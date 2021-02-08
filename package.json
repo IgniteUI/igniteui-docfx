@@ -6,6 +6,7 @@
   "scripts": {
     "start": "gulp serve",
     "build": "gulp build",
+    "build-gh-actions": "gulp buildTravis",
     "build-staging": "set NODE_ENV=staging && gulp build",
     "build-production": "set NODE_ENV=production && gulp build",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,8 +14,7 @@
   "author": "Infragistics",
   "license": "ISC",
   "dependencies": {
-    "gulp-sass": "^4.0.1",
-    "igniteui-docfx-template": "^2.8.1",
+    "igniteui-docfx-template": "^3.0.0-alpha.0",
     "natives": "^1.1.6",
     "yargs": "^10.0.3"
   },
@@ -23,7 +23,9 @@
     "del": "^5.1.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
+    "gulp-dart-sass": "^1.0.2",
     "gulp-file-include": "^2.1.1",
+    "gulp-replace": "^1.0.0",
     "gulp-shell": "^0.7.1",
     "slash": "^3.0.0"
   }

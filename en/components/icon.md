@@ -5,12 +5,12 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 # Icon
-<p class="highlight">The Ignite UI for Angular Icon component unifies icon/font sets so developers can use them interchangeably and add material icons to markup.</p>
+<p class="highlight">The Ignite UI for Angular Icon component unifies icon/font families so developers can use them interchangeably and add material icons to markup.</p>
 
-## Demo
+## Angular Icon Example
 
 <div class="sample-container loading" style="height: 75px">
-    <iframe id="icon-sample-1-iframe" seamless="" width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-display/icon-sample-1" onload="onSampleIframeContentLoaded(this);">
+    <iframe id="icon-sample-1-iframe" seamless="" width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-display/icon-sample-1" onload="onSampleIframeContentLoaded(this);" alt="Angular Icon Example">
 </iframe></div>
 <p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>
@@ -53,12 +53,15 @@ Use the [`color`]({environment:angularApiUrl}/classes/igxiconcomponent.html#icon
     <iframe id="icon-sample-3-iframe" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-display/icon-sample-3" class="lazyload">
 </iframe></div>
 
+>[!NOTE]
+> The `color` property will be deprecated in the next major version of Ignite UI for Angular. To change the color of an icon, use CSS properties.
+
 ### Inactive Icon
 
 If you want to disable an icon, you can use the [`active`]({environment:angularApiUrl}/classes/igxiconcomponent.html#active) property:
 
 ```html
-<igx-icon [isActive]="false">volume_off</igx-icon>
+<igx-icon [active]="false">volume_off</igx-icon>
 ```
 <div class="sample-container loading" style="height: 40px">
     <iframe id="icon-sample-4-iframe" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-display/icon-sample-4" class="lazyload">
@@ -95,9 +98,9 @@ You can customize the icons using CSS. The icon's size can be changed through th
 
 You can also use an SVG image as an icon. First, inject the [`IgxIconService`]({environment:angularApiUrl}/classes/igxiconservice.html) dependency. In this example we will inject it in a component's constructor but you can use it wherever it is needed in your code. 
 
-Use the [`addSvgIcon`]({environment:angularApiUrl}/classes/igxiconservice.html#addsvgicon) method to import the SVG file in cache. When the SVG is cached, it can be used anywhere in the application. The icon name and file URL path are the method's mandatory parameters; font-set can be specified as well. After that, you can use the SVG files in the HTML markup. Alternatively, you can use the `addSvgIconFromText` method to import an SVG file, providing the SVG text content instead of the file URL.
+Use the [`addSvgIcon`]({environment:angularApiUrl}/classes/igxiconservice.html#addsvgicon) method to import the SVG file in cache. When the SVG is cached, it can be used anywhere in the application. The icon name and file URL path are the method's mandatory parameters; family can be specified as well. After that, you can use the SVG files in the HTML markup. Alternatively, you can use the `addSvgIconFromText` method to import an SVG file, providing the SVG text content instead of the file URL.
 
-* Have in mind that if there are two icons with the same name and the same font-set, the SVG icon will be displayed with priority.
+* Have in mind that if there are two icons with the same name and the same family, the SVG icon will be displayed with priority.
 * It is better not to provide image width and height in the SVG file.
 * You may need additional polyfill scripts ("polyfills") for Internet Explorer.
 
@@ -111,7 +114,7 @@ public ngOnInit() {
 ```
 
 ```html
-<igx-icon name="contains" fontSet="filter-icons"></igx-icon>
+<igx-icon name="contains" family="filter-icons"></igx-icon>
 ```
 
 <div class="sample-container loading" style="height: 70px">
@@ -187,7 +190,7 @@ If the component is using the [`Emulated`](themes/component-themes.md#view-encap
 
 ### Demo
 <div class="sample-container loading" style="height:75px">
-    <iframe id="icon-styling-sample-iframe" data-src='{environment:demosBaseUrl}/data-display/icon-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
+    <iframe id="icon-styling-sample-iframe" data-src='{environment:demosBaseUrl}/data-display/icon-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming" alt="Angular Icon Example"></iframe>
 </div>
 <br/>
 <div>
@@ -195,9 +198,6 @@ If the component is using the [`Emulated`](themes/component-themes.md#view-encap
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="icon-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-## Breaking Changes in 6.2.0
-
-* The [`IgxIconComponent`]({environment:angularApiUrl}/classes/igxiconcomponent.html) `iconName` property is deprecated. To set the icon name for 'material' icons, place the name of the icon between the opening and closing tags. For 'Font Awesome' and SVG icons, use the `name` property.
 
 ## API References
 <div class="divider--half"></div>

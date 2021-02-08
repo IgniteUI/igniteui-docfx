@@ -9,11 +9,11 @@ _language: ja
 
 **テキスト入力フィールド**に [`igxMask`]({environment:angularApiUrl}/classes/igxmaskdirective.html) ディレクティブを適用し、構成可能なマスク ルールに基づいてユーザー入力を制御して表示される値を書式設定できます。入力オプションも構成できます。
 
-## デモ
+## Angular Mask の例
 <div class="sample-container loading" style="height: 100px">
-    <iframe id="mask-sample2-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-display/mask-sample-2" class="lazyload"></iframe>
+    <iframe id="mask-sample2-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/data-display/mask-sample-2" onload="onSampleIframeContentLoaded(this);" alt="Angular Mask の例"></iframe>
 </div>
-<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="mask-sample2-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
@@ -166,7 +166,7 @@ private notify(snackbar, message, input) {
 <div class="divider--half"></div>
 
 ### テキスト選択
-[`igxTextSelection`]({environment:angularApiUrl}/classes/igxtextselectiondirective.html) を使用して、フォーカスがあるコンポーネントにすべての入力テキストを選択させることができます。[Label および Input](label_input.md#フォーカスとテキストの選択) で `igxTextSelection` の詳細情報を参照してください。
+[`igxTextSelection`]({environment:angularApiUrl}/classes/igxtextselectiondirective.html) を使用して、フォーカスがあるコンポーネントにすべての入力テキストを選択させることができます。[Label および Input](label-input.md#フォーカスとテキストの選択) で `igxTextSelection` の詳細情報を参照してください。
 
 **app.module.ts** ファイルに  `IgxToastModule` をインポートします:
 

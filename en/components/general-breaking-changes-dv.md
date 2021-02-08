@@ -8,30 +8,6 @@ _keywords: Breaking Changes,  Ignite UI for Angular, Infragistics
 
 This topic provides information about breaking changes in Ignite UI for Angular as well as how to update older code to latest API.
 
-## Changed name of PropertyPath
-
-The data grid component property `propertyPath` has been renamed to `field`. This applies to all Column types, GroupDescription, SortDescription & SummaryDescription.
-
-> [!NOTE]
-> These breaking changes were introduce in version **{PackageVerChangedFields}** of the grid package.
-
-## Changed Name of Live Grid
-
-The data grid component and it's corresponding module's names have changed from "LiveGrid" to "DataGrid".
-
-> [!NOTE]
-> These breaking changes were introduce in version **{PackageVerRenamedGrid}** of these packages and components:
-
-The new code for importing the grid and it's corresponding module is:
-
-## Required Peer Dependency for Data Grid
-
-The data grid component requires the "inputs" package.
-
-```ts
-**npm install --save {PackageInputs}**
-```
-
 ## Changed Import Statements
 
 Import statements have been simplified to use just package names instead of full paths to API classes and enums.
@@ -41,8 +17,8 @@ Import statements have been simplified to use just package names instead of full
 
 | Affected Packages                                                                                                              | Affected Components                                                                                                                                                                                            |
 | ------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <a href="https://www.npmjs.com/package/igniteui-angular-excel/v/8.2.12" target="_blank">igniteui-angular-excel</a>             | [Excel Library](excel_library.md)                                                                                                                                                                              |
-| <a href="https://www.npmjs.com/package/igniteui-angular-spreadsheet/v/8.2.12" target="_blank">igniteui-angular-spreadsheet</a> | [Spreadsheet](spreadsheet_overview.md)                                                                                                                                                                         |
+| <a href="https://www.npmjs.com/package/igniteui-angular-excel/v/8.2.12" target="_blank">igniteui-angular-excel</a>             | [Excel Library](excel-library.md)                                                                                                                                                                              |
+| <a href="https://www.npmjs.com/package/igniteui-angular-spreadsheet/v/8.2.12" target="_blank">igniteui-angular-spreadsheet</a> | [Spreadsheet](spreadsheet-overview.md)                                                                                                                                                                         |
 | <a href="https://www.npmjs.com/package/igniteui-angular-maps/v/8.2.12" target="_blank">igniteui-angular-maps</a>               | [Geo Map](geo-map.md), [Treemap](treemap-overview.md)                                                                                                                                                          |
 | <a href="https://www.npmjs.com/package/igniteui-angular-gauges/v/8.2.12" target="_blank">igniteui-angular-gauges</a>           | [Bullet Graph](bullet-graph.md), [Linear Gauge](linear-gauge.md), [Radial Gauge](radial-gauge.md)                                                                                                              |
 | <a href="https://www.npmjs.com/package/igniteui-angular-charts/v/8.2.12" target="_blank">igniteui-angular-charts</a>           | [Category Chart](category-chart.md), [Data Chart](data-chart.md), [Doughnut Chart](doughnut-chart.md), [Financial Chart](financial-chart.md), [Pie Chart](pie-chart.md), [Zoom Slider](zoomslider-overview.md) |

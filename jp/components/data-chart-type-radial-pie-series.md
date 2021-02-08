@@ -10,10 +10,10 @@ _language: ja
 
 Ignite UI for Angular 放射状円チャートはラジアル チャートのグループに属し、チャートの中心からデータポイントの位置に向かって伸びる円スライスを使用します。[`IgxRadialPieSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialpieseriescomponent.html) は、データ ポイントの複数シリーズを分類する概念を使用していますが、横の線に沿って伸びるのではなく、円の周りでデータ ポイントをラップします。
 
-## サンプル
+## Angular ラジアル状円チャートの例
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="data-chart-type-radial-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-radial-pie-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="data-chart-type-radial-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-radial-pie-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular ラジアル状円チャートの例"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-radial-series-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示

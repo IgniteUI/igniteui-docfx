@@ -1,20 +1,33 @@
+@@if(igxName === 'IgxGrid') {
 ---
-title: Angular Grid ソート | テンプレート | Ignite UI for Angular | インフラジスティックス
-_description: Angular ページネーションを設定し、Ignite UI を使用して Angular Material テーブルにカスタム ページを作成し、要求されたページのデータをさまざまな Angular イベントで取得します。
-_keywords: angular pagination, igniteui for angular, infragistics
+title: Angular Grid ページング | Angular 改ページ テーブル | インフラジスティックス
+_description: Angular 改ページを構成して Ignite UI の Angular マテリアル テーブルにカスタム ページを作成し、さまざまな Angular イベントで要求されたページのデータを取得します。
+_keywords: angular 改ページ, igniteui for angular, インフラジスティックス
 _language: ja
 ---
+}
+@@if(igxName !== 'IgxGrid') {
+---
+title: Angular Grid ページング | Angular 改ページ テーブル | インフラジスティックス
+_description: Angular 改ページを構成して Ignite UI の Angular マテリアル テーブルにカスタム ページを作成し、さまざまな Angular イベントで要求されたページのデータを取得します。
+_keywords: angular 改ページ, igniteui for angular, インフラジスティックス
+_canonicalLink: grid/paging
+_language: ja
+---
+}
 
-# @@igComponent ページング
-@@igComponent のページングは、[`paging`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#paging) と [`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) で設定できます。その他の Angular Material テーブルと同様に、@@igComponent のページングはカスタム ページのテンプレートをサポートします。
+# Angular @@igComponent 改ページ
+改ページは、大量のデータセットを類似したコンテンツを持つ一連のページに分割するために使用されます。Angular テーブルの改ページにより、ユーザー エクスペリエンスとデータ操作が向上します。@@igComponent 改ページは、[`paging`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#paging) および [` perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) 入力で設定できます。他の Angular Material テーブルと同様に、@@igComponent の改ページはカスタム ページのテンプレートをサポートします。
 
-### デモ
+## Angular 改ページの例
+
+次の例は、@@igComponent 改ページを表しており、`items per page` のオプションの使用法と、ページングを有効にする方法を示しています。ユーザーは、[最後のページに移動] ボタンと [最初のページに移動] ボタンを使用して、@@igComponent ページをすばやくナビゲートすることもできます。
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:550px">
-    <iframe id="grid-paging-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-paging-sample' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-paging-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-paging-sample' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular 改ページの例"></iframe>
 </div>
-<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
@@ -22,9 +35,9 @@ _language: ja
 }
 @@if (igxName === 'IgxTreeGrid') {
 <div class="sample-container loading" style="height:550px">
-    <iframe id="treegrid-paging-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-paging' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="treegrid-paging-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-paging' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular 改ページの例"></iframe>
 </div>
-<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="treegrid-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
@@ -32,9 +45,9 @@ _language: ja
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 <div class="sample-container loading" style="height:580px">
-    <iframe id="hierarchical-grid-paging-sample-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-paging' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="hierarchical-grid-paging-sample-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-paging' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular 改ページの例"></iframe>
 </div>
-<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
@@ -49,7 +62,7 @@ _language: ja
 </@@igSelector>
 ```
 
-## テンプレート
+## Angular 改ページのテンプレート
 ページング領域でテンプレート化がサポートされますが、初期化でテンプレート参照を @@igComponent に渡す必要があります。以下は、ページングが入力によって制御されるテンプレートの例です。
 
 ```html
@@ -93,11 +106,11 @@ this.@@igObjectRef.totalRecords = 30;
 
 @@if (igxName === 'IgxGrid') {
 ## グループ化によるページング
-
+グループ行は、データ行とともにページング プロセスに関係します。それらは各ページのページ サイズにカウントされます。折りたたまれた行はページング プロセスに含まれません。
 ページングとグループ化の統合については、[グループ化](groupby.html#ページングによるグループ化)のトピックで説明しています。
 }
 
-## ページネータ コンポーネント
+## Angular の再利用可能なページネータ コンポーネント
 8.1.0 リリースでは、新しいコンポーネント `igx-paginator` が導入されました。このコンポーネントは、現在のページャーを置き換え、スタンドアロン コンポーネントとしても使用できます。
 `igx-paginator` は、ページングを詳細なカスタマイズが可能な入力および出力プロパティを公開します。
 
@@ -136,7 +149,7 @@ this.@@igObjectRef.totalRecords = 30;
 </ng-template>
 ```
 
-### デモ
+### ページネータ コンポネント デモ
 <div class="sample-container loading" style="height:600px">
     <iframe id="grid-pager-sample-iframe" class="lazyload" src='{environment:demosBaseUrl}/grid/grid-pager-sample' width="100%" height="100%" seamless frameBorder="0"></iframe>
 </div>
@@ -149,14 +162,13 @@ this.@@igObjectRef.totalRecords = 30;
 <div class="divider--half"></div>
 
 ## リモート ページング
-
-@@igComponent はリモート ページングをサポートします。詳細については、[`@@igComponent リモート データ操作`](remote_data_operations.md#リモート-ページング) トピックで説明されています。
+リモート ページングは、データ取得を担当するサービスと、グリッドの構築とデータ サブスクリプションを担当するコンポーネントを宣言することで実現できます。詳細については、[@@igComponent リモート データ操作](remote-data-operations.md#remote-paging)トピックをご覧ください。
 
 
 @@if (igxName === 'IgxGrid') {
 ## カスタム テンプレートのリモート ページング
 
-独自のページング動作を定義するために、ページング テンプレートを使用してカスタム ロジックを追加できます。[このセクション](remote_data_operations.md#カスタム-テンプレートのリモート-ページング)では、上記を実証するために、リモート ページングの例を拡張する方法を説明します。
+独自のページング動作を定義するために、ページング テンプレートを使用してカスタム ロジックを追加できます。[このセクション](remote-data-operations.md#カスタム-テンプレートのリモート-ページング)では、上記を実証するために、リモート ページングの例を拡張する方法を説明します。
 }
 
 ## ローカライズ
@@ -207,7 +219,7 @@ public ngOnInit(): void {
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-pager-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz デモ</button>
 </div>
 
-## スタイル設定
+## Angular の改ページ スタイリング
 
 ページネータのスタイル設定を始めるには、すべてのテーマ関数とコンポーネントミックスインが存在する `index` ファイルをインポートする必要があります。
 
@@ -374,7 +386,7 @@ $dark-button: igx-button-theme(
 
 テーマを上記と同じ方法で含める必要があることに注意してください。
 @@if (igxName === 'IgxGrid'){
-### デモ
+### 改ページ スタイルの例
 
 <div class="sample-container loading" style="height:560px">
     <iframe id="custom-grid-paging-style-iframe" data-src='{environment:demosBaseUrl}/grid/custom-grid-paging-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
@@ -419,7 +431,7 @@ $dark-button: igx-button-theme(
 ## API リファレンス
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 * [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
-* [IgxGridPaginator スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-paginator-theme)
+* [IgxGridPaginator スタイル]({environment:sassApiUrl}/index.html#function-igx-paginator-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>
@@ -429,9 +441,9 @@ $dark-button: igx-button-theme(
 * [フィルタリング](filtering.md)
 * [ソート](sorting.md)
 * [集計](summaries.md)
-* [列移動](column_moving.md)
-* [列ピン固定](column_pinning.md)
-* [列サイズ変更](column_resizing.md)
+* [列移動](column-moving.md)
+* [列ピン固定](column-pinning.md)
+* [列サイズ変更](column-resizing.md)
 * [選択](selection.md)
 
 <div class="divider--half"></div>

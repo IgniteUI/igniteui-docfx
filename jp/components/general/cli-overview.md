@@ -10,7 +10,7 @@ CLI ツールでは、Ignite UI for Angular の定義済みのプロジェクト
 
 [Ignite UI CLI](https://github.com/IgniteUI/igniteui-cli) は、さまざまなフレームワーク用のアプリケーションを作成およびスキャフォールディングするためのスタンドアロン コマンドラインツールです。
 
-[Ignite UI for Angular Schematics](https://github.com/IgniteUI/igniteui-cli/tree/master/packages/ng-schematics) は同じプロジェクトの一部であり、[Angular CLI](https://angular.io/guide/schematics#schematics-for-the-angular-cli) で使用するコレクションとして利用できます。Ignite UI CLI のようなコア機能を提供しますが、Schematics ワークフローと統合され、製品に特化しています。[Ignite UI for Angular をインストールする](getting_started.md#ignite-ui-for-angular-のインストール)と、schematics コレクションがプロジェクトに追加されます。
+[Ignite UI for Angular Schematics](https://github.com/IgniteUI/igniteui-cli/tree/master/packages/ng-schematics) は同じプロジェクトの一部であり、[Angular CLI](https://angular.io/guide/schematics#schematics-for-the-angular-cli) で使用するコレクションとして利用できます。Ignite UI CLI のようなコア機能を提供しますが、Schematics ワークフローと統合され、製品に特化しています。[Ignite UI for Angular をインストールする](getting-started.md#ignite-ui-for-angular-のインストール)と、schematics コレクションがプロジェクトに追加されます。
 
 ツールの両方バージョンにより、異なるプロジェクト、コンポーネント、およびシナリオビュー (テンプレート)を生成し、ガイドモードを提供します。
 
@@ -143,9 +143,9 @@ ig new newAngularProject --framework=angular --type=igx-ts --template=side-nav
 
 
 ## テンプレートの追加
-[利用可能な Ignite UI Angular テンプレート](cli/component-templates.md)を追加するには、新しいコンポーネントのテンプレート ID と名前を指定するか、[Step-by-Step Guide](cli/step-by-step-guide.md#ビューの追加) を使用する必要があります。Angular Schematics、Ignite UI CLI で作成された既存のプロジェクト内、または Ignite UI for Angular が [`ng add` でインストールされている](getting_started.md#Ignite-UI-for-Angular-のインストール) 場合にのみサポートされます。
+[利用可能な Ignite UI Angular テンプレート](cli/component-templates.md)を追加するには、新しいコンポーネントのテンプレート ID と名前を指定するか、[Step-by-Step Guide](cli/step-by-step-guide.md#ビューの追加) を使用する必要があります。Angular Schematics、Ignite UI CLI で作成された既存のプロジェクト内、または Ignite UI for Angular が [`ng add` でインストールされている](getting-started.md#Ignite-UI-for-Angular-のインストール) 場合にのみサポートされます。
 
-Schematics には、 Ignite UI for Angular コレクション と `component [template] [name]` の `ng generate` を使用します。
+Schematics には、Ignite UI for Angular コレクション と `component [template] [name]` の `ng generate` を使用します。
 
 ```cmd
 ng g @igniteui/angular-schematics:component grid newGrid
@@ -170,7 +170,7 @@ ig add grid newGrid
     注: module 引数は、Angular プロジェクトでのみ適用できます。
   </p> 
   <p>
-    新しいコンポーネントを登録するモジュールの、 /src/app/ folder を基準とした module.ts ファイルのパス。
+    新しいコンポーネントを登録するモジュールの、/src/app/ folder を基準とした module.ts ファイルのパス。
   </p>
   <code>ng g @igniteui/angular-schematics:component combo newCombo --module=myModule/myModule.module.ts</code>
   <br>

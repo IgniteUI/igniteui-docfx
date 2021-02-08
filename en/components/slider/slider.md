@@ -8,9 +8,9 @@ _keywords: angular slider, igniteui for angular, infragistics
 <p class="highlight">The Ignite UI for Angular Slider component allows selection in a given range by moving the thumb along the track. The track can be defined as continuous or stepped and you can choose between single and range slider types.</p>
 <div class="divider"></div>
 
-## Slider Demo
+## Angular Slider Example
 <div class="sample-container loading" style="height: 250px">
-    <iframe id="slide-sample-1-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/slider-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="slide-sample-1-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/slider-sample-1" onload="onSampleIframeContentLoaded(this);" alt="Angular Slider Example"></iframe>
 </div>
 <p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>

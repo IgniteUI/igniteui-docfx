@@ -1,4 +1,4 @@
-﻿@@if (igxName === 'IgxGrid') {
+@@if (igxName === 'IgxGrid') {
 ---
 title: Angular Grid サイズ変更 | Ignite UI for Angular | インフラジスティックス 
 _description: Angular グリッドのサイズ設定がどのように機能するかを理解し、ユーザーが遭遇するさまざまな状況に対応するために幅と高さを使用する方法を学びます。
@@ -212,7 +212,7 @@ _language: ja
 
     <img src="../../images/grid_sizing/columns-150px-empty-area-v2.jpg" style="width: 80%"/>
 
-* すべての列の合計`幅`が実際の [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) の`幅`よりも大きい場合、水平スクロールバーがレンダリングされます。次の例では、列の幅が `300px` で、グリッドの幅は `1200px` です。 
+* すべての列の合計`幅`が実際の [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) の`幅`よりも大きい場合、水平スクロールバーがレンダリングされます。次の例では、6 つの列のそれぞれの幅が `300px` で、グリッドの幅が `1200px` です。これは、結合された列の幅が `600px` を超えており、範囲を超えていることを意味します。
 
     <img src="../../images/grid_sizing/columns-150px-extra-area-v2.jpg" style="width: 80%"/>
 

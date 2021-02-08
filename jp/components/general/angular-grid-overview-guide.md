@@ -7,7 +7,7 @@ _language: ja
 
 # Angular Grid と Angular アプリケーション開発の完全ガイド 
   
-Angular Data Grid とその使用方法については、[このセクション](../grids_and_lists.md#Angular-Data-Grid-の概要) (グリッドの概要トピック) をご覧ください。
+Angular Data Grid とその使用方法については、[このセクション](../grids-and-lists.md#Angular-Data-Grid-の概要) (グリッドの概要トピック) をご覧ください。
 
 ### Ignite UI - Angular アプリ開発のフレームワーク 
 
@@ -25,7 +25,7 @@ Ignite UI for Angular は、Angular CLI または [Ignite UI CLI](https://jp.inf
 
 `ng add igniteui-angular` 
 
-Ignite UI for Angular を[既存の Angular アプリケーション](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/general/getting_started.html#ignite-ui-for-angular-のインストール "Ignite UI for Angular のインストール")に追加する必要がある場合、このオプションお勧めします。 
+Ignite UI for Angular を[既存の Angular アプリケーション](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/general/getting-started.html#ignite-ui-for-angular-のインストール "Ignite UI for Angular のインストール")に追加する必要がある場合、このオプションお勧めします。 
 
 新しいアプリケーションを最初から作成する場合、以下の方法をお勧めします。 
 
@@ -41,7 +41,7 @@ IgniteUI CLI をインストールすると、cli の[ガイド](https://jp.infr
 
 製品の依存関係のインポートには、Ignite UI CLI の使用をお勧めします。`ng add igniteui-angular` を使用すると、Ignite UI for Angular パッケージとその依存関係、フォントのインポート、スタイル設定などをプロジェクトにインストールできます。 
 
-Ignite UI CLI せずに Ignite UI for Angular コンポーネントを使用するには、必要となるすべての依存関係を構成し、プロジェクトを適切に設定したことを確認してください。手順は、[はじめに](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/general/getting_started.html "Ignite UI for Angular で作業を開始")のトピックをご確認ください。 
+Ignite UI CLI せずに Ignite UI for Angular コンポーネントを使用するには、必要となるすべての依存関係を構成し、プロジェクトを適切に設定したことを確認してください。手順は、[はじめに](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/general/getting-started.html "Ignite UI for Angular で作業を開始")のトピックをご確認ください。 
 
 ### コンポーネントをテンプレートに追加 
 
@@ -192,11 +192,11 @@ Angular データ グリッドは、簡単なソート、フィルタリング�
 
 グリッドは、カスタム フィルタリング条件で 3 種類のフィルタリングを提供します。 
 
- - デフォルトの定義済みフィルタリングおよび標準のフィルタリング条件で列ごとに[行をフィルタリングします](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/grid/filtering.html#grid-のフィルタリング概要 "Grid のフィルタリング概要")。  
+ - デフォルトの定義済みフィルタリングおよび標準のフィルタリング条件で列ごとに[行をフィルタリングします](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/grid/filtering.html "Grid のフィルタリング概要")。  
 
- - ソート、移動、ピン固定、非表示などの機能を構成できるメニューの [Excel スタイル フィルタリング](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/grid/excel_style_filtering.html "Grid Excel スタイル フィルタリングの概要") 。 
+ - ソート、移動、ピン固定、非表示などの機能を構成できるメニューの [Excel スタイル フィルタリング](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/grid/excel-style-filtering.html "Grid Excel スタイル フィルタリングの概要") 。 
 
- - すべての列でフィルタリング条件を持つグループを作成できるダイアログを提供する[高度なフィルタリング](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/grid/advanced_filtering.html "高度なフィルタリングの概要")。 
+ - すべての列でフィルタリング条件を持つグループを作成できるダイアログを提供する[高度なフィルタリング](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/grid/advanced-filtering.html "高度なフィルタリングの概要")。 
 
 [Angular 9 リリース](https://www.infragistics.com/community/blogs/b/infragistics/posts/ignite-ui-for-angular-9-0-0-release "Ignite UI for Angular 9.0.0 リリース")には、データ解析、豊富な可視化、グリッド状態の永続化、テーマ ウィジェットなど、多数の新しい主要機能が含まれています。 
 
@@ -227,18 +227,24 @@ $my-color-palette: igx-palette(
 IgniteUI for Angular はコンポーネントのデザインを[マテリアル デザイン原則](https://material.io/guidelines/material-design/introduction.html "マテリアル デザインの概要")に基づき、Google によって作成されたコンポーネントの色、サイズ、タイポグラフィ、およびルックアンドフィールにできるだけ近づけるようデザインしています。例:
 
 <div class="sample-container loading" style="height: 477px">
-    <iframe id="list-sample-4-iframe" src='{environment:lobDemosBaseUrl}/grid-crm' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="list-sample-4-iframe" src='{environment:crmDemoBaseUrl}/grid-crm' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
+
+<div class="divider--half"></div>
 
 サンプル ブラウザーのテーマ ウィジェットについても説明します。[Ignite UI サンプル ブラウザー](http://jp.infragistics.com/angularsite/components/grid/grid.html "Data Grid 概要と構成")でワンクリックでテーマをランタイムに変更できるようになりました。テーマ ウィジェットでは、スタイル、色、丸み、およびエレベーションを変更できます。テーマを簡単にカスタマイズできます。テーマの準備をした後、[SASS の ダウンロード] を押すと、設定済みの SCSS ファイルをアプリケーションで使用できます。 
 
+<div class="divider--half"></div>
+
+<div>
 <img class="b-lazy responsive-img" style="-webkit-box-shadow: 8px 9px 9px 5px #ccc; -moz-box-shadow: 8px 9px 9px 5px #ccc; box-shadow: 8px 9px 9px 5px #ccc;" 
     src="../../images/general/ThemeingWidget1.gif" 
     data-src="../../images/general/ThemeingWidget1.gif" 
     data-srcset="../../images/general/ThemeingWidget1.gif 480w, ../../images/general/ThemeingWidget1.gif 768w, ../../images/general/ThemeingWidget1.gif 1100w" 
-    alt="Theming widget example"
+    alt="テーマ ウィジェットの例"
     title="テーマ ウィジェットは、Ignite UI のパワフルなテーマ フレームワークを使用しています。">
+</div>
 
 ### Ignite UI のデータ分析 
 
@@ -258,13 +264,18 @@ Grid コンポーネントは一般に、大量の表データを可視化する
 
 読み込み時間および実行時のパフォーマンスに関する Web アプリケーションの要件を満たすために、描画される Document Object Model (DOM) 要素を仮想化し、ユーザーがコンポーネントのコンテナで垂直方向および水平ス方向にクロールする際に DOM 要素をスワップまたは再利用することが重要です。igxGrid は、見た目を損なうことなく優れたランタイムのスクロール パフォーマンスと、ソフト パフォーマンス (ソフトウェアの一般的なユーザビリティによって定義される) を備えています。以下は、スクロール パフォーマンスを備えた Gif の例です。 
 
+
+<div>
 <img class="b-lazy responsive-img" style="-webkit-box-shadow: 8px 9px 9px 5px #ccc; -moz-box-shadow: 8px 9px 9px 5px #ccc; box-shadow: 8px 9px 9px 5px #ccc;" 
     src="../../images/general/scrolling.gif" 
     data-src="../../images/general/scrolling.gif" 
     data-srcset="../../images/general/scrolling.gif 480w, ../../images/general/scrolling.gif 768w, ../../images/general/scrolling.gif 1100w" 
-    alt="Scrolling performance"
+    alt="スクロールのパフォーマンス"
     title="igxGrid 仮想スクロールのパフォーマンス">
+<div>
+
+<div class="divider--half"></div>
 
 Grid で使用したい機能を簡単に見つけてナビゲートできます。また、アプリケーションをより魅力的にできます。 
 
-詳細については、[Medium Software Performance (Web) の記事 (英語)](https://medium.com/ignite-ui/software-performance-web-61158c8583d "Web Software Performance")をご覧ください。
+詳細については、[Medium Software Performance (Web) の記事 (英語)](https://medium.com/ignite-ui/software-performance-web-61158c8583d "Web Software Performance") をご覧ください。

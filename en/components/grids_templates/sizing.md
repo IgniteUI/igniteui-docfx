@@ -10,6 +10,7 @@ _keywords: angular grid sizing, igniteui for angular, infragistics
 title:  Angular Tree Grid Sizing | Ignite UI for Angular | infragistics 
 _description: Understand how the Angular grid sizing works and learn how to use the width and height in order to accommodate the different scenarios that users can have.
 _keywords: angular grid sizing, igniteui for angular, infragistics
+_canonicalLink: grid/sizing
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -17,6 +18,7 @@ _keywords: angular grid sizing, igniteui for angular, infragistics
 title:  Angular Hierarchical Grid Sizing | Ignite UI for Angular | infragistics 
 _description: Understand how the Angular grid sizing works and learn how to use the width and height in order to accommodate the different scenarios that users can have.
 _keywords:  angular grid sizing, igniteui for angular, infragistics
+_canonicalLink: grid/sizing
 ---
 }
 
@@ -209,7 +211,7 @@ When columns have set specific `width` in pixels, they stick to that size, unles
 
     <img src="../../images/grid_sizing/columns-150px-empty-area-v2.jpg" style="width: 80%"/>
 
-* If the combined `width` of all columns is bigger than the actual [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) `width`, a horizontal scrollbar will be rendered. In the next example the columns have width of `300px` and grid has width if `1200px`, which means that the columns have excess of 
+* If the combined `width` of all columns is bigger than the actual [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) `width`, a horizontal scrollbar will be rendered. In the next example each of the 6 columns have width of `300px` and grid has width of `1200px`, which means that the columns combined have excess of `600px` that goes out of bounds.
 
     <img src="../../images/grid_sizing/columns-150px-extra-area-v2.jpg" style="width: 80%"/>
 

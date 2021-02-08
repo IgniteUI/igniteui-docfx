@@ -5,14 +5,14 @@ _keywords: Angular Tree Map, Treemap, layout, orientation, Ignite UI for Angular
 mentionedTypes: ['Treemap','TreemapOrientation','TreemapLayoutType']
 ---
 
-## Angular Treemap Overview
+# Angular Treemap Overview
 
 The Ignite UI for Angular Treemap displays hierarchical (tree-structured) data as a set of nested nodes. Each branch of the tree is given a treemap node, which is then tiled with smaller nodes representing sub-branches. Each node’s rectangle has an area proportional to a specified dimension on the data. Often the nodes are colored to show a separate dimension of the data.
 
-## Demo
+## Angular Treemap Overview Example
 
 <div class="sample-container loading" style="height: 600px">
-    <iframe id="tree-map-overview-iframe" src='{environment:dvDemosBaseUrl}/charts/tree-map-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="tree-map-overview-iframe" src='{environment:dvDemosBaseUrl}/charts/tree-map-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Treemap Overview Example"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="tree-map-overview-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
@@ -78,10 +78,7 @@ npm install --save igniteui-angular-charts
 
 ## Required Modules
 
-The [`IgxTreemapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtreemapcomponent.html) requires the following modules<!-- Angular, React, WebComponents -->.<!-- end: Angular, React, WebComponents --><!-- Blazor --> to be registered in your application entry point:
-
--   TreemapModule
-    <!-- end: Blazor -->
+The [`IgxTreemapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtreemapcomponent.html) requires the following modules:
 
 ```ts
 import { IgxTreemapModule } from "igniteui-angular-charts";

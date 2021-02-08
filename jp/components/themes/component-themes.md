@@ -7,7 +7,6 @@ _language: ja
 
 # コンポーネント テーマ
 <div class="highlight">コンポーネント テーマは、テーマをグローバルに定義して特定のコンポーネント インスタンスのスタイルを変更できます。</div>
-<div class="divider"></div>
 
 ## 概要
 <div class="divider--half"></div>
@@ -104,7 +103,7 @@ $another-avatar-theme: igx-avatar-theme(
 
 グローバルにスコープし、単一の Sass ファイルに含まれるテーマを作成する方法について説明しました。ただし最適な方法ではないため、Sass ファイルを特定アプリのコンポーネントにバインドした方がよい場合があります。この場合、表示のカプセル化、特に Angular で発生させる方法を考慮する必要があります。
 
-Angular では、表示のカプセル化に 3 つの方法 Emulated (デフォルト)、Shadow DOM、None を採用しています。 各方法の詳細については、 [Angular ヘルプ](https://angular.io/api/core/ViewEncapsulation)をご覧ください。表示をカプセルかした親コンポーネントの一部である Ignite UI for Angular コンポーネントのテーマを処理する方法について詳しく説明します。
+Angular では、表示のカプセル化に 3 つの方法 Emulated (デフォルト)、Shadow DOM、None を採用しています。 各方法の詳細については、[Angular ヘルプ](https://angular.io/api/core/ViewEncapsulation)をご覧ください。表示をカプセルかした親コンポーネントの一部である Ignite UI for Angular コンポーネントのテーマを処理する方法について詳しく説明します。
 
 エミュレートされた表示のカプセル化とは？このタイプの表示のカプセル化は、Shadow DOM 仕様の利点を享受しませんが、ホスト要素に適用された一意の属性識別子を使用してコンポーネントとその子のスタイルをバインドする方法を利用します。インナー セレクターをターゲットにした表示のカプセル化コンポーネントのスタイルシートに追加したスタイルのルールは、ホスト要素の一意の属性を参照しないため適用されません。このカプセル化を解除するには、View Encapsulation ペネトレーション ストラテジーをいくつか使用する必要があります。現在の Angular でこれを行うのは  `::ng-deep` です。ホスト要素でカプセル化された内部のセレクターをターゲットにできます。CSS 変数の代わりに CSS ルールを扱っている場合やコンポーネントの単一のインスタンスをカスタマイズする場合は、`::ng-deep` の使用をお勧めします。次のセクションで例を示します。
 
@@ -200,11 +199,12 @@ $avatar-theme: igx-avatar-theme($initials-background: royalblue);
 ```
 <div class="divider"></div>
 
-## API
-* [Global テーマ]({environment:sassApiUrl}/index.html#mixin-igx-theme)
-* [Avatar テーマ]({environment:sassApiUrl}/index.html#function-igx-avatar)
+## API リファレンス
 
 <div class="divider--half"></div>
+
+* [Global テーマ]({environment:sassApiUrl}/index.html#mixin-igx-theme)
+* [Avatar テーマ]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

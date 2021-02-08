@@ -11,13 +11,13 @@ _language: ja
 Ignite UI for Angular [`igx-tabs`]({environment:angularApiUrl}/classes/igxtabscomponent.html) コンポーネントは、同様なデータ セットの体系化や切り替えに使用します。[`igx-tab-item`]({environment:angularApiUrl}/classes/igxtabitemcomponent.html) および [`igx-tabs-group`]({environment:angularApiUrl}/classes/igxtabsgroupcomponent.html) のラッパーとして機能し、データのコンテナーおよびタブ ヘッダーを表します。Tabs コンポーネントは、タブを上側に配置して複数のタブ項目がある場合にスクロールを許可します。
 </p>
 
-## デモ
+## Angular Tabs の例
 
 <div class="sample-container loading" style="height: 250px; border: 1px solid #ededed;">
-    <iframe id="tabs-sample-0" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/layouts/tabs-sample-3" onload="onSampleIframeContentLoaded(this);">
+    <iframe id="tabs-sample-0" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/layouts/tabs-sample-3" onload="onSampleIframeContentLoaded(this);" alt="Angular Tabs Example">
     </iframe>
 </div>
-<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="tabs-sample-0" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
@@ -58,7 +58,7 @@ export class AppModule {}
 サンプルを構成した後、結果は以下のようになります。
 
 <div class="sample-container loading" style="height: 200px; border: 1px solid #ededed;">
-    <iframe id="tabs-sample-1-iframe" data-src='{environment:demosBaseUrl}/layouts/tabs-sample-1' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+    <iframe id="tabs-sample-1-iframe" data-src='{environment:demosBaseUrl}/layouts/tabs-sample-1' width="100%" height="100%" seamless frameBorder="0" class="lazyload" alt="Angular Tabs の例"></iframe>
 </div>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="tabs-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
@@ -256,7 +256,7 @@ export class AppRoutingModule { }
 
   <igx-tab-item 
     label="Tab 3" 
-    icon="radio_button_checked"
+    icon="radio-button_checked"
     routerLink="view3"
     routerLinkActive 
     #rla3="routerLinkActive"

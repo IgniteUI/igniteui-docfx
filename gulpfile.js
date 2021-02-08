@@ -1,25 +1,22 @@
-const path = require('path');
-const del = require('del');
-const {dest, series, src, watch, parallel} = require('gulp');
-const browserSync = require('browser-sync').create();
-const sass = require('gulp-sass');
-const autoprefixer = require('gulp-autoprefixer');
-const argv = require('yargs').argv;
-const fs = require('fs');
-const environmentVariablesPreConfig = require('./node_modules/igniteui-docfx-template/post-processors/PostProcessors/EnvironmentVariables/preconfig.json');
-const fileinclude = require('gulp-file-include');
-const slash = require("slash");
-const { exec, spawnSync } = require('child_process');
 
+const fs = require('fs');
+const replace = require('gulp-replace');
+const fileinclude = require('gulp-file-include');
+const slash = require('slash');
+const {dest, series, src, watch, parallel} = require('gulp');
+const { buildDocfx } = require('igniteui-docfx-template');
+const path = require('path');
+const browserSync = require('browser-sync').create();
+const argv = require('yargs').argv;
 const LANG = argv.lang === undefined ? "en" : argv.lang;
+
 const DOCFX_BASE = {
     en: './en',
     jp: './jp',
     kr: './kr'
 };
 const DOCFX_PATH = `${DOCFX_BASE[LANG]}`;
-const DOCFX_CONF = `${DOCFX_PATH}/docfx.json`;
-const DOCFX_TEMPLATE = slash(path.join(__dirname, 'node_modules', 'igniteui-docfx-template', 'template'));
+const DOCFX_TEMPLATE_GLOBAL = slash(path.join(__dirname, 'node_modules', 'igniteui-docfx-template', 'template', 'bundling.global.json'));
 const DOCFX_SITE = `${DOCFX_PATH}/_site`;
 const DOCFX_ARTICLES = `${DOCFX_PATH}/components`;
 const gridsConfigs = {
@@ -35,7 +32,7 @@ const gridsConfigs = {
   },
   treeGrid: {
       igPath: '/treegrid',
-      igMainTopic: 'tree_grid',
+      igMainTopic: 'tree-grid',
       igObjectRef: "treeGrid",
       igDemoBasePath: "tree-grid",
       igComponent: "Tree Grid",
@@ -45,7 +42,7 @@ const gridsConfigs = {
   },
   hierarchicalGrid: {
       igPath: '/hierarchicalgrid',
-      igMainTopic: 'hierarchical_grid',
+      igMainTopic: 'hierarchical-grid',
       igObjectRef: "hierarchicalGrid",
       igDemoBasePath: "hierarchical-grid",
       igComponent: "Hierarchical Grid",
@@ -54,33 +51,6 @@ const gridsConfigs = {
       igSelector: "igx-hierarchical-grid"
     }
   };
-  
-  const cleanup = () => {
-    return del(`${DOCFX_SITE}`);
-  };
-  
-  const environmentVariablesConfig = (done) => {
-    var environmentVariablesConfig = JSON.parse(JSON.stringify(environmentVariablesPreConfig));
-    
-    if (process.env.NODE_ENV) {
-      environmentVariablesConfig.environment = process.env.NODE_ENV.trim();
-    }
-    
-    environmentVariablesConfig.variables =
-    environmentVariablesConfig.variables[LANG.toLowerCase().trim()][
-      environmentVariablesConfig.environment
-    ];
-    
-    if (!fs.existsSync(`${DOCFX_SITE}`)) {
-      fs.mkdirSync(`${DOCFX_SITE}`);
-    }
-    
-    fs.writeFileSync(
-      `${DOCFX_SITE}/${environmentVariablesConfig._configFileName}`,
-      JSON.stringify(environmentVariablesConfig)
-      );
-      done();
-    };
     
 const fileInclude = (grid) => {
   return src([DOCFX_ARTICLES + '/grids_templates/*.md'])
@@ -112,28 +82,22 @@ const generateHierarchicalGridsTopics = () => {
   return fileInclude(gridsConfigs.hierarchicalGrid);
 };
 
-const  styles = () => {
-  return src(`${DOCFX_TEMPLATE}/styles/sass/main.scss`)
-        .pipe(sass().on('error', sass.logError))
-        .pipe(
-            autoprefixer({
-                overrideBrowserslist: ['last 2 versions'],
-                cascase: false
-            })
-        )
-        .pipe(dest(`${DOCFX_TEMPLATE}/styles/css`));
-};
+const buildSite = () => {
+  return buildDocfx({
+    siteDir: DOCFX_SITE,
+    projectDir: DOCFX_PATH,
+    environment: process.env.NODE_ENV ? process.env.NODE_ENV.trim() : null
+  });
+}
 
-const buildSite = (done) => {
-    exec(`docfx build ${DOCFX_CONF}`, (err, stdout, stderr) => {
-      console.log(stdout);
-      console.log(stderr);
-      done(err);
-    });
+const removeHTMLExtensionFromSiteMap = () => {
+  return src([DOCFX_SITE + '/sitemap.xml'])
+      .pipe(replace(/\.html/g, ''))
+      .pipe(dest(DOCFX_SITE));
 };
 
 const watchFiles = (done) => {
-    
+
     const excluded = [
         `!${DOCFX_ARTICLES}/grid/**`,
         `!${DOCFX_ARTICLES}/treegrid/**`,
@@ -144,20 +108,19 @@ const watchFiles = (done) => {
     const included = [
         `${DOCFX_ARTICLES}/grid/grid.md`,
         `${DOCFX_ARTICLES}/grid/groupby.md`,
-        `${DOCFX_ARTICLES}/grid/paste_excel.md`,
-        `${DOCFX_ARTICLES}/grid/master_detail.md`,
-        `${DOCFX_ARTICLES}/grid/selection_based_aggregates.md`,
-        `${DOCFX_ARTICLES}/treegrid/tree_grid.md`,
+        `${DOCFX_ARTICLES}/grid/paste-excel.md`,
+        `${DOCFX_ARTICLES}/grid/master-detail.md`,
+        `${DOCFX_ARTICLES}/grid/selection-based-aggregates.md`,
+        `${DOCFX_ARTICLES}/treegrid/tree-grid.md`,
         `${DOCFX_ARTICLES}/treegrid/aggregations.md`,
-        `${DOCFX_ARTICLES}/treegrid/load_on_demand.md`,
-        `${DOCFX_ARTICLES}/hierarchicalgrid/hierarchical_grid.md`,
-        `${DOCFX_ARTICLES}/hierarchicalgrid/load_on_demand.md`
+        `${DOCFX_ARTICLES}/treegrid/load-on-demand.md`,
+        `${DOCFX_ARTICLES}/hierarchicalgrid/hierarchical-grid.md`,
+        `${DOCFX_ARTICLES}/hierarchicalgrid/load-on-demand.md`
     ];
 
     // watch([`${DOCFX_TEMPLATE}/**/*`, `!${DOCFX_TEMPLATE}/styles/css`], series(build));
     watch([
-      `${DOCFX_TEMPLATE}/**/*`,
-      `!${DOCFX_TEMPLATE}/styles/css/main.css`,
+      `${DOCFX_TEMPLATE_GLOBAL}`,
       `${DOCFX_PATH}/components/*.md`,
       `${DOCFX_PATH}/general/**/*.md`,
       `${DOCFX_PATH}/themes/*.md`,
@@ -197,14 +160,11 @@ const  browserSyncReload = (done) => {
     done();
 };
 
-const postProcessorConfigs = series(cleanup, environmentVariablesConfig);
 const build = series(
-  styles, 
-  postProcessorConfigs, 
   parallel(generateGridsTopics, generateTreeGridsTopics, generateHierarchicalGridsTopics), 
-  buildSite);
+  buildSite, removeHTMLExtensionFromSiteMap);
 
-const buildTravis = series(styles, postProcessorConfigs, generateGridsTopics);
+const buildTravis = series(generateGridsTopics);
 
 exports.buildTravis = buildTravis;
 exports.build = build;

@@ -1,18 +1,21 @@
 ---
-title: Combo Component
-_description: The igx-combo provides a powerful input, combining features of the basic HTML input, select and the IgniteUI for Angular igx-drop-down controls.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Combo components, Angular Combo controls
+title: Angular Combobox Component | Data binding combobox | Infragistics
+_description: The Ignite UI for Angular ComboBox provides a powerful input, combining features of the basic HTML input, select, filtering and custom drop-down lists. Try it for FREE
+_keywords: angular combobox, ignite ui for angular, infragistics
 ---
 
-# Combo
-<p class="highlight">
-The Ignite UI for Angular Combo Component provides easy filtering, single and multiple selection of items, grouping and adding custom values to a dropdown list.
-</p>
+# Angular ComboBox Overview
 
-## Demo
+The Angular ComboBox component represents a drop-down list that provides editable functionalities, allowing users to choose an option from a predefined list. The Ignite UI for Angular Combo Component provides also filtering capabilities, single and multiple selections of items, grouping and adding custom values to a dropdown list. It can be used as an alternative to the HTML select tag and has several out-of-the-box features such as data binding (local and remote), filtering, grouping, custom templates, custom values, and more.
+
+
+## Angular ComboBox Example
+
+In this Angular ComboBox example, you can see how users can filter items and perform single or multiple selection with the provided data. In addition, the ComboBox expose keyboard navigation and custom styling capabilities.
+
 <div class="divider--half"></div>
 <div class="sample-container loading" style="height: 400px;">
-    <iframe id="combo-main-sample" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/lists/combo-main" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="combo-main-sample" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/lists/combo-main" onload="onSampleIframeContentLoaded(this);" alt="Angular combobox example as an alt text" alt="Angular ComboBox Example"></iframe>
 </div>
 <p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>
@@ -20,16 +23,16 @@ The Ignite UI for Angular Combo Component provides easy filtering, single and mu
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="combo-main-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-## Features
+## Angular ComboBox Features
 
 The combo control exposes the following features:
-    - Data Binding - local data and [remote data](combo_remote.md)
-    - [Value Binding](combo_features.md#value-binding)
-    - [Filtering](combo_features.md#filtering)
-    - [Grouping](combo_features.md#grouping)
-    - [Custom Values](combo_features.md#custom-values)
-    - [Templates](combo_templates.md)
-    - Integration with [Template Driven Forms](input_group.md) and [Reactive Forms](input_group_reactive_forms.md)
+    - Data Binding - local data and [remote data](combo-remote.md)
+    - [Value Binding](combo-features.md#value-binding)
+    - [Filtering](combo-features.md#filtering)
+    - [Grouping](combo-features.md#grouping)
+    - [Custom Values](combo-features.md#custom-values)
+    - [Templates](combo-templates.md)
+    - Integration with [Template Driven Forms](input-group.md) and [Reactive Forms](input-group-reactive-forms.md)
 
 ## Usage
 
@@ -247,7 +250,7 @@ When igxCombo is opened, allow custom values are enabled and add item button is 
 - `ArrowUp` focus will be moved back to the last list item or if the list is empty, will be moved to the search input.
 
 
-## Styling
+## Angular ComboBox Styling
 
 Using the [Ignite UI for Angular Theming](themes/index.md), we can greatly alter the drop-down appearance. First, in order for us to use the functions exposed by the theme engine, we need to import the `index` file in our style file: 
 
@@ -290,7 +293,7 @@ $custom-checkbox-theme: igx-checkbox-theme(
 );
 ```
 
-### Using CSS variables 
+### Using CSS Variables 
 
 The last step is to include the component's theme.
 
@@ -319,7 +322,10 @@ If the component is using the [Emulated](themes/component-themes.md#view-encapsu
 ```
 
 > [!NOTE]
-> The [IgxCombo]({environment:angularApiUrl}/classes/igxcombocomponent.html) component uses the [IgxOverlay](overlay_main.md) service to hold and display the combo items list container. To properly scope your styles you might have to use an [OverlaySetting.outlet]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet). For more details check the [IgxOverlay Styling Guide](overlay_styling.md).
+> The [IgxCombo]({environment:angularApiUrl}/classes/igxcombocomponent.html) component uses the [IgxOverlay](overlay.md) service to hold and display the combo items list container. To properly scope your styles you might have to use an [OverlaySetting.outlet]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet). For more details check the [IgxOverlay Styling Guide](overlay-styling.md).
+
+> [!Note]
+> The default `type` of the IgxCombo is `box` unlike the [IgxSelect](select.md) where it is `line`.
 
 ### Demo
 <div class="sample-container loading" style="height:410px">
@@ -339,7 +345,7 @@ If the component is using the [Emulated](themes/component-themes.md#view-encapsu
 - The combo does not have input for sizing its height. In the future, the [IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) component will expose an option that allows custom sizing, and then the [IgxCombo]({environment:angularApiUrl}/classes/igxcombocomponent.html) will use the same functionality for proper styling and better consistency.
 
 > [!NOTE]
-> The `igxCombo` uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for the combo. For more details see [igxForOf Known Issues](for_of.html#known-limitations) section.
+> The `igxCombo` uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for the combo. For more details see [igxForOf Known Issues](for-of.html#known-limitations) section.
 
 ## API Summary
 <div class="divider--half"></div>
@@ -357,12 +363,12 @@ Additional components and/or directives with relative APIs that were used:
 ## Additional Resources
 <div class="divider--half"></div>
 
-* [Combo Features](combo_features.md)
-* [Combo Remote Binding](combo_remote.md)
-* [Combo Templates](combo_templates.md)
-* [Template Driven Forms Integration](input_group.md)
-* [Reactive Forms Integration](input_group_reactive_forms.md)
-* [Cascading Scenario](combo_cascading.md)
+* [Combo Features](combo-features.md)
+* [Combo Remote Binding](combo-remote.md)
+* [Combo Templates](combo-templates.md)
+* [Template Driven Forms Integration](input-group.md)
+* [Reactive Forms Integration](input-group-reactive-forms.md)
+* [Cascading Scenario](combo-cascading.md)
 
 Our community is active and always welcoming to new ideas.
 

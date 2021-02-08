@@ -19,7 +19,7 @@ The [`IgxTextHighlight`]({environment:angularApiUrl}/classes/igxtexthighlightdir
 <div class="divider--half"></div>
 
 > [!NOTE]
-> To start using Ignite UI for Angular components in your own projects, make sure you have configured all necessary dependencies and have performed the proper setup of your project. You can learn how to do this in the [**installation**](general/getting_started.md) topic.
+> To start using Ignite UI for Angular components in your own projects, make sure you have configured all necessary dependencies and have performed the proper setup of your project. You can learn how to do this in the [**installation**](general/getting-started.md) topic.
 
 ### Usage
 
@@ -41,7 +41,7 @@ import { IgxButtonModule, IgxInputGroupModule,
 export class AppModule {}
 ```
 
-Then, lets create a search box which we can use to highlight different parts of the text. We will use Ignite UI for Angular's [InputGroup](input_group.md) component in which we will add a text input with buttons for clear matches, find next and find previous and a button for specifying whether the search will be case sensitive or not. Also it has a label for how many matches we have found.
+Then, lets create a search box which we can use to highlight different parts of the text. We will use Ignite UI for Angular's [InputGroup](input-group.md) component in which we will add a text input with buttons for clear matches, find next and find previous and a button for specifying whether the search will be case sensitive or not. Also it has a label for how many matches we have found.
 
 ```html
 <div class="search-container">
@@ -177,10 +177,10 @@ Then we need to add the following methods which will allow the user to apply the
 If the sample is configured properly, the final result should look like that:
 
 <div class="sample-container loading" style="height: 260px;">
-    <iframe id="text-highlight-1-iframe" data-src='{environment:demosBaseUrl}/data-display/text-highlight-1' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+    <iframe id="text-highlight-1-iframe-2" data-src='{environment:demosBaseUrl}/data-display/text-highlight-1' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="text-highlight-1-iframe"
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="text-highlight-1-iframe-2"
     data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
 </div>
 

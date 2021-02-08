@@ -9,10 +9,10 @@ mentionedTypes: ['XamDataChart','ScatterAreaSeries','ScatterContourSeries']
 
 This topic explains, with code examples, how to use  [`IgxScatterAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterareaseriescomponent.html) in the Angular data chart component. This series draws a colored surface based on a triangulation of X and Y data with a numeric value assigned to each point. This type of series is useful for rendering heat maps, magnetic field strength or Wi-Fi strength in an office. The [`IgxScatterAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterareaseriescomponent.html) works a lot like the [`IgxScatterContourSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscattercontourseriescomponent.html) except that it represents data as interpolated and colored surface instead of contour lines connecting data points with the same values.
 
-## Demo
+## Angular Scatter Area Chart Example
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="data-chart-type-area-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-scatter-area-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="data-chart-type-area-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-scatter-area-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Scatter Area Chart Example"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-area-series-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
@@ -43,14 +43,7 @@ public dataSource: any[] = SampleScatterData.create();
 
 ## Required Modules
 
-The scatter area series requires the following modules<!-- Angular, React, WebComponents -->.<!-- end: Angular, React, WebComponents --><!-- Blazor --> to be registered in your application entry point:
-
--   DataChartCoreModule        
--   DataChartScatterCoreModule
--   DataChartScatterModule       
--   DataChartInteractivityModule
--   ScatterAreaSeriesModule
-    <!-- end: Blazor -->
+The scatter area series requires the following modules:
 
 ```ts
 // axis' modules:

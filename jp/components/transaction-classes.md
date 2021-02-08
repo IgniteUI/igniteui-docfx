@@ -1,4 +1,4 @@
-﻿---
+---
 title: 一括編集 | トランザクション サービス | Ignite UI for Angular | インフラジスティックス
 _description: コンポーネントで Angular CRUD 操作を実行するときにバッチ編集を実装できるトランザクション サービスクラスの階層について学びます。
 _keywords: batch editing, igniteui for angular, infragistics, 一括編集,
@@ -28,9 +28,9 @@ _language: ja
 [`igxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html) には元に戻すスタックがないため、元に戻す/やり直しの機能は提供されません。
 
 以下のトピックには、行編集を有効にするために [`igxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html) を使用する方法の詳細な例が含まれます。
-* [Grid 行編集](grid/row_editing.md)
-* [Tree Grid 行編集](treegrid/row_editing.md)
-* [Hierarchical Grid 行編集](hierarchicalgrid/row_editing.md)
+* [Grid 行編集](grid/row-editing.md)
+* [Tree Grid 行編集](treegrid/row-editing.md)
+* [Hierarchical Grid 行編集](hierarchicalgrid/row-editing.md)
 
 ## igxTransactionService および igxHierarchicalTransactionService に関する一般情報
 
@@ -42,18 +42,18 @@ _language: ja
 
 ## igxTransactionService の使用
 
-[`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) は、 [`igxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html) を拡張します。
+[`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) は、[`igxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html) を拡張します。
 
 バッチ編集機能を有効にするには、[`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) を igxGrid またはその親コン​​ポーネントのプロバイダーとして定義します。
 
 [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) には元に戻すスタックが含まれ、元に戻す/やり直し機能を利用できます。Undo スタックは、実際にはトランザクションの配列を含む配列です。[`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) 使用時に、元に戻すスタックにトランザクションがある場合は、[`canUndo`]({environment:angularApiUrl}/classes/igxtransactionservice.html#canundo) アクセサーを確認できます。ある場合 [`undo`]({environment:angularApiUrl}/classes/igxtransactionservice.html#undo) メソッドを使用して最後のトランザクションを削除し、[`redo`]({environment:angularApiUrl}/classes/igxtransactionservice.html#redo) で最後に元に戻したトランザクションを適用します。
 
 以下のトピックで、バッチ編集を使用した igxGrid の実装方法の詳細な例を見つけることができます。
-* [Grid 一括編集](grid/batch_editing.md)
+* [Grid 一括編集](grid/batch-editing.md)
 
 ## igxHierarchicalTransactionService の使用
 
-[`igxHierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) は、 [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) を拡張します。
+[`igxHierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) は、[`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) を拡張します。
 
 [`igxHierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) は、[`igxHierarchicalGrid`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html) および [`igxTreeGrid`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)  の親と子の間の関係を処理するように設計されているため、ADD トランザクションを追加するときに予想される場所に新しいレコードが追加されます。また、親レコードを削除すると、その子はデータ型とグリッドの [`cascadeOnDelete`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#cascadeondelete) プロパティに基づいて、上位レベルの階層に昇格されるか、親とともに削除されます。
 
@@ -68,8 +68,8 @@ _language: ja
 ```
 
 以下は、[`igxTreeGrid`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html) と [`igxHierarchicalGrid`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html) でバッチ編集を実装する方法の詳細な例を含むトピックです。
-* [Tree Grid 一括編集](treegrid/batch_editing.md)
-* [Hierarchical Grid 一括編集](hierarchicalgrid/batch_editing.md)
+* [Tree Grid 一括編集](treegrid/batch-editing.md)
+* [Hierarchical Grid 一括編集](hierarchicalgrid/batch-editing.md)
 
 ## その他のリソース
 <div class="divider--half"></div>
@@ -77,6 +77,6 @@ _language: ja
 * [トランザクション サービス API]({environment:angularApiUrl}/interfaces/transactionservice.html)
 * [トランザクション サービス](transaction.md)
 * [トランザクション サービスの使用方法](transaction-how-to-use.md)
-* [Grid 一括編集](grid/batch_editing.md)
-* [Tree Grid 一括編集](treegrid/batch_editing.md)
-* [Hierarchical Grid 一括編集](hierarchicalgrid/batch_editing.md)
+* [Grid 一括編集](grid/batch-editing.md)
+* [Tree Grid 一括編集](treegrid/batch-editing.md)
+* [Hierarchical Grid 一括編集](hierarchicalgrid/batch-editing.md)

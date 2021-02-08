@@ -8,10 +8,10 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 The [`IgxTextHighlight`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html) directive in Ignite UI for Angular is used to highlight parts of a text, providing options for case sensitive searches and to highlight only exact matches. It also allows the developer to keep an active highlight, which can be any of the already highlighted parts.
 
-## Demo   
+## Angular TextHighlight Directive Example   
 
 <div class="sample-container loading" style="height: 260px;">
-    <iframe id="text-highlight-1-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/data-display/text-highlight-1" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="text-highlight-1-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/data-display/text-highlight-1" onload="onSampleIframeContentLoaded(this);" alt="Angular TextHighlight Directive Example"></iframe>
 </div>
 <p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>
@@ -38,7 +38,7 @@ import { IgxButtonModule, IgxInputGroupModule,
 export class AppModule {}
 ```
 
-Let's create a search box that we can use to highlight different parts of the text. We will use Ignite UI for Angular's [InputGroup](input_group.md) component in which we will add a text input with buttons for clear matches, find next, find previous, and a button for specifying whether the search will be case-sensitive or not. Also it has a label for how many matches we have found.
+Let's create a search box that we can use to highlight different parts of the text. We will use Ignite UI for Angular's [InputGroup](input-group.md) component in which we will add a text input with buttons for clear matches, find next, find previous, and a button for specifying whether the search will be case-sensitive or not. Also it has a label for how many matches we have found.
 
 ```html
 <div class="search-container">
@@ -174,11 +174,11 @@ private find(increment: number) {
 If the sample is configured properly, the final result should look like that:
 
 <div class="sample-container loading" style="height: 260px;">
-    <iframe id="text-highlight-1-iframe" data-src='{environment:demosBaseUrl}/data-display/text-highlight-1' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+    <iframe id="text-highlight-1-iframe-2" data-src='{environment:demosBaseUrl}/data-display/text-highlight-1' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="text-highlight-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="text-highlight-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="text-highlight-1-iframe-2" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="text-highlight-1-iframe-2" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
 <div class="divider"></div>

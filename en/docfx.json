@@ -1,15 +1,6 @@
 {
-    "metadata": [{
-        "src": [{
-            "files": ["src/**.csproj"],
-            "exclude": ["**/obj/**", "**/bin/**", "_site/**"]
-        }],
-        "dest": "api"
-    }],
     "build": {
-        "content": [{
-                "files": ["api/**.yml", "api/index.md"]
-            },
+        "content": [
             {
                 "files": [
                     "components/**.md",
@@ -19,25 +10,103 @@
                     "toc.yml",
                     "*.md"
                 ],
-                "exclude": ["obj/**", "_site/**", "components/grids_templates/**"]
+                "exclude": [
+                    "obj/**",
+                    "_site/**",
+                    "components/grids_templates/**"
+                ]
             }
         ],
-        "resource": [{
-            "files": ["images/**"],
-            "exclude": ["obj/**", "_site/**"]
-        }],
-        "overwrite": [{
-            "files": ["apidoc/**.md"],
-            "exclude": ["obj/**", "_site/**"]
-        }],
+        "resource": [
+            {
+                "files": [
+                    "images/**",
+                    "web.config"
+                ],
+                "exclude": [
+                    "obj/**",
+                    "_site/**"
+                ]
+            }
+        ],
+        "overwrite": [
+            {
+                "files": [
+                    "apidoc/**.md"
+                ],
+                "exclude": [
+                    "obj/**",
+                    "_site/**"
+                ]
+            }
+        ],
         "dest": "_site",
-        "globalMetadataFiles": ["global.json", "../node_modules/igniteui-docfx-template/template/bundling.global.json"],
+        "globalMetadataFiles": [
+            "global.json",
+            "../node_modules/igniteui-docfx-template/template/bundling.global.json"
+        ],
         "fileMetadataFiles": [],
-        "template": ["../node_modules/igniteui-docfx-template/template"],
-        "postProcessors": ["SetEnvironmentVariables"],
+        "template": [
+            "../node_modules/igniteui-docfx-template/template"
+        ],
+        "postProcessors": [
+            "SetEnvironmentVariables"
+        ],
         "noLangKeyword": false,
         "keepFileLink": false,
         "cleanupCacheHistory": true,
-        "disableGitFeatures": true
+        "disableGitFeatures": true,
+        "sitemap": {
+            "baseUrl": "https://www.infragistics.com/products/ignite-ui-angular/angular/",
+            "changefreq": "weekly",
+            "priority": 0.7,
+            "fileOptions":{
+                "**/grid/**": {
+                    "priority": 0.8
+                },
+                "**/grid.md": {
+                    "priority": 0.9
+                },
+                "**/hierarchical-grid.md": {
+                    "priority": 0.9
+                },
+                "**/tree-grid.md": {
+                    "priority": 0.9
+                },
+                "**/grids-and-lists.md": {
+                    "priority": 0.9
+                },
+                "**/combo.md": {
+                    "priority": 0.9
+                },
+                "**/spreadsheet_overview.md": {
+                    "priority": 0.9
+                },
+                "**/category-chart.md": {
+                    "priority": 0.9
+                },
+                "**/data-chart.md": {
+                    "priority": 0.9
+                },
+                "**/financial-chart.md": {
+                    "priority": 0.9
+                },
+                "**/ignite-ui-licensing.md": {
+                    "priority": 0.9
+                },
+                "**/getting-started.md": {
+                    "priority": 0.9
+                },
+                "**/accessibility-compliance.md": {
+                    "priority": 0.9
+                },
+                "**/ssr-rendering.md": {
+                    "priority": 0.9
+                },
+                "**/data-analysis.md": {
+                    "priority": 0.9
+                }
+            }
+        }
     }
 }

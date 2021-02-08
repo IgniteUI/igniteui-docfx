@@ -1,18 +1,29 @@
+@@if(igxName==='IgxGrid') {
 ---
 title: Angular Grid Toolbar | Material Table | Ignite UI for Angular | infragistics 
 _description: Understand how to use the Ignite UI for Angular Toolbar for essential UI operations. The Material UI table toolbar hosts different UI controls related to different features.
 _keywords: angular toolbar, igniteui for angular, infragistics
 ---
+}
+
+@@if(igxName!=='IgxGrid') {
+---
+title: Angular Grid Toolbar | Material Table | Ignite UI for Angular | infragistics 
+_description: Understand how to use the Ignite UI for Angular Toolbar for essential UI operations. The Material UI table toolbar hosts different UI controls related to different features.
+_keywords: angular toolbar, igniteui for angular, infragistics
+_canonicalLink: grid/toolbar
+---
+}
 
 # @@igComponent Toolbar container for UI operations
 
 The @@igComponent in Ignite UI for Angular provides an [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) which is essentially a container for **UI** operations. The Angular toolbar is located at the top of the Angular component, i.e the @@igComponent and it matches its horizontal size. The toolbar container hosts different UI controls which are related to some of the @@igComponent's features - column hiding, column pinning, excel exporting, etc and supports Angular events.
 
-### Demo
+## Angular Toolbar Grid Example
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:420px">
-    <iframe id="grid-toolbar-sample-1-iframe" src='{environment:demosBaseUrl}/grid/grid-toolbar-sample-1' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-toolbar-sample-1-iframe" src='{environment:demosBaseUrl}/grid/grid-toolbar-sample-1' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular Toolbar Grid Example"></iframe>
 </div>
 <p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>
@@ -22,7 +33,7 @@ The @@igComponent in Ignite UI for Angular provides an [`IgxGridToolbarComponent
 }
 @@if (igxName === 'IgxTreeGrid') {
 <div class="sample-container loading" style="height:420px">
-    <iframe id="treegrid-toolbar-sample-4-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-toolbar-4' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="treegrid-toolbar-sample-4-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-toolbar-4' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular Toolbar Grid Example"></iframe>
 </div>
 <p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>
@@ -32,7 +43,7 @@ The @@igComponent in Ignite UI for Angular provides an [`IgxGridToolbarComponent
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 <div class="sample-container loading" style="height:510px">
-    <iframe id="hierarchical-grid-toolbar-sample-1-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-toolbar-title' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="hierarchical-grid-toolbar-sample-1-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-toolbar-title' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular Toolbar Grid Example"></iframe>
 </div>
 <p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>
@@ -41,51 +52,78 @@ The @@igComponent in Ignite UI for Angular provides an [`IgxGridToolbarComponent
 </div>
 }
 
-The toolbar is shown using the @@igComponent's [`showToolbar`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#showtoolbar) property - just set it to **true**. The toolbar supports a textual title which is left aligned and its content is set using the @@igComponent's [`toolbarTitle`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#toolbartitle) property. The following code snippet demonstrates how to enable a toolbar and set its title:
+You can enable the toolbar for @@igComponent by inserting the `igx-grid-toolbar` component between the @@igComponent tags.
+Additional features for the toolbar are enabled by using the default toolbar UI components or creating your own.
+For a comprehensive look over the default UI components and how to enabled them continue reading the **Features** section
+below.
+The following code snippet demonstrates how to enable a toolbar and set its title:
 
 @@if (igxName === 'IgxGrid') {
 ```html
-<igx-grid [data]="data" [autoGenerate]="true" height="400px" width="600px"
-    [showToolbar]="true"
-    toolbarTitle="Grid Title">
+<igx-grid [data]="data" [autoGenerate]="true">
+    <igx-grid-toolbar>
+        <igx-grid-toolbar-title>Grid Title</igx-grid-toolbar-title>
+    </igx-grid-toolbar>
 </igx-grid>
 ```
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```html
-<igx-tree-grid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="true" height="400px" width="900px"
-    [showToolbar]="true"
-    toolbarTitle="Tree Grid Toolbar">
+<igx-tree-grid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="true">
+    <igx-grid-toolbar>
+        <igx-grid-toolbar-title>Tree Grid Toolbar</igx-grid-toolbar-title>
+    </igx-grid-toolbar>
 </igx-tree-grid>
 ```
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid #hierarchicalGrid class="hgrid" [data]="localdata" [showToolbar]="true" toolbarTitle="Singers" 
-     [height]="'500px'" [width]="'800px'">
+<igx-hierarchical-grid [data]="data">
+    <igx-grid-toolbar>
+        <igx-grid-toolbar-title>Hierarchical Grid Toolbar</igx-grid-toolbar-title>
+    </igx-grid-toolbar>
 </igx-hierarchical-grid>
 ```
 }
 
-## Features
-
-The toolbar can be configured to allow column hiding, column pinning and exporting data to MS Excel and CSV. 
-You can enable each feature independently by setting its dedicated boolean property to true:
-- for column hiding set [`columnHiding`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnhiding) to **true**
-- for column pinning set [`columnPinning`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnpinning) to **true**
-- for MS Excel export set the @@igComponent's [`exportExcel`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#exportexcel) property to **true**
-- for CSV export set the @@igComponent's [`exportCsv`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#exportcsv) property to **true**
-
 @@if (igxName === 'IgxHierarchicalGrid') {
-> [!NOTE]
-> When exporting the Hierarchical Grid or any of its child grids down the hierarchy, the exported data will be a flat collection of rows
-> that belong to the respective grid (the child grids will not be included in the exported data).
+
+## Toolbar with child grids
+Due to certain limitations in how the child grids of an IgxHierarchicalGrid are implemented and how DI scope works, there is a caveat when
+using the toolbar in the scope of child grids. When defining a toolbar component inside the `igx-row-island` tags, always make sure
+to use the IgxGridToolbar directive on the toolbar itself and pass the provided grid instance as an input property to the toolbar itself.
+This will make sure you always have the correct grid instance in the scope of your template:
+
+```html
+<igx-hierarchical-grid>
+    ...
+    <igx-row-island>
+        <!--
+            You can name the binding from igxGridToolbar however you want. Just make sure to use
+            it inside the template if you need to access the grid instance.
+        -->
+        <igx-grid-toolbar [grid]="gridRef" *igxGridToolbar="let gridRef">
+            <igx-grid-toolbar-title>Child toolbar {{ gridRef.parentIsland.level }}</igx-grid-toolbar-title>
+        </igx-grid-toolbar>
+    </igx-row-island>
+    ...
+</igx-hierarchical-grid>
+```
+
 }
 
-There are also properties for configuring each button's text and they are listed in the API section below.
+## Features
+
+The toolbar is great at separating logic/interactions which affects the grid as a whole.
+Thus, it can be configured to provide default components for controlling, column hiding, column pinning,
+advanced filtering and exporting data from the grid.
+These features can be enabled independently from each other by following a pattern similar to the card component of
+the Ignite UI for Angular suite.
+Listed below are the main features of the toolbar with example code for each of them.
+
 
 @@if (igxName === 'IgxGrid') {
-<div class="sample-container loading" style="height:420px">
+<div class="sample-container loading" style="height:630px">
     <iframe id="grid-toolbar-sample-2-iframe" data-src='{environment:demosBaseUrl}/grid/grid-toolbar-sample-2' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <br/>
@@ -115,94 +153,154 @@ There are also properties for configuring each button's text and they are listed
 </div>
 }
 
-The following code snippet demonstrates how to enable all features of the toolbar:
 
-@@if (igxName === 'IgxGrid') {
+### Title
+Setting a title for the toolbar in your grid is achieved by using the [IgxGridToolbarTitleDirective]({environment:angularApiUrl}/classes/igxgridtoolbartitledirective.html).
+Users can provide anything from simple text to more involved templates.
 ```html
-<igx-grid [data]="data" [autoGenerate]="true" height="400px" width="600px"
-    [showToolbar]="true"
-    toolbarTitle="Grid Title"
-    [columnHiding]="true"
-    [columnPinning]="true"
-    [exportExcel]="true"
-    [exportCsv]="true"
-    exportText="Export"
-    exportExcelText="Export to Excel"
-    exportCsvText="Export to CSV">
-</igx-grid>
+<igx-grid-toolbar>
+    <igx-grid-toolbar-title>Grid toolbar title</igx-grid-toolbar-title>
+</igx-grid-toolbar>
 ```
-}
-@@if (igxName === 'IgxTreeGrid') {
+
+### Actions
+The toolbar exposes a [specific container]({environment:angularApiUrl}/classes/igxgridtoolbaractionsdirective.html) where users can place actions/interactions in relation to the parent grid.
+As with the title portion of the toolbar, users can provide anything inside that template part, including the default
+toolbar interaction components.
 ```html
-<igx-tree-grid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="true" height="400px" width="900px"
-    [showToolbar]="true"
-    toolbarTitle="Tree Grid Toolbar"
-    [columnHiding]="true"
-    [columnPinning]="true"
-    [exportExcel]="true"
-    [exportCsv]="true"
-    exportText="Export"
-    exportExcelText="Export to Excel"
-    exportCsvText="Export to CSV">
-</igx-tree-grid>
+<igx-grid-toolbar>
+    <igx-grid-toolbar-actions>
+        <button igxButton>Action</button>
+        <igx-select></igx-select>
+        ...
+    </igx-grid-toolbar-actions>
+</igx-grid-toolbar>
 ```
-}
+
+### Column pinning
+[This component]({environment:angularApiUrl}/classes/igxgridtoolbarpinningcomponent.html) provides the default UI for interacting with column pinning in the grid.
+The component is setup to work out of the box with the parent grid containing the toolbar as well as several input properties for customizing the UI, such as the component
+title, the placeholder for the component input and the height of the dropdown itself.
+
+```html
+<igx-grid-toolbar>
+    <igx-grid-toolbar-actions>
+        <igx-grid-toolbar-pinning
+            title="Grid pinned columns"
+            prompt="Filter column collection"
+            columnListHeight="400px"
+        >
+        </igx-grid-toolbar-pinning>
+    </igx-grid-toolbar-actions>
+</igx-grid-toolbar>
+```
+
+
+### Column hiding
+Similar to the pinning actions component, the [hiding component]({environment:angularApiUrl}/classes/igxgridtoolbarhidingcomponent.html) provides the default
+UI for interacting with column hiding.
+
+```html
+<igx-grid-toolbar>
+    <igx-grid-toolbar-actions>
+        <igx-grid-toolbar-hiding
+            title="Grid column hiding"
+            prompt="Filter column collection"
+            columnListHeight="400px"
+        >
+        </igx-grid-toolbar-hiding>
+    </igx-grid-toolbar-actions>
+</igx-grid-toolbar>
+```
+
+### Advanced filtering
+If advanced filtering is enabled in the grid, users can provide the [default component]({environment:angularApiUrl}/classes/igxgridtoolbaradvancedfilteringcomponent.html) for the
+advanced filtering feature. The component exposes a way to change the default text of the button.
+```html
+<igx-grid-toolbar>
+    <igx-grid-toolbar-actions>
+        <igx-grid-toolbar-advanced-filtering>Custom text for the toggle button</igx-grid-toolbar-advanced-filtering>
+    </igx-grid-toolbar-actions>
+</igx-grid-toolbar>
+```
+
+### Data exporting
+
 @@if (igxName === 'IgxHierarchicalGrid') {
-```html
- <igx-hierarchical-grid #hierarchicalGrid class="hgrid" [data]="localdata" [showToolbar]="true" toolbarTitle="Singers" 
-    [columnHiding]="true" [columnPinning]="true" [height]="'500px'" [width]="'100%'">
-...
-</igx-hierarchical-grid>
-```
+> [!NOTE]
+> When exporting the Hierarchical Grid or any of its child grids down the hierarchy, the exported data will be a flat collection of rows
+> belonging to their respective grid (the child grids will not be included in the exported data).
 }
 
-The export to MS Excel and the export to CSV features are using respectively the [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) and [`IgxCsvExporterService`]({environment:angularApiUrl}/classes/igxcsvexporterservice.html) as providers. If you need to use any of them you should specify them in the **providers** array of your **app.module.ts** file. For example the following code snippet demonstrates how to include all exporter services:
+As with the rest of the toolbar actions, exporting is provided through a toolbar [component]({environment:angularApiUrl}/classes/igxgridtoolbarexportercomponent.html) out of the box.
+The exporting component is using the respective service for the target data format ([Excel]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) [CSV]({environment:angularApiUrl}/classes/igxcsvexporterservice.html)). That means if the respective service is not provided through the dependency injection chain, the component
+won't be able to export anything.
+If you need a refresher on the DI in Angular, check the [official guide](https://angular.io/guide/dependency-injection). Here is a sample snippet showing how to enable
+all export services for your application.
 
 ```typescript
 // app.module.ts
 
-...
-import { IgxExcelExporterService, IgxCsvExporterService } from "igniteui-angular";
+import { IgxExcelExporterService, IgxCsvExporterService } from 'igniteui-angular';
 
 @NgModule({
-  providers: [ IgxExcelExporterService, IgxCsvExporterService ]
+    ...
+    providers: [IgxExcelExporterService, IgxCsvExporterService ]
 })
-
-export class AppModule {}
+export class AppModule { ... }
 ```
-@@if (igxName !== 'IgxHierarchicalGrid') {
-## Customizing the Export
 
-In addition to simply switching on and off the toolbar features, the export process can be further configured in the [`onToolbarExporting`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#ontoolbarexporting) event which is emitted when the user initiates the export process. This event exposes both the exporter and the exporter's options.
+The toolbar exporter component exposes several input properties for customizing both the UI and the exporting experience.
+These range from changing the display text, to enabling/disabling options in the dropdown to customizing the name of the
+generated file. For full reference, consult the [API documentation]({environment:angularApiUrl}/classes/igxgridtoolbarexportercomponent.html) for the toolbar exporter component.
+
+Here is a snippet showing some of the options which can be customized through the Angular template:
+
+```html
+<igx-grid-toolbar>
+    <igx-grid-toolbar-actions>
+        <igx-grid-toolbar-exporter
+            <!-- If active, enables the csv export entry in the dropdown UI -->
+            [exportCSV]="csvExportEnabled"
+            <!-- If active, enables the excel export entry in the dropdown UI -->
+            [exportExcel]="excelExportEnabled"
+            <!-- The name of the generated export file without the file extension -->
+            filename="exported_data"
+        >
+            Custom text for the exporter button
+            <span excelText>Custom text for the excel export entry</span>
+            <span csvText>Custom text for the CSV export entry</span>
+        </igx-grid-toolbar-exporter>
+    </igx-grid-toolbar-actions>
+</igx-grid-toolbar>
+```
+
+@@if (igxName !== 'IgxHierarchicalGrid') {
+
+In addition to changing the exported filename, the user can further configure the exporter options by waiting for the (onToolbarExporting)[environment:angularApiUrl}/classes/@@igTypeDoc.html#ontoolbarexporting] event and customizing the options entry in the event properties.
 
 > [!NOTE]
 > By default when exporting to CSV the exporter exports using a comma separator and uses a '.csv' extension for the output file.
 > You can customize these exporting parameters by subscribing to events of the exporter or changing the values of the exporter options fields.
 > You can also cancel the export process by setting the cancel field of the event args to true.
 
-The following code snippet demonstrates how to subscribe to the [`onToolbarExporting`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#ontoolbarexporting) event and cancel the default exporting process.
+The following code snippet demonstrates subscribing to the toolbar exporting event and configuring the exporter options:
 
 ```html
-<@@igSelector ... (onToolbarExporting)="toolbarExportingHandler($event)"></@@igSelector>
+<@@igSelector (onToolbarExporting)="configureExport($event)" ></@@igSelector>
 ```
 
 ```typescript
-import { IgxExcelExporterService, IgxCsvExporterService } from "igniteui-angular";
+configureExport(args: IGridToolbarExportEventArgs) {
+    const options: IgxExporterOptionsBase = args.options;
 
-...
-
-public toolbarExportingHandler(args) {
-    // You can customize the exporting from this event
-    const options: IgxExporterOptionsBase = args.options ;
-    options.fileName = "Custom Title";
+    options.fileName = `Report_${new Date().toDateString()}`;
 
     if (options instanceof IgxExcelExporterOptions) {
-        const excelOptions = options as IgxExcelExporterOptions;
-        excelOptions.columnWidth = 10;
+        options.columnWidth = 10;
     } else {
-        const csvOptions = options as IgxCsvExporterOptions;
-        csvOptions.fileType = CsvFileTypes.TSV;
-        csvOptions.valueDelimiter = "\t";
+        options.fileType = CsvFileTypes.TSV;
+        options.valueDelimiter = "\t";
     }
 
     args.exporter.onColumnExport.subscribe((columnArgs: IColumnExportingEventArgs) => {
@@ -246,7 +344,11 @@ The following sample demonstrates how to customize the exported files:
 
 ## Exporting Indicator
 
-Sometimes when the grid has a lot of data, exporting that data to Excel or CSV can take some time. That's why we added the exporting indicator at the bottom of the toolbar, which tells whether an exporting is in progress. If the exporting process takes longer than 500ms, the indicator will appear at the bottom of the toolbar and hide once the exporting finishes. The sample below contains big amount of data, in order to increase the time needed for data export which will cause exporting indicator to appear:
+When using the default toolbar exporter component, whenever an export operation takes place the toolbar will show a progress indicator while the operation is in progress.
+Moreover, users can set the toolbar [showProgress]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html#showprogress) property and use for their own long running operations
+or just as another way to signify an action taking place in the grid.
+The sample belows uses has significant amount of data, in order to increase the time needed for data export so the progressbar can be seen. Additionally it has another button
+that simulates a long running operation in the grid:
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height: 370px;">
@@ -270,30 +372,44 @@ Sometimes when the grid has a lot of data, exporting that data to Excel or CSV c
 </div>
 <div class="divider--half"></div>
 }
-}
 
-## Custom Content Template
+## Custom Content
 
-If you need to add some application specific UI to the toolbar (like custom buttons for example) you may create an ng-template and mark it with the [`igxToolbarCustomContent`]({environment:angularApiUrl}/classes/igxgridtoolbarcustomcontentdirective.html) directive. The following code snippet demonstrates how to define such custom template:
+> [!NOTE]
+> This replaces the old toolbar template directive. If you are migrating from a version before v11 our migrations will handle
+> the moving of the template content. However, we do not handle the bindings in the template, so make sure to double check the modified
+> template files after the migration completes.
+
+If the actions part of the toolbar component is not sufficient for a particular use case, the toolbar itself has a general content projection where
+users can provide additional UI. If the user needs the respective grid instance for API calls or bindings, they can create a template reference variable.
+
+
+Here is a sample snippet:
 
 ```html
-<@@igSelector [showToolbar]="true" ...>
+<@@igSelector #gridRef ...>
 
     ...
+    <igx-grid-toolbar>
+        <igx-grid-toolbar-title>{{ titleBinding }}</igx-grid-toolbar-title>
 
-    <ng-template igxToolbarCustomContent let-@@igObjectRef="grid">
-        <button igxButton="flat" igxRipple igxRippleCentered="true" (click)="@@igObjectRef.clearSort()">
+        <!--
+            Everything between the toolbar tags except the default toolbar components/directives
+            will be projected as custom content.
+         -->
+        <button igxButton="flat" igxRipple (click)="#gridRef.clearSort()">
             <igx-icon fontSet="material">clear</igx-icon>
             Clear Sort
         </button>
-    </ng-template>
+
+        <igx-grid-toolbar-actions>
+            ...
+        </igx-grid-toolbar-actions>
+    </igx-grid-toolbar>
+
 </@@igSelector>
 ```
 
-> [!NOTE]
-> The [`igxToolbarCustomContent`]({environment:angularApiUrl}/classes/igxgridtoolbarcustomcontentdirective.html) directive's context contains two properties:
-> `grid` - a reference to the [`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) containing the toolbar and
-> `toolbar` - a reference to the [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html)
 
 The following sample demonstrates how to add an additional button to the toolbar to clear the sorting set by clicking on the columns' headers:
 
@@ -338,39 +454,84 @@ To get started with styling the toolbar, we need to import the index file, where
 ```scss
 // custom-grid-paging-style.component.scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+```
 
-Following the simplest approach, we create a new theme that extends the [`igx-grid-toolbar-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-toolbar-theme) and accepts the `$background-color` and the `$title-text-color` parameters.
+First, let's create a new palette.
+
+```scss
+$my-dark-palette: igx-palette(
+    $primary: #2466ff,
+    $secondary: #FFCD0F,
+    $surface: #2a2b2f,
+    $grays: #fff,
+);
+
+$my-dark-color: igx-color($my-dark-palette, 'surface');
+```
+
+Now, create a new theme that extends the [`igx-grid-toolbar-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-toolbar-theme) and modify the `$background-color` and the `$title-text-color` parameters.
 
 ```scss
 $dark-grid-toolbar-theme: igx-grid-toolbar-theme(
-    $background-color: #292826,
-    $title-text-color: #FFCD0F
+    $palette: $my-dark-palette,
+    $background-color: $my-dark-color,
+    $title-text-color: igx-color($my-dark-palette, 'secondary'),
+    $dropdown-background: $my-dark-color,
 );
 ```
 
-In order to style the buttons inside the toolbar, we will also create another theme that extends the [`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme).
+To theme the column actions menus of the toolbar, we have to change the theme of the [`igx-column-actions-theme`]({environment:sassApiUrl}/index.html#function-igx-column-actionsr-theme) component.
+
+```scss
+$dark-column-actions-theme: igx-column-actions-theme(
+    $palette: $my-dark-palette,
+    $title-color: igx-color($my-dark-palette, 'secondary'),
+    $background-color: igx-color($my-dark-palette, 'surface')
+);
+```
+
+Since the column actions are using other components - igx-button, igx-checkbox, and igx-input-group, we need to change their themes to match our new toolbar theme.
 
 ```scss
 $dark-button-theme: igx-button-theme(
-    $outlined-background: #FFCD0F,
-    $outlined-text-color: #292826,
-    $outlined-hover-background: #404040,
-    $outlined-hover-text-color: #FFCD0F
+    $palette: $my-dark-palette,
+    $outlined-background: igx-color($my-dark-palette, 'secondary'),
+    $outlined-hover-background: igx-color($my-dark-palette, 'grays', 100),
+    $outlined-hover-text-color: igx-color($my-dark-palette, 'secondary')
+);
+
+$dark-checkbox-theme: igx-checkbox-theme(
+    $palette: $my-dark-palette,
+    $tick-color: $my-dark-color,
+);
+
+$dark-input-group-theme: igx-input-group-theme(
+    $palette: $my-dark-palette
 );
 ```
 
-The last step is to **include** the newly created themes. The button theme will be scoped to the actions container of the toolbar, so the buttons outside the toolbar do not get affected by it.
+The last step is to **include** the newly created themes.
 
 ```scss
-@include igx-grid-toolbar($dark-grid-toolbar-theme);
-.igx-grid-toolbar__actions {
+:host {
+    @include igx-grid-toolbar($dark-grid-toolbar-theme);
+    @include igx-column-actions($dark-column-actions-theme);
+    @include igx-checkbox($dark-checkbox-theme);
+    @include igx-input-group($dark-input-group-theme);
     @include igx-button($dark-button-theme);
+}
+```
 
-    .igx-button--outlined {
-        margin-left: 0.5rem;
-        border: none;
-    }
+>[!NOTE]
+>If `$legacy-support` is set to `false(default)`, include the component css variables like that:
+
+```scss
+:host {
+    @include igx-css-vars($dark-grid-toolbar-theme);
+    @include igx-css-vars($dark-column-actions-theme);
+    @include igx-css-vars($dark-checkbox-theme);
+    @include igx-css-vars($dark-input-group-theme);
+    @include igx-css-vars($dark-button-theme);
 }
 ```
 
@@ -381,115 +542,18 @@ The last step is to **include** the newly created themes. The button theme will 
 :host {
     ::ng-deep {
         @include igx-grid-toolbar($dark-grid-toolbar-theme);
-
-        .igx-grid-toolbar__actions {
-            @include igx-button($dark-button-theme);
-    
-            .igx-button--outlined {
-                margin-left: 0.5rem;
-                border: none;
-            }
-        }
+        @include igx-column-actions($dark-column-actions-theme);
+        @include igx-checkbox($dark-checkbox-theme);
+        @include igx-input-group($dark-input-group-theme);
+        @include igx-button($dark-button-theme);
     }
 }
 ```
 
-### Defining a color palette
-
-Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
-
-`igx-palette` generates a color palette based on the primary and secondary colors that are passed:
-
-```scss
-$yellow-color: #FFCD0F;
-$black-color: #292826;
-
-$dark-palette: igx-palette($primary: $black-color, $secondary: $yellow-color);
-```
-
-And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette. 
-
-```scss
-$dark-button-theme: igx-button-theme(
-    $outlined-background: igx-color($dark-palette, "secondary", 400),
-    $outlined-text-color: igx-color($dark-palette, "primary", 400),
-    $outlined-hover-background: igx-color($dark-palette, "primary", 400),
-    $outlined-hover-text-color: igx-color($dark-palette, "secondary", 400)
-);
-
-$dark-grid-toolbar-theme: igx-grid-toolbar-theme(
-    $background-color: igx-color($dark-palette, "primary", 200),
-    $title-text-color: igx-color($dark-palette, "secondary", 400)
-);
-```
-
->[!NOTE]
->The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](../themes/palette.md) topic for detailed guidance on how to use them.
-
-### Using Schemas
-
-Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](../themes/schemas.md). A **schema** is a recipe of a theme.
-
-Extend one of the two predefined schemas, that are provided for every component, in this case - [`dark-grid-toolbar`]({environment:sassApiUrl}/index.html#variable-_dark-grid-toolbar) and [`dark-button`]({environment:sassApiUrl}/index.html#variable-_dark-button) schemas: 
-
-```scss
-$dark-grid-toolbar-schema: extend($_dark-grid-toolbar,
-    (
-        background-color:(
-            igx-color: ("primary", 200)
-        ),
-        title-text-color:(
-            igx-color: ("secondary", 400)
-        )
-    )
-);
-
-$dark-button-schema: extend($_dark-button,
-    (
-        outlined-background: (
-            igx-color: ("secondary", 400)
-        ),
-        outlined-text-color: (
-            igx-color: ("primary", 400)
-        ),
-        outlined-hover-background: (
-            igx-color: ("primary", 400)
-        ),
-        outlined-hover-text-color: (
-            igx-color: ("secondary", 400)
-        )
-    )
-);
-```
-
-In order to apply our custom schemas we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
-
-```scss
-// Extending the global dark-schema
-$custom-dark-schema: extend($dark-schema,(
-    igx-grid-toolbar: $dark-grid-toolbar-schema,
-    igx-button: $dark-button-schema
-));
-
-// Defining button-theme with the global dark schema
-$dark-button-theme: igx-button-theme(
-  $palette: $dark-palette,
-  $schema: $custom-dark-schema
-);
-
-// Defining grid-toolbar-theme with the global dark schema
-$dark-grid-toolbar-theme: igx-grid-toolbar-theme(
-  $palette: $dark-palette,
-  $schema: $custom-dark-schema
-);
-```
-
-Don't forget to include the themes in the same way as it was demonstrated above.
-
 ### Demo
 
 @@if (igxName === 'IgxGrid') {
-<div class="sample-container loading" style="height:420px">
+<div class="sample-container loading" style="height:510px">
     <iframe id="grid-toolbar-style-iframe" data-src='{environment:demosBaseUrl}/grid/grid-toolbar-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>
@@ -526,23 +590,14 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 
 The Grid Toolbar service has a few more APIs to explore, which are listed below.
 
-[`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html)
+* [`IgxGridToolbarActionsDirective`]({environment:angularApiUrl}/classes/igxgridtoolbaractionsdirective.html)
+* [`IgxGridToolbarAdvancedFilteringComponent`]({environment:angularApiUrl}/classes/igxgridtoolbaradvancedfilteringcomponent.html)
+* [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html)
+* [`IgxGridToolbarExporterComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarexportercomponent.html)
+* [`IgxGridToolbarHidingComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarhidingcomponent.html)
+* [`IgxGridToolbarPinningComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarpinningcomponent.html)
+* [`IgxGridToolbarTitleDirective`]({environment:angularApiUrl}/classes/igxgridtoolbartitledirective.html)
 
-[`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) properties:
-* [`toolbar`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#toolbar)
-* [`showToolbar`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#showtoolbar)
-* [`toolbarTitle`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#toolbartitle)
-* [`columnHiding`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnhiding)
-* [`columnHidingTitle`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnhidingtitle)
-* [`hiddenColumnsText`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#hiddencolumnstext)
-* [`columnPinning`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnpinning)
-* [`columnPinningTitle`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnpinningtitle)
-* [`pinnedColumnsText`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#pinnedcolumnstext)
-* [`exportExcel`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#exportexcel)
-* [`exportCsv`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#exportcsv)
-* [`exportText`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#exporttext)
-* [`exportExcelText`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#exportexceltext)
-* [`exportCsvText`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#exportcsvtext)
 
 [`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) events:
 * [`onToolbarExporting`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#ontoolbarexporting)

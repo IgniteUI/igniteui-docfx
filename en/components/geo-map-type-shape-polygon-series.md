@@ -9,10 +9,10 @@ mentionedTypes: ['XamGeographicMap']
 
 Use the Angular map component's [`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html) to display geo-spatial data using shape polygons in a geographic context. This type of geographic series is often used to render shapes of countries or regions defined by geographic locations.
 
-## Demo
+## Angular Using Shape Polygon Series Example
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="geo-map-type-shape-polygon-series-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-type-shape-polygon-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="geo-map-type-shape-polygon-series-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-type-shape-polygon-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Using Shape Polygon Series Example"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="geo-map-type-shape-polygon-series-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz

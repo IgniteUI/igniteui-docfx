@@ -9,10 +9,10 @@ mentionedTypes: ['XamDataChart', 'ModifierKeys']
 
 In the Angular data chart component, navigation is disabled by default. Once enabled, you are able to zoom and pan the data chart either programmatically or in the UI.
 
-## Demo
+## Angular Navigation Example
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="data-chart-navigation-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-chart-navigation' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="data-chart-navigation-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-chart-navigation' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Navigation Example"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-navigation-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
@@ -24,11 +24,6 @@ In the Angular data chart component, navigation is disabled by default. Once ena
 <div class="divider--half"></div>
 
 In order to use navigation in the data chart, you need to import and register the interactivity module. This can be done by using the following code:
-
-<!-- Blazor -->
-
--   DataChartInteractivityModule
-    <!-- end: Blazor -->
 
 ```ts
 import { IgxDataChartInteractivityModule } from 'igniteui-angular-charts';

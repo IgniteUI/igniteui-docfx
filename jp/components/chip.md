@@ -9,12 +9,12 @@ _language: ja
 
 [Chip コンポーネント]({environment:angularApiUrl}/classes/igxchipcomponent.html) は、楕円形のコンテナーに情報を表示する視覚的要素です。コンポーネントにはテンプレート化、削除、選択などのさまざまなプロパティがあります。複数のチップの順序を変更し、チップ領域をコンテナーとして視覚的に接続できます。
 
-## デモ
+## Angular Chip の例
 
 <div class="sample-container loading" style="height: 100px; padding-top: 10px">
-    <iframe id="chip-simple-iframe" src='{environment:demosBaseUrl}/data-display/chip-simple' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="chip-simple-iframe" src='{environment:demosBaseUrl}/data-display/chip-simple' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular Chip の例"></iframe>
 </div>
-<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="chip-simple-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="chip-simple-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
@@ -154,12 +154,12 @@ public chipRemoved(event: IBaseChipEventArgs) {
 すべて適切に設定できると、ブラウザーで以下が表示されます。
 
 <div class="sample-container loading" style="height: 100px; padding-top: 10px">
-    <iframe id="chip-simple-iframe" src='{environment:demosBaseUrl}/data-display/chip-simple' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="chip-simple-iframe-2" src='{environment:demosBaseUrl}/data-display/chip-simple' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="chip-simple-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="chip-simple-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="chip-simple-iframe-2" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="chip-simple-iframe-2" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
 ### Chip テンプレート
@@ -453,6 +453,14 @@ $custom-theme: igx-chip-theme(
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="chip-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="chip-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
+
+## 既知の問題と制限
+
+- IE11 で Chips Area コンポーネントを使用するには、Angular アプリケーションの polyfill.ts に配列ポリフィルを明示的にインポートする必要があります。
+
+    ```typescript
+    import 'core-js/es7/array';
+    ```
 
 ## API
 

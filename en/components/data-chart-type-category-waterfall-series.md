@@ -9,10 +9,10 @@ mentionedTypes: ['XamDataChart']
 
 The Ignite UI for Angular waterfall chart belongs to a group of category charts and it is rendered using a collection of vertical columns that show the difference between consecutive data points. The columns are color coded for distinguishing between positive and negative changes in value. Values are represented on the y-axis and categories are displayed on the x-axis. The Angular [`IgxWaterfallSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxwaterfallseriescomponent.html) is similar in appearance to the Angular [`IgxRangeColumnSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxrangecolumnseriescomponent.html) but it requires only one numeric data column rather than two columns for each data point.
 
-## Demo
+## Angular Waterfall Chart Example
 
 <div class="sample-container loading" style="height: 400px">
-    <iframe id="data-chart-type-category-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-category-waterfall-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="data-chart-type-category-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-category-waterfall-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Waterfall Chart Example"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-category-series-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
@@ -49,13 +49,7 @@ public dataSource: any[] = SampleCategoryData.create();
 
 ## Required Modules
 
-Creation of the [`IgxWaterfallSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxwaterfallseriescomponent.html) requires the following modules<!-- Angular, React, WebComponents -->.<!-- end: Angular, React, WebComponents --><!-- Blazor --> to be registered in your application entry point:
-
--   DataChartCoreModule;
--   DataChartCategoryModule;
--   DataChartCategoryCoreModule;
--   DataChartInteractivityModule;
-    <!-- end: Blazor -->
+Creation of the [`IgxWaterfallSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxwaterfallseriescomponent.html) requires the following modules:
 
 ```ts
 // axis' modules:

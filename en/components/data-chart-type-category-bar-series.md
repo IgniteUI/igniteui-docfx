@@ -9,10 +9,10 @@ mentionedTypes: ['XamDataChart']
 
 The Ignite UI for Angular bar chart belongs to a group of category charts and it is rendered using a collection of rectangles that extend from the left to right of the chart towards the values of data points. [`IgxBarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbarseriescomponent.html) uses the same concepts of data plotting as [`IgxColumnSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcolumnseriescomponent.html) but data points are stretched along a vertical line (y-axis) rather than horizontal line (x-axis). In other words, the bar chart is rendered like the column chart, but with 90 degrees clockwise rotation.
 
-## Demo
+## Angular Bar Chart Example
 
 <div class="sample-container loading" style="height: 400px">
-    <iframe id="data-chart-type-category-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-category-bar-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="data-chart-type-category-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-category-bar-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Bar Chart Example"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-category-series-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
@@ -47,13 +47,7 @@ public dataSource: any[] = SampleCategoryData.create();
 
 ## Required Modules
 
-Creation of the [`IgxBarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbarseriescomponent.html) requires the following modules<!-- Angular, React, WebComponents -->.<!-- end: Angular, React, WebComponents --><!-- Blazor --> to be registered in your application entry point:
-
--   DataChartCoreModule
--   DataChartCategoryModule
--   DataChartCategoryCoreModule
--   DataChartInteractivityModule
-    <!-- end: Blazor -->
+Creation of the [`IgxBarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbarseriescomponent.html) requires the following modules:
 
 ```ts
 // axis' modules:

@@ -8,9 +8,9 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <p class="highlight">Use the Ignite UI for Angular Dialog Window component to display messages or present forms for users to fill out. The component opens a dialog window centered on top of app content. You can also provide a standard alert message that users can cancel.</p>
 <div class="divider"></div>
 
-## Dialog Demo
+## Angular Dialog Window Example
 <div class="sample-container loading" style="height:200px">
-    <iframe id="dialog-sample-1-iframe" src='{environment:demosBaseUrl}/interactions/dialog-sample-1' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="dialog-sample-1-iframe" src='{environment:demosBaseUrl}/interactions/dialog-sample-1' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular Dialog Window Example"></iframe>
 </div>
 <p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>
@@ -89,7 +89,7 @@ To create a standard dialog, in the template of our file manager component, we a
 ### Custom Dialog
 
 To create a custom dialog, in the template of our sign-in component, we add the following code. The dialog title area can be customized using the `igxDialogTitle` directive or the `igx-dialog-title` selector. The actions area can be customized using the `igxDialogActions` directive or the `igx-dialog-actions` selector.
-We add two input groups consisting of a label and and input decorated with the [**igxLabel**](input_group.md) and [**igxInput**](input_group.md) directives.
+We add two input groups consisting of a label and and input decorated with the [**igxLabel**](input-group.md) and [**igxInput**](input-group.md) directives.
 
 ```html
 <!--sign-in.component.html-->
@@ -219,7 +219,7 @@ $my-dialog-theme: igx-dialog-theme(
 > [!NOTE]
 > In order to style any additional components that are used as part of the dialog window's content (such as the [`IgxButton`](button.md)), an additional theme should be created that is specific to the respective component and is placed under the dialog window's scope only (so it does not affect the rest of the application).
 
-Since the dialog window uses the [`IgxOverlayService`](overlay_main.md), in order for our custom theme to reach down the dialog window that we want to style, we will provide a specific outlet where the dialog window will be placed in the DOM when it is visible.
+Since the dialog window uses the [`IgxOverlayService`](overlay.md), in order for our custom theme to reach down the dialog window that we want to style, we will provide a specific outlet where the dialog window will be placed in the DOM when it is visible.
 
 ```html
 <div igxOverlayOutlet>
@@ -230,7 +230,7 @@ Since the dialog window uses the [`IgxOverlayService`](overlay_main.md), in orde
 ```
 
 > [!NOTE]
-> In order to learn more about the various options for providing themes to elements that are shown by using the [`IgxOverlayService`](overlay_main.md), you can take a look at this [link](overlay_main.md#styling).
+> In order to learn more about the various options for providing themes to elements that are shown by using the [`IgxOverlayService`](overlay.md), you can take a look at this [link](overlay.md#styling).
 
 ### Including Themes
 

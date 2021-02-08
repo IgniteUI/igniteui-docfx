@@ -1,4 +1,4 @@
-﻿---
+---
 title: 一括編集 | Angular Crud | Ignite UI for Angular | インフラジスティックス
 _description: Ignite UI Angular トランザクション サービスを使用して、バッチ編集を簡単に実装し、コンポーネントで Angular CRUD 操作を実行します。
 _keywords: batch editing, igniteui for angular, infragistics, 一括編集,
@@ -20,10 +20,10 @@ _language: ja
 
 [`トランザクション サービス`]({environment:angularApiUrl}/interfaces/transactionservice.html) 上に 3 つのクラスを構築したことにより、ユーザーは、行ったすべての変更、または特定のレコードに加えられた変更のみを一度にコミットできます。これらのクラスは、[`igxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html)、[`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html)、[`igxHierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) です。
 
-[`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) と [`igxHierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) は、[igxGrid]({environment:angularApiUrl}/classes/igxgridcomponent.html)、[igxHierarchicalGrid]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html)、 および [igxTreeGrid]({environment:angularApiUrl}/classes/igxtreegridcomponent.html) コンポーネントと完全に統合されています。以下のトピックは、トランザクションを有効にしてこれらのコンポーネントを使用する詳細な例を示します。
-* [igxGrid 一括編集とトランザクション](grid/batch_editing.md)
-* [igxHierarchicalGrid 一括編集とトランザクション](hierarchicalgrid/batch_editing.md)
-* [igxTreeGrid 一括編集とトランザクション](treegrid/batch_editing.md)
+[`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) と [`igxHierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) は、[igxGrid]({environment:angularApiUrl}/classes/igxgridcomponent.html)、[igxHierarchicalGrid]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html)、および [igxTreeGrid]({environment:angularApiUrl}/classes/igxtreegridcomponent.html) コンポーネントと完全に統合されています。以下のトピックは、トランザクションを有効にしてこれらのコンポーネントを使用する詳細な例を示します。
+* [igxGrid 一括編集とトランザクション](grid/batch-editing.md)
+* [igxHierarchicalGrid 一括編集とトランザクション](hierarchicalgrid/batch-editing.md)
+* [igxTreeGrid 一括編集とトランザクション](treegrid/batch-editing.md)
 
 [`トランザクション サービス`]({environment:angularApiUrl}/interfaces/transactionservice.html)が提供する利点に関する詳細については、[Building a transaction service for managing large scale editing experiences](https://blog.angular.io/building-a-transaction-service-for-managing-large-scale-editing-experiences-ded666eafd5e) ブログ (英語) をご覧ください。
 
@@ -33,7 +33,7 @@ _language: ja
 * [トランザクション サービス API]({environment:angularApiUrl}/interfaces/transactionservice.html)
 * [トランザクション サービス クラス階層](transaction-classes.md)
 * [トランザクション サービスの使用方法](transaction-how-to-use.md)
-* [Grid 一括編集](grid/batch_editing.md)
-* [Tree Grid 一括編集](treegrid/batch_editing.md)
-* [Hierarchical Grid 一括編集](hierarchicalgrid/batch_editing.md)
+* [Grid 一括編集](grid/batch-editing.md)
+* [Tree Grid 一括編集](treegrid/batch-editing.md)
+* [Hierarchical Grid 一括編集](hierarchicalgrid/batch-editing.md)
 * [「Building a transaction service for managing large scale editing experiences」 ブログ](https://blog.angular.io/building-a-transaction-service-for-managing-large-scale-editing-experiences-ded666eafd5e) (英語)

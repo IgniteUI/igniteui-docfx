@@ -1,17 +1,18 @@
 ---
-title: Angular Grid Group By | Column Group | Ignite UI for Angular | infragistics
+title: Angular Grid Group By | Group by multiple fields | Infragistics
 _description: Configure angular group by that allows visualizing of data records in Angular Material table, visualize the grouped data in separate and convenient column group.
 _keywords: angular group by, igniteui for angular, infragistics
 ---
 
-# Grid Group By
+# Angular Grid Group By
 
-A Group by behavior in an Angular Material table or UI grid creates grouped data rows based on the column values. The Group By in [`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) allows for visualizing the groups in a hierarchical structure. The grouped data rows can be expanded or collapsed and the order of grouping may be changed through the UI or API.
+A Group By behavior in an Angular Material table or UI grid creates grouped data rows based on the column values. The Group By in [`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) allows for visualizing the groups in a hierarchical structure. The grouped data rows can be expanded or collapsed and the order of grouping may be changed through the UI or API. When Row Selection is enabled, a Group By row selector is rendered in the left-most area of the group row. In case the **rowSelection** property is set to single, checkboxes are disabled and only serve as an indication for the group where selection is placed. If the **rowSelection** property is set to multiple, clicking over the Group By row selector selects all records belonging to this group.
 
-### Demo
+## Angular Grid Group By Example
+This example presents the grouping capabilities of a large amount of data. Dragging the column headers to the top (grouping area) allows users to see the data for the selected column in a hierarchical structure. They can do group by in multiple fields by dragging more column headers to the top. These grouping options come in handy when you have tables with numerous rows and columns where users want to present the data in a much faster and visually acceptable way.
 
 <div class="sample-container loading" style="height:605px">
-    <iframe id="grid-sample-groupby-iframe" src='{environment:demosBaseUrl}/grid/grid-groupby' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-sample-groupby-iframe" src='{environment:demosBaseUrl}/grid/grid-groupby' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular Grid Group By Example"></iframe>
 </div>
 <p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>
@@ -35,6 +36,8 @@ public ngOnInit() {
 Grouping expressions implement the [`ISortingExpression`]({environment:angularApiUrl}/interfaces/isortingexpression.html) interface.
 
 ## Group By API
+
+### Grouping API
 
 Grouping is available through the UI and through a robust API exposed by the grid component. Developers can allow end-users to group the grid data by certain columns, by setting each column's [`groupable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#groupable) property to `true`.
 
@@ -61,6 +64,8 @@ grid.groupBy({ fieldName: 'ProductName', dir: SortingDirection.Desc, ignoreCase:
 
 Grouping works in conjunction with sorting and grouping expressions are applied as sorting ones even though columns may be sorted without being grouped. You will always find the grouping expressions in the [`sortingExpressions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#sortingexpressions) property, sorted in a way that grouped columns' expressions are always first. The sorting API will affect grouping if it changes the expression for a column that is grouped. Removing a grouping expression (ungrouping a column) also unsorts it.
 
+### Expand/Collapse API
+
 In addition to grouping expressions you can also control the expansion states for group rows. They are stored in a separate property of the [`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) component [`groupingExpansionState`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupingexpansionstate). A group row is uniquely identified based on the field name it is created for and the value it represents for each level of grouping. This means that the signature of an expansion state interface is the following:
 
 ```typescript
@@ -84,9 +89,29 @@ As with [`groupingExpressions`]({environment:angularApiUrl}/classes/igxgridcompo
 
 Groups can be created expanded (***default***) or collapsed and the expansion states would generally only contain the state opposite to the default behavior. You can control whether groups should be created expanded or not through the [`groupsExpanded`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupsexpanded) property.
 
-## Group Row Templates
+### Select/Deselect all rows in a group API
 
-The group row without its expand/collapse UI is fully templatable. By default it renders a grouping icon and displays the field name and value it represents. The grouping record template is rendered against has the following signature:
+Selecting/Deselecting all rows in a group is available through the [`selectRowsInGroup`]({environment:angularApiUrl}/classes/igxgridcomponent.html#selectrowsingroup) and [`deselectRowsInGroup`]({environment:angularApiUrl}/classes/igxgridcomponent.html#deselectrowsingroup) API methods.
+
+The code snippet below can be used to select all rows within a group using the group record instance [`selectRowsInGroup`]({environment:angularApiUrl}/classes/igxgridcomponent.html#selectrowsingroup) method. Additionally, the second parameter of this method is a boolean property through which you may choose whether the previous row selection will be cleared or not. The previous selection is preserved by default.
+
+```typescript
+    const groupRow = this.grid.groupsRecords.find(r => r.value === "France");
+    grid.selectRowsInGroup(groupRow);
+```
+
+If you need to deselect all rows within a group programmatically, you can use the [`deselectRowsInGroup`]({environment:angularApiUrl}/classes/igxgridcomponent.html#deselectrowsingroup) method.
+
+```typescript
+    const groupRow = this.grid.groupsRecords.find(r => r.value === "France");
+    grid.deselectRowsInGroup(groupRow);
+```
+
+## Templating
+
+### Group Row Templates
+
+The group row except for the expand/collapse UI is fully templatable. By default it renders a grouping icon and displays the field name and value it represents. The grouping record template is rendered against has the following signature:
 
 ```typescript
 export interface IGroupByRecord {
@@ -107,16 +132,49 @@ As an example, the following template would make the group rows summary more ver
 </ng-template>
 ```
 
+### Group Row Selector Templates
 
-## Group By with Paging
+As mentioned above the group row except for the expand/collapse UI is fully templatable. To create a custom Group By row selector template within the Grid, declare an `<ng-template>` with `igxGroupByRowSelector` directive. From the template, you can access the implicitly provided context variable, with properties that give you information about the Group By row's state.
+
+The `selectedCount` property shows how many of the group records are currently selected while `totalCount` shows how many records belong to the group.
+
+```html
+<ng-template igxGroupByRowSelector let-groupByRowContext>
+    {{ groupByRowContext.selectedCount }} / {{ groupByRowContext.totalCount  }}
+</ng-template>
+```
+
+The `groupRow` property returns a reference to the group row.
+
+```html
+<ng-template igxGroupByRowSelector let-groupByRowContext>
+    <div (click)="handleGroupByRowSelectorClick($event, groupByRowContext.groupRow)">Handle groupRow</div>
+</ng-template>
+```
+
+The `selectedCount` and `totalCount` properties can be used to determine if the Group By row selector should be checked or indeterminate (partially selected).
+
+```html
+<igx-grid #grid [data]="gridData" primaryKey="ProductID" rowSelection="multiple">
+    <!-- ... -->
+    <ng-template igxGroupByRowSelector let-context>
+        <igx-checkbox
+            [checked]=" context.selectedCount > 0 && context.selectedCount === context.totalCount"
+            [indeterminate]="context.selectedCount > 0 && context.selectedCount !== context.totalCount">
+        </igx-checkbox>
+    </ng-template>
+</igx-grid>
+```
+
+## Angular Grid Group By with Paging
 
 Group rows participate in the paging process along with data rows. They count towards the page size for each page. Collapsed rows are not included in the paging process. Any expand or collapse operation forces Paging to recalculate the page count and adjust the page index if necessary.
 Groups that span multiple pages are split between them. The group row is visible only on the page it starts on and is not repeated on subsequent pages. Summary information for group rows is calculated based on the whole group and is unaffected by Paging.
 
-### Demo
+### Angular group by with paging example
 
 <div class="sample-container loading" style="height:605px">
-    <iframe id="grid-sample-groupby-paging-iframe" src='{environment:demosBaseUrl}/grid/grid-groupby-paging' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-sample-groupby-paging-iframe" src='{environment:demosBaseUrl}/grid/grid-groupby-paging' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular grid group by with paging example"></iframe>
 </div>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-sample-groupby-paging-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
@@ -134,6 +192,7 @@ The grouping UI supports the following keyboard interactions:
 - For group rows (focus should be on the row or the expand/collapse cell)
    - <kbd>ALT</kbd> + <kbd>RIGHT</kbd> - Expands the group
    - <kbd>ALT</kbd> + <kbd>LEFT</kbd> - Collapses the group
+   - <kbd>SPACE</kbd> - selects all rows in the group, if <kbd>rowSelection</kbd> property is set to multiple
 
 - For group [`igxChip`]({environment:angularApiUrl}/classes/igxchipcomponent.html) components in the group by area (focus should be on the chip)
    - <kbd>SHIFT</kbd> + <kbd>LEFT</kbd> - moves the focused chip left, changing the grouping order, if possible
@@ -142,7 +201,7 @@ The grouping UI supports the following keyboard interactions:
    - <kbd>DELETE</kbd> - ungroups the field
    - The seperate elements of the chip are also focusable and can be interacted with using the <kbd>ENTER</kbd> key.
 
-## Custom Group By
+## Angular Grid Custom Group By
 
 igxGrid allows defining custom grouping per column or per grouping expression, which provides grouping based on a custom condition. This is useful when you need to group by complex objects or for other application specific scenarios.
 
@@ -151,10 +210,10 @@ igxGrid allows defining custom grouping per column or per grouping expression, w
 
 The sample below demonstrates custom grouping by `Date`, where the date values are sorted and grouped by Day, Week, Month or Year based on user-selected grouping mode.
 
-### Demo
+### Angular custom group by example
 
 <div class="sample-container loading" style="height:605px">
-    <iframe id="grid-sample-groupby-custom-iframe" src='{environment:demosBaseUrl}/grid/grid-groupby-custom' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-sample-groupby-custom-iframe" src='{environment:demosBaseUrl}/grid/grid-groupby-custom' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular custom group by example"></iframe>
 </div>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-sample-groupby-custom-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
@@ -410,9 +469,9 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 * [Paging](paging.md)
 * [Filtering](filtering.md)
 * [Sorting](sorting.md)
-* [Column Moving](column_moving.md)
+* [Column Moving](column-moving.md)
 * [Summaries](summaries.md)
-* [Column Resizing](column_resizing.md)
+* [Column Resizing](column-resizing.md)
 * [Selection](selection.md)
 
 <div class="divider--half"></div>

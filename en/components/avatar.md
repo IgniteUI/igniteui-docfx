@@ -9,10 +9,10 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <p class="highlight">The Ignite UI for Angular Avatar component helps adding initials, images, or material icons to your application.</p>
 <div class="divider"></div>
 
-## Demo
+## Angular Avatar Example
 
 <div class="sample-container loading" style="height:200px">
-    <iframe id="avatar-sample-3-iframe" src='{environment:demosBaseUrl}/layouts/avatar-sample-3' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="avatar-sample-3-iframe" src='{environment:demosBaseUrl}/layouts/avatar-sample-3' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular Avatar Example"></iframe>
 </div>
 <p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>
@@ -30,7 +30,7 @@ To get started with the Avatar component, first you need to install Ignite UI fo
 ```cmd
 ng add igniteui-angular
 ```
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting_started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
 
 The next step is to import the `IgxAvatarModule` in the **app.module.ts** file:
 

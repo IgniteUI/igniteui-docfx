@@ -1,27 +1,30 @@
 ---
-title: Angular データ グリッド | Angular Material テーブル | インフラジスティックス
-_description: Ignite UI for Angular データ グリッドを使用して、さまざまなイベントを含むタッチ レスポンシブな Angular コンポーネントを作成します。今すぐデータ視覚化を強化しましょう!
-_keywords: angular データ グリッド, angular グリッド, angular material テーブル, ignite ui for angular
+title: Angular Data Grid | 高速な Angular テーブルを構築する | インフラジスティックス
+_description: Ignite UI for Angular を使用して、超高速でレスポンシブな Angular データ グリッドとテーブルを作成します。 編集、フィルタリング、データ バインディングなどをサポートします。 30 日間の無料トライアル。
+_keywords: angular データ グリッド, angular マテリアル テーブル, ignite ui for angular
 _language: ja
 ---
 
 # Angular データ グリッドの概要と構成
 
-<p class="highlight"> Ignite UI for Angular Data Grid は、データの表示や操作が簡単にできます。最小限のコードでデータをすばやくバインドするか、さまざまなイベントを使用してさまざまな動作をカスタマイズします。このコンポーネントは、データ選択、Excel スタイル フィルタリング、ソート、ページング、テンプレート、列移動などの豊富な機能を提供します。Material Table ベースの UI グリッドにより、表形式のデータの表示がさらに簡単できれいになりました。</p>
+Ignite UI for Angular Data Grid は、データの表示や操作が簡単にできます。最小限のコードでデータをすばやくバインドするか、さまざまなイベントを使用してさまざまな動作をカスタマイズします。このコンポーネントは、データ選択、Excel スタイル フィルタリング、ソート、ページング、テンプレート、列移動などの豊富な機能を提供します。Material Table ベースの UI グリッドにより、表形式のデータの表示がさらに簡単できれいになりました。
 
-## デモ
+## Angular データ グリッドの例
+
+Boston Marathon 2020 – この Angular グリッドの例では、ユーザーが基本スタイルと Excel スタイルの両方のフィルタリング、ライブ データのソート、および[スパークライン](../sparkline.md) コンポーネント、[Circular Progress Indicator](../circular-progress.md) コンポーネントと [Icons](../icon.md) を含むグリッド集計とセル テンプレートの使用を実行する方法を確認できます。デモには、[Angular 改ページ](paging.md)のカスタム ページングとページごとの使用法も含まれています。
 
 <div class="sample-container loading" style="height:700px">
-    <iframe id="grid-sample-iframe" src='{environment:lobDemosBaseUrl}/grid/grid' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="grid-sample-iframe" src='{environment:lobDemosBaseUrl}/grid/grid' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular データ グリッドの例"></iframe>
 </div>
-<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-sample-iframe" data-demos-base-url="{environment:lobDemosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-iframe" data-demos-base-url="{environment:lobDemosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
-## 依存関係
+## Ignite UI for Angular Data Grid で作業を開始
+### 依存関係
 
 >[!NOTE]
 >**このコンポーネントでは、タッチ操作が正しく動作するために、アプリケーションのルート モジュールに [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) をインポートする必要があります。**.
@@ -31,7 +34,7 @@ Angular データ グリッドを初期化するには、以下のコマンド�
 ```cmd
 ng add igniteui-angular
 ```
-Ignite UI for Angular については、[はじめに](../general/getting_started.md)トピックををご覧ください。
+Ignite UI for Angular については、[はじめに](../general/getting-started.md)トピックををご覧ください。
 
 Angular グリッドが `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に `IgxGridModule` をインポートする必要があります。
 
@@ -64,7 +67,7 @@ import { IgxGridComponent } from 'igniteui-angular';
 public grid: IgxGridComponent;
 ```
 
-## 使用方法
+### 使用方法
 
 グリッド モジュールをインポート後、ローカル データにバインドする **igx-grid** の基本構成を設定します。
 
@@ -76,7 +79,7 @@ public grid: IgxGridComponent;
 
 [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) プロパティは、データソース フィールドに基づいて **igx-grid** にグリッドの[`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) を自動生成させます。列の適切なデータ型の決定を試みます。それ以外の場合、開発者は列およびデータ ソース フィールドへのマッピングを明示的に定義する必要があります。
 
-## スタイルの構成
+## Angular Grid スタイルの構成
 > [!NOTE]
 > [**IgxGridComponent**]({environment:angularApiUrl}/classes/igxgridcomponent.html) は **css グリッド レイアウト**を使用しますが、**プレフィックスなしでは IE でサポートされていない**ため、正しく描画できません。
 
@@ -96,7 +99,7 @@ public grid: IgxGridComponent;
  ...
  ```
 
-## 列の構成
+## Angular Grid 列の構成
 
 [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) は、グリッドの [`columns`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columns) コレクションを定義し、**ソート**、**ページング**など、列ごとの機能を有効にするために使用します。セル、ヘッダー、およびフッター テンプレートも利用できます。
 
@@ -284,7 +287,7 @@ const pipeArgs: IColumnPipeArgs = {
 
 `OrderDate` 列は `format` および `timezone` プロパティのみに遵守しますが、`UnitPrice` は `digitsInfo` のみに遵守します。詳細については、[「Localizing your app (英語)」](https://angular.io/guide/i18n)で Angular の公式ドキュメントを参照してください。
 
-## データ構造
+## Angular Grid データ構造
 
 [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) は**フラット データ**とネストされた **POJOs (Plain old Java objects)** を処理します。描画に固有のデータ構造はフォームにあります。
 
@@ -328,7 +331,7 @@ const POJO = [{
 
 >[autoGenerate]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) 列を使用する場合、データキーが同一である必要があります。
 
-## データ バインディング
+## Angular Grid データ バインディング
 
 はじめにリモート データ サービスにバインドするために Angular グリッドを変更します。大規模なアプリケーション レベルでは一般的なシナリオです。すべてのデータ取得に関連するロジックを別のデータ サービスに分割することがベスト プラクティスであるため、サーバーからデータの取得を処理するサービスを作成します。
 
@@ -670,9 +673,16 @@ export const DATA: any[] = [
 </div>
 <div class="divider--half"></div>
 
+## キーボード ナビゲーション
+Grid のキーボード ナビゲーションは、さまざまなキーボード操作をユーザーに提供します。アクセシビリティが向上し、内部の要素 (セル、行、列ヘッダー、ツールバー、フッターなど) を直感的にナビゲートできます。詳細については、これらのリソースを参照してください。
+ - [Grid キーボード ナビゲーション](../grid/keyboard-navigation.md)
+ - [TreeGrid キーボード ナビゲーション](../treegrid/keyboard-navigation.md)
+ - [Hierarchical Grid キーボード ナビゲーション](../hierarchicalgrid/keyboard-navigation.md)
+ -「Improving Usability, Accessibility and ARIA Compliance with Grid keyboard navigation」の[ブロク](https://www.infragistics.com/community/blogs/b/engineering/posts/grid-keyboard-navigation-accessibility)
+
 ## パーシステンス (永続化) 状態
 
-新しい組み込みの [`IgxGridState`](state_persistence.md) ディレクティブを使用することで、状態永続フレームワークの実装が更に簡単になりました。
+新しい組み込みの [`IgxGridState`](state-persistence.md) ディレクティブを使用することで、状態永続フレームワークの実装が更に簡単になりました。
 
 
 ## サイズ変更
@@ -692,7 +702,7 @@ export const DATA: any[] = [
 | ビューに描画されていないセル高さは行の高さに影響しません。|仮想化のため、セルの高さを変更するビューにないカスタム テンプレートの列は行の高さに影響しません。関連する列がビューにスクロールされるときのみ行の高さに影響します。
 
 > [!NOTE]
-> `igxGrid` は内部で `igxForOf` ディレクティブを使用するため、すべての `igxForOf` の制限が `igxGrid` で有効です。詳細については、[igxForOf 既知の問題](../for_of.html#既知の問題と制限) のセクションを参照してください。
+> `igxGrid` は内部で `igxForOf` ディレクティブを使用するため、すべての `igxForOf` の制限が `igxGrid` で有効です。詳細については、[igxForOf 既知の問題](../for-of.html#既知の問題と制限) のセクションを参照してください。
 
 <div class="divider--half"></div>
 
@@ -712,9 +722,9 @@ export const DATA: any[] = [
 * [フィルタリング](filtering.md)
 * [ソート](sorting.md)
 * [集計](summaries.md)
-* [列移動](column_moving.md)
-* [列のピン固定](column_pinning.md)
-* [列のサイズ変更](column_resizing.md)
+* [列移動](column-moving.md)
+* [列のピン固定](column-pinning.md)
+* [列のサイズ変更](column-resizing.md)
 * [選択](selection.md)
 
 <div class="divider--half"></div>

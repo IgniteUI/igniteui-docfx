@@ -1,36 +1,39 @@
 ---
-title: Combo コンポーネント
-_description: igx-combo は、基本的な HTML input 要素、select 要素、および IgniteUI for Angular igx-drop-down コントロールの機能を組み合わされています。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Combo コンポーネント, Angular Combo コントロール
+title: Angular Combobox コンポーネント | データ バインディング ComboBox | インフラジスティックス 
+_description: Ignite UI for Angular ComboBox は、基本的な HTML 入力、選択、フィルタリング、およびカスタム ドロップダウン リストの機能を組み合わせた強力な入力を提供します。無料でお試しください。
+_keywords: angular combobox, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
 
-# コンボ
-<p class="highlight">
-Ignite UI for Angular Combo コンポーネントは、フィルタリング、項目の単一と複数選択、グループ化、ドロップダウン リストにカスタム値の追加などの機能をサポートします。
-</p>
+# Angular ComboBox の概要
 
-## デモ
+Angular ComboBox コンポーネントは、編集可能な機能を提供するドロップダウン リストを表し、ユーザーが事前定義されたリストからオプションを選択できるようにします。Ignite UI for Angular Combo コンポーネントは、フィルタリング機能、項目の単一と複数選択、グループ化、ドロップダウン リストにカスタム値の追加などの機能をサポートします。HTML select タグの代わりに使用でき、データ バインディング (ローカルおよびリモート)、フィルタリング、グループ化、カスタム テンプレート、カスタム値など、すぐに使用できる機能がいくつかあります。
+
+
+## Angular ComboBox の例
+
+この AngularComboBox の例では、ユーザーが項目をフィルターし、提供されたデータを使用して単一または複数の選択を実行する方法を表します。さらに、ComboBox は、キーボード ナビゲーションとカスタム スタイル設定機能を公開します。
+
 <div class="divider--half"></div>
 <div class="sample-container loading" style="height: 400px;">
-    <iframe id="combo-main-sample" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/lists/combo-main" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="combo-main-sample" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/lists/combo-main" onload="onSampleIframeContentLoaded(this);" alt="Angular Combobox の例" alt="Angular ComboBox の例"></iframe>
 </div>
-<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="combo-main-sample" data-demos-base-url="{environment:demosBaseUrl}">CodeSandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="combo-main-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
 </div>
 
-## 機能
+## Angular ComboBox 機能
 
 Combo コンポーネントは以下の機能を公開します。
-    - データ バインディング- ローカル データおよび[リモート データ](combo_remote.md)
-    - [値バインディング](combo_features.md#value-binding)
-    - [フィルタリング](combo_features.md#フィルタリング)
-    - [グループ化](combo_features.md#グループ化)
-    - [カスタム値](combo_features.md#カスタム値)
-    - [テンプレート](combo_templates.md)
-    - [テンプレート駆動フォーム](input_group.md)および[リアクティブ フォーム](input_group_reactive_forms.md) との統合
+    - データ バインディング- ローカル データおよび[リモート データ](combo-remote.md)
+    - [値バインディング](combo-features.md#value-binding)
+    - [フィルタリング](combo-features.md#フィルタリング)
+    - [グループ化](combo-features.md#グループ化)
+    - [カスタム値](combo-features.md#カスタム値)
+    - [テンプレート](combo-templates.md)
+    - [テンプレート駆動フォーム](input-group.md)および[リアクティブ フォーム](input-group-reactive-forms.md) との統合
 
 ## 使用方法
 
@@ -248,7 +251,7 @@ igxCombo を開くと、カスタム値が有効になり、項目の追加ボ�
 - `上矢印` - フォーカスは最後のリスト項目に戻るか、あるいはリストが空の場合、検索入力に移動します。
 
 
-## スタイル設定
+## Angular ComboBox スタイル設定
 
 [Ignite UI for Angular テーマ](themes/index.md)を使用して、drop-down の外観を変更できます。はじめに、テーマ エンジンによって公開されている関数を使用するために、スタイル ファイルに `index` ファイルをインポートする必要があります。 
 
@@ -320,7 +323,10 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 ```
 
 > [!NOTE]
-> [IgxCombo]({environment:angularApiUrl}/classes/igxcombocomponent.html) は、[IgxOverlay](overlay_main.md) サービスを使用して、コンボ項目のリスト コンテナーを保持および表示します。スタイルを適切にスコープするには、[OverlaySetting.outlet]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet) を使用してください。詳細については、[IgxOverlay スタイル ガイド](overlay_styling.md)を確認してください。
+> [IgxCombo]({environment:angularApiUrl}/classes/igxcombocomponent.html) は、[IgxOverlay](overlay.md) サービスを使用して、コンボ項目のリスト コンテナーを保持および表示します。スタイルを適切にスコープするには、[OverlaySetting.outlet]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet) を使用してください。詳細については、[IgxOverlay スタイル ガイド](overlay-styling.md)を確認してください。
+
+> [!NOTE]
+> IgxCombo のデフォルト `type` は `box` です。[IgxSelect](select.md) は `line` です。
 
 ### デモ
 <div class="sample-container loading" style="height:410px">
@@ -340,7 +346,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 - コンボの高さを変更するための入力はありません。将来、[IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) コンポーネントは、カスタムのサイズ変更オプションを公開し、[IgxCombo]({environment:angularApiUrl}/classes/igxcombocomponent.html) は適切なスタイル設定と外観の統一に同じ機能を使用します。
 
 > [!NOTE]
-> `igxCombo` は内部で `igxForOf` ディレクティブを使用するため、すべての `igxForOf` の制限が Combo で有効です。詳細については、[igxForOf Known Issues](for_of.html#known-limitations) の既知の問題のセクションを参照してください。
+> `igxCombo` は内部で `igxForOf` ディレクティブを使用するため、すべての `igxForOf` の制限が Combo で有効です。詳細については、[igxForOf 既知の制限](for-of.html#既知の制限)セクションを参照してください。
 
 ## API まとめ
 <div class="divider--half"></div>
@@ -358,12 +364,12 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 ## その他のリソース
 <div class="divider--half"></div>
 
-* [コンボ機能](combo_features.md)
-* [コンボ リモート バインディング](combo_remote.md)
-* [コンボ テンプレート](combo_templates.md)
-* [テンプレート駆動フォームの統合](input_group.md)
-* [リアクティブ フォームの統合](input_group_reactive_forms.md)
-* [カスケーディング](combo_cascading.md)
+* [コンボ機能](combo-features.md)
+* [コンボ リモート バインディング](combo-remote.md)
+* [コンボ テンプレート](combo-templates.md)
+* [テンプレート駆動フォームの統合](input-group.md)
+* [リアクティブ フォームの統合](input-group-reactive-forms.md)
+* [カスケーディング](combo-cascading.md)
 
 コミュニティに参加して新しいアイデアをご提案ください。
 

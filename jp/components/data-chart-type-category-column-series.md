@@ -10,10 +10,10 @@ _language: ja
 
 Ignite UI for Angular 縦棒チャートはカテゴリ チャートのグループに属し、チャートの下から上へデータポイントの値に向かって伸びる長方形のコレクションを使用して描画されます。[`IgxColumnSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcolumnseriescomponent.html) は時間毎のデータの変化や複数の項目を比較する場合に用いられます。値は y 軸に表示され、カテゴリは x 軸に表示されます。[`IgxColumnSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcolumnseriescomponent.html) は [`IgxBarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbarseriescomponent.html) と同じデータプロットの概念を使用しますが、データポイントは垂直線（y軸）ではなく水平線（x軸）に沿って引き伸ばされます。つまり、縦棒シリーズは棒シリーズのように描画されますが、反時計回りに 90 度回転されます。
 
-## サンプル
+## Angular 縦棒チャートの例
 
 <div class="sample-container loading" style="height: 400px">
-    <iframe id="data-chart-type-category-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-category-column-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="data-chart-type-category-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-category-column-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular 縦棒チャートの例"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-category-series-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示

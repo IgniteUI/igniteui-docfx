@@ -11,10 +11,10 @@ This topic explains various types of category series in the Angular data chart c
 
 <!-- Angular, React, WebComponents -->
 
-## Demo
+## Angular Category Series Example
 
 <div class="sample-container loading" style="height: 400px">
-    <iframe id="data-chart-type-category-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-category-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="data-chart-type-category-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-category-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Category Series Example"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-category-series-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
@@ -76,13 +76,7 @@ public dataSource: any[] = SampleCategoryData.create();
 
 ## Required Modules
 
-The category series requires the following modules<!-- Angular, React, WebComponents -->.<!-- end: Angular, React, WebComponents --><!-- Blazor --> to be registered in your application entry point:
-
--   DataChartCoreModule;
--   DataChartCategoryModule;
--   DataChartCategoryCoreModule;
--   DataChartInteractivityModule;
-    <!-- end: Blazor -->
+The category series requires the following modules:
 
 ```ts
 // axis' modules:

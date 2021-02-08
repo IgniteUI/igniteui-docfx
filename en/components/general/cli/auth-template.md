@@ -15,7 +15,7 @@ You can select an authentication project either when going through the Step by s
 
 ![](../../../images/general/cli-igx-side-auth.png)
 
-Or though the new command:
+Or through the new command:
 
 ```bash
 ig new "Auth Project" --framework=angular --type=igx-ts --template=side-nav-auth

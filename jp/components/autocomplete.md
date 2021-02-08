@@ -9,9 +9,9 @@ _language: ja
 <p class="highlight">[`igxAutocomplete`]({environment:angularApiUrl}/classes/igxautocompletedirective.html) ディレクティブは [`igxDropDown`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) と候補オプションを表示してテキスト入力を向上する方法を提供します。候補は、テキスト入力の開始時、または `上矢印`/`下矢印` キーを使用して表示します。</p>
 <div class="divider"></div>
 
-## デモ
+## Angular Autocomplete の例
 <div class="sample-container loading" style="height: 400px;">
-    <iframe id="autocomplete-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/autocomplete" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="autocomplete-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/autocomplete" onload="onSampleIframeContentLoaded(this);" alt="Angular Autocomplete の例"></iframe>
 </div>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="autocomplete-sample" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
@@ -211,7 +211,7 @@ export class AutocompleteComponent {
 
 `igxAutocomplete` のスタイルを設定するには、それに含まれるコンポーネントのスタイルを設定します。この場合、[igx-input-group-theme]({environment:sassApiUrl}/index.html#function-igx-input-group-theme) と [igx-drop-down-theme]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme) の両方を使用する必要があります。 
 
-これら 2 つのコンポーネントのスタイル設定については、[`igxInputGroup`](input_group.md#スタイル設定) および [`igxDropdown`](drop_down.md#スタイル設定) のスタイル設定セクションを参照してください。
+これら 2 つのコンポーネントのスタイル設定については、[`igxInputGroup`](input-group.md#スタイル設定) および [`igxDropdown`](drop-down.md#スタイル設定) のスタイル設定セクションを参照してください。
 
 ## API リファレンス
 <div class="divider--half"></div>
@@ -225,9 +225,9 @@ export class AutocompleteComponent {
 ## その他のリソース
 <div class="divider--half"></div>
 
-* [IgxDropDown](drop_down.md)
-* [IgxInputGroup](input_group.md)
-* [テンプレート駆動フォームの統合](input_group.md)
+* [IgxDropDown](drop-down.md)
+* [IgxInputGroup](input-group.md)
+* [テンプレート駆動フォームの統合](input-group.md)
 
 コミュニティに参加して新しいアイデアをご提案ください。
 

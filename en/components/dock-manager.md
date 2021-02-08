@@ -7,10 +7,10 @@ _keywords: manage angular page layout, Ignite UI for Angular, Infragistics
 
 The Ignite UI Dock Manager component provides means to manage the layout of your application through panes, allowing your end-users to customize it further by pinning, resizing, moving and hiding panes.
 
-## Demo
+## Angular Dock Manager Example
 
 <div class="sample-container loading" style="height: 600px">
-    <iframe id="dock-manager-overview-iframe" src='{environment:demosBaseUrl}/layouts/dock-manager-sample' width="100%" height="100%" seamless="" frameborder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="dock-manager-overview-iframe" src='{environment:demosBaseUrl}/layouts/dock-manager-sample' width="100%" height="100%" seamless="" frameborder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Dock Manager Example"></iframe>
 </div>
 <p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>

@@ -7,10 +7,10 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 # Tree Grid Aggregations
 If you have non-hierarchical data and you want to **group by** one or more columns and populate the parent rows with **aggregated values**, you could use the [`IgxTreeGridComponent`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html) and a custom implementation like in the demo below.
 
-#### Demo
+## Angular Tree Grid Aggregations Example
 
 <div class="sample-container loading" style="height:850px">
-    <iframe id="treegrid-finjs-iframe" src='{environment:lobDemosBaseUrl}/treegrid-finjs-sample' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="treegrid-finjs-iframe" src='{environment:lobDemosBaseUrl}/treegrid-finjs-sample' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular Tree Grid Aggregations Example"></iframe>
 </div>
 <p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>
@@ -80,7 +80,7 @@ public groupColumnKey = "Categories";
 
 <div class="divider--half"></div>
 
-* [TreeGrid overview](tree_grid.md)
+* [TreeGrid overview](tree-grid.md)
 * [TreeGrid Summaries](summaries.md)
 * [Grid Summaries](../grid/summaries.md)
 

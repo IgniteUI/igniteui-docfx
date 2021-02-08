@@ -7,9 +7,9 @@ _keywords:  angular select, igniteui for angular, infragistics
 # Select
 <p class="highlight">The [Select Component]({environment:angularApiUrl}/classes/igxselectcomponent.html) allows a single selection from a list of items, placed in a dropdown. This Material-based form control offers quick items list navigation, including selection, based on a single or multiple characters match. Since the [IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html) extends the [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html), you can handle all of the Drop Down events in the Select instance as well.</p>
 
-## Demo
+## Angular Select Example
 <div class="sample-container loading" style="height: 300px;">
-    <iframe id="select-sample-1-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/select-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="select-sample-1-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/select-sample-1" onload="onSampleIframeContentLoaded(this);" alt="Angular Select Example"></iframe>
 </div>
 <p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>
@@ -73,7 +73,7 @@ To see the `text` property in action with a bit more sophisticated item template
 
 ### Input Properties
 
-The Select component supports the following directives applicable to the [Input Group](input_group.md):
+The Select component supports the following directives applicable to the [Input Group](input-group.md):
 
 - `igxLabel` - No need to set the `for` property, as linking with the Select input is handled automatically via `aria-labelledby`.
 - `igx-prefix`/`igxPrefix`
@@ -327,10 +327,10 @@ Every component has its own theme.
 
 To get the Select styled, you have style its containing components. In our case, we need to use both the [igx-input-group-theme]({environment:sassApiUrl}/index.html#function-igx-input-group-theme) and the [igx-drop-down-theme]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme).
 
-Take a look at the [`Input Group`](input_group.md#styling) and the [`Drop Down`](drop_down.md#styling) styling sections to get a better understanding of how to style those two components.
+Take a look at the [`Input Group`](input-group.md#styling) and the [`Drop Down`](drop-down.md#styling) styling sections to get a better understanding of how to style those two components.
 
 > [!NOTE]
-> The [**IgxSelectComponent**]({environment:angularApiUrl}/classes/igxselectcomponent.html) uses the [IgxOverlay](overlay_main.md) to hold and display the `igx-select-items` list container. To properly scope your styles you might have to use an [OverlaySetting.outlet]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet). For more details check the [`IgxOverlay styling guide`](overlay_styling.md).
+> The [**IgxSelectComponent**]({environment:angularApiUrl}/classes/igxselectcomponent.html) uses the [IgxOverlay](overlay.md) to hold and display the `igx-select-items` list container. To properly scope your styles you might have to use an [OverlaySetting.outlet]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet). For more details check the [`IgxOverlay styling guide`](overlay-styling.md).
 
 <div class="divider--half"></div>
 

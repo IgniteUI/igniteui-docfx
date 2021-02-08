@@ -7,13 +7,14 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 # Button
 <p class="highlight">The Ignite UI for Angular Button directive is intended to turn any button, span, div, or anchor element into a fully functional button.</p>
 
-## Demo
+## Angular Button Example
 <div class="divider--half"></div>
 <div class="sample-container loading" style="height: 150px">
-    <iframe id="buttons-sample-iframe" seamless="" width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/buttons-sample-1" onload="onSampleIframeContentLoaded(this);">
+    <iframe id="buttons-sample-iframe" seamless="" width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/buttons-sample-1" onload="onSampleIframeContentLoaded(this);" alt="Angular Button Example">
 </iframe></div>
 <p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="buttons-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttons-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>

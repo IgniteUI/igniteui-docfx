@@ -10,10 +10,10 @@ _language: ja
 
 [`Candlestick`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/pricedisplaytype.html#candlestick) モードの Ignite UI for Angular 金融価格チャートは、株価をプロットし、各日の株価の高値、安値、始値、終値を表示するために使用します。各データ ポイントは、上下の両方に垂直線で垂直列としてプロットされます。垂直の線は投資の高値と安値の間の範囲を示します。垂直線の上部はセッション中の最高価格を示し、垂直線の下部はセッション中の最低価格を示します。垂直列は、投資の始値と終値の間の範囲を示します。開始値と終了値の間で正の値がある場合はシリーズの [`brush`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriescomponent.html#brush) を使用して列が満たされ、負の値がある場合は Series の [`negativeBrush`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialseriescomponent.html#negativebrush) を使用して列が満たされます。
 
-## サンプル
+## Angular ファイナンシャル ローソク足チャートの例
 
 <div class="sample-container loading" style="height: 400px">
-    <iframe id="data-chart-type-financial-candlestick-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-financial-candlestick-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="data-chart-type-financial-candlestick-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-financial-candlestick-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular ファイナンシャル ローソク足チャートの例"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-financial-candlestick-series-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示

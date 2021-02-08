@@ -21,8 +21,21 @@ brew install docfx
 
 For Windows based platforms use [_chocolatey_](https://chocolatey.org/):
 
+Download the chocolatey.exe or use the command lister under [Install with PowerShell.exe](https://docs.chocolatey.org/en-us/choco/setup#install-with-powershell.exe):
+
+```
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+```
+
+Use chocolatey to install docfx
 ```
 choco install docfx
+```
+
+Note: Use the following command in order to install specific version of docfx:
+
+```
+choco install docfx --version 2.47 --force
 ```
 
 ### Installing the Node.js dependencies:

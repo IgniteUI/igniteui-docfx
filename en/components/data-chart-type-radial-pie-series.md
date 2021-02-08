@@ -9,10 +9,10 @@ mentionedTypes: ['XamDataChart','RadialPieSeries']
 
 The Ignite UI for Angular radial pie chart belongs to a group of radial charts and uses pie slices that extend from the center of chart towards locations of data points. The [`IgxRadialPieSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialpieseriescomponent.html) take concepts of categorizing multiple series of data points and wrapping them around on a circle rather than stretching data points along a horizontal line.
 
-## Demo
+## Angular Radial Pie Chart Example
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="data-chart-type-radial-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-radial-pie-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="data-chart-type-radial-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-radial-pie-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Radial Pie Chart Example"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-radial-series-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
@@ -47,13 +47,7 @@ public dataSource: any[] = SampleRadialData.create();
 
 ## Required Modules
 
-Creation of the [`IgxRadialPieSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialpieseriescomponent.html) requires the following modules<!-- Angular, React, WebComponents -->.<!-- end: Angular, React, WebComponents --><!-- Blazor --> to be registered in your application entry point:
-
--   DataChartCoreModule        
--   RadialPieSeriesModule
--   RadialPieSeriesCoreModule      
--   DataChartInteractivityModule
-    <!-- end: Blazor -->
+Creation of the [`IgxRadialPieSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialpieseriescomponent.html) requires the following modules:
 
 ```ts
 // axis' modules:

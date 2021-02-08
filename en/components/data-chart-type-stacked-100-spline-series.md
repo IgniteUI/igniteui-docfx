@@ -10,10 +10,10 @@ namespace: Infragistics.Controls.Charts
 
 The Ignite UI for Angular stacked 100 spline chart belongs to a group of category charts and is rendered using a collection of points connected by smooth curves of spline segments ([`IgxStackedFragmentSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedfragmentseriescomponent.html)) that are stacked on top of each other. Each stacked fragment in the collection represents one visual element in each stack. Each stack can contain both positive and negative values. All positive values are grouped on the positive side of the y-axis, and all negative values are grouped on the negative side of the y-axis. The Angular stacked 100 spline chart is identical to the Angular stacked spline chart in all aspects except in their treatment of the values on y-axis. Instead of presenting a direct representation of the data, the [`IgxStacked100SplineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstacked100splineseriescomponent.html) presents the data in terms of percent of the sum of all values in a data point.
 
-## Demo
+## Angular Stacked 100 Spline Chart Example
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="data-chart-overview-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-stacked-100-spline-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="data-chart-overview-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-stacked-100-spline-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Stacked 100 Spline Chart Example"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-overview-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
@@ -46,12 +46,7 @@ The [`IgxStacked100SplineSeriesComponent`]({environment:dvApiBaseUrl}/products/i
 
 ## Required Modules
 
-Creation of the [`IgxStacked100SplineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstacked100splineseriescomponent.html) requires the following modules<!-- Angular, React, WebComponents -->.<!-- end: Angular, React, WebComponents --><!-- Blazor --> to be registered in your application entry point:
-
--   DataChartCoreModule        
--   DataChartInteractivityModule
--   Stacked100SplineSeriesModule
-    <!-- end: Blazor -->
+Creation of the [`IgxStacked100SplineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstacked100splineseriescomponent.html) requires the following modules:
 
 ```ts
 // axis' modules:
