@@ -42,7 +42,7 @@ this.spreadsheet.enterKeyNavigationDirection = SpreadsheetEnterKeyNavigationDire
 
 ## 数式バーの構成
 
-Angular [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) は、コントロールの IsFormulaBarVisible プロパティを設定して数式バーの表示/非表示を設定できます。
+Angular [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) は、コントロールの [`isFormulaBarVisible`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#isformulabarvisible) プロパティを設定して数式バーの表示/非表示を設定できます。
 
 以下のコード スニペットは上記のデモです。
 
@@ -70,7 +70,7 @@ this.spreadsheet.areGridlinesVisible = true;
 
 ## ヘッダーの構成
 
-[`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) は、AreHeadersVisible プロパティを設定してへッダーの可視性を設定できます。
+[`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) は、[`areHeadersVisible`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#areheadersvisible) プロパティを設定してへッダーの可視性を設定できます。
 
 以下のコード スニペットは上記のデモです。
 
