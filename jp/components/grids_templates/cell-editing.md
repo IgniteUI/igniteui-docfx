@@ -3,6 +3,7 @@
 title: Angular Grid セル編集 | データの変更 | Ignite UI for Angular | Infragistics
 _description: 機能豊富な Angular UI グリッドのセルデータ操作機能や Ignite UI for Angular グリッド編集機能を使用した CRUD (クラッド) をお試しください。
 _keywords: データ操作, ignite ui for angular, インフラジスティックス
+_language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
@@ -10,6 +11,7 @@ _keywords: データ操作, ignite ui for angular, インフラジスティッ�
 title: Angular TreeGrid セル編集 | データの変更 | Ignite UI for Angular
 _description: 機能豊富な Angular UI グリッドのセルデータ操作機能や Ignite UI for Angular ツリー グリッド編集機能を使用した CRUD (クラッド) をお試しください。
 _keywords: データ操作, ignite ui for angular, インフラジスティックス
+_language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -17,6 +19,7 @@ _keywords: データ操作, ignite ui for angular, インフラジスティッ�
 title: Angular HierarchicalGrid セル編集 | データの変更 | Ignite UI for Angular
 _description: 機能豊富な Angular UI グリッドのセルデータ操作機能や Ignite UI for Angular 階層グリッド編集機能を使用した CRUD (クラッド) をお試しください。
 _keywords: データ操作, ignite ui for angular, インフラジスティックス
+_language: ja
 ---
 }
 
@@ -59,7 +62,7 @@ Ignite UI for Angular @@igComponent コンポーネントは、Angular CRUD 操�
 <div class="divider--half"></div>
 
 > [!NOTE]
->任意のタイプのエディター コンポーネントで `igxCellEditor` を使用すると、キーボード ナビゲーション フローが中断されます。同じことが、編集モードに入るカスタム セルの直接編集にも当てはまります。これは、追加したエディター コンポーネント ([`igxSelect`](../select.md)、[`igxCombo`](../combo.md) など) ではなく、セル要素にフォーカスが残るためです。これが、`igxFocus` ディレクティブを利用する必要がある理由です。これにより、フォーカスがセル内コンポーネントに直接移動し、セル/行の `流暢な編集フロー`が維持されます。
+>任意のタイプのエディター コンポーネントで `igxCellEditor` を使用すると、キーボード ナビゲーション フローが中断されます。同じことが、編集モードに入るカスタム セルの直接編集にも当てはまります。これは、追加したエディター コンポーネント ([`igxSelect`](../select.md)、[`igxCombo`](../combo.md) など) ではなく、セル要素にフォーカスが残るためです。これが、`igxFocus` ディレクティブを利用する必要がある理由です。これにより、フォーカスがセル内コンポーネントに直接移動し、セル/行の`流暢な編集フロー`が維持されます。
 
 ## セルの編集
 
@@ -163,7 +166,7 @@ Ignite UI for Angular @@igComponent コンポーネントは、Angular CRUD 操�
 
 デフォルトのセル編集テンプレートの詳細については、[編集トピック](editing.md#テンプレートの編集)を参照してください。
 
-セルが編集モードのときに適用されるカスタム テンプレートを提供する場合は、[`igxCellEditor` ディレクティブ]({environment:angularApiUrl}/classes/igxcelltemplatedirective.html)を使用できます。これを行うには、 `igxCellEditor` ディレクティブでマークされた `ng-template` を渡し、カスタム コントロールを [`cell.editValue`]({environment:angularApiUrl}/classes/igxcellcomponent.html#editvalue) に適切にバインドする必要があります:
+セルが編集モードのときに適用されるカスタム テンプレートを提供する場合は、[`igxCellEditor` ディレクティブ]({environment:angularApiUrl}/classes/igxcelltemplatedirective.html)を使用できます。これを行うには、`igxCellEditor` ディレクティブでマークされた `ng-template` を渡し、カスタム コントロールを [`cell.editValue`]({environment:angularApiUrl}/classes/igxcellcomponent.html#editvalue) に適切にバインドする必要があります:
 
 ```html
 <igx-column field="class" header="Class" [editable]="true">
