@@ -302,7 +302,7 @@ import { IgxButtonGroupModule } from 'igniteui-angular';
 ```html
 <!--contacts.component.html-->
 
-<igx-buttongroup [values]="displayDensities" (onSelect)="selectDensity($event)"></igx-buttongroup>
+<igx-buttongroup [values]="displayDensities" (selected)="selectDensity($event)"></igx-buttongroup>
 ...
 <igx-list [displayDensity]="density">
     ...

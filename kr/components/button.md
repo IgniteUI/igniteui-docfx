@@ -153,7 +153,7 @@ import { IgxButtonGroupModule } from 'igniteui-angular';
 ```html
 <!--buttons-density.component.html-->
 
-<igx-buttongroup [values]="displayDensities" (onSelect)="selectDensity($event)"></igx-buttongroup>
+<igx-buttongroup [values]="displayDensities" (selected)="selectDensity($event)"></igx-buttongroup>
 ...
 <button igxButton="flat" [displayDensity]="density">Flat</button>
 ```
