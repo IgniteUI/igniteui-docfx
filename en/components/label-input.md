@@ -119,8 +119,7 @@ If you want the text in an input element, marked with `igxInput`, to be selected
 >[!NOTE]
 >To use the [`igxTextSelection`]({environment:angularApiUrl}/classes/igxtextselectiondirective.html) directive, you have to import the [`IgxTextSelectionModule`]({environment:angularApiUrl}/classes/igxtextselectionmodule.html).
 
-##### Demo
-<div class="sample-container loading" style="height: 100px">
+<div class="sample-container loading" style="height: 130px">
 <iframe id="input-text-selection-frame" data-src='{environment:demosBaseUrl}/data-entries/input-text-selection' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
