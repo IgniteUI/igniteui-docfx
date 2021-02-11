@@ -342,7 +342,37 @@ public slides = [
 </div>
 
 
+## Accessibility
+### WAI-ARIA Roles, States, and Properties
+ * The Carousel base element role is [`region`](https://www.w3.org/TR/wai-aria-1.1/#region) - section containing content that is relevant to specific purpose and users will likely want to be able to navigate easily.
+ * Carousel indicators are with role [`tab`](https://www.w3.org/TR/wai-aria-1.1/#tab) -  grouping label providing a mechanism for selecting the tab content that is to be rendered to the user
+ * The element that serves as the container for the set of tabs (carousel indicators) role is set to [`tablist`](https://www.w3.org/TR/wai-aria-1.1/#tab).
+ * Each slide element is set with role [`tabpanel`](https://www.w3.org/TR/wai-aria-1.1/#tabpanel).
+ * The element that serves as the container for the set of igx-slides is set with [aria-live](https://www.w3.org/TR/wai-aria-1.1/#aria-live)="polite". Both options are
+   - **off**: if the carousel is automatically rotating.
+   - **polite**: if the carousel is NOT automatically rotating.
 
+### ARIA support
+#### **Carousel component**
+
+##### **Attributes**:   
+ * [aria-roledescription](https://www.w3.org/TR/wai-aria-1.1/#aria-roledescription) set to 'carousel'.
+ * [aria-selected](https://www.w3.org/TR/wai-aria/states_and_properties#aria-selected)- set to *true* or *false* based on the active slide.
+ * [aria-controls](https://www.w3.org/TR/wai-aria-1.1/#aria-controls) - set a slide index whose content is controlled by the current element.
+ * [aria-live](https://www.w3.org/TR/wai-aria-1.1/#aria-live) - used to set the priority with which screen reader should treat updates to live regions - the possible settings are: **off** and **polite**. The default setting is **polite**. When the [interval]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#interval) option set, the **aria-live** attribute would be set to **off**.
+ * [aria-label](https://www.w3.org/TR/wai-aria/states_and_properties#aria-label) slide based.
+ * aria-label (buttons)
+   - aria-label - for previous slide.
+   - aria-label - for next slide.
+
+#### **Slide component**
+##### **Roles**: 
+ * [attr.role="tabpanel"](https://www.w3.org/TR/wai-aria-1.1/#tabpanel) -  container for the resources associated with a tab, where each tab is contained in a tablist.
+
+##### **Attributes**:
+ * id - follows the pattern "panel-${this.index}"
+ * [aria-labelledby](https://www.w3.org/TR/wai-aria/#aria-labelledby) follows the pattern "tab-${this.index}-${this.total}"
+ * [aria-selected](https://www.w3.org/TR/wai-aria-1.1/#aria-selected) set **active** slide. Indicates the current **selected** state of a particular slide element.
 
 ## API リファレンス
 <div class="divider--half"></div>
