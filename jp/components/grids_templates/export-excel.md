@@ -125,7 +125,7 @@ public exportButtonHandler() {
 @@if (igxName === 'IgxGrid') {
 ## グループ化されたデータのエクスポート
 
-グループ化されたデータをエクスポートするには、@@igComponent を 1 つ以上の列でグループ化する必要があります。ブラウザーは、選択した列でグループ化された MSExcel 形式の @@ igComponent コンポーネントからのデータを含む 「ExportedDataFile.xlsx」 という名前のファイルをダウンロードします。例:
+グループ化されたデータをエクスポートするには、@@igComponent を 1 つ以上の列でグループ化する必要があります。ブラウザーは、選択した列でグループ化された MSExcel 形式の @@igComponent コンポーネントからのデータを含む 「ExportedDataFile.xlsx」 という名前のファイルをダウンロードします。例:
 
 <div class="sample-container loading" style="height: 800px;">
     <iframe id="excel-group-export-sample-iframe" src="{environment:demosBaseUrl}/services/export-excel-sample-1"
@@ -160,7 +160,7 @@ this.excelExportService.export(this.@@igObjectRef, new IgxExcelExporterOptions("
 @@if (igxName === 'IgxGrid') {
 |制限|説明|
 |--- |--- |
-|複数列ヘッダーのエクスポート|Excel エクスポーター サービスは、複数列ヘッダーを持つ @@ igComponent のエクスポートをサポートしていません。|
+|複数列ヘッダーのエクスポート|Excel エクスポーター サービスは、複数列ヘッダーを持つ @@igComponent のエクスポートをサポートしていません。|
 }
 
 > [!NOTE] 

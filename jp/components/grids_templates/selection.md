@@ -81,7 +81,7 @@ Ignite UI for Angular @@igComponent コンポーネントは、[行選択](row-s
 以下のオプションは、プロパティ [`cellSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellSelection) で指定できます。
 - none - @@igComponent のセル選択が無効になります。
 - single - @@igComponent 内の 1 セルのみ選択が利用可能になります。
-- multiple - @@ igComponent の選択のデフォルト状態です。Multi - セルの選択は、マウスの左ボタンを連続してクリックした後、マウスをセル上にドラッグすることで利用できます。
+- multiple - @@igComponent の選択のデフォルト状態です。Multi - セルの選択は、マウスの左ボタンを連続してクリックした後、マウスをセル上にドラッグすることで利用できます。
 
 > 詳細については、[セル選択トピック](cell-selection.md)を参照してください。
 

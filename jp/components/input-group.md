@@ -125,7 +125,7 @@ Ignite UI for Angular は、`type="file"` の入力スタイルも提供し、�
 
 ### Input Group テーマ
 
-入力グループ コンポーネントは、 `material`、`fluent`、`bootstrap`、`indigo-design` などの複数のテーマをサポートします。[`theme`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html#theme) は、コンポーネントの初期化中に自動的に設定され、現在使用されているスタイルシートから推測されます。
+入力グループ コンポーネントは、`material`、`fluent`、`bootstrap`、`indigo-design` などの複数のテーマをサポートします。[`theme`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html#theme) は、コンポーネントの初期化中に自動的に設定され、現在使用されているスタイルシートから推測されます。
 
 ```html
 <igx-input-group theme="fluent">...</igx-input-group>
