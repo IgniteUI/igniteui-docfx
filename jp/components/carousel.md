@@ -255,10 +255,10 @@ public slides = [
 ### キーボード ナビゲーション
 <div class="divider--half"></div>
 
-*   **次へ**/**前へ**のスライドに移動するには、丁寧に使用する必要があります。
+*   **次へ**/**前へ**のスライドに移動するには、それぞれ以下を使用する必要があります。
     * `右矢印`キー - 次のスライド
     * `左矢印`キー - 前のスライド
-*   **最後**/**最初**のスライドに移動するには丁寧に使用する必要があります。
+*   **最後**/**最初**のスライドに移動するには、それぞれ以下を使用する必要があります。
     * `End` キー - 最後のスライド
     * `Home` キー - 最初のスライド
  
@@ -342,37 +342,37 @@ public slides = [
 </div>
 
 
-## Accessibility
-### WAI-ARIA Roles, States, and Properties
- * The Carousel base element role is [`region`](https://www.w3.org/TR/wai-aria-1.1/#region) - section containing content that is relevant to specific purpose and users will likely want to be able to navigate easily.
- * Carousel indicators are with role [`tab`](https://www.w3.org/TR/wai-aria-1.1/#tab) -  grouping label providing a mechanism for selecting the tab content that is to be rendered to the user
- * The element that serves as the container for the set of tabs (carousel indicators) role is set to [`tablist`](https://www.w3.org/TR/wai-aria-1.1/#tab).
- * Each slide element is set with role [`tabpanel`](https://www.w3.org/TR/wai-aria-1.1/#tabpanel).
- * The element that serves as the container for the set of igx-slides is set with [aria-live](https://www.w3.org/TR/wai-aria-1.1/#aria-live)="polite". Both options are
-   - **off**: if the carousel is automatically rotating.
-   - **polite**: if the carousel is NOT automatically rotating.
+## ユーザー補助
+### WAI-ARIA の役割、状態、およびプロパティ
+ * Carousel の基本要素の役割は [`region`](https://www.w3.org/TR/wai-aria-1.1/#region) です。これは、ユーザーが簡単にナビゲートできるようにしたい特定の目的に関連するコンテンツを含むセクションです。
+ * Carousel インジケーターの役割は [`tab`](https://www.w3.org/TR/wai-aria-1.1/#tab) です。これは、ユーザーに描画されるタブ コンテンツを選択するためのメカニズムを提供するグループ化ラベルです。
+ * タブのセット (カルーセル インジケーター) 役割のコンテナーとして機能する要素は、[`tablist`](https://www.w3.org/TR/wai-aria-1.1/#tab) に設定されます。
+ * 各スライド要素には、[`tabpanel`](https://www.w3.org/TR/wai-aria-1.1/#tabpanel) の役割が設定されています。
+ * igx-slides のセットのコンテナとして機能する要素は、[aria-live](https://www.w3.org/TR/wai-aria-1.1/#aria-live)="polite" で設定されます。どちらのオプションも
+   - カルーセルが自動的に回転している場合、**off** になります。
+   - カルーセルが自動的に回転しない場合、**polite** になります。
 
-### ARIA support
-#### **Carousel component**
+### ARIA のサポート
+#### **Carousel コンポーネント**
 
-##### **Attributes**:   
- * [aria-roledescription](https://www.w3.org/TR/wai-aria-1.1/#aria-roledescription) set to 'carousel'.
- * [aria-selected](https://www.w3.org/TR/wai-aria/states_and_properties#aria-selected)- set to *true* or *false* based on the active slide.
- * [aria-controls](https://www.w3.org/TR/wai-aria-1.1/#aria-controls) - set a slide index whose content is controlled by the current element.
- * [aria-live](https://www.w3.org/TR/wai-aria-1.1/#aria-live) - used to set the priority with which screen reader should treat updates to live regions - the possible settings are: **off** and **polite**. The default setting is **polite**. When the [interval]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#interval) option set, the **aria-live** attribute would be set to **off**.
- * [aria-label](https://www.w3.org/TR/wai-aria/states_and_properties#aria-label) slide based.
- * aria-label (buttons)
-   - aria-label - for previous slide.
-   - aria-label - for next slide.
+##### **属性**:   
+ * [aria-roledescription](https://www.w3.org/TR/wai-aria-1.1/#aria-roledescription) を 'carousel' に設定します。
+ * [aria-selected](https://www.w3.org/TR/wai-aria/states_and_properties#aria-selected) - アクティブなスライドに基づいて *true* または *false* に設定します。
+ * [aria-controls](https://www.w3.org/TR/wai-aria-1.1/#aria-controls) - コンテンツが現在の要素によって制御されるスライド インデックスを設定します。
+ * [aria-live](https://www.w3.org/TR/wai-aria-1.1/#aria-live) - スクリーン リーダーがライブ リージョンの更新を処理する優先度を設定するために使用されます。可能な設定は **off** および **polite** です。デフォルト設定は **polite** です。[interval]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#interval) オプションが設定されている場合、**aria-live** 属性は  **off** に設定されます。
+ * スライドに基づく [aria-label](https://www.w3.org/TR/wai-aria/states_and_properties#aria-label)。
+ * aria-label (ボタン)
+   - aria-label - 前のスライド用。
+   - aria-label - 次のスライド用。
 
-#### **Slide component**
-##### **Roles**: 
- * [attr.role="tabpanel"](https://www.w3.org/TR/wai-aria-1.1/#tabpanel) -  container for the resources associated with a tab, where each tab is contained in a tablist.
+#### **Slide コンポーネント**
+##### **役割**: 
+ * [attr.role="tabpanel"](https://www.w3.org/TR/wai-aria-1.1/#tabpanel) - タブに関連付けられたリソースのコンテナ。各タブはタブ リストに含まれています。
 
-##### **Attributes**:
- * id - follows the pattern "panel-${this.index}"
- * [aria-labelledby](https://www.w3.org/TR/wai-aria/#aria-labelledby) follows the pattern "tab-${this.index}-${this.total}"
- * [aria-selected](https://www.w3.org/TR/wai-aria-1.1/#aria-selected) set **active** slide. Indicates the current **selected** state of a particular slide element.
+##### **属性**:
+ * Id - パターン "panel-${this.index}" に従います。
+ * [aria-labelledby](https://www.w3.org/TR/wai-aria/#aria-labelledby) は、"tab-${this.index}-${this.total}" のパターンに従います。
+ * [aria-selected](https://www.w3.org/TR/wai-aria-1.1/#aria-selected) は、**アクティブ** スライドを設定します。特定のスライド要素の現在の**選択された**状態を示します。
 
 ## API リファレンス
 <div class="divider--half"></div>

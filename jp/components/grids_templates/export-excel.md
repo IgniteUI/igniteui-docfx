@@ -123,9 +123,9 @@ public exportButtonHandler() {
 ```
 
 @@if (igxName === 'IgxGrid') {
-## Export Grouped Data
+## グループ化されたデータのエクスポート
 
-To export grouped data you just need to group the @@igComponent by one or more columns. The browser will download a file named "ExportedDataFile.xlsx" which contains the data from the @@igComponent component in MS Excel format grouped by the selected column. Example:
+グループ化されたデータをエクスポートするには、@@igComponent を 1 つ以上の列でグループ化する必要があります。ブラウザーは、選択した列でグループ化された MSExcel 形式の @@ igComponent コンポーネントからのデータを含む 「ExportedDataFile.xlsx」 という名前のファイルをダウンロードします。例:
 
 <div class="sample-container loading" style="height: 800px;">
     <iframe id="excel-group-export-sample-iframe" src="{environment:demosBaseUrl}/services/export-excel-sample-1"
@@ -160,7 +160,7 @@ this.excelExportService.export(this.@@igObjectRef, new IgxExcelExporterOptions("
 @@if (igxName === 'IgxGrid') {
 |制限|説明|
 |--- |--- |
-|Exporting multi column headers|The excel exporter service doesn't support exporting @@igComponent with multi column headers.|
+|複数列ヘッダーのエクスポート|Excel エクスポーター サービスは、複数列ヘッダーを持つ @@ igComponent のエクスポートをサポートしていません。|
 }
 
 > [!NOTE] 
