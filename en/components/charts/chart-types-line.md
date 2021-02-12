@@ -15,18 +15,36 @@ A Line Chart, or Line Graph, is a type of category line graph that shows the con
 
 <div class="divider--half"></div>
 
+In order to use the Angular Line Chart, the following modules are first required to be added to your application:
+
+<!-- Angular -->
+
+```ts
+// app.module.ts
+import { IgxCategoryChartModule } from 'igniteui-angular-charts';
+
+@NgModule({
+    imports: [
+        // ...
+        IgxCategoryChartModule,
+        // ...
+    ]
+})
+export class AppModule {}
+```
+
+<!-- end: Angular -->
+
 -   Different than a line chart, the area chart fills the area between the X-Axis (bottom axis) and the line representing the data value with color or texture to visually represent volume.
 -   The Angular line chart is identical to the Angular spline chart in all aspects except that the line connecting data points does not have spline interpolation and smoothing for improved presentation of data.
 
 A Line Chart includes several variants based on your data or how you want to tell the correct story with your data. These include:
 
--   Layered Area Chart
--   Stacked Area Chart
--   Stepped Area Chart
+-   Layered Line Chart
+-   Stacked Line Chart
 -   Stepped Line Chart
--   Polar Area Chart
 -   Polar Line Chart
--   Stacked 100 Area Chart
+-   Stacked 100 Line Chart
 
 There are several use cases for a Line Chart. When you:
 
@@ -55,6 +73,26 @@ Data Structure:
 -   The data source must contain at least one data item
 -   All data items must contain at least one data column (string or date time)
 -   All data items must contain at least one numeric data column
+
+The following code snippet demonstrates a sample data source that can be used to create a Line Chart:
+
+```ts
+public initData() {
+    this.data = [
+        { Year: "2009", Europe: 31, China: 21,  USA: 19 },
+        { Year: "2010", Europe: 43, China: 26,  USA: 24 },
+        { Year: "2011", Europe: 66, China: 29,  USA: 28 },
+        { Year: "2012", Europe: 69, China: 32,  USA: 26 },
+        { Year: "2013", Europe: 58, China: 47,  USA: 38 },
+        { Year: "2014", Europe: 40, China: 46,  USA: 31 },
+        { Year: "2015", Europe: 78, China: 50,  USA: 19 },
+        { Year: "2016", Europe: 13, China: 90,  USA: 52 },
+        { Year: "2017", Europe: 78, China: 132, USA: 50 },
+        { Year: "2018", Europe: 40, China: 134, USA: 34 },
+        { Year: "2019", Europe: 80, China: 96,  USA: 38 },
+    ];
+}
+```
 
 ## Angular Line Chart with Single Series
 
@@ -135,16 +173,14 @@ Once our chart is set up, we may want to make some further styling customization
 
 <div class="divider--half"></div>
 
-## Additional Resources
+<!-- ## Additional Resources
 
--   [Area Chart](chart-types-area.md)
--   [Column Chart](chart-types-column.md)
--   [Financial Chart](chart-types-financial.md)
--   [Scatter Chart](chart-types-scatter.md)
--   [Shape Chart](chart-types-scatter.md#angular-scatter-polygon-chart)
--   [Spline Chart](chart-types-spline.md)
--   [Step Chart](chart-types-step.md)
--   [Sparkline](../sparkline.md)
+- [Series Animations](chart-features-animations.md)
+- [Series Annotations](chart-features-annotations.md)
+- [Series Highlighting](chart-features-highlighting.md)
+- [Series Markers](chart-features-markers.md)
+- [Series Tooltips](chart-features-tooltips.md)
+- [Series Trendlines](chart-features-trendlines.md) -->
 
 ## API Members
 
