@@ -149,7 +149,7 @@ public selectDensity(event) {
 <!-- sample.component.html -->
 <igx-buttongroup [values]="displayDensities" 
                  [displayDensity]="displayDensity"
-                 (onSelect)="selectDensity($event)">
+                 (selected)="selectDensity($event)">
 </igx-buttongroup>
 ```
 
