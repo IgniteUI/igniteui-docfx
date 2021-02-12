@@ -101,9 +101,17 @@ export class AppModule {}
 providers: [{provide: IGX_input-group_TYPE, useValue: 'box' }]
 ```
 
->注:
->[`type`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html#type) プロパティは [IGX_input-group_TYPE]({environment:angularApiUrl}/index.html#igx_input-group_type) よりも優先されるため、type プロパティが明示的に設定されている場合トークン値をコンポーネントレベルでオーバーライドできます。  
+>[!NOTE]
+>[`type`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html#type) プロパティは [IGX_INPUT_GROUP_TYPE]({environment:angularApiUrl}/index.html#igx_input_group_type) よりも優先されるため、type プロパティが明示的に設定されている場合トークン値をコンポーネントレベルでオーバーライドできます。  
 >`igniteui-angular` フォーム コントロールのほとんどは、内部で input-group コンポーネントを使用するか、カスタム テンプレートを使用します。グローバル トークンの設定は、これらのコンポーネントにも影響します。
+
+Ignite UI for Angular は、`type="file"` の入力スタイルも提供し、すべての入力グループ タイプとテーマをサポートします。以下をテンプレートに追加するだけです:
+
+```html
+<igx-input-group>
+    <input igxInput type="file" multiple />
+</igx-input-group>
+```
 
 
 <div class="sample-container loading" style="height:520px">
