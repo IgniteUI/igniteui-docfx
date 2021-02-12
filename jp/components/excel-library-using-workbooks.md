@@ -39,19 +39,19 @@ Microsoft Excel® ドキュメント プロパティは、ドキュメントの�
 
 -   `Title`
 
--   `subject`
+-   `Subject`
 
--   `keywords`
+-   `Keywords`
 
--   `category`
+-   `Category`
 
--   `status`
+-   `Status`
 
--   `comments`
+-   `Comments`
 
--   `company`
+-   `Company`
 
--   `manager`
+-   `Manager`
 
 以下のコードは、ブックを作成し、`title` および `status` ドキュメント プロパティを設定する方法を示します。
 
@@ -80,16 +80,12 @@ var workbook = new Workbook();
 workbook.protect(false, false);
 ```
 
--   isProtected
-
 ブックが保護されているかどうかの確認この読み取り専用プロパティは、ワークブックに Protect メソッドのオーバーロードを使用して設定された保護がある場合、true を返します。
 
 ```ts
 var workbook = new Workbook();
 var protect = workbook.isProtected;
 ```
-
--   protection
 
 この読み取り専用プロパティは、保護の各設定を個別に取得するためにプロパティを含む WorkbookProtection 型のオブジェクトを返します。
 
