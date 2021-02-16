@@ -181,8 +181,8 @@ This code is used in the sample below which implements an [`IgxSelectComponent`]
     <iframe id="grid-select-amino-iframe" data-src='{environment:demosBaseUrl}/grid/grid-select' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
 </div>
 <div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-select-amino-iframe" data-demos-base-url="{environment:lobDemosBaseUrl}">view on codesandbox</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-select-amino-iframe" data-demos-base-url="{environment:lobDemosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-select-amino-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-select-amino-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
 
