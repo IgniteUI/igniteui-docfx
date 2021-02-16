@@ -12,7 +12,7 @@ Angular ComboBox コンポーネントは、編集可能な機能を提供する
 
 ## Angular ComboBox の例
 
-この AngularComboBox の例では、ユーザーが項目をフィルターし、提供されたデータを使用して単一または複数の選択を実行する方法を表します。さらに、ComboBox は、キーボード ナビゲーションとカスタム スタイル設定機能を公開します。
+この Angular ComboBox の例では、ユーザーが項目をフィルターし、提供されたデータを使用して単一または複数の選択を実行する方法を表します。さらに、ComboBox は、キーボード ナビゲーションとカスタム スタイル設定機能を公開します。
 
 <div class="divider--half"></div>
 <div class="sample-container loading" style="height: 400px;">
@@ -33,7 +33,7 @@ Combo コンポーネントは以下の機能を公開します。
     - [グループ化](combo-features.md#グループ化)
     - [カスタム値](combo-features.md#カスタム値)
     - [テンプレート](combo-templates.md)
-    - [テンプレート駆動フォーム](input-group.md)および[リアクティブ フォーム](input-group-reactive-forms.md) との統合
+    - [テンプレート駆動フォーム](input-group.md)および[リアクティブ フォーム](input-group-reactive-forms.md)との統合
 
 ## 使用方法
 
