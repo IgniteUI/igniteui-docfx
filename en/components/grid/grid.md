@@ -288,6 +288,8 @@ const pipeArgs: IColumnPipeArgs = {
 
 The `OrderDate` column will respect only the `format` and `timezone` properties, while the `UnitPrice` will only respect the `digitsInfo`. For further details, please check the official Angular documentation at [Localizing your app](https://angular.io/guide/i18n).
 
+Ref to column types topic
+
 ## Angular Grid Data Structure
 
 The [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) handles **flat data** and nested **POJOs(Plain old Java objects)**. The data structure specific for rendering is in the form:

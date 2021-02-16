@@ -92,6 +92,9 @@
     - name: Remote Data Operations
       href: grid/remote-data-operations.md
       new: false
+    - name: Column data types
+      href: grid/column-types.md
+      new: true
     - name: Editing
       href: grid/editing.md
       new: true
