@@ -230,6 +230,9 @@
     - name: Remote Data Operations
       href: treegrid/remote-data-operations.md
       new: false
+    - name: Column data types
+      href: treegrid/column-types.md
+      new: true
     - name: Load On Demand
       href: treegrid/load-on-demand.md
       new: false
@@ -352,6 +355,9 @@
     - name: Remote Data Operations
       href: hierarchicalgrid/remote-data-operations.md
       new: false
+    - name: Column data types
+      href: hierarchicalgrid/column-types.md
+      new: true
     - name: Load on Demand
       href: hierarchicalgrid/load-on-demand.md
       new: false

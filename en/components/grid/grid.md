@@ -288,7 +288,7 @@ const pipeArgs: IColumnPipeArgs = {
 
 The `OrderDate` column will respect only the `format` and `timezone` properties, while the `UnitPrice` will only respect the `digitsInfo`. For further details, please check the official Angular documentation at [Localizing your app](https://angular.io/guide/i18n).
 
-Ref to column types topic
+All available column data types could be found in the official [Column types topic](column-types.md#default-template).
 
 ## Angular Grid Data Structure
 
@@ -732,6 +732,7 @@ See the [Grid Sizing](sizing.md) topic.
 * [Column Pinning](column-pinning.md)
 * [Column Resizing](column-resizing.md)
 * [Selection](selection.md)
+* [Column Data Types](column-types.md#default-template)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
