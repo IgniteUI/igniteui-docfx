@@ -68,7 +68,7 @@ The sample below demonstrates the three types of @@igComponent's **row selection
 }
 
 ## Setup
-In order to setup row selection in the [`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html), you just need to set the **rowSelection** property. This property accepts **GridSelectionMode** enumeration. **GridSelectionMode** exposes the following tree modes: @@if(igxName !== 'IgxTreeGrid'){**none**, **single** and **multiple**}@@if(igxName === 'IgxTreeGrid'){**none**, **single**, **multiple** and **multipleCascade**}. Below we will take a look at each of them in more detail.
+In order to setup row selection in the [`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html), you just need to set the **rowSelection** property. This property accepts **GridSelectionMode** enumeration. **GridSelectionMode** exposes the following @@if(igxName !== 'IgxTreeGrid'){three modes: **none**, **single** and **multiple**}@@if(igxName === 'IgxTreeGrid'){four modes: **none**, **single**, **multiple** and **multipleCascade**}. Below we will take a look at each of them in more detail.
 
 ### None Selection
 
@@ -171,7 +171,7 @@ To enable multiple row selection in the [`@@igSelector`]({environment:angularApi
 }
 @@if(igxName === 'IgxTreeGrid'){
 ### Cascade Selection
-To enable multiple row selection in the [`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) just set the [`rowSelection`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowSelection) property to `multipleCascade`. This will enable a row selector field on each row and in the @@igComponent header. The row selector allows users to select multiple rows which would select all children in the tree below the selected records. The selection persisting through scrolling, paging, and data operations, such as sorting and filtering. The row also can be selected by clicking on a cell or by pressing the *space* key when a cell is focused. If you have selected one row and *click* on another while holding the *shift* key, the selection of parent record will select all of its children even if they are not in the selected range. In this selection mode, when you *click* on a single row, the previous selected rows will be deselected. If you *click* while holding the *ctrl* key, the row and its children will be toggled and the previous selection will be preserved.
+To enable multiple row selection in the [`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) just set the [`rowSelection`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowSelection) property to `multipleCascade`. This will enable a row selector field on each row and in the @@igComponent header. The row selector allows users to select multiple rows which would select all children in the tree below. The selection persists through scrolling, paging, and data operations, such as sorting and filtering. The row can also be selected by clicking on a cell or by pressing the *space* key when a cell is focused. If you have selected one row and *click* on another while holding the *shift* key, the selection of a parent record will select all of its children even if they are not in the selected range. In this selection mode, when you *click* on a single row, the previously selected rows will be deselected. If you *click* while holding the *ctrl* key, the row and its children will be toggled and the previous selection will be preserved.
 
 ```html
 <!-- selectionExample.component.html -->
