@@ -98,7 +98,7 @@ public slides = [
 ```html
 <div class="carousel-container">
     <igx-carousel #carousel [loop]="false">
-      ...  
+      ...
         <!-- Adding an empty template to disable carousel's indicators -->
         <ng-template igxCarouselIndicator></ng-template>
     </igx-carousel>
@@ -315,12 +315,12 @@ public slides = [
 </div>
 ...
 ```
-カルーセルの [`onSlideChanged`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#onslidechanged) およびリストの [onItemClicked]({environment:angularApiUrl}/classes/igxlistcomponent.html#onitemclicked) イベントを処理し、コンポーネントを同期する方法: 
+カルーセルの [`onSlideChanged`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#onslidechanged) およびリストの [itemClicked]({environment:angularApiUrl}/classes/igxlistcomponent.html#itemclicked) イベントを処理し、コンポーネントを同期する方法: 
 
 ```typescript
   public ngOnInit() {
     ...
-    this.list.onItemClicked.subscribe((args: IListItemClickEventArgs) => {
+    this.list.itemClicked.subscribe((args: IListItemClickEventArgs) => {
         this.currentIndex = args.item.index;
         this.carousel.select(this.carousel.get(this.currentIndex));
     });
@@ -355,7 +355,7 @@ public slides = [
 ### ARIA のサポート
 #### **Carousel コンポーネント**
 
-##### **属性**:   
+##### **属性**:
  * [aria-roledescription](https://www.w3.org/TR/wai-aria-1.1/#aria-roledescription) を 'carousel' に設定します。
  * [aria-selected](https://www.w3.org/TR/wai-aria/states_and_properties#aria-selected) - アクティブなスライドに基づいて *true* または *false* に設定します。
  * [aria-controls](https://www.w3.org/TR/wai-aria-1.1/#aria-controls) - コンテンツが現在の要素によって制御されるスライド インデックスを設定します。
@@ -366,7 +366,7 @@ public slides = [
    - aria-label - 次のスライド用。
 
 #### **Slide コンポーネント**
-##### **役割**: 
+##### **役割**:
  * [attr.role="tabpanel"](https://www.w3.org/TR/wai-aria-1.1/#tabpanel) - タブに関連付けられたリソースのコンテナ。各タブはタブ リストに含まれています。
 
 ##### **属性**:
