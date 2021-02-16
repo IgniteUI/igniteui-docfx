@@ -315,7 +315,7 @@ public slides = [
 </div>
 ...
 ```
-カルーセルの [`onSlideChanged`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#onslidechanged) およびリストの [itemClicked]({environment:angularApiUrl}/classes/igxlistcomponent.html#itemClicked) イベントを処理し、コンポーネントを同期する方法: 
+カルーセルの [`onSlideChanged`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#onslidechanged) およびリストの [itemClicked]({environment:angularApiUrl}/classes/igxlistcomponent.html#itemclicked) イベントを処理し、コンポーネントを同期する方法: 
 
 ```typescript
   public ngOnInit() {

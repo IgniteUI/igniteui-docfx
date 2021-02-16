@@ -185,8 +185,8 @@ Ignite UI for Angular @@igComponent コンポーネントは、Angular CRUD 操�
     <iframe id="grid-select-amino-iframe" data-src='{environment:demosBaseUrl}/grid/grid-select' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
 </div>
 <div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-select-amino-iframe" data-demos-base-url="{environment:lobDemosBaseUrl}">Codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-select-amino-iframe" data-demos-base-url="{environment:lobDemosBaseUrl}">Stackblitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-select-amino-iframe" data-demos-base-url="{environment:demosBaseUrl}">Codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-select-amino-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
