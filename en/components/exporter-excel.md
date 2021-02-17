@@ -39,7 +39,7 @@ import { IgxExcelExporterService } from "igniteui-angular";
 export class AppModule {}
 ```
 
-> [!Note] 
+> [!Note]
 > The Excel Exporter service has a peer dependency on the JSZip library. The JSZip library should be installed when using the Excel Exporter.
 
 To initiate an export process you may use the handler of a button in your component's template.
@@ -78,14 +78,14 @@ If all went well, you should see an export button. When pressed, it will trigger
 
 ## Customizing the Exported Content
 
-In the above examples the Excel Exporter service was exporting all available data. There are situations in which you may want to skip exporting a row or even an entire column. To achieve this you may hook to the [`onColumnExport`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#oncolumnexport) and/or [`onRowExport`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#onrowexport) events which are fired respectively for each column and/or each row and cancel the respective event by setting the event argument object's [`cancel`]({environment:angularApiUrl}/interfaces/irowexportingeventargs.html#cancel) property to `true`.
+In the above examples the Excel Exporter service was exporting all available data. There are situations in which you may want to skip exporting a row or even an entire column. To achieve this you may hook to the [`columnExporting`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#columnexporting) and/or [`rowExporting`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#rowexporting) events which are fired respectively for each column and/or each row and cancel the respective event by setting the event argument object's [`cancel`]({environment:angularApiUrl}/interfaces/irowexportingeventargs.html#cancel) property to `true`.
 
 The following example will exclude a column from the export if its header is "Age" and if its index is 1:
 
 ```typescript
 // component.ts
 
-this.excelExportService.onColumnExport.subscribe((args: IColumnExportingEventArgs) => {
+this.excelExportService.columnExporting.subscribe((args: IColumnExportingEventArgs) => {
   if (args.header == "Age" && args.columnIndex == 1) {
       args.cancel = true;
   }
@@ -94,7 +94,7 @@ this.excelExportService.export(this.igxGrid1, new IgxExcelExporterOptions("Expor
 ```
 
 ## Known Limitations
-> [!NOTE] 
+> [!NOTE]
 > Exporting large Excel files may be slow because of an [issue](https://github.com/Stuk/jszip/issues/617) in the [JSZip](https://www.npmjs.com/package/jszip) library. Until the issue is resolved, in order to speed up the Excel Exporter you could import a [`setImmediate`](https://developer.mozilla.org/en-US/docs/Web/API/Window/setImmediate) [polyfill](https://www.npmjs.com/package/setimmediate) in your application.
 
 ```cmd

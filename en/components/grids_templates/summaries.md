@@ -70,7 +70,7 @@ The Angular UI grid in Ignite UI for Angular has a **summaries** feature that fu
 For `string` and `boolean` [`data types`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype), the following function is available:
  - count
 
-For `number` data type, the following functions are available:
+For `number`, `currency` and `percent` data types, the following functions are available:
  - count
  - min
  - max
@@ -81,6 +81,8 @@ For `date` data type, the following functions are available:
  - count
  - earliest
  - latest
+
+All available column data types could be found in the official [Column types topic](column-types.md#default-template).
 
 **@@igComponent summaries** are enabled per-column by setting [`hasSummary`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#hassummary) property to `true`. It is also important to keep in mind that the summaries for each column are resolved according to the column data type. In the `@@igSelector` the default column data type is `string`, so if you want `number` or `date` specific summaries you should specify the [`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype) property as `number` or `date`. Note that the summary values will be displayed localized, according to the grid [`locale`]({environment:angularApiUrl}/classes/igxgridcomponent.html#locale) and column [`pipeArgs`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#pipeArgs).
 
@@ -222,7 +224,7 @@ class MySummary extends IgxNumberSummaryOperand {
 ```
 }
 
-As seen in the examples, the base classes expose the [`operate`]({environment:angularApiUrl}/classes/igxsummaryoperand.html#operate) method, so you can choose to get all default summaries and modify the result, or calculate entirely new summary results. 
+As seen in the examples, the base classes expose the [`operate`]({environment:angularApiUrl}/classes/igxsummaryoperand.html#operate) method, so you can choose to get all default summaries and modify the result, or calculate entirely new summary results.
 The method returns a list of [`IgxSummaryResult`]({environment:angularApiUrl}/interfaces/igxsummaryresult.html).
 ```typescript
 interface IgxSummaryResult {
@@ -232,7 +234,7 @@ interface IgxSummaryResult {
 }
 ```
 and take optional parameters for calculating the summaries.
-See [Custom summaries, which access all data](#custom-summaries-which-access-all-grid-data) and [Custom summaries with localization](#custom-summaries-with-localization) sections below. 
+See [Custom summaries, which access all data](#custom-summaries-which-access-all-grid-data) and [Custom summaries with localization](#custom-summaries-with-localization) sections below.
 
 > [!NOTE]
 > In order to calculate the summary row height properly, the @@igComponent needs the [`operate`]({environment:angularApiUrl}/classes/igxsummaryoperand.html#operate) method to always return an array of [`IgxSummaryResult`]({environment:angularApiUrl}/interfaces/igxsummaryresult.html) with the proper length even when the data is empty.
@@ -356,7 +358,7 @@ class MySummary extends IgxDateSummaryOperand {
         return result;
     }
 }
-```  
+```
 
 @@if (igxName === 'IgxGrid') {
 ## Summaries with Group By
@@ -594,6 +596,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 <div class="divider--half"></div>
 
 * [@@igComponent overview](@@igMainTopic.md)
+* [Column Data Types](column-types.md#default-template)
 * [Virtualization and Performance](virtualization.md)
 * [Paging](paging.md)
 * [Filtering](filtering.md)
