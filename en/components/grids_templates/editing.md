@@ -70,33 +70,6 @@ The grid exposes a wide array of events that provide greater control over the ed
 | [`rowEditDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditdone) | If `rowEditing` is enabled, fires **after** a row has been edited and new row's value has been **committed**. | [IGridEditDoneEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `false` |
 | [`rowEditExit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditExit) | If `rowEditing` is enabled, fires when a row **exits edit mode** | [IGridEditDoneEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `false` |
 
-### Features integration
-While a cell/row is in edit mode, a user may interact with the grid in many ways. The following table specifies how a certain interaction affects the current editing:
-
-| @@igComponent | Fitering | Sorting | Paging | Moving | Pinning | Hiding | GroupBy | Resizing | Escape | Enter | F2 | Tab | Cell Click | Add new row/Delete/Edit |
-| -------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Keep edit mode |     |   |   |   |   |   |   | ✔ |   |   |   |   |   |   |
-| Exit edit mode | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |   | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| Commit |   |   |  |  |  |   |   |   |  | ✔ | ✔ | ✔ | ✔ | ✔ |
-| Discard | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |✔ |   | ✔  |  |   |   |   |  |
-
-As seen from the table, all interactions, except resizing a column, will end the editing and will discard the new values. Should the new value be commited, this can be done by the developer in the corresponding feature "-ing" event.
-
-Exammple how to commit new values, if user tries to sort the column while a cell/row is in edit mode:
-
-```html
-<igx-grid #grid [data]="localData" [primaryKey]="'ProductID'" (sorting)="onSorting($event)">
-...
-</igx-grid>
-```
-
-```typescript
-public onSorting(event: ISortingEventArgs) {
-    this.grid.endEdit(true);
-    // (event.owner as IgxGridComponent).endEdit(true);
-}
-```
-
 
 ### Event cancelation
  - `rowEditEnter` - Neither Row nor Cell will enter edit mode.
@@ -135,6 +108,33 @@ The following sample demonstrates the editing execution sequence in action:
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hGrid-editing-lifecycle-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 }
+
+### Features integration
+While a cell/row is in edit mode, a user may interact with the grid in many ways. The following table specifies how a certain interaction affects the current editing:
+
+| @@igComponent | Fitering | Sorting | Paging | Moving | Pinning | Hiding | GroupBy | Resizing | Escape | Enter | F2 | Tab | Cell Click | Add new row/Delete/Edit |
+| -------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Keep edit mode |     |   |   |   |   |   |   | ✔ |   |   |   |   |   |   |
+| Exit edit mode | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |   | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+| Commit |   |   |  |  |  |   |   |   |  | ✔ | ✔ | ✔ | ✔ | ✔ |
+| Discard | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |✔ |   | ✔  |  |   |   |   |  |
+
+As seen from the table, all interactions, except resizing a column, will end the editing and will discard the new values. Should the new value be commited, this can be done by the developer in the corresponding feature "-ing" event.
+
+Exammple how to commit new values, if user tries to sort the column while a cell/row is in edit mode:
+
+```html
+<igx-grid #grid [data]="localData" [primaryKey]="'ProductID'" (sorting)="onSorting($event)">
+...
+</igx-grid>
+```
+
+```typescript
+public onSorting(event: ISortingEventArgs) {
+    this.grid.endEdit(true);
+    // (event.owner as IgxGridComponent).endEdit(true);
+}
+```
 
 ## API References
 
