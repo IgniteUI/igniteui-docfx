@@ -12,7 +12,7 @@ Angular ComboBox コンポーネントは、編集可能な機能を提供する
 
 ## Angular ComboBox の例
 
-この AngularComboBox の例では、ユーザーが項目をフィルターし、提供されたデータを使用して単一または複数の選択を実行する方法を表します。さらに、ComboBox は、キーボード ナビゲーションとカスタム スタイル設定機能を公開します。
+この Angular ComboBox の例では、ユーザーが項目をフィルターし、提供されたデータを使用して単一または複数の選択を実行する方法を表します。さらに、ComboBox は、キーボード ナビゲーションとカスタム スタイル設定機能を公開します。
 
 <div class="divider--half"></div>
 <div class="sample-container loading" style="height: 400px;">
@@ -33,7 +33,7 @@ Combo コンポーネントは以下の機能を公開します。
     - [グループ化](combo-features.md#グループ化)
     - [カスタム値](combo-features.md#カスタム値)
     - [テンプレート](combo-templates.md)
-    - [テンプレート駆動フォーム](input-group.md)および[リアクティブ フォーム](input-group-reactive-forms.md) との統合
+    - [テンプレート駆動フォーム](input-group.md)および[リアクティブ フォーム](input-group-reactive-forms.md)との統合
 
 ## 使用方法
 
@@ -323,7 +323,10 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 ```
 
 > [!NOTE]
-> [IgxCombo]({environment:angularApiUrl}/classes/igxcombocomponent.html) は、[IgxOverlay](overlay-main.md) サービスを使用して、コンボ項目のリスト コンテナーを保持および表示します。スタイルを適切にスコープするには、[OverlaySetting.outlet]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet) を使用してください。詳細については、[IgxOverlay スタイル ガイド](overlay-styling.md)を確認してください。
+> [IgxCombo]({environment:angularApiUrl}/classes/igxcombocomponent.html) は、[IgxOverlay](overlay.md) サービスを使用して、コンボ項目のリスト コンテナーを保持および表示します。スタイルを適切にスコープするには、[OverlaySetting.outlet]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet) を使用してください。詳細については、[IgxOverlay スタイル ガイド](overlay-styling.md)を確認してください。
+
+> [!NOTE]
+> IgxCombo のデフォルト `type` は `box` です。[IgxSelect](select.md) は `line` です。
 
 ### デモ
 <div class="sample-container loading" style="height:410px">
@@ -343,7 +346,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 - コンボの高さを変更するための入力はありません。将来、[IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) コンポーネントは、カスタムのサイズ変更オプションを公開し、[IgxCombo]({environment:angularApiUrl}/classes/igxcombocomponent.html) は適切なスタイル設定と外観の統一に同じ機能を使用します。
 
 > [!NOTE]
-> `igxCombo` は内部で `igxForOf` ディレクティブを使用するため、すべての `igxForOf` の制限が Combo で有効です。詳細については、[igxForOf Known Issues](for-of.html#known-limitations) の既知の問題のセクションを参照してください。
+> `igxCombo` は内部で `igxForOf` ディレクティブを使用するため、すべての `igxForOf` の制限が Combo で有効です。詳細については、[igxForOf 既知の制限](for-of.html#既知の制限)セクションを参照してください。
 
 ## API まとめ
 <div class="divider--half"></div>

@@ -89,10 +89,10 @@ IgniteUI for Angular @@igComponent コンポーネントは、[クイック フ�
 </@@igSelector>
 ```
 
-ただし、[高度なフィルタリング](advanced-filtering.md)を有効にするには、[`showToolbar`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#showtoolbar) および [`allowAdvancedFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowadvancedfiltering) 入力プロパティを `true` に設定します。
+ただし、[高度なフィルタリング](advanced-filtering.md)を有効にするには、[`allowAdvancedFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowadvancedfiltering) 入力プロパティを `true` に設定します。
 
 ```html
-<@@igSelector [data]="data" [autoGenerate]="true" [showToolbar]="true" [allowAdvancedFiltering]="true">
+<@@igSelector [data]="data" [autoGenerate]="true" [allowAdvancedFiltering]="true">
 </@@igSelector>
 ```
 

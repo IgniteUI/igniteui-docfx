@@ -65,7 +65,7 @@ export class SampleComponent implements OnInit {
 To use the icons in your component template:
 
 ```html
-<igx-icon fontSet="imx-icons" name="github"></igx-icon>
+<igx-icon family="imx-icons" name="github"></igx-icon>
 ```
 
 For more information and other types of usage, go to our [GitHub Repository](https://github.com/IgniteUI/material-icons-extended).

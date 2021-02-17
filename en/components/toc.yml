@@ -971,6 +971,9 @@
     - name: Printing styles
       href: themes/printing-styles.md
       new: false
+    - name: Theming with CSS Variables
+      href: themes/css-variables-theming.md
+      new: false
 - name: Components Roundness
   href: roundness.md
   new: false
@@ -1057,7 +1060,7 @@
   href: tooltip.md
   new: false
 - name: Overlay
-  href: overlay-main.md
+  href: overlay.md
   new: false
   updated: true
   items:

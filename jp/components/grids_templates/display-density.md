@@ -125,7 +125,7 @@ public ngOnInit() {
 @@if (igxName === 'IgxGrid') {
 ```html
 <div class="density-chooser">
-    <igx-buttongroup [values]="displayDensities" (onSelect)="selectDensity($event)"></igx-buttongroup>
+    <igx-buttongroup [values]="displayDensities" (selected)="selectDensity($event)"></igx-buttongroup>
 </div>
 <igx-grid #grid [data]="data" [displayDensity]="density" width="100%" height="550px" [allowFiltering]="true">
     <igx-column-group  header="Customer Information">
@@ -181,7 +181,7 @@ public ngOnInit() {
 @@if (igxName === 'IgxTreeGrid') {
 ```html
 <div class="density-chooser">
-    <igx-buttongroup [values]="displayDensities" (onSelect)="selectDensity($event)"></igx-buttongroup>
+    <igx-buttongroup [values]="displayDensities" (selected)="selectDensity($event)"></igx-buttongroup>
 </div>
 <igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID" [displayDensity]="density" width="100%"
     height="550px" [allowFiltering]="true">
@@ -229,7 +229,7 @@ public ngOnInit() {
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
 <div class="density-chooser">
-    <igx-buttongroup [values]="displayDensities" (onSelect)="selectDensity($event)"></igx-buttongroup>
+    <igx-buttongroup [values]="displayDensities" (selected)="selectDensity($event)"></igx-buttongroup>
 </div>
 <igx-hierarchical-grid #hGrid [data]="localdata" [height]="'600px'" [width]="'100%'" [allowFiltering]="true">
     <igx-column field="CustomerID"></igx-column>
