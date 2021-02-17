@@ -10,7 +10,7 @@ The Ignite UI for Angular Data Grid is used to display and manipulate data with 
 
 ## Angular Data Grid Example
 
-Boston Marathon 2020 – In this angular grid example, you can see how users can do both basic and excel-style filtering, live-data sorting, as well as using of grid summaries and cell templating that includes our [Sparkline](../sparkline.md) component, 
+Boston Marathon 2020 – In this angular grid example, you can see how users can do both basic and excel-style filtering, live-data sorting, as well as using of grid summaries and cell templating that includes our [Sparkline](../sparkline.md) component,
 [Circular Progress Indicator](../circular-progress.md) component, and [Icons](../icon.md). The demo also includes  custom paging and per page usage part of the [Angular Pagination](paging.md).
 
 <div class="sample-container loading" style="height:700px">
@@ -262,7 +262,7 @@ The code above will make the **ProductName** column sortable and editable and wi
 
 ### Custom Display Format
 
-All values for a date or numeric column are transformed through the Angular [`DatePipe`](https://angular.io/api/common/DatePipe) or [`DecimalPipe`](https://angular.io/api/common/DecimalPipe). This does not modify the original value, just the value that is displayed in the column. By default, values will be displayed according to the grid [`locale`]({environment:angularApiUrl}/classes/igxgridcomponent.html#locale) (if not specified, it fallbacks to the application locale, which defaults to `'en-US'`).
+All values for a date, numeric, currency and percent column are transformed through the Angular [`DatePipe`](https://angular.io/api/common/DatePipe), [`DecimalPipe`](https://angular.io/api/common/DecimalPipe), [`CurrencyPipe`](https://angular.io/api/common/CurrencyPipe) and [`PercentPipe`](https://angular.io/api/common/PercentPipe) accordingly. This does not modify the original value, just the value that is displayed in the column. So please keep in mind that all data operations and manipulations are done based on the values in your data source. By default, values will be displayed according to the grid [`locale`]({environment:angularApiUrl}/classes/igxgridcomponent.html#locale) (if not specified, it fallbacks to the application locale, which defaults to `'en-US'`).
 
 See [Setting up the locale of your app](https://angular.io/guide/i18n#setting-up-the-locale-of-your-app) for more details.
 
