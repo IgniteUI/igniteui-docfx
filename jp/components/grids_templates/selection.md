@@ -72,7 +72,9 @@ Ignite UI for Angular @@igComponent コンポーネントは、[行選択](row-s
 [`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection) プロパティを使用すると、次のオプションを指定できます。
 - none - @@igComponent の行選択が無効になります。
 - single - @@igComponent 内の 1 行のみの選択が利用可能になります。
-- multiple - 複数行の選択は、<kbd>ctrl</kbd> + <kbd>click</kbd>、<kbd>space キー</kbd>を押して`行セレクター`を使用することにより、複数行の選択が可能になります。
+- multiple - 複数行の選択は、<kbd>ctrl</kbd> + <kbd>click</kbd>、<kbd>space キー</kbd>を押して`行セレクター`を使用することにより、複数行の選択が可能になります。@@if (igxName === 'IgxTreeGrid') {
+- multipleCascade -  This is a mode for cascading selection, resulting in the selection of all children in the tree below the record that the user selects with user interaction. In this mode a parent's selection state entirely depends on the selection state of its children.
+}
 
 > 詳細については、[行選択トピック](row-selection.md)を参照してください。
 
