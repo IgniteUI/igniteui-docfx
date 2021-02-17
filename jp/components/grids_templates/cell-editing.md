@@ -3,6 +3,7 @@
 title: Angular Grid セル編集 | データの変更 | Ignite UI for Angular | Infragistics
 _description: 機能豊富な Angular UI グリッドのセルデータ操作機能や Ignite UI for Angular グリッド編集機能を使用した CRUD (クラッド) をお試しください。
 _keywords: データ操作, ignite ui for angular, インフラジスティックス
+_language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
@@ -10,6 +11,7 @@ _keywords: データ操作, ignite ui for angular, インフラジスティッ�
 title: Angular TreeGrid セル編集 | データの変更 | Ignite UI for Angular
 _description: 機能豊富な Angular UI グリッドのセルデータ操作機能や Ignite UI for Angular ツリー グリッド編集機能を使用した CRUD (クラッド) をお試しください。
 _keywords: データ操作, ignite ui for angular, インフラジスティックス
+_language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -17,6 +19,7 @@ _keywords: データ操作, ignite ui for angular, インフラジスティッ�
 title: Angular HierarchicalGrid セル編集 | データの変更 | Ignite UI for Angular
 _description: 機能豊富な Angular UI グリッドのセルデータ操作機能や Ignite UI for Angular 階層グリッド編集機能を使用した CRUD (クラッド) をお試しください。
 _keywords: データ操作, ignite ui for angular, インフラジスティックス
+_language: ja
 ---
 }
 
@@ -59,7 +62,7 @@ Ignite UI for Angular @@igComponent コンポーネントは、Angular CRUD 操�
 <div class="divider--half"></div>
 
 > [!NOTE]
->By using `igxCellEditor` with any type of editor component, the keyboard navigation flow will be disrupted. The same applies to direct editing of the custom cell that enters edit mode. This is because the `focus` will remain on the `cell element`, not on the editor component that we've added - [`igxSelect`](../select.md), [`igxCombo`](../combo.md), etc. This is why we should take leverage of the `igxFocus` directive, which will move the focus directly in the in-cell component and will preserve `a fluent editing flow` of the cell/row.
+>任意のタイプのエディター コンポーネントで `igxCellEditor` を使用すると、キーボード ナビゲーション フローが中断されます。同じことが、編集モードに入るカスタム セルの直接編集にも当てはまります。これは、追加したエディター コンポーネント ([`igxSelect`](../select.md)、[`igxCombo`](../combo.md) など) ではなく、セル要素にフォーカスが残るためです。これが、`igxFocus` ディレクティブを利用する必要がある理由です。これにより、フォーカスがセル内コンポーネントに直接移動し、セル/行の`流暢な編集フロー`が維持されます。
 
 ## セルの編集
 
@@ -163,15 +166,29 @@ Ignite UI for Angular @@igComponent コンポーネントは、Angular CRUD 操�
 
 デフォルトのセル編集テンプレートの詳細については、[編集トピック](editing.md#テンプレートの編集)を参照してください。
 
-セルが編集モードのときに適用されるカスタム テンプレートを提供する場合は、[`igxCellEditor` ディレクティブ]({environment:angularApiUrl}/classes/igxcelltemplatedirective.html)を使用できます。これを行うには、`igxCellEditor` ディレクティブで `ng-template` を渡し、カスタムコントロールを [`cell.editValue`]({environment:angularApiUrl}/classes/igxcellcomponent.html#editvalue) に適切にバインドする必要があります。
+セルが編集モードのときに適用されるカスタム テンプレートを提供する場合は、[`igxCellEditor` ディレクティブ]({environment:angularApiUrl}/classes/igxcelltemplatedirective.html)を使用できます。これを行うには、`igxCellEditor` ディレクティブでマークされた `ng-template` を渡し、カスタム コントロールを [`cell.editValue`]({environment:angularApiUrl}/classes/igxcellcomponent.html#editvalue) に適切にバインドする必要があります:
 
 ```html
-<igx-column field="ReorderLevel" header="Reorder Level" [editable]="true">
-    <ng-template igxCellEditor let-cell="cell">
-        <input type="number" [(ngModel)]="cell.editValue" />
+<igx-column field="class" header="Class" [editable]="true">
+    <ng-template igxCellEditor let-cell="cell" let-value>
+        <igx-select class="cell-select" [(ngModel)]="cell.editValue" [igxFocus]="true">
+            <igx-select-item *ngFor="let class of classes" [value]="class">
+                {{ class }}
+            </igx-select-item>
+        </igx-select>
     </ng-template>
 </igx-column>
 ```
+このコードは、`Race`、`Class`、および `Alignment` 列のセルに [`IgxSelectComponent`](../select.md) を実装する以下のサンプルで使用されています。
+
+<div class="sample-container loading" style="height:625px">
+    <iframe id="grid-select-amino-iframe" data-src='{environment:demosBaseUrl}/grid/grid-select' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
+</div>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-select-amino-iframe" data-demos-base-url="{environment:demosBaseUrl}">Codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-select-amino-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+</div>
+<div class="divider--half"></div>
 
 > [!NOTE]
 > 編集モードでセルの [`editValue`]({environment:angularApiUrl}/classes/igxcellcomponent.html#editvalue) に加えられた変更は、終了時に適切な[`編集イベント`]({environment:angularApiUrl}/classes/igxcellcomponent.html#editvalue)をトリガーし、[トランザクション状態](./batch-editing.md)に適用されます (トランザクションが有効な場合)。
@@ -181,7 +198,7 @@ Ignite UI for Angular @@igComponent コンポーネントは、Angular CRUD 操�
 > `igxCellEditor` セル編集テンプレート ディレクティブは、編集モードでの列のセルの表示方法を処理し、編集されたセルの編集値を制御します。
 
 > [!NOTE]
->By using `igxCellEditor` with any type of editor component, the keyboard navigation flow will be disrupted. The same applies to direct editing of the custom cell that enters edit mode. This is because the `focus` will remain on the `cell element`, not on the editor component that we've added - [`igxSelect`](../select.md), [`igxCombo`](../combo.md), etc. This is why we should take leverage of the `igxFocus` directive, which will move the focus directly in the in-cell component and will preserve `a fluent editing flow` of the cell/row.
+>任意のタイプのエディター コンポーネントで `igxCellEditor` を使用すると、キーボード ナビゲーション フローが中断されます。同じことが、編集モードに入るカスタム セルの直接編集にも当てはまります。これは、追加したエディター コンポーネント ([`igxSelect`](../select.md)、[`igxCombo`](../combo.md) など) ではなく、セル要素にフォーカスが残るためです。これが、`igxFocus` ディレクティブを利用する必要がある理由です。これにより、フォーカスがセル内コンポーネントに直接移動し、セル/行の `流暢な編集フロー`が維持されます。
 
 
 列とそのテンプレートの構成方法の詳細については、[グリッド列構成](../grid/grid.md#angular-grid-列の構成)のドキュメントを参照してください。
