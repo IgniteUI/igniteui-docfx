@@ -214,7 +214,7 @@ You can customize the `remove icon`, using the [`removeIcon`]({environment:angul
 ![Remove icons](../images/chip/remove_icons.jpg)
 
 ```html
-<igx-chip *ngFor="let chip of chipList"  [removable]="true" [removeIcon]="myRemoveIcon">
+<igx-chip *ngFor="let chip of chipList" [removable]="true" [removeIcon]="myRemoveIcon">
     <igx-icon igxPrefix>{{chip.icon}}</igx-icon>
     {{chip.text}}
 </igx-chip>
