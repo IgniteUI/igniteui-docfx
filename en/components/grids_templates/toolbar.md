@@ -303,7 +303,7 @@ configureExport(args: IGridToolbarExportEventArgs) {
         options.valueDelimiter = "\t";
     }
 
-    args.exporter.onColumnExport.subscribe((columnArgs: IColumnExportingEventArgs) => {
+    args.exporter.columnExporting.subscribe((columnArgs: IColumnExportingEventArgs) => {
         @@if (igxName === 'IgxGrid') {
         // Don't export image fields
         columnArgs.cancel = columnArgs.header === "Athlete" ||
