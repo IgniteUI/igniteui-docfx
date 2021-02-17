@@ -2,14 +2,14 @@
 ---
 title: Angular Grid Editing | Data Manipulation | Ignite UI for Angular | Infragistics
 _description: Configure in cell data manipulation with feature rich Angular UI grid, try the update data features and Angular CRUD by using the Ignite UI for Angular grid editing
-_keywords: data manipulation, ignite ui for angular, infragistics
+_keywords: data manipulation, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
 title: Angular TreeGrid Editing | Data Manipulation | Ignite UI for Angular
 _description: Configure in cell data manipulation with feature rich Angular UI grid, try the update data features and Angular CRUD by using the Ignite UI for Angular tree grid editing
-_keywords: data manipulation, ignite ui for angular, infragistics
+_keywords: data manipulation, ignite ui for angular, infragistics
 _canonicalLink: grid/editing
 ---
 }
@@ -17,7 +17,7 @@ _canonicalLink: grid/editing
 ---
 title: Angular HierarchicalGrid Editing | Data Manipulation | Ignite UI for Angular
 _description: Configure in cell data manipulation with feature rich Angular UI grid, try the update data features and Angular CRUD by using the Ignite UI for Angular hierarchical grid editing
-_keywords: data manipulation, ignite ui for angular, infragistics
+_keywords: data manipulation, ignite ui for angular, infragistics
 _canonicalLink: grid/editing
 ---
 }
@@ -73,29 +73,30 @@ The grid exposes a wide array of events that provide greater control over the ed
 ### Features integration
 While a cell/row is in edit mode, a user may interact with the grid in many ways. The following table specifies how a certain interaction affects the current editing:
 
-igxGrid | Fitering | Sorting | Paging | Moving | Pinning | Hiding | Resizing | Enter | Escape | F2 | Tab | Cell Click | Add new row/Delete/Edit
--- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | --
-Keep edit mode |   |   |   |   |   |   | ✔ |   |   |   |   |   |  
-Exit edit mode | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |  | ✔ | ✔ | ✔ | ✔ | ✔ | ✔
-Commit |   |   |  |  |  |   |  | ✔ |   | ✔ | ✔ | ✔ | ✔
-Discard | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |   |   | ✔ |   |   |   |  
-
-
+| @@igComponent | Fitering | Sorting | Paging | Moving | Pinning | Hiding | GroupBy | Resizing | Escape | Enter | F2 | Tab | Cell Click | Add new row/Delete/Edit |
+| -------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Keep edit mode |     |   |   |   |   |   |   | ✔ |   |   |   |   |   |   |
+| Exit edit mode | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |   | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+| Commit |   |   |  |  |  |   |   |   |  | ✔ | ✔ | ✔ | ✔ | ✔ |
+| Discard | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |✔ |   | ✔  |  |   |   |   |  |
 
 As seen from the table, all interactions, except resizing a column, will end the editing and will discard the new values. Should the new value be commited, this can be done by the developer in the corresponding feature "-ing" event.
 
 Exammple how to commit new values, if user tries to sort the column while a cell/row is in edit mode:
+
 ```html
 <igx-grid #grid [data]="localData" [primaryKey]="'ProductID'" (sorting)="onSorting($event)">
-  ...
+...
 </igx-grid>
 ```
 
 ```typescript
 public onSorting(event: ISortingEventArgs) {
     this.grid.endEdit(true);
+    // (event.owner as IgxGridComponent).endEdit(true);
 }
 ```
+
 
 ### Event cancelation
  - `rowEditEnter` - Neither Row nor Cell will enter edit mode.
