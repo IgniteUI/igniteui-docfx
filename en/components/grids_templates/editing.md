@@ -70,11 +70,38 @@ The grid exposes a wide array of events that provide greater control over the ed
 | [`rowEditDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditdone) | If `rowEditing` is enabled, fires **after** a row has been edited and new row's value has been **committed**. | [IGridEditDoneEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `false` |
 | [`rowEditExit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditExit) | If `rowEditing` is enabled, fires when a row **exits edit mode** | [IGridEditDoneEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `false` |
 
+### Features integration
+While a cell/row is in edit mode, a user may interact with the grid in many ways. The following table specifies how a certain interaction affects the current editing:
+
+igxGrid | Fitering | Sorting | Paging | Moving | Pinning | Hiding | Resizing | Enter | Escape | F2 | Tab | Cell Click | Add new row/Delete/Edit
+-- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | --
+Keep edit mode |   |   |   |   |   |   | ✔ |   |   |   |   |   |  
+Exit edit mode | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |  | ✔ | ✔ | ✔ | ✔ | ✔ | ✔
+Commit |   |   |  |  |  |   |  | ✔ |   | ✔ | ✔ | ✔ | ✔
+Discard | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |   |   | ✔ |   |   |   |  
+
+
+
+As seen from the table, all interactions, except resizing a column, will end the editing and will discard the new values. Should the new value be commited, this can be done by the developer in the corresponding feature "-ing" event.
+
+Exammple how to commit new values, if user tries to sort the column while a cell/row is in edit mode:
+```html
+<igx-grid #grid [data]="localData" [primaryKey]="'ProductID'" (sorting)="onSorting($event)">
+  ...
+</igx-grid>
+```
+
+```typescript
+public onSorting(event: ISortingEventArgs) {
+    this.grid.endEdit(true);
+}
+```
+
 ### Event cancelation
- - `RowEditEnter` - Neither Row nor Cell will enter edit mode.
- - `CellEditEnter` - Prevents entering cell edit. If [`rowEditable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#roweditable) is enabled, row edit will be triggered, although cell edit will remain forbidden.
- - `CellEdit` - Allowed Cell/Row edit, hitting **Done** button or **Enter** won't commit the value or row transaction. Cell editing and Row editing won't be closed until **Cancel** button is clicked.
- - `RowEdit` - Committing cell is possible, but not the whole row. The row will stay in edit mode and the row transaction will be considered open. Hitting **Done** does not commit or close the row. **Cancel** button closes the editing process and the transaction without committing the changes.
+ - `rowEditEnter` - Neither Row nor Cell will enter edit mode.
+ - `cellEditEnter` - Prevents entering cell edit. If [`rowEditable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#roweditable) is enabled, row edit will be triggered, although cell edit will remain forbidden.
+ - `cellEdit` - Allowed Cell/Row edit, hitting **Done** button or **Enter** won't commit the value or row transaction. Cell editing and Row editing won't be closed until **Cancel** button is clicked.
+ - `rowEdit` - Committing cell is possible, but not the whole row. The row will stay in edit mode and the row transaction will be considered open. Hitting **Done** does not commit or close the row. **Cancel** button closes the editing process and the transaction without committing the changes.
 
 The following sample demonstrates the editing execution sequence in action:
 @@if (igxName === 'IgxGrid') {
