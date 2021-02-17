@@ -28,7 +28,7 @@ With row selection in Ignite UI for Angular, there is row selector column that p
 
 ## Angular Row Selection Example
 
-@if (igxName === 'IgxTreeGrid'){
+@@if (igxName === 'IgxTreeGrid'){
 The sample below demonstrates the four types of @@igComponent's **row selection** behavior. Use the buttons below to enable each of the available selection modes. A brief description will be provided on each button interaction through a snackbar message box. Use the switch button to _hide_ or _show_ the row selector checkbox.
 }
 @@if (igxName !== 'IgxTreeGrid'){
