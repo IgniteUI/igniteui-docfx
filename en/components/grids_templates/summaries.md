@@ -70,7 +70,7 @@ The Angular UI grid in Ignite UI for Angular has a **summaries** feature that fu
 For `string` and `boolean` [`data types`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype), the following function is available:
  - count
 
-For `number` data type, the following functions are available:
+For `number`, `currency` and `percent` data types, the following functions are available:
  - count
  - min
  - max
@@ -224,7 +224,7 @@ class MySummary extends IgxNumberSummaryOperand {
 ```
 }
 
-As seen in the examples, the base classes expose the [`operate`]({environment:angularApiUrl}/classes/igxsummaryoperand.html#operate) method, so you can choose to get all default summaries and modify the result, or calculate entirely new summary results. 
+As seen in the examples, the base classes expose the [`operate`]({environment:angularApiUrl}/classes/igxsummaryoperand.html#operate) method, so you can choose to get all default summaries and modify the result, or calculate entirely new summary results.
 The method returns a list of [`IgxSummaryResult`]({environment:angularApiUrl}/interfaces/igxsummaryresult.html).
 ```typescript
 interface IgxSummaryResult {
@@ -234,7 +234,7 @@ interface IgxSummaryResult {
 }
 ```
 and take optional parameters for calculating the summaries.
-See [Custom summaries, which access all data](#custom-summaries-which-access-all-grid-data) and [Custom summaries with localization](#custom-summaries-with-localization) sections below. 
+See [Custom summaries, which access all data](#custom-summaries-which-access-all-grid-data) and [Custom summaries with localization](#custom-summaries-with-localization) sections below.
 
 > [!NOTE]
 > In order to calculate the summary row height properly, the @@igComponent needs the [`operate`]({environment:angularApiUrl}/classes/igxsummaryoperand.html#operate) method to always return an array of [`IgxSummaryResult`]({environment:angularApiUrl}/interfaces/igxsummaryresult.html) with the proper length even when the data is empty.
@@ -358,7 +358,7 @@ class MySummary extends IgxDateSummaryOperand {
         return result;
     }
 }
-```  
+```
 
 @@if (igxName === 'IgxGrid') {
 ## Summaries with Group By
