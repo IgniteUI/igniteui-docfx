@@ -72,7 +72,7 @@ Property [`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.h
 - none - Row selection would be disabled for the @@igComponent
 - single - Selection of only one row within the @@igComponent would be available
 - multiple - Multi-row selection would be available by using the `Row selectors`, with a key combination like <kbd>ctrl</kbd> + <kbd>click</kbd>, or by pressing the <kbd>space key</kbd> once a cell is focused @@if (igxName === 'IgxTreeGrid') {
-- multipleCascade -  This is a mode for cascading selection, resulting in the selection of all children in the tree below the record that the user selects with user interaction. In this mode a parent`s selection state entirely depends on the selection state of its children.
+- multipleCascade -  This is a mode for cascading selection, resulting in the selection of all children in the tree below the record that the user selects with user interaction. In this mode a parent's selection state entirely depends on the selection state of its children.
 }
 
 > Go to [Row selection topic](row-selection.md) for more information.
