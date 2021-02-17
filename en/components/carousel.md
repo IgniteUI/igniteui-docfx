@@ -97,7 +97,7 @@ The carousel template may look like this:
 ```html
 <div class="carousel-container">
     <igx-carousel #carousel [loop]="false">
-      ...  
+      ...
         <!-- Adding an empty template to disable carousel's indicators -->
         <ng-template igxCarouselIndicator></ng-template>
     </igx-carousel>
@@ -224,7 +224,7 @@ Setting `none` to the `animationType` input disables carousel's animations.
 
 ### Demo
 
-The demo below demonstrates the different types of animations, which the carousel supports. 
+The demo below demonstrates the different types of animations, which the carousel supports.
 
 <div class="sample-container loading" style="height: 700px">
     <iframe id="carousel-animations-sample-iframe" data-src='{environment:demosBaseUrl}/layouts/carousel-animations-sample' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
@@ -254,20 +254,20 @@ The carousel [animations](carousel.md#animations) are fully supported on touch d
 ### Keyboard navigation
 <div class="divider--half"></div>
 
-* To navigate to the **next**/**previous** slide, you have to use, respectfully: 
+* To navigate to the **next**/**previous** slide, you have to use, respectfully:
     * `Arrow Right` key for the next slide
     * `Arrow Left` key for the previous slide
 *  To navigate to the **end**/**start** slide you have to use, respectfully:
     * `End` key for the end slide
     * `Home` key for the start slide
- 
+
 ### Automatic transitioning
 <div class="divider--half"></div>
 
-The **IgxCarousel** can be easily configured to change the slides automatically, without any user interaction. This way you can create your own slideshow by only setting a transition interval to the [interval]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#interval) property, which determines the amount of time in milliseconds between slides transition. 
+The **IgxCarousel** can be easily configured to change the slides automatically, without any user interaction. This way you can create your own slideshow by only setting a transition interval to the [interval]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#interval) property, which determines the amount of time in milliseconds between slides transition.
 
 >[!NOTE]
->The automatic slide transitioning is not entirely user-independent by default. Positioning the mouse pointer over a slide will interrupt the current slide transition until the mouse pointer leaves the slide area. This can be prevented by setting [pause]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#pause) property to `false`. 
+>The automatic slide transitioning is not entirely user-independent by default. Positioning the mouse pointer over a slide will interrupt the current slide transition until the mouse pointer leaves the slide area. This can be prevented by setting [pause]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#pause) property to `false`.
 
 ## Advanced Example
 <div class="divider--half"></div>
@@ -314,12 +314,12 @@ adding [IgxList]({environment:angularApiUrl}/classes/igxlistcomponent.html):
 </div>
 ...
 ```
-syncing the components by hooking up on carousel's [`onSlideChanged`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#onslidechanged) and list's [onItemClicked]({environment:angularApiUrl}/classes/igxlistcomponent.html#onitemclicked) events:
+syncing the components by hooking up on carousel's [`onSlideChanged`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#onslidechanged) and list's [itemClicked]({environment:angularApiUrl}/classes/igxlistcomponent.html#itemclicked) events:
 
 ```typescript
   public ngOnInit() {
     ...
-    this.list.onItemClicked.subscribe((args: IListItemClickEventArgs) => {
+    this.list.itemClicked.subscribe((args: IListItemClickEventArgs) => {
         this.currentIndex = args.item.index;
         this.carousel.select(this.carousel.get(this.currentIndex));
     });
@@ -354,7 +354,7 @@ These configurions will have the following result:
 ### ARIA support
 #### **Carousel component**
 
-##### **Attributes**:   
+##### **Attributes**:
  * [aria-roledescription](https://www.w3.org/TR/wai-aria-1.1/#aria-roledescription) set to 'carousel'.
  * [aria-selected](https://www.w3.org/TR/wai-aria/states_and_properties#aria-selected)- set to *true* or *false* based on the active slide.
  * [aria-controls](https://www.w3.org/TR/wai-aria-1.1/#aria-controls) - set a slide index whose content is controlled by the current element.
@@ -365,7 +365,7 @@ These configurions will have the following result:
    - aria-label - for next slide.
 
 #### **Slide component**
-##### **Roles**: 
+##### **Roles**:
  * [attr.role="tabpanel"](https://www.w3.org/TR/wai-aria-1.1/#tabpanel) -  container for the resources associated with a tab, where each tab is contained in a tablist.
 
 ##### **Attributes**:

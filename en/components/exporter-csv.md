@@ -72,12 +72,12 @@ public exportButtonHandler() {
 
 ```
 
-If all went well, you should see an export button. When pressed, it will trigger the export process and the browser will download a file named "ExportedDataFile.csv" which contains the data from the `localData` array in CSV format. 
+If all went well, you should see an export button. When pressed, it will trigger the export process and the browser will download a file named "ExportedDataFile.csv" which contains the data from the `localData` array in CSV format.
 
 
 ## Exporting IgxGrid's Data
 
-The CSV Exporter service can also export data in CSV format from an [**IgxGrid**](grid/grid.md). The only difference is that you need to invoke the 
+The CSV Exporter service can also export data in CSV format from an [**IgxGrid**](grid/grid.md). The only difference is that you need to invoke the
 [`IgxCsvExporterService`]({environment:angularApiUrl}/classes/igxcsvexporterservice.html)'s [`export`]({environment:angularApiUrl}/classes/igxcsvexporterservice.html#export) method and pass the [**IgxGrid**](grid/grid.md) as first argument.
 
 Here is an example:
@@ -141,14 +141,14 @@ You can also specify a custom delimiter using the [`IgxCsvExporterOptions`]({env
 
 ## Customizing the Exported Content
 
-In the above examples the CSV Exporter service was exporting all available data. There are situations in which you may want to skip exporting a row or even an entire column. To achieve this you may hook to the [`onColumnExport`]({environment:angularApiUrl}/classes/igxcsvexporterservice.html#oncolumnexport) and/or [`onRowExport`]({environment:angularApiUrl}/classes/igxcsvexporterservice.html#onrowexport) events which are fired respectively for each column and/or each row and cancel the respective event by setting the event argument object's [`cancel`]({environment:angularApiUrl}/interfaces/irowexportingeventargs.html#cancel) property to `true`.
+In the above examples the CSV Exporter service was exporting all available data. There are situations in which you may want to skip exporting a row or even an entire column. To achieve this you may hook to the [`columnExporting`]({environment:angularApiUrl}/classes/igxcsvexporterservice.html#columnexporting) and/or [`rowExporting`]({environment:angularApiUrl}/classes/igxcsvexporterservice.html#rowexporting) events which are fired respectively for each column and/or each row and cancel the respective event by setting the event argument object's [`cancel`]({environment:angularApiUrl}/interfaces/irowexportingeventargs.html#cancel) property to `true`.
 
 The following example will exclude a column from the export if its name is "Age" and if its index is 1:
 
 ```typescript
 // component.ts
 
-this.csvExportService.onColumnExport.subscribe((args: IColumnExportingEventArgs) => {
+this.csvExportService.columnExporting.subscribe((args: IColumnExportingEventArgs) => {
   if (args.header == "Age" && args.columnIndex == 1) {
       args.cancel = true;
   }
