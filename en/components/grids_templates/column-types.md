@@ -25,7 +25,7 @@ _keywords: column data type, ignite ui for angular, infragistics
 Ignite UI for Angular @@igComponent provides a default handling of *number*, *string*, *date*, *boolean*, *currency* and *percent* column data types, based on which the appearance of the default and editing templates will be present.
 
 ## Default template
-If you want to enable a data type specific template, you should set the column [`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype) input. Let's see what are the default templates for each type.
+If you want to enable a data type-specific template, you should set the column [`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype) input otherwise the column will be treated as a string column since that is the default value for column dataType. Let's see what are the default templates for each type.
 
 ### String
 This column [`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype) is not changing the appearance or format of the cell value.
@@ -86,7 +86,7 @@ Available timezones:
 <div class="divider--half"></div>
 
 
-The @@igComponent accepts date values of type *Date object*, *Number (milliseconds)*, *An ISO date-time string*. This section shows [how to configure a custom display format](grid.md#custom-display-format). 
+The @@igComponent accepts date values of type *Date object*, *Number (milliseconds)*, *An ISO date-time string*. This section shows [how to configure a custom display format](grid.md#custom-display-format).
 
 ### Boolean
 
@@ -132,8 +132,8 @@ public formatOptions = this.options;
 ```
 
 ```html
-<igx-column field="UnitsInStock" 
-    [pipeArgs]="formatOptions" 
+<igx-column field="UnitsInStock"
+    [pipeArgs]="formatOptions"
     [dataType]="'currency'">
 </igx-column>
 ```
@@ -172,8 +172,8 @@ public formatPercentOptions = this.options;
 ```
 
 ```html
-<igx-column field="UnitsInStock" 
-    [pipeArgs]="formatPercentOptions" 
+<igx-column field="UnitsInStock"
+    [pipeArgs]="formatPercentOptions"
     [dataType]="'percent'">
 </igx-column>
 ```
