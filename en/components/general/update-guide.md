@@ -43,7 +43,13 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
 
 ## From 11.0.x to 11.1.x
 * IgxGrid, IgxTreeGrid, IgxHierarchicalGrid
-    * The `onPagingDone` output is removed from the grid. Other paging inputs/outputs like `page`, `perPage`, `totalPages` are deprecated and will also be removed in a future major release. If needed to make use of any of those, an external paginator should be used. It is recommended to use the `IgxPaginator` as an external component. See [Paginator Component](../grid/paging#paginator-component-demo) topic, which also includes sections that cover remote data scenarios.
+    * The `onPagingDone` output is removed from the grid. Other paging inputs/outputs like `page`, `perPage`, `totalPages`, `nextPage`, `previousPage`, `paginate` are deprecated and will also be removed in a future major release.
+    
+    If any of these are used in your application, you will need to migrate to using an external paginator for the grid and use the corresponding inputs/outputs exposed by the external paginator.
+
+    It is recommended to use the `igx-paginator` as an external paginator, where the naming of the corresponding properties is exactly the same (except that `onPagingDone` migrates to `pagingDone`). See [Paginator Component](../grid/paging#reusable-paginator-component-in-angular) topic, which also includes sections that cover remote data scenarios.
+    
+    If `onPagingDone` is not used in your application, only any of the other properties, your application will still work until these are removed in a future major release.
 
 ## From 10.2.x to 11.0.x
 * IgxGrid, IgxTreeGrid, IgxHierarchicalGrid
