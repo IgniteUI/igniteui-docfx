@@ -55,15 +55,9 @@ The following example represents the Grid pagination. Setting the `paging` input
 The [`paging`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#paging) input is a Boolean property that controls whether the feature is enabled, and the [`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) property controls the visible records per page. Let’s update our @@igComponent to enable paging:
 
 ```html
-<@@igSelector #@@igObjectRef [data]="data" [paging]="true" [perPage]="10" height="500px" width="100%" displayDensity="cosy">
+<@@igSelector #@@igObjectRef [data]="data" [paging]="true" height="500px" width="100%" displayDensity="cosy">
 </@@igSelector>
 ```
-
-@@if (igxName === 'IgxGrid') {
-## Paging with Group By
-Group rows participate in the paging process along with data rows. They count towards the page size for each page. Collapsed rows are not included in the paging process.
-Integration between Paging and Group By is described in the [Group By](groupby.html#group-by-with-paging) topic.
-}
 
 ## Angular Pagination Template
 The paging area supports custom templates to be used via the [`paginationTemplate`](environment:angularApiUrl}/classes/igxgridcomponent.html#paginationTemplate) input. The example below is a template where the pagination is controlled through an input.
@@ -131,12 +125,12 @@ Note the additional `page`, `perPage` and `totalPages` properties introduced: th
 
 The example above was pretty simple, yet working. To enable you achieve full customization and more granular control over pagination, we suggest that you use the `igx-paginator` - a standalone paginator component, that already exposes all inputs/outputs that you may need. Just continue reading below.
 
-## Reusable Paginator Component in Angular
+## IgxPaginator component
+### Usage
 The `igx-paginator` was introduced with 8.1.0 version as a standalone component and exposes all inputs/outputs needed to effectively slice your data to pages with a precise control over when and how to do it. This also makes it super easy to implement remote paging scenarios.
 
-The `igx-paginator` is what the `grid` uses internally for pagination, but this section will demonstrate how to use it as a separate component, in order to fully benefit from its capabilities.
+The `igx-paginator` is what the `igx-grid` uses internally for pagination, but this section will demonstrate how to use it as a separate component, in order to fully benefit from its capabilities.
 
-### Usage
 The `igx-paginator` exposes a rich [API](paging.md#api) to enable granular control and customization of the component behavior. Let's see it in action! The example below demonstrates how the `igx-paginator` component is used along with the `igx-grid` component in the example below, but it may be used with any other component in case paging functionality is needed.
 
 ```html
@@ -171,19 +165,23 @@ public isPagerHidden = false;
 public isDropdownDisabled = false;
 public isPagerDisabled = false;
 public selectOptions = [5, 10, 15, 25];
+
 public ngOnInit() {
     this.totalRecords = localData.length;
     this.data = this.sliceData(page, perPage);
 }
+
 public paging(event: IPagingEventArgs) {
     this.data = this.sliceData(event.newPage, this.perPage);
 }
+
 public sliceData(page, perPage) {
     const start = page * perPage;
     const end = (page + 1) * perPage;
     const result = this.allData.slice(start, end);
     return result;
 }
+
 public perPageChange(perPage: number) {
     this.data = this.sliceData(this.page, perPage);
 }
@@ -204,7 +202,7 @@ public perPageChange(perPage: number) {
 
 <div class="divider--half"></div>
 
-#### API
+### API
 
 | Input/Output/Method           |      Description                           |
 |-----------------|:------------------------------------------:|
@@ -231,14 +229,20 @@ public perPageChange(perPage: number) {
 > `totalRecords` property is essential when fetching data from a remote service - in this case `totalRecords` needs to equal the total number of records existing in the remote data source.
 
 
-## Remote Paging
+## Remote Paging with IgxPaginator
 Remote paging can be achieved by declaring a service, responsible for data fetching and a component, which will be responsible for the Grid construction and data subscription.For more detailed information, check the [`@@igComponent Remote Data Operations`](remote-data-operations.md#remote-paging) topic.
 
 
 @@if (igxName === 'IgxGrid') {
-## Remote Paging with Custom Template
+## Remote Paging with custom paginator
 
 In some cases you may want to define your own paging behavior and this is when we can take advantage of the Paging template and add our custom logic along with it. [This section](remote-data-operations.md#remote-paging-with-custom-template) explains how we are going to extend the Remote Paging example in order to demonstrate this.
+}
+
+@@if (igxName === 'IgxGrid') {
+## Paging with Group By
+Group rows participate in the paging process along with data rows. They count towards the page size for each page. Collapsed rows are not included in the paging process.
+Integration between Paging and Group By is described in the [Group By](groupby.html#group-by-with-paging) topic.
 }
 
 ## Localization
