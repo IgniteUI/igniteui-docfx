@@ -71,7 +71,9 @@ IgniteUI for Angular @@igComponent component provides three different selection 
 Property [`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection) enables you to specify the following options:
 - none - Row selection would be disabled for the @@igComponent
 - single - Selection of only one row within the @@igComponent would be available
-- multiple - multi-row selection would be available by using the `Row selectors`, with a key combination like <kbd>ctrl</kbd> + <kbd>click</kbd>, or by pressing the <kbd>space key</kbd> once a cell is focused
+- multiple - Multi-row selection would be available by using the `Row selectors`, with a key combination like <kbd>ctrl</kbd> + <kbd>click</kbd>, or by pressing the <kbd>space key</kbd> once a cell is focused @@if (igxName === 'IgxTreeGrid') {
+- multipleCascade -  This is a mode for cascading selection, resulting in the selection of all children in the tree below the record that the user selects with user interaction. In this mode a parent`s selection state entirely depends on the selection state of its children.
+}
 
 > Go to [Row selection topic](row-selection.md) for more information.
 
