@@ -28,8 +28,12 @@ With row selection in Ignite UI for Angular, there is row selector column that p
 
 ## Angular Row Selection Example
 
+@@if (igxName === 'IgxTreeGrid'){
+The sample below demonstrates the four types of @@igComponent's **row selection** behavior. Use the buttons below to enable each of the available selection modes. A brief description will be provided on each button interaction through a snackbar message box. Use the switch button to _hide_ or _show_ the row selector checkbox.
+}
+@@if (igxName !== 'IgxTreeGrid'){
 The sample below demonstrates the three types of @@igComponent's **row selection** behavior. Use the buttons below to enable each of the available selection modes. A brief description will be provided on each button interaction through a snackbar message box. Use the switch button to _hide_ or _show_ the row selector checkbox.
-
+}
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:700px">
     <iframe id="grid-selection-iframe" src='{environment:demosBaseUrl}/grid/grid-selection' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular Row Selection Example"></iframe>
@@ -65,7 +69,7 @@ The sample below demonstrates the three types of @@igComponent's **row selection
 }
 
 ## Setup
-In order to setup row selection in the [`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html), you just need to set the **rowSelection** property. This property accepts **GridSelectionMode** enumeration. **GridSelectionMode** exposes the following tree modes: **none**, **single** and **multiple**. Below we will take a look at each of them in more detail.
+In order to setup row selection in the [`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html), you just need to set the **rowSelection** property. This property accepts **GridSelectionMode** enumeration. **GridSelectionMode** exposes the following @@if(igxName !== 'IgxTreeGrid'){three modes: **none**, **single** and **multiple**}@@if(igxName === 'IgxTreeGrid'){four modes: **none**, **single**, **multiple** and **multipleCascade**}. Below we will take a look at each of them in more detail.
 
 ### None Selection
 
@@ -165,6 +169,18 @@ To enable multiple row selection in the [`@@igSelector`]({environment:angularApi
     ...
 </igx-hierarchical-grid>
 ```
+}
+@@if(igxName === 'IgxTreeGrid'){
+### Cascade Selection
+To enable multiple row selection in the [`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) just set the [`rowSelection`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowSelection) property to `multipleCascade`. This will enable a row selector field on each row and in the @@igComponent header. The row selector allows users to select multiple rows which would select all children in the tree below. The selection persists through scrolling, paging, and data operations, such as sorting and filtering. The row can also be selected by clicking on a cell or by pressing the *space* key when a cell is focused. If you have selected one row and *click* on another while holding the *shift* key, the selection of a parent record will select all of its children even if they are not in the selected range. In this selection mode, when you *click* on a single row, the previously selected rows will be deselected. If you *click* while holding the *ctrl* key, the row and its children will be toggled and the previous selection will be preserved.
+```html
+<!-- selectionExample.component.html -->
+
+<igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID" [height]="'530px'" width="100%" [rowSelection]="'multipleCascade'" [allowFiltering]="true" (onRowSelectionChange)="handleRowSelection($event)">
+    ...
+</igx-tree-grid>
+```
+In this mode a parent's selection state entirely depends on the selection state of its children. When a parent has some selected and some deselected children, its checkbox is in an indeterminate state.
 }
 
 **Notes**
