@@ -426,7 +426,7 @@ In order to provide a custom loading template for the excel style filtering, we 
 
 <div class="divider--half"></div>
 
-### Remote Paging
+## Remote Paging
 
 @@if (igxName === 'IgxGrid' || igxName === 'IgxHierarchicalGrid') {
 The paging feature can operate with remote data. In order to demonstrate this let's first declare our service that will be responsible for data fetching. We will need the count of all data items in order to calculate the page count. This logic will be added to our service.
@@ -466,6 +466,7 @@ export class RemotePagingService {
     }
 }
 ```
+}
 After declaring the service, we need to create a component, which will be responsible for the @@igComponent construction and data subscription.
 @@if (igxName === 'IgxGrid') {
 ```typescript
@@ -496,7 +497,7 @@ public ngOnDestroy() {
 
 Since remote data sccenario requires that we have a more precise control over when and how paging is done, we need to use a *custom paging template*. Let's go!
 
-### Remote Paging with custom template
+### Remote Paging with IgxPaginator
 
  We need to create a custom pager template to get the data only for the requested page and to pass the correct **skip** and **top** parameters to the remote service according to the selected page and items [`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage). We are going to use the `<igx-paginator>` in order to ease our example configuration.
 
@@ -708,7 +709,7 @@ The last step will be to declare our template for the gird.
 After all the changes above, the following result will be achieved.
 
 @@if (igxName === 'IgxGrid') {
-<div class="sample-container loading" style="height:620px">
+<div class="sample-container loading" style="height:400px">
     <iframe id="grid-remote-paging-sample-iframe" data-src='{environment:demosBaseUrl}/grid/grid-remote-paging-sample' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <br/>

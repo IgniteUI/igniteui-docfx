@@ -1,20 +1,26 @@
-
+@@if(igxName === 'IgxGrid') {
 ---
 title: Angular Grid Paging | Angular Pagination Table | Infragistics
 _description: Configure Angular pagination and create custom pages in the Angular Material table by Ignite UI, get data for the requested pages with variety of angular events.
 _keywords: angular pagination, igniteui for angular, infragistics
 ---
+}
+@@if(igxName !== 'IgxGrid') {
+---
+title: Angular Grid Paging | Angular Pagination Table | Infragistics
+_description: Configure Angular pagination and create custom pages in the Angular Material table by Ignite UI, get data for the requested pages with variety of angular events.
+_keywords: angular pagination, igniteui for angular, infragistics
+_canonicalLink: grid/paging
+---
+}
 
-
-
-# Angular Grid Pagination
+# Angular @@igComponent Pagination
 Pagination is used to split a large set of data into a sequence of pages. Angular table pagination improves user experience and data interaction. Grid pagination is enabled via the [`paging`]({environment:angularApiUrl}/classes/igxgridcomponent.html#paging) input. Should any further paging customization is needed, the grid supports custom pagination template through the [`paginationTemplate`](environment:angularApiUrl}/classes/igxgridcomponent.html#paginationTemplate) input.
-
 
 ## Angular Pagination Example
 
 The following example represents the Grid pagination. Setting the `paging` input to true enables the feature and brings the corresponding UI rendered in the grid footer. The UI indicates the current and total number of pages, and provides buttons to quickly navigate to `next`, `previous`, `first` or `last` page. The `Items per page` select enables user to quickly change the number of records displayed per page.
-
+@@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:550px">
     <iframe id="grid-paging-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-paging-sample' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular Pagination Example"></iframe>
 </div>
@@ -23,10 +29,41 @@ The following example represents the Grid pagination. Setting the `paging` input
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
+}
+@@if (igxName === 'IgxTreeGrid') {
+<div class="sample-container loading" style="height:550px">
+    <iframe id="treegrid-paging-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-paging' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular Pagination Example"></iframe>
+</div>
+<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="treegrid-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+<div class="sample-container loading" style="height:580px">
+    <iframe id="hierarchical-grid-paging-sample-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-paging' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular Pagination Example"></iframe>
+</div>
+<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
+}
 
+The [`paging`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#paging) input is a Boolean property that controls whether the feature is enabled, and the [`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) property controls the visible records per page. Let’s update our @@igComponent to enable paging:
+
+```html
+<@@igSelector #@@igObjectRef [data]="data" [paging]="true" [perPage]="10" height="500px" width="100%" displayDensity="cosy">
+</@@igSelector>
+```
+
+@@if (igxName === 'IgxGrid') {
 ## Paging with Group By
 Group rows participate in the paging process along with data rows. They count towards the page size for each page. Collapsed rows are not included in the paging process.
 Integration between Paging and Group By is described in the [Group By](groupby.html#group-by-with-paging) topic.
+}
 
 ## Angular Pagination Template
 The paging area supports custom templates to be used via the [`paginationTemplate`](environment:angularApiUrl}/classes/igxgridcomponent.html#paginationTemplate) input. The example below is a template where the pagination is controlled through an input.
@@ -40,12 +77,10 @@ The paging area supports custom templates to be used via the [`paginationTemplat
     Total pages: {{ this.totalPages }}
 </ng-template>
 
-<igx-grid [paging]="true" [paginationTemplate]="myTemplate" [data]="data">
+<@@igSelector [paging]="true" [paginationTemplate]="myTemplate">
     ...
-</igx-grid>
+</@@igSelector>
 ```
-
-Note the additional `page`, `perPage` and `totalPages` properties introduced: those are the parameters needed to correctly slice the data. This can happen in code, for example in value change event of the `input`
 
 ```typescript
 public totalRecords = 0;
@@ -70,12 +105,13 @@ public sliceData(page, perPage) {
     return result;
 }
 ```
+
 or pipe the `data` input value through a custom Angular pipe - this way a developer need not worry about change detection in certain scenarios, Angular will handle it internally:
 
 ```html
-<igx-grid [paging]="true" [paginationTemplate]="myTemplate" [data]="allData | paging:page:perPage">
+<@@igSelector [paging]="true" [paginationTemplate]="myTemplate" [data]="allData | paging:page:perPage">
     ...
-</igx-grid>
+</@@igSelector>
 ```
 
 ```typescript
@@ -91,28 +127,28 @@ export class PagingPipe implements PipeTransform {
 }
 ```
 
-The example above was pretty simple, yet working. To enable you achieve full customization and more granular control over pagination, we suggest that you use the `igx-paginator` - a standalone paginator component, that already exposes all inputs/outputs that you may need. Just continue reading below.
+Note the additional `page`, `perPage` and `totalPages` properties introduced: those are the parameters needed to correctly slice the data. This can happen in code, for example in value change event of the `input`.
 
+The example above was pretty simple, yet working. To enable you achieve full customization and more granular control over pagination, we suggest that you use the `igx-paginator` - a standalone paginator component, that already exposes all inputs/outputs that you may need. Just continue reading below.
 
 ## Reusable Paginator Component in Angular
 The `igx-paginator` was introduced with 8.1.0 version as a standalone component and exposes all inputs/outputs needed to effectively slice your data to pages with a precise control over when and how to do it. This also makes it super easy to implement remote paging scenarios.
 
 The `igx-paginator` is what the `grid` uses internally for pagination, but this section will demonstrate how to use it as a separate component, in order to fully benefit from its capabilities.
 
-
 ### Usage
-
 The `igx-paginator` exposes a rich [API](paging.md#api) to enable granular control and customization of the component behavior. Let's see it in action! The example below demonstrates how the `igx-paginator` component is used along with the `igx-grid` component in the example below, but it may be used with any other component in case paging functionality is needed.
 
 ```html
-<igx-grid #grid [data]="data" [paging]="true" [paginationTemplate]="pager">
+<@@igSelector #grid [data]="data" [paging]="true" [paginationTemplate]="pager">
 ...
-</igx-grid>
+</@@igSelector>
 
 <ng-template #pager>
     <igx-paginator #paginator
         [(page)]="page"
         [perPage]="perPage"
+        [totalRecords]="totalRecords"
         [totalRecords]="totalRecords"
         [dropdownHidden]="isDropdownHidden"
         [pagerHidden]="isPagerHidden"
@@ -135,30 +171,26 @@ public isPagerHidden = false;
 public isDropdownDisabled = false;
 public isPagerDisabled = false;
 public selectOptions = [5, 10, 15, 25];
-
 public ngOnInit() {
     this.totalRecords = localData.length;
     this.data = this.sliceData(page, perPage);
 }
-
 public paging(event: IPagingEventArgs) {
     this.data = this.sliceData(event.newPage, this.perPage);
 }
-
 public sliceData(page, perPage) {
     const start = page * perPage;
     const end = (page + 1) * perPage;
     const result = this.allData.slice(start, end);
     return result;
 }
-
 public perPageChange(perPage: number) {
     this.data = this.sliceData(this.page, perPage);
 }
 ```
 
 >[!NOTE]
-> Notice that this example is the so called local data scenario, where all the data is available (in the `localData` property). The `igx-paginator` plugs in, allowing us to control the state of the `page` and `perPage` properties, and then using these to effectively slice the correct page of data and pass it to the grid. As an alternative to slicing, pipe the `data` input value through a custom Angular pipe - this way a developer need not worry about change detection in certain scenarios, Angular will handle it internally,
+> Notice that this example is the so called local data scenario, where all the data is available (in the `localData` property). The `igx-paginator` plugs in, allowing us to control the state of the `page` and `perPage` properties, and then using these to effectively slice the correct page of data and pass it to the grid. As an alternative to slicing, pipe the `data` input value through a custom Angular pipe - this way a developer need not worry about change detection in certain scenarios, Angular will handle it internally.
 
 ### Paginator Component Demo
 <div class="sample-container loading" style="height:600px">
@@ -200,16 +232,17 @@ public perPageChange(perPage: number) {
 
 
 ## Remote Paging
-Remote paging can be achieved by declaring a service, responsible for data fetching and a component, which will be responsible for the Grid construction and data subscription.For more detailed information, check the [`Grid Remote Data Operations`](remote-data-operations.md#remote-paging) topic.
+Remote paging can be achieved by declaring a service, responsible for data fetching and a component, which will be responsible for the Grid construction and data subscription.For more detailed information, check the [`@@igComponent Remote Data Operations`](remote-data-operations.md#remote-paging) topic.
 
 
+@@if (igxName === 'IgxGrid') {
 ## Remote Paging with Custom Template
 
 In some cases you may want to define your own paging behavior and this is when we can take advantage of the Paging template and add our custom logic along with it. [This section](remote-data-operations.md#remote-paging-with-custom-template) explains how we are going to extend the Remote Paging example in order to demonstrate this.
-
+}
 
 ## Localization
-With only a few lines of code you can easily localize all strings part of the Paging component. In order to localize a given Paging instance use the input property [resourceStrings]({environment:angularApiUrl}/classes/igxgridcomponent.html#resourceStrings). You can use this 
+With only a few lines of code you can easily localize all strings part of the Paging component. In order to localize a given Paging instance use the input property [resourceStrings]({environment:angularApiUrl}/classes/@@igTypeDoc.html#resourceStrings). You can use this 
 
 **Step 1** - Import `IPaginatorResourceStrings` interface and [changei18n]({environment:angularApiUrl}/#changei18n) function:
 
@@ -239,7 +272,7 @@ public ngOnInit(): void {
 }
 ```
 
-In order to change the resource string to a specific Paging component, you can use a @ViewChild and set the desired [resourceStrings]({environment:angularApiUrl}/classes/igxgridcomponent.html#resourceStrings) within a `requestAnimationFrame` method with a callback, that will be invoked before the page repaint. Setting a newly instantiated object to the [resourceStrings]({environment:angularApiUrl}/classes/igxgridcomponent.html#resourceStrings) property will localize only that given component's instance.
+In order to change the resource string to a specific Paging component, you can use a @ViewChild and set the desired [resourceStrings]({environment:angularApiUrl}/classes/@@igTypeDoc.html#resourceStrings) within a `requestAnimationFrame` method with a callback, that will be invoked before the page repaint. Setting a newly instantiated object to the [resourceStrings]({environment:angularApiUrl}/classes/@@igTypeDoc.html#resourceStrings) property will localize only that given component's instance.
 
 ```ts
 @ViewChild("paginator", { read: IgxPaginatorComponent, static: false }) public paginator: IgxPaginatorComponent;
@@ -422,7 +455,7 @@ $dark-button: igx-button-theme(
 ```
 
 Don't forget to include the themes in the same way as it was demonstrated above.
-
+@@if (igxName === 'IgxGrid'){
 ### Pagination Style Example
 
 <div class="sample-container loading" style="height:560px">
@@ -434,22 +467,47 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="custom-grid-paging-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 <div class="divider--half"></div>
+}
+
+@@if (igxName === 'IgxHierarchicalGrid'){
+### Demo
+<div class="sample-container loading" style="height:560px">
+    <iframe id="custom-hGrid-paging-style-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-paging-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="custom-hGrid-paging-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox
+    </button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="custom-hGrid-paging-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz
+    </button>
+</div>
+}
 
 
-
-
-
-
+@@if (igxName === 'IgxTreeGrid'){
+### Demo
+<div class="sample-container loading" style="height:560px">
+    <iframe id="custom-treegrid-paging-style-iframe" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-paging-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="custom-treegrid-paging-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox
+    </button>
+<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="custom-treegrid-paging-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz
+    </button>
+</div>
+}
 
 ## API References
-* [IgxGridComponent API]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
-* [IgxGridPaginator Styles]({environment:sassApiUrl}/index.html#function-igx-paginator-theme)
+* [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
+* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [IgxGridPaginatorComponent API]({environment:angularApiUrl}/classes/igxpaginatorcomponent.html)
+* [IgxGridPaginatorComponent Styles]({environment:sassApiUrl}/index.html#function-igx-paginator-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>
 
-* [Grid overview](grid.md)
+* [@@igComponent overview](@@igMainTopic.md)
 * [Virtualization and Performance](virtualization.md)
 * [Filtering](filtering.md)
 * [Sorting](sorting.md)
