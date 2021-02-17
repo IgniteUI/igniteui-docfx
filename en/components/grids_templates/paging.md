@@ -8,9 +8,7 @@ _keywords: angular pagination, igniteui for angular, infragistics
 
 
 # Angular Grid Pagination
-Pagination is used to split a large set of data into a sequence of pages. Angular table pagination improves user experience and data interaction.
-
-Grid pagination is enabled via the [`paging`]({environment:angularApiUrl}/classes/igxgridcomponent.html#paging) input. Should is needed any further customization, the grid supports custom pagination template through the [`paginationTemplate`](environment:angularApiUrl}/classes/igxgridcomponent.html#paginationTemplate) input.
+Pagination is used to split a large set of data into a sequence of pages. Angular table pagination improves user experience and data interaction. Grid pagination is enabled via the [`paging`]({environment:angularApiUrl}/classes/igxgridcomponent.html#paging) input. Should any further paging customization is needed, the grid supports custom pagination template through the [`paginationTemplate`](environment:angularApiUrl}/classes/igxgridcomponent.html#paginationTemplate) input.
 
 
 ## Angular Pagination Example
@@ -35,9 +33,10 @@ The paging area supports custom templates to be used via the [`paginationTemplat
 
 ```html
 <ng-template #myTemplate let-grid>
+    Total records: {{ this.totalRecords }}
     Records per page: {{ this.perPage }}
     Current page: {{ this.page }}
-    <input type="number" [(ngModel)]="this.page" />
+    <input type="number" [(ngModel)]="this.page" (change)="valueChange(this.page)" />
     Total pages: {{ this.totalPages }}
 </ng-template>
 
@@ -49,16 +48,18 @@ The paging area supports custom templates to be used via the [`paginationTemplat
 Note the additional `page`, `perPage` and `totalPages` properties introduced: those are the parameters needed to correctly slice the data. This can happen in code, for example in value change event of the `input`
 
 ```typescript
+public totalRecords = 0;
+public totalPages = 0;
 public page = 0;
 public perPage = 10;
 
 public ngOnInit() {
-    this.totalPages = localData.length / this.perPage;
-    this.data = this.sliceData(page, perPage);
+    this.totalRecords = allData.length;
+    this.totalPages = Math.ceil(this.totalRecords / this.perPage);
+    this.data = this.sliceData(this.page, this.perPage);
 }
 
-public valueChange(event: any) {
-    const newPage = Number(event);
+public valueChange(newPage: number) {
     this.data = this.sliceData(newPage, this.perPage);
 }
 
@@ -72,7 +73,7 @@ public sliceData(page, perPage) {
 or pipe the `data` input value through a custom Angular pipe - this way a developer need not worry about change detection in certain scenarios, Angular will handle it internally:
 
 ```html
-<igx-grid [paging]="true" [paginationTemplate]="myTemplate" [data]="data | paging:page:perPage">
+<igx-grid [paging]="true" [paginationTemplate]="myTemplate" [data]="allData | paging:page:perPage">
     ...
 </igx-grid>
 ```
@@ -98,44 +99,10 @@ The `igx-paginator` was introduced with 8.1.0 version as a standalone component 
 
 The `igx-paginator` is what the `grid` uses internally for pagination, but this section will demonstrate how to use it as a separate component, in order to fully benefit from its capabilities.
 
+
 ### Usage
-The `igx-paginator` exposes a rich API to enable granular control and customization of the component behavior:
 
-| Input           |      Description                           |
-|-----------------|:------------------------------------------:|
-| page            | Sets the current page.
-| perPage         | Sets the number of items per page. |
-| selectOptions   | Sets custom values for the `perPage` select UI. |
-| totalRecords    | Sets the total number of items available. |
-| displayDensity  | Sets the display density of the paginator. |
-| pagerEnabled    | Enables/disables the paginator UI. |
-| pagerHidden     | Enables/disables the paginator UI. |
-| dropdownEnabled | Enables/disables the `perPage` select UI. |
-| dropdownHidden  | Shows/hides the `perPage` select UI. |
-| resourceStrings | Sets the resource strings. By default it uses EN resource strings. |
-
-
-| Method          |      Description                           |
-|-----------------|:------------------------------------------:|
-| paginate        |  Takes a number parameter indicating the page to navigate to, if exists. |
-| nextPage        |  Paginate to next page, if exists. |
-| previousPage    |  Paginate to previous page, if exists. |
-
-
-| Output          |      Description                           |
-|-----------------|:------------------------------------------:|
-| pageChange      |  Emitted after the `page` property value was changed. |
-| perPageChange   |  Emitted after the `perPage` property value was changed. |
-| paging          |  Emits an `IPagingEventArgs` containing the oldPage and newPage values. Emitted before the page is changed.
-| pagingDone      |  Emits an `IPagingDoneEventArgs` containing the oldPage and newPage values. Emitted after the page whas changed.
-
-
-> All outputs are emitted regardless if the change happened programatically or by a user interaction with the component UI.
-
-> `totalRecords` property is essential when fetching data from a remote service - in this case `totalRecords` needs to equal the total number of records existing in the remote data source.
-
-
-Let's see this rich API in action! The example below demonstrates how the `igx-paginator` component is used along with the `igx-grid` component in the example below, but it may be used with any other component in case paging functionality is needed.
+The `igx-paginator` exposes a rich [API](paging.md#api) to enable granular control and customization of the component behavior. Let's see it in action! The example below demonstrates how the `igx-paginator` component is used along with the `igx-grid` component in the example below, but it may be used with any other component in case paging functionality is needed.
 
 ```html
 <igx-grid #grid [data]="data" [paging]="true" [paginationTemplate]="pager">
@@ -145,46 +112,53 @@ Let's see this rich API in action! The example below demonstrates how the `igx-p
 <ng-template #pager>
     <igx-paginator #paginator
         [(page)]="page"
-        [(perPage)]="perPage"
+        [perPage]="perPage"
         [totalRecords]="totalRecords"
         [dropdownHidden]="isDropdownHidden"
         [pagerHidden]="isPagerHidden"
+        [dropdownEnabled]="!isDropdownDisabled"
+        [pagerEnabled]="!isPagerDisabled"
         [selectOptions]="selectOptions"
         [displayDensity]="grid.displayDensity"
+        (perPageChange)="perPageChange($event)"
         (paging)="paging($event)">
     </igx-paginator>
 </ng-template>
 ```
 
 ```typescript
-    public totalRecords = 0;
-    public page = 0;
-    public perPage = 10;
-    public dropdownHidden = false;
-    public pagerHidden = false;
-    public selectOptions = [5, 10, 15, 25];
+public totalRecords = 0;
+public page = 0;
+public perPage = 10;
+public isDropdownHidden = false;
+public isPagerHidden = false;
+public isDropdownDisabled = false;
+public isPagerDisabled = false;
+public selectOptions = [5, 10, 15, 25];
 
-    public ngOnInit() {
-        this.totalRecords = localData.length;
-        this.data = this.sliceData(page, perPage);
-    }
+public ngOnInit() {
+    this.totalRecords = localData.length;
+    this.data = this.sliceData(page, perPage);
+}
 
-    public paging(event: IPagingEventArgs) {
-        const skip = event.newPage * this.perPage;
-        this.data = this.sliceData(event.newPage, this.perPage);
-    }
+public paging(event: IPagingEventArgs) {
+    this.data = this.sliceData(event.newPage, this.perPage);
+}
 
-    public sliceData(page, perPage) {
-        const start = page * perPage;
-        const end = (page + 1) * perPage;
-        const result = localData.slice(start, end);
-        return result;
-    }
+public sliceData(page, perPage) {
+    const start = page * perPage;
+    const end = (page + 1) * perPage;
+    const result = this.allData.slice(start, end);
+    return result;
+}
+
+public perPageChange(perPage: number) {
+    this.data = this.sliceData(this.page, perPage);
+}
 ```
 
 >[!NOTE]
 > Notice that this example is the so called local data scenario, where all the data is available (in the `localData` property). The `igx-paginator` plugs in, allowing us to control the state of the `page` and `perPage` properties, and then using these to effectively slice the correct page of data and pass it to the grid. As an alternative to slicing, pipe the `data` input value through a custom Angular pipe - this way a developer need not worry about change detection in certain scenarios, Angular will handle it internally,
-
 
 ### Paginator Component Demo
 <div class="sample-container loading" style="height:600px">
@@ -197,6 +171,33 @@ Let's see this rich API in action! The example below demonstrates how the `igx-p
 </div>
 
 <div class="divider--half"></div>
+
+#### API
+
+| Input/Output/Method           |      Description                           |
+|-----------------|:------------------------------------------:|
+| page            | Sets the current page.
+| perPage         | Sets the number of items per page. |
+| selectOptions   | Sets custom values for the `perPage` select UI. |
+| totalRecords    | Sets the total number of items available. |
+| displayDensity  | Sets the display density of the paginator. |
+| pagerEnabled    | Enables/disables the paginator UI. |
+| pagerHidden     | Enables/disables the paginator UI. |
+| dropdownEnabled | Enables/disables the `perPage` select UI. |
+| dropdownHidden  | Shows/hides the `perPage` select UI. |
+| resourceStrings | Sets the resource strings. By default it uses EN resource strings. |
+| pageChange      |  Emitted after the `page` property value was changed. |
+| perPageChange   |  Emitted after the `perPage` property value was changed. |
+| paging          |  Emits an `IPagingEventArgs` containing the oldPage and newPage values. Emitted before the page is changed.
+| pagingDone      |  Emits an `IPagingDoneEventArgs` containing the oldPage and newPage values. Emitted after the page whas changed.
+| paginate        |  Takes a number parameter indicating the page to navigate to, if exists. |
+| nextPage        |  Paginate to next page, if exists. |
+| previousPage    |  Paginate to previous page, if exists. |
+
+>[!NOTE]
+> All outputs are emitted regardless if the change happened programatically or by a user interaction with the component UI.
+> `totalRecords` property is essential when fetching data from a remote service - in this case `totalRecords` needs to equal the total number of records existing in the remote data source.
+
 
 ## Remote Paging
 Remote paging can be achieved by declaring a service, responsible for data fetching and a component, which will be responsible for the Grid construction and data subscription.For more detailed information, check the [`Grid Remote Data Operations`](remote-data-operations.md#remote-paging) topic.
