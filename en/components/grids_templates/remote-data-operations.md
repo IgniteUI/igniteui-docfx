@@ -428,9 +428,9 @@ In order to provide a custom loading template for the excel style filtering, we 
 
 ## Remote Paging
 
-@@if (igxName === 'IgxGrid' || igxName === 'IgxHierarchicalGrid') {
 The paging feature can operate with remote data. In order to demonstrate this let's first declare our service that will be responsible for data fetching. We will need the count of all data items in order to calculate the page count. This logic will be added to our service.
 
+@@if (igxName === 'IgxGrid' || igxName === 'IgxHierarchicalGrid') {
 ```typescript
 @Injectable()
 export class RemotePagingService {
@@ -467,57 +467,52 @@ export class RemotePagingService {
 }
 ```
 }
-After declaring the service, we need to create a component, which will be responsible for the @@igComponent construction and data subscription.
-@@if (igxName === 'IgxGrid') {
+
+@@if (igxName === 'IgxTreeGrid') {
 ```typescript
-public data: Observable<any[]>;
-private _dataLengthSubscriber;
+@Injectable()
+export class RemotePagingService {
+    public remoteData: BehaviorSubject<any[]>;
+    public dataLength: BehaviorSubject<number> = new BehaviorSubject(0);
 
-@ViewChild("grid", { static: true }) public grid: IgxGridComponent;
+    constructor() {
+        this.remoteData = new BehaviorSubject([]);
+    }
 
-constructor(private remoteService: RemotePagingService) {
-}
+    public getData(index: number, perPage: number) {
+        // const build url based on index and perPage
+        this.http.get(`${url}`).subscribe((data) => this.remoteData.next(data));
+    }
 
-public ngOnInit() {
-    this.data = this.remoteService.remoteData.asObservable();
-
-    this._dataLengthSubscriber = this.remoteService.getDataLength().subscribe((data) => {
-        this.totalCount = data;
-        this.grid.isLoading = false;
-    });
-}
-
-public ngOnDestroy() {
-    if (this._dataLengthSubscriber) {
-        this._dataLengthSubscriber.unsubscribe();
+    public getDataLength() {
+        setTimeout(() =>
+            this.dataLength.next(this.localData.length), 300);
     }
 }
 ```
 }
 
-Since remote data sccenario requires that we have a more precise control over when and how paging is done, we need to use a *custom paging template*. Let's go!
+After declaring the service, we need to create a component, which will be responsible for the @@igComponent construction and data subscription. We are going to use the `<igx-paginator>`. Since it exposes all inputs/outputs/properties needed, it will help us build the correct API queries and execute those when the user interacts with the paging UI.
 
-### Remote Paging with IgxPaginator
-
- We need to create a custom pager template to get the data only for the requested page and to pass the correct **skip** and **top** parameters to the remote service according to the selected page and items [`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage). We are going to use the `<igx-paginator>` in order to ease our example configuration.
-
-@@if (igxName === 'IgxGrid') {
 ```html
+<@@igSelector [paging]="true" [paginationTemplate]="customPager" [pagingMode]="mode" [totalRecords]="totalCount" [isLoading]="isLoading">
+        ...
+</@@igSelector>
 <ng-template #customPager let-api>
     <igx-paginator #paginator
         [totalRecords]="totalCount"
         [(page)]="page"
         [(perPage)]="perPage"
-        [displayDensity]="grid1.displayDensity"
         (perPageChange)="perPageChange($event)"
         (paging)="paging($event)">
     </igx-paginator>
 </ng-template>
 ```
 
-```typescript
-@ViewChild("grid1", { static: true }) public grid1: IgxGridComponent;
+The code snippets below contain the essence of everything that is needed to have the ultimate paging behavior.
 
+@@if (igxName === 'IgxTreeGrid' || igxName === 'IgxGrid') {
+```typescript
 public totalCount = 0;
 public page = 0;
 public perPage = 10;
@@ -525,11 +520,6 @@ public data: Observable<any[]>;
 public mode = GridPagingMode.Remote;
 public isLoading = true;
 private _dataLengthSubscriber;
-
-constructor(private remoteService: RemotePagingService) {
-}
-
-...
 
 public ngOnInit() {
     this.data = this.remoteService.remoteData.asObservable();
@@ -566,19 +556,9 @@ private get totalPages() {
 
 ```
 }
+
+
 @@if (igxName === 'IgxHierarchicalGrid') {
-```html
-<ng-template #customPager let-api>
-    <igx-paginator #paginator
-        [totalRecords]="totalCount"
-        [(page)]="page"
-        [(perPage)]="perPage"
-        [displayDensity]="hierarchicalGrid.displayDensity"
-        (perPageChange)="perPageChange($event)"
-        (paging)="paging($event)">
-    </igx-paginator>
-</ng-template>
-```
 ```typescript
 @ViewChild("layout1")
 public layout1: IgxRowIslandComponent;
@@ -617,106 +597,6 @@ public paging(event: IPagingEventArgs) {
             }
         );
 }
-
-```
-}
-@@if (igxName === 'IgxTreeGrid') {
-```html
-<ng-template #customPager let-api>
-    <igx-paginator #paginator
-        [totalRecords]="totalCount"
-        [(page)]="page"
-        [(perPage)]="perPage"
-        [displayDensity]="treeGrid.displayDensity"
-        (perPageChange)="perPageChange($event)"
-        (paging)="paging($event)">
-    </igx-paginator>
-</ng-template>
-```
-
-```typescript
-public page = 0;
-public perPage = 10;
-public totalPages: number = 1;
-public totalCount = 0;
-public data: Observable<any[]>;
-
-@ViewChild("treeGrid", { static: true }) public treeGrid: IgxTreeGridComponent;
-
-private _dataLengthSubscriber;
-
-constructor(
-    private remoteService: RemotePagingService) {
-}
-
-public ngOnInit() {
-    this.data = this.remoteService.remoteData.asObservable();
-    this._dataLengthSubscriber = this.remoteService.dataLength.subscribe((data) => {
-        this.totalCount = data;
-        this.totalPages = Math.ceil(data / this.perPage);
-        this.treeGrid.isLoading = false;
-    });
-}
-
-public ngAfterViewInit() {
-    this.treeGrid.isLoading = true;
-    const skip = this.page * this.perPage;
-    this.remoteService.getData(skip, this.perPage);
-    this.remoteService.getDataLength();
-}
-
-public paging(event: IPagingEventArgs) {
-    const skip = event.newPage * event.owner.perPage;
-    this.remoteService.getData(skip, event.owner.perPage);
-}
-
-public perPageChange(perPage: number) {
-    const skip = this.page * perPage;
-    this.remoteService.getData(skip, perPage);
-}
-```
-
-}
-The last step will be to declare our template for the gird.
-@@if (igxName === 'IgxGrid') {
-```html
-<@@igSelector #@@igObjectRef [data]="data | async" width="960px" height="550px" [paging]="true" >
-    <igx-column field="ID"></igx-column>
-    <igx-column field="ProductName"></igx-column>
-    <igx-column field="QuantityPerUnit"></igx-column>
-    <igx-column field="SupplierName"></igx-column>
-    <igx-column field="UnitsInStock"></igx-column>
-    <igx-column field="Rating"></igx-column>
-</@@igSelector>
-```
-}
-@@if (igxName === 'IgxHierarchicalGrid') {
-```html
-<igx-hierarchical-grid [paging]="true" [primaryKey]="'CustomerID'" [height]="'550px'" [width]="'100%'" #hierarchicalGrid>
-    <igx-column field="CustomerID"></igx-column>
-        <igx-column field="CompanyName"></igx-column>
-        <igx-column field="ContactName"></igx-column>
-        <igx-column field="ContactTitle"></igx-column>
-        <igx-column field="Country"></igx-column>
-        <igx-column field="Phone"></igx-column>
-        ...
-</igx-hierarchical-grid>
-```
-}
-@@if (igxName === 'IgxTreeGrid') {
-```html
-<igx-tree-grid #treeGrid [data]="data | async" childDataKey="Content" expansionDepth="0" width="100%"
-                [paging]="true" [paginationTemplate]="customPager">
-    <igx-column field="Name">
-        <ng-template igxCell let-cell="cell" let-val>
-            <igx-icon *ngIf="cell.rowData.Type === 'File folder'" fontSet="material" class="typeIcon">folder</igx-icon>
-            <igx-icon *ngIf="cell.rowData.Type === 'JPG File'" fontSet="material" class="typeIcon">photo</igx-icon>
-            {{val}}
-        </ng-template>
-    </igx-column>
-    <igx-column field="Type"></igx-column>
-    <igx-column field="Size" dataType="number" [formatter]="formatSize"></igx-column>
-</igx-tree-grid>
 ```
 }
 

@@ -15,7 +15,7 @@ _canonicalLink: grid/paging
 }
 
 # Angular @@igComponent Pagination
-Pagination is used to split a large set of data into a sequence of pages. Angular table pagination improves user experience and data interaction. Grid pagination is enabled via the [`paging`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#paging) input. Should you need to customize the paging behavior or template, you will need to use custom pagination template, that is supproted through the [`paginationTemplate`](environment:angularApiUrl}/classes/@@igTypeDoc.html#paginationTemplate) input.
+Pagination is used to split a large set of data into a sequence of pages. Angular table pagination improves user experience and data interaction. Grid pagination is enabled via the [`paging`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#paging) input. Should you need to customize the paging behavior or template, you will need to use custom pagination template, that is supproted through the [`paginationTemplate`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#paginationTemplate) input.
 
 ## Angular Pagination Example
 
@@ -52,23 +52,14 @@ The following example represents the Grid pagination. Setting the `paging` input
 <div class="divider--half"></div>
 }
 
-The [`paging`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#paging) input is a Boolean property that controls whether the feature is enabled, and the [`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) property controls the visible records per page. Let’s update our @@igComponent to enable paging:
-
-```html
-<@@igSelector #@@igObjectRef [data]="data" [paging]="true" height="500px" width="100%" displayDensity="cosy">
-</@@igSelector>
-```
-
 ## Angular Pagination Template
 
 >[!NOTE]
 > When using any external template, always set `pagingMode` to `GridPadingMode.Remote` and `totalRecords` properties on the grid. Otherwise, the correct data slice that is passed to the grid will be piped once more through the grid internal paging pipe, which will result in incorrect data displayed.
 
-The paging area supports custom templates to be used via the [`paginationTemplate`](environment:angularApiUrl}/classes/igxgridcomponent.html#paginationTemplate) input.
+The paging area supports custom templates to be used via the [`paginationTemplate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#paginationTemplate) input.
 
-The example below is a template where the pagination is controlled through an input.
-
-Note the additional `page`, `perPage`, properties introduced: those are the parameters needed to correctly slice the data. This can happen in code, for example in value change event of the `input`.
+The example below is a template where pagination is controlled through an input. Note the additional `page` and `perPage` properties introduced: those parameters are needed to correctly slice the correct data page. This can happen in code, for example in value change event of the input:
 
 ```html
 <ng-template #myTemplate let-grid>
@@ -79,7 +70,7 @@ Note the additional `page`, `perPage`, properties introduced: those are the para
     Total pages: {{ this.totalPages }}
 </ng-template>
 
-<@@igSelector[paging]="true" [paginationTemplate]="myTemplate" [pagingMode]="mode" [totalRecords]="totalRecords">
+<@@igSelector [paging]="true" [paginationTemplate]="myTemplate" [pagingMode]="mode" [totalRecords]="totalRecords">
     ...
 </@@igSelector>
 ```
@@ -112,7 +103,7 @@ public sliceData(page, perPage) {
 A better alternative to the above approach is to pipe the `data` input through a custom Angular pipe - this way a developer need not worry about change detection in certain scenarios, Angular will handle it internally:
 
 ```html
-<@@igSelector [paging]="true" [paginationTemplate]="myTemplate" [data]="allData | paging:page:perPage">
+<@@igSelector [paging]="true" [paginationTemplate]="myTemplate" [pagingMode]="mode" [totalRecords]="totalRecords" [data]="allData | paging:page:perPage">
     ...
 </@@igSelector>
 ```
@@ -134,11 +125,11 @@ The example above was pretty simple, yet working. To enable you achieve full cus
 
 ## IgxPaginator component
 ### Usage
-The `igx-paginator` was introduced with 8.1.0 version as a standalone component and exposes all inputs/outputs needed to effectively slice your data to pages with a precise control over when and how to do it. This also makes it super easy to implement remote paging scenarios.
+The `igx-paginator` was introduced with 8.1.0 version as a standalone component and exposes exposes a rich [API](paging.md#api) to enable granular control and customization of the paging behavior. I.e. it allows the developer to slice the data to pages with a precise control over when and how to do it. This also makes it super easy to implement remote paging scenarios.
 
-The `igx-paginator` is what the `igx-grid` uses internally for pagination, but this section will demonstrate how to use it as a separate component, in order to fully benefit from its capabilities.
+The `igx-paginator` is what the `igx-grid` uses internally for pagination, but this section will demonstrate how to use it as a separate component, in order to fully benefit from its capabilities. Of course, the paginator component may be used with any other component.
 
-The `igx-paginator` exposes a rich [API](paging.md#api) to enable granular control and customization of the component behavior. Let's see it in action! The example below demonstrates how the `igx-paginator` component is used along with the `igx-grid` component in the example below, but it may be used with any other component in case paging functionality is needed.
+The example below uses almost all inputs available for the paginator for demo purposes:
 
 ```html
 <@@igSelector #grid [data]="data" [paging]="true" [paginationTemplate]="pager" [pagingMode]="mode" [totalRecords]="totalRecords">
@@ -236,8 +227,6 @@ public perPageChange(perPage: number) {
 
 >[!NOTE]
 > All outputs are emitted regardless if the change happened programatically or by a user interaction with the component UI.
-> `totalRecords` property is essential when fetching data from a remote service - in this case `totalRecords` needs to equal the total number of records existing in the remote data source.
-
 
 ## Remote Paging with IgxPaginator
 Remote paging can be achieved by declaring a service, responsible for data fetching and a component, which will be responsible for the Grid construction and data subscription.For more detailed information, check the [`@@igComponent Remote Data Operations`](remote-data-operations.md#remote-paging) topic.
