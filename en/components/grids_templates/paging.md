@@ -15,7 +15,7 @@ _canonicalLink: grid/paging
 }
 
 # Angular @@igComponent Pagination
-Pagination is used to split a large set of data into a sequence of pages. Angular table pagination improves user experience and data interaction. Grid pagination is enabled via the [`paging`]({environment:angularApiUrl}/classes/igxgridcomponent.html#paging) input. Should any further paging customization is needed, the grid supports custom pagination template through the [`paginationTemplate`](environment:angularApiUrl}/classes/igxgridcomponent.html#paginationTemplate) input.
+Pagination is used to split a large set of data into a sequence of pages. Angular table pagination improves user experience and data interaction. Grid pagination is enabled via the [`paging`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#paging) input. Should you need to customize the paging behavior or template, you will need to use custom pagination template, that is supproted through the [`paginationTemplate`](environment:angularApiUrl}/classes/@@igTypeDoc.html#paginationTemplate) input.
 
 ## Angular Pagination Example
 
@@ -60,14 +60,15 @@ The [`paging`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#paging) inpu
 ```
 
 ## Angular Pagination Template
+
+>[!NOTE]
+> When using any external template, always set `pagingMode` to `GridPadingMode.Remote` and `totalRecords` properties on the grid. Otherwise, the correct data slice that is passed to the grid will be piped once more through the grid internal paging pipe, which will result in incorrect data displayed.
+
 The paging area supports custom templates to be used via the [`paginationTemplate`](environment:angularApiUrl}/classes/igxgridcomponent.html#paginationTemplate) input.
 
 The example below is a template where the pagination is controlled through an input.
 
 Note the additional `page`, `perPage`, properties introduced: those are the parameters needed to correctly slice the data. This can happen in code, for example in value change event of the `input`.
-
->[!NOTE]
-> When using any external template, always set `pagingMode` to `GridPadingMode.Remote` and `totalRecords` properties on the grid. Otherwise, the correct data slice that is passed to the grid will be piped once more through the grid internal paging pipe, which will result in incorrect data displayed.
 
 ```html
 <ng-template #myTemplate let-grid>
@@ -108,7 +109,7 @@ public sliceData(page, perPage) {
 }
 ```
 
-or pipe the `data` input value through a custom Angular pipe - this way a developer need not worry about change detection in certain scenarios, Angular will handle it internally:
+A better alternative to the above approach is to pipe the `data` input through a custom Angular pipe - this way a developer need not worry about change detection in certain scenarios, Angular will handle it internally:
 
 ```html
 <@@igSelector [paging]="true" [paginationTemplate]="myTemplate" [data]="allData | paging:page:perPage">
