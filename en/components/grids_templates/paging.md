@@ -60,7 +60,14 @@ The [`paging`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#paging) inpu
 ```
 
 ## Angular Pagination Template
-The paging area supports custom templates to be used via the [`paginationTemplate`](environment:angularApiUrl}/classes/igxgridcomponent.html#paginationTemplate) input. The example below is a template where the pagination is controlled through an input.
+The paging area supports custom templates to be used via the [`paginationTemplate`](environment:angularApiUrl}/classes/igxgridcomponent.html#paginationTemplate) input.
+
+The example below is a template where the pagination is controlled through an input.
+
+Note the additional `page`, `perPage`, properties introduced: those are the parameters needed to correctly slice the data. This can happen in code, for example in value change event of the `input`.
+
+>[!NOTE]
+> When using any external template, always set `pagingMode` to `GridPadingMode.Remote` and `totalRecords` properties on the grid. Otherwise, the correct data slice that is passed to the grid will be piped once more through the grid internal paging pipe, which will result in incorrect data displayed.
 
 ```html
 <ng-template #myTemplate let-grid>
@@ -71,7 +78,7 @@ The paging area supports custom templates to be used via the [`paginationTemplat
     Total pages: {{ this.totalPages }}
 </ng-template>
 
-<@@igSelector [paging]="true" [paginationTemplate]="myTemplate">
+<@@igSelector[paging]="true" [paginationTemplate]="myTemplate" [pagingMode]="mode" [totalRecords]="totalRecords">
     ...
 </@@igSelector>
 ```
@@ -81,6 +88,7 @@ public totalRecords = 0;
 public totalPages = 0;
 public page = 0;
 public perPage = 10;
+public mode = GridPagingMode.Remote;
 
 public ngOnInit() {
     this.totalRecords = allData.length;
@@ -121,8 +129,6 @@ export class PagingPipe implements PipeTransform {
 }
 ```
 
-Note the additional `page`, `perPage` and `totalPages` properties introduced: those are the parameters needed to correctly slice the data. This can happen in code, for example in value change event of the `input`.
-
 The example above was pretty simple, yet working. To enable you achieve full customization and more granular control over pagination, we suggest that you use the `igx-paginator` - a standalone paginator component, that already exposes all inputs/outputs that you may need. Just continue reading below.
 
 ## IgxPaginator component
@@ -134,7 +140,7 @@ The `igx-paginator` is what the `igx-grid` uses internally for pagination, but t
 The `igx-paginator` exposes a rich [API](paging.md#api) to enable granular control and customization of the component behavior. Let's see it in action! The example below demonstrates how the `igx-paginator` component is used along with the `igx-grid` component in the example below, but it may be used with any other component in case paging functionality is needed.
 
 ```html
-<@@igSelector #grid [data]="data" [paging]="true" [paginationTemplate]="pager">
+<@@igSelector #grid [data]="data" [paging]="true" [paginationTemplate]="pager" [pagingMode]="mode" [totalRecords]="totalRecords">
 ...
 </@@igSelector>
 
@@ -142,7 +148,6 @@ The `igx-paginator` exposes a rich [API](paging.md#api) to enable granular contr
     <igx-paginator #paginator
         [(page)]="page"
         [(perPage)]="perPage"
-        [totalRecords]="totalRecords"
         [totalRecords]="totalRecords"
         [dropdownHidden]="isDropdownHidden"
         [pagerHidden]="isPagerHidden"
@@ -157,14 +162,18 @@ The `igx-paginator` exposes a rich [API](paging.md#api) to enable granular contr
 ```
 
 ```typescript
+public data: any[];
+public densityOptions: string[];
 public totalRecords = 0;
 public page = 0;
 public perPage = 10;
+public mode: GridPagingMode.Remote;
 public isDropdownHidden = false;
 public isPagerHidden = false;
 public isDropdownDisabled = false;
 public isPagerDisabled = false;
 public selectOptions = [5, 10, 15, 25];
+public allData: any[];
 
 public ngOnInit() {
     this.totalRecords = localData.length;

@@ -507,7 +507,7 @@ Since remote data sccenario requires that we have a more precise control over wh
     <igx-paginator #paginator
         [totalRecords]="totalCount"
         [(page)]="page"
-        [perPage]="perPage"
+        [(perPage)]="perPage"
         [displayDensity]="grid1.displayDensity"
         (perPageChange)="perPageChange($event)"
         (paging)="paging($event)">
@@ -518,10 +518,12 @@ Since remote data sccenario requires that we have a more precise control over wh
 ```typescript
 @ViewChild("grid1", { static: true }) public grid1: IgxGridComponent;
 
-public page = 0;
-public perPage = 5;
 public totalCount = 0;
+public page = 0;
+public perPage = 10;
 public data: Observable<any[]>;
+public mode = GridPagingMode.Remote;
+public isLoading = true;
 private _dataLengthSubscriber;
 
 constructor(private remoteService: RemotePagingService) {
@@ -531,9 +533,11 @@ constructor(private remoteService: RemotePagingService) {
 
 public ngOnInit() {
     this.data = this.remoteService.remoteData.asObservable();
+    this.data.subscribe((data) => {
+        this.isLoading = false;
+    })
     this._dataLengthSubscriber = this.remoteService.getDataLength().subscribe((data) => {
         this.totalCount = data;
-        this.grid1.isLoading = false;
     });
 }
 
@@ -543,13 +547,21 @@ public ngAfterViewInit() {
 }
 
 public paging(event: IPagingEventArgs) {
+    this.isLoading = true;
     const skip = event.newPage * this.perPage;
     this.remoteService.getData(skip, this.perPage);
 }
 
 public perPageChange(perPage: number) {
-    const skip = this.page * perPage;
-    this.remoteService.getData(skip, perPage);
+    if (this.page < this.totalPages) {
+        this.isLoading = true;
+        const skip = this.page * perPage;
+        this.remoteService.getData(skip, perPage);
+    }
+
+private get totalPages() {
+    return Math.ceil(this.totalCount / this.perPage);
+}
 }
 
 ```
@@ -560,7 +572,7 @@ public perPageChange(perPage: number) {
     <igx-paginator #paginator
         [totalRecords]="totalCount"
         [(page)]="page"
-        [perPage]="perPage"
+        [(perPage)]="perPage"
         [displayDensity]="hierarchicalGrid.displayDensity"
         (perPageChange)="perPageChange($event)"
         (paging)="paging($event)">
@@ -570,6 +582,8 @@ public perPageChange(perPage: number) {
 ```typescript
 @ViewChild("layout1")
 public layout1: IgxRowIslandComponent;
+
+@ViewChild("customPager", { read: TemplateRef, static: true }) public remotePager: TemplateRef<any>;
 
 @ViewChild("hierarchicalGrid")
 public hierarchicalGrid: IgxHierarchicalGridComponent;
@@ -612,7 +626,7 @@ public paging(event: IPagingEventArgs) {
     <igx-paginator #paginator
         [totalRecords]="totalCount"
         [(page)]="page"
-        [perPage]="perPage"
+        [(perPage)]="perPage"
         [displayDensity]="treeGrid.displayDensity"
         (perPageChange)="perPageChange($event)"
         (paging)="paging($event)">
@@ -758,34 +772,40 @@ In some cases you may want to define your own paging behavior and this is when w
 Below you will find the methods that we've defined in order to implement our own `next` and `previous` page actions.
 
 ```typescript
-@ViewChild("customPager", { read: TemplateRef, static: true }) public remotePager: TemplateRef<any>;
+public page = 0;
+public perPage = 10;
+public lastPage = false;
+public firstPage = true;
+public totalPages: number = 1;
+public totalCount = 0;
+public pages = [];
+public title = "gridPaging";
+public data: Observable<any[]>;
+public isLoading = true;
+public mode = GridPagingMode.Remote;
+
 @ViewChild("grid1", { static: true }) public grid1: IgxGridComponent;
 
 public nextPage() {
     this.firstPage = false;
-    this.page++;
-    const skip = this.page * this.perPage;
-    const top = this.perPage;
-    this.remoteService.getData(skip, top);
+    this.paginate(this.page + 1);
+
     if (this.page + 1 >= this.totalPages) {
         this.lastPage = true;
     }
-    this.setNumberOfPagingItems(this.page, this.totalPages);
 }
 
 public previousPage() {
     this.lastPage = false;
-    this.page--;
-    const skip = this.page * this.perPage;
-    const top = this.perPage;
-    this.remoteService.getData(skip, top);
+    this.paginate(this.page - 1);
+
     if (this.page <= 0) {
         this.firstPage = true;
     }
-    this.setNumberOfPagingItems(this.page, this.totalPages);
 }
 
 public paginate(page: number, recalc = false) {
+    this.isLoading = true;
     this.page = page;
     const skip = this.page * this.perPage;
     const top = this.perPage;
@@ -803,8 +823,8 @@ public buttonDeselection(page: number, totalPages: number) {
 
 ...
 public ngAfterViewInit() {
-    this.grid1.isLoading = true;
-    this.remoteService.getData(0, this.perPage);
+    const skip = this.page * this.perPage;
+    this.remoteService.getData(skip, this.perPage);
 }
 
 ```
@@ -826,7 +846,6 @@ public ngOnInit() {
         this.totalCount = data;
         this._recordOnServer = data;
         this._totalPagesOnServer = Math.floor(this.totalCount / this.perPage);
-        this.grid1.isLoading = false;
     });
     }
 ```
