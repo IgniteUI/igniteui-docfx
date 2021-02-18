@@ -25,7 +25,7 @@ _language: ja
 
 # @@igComponent 列タイプ
 
-Ignite UI for Angular @@igComponent　は、デフォルトおよび編集テンプレートの外観に基づいて、*number* (数値)、*string* (文字列)、*date* (日付)、*boolean* (ブール値)、*currency* (通貨) および *percent* (パーセント) 列のデータ型のデフォルト処理を提供します。
+Ignite UI for Angular @@igComponent は、デフォルトおよび編集テンプレートの外観に基づいて、*number* (数値)、*string* (文字列)、*date* (日付)、*boolean* (ブール値)、*currency* (通貨) および *percent* (パーセント) 列のデータ型のデフォルト処理を提供します。
 
 ## デフォルトのテンプレート
 データ型固有のテンプレートを有効にする場合、列の [`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype) 入力を設定する必要があります。設定しない場合、列は文字列の列として処理されます (これは列 dataType のデフォルト値であるためです)。次に各型のデフォルト テンプレートについて説明します。

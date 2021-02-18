@@ -261,7 +261,7 @@ public initColumns(column: IgxGridColumn) {
 
 ### カスタム表示形式
 
-日付、数値、通貨、パーセント列のすべての値は、Angular [`DatePipe`](https://angular.io/api/common/DatePipe)、[`DecimalPipe`](https://angular.io/api/common/DecimalPipe)、[`CurrencyPipe`](https://angular.io/api/common/CurrencyPipe)、[`PercentPipe`](https://angular.io/api/common/PercentPipe) に応じて変換されます。これは元の値を変更せず、列に表示される値のみを変更します。データにまつわるすべての動作や操作はデータ ソースの値に基づいて実行されることに注意してください。 デフォルトでは、値はグリッドの [`locale`]({environment:angularApiUrl}/classes/igxgridcomponent.html#locale) に従って表示されます (指定しない場合、アプリケーション ロケールにフォールバックします。デフォルトは `'en-US'` です)。
+日付、数値、通貨、パーセント列のすべての値は、Angular [`DatePipe`](https://angular.io/api/common/DatePipe)、[`DecimalPipe`](https://angular.io/api/common/DecimalPipe)、[`CurrencyPipe`](https://angular.io/api/common/CurrencyPipe)、[`PercentPipe`](https://angular.io/api/common/PercentPipe) に応じて変換されます。これは元の値を変更せず、列に表示される値のみを変更します。データにまつわるすべての動作や操作はデータ ソースの値に基づいて実行されることに注意してください。デフォルトでは、値はグリッドの [`locale`]({environment:angularApiUrl}/classes/igxgridcomponent.html#locale) に従って表示されます (指定しない場合、アプリケーション ロケールにフォールバックします。デフォルトは `'en-US'` です)。
 
 詳細については、[「Setting up the locale of your app (英語)」](https://angular.io/guide/i18n#setting-up-the-locale-of-your-app)をご覧ください。
 
