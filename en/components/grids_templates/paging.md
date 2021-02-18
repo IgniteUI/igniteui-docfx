@@ -312,17 +312,17 @@ To get started with styling the paginator, we need to import the `index` file, w
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Following the simplest approach, we create a new theme that extends the [`igx-grid-paginator-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-paginator-theme) and accepts the `$text-color`, `$background-color` and the `$border-color` parameters.
+Following the simplest approach, we create a new theme that extends the [`igx-paginator-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-paginator-theme) and accepts the `$text-color`, `$background-color` and the `$border-color` parameters.
 
 ```scss
-$dark-grid-paginator: igx-grid-paginator-theme(
+$dark-paginator: igx-paginator-theme(
     $text-color: #F4D45C,
     $background-color: #575757,
     $border-color: #292826
 );
 ```
 
-As seen, the `igx-grid-paginator-theme` only controls colors for the paging container, but does not affect the buttons in the pager UI. To style those buttons, let's create a new button theme:
+As seen, the `igx-paginator-theme` only controls colors for the paging container, but does not affect the buttons in the pager UI. To style those buttons, let's create a new button theme:
 
 ```scss
 $dark-button: igx-button-theme(
@@ -347,7 +347,7 @@ The last step is to **include** the component mixins, each with its respective t
 ```
 
 >[!NOTE]
->We scope the **igx-button** mixin within `.igx-grid-paginator__pager`, so that only the paginator buttons would be styled. Otherwise other buttons in the grid would be affected too.
+>We scope the **igx-button** mixin within `.igx-paginator__pager`, so that only the paginator buttons would be styled. Otherwise other buttons in the grid would be affected too.
 
  >[!NOTE]
  >If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
@@ -355,8 +355,8 @@ The last step is to **include** the component mixins, each with its respective t
 ```scss
 :host {
     ::ng-deep {
-        @include igx-grid-paginator($dark-grid-paginator);
-        .igx-grid-paginator__pager {
+        @include igx-paginator($dark-paginator);
+        .igx-paginator__pager {
             @include igx-button($dark-button);
         }
     }
@@ -379,7 +379,7 @@ $dark-palette: igx-palette($primary: $black-color, $secondary: $yellow-color);
 And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the pallette.
 
 ```scss
-$dark-grid-paginator: igx-grid-paginator-theme(
+$dark-paginator: igx-paginator-theme(
     $palette: $dark-palette,
     $text-color: igx-color($dark-palette, "secondary", 400),
     $background-color: igx-color($dark-palette, "primary", 200),
@@ -404,11 +404,11 @@ $dark-button: igx-button-theme(
 
  Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](../themes/schemas.md). A **schema** is a recipe of a theme.
 
-Extend one of the two predefined schemas, that are provided for every component, in this case - [`dark-grid-pagination`]({environment:sassApiUrl}/index.html#variable-_dark-grid-pagination) and [`dark-button`]({environment:sassApiUrl}/index.html#variable-_dark-button) schemas:
+Extend one of the two predefined schemas, that are provided for every component, in this case - [`dark-pagination`]({environment:sassApiUrl}/index.html#variable-_dark-grid-pagination) and [`dark-button`]({environment:sassApiUrl}/index.html#variable-_dark-button) schemas:
 
 ```scss
 // Extending the dark paginator schema
-$dark-grid-paginator-schema: extend($_dark-grid-pagination,
+$dark-paginator-schema: extend($_dark-pagination,
         (
             text-color:(
                 igx-color: ("secondary", 400)
@@ -451,12 +451,12 @@ In order to apply our custom schemas we have to **extend** one of the globals ([
 ```scss
 // Extending the global dark-schema
 $custom-dark-schema: extend($dark-schema,(
-    igx-grid-paginator: $dark-grid-paginator-schema,
+    igx-paginator: $dark-paginator-schema,
     igx-button: $dark-button-schema
 ));
 
-// Defining grid-paginator-theme with the global dark schema
-$dark-grid-paginator: igx-grid-paginator-theme(
+// Defining igx-paginator-theme with the global dark schema
+$dark-paginator: igx-paginator-theme(
   $palette: $dark-palette,
   $schema: $custom-dark-schema
 );
