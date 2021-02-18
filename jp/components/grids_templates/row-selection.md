@@ -70,7 +70,7 @@ Ignite UI for Angular の行選択では、行内の他のすべての列に先�
 }
 
 ## 設定
-[`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) で行選択を設定するには、**rowSelection** プロパティを設定します。このプロパティは、**GridSelectionMode** 列挙を受け取ります。**GridSelectionMode** exposes the following @@if(igxName !== 'IgxTreeGrid'){three modes: **none**, **single** and **multiple**}@@if(igxName === 'IgxTreeGrid'){four modes: **none**, **single**, **multiple** and **multipleCascade**}. Below we will take a look at each of them in more detail.
+[`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) で行選択を設定するには、**rowSelection** プロパティを設定します。このプロパティは、**GridSelectionMode** 列挙を受け取ります。**GridSelectionMode** は、次の @@if(igxName !== 'IgxTreeGrid'){3 つのモードを公開します: **none**、**single** および **multiple**}@@if(igxName === 'IgxTreeGrid'){4 つのモード: **none**、**single**、**multiple**、**multipleCascade**}。以下で、それぞれについて詳しく説明します。
 
 ### None 選択
 
@@ -172,8 +172,8 @@ public handleRowSelection(event) {
 ```
 }
 @@if(igxName === 'IgxTreeGrid'){
-### Cascade Selection
-To enable multiple row selection in the [`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) just set the [`rowSelection`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowSelection) property to `multipleCascade`. This will enable a row selector field on each row and in the @@igComponent header. The row selector allows users to select multiple rows which would select all children in the tree below. The selection persists through scrolling, paging, and data operations, such as sorting and filtering. The row can also be selected by clicking on a cell or by pressing the *space* key when a cell is focused. If you have selected one row and *click* on another while holding the *shift* key, the selection of a parent record will select all of its children even if they are not in the selected range. In this selection mode, when you *click* on a single row, the previously selected rows will be deselected. If you *click* while holding the *ctrl* key, the row and its children will be toggled and the previous selection will be preserved.
+### カスケード選択
+[`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) で複数行の選択を有効にするには、[`rowSelection`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowSelection) プロパティを `multipleCascade` に設定するだけです。これにより、各行および @@igComponent ヘッダーで行セレクター フィールドが有効になります。行セレクターを使用すると、ユーザーは複数の行を選択して、下のツリーのすべての子を選択できます。選択は、スクロール、ページング、および並べ替えやフィルタリングなどのデータ操作を通じて保持されます。行は、セルをクリックするか、セルがフォーカスされているときに *space* キーを押すことによっても選択できます。1 つの行を選択し、*shift* キーを押しながら別の行をクリックすると、親レコードの選択を通じて選択した範囲内にない場合でも、そのすべての子が選択されます。この選択モードでは、単一の行をクリックすると、前に選択した行が選択解除されます。*ctrl* キーを押しながらクリックすると、行とその子が切り替えられ、前の選択が保持されます。
 ```html
 <!-- selectionExample.component.html -->
 
@@ -181,7 +181,7 @@ To enable multiple row selection in the [`@@igSelector`]({environment:angularApi
     ...
 </igx-tree-grid>
 ```
-In this mode a parent's selection state entirely depends on the selection state of its children. When a parent has some selected and some deselected children, its checkbox is in an indeterminate state.
+このモードでは、親の選択状態はその子の選択状態に完全に依存します。親に選択された子と選択解除された子がある場合、そのチェックボックスは不確定な状態になります。
 }
 
 **注**
