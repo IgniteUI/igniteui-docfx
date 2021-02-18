@@ -70,7 +70,7 @@ Ignite UI for Angular の行選択では、行内の他のすべての列に先�
 }
 
 ## 設定
-[`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) で行選択を設定するには、**rowSelection** プロパティを設定します。このプロパティは、**GridSelectionMode** 列挙を受け取ります。**GridSelectionMode** は、次の @@if(igxName !== 'IgxTreeGrid'){3 つのモードを公開します: **none**、**single** および **multiple**}@@if(igxName === 'IgxTreeGrid'){4 つのモード: **none**、**single**、**multiple**、**multipleCascade**}。以下で、それぞれについて詳しく説明します。
+[`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) で行選択を設定するには、**rowSelection** プロパティを設定します。このプロパティは、**GridSelectionMode** 列挙を受け取ります。**GridSelectionMode** は、次の @@if(igxName !== 'IgxTreeGrid'){3 つのモードを公開します: **none**、**single** および **multiple**}@@if(igxName === 'IgxTreeGrid'){4 つのモードを公開します: **none**、**single**、**multiple**、**multipleCascade**}。以下で、それぞれについて詳しく説明します。
 
 ### None 選択
 
