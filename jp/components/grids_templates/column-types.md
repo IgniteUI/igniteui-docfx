@@ -27,6 +27,24 @@ _language: ja
 
 Ignite UI for Angular @@igComponent は、デフォルトおよび編集テンプレートの外観に基づいて、*number* (数値)、*string* (文字列)、*date* (日付)、*boolean* (ブール値)、*currency* (通貨) および *percent* (パーセント) 列のデータ型のデフォルト処理を提供します。
 
+
+@@if (igxName === 'IgxGrid') {
+## Angular 列タイプの例
+
+<div class="sample-container loading" style="height:550px">
+    <iframe id="grid-column-data-types-iframe" src='{environment:demosBaseUrl}/grid/grid-column-data-types' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。 <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-column-data-types-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-column-data-types-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+</div>
+}
+@@if (igxName === 'IgxTreeGrid') {
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+}
+
 ## デフォルトのテンプレート
 データ型固有のテンプレートを有効にする場合、列の [`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype) 入力を設定する必要があります。設定しない場合、列は文字列の列として処理されます (これは列 dataType のデフォルト値であるためです)。次に各型のデフォルト テンプレートについて説明します。
 
