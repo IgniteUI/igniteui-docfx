@@ -51,11 +51,15 @@ Ignite UI for Angular @@igComponent コンポーネントは、レコードの�
 
  データ型固有の**編集テンプレート**を使用する場合、列 [`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype) プロパティを指定する必要があります。次に各型のデフォルト テンプレートについて説明します。
 
- - `string` データ型ではデフォルトのテンプレートは [**igxInput**]({environment:angularApiUrl}/classes/igxinputdirective.html) を使用します。
- - `number` データ型のデフォルト テンプレートは **[igxInput]({environment:angularApiUrl}/classes/igxinputdirective.html) type="number"** を使用します。数値に解析できない値にセルを更新した場合、変更は無視されてセルの値が **0** に設定されます。
- - `date` データ型ではデフォルトのテンプレートは [**igx-date-picker**]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) を使用します。
- - `boolean` データ型ではデフォルトのテンプレートは [**igx-checkbox**]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html) を使用します。
- - カスタム テンプレートについては、[セル編集トピック](cell-editing.md#セル編集テンプレート)を参照してください。
+- `string` データ型の場合、デフォルトのテンプレートは [igxInput]({environment:angularApiUrl}/classes/igxinputdirective.html) を使用します。
+- `number` データ型のデフォルト テンプレートは [igxInput]({environment:angularApiUrl}/classes/igxinputdirective.html) type="number" を使用します。数値に解析できない値にセルを更新した場合、変更は無視されてセルの値が 0 に設定されます。
+- `date` データ型ではデフォルトのテンプレートは [igxDatePicker]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) を使用します。
+- `boolean` データ型ではデフォルトのテンプレートは [igxCheckbox]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html) を使用します。
+- `currency` データ型の場合、デフォルトのテンプレートは、アプリケーションまたはグリッドのロケール設定に基づいたプレフィックス/サフィックス構成の [IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) を使用します。 
+- `percent` パーセントデータ型の場合、デフォルトのテンプレートは、編集された値のプレビューをパーセントで表示するサフィックス要素を持つ [IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) を使用します。 
+- カスタム テンプレートについては、[セル編集トピック](cell-editing.md#cell-editing-templates)を参照してください。
+
+すべての利用可能な列データ型は、公式の[列タイプ トピック](column-types.md#デフォルトのテンプレート)にあります。
 
 ### イベントの引数とシーケンス
 グリッドは、編集エクスペリエンスをより詳細に制御できる広範なイベントを公開します。これらのイベントは、[**行の編集**](row-editing.md)および[**セルの編集**](cell-editing.md)のライフサイクル - 編集の開始、コミット、またはキャンセル時に発生します。
@@ -127,6 +131,7 @@ Ignite UI for Angular @@igComponent コンポーネントは、レコードの�
 <div class="divider--half"></div>
 
 * [@@igComponent 概要](@@igMainTopic.md)
+* [列のデータ型](column-types.md#デフォルトのテンプレート)
 * [仮想化とパフォーマンス](virtualization.md)
 * [ページング](paging.md)
 * [フィルタリング](filtering.md)
