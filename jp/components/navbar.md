@@ -135,7 +135,7 @@ export class AppModule {}
 ```
 
 > [!NOTE]
-> [`igx-navbar-action`]({environment:angularApiUrl}/classes/igxnavbaractiondirective.html) または [`igxNavbarAction`]({environment:angularApiUrl}/classes/igxnavbaractiondirective.html) の場合、デフォルト [`actionButtonIcon`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#actionbuttonicon) が使用されません。 
+> [`igx-navbar-action`]({environment:angularApiUrl}/classes/igxnavbaractiondirective.html) または [`igxNavbarAction`]({environment:angularApiUrl}/classes/igxnavbaractiondirective.html) の場合、デフォルト [`actionButtonIcon`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#actionbuttonicon) が使用されません。
 
 以下はカスタム アクション アイコンをした場合の navbar の外観です。
 
@@ -150,15 +150,15 @@ export class AppModule {}
 
 ### ナビゲーション アイコを追加
 
-戻るためのアイコンが付いたナビゲーション バーを作成する場合は、次の手順を実行します。まず、`actionButtonIcon` プロパティを使用して、Material フォントセットから適切なアイコンを選択できます。次に、以前にアクセスしたページに戻るかどうかを確認し、その結果を [`isActionButtonVisible`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#isactionbuttonvisible) プロパティに渡します。最後の手順は、戻るためのメソッドを作成し、[`onAction`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#onaction) プロパティにフックすることです。 
+戻るためのアイコンが付いたナビゲーション バーを作成する場合は、次の手順を実行します。まず、`actionButtonIcon` プロパティを使用して、Material フォントセットから適切なアイコンを選択できます。次に、以前にアクセスしたページに戻るかどうかを確認し、その結果を [`isActionButtonVisible`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#isactionbuttonvisible) プロパティに渡します。最後の手順は、戻るためのメソッドを作成し、[`action`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#action) プロパティにフックすることです。 
 
 ```html
 <!--navbar.component.html-->
 
-<igx-navbar title="Ignite UI for Angular" 
-    actionButtonIcon="arrow_back" 
-    [isActionButtonVisible]="canGoBack()" 
-    (onAction)="navigateBack()">
+<igx-navbar title="Ignite UI for Angular"
+    actionButtonIcon="arrow_back"
+    [isActionButtonVisible]="canGoBack()"
+    (action)="navigateBack()">
 </igx-navbar>
 ```
 
@@ -217,7 +217,7 @@ Navbar のタイトルにカスタム コンテンツを提供する場合は、
 > [`igx-navbar-title`]({environment:angularApiUrl}/classes/igxnavbartitledirective.html) または [`igxNavbarTitle`]({environment:angularApiUrl}/classes/igxnavbartitledirective.html) の場合、デフォルト [`title`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#title) が使用されません。 
 
 <div class="sample-container loading" style="height: 300px">
-    <iframe id="navbar-custom-title-iframe" frameborder="0" seamless width="100%" height="100%" 
+    <iframe id="navbar-custom-title-iframe" frameborder="0" seamless width="100%" height="100%"
     data-src='{environment:demosBaseUrl}/menus/navbar-custom-title' class="lazyload"></iframe>
 </div>
 <div>

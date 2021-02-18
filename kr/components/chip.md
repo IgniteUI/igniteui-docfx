@@ -45,7 +45,7 @@ Chip states:
 
 Selection can be enabled by setting an input called [`selectable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#selectable). The selecting is done either by clicking on the chip itself or by using the `Tab` key to focus the chip and then pressing the `Space` key. If a chip is already selected it can be deselected by pressing the `Space` key again while the chip is focused or by clicking on it.
 
-An event [`onSelection`]({environment:angularApiUrl}/classes/igxchipcomponent.html#onselection) is fired when the selection state of the [`igxChip`]({environment:angularApiUrl}/classes/igxchipcomponent.html) changes. It provides the new [`selected`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#selected) value so you can get the new state and the original event in [`originalEvent`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#originalevent) that triggered this selection change. If this is not done through user interaction but instead is done by setting the [`selected`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#selected) property programmatically the [`originalEvent`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#originalevent) argument has value `null`.
+An event [`selectedChanging`]({environment:angularApiUrl}/classes/igxchipcomponent.html#selectedchanging) is fired when the selection state of the [`igxChip`]({environment:angularApiUrl}/classes/igxchipcomponent.html) changes. It provides the new [`selected`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#selected) value so you can get the new state and the original event in [`originalEvent`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#originalevent) that triggered this selection change. If this is not done through user interaction but instead is done by setting the [`selected`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#selected) property programmatically the [`originalEvent`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#originalevent) argument has value `null`.
 
 Also by default an icon is shown indicating that the chip is being selected. It is fully customizable and can be done through the [`selectIcon`]({environment:angularApiUrl}/classes/igxchipcomponent.html#selecticon) input. It accepts values of type `TemplateRef` and overrides the default icon while retaining the same functionality.
 
@@ -69,9 +69,9 @@ Example of customizing the select icon:
 
 ![Removing](../images/chip/removing_default.gif)
 
-Removing can be enabled by setting the [`removable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#removable) input to `true`. When enabled a remove button is rendered at the end of the chip. When the end-users performs any interaction like clicking on the remove button or pressing the `Delete` key while the chip is focused the [`onRemove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#onremove) event is emitted.
+Removing can be enabled by setting the [`removable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#removable) input to `true`. When enabled a remove button is rendered at the end of the chip. When the end-users performs any interaction like clicking on the remove button or pressing the `Delete` key while the chip is focused the [`remove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#remove) event is emitted.
 
-By default the chip does not remove itself from the template when the user wants to delete a chip. This needs to be handled manually using the [`onRemove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#onremove) event.
+By default the chip does not remove itself from the template when the user wants to delete a chip. This needs to be handled manually using the [`remove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#remove) event.
 
 If you need to customize the remove icon you can use the [`removeIcon`]({environment:angularApiUrl}/classes/igxchipcomponent.html#removeicon) input. It takes a value of type `TemplateRef` and renders it instead of the default remove icon. This means that you can customize the remove button in any way while all the handling of it is still handled by the chip itself.
 
@@ -81,7 +81,7 @@ Example of handling chip removing and custom remove icon:
 
 ```html
 <igx-chips-area #chipsArea>
-    <igx-chip *ngFor="let chip of chipList" [id]="chip.id" [removable]="true" [removeIcon]="myRemoveIcon" (onRemove)="chipRemoved($event)">
+    <igx-chip *ngFor="let chip of chipList" [id]="chip.id" [removable]="true" [removeIcon]="myRemoveIcon" (remove)="chipRemoved($event)">
         <igx-icon igxPrefix>{{chip.icon}}</igx-icon>
         <span>{{chip.text}}</span>
     </igx-chip>
@@ -104,10 +104,10 @@ public chipRemoved(event: IBaseChipEventArgs) {
 
 ![Dragging](../images/chip/dragging.gif)
 
-The chip can be dragged by the end-user in order to change it's position. The moving/dragging is disabled by default, but can be enabled with an option called [`draggable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#draggable). You need to handle the actual moving of the chip in the template manually. This is where the chip area comes in handy since it provides [`onReorder`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html#onreorder) event that returns the new order if a chip is dragged over another chip to take its place.
+The chip can be dragged by the end-user in order to change it's position. The moving/dragging is disabled by default, but can be enabled with an option called [`draggable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#draggable). You need to handle the actual moving of the chip in the template manually. This is where the chip area comes in handy since it provides [`reorder`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html#reorder) event that returns the new order if a chip is dragged over another chip to take its place.
 
 ```html
-<igx-chips-area (onReorder)="chipsOrderChanged($event)">
+<igx-chips-area (reorder)="chipsOrderChanged($event)">
     <igx-chip *ngFor="let chip of chipList" [draggable]="'true'">
         <igx-icon igxPrefix>{{chipElem.icon}}</igx-icon>
         {{chip.text}}
@@ -186,13 +186,13 @@ The chip can be focused using the `Tab` key or by clicking on it. When in chip a
   - <kbd>SPACE</kbd> - Toggles chip selection if it is selectable.
 
     ![Space](../images/chip/space_key.gif)
-  - <kbd>DELETE</kbd> - Triggers the [`onRemove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#onremove) event for the [`igxChip`]({environment:angularApiUrl}/classes/igxchipcomponent.html) so the chip deletion can be handled manually.
-  - <kbd>SHIFT</kbd> + <kbd>LEFT</kbd> - Triggers [`onReorder`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html#onreorder) event for the [`igxChipArea`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html) when the currently focused chip should move position to the left.
-  - <kbd>SHIFT</kbd> + <kbd>RIGHT</kbd> - Triggers [`onReorder`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html#onreorder) event for the [`igxChipArea`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html) when the currently focused chip should move one position to the right.
+  - <kbd>DELETE</kbd> - Triggers the [`remove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#remove) event for the [`igxChip`]({environment:angularApiUrl}/classes/igxchipcomponent.html) so the chip deletion can be handled manually.
+  - <kbd>SHIFT</kbd> + <kbd>LEFT</kbd> - Triggers [`reorder`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html#reorder) event for the [`igxChipArea`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html) when the currently focused chip should move position to the left.
+  - <kbd>SHIFT</kbd> + <kbd>RIGHT</kbd> - Triggers [`reorder`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html#reorder) event for the [`igxChipArea`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html) when the currently focused chip should move one position to the right.
 
 - Keyboard controls when the remove button is focused:
 
-  - <kbd>SPACE</kbd> or <kbd>ENTER</kbd> Fires the [`onRemove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#onremove) output so the chip deletion can be handled manually.
+  - <kbd>SPACE</kbd> or <kbd>ENTER</kbd> Fires the [`remove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#remove) output so the chip deletion can be handled manually.
 
 ### Styling
 The igxChip allows styling through the [Ignite UI for Angular Theme Library](../themes/component-themes.md). The chip's [theme]({environment:sassApiUrl}/index.html#function-igx-chip-theme) exposes a wide variety of properties, which allow the customization of many of the aspects of the chip.        
