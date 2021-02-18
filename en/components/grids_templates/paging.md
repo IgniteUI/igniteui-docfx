@@ -15,7 +15,7 @@ _canonicalLink: grid/paging
 }
 
 # Angular @@igComponent Pagination
-Pagination is used to split a large set of data into a sequence of pages. Angular table pagination improves user experience and data interaction. Grid pagination is enabled via the [`paging`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#paging) input. Should you need to customize the paging behavior or template, you will need to use custom pagination template, that is supproted through the [`paginationTemplate`](environment:angularApiUrl}/classes/@@igTypeDoc.html#paginationTemplate) input.
+Pagination is used to split a large set of data into a sequence of pages. Angular table pagination improves user experience and data interaction. Grid pagination is enabled via the [`paging`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#paging) input. Should you need to customize the paging behavior or template, you will need to use custom pagination template, that is supported through the [`paginationTemplate`](environment:angularApiUrl}/classes/@@igTypeDoc.html#paginationTemplate) input.
 
 ## Angular Pagination Example
 
