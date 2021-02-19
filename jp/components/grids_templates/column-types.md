@@ -169,7 +169,7 @@ public formatOptions = this.options;
 
 セルの値を編集すると、**通貨記号**がサフィックスまたはプレフィックスとして表示されます。詳細については、公式の[セル編集トピック](cell-editing.md#cell-editing-templates)を参照してください。
 
-> 上/下矢印キーを使用する場合、値は digitsInfo-minFractionDigits (小数点以下の最小桁数。デフォルトは 0 です。) に基づいてステップで増減します。デフォルトは 0 です。)
+> 上/下矢印キーを使用する場合、値は digitsInfo-minFractionDigits (小数点以下の最小桁数。デフォルトは 0 です。) に基づいてステップで増減します。
 
 
 ### Percent (パーセント)
@@ -199,7 +199,7 @@ public formatPercentOptions = this.options;
 </igx-column>
 ```
 
-> 注: 上/下矢印キーを使用する場合、値は digitsInfo-minFractionDigits (小数点以下の最小桁数。デフォルトは 0 です。) に基づいてステップで増減します。デフォルトは 0 です。)
+> 注: 上/下矢印キーを使用する場合、値は digitsInfo-minFractionDigits (小数点以下の最小桁数。デフォルトは 0 です。) に基づいてステップで増減します。
 
 ## デフォルトの編集テンプレート
 
