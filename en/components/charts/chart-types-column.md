@@ -7,41 +7,61 @@ mentionedTypes: ["XamCategoryChart", "XamDataChart"]
 
 # Angular Column Charts
 
-<!-- TODO add introduction with info about using category-chart with the chartType property set to Column -->
+<div class="sample-container loading" style="height: 400px">
+    <iframe id="cc-chart-with-legend" src='{environment:dvDemosBaseUrl}/charts/category-chart-column-chart-with-legend' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Line Chart With Legend"></iframe>
+</div>
 
-## Angular Column Charts Example
+<div class="divider--half"></div>
 
-<!-- TODO use this iframe which will point to a new sample:
-<iframe src='{environment:dvDemosBaseUrl}/charts/category-chart-type-column' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Column Charts Example"></iframe> -->
+## Angular Column Chart with Single Series
 
-## Angular Simple Column Chart
+<div class="sample-container loading" style="height: 400px">
+    <iframe id="cc-chart-with-legend" src='{environment:dvDemosBaseUrl}/charts/category-chart-column-chart-single-source' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Line Chart With Legend"></iframe>
+</div>
 
-<!-- TODO show code for CategoryChart with
-- the dataSource set to multiple data sources
-- the chartType property set to Column
-- the brushes and markerOutlines properties set to same value, e.g. "red, green, blue"
-- the markerBrushes property set for "White"
-- the markerTypes property set for "Circle"
--->
+<div class="divider--half"></div>
+
+## Angular Column Chart with Multiple Series
+
+<div class="sample-container loading" style="height: 400px">
+    <iframe id="cc-chart-with-legend" src='{environment:dvDemosBaseUrl}/charts/category-chart-column-chart-multiple-sources' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Line Chart With Legend"></iframe>
+</div>
+
+<div class="divider--half"></div>
 
 ## Angular Advanced Column Chart
 
 If you need a column chart with more features such as multiple axes or composite other series, you can use DataChart component.
 
-<!-- TODO copy and combine content (code snippets, description) from these topics:
-    data-chart-type-category-column-series.md
--->
+<div class="sample-container loading" style="height: 400px">
+    <iframe id="cc-chart-with-legend" src='{environment:dvDemosBaseUrl}/charts/data-chart-column-chart-styling' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Line Chart With Legend"></iframe>
+</div>
+
+<div class="divider--half"></div>
 
 ## Angular Waterfall Chart
 
-<!-- data-chart-type-category-waterfall-series.md -->
+<div class="sample-container loading" style="height: 400px">
+    <iframe id="cc-chart-with-legend" src='{environment:dvDemosBaseUrl}/charts/data-chart-waterfall-chart' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Line Chart With Legend"></iframe>
+</div>
+
+<div class="divider--half"></div>
 
 ## Angular Stacked Column Chart
 
-<!-- TODO copy and combine content (code snippets, description) from these topics:
-	data-chart-type-stacked-column-series.md
-    data-chart-type-stacked-100-column-series.md
--->
+<div class="sample-container loading" style="height: 400px">
+    <iframe id="cc-chart-with-legend" src='{environment:dvDemosBaseUrl}/charts/data-chart-stacked-column-chart' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Line Chart With Legend"></iframe>
+</div>
+
+<div class="divider--half"></div>
+
+## Angular Stacked 100 Column Chart
+
+<div class="sample-container loading" style="height: 400px">
+    <iframe id="cc-chart-with-legend" src='{environment:dvDemosBaseUrl}/charts/data-chart-stacked-100-column-chart' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Line Chart With Legend"></iframe>
+</div>
+
+<div class="divider--half"></div>
 
 ## Angular Range Column Chart
 
