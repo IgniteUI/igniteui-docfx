@@ -15,11 +15,11 @@ _canonicalLink: grid/paging
 }
 
 # Angular @@igComponent Pagination
-Pagination is used to split a large set of data into a sequence of pages. Angular table pagination improves user experience and data interaction. Grid pagination is enabled via the [`paging`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#paging) input. Should you need to customize the paging behavior or template, you will need to use custom pagination template, that is supproted through the [`paginationTemplate`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#paginationTemplate) input.
+Pagination is used to split a large set of data into a sequence of pages that have similar content. Angular table pagination improves user experience and data interaction. @@igComponent pagination is configurable via the [`paging`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#paging) and [`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) inputs. As in any Angular Material table, the pagination in the @@igComponent supports template for custom pages.
 
 ## Angular Pagination Example
 
-The following example represents the Grid pagination. Setting the `paging` input to true enables the feature and brings the corresponding UI rendered in the grid footer. The UI indicates the current and total number of pages, and provides buttons to quickly navigate to `next`, `previous`, `first` or `last` page. The `Items per page` select enables user to quickly change the number of records displayed per page.
+The following example represents @@igComponent pagination and exposes the options usage of `items per page` and how paging can be enabled. The user can also quickly navigate through the @@igComponent pages via "Go to last page" and "Go to first page" buttons.
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:550px">
     <iframe id="grid-paging-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-paging-sample' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular Pagination Example"></iframe>
@@ -52,144 +52,99 @@ The following example represents the Grid pagination. Setting the `paging` input
 <div class="divider--half"></div>
 }
 
+The [`paging`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#paging) input is a Boolean property that controls whether the feature is enabled, and the [`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) property controls the visible records per page. Let’s update our @@igComponent to enable paging:
+
+```html
+<@@igSelector #@@igObjectRef [data]="data" [paging]="true" [perPage]="10" height="500px" width="100%" displayDensity="cosy">
+</@@igSelector>
+```
+
 ## Angular Pagination Template
-
->[!NOTE]
-> When using any external template, always set `pagingMode` to `GridPadingMode.Remote` and `totalRecords` properties on the grid. Otherwise, the correct data slice that is passed to the grid will be piped once more through the grid internal paging pipe, which will result in incorrect data displayed.
-
-The paging area supports custom templates to be used via the [`paginationTemplate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#paginationTemplate) input.
-
-The example below is a template where pagination is controlled through an input. Note the additional `page` and `perPage` properties introduced: those parameters are needed to correctly slice the correct data page. This can happen in code, for example in value change event of the input:
+The paging area supports templating by the user, if a template reference is passed to the @@igComponent during initialization. The example below is a template where the pagination is controlled through an input.
 
 ```html
 <ng-template #myTemplate let-grid>
-    Total records: {{ this.totalRecords }}
-    Records per page: {{ this.perPage }}
-    Current page: {{ this.page }}
-    <input type="number" [(ngModel)]="this.page" (change)="valueChange(this.page)" />
-    Total pages: {{ this.totalPages }}
+    Current page: {{ @@igObjectRef.page }}
+    <input type="number" [(ngModel)]="grid.page" />
+    Total pages: {{ @@igObjectRef.totalPages }}
 </ng-template>
 
-<@@igSelector [paging]="true" [paginationTemplate]="myTemplate" [pagingMode]="mode" [totalRecords]="totalRecords">
+<@@igSelector [paging]="true" [paginationTemplate]="myTemplate">
     ...
 </@@igSelector>
 ```
 
-```typescript
-public totalRecords = 0;
-public totalPages = 0;
-public page = 0;
-public perPage = 10;
-public mode = GridPagingMode.Remote;
-
-public ngOnInit() {
-    this.totalRecords = allData.length;
-    this.totalPages = Math.ceil(this.totalRecords / this.perPage);
-    this.data = this.sliceData(this.page, this.perPage);
-}
-
-public valueChange(newPage: number) {
-    this.data = this.sliceData(newPage, this.perPage);
-}
-
-public sliceData(page, perPage) {
-    const start = page * perPage;
-    const end = (page + 1) * perPage;
-    const result = localData.slice(start, end);
-    return result;
-}
-```
-
-A better alternative to the above approach is to pipe the `data` input through a custom Angular pipe - this way a developer need not worry about change detection in certain scenarios, Angular will handle it internally:
-
-```html
-<@@igSelector [paging]="true" [paginationTemplate]="myTemplate" [pagingMode]="mode" [totalRecords]="totalRecords" [data]="allData | paging:page:perPage">
-    ...
-</@@igSelector>
-```
+Paging can also be done programmatically through the @@igComponent API, using the [`paginate`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#paginate), [`previousPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#previouspage), [`nextPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#nextpage) methods and the inputs [`page`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#page), [`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) and [`totalRecords`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalrecords). Where *page* allows you to set the current page, *perPage* - the number of items that are displayed at one page and *totalRecords* - the number of the records that are in the grid. `TotalRecords` property is useful when you have paging with remote data and you want to alter the page count based on total remote records. Keep in mind that If you are using paging and all the data is passed to the grid, the value of totalRecords property will be set by default to the length of the provided data source. If totalRecords is set, it will take precedence over the default length based on the data source."
 
 ```typescript
-@Pipe({
-    name: 'paging',
-    pure: true
-})
-export class PagingPipe implements PipeTransform {
-    public transform(data: any[], page, perPage): any[] {
-        const result = data.slice(page * perPage, (page + 1) * perPage);
-        return result;
-    }
-}
+// Go to page 6
+this.@@igObjectRef.paginate(5);
+
+// Go to previous/next page
+this.@@igObjectRef.previousPage();
+this.@@igObjectRef.nextPage();
+
+// Check for first/last page
+this.@@igObjectRef.isFirstPage;
+this.@@igObjectRef.isLastPage;
+
+// Get the number of pages
+this.@@igObjectRef.totalPages;
+
+// Change the number of records per page
+this.@@igObjectRef.perPage = 25;
+
+// Enables/disables paging
+this.@@igObjectRef.paging = false;
+
+//  Set the total number of records that are in the grid. Default value is the length of the provided data.
+this.@@igObjectRef.totalRecords = 30;
 ```
 
-The example above was pretty simple, yet working. To enable you achieve full customization and more granular control over pagination, we suggest that you use the `igx-paginator` - a standalone paginator component, that already exposes all inputs/outputs that you may need. Just continue reading below.
+@@if (igxName === 'IgxGrid') {
+## Paging with Group By
+Group rows participate in the paging process along with data rows. They count towards the page size for each page. Collapsed rows are not included in the paging process.
+Integration between Paging and Group By is described in the [Group By](groupby.html#group-by-with-paging) topic.
+}
 
-## IgxPaginator component
+## Reusable Paginator Component in Angular
+A new component `igx-paginator` is introduced with 8.1.0 release. This component replaces the current pager and can be used as a standalone component as well.
+The `igx-paginator` exposes a couple of input and output properties that enable further customization of the paging.
+
+| Input           |      Description                           |
+|-----------------|:------------------------------------------:|
+| displayDensity  | Sets the display density of the paginator. |
+| dropdownEnabled | Sets the enabled state to the drop-down. |
+| dropdownHidden  | Sets the hidden state to the drop-down. |
+| page            | Sets the current page. |
+| pagerEnabled    | Sets the enabled state to the pager. |
+| pagerHidden     | Sets the hidden state to the pager. |
+| perPage         | Sets the number of visible items per page. |
+| selectOptions   | Sets custom options for items per page. |
+| totalRecords    | Sets the total records count. |
+| resourceStrings | Sets the resource strings. By default it uses EN resource strings. |
+
+
+| Output          |      Description                           |
+|-----------------|:------------------------------------------:|
+| pageChange      |  the event is emitted when the current page is changed. |
+| perPageChange   |  the event is emitted when the number items per page is changed. |
+
 ### Usage
-The `igx-paginator` was introduced with 8.1.0 version as a standalone component and exposes exposes a rich [API](paging.md#api) to enable granular control and customization of the paging behavior. I.e. it allows the developer to slice the data to pages with a precise control over when and how to do it. This also makes it super easy to implement remote paging scenarios.
-
-The `igx-paginator` is what the `igx-grid` uses internally for pagination, but this section will demonstrate how to use it as a separate component, in order to fully benefit from its capabilities. Of course, the paginator component may be used with any other component.
-
-The example below uses almost all inputs available for the paginator for demo purposes:
+The `igx-paginator` component is used along with the `igx-grid` component in the example below, but you can use it with any other component in case paging functionality is needed.
 
 ```html
-<@@igSelector #grid [data]="data" [paging]="true" [paginationTemplate]="pager" [pagingMode]="mode" [totalRecords]="totalRecords">
+<igx-grid #grid [data]="data" [paging]="true" [perPage]="10" [paginationTemplate]="pager">
 ...
-</@@igSelector>
+</igx-grid>
 
 <ng-template #pager>
-    <igx-paginator #paginator
-        [(page)]="page"
-        [(perPage)]="perPage"
-        [totalRecords]="totalRecords"
-        [dropdownHidden]="isDropdownHidden"
-        [pagerHidden]="isPagerHidden"
-        [dropdownEnabled]="!isDropdownDisabled"
-        [pagerEnabled]="!isPagerDisabled"
-        [selectOptions]="selectOptions"
-        [displayDensity]="grid.displayDensity"
-        (perPageChange)="perPageChange($event)"
-        (paging)="paging($event)">
+    <igx-paginator #paginator [(page)]="grid.page" [totalRecords]="grid.totalRecords" [(perPage)]="grid.perPage"
+            [dropdownHidden]="isDropdownHidden" [pagerHidden]="isPagerHidden"
+            [selectOptions]="selectOptions" [displayDensity]="grid.displayDensity">
     </igx-paginator>
 </ng-template>
 ```
-
-```typescript
-public data: any[];
-public densityOptions: string[];
-public totalRecords = 0;
-public page = 0;
-public perPage = 10;
-public mode: GridPagingMode.Remote;
-public isDropdownHidden = false;
-public isPagerHidden = false;
-public isDropdownDisabled = false;
-public isPagerDisabled = false;
-public selectOptions = [5, 10, 15, 25];
-public allData: any[];
-
-public ngOnInit() {
-    this.totalRecords = localData.length;
-    this.data = this.sliceData(page, perPage);
-}
-
-public paging(event: IPagingEventArgs) {
-    this.data = this.sliceData(event.newPage, this.perPage);
-}
-
-public sliceData(page, perPage) {
-    const start = page * perPage;
-    const end = (page + 1) * perPage;
-    const result = this.allData.slice(start, end);
-    return result;
-}
-
-public perPageChange(perPage: number) {
-    this.data = this.sliceData(this.page, perPage);
-}
-```
-
->[!NOTE]
-> Notice that this example is the so called local data scenario, where all the data is available (in the `localData` property). The `igx-paginator` plugs in, allowing us to control the state of the `page` and `perPage` properties, and then using these to effectively slice the correct page of data and pass it to the grid. As an alternative to slicing, pipe the `data` input value through a custom Angular pipe - this way a developer need not worry about change detection in certain scenarios, Angular will handle it internally.
 
 ### Paginator Component Demo
 <div class="sample-container loading" style="height:600px">
@@ -203,45 +158,14 @@ public perPageChange(perPage: number) {
 
 <div class="divider--half"></div>
 
-### API
-
-| Input/Output/Method           |      Description                           |
-|-----------------|:------------------------------------------:|
-| page            | Sets the current page.
-| perPage         | Sets the number of items per page. |
-| selectOptions   | Sets custom values for the `perPage` select UI. |
-| totalRecords    | Sets the total number of items available. |
-| displayDensity  | Sets the display density of the paginator. |
-| pagerEnabled    | Enables/disables the paginator UI. |
-| pagerHidden     | Enables/disables the paginator UI. |
-| dropdownEnabled | Enables/disables the `perPage` select UI. |
-| dropdownHidden  | Shows/hides the `perPage` select UI. |
-| resourceStrings | Sets the resource strings. By default it uses EN resource strings. |
-| pageChange      |  Emitted after the `page` property value was changed. |
-| perPageChange   |  Emitted after the `perPage` property value was changed. |
-| paging          |  Emits an `IPagingEventArgs` containing the oldPage and newPage values. Emitted before the page is changed.
-| pagingDone      |  Emits an `IPagingDoneEventArgs` containing the oldPage and newPage values. Emitted after the page whas changed.
-| paginate        |  Takes a number parameter indicating the page to navigate to, if exists. |
-| nextPage        |  Paginate to next page, if exists. |
-| previousPage    |  Paginate to previous page, if exists. |
-
->[!NOTE]
-> All outputs are emitted regardless if the change happened programatically or by a user interaction with the component UI.
-
-## Remote Paging with IgxPaginator
+## Remote Paging
 Remote paging can be achieved by declaring a service, responsible for data fetching and a component, which will be responsible for the Grid construction and data subscription.For more detailed information, check the [`@@igComponent Remote Data Operations`](remote-data-operations.md#remote-paging) topic.
 
 
 @@if (igxName === 'IgxGrid') {
-## Remote Paging with custom paginator
+## Remote Paging with Custom Template
 
 In some cases you may want to define your own paging behavior and this is when we can take advantage of the Paging template and add our custom logic along with it. [This section](remote-data-operations.md#remote-paging-with-custom-template) explains how we are going to extend the Remote Paging example in order to demonstrate this.
-}
-
-@@if (igxName === 'IgxGrid') {
-## Paging with Group By
-Group rows participate in the paging process along with data rows. They count towards the page size for each page. Collapsed rows are not included in the paging process.
-Integration between Paging and Group By is described in the [Group By](groupby.html#group-by-with-paging) topic.
 }
 
 ## Localization
@@ -301,17 +225,17 @@ To get started with styling the paginator, we need to import the `index` file, w
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Following the simplest approach, we create a new theme that extends the [`igx-paginator-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-paginator-theme) and accepts the `$text-color`, `$background-color` and the `$border-color` parameters.
+Following the simplest approach, we create a new theme that extends the [`igx-grid-paginator-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-paginator-theme) and accepts the `$text-color`, `$background-color` and the `$border-color` parameters.
 
 ```scss
-$dark-paginator: igx-paginator-theme(
+$dark-grid-paginator: igx-grid-paginator-theme(
     $text-color: #F4D45C,
     $background-color: #575757,
     $border-color: #292826
 );
 ```
 
-As seen, the `igx-paginator-theme` only controls colors for the paging container, but does not affect the buttons in the pager UI. To style those buttons, let's create a new button theme:
+As seen, the `igx-grid-paginator-theme` only controls colors for the paging container, but does not affect the buttons in the pager UI. To style those buttons, let's create a new button theme:
 
 ```scss
 $dark-button: igx-button-theme(
@@ -336,7 +260,7 @@ The last step is to **include** the component mixins, each with its respective t
 ```
 
 >[!NOTE]
->We scope the **igx-button** mixin within `.igx-paginator__pager`, so that only the paginator buttons would be styled. Otherwise other buttons in the grid would be affected too.
+>We scope the **igx-button** mixin within `.igx-grid-paginator__pager`, so that only the paginator buttons would be styled. Otherwise other buttons in the grid would be affected too.
 
  >[!NOTE]
  >If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
@@ -344,8 +268,8 @@ The last step is to **include** the component mixins, each with its respective t
 ```scss
 :host {
     ::ng-deep {
-        @include igx-paginator($dark-paginator);
-        .igx-paginator__pager {
+        @include igx-grid-paginator($dark-grid-paginator);
+        .igx-grid-paginator__pager {
             @include igx-button($dark-button);
         }
     }
@@ -368,7 +292,7 @@ $dark-palette: igx-palette($primary: $black-color, $secondary: $yellow-color);
 And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the pallette.
 
 ```scss
-$dark-paginator: igx-paginator-theme(
+$dark-grid-paginator: igx-grid-paginator-theme(
     $palette: $dark-palette,
     $text-color: igx-color($dark-palette, "secondary", 400),
     $background-color: igx-color($dark-palette, "primary", 200),
@@ -393,11 +317,11 @@ $dark-button: igx-button-theme(
 
  Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](../themes/schemas.md). A **schema** is a recipe of a theme.
 
-Extend one of the two predefined schemas, that are provided for every component, in this case - [`dark-pagination`]({environment:sassApiUrl}/index.html#variable-_dark-grid-pagination) and [`dark-button`]({environment:sassApiUrl}/index.html#variable-_dark-button) schemas:
+Extend one of the two predefined schemas, that are provided for every component, in this case - [`dark-grid-pagination`]({environment:sassApiUrl}/index.html#variable-_dark-grid-pagination) and [`dark-button`]({environment:sassApiUrl}/index.html#variable-_dark-button) schemas:
 
 ```scss
 // Extending the dark paginator schema
-$dark-paginator-schema: extend($_dark-pagination,
+$dark-grid-paginator-schema: extend($_dark-grid-pagination,
         (
             text-color:(
                 igx-color: ("secondary", 400)
@@ -440,12 +364,12 @@ In order to apply our custom schemas we have to **extend** one of the globals ([
 ```scss
 // Extending the global dark-schema
 $custom-dark-schema: extend($dark-schema,(
-    igx-paginator: $dark-paginator-schema,
+    igx-grid-paginator: $dark-grid-paginator-schema,
     igx-button: $dark-button-schema
 ));
 
-// Defining igx-paginator-theme with the global dark schema
-$dark-paginator: igx-paginator-theme(
+// Defining grid-paginator-theme with the global dark schema
+$dark-grid-paginator: igx-grid-paginator-theme(
   $palette: $dark-palette,
   $schema: $custom-dark-schema
 );
@@ -504,8 +428,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 ## API References
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 * [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
-* [IgxGridPaginatorComponent API]({environment:angularApiUrl}/classes/igxpaginatorcomponent.html)
-* [IgxGridPaginatorComponent Styles]({environment:sassApiUrl}/index.html#function-igx-paginator-theme)
+* [IgxGridPaginator Styles]({environment:sassApiUrl}/index.html#function-igx-paginator-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>
