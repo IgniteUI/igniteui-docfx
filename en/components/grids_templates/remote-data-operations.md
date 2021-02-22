@@ -551,8 +551,8 @@ If you want to use the *default paging template* you need to set the [`totalReco
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```html
-<igx-tree-grid #treeGrid [data]="data | async" childDataKey="Content" [paging]="true" [perPage]="10"
-        [pagingMode]="mode" [totalRecords]="totalCount" (onPagingDone)="paginate($event)">
+<igx-tree-grid #treeGrid [data]="data | async" childDataKey="Content" [(page)]="page" [(perPage)]="perPage"
+        [pagingMode]="mode" [totalRecords]="totalCount" (onPagingDone)="paginate($event.current)">
     <igx-column field="Name"></igx-column>
     ...
 </igx-tree-grid>
@@ -650,7 +650,8 @@ When we define a *custom paging template* it's not necessary to define the @@igC
         [(perPage)]="perPage"
         [selectOptions]="selectOptions"
         [displayDensity]="grid1.displayDensity"
-        (pageChange)="paginate($event)">
+        (pageChange)="paginate($event)"
+        (perPageChange)="perPageChange($event)">
     </igx-paginator>
 </ng-template>
 ```
@@ -752,10 +753,10 @@ public paginate(page: number) {
 }
 ```
 }
-The last step will be to declare our template for the gird.
+The last step will be to declare our template for the grid.
 @@if (igxName === 'IgxGrid') {
 ```html
-<@@igSelector #@@igObjectRef [data]="data | async" width="960px" height="550px" [paging]="true" >
+<@@igSelector #@@igObjectRef [data]="data | async" width="960px" height="550px" [paging]="true" [(perPage)]="perPage" [paginationTemplate]="customPager">
     <igx-column field="ID"></igx-column>
     <igx-column field="ProductName"></igx-column>
     <igx-column field="QuantityPerUnit"></igx-column>
@@ -767,7 +768,8 @@ The last step will be to declare our template for the gird.
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid [paging]="true" [primaryKey]="'CustomerID'" [height]="'550px'" [width]="'100%'" #hierarchicalGrid>
+<igx-hierarchical-grid #hierarchicalGrid [data]="data | async" [paging]="true" 
+        [(perPage)]="perPage" [(page)]="page" [paginationTemplate]="customPager">
     <igx-column field="CustomerID"></igx-column>
         <igx-column field="CompanyName"></igx-column>
         <igx-column field="ContactName"></igx-column>
