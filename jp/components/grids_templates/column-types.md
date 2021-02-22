@@ -107,7 +107,7 @@ public formatOptions = this.options;
 <div class="divider--half"></div>
 
 
-@@igComponent は、**Date オブジェクト**、**数値 (ミリ秒)** または **ISO 日付/時刻文字列**の日付値を受け取ります。このセクションは、[カスタム表示書式を構成する方法](grid.md#custom-display-format)を示します。
+@@igComponent は、**Date オブジェクト**、**数値 (ミリ秒)** または **ISO 日付/時刻文字列**の日付値を受け取ります。このセクションは、[カスタム表示書式を構成する方法](grid.md#カスタム表示形式)を示します。
 
 ### Boolean (ブール値)
 
@@ -167,7 +167,7 @@ public formatOptions = this.options;
 
 *display - デフォルトの en-US ロケールの場合、USD コードは省略記号 ($) または記号 (US$) で表すことができます。
 
-セルの値を編集すると、**通貨記号**がサフィックスまたはプレフィックスとして表示されます。詳細については、公式の[セル編集トピック](cell-editing.md#cell-editing-templates)を参照してください。
+セルの値を編集すると、**通貨記号**がサフィックスまたはプレフィックスとして表示されます。詳細については、公式の[セル編集トピック](cell-editing.md#セル編集テンプレート)を参照してください。
 
 > 上/下矢印キーを使用する場合、値は digitsInfo-minFractionDigits (小数点以下の最小桁数。デフォルトは 0 です。) に基づいてステップで増減します。
 
