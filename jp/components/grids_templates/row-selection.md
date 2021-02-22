@@ -173,7 +173,7 @@ public handleRowSelection(event) {
 }
 @@if(igxName === 'IgxTreeGrid'){
 ### カスケード選択
-[`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) で複数行の選択を有効にするには、[`rowSelection`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowSelection) プロパティを `multipleCascade` に設定するだけです。これにより、各行および @@igComponent ヘッダーで行セレクター フィールドが有効になります。行セレクターを使用すると、ユーザーは複数の行を選択して、下のツリーのすべての子を選択できます。選択は、スクロール、ページング、および並べ替えやフィルタリングなどのデータ操作を通じて保持されます。行は、セルをクリックするか、セルがフォーカスされているときに *space* キーを押すことによっても選択できます。1 つの行を選択し、*shift* キーを押しながら別の行をクリックすると、親レコードの選択を通じて選択した範囲内にない場合でも、そのすべての子が選択されます。この選択モードでは、単一の行をクリックすると、前に選択した行が選択解除されます。*ctrl* キーを押しながらクリックすると、行とその子が切り替えられ、前の選択が保持されます。
+[`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) で行のカスケード選択を有効にするには、[`rowSelection`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowSelection) プロパティを `multipleCascade` に設定するだけです。これにより、各行および @@igComponent ヘッダーで行セレクター フィールドが有効になります。行セレクターを使用すると、ユーザーは複数の行を選択して、下のツリーのすべての子を選択できます。選択は、スクロール、ページング、および並べ替えやフィルタリングなどのデータ操作を通じて保持されます。行は、セルをクリックするか、セルがフォーカスされているときに *space* キーを押すことによっても選択できます。1 つの行を選択し、*shift* キーを押しながら別の行をクリックすると、親レコードの選択を通じて選択した範囲内にない場合でも、そのすべての子が選択されます。この選択モードでは、単一の行をクリックすると、前に選択した行が選択解除されます。*ctrl* キーを押しながらクリックすると、行とその子が切り替えられ、前の選択が保持されます。
 ```html
 <!-- selectionExample.component.html -->
 
