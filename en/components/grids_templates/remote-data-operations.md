@@ -540,8 +540,10 @@ If you want to use the *default paging template* you need to set the [`totalReco
 
 @@if (igxName === 'IgxGrid') {
 ```html
-<igx-grid #grid1 [data]="data | async"  [paging]="true" (perPageChange)="paginate()" (onPagingDone)="pagingDone($event)" 
-    [pagingMode]="mode" [totalRecords]="totalCount">
+<igx-grid #grid1 [data]="data | async" [isLoading]="isLoading"
+        [paging]="true" [(page)]="page" [(perPage)]="perPage" 
+        [pagingMode]="mode" [totalRecords]="totalCount" 
+        (onPagingDone)="paginate($event.current)">
     <igx-column field="ID"></igx-column>
     ...
 </igx-grid>
@@ -570,30 +572,35 @@ If you want to use the *default paging template* you need to set the [`totalReco
 public totalCount = 0;
 public data: Observable<any[]>;
 public mode = GridPagingMode.remote;
+public isLoading = true;
 @ViewChild("grid1", { static: true }) public grid1: IgxGridComponent;
 
 private _dataLengthSubscriber;
 ...
+public set perPage(val: number) {
+    this._perPage = val;
+    this.paginate(0);
+}
+
 public ngOnInit() {
     this.data = this.remoteService.remoteData.asObservable();
+    this.data.subscribe(() => {
+        this.isLoading = false;
+    })
     this._dataLengthSubscriber = this.remoteService.getDataLength().subscribe((data) => {
         this.totalCount = data;
-        this.grid1.isLoading = false;
     });
 }
 ...
 public ngAfterViewInit() {
-    this.grid1.isLoading = true;
-    this.remoteService.getData(0, this.grid1.perPage);
-}
-
-public pagingDone(page) {
-    const skip = page.current * this.grid1.perPage;
-    this.remoteService.getData(skip, this.grid1.perPage);
+    const skip = this.page * this.perPage;
+    this.remoteService.getData(skip, this.perPage);
 }
 
 public paginate() {
-    this.remoteService.getData(0, this.grid1.perPage);
+    this.isLoading = true;
+    const skip = page * this.perPage;
+    this.remoteService.getData(skip, this.perPage);
 }
 ```
 
@@ -639,6 +646,7 @@ When we define a *custom paging template* it's not necessary to define the @@igC
 <ng-template #customPager let-api>
     <igx-paginator #paginator
         [totalRecords]="totalCount"
+        [(page)]="page" 
         [(perPage)]="perPage"
         [selectOptions]="selectOptions"
         [displayDensity]="grid1.displayDensity"
@@ -679,10 +687,11 @@ public paginate(page: number) {
 <ng-template #customPager let-api>
     <igx-paginator #paginator
         [totalRecords]="totalCount"
+        [(page)]="page" 
         [(perPage)]="perPage"
         [selectOptions]="selectOptions"
         [displayDensity]="grid1.displayDensity"
-        (pageChange)="paginate($event)">
+        (pageChange)="paginate($event.current)">
     </igx-paginator>
 </ng-template>
 ```
