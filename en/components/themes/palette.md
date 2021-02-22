@@ -116,13 +116,13 @@ For instance, if you want to generate CSS classes that apply background color to
 ```
 The above code will generate CSS classes for each color variant in the palette. For instance, the `500` color variant of the `primary` palette will be given the following class `.igx-primary-500-bg`;
 
-<div class="divider--half"></div>
 
 ## API Reference
+<div class="divider--half"></div>
+
 * [Palettes]({environment:sassApiUrl}/index.html#function-igx-palette)
 * [Getting Palette Colors]({environment:sassApiUrl}/index.html#function-igx-color)
 * [Getting Contrast Colors]({environment:sassApiUrl}/index.html#function-igx-contrast-color)
-* [Generating Color Classes]({environment:sassApiUrl}/index.html#mixin-igx-color-classes)
 
 ## Additional Resources
 <div class="divider--half"></div>

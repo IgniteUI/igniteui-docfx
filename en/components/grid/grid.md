@@ -690,7 +690,6 @@ Check out these resources for more information:
 
 Achieving a state persistence framework is easier than ever by using the new built-in [`IgxGridState`](state-persistence.md) directive.
 
-
 ## Sizing
 
 See the [Grid Sizing](sizing.md) topic.

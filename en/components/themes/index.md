@@ -6,10 +6,10 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 # Themes
 
-<div class="highlight">With just a few lines of code, you can easily change the theme of your components. Being developed in SASS, the API is easy and allows for theming granularity on different levels from a single component, multiple components, or the entire suite.</div>
+<p class="highlight">With just a few lines of code, you can easily change the theme of your components. Being developed in SASS, the API is easy and allows for theming granularity on different levels from a single component, multiple components, or the entire suite.</p>
 
 ## Overview
-Since **IgniteUI for Angular** bases its component designs on the **<a href="https://material.io/guidelines/material-design/introduction.html" target="_blank">Material Design Principles</a>**, we try to get as close as possible to colors, sizes, typography, and overall look and feel of our components to those created by Google.
+Since **IgniteUI for Angular** bases its component designs on the **<a href="https://material.io/design/introduction#principles" target="_blank">Material Design Principles</a>**, we try to get as close as possible to colors, sizes, typography, and overall look and feel of our components to those created by Google.
 
 Our approach to theming is based around several simple concepts.
 

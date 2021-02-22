@@ -24,9 +24,7 @@ In this example, you can see how users can manipulate hierarchical or flat data.
 </div>
 <div class="divider--half"></div>
 
-
 ## Getting Started with Ignite UI for Angular Tree Grid
-
 To get started with the tree grid, first you need to install Ignite UI for Angular by typing the following command:
 
 ```cmd
@@ -309,7 +307,6 @@ The last step is to **include** the component theme in our application.
     }
 }
 ```
-
 
 ### Defining a Color Palette
 
