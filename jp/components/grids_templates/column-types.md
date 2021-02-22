@@ -250,7 +250,7 @@ switch (column.field) {
 ## その他のリソース
 <div class="divider--half"></div>
 
-* カスタム テンプレートについては、[セル編集トピック](cell-editing.md#cell-editing-templates)を参照してください。
+* カスタム テンプレートについては、[セル編集トピック](cell-editing.md#セル編集テンプレート)を参照してください。
 * [@@igComponent 概要トピック](@@igMainTopic.md)
 * [編集トピック](editing.md)
 * [集計トピック](summaries.md)
