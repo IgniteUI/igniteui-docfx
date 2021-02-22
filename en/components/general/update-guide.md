@@ -41,6 +41,13 @@ Unfortunately not all changes can be automatically updated. Changes bellow are s
 
 For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from the "From 6.x .." section apply those changes and work your way up:
 
+## From 11.0.x to 11.1.x
+* IgxGrid, IgxTreeGrid, IgxHierarchicalGrid
+    * The onPagingDone output is removed from the grid. Other paging inputs/outputs like page, perPage, totalPages, nextPage, previousPage, paginate are deprecated and will also be removed in a future major release.
+    * If any of these are used in your application, you will need to migrate to using an external paginator for the grid and use the corresponding inputs/outputs exposed by the external paginator.
+    * It is recommended to use the igx-paginator as an external paginator, where the naming of the corresponding properties is exactly the same (except that onPagingDone migrates to pagingDone). See Paginator Component topic, which also includes sections that cover remote data scenarios.
+    * If onPagingDone is not used in your application, only any of the other properties, your application will still work until these are removed in a future major release.
+
 ## From 10.2.x to 11.0.x
 * IgxGrid, IgxTreeGrid, IgxHierarchicalGrid
     * The way the toolbar is instantiated in the grid has changed. It is now a separate component projected in the grid tree. Thus the `showToolbar` property is removed from
