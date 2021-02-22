@@ -177,7 +177,7 @@ public priceClasses = {
 }
 <div class="divider--half"></div>
 
-- [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html)　入力を使用して、キーがスタイル プロパティであり、値が評価用の式であるオブジェクト リテラルを受け取る [`cellStyles`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellStyles)。
+- [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) 入力を使用して、キーがスタイル プロパティであり、値が評価用の式であるオブジェクト リテラルを受け取る [`cellStyles`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellStyles)。
 
 ```ts
 public styles = {
