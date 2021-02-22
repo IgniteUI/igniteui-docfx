@@ -7,30 +7,37 @@ mentionedTypes: ["XamCategoryChart", "XamDataChart"]
 
 # Angular Spline Chart
 
-<!-- TODO add introduction with info about using category-chart with the chartType property set to spline -->
+<div class="sample-container loading" style="height: 400px">
+    <iframe id="cc-chart-with-legend" src='{environment:dvDemosBaseUrl}/charts/category-chart-spline-multiple-sources' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Line Chart With Legend"></iframe>
+</div>
 
-## Angular Spline Chart Example
+<div class="divider--half"></div>
 
-<!-- TODO use this iframe which will point to a new sample:
-<iframe src='{environment:dvDemosBaseUrl}/charts/category-chart-type-spline' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Spline Chart Example"></iframe> -->
+## Angular Spline Chart with Single Series
 
-## Angular Simple Spline Chart
+<div class="sample-container loading" style="height: 400px">
+    <iframe id="cc-chart-with-legend" src='{environment:dvDemosBaseUrl}/charts/category-chart-spline-single-source' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Line Chart With Legend"></iframe>
+</div>
 
-<!-- TODO show code for CategoryChart with
-- the dataSource set to multiple data sources
-- the chartType property set to spline
-- the brushes and markerOutlines properties set to same value, e.g. "red, green, blue"
-- the markerBrushes property set for "White"
-- the markerTypes property set for "Circle"
--->
+<div class="divider--half"></div>
+
+## Angular Spline Chart with Multiple Series
+
+<div class="sample-container loading" style="height: 400px">
+    <iframe id="cc-chart-with-legend" src='{environment:dvDemosBaseUrl}/charts/category-chart-spline-multiple-sources' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Line Chart With Legend"></iframe>
+</div>
+
+<div class="divider--half"></div>
 
 ## Angular Advanced Spline Chart
 
 If you need a spline chart with more features such as composite other series, you can use DataChart component.
 
-<!-- TODO copy and combine content (code snippets, description) from these topics:
-	data-chart-type-category-spline-series.md
--->
+<div class="sample-container loading" style="height: 400px">
+    <iframe id="cc-chart-with-legend" src='{environment:dvDemosBaseUrl}/charts/category-chart-spline-styling' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Line Chart With Legend"></iframe>
+</div>
+
+<div class="divider--half"></div>
 
 ## Angular Stacked Spline Chart
 
