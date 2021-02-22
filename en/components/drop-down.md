@@ -113,7 +113,7 @@ export class MyDropDownComponent {
 
 ### Grouping items
 
-To provide a more useful visual information, use the [isHeader]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#isheader) property to group items semantically or the [disabled]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#disabled) property to display an item as a non-interactive. You can also set the [selected]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#selected) property on a particular item to make it the selected item.
+To provide a more useful visual information, use the [isHeader]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#isheader) property to group items semantically or the [disabled]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#disabled) property to display an item as a non-interactive. You can also set the [selected]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#selected) property on a particular item to make it the selected item. The `igx-drop-down` items have out-of-the-box support for `igxPrefix`, `igxSuffix`, and `igx-divider` directives that can contain or be set on HTML elements or other web components.
 
 ```html
 <!-- dropdown.component.html -->
@@ -122,13 +122,16 @@ To provide a more useful visual information, use the [isHeader]({environment:ang
         [igxDropDownItemNavigation]="dropdown">
         Countries
 </button>
-<igx-drop-down #dropdown [width]="'144px'">
+<igx-drop-down #dropdown [width]="'240px'">
     <div class="drop-down__scroll-container">
         <igx-drop-down-item *ngFor="let item of items" 
                             [disabled]="item.disabled"
                             [isHeader]="item.header"
                             [selected]="item.selected">
+            <igx-icon igxPrefix>place</igx-icon>
             {{ item.field }}
+            <span igxSuffix>{{ item.code }}</span>
+            <igx-divider></igx-divider>
         </igx-drop-down-item>
     </div>
 </igx-drop-down>
@@ -138,19 +141,19 @@ To provide a more useful visual information, use the [isHeader]({environment:ang
 // dropdown.component.ts
 export class MyDropDownComponent {
     public items: any[] = [
-        { field: "EU", header: true },
-        { field: "Germany" },
-        { field: "Bulgaria", selected: true },
-        { field: "UK", disabled: true },
-        { field: "NA", header: true },
-        { field: "Canada" },
-        { field: "USA" },
-        { field: "Mexico" }
+        { field: "European Union", code: "EU", header: true },
+        { field: "Germany", code: "DE" },
+        { field: "Bulgaria", code: "BG", selected: true },
+        { field: "France", code: "FR", disabled: true },
+        { field: "North America", code: "NA", header: true },
+        { field: "Canada", code: "CA" },
+        { field: "United States", code: "US" },
+        { field: "Mexico", code: "MX" }
     ];
 }
 ```
 
-If the sample is configured properly, a list of countries should be displayed as a group under EU header, UK as a non-interactive item, and Bulgaria as a selected item:
+If the sample is configured properly, a list of countries should be displayed as a group under European Union header, France as a non-interactive item, and Bulgaria as a selected item:
 
 <div class="sample-container loading" style="height: 310px">
     <iframe id="dropdown-sample-3-iframe" data-src='{environment:demosBaseUrl}/data-entries/dropdown-sample-3' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
@@ -458,6 +461,8 @@ If the component is using the [`Emulated`](themes/component-themes.md#view-encap
 * [IgxDropDownItemComponent]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html).
 * [IgxOverlay]({environment:angularApiUrl}/interfaces/overlaysettings.html)
 * [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+* [IgxDividerDirective]({environment:angularApiUrl}/classes/igxdividerdirective.html)
+* [IgxDividerDirective Styles]({environment:sassApiUrl}/index.html#function-igx-divider-theme)
 
 ## Additional Resources
 

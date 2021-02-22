@@ -50,11 +50,15 @@ In the @@igComponent if you set rowEditable property to true, and editable prope
 
  If you want to use a data type specific *edit templates*, you should specify the column [`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype) property. So let's now see what are the default templates for each type:
 
- - For `string` data type, default template is using [**igxInput**]({environment:angularApiUrl}/classes/igxinputdirective.html)
- - For `number` data type, default template is using **[igxInput]({environment:angularApiUrl}/classes/igxinputdirective.html) type="number"**, so if you try to update cell to a value which can not be parsed to a number your change is going to be discarded, and the value in the cell will be set to **0**.
- - For `date` data type, default template is using [**igx-date-picker**]({environment:angularApiUrl}/classes/igxdatepickercomponent.html)
- - For `boolean` data type, default template is using [**igx-checkbox**]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html)
- - For custom templates you can see [cell editing topic](cell-editing.md#cell-editing-templates)
+ - For `string` data type, default template is using [igxInput]({environment:angularApiUrl}/classes/igxinputdirective.html)
+ - For `number` data type, default template is using [igxInput]({environment:angularApiUrl}/classes/igxinputdirective.html) type="number", so if you try to update cell to a value which can not be parsed to a number your change is going to be discarded, and the value in the cell will be set to 0.
+ - For `date` data type, default template is using [igxDatePicker]({environment:angularApiUrl}/classes/igxdatepickercomponent.html)
+ - For `boolean` data type, default template is using [igxCheckbox]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html)
+ - For `currency` data type, default template is using [IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) with prefix/suffix configuration based on application or grid locale settings. 
+ - For `percent` data type, default template is using [IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) with suffix element that shows a preview of the edited value in percents. 
+ - For custom templates you can see [Cell Editing topic](cell-editing.md#cell-editing-templates)
+
+All available column data types could be found in the official [Column types topic](column-types.md#default-template).
 
 ### Event arguments and sequence
 The grid exposes a wide array of events that provide greater control over the editing experience. These events are fired during the [**Row Editing**](row-editing.md) and [**Cell Editing**](cell-editing.md) lifecycle - when starting, committing or canceling the editing action.
@@ -108,6 +112,33 @@ The following sample demonstrates the editing execution sequence in action:
 </div>
 }
 
+### Features integration
+While a cell/row is in edit mode, a user may interact with the grid in many ways. The following table specifies how a certain interaction affects the current editing:
+
+| @@igComponent     | Filtering  | Sorting | Paging | Moving | Pinning | Hiding | GroupBy | Resizing | Escape | Enter | F2 | Tab | Cell Click | Add new row/Delete/Edit |
+| ----------------- |:---------:|:-------:|:------:|:------:|:-------:|:------:|:-------:|:--------:|:------:|:-----:|:--:|:---:|:----------:|:-----------------------:|
+| Keep edit mode    |           |      |   |   |   |   |   | ✔ |   |   |   |   |   |   |
+| Exit edit mode    |✔         | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |   | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+| Commit            |   |   |  |  |  |   |   |   |  | ✔ | ✔ | ✔ | ✔ | ✔ |
+| Discard        | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |✔ |   | ✔  |  |   |   |   |  |
+
+As seen from the table, all interactions, except resizing a column, will end the editing and will discard the new values. Should the new value be committed, this can be done by the developer in the corresponding feature "-ing" event.
+
+Example how to commit new values, if user tries to sort the column while a cell/row is in edit mode:
+
+```html
+<igx-grid #grid [data]="localData" [primaryKey]="'ProductID'" (sorting)="onSorting($event)">
+...
+</igx-grid>
+```
+
+```typescript
+public onSorting(event: ISortingEventArgs) {
+    this.grid.endEdit(true);
+    // (event.owner as IgxGridComponent).endEdit(true);
+}
+```
+
 ## API References
 
 * [IgxGridCellComponent]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
@@ -126,6 +157,7 @@ The following sample demonstrates the editing execution sequence in action:
 <div class="divider--half"></div>
 
 * [@@igComponent overview](@@igMainTopic.md)
+* [Column Data Types](column-types.md#default-template)
 * [Virtualization and Performance](virtualization.md)
 * [Paging](paging.md)
 * [Filtering](filtering.md)

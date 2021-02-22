@@ -29,8 +29,12 @@ Ignite UI for Angular の行選択では、行内の他のすべての列に先�
 
 ## Angular 行選択の例
 
+@@if (igxName === 'IgxTreeGrid'){
+以下のサンプルは、@@igComponent の**行選択**の 4 つのタイプを示します。以下のボタンを使用して、使用可能な各選択モードを有効にします。Snackbar メッセージ ボックスで各ボタンの操作について簡単に説明します。切り替えボタンを使用して、行セレクターのチェックボックスを非表示または表示します。
+}
+@@if (igxName !== 'IgxTreeGrid'){
 以下のサンプルは、@@igComponent の**行選択**の 3 つのタイプを示します。以下のボタンを使用して、使用可能な各選択モードを有効にします。Snackbar メッセージ ボックスで各ボタンの操作について簡単に説明します。切り替えボタンを使用して、行セレクターのチェックボックスを非表示または表示します。
-
+}
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:700px">
     <iframe id="grid-selection-iframe" src='{environment:demosBaseUrl}/grid/grid-selection' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular 行選択の例"></iframe>
@@ -66,7 +70,7 @@ Ignite UI for Angular の行選択では、行内の他のすべての列に先�
 }
 
 ## 設定
-[`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) で行選択を設定するには、**rowSelection** プロパティを設定します。このプロパティは、**GridSelectionMode** 列挙を受け取ります。**GridSelectionMode** は、**none**、**single**、**multiple** のツリーモードを公開します。以下で、それぞれについて詳しく説明します。
+[`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) で行選択を設定するには、**rowSelection** プロパティを設定します。このプロパティは、**GridSelectionMode** 列挙を受け取ります。**GridSelectionMode** は、次の @@if(igxName !== 'IgxTreeGrid'){3 つのモードを公開します: **none**、**single** および **multiple**}@@if(igxName === 'IgxTreeGrid'){4 つのモードを公開します: **none**、**single**、**multiple**、**multipleCascade**}。以下で、それぞれについて詳しく説明します。
 
 ### None 選択
 
@@ -166,6 +170,18 @@ public handleRowSelection(event) {
     ...
 </igx-hierarchical-grid>
 ```
+}
+@@if(igxName === 'IgxTreeGrid'){
+### カスケード選択
+[`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) で行のカスケード選択を有効にするには、[`rowSelection`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowSelection) プロパティを `multipleCascade` に設定するだけです。これにより、各行および @@igComponent ヘッダーで行セレクター フィールドが有効になります。行セレクターを使用すると、ユーザーは複数の行を選択して、下のツリーのすべての子を選択できます。選択は、スクロール、ページング、および並べ替えやフィルタリングなどのデータ操作を通じて保持されます。行は、セルをクリックするか、セルがフォーカスされているときに *space* キーを押すことによっても選択できます。1 つの行を選択し、*shift* キーを押しながら別の行をクリックすると、親レコードの選択を通じて選択した範囲内にない場合でも、そのすべての子が選択されます。この選択モードでは、単一の行をクリックすると、前に選択した行が選択解除されます。*ctrl* キーを押しながらクリックすると、行とその子が切り替えられ、前の選択が保持されます。
+```html
+<!-- selectionExample.component.html -->
+
+<igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID" [height]="'530px'" width="100%" [rowSelection]="'multipleCascade'" [allowFiltering]="true" (onRowSelectionChange)="handleRowSelection($event)">
+    ...
+</igx-tree-grid>
+```
+このモードでは、親の選択状態はその子の選択状態に完全に依存します。親に選択された子と選択解除された子がある場合、そのチェックボックスは不確定な状態になります。
 }
 
 **注**

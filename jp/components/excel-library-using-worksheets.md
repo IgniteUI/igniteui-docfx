@@ -10,10 +10,10 @@ _language: ja
 
 Angular Excel Engine の [`worksheet`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#worksheet) にデータが保存されます。Worksheet の行やセルにデータを入力でき、対応する値を設定できます。[`worksheet`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#worksheet) は、フィルター、ソート、セル書式のカスタマイズができます。
 
-## サンプル
+## Angular ワークシートの使用の例
 
 <div class="sample-container loading" style="height: 200px">
-    <iframe id="excel-library-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/excel/excel-library-operations-on-worksheets' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="excel-library-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/excel/excel-library-operations-on-worksheets' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular ワークシートの使用の例"></iframe>
 </div>
 
 

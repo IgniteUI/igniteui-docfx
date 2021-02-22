@@ -42,21 +42,16 @@ npm install --save igniteui-angular-gauges
 
 ## Required Modules
 
-The [`IgxRadialGaugeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialgaugecomponent.html) requires the following modules<!-- Angular, React, WebComponents -->.<!-- end: Angular, React, WebComponents --><!-- Blazor --> to be registered in your application entry point:
-
--   RadialGaugeModule
-    <!-- end: Blazor -->
+The [`IgxRadialGaugeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialgaugecomponent.html) requires the following modules:
 
 ```ts
 // app.module.ts
 import { IgxRadialGaugeModule } from 'igniteui-angular-gauges';
-import { IgxRadialGaugeComponent } from 'igniteui-angular-gauges';
 
 @NgModule({
     imports: [
         // ...
-        IgxRadialGaugeModule,
-        IgxRadialGaugeComponent
+        IgxRadialGaugeModule
         // ...
     ]
 })

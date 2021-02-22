@@ -10,10 +10,10 @@ _language: ja
 
 Angular Financial Chart コンポーネントは、シンプルな API を使用して複雑なファイナンシャル データを可視化するチャート コンポーネントです。
 
-## サンプル
+## Angular ファイナンシャル チャートの例
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="financial-chart-overview-iframe" src='{environment:dvDemosBaseUrl}/charts/financial-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="financial-chart-overview-iframe" src='{environment:dvDemosBaseUrl}/charts/financial-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular ファイナンシャル チャートの例"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-overview-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示

@@ -10,10 +10,10 @@ _language: ja
 
 Angular Spreadsheet コンポーネントを使用して [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) にチャートを表示できます。
 
-## サンプル
+## Angular Spreadsheet チャート アダプターの例
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="spreadsheet-adapter-iframe" src='{environment:dvDemosBaseUrl}/excel/spreadsheet-adapter-chart' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="spreadsheet-adapter-iframe" src='{environment:dvDemosBaseUrl}/excel/spreadsheet-adapter-chart' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Spreadsheet チャート アダプターの例"></iframe>
 </div>
 
 

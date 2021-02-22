@@ -65,7 +65,7 @@ export class SampleComponent implements OnInit {
 コンポーネント テンプレートでアイコンを使用するには:
 
 ```html
-<igx-icon fontSet="imx-icons" name="github"></igx-icon>
+<igx-icon family="imx-icons" name="github"></igx-icon>
 ```
 
 詳細とその他の使用方法については、[GitHub リポジトリ](https://github.com/IgniteUI/material-icons-extended)にアクセスしてください。

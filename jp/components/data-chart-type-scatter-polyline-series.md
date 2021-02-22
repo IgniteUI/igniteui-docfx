@@ -12,10 +12,10 @@ Ignite UI for Angular 散布ポリライン チャートは、形状の配列 (X
 
 散布図シリーズは科学データの強調領域でよく使用されますが、ダイアグラム、青写真、さらには建物の間取り図のプロットにも使用できます。
 
-## サンプル
+## Angular 散布ポリライン チャートの例
 
 <div class="sample-container loading" style="height: 400px">
-    <iframe id="data-chart-type-scatter-polyline-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-scatter-polyline-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="data-chart-type-scatter-polyline-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-scatter-polyline-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular 散布ポリライン チャートの例"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-scatter-polyline-series-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示

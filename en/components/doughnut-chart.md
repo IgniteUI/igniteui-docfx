@@ -39,11 +39,7 @@ npm install --save igniteui-angular-charts
 
 ## Required Modules
 
-The Angular doughnut chart component requires the following modules<!-- Angular, React, WebComponents -->.<!-- end: Angular, React, WebComponents --><!-- Blazor --> to be registered in your application entry point:
-
--   DoughnutChartModule
--   RingSeriesModule
-    <!-- end: Blazor -->
+The Angular doughnut chart component requires the following modules:
 
 ```ts
 // app.module.ts
@@ -95,32 +91,31 @@ The following code demonstrates how to bind the doughnut chart to the above data
 The doughnut chart component can also display multiple rings at the same time with each of the rings capable of being bound to a different data item, or they can share a common data source. For example, the following 2 data sources
 are used to bind to multiple rings:
 
-```ts
-public Months: any[];
-public Seasons: any[];
-/// ...
+    ```ts
+    public Months: any[];
+    public Seasons: any[];
+    /// ...
 
-this.Months = [
-    { Value: 1, Label: "December" },
-    { Value: 1, Label: "January" },
-    { Value: 1, Label: "February" },
-    { Value: 1, Label: "March" },
-    { Value: 1, Label: "April" },
-    { Value: 1, Label: "May" },
-    { Value: 1, Label: "June" },
-    { Value: 1, Label: "July" },
-    { Value: 1, Label: "August" },
-    { Value: 1, Label: "September" },
-    { Value: 1, Label: "October" },
-    { Value: 1, Label: "November" },
-];
-this.Seasons = [
-    { Value: 4, Label: "Winter" },
-    { Value: 4, Label: "Spring" },
-    { Value: 4, Label: "Summer" },
-    { Value: 4, Label: "Fall" },
-];
-```
+    this.Months = [
+        { Value: 1, Label: "December" },
+        { Value: 1, Label: "January" },
+        { Value: 1, Label: "February" },
+        { Value: 1, Label: "March" },
+        { Value: 1, Label: "April" },
+        { Value: 1, Label: "May" },
+        { Value: 1, Label: "June" },
+        { Value: 1, Label: "July" },
+        { Value: 1, Label: "August" },
+        { Value: 1, Label: "September" },
+        { Value: 1, Label: "October" },
+        { Value: 1, Label: "November" },
+    ];
+    this.Seasons = [
+        { Value: 4, Label: "Winter" },
+        { Value: 4, Label: "Spring" },
+        { Value: 4, Label: "Summer" },
+        { Value: 4, Label: "Fall" },
+    ];
 
 ```html
  <igx-doughnut-chart width="100%" height="100%">

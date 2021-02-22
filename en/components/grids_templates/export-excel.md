@@ -32,7 +32,7 @@ The Excel Exporter service can export data to excel from the @@igxName. The data
 ## Angular Excel Exporter Example
 
 @@if (igxName === 'IgxGrid') {
-<div class="sample-container loading" style="height: 300px;">
+<div class="sample-container loading" style="height: 800px;">
     <iframe id="excel-export-sample-iframe" src="{environment:demosBaseUrl}/services/export-excel-sample-1"
         width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular Excel Exporter Example"></iframe>
 </div>
@@ -74,7 +74,7 @@ import { IgxExcelExporterService } from "igniteui-angular/services/index";
 export class AppModule {}
 ```
 
-> [!NOTE] 
+> [!NOTE]
 > The Excel Exporter service has a peer dependency on the JSZip library. The JSZip library should be installed when using the Excel Exporter.
 
 To initiate an export process you may use the handler of a button in your component's template.
@@ -119,16 +119,31 @@ public exportButtonHandler() {
 }
 ```
 
+@@if (igxName === 'IgxGrid') {
+## Export Grouped Data
+
+To export grouped data you just need to group the @@igComponent by one or more columns. The browser will download a file named "ExportedDataFile.xlsx" which contains the data from the @@igComponent component in MS Excel format grouped by the selected column. Example:
+
+<div class="sample-container loading" style="height: 800px;">
+    <iframe id="excel-group-export-sample-iframe" src="{environment:demosBaseUrl}/services/export-excel-sample-1"
+        width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular Grouped Data Excel Exporter Example"></iframe>
+</div>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="excel-group-export-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="excel-group-export-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+}
+
 ## Customizing the Exported Content
 
-In the above examples the Excel Exporter service was exporting all available data. There are situations in which you may want to skip exporting a row or even an entire column. To achieve this you may hook to the [`onColumnExport`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#oncolumnexport) and/or [`onRowExport`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#onrowexport) events which are fired respectively for each column and/or each row and cancel the respective event by setting the event argument object's [`cancel`]({environment:angularApiUrl}/interfaces/irowexportingeventargs.html#cancel) property to `true`.
+In the above examples the Excel Exporter service was exporting all available data. There are situations in which you may want to skip exporting a row or even an entire column. To achieve this you may hook to the [`columnExporting`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#columnexporting) and/or [`rowExporting`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#rowexporting) events which are fired respectively for each column and/or each row and cancel the respective event by setting the event argument object's [`cancel`]({environment:angularApiUrl}/interfaces/irowexportingeventargs.html#cancel) property to `true`.
 
 The following example will exclude a column from the export if its header is "Age" and if its index is 1:
 
 ```typescript
 // component.ts
 
-this.excelExportService.onColumnExport.subscribe((args: IColumnExportingEventArgs) => {
+this.excelExportService.columnExporting.subscribe((args: IColumnExportingEventArgs) => {
   if (args.header == "Age" && args.columnIndex == 1) {
       args.cancel = true;
   }
@@ -142,10 +157,10 @@ When you are exporting data from the @@igComponent component, the export process
 @@if (igxName === 'IgxGrid') {
 |Limitation|Description|
 |--- |--- |
-|Exporting grouped data|When exporting Grid data that is grouped by one or more columns, the output result in Excel will be a flat collection that is not grouped.|
+|Exporting multi column headers|The excel exporter service doesn't support exporting @@igComponent with multi column headers.|
 }
 
-> [!NOTE] 
+> [!NOTE]
 > Exporting large Excel files may be slow because of an [issue](https://github.com/Stuk/jszip/issues/617) in the [JSZip](https://www.npmjs.com/package/jszip) library. Until the issue is resolved, in order to speed up the Excel Exporter you could import a [`setImmediate`](https://developer.mozilla.org/en-US/docs/Web/API/Window/setImmediate) [polyfill](https://www.npmjs.com/package/setimmediate) in your application.
 
 ```cmd

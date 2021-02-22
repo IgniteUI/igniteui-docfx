@@ -10,10 +10,10 @@ _language: ja
 
 Angular Spreadsheet コンポネントは、セルの編集、グリッド線とヘッダーの表示、保護、ズームレベル、および Excel ワークシートに関連するその他のさまざまなプロパティなど、コントロールのさまざまな側面を設定できます。
 
-## サンプル
+## Angular Spreadsheet の構成の例
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="spreadsheet-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/excel/spreadsheet-config-options' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="spreadsheet-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/excel/spreadsheet-config-options' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Spreadsheet の構成の例"></iframe>
 </div>
 
 

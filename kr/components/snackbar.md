@@ -62,7 +62,7 @@ Once opened, the snackbar disappears after a period specified by the [`displayTi
 
 <button igxButton="raised" (click)="snackbar.show()">Send message</button>
 <div>
-  <igx-snackbar #snackbar [autoHide]="false" actionText="CLOSE" (onAction)="close(snackbar)">Message sent</igx-snackbar>
+  <igx-snackbar #snackbar [autoHide]="false" actionText="CLOSE" (clicked)="close(snackbar)">Message sent</igx-snackbar>
 </div>
 ```
 
@@ -182,7 +182,7 @@ Let’s create a list with contacts that can be deleted. When an item is deleted
 
     </igx-list-item>
 
-    <igx-snackbar actionText="Undo" (onAction)="restore()">Contact deleted</igx-snackbar>
+    <igx-snackbar actionText="Undo" (clicked)="restore()">Contact deleted</igx-snackbar>
 </igx-list>
 ```
 

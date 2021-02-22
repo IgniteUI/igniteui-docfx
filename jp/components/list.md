@@ -168,8 +168,8 @@ public contacts = [{
 }];
 ```
 
-データを描画するマークアップを作成します。  
-すぐにスタイル設定したい場合は、リスト項目に付属するディレクティブを使用できます。 
+データを描画するマークアップを作成します。
+すぐにスタイル設定したい場合は、リスト項目に付属するディレクティブを使用できます。
 
 以下の例では、それらを使用する方法を示します。
 
@@ -187,7 +187,7 @@ public contacts = [{
 </igx-list>
 ```
 
-`igxListLineTitle` と `igxListLineSubTitle` ディレクティブは両方とも、リスト項目にデフォルトの外観を指定します。 
+`igxListLineTitle` と `igxListLineSubTitle` ディレクティブは両方とも、リスト項目にデフォルトの外観を指定します。
 
 結果は以下のようになります。
 
@@ -303,7 +303,7 @@ import { IgxButtonGroupModule } from 'igniteui-angular';
 ```html
 <!--contacts.component.html-->
 
-<igx-buttongroup [values]="displayDensities" (onSelect)="selectDensity($event)"></igx-buttongroup>
+<igx-buttongroup [values]="displayDensities" (selected)="selectDensity($event)"></igx-buttongroup>
 ...
 <igx-list [displayDensity]="density">
     ...
@@ -360,7 +360,7 @@ public selectDensity(event) {
 <!-- contacts.component.html -->
 
 <igx-list [allowLeftPanning]="true" [allowRightPanning]="true"
-  (onLeftPan)="leftPanPerformed($event)" (onRightPan)="rightPanPerformed($event)">
+  (leftPan)="leftPanPerformed($event)" (rightPan)="rightPanPerformed($event)">
   <ng-template igxListItemLeftPanning>
     <div class="listItemLeftPanningStyle">
       <igx-icon [color]="white" style="margin-left:10px">delete</igx-icon>Delete

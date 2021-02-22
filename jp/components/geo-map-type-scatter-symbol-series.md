@@ -10,10 +10,10 @@ _language: ja
 
 Angular マップ コンポーネントの [`IgxGeographicSymbolSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html) を使用して、地理的コンテキストでポイントまたはマーカーを使用して地理空間データを表示します。地理的シリーズのこのタイプは、都市、空港、地震または興味のあるポイントなどの地理的位置のコレクションを描画するためにしばしば使用されます。
 
-## サンプル
+## Angular 散布図記号シリーズの使用の例
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="geo-map-type-scatter-symbol-series-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-type-scatter-symbol-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="geo-map-type-scatter-symbol-series-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-type-scatter-symbol-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular 散布図記号シリーズの使用の例"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="geo-map-type-scatter-symbol-series-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示

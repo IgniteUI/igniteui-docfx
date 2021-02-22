@@ -11,10 +11,10 @@ _language: ja
 このトピックは、コード例を示して Angular データ チャート コンポーネントで散布 [`IgxBubbleSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbubbleseriescomponent.html) 使用する方法を説明します。このシリーズ
 データをプロットするためにデカルト座標系 (x, y) を使用する[散布図 - マーカーシリーズ](data-chart-type-scatter-point-series.md) に似ています。このシリーズはスケールされたバブルの集まりとしてデータを表示します。それぞれがその位置を決定する一対の数値X / Y値とそのサイズを決定する 3 番目の値を持ちます。
 
-## サンプル
+## Angular 散布図 - バブル シリーズの例
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="data-chart-type-scatter-bubble-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-scatter-bubble-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="data-chart-type-scatter-bubble-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-scatter-bubble-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular 散布図 - バブル シリーズの例"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-scatter-series-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示

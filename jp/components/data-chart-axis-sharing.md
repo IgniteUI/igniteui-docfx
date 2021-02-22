@@ -10,10 +10,10 @@ _language: ja
 
  Angular データ チャート コンポーネントの同じプロット領域に複数の軸を共有して追加できます。すべての軸に対して、チャートプロット領域に関連して位置を指定できます。広範囲の値 (株価や株取引量など) を持つ多くのデータソースをプロットする場合は、複数の軸を使用するのが一般的なシナリオです。
 
-## サンプル
+## Angular 軸共有と複数軸の例
 
 <div class="sample-container loading" style="height: 450px">
-    <iframe id="data-chart-axis-sharing-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-axis-sharing' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="data-chart-axis-sharing-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-axis-sharing' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular 軸共有と複数軸の例"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-axis-sharing-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示

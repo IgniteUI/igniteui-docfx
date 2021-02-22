@@ -33,7 +33,7 @@ Excel Exporter サービスは @@igxName のデータを MS Excel へエクス�
 ## Angular Excel Exporter の例
 
 @@if (igxName === 'IgxGrid') {
-<div class="sample-container loading" style="height: 300px;">
+<div class="sample-container loading" style="height: 800px;">
     <iframe id="excel-export-sample-iframe" src="{environment:demosBaseUrl}/services/export-excel-sample-1"
         width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular Excel Exporter 例"></iframe>
 </div>
@@ -122,16 +122,31 @@ public exportButtonHandler() {
 }
 ```
 
+@@if (igxName === 'IgxGrid') {
+## グループ化されたデータのエクスポート
+
+グループ化されたデータをエクスポートするには、@@igComponent を 1 つ以上の列でグループ化する必要があります。ブラウザーは、選択した列でグループ化された MSExcel 形式の @@igComponent コンポーネントからのデータを含む 「ExportedDataFile.xlsx」 という名前のファイルをダウンロードします。例:
+
+<div class="sample-container loading" style="height: 800px;">
+    <iframe id="excel-group-export-sample-iframe" src="{environment:demosBaseUrl}/services/export-excel-sample-1"
+        width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular Grouped Data Excel Exporter Example"></iframe>
+</div>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="excel-group-export-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="excel-group-export-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+</div>
+}
+
 ## エクスポートするコンテンツのカスタマイズ
 
-上記の例では、Excel Exporter サービスで利用可能なデータをすべてエクスポートしました。行または列全体のエクスポートをしない方が良い場合があります。実装は、各列で発生される [`onColumnExport`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#oncolumnexport) または各行で発生される [`onRowExport`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#onrowexport) イベントを処理し、イベント引数オブジェクトの [`cancel`]({environment:angularApiUrl}/interfaces/irowexportingeventargs.html#cancel) プロパティを `true` に設定して各イベントをキャンセルします。
+上記の例では、Excel Exporter サービスで利用可能なデータをすべてエクスポートしました。行または列全体のエクスポートをしない方が良い場合があります。実装は、各列で発生される [`columnExporting`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#columnexporting) または各行で発生される [`rowExporting`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#rowexporting) イベントを処理し、イベント引数オブジェクトの [`cancel`]({environment:angularApiUrl}/interfaces/irowexportingeventargs.html#cancel) プロパティを `true` に設定して各イベントをキャンセルします。
 
 以下の例では、ヘッダーが "Age" で、インデックスが 1 の場合、エクスポートから列を除外します。
 
 ```typescript
 // component.ts
 
-this.excelExportService.onColumnExport.subscribe((args: IColumnExportingEventArgs) => {
+this.excelExportService.columnExporting.subscribe((args: IColumnExportingEventArgs) => {
   if (args.header == "Age" && args.columnIndex == 1) {
       args.cancel = true;
   }
@@ -145,10 +160,10 @@ this.excelExportService.export(this.@@igObjectRef, new IgxExcelExporterOptions("
 @@if (igxName === 'IgxGrid') {
 |制限|説明|
 |--- |--- |
-|グループ化したデータのエクスポート|複数列でグループ化されたグリッド データをエクスポートすると、Excel の出力結果ではグループ化されていないフラットなコレクションになります。|
+|複数列ヘッダーのエクスポート|Excel エクスポーター サービスは、複数列ヘッダーを持つ @@igComponent のエクスポートをサポートしていません。|
 }
 
-> [!NOTE] 
+> [!NOTE]
 > [JSZip](https://www.npmjs.com/package/jszip) のライブラリがの [問題](https://github.com/Stuk/jszip/issues/617) が原因で、大きな Excel ファイルのエクスポートが遅延する場合があります。問題が解決するまで、Excel エクスポーターの速度を上げるために、アプリケーションに [`setImmediate`](https://developer.mozilla.org/en-US/docs/Web/API/Window/setImmediate) [polyfill](https://www.npmjs.com/package/setimmediate) をインポートできます。
 
 ```cmd

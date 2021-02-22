@@ -10,10 +10,10 @@ _language: ja
 
 Ignite UI for Angular スプライン エリア チャートは、カテゴリ チャートのグループに属し、スプラインの下の領域が塗りつぶされたスプラインの滑らかな曲線で接続されたポイントのコレクションを使用して描画されます。値は y 軸に表示され、カテゴリは x 軸に表示されます。[`IgxSplineAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsplineareaseriescomponent.html) は時間毎のデータの変化や複数の項目を比較する場合に用いられ、プロットされた値の合計を表示することで全体に対するデータ間の関係も表します。Angular スプライン エリア チャートは、データ ポイントを接続するラインにスプライン補間とデータの表示を改善するスムージングがあること以外は Angular エリア チャートと同じです。
 
-## サンプル
+## Angular スプライン エリア チャートの例
 
 <div class="sample-container loading" style="height: 400px">
-    <iframe id="data-chart-type-category-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-category-spline-area-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="data-chart-type-category-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-category-spline-area-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular スプライン エリア チャートの例"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-category-series-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示

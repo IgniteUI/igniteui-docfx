@@ -11,10 +11,10 @@ _language: ja
 
 Ignite UI for Angular データチャート コンポーネントを使用すると、[`IgxValueOverlayComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxvalueoverlaycomponent.html) を使用して定義した単一の数値で水平線または垂直線を配置できます。特定のシリーズの平均値や中央値などのデータを視覚化するのに役立ちます。
 
-## サンプル
+## Angular 値オーバーレイ例
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="data-chart-series-value-overlay-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-series-value-overlay' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="data-chart-series-value-overlay-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-series-value-overlay' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular 値オーバーレイ例"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-series-value-overlay-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示

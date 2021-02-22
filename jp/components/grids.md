@@ -217,7 +217,7 @@ Ignite UI for Angular のデータ グリッドは、大量のリアルタイム
 
 <div class="divider"></div>
 
-### サンプル
+### 高速 Angular データ グリッド例
 
 <span class="h3">サンプル</span>
 
