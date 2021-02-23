@@ -1,6 +1,6 @@
 ---
 title: Angular Data Chart | Data Visualization Tools | Axis Sharing | Infragistics
-_description: Infragistics' Angular charts control allows for muliple axes to be displayed in the same plot area. Create a Ignite UI for Angular graph with multiple axis!
+_description: Infragistics' Angular charts control allows for multiple axes to be displayed in the same plot area. Create a Ignite UI for Angular graph with multiple axis!
 _keywords: Angular charts, data chart, axis sharing, Ignite UI for Angular, Infragistics, multiple axes
 mentionedTypes: ['XamDataChart', 'CategoryXAxis', 'NumericYAxis', 'CategoryDateTimeXAxis']
 ---
@@ -9,10 +9,10 @@ mentionedTypes: ['XamDataChart', 'CategoryXAxis', 'NumericYAxis', 'CategoryDateT
 
  You can share and add multiple axes in the same plot area of the Angular data chart component. For all axes, you can specify locations in relationship to chart plot area. It a common scenario to use multiple axes when you want to plot many data sources that have wide range of values (e.g. stock prices and stock trade volumes).
 
-## Demo
+## Angular Axis Sharing and Multiple Axes Example
 
 <div class="sample-container loading" style="height: 450px">
-    <iframe id="data-chart-axis-sharing-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-axis-sharing' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="data-chart-axis-sharing-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-axis-sharing' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Axis Sharing and Multiple Axes Example"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-axis-sharing-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz

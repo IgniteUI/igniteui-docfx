@@ -7,11 +7,11 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <p class="highlight">The Ignite UI for Angular Snack Bar component provides feedback about an operation with a single-line message, which can include a link to an action such as Undo. The Snack Bar message appears above all other screen elements, located at the bottom of a mobile device screen or at the lower left of larger device screens.</p>
 <div class="divider"></div>
 
-## Demo
+## Angular Snackbar Example
 <div class="divider--half"></div>
 
 <div class="sample-container loading" style="height: 140px">
-    <iframe id="snackbar-sample-1-iframe" src='{environment:demosBaseUrl}/notifications/snackbar-sample-1' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="snackbar-sample-1-iframe" src='{environment:demosBaseUrl}/notifications/snackbar-sample-1' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular Snackbar Example"></iframe>
 </div>
 <p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>
@@ -70,7 +70,7 @@ Once opened, the snackbar disappears after a period specified by the [`displayTi
 
 <button igxButton="raised" (click)="snackbar.show()">Send message</button>
 <div>
-  <igx-snackbar #snackbar [autoHide]="false" actionText="CLOSE" (onAction)="close(snackbar)">Message sent</igx-snackbar>
+  <igx-snackbar #snackbar [autoHide]="false" actionText="CLOSE" (clicked)="close(snackbar)">Message sent</igx-snackbar>
 </div>
 ```
 
@@ -179,7 +179,7 @@ Let’s create a list with contacts that can be deleted. When an item is deleted
 
     </igx-list-item>
 
-    <igx-snackbar actionText="Undo" (onAction)="restore()">Contact deleted</igx-snackbar>
+    <igx-snackbar actionText="Undo" (clicked)="restore()">Contact deleted</igx-snackbar>
 </igx-list>
 ```
 

@@ -10,11 +10,11 @@ _language: ja
 ## Radio Button
 <p class="highlight">Ignite UI for Angular Radio Button コンポーネントを使用すると、隣に表示されるオプションのセットから単一のオプションを選択する機能を提供します。</p>
 
-### デモ
+## Angular Radio & Radio Group の例
 <div class="sample-container loading" style="height: 90px">
-    <iframe id="form-elements-sample-iframe" src='{environment:demosBaseUrl}/data-entries/radio-sample-1' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="form-elements-sample-iframe" src='{environment:demosBaseUrl}/data-entries/radio-sample-1' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular Radio & Radio Group の例"></iframe>
 </div>
-<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="form-elements-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="form-elements-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
@@ -168,7 +168,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 <div class="divider"></div>
 
 ### デモ
-<div class="sample-container loading" style="height: 360px">
+<div class="sample-container loading" style="height: 260px">
     <iframe id="radio-group-sample-iframe" data-src='{environment:demosBaseUrl}/data-entries/radio-group-sample' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
@@ -210,6 +210,36 @@ import { IgxRadioModule } from 'igniteui-angular';
 // radio-group.component.ts
 public fruits = ["Apple", "Mango", "Banana", "Orange"];
 ```
+
+### 配置
+[`alignment`]({environment:angularApiUrl}/classes/igxradiogroupdirective.html#alignment) 入力プロパティを使用して、ラジオ グループ内の `igxRadio` コンポーネントの方向を変更します。`horizontal` および `vertical` から選択できます。ラジオ グループのデフォルト配置は horizontal (水平) です。
+
+```typescript
+//sample.component.ts
+import { RadioGroupAlignment } from "igniteui-angular";
+...
+public alignment = RadioGroupAlignment.vertical;
+...
+```
+
+```html
+<!-- sample.component.html -->
+<igx-radio-group [alignment]="alignment">
+    <igx-radio [(ngModel)]="selected" value="London">London</igx-radio>
+    <igx-radio [(ngModel)]="selected" value="New York">New York</igx-radio>
+    <igx-radio [(ngModel)]="selected" value="Tokyo">Tokyo</igx-radio>
+    <igx-radio [(ngModel)]="selected" value="Sofia">Sofia</igx-radio>
+</igx-radio-group>
+```
+
+<div class="sample-container loading" style="height: 300px">
+    <iframe id="radio-group-vertical-iframe" data-src='{environment:demosBaseUrl}/data-entries/radio-group-vertical' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="radio-group-vertical-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="radio-group-vertical-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+</div>
+<div class="divider--half"></div>
 
 ## API リファレンス
 <div class="divider--half"></div>

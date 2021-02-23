@@ -1,5 +1,5 @@
 ---
-title: Angular Grid Layout | Real-Time Angular Tables | The Lightweight Angular Web Components table | Table Controls for Angular Apps | Infragistics
+title: Angular Grid Layout | Real-Time Angular Tables | The Lightweight Angular Web Components table | Infragistics
 _description: Our Angular grid layout will help you build dynamic, touch-responsive data grids with little coding and configuration. Get 30-day FREE trial of Ignite UI for Angular.
 _keywords: Angular data grid, infragistics, grids, Ignite UI for Angular, table
 ---
@@ -180,7 +180,7 @@ In this Angular grid example, you can see how users can customize their view of 
 <div class="divider--half"></div>
 
 <div class="sample-container loading" style="height: 435px">
-    <iframe id="data-grid-overview-sample-iframe" src='{environment:demosBaseUrl}/grids/data-grid-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Grid Example"></iframe>
+    <iframe id="data-grid-overview-sample-iframe" src='{environment:demosBaseUrl}/grids/data-grid-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Grid Example" alt="Angular Grid Example"></iframe>
 </div>
 
 Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a href="{environment:infragisticsBaseUrl}/products/ignite-ui-angular/download">Download it for free.</a>
@@ -216,7 +216,7 @@ This example demonstrates a few of the data grid’s key features:
 
 <div class="divider"></div>
 
-### Demo
+### The Fastest Angular Data Grid Example
 
 <span class="h3">Demo</span>
 

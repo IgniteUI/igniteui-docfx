@@ -1,7 +1,7 @@
 ---
-title: Angular Data Grid | Build Fast Angular Tables | Infragistics
-_description: Create super fast, responsive Angular data grids and tables with Ignite UI for Angular. Supports  editing, filtering, data binding and many more. 30 days free trial
-_keywords: angular data grid, angular material table, ignite ui for angular
+title: Angular Data Grid | 高速な Angular テーブルを構築する | インフラジスティックス
+_description: Ignite UI for Angular を使用して、超高速でレスポンシブな Angular データ グリッドとテーブルを作成します。 編集、フィルタリング、データ バインディングなどをサポートします。 30 日間の無料トライアル。
+_keywords: angular データ グリッド, angular マテリアル テーブル, ignite ui for angular
 _language: ja
 ---
 
@@ -11,12 +11,12 @@ Ignite UI for Angular Data Grid は、データの表示や操作が簡単にで
 
 ## Angular データ グリッドの例
 
-Boston Marathon 2020 – この Angular グリッドの例では、ユーザーが基本スタイルと Excel スタイルの両方のフィルタリング、ライブ データのソート、および[スパークライン](../sparkline.md) コンポーネント、[Circular Progress Indicator](../circular-progress.md) コンポーネントと [Icons](../icon.md) を含むグリッド集計とセル テンプレートの使用を実行する方法を確認できます。デモには、[Angular 改ページ](paging.md)のカスタム ページングとページごとの使用法も含まれています。
+Boston Marathon 2020 – この Angular グリッドの例では、ユーザーが基本スタイルと Excel スタイルの両方のフィルタリング、ライブ データのソート、および[スパークライン](../sparkline.md) コンポーネント、[Circular Progress Indicator](../circular-progress.md) コンポーネントと [Icons](../icon.md) を含むグリッド集計とセル テンプレートの使用を実行する方法を確認できます。デモには、[Angular ページネーション](paging.md)のカスタム ページングとページごとの使用法も含まれています。
 
 <div class="sample-container loading" style="height:700px">
     <iframe id="grid-sample-iframe" src='{environment:lobDemosBaseUrl}/grid/grid' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular データ グリッドの例"></iframe>
 </div>
-<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-sample-iframe" data-demos-base-url="{environment:lobDemosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-iframe" data-demos-base-url="{environment:lobDemosBaseUrl}">Stackblitz で表示</button>
@@ -261,7 +261,7 @@ public initColumns(column: IgxGridColumn) {
 
 ### カスタム表示形式
 
-日付列または数値列のすべての値は、[`Angular DatePipe`](https://angular.io/api/common/DatePipe) または [`DecimalPipe`](https://angular.io/api/common/DecimalPipe) を介して変換されます。これは元の値を変更せず、列に表示される値のみを変更します。デフォルトでは、値はグリッドの[`ロケール`]({environment:angularApiUrl}/classes/igxgridcomponent.html#locale)に従って表示されます (指定しない場合、アプリケーション ロケールにフォールバックします。デフォルトは `'en-US'` です)。
+日付、数値、通貨、パーセント列のすべての値は、Angular [`DatePipe`](https://angular.io/api/common/DatePipe)、[`DecimalPipe`](https://angular.io/api/common/DecimalPipe)、[`CurrencyPipe`](https://angular.io/api/common/CurrencyPipe)、[`PercentPipe`](https://angular.io/api/common/PercentPipe) に応じて変換されます。これは元の値を変更せず、列に表示される値のみを変更します。データにまつわるすべての動作や操作はデータ ソースの値に基づいて実行されることに注意してください。デフォルトでは、値はグリッドの [`locale`]({environment:angularApiUrl}/classes/igxgridcomponent.html#locale) に従って表示されます (指定しない場合、アプリケーション ロケールにフォールバックします。デフォルトは `'en-US'` です)。
 
 詳細については、[「Setting up the locale of your app (英語)」](https://angular.io/guide/i18n#setting-up-the-locale-of-your-app)をご覧ください。
 
@@ -286,6 +286,8 @@ const pipeArgs: IColumnPipeArgs = {
 ```
 
 `OrderDate` 列は `format` および `timezone` プロパティのみに遵守しますが、`UnitPrice` は `digitsInfo` のみに遵守します。詳細については、[「Localizing your app (英語)」](https://angular.io/guide/i18n)で Angular の公式ドキュメントを参照してください。
+
+すべての利用可能な列データ型は、公式の[列タイプ トピック](column-types.md#デフォルトのテンプレート)にあります。
 
 ## Angular Grid データ構造
 
@@ -726,6 +728,7 @@ Grid のキーボード ナビゲーションは、さまざまなキーボー�
 * [列のピン固定](column-pinning.md)
 * [列のサイズ変更](column-resizing.md)
 * [選択](selection.md)
+* [列のデータ型](column-types.md#デフォルトのテンプレート)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

@@ -13,7 +13,7 @@ Schematics コレクションを使用してガイドをアクティブにする
 ng new --collection="@igniteui/angular-schematics"
 ```
 
-Ignite UI CLI を使用してガイドを開始するには、 `ig` コマンドを実行します。
+Ignite UI CLI を使用してガイドを開始するには、`ig` コマンドを実行します。
 
 ```bash
 ig
@@ -46,7 +46,7 @@ ig new
 
 ![](../../../images/general/ig-step-by-step-new-project-template.png)
 
-次のステップでは、アプリケーションのテーマを選択します。デフォルトのオプションを選択すると、 Ignite UI for Angular のデフォルト テーマの Ignite UI がプリコンパイルされた CSS ファイル (`igniteui-angular.css`) がプロジェクトの `angular.json` に含まれます。カスタムオプションは、`app/styles.scss` の [Theming API](../../themes.md) を使用して、カラーパレットとテーマのコードを生成します。
+次のステップでは、アプリケーションのテーマを選択します。デフォルトのオプションを選択すると、Ignite UI for Angular のデフォルト テーマの Ignite UI がプリコンパイルされた CSS ファイル (`igniteui-angular.css`) がプロジェクトの `angular.json` に含まれます。カスタムオプションは、`app/styles.scss` の [Theming API](../../themes.md) を使用して、カラーパレットとテーマのコードを生成します。
 
 ![](../../../images/general/ig-step-by-step-new-project-theme.png)
 
@@ -63,7 +63,7 @@ Schematics コレクションを使用してステップバイステップ モ�
 ng g @igniteui/angular-schematics:component
 ```
 
-Ignite UI CLI を使用する場合、 `add` コマンドを実行します。
+Ignite UI CLI を使用する場合、`add` コマンドを実行します。
 ```bash	
 ig add
 ```

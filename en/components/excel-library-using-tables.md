@@ -9,10 +9,10 @@ mentionedTypes: ['Workbook', 'WorksheetTable', 'Worksheet', 'SortSettings']
 
 The Infragistics Angular Excel Engine's [`WorksheetTable`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html) functionality allows you to format your data in rows and columns The data in a worksheet table can be managed independently from the data in the other rows and columns in a [`worksheet`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html#worksheet).
 
-<!--## Demo
+<!--## Angular Using Tables Example
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="excel-library-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/excel/excel-library-working-with-tables' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="excel-library-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/excel/excel-library-working-with-tables' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Using Tables Example"></iframe>
 </div>-->
 
 <div class="divider--half"></div>
@@ -36,7 +36,7 @@ The following code snippet shows the usage of these methods:
 
 ```ts
 var workbook = new Workbook(WorkbookFormat.Excel2007);
-var worksheet = this.workbook.worksheets().add("Sheet1");
+var worksheet = workbook.worksheets().add("Sheet1");
 var table = worksheet.tables().add("A1:G10", true);
 
 //Will add 5 columns at index 1.
@@ -77,7 +77,7 @@ The following code snippet demonstrates how to apply an "above average" filter t
 
 ```ts
 var workbook = new Workbook(WorkbookFormat.Excel2007);
-var worksheet = this.workbook.worksheets().add("Sheet1");
+var worksheet = workbook.worksheets().add("Sheet1");
 var table = worksheet.tables().add("A1:G10", true);
 
 table.columns(0).applyAverageFilter(AverageFilterType.AboveAverage);

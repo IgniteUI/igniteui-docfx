@@ -1,27 +1,30 @@
 ﻿- name: 概要
   header: true
+  sortable: true
   _language: "ja"
 - name: Angular - 完全ガイド
   href: general/angular-grid-overview-guide.md
-  new: true
+  new: false
 - name: ライセンス
   href: general/ignite-ui-licensing.md
-  new: true
+  new: false
 - name: 作業の開始
   href: general/getting-started.md
   new: false
 - name: 重大な変更
   href: general-breaking-changes-dv.md
-  new: true
+  new: false
+  updated: true
 - name: アップデート ガイド
   href: general/update-guide.md
   new: false
+  updated: true
 - name: アクセシビリティ準拠
   href: general/accessibility-compliance.md
-  new: true
+  new: false
 - name: Angular Schematics & Ignite UI CLI
   href: general/cli-overview.md
-  new: true
+  new: false
   items:
     - name: ステップバイステップガイド
       href: general/cli/step-by-step-guide.md
@@ -62,7 +65,7 @@
       new: false
 - name: フレームワーク & 機能
   href: general/framework-and-features/framework-and-features.md
-  new: true
+  new: false
   items:
     - name: SSR レンダリング
       href: general/framework-and-features/ssr-rendering.md
@@ -74,11 +77,14 @@
 - name: グリッドとリスト
   href: grids-and-lists.md
   header: true
+  updated: true
 - name: Data Grid
   href: grid/grid.md
-  new: true
+  new: false
+  updated: true
+  sortable: true
   items:
-    - name: ライブデータ/リアルタイム更新
+    - name: ライブ データ/リアルタイム更新
       href: grid/live-data.md
       new: false
     - name: 仮想化とパフォーマンス
@@ -86,10 +92,13 @@
       new: false
     - name: リモート データ操作
       href: grid/remote-data-operations.md
+      new: false
+    - name: 列のデータ型
+      href: grid/column-types.md
       new: true
     - name: 編集
       href: grid/editing.md
-      updated: true
+      new: true
       items:
         - name: セル編集
           href: grid/cell-editing.md
@@ -118,26 +127,29 @@
           updated: true
         - name: 高度なフィルタリング
           href: grid/advanced-filtering.md
-          new: true
+          new: false
     - name: ソート
       href: grid/sorting.md
-      updated: true
+      updated: false
     - name: グループ化
       href: grid/groupby.md
       new: false
+      updated: true
     - name: 集計
       href: grid/summaries.md
-      updated: true
+      updated: false
     - name: 列移動
       href: grid/column-moving.md
       new: false
-      updated: true
+      updated: false
     - name: 列のピン固定
       href: grid/column-pinning.md
-      new: true
+      new: false
+      updated: true
     - name: 行のピン固定
       href: grid/row-pinning.md
-      new: true
+      new: false
+      updated: false
     - name: 列のサイズ変更
       href: grid/column-resizing.md
       new: false
@@ -159,7 +171,7 @@
           new: false
         - name: 列選択
           href: grid/column-selection.md
-          new: true
+          new: false
     - name: 検索
       href: grid/search.md
       new: false
@@ -170,6 +182,7 @@
     - name: Excel エクスポート
       href: grid/export-excel.md
       new: false
+      updated: true
     - name: Excel からの貼り付け
       href: grid/paste-excel.md
       new: false
@@ -178,7 +191,7 @@
       new: false
     - name: 列グループの折りたたみ
       href: grid/collapsible-column-groups.md
-      new: true
+      new: false
     - name: 表示密度
       href: grid/display-density.md
       new: false
@@ -188,7 +201,7 @@
     - name: キーボード ナビゲーション
       href: grid/keyboard-navigation.md
       new: false
-      updated: true
+      updated: false
     - name: 複数行レイアウト
       href: grid/multi-row-layout.md
       new: false
@@ -200,13 +213,14 @@
       new: false
     - name: Grid Master-Detail
       href: grid/master-detail.md
-      new: true
+      new: false
     - name: 状態保持
       href: grid/state-persistence.md
-      updated: true
+      updated: false
 - name: Tree Grid
   href: treegrid/tree-grid.md
-  new: true
+  new: false
+  sortable: true
   items:
     - name: ライブデータ/リアルタイム更新
       href: treegrid/live-data.md
@@ -216,13 +230,16 @@
       new: false
     - name: リモート データ操作
       href: treegrid/remote-data-operations.md
+      new: false
+    - name: 列のデータ型
+      href: treegrid/column-types.md
       new: true
     - name: ロードオンデマンド
       href: treegrid/load-on-demand.md
       new: false
     - name: 編集
       href: treegrid/editing.md
-      updated: true
+      new: true
       items:
         - name: セル編集
           href: treegrid/cell-editing.md
@@ -251,32 +268,35 @@
         updated: true
       - name: 高度なフィルタリング
         href: treegrid/advanced-filtering.md
-        new: true
+        new: false
     - name: ソート
       href: treegrid/sorting.md
-      updated: true
+      updated: false
     - name: 集計
       href: treegrid/summaries.md
-      new: true
+      new: false
     - name: 列移動
       href: treegrid/column-moving.md
       new: false
-      updated: true
+      updated: false
     - name: 列のピン固定
       href: treegrid/column-pinning.md
       new: false
+      updated: true
     - name: 行のピン固定
       href: treegrid/row-pinning.md
-      new: true
+      new: false
+      updated: false
     - name: 列のサイズ変更
       href: treegrid/column-resizing.md
       new: false
     - name: 列の非表示
       href: treegrid/column-hiding.md
       new: false
+      updated: true
     - name: 選択
       href: treegrid/selection.md
-      new: true
+      new: false
       items:
         - name: 行選択
           href: treegrid/row-selection.md
@@ -286,7 +306,7 @@
           new: false
         - name: 列選択
           href: treegrid/column-selection.md
-          new: true
+          new: false
     - name: 検索
       href: treegrid/search.md
       new: false
@@ -302,7 +322,7 @@
       new: false
     - name: 列グループの折りたたみ
       href: treegrid/collapsible-column-groups.md
-      new: true
+      new: false
     - name: 表示密度
       href: treegrid/display-density.md
       new: false
@@ -315,7 +335,7 @@
     - name: キーボードナビゲーション
       href: treegrid/keyboard-navigation.md
       new: false
-      updated: true
+      updated: false
     - name: クリップボード操作
       href: treegrid/clipboard-interactions.md
       new: false
@@ -324,23 +344,27 @@
       new: false
     - name: 状態保持
       href: treegrid/state-persistence.md
-      new: true
+      new: false
 - name: Hierarchical Grid
   href: hierarchicalgrid/hierarchical-grid.md
-  new: true
+  new: false
+  sortable: true
   items:
     - name: 仮想化とパフォーマンス
       href: hierarchicalgrid/virtualization.md
       new: false
     - name: リモート データ操作
       href: hierarchicalgrid/remote-data-operations.md
+      new: false
+    - name: 列のデータ型
+      href: hierarchicalgrid/column-types.md
       new: true
     - name: ロードオンデマンド
       href: hierarchicalgrid/load-on-demand.md
       new: false
     - name: 編集
       href: hierarchicalgrid/editing.md
-      updated: true
+      new: true
       items:
         - name: セル編集
           href: hierarchicalgrid/cell-editing.md
@@ -369,29 +393,31 @@
         updated: true
       - name: 高度なフィルタリング
         href: hierarchicalgrid/advanced-filtering.md
-        new: true
+        new: false
     - name: ソート
       href: hierarchicalgrid/sorting.md
-      updated: true
+      updated: false
     - name: 集計
       href: hierarchicalgrid/summaries.md
-      new: true
+      new: false
     - name: 列移動
       href: hierarchicalgrid/column-moving.md
       new: false
-      updated: true
+      updated: false
     - name: 列のピン固定
       href: hierarchicalgrid/column-pinning.md
       new: false
+      updated: true
     - name: 行のピン固定
       href: hierarchicalgrid/row-pinning.md
-      new: true
+      new: false
     - name: 列のサイズ変更
       href: hierarchicalgrid/column-resizing.md
       new: false
     - name: 列の非表示
       href: hierarchicalgrid/column-hiding.md
       new: false
+      updated: true
     - name: 選択
       href: hierarchicalgrid/selection.md
       new: false
@@ -401,10 +427,10 @@
           new: false
         - name: セル選択
           href: hierarchicalgrid/cell-selection.md
-          new: true
+          new: false
         - name: 列選択
           href: hierarchicalgrid/column-selection.md
-          new: true
+          new: false
     # Not yet fully implemented for igxHGrid
     # - name: 検索
     #   href: hierarchicalgrid/search.md
@@ -412,12 +438,13 @@
     - name: ツールバー
       href: hierarchicalgrid/toolbar.md
       new: false
+      updated: true
     - name: 複数列ヘッダー
       href: hierarchicalgrid/multi-column-headers.md
       new: false
     - name: 列グループの折りたたみ
       href: hierarchicalgrid/collapsible-column-groups.md
-      new: true
+      new: false
     - name: 表示密度
       href: hierarchicalgrid/display-density.md
       new: false
@@ -427,7 +454,7 @@
     - name: キーボードナビゲーション
       href: hierarchicalgrid/keyboard-navigation.md
       new: false
-      updated: true
+      updated: false
     - name: サイズ変更
       href: hierarchicalgrid/sizing.md
       new: false
@@ -438,7 +465,7 @@
   href: list.md
 - name: Combo
   href: combo.md
-  new: true
+  new: false
   items:
     - name: 機能
       href: combo-features.md
@@ -448,40 +475,41 @@
       new: false
     - name: テンプレート
       href: combo-templates.md
-      new: true
+      new: false
     - name: カスケーディング
       href: combo-cascading.md
       new: false
 - name: Spreadsheet
-  href: spreadsheet_overview.md
+  href: spreadsheet-overview.md
   new: false
   items:
     - name: アクティブ化
-      href: spreadsheet_activation.md
+      href: spreadsheet-activation.md
       new: false
     - name: チャート アダプター
-      href: spreadsheet_chart-adapter.md
+      href: spreadsheet-chart-adapter.md
       new: false
     - name: クリップボード
-      href: spreadsheet_clipboard.md
+      href: spreadsheet-clipboard.md
       new: false
     - name: 条件付き書式
-      href: spreadsheet_conditional-formatting.md
+      href: spreadsheet-conditional-formatting.md
       new: false
     - name: Spreadsheet の構成
-      href: spreadsheet_configuring.md
+      href: spreadsheet-configuring.md
       new: false
     - name: コマンド
-      href: spreadsheet_commands.md
+      href: spreadsheet-commands.md
       new: false
     - name: データ検証
-      href: spreadsheet_data-validation.md
+      href: spreadsheet-data-validation.md
       new: false
     - name: ハイパーリンク
-      href: spreadsheet_hyperlinks.md
+      href: spreadsheet-hyperlinks.md
       new: false
 - name: チャート
   header: true
+  sortable: true
 - name: カテゴリ チャート
   href: category-chart.md
   new: false
@@ -510,7 +538,7 @@
 #   - name: ツールチップ テンプレート
 #     href: category-chart-tooltip-template.md
 #     new: false
-- name: テータ チャート
+- name: データ チャート
   href: data-chart.md
   new: false
   items:
@@ -541,43 +569,43 @@
           href: data-chart-types-overview-area.md
           new: false
           items:
-            - name: エリアチャート
+            - name: エリア チャート
               href: data-chart-type-category-area-series.md
               new: false
-            - name: 極座標エリアチャート
+            - name: 極座標エリア チャート
               href: data-chart-type-polar-area-series.md
               new: false
-            - name: 極座標スプラインエリアチャート
+            - name: 極座標スプライン エリア チャート
               href: data-chart-type-polar-spline-area-series.md
               new: false
-            - name: ラジアルエリアチャート
+            - name: ラジアル エリア チャート
               href: data-chart-type-radial-area-series.md
               new: false
-            - name: 範囲エリアチャート
+            - name: 範囲エリア チャート
               href: data-chart-type-range-area-series.md
               new: false
-            - name: 散布エリアチャート
+            - name: 散布エリア チャート
               href: data-chart-type-scatter-area-series.md
               new: false
             - name: 散布ポリゴンチャート
               href: data-chart-type-scatter-polygon-series.md
               new: false
-            - name: スプラインエリアチャート
+            - name: スプライン エリア チャート
               href: data-chart-type-category-spline-area-series.md
               new: false
-            - name: 積層 100 エリアチャート
+            - name: 積層 100 エリア チャート
               href: data-chart-type-stacked-100-area-series.md
               new: false
-            - name: 積層 100 スプラインエリアチャート
+            - name: 積層 100 スプライン エリア チャート
               href: data-chart-type-stacked-100-spline-area-series.md
               new: false
-            - name: 積層エリアチャート
+            - name: 積層エリア チャート
               href: data-chart-type-stacked-area-series.md
               new: false
-            - name: 積層スプラインエリアチャート
+            - name: 積層スプライン エリア チャート
               href: data-chart-type-stacked-spline-area-series.md
               new: false
-            - name: ステップエリアチャート
+            - name: ステップ エリア チャート
               href: data-chart-type-category-step-area-series.md
               new: false
         - name: 棒チャートと縦棒チャート
@@ -608,7 +636,7 @@
             - name: 積層縦棒チャート
               href: data-chart-type-stacked-column-series.md
               new: false
-            - name: ウォーターフォールチャート
+            - name: ウォーターフォール チャート
               href: data-chart-type-category-waterfall-series.md
               new: false
         - name: ファイナンシャル
@@ -621,69 +649,69 @@
             - name: ファイナンシャル OHLC チャート
               href: data-chart-type-financial-ohlc-series.md
               new: false
-            - name: ファイナンシャルエリアインジケーター
+            - name: ファイナンシャル エリア インジケーター
               href: data-chart-type-financial-area-indicators.md
               new: false
             - name: ファイナンシャル縦棒インジケーター
               href: data-chart-type-financial-column-indicators.md
               new: false
-            - name: ファイナンシャルラインインジケーター
+            - name: ファイナンシャル ライン インジケーター
               href: data-chart-type-financial-line-indicators.md
               new: false
-            - name: ファイナンシャルオーバーレイ
+            - name: ファイナンシャル オーバーレイ
               href: data-chart-type-financial-overlays.md
               new: false
-        - name: ラインチャート
+        - name: 折れ線チャート
           href: data-chart-types-overview-line.md
           new: false
           items:
-            - name: ラインチャート
+            - name: 折れ線チャート
               href: data-chart-type-category-line-series.md
               new: false
-            - name: 極座標ラインチャート
+            - name: 極座標折れ線チャート
               href: data-chart-type-polar-line-series.md
               new: false
             - name: 極座標スプラインチャート
               href: data-chart-type-polar-spline-series.md
               new: false
-            - name: ラジアルラインチャート
+            - name: ラジアル折れ線チャート
               href: data-chart-type-radial-line-series.md
               new: false
             - name: 散布等高線チャート
               href: data-chart-type-scatter-contour-series.md
               new: false
-            - name: 散布ラインチャート
+            - name: 散布折れ線チャート
               href: data-chart-type-scatter-line-series.md
               new: false
-            - name: 散布スプラインチャート
+            - name: 散布スプライン チャート
               href: data-chart-type-scatter-spline-series.md
               new: false
-            - name: 散布ポリラインチャート
+            - name: 散布ポリライン チャート
               href: data-chart-type-scatter-polyline-series.md
               new: false
-            - name: スプラインチャート
+            - name: スプライン チャート
               href: data-chart-type-category-spline-series.md
               new: false
-            - name: 積層 100 ラインチャート
+            - name: 積層 100 折れ線チャート
               href: data-chart-type-stacked-100-line-series.md
               new: false
-            - name: 積層 100 スプラインチャート
+            - name: 積層 100 スプライン チャート
               href: data-chart-type-stacked-100-spline-series.md
               new: false
-            - name: 積層ラインチャート
+            - name: 積層折れ線チャート
               href: data-chart-type-stacked-line-series.md
               new: false
             - name: 積層スプラインチャート
               href: data-chart-type-stacked-spline-series.md
               new: false
-            - name: ステップラインチャート
+            - name: ステップ折れ線チャート
               href: data-chart-type-category-step-line-series.md
               new: false
-        - name: 円チャートとドーナツチャート
+        - name: 円チャートとドーナツ チャート
           href: data-chart-types-overview-pie.md
           new: false
           items:
-            - name: ドーナツチャート
+            - name: ドーナツ チャート
               href: doughnut-chart.md
               new: false
             - name: 円チャート
@@ -692,20 +720,20 @@
             - name: ラジアル円チャート
               href: data-chart-type-radial-pie-series.md
               new: false
-        - name: ポイントチャート
+        - name: ポイント チャート
           href: data-chart-types-overview-point.md
           new: false
           items:
-            - name: ポイントチャート
+            - name: ポイント チャート
               href: data-chart-type-category-point-series.md
               new: false
             - name: 極座標散布チャート
               href: data-chart-type-polar-scatter-series.md
               new: false
-            - name: 散布バブルチャート
+            - name: 散布バブル チャート
               href: data-chart-type-scatter-bubble-series.md
               new: false
-            - name: 散布マーカーチャート
+            - name: 散布マーカー チャート
               href: data-chart-type-scatter-point-series.md
               new: false
           # - name: Scatter HD Series
@@ -847,19 +875,19 @@
     - name: 散布図記号シリーズ
       href: geo-map-type-scatter-symbol-series.md
       new: false
-    - name: シェイプポリゴンシリーズ
+    - name: シェイプ ポリゴンシ リーズ
       href: geo-map-type-shape-polygon-series.md
       new: false
-    - name: シェイプポリラインシリーズ
+    - name: シェイプ ポリライン シリーズ
       href: geo-map-type-shape-polyline-series.md
       new: false
-    - name: ワールドコネクション
+    - name: ワールド コネクション
       href: geo-map-resources-world-connections.md
       new: false
-    - name: ワールドロケーション
+    - name: ワールド ロケーション
       href: geo-map-resources-world-locations.md
       new: false
-    - name: ワールドユーティリティ
+    - name: ワールド ユーティリティ
       href: geo-map-resources-world-util.md
       new: false
     # - name: Binding Data
@@ -876,6 +904,7 @@
 - name: Excel ライブラリ
   href: excel-library.md
   new: false
+  sortable: true
   items:
     - name: セルの使用
       href: excel-library-using-cells.md
@@ -901,6 +930,7 @@
 - name: ゲージ
   header: true
   new: false
+  sortable: true
 - name: Bullet Graph
   href: bullet-graph.md
   new: false
@@ -912,9 +942,10 @@
   new: false
 - name: スタイルとテーマ
   header: true
+  sortable: true
 - name: Themes
   href: themes/index.md
-  new: true
+  new: false
   items:
     - name: パレット
       href: themes/palette.md
@@ -925,39 +956,45 @@
     - name: タイポグラフィ
       href: themes/typography.md
       new: false
-    - name: グローバルテーマ
+    - name: グローバル テーマ
       href: themes/global-theme.md
-      new: true
-    - name: コンポーネントテーマ
+      new: false
+    - name: コンポーネント テーマ
       href: themes/component-themes.md
       new: false
     - name: 定義済みのテーマ
-      new: true
+      new: false
       items:
         - name: Material
           href: themes/themes-list/material.md
           new: false
         - name: Fluent
           href: themes/themes-list/fluent.md
-          new: true
+          new: false
         - name: Bootstrap
           href: themes/themes-list/bootstrap.md
-          new: true
+          new: false
         - name: Indigo
           href: themes/themes-list/indigo.md
           new: true
     - name: 印刷スタイル
       href: themes/printing-styles.md
       new: false
+    - name: CSS 変数を使用したテーマ設定
+      href: themes/css-variables-theming.md
+      new: false
 - name: 丸み付け
   href: roundness.md
-  new: true
+  new: false
 - name: シャドウ
   href: shadows.md
+- name: アニメーション
+  href: animations.md
 - name: 密度の表示
   href: display-density.md
 - name: データ入力と表示
   header: true
+  sortable: true
 - name: Drop Down
   href: drop-down.md
   new: false
@@ -967,14 +1004,14 @@
       new: false
 - name: Select
   href: select.md
-  new: true
+  new: false
 - name: Autocomplete
   href: autocomplete.md
   new: false
 - name: Button
   href: button.md
 - name: Button Group
-  href: buttonGroup.md
+  href: button-group.md
 - name: Checkbox
   href: checkbox.md
 - name: Switch
@@ -995,6 +1032,7 @@
   new: false
 - name: Badge
   href: badge.md
+  updated: true
 - name: Icon
   href: icon.md
   items:
@@ -1017,11 +1055,12 @@
   new: false
 - name: インタラクション
   header: true
+  sortable: true
 - name: Dialog Window
   href: dialog.md
 - name: Slider
   href: slider/slider.md
-  new: true
+  new: false
 - name: Ripple
   href: ripple.md
 - name: Toggle
@@ -1030,12 +1069,14 @@
   href: tooltip.md
   new: false
 - name: Overlay
-  href: overlay-main.md
-  new: true
+  href: overlay.md
+  new: false
+  updated: true
   items:
   - name: 配置ストラテジ
     href: overlay-position.md
-    new: true
+    new: false
+    updated: true
   - name: スクロール ストラテジ
     href: overlay-scroll.md
     new: false
@@ -1049,21 +1090,25 @@
   new: false
   href: zoomslider-overview.md
 - name: Action Strip
-  new: true
+  new: false
+  updated: true
   href: action-strip.md
 - name: メニュー
   header: true
+  sortable: true
 - name: Navigation Drawer
   href: navdrawer.md
+  updated: true
 - name: Navbar
   href: navbar.md
 - name: レイアウト
   header: true
+  sortable: true
 - name: Layout Manager
   href: layout.md
 - name: Carousel
   href: carousel.md
-  new: true
+  new: false
 - name: Bottom Navigation
   href: tabbar.md
 - name: Tabs
@@ -1078,12 +1123,14 @@
   new: false
 - name: Splitter
   href: splitter.md
-  new: true
+  new: false
 - name: Dock Manager
   href: dock-manager.md
-  new: true
+  new: false
+  updated: true
 - name: 通知
   header: true
+  sortable: true
 - name: Banner
   href: banner.md
   new: false
@@ -1093,25 +1140,29 @@
   href: toast.md
 - name: スケジュール
   header: true
+  sortable: true
 - name: Date Time Editor
   href: date-time-editor.md
-  new: true
+  new: false
 - name: Calendar
   href: calendar.md
   updated: true
 - name: Date Picker
   href: date-picker.md
+  updated: true
 - name: Date Range Picker
   href: date-range-picker.md
-  new: true
+  new: false
 - name: Month Picker
   href: month-picker.md
   new: false
 - name: Time Picker
   href: time-picker.md
   new: false
+  updated: true
 - name: サービス
   header: true
+  sortable: true
 - name: CSV エクスポーター
   href: exporter-csv.md
   new: false
@@ -1121,13 +1172,13 @@
 - name: ローカリゼーション
   href: localization.md
   new: false
-- name: トランザクションサービス
+- name: トランザクション サービス
   href: transaction.md
   new: false
   items:
-    - name: トランザクションサービスクラス階層
+    - name: トランザクション サービス クラス階層
       href: transaction-classes.md
       new: false
-    - name: トランザクションサービスの使用方法
+    - name: トランザクション サービスの使用方法
       href: transaction-how-to-use.md
       new: false

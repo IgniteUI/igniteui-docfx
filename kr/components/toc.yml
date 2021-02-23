@@ -774,7 +774,7 @@
 - name: Button
   href: button.md
 - name: Button Group
-  href: buttonGroup.md
+  href: button-group.md
 - name: Checkbox
   href: checkbox.md
 - name: Switch
@@ -830,7 +830,7 @@
   href: tooltip.md
   new: false
 - name: Overlay
-  href: overlay-main.md
+  href: overlay.md
   new: true
   items:
   - name: Positioning Strategies

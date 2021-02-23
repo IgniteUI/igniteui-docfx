@@ -9,11 +9,11 @@ _language: ja
 <p class="highlight">Ignite UI for Angular Carousel コンポーネントは、ネイティブ [Angular コンポーネント](https://angular.io/guide/architecture#components)です。画像ギャラリー、カード、チュートリアル、またはページごとのインターフェイスでスライド コレクションをブラウズ、移動できます。</p>
 <div class="divider"></div>
 
-## デモ
+## Angular Carousel の例
 <div class="sample-container loading" style="height: 550px">
-    <iframe id="carousel-iframe" seamless="" width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/layouts/carousel" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="carousel-iframe" seamless="" width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/layouts/carousel" onload="onSampleIframeContentLoaded(this);" alt="Angular Carousel の例"></iframe>
 </div>
-<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="carousel-iframe" data-demos-base-url="{environment:demosBaseUrl}">                codesandbox で表示
     </button>
@@ -98,7 +98,7 @@ public slides = [
 ```html
 <div class="carousel-container">
     <igx-carousel #carousel [loop]="false">
-      ...  
+      ...
         <!-- Adding an empty template to disable carousel's indicators -->
         <ng-template igxCarouselIndicator></ng-template>
     </igx-carousel>
@@ -255,10 +255,10 @@ public slides = [
 ### キーボード ナビゲーション
 <div class="divider--half"></div>
 
-*   **次へ**/**前へ**のスライドに移動するには、丁寧に使用する必要があります。
+*   **次へ**/**前へ**のスライドに移動するには、それぞれ以下を使用する必要があります。
     * `右矢印`キー - 次のスライド
     * `左矢印`キー - 前のスライド
-*   **最後**/**最初**のスライドに移動するには丁寧に使用する必要があります。
+*   **最後**/**最初**のスライドに移動するには、それぞれ以下を使用する必要があります。
     * `End` キー - 最後のスライド
     * `Home` キー - 最初のスライド
  
@@ -315,12 +315,12 @@ public slides = [
 </div>
 ...
 ```
-カルーセルの [`onSlideChanged`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#onslidechanged) およびリストの [onItemClicked]({environment:angularApiUrl}/classes/igxlistcomponent.html#onitemclicked) イベントを処理し、コンポーネントを同期する方法: 
+カルーセルの [`onSlideChanged`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#onslidechanged) およびリストの [itemClicked]({environment:angularApiUrl}/classes/igxlistcomponent.html#itemclicked) イベントを処理し、コンポーネントを同期する方法: 
 
 ```typescript
   public ngOnInit() {
     ...
-    this.list.onItemClicked.subscribe((args: IListItemClickEventArgs) => {
+    this.list.itemClicked.subscribe((args: IListItemClickEventArgs) => {
         this.currentIndex = args.item.index;
         this.carousel.select(this.carousel.get(this.currentIndex));
     });
@@ -342,7 +342,37 @@ public slides = [
 </div>
 
 
+## ユーザー補助
+### WAI-ARIA の役割、状態、およびプロパティ
+ * Carousel の基本要素の役割は [`region`](https://www.w3.org/TR/wai-aria-1.1/#region) です。これは、ユーザーが簡単にナビゲートできるようにしたい特定の目的に関連するコンテンツを含むセクションです。
+ * Carousel インジケーターの役割は [`tab`](https://www.w3.org/TR/wai-aria-1.1/#tab) です。これは、ユーザーに描画されるタブ コンテンツを選択するためのメカニズムを提供するグループ化ラベルです。
+ * タブのセット (カルーセル インジケーター) 役割のコンテナーとして機能する要素は、[`tablist`](https://www.w3.org/TR/wai-aria-1.1/#tab) に設定されます。
+ * 各スライド要素には、[`tabpanel`](https://www.w3.org/TR/wai-aria-1.1/#tabpanel) の役割が設定されています。
+ * igx-slides のセットのコンテナとして機能する要素は、[aria-live](https://www.w3.org/TR/wai-aria-1.1/#aria-live)="polite" で設定されます。どちらのオプションも
+   - カルーセルが自動的に回転している場合、**off** になります。
+   - カルーセルが自動的に回転しない場合、**polite** になります。
 
+### ARIA のサポート
+#### **Carousel コンポーネント**
+
+##### **属性**:
+ * [aria-roledescription](https://www.w3.org/TR/wai-aria-1.1/#aria-roledescription) を 'carousel' に設定します。
+ * [aria-selected](https://www.w3.org/TR/wai-aria/states_and_properties#aria-selected) - アクティブなスライドに基づいて *true* または *false* に設定します。
+ * [aria-controls](https://www.w3.org/TR/wai-aria-1.1/#aria-controls) - コンテンツが現在の要素によって制御されるスライド インデックスを設定します。
+ * [aria-live](https://www.w3.org/TR/wai-aria-1.1/#aria-live) - スクリーン リーダーがライブ リージョンの更新を処理する優先度を設定するために使用されます。可能な設定は **off** および **polite** です。デフォルト設定は **polite** です。[interval]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#interval) オプションが設定されている場合、**aria-live** 属性は  **off** に設定されます。
+ * スライドに基づく [aria-label](https://www.w3.org/TR/wai-aria/states_and_properties#aria-label)。
+ * aria-label (ボタン)
+   - aria-label - 前のスライド用。
+   - aria-label - 次のスライド用。
+
+#### **Slide コンポーネント**
+##### **役割**:
+ * [attr.role="tabpanel"](https://www.w3.org/TR/wai-aria-1.1/#tabpanel) - タブに関連付けられたリソースのコンテナ。各タブはタブ リストに含まれています。
+
+##### **属性**:
+ * Id - パターン "panel-${this.index}" に従います。
+ * [aria-labelledby](https://www.w3.org/TR/wai-aria/#aria-labelledby) は、"tab-${this.index}-${this.total}" のパターンに従います。
+ * [aria-selected](https://www.w3.org/TR/wai-aria-1.1/#aria-selected) は、**アクティブ** スライドを設定します。特定のスライド要素の現在の**選択された**状態を示します。
 
 ## API リファレンス
 <div class="divider--half"></div>

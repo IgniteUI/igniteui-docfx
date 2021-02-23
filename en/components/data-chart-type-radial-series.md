@@ -11,10 +11,10 @@ This topic explains various types of radial series in the Angular data chart com
 
 <!-- Angular, React, WebComponents -->
 
-## Demo
+## Angular Radial Series Example
 
 <div class="sample-container loading" style="height: 500px">
-    <iframe id="data-chart-type-radial-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-radial-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="data-chart-type-radial-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-radial-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Radial Series Example"></iframe>
 </div>
 <div>
     <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-radial-series-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
@@ -66,13 +66,7 @@ public dataSource: any[] = SampleRadialData.create();
 
 ## Required Modules
 
-The radial series requires the following modules<!-- Angular, React, WebComponents -->.<!-- end: Angular, React, WebComponents --><!-- Blazor --> to be registered in your application entry point:
-
--   DataChartCoreModule        
--   DataChartRadialSeriesModule
--   DataChartRadialSeriesCoreModule      
--   DataChartInteractivityModule
-    <!-- end: Blazor -->
+The radial series requires the following modules:
 
 ```ts
 // axis' modules:

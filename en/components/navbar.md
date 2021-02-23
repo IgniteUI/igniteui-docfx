@@ -8,9 +8,9 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <p class="highlight">The Ignite UI for Angular [`IgxNavbarComponent`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html) informs the user of their current position in an app, and helps them move back (much like the “back” button in a browser). The Navigation Bar can also provide links to quick actions such as search or favorite, helping users navigate smoothly through an application without trying to move to invalid routes or states. The bar sits at the top of the container it is placed in.</p>
 
 
-## Demo
+## Angular Navbar Example
 <div class="sample-container loading" style="height: 300px">
-    <iframe id="nav-bar-sample-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/menus/navbar" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="nav-bar-sample-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/menus/navbar" onload="onSampleIframeContentLoaded(this);" alt="Angular Navbar Example"></iframe>
 </div>
 <p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>
@@ -134,7 +134,7 @@ What if we want to use a custom action icon for our app navigation instead of th
 ```
 
 > [!NOTE]
-> If [`igx-navbar-action`]({environment:angularApiUrl}/classes/igxnavbaractiondirective.html) or [`igxNavbarAction`]({environment:angularApiUrl}/classes/igxnavbaractiondirective.html) is provided, the default [`actionButtonIcon`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#actionbuttonicon) will not be used. 
+> If [`igx-navbar-action`]({environment:angularApiUrl}/classes/igxnavbaractiondirective.html) or [`igxNavbarAction`]({environment:angularApiUrl}/classes/igxnavbaractiondirective.html) is provided, the default [`actionButtonIcon`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#actionbuttonicon) will not be used.
 
 Finally, this is how our navbar should look like with its custom action icon:
 
@@ -149,15 +149,15 @@ Finally, this is how our navbar should look like with its custom action icon:
 
 ### Add Navigation Icon
 
-If we want to create a navbar with an icon navigating back, we should follow a couple of steps. First, we can use the `actionButtonIcon` property to choose a suitable icon from the Material fontset. Then, we can make a simple check if there are any previously visited pages to go back to, and pass the result to the  [`isActionButtonVisible`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#isactionbuttonvisible) property. The last step is to create a method for navigating back and hook it to the [`onAction`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#onaction) property.
+If we want to create a navbar with an icon navigating back, we should follow a couple of steps. First, we can use the `actionButtonIcon` property to choose a suitable icon from the Material fontset. Then, we can make a simple check if there are any previously visited pages to go back to, and pass the result to the  [`isActionButtonVisible`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#isactionbuttonvisible) property. The last step is to create a method for navigating back and hook it to the [`action`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#action) property.
 
 ```html
 <!--navbar.component.html-->
 
-<igx-navbar title="Ignite UI for Angular" 
-    actionButtonIcon="arrow_back" 
-    [isActionButtonVisible]="canGoBack()" 
-    (onAction)="navigateBack()">
+<igx-navbar title="Ignite UI for Angular"
+    actionButtonIcon="arrow_back"
+    [isActionButtonVisible]="canGoBack()"
+    (action)="navigateBack()">
 </igx-navbar>
 ```
 
@@ -216,7 +216,7 @@ If we want to provide a custom content for a navbar's title, we can achieve this
 > If [`igx-navbar-title`]({environment:angularApiUrl}/classes/igxnavbartitledirective.html) or [`igxNavbarTitle`]({environment:angularApiUrl}/classes/igxnavbartitledirective.html) is provided, the default [`title`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#title) will not be used.
 
 <div class="sample-container loading" style="height: 300px">
-    <iframe id="navbar-custom-title-iframe" frameborder="0" seamless width="100%" height="100%" 
+    <iframe id="navbar-custom-title-iframe" frameborder="0" seamless width="100%" height="100%"
     data-src='{environment:demosBaseUrl}/menus/navbar-custom-title' class="lazyload"></iframe>
 </div>
 <div>
@@ -252,7 +252,7 @@ The last step is to pass the newly created theme:
 @include igx-css-vars($custom-navbar-theme);
 ```
 
-### Using mixins 
+### Using mixins
 
 In order to style components for older browsers, like Internet Explorer 11, we have to use a different approach, since it doesn't support CSS variables.
 

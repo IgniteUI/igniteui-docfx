@@ -151,7 +151,7 @@ Shadows are used to establish and maintain functional boundaries between Documen
 
 The following section demonstrates how to set elevation to a component. In the example, we are using the card component.
 
-Firs apply the [igx-elevation]({environment:sassApiUrl}/index.html#function-igx-elevation) to the card by doing the following
+First apply the [igx-elevation]({environment:sassApiUrl}/index.html#function-igx-elevation) to the card by doing the following
 
 ```scss
 $myCard: igx-card-theme(

@@ -1,5 +1,5 @@
 ---
-title: Angular List View | Angular List Example | Infragistics 
+title: Angular List View | Angular List Example | Infragistics
 _description: The Ignite UI for Angular List component displays rows of items and supports one or more header items as well as search and filtering of list items. Try it for FREE
 _keywords: angular list, ignite ui for angular, angular list component
 ---
@@ -12,7 +12,7 @@ The Ignite UI for Angular List component displays rows of items and supports one
 ## Angular List Example
 The following example represents a list populated with contacts with a _name_ and a _phone number_ properties. The [`IgxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) component uses [**IgxAvatar**](avatar.md) and [**IgxIcon**](icon.md) to enrich the user experience and expose the capabilities of setting avatar picture and different icon for _favorite a contact_. In addition, the List View expose sorting capabilities achieved by using our filtering pipe.
 <div class="sample-container loading" style="height: 513px">
-<iframe id="list-sample-4-iframe" src='{environment:demosBaseUrl}/lists/list-sample-4' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+<iframe id="list-sample-4-iframe" src='{environment:demosBaseUrl}/lists/list-sample-4' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular List Example"></iframe>
 </div>
 <p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>
@@ -167,8 +167,8 @@ public contacts = [{
 }];
 ```
 
-Now that we have some data we want to render, let's set up some markup.  
-If we want some styling out of the box we can use some of the directives that come with the list items.  
+Now that we have some data we want to render, let's set up some markup.
+If we want some styling out of the box we can use some of the directives that come with the list items.
 
 Let's look at how we can use some of them in the next example:
 
@@ -186,7 +186,7 @@ Let's look at how we can use some of them in the next example:
 </igx-list>
 ```
 
-Both directives `igxListLineTitle` and `igxListLineSubTitle` gives our list items some default look. 
+Both directives `igxListLineTitle` and `igxListLineSubTitle` gives our list items some default look.
 
 After all that our Angular list should now look like that:
 
@@ -287,7 +287,7 @@ toggleFavorite(item: IgxListItem) {
 }
 ```
 
-Let's also allow the user to choose the display density of the list by using its [`displayDensity`]({environment:angularApiUrl}/classes/igxlistcomponent.html#displaydensity) input. We will do this by importing the `IgxButtonGroupModule` and using the [**IgxButtonGroup**](buttonGroup.md) to display all density values. This way whenever one gets selected, we will update our own **density** property that is bound to the [`displayDensity`]({environment:angularApiUrl}/classes/igxlistcomponent.html#displaydensity) of the list.
+Let's also allow the user to choose the display density of the list by using its [`displayDensity`]({environment:angularApiUrl}/classes/igxlistcomponent.html#displaydensity) input. We will do this by importing the `IgxButtonGroupModule` and using the [**IgxButtonGroup**](button-group.md) to display all density values. This way whenever one gets selected, we will update our own **density** property that is bound to the [`displayDensity`]({environment:angularApiUrl}/classes/igxlistcomponent.html#displaydensity) of the list.
 
 ```typescript
 // app.module.ts
@@ -302,7 +302,7 @@ import { IgxButtonGroupModule } from 'igniteui-angular';
 ```html
 <!--contacts.component.html-->
 
-<igx-buttongroup [values]="displayDensities" (onSelect)="selectDensity($event)"></igx-buttongroup>
+<igx-buttongroup [values]="displayDensities" (selected)="selectDensity($event)"></igx-buttongroup>
 ...
 <igx-list [displayDensity]="density">
     ...
@@ -359,7 +359,7 @@ Here is the HTML code of the example:
 <!-- contacts.component.html -->
 
 <igx-list [allowLeftPanning]="true" [allowRightPanning]="true"
-  (onLeftPan)="leftPanPerformed($event)" (onRightPan)="rightPanPerformed($event)">
+  (leftPan)="leftPanPerformed($event)" (rightPan)="rightPanPerformed($event)">
   <ng-template igxListItemLeftPanning>
     <div class="listItemLeftPanningStyle">
       <igx-icon [color]="white" style="margin-left:10px">delete</igx-icon>Delete
@@ -535,7 +535,7 @@ Then we need to create a theme for our component.
     @include igx-list($my-list-theme);
 }
 ```
-The result from the above code is 
+The result from the above code is
 
 <div class="sample-container loading" style="height: 365px">
 <iframe id="list-sample-8-final-iframe" data-src='{environment:demosBaseUrl}/lists/list-sample-8' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>

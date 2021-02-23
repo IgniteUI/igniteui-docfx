@@ -9,11 +9,11 @@ _language: ja
 <p class="highlight">Ignite UI for Angular Drop Down は、視覚的にグループ化するスクロール可能な項目のリストを表示します。項目をクリックまたはタップして選択するとドロップダウンが閉じられます。</p>
 <div class="divider"></div>
 
-## デモ
+## Angular Drop Down の例
 <div class="sample-container loading" style="height:200px">
-    <iframe id="dropdown-sample-1-iframe" src='{environment:demosBaseUrl}/data-entries/dropdown-sample-1' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="dropdown-sample-1-iframe" src='{environment:demosBaseUrl}/data-entries/dropdown-sample-1' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular Drop Down の例"></iframe>
 </div>
-<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="dropdown-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
@@ -114,7 +114,7 @@ export class MyDropDownComponent {
 
 ### 項目のグループ化
 
-より有益な視覚情報を提供するには、[isHeader]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#isheader) プロパティを使用して項目をセマンティックにグループ化するか、[disabled]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#disabled) プロパティを使用して項目を非インタラクティブとして表示します。[selected]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#selected) プロパティを特定の項目に設定して選択済の項目にできます。
+より有益な視覚情報を提供するには、[isHeader]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#isheader) プロパティを使用して項目をセマンティックにグループ化するか、[disabled]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#disabled) プロパティを使用して項目を非インタラクティブとして表示します。[selected]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#selected) プロパティを特定の項目に設定して選択済の項目にできます。`igx-drop-down` 項目は、HTML 要素/他の Web コンポーネントに含める、または設定できる `igxPrefix``igxSuffix` および `igx-divider` ディレクティブをサポートしています。
 
 ```html
 <!-- dropdown.component.html -->
@@ -123,13 +123,16 @@ export class MyDropDownComponent {
         [igxDropDownItemNavigation]="dropdown">
         Countries
 </button>
-<igx-drop-down #dropdown [width]="'144px'">
+<igx-drop-down #dropdown [width]="'240px'">
     <div class="drop-down__scroll-container">
         <igx-drop-down-item *ngFor="let item of items" 
                             [disabled]="item.disabled"
                             [isHeader]="item.header"
                             [selected]="item.selected">
+            <igx-icon igxPrefix>place</igx-icon>
             {{ item.field }}
+            <span igxSuffix>{{ item.code }}</span>
+            <igx-divider></igx-divider>
         </igx-drop-down-item>
     </div>
 </igx-drop-down>
@@ -139,19 +142,19 @@ export class MyDropDownComponent {
 // dropdown.component.ts
 export class MyDropDownComponent {
     public items: any[] = [
-        { field: "EU", header: true },
-        { field: "Germany" },
-        { field: "Bulgaria", selected: true },
-        { field: "UK", disabled: true },
-        { field: "NA", header: true },
-        { field: "Canada" },
-        { field: "USA" },
-        { field: "Mexico" }
+        { field: "European Union", code: "EU", header: true },
+        { field: "Germany", code: "DE" },
+        { field: "Bulgaria", code: "BG", selected: true },
+        { field: "France", code: "FR", disabled: true },
+        { field: "North America", code: "NA", header: true },
+        { field: "Canada", code: "CA" },
+        { field: "United States", code: "US" },
+        { field: "Mexico", code: "MX" }
     ];
 }
 ```
 
-サンプルを正しく構成すると EU ヘッダーの下に国の一覧がグループ形式で表示され、UK は非インタラクティブな項目、そして Bulgaria は選択済みの項目として表示されます。
+サンプルを正しく構成すると European Union ヘッダーの下に国の一覧がグループ形式で表示され、France は非インタラクティブな項目、そして Bulgaria は選択済みの項目として表示されます。
 
 <div class="sample-container loading" style="height: 310px">
     <iframe id="dropdown-sample-3-iframe" data-src='{environment:demosBaseUrl}/data-entries/dropdown-sample-3' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
@@ -440,7 +443,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 ```
 
 > [!NOTE]
-> [IgxDropDown]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) コンポーネントは、[IgxOverlay](overlay-main.md) を使用して、`igx-drop-down-items` リスト コンテナを保持および表示します。スタイルを適切にスコープするには、[OverlaySetting.outlet]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet) を使用してください。詳細については、[IgxOverlay スタイリング ガイド](overlay-styling.md)を確認してください。
+> [IgxDropDown]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) コンポーネントは、[IgxOverlay](overlay.md) を使用して、`igx-drop-down-items` リスト コンテナを保持および表示します。スタイルを適切にスコープするには、[OverlaySetting.outlet]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet) を使用してください。詳細については、[IgxOverlay スタイリング ガイド](overlay-styling.md)を確認してください。
 
 ### デモ
 <div class="sample-container loading" style="height:350px">
@@ -459,6 +462,8 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 * [IgxDropDownItemComponent]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html)
 * [IgxOverlay]({environment:angularApiUrl}/interfaces/overlaysettings.html)
 * [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+* [IgxDividerDirective]({environment:angularApiUrl}/classes/igxdividerdirective.html)
+* [IgxDividerDirective スタイル]({environment:sassApiUrl}/index.html#function-igx-divider-theme)
 
 ## その他のリソース
 

@@ -157,7 +157,7 @@ $my-type-scale: igx-type-scale($h5: $my-h5);
 
 `$my-type-scale` スケールに `h5` カテゴリの変更を渡した場合に `igx-typography` mixin は含まれなくなります。作成したカスタム スケールを `igx-card-typography` mixin へ渡します。`$my-type-scale` スケールを使用するコンポーネントはカードのみになります。
 
-タイポグラフィ スタイル mixins は、特定のセレクターにスコープできます。カスタムのカード タイポグラフィをクラス名が `my-cool-card` のすべての `igx-card` コンポーネントに適用する場合、 
+タイポグラフィ スタイル mixins は、特定のセレクターにスコープできます。カスタムのカード タイポグラフィをクラス名が `my-cool-card` のすべての `igx-card` コンポーネントに適用する場合
 
 ```scss
 //...

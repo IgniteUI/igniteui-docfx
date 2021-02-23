@@ -9,12 +9,12 @@ _language: ja
 
 [Chip コンポーネント]({environment:angularApiUrl}/classes/igxchipcomponent.html) は、楕円形のコンテナーに情報を表示する視覚的要素です。コンポーネントにはテンプレート化、削除、選択などのさまざまなプロパティがあります。複数のチップの順序を変更し、チップ領域をコンテナーとして視覚的に接続できます。
 
-## デモ
+## Angular Chip の例
 
 <div class="sample-container loading" style="height: 100px; padding-top: 10px">
-    <iframe id="chip-simple-iframe" src='{environment:demosBaseUrl}/data-display/chip-simple' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="chip-simple-iframe" src='{environment:demosBaseUrl}/data-display/chip-simple' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular Chip の例"></iframe>
 </div>
-<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="chip-simple-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="chip-simple-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
@@ -49,7 +49,7 @@ export class AppModule {}
 
 ![Default Selection](../images/chip/selecting_default.gif)
 
-選択は、[`selectable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#selectable) 入力を `true` に設定して有効にできます。チップを選択すると、[`onSelection`]({environment:angularApiUrl}/classes/igxchipcomponent.html#onselection) イベントが発生します。新しい [`selected`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#selected) 値を提供することにより、新しいステートとこの選択の変更をトリガーした [`originalEvent`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#originalevent) の元のイベントを取得できます。[`selected`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#selected) プロパティをプログラムで設定して行う場合、[`originalEvent`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#originalevent) 引数に値 `null` になります。
+選択は、[`selectable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#selectable) 入力を `true` に設定して有効にできます。チップを選択すると、[`selectedChanging`]({environment:angularApiUrl}/classes/igxchipcomponent.html#selectedchanging) イベントが発生します。新しい [`selected`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#selected) 値を提供することにより、新しいステートとこの選択の変更をトリガーした [`originalEvent`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#originalevent) の元のイベントを取得できます。[`selected`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#selected) プロパティをプログラムで設定して行う場合、[`originalEvent`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#originalevent) 引数に値 `null` になります。
 
 ```html
 <igx-chip *ngFor="let chip of chipList" [selectable]="true">
@@ -62,12 +62,12 @@ export class AppModule {}
 
 ![Removing](../images/chip/removing_default.gif)
 
-削除は、[`removable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#removable) 入力を `true` に設定して有効にできます。有効な場合は、チップの最後に削除ボタンが描画されます。チップを削除すると、[`onRemove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#onremove) イベントが発生します。
+削除は、[`removable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#removable) 入力を `true` に設定して有効にできます。有効な場合は、チップの最後に削除ボタンが描画されます。チップを削除すると、[`remove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#remove) イベントが発生します。
 
 デフォルトで、チップは削除アイコンをクリックしても DOM ツリーから自動的に削除されません。削除は手動で処理する必要があります。
 
 ```html
-<igx-chip *ngFor="let chip of chipList" [id]="chip.id" [removable]="true" (onRemove)="chipRemoved($event)">
+<igx-chip *ngFor="let chip of chipList" [id]="chip.id" [removable]="true" (remove)="chipRemoved($event)">
     <igx-icon igxPrefix>{{chip.icon}}</igx-icon>
     {{chip.text}}
 </igx-chip>
@@ -106,14 +106,14 @@ public chipRemoved(event: IBaseChipEventArgs) {
 [id]="chip.id"
 [selectable]="true"
 [removable]="true"
-(onRemove)="chipRemoved($event)"
+(remove)="chipRemoved($event)"
 >
     <igx-icon igxPrefix>{{chip.icon}}</igx-icon>
     {{chip.text}}
 </igx-chip>
 ```
 
-次に、`chipList` と [`onRemove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#onremove) イベントを処理する関数を追加します。
+次に、`chipList` と [`remove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#remove) イベントを処理する関数を追加します。
 
 ```ts
 import { IBaseChipEventArgs } from "igniteui-angular";
@@ -154,12 +154,12 @@ public chipRemoved(event: IBaseChipEventArgs) {
 すべて適切に設定できると、ブラウザーで以下が表示されます。
 
 <div class="sample-container loading" style="height: 100px; padding-top: 10px">
-    <iframe id="chip-simple-iframe" src='{environment:demosBaseUrl}/data-display/chip-simple' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="chip-simple-iframe-2" src='{environment:demosBaseUrl}/data-display/chip-simple' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="chip-simple-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="chip-simple-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="chip-simple-iframe-2" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="chip-simple-iframe-2" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
 </div>
 
 ### Chip テンプレート
@@ -215,7 +215,7 @@ public chipRemoved(event: IBaseChipEventArgs) {
 ![Remove icons](../images/chip/remove_icons.jpg)
 
 ```html
-<igx-chip *ngFor="let chip of chipList"  [removable]="true" [removeIcon]="myRemoveIcon">
+<igx-chip *ngFor="let chip of chipList" [removable]="true" [removeIcon]="myRemoveIcon">
     <igx-icon igxPrefix>{{chip.icon}}</igx-icon>
     {{chip.text}}
 </igx-chip>
@@ -233,10 +233,10 @@ public chipRemoved(event: IBaseChipEventArgs) {
 
 ![Dragging](../images/chip/dragging.gif)
 
-チップの位置を変更するため、ユーザーによってドラッグができます。ドラッグはデフォルトで無効になっていますが、[`draggable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#draggable) 入力プロパティを使用して有効にできます。実際のチップのソートは手動で処理する必要があります。チップが別のチップの上にドラッグされる場合に、新しい順序を返す [`onReorder`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html#onreorder) イベントを提供するため、チップ領域が役に立ちます。
+チップの位置を変更するため、ユーザーによってドラッグができます。ドラッグはデフォルトで無効になっていますが、[`draggable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#draggable) 入力プロパティを使用して有効にできます。実際のチップのソートは手動で処理する必要があります。チップが別のチップの上にドラッグされる場合に、新しい順序を返す [`reorder`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html#reorder) イベントを提供するため、チップ領域が役に立ちます。
 
 ```html
-<igx-chips-area (onReorder)="chipsOrderChanged($event)">
+<igx-chips-area (reorder)="chipsOrderChanged($event)">
     <igx-chip *ngFor="let chip of chipList" [draggable]="'true'">
         <igx-icon igxPrefix>{{chip.icon}}</igx-icon>
         {{chip.text}}
@@ -274,20 +274,20 @@ public chipsOrderChanged(event: IChipsAreaReorderEventArgs) {
   - <kbd>SPACE</kbd> - チップが選択可能な場合、選択を切り替えます。
 
     ![Space](../images/chip/space_key.gif)
-  - <kbd>DELETE</kbd> - [`igxChip`]({environment:angularApiUrl}/classes/igxchipcomponent.html) の [`onRemove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#onremove) イベントをトリガーし、チップ削除が手動で処理されます。
-  - <kbd>SHIFT</kbd> + <kbd>LEFT</kbd> - 現在フォーカスされたチップは左に位置を移動した際に [`igxChipArea`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html) の [`onReorder`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html#onreorder) イベントをトリガーします。
-  - <kbd>SHIFT</kbd> + <kbd>RIGHT</kbd> - 現在フォーカスされたチップは右に位置を移動した際に [`igxChipArea`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html) の [`onReorder`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html#onreorder) イベントをトリガーします。
+  - <kbd>DELETE</kbd> - [`igxChip`]({environment:angularApiUrl}/classes/igxchipcomponent.html) の [`remove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#remove) イベントをトリガーし、チップ削除が手動で処理されます。
+  - <kbd>SHIFT</kbd> + <kbd>LEFT</kbd> - 現在フォーカスされたチップは左に位置を移動した際に [`igxChipArea`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html) の [`reorder`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html#reorder) イベントをトリガーします。
+  - <kbd>SHIFT</kbd> + <kbd>RIGHT</kbd> - 現在フォーカスされたチップは右に位置を移動した際に [`igxChipArea`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html) の [`reorder`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html#reorder) イベントをトリガーします。
 
 - 削除ボタンがフォーカスされた場合のキーボード コントロール:
 
-  - <kbd>SPACE</kbd> または <kbd>ENTER</kbd> チップの削除を手動的に処理するために [`onRemove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#onremove) 出力を発生します。
+  - <kbd>SPACE</kbd> または <kbd>ENTER</kbd> チップの削除を手動的に処理するために [`remove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#remove) 出力を発生します。
 
 <div class="divider--half"></div>
 
 以下は、IgxAvatar をプレフィックスとして使用し、すべてのチップにカスタム アイコンを使用するチップ領域の例です。
 
 ```html
-<igx-chips-area (onReorder)="chipsOrderChanged($event)">
+<igx-chips-area (reorder)="chipsOrderChanged($event)">
     <igx-chip
     *ngFor="let chip of chipList"
     [id]="chip.id"
@@ -295,7 +295,7 @@ public chipsOrderChanged(event: IChipsAreaReorderEventArgs) {
     [selectIcon]="mySelectIcon"
     [removable]="true"
     [removeIcon]="myRemoveIcon"
-    (onRemove)="chipRemoved($event)"
+    (remove)="chipRemoved($event)"
     [draggable]="'true'">
         <igx-avatar
         class="chip-avatar-resized"

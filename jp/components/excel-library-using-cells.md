@@ -10,10 +10,10 @@ _language: ja
 
 Excel ワークシートの [`WorksheetCell`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html) オブジェクトは、ワークシートの実際のデータ値を保持するオブジェクトです。このトピックは、名前で領域にアクセス、数式やコメントをセルに追加、結合および書式設定など、セルで実行できる多くの操作について説明します。
 
-## サンプル
+## Angular セルの使用の例
 
 <div class="sample-container loading" style="height: 150px">
-    <iframe id="excel-library-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/excel/excel-library-working-with-cells' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="excel-library-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/excel/excel-library-working-with-cells' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular セルの使用の例"></iframe>
 </div>
 
 
@@ -220,7 +220,7 @@ RGB またはテーマの色が使用される場合、色を明るくする、�
 
 [`WorkbookColorInfo`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbookcolorinfo.html) がテーマの色を表す場合、Workbook インストールをこのメソッドに渡す必要があります。これによってテーマの色の RGB 値をワークブックから取得できます。
 
-.xlsx など新しいファイル形式で保存するときは、より新しい色の情報が直接ファイルに保存されます。.xls など古いファイル形式で保存するときは、パレットで最も近い色のインデックスが保存されます。さらに、古い形式には、新しい色の情報を示すために保存できる機能レコードがあります。
+.xlsx など新しいファイル形式で保存するときは、より新しい色の情報が直接ファイルに保存されます。xls など古いファイル形式で保存するときは、パレットで最も近い色のインデックスが保存されます。さらに、古い形式には、新しい色の情報を示すために保存できる機能レコードがあります。
 
 古い形式が Microsoft Excel 2003 以前のバージョンで開かれると機能が無視されますが Excel 2007 以降で開かれるとレコードが読み取られて色情報が標準形式レコードから以前読み込まれたインデックス付きの色を上書きします。
 

@@ -8,9 +8,9 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <p class="highlight">The Ignite UI for Angular Carousel component is developed as a native [Angular component](https://angular.io/guide/architecture#components). Use it to browse or navigate through a collection of slides, including image galleries, cards, onboarding tutorials, or page-based interfaces.</p>
 <div class="divider"></div>
 
-## Demo
+## Angular Carousel Example
 <div class="sample-container loading" style="height: 550px">
-    <iframe id="carousel-iframe" seamless="" width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/layouts/carousel" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="carousel-iframe" seamless="" width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/layouts/carousel" onload="onSampleIframeContentLoaded(this);" alt="Angular Carousel Example"></iframe>
 </div>
 <p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>
@@ -97,7 +97,7 @@ The carousel template may look like this:
 ```html
 <div class="carousel-container">
     <igx-carousel #carousel [loop]="false">
-      ...  
+      ...
         <!-- Adding an empty template to disable carousel's indicators -->
         <ng-template igxCarouselIndicator></ng-template>
     </igx-carousel>
@@ -224,7 +224,7 @@ Setting `none` to the `animationType` input disables carousel's animations.
 
 ### Demo
 
-The demo below demonstrates the different types of animations, which the carousel supports. 
+The demo below demonstrates the different types of animations, which the carousel supports.
 
 <div class="sample-container loading" style="height: 700px">
     <iframe id="carousel-animations-sample-iframe" data-src='{environment:demosBaseUrl}/layouts/carousel-animations-sample' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
@@ -254,20 +254,20 @@ The carousel [animations](carousel.md#animations) are fully supported on touch d
 ### Keyboard navigation
 <div class="divider--half"></div>
 
-* To navigate to the **next**/**previous** slide, you have to use, respectfully: 
+* To navigate to the **next**/**previous** slide, you have to use, respectfully:
     * `Arrow Right` key for the next slide
     * `Arrow Left` key for the previous slide
 *  To navigate to the **end**/**start** slide you have to use, respectfully:
     * `End` key for the end slide
     * `Home` key for the start slide
- 
+
 ### Automatic transitioning
 <div class="divider--half"></div>
 
-The **IgxCarousel** can be easily configured to change the slides automatically, without any user interaction. This way you can create your own slideshow by only setting a transition interval to the [interval]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#interval) property, which determines the amount of time in milliseconds between slides transition. 
+The **IgxCarousel** can be easily configured to change the slides automatically, without any user interaction. This way you can create your own slideshow by only setting a transition interval to the [interval]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#interval) property, which determines the amount of time in milliseconds between slides transition.
 
 >[!NOTE]
->The automatic slide transitioning is not entirely user-independent by default. Positioning the mouse pointer over a slide will interrupt the current slide transition until the mouse pointer leaves the slide area. This can be prevented by setting [pause]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#pause) property to `false`. 
+>The automatic slide transitioning is not entirely user-independent by default. Positioning the mouse pointer over a slide will interrupt the current slide transition until the mouse pointer leaves the slide area. This can be prevented by setting [pause]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#pause) property to `false`.
 
 ## Advanced Example
 <div class="divider--half"></div>
@@ -314,12 +314,12 @@ adding [IgxList]({environment:angularApiUrl}/classes/igxlistcomponent.html):
 </div>
 ...
 ```
-syncing the components by hooking up on carousel's [`onSlideChanged`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#onslidechanged) and list's [onItemClicked]({environment:angularApiUrl}/classes/igxlistcomponent.html#onitemclicked) events:
+syncing the components by hooking up on carousel's [`onSlideChanged`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#onslidechanged) and list's [itemClicked]({environment:angularApiUrl}/classes/igxlistcomponent.html#itemclicked) events:
 
 ```typescript
   public ngOnInit() {
     ...
-    this.list.onItemClicked.subscribe((args: IListItemClickEventArgs) => {
+    this.list.itemClicked.subscribe((args: IListItemClickEventArgs) => {
         this.currentIndex = args.item.index;
         this.carousel.select(this.carousel.get(this.currentIndex));
     });
@@ -341,7 +341,37 @@ These configurions will have the following result:
 </div>
 
 
+## Accessibility
+### WAI-ARIA Roles, States, and Properties
+ * The Carousel base element role is [`region`](https://www.w3.org/TR/wai-aria-1.1/#region) - section containing content that is relevant to specific purpose and users will likely want to be able to navigate easily.
+ * Carousel indicators are with role [`tab`](https://www.w3.org/TR/wai-aria-1.1/#tab) -  grouping label providing a mechanism for selecting the tab content that is to be rendered to the user
+ * The element that serves as the container for the set of tabs (carousel indicators) role is set to [`tablist`](https://www.w3.org/TR/wai-aria-1.1/#tab).
+ * Each slide element is set with role [`tabpanel`](https://www.w3.org/TR/wai-aria-1.1/#tabpanel).
+ * The element that serves as the container for the set of igx-slides is set with [aria-live](https://www.w3.org/TR/wai-aria-1.1/#aria-live)="polite". Both options are
+   - **off**: if the carousel is automatically rotating.
+   - **polite**: if the carousel is NOT automatically rotating.
 
+### ARIA support
+#### **Carousel component**
+
+##### **Attributes**:
+ * [aria-roledescription](https://www.w3.org/TR/wai-aria-1.1/#aria-roledescription) set to 'carousel'.
+ * [aria-selected](https://www.w3.org/TR/wai-aria/states_and_properties#aria-selected)- set to *true* or *false* based on the active slide.
+ * [aria-controls](https://www.w3.org/TR/wai-aria-1.1/#aria-controls) - set a slide index whose content is controlled by the current element.
+ * [aria-live](https://www.w3.org/TR/wai-aria-1.1/#aria-live) - used to set the priority with which screen reader should treat updates to live regions - the possible settings are: **off** and **polite**. The default setting is **polite**. When the [interval]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#interval) option set, the **aria-live** attribute would be set to **off**.
+ * [aria-label](https://www.w3.org/TR/wai-aria/states_and_properties#aria-label) slide based.
+ * aria-label (buttons)
+   - aria-label - for previous slide.
+   - aria-label - for next slide.
+
+#### **Slide component**
+##### **Roles**:
+ * [attr.role="tabpanel"](https://www.w3.org/TR/wai-aria-1.1/#tabpanel) -  container for the resources associated with a tab, where each tab is contained in a tablist.
+
+##### **Attributes**:
+ * id - follows the pattern "panel-${this.index}"
+ * [aria-labelledby](https://www.w3.org/TR/wai-aria/#aria-labelledby) follows the pattern "tab-${this.index}-${this.total}"
+ * [aria-selected](https://www.w3.org/TR/wai-aria-1.1/#aria-selected) set **active** slide. Indicates the current **selected** state of a particular slide element.
 
 ## API References
 <div class="divider--half"></div>

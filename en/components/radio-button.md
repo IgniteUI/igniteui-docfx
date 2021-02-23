@@ -9,9 +9,9 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ## Radio Button
 <p class="highlight">The Ignite UI for Angular Radio Button component allows the user to select a single option from an available set of options that are listed side by side.</p>
 
-### Demo
+## Angular Radio & Radio Group Example
 <div class="sample-container loading" style="height: 90px">
-    <iframe id="form-elements-sample-iframe" src='{environment:demosBaseUrl}/data-entries/radio-sample-1' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="form-elements-sample-iframe" src='{environment:demosBaseUrl}/data-entries/radio-sample-1' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular Radio & Radio Group Example"></iframe>
 </div>
 <p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>
@@ -49,7 +49,7 @@ Radio buttons can be displayed using the following code inside the component tem
 
 ### Label
 
-The `labelPosition` property can be used to change the default position of the label in the radio component. Users can choose between `before` and `after. If not specified, the label will be placed after the radio button.
+The `labelPosition` property can be used to change the default position of the label in the radio component. Users can choose between `before` and `after`. If not specified, the label will be placed after the radio button.
 
 ```html
 <igx-radio [(ngModel)]="selected" value="option1" labelPosition="before">Option 1</igx-radio>
@@ -167,7 +167,7 @@ If the component is using the [`Emulated`](themes/component-themes.md#view-encap
 <div class="divider"></div>
 
 ### Demo
-<div class="sample-container loading" style="height: 360px">
+<div class="sample-container loading" style="height: 260px">
     <iframe id="radio-group-sample-iframe" data-src='{environment:demosBaseUrl}/data-entries/radio-group-sample' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 <div>
@@ -209,6 +209,36 @@ Note that, setting a [`name`]({environment:angularApiUrl}/classes/igxradiogroupd
 // radio-group.component.ts
 public fruits = ["Apple", "Mango", "Banana", "Orange"];
 ```
+
+### Alignment
+Use the [`alignment`]({environment:angularApiUrl}/classes/igxradiogroupdirective.html#alignment) input property to change the orientation of the `igxRadio` components in the radio group. Users can choose between `horizontal` and `vertical`. By default the radio group alignment is horizontal.
+
+```typescript
+//sample.component.ts
+import { RadioGroupAlignment } from "igniteui-angular";
+...
+public alignment = RadioGroupAlignment.vertical;
+...
+```
+
+```html
+<!-- sample.component.html -->
+<igx-radio-group [alignment]="alignment">
+    <igx-radio [(ngModel)]="selected" value="London">London</igx-radio>
+    <igx-radio [(ngModel)]="selected" value="New York">New York</igx-radio>
+    <igx-radio [(ngModel)]="selected" value="Tokyo">Tokyo</igx-radio>
+    <igx-radio [(ngModel)]="selected" value="Sofia">Sofia</igx-radio>
+</igx-radio-group>
+```
+
+<div class="sample-container loading" style="height: 300px">
+    <iframe id="radio-group-vertical-iframe" data-src='{environment:demosBaseUrl}/data-entries/radio-group-vertical' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="radio-group-vertical-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="radio-group-vertical-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+<div class="divider--half"></div>
 
 ## API References
 <div class="divider--half"></div>

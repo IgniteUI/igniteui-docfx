@@ -48,14 +48,6 @@ The [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-
 
 <!-- end: Angular, React, WebComponents -->
 
-<!-- Blazor -->
-
-The [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html) requires the following modules, however the DataChartInteractivityModule is only required for mouse interactions, such as panning and zooming the map content.
-
--   GeographicMapModule
--   DataChartInteractivityModule
-    <!-- end: Blazor -->
-
 ```ts
 // app.module.ts
 import { IgxGeographicMapModule } from 'igniteui-angular-maps';
