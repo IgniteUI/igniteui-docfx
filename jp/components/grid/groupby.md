@@ -7,7 +7,7 @@ _language: ja
 
 # Angular Grid グループ化
 
-Angular Material テーブルまたは UI グリッドの Group By 動作は、列の値に基づいてグループ化されたデータ行を作成します。[`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) の Group By では、グループを階層構造で視覚化できます。グループデータ行は展開または縮小でき、グループの順序は UI または API で変更できます。行選択を有効にすると、Group By 行セレクターがグループ行の一番左の領域に描画されます。**rowSelection** プロパティが単一に設定されている場合、チェックボックスは無効になり、選択が行われるグループの表示としてのみ機能します。**rowSelection** プロパティが複数に設定されている場合、Group By 行セレクターをクリックすると、このグループに属するすべてのレコードが選択されます。
+Angular Material テーブルまたは UI グリッドの Group By 動作は、列の値に基づいてグループ化されたデータ行を作成します。[`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) の Group By では、グループを階層構造で視覚化できます。グループデータ行は展開または縮小でき、グループの順序は UI または API で変更できます。行選択を有効にすると、Group By 行セレクターがグループ行の一番左の領域に描画されます。[`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection) プロパティが単一に設定されている場合、チェックボックスは無効になり、選択が行われるグループの表示としてのみ機能します。[`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection) プロパティが複数に設定されている場合、Group By 行セレクターをクリックすると、このグループに属するすべてのレコードが選択されます。
 
 ## Angular Grid グループ化の例
 この例は、大量のデータのグループ化が可能であることを示しています。列ヘッダーを一番上 (グループ化領域) にドラッグすると、ユーザーは選択した列のデータを階層構造で表示できます。さらに列ヘッダーを一番上にドラッグすることで、複数のフィールドでグループ化できます。これらのグループ化オプションは、ユーザーが多数の行と列を持つテーブルがあり、はるかに高速で視覚的に受け入れられる方法でデータを表示しようとする場合に役立ちます。
