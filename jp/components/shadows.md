@@ -239,15 +239,10 @@ $myboringCard: igx-card-theme(
 </div>
 <div class="divider--half"></div>
 
+
+<div class="divider--half"></div>
+
 ## API リファレンス
-<div class="divider--half"></div>
-
-* [Elevations]({environment:sassApiUrl}/index.html#function-igx-elevation)
-
-## その他のリソース
-<div class="divider--half"></div>
-
-コミュニティに参加して新しいアイデアをご提案ください。
 
 * [Elevations]({environment:sassApiUrl}/index.html#function-igx-elevation)
 
