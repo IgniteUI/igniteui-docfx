@@ -55,18 +55,10 @@ Common Angular Bar Chart Scenarios:
 
 In this example, the bar chart is comparing the total number of Olympic Medals (the Category) won between the USA and Russia from 1996 to 2016. The Y-Axis, or labels on the left of the chart, are displaying the time-series values of Year. The X-Axis, or labels on the bottom of the chart, are displaying the number of medals won.
 
-<!-- <div class="sample-container loading" style="height: 500px">
-    <iframe></iframe>
-</div>
-<div class="divider--half"></div> -->
-
-## Angular Bar Chart Annotations
-
-In this example, the bar chart uses annotations to show a callout with the value for each bar.
-
 <div class="sample-container loading" style="height: 400px">
     <iframe id="cc-chart-with-legend" src='{environment:dvDemosBaseUrl}/charts/data-chart-bar-chart-with-legend' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Line Chart With Legend"></iframe>
 </div>
+
 <div class="divider--half"></div>
 
 ## Angular Bar Chart with Single Series
@@ -86,6 +78,8 @@ In this example, the bar chart uses annotations to show a callout with the value
 <div class="divider--half"></div>
 
 ## Angular Advanced Bar Chart
+
+In this example, the bar chart uses annotations to show a callout with the value for each bar.
 
 <div class="sample-container loading" style="height: 400px">
     <iframe id="cc-chart-with-legend" src='{environment:dvDemosBaseUrl}/charts/data-chart-bar-chart-styling' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Line Chart With Legend"></iframe>
