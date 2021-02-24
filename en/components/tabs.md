@@ -1,6 +1,6 @@
 ---
-title: Tabs Component - Native Angular | Ignite UI for Angular 
-_description: The Ignite UI for Angular Tabs component places tabs at the top and allows for scrolling when there are multiple tab items on the screen. 
+title: Tabs Component - Native Angular | Ignite UI for Angular
+_description: The Ignite UI for Angular Tabs component places tabs at the top and allows for scrolling when there are multiple tab items on the screen.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Components, Native Angular Controls, Native Angular Components Library, Angular Tabs component, Angular Tabs controls, Angular Tabs
 ---
 
@@ -67,9 +67,9 @@ If the sample is configured properly, the final result should look like that:
 <div class="divider"></div>
 
 ## Tabs Types
-There are two types of tabs - `fixed` and `contentfit`. Set the [`type`]({environment:angularApiUrl}/classes/igxtabscomponent.html#tabstype) input to choose between [`fixed`]({environment:angularApiUrl}/enums/tabstype.html#fixed) and [`contentfit`]({environment:angularApiUrl}/enums/tabstype.html#contentfit) tabs.
+There are two types of tabs - `fixed` and `contentfit`. Set the [`type`]({environment:angularApiUrl}/classes/igxtabscomponent.html#type) input to choose between the two.
 - **Content-fit tabs** (default): the width of the tab header depends on the content (label, icon, both) and all tabs have equal padding.
-No matter what type of tabs you chose, the width of the tab header is limited by the specified min and max width. 
+No matter what type of tabs you chose, the width of the tab header is limited by the specified min and max width.
 - **Fixed tabs**: all tab headers are equal in width and fully fit the tabs container. If the space is not enough to fit all items, scroll buttons are displayed.
 
 ```html
@@ -201,7 +201,7 @@ import {
     TabsRoutingComponent,
     TabsRoutingView1Component,
     TabsRoutingView2Component,
-    TabsRoutingView3Component 
+    TabsRoutingView3Component
 } from './tabs-routing.component';
 
 ...
@@ -236,29 +236,29 @@ Now that we have all navigation routes set up, we need to declare the `igx-tabs`
 <!-- tabs-routing.component.html -->
 
 <igx-tabs>
-  <igx-tab-item 
-    label="Tab 1" 
+  <igx-tab-item
+    label="Tab 1"
     icon="dashboard"
     routerLink="view1"
-    routerLinkActive 
+    routerLinkActive
     #rla1="routerLinkActive"
     [isSelected]="rla1.isActive"
   ></igx-tab-item>
 
-  <igx-tab-item 
-    label="Tab 2" 
+  <igx-tab-item
+    label="Tab 2"
     icon="check_circle_outline"
     routerLink="view2"
-    routerLinkActive 
+    routerLinkActive
     #rla2="routerLinkActive"
     [isSelected]="rla2.isActive"
   ></igx-tab-item>
 
-  <igx-tab-item 
-    label="Tab 3" 
+  <igx-tab-item
+    label="Tab 3"
     icon="radio-button_checked"
     routerLink="view3"
-    routerLinkActive 
+    routerLinkActive
     #rla3="routerLinkActive"
     [isSelected]="rla3.isActive"
   ></igx-tab-item>
@@ -332,13 +332,13 @@ $yellow-color: #F4D45C;
 $black-color: #292826;
 
 $dark-palette: igx-palette(
-  $primary: $black-color, 
-  $secondary: $yellow-color, 
+  $primary: $black-color,
+  $secondary: $yellow-color,
   $grays: #fff
 );
 ```
 
-We can easily retrieve any color from the palette using [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color). 
+We can easily retrieve any color from the palette using [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color).
 
 ```scss
 $dark-tabs: igx-tabs-theme(
