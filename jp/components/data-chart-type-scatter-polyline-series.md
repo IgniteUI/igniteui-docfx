@@ -49,14 +49,7 @@ public dataSource: any[] = SampleScatterStats.getCountries();
 
 ## モジュールの要件
 
-[`IgxScatterPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolylineseriescomponent.html) を作成するには、以下のモジュールが必要です。<!-- Angular, React, WebComponents --> <!-- end: Angular, React, WebComponents --><!-- Blazor -->モジュールはアプリケーションのエントリ ポイントに登録する必要があります。
-
--   DataChartCoreModule        
--   DataChartScatterCoreModule
--   DataChartScatterModule   
--   DataChartInteractivityModule
--   ScatterPolylineSeriesModule
-    <!-- end: Blazor -->
+[`IgxScatterPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolylineseriescomponent.html) を作成するには、以下のモジュールが必要です。
 
 ```ts
 // axis' modules:

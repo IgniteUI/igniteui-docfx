@@ -26,11 +26,6 @@ Angular データ チャート コンポーネントは、2 つのツールチ�
 
 Angular データ チャート コンポーネントでツールチップ レイヤーを有効にするには、対話モジュールをインポートして登録する必要があります。以下のコードを使用できます。
 
-<!-- Blazor -->
-
--   DataChartInteractivityModule
-    <!-- end: Blazor -->
-
 ```ts
 import { IgxDataChartInteractivityModule } from 'igniteui-angular-charts';
 
