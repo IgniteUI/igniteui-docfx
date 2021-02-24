@@ -552,8 +552,8 @@ public maxPerPage = Number.MAX_SAFE_INTEGER;
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```html
-<igx-tree-grid #treeGrid [data]="data | async" childDataKey="Content" [paging]="true" [perPage]="10"
-        [pagingMode]="mode" [totalRecords]="totalCount" (onPagingDone)="paginate($event)">
+<igx-tree-grid #treeGrid [data]="data | async" childDataKey="Content" [(page)]="page" [(perPage)]="perPage"
+        [pagingMode]="mode" [totalRecords]="totalCount" (onPagingDone)="paginate($event.current)">
     <igx-column field="Name"></igx-column>
     ...
 </igx-tree-grid>
@@ -651,7 +651,8 @@ public paginate() {
         [(perPage)]="perPage"
         [selectOptions]="selectOptions"
         [displayDensity]="grid1.displayDensity"
-        (pageChange)="paginate($event)">
+        (pageChange)="paginate($event)"
+        (perPageChange)="perPageChange($event)">
     </igx-paginator>
 </ng-template>
 ```
@@ -756,7 +757,7 @@ public paginate(page: number) {
 最後にグリッドのテンプレートを宣言します。
 @@if (igxName === 'IgxGrid') {
 ```html
-<@@igSelector #@@igObjectRef [data]="data | async" width="960px" height="550px" [paging]="true" >
+<@@igSelector #@@igObjectRef [data]="data | async" width="960px" height="550px" [paging]="true" [(perPage)]="perPage" [paginationTemplate]="customPager">
     <igx-column field="ID"></igx-column>
     <igx-column field="ProductName"></igx-column>
     <igx-column field="QuantityPerUnit"></igx-column>
@@ -768,7 +769,8 @@ public paginate(page: number) {
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid [paging]="true" [primaryKey]="'CustomerID'" [height]="'550px'" [width]="'100%'" #hierarchicalGrid>
+<igx-hierarchical-grid #hierarchicalGrid [data]="data | async" [paging]="true" 
+        [(perPage)]="perPage" [(page)]="page" [paginationTemplate]="customPager">
     <igx-column field="CustomerID"></igx-column>
         <igx-column field="CompanyName"></igx-column>
         <igx-column field="ContactName"></igx-column>
