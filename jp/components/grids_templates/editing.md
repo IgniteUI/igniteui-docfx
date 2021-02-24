@@ -113,6 +113,33 @@ Ignite UI for Angular @@igComponent コンポーネントは、レコードの�
 </div>
 }
 
+### 機能の統合
+セル/行が編集モードの場合、ユーザーはさまざまな方法でグリッドを操作できます。以下のテーブルは、特定の操作が現在の編集にどのように影響するかを示しています。
+
+| @@igComponent     | フィルタリング  | ソート | ページング | 移動 | ピン固定 | 非表示 | グループ化 | サイズ変更 | Escape | Enter | F2 | Tab | セル クリック | 新しい行の追加/削除/編集 |
+| ----------------- |:---------:|:-------:|:------:|:------:|:-------:|:------:|:-------:|:--------:|:------:|:-----:|:--:|:---:|:----------:|:-----------------------:|
+| 編集モードを保持    |           |      |   |   |   |   |   | ✔ |   |   |   |   |   |   |
+| 編集モードを終了    |✔         | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |   | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+| コミット            |   |   |  |  |  |   |   |   |  | ✔ | ✔ | ✔ | ✔ | ✔ |
+| 破棄        | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |✔ |   | ✔  |  |   |   |   |  |
+
+テーブルからわかるように、列のサイズ変更を除くすべての操作は編集を終了し、新しい値を破棄します。新しい値がコミットされる場合、対応する機能の '-ing' イベントで開発者が実行できます。
+
+たとえば、ユーザーがセル/行が編集モードのときに列をソートしようとする場合に、新しい値をコミットする方法:
+
+```html
+<igx-grid #grid [data]="localData" [primaryKey]="'ProductID'" (sorting)="onSorting($event)">
+...
+</igx-grid>
+```
+
+```typescript
+public onSorting(event: ISortingEventArgs) {
+    this.grid.endEdit(true);
+    // (event.owner as IgxGridComponent).endEdit(true);
+}
+```
+
 ## API リファレンス
 
 * [IgxGridCellComponent]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
