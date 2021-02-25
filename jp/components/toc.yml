@@ -8,6 +8,10 @@
 - name: ライセンス
   href: general/ignite-ui-licensing.md
   new: false
+- name: ローカリゼーション
+  href: general/localization.md
+  new: false
+  updated: true
 - name: 作業の開始
   href: general/getting-started.md
   new: false
@@ -1168,9 +1172,6 @@
   new: false
 - name: Excel エクスポーター
   href: exporter-excel.md
-  new: false
-- name: ローカリゼーション
-  href: localization.md
   new: false
 - name: トランザクション サービス
   href: transaction.md
