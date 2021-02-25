@@ -1,12 +1,12 @@
 ---
-title: Angular チャートおよびグラフ | データ可視化ツール | インフラジスティックス
-_description: インフラジスティックスの Angular チャート コンポーネントは、データを表示するのに最適なチャートを選択するのに役立ちます。Ignite UI for Angular でグラフと視覚化を改善します!
-_keywords: Angular charts, category chart, Ignite UI for Angular, Infragistics, Angular チャート, カテゴリ チャート, インフラジスティックス
+title: Angular カテゴリ チャート | データのチャート作成コンポーネント | インフラジスティックス
+_description: Angular カテゴリ チャート コンポーネントを使用して、データを解析し、データを表すための最適なチャート タイプを自動的に選択します。今日から始められます。
+_keywords: category chart, Angular component, Ignite UI for Angular, Angular charts, charting component, カテゴリ チャート, Angular コンポーネント, Angular チャート, チャート作成コンポーネント
 mentionedTypes: ['CategoryChart', 'CategoryChartType']
 _language: ja
 ---
 
-# Angular チャートの概要
+# Angular チャート
 
 Angular カテゴリ チャート コンポーネント は、カテゴリ データの可視化を容易にする Ignite UI for Angular チャート コンポーネントです。データ可視化ドメインの複雑さを管理しやすい API に簡素化できます。
 
@@ -47,7 +47,7 @@ Angular カテゴリ チャート コンポーネント は、カテゴリ デ�
 
 ## 依存関係
 
-チャート パッケージをインストールするときに core パッケージもインストールする必要があります。
+Angular チャート パッケージをインストールするときに core パッケージもインストールする必要があります。
 
 <pre style="background:#141414;color:white;display:inline-block;padding:16x;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
 npm install --save igniteui-angular-core
@@ -58,7 +58,7 @@ npm install --save igniteui-angular-charts
 
 ## モジュールの要件
 
-<!-- Angular, React, WebComponents -->
+[`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html) は以下のモジュールを要求します。
 
 ```ts
 // app.module.ts
@@ -73,8 +73,6 @@ import { IgxCategoryChartModule } from 'igniteui-angular-charts';
 })
 export class AppModule {}
 ```
-
-<!-- end: Angular, React, WebComponents -->
 
 カテゴリ チャートのより最小限の設定をロードすることも可能で、それによって可能なシリーズのサブセットだけをロードし、代わりに [`IgxCategoryChartCoreModule`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcoremodule.html) や [`IgxLineSeriesDynamicModule`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineseriesdynamicmodule.html) など問題のシリーズの動的モジュールをロードして除外します。[`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#charttype) が [`Auto`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#auto) の場合、読み込んだシリーズ型が選択されます。
 
@@ -110,7 +108,7 @@ var data = [
 ## チャート タイプ
 
 表示するチャート型を設定するために、カテゴリ チャートのデフォルト動作をオーバーライドできます。これを実行するには、[`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#charttype) プロパティを設定します。
-以下は、カテゴリ チャートでサポートされるすべてのタイプです。
+以下は、Angular カテゴリ チャートでサポートされるすべてのタイプです。
 
 > [!NOTE]
 > 特別なケースにプロパティの [`Auto`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#auto) 設定があります。[`Auto`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#auto) を使用した場合、チャートがデータを分析し、最適なチャート タイプを割り当てます。
