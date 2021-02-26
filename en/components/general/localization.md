@@ -1,32 +1,87 @@
 ---
-title: Localization - Native Angular | Ignite UI for Angular
+title: Localization (i18n) - Native Angular | Ignite UI for Angular
 _description: The Ignite UI for Angular Localization mechanism provides the ability to change/localize strings in the components.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components
 ---
 
-# Localization
+# Localization (i18n)
+
+Currently, Ignite UI for Angular ships with resource strings for the following languages: German, French, Italian, Japanese, Korean, Spanish, Traditional Chinese (zh-Hant) and Simplified Chinese (zh-Hans). These are available via the `igniteui-angular-i18n` package.
 
 With only a few lines of code, users can easily localize the strings in Ignite UI for Angular components.
 
 ## Angular Localization Example
-<div class="sample-container loading" style="height:550px">
-    <iframe id="localization-sample-1-iframe" src="{environment:demosBaseUrl}/services/localization-sample-1" width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular Localization Example"></iframe>
+<div class="sample-container loading" style="height:800px">
+    <iframe id="localization-all-resources-iframe" src="{environment:demosBaseUrl}/services/localization-all-resources" width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular Localize Application Example"></iframe>
 </div>
 <p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="localization-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="localization-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="localization-all-resources-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="localization-all-resources-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
 ## Usage
 
-### Localize entire application
+### Load localized resources from npm package
 
-To get all available resource strings, there is a global function `getCurrentResourceStrings`, which returns an `IResourceStrings` object.
-The values could be replaced in order to be localized and then the object can be passed to the `changei18n` function, as a parameter, which will change the global i18n for the igniteui-angular components on an app.module level. The localization can be done anywhere in the app, not only in the app.module.ts
+To localize an application for one of the available in the `igniteui-angular-i18n` package languages, the most straight forward approach is to:
+
+Install the package first:
+
+`npm install igniteui-angular-i18n --save-dev`
+
+Then import the resource strings for the desired language and call the `changei18n` function passing the corresponding resource object:
 
 ```typescript
 // app.component.ts
+...
+import { changei18n } from "igniteui-angular";
+import { IgxResourceStringsJA } from 'igniteui-angular-i18n';
+...
+public ngOnInit(): void {
+    ...
+    changei18n(IgxResourceStringsJA);
+    ...
+}
+```
+
+>Note: Feel free to contribute to the `igniteui-angular-i18n` package.
+
+### Utilize own localized resources
+`changei18n` function expects an `IResourceStrings` object. If the language you want to use is not available in the `igniteui-angular-i18n` package, or simply want to change a particular string,
+you can pass a custom object containing your string resources for the language and components you need. This will change the global i18n for the igniteui-angular components on an app.module level. The localization can be done anywhere in the app, not only in the app.module.ts
+
+```typescript
+// app.component.ts
+...
+import { changei18n } from "igniteui-angular";
+...
+
+public customBG: IResourceStrings;
+public ngOnInit(): void {
+    ...
+    this.customBG = {
+        ...
+        igx_grid_summary_count: 'Общ брой',
+        igx_grid_summary_min: 'Минимум',
+        igx_grid_summary_max: 'Максимум',
+        igx_grid_summary_sum: 'Сума',
+        igx_grid_summary_average: 'Средна стойност'
+        ...
+    };
+    changei18n(this.customBG);
+    ...
+}
+```
+
+Alternatively, you may get all currently available resource strings. There is a global function `getCurrentResourceStrings`, which returns an `IResourceStrings` object.
+The values could be replaced in order to be localized and then the object can be passed to the `changei18n` function, as a parameter.
+
+```typescript
+// app.component.ts
+...
+import { changei18n } from "igniteui-angular";
+...
 
 public ngOnInit(): void {
     ...
@@ -75,31 +130,6 @@ const newGridRes: IGridResourceStrings = {
 this.grid.resourceStrings = newGridRes;
 ```
 
-<div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="localization-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
-
-## Load localized resources from npm package
-
-Firstly the package that contains the resource strings should be installed:
-
-`npm install igniteui-angular-i18n --save-dev`
-
-Then in order to use Japanese, Korean and Spanish resource strings, the following imports should be added to the application and the `changei18n` functions should be called:
-
-```typescript
-// app.component.ts
-
-import { IgxResourceStringsJA } from 'igniteui-angular-i18n';
-import { IgxResourceStringsKO } from 'igniteui-angular-i18n';
-import { IgxResourceStringsES } from 'igniteui-angular-i18n';
-...
-public ngOnInit(): void {
-    ...
-    changei18n(IgxResourceStringsJA);
-    ...
-}
-```
 
 ## Additional Resources
 
