@@ -4,19 +4,27 @@ _description: Ignite UI for Angular によって ARIA アクセシビリティ�
 _keywords: aria support, aria サポート, a11y, ignite ui for angular, infragistics, インフラジスティックス
 ---
 
-# フレームワークと機能
+# Directionality
 
-## アクセシビリティと文字表記の方向
+## Directionality Example
 
 このセクションでは、フレームワークのアクセシビリティ (ARIA) サポートと、コンポーネントの`文字表記の方向`の簡単な管理を示します。
 
-### 右から左方向 (RTL) の有効化
+<div class="divider--half"></div>
+<div class="sample-container loading" style="height: 600px">
+    <iframe id="calendar-sample-5-iframe" src='{environment:demosBaseUrl}/scheduling/calendar-rtl-sample' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular RTL Support Example"></iframe>
+</div>
+<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
+<div>
+</div>
+
+## 右から左方向 (RTL) の有効化
 
 `Ignite UI for Angular` ライブラリは、`html` または `body` タグの `dir` 属性を設定した場合のみ `文字表記の方向`操作の影響を受けます。また、ランタイムの変更は検出されないことに注意してください。
 
 次の例に移動します。
 
-#### 手順 1 - 両方のタグで ‘dir’ 属性を設定します。
+### 手順 1 - 両方のタグで ‘dir’ 属性を設定します。
 
 ```html
 <html dir="rtl">
@@ -28,7 +36,7 @@ _keywords: aria support, aria サポート, a11y, ignite ui for angular, infragi
 
 上記の場合、`body` タグの内部属性タグが優先されます。
 
-#### 手順 2 - それぞれの方向の[テーマエンジン](../../themes/index.md)に通知します。
+### 手順 2 - それぞれの方向の[テーマエンジン](../../themes/index.md)に通知します。
 
 そのためには、[igx-core]({environment:sassApiUrl}/index.html#mixin-igx-core) mixin の `$direction` パラメーターを設定します。
 

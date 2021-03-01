@@ -74,4 +74,4 @@ Angular コンポーネント テンプレートで Dock Manager コンポーネ
 
 Dock Manager コンポーネントの使用方法の詳細については、[このトピック (英語)](https://www.infragistics.com//products/ignite-ui-web-components/web-components/components/dock-manager.html) を参照してください。
 
-さまざまな Ignite UI for Angular コンポーネントをホストするペインで Dock Manager コンポーネントを使用する高度な例については、このバージョンの[データ分析サンプル](./general/framework-and-features/data-analysis.md#Dock-Manager-のデータ分析)を参照してください。
+さまざまな Ignite UI for Angular コンポーネントをホストするペインで Dock Manager コンポーネントを使用する高度な例については、このバージョンの[データ分析サンプル](./general/data-analysis.md#Dock-Manager-のデータ分析)を参照してください。
