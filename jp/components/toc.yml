@@ -19,6 +19,13 @@
   href: general/update-guide.md
   new: false
   updated: true
+- name: SSR レンダリング
+  href: general/ssr-rendering.md
+  new: false
+- name: データ分析
+  href: general/data-analysis.md
+  new: false
+  updated: true
 - name: アクセシビリティ準拠
   href: general/accessibility-compliance.md
   new: false
@@ -63,17 +70,9 @@
     - name: レイアウト要素
       href: general/wpf-to-angular-guide/layout.md
       new: false
-- name: フレームワーク & 機能
-  href: general/framework-and-features/framework-and-features.md
+- name: Directionality
+  href: general/directionality.md
   new: false
-  items:
-    - name: SSR レンダリング
-      href: general/framework-and-features/ssr-rendering.md
-      new: false
-    - name: データ分析
-      href: general/framework-and-features/data-analysis.md
-      new: false
-      updated: true
 - name: グリッドとリスト
   href: grids-and-lists.md
   header: true

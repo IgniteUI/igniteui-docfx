@@ -248,7 +248,7 @@ IgniteUI for Angular はコンポーネントのデザインを[マテリアル 
 
 ### Ignite UI のデータ分析 
 
-Ignite Angular UI ツールセットには[データ分析機能](https://jp.infragistics.com//angularsite/components/general/framework-and-features/data-analysis.html "igxGrid と igxDataChart のデータ分析")も含まれています。優れたエクスペリエンスを顧客に提供するために必要なすべてのビジネス機能を提供します。そのため、Excel に類似したエクスペリエンスを提供するディレクティブを提供します。たとえば、データの一部を選択することにより、ボタンをクリックし、データのサブセットですばやくデータ分析を実行できるようになりました。 
+Ignite Angular UI ツールセットには[データ分析機能](https://jp.infragistics.com//angularsite/components/general/data-analysis.html "igxGrid と igxDataChart のデータ分析")も含まれています。優れたエクスペリエンスを顧客に提供するために必要なすべてのビジネス機能を提供します。そのため、Excel に類似したエクスペリエンスを提供するディレクティブを提供します。たとえば、データの一部を選択することにより、ボタンをクリックし、データのサブセットですばやくデータ分析を実行できるようになりました。 
 
 <div class="sample-container loading" style="height: 750px;">
     <iframe id="grid-dynamic-chart" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis" class="lazyload no-theming"></iframe>
