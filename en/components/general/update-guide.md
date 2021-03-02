@@ -54,8 +54,8 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
     ```
     ```scss
         $my-button-theme: igx-button-theme(
-            raised-background: red,
-            outlined-outline-color: green
+            $raised-background: red,
+            $outlined-outline-color: green
         );
         
         @include igx-css-vars($my-button-theme);
@@ -71,11 +71,11 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
     ```
     ```scss
         $my-raised-button: igx-button-theme(
-            background: red
+            $background: red
         );
   
         $my-outlined-button: igx-button-theme(
-            border-color: red
+            $border-color: red
         );
   
         .my-raised-btn {
