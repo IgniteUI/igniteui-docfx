@@ -33,7 +33,6 @@ The following sample demonstrates how to enable native row adding in the @@igCom
     <iframe id="grid-add-row-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-add-row' width="100%" height="100%"
     seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<br/>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-add-row-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-add-row-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
@@ -44,7 +43,6 @@ The following sample demonstrates how to enable native row adding in the @@igCom
 <div class="sample-container loading" style="height:520px">
     <iframe id="tree-grid-row-adding-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-add-row' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular @@igComponent Row Adding Example"></iframe>
 </div>
-<br/>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="tree-grid-row-adding-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-row-adding-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
@@ -55,7 +53,6 @@ The following sample demonstrates how to enable native row adding in the @@igCom
    <div class="sample-container loading" style="height:510px">
     <iframe id="hierarchical-grid-row-editing-sample-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-add-row' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular @@igComponent Row Adding Example"></iframe>
 </div>
-<br/>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-row-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-row-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
