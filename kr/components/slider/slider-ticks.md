@@ -41,12 +41,12 @@ Let’s start with something simple and enable slider **ticks** below the slider
 public type = SliderType.RANGE;
 ```
 
-<div class="sample-container loading" style="height: 140px">
-    <iframe id="discrete-slider-ticks-bottom-iframe" data-src='{environment:demosBaseUrl}/interactions/discrete-slider-ticks-bottom' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="discrete-slider-ticks-bottom-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height: 140px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/interactions/discrete-slider-ticks-bottom" >
+</code-view>
+
 
 Let’s look at the ticks below the slider. Firstly the whole feature is enabled by setting [`showTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#showticks) to **true**. Then setting [`primaryTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#primaryticks) to six (because the rendering starts from 0), defines and spreads all primary **ticks** equally below the slider. [`SecondaryTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#secondaryticks) set up works a little bit different. It defines four secondary ticks between every two **primary** and if the calculation is right, 21 **ticks** will be rendered totally.
 
@@ -96,12 +96,12 @@ export class PriceRange {
 
 ```
 
-<div class="sample-container loading" style="height: 240px">
-    <iframe id="slider-ticks-bottomtotop-labels-iframe" data-src='{environment:demosBaseUrl}/interactions/slider-ticks-bottomtotop-labels' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="slider-ticks-bottomtotop-labels-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height: 240px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/interactions/slider-ticks-bottomtotop-labels" >
+</code-view>
+
 
 Following the example above, it is easy to determine that setting [`secondaryTickLabels`]({environment:angularApiUrl}/classes/igxslidercomponent.html#secondaryticklabels) to **false** disable all **secondary tick labels**, and passing **BottomToTop**(-90) property of [`TickLabelsOrientation`]({environment:angularApiUrl}/enums/ticklabelsorientation.html#range) enumeration to [`tickLabelsOrientation`]({environment:angularApiUrl}/classes/igxslidercomponent.html#ticklabelsorientation) input does the rotation.
 
@@ -131,12 +131,12 @@ The two buttons above are used just to control/update slider's **value**, but le
   public ticksOrientation = TicksOrientation.Mirror;
 ```
 
-<div class="sample-container loading" style="height: 140px">
-    <iframe id="slider-secondary-ticks-mirror-iframe" data-src='{environment:demosBaseUrl}/interactions/slider-secondary-ticks-mirror' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="slider-secondary-ticks-mirror-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height: 140px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/interactions/slider-secondary-ticks-mirror" >
+</code-view>
+
 
 The change of the orientation has come from [`ticksOrientation`]({environment:angularApiUrl}/classes/igxslidercomponent.html#ticksorientation) input, which was changed from **Bottom**(default) to **Mirror**. This mirrors the visualization of the **ticks** and duplicates them at the top as well. 
 
@@ -155,12 +155,12 @@ There is an edge case where **thumb label** is hidden intentionally, and it is w
 public ticksOrientation = TicksOrientation.Top;
 ```
 
-<div class="sample-container loading" style="height: 140px">
-    <iframe id="slider-primary-ticks-top-iframe" data-src='{environment:demosBaseUrl}/interactions/slider-primary-ticks-top' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="slider-primary-ticks-top-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height: 140px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/interactions/slider-primary-ticks-top" >
+</code-view>
+
 
 We haven’t done anything special here, except that we’ve changed the **orientation** of the **ticks** and positioned them at the top of the slider. We can see that, there isn’t any **thumb label** that is popping up.
 
@@ -179,12 +179,12 @@ The feature has been aligned with the **labels view** feature as well. Let's see
   public labels = ["04:00", "08:00", "12:00", "16:00", "20:00", "00:00"];
 ```
 
-<div class="sample-container loading" style="height: 140px">
-    <iframe id="slider-timeframe-iframe" data-src='{environment:demosBaseUrl}/interactions/slider-timeframe' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="slider-timeframe-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height: 140px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/interactions/slider-timeframe" >
+</code-view>
+
 
 Here, the [`primaryTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#primaryticks) hasn't been set, because it won’t be reflected in any way. The **length** of the collection takes precedence and control over it. This does not mean that we are not able to set any [`secondaryTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#secondaryticks). We are, but all **secondary ticks** will be empty(without any **labels**), which makes them seem more as some sort of indicators between the **primary ticks**.
 
@@ -224,12 +224,12 @@ Which means that it provides a reference to:
 
 From the **tackLabel** callback above, we can see that every **primary** tick **value** has been rounded. 
 
-<div class="sample-container loading" style="height: 140px">
-    <iframe id="slider-tick-labels-template-iframe" data-src='{environment:demosBaseUrl}/interactions/slider-tick-labels-template' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="slider-tick-labels-template-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height: 140px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/interactions/slider-tick-labels-template" >
+</code-view>
+
 
 ### API References
 <div class="divider--half"></div>

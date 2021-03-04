@@ -11,12 +11,12 @@ _language: kr
 
 #### 데모
 
-<div class="sample-container loading" style="height:600px">
-    <iframe id="grid-multi-row-layout-iframe" src='{environment:demosBaseUrl}/grid/grid-multi-row-layout' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-multi-row-layout-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기</button>
-</div>
+
+<code-view style="height:600px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/grid/grid-multi-row-layout" >
+</code-view>
+
 
 다중 행 레이아웃 선언은 [`igx-column-layout`]({environment:angularApiUrl}/classes/igxcolumnlayoutcomponent.html) 컴포넌트를 통해 이루어집니다. 각 `igx-column-layout` 컴포넌트는 하나 이상의 `igx-column` 컴포넌트를 포함하는 블록으로 간주해야 합니다. 일부 그리드 기능은 블록 수준에서 작동합니다(아래의 "기능 통합" 섹션에서 열거). 예를 들면, 가상화는 블록을 사용하여 가상 청크를 결정하므로 성능을 향상하려면 레이아웃이 허용하는 경우, 열을 더 많은 `igx-column-layout` 블록으로 분할합니다. 다중 행 레이아웃을 구성할 경우, 이러한 블록 이외에 열이 없어야 하며, `IgxColumnGroupComponent`를 사용하지 않아야 합니다. 다중 행 레이아웃은 [grid layout](https://www.w3.org/TR/css-grid-1/) 사양 상에서 구현되며 요구 사항을 준수해야 합니다.
 
@@ -104,12 +104,12 @@ The demo below adds additional navigation down/up via the <kbd>Enter</kbd> and <
 
 #### Demo
 
-<div class="sample-container loading" style="height:605px">
-    <iframe id="grid-mrl-custom-navigation-iframe" src='{environment:demosBaseUrl}/grid/grid-mrl-custom-navigation' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-mrl-custom-navigation-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height:605px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/grid/grid-mrl-custom-navigation" >
+</code-view>
+
 
 ### Layout Configurator
 
@@ -126,128 +126,12 @@ Sometimes when configuring a column layout it might be a challenge to calculate 
 
 By default we have set the same columns as our previous sample, but it can be cleared and configured to match your desired configuration.
 
-<div class="sample-container loading" style="height:500px">
-    <iframe id="grid-multi-row-layout-configuration-iframe" src='{environment:demosBaseUrl}/grid/grid-multi-row-layout-configuration' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
 
-### Styling
-The igxGrid allows styling through the [Ignite UI for Angular Theme Library](../themes/component-themes.md). The grid's [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) exposes a wide variety of properties, which allow the customization of all the features of the grid. 
+<code-view style="height:500px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/grid/grid-multi-row-layout-configuration" >
+</code-view>
 
-In the below steps, we are going through the steps of customizing the grid's Multi Row Layout styling.     
-
- #### Importing global theme
-To begin the customization of the Multi Row Layout feature, you need to import the `index` file, where all styling functions and mixins are located.
-
-```scss
-@import '~igniteui-angular/lib/core/styles/themes/index'
-```   
-
-#### Defining custom theme
-Next, create a new theme, that extends the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) and accepts the parameters, required to customize the feature layout as desired.   
-
-```scss
-$custom-theme: igx-grid-theme(
-    $cell-active-border-color: #ffcd0f,
-    $cell-selected-background: #6f6f6f,
-    $row-hover-background: #fde069,
-    $row-selected-background: #8d8d8d,
-    $header-background: #494949,
-    $header-text-color: #fff,
-    $sorted-header-icon-color: #ffcd0f,
-    $sortable-header-icon-hover-color: #e9bd0d
-);
-```    
-
-#### Defining a custom color palette
-In the approach, that was described above, the color values were hardcoded. Alternatively, you can achieve greater flexibility, using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.   
-`igx-palette` generates a color palette, based on provided primary and secondary colors.  
-
- ```scss
-$black-color: #494949;
-$yellow-color: #FFCD0F;
-
-$custom-palette: igx-palette(
-  $primary: $black-color,
-  $secondary: $yellow-color
-);
-```   
-
-After a custom palette has been generated, the `igx-color` function can be used to obtain different varieties of the primary and the secondary colors.
-
-```scss
-$custom-theme: igx-grid-theme(
-    $cell-active-border-color: igx-color($custom-palette, "secondary", 500),
-    $cell-selected-background: igx-color($custom-palette, "primary", 300),
-    $row-hover-background: igx-color($custom-palette, "secondary", 300),
-    $row-selected-background: igx-color($custom-palette, "primary", 100),
-    $header-background: igx-color($custom-palette, "primary", 500),
-    $header-text-color: igx-contrast-color($custom-palette, "primary", 500),
-    $sorted-header-icon-color: igx-color($custom-palette, "secondary", 500),
-    $sortable-header-icon-hover-color: igx-color($custom-palette, "secondary", 600)
-);
-```
-
-#### Defining custom schemas
-You can go even further and build flexible structure that has all the benefits of a [**schema**](../themes/schemas.md). The **schema** is the recipe of a theme.   
-Extend one of the two predefined schemas, that are provided for every component. In our case, we would use `$_light_grid`.   
-```scss
-$custom-grid-schema: extend($_light-grid,(
-    cell-active-border-color: (igx-color:('secondary', 500)),
-    cell-selected-background: (igx-color:('primary', 300)),
-    row-hover-background: (igx-color:('secondary', 300)),
-    row-selected-background: (igx-color:('primary', 100)),
-    header-background: (igx-color:('primary', 500)),
-    header-text-color: (igx-contrast-color:('primary', 500)),
-    sorted-header-icon-color: (igx-color:('secondary', 500)),
-    sortable-header-icon-hover-color: (igx-color:('secondary', 600)) 
-));
-```   
-
-In order for the custom schema to be applied, either `light`, or `dark` globals has to be extended. The whole process is actually supplying a component with a custom schema and adding it to the respective component theme afterwards.   
-
-```scss
-$my-custom-schema: extend($light-schema, ( 
-    igx-grid: $custom-grid-schema
-));
- $custom-theme: igx-grid-theme(
-    $palette: $custom-palette,
-    $schema: $my-custom-schema
-);
-```
-
-#### Applying the custom theme
-The easiest way to apply your theme is with a `sass` `@include` statement in the global styles file:  
-```scss
-@include igx-grid($custom-theme);
-```
-
-#### Scoped component theme
-
-In order for the custom theme do affect only specific component, you can move all of the styles you just defined from the global styles file to the custom component's style file (including the import of the `index` file).
-
-This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Component#encapsulation), your styles will be applied only to your custom component.
-
- >[!NOTE]
- >If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to penetrate this encapsulation using `::ng-deep` in order to style the grid.
- >[!NOTE]
- >Wrap the statement inside of a `:host` selector to prevent your styles from affecting elements *outside of* our component: 
-
-```scss
-:host {
-    ::ng-deep {
-        @include igx-grid($custom-theme);
-    }
-}
-```
-
-#### Demo 
-
-<div class="sample-container loading" style="height:755px">
-    <iframe id="grid-multi-row-layout-styling" data-src='{environment:demosBaseUrl}/grid/grid-multi-row-layout-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-multi-row-layout-styling" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
 
 ### API 참조
 <div class="divider--half"></div>
