@@ -11,14 +11,12 @@ _language: ja
 
 ## Angular Toast の例
 
-<div class="sample-container loading" style="height: 300px">
-    <iframe id="toast-sample-2-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/notifications/toast-sample-2" onload="onSampleIframeContentLoaded(this);" alt="Angular Toast の例"></iframe>
-</div>
-<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="toast-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toast-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
+
+<code-view style="height: 300px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/notifications/toast-sample-2" alt="Angular Toast の例">
+</code-view>
+
 <div class="divider--half"></div>
 
 
@@ -96,14 +94,12 @@ public showMessage() {
 サンプルが正しく構成されると、[SHOW] ボタンをクリックしたときに Toast が表示されます。自動的に隠す機能が無効で、[HIDE] ボタンのクリックで Toast が非表示になります。
 他の 2 つのコンポーネントでは、[`show()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#show) メソッドを介してさまざまなメッセージを渡し、コンテンツ プロジェクションを使用する方法を実際に見ることができます。
 
-<div class="sample-container loading" style="height: 450px">
-    <iframe id="toast-sample-3-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/toast-sample-3" class="lazyload"></iframe>
-</div>
 
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="toast-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toast-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
-</div>
+<code-view style="height: 450px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/notifications/toast-sample-3" >
+</code-view>
+
 
 ### 表示期間
 [`displayTime`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#displaytime) でミリ秒間隔に設定し、Toast コンポーネントが表示される期間を構成します。
@@ -117,46 +113,12 @@ public showMessage() {
 
 サンプルが正しく構成された場合、Toast が自動ですばやく非表示になります。
 
-<div class="sample-container loading">
-    <iframe id="toast-sample-4-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/toast-sample-4" class="lazyload"></iframe>
-</div>
 
-### 配置
-[`position`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#position) を使用すると、Toast の表示位置を構成します。デフォルトで、ページの下に表示されます。以下のサンプルで、通知が上位置に表示されます。
+<code-view style 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/notifications/toast-sample-4" >
+</code-view>
 
-```html
-<!--sample.component.html-->
-
-<div>
-    <button igxButton="raised" (click)="show(toast)">Show notification on top</button>
-    <igx-toast #toast message="Notification displayed" [position]="toastPosition"></igx-toast>
-</div>
-
-```
-
-```typescript
-// sample.component.ts
-
-import { IgxToastPosition } from 'igniteui-angular';
-
-...
-public toastPosition: IgxToastPosition;
-public show(toast) {
-    this.toastPosition = "top";
-    toast.show();
-}
-...
-
-```
-
-<div class="sample-container loading" style="height: 300px">
-    <iframe id="toast-sample-5-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/toast-sample-5" class="lazyload"></iframe>
-</div>
-
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="toast-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toast-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
 
 <div class="divider--half"></div>
 
@@ -265,13 +227,12 @@ $custom-toast-theme: igx-toast-theme(
 
 上記と同じ方法でテーマを含める必要があることに注意してください。
 
-<div class="sample-container loading" style="height: 600px">
-    <iframe id="toast-style-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/toast-style" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="toast-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toast-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
+
+<code-view style="height: 600px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/notifications/toast-style" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ## API リファレンス

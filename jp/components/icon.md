@@ -10,16 +10,12 @@ _language: ja
 
 ## Angular Icon の例
 
-<div class="sample-container loading" style="height: 75px">
-    <iframe id="icon-sample-1-iframe" seamless="" width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-display/icon-sample-1" onload="onSampleIframeContentLoaded(this);"  alt="Angular Icon の例">
-</iframe></div>
-<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="icon-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">                codesandbox で表示
-    </button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="icon-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">                StackBlitz で表示
-    </button>
-</div>
+
+<code-view style="height: 75px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-display/icon-sample-1" alt="Angular Icon の例">
+</code-view>
+
 
 <div class="divider--half"></div>
 
@@ -50,83 +46,12 @@ export class AppModule {}
 ```html
 <igx-icon color="#e41c77">home</igx-icon>
 ```
-<div class="sample-container loading" style="height: 40px">
-    <iframe id="icon-sample-3-iframe" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-display/icon-sample-3" class="lazyload">
-</iframe></div>
 
->[!NOTE]
-> `color` プロパティは、Ignite UI for Angular の次のメジャー バージョンで非推奨になります。アイコンの色を変更するには、CSS プロパティを使用します。
+<code-view style="height: 40px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-display/icon-sample-3" >
+</code-view>
 
-### アイコンの無効化
-
-アイコンを無効にするには、[`active`]({environment:angularApiUrl}/classes/igxiconcomponent.html#active) を使用できます。
-
-```html
-<igx-icon [active]="false">volume_off</igx-icon>
-```
-<div class="sample-container loading" style="height: 40px">
-    <iframe id="icon-sample-4-iframe" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-display/icon-sample-4" class="lazyload">
-</iframe></div>
-
-### コンテンツ プロジェクション
-
-コンテンツ プロジェクションでアイコンを設定できます。
-
-```html
-<igx-icon>bluetooth</igx-icon>
-```
-
-<div class="sample-container loading" style="height: 40px">
-    <iframe id="icon-sample-5-iframe" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-display/icon-sample-5" class="lazyload">
-</iframe></div>
-
-### アイコンのサイズ
-
-CSS を使用してアイコンをカスタマイズできます。アイコン サイズは `font-size` プロパティで変更できます。さらに中央揃えにするには、`width` と `height` プロパティに等しい値を設定します。
-
-```scss
-.custom-size{
-    font-size: 56px;
-    width: 56px;
-    height: 56px;
-}
-```
-<div class="sample-container loading" style="height: 80px">
-    <iframe id="icon-sample-2-iframe" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-display/icon-sample-2" class="lazyload">
-</iframe></div>
-
-## SVG アイコン
-
-SVG 画像はアイコンとして使用できます。はじめに [`IgxIconService`]({environment:angularApiUrl}/classes/igxiconservice.html) 依存を注入します。この例ではコンポーネントのコンストラクタに注入されますが、コード内の必要な場所に使用できます。
-
-[`addSvgIcon`]({environment:angularApiUrl}/classes/igxiconservice.html#addsvgicon) メソッドを SVG ファイルをキャッシュにインポートするために使用します。SVG をキャッシュした場合、アプリケーションのどこでも使用できるようになります。アイコン名とファイル URL がメソッドに必須のパラメーターです。ファミリも指定できます。HTML マークアップの SVG ファイルを使用できます。または `addSvgIconFromText` メソッドを使用して SVG ファイルをインポートして、SVC テキスト コンテンツを使用できます。
-
-* 同じ名前のアイコンが 2 つある場合に同じファミリ SVG アイコンが優先順位に従って表示されます。
-* SVG ファイルの画像の幅と高さは指定しないことをお勧めします。
-* 追加のポリフィル スクリプトがインターネット エクスプローラーで必要な場合があります。
-
-```typescript
-constructor(private iconService: IgxIconService) { }
-
-public ngOnInit() {
-    // register custom SVG icons
-    this.iconService.addSvgIcon("contains", "/assets/images/svg/contains.svg", "filter-icons");
-}
-```
-
-```html
-<igx-icon name="contains" family="filter-icons"></igx-icon>
-```
-
-<div class="sample-container loading" style="height: 70px">
-    <iframe id="svg-icon-sample-iframe" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-display/svg-icon-sample" class="lazyload">
-</iframe></div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="svg-icon-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">                codesandbox で表示
-    </button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="svg-icon-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">                StackBlitz で表示
-    </button>
-</div>
 
 ## サーバーサイド レンダリング時の注意
 
@@ -190,13 +115,12 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 ```
 
 ### デモ
-<div class="sample-container loading" style="height:75px">
-    <iframe id="icon-styling-sample-iframe" data-src='{environment:demosBaseUrl}/data-display/icon-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming" alt="Angular Icon の例"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="icon-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="icon-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
+
+<code-view style="height:75px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-display/icon-styling" alt="Angular Icon の例">
+</code-view>
+
 
 
 ## API リファレンス
