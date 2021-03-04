@@ -12,7 +12,6 @@ With only a few lines of code, users can easily localize the strings in Ignite U
 <div class="sample-container loading" style="height:550px">
     <iframe id="localization-sample-1-iframe" src='{environment:demosBaseUrl}/services/localization-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<br/>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="localization-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
