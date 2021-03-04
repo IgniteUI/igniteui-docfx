@@ -42,6 +42,55 @@ ng update @angular/cli
 
 例: 6.2.4 から 7.1.0 にアップデートする場合、[6.x .. から] セクションから始めて変更を適用していきます。
 
+## 11.1.x から 12.0.x の場合:
+### Themes:
+* Breaking Changes:
+    * `IgxButton` theme has been simplified. The number of theme params (`igx-button-theme`) has been reduced significantly and no longer includes prefixed parameters (`flat-*`, `raised-*`, etc.). Updates performed with `ng update` will migrate existing button themes, but some additional tweaking may be required to account for the absence of prefixed params. 
+
+  In order to achieve the same result as from the code snippet below.
+
+    ```html
+       <button igxButton="raised">Raised button</button>
+       <button igxButton="outlined">Outlined button</button>
+    ```
+    ```scss
+        $my-button-theme: igx-button-theme(
+            $raised-background: red,
+            $outlined-outline-color: green
+        );
+        
+        @include igx-css-vars($my-button-theme);
+    ```
+  You have to create a separate theme for each button type and scope it to a CSS selector.
+    ```html
+       <div class="my-raised-btn">
+           <button igxButton="raised">Raised button</button>
+       </div>
+       <div class="my-outlined-btn">
+           <button igxButton="outlined">Outlined button</button>
+       </div>
+    ```
+    ```scss
+        $my-raised-button: igx-button-theme(
+            $background: red
+        );
+  
+        $my-outlined-button: igx-button-theme(
+            $border-color: red
+        );
+  
+        .my-raised-btn {
+            @include igx-css-vars($my-raised-button);
+        }
+  
+        .my-outlined-btn {
+            @include igx-css-vars($my-outlined-button);
+        }
+    ```
+  As you can see, since the `igx-button-theme` params now have the same names for each button type, we have to scope our button themes to a CSS selector in order to have different colors for different types.
+  
+  Here you can see all the [available properties](https://www.infragistics.com/products/ignite-ui-angular/docs/sass/latest/index.html#function-igx-button-theme) of the `igx-button-theme` 
+
 ## 10.2.x から 11.0.x の場合:
 * IgxGrid、IgxTreeGrid、IgxHierarchicalGrid
     * グリッドでツール バーをインスタンス化される方法が変更されました。グリッド ツリーに投影される別個のコンポーネントになりました。したがって、`showToolbar` プロパティはすべてのグリッドから削除され、グリッド内のツールバーに関連する他のすべてのプロパティは非推奨です。
