@@ -493,7 +493,6 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
     <iframe id="datepicker-styling-sample-iframe" src='{environment:demosBaseUrl}/scheduling/datepicker-styling-sample' width="100%" height="100%" 
         seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
-<br/>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="datepicker-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="datepicker-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
