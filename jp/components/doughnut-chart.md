@@ -233,7 +233,7 @@ this.data = [
 チャートの半径をスケールする `radiusFactor` プロパティを設定してドーナツ チャートをアニメーション化できます。
 `startAngle` プロパティを設定してチャートが回転する間、チャートの角度が増加し続けるようにします。
 
-以下のコードでは、radiusFactor がチャートをサイズの 0.25％ 増加し、startAngle がチャートを 1 度回転しています。radiusFactor と startAngle が最大値に達すると、アニメーション フラグをリセットし、間隔をクリアしてアニメーションを停止します。
+以下のコードでは、radiusFactor がチャートをサイズの 0.25% 増加し、startAngle がチャートを 1 度回転しています。radiusFactor と startAngle が最大値に達すると、アニメーション フラグをリセットし、間隔をクリアしてアニメーションを停止します。
 
 ```ts
 window.setInterval(() => this.tick(), 15);
