@@ -944,11 +944,11 @@
   header: true
   sortable: true
 - name: Themes
-  href: themes/index.md
+  href: themes/index_new.md
   new: false
   items:
     - name: Palettes
-      href: themes/palette.md
+      href: themes/palettes.md
       new: false
     - name: Schemas
       href: themes/schemas.md
