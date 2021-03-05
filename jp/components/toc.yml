@@ -97,6 +97,9 @@
     - name: リモート データ操作
       href: grid/remote-data-operations.md
       new: false
+    - name: 列のデータ型
+      href: grid/column-types.md
+      new: true
     - name: 編集
       href: grid/editing.md
       new: true
@@ -232,6 +235,9 @@
     - name: リモート データ操作
       href: treegrid/remote-data-operations.md
       new: false
+    - name: 列のデータ型
+      href: treegrid/column-types.md
+      new: true
     - name: ロードオンデマンド
       href: treegrid/load-on-demand.md
       new: false
@@ -354,6 +360,9 @@
     - name: リモート データ操作
       href: hierarchicalgrid/remote-data-operations.md
       new: false
+    - name: 列のデータ型
+      href: hierarchicalgrid/column-types.md
+      new: true
     - name: ロードオンデマンド
       href: hierarchicalgrid/load-on-demand.md
       new: false

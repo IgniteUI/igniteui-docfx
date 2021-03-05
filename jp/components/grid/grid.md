@@ -11,7 +11,7 @@ Ignite UI for Angular Data Grid は、データの表示や操作が簡単にで
 
 ## Angular データ グリッドの例
 
-Boston Marathon 2020 – この Angular グリッドの例では、ユーザーが基本スタイルと Excel スタイルの両方のフィルタリング、ライブ データのソート、および[スパークライン](../sparkline.md) コンポーネント、[Circular Progress Indicator](../circular-progress.md) コンポーネントと [Icons](../icon.md) を含むグリッド集計とセル テンプレートの使用を実行する方法を確認できます。デモには、[Angular 改ページ](paging.md)のカスタム ページングとページごとの使用法も含まれています。
+Boston Marathon 2020 – この Angular グリッドの例では、ユーザーが基本スタイルと Excel スタイルの両方のフィルタリング、ライブ データのソート、および[スパークライン](../sparkline.md) コンポーネント、[Circular Progress Indicator](../circular-progress.md) コンポーネントと [Icons](../icon.md) を含むグリッド集計とセル テンプレートの使用を実行する方法を確認できます。デモには、[Angular ページネーション](paging.md)のカスタム ページングとページごとの使用法も含まれています。
 
 <div class="sample-container loading" style="height:700px">
     <iframe id="grid-sample-iframe" src='{environment:lobDemosBaseUrl}/grid/grid' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular データ グリッドの例"></iframe>
@@ -261,7 +261,7 @@ public initColumns(column: IgxGridColumn) {
 
 ### カスタム表示形式
 
-日付列または数値列のすべての値は、[`Angular DatePipe`](https://angular.io/api/common/DatePipe) または [`DecimalPipe`](https://angular.io/api/common/DecimalPipe) を介して変換されます。これは元の値を変更せず、列に表示される値のみを変更します。デフォルトでは、値はグリッドの[`ロケール`]({environment:angularApiUrl}/classes/igxgridcomponent.html#locale)に従って表示されます (指定しない場合、アプリケーション ロケールにフォールバックします。デフォルトは `'en-US'` です)。
+日付、数値、通貨、パーセント列のすべての値は、Angular [`DatePipe`](https://angular.io/api/common/DatePipe)、[`DecimalPipe`](https://angular.io/api/common/DecimalPipe)、[`CurrencyPipe`](https://angular.io/api/common/CurrencyPipe)、[`PercentPipe`](https://angular.io/api/common/PercentPipe) に応じて変換されます。これは元の値を変更せず、列に表示される値のみを変更します。データにまつわるすべての動作や操作はデータ ソースの値に基づいて実行されることに注意してください。デフォルトでは、値はグリッドの [`locale`]({environment:angularApiUrl}/classes/igxgridcomponent.html#locale) に従って表示されます (指定しない場合、アプリケーション ロケールにフォールバックします。デフォルトは `'en-US'` です)。
 
 詳細については、[「Setting up the locale of your app (英語)」](https://angular.io/guide/i18n#setting-up-the-locale-of-your-app)をご覧ください。
 
@@ -286,6 +286,8 @@ const pipeArgs: IColumnPipeArgs = {
 ```
 
 `OrderDate` 列は `format` および `timezone` プロパティのみに遵守しますが、`UnitPrice` は `digitsInfo` のみに遵守します。詳細については、[「Localizing your app (英語)」](https://angular.io/guide/i18n)で Angular の公式ドキュメントを参照してください。
+
+すべての利用可能な列データ型は、公式の[列タイプ トピック](column-types.md#デフォルトのテンプレート)にあります。
 
 ## Angular Grid データ構造
 
@@ -726,6 +728,7 @@ Grid のキーボード ナビゲーションは、さまざまなキーボー�
 * [列のピン固定](column-pinning.md)
 * [列のサイズ変更](column-resizing.md)
 * [選択](selection.md)
+* [列のデータ型](column-types.md#デフォルトのテンプレート)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

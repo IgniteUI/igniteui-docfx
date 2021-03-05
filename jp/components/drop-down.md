@@ -114,7 +114,7 @@ export class MyDropDownComponent {
 
 ### 項目のグループ化
 
-より有益な視覚情報を提供するには、[isHeader]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#isheader) プロパティを使用して項目をセマンティックにグループ化するか、[disabled]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#disabled) プロパティを使用して項目を非インタラクティブとして表示します。[selected]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#selected) プロパティを特定の項目に設定して選択済の項目にできます。`igx-drop-down` 項目は、HTML 要素/他の Web コンポーネントに含める、または設定できる `igxPrefix`、 `igxSuffix` および `igx-divider` ディレクティブをサポートしています。
+より有益な視覚情報を提供するには、[isHeader]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#isheader) プロパティを使用して項目をセマンティックにグループ化するか、[disabled]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#disabled) プロパティを使用して項目を非インタラクティブとして表示します。[selected]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#selected) プロパティを特定の項目に設定して選択済の項目にできます。`igx-drop-down` 項目は、HTML 要素/他の Web コンポーネントに含める、または設定できる `igxPrefix`、`igxSuffix` および `igx-divider` ディレクティブをサポートしています。
 
 ```html
 <!-- dropdown.component.html -->

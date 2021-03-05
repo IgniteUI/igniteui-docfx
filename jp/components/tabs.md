@@ -68,7 +68,7 @@ export class AppModule {}
 <div class="divider"></div>
 
 ## Tabs タイプ
-タブには、`fixed` および `contentfit` の 2 種類があります。[`type`]({environment:angularApiUrl}/classes/igxtabscomponent.html#tabstype) 入力を設定して、[`fixed`]({environment:angularApiUrl}/enums/tabstype.html#fixed) と [`contentfit`]({environment:angularApiUrl}/enums/tabstype.html#contentfit) タブを選択します。
+タブには、`fixed` および `contentfit` の 2 種類があります。[`type`]({environment:angularApiUrl}/classes/igxtabscomponent.html#type) 入力を設定してタブを選択します。
 - **Content-fit タブ** (デフォルト): タブ ヘッダーの幅はコンテンツ (ラベル、アイコン、両方) に基づいて決定され、すべてのタブのパディングが等しくなります。
 タブのタイプに関係なく、タブ ヘッダーの幅は指定した最小幅および最大幅によって制限されます。
 - **Fixed タブ**: すべてのタブ ヘッダーは同じ幅を持ち、Tabs コンテナに完全に収まります。スペースが足りない場合、スクロール ボタンが表示されます。
@@ -201,7 +201,7 @@ import {
     TabsRoutingComponent,
     TabsRoutingView1Component,
     TabsRoutingView2Component,
-    TabsRoutingView3Component 
+    TabsRoutingView3Component
 } from './tabs-routing.component';
 
 ...
@@ -236,29 +236,29 @@ export class AppRoutingModule { }
 <!-- tabs-routing.component.html -->
 
 <igx-tabs>
-  <igx-tab-item 
-    label="Tab 1" 
+  <igx-tab-item
+    label="Tab 1"
     icon="dashboard"
     routerLink="view1"
-    routerLinkActive 
+    routerLinkActive
     #rla1="routerLinkActive"
     [isSelected]="rla1.isActive"
   ></igx-tab-item>
 
-  <igx-tab-item 
-    label="Tab 2" 
+  <igx-tab-item
+    label="Tab 2"
     icon="check_circle_outline"
     routerLink="view2"
-    routerLinkActive 
+    routerLinkActive
     #rla2="routerLinkActive"
     [isSelected]="rla2.isActive"
   ></igx-tab-item>
 
-  <igx-tab-item 
-    label="Tab 3" 
+  <igx-tab-item
+    label="Tab 3"
     icon="radio-button_checked"
     routerLink="view3"
-    routerLinkActive 
+    routerLinkActive
     #rla3="routerLinkActive"
     [isSelected]="rla3.isActive"
   ></igx-tab-item>
@@ -332,8 +332,8 @@ $yellow-color: #F4D45C;
 $black-color: #292826;
 
 $dark-palette: igx-palette(
-  $primary: $black-color, 
-  $secondary: $yellow-color, 
+  $primary: $black-color,
+  $secondary: $yellow-color,
   $grays: #fff
 );
 ```
@@ -377,7 +377,6 @@ $dark-tabs: igx-tabs-theme(
 * [IgxTabItemComponent]({environment:angularApiUrl}/classes/igxtabitemcomponent.html)
 
 ## その他のリソース
-
 <div class="divider--half"></div>
 
 コミュニティに参加して新しいアイデアをご提案ください。

@@ -541,8 +541,10 @@ public maxPerPage = Number.MAX_SAFE_INTEGER;
 
 @@if (igxName === 'IgxGrid') {
 ```html
-<igx-grid #grid1 [data]="data | async"  [paging]="true" (perPageChange)="paginate()" (onPagingDone)="pagingDone($event)" 
-    [pagingMode]="mode" [totalRecords]="totalCount">
+<igx-grid #grid1 [data]="data | async" [isLoading]="isLoading"
+        [paging]="true" [(page)]="page" [(perPage)]="perPage" 
+        [pagingMode]="mode" [totalRecords]="totalCount" 
+        (onPagingDone)="paginate($event.current)">
     <igx-column field="ID"></igx-column>
     ...
 </igx-grid>
@@ -550,8 +552,8 @@ public maxPerPage = Number.MAX_SAFE_INTEGER;
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```html
-<igx-tree-grid #treeGrid [data]="data | async" childDataKey="Content" [paging]="true" [perPage]="10"
-        [pagingMode]="mode" [totalRecords]="totalCount" (onPagingDone)="paginate($event)">
+<igx-tree-grid #treeGrid [data]="data | async" childDataKey="Content" [(page)]="page" [(perPage)]="perPage"
+        [pagingMode]="mode" [totalRecords]="totalCount" (onPagingDone)="paginate($event.current)">
     <igx-column field="Name"></igx-column>
     ...
 </igx-tree-grid>
@@ -571,30 +573,35 @@ public maxPerPage = Number.MAX_SAFE_INTEGER;
 public totalCount = 0;
 public data: Observable<any[]>;
 public mode = GridPagingMode.remote;
+public isLoading = true;
 @ViewChild("grid1", { static: true }) public grid1: IgxGridComponent;
 
 private _dataLengthSubscriber;
 ...
+public set perPage(val: number) {
+    this._perPage = val;
+    this.paginate(0);
+}
+
 public ngOnInit() {
     this.data = this.remoteService.remoteData.asObservable();
+    this.data.subscribe(() => {
+        this.isLoading = false;
+    })
     this._dataLengthSubscriber = this.remoteService.getDataLength().subscribe((data) => {
         this.totalCount = data;
-        this.grid1.isLoading = false;
     });
 }
 ...
 public ngAfterViewInit() {
-    this.grid1.isLoading = true;
-    this.remoteService.getData(0, this.grid1.perPage);
-}
-
-public pagingDone(page) {
-    const skip = page.current * this.grid1.perPage;
-    this.remoteService.getData(skip, this.grid1.perPage);
+    const skip = this.page * this.perPage;
+    this.remoteService.getData(skip, this.perPage);
 }
 
 public paginate() {
-    this.remoteService.getData(0, this.grid1.perPage);
+    this.isLoading = true;
+    const skip = page * this.perPage;
+    this.remoteService.getData(skip, this.perPage);
 }
 ```
 
@@ -640,10 +647,12 @@ public paginate() {
 <ng-template #customPager let-api>
     <igx-paginator #paginator
         [totalRecords]="totalCount"
+        [(page)]="page" 
         [(perPage)]="perPage"
         [selectOptions]="selectOptions"
         [displayDensity]="grid1.displayDensity"
-        (pageChange)="paginate($event)">
+        (pageChange)="paginate($event)"
+        (perPageChange)="perPageChange($event)">
     </igx-paginator>
 </ng-template>
 ```
@@ -680,10 +689,11 @@ public paginate(page: number) {
 <ng-template #customPager let-api>
     <igx-paginator #paginator
         [totalRecords]="totalCount"
+        [(page)]="page" 
         [(perPage)]="perPage"
         [selectOptions]="selectOptions"
         [displayDensity]="grid1.displayDensity"
-        (pageChange)="paginate($event)">
+        (pageChange)="paginate($event.current)">
     </igx-paginator>
 </ng-template>
 ```
@@ -747,7 +757,7 @@ public paginate(page: number) {
 最後にグリッドのテンプレートを宣言します。
 @@if (igxName === 'IgxGrid') {
 ```html
-<@@igSelector #@@igObjectRef [data]="data | async" width="960px" height="550px" [paging]="true" >
+<@@igSelector #@@igObjectRef [data]="data | async" width="960px" height="550px" [paging]="true" [(perPage)]="perPage" [paginationTemplate]="customPager">
     <igx-column field="ID"></igx-column>
     <igx-column field="ProductName"></igx-column>
     <igx-column field="QuantityPerUnit"></igx-column>
@@ -759,7 +769,8 @@ public paginate(page: number) {
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid [paging]="true" [primaryKey]="'CustomerID'" [height]="'550px'" [width]="'100%'" #hierarchicalGrid>
+<igx-hierarchical-grid #hierarchicalGrid [data]="data | async" [paging]="true" 
+        [(perPage)]="perPage" [(page)]="page" [paginationTemplate]="customPager">
     <igx-column field="CustomerID"></igx-column>
         <igx-column field="CompanyName"></igx-column>
         <igx-column field="ContactName"></igx-column>

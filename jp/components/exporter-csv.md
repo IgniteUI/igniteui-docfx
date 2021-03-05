@@ -141,14 +141,14 @@ CSV Exporter は複数のエクスポート形式タイプをサポートしま�
 
 ## エクスポートされたコンテンツのカスタマイズ
 
-上記の例では、CSV Exporter サービスで利用可能なデータをすべてエクスポートしましたが、特定の行や列をエクスポートしない場合の実装は、各列で発生される [`onColumnExport`]({environment:angularApiUrl}/classes/igxcsvexporterservice.html#oncolumnexport) または各行で発生される [`onRowExport`]({environment:angularApiUrl}/classes/igxcsvexporterservice.html#onrowexport) イベントを処理し、イベント引数オブジェクトの [`cancel`]({environment:angularApiUrl}/interfaces/irowexportingeventargs.html#cancel) プロパティを `true` に設定して各イベントをキャンセルできます。
+上記の例では、CSV Exporter サービスで利用可能なデータをすべてエクスポートしましたが、特定の行や列をエクスポートしない場合の実装は、各列で発生される [`columnExporting`]({environment:angularApiUrl}/classes/igxcsvexporterservice.html#columnexporting) または各行で発生される [`rowExporting`]({environment:angularApiUrl}/classes/igxcsvexporterservice.html#rowexporting) イベントを処理し、イベント引数オブジェクトの [`cancel`]({environment:angularApiUrl}/interfaces/irowexportingeventargs.html#cancel) プロパティを `true` に設定して各イベントをキャンセルできます。
 
 以下の例では、名前が "Age" で、インデックスが 1 の場合、エクスポートから列を除外します。
 
 ```typescript
 // component.ts
 
-this.csvExportService.onColumnExport.subscribe((args: IColumnExportingEventArgs) => {
+this.csvExportService.columnExporting.subscribe((args: IColumnExportingEventArgs) => {
   if (args.header == "Age" && args.columnIndex == 1) {
       args.cancel = true;
   }
