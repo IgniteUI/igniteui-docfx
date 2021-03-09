@@ -143,7 +143,7 @@ public max: string = "06:15:30 PM";
 private toast;
 
 public onValidationFailed() {
-    this.toast.show();
+    this.toast.open();
 }
 ```
 
