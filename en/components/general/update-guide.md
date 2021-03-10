@@ -41,6 +41,55 @@ Unfortunately not all changes can be automatically updated. Changes bellow are s
 
 For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from the "From 6.x .." section apply those changes and work your way up:
 
+## From 11.1.x to 12.0.x
+### Themes:
+* Breaking Changes:
+    * `IgxButton` theme has been simplified. The number of theme params (`igx-button-theme`) has been reduced significantly and no longer includes prefixed parameters (`flat-*`, `raised-*`, etc.). Updates performed with `ng update` will migrate existing button themes, but some additional tweaking may be required to account for the absence of prefixed params. 
+
+  In order to achieve the same result as from the code snippet below.
+
+    ```html
+       <button igxButton="raised">Raised button</button>
+       <button igxButton="outlined">Outlined button</button>
+    ```
+    ```scss
+        $my-button-theme: igx-button-theme(
+            $raised-background: red,
+            $outlined-outline-color: green
+        );
+        
+        @include igx-css-vars($my-button-theme);
+    ```
+  You have to create a separate theme for each button type and scope it to a CSS selector.
+    ```html
+       <div class="my-raised-btn">
+           <button igxButton="raised">Raised button</button>
+       </div>
+       <div class="my-outlined-btn">
+           <button igxButton="outlined">Outlined button</button>
+       </div>
+    ```
+    ```scss
+        $my-raised-button: igx-button-theme(
+            $background: red
+        );
+  
+        $my-outlined-button: igx-button-theme(
+            $border-color: red
+        );
+  
+        .my-raised-btn {
+            @include igx-css-vars($my-raised-button);
+        }
+  
+        .my-outlined-btn {
+            @include igx-css-vars($my-outlined-button);
+        }
+    ```
+  As you can see, since the `igx-button-theme` params now have the same names for each button type, we have to scope our button themes to a CSS selector in order to have different colors for different types.
+  
+  Here you can see all the [available properties](https://www.infragistics.com/products/ignite-ui-angular/docs/sass/latest/index.html#function-igx-button-theme) of the `igx-button-theme` 
+ 
 ## From 10.2.x to 11.0.x
 * IgxGrid, IgxTreeGrid, IgxHierarchicalGrid
     * The way the toolbar is instantiated in the grid has changed. It is now a separate component projected in the grid tree. Thus the `showToolbar` property is removed from
@@ -66,31 +115,6 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
         primaryKey="ID" [selectedRows]="mySelectedRows">
         <!-- ... -->
     </igx-grid>
-
-### From 9.0.x to 10.0.x
-
-* IgxDropdown
-    * The display property of the dropdown item has been changed from `flex` to `block`. We have done this in order to have truncated text enabled by default. Due to that change, if there is more than text in the content of the dropdown item, the layout needs to be handled on the application level.
-
-    * The following example demonstrates how to style a dropdown item with an icon and text content so that they are vertically aligned.
-
-    ```html
-    <igx-drop-down-item>
-        <div class="my-styles">
-            <igx-icon>alarm</igx-icon>
-            <span>item text</span>
-        </div>
-    </igx-drop-down-item>
-    ```
-    ```scss
-    .my-styles {
-        display: flex;
-        align-items: center;
-
-        span {
-          margin-left: 8px;
-        }
-    }
 
 ## From 9.0.x to 10.0.x
 * IgxDropdown
