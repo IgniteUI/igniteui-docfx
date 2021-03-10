@@ -35,7 +35,7 @@ The Step Chart is often used to show the change of value over time such as the a
 
 <div class="divider--half"></div>
 
-## Angular Advanced Step Chart
+## Angular Step Chart Styling
 
 If you need a Step Chart with more features such as composite other series, you can configure the markers, marker brushes, marker outlines, series brushes and series outlines as demonstrated below.
 
@@ -45,10 +45,10 @@ If you need a Step Chart with more features such as composite other series, you 
 
 <div class="divider--half"></div>
 
-## Additional Resources
+<!-- ## Additional Resources -->
 
 <!-- TODO list topic links related to this topic -->
 
+<!-- TODO list API links used in this topic 
 ## API Members
-
-<!-- TODO list API links used in this topic -->
+-->

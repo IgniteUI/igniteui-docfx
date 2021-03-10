@@ -9,6 +9,8 @@ mentionedTypes: ["XamCategoryChart", "XamDataChart"]
 
 Angular Line Chart, or Line Graph, is a type of category line graph that shows the continuous data values represented by points connected by straight line segments of one or more quantities over a period of time. It’s often used to show trends and perform comparative analysis. The Y-Axis (labels on left side) show a numeric value, while the X-Axis (bottom labels) show a time-series or comparison category. You can include one or more data sets to compare, which would render as multiple lines in the chart.
 
+With multiple series, our Angular Line Chart requires more visual indicators for end-users to easily perceive what data is displayed. To improve the experience, we need to add a legend for the multiple series. First, we will add a legend object to our application and then we will set it to the [`IgxLegendComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlegendcomponent.html) property of the Angular `XamCategoryChart`. This gives the benefit for our users to more easily comprehend what data set each line corresponds to.
+
 <div class="sample-container loading" style="height: 400px">
     <iframe id="cc-chart-with-legend" src='{environment:dvDemosBaseUrl}/charts/category-chart-line-chart-with-legend' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Line Chart With Legend"></iframe>
 </div>
@@ -126,22 +128,6 @@ Since the Angular Line Chart allows you to combine multiple series and compare o
 
 <div class="divider--half"></div>
 
-## Angular Line Chart with Legend
-
-With multiple series, our Angular Line Chart requires more visual indicators for end-users to easily perceive what data is displayed. To improve the experience, we need to add a legend for the multiple series. First, we will add a legend object to our application and then we will set it to the [`IgxLegendComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlegendcomponent.html) property of the Angular `XamCategoryChart`. This gives the benefit for our users to more easily comprehend what data set each line corresponds to.
-
-<div class="sample-container loading" style="height: 400px">
-    <iframe id="cc-line-chart-with-legend" data-src='{environment:dvDemosBaseUrl}/charts/category-chart-line-chart-with-legend' width="100%" height="100%" seamless frameBorder="0" class="lazyload" alt="Angular Line Chart with Legend"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="category-chart-line-chart-with-legend-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
-    </button>
-
-
-</div>
-
-<div class="divider--half"></div>
-
 ## Angular Line Chart with Live Data
 
 The Angular Line Chart component is capable of handling high volumes of data, ranging into millions of data points, and updating them every few milliseconds as demonstrated in the following demo.
@@ -182,9 +168,10 @@ Once our chart is set up, we may want to make some further styling customization
 - [Series Tooltips](chart-features-tooltips.md)
 - [Series Trendlines](chart-features-trendlines.md) -->
 
+<!-- TODO list API links used in this topic 
 ## API Members
-
--   `XamCategoryChart`
--   [`ChartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html)
--   `ItemsSource`
--   [`IgxLegendComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlegendcomponent.html)
+- `XamCategoryChart`
+- `ChartType`
+- `ItemsSource`
+- `Legend`
+-->

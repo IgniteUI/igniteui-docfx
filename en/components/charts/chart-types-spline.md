@@ -35,7 +35,7 @@ Since the Spline Chart allows you to combine multiple series and compare or see 
 
 <div class="divider--half"></div>
 
-## Angular Advanced Spline Chart
+## Angular Spline Chart Styling
 
 If you need a Spline Chart with more features such as composite other series, you can configure the markers, marker brushes, marker outlines, series brushes and series outlines as demonstrated below.
 
@@ -49,27 +49,26 @@ If you need a Spline Chart with more features such as composite other series, yo
 
 The Stacked Spline Chart is often used to show the change of value over time such as the amount of renewable electricity produced for several years between regions, as we have shown in the example below.
 
-<!-- TODO copy and combine content (code snippets, description) from these topics:
-	data-chart-type-stacked-spline-series.md
-    data-chart-type-stacked-100-spline-series.md
--->
+<div class="sample-container loading" style="height: 400px">
+    <iframe id="cc-chart-with-legend" src='{environment:dvDemosBaseUrl}/charts/data-chart-stacked-spline-chart' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Stacked Spline Chart"></iframe>
+</div>
 
-## Angular Scatter Spline Chart
+<div class="divider--half"></div>
 
-<!-- TODO copy and combine content (code snippets, description) from these topics:
-	data-chart-type-scatter-spline-series.md
--->
+## Angular Stacked 100 Spline Chart
 
-## Angular Polar Spline Chart
+The Stacked 100 Spline Chart is identical to the Stacked Spline Chart in all aspects except in their treatment of the values on y-axis. Instead of presenting a direct representation of the data, the Stacked 100 Spline Chart presents the data in terms of percent of the sum of all values in a data point. The example below shows a study made for online shopping traffic by departments via tablet, phone and personal computers.
 
-<!-- TODO copy and combine content (code snippets, description) from these topics:
-	data-chart-type-polar-spline-series.md
--->
+<div class="sample-container loading" style="height: 400px">
+    <iframe id="cc-chart-with-legend" src='{environment:dvDemosBaseUrl}/charts/data-chart-stacked-100-spline-chart' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Stacked 100 Spline Chart"></iframe>
+</div>
 
-## Additional Resources
+<div class="divider--half"></div>
+
+<!-- ## Additional Resources -->
 
 <!-- TODO list topic links related to this topic -->
 
+<!-- TODO list API links used in this topic 
 ## API Members
-
-<!-- TODO list API links used in this topic -->
+-->

@@ -9,6 +9,12 @@ mentionedTypes: ["XamDataChart"]
 
 Angular Bar Charts, Bar Graphs, or Horizontal Bar Charts, are among the most common category chart types used to quickly compare frequency, count, total, or average of data in different categories with data encoded by horizontal bars or equal width and differing lengths. They are ideal for showing variations in the value of an item over time. Data is represented using a collection of rectangles that extend from the left to right of the chart towards the values of data points. Like a Column Chart, or Column Graph, where bars are displayed vertically (up and down), the bar chart is rendered like the column chart, but with 90 degrees clockwise rotation and a horizontal display (left to right).
 
+<div class="sample-container loading" style="height: 400px">
+    <iframe id="cc-chart-with-legend" src='{environment:dvDemosBaseUrl}/charts/data-chart-bar-chart-with-legend' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Bar Chart with Legend"></iframe>
+</div>
+
+<div class="divider--half"></div>
+
 There are several common use cases for choosing a Bar Chart:
 
 -   You need to show trends over time or a numeric value change in a category of data
@@ -51,14 +57,6 @@ Common Angular Bar Chart Scenarios:
 -   Stock Charts
 -   Any String Value Comparing a Numeric Value or Time-Series Value
 
-## Angular Bar Chart Example
-
-In this example, the Bar Chart is comparing the total number of Olympic Medals (the Category) won between the USA and Russia from 1996 to 2016. The Y-Axis, or labels on the left of the chart, are displaying the time-series values of Year. The X-Axis, or labels on the bottom of the chart, are displaying the number of medals won. The Bar Chart is paired with a CategoryYAxis and a NumericXAxis.
-
-<div class="sample-container loading" style="height: 400px">
-    <iframe id="cc-chart-with-legend" src='{environment:dvDemosBaseUrl}/charts/data-chart-bar-chart-with-legend' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Bar Chart with Legend"></iframe>
-</div>
-
 <div class="divider--half"></div>
 
 ## Angular Bar Chart with Single Series
@@ -82,9 +80,9 @@ The Bar Chart is able to render multiple columns per category for comparison pur
 
 <div class="divider--half"></div>
 
-## Angular Advanced Bar Chart
+## Angular Styling Bar Chart
 
-In this example, the Bar Chart uses annotations to show a callout with the value for each bar.
+In this example, the Bar Chart uses annotations values for each bar demonstrating a percent comparison between popular online retail shopping sites using the CalloutLayer.
 
 <div class="sample-container loading" style="height: 400px">
     <iframe id="cc-chart-with-legend" src='{environment:dvDemosBaseUrl}/charts/data-chart-bar-chart-styling' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Bar Chart Styling"></iframe>
@@ -98,8 +96,6 @@ A Stacked Bar Chart, or Stacked Bar Graph, is a type of category chart that is u
 
 The Stacked Bar Chart differs from the Bar Chart in that the data points representing your data are stacked next to each other horizontally to visually group your data. Each stack can contain both positive and negative values. All positive values are grouped on the positive side of the X-Axis, and all negative values are grouped on the negative side of the X-Axis.
 
-### Angular Stacked Bar Chart Example
-
 In this example of an Stacked Bar Chart, we have a Numeric X Axis (bottom labels of the chart) and a Category Y Axis (left labels of the chart).
 
 <div class="sample-container loading" style="height: 400px">
@@ -112,8 +108,6 @@ In this example of an Stacked Bar Chart, we have a Numeric X Axis (bottom labels
 
 The Angular Stacked 100 Bar Chart is identical to the Angular stacked bar chart in all aspects except in their treatment of the values on X-Axis (bottom labels of the chart). Instead of presenting a direct representation of the data, the stacked 100 bar chart presents the data in terms of percent of the sum of all values in a data point.
 
-### Angular Stacked 100 Bar Chart Example
-
 In this example of a Stacked 100 Bar Chart, the Energy Product values are shown as a 100% value of all of the data in the fragments of the horizontal bars.
 
 <div class="sample-container loading" style="height: 400px">
@@ -122,32 +116,10 @@ In this example of a Stacked 100 Bar Chart, the Energy Product values are shown 
 
 <div class="divider--half"></div>
 
-## Angular Range Bar Chart
-
-The Ignite UI for Angular range column chart belongs to a group of range charts and is rendered using two lines with the area between the lines filled in. This type of series emphasizes the amount of change between low values and high values in the same data point over a period of time or compares multiple items. Range values are represented on the y-axis and categories are displayed on the X-Axis.
-
-### Angular Range Bar Chart Example
-
-In this Range Bar Chart example, weather data variance between high and low temperatures by date is shown.
-
-<!-- <div class="sample-container loading" style="height: 500px">
-    <iframe></iframe>
-</div>
-<div class="divider--half"></div> -->
-
-## Styling the Angular Bar Chart
-
-Annotations can be added to the Bar Chart. The following example demonstrates a percent comparison between popular online retail shopping sites.
-
-<!-- <div class="sample-container loading" style="height: 500px">
-    <iframe></iframe>
-</div>
-<div class="divider--half"></div> -->
-
 ## Additional Resources
 
 -   [Column Chart](chart-types-column.md)
 
+<!-- TODO list API links used in this topic 
 ## API Members
-
-<!-- TODO list API links used in this topic -->
+-->

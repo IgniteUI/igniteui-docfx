@@ -22,61 +22,54 @@ You can explicitly specify the chart type by setting the chartType property to o
 ## Angular Stock Chart with Multiple Series
 
 <div class="sample-container loading" style="height: 400px">
-    <iframe id="cc-chart-with-legend" src='{environment:dvDemosBaseUrl}/charts/financial-chart-stock-index-chart' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Stock Index Chart"></iframe>
+    <iframe id="cc-chart-with-legend" src='{environment:dvDemosBaseUrl}/charts/financial-chart-multiple-data' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Stock Index Chart"></iframe>
 </div>
 
 <div class="divider--half"></div>
 
-## Angular Stock Chart Example
+<div class="divider--half"></div>
 
-In this example, the financial chart is representing the S&P 500 over the course of a year.
+## Angular Stock Chart
+
+In this example the financial chart is representing the S&P 500 over the course of a year; useful for investors and conducting technical analysis and forecasting future pricing/reports.
+
+<div class="sample-container loading" style="height: 400px">
+    <iframe id="fc-chart-stock-index-chart" src='{environment:dvDemosBaseUrl}/charts/financial-chart-stock-index-chart' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Stock Index Chart"></iframe>
+</div>
+
+<div class="divider--half"></div>
+
+## Angular Stock Chart Styling
+
+If you need a Financial Chart with more features such as composite other series, you can configure the thickness, outlines, brushes, negative outlines, negative brushes as demonstrated below. In this example, the financial chart is comparing revenue between Amazon, Microsoft and Tesla.
+
+<div class="sample-container loading" style="height: 400px">
+    <iframe id="fc-chart-styling-chart" src='{environment:dvDemosBaseUrl}/charts/financial-chart-styling' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Stock Index Chart"></iframe>
+</div>
+
+<div class="divider--half"></div>
 
 <!-- TODO use this iframe which will point to a new sample:
 <iframe src='{environment:dvDemosBaseUrl}/charts/category-chart-type-Line' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Financial Chart Example"></iframe> -->
 
-## Angular Simple Stock Chart
+## Angular Chart Annotations
 
-<!-- TODO show code for FinancialChart with:
-- the dataSource set to multiple data sources
-- the chartType property set to Candlestick
-- the zoomSliderType property set to Candlestick
--->
+<div class="sample-container loading" style="height: 400px">
+    <iframe id="fc-chart-annotations" src='{environment:dvDemosBaseUrl}/charts/financial-chart-annotations' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Chart Annotations"></iframe>
+</div>
 
-## Composite Angular Stock Chart
+<div class="divider--half"></div>
+
+## Angular Chart Panes
 
 In this example, the financial chart is plotting revenue for United States.
 
-<!-- TODO show code for FinancialChart with:
-- the dataSource set to multiple data sources
-- the volumeType="Column"
-- the overlayType="BollingerBands"
-- the indicatorTypes="AverageTrueRange"
--->
+<div class="sample-container loading" style="height: 400px">
+    <iframe id="fc-chart-panes" src='{environment:dvDemosBaseUrl}/charts/financial-chart-panes' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Chart Panes"></iframe>
+</div>
 
-## Styling Angular Stock Chart
+<div class="divider--half"></div>
 
-In this example, the financial chart is comparing revenue between Amazon, Microsoft and Tesla.
-
-<!-- TODO show code for FinancialChart with:
-- the brushes and outlines properties set
-- the thickness property set
--->
-
-## Angular Advanced Stock Chart
-
-If you need a Financial Chart with more features such as composite other series, you can configure the thickness, outlines, brushes, negative outlines, negative brushes as demonstrated below. 
-
-<!-- TODO copy and combine content (code snippets, description) from these topics:
-	data-chart-type-financial-candlestick-series.md
-	data-chart-type-financial-ohlc-series.md
-	data-chart-type-financial-line-indicators.md
-	data-chart-type-financial-overlays.md
--->
-
-## Additional Resources
-
-<!-- TODO list topic links related to this topic -->
-
+<!-- TODO list API links used in this topic 
 ## API Members
-
-<!-- TODO list API links used in this topic -->
+-->
