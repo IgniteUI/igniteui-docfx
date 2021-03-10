@@ -7,7 +7,9 @@ mentionedTypes: ["XamDataChart"]
 
 # Angular Polar Chart
 
-<!-- TODO add introduction to and purpose of using about using radial series in data-chart -->
+Angular Polar Chart is a group of series that use the polar (angle, radius) coordinate system instead of the Cartesian (x, y) coordinate system to plot data in chart. In other words, Polar Chart take concepts of Scatter Series and wrap them around a circle rather than stretching along a horizontal line. This group of series is used to show the relationship among the items in several distinct series of data using the polar coordinates system.
+
+Polar Chart draw attention to uneven intervals or clusters of data. They are often used to plot scientific data (e.g. wind direction and speed, direction, and strength of magnetic field, location of objects in solar system), and can highlight the deviation of collected data from predicted results.
 
 ## Angular Polar Chart Example
 

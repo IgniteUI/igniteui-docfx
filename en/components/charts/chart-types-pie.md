@@ -7,12 +7,12 @@ mentionedTypes: ['XamPieChart','SliceSelectionMode','PieSliceOthersContext']
 
 # Angular Pie Chart Overview
 
-A Pie Chart, or Pie Graph, is a part-to-whole chart that shows how categories (parts) of a data set add up to a total (whole) value. Categories are rendered as sections in a circular, or pie-shaped graph. Each section, or pie slice, has an arc length proportional to its underlying data value. Categories are shown in proportion to other categories based on their value percentage to the total value being analyzed, as parts of 100 or 100%.
+Angular Pie Chart, or Pie Graph, is a part-to-whole chart that shows how categories (parts) of a data set add up to a total (whole) value. Categories are rendered as sections in a circular, or pie-shaped graph. Each section, or pie slice, has an arc length proportional to its underlying data value. Categories are shown in proportion to other categories based on their value percentage to the total value being analyzed, as parts of 100 or 100%.
 
 Pie Charts are appropriate for small data sets and are easy to read at a glance. Pie charts are just one type of part-to-whole visualization. Others include: 
 
 -   Pie 
--   Donut (Ring) 
+-   Doughnut (Ring) 
 -   Funnel 
 -   Stacked Area  
 -   Stacked 100% Area (Stacked Percentage Area) 
@@ -170,6 +170,8 @@ Additionally you can use the [`legendItemTemplate`]({environment:dvApiBaseUrl}/p
 <div class="divider--half"></div>
 
 ### How to Show Percentage in Pie Chart Legend
+
+In this example, the Pie chart is comparing market share between common household utilities.
 
 <!-- TODO -->
 
