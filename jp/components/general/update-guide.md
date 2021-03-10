@@ -42,6 +42,55 @@ ng update @angular/cli
 
 例: 6.2.4 から 7.1.0 にアップデートする場合、[6.x .. から] セクションから始めて変更を適用していきます。
 
+## 11.1.x から 12.0.x の場合:
+### テーマ:
+* 重大な変更:
+    * `IgxButton` テーマが簡略化されました。テーマ パラメーター (`igx-button-theme`) の数が大幅に削減され、接頭辞付きのパラメーター (`flat-*`、`raised-*` など) が含まれなくなりました。`ng update` で実行された更新は、既存のボタン テーマを移行しますが、接頭辞付きのパラメーターがないことを考慮して、いくつかの追加の調整が必要になる場合があります。 
+
+  以下のコード スニペットと同じ結果を得るには: 
+
+    ```html
+       <button igxButton="raised">Raised button</button>
+       <button igxButton="outlined">Outlined button</button>
+    ```
+    ```scss
+        $my-button-theme: igx-button-theme(
+            $raised-background: red,
+            $outlined-outline-color: green
+        );
+        
+        @include igx-css-vars($my-button-theme);
+    ```
+  ボタン タイプごとに個別のテーマを作成し、CSS セレクターにスコープする必要があります。
+    ```html
+       <div class="my-raised-btn">
+           <button igxButton="raised">Raised button</button>
+       </div>
+       <div class="my-outlined-btn">
+           <button igxButton="outlined">Outlined button</button>
+       </div>
+    ```
+    ```scss
+        $my-raised-button: igx-button-theme(
+            $background: red
+        );
+  
+        $my-outlined-button: igx-button-theme(
+            $border-color: red
+        );
+  
+        .my-raised-btn {
+            @include igx-css-vars($my-raised-button);
+        }
+  
+        .my-outlined-btn {
+            @include igx-css-vars($my-outlined-button);
+        }
+    ```
+  ご覧のとおり、`igx-button-theme` パラメーターはボタン タイプごとに同じ名前になっているため、タイプごとに異なる色を使用するには、ボタン テーマのスコープを CSS セレクターに設定する必要があります。
+  
+  ここでは、`igx-button-theme` のすべての[利用可能なプロパティ](https://jp.infragistics.com/products/ignite-ui-angular/docs/sass/latest/index.html#function-igx-button-theme)を確認できます。  
+
 ## 10.2.x から 11.0.x の場合:
 * IgxGrid、IgxTreeGrid、IgxHierarchicalGrid
     * グリッドでツール バーをインスタンス化される方法が変更されました。グリッド ツリーに投影される別個のコンポーネントになりました。したがって、`showToolbar` プロパティはすべてのグリッドから削除され、グリッド内のツールバーに関連する他のすべてのプロパティは非推奨です。
