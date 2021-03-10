@@ -45,7 +45,7 @@ ng update @angular/cli
 ## 11.1.x から 12.0.x の場合:
 ### テーマ:
 * 重大な変更:
-    * `IgxButton` テーマが簡略化されました。テーマ パラメーター ( `igx-button-theme`) の数が大幅に削減され、接頭辞付きのパラメーター (`flat- *`、`raised- *` など) が含まれなくなりました。`ng update` で実行された更新は、既存のボタン テーマを移行しますが、接頭辞付きのパラメーターがないことを考慮して、いくつかの追加の調整が必要になる場合があります。 
+    * `IgxButton` テーマが簡略化されました。テーマ パラメーター (`igx-button-theme`) の数が大幅に削減され、接頭辞付きのパラメーター (`flat-*`、`raised-*` など) が含まれなくなりました。`ng update` で実行された更新は、既存のボタン テーマを移行しますが、接頭辞付きのパラメーターがないことを考慮して、いくつかの追加の調整が必要になる場合があります。 
 
   以下のコード スニペットと同じ結果を得るには: 
 
@@ -89,7 +89,7 @@ ng update @angular/cli
     ```
   ご覧のとおり、`igx-button-theme` パラメーターはボタン タイプごとに同じ名前になっているため、タイプごとに異なる色を使用するには、ボタン テーマのスコープを CSS セレクターに設定する必要があります。
   
-  ここでは、 `igx-button-theme` のすべての[利用可能なプロパティ](https://jp.infragistics.com/products/ignite-ui-angular/docs/sass/latest/index.html#function-igx-button-theme)を確認できます。  
+  ここでは、`igx-button-theme` のすべての[利用可能なプロパティ](https://jp.infragistics.com/products/ignite-ui-angular/docs/sass/latest/index.html#function-igx-button-theme)を確認できます。  
 
 ## 10.2.x から 11.0.x の場合:
 * IgxGrid、IgxTreeGrid、IgxHierarchicalGrid
