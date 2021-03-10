@@ -26,9 +26,6 @@
   href: general/data-analysis.md
   new: false
   updated: true
-- name: アクセシビリティ準拠
-  href: general/accessibility-compliance.md
-  new: false
 - name: Angular Schematics & Ignite UI CLI
   href: general/cli-overview.md
   new: false
@@ -70,9 +67,15 @@
     - name: レイアウト要素
       href: general/wpf-to-angular-guide/layout.md
       new: false
-- name: Directionality
-  href: general/directionality.md
+- name: Interactivity
   new: false
+  items:
+    - name: RTL Support
+      href: general/interactivity/right-to-left-support.md
+      new: false
+    - name: アクセシビリティ準拠
+      href: general/interactivity/accessibility-compliance.md
+      new: false
 - name: グリッドとリスト
   href: grids-and-lists.md
   header: true
