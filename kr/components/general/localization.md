@@ -45,7 +45,7 @@ public ngOnInit(): void {
 </button>
 </div>
 
-#### Localize particular strings for all components
+#### Localize specific strings for all components
 
 Another approach is to localize/change only some of the strings for all components of given type. There is a `resourceStrings` property for the components that could be localized, which is of `IResourceStrings` type.
 
@@ -61,7 +61,7 @@ currentRS.igx_grid_filter_row_close = '[Localized]Close';
     </button>
 </div>
 
-#### Localize particular strings for particular instance of a component
+#### Localize specific strings for a specific instance of a component
 
 If only a single `igx-grid` instance should be localized, there is a way. The `resourceStrings` property should be used and it should be set to a new instance of `IGridResourceStrings` type.
 
