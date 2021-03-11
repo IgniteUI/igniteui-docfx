@@ -9,30 +9,137 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div class="divider"></div>
 
 ## Overview
+Palettes in the context of Ignite UI for Angular are represented as [Sass maps](https://sass-lang.com/documentation/values/maps) with keys of those map being the palette colors (`primary`, `secondary`, `grays`, etc.). Each color is in turn a map itself and has all color variants listed as keys. The values assigned to those color variants are the actual colors used throughout all component themes. All palette maps are generated programatically by the palette function. The function accepts arguments for `primary`, `secondary`, `grays`, `surface`, `info`, `success`, `warn`, and `error` colors. The `primary` color is usually your brand color. It is mostly used to style static elements, such as the `igx-navbar` component. The secondary color is the one used on elements that are actionable, such as buttons, switches, sliders, etc. The only required arguments are the ones for `primary` and `secondary` colors. The surface color is used to color the 'surface' of some components, such as cards, menus, date/time pickers, banners sheets, etc. We default the colors for `surface`, `grays`, `info`, `success`, `warn`, and `error` to a predefined set of our choosing.
 
-Palettes accept arguments for `primary`, `secondary`, `grays`, `surface`, `info`, `success`, `warn`, and `error` colors. The `primary` color is usually your brand color. It is mostly used to style static elements, such as the `igx-navbar` component. The secondary color is the one used on elements that are actionable, such as buttons, switches, sliders, etc. The only required arguments are the ones for `primary` and `secondary` colors. The surface color is used to color the 'surfaces' of some components, such as cards, menus, date/time pickers, banners sheets, etc. We default the colors for `surface`, `grays`, `info`, `success`, `warn`, and `error` to a predefined set of our choosing.
-
-To get started with your first color palette, create an _scss_ file that would be the base file for your global theme. I will call mine _"my-app-theme.scss"_.
+To get started with your first color palette, create an _scss_ file that would be the base file for your global theme. I will call mine _"_variables.scss"_.
 
 ```scss
+// _variables.scss
+
 // Import the IgniteUI themes library first
 @import '~igniteui-angular/lib/core/styles/themes/index';
 
-$company-color: #2ab759; /* Some green shade I like */
-$secondary-color: #f96a88; /* Watermelon pink */
-
-$my-color-palette: igx-palette(
-    $primary: $company-color,
-    $secondary: $secondary-color
+$melon-palette: igx-palette(
+    $primary: #2ab759,
+    $secondary: #f96a88,
 );
 ```
 
-Now we have a palette that contains exactly 43 colors! Whoa, wait, what? How did that happen? You provided 2 and got 43? Where did the other 41 colors come from?
-Let's stop here to explain what just happened as it's quite important. When you provided `primary` and `secondary` colors, we took those and generated shades and accent colors for each one. Basically now in your palette you have 2 sub-palettes for `primary` and `secondary` colors. Each sub-palette contains 13 additional color variations based on the original color. 5 of the 13 colors are lighter shades of your original color, and 4 are darker. The remaining 4 colors are more exaggerated 'accent' versions of the original color. With the original color that makes for a total of 14 colors in each palette.
+>[!WARNING]
+> The value you pass to `$primary`, `$secondary`, or any other color **must be of type color**. You cannot pass CSS variables as arguments as those can't be resolved at Sass build-time.
 
-With so many colors in each sub-palette you may be wondering, how on Earth will I know which one is which, right? It's quite simple, really. Each of the colors in the sub-palette has a number. We assign the number `500` to the original color. The lighter shades start from `50` and range to `400`. The darker shades start from `600` and range to `900`. The accent colors have string names `A100`, `A200`, `A400`, and `A700`, respectively. Okay, but now that's only 28 out of 43. Don't worry, there's another sub-palette we give you. One that consists of gray 'colors', called `grays`. It's just like the other two color sub-palettes, but doesn't include any accent variations. Good, now we're up to 28 + 10 for a total of 38 colors. That is still a some way from 43. Where do the other 5 colors come from? Let's solve the final puzzle. Remember you can also have 5 additional colors for `surface`, `info`, `success`, `warn` and `error`.
+We created a palette that contains variants for all colors in the it, including automatically created text contrast colors for each variant. If you haven't checked [the documentation](../palettes.md) regarding palettes with CSS variables, go check it out now. It contains information about all the color variants of a palette.
 
-Got it? Good! But how does one access any of the colors in the palette?
+The `igx-palette` function does a lot internally to help you create colors at build-time that you can reuse throughout your scss documents. The function is nice in that it will create a huge map of colors for you, but the algorithm for generating the color variants is very opinionated and may not match your exact needs. Our component themes don't care how the palette is generated, it only cares about the shape of the map.
+
+In case you want to manually create your palette, or create the palette generating function yourself here's what we expect to get as a palette map.
+
+```scss
+$handmade-palette: (
+    primary: (
+        50: #c0c0ff,
+        '50-contrast': black,
+        100: #a7a7fa,
+        '100-contrast': black,
+        200: #6d6df1,
+        '200-contrast': black,
+        300: #3c3cf2,
+        '300-contrast': white,
+        400: #1d1df7,
+        '400-contrast': white,
+        500: blue,
+        '500-contrast': white,
+        600: #0000e5,
+        '600-contrast': white,
+        700: #0000d2,
+        '700-contrast': white,
+        800: #0000be,
+        '800-contrast': white,
+        900: #0000a8,
+        '900-contrast': white,
+        'A100': #55f,
+        'A100-contrast': white,
+        'A200': #2727ff,
+        'A200-contrast': white,
+        'A400': #0000eb,
+        'A400-contrast': white,
+        'A700': #00a,
+        'A700-contrast': white
+    ),
+    secondary: (
+        50: #ffc0c0,
+        '50-contrast': black,
+        100: #faa7a7,
+        '100-contrast': black,
+        200: #f16d6d,
+        '200-contrast': black,
+        300: #f23c3c,
+        '300-contrast': black,
+        400: #f71d1d,
+        '400-contrast': black,
+        500: var(--some-dynamic-color),
+        '500-contrast': black,
+        600: #e50000,
+        '600-contrast': white,
+        700: #d20000,
+        '700-contrast': white,
+        800: #be0000,
+        '800-contrast': white,
+        900: #a80000,
+        '900-contrast': white,
+        'A100': #f55,
+        'A100-contrast': black,
+        'A200': #ff2727,
+        'A200-contrast': black,
+        'A400': #eb0000,
+        'A400-contrast': white,
+        'A700': #a00,
+        'A700-contrast': white
+    ),
+    grays: (
+        50: rgba(0, 0, 0, .02),
+        '50-contrast': black,
+        100: rgba(0, 0, 0, .04),
+        '100-contrast': black,
+        200: rgba(0, 0, 0, .08),
+        '200-contrast': black,
+        300: rgba(0, 0, 0, .12),
+        '300-contrast': black,
+        400: rgba(0, 0, 0, .26),
+        '400-contrast': black,
+        500: rgba(0, 0, 0, .38),
+        '500-contrast': black,
+        600: rgba(0, 0, 0, .54),
+        '600-contrast': white,
+        700: rgba(0, 0, 0, .62),
+        '700-contrast': white,
+        800: rgba(0, 0, 0, .74),
+        '800-contrast': white,
+        900: rgba(0, 0, 0, .87),
+        '900-contrast': white
+    ),
+    info: (
+        500: #1377d5,
+        '500-contrast': black
+    ),
+    success: (
+        500: #4eb862,
+        '500-contrast': black
+    ),
+    warn: (
+        500: #fbb13c,
+        '500-contrast': black
+    ),
+    error: (
+        500: #ff134a,
+        '500-contrast': black
+    ),
+    surface: (
+        500: #fff,
+        '500-contrast': black
+    )
+);
+```
 
 <div class="divider"></div>
 
