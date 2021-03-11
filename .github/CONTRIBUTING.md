@@ -140,7 +140,7 @@ These variables are defined in the [**environment.json**](https://github.com/Ign
 
 # <a name='#code-view-configuration'>Code View Configuration</a>
 
-If you want to add a sample and introduce the code behind this sample to the readers, you have to add a **<\code-view><\/code-view>** element.
+If you want to add a sample and introduce the code behind this sample to the readers, you have to add a ```html<code-view></code-view>``` element.
 This element is rendered as a container with tabs, their respective views and a footer element containing **StackBlitz** and **Codesandbox** buttons for live editing purposes. The first tab renders the sample iframe and each following tab renders the content of a specific file, used for the development of the sample. The live editing buttons create [StackBlitz](https://stackblitz.com/) and [Codesandbox](https://codesandbox.io/) applications for the sample in the code view.
 
 The **<code-view></code-view>** element has the following attributes:
