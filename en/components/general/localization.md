@@ -6,7 +6,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 # Localization (i18n)
 
-Currently, Ignite UI for Angular ships with resource strings for the following languages: German, French, Italian, Japanese, Korean, Spanish, Traditional Chinese (zh-Hant) and Simplified Chinese (zh-Hans). These are available via the `igniteui-angular-i18n` package.
+Currently, Ignite UI for Angular ships with resource strings for the following languages and scripts: German, French, Italian, Japanese, Korean, Spanish, Traditional Chinese (zh-Hant) and Simplified Chinese (zh-Hans). These are available via the `igniteui-angular-i18n` package.
 
 With only a few lines of code, users can easily localize the strings in Ignite UI for Angular components.
 
@@ -24,13 +24,11 @@ With only a few lines of code, users can easily localize the strings in Ignite U
 
 ### Load localized resources from npm package
 
-To localize an application for one of the available in the `igniteui-angular-i18n` package languages, the most straight forward approach is to:
+You can localize an application in one of the languages available in the `igniteui-angular-i18n` package like this:
 
-Install the package first:
+Install the package by executing `npm install igniteui-angular-i18n --save-dev`
 
-`npm install igniteui-angular-i18n --save-dev`
-
-Then import the resource strings for the desired language and call the `changei18n` function passing the corresponding resource object:
+Import the resource strings for the desired language and call the `changei18n()` function passing the corresponding resource object:
 
 ```typescript
 // app.component.ts
