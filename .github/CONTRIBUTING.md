@@ -145,13 +145,14 @@ This element is rendered as a container with tabs, their respective views and a 
 
 The ```<code-view></code-view>``` element has the following attributes:
 
-- *style*: The [*global style attribute*](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/style). At runtime its values are applied to the container of the sample.
-> Note: It is necessary to add the **height** of the code-view when you create such element.
-- *data-demos-base-url*: The base url of the sample. It is recommended to assign an **environment variable** to it. 
-- *iframe-src*: The absolute path of the sample. It is recommended to assign the value of the *data-demos-base-url* attribute combined with the relative (relative to its base url) path of the sample.
-- *alt* (optional): This attribute is applied as an *alt* attribute to the iframe of the sample.
+- ***style***: The [*global style attribute*](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/style). At runtime its values are applied to the container of the sample.
+> Note: It is necessary to add the **height** of the code-view when you create this element.
+- ***data-demos-base-url***: The base url of the sample. It is recommended to assign an **environment variable** to it. 
+- ***iframe-src***: The absolute path of the sample. It is recommended to assign the value of the *data-demos-base-url* attribute combined with the relative (relative to its base url) path of the sample.
+- ***alt*** (optional): This attribute is applied as an *alt* attribute to the iframe of the sample.
 
-Code view example
+Code view example:
+
 ```html
 <code-view style="height:700px" 
            data-demos-base-url="{environment:lobDemosBaseUrl}" 
