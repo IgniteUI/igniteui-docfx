@@ -25,7 +25,7 @@ _language: ja
 
 ### npm パッケージからローカライズしたリソースを読み込む
 
-次のように、 `igniteui-angular-i18n` パッケージで利用可能な言語の 1 つでアプリケーションをローカライズできます。
+次のように、`igniteui-angular-i18n` パッケージで利用可能な言語の 1 つでアプリケーションをローカライズできます。
 
 `npm install igniteui-angular-i18n--save-dev` を実行してパッケージをインストールします。
 
@@ -73,7 +73,7 @@ public ngOnInit(): void {
 ```
 
 または、現在利用可能なすべてのリソース文字列を取得することもできます。`IResourceStrings` オブジェクトを返すグローバル関数 `getCurrentResourceStrings` があります。
-ローカライズするために値を置き換えることができ、オブジェクトをパラメータとして `changei18n` 関数に渡すことができます。
+ローカライズするために値を置き換えることができ、オブジェクトをパラメーターとして `changei18n` 関数に渡すことができます。
 
 ```typescript
 // app.component.ts
@@ -135,6 +135,6 @@ this.grid.resourceStrings = newGridRes;
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語) ](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語) ](https://github.com/IgniteUI/igniteui-angular)
-* [Ignite UI for Angular **ResourceStrings** (英語) ](https://github.com/IgniteUI/igniteui-angular-i18n)
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **ResourceStrings** (英語)](https://github.com/IgniteUI/igniteui-angular-i18n)
