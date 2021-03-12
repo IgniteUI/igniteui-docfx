@@ -12,14 +12,11 @@ _language: ja
 
 ## Angular 仮想スクロール ディレクティブの例
 
-<div class="sample-container loading" style="height:650px">
-    <iframe id="igx-for-sample-iframe" src='{environment:demosBaseUrl}/data-display/igx-for-sample-1' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular 仮想スクロール ディレクティブの例"></iframe>
-</div>
-<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="igx-for-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
-    <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="igx-for-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Codesandbox で表示</button>
-</div>
+<code-view style="height:650px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src='{environment:demosBaseUrl}/data-display/igx-for-sample-1'
+           alt="Angular Virtual For Directive Example">
+</code-view>
 
 ## 使用方法
 
@@ -99,13 +96,11 @@ export class AppModule {}
 </igx-list>
 ```
 
-<div class="sample-container loading" style="height: 240px">
-<iframe id="igx-for-sample-2-iframe" data-src='{environment:demosBaseUrl}/data-display/igx-for-sample-2' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="igx-for-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
-<button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="igx-for-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">Codesandbox で表示</button>
-</div>
+<code-view style="height:240px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src='{environment:demosBaseUrl}/data-display/igx-for-sample-2'>
+</code-view>
+
 <div class="divider--half"></div>
 
 ### 水平仮想化および垂直仮想化

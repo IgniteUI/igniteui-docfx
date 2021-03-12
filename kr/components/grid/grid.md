@@ -1,4 +1,4 @@
-﻿---
+---
 title: 데이터 그리드 컴포넌트
 _description: The Ignite UI for Angular Data Grid control features the fastest, touch-responsive data-rich grid with popular features, including hierarchical and list views.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Data Grid component, Angular Data Grid control, Angular Grid component, Angular Grid control, Angular High Performance Grid
@@ -11,13 +11,12 @@ _language: kr
 
 ### 데모
 
-<div class="sample-container loading" style="height:700px">
-    <iframe id="grid-sample-iframe" src='{environment:lobDemosBaseUrl}/grid/grid' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<br/>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기</button>
-</div>
+
+<code-view style="height:700px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:lobDemosBaseUrl}/grid/grid" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ### 의존성
@@ -413,12 +412,12 @@ Achieving a state persistence framework is easier than ever by using the new bui
 
 이 샘플은 실시간 데이터에 바인딩된 `igxGrid`를 보여줍니다. 
 
-<div class="sample-container loading" style="height:915px">
-    <iframe id="grid-sample-finjs-iframe" data-src='{environment:lobDemosBaseUrl}/finjs-sample' width="100%" height="100%" seamless="" frameborder="0" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-finjs-iframe" data-demos-base-url="{environment:lobDemosBaseUrl}">STACKBLITZ 에서 보기</button>
-</div>
+
+<code-view style="height:915px" 
+           data-demos-base-url="{environment:lobDemosBaseUrl}" 
+           iframe-src="{environment:lobDemosBaseUrl}/grid-finjs" >
+</code-view>
+
 
 ### Sizing
 See the [Grid Sizing](sizing.md) topic.

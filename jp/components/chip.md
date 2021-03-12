@@ -11,14 +11,12 @@ _language: ja
 
 ## Angular Chip の例
 
-<div class="sample-container loading" style="height: 100px; padding-top: 10px">
-    <iframe id="chip-simple-iframe" src='{environment:demosBaseUrl}/data-display/chip-simple' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular Chip の例"></iframe>
-</div>
-<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="chip-simple-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="chip-simple-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
-</div>
+
+<code-view style="height: 100px; padding-top: 10px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-display/chip-simple" alt="Angular Chip の例">
+</code-view>
+
 
 ## 使用方法
 
@@ -153,14 +151,12 @@ public chipRemoved(event: IBaseChipEventArgs) {
 
 すべて適切に設定できると、ブラウザーで以下が表示されます。
 
-<div class="sample-container loading" style="height: 100px; padding-top: 10px">
-    <iframe id="chip-simple-iframe-2" src='{environment:demosBaseUrl}/data-display/chip-simple' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<br/>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="chip-simple-iframe-2" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="chip-simple-iframe-2" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
-</div>
+
+<code-view style="height: 100px; padding-top: 10px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-display/chip-simple" >
+</code-view>
+
 
 ### Chip テンプレート
 
@@ -373,14 +369,12 @@ public chipsOrderChanged(event: IChipsAreaReorderEventArgs) {
 
 ### デモ
 
-<div class="sample-container loading" style="height: 100px">
-    <iframe id="chip-area-sample-iframe" src='{environment:demosBaseUrl}/data-display/chip-area-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<br/>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="chip-area-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="chip-area-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
-</div>
+
+<code-view style="height: 100px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-display/chip-area-sample" >
+</code-view>
+
 
 ## スタイル設定
 チップのスタイル設定を始めるには、すべてのテーマ関数とコンポーネントのミックスインが存在する `index` ファイルをインポートする必要があります。
@@ -445,14 +439,12 @@ $custom-theme: igx-chip-theme(
 ```
 
 ### デモ
-<div class="sample-container loading" style="height:100px">
-    <iframe id="chip-styling-sample-iframe" data-src='{environment:demosBaseUrl}/data-display/chip-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
-</div>
-<br/>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="chip-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="chip-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
-</div>
+
+<code-view style="height:100px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-display/chip-styling" >
+</code-view>
+
 
 ## 既知の問題と制限
 

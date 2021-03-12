@@ -10,14 +10,12 @@ _language: ja
 <div class="divider"></div>
 
 ## Angular Date Time Editor の例
-<div class="sample-container loading" style="height:100px">
-    <iframe id="datetime-basic-iframe" src="{environment:demosBaseUrl}/scheduling/datetime-basic" width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular Date Time Editor 例"></iframe>
-</div>
-<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="datetime-basic-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="datetime-basic-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
+
+<code-view style="height:100px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/scheduling/datetime-basic" alt="Angular Date Time Editor 例">
+</code-view>
+
 <div class="divider--half"></div>
 
 
@@ -108,13 +106,12 @@ public maxDate = new Date(2020, 11, 1);
 最初のシナリオでは、特定の DatePart がメソッドに渡されない場合、指定した `inputFormat` および内部ディレクティブの実装に基づいてデフォルトの DatePart が増減します。
 2 番目のシナリオでは、さまざまな要件を満たすために操作する DatePart を明示的に指定できます。
 以下のサンプルで両方を比較できます。
-<div class="sample-container loading" style="height:150px">
-    <iframe id="datetime-advanced-iframe" data-src="{environment:demosBaseUrl}/scheduling/datetime-advanced" width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="datetime-advanced-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="datetime-advanced-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
+
+<code-view style="height:150px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/scheduling/datetime-advanced" >
+</code-view>
+
 <div class="divider--half"></div>
 
 
