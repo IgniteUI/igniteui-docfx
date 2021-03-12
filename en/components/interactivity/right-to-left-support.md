@@ -4,7 +4,7 @@ _description: Learn how to configure ARIA Accessibility and Directionality of yo
 _keywords: aria support, a11y, ignite ui for angular, infragistics
 ---
 
-# RTL Support (Right To Left)
+# Right to Left (RTL) Support
 
 ## RTL Support 
 Most of the components in the framework now have full **right-to-left (RTL)** support via the newly included RTL themes.
