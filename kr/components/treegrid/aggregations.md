@@ -13,7 +13,7 @@ _language: kr
 
 <code-view style="height:850px" 
            data-demos-base-url="{environment:lobDemosBaseUrl}" 
-           iframe-src="{environment:lobDemosBaseUrl}/treegrid-finjs-sample" >
+           iframe-src="{environment:lobDemosBaseUrl}/treegrid-finjs" >
 </code-view>
 
 <div class="divider--half"></div>

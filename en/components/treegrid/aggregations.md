@@ -12,7 +12,7 @@ If you have non-hierarchical data and you want to **group by** one or more colum
 
 <code-view style="height:850px" 
            data-demos-base-url="{environment:lobDemosBaseUrl}" 
-           iframe-src="{environment:lobDemosBaseUrl}/treegrid-finjs-sample" alt="Angular Tree Grid Aggregations Example">
+           iframe-src="{environment:lobDemosBaseUrl}/treegrid-finjs" alt="Angular Tree Grid Aggregations Example">
 </code-view>
 
 <div class="divider--half"></div>

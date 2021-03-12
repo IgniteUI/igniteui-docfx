@@ -26,7 +26,7 @@ Feed the same data into the [Category Chart](../category-chart.md) to experience
 
 <code-view style="height:700px" 
            data-demos-base-url="{environment:lobDemosBaseUrl}" 
-           iframe-src="{environment:lobDemosBaseUrl}/finjs-sample" alt="Angular Live-data Update Example">
+           iframe-src="{environment:lobDemosBaseUrl}/grid-finjs" alt="Angular Live-data Update Example">
 </code-view>
 
 
@@ -95,7 +95,7 @@ Our community is active and always welcoming to new ideas.
 
 <code-view style="height:700px" 
            data-demos-base-url="{environment:lobDemosBaseUrl}" 
-           iframe-src="{environment:lobDemosBaseUrl}/treegrid-finjs-sample" alt="Angular Live-data Update Example">
+           iframe-src="{environment:lobDemosBaseUrl}/treegrid-finjs" alt="Angular Live-data Update Example">
 </code-view>
 
 
