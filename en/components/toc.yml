@@ -7,6 +7,10 @@
 - name: Licensing
   href: general/ignite-ui-licensing.md
   new: false
+- name: Localization (i18n)
+  href: general/localization.md
+  new: false
+  updated: true
 - name: Getting started
   href: general/getting-started.md
   new: false
@@ -1171,9 +1175,6 @@
   new: false
 - name: Excel Exporter
   href: exporter-excel.md
-  new: false
-- name: Localization
-  href: localization.md
   new: false
 - name: Transaction Service
   href: transaction.md

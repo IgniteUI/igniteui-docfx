@@ -25,7 +25,7 @@ _language: ja
 同じデータを[カテゴリ チャート](../category-chart.md)に入力して、Ignite UI forAngular の強力なチャート作成機能を体験してください。`Chart` ボタンには、選択した行の `Category Prices per Region` データが表示され、`Chart` 列ボタンには現在の行の同じデータが表示されます。
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:700px">
-    <iframe id="grid-sample-finjs-iframe" src='{environment:lobDemosBaseUrl}/finjs-sample' width="100%" height="100%" seamless frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular 更新のライブデ例"></iframe>
+    <iframe id="grid-sample-finjs-iframe" src='{environment:lobDemosBaseUrl}/grid-finjs' width="100%" height="100%" seamless frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular 更新のライブデ例"></iframe>
 </div>
 <p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
@@ -96,7 +96,7 @@ private updateData(data: IRecord[]) {
 
 @@if (igxName === 'IgxTreeGrid') {
 <div class="sample-container loading" style="height:700px">
-    <iframe id="grid-sample-finjs-iframe" data-src='{environment:lobDemosBaseUrl}/treegrid-finjs-sample' width="100%" height="100%" seamless frameborder="0" class="lazyload" alt="Angular 更新のライブデ例"></iframe>
+    <iframe id="grid-sample-finjs-iframe" data-src='{environment:lobDemosBaseUrl}/treegrid-finjs' width="100%" height="100%" seamless frameborder="0" class="lazyload" alt="Angular 更新のライブデ例"></iframe>
 </div>
 <p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
