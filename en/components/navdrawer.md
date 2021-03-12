@@ -11,14 +11,12 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ## Angular Navigation Drawer Example
 <div class="divider--half"></div>
 
-<div class="sample-container loading" style="height: 500px; border: 1px solid #D4D4D4;">
-    <iframe id="nav-drawer-simple-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/menus/navigation-drawer-simple" onload="onSampleIframeContentLoaded(this);" alt="Angular Navigation Drawer Example"></iframe>
-</div>
-<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="nav-drawer-simple-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-drawer-simple-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height: 500px; border: 1px solid #D4D4D4;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/menus/navigation-drawer-simple" alt="Angular Navigation Drawer Example">
+</code-view>
+
 
 <div class="divider--half"></div>
 
@@ -191,13 +189,12 @@ Here's how that would look applied to the previous example:
 
 Now the changed example should look like that:
 
-<div class="sample-container loading" style="height: 500px; border: 1px solid #D4D4D4;">
-    <iframe id="nav-drawer-pin-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/menus/navigation-drawer-pin" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="nav-drawer-pin-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-drawer-pin-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height: 500px; border: 1px solid #D4D4D4;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/menus/navigation-drawer-pin" >
+</code-view>
+
 
 The drawer applies `flex-basis` on its host element, allowing the rest of the content to take up the remaining width.
 Alternatively, skipping using directives, manual styling can be applied similar to:
@@ -240,13 +237,12 @@ The mini variant is commonly used in a persistent setup, so we've set `pin` and 
 </igx-nav-drawer>
 ```
 
-<div class="sample-container loading" style="height: 400px; border: 1px solid #D4D4D4;">
-    <iframe id="nav-drawer-mini-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/menus/navigation-drawer-mini" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="nav-drawer-mini-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-drawer-mini-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height: 400px; border: 1px solid #D4D4D4;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/menus/navigation-drawer-mini" >
+</code-view>
+
 
 <div class="divider--half"></div>
 
@@ -317,13 +313,12 @@ import { RouterModule } from "@angular/router";
 ```
 After all the steps above are completed, your app should look like that:
 
-<div class="sample-container loading" style="height: 400px; border: 1px solid #D4D4D4;">
-    <iframe id="nav-drawer-routing-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/menus/navigation-drawer-routing" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="nav-drawer-routing-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-drawer-routing-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height: 400px; border: 1px solid #D4D4D4;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/menus/navigation-drawer-routing" >
+</code-view>
+
 
 <div class="divider--half"></div>
 
@@ -384,13 +379,12 @@ If `$legacy-support` is set to `false`(default), include the component **css var
 }
 ```
 
-<div class="sample-container loading" style="height: 400px; border: 1px solid #D4D4D4;">
-    <iframe id="nav-drawer-styling-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/menus/navigation-drawer-styling" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="nav-drawer-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-drawer-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height: 400px; border: 1px solid #D4D4D4;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/menus/navigation-drawer-styling" >
+</code-view>
+
 
 <div class="divider--half"></div>
 

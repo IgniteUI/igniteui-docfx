@@ -11,13 +11,12 @@ The [`igxToggle`]({environment:angularApiUrl}/classes/igxtoggledirective.html) d
 
 ###Toggle Demo
 
-<div class="sample-container loading" style="height: 370px">
-    <iframe id="toggle-iframe" src='{environment:demosBaseUrl}/interactions/toggle' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toggle-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       StackBlitz 에서보기
-    </button>
-</div>
+
+<code-view style="height: 370px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/interactions/toggle" >
+</code-view>
+
 
 ##Usage
 The toggle allows you easily to wrap some content into a box which easily can be opened and closed.
@@ -77,13 +76,12 @@ export class Class {
 
 If all went well, you should see the following in your browser:
 
-<div class="sample-container loading" style="height: 370px">
-    <iframe id="toggle-sample-1-iframe" data-src='{environment:demosBaseUrl}/interactions/toggle-sample-1' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toggle-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       StackBlitz 에서보기
-    </button>
-</div>
+
+<code-view style="height: 370px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/interactions/toggle-sample-1" >
+</code-view>
+
 
 In the next sample we'll use different positioning strategy so the content is displayed below the button. 
 
@@ -140,13 +138,12 @@ The [`igxToggle`]({environment:angularApiUrl}/classes/igxtoggledirective.html) u
 ```
 
 
-<div class="sample-container loading" style="height: 370px">
-    <iframe id="toggle-iframe-1" data-src='{environment:demosBaseUrl}/interactions/toggle' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toggle-iframe-1" data-demos-base-url="{environment:demosBaseUrl}">                       StackBlitz 에서보기
-    </button>
-</div>
+
+<code-view style="height: 370px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/interactions/toggle" >
+</code-view>
+
 
 ### Automatic toggle actions
 
@@ -180,13 +177,12 @@ Then in the template we need to declare [**IgxToggleActionDirective**]({environm
 
 After these changes the toggle should work exactly in the same way.
 
-<div class="sample-container loading" style="height: 370px">
-    <iframe id="toggle-sample-2-iframe" data-src='{environment:demosBaseUrl}/interactions/toggle-sample-2' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toggle-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       StackBlitz 에서보기
-    </button>
-</div>
+
+<code-view style="height: 370px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/interactions/toggle-sample-2" >
+</code-view>
+
 
 ### Automatic toggle actions with service provider
 
@@ -219,13 +215,12 @@ export class AppModule {}
 
 If all went well, it will look like this:
 
-<div class="sample-container loading" style="height: 370px">
-    <iframe id="toggle-sample-3-iframe" data-src='{environment:demosBaseUrl}/interactions/toggle-sample-3' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toggle-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       StackBlitz 에서보기
-    </button>
-</div>
+
+<code-view style="height: 370px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/interactions/toggle-sample-3" >
+</code-view>
+
 
 ### IgxOverlayOutlet Directive
 

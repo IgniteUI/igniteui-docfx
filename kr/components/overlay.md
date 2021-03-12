@@ -102,12 +102,12 @@ The overlay service [`show()`] ({environment:angularApiUrl}/classes/igxoverlayse
 In the below demo, we can pass the [IgxCard](card.md#card-demo) through the overlay service [`show()`] ({environment:angularApiUrl}/classes/igxoverlayservice.html#show) method to dynamically attach it to the DOM in a modal container.
 
 
-<div class="sample-container loading" style="height: 400px">
-    <iframe id="overlay-sample-main-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-sample-main-1" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-sample-main-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
-</div>
+
+<code-view style="height: 400px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/interactions/overlay-sample-main-1" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ### Configuring overlay settings
@@ -187,12 +187,12 @@ export class MyOverlayComponent {
 
 Using the [`overlaySettings`] ({environment:angularApiUrl}/interfaces/overlaysettings.html) parameter of the [`show()`] ({environment:angularApiUrl}/classes/igxoverlayservice.html#show) method, we can change how the content is shown - e.g. where the content is positioned, how the scroll should behave, is the container modal or not
 
-<div class="sample-container loading" style="height: 400px">
-    <iframe id="overlay-sample-main-2-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/interactions/overlay-sample-main-2" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-sample-main-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
-</div>
+
+<code-view style="height: 400px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/interactions/overlay-sample-main-2" >
+</code-view>
+
 <div class="divider--half"></div>
 
 

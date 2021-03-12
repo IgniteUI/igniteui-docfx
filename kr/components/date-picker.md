@@ -10,12 +10,12 @@ _language: kr
 <div class="divider"></div>
 
 ### Date Picker Demo
-<div class="sample-container loading" style="height: 540px;">
-    <iframe id="date-picker-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/scheduling/datepicker-sample-4" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="date-picker-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz ????</button>
-</div>
+
+<code-view style="height: 540px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-4" >
+</code-view>
+
 <div class="divider--half"></div>
 
 > [!NOTE]
@@ -47,12 +47,12 @@ To add the date picker in a template, use the following code:
 ```
 
 The result is as follows:
-<div class="sample-container loading" style="height: 540px;">
-    <iframe id="date-picker-sample-1" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-1" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="date-picker-sample-1" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz ????</button>
-</div>
+
+<code-view style="height: 540px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-1" >
+</code-view>
+
 <div class="divider--half"></div>
 
 #### Setting date
@@ -73,12 +73,12 @@ Then, use the [`value`]({environment:angularApiUrl}/classes/igxdatepickercompone
 ```
 
 And there we have it:
-<div class="sample-container loading" style="height: 540px;">
-    <iframe id="date-picker-sample-2" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-2" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="date-picker-sample-2" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz ????</button>
-</div>
+
+<code-view style="height: 540px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-2" >
+</code-view>
+
 <div class="divider--half"></div>
 
 To create a two-way data-binding, set `ngModel` like this:
@@ -105,12 +105,12 @@ Using the [`monthsViewNumber`]({environment:angularApiUrl}/classes/igxcalendarco
 
 
 Here you can see the buttons:
-<div class="sample-container loading" style="height: 680px;">
-    <iframe id="date-picker-sample-3" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-3" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="date-picker-sample-3" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz ????</button>
-</div>
+
+<code-view style="height: 680px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-3" >
+</code-view>
+
 <div class="divider--half"></div>
 
 #### Custom formatting
@@ -136,12 +136,12 @@ And then use the [`formatter`]({environment:angularApiUrl}/classes/igxdatepicker
 ```
 
 Here is the formatted date:
-<div class="sample-container loading" style="height: 540px;">
-    <iframe id="date-picker-sample-4" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-4" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="date-picker-sample-4" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz ????</button>
-</div>
+
+<code-view style="height: 540px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-4" >
+</code-view>
+
 <div class="divider--half"></div>
 
 #### Editable mode
@@ -184,12 +184,12 @@ The editable date picker provides the following outputs to handle entering of di
 *  To decrement a date part:
     * Focus on a date part + <kbd>DOWN</kbd> 
 
-<div class="sample-container loading" style="height: 650px;">
-    <iframe id="date-picker-dropdown" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/datepicker-dropdown" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="date-picker-dropdown" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height: 650px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/scheduling/datepicker-dropdown" >
+</code-view>
+
 <div class="divider--half"></div>
 
 #### Templating Dialog Mode Date Picker
@@ -238,23 +238,23 @@ public date: Date = new Date(Date.now());
 ```
 
 Here is the retemplated input group:
-<div class="sample-container loading" style="height: 540px;">
-    <iframe id="date-picker-sample-6" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-6" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="date-picker-sample-6" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz ????</button>
-</div>
+
+<code-view style="height: 540px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-6" >
+</code-view>
+
 <div class="divider--half"></div>
 
 #### Templating Dropdown Mode Date Picker
 All the information mentioned in the <a href="#templating-dialog-mode-date-picker">Templating Dialog Mode Date Picker</a> section can be applied when re-templating a dropdown date picker. The only requirement is that an HTML element should be passed to the `openDialog(target)`, and that element will be used as a positioning target for the drop down that is being spawned.
 
-<div class="sample-container loading" style="height: 650px;">
-    <iframe id="date-picker-sample-7" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-7" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="date-picker-sample-7" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height: 650px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-7" >
+</code-view>
+
 
 <div class="divider--half"></div>
 
@@ -290,12 +290,12 @@ public yearsView(datePicker: IgxDatePickerComponent) {
 ```
 
 The result is as follows:
-<div class="sample-container loading" style="height: 680px;">
-    <iframe id="date-picker-sample-8" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-8" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="date-picker-sample-8" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height: 680px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-8" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ### Internationalization
@@ -365,12 +365,12 @@ public getDatePart(val: any, component: any, datePart: string) {
 ```
 
 The result is as follows:
-<div class="sample-container loading" style="height: 580px;">
-    <iframe id="date-picker-sample-5" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-5" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="date-picker-sample-5" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz ????</button>
-</div>
+
+<code-view style="height: 580px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-5" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ### API References

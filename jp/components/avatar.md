@@ -12,16 +12,12 @@ _language: ja
 
 ## Angular Avatar の例
 
-<div class="sample-container loading" style="height:200px">
-    <iframe id="avatar-sample-3-iframe" src='{environment:demosBaseUrl}/layouts/avatar-sample-3' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular Avatar の例"></iframe>
-</div>
-<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="avatar-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">        codesandbox で表示
-    </button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="avatar-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">        stackblitz で表示
-    </button>
-</div>
+
+<code-view style="height:200px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/layouts/avatar-sample-3" alt="Angular Avatar の例">
+</code-view>
+
 <div class="divider--half"></div>
 
 ## 使用方法
@@ -81,96 +77,12 @@ Avatar の形式は四角または丸で、3 つのサイズ オプション (�
 ```
 以下は結果です。
 
-<div class="sample-container loading" style="height:100px">
-    <iframe id="avatar-sample-1-iframe" data-src='{environment:demosBaseUrl}/layouts/avatar-sample-1' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
 
-### 画像を表示するアバター
-画像を表示するアバターを作成するには、`src` プロパティで画像ソースを設定します。
+<code-view style="height:100px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/layouts/avatar-sample-1" >
+</code-view>
 
-```html
-<igx-avatar src="https://randomuser.me/api/portraits/men/1.jpg"
-            [roundShape]="true"
-            size="large">
-</igx-avatar>
-```
-
-ここまでの内容が正しければ、以下のように表示されます。
-
-<div class="sample-container loading" style="height:100px">
-    <iframe id="avatar-sample-2-iframe" data-src='{environment:demosBaseUrl}/layouts/avatar-sample-2' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-
-### アイコンを表示するアバター
-アバターでアイコンを表示するには、[`icon`]({environment:angularApiUrl}/classes/igxavatarcomponent.html#icon) プロパティを設定します。現在、マテリアル アイコン セットのすべてのアイコンがサポートされます。
-
-```html
-<igx-avatar icon="person"
-            [roundShape]="true"
-            size="small">
-</igx-avatar>
-```
-
-以下は結果です。
-
-<div class="sample-container loading" style="height:100px">
-    <iframe id="avatar-sample-4-iframe" data-src='{environment:demosBaseUrl}/layouts/avatar-sample-4' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-
-## スタイル設定
-
-Avatar のスタイル設定を始めるには、すべてのテーマ関数とコンポーネント ミックスインが存在する index ファイルをインポートする必要があります。
-
-```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
-
-最も簡単な方法は、[`igx-avatar-theme`]({environment:sassApiUrl}/index.html#function-igx-avatar-theme) を拡張する新しいテーマを作成し、`$initials-background`、`$initials-color`、`$icon-background`、`$icon-color` と `$border-radius-square` パラメーターを受け取る方法です。
-
-```scss
-$custom-avatar-theme: igx-avatar-theme(
-    $initials-background: #72da67,
-    $initials-color: #000000,
-    $icon-background: #217346,
-    $icon-color: #ffffff,
-    $border-radius-square: 16px
-);
-```
-
-### CSS 変数の使用
-
-最後にアバターのカスタム テーマを渡します。
-
-```scss
-@include igx-css-vars($custom-avatar-theme);
-```
-
-### ミックスインの使用
-
-Internet Explorer 11 のコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、別のアプローチが必要です。 
-
-コンポーネントが [`Emulated`](./themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。一方、カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
-
-```scss
-:host {
-    ::ng-deep {
-        // Pass the custom avatar theme to the `igx-avatar` mixin
-        @include igx-avatar($custom-avatar-theme);
-    }
-}
-```
-
-ここまでの内容が正しければ、以下のように表示されます。
-
-<div class="sample-container loading" style="height:120px">
-    <iframe id="avatar-styling-iframe" data-src='{environment:demosBaseUrl}/layouts/avatar-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="avatar-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">        codesandbox で表示
-    </button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="avatar-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">        stackblitz で表示
-    </button>
-</div>
 <div class="divider--half"></div>
 
 ## API リファレンス

@@ -13,12 +13,12 @@ The [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) expo
 
 ### Demo
 The sample below demonstrates remote binding using combo API - defining [valueKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#valuekey) and [displayKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#displaykey), and using [onDataPreLoad]({environment:angularApiUrl}/classes/igxcombocomponent.html#ondatapreload) to load new chunk of remote data:
-<div class="sample-container loading" style="height: 400px;">
-    <iframe id="combo-remote-sample" frameborder="0" seamless width="700px" height="100%" src="{environment:demosBaseUrl}/lists/combo-remote" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="combo-remote-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
-</div>
+
+<code-view style="height: 400px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/lists/combo-remote" >
+</code-view>
+
 
 ### Usage
 To get started with the Ignite UI for Angular Combo import the `IgxComboModule` in the **app.module.ts** file. In this demo a remote service is used for server requests, that is why in addition we need to include the Angular **HttpClientModule**:

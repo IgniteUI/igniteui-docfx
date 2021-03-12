@@ -9,16 +9,12 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ## Angular Icon Example
 
-<div class="sample-container loading" style="height: 75px">
-    <iframe id="icon-sample-1-iframe" seamless="" width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-display/icon-sample-1" onload="onSampleIframeContentLoaded(this);" alt="Angular Icon Example">
-</iframe></div>
-<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="icon-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on codesandbox
-    </button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="icon-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on stackblitz
-    </button>
-</div>
+
+<code-view style="height: 75px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-display/icon-sample-1" alt="Angular Icon Example">
+</code-view>
+
 
 <div class="divider--half"></div>
 
@@ -49,83 +45,12 @@ Use the [`color`]({environment:angularApiUrl}/classes/igxiconcomponent.html#icon
 ```html
 <igx-icon color="#e41c77">home</igx-icon>
 ```
-<div class="sample-container loading" style="height: 40px">
-    <iframe id="icon-sample-3-iframe" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-display/icon-sample-3" class="lazyload">
-</iframe></div>
 
->[!NOTE]
-> The `color` property will be deprecated in the next major version of Ignite UI for Angular. To change the color of an icon, use CSS properties.
+<code-view style="height: 40px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-display/icon-sample-3" >
+</code-view>
 
-### Inactive Icon
-
-If you want to disable an icon, you can use the [`active`]({environment:angularApiUrl}/classes/igxiconcomponent.html#active) property:
-
-```html
-<igx-icon [active]="false">volume_off</igx-icon>
-```
-<div class="sample-container loading" style="height: 40px">
-    <iframe id="icon-sample-4-iframe" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-display/icon-sample-4" class="lazyload">
-</iframe></div>
-
-### Content Projection
-
-You can set icons with content projection:
-
-```html
-<igx-icon>bluetooth</igx-icon>
-```
-
-<div class="sample-container loading" style="height: 40px">
-    <iframe id="icon-sample-5-iframe" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-display/icon-sample-5" class="lazyload">
-</iframe></div>
-
-### Icon Size
-
-You can customize the icons using CSS. The icon's size can be changed through the `font-size` property. Additionally to center it, set equal values to the `width` and `height` properties:
-
-```scss
-.custom-size{
-    font-size: 56px;
-    width: 56px;
-    height: 56px;
-}
-```
-<div class="sample-container loading" style="height: 80px">
-    <iframe id="icon-sample-2-iframe" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-display/icon-sample-2" class="lazyload">
-</iframe></div>
-
-## SVG Icons
-
-You can also use an SVG image as an icon. First, inject the [`IgxIconService`]({environment:angularApiUrl}/classes/igxiconservice.html) dependency. In this example we will inject it in a component's constructor but you can use it wherever it is needed in your code. 
-
-Use the [`addSvgIcon`]({environment:angularApiUrl}/classes/igxiconservice.html#addsvgicon) method to import the SVG file in cache. When the SVG is cached, it can be used anywhere in the application. The icon name and file URL path are the method's mandatory parameters; family can be specified as well. After that, you can use the SVG files in the HTML markup. Alternatively, you can use the `addSvgIconFromText` method to import an SVG file, providing the SVG text content instead of the file URL.
-
-* Have in mind that if there are two icons with the same name and the same family, the SVG icon will be displayed with priority.
-* It is better not to provide image width and height in the SVG file.
-* You may need additional polyfill scripts ("polyfills") for Internet Explorer.
-
-```typescript
-constructor(private iconService: IgxIconService) { }
-
-public ngOnInit() {
-    // register custom SVG icons
-    this.iconService.addSvgIcon("contains", "/assets/images/svg/contains.svg", "filter-icons");
-}
-```
-
-```html
-<igx-icon name="contains" family="filter-icons"></igx-icon>
-```
-
-<div class="sample-container loading" style="height: 70px">
-    <iframe id="svg-icon-sample-iframe" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-display/svg-icon-sample" class="lazyload">
-</iframe></div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="svg-icon-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on codesandbox
-    </button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="svg-icon-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">                view on stackblitz
-    </button>
-</div>
 
 ## Server-side Rendering Note
 
@@ -189,14 +114,12 @@ If the component is using the [`Emulated`](themes/component-themes.md#view-encap
 ```
 
 ### Demo
-<div class="sample-container loading" style="height:75px">
-    <iframe id="icon-styling-sample-iframe" data-src='{environment:demosBaseUrl}/data-display/icon-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming" alt="Angular Icon Example"></iframe>
-</div>
-<br/>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="icon-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="icon-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height:75px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-display/icon-styling" alt="Angular Icon Example">
+</code-view>
+
 
 
 ## API References
