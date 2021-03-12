@@ -4,7 +4,7 @@ _description: Ignite UI for Angular によって ARIA アクセシビリティ�
 _keywords: aria support, aria サポート, a11y, ignite ui for angular, infragistics, インフラジスティックス
 ---
 
-# RTL Support (Right To Left)
+# Right to Left (RTL) Support
 
 ## RTL サポート 
 フレームワークのほとんどのコンポーネントで、新しい RTL テーマを介した**右から左 (RTL)** がサポートされます。
