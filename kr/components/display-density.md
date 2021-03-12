@@ -12,12 +12,12 @@ Display density configuration can significantly improve the visual representatio
 Using the [DisplayDensityToken]({environment:angularApiUrl}/index.html#displaydensitytoken) injection token, you can configure the display density on an application and/or on a component level. 
 
 ### Display Density Demo
-<div class="sample-container loading" style="height: 250px; width: 600px;">
-    <iframe id="density-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/theming/density" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="density-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
-</div>
+
+<code-view style="height: 250px; width: 600px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/theming/density" >
+</code-view>
+
 <div class="divider--half"></div>
 
 > [!NOTE]

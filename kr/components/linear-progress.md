@@ -10,12 +10,12 @@ _language: kr
 <div class="divider"></div>
 
 ### Linear Progress Demo
-<div class="sample-container loading" style="height:550px">
-    <iframe id="progressbar-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-display/linear-progressbar-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="progressbar-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
-</div>
+
+<code-view style="height:550px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-display/linear-progressbar-sample-1" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ### Usage
@@ -86,12 +86,12 @@ that the speed of loading depends on the [`max`]({environment:angularApiUrl}/cla
   }
 ```
 If all went well, you should see something like the following in your browser:
-<div class="sample-container loading" style="height:500px">
-    <iframe id="linear-progressbar-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-display/linear-progressbar" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="linear-progressbar-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
-</div>
+
+<code-view style="height:500px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-display/linear-progressbar" >
+</code-view>
+
 <div class="divider--half"></div>
 And now let's enhance our example and create different types of loading bars, that can be striped or not.
 ```html
@@ -156,12 +156,12 @@ And now let's enhance our example and create different types of loading bars, th
   }
 ```
 So if we set up everything correctly, let's see what happened in the browser:
-<div class="sample-container loading" style="height:550px">
-    <iframe id="linear-sample-1-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-display/linear-progressbar-sample-1" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="linear-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
-</div>
+
+<code-view style="height:550px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-display/linear-progressbar-sample-1" >
+</code-view>
+
 <div class="divider--half"></div>
 
 Finally let's make our sample even more exciting and good as we set the following attributes: [`textAlign`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#textalign), [`textVisibility`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#textvisibility), [`textTop`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#texttop) and [`text`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#text).
@@ -250,12 +250,12 @@ export class LinearProgressbarSample2Component implements OnInit {
 
 And now let's see it in the browser:
 
-<div class="sample-container loading" style="height:700px">
-    <iframe id="linear-sample-2-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-display/linear-progressbar-sample-2" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="linear-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
-</div>
+
+<code-view style="height:700px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-display/linear-progressbar-sample-2" >
+</code-view>
+
 <div class="divider--half"></div>
 
 > [!NOTE]

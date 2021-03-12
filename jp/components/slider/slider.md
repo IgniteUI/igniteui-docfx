@@ -10,14 +10,12 @@ _language: ja
 <div class="divider"></div>
 
 ## Angular Slider の例
-<div class="sample-container loading" style="height: 250px">
-    <iframe id="slide-sample-1-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/slider-sample-1" onload="onSampleIframeContentLoaded(this);" alt="Angular Slider 例"></iframe>
-</div>
-<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="slide-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="slide-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
+
+<code-view style="height: 250px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/interactions/slider-sample-1" alt="Angular Slider 例">
+</code-view>
+
 <div class="divider--half"></div>
 
 ## 使用方法
@@ -83,13 +81,12 @@ class Task {
 
 2 つのコンポーネント間の双方向データ バインディングが表示されます。
 
-<div class="sample-container loading" style="height: 160px">
-    <iframe id="slide-sample-3-iframe" data-src='{environment:demosBaseUrl}/interactions/slider-sample-3' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="slide-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="slide-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
-</div>
+
+<code-view style="height: 160px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/interactions/slider-sample-3" >
+</code-view>
+
 
 ### 連続スライダー
 最初に、[`continuous`]({environment:angularApiUrl}/classes/igxslidercomponent.html#continuous) 入力を true に設定し、スライダー タイプを指定します。次に、[`minValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#minvalue) および [`maxValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#maxvalue) プロパティを設定し、最小値および最大値を定義します。 
@@ -121,13 +118,12 @@ public volume = 20;
 
 サンプルの構成後、スライダーのつまみをドラッグするとラベルを更新しますが、スライダー値は指定した最小値および最大値の間に制限されます。
 
-<div class="sample-container loading" style="height: 140px">
-    <iframe id="slide-sample-2-iframe" data-src='{environment:demosBaseUrl}/interactions/slider-sample-2' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="slide-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="slide-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
-</div>
+
+<code-view style="height: 140px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/interactions/slider-sample-2" >
+</code-view>
+
 
 ### 範囲スライダー
 最初に、スライダーの [`type`]({environment:angularApiUrl}/classes/igxslidercomponent.html#type) を [`RANGE`]({environment:angularApiUrl}/enums/slidertype.html#range) に設定します。次にスライダー値を PriceRange 型のオブジェクトにバインドします。
@@ -162,13 +158,12 @@ class PriceRange {
 
 ```
 
-<div class="sample-container loading" style="height: 120px">
-    <iframe id="slide-sample-4-iframe" data-src='{environment:demosBaseUrl}/interactions/slider-sample-4' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="slide-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="slide-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
-</div>
+
+<code-view style="height: 120px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/interactions/slider-sample-4" >
+</code-view>
+
 
 最大値および最小値に近い値が適切でない場合があります。[`minValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#minvalue) と [`maxValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#maxvalue) の設定以外に、ユーザー選択を更に制限するための範囲も設定できます。 
 これは、[`lowerBound`]({environment:angularApiUrl}/classes/igxslidercomponent.html#lowerbound) および [`upperBound`]({environment:angularApiUrl}/classes/igxslidercomponent.html#upperbound) プロパティで設定します。この設定により、0 ～ 100 および 900 ～ 1000 の範囲でつまみを移動できなくなります。
@@ -186,13 +181,12 @@ class PriceRange {
     </igx-slider>
 ```
 
-<div class="sample-container loading" style="height: 120px">
-    <iframe id="slide-sample-5-iframe" data-src='{environment:demosBaseUrl}/interactions/slider-sample-5' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="slide-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="slide-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
-</div>
+
+<code-view style="height: 120px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/interactions/slider-sample-5" >
+</code-view>
+
 
 ### ラベル モード
 ここまでで目盛りでのみ数値を表示しましたが、基本的な値の配列を使用することで、情報を提示するために使用できる別の方法があります。
@@ -225,13 +219,12 @@ public sliderType: SliderType = SliderType.RANGE;
 public labels = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 ```
 
-<div class="sample-container loading" style="height: 250px">
-    <iframe id="slide-sample-6-final-iframe" data-src='{environment:demosBaseUrl}/interactions/slider-sample-6' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="slide-sample-6-final-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="slide-sample-6-final-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
+
+<code-view style="height: 250px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/interactions/slider-sample-6" >
+</code-view>
+
 
 上記のサンプルからわかるように、`境界`の設定はまだ有効な操作です。[`lowerBound`]({environment:angularApiUrl}/classes/igxslidercomponent.html#lowerbound) と [`upperBound`]({environment:angularApiUrl}/classes/igxslidercomponent.html#upperbound) に対応すると、スライドできる範囲が制限されます。
 
@@ -276,13 +269,12 @@ public labels = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturd
 public type = SliderType.RANGE;
 ```
 
-<div class="sample-container loading" style="height: 140px">
-    <iframe id="discrete-slider-ticks-bottom-iframe" data-src='{environment:demosBaseUrl}/interactions/discrete-slider-ticks-bottom' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="discrete-slider-ticks-bottom-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="discrete-slider-ticks-bottom-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
-</div>
+
+<code-view style="height: 140px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/interactions/discrete-slider-ticks-bottom" >
+</code-view>
+
 
 
 ### ラベルの向きと表示状態
@@ -312,13 +304,12 @@ public type = SliderType.RANGE;
 ...
 ```
 
-<div class="sample-container loading" style="height: 240px">
-    <iframe id="slider-ticks-bottomtotop-labels-iframe" data-src='{environment:demosBaseUrl}/interactions/slider-ticks-bottomtotop-labels' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="slider-ticks-bottomtotop-labels-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="slider-ticks-bottomtotop-labels-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
-</div>
+
+<code-view style="height: 240px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/interactions/slider-ticks-bottomtotop-labels" >
+</code-view>
+
 
 ### 目盛りの位置
 次に、**目盛り**の位置を変更する方法を見てみましょう。
@@ -344,13 +335,12 @@ public type = SliderType.RANGE;
   public ticksOrientation = TicksOrientation.Mirror;
 ```
 
-<div class="sample-container loading" style="height: 140px">
-    <iframe id="slider-secondary-ticks-mirror-iframe" data-src='{environment:demosBaseUrl}/interactions/slider-secondary-ticks-mirror' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="slider-secondary-ticks-mirror-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="slider-secondary-ticks-mirror-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
-</div>
+
+<code-view style="height: 140px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/interactions/slider-secondary-ticks-mirror" >
+</code-view>
+
 
 > [!NOTE]
 > [`ticksOrientaion`]({environment:angularApiUrl}/classes/igxslidercomponent.html#ticksorientation) が **Top** または **Mirror** に設定され、**目盛りラベル**が表示されている場合、**つまみラベル**は意図的に非表示になります。このようにして、ユーザー エクスペリエンスの低下と 2 つのラベルの重複を防止できます。
@@ -370,13 +360,12 @@ public type = SliderType.RANGE;
   public labels = ["04:00", "08:00", "12:00", "16:00", "20:00", "00:00"];
 ```
 
-<div class="sample-container loading" style="height: 140px">
-    <iframe id="slider-timeframe-iframe" data-src='{environment:demosBaseUrl}/interactions/slider-timeframe' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="slider-timeframe-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="slider-timeframe-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
-</div>
+
+<code-view style="height: 140px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/interactions/slider-timeframe" >
+</code-view>
+
 
 いずれにしても反映されないため、ここでは、[`primaryTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#primaryticks) は設定されていません。コレクションの **長さ** が優先されます。これは、[`secondaryTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#secondaryticks) を設定できないことを意味しません。すべての**セカンダリ目盛り**は、**ラベル**なしで空になります。
 
@@ -416,13 +405,12 @@ public type = SliderType.RANGE;
 
 上記の **tickLabel** コールバックから、各**プライマリ**目盛りの**値**を丸めていることがわかります。 
 
-<div class="sample-container loading" style="height: 140px">
-    <iframe id="slider-tick-labels-template-iframe" data-src='{environment:demosBaseUrl}/interactions/slider-tick-labels-template' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="slider-tick-labels-template-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="slider-tick-labels-template-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
-</div>
+
+<code-view style="height: 140px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/interactions/slider-tick-labels-template" >
+</code-view>
+
 
 ## スタイル設定
 スライダー コンポーネントのデフォルト スタイル設定を変更するには、新しいテーマを作成します。
@@ -430,13 +418,12 @@ public type = SliderType.RANGE;
 ### デモ
 これは、新しいテーマを適用した結果です。
 
-<div class="sample-container loading" style="height: 240px">
-    <iframe id="slider-styling-sample-iframe" data-src='{environment:demosBaseUrl}/interactions/slider-styling-sample' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="slider-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="slider-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
-</div>
+
+<code-view style="height: 240px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/interactions/slider-styling-sample" >
+</code-view>
+
 
 ### コンポーネント テーマの作成
 はじめに、[カスタム パレット](../themes/palette.md)を作成します。

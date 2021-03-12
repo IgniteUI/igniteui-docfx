@@ -8,14 +8,12 @@ _keywords:  angular select, igniteui for angular, infragistics
 <p class="highlight">The [Select Component]({environment:angularApiUrl}/classes/igxselectcomponent.html) allows a single selection from a list of items, placed in a dropdown. This Material-based form control offers quick items list navigation, including selection, based on a single or multiple characters match. Since the [IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html) extends the [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html), you can handle all of the Drop Down events in the Select instance as well.</p>
 
 ## Angular Select Example
-<div class="sample-container loading" style="height: 300px;">
-    <iframe id="select-sample-1-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/select-sample-1" onload="onSampleIframeContentLoaded(this);" alt="Angular Select Example"></iframe>
-</div>
-<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
-<div>
-    <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="select-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height: 300px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-entries/select-sample-1" alt="Angular Select Example">
+</code-view>
+
 
 
 ## Usage
@@ -96,13 +94,12 @@ The Select component supports the following directives applicable to the [Input 
 </igx-select>
 ```
 
-<div class="sample-container loading" style="height: 350px;">
-    <iframe id="select-input-directives-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/select-input-directives" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-    <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="select-input-directives-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-input-directives-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height: 350px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-entries/select-input-directives" >
+</code-view>
+
 
 > [!NOTE]
 If no [`placeholder`]({environment:angularApiUrl}/classes/igxselectcomponent.html#placeholder) is specified for the Select component and there is no selection made, the `igxLabel` will transition and appear where you would expect the placeholder to be.
@@ -146,13 +143,12 @@ Then in your template file you can iterate over the objects and access their ite
 </igx-select>
 ```
 
-<div class="sample-container loading" style="height: 400px;">
-    <iframe id="select-sample-2-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-entries/select-sample-2" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="select-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height: 400px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-entries/select-sample-2" >
+</code-view>
+
 
 ### Header & Footer
 Currently, there are no default header and footer templates for the Select component. However, you can add a header or a footer template by marking them respectively with `igxSelectHeader` or `igxSelectFooter`. As these are custom templates, you should define their styling as well.
@@ -210,13 +206,12 @@ In this example, there are both header and footer ng-templates defined. In the h
 </igx-select>
 ```
 
-<div class="sample-container loading" style="height: 610px;">
-    <iframe id="select-header-footer-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-entries/select-header-footer" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="select-header-footer-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-header-footer-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height: 610px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-entries/select-header-footer" >
+</code-view>
+
 
 ### Custom Toggle Button
 You can customize the default toggle button, using the `igxSelectToggleIcon` directive or setting a `TemplateRef` to the [`toggleIconTemplate`]({environment:angularApiUrl}/classes/igxselectcomponent.html#toggleicontemplate) property.
@@ -286,13 +281,12 @@ You can see that we create a [*PositionSettings*]({environment:angularApiUrl}/in
 
 - You can set all settings inside of the [*ngOnInit*](https://angular.io/api/core/OnInit) hook and this will automatically affect your template upon the component's generation.
 
-<div class="sample-container loading" style="height: 260px;">
-    <iframe id="select-sample-4-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-entries/select-sample-4" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="select-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="select-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height: 260px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-entries/select-sample-4" >
+</code-view>
+
 
 You can also pass in a customized [OverlaySettings]({environment:angularApiUrl}/interfaces/overlaysettings.html) object to the [IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html#open)'s open function, where your template should look like this:
 ```html

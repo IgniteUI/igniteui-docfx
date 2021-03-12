@@ -9,14 +9,12 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 
 ## Angular Navbar Example
-<div class="sample-container loading" style="height: 300px">
-    <iframe id="nav-bar-sample-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/menus/navbar" onload="onSampleIframeContentLoaded(this);" alt="Angular Navbar Example"></iframe>
-</div>
-<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="nav-bar-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-bar-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height: 300px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/menus/navbar" alt="Angular Navbar Example">
+</code-view>
+
 <div class="divider--half"></div>
 
 ## Usage
@@ -94,13 +92,12 @@ Next, we need to update our template with an icon for each of the options we wan
 ```
 
 If all went well, you should see the following in your browser:
-<div class="sample-container loading" style="height: 300px">
-    <iframe id="nav-bar-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" data-src='{environment:demosBaseUrl}/menus/navbar-sample-1' class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="nav-bar-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-bar-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height: 300px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/menus/navbar-sample-1" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ### Add Custom Action Icon
@@ -138,13 +135,12 @@ What if we want to use a custom action icon for our app navigation instead of th
 
 Finally, this is how our navbar should look like with its custom action icon:
 
-<div class="sample-container loading" style="height: 300px">
-    <iframe id="nav-bar-sample-2-iframe" frameborder="0" seamless width="100%" height="100%" data-src='{environment:demosBaseUrl}/menus/navbar-sample-2' class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="nav-bar-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-bar-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height: 300px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/menus/navbar-sample-2" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ### Add Navigation Icon
@@ -180,13 +176,12 @@ export class NavbarSample3Component {
 
 If the sample is configured properly, you should see the following in your browser:
 
-<div class="sample-container loading" style="height: 300px">
-    <iframe id="navbar-sample-3-iframe" frameborder="0" seamless width="100%" height="100%" data-src='{environment:demosBaseUrl}/menus/navbar-sample-3' class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="navbar-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="navbar-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height: 300px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/menus/navbar-sample-3" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ### Add Custom Title
@@ -201,7 +196,7 @@ If we want to provide a custom content for a navbar's title, we can achieve this
         <div igxNavbarTitle>
             <a href="https://www.infragistics.com/products/ignite-ui-angular" target="_blank">
                 <img src="https://static.infragistics.com/marketing/Website/products/ignite-ui-landing/ignite-ui-logo.svg"
-                     width="120px" height="50px" alt="" style="margin-top: 7px;">
+                     width="120px" height="50px" alt style="margin-top: 7px;">
             </a>
         </div>
 
@@ -215,14 +210,12 @@ If we want to provide a custom content for a navbar's title, we can achieve this
 > [!NOTE]
 > If [`igx-navbar-title`]({environment:angularApiUrl}/classes/igxnavbartitledirective.html) or [`igxNavbarTitle`]({environment:angularApiUrl}/classes/igxnavbartitledirective.html) is provided, the default [`title`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#title) will not be used.
 
-<div class="sample-container loading" style="height: 300px">
-    <iframe id="navbar-custom-title-iframe" frameborder="0" seamless width="100%" height="100%"
-    data-src='{environment:demosBaseUrl}/menus/navbar-custom-title' class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="navbar-custom-title-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="navbar-custom-title-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height: 300px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/menus/navbar-custom-title" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ## Styling
@@ -336,13 +329,12 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 
 ### Demo
 
-<div class="sample-container loading" style="height: 150px">
-    <iframe id="nav-bar-style-iframe" frameborder="0" seamless width="100%" height="100%" data-src='{environment:demosBaseUrl}/menus/navbar-style' class="lazyload no-theming"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="nav-bar-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-bar-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height: 150px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/menus/navbar-style" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ## API References

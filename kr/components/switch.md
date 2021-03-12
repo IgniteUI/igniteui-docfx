@@ -10,12 +10,12 @@ _language: kr
 <div class="divider"></div>
 
 ### Switch Demo
-<div class="sample-container loading" style="height:200px">
-    <iframe id="form-elements-sample-iframe" src='{environment:demosBaseUrl}/data-entries/switch-sample-2' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="form-elements-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
-</div>
+
+<code-view style="height:200px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-entries/switch-sample-2" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ### Usage
@@ -48,7 +48,7 @@ To get a simple switch, add the following code inside the component template:
 If all went well, you should see something like the following in the browser:
 
 <div class="sample-container loading" style="height: 150px">
-<iframe data-src='{environment:demosBaseUrl}/data-entries/switch-sample-1' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+<iframe data-src='{environment:demosBaseUrl}/data-entries/switch-sample-1' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 
 #### Switch properties
@@ -77,7 +77,7 @@ Enhance the component template by adding a switch for each setting and then bind
 The final result would be something like that:
 
 <div class="sample-container loading" style="height: 200px">
-    <iframe data-src='{environment:demosBaseUrl}/data-entries/switch-sample-2' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+    <iframe data-src='{environment:demosBaseUrl}/data-entries/switch-sample-2' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 
 ### API References

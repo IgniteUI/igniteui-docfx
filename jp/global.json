@@ -9,5 +9,6 @@
     "_KRBaseUrl": "https://www.infragistics.co.kr/products/ignite-ui-angular/angular/",
     "_gitHubBtnLbl": "ページを開く:",
     "_themeUsage": true,
-    "_demosBaseUrlVar": "{environment:demosBaseUrl}"
+    "_demosBaseUrlVar": "{environment:demosBaseUrl}",
+    "_platform": "angular"
 }

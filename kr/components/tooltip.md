@@ -12,13 +12,12 @@ While most tooltips have a limited number of available positions, with the [`igx
 
 ### Demo
 
-<div class="sample-container loading" style="height:450px">
-    <iframe id="tooltip-simple-iframe" src='{environment:demosBaseUrl}/interactions/tooltip-simple' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<br/>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tooltip-simple-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
-</div>
+
+<code-view style="height:450px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/interactions/tooltip-simple" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ### Setup
@@ -308,13 +307,12 @@ As a finishing touch, we will add a couple of button icons as card actions at th
 
 If all went well, this is how our location and tooltip should look like:
 
-<div class="sample-container loading" style="height:400px">
-    <iframe id="tooltip-rich-iframe" data-src='{environment:demosBaseUrl}/interactions/tooltip-rich' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
-</div>
-<br/>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tooltip-rich-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
-</div>
+
+<code-view style="height:400px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/interactions/tooltip-rich" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ### Overlay configuration

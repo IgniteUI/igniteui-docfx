@@ -12,13 +12,12 @@ _language: kr
 
 Drag and drop icon to reposition it.
 
-<div class="sample-container loading" style="height:325px">
-    <iframe id="icons-sample-iframe" src='{environment:demosBaseUrl}/interactions/icons-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<br/>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="icons-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height:325px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/interactions/icons-sample" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ### Drag Directive

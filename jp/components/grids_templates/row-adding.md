@@ -18,37 +18,30 @@ _keywords: 行追加, igniteui for angular, infragistics, インフラジステ�
 次のサンプルは、@@igComponent でネイティブの行追加を有効にする方法を示しています。セルの値を変更してから、同じ行の別のセルをクリックまたはナビゲートしても、**[完了]** ボタンを使用して確認するか、**[キャンセル]** ボタンを使用して破棄するまで、行の値は更新されません。
 
 @@if (igxName === 'IgxGrid') {
-<div class="sample-container loading" style="height:520px">
-    <iframe id="grid-add-row-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-add-row' width="100%" height="100%"
-    seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<br/>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-add-row-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-add-row-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
-</div>
+
+<code-view style="height:520px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/grid/grid-add-row" >
+</code-view>
+
 <div class="divider--half"></div>
 }
 @@if (igxName === 'IgxTreeGrid') {
-<div class="sample-container loading" style="height:520px">
-    <iframe id="tree-grid-row-adding-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-add-row' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular @@igComponent 行追加の例"></iframe>
-</div>
-<br/>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="tree-grid-row-adding-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-row-adding-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
-</div>
+
+<code-view style="height:520px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-add-row" alt="Angular @@igComponent 行追加の例">
+</code-view>
+
 <div class="divider--half"></div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-   <div class="sample-container loading" style="height:510px">
-    <iframe id="hierarchical-grid-row-editing-sample-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-add-row' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular @@igComponent 行追加の例"></iframe>
-</div>
-<br/>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-row-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-row-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
-</div>
+   
+<code-view style="height:510px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-add-row" alt="Angular @@igComponent 行追加の例">
+</code-view>
+
 <div class="divider--half"></div>
 }
 

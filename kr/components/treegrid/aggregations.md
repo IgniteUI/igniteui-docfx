@@ -1,4 +1,4 @@
-﻿---
+---
 title: 트리 그리드 집계- 네이티브 Angular | Ignite UI for Angular
 _description: With the Ignite UI for Angular Tree Grid aggregations, see the data grouped and aggregated.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Tree Grid, Angular Tree Grid component, Angular Tree Grid control, Angular High Performance Tree Grid, Summaries, Summary, Aggregate, Aggregations
@@ -10,13 +10,12 @@ _language: kr
 
 #### 데모
 
-<div class="sample-container loading" style="height:850px">
-    <iframe id="treegrid-finjs-iframe" src='{environment:lobDemosBaseUrl}/treegrid-finjs' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<br/>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-finjs-iframe" data-demos-base-url="{environment:lobDemosBaseUrl}">STACKBLITZ 에서 보기</button>
-</div>
+
+<code-view style="height:850px" 
+           data-demos-base-url="{environment:lobDemosBaseUrl}" 
+           iframe-src="{environment:lobDemosBaseUrl}/treegrid-finjs" >
+</code-view>
+
 <div class="divider--half"></div>
 
 > [!NOTE]

@@ -12,12 +12,12 @@ _language: kr
 ### Radio Button
 
 #### Radio Button Demo
-<div class="sample-container loading" style="height: 384px">
-    <iframe id="form-elements-sample-iframe" src='{environment:demosBaseUrl}/data-entries/radio-sample-2' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="form-elements-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
-</div>
+
+<code-view style="height: 384px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-entries/radio-sample-2" >
+</code-view>
+
 <div class="divider--half"></div>
 
 #### Radio Button Usage
@@ -49,67 +49,12 @@ To get a started with some radio buttons, add the following code inside the comp
 
 If all went well, you should see something like the following in the browser:
 
-<div class="sample-container loading" style="height: 88px">
-    <iframe data-src='{environment:demosBaseUrl}/data-entries/radio-sample-1' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
-</div>
 
-#### Radio Button Properties
-Radio buttons are only useful when added in a group. Let's enhance the code above by adding four radio buttons, each responsible for applying a certain color as a background. We will bind the backgroundColor property of a div element to the component's selectedColor property. You will notice that selectedColor also participates in a two way binding relation through the NgModel directive, therefore its value is updated each time the user selects a different radio button(color).
+<code-view style="height: 88px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-entries/radio-sample-1" >
+</code-view>
 
-```typescript
-// radiogroup.component.ts
-...
-public title = "Select Background";
-
-public colors = [{
-    hex: "#f06a2f",
-    name: "Carrot"
-}, {
-    hex: "#ff134a",
-    name: "Watermelon"
-}, {
-    hex: "#7bc96f",
-    name: "Grass"
-},
-{
-    hex: "transparent",
-    name: "No color"
-}];
-
-public selectedColor: string = this.colors[3].hex;
-```
-
-```html
-<!--radiogroup.component.html-->
-<igx-radio *ngFor="let color of colors" 
-    name="color" 
-    [value]="color.hex" 
-    [(ngModel)]="selectedColor">
-    {{color.name}}
-</igx-radio>
-
-<div class="box" [style.background-color]="selectedColor"></div>
-```
-
-Pay attention that before using the ngModel directive in a two-way data binding, you must import the FormsModule and add it to the NgModule's imports list.
-
-Try it! The final result would be something like that:
-
-<div class="sample-container loading" style="height: 384px">
-    <iframe data-src='{environment:demosBaseUrl}/data-entries/radio-sample-2' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
-</div>
-
-### Radio Group
-<p class="highlight">The Ignite UI for Angular Radio Group directive provides a grouping container that allows better control over the child [`igxRadio`]({environment:angularApiUrl}/classes/igxradiocomponent.html) components and supports template-driven and reactive forms.</p>
-<div class="divider"></div>
-
-#### Radio Group Demo
-<div class="sample-container loading" style="height: 320px">
-    <iframe id="radio-group-sample-iframe" data-src='{environment:demosBaseUrl}/data-entries/radio-group-sample' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="radio-group-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
-</div>
 <div class="divider--half"></div>
 
 #### Radio Group Usage
