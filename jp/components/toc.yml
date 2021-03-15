@@ -8,7 +8,7 @@
 - name: ライセンス
   href: general/ignite-ui-licensing.md
   new: false
-- name: ローカリゼーション
+- name: ローカライズ
   href: general/localization.md
   new: false
   updated: true
