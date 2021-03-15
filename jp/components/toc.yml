@@ -71,10 +71,10 @@
     - name: レイアウト要素
       href: general/wpf-to-angular-guide/layout.md
       new: false
-- name: Interactivity
-header: true
-new: false
-- name: RTL Support
+- name: インタラクティビティ
+  header: true
+  new: false
+- name: RTL サポート
   href: interactivity/right-to-left-support.md
   updated: true
   new: false
@@ -833,6 +833,7 @@ new: false
 - name: マップ
   href: geo-map.md
   new: false
+  sortable: true
   items:
     - name: CSV ファイルのバインド
       href: geo-map-binding-data-csv.md
