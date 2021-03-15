@@ -39,12 +39,12 @@ import { IgxToastModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 #### Show Toast
-In order to display the toast component, use its [`show()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#show) method and call it on a button click. Use the [`message`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#message) input to set a notification.
+In order to display the toast component, use its [`open()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#open) method and call it on a button click. Use the [`message`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#message) input to set a notification.
 
 ```html
 <!--sample.component.html-->
 
-<button igxButton="raised" (click)="toast.show()">Show notification</button>
+<button igxButton="raised" (click)="toast.open()">Show notification</button>
 <igx-toast #toast message="Notification displayed"></igx-toast>
 ```
 
@@ -55,13 +55,13 @@ If the sample is configured properly, a toast appears displaying a notification 
 </div>
 
 #### Hide/Auto Hide
-Once opened, the toast disappears after a period specified by the [`displayTime`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#displaytime) input which is set initially to 4000 milliseconds. This behavior is enabled by default but you can change this by setting [`autoHide`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#autohide) to **false**. In this way, the toast remains visible. Using the toast [`hide()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#hide) method, you can close the component.
+Once opened, the toast disappears after a period specified by the [`displayTime`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#displaytime) input which is set initially to 4000 milliseconds. This behavior is enabled by default but you can change this by setting [`autoHide`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#autohide) to **false**. In this way, the toast remains visible. Using the toast [`close()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#close) method, you can close the component.
 
 ```html
 <!--sample.component.html-->
 
-<button igxButton="raised" (click)="toast.show()">SHOW TOAST</button>
-<button igxButton="raised" (click)="toast.hide()">HIDE TOAST</button>
+<button igxButton="raised" (click)="toast.open()">SHOW TOAST</button>
+<button igxButton="raised" (click)="toast.close()">HIDE TOAST</button>
 <igx-toast #toast message="Notification displayed" [autoHide]="false"></igx-toast>
 ```
 
@@ -77,7 +77,7 @@ Use [`displayTime`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#d
 ```html
 <!--sample.component.html-->
 
-<button igxButton="raised" (click)="toast.show()">Show notification</button>
+<button igxButton="raised" (click)="toast.open()">Show notification</button>
 <igx-toast #toast message="Notification displayed" displayTime="1000"></igx-toast>
 ```
 
@@ -94,7 +94,7 @@ Use [`position`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#posi
 <!--sample.component.html-->
 
 <div>
-    <button igxButton="raised" (click)="show(toast)">Show notification on top</button>
+    <button igxButton="raised" (click)="open(toast)">Show notification on top</button>
     <igx-toast #toast message="Notification displayed" [position]="toastPosition"></igx-toast>
 </div>
 
@@ -107,9 +107,9 @@ import { IgxToastPosition } from 'igniteui-angular';
 
 ...
 public toastPosition: IgxToastPosition;
-public show(toast) {
+public open(toast) {
     this.toastPosition = IgxToastPosition.Top;
-    toast.show();
+    toast.open();
 }
 ...
 
