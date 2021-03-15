@@ -2,25 +2,24 @@
 title: Localization - Native Angular | Ignite UI for Angular
 _description: The Ignite UI for Angular Localization mechanism provides the ability to change/localize strings in the components.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components
+_language: kr
 ---
 
-# Localization
+## Localization
 
 With only a few lines of code, users can easily localize the strings in Ignite UI for Angular components.
 
-## Angular Localization Example
 <div class="sample-container loading" style="height:550px">
-    <iframe id="localization-sample-1-iframe" src="{environment:demosBaseUrl}/services/localization-sample-1" width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular Localization Example"></iframe>
+    <iframe id="localization-sample-1-iframe" src='{environment:demosBaseUrl}/services/localization-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
+<br/>
 <div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="localization-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="localization-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-## Usage
+### Usage
 
-### Localize entire application
+#### Localize entire application
 
 To get all available resource strings, there is a global function `getCurrentResourceStrings`, which returns an `IResourceStrings` object.
 The values could be replaced in order to be localized and then the object can be passed to the `changei18n` function, as a parameter, which will change the global i18n for the igniteui-angular components on an app.module level. The localization can be done anywhere in the app, not only in the app.module.ts
@@ -33,7 +32,7 @@ public ngOnInit(): void {
     const currentRS = getCurrentResourceStrings();
 
     for (const key of Object.keys(currentRS)) {
-    currentRS[key] = '[Localized]'+ currentRS[key];
+        currentRS[key] = '[Localized]'+ currentRS[key];
     }
 
     changei18n(currentRS);
@@ -46,7 +45,7 @@ public ngOnInit(): void {
 </button>
 </div>
 
-### Localize particular strings for all components
+#### Localize specific strings for all components
 
 Another approach is to localize/change only some of the strings for all components of given type. There is a `resourceStrings` property for the components that could be localized, which is of `IResourceStrings` type.
 
@@ -62,7 +61,7 @@ currentRS.igx_grid_filter_row_close = '[Localized]Close';
     </button>
 </div>
 
-### Localize particular strings for particular instance of a component
+#### Localize specific strings for a specific instance of a component
 
 If only a single `igx-grid` instance should be localized, there is a way. The `resourceStrings` property should be used and it should be set to a new instance of `IGridResourceStrings` type.
 
@@ -79,7 +78,7 @@ this.grid.resourceStrings = newGridRes;
 <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="localization-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 
-## Load localized resources from npm package
+### Load localized resources from npm package
 
 Firstly the package that contains the resource strings should be installed:
 
@@ -94,14 +93,15 @@ import { IgxResourceStringsJA } from 'igniteui-angular-i18n';
 import { IgxResourceStringsKO } from 'igniteui-angular-i18n';
 import { IgxResourceStringsES } from 'igniteui-angular-i18n';
 ...
+
 public ngOnInit(): void {
     ...
-    changei18n(IgxResourceStringsJA);
+    changei18n(IgxResourceStringsKO);
     ...
 }
 ```
 
-## Additional Resources
+### Additional Resources
 
 <div class="divider--half"></div>
 

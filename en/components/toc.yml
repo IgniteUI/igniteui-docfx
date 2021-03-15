@@ -7,6 +7,10 @@
 - name: Licensing
   href: general/ignite-ui-licensing.md
   new: false
+- name: Localization (i18n)
+  href: general/localization.md
+  new: false
+  updated: true
 - name: Getting started
   href: general/getting-started.md
   new: false
@@ -18,9 +22,13 @@
   href: general/update-guide.md
   new: false
   updated: true
-- name: Accessibility Compliance
-  href: general/accessibility-compliance.md
+- name: SSR Rendering
+  href: general/ssr-rendering.md
   new: false
+- name: Data Analysis
+  href: general/data-analysis.md
+  new: false
+  updated: true
 - name: Angular Schematics & Ignite UI CLI
   href: general/cli-overview.md
   new: false
@@ -62,17 +70,16 @@
     - name: Layout Elements
       href: general/wpf-to-angular-guide/layout.md
       new: false
-- name: Framework & features
-  href: general/framework-and-features/framework-and-features.md
+- name: Interactivity
+  header: true
   new: false
-  items:
-    - name: SSR Rendering
-      href: general/framework-and-features/ssr-rendering.md
-      new: false
-    - name: Data Analysis
-      href: general/framework-and-features/data-analysis.md
-      new: false
-      updated: true
+- name: RTL Support
+  href: interactivity/right-to-left-support.md
+  updated: true
+  new: false
+- name: Accessibility Compliance
+  href: interactivity/accessibility-compliance.md
+  new: false
 - name: Grids & Lists
   href: grids-and-lists.md
   header: true
@@ -1168,9 +1175,6 @@
   new: false
 - name: Excel Exporter
   href: exporter-excel.md
-  new: false
-- name: Localization
-  href: localization.md
   new: false
 - name: Transaction Service
   href: transaction.md
