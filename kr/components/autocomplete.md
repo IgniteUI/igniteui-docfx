@@ -17,12 +17,12 @@ The [`igx-autocomplete`]({environment:angularApiUrl}/classes/igxautocompletedire
 
 ### Demo
 The following sample demonstrates simple use of the `igx-autocomplete` directive, applied on an `igx-input`. The directive is provided with an `igx-drop-down` which has a defined filtering pipe.
-<div class="sample-container loading" style="height: 400px;">
-    <iframe id="autocomplete-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/autocomplete" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="autocomplete-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height: 400px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-entries/autocomplete" >
+</code-view>
+
 <div class="divider--half"></div>
 
 > [!WARNING]
@@ -199,12 +199,12 @@ export class AutocompleteSampleComponent {
 
 The following sample demonstrates an autocomplete, which allows selecting a cinema, where movies are grouped by a city. Type in the input or use the `Arrow Down` key to open the list and choose a cinema, then select a movie and its date and time:
 
-<div class="sample-container loading" style="height: 650px;">
-    <iframe id="autocomplete-movie" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-entries/movie" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="autocomplete-movie" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height: 650px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-entries/movie" >
+</code-view>
+
 
 <div class="divider--half"></div>
 
@@ -229,12 +229,12 @@ In order to use the `igxAutocomplete` with groups, like in the sample above, you
 The following sample demonstrates an `igxAutocomplete` with a drop-down bound to a remote service. In order to limit requests to the service and improve performance, RxJS `debounce` is used and requests are made `250ms` after the input has stopped.
 
 For the purpose of the sample there is a delay in the data loading, in order to apply and show a custom loading template instead of the drop-down:
-<div class="sample-container loading" style="height: 400px;">
-    <iframe id="autocomplete-remote-sample" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-entries/autocomplete-remote" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="autocomplete-remote-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height: 400px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-entries/autocomplete-remote" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ## API References

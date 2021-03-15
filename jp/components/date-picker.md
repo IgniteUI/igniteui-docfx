@@ -9,14 +9,12 @@ _language: ja
 <p class="highlight">Ignite UI for Angular Date Picker コンポーネントは単一の日付選択が可能な月表示カレンダーを表示するか、ドロップダウン モードで日付を変更するための入力機能を提供します。ロケールおよびカスタム日付書式設定をサポートします。</p>
 
 ## Angular Date Picker の例
-<div class="sample-container loading" style="height: 550px;">
-    <iframe id="date-picker-sample-1" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/scheduling/datepicker-sample-1" onload="onSampleIframeContentLoaded(this);" alt="Angular Date Picker の例"></iframe>
-</div>
-<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="date-picker-sample-1" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="date-picker-sample-1" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
+
+<code-view style="height: 550px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-1" alt="Angular Date Picker の例">
+</code-view>
+
 <div class="divider--half"></div>
 
 ## 使用方法
@@ -71,13 +69,12 @@ public date: Date = new Date(Date.now());
 ```
 
 以下は結果です。
-<div class="sample-container loading" style="height: 540px;">
-    <iframe id="date-picker-sample-2" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-2" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="date-picker-sample-2" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="date-picker-sample-2" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
+
+<code-view style="height: 540px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-2" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ### ドロップダウン モード
@@ -130,13 +127,12 @@ public date: Date = new Date(Date.now());
 </igx-date-picker>
 ```
 
-<div class="sample-container loading" style="height: 500px;">
-    <iframe id="date-picker-dropdown" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/datepicker-dropdown" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="date-picker-dropdown" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="date-picker-dropdown" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
-</div>
+
+<code-view style="height: 500px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/scheduling/datepicker-dropdown" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ### 週番号
@@ -150,13 +146,12 @@ public date: Date = new Date(Date.now());
 
 以下のデモは、週番号が有効になっている日付のピッカーを示しています:
 
-<div class="sample-container loading" style="height: 550px;">
-    <iframe id="date-picker-sample-1-2" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-1" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="date-picker-sample-1-2" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="date-picker-sample-1-2" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
-</div>
+
+<code-view style="height: 550px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-1" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ### ボタンの追加
@@ -209,13 +204,12 @@ public date: Date = new Date(Date.now());
 ```
 
 以下のサンプルは、日付ピッカーのモード、ボタン、および双方向データ バインディングの使用方法を示します。
-<div class="sample-container loading" style="height: 680px;">
-    <iframe id="date-picker-sample-3" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-3" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="date-picker-sample-3" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="date-picker-sample-3" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
+
+<code-view style="height: 680px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-3" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ### カスタム アクション ボタン
@@ -247,13 +241,12 @@ public yearsView(datePicker: IgxDatePickerComponent) {
 }
 ```
 
-<div class="sample-container loading" style="height: 680px;">
-    <iframe id="date-picker-sample-8" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-8" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="date-picker-sample-8" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="date-picker-sample-8" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
+
+<code-view style="height: 680px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-8" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ### カスタム書式設定
@@ -279,13 +272,12 @@ public formatter = (date: Date) => {
 ```
 
 書式設定した日付を表示するサンプル:
-<div class="sample-container loading" style="height: 540px;">
-    <iframe id="date-picker-sample-4" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-4" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="date-picker-sample-4" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="date-picker-sample-4" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
+
+<code-view style="height: 540px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-4" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ## テンプレート  
@@ -315,13 +307,12 @@ public formatter = (date: Date) => {
 ```
 
 再テンプレートした入力グループ:
-<div class="sample-container loading" style="height: 540px;">
-    <iframe id="date-picker-sample-6" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-6" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="date-picker-sample-6" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="date-picker-sample-6" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
+
+<code-view style="height: 540px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-6" >
+</code-view>
+
 <div class="divider--half"></div>
 
 #### ドロップダウン モード日付ピッカー
@@ -347,13 +338,12 @@ public formatter = (date: Date) => {
 <igx-snackbar #snackbar></igx-snackbar>
 ```
 
-<div class="sample-container loading" style="height: 550px;">
-    <iframe id="date-picker-sample-7" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-7" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="date-picker-sample-7" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="date-picker-sample-7" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
+
+<code-view style="height: 550px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-7" >
+</code-view>
+
 
 <div class="divider--half"></div>
 
@@ -430,13 +420,12 @@ public getDatePart(val: any, component: any, datePart: string) {
 ```
 
 以下は結果です。
-<div class="sample-container loading" style="height: 580px;">
-    <iframe id="date-picker-sample-5" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-5" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="date-picker-sample-5" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="date-picker-sample-5" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
+
+<code-view style="height: 580px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-5" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ## スタイル設定
@@ -489,15 +478,12 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 }
 ```
 
-<div class="sample-container loading" style="height:500px">
-    <iframe id="datepicker-styling-sample-iframe" src='{environment:demosBaseUrl}/scheduling/datepicker-styling-sample' width="100%" height="100%" 
-        seamless frameBorder="0" class="lazyload no-theming"></iframe>
-</div>
-<br/>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="datepicker-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="datepicker-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
+
+<code-view style="height:500px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/scheduling/datepicker-styling-sample" >
+</code-view>
+
 
 ## API リファレンス
 <div class="divider--half"></div>

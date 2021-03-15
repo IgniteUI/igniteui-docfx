@@ -2,8 +2,8 @@
  ### 1. [Writing an article](#writing-an-article)
  ### 2. [Writing a Styling section for article](#styling-section)
  ### 3. [Workflow](#workflow)
- ### 4. [StackBlitz configuration](#stackblitz-configuration)
- ### 5. [Lazy loading](#lazy-loading-of-samples-in-a-topic)
+ ### 4. [Environment variables](#environment-variables)
+ ### 5. [Code View Configuration](#code-view-configuration)
  ### 6. [Creating shared help topics](#creating-shared-help-topics)
  ### 7. [Updating of Data Visualization related topics](#updating-of-data-visualization-related-topics)
 
@@ -119,7 +119,7 @@ Example status workflows:
 1. Check the build result.
 2. Be sure that `Writing an article` guidance is respected.
 3. Check whether the embed sample is working.
-4. Stackblitz demo is working as well (Button action).
+4. Code views are working as well
 5. Each hyperlink is working properly.
 6. Table of content is correct.
 
@@ -134,29 +134,39 @@ Open both repositories and perform `npm start`. This will start both projects an
 
 > Note: Keep in mind that when you submit a change in the EN .md files, you will need to make the same change in the JP versions as well. This will help our Localization team to translate the change. As for the KR version of the topic, these changes will be handled by the Localization team.
 
+# <a name='#environment-variables'>Environment variables</a>
+The environment variables are a syntactic sugar for pointing out the location of the resources used in a topic.
+These variables are defined in the [**environment.json**](https://github.com/IgniteUI/igniteui-docfx/blob/master/en/environment.json) file of a docfx project. Each environment variable is replaced with its corresponding value during build time.
 
-# <a name='#stackblitz-configuration'>StackBlitz configuration</a>
+# <a name='#code-view-configuration'>Code View Configuration</a>
 
-StackBlitz button should be added for each live editing sample.
-In order to do that, certain configuration should be added in the [angular samples](https://github.com/IgniteUI/igniteui-angular-samples) repository. More could be found here [To do](https://github.com/IgniteUI/igniteui-angular-samples/issues/130).
+If you want to add a sample and introduce the code behind this sample to the readers, you have to add a ```<code-view></code-view>``` element.
+This element is rendered as a container with tabs, their respective views and a footer element containing **StackBlitz** and **Codesandbox** buttons for live editing purposes. The first tab renders the sample iframe and each following tab renders the content of a specific file, used for the development of the sample. The live editing buttons create [StackBlitz](https://stackblitz.com/) and [Codesandbox](https://codesandbox.io/) applications for the sample in the code view.
 
+The ```<code-view></code-view>``` element has the following attributes:
 
-StackBlitz button should be referencing the iframe provided by angular samples repo. Add the button in the JP versions of the documentation as well:
+- ***style***: The [*global style attribute*](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/style). At runtime its values are applied to the container of the sample.
+> Note: It is necessary to add the **height** of the code-view when you create this element.
+- ***data-demos-base-url***: The base url of the sample. It is recommended to assign an **environment variable** to this attribute. 
+- ***iframe-src***: The absolute path of the sample. It is recommended to assign the value of the *data-demos-base-url* attribute combined with the relative (relative to its base url) path of the sample.
+- ***alt*** (optional): This attribute is applied as an *alt* attribute to the iframe of the sample.
+
+Code view example:
 
 ```html
-<div class="sample-container loading" style="height: 477px">
-    <iframe id="list-sample-4-iframe" src='{environment:demosBaseUrl}/list-sample-4' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="list-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+<code-view style="height:700px" 
+           data-demos-base-url="{environment:lobDemosBaseUrl}" 
+           iframe-src="{environment:lobDemosBaseUrl}/grid/grid" 
+           alt="Angular data grid example">
+</code-view>
 ```
 
-Here is an explanation of how the StackBlitz integration works. For each sample (grid-sample-1) a .json file is created (grid-sample-1.json). Each .json file contains the source code of the sample.
+Here is a brief explanation of how the code view element works. For each sample (grid-sample-1) a .json file is created (grid--grid-sample-1.json). Each .json file contains the source code of the sample.
+All of the `.json` files are located under `/assets/samples` of [igniteui-angular-samples](https://github.com/IgniteUI/igniteui-angular-samples/) project.
 
-All of the `.json` files are located under `/assets/samples` of [igniteui-angular-samples](https://github.com/IgniteUI/igniteui-angular-samples/) project. When you press a StackBlitz button, `igniteui-docfx` consumes a `.json` file from igniteui-angular-samples, creates a hidden `<form>` and submits it to StackBlitz using their [API](https://gist.github.com/EricSimons/72017ec7ba068a5b492ee39f9e3a7f32).
+> Note: Samples without a respective .json file are still rendered in the code view, but the code tabs and the footer will be omitted.
 
-# <a name='#lazy-loading'>Lazy loading of samples in a topic</a>
+# <a name='#environment-variables'>Add/Change environment variables</a>
 Our samples are embedded in the topics with iframes. Some topics have more than one sample and in order to prevent loading delays, we've added lazy loading functionality of [the iframes](https://github.com/IgniteUI/igniteui-docfx-template/issues/75). In order to achieve this we use [lazysizes](https://www.npmjs.com/package/lazysizes#recommendedpossible-markup-patterns) library.
 
 Follow the steps below for lazy loading implementation in a topic ([PR example](https://github.com/IgniteUI/igniteui-docfx/pull/1001/files#diff-52bafd164f6207a20517090ad21d7a6aR13)):
@@ -173,6 +183,4 @@ Follow the steps below for lazy loading implementation in a topic ([PR example](
 # <a name='#updating-of-data-visualization-related-topics'>Updating of Data Visualization related topics</a>
 Our cross platform docs are in `internal repo`. 
 
-If you need to update the cross platform docs, please do so from `internal repo`, queue an Angular build from `AngularDocFX_EN` build definition in the `xplat-docfx` repository, and then approve the PR that will come into public repo from ESShared.
-
-- `internal repo` - "...tfs/engineering/IgInternalApplicationsGit/IgInternalApplicationsGit Team/_git/xplat-docfx"
+If you need to update the cross platform docs, please do so from the [`igniteui-xplat-doc`](https://github.com/IgniteUI/igniteui-xplat-docs) repo, queue an Angular build from `AngularDocFX_EN` build definition in the `igniteui-xplat-doc` repository, and then approve the PR that will come into public repo from ESShared.

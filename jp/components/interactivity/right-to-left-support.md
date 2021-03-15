@@ -4,39 +4,7 @@ _description: Ignite UI for Angular によって ARIA アクセシビリティ�
 _keywords: aria support, aria サポート, a11y, ignite ui for angular, infragistics, インフラジスティックス
 ---
 
-# フレームワークと機能
-
-## アクセシビリティと文字表記の方向
-
-このセクションでは、フレームワークのアクセシビリティ (ARIA) サポートと、コンポーネントの`文字表記の方向`の簡単な管理を示します。
-
-### 右から左方向 (RTL) の有効化
-
-`Ignite UI for Angular` ライブラリは、`html` または `body` タグの `dir` 属性を設定した場合のみ `文字表記の方向`操作の影響を受けます。また、ランタイムの変更は検出されないことに注意してください。
-
-次の例に移動します。
-
-#### 手順 1 - 両方のタグで ‘dir’ 属性を設定します。
-
-```html
-<html dir="rtl">
-...
-  <body dir="ltr">
-  </body>
-</html>
-```
-
-上記の場合、`body` タグの内部属性タグが優先されます。
-
-#### 手順 2 - それぞれの方向の[テーマエンジン](../../themes/index.md)に通知します。
-
-そのためには、[igx-core]({environment:sassApiUrl}/index.html#mixin-igx-core) mixin の `$direction` パラメーターを設定します。
-
-```scss 
-@include igx-core($direction: rtl);
-```
-
-コンテンツを調整する手順はこれですべてになります。
+# Right to Left (RTL) Support
 
 ## RTL サポート 
 フレームワークのほとんどのコンポーネントで、新しい RTL テーマを介した**右から左 (RTL)** がサポートされます。
@@ -56,4 +24,42 @@ _keywords: aria support, aria サポート, a11y, ignite ui for angular, infragi
 
 * Grid (igx-grid)
 * Tabs (igx-tabs)
+
+## RTL Example
+
+このセクションでは、フレームワークのアクセシビリティ (ARIA) サポートと、コンポーネントの`文字表記の方向`の簡単な管理を示します。
+
+<code-view style="height: 600px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-rtl-sample" alt="Angular RTL Support Example">
+</code-view>
+
+## 右から左方向 (RTL) の有効化
+
+`Ignite UI for Angular` ライブラリは、`html` または `body` タグの `dir` 属性を設定した場合のみ `文字表記の方向`操作の影響を受けます。また、ランタイムの変更は検出されないことに注意してください。
+
+次の例に移動します。
+
+### 手順 1 - 両方のタグで ‘dir’ 属性を設定します。
+
+```html
+<html dir="rtl">
+...
+  <body dir="ltr">
+  </body>
+</html>
+```
+
+上記の場合、`body` タグの内部属性タグが優先されます。
+
+### 手順 2 - それぞれの方向の[テーマエンジン](../../themes/index.md)に通知します。
+
+そのためには、[igx-core]({environment:sassApiUrl}/index.html#mixin-igx-core) mixin の `$direction` パラメーターを設定します。
+
+```scss 
+@include igx-core($direction: rtl);
+```
+
+コンテンツを調整する手順はこれですべてになります。
+
 

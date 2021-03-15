@@ -11,14 +11,12 @@ _language: ja
 <p class="highlight">Ignite UI for Angular Radio Button コンポーネントを使用すると、隣に表示されるオプションのセットから単一のオプションを選択する機能を提供します。</p>
 
 ## Angular Radio & Radio Group の例
-<div class="sample-container loading" style="height: 90px">
-    <iframe id="form-elements-sample-iframe" src='{environment:demosBaseUrl}/data-entries/radio-sample-1' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular Radio & Radio Group の例"></iframe>
-</div>
-<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="form-elements-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="form-elements-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
+
+<code-view style="height: 90px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-entries/radio-sample-1" alt="Angular Radio & Radio Group の例">
+</code-view>
+
 <div class="divider--half"></div>
 
 ### 使用方法
@@ -57,59 +55,12 @@ export class AppModule {
 <igx-radio [(ngModel)]="selected" value="option2" labelPosition="before">Option 2</igx-radio>
 ```
 
-<div class="sample-container loading" style="height: 90px">
-    <iframe id="radio-sample-3-iframe" data-src='{environment:demosBaseUrl}/data-entries/radio-sample-3' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
 
-### プロパティ
-上記のサンプルに 4 つのラジオ ボタンを追加し、各ボタンに特定の背景色を適用します。次に含まれる div 要素の backgroundColor プロパティをコンポーネントの selectedColor プロパティにバインドします。selectedColor は `NgModel` ディレクティブによって双方向バインディングが設定されるため、ユーザーが別のラジオ ボタン (色) を選択する際に値が更新されます。
+<code-view style="height: 90px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-entries/radio-sample-3" >
+</code-view>
 
-```typescript
-// radiogroup.component.ts
-...
-public colors = [{
-    hex: "#f06a2f",
-    name: "Carrot"
-}, {
-    hex: "#ff134a",
-    name: "Watermelon"
-}, {
-    hex: "#7bc96f",
-    name: "Grass"
-},
-{
-    hex: "transparent",
-    name: "No color"
-}];
-
-public selectedColor: string = this.colors[3].hex;
-```
-
-```html
-<!--radiogroup.component.html-->
-<igx-radio *ngFor="let color of colors" 
-           name="color" 
-           [value]="color.hex" 
-           [(ngModel)]="selectedColor">
-           {{color.name}}
-</igx-radio>
-
-<div [style.background-color]="selectedColor">
-    ...
-</div>
-```
-
-双方向バインディングで `NgModel` ディレクティブを使用しない場合、`FormsModule` をインポートし、NgModule の imports リストに追加する必要があります。
-
-結果は以下のようになります。
-
-<div class="sample-container loading" style="height: 450px">
-    <iframe id="radio-sample-2-iframe" data-src='{environment:demosBaseUrl}/data-entries/radio-sample-2' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="radio-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="radio-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
 
 ## スタイル設定
 
@@ -154,13 +105,12 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 }
 ```
 
-<div class="sample-container loading" style="height: 220px">
-    <iframe id="radio-styling-sample-iframe" data-src='{environment:demosBaseUrl}/data-entries/radio-styling-sample' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="radio-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="radio-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
+
+<code-view style="height: 220px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-entries/radio-styling-sample" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ## Radio Group
@@ -168,13 +118,12 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 <div class="divider"></div>
 
 ### デモ
-<div class="sample-container loading" style="height: 260px">
-    <iframe id="radio-group-sample-iframe" data-src='{environment:demosBaseUrl}/data-entries/radio-group-sample' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="radio-group-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="radio-group-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
+
+<code-view style="height: 260px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-entries/radio-group-sample" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ### 使用方法
@@ -232,13 +181,12 @@ public alignment = RadioGroupAlignment.vertical;
 </igx-radio-group>
 ```
 
-<div class="sample-container loading" style="height: 300px">
-    <iframe id="radio-group-vertical-iframe" data-src='{environment:demosBaseUrl}/data-entries/radio-group-vertical' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="radio-group-vertical-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="radio-group-vertical-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
+
+<code-view style="height: 300px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-entries/radio-group-vertical" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ## API リファレンス

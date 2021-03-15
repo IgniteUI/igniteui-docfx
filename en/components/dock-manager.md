@@ -9,16 +9,12 @@ The Ignite UI Dock Manager component provides means to manage the layout of your
 
 ## Angular Dock Manager Example
 
-<div class="sample-container loading" style="height: 600px">
-    <iframe id="dock-manager-overview-iframe" src='{environment:demosBaseUrl}/layouts/dock-manager-sample' width="100%" height="100%" seamless="" frameborder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Dock Manager Example"></iframe>
-</div>
-<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="dock-manager-overview-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on codesandbox
-    </button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dock-manager-overview-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on StackBlitz
-    </button>
-</div>
+
+<code-view style="height: 600px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/layouts/dock-manager-sample" alt="Angular Dock Manager Example">
+</code-view>
+
 
 <div class="divider--half"></div>
 
@@ -73,4 +69,4 @@ This is it, you are now ready to use the Dock Manager component in an Angular co
 
 For further information on the usage of the Dock Manager component, you can check out [this topic]({environment:infragisticsBaseUrl}/products/ignite-ui-web-components/web-components/components/dock-manager.html).
 
-For a more advanced example of the usage of the Dock Manager component with panes hosting various Ignite UI for Angular components, see this version of the [data analysis sample](./general/framework-and-features/data-analysis.md#data-analysis-with-dockmanager).
+For a more advanced example of the usage of the Dock Manager component with panes hosting various Ignite UI for Angular components, see this version of the [data analysis sample](./general/data-analysis.md#data-analysis-with-dockmanager).
