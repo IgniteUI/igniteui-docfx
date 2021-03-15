@@ -154,12 +154,12 @@ public max: string = "18:00";
 @ViewChild("toast")
 private toast: ElementRef;    
 
-public show(toast) {
-    toast.show();
+public open(toast) {
+    toast.open();
 }
 
 public onValidationFailed(timepicker){
-    this.show(this.toast);
+    this.open(this.toast);
 }
 ```
 

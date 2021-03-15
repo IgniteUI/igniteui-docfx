@@ -425,14 +425,14 @@ public toast: IgxToastComponent;
 public rightPanPerformed(args) {
   args.keepItem = true;
   this.toast.message = "Dialing " + this.contacts[args.item.index - 1].name;
-  this.toast.show();
+  this.toast.open();
 }
 
 public leftPanPerformed(args) {
   args.keepItem = false;
   setTimeout((idx = args.item.index - 1) => {
     this.toast.message = "Contact " + this.contacts[idx].name + " removed.";
-    this.toast.show();
+    this.toast.open();
     this.contacts.splice(idx, 1);
   }, 500);
 }
