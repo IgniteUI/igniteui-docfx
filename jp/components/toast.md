@@ -41,27 +41,27 @@ export class AppModule {}
 ```
 
 ### Toast の表示
-Toast コンポーネントを表示するには、ボタン クリックで [`show()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#show) メソッドを呼び出します。Toast コンテンツを要素内に渡すことができます。
+Toast コンポーネントを表示するには、ボタン クリックで [`open()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#open) メソッドを呼び出します。Toast コンテンツを要素内に渡すことができます。
 
 ```html
 <!--sample.component.html-->
 
-<button igxButton="raised" (click)="toast.show()">Show notification</button>
+<button igxButton="raised" (click)="toast.open()">Show notification</button>
 <igx-toast #toast >Notification displayed</igx-toast>
 ```
 
 サンプルが正しく構成された場合、ボタン クリック時に通知を表示する Toast が表示されます。
 
-Toast コンテンツを設定する別の方法は、メッセージをパラメーターとして [`show()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#show) メソッドに直接渡すことです。
+Toast コンテンツを設定する別の方法は、メッセージをパラメーターとして [`open()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#open) メソッドに直接渡すことです。
 
 ```html
 <!--sample.component.html-->
 
-<button igxButton="raised" (click)="toast.show('Notification displayed')">Show notification</button>
+<button igxButton="raised" (click)="toast.open('Notification displayed')">Show notification</button>
 <igx-toast #toast ></igx-toast>
 ```
 
-[`show()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#show) メソッドを AppComponent ファイルで使用して、メッセージの値を管理することもできます。
+[`open()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#open) メソッドを AppComponent ファイルで使用して、メッセージの値を管理することもできます。
 
 ```typescript
 // app.component.ts
@@ -74,25 +74,25 @@ public ngOnInit() {
 }
 
 public showMessage() {
-    this.toast.show(this.message);
+    this.toast.open(this.message);
 }
 ```
 
 ## 例
 
 ### 非表示/自動的に隠す
-開いた後は、[`displayTime`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#displaytime) に指定した時間期間後に非表示になります。デフォルト値は 4000 ミリ秒です。この動作はデフォルトで有効ですが、[`autoHide`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#autohide) を **false** に設定して変更できます。このように、Toast は非表示になりません。Toast の [`hide()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#hide) メソッドを使用して、コンポーネントを閉じることができます。 
+開いた後は、[`displayTime`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#displaytime) に指定した時間期間後に非表示になります。デフォルト値は 4000 ミリ秒です。この動作はデフォルトで有効ですが、[`autoHide`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#autohide) を **false** に設定して変更できます。このように、Toast は非表示になりません。Toast の [`close()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#close) メソッドを使用して、コンポーネントを閉じることができます。 
 
 ```html
 <!--sample.component.html-->
 
-<button igxButton="raised" (click)="toast.show()">Show Toast</button>
-<button igxButton="raised" (click)="toast.hide()">Hide Toast</button>
+<button igxButton="raised" (click)="toast.open()">Show Toast</button>
+<button igxButton="raised" (click)="toast.close()">Hide Toast</button>
 <igx-toast #toast message="Notification displayed" [autoHide]="false"></igx-toast>
 ```
 
 サンプルが正しく構成されると、[SHOW] ボタンをクリックしたときに Toast が表示されます。自動的に隠す機能が無効で、[HIDE] ボタンのクリックで Toast が非表示になります。
-他の 2 つのコンポーネントでは、[`show()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#show) メソッドを介してさまざまなメッセージを渡し、コンテンツ プロジェクションを使用する方法を実際に見ることができます。
+他の 2 つのコンポーネントでは、[`open()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#open) メソッドを介してさまざまなメッセージを渡し、コンテンツ プロジェクションを使用する方法を実際に見ることができます。
 
 
 <code-view style="height: 450px" 
@@ -107,7 +107,7 @@ public showMessage() {
 ```html
 <!--sample.component.html-->
 
-<button igxButton="raised" (click)="toast.show()">Show notification</button>
+<button igxButton="raised" (click)="toast.open()">Show notification</button>
 <igx-toast #toast message="Notification displayed" displayTime="1000"></igx-toast>
 ```
 

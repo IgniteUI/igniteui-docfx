@@ -148,12 +148,12 @@ public ngAfterViewInit() {
 }
 
 public processData() {
-    this.toast.show();
+    this.toast.open();
 
     const filteringExpr = this.treeGrid.filteringExpressionsTree;
 
     this._remoteService.getData(filteringExpr, () => {
-        this.toast.hide();
+        this.toast.close();
     });
 }
 ```
