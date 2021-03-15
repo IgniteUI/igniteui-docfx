@@ -833,6 +833,7 @@
 - name: マップ
   href: geo-map.md
   new: false
+  sortable: true
   items:
     - name: CSV ファイルのバインド
       href: geo-map-binding-data-csv.md
