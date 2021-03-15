@@ -39,12 +39,12 @@ import { IgxToastModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 #### Show Toast
-In order to display the toast component, use its [`show()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#show) method and call it on a button click. Use the [`message`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#message) input to set a notification.
+In order to display the toast component, use its [`open()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#open) method and call it on a button click. Use the [`message`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#message) input to set a notification.
 
 ```html
 <!--sample.component.html-->
 
-<button igxButton="raised" (click)="toast.show()">Show notification</button>
+<button igxButton="raised" (click)="toast.open()">Show notification</button>
 <igx-toast #toast message="Notification displayed"></igx-toast>
 ```
 
