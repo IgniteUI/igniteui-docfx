@@ -11,15 +11,11 @@ _language: kr
 
 ## 데모
 
-<div class="sample-container loading" style="height: 300px">
-    <iframe id="data-chart-series-markers-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-series-markers' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-series-markers-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">STACKBLITZ 에서 보기
-    </button>
-
-
-</div>
+<code-view style="height: 300px" 
+           data-demos-base-url="{environment:dvDemosBaseUrl}" 
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-series-markers"  
+           github-src="charts/data-chart/series-markers">
+</code-view>
 
 <div class="divider--half"></div>
 
