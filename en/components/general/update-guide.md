@@ -90,7 +90,7 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
     
     Here you can see all the [available properties](https://www.infragistics.com/products/ignite-ui-angular/docs/sass/latest/index.html#function-igx-button-theme) of the `igx-button-theme` 
 
-    * The `igx-typography` mixin is no longer implicitly included with `igx-core`. To use our typography styles you have to include the mixin explicitly:
+    * The `igx-typography` mixin is no longer implicitly included with `igx-core`. To use our typography styles you have to include the mixin explicitly after `igx-core` and before `igx-theme`:
 
     ```scss
     // in styles.scss
