@@ -62,21 +62,19 @@ To get started with styling the button, we need to import the `index` file, wher
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) and accepts the `$raised-text-color` and the `$raised-background` parameters with their respective hover and focus parameters.
+Following the simplest approach, we create a new theme that extends the [`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) and accepts the `$foreground` and the `$background` parameters with their respective hover and focus parameters.
 
 ```scss
 $custom-button-theme: igx-button-theme(
-    $raised-text-color: #fdfdfd,
-    $raised-hover-text-color: #fdfdfd,
-    $raised-background: #345779,
-    $raised-hover-background: #2e4d6b,
-    $raised-focus-text-color: #fdfdfd,
-    $raised-focus-background: #2e4d6b,
-    $disabled-color: #2e4d6b
+    $foreground: #fdfdfd,
+    $hover-foreground: #fdfdfd,
+    $focus-foreground: #fdfdfd,
+    $background: #345779,
+    $hover-background: #2e4d6b,
+    $focus-background: #2e4d6b,
+    $disabled-foreground: #2e4d6b
 );
 ```
-
-In our custom theme we have provided parameter values only for the `raised` button. In order to implement this for any other type of button, we simply have to target the corresponding parameters.
 
 Take a look at the [`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) section for a complete list of available parameters for styling any type of button.
 
