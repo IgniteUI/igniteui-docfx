@@ -42,7 +42,7 @@ Unfortunately not all changes can be automatically updated. Changes bellow are s
 For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from the "From 6.x .." section apply those changes and work your way up:
 
 ## From 11.1.x to 12.0.x
-### Themes:
+### Themes
 * Breaking Changes:
     * `IgxButton` theme has been simplified. The number of theme params (`igx-button-theme`) has been reduced significantly and no longer includes prefixed parameters (`flat-*`, `raised-*`, etc.). Updates performed with `ng update` will migrate existing button themes, but some additional tweaking may be required to account for the absence of prefixed params. 
 
@@ -53,12 +53,12 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
         <button igxButton="outlined">Outlined button</button>
         ```
         ```scss
-            $my-button-theme: igx-button-theme(
-                $raised-background: red,
-                $outlined-outline-color: green
-            );
+        $my-button-theme: igx-button-theme(
+            $raised-background: red,
+            $outlined-outline-color: green
+        );
             
-            @include igx-css-vars($my-button-theme);
+        @include igx-css-vars($my-button-theme);
         ```
     You have to create a separate theme for each button type and scope it to a CSS selector.
         ```html
@@ -69,22 +69,23 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
             <button igxButton="outlined">Outlined button</button>
         </div>
         ```
+	
         ```scss
-            $my-raised-button: igx-button-theme(
-                $background: red
-            );
+        $my-raised-button: igx-button-theme(
+            $background: red
+        );
     
-            $my-outlined-button: igx-button-theme(
-                $border-color: red
-            );
+        $my-outlined-button: igx-button-theme(
+            $border-color: red
+        );
     
-            .my-raised-btn {
-                @include igx-css-vars($my-raised-button);
-            }
+        .my-raised-btn {
+            @include igx-css-vars($my-raised-button);
+         }
     
-            .my-outlined-btn {
-                @include igx-css-vars($my-outlined-button);
-            }
+        .my-outlined-btn {
+            @include igx-css-vars($my-outlined-button);
+        }
         ```
     As you can see, since the `igx-button-theme` params now have the same names for each button type, we have to scope our button themes to a CSS selector in order to have different colors for different types.
     
@@ -94,9 +95,15 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
 
     ```scss
     // in styles.scss
+    
     @include igx-core();
-    // Example with Material theme:
-    @include igx-typography($font-family: $material-typeface, $type-scale: $material-type-scale);
+    
+    @include igx-typography(
+        $font-family: $material-typeface,
+        $type-scale: $material-type-scale
+    );
+    
+    @include igx-theme();
     ```
 
     > [!IMPORTANT]
