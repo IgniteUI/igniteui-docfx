@@ -44,7 +44,7 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
 ## From 11.1.x to 12.0.x
 ### Themes
 * Breaking Changes:
-    * `IgxAvatar` theme has been simplified. The number of theme params (`igx-avatar-theme`) has been reduced significantly and no longer includes prefixed parameters(`icon-*, initials-*`, `image-*`) and suffixed parameters(`border-radius-*`). Updates performed with `ng update` will migrate existing button themes, but some additional tweaking may be required to account for the absence of prefixed and suffixed params.
+    * `IgxAvatar` theme has been simplified. The number of theme params (`igx-avatar-theme`) has been reduced significantly and no longer includes prefixed parameters(`icon-*`, `initials-*`, `image-*`) and suffixed parameters(`border-radius-*`). Updates performed with `ng update` will migrate existing button themes, but some additional tweaking may be required to account for the absence of prefixed and suffixed params.
     
     You will need to modify existing type specific avatar themes in the following way:
 
