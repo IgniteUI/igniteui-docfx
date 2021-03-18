@@ -79,7 +79,7 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
         }
 
         .icon-avatar {
-            @include igx-avatar(icon-avatar);
+            @include igx-avatar($icon-avatar);
         }
         ```
 
