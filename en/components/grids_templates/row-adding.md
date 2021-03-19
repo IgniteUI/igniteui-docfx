@@ -212,6 +212,31 @@ After a new row is added through the row adding UI, its position and/or visibili
 - When spawning the UI for Hierarchical Grids, any child layout currently expanded for a row that the end user clicks the add row button for is collapsed.
 }
 
+## Customizing Row Adding Overlay
+
+### Customizing Text
+
+Customizing the text of the row adding overlay is possible using the `igxRowAddTextDirective`.
+
+```html
+<ng-template igxRowAddText>
+	Adding Row
+</ng-template>
+ ```
+
+### Customizing Buttons
+Customizing the buttons of the row editing overlay is possible using the `igxRowEditActionsDirective`.
+If you want the buttons to be part of the keyboard navigation, then each on of them should have the `igxRowEditTabStopDirective`.
+
+ ```html
+ <ng-template igxRowEditActions let-endRowEdit>
+	<button igxButton igxRowEditTabStop (click)="endRowEdit(false)">Cancel</button>
+	<button igxButton igxRowEditTabStop (click)="endRowEdit(true)">Apply</button>
+</ng-template>
+ ```
+> [!NOTE]
+> Using `igxRowEditActions` directive will change edit actions for both editing and adding overlay buttons.
+
 ## Remote scenarios
 
 In most remote data scenarios the Primary Key assignment happens on the create server request. In this case the added records on the client will not have the final primary key value until saved on the server's data base. In that case the recommended way to handle this update in the @@igComponent is as follows:
