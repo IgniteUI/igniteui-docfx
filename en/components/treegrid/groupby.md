@@ -1,18 +1,19 @@
 ---
-title: Tree Grid Aggregations - Native Angular | Ignite UI for Angular
-_description: With the Ignite UI for Angular Tree Grid aggregations, see the data grouped and aggregated.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Component, Angular Tree Grid, Angular Tree Grid component, Angular Tree Grid control, Angular High Performance Tree Grid, Summaries, Summary, Aggregate, Aggregations
+title: Angular Tree Grid Group By | Group by multiple fields | Infragistics
+_description: Configure angular group by that allows visualizing of data records in Angular Material table, visualize the grouped data in separate and convenient column group.
+_keywords: angular group by, igniteui for angular, infragistics
 ---
 
-# Tree Grid Aggregations
+# Angular Tree Grid Group By
+
 If you have non-hierarchical data and you want to **group by** one or more columns and populate the parent rows with **aggregated values**, you could use the [`IgxTreeGridComponent`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html) and a custom implementation like in the demo below.
 
-## Angular Tree Grid Aggregations Example
+## Angular Tree Grid Group By Example
 
 
 <code-view style="height:850px" 
            data-demos-base-url="{environment:lobDemosBaseUrl}" 
-           iframe-src="{environment:lobDemosBaseUrl}/treegrid-finjs" alt="Angular Tree Grid Aggregations Example">
+           iframe-src="{environment:lobDemosBaseUrl}/treegrid-finjs" alt="Angular Tree Grid Group By Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -22,13 +23,13 @@ If you have non-hierarchical data and you want to **group by** one or more colum
 
 #### Implementation
 
-In this sample we have created a pipe class called `TreeGridGroupingPipe` which groups the tabular data by the **"Category"**, **"Type"** and **"Contract"** fields. The resulting hierarchy is displayed in the newly created **"Categories"** column. The pipe also calculates aggregated values for the generated parent rows for the **"Price"**, **"Change"** and **"Change(%)"** columns. For more information on how this pipe works you can take a look at the `TreeGridGroupingPipe` class in the `tree-grid-grouping.pipe.ts` file. The pipe is completely configurable so you could copy and re-use it in your own project.
+In this sample we have created a pipe class called `TreeGridGroupingPipe` which groups the tabular data by the **"category"**, **"type"** and **"contract"** fields. The resulting hierarchy is displayed in the newly created **"categories"** column. The pipe also calculates aggregated values for the generated parent rows for the **"price"**, **"change"** and **"changeP"** columns. For more information on how this pipe works you can take a look at the `TreeGridGroupingPipe` class in the `tree-grid-grouping.pipe.ts` file. The pipe is completely configurable so you could copy and re-use it in your own project.
 
 Here is an example of how to use the pipe in the template:
 
 ```html
 <igx-tree-grid #grid1 
-               [data]="data | treeGridGrouping:groupColumns:aggregations:groupColumnKey:primaryKey:childDataKey"
+               [data]="data$ | async | treeGridGrouping:groupColumns:aggregations:groupColumnKey:primaryKey:childDataKey"
                [primaryKey]="primaryKey" [childDataKey]="childDataKey">
     <igx-column [field]="groupColumnKey" [width]="'180px'" [sortable]='true' [resizable]='true' [disableHiding]="true"></igx-column>
 ```
@@ -40,31 +41,51 @@ The pipe arguments are the following:
 - primaryKey - a string value for the primary key field
 - childDataKey - a string value for the field where the child collection of the generated parent rows is stored
 
+In this sample we have also created an UI component with selector `igx-tree-grid-group-area` which handles the UI interactions related to the columns that are used for the grouping. For more information on how this component works you can take a look at the `IgxTreeGridGroupAreaComponent` class in the `tree-grid-group-area.component.ts` file. The component is completely configurable so you could copy and re-use it in your own project.
+
+Here is an example of how to use the component in the template:
+
+```html
+<igx-grid-toolbar *ngIf="showToolbar">
+    <igx-grid-toolbar-title class="grid-toolbar-title">
+        <igx-tree-grid-group-area
+            [grid]='grid1'
+            [(groupColumns)]='groupColumns'
+            [groupColumnKey]='groupColumnKey'>
+        </igx-tree-grid-group-area>
+    </igx-grid-toolbar-title>
+```
+
+The components arguments are the following:
+- grid - `IgxTreeGridComponent` that is used for the aggregations
+- groupColumns - an array of string values which contains the fields used to generate the hierarchy
+- groupColumnKey - a string value for the name of the generated hierarchy column
+
 ```typescript
-public groupColumns = ["Category", "Type", "Contract"];
+public groupColumns = ["category", "type", "contract"];
 public aggregations: ITreeGridAggregation[] = [
     {
         aggregate: (parent: any, data: any[]) => {
             return data.map((r) => r.Change).reduce((ty, u) => ty + u, 0);
         },
-        field: "Change"
+        field: "change"
     },
     {
         aggregate: (parent: any, data: any[]) => {
             return data.map((r) => r.Price).reduce((ty, u) => ty + u, 0);
         },
-        field: "Price"
+        field: "price"
     },
     {
         aggregate: (parent: any, data: any[]) => {
             return parent.Change / (parent.Price - parent.Change) * 100;
         },
-        field: "Change(%)"
+        field: "changeP"
     }
 ];
-public primaryKey = "ID";
-public childDataKey = "Children";
-public groupColumnKey = "Categories";
+public primaryKey = "id";
+public childDataKey = "children";
+public groupColumnKey = "categories";
 ```
 
 ### API References

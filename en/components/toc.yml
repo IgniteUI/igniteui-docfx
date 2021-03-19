@@ -335,8 +335,8 @@
     - name: Conditional Cell Styling
       href: treegrid/conditional-cell-styling.md
       new: false
-    - name: Aggregations
-      href: treegrid/aggregations.md
+    - name: Group By
+      href: treegrid/groupby.md
       new: false
     - name: Keyboard navigation
       href: treegrid/keyboard-navigation.md
