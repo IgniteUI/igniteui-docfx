@@ -14,17 +14,14 @@ Border radius as any other property is set through the theme schema like it's sh
 
 ```scss
 $_light-button: (
-    flat-border-radius: .2,
-    raised-border-radius: .2,
-    fab-border-radius: 1,
-    icon-border-radius: 1,
+    border-radius: .2
 );
 ```
 
 As you can see from the example above, the component schema for [Button theme]({environment:sassApiUrl}/index.html#function-igx-button-theme) defines the default border-radius for all types of buttons.
 
 Let's look at how things work. 
-The default value for "flat-border-radius" is set to 0.2 which in the end will be resolved to 4px, it is actually a fraction between 0 and 20px where 0 is the minimum border-radius and 20px is the maximum. 
+The default value for `border-radius` is set to 0.2 which in the end will be resolved to 4px. It is actually a fraction between 0 and 20px where 0 is the minimum border-radius and 20px is the maximum. 
 
 We decided to not limit you to fractions only. You can use whatever unit you want - pixels, relative units like em or rem, etc., allowing you to overwrite the implicit border radius limits.
 
@@ -37,14 +34,41 @@ Let's see how we can change the default values for the buttons from the example 
 // In the context of the button the min and max values are 0 - 20px, 
 // For all baseline values see the table at the bottom of the page
 
-$myButtons-theme: (
-    $flat-border-radius: .5, // will resolve to 10px
-    $raised-border-radius: 30px, // Will resolve to 30px
-    $fab-border-radius: 10%, // Will resolve to 10%
-    $icon-border-radius: .5 .2 .5 .2, // Will resolve to 10px 4px 10px 4px
+// will resolve to 10px
+$flatBtn: igx-button-theme(
+    $border-radius: .5 
 );
 
-@include igx-button($myButtons-theme);
+// Will resolve to 30px
+$raisedBtn: igx-button-theme(
+    $border-radius: 30px
+);
+
+// Will resolve to 10%
+$fabBtn: igx-button-theme(
+    $border-radius: 10%
+);
+
+// Will resolve to 10px 4px 10px 4px
+$iconBtn: igx-button-theme(
+    $border-radius: .5 .2 .5 .2
+);
+
+.flat {
+    @include igx-button($flatBtn);
+}
+
+.raised {
+    @include igx-button($raisedBtn);
+}
+
+.fab {
+    @include igx-button($fabBtn);
+}
+
+.icon {
+    @include igx-button($iconBtn);
+}
 ```
 
 The result from the above code snippets is:

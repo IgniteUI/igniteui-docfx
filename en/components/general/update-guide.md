@@ -44,6 +44,45 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
 ## From 11.1.x to 12.0.x
 ### Themes
 * Breaking Changes:
+    * `IgxAvatar` theme has been simplified. The number of theme params (`igx-avatar-theme`) has been reduced significantly and no longer includes prefixed parameters(`icon-*`, `initials-*`, `image-*`) and suffixed parameters(`border-radius-*`). Updates performed with `ng update` will migrate existing button themes, but some additional tweaking may be required to account for the absence of prefixed and suffixed params.
+    
+    You will need to modify existing type specific avatar themes in the following way:
+
+    For example, this:
+
+        ```scss
+        $avatar-theme: igx-avatar-theme(
+            $initials-background: blue,
+            $initials-color: orange,
+            $icon-background: blue,
+            $icon-color: orange,
+        );
+
+        @include igx-avatar($avatar-theme);
+        ```
+
+    Needs to be transformed into this:
+
+        ```scss
+        $initials-avatar: igx-avatar-theme(
+            $background: blue,
+            $color: orange,
+        );
+
+        $icon-avatar: igx-avatar-theme(
+            $background: blue,
+            $color: orange,
+        );
+
+        .initials-avatar {
+            @include igx-avatar($initials-avatar);
+        }
+
+        .icon-avatar {
+            @include igx-avatar($icon-avatar);
+        }
+        ```
+
     * `IgxButton` theme has been simplified. The number of theme params (`igx-button-theme`) has been reduced significantly and no longer includes prefixed parameters (`flat-*`, `raised-*`, etc.). Updates performed with `ng update` will migrate existing button themes, but some additional tweaking may be required to account for the absence of prefixed params. 
 
     In order to achieve the same result as from the code snippet below.
