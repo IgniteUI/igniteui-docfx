@@ -41,26 +41,6 @@ The pipe arguments are the following:
 - primaryKey - a string value for the primary key field
 - childDataKey - a string value for the field where the child collection of the generated parent rows is stored
 
-In this sample we have also created an UI component with selector `igx-tree-grid-group-area` which handles the UI interactions related to the columns that are used for the grouping. For more information on how this component works you can take a look at the `IgxTreeGridGroupAreaComponent` class in the `tree-grid-group-area.component.ts` file. The component is completely configurable so you could copy and re-use it in your own project.
-
-Here is an example of how to use the component in the template:
-
-```html
-<igx-grid-toolbar *ngIf="showToolbar">
-    <igx-grid-toolbar-title class="grid-toolbar-title">
-        <igx-tree-grid-group-area
-            [grid]='grid1'
-            [(groupColumns)]='groupColumns'
-            [groupColumnKey]='groupColumnKey'>
-        </igx-tree-grid-group-area>
-    </igx-grid-toolbar-title>
-```
-
-The components arguments are the following:
-- grid - `IgxTreeGridComponent` that is used for the aggregations
-- groupColumns - an array of string values which contains the fields used to generate the hierarchy
-- groupColumnKey - a string value for the name of the generated hierarchy column
-
 ```typescript
 public groupColumns = ["category", "type", "contract"];
 public aggregations: ITreeGridAggregation[] = [
@@ -87,6 +67,26 @@ public primaryKey = "id";
 public childDataKey = "children";
 public groupColumnKey = "categories";
 ```
+
+In this sample we have also created an UI component with selector `igx-tree-grid-group-area` which handles the UI interactions related to the columns that are used for the grouping. For more information on how this component works you can take a look at the `IgxTreeGridGroupAreaComponent` class in the `tree-grid-group-area.component.ts` file. The component is completely configurable so you could copy and re-use it in your own project.
+
+Here is an example of how to use the component in the template:
+
+```html
+<igx-grid-toolbar *ngIf="showToolbar">
+    <igx-grid-toolbar-title class="grid-toolbar-title">
+        <igx-tree-grid-group-area
+            [grid]='grid1'
+            [(groupColumns)]='groupColumns'
+            [groupColumnKey]='groupColumnKey'>
+        </igx-tree-grid-group-area>
+    </igx-grid-toolbar-title>
+```
+
+The component's inputs are the following:
+- grid - `IgxTreeGridComponent` that is used for the grouping
+- groupColumns - an array of string values which contains the fields used to generate the hierarchy
+- groupColumnKey - a string value for the name of the generated hierarchy column
 
 ### API References
 
