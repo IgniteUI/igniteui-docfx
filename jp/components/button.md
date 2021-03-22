@@ -63,7 +63,7 @@ export class AppModule {}
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-次に、[`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) を拡張し、それぞれのホバーとフォーカス パラメーターと共に ``$foreground` と `$background` パラメーターを受け入れる新しいテーマを作成します。
+次に、[`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) を拡張し、それぞれのホバーとフォーカス パラメーターと共に `$foreground` と `$background` パラメーターを受け入れる新しいテーマを作成します。
 
 ```scss
 $custom-button-theme: igx-button-theme(
