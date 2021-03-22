@@ -18,6 +18,43 @@ _language: ja
 
 <div class="divider--half"></div>
 
+## 使用方法
+
+Button ディレクティブは `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に `IgxButtonModule` をインポートする必要があります:
+
+```typescript
+// app.module.ts
+
+import { IgxButtonModule } from 'igniteui-angular';
+
+@NgModule({
+    imports: [
+        ...
+        IgxButtonModule,
+        ...
+    ]
+})
+export class AppModule {}
+```
+
+## ボタン タイプ
+
+### フラットボタン
+
+[`igxButton`]({environment:angularApiUrl}/classes/igxbuttondirective.html) ディレクティブを使用して、コンポーネント テンプレートにシンプルなフラット ボタンをコンポーネント テンプレートに追加します。タイプを選択しない場合、デフォルト値は `flat` です。
+
+```html
+<button igxButton="flat">Flat</button>
+```
+
+
+<code-view style="height: 70px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-entries/buttons-sample-2" >
+</code-view>
+
+<div class="divider--half"></div>
+
 ## スタイル設定
 
 ボタンのスタイル設定を始めるには、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
@@ -26,21 +63,19 @@ _language: ja
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-次に、[`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) を拡張し、それぞれのホバーとフォーカス パラメーターと共に `$raised-text-color` と `$raised-background` パラメーターを受け入れる新しいテーマを作成します。
+次に、[`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) を拡張し、それぞれのホバーとフォーカス パラメーターと共に `$foreground` と `$background` パラメーターを受け入れる新しいテーマを作成します。
 
 ```scss
 $custom-button-theme: igx-button-theme(
-    $raised-text-color: #fdfdfd,
-    $raised-hover-text-color: #fdfdfd,
-    $raised-background: #345779,
-    $raised-hover-background: #2e4d6b,
-    $raised-focus-text-color: #fdfdfd,
-    $raised-focus-background: #2e4d6b,
-    $disabled-color: #2e4d6b
+    $foreground: #fdfdfd,
+    $hover-foreground: #fdfdfd,
+    $focus-foreground: #fdfdfd,
+    $background: #345779,
+    $hover-background: #2e4d6b,
+    $focus-background: #2e4d6b,
+    $disabled-foreground: #2e4d6b
 );
 ```
-
-カスタム テーマでは、`raised` ボタンにのみパラメーター値を提供しました。その他のタイプのボタンに実装するには、対応するパラメーターをターゲットにします。
 
 ボタンのスタイル設定に使用できるパラメーターの完全なリストについては、[`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) セクションを参照してください。
 

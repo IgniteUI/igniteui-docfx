@@ -539,15 +539,10 @@ $custom-grid: igx-grid-theme(
 
 ```scss
 $dark-button: igx-button-theme(
-    $flat-background: #FFCD0F,
-    $flat-text-color: #292826,
-    $flat-hover-background: #292826,
-    $flat-hover-text-color: #FFCD0F,
-
-    $raised-background: #FFCD0F,
-    $raised-text-color: #292826,
-    $raised-hover-background: #292826,
-    $raised-hover-text-color: #FFCD0F
+    $background: #FFCD0F,
+    $foreground: #292826,
+    $hover-background: #292826,
+    $hover-foreground: #FFCD0F
 );
 
 $dark-input-group: igx-input-group-theme(
@@ -638,15 +633,10 @@ $custom-grid: igx-grid-theme(
 );
 
 $dark-button: igx-button-theme(
-    $flat-background: igx-color($dark-palette, "secondary", 400),
-    $flat-text-color: igx-color($dark-palette, "primary", 400),
-    $flat-hover-background: igx-color($dark-palette, "primary", 400),
-    $flat-hover-text-color: igx-color($dark-palette, "secondary", 400),
-
-    $raised-background: igx-color($dark-palette, "secondary", 400),
-    $raised-text-color: igx-color($dark-palette, "primary", 400),
-    $raised-hover-background: igx-color($dark-palette, "primary", 400),
-    $raised-hover-text-color: igx-color($dark-palette, "secondary", 400)
+    $background: igx-color($dark-palette, "secondary", 400),
+    $foreground: igx-color($dark-palette, "primary", 400),
+    $hover-background: igx-color($dark-palette, "primary", 400),
+    $hover-foreground: igx-color($dark-palette, "secondary", 400)
 );
 
 $dark-input-group: igx-input-group-theme(
