@@ -297,7 +297,6 @@ $custom-grid-theme: igx-grid-theme(
 <div class="sample-container loading" style="height:620px">
     <iframe id="grid-multi-cell-selection-style-iframe" data-src='{environment:demosBaseUrl}/grid/grid-multi-cell-selection-style' width="100%" height="100%" seamless frameborder="0" class="lazyload no-theming"></iframe>
 </div>
-<br/>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-multi-cell-selection-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-multi-cell-selection-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
@@ -310,7 +309,6 @@ $custom-grid-theme: igx-grid-theme(
 <div class="sample-container loading" style="height:620px">
     <iframe id="hierarchical-grid-multi-cell-style-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-cell-style' width="100%" height="100%" seamless frameborder="0" class="lazyload no-theming"></iframe>
 </div>
-<br/>
 <div>
 <button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="hierarchical-grid-multi-cell-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示
     </button>
@@ -325,7 +323,6 @@ $custom-grid-theme: igx-grid-theme(
 <div class="sample-container loading" style="height:620px">
     <iframe id="tree-grid-multi-cell-selection-style-iframe" data-src='{environment:demosBaseUrl}/tree-grid/tree-grid-multi-cell-selection-style' width="100%" height="100%" seamless frameborder="0" class="lazyload no-theming"></iframe>
 </div>
-<br/>
 <div>
 <button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="tree-grid-multi-cell-selection-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示
     </button>

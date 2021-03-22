@@ -300,7 +300,6 @@ public togglePinning(row: IgxGridRowComponent, event) {
 <div class="sample-container loading" style="height:600px">
     <iframe id="grid-row-pinning-extra-column-iframe" src='{environment:demosBaseUrl}/grid/grid-row-pinning-extra-column' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<br/>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-row-pinning-extra-column-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-pinning-extra-column-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
@@ -310,7 +309,6 @@ public togglePinning(row: IgxGridRowComponent, event) {
 <div class="sample-container loading" style="height:600px">
     <iframe id="tree-grid-row-pinning-extra-column-iframe" src='{environment:demosBaseUrl}/tree-grid/tree-grid-row-pinning-extra-column' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<br/>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="tree-grid-row-pinning-extra-column-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-row-pinning-extra-column-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
@@ -320,7 +318,6 @@ public togglePinning(row: IgxGridRowComponent, event) {
 <div class="sample-container loading" style="height:600px">
     <iframe id="hierarchical-grid-row-pinning-extra-column-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-pinning-extra-column' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<br/>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-row-pinning-extra-column-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-row-pinning-extra-column-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
@@ -381,7 +378,6 @@ public onDropAllowed(args) {
 <div class="sample-container loading" style="height:510px">
     <iframe id="grid-row-pinning-drag-iframe" src='{environment:demosBaseUrl}/grid/grid-row-pinning-drag' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<br/>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-row-pinning-drag-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-pinning-drag-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
