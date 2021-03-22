@@ -46,19 +46,19 @@ public groupColumns = ["category", "type", "contract"];
 public aggregations: ITreeGridAggregation[] = [
     {
         aggregate: (parent: any, data: any[]) => {
-            return data.map((r) => r.Change).reduce((ty, u) => ty + u, 0);
+            return data.map((r) => r.change).reduce((ty, u) => ty + u, 0);
         },
         field: "change"
     },
     {
         aggregate: (parent: any, data: any[]) => {
-            return data.map((r) => r.Price).reduce((ty, u) => ty + u, 0);
+            return data.map((r) => r.price).reduce((ty, u) => ty + u, 0);
         },
         field: "price"
     },
     {
         aggregate: (parent: any, data: any[]) => {
-            return parent.Change / (parent.Price - parent.Change) * 100;
+            return parent.change / (parent.price - parent.change) * 100;
         },
         field: "changeP"
     }
