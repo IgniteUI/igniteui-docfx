@@ -46,56 +46,68 @@ On top of the aforementioned colors, we also include **Level AAA** [WCAG](https:
 > [!NOTE]
 > Contrast colors are generated at build-time by the Sass theming engine. Overriding the CSS variables will not update the corresponding contrast colors.
 
-Here's an extract of the `primary` color as declared in the Light Material Palette:
+Here's an excerpt of the `primary` color as declared in the Light Material Palette:
 
 ```css
 :root {
-  --igx-primary-50: #c0e6ff;
+  --igx-primary-h: 204deg;
+  --igx-primary-s: 100%;
+  --igx-primary-l: 50%;
+  --igx-primary-a: 1;
+  --igx-primary-50: hsla(
+                      var(--igx-primary-h), 
+                      calc(var(--igx-primary-s) * 1.23),
+                      calc(var(--igx-primary-l) * 1.78), 
+                      var(--igx-primary-a)
+                    );
+  --igx-primary-100: hsla(
+                      var(--igx-primary-h), 
+                      calc(var(--igx-primary-s) / 1.25),
+                      calc(var(--igx-primary-l) * 1.66),
+                      var(--igx-primary-a)
+                    );
+  --igx-primary-200: hsla(
+                      var(--igx-primary-h),
+                      calc(var(--igx-primary-s) * .64),
+                      calc(var(--igx-primary-l) * 1.43),
+                      var(--igx-primary-a)
+                    );
+  // ...
   --igx-primary-50-contrast: black;
-  --igx-primary-100: #a7d9fa;
   --igx-primary-100-contrast: black;
-  --igx-primary-200: #6dbcf1;
   --igx-primary-200-contrast: black;
-  --igx-primary-300: #3ca9f2;
-  --igx-primary-300-contrast: black;
-  --igx-primary-400: #1da0f7;
-  --igx-primary-400-contrast: black;
-  --igx-primary-500: #09f;
-  --igx-primary-500-contrast: black;
-  --igx-primary-600: #0089e5;
-  --igx-primary-600-contrast: black;
-  --igx-primary-700: #007ed2;
-  --igx-primary-700-contrast: black;
-  --igx-primary-800: #0072be;
-  --igx-primary-800-contrast: white;
-  --igx-primary-900: #0065a8;
-  --igx-primary-900-contrast: white;
-  --igx-primary-A100: #55bbff;
-  --igx-primary-A100-contrast: black;
-  --igx-primary-A200: #27a9ff;
-  --igx-primary-A200-contrast: black;
-  --igx-primary-A400: #008deb;
-  --igx-primary-A400-contrast: black;
-  --igx-primary-A700: #0066aa;
-  --igx-primary-A700-contrast: white;
+  // ...
 }
 ```
+
+All colors variants are derived from 4 base variables - `--igx-primary-h`, `--igx-primary-s`, `--igx-primary-l`, and `--igx-primary-a`. Each one of these variables holds the [HSLA](https://drafts.csswg.org/css-color/#the-hsl-notation) parts for a single color. HSLA stands for `hue`, `saturation`, `lightness`, and `alpha`. It's another color scheme used to describe colors. We decided to use this approach as it allows us to modify all variants of the `primary`, `secondary` and other colors at runtime.
 
 ## Defining Palettes
 
-If you wanted to change the colors of a palette, you can do so by overriding them anywhere in your stylesheets. For instance, changing the primary 500 color variant is as easy as writing:
+If you wanted to change the color variants for a color from the palette, you can do so by overriding its HSLA values in your stylesheets. For instance, changing the primary colors is as easy as writing:
 
 ```css
+/* The HSLA representation of orange (#ffa500) */
+/* hsla(38.8,100%,50%, 1); */
 :root {
-  --igx-primary-500: orange;
+  --igx-primary-h: 38.8deg; 
+  --igx-primary-s: 100%; 
+  --igx-primary-l: 50%; 
+  --igx-primary-a: 1; 
 }
 ```
 
-Changing only the _500_ variant will not automatically update the other primary variants. Many components use either the primary _500_ or the secondary _500_ variants as the main colors. So in many cases changing just the _500_ variant could be sufficient, however, in some instances different color variants are used internally by component themes.
+This will automatically update all the other primary variants.
 
-You will notice that color variants for each color are monochromatic. This is because all color variants are generated from the _500_ variant at build-time. For that reason, it will not be a good idea to declare colors that are opposite to each other on the color wheel.
+You will notice that color variants for each color are monochromatic. This is because all color variants are generated from the HSLA variables. You can override individual colors only using any color scheme:
 
-Avoid doing this:
+```css
+:root {
+  --igx-primary-600: darkorange;
+}
+```
+
+Be cautious when doing this:
 
 ```css
 :root {
@@ -104,9 +116,11 @@ Avoid doing this:
 }
 ```
 
+It may result in unexpected results, as some component themes use more than one color variant. We designed all component themes around monochromatic palettes.
+
 ## Scoping
 
-We've seen that overriding color variants is easy. We can update the _global_ palette by scoping color variants to the `:root` selector in the `styles.css` file of our application:
+We've seen that overriding colors in the palette is relatively easy. We can update the _global_ palette by scoping color variants to the `:root` selector in the `styles.css` file of our application:
 
 Let's say your corporate primary color is `#9f349c` and you want to create primary variants for it. One option would be to use the [Material Color Tool](https://material.io/design/color/the-color-system.html#tools-for-picking-colors) to generate all color variants for you. Here's how we will declare the produced colors by the tool:
 
@@ -124,6 +138,7 @@ Let's say your corporate primary color is `#9f349c` and you want to create prima
   --igx-primary-900: #561d74;
 }
 ```
+This approach disregards the `calc` function we use for coming up with color variants from HSLA scheme at runtime, however, it allows you to specify a hand-picked palette.
 
 The Material Color Tool doesn't give you the contrast color for each color variant. There are many tools out there that will help you determine if a specific color has enough contrast when used in combination with another color. You can use the built-in contrast checker in Chrome when determining the contrast color you want to pick for each color variant. We provide a Sass function for generating color palettes at build-time. If you prefer that we generate all color variants and their contrast colors for you from your own colors, check out the [Palettes with Sass](link-to-sass-palettes) section of the documentation.
 
@@ -132,13 +147,20 @@ Apart from having a single global palette, you can also create several palettes 
 ```css
 /* styles.css */
 
-/* skipped other variants for brevity */
+/* cornflowerblue hsl(218.5,79.2%,66.1%) */
 .blue-theme {
-  --igx-primary-500: cornflowerblue;
+  --igx-primary-h: 218.5deg; 
+  --igx-primary-s: 79.2%; 
+  --igx-primary-l: 66.1%; 
+  --igx-primary-a: 1; 
 }
 
+/* brick red hsl(351.7,57%,52.5%) */
 .red-theme {
-  --igx-primary-500: palevioletred;
+  --igx-primary-h: 351.7deg; 
+  --igx-primary-s: 57%; 
+  --igx-primary-l: 52.5%; 
+  --igx-primary-a: 1; 
 }
 ```
 
@@ -164,7 +186,7 @@ igx-calendar {
 
 Palettes in Ignite UI for Angular dictate whether a theme is going to be light or dark. The two colors that have the biggest impact on that are `grays` and `surface`. See, the `grays` color variants in all themes are based on either a very light color shade, like `#fff`, or a very dark one like `#222`. Light themes have `grays` variants based on dark shades of gray, while dark themes are the opposite - all `grays` variants are a shade of white. These `grays` colors will be displayed against another color, usually the `surface` color. The `surface` color should always be on the opposite end of the `grays` in the gray scale to ensure themes look good.
 
-To make this a bit clearer, bellow is the complete list of all `grays` and `surface` color variants in both a light and a dark theme.
+To make this a bit clearer, bellow is the complete list of all `grays` and `surface` color variants in both a light and a dark theme as represented in the RGBA color space.
 
 *Material Light:*
 ```css
