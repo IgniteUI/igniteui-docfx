@@ -15,17 +15,14 @@ _language: ja
 
 ```scss
 $_light-button: (
-    flat-border-radius: .2,
-    raised-border-radius: .2,
-    fab-border-radius: 1,
-    icon-border-radius: 1,
+    border-radius: .2
 );
 ```
 
 上記の例のように [Button テーマ]({environment:sassApiUrl}/index.html#function-igx-button-theme) のコンポーネント スキーマはすべてのボタン タイプのデフォルトの border-radius を定義します。
 
 次の例を見てみましょう。
-"flat-border-radius" のデフォルト値は 0.2 に設定されており、最後に 4 px に解決され、実際には 0 から 20px の間のフラクションです。0 が最小の border-radius で、20px は最大です。
+`border-radius` のデフォルト値は 0.2 に設定されており、最後に 4 px に解決され、実際には 0 から 20px の間のフラクションです。0 が最小の border-radius で、20px は最大です。
 
 フラクションのみに制限することはしません。ピクセル、em や rem のような関連ユニットなど任意のユニットを使用して、明示的な border radius の制限を上書きできます。
 
@@ -38,14 +35,41 @@ $_light-button: (
 // In the context of the button the min and max values are 0 - 20px, 
 // For all baseline values see the table at the bottom of the page
 
-$myButtons-theme: (
-    $flat-border-radius: .5, // will resolve to 10px
-    $raised-border-radius: 30px, // Will resolve to 30px
-    $fab-border-radius: 10%, // Will resolve to 10%
-    $icon-border-radius: .5 .2 .5 .2, // Will resolve to 10px 4px 10px 4px
+// will resolve to 10px
+$flatBtn: igx-button-theme(
+    $border-radius: .5 
 );
 
-@include igx-button($myButtons-theme);
+// Will resolve to 30px
+$raisedBtn: igx-button-theme(
+    $border-radius: 30px
+);
+
+// Will resolve to 10%
+$fabBtn: igx-button-theme(
+    $border-radius: 10%
+);
+
+// Will resolve to 10px 4px 10px 4px
+$iconBtn: igx-button-theme(
+    $border-radius: .5 .2 .5 .2
+);
+
+.flat {
+    @include igx-button($flatBtn);
+}
+
+.raised {
+    @include igx-button($raisedBtn);
+}
+
+.fab {
+    @include igx-button($fabBtn);
+}
+
+.icon {
+    @include igx-button($iconBtn);
+}
 ```
 
 以下は上記コードスニペットの結果です。
