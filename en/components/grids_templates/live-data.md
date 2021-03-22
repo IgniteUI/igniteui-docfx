@@ -106,12 +106,10 @@ Updating the view works the same way for columns with a default template and for
 
 ## Live-data feed with Dock Manager Component
 
-<div class="sample-container loading" style="height: 580px;">
-    <iframe id="data-analysis-dock-manager" frameborder="0" seamless width="100%" height="100%" src="{environment:lobDemosBaseUrl}/grid-finjs-dock-manager/grid-finjs-dock-manager" onload="onSampleIframeContentLoaded(this);" class="no-theming"></iframe>
-</div>
-
-<button class="full-screen-btn" onclick='window.open("{environment:lobDemosBaseUrl}/grid-finjs-dock-manager/grid-finjs-dock-manager")'>View in full screen</button>
-
+<code-view style="height:700px" 
+           data-demos-base-url="{environment:lobDemosBaseUrl}" 
+           iframe-src="{environment:lobDemosBaseUrl}/grid-finjs-dock-manager/grid-finjs-dock-manager" alt="Angular Live-data Update Example with a service">
+</code-view>
 
 ## API References
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
