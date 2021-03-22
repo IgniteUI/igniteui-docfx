@@ -96,7 +96,7 @@ npm run build:ssr && npm run serve:ssr
 
 ## ゼロから新しいアプリケーションを作成する 
 
-1. `ng new` または [Ignite UI CLI](../cli-overview.md) の `ig new` コマンドを使用します。
+1. `ng new` または [Ignite UI CLI](cli-overview.md) の `ig new` コマンドを使用します。
 2. ライブラリの npm パッケージをワークスペースにインストールし、そのライブラリを使用するように現在の作業ディレクトリにプロジェクトを構成する `ng add igniteui-angular` コマンドを実行します。
 4. `ng add @nguniversal/express-engine --clientProject ig-ssr-example` で Angular Universal を追加します。「ig-ssr-example」はプロジェクトの名前です。
 3. Ignite UI for Angular コンポーネント (Grid、Calendar など) を追加します。
@@ -141,5 +141,5 @@ npm run build:ssr && npm run serve:ssr
 * [Angular Universal ガイド (英語)](https://angular.io/guide/universal)
 * [Ignite UI スターターキット (英語)](https://github.com/IgniteUI/ng-universal-example)
 * [サーバー側レンダリング用語](https://developers.google.com/web/updates/2019/02/rendering-on-the-web)
-* [Ignite UI で作業を開始](../getting-started.md)
-* [Ignite UI CLI ガイド](../cli/step-by-step-guide.md)
+* [Ignite UI で作業を開始](getting-started.md)
+* [Ignite UI CLI ガイド](cli/step-by-step-guide.md)
