@@ -10,14 +10,12 @@ _language: ja
 Ignite UI for Angular Date Range Picker コンポーネントは開始日と終了日を定義して日付範囲を選択できる月表示カレンダーを表示します。カレンダーの UI は、ダイアログ (デフォルトの設定) または入力フィールドにあるカレンダー アイコンへのユーザー操作によってドロップダウンとして表示されます。さらに、このコンポーネントには高度なセットアップ オプションがあり、2 つの異なる編集可能な入力フィールドを公開します。コンポーネントはロケールおよびカスタム日付書式設定をサポートします。
 
 ## Angular Date Range Picker の例
-<div class="sample-container loading" style="height:600px">
-    <iframe id="basic-daterangepicker-iframe" src="{environment:demosBaseUrl}/scheduling/basic-daterangepicker" width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular Date Range Picker 例"></iframe>
-</div>
-<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="basic-daterangepicker-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="basic-daterangepicker-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
+
+<code-view style="height:600px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/scheduling/basic-daterangepicker" alt="Angular Date Range Picker 例">
+</code-view>
+
 <div class="divider--half"></div>
 
 
@@ -93,13 +91,12 @@ Date Range Picker コンポーネントは、開始日と終了日の 2 つの�
 - [`IgxDateRangeStartComponent`]({environment:angularApiUrl}/classes/igxdaterangestartcomponent.html) と [`IgxDateRangeEndComponent`]({environment:angularApiUrl}/classes/igxdaterangeendcomponent.html) は、既存の [`IgxInputGroupComponent`](input-group.md) を拡張します。このような構成を操作するには、[`IgxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) に定義する必要があります。さらに、[`IgxInputGroupComponent`](input-group.md) で利用可能なすべての他のコンポーネントおよびディレクティブも使用できます。
 - 両方の入力で日付編集を有効にするには、[`igxDateTimeEditor`](date-time-editor.md) ディレクティブでデコレートする必要があります。
 
-<div class="sample-container loading" style="height:600px">
-    <iframe id="daterangepicker-start-end-iframe" src="{environment:demosBaseUrl}/scheduling/daterangepicker-start-end" width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="daterangepicker-start-end-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="daterangepicker-start-end-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
+
+<code-view style="height:600px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/scheduling/daterangepicker-start-end" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ### ユーザー エクスペリエンス
@@ -157,13 +154,12 @@ Date Range Picker に開始日と終了日の 2 つの入力がある場合、�
 <igx-date-range-picker [mode]="'dropdown'"></igx-date-range-picker>
 ```
 
-<div class="sample-container loading" style="height:500px">
-    <iframe id="daterangepicker-mode-iframe" src="{environment:demosBaseUrl}/scheduling/daterangepicker-mode" width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="daterangepicker-mode-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="daterangepicker-mode-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
+
+<code-view style="height:500px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/scheduling/daterangepicker-mode" >
+</code-view>
+
 <div class="divider--half"></div>
 
 範囲値はカレンダーから日付が選択されるときに設定されます。ドロップダウン モードでは、`Done` ボタンは使用できません。
@@ -253,13 +249,12 @@ Date Range Picker コンポーネントは、コア FormsModule [NgModel](https:
 </igx-date-range-picker>
 ```
 
-<div class="sample-container loading" style="height:600px">
-    <iframe id="daterangepicker-validation-iframe" src="{environment:demosBaseUrl}/scheduling/daterangepicker-validation" width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="daterangepicker-validation-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="daterangepicker-validation-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
+
+<code-view style="height:600px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/scheduling/daterangepicker-validation" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ### 最小値と最大値
@@ -394,25 +389,22 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 ### スタイルのスコーピング
 スタイルのスコーピングについては、詳細は[オーバーレイのスコープ コンポーネント スタイル](overlay-styling.md#スコープ-コンポーネント-スタイル)および[入力グループのスタイル スコーピング](input-group.md#スタイルのスコーピング)の両方のスタイル設定セクションを参照してください。
 
-<div class="sample-container loading" style="height:600px">
-    <iframe id="styled-daterangepicker-iframe" src='{environment:demosBaseUrl}/scheduling/styled-daterangepicker' width="100%" height="100%" 
-        seamless frameBorder="0" class="lazyload no-theming"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="styled-daterangepicker-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="styled-daterangepicker-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
+
+<code-view style="height:600px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/scheduling/styled-daterangepicker" >
+</code-view>
+
 
 ## アプリケーション デモ
 以下のデモは、[`IgxDateRangePickerComponent`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html) を使用する航空券のフォームを定義します。日付が選択されていない場合、検証エラーを表示するために [`IgxHint`]({environment:angularApiUrl}/classes/igxhintdirective.html)  が使用されます。日付の選択は、[`IgxDateRangePickerComponent`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html) の [`minValue`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html#minvalue) および [`maxValue`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html#maxvalue) プロパティによって制限されます。
 
-<div class="sample-container loading" style="height:600px">
-    <iframe id="flight-booking-iframe" src="{environment:demosBaseUrl}/scheduling/flight-booking" width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="flight-booking-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="flight-booking-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
+
+<code-view style="height:600px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/scheduling/flight-booking" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ## API リファレンス

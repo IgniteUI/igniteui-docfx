@@ -30,26 +30,22 @@ Ignite UI for Angular @@igComponent は、リモート仮想化、リモート �
 @@if (igxName === 'IgxGrid') {
 ## Angular @@igComponent リモート データ操作の例
 
-<div class="sample-container loading" style="height:500px">
-    <iframe id="grid-remote-scenarios-iframe" src='{environment:demosBaseUrl}/grid/grid-remote-filtering' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular @@igComponent リモート データ操作の例"></iframe>
-</div>
-<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-remote-scenarios-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-remote-scenarios-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
+
+<code-view style="height:500px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/grid/grid-remote-filtering" alt="Angular @@igComponent リモート データ操作の例">
+</code-view>
+
 }
 @@if (igxName === 'IgxTreeGrid') {
 ### デモ
 
-<div class="sample-container loading" style="height:550px">
-    <iframe id="treegrid-remotefiltering-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-remote-filtering' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular @@igComponent リモート データ操作の例"></iframe>
-</div>
-<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="treegrid-remotefiltering-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-remotefiltering-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
+
+<code-view style="height:550px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-remote-filtering" alt="Angular @@igComponent リモート データ操作の例">
+</code-view>
+
 <div class="divider--half"></div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -107,13 +103,12 @@ public processData(reset) {
 
 ### リモート仮想化のデモ
 
-<div class="sample-container loading" style="height:550px">
-    <iframe id="grid-sample-4-iframe" data-src='{environment:demosBaseUrl}/grid/grid-sample-4' width="100%" height="100%" seamless="" frameborder="0" class="lazyload" onload="onSampleIframeContentLoaded(this);" alt="Angular @@igComponent リモート データ操作の例"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
+
+<code-view style="height:550px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/grid/grid-sample-4" alt="Angular @@igComponent リモート データ操作の例">
+</code-view>
+
 
 
 ## 無限スクロール
@@ -169,13 +164,12 @@ public handlePreLoad() {
 
 
 ### 無限スクロールのデモ
-<div class="sample-container loading" style="height:510px">
-    <iframe id="grid-sample-5-iframe" data-src='{environment:demosBaseUrl}/grid/grid-sample-5' width="100%" height="100%" seamless frameBorder="0" class="lazyload" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
+
+<code-view style="height:510px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/grid/grid-sample-5" >
+</code-view>
+
 
 ## リモート ソート/フィルタリング
 
@@ -333,13 +327,12 @@ public columnValuesStrategy = (column: IgxColumnComponent,
 
 ### 一意の列値ストラテジのデモ
 
-<div class="sample-container loading" style="height:800px">
-    <iframe id="grid-esf-loadOnDemand-iframe" data-src='{environment:demosBaseUrl}/grid/grid-excel-style-filtering-load-on-demand' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-esf-loadOnDemand-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-esf-loadOnDemand-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
+
+<code-view style="height:800px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/grid/grid-excel-style-filtering-load-on-demand" >
+</code-view>
+
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```html
@@ -359,13 +352,12 @@ public columnValuesStrategy = (column: IgxColumnComponent,
 
 ### 一意の列値ストラテジのデモ
 
-<div class="sample-container loading" style="height:800px">
-    <iframe id="tree-grid-esf-loadOnDemand-iframe" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-excel-style-filtering-load-on-demand' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="tree-grid-esf-loadOnDemand-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-esf-loadOnDemand-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
+
+<code-view style="height:800px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-excel-style-filtering-load-on-demand" >
+</code-view>
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
@@ -400,13 +392,12 @@ this.remoteValuesService.getColumnData(
 
 ### 一意の列値ストラテジのデモ
 
-<div class="sample-container loading" style="height:800px">
-    <iframe id="hierarchical-grid-esf-load-on-demand-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-style-filtering-load-on-demand' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-esf-load-on-demand-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-esf-load-on-demand-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
+
+<code-view style="height:800px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-style-filtering-load-on-demand" >
+</code-view>
+
 }
 
 Excel スタイル フィルタリングのカスタム ロード テンプレートを提供するには、`igxExcelStyleLoading` ディレクティブを使用できます。
@@ -601,32 +592,29 @@ public paginate() {
 ```
 
 @@if (igxName === 'IgxGrid') {
-<div class="sample-container loading" style="height:620px">
-    <iframe id="remote-paging-default-template-iframe" data-src='{environment:demosBaseUrl}/grid/remote-paging-default-template' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="remote-paging-default-template-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="remote-paging-default-template-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
-</div>
+
+<code-view style="height:620px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/grid/remote-paging-default-template" >
+</code-view>
+
 }
 @@if (igxName === 'IgxTreeGrid') {
-<div class="sample-container loading" style="height:560px">
-    <iframe id="tree-grid-remote-paging-default-template-iframe" data-src='{environment:demosBaseUrl}/tree-grid/tree-grid-remote-paging-default-template' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="tree-grid-remote-paging-default-template-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-remote-paging-default-template-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
-</div>
+
+<code-view style="height:560px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-remote-paging-default-template" >
+</code-view>
+
 <div class="divider--half"></div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<div class="sample-container loading" style="height:580px">
-    <iframe id="remote-paging-default-template-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/remote-paging-default-template' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="remote-paging-default-template-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="remote-paging-default-template-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
-</div>
+
+<code-view style="height:580px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/remote-paging-default-template" >
+</code-view>
+
 <div class="divider--half"></div>
 }
 
@@ -793,32 +781,29 @@ public paginate(page: number) {
 上記すべての設定を完了すると以下のような結果になります。
 
 @@if (igxName === 'IgxGrid') {
-<div class="sample-container loading" style="height:620px">
-    <iframe id="grid-remote-paging-sample-iframe" data-src='{environment:demosBaseUrl}/grid/grid-remote-paging-sample' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-remote-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-remote-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
-</div>
+
+<code-view style="height:620px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/grid/grid-remote-paging-sample" >
+</code-view>
+
 }
 @@if (igxName === 'IgxTreeGrid') {
-<div class="sample-container loading" style="height:560px">
-    <iframe id="tree-grid-remote-paging-sample-iframe" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-remote-paging' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="tree-grid-remote-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-remote-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
-</div>
+
+<code-view style="height:560px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-remote-paging" >
+</code-view>
+
 <div class="divider--half"></div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<div class="sample-container loading" style="height:580px">
-    <iframe id="hierarchical-grid-remote-paging-sample-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-remote-paging' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-remote-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-remote-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
-</div>
+
+<code-view style="height:580px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-remote-paging" >
+</code-view>
+
 <div class="divider--half"></div>
 }
 
@@ -827,13 +812,12 @@ public paginate(page: number) {
 
 独自のページング動作を定義するために、ページング テンプレートを使用してカスタム ロジックを追加できます。上記を実証するために、リモート ページングの例を拡張する方法を説明します。
 
-<div class="sample-container loading" style="height:620px">
-    <iframe id="grid-custom-remote-paging-sample-iframe" data-src='{environment:demosBaseUrl}/grid/grid-custom-remote-paging-sample' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-custom-remote-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-custom-remote-paging-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
-</div>
+
+<code-view style="height:620px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/grid/grid-custom-remote-paging-sample" >
+</code-view>
+
 
 以下は、独自の `next` および `previous` ページ操作を実装するために定義したメソッドです。
 
@@ -941,13 +925,12 @@ public paginate(page: number) {
 #### 一括編集のリモート ページングのデモ
 
 
-<div class="sample-container loading" style="height:620px">
-    <iframe id="remote-paging-batch-editing-iframe" data-src='{environment:demosBaseUrl}/grid/remote-paging-batch-editing' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="remote-paging-batch-editing-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="remote-paging-batch-editing-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
+
+<code-view style="height:620px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/grid/remote-paging-batch-editing" >
+</code-view>
+
 }
 
 ## API リファレンス

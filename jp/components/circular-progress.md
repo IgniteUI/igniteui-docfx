@@ -10,14 +10,12 @@ _language: ja
 <div class="divider"></div>
 
 ## Angular Circular Progress の例
-<div class="sample-container loading" style="height:100px">
-    <iframe id="progressbar-sample-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/data-display/circular-progressbar" onload="onSampleIframeContentLoaded(this);" alt="Angular Circular Progress の例"></iframe>
-</div>
-<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="progressbar-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="progressbar-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
+
+<code-view style="height:100px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-display/circular-progressbar" alt="Angular Circular Progress の例">
+</code-view>
+
 <div class="divider--half"></div>
 
 ## 使用方法
@@ -73,13 +71,12 @@ class="custom-size"
 
 結果は以下のようになります。
 
-<div class="sample-container loading" style="height:100px">
-    <iframe id="indeterminate-progressbar-sample-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-display/circular-indeterminate-progressbar" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="indeterminate-progressbar-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="indeterminate-progressbar-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
-</div>
+
+<code-view style="height:100px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-display/circular-indeterminate-progressbar" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ### ダイナミック プログレス
@@ -195,13 +192,12 @@ $custom-theme: igx-progress-circular-theme(
 
 上記の手順を再現した後、以下のようになります。
 
-<div class="sample-container loading" style="height:200px">
-    <iframe id="circular-dynamic-sample-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/data-display/circular-dynamic-sample" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="circular-dynamic-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="circular-dynamic-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
-</div>
+
+<code-view style="height:200px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-display/circular-dynamic-sample" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ## スタイル設定
@@ -262,14 +258,12 @@ $custom-theme: igx-progress-circular-theme(
 
 ### デモ
 <div class="divider--half"></div>
-<div class="sample-container loading" style="height:100px">
-    <iframe id="circular-styling-sample-iframe" src='{environment:demosBaseUrl}/data-display/circular-styling-sample' width="100%" height="100%" 
-        seamless frameBorder="0" class="lazyload no-theming"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="circular-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="circular-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
-</div>
+
+<code-view style="height:100px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-display/circular-styling-sample" >
+</code-view>
+
 
 ## API
 <div class="divider--half"></div>

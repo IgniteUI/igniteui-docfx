@@ -13,14 +13,12 @@ Ignite UI for Angular Data Grid は、データの表示や操作が簡単にで
 
 Boston Marathon 2020 – この Angular グリッドの例では、ユーザーが基本スタイルと Excel スタイルの両方のフィルタリング、ライブ データのソート、および[スパークライン](../sparkline.md) コンポーネント、[Circular Progress Indicator](../circular-progress.md) コンポーネントと [Icons](../icon.md) を含むグリッド集計とセル テンプレートの使用を実行する方法を確認できます。デモには、[Angular ページネーション](paging.md)のカスタム ページングとページごとの使用法も含まれています。
 
-<div class="sample-container loading" style="height:700px">
-    <iframe id="grid-sample-iframe" src='{environment:lobDemosBaseUrl}/grid/grid' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular データ グリッドの例"></iframe>
-</div>
-<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-sample-iframe" data-demos-base-url="{environment:lobDemosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-iframe" data-demos-base-url="{environment:lobDemosBaseUrl}">Stackblitz で表示</button>
-</div>
+
+<code-view style="height:700px" 
+           data-demos-base-url="{environment:lobDemosBaseUrl}" 
+           iframe-src="{environment:lobDemosBaseUrl}/grid/grid" alt="Angular データ グリッドの例">
+</code-view>
+
 <div class="divider--half"></div>
 
 ## Ignite UI for Angular Data Grid で作業を開始
@@ -495,13 +493,12 @@ interface AminoAcid {
 >[!WARNING]
 >グリッドは、`primary key`、`foreign key` および `child key` プロパティのこの種のバインディングを**サポートしていません**。
 
-<div class="sample-container loading" style="height:460px">
-    <iframe id="grid-nested-data-amino-iframe" data-src='{environment:demosBaseUrl}/grid/grid-nested-data-binding-2' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-nested-data-amino-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-nested-data-amino-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
-</div>
+
+<code-view style="height:460px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/grid/grid-nested-data-binding-2" >
+</code-view>
+
 <div class="divider--half"></div>
 
 **IgxGrid** で複雑なデータをバインドまたは複合データ (複数の列から) を可視化する別の方法は、列にカスタム ボディ テンプレートを使用することです。通常、以下のことができます。
@@ -586,13 +583,12 @@ export const EMPLOYEE_DATA = [
 
 以下は、この設定の結果です。
 
-<div class="sample-container loading" style="height:460px">
-    <iframe id="grid-nested-dataBind-iframe" data-src='{environment:demosBaseUrl}/grid/grid-nested-data-binding' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-nested-dataBind-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-nested-dataBind-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
-</div>
+
+<code-view style="height:460px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/grid/grid-nested-data-binding" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ### フラット データの使用
@@ -666,13 +662,12 @@ export const DATA: any[] = [
 ```
 以下は結果です。
 
-<div class="sample-container loading" style="height:550px">
-    <iframe id="grid-composite-dataBind-iframe" data-src='{environment:demosBaseUrl}/grid/grid-composite-data-binding' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-composite-dataBind-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-composite-dataBind-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
-</div>
+
+<code-view style="height:550px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/grid/grid-composite-data-binding" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ## キーボード ナビゲーション
