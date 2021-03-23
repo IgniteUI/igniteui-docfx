@@ -270,6 +270,10 @@ For instance, if you want to generate CSS classes that apply background color to
 ```
 The above code will generate CSS classes for each color variant in the palette. For instance, the `500` color variant of the `primary` palette will be given the following class `.bg-primary-500`;
 
+```html
+<div class="bg-primary-500">...</div>
+```
+
 <div class="divider--half"></div>
 
 ## CSS Variables
