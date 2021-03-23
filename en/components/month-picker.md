@@ -10,12 +10,14 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 </p>
 
 ## Angular Month Picker Example
-
-<code-view style="height: 620px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/monthpicker-sample-1" alt="Angular Month Picker Example">
-</code-view>
-
+<div class="sample-container loading" style="height: 620px">
+    <iframe id="monthpicker-sample-1-iframe" src='{environment:demosBaseUrl}/scheduling/monthpicker-sample-1' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular Month Picker Example"></iframe>
+</div>
+<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="monthpicker-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="monthpicker-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
 
 ## Usage
 
@@ -117,12 +119,13 @@ public formatOptions = {
 ```
 
 Here is an example of localizing and formatting the month picker component:
-
-<code-view style="height: 680px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/monthpicker-sample-3" >
-</code-view>
-
+<div class="sample-container loading" style="height: 680px">
+    <iframe id="monthpicker-sample-3-iframe" data-src='{environment:demosBaseUrl}/scheduling/monthpicker-sample-3' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="monthpicker-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="monthpicker-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
 
 ## Keyboard navigation
 - When the **igxMonthPicker** component is focused, use
@@ -213,12 +216,13 @@ After everything's done, your component should look like this:
 
 ### Demo
 
-
-<code-view style="height: 600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/monthpicker-styling" >
-</code-view>
-
+<div class="sample-container loading" style="height: 600px">
+    <iframe id="monthpicker-styling-iframe" data-src='{environment:demosBaseUrl}/scheduling/monthpicker-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="monthpicker-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="monthpicker-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
 
 ## API References
 <div class="divider--half"></div>

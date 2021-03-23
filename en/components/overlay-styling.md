@@ -87,12 +87,14 @@ export class OverlayStylingComponent {
 
 Now, the combo's list of items are properly rendered **inside** of our component's host, which means that our custom theme will take effect:
 
-
-<code-view style="height: 400px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/overlay-styling-simple" >
-</code-view>
-
+<div class="sample-container loading" style="height: 400px">
+    <iframe class="lazyload no-theming" id="overlay-styling-simple-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-styling-simple" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="overlay-styling-simple-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-styling-simple-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on Stackblitz</button>
+</div>
 
 ## Styling The Overlay
 

@@ -32,20 +32,24 @@ The Excel Exporter service can export data to excel from the @@igxName. The data
 ## Angular Excel Exporter Example
 
 @@if (igxName === 'IgxGrid') {
-
-<code-view style="height: 800px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/services/export-excel-sample-1" alt="Angular Excel Exporter Example">
-</code-view>
-
+<div class="sample-container loading" style="height: 800px;">
+    <iframe id="excel-export-sample-iframe" src="{environment:demosBaseUrl}/services/export-excel-sample-1"
+        width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular Excel Exporter Example"></iframe>
+</div>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="excel-export-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="excel-export-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
 }
 @@if (igxName === 'IgxTreeGrid') {
-
-<code-view style="height: 350px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/services/export-excel-tree-grid-sample" alt="Angular Excel Exporter Example">
-</code-view>
-
+<div class="sample-container loading" style="height: 350px;">
+    <iframe id="excel-export-sample-iframe" src="{environment:demosBaseUrl}/services/export-excel-tree-grid-sample"
+        width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular Excel Exporter Example"></iframe>
+</div>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="excel-export-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="excel-export-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
     <!-- todo -->
@@ -120,12 +124,14 @@ public exportButtonHandler() {
 
 To export grouped data you just need to group the @@igComponent by one or more columns. The browser will download a file named "ExportedDataFile.xlsx" which contains the data from the @@igComponent component in MS Excel format grouped by the selected column. Example:
 
-
-<code-view style="height: 800px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/services/export-excel-sample-1" alt="Angular Grouped Data Excel Exporter Example">
-</code-view>
-
+<div class="sample-container loading" style="height: 800px;">
+    <iframe id="excel-group-export-sample-iframe" src="{environment:demosBaseUrl}/services/export-excel-sample-1"
+        width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular Grouped Data Excel Exporter Example"></iframe>
+</div>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="excel-group-export-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="excel-group-export-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
 }
 
 ## Customizing the Exported Content

@@ -11,12 +11,14 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ## Angular Layout Manager Example
 <div class="divider--half"></div>
 
-
-<code-view style="height: 580px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/layout-sample" alt="Angular Layout Manager Example">
-</code-view>
-
+<div class="sample-container loading" style="height: 580px">
+    <iframe id="layout-sample-iframe" src='{environment:demosBaseUrl}/layouts/layout-sample' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular Layout Manager Example"></iframe>
+</div>
+<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="layout-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="layout-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
 
 <div class="divider--half"></div>
 
@@ -29,24 +31,26 @@ Use the [**igxLayout**]({environment:angularApiUrl}/classes/igxlayoutdirective.h
 ### Horizontally with Row direction
 
 Use [`igxLayoutDir`]({environment:angularApiUrl}/classes/igxlayoutdirective.html#dir)`="row"`.
-
-<code-view style="height: 180px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/layout-direction-row" >
-</code-view>
-
+<div class="sample-container loading" style="height: 180px">
+    <iframe id="layout-direction-row-iframe" src='{environment:demosBaseUrl}/layouts/layout-direction-row' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="layout-direction-row-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="layout-direction-row-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
 
 <div class="divider--half"></div>
 
 ### Vertically with Column direction
 
 Use [`igxLayoutDir`]({environment:angularApiUrl}/classes/igxlayoutdirective.html#dir)`="column"`.
-
-<code-view style="height: 300px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/layout-direction-column" >
-</code-view>
-
+<div class="sample-container loading" style="height: 300px">
+    <iframe id="layout-direction-column-iframe" src='{environment:demosBaseUrl}/layouts/layout-direction-column' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="layout-direction-column-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="layout-direction-column-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
 
 <div class="divider--half"></div>
 
@@ -57,57 +61,62 @@ Use [`igxLayoutDir`]({environment:angularApiUrl}/classes/igxlayoutdirective.html
 ### Customize the order of the elements
 Customize the order of the element by using `igxFlexOrder`.
 
-
-<code-view style="height: 110px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/layout-custom-order" >
-</code-view>
-
+<div class="sample-container loading" style="height: 110px">
+    <iframe id="layout-custom-order-iframe" src='{environment:demosBaseUrl}/layouts/layout-custom-order' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="layout-custom-order-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="layout-custom-order-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
 
 <div class="divider--half"></div>
 
 ### Change element spacing
 
 Use [`igxLayoutJustify`]({environment:angularApiUrl}/classes/igxlayoutdirective.html#justify)`="space-between | space-around"`.
-
-<code-view style="height: 180px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/layout-content-space" >
-</code-view>
-
+<div class="sample-container loading" style="height: 180px">
+    <iframe id="layout-content-space-iframe" src='{environment:demosBaseUrl}/layouts/layout-content-space' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="layout-content-space-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="layout-content-space-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
 
 <div class="divider--half"></div>
 
 ### Position elements along the main axis
 Use [`igxLayoutJustify`]({environment:angularApiUrl}/classes/igxlayoutdirective.html#justify)`="flex-start | center | flex-end"` to specify the elements position along the main axis according to your preferences.
-
-<code-view style="height: 180px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/layout-justify-content" >
-</code-view>
-
+<div class="sample-container loading" style="height: 180px">
+    <iframe id="layout-justify-content-iframe" src='{environment:demosBaseUrl}/layouts/layout-justify-content' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="layout-justify-content-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="layout-justify-content-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
 
 <div class="divider--half"></div>
 
 ### Position elements along the cross axis
 Use [`igxLayoutItemAlign`]({environment:angularApiUrl}/classes/igxlayoutdirective.html#itemalign)`="flex-start | center | flex-end"` to specify the elements position along the cross axis according to your preferences.
-
-<code-view style="height: 400px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/layout-align-items" >
-</code-view>
-
+<div class="sample-container loading" style="height: 400px">
+    <iframe id="layout-align-items-iframe" src='{environment:demosBaseUrl}/layouts/layout-align-items' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="layout-align-items-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="layout-align-items-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
 
 <div class="divider--half"></div>
 
 ### You can also wrap elements 
 Use [`igxLayoutWrap`]({environment:angularApiUrl}/classes/igxlayoutdirective.html#wrap)`="wrap"`.
-
-<code-view style="height: 180px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/layout-wrap" >
-</code-view>
-
+<div class="sample-container loading" style="height: 180px">
+    <iframe id="layout-wrap-iframe" src='{environment:demosBaseUrl}/layouts/layout-wrap' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="layout-wrap-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="layout-wrap-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
 
 **Note**: The [`igxLayout`]({environment:angularApiUrl}/classes/igxlayoutdirective.html) directive affects the flow directions for that
 container's **immediate** children.
