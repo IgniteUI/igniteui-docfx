@@ -9,12 +9,12 @@ _language: kr---
 <div class="divider"></div>
 
 ### Time Picker Demo
-<div class="sample-container loading" style="height: 600px;">
-    <iframe id="time-picker-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/scheduling/timepicker-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="time-picker-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz ????</button>
-</div>
+
+<code-view style="height: 600px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-1" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ### Usage
@@ -47,12 +47,12 @@ To add the time picker, use the following code:
 ```
 
 And there we have it:
-<div class="sample-container loading" style="height:600px">
-    <iframe id="timepicker-sample-1-iframe" data-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-1" width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="timepicker-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz ????</button>
-</div>
+
+<code-view style="height:600px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-1" >
+</code-view>
+
 <div class="divider--half"></div>
 
 #### Setting value
@@ -70,12 +70,12 @@ Then use the [`value`]({environment:angularApiUrl}/classes/igxtimepickercomponen
 ```
 
 And there we have it:
-<div class="sample-container loading" style="height: 600px;">
-    <iframe id="time-picker-sample-2" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-2" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="time-picker-sample-2" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz ????</button>
-</div>
+
+<code-view style="height: 600px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-2" >
+</code-view>
+
 <div class="divider--half"></div>
 
 To create a two-way data-binding, set `ngModel` like this:
@@ -101,12 +101,12 @@ The table below lists valid time display formats:
 
 
 The result is as follows:
-<div class="sample-container loading" style="height: 580px;">
-    <iframe id="time-picker-sample-8" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-8" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="time-picker-sample-8" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height: 580px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-8" >
+</code-view>
+
 <div class="divider--half"></div>
 
 #### Change delta and spin mode
@@ -118,12 +118,12 @@ To change the delta of the items, set the [`itemsDelta`]({environment:angularApi
 ```
 
 And there we have it:
-<div class="sample-container loading" style="height: 600px;">
-    <iframe id="time-picker-sample-3" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-3" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="time-picker-sample-3" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz ????</button>
-</div>
+
+<code-view style="height: 600px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-3" >
+</code-view>
+
 <div class="divider--half"></div>
 
 #### Validation
@@ -169,12 +169,12 @@ public onValidationFailed(timepicker){
 ```
 
 And there we have it:
-<div class="sample-container loading" style="height: 540px;">
-    <iframe id="time-picker-sample-4" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-4" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="time-picker-sample-4" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz ????</button>
-</div>
+
+<code-view style="height: 540px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-4" >
+</code-view>
+
 <div class="divider--half"></div>
 
 #### Dropdown mode
@@ -209,12 +209,12 @@ Note that if the time picker's [`minValue`]({environment:angularApiUrl}/classes/
 * If the dropdown is not opened and a new value is typed, to `Accept` it - click outside of the time picker or press <kbd>Tab</kbd> to move the focus.
 
 And there we have it:
-<div class="sample-container loading" style="height:540px">
-    <iframe id="timepicker-dropdown-iframe" data-src='{environment:demosBaseUrl}/scheduling/timepicker-dropdown' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="timepicker-dropdown-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height:540px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-dropdown" >
+</code-view>
+
 <div class="divider--half"></div>
 
 #### Templating Input Group
@@ -247,12 +247,12 @@ public date: Date = new Date(Date.now());
 ```
 
 And there we have it:
-<div class="sample-container loading" style="height: 600px;">
-    <iframe id="time-picker-sample-5" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-5" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="time-picker-sample-5" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height: 600px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-5" >
+</code-view>
+
 
 #### Templating Input Group - dropdown mode
 
@@ -294,12 +294,12 @@ public onBlur(inputValue: string, value: Date, picker: IgxTimePickerComponent) {
 ```
 
 And there we have it, a re-templated time picker with dropdown and two-way binding support:
-<div class="sample-container loading" style="height: 600px;">
-    <iframe id="time-picker-sample-6" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-6" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="time-picker-sample-6" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height: 600px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-6" >
+</code-view>
+
 
 #### Custom button action
 The [`IgxTimePickerComponent`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html) supports adding of custom actions buttons. To achieve that, wrap the buttons in `ng-template` marked with the `igxTimePickerActions` directive selector.
@@ -331,12 +331,12 @@ public selectNow(timePicker: IgxTimePickerComponent) {
 ```
 
 The result is as follows:
-<div class="sample-container loading" style="height: 580px;">
-    <iframe id="time-picker-sample-7" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-7" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="time-picker-sample-7" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height: 580px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-7" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ### API References

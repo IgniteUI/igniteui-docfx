@@ -33,31 +33,30 @@ _language: kr
 다음 샘플에서는 @@igComponent에서 행 편집을 활성화하는 방법을 보여줍니다. 셀 값을 변경한 다음 동일한 행의 다른 셀을 클릭하거나 탐색하면 확인될 때까지 행 값이 업데이트되지 않으며, 종료 버튼을 사용하거나 취소 버튼을 사용하여 취소합니다.
 
 @@if (igxName === 'IgxGrid') {
-<div class="sample-container loading" style="height:550px">
-    <iframe id="grid-row-editing-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-row-editing' width="100%" height="100%"
-    seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기</button>
-</div>
+
+<code-view style="height:550px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/grid/grid-row-editing" >
+</code-view>
+
 <div class="divider--half"></div>
 }
 @@if (igxName === 'IgxTreeGrid') {
-<div class="sample-container loading" style="height:590px">
-    <iframe id="tree-grid-row-editing-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-row-edit' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-row-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기</button>
-</div>
+
+<code-view style="height:590px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-row-edit" >
+</code-view>
+
 <div class="divider--half"></div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-   <div class="sample-container loading" style="height:510px">
-    <iframe id="hierarchical-grid-row-editing-sample-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-editing' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-row-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기</button>
-</div>
+   
+<code-view style="height:510px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-editing" >
+</code-view>
+
 <div class="divider--half"></div>
 }
 

@@ -1,4 +1,4 @@
-﻿---
+---
 title: 계층 그리드 컴포넌트
 _description: The Ignite UI for Angular Hierarchical Grid control features the fastest, touch-responsive data-rich hierarchical grid with popular features.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Hierarchical Grid component, Angular Hierarchical Grid control, Angular High Performance Hierarchical Grid, Hierarchical Grid
@@ -9,12 +9,12 @@ _language: kr
 
 ### 데모
 
-<div class="sample-container loading" style="height:520px">
-    <iframe id="grid-sample-iframe" src='{environment:lobDemosBaseUrl}/hierarchical-grid/hierarchical-grid-resizing' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-iframe" data-demos-base-url="{environment:lobDemosBaseUrl}">STACKBLITZ 에서 보기</button>
-</div>
+
+<code-view style="height:520px" 
+           data-demos-base-url="{environment:lobDemosBaseUrl}" 
+           iframe-src="{environment:lobDemosBaseUrl}/hierarchical-grid/hierarchical-grid-resizing" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ### 의존성
@@ -397,12 +397,12 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 ```   
 
 #### Demo
-<div class="sample-container loading" style="height:505px">
-    <iframe id="hierarchical-grid-styling" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-styling" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height:505px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-styling" >
+</code-view>
+
 
 ## API 참조
 

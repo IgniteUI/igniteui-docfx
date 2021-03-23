@@ -1,4 +1,4 @@
-﻿@@if (igxName === 'IgxGrid') {
+@@if (igxName === 'IgxGrid') {
 ---
 title: Angular Filter | Angular Grid Filtering | Ignite UI for Angular | Infragistics
 _description: Start using angular filter to return data with Ignite UI for Angular Material table similar to the one in excel with convenient usage be the Angular grid filtering
@@ -27,28 +27,28 @@ Angular grid filtering enables you to display only the records which meet specif
 #### 데모
 
 @@if (igxName === 'IgxGrid') {
-<div class="sample-container loading" style="height:600px">
-    <iframe id="grid-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-filtering-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기</button>
-</div>
+
+<code-view style="height:600px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/grid/grid-filtering-sample" >
+</code-view>
+
 }
 @@if (igxName === 'IgxTreeGrid') {
-<div class="sample-container loading" style="height:600px">
-    <iframe id="treegrid-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-filtering' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기</button>
-</div>
+
+<code-view style="height:600px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-filtering" >
+</code-view>
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<div class="sample-container loading" style="height:610px">
-    <iframe id="hierarchical-grid-sample-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-filtering' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기</button>
-</div>
+
+<code-view style="height:610px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-filtering" >
+</code-view>
+
 }
 
 <div class="divider--half"></div>
@@ -305,56 +305,56 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
 ```
 }
 @@if (igxName === 'IgxGrid') {
-<div class="sample-container loading" style="height:600px">
-    <iframe id="grid-filtering-iframe" data-src='{environment:demosBaseUrl}/grid/grid-filter-conditions' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-filtering-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기</button>
-</div>
+
+<code-view style="height:600px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/grid/grid-filter-conditions" >
+</code-view>
+
 }
 @@if (igxName === 'IgxTreeGrid') {
-<div class="sample-container loading" style="height:600px">
-    <iframe id="treegrid-filtering-iframe" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-filtering-custom' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-filtering-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기</button>
-</div>
+
+<code-view style="height:600px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-filtering-custom" >
+</code-view>
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-   <div class="sample-container loading" style="height:610px">
-    <iframe id="hierarchical-grid-filtering-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-custom-filtering' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-filtering-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기</button>
-</div>
+   
+<code-view style="height:610px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-custom-filtering" >
+</code-view>
+
 }
 
 #### 필터 셀 재템플레이팅
 필터 셀을 재템플레이팅하기 위해 `igxFilterCellTemplate`으로 표시된 템플릿을 추가할 수 있습니다. 아래 샘플에서는 문자열 열에는 입력이 추가되고 날짜 열에는 IgxDatePicker가 추가됩니다. 사용자가 값을 입력하거나 선택하면 문자열 열에는 contains 연산자, 날짜 열에는 equals 연산자를 가진 필터가 그리드의 공개 API를 사용하여 적용됩니다.
 
 @@if (igxName === 'IgxGrid') {
-<div class="sample-container loading" style="height:500px">
-    <iframe id="grid-filtering-template-iframe" data-src='{environment:demosBaseUrl}/grid/grid-filtering-template-sample' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-filtering-template-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기</button>
-</div>
+
+<code-view style="height:500px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/grid/grid-filtering-template-sample" >
+</code-view>
+
 }
 @@if (igxName === 'IgxTreeGrid') {
-<div class="sample-container loading" style="height:500px">
-    <iframe id="treegrid-filtering-template-iframe" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-filtering-template' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-filtering-template-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기</button>
-</div>
+
+<code-view style="height:500px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-filtering-template" >
+</code-view>
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-   <div class="sample-container loading" style="height:610px">
-    <iframe id="hierarchical-grid-filtering-template-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-filtering-template' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-filtering-template-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기</button>
-</div>
+   
+<code-view style="height:610px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-filtering-template" >
+</code-view>
+
 }
 
 @@if (igxName !== 'IgxHierarchicalGrid') {

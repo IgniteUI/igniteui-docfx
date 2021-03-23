@@ -1,4 +1,4 @@
-﻿---
+---
 title: 컴포넌트별 그룹화 - 네이티브 Angular | Ignite UI for Angular
 _description: The Ignite UI for Angular Group By component allows users to group data based on common values for particular columns.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components, Angular Data Grid component, Angular Data Grid control, Angular Grid component, Angular Grid control, Angular High Performance Grid, group by, groupby, grouping, column grouping
@@ -12,12 +12,12 @@ _language: kr
 
 #### 데모
 
-<div class="sample-container loading" style="height:605px">
-    <iframe id="grid-sample-groupby-iframe" src='{environment:demosBaseUrl}/grid/grid-groupby' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-groupby-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기</button>
-</div>
+
+<code-view style="height:605px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/grid/grid-groupby" >
+</code-view>
+
 
 #### 초기 그룹화 상태
 
@@ -114,12 +114,12 @@ Groups that span multiple pages are split between them. The group row is visible
 
 #### Demo
 
-<div class="sample-container loading" style="height:605px">
-    <iframe id="grid-sample-groupby-paging-iframe" src='{environment:demosBaseUrl}/grid/grid-groupby-paging' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-groupby-paging-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height:605px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/grid/grid-groupby-paging" >
+</code-view>
+
 
 ### Group By with Summaries
 
@@ -280,12 +280,12 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 
 #### Demo   
 
-<div class="sample-container loading" style="height:570px">
-    <iframe id="grid-sample-groupby-styling" data-src='{environment:demosBaseUrl}/grid/grid-groupby-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
-</div>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-groupby-styling" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height:570px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/grid/grid-groupby-styling" >
+</code-view>
+
 
 ### 알려진 제한 사항
 

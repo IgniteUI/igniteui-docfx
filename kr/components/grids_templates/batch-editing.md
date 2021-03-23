@@ -45,32 +45,32 @@ _keywords: angular crud, ignite ui for angular, infragistics
 @@if (igxName === 'IgxGrid') {
 다음 샘플은 그리드에 트랜잭션이 공급자로 있고 행 편집이 활성화된 경우를 보여줍니다. 후자는 전체 행 편집이 확인된 후 트랜잭션이 추가됩니다.
 
-<div class="sample-container loading" style="height:650px">
-    <iframe id="grid-batch-editing-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-batch-editing' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-batch-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기</button>
-</div>
+
+<code-view style="height:650px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/grid/grid-batch-editing" >
+</code-view>
+
 <div class="divider--half"></div>
 }
 @@if (igxName === 'IgxTreeGrid') {
 다음 샘플은 트랜잭션을 통해 일괄 편집을 공급자로 설정하고 사용하는 방법을 보여주며 행 편집을 활성화합니다. 후자는 전체 행 편집이 확인된 후 트랜잭션이 추가됩니다. 이 샘플은 플랫 데이터 소스를 사용합니다.
 
-<div class="sample-container loading" style="height:600px">
-    <iframe id="tree-grid-batch-editing-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-batchediting' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-batch-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기</button>
-</div>
+
+<code-view style="height:600px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-batchediting" >
+</code-view>
+
 <div class="divider--half"></div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<div class="sample-container loading" style="height:680px">
-    <iframe id="hierarchical-grid-batch-editing-sample-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-batch-editing' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-batch-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기</button>
-</div>
+
+<code-view style="height:680px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-batch-editing" >
+</code-view>
+
 <div class="divider--half"></div>
 }
 

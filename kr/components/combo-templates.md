@@ -13,12 +13,12 @@ Custom templates for different areas of the [igx-combo]({environment:angularApiU
 
 ### Demo
 
-<div class="sample-container loading" style="height: 450px;">
-    <iframe id="combo-templates-sample" frameborder="0" seamless width="700px" height="100%" src="{environment:demosBaseUrl}/lists/combo-template" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="combo-templates-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
-</div>
+
+<code-view style="height: 450px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/lists/combo-template" >
+</code-view>
+
 
 ### Usage
 To get started with the Ignite UI for Angular Combo import the `IgxComboModule` in the **app.module.ts** file:
@@ -89,7 +89,7 @@ Use selector `[igxComboHeader]`:
 <igx-combo>
     <ng-template igxComboHeader>
         <div class="header-class">Custom header</div>
-        <img src=""/>
+        <img src/>
     </ng-template>
 </igx-combo>
 ```
@@ -101,7 +101,7 @@ Use selector `[igxComboFooter]`:
 <igx-combo>
     <ng-template igxComboFooter>
         <div class="footer-class">Custom footer</div>
-        <img src=""/>
+        <img src/>
     </ng-template>
 </igx-combo>
 ```
