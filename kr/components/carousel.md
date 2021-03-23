@@ -46,13 +46,10 @@ Then in the template of our carousel component we can add the following markup t
 
 This is enough to have the carousel instantiated on our page, let's have a look at it:
 
-<div class="sample-container loading" style="height: 230px">
-    <iframe id="carousel-sample-1-iframe" data-src='{environment:demosBaseUrl}/layouts/carousel-sample-1' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="carousel-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">                StackBlitz 에서보기
-    </button>
-</div>
+<code-view style="height: 230px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/layouts/carousel-sample-1" >
+</code-view>
 
 ### Displaying slides using the ngFor directive
 
@@ -106,13 +103,12 @@ a > igx-icon > span{
 
 Let's see what we have now, sure looks better with the arrows standing out clearly on both sides and all the content centered:
 
-<div class="sample-container loading" style="height: 600px">
-<iframe id="carousel-sample-2-iframe" data-src='{environment:demosBaseUrl}/layouts/carousel-sample-2' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="carousel-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">                StackBlitz 에서보기
-    </button>
-</div>
+
+<code-view style="height: 600px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/layouts/carousel-sample-2" >
+</code-view>
+
 
 ### Navigation
 
@@ -198,13 +194,12 @@ ul.igx-carousel__indicators {
 
 Following all the steps above brings us a nice and functional carousel that the user has full control over using the navigation arrows. The linear bar provides adittional UI that acts as an indicator of the user progress:
 
-<div class="sample-container loading" style="height: 550px">
-    <iframe id="carousel-sample-3-iframe" data-src='{environment:demosBaseUrl}/layouts/carousel-sample-3' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="carousel-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">                StackBlitz 에서보기
-    </button>
-</div>
+
+<code-view style="height: 550px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/layouts/carousel-sample-3" >
+</code-view>
+
 
 ### Actions on tap/click
 Our carousel now displays nicely the home page content. What it is missing is defining actions that will follow the user interactions with the slides. Once the user made a choice and clicked/tapped on the slide, it is expected that the carousel will transfer the user to a new page/view. Let's see how to do this by setting a route to navigate to - we will replace the heading with an [`IgxButton`]({environment:angularApiUrl}/classes/igxbuttondirective.html) and  add an event handler for the button click event:
@@ -237,7 +232,7 @@ Don't forget to add the **IgxButtonModule** to the **app.component.ts**. The `go
 Given this configuration, the router matches that URL to the given route path **/details:index** and displays the corresponding page:
 
 <div class="sample-container loading" style="height: 620px">
-    <iframe data-src='{environment:demosBaseUrl}/layouts/carousel-sample-4' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+    <iframe data-src='{environment:demosBaseUrl}/layouts/carousel-sample-4' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 
 ###API References
