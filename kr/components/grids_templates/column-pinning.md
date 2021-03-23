@@ -29,7 +29,6 @@ A column or multiple columns can be pinned to the left-hand side of the Angular 
 <div class="sample-container loading" style="height:510px">
     <iframe id="grid-sample-toolbar-pinning-iframe" src='{environment:demosBaseUrl}/grid/grid-sample-toolbar-pinning' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<br/>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-toolbar-pinning-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기</button>
 </div>
@@ -38,7 +37,6 @@ A column or multiple columns can be pinned to the left-hand side of the Angular 
 <div class="sample-container loading" style="height:630px">
     <iframe id="treegrid-toolbar-pinning-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-toolbar-pinning' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<br/>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-toolbar-pinning-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기</button>
 </div>
@@ -47,7 +45,6 @@ A column or multiple columns can be pinned to the left-hand side of the Angular 
 <div class="sample-container loading" style="height:510px">
     <iframe id="hierarchical-grid-sample-toolbar-pinning-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-toolbar-pinning' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<br/>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-sample-toolbar-pinning-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기</button>
 </div>
@@ -231,7 +228,6 @@ public pinningConfig: IPinningConfig = { columns: ColumnPinningPosition.End };
 <div class="sample-container loading" style="height:510px">
     <iframe id="grid-sample-toolbar-pinning-iframe" src='{environment:demosBaseUrl}/grid/grid-sample-right-pinning' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<br/>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-right-pinning-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
@@ -241,7 +237,6 @@ public pinningConfig: IPinningConfig = { columns: ColumnPinningPosition.End };
 <div class="sample-container loading" style="height:510px">
     <iframe id="hierarchical-grid-sample-toolbar-pinning-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-sample-right-pinning' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<br/>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-sample-toolbar-pinning-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
@@ -251,7 +246,6 @@ public pinningConfig: IPinningConfig = { columns: ColumnPinningPosition.End };
 <div class="sample-container loading" style="height:510px">
     <iframe id="tree-grid-sample-toolbar-pinning-iframe" src='{environment:demosBaseUrl}/tree-grid/tree-grid-sample-right-pinning' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<br/>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-sample-right-pinning-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
@@ -356,7 +350,6 @@ public toggleColumn(col: IgxColumnComponent) {
 <div class="sample-container loading" style="height:510px">
     <iframe id="grid-sample-pinning-iframe" src='{environment:demosBaseUrl}/grid/grid-sample-pinning' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<br/>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-pinning-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
@@ -365,7 +358,6 @@ public toggleColumn(col: IgxColumnComponent) {
 <div class="sample-container loading" style="height:630px">
     <iframe id="treegrid-sample-pinning-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-column-pinning' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<br/>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-sample-pinning-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
@@ -374,7 +366,6 @@ public toggleColumn(col: IgxColumnComponent) {
 <div class="sample-container loading" style="height:510px">
     <iframe id="hierarchical-grid-sample-pinning-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-pinning' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<br/>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-sample-pinning-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>

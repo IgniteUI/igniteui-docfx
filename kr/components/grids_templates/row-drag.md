@@ -33,7 +33,6 @@ Ignite UI for Angular @@igComponent에서 **RowDrag**는 루트 `@@igSelector` �
 <div class="sample-container loading" style="height:550px">
     <iframe id="grid-row-drag-to-grid-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-row-drag-to-grid' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<br/>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-drag-to-grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기</button>
 </div>
@@ -43,7 +42,6 @@ Ignite UI for Angular @@igComponent에서 **RowDrag**는 루트 `@@igSelector` �
 <div class="sample-container loading" style="height:560px">
     <iframe id="tree-grid-row-drag-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/tree-grid-row-drag' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<br/>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-row-drag-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기</button>
 </div>
@@ -54,7 +52,6 @@ Ignite UI for Angular @@igComponent에서 **RowDrag**는 루트 `@@igSelector` �
 <div class="sample-container loading" style="height:560px">
     <iframe id="hierarchical-grid-row-drag-sample-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-drag' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<br/>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-row-drag-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기</button>
 </div>
@@ -272,7 +269,6 @@ enum DragIcon {
 <div class="sample-container loading" style="height:550px">
     <iframe id="grid-row-drag-to-grid-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-row-drag-to-grid' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<br/>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-drag-to-grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기</button>
 </div>
@@ -281,7 +277,6 @@ The following sample demonstrates how to configure row reordering in the grid. H
 <div class="sample-container loading" style="height:830px">
     <iframe id="grid-row-reorder" src='{environment:demosBaseUrl}/grid/grid-row-reorder' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<br/>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-reorder" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
@@ -292,7 +287,6 @@ The following sample demonstrates how to configure row reordering in the grid. H
 <div class="sample-container loading" style="height:560px">
     <iframe id="tree-grid-row-drag-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/tree-grid-row-drag' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<br/>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-row-drag-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기</button>
 </div>
@@ -302,7 +296,6 @@ The following sample demonstrates how to configure row reordering in the tree gr
 <div class="sample-container loading" style="height:560px">
     <iframe id="tree-grid-row-reorder-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/tree-grid-row-reordering' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<br/>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-row-reorder-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
@@ -313,7 +306,6 @@ The following sample demonstrates how to configure row reordering in the tree gr
 <div class="sample-container loading" style="height:560px">
     <iframe id="hierarchical-grid-row-drag-sample-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-drag' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<br/>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-row-drag-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기</button>
 </div>
@@ -324,7 +316,6 @@ Notice that we also have row selection enabled and we preserve the selection whe
 <div class="sample-container loading" style="height:560px">
     <iframe id="hierarchical-grid-row-reorder-sample-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-row-reorder' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<br/>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-row-reorder-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>

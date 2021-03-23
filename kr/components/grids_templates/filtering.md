@@ -30,7 +30,6 @@ Angular grid filtering enables you to display only the records which meet specif
 <div class="sample-container loading" style="height:600px">
     <iframe id="grid-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-filtering-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<br/>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기</button>
 </div>
@@ -39,7 +38,6 @@ Angular grid filtering enables you to display only the records which meet specif
 <div class="sample-container loading" style="height:600px">
     <iframe id="treegrid-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-filtering' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<br/>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기</button>
 </div>
@@ -48,7 +46,6 @@ Angular grid filtering enables you to display only the records which meet specif
 <div class="sample-container loading" style="height:610px">
     <iframe id="hierarchical-grid-sample-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-filtering' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<br/>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기</button>
 </div>
@@ -311,7 +308,6 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
 <div class="sample-container loading" style="height:600px">
     <iframe id="grid-filtering-iframe" data-src='{environment:demosBaseUrl}/grid/grid-filter-conditions' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
-<br/>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-filtering-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기</button>
 </div>
@@ -320,7 +316,6 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
 <div class="sample-container loading" style="height:600px">
     <iframe id="treegrid-filtering-iframe" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-filtering-custom' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
-<br/>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-filtering-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기</button>
 </div>
@@ -329,7 +324,6 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
    <div class="sample-container loading" style="height:610px">
     <iframe id="hierarchical-grid-filtering-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-custom-filtering' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
-<br/>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-filtering-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기</button>
 </div>
@@ -342,7 +336,6 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
 <div class="sample-container loading" style="height:500px">
     <iframe id="grid-filtering-template-iframe" data-src='{environment:demosBaseUrl}/grid/grid-filtering-template-sample' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
-<br/>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-filtering-template-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기</button>
 </div>
@@ -351,7 +344,6 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
 <div class="sample-container loading" style="height:500px">
     <iframe id="treegrid-filtering-template-iframe" data-src='{environment:demosBaseUrl}/tree-grid/treegrid-filtering-template' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
-<br/>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-filtering-template-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기</button>
 </div>
@@ -360,7 +352,6 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
    <div class="sample-container loading" style="height:610px">
     <iframe id="hierarchical-grid-filtering-template-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-filtering-template' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
-<br/>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-filtering-template-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기</button>
 </div>

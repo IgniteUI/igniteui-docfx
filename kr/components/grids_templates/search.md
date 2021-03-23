@@ -30,7 +30,6 @@ While browsers natively provide content search functionality, most of the time t
 <div class="sample-container loading" style="height:600px">
     <iframe id="grid-search-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-search-sample' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<br/>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-search-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기</button>
 </div>
@@ -40,7 +39,6 @@ While browsers natively provide content search functionality, most of the time t
 <div class="sample-container loading" style="height:600px">
     <iframe id="treegrid-search-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-search' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<br/>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-search-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기</button>
 </div>

@@ -15,7 +15,6 @@ While most tooltips have a limited number of available positions, with the [`igx
 <div class="sample-container loading" style="height:450px">
     <iframe id="tooltip-simple-iframe" src='{environment:demosBaseUrl}/interactions/tooltip-simple' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<br/>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tooltip-simple-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
 </div>
@@ -311,7 +310,6 @@ If all went well, this is how our location and tooltip should look like:
 <div class="sample-container loading" style="height:400px">
     <iframe id="tooltip-rich-iframe" data-src='{environment:demosBaseUrl}/interactions/tooltip-rich' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
 </div>
-<br/>
 <div>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tooltip-rich-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
 </div>
