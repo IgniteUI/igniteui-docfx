@@ -13,14 +13,12 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 By default the divider is a solid horizontal line.
 
-<div class="sample-container loading" style="height:207px">
-    <iframe id="divider-sample-1-iframe" src='{environment:demosBaseUrl}/layouts/divider-sample-1' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular Divider Example"></iframe>
-</div>
-<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="divider-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="divider-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height:207px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/layouts/divider-sample-1" alt="Angular Divider Example">
+</code-view>
+
 
 ## Usage
 
@@ -34,13 +32,12 @@ By adding the `vertical` attribute and setting its value to `true`, you can chan
 ```html
 <igx-divider [vertical]="true"></igx-divider>
 ```
-<div class="sample-container loading" style="height:238px">
-    <iframe id="divider-sample-2-iframe" data-src='{environment:demosBaseUrl}/layouts/divider-sample-2' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="divider-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="divider-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height:238px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/layouts/divider-sample-2" >
+</code-view>
+
 
 ## Dashed Divider
 The default style of the divider is a `solid` line but it can also be `dashed`.
@@ -49,13 +46,12 @@ To change the default look simply use the `type` attribute of the divider and se
 ```html
 <igx-divider type="dashed"></igx-divider>
 ```
-<div class="sample-container loading" style="height:187px">
-    <iframe id="divider-sample-3-iframe" data-src='{environment:demosBaseUrl}/layouts/divider-sample-3' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="divider-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="divider-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height:187px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/layouts/divider-sample-3" >
+</code-view>
+
 
 ## Inset Divider
 The divider can be set in on both sides.
@@ -71,13 +67,12 @@ To inset the divider, set the `middle` attribute of the divider to `true` and pr
 <igx-divider inset="40px"></igx-divider>
 
 ```
-<div class="sample-container loading" style="height:311px">
-    <iframe id="divider-sample-4-iframe" data-src='{environment:demosBaseUrl}/layouts/divider-sample-4' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="divider-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="divider-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height:311px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/layouts/divider-sample-4" >
+</code-view>
+
 
 If the value of the `middle` attribute is set to a falsy value, or if the attribute is omitted altoghether, the divider will set in only on the left.
 
