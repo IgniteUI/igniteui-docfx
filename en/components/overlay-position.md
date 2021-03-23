@@ -9,12 +9,14 @@ Position strategies determine where the content is displayed in the provided `Ig
 
 ## Angular Positioning Strategies Example
 
-
-<code-view style="height: 350px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/overlay-sample-main-1" alt="Angular Positioning Strategies Example">
-</code-view>
-
+<div class="sample-container loading" style="height: 350px">
+    <iframe id="overlay-position-sample-1-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-sample-main-1" onload="onSampleIframeContentLoaded(this);" alt="Angular Positioning Strategies Example"></iframe>
+</div>
+<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="overlay-position-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-position-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on Stackblitz</button>
+</div>
 <div class="divider--half"></div>
 
 ## Strategies Overview
@@ -89,12 +91,13 @@ const overlayId = overlay.attach(dummyElement, overlaySettings);
 ``` 
 <div class="divider"></div>
 
-
-<code-view style="height: 400px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/overlay-position-sample-1" >
-</code-view>
-
+<div class="sample-container loading" style="height: 400px">
+    <iframe id="overlay-position-sample-2-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-position-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="overlay-position-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-position-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on Stackblitz</button>
+</div>
 <div class="divider--half"></div>
 
 ## Positioning Settings
@@ -120,12 +123,13 @@ const overlaySettings: OverlaySettings = {
 this._overlayId = this.overlayService.attach(MyDynamicCardComponent, overlaySettings);
 ```
 
-
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/overlay-position-sample-2" >
-</code-view>
-
+<div class="sample-container loading" style="height: 500px">
+    <iframe id="overlay-position-sample-3-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-position-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="overlay-position-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-position-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on Stackblitz</button>
+</div>
 <div class="divider--half"></div>
 
 ### Changing Strategies
@@ -137,12 +141,13 @@ const myPositionStrategy = new AutoPositionStrategy();
 overlay.show(overlayId, { positionStrategy: myPositionStrategy }); 
 ```
 
-
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/overlay-position-sample-3" >
-</code-view>
-
+<div class="sample-container loading" style="height: 500px">
+    <iframe id="overlay-position-sample-4-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-position-sample-3" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="overlay-position-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-position-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on Stackblitz</button>
+</div>
 <div class="divider--half"></div>
 
 ### Changing Settings

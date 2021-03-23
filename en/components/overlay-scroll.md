@@ -62,12 +62,14 @@ import { NoOpScrollStrategy } from "./scroll/NoOpScrollStrategy";
 ### Scroll Strategies
 The scroll strategies can be passed to the [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) object to determine how the overlay should handle scrolling.
 The demo below illustrates the difference between the separate [`scrollStrategies`]({environment:angularApiUrl}/interfaces/iscrollstrategy.html):
-
-<code-view style="height: 400px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/overlay-scroll-sample-2" >
-</code-view>
-
+<div class="sample-container loading" style="height: 400px">
+    <iframe id="overlay-scroll-sample-2-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-scroll-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="overlay-scroll-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-scroll-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on Stackblitz</button>
+</div>
 <div class="divider--half"></div>
 
 ## Modal
@@ -75,12 +77,13 @@ The [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.h
 - If the [`modal`]({environment:angularApiUrl}/interfaces/overlaysettings.html#modal) property is `false`, the element will be attached to the DOM foreground but everything will still be active and interactable - e.g. scrolling, clicking, etc.
 - If the [`modal`]({environment:angularApiUrl}/interfaces/overlaysettings.html#modal) property is `true`, the element will be attached to the DOM foreground and an overlay blocker will wrap behind it, stopping propagation of all events:
 
-
-<code-view style="height: 400px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/overlay-scroll-sample-1" >
-</code-view>
-
+<div class="sample-container loading" style="height: 400px">
+    <iframe id="overlay-scroll-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-scroll-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="overlay-scroll-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-scroll-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on Stackblitz</button>
+</div>
 <div class="divider--half"></div>
 
 ## API References
