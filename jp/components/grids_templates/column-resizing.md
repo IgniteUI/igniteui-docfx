@@ -349,12 +349,14 @@ $custom-grid-theme: igx-grid-theme(
 <div class="divider--half"></div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-
-<code-view style="height:550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-resize-line-styling" >
-</code-view>
-
+<div class="sample-container loading" style="height:550px">
+    <iframe id="hierarchical-grid-resize-line-styling-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-resize-line-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+<div class="divider--half"></div>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-resize-line-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-resize-line-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+</div>
 <div class="divider--half"></div>
 }
 
