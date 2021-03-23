@@ -10,16 +10,12 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ## Angular Toggle Example
 
-<div class="sample-container loading" style="height: 370px">
-    <iframe id="toggle-sample-1-iframe" src='{environment:demosBaseUrl}/interactions/toggle-sample-1' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular Toggle Example"></iframe>
-</div>
-<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="toggle-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       view on codesandbox
-    </button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toggle-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       view on stackblitz
-    </button>
-</div>
+
+<code-view style="height: 370px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/interactions/toggle-sample-1" alt="Angular Toggle Example">
+</code-view>
+
 
 ## Usage
 
@@ -112,15 +108,12 @@ The `igxToggle` directive uses the [`IgxOverlayService`]({environment:angularApi
 
 This is how our toggle should look like now:
 
-<div class="sample-container loading" style="height: 370px">
-    <iframe id="toggle-iframe" src='{environment:demosBaseUrl}/interactions/toggle' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="toggle-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       view on codesandbox
-    </button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toggle-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       view on stackblitz
-    </button>
-</div>
+
+<code-view style="height: 370px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/interactions/toggle" >
+</code-view>
+
 
 ### Automatic Toggle Actions
 
@@ -143,15 +136,12 @@ If we would like to take advantage of this functionality, we will have to use th
 
 After these changes the toggle should work exactly in the same way.
 
-<div class="sample-container loading" style="height: 370px">
-    <iframe id="toggle-sample-2-iframe" data-src='{environment:demosBaseUrl}/interactions/toggle-sample-2' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="toggle-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       view on codesandbox
-    </button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toggle-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       view on stackblitz
-    </button>
-</div>
+
+<code-view style="height: 370px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/interactions/toggle-sample-2" >
+</code-view>
+
 
 >[!NOTE]
 > By default `IgxToggleActionDirective` excludes its host element from the [`closeOnOutsideClick`]({environment:angularApiUrl}/interfaces/overlaysettings.html#closeonoutsideclick) property. Therefore, clicking on the host element will not fire any event. Additionally, this directive will set its host element as the overlay settings [`target`]({environment:angularApiUrl}/interfaces/overlaysettings.html#target).
@@ -172,15 +162,12 @@ There is a convenient way to keep the state of the `igxToggle` directive and com
 
 If all went well, it will look like this:
 
-<div class="sample-container loading" style="height: 370px">
-    <iframe id="toggle-sample-3-iframe" data-src='{environment:demosBaseUrl}/interactions/toggle-sample-3' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="toggle-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       view on codesandbox
-    </button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toggle-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       view on stackblitz
-    </button>
-</div>
+
+<code-view style="height: 370px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/interactions/toggle-sample-3" >
+</code-view>
+
 
 ### Offsetting the Toggle Container
 
@@ -195,15 +182,12 @@ public offsetToggle() {
 }
 ```
 
-<div class="sample-container loading" style="height: 370px">
-    <iframe id="toggle-sample-4-iframe" data-src='{environment:demosBaseUrl}/interactions/toggle-sample-4' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="toggle-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       view on codesandbox
-    </button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toggle-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">                       view on stackblitz
-    </button>
-</div>
+
+<code-view style="height: 370px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/interactions/toggle-sample-4" >
+</code-view>
+
 
 ## API References
 <div class="divider"></div>
