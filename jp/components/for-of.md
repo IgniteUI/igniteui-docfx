@@ -12,11 +12,12 @@ _language: ja
 
 ## Angular 仮想スクロール ディレクティブの例
 
-<code-view style="height:650px"
-           data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src='{environment:demosBaseUrl}/data-display/igx-for-sample-1'
-           alt="Angular Virtual For Directive Example">
+
+<code-view style="height:650px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-display/igx-for-sample-1" alt="Angular 仮想スクロール ディレクティブの例">
 </code-view>
+
 
 ## 使用方法
 
@@ -96,9 +97,10 @@ export class AppModule {}
 </igx-list>
 ```
 
-<code-view style="height:240px"
-           data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src='{environment:demosBaseUrl}/data-display/igx-for-sample-2'>
+
+<code-view style="height: 240px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-display/igx-for-sample-2" >
 </code-view>
 
 <div class="divider--half"></div>

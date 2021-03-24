@@ -57,10 +57,63 @@ The `igx-prefix` or `igxPrefix` and `igx-suffix` or `igxSuffix` directives can c
 </igx-input-group>
 ```
 
+<div class="sample-container loading" style="height:100px">
+<iframe class="lazyload" id="input-group-sample-3-frame" data-src='{environment:demosBaseUrl}/data-entries/input-group-sample-3' width="100%" height="100%" seamless frameBorder="0"></iframe>
+</div>
+<div class="divider--half"></div>
 
-<code-view style="height:100px" 
+### Hints
+The [`igx-hint`]({environment:angularApiUrl}/classes/igxhintdirective.html) directive provides a helper text placed below the input. It can be at the beginning or at the end of the input depending on the value of the [`position`]({environment:angularApiUrl}/classes/igxhintdirective.html#position) property. Let's add a hint to our phone input:
+
+```html
+<igx-input-group>
+    <igx-prefix>+359</igx-prefix>
+    <label igxLabel for="phone">Phone</label>
+    <input igxInput name="phone" type="tel" />
+    <igx-suffix>
+        <igx-icon>phone</igx-icon>
+    </igx-suffix>
+    <igx-hint position="start">Ex.: +359 888 123 456</igx-hint>
+</igx-input-group>
+```
+
+This is how the phone field with hint looks:
+<div class="sample-container loading" style="height:110px">
+<iframe class="lazyload" id="input-group-sample-4-frame" data-src='{environment:demosBaseUrl}/data-entries/input-group-sample-4' width="100%" height="100%" seamless frameBorder="0"></iframe>
+</div>
+<div class="divider--half"></div>
+
+### Input Types & Input Group Type Token
+The input group styles can be altered by using the [`type`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html#type) property of the [`igxInputGroup`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) component. The input group component supports the following types: `line` (default if type is not specified), `border`, `box`, and `search`. The `line`, `border`, and `box` types are made specifically for the `Material Design` themes. Setting those types with other themes will not have any effect on how the input group looks.
+An example of setting a specific type declaratively:
+```html
+<igx-input-group type="border">
+```
+
+Using the [IGX_input-group_TYPE]({environment:angularApiUrl}/index.html#igx_input-group_type) injection token allows to specify a type on an application level for all input-group instances. It provides an easy way to style all related components at once.
+To set the type, use the [IGX_input-group_TYPE]({environment:angularApiUrl}/index.html#igx_input-group_type) injection token to create a DI provider.
+
+```typescript
+providers: [{provide: IGX_input-group_TYPE, useValue: 'box' }]
+```
+
+>[!NOTE]
+>The [`type`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html#type) property has precedence over a [IGX_INPUT_GROUP_TYPE]({environment:angularApiUrl}/index.html#igx_input_group_type), thus a token value can be overridden on a component level if the type property is set explicitly.  
+>Most of the `igniteui-angular` form controls use input-group component internally, or allow for a custom template. Setting a global token will affect these components as well.
+
+Ignite UI for Angular also provides styling for the input of `type="file"` and it supports all the input group types and themes, just add this to your template:
+
+```html
+<igx-input-group>
+    <input igxInput type="file" multiple />
+</igx-input-group>
+```
+
+
+
+<code-view style="height:520px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/input-group-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/input-group-sample-5" >
 </code-view>
 
 

@@ -15,7 +15,203 @@ _language: ja
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-entries/buttons-sample-1" alt="Angular Button の例">
 </code-view>
+<div class="divider--half"></div>
 
+## 使用方法
+
+Button ディレクティブは `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に `IgxButtonModule` をインポートする必要があります。
+
+```typescript
+// app.module.ts
+
+import { IgxButtonModule } from 'igniteui-angular';
+
+@NgModule({
+    imports: [
+        ...
+        IgxButtonModule,
+        ...
+    ]
+})
+export class AppModule {}
+```
+
+## ボタン タイプ
+
+### Flat ボタン
+
+[`igxButton`]({environment:angularApiUrl}/classes/igxbuttondirective.html) ディレクティブを使用して、シンプルなフラット ボタンをコンポーネント テンプレートに追加します。タイプを選択しない場合、デフォルト値は `flat` です。
+
+```html
+<button igxButton="flat">Flat</button>
+```
+
+<div class="sample-container loading" style="height: 70px">
+    <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-2">
+</iframe></div>
+
+### Raised ボタン 
+
+エンボス加工されたボタンを作成するには、`igxButton` プロパティの値を変更するだけです。
+
+```html
+<button igxButton="raised">Raised</button>
+```
+
+<div class="sample-container loading" style="height: 70px">
+    <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-5">
+</iframe></div>
+
+### Outlined ボタン
+
+同様に、アウトライン タイプに切り替えることができます。
+
+```html
+<button igxButton="outlined">Outlined</button>
+```
+
+<div class="sample-container loading" style="height: 70px">
+    <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-8">
+</iframe></div>
+
+### Icon ボタン
+
+アイコンをボタンとして使用することもできます。
+
+```html
+<button igxButton="icon">
+  <igx-icon fontSet="material">favorite</igx-icon>
+</button>
+```
+
+<div class="sample-container loading" style="height: 70px">
+    <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-7">
+</iframe></div>
+
+### フローティング アクション ボタン
+
+アイコンを使用して、フローティング アクション ボタンを作成します。
+
+```html
+<button igxButton="fab">
+  <igx-icon fontSet="material">edit</igx-icon>
+</button>
+```
+
+拡張 FAB を作成するには、`igx-icon` の前に任意の要素を追加できます。
+
+```html
+<button class="btn" igxButton="fab">
+    <span>like</span>
+    <igx-icon fontSet="material">favorite</igx-icon>
+</button>
+```
+
+>[!NOTE]
+>拡張 FAB テキストを適切にスタイルするには、`<span>`、`<div>` または `<p>` タグを使用します。
+
+<div class="sample-container loading" style="height: 100px">
+    <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-6">
+</iframe></div>
+
+## 例
+
+### ボタンの無効化
+
+ボタンを無効にするには、`disabled` プロパティを使用します。
+
+```html
+<button igxButton="raised" [disabled]="'true'">Disabled</button>
+```
+
+<div class="sample-container loading" style="height: 70px">
+    <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-disabled-sample">
+</iframe></div> 
+
+### Ripple
+
+[`igxRipple`]({environment:angularApiUrl}/classes/igxrippledirective.html) ディレクティブは、ボタンまたはその他の指定した要素にリップル効果を追加します。`以下のプロパティを使用して、デフォルトのリップル色、位置、および期間を簡単に変更できます。
+
+```html
+<button igxButton="raised" igxRipple="white" [igxRippleCentered]="true" [igxRippleDuration]="2000">
+    Ripple
+</button>
+```
+
+<div class="sample-container loading" style="height: 70px">
+    <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-3">
+</iframe></div> 
+
+### Span
+
+`Span` や `div` などの要素を Ignite UI for Angular スタイルのボタンに変更するために `igxButton` ディレクティブを使用できます。デフォルトの色は `igxButtonColor` と `igxButtonBackground` プロパティでカスタマイズできます。
+
+```html
+<span igxButton="raised" igxButtonColor="white" igxButtonBackground="#72da67" igxRipple="white">
+    Span
+</span>
+```
+
+<div class="sample-container loading" style="height: 70px">
+    <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-4">
+</iframe></div>
+
+## 密度の表示
+
+[`displayDensity`]({environment:angularApiUrl}/classes/igxbuttondirective.html#displaydensity) 入力を使用して `igxButton` の表示密度を選択できます。これを行うには、まず `IgxButtonGroupModule` をインポートし、[`igxButtonGroup`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html) コンポーネントによってすべての密度値を表示する必要があります。これにより、選択されるたびにボタンの `displayDensity` にバインドされた独自の **density** プロパティが更新されます。
+
+> [!NOTE] 
+> `icon` タイプのボタンは、異なる表示密度値を設定しても視覚的に変化しません。
+
+```typescript
+// app.module.ts
+...
+import { IgxButtonGroupModule } from 'igniteui-angular';
+
+@NgModule({
+    imports: [
+        ...
+        IgxButtonGroupModule
+        ...
+    ]
+})
+```
+
+```html
+<!--buttons-density.component.html-->
+
+<igx-buttongroup [values]="displayDensities" (selected)="selectDensity($event)"></igx-buttongroup>
+...
+<button igxButton="flat" [displayDensity]="density">Flat</button>
+```
+
+```typescript
+// buttons-density.component.ts
+public density = "comfortable";
+public displayDensities;
+
+public ngOnInit() {
+    this.displayDensities = [
+        { label: 'comfortable', selected: this.density === 'comfortable', togglable: true },
+        { label: 'cosy', selected: this.density === 'cosy', togglable: true },
+        { label: 'compact', selected: this.density === 'compact', togglable: true }
+    ];
+}
+
+public selectDensity(event) {
+    this.density = this.displayDensities[event.index].label;
+}
+```
+
+以下は結果です。
+
+<div class="sample-container loading" style="height: 150px">
+    <iframe id="buttons-display-density-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/buttons-display-density" onload="onSampleIframeContentLoaded(this);">
+</div>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="buttons-display-density-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttons-display-density-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
+</div>
 <div class="divider--half"></div>
 
 ## 使用方法
@@ -48,10 +244,9 @@ export class AppModule {}
 ```
 
 
-<code-view style="height: 70px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/buttons-sample-2" >
-</code-view>
+<div class="sample-container loading" style="height: 70px">
+    <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-2">
+</iframe></div>
 
 <div class="divider--half"></div>
 

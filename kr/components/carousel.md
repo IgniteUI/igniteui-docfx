@@ -10,10 +10,46 @@ _language: kr
 <div class="divider"></div>
 
 ### Carousel Demo
+<div class="sample-container loading" style="height: 620px">
+    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/layouts/carousel-sample-4" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
 
-<code-view style="height: 620px" 
+
+### Usage
+The carousel can be used as a full-screen element or situated inside another component. Also, the slides may feature any valid html content inside, including other Angular components. To get started with the **Ignite UI for Angular Carousel**, let's first import the **IgxCarouselModule** in our **app.module.ts** file:
+```typescript
+// app.module.ts
+...
+import { IgxCarouselModule } from 'igniteui-angular';
+@NgModule({
+    ...
+    imports: [..., IgxCarouselModule],
+    ...
+})
+export class AppModule {}
+```
+Then in the template of our carousel component we can add the following markup to add two slides and define their html content:
+
+```html
+<!-- app.component.html -->
+<igx-carousel>
+    <igx-slide>
+        <h3>Ignite UI for Angular</h3>
+        <p>30+ Material-based Angular components to code speedy web apps faster.</p>
+    </igx-slide>
+    <igx-slide>
+        <h3>Ignite UI for Javascript</h3>
+        <p>A complete JavaScript UI component library giving you the ability to build data-rich responsive web apps.</p>
+    </igx-slide>
+</igx-carousel>
+```
+
+This is enough to have the carousel instantiated on our page, let's have a look at it:
+
+
+<code-view style="height: 230px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/carousel-sample-4" >
+           iframe-src="{environment:demosBaseUrl}/layouts/carousel-sample-1" >
 </code-view>
 
 

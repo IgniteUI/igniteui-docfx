@@ -45,10 +45,78 @@ Use the [`color`]({environment:angularApiUrl}/classes/igxiconcomponent.html#icon
 ```html
 <igx-icon color="#e41c77">home</igx-icon>
 ```
+<div class="sample-container loading" style="height: 40px">
+    <iframe id="icon-sample-3-iframe" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-display/icon-sample-3" class="lazyload">
+</iframe></div>
 
-<code-view style="height: 40px" 
+>[!NOTE]
+> The `color` property will be deprecated in the next major version of Ignite UI for Angular. To change the color of an icon, use CSS properties.
+
+### Inactive Icon
+
+If you want to disable an icon, you can use the [`active`]({environment:angularApiUrl}/classes/igxiconcomponent.html#active) property:
+
+```html
+<igx-icon [active]="false">volume_off</igx-icon>
+```
+<div class="sample-container loading" style="height: 40px">
+    <iframe id="icon-sample-4-iframe" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-display/icon-sample-4" class="lazyload">
+</iframe></div>
+
+### Content Projection
+
+You can set icons with content projection:
+
+```html
+<igx-icon>bluetooth</igx-icon>
+```
+
+<div class="sample-container loading" style="height: 40px">
+    <iframe id="icon-sample-5-iframe" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-display/icon-sample-5" class="lazyload">
+</iframe></div>
+
+### Icon Size
+
+You can customize the icons using CSS. The icon's size can be changed through the `font-size` property. Additionally to center it, set equal values to the `width` and `height` properties:
+
+```scss
+.custom-size{
+    font-size: 56px;
+    width: 56px;
+    height: 56px;
+}
+```
+<div class="sample-container loading" style="height: 80px">
+    <iframe id="icon-sample-2-iframe" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-display/icon-sample-2" class="lazyload">
+</iframe></div>
+
+## SVG Icons
+
+You can also use an SVG image as an icon. First, inject the [`IgxIconService`]({environment:angularApiUrl}/classes/igxiconservice.html) dependency. In this example we will inject it in a component's constructor but you can use it wherever it is needed in your code. 
+
+Use the [`addSvgIcon`]({environment:angularApiUrl}/classes/igxiconservice.html#addsvgicon) method to import the SVG file in cache. When the SVG is cached, it can be used anywhere in the application. The icon name and file URL path are the method's mandatory parameters; family can be specified as well. After that, you can use the SVG files in the HTML markup. Alternatively, you can use the `addSvgIconFromText` method to import an SVG file, providing the SVG text content instead of the file URL.
+
+* Have in mind that if there are two icons with the same name and the same family, the SVG icon will be displayed with priority.
+* It is better not to provide image width and height in the SVG file.
+* You may need additional polyfill scripts ("polyfills") for Internet Explorer.
+
+```typescript
+constructor(private iconService: IgxIconService) { }
+
+public ngOnInit() {
+    // register custom SVG icons
+    this.iconService.addSvgIcon("contains", "/assets/images/svg/contains.svg", "filter-icons");
+}
+```
+
+```html
+<igx-icon name="contains" family="filter-icons"></igx-icon>
+```
+
+
+<code-view style="height: 70px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/icon-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/data-display/svg-icon-sample" >
 </code-view>
 
 

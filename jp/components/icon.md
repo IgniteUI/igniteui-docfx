@@ -46,10 +46,78 @@ export class AppModule {}
 ```html
 <igx-icon color="#e41c77">home</igx-icon>
 ```
+<div class="sample-container loading" style="height: 40px">
+    <iframe id="icon-sample-3-iframe" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-display/icon-sample-3" class="lazyload">
+</iframe></div>
 
-<code-view style="height: 40px" 
+>[!NOTE]
+> `color` プロパティは、Ignite UI for Angular の次のメジャー バージョンで非推奨になります。アイコンの色を変更するには、CSS プロパティを使用します。
+
+### アイコンの無効化
+
+アイコンを無効にするには、[`active`]({environment:angularApiUrl}/classes/igxiconcomponent.html#active) を使用できます。
+
+```html
+<igx-icon [active]="false">volume_off</igx-icon>
+```
+<div class="sample-container loading" style="height: 40px">
+    <iframe id="icon-sample-4-iframe" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-display/icon-sample-4" class="lazyload">
+</iframe></div>
+
+### コンテンツ プロジェクション
+
+コンテンツ プロジェクションでアイコンを設定できます。
+
+```html
+<igx-icon>bluetooth</igx-icon>
+```
+
+<div class="sample-container loading" style="height: 40px">
+    <iframe id="icon-sample-5-iframe" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-display/icon-sample-5" class="lazyload">
+</iframe></div>
+
+### アイコンのサイズ
+
+CSS を使用してアイコンをカスタマイズできます。アイコン サイズは `font-size` プロパティで変更できます。さらに中央揃えにするには、`width` と `height` プロパティに等しい値を設定します。
+
+```scss
+.custom-size{
+    font-size: 56px;
+    width: 56px;
+    height: 56px;
+}
+```
+<div class="sample-container loading" style="height: 80px">
+    <iframe id="icon-sample-2-iframe" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-display/icon-sample-2" class="lazyload">
+</iframe></div>
+
+## SVG アイコン
+
+SVG 画像はアイコンとして使用できます。はじめに [`IgxIconService`]({environment:angularApiUrl}/classes/igxiconservice.html) 依存を注入します。この例ではコンポーネントのコンストラクタに注入されますが、コード内の必要な場所に使用できます。
+
+[`addSvgIcon`]({environment:angularApiUrl}/classes/igxiconservice.html#addsvgicon) メソッドを SVG ファイルをキャッシュにインポートするために使用します。SVG をキャッシュした場合、アプリケーションのどこでも使用できるようになります。アイコン名とファイル URL がメソッドに必須のパラメーターです。ファミリも指定できます。HTML マークアップの SVG ファイルを使用できます。または `addSvgIconFromText` メソッドを使用して SVG ファイルをインポートして、SVC テキスト コンテンツを使用できます。
+
+* 同じ名前のアイコンが 2 つある場合に同じファミリ SVG アイコンが優先順位に従って表示されます。
+* SVG ファイルの画像の幅と高さは指定しないことをお勧めします。
+* 追加のポリフィル スクリプトがインターネット エクスプローラーで必要な場合があります。
+
+```typescript
+constructor(private iconService: IgxIconService) { }
+
+public ngOnInit() {
+    // register custom SVG icons
+    this.iconService.addSvgIcon("contains", "/assets/images/svg/contains.svg", "filter-icons");
+}
+```
+
+```html
+<igx-icon name="contains" family="filter-icons"></igx-icon>
+```
+
+
+<code-view style="height: 70px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/icon-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/data-display/svg-icon-sample" >
 </code-view>
 
 

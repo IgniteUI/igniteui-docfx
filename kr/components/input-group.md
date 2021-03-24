@@ -61,10 +61,39 @@ If you want to have an input prefix or suffix, you can use Ignite UI for Angular
 ```
 
 Here is how the sample looks:
+<div class="sample-container loading" style="height:100px">
+<iframe id="input-group-sample-3-frame" data-src='{environment:demosBaseUrl}/data-entries/input-group-sample-3' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+<div class="divider--half"></div>
 
-<code-view style="height:100px" 
+#### Hints
+Ignite UI for Angular Hint provides a helper text placed below the input. The hint can be placed at the start or at the end of the input. The position of the [`igx-hint`]({environment:angularApiUrl}/classes/igxhintdirective.html) can be set using the [`position`]({environment:angularApiUrl}/classes/igxhintdirective.html#position) property. Let's add a hint to our phone input:
+
+```html
+<igx-input-group>
+    <igx-prefix>+359</igx-prefix>
+    <label igxLabel for="phone">Phone</label>
+    <input igxInput name="phone" type="text" [(ngModel)]="user.phone" />
+    <igx-suffix>
+        <igx-icon>phone</igx-icon>
+    </igx-suffix>
+    <igx-hint position="start">Ex.: +359 888 123 456</igx-hint>
+</igx-input-group>
+```
+
+This is how the phone field with hint looks:
+<div class="sample-container loading" style="height:110px">
+<iframe id="input-group-sample-4-frame" data-src='{environment:demosBaseUrl}/data-entries/input-group-sample-4' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+<div class="divider--half"></div>
+
+#### Styling
+Our inputs could be styled differently by using the [`type`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html#type) property of the [`igxInputGroup`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) component. Currently we support four different ways of styling: line (the default one), box, border and search. This is how they look:
+
+
+<code-view style="height:520px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/input-group-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/input-group-sample-5" >
 </code-view>
 
 
