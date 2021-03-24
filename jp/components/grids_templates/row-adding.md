@@ -194,6 +194,31 @@ export class AppModule {}
 - 階層グリッドの UI を生成すると、エンド ユーザーが [行の追加] ボタンをクリックした行に対して現在展開されている子レイアウトはすべて縮小されます。
 }
 
+## 行追加オーバーレイのカスタマイズ
+
+### テキストのカスタマイズ
+
+Customizing the text of the row adding overlay is possible using the `igxRowAddTextDirective`.
+
+```html
+<ng-template igxRowAddText>
+	Adding Row
+</ng-template>
+ ```
+
+### ボタンのカスタマイズ
+Customizing the buttons of the row editing overlay is possible using the `igxRowEditActionsDirective`.
+If you want the buttons to be part of the keyboard navigation, then each on of them should have the `igxRowEditTabStopDirective`.
+
+ ```html
+ <ng-template igxRowEditActions let-endRowEdit>
+	<button igxButton igxRowEditTabStop (click)="endRowEdit(false)">Cancel</button>
+	<button igxButton igxRowEditTabStop (click)="endRowEdit(true)">Apply</button>
+</ng-template>
+ ```
+> [!NOTE]
+> Using `igxRowEditActions` directive will change edit actions for both editing and adding overlay buttons.
+
 ## リモート シナリオ
 
 ほとんどのリモート データ シナリオでは、主キーの割り当てはサーバーの作成要求で発生します。この場合、クライアントに追加されたレコードは、サーバーのデータベースに保存されるまで最終的な主キー値を持ちません。@@igComponent でこの更新を処理する推奨される方法は以下のとおりです。
