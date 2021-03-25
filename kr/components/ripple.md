@@ -10,12 +10,12 @@ _language: kr
 <div class="divider"></div>
 
 ### Ripple Demo
-<div class="sample-container loading" style="height: 558px">
-    <iframe id="ripple-sample-1-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/interactions/ripple-sample-1" onload="onSampleIframeContentLoaded(this);">
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="ripple-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
-</div>
+
+<code-view style="height: 558px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/interactions/ripple-sample-1" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ### Dependencies
@@ -196,13 +196,12 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
   > A color that is set using the `igxRiple` directive, would take precedence from the one, set within a custom theme.  
 
 #### Demo
-<div class="sample-container loading" style="height:700px">
-    <iframe id="ripple-styling-sample-iframe" data-src='{environment:demosBaseUrl}/interactions/ripple-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
-</div>
-<br/>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="ripple-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height: 700px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/interactions/ripple-styling" >
+</code-view>
+
 
 ### API References
 <div class="divider--half"></div>

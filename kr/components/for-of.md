@@ -11,13 +11,12 @@ In Ignite UI for Angular, [`igxForOf`]({environment:angularApiUrl}/classes/igxfo
 
 ### Demo
 
-<div class="sample-container loading" style="height:650px">
-    <iframe id="igx-for-sample-iframe" src='{environment:demosBaseUrl}/data-display/igx-for-sample-1' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<br/>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="igx-for-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
-</div>
+
+<code-view style="height:650px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-display/igx-for-sample-1" >
+</code-view>
+
 
 ### Dependencies
 

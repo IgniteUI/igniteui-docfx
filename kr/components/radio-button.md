@@ -12,12 +12,12 @@ _language: kr
 ### Radio Button
 
 #### Radio Button Demo
-<div class="sample-container loading" style="height: 384px">
-    <iframe id="form-elements-sample-iframe" src='{environment:demosBaseUrl}/data-entries/radio-sample-2' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="form-elements-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
-</div>
+
+<code-view style="height: 384px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-entries/radio-sample-2" >
+</code-view>
+
 <div class="divider--half"></div>
 
 #### Radio Button Usage
@@ -104,12 +104,12 @@ Try it! The final result would be something like that:
 <div class="divider"></div>
 
 #### Radio Group Demo
-<div class="sample-container loading" style="height: 320px">
-    <iframe id="radio-group-sample-iframe" data-src='{environment:demosBaseUrl}/data-entries/radio-group-sample' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="radio-group-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
-</div>
+
+<code-view style="height: 320px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-entries/radio-group-sample" >
+</code-view>
+
 <div class="divider--half"></div>
 
 #### Radio Group Usage

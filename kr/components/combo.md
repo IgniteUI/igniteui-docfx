@@ -18,12 +18,12 @@ Drop Down items are **virtualized**, which guarantees smooth work, even if the [
 <div class="divider"></div>
 
 ### Demo
-<div class="sample-container loading" style="height: 400px;">
-    <iframe id="combo-sample" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/lists/combo" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="combo-sample" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
-</div>
+
+<code-view style="height: 400px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/lists/combo" >
+</code-view>
+
 <div class="divider--half"></div>
 
 > [!WARNING]

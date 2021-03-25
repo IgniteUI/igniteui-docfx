@@ -9,14 +9,12 @@ _language: ja
 <p class="highlight">Ignite UI for Angular Button Group コンポーネントは、ボタンを水平/垂直配置、単一/複数選択、オン/オフ切り替えが可能なスタイルのボタン グループに組織するために使用します。</p>
 
 ## Angular Button Group の例
-<div class="sample-container loading" style="height: 85px">
-    <iframe id="buttonGroup-sample-1-iframe" seamless="" width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/button-group-sample-1" onload="onSampleIframeContentLoaded(this);" alt="Angular Button Group の例">
-</iframe></div>
-<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="buttonGroup-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttonGroup-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
+
+<code-view style="height: 85px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-1" alt="Angular Button Group の例">
+</code-view>
+
 <div class="divider--half"></div>
 
 ## 使用方法
@@ -85,13 +83,12 @@ public alignment = ButtonGroupAlignment.vertical;
 </igx-buttongroup>
 ```
 
-<div class="sample-container loading" style="height: 220px">
-    <iframe id="buttonGroup-sample-2-iframe" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/button-group-sample-2" class="lazyload">
-</iframe></div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="buttonGroup-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttonGroup-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
+
+<code-view style="height: 220px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-2" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ### 複数選択
@@ -112,13 +109,12 @@ public alignment = ButtonGroupAlignment.vertical;
 </igx-buttongroup>
 ```
 
-<div class="sample-container loading" style="height: 80px">
-    <iframe id="buttonGroup-sample-4-iframe" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/button-group-sample-4" class="lazyload">
-</iframe></div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="buttonGroup-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttonGroup-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
+
+<code-view style="height: 80px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-4" >
+</code-view>
+
 
 ### 表示密度
 [`displayDensity`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#displaydensity) プロパティを使用して、ボタン グループの表示密度を制御します。これにより、グループ内のボタンのスタイルが、最大、最小、または標準 (デフォルト値) に設定されます。
@@ -154,13 +150,12 @@ public selectDensity(event) {
 </igx-buttongroup>
 ```
 
-<div class="sample-container loading" style="height: 80px">
-    <iframe id="buttonGroup-sample-5-iframe" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/button-group-sample-5" class="lazyload">
-</iframe></div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="buttonGroup-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttonGroup-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
+
+<code-view style="height: 80px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-5" >
+</code-view>
+
 
 ### カスタム トグル ボタン
 [`values`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#values) プロパティを使用して、ボタン グループ内のカスタムボタンの配列を設定します。
@@ -228,13 +223,12 @@ public ngOnInit() {
 <igx-buttongroup [multiSelection]="true" [values]="bordersButtons"></igx-buttongroup>
 ```
 
-<div class="sample-container loading" style="height: 90px">
-    <iframe id="buttonGroup-sample-3-iframe" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/button-group-sample-3" class="lazyload">
-</iframe></div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="buttonGroup-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttonGroup-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
+
+<code-view style="height: 90px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-3" >
+</code-view>
+
 
 ## スタイル設定
 
@@ -286,13 +280,12 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 
 ### デモ
 
-<div class="sample-container loading" style="height: 200px">
-    <iframe id="buttonGroup-style-iframe" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/button-group-style" class="lazyload no-theming">
-</iframe></div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="buttonGroup-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttonGroup-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
+
+<code-view style="height: 200px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-entries/button-group-style" >
+</code-view>
+
 
 ## API リファレンス
 <div class="divider--half"></div>

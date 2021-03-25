@@ -63,14 +63,12 @@ import { NoOpScrollStrategy } from "./scroll/NoOpScrollStrategy";
 ### スクロール方法
 オーバーレイのスクロールの処理方法を決定するためにスクロール方法を [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) オブジェクトによって渡すことができます。
 以下のデモは複数の [`scrollStrategies`]({environment:angularApiUrl}/interfaces/iscrollstrategy.html) を紹介します。
-<div class="sample-container loading" style="height: 400px">
-    <iframe id="overlay-scroll-sample-2-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-scroll-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="overlay-scroll-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-scroll-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
-</div>
+
+<code-view style="height: 400px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/interactions/overlay-scroll-sample-2" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ## モーダル
@@ -78,13 +76,12 @@ import { NoOpScrollStrategy } from "./scroll/NoOpScrollStrategy";
 - [`modal`]({environment:angularApiUrl}/interfaces/overlaysettings.html#modal) プロパティが `false` の場合、要素は DOM 前景にアタッチされますが、すべての要素がまだアクティブで操作可能 (スクロール、クリックなど) です。
 - [`modal`]({environment:angularApiUrl}/interfaces/overlaysettings.html#modal) プロパティが `true` の場合、要素が DOM 前景にアタッチされ、背景の要素が非アクティブなため操作不能となり、すべてのイベントが中止されます。
 
-<div class="sample-container loading" style="height: 400px">
-    <iframe id="overlay-scroll-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-scroll-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="overlay-scroll-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-scroll-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
-</div>
+
+<code-view style="height: 400px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/interactions/overlay-scroll-sample-1" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ## API リファレンス
