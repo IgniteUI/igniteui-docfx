@@ -1,8 +1,19 @@
+@@if(igxName==='IgxGrid') {
 ---
 title: Angular グリッド行追加 | UI グリッド | Ignite UI for Angular | インフラジスティックス
 _description: Ignite UI for Angular を使用して、定義済みの行追加機能の使用およびカスタマイズする方法を学びます。UI グリッドで、直感的なグリッド行の追加と CRUD 機能を利用できます。
-_keywords: 行追加, igniteui for angular, infragistics, インフラジスティックス
+_keywords: row adding, 行追加, igniteui for angular, infragistics, インフラジスティックス
 ---
+}
+
+@@if(igxName!=='IgxGrid') {
+---
+title: Angular グリッド行追加 | UI グリッド | Ignite UI for Angular | インフラジスティックス
+_description: Ignite UI for Angular を使用して、定義済みの行追加機能の使用およびカスタマイズする方法を学びます。UI グリッドで、直感的なグリッド行の追加と CRUD 機能を利用できます。
+_keywords: row adding, 行追加, igniteui for angular, infragistics, インフラジスティックス
+_canonicalLink: grid/row-adding
+---
+}
 
 # @@igComponent 行追加
 
@@ -198,7 +209,7 @@ export class AppModule {}
 
 ### テキストのカスタマイズ
 
-Customizing the text of the row adding overlay is possible using the `igxRowAddTextDirective`.
+行追加オーバーレイのテキストのカスタマイズは、`igxRowAddTextDirective` を使用して可能です。
 
 ```html
 <ng-template igxRowAddText>
@@ -207,8 +218,8 @@ Customizing the text of the row adding overlay is possible using the `igxRowAddT
  ```
 
 ### ボタンのカスタマイズ
-Customizing the buttons of the row editing overlay is possible using the `igxRowEditActionsDirective`.
-If you want the buttons to be part of the keyboard navigation, then each on of them should have the `igxRowEditTabStopDirective`.
+`igxRowEditActionsDirective` を使用して行編集オーバーレイのボタンのカスタマイズが可能です。
+キーボード ナビゲーションにボタンを含める場合、各ボタンに `igxRowEditTabStopDirective` が必要です。
 
  ```html
  <ng-template igxRowEditActions let-endRowEdit>
@@ -217,7 +228,7 @@ If you want the buttons to be part of the keyboard navigation, then each on of t
 </ng-template>
  ```
 > [!NOTE]
-> Using `igxRowEditActions` directive will change edit actions for both editing and adding overlay buttons.
+> `igxRowEditActions` ディレクティブを使用すると、オーバーレイ ボタンの編集と追加の両方の編集アクションが変更されます。
 
 ## リモート シナリオ
 

@@ -69,9 +69,11 @@ public childDataKey = "children";
 public groupColumnKey = "categories";
 ```
 
-In this sample we have also created an UI component with selector `igx-tree-grid-group-area` which handles the UI interactions related to the columns that are used for the grouping. For more information on how this component works you can take a look at the `IgxTreeGridGroupAreaComponent` class in the `tree-grid-group-area.component.ts` file. The component is completely configurable so you could copy and re-use it in your own project.
+このサンプルでは、グループ化に使用される列に関連する UI 操作を処理するセレクター `igx-tree-grid-group-area` を使用して UI コンポーネントも作成しました。
+このコンポーネントの動作の詳細については、 `tree-grid-group-area.component.ts` ファイルの `IgxTreeGridGroupAreaComponent` クラスを参照してください。
+コンポーネントは完全にカスタマイズが可能でカスタム プロジェクトに使用できます。
 
-Here is an example of how to use the component in the template:
+以下はテンプレートでコンポーネントを使用した例です。
 
 ```html
 <igx-grid-toolbar *ngIf="showToolbar">
@@ -84,10 +86,10 @@ Here is an example of how to use the component in the template:
     </igx-grid-toolbar-title>
 ```
 
-The component's inputs are the following:
-- grid - `IgxTreeGridComponent` that is used for the grouping
-- groupColumns - an array of string values which contains the fields used to generate the hierarchy
-- groupColumnKey - a string value for the name of the generated hierarchy column
+コンポーネントの入力は次のとおりです:
+- grid - グループ化に使用される `IgxTreeGridComponent`。
+- groupColumns - 階層を生成するために使用されるフィールドを含む文字列の配列。
+- groupColumnKey - 生成した階層列の名前の文字列値。
 
 ### API リファレンス
 
