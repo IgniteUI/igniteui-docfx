@@ -57,9 +57,9 @@ Depending on the set [`dataType`]({environment:angularApiUrl/classes/igxcolumnco
 
 The purpose of this section is to present what the structure of the topic should be and the arrangement of the main elements in it.
 
-### 1. The first title of the page should be with `<h1>` tag `# Page Title` and it wont appear on the submenu on the right.
+### 1. The first title of the page should be with `<h1>` tag (`#` Page Title) and it wont appear on the submenu on the right.
 
-### 2. Every main title should be with <h2> tag `## Main Title`.
+### 2. Every main title should be with `<h2>` tag (`##` Main Title).
 
 ### 3. Using nested titles.
 Minor titles related to the main titles can be used with `<h3>`(`###`) or `<h4>` (`####`).
