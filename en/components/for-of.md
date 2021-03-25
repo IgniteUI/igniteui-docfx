@@ -11,11 +11,12 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ## Angular Virtual For Directive Example
 
-<code-view style="height:650px"
-           data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src='{environment:demosBaseUrl}/data-display/igx-for-sample-1'
-           alt="Angular Virtual For Directive Example">
+
+<code-view style="height:650px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-display/igx-for-sample-1" alt="Angular Virtual For Directive Example">
 </code-view>
+
 
 ## Usage
 
@@ -95,9 +96,10 @@ Virtualization works similarly to Paging by slicing the data into smaller chucks
 </igx-list>
 ```
 
-<code-view style="height:240px"
-           data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src='{environment:demosBaseUrl}/data-display/igx-for-sample-2'>
+
+<code-view style="height: 240px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-display/igx-for-sample-2" >
 </code-view>
 
 <div class="divider--half"></div>

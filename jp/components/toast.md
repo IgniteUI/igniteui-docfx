@@ -113,10 +113,42 @@ public showMessage() {
 
 サンプルが正しく構成された場合、Toast が自動ですばやく非表示になります。
 
+<div class="sample-container loading">
+    <iframe id="toast-sample-4-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/toast-sample-4" class="lazyload"></iframe>
+</div>
 
-<code-view style 
+### 配置
+[`position`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#position) を使用すると、Toast の表示位置を構成します。デフォルトで、ページの下に表示されます。以下のサンプルで、通知が上位置に表示されます。
+
+```html
+<!--sample.component.html-->
+
+<div>
+    <button igxButton="raised" (click)="show(toast)">Show notification on top</button>
+    <igx-toast #toast message="Notification displayed" [position]="toastPosition"></igx-toast>
+</div>
+
+```
+
+```typescript
+// sample.component.ts
+
+import { IgxToastPosition } from 'igniteui-angular';
+
+...
+public toastPosition: IgxToastPosition;
+public show(toast) {
+    this.toastPosition = "top";
+    toast.show();
+}
+...
+
+```
+
+
+<code-view style="height: 300px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/notifications/toast-sample-4" >
+           iframe-src="{environment:demosBaseUrl}/notifications/toast-sample-5" >
 </code-view>
 
 

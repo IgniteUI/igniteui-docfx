@@ -110,10 +110,42 @@ Use [`displayTime`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#d
 
 If the sample is configured properly, the toast auto hides faster.
 
+<div class="sample-container loading">
+    <iframe id="toast-sample-4-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/toast-sample-4" class="lazyload"></iframe>
+</div>
 
-<code-view style 
+### Positioning
+Use [`position`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#position) to configure where the toast appears. By default, it is displayed at the bottom of the page. In the sample below, we set notification to appear at the top position.
+
+```html
+<!--sample.component.html-->
+
+<div>
+    <button igxButton="raised" (click)="show(toast)">Show notification on top</button>
+    <igx-toast #toast message="Notification displayed" [position]="toastPosition"></igx-toast>
+</div>
+
+```
+
+```typescript
+// sample.component.ts
+
+import { IgxToastPosition } from 'igniteui-angular';
+
+...
+public toastPosition: IgxToastPosition;
+public show(toast) {
+    this.toastPosition = "top";
+    toast.show();
+}
+...
+
+```
+
+
+<code-view style="height: 300px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/notifications/toast-sample-4" >
+           iframe-src="{environment:demosBaseUrl}/notifications/toast-sample-5" >
 </code-view>
 
 

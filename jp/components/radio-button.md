@@ -55,10 +55,56 @@ export class AppModule {
 <igx-radio [(ngModel)]="selected" value="option2" labelPosition="before">Option 2</igx-radio>
 ```
 
+<div class="sample-container loading" style="height: 90px">
+    <iframe id="radio-sample-3-iframe" data-src='{environment:demosBaseUrl}/data-entries/radio-sample-3' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
 
-<code-view style="height: 90px" 
+### プロパティ
+上記のサンプルに 4 つのラジオ ボタンを追加し、各ボタンに特定の背景色を適用します。次に含まれる div 要素の backgroundColor プロパティをコンポーネントの selectedColor プロパティにバインドします。selectedColor は `NgModel` ディレクティブによって双方向バインディングが設定されるため、ユーザーが別のラジオ ボタン (色) を選択する際に値が更新されます。
+
+```typescript
+// radiogroup.component.ts
+...
+public colors = [{
+    hex: "#f06a2f",
+    name: "Carrot"
+}, {
+    hex: "#ff134a",
+    name: "Watermelon"
+}, {
+    hex: "#7bc96f",
+    name: "Grass"
+},
+{
+    hex: "transparent",
+    name: "No color"
+}];
+
+public selectedColor: string = this.colors[3].hex;
+```
+
+```html
+<!--radiogroup.component.html-->
+<igx-radio *ngFor="let color of colors" 
+           name="color" 
+           [value]="color.hex" 
+           [(ngModel)]="selectedColor">
+           {{color.name}}
+</igx-radio>
+
+<div [style.background-color]="selectedColor">
+    ...
+</div>
+```
+
+双方向バインディングで `NgModel` ディレクティブを使用しない場合、`FormsModule` をインポートし、NgModule の imports リストに追加する必要があります。
+
+結果は以下のようになります。
+
+
+<code-view style="height: 450px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/radio-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/radio-sample-2" >
 </code-view>
 
 

@@ -70,6 +70,7 @@ Feed the same data into the [Category Chart](../category-chart.md) to experience
            iframe-src="{environment:lobDemosBaseUrl}/grid-finjs" alt="Angular Live-data Update Example">
 </code-view>
 
+
 ## Data binding and updates
 A service provides data to the component when the page loads, and when the slider controller is used to fetch a certain number of records. While in a real scenario updated data would be consumed from the service, here data is updated in code. This is done to keep the demo simple and focus on its main goal - demonstrate the grid performance.
 ```html

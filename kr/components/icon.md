@@ -71,10 +71,41 @@ You can set the icon's size through CSS. Create a custom CSS class and name it *
     height: 56px;
 }
 ```
+<div class="sample-container loading" style="height: 80px; width: 300px">
+    <iframe id="icon-sample2-iframe" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-display/icon-sample2" class="lazyload">
+</iframe></div>
 
-<code-view style="height: 80px; width: 300px" 
+### SVG Icons
+
+You can also use a SVG image as an icon. First, inject [`IgxIconService`]({environment:angularApiUrl}/classes/igxiconservice.html) dependency. In this example [`IgxIconService`]({environment:angularApiUrl}/classes/igxiconservice.html) dependency is injected in a component's constructor but you can use it wherever it is needed in your code. 
+
+Use the [`addSvgIcon`]({environment:angularApiUrl}/classes/igxiconservice.html#addsvgicon) method to import the SVG file in cache. When the SVG is cached, it can be used anywhere in the application. Icon name and file URL path are method's mandatory parameters; you can specify font-set as well. After that, you can use the SVG files in the HTML markup. Alternatively, you can use the `addSvgIconFromText` method to import the SVG file providing the SVG text content instead of the file URL.
+
+* Have in mind that if there are two icons with the same name and the same font-set - SVG icon will be displayed with priority.
+* It is better not to provide image width and height in the SVG file.
+* You may need additional polyfill scripts ("polyfills") for Internet Explorer.
+
+```typescript
+// svg-icon-sample.ts
+
+constructor(private iconService: IgxIconService) { }
+
+public ngOnInit() {
+    // register custom SVG icons
+    this.iconService.addSvgIcon("contains", "/assets/images/svg/contains.svg", "filter-icons");
+}
+```
+
+```html
+<!-- svg-icon-sample.html -->
+
+<igx-icon name="contains" fontSet="filter-icons"></igx-icon>
+```
+
+
+<code-view style="height: 50px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/icon-sample2" >
+           iframe-src="{environment:demosBaseUrl}/data-display/svg-icon-sample" >
 </code-view>
 
 

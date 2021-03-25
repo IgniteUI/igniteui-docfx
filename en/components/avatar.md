@@ -76,10 +76,91 @@ We can also change the background through the `background` property or set a col
 ```
 If all went well, you should see something like the following in the browser:
 
+<div class="sample-container loading" style="height:100px">
+    <iframe id="avatar-sample-1-iframe" data-src='{environment:demosBaseUrl}/layouts/avatar-sample-1' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
 
-<code-view style="height:100px" 
+### Avatar displaying image
+To get an avatar that displays an image, all you have to do is set the image source via the `src` property.
+
+```html
+<igx-avatar src="https://randomuser.me/api/portraits/men/1.jpg"
+            [roundShape]="true"
+            size="large">
+</igx-avatar>
+```
+
+If all went well, you should see something like the following in the browser:
+
+<div class="sample-container loading" style="height:100px">
+    <iframe id="avatar-sample-2-iframe" data-src='{environment:demosBaseUrl}/layouts/avatar-sample-2' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+
+### Avatar displaying icon
+Analogically, the avatar can display an icon via the [`icon`]({environment:angularApiUrl}/classes/igxavatarcomponent.html#icon) property. Currently all icons from the material icon set are supported.
+
+```html
+<igx-avatar icon="person"
+            [roundShape]="true"
+            size="small">
+</igx-avatar>
+```
+
+You should see something like this:
+
+<div class="sample-container loading" style="height:100px">
+    <iframe id="avatar-sample-4-iframe" data-src='{environment:demosBaseUrl}/layouts/avatar-sample-4' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+
+## Styling
+
+To get started with styling the avatar, we need to import the `index` file, where all the theme functions and component mixins live:
+
+```scss
+@import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
+
+Following the simplest approach, we create a new theme that extends the [`igx-avatar-theme`]({environment:sassApiUrl}/index.html#function-igx-avatar-theme) and accepts the `$initials-background`, `$initials-color`, `$icon-background`, `$icon-color` and the `$border-radius-square` parameters.
+
+```scss
+$custom-avatar-theme: igx-avatar-theme(
+    $initials-background: #72da67,
+    $initials-color: #000000,
+    $icon-background: #217346,
+    $icon-color: #ffffff,
+    $border-radius-square: 16px
+);
+```
+
+### Using CSS variables 
+
+The last step is to pass the custom avatar theme:
+
+```scss
+@include igx-css-vars($custom-avatar-theme);
+```
+
+### Using mixins
+
+In order to style components for Internet Explorer 11, we have to use different approach, since it doesn't support CSS variables. 
+
+If the component is using an [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`. On the other side, in order to prevent the custom theme to leak to other components, be sure to include the `:host` selector before `::ng-deep`:
+
+```scss
+:host {
+    ::ng-deep {
+        // Pass the custom avatar theme to the `igx-avatar` mixin
+        @include igx-avatar($custom-avatar-theme);
+    }
+}
+```
+
+If all went well, you should see something like the following in the browser:
+
+
+<code-view style="height:120px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/avatar-sample-1" >
+           iframe-src="{environment:demosBaseUrl}/layouts/avatar-styling" >
 </code-view>
 
 <div class="divider--half"></div>

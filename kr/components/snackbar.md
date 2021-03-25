@@ -50,10 +50,108 @@ In order to display the snackbar component, use its [`show()`]({environment:angu
 
 If the sample is configured properly, a snackbar appears displaying a text message when the button is clicked.
 
+<div class="sample-container loading" style="height: 170px">
+    <iframe id="snackbar-sample-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/snackbar-sample-1" class="lazyload"></iframe>
+</div>
+
+#### Hide/Auto Hide
+Once opened, the snackbar disappears after a period specified by the [`displayTime`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#displaytime) input which is set initially to 4000 milliseconds. This behavior is enabled by default but you can change this by setting [`autoHide`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#autohide) to **false**. In this way, the snackbar will remain visible. Using the snackbar [`hide()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#hide) method, you can close the component in the code.
+
+```html
+<!--sample.component.html-->
+
+<button igxButton="raised" (click)="snackbar.show()">Send message</button>
+<div>
+  <igx-snackbar #snackbar [autoHide]="false" actionText="CLOSE" (clicked)="close(snackbar)">Message sent</igx-snackbar>
+</div>
+```
+
+```typescript
+// sample.component.ts
+
+public close(element) {
+    element.hide();
+}
+```
+
+If the sample is configured properly, a snackbar appears when the button is clicked showing message and action button. The auto hide feature is disabled and the snackbar disappears on 'CLOSE' button click.
+
+<div class="sample-container loading" style="height: 170px">
+    <iframe id="snackbar-sample-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/snackbar-sample-2" class="lazyload"></iframe>
+</div>
+
+#### Display Time
+Use [`displayTime`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#displaytime) and set it to an interval in milliseconds to configure how long the snackbar component is visible.
+
+```html
+<!--sample.component.html-->
+
+<button igxButton="raised" (click)="snackbar.show()">Send message</button>
+<div>
+  <igx-snackbar #snackbar displayTime="1000">Message sent</igx-snackbar>
+</div>
+```
+
+If the sample is configured properly, the snackbar auto hides faster.
+
+<div class="sample-container loading" style="height: 170px">
+    <iframe id="snackbar-sample-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/snackbar-sample-3" class="lazyload"></iframe>
+</div>
+
+#### Customize Snackbar
+We can also customize the content of the Snackbar to display more complex elements than a message and a button. If we want to show the snackbar while loading a file, for example, a loading animation could be added to its content.
+
+```html
+<!--sample.component.html-->
+<button igxButton="raised" (click)="snackbar.show()">Load file</button>
+<div>
+  <igx-snackbar #snackbar displayTime="5000">File loading
+    <svg id="dots" height="20px">
+        <g id="dots" fill="#FFFFFF">
+            <circle id="dot1" cx="5" cy="18" r="2"></circle>
+            <circle id="dot2" cx="15" cy="18" r="2"></circle>
+            <circle id="dot3" cx="25" cy="18" r="2"></circle>
+        </g>
+    </svg>
+  </igx-snackbar>
+</div>
+```
+
+```scss
+//sample.component.scss
+#dots #dot1 {
+    animation: load 1s infinite;
+}
+
+#dots #dot2 {
+    animation: load 1s infinite;
+    animation-delay: 0.2s;
+}
+
+#dots #dot3 {
+    animation: load 1s infinite;
+    animation-delay: 0.4s;
+}
+
+@keyframes load {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+}
+```
+
+As a result, a message and three loading dots appear in the snackbar.
+
 
 <code-view style="height: 170px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/notifications/snackbar-sample-1" >
+           iframe-src="{environment:demosBaseUrl}/notifications/snackbar-sample-5" >
 </code-view>
 
 

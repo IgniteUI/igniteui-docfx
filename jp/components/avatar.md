@@ -77,10 +77,91 @@ Avatar の形式は四角または丸で、3 つのサイズ オプション (�
 ```
 以下は結果です。
 
+<div class="sample-container loading" style="height:100px">
+    <iframe id="avatar-sample-1-iframe" data-src='{environment:demosBaseUrl}/layouts/avatar-sample-1' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
 
-<code-view style="height:100px" 
+### 画像を表示するアバター
+画像を表示するアバターを作成するには、`src` プロパティで画像ソースを設定します。
+
+```html
+<igx-avatar src="https://randomuser.me/api/portraits/men/1.jpg"
+            [roundShape]="true"
+            size="large">
+</igx-avatar>
+```
+
+ここまでの内容が正しければ、以下のように表示されます。
+
+<div class="sample-container loading" style="height:100px">
+    <iframe id="avatar-sample-2-iframe" data-src='{environment:demosBaseUrl}/layouts/avatar-sample-2' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+
+### アイコンを表示するアバター
+アバターでアイコンを表示するには、[`icon`]({environment:angularApiUrl}/classes/igxavatarcomponent.html#icon) プロパティを設定します。現在、マテリアル アイコン セットのすべてのアイコンがサポートされます。
+
+```html
+<igx-avatar icon="person"
+            [roundShape]="true"
+            size="small">
+</igx-avatar>
+```
+
+以下は結果です。
+
+<div class="sample-container loading" style="height:100px">
+    <iframe id="avatar-sample-4-iframe" data-src='{environment:demosBaseUrl}/layouts/avatar-sample-4' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+
+## スタイル設定
+
+Avatar のスタイル設定を始めるには、すべてのテーマ関数とコンポーネント ミックスインが存在する index ファイルをインポートする必要があります。
+
+```scss
+@import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
+
+最も簡単な方法は、[`igx-avatar-theme`]({environment:sassApiUrl}/index.html#function-igx-avatar-theme) を拡張する新しいテーマを作成し、`$initials-background`、`$initials-color`、`$icon-background`、`$icon-color` と `$border-radius-square` パラメーターを受け取る方法です。
+
+```scss
+$custom-avatar-theme: igx-avatar-theme(
+    $initials-background: #72da67,
+    $initials-color: #000000,
+    $icon-background: #217346,
+    $icon-color: #ffffff,
+    $border-radius-square: 16px
+);
+```
+
+### CSS 変数の使用
+
+最後にアバターのカスタム テーマを渡します。
+
+```scss
+@include igx-css-vars($custom-avatar-theme);
+```
+
+### ミックスインの使用
+
+Internet Explorer 11 のコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、別のアプローチが必要です。 
+
+コンポーネントが [`Emulated`](./themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。一方、カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
+
+```scss
+:host {
+    ::ng-deep {
+        // Pass the custom avatar theme to the `igx-avatar` mixin
+        @include igx-avatar($custom-avatar-theme);
+    }
+}
+```
+
+ここまでの内容が正しければ、以下のように表示されます。
+
+
+<code-view style="height:120px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/avatar-sample-1" >
+           iframe-src="{environment:demosBaseUrl}/layouts/avatar-styling" >
 </code-view>
 
 <div class="divider--half"></div>

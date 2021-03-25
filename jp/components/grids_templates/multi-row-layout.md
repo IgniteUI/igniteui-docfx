@@ -123,10 +123,126 @@ _language: ja
 
 デフォルトでは、前のサンプルと同じ列を設定していますが、目的の設定に合わせて消去して設定することもできます。
 
+<div class="sample-container loading" style="height:500px">
+    <iframe id="grid-multi-row-layout-configuration-iframe" data-src='{environment:demosBaseUrl}/grid/grid-multi-row-layout-configuration' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
 
-<code-view style="height:500px" 
+## スタイル設定
+igxGrid を使用すると、[Ignite UI for Angular テーマ ライブラリ](../themes/component-themes.md)でスタイルを設定できます。[テーマ]({environment:sassApiUrl}/index.html#function-igx-grid-theme) は、グリッドのすべての機能をカスタマイズできるさまざまなプロパティを公開します。 
+
+以下は、グリッドの複数行レイアウト スタイルをカスタマイズする手順です。     
+
+### グローバル テーマのインポート
+複数行レイアウト機能のカスタマイズは、すべてのスタイリング機能とミックスインが配置されている `index` ファイルをインポートする必要があります。
+
+```scss
+@import '~igniteui-angular/lib/core/styles/themes/index'
+```   
+
+### カスタム テーマの定義
+次に、[`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) を拡張し、必要に応じて機能レイアウトをカスタマイズするために必要なパラメーターを受け取る新しいテーマを作成します。   
+
+```scss
+$custom-theme: igx-grid-theme(
+    $cell-active-border-color: #ffcd0f,
+    $cell-selected-background: #6f6f6f,
+    $row-hover-background: #fde069,
+    $row-selected-background: #8d8d8d,
+    $header-background: #494949,
+    $header-text-color: #fff,
+    $sorted-header-icon-color: #ffcd0f,
+    $sortable-header-icon-hover-color: #e9bd0d
+);
+```    
+
+### カスタム カラー パレットの定義
+上記で説明したアプローチでは、色の値がハード コーディングされていました。または、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) および [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用して、柔軟性を高めることができます。   
+`igx-palette` は指定した一次色と二次色に基づいてカラーパレットを生成します。 
+
+ ```scss
+$black-color: #494949;
+$yellow-color: #FFCD0F;
+
+$custom-palette: igx-palette(
+  $primary: $black-color,
+  $secondary: $yellow-color
+);
+```   
+
+カスタム パレットが生成された後、`igx-color` 関数を使用して、さまざまな種類の原色と二次色を取得できます。
+
+```scss
+$custom-theme: igx-grid-theme(
+    $cell-active-border-color: igx-color($custom-palette, "secondary", 500),
+    $cell-selected-background: igx-color($custom-palette, "primary", 300),
+    $row-hover-background: igx-color($custom-palette, "secondary", 300),
+    $row-selected-background: igx-color($custom-palette, "primary", 100),
+    $header-background: igx-color($custom-palette, "primary", 500),
+    $header-text-color: igx-contrast-color($custom-palette, "primary", 500),
+    $sorted-header-icon-color: igx-color($custom-palette, "secondary", 500),
+    $sortable-header-icon-hover-color: igx-color($custom-palette, "secondary", 600)
+);
+```
+
+### カスタム スキーマの定義
+さらに進んで、[**スキーマ**](../themes/schemas.md) のすべての利点を備えた柔軟な構造を構築できます。**スキーマ**はテーマを作成させるための方法です。   
+すべてのコンポーネントに提供される 2 つの事前定義されたスキーマの 1 つを拡張します。この場合、`$_light_grid` を使用します。   
+```scss
+$custom-grid-schema: extend($_light-grid,(
+    cell-active-border-color: (igx-color:('secondary', 500)),
+    cell-selected-background: (igx-color:('primary', 300)),
+    row-hover-background: (igx-color:('secondary', 300)),
+    row-selected-background: (igx-color:('primary', 100)),
+    header-background: (igx-color:('primary', 500)),
+    header-text-color: (igx-contrast-color:('primary', 500)),
+    sorted-header-icon-color: (igx-color:('secondary', 500)),
+    sortable-header-icon-hover-color: (igx-color:('secondary', 600)) 
+));
+```   
+
+カスタム スキーマを適用するには、`light` グローバルまたは `dark` グローバルを拡張する必要があります。プロセス全体が実際にコンポーネントにカスタム スキーマを提供し、その後、それぞれのコンポーネントテーマに追加します。   
+
+```scss
+$my-custom-schema: extend($light-schema, ( 
+    igx-grid: $custom-grid-schema
+));
+ $custom-theme: igx-grid-theme(
+    $palette: $custom-palette,
+    $schema: $my-custom-schema
+);
+```
+
+### カスタム テーマの適用
+テーマを適用する最も簡単な方法は、グローバル スタイル ファイルに `sass` `@include` ステートメントを使用することです。  
+```scss
+@include igx-grid($custom-theme);
+```
+
+### スコープ コンポーネント テーマ
+
+カスタム テーマが特定のコンポーネントのみに影響するように、定義したすべてのスタイルをグローバル スタイル ファイルからカスタム コンポーネントのスタイルファイルに移動できます (`index` ファイルのインポートを含む)。
+
+このように、Angular の [ViewEncapsulation](https://angular.io/api/core/Component#encapsulation) により、スタイルはカスタム コンポーネントにのみ適用されます。
+
+ >[!NOTE]
+ >コンポーネントが [`Emulated`](../themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、グリッドのスタイル設定は `::ng-deep` を使用してこのカプセル化を解除する必要があります。
+ >[!NOTE]
+ >ステートメントがコンポーネントの外にある要素に影響を与えないよう、ステートメントを `:host` セレクター内にラップします。 
+
+```scss
+:host {
+    ::ng-deep {
+        @include igx-grid($custom-theme);
+    }
+}
+```
+
+### デモ 
+
+
+<code-view style="height:755px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-multi-row-layout-configuration" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-multi-row-layout-styling" >
 </code-view>
 
 
