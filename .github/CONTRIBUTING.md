@@ -1,11 +1,12 @@
 ## In this topic
  ### 1. [Writing an article](#writing-an-article)
- ### 2. [Writing a Styling section for article](#styling-section)
- ### 3. [Workflow](#workflow)
- ### 4. [Environment variables](#environment-variables)
- ### 5. [Code View Configuration](#code-view-configuration)
- ### 6. [Creating shared help topics](#creating-shared-help-topics)
- ### 7. [Updating of Data Visualization related topics](#updating-of-data-visualization-related-topics)
+ ### 2. [Topic structure](#topic-structure)
+ ### 3. [Writing a Styling section for article](#styling-section)
+ ### 4. [Workflow](#workflow)
+ ### 5. [Environment variables](#environment-variables)
+ ### 6. [Code View Configuration](#code-view-configuration)
+ ### 7. [Creating shared help topics](#creating-shared-help-topics)
+ ### 8. [Updating of Data Visualization related topics](#updating-of-data-visualization-related-topics)
 
 # <a name='#writing-an-article'>Writing an article</a>
 
@@ -51,6 +52,18 @@ Depending on the set [`dataType`]({environment:angularApiUrl/classes/igxcolumnco
 ```
 
 ### 8. Where does one find further help related to the topic of the article?
+
+# <a name='#topic-structure'>Topic structure</a>
+
+The purpose of this section is to present what the structure of the topic should be and the arrangement of the main elements in it.
+
+### 1. The first title of the page should be with `<h1>` tag (`#` Page Title) and it wont appear on the submenu on the right.
+
+### 2. Every main title should be with `<h2>` tag (`##` Main Title).
+
+### 3. Using nested titles.
+Minor titles related to the main titles can be used with `<h3>`(`###`) or `<h4>` (`####`).
+Note: when `<h4>` (`####`) is used the title wont appear on the submenu on the right.
 
 # <a name='#styling-section'>Writing a Styling section for article</a>
 
