@@ -285,7 +285,7 @@ export class HGridSummarySampleComponent implements OnInit {
 ```
 }
 
-### Custom summaries, which access all @@igComponent data
+## Custom summaries, which access all @@igComponent data
  Now you can access all grid data inside the custom column summary. Two additional optional parameters are introduced in the IgxSummaryOperand `operate` method.
 As you can see in the code snippet below the operate method has the following three parameters:
 - columnData - gives you an array that contains the values only for the current column
@@ -367,12 +367,12 @@ public dateSummaryFormat(summary: IgxSummaryResult, summaryOperand: IgxSummaryOp
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
   <div class="sample-container loading" style="height:650px">
-    <iframe id="hierarchical-grid-summary-formatter-sample-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-summary-formatter' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="hGrid-summary-formatter-sample-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hGrid-summary-formatter' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <br/>
 <div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-summary-formatter-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-summary-formatter-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hGrid-summary-formatter-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hGrid-summary-formatter-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
 </div>
 }
 
