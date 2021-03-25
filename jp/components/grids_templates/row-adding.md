@@ -3,6 +3,7 @@
 title: Angular グリッド行追加 | UI グリッド | Ignite UI for Angular | インフラジスティックス
 _description: Ignite UI for Angular を使用して、定義済みの行追加機能の使用およびカスタマイズする方法を学びます。UI グリッドで、直感的なグリッド行の追加と CRUD 機能を利用できます。
 _keywords: row adding, 行追加, igniteui for angular, infragistics, インフラジスティックス
+_language: ja
 ---
 }
 
@@ -11,6 +12,7 @@ _keywords: row adding, 行追加, igniteui for angular, infragistics, インフ�
 title: Angular グリッド行追加 | UI グリッド | Ignite UI for Angular | インフラジスティックス
 _description: Ignite UI for Angular を使用して、定義済みの行追加機能の使用およびカスタマイズする方法を学びます。UI グリッドで、直感的なグリッド行の追加と CRUD 機能を利用できます。
 _keywords: row adding, 行追加, igniteui for angular, infragistics, インフラジスティックス
+_language: ja
 _canonicalLink: grid/row-adding
 ---
 }

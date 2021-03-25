@@ -7,7 +7,7 @@ _language: ja
 
 # Angular Tree Grid グループ化
 
-階層以外のデータ列を **group by** し、**集計値**で親行を生成する場合、[`IgxTreeGridComponent`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html) と以下のデモのようなカスタム実装を使用します。
+階層以外のデータ列を **グループ化**し、**集計値**で親行を生成する場合、[`IgxTreeGridComponent`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html) と以下のデモのようなカスタム実装を使用します。
 
 ## Angular Tree Grid グループ化の例
 
@@ -20,7 +20,7 @@ _language: ja
 <div class="divider--half"></div>
 
 > [!NOTE]
-> このサンプルは [`IgxTreeGridComponent`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html) には含まれていないカスタム ロジックを使用します。  [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) のグループ化や集計機能と同様ですが、集計行内ではなく、集計データが親行に表示されます。
+> このサンプルは [`IgxTreeGridComponent`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html) には含まれていないカスタム ロジックを使用します。[`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) のグループ化や集計機能と同様ですが、集計行内ではなく、集計データが親行に表示されます。
 
 #### 実装
 
@@ -69,9 +69,7 @@ public childDataKey = "children";
 public groupColumnKey = "categories";
 ```
 
-このサンプルでは、グループ化に使用される列に関連する UI 操作を処理するセレクター `igx-tree-grid-group-area` を使用して UI コンポーネントも作成しました。
-このコンポーネントの動作の詳細については、 `tree-grid-group-area.component.ts` ファイルの `IgxTreeGridGroupAreaComponent` クラスを参照してください。
-コンポーネントは完全にカスタマイズが可能でカスタム プロジェクトに使用できます。
+このサンプルでは、グループ化に使用される列に関連する UI 操作を処理するセレクター `igx-tree-grid-group-area` を使用して UI コンポーネントも作成しました。このコンポーネントの動作の詳細については、`tree-grid-group-area.component.ts` ファイルの `IgxTreeGridGroupAreaComponent` クラスを参照してください。コンポーネントは完全にカスタマイズが可能でカスタム プロジェクトに使用できます。
 
 以下はテンプレートでコンポーネントを使用した例です。
 
