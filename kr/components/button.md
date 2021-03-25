@@ -11,12 +11,12 @@ The Button directive within Ignite UI for Angular is intended to be used on any 
 
 ### Button Demo
 
-<div class="sample-container loading" style="height: 436px">
-    <iframe id="buttons-sample-iframe" seamless="" width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/buttons-sample-1" onload="onSampleIframeContentLoaded(this);">
-</iframe></div>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttons-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
-</div>
+
+<code-view style="height: 436px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-entries/buttons-sample-1" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ### Dependencies
@@ -176,12 +176,11 @@ public selectDensity(event) {
 
 And the final result:
 
-<div class="sample-container loading" style="height: 300px">
-    <iframe id="buttons-display-density-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/buttons-display-density" onload="onSampleIframeContentLoaded(this);">
-</div>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttons-display-density-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+<code-view style="height: 300px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-entries/buttons-display-density" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ### API References

@@ -10,14 +10,12 @@ _language: ja
 
 
 ## Angular Navbar の例
-<div class="sample-container loading" style="height: 300px">
-    <iframe id="nav-bar-sample-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/menus/navbar" onload="onSampleIframeContentLoaded(this);" alt="Angular Navbar の例"></iframe>
-</div>
-<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="nav-bar-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-bar-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
+
+<code-view style="height: 300px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/menus/navbar" alt="Angular Navbar の例">
+</code-view>
+
 <div class="divider--half"></div>
 
 ## 使用方法
@@ -95,13 +93,12 @@ export class AppModule {}
 ```
 
 以下は結果です:
-<div class="sample-container loading" style="height: 300px">
-    <iframe id="nav-bar-sample-1-iframe" frameborder="0" seamless width="100%" height="100%" data-src='{environment:demosBaseUrl}/menus/navbar-sample-1' class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="nav-bar-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-bar-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
+
+<code-view style="height: 300px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/menus/navbar-sample-1" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ### カスタム アクション アイコンの追加
@@ -139,13 +136,12 @@ export class AppModule {}
 
 以下はカスタム アクション アイコンをした場合の navbar の外観です。
 
-<div class="sample-container loading" style="height: 300px">
-    <iframe id="nav-bar-sample-2-iframe" frameborder="0" seamless width="100%" height="100%" data-src='{environment:demosBaseUrl}/menus/navbar-sample-2' class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="nav-bar-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-bar-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
+
+<code-view style="height: 300px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/menus/navbar-sample-2" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ### ナビゲーション アイコを追加
@@ -181,13 +177,12 @@ export class NavbarSample3Component {
 
 サンプルが正しく構成された場合、ブラウザーで以下が表示されます。 
 
-<div class="sample-container loading" style="height: 300px">
-    <iframe id="navbar-sample-3-iframe" frameborder="0" seamless width="100%" height="100%" data-src='{environment:demosBaseUrl}/menus/navbar-sample-3' class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="navbar-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="navbar-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
+
+<code-view style="height: 300px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/menus/navbar-sample-3" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ### カスタムのタイトルを追加する
@@ -202,7 +197,7 @@ Navbar のタイトルにカスタム コンテンツを提供する場合は、
         <div igxNavbarTitle>
             <a href="https://www.infragistics.com/products/ignite-ui-angular" target="_blank">
                 <img src="https://static.infragistics.com/marketing/Website/products/ignite-ui-landing/ignite-ui-logo.svg"
-                     width="120px" height="50px" alt="" style="margin-top: 7px;">
+                     width="120px" height="50px" alt style="margin-top: 7px;">
             </a>
         </div>
 
@@ -216,14 +211,12 @@ Navbar のタイトルにカスタム コンテンツを提供する場合は、
 > [!NOTE]
 > [`igx-navbar-title`]({environment:angularApiUrl}/classes/igxnavbartitledirective.html) または [`igxNavbarTitle`]({environment:angularApiUrl}/classes/igxnavbartitledirective.html) の場合、デフォルト [`title`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#title) が使用されません。 
 
-<div class="sample-container loading" style="height: 300px">
-    <iframe id="navbar-custom-title-iframe" frameborder="0" seamless width="100%" height="100%"
-    data-src='{environment:demosBaseUrl}/menus/navbar-custom-title' class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="navbar-custom-title-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="navbar-custom-title-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
-</div>
+
+<code-view style="height: 300px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/menus/navbar-custom-title" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ## スタイル設定
@@ -337,13 +330,12 @@ $cutom-navbar-theme: igx-navbar-theme(
 
 ### デモ
 
-<div class="sample-container loading" style="height: 150px">
-    <iframe id="nav-bar-style-iframe" frameborder="0" seamless width="100%" height="100%" data-src='{environment:demosBaseUrl}/menus/navbar-style' class="lazyload no-theming"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="nav-bar-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-bar-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
+
+<code-view style="height: 150px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/menus/navbar-style" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ## API リファレンス
