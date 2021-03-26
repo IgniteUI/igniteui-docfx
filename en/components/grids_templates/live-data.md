@@ -1,45 +1,4 @@
 
-<style>
-    .full-screen-btn {
-        display: -webkit-inline-box;
-        display: -ms-inline-flexbox;
-        display: inline-flex;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
-        font-size: 13px;
-        font-weight: 400;
-        color: #fff;
-        border: 0;
-        text-transform: uppercase;
-        padding: 8px 16px;
-        margin: 24px 0;
-        outline-style: none;
-        -webkit-transition: all 0.25s ease-out;
-        transition: all 0.25s ease-out;
-        background: #0099ff; 
-    }
-    .full-screen-btn:hover, .full-screen-btn:focus {
-        color: white;
-        -webkit-box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.26), 0 8px 10px 1px rgba(0, 0, 0, 0.12), 0 3px 14px 2px rgba(0, 0, 0, 0.08);
-        box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.26), 0 8px 10px 1px rgba(0, 0, 0, 0.12), 0 3px 14px 2px rgba(0, 0, 0, 0.08); 
-    }
-    .full-screen-btn::before {
-        content: "";
-        display: inline-block;
-        height: 28px;
-        margin-right: 8px;
-        background-size: 100%;
-        background-repeat: no-repeat; 
-    }
-    .full-screen-btn[disabled] {
-        color: rgba(0, 0, 0, 0.28);
-        background: #eee;
-        -webkit-box-shadow: none;
-        box-shadow: none; 
-    }
-
-</style>
 @@if (igxName === 'IgxGrid') {
 ---
 title: Grid Live Data - Native Angular | Ignite UI for Angular | Infragistics
@@ -132,7 +91,7 @@ this.hubConnection = new signalR.HubConnectionBuilder()
             this.registerSignalEvents();
             this.broadcastParams(interval, volume, live, updateAll);
         })
-        .catch(() => {
+        .catch(() => {});
 ```
 
 Based on the specified frequency a total of 30 new updates will be received by the Grids from the server. A specific cellStyle classes are applied to the three columns that are handling the changes (Price, Change and Change in percent).
