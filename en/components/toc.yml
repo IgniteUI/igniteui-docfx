@@ -29,6 +29,12 @@
   href: general/data-analysis.md
   new: false
   updated: true
+- name: How to
+  new: true
+  items:
+    - name: ASP.NET Core SignalR
+      href: general/how-to/signal-r-service-live-data.md
+      new: true
 - name: Angular Schematics & Ignite UI CLI
   href: general/cli-overview.md
   new: false
