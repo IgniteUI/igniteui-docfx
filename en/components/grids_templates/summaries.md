@@ -228,7 +228,7 @@ interface IgxSummaryResult {
 }
 ```
 and take optional parameters for calculating the summaries.
-See [Custom summaries, which access all data](#custom-summaries-which-access-all-grid-data) section below.
+See [Custom summaries, which access all data](#custom-summaries-which-access-all-data) section below.
 
 > [!NOTE]
 > In order to calculate the summary row height properly, the @@igComponent needs the [`operate`]({environment:angularApiUrl}/classes/igxsummaryoperand.html#operate) method to always return an array of [`IgxSummaryResult`]({environment:angularApiUrl}/interfaces/igxsummaryresult.html) with the proper length even when the data is empty.
@@ -285,8 +285,8 @@ export class HGridSummarySampleComponent implements OnInit {
 ```
 }
 
-## Custom summaries, which access all @@igComponent data
- Now you can access all grid data inside the custom column summary. Two additional optional parameters are introduced in the IgxSummaryOperand `operate` method.
+## Custom summaries, which access all data
+ Now you can access all @@igComponent data inside the custom column summary. Two additional optional parameters are introduced in the IgxSummaryOperand `operate` method.
 As you can see in the code snippet below the operate method has the following three parameters:
 - columnData - gives you an array that contains the values only for the current column
 - allGridData - gives you the whole grid data source
