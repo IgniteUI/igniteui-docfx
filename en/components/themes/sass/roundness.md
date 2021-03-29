@@ -4,50 +4,64 @@ _description: Ignite UI for Angular allow you to change the shape of components 
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library 
 ---
 
-# Components roundness 
-<p class="highlight">In Ignite UI for Angular we allows you to change the shape of components by changing their border-radius</p>
-
-<div class="divider--half"></div>
+# Roundness
+<p class="highlight">Ignite UI for Angular allows you to change the shape of components by setting their roundness to a value between 0 and 1.</p>
+<div class="divider"></div>
 
 ## Overview
-Border radius as any other property is set through the theme schema like it's shown in the example bellow.
+Roundness, as any other property, is set in the component theme or schema like it's shown in the examples bellow.
 
 ```scss
-$_light-button: (
-    flat-border-radius: .2,
-    raised-border-radius: .2,
-    fab-border-radius: 1,
-    icon-border-radius: 1,
+$_material-shape-button: (
+    border-radius: .2
 );
 ```
 
-As you can see from the example above, the component schema for [Button theme]({environment:sassApiUrl}/index.html#function-igx-button-theme) defines the default border-radius for all types of buttons.
+As you can see from the example above, the component schema for the [Button Theme]({environment:sassApiUrl}/index.html#function-igx-button-theme) defines the default border-radius for all types of buttons.
 
-Let's look at how things work. 
-The default value for "flat-border-radius" is set to 0.2 which in the end will be resolved to 4px, it is actually a fraction between 0 and 20px where 0 is the minimum border-radius and 20px is the maximum. 
+Let's look at how this works. 
 
-We decided to not limit you to fractions only. You can use whatever unit you want - pixels, relative units like em or rem, etc., allowing you to overwrite the implicit border radius limits.
+The default `border-radius` value is set to `.2`, which in the end will be resolved to 4px. This fraction, between 0 and 1 represents the minimum and maximum allowed roundness. 0 is the minimum border-radius, i.e. 0px and 1 is the maximum or 20px. The minimum and maximum pixel values are defined for each individual component in its Sass theme.
 
-If you decide to go with fractions, you will automatically be limited by the theming engine to min and max boundary for each component.
+We decided to not limit you to fractions only. You can use whatever unit you want - pixels, relative units (em or rem), etc., allowing you to overwrite the implicit border radius limits.
 
-## How to use?
+If you decide to go with fractions, you will automatically be limited by the theming engine to min and max values for each component.
+
+## Usage 
 Let's see how we can change the default values for the buttons from the example above.
 
+Using the theme mixin:
 ```scss
-// In the context of the button the min and max values are 0 - 20px, 
-// For all baseline values see the table at the bottom of the page
-
-$myButtons-theme: (
-    $flat-border-radius: .5, // will resolve to 10px
-    $raised-border-radius: 30px, // Will resolve to 30px
-    $fab-border-radius: 10%, // Will resolve to 10%
-    $icon-border-radius: .5 .2 .5 .2, // Will resolve to 10px 4px 10px 4px
+$my-button-theme: igx-button-theme(
+    $border-radius: .5 .2 .5 .2, // resolves to 10px 4px 10px 4px
 );
 
-@include igx-button($myButtons-theme);
+@include igx-button($my-button-theme);
 ```
 
-The result from the above code snippets is:
+Using a component schema:
+```scss
+$my-flat-button: extend(
+    $_material-flat-button,
+    (
+        border-radius: .5 .2 .5 .2
+    )
+);
+
+$my-light-schema: extend(
+    $_material-light-schema, 
+    (
+        igx-button: $my-flat-button
+    )
+);
+
+@include igx-theme(
+    $palette: $light-material-palette,
+    $schema: $my-light-schema
+);
+```
+
+Using either approach, the result from the above code snippets is:
 
 <div class="sample-container loading" style="height: 250px">
     <iframe id="buttons-roundness-sample-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/buttons-roundness-sample" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -59,31 +73,31 @@ The result from the above code snippets is:
 </div>
 <div class="divider--half"></div>
 
-## Baseline roundness values
-The table shows the default border-radius for each component and its min and max boundaries
+## Baseline Roundness
+The table below shows the default roundness for each component and its min and max boundaries:
 
-|                        | **Corners can be shaped?** | **Min/Max boundaries** | **Baseline theme values** |
-|------------------------|----------------------------|-----------------------|---------------------------|
-| **Button(Flat)**       | Yes; Yes; Yes; Yes;        | 0 - 20px              | 4px                       |
-| **Button(Raised)**     | Yes; Yes; Yes; Yes;        | 0 - 20px              | 4px                       |
-| **button(Fab)**        | Yes; Yes; Yes; Yes;        | 12px - 28px           | 28px                      |
-| **button(Icon)**       | Yes; Yes; Yes; Yes;        | 0 - 18px              | 18px                      |
-| **Button-group**       | Yes; Yes; Yes; Yes;        | 0 - 20px              | 4px                       |
-| **Chip**               | Yes; Yes; Yes; Yes;        | 0 - 20px              | 4px                       |
-| **Card**               | Yes; Yes; Yes; Yes;        | 0 - 24px              | 4px                       |
-| **Carousel**           | Yes; Yes; Yes; Yes;        | 0 - 36px              | 0                         |
-| **Dialog**             | Yes; Yes; Yes; Yes;        | 0 - 36px              | 4px                       |
-| **Drop-down**          | Yes; Yes; Yes; Yes;        | 0 - 20px              | 4px                       |
-| **Expansion panel**    | Yes; Yes; Yes; Yes;        | 0 - 16px              | 0                         |
-| **input(Border)**      | Yes; Yes; Yes; Yes;        | 0 - 20px              | 4px                       |
-| **input(Box)**         | Yes; Yes; No; No;          | 0 - 20px              | 4px 4px 0 0               |
-| **input(Search)**      | Yes; Yes; Yes; Yes;        | 0 - 20px              | 4px                       |
-| **List**               | Yes; Yes; Yes; Yes;        | 0 - 24px              | 0                         |
-| **List item**          | Yes; Yes; Yes; Yes;        | 0 - 24px              | 0                         |
-| **Navdrawer**          | Yes; Yes; Yes; Yes;        | 0 - 36px              | 0                      |
-| **Snackbar**           | Yes; Yes; Yes; Yes;        | 0 - 24px              | 4px                       |
-| **Tooltip**            | Yes; Yes; Yes; Yes;        | 0 - 16px              | 4px                       |
-| **Toast**              | Yes; Yes; Yes; Yes;        | 0 - 26px              | 26px                       |
+|                     | **Corners can be shaped?** | **Min/Max boundaries** | **Baseline theme values** |
+|---------------------|----------------------------|------------------------|---------------------------|
+| **Button(Flat)**    | Yes; Yes; Yes; Yes;        | 0 - 20px               | 4px                       |
+| **Button(Raised)**  | Yes; Yes; Yes; Yes;        | 0 - 20px               | 4px                       |
+| **button(Fab)**     | Yes; Yes; Yes; Yes;        | 12px - 28px            | 28px                      |
+| **button(Icon)**    | Yes; Yes; Yes; Yes;        | 0 - 18px               | 18px                      |
+| **Button-group**    | Yes; Yes; Yes; Yes;        | 0 - 20px               | 4px                       |
+| **Chip**            | Yes; Yes; Yes; Yes;        | 0 - 20px               | 4px                       |
+| **Card**            | Yes; Yes; Yes; Yes;        | 0 - 24px               | 4px                       |
+| **Carousel**        | Yes; Yes; Yes; Yes;        | 0 - 36px               | 0                         |
+| **Dialog**          | Yes; Yes; Yes; Yes;        | 0 - 36px               | 4px                       |
+| **Drop-down**       | Yes; Yes; Yes; Yes;        | 0 - 20px               | 4px                       |
+| **Expansion panel** | Yes; Yes; Yes; Yes;        | 0 - 16px               | 0                         |
+| **input(Border)**   | Yes; Yes; Yes; Yes;        | 0 - 20px               | 4px                       |
+| **input(Box)**      | Yes; Yes; No; No;          | 0 - 20px               | 4px 4px 0 0               |
+| **input(Search)**   | Yes; Yes; Yes; Yes;        | 0 - 20px               | 4px                       |
+| **List**            | Yes; Yes; Yes; Yes;        | 0 - 24px               | 0                         |
+| **List item**       | Yes; Yes; Yes; Yes;        | 0 - 24px               | 0                         |
+| **Navdrawer**       | Yes; Yes; Yes; Yes;        | 0 - 36px               | 0                         |
+| **Snackbar**        | Yes; Yes; Yes; Yes;        | 0 - 24px               | 4px                       |
+| **Tooltip**         | Yes; Yes; Yes; Yes;        | 0 - 16px               | 4px                       |
+| **Toast**           | Yes; Yes; Yes; Yes;        | 0 - 26px               | 26px                      |
 
 
 <div class="divider--half"></div>
