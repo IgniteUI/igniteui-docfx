@@ -1,4 +1,3 @@
-
 @@if (igxName === 'IgxGrid') {
 ---
 title: Grid ライブ データ - ネイティブ Angular | Ignite UI for Angular | インフラジスティックス
@@ -64,6 +63,61 @@ private updateData(data: IRecord[]) {
 
 ## テンプレート
 ビューの更新は、デフォルト テンプレートの列とカスタム テンプレートの列で同じように機能します。ただし、カスタム テンプレートは比較的単純にしておくことをお勧めします。テンプレート内の要素の数が増えると、パフォーマンスへの悪影響も大きくなります。
+
+## Dock Manager および igxGrid コンポーネントを使用したライブ データ フィード
+
+このデモの目的は、[SignalR](https://dotnet.microsoft.com/apps/aspnet/signalr) ハブ バックエンドを使用してリアルタイム データ ストリームを表示する財務用スクリーン ボードを紹介することです。
+igxGrid コンポーネントは、サーバーからの高頻度の更新を簡単に処理できます。SignalR を使用する ASP.NET Core アプリケーションのコードは、この[公開な GitHub リポジトリ](https://github.com/IgniteUI/finjs-web-api)にあります。
+
+<code-view style="height:700px" 
+           data-demos-base-url="{environment:lobDemosBaseUrl}" 
+           iframe-src="{environment:lobDemosBaseUrl}/grid-finjs-dock-manager/grid-finjs-dock-manager" alt="サービスを使用した Angular ライブ データ更新の例">
+</code-view>
+
+### ハブ接続の開始
+
+signal-r.service は公開された管理可能なパラメーター - frequency、volume および live-update 状態のトグル (開始/停止) - の接続と更新を処理します。
+
+```ts
+this.hubConnection = new signalR.HubConnectionBuilder()
+        .configureLogging(signalR.LogLevel.Trace)
+        .withUrl('https://www.infragistics.com/angular-apis/webapi/streamHub')
+        .build();
+    this.hubConnection
+        .start()
+        .then(() => {
+            this.hasRemoteConnection = true;
+            this.registerSignalEvents();
+            this.broadcastParams(interval, volume, live, updateAll);
+        })
+        .catch(() => {})
+        ...
+```
+
+指定された頻度に基づいて、合計 30 の新しい更新がサーバーによって受信されます。特定の cellStyle クラスは、変更を処理する 3 つの列に適用されます - Price、Change および Change (%)。
+
+### 更新頻度とデータ ボリューム
+
+左側のアクション パネルを使用して、データ フィードの頻度と要求されたデータ ボリュームを管理できます。
+すべてのグリッドは同じデータ ソースを使用します。
+**データ フィードの停止**、**アプリケーション テーマの変更**、または igxGrid を使用した **DockSlot コンテナーの動的追加**は、他のアクション要素をご自由にお使いください。
+
+'updateparameters' メソッドを使用して、特定の頻度で新しいデータのセットを要求します。このメソッドは、SignalR [ストリーム ハブの実装](https://github.com/IgniteUI/finjs-web-api/blob/master/WebAPI/Models/StreamHub.cs#L18)の一部です。
+
+```ts
+this.hubConnection.invoke('updateparameters', frequency, volume, live, updateAll)
+    .then(() => console.log('requestLiveData', volume))
+    .catch(err => {
+        console.error(err);
+    });
+```
+
+### DockSlot および Grid コンポーネントを動的に作成
+
+[ComponentFactoryResolver](https://angular.io/api/core/ComponentFactoryResolver) を使用して、DockSlot および Grid コンポーネントをオンザフライで作成できます。
+
+### DockManager コンポーネント
+[Dock Manager](../dock-manager.md) WebComponent を利用し、ドケットまたはフローティング パネルを使用して独自の Web ビューを作成します。新しいフローティング パネルを追加するには、右側のアクション ペインを開き、[フローティング ペインの追加] ボタンをクリックします。新しいペインを目的の場所にドラッグアンドドロップします。
 
 ## API リファレンス
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
