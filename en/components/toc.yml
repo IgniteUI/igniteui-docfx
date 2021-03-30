@@ -32,7 +32,7 @@
 - name: How to
   new: true
   items:
-    - name: ASP.NET Core SignalR
+    - name: Build Real-time SignalR App with .NET Core
       href: general/how-to/signal-r-service-live-data.md
       new: true
 - name: Angular Schematics & Ignite UI CLI

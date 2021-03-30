@@ -4,12 +4,23 @@ _description: Modern data grid & dock manager are used for application creation 
 _keywords: angular, signalr, .net core, infragistics
 ---
 
-# Real-time Web Application with ASP.NET Core SignalR
-In this post, we’ll see how to create applications for both *streaming* and *receiving* data with **ASP.NET Core SignalR**. On certain interval a fixed amount of data will be updated and send to the client taking leverage of the SignalR Streaming capabilities. SignalR automatically picks the most efficient transport - WebSockets, Server Send Events or Long-polling.
+# Real-time Web App with ASP.NET Core SignalR
+In this topic, we’ll see how to create applications for both *streaming* and *receiving* data with **ASP.NET Core SignalR**. 
+
+What you'll need:
+- A basic knowledge of ASP.NET Core and Angular.
+- .NET Core 3.1 installed and IDE such as Visual Studio.
+
+What you'll know by the end of this blog:
+- How to add and use SignalR.
+- How to open Client's connection and use the *method invocation* concept to stream data per Client.
+- How to consume the SignalR service with Angular application by using Observables.
+
+SignalR takes advantage of several transports and it automatically selects the best available transport given the client and server's capabilities - [WebSockets, Server Send Events or Long-polling](https://stackoverflow.com/a/12855533/2940502).
 
 When we talk in terms of [WebSockets](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/websockets?view=aspnetcore-5.0) (Putting SSE and Long-polling out of the equation) when the client is real-time connected to the server, whenever something happens the server will knows to send a message over that WebSocket back to the client. With old-school clients and servers the Long-polling transport would be used.
 
-This is how SignalR handles modern clients and servers:
+This is how SignalR handles modern clients and servers, it uses WebSockets under the hood when available, and gracefully falls back to other techniques and technologies when it isn't:
 
 <img style="-webkit-box-shadow: 8px 9px 9px 5px #ccc; -moz-box-shadow: 8px 9px 9px 5px #ccc; box-shadow: 8px 9px 9px 5px #ccc; min-width: calc(100% - 950px); max-width: calc(100% - 400px);"
   src="../../../images/general/how-to/ws-party-1.jpg"
@@ -37,9 +48,9 @@ The purpose of this demo is to showcase a financial screen board with Real-time 
 
 ### Create ASP.NET Core App
 Let's see how to set up the ASP.NET Core SignalR application.
-In Visual Studio from **File** >> **New project** choose ASP.NET Core Web Application and follow the setup. Feel free to follow [the official Microsoft documentation tutorial](https://docs.microsoft.com/en-us/aspnet/core/tutorials/signalr?view=aspnetcore-3.1&tabs=visual-studio) if you experience any configuration difficulties.
+In Visual Studio from *File* >> *New project* choose ASP.NET Core Web Application and follow the setup. Feel free to follow [the official Microsoft documentation tutorial](https://docs.microsoft.com/en-us/aspnet/core/tutorials/signalr?view=aspnetcore-3.1&tabs=visual-studio) if you experience any configuration difficulties.
 
-<img class="responsive-img" style="-webkit-box-shadow: 8px 9px 9px 5px #ccc; -moz-box-shadow: 8px 9px 9px 5px #ccc; box-shadow: 8px 9px 9px 5px #ccc; min-width: calc(100% - 650px)"
+<img style="-webkit-box-shadow: 8px 9px 9px 5px #ccc; -moz-box-shadow: 8px 9px 9px 5px #ccc; box-shadow: 8px 9px 9px 5px #ccc; min-width: calc(100% - 650px); max-width: calc(100% - 400px);"
   src="../../../images/general/how-to/create-new-project.jpg"
   data-src="../../../images/general/how-to/create-new-project.jpg"
   alt="Create new asp.net core project"
@@ -88,22 +99,22 @@ Our server-side project will run on `localhost:5001` and the client side will ru
 
 ```cs
 public void ConfigureServices(IServiceCollection services)
+{
+    services.AddCors(options =>
     {
-        services.AddCors(options =>
-        {
-            options.AddPolicy("CorsPolicy", builder => builder
-            .AllowAnyMethod()
-            .AllowAnyHeader()
-            .AllowCredentials()
-            .WithOrigins("http://localhost:4200"));
-        });
+        options.AddPolicy("CorsPolicy", builder => builder
+        .AllowAnyMethod()
+        .AllowAnyHeader()
+        .AllowCredentials()
+        .WithOrigins("http://localhost:4200"));
+    });
     ...
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-        {
-            ...
-            app.UseCors("CorsPolicy");
-            ...
+    {
+        ...
+        app.UseCors("CorsPolicy");
+        ...
 ```
 
 If you experience a specific problems with enabling Cross-origin resource sharing, check out the [official Microsoft topic](https://docs.microsoft.com/en-us/aspnet/core/signalr/security?view=aspnetcore-5.0#cross-origin-resource-sharing).
@@ -119,12 +130,13 @@ The actual hub lives on the server side. Imagine you have *Clients* and *the Hub
   alt="Hub example with callers"
   title="Hub example with callers" />
 
-We've created a [StreamHub class](https://github.com/IgniteUI/finjs-web-api/blob/d493f159e0a6f14b5ffea3e893f543f057fdc92a/WebAPI/Models/StreamHub.cs#L9) that inherits the base Hub class, which is responsible for managing connections, groups, and messaging. Its good to keep in mind that hub class is stateless and each new invocation of a certain method is in new instance of this class. So it is useless to save state in instance properties rather we suggest you to use static properties, just like in our case where we use static key value pair collection to store data for each connected client. Other useful properties of this class are *Clients*, *Context* and *Groups*. They can help you to manage certain behavior based on the unique *ConnectionID*. Also this class provides you with these two useful methods:
+We've created a [StreamHub class](https://github.com/IgniteUI/finjs-web-api/blob/d493f159e0a6f14b5ffea3e893f543f057fdc92a/WebAPI/Models/StreamHub.cs#L9) that inherits the base Hub class, which is responsible for managing connections, groups, and messaging. It's good to keep in mind that the Hub class is stateless and each new invocation of a certain method is in new instance of this class. It's useless to save state in instance properties, rather we suggest to use static properties, in our case we use static key value pair collection to store data for each connected client. 
+
+Other useful properties of this class are *Clients*, *Context* and *Groups*. They can help you to manage certain behavior based on the unique *ConnectionID*. Also, this class provides you with the following useful methods:
 - OnConnectedAsync() - Called when a new connection is established with the hub.
 - OnDisconnectedAsync(Exception) - Called when a connection with the hub is terminated.
 
-which allows you to perform any additional logic when a connection is established or closed.
-In the our application we've also added *UpdateParameters* method that gets a *Context connection ID* and use it to send back data at certain interval. As you can see we communicate over a unique *ConnectionID* which prevents a streaming intervention from other Clients.
+They allows us to perform any additional logic when a connection is established or closed. In our application we've also added *UpdateParameters* method that gets a *Context connection ID* and use it to send back data at certain interval. As you can see we communicate over a unique *ConnectionID* which prevents a streaming intervention from other Clients.
 
 ```cs
 public async void UpdateParameters(int interval, int volume, bool live = false, bool updateAll = true)
@@ -260,13 +272,16 @@ constructor(public dataService: SignalRService) {}
     }
 ...
 ```
-### Grid data bind
+### Grid Data Binding
 
-As we have seen in the topic above in our client code we set up listener for `transferdata` event, which receive as an argument the updated data array. So in order to pass the newly received data to the our grid we use an observable. In order to set that, we need to bind the grid data source to the data observable like the following:
+As we have seen so far in our client code we set up listener for `transferdata` event, which receive as an argument the updated data array. In order to pass the newly received data to our grid we use an observable. In order to set that, we need to bind grid's data source to the data observable like so:
+
 ```html
 <igx-grid [data]='data | async'> ... </igx-grid>
 ```
-Every time when new data is received from the server to the client we call the next method of the data observable.
+
+Every time when new data is received from the server to the client we call the `next()` method of the data observable.
+
 ```ts
     this.hubConnection.on('transferdata', (data) => {
         this.data.next(data);
@@ -275,4 +290,6 @@ Every time when new data is received from the server to the client we call the n
 
 ## Topic Takeaways
 
-If you don’t want to refresh you application, rather just see when the data is updated you should consider ASP.NET Core SignalR. I’d recommend going for streaming content when you think your data is large or if you want some user experience without blocking the client by showing endless spinners.
+If you don’t want to refresh you application, rather just see when the data is updated, you should consider ASP.NET Core SignalR. I definitely recommend going for streaming content when you think your data is large, or if you want a smooth user experience without blocking the client by showing endless spinners.
+
+Using SignalR Hub communication is easy and intuitive and with the help of Angular Observables you can create a powerful application that uses data streaming with WebSockets.
