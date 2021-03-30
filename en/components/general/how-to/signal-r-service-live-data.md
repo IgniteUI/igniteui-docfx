@@ -18,7 +18,7 @@ What you'll know by the end of this article:
 
 SignalR takes advantage of several transports and it automatically selects the best available transport given the client and server's capabilities - [WebSockets, Server Send Events or Long-polling](https://stackoverflow.com/a/12855533/2940502).
 
-When we talk in terms of [WebSockets](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/websockets?view=aspnetcore-5.0) (Putting SSE and Long-polling out of the equation) when the client is real-time connected to the server, whenever something happens the server will knows to send a message over that WebSocket back to the client. With old-school clients and servers the Long-polling transport would be used.
+When we talk in terms of [WebSockets](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/websockets?view=aspnetcore-5.0) (Putting SSE and Long-polling out of the equation) when the client is real-time connected to the server, whenever something happens the server will know to send a message over that WebSocket back to the client. With old-school clients and servers, the Long-polling transport would be used.
 
 This is how SignalR handles modern clients and servers, it uses WebSockets under the hood when available, and gracefully falls back to other techniques and technologies when it isn't:
 
@@ -37,7 +37,7 @@ It's like a handshake, the Client and Server agree on what to use and they use i
   title="Let's use WebSocket" />
 
 ## SignalR Example
-The purpose of this demo is to showcase a financial screen board with Real-time data stream using [ASP.NET Core SignalR](https://dotnet.microsoft.com/apps/aspnet/signalr).
+The purpose of this demo is to showcase a financial screen board with a Real-time data stream using [ASP.NET Core SignalR](https://dotnet.microsoft.com/apps/aspnet/signalr).
 
 <code-view style="height:700px"
            data-demos-base-url="{environment:lobDemosBaseUrl}"
@@ -117,12 +117,12 @@ public void ConfigureServices(IServiceCollection services)
         ...
 ```
 
-If you experience a specific problems with enabling Cross-origin resource sharing, check out the [official Microsoft topic](https://docs.microsoft.com/en-us/aspnet/core/signalr/security?view=aspnetcore-5.0#cross-origin-resource-sharing).
+If you experience a specific problem with enabling Cross-origin resource sharing, check out the [official Microsoft topic](https://docs.microsoft.com/en-us/aspnet/core/signalr/security?view=aspnetcore-5.0#cross-origin-resource-sharing).
 ### SignalR Hub Setup
 Let's start by explaining what is a [SignalR hub?](https://docs.microsoft.com/en-us/aspnet/core/signalr/hubs?view=aspnetcore-5.0#what-is-a-signalr-hub)
-The SignalR Hub API enables you to call methods on connected clients from the server. In the server code, you define methods that are called by client. In SignalR there is this concept called *Invocation* - you can actually be calling the hub from the client with a particular method. In the client code, you define methods that are called from the server.
+The SignalR Hub API enables you to call methods on connected clients from the server. In the server code, you define methods that are called by the client. In SignalR there is this concept called *Invocation* - you can actually be calling the hub from the client with a particular method. In the client code, you define methods that are called from the server.
 
-The actual hub lives on the server side. Imagine you have *Clients* and *the Hub* is between all of them. You can say something to all the Clients with `Clients.All.doWork()` by invoking a method on the hub. This will goes to all connected clients. Also, you can communicate with only one client, which is the Caller, because he is the caller of that particular method.
+The actual hub lives on the server-side. Imagine you have *Clients* and *the Hub* is between all of them. You can say something to all the Clients with `Clients.All.doWork()` by invoking a method on the hub. This will goes to all connected clients. Also, you can communicate with only one client, which is the Caller, because he is the caller of that particular method.
 
 <img style="-webkit-box-shadow: 8px 9px 9px 5px #ccc; -moz-box-shadow: 8px 9px 9px 5px #ccc; box-shadow: 8px 9px 9px 5px #ccc; min-width: calc(100% - 650px); max-width: calc(100% - 400px);"
   src="../../../images/general/how-to/ws-hub-callers.jpg"
@@ -130,13 +130,13 @@ The actual hub lives on the server side. Imagine you have *Clients* and *the Hub
   alt="Hub example with callers"
   title="Hub example with callers" />
 
-We've created a [StreamHub class](https://github.com/IgniteUI/finjs-web-api/blob/d493f159e0a6f14b5ffea3e893f543f057fdc92a/WebAPI/Models/StreamHub.cs#L9) that inherits the base Hub class, which is responsible for managing connections, groups, and messaging. It's good to keep in mind that the Hub class is stateless and each new invocation of a certain method is in new instance of this class. It's useless to save state in instance properties, rather we suggest to use static properties, in our case we use static key value pair collection to store data for each connected client. 
+We've created a [StreamHub class](https://github.com/IgniteUI/finjs-web-api/blob/d493f159e0a6f14b5ffea3e893f543f057fdc92a/WebAPI/Models/StreamHub.cs#L9) that inherits the base Hub class, which is responsible for managing connections, groups, and messaging. It's good to keep in mind that the Hub class is stateless and each new invocation of a certain method is in a new instance of this class. It's useless to save state in instance properties, rather we suggest using static properties, in our case we use static key-value pair collection to store data for each connected client. 
 
-Other useful properties of this class are *Clients*, *Context* and *Groups*. They can help you to manage certain behavior based on the unique *ConnectionID*. Also, this class provides you with the following useful methods:
+Other useful properties of this class are *Clients*, *Context*, and *Groups*. They can help you to manage certain behavior based on the unique *ConnectionID*. Also, this class provides you with the following useful methods:
 - OnConnectedAsync() - Called when a new connection is established with the hub.
 - OnDisconnectedAsync(Exception) - Called when a connection with the hub is terminated.
 
-They allows us to perform any additional logic when a connection is established or closed. In our application we've also added *UpdateParameters* method that gets a *Context connection ID* and use it to send back data at certain interval. As you can see we communicate over a unique *ConnectionID* which prevents a streaming intervention from other Clients.
+They allow us to perform any additional logic when a connection is established or closed. In our application, we've also added *UpdateParameters* method that gets a *Context connection ID* and use it to send back data at a certain interval. As you can see we communicate over a unique *ConnectionID* which prevents a streaming intervention from other Clients.
 
 ```cs
 public async void UpdateParameters(int interval, int volume, bool live = false, bool updateAll = true)
@@ -201,7 +201,7 @@ Public GitHub repository of the [ASP.NET Core Application could be found here](h
 
 ## Create SignalR Client Library
 
-We will create Angular project in order to consume the SignalR service.
+We will create an Angular project in order to consume the SignalR service.
 Github repository with the actual application can be found [here](https://github.com/IgniteUI/igniteui-angular-samples/tree/master/projects/app-lob/src/app/grid-finjs-dock-manager).
 
 First, start by installing SignalR:
@@ -274,7 +274,7 @@ constructor(public dataService: SignalRService) {}
 ```
 ### Grid Data Binding
 
-As we have seen so far in our client code we set up listener for `transferdata` event, which receive as an argument the updated data array. In order to pass the newly received data to our grid we use an observable. In order to set that, we need to bind grid's data source to the data observable like so:
+As we have seen so far in our client code we set up a listener for `transferdata` event, which receives as an argument the updated data array. To pass the newly received data to our grid we use an observable. To set that, we need to bind the grid's data source to the data observable like so:
 
 ```html
 <igx-grid [data]='data | async'> ... </igx-grid>
@@ -290,6 +290,6 @@ Every time when new data is received from the server to the client we call the `
 
 ## Topic Takeaways
 
-If you don’t want to refresh you application, rather just see when the data is updated, you should consider ASP.NET Core SignalR. I definitely recommend going for streaming content when you think your data is large, or if you want a smooth user experience without blocking the client by showing endless spinners.
+If you don’t want to refresh your application, rather just see when the data is updated, you should consider ASP.NET Core SignalR. I definitely recommend going for streaming content when you think your data is large, or if you want a smooth user experience without blocking the client by showing endless spinners.
 
 Using SignalR Hub communication is easy and intuitive and with the help of Angular Observables you can create a powerful application that uses data streaming with WebSockets.
