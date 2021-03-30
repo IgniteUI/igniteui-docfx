@@ -11,9 +11,10 @@ The Angular Spreadsheet component allows displaying charts in your [`IgxSpreadsh
 
 ## Demo
 
-<div class="sample-container loading" style="height: 500px">
-    <iframe id="spreadsheet-adapter-iframe" src='{environment:dvDemosBaseUrl}/excel/spreadsheet-adapter' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
-</div>
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/excel/spreadsheet-adapter"  >
+</code-view>
 
 <div class="divider--half"></div>
 
@@ -45,7 +46,7 @@ There are over 35 chart types supported by the Spreadsheet ChartAdapters includi
     -   100% stacked line
     -   100% stacked line with markers
 -   Pie Charts
--   Doughnut Charts
+-   Donut Charts
 -   Bar Charts
     -   Clustered bar
     -   Stacked bar

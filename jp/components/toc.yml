@@ -336,8 +336,8 @@
     - name: 条件付きセルのスタイル設定
       href: treegrid/conditional-cell-styling.md
       new: false
-    - name: 集計
-      href: treegrid/aggregations.md
+    - name: グループ化
+      href: treegrid/groupby.md
       new: false
     - name: キーボードナビゲーション
       href: treegrid/keyboard-navigation.md
