@@ -4,8 +4,27 @@ _description: Modern data grid & dock manager are used for application creation 
 _keywords: angular, signalr, .net core, infragistics 
 ---
 
-# ASP.NET Core SignalR
-In this post, we’ll see how to create applications for both streaming and receiving a live-like data with ASP.NET Core SignalR. On certain interval a fixed amount of data will be updated and send to the client taking leverage of the SignalR Streaming capabilities.
+# Real-time Web Application with ASP.NET Core SignalR
+In this post, we’ll see how to create applications for both streaming and receiving a live-like data with ASP.NET Core SignalR. On certain interval a fixed amount of data will be updated and send to the client taking leverage of the SignalR Streaming capabilities. SignalR uses the most efficient transport by dynamically picking the underlying hub protocol - WebSockets, Server Send Events and Long-polling.
+
+When we talk in terms of WebSockets (Putting SSE and Long-polling out of the equation) when the client is real-time connected to the server, whenever something happens the server it will knows to send a message over that WebSocket back to the client. With old-school clients and servers the Long-polling transport would be used.
+
+This is how SignalR handles modern clients and servers:
+
+<img style="-webkit-box-shadow: 8px 9px 9px 5px #ccc; -moz-box-shadow: 8px 9px 9px 5px #ccc; box-shadow: 8px 9px 9px 5px #ccc; min-width: calc(100% - 950px); max-width: calc(100% - 400px);" 
+  src="../../../images/general/how-to/ws-party-1.jpg"
+  data-src="../../../images/general/how-to/ws-party-1.jpg" 
+  alt="How to party"
+  title="How to party" />
+
+It's like a handshake, we Client and Server agree on what to use and they use it. This is called **process negotiation**.
+
+<img style="-webkit-box-shadow: 8px 9px 9px 5px #ccc; -moz-box-shadow: 8px 9px 9px 5px #ccc; box-shadow: 8px 9px 9px 5px #ccc; min-width: calc(100% - 650px); max-width: calc(100% - 400px);" 
+  src="../../../images/general/how-to/ws-lets-party.jpg"
+  data-src="../../../images/general/how-to/ws-lets-party.jpg" 
+  alt="Let's use WebSocket"
+  title="Let's use WebSocket" />
+
 ## SignalR Example
 The purpose of this demo is to showcase a financial screen board with Real-time data stream using [ASP.NET Core SignalR](https://dotnet.microsoft.com/apps/aspnet/signalr).
 
@@ -15,23 +34,23 @@ The purpose of this demo is to showcase a financial screen board with Real-time 
 </code-view>
 
 ## SignalR Server Configuration
+
 ### What is a stream?
-Streaming or media streaming is a technique for transferring data so that it can be processed as a steady and continuous stream. ASP.NET Core SignalR supports streaming from [client to server](https://docs.microsoft.com/en-us/aspnet/core/signalr/streaming?view=aspnetcore-5.0#client-to-server-streaming) and from [server to client](https://docs.microsoft.com/en-us/aspnet/core/signalr/streaming?view=aspnetcore-5.0#server-to-client-streaming). 
+Streaming is a technique for transferring data so that it can be processed as a steady and continuous stream. ASP.NET Core SignalR supports streaming from [client to server](https://docs.microsoft.com/en-us/aspnet/core/signalr/streaming?view=aspnetcore-5.0#client-to-server-streaming) and from [server to client](https://docs.microsoft.com/en-us/aspnet/core/signalr/streaming?view=aspnetcore-5.0#server-to-client-streaming). 
 
-### Create ASP.NET Core App
-Let's see how to set up the ASP.NET Core SignalR application. In Visual Studio from **File** >> **New project** choose ASP.NET Core Web Application and follow the setup. Feel free to follow [the official Microsoft documentation tutorial](https://docs.microsoft.com/en-us/aspnet/core/tutorials/signalr?view=aspnetcore-3.1&tabs=visual-studio).
-
-<img class="responsive-img" style="-webkit-box-shadow: 8px 9px 9px 5px #ccc; -moz-box-shadow: 8px 9px 9px 5px #ccc; box-shadow: 8px 9px 9px 5px #ccc; min-width: calc(100% - 650px)" 
-  src="../../../images/general/how-to/create-new-project.jpg"
-  data-src="../../../images/general/how-to/create-new-project.jpg" 
-  alt="Create new asp.net core project"
-  title="Create new asp.net core project" />
-
-### SugnalR Hub Setup
+### SignalR Hub Setup
 [What is a SignalR hub?](https://docs.microsoft.com/en-us/aspnet/core/signalr/hubs?view=aspnetcore-5.0#what-is-a-signalr-hub)
-The SignalR Hubs API enables you to call methods on connected clients from the server. In the server code, you define methods that are called by client. In the client code, you define methods that are called from the server. SignalR takes care of everything behind the scenes that makes real-time client-to-server and server-to-client communications possible.
+The SignalR Hubs API enables you to call methods on connected clients from the server. In the server code, you define methods that are called by client. In SignalR there is this concept call Invocation - you can actually be calling the hub from the client with a particular method. In the client code, you define methods that are called from the server.
 
-[TODO] We've created a StreamHub class that inherits the SignalR Base Hub class, along with UpdateParameters method that gets a Context connection ID and use it to send back data at certain interval ...
+The actual hub lives on the server side. Imagine you have Clients and the Hub is between all of them. You can say something to all the Clients with `Clients.All.doWork()` by invoking a method on the hub. This will goes to all connected clients. Also, you can communicate with only one client, which is the Caller, because he is the caller of that particular method.
+
+<img style="-webkit-box-shadow: 8px 9px 9px 5px #ccc; -moz-box-shadow: 8px 9px 9px 5px #ccc; box-shadow: 8px 9px 9px 5px #ccc; min-width: calc(100% - 650px); max-width: calc(100% - 400px);" 
+  src="../../../images/general/how-to/ws-hub-callers.jpg"
+  data-src="../../../images/general/how-to/ws-hub-callers.jpg" 
+  alt="Hub example with callers"
+  title="Hub example with callers" />
+
+We've created a [StreamHub class](https://github.com/IgniteUI/finjs-web-api/blob/d493f159e0a6f14b5ffea3e893f543f057fdc92a/WebAPI/Models/StreamHub.cs#L9) that inherits the SignalR Base Hub class, along with *UpdateParameters* method that gets a Context connection ID and use it to send back data at certain interval. As you can see we communicate over a unique ConnectionID which limits a streaming intervention from other Clients.
 
 ```cs
 public async void UpdateParameters(int interval, int volume, bool live = false, bool updateAll = true)
@@ -61,7 +80,7 @@ public async void UpdateParameters(int interval, int volume, bool live = false, 
 }
 ```
 
-[TODO] Async task with OnDisconnectedAsync
+When the data is ready we transfer it by emitting a `transferdata` event with the help of `SendAsync` Method.
 
 ```cs
 public async Task Send(FinancialData[] array, IClientProxy client, string connection)
@@ -70,6 +89,7 @@ public async Task Send(FinancialData[] array, IClientProxy client, string connec
 }
 ...
 
+// Called when a connection with the hub is terminated
 public override Task OnDisconnectedAsync(Exception exception)
 {
     StopTimer();
@@ -78,7 +98,29 @@ public override Task OnDisconnectedAsync(Exception exception)
 }
 ```
 
-[Public GitHub repository](https://github.com/IgniteUI/finjs-web-api).
+Our client application would be listening on the registered events: 
+
+```ts
+private registerSignalEvents() {
+    this.hubConnection.onclose(() => {
+        this.hasRemoteConnection = false;
+    });
+    this.hubConnection.on('transferdata', (data) => {
+        this.data.next(data);
+    })
+}
+```
+
+Public GitHub repository of the [ASP.NET Core Application could be found here](https://github.com/IgniteUI/finjs-web-api).
+### Create ASP.NET Core App
+Let's see how to set up the ASP.NET Core SignalR application. In Visual Studio from **File** >> **New project** choose ASP.NET Core Web Application and follow the setup. Feel free to follow [the official Microsoft documentation tutorial](https://docs.microsoft.com/en-us/aspnet/core/tutorials/signalr?view=aspnetcore-3.1&tabs=visual-studio).
+
+<img class="responsive-img" style="-webkit-box-shadow: 8px 9px 9px 5px #ccc; -moz-box-shadow: 8px 9px 9px 5px #ccc; box-shadow: 8px 9px 9px 5px #ccc; min-width: calc(100% - 650px)" 
+  src="../../../images/general/how-to/create-new-project.jpg"
+  data-src="../../../images/general/how-to/create-new-project.jpg" 
+  alt="Create new asp.net core project"
+  title="Create new asp.net core project" />
+
 
 ### SignalR Config Setup
 
@@ -92,7 +134,8 @@ app.UseEndpoints(endpoints =>
     endpoints.MapHub<StreamHub>("/streamHub");
 });
 ```
-- AddSignalR ot the `ConfigureServices` method.
+
+- Add SignalR usage to the `ConfigureServices` method.
 
 ```cs
 services.AddSignalR(options =>
@@ -101,9 +144,9 @@ services.AddSignalR(options =>
 });
 ```
 
-These changes add SignalR to the ASP.NET Core dependency injection and routing systems.
+The changes above are adding SignalR to the ASP.NET Core dependency injection and routing system.
 
-We are going to set up additional basic configuration. To do that, let’s open the [properties/launchSettings.json](https://github.com/IgniteUI/finjs-web-api/blob/master/WebAPI/Properties/launchSettings.json#L11) file and modify it accordingly:
+Now, let's set up additional basic configuration. Open the [properties/launchSettings.json](https://github.com/IgniteUI/finjs-web-api/blob/master/WebAPI/Properties/launchSettings.json#L11) file and modify it accordingly:
 
 ```json
 "profiles": {
@@ -168,7 +211,7 @@ export class SignalRService implements OnDestroy {
     }
     ...
 
-    // TODO Comment
+    // Start Hub Connection and Register events
     public startConnection = (interval = 500, volume = 1000, live = false,  updateAll = true) => {
         this.hubConnection = new signalR.HubConnectionBuilder()
             .configureLogging(signalR.LogLevel.Trace)
@@ -184,7 +227,7 @@ export class SignalRService implements OnDestroy {
             .catch(() => { ... });
     }
 
-    // TODO Comment
+    // Change the broadcast parameters like frequency and data volume
     public broadcastParams = (frequency, volume, live, updateAll = true) => {
         this.hubConnection.invoke('updateparameters', frequency, volume, live, updateAll)
             .then(() => console.log('requestLiveData', volume))
@@ -193,7 +236,7 @@ export class SignalRService implements OnDestroy {
             });
     }
     
-    // TODO Comment
+    // Register events
     private registerSignalEvents() {
         this.hubConnection.onclose(() => {
             this.hasRemoteConnection = false;
@@ -209,14 +252,12 @@ In your app.component add use the newly created `startConnection` method
 
 ```ts
 constructor(public dataService: SignalRService) {}
-public ngOnInit() {
-    this.dataService.startConnection(this.frequency, this.dataVolume, true, false);
-}
+    public ngOnInit() {
+        this.dataService.startConnection(this.frequency, this.dataVolume, true, false);
+    }
 ...
 ```
 
-## Topic Takeaway
+## Topic Takeaways
 
-With ASP.NET Core SignalR, streaming the data from the server to client overcomes the problem of easily transferring data content.
-
-I’d recommend going for streaming content when you think your data is large or if you want some user experience without blocking the client by showing endless spinners.
+If you don’t want to refresh you application, rather just see when the data is updated you should consider ASP.NET Core SignalR. I’d recommend going for streaming content when you think your data is large or if you want some user experience without blocking the client by showing endless spinners.
