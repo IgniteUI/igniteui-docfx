@@ -71,7 +71,7 @@ igxGrid コンポーネントは、サーバーからの高頻度の更新を簡
 
 <code-view style="height:700px" 
            data-demos-base-url="{environment:lobDemosBaseUrl}" 
-           iframe-src="{environment:lobDemosBaseUrl}/grid-finjs-dock-manager/grid-finjs-dock-manager" alt="Angular Live-data Update Example with a service">
+           iframe-src="{environment:lobDemosBaseUrl}/grid-finjs-dock-manager/grid-finjs-dock-manager" alt="サービスを使用した Angular ライブ データ更新の例">
 </code-view>
 
 ### ハブ接続の開始
