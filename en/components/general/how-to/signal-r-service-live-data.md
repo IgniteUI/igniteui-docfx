@@ -184,7 +184,7 @@ public override Task OnDisconnectedAsync(Exception exception)
 }
 ```
 
-Our client application would be listening on the registered events:
+Our client application would be listening to the registered events:
 
 ```ts
 private registerSignalEvents() {
@@ -197,7 +197,7 @@ private registerSignalEvents() {
 }
 ```
 
-Public GitHub repository of the [ASP.NET Core Application could be found here](https://github.com/IgniteUI/finjs-web-api).
+The public GitHub repository of the [ASP.NET Core Application could be found here](https://github.com/IgniteUI/finjs-web-api).
 
 ## Create SignalR Client Library
 
@@ -292,4 +292,4 @@ Every time when new data is received from the server to the client we call the `
 
 If you don’t want to refresh your application, rather just see when the data is updated, you should consider ASP.NET Core SignalR. I definitely recommend going for streaming content when you think your data is large, or if you want a smooth user experience without blocking the client by showing endless spinners.
 
-Using SignalR Hub communication is easy and intuitive and with the help of Angular Observables you can create a powerful application that uses data streaming with WebSockets.
+Using SignalR Hub communication is easy and intuitive and with the help of Angular Observables, you can create a powerful application that uses data streaming with WebSockets.
