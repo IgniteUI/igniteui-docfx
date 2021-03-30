@@ -963,6 +963,9 @@
     - name: Overview
       href: themes/sass/index.md
       new: false
+    - name: Configuration
+      href: themes/sass/configuration.md
+      new: true
     - name: Palettes
       href: themes/sass/palettes.md
       new: false
@@ -972,8 +975,8 @@
     - name: Typography
       href: themes/sass/typography.md
       new: false
-    - name: Schemes
-      href: themes/sass/schemes.md
+    - name: Schemas
+      href: themes/sass/schemas.md
       new: false
     - name: Animations
       href: themes/sass/animations.md

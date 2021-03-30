@@ -47,6 +47,7 @@ Finally, we have component themes. Palettes, Schemas, Elevations, Roundness, and
 
 Learn the concepts:
 
+* [Configuration](./configuration.md)
 * [Palettes](./palettes.md)
 * [Typography](./typography.md)
 * [Elevations](./elevations.md)
