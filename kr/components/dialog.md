@@ -10,12 +10,12 @@ _language: kr
 <div class="divider"></div>
 
 ### Dialog Demo
-<div class="sample-container loading" style="height:300px">
-    <iframe id="dialog-sample-iframe" src='{environment:demosBaseUrl}/interactions/dialog' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dialog-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
-</div>
+
+<code-view style="height:300px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/interactions/dialog" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ### Usage
@@ -53,12 +53,12 @@ To add alert, in the template of our email component we can add the following co
 </igx-dialog>
 ```
 
-<div class="sample-container loading" style="height:250px">
-    <iframe id="dialog-sample-1-iframe" data-src='{environment:demosBaseUrl}/interactions/dialog-sample-1' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dialog-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
-</div>
+
+<code-view style="height:250px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/interactions/dialog-sample-1" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ####Standard Dialog
@@ -78,12 +78,12 @@ To add standard dialog, in the template of our file manager component we can add
 </igx-dialog>
 ```
 
-<div class="sample-container loading" style="height:250px">
-    <iframe id="dialog-sample-2-iframe" data-src='{environment:demosBaseUrl}/interactions/dialog-sample-2' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dialog-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
-</div>
+
+<code-view style="height:250px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/interactions/dialog-sample-2" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ####Custom Dialog
@@ -119,12 +119,12 @@ Also we can add two groups of label and input decorated with the [**igxLabel**](
 </igx-dialog>
 ```
 
-<div class="sample-container loading" style="height:300px">
-    <iframe id="dialog-sample-3-iframe" data-src='{environment:demosBaseUrl}/interactions/dialog-sample-3' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dialog-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
-</div>
+
+<code-view style="height:300px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/interactions/dialog-sample-3" >
+</code-view>
+
 <div class="divider--half"></div>
 
 #### Customized Title and Actions
@@ -148,12 +148,12 @@ Dialog title area can be customized using `igxDialogTitle` directive or `igx-dia
 </igx-dialog>
 ```
 
-<div class="sample-container loading" style="height:300px">
-    <iframe id="custom-dialog-sample-iframe" data-src='{environment:demosBaseUrl}/interactions/custom-dialog-sample' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="custom-dialog-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height:300px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/interactions/custom-dialog-sample" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ### API Summary

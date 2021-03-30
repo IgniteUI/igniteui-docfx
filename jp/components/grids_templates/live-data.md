@@ -1,4 +1,45 @@
 
+<style>
+    .full-screen-btn {
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        font-size: 13px;
+        font-weight: 400;
+        color: #fff;
+        border: 0;
+        text-transform: uppercase;
+        padding: 8px 16px;
+        margin: 24px 0;
+        outline-style: none;
+        -webkit-transition: all 0.25s ease-out;
+        transition: all 0.25s ease-out;
+        background: #0099ff; 
+    }
+    .full-screen-btn:hover, .full-screen-btn:focus {
+        color: white;
+        -webkit-box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.26), 0 8px 10px 1px rgba(0, 0, 0, 0.12), 0 3px 14px 2px rgba(0, 0, 0, 0.08);
+        box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.26), 0 8px 10px 1px rgba(0, 0, 0, 0.12), 0 3px 14px 2px rgba(0, 0, 0, 0.08); 
+    }
+    .full-screen-btn::before {
+        content: "";
+        display: inline-block;
+        height: 28px;
+        margin-right: 8px;
+        background-size: 100%;
+        background-repeat: no-repeat; 
+    }
+    .full-screen-btn[disabled] {
+        color: rgba(0, 0, 0, 0.28);
+        background: #eee;
+        -webkit-box-shadow: none;
+        box-shadow: none; 
+    }
+
+</style>
 @@if (igxName === 'IgxGrid') {
 ---
 title: Grid ライブ データ - ネイティブ Angular | Ignite UI for Angular | インフラジスティックス
@@ -24,14 +65,12 @@ _language: ja
 以下のサンプルは、すべてのレコードが 1 秒間に複数回更新される場合の @@igComponent のパフォーマンスを示しています。UI コントロールを使用して、読み込むレコードの数と更新の頻度を選択します。
 同じデータを[カテゴリ チャート](../category-chart.md)に入力して、Ignite UI forAngular の強力なチャート作成機能を体験してください。`Chart` ボタンには、選択した行の `Category Prices per Region` データが表示され、`Chart` 列ボタンには現在の行の同じデータが表示されます。
 @@if (igxName === 'IgxGrid') {
-<div class="sample-container loading" style="height:700px">
-    <iframe id="grid-sample-finjs-iframe" src='{environment:lobDemosBaseUrl}/finjs-sample' width="100%" height="100%" seamless frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular 更新のライブデ例"></iframe>
-</div>
-<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-sample-finjs-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-finjs-iframe" data-demos-base-url="{environment:lobDemosBaseUrl}">Stackblitz で表示</button>
-</div>
+
+<code-view style="height:700px" 
+           data-demos-base-url="{environment:lobDemosBaseUrl}" 
+           iframe-src="{environment:lobDemosBaseUrl}/grid-finjs" alt="Angular 更新のライブデ例">
+</code-view>
+
 
 ## データ バインディングおよび更新
 サービスは、ページが読み込まれたとき、およびスライダー コントローラーを使用して特定の数のレコードを取得したときに、コンポーネントにデータを提供します。実際のシナリオでは、更新されたデータはサービスから消費されますが、ここではデータはコードで更新されます。これは、デモをシンプルに保ち、その主な目標であるグリッドのパフォーマンスを実証するために行われます。
@@ -67,6 +106,15 @@ private updateData(data: IRecord[]) {
 ## テンプレート
 ビューの更新は、デフォルト テンプレートの列とカスタム テンプレートの列で同じように機能します。ただし、カスタム テンプレートは比較的単純にしておくことをお勧めします。テンプレート内の要素の数が増えると、パフォーマンスへの悪影響も大きくなります。
 
+## Dock Manager コンポーネントを使用したライブ データ フィード
+
+<div class="sample-container loading" style="height: 580px;">
+    <iframe id="data-analysis-dock-manager" frameborder="0" seamless width="100%" height="100%" src="{environment:lobDemosBaseUrl}/grid-finjs-dock-manager/grid-finjs-dock-manager" onload="onSampleIframeContentLoaded(this);" class="no-theming"></iframe>
+</div>
+
+<button class="full-screen-btn" onclick='window.open("{environment:lobDemosBaseUrl}/grid-finjs-dock-manager/grid-finjs-dock-manager")'>全画面表示</button>
+
+
 ## API リファレンス
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 * [IgxGridComponent スタイル]({environment:sassApiUrl}/#function-igx-grid-theme)
@@ -95,14 +143,12 @@ private updateData(data: IRecord[]) {
 }
 
 @@if (igxName === 'IgxTreeGrid') {
-<div class="sample-container loading" style="height:700px">
-    <iframe id="grid-sample-finjs-iframe" data-src='{environment:lobDemosBaseUrl}/treegrid-finjs-sample' width="100%" height="100%" seamless frameborder="0" class="lazyload" alt="Angular 更新のライブデ例"></iframe>
-</div>
-<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-sample-finjs-iframe" data-demos-base-url="{environment:lobDemosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-finjs-iframe" data-demos-base-url="{environment:lobDemosBaseUrl}">Stackblitz で表示</button>
-</div>
+
+<code-view style="height:700px" 
+           data-demos-base-url="{environment:lobDemosBaseUrl}" 
+           iframe-src="{environment:lobDemosBaseUrl}/treegrid-finjs" alt="Angular 更新のライブデ例">
+</code-view>
+
 
 ## API リファレンス
 

@@ -10,14 +10,12 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ## Angular Toast Example
 
-<div class="sample-container loading" style="height: 300px">
-    <iframe id="toast-sample-2-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/notifications/toast-sample-2" onload="onSampleIframeContentLoaded(this);" alt="Angular Toast Example"></iframe>
-</div>
-<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="toast-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toast-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height: 300px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/notifications/toast-sample-2" alt="Angular Toast Example">
+</code-view>
+
 <div class="divider--half"></div>
 
 
@@ -42,27 +40,25 @@ export class AppModule {}
 ```
 
 ### Show Toast
-In order to display the toast component, use its [`show()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#show) method and call it on a button click. You can pass the toast content inside the element.
+In order to display the toast component, use its [`open()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#open) method and call it on a button click. You can pass the toast content inside the element.
 
 ```html
 <!--sample.component.html-->
 
-<button igxButton="raised" (click)="toast.show()">Show notification</button>
+<button igxButton="raised" (click)="toast.open()">Show notification</button>
 <igx-toast #toast >Notification displayed</igx-toast>
 ```
 
-If the sample is configured properly, a toast appears displaying a notification when the button is clicked.
-
-Another way to set the toast content is to directly pass the message as a parameter to the [`show()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#show) method.
+Another way to set the toast content is to directly pass the message as a parameter to the [`open()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#open) method.
 
 ```html
 <!--sample.component.html-->
 
-<button igxButton="raised" (click)="toast.show('Notification displayed')">Show notification</button>
+<button igxButton="raised" (click)="toast.open('Notification displayed')">Show notification</button>
 <igx-toast #toast ></igx-toast>
 ```
 
-The [`show()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#show) method can also be used in the AppComponent file to manage the value of the message.
+The [`open()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#open) method can also be used in the AppComponent file to manage the value of the message.
 
 ```typescript
 // app.component.ts
@@ -75,34 +71,32 @@ public ngOnInit() {
 }
 
 public showMessage() {
-    this.toast.show(this.message);
+    this.toast.open(this.message);
 }
 ```
 
 ## Examples
 
 ### Hide/Auto Hide
-Once opened, the toast disappears after a period specified by the [`displayTime`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#displaytime) input which is set initially to 4000 milliseconds. This behavior is enabled by default but you can change this by setting [`autoHide`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#autohide) to **false**. This way, the toast remains visible. Using the toast [`hide()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#hide) method, you can close the component.
+Once opened, the toast disappears after a period specified by the [`displayTime`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#displaytime) input which is set initially to 4000 milliseconds. This behavior is enabled by default but you can change this by setting [`autoHide`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#autohide) to **false**. This way, the toast remains visible. Using the toast [`close()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#close) method, you can close the component.
 
 ```html
 <!--sample.component.html-->
 
-<button igxButton="raised" (click)="toast.show()">Show Toast</button>
-<button igxButton="raised" (click)="toast.hide()">Hide Toast</button>
+<button igxButton="raised" (click)="toast.open()">Show Toast</button>
+<button igxButton="raised" (click)="toast.close()">Hide Toast</button>
 <igx-toast #toast message="Notification displayed" [autoHide]="false"></igx-toast>
 ```
 
 If the sample is configured properly, the toast will appear when the *Show button* is clicked. For the first component auto-hide feature is disabled and the toast will disappear on 'Hide' button click.
-In the other two components you can see in action how to pass different messages through the [`show()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#show) method and use content projection.
+In the other two components you can see in action how to pass different messages through the [`open()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#open) method and use content projection.
 
-<div class="sample-container loading" style="height: 450px">
-    <iframe id="toast-sample-3-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/toast-sample-3" class="lazyload"></iframe>
-</div>
 
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="toast-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toast-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+<code-view style="height: 450px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/notifications/toast-sample-3" >
+</code-view>
+
 
 ### Display Time
 Use [`displayTime`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#displaytime) and set it to an interval in milliseconds to configure how long the toast component is visible.
@@ -110,7 +104,7 @@ Use [`displayTime`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#d
 ```html
 <!--sample.component.html-->
 
-<button igxButton="raised" (click)="toast.show()">Show notification</button>
+<button igxButton="raised" (click)="toast.open()">Show notification</button>
 <igx-toast #toast message="Notification displayed" displayTime="1000"></igx-toast>
 ```
 
@@ -148,14 +142,12 @@ public show(toast) {
 
 ```
 
-<div class="sample-container loading" style="height: 300px">
-    <iframe id="toast-sample-5-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/toast-sample-5" class="lazyload"></iframe>
-</div>
 
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="toast-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toast-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+<code-view style="height: 300px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/notifications/toast-sample-5" >
+</code-view>
+
 
 <div class="divider--half"></div>
 
@@ -264,13 +256,12 @@ $custom-toast-theme: igx-toast-theme(
 
 Don't forget to include the themes in the same way as it was demonstrated above.
 
-<div class="sample-container loading" style="height: 600px">
-    <iframe id="toast-style-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/toast-style" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="toast-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toast-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height: 600px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/notifications/toast-style" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ## API References

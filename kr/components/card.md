@@ -10,14 +10,12 @@ _language: kr
 <div class="divider"></div>
 
 ###Card Demo
-<div class="sample-container loading" style="height: 930px">
-    <iframe id="card-sample-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/layouts/card"
-        onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="card-sample-iframe"
-        data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
-</div>
+
+<code-view style="height: 930px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/layouts/card" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ###Usage
@@ -56,12 +54,12 @@ Then in the template of our info card component we can add the following code to
 ```
 
 If all went well, you should see the following card in your browser:
-<div class="sample-container loading" style="height: 300px">
-    <iframe id="card-sample-1-iframe" data-src='{environment:demosBaseUrl}/layouts/card-sample-1' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="card-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
-</div>
+
+<code-view style="height: 300px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/layouts/card-sample-1" >
+</code-view>
+
 
 ####Adding Avatar and Images
 
@@ -105,12 +103,12 @@ Next, we need to update the template for our card to show a round-shaped avatar 
 ```
 
 At this point the card should look similar to the following:
-<div class="sample-container loading" style="height: 480px">
-    <iframe id="card-sample-2-iframe" data-src='{environment:demosBaseUrl}/layouts/card-sample-2' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="card-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
-</div>
+
+<code-view style="height: 480px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/layouts/card-sample-2" >
+</code-view>
+
 
 ####Adding Actions
 
@@ -172,13 +170,12 @@ public icons = ['add', 'star'];
 
 Easy, right? Let's see how it turned out in the browser:
 
-<div class="sample-container loading" style="height: 400px">
-    <iframe id="card-sample-3-iframe" seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/layouts/card-sample-3" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"
-        data-iframe-id="card-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
-</div>
+
+<code-view style="height: 400px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/layouts/card-sample-3" >
+</code-view>
+
 
 <div class="divider--half"></div>
 

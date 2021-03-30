@@ -11,13 +11,12 @@ _language: kr
 
 ### Icon Demo
 
-<div class="sample-container loading" style="height: 384px">
-    <iframe id="icon-sample-1-iframe" seamless="" width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-display/icon-sample-1" onload="onSampleIframeContentLoaded(this);">
-</iframe></div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="icon-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">                StackBlitz 에서보기
-    </button>
-</div>
+
+<code-view style="height: 384px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-display/icon-sample-1" >
+</code-view>
+
 
 <div class="divider--half"></div>
 
@@ -73,7 +72,7 @@ You can set the icon's size through CSS. Create a custom CSS class and name it *
 }
 ```
 <div class="sample-container loading" style="height: 80px; width: 300px">
-    <iframe id="icon-sample2-iframe" seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-display/icon-sample2" class="lazyload">
+    <iframe id="icon-sample2-iframe" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-display/icon-sample2" class="lazyload">
 </iframe></div>
 
 ### SVG Icons
@@ -103,13 +102,12 @@ public ngOnInit() {
 <igx-icon name="contains" fontSet="filter-icons"></igx-icon>
 ```
 
-<div class="sample-container loading" style="height: 50px">
-    <iframe id="svg-icon-sample-iframe" seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-display/svg-icon-sample" class="lazyload">
-</iframe></div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="svg-icon-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">                StackBlitz 에서보기
-    </button>
-</div>
+
+<code-view style="height: 50px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-display/svg-icon-sample" >
+</code-view>
+
 
 ### Styling
 The igxIcon allows styling through the [Ignite UI for Angular Theme Library](../themes/component-themes.md). The icon's [theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme) exposes a property that allows customization of the color of the component.
@@ -203,13 +201,12 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 ```    
 
 #### Demo
-<div class="sample-container loading" style="height:320px">
-    <iframe id="icon-styling-sample-iframe" data-src='{environment:demosBaseUrl}/data-display/icon-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
-</div>
-<br/>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="icon-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height:320px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-display/icon-styling" >
+</code-view>
+
 
 ### Breaking Changes in 6.2.0
 
