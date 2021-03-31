@@ -65,7 +65,7 @@ The [animation]({environment:sassApiUrl}/index.html#mixin-animation) mixin serve
 
 ### Timing Functions
 
-We include a list of pre-baked timing functions to use with our keyframes mixins. Read the [documentation]({environment:sassApiUrl}/index.html) the full list of timing functions visit their documentation.
+We include a list of pre-baked timing functions to use with our keyframes mixins. Read the [documentation]({environment:sassApiUrl}/index.html) to find the full list of timing functions.
 
 <div class="sample-container loading" style="height: 270px">
     <iframe id="animations-sample-2-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/theming/animations-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
