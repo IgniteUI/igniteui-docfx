@@ -955,56 +955,75 @@
   new: false
 - name: Styling & Themes
   header: true
-  sortable: true
-- name: Themes
+  sortable: false
+- name: Overview
   href: themes/index.md
   new: false
+- name: Palettes
+  href: themes/palettes.md
+  new: false
+- name: Elevations
+  href: themes/elevations.md
+  new: false
+- name: Typography
+  href: themes/typography.md
+  new: false
+- name: Display Density
+  href: display-density.md
+- name: Sass
+  new: false
   items:
-    - name: Palettes
-      href: themes/palette.md
+    - name: Overview
+      href: themes/sass/index.md
       new: false
-    - name: Schemas
-      href: themes/schemas.md
+    - name: Configuration
+      href: themes/sass/configuration.md
+      new: true
+    - name: Palettes
+      href: themes/sass/palettes.md
+      new: false
+    - name: Elevations
+      href: themes/sass/elevations.md
       new: false
     - name: Typography
-      href: themes/typography.md
+      href: themes/sass/typography.md
+      new: false
+    - name: Schemas
+      href: themes/sass/schemas.md
+      new: false
+    - name: Animations
+      href: themes/sass/animations.md
+      new: false
+    - name: Roundness
+      href: themes/sass/roundness.md
       new: false
     - name: Global Themes
-      href: themes/global-theme.md
+      href: themes/sass/global-themes.md
       new: false
     - name: Component Themes
-      href: themes/component-themes.md
+      href: themes/sass/component-themes.md
       new: false
     - name: Predefined Themes
       new: false
       items:
         - name: Material
-          href: themes/themes-list/material.md
+          href: themes/sass/presets/material.md
           new: false
         - name: Fluent
-          href: themes/themes-list/fluent.md
+          href: themes/sass/presets/fluent.md
           new: false
         - name: Bootstrap
-          href: themes/themes-list/bootstrap.md
+          href: themes/sass/presets/bootstrap.md
           new: false
         - name: Indigo
-          href: themes/themes-list/indigo.md
+          href: themes/sass/presets/indigo.md
           new: true
-    - name: Printing styles
-      href: themes/printing-styles.md
-      new: false
-    - name: Theming with CSS Variables
-      href: themes/css-variables-theming.md
-      new: false
-- name: Components Roundness
-  href: roundness.md
-  new: false
-- name: Shadows
-  href: shadows.md
-- name: Animations
-  href: animations.md
-- name: Display Density
-  href: display-density.md
+    - name: Misc
+      new: true
+      items:
+      - name: Printing styles
+        href: themes/misc/printing-styles.md
+        new: false
 - name: Data Entry & Display
   header: true
   sortable: true
