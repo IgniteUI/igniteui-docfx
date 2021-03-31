@@ -30,7 +30,7 @@ As you can see from the `CSS Variable` column, all elevations are defined in the
 
 ## Usage
 
-To begin using elevations in your own components all you need is reference the variable name of the desired level.
+To begin using elevations in your own components all you need is to reference the variable name of the desired level.
 
 ```css
 .floaty-element {
