@@ -47,7 +47,7 @@ We have selected [Titillium Web](https://fonts.google.com/selection?selection.fa
 />
 ```
 
-Enable the typography styles by setting `igx-typography` class on one the body element.
+Enable the typography styles by setting `igx-typography` class on the body element.
 
 ```html
 <!-- index.html -->
