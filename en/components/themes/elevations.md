@@ -30,7 +30,7 @@ As you can see from the `CSS Variable` column, all elevations are defined in the
 
 ## Usage
 
-To begin using elevations in your own components all you need is reference the variable name of the desired level.
+To begin using elevations in your own components all you need is to reference the variable name of the desired level.
 
 ```css
 .floaty-element {
@@ -67,7 +67,7 @@ Example:
 Now, all components that use elevation levels 1 and 2 will have their shadows updated.
 
 ### Shadowing
-You can shadow the globally set elevations for a specific scope only. We already saw that the button component uses elevation level 2 for its resting state. Level 2 is also used by the card and grid components. So to change the shadows for all three, all you need to to is:
+You can shadow the globally set elevations for a specific scope only. We already saw that the button component uses elevation level 2 for its resting state. Level 2 is also used by the card and grid components. So to change the shadows for all three, all you need to do is:
 
 ```css
 [igxButton="raised"],

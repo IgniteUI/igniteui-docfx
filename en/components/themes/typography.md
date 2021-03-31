@@ -7,7 +7,7 @@ _extraFont: https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,70
 
 # Typography
 
-<p class="highlight">The typography in Ignite UI for Angular is modeled after the [Material Type System](https://material.io/design/typography/the-type-system.html#). It's non-intrusiveand optional, allowing you to modify the type styles using CSS only.</p>
+<p class="highlight">The typography in Ignite UI for Angular is modeled after the [Material Type System](https://material.io/design/typography/the-type-system.html#). It's non-intrusive and optional, allowing you to modify the type styles using CSS only.</p>
 <div class="divider"></div>
 
 ## Overview
@@ -47,7 +47,7 @@ We have selected [Titillium Web](https://fonts.google.com/selection?selection.fa
 />
 ```
 
-Enable the typography styles by setting `igx-typography` class on one the body element.
+Enable the typography styles by setting `igx-typography` class on the body element.
 
 ```html
 <!-- index.html -->
