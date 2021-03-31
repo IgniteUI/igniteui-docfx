@@ -140,7 +140,7 @@ Let's say your corporate primary color is `#9f349c` and you want to create prima
 ```
 This approach disregards the `calc` function we use for coming up with color variants from HSLA scheme at runtime, however, it allows you to specify a hand-picked palette.
 
-The Material Color Tool doesn't give you the contrast color for each color variant. There are many tools out there that will help you determine if a specific color has enough contrast when used in combination with another color. You can use the built-in contrast checker in Chrome when determining the contrast color you want to pick for each color variant. We provide a Sass function for generating color palettes at build-time. If you prefer that we generate all color variants and their contrast colors for you from your own colors, check out the [Palettes with Sass](link-to-sass-palettes) section of the documentation.
+The Material Color Tool doesn't give you the contrast color for each color variant. There are many tools out there that will help you determine if a specific color has enough contrast when used in combination with another color. You can use the built-in contrast checker in Chrome when determining the contrast color you want to pick for each color variant. We provide a Sass function for generating color palettes at build-time. If you prefer that we generate all color variants and their contrast colors for you from your own colors, check out the [Palettes with Sass](./sass/palettes.md) section of the documentation.
 
 Apart from having a single global palette, you can also create several palettes scoped to other CSS selectors. For example, we can have a blue and red palette scoped to class selectors:
 

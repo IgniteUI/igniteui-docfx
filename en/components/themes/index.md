@@ -8,8 +8,8 @@
 Ignite UI for Angular allows you to modify the styles of all component themes using CSS variables. If you really wanted to dig deep, we provide a powerful Sass theming engine that allows you to create global component themes tailored to your specific design language that work in both modern and old browsers.
 
 >[!NOTE] 
-> This document describes the theming system in Ignite UI for Angular from version 12 forward. If you are looking for the old documentation, visit [link](https://link-to-old-docs). Starting with version 12, we have extended support for CSS variables and they are now the recommended way to modify the theme.
-> **The Sass theming system is not going anywhere, you can still use all the mixins and functions you've been using prior to version 12.**
+> This document describes the theming system in Ignite UI for Angular from version 12 forward. Starting with version 12, we have extended support for CSS variables and they are now the recommended way to modify the theme.
+> **The Sass theming library is here to stay, you can still use all the mixins and functions you've been using prior to version 12.**
 
 ## Basic Usage
 
@@ -80,13 +80,13 @@ If you wanted to change the primary and secondary colors, all you have to do is 
 }
 ```
 
-Let's break down the names of these color variables. The `igx` prefix is there as a unique identifier to indicate that this variable is part of an Ignite UI for Angular theme, `primary` is the name of the `color` palette, and `500` is the color `variant`. We will take a deeper look at palettes in the [Palettes](https://something.com) section of the documentation. For now all you need to know is that we have several colors (primary, secondary, success, info, etc.) that include different shades or _variants_ that are all generated from the `500` color variant, i.e. the `500` variant is considered to be the main color variant. Some color variants are lighter while others are darker.
+Let's break down the names of these color variables. The `igx` prefix is there as a unique identifier to indicate that this variable is part of an Ignite UI for Angular theme, `primary` is the name of the `color` palette, and `500` is the color `variant`. We will take a deeper look at palettes in the [Palettes](./palettes.md) section of the documentation. For now all you need to know is that we have several colors (primary, secondary, success, info, etc.) that include different shades or _variants_ that are all generated from the `500` color variant, i.e. the `500` variant is considered to be the main color variant. Some color variants are lighter while others are darker.
 
 Following this approach, you can completely overhaul the entire palette.
 
 >[!WARNING]
 > Some components do not use colors from the palettes. In those cases you will have to target the component CSS variables directly to modify their colors.
-> To find out which palette colors are used by what component, take a look at the [components documentation](https://link-to-docs).
+> To find out which palette colors are used by what component, take a look at the [Components Documentation]({environment:sassApiUrl}/index.html#variable-_light-avatar).
 
 Likewise, changing the `elevations`(shadows) is just as easy. We include 25 elevation levels (0-24) and they are declared as CSS variables like so:
 
@@ -104,7 +104,7 @@ Likewise, changing the `elevations`(shadows) is just as easy. We include 25 elev
 }
 ```
 
-These are essentially stacked CSS [`box-shadow`](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) declarations. You can replace them with any other valid `box-shadow` value. The higher the elevation level number is, the bigger the shadow is. Again, different components use different elevation levels, to find out which elevation level a component uses take look at the [components documentation](link to Sass documentation). We will take a deeper look at elevations in the [Elevations](link to elevations section) of the documentation.
+These are essentially stacked CSS [`box-shadow`](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) declarations. You can replace them with any other valid `box-shadow` value. The higher the elevation level number is, the bigger the shadow is. Again, different components use different elevation levels, to find out which elevation level a component uses take look at the [Components Documentation]({environment:sassApiUrl}/index.html#variable-_light-avatar). We will take a deeper look at elevations in the [Elevations](./elevations.md) of the documentation.
 
 ## Component Variables
 
