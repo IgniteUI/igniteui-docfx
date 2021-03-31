@@ -258,7 +258,7 @@ export class SignalRService implements OnDestroy {
         });
         this.hubConnection.on('transferdata', (data) => {
             this.data.next(data);
-        })
+        });
     }
     ...
 ```
@@ -267,9 +267,9 @@ In your app.component add use the newly created `startConnection` method
 
 ```ts
 constructor(public dataService: SignalRService) {}
-    public ngOnInit() {
-        this.dataService.startConnection(this.frequency, this.dataVolume, true, false);
-    }
+public ngOnInit() {
+    this.dataService.startConnection(this.frequency, this.dataVolume, true, false);
+}
 ...
 ```
 ### Grid Data Binding
