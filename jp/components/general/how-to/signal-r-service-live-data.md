@@ -19,7 +19,7 @@ _language: ja
 
 SignalR はいくつかの転送を利用し、クライアントとサーバーの機能 ([WebSockets、サーバー送信イベント (SSE)、またはロングポーリング](https://stackoverflow.com/a/12855533/2940502)) を考慮して、利用可能な最適な転送を自動的に選択します。
 
-クライアントがサーバーにリアルタイムで接続されているときに、SSE とロングポーリングを除いて、[WebSockets](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/websockets?view=aspnetcore-5.0) の観点から話すと、何かが起こったときはいつでも、サーバーはその WebSocket を介してクライアントにメッセージを送信することを認識します。一昔前のクライアントとサーバーでは、ロングポーリング転送が使用されます。
+クライアントがサーバーにリアルタイムで接続されているときに、SSE とロングポーリングを除いて、[WebSockets](https://docs.microsoft.com/ja-jp/aspnet/core/fundamentals/websockets?view=aspnetcore-5.) の観点から話すと、何かが起こったときはいつでも、サーバーはその WebSocket を介してクライアントにメッセージを送信することを認識します。一昔前のクライアントとサーバーでは、ロングポーリング転送が使用されます。
 
 これは、SignalR が最新のクライアントとサーバーを処理する方法であり、利用可能な場合は内部で WebSockets を使用し、そうでない場合は他の技術とテクノロジーに適切にフォールバックします。
 
