@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 # Global Themes
-<div class="highlight">The global theme allows you to quickly generate a theme that uses your custom color palette. The color palette will be propagated to all components that don't have custom themes created for them.</div>
+<div class="highlight">The global theme allows you to quickly generate a theme that uses your custom color palette, schema, and elevations. The color palette, schema, and elevations will be propagated to all components that don't have custom themes created for them.</div>
 <div class="divider"></div>
 
 ## Overview
@@ -15,32 +15,36 @@ If you've included the _`igniteui-angular.css`_ file in your application project
 To generate a global theme we're going to be including two mixins `igx-core` and `igx-theme`; both of those mixins accepts a few arguments: 
 
 ### igx-core  
+<div class="divider--half"></div>
 
-| Name                 |  Type    | Default            | Description                                                                           |
-| :---------------:    | :-----:  | :---------------:  | :-----------------------------------------------------------------------------------: |
-| `$print-layout`      | boolean  | true               | include/exclude the styles for printing                                               |
-| `$direction`         | Keyword  | ltr                | Specifies the content direction for all components can be `ltr` or `rtl`              |
+| Name                      | Type    | Default | Description                                                               |
+|:-------------------------:|:-------:|:-------:|:-------------------------------------------------------------------------:|
+| `$print-layout`           | boolean | true    | include/exclude the styles for printing.                                  |
+| `$direction`              | Keyword | ltr     | Specifies the content direction for all components can be `ltr` or `rtl`. |
+| `$enhanced-accessibility` | boolean | false   | Switches component colors and other properties to more accessible values. |
 
 
 ### igx-theme  
+<div class="divider--half"></div>
 
-| Name              |  Type   | Default            | Description                                                                                                    |
-| :---------------: | :-----: | :---------------:  | :------------------------------------------------------------------------------------------------------------: |
-| `$palette`        | map     | undefined          | The palette map to be used to by the default themes of all components.                                         |
-| `$schema`         | map     | $light-schema      | The schema used as basis for styling the components.                                                           |
-| `$exclude`        | list    | ( )                | A list of component themes to be excluded from the global theme.                                               |
-| `$legacy-support` | boolean | `false`             | Determines the theming strategy - if set to true, theming is done via hard values. |
-| `$roundness`      | Number  |  null              | Sets the global roundness factor for all components (the value can be any decimal fraction between 0 and 1).   |
-| `$elevation`      | boolean | `true`             | Sets the global elevation for all components that come with elevation.
+| Name              | Type    | Default       | Description                                                                                                  |
+|:-----------------:|:-------:|:-------------:|:------------------------------------------------------------------------------------------------------------:|
+| `$palette`        | map     | null          | The palette map to be used to by the default themes of all components.                                       |
+| `$schema`         | map     | $light-schema | The schema used as basis for styling the components.                                                         |
+| `$exclude`        | list    | ( )           | A list of component themes to be excluded from the global theme.                                             |
+| `$legacy-support` | boolean | `false`       | Determines the theming strategy - if set to true, theming is done via hard values.                           |
+| `$roundness`      | Number  | null          | Sets the global roundness factor for all components (the value can be any decimal fraction between 0 and 1). |
+| `$elevation`      | boolean | `true`        | Turns on/off elevations for all components in the theme.                                                     |
+| `$elevations`     | Map | `true`        | The elevation map to be used by all component themes.                                                        |
 
 Let's create a custom global theme that will use the primary and secondary colors of our company.
 
 ```scss
-// Import the IgniteUI themes library first
+// Import the Ignite UI theming library first
 @import '~igniteui-angular/lib/core/styles/themes/index';
 
-$primary-color: #2ab759; // Some green shade I like
-$secondary-color: #f96a88; // Watermelon pink
+$primary-color: #2ab759;
+$secondary-color: #f96a88;
 
 $my-color-palette: igx-palette(
     $primary: $primary-color,
@@ -49,19 +53,21 @@ $my-color-palette: igx-palette(
 
 // IMPORTANT: Make sure you always include igx-core first!
 @include igx-core();
-// Pass the color palette we generated to the igx-theme mixin
+// Add the typography styles before the main theme.
+@include igx-typography();
+// Pass the color palette we generated to the igx-theme mixin.
 @include igx-theme($my-color-palette);
 ```
 
-Let's explain what the `igx-core` and `igx-theme` mixins do. The `igx-core` mixin takes care of loading all essential parts like global elevations, global typography, etc. The `igx-theme` will set the global variable `$default-palette` to the palette map you pass; it will also set the global variable `$igx-legacy-support` to the value of `$legacy-support`. The `igx-theme` mixin also includes each individual component style that is not listed in the `$exclude` list of components. 
+Let's explain what the `igx-core` and `igx-theme` mixins do. The `igx-core` mixin takes care of the global theme configuration, like direction, accessibility, and adding printing styles for variable components. The `igx-theme` will set the global variable `$default-palette` to the palette you pass; it will also set the global variable `$igx-legacy-support` to the value of `$legacy-support`. The `igx-theme` mixin also includes each individual component style that is not listed in the `$exclude` list of components. 
 
 > [!IMPORTANT]
-> Including `igx-core` before `igx-theme` is essential. The `igx-core` mixin provides all base definitions needed for `igx-theme` to work.
+> Including `igx-core` and `igx-typography` before `igx-theme` is essential. The `igx-core` mixin provides all base definitions needed for `igx-theme` to work.
 
 ## Excluding Components
 <div class="divider--half"></div>
 
-The `igx-theme` mixin allows you to provide a list of component names to be excluded from the global theme styles. For instance, if you want to completely remove all styles we include for the `igx-avatar` and `igx-badge` and provide your own custom styles, you can do so by passing the list of components like so:
+The `igx-theme` mixin allows you to provide a list of component names to be excluded from the global theme styles. For instance, if you want to completely remove all styles we include for the `igx-avatar` and `igx-badge` to reduce the amount of produced CSS or to supply your own custom styles, you can do so by passing the list of components like so:
 
 ```scss
 // ...
@@ -70,27 +76,42 @@ $unnecessary: (igx-avatar, igx-badge);
 @include igx-theme($my-color-palette, $exclude: $unnecessary);
 ```
 
-Additionally, if you know your app will not be using some of our components, you can list them in the `$exclude` list, thus reducing the overall size of the produced CSS.
+If you know your app will not be using some of our components, we recommend you add them to the `$exclude` list.
+
+You can do the inverse, i.e. include only the component styles you want using the method below:
+
+```scss
+@function include($items, $register) {
+    @return map-keys(map-remove($register, $items...));
+}
+
+$allowed: (igx-avatar, igx-badge);
+
+@include igx-theme(
+    $exclude: include($allowed, $components)
+);
+```
 
 ## Light and Dark Themes
 
-In addition to the more powerful `igx-theme` mixin, we include two additional global theme mixins for fast bootstrapping of *__light__* and *__dark__* themes. Those mixins are `igx-light-theme` and `igx-dark-theme`.
+In addition to the more powerful `igx-theme` mixin, we include two additional global theme mixins for fast bootstrapping *__light__* and *__dark__* themes. Those mixins are `igx-light-theme` and `igx-dark-theme`.
 
-Here's a quick showcase of how you can create a light and dark theme for your application
+Here's a quick showcase of how you can create a light and dark theme for your application:
 
 ```scss
 .light-theme {
-    @include igx-light-theme($default-palette);
+    @include igx-light-theme($light-material-palette);
 }
 
 .dark-theme {
     background: #333;
     color: #fff;
 
-    @include igx-dark-theme($default-palette);
+    @include igx-dark-theme($light-material-palette);
 }
 ```
-Ideally you would be applying `.light-theme` and `.dark-theme` CSS classes somewhere high in your application DOM tree. Your `app-root` element is a good candidate for that.
+
+Ideally, you set `.light-theme` or `.dark-theme` classes on an element high in your application DOM tree. Your `app-root` element is a good candidate for that.
 
 ### Available Themes
 Ignite UI for Angular gives you the option to pick from a set of predefined themes.
@@ -134,7 +155,7 @@ $my-color-palette: igx-palette(
 ## Browser Support
 <div class="divider--half"></div>
 
-The value of `$igx-legacy-support` is quite important as it determines how component themes will work. When its value is set to `true`, individual component style rules will have their values set at build time to the hard-coded values defined in their theme. If you set the value of `$igx-legacy-support` to `false`, however, style rules will look for values from CSS variables defined at the `:root` scope, or the nearest block scope.
+The value of `$igx-legacy-support` is quite important as it determines how component themes work. When its value is set to `true`, individual component style rules will have their values set at build time to the hard-coded values defined in their theme. If you set the value of `$igx-legacy-support` to `false`, however, style rules will look for values from CSS variables defined at the `:root` scope, or the nearest block scope.
 
 The general rule of thumb regarding what the value of `$legacy-support` should be is dictated by whether you will be including support for Internet Explorer 11 or not. If you want to include support for IE11 set the `$legacy-support` value to `true`, otherwise setting its value to `false` (default) will force CSS variables for theming.
 
