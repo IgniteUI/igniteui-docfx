@@ -963,7 +963,7 @@
 - name: Palettes
   href: themes/palettes.md
   new: false
-- name: Elevations
+- name: エレベーション
   href: themes/elevations.md
   new: false
 - name: Typography
@@ -983,7 +983,7 @@
     - name: Palettes
       href: themes/sass/palettes.md
       new: false
-    - name: Elevations
+    - name: エレベーション
       href: themes/sass/elevations.md
       new: false
     - name: Typography

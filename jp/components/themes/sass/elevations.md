@@ -1,11 +1,11 @@
 ---
-title: Elevations/Shadows
+title: エレベーション/シャドウ
 _description:
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ
 _language: ja
 ---
 
-# Elevations
+# エレベーション
 <p class="highlight">Elevations are used to establish and maintain functional boundaries between Document Object Model trees to enable better functional encapsulation. You can create sets of elevations using our Sass theming library.</p>
 <div class="divider"></div>
 
@@ -140,10 +140,10 @@ $elevations: (
 The elevation levels are also used in theme schema declarations. More on that in the [Schema](./schemes.md) section of the documentation.
 <div class="divider--half"></div>
 
-## API References
+## API リファレンス
 
-* [Creating Elevations]({environment:sassApiUrl}/index.html#function-igx-elevations)
-* [Retrieving Elevations]({environment:sassApiUrl}/index.html#function-igx-elevation)
+* [エレベーションの作成]({environment:sassApiUrl}/index.html#function-igx-elevations)
+* [エレベーションの取得]({environment:sassApiUrl}/index.html#function-igx-elevation)
 
 
 ## その他のリソース

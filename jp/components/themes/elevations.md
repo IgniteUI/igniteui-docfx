@@ -1,11 +1,11 @@
 ---
-title: Elevations (Shadows)
+title: エレベーション (シャドウ)
 _description:
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ
 _language: ja
 ---
 
-# Elevations
+# エレベーション
 
 <p class="highlight">Elevations are used to establish and maintain functional boundaries between Document Object Model trees to enable better functional encapsulation. The implementation of the Elevations in Ignite UI for Angular is modeled after the [Elevations in Material Design](https://material.io/design/environment/elevation.html#elevation-in-material-design).</p>
 <div class="divider"></div>
@@ -16,14 +16,14 @@ Shadows in Ignite UI for Angular closely follow the Material Design guidelines f
 
 Here's a list of resting elevations as used in various components in Ignite UI for Angular in the Material Theme and their corresponding CSS variable names:
 
-| Component                                       | Default Elevation Level | CSS Variable       |
+| コンポーネント                                       | デフォルト エレベーション レベル | CSS 変数      |
 | ----------------------------------------------- | ----------------------- | ------------------ |
-| banner, button, toast                           | 0                       | --igx-elevation-0  |
-| badge, carousel buttons, search input           | 1                       | --igx-elevation-1  |
-| button group, raised button, card, grid, switch | 2                       | --igx-elevation-2  |
-| navbar, snackbar                                | 4                       | --igx-elevation-4  |
-| floating action button,                         | 6                       | --igx-elevation-6  |
-| bottom navigation, ghost chip, dropdown         | 8                       | --igx-elevation-8  |
+| banner、button、toast                           | 0                       | --igx-elevation-0  |
+| badge、carousel buttons、search input           | 1                       | --igx-elevation-1  |
+| button group、raised button、card、grid、switch | 2                       | --igx-elevation-2  |
+| navbar、snackbar                                | 4                       | --igx-elevation-4  |
+| floating action button                         | 6                       | --igx-elevation-6  |
+| bottom navigation、ghost chip、dropdown         | 8                       | --igx-elevation-8  |
 | navdrawer                                       | 16                      | --igx-elevation-16 |
 | dialog                                          | 24                      | --igx-elevation-24 |
 
@@ -83,9 +83,9 @@ Elevations can be created and consumed in a more powerful way using Sass as well
 
 ## その他のリソース
 
-Related topics:
+関連トピック:
 
-- [Elevations with Sass](./sass/elevations.md)
+- [Sass エレベーション](./sass/elevations.md)
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
