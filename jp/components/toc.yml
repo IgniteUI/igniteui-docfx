@@ -30,10 +30,10 @@
   href: general/data-analysis.md
   new: false
   updated: true
-- name: How to
+- name: 操作方法
   new: true
   items:
-    - name: Build Real-time SignalR App with .NET Core
+    - name: .NET Core を使用してリアルタイム SignalR アプリの構築
       href: general/how-to/signal-r-service-live-data.md
       new: true
 - name: Angular Schematics & Ignite UI CLI
@@ -957,45 +957,45 @@
 - name: スタイルとテーマ
   header: true
   sortable: false
-- name: Overview
+- name: 概要
   href: themes/index.md
   new: false
-- name: Palettes
+- name: パレット
   href: themes/palettes.md
   new: false
 - name: エレベーション
   href: themes/elevations.md
   new: false
-- name: Typography
+- name: タイポグラフィ
   href: themes/typography.md
   new: false
-- name: Display Density
+- name: 表示密度
   href: display-density.md
 - name: Sass
   new: false
   items:
-    - name: Overview
+    - name: 概要
       href: themes/sass/index.md
       new: false
-    - name: Configuration
+    - name: 構成
       href: themes/sass/configuration.md
       new: true
-    - name: Palettes
+    - name: パレット
       href: themes/sass/palettes.md
       new: false
     - name: エレベーション
       href: themes/sass/elevations.md
       new: false
-    - name: Typography
+    - name: タイポグラフィ
       href: themes/sass/typography.md
       new: false
-    - name: Schemas
+    - name: スキーマ
       href: themes/sass/schemas.md
       new: false
-    - name: Animations
+    - name: アニメーション
       href: themes/sass/animations.md
       new: false
-    - name: Roundness
+    - name: 丸み
       href: themes/sass/roundness.md
       new: false
     - name: グローバル テーマ

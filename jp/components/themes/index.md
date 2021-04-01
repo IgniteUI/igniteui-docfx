@@ -1,7 +1,7 @@
 <!-- --- -->
-<!-- title: Theming Component - Native Angular | Ignite UI for Angular -->
-<!-- _description: The Ignite UI for Angular Theming component was developed through SASS with a low-difficulty API that offers restyling of one component, multiple components, or the entire suite. -->
-<!-- _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components, Angular Theming Component, Angular Theming -->
+<!-- title: Theming コンポーネント - ネイティブ Angular | Ignite UI for Angular -->
+<!-- _description: Ignite UI for Angular Theming コンポーネントは SASS によって開発されます。API は簡単で、単一のコンポーネント、複数のコンポーネント、またはスイート全体のスタイル変更を適用できます。 -->
+<!-- _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular Theming コンポーネント, Angular Theming -->
 <!-- _language: ja-->
 <!-- --- -->
 
@@ -12,7 +12,7 @@ Ignite UI for Angular allows you to modify the styles of all component themes us
 > This document describes the theming system in Ignite UI for Angular from version 12 forward. Starting with version 12, we have extended support for CSS variables and they are now the recommended way to modify the theme.
 > **The Sass theming library is here to stay, you can still use all the mixins and functions you've been using prior to version 12.**
 
-## Basic Usage
+## 基本的な使用方法
 
 Ignite UI for Angular includes the following themes as part of its package:
     - Material
@@ -65,7 +65,7 @@ This is not the end of our theming story, though. All of the themes are compiled
 
 If Sass isn't your thing that's completely fine, we've made it easy to modify the compiled themes using [custom CSS properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties), or otherwise known as CSS variables. If you love Sass and really want to tweak the component themes, don't worry, we've documented every part of the theming engine so that you can take full control of what comes on the other end as CSS.
 
-## Global Variables
+## グローバル変数
 
 If you inspect any of the CSS themes above, you will notice that there are quite a few CSS variables included in the `:root` rule scope; We include variables for `colors`, `shadows`, and `typography`. Modifying any of these allows you to customize the overall look and feel of the theme and conversely the components.
 
@@ -140,7 +140,7 @@ igx-avatar {
 
 You would generally use _global_ variables when you want to apply changes to all instances of a component while _local_ variables target specific component instances and will always override the global variable.
 
-Here's another example:
+次の例を見てみましょう。
 
 ```html
 <!-- app.component.html -->
@@ -177,12 +177,12 @@ This should be all you need to get you started with theming. You can modify glob
 
 ## その他のリソース
 
-Related topics:
+関連トピック:
 
-- [Palettes](./palettes.md)
-- [Elevations](./elevations.md)
-- [Typography](./typography.md)
-- [Theming with Sass](./sass/index.md)
+- [パレット](./palettes.md)
+- [エレベーション](./elevations.md)
+- [タイポグラフィ](./typography.md)
+- [Sass のテーマ](./sass/index.md)
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
