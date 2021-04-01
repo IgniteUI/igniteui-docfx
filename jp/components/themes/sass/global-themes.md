@@ -168,14 +168,14 @@ The general rule of thumb regarding what the value of `$legacy-support` should b
 
 <div class="divider--half"></div>
 
-## Additional Resources
+## その他のリソース
 <div class="divider--half"></div>
 
 Learn how to create individual component themes:
 
 * [Component Themes](./component-themes.md)
 
-Our community is active and always welcoming to new ideas.
+コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

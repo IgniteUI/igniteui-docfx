@@ -81,13 +81,13 @@ This will set the `--resting-shadow` in the raised button and card, and the `--g
 
 Elevations can be created and consumed in a more powerful way using Sass as well. Check out the related topics below to learn more.
 
-## Additional Resources
+## その他のリソース
 
 Related topics:
 
 - [Elevations with Sass](./sass/elevations.md)
 
-Our community is active and always welcoming to new ideas.
+コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

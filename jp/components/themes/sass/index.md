@@ -43,7 +43,7 @@ Some components use keyframe transitions and animations to communicate changes o
 ## Themes
 Finally, we have component themes. Palettes, Schemas, Elevations, Roundness, and Animations wouldn't do much good on their own if they weren't used by a theme. We provide themes for individual component, and a global one, that styles the entire application and every component in it. You simply pass the palette and schema to the global theme, we take care of the rest. You can, of course, style each component individually to your liking by creating custom schemas, elevations, and by passing different values for roundness and colors to the component theme mixins.
 
-## Additional Resources
+## その他のリソース
 <div class="divider--half"></div>
 
 Learn the concepts:
@@ -61,7 +61,7 @@ Learn how to create application-wide themes:
 Learn how to create component-specific themes:
 * [Component Themes](./component-themes.md)
 
-Our community is active and always welcoming to new ideas.
+コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

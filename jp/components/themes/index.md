@@ -175,7 +175,7 @@ Avatars `AB` and `CD` will use the globally set _lavender_ color as background, 
 
 This should be all you need to get you started with theming. You can modify global palette colors, elevations, and change component theme properties by creating global and local component themes. If you want to learn more, we have extensive documentation covering topics like **Palettes**, **Elevations**, **Typography**, and **Theming with Sass** in depth.
 
-## Additional Resources
+## その他のリソース
 
 Related topics:
 
@@ -184,7 +184,7 @@ Related topics:
 - [Typography](./typography.md)
 - [Theming with Sass](./sass/index.md)
 
-Our community is active and always welcoming to new ideas.
+コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
