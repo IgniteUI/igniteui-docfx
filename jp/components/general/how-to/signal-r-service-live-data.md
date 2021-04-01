@@ -259,7 +259,7 @@ export class SignalRService implements OnDestroy {
         });
         this.hubConnection.on('transferdata', (data) => {
             this.data.next(data);
-        })
+        });
     }
     ...
 ```
@@ -268,9 +268,9 @@ app.component で、新しく作成された `startConnection` メソッドを�
 
 ```ts
 constructor(public dataService: SignalRService) {}
-    public ngOnInit() {
-        this.dataService.startConnection(this.frequency, this.dataVolume, true, false);
-    }
+public ngOnInit() {
+    this.dataService.startConnection(this.frequency, this.dataVolume, true, false);
+}
 ...
 ```
 ### グリッドのデータ バインディング
