@@ -30,6 +30,12 @@
   href: general/data-analysis.md
   new: false
   updated: true
+- name: How to
+  new: true
+  items:
+    - name: Build Real-time SignalR App with .NET Core
+      href: general/how-to/signal-r-service-live-data.md
+      new: true
 - name: Angular Schematics & Ignite UI CLI
   href: general/cli-overview.md
   new: false
@@ -950,56 +956,75 @@
   new: false
 - name: スタイルとテーマ
   header: true
-  sortable: true
-- name: Themes
+  sortable: false
+- name: Overview
   href: themes/index.md
   new: false
+- name: Palettes
+  href: themes/palettes.md
+  new: false
+- name: Elevations
+  href: themes/elevations.md
+  new: false
+- name: Typography
+  href: themes/typography.md
+  new: false
+- name: Display Density
+  href: display-density.md
+- name: Sass
+  new: false
   items:
-    - name: パレット
-      href: themes/palette.md
+    - name: Overview
+      href: themes/sass/index.md
       new: false
-    - name: スキーマ
-      href: themes/schemas.md
+    - name: Configuration
+      href: themes/sass/configuration.md
+      new: true
+    - name: Palettes
+      href: themes/sass/palettes.md
       new: false
-    - name: タイポグラフィ
-      href: themes/typography.md
+    - name: Elevations
+      href: themes/sass/elevations.md
+      new: false
+    - name: Typography
+      href: themes/sass/typography.md
+      new: false
+    - name: Schemas
+      href: themes/sass/schemas.md
+      new: false
+    - name: Animations
+      href: themes/sass/animations.md
+      new: false
+    - name: Roundness
+      href: themes/sass/roundness.md
       new: false
     - name: グローバル テーマ
-      href: themes/global-theme.md
+      href: themes/sass/global-themes.md
       new: false
     - name: コンポーネント テーマ
-      href: themes/component-themes.md
+      href: themes/sass/component-themes.md
       new: false
     - name: 定義済みのテーマ
       new: false
       items:
         - name: Material
-          href: themes/themes-list/material.md
+          href: themes/sass/presets/material.md
           new: false
         - name: Fluent
-          href: themes/themes-list/fluent.md
+          href: themes/sass/presets/fluent.md
           new: false
         - name: Bootstrap
-          href: themes/themes-list/bootstrap.md
+          href: themes/sass/presets/bootstrap.md
           new: false
         - name: Indigo
-          href: themes/themes-list/indigo.md
+          href: themes/sass/presets/indigo.md
           new: true
+    - name: Misc
+      new: true
+      items:
     - name: 印刷スタイル
-      href: themes/printing-styles.md
-      new: false
-    - name: CSS 変数を使用したテーマ設定
-      href: themes/css-variables-theming.md
-      new: false
-- name: 丸み付け
-  href: roundness.md
-  new: false
-- name: シャドウ
-  href: shadows.md
-- name: アニメーション
-  href: animations.md
-- name: 密度の表示
-  href: display-density.md
+        href: themes/misc/printing-styles.md
+        new: false
 - name: データ入力と表示
   header: true
   sortable: true
