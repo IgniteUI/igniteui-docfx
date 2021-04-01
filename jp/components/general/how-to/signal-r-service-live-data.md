@@ -1,67 +1,67 @@
 ---
-title: How to create ASP.NET Core SignalR service for live-data streaming.
-_description: Modern data grid & dock manager are used for application creation along with ASP.NET Core SignalR.
+title: ライブ データ ストリーミング用の ASP.NET Core SignalR サービスを作成する方法。
+_description: 最新のデータ グリッドとドック マネージャーは、ASP.NET Core SignalR とともにアプリケーションの作成に使用されます。
 _keywords: angular, signalr, .net core, infragistics, インフラジスティックス
 _language: ja
 ---
 
-# Real-time Web App with ASP.NET Core SignalR
-In this topic, we’ll see how to create applications for both *streaming* and *receiving* data with **ASP.NET Core SignalR**. 
+# ASP.NET CoreSignalR を使用したリアルタイム Web アプリ
+このトピックでは、**ASP.NET Core SignalR** を使用してデータの**ストリーミング**と**受信**の両方に対応するアプリケーションを作成する方法を説明します。
 
-What you'll need:
-- A basic knowledge of ASP.NET Core and Angular.
-- .NET Core 3.1 installed and IDE such as Visual Studio.
+前提条件:
+- ASP.NET Core と Angular の基本的な知識。
+- .NET Core 3.1 がインストールされ、Visual Studio などの IDE。
 
-What you'll know by the end of this article:
-- How to add and use SignalR.
-- How to open Client connection and use the *method invocation* concept to stream data per Client.
-- How to consume the SignalR service with Angular application by using Observables.
+この記事の終わりまでに、次のことがわかります:
+- SignalR を追加して使用する方法。
+- クライアント接続を開き、**メソッドの呼び出し**の概念を使用してクライアントごとにデータをストリーミングする方法。
+- Observables を使用して Angular アプリケーションで SignalR サービスを使用する方法。
 
-SignalR takes advantage of several transports and it automatically selects the best available transport given the client and server's capabilities - [WebSockets, Server Send Events or Long-polling](https://stackoverflow.com/a/12855533/2940502).
+SignalR はいくつかの転送を利用し、クライアントとサーバーの機能 ([WebSockets、サーバー送信イベント (SSE)、またはロングポーリング](https://stackoverflow.com/a/12855533/2940502)) を考慮して、利用可能な最適な転送を自動的に選択します。
 
-When we talk in terms of [WebSockets](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/websockets?view=aspnetcore-5.0) (Putting SSE and Long-polling out of the equation) when the client is real-time connected to the server, whenever something happens the server will knows to send a message over that WebSocket back to the client. With old-school clients and servers the Long-polling transport would be used.
+クライアントがサーバーにリアルタイムで接続されているときに、SSE とロングポーリングを除いて、[WebSockets](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/websockets?view=aspnetcore-5.0) の観点から話すと、何かが起こったときはいつでも、サーバーはその WebSocket を介してクライアントにメッセージを送信することを認識します。一昔前のクライアントとサーバーでは、ロングポーリング転送が使用されます。
 
-This is how SignalR handles modern clients and servers, it uses WebSockets under the hood when available, and gracefully falls back to other techniques and technologies when it isn't:
+これは、SignalR が最新のクライアントとサーバーを処理する方法であり、利用可能な場合は内部で WebSockets を使用し、そうでない場合は他の技術とテクノロジーに適切にフォールバックします。
 
 <img style="-webkit-box-shadow: 8px 9px 9px 5px #ccc; -moz-box-shadow: 8px 9px 9px 5px #ccc; box-shadow: 8px 9px 9px 5px #ccc; min-width: calc(100% - 950px); max-width: calc(100% - 400px);"
   src="../../../images/general/how-to/ws-party-1.jpg"
   data-src="../../../images/general/how-to/ws-party-1.jpg"
-  alt="How to party"
+  alt="パーティの仕方"
   title="How to party" />
 
-It's like a handshake, the Client and Server agree on what to use and they use it. This is called **process negotiation**.
+それはハンドシェイクのようなもので、クライアントとサーバーは何を使用するかについて合意します。これは**プロセス ネゴシエーション**と呼ばれます。
 
 <img style="-webkit-box-shadow: 8px 9px 9px 5px #ccc; -moz-box-shadow: 8px 9px 9px 5px #ccc; box-shadow: 8px 9px 9px 5px #ccc; min-width: calc(100% - 650px); max-width: calc(100% - 400px);"
   src="../../../images/general/how-to/ws-lets-party.jpg"
   data-src="../../../images/general/how-to/ws-lets-party.jpg"
-  alt="Let's use WebSocket"
+  alt="WebSocket を使用しましょう"
   title="Let's use WebSocket" />
 
-## SignalR Example
-The purpose of this demo is to showcase a financial screen board with Real-time data stream using [ASP.NET Core SignalR](https://dotnet.microsoft.com/apps/aspnet/signalr).
+## SignalR の例
+このデモの目的は、[ASP.NET Core SignalR](https://dotnet.microsoft.com/apps/aspnet/signalr) を使用してリアルタイム データ ストリームを表示する財務用スクリーン ボードを紹介することです。
 
 <code-view style="height:700px"
            data-demos-base-url="{environment:lobDemosBaseUrl}"
-           iframe-src="{environment:lobDemosBaseUrl}/grid-finjs-dock-manager/grid-finjs-dock-manager" alt="Angular Live-data Update Example with a service">
+           iframe-src="{environment:lobDemosBaseUrl}/grid-finjs-dock-manager/grid-finjs-dock-manager" alt="サービスを使用した Angular ライブデータ更新の例">
 </code-view>
 
-## SignalR Server Configuration
+## SignalR サーバーの構成
 
-### Create ASP.NET Core App
-Let's see how to set up the ASP.NET Core SignalR application.
-In Visual Studio from *File* >> *New project* choose ASP.NET Core Web Application and follow the setup. Feel free to follow [the official Microsoft documentation tutorial](https://docs.microsoft.com/en-us/aspnet/core/tutorials/signalr?view=aspnetcore-3.1&tabs=visual-studio) if you experience any configuration difficulties.
+### ASP.NET Core アプリを作成する
+LASP.NET Core SignalR アプリをセットアップする方法を見てみましょう。
+Visual Studio の **[ファイル]** >> **[新規作成]** >> **[プロジェクト]** で、[ASP.NET Core Web アプリケーション] を選択し、セットアップに従います。構成上の問題が発生した場合は、[Microsoft の公式ドキュメント チュートリアル](https://docs.microsoft.com/ja-jp/aspnet/core/tutorials/signalr?view=aspnetcore-3.1&tabs=visual-studio)に従ってください。
 
 <img style="-webkit-box-shadow: 8px 9px 9px 5px #ccc; -moz-box-shadow: 8px 9px 9px 5px #ccc; box-shadow: 8px 9px 9px 5px #ccc; min-width: calc(100% - 650px); max-width: calc(100% - 400px);"
   src="../../../images/general/how-to/create-new-project.jpg"
   data-src="../../../images/general/how-to/create-new-project.jpg"
-  alt="Create new asp.net core project"
+  alt="新しい asp.net core プロジェクトの作成"
   title="Create new asp.net core project" />
 
 
-### SignalR Config Setup
+### SignalR 構成のセットアップ
 
-Add the following code to the [Startup.cs file](https://github.com/IgniteUI/finjs-web-api/blob/master/WebAPI/Startup.cs):
-- Endpoint part of the `Configure` method.
+以下のコードを [Startup.cs ファイル](https://github.com/IgniteUI/finjs-web-api/blob/master/WebAPI/Startup.cs)に追加します。
+- `Configure` メソッドのエンドポイント部分。
 
 ```cs
 app.UseEndpoints(endpoints =>
@@ -71,7 +71,7 @@ app.UseEndpoints(endpoints =>
 });
 ```
 
-- Add SignalR usage to the `ConfigureServices` method.
+- SignalR の使用法を `ConfigureServices` メソッドに追加します。
 
 ```cs
 services.AddSignalR(options =>
@@ -80,9 +80,9 @@ services.AddSignalR(options =>
 });
 ```
 
-The changes above are adding SignalR to the ASP.NET Core dependency injection and routing system.
+上記の変更により、SignalR が ASP.NET Core の依存関係挿入およびルーティング システムに追加されます。
 
-Now, let's set up additional basic configuration. Open the [properties/launchSettings.json](https://github.com/IgniteUI/finjs-web-api/blob/master/WebAPI/Properties/launchSettings.json#L11) file and modify it accordingly:
+それでは、追加の基本構成をセットアップしましょう。[properties/launchSettings.json](https://github.com/IgniteUI/finjs-web-api/blob/master/WebAPI/Properties/launchSettings.json#L11) ファイルを開き、それに応じて変更します:
 
 ```json
 "profiles": {
@@ -96,7 +96,7 @@ Now, let's set up additional basic configuration. Open the [properties/launchSet
     }
   }
 ```
-Our server-side project will run on `localhost:5001` and the client side will run on `localhost:4200`, so in order to establish communication between those two, we need to enable CORS. Let’s open the [Startup.cs](https://github.com/IgniteUI/finjs-web-api/blob/master/WebAPI/Startup.cs#L31) class and modify it:
+サーバー側のプロジェクトは `localhost:5001` で実行され、クライアント側は `localhost:4200` で実行されるため、これら 2 つの間の通信を確立するには、CORS を有効にする必要があります。[Startup.cs](https://github.com/IgniteUI/finjs-web-api/blob/master/WebAPI/Startup.cs#L31) クラスを開いて、変更してみましょう。
 
 ```cs
 public void ConfigureServices(IServiceCollection services)
@@ -118,26 +118,26 @@ public void ConfigureServices(IServiceCollection services)
         ...
 ```
 
-If you experience a specific problems with enabling Cross-origin resource sharing, check out the [official Microsoft topic](https://docs.microsoft.com/en-us/aspnet/core/signalr/security?view=aspnetcore-5.0#cross-origin-resource-sharing).
-### SignalR Hub Setup
-Let's start by explaining what is a [SignalR hub?](https://docs.microsoft.com/en-us/aspnet/core/signalr/hubs?view=aspnetcore-5.0#what-is-a-signalr-hub)
-The SignalR Hub API enables you to call methods on connected clients from the server. In the server code, you define methods that are called by client. In SignalR there is this concept called *Invocation* - you can actually be calling the hub from the client with a particular method. In the client code, you define methods that are called from the server.
+クロス オリジン リソース共有の有効化で特定の問題が発生した場合は、[Microsoft の公式トピック](https://docs.microsoft.com/ja-jp/aspnet/core/signalr/security?view=aspnetcore-5.0#cross-origin-resource-sharing)を確認してください。
+### SignalR ハブのセットアップ
+[SignalR ハブ](https://docs.microsoft.com/ja-jp/aspnet/core/signalr/hubs?view=aspnetcore-5.0#what-is-a-signalr-hub)とは何かを説明することから始めましょう。
+SignalR ハブ API を使用すると、サーバーから接続されたクライアントのメソッドを呼び出すことができます。サーバー コードでは、クライアントによって呼び出されるメソッドを定義します。SignalR には、**呼び出し**と呼ばれるこの概念があります。実際には、特定のメソッドを使用してクライアントからハブを呼び出すことができます。クライアント コードでは、サーバーから呼び出されるメソッドを定義します。
 
-The actual hub lives on the server side. Imagine you have *Clients* and *the Hub* is between all of them. You can say something to all the Clients with `Clients.All.doWork()` by invoking a method on the hub. This will goes to all connected clients. Also, you can communicate with only one client, which is the Caller, because he is the caller of that particular method.
+実際のハブはサーバー側にあります。**クライアント**がいて、**ハブ**がそれらすべての間にあると想像してください。ハブでメソッドを呼び出すことにより、`Clients.All.doWork()` を使用してすべてのクライアントに何かを言うことができます。これは、接続されているすべてのクライアントに適用されます。また、特定のメソッドの呼び出し元である 1 つのクライアントとのみ通信できます。
 
 <img style="-webkit-box-shadow: 8px 9px 9px 5px #ccc; -moz-box-shadow: 8px 9px 9px 5px #ccc; box-shadow: 8px 9px 9px 5px #ccc; min-width: calc(100% - 650px); max-width: calc(100% - 400px);"
   src="../../../images/general/how-to/ws-hub-callers.jpg"
   data-src="../../../images/general/how-to/ws-hub-callers.jpg"
-  alt="Hub example with callers"
+  alt="呼び出し元とのハブの例"
   title="Hub example with callers" />
 
-We've created a [StreamHub class](https://github.com/IgniteUI/finjs-web-api/blob/d493f159e0a6f14b5ffea3e893f543f057fdc92a/WebAPI/Models/StreamHub.cs#L9) that inherits the base Hub class, which is responsible for managing connections, groups, and messaging. It's good to keep in mind that the Hub class is stateless and each new invocation of a certain method is in new instance of this class. It's useless to save state in instance properties, rather we suggest to use static properties, in our case we use static key value pair collection to store data for each connected client. 
+接続、グループ、およびメッセージの管理を担当する基本 Hub クラスを継承する [StreamHub クラス](https://github.com/IgniteUI/finjs-web-api/blob/d493f159e0a6f14b5ffea3e893f543f057fdc92a/WebAPI/Models/StreamHub.cs#L9)を作成しました。Hub クラスはステートレスであり、特定のメソッドの新しい呼び出しはそれぞれ、このクラスの新しいインスタンスにあることに注意してください。インスタンス プロパティに状態を保存することは無意味です。代わりに、静的プロパティを使用することをお勧めします。この場合、静的キー値ペアのコレクションを使用して、接続されている各クライアントのデータを保存します。 
 
-Other useful properties of this class are *Clients*, *Context* and *Groups*. They can help you to manage certain behavior based on the unique *ConnectionID*. Also, this class provides you with the following useful methods:
-- OnConnectedAsync() - Called when a new connection is established with the hub.
-- OnDisconnectedAsync(Exception) - Called when a connection with the hub is terminated.
+このクラスの他の便利なプロパティは、*Clients*、*Context*、および *Groups* です。これらは、一意の *ConnectionID* に基づいて特定の動作を管理するのに役立ちます。また、このクラスは次の便利なメソッドを提供します:
+- OnConnectedAsync() - ハブとの新しい接続が確立されたときに呼び出されます。
+- OnDisconnectedAsync(Exception) - ハブとの接続が終了したときに呼び出されます。
 
-They allows us to perform any additional logic when a connection is established or closed. In our application we've also added *UpdateParameters* method that gets a *Context connection ID* and use it to send back data at certain interval. As you can see we communicate over a unique *ConnectionID* which prevents a streaming intervention from other Clients.
+これにより、接続が確立または閉じられたときに追加ロジックを実行できます。このアプリケーションでは、*Context connection ID* を取得し、それを使用して特定の間隔でデータを送り返す *UpdateParameters* メソッドも追加しました。ご覧のとおり、他のクライアントからのストリーミング介入を防ぐ一意の *ConnectionID* を介して通信します。
 
 ```cs
 public async void UpdateParameters(int interval, int volume, bool live = false, bool updateAll = true)
@@ -167,7 +167,7 @@ public async void UpdateParameters(int interval, int volume, bool live = false, 
 }
 ```
 
-When the data is ready we transfer it by emitting a `transferdata` event with the help of `SendAsync` Method.
+データの準備ができたら、`SendAsync` メソッドを使用して `transferdata` イベントを発行してデータを転送します。
 
 ```cs
 public async Task Send(FinancialData[] array, IClientProxy client, string connection)
@@ -185,7 +185,7 @@ public override Task OnDisconnectedAsync(Exception exception)
 }
 ```
 
-Our client application would be listening on the registered events:
+クライアント アプリケーションは、登録されたイベントをリスニングします。
 
 ```ts
 private registerSignalEvents() {
@@ -198,22 +198,22 @@ private registerSignalEvents() {
 }
 ```
 
-Public GitHub repository of the [ASP.NET Core Application could be found here](https://github.com/IgniteUI/finjs-web-api).
+ASP.NET Core アプリケーションの公開な GitHub リポジトリは[こちら](https://github.com/IgniteUI/finjs-web-api)にあります。
 
-## Create SignalR Client Library
+## SignalR クライアント ライブラリを作成する
 
-We will create Angular project in order to consume the SignalR service.
-Github repository with the actual application can be found [here](https://github.com/IgniteUI/igniteui-angular-samples/tree/master/projects/app-lob/src/app/grid-finjs-dock-manager).
+SignalR サービスを利用するために Angular プロジェクトを作成します。
+実際のアプリケーションを含む Github リポジトリは[こちら](https://github.com/IgniteUI/igniteui-angular-samples/tree/master/projects/app-lob/src/app/grid-finjs-dock-manager)にあります。
 
-First, start by installing SignalR:
+まず、SignalR をインストールすることから始めます:
 
 ```
 npm install @microsoft/signalr
 ```
 
-Keep in mind that we are going to send the HTTP request towards our server, so we need HttpClientModule as well.
+サーバーに向けて HTTP リクエストを送信するため、HttpClientModule も必要であることに注意してください。
 
-Below you will find the [signal-r.service.ts](https://github.com/IgniteUI/igniteui-angular-samples/blob/master/projects/app-lob/src/app/services/signal-r.service.ts#L10) file that handles the hub connection builder.
+以下に、ハブ接続ビルダーを処理する [signal-r.service.ts](https://github.com/IgniteUI/igniteui-angular-samples/blob/master/projects/app-lob/src/app/services/signal-r.service.ts#L10) ファイルを示します。
 
 ```ts
 export class SignalRService implements OnDestroy {
@@ -264,7 +264,7 @@ export class SignalRService implements OnDestroy {
     ...
 ```
 
-In your app.component add use the newly created `startConnection` method
+app.component で、新しく作成された `startConnection` メソッドを使用します。
 
 ```ts
 constructor(public dataService: SignalRService) {}
@@ -273,15 +273,15 @@ constructor(public dataService: SignalRService) {}
     }
 ...
 ```
-### Grid Data Binding
+### グリッドのデータ バインディング
 
-As we have seen so far in our client code we set up listener for `transferdata` event, which receive as an argument the updated data array. In order to pass the newly received data to our grid we use an observable. In order to set that, we need to bind grid's data source to the data observable like so:
+これまでクライアント コードで見てきたように、`transferdata` イベントのリスナーを設定します。このイベントは、更新されたデータ配列を引数として受け取ります。新しく受信したデータをグリッドに渡すために、オブザーバブルを使用します。これを設定するには、グリッドのデータ ソースを次のようにデータ オブザーバブルにバインドする必要があります。
 
 ```html
 <igx-grid [data]='data | async'> ... </igx-grid>
 ```
 
-Every time when new data is received from the server to the client we call the `next()` method of the data observable.
+サーバーからクライアントに新しいデータを受信するたびに、データ オブザーバブルの `next()` メソッドを呼び出します。
 
 ```ts
     this.hubConnection.on('transferdata', (data) => {
@@ -289,8 +289,8 @@ Every time when new data is received from the server to the client we call the `
     })
 ```
 
-## Topic Takeaways
+## トピックの重要ポイント
 
-If you don’t want to refresh you application, rather just see when the data is updated, you should consider ASP.NET Core SignalR. I definitely recommend going for streaming content when you think your data is large, or if you want a smooth user experience without blocking the client by showing endless spinners.
+アプリケーションを更新するのではなく、データがいつ更新されるかを確認するだけの場合は、ASP.NET Core SignalR を検討してください。データが大きいと思う場合、または無限のスピンを表示してクライアントをブロックせずにスムーズなユーザー エクスペリエンスが必要な場合は、ストリーミング コンテンツを使用することを強くお勧めします。
 
-Using SignalR Hub communication is easy and intuitive and with the help of Angular Observables you can create a powerful application that uses data streaming with WebSockets.
+SignalR Hub 通信の使用は簡単で直感的であり、Angular Observables を使用すると、WebSockets でデータ ストリーミングを使用する強力なアプリケーションを作成できます。
