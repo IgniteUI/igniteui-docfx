@@ -33,7 +33,7 @@
 - name: 操作方法
   new: true
   items:
-    - name: Build Real-time SignalR App with .NET Core
+    - name: .NET Core を使用してリアルタイム SignalR アプリの構築
       href: general/how-to/signal-r-service-live-data.md
       new: true
 - name: Angular Schematics & Ignite UI CLI
