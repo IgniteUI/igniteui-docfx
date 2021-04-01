@@ -330,8 +330,8 @@ class MySummary extends IgxNumberSummaryOperand {
 
 }
 
-## Format summaries
-By default, summary results are localized and formatted according to the grid [`locale`]({environment:angularApiUrl}/classes/igxgridcomponent.html#locale) and column [`pipeArgs`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#pipeArgs). When you want to change the default appearance of the summaries, you may format the result with the [`summaryFormatter`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#summaryFormatter) property.
+## Formatting summaries
+By default, summary results, produced by the built-in summary operands, are localized and formatted according to the grid [`locale`]({environment:angularApiUrl}/classes/igxgridcomponent.html#locale) and column [`pipeArgs`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#pipeArgs). When using custom operands, the `locale` and `pipeArgs` are not applied. If you want to change the default appearance of the summary results, you may format them using the [`summaryFormatter`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#summaryFormatter) property.
 
 ```typescript
 public dateSummaryFormat(summary: IgxSummaryResult, summaryOperand: IgxSummaryOperand): string {
@@ -343,6 +343,10 @@ public dateSummaryFormat(summary: IgxSummaryResult, summaryOperand: IgxSummaryOp
     }
     return result;
 }
+```
+
+```html
+<igx-column ... [summaryFormatter]="dateSummaryFormat"></igx-column>
 ```
 
 @@if (igxName === 'IgxGrid') {

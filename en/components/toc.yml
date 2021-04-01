@@ -143,7 +143,7 @@
       updated: true
     - name: Summaries
       href: grid/summaries.md
-      updated: false
+      updated: true
     - name: Column Moving
       href: grid/column-moving.md
       new: false
@@ -281,6 +281,7 @@
     - name: Summaries
       href: treegrid/summaries.md
       new: false
+      updated: true
     - name: Column Moving
       href: treegrid/column-moving.md
       new: false
@@ -406,6 +407,7 @@
     - name: Summaries
       href: hierarchicalgrid/summaries.md
       new: false
+      updated: true
     - name: Column Moving
       href: hierarchicalgrid/column-moving.md
       new: false
