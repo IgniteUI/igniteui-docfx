@@ -30,6 +30,12 @@
   href: general/data-analysis.md
   new: false
   updated: true
+- name: 操作方法
+  new: true
+  items:
+    - name: .NET Core を使用してリアルタイム SignalR アプリの構築
+      href: general/how-to/signal-r-service-live-data.md
+      new: true
 - name: Angular Schematics & Ignite UI CLI
   href: general/cli-overview.md
   new: false
