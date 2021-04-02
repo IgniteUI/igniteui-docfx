@@ -1,7 +1,8 @@
 ---
-title: Theming Library Configuration
+title: テーマ ライブラリの構成
 _description: The Ignite UI for Angular Theming provides several global variables that let you configure how the theming engine works.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components, Angular Theming Component, Angular Theming
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular Theming コンポーネント, Angular Theming
+_language: ja
 ---
 
 # Configuration
@@ -120,7 +121,7 @@ We will be switching to Sass modules as soon as Angular drops support for `node-
 
 Here's a list of those variables:
 
-| Variable Name | Description                                                                 |
+| 変数名 | 説明                                                                 |
 |:-------------:|:---------------------------------------------------------------------------:|
 | `$components` | Stores a register of all component themes. Used for tree-shaking.           |
 | `$keyframes`  | Stores a register of all keyframe animation mixins. Used for tree-shaking. |
@@ -128,22 +129,22 @@ Here's a list of those variables:
 
 <div class="divider"></div>
 
-## Additional Resources
+## その他のリソース
 Learn the concepts:
 
-* [Palettes](./palettes.md)
-* [Typography](./typography.md)
-* [Elevations](./elevations.md)
-* [Schemas](./schemas.md)
-* [Animations](./animations.md)
+* [パレット](./palettes.md)
+* [タイポグラフィ](./typography.md)
+* [エレベーション](./elevations.md)
+* [スキーマ](./schemas.md)
+* [アニメーション](./animations.md)
 
 Learn how to create application-wide themes:
-* [Application Themes](./global-themes.md)
+* [グローバル テーマ](./global-themes.md)
 
 Learn how to create component-specific themes:
-* [Component Themes](./component-themes.md)
+* [コンポーネント テーマ](./component-themes.md)
 
-Our community is active and always welcoming to new ideas.
+コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
