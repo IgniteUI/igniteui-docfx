@@ -7,14 +7,14 @@ _language: ja
 
 # エレベーション
 
-<p class="highlight">Elevations are used to establish and maintain functional boundaries between Document Object Model trees to enable better functional encapsulation. The implementation of the Elevations in Ignite UI for Angular is modeled after the [Elevations in Material Design](https://material.io/design/environment/elevation.html#elevation-in-material-design).</p>
+<p class="highlight">エレベーションは、Document Object Model ツリーの間に境界線を描画し、機能のカプセル化を向上します。Ignite UI for Angular でのエレベーションの実装は、[マテリアル デザインでのエレベーション](https://material.io/design/environment/elevation.html#elevation-in-material-design)をモデルにしています。</p>
 <div class="divider"></div>
 
-## Overview
+## 概要
 
-Shadows in Ignite UI for Angular closely follow the Material Design guidelines for establishing depth hierarchy based on 25 elevation levels. The size of the shadow cast is related to the elevation level number. The higher the elevation level number, the larger the shadow will be. Elevations in Ignite UI for Angular are exposed as CSS variables. Each variable stores a set of 3 `box-shadows`. These `box-shadows` represent the umbra, penumbra, and antumbra elements that are the properties of shadows as observed in the real world.
+Ignite UI for Angular のシャドウは、25 のエレベーション レベルに基づいて深い階層を確立するためのマテリアル デザイン ガイドラインに厳密に従います。シャドウ キャストのサイズは、エレベーション レベル番号に関連しています。エレベーション レベル番号が高いほど、シャドウが大きくなります。Ignite UI for Angular のエレベーションは、CSS 変数として公開されます。各変数は、3 つの `box-shadows` のセットを格納します。これらの `box-shadows` は、実世界で観察されるシャドウのプロパティである本影、半影、および影要素を表します。
 
-Here's a list of resting elevations as used in various components in Ignite UI for Angular in the Material Theme and their corresponding CSS variable names:
+Ignite UI for Angular のマテリアル テーマのさまざまなコンポーネントで使用される静止エレベーションと、それに対応する CSS 変数名のリストを次に示します:
 
 | コンポーネント                                       | デフォルト エレベーション レベル | CSS 変数      |
 | ----------------------------------------------- | ----------------------- | ------------------ |
@@ -27,11 +27,11 @@ Here's a list of resting elevations as used in various components in Ignite UI f
 | navdrawer                                       | 16                      | --igx-elevation-16 |
 | dialog                                          | 24                      | --igx-elevation-24 |
 
-As you can see from the `CSS Variable` column, all elevations are defined in the following format `--igx-elevation-[level]`. As mentioned, the elevation level number go from 0 through 24(inclusive).
+`CSS 変数`列からわかるように、すべてのエレベーションは `--igx-elevation-[level]` の形式で定義されています。前述のように、エレベーション レベル番号は 0 から 24 (両端を含む) になります。
 
-## Usage
+## 使用方法
 
-To begin using elevations in your own components all you need is to reference the variable name of the desired level.
+独自のコンポーネントでエレベーションの使用を開始するには、目的のレベルの変数名を参照するだけです。
 
 ```css
 .floaty-element {
@@ -39,7 +39,7 @@ To begin using elevations in your own components all you need is to reference th
 }
 ```
 
-Changing the elevation in an existing component theme works in a similar way.
+既存のコンポーネント テーマのエレベーションを変更することも同様に機能します。
 
 ```css
 [igxButton="raised"] {
@@ -49,13 +49,13 @@ Changing the elevation in an existing component theme works in a similar way.
 }
 ```
 
-The documentation for each component theme lists the default elevation used in each of its states. If elevation is not listed, the component doesn't use any of the predefined elevation levels.
+各コンポーネント テーマのドキュメントには、各状態で使用されるデフォルトのエレベーションがリストされています。エレベーションがリストされていない場合、コンポーネントは事前定義されたエレベーション レベルを使用しません。
 
-## Defining Elevations
+## エレベーションの定義
 
-Updating the default elevations works in a similar way to updating the palette colors. You simply need to reassign the variable to a different value. With elevations, make sure the value is `box-shadow`.
+デフォルトのエレベーションの更新は、パレットの色の更新と同じように機能します。変数を別の値に再割り当てするだけです。エレベーションの場合、値が `box-shadow` であることを確認してください。
 
-Example:
+例:
 
 ```css
 /* styles.css */
@@ -65,11 +65,10 @@ Example:
 }
 ```
 
-Now, all components that use elevation levels 1 and 2 will have their shadows updated.
+これで、エレベーション レベル 1 と 2 を使用するすべてのコンポーネントのシャドウが更新されます。
 
-### Shadowing
-You can shadow the globally set elevations for a specific scope only. We already saw that the button component uses elevation level 2 for its resting state. Level 2 is also used by the card and grid components. So to change the shadows for all three, all you need to do is:
-
+### シャドウイング
+特定のスコープに対してのみ、グローバルに設定されたエレベーションをシャドーイングすることができます。ボタン コンポーネントが静止状態にエレベーション レベル 2 を使用することはすでに見た通りです。レベル 2 は、カードおよびグリッド コンポーネントでも使用されます。したがって、3 つすべてのシャドウを変更するには、次のことを行う必要があります:
 ```css
 [igxButton="raised"],
 igx-grid,
@@ -77,9 +76,9 @@ igx-card {
     --igx-elevation-2: 0 3px 9px 0 rgba(0, 0, 0, .24);
 }
 ```
-This will set the `--resting-shadow` in the raised button and card, and the `--grid-shadow` in the grid, to the value assigned to `--igx-elevation-2`;
+これにより、エンボス加工されたボタンとカードの `--resting-shadow`、およびグリッドの `--grid-shadow` が、`-igx-elevation-2` に割り当てられた値に設定されます。
 
-Elevations can be created and consumed in a more powerful way using Sass as well. Check out the related topics below to learn more.
+エレベーションは、Sass を使用して、より強力な方法で作成および使用することもできます。詳細については、以下の関連トピックを参照してください。
 
 ## その他のリソース
 

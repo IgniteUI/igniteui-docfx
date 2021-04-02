@@ -6,16 +6,16 @@ _language: ja
 ---
 
 # エレベーション
-<p class="highlight">Elevations are used to establish and maintain functional boundaries between Document Object Model trees to enable better functional encapsulation. You can create sets of elevations using our Sass theming library.</p>
+<p class="highlight">エレベーションは、Document Object Model ツリーの間に境界線を描画し、機能のカプセル化を向上します。Sass テーマ ライブラリを使用してエレベーションのセットを作成できます。</p>
 <div class="divider"></div>
 
-## Overview
-Elevations in Ignite UI for Angular are declared as a map of 25 elements. Each element is a key-value pair where the key is the elevation level name (0..24) and the value is a list of 3 `box-shadow` declarations. We allow you to generate new sets of elevations where you can define the color for the shadows. Additionally, we expose functions for retrieving a specific elevation level from the elevations map. We expose a global variable `$igx-elevations` that is used across components by default. If you've not read the CSS variables [documentation](../elevations.md) related to Elevations, we suggest you do that first before reading on. 
+## 概要
+Ignite UI for Angular のエレベーションは、25 要素のマップとして宣言されています。各要素はキーと値のペアであり、キーはエレベーション レベル名 (0..24) であり、値は 3 つの `box-shadow` 宣言のリストです。シャドウの色を定義できる新しいエレベーションのセットを生成できます。さらに、エレベーション マップから特定のエレベーション レベルを取得するための関数を公開します。デフォルトでコンポーネント間で使用されるグローバル変数 `$igx-elevations` を公開します。エレベーションに関連する CSS 変数の[ドキュメント](../elevations.md)を読んでいない場合は、先に進む前にまず読んでおくことをお勧めします。
 
-## Usage
-The following section demonstrates how to create and retrieve custom elevations.
+## 使用方法
+次のセクションでは、カスタム エレベーションを作成および取得する方法を示します。
 
-### Creating Elevations
+### エレベーションの作成
 
 ```scss
 // Define the 3 elevation colors
@@ -30,11 +30,11 @@ $my-elevations: igx-elevations(
 );
 ```
 
-### Retrieving Elevations
+### エレベーションの取得
 
-To retrieve a set of box-shadows from the elevations map you can pass up to two arguments to the `igx-elevation` function - an elevation map and the wanted elevation level. It returns a list of 3 box shadows for the given level.
+エレベーション マップからボックス シャドウのセットを取得するには、最大 2 つの引数 (エレベーション マップと必要なエレベーション レベル ) を `igx-elevation` 関数に渡すことができます。指定されたレベルの 3 つのボックス シャドウのリストを返します。
 
-If you want to retrieve the elevation from the default `$igx-elevations` map, you can omit the first argument.
+デフォルトの `$igx-elevations` マップからエレベーションを取得する場合は、最初の引数を省略できます。
 
 ```scss
 // Returns elevation 1 shadows from $igx-elevations
@@ -47,11 +47,11 @@ $my-elevation-1: igx-elevation(
 );
 ```
 
-### Passing Elevations to Themes
+### テーマへのエレベーションの渡し
 
-Several theme mixins allow you to pass an elevations map. Most notably, the `igx-theme` has a parameter named `$elevations` which allows you to update the elevations for all component themes.
+いくつかの theme mixin を使用すると、エレベーション マップを渡すことができます。特に、`igx-theme` には、すべてのコンポーネント テーマのエレベーションを更新できる `$elevations` という名前のパラメーターがあります。
 
-Force all component themes to use your custom elevations:
+すべてのコンポーネント テーマにカスタム エレベーションを使用するように強制します。
 
 ```scss
 @include igx-theme(
@@ -60,7 +60,7 @@ Force all component themes to use your custom elevations:
 );
 ```
 
-In addition to this, you can tell the theme to ignore/not use elevations completely:
+これに加えて、エレベーションを完全に無視する/使用しないようにテーマに指示できます。
 
 ```scss
 @include igx-theme(
@@ -70,9 +70,9 @@ In addition to this, you can tell the theme to ignore/not use elevations complet
 );
 ```
 
-Some component themes also accept the `$elevations` parameter to allow you to pass custom elevation for their instances only.
+一部のコンポーネント テーマは `$elevations` パラメーターも受け入れて、インスタンスに対してのみカスタム エレベーションを渡すことができます。
 
-For instance, the card component does support passing custom elevations. To find out which components accept a custom elevations map, take a look at their Sass documentation. Each component uses only specific levels from the elevations map, those too are listed in the component's Sass docs.
+たとえば、カード コンポーネントは、カスタム エレベーションの渡しをサポートしています。カスタム エレベーション マップを受け入れるコンポーネントを見つけるには、Sass のドキュメントを参照してください。各コンポーネントは、エレベーション マップの特定のレベルのみを使用します。それらもコンポーネントの Sass ドキュメントにリストされています。
 
 ```scss
 @include igx-card(igx-card-theme(
@@ -81,7 +81,7 @@ For instance, the card component does support passing custom elevations. To find
 ));
 ```
 
-Since the `igx-elevation` function returns a list of box shadows, you can use the return value of that function to modify only certain elevations in your component themes. 
+`igx-elevation` 関数はボックス シャドウのリストを返すため、その関数の戻り値を使用して、コンポーネント テーマの特定のエレベーションのみを変更できます。 
 
 ```scss
 $card-theme: igx-card-theme(
@@ -91,7 +91,7 @@ $card-theme: igx-card-theme(
 @include igx-card($card-theme);
 ```
 
-This compiles to:
+これは次のようにコンパイルされます:
 
 ```css
 .igx-card {
@@ -102,7 +102,7 @@ This compiles to:
 }
 ```
 
-You can also pass simple box shadows without taking advantage of the `igx-elevation` function:
+`igx-elevation` 関数を利用せずに、単純なボック スシャドウを渡すこともできます。
 ```scss
 $card-theme: igx-card-theme(
     $resting-shadow: 0 10px 10px 10px #666
@@ -113,7 +113,7 @@ $card-theme: igx-card-theme(
 }
 ```
 
-Here is the result from the above snippet:
+上記のスニペットの結果は次のとおりです:
 
 ```scss
 .my-card .igx-card {
@@ -123,8 +123,8 @@ Here is the result from the above snippet:
 ```
 <div class="divider--half"></div>
 
-## Custom Elevations
-It is possible to create an elevations map that doesn't adhere to the [Material Design Guidelines](https://material.io/design/environment/elevation.html) as generated by the `igx-elevations` function. Make sure your custom elevation maps contain at least 25 elevation levels. Here's the elevations map signature our themes expect to build correctly:
+## カスタム エレベーション 
+`igx-elevations` 関数によって生成された[マテリアル デザイン ガイドライン (英語)](https://material.io/design/environment/elevation.html)に準拠していないエレベーション マップを作成することができます。カスタム エレベーション マップに少なくとも 25 のエレベーション レベルが含まれていることを確認してください。テーマが正しく構築することを期待しているエレベーション マップのシグネチャは次のとおりです:
 
 ```scss
 // Omitted levels 2 through 23 for brevity
@@ -136,8 +136,8 @@ $elevations: (
 );
 ```
 
-## Elevation Schema Declarations
-The elevation levels are also used in theme schema declarations. More on that in the [Schema](./schemes.md) section of the documentation.
+## エレベーション スキーマの宣言
+エレベーション レベルは、テーマ スキーマの宣言でも使用されます。詳細については、ドキュメントの[スキーマ](./schemes.md) セクションをご覧ください。
 <div class="divider--half"></div>
 
 ## API リファレンス
