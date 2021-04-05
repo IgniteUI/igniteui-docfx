@@ -1148,6 +1148,7 @@
 - name: Tabs
   href: tabs.md
   new: false
+  updated: true
 - name: Card
   href: card.md
 - name: Avatar
