@@ -111,7 +111,7 @@ Ignite UI for Angular also provides styling for the input of `type="file"` and i
 
 
 
-<code-view style="height:520px" 
+<code-view style="height:750px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-entries/input-group-sample-5" >
 </code-view>
