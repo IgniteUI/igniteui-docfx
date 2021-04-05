@@ -1,7 +1,7 @@
 ---
 title: Theming with Sass
 _description: The Ignite UI for Angular Theming is built with Sass and exposes a rich set of API functions and mixins that make restyling components or the entire application easier.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components, Angular Theming Component, Angular Theming
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular テーマ化コンポーネント, Angular テーマ化
 _language: ja
 ---
 

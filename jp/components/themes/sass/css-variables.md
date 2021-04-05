@@ -1,7 +1,7 @@
 ---
 title: CSS 変数を使用したテーマ設定
 _description: Ignite UI for Angular テーマ エンジンは、パレットの各色相の基本色とコントラスト テキスト色からマテリアル デザインのようなパレットを生成するアルゴリズムを提供します。
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components, Angular Theming Component, Angular Theming
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular テーマ化コンポーネント, Angular テーマ化
 _language: ja
 ---
 
