@@ -17,8 +17,8 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div class="divider--half"></div>
 
 
-<code-view style="height: 200px; width: 400px; border: 1px solid #D4D4D4;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 200px; width: 400px; border: 1px solid #D4D4D4;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/layouts/tabbar-sample-1" alt="Angular Bottom Navigation Example">
 </code-view>
 
@@ -43,25 +43,7 @@ import { IgxBottomNavModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Then, modify the component's template to include the Bottom Navigation and add three panels.
-
-```html
-<igx-bottom-nav>
-  <igx-tab-panel label="Tab 1">This is Tab 1 content.</igx-tab-panel>
-  <igx-tab-panel label="Tab 2">This is Tab 2 content.</igx-tab-panel>
-  <igx-tab-panel label="Tab 3">This is Tab 3 content.</igx-tab-panel>
-</igx-bottom-nav>
-```
-If all went well, you should see the demo sample in your browser.
-
-<div class="divider--half"></div>
-
-## Customizing Bottom Navigation
-
-Let's modify the tabs and make them more appealing by including icons. The Bottom Navigation control is compatible with the Material Design
-[**Icons**](https://material.io/icons/) so it will be very easy for you to adopt them in your application.
-
-First add the Material+Icons import in your 'styles.css' file in the main application folder.
+Then, modify the component's template to include the Bottom Navigation and add three items. Each item wraps an `igx-bottom-nav-header` and an `igx-bottom-nav-content` component which represent respectively the header and the container of the data. Headers usually consist of an icon and an optional text label. The Bottom Navigation control is compatible with the Material Design [**Icons**](https://material.io/icons/) so to adopt them in your application simply add the Material+Icons import in your 'styles.css' file in the main application folder.
 
 ```css
 // styles.css
@@ -70,6 +52,37 @@ First add the Material+Icons import in your 'styles.css' file in the main applic
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 ...
 ```
+
+```html
+<igx-bottom-nav>
+    <igx-bottom-nav-item>
+        <igx-bottom-nav-header>
+            <igx-icon>library_music</igx-icon>
+        </igx-bottom-nav-header>
+        <igx-bottom-nav-content>This is Item 1 content.</igx-bottom-nav-content>
+    </igx-bottom-nav-item>
+    <igx-bottom-nav-item>
+        <igx-bottom-nav-header>
+            <igx-icon>video_library</igx-icon>
+        </igx-bottom-nav-header>
+        <igx-bottom-nav-content>This is Item 2 content.</igx-bottom-nav-content>
+    </igx-bottom-nav-item>
+    <igx-bottom-nav-item>
+        <igx-bottom-nav-header>
+            <igx-icon>library_books</igx-icon>
+        </igx-bottom-nav-header>
+        <igx-bottom-nav-content>This is Item 3 content.</igx-bottom-nav-content>
+    </igx-bottom-nav-item>
+</igx-bottom-nav>
+```
+
+If all went well, you should see the demo sample in your browser.
+
+<div class="divider--half"></div>
+
+## Customizing Bottom Navigation
+
+Let's modify the tabs by adding labels alongside the icons and make sure the headers are properly styled.
 
 Define some object arrays for the data source in the component typescript file:
 
@@ -98,37 +111,51 @@ public booksList: object[] = [
 ...
 ```
 
-Update the component's template markup by adding new tabs' labels, icon names from the Material Design Icons library
-and also DIV and SPAN elements to visualize the data content correctly:
+Update the component's template markup as follows:
 
 ```html
 <igx-bottom-nav>
-
-  <igx-tab-panel label="Songs" icon="library_music">
-    <div class="item" *ngFor="let song of songsList">
-      <span class="item-line1">{{song.title}}</span><br/>
-      <span class="item-line2">{{song.artist}}</span>
-    </div>
-  </igx-tab-panel>
-
-  <igx-tab-panel label="Movies" icon="video_library">
-    <div class="item" *ngFor="let movie of moviesList">
-      <span class="item-line1">{{movie.title}}</span><br/>
-      <span class="item-line2">{{movie.genre}}</span>
-    </div>
-  </igx-tab-panel>
-
-  <igx-tab-panel label="Books" icon="library_books">
-    <div class="item" *ngFor="let book of booksList">
-      <span class="item-line1">{{book.title}}</span><br/>
-      <span class="item-line2">{{book.author}}</span>
-    </div>
-  </igx-tab-panel>
-
+    <igx-bottom-nav-item>
+        <igx-bottom-nav-header>
+            <igx-icon igxBottomNavHeaderIcon>library_music</igx-icon>
+            <span igxBottomNavHeaderLabel>Songs</span>
+        </igx-bottom-nav-header>
+        <igx-bottom-nav-content>
+            <div class="item" *ngFor="let song of songsList">
+                <span class="item-line1">{{song.title}}</span><br/>
+                <span class="item-line2">{{song.artist}}</span>
+            </div>
+        </igx-bottom-nav-content>
+    </igx-bottom-nav-item>
+    <igx-bottom-nav-item>
+        <igx-bottom-nav-header>
+            <igx-icon igxBottomNavHeaderIcon>video_library</igx-icon>
+            <span igxBottomNavHeaderLabel>Movies</span>
+        </igx-bottom-nav-header>
+        <igx-bottom-nav-content>
+            <div class="item" *ngFor="let movie of moviesList">
+                <span class="item-line1">{{movie.title}}</span><br/>
+                <span class="item-line2">{{movie.genre}}</span>
+            </div>
+        </igx-bottom-nav-content>
+    </igx-bottom-nav-item>
+    <igx-bottom-nav-item>
+        <igx-bottom-nav-header>
+            <igx-icon igxBottomNavHeaderIcon>library_books</igx-icon>
+            <span igxBottomNavHeaderLabel>Books</span>
+        </igx-bottom-nav-header>
+        <igx-bottom-nav-content>
+            <div class="item" *ngFor="let book of booksList">
+                <span class="item-line1">{{book.title}}</span><br/>
+                <span class="item-line2">{{book.author}}</span>
+            </div>
+        </igx-bottom-nav-content>
+    </igx-bottom-nav-item>
 </igx-bottom-nav>
 ```
+You probably noticed that in addition to placing the icon and the span with the label between the item's header tags, we also attach the `igxBottomNavHeaderIcon` and the `igxBottomNavHeaderLabel` directives to them. These directives denote the respective elements and apply the proper styles to them.
 
-Finally add the CSS classes used by the DIV and SPAN elements of the template to the component's CSS file:
+Finally add the CSS classes used by the DIV and SPAN elements of the content's template to the component's CSS file:
 
 ```css
 .item {
@@ -152,30 +179,31 @@ igx-tab-panel {
 
 After these modifications our Bottom Navigation should look similar to this:
 
-
-<code-view style="height: 350px; width: 300px; border: 1px solid #D4D4D4;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 350px; width: 300px; border: 1px solid #D4D4D4;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/layouts/tabbar-sample-2" >
 </code-view>
 
 
 <div class="divider--half"></div>
 
-If changing the tabs' labels and tabs' icons is not enough, you can also create your own template for each tab.
+If having labels and icons in the headers is not enough, you can simply add your custom content between the header tags.
 Here is an example:
 
 ```html
 <igx-bottom-nav>
-    <igx-tab-panel>
-
-        <ng-template igxTab>
+    <igx-bottom-nav-item>
+        <igx-bottom-nav-header>
+            <igx-icon igxBottomNavHeaderIcon>video_library</igx-icon>
+            <span igxBottomNavHeaderLabel>Movies</span>
             <div>
-                <!-- your custom tab content goes here -->
+                <!-- your custom tab header content goes here -->
             </div>
-        </ng-template>
-
-        <h1>Tab content</h1>
-    </igx-tab-panel>
+        </igx-bottom-nav-header>
+        <igx-bottom-nav-content>
+            <h1>Tab content</h1>
+        </igx-bottom-nav-content>
+    </igx-bottom-nav-item>
 </igx-bottom-nav>
 ```
 
@@ -183,14 +211,9 @@ Here is an example:
 
 ## Integration With Router Outlet Container
 
-Despite the primary usage of the Bottom Navigation component is to define panels with content, there may be cases in which you may need to define tab items only.
+Despite the primary usage of the Bottom Navigation component is to define tab items with content, there may be cases in which you may need to define tab items with headers only. Probably, the main scenario for such usage is navigation between views using the Angular Router. The following example will demonstrate how to configure the Bottom Navigation component to switch between three components in a single router-outlet.
 
-> [!NOTE]
-> Keep in mind that the tab items definition mode does not support any content in the tabs - the component renders a tab items' strip only. The component also does not support mixing of tab item definitions and panel definitions at the same time.
-
-When defining tab items you have the ability to apply directives on them. For example, you may use this functionality to achieve navigation between views using the Angular Router. The following example will demonstrate how to configure the Bottom Navigation component to switch between three components in a single router-outlet.
-
-To start we need a main component hosting the Bottom Navigation component and three view components with some content for demonstration purpose. For code snippets' simplicity, the view components will have a very short template but feel free to make them more distinguishable if you need. Also import these view components in your `app.module.ts` file.
+To start we need a main component hosting the Bottom Navigation component and three view components with some content for demonstration purposes. For code snippets' simplicity, the view components will have a very short template but feel free to make them more distinguishable if you need. Also import these view components in your `app.module.ts` file.
 
 ```typescript
 // bottomnav-routing.component.ts
@@ -262,40 +285,44 @@ Also, make sure to add a router-outlet for rendering the view components' output
 <!-- bottomnav-routing.component.html -->
 <router-outlet></router-outlet>
 
-<igx-bottom-nav>
-    <igx-tab
-    label="Item 1"
-    routerLink="tabbar-view1"
-    routerLinkActive
-    #rla1="routerLinkActive"
-    [isSelected]="rla1.isActive"
-    ></igx-tab>
-
-    <igx-tab
-    label="Item 2"
-    routerLink="tabbar-view2"
-    routerLinkActive
-    #rla2="routerLinkActive"
-    [isSelected]="rla2.isActive"
-    ></igx-tab>
-
-    <igx-tab
-    label="Item 3"
-    routerLink="tabbar-view3"
-    routerLinkActive
-    #rla3="routerLinkActive"
-    [isSelected]="rla3.isActive"
-    ></igx-tab>
+<igx-bottom-nav #tabs1>
+    <igx-bottom-nav-item
+        routerLinkActive
+        #rla1="routerLinkActive"
+        [selected]="rla1.isActive"
+        >
+        <igx-bottom-nav-header routerLink="tabbar-view1">
+            <igx-icon igxBottomNavHeaderIcon>phone</igx-icon>
+        </igx-bottom-nav-header>
+    </igx-bottom-nav-item>
+    <igx-bottom-nav-item
+        routerLinkActive
+        #rla2="routerLinkActive"
+        [selected]="rla2.isActive"
+    >
+        <igx-bottom-nav-header routerLink="tabbar-view2">
+            <igx-icon igxBottomNavHeaderIcon>supervisor_account</igx-icon>
+        </igx-bottom-nav-header>
+    </igx-bottom-nav-item>
+    <igx-bottom-nav-item
+        routerLinkActive
+        #rla3="routerLinkActive"
+        [selected]="rla3.isActive"
+    >
+        <igx-bottom-nav-header routerLink="tabbar-view3">
+            <igx-icon igxBottomNavHeaderIcon>format_list_bulleted</igx-icon>
+        </igx-bottom-nav-header>
+    </igx-bottom-nav-item>
 </igx-bottom-nav>
 ```
 
-The above code creates a BottomNavigation component with three tab items. All tab items are having the `RouterLink` directive applied which is used to specify the routing link used for the navigation. If any of these links becomes active, the corresponding tab item will have its `isSelected` property set because of the binding to the `RouterLinkActive` directive's `isActive` property. This way the selected tab item will always stay synchronized with the current browser's address.
+The above code creates a BottomNavigation component with three tab items. All tab items are having the `RouterLinkActive` directive applied which tracks whether the linked route is currently active. Please, note, that the `RouterLink` directive is applied on the header element itself, not on the tab item. This allows us to create a visual distinction for the header currently associated with an active route. If any of these links becomes active, the corresponding tab item will have its `selected` property set because of the binding to the `RouterLinkActive` directive's `isActive` property. This way the selected tab item will always stay synchronized with the current browser's address.
 
-The described approach above is used by the following sample to demonstrate routing using the BottomNavigation component:
+The approach described above is used by the following sample to demonstrate routing using the BottomNavigation component:
 
 
-<code-view style="height: 250px; width: 500px; border: 1px solid #D4D4D4;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 250px; width: 500px; border: 1px solid #D4D4D4;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/layouts/tabbar-sample-3" >
 </code-view>
 
@@ -320,7 +347,7 @@ $dark-bottom-nav: igx-bottom-nav-theme(
 If we take a look at the [`igx-bottom-nav-theme`]({environment:sassApiUrl}/index.html#function-igx-bottom-nav-theme), we will notice that there are even more parameters available to us in order to style our bottom navigation component!
 
 > [!NOTE]
-> In order to style any additional components that are used as part of a tab panel's content, an additional theme should be created that is specific to the respective component.
+> In order to style any additional components that are used as part of an item's content, an additional theme should be created that is specific to the respective component.
 
 ### Including themes
 
@@ -373,7 +400,7 @@ $black-color: #292826;
 $dark-palette: igx-palette($primary: $black-color, $secondary: $yellow-color);
 ```
 
-And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette. 
+And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette.
 
 ```scss
 $dark-bottom-nav: igx-bottom-nav-theme(
@@ -422,8 +449,8 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 ### Demo
 
 
-<code-view style="height: 350px; width: 300px; border: 1px solid #D4D4D4;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 350px; width: 300px; border: 1px solid #D4D4D4;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/layouts/tabbar-style" >
 </code-view>
 
@@ -432,14 +459,10 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 ## API References
 <div class="divider--half"></div>
 
-* [IgxAvatarComponent]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
 * [IgxBottomNavComponent]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html)
 * [IgxBottomNavComponent Styles]({environment:sassApiUrl}/index.html#function-igx-bottom-nav-theme)
 * [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
-* [IgxListComponent]({environment:angularApiUrl}/classes/igxlistcomponent.html)
-* [IgxListItemComponent]({environment:angularApiUrl}/classes/igxlistitemcomponent.html)
 * [IgxTabComponent]({environment:angularApiUrl}/classes/igxtabcomponent.html)
-* [IgxTabPanelComponent]({environment:angularApiUrl}/classes/igxtabpanelcomponent.html)
 
 ## Additional Resources
 <div class="divider--half"></div>
