@@ -5,22 +5,22 @@
 <!-- _language: ja-->
 <!-- --- -->
 
-# Theming
-Ignite UI for Angular allows you to modify the styles of all component themes using CSS variables. If you really wanted to dig deep, we provide a powerful Sass theming engine that allows you to create global component themes tailored to your specific design language that work in both modern and old browsers.
+# テーマ
+Ignite UI for Angular を使用すると、CSS 変数を使用してすべてのコンポーネント テーマのスタイルを変更できます。本当に深く掘り下げたい場合は、強力な Sass テーマ エンジンを提供します。これにより、特定のデザイン言語に合わせた、最新のブラウザーと古いブラウザーの両方で機能するグローバル コンポーネント テーマを作成できます。
 
 >[!NOTE] 
-> This document describes the theming system in Ignite UI for Angular from version 12 forward. Starting with version 12, we have extended support for CSS variables and they are now the recommended way to modify the theme.
-> **The Sass theming library is here to stay, you can still use all the mixins and functions you've been using prior to version 12.**
+> このドキュメントでは、バージョン 12 以降の Ignite UI for Angular のテーマ システムについて説明します。バージョン 12 以降、CSS 変数のサポートが拡張され、テーマを変更するための推奨される方法になりました。
+> **Sass テーマ ライブラリはそのままです。バージョン 12 より前に使用していたすべてのミックスインと関数を引き続き使用できます。**
 
 ## 基本的な使用方法
 
-Ignite UI for Angular includes the following themes as part of its package:
+Ignite UI for Angular には、パッケージの一部として次のテーマが含まれています:
     - Material
     - Bootstrap
     - Fluent
     - Indigo
 
-All themes have light and dark variants as well as support for left-to-right(LTR) and right-to-left(RTL) content. The easiest way to start using any of the bundled themes in your application is by specifying the path to a CSS theme file in your `angular.json` configuration. For example, if you wanted to use the dark Material theme, you would include the path to the theme file like so:
+すべてのテーマには、ライト バリエーションとダーク バリエーションがあり、左から右 (LTR) および右から左 (RTL) のコンテンツがサポートされています。アプリケーションでバンドルされているテーマの使用を開始する最も簡単な方法は、`angular.json` 構成で CSS テーマ ファイルへのパスを指定することです。たとえば、ダーク マテリアル テーマを使用する場合は、次のようにテーマ ファイルへのパスを含めます:
 
 ```json
 "styles": [
@@ -30,11 +30,11 @@ All themes have light and dark variants as well as support for left-to-right(LTR
 ```
 
 >[!NOTE]
-> If you've installed the Ignite UI for Angular package using `ng add igniteui-angular`, you will have noticed that we've already added `igniteui-angular.css` to the styles array.
+> `ng add igniteui-angular` パッケージをインストールした場合は、すでに `igniteui-angular.css` が styles 配列に追加されていることに気付くでしょう。
 
-Here's the full list of themes included in the styles folder:
+styles フォルダーに含まれるテーマの完全なリストは次のとおりです:
 
-| Theme Name                  | Path                                                                       |
+| テーマ名                  | パス                                                                       |
 |-----------------------------|----------------------------------------------------------------------------|
 | **Material Light LTR**      | `node_modules/igniteui-angular/styles/igniteui-angular.css`                |
 | **Material Light RTL**      | `node_modules/igniteui-angular/styles/igniteui-angular-rtl.css`            |
@@ -59,19 +59,19 @@ Here's the full list of themes included in the styles folder:
 | **Indigo Dark LTR**         | `node_modules/igniteui-angular/styles/igniteui-indigo-dark.css`            |
 | **Indigo Dark RTL**         | `node_modules/igniteui-angular/styles/igniteui-indigo-dark-rtl.css`        |
 
-As you can see, we ship Ignite UI for Angular with a substantial amount of themes.
+ご覧のとおり、かなりの量のテーマを備えた Ignite UI for Angular を提供しています。
 
-This is not the end of our theming story, though. All of the themes are compiled from Sass source and are built using our powerful theming engine. This engine is comprised of Sass `mixins` and `functions` many of which are publicly exposed so you can completely redesign all components in your application.
+ただし、これでテーマの話は終わりではありません。すべてのテーマは Sass ソースからコンパイルされ、強力なテーマ エンジンを使用して構築されています。このエンジンは Sass `mixins` と `functions` で構成されており、その多くは公開されているため、アプリケーションのすべてのコンポーネントを完全に再設計できます。
 
-If Sass isn't your thing that's completely fine, we've made it easy to modify the compiled themes using [custom CSS properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties), or otherwise known as CSS variables. If you love Sass and really want to tweak the component themes, don't worry, we've documented every part of the theming engine so that you can take full control of what comes on the other end as CSS.
+Sass が適切でない場合は、[カスタム CSS プロパティ](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)、または CSS 変数として知られているものを使用してコンパイルされたテーマを簡単に変更できるようにしました。Sass が適切で、コンポーネントのテーマを微調整したい場合は、心配しないでください。CSS としてもう一方の端に来るものを完全に制御できるように、テーマ エンジンのすべての部分のドキュメントを提供しています。
 
 ## グローバル変数
 
-If you inspect any of the CSS themes above, you will notice that there are quite a few CSS variables included in the `:root` rule scope; We include variables for `colors`, `shadows`, and `typography`. Modifying any of these allows you to customize the overall look and feel of the theme and conversely the components.
+上記の CSS テーマのいずれかを調べると、`:root` ルール スコープにかなりの数の CSS 変数が含まれていることがわかります。 `colors`、`shadows`、および `typography` の変数が含まれています。これらのいずれかを変更すると、テーマの全体的なルック アンド フィールをカスタマイズでき、逆にコンポーネントをカスタマイズできます。
 
-What most people look for when modifying a theme is changing the default colors used by the components.
+テーマを変更するときにほとんどの人が探しているのは、コンポーネントで使用されるデフォルト カラーを変更することです。
 
-If you wanted to change the primary and secondary colors, all you have to do is type the following in your `styles.css` file:
+プライマリ カラーとセカンダリ カラーを変更したい場合は、`styles.css` ファイルに次のように入力するだけです。
 
 ```css
 /* styles.css */
@@ -81,15 +81,15 @@ If you wanted to change the primary and secondary colors, all you have to do is 
 }
 ```
 
-Let's break down the names of these color variables. The `igx` prefix is there as a unique identifier to indicate that this variable is part of an Ignite UI for Angular theme, `primary` is the name of the `color` palette, and `500` is the color `variant`. We will take a deeper look at palettes in the [Palettes](./palettes.md) section of the documentation. For now all you need to know is that we have several colors (primary, secondary, success, info, etc.) that include different shades or _variants_ that are all generated from the `500` color variant, i.e. the `500` variant is considered to be the main color variant. Some color variants are lighter while others are darker.
+これらのカラー変数の名前を分解してみましょう。`igx` プレフィックスは、この変数が Ignite UI for Angular テーマの一部であることを示す一意の識別子で、`primary` が`カラー` パレットの名前であり、`500` がカラー `バリアント`です。ドキュメントの [パレット](./palettes.md) セクションでパレットについて詳しく見ていきます。今のところ、知っておく必要があるのは、`500` カラー バリエーションから生成されたさまざまな色合い/バリエーションを含むいくつかのカラー (primary、secondary、success、info など) があることです。`500` バリアントはメイン カラー バリエーションと見なされます。一部のカラー バリエーションはライトですが、他のカラー バリエーションはダークです。
 
-Following this approach, you can completely overhaul the entire palette.
+このアプローチに従うと、パレット全体を完全に見直すことができます。
 
 >[!WARNING]
-> Some components do not use colors from the palettes. In those cases you will have to target the component CSS variables directly to modify their colors.
-> To find out which palette colors are used by what component, take a look at the [Components Documentation]({environment:sassApiUrl}/index.html#variable-_light-avatar).
+> 一部のコンポーネントは、パレットのカラーを使用しません。そのような場合、カラーを変更するには、コンポーネントの CSS 変数を直接ターゲットにする必要があります。
+> どのパレットのカラーがどのコンポーネントで使用されているかを確認するには、コンポーネントの[ドキュメント]({environment:sassApiUrl}/index.html#variable-_light-avatar)を参照してください。
 
-Likewise, changing the `elevations`(shadows) is just as easy. We include 25 elevation levels (0-24) and they are declared as CSS variables like so:
+同様に、`エレベーション` (シャドウ) の変更も同様に簡単です。25 のエレベーション レベル (0〜24) が含まれ、次のように CSS 変数として宣言されます。
 
 ```css
 /* styles.css */
@@ -105,13 +105,13 @@ Likewise, changing the `elevations`(shadows) is just as easy. We include 25 elev
 }
 ```
 
-These are essentially stacked CSS [`box-shadow`](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) declarations. You can replace them with any other valid `box-shadow` value. The higher the elevation level number is, the bigger the shadow is. Again, different components use different elevation levels, to find out which elevation level a component uses take look at the [Components Documentation]({environment:sassApiUrl}/index.html#variable-_light-avatar). We will take a deeper look at elevations in the [Elevations](./elevations.md) of the documentation.
+これらは基本的に積層された CSS [`box-shadow`](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) 宣言です。それらを他の有効な `box-shadow` 値に置き換えることができます。エレベーション レベルの数値が高いほど、シャドウが大きくなります。この場合も、コンポーネントごとに異なるエレベーション レベルが使用されます。コンポーネントが使用するエレベーション レベルを確認するには、[コンポーネントのドキュメント]({environment:sassApiUrl}/index.html#variable-_light-avatar)を参照してください。ドキュメントの[エレベーション](./elevations.md)でエレベーションを詳しく見ていきます。
 
-## Component Variables
+## コンポーネント変数
 
-All components provide the ability to modify their themes using component-specific CSS variables. Each component exposes two variables that modify the same property. The exposed variables can be thought of as `global` and `local`. They both modify the component theme in the same way, the only difference is that `global` variables have the `igx-[component-name]` prefix attached to the variable name and can be used from parent selectors to style child components, while `local` variables are specific to a component instance.
+すべてのコンポーネントは、コンポーネント固有の CSS 変数を使用してテーマを変更する機能を提供します。各コンポーネントは、同じプロパティを変更する 2 つの変数を公開します。公開された変数は、`global` および `local` と考えることができます。どちらも同じ方法でコンポーネントのテーマを変更します。唯一の違いは、`global` 変数には `igx-[component-name]` プレフィックスが変数名に付加されており、親セレクターから子コンポーネントのスタイルを設定するために使用できますが、`local` 変数は、コンポーネント インスタンスに固有です。
 
-Let's look at an example. Say you wanted to modify the background of the avatar. The avatar looks for the following CSS variables that modify its background:
+例を見てみましょう。アバターの背景を変更したいとします。アバターは、背景を変更する次の CSS 変数を探します。
 
 ```css
 /* styles.css */
@@ -124,12 +124,12 @@ igx-avatar {
 }
 ```
 
-The snippet above will set the background in all avatars to orange.
+上記のスニペットは、すべてのアバターの背景を orange カラーに設定します。
 
-The avatar component will look for the `--background` variable first. If explicitly set, it will take its value. In other words, `local` variables have higher priority and will work **only** if applied to the `igx-avatar` directly, either by using its tag selector or any other selector that targets `igx-avatar`.
-The global `--igx-avatar-background` can be thought of as _fallback_ variable and it's going to be used only if the local `--background` is not explicitly overridden.
+アバター コンポーネントは、最初に `--background` 変数を探します。明示的に設定されている場合は、その値を取ります。つまり、`local` 変数の優先度は高く、タグ セレクターまたは `igx-avatar` をターゲットとするその他のセレクターを使用して、`igx-avatar` に直接適用された場合に**のみ**機能します。
+グローバル `--igx-avatar-background` はフォールバック変数と考えることができ、ローカル `--background` が明示的にオーバーライドされていない場合にのみ使用されます。
 
-For the curious, here's how this is implemented internally in the avatar:
+好奇心旺盛な方のために、これがアバターの内部でどのように実装されているかを次に示します:
 
 ```css
 igx-avatar {
@@ -138,7 +138,7 @@ igx-avatar {
 }
 ```
 
-You would generally use _global_ variables when you want to apply changes to all instances of a component while _local_ variables target specific component instances and will always override the global variable.
+通常、コンポーネントのすべてのインスタンスに変更を適用する場合は _global_ 変数を使用しますが、_local_ 変数は特定のコンポーネント インスタンスを対象とし、常にグローバル変数をオーバーライドします。
 
 次の例を見てみましょう。
 
@@ -169,11 +169,11 @@ igx-avatar {
 }
 ```
 
-Avatars `AB` and `CD` will use the globally set _lavender_ color as background, while avatars `EF` and `GH` will have _purple_ backgrounds.
+アバター `AB` と `CD` は、グローバルに設定された _lavender_ カラーを背景として使用しますが、アバター `EF` と `GH` は _purple_ 背景を持ちます。
 
-**Each component has all of its theme properties documented in the styling section of the component documentation.**
+**各コンポーネントには、コンポーネント ドキュメントのスタイル セクションにすべてのテーマ プロパティが記載されている。**
 
-This should be all you need to get you started with theming. You can modify global palette colors, elevations, and change component theme properties by creating global and local component themes. If you want to learn more, we have extensive documentation covering topics like **Palettes**, **Elevations**, **Typography**, and **Theming with Sass** in depth.
+テーマ設定を開始するために必要なのはこれだけです。グローバルおよびローカル コンポーネント テーマを作成することにより、グローバル パレットのカラー、高さを変更したり、コンポーネント テーマのプロパティを変更したりできます。詳細を知りたい場合は、**パレット**、**エレベション**、**タイポグラフィ**、**Sass を使用したテーマ**などのトピックをご覧ください。
 
 ## その他のリソース
 

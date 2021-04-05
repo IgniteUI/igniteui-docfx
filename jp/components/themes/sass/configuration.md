@@ -1,20 +1,20 @@
 ---
 title: テーマ ライブラリの構成
-_description: The Ignite UI for Angular Theming provides several global variables that let you configure how the theming engine works.
+_description: Ignite UI for Angular テーマ化は、テーマ エンジンの動作を構成できるいくつかのグローバル変数を提供します。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular Theming コンポーネント, Angular Theming
 _language: ja
 ---
 
-# Configuration
+# 構成
 
-<div class="highlight">The Ignite UI for Angular theming library provides several global variables that let you configure how the theming engine works.</div>
+<div class="highlight">Ignite UI for Angular テーマ ライブラリは、テーマ エンジンの動作を構成できるいくつかのグローバル変数を提供します。</div>
 <div class="divider"></div>
 
-## Legacy Support
+## レガシーのサポート
 
-The development of Ignite UI for Angular started back in 2016 when Internet Explorer 11 was still relevant. Some of our users depend on IE11 to this day. Our theming engine was built in a way that allows you to produce styles for ever-green and old browsers alike, using the same API. We allow you to configure how the engine behaves based on a single global variable - `$igx-legacy-support`. By default, it is set to `false`, but you can shadow its declaration. The value of this variable is also implicitly set when you specify the `$legacy-support` parameter on the `igx-theme` mixin.
+Ignite UI for Angular の開発は、Internet Explorer 11 がまだ関連していた 2016 年に始まりました。一部のユーザーはまだ IE11 に依存しています。私たちのテーマ エンジンは、同じ API を使用して、エバーグリーンのブラウザと古いブラウザのスタイルを同じように作成できるように構築されています。単一のグローバル変数 `$igx-legacy-support` に基づいて、エンジンの動作を構成できます。デフォルトでは `false` に設定されていますが、宣言をシャドウすることができます。この変数の値は、`igx-theme` ミックスインで `$legacy-support` パラメーターを指定するときにも暗黙的に設定されます。
 
-Example:
+例:
 
 ```scss
 // styles.scss
@@ -26,7 +26,7 @@ Example:
 );
 ```
 
-This is the default way to turn of legacy support for the theme you're building in your `styles.scss` file. If you have styles scoped to specific components, like the `app.component.scss` file, you will have to specify the legacy support there as well.
+これは、`styles.scss` ファイルで作成しているテーマのレガシー サポートをオフにするデフォルトの方法です。`app.component.scss` ファイルなど、特定のコンポーネントにスコープされたスタイルがある場合は、そこでもレガシー サポートを指定する必要があります。
 
 ```scss
 // app.component.scss
@@ -37,15 +37,15 @@ $igx-legacy-support: true;
 $color: igx-color($default-palette, 'primary', 900);
 ```
 
-We recommend you create a `_variables.scss` file in the `styles` directory of your project where you store all of your global configuration variables. In this way, you can simply import your configuration in every style file.
+すべてのグローバル構成変数を格納するプロジェクトの `styles` ディレクトリに `_variables.scss` ファイルを作成することをお勧めします。このようにして、すべてのスタイル ファイルに構成をインポートするだけです。
 
-## Default Palette
+## デフォルト パレット
 
-Another global variable is `$default-palette`. Like `$igx-legacy-support`, it is implicitly set when you pass a palette to the `igx-theme` mixin. This variable sets the palette to be used by default by theming functions and mixin when a palette is not explicitly provided.
+もう 1 つのグローバル変数は `$default-palette` です。`$igx-legacy-support` と同様に、パレットを `igx-theme` ミックスインに渡すと暗黙的に設定されます。この変数は、パレットが明示的に提供されていない場合に、テーマ関数とミックスインによってデフォルトで使用されるパレットを設定します。
 
-For instance, the `igx-color` function may not be called with a specific palette in which case the value assigned to `$default-palette` will be used to retreive the color.
+たとえば、`igx-color` 関数は特定のパレットで呼び出されない場合があります。その場合、`$default-palette` に割り当てられた値がカラーを取得するために使用されます。
 
-You can change the default palette at any time by shadowing its declaration:
+デフォルトのパレットは、その宣言をシャドウイングすることでいつでも変更できます。
 
 ```scss
 // styles.scss
@@ -63,7 +63,7 @@ $my-palette: igx-palette(
 );
 ```
 
-Now, we can assign `$my-palette` to `$default-palette` and store it in our `_variables.scss` file. Then pass either `$default-palette` or `$my-palette` to the theme mixin:
+これで、`$my-palette` を `$default-palette` に割り当てて、`_variables.scss` ファイルに保存できます。次に、`$default-palette` または `$my-palette` のいずれかをテーマ ミックスインに渡します。
 
 ```scss
 // _variables.scss
@@ -91,9 +91,9 @@ $igx-legacy-support: $legacy-support;
 );
 ```
 
-## Direction
+## 方向
 
-Like `$igx-legacy-support` and `$default-palette`, we allow you to modify the direction (left-to-right vs. right-to-left) of the produced styles; By setting the global `$direction` variable, you can change the default direction from LTR to RTL.
+`$igx-legacy-support` や `$default-palette` と同様に、生成されたスタイルの方向 (left-to-right と right-to-left) を変更できます。グローバル `$direction` 変数を設定することにより、デフォルトの方向を LTR から RTL に変更できます。
 
 
 ```scss
@@ -103,7 +103,7 @@ Like `$igx-legacy-support` and `$default-palette`, we allow you to modify the di
 $direction: rtl;
 ```
 
-You can set the direction for the global theme by specifying it in the `igx-core` mixin.
+`igx-core` ミックスインで指定することにより、グローバル テーマの方向を設定できます。
 
 ```scss
 // styles.scss
@@ -115,22 +115,22 @@ You can set the direction for the global theme by specifying it in the `igx-core
 );
 ```
 
-## Global Variables
+## グローバル変数
 
-We will be switching to Sass modules as soon as Angular drops support for `node-sass`. In the meantime, there are a few global variables that we depend upon. Be careful to not overwrite them in your Sass files.
+Angular が `node-sass` のサポートを終了するとすぐに、Sass モジュールに切り替えます。それまでの間、依存しているグローバル変数がいくつかあります。Sass ファイルでそれらを上書きしないように注意してください。
 
-Here's a list of those variables:
+これらの変数のリストは次のとおりです。
 
 | 変数名 | 説明                                                                 |
 |:-------------:|:---------------------------------------------------------------------------:|
-| `$components` | Stores a register of all component themes. Used for tree-shaking.           |
-| `$keyframes`  | Stores a register of all keyframe animation mixins. Used for tree-shaking. |
+| `$components` | すべてのコンポーネント テーマのレジスタを格納します。tree-shaking に使用されます。            |
+| `$keyframes`  | すべてのキーフレーム アニメーション ミックスインのレジスタを格納します。tree-shaking に使用されます。  |
 
 
 <div class="divider"></div>
 
 ## その他のリソース
-Learn the concepts:
+概念の学習:
 
 * [パレット](./palettes.md)
 * [タイポグラフィ](./typography.md)
@@ -138,13 +138,13 @@ Learn the concepts:
 * [スキーマ](./schemas.md)
 * [アニメーション](./animations.md)
 
-Learn how to create application-wide themes:
+アプリケーション全体のテーマを作成する方法の詳細:
 * [グローバル テーマ](./global-themes.md)
 
-Learn how to create component-specific themes:
+コンポーネント固有のテーマを作成する方法の詳細:
 * [コンポーネント テーマ](./component-themes.md)
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
 * [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular) 

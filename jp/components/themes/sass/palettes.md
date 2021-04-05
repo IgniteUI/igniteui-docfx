@@ -1,18 +1,18 @@
 ---
-title: Palettes
+title: パレット
 _description: 
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library 
+_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library
 _language: ja
 ---
 
-# Palettes
-<p class="highlight">The Ignite UI for Angular theming engine provides several powerful functions and mixins for generating and retrieving colors.</p>
+# パレット
+<p class="highlight">Ignite UI for Angular テーマ エンジンは、カラーを生成および取得するためのいくつかの関数とミックスインを提供します。</p>
 <div class="divider"></div>
 
-## Overview
-Palettes in the context of Ignite UI for Angular are declared as [Sass Maps](https://sass-lang.com/documentation/values/maps) with the keys of those map being the palette colors (`primary`, `secondary`, `grays`, etc.). Each color is in turn a map itself and has all color variants listed as keys. The values assigned to those color variants are the actual colors used throughout all component themes. All palette maps are generated programatically by the palette function. The function accepts arguments for `primary`, `secondary`, `grays`, `surface`, `info`, `success`, `warn`, and `error` colors. The `primary` color is usually your brand color. It is mostly used to style static elements, such as the `igx-navbar` component. The secondary color is the one used on elements that are actionable, such as buttons, switches, sliders, etc. The only required arguments are the ones for `primary` and `secondary` colors. The surface color is used to color the 'surface' of some components, such as cards, menus, date/time pickers, banners sheets, etc. We default the colors for `surface`, `grays`, `info`, `success`, `warn`, and `error` to a predefined set of our choosing.
+## 概要
+Ignite UI for Angular のコンテキストでのパレットは [Sass Maps](https://sass-lang.com/documentation/values/maps) として宣言され、マップのキーはパレットのカラー (`primary`、`secondary`、`grays` など) になります。各カラーはマップ自体であり、すべてのカラー バリアントがキーとしてリストされます。これらのカラー バリアントに割り当てられる値は、すべてのコンポーネント テーマで使用される実際のカラーです。すべてのパレット マップは、パレット関数によってプログラムで生成されます。この関数は、`primary`、`secondary`、`grays`、`surface`、`info`、`success`、`warn`、および `error` カラーの引数を受け取ります。`primary` カラーは通常、ブランド カラーです。`igx-navbar` など、主に静的要素をスタイル設定するために使用されます。secondary カラーは、ボタン、スイッチ、スライダーなどの操作可能な要素で使用される secondary カラーです。必須の引数は、`primary` と `secondary` カラーの引数です。surface カラーは、カード、メニュー、日付/タイムピッカー、バナーシートなどのようないくつかのコンポーネントの '表面' にカラーを付けるために使われます。デフォルトでは、`surface`、`grays`、`info`、`success`、`warn`、`error` は、定義済みのカラーのセットです。
 
-To get started with your first color palette, create an _scss_ file that would be the base file for your global theme. I will call mine _"_variables.scss"_.
+カラー パレットを作成するには、グローバル テーマの基本ファイルとなる _scss_ ファイルを作成します。_"_variables.scss"_ と呼びます。
 
 ```scss
 // _variables.scss
@@ -27,13 +27,13 @@ $melon-palette: igx-palette(
 ```
 
 >[!WARNING]
-> The value you pass to `$primary`, `$secondary`, or any other color **must be of type color**. You cannot pass CSS variables as arguments as those can't be resolved at Sass build-time.
+> `$primary`、`$secondary`、またはその他のカラーに渡す値は、**color 型である必要があります**。CSS 変数は Sass ビルド時に解決できないため、引数として渡すことはできません。
 
-We created a palette that contains variants for all colors in the it, including automatically created text contrast colors for each variant. If you haven't checked [the documentation](../palettes.md) regarding palettes with CSS variables, go check it out now. It contains information about all the color variants of a palette.
+すべてのカラー バリアントを含むパレットを作成しました。各バリアントには自動的に作成されたテキストのコントラスト カラーが含まれます。CSS 変数を使用したパレットに関するドキュメントをまだ読んでいない場合は、[こちら](../palettes.md)を参照してください。パレットのすべてのカラー バリアントに関する情報が含まれています。
 
-The `igx-palette` function does a lot internally to help you create colors at build-time that you can reuse throughout your `.scss` documents. The function is nice in that it will create a huge map of colors for you, but the algorithm for generating the color variants is very opinionated and may not match your exact needs. Our component themes don't care how the palette is generated, it only cares about the shape of the map.
+`igx-palette` 関数は、ビルド時に `.scss` ドキュメントで再利用できるカラーを作成するために内部的に多くの機能を果たします。この関数は豊かなカラー マップを作成するという点で優れていますが、カラー バリアントを生成するためのアルゴリズムは厳密であり、ニーズに完全に一致しない場合があります。コンポーネント テーマは、パレットの生成方法に関係なく、マップの形状のみに関係します。
 
-In case you want to manually create your palette, or create the palette generating function yourself here's what we expect to get as a palette map.
+パレットを手動で作成する場合、または関数を生成するパレットを作成する場合は、パレット マップを取得します。
 
 ```scss
 $handmade-palette: (
@@ -143,12 +143,12 @@ $handmade-palette: (
 ```
 <div class="divider"></div>
 
-## The Default Palette
-The `igx-theme` mixin takes a palette(see the previous section) as one of its arguments. The passed palette is assigned to the global `$default-palette` variable. This palette stored in this variable is used across the Sass library as fallback palette, whenever a palette is expected, but not explicitly provided by the user.
+## デフォルトのパレット
+`igx-theme` ミックスインは、引数の 1 つとしてパレット (前のセクションを参照) を使用します。渡されたパレットはグローバルな `$default-palette` 変数に割り当てられます。この変数に保存されたパレットは、パレットが必要であるがユーザーによって明示的に提供されない場合、Sass ライブラリ全体で代替パレットとして使用されます。
 
-You can use this knowledge to your advantage to allow you to re-use the same palette across multiple Sass documents in your application.
+この知識を活用して、アプリケーション内の複数の Sass ドキュメントで同じパレットを再利用できます。
 
-For example, you could have the following Sass files in your app.
+たとえば、以下の Sass ファイルをアプリに含めることができます。
 
 ```scss
 // src/styles/_variables.scss
@@ -161,7 +161,7 @@ $my-palette: igx-palette(
 $default-palette: $my-palette;
 ```
 
-In your main styles file:
+メインの styles ファイル:
 ```scss
 // src/styles/styles.scss
 @import '~igniteui-angular/src/lib/core/styles/themes/index';
@@ -170,7 +170,7 @@ In your main styles file:
 @include igx-theme($palette: $my-palette);
 ```
 
-In a component `.scss` file:
+コンポーネントの `.scss` ファイル:
 ```scss
 @import '../styles/styles/variables';
 
@@ -179,13 +179,13 @@ In a component `.scss` file:
 }
 ```
 
-This ensures that the same palette, declared in our `_variables.scss` file is used across all Sass files
+これにより、`_variables.scss` ファイルで宣言された同じパレットがすべての Sass ファイルで使用されます。
 
-## Grayscale Colors
+## グレースケール カラー
 
-Similar to the `primary` and `secondary` colors, you can provide another color to the `igx-palette` function that will be used to generate shades of gray. The default color used to generate the `grays` palette in all light themes is `#000`, or better known as `black`. The `grays` color variants are mainly used for setting text colors across components. Modifying the value is useful when changing the background or surface colors in your application. For instance, if your application uses a darker surface background, setting the `grays` color to `white` is sensible, and will force all text colors to be based on shades of `white`.
+`primary` と `secondary` パレットのように、グレーの色合いを生成するために使用される `igx-palette` 関数のカラーを提供できます。`grays` パレットの生成に使用されるデフォルトのカラーは `#000` (`black`)。`grays` のカラー バリアントは、コンポーネント全体のテキストのカラーを設定するために使用されます。値の変更は、アプリケーションの背景または表面のカラーを変更する場合に役立ちます。たとえば、アプリケーションで暗い背景を使用する場合、`grays` カラーを `white` に設定すると、すべてのテキストのカラーは `white` の色合いに基づいて強制されます。
 
-To generate a palette that uses `white` for its gray shades:
+グレーのの色合いに `white` を使用するパレットを生成するには:
 
 ```scss
 // Import the Ignite UI themes library first
@@ -202,9 +202,9 @@ $my-color-palette: igx-palette(
 
 <div class="divider"></div>
 
-## Colors Variants
+## カラー バリアント
 
-We provide a function that is easy to remember and use - `igx-color`. It can take up to three arguments - `palette`, `color`, and `variant`;
+`igx-color` 関数を提供します。関数は、`palette`、`color`、および `variant` の 3 つの引数を受け取ります。
 
 ```scss
 // Get the primary 500 color variant from $default-palette
@@ -229,13 +229,13 @@ $my-warning-color: igx-color($my-palette, 'warn');
 }
 ```
 
-If you omit the `$palette` argument, the value stored in `$default-palette` is used. If you do not provide `$color` and/or `$variant`, they will be assigned to `primary` and `500` respectively.
+`$palette` 引数を省略すると、`$default-palette` に保存されている値が使用されます。`$color` および/または `$variant` を指定しない場合、それぞれ `primary` および `500` に割り当てられます。
 
 <div class="divider"></div>
 
-## Contrast Text Colors
+## コントラスト テキスト カラー
 
-Similar to how we retrieve color variants, there's a way to get the contrast text color for each of the color variants in the palette.
+カラー バリアントを取得する方法と同様に、パレットの各カラー バリアントのコントラスト テキスト カラーを取得する方法があります。
 
 ```scss
 $my-primary-800: igx-color($my-palette, 'primary', 600);
@@ -250,18 +250,18 @@ $my-primary-800-text: igx-contrast-color($my-palette, 'primary', 600);
 
 <div class="divider"></div>
 
-## Color Classes
+## カラー クラス
 
-We understand that some people prefer to use CSS classes to apply colors to web elements, be it text or background. We have a mixin that allows you to generate CSS classes for each color in the palette.
+CSS クラスを使用して Web 要素 (テキストや背景など) にカラーを適用する場合もあります。パレットの各カラーの CSS クラスを生成できるミックスインがあります。
 
-The mixin takes a few arguments that allow you control the CSS class name as well as the CSS property to pass the palette color to;
+ミックスインは、CSS クラス名とパレットのカラーを渡す CSS プロパティを制御できるいくつかの引数を取得します。
 
-- `$prop` - The CSS property to assign the color to.
-- `$prefix` - A prefix string to be attached to the generated class name. The default is 'igx'.
-- `$suffix` - A suffix string to be attached to the generated class name.
-- `$palette` - The palette to use.
+- `$prop` - カラーに割り当てられる CSS プロパティ。
+- `$prefix` - 生成されたクラス名に連結するプレフィックス文字列。デフォルトは `igx` です。
+- `$suffix` - 生成されたクラス名に連結するサフィックス文字列。
+- `$palette` - 使用しするパレット。
 
-For instance, if you want to generate CSS classes that apply background color to elements, you can do the following:
+たとえば、要素に背景色を適用する CSS クラスを生成する場合、以下を実行できます:
 
 ```scss
 @include igx-color-classes(
@@ -269,7 +269,7 @@ For instance, if you want to generate CSS classes that apply background color to
     $prefix: 'bg'
 );
 ```
-The above code will generate CSS classes for each color variant in the palette. For instance, the `500` color variant of the `primary` palette will be given the following class `.bg-primary-500`;
+上記のコードは、パレットの各カラー バリアントに CSS クラスを生成します。たとえば、 `primary` パレットの `500` カラー バリアントには、`.igx-primary-500-bg` クラスが与えられます。
 
 ```html
 <div class="bg-primary-500">...</div>
@@ -277,13 +277,13 @@ The above code will generate CSS classes for each color variant in the palette. 
 
 <div class="divider--half"></div>
 
-## CSS Variables
+## CSS 変数
 
-When reading about the color palette in the [CSS Variables](../palettes.md) section of the documentation, you would've noticed that all palette colors are included as CSS variables. We do this internally every time we generate a theme using the `igx-theme` mixin. The `igx-theme` calls another mixin in its body - `igx-palette-vars`. It takes a palette and converts the colors in it into CSS variables. 
+ドキュメントの [CSS 変数](../palettes.md)セクションでカラー パレットについて読むと、すべてのパレット カラーが CSS 変数として含まれています。`igx-theme` ミックスインを使用してテーマを生成するたびに内部で行います。`igx-theme` は本体で `igx-palette-vars` ミックスインを呼び出します。パレットを取得し、パレット内のカラーを CSS 変数に変換します。 
 
-You use this mixin when you want your custom palette colors to be included as CSS variables.
+このパレットは、カスタム パレット カラーを CSS 変数として含める場合に使用します。
 
-Here's an example:
+以下はその例です。
 
 ```scss
 $my-palette: igx-palette(
@@ -294,11 +294,11 @@ $my-palette: igx-palette(
 @include igx-palette-vars($my-palette);
 ```
 
-## API Reference
-* [Palettes]({environment:sassApiUrl}/index.html#function-igx-palette)
-* [Getting Palette Colors]({environment:sassApiUrl}/index.html#function-igx-color)
-* [Getting Contrast Colors]({environment:sassApiUrl}/index.html#function-igx-contrast-color)
-* [Generating Color Classes]({environment:sassApiUrl}/index.html#mixin-igx-color-classes)
+## API リファレンス
+* [パレット]({environment:sassApiUrl}/index.html#function-igx-palette)
+* [パレット カラーの取得]({environment:sassApiUrl}/index.html#function-igx-color)
+* [コントラスト カラーの取得]({environment:sassApiUrl}/index.html#function-igx-contrast-color)
+* [カラー クラスの生成]({environment:sassApiUrl}/index.html#mixin-igx-color-classes)
 
 ## その他のリソース
 <div class="divider--half"></div>
