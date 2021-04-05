@@ -146,7 +146,7 @@ overlay.attach(element, { positionStrategy: myPositionStrategy });
 
 ### Changing Settings
 
-To change the position settings of an already existing strategy, override any of the settings in it. If strategy was already attached you should detach previously generated ID:
+To change the position settings of an already existing strategy, override any of the settings in it. If a strategy was already attached you should detach the previously generated ID:
 ```typescript
 // overlaySettings is an existing object of type OverlaySettings
 // overlaySettings.positionStrategy is an existing PositionStrategy with settings of type PositionSettings

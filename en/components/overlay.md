@@ -110,17 +110,17 @@ The Overlay Service's [`attach()`]({environment:angularApiUrl}/classes/igxoverla
   - `attach(component, settings?, moduleRef?)`
 
 The first parameter in both overloads is mandatory and represents the content that will be shown in the overlay. There are a couple of different scenarios how the content can be passed:
-  - A component definition - When passing a component in as the first argument, the overlay service creates a new instance of that component and dynamically attaches it's `ElementRef` to the `overlay` DOM. If `moduleRef` is provided the service will use the module's `ComponentFactoryResolver` and `Injector` when creating the `ComponentRef` instead of the root ones.
+  - A component definition - When passing a component in as the first argument, the overlay service creates a new instance of that component and dynamically attaches its `ElementRef` to the `overlay` DOM. If `moduleRef` is provided the service will use the module's `ComponentFactoryResolver` and `Injector` when creating the `ComponentRef` instead of the root ones.
   - An `ElementRef` to an existing DOM element (illustrated in the sample above) - Any view that is already rendered on the page can be passed through the overlay service and be rendered in the overlay DOM.
 
-In both cases [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) method will:
+In both cases the [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) method will:
   - Get the reference to the passed view from Angular
   - Detach the view from the DOM and leave an anchor in its place
-  - Re-attach the view to the overlay using provided [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) or falling back to the default overlay ones
+  - Re-attach the view to the overlay using the provided [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) or falling back to the default overlay ones
 
 Calling then [`show(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#show) will play the open animation if any and will show the attached content. Calling [`hide(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#hide) will play close animation in any and will hide the attached content.
 
-Finally calling [`detach(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#detach) method will re-attach the view back to it's original location in the DOM. If component was provided to the [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) method calling [`detach(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#detach) will destroy the created instance.
+Finally calling [`detach(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#detach) method will re-attach the view back to its original location in the DOM. If a component was provided to the [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) method calling [`detach(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#detach) will destroy the created instance.
 
 <div class="divider--half"></div>
 
@@ -205,9 +205,9 @@ const connectedOverlaySettings = IgxOverlayService.createRelativeOverlaySettings
 
 ## Hiding the Overlay
 
-The [`hide(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#hide) hides the overlay content. All of the elements rendered by the overlay service have a unique ID, assigned to them by the service. The [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) method returns the identifier of the rendered content. To hide the content that ID needs to be passed to the overlay's [`hide(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#hide) method. To hide all overlays [`hideAll()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#hideAll) method could be called.
+The [`hide(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#hide) hides the overlay content. All of the elements rendered by the overlay service have a unique ID, assigned to them by the service. The [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) method returns the identifier of the rendered content. To hide the content this ID needs to be passed to the overlay's [`hide(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#hide) method. To hide all overlays [`hideAll()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#hideAll) method could be called.
 
-When rendered content is not needed anymore [`detach(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#detach) method should be called. This method removes the content from the overlay and, if applicable, re-attaches it to it's original location in the DOM. [`detach(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#detach) method also accepts as mandatory parameter the ID generated from [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) method. To remove all the overlays [`detachAll()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#detachAll) method could be called.
+When rendered content is not needed anymore [`detach(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#detach) method should be called. This method removes the content from the overlay and, if applicable, re-attaches it to its original location in the DOM. [`detach(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#detach) method also accepts as mandatory parameter the ID generated from [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) method. To remove all the overlays [`detachAll()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#detachAll) method could be called.
 
 We can modify the previously defined overlay method to not only show but also hide the overlay element
 ```typescript
