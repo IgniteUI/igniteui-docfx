@@ -1,20 +1,20 @@
 ---
-title: Palettes
+title: パレット
 _description:
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ
 _language: ja
 ---
 
-# Palettes
+# パレット
 
-<p class="highlight">Ignite UI for Angular exposes CSS variables that allow you to update the colors in your application in a consistent way.</p>
+<p class="highlight">Ignite UI for Angular は、アプリケーションで一貫した方法でカラーを更新できる CSS 変数を公開します。</p>
 <div class="divider"></div>
 
-## Overview
+## 概要
 
-Ignite UI for Angular exposes over 80 color variants as CSS variables for 8 base colors - `primary`, `secondary`, `grays`, `info`, `success`, `warn`, `error`, and `surface`.
+Ignite UI for Angular は、`primary`、`secondary`、`grays`、`info`、`success`、`warn`、`error`、および `surface` の 8 つの基本カラーの CSS 変数として 80 カラー以上のバリアントを公開します。
 
-The `primary`, `secondary`, and `grays` colors follow the [2014 Material Design Color Palette](https://material.io/design/color/the-color-system.html#tools-for-picking-colors). This means these colors include the following variants:
+`primary`、`secondary`、および `grays` カラーは [2014 Material Design カラー パレット](https://material.io/design/color/the-color-system.html#tools-for-picking-colors)に従います。これらのカラーが以下のバリアントを含みます:
 
 <table>
     <tr>
@@ -40,14 +40,14 @@ The `primary`, `secondary`, and `grays` colors follow the [2014 Material Design 
 </table>
 
 <div class="divider--half"></div>
-As the table above shows, the `grays` color doesn't include the `A100`, `A200`, `A400`, and `A700` variants, while the `primary` and `secondary` colors contain all 14 color variants. We include 5 additional colors that are not part of the 2014 Material Design Color Palette - `info`, `success`, `warn`, `error`, and `surface`. These colors have only one color variant - `500`.
+上記の表に示すように、`grays` カラーには `A100`、`A200`、`A400`、および `A700` バリアントは含まれませんが、`primary` および `secondary` カラーには 14 カラー バリアントすべてが含まれます。2014 Material Design カラー パレットに含まれない `info`、`success`、`warn`、`error`、`surface` の 5つのカラーを追加しました。これらのカラーには 1 つのカラー バリアント (`500`) のみがあります。
 
-On top of the aforementioned colors, we also include **Level AAA** [WCAG](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html) compliant `contrast` colors for each color variant. This means that you can safely use the corresponding `contrast` color variants as foreground colors for the base color variant.
+上記のカラーに加えて、各カラー バリアントに **Level AAA** [WCAG](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html) 準拠の `contrast` カラーも含まれています。つまり、対応する `contrast` カラー バリアントをベースカラー バリアントの前景カラーとして安全に使用できます。
 
 > [!NOTE]
-> Contrast colors are generated at build-time by the Sass theming engine. Overriding the CSS variables will not update the corresponding contrast colors.
+> コントラストカラーは、Sass テーマ エンジンによってビルド時に生成されます。CSS 変数をオーバーライドしても、対応するコントラストカラーは更新されません。
 
-Here's an excerpt of the `primary` color as declared in the Light Material Palette:
+以下は、Light Material パレットで宣言された `primary` カラーの抜粋です。
 
 ```css
 :root {
@@ -81,11 +81,11 @@ Here's an excerpt of the `primary` color as declared in the Light Material Palet
 }
 ```
 
-All colors variants are derived from 4 base variables - `--igx-primary-h`, `--igx-primary-s`, `--igx-primary-l`, and `--igx-primary-a`. Each one of these variables holds the [HSLA](https://drafts.csswg.org/css-color/#the-hsl-notation) parts for a single color. HSLA stands for `hue`, `saturation`, `lightness`, and `alpha`. It's another color scheme used to describe colors. We decided to use this approach as it allows us to modify all variants of the `primary`, `secondary` and other colors at runtime.
+すべてのカラー バリアントは、`-i-gx-primary-h`、`-i-gx-primary-s`、`--igx-primary-l`、および `--igx-primary-a` の 4 つのベース変数から派生しています。これらの変数はそれぞれ、単カラーの [HSLA](https://drafts.csswg.org/css-color/#the-hsl-notation) 部分を保持します。HSLA は、`hue` (色相)、`saturation` (彩度)、`lightness` (明度)、および `alpha` (アルファ) を表します。カラーを説明するために使用されるもう 1 つのカラー スキームです。`primary`、`secondary`、その他のカラーのすべてのバリアントを実行時に変更できるため、この方法を使用することにしました。
 
-## Defining Palettes
+## パレットの定義
 
-If you wanted to change the color variants for a color from the palette, you can do so by overriding its HSLA values in your stylesheets. For instance, changing the primary colors is as easy as writing:
+パレットからカラーのバリアントを変更したい場合は、スタイルシートで HSLA 値をオーバーライドできます。たとえば、プライマリ カラーを変更するのは簡単です。
 
 ```css
 /* The HSLA representation of orange (#ffa500) */
@@ -98,9 +98,9 @@ If you wanted to change the color variants for a color from the palette, you can
 }
 ```
 
-This will automatically update all the other primary variants.
+これにより、他のすべてのプライマリ バリアントが自動的に更新されます。
 
-You will notice that color variants for each color are monochromatic. This is because all color variants are generated from the HSLA variables. You can override individual colors only using any color scheme:
+各カラーのカラー バリアントは単色です。これは、すべてのカラー バリアントが HSLA 変数から生成されるためです。任意のカラー スキームを使用してのみ個々のカラーをオーバーライドできます。
 
 ```css
 :root {
@@ -108,7 +108,7 @@ You will notice that color variants for each color are monochromatic. This is be
 }
 ```
 
-Be cautious when doing this:
+これを行う場合は注意してください。
 
 ```css
 :root {
@@ -117,13 +117,13 @@ Be cautious when doing this:
 }
 ```
 
-It may result in unexpected results, as some component themes use more than one color variant. We designed all component themes around monochromatic palettes.
+一部のコンポーネント テーマが複数のカラー バリアントを使用するため、予期しない結果になる場合があります。単色パレットを中心にすべてのコンポーネント テーマをデザインしました。
 
-## Scoping
+## スコープ
 
-We've seen that overriding colors in the palette is relatively easy. We can update the _global_ palette by scoping color variants to the `:root` selector in the `styles.css` file of our application:
+パレットでカラーをオーバーライドする方法は比較的簡単です。_global_ パレットを更新するには、アプリケーションの `styles.css` ファイルの `:root` セレクターにカラー バリアントをスコープします。
 
-Let's say your corporate primary color is `#9f349c` and you want to create primary variants for it. One option would be to use the [Material Color Tool](https://material.io/design/color/the-color-system.html#tools-for-picking-colors) to generate all color variants for you. Here's how we will declare the produced colors by the tool:
+たとえば、企業のプライマリ カラーが `#9f349c` で、そのプライマリ カラー バリアントを作成するとします。1 つのオプションは、[マテリアル カラー ツール](https://material.io/design/color/the-color-system.html#tools-for-picking-colors)を使用してすべてのカラー バリアントを生成することです。以下はツールで生成されたカラーを宣言する方法です。
 
 ```css
 :root {
@@ -139,11 +139,11 @@ Let's say your corporate primary color is `#9f349c` and you want to create prima
   --igx-primary-900: #561d74;
 }
 ```
-This approach disregards the `calc` function we use for coming up with color variants from HSLA scheme at runtime, however, it allows you to specify a hand-picked palette.
+このアプローチは、実行時に HSLA スキームからカラー バリアントを作成するために使用する `calc` 関数を無視しますが、選択したパレットを指定できます。
 
-The Material Color Tool doesn't give you the contrast color for each color variant. There are many tools out there that will help you determine if a specific color has enough contrast when used in combination with another color. You can use the built-in contrast checker in Chrome when determining the contrast color you want to pick for each color variant. We provide a Sass function for generating color palettes at build-time. If you prefer that we generate all color variants and their contrast colors for you from your own colors, check out the [Palettes with Sass](./sass/palettes.md) section of the documentation.
+マテリアル カラー ツールは、各カラー バリアントのコントラストカラーを提供しません。特定のカラーを他のカラーと組み合わせて使用した場合に十分なコントラストがあるかどうかを判断するのに役立つツールが多数あります。各カラー バリアントのコントラストカラーを決定する際に、Chrome の組み込みのコントラスト チェッカーを使用できます。ビルド時にカラー パレットを生成する Sass 関数を提供します。選択したカラーからすべてのカラー バリアントとそのコントラスト カラーを自動で生成する場合は、ドキュメントの「[Sass を使用したパレット](./sass/palettes.md)」セクションを参照してください。
 
-Apart from having a single global palette, you can also create several palettes scoped to other CSS selectors. For example, we can have a blue and red palette scoped to class selectors:
+単一のグローバル パレット以外に、他の CSS セレクターにスコープされる複数のパレットを作成することもできます。たとえば、青と赤のパレットをクラス セレクターにスコープできます。
 
 ```css
 /* styles.css */
@@ -169,11 +169,11 @@ Apart from having a single global palette, you can also create several palettes 
 <app-component class="blue-theme"></app-component>
 ```
 
-Then you can simply overhaul the colors in your application by changing the value of the class attribute from `blue-theme` to `red-theme`.
+class 属性の値を `blue-theme` から `red-theme` に変更することで、アプリケーションのカラーを簡単に変更できます。
 
-This approach works for overriding palette colors for individual components as well. In some instances, you don't want to create multiple palettes, but you would want to change a palette color used in component.
+この方法は、個々のコンポーネントのパレット カラーをオーバーライドする場合にも機能します。複数のパレットを作成したくないが、コンポーネントで使用されるパレットのカラーを変更したい場合があります。
 
-Let's look at the button, calendar, and the input group component themes. They all use the _100_ variant of the _grays_ color as their disabled background. Now, we can customize the theme for each component by overriding the individual properties responsible for setting the disabled background or we could change the disabled background color for all three in one fell swoop by overriding the _grays 100_ palette color for all three:
+ボタン、カレンダー、および入力グループコンポーネントのテーマを見てみましょう。それらはすべて、無効な背景として _grays_ カラーの _100_ バリアントを使用します。無効な背景を設定する個々のプロパティをオーバーライドすることによって各コンポーネントのテーマをカスタマイズできます。または 3 つすべての _grays 100_ パレットのカラーをオーバーライドすることで、3 つのすべての無効な背景色を変更できます。
 
 ```css
 igx-avatar,
@@ -183,11 +183,11 @@ igx-calendar {
 }
 ```
 
-## Dark vs. Light
+## 明暗 (Dark/Light)
 
-Palettes in Ignite UI for Angular dictate whether a theme is going to be light or dark. The two colors that have the biggest impact on that are `grays` and `surface`. See, the `grays` color variants in all themes are based on either a very light color shade, like `#fff`, or a very dark one like `#222`. Light themes have `grays` variants based on dark shades of gray, while dark themes are the opposite - all `grays` variants are a shade of white. These `grays` colors will be displayed against another color, usually the `surface` color. The `surface` color should always be on the opposite end of the `grays` in the gray scale to ensure themes look good.
+Ignite UI for Angular のパレットは、テーマが明るいまたは暗いかを示します。最も影響を与える 2 つのカラーは、`grays` と `surface` です。すべてのテーマの `grays` カラー バリアントは、`#fff` などの非常に明るい色合いまたは `#222` などの非常に暗い色合いに基づいています。明るいテーマには暗い色合いの `grays` に基づいたグレー カラーのバリアントがあり、暗いテーマは反対です。すべての `grays` カラーのバリアントは白い色合いです。これらの `grays` カラーは、他のカラー (通常は `surface` カラー) に対して表示されます。テーマを適切に表示するために、`surface` のカラーは常にグレースケールの `grays` の反対側に設定します。
 
-To make this a bit clearer, bellow is the complete list of all `grays` and `surface` color variants in both a light and a dark theme as represented in the RGBA color space.
+以下は、RGBA カラー スペースで表される light および dark テーマのすべての `grays` と `surface` カラー バリアントのリストです。
 
 *Material Light:*
 ```css
@@ -229,11 +229,11 @@ To make this a bit clearer, bellow is the complete list of all `grays` and `surf
 }
 ```
 
-Be mindful when changing the `grays` and `surface` color variants as they are used in most components and have a big impact on their overall look and feel. 
+`grays` と `surface` カラー バリアントはほとんどのコンポーネントで使用されているため、外観全体に大きな影響を与えます。 
 
-## Other Colors
+## その他のカラー
 
-So far we've covered the `primary`, `secondary`, `grays`, and `surface` color variants and how you can override them. There are four more colors - `info`, `success`, `warn`, and `error`. They are usually used to set the colors in different states. For example, the `igx-input-group` component uses these colors in its input validation states.
+ここまでで、`primary`、`secondary`、`greys`、`surface` のカラー バリアントと、それらをオーバーライドする方法を説明しました。さらに 4 つのカラーがあります - `info`、`success`、`warn`、`error`。通常、異なる状態のカラーを設定するために使用されます。たとえば、`igx-input-group` コンポーネントは、入力検証状態でこれらのカラーを使用します。
 
 ```css
 :root {
@@ -246,9 +246,9 @@ So far we've covered the `primary`, `secondary`, `grays`, and `surface` color va
 
 ## その他のリソース
 
-Related topics:
+関連トピック:
 
-- [Palettes with Sass](./sass/palettes.md)
+- [Sass を使用したパレット](./sass/palettes.md)
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
