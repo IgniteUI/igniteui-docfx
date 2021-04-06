@@ -113,7 +113,7 @@ Ignite UI for Angular は、`type="file"` の入力スタイルも提供し、�
 
 
 
-<code-view style="height:520px" 
+<code-view style="height:695px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-entries/input-group-sample-5" >
 </code-view>
