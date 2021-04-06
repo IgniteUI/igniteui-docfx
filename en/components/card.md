@@ -196,7 +196,7 @@ If everything went well, our card should look like this:
 
 You can get even more creative with the layout of the `igx-card`.
 
-Bellow is an example showing how you can create a semi-horizontal card, where we have every section of the card layed out vertically, while the `igx-card-media` appears alongside the vertical sections of the card.
+Below is an example showing how you can create a semi-horizontal card, where we have every section of the card layed out vertically, while the `igx-card-media` appears alongside the vertical sections of the card.
 
 ```html
 <igx-card [horizontal]="horizontal">
