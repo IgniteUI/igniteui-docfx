@@ -84,7 +84,7 @@ If all went well, you should see the demo sample in your browser.
 
 Let's modify the tabs by adding labels alongside the icons and make sure the headers are properly styled.
 
-Define some object arrays for the data source in the component typescript file:
+First, define some object arrays for the data source in the component typescript file:
 
 ```typescript
 ...
@@ -111,7 +111,7 @@ public booksList: object[] = [
 ...
 ```
 
-Update the component's template markup as follows:
+Next, update the component's template markup as follows:
 
 ```html
 <igx-bottom-nav>
@@ -155,7 +155,7 @@ Update the component's template markup as follows:
 ```
 You probably noticed that in addition to placing the icon and the span with the label between the item's header tags, we also attach the `igxBottomNavHeaderIcon` and the `igxBottomNavHeaderLabel` directives to them. These directives denote the respective elements and apply the proper styles to them.
 
-Finally add the CSS classes used by the DIV and SPAN elements of the content's template to the component's CSS file:
+Finally, add the CSS classes used by the DIV and SPAN elements of the content's template to the component's CSS file:
 
 ```css
 .item {
@@ -172,7 +172,7 @@ Finally add the CSS classes used by the DIV and SPAN elements of the content's t
     color: darkgray;
 }
 
-igx-tab-panel {
+igx-bottom-nav-content {
     padding: 10px;
 }
 ```
