@@ -1,45 +1,45 @@
 ---
-title: Typography
+title: タイポグラフィ
 _description:
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ
 _extraFont: https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,700
 _language: ja
 ---
 
-# Typography
+# タイポグラフィ
 
-<p class="highlight">The typography in Ignite UI for Angular is modeled after the [Material Type System](https://material.io/design/typography/the-type-system.html#). It's non-intrusive and optional, allowing you to modify the type styles using CSS only.</p>
+<p class="highlight">Ignite UI for Angular のタイポグラフィは、[マテリアル タイプ システム](https://material.io/design/typography/the-type-system.html#)をモデルにしています。邪魔にならないオプションで、CSS のみを使用してタイプ スタイルを変更できます。</p>
 <div class="divider"></div>
 
-## Overview
-The type system is a **_type scale_** consisting of **_13 different category type styles_** used across most components. All of the scale categories are completely reusable and adjustable by the end user.
+## 概要
+タイプ システムは、**タイプ スケール**でほとんどのコンポーネントで使用されている **13 の異なるカテゴリ タイプ スタイル**で構成されます。エンドユーザーはすべてのスケール カテゴリの完全な再利用、調整ができます。
 
-Here's a list of all 13 category styles as defined for the Material Theme in Ignite UI for Angular:
-| **Scale Category** | **Font Family** | **Font Weight** | **Font Size** | **Text Transform** | **Letter Spacing** | **Line Height** | **CSS Class**                |
+以下は、Ignite UI for Angular のマテリアル テーマで定義される 13 カテゴリ スタイルすべてのリストです。
+| **スケール カテゴリ** | **フォント ファミリ** | **フォントの太さ** | **フォント サイズ** | **テキストの変換** | **文字間隔** | **線の高さ** | **CSS クラス**                |
 |--------------------|-----------------|-----------------|---------------|--------------------|--------------------|-----------------|------------------------------|
-| **h1**             | Titillium Web   | 300             | 6 rem         | none               | -.09375 rem        | 7 rem           | `igx-typography__h1`         |
-| **h2**             | Titillium Web   | 300             | 3.75 rem      | none               | -.0312 rem         | 4.4375 rem      | `igx-typography__h2`         |
-| **h3**             | Titillium Web   | 400             | 3 rem         | none               | 0                  | 3.5625 rem      | `igx-typography__h3`         |
-| **h4**             | Titillium Web   | 400             | 2.125 rem     | none               | .015625 rem        | 2.5 rem         | `igx-typography__h4`         |
-| **h5**             | Titillium Web   | 400             | 1.5 rem       | none               | 0                  | 1.75 rem        | `igx-typography__h4`         |
-| **h6**             | Titillium Web   | 600             | 1.25 rem      | none               | .009375 rem        | 1.5 rem         | `igx-typography__h4`         |
-| **subtitle-1**     | Titillium Web   | 400             | 1 rem         | none               | .009375 rem        | 1.5 rem         | `igx-typography__subtitle-1` |
-| **subtitle-2**     | Titillium Web   | 600             | .875 rem      | none               | .00625 rem         | 1.5 rem         | `igx-typography__subtitle-2` |
-| **body-1**         | Titillium Web   | 400             | 1 rem         | none               | .03125 rem         | 1.75 rem        | `igx-typography__body-1`     |
-| **body-2**         | Titillium Web   | 400             | .875 rem      | none               | .015625 rem        | 1.25 rem        | `igx-typography__body-2`     |
-| **button**         | Titillium Web   | 600             | .875 rem      | uppercase          | .046875            | 1 rem           | `igx-typography__button`     |
-| **caption**        | Titillium Web   | 400             | .75 rem       | none               | .025 rem           | 1 rem           | `igx-typography__caption`    |
-| **overline**       | Titillium Web   | 400             | .625 rem      | uppercase          | .09375 rem         | 1 rem           | `igx-typography__overline`   |
+| **h1**             | Titillium Web   | 300             | 6 rem         | none (なし)               | -.09375 rem        | 7 rem           | `igx-typography__h1`         |
+| **h2**             | Titillium Web   | 300             | 3.75 rem      | none (なし)               | -.0312 rem         | 4.4375 rem      | `igx-typography__h2`         |
+| **h3**             | Titillium Web   | 400             | 3 rem         | none (なし)               | 0                  | 3.5625 rem      | `igx-typography__h3`         |
+| **h4**             | Titillium Web   | 400             | 2.125 rem     | none (なし)               | .015625 rem        | 2.5 rem         | `igx-typography__h4`         |
+| **h5**             | Titillium Web   | 400             | 1.5 rem       | none (なし)               | 0                  | 1.75 rem        | `igx-typography__h4`         |
+| **h6**             | Titillium Web   | 600             | 1.25 rem      | none (なし)               | .009375 rem        | 1.5 rem         | `igx-typography__h4`         |
+| **subtitle-1**     | Titillium Web   | 400             | 1 rem         | none (なし)               | .009375 rem        | 1.5 rem         | `igx-typography__subtitle-1` |
+| **subtitle-2**     | Titillium Web   | 600             | .875 rem      | none (なし)               | .00625 rem         | 1.5 rem         | `igx-typography__subtitle-2` |
+| **body-1**         | Titillium Web   | 400             | 1 rem         | none (なし)               | .03125 rem         | 1.75 rem        | `igx-typography__body-1`     |
+| **body-2**         | Titillium Web   | 400             | .875 rem      | none (なし)               | .015625 rem        | 1.25 rem        | `igx-typography__body-2`     |
+| **button**         | Titillium Web   | 600             | .875 rem      | uppercase (大文字)          | .046875            | 1 rem           | `igx-typography__button`     |
+| **caption**        | Titillium Web   | 400             | .75 rem       | none (なし)               | .025 rem           | 1 rem           | `igx-typography__caption`    |
+| **overline**       | Titillium Web   | 400             | .625 rem      | uppercase (大文字)          | .09375 rem         | 1 rem           | `igx-typography__overline`   |
 
 <div class="divider"></div>
 
-Each theme defines its own type scale. This means each one of the themes we ship - Material, Fluent, Boostrap, and Indigo will have its own type scale. They all share the same _scale categories_, but can have different font family, weight, size, text transform, letter spacing, and line height.
+各テーマは独自のタイプ スケールを定義します。つまり、Material、Fluent、Boostrap、および Indigo の各テーマに独自のタイプ スケールがあります。これらはすべて同じスケール カテゴリを共有しますが、異なるフォント ファミリ、太さ、サイズ、テキスト変換、文字間隔、線の高さを持つことができます。
 
-## Usage
+## 使用方法
 > [!IMPORTANT]
-> By default we don't apply any typography styles. To use our typography in your application you have to set the `igx-typography` CSS class on a top-level element. All of its children will then use our typography styles.
+> デフォルトではタイポグラフィ スタイルを適用しません。アプリケーションでインフラジスティックスのタイポグラフィを使用するには、`igx-typography` CSS をトップ レベルの要素に設定する必要があります。そのすべての子がタイポグラフィ スタイルを使用するようになります。
 
-We have selected [Titillium Web](https://fonts.google.com/selection?selection.family=Titillium+Web:300,400,600,700) to be the default font for the Material Theme in Ignite UI for Angular. To use it you have to host it yourself, or include it from Google Fonts:
+Ignite UI for Angular のマテリアル テーマのデフォルト フォントは [Titillium Web](https://fonts.google.com/selection?selection.family=Titillium+Web:300,400,600,700) です。使用にはフォントをホストするか Google フォントからのフォントを含む必要があります。
 
 ```html
 <link
@@ -48,7 +48,7 @@ We have selected [Titillium Web](https://fonts.google.com/selection?selection.fa
 />
 ```
 
-Enable the typography styles by setting `igx-typography` class on the body element.
+body 要素で `igx-typography` クラスを設定してタイポグラフィ スタイルを有効にします。
 
 ```html
 <!-- index.html -->
@@ -57,9 +57,9 @@ Enable the typography styles by setting `igx-typography` class on the body eleme
 </body>
 ```
 
-### Changing the Font Family
+### フォント ファミリの変更
 
-To change the font family in all components, all you have to do is overwrite the `igx-typography` class with the your desired font-family value;
+すべてのコンポーネントでフォント ファミリを変更するには、`igx-typography` クラスを希望の font-family 値で上書きします。
 
 ```css
 /* styles.css */
@@ -68,11 +68,11 @@ To change the font family in all components, all you have to do is overwrite the
 }
 ```
 
-## Type Styles
+## タイプ スタイル
 
-The type styles are used internally by most of the components in Ignite UI for Angular. For instance, the documentation says the button component uses the button type style. This means that we can copy and modify the typography of the button component by ovewriting the included `igx-typography__button` class.
+タイプ スタイルは、Ignite UI for Angular のほとんどのコンポーネントで内部的に使用されます。たとえば、ボタン コンポーネントはボタン タイプのスタイルを使用するとドキュメントに記載されています。つまり、含まれる `igx-typography__button` クラスを上書きすることによって、ボタン コンポーネントのタイポグラフィをコピーして変更できます。
 
-Let's say we want to change the text of the button in the Material Theme to always be lowercase.
+マテリアル テーマのボタンのテキストを常に小文字に変更するとします。
 
 ```css
 .igx-typography .igx-typography__button {
@@ -85,13 +85,13 @@ Let's say we want to change the text of the button in the Material Theme to alwa
 <button [igxButton] class="igx-typography__button">Flat</button>
 ```
 
-Some components have a lot of elements buried deep in their templates. Those are a little tricky to modify directly using CSS classes. At the time of writing this article, the only way to completely modify the typography of such components you'd have to fall back to our [Sass typography](./sass/typography.md) mixins. We are currently working on providing better ways of modifying the typography for individual components via CSS variables.
+一部のコンポーネントには、テンプレートに多くの要素が埋め込まれています。CSS クラスを使用して直接変更するには、注意が必要です。この記事の作成時点では、このようなコンポーネントのタイポグラフィを完全に変更する唯一の方法は、[Sass タイポグラフィ](./sass/typography.md) ミックスインにフォールバックする必要があります。CSS 変数を使用して個々のコンポーネントのタイポグラフィを変更するより良い方法の提供に取り組んでいます。
 
 <div class="divider"></div>
 
 ## その他のリソース
 
-- [Typography with Sass](./sass/typography.md)
+- [Sass を使用したタイポグラフィ](./sass/typography.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

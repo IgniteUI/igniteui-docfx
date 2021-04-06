@@ -1,16 +1,16 @@
 ---
-title: Roundness
+title: 丸み
 _description: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ 
 _language: ja
 ---
 
-# Roundness
-<p class="highlight">Ignite UI for Angular allows you to change the shape of components by setting their roundness to a value between 0 and 1.</p>
+# 丸み
+<p class="highlight">Ignite UI for Angular では、丸みを 0 から 1 の間の値に設定してコンポーネントの形を変更できます。</p>
 <div class="divider"></div>
 
-## Overview
-Roundness, as any other property, is set in the component theme or schema like it's shown in the examples bellow.
+## 概要
+丸みは、他のプロパティと同様に、以下の例に示すようにコンポーネントのテーマまたはスキーマで設定されます。
 
 ```scss
 $_material-shape-button: (
@@ -18,20 +18,20 @@ $_material-shape-button: (
 );
 ```
 
-As you can see from the example above, the component schema for the [Button Theme]({environment:sassApiUrl}/index.html#function-igx-button-theme) defines the default border-radius for all types of buttons.
+上記の例のように [Button テーマ]({environment:sassApiUrl}/index.html#function-igx-button-theme)のコンポーネント スキーマはすべてのボタン タイプのデフォルトの border-radius を定義します。
 
-Let's look at how this works. 
+次の例を見てみましょう。 
 
-The default `border-radius` value is set to `.2`, which in the end will be resolved to 4px. This fraction, between 0 and 1 represents the minimum and maximum allowed roundness. 0 is the minimum border-radius, i.e. 0px and 1 is the maximum or 20px. The minimum and maximum pixel values are defined for each individual component in its Sass theme.
+デフォルトの `border-radius` 値は `.2` に設定され、最終的に 4px が設定されます。0 から 1 の間のこの小数部は、許容される丸みの最小値と最大値を表します。0 は最小の境界線半径 (0px) で 1 は最大 (20px) です。ピクセルの最小値と最大値は、Sass テーマの各コンポーネントで定義されます。
 
-We decided to not limit you to fractions only. You can use whatever unit you want - pixels, relative units (em or rem), etc., allowing you to overwrite the implicit border radius limits.
+フラクションのみに制限することはしません。ピクセル、相対単位 (em または rem) など任意の単位を使用して、明示的な境界線半径の制限を上書きできます。
 
-If you decide to go with fractions, you will automatically be limited by the theming engine to min and max values for each component.
+フラクションを使用する場合、テーマ エンジンによって各コンポーネントの min と max の値に自動的に制限されます。
 
-## Usage 
-Let's see how we can change the default values for the buttons from the example above.
+## 使用方法 
+上記の例のボタンのデフォルト値を変更できます。
 
-Using the theme mixin:
+テーマ ミックスインの使用:
 ```scss
 $my-button-theme: igx-button-theme(
     $border-radius: .5 .2 .5 .2, // resolves to 10px 4px 10px 4px
@@ -40,7 +40,7 @@ $my-button-theme: igx-button-theme(
 @include igx-button($my-button-theme);
 ```
 
-Using a component schema:
+コンポーネント スキーマの使用:
 ```scss
 $my-flat-button: extend(
     $_material-flat-button,
@@ -62,43 +62,43 @@ $my-light-schema: extend(
 );
 ```
 
-Using either approach, the result from the above code snippets is:
+以下は上記コード スニペットの結果です。
 
 <div class="sample-container loading" style="height: 250px">
     <iframe id="buttons-roundness-sample-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/buttons-roundness-sample" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
-<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="buttons-roundness-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttons-roundness-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz</button>
 </div>
 <div class="divider--half"></div>
 
-## Baseline Roundness
-The table below shows the default roundness for each component and its min and max boundaries:
+## ベースラインの丸み
+以下のテーブルは、各コンポーネントのデフォルトの丸み、およびその最小境界と最大境界を示しています。
 
-|                     | **Corners can be shaped?** | **Min/Max boundaries** | **Baseline theme values** |
+|                     | **角の形を変更できるか？** | **Min/Max 境界** | **ベースライン テーマ値** |
 |---------------------|----------------------------|------------------------|---------------------------|
-| **Button(Flat)**    | Yes; Yes; Yes; Yes;        | 0 - 20px               | 4px                       |
-| **Button(Raised)**  | Yes; Yes; Yes; Yes;        | 0 - 20px               | 4px                       |
-| **button(Fab)**     | Yes; Yes; Yes; Yes;        | 12px - 28px            | 28px                      |
-| **button(Icon)**    | Yes; Yes; Yes; Yes;        | 0 - 18px               | 18px                      |
-| **Button-group**    | Yes; Yes; Yes; Yes;        | 0 - 20px               | 4px                       |
-| **Chip**            | Yes; Yes; Yes; Yes;        | 0 - 20px               | 4px                       |
-| **Card**            | Yes; Yes; Yes; Yes;        | 0 - 24px               | 4px                       |
-| **Carousel**        | Yes; Yes; Yes; Yes;        | 0 - 36px               | 0                         |
-| **Dialog**          | Yes; Yes; Yes; Yes;        | 0 - 36px               | 4px                       |
-| **Drop-down**       | Yes; Yes; Yes; Yes;        | 0 - 20px               | 4px                       |
-| **Expansion panel** | Yes; Yes; Yes; Yes;        | 0 - 16px               | 0                         |
-| **input(Border)**   | Yes; Yes; Yes; Yes;        | 0 - 20px               | 4px                       |
-| **input(Box)**      | Yes; Yes; No; No;          | 0 - 20px               | 4px 4px 0 0               |
-| **input(Search)**   | Yes; Yes; Yes; Yes;        | 0 - 20px               | 4px                       |
-| **List**            | Yes; Yes; Yes; Yes;        | 0 - 24px               | 0                         |
-| **List item**       | Yes; Yes; Yes; Yes;        | 0 - 24px               | 0                         |
-| **Navdrawer**       | Yes; Yes; Yes; Yes;        | 0 - 36px               | 0                         |
-| **Snackbar**        | Yes; Yes; Yes; Yes;        | 0 - 24px               | 4px                       |
-| **Tooltip**         | Yes; Yes; Yes; Yes;        | 0 - 16px               | 4px                       |
-| **Toast**           | Yes; Yes; Yes; Yes;        | 0 - 26px               | 26px                      |
+| **Button(Flat)**    | 〇; 〇; 〇; 〇;        | 0 - 20px               | 4px                       |
+| **Button(Raised)**  | 〇; 〇; 〇; 〇;        | 0 - 20px               | 4px                       |
+| **button(Fab)**     | 〇; 〇; 〇; 〇;        | 12px - 28px            | 28px                      |
+| **button(Icon)**    | 〇; 〇; 〇; 〇;        | 0 - 18px               | 18px                      |
+| **Button-group**    | 〇; 〇; 〇; 〇;        | 0 - 20px               | 4px                       |
+| **Chip**            | 〇; 〇; 〇; 〇;        | 0 - 20px               | 4px                       |
+| **Card**            | 〇; 〇; 〇; 〇;        | 0 - 24px               | 4px                       |
+| **Carousel**        | 〇; 〇; 〇; 〇;        | 0 - 36px               | 0                         |
+| **Dialog**          | 〇; 〇; 〇; 〇;        | 0 - 36px               | 4px                       |
+| **Drop-down**       | 〇; 〇; 〇; 〇;        | 0 - 20px               | 4px                       |
+| **Expansion panel** | 〇; 〇; 〇; 〇;        | 0 - 16px               | 0                         |
+| **input(Border)**   | 〇; 〇; 〇; 〇;        | 0 - 20px               | 4px                       |
+| **input(Box)**      | 〇; 〇; x; x;          | 0 - 20px               | 4px 4px 0 0               |
+| **input(Search)**   | 〇; 〇; 〇; 〇;        | 0 - 20px               | 4px                       |
+| **List**            | 〇; 〇; 〇; 〇;        | 0 - 24px               | 0                         |
+| **List item**       | 〇; 〇; 〇; 〇;        | 0 - 24px               | 0                         |
+| **Navdrawer**       | 〇; 〇; 〇; 〇;        | 0 - 36px               | 0                         |
+| **Snackbar**        | 〇; 〇; 〇; 〇;        | 0 - 24px               | 4px                       |
+| **Tooltip**         | 〇; 〇; 〇; 〇;        | 0 - 16px               | 4px                       |
+| **Toast**           | 〇; 〇; 〇; 〇;        | 0 - 26px               | 26px                      |
 
 
 <div class="divider--half"></div>
