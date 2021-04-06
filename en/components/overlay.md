@@ -118,7 +118,7 @@ In both cases the [`attach()`]({environment:angularApiUrl}/classes/igxoverlayser
   - Detach the view from the DOM and leave an anchor in its place
   - Re-attach the view to the overlay using the provided [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) or falling back to the default overlay ones
 
-Calling then [`show(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#show) will play the open animation if any and will show the attached content. Calling [`hide(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#hide) will play close animation in any and will hide the attached content.
+Calling then [`show(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#show) will play the open animation, if there is any, and will show the attached content. Calling [`hide(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#hide) will play close animation, if there is any, and will hide the attached content.
 
 Finally calling [`detach(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#detach) method will re-attach the view back to its original location in the DOM. If a component was provided to the [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) method calling [`detach(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#detach) will destroy the created instance.
 
