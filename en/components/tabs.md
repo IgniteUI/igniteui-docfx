@@ -38,7 +38,7 @@ import { IgxTabsModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-We set the tabs header by providing a content between [`igx-tab-header`]({environment:angularApiUrl}/classes/igxtabheader.html}). To set the tabs name we simply add a span with [`igxTabHeaderLabel`]({environment:angularApiUrl}/classes/igxtabheaderlabeldirective.html) directive, between the `igx-tab-header` tags. Any content that will appear as a tab item's content should be added between [`igx-tab-content`]({environment:angularApiUrl}/classes/igxtabcontent.html}) tags.
+We set the tabs header by providing a content between [`igx-tab-header`]({environment:angularApiUrl}/classes/igxtabheader.html}). To set the tab's name we simply add a span with [`igxTabHeaderLabel`]({environment:angularApiUrl}/classes/igxtabheaderlabeldirective.html) directive. Any content that will appear as a tab item's content should be added between [`igx-tab-content`]({environment:angularApiUrl}/classes/igxtabcontent.html}) tags.
 
 ```html
 <igx-tabs>
@@ -116,10 +116,10 @@ Sample below demostrates how tabs get aligned when switching between tabAlignmen
 
 ## Customizing Tabs
 
-Let's modify the tabs and make them more appealing by including icons using the [`igxTabHeaderIcon`]({environment:angularApiUrl}/classes/igxtabsgroupcomponent.html#icon) directive. The `igx-tabs` component is compatible with the Material Design
+Let's modify the tabs and make them more appealing by including icons using the [`igxTabHeaderIcon`]({environment:angularApiUrl}/classes/igxtabheadericondirective.html) directive. The `igx-tabs` component is compatible with the Material Design
 [**Icons**](https://material.io/icons/) so it will be very easy to adopt them in your application.
 
-First add the Material Icons in your 'styles.scss' file in the main application folder. Next add `igx-icon` with [`igxTabHeaderIcon`]({environment:angularApiUrl}/classes/igxtabheadericondirective.html}) directive set, as a child of [`igx-tab-header`]({environment:angularApiUrl}/classes/igxtabheader.html}) .
+First, add the Material Icons in your 'styles.scss' file in the main application folder. Next, add `igx-icon` with [`igxTabHeaderIcon`]({environment:angularApiUrl}/classes/igxtabheadericondirective.html}) directive set, as a child of [`igx-tab-header`]({environment:angularApiUrl}/classes/igxtabheader.html}) .
 
 ```css
 // styles.scss
