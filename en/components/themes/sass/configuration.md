@@ -128,7 +128,7 @@ Here's a list of those variables:
 
 <div class="divider"></div>
 
-## Additional Resources:
+## Additional Resources
 Learn the concepts:
 
 * [Palettes](./palettes.md)
