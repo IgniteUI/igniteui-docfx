@@ -230,7 +230,7 @@ $custom-drop-down: igx-drop-down-theme(
 
 この例では、リストされたコンポーネントのパラメーターの一部のみを変更しましたが、[`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme)、[`igx-button-group-theme`]({environment:sassApiUrl}/index.html#function-igx-button-group-theme)、[`igx-chip-theme`]({environment:sassApiUrl}/index.html#function-igx-chip-theme)、[`igx-drop-down-theme`]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme)、[`igx-input-group-theme`]({environment:sassApiUrl}/index.html#function-igx-input-group-theme) テーマは、それぞれのスタイルを制御するために多数のパラメーターを提供します。
 
-最後の手順は、それぞれのテーマを持つコンポーネント mixins を**含める**ことです。また、高度なフィルタリング ダイアログ内の他の要素のスタイルを追加します。
+最後の手順は、それぞれのテーマを持つコンポーネント ミックスインを**含める**ことです。また、高度なフィルタリング ダイアログ内の他の要素のスタイルを追加します。
 
 ```scss
 @include igx-grid($custom-grid);
@@ -270,7 +270,7 @@ igx-advanced-filtering-dialog {
 ```
 
 >[!NOTE]
->カスタム テーマが高度なフィルタリング ダイアログにネストされたコンポーネントのみに影響するように、コンポーネントのほとんどの mixins を`igx-advanced-filtering-dialog` 内にスコープします。そうでない場合、アプリケーション内の他のボタン、チップ、入力、ドロップダウンも影響を受けます。
+>カスタム テーマが高度なフィルタリング ダイアログにネストされたコンポーネントのみに影響するように、コンポーネントのほとんどのミックスインを`igx-advanced-filtering-dialog` 内にスコープします。そうでない場合、アプリケーション内の他のボタン、チップ、入力、ドロップダウンも影響を受けます。
 
 >[!NOTE]
 >コンポーネントが [`Emulated`](../themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。

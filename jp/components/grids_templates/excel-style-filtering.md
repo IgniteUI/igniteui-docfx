@@ -573,7 +573,7 @@ $custom-drop-down: igx-drop-down-theme(
 
 この例では、リストされたコンポーネントのパラメーターの一部のみを変更しましたが、[`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme)、[`igx-checkbox-theme`]({environment:sassApiUrl}/index.html#function-igx-checkbox-theme)、[`igx-drop-down-theme`]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme)、[`igx-input-group-theme`]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)、[`igx-list-theme`]({environment:sassApiUrl}/index.html#function-igx-list-theme) テーマは、それぞれのスタイルを制御するためのより多くのパラメーターを提供します。
 
-最後の手順は、それぞれのテーマを持つコンポーネント mixins を**含める**ことです。また、入力のプレース ホルダーの色プロパティを設定します。
+最後の手順は、それぞれのテーマを持つコンポーネント ミックスインを**含める**ことです。また、入力のプレース ホルダーの色プロパティを設定します。
 
 ```scss
 @include igx-drop-down($custom-drop-down);

@@ -1,5 +1,5 @@
 # デフォルトのテーマ
-Material テーマは、Ignite UI for Angular のデフォルトテーマです。これを使用するには、`igx-theme` mixins を `igx-core` の後に含めます。
+Material テーマは、Ignite UI for Angular のデフォルトテーマです。これを使用するには、`igx-theme`ミックスインを `igx-core` の後に含めます。
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';

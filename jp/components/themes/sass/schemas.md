@@ -1,21 +1,21 @@
 ---
-title: Schemas
-_description: Ignite UI for Angular theming schemas allow you to create recipes for component themes.
+title: スキーマ
+_description: Ignite UI for Angular テーマ化するスキーマを使用して、コンポーネント テーマのレシピを作成できます。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ 
 _language: ja
 ---
 
-# Schemas
-<p class="highlight">Schemas are a simple, declarative way to list all properties a component theme uses.</p>
+# スキーマ
+<p class="highlight">スキーマはシンプルかつ宣言的にコンポーネント テーマで使用する可能性のあるすべてのプロパティをリストします。</p>
 
 <div class="divider--half"></div>
 
-## Overview
-Schemas are like recipes. They are simple Sass maps, similar to JSON that allow us to define all properties a theme might use. Those properties can be colors, elevation levels, roundness, etc. Anything a theme consumes can be described as a `schema`, then passed to the global or component theme. A component schema can extend an existing component schema and override its properties.
+## 概要
+スキーマはレシピのようなものです。JSON 同様のシンプルな Sass マップでテーマが使用するすべてのプロパティを定義します。プロパティは、カラー、エレベーション レベル、丸みなどでテーマが使用するあらゆる項目が `schema (スキーマ)` として記述され、グローバルまたはコンポーネント テーマへ渡します。コンポーネント スキーマは既存コンポーネント スキーマを拡張し、そのプロパティをオーバーライドします。
 
-**Schemas should be used when you want to change the default theme properties of a component in a way that will not result in duplicating CSS style rules or CSS variables**.
+**スキーマは、コンポーネントのデフォルト テーマ プロパティを、CSS スタイル ルールまたは CSS 変数を複製しない方法で変更する場合に使用します。**
 
-Let's take a look at the light Material Avatar schema:
+Light Material Avatar スキーマを見てみましょう。
 
 ```scss
 $_light-avatar: extend(
@@ -32,15 +32,15 @@ $_light-avatar: extend(
 );
 ```
 
-As you can see from the example above, the component schema defines the properties the [Avatar Theme]({environment:sassApiUrl}/index.html#function-igx-avatar-theme) consumes. It just prescribes the colors the avatar should use, without referencing a concrete color palette map.
+上記の例では、コンポーネント スキーマが [Avatar テーマ]({environment:sassApiUrl}/index.html#function-igx-avatar-theme) で使用するプロパティを定義します。具体的なカラー パレット マップを参照せずに、アバターが使用するカラーを指定します。
 
-Let's take the `background` property for example. It tells the avatar theme what the default background should be. 
+以下は、`background` プロパティの例です。アバターのテーマにデフォルトの背景を指示します。 
 
-*The `background` can be assigned any value, that is, a value that can be assigned to the CSS `background-color` property.* You can also assign a map to `background`, like in the sample above. When you assign a map to the `background` property, the map should contain functions as the key names (e.g. `igx-color`), and arguments for the functions as values for said keys. We do this to be able to resolve the values later on, when the avatar theme is being built. See, because we don't know the palette a user might pass to the avatar theme, we should be able to resolve it later on, only when the palette is known.
+`background` は任意の値に割り当てることができ、CSS `background-color` プロパティに割り当てることができます。上記サンプルのように `background` にマップを割り当てることができます。マップを `background` プロパティに割り当てる場合、マップはキー名として関数 (`igx-color` など) を含む必要があり、また関数にはキー値として引数を含む必要があります。後ほど avatar テーマを作成する際に値を解決するために必要となります。ユーザーが avatar テーマへ渡す可能性のあるパレットがわからないため、後でパレットが確定したときに解決できるようになります。
 
-We can also add other functions and arguments to the `background` map as key value pairs. For instance we may want to run the resolved result from `igx-color: ('grays', 400)` through the `to-opaque` function we have, to resolve the HEX value for the `400` color variant of the `grays` palette, which is usually represented in rgba. 
+その他の関数や引数をキー値ペアとして `background` マップに追加ます。たとえば、通常 rgba で表される `grays` パレットの `400` カラー バリアントの HEX 値を解決するために `to-opaque` 関数を介して `igx-color: ('grays', 400)` から解決済みの結果を実行してもよいでしょう。 
 
-Let's see how the schema will change when we make this addition:
+次に追加する場合にスキーマを変更する方法を示します。
 
 ```scss
 $_light-avatar: (
@@ -52,12 +52,12 @@ $_light-avatar: (
 );
 ```
 
-The result of the `igx-color` function call will automatically be passed as the first argument to the `to-opaque` function. Since `to-opaque` accepts a second argument for the background color, we provide it as the value. If the function doesn't accept any additional arguments, you should assign an empty list `()` as its value.
+`igx-color` 関数の結果が最初の引数として `to-opaque` 関数に自動的に渡されます。`to-opaque` は背景色の 2 番目の引数を受け取るため、値として提供します。関数が追加の引数を受け取らない場合、空のリスト `()` を値として割り当てる必要があります。
 
 <div class="divider--half"></div>
 
-## Extending Schemas
-As you saw from the example above. Schemas are simple maps and as such can be extended by overriding some of their properties. You might want to _extend_ the material avatar schema by only changing its `background` property, without having to copy all other properties manually. This is easily done using the `extend` function we provide.
+## スキーマの拡張
+上記例からもわかるように、スキーマはシンプルなマップのためプロパティをオーバーライドして拡張できます。デフォルトの material avatar schema は、その他すべてのプロパティを手動でコピーせずに `background` を変更することもできます。`extend` 関数を使用して簡単に行うことができます。
 
 ```scss
 $my-avatar-schema: extend($_light-avatar, (
@@ -65,12 +65,12 @@ $my-avatar-schema: extend($_light-avatar, (
 ));
 ```
 
-Now the value of `$my-avatar-schema` will contain all properties of `$_light-avatar`, but the value for `background` will have be `limegreen`.
+これで `$my-avatar-schema` の値には `$_light-avatar` のすべてのプロパティが含まれますが、`background` の値は `limegreen` になります。
 
-## Consuming Schemas
-Until now we have shown what a component schema is and how you can create one, but we have not talked about how you can use schemas in your Sass project. 
+## スキーマの使用
+以上がコンポーネント スキーマの概要と作成方法です。次に Sass プロジェクトのスキーマの使用方法について説明します。 
 
-Individual component schemas are bundled up in a global schema map for all components we have. So the `$_light-avatar` schema is part of the global `$light-material-schema`. The `$light-material-schema` maps component schemas to component names. The `$light-material-schema` looks something like this:
+各コンポーネント スキーマはすべてのコンポーネントのグローバル スキーマとバンドルされます。`$_light-avatar` スキーマはグローバル `$light-material-schema` マップの一部です。`$light-material-schema` はコンポーネント スキーマをコンポーネント名にマップします。`$light-material-schema` は以下のようになります。
 
 ```scss
 $light-material-schema: (
@@ -80,7 +80,7 @@ $light-material-schema: (
 );
 ```
 
-We do this so we can pass the entire `$light-material-schema` to the `igx-theme` mixin. So for instance if we wanted to modify the `$light-material-schema` by replacing the default component schema the avatar component uses we might do:
+`$light-material-schema` 全体を `igx-theme` ミックスインに渡すことができます。たとえば、デフォルト コンポーネント スキーマを置き換えて `$light-material-schema` を変更したい場合、Avatar コンポーネントは以下を使用します。
 
 ```scss
 $my-light-schema: extend($light-material-schema, (
@@ -88,7 +88,7 @@ $my-light-schema: extend($light-material-schema, (
 ));
 ```
 
-Now we can pass all that to the global theme mixin:
+これでグローバル テーマ ミックスインにすべて渡すことができます。
 
 ```scss
 // styles.scss
@@ -98,11 +98,11 @@ Now we can pass all that to the global theme mixin:
 );
 ```
 
-Avatars in your global theme will now have use limegreen color for their background.
+グローバル テーマのアバターの背景にライムグリーン カラーが使用されます。
 
-Some component schemas, like the button schema, have property definitions for roundness. This means that you can change the default button roundness for all buttons.
+ボタン スキーマなどコンポーネント スキーマの一部には丸み付けのためのプロパティ定義があります。すべてのボタンでデフォルトの丸みを変更できます。
 
-Finally, let's see how individual component themes can use the schema we created above.
+最後に各コンポーネント テーマで上記で作成したスキーマを使用する方法について説明します。
 
 ```scss
 $my-avatar-theme: igx-avatar-theme(
@@ -110,18 +110,18 @@ $my-avatar-theme: igx-avatar-theme(
 );
 ```
 
-## Conclusions
+## まとめ
 
-Although schemas require a deeper knowledge of our theming library compared to theme functions and mixins, they allow us to declare component themes without increasing the size of the produced CSS. Another benefit of using schemas is how reusable and extensible they are as they are simple Sass maps. You can mix and match component schemas to create global theme schemas.
+スキーマはテーマ関数およびミックスインと比較してテーマ ライブラリの知識が必要ですが、生成された CSS のサイズを増やすことなくコンポーネン トテーマを宣言できます。スキーマを使用するもう 1 つの利点は、シンプルな Sass マップであるため、再利用および拡張が可能なことです。コンポーネント スキーマを組み合わせてグローバル テーマ スキーマを作成できます。
 
-We use schemas internally to create variations that result in different pre-bundled themes for Material, Bootstrap, Fluent, and Indigo.
+内部でスキーマを使用してバリアントを作成し、結果として Material、Bootstrap、Fluent、および Indigo のテーマがあらかじめバンドルされています。
 
-## API Overview
-* [Avatar Schema]({environment:sassApiUrl}/index.html#variable-_light-avatar)
-* [Light Components Schema]({environment:sassApiUrl}/index.html#variable-light-schema)
-* [Dark Components Schema]({environment:sassApiUrl}/index.html#variable-dark-schema)
-* [Global Theme]({environment:sassApiUrl}/index.html#mixin-igx-theme)
-* [Avatar Theme]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
+## API の概要
+* [Avatar スキーマ]({environment:sassApiUrl}/index.html#variable-_light-avatar)
+* [Light コンポーネント スキーマ]({environment:sassApiUrl}/index.html#variable-light-schema)
+* [Dark コンポーネント スキーマ]({environment:sassApiUrl}/index.html#variable-dark-schema)
+* [Global テーマ]({environment:sassApiUrl}/index.html#mixin-igx-theme)
+* [Avatar テーマ]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

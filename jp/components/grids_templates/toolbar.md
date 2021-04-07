@@ -413,7 +413,7 @@ configureExport(args: IGridToolbarExportEventArgs) {
 
 ## スタイル設定
 
-ツールバーのスタイル設定を始めるには、すべてのテーマ関数とコンポーネント mixins が存在する index ファイルをインポートする必要があります。
+ツールバーのスタイル設定を始めるには、すべてのテーマ関数とコンポーネント ミックスインが存在する index ファイルをインポートする必要があります。
 
 ```scss
 // custom-grid-paging-style.component.scss
