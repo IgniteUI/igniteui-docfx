@@ -7,7 +7,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 # Tabs
 
 <p class="highlight">
-The [`igx-tabs`]({environment:angularApiUrl}/classes/igxtabscomponent.html) component in Ignite UI for Angular is used to organize or switch between similar data sets. It functions as a wrapper for [`igx-tab-item`]({environment:angularApiUrl}/classes/igxtabitemcomponent.html) and [`igx-tabs-group`]({environment:angularApiUrl}/classes/igxtabsgroupcomponent.html), as these respectively represent the container for the data and the tab header. The tabs component places tabs at the top and allows scrolling when there are multiple tab items on the screen.
+The [`igx-tabs`]({environment:angularApiUrl}/classes/igxtabscomponent.html) component in Ignite UI for Angular is used to organize or switch between similar data sets. It functions as a wrapper for [`igx-tab-item`]({environment:angularApiUrl}/classes/igxtabitemcomponent.html) which respectively represent the container for the data and the tab header. The tabs component places tabs at the top and allows scrolling when there are multiple tab items on the screen.
 </p>
 
 ## Angular Tabs Example
@@ -38,15 +38,50 @@ import { IgxTabsModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-We set the names of tabs using the [`label`]({environment:angularApiUrl}/classes/igxtabsgroupcomponent.html#label) attribute. Any content provided between the opening and closing `igx-tabs-group` tags will appear in the respective tab group as content.
+We set the tabs header by providing a content between [`igx-tab-header`]({environment:angularApiUrl}/classes/igxtabheader.html}). To set the tabs name we simply add a span with [`igxTabHeaderLabel`]({environment:angularApiUrl}/classes/igxtabheaderlabeldirective.html) directive, between the `igx-tab-header` tags. Any content that will appear as a tab item's content should be added between [`igx-tab-content`]({environment:angularApiUrl}/classes/igxtabcontent.html}) tags.
 
 ```html
 <igx-tabs>
-  <igx-tabs-group label="Tab 1">This is Tab 1 content.</igx-tabs-group>
-  <igx-tabs-group label="Tab 2">This is Tab 2 content.</igx-tabs-group>
-  <igx-tabs-group label="Tab 3">This is Tab 3 content.</igx-tabs-group>
-  <igx-tabs-group label="Tab 4">This is Tab 4 content.</igx-tabs-group>
-  <igx-tabs-group label="Tab 5">This is Tab 5 content.</igx-tabs-group>
+  <igx-tab-item>
+    <igx-tab-header>
+      <span igxTabHeaderLabel>Tab 1</span>
+    </igx-tab-header>
+    <igx-tab-content>
+      This is Tab 1 content.
+    </igx-tab-content>
+  </igx-tab-item>
+  <igx-tab-item>
+    <igx-tab-header>
+      <span igxTabHeaderLabel>Tab 2</span>
+    </igx-tab-header>
+    <igx-tab-content>
+      This is Tab 2 content.
+    </igx-tab-content>
+  </igx-tab-item>
+  <igx-tab-item>
+    <igx-tab-header>
+      <span igxTabHeaderLabel>Tab 3</span>
+    </igx-tab-header>
+    <igx-tab-content>
+      This is Tab 3 content.
+    </igx-tab-content>
+  </igx-tab-item>
+  <igx-tab-item>
+    <igx-tab-header>
+      <span igxTabHeaderLabel>Tab 4</span>
+    </igx-tab-header>
+    <igx-tab-content>
+      This is Tab 4 content.
+    </igx-tab-content>
+  </igx-tab-item>
+  <igx-tab-item>
+    <igx-tab-header>
+      <span igxTabHeaderLabel>Tab 5</span>
+    </igx-tab-header>
+    <igx-tab-content>
+      This is Tab 5 content.
+    </igx-tab-content>
+  </igx-tab-item>
 </igx-tabs>
 ```
 
@@ -61,30 +96,19 @@ If the sample is configured properly, the final result should look like that:
 
 <div class="divider"></div>
 
-## Tabs Types
-There are two types of tabs - `fixed` and `contentfit`. Set the [`type`]({environment:angularApiUrl}/classes/igxtabscomponent.html#type) input to choose between the two.
-- **Content-fit tabs** (default): the width of the tab header depends on the content (label, icon, both) and all tabs have equal padding.
-No matter what type of tabs you chose, the width of the tab header is limited by the specified min and max width.
-- **Fixed tabs**: all tab headers are equal in width and fully fit the tabs container. If the space is not enough to fit all items, scroll buttons are displayed.
-
-```html
-  <igx-tabs>
-    <igx-tabs-group label="Home">Home content.</igx-tabs-group>
-    <igx-tabs-group label="Recent Contacts">Recent contacts list.</igx-tabs-group>
-    <igx-tabs-group label="More">More detailed contact information.</igx-tabs-group>
-  </igx-tabs>
-
-  <igx-tabs tabsType="fixed">
-    <igx-tabs-group label="Home">Home content.</igx-tabs-group>
-    <igx-tabs-group label="Recent Contacts">Recent contacts list.</igx-tabs-group>
-    <igx-tabs-group label="More">More detailed contact information.</igx-tabs-group>
-  </igx-tabs>
-```
+## Tabs Alignment
+`IgxTabs` [`tabAlignment`]({environment:angularApiUrl}/classes/igxtabscomponent.html#tabalignment) input property controls how tabs are positioned and arranged. It accepts four different values - start, center, end and justify.
+- **Start** (default): the width of the tab header depends on the content (label, icon, both) and all tabs have equal padding. First tab is aligned to the tabs container left side.
+- **Center**: the width of the tab header depends on the content and occupies the tabs container center. If the space is not enough to fit all items, scroll buttons are displayed.
+- **End**: the width of the tab header depends on the content and all tabs have equal padding. Last tab is aligned to the tabs container right side. 
+- **Justify**: all tab headers are equal in width and fully fit the tabs container. If the space is not enough to fit all items, scroll buttons are displayed.
 
 
-<code-view style="height: 450px; border: 1px solid #ededed" 
+Sample below demostrates how tabs get aligned when switching between tabAlignment property values.
+
+<code-view style="height: 250px; border: 1px solid #ededed" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/tabs-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/layouts/tabs-alignment" >
 </code-view>
 
 
@@ -92,10 +116,10 @@ No matter what type of tabs you chose, the width of the tab header is limited by
 
 ## Customizing Tabs
 
-Let's modify the tabs and make them more appealing by including icons using the [`icon`]({environment:angularApiUrl}/classes/igxtabsgroupcomponent.html#icon) input. The `igx-tabs` component is compatible with the Material Design
+Let's modify the tabs and make them more appealing by including icons using the [`igxTabHeaderIcon`]({environment:angularApiUrl}/classes/igxtabsgroupcomponent.html#icon) directive. The `igx-tabs` component is compatible with the Material Design
 [**Icons**](https://material.io/icons/) so it will be very easy to adopt them in your application.
 
-First add the Material Icons in your 'styles.scss' file in the main application folder.
+First add the Material Icons in your 'styles.scss' file in the main application folder. Next add `igx-icon` with [`igxTabHeaderIcon`]({environment:angularApiUrl}/classes/igxtabheadericondirective.html}) directive set, as a child of [`igx-tab-header`]({environment:angularApiUrl}/classes/igxtabheader.html}) .
 
 ```css
 // styles.scss
@@ -107,18 +131,35 @@ First add the Material Icons in your 'styles.scss' file in the main application 
 
 ```html
 <igx-tabs>
-  <igx-tabs-group label="Albums" icon="library_music">
-    Albums
-  </igx-tabs-group>
-
-  <igx-tabs-group label="Songs" icon="favorite">
-    Songs
-  </igx-tabs-group>
-
-  <igx-tabs-group label="Details" icon="info">
-    Details
-  </igx-tabs-group>
+  <igx-tab-item>
+    <igx-tab-header>
+        <igx-icon igxTabHeaderIcon>library_music</igx-icon>
+        <span igxTabHeaderLabel>Albums</span>
+    </igx-tab-header>
+    <igx-tab-content>
+        Albums
+    </igx-tab-content>
+  </igx-tab-item>
+  <igx-tab-item>
+    <igx-tab-header>
+        <igx-icon igxTabHeaderIcon>favorite</igx-icon>
+        <span igxTabHeaderLabel>Favorite</span>
+    </igx-tab-header>
+    <igx-tab-content>
+        Favorite
+    </igx-tab-content>
+  </igx-tab-item>
+  <igx-tab-item>
+    <igx-tab-header>
+        <igx-icon igxTabHeaderIcon>info</igx-icon>
+        <span igxTabHeaderLabel>Details</span>
+    </igx-tab-header>
+    <igx-tab-content>
+        Details
+    </igx-tab-content>
+  </igx-tab-item>
 </igx-tabs>
+
 ```
 
 If the sample is configured properly, the tabs should look like the following example:
@@ -131,27 +172,37 @@ If the sample is configured properly, the tabs should look like the following ex
 
 <div class="divider--half"></div>
 
-If changing the labels and icons is not enough, you can also provide your own template by utilizing the [`IgxTabItemTemplateDirective`]({environment:angularApiUrl}/classes/igxtabitemtemplatedirective.html) for each tab header.
+If setting the labels and icons is not enough, you can also provide your own custom content directly between [`igx-tab-header`]({environment:angularApiUrl}/classes/igxtabheader.html}) tags.
 
 ```html
 <igx-tabs>
-    <igx-tabs-group>
-        <ng-template igxTab>
-            <div>
-                <!-- your custom tab content goes here -->
-            </div>
-        </ng-template>
-        <h1>Tab content</h1>
-    </igx-tabs-group>
+  <igx-tab-item>
+    <igx-tab-header>
+      <!-- your custom tab content goes here -->
+      <div>
+        <img src="https://static.infragistics.com/marketing/Website/products/ignite-ui-landing/ignite-ui-logo.svg"
+             width="80px" height="40px">
+      </div>
+    </igx-tab-header>
+    <igx-tab-content>
+      <h1>IgniteUI Rocks!</h1>
+    </igx-tab-content>
+  </igx-tab-item>
 </igx-tabs>
 ```
 
+You can also add you own custom tab header's prefix and suffix simply by using `igxPrefix` and `igxSuffix` directives. The sample below demonstrates how to add a tab with custom header content and prefix/suffix.
+
+<code-view style="height: 250px; border: 1px solid #ededed;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/layouts/tabs-header-prefix-suffix" >
+</code-view>
+
+<div class="divider--half"></div>
+
 ## Integration With Router Outlet Container
 
-Although the `igx-tabs` component is meant to be used as a list of tabs with content specified for each tab group, there might be cases in which you need to define tab items where the content is separate from the tab group.
-
-> [!NOTE]
-> Keep in mind that the tab items definition mode does not support any content in the tab group - the component renders the tab item strip only. The component also does not support mixing of tab item definitions and group definitions at the same time.
+Although the `igx-tabs` component is meant to be used as a list of tabs with content specified for each tab item, there might be cases in which you need to define tab items where the content is separate from the tab content.
 
 When defining tab items you have the ability to apply directives to them. For example, you may use this functionality to achieve navigation between views using the Angular Router. The following example will demonstrate how to configure the `igx-tabs` component to switch between three components in a single router-outlet.
 
@@ -226,45 +277,49 @@ Now that we have all navigation routes set up, we need to declare the `igx-tabs`
 ```html
 <!-- tabs-routing.component.html -->
 
-<igx-tabs>
+<igx-tabs #tabs1>
   <igx-tab-item
-    label="Tab 1"
-    icon="dashboard"
-    routerLink="view1"
-    routerLinkActive
-    #rla1="routerLinkActive"
-    [isSelected]="rla1.isActive"
-  ></igx-tab-item>
-
+      routerLinkActive
+      #rla1="routerLinkActive"
+      [selected]="rla1.isActive"
+  >
+      <igx-tab-header routerLink="view1">
+          <span igxTabHeaderLabel>Tab 1</span>
+      </igx-tab-header>
+  </igx-tab-item>
   <igx-tab-item
-    label="Tab 2"
-    icon="check_circle_outline"
-    routerLink="view2"
-    routerLinkActive
-    #rla2="routerLinkActive"
-    [isSelected]="rla2.isActive"
-  ></igx-tab-item>
-
+      routerLinkActive
+      #rla2="routerLinkActive"
+      [selected]="rla2.isActive"
+  >
+      <igx-tab-header routerLink="view2">
+          <span igxTabHeaderLabel>Tab 2</span>
+      </igx-tab-header>
+  </igx-tab-item>
   <igx-tab-item
-    label="Tab 3"
-    icon="radio-button_checked"
-    routerLink="view3"
-    routerLinkActive
-    #rla3="routerLinkActive"
-    [isSelected]="rla3.isActive"
-  ></igx-tab-item>
+      routerLinkActive
+      #rla3="routerLinkActive"
+      [selected]="rla3.isActive"
+  >
+      <igx-tab-header routerLink="view3">
+          <span igxTabHeaderLabel>Tab 3</span>
+      </igx-tab-header>
+  </igx-tab-item>
 </igx-tabs>
 
 <router-outlet></router-outlet>
 ```
 
-The above code creates an `igx-tabs` component with three tab items. All tab items have the `RouterLink` directive applied, which is used to specify the routing link used for the navigation. If any of the links becomes active, the corresponding tab item will have its `isSelected` property set because of the binding to the `RouterLinkActive` directive's `isActive` property. This way the selected tab item will always be synchronized with the current url path.
+The above code creates an `igx-tabs` component with three tab items. Each tab item's header has the `RouterLink` directive applied, which is used to specify the routing link used for the navigation. If any of the links becomes active, the corresponding tab item will have its `selected` property set because of the binding to the `RouterLinkActive` directive's `isActive` property. This way the selected tab item will always be synchronized with the current url path.
 
 
 <code-view style="height: 250px; border: 1px solid #ededed" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/layouts/tabs-sample-4" >
 </code-view>
+
+> [!NOTE]
+> Please note that the routerLink directive is set to the `igx-tab-header`, not directly to the `igx-tab-item`.
 
 
 ## Styles
@@ -293,7 +348,7 @@ $dark-tabs: igx-tabs-theme(
 If we take a look at the [`igx-tabs-theme`]({environment:sassApiUrl}/index.html#function-igx-tabs-theme), we will notice that there are even more properties available to us in order to style our tabs.
 
 > [!NOTE]
-> In order to style any component used as part of a tab group content, additional themes should be created specific to the respective component.
+> In order to style any component used as part of a tab content, additional themes should be created specific to the respective component.
 
 The last step is to **include** the component theme in our application.
 
@@ -355,14 +410,13 @@ $dark-tabs: igx-tabs-theme(
 ## API References
 <div class="divider"></div>
 
-* [IgxAvatarComponent]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
-* [IgxCardComponent]({environment:angularApiUrl}/classes/igxcardcomponent.html)
 * [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
 * [IgxNavbarComponent]({environment:angularApiUrl}/classes/igxnavbarcomponent.html)
 * [IgxTabsComponent]({environment:angularApiUrl}/classes/igxtabscomponent.html)
 * [IgxTabsComponent Styles]({environment:sassApiUrl}/index.html#function-igx-tabs-theme)
-* [IgxTabsGroupComponent]({environment:angularApiUrl}/classes/igxtabsgroupcomponent.html)
 * [IgxTabItemComponent]({environment:angularApiUrl}/classes/igxtabitemcomponent.html)
+* [IgxTabHeaderComponent]({environment:angularApiUrl}/classes/igxtabheadercomponent.html)
+* [IgxTabContentComponent]({environment:angularApiUrl}/classes/igxtabcontentcomponent.html)
 
 ## Additional Resources
 <div class="divider--half"></div>
