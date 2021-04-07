@@ -38,7 +38,7 @@ import { IgxTabsModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-We set the tabs header by providing a content between [`igx-tab-header`]({environment:angularApiUrl}/classes/igxtabheader.html}). To set the tab's name we simply add a span with [`igxTabHeaderLabel`]({environment:angularApiUrl}/classes/igxtabheaderlabeldirective.html) directive. Any content that will appear as a tab item's content should be added between [`igx-tab-content`]({environment:angularApiUrl}/classes/igxtabcontent.html}) tags.
+We set the tabs header by providing content to [`igx-tab-header`]({environment:angularApiUrl}/classes/igxtabheader.html}). To set the tab's name we simply add a span with [`igxTabHeaderLabel`]({environment:angularApiUrl}/classes/igxtabheaderlabeldirective.html) directive. Any content that will appear as a tab item's content should be added between [`igx-tab-content`]({environment:angularApiUrl}/classes/igxtabcontent.html}) tags.
 
 ```html
 <igx-tabs>
@@ -104,7 +104,7 @@ If the sample is configured properly, the final result should look like that:
 - **Justify**: all tab headers are equal in width and fully fit the tabs container. If the space is not enough to fit all items, scroll buttons are displayed.
 
 
-Sample below demostrates how tabs get aligned when switching between tabAlignment property values.
+Sample below demostrates how tabs get aligned when switching between `tabAlignment` property values.
 
 <code-view style="height: 250px; border: 1px solid #ededed" 
            data-demos-base-url="{environment:demosBaseUrl}" 
