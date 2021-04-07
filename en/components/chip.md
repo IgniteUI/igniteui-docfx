@@ -44,7 +44,7 @@ The [`IgxChipComponent`]({environment:angularApiUrl}/classes/igxchipcomponent.ht
 
 ### Selection
 
-![Default Selection](../images/chip/selecting_default.gif)
+<img class="responsive-img"  src="../images/chip/selecting_default.gif" />
 
 Selection can be enabled by setting the [`selectable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#selectable) input property to `true`. When selecting a chip, the [`selectedChanging`]({environment:angularApiUrl}/classes/igxchipcomponent.html#selectedchanging) event is fired. It provides the new [`selected`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#selected) value so you can get the new state and the original event in [`originalEvent`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#originalevent) that triggered the selection change. If this is not done through user interaction but instead is done by setting the [`selected`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#selected) property programmatically, the [`originalEvent`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#originalevent) argument has  a value of `null`.
 
@@ -57,7 +57,7 @@ Selection can be enabled by setting the [`selectable`]({environment:angularApiUr
 
 ### Removing
 
-![Removing](../images/chip/removing_default.gif)
+<img class="responsive-img"  src="../images/chip/removing_default.gif" />
 
 Removing can be enabled by setting the [`removable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#removable) input to `true`. When enabled, a remove button is rendered at the end of the chip. When removing a chip, the [`remove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#remove) event is emitted.
 
@@ -163,7 +163,7 @@ All of the [`IgxChipComponent`]({environment:angularApiUrl}/classes/igxchipcompo
 
 You can template the `prefix` and the `suffix` of the chip, using the `IgxPrefix` and the `IgxSuffix` directives:
 
-![Prefix and Suffix](../images/chip/prefix_suffix.jpg)
+<img class="responsive-img"  src="../images/chip/prefix_suffix.jpg" />
 
 ```html
 <igx-chip>
@@ -175,7 +175,7 @@ You can template the `prefix` and the `suffix` of the chip, using the `IgxPrefix
 
 You can customize the size of the chip, using the [`displayDensity`]({environment:angularApiUrl}/classes/igxchipcomponent.html#displaydensity) input. By default it is set to `comfortable`. It can also be set to `cosy` or `compact`, while everything inside the chip retains its relative positioning:
 
-![Density](../images/chip/density.jpg)
+<img class="responsive-img"  src="../images/chip/density.jpg" />
 
 ```html
 <igx-chip>Hi! My name is Chip!</igx-chip>
@@ -192,7 +192,8 @@ You can customize the size of the chip, using the [`displayDensity`]({environmen
 
 You can customize the `select icon`, using the [`selectIcon`]({environment:angularApiUrl}/classes/igxchipcomponent.html#selecticon) input. It accepts values of type `TemplateRef` and overrides the default icon while retaining the same functionality.
 
-![Custom Selection](../images/chip/selecting_custom.gif)
+<img class="responsive-img"  src="../images/chip/selecting_custom.gif" />
+
 
 ```html
 <igx-chip *ngFor="let chip of chipList" [selectable]="true" [selectIcon]="mySelectIcon">
@@ -207,7 +208,8 @@ You can customize the `select icon`, using the [`selectIcon`]({environment:angul
 
 You can customize the `remove icon`, using the [`removeIcon`]({environment:angularApiUrl}/classes/igxchipcomponent.html#removeicon) input. It takes a value of type `TemplateRef` and renders it instead of the default remove icon.
 
-![Remove icons](../images/chip/remove_icons.jpg)
+<img class="responsive-img"  src="../images/chip/remove_icons.jpg" />
+
 
 ```html
 <igx-chip *ngFor="let chip of chipList" [removable]="true" [removeIcon]="myRemoveIcon">
@@ -226,7 +228,7 @@ The [`IgxChipsAreaComponent`]({environment:angularApiUrl}/classes/igxchipsareaco
 
 ### Reorder Chips
 
-![Dragging](../images/chip/dragging.gif)
+<img class="responsive-img"  src="../images/chip/dragging.gif" />
 
 The chip can be dragged by the end-user in order to change its position. The dragging is disabled by default but can be enabled using the [`draggable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#draggable) input property. You need to handle the actual chip reordering manually. This is where the chip area comes in handy since it provides the [`reorder`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html#reorder) event that returns the new order when a chip is dragged over another chip.
 
@@ -260,15 +262,15 @@ The chip can be focused using the `Tab` key or by clicking on it. When the chips
 
   - <kbd>LEFT</kbd> - Moves the focus to the chip on the left.
 
-    ![Left](../images/chip/arrow_left_key.gif)
+    <img class="responsive-img"  src="../images/chip/arrow_left_key.gif" />
 
   - <kbd>RIGHT</kbd> - Moves the focus to the chip on the right.
 
-    ![Right](../images/chip/arrow_right_key.gif)
+    <img class="responsive-img"  src="../images/chip/arrow_right_key.gif" />
 
   - <kbd>SPACE</kbd> - Toggles chip selection if it is selectable.
 
-    ![Space](../images/chip/space_key.gif)
+    <img class="responsive-img"  src="../images/chip/space_key.gif" />
   - <kbd>DELETE</kbd> - Triggers the [`remove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#remove) event for the [`igxChip`]({environment:angularApiUrl}/classes/igxchipcomponent.html) so the chip deletion can be handled manually.
   - <kbd>SHIFT</kbd> + <kbd>LEFT</kbd> - Triggers [`reorder`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html#reorder) event for the [`igxChipArea`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html) when the currently focused chip should move position to the left.
   - <kbd>SHIFT</kbd> + <kbd>RIGHT</kbd> - Triggers [`reorder`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html#reorder) event for the [`igxChipArea`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html) when the currently focused chip should move one position to the right.

@@ -14,7 +14,7 @@ Angular Schematics または Ignite UI CLI を使用して Angular プロジェ�
 ## 認証プロジェクトの作成
 'Ignite UI for Angular' プロジェクト タイプを選択した後、ステップバイステップの手順を実行する際に認証プロジェクトを選択できます。
 
-![](../../../images/general/cli-igx-side-auth.png)
+<img class="responsive-img" src="../../../images/general/cli-igx-side-auth.png" />
 
 または新しいコマンドを使用します。
 
@@ -30,11 +30,11 @@ ng new "Auth Project" --collection="@igniteui/angular-schematics" --template=sid
 ## 説明
 このテンプレートはサイドナビゲーションのデフォルトに基づいて作成され、ログイン ページまたはログインユーザーのアバターを表示するプロファイル ページとログイン セクションをアプリのナビゲーションバーに追加します。
 
-![](../../../images/general/igx-side-auth-login-bar.png)
+<img class="responsive-img" src="../../../images/general/igx-side-auth-login-bar.png" />
 
 ログインバーは、サインインまたはサインアップするためのダイアログも統合されます。
 
-![](../../../images/general/igx-side-auth-login-dialogs.png)
+<img class="responsive-img" src="../../../images/general/igx-side-auth-login-dialogs.png" />
 
 このプロジェクトは、さまざまな[外部認証プロバイダー](#add-a-third-party-social-provider)もサポートしています。 
 
@@ -102,7 +102,7 @@ export class AppModule {
 ```
 これにより、ログイン ダイアログの各ボタンが自動的に有効になります。
 
-![](../../../images/general/igx-side-auth-login-google.png)
+<img class="responsive-img" src="../../../images/general/igx-side-auth-login-google.png" />
 
 このガイドに従って [Microsoft](https://docs.microsoft.com/ja-jp/azure/active-directory/develop/v2-protocols-oidc) でも同じことができます。
 
@@ -115,7 +115,7 @@ https://developers.facebook.com/docs/apps/#register
 
 プロバイダーを有効にすると、すべてのボタンがアクティブになります。
 
-![](../../../images/general/igx-side-auth-login-social.png)
+<img class="responsive-img" src="../../../images/general/igx-side-auth-login-social.png" />
 
 ### プロバイダーの詳細
 
