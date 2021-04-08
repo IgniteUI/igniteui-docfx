@@ -84,9 +84,10 @@ export class AppModule {
 
 To enable user login with a specific third-party provider all that is required is to un-comment the specific line and replace the `` with your app's client ID.
 If you need to obtain one, for example for Google Account sign in, follow the provider-specific guide at:
-- https://developers.google.com/identity/protocols/OpenIDConnect#getcredentials
 
-- https://support.google.com/cloud/answer/6158849?hl=en&ref_topic=6262490 (more detailed version)
+- [Obtain credentials](https://developers.google.com/identity/protocols/OpenIDConnect#getcredentials)
+
+- [More detailed version](https://support.google.com/cloud/answer/6158849?hl=en&ref_topic=6262490)
 
 Keep in mind, redirect URLs and allowed domain origins should be configured per provider to match the project. When creating the Google OAuth 2.0 client ID for development you can provide `http://localhost:4200/redirect-google` as the redirect URI. See [redirect URLs](#provider-details) for details.
 
