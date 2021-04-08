@@ -81,7 +81,7 @@ ig
 ```
 
 <div style="display:inline-block;">
-    <a style="background: url(../../images/general/buildCLIapp.gif); display:flex; justify-content:center; min-width:540px; min-height:315px;"
+    <a style="background: url(../../images/general/buildCLIapp.gif); display:flex; justify-content:center; width: 80vw; max-width:540px; min-height:315px;"
        href="https://youtu.be/QK_NsdtdA70" target="_blank">
         <img src="../../images/general/play.svg" style="vertical-align: middle;" />
     </a>
@@ -215,7 +215,10 @@ ng serve
 
 The final result should look something like this:
 
-<img src="../../images/general/igniteui-project.png" />
+
+<img class="responsive-img"  src="../../images/general/igniteui-project.png" />
+
+
 
 ## API References
 

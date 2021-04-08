@@ -13,14 +13,14 @@ Angular アプリケーションでユーザー インターフェイスを作�
 
 Angular で UI を作成する方法は、WPF で UI を作成する方法と非常に似ています。通常、UserControl クラスで表されるユーザー コントロールを使用します。`UserControl` は、マークアップとコードを再利用可能なコンテナにグループ化し、複数の異なる場所で同じインターフェイスと機能を使用できるようにします。このユーザー コントロールには、UI マークアップ用の .xaml ファイルとロジック用の C# ファイルがあります。さらに、このユーザー コントロール用の任意のタイプのスタイリング情報を含むリソース ディクショナリがあります。Angular では、`Component` と呼ばれるものを使用します。コンポーネントには、UI マークアップに使用される html ファイルがあります。プロパティとロジックに使用される typescript ファイルがあり、すべてのスタイル情報に CSS ファイルを使用します。以下は比較ですが類似点が多くあります。
 
-<img src="../../../images/general/component_structure.png" />
+<img class="responsive-img" src="../../../images/general/component_structure.png" />
 
 左側には、`Sample` というユーザー コントロールを備えた WPF アプリケーションがあります。また、スタイリング情報を含む `SampleResources` と呼ばれるリソース ディクショナリもあります。
 右側には、`AppComponent` を持つ Angular アプリケーションがあります。先に進み、Angular アプリ コンポーネントを WPF アプリケーションのサンプル ユーザーコントロールのコンポーネントと比較します。
 
 アプリ コンポーネントの typescript ファイルを開きます。このファイルをコンポーネントの背後にあるコードと考えることができます。その理由は、WPF にアクセスして `Sample` ユーザー コントロールの背後にあるコードである Sample.xaml.cs を開いて多くの類似点を確認できます。
 
-<img src="../../../images/general/component_code_behind.png" />
+<img class="responsive-img" src="../../../images/general/component_code_behind.png" />
 
 はじめに、`AppComponent` と呼ばれるエクスポートするクラスがあることがわかります。現在、この AppComponent には title というプロパティもあります。したがって、このクラス内で、コンポーネントの実行に必要なすべてのプロパティ、メソッド、およびイベントを定義でき、ユーザー コントロールと非常に似ています。クラス (この場合は `Sample`) があり、このクラス内で、ユーザーコントロールが機能するために必要なすべてのプロパティ、メソッド、およびイベントを定義します。
 
@@ -41,7 +41,7 @@ ng g c sample
 
 コマンドが完了すると、多くのことが実行されているのを確認できます。まず、コンポーネントに指定したのと同じ名前の新しいフォルダーがあります。また、html ファイル、SPEC ファイル、typescript ファイル、CSS ファイルの 4 つの新しいファイルがあります。`app.module.ts` ファイルも更新しました。
 
-<img src="../../../images/general/sample_component.png" />
+<img class="responsive-img" src="../../../images/general/sample_component.png" />
 
 新しく作成したコンポーネントを含む `sample` フォルダーを確認します。コンポーネントに必要な 3 つのファイルすべてに加えて、SPEC ファイルがありますが、このトピックでは必要ないテスト ファイルです。また、app.module.ts に変更を加え、NgModule の`宣言`セクションにサンプルコンポーネントを追加しました。
 > [!NOTE]

@@ -12,14 +12,14 @@ When it comes to creating user interface in an Angular application you can use a
 
 Creating a UI in Angular is very similar to how we would create one in WPF. We normally use user controls, represented by the UserControl class. A `UserControl` groups markup and code into a reusable container, allowing the same interface and functionality to be used in several different places. This user control will have a .xaml file for the UI markup and a C# file for the logic, and then it may even have a resource dictionary, which would contain any type of styling information for this user control. While in Angular, we use what's called a `Component`. A component has an html file, which is used for any UI markup. It has a typescript file, which is used for its properties and logic, and then it uses a CSS file for all its styling information. Let's go ahead and see just how similar these two are.
 
-<img src="../../../images/general/component_structure.png" />
+<img class="responsive-img" src="../../../images/general/component_structure.png" />
 
 On the left side, we have a WPF application, with a user control called `Sample`. It also has a resource dictionary called `SampleResources` that contains styling information.
 On the right side, we have an Angular application with an `AppComponent`. Let's go ahead and compare the Angular app component to that of the sample user control in the WPF application.
 
 Start by opening up the app component typescript file. We can think of this file as the code behind of the component, and the reason we think that way is because if we come over to the WPF and open up the Sample.xaml.cs, the code behind of the `Sample` user control, we can see a lot of similarities.
 
-<img src="../../../images/general/component_code_behind.png" />
+<img class="responsive-img" src="../../../images/general/component_code_behind.png" />
 
 First we can see that we have a class that we're exporting called `AppComponent`. Now, this AppComponent also has a property in it called title. So within this class we're going to define all the properties, methods and events required for our component to run. This is extremely similar if not the exact same of a user control. We can see that we have a class, in this case called `Sample`, and within this class, we're going to define all the properties, methods and events required for the user control to function.
 
@@ -40,7 +40,7 @@ ng g c sample
 
 When the command completes, you'll notice a number of things have happened. First, we have a new folder with the same name we have given to our component. We also have four new files - an html file, a SPEC file, a typescript file, and a CSS file. We also made an update to the `app.module.ts` file.
 
-<img src="../../../images/general/sample_component.png" />
+<img class="responsive-img" src="../../../images/general/sample_component.png" />
 
 Look at the `sample` folder which contains our newly created component. We can see that all three files that are required for a component are there plus this extra SPEC file. This is actually a test file which we do not need for this article, so we're not going to bother with it now. We also made a modification to the app.module.ts, in which it added the sample component to the `declarations` section of our NgModule.
 > [!NOTE]

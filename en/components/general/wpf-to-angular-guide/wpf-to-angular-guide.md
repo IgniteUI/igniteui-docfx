@@ -9,7 +9,7 @@ _keywords: wpf to angular tutorial, igniteui for angular, infragistics
 WPF to Angular tutorial is the first step that you should take in order to make a smooth transition from a `desktop` to `web` framework transition. The tutorial targets WPF developers, who make their first steps to web development and it examines some differences and similarities of both frameworks - applications structure, data binding, events, components, etc.
 
 <p align="center">
-    <img src="../../../images/general/wpf_to_angular_guide.png" style="vertical-align: middle;" />
+    <img class="responsive-img" src="../../../images/general/wpf_to_angular_guide.png" style="vertical-align: middle;" />
 </p>
 
 The guide is divided into the following topics and has included video tutorials:
