@@ -30,7 +30,7 @@ Ignite UI for Angular [keyframes]({environment:sassApiUrl}/index.html#mixin-keyf
 
 アニメーション ステップのキーフレーム セレクターおよびキーフレームの CSS スタイルは、mixin の本体内で定義されます。
 
-Here's an example of creating a new animation mixin that can be used with our `animation` mixin.
+これは、`animation` ミックスインで使用できる新しいアニメーション ミックスインを作成する例です。
 
 ```scss
 @mixin fade-in-bottom {
@@ -66,20 +66,20 @@ Here's an example of creating a new animation mixin that can be used with our `a
 
 ### タイミング関数
 
-We include a list of pre-baked timing functions to use with our keyframes mixins. Read the [documentation]({environment:sassApiUrl}/index.html) to find the full list of timing functions.
+キーフレーム ミックスインで使用するタイミング関数のリストが含まれています。タイミング関数の全てのリストの詳細は、[ドキュメント]({environment:sassApiUrl}/index.html)をご覧ください。
 
 <div class="sample-container loading" style="height: 270px">
     <iframe id="animations-sample-2-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/theming/animations-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="animations-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on codesandbox</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="animations-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="animations-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="animations-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 <div class="divider--half"></div>
 
 ## Angular アニメーション
 
-Apart from Sass keyframes and animations mixin, we also include pre-defined Angular animations.
+Sass キーフレームとアニメーション ミックスインの他に、事前定義された Angular アニメーションも含まれています。
 
 <div class="divider--half"></div>
 
@@ -88,13 +88,13 @@ Apart from Sass keyframes and animations mixin, we also include pre-defined Angu
 </div>
 <p style="margin: 0; padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="animations-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on codesandbox</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="animations-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on stackblitz</button>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="animations-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="animations-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 
 ### 使用方法
 
-Ignite UI for Angular アニメーションは、`フェード`、`フリップ`、`成長`、`その他`、`回転`、ス`ケール`、`スライド`、`スウィング`などの視覚効果に基づいて 8 つのカテゴリに分類されます。各グループは異なるパラメーター セットを受け取り、含まれるアニメーションの動作を変更できます。各アニメーションは、Angular が提供する [`animation`](https://angular.io/api/animations/animation) 関数によって生成される [`AnimationReferenceMetadata`](https://angular.io/api/animations/AnimationReferenceMetadata) オブジェクトです。
+Ignite UI for Angular アニメーションは、`フェード`、`フリップ`、`成長`、`その他`、`回転`、`スケール`、`スライド`、`スウィング`などの視覚効果に基づいて 8 つのカテゴリに分類されます。各グループは異なるパラメーター セットを受け取り、含まれるアニメーションの動作を変更できます。各アニメーションは、Angular が提供する [`animation`](https://angular.io/api/animations/animation) 関数によって生成される [`AnimationReferenceMetadata`](https://angular.io/api/animations/AnimationReferenceMetadata) オブジェクトです。
 
 パラメーターがアタッチされている場合、デフォルト値として機能します。アニメーションが [`useAnimation`](https://angular.io/api/animations/useAnimation) 関数によって呼び出された場合、パラメーター値を直接渡すことができます。渡されたパラメーター値のいずれかがない場合、デフォルト値が使用されます。
 

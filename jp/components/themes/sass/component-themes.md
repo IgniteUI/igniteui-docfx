@@ -14,7 +14,7 @@ _language: ja
 
 Ignite UI for Angular でコンポーネント テーマを設定する方法、次にコンポーネント レベル テーマの作成方法について説明します。IE 11 などの古いブラウザーをサポートするためにコンポーネントのテーマ設定に 2 つの方法があります。
 - 1 つ目の方法は、コンポーネント インスタンスを [CSS 変数](https://developer.mozilla.org/ja-JP/docs/Web/CSS/Using_CSS_variables) を使用してスタイル設定する方法です。CSS 変数を使用するとスタイルを繰り返し定義することなくコンポーネント テーマを作成できます。この方法は、CSS 変数の値をランタイムで変更できます。
-- 2 つ目の方法は、特定のコンポーネントで既に宣言されている CSS ルールを上書きする新しいルールを作成することです。 This approach is pretty straight-forward, and it is the only way we can provide sensible theming support for older browser, albeit it is not ideal as it adds a lot of additional CSS rules to the generated CSS theme.
+- 2 つ目の方法は、特定のコンポーネントで既に宣言されている CSS ルールを上書きする新しいルールを作成することです。この方法は古いブラウザーに適切なテーマをサポートする簡単で唯一の方法ですが、多くの追加 CSS ルールを生成した CSS テーマに追加するため理想的ではありません。
 
 これらの方法を実際に使用する方法やコンポーネント レベルのテーマを作成する場合にどちらか一方を使用する方法について説明します。
 <div class="divider"></div>
@@ -28,8 +28,8 @@ Ignite UI for Angular でコンポーネント テーマを設定する方法、
 - **CSS 変数 mixin** - コンポーネント テーマを使用し、特定コンポーネントのスタイルに使用される *CSS 変数*を生成する Sass mixin。
 - **コンポーネント mixin** - コンポーネント テーマを使用し、特定コンポーネントのスタイルに使用される *CSS ルール*を生成する Sass mixin。
 
-Say you want to create a new global avatar theme that has a different background color to the one we set in the avatar's default theme. As mentioned in the [**overview section**](#overview) there are 2 general approaches to creating a component theme. 
-コンポーネントテーマを体系化し、スコープする方法があります。最も簡単な方法は、[**グローバル テーマ**](./global-theme.md)を定義した同じファイルで行う方法です。
+アバターのデフォルトテーマに設定するテーマと異なる背景色を持つ新規のグローバル アバター テーマを作成する場合、[**概要セクション**](#概要)のようにコンポーネント テーマを作成する 2 つの一般的な方法があります。 
+コンポーネントテーマを体系化し、スコープする方法があります。最も簡単な方法は、[**グローバル テーマ**](./global-themes.md)を定義した同じファイルで行う方法です。
 
 アバター テーマの定義:
 
@@ -140,9 +140,9 @@ $avatar-theme: igx-avatar-theme($background: royalblue);
 
 ```
 
-When using CSS variables, we don't have to use the `::ng-deep` pseudo-selector. With the code above we've created CSS variables for the `igx-avatar`,  which will always have `royalblue` as its background color. The theme for our custom avatar will not 'leak' into other `igx-avatar` component instances, thus staying encapsulated within our custom `app-avatar` component.
+CSS 変数を使用する間は、`:: ng-deep` 擬似セレクターは必要ありません。上記コードで背景色に常に `royalblue` が含まれる `igx-avatar` の CSS 変数を作成しました。カスタム アバターのテーマは、その他の `igx-avatar` コンポーネントに影響しないため、カスタムの `app-avatar` コンポーネント内でカプセル化されたままです。
 
-Any Ignite UI for Angular theme built with the `$igx-legacy-support` set to `false` will allow styling of components without the need of Sass in your project. For instance the above could be achieved by setting the value of `--igx-avatar-background` CSS variable to the desired color:
+`$igx-legacy-support` を `false` に設定してビルドした Ignite UI for Angular テーマは、プロジェクトで Sass を使用せずにコンポーネントのスタイルを設定できます。たとえば、上記は `--igx-avatar-background` CSS 変数に色の値を設定することにより実現できます。
 
 ```css
 /* app-avatar.component.css */
@@ -156,7 +156,7 @@ Any Ignite UI for Angular theme built with the `$igx-legacy-support` set to `fal
 ## 古いブラウザーの場合
 <div class="divider--half"></div>
 
-In the [overview](#overview) section I mentioned you could use hard-coded values to style your components by setting the `$igx-legacy-support` global variable to `true`. If you use the `igx-theme` mixin and pass it `$legacy-support` with value of `true` it will set the `$igx-legacy-support` to `true`, too.
+[概要](#概要)セクションの説明にあったように、`$igx-legacy-support` グローバル変数を `true` に設定することにより、ハードコーディングされた値をコンポーネントのスタイル設定に使用できます。`igx-theme` mixin を使用して `$legacy-support` に `true` を渡した場合、`$igx-legacy-support` もまた `true` に設定されます。
 
 ### グローバル テーマの使用
 
@@ -181,7 +181,7 @@ $avatar-theme: igx-avatar-theme($background: royalblue);
 
 ### カプセル化した表示の使用 
 
-The below sample uses the sample from the [View Encapsulation](#view-encapsulation) section as a starting point:
+以下のサンプルは、[表示のカプセル化](#表示のカプセル化)セクションのサンプルを開始点として使用しています。
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/utilities';
@@ -209,7 +209,7 @@ $avatar-theme: igx-avatar-theme($initials-background: royalblue);
 
 グローバル テーマの設定方法:
 
-* [グローバル テーマ](./global-theme.md)
+* [グローバル テーマ](./global-themes.md)
 
 コミュニティに参加して新しいアイデアをご提案ください。
 

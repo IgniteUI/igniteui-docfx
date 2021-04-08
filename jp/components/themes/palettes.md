@@ -18,8 +18,8 @@ Ignite UI for Angular は、`primary`、`secondary`、`grays`、`info`、`succes
 
 <table>
     <tr>
-        <th colspan="10" style="text-align: center !important">All</th>
-        <th colspan="4" style="text-align: center !important">*Primary & Secondary Only*</th>
+        <th colspan="10" style="text-align: center !important">すべて</th>
+        <th colspan="4" style="text-align: center !important">Primary および Secondary のみ</th>
     </tr>
     <tr>
         <td>**50**</td>
@@ -45,7 +45,7 @@ Ignite UI for Angular は、`primary`、`secondary`、`grays`、`info`、`succes
 上記のカラーに加えて、各カラー バリアントに **Level AAA** [WCAG](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html) 準拠の `contrast` カラーも含まれています。つまり、対応する `contrast` カラー バリアントをベースカラー バリアントの前景カラーとして安全に使用できます。
 
 > [!NOTE]
-> コントラストカラーは、Sass テーマ エンジンによってビルド時に生成されます。CSS 変数をオーバーライドしても、対応するコントラストカラーは更新されません。
+> コントラスト カラーは、Sass テーマ エンジンによってビルド時に生成されます。CSS 変数をオーバーライドしても、対応するコントラスト カラーは更新されません。
 
 以下は、Light Material パレットで宣言された `primary` カラーの抜粋です。
 

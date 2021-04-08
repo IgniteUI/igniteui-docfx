@@ -114,9 +114,9 @@ $custom-avatar-schema: extend($_light-avatar, (
 <div class="divider--half"></div>
 
 関連トピック:
-* [パレット](palette.md)
+* [パレット](palettes.md)
 * [スキーマ](schemas.md)
-* [Global テーマ](global-theme.md)
+* [Global テーマ](global-themes.md)
 * [コンポーネント テーマ](component-themes.md)
 
 コミュニティに参加して新しいアイデアをご提案ください。
