@@ -108,7 +108,7 @@ npm install @infragistics/igniteui-angular igniteui-angular-core igniteui-angula
 ## データ分析ボタン
 データ分析ボタンは、選択したデータをさまざまな方法で可視化するアウトレットです。
 
-![](../../images/general/data-analysis-button.png)
+<img class="responsive-img" src="../../images/general/data-analysis-button.png" />
 
 グリッドで実行されるすべての範囲選択をシングル クリックで簡単に分析できます。
 
@@ -143,8 +143,7 @@ npm install @infragistics/igniteui-angular igniteui-angular-core igniteui-angula
 ### 数の範囲選択
 - `Data Bars` - データバーは、売れ筋商品や売れ残り商品など、高値と低値を識別する場合などに役立ちます。このプリセットにより、選択したセルの範囲の値を簡単に可視化できます。長いバーはより高い値を表します。値が 0 のセルにはデータバーがありません。他のすべてのセルは比例的に塗りつぶされます。正の値は`緑色`で、負の値は`赤色`です。
 
-
-![](../../images/general/data-bars-formatting.png)
+<img class="responsive-img" src="../../images/general/data-bars-formatting.png" />
 
 - `Color Scale` - 色の影はセルの値を表します。`*最低のしきい値`未満の値を保持するセルは`赤色`で色付けされます。`*最高のしきい値`を超える値を保持するセルは`緑色`で色付けされます。`最低`と`最高のしきい値`の間にあるすべてのセルは`黄色`で表示されます。
 
@@ -152,24 +151,24 @@ npm install @infragistics/igniteui-angular igniteui-angular-core igniteui-angula
 
 > `最高のしきい値` - 範囲選択の最大セル値の 66％ 以上。 
 
-![](../../images/general/color-scale-formatting.png)
+<img class="responsive-img" src="../../images/general/color-scale-formatting.png" />
 
 - `Top 10%` - このプリセットを使用して、選択したデータの上位 10％ に相当する値を強調表示します。
 
-![](../../images/general/top-10-percent.png)
+<img class="responsive-img" src="../../images/general/top-10-percent.png" />
 
 - `Greater than` - このプリセットは、`平均よりも大きい`値をすべてマークします。
 - `Duplicate values` - 重複する値をすべてマークします。
 - `Unique values` - 一意のすべてのセル値がマークされます(`青色`の背景色)。
 
-![](../../images/general/unique-values-formatting.png)
+<img class="responsive-img" src="../../images/general/unique-values-formatting.png" />
 
 - `Empty`- `未定義の値`のすべてのセルをマークします。
 
 ### テキストの範囲選択
 - `Text contains` - `左上に上位の選択されたセル`のセル値を含むすべてのセルをマークします。例:
 
-![](../../images/general/contains-formatting.png)
+<img class="responsive-img" src="../../images/general/contains-formatting.png" />
 
 - `Duplicate values` - 重複する値をすべてマークします。
 - `Unique values` - 一意のすべてのセル値がマークされます(`青色`の背景色)。

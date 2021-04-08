@@ -91,7 +91,8 @@ ng update @angular/cli
     ```
 
 ## 8.x.x から 9.0.x の場合:
-Angular 9 の重大な変更により、Hammer プロバイダー は暗黙的に追加されていません (詳細は、https://github.com/angular/angular/blob/master/CHANGELOG.md#breaking-changes-9 を参照してください)。このため、以下のコンポネントの**タッチ**操作が正しく動作するには、アプリケーションのルート モジュールに `HammerModule` をインポートする必要があります。
+Angular 9 の重大な変更により、Hammer プロバイダー は暗黙的に追加されていません 
+[詳細は](https://github.com/angular/angular/blob/master/CHANGELOG.md#breaking-changes-9 )を参照してください。このため、以下のコンポネントの**タッチ**操作が正しく動作するには、アプリケーションのルート モジュールに `HammerModule` をインポートする必要があります。
 
 * igxGrid
 * igxHierarchicalGrid

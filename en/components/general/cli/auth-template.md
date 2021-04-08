@@ -13,7 +13,7 @@ When creating Ignite UI for Angular project with Angular Schematics or Ignite UI
 ## Create Authentication Project
 You can select an authentication project either when going through the Step by step experience after selection 'Ignite UI for Angular' project type:
 
-![](../../../images/general/cli-igx-side-auth.png)
+<img class="responsive-img" src="../../../images/general/cli-igx-side-auth.png" />
 
 Or through the new command:
 
@@ -30,11 +30,11 @@ ng new "Auth Project" --collection="@igniteui/angular-schematics" --template=sid
 ## Description
 This template builds upon the Side Navigation default and adds a profile page and a login section to the app's nav bar that will display a login button or an avatar of the logged in user:
 
-![](../../../images/general/igx-side-auth-login-bar.png)
+<img class="responsive-img" src="../../../images/general/igx-side-auth-login-bar.png" />
 
 The login bar also integrates dialogs to sign in or up:
 
-![](../../../images/general/igx-side-auth-login-dialogs.png)
+<img class="responsive-img" src="../../../images/general/igx-side-auth-login-dialogs.png" />
 
 The project also supports various [external authentication providers](#add-a-third-party-social-provider). 
 
@@ -84,9 +84,10 @@ export class AppModule {
 
 To enable user login with a specific third-party provider all that is required is to un-comment the specific line and replace the `` with your app's client ID.
 If you need to obtain one, for example for Google Account sign in, follow the provider-specific guide at:
-- https://developers.google.com/identity/protocols/OpenIDConnect#getcredentials
 
-- https://support.google.com/cloud/answer/6158849?hl=en&ref_topic=6262490 (more detailed version)
+- [Obtain credentials](https://developers.google.com/identity/protocols/OpenIDConnect#getcredentials)
+
+- [More detailed version](https://support.google.com/cloud/answer/6158849?hl=en&ref_topic=6262490)
 
 Keep in mind, redirect URLs and allowed domain origins should be configured per provider to match the project. When creating the Google OAuth 2.0 client ID for development you can provide `http://localhost:4200/redirect-google` as the redirect URI. See [redirect URLs](#provider-details) for details.
 
@@ -103,7 +104,7 @@ export class AppModule {
 ```
 This will automatically enable the respective button in the login dialog:
 
-![](../../../images/general/igx-side-auth-login-google.png)
+<img class="responsive-img" src="../../../images/general/igx-side-auth-login-google.png" />
 
 You can do the same with [Microsoft](https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-protocols-oidc) following this guide:
 
@@ -116,7 +117,7 @@ https://developers.facebook.com/docs/apps/#register
 
 As you enable providers, all buttons will become active:
 
-![](../../../images/general/igx-side-auth-login-social.png)
+<img class="responsive-img" src="../../../images/general/igx-side-auth-login-social.png" />
 
 ### Provider details
 

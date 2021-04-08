@@ -14,7 +14,7 @@ Angular Schematics または Ignite UI CLI を使用して Angular プロジェ�
 ## 認証プロジェクトの作成
 'Ignite UI for Angular' プロジェクト タイプを選択した後、ステップバイステップの手順を実行する際に認証プロジェクトを選択できます。
 
-![](../../../images/general/cli-igx-side-auth.png)
+<img class="responsive-img" src="../../../images/general/cli-igx-side-auth.png" />
 
 または新しいコマンドを使用します。
 
@@ -30,11 +30,11 @@ ng new "Auth Project" --collection="@igniteui/angular-schematics" --template=sid
 ## 説明
 このテンプレートはサイドナビゲーションのデフォルトに基づいて作成され、ログイン ページまたはログインユーザーのアバターを表示するプロファイル ページとログイン セクションをアプリのナビゲーションバーに追加します。
 
-![](../../../images/general/igx-side-auth-login-bar.png)
+<img class="responsive-img" src="../../../images/general/igx-side-auth-login-bar.png" />
 
 ログインバーは、サインインまたはサインアップするためのダイアログも統合されます。
 
-![](../../../images/general/igx-side-auth-login-dialogs.png)
+<img class="responsive-img" src="../../../images/general/igx-side-auth-login-dialogs.png" />
 
 このプロジェクトは、さまざまな[外部認証プロバイダー](#add-a-third-party-social-provider)もサポートしています。 
 
@@ -83,9 +83,9 @@ export class AppModule {
 
 特定のサードパーティ プロバイダーでユーザー ログインを有効にするには、特定の行のコメントを解除して、アプリのクライアント ID に置き換えます。
 Google アカウントのサインインなどで取得する必要がある場合は、以下のプロバイダー固有のガイドに従ってください。
-- https://developers.google.com/identity/protocols/OpenIDConnect#getcredentials
+- [資格情報を取得する](https://developers.google.com/identity/protocols/OpenIDConnect#getcredentials)
 
-- https://support.google.com/cloud/answer/6158849?hl=ja&ref_topic=6262490 (詳細バージョン)
+- [詳細バージョン](https://support.google.com/cloud/answer/6158849?hl=en&ref_topic=6262490)
 
 プロジェクトに一致するようにプロバイダーごとにリダイレクト URL と許可されたドメイン オリジンを設定する必要があることに注意してください。開発用の Google OAuth 2.0 クライアント ID を作成するとき、リダイレクト URI として `http://localhost:4200/redirect-google` を指定できます。詳細については、[リダイレクト URL](#プロバイダーの詳細) をご覧ください。
 
@@ -102,7 +102,7 @@ export class AppModule {
 ```
 これにより、ログイン ダイアログの各ボタンが自動的に有効になります。
 
-![](../../../images/general/igx-side-auth-login-google.png)
+<img class="responsive-img" src="../../../images/general/igx-side-auth-login-google.png" />
 
 このガイドに従って [Microsoft](https://docs.microsoft.com/ja-jp/azure/active-directory/develop/v2-protocols-oidc) でも同じことができます。
 
@@ -115,7 +115,7 @@ https://developers.facebook.com/docs/apps/#register
 
 プロバイダーを有効にすると、すべてのボタンがアクティブになります。
 
-![](../../../images/general/igx-side-auth-login-social.png)
+<img class="responsive-img" src="../../../images/general/igx-side-auth-login-social.png" />
 
 ### プロバイダーの詳細
 

@@ -45,8 +45,8 @@ This is going to launch a new instance of Visual Studio Code that contains your 
 
 Let's go ahead and take a look at each of these files and see how they relate to a WPF application. The best way to do that is to compare each project side by side. On the left we have our WPF app. On the right we have our Angular app.
 
-<img src="../../../images/general/WPF_project_structure.png" />
-<img src="../../../images/general/Angular_project_structure.png" />
+<img class="responsive-img" src="../../../images/general/WPF_project_structure.png" />
+<img class="responsive-img" src="../../../images/general/Angular_project_structure.png" />
 
 It is important to keep in mind that an Angular application is a single page application (SPA) which means there is only one page in the entire app, and that is your `index.html`. The `index.html` file could be compared to the `App.xaml` of the WPF application. They are both global and everything you put there will show up on every single page of your application. The `index.html` file contains a section `<app-root></app-root>` which is similar to the `StartupUri` of the `App.xaml` file and specifies the first page we want to show when the app launches.
 
@@ -99,7 +99,7 @@ You could find those scripts defined in the `package.json` file and modify the `
 
 Your first Angular application should look like this:
 
-<img src="../../../images/general/First_angular_app.png" />
+<img class="responsive-img" src="../../../images/general/First_angular_app.png" />
 
 ## Additional Resources
 * [Desktop to Web: Create your first Angular App](https://www.youtube.com/watch?v=dhjrAPPad54&list=PLG8rj6Rr0BU-AqcJMuwggKy0GMIkjkt3j)
