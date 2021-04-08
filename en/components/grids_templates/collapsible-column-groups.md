@@ -98,11 +98,11 @@ The initial state of the column group which is specified as collapsible is `[exp
 
 Default expand indicator for the igxGrid is the following:
 
- <img src="../../images/general/expand_indicator.png" style="width: 450px; height: 130px"/>
+ <img class="responsive-img" src="../../images/general/expand_indicator.png" style="width: 450px; height: 130px"/>
 
 Default collapse indicator for the igxGrid is the following:
 
-<img src="../../images/general/collapsed_indicator.png" style="width: 400px; height: 130px"/>
+<img class="responsive-img" src="../../images/general/collapsed_indicator.png" style="width: 400px; height: 130px"/>
 
 Also if you need to change the default expand/collapse indicator we introduce you two easy ways to do it.
 ### By input property

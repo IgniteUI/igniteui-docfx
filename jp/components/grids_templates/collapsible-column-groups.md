@@ -90,11 +90,11 @@ Ignite UI for Angular については、[*はじめに*](general/getting-started
 
 igxGrid のデフォルトの展開インジケーターは次のとおりです。
 
- <img src="../../images/general/expand_indicator.png" style="width: 450px; height: 130px"/>
+ <img class="responsive-img" src="../../images/general/expand_indicator.png" style="width: 450px; height: 130px"/>
 
 igxGrid のデフォルトの展開インジケーターは次のとおりです。
 
-<img src="../../images/general/collapsed_indicator.png" style="width: 400px; height: 130px"/>
+<img class="responsive-img" src="../../images/general/collapsed_indicator.png" style="width: 400px; height: 130px"/>
 
 したがって、デフォルトの展開/折りたたみインジケータを変更する必要がある場合、2 つの簡単な方法を紹介します。
 ### 入力プロパティ
