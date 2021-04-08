@@ -9,7 +9,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div class="divider"></div>
 
 ## Overview
-Roundness, as any other property, is set in the component theme or schema like it's shown in the examples bellow.
+Roundness, as any other property, is set in the component theme or schema like it's shown in the examples below.
 
 ```scss
 $_material-shape-button: (
