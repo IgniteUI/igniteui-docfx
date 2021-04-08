@@ -107,7 +107,7 @@ And that's it! You can now perform **cell range selection** and follow the data 
 ## Data Analysis Button
 The data analysis button is the outlet to visualize your selected data in various ways:
 
-![](../../images/general/data-analysis-button.png)
+<img class="responsive-img" src="../../images/general/data-analysis-button.png" />
 
 This way every range selection performed in the grid can be easily analyzed in a single click.
 
@@ -142,8 +142,7 @@ Understanding conditional formatting - it allows for applying formatting such as
 ### Number range selection
 - `Data Bars` - Data bars can help you spot larger and smaller numbers, such as top-selling and bottom-selling products. This preset makes it very easy to visualize values in a range of selected cells. A longer bar represents a higher value. A cell that holds  value of 0 has no data bar all other cells are filled proportionally. Positive values are with `green` color  and  negative values will be `red`
 
-
-![](../../images/general/data-bars-formatting.png)
+<img class="responsive-img" src="../../images/general/data-bars-formatting.png" />
 
 - `Color Scale` - The shade of the color represents the value in the cell. The cells that hold values below the `*Lowest threshold` will be colored in `red`. The cells that are above the `*Highest threshold` will be colored in `green`. And all the cells that are between the `Lowest` and `Highest threshold` will be colored in `yellow`.
 
@@ -151,24 +150,24 @@ Understanding conditional formatting - it allows for applying formatting such as
 
 > `Highest threshold` - Above 66% of the maximum cell value in range selection. 
 
-![](../../images/general/color-scale-formatting.png)
+<img class="responsive-img" src="../../images/general/color-scale-formatting.png" />
 
 - `Top 10%` - Use this preset to highlight the values which are equivalent to top 10% of the selected data.
 
-![](../../images/general/top-10-percent.png)
+<img class="responsive-img" src="../../images/general/top-10-percent.png" />
 
 - `Greater than` - This preset marks all values `Greater than the avarege`
 - `Duplicate values` - Marks all duplicate values.
 - `Unique values` - All cell values that are unique will be marked (`blue` background color).
 
-![](../../images/general/unique-values-formatting.png)
+<img class="responsive-img" src="../../images/general/unique-values-formatting.png" />
 
 - `Empty`- Marks all cells with `undefined` values
 
 ### Text range selection
 - `Text contains` - Marks all cells that contain the cell value from the `top-left most selected cell`. Example:
 
-![](../../images/general/contains-formatting.png)
+<img class="responsive-img" src="../../images/general/contains-formatting.png" />
 
 - `Duplicate values` - Marks all duplicate values.
 - `Unique values` - All cell values that are unique will be marked (`blue` background color).

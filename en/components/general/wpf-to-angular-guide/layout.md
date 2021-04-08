@@ -22,7 +22,7 @@ The [`StackPanel`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.co
 </StackPanel>
 ```
 
-<img src="../../../images/general/wpf_stackpanel.png" />
+<img class="responsive-img" src="../../../images/general/wpf_stackpanel.png" />
 
 If we want to achieve similar layout in Angular, we may use CSS Flexbox layout. The Flexible Box Layout Module is a powerful mechanism which allows designing a flexible responsive layout structure. In order to use the Flexbox layout, we have to define a container which has its [`display`](https://www.w3schools.com/cssref/pr_class_display.asp) property set to `flex`. Also in order to stack the items vertically, we have to set the [`flex-direction`](https://www.w3schools.com/cssref/css3_pr_flex-direction.asp) property to `column`.
 
@@ -45,7 +45,7 @@ If we want to achieve similar layout in Angular, we may use CSS Flexbox layout. 
 
 Here is the final result in the browser:
 
-<img src="../../../images/general/angular_stackpanel.png" />
+<img class="responsive-img" src="../../../images/general/angular_stackpanel.png" />
 
 The default value of the [`flex-direction`](https://www.w3schools.com/cssref/css3_pr_flex-direction.asp) property is `row`, which is equivalent to a StackPanel with Horizontal orientation in WPF. The flexbox also supports `row-reverse` and `column-reverse` directions which stack the items right to left and bottom to top respectively.
 
@@ -68,7 +68,7 @@ The [`WrapPanel`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.con
 </WrapPanel>
 ```
 
-<img src="../../../images/general/wpf_wrappanel.png" />
+<img class="responsive-img" src="../../../images/general/wpf_wrappanel.png" />
 
 In order to achieve similar result in Angular, we will use the Flexbox layout again. As in the case with StackPanel, we have to set the [`display`](https://www.w3schools.com/cssref/pr_class_display.asp) property to `flex`, but we also have to set the [`flex-wrap`](https://www.w3schools.com/cssref/css3_pr_flex-wrap.asp) property to `wrap`.
 
@@ -95,7 +95,7 @@ button {
 
 Here is the final result in the browser:
 
-<img src="../../../images/general/angular_wrappanel.png" />
+<img class="responsive-img" src="../../../images/general/angular_wrappanel.png" />
 
 If you want to achieve a result similar to a WrapPanel with Orientation="Vertical", you have to set the [`flex-direction`](https://www.w3schools.com/cssref/css3_pr_flex-direction.asp) property to `column`. The [`flex-flow`](https://www.w3schools.com/cssref/css3_pr_flex-flow.asp) property is a shorthand property for setting both the `flex-direction` and `flex-wrap` properties. 
 
@@ -135,7 +135,7 @@ The [`Grid`](https://docs.microsoft.com/en-us/dotnet/api/system.windows.controls
 </Grid>
 ```
 
-<img src="../../../images/general/wpf_grid.png" />
+<img class="responsive-img" src="../../../images/general/wpf_grid.png" />
 
 In Angular, we could use the CSS Grid Layout Module, which offers a grid-based layout system, with rows and columns. In order to use the Grid layout, we have to define a container which has its [`display`](https://www.w3schools.com/cssref/pr_class_display.asp) property set to `grid` or `inline-grid`.
 
@@ -190,7 +190,7 @@ Now we will add the rows with height of 50px each using the [`grid-template-rows
 
 If we open the application now it looks like this:
 
-<img src="../../../images/general/angular_grid.png" />
+<img class="responsive-img" src="../../../images/general/angular_grid.png" />
 
 You could see one important difference between the WPF and CSS grids. In WPF the default value of Grid.Row and Grid.Column is 0, while the CSS grid layout automatically assigns the next available row and column to its children.
 
@@ -228,7 +228,7 @@ Here is the full CSS and the final result in the browser:
 }
 ```
 
-<img src="../../../images/general/angular_grid_span.png" />
+<img class="responsive-img" src="../../../images/general/angular_grid_span.png" />
 
 The `grid-row` and `grid-column` properties are shorthand properties for the [`grid-row-start`](https://www.w3schools.com/cssref/pr_grid-row-start.asp), [`grid-row-end`](https://www.w3schools.com/cssref/pr_grid-row-end.asp), [`grid-column-start`](https://www.w3schools.com/cssref/pr_grid-column-start.asp) and [`grid-column-end`](https://www.w3schools.com/cssref/pr_grid-column-end.asp) properties. You could learn more about the CSS Grid container and item properties in the tutorials in the **Additional Resources** section.
 
