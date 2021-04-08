@@ -81,7 +81,7 @@ Then specify the positioning strategy to be used by the overlay. The position st
 // Initialize and use overlay settings
 const overlaySettings: OverlaySettings = {
     // Set the target where content should be shown
-        target: this.buttonElement.nativeElement
+    target: this.buttonElement.nativeElement,
     // Pass in the positioning strategy
     positionStrategy: new ConnectedPositioningStrategy()
 };
@@ -134,9 +134,8 @@ You can also change the positioning strategy, used by the overlay, by overriding
 
 ```typescript
 const myPositionStrategy = new AutoPositionStrategy();
-overlay.show(overlayId, { positionStrategy: myPositionStrategy }); 
+overlay.attach(element, { positionStrategy: myPositionStrategy }); 
 ```
-
 
 <code-view style="height: 500px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -147,7 +146,7 @@ overlay.show(overlayId, { positionStrategy: myPositionStrategy });
 
 ### Changing Settings
 
-To change the position settings of an already existing strategy, override any of the settings in it:
+To change the position settings of an already existing strategy, override any of the settings in it. If a strategy was already attached you should detach the previously generated ID:
 ```typescript
 // overlaySettings is an existing object of type OverlaySettings
 // overlaySettings.positionStrategy is an existing PositionStrategy with settings of type PositionSettings
@@ -158,7 +157,8 @@ Object.assign(overlaySettings.positionStrategy.settings, {
 overlaySettings.target = dummyHTMLElement;
 // the element will now start to the left of the target (dummyHTMLElement)
 // and will align itself to the left
-overlay.show(overlayId, overlaySettings);
+const overlayId = overlay.attach(overlayId, overlaySettings);
+overlay.show(overlayId);
 ```
 
 ### Offsetting Content
