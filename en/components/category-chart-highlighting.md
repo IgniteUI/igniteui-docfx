@@ -11,15 +11,13 @@ This topic provides conceptual information about the highlighting features of th
 
 ## Angular Highlighting Example
 
-<div class="sample-container loading" style="height: 500px">
-    <iframe id="category-chart-highlighting-iframe" src='{environment:dvDemosBaseUrl}/charts/category-chart-highlighting' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Highlighting Example"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="category-chart-highlighting-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
-    </button>
+<code-view style="height: 500px" 
+           data-demos-base-url="{environment:dvDemosBaseUrl}" 
+           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-highlighting" 
+           alt="Angular Highlighting Example" 
+           github-src="charts/category-chart/highlighting">
+</code-view>
 
-
-</div>
 <div class="divider--half"></div>
 
 ## Highlight Layers

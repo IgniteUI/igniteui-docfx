@@ -12,15 +12,12 @@ The Ignite UI for Angular stacked line chart belongs to a group of category char
 
 ## Angular Stacked Line Chart Example
 
-<div class="sample-container loading" style="height: 500px">
-    <iframe id="data-chart-overview-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-stacked-line-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Stacked Line Chart Example"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-overview-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
-    </button>
-
-
-</div>
+<code-view style="height: 500px" 
+           data-demos-base-url="{environment:dvDemosBaseUrl}" 
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-stacked-line-series" 
+           alt="Angular Stacked Line Chart Example" 
+           github-src="charts/data-chart/type-stacked-line-series">
+</code-view>
 
 <div class="divider--half"></div>
 

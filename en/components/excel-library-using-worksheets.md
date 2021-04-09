@@ -11,10 +11,12 @@ The Infragistics Angular Excel Engine's [`worksheet`]({environment:dvApiBaseUrl}
 
 ## Angular Using Worksheets Example
 
-<div class="sample-container loading" style="height: 200px">
-    <iframe id="excel-library-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/excel/excel-library-operations-on-worksheets' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Using Worksheets Example"></iframe>
-</div>
-
+<code-view style="height: 200px" 
+           data-demos-base-url="{environment:dvDemosBaseUrl}" 
+           iframe-src="{environment:dvDemosBaseUrl}/excel/excel-library-operations-on-worksheets" 
+           alt="Angular Using Worksheets Example" 
+           github-src="excel/excel-library/operations-on-worksheets">
+</code-view>
 
 <div class="divider--half"></div>
 

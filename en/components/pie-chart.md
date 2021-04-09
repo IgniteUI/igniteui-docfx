@@ -11,17 +11,14 @@ The Ignite UI for Angular pie chart component is a specialized component that re
 
 This control is used for representing categorical data. It is most effective when there are only a few categories, and when each category makes up a relatively large percentage of the data as a whole.
 
-## Angular Pie Chart Overview Example
+## Angular Pie Chart Example
 
-<div class="sample-container loading" style="height: 350px">
-    <iframe id="pie-chart-data-sample-iframe" src='{environment:dvDemosBaseUrl}/charts/pie-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Pie Chart Overview Example"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="pie-chart-overview-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
-    </button>
-
-
-</div>
+<code-view style="height: 350px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart-overview"
+           alt="Angular Pie Chart Example"
+           github-src="charts/pie-chart/overview">
+</code-view>
 
 <div class="divider--half"></div>
 
@@ -104,15 +101,11 @@ Additionally you can use the [`legendItemTemplate`]({environment:dvApiBaseUrl}/p
 </igx-pie-chart>
 ```
 
-<div class="sample-container loading" style="height: 350px">
-    <iframe id="pie-chart-legend-iframe" data-src='{environment:dvDemosBaseUrl}/charts/pie-chart-legend' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="pie-chart-legend-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
-    </button>
-
-
-</div>
+<code-view style="height: 350px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart-legend"
+           github-src="charts/pie-chart/legend">
+</code-view>
 
 <div class="divider--half"></div>
 
@@ -136,15 +129,11 @@ If you set [`othersCategoryType`]({environment:dvApiBaseUrl}/products/ignite-ui-
 </igx-pie-chart>
 ```
 
-<div class="sample-container loading" style="height: 350px">
-    <iframe id="pie-chart-others-iframe" data-src='{environment:dvDemosBaseUrl}/charts/pie-chart-others' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="pie-chart-others-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
-    </button>
-
-
-</div>
+<code-view style="height: 350px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart-others"
+           github-src="charts/pie-chart/others">
+</code-view>
 
 <div class="divider--half"></div>
 
@@ -161,15 +150,11 @@ The pie chart component supports explosion of individual pie slices as well as a
 </igx-pie-chart>
 ```
 
-<div class="sample-container loading" style="height: 350px">
-    <iframe id="pie-chart-explosion-iframe" data-src='{environment:dvDemosBaseUrl}/charts/pie-chart-explosion' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="pie-chart-explosion-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
-    </button>
-
-
-</div>
+<code-view style="height: 350px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart-explosion"
+           github-src="charts/pie-chart/explosion">
+</code-view>
 
 <div class="divider--half"></div>
 
@@ -208,15 +193,11 @@ For scenarios where you click on the Others slice, the pie chart will return an 
 </igx-pie-chart>
 ```
 
-<div class="sample-container loading" style="height: 350px">
-    <iframe id="pie-chart-selection-iframe" data-src='{environment:dvDemosBaseUrl}/charts/pie-chart-selection' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="pie-chart-selection-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
-    </button>
-
-
-</div>
+<code-view style="height: 350px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart-selection"
+           github-src="charts/pie-chart/selection">
+</code-view>
 
 <div class="divider--half"></div>
 
@@ -246,14 +227,10 @@ public tick(): void {
 }
 ```
 
-<div class="sample-container loading" style="height: 350px">
-    <iframe id="pie-chart-animation-iframe" data-src='{environment:dvDemosBaseUrl}/charts/pie-chart-animation' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="pie-chart-animation-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
-    </button>
-
-
-</div>
+<code-view style="height: 350px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart-animation"
+           github-src="charts/pie-chart/animation">
+</code-view>
 
 <div class="divider--half"></div>

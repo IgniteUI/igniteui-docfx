@@ -11,15 +11,12 @@ The Ignite UI for Angular category chart component is capable of handling high v
 
 ## Angular High Volume Data Example
 
-<div class="sample-container loading" style="height: 500px">
-    <iframe id="category-chart-high-volume-iframe" src='{environment:dvDemosBaseUrl}/charts/category-chart-high-volume' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular High Volume Data Example"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="category-chart-high-volume-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
-    </button>
-
-
-</div>
+<code-view style="height: 500px" 
+           data-demos-base-url="{environment:dvDemosBaseUrl}" 
+           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-high-volume" 
+           alt="Angular High Volume Data Example" 
+           github-src="charts/category-chart/high-volume">
+</code-view>
 
 <div class="divider--half"></div>
 
