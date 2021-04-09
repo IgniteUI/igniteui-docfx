@@ -13,8 +13,8 @@ The [`igx-tabs`]({environment:angularApiUrl}/classes/igxtabscomponent.html) comp
 ## Angular Tabs Example
 
 
-<code-view style="height: 250px; border: 1px solid #ededed;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 250px; border: 1px solid #ededed;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/layouts/tabs-sample-3" alt="Angular Tabs Example">
 </code-view>
 
@@ -88,8 +88,8 @@ We set the tabs header by providing content to [`igx-tab-header`]({environment:a
 If the sample is configured properly, the final result should look like that:
 
 
-<code-view style="height: 200px; border: 1px solid #ededed;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 200px; border: 1px solid #ededed;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/layouts/tabs-sample-1" alt="Angular Tabs Example">
 </code-view>
 
@@ -100,14 +100,14 @@ If the sample is configured properly, the final result should look like that:
 `IgxTabs` [`tabAlignment`]({environment:angularApiUrl}/classes/igxtabscomponent.html#tabalignment) input property controls how tabs are positioned and arranged. It accepts four different values - start, center, end and justify.
 - **Start** (default): the width of the tab header depends on the content (label, icon, both) and all tabs have equal padding. First tab is aligned to the tabs container left side.
 - **Center**: the width of the tab header depends on the content and occupies the tabs container center. If the space is not enough to fit all items, scroll buttons are displayed.
-- **End**: the width of the tab header depends on the content and all tabs have equal padding. Last tab is aligned to the tabs container right side. 
+- **End**: the width of the tab header depends on the content and all tabs have equal padding. Last tab is aligned to the tabs container right side.
 - **Justify**: all tab headers are equal in width and fully fit the tabs container. If the space is not enough to fit all items, scroll buttons are displayed.
 
 
 Sample below demostrates how tabs get aligned when switching between `tabAlignment` property values.
 
-<code-view style="height: 250px; border: 1px solid #ededed" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 250px; border: 1px solid #ededed"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/layouts/tabs-alignment" >
 </code-view>
 
@@ -118,6 +118,8 @@ Sample below demostrates how tabs get aligned when switching between `tabAlignme
 
 Let's modify the tabs and make them more appealing by including icons using the [`igxTabHeaderIcon`]({environment:angularApiUrl}/classes/igxtabheadericondirective.html) directive. The `igx-tabs` component is compatible with the Material Design
 [**Icons**](https://material.io/icons/) so it will be very easy to adopt them in your application.
+> [!NOTE]
+> If you haven't used the `igx-icon` in your application so far, please make sure to import the `IgxIconModule` in the **app.module.ts** before proceeding.
 
 First, add the Material Icons in your 'styles.scss' file in the main application folder. Next, add `igx-icon` with [`igxTabHeaderIcon`]({environment:angularApiUrl}/classes/igxtabheadericondirective.html}) directive set, as a child of [`igx-tab-header`]({environment:angularApiUrl}/classes/igxtabheader.html}) .
 
@@ -165,8 +167,8 @@ First, add the Material Icons in your 'styles.scss' file in the main application
 If the sample is configured properly, the tabs should look like the following example:
 
 
-<code-view style="height: 250px; border: 1px solid #ededed;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 250px; border: 1px solid #ededed;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/layouts/tabs-sample-3" >
 </code-view>
 
@@ -193,8 +195,8 @@ If setting the labels and icons is not enough, you can also provide your own cus
 
 You can also add you own custom tab header's prefix and suffix simply by using `igxPrefix` and `igxSuffix` directives. The sample below demonstrates how to add a tab with custom header content and prefix/suffix.
 
-<code-view style="height: 250px; border: 1px solid #ededed;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 250px; border: 1px solid #ededed;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/layouts/tabs-header-prefix-suffix" >
 </code-view>
 
@@ -313,8 +315,8 @@ Now that we have all navigation routes set up, we need to declare the `igx-tabs`
 The above code creates an `igx-tabs` component with three tab items. Each tab item's header has the `RouterLink` directive applied, which is used to specify the routing link used for the navigation. If any of the links becomes active, the corresponding tab item will have its `selected` property set because of the binding to the `RouterLinkActive` directive's `isActive` property. This way the selected tab item will always be synchronized with the current url path.
 
 
-<code-view style="height: 250px; border: 1px solid #ededed" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 250px; border: 1px solid #ededed"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/layouts/tabs-sample-4" >
 </code-view>
 
@@ -399,8 +401,8 @@ $dark-tabs: igx-tabs-theme(
 ```
 
 
-<code-view style="height: 250px; border: 1px solid #ededed" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 250px; border: 1px solid #ededed"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/layouts/tabs-style" >
 </code-view>
 
