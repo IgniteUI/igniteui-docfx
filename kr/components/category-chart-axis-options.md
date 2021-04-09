@@ -11,15 +11,11 @@ Ignite UI for Angular 카테고리 차트 컴포넌트에서는 축은 축 기�
 
 ## 데모
 
-<div class="sample-container loading" style="height: 500px">
-    <iframe id="category-chart-axis-options-iframe" src='{environment:dvDemosBaseUrl}/charts/category-chart-axis-options' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="category-chart-axis-options-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">STACKBLITZ 에서 보기
-    </button>
-
-
-</div>
+<code-view style="height: 500px" 
+           data-demos-base-url="{environment:dvDemosBaseUrl}" 
+           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-axis-options"  
+           github-src="charts/category-chart/axis-options">
+</code-view>
 
 <div class="divider--half"></div>
 

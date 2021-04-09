@@ -9,14 +9,12 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div class="divider--half"></div>
 
 ## Angular Time Picker Example
-<div class="sample-container loading" style="height: 600px;">
-    <iframe id="time-picker-sample" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/scheduling/timepicker-sample-1" onload="onSampleIframeContentLoaded(this);" alt="Angular Time Picker Example"></iframe>
-</div>
-<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="time-picker-sample" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="time-picker-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height: 600px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-1" alt="Angular Time Picker Example">
+</code-view>
+
 <div class="divider--half"></div>
 
 ## Usage
@@ -142,7 +140,7 @@ public max: string = "06:15:30 PM";
 private toast;
 
 public onValidationFailed() {
-    this.toast.show();
+    this.toast.open();
 }
 ```
 
@@ -164,13 +162,12 @@ public onValidationFailed() {
 A toast is added to show a message when an invalid time is selected. The range is (09:15:30 AM~06:15:30 PM) and the time parts outside it will be grayed out. Also we changed the delta of the items and the time format so you can see how that looks like.
 
 And there we have it:
-<div class="sample-container loading" style="height: 540px;">
-    <iframe id="time-picker-sample-4" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-4" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="time-picker-sample-4" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="time-picker-sample-4" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height: 540px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-4" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ## Dropdown mode
@@ -214,13 +211,12 @@ When the mouse caret is positioned at the hours, minutes or AM/PM placeholders a
 * If the dropdown is not opened and a new value is typed, to `Accept` it - click outside of the time picker or press <kbd>Tab</kbd> to move the focus.
 
 And there we have it:
-<div class="sample-container loading" style="height:540px">
-    <iframe id="timepicker-dropdown-iframe" data-src='{environment:demosBaseUrl}/scheduling/timepicker-dropdown' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="timepicker-dropdown-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="timepicker-dropdown-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height:540px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-dropdown" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ## Templated Input Group
@@ -257,13 +253,12 @@ public date: Date = new Date();
 ```
 
 And here's our templated time picker:
-<div class="sample-container loading" style="height: 600px;">
-    <iframe id="time-picker-sample-5" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-5" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="time-picker-sample-5" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="time-picker-sample-5" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height: 600px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-5" >
+</code-view>
+
 
 ## Templated Dropdown Mode
 
@@ -337,13 +332,12 @@ public selectNow(timePicker: IgxTimePickerComponent) {
 ```
 
 And there we have it, a re-templated time picker with dropdown, custom actions and two-way binding support:
-<div class="sample-container loading" style="height: 600px;">
-    <iframe id="time-picker-sample-6" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-6" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="time-picker-sample-6" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="time-picker-sample-6" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height: 600px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-6" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ## Styling
@@ -435,13 +429,12 @@ If `$legacy-support` is set to `false`(default), include the component **css var
 ```
 
 ### Demo
-<div class="sample-container loading" style="height: 600px;">
-    <iframe id="time-picker-styling" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/scheduling/timepicker-styling" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="time-picker-styling" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="time-picker-styling" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height: 600px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-styling" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ## API References

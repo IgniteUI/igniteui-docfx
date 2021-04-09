@@ -9,12 +9,12 @@ _language: kr
 
 <p class="highlight">[The Ignite UI for Angular Drop Down](drop-down.md) can fully integrate usage of the [IgxForOf directive](for-of.md) in order to display a very large list of items for its selection</p>
 
-<div class="sample-container loading" style="height:320px">
-    <iframe id="dropdown-virtual-iframe" src='{environment:demosBaseUrl}/data-entries/dropdown-virtual' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-virtual-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height:320px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-virtual" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ## Configuration
@@ -126,12 +126,12 @@ Here, we can also pass the style for `height` (but we already did so in the temp
 
 You can view the configured example below:
 
-<div class="sample-container loading" style="height:320px">
-    <iframe id="dropdown-virtual-iframe" src='{environment:demosBaseUrl}/data-entries/dropdown-virtual' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-virtual-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height:320px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-virtual" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ## Remote Data
@@ -245,12 +245,12 @@ Inside of the `ngAfterViewInit` hook, we call to get data for the initial state 
 ### Remote Virtualization - Demo
 The result of the above configuration is a drop-down that dynamically loads the data in should display, depending on the scrollbar's state. You can view the demo and play around with the configuration below:
 
-<div class="sample-container loading" style="height:400px">
-    <iframe id="dropdown-remote-iframe" src='{environment:demosBaseUrl}/data-entries/dropdown-remote' width="100%" height="100%" seamless="" frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="dropdown-remote-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height:400px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-remote" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ## Notes and Limitations

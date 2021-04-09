@@ -1,8 +1,21 @@
+@@if(igxName==='IgxGrid') {
 ---
 title: Angular グリッド行追加 | UI グリッド | Ignite UI for Angular | インフラジスティックス
 _description: Ignite UI for Angular を使用して、定義済みの行追加機能の使用およびカスタマイズする方法を学びます。UI グリッドで、直感的なグリッド行の追加と CRUD 機能を利用できます。
-_keywords: 行追加, igniteui for angular, infragistics, インフラジスティックス
+_keywords: row adding, 行追加, igniteui for angular, infragistics, インフラジスティックス
+_language: ja
 ---
+}
+
+@@if(igxName!=='IgxGrid') {
+---
+title: Angular グリッド行追加 | UI グリッド | Ignite UI for Angular | インフラジスティックス
+_description: Ignite UI for Angular を使用して、定義済みの行追加機能の使用およびカスタマイズする方法を学びます。UI グリッドで、直感的なグリッド行の追加と CRUD 機能を利用できます。
+_keywords: row adding, 行追加, igniteui for angular, infragistics, インフラジスティックス
+_language: ja
+_canonicalLink: grid/row-adding
+---
+}
 
 # @@igComponent 行追加
 
@@ -18,37 +31,30 @@ _keywords: 行追加, igniteui for angular, infragistics, インフラジステ�
 次のサンプルは、@@igComponent でネイティブの行追加を有効にする方法を示しています。セルの値を変更してから、同じ行の別のセルをクリックまたはナビゲートしても、**[完了]** ボタンを使用して確認するか、**[キャンセル]** ボタンを使用して破棄するまで、行の値は更新されません。
 
 @@if (igxName === 'IgxGrid') {
-<div class="sample-container loading" style="height:520px">
-    <iframe id="grid-add-row-sample-iframe" src='{environment:demosBaseUrl}/grid/grid-add-row' width="100%" height="100%"
-    seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<br/>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-add-row-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-add-row-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
-</div>
+
+<code-view style="height:520px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/grid/grid-add-row" >
+</code-view>
+
 <div class="divider--half"></div>
 }
 @@if (igxName === 'IgxTreeGrid') {
-<div class="sample-container loading" style="height:520px">
-    <iframe id="tree-grid-row-adding-sample-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-add-row' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular @@igComponent 行追加の例"></iframe>
-</div>
-<br/>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="tree-grid-row-adding-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tree-grid-row-adding-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
-</div>
+
+<code-view style="height:520px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-add-row" alt="Angular @@igComponent 行追加の例">
+</code-view>
+
 <div class="divider--half"></div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-   <div class="sample-container loading" style="height:510px">
-    <iframe id="hierarchical-grid-row-editing-sample-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-add-row' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular @@igComponent 行追加の例"></iframe>
-</div>
-<br/>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-row-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-row-editing-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
-</div>
+   
+<code-view style="height:510px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-add-row" alt="Angular @@igComponent 行追加の例">
+</code-view>
+
 <div class="divider--half"></div>
 }
 
@@ -200,6 +206,31 @@ export class AppModule {}
 
 - 階層グリッドの UI を生成すると、エンド ユーザーが [行の追加] ボタンをクリックした行に対して現在展開されている子レイアウトはすべて縮小されます。
 }
+
+## 行追加オーバーレイのカスタマイズ
+
+### テキストのカスタマイズ
+
+行追加オーバーレイのテキストのカスタマイズは、`igxRowAddTextDirective` を使用して可能です。
+
+```html
+<ng-template igxRowAddText>
+	Adding Row
+</ng-template>
+ ```
+
+### ボタンのカスタマイズ
+`igxRowEditActionsDirective` を使用して行編集オーバーレイのボタンのカスタマイズが可能です。
+キーボード ナビゲーションにボタンを含める場合、各ボタンに `igxRowEditTabStopDirective` が必要です。
+
+ ```html
+ <ng-template igxRowEditActions let-endRowEdit>
+	<button igxButton igxRowEditTabStop (click)="endRowEdit(false)">Cancel</button>
+	<button igxButton igxRowEditTabStop (click)="endRowEdit(true)">Apply</button>
+</ng-template>
+ ```
+> [!NOTE]
+> `igxRowEditActions` ディレクティブを使用すると、オーバーレイ ボタンの編集と追加の両方の編集アクションが変更されます。
 
 ## リモート シナリオ
 

@@ -5,10 +5,82 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 # Animations
-
 <p class="highlight">Ignite UI for Angular includes over 100+ pre-built animations specially designed for a better user experience.</p>
+<div class="divider"></div>
+
+## Sass Animations
+
+### Keyframes Mixin
+
+The Ignite UI for Angular [keyframes]({environment:sassApiUrl}/index.html#mixin-keyframes) mixin is used to register new keyframes animations. The mixin takes the name of a keyframes animation as a parameter and adds it to the global keyframe register list. In that way, the keyframes will not be duplicated in the exported CSS when including the same keyframes animation several times.
+
+For instance, doing this:
+
+```scss
+@include fade-in();
+@include fade-in();
+```
+
+Will result in only one `@keyframes` rule added to the produced CSS:
+
+```css
+@keyframes fade-in { ... }
+```
+
+Keyframes selectors for the animation steps along with CSS styles for the keyframes are defined inside the body of the mixin.
+
+Here's an example of creating a new animation mixin that can be used with our `animation` mixin.
+
+```scss
+@mixin fade-in-bottom {
+    @include keyframes(fade-in-bottom) {
+        0% {
+            transform: translateY(50px);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+} 
+```
+<div class="divider--half"></div>
+
+### Animation Mixin
+
+The [animation]({environment:sassApiUrl}/index.html#mixin-animation) mixin serves as a vessel for animating elements using a list of animation properties passed as parameters. Users can specify animation properties like `name`, `duration`, `delay`, `direction`, `iteration count`, etc. Multiple keyframe animations can be passed to the `animation` mixin.
+
+```scss
+//include the 'fade-in-top' keyframes animation mixin
+@include fade-in-top();
+
+//include the animation mixin with parameters
+.my-class {
+    @include animation('fade-in-top' 3s $ease-out-quad infinite);
+}
+```
+<div class="divider--half"></div>
+
+### Timing Functions
+
+We include a list of pre-baked timing functions to use with our keyframes mixins. Read the [documentation]({environment:sassApiUrl}/index.html) to find the full list of timing functions.
+
+<div class="sample-container loading" style="height: 270px">
+    <iframe id="animations-sample-2-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/theming/animations-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="animations-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on codesandbox</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="animations-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on stackblitz</button>
+</div>
+<div class="divider--half"></div>
 
 ## Angular Animations
+
+Apart from Sass keyframes and animations mixin, we also include pre-defined Angular animations.
+
+<div class="divider--half"></div>
 
 <div class="sample-container loading" style="height: 470px">
     <iframe id="animations-sample-1-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/theming/animations-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -18,7 +90,6 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="animations-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on codesandbox</button>
 <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="animations-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on stackblitz</button>
 </div>
-<div class="divider--half"></div>
 
 ### Usage
 
@@ -78,63 +149,6 @@ useAnimation(fadeIn, {
     }
 });
 ```
-## SCSS Animations
-
-### Keyframes Mixin
-
-The Ignite UI for Angular [keyframes]({environment:sassApiUrl}/index.html#mixin-keyframes) mixin is used to register new keyframes animations. The mixin takes the name of a keyframes animation as a parameter and adds it to the global keyframe register list. In that way, the keyframes will not be duplicated in the exported CSS when including the same keyframes animation several times.
-
-For instance, doing this:
-
-```scss
-@include fade-in();
-@include fade-in();
-```
-
-Will result in only one `@keyframes` rule added to the produced CSS:
-
-```css
-@keyframes fade-in { ... }
-```
-
-Keyframes selectors for the animation steps along with CSS styles for the keyframes are defined inside the body of the mixin.  
-
-```scss
-@include keyframes(fade-in-bottom) {
-    0% {
-        transform: translateY(50px);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-```
-
-
-### Animation Mixin
-
-The [animation]({environment:sassApiUrl}/index.html#mixin-animation) mixin serves as a vessel for animating elements using a list of animation properties passed as parameters. Users can specify animation properties like `name`, `duration`, `delay`, `direction`, `iteration count`, etc. Multiple keyframe animations can be passed to the `animation` mixin.
-
-```scss
-//include the 'fade-in-top' keyframes animation mixin
-@include fade-in-top();
-
-//include the animation mixin with parameters
-.my-class {
-    @include animation('fade-in-top' 3s $ease-out-quad infinite);
-}
-```
-
-<div class="sample-container loading" style="height: 270px">
-    <iframe id="animations-sample-2-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/theming/animations-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="animations-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on codesandbox</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="animations-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on stackblitz</button>
-</div>
 
 ## API References
 <div class="divider"></div>

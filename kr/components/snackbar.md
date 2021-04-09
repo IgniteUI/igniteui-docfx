@@ -9,12 +9,12 @@ _language: kr
 <div class="divider"></div>
 
 ### Snackbar Demo
-<div class="sample-container loading" style="height: 350px">
-    <iframe id="snackbar-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/notifications/snackbar-sample-4" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="snackbar-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
-</div>
+
+<code-view style="height: 350px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/notifications/snackbar-sample-4" >
+</code-view>
+
 <div class="divider--half"></div>
 
 > [!NOTE]
@@ -51,7 +51,7 @@ In order to display the snackbar component, use its [`show()`]({environment:angu
 If the sample is configured properly, a snackbar appears displaying a text message when the button is clicked.
 
 <div class="sample-container loading" style="height: 170px">
-    <iframe id="snackbar-sample-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/snackbar-sample-1" class="lazyload"></iframe>
+    <iframe id="snackbar-sample-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/snackbar-sample-1" class="lazyload"></iframe>
 </div>
 
 #### Hide/Auto Hide
@@ -77,7 +77,7 @@ public close(element) {
 If the sample is configured properly, a snackbar appears when the button is clicked showing message and action button. The auto hide feature is disabled and the snackbar disappears on 'CLOSE' button click.
 
 <div class="sample-container loading" style="height: 170px">
-    <iframe id="snackbar-sample-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/snackbar-sample-2" class="lazyload"></iframe>
+    <iframe id="snackbar-sample-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/snackbar-sample-2" class="lazyload"></iframe>
 </div>
 
 #### Display Time
@@ -95,7 +95,7 @@ Use [`displayTime`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.htm
 If the sample is configured properly, the snackbar auto hides faster.
 
 <div class="sample-container loading" style="height: 170px">
-    <iframe id="snackbar-sample-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/snackbar-sample-3" class="lazyload"></iframe>
+    <iframe id="snackbar-sample-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/snackbar-sample-3" class="lazyload"></iframe>
 </div>
 
 #### Customize Snackbar
@@ -148,14 +148,12 @@ We can also customize the content of the Snackbar to display more complex elemen
 
 As a result, a message and three loading dots appear in the snackbar.
 
-<div class="sample-container loading" style="height: 170px">
-    <iframe id="snackbar-sample-iframe-1" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/snackbar-sample-5" class="lazyload"></iframe>
-</div>
 
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="snackbar-sample-iframe-1" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<code-view style="height: 170px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/notifications/snackbar-sample-5" >
+</code-view>
 
-</div>
 
 #### Snackbar in list
 Having all main snackbar features covered, we can integrate this component in more interesting scenario. We can use the snackbar to provide a notification and ability to revert actions.
@@ -233,13 +231,12 @@ public restore() {
 
 ```
 
-<div class="sample-container loading" style="height: 350px">
-    <iframe id="snackbar-sample-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/snackbar-sample-4" class="lazyload"></iframe>
-</div>
 
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="snackbar-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
-</div>
+<code-view style="height: 350px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/notifications/snackbar-sample-4" >
+</code-view>
+
 
 <div class="divider--half"></div>
 

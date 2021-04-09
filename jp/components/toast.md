@@ -11,14 +11,12 @@ _language: ja
 
 ## Angular Toast の例
 
-<div class="sample-container loading" style="height: 300px">
-    <iframe id="toast-sample-2-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/notifications/toast-sample-2" onload="onSampleIframeContentLoaded(this);" alt="Angular Toast の例"></iframe>
-</div>
-<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="toast-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toast-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
+
+<code-view style="height: 300px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/notifications/toast-sample-2" alt="Angular Toast の例">
+</code-view>
+
 <div class="divider--half"></div>
 
 
@@ -43,27 +41,27 @@ export class AppModule {}
 ```
 
 ### Toast の表示
-Toast コンポーネントを表示するには、ボタン クリックで [`show()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#show) メソッドを呼び出します。Toast コンテンツを要素内に渡すことができます。
+Toast コンポーネントを表示するには、ボタン クリックで [`open()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#open) メソッドを呼び出します。Toast コンテンツを要素内に渡すことができます。
 
 ```html
 <!--sample.component.html-->
 
-<button igxButton="raised" (click)="toast.show()">Show notification</button>
+<button igxButton="raised" (click)="toast.open()">Show notification</button>
 <igx-toast #toast >Notification displayed</igx-toast>
 ```
 
 サンプルが正しく構成された場合、ボタン クリック時に通知を表示する Toast が表示されます。
 
-Toast コンテンツを設定する別の方法は、メッセージをパラメーターとして [`show()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#show) メソッドに直接渡すことです。
+Toast コンテンツを設定する別の方法は、メッセージをパラメーターとして [`open()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#open) メソッドに直接渡すことです。
 
 ```html
 <!--sample.component.html-->
 
-<button igxButton="raised" (click)="toast.show('Notification displayed')">Show notification</button>
+<button igxButton="raised" (click)="toast.open('Notification displayed')">Show notification</button>
 <igx-toast #toast ></igx-toast>
 ```
 
-[`show()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#show) メソッドを AppComponent ファイルで使用して、メッセージの値を管理することもできます。
+[`open()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#open) メソッドを AppComponent ファイルで使用して、メッセージの値を管理することもできます。
 
 ```typescript
 // app.component.ts
@@ -76,34 +74,32 @@ public ngOnInit() {
 }
 
 public showMessage() {
-    this.toast.show(this.message);
+    this.toast.open(this.message);
 }
 ```
 
 ## 例
 
 ### 非表示/自動的に隠す
-開いた後は、[`displayTime`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#displaytime) に指定した時間期間後に非表示になります。デフォルト値は 4000 ミリ秒です。この動作はデフォルトで有効ですが、[`autoHide`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#autohide) を **false** に設定して変更できます。このように、Toast は非表示になりません。Toast の [`hide()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#hide) メソッドを使用して、コンポーネントを閉じることができます。 
+開いた後は、[`displayTime`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#displaytime) に指定した時間期間後に非表示になります。デフォルト値は 4000 ミリ秒です。この動作はデフォルトで有効ですが、[`autoHide`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#autohide) を **false** に設定して変更できます。このように、Toast は非表示になりません。Toast の [`close()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#close) メソッドを使用して、コンポーネントを閉じることができます。 
 
 ```html
 <!--sample.component.html-->
 
-<button igxButton="raised" (click)="toast.show()">Show Toast</button>
-<button igxButton="raised" (click)="toast.hide()">Hide Toast</button>
+<button igxButton="raised" (click)="toast.open()">Show Toast</button>
+<button igxButton="raised" (click)="toast.close()">Hide Toast</button>
 <igx-toast #toast message="Notification displayed" [autoHide]="false"></igx-toast>
 ```
 
 サンプルが正しく構成されると、[SHOW] ボタンをクリックしたときに Toast が表示されます。自動的に隠す機能が無効で、[HIDE] ボタンのクリックで Toast が非表示になります。
-他の 2 つのコンポーネントでは、[`show()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#show) メソッドを介してさまざまなメッセージを渡し、コンテンツ プロジェクションを使用する方法を実際に見ることができます。
+他の 2 つのコンポーネントでは、[`open()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#open) メソッドを介してさまざまなメッセージを渡し、コンテンツ プロジェクションを使用する方法を実際に見ることができます。
 
-<div class="sample-container loading" style="height: 450px">
-    <iframe id="toast-sample-3-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/toast-sample-3" class="lazyload"></iframe>
-</div>
 
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="toast-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toast-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz で表示</button>
-</div>
+<code-view style="height: 450px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/notifications/toast-sample-3" >
+</code-view>
+
 
 ### 表示期間
 [`displayTime`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#displaytime) でミリ秒間隔に設定し、Toast コンポーネントが表示される期間を構成します。
@@ -111,7 +107,7 @@ public showMessage() {
 ```html
 <!--sample.component.html-->
 
-<button igxButton="raised" (click)="toast.show()">Show notification</button>
+<button igxButton="raised" (click)="toast.open()">Show notification</button>
 <igx-toast #toast message="Notification displayed" displayTime="1000"></igx-toast>
 ```
 
@@ -149,14 +145,12 @@ public show(toast) {
 
 ```
 
-<div class="sample-container loading" style="height: 300px">
-    <iframe id="toast-sample-5-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/toast-sample-5" class="lazyload"></iframe>
-</div>
 
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="toast-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toast-sample-5-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
+<code-view style="height: 300px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/notifications/toast-sample-5" >
+</code-view>
+
 
 <div class="divider--half"></div>
 
@@ -265,13 +259,12 @@ $custom-toast-theme: igx-toast-theme(
 
 上記と同じ方法でテーマを含める必要があることに注意してください。
 
-<div class="sample-container loading" style="height: 600px">
-    <iframe id="toast-style-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/toast-style" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="toast-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="toast-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
+
+<code-view style="height: 600px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/notifications/toast-style" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ## API リファレンス

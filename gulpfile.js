@@ -112,7 +112,7 @@ const watchFiles = (done) => {
         `${DOCFX_ARTICLES}/grid/master-detail.md`,
         `${DOCFX_ARTICLES}/grid/selection-based-aggregates.md`,
         `${DOCFX_ARTICLES}/treegrid/tree-grid.md`,
-        `${DOCFX_ARTICLES}/treegrid/aggregations.md`,
+        `${DOCFX_ARTICLES}/treegrid/groupby.md`,
         `${DOCFX_ARTICLES}/treegrid/load-on-demand.md`,
         `${DOCFX_ARTICLES}/hierarchicalgrid/hierarchical-grid.md`,
         `${DOCFX_ARTICLES}/hierarchicalgrid/load-on-demand.md`

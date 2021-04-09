@@ -8,6 +8,10 @@
 - name: ライセンス
   href: general/ignite-ui-licensing.md
   new: false
+- name: ローカライズ
+  href: general/localization.md
+  new: false
+  updated: true
 - name: 作業の開始
   href: general/getting-started.md
   new: false
@@ -19,9 +23,19 @@
   href: general/update-guide.md
   new: false
   updated: true
-- name: アクセシビリティ準拠
-  href: general/accessibility-compliance.md
+- name: SSR レンダリング
+  href: general/ssr-rendering.md
   new: false
+- name: データ分析
+  href: general/data-analysis.md
+  new: false
+  updated: true
+- name: 操作方法
+  new: true
+  items:
+    - name: .NET Core を使用してリアルタイム SignalR アプリの構築
+      href: general/how-to/signal-r-service-live-data.md
+      new: true
 - name: Angular Schematics & Ignite UI CLI
   href: general/cli-overview.md
   new: false
@@ -63,17 +77,16 @@
     - name: レイアウト要素
       href: general/wpf-to-angular-guide/layout.md
       new: false
-- name: フレームワーク & 機能
-  href: general/framework-and-features/framework-and-features.md
+- name: インタラクティビティ
+  header: true
   new: false
-  items:
-    - name: SSR レンダリング
-      href: general/framework-and-features/ssr-rendering.md
-      new: false
-    - name: データ分析
-      href: general/framework-and-features/data-analysis.md
-      new: false
-      updated: true
+- name: RTL サポート
+  href: interactivity/right-to-left-support.md
+  updated: true
+  new: false
+- name: アクセシビリティ準拠
+  href: interactivity/accessibility-compliance.md
+  new: false
 - name: グリッドとリスト
   href: grids-and-lists.md
   header: true
@@ -329,8 +342,8 @@
     - name: 条件付きセルのスタイル設定
       href: treegrid/conditional-cell-styling.md
       new: false
-    - name: 集計
-      href: treegrid/aggregations.md
+    - name: グループ化
+      href: treegrid/groupby.md
       new: false
     - name: キーボードナビゲーション
       href: treegrid/keyboard-navigation.md
@@ -826,6 +839,7 @@
 - name: マップ
   href: geo-map.md
   new: false
+  sortable: true
   items:
     - name: CSV ファイルのバインド
       href: geo-map-binding-data-csv.md
@@ -1168,9 +1182,6 @@
   new: false
 - name: Excel エクスポーター
   href: exporter-excel.md
-  new: false
-- name: ローカリゼーション
-  href: localization.md
   new: false
 - name: トランザクション サービス
   href: transaction.md

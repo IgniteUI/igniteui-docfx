@@ -10,14 +10,12 @@ _keywords: angular accordion, igniteui for angular, infragistics
 <div class="divider--half"></div>
 
 ## Usage
-<div class="sample-container loading" style="height: 320px;">
-    <iframe id="expansion-sample-1-sample" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/layouts/expansion-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
-<div>
-<button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="expansion-sample-1-sample" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-1-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height: 320px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-1" >
+</code-view>
+
 
 First, we need to import the **IgxExpansionPanelModule** in our **app.module**:
 ```typescript
@@ -111,13 +109,12 @@ export class ExpansionPanelComponent {
 ```
 
 Below we have the results:
-<div class="sample-container loading" style="height: 320px;">
-    <iframe id="expansion-sample-2-sample" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/layouts/expansion-sample-2" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="expansion-sample-2-sample" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-2-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height: 320px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-2" >
+</code-view>
+
 
 ## Component Customization
 The [`IgxExpansionPanelComponent`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) allows for easy customization of [the header]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html).
@@ -166,25 +163,23 @@ For the sake of simplicity let's add some basic markup to the body of our expans
 ```
 
 Lets see the result from all the above changes:
-<div class="sample-container loading" style="height: 460px;">
-    <iframe id="expansion-sample-3-sample" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/layouts/expansion-sample-3" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="expansion-sample-3-sample" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-3-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height: 460px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-3" >
+</code-view>
+
 
 
 ## Styling  
 
 ### Demo
-<div class="sample-container loading" style="height: 440px;">
-    <iframe id="expansion-styling" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/layouts/expansion-styling" class="lazyload no-theming"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="expansion-styling" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-styling" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height: 440px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/layouts/expansion-styling" >
+</code-view>
+
 
 ### Palettes & Colors
 Fist we create a custom palette which can later be passed to our component:
@@ -313,13 +308,12 @@ The sample shows some user information and the key point here is passing the ani
 ```
 
 You can see the results below:
-<div class="sample-container loading" style="height: 380px;">
-    <iframe id="expansion-sample-5-sample" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/layouts/expansion-sample-5" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="expansion-sample-5-sample" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-5-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height: 380px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-5" >
+</code-view>
+
 
 ## Multiple panel scenario
 In the following example, we are going to implement more like app case scenario, where you want to follow a particular workflow showing and requiring more user details on portions. In this sample, the default `growVerIn` and `growVerOut` animations from our inbuilt animations suite are used thus there is no need to pass any specific animation settings or import animations. Notice how we do not allow more than one `igxExpansionPanel` to be expanded at a time, handling the [`onInteraction`]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html#oninteraction)  event.
@@ -388,13 +382,12 @@ export class ExpansionPanelComponent {
 </igx-expansion-panel>
 ```
 You can see the results below:
-<div class="sample-container loading" style="height: 480px;">
-    <iframe id="expansion-sample-4-sample" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/layouts/expansion-sample-4" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" class="codesandbox-btn" data-iframe-id="expansion-sample-4-sample" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
-<button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="expansion-sample-4-sample" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height: 480px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-4" >
+</code-view>
+
 
 ## API Reference
 * [IgxExpansionPanel API]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html)

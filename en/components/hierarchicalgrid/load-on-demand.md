@@ -14,14 +14,12 @@ This topic demonstrates how to configure Load on Demand by creating a Remote Ser
 
 ## Angular Hierarchical Grid Load On Demand Example
 
-<div class="sample-container loading" style="height:620px">
-    <iframe id="hierarchical-grid-lod-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-lod' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular Hierarchical Grid Load On Demand Example"></iframe>
-</div>
-<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-lod-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-lod-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height:620px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-lod" alt="Angular Hierarchical Grid Load On Demand Example">
+</code-view>
+
 <div class="divider--half"></div>
 
 ### Remote Service Provider
@@ -45,9 +43,10 @@ As you can see `this.http` will be a reference to our `HttpCLient` module, and `
 
 #### Building our request url
 
-Next we will define how we should build our URL for the GET request. This is where we will be able to get the data for our main grid but also for any child grid inside it. We will use the `Customers` data from `https://services.odata.org/V4/Northwind/Northwind.svc/` for our root level and use `Order` and `Order_Details` for the lower levels. The model will differ per application but we will use the following one:
+Next we will define how we should build our URL for the GET request. This is where we will be able to get the data for our main grid but also for any child grid inside it. We will use the `Customers` data from [here](https://services.odata.org/V4/Northwind/Northwind.svc/) for our root level and use `Order` and `Order_Details` for the lower levels. The model will differ per application but we will use the following one:
 
-![Dragging](../../images/hgrid-database.jpg)
+<img class="responsive-img" src="../../images/hgrid-database.jpg" />
+
 
  What we first need is the `key` of our table to determine from where to get the data for the desired grid, the primary key of the parent row and its unique ID. We will define all this in an interface called `IDataState`. An example:
 

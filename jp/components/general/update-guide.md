@@ -45,52 +45,119 @@ ng update @angular/cli
 ## 11.1.x から 12.0.x の場合:
 ### テーマ:
 * 重大な変更:
+    * `IgxAvatar` テーマが簡略化されました。テーマ パラメーター (`igx-avatar-theme`) の数が大幅に削減され、接頭辞付きのパラメーター (`icon-*`, `initials-*`, `image-*`) と接尾辞付きのパラメーター (`border-radius-*`) が含まれなくなりました。`ng update` で実行された更新は、既存のボタン テーマを移行しますが、接頭辞付きと接尾辞付きのパラメーターがないことを考慮して、いくつかの追加の調整が必要になる場合があります。
+    
+    既存のタイプ固有のアバター テーマを以下のように変更する必要があります。
+
+    例えば、次の例は
+
+        ```scss
+        $avatar-theme: igx-avatar-theme(
+            $initials-background: blue,
+            $initials-color: orange,
+            $icon-background: blue,
+            $icon-color: orange,
+        );
+
+        @include igx-avatar($avatar-theme);
+        ```
+
+    このとおりに変換する必要があります。
+
+        ```scss
+        $initials-avatar: igx-avatar-theme(
+            $background: blue,
+            $color: orange,
+        );
+
+        $icon-avatar: igx-avatar-theme(
+            $background: blue,
+            $color: orange,
+        );
+
+        .initials-avatar {
+            @include igx-avatar($initials-avatar);
+        }
+
+        .icon-avatar {
+            @include igx-avatar($icon-avatar);
+        }
+        ```
+
     * `IgxButton` テーマが簡略化されました。テーマ パラメーター (`igx-button-theme`) の数が大幅に削減され、接頭辞付きのパラメーター (`flat-*`、`raised-*` など) が含まれなくなりました。`ng update` で実行された更新は、既存のボタン テーマを移行しますが、接頭辞付きのパラメーターがないことを考慮して、いくつかの追加の調整が必要になる場合があります。 
 
   以下のコード スニペットと同じ結果を得るには: 
 
-    ```html
-       <button igxButton="raised">Raised button</button>
-       <button igxButton="outlined">Outlined button</button>
-    ```
-    ```scss
+        ```html
+        <button igxButton="raised">Raised button</button>
+        <button igxButton="outlined">Outlined button</button>
+        ```
+        ```scss
         $my-button-theme: igx-button-theme(
             $raised-background: red,
             $outlined-outline-color: green
         );
-        
+            
         @include igx-css-vars($my-button-theme);
-    ```
-  ボタン タイプごとに個別のテーマを作成し、CSS セレクターにスコープする必要があります。
-    ```html
-       <div class="my-raised-btn">
-           <button igxButton="raised">Raised button</button>
-       </div>
-       <div class="my-outlined-btn">
-           <button igxButton="outlined">Outlined button</button>
-       </div>
-    ```
-    ```scss
+        ```
+    ボタン タイプごとに個別のテーマを作成し、CSS セレクターにスコープする必要があります。
+        ```html
+        <div class="my-raised-btn">
+            <button igxButton="raised">Raised button</button>
+        </div>
+        <div class="my-outlined-btn">
+            <button igxButton="outlined">Outlined button</button>
+        </div>
+        ```
+	
+        ```scss
         $my-raised-button: igx-button-theme(
             $background: red
         );
-  
+    
         $my-outlined-button: igx-button-theme(
             $border-color: red
         );
-  
+    
         .my-raised-btn {
             @include igx-css-vars($my-raised-button);
-        }
-  
+         }
+    
         .my-outlined-btn {
             @include igx-css-vars($my-outlined-button);
         }
-    ```
-  ご覧のとおり、`igx-button-theme` パラメーターはボタン タイプごとに同じ名前になっているため、タイプごとに異なる色を使用するには、ボタン テーマのスコープを CSS セレクターに設定する必要があります。
-  
-  ここでは、`igx-button-theme` のすべての[利用可能なプロパティ](https://jp.infragistics.com/products/ignite-ui-angular/docs/sass/latest/index.html#function-igx-button-theme)を確認できます。  
+        ```
+    ご覧のとおり、`igx-button-theme` パラメーターはボタン タイプごとに同じ名前になっているため、タイプごとに異なる色を使用するには、ボタン テーマのスコープを CSS セレクターに設定する必要があります。
 
+    ここでは、`igx-button-theme` のすべての[利用可能なプロパティ](https://jp.infragistics.com/products/ignite-ui-angular/docs/sass/latest/index.html#function-igx-button-theme)を確認できます。
+
+    * `igx-typography` mixin は `igx-core` に暗黙的に含まれなくなりました。タイポグラフィ スタイルを使用するには、`igx-core` の後と `igx-theme` の前に mixin を明示的に含める必要があります。
+
+    ```scss
+    // in styles.scss
+    
+    @include igx-core();
+    
+    @include igx-typography(
+        $font-family: $material-typeface,
+        $type-scale: $material-type-scale
+    );
+    
+    @include igx-theme();
+    ```
+
+    > [!IMPORTANT]
+    > `igx-core` mixin は常に最初に含める必要があります。
+
+    Ignite UI for Angular に含まれるテーマごとに、使用できる特定の `font-family` 変数と `type-scale` 変数を提供します。
+
+    | **テーマ** | **フォント ファミリ** | **タイプ スケール** |
+    |----------------|-----------------|-----------------|
+    | Material | $material-typeface | $material-type-scale |
+    | Fluent | $fluent-typeface | $fluent-type-scale |
+    | Bootstrap | $bootstrap-typeface | $bootstrap-type-scale |
+    | Indigo | $indigo-typeface | $indigo-type-scale |
+ 
 ## 10.2.x から 11.0.x の場合:
 * IgxGrid、IgxTreeGrid、IgxHierarchicalGrid
     * グリッドでツール バーをインスタンス化される方法が変更されました。グリッド ツリーに投影される別個のコンポーネントになりました。したがって、`showToolbar` プロパティはすべてのグリッドから削除され、グリッド内のツールバーに関連する他のすべてのプロパティは非推奨です。
@@ -140,7 +207,8 @@ ng update @angular/cli
     ```
 
 ## 8.x.x から 9.0.x の場合:
-Angular 9 の重大な変更により、Hammer プロバイダー は暗黙的に追加されていません (詳細は、https://github.com/angular/angular/blob/master/CHANGELOG.md#breaking-changes-9 を参照してください)。このため、以下のコンポネントの**タッチ**操作が正しく動作するには、アプリケーションのルート モジュールに `HammerModule` をインポートする必要があります。
+Angular 9 の重大な変更により、Hammer プロバイダー は暗黙的に追加されていません 
+[詳細は](https://github.com/angular/angular/blob/master/CHANGELOG.md#breaking-changes-9 )を参照してください。このため、以下のコンポネントの**タッチ**操作が正しく動作するには、アプリケーションのルート モジュールに `HammerModule` をインポートする必要があります。
 
 * igxGrid
 * igxHierarchicalGrid
@@ -182,6 +250,7 @@ import { HammerModule } from "@angular/platform-browser";
 `ng update` プロセスは、`AvatarType`、`Type` などのすべての列挙名を `IgxAvatarType` と `IgxBadgeType` にそれぞれ更新します。その他の列挙メンバー名は変更されません。 
 
 ## 8.1.x から 8.2.x の場合:
+
 * IgxDrag
     * `hideBaseOnDrag` と `visible` 入力は非推奨のため、アプリケーションで同じ機能を実現するために、Angular が提供する基本要素を非表示にする任意の方法を使用できます。1 つの例として、可視性スタイルの非表示設定があります。これは、非表示にして DOM で使用するスペースを保持するためです。
 
