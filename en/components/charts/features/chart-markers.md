@@ -24,6 +24,19 @@ The colors of the markers are also managed by setting the `MarkerBrushes` and `M
 
 <div class="divider--half"></div>
 
+# Angular Chart Marker Templates
+
+In addition to marker properties, you can implement your own marker by setting a function to the  `MarkerTemplate` property of a series rendered in the `XamCategoryChart` control as it is demonstrated in example below.
+
+<code-view style="height: 600px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-marker-templates"
+           alt="Angular Chart Marker Templates"
+           github-src="charts/category-chart/marker-templates">
+</code-view>
+
+<div class="divider--half"></div>
+
 ## Additional Resources
 
 You can find more information about related chart features in these topics:
