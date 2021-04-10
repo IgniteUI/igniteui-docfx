@@ -2,7 +2,7 @@
 title: Angular Polar Chart | Data Visualization | Infragistics
 _description: Infragistics' Angular Polar Chart
 _keywords: Angular Charts, Polar Chart, Infragistics
-mentionedTypes: ["XamDataChart", "PolarAreaSeries", "PolarLineSeries", "PolarSplineSeries"]
+mentionedTypes: ["XamDataChart", "PolarAreaSeries"]
 ---
 
 # Angular Polar Charts
@@ -11,9 +11,37 @@ Angular Polar Charts are a group of charts that use the polar (angle, radius) co
 
 Polar Charts draw attention to uneven intervals or clusters of data. They are often used to plot scientific data (e.g. wind direction and speed, direction, and strength of magnetic field, location of objects in solar system), and can highlight the deviation of collected data from predicted results.
 
+## Angular Polar Area Chart
+
+The Polar Area Chart renders using a collection of polygons connecting data points in polar (angle/radius) coordinate system. This Chart uses the same concepts of data plotting as the [Category Area Chart](area-chart.md#angular-category-area-chart) with the difference that the visualization wraps data points around a circle rather than stretching them along a horizontal line.
+
+You can create this type of chart in the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) control by binding your data to a [`IgxPolarAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarareaseriescomponent.html), as shown in the example below:
+
+<code-view style="height: 600px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-polar-area-series"
+           alt="Angular Polar Area Chart" >
+</code-view>
+
+<div class="divider--half"></div>
+
+## Angular Polar Spline Area Chart
+
+The Polar Spline Area Chart renders also as a collection of polygons but they have curved splines connecting data points instead of straight lines like [Polar Area Chart](polar-chart.md#angular-polar-area-chart) does.
+
+You can create this type of chart in the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) control by binding your data to a [`IgxPolarAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarareaseriescomponent.html), as shown in the example below:
+
+<code-view style="height: 600px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-polar-spline-area-series"
+           alt="Angular Polar Area Chart" >
+</code-view>
+
+<div class="divider--half"></div>
+
 ## Angular Polar Marker Chart
 
-The Polar Marker Chart renders using a collection of markers representing data points in polar (angle/radius) coordinate system. This chart uses the same concepts of data plotting as the [Scatter Marker Chart](scatter-chart.md#scatter-marker-chart) with the difference that the visualization wraps data points around a circle rather than stretching them along a horizontal line.
+The Polar Marker Chart renders using a collection of markers representing data points in polar (angle/radius) coordinate system. This chart uses the same concepts of data plotting as the [Scatter Marker Chart](scatter-chart.md#angular-scatter-marker-chart) with the difference that the visualization wraps data points around a circle rather than stretching them along a horizontal line.
 
 You can create this type of chart in the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) control by binding your data to a [`IgxPolarScatterSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarscatterseriescomponent.html), as shown in the example below:
 
@@ -27,7 +55,7 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
 
 ## Angular Polar Line Chart
 
-The Polar Line Chart renders using a collection of straight lines connecting data points in polar (angle/radius) coordinate system. This chart uses the same concepts of data plotting as the [Scatter Line Chart](scatter-chart.md#scatter-line-chart) with the difference that the visualization wraps data points around a circle rather than stretching them along a horizontal line.
+The Polar Line Chart renders using a collection of straight lines connecting data points in polar (angle/radius) coordinate system. This chart uses the same concepts of data plotting as the [Scatter Line Chart](scatter-chart.md#angular-scatter-line-chart) with the difference that the visualization wraps data points around a circle rather than stretching them along a horizontal line.
 
 You can create this type of chart in the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) control by binding your data to a [`IgxPolarLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarlineseriescomponent.html), as shown in the example below:
 
@@ -41,7 +69,7 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
 
 ## Angular Polar Spline Chart
 
-The Polar Spline Chart renders using a collection of curved splines connecting data points in polar (angle/radius) coordinate system. This Chart uses the same concepts of data plotting as the [Scatter Spline Chart](scatter-chart.md#scatter-spline-chart) with the difference that the visualization wraps data points around a circle rather than stretching them along a horizontal line.
+The Polar Spline Chart renders using a collection of curved splines connecting data points in polar (angle/radius) coordinate system. This Chart uses the same concepts of data plotting as the [Scatter Spline Chart](scatter-chart.md#angular-scatter-spline-chart) with the difference that the visualization wraps data points around a circle rather than stretching them along a horizontal line.
 
 You can create this type of chart in the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) control by binding your data to a [`IgxPolarSplineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarsplineseriescomponent.html), as shown in the example below:
 

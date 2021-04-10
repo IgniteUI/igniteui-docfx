@@ -5,11 +5,13 @@ _keywords: Angular Charts, Spline Chart, Infragistics
 mentionedTypes: ["XamCategoryChart", "XamDataChart", "SplineSeries", "StackedSplineSeries", "Stacked100SplineSeries"]
 ---
 
-# Angular Spline Chart
+# Angular Spline Charts
 
-Angular Spline Chart belongs to a group of Category Series and it is rendered using a collection of points connected by smooth curves of spline.  Values are represented on the y-axis and categories are displayed on the x-axis. Spline Chart emphasizes the amount of change over a period of time or compares multiple items as well as the relationship of parts to a whole by displaying the total of the plotted values. The Spline Chart is identical to the [Line Chart](line-chart.md) in all aspects except that line connecting data points has spline interpolation and smoothing for improved presentation of data.
+Angular Spline Charts belong to a group of Category Series that render as a collection of points connected by smooth curves of spline. Values are represented on the y-axis and categories are displayed on the x-axis. Spline Charts emphasize the amount of change over a period of time or compares multiple items as well as the relationship of parts to a whole by displaying the total of the plotted values. Spline Charts are identical to [Line Charts](line-chart.md) in all aspects except that line connecting data points has spline interpolation and smoothing for improved presentation of data.
 
-## Angular Spline Chart Example
+## Angular Category Spline Chart
+
+The following example shows how to create Category Line Chart in the `XamCategoryChart` control by binding your data and setting the [`ChartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html) property to Spline enum.
 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"

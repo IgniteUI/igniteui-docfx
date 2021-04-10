@@ -12,7 +12,7 @@ The Ignite UI for Angular data chart allows for placement of horizontal or verti
 
 ## Angular Value Overlay Example
 
-The following example depicts a [Column Chart](column-chart.md) with a few horizontal value overlays plotted.
+The following example depicts a [Column Chart](../types/column-chart.md) with a few horizontal value overlays plotted.
 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"

@@ -51,15 +51,6 @@ The following example shows how to configure the crosshair layer but targeting a
 
 <div class="divider--half"></div>
 
-```html
-<igx-category-chart
-    [dataSource]="data"
-    crosshairsDisplayMode="Horizontal"
-    crosshairsSnapToData="true"
-    crosshairsAnnotationEnabled="true">
-</igx-category-chart>
-```
-
 ## Angular Final Value Layer
 
 The [`IgxFinalValueLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinalvaluelayercomponent.html) of the category chart component provides a quick view along the axis of the ending value displayed in a series. 

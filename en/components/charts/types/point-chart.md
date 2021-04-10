@@ -11,7 +11,7 @@ Angular Point Chart renders a collection of points. Values are represented on th
 
 With multiple series, our Angular Point Chart requires more visual indicators for end-users to easily perceive what data is displayed. To improve the experience, we need to add a legend for the multiple series. First, we will add a legend object to our application and then we will set it to the [`IgxLegendComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlegendcomponent.html) property of the Angular `XamCategoryChart` control. This gives the benefit for our users to more easily comprehend what data set each point corresponds to.
 
-## Angular Point Chart Example
+## Angular Category Point Chart
 
 You can create the Angular Point Chart in the `XamCategoryChart` control by binding your data to `ItemsSource` property and setting [`ChartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html) property to `Point` value, as shown in the example below.
 

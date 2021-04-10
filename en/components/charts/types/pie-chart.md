@@ -64,77 +64,6 @@ Do Not Use Pie Chart When:
 -   You have more than 6 or 8 segments (high data volume) — consider a Bar, Line or Area chart if it works for your data story.
 -   It would be easier for the viewer to perceive the value difference in a Bar chart.
 
-<!-- Angular, React, WebComponents -->
-
-## How to Make Angular Pie Chart
-
-### 1. Install Angular core package
-
-<pre style="background:#141414;color:white;display:inline-block;padding:16x;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
-npm install --save igniteui-angular-core
-</pre>
-
-### 2. Install Angular charts
-
-<pre style="background:#141414;color:white;display:inline-block;padding:16x;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
-npm install --save igniteui-angular-charts
-</pre>
-
-### 3. Install Required Modules
-
-The Angular Pie Chart requires the following modules
-
-```ts
-// app.module.ts
-
-import { IgxPieChartModule } from 'igniteui-angular-charts';
-
-@NgModule({
-    imports: [
-        // ...
-        IgxPieChartModule,
-        // ...
-    ]
-})
-export class AppModule {}
-```
-
-<div class="divider--half"></div>
-
-<!-- end: Angular, React, WebComponents -->
-
-<!-- Angular, React, WebComponents -->
-
-## Usage
-
-Now that the pie chart module is imported, next step is to bind it to data.
-In order to create a pie chart, you must first have data to bind it to. The following code snippet demonstrates how to create a simple data source.
-
-```ts
-var data = [
-    { MarketShare: 30, Company: "Google",    },
-    { MarketShare: 30, Company: "Apple",     },
-    { MarketShare: 15, Company: "Microsoft", },
-    { MarketShare: 15, Company: "Samsung",   },
-    { MarketShare: 10, Company: "Other",     },
-];
-```
-
-The following code demonstrates how to bind the pie chart to the above data.
-
-```html
-<igx-pie-chart [dataSource]="data"
-               width="100%"
-               height="100%"
-               labelMemberPath="Company"
-               valueMemberPath="MarketShare">
-</igx-pie-chart>
-```
-
-<!-- end: Angular, React, WebComponents -->
-
-<div class="divider--half"></div>
-
 ## Angular Pie Chart Legend
 
 Legends are used to show information about each point, to know about its contribution towards the total sum. You can collapse the point using legend click.
@@ -142,17 +71,6 @@ Legends are used to show information about each point, to know about its contrib
 In order to display a legend next to the pie chart an ItemLegend needs to be created and assigned to the [`IgxLegendComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlegendcomponent.html) property. The [`legendLabelMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartbasecomponent.html#legendlabelmemberpath) can then be used to specify which property on your data model it will use to display inside the legend for each pie slice.
 
 Additionally you can use the [`legendItemTemplate`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartbasecomponent.html#legenditemtemplate) and [`legendItemBadgeTemplate`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartbasecomponent.html#legenditembadgetemplate) properties and the various font properties on ItemLegend to further customize the look of the legend items.
-
-```html
-<igx-pie-chart [dataSource]="data"
-               width="100%"
-               height="100%"
-               valueMemberPath="MarketShare"
-               labelMemberPath="Company"
-               legendLabelMemberPath="Company"
-               [legend]="PieChartLegend">
-</igx-pie-chart>
-```
 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
@@ -166,21 +84,9 @@ Additionally you can use the [`legendItemTemplate`]({environment:dvApiBaseUrl}/p
 
 Sometimes, the underlying data for the pie chart will contain many items with small values. In this case, the Others category will permit automatic aggregation of several data values into a single slice
 
-In the sample below, the [`othersCategoryThreshold`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartbasecomponent.html#otherscategorythreshold) is set to 2, and [`othersCategoryType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartbasecomponent.html#otherscategorytype) is set to Number. Therefore, items with value less than or equal to 2 will be assigned to the “Others” category.
+In the sample below, the [`othersCategoryThreshold`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartbasecomponent.html#otherscategorythreshold) is set to 2, and [`othersCategoryType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartbasecomponent.html#otherscategorytype) is set to Number. Therefore, items with value less than or equal to 2 will be assigned to the "Others" category.
 
 If you set [`othersCategoryType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartbasecomponent.html#otherscategorytype) to Percent, then [`othersCategoryThreshold`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartbasecomponent.html#otherscategorythreshold) will be interpreted as a percentage rather than as a value, i.e. items whose values are less than 2% of the sum of all item values would be assigned to the Others category. You can use whichever [`othersCategoryType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartbasecomponent.html#otherscategorytype) is most appropriate for your application.
-
-```html
-<igx-pie-chart [dataSource]="data"
-               width="100%"
-               height="100%"
-               labelMemberPath="Company"
-               valueMemberPath="MarketShare"
-               othersCategoryThreshold="2"
-               othersCategoryType="Number"
-               othersCategoryText="Others">
-</igx-pie-chart>
-```
 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
@@ -193,15 +99,6 @@ If you set [`othersCategoryType`]({environment:dvApiBaseUrl}/products/ignite-ui-
 ## Angular Pie Chart Explosion
 
 The pie chart supports explosion of individual pie slices as well as a `SliceClick` event that allows you to modify selection states and implement custom logic
-
-```html
-<igx-pie-chart [dataSource]="data"
-               width="100%"
-               height="100%"
-               allowSliceExplosion="true"
-               sliceClick="piechart_SliceClick">
-</igx-pie-chart>
-```
 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
@@ -234,18 +131,6 @@ The events that end in “Changing” are cancelable events which means you can 
 
 For scenarios where you click on the Others slice, the pie chart will return an object called [`IgxPieSliceOthersContext`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiesliceotherscontext.html). This object contains a list of the data items contained within the Others slice.
 
-```html
-<igx-pie-chart [dataSource]="data"
-            width="100%"
-            height="100%"
-            selectionMode="multiple"
-            selectedSliceStroke = "white"
-            selectedSliceFill= "rgb(143,143,143)"
-            selectedSliceOpacity =1.0
-            selectedSliceStrokeThickness=2>
-</igx-pie-chart>
-```
-
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart-selection"
@@ -259,26 +144,6 @@ For scenarios where you click on the Others slice, the pie chart will return an 
 You can animate the pie chart smoothly by setting the `radiusFactor` property, which will scale the chart's radius. Also set the `startAngle` property to angle the chart such that it keep increasing the chart angle while rotating.
 
 In the code below, the radiusFactor is increasing the chart by 0.25% of the size, and startAngle is rotating the chart by 1 degree. When radiusFactor and startAngle reached to its maximum limit the animation is stopped by reset the animation flag and clear the interval.
-
-```ts
-window.setInterval(() => this.tick(), 15);
-
-public tick(): void {
-    if (this.isAnimating) {
-        if (this.chart.radiusFactor < 1.0)
-            this.chart.radiusFactor += 0.0025;
-
-        if (this.chart.startAngle < 360)
-            this.chart.startAngle++;
-
-        if (this.chart.radiusFactor >= 1.0 &&
-            this.chart.startAngle >= 360) {
-            this.isAnimating = false;
-            window.clearInterval(this.interval);
-        }
-    }
-}
-```
 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
