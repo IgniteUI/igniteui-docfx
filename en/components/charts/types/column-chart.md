@@ -5,11 +5,15 @@ _keywords: Angular Charts, Column Chart, Infragistics
 mentionedTypes: ["XamCategoryChart", "XamDataChart", "ColumnSeries", "WaterfallSeries", "StackedColumnSeries", "Stacked100ColumnSeries", "RangeColumnSeries", "RadialColumnSeries"]
 ---
 
-# Angular Column Chart
+# Angular Column Charts
 
-The Ignite UI for Angular Column Chart is rendered using a collection of rectangles that extend from the bottom to top of the chart towards the values of data points. A Column Chart emphasizes the amount of change over a period of time or compares multiple items. Values are represented on the Y-Axis (NumericYAxis) and categories are displayed on the X-Axis (CategoryXAxis).
+The Ignite UI for Angular Column Charts, Column Graphs, or Vertical Bar Charts are among the most common category chart types used to quickly compare frequency, count, total, or average of data in different categories with data encoded by columns with equal widths but differing heights. These columns extend from the bottom to top of the chart towards the values of data points. Column Charts emphasize the amount of change over a period of time or compares multiple items. Column Charts are very similar to [Bar Charts](bar-chart.md) except that Column Charts render in vertical orientation  (up and down) while [Bar Charts](bar-chart.md) have horizontal orientation (left to right) or 90 degrees clockwise rotation.
 
-## Angular Column Chart Example
+## Angular Category Column Chart
+
+The Ignite UI for Angular Category Column Chart groups data items from multiple data sources into categories and renders them as vertical columns or rectangles. Values are represented on the Y-Axis and categories are displayed on the X-Axis.
+
+You can create this type of chart in the `XamCategoryChart` control by binding your data and setting [`ChartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html) to Column enum, as shown in the example below:
 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
@@ -81,7 +85,7 @@ For more advanced types of column charts, use [`IgxDataChartComponent`]({environ
 
 ## Angular Styling Column Chart
 
-The Angular Column Chart has many options for styling and modification of the visual appearance. For example, the sample below demonstrates using a [crossing value](../features/axis-layouts.md) for your X-Axis, as well as using [marker templates](../features/chart-markers.md) to display the value of an item above (or below) its corresponding column.
+The Angular Column Chart has many options for styling and modification of the visual appearance. For example, the sample below demonstrates using a [crossing value](../features/chart-axis-layouts.md) for your X-Axis, as well as using [marker templates](../features/chart-markers.md) to display the value of an item above (or below) its corresponding column.
 
 You can create this type of chart in the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) control by binding your data to a [`IgxColumnSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcolumnseriescomponent.html), as shown in the example below:
 

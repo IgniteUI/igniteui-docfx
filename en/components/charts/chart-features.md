@@ -13,7 +13,7 @@ The Angular chart offers the following chart features:
 
 ### Axis
 
-Modify or customize all aspects of both the X-Axis and Y-Axis using the different axis properties. You can display gridlines, customize the style of tickmarks, change axis titles, and even modify axis locations and crossing values. You can learn more about customizations of the Angular chart's [Axis Gridlines](features/axis-gridlines.md), [Axis Layouts](features/axis-layouts), and [Axis Options](features/axis-options.md) topic.
+Modify or customize all aspects of both the X-Axis and Y-Axis using the different axis properties. You can display gridlines, customize the style of tickmarks, change axis titles, and even modify axis locations and crossing values. You can learn more about customizations of the Angular chart's [Axis Gridlines](features/chart-axis-gridlines.md), [Axis Layouts](features/chart-axis-layouts.md), and [Axis Options](features/chart-axis-options.md) topic.
 
 <code-view style="height: 500px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
