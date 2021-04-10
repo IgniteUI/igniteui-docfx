@@ -130,9 +130,9 @@ You can create this type of chart in the `XamCategoryChart` control by binding y
 
 <div class="divider--half"></div>
 
-## Angular Line Chart Advanced Scenarios
+## Advanced Types of Line Charts
 
-For more advanced types of line charts, use [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) control to create other types of line charts as the following sections demonstrate them.
+The following sections explain more advanced types of Angular Line Charts that can be created using the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) control instead of `XamCategoryChart` control with simplified API.
 
 ## Angular Stacked Line Chart
 

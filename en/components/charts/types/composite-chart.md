@@ -26,7 +26,7 @@ The following example demonstrates how to create Composite Chart using [`IgxColu
 -   [Bar Chart](bar-chart.md)
 -   [Column Chart](column-chart.md)
     <!-- - [Gantt Chart](gantt-chart.md) -->
--   [Composite Chart](composite-chart.md)
+-   [Line Chart](line-chart.md)
 -   [Stacked Chart](stacked-chart.md)
 
 ## API Members

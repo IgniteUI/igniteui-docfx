@@ -7,13 +7,13 @@ mentionedTypes: ["XamCategoryChart", "XamDataChart", "ChartType"]
 
 # Angular Area Charts
 
-The Ignite UI for Angular Area Charts are based on [Line Charts](line-chart.md) or [Spline Charts](spline-chart.md). Therefore, they are often chronological, showing a change of quantity e.g. accumulation of a commodity over time.
+The Angular Area Charts render as a collection of points connected by straight line segments with the area below the line filled in. Values are represented on the y-axis (labels on the left side) and categories are displayed on the x-axis (bottom labels). These charts emphasize the amount of change over a period of time or compare multiple items as well as the relationship of parts of a whole by displaying the total of the plotted values.
 
-Area Charts render as a collection of points connected by straight line segments with the area below the line filled in. Values are represented on the y-axis (labels on the left side) and categories are displayed on the x-axis (bottom labels). These charts emphasize the amount of change over a period of time or compare multiple items as well as the relationship of parts of a whole by displaying the total of the plotted values.
+Area Charts are based on [Line Charts](line-chart.md) or [Spline Charts](spline-chart.md). Therefore, they are often chronological, showing a change of quantity e.g. accumulation of a commodity over time.
 
 ## Angular Category Area Chart
 
-You can create an Area Chart in the `XamCategoryChart` control by binding your data to `ItemsSource` property and setting [`ChartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html) property to [`area`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html#area) value, as shown in the example below.
+You can create Category Area Chart in the `XamCategoryChart` control by binding your data to `ItemsSource` property and setting [`ChartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html) property to [`area`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html#area) value, as shown in the example below.
 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
@@ -24,10 +24,6 @@ You can create an Area Chart in the `XamCategoryChart` control by binding your d
 <div class="divider--half"></div>
 
 ## Area Chart Recommendations
-
-### Are Angular Area Charts right for your project?
-
-Area Charts are similar to [Line Charts](line-chart.md) in that data points are plotted and connected by straight line segments, however they differ because with Area Charts, the area between the X-Axis and the line is filled in.
 
 ### Area Chart Use Cases
 
@@ -95,6 +91,10 @@ Area charts often have semi-transparent fill for their areas, thicker li
 
 <div class="divider--half"></div>
 
+## Advanced Types of Area Charts
+
+The following sections explain more advanced types of Angular Area Charts that can be created using the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) control instead of `XamCategoryChart` control with simplified API.
+
 ## Angular Step Area Chart
 
 The Ignite UI for Angular Step Area Chart belongs to a group of category charts and it is rendered using a collection of points connected by continuous vertical and horizontal lines with the area below lines filled in. Values are represented on the y-axis and categories are displayed on the x-axis. The step area chart emphasizes the amount of change over a period of time or compares multiple items. You can create this type of chart in `XamCategoryChart` control by binding your data and setting [`ChartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html) property to `StepArea` value, as shown in the example below.
@@ -107,9 +107,9 @@ The Ignite UI for Angular Step Area Chart belongs to a group of category charts 
 
 <div class="divider--half"></div>
 
-## Angular Advanced Scenarios
+## Advanced Types of Area Charts
 
-For more advanced types of area charts, use [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) control to create other types of area charts as the following sections demonstrate them.
+The following sections explain more advanced types of Angular Area Charts that can be created using the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) control instead of `XamCategoryChart` control with simplified API.
 
 ## Angular Range Area Chart
 
