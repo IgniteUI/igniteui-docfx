@@ -7,7 +7,7 @@ mentionedTypes: ["XamDataChart", "BubbleSeries", "ScatterSeries"]
 
 # Angular Bubble Chart
 
-Angular Bubble Chart is a type of [Scatter Charts](scatter-chart.md) that show markers with variable scaling to represent the relationship among items in several distinct series of data or to plot data items using x and y coordinates. These coordinates of the data point are determined by two numeric data columns. The Bubble Chart draws attention to uneven intervals or clusters of data. This chart is often used to plot scientific data, and can highlight the deviation of collected data from predicted results. The Bubble Chart has many of the characteristics of the [Scatter Marker Chart](scatter-chart.md#angular-scatter-marker-chart) but with the option to have various radius scale sizes.
+Angular Bubble Chart is a type of [Scatter Chart](scatter-chart.md) that show markers with variable scaling to represent the relationship among items in several distinct series of data or to plot data items using x and y coordinates. These coordinates of the data point are determined by two numeric data columns. The Bubble Chart draws attention to uneven intervals or clusters of data. This chart is often used to plot scientific data, and can highlight the deviation of collected data from predicted results. The Bubble Chart has many of the characteristics of the [Scatter Marker Chart](scatter-chart.md#angular-scatter-marker-chart) but with the option to have various radius scale sizes.
 
 ## Angular Bubble Chart Example
 
@@ -59,8 +59,8 @@ In Angular Bubble Chart, you can customize shape of bubble markers using [`marke
 
 ## Additional Resources
 
--   [Scatter Charts](scatter-chart.md)
--   [Shape Charts](shape-chart.md)
+-   [Scatter Chart](scatter-chart.md)
+-   [Shape Chart](shape-chart.md)
 
 ## API Members
 
