@@ -158,7 +158,7 @@ $custom-theme: igx-grid-theme(
     $sortable-header-icon-hover-color: black
 );
 ```
-最後の手順は、それぞれのテーマを持つコンポーネント mixins を**含める**ことです。 
+最後の手順は、それぞれのテーマを持つコンポーネント ミックスインを**含める**ことです。 
 
 ```scss
  @include igx-grid($custom-theme);

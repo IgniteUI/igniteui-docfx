@@ -956,56 +956,75 @@
   new: false
 - name: スタイルとテーマ
   header: true
-  sortable: true
-- name: Themes
+  sortable: false
+- name: 概要
   href: themes/index.md
   new: false
+- name: パレット
+  href: themes/palettes.md
+  new: false
+- name: エレベーション
+  href: themes/elevations.md
+  new: false
+- name: タイポグラフィ
+  href: themes/typography.md
+  new: false
+- name: 表示密度
+  href: display-density.md
+- name: Sass
+  new: false
   items:
-    - name: パレット
-      href: themes/palette.md
+    - name: 概要
+      href: themes/sass/index.md
       new: false
-    - name: スキーマ
-      href: themes/schemas.md
+    - name: 構成
+      href: themes/sass/configuration.md
+      new: true
+    - name: パレット
+      href: themes/sass/palettes.md
+      new: false
+    - name: エレベーション
+      href: themes/sass/elevations.md
       new: false
     - name: タイポグラフィ
-      href: themes/typography.md
+      href: themes/sass/typography.md
+      new: false
+    - name: スキーマ
+      href: themes/sass/schemas.md
+      new: false
+    - name: アニメーション
+      href: themes/sass/animations.md
+      new: false
+    - name: 丸み
+      href: themes/sass/roundness.md
       new: false
     - name: グローバル テーマ
-      href: themes/global-theme.md
+      href: themes/sass/global-themes.md
       new: false
     - name: コンポーネント テーマ
-      href: themes/component-themes.md
+      href: themes/sass/component-themes.md
       new: false
     - name: 定義済みのテーマ
       new: false
       items:
         - name: Material
-          href: themes/themes-list/material.md
+          href: themes/sass/presets/material.md
           new: false
         - name: Fluent
-          href: themes/themes-list/fluent.md
+          href: themes/sass/presets/fluent.md
           new: false
         - name: Bootstrap
-          href: themes/themes-list/bootstrap.md
+          href: themes/sass/presets/bootstrap.md
           new: false
         - name: Indigo
-          href: themes/themes-list/indigo.md
+          href: themes/sass/presets/indigo.md
           new: true
-    - name: 印刷スタイル
-      href: themes/printing-styles.md
-      new: false
-    - name: CSS 変数を使用したテーマ設定
-      href: themes/css-variables-theming.md
-      new: false
-- name: 丸み付け
-  href: roundness.md
-  new: false
-- name: シャドウ
-  href: shadows.md
-- name: アニメーション
-  href: animations.md
-- name: 密度の表示
-  href: display-density.md
+    - name: その他
+      new: true
+      items:
+      - name: 印刷スタイル
+        href: themes/misc/printing-styles.md
+        new: false
 - name: データ入力と表示
   header: true
   sortable: true
@@ -1099,7 +1118,7 @@
     new: false
 - name: Drag and Drop
   href: drag-drop.md
-  new: true
+  new: false
 - name: Zoom Slider
   new: false
   href: zoomslider-overview.md

@@ -102,7 +102,7 @@ $my-primary-800-text: igx-contrast-color($my-palette, "primary", 600);
 
 アプリケーション プロジェクトに _"igniteui-angular.css"_ ファイルを追加した場合、削除してください。カスタム テーマを生成するために _"my-app-theme.scss"_ ファイルを使用します。
 
-このトピックの最初の例から始めます。ここでは、`igx-core` および `igx-theme` の 2 つの mixins を追加します。`igx-core` は引数を受け取りません。ただし、`igx-theme` は `$palette` および `$exclude` の 2 つの引数を受け取ります。ここでは `$palette` 引数について説明します。
+このトピックの最初の例から始めます。ここでは、`igx-core` および `igx-theme` の 2 つのミックスインを追加します。`igx-core` は引数を受け取りません。ただし、`igx-theme` は `$palette` および `$exclude` の 2 つの引数を受け取ります。ここでは `$palette` 引数について説明します。
 
 > [!IMPORTANT]
 > `igx-core` を `igx-theme` の前に含める必要があります。`igx-core` mixin は `igx-theme` の基本定義を提供します。

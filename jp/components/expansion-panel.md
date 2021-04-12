@@ -222,7 +222,7 @@ $custom-panel-theme: igx-expansion-panel-theme(
 );
 ```
 >[!NOTE]
-> [`テーマ化`](themes/component-themes.md)エンジンを介したスタイル設定に使用可能なすべてのパラメーターを確認するには、[`API ヘルプ`]({environment:sassApiUrl}/index.html#function-igx-expansion-panel-theme) を参照してください。
+> [`テーマ`](themes/component-themes.md)エンジンを介したスタイル設定に使用可能なすべてのパラメーターを確認するには、[`API ヘルプ`]({environment:sassApiUrl}/index.html#function-igx-expansion-panel-theme) を参照してください。
 
 ### コンポーネント テーマの適用
 コンポーネント テーマを適用するには、`igx-css-vars` mixin をインクルードし、`$custom-panel-theme` マップを渡します。 

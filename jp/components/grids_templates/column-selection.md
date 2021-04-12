@@ -94,7 +94,7 @@ _language: ja
 API 操作の詳細については、[`API リファレンス`](#api-references) セクションを参照してください。
 
 ## スタイル設定
-スタイル設定オプションに移動する前に、core ジュールとすべてのコンポーネント mixins をインポートする必要があります。
+スタイル設定オプションに移動する前に、core ジュールとすべてのコンポーネント ミックスインをインポートする必要があります。
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
