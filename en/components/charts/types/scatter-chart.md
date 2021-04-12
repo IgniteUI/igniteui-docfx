@@ -7,7 +7,7 @@ mentionedTypes: ["XamDataChart", "ScatterSeries", "ScatterLineSeries", "ScatterS
 
 # Angular Scatter Charts
 
-Angular Scatter Charts are a group of charts that show the relationship among items in distinct series of data or to plot data items using numeric x and y coordinates. These Charts draw attention to uneven intervals or clusters of data. They are often used to plot scientific data, and can highlight the deviation of collected data from predicted results. Also, you can use them to organize data chronologically (even if the data is not in chronological order).
+The Ignite UI for Angular Scatter Chart belongs to a group of charts that show the relationship among items in distinct series of data or to plot data items using numeric x and y coordinates. These charts draw attention to uneven intervals or clusters of data. They are often used to plot scientific data, and can highlight the deviation of collected data from predicted results. Also, you can use them to organize data chronologically (even if the data is not in chronological order).
 
 ## Angular Scatter Marker Chart
 
@@ -97,11 +97,11 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
 
 You can find more information about related chart types in these topics:
 
--   [Area Charts](area-chart.md)
--   [Bubble Charts](bubble-chart.md)
--   [Line Charts](line-chart.md)
--   [Spline Charts](spline-chart.md)
--   [Shape Charts](shape-chart.md)
+-   [Area Chart](area-chart.md)
+-   [Bubble Chart](bubble-chart.md)
+-   [Line Chart](line-chart.md)
+-   [Spline Chart](spline-chart.md)
+-   [Shape Chart](shape-chart.md)
 
 ## API Members
 

@@ -7,7 +7,7 @@ mentionedTypes: ["XamCategoryChart", "ToolTipType"]
 
 # Angular Chart Tooltips
 
-In Angular charts, tooltips provide details about bound data and they are rendered in popups when the end-user hovers over data points. Tooltips supported by the `XamCategoryChart`, `XamFinancialChart`, and [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) controls.
+In Angular charts, tooltips provide details about bound data and they are rendered in popups when the end-user hovers over data points. Tooltips are supported by the `XamCategoryChart`, `XamFinancialChart`, and [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) controls.
 
 ## Angular Chart Tooltips Types
 
@@ -30,9 +30,8 @@ The following example shows the [Column Chart](../types/column-chart.md) with to
 
 ## Angular Chart Tooltip Template
 
-If none of built-in types of tooltips are matching your requirements, you can create your own tooltips to display and style series title, data values, and axis values. The following sections demostrate how to do this in different types of Angular charts.
+If none of built-in types of tooltips are matching your requirements, you can create your own tooltips to display and style series title, data values, and axis values. The following sections demonstrate how to do this in different types of Angular charts.
 
-<!-- TODO uncomment when charts/category-chart/tooltip-template is ported to Blazor
 ## Custom Tooltips in Category Chart
 
 This example shows how to create custom tooltips for all series in Angular Category Chart control.
@@ -45,7 +44,6 @@ This example shows how to create custom tooltips for all series in Angular Categ
 </code-view>
 
 <div class="divider--half"></div>
--->
 
 ## Custom Tooltips in Data Chart
 

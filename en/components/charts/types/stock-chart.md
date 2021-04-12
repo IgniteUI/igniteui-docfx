@@ -7,7 +7,7 @@ mentionedTypes: ["XamFinancialChart", "ChartType", "IndicatorTypes", "ZoomSlider
 
 # Angular Stock Chart
 
-Angular Stock Chart, sometimes referred to as Angular Financial Chart or Candlestick Chart, is a composite visualization that renders stock ticker data, or price data in an interactive time-series display. Stock ticker represents the company data (a ticker symbol, usually 1 to 5 characters) that you are analyzing. Stock Chart shows stock prices for a ticker over time in a Time Series X-Axis. Stock charts also show information for a company’s ticker data like Open Price, High Price, Low Price and Close Price (OHLC) for each time-period. The Angular Stock Chart offers multiple ways in which the data can then be visualized and interpreted, including display modes for price and volume and a host of Stock indicators.
+The Ignite UI for Angular Stock Chart, sometimes referred to as Angular Financial Chart or Candlestick Chart, is a composite visualization that renders stock ticker data, or price data in an interactive time-series display. Stock Chart shows stock prices for a ticker over time in a Time Series X-Axis. Also, this chart shows information for a company’s ticker data like Open Price, High Price, Low Price and Close Price (OHLC) for configurable period of time. The Stock Chart offers multiple ways in which the data can be visualized and interpreted, including display modes for price and volume and a host of Stock indicators.
 
 ## Angular Stock Chart Example
 
