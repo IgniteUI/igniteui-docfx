@@ -7,7 +7,7 @@ mentionedTypes: ["XamDataChart", "RadialLineSeries"]
 
 # Angular Radial Chart
 
-Angular Radial Chart takes data and render it as collection of data points wrapped around a circle (rather than stretching along a horizontal line). Radial Chart is also mapping a list of categories from the minimum to the maximum of the extent of the chart, and support the category grouping mechanisms.
+The Ignite UI for Angular Radial Chart takes data and render it as collection of data points wrapped around a circle (rather than stretching along a horizontal line). Radial Chart is also mapping a list of categories from the minimum to the maximum of the extent of the chart, and support the category grouping mechanisms.
 
 ## Angular Radial Area Chart
 

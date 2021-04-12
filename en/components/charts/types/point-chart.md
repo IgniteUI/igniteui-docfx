@@ -7,7 +7,7 @@ mentionedTypes: ["XamCategoryChart", "ChartType", "Legend"]
 
 # Angular Point Chart
 
-Angular Point Chart renders a collection of points. Values are represented on the y-axis (labels on the left side) and categories are displayed on the x-axis (bottom labels). These charts emphasize the amount of change over a period of time or compare multiple items as well as the relationship of parts of a whole by displaying the total of the plotted values.
+The Ignite UI for Angular Point Chart renders a collection of points. Values are represented on the y-axis (labels on the left side) and categories are displayed on the x-axis (bottom labels). These charts emphasize the amount of change over a period of time or compare multiple items as well as the relationship of parts of a whole by displaying the total of the plotted values.
 
 ## Angular Point Chart Example
 

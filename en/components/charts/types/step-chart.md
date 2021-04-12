@@ -7,7 +7,7 @@ mentionedTypes: ["XamCategoryChart", "ChartType"]
 
 # Angular Step Chart
 
-Angular Step Chart belongs to a group of category charts that render as a collection of points connected by continuous vertical and horizontal lines. Values are represented on the y-axis and categories are displayed on the x-axis. Step Chart emphasizes the amount of change over a period of time or compares multiple items.
+The Ignite UI for Angular Step Chart belongs to a group of category charts that render as a collection of points connected by continuous vertical and horizontal lines. Values are represented on the y-axis and categories are displayed on the x-axis. Step Chart emphasizes the amount of change over a period of time or compares multiple items.
 
 ## Angular Step Area Chart
 
