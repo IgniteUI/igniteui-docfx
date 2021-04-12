@@ -77,6 +77,9 @@ public grid: IgxGridComponent;
 
 [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) プロパティは、データソース フィールドに基づいて **igx-grid** にグリッドの[`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) を自動生成させます。列の適切なデータ型の決定を試みます。それ以外の場合、開発者は列およびデータ ソース フィールドへのマッピングを明示的に定義する必要があります。
 
+## Angular Bootstrap Grid Definition
+<p>Ignite UI for Angular includes a powerful bootstrap grid like flex-based layout system. Any modern application today is expected to follow a responsive web design approach, meaning it can gracefully adjust layout of HTML elements based on the device size, or from simply resizing the browser. An Angular bootstrap grid layout was the most used approach in the past, but a flex-based layout system like CSS grid has become more popular, as it works in any browser. The Ignite UI for Angular Layout Directive allows vertical and horizontal flow, including content / text wrapping, justification, and alignment. The Ignite UI for Angular grid supports a responsive layout using CSS, giving you the ultimate flexibility in how the grid behaves on resize. </p>
+
 ## Angular Grid スタイルの構成
 > [!NOTE]
 > [**IgxGridComponent**]({environment:angularApiUrl}/classes/igxgridcomponent.html) は **css グリッド レイアウト**を使用しますが、**プレフィックスなしでは IE でサポートされていない**ため、正しく描画できません。
@@ -97,10 +100,14 @@ public grid: IgxGridComponent;
  ...
  ```
 
+## Editable Grid Angular
+<p>Each operation for Angular grid editing includes Batch operations, meaning the API gives you the option to group edits into a single server call, or you can perform grid edit / update operations as they occur with grid interactions. Along with a great developer experience as an editable Angular grid with CRUD operations, the Angular grid includes Excel-like keyboard navigation. Common default grid navigation is included, plus the option to override any navigation option to meet the needs of your customers. An editable grid in Angular with a great navigation scheme is critical to any modern line of business application, with the Ignite UI grid we make it easy.</p>
+
+Following this topic you will learn more about [cell template](grid.md#cell-template) and [cell editing template](grid.md#cell-editing-template) and editing.
+
 ## Angular Grid 列の構成
 
 [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) は、グリッドの [`columns`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columns) コレクションを定義し、**ソート**、**ページング**など、列ごとの機能を有効にするために使用します。セル、ヘッダー、およびフッター テンプレートも利用できます。
-
 
 ### 列の定義
 

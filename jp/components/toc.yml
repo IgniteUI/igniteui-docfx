@@ -1144,6 +1144,7 @@
   new: false
 - name: Bottom Navigation
   href: tabbar.md
+  updated: true
 - name: Tabs
   href: tabs.md
   new: false

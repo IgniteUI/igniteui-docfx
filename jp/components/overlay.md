@@ -35,7 +35,7 @@ import { IgxOverlayService } from `igniteui-angular`;
 export class MyOverlayComponent {
     constructor(
         @Inject(IgxOverlayService) private overlayService: IgxOverlayService
-    )
+    ) {}
 }
 
 ...
@@ -111,12 +111,18 @@ Overlay サービスの [`attach()`]({environment:angularApiUrl}/classes/igxover
   - `attach(component, settings?, moduleRef?)`
 
 オーバーロードの最初のパラメーターは必須でオーバーレイに表示されるコンテンツを表します。以下は、コンテンツを渡す場合の例です。
-  - コンポーネント定義 - コンポーネントを最初の引数として渡す場合、オーバーレイ サービスがそのコンポーネントの新しいインスタンスを作成し、動的に`オーバーレイ` DOM にアタッチします。`moduleRef` を指定した場合、サービスは `ComponentRef` を作成する際にルートのものではなくモジュールの `ComponentFactoryResolver` と `Injector` を使用します。
-  - `ElementRef` から既存の DOM 要素 (上記のサンプルを参照) - ページで既に描画されたビューはオーバーレイ サービスで渡して、オーバーレイ DOM で描画できます。[`show(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#show) を呼び出したときにこの方法を使用するとオーバーレイは:
-    - Angular から渡されるビューへの参照を取得します。 
-    - ビューを DOM からデタッチし、そこにアンカーを追加します。
-    - [`show()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#show) メソッド設定またはデフォルトのオーバーレイ設定を使用してビューをオーバーレイにアタッチします。
-    - 閉じた後、ビューを DOM にある元の位置にアタッチします。
+  - コンポーネント定義 - コンポーネントを最初の引数として渡す場合、オーバーレイ サービスがそのコンポーネントの新しいインスタンスを作成し、その `ElementRef` を動的に `オーバーレイ` DOM にアタッチします。`moduleRef` を指定した場合、サービスは `ComponentRef` を作成する際にルートのものではなくモジュールの `ComponentFactoryResolver` と `Injector` を使用します。
+  - `ElementRef` から既存の DOM 要素 (上記のサンプルを参照) - ページで既に描画されたビューはオーバーレイ サービスで渡して、オーバーレイ DOM で描画できます。
+
+  In both cases the [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) method will:
+  - Get the reference to the passed view from Angular
+  - Detach the view from the DOM and leave an anchor in its place
+  - Re-attach the view to the overlay using the provided [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) or falling back to the default overlay ones
+
+Calling then [`show(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#show) will play the open animation, if there is any, and will show the attached content. Calling [`hide(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#hide) will play close animation, if there is any, and will hide the attached content.
+
+Finally calling [`detach(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#detach) method will re-attach the view back to its original location in the DOM. If a component was provided to the [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) method calling [`detach(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#detach) will destroy the created instance.
+
 <div class="divider--half"></div>
 
 ## コンポーネントのアタッチ
@@ -198,12 +204,11 @@ const connectedOverlaySettings = IgxOverlayService.createRelativeOverlaySettings
 
 <div class="divider--half"></div>
 
-
 ## オーバーレイの非表示
 
-[`IgxOverlayService.hide()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#hide) メソッドはコンテンツをオーバーレイからコンテンツを削除し、DOM の元の位置に再度アタッチします。
+The [`hide(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#hide) hides the overlay content. All of the elements rendered by the overlay service have a unique ID, assigned to them by the service. The [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) method returns the identifier of the rendered content. To hide the content this ID needs to be passed to the overlay's [`hide(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#hide) method. To hide all overlays [`hideAll()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#hideAll) method could be called.
 
-すべてのオーバーレイ サービスで描画される要素にサービスによって割り当てられた一意の ID があります。[`IgxOverlayService.attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) メソッドは描画されるコンテンツの識別子を返します。オーバーレイからコンテンツを削除するには、その ID をオーバーレイの [`hide()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#hide) メソッドに渡します。
+When rendered content is not needed anymore [`detach(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#detach) method should be called. This method removes the content from the overlay and, if applicable, re-attaches it to its original location in the DOM. [`detach(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#detach) method also accepts as mandatory parameter the ID generated from [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) method. To remove all the overlays [`detachAll()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#detachAll) method could be called.
 
 以前に定義されたオーバーレイ メソッドをオーバーレイ要素を表示して非表示するために変更できます。
 ```typescript
@@ -211,7 +216,7 @@ const connectedOverlaySettings = IgxOverlayService.createRelativeOverlaySettings
 // add an import for the definion of ConnectedPositioningStategy class
 import { ConnectedPositioningStrategy } from 'igniteui-angular';
 ...
-export class MyOverlayComponent {
+export class MyOverlayComponent implements OnDestroy {
     private _overlayId = ''; // The unique identifier assigned to the component by the Overlay service
     private _overlayShown = false; // Is the component rendered in the Overlay?
 
@@ -232,10 +237,18 @@ export class MyOverlayComponent {
             }
 
             this.overlayService.show(this._overlayId);
-        } else { // If the element is visible, hide it
-            this.overlayService.hide(this._overlayId); // Find and remove the component from the overlay container
+        } else {
+            this.overlayService.hide(this._overlayId); // If element if visible, hide it
         }
         this._overlayShown = !this._overlayShown;
+    }
+
+    // finally detach overlay content
+    public ngOnDestroy(): void {
+        if (this._overlayId) {
+            this.overlayService.detach(this._overlayId);
+            delete this._overlayId;
+        }
     }
 }
 ```

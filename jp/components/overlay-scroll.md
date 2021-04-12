@@ -40,7 +40,7 @@ const overlayId = overlay.attach(dummyElement, overlaySettings);
 ``` 
 <div class="divider"></div>
 
-オーバーレイで使用するスクロール方法の変更は、オーバーレイに渡される [`overlaySettings`] ({environment:angularApiUrl}/interfaces/overlaysettings.html) オブジェクトの [`scrollStrategy`] ({environment:angularApiUrl}/interfaces/iscrollstrategy.html) プロパティをオーバーライドします。
+オーバーレイで使用するスクロール方法の変更は、オーバーレイに渡される [`overlaySettings`] ({environment:angularApiUrl}/interfaces/overlaysettings.html) オブジェクトの [`scrollStrategy`] ({environment:angularApiUrl}/interfaces/iscrollstrategy.html) プロパティをオーバーライドします。If a strategy was already attached you should detach the previously generated ID:
 ```typescript
 // overlaySettings is an existing object of type OverlaySettings
 // to override the scroll strategy
@@ -48,7 +48,8 @@ const newOverlaySettings = Object.assing({}, overlaySettings);
 Object.assing(newOverlaySettings, {
     scrollStrategy: new CloseScrollStrategy()
 })
-overlay.show(overlayId, newOverlaySettings); 
+const overlayId = overlay.attach(dummyElement, newOverlaySettings);
+overlay.show(overlayId);
 ```
 <div class="divider--half"></div>
 
