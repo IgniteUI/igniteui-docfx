@@ -14,15 +14,12 @@ The Angular data chart component allows you to highlight the plotted series in t
 
 ## Angular Highlighting Example
 
-<div class="sample-container loading" style="height: 500px">
-    <iframe id="data-chart-series-highlighting-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-series-highlighting' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Highlighting Example"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-series-highlighting-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
-    </button>
-
-
-</div>
+<code-view style="height: 500px" 
+           data-demos-base-url="{environment:dvDemosBaseUrl}" 
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-series-highlighting" 
+           alt="Angular Highlighting Example" 
+           github-src="charts/data-chart/series-highlighting">
+</code-view>
 
 <div class="divider--half"></div>
 

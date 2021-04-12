@@ -10,7 +10,7 @@ _language: ja
 このチュートリアルは、`デスクトップ`から `Web` フレームワークへのスムーズな移行を行うための最初のステップです。このチュートリアルは、Web 開発を始める予定の WPF 開発者を対象としており、アプリケーション構造、データバインディング、イベント、コンポーネントなど、両方のフレームワークの相違点と類似点を検証します。
 
 <p align="center">
-    <img src="../../../images/general/wpf_to_angular_guide.png" style="vertical-align: middle;" />
+    <img class="responsive-img" src="../../../images/general/wpf_to_angular_guide.png" style="vertical-align: middle;" />
 </p>
 
 ガイドは以下のトピックで構成されています:

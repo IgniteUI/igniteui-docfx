@@ -9,17 +9,14 @@ mentionedTypes: ['FinancialChart', 'FinancialChartType', 'FinancialOverlayType']
 
 The Angular financial chart component makes it easy to visualize financial and stock data by using a simple and intuitive API.
 
-## Angular Financial Chart Overview Example
+## Angular Financial Chart Example
 
-<div class="sample-container loading" style="height: 500px">
-    <iframe id="financial-chart-overview-iframe" src='{environment:dvDemosBaseUrl}/charts/financial-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Financial Chart Overview Example"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-overview-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
-    </button>
-
-
-</div>
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-overview"
+           alt="Angular Financial Chart Example"
+           github-src="charts/financial-chart/overview">
+</code-view>
 
 <div class="divider--half"></div>
 

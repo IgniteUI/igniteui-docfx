@@ -37,7 +37,7 @@ ng update @angular/cli
 ## Additional manual changes
 
 
-Unfortunately not all changes can be automatically updated. Changes bellow are split into sections as they occur in the versions, so if any updates are required you should start from your current version and apply further updates from bottom to top.
+Unfortunately not all changes can be automatically updated. Changes below are split into sections as they occur in the versions, so if any updates are required you should start from your current version and apply further updates from bottom to top.
 
 For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from the "From 6.x .." section apply those changes and work your way up:
 
@@ -182,6 +182,7 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
         primaryKey="ID" [selectedRows]="mySelectedRows">
         <!-- ... -->
     </igx-grid>
+    ```
 
 ## From 9.0.x to 10.0.x
 * IgxDropdown
@@ -209,7 +210,8 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
     ```
 
 ## From 8.x.x to 9.0.x
-Due to a breaking change in Angular 9 Hammer providers are no longer implicitly added (please, refer to the following document for details: https://github.com/angular/angular/blob/master/CHANGELOG.md#breaking-changes-9 ) . Because of this the following components require `HammerModule` to be imported in the root module of the application in order for **touch** interactions to work as expected:
+Due to a breaking change in Angular 9 Hammer providers are no longer implicitly added 
+[please, refer to the following document for details:](https://github.com/angular/angular/blob/master/CHANGELOG.md#breaking-changes-9 ) Because of this the following components require `HammerModule` to be imported in the root module of the application in order for **touch** interactions to work as expected:
 
 * igxGrid
 * igxHierarchicalGrid

@@ -28,7 +28,7 @@ There are several parts to a component theme:
 - **The component mixin** - A Sass mixin that consumes a component theme and produces *CSS rules* used to style a particular component.
 
 Say you want to create a new global avatar theme that has a different background color to the one we set in the avatar's default theme. As mentioned in the [**overview section**](#overview) there are 2 general approaches to creating a component theme. 
-There are even more ways you can organize and scope your component themes. The most straightforward way to do that is in the same file you defined your [**global theme**](./global-theme.md).
+There are even more ways you can organize and scope your component themes. The most straightforward way to do that is in the same file you defined your [**global theme**](./global-themes.md).
 
 Defining an avatar theme:
 
@@ -208,7 +208,7 @@ $avatar-theme: igx-avatar-theme($initials-background: royalblue);
 
 Learn how to configure a global theme:
 
-* [Global Themes](./global-theme.md)
+* [Global Themes](./global-themes.md)
 
 Our community is active and always welcoming to new ideas.
 
