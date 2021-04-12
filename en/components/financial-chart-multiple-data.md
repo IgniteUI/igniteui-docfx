@@ -11,15 +11,13 @@ The Angular financial chart component can bind easily to multiple data sources, 
 
 ## Angular Binding Multiple Sources Example
 
-<div class="sample-container loading" style="height: 500px">
-    <iframe id="financial-chart-multiple-data-iframe" src='{environment:dvDemosBaseUrl}/charts/financial-chart-multiple-data' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Binding Multiple Sources Example"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="financial-chart-multiple-data-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
-    </button>
+<code-view style="height: 500px" 
+           data-demos-base-url="{environment:dvDemosBaseUrl}" 
+           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-multiple-data" 
+           alt="Angular Binding Multiple Sources Example" 
+           github-src="charts/financial-chart/multiple-data">
+</code-view>
 
-
-</div>
 <div class="divider--half"></div>
 
 The financial chart component can plot multiple data sources as long as your each data source is added to an array. The financial chart component cannot plot multiple data sources on the XAxis in Time mode if the number of items in the data sources is not the same. The control also will not align items of multiple data sources. As a result, developers should align data items by inserting null items where one data source does not have corresponding items with another data source.
