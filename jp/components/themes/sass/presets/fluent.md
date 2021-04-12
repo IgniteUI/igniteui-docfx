@@ -1,7 +1,7 @@
 # Material から Fluent テーマへの切り替え
 バージョン `8.2` 以降、インフラジスティックスのコンポーネントでは、[Microsoft Fluent デザイン システム](https://www.microsoft.com/design/fluent/) に基づいて構築された新しいテーマが含まれます。 
  
-`Material` から `Fluent` へ切り替えるには、定義済みの mixins の 1 つを使用できます。
+`Material` から `Fluent` へ切り替えるには、定義済みのミックスインの 1 つを使用できます。
 
 Word および Excel パレットをサポートしています。使用するには、2 つのマップ `$ light-fluent-excel-palette` または `$ light-fluent-word-palette` のいずれかを mixin テーマに渡すだけです。
 

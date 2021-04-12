@@ -441,7 +441,7 @@ $custom-theme: igx-grid-summary-theme(
     $pinned-border-color: #e41c77
 );
 ```
-最後にそれぞれのテーマを持つコンポーネント mixins を**含めます**。
+最後にそれぞれのテーマを持つコンポーネント ミックスインを**含めます**。
 
 ```scss
 @include igx-grid-summary($custom-theme);

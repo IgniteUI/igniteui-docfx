@@ -274,7 +274,7 @@ igxHierarchicalGrid を使用すると、[Ignite UI for Angular テーマ ライ
 以下の手順では、igxHierarchicalGrid スタイルをカスタマイズする手順を実行しています。     
 
 ### グローバル テーマのインポート   
-階層グリッドのカスタマイズは、すべてのスタイリング機能と mixins が配置されている `index` ファイルをインポートする必要があります。 
+階層グリッドのカスタマイズは、すべてのスタイリング機能とミックスインが配置されている `index` ファイルをインポートする必要があります。 
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index'

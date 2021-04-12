@@ -235,7 +235,7 @@ public restore() {
 
 ## スタイル設定
 
-スナックバーのスタイル設定を始めるには、すべてのテーマ関数とコンポーネントmixins が存在する index ファイルをインポートする必要があります。
+スナックバーのスタイル設定を始めるには、すべてのテーマ関数とコンポーネント ミックスインが存在する index ファイルをインポートする必要があります。
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
