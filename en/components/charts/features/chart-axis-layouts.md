@@ -54,6 +54,12 @@ The following example depicts the amount of renewable electricity produced since
            github-src="charts/category-chart/axis-locations">
 </code-view>
 
+<!-- ## Axis Orientation Example
+
+TODO add info/example of 4 charts with all possible combinations of XAxisIsInverted and YAxisIsInverted
+e.g. https://www.infragistics.com/help/wpf/datachart-axis-orientation
+ -->
+
 ## Axis Advanced Scenarios
 
 For more advanced axis layout scenarios, you can use [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) to share axis, add multiple axes of the same type, or even cross axis at specific values. The following examples show how to use these features.

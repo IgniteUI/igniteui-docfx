@@ -251,15 +251,19 @@ Show how your data changes over time with our built-in Time Axis. We’ll dynami
 
 ### Dynamic Charts
 
-Visualize your data by creating new composite views and overlapping multiple series in single chart. In the Chart, you can display and overlap multiple chart columns to create stacked columns.
+Visualize your data by creating new [Composite Chart](types/composite-chart.md) and overlapping multiple series in single chart. In the Chart, you can display and overlap multiple chart columns to create stacked columns.
 
 ### Custom Tooltips
 
-Visualize your data by creating new composite views and overlapping multiple series in single chart. In the Chart, you can customize tooltips with images, data binding, and even combine tooltips of multiple series into single tooltip.
+Visualize your data by creating new composite views and overlapping multiple series in single chart. In the Chart, you can create [Custom Tooltips](features/chart-tooltips.md#angular-chart-tooltip-template) with images, data binding, and even combine tooltips of multiple series into single tooltip.
 
-### Real-Time, High-Performance Charting
+### High-Performance, Real-Time Charting
 
-Display millions of data points with milliseconds-level updates in real time with live, streaming data. You will experience no lag, no screen-flicker, and no visual delays, even as you interact with the chart on a touch-device.
+Display thousands of data points with milliseconds-level updates in real time with live, streaming data. You will experience no lag, no screen-flicker, and no visual delays, even as you interact with the chart on a touch-device. For a demo, refer to the [Chart with High-Frequency](features/chart-performance.md#angular-chart-with-high-frequency) topic.
+
+### High-Volume Data Handling
+
+Optimize [Chart Performance](features/chart-performance.md) to render millions of data points while the chart keeps providing smooth performance when end-users tries zooming in/out or navigating chart content. For a demo, refer to the [Chart with High-Volume](features/chart-performance.md#angular-chart-with-high-volume) topic.
 
 ### Modular Design
 
@@ -273,9 +277,9 @@ Let us choose the chart type. Our smart Data Adapter automatically chooses the b
 
 <img class="img" src="../../images/charts/ignite-ui-angular-financial-chart-smart-data-binding-1100.jpg"/>
 
-### Trend Lines
+### Trendlines
 
-We support every trend line you’ll ever need, including linear (x), quadratic (x2), cubic (x3), quartic (x4), quintic (x5), logarithmic (log x), exponential (ex), and power law (axk + o(xk)) trend lines.
+Angular Charts support all [Trendlines](features/chart-trendlines.md) you’ll ever need, including linear (x), quadratic (x2), cubic (x3), quartic (x4), quintic (x5), logarithmic (log x), exponential (ex), and power law (axk + o(xk)) trend lines.
 
 <img class="img" src="../../images/charts/ignite-ui-angular-financial-chart-trendlines-1100.jpg"/>
 
@@ -287,15 +291,9 @@ Use single or multi-touch, keyboard, zoom bar, mouse wheel, drag-select for any 
 
 ### Markers, Tooltips, and Templates
 
-Use one of 10 marker types to highlight data or use simple tooltips or multi-axis and multi-series chart tooltips with custom chart templates to give more context and meaning to your data.
+Use one of 10 [Marker Types](features/chart-markers.md) or create your own [Marker Template](features/chart-markers.md#angular-chart-marker-templates) to highlight data or use simple [Tooltips](features/chart-tooltips.md) or multi-axis and multi-series chart with [Custom Tooltips](features/chart-tooltips.md#angular-chart-tooltip-template) to give more context and meaning to your data.
 
 <img class="img" src="../../images/charts/ignite-ui-angular-financial-chart-custom-tooltips-1100.jpg"/>
-
-### High-Volume Data Handling
-
-Optimize the performance of your financial chart to render millions of data points by modifying the `changeDetection` setting. This setting lets you control how Angular treats your data array when looking for changes and keeping your high-volume chart smoothly running.
-
-<img class="img" src="../../images/charts/ignite-ui-angular-category-chart-high-volume-data-1100.gif"/>
 
 ## But Wait, There’s More!
 

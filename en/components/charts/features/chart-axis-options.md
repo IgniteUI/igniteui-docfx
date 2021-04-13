@@ -50,6 +50,13 @@ By default, the Angular charts will calculate the minimum and maximum values for
 
 <div class="divider--half"></div>
 
+<!--
+## Axis Scale Example
+
+TODO add info/example of financial chart with  YAxisMode and YAxisIsLogarithm
+
+-->
+
 ## Additional Resources
 
 You can find more information about related chart features in these topics:
