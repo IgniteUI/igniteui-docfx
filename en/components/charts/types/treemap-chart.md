@@ -83,7 +83,7 @@ The Treemap chart displays the relative weight of data. It uses a variety of alg
 The Treemap allows you to choose the algorithm that is best for your requirements, defaulting to use the Squarified method. It also includes the ability to allow you to colorize nodes using two mechanisms:
 
 -   A group-based mechanism that colors items with like values
--   A scale-based mechanism similar to a map choropleth, which gradiates node colors based on their value.
+-   A scale-based mechanism similar to a map choropleth, which maps node colors based on their value.
 
 ### Layout Orientation
 
@@ -118,6 +118,6 @@ You can find more information about related chart types in these topics:
 
 The following is a list of API members mentioned in the above sections:
 
--   `XamTreemap`
+-   [`IgxTreemapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtreemapcomponent.html)
 -   [`layoutOrientation`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtreemapcomponent.html#layoutorientation)
 -   [`layoutType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtreemapcomponent.html#layouttype)

@@ -2,7 +2,7 @@
 title: Angular Point Chart | Data Visualization | Infragistics
 _description: Infragistics' Angular Point Chart
 _keywords: Angular Charts, Point Chart, Infragistics
-mentionedTypes: ["XamCategoryChart", "ChartType", "Legend"]
+mentionedTypes: ["CategoryChart", "ChartType", "Legend"]
 ---
 
 # Angular Point Chart
@@ -11,7 +11,7 @@ The Ignite UI for Angular Point Chart renders a collection of points. Values are
 
 ## Angular Point Chart Example
 
-You can create the Angular Point Chart in the `XamCategoryChart` control by binding your data to `ItemsSource` property and setting [`ChartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html) property to `Point` value, as shown in the example below.
+You can create the Angular Point Chart in the [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html) control by binding your data to `ItemsSource` property and setting [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#charttype) property to `Point` value, as shown in the example below.
 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
@@ -59,7 +59,7 @@ Once the Angular Point Chart is set up, we may want to make some further styling
 
 ## Advanced Types of Point Charts
 
-You can create more advanced types of Angular Point Charts using the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) control instead of `XamCategoryChart` control by following these topics:
+You can create more advanced types of Angular Point Charts using the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) control instead of [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html) control by following these topics:
 
 -   [Scatter Bubble Chart](bubble-chart.md)
 -   [Scatter Marker Chart](scatter-chart.md#angular-scatter-marker-chart)
@@ -77,10 +77,10 @@ You can find more information about related chart features in these topics:
 
 The following table lists API members mentioned in the above sections:
 
--   `XamCategoryChart`
+-   [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html)
 -   [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html)
--   [`ChartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/charttype.html)
--   `MarkerTypes`
--   `MarkerOutlines`
--   `MarkerBrushes`
+-   [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#charttype)
+-   [`markerTypes`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#markertypes)
+-   [`markerOutlines`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html#markeroutlines)
+-   [`markerBrushes`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html#markerbrushes)
 -   `MarkerThickness`
