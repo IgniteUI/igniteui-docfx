@@ -215,7 +215,7 @@ The two components were completely refactored in order to provide more flexible 
         * The following properties were changed:
             * The tab item's `isSelected` property was renamed to `selected`.
             * The `selectedTabItem` property was shortten to `selectedItem`.
-            * The `type` property, with its contentFit and fixed options, is no longer available. The header sizing & positioning mode is currently controlled by the `tabAlignment` input property which accepts four different values - start (default), center, end and justify. The old `fixed` type corresponds to the current `justify` alignment value.
+            * The `type` property, with its contentFit and fixed options, is no longer available. The header sizing & positioning mode is currently controlled by the `tabAlignment` input property which accepts four different values - start (default), center, end and justify. The old `contentFit` type corresponds to the current `start` alignment value and the old `fixed` type - to the current `justify` value.
         * The `tabItemSelected` and `tabItemDeselected` events were removed. We introduced three new events, `selectedIndexChanging`, `selectedIndexChange` and `selectedItemChange`, which provide more flexibility and control over the tabs' selection. Unfortunately, having an adequate migration for these event changes is complicated to say the least, so any errors should be handled at project level.
 
 ## From 10.2.x to 11.0.x
