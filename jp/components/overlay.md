@@ -114,10 +114,10 @@ Overlay サービスの [`attach()`]({environment:angularApiUrl}/classes/igxover
   - コンポーネント定義 - コンポーネントを最初の引数として渡す場合、オーバーレイ サービスがそのコンポーネントの新しいインスタンスを作成し、その `ElementRef` を動的に `オーバーレイ` DOM にアタッチします。`moduleRef` を指定した場合、サービスは `ComponentRef` を作成する際にルートのものではなくモジュールの `ComponentFactoryResolver` と `Injector` を使用します。
   - `ElementRef` から既存の DOM 要素 (上記のサンプルを参照) - ページで既に描画されたビューはオーバーレイ サービスで渡して、オーバーレイ DOM で描画できます。
 
-  どちらの場合も、[`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) メソッドは次のようになります:
+どちらの場合も、[`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) メソッドは次のようになります:
   - Angular から渡されるビューへの参照を取得します。
   - ビューを DOM からデタッチし、そこにアンカーを追加します。
-  - 提供されている[`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html)を使用するか、デフォルトのオーバーレイにフォールバックして、ビューをオーバーレイに再アタッチします。
+  - 提供されている [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) を使用するか、デフォルトのオーバーレイにフォールバックして、ビューをオーバーレイに再アタッチします。
 
 次に [`show(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#show) を呼び出すと、開くアニメーションが再生され、添付されたコンテンツが表示されます。[`hide(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#hide) を呼び出すと、閉じるアニメーションが再生され、添付されているコンテンツが非表示になります。
 
@@ -206,7 +206,7 @@ const connectedOverlaySettings = IgxOverlayService.createRelativeOverlaySettings
 
 ## オーバーレイの非表示
 
-[`hide(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#hide) は、オーバーレイ コンテンツを非表示にします。すべてのオーバーレイ サービスで描画される要素がサービスによって割り当てられた一意の ID があります。[`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) メソッドは、描画されたコンテンツの識別子を返します。コンテンツを非表示にするには、この ID をオーバーレイの [`hide(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#hide) メソッドに渡す必要があります。すべてのオーバーレイを非表示にするには、[`hideAll（）`]（{environment：angularApiUrl} /classes/igxoverlayservice.html#hideAll）メソッドを呼び出すことができます。
+[`hide(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#hide) は、オーバーレイ コンテンツを非表示にします。すべてのオーバーレイ サービスで描画される要素がサービスによって割り当てられた一意の ID があります。[`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) メソッドは、描画されたコンテンツの識別子を返します。コンテンツを非表示にするには、この ID をオーバーレイの [`hide(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#hide) メソッドに渡す必要があります。すべてのオーバーレイを非表示にするには、[`hideAll()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#hideAll) メソッドを呼び出すことができます。
 
 描画されたコンテンツが不要になったら、[`detach(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#detach) メソッドを呼び出す必要があります。このメソッドは、オーバーレイからコンテンツを削除し、該当する場合は、DOM 内の元の場所にコンテンツを再アタッチします。[`detach(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#detach) メソッドは、[`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) メソッドから生成された ID も必須パラメーターとして受け入れます。すべてのオーバーレイを削除するには、[`detachAll()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#detachAll) メソッドを呼び出すことができます。
 
