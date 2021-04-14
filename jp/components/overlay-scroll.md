@@ -40,7 +40,7 @@ const overlayId = overlay.attach(dummyElement, overlaySettings);
 ``` 
 <div class="divider"></div>
 
-オーバーレイで使用するスクロール方法の変更は、オーバーレイに渡される [`overlaySettings`] ({environment:angularApiUrl}/interfaces/overlaysettings.html) オブジェクトの [`scrollStrategy`] ({environment:angularApiUrl}/interfaces/iscrollstrategy.html) プロパティをオーバーライドします。If a strategy was already attached you should detach the previously generated ID:
+オーバーレイで使用するスクロール方法の変更は、オーバーレイに渡される [`overlaySettings`] ({environment:angularApiUrl}/interfaces/overlaysettings.html) オブジェクトの [`scrollStrategy`] ({environment:angularApiUrl}/interfaces/iscrollstrategy.html) プロパティをオーバーライドします。ストラテジーがすでにアタッチされている場合は、以前に生成された ID をデタッチする必要があります:
 ```typescript
 // overlaySettings is an existing object of type OverlaySettings
 // to override the scroll strategy

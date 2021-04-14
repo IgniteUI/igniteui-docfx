@@ -43,10 +43,10 @@ import { IgxBottomNavModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-次にコンポーネントのテンプレートを Bottom Navigation に追加し、3 つの項目を追加します。Each item wraps an `igx-bottom-nav-header` and an `igx-bottom-nav-content` component which represent respectively the header and the container of the data. Headers usually consist of an icon and an optional text label. The Bottom Navigation control is compatible with the Material Design [**Icons**](https://material.io/icons/) so to adopt them in your application simply add the Material+Icons import in your 'styles.css' file in the main application folder.
+次にコンポーネントのテンプレートを Bottom Navigation に追加し、3 つの項目を追加します。各項目は、データのヘッダーとコンテナをそれぞれ表す  `igx-bottom-nav-header` コンポーネントと `igx-bottom-nav-content` コンポーネントをラップします。ヘッダーは通常、アイコンとオプションのテキスト ラベルで構成されます。Bottom Navigation コントロールはマテリアル デザイン[**アイコン**](https://material.io/icons/)と互換性があるため、アプリケーションに採用するには、メイン アプリケーション フォルダーの 'styles.css' ファイルに Material+Icons インポートを追加するだけです。
 
 > [!NOTE]
-> If you haven't used the `igx-icon` in your application so far, please make sure to import the `IgxIconModule` in the **app.module.ts** before proceeding.
+> これまでアプリケーションで `igx-icon` を使用したことがない場合は、続行する前に必ず **app.module.ts** の `IgxIconModule` をインポートしてください。
 
 ```css
 // styles.css
@@ -85,9 +85,9 @@ export class AppModule {}
 
 ## Bottom Navigation のカスタマイズ
 
-Let's modify the tabs by adding labels alongside the icons and make sure the headers are properly styled.
+アイコンの横にラベルを追加してタブを変更し、ヘッダーのスタイルが適切であることを確認しましょう。
 
-First, define some object arrays for the data source in the component typescript file:
+まず、コンポーネントの typescript ファイルにデータ ソースのオブジェクト配列を定義します。
 
 ```typescript
 ...
@@ -114,7 +114,7 @@ public booksList: object[] = [
 ...
 ```
 
-Next, update the component's template markup as follows:
+次に、コンポーネントのテンプレート マークアップを次のように更新します。
 
 ```html
 <igx-bottom-nav>
@@ -156,7 +156,7 @@ Next, update the component's template markup as follows:
     </igx-bottom-nav-item>
 </igx-bottom-nav>
 ```
-You probably noticed that in addition to placing the icon and the span with the label between the item's header tags, we also attach the `igxBottomNavHeaderIcon` and the `igxBottomNavHeaderLabel` directives to them. These directives denote the respective elements and apply the proper styles to them.
+項目のヘッダー タグの間にアイコンとラベル付きのスパンを配置することに加えて、`igxBottomNavHeaderIcon` および `igxBottomNavHeaderLabel` ディレクティブもそれらに添付していることに気付いたと思います。これらのディレクティブはそれぞれの要素を示し、適切なスタイルを適用します。
 
 最後に、コンテンツのテンプレートの DIV および SPAN 要素に使用される CSS クラスをコンポーネントの CSS ファイルに追加します。
 
@@ -182,7 +182,6 @@ igx-bottom-nav-content {
 
 Bottom Navigation は以下のようになります。
 
-
 <code-view style="height: 350px; width: 300px; border: 1px solid #D4D4D4;"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/layouts/tabbar-sample-2" >
@@ -191,7 +190,7 @@ Bottom Navigation は以下のようになります。
 
 <div class="divider--half"></div>
 
-If having labels and icons in the headers is not enough, you can simply add your custom content between the header tags.
+ヘッダーにラベルとアイコンを含めるだけでは不十分な場合は、ヘッダー タグの間にカスタム コンテンツを追加するだけです。
 以下はその例です。
 
 ```html
@@ -215,9 +214,9 @@ If having labels and icons in the headers is not enough, you can simply add your
 
 ## ルーター アウトレット コンテナとの統合
 
-Despite the primary usage of the Bottom Navigation component is to define tab items with content, there may be cases in which you may need to define tab items with headers only. Probably, the main scenario for such usage is navigation between views using the Angular Router. The following example will demonstrate how to configure the Bottom Navigation component to switch between three components in a single router-outlet.
+Bottom Navigation コンポーネントの主な用途はコンテンツを含むタブ項目を定義することですが、ヘッダーのみを使用してタブ項目を定義する必要がある場合があります。おそらく、そのような使用法の主なシナリオは、Angular Router を使用したビュー間のナビゲーションです。次の例は、Bottom Navigation コンポーネントを構成して、単一のルーターアウトレットで 3 つのコンポーネントを切り替える方法を示しています。
 
-To start we need a main component hosting the Bottom Navigation component and three view components with some content for demonstration purposes. For code snippets' simplicity, the view components will have a very short template but feel free to make them more distinguishable if you need. Also import these view components in your `app.module.ts` file.
+まず、Bottom Navigation コンポーネントをホストするメインコンポーネントと、デモ用のコンテンツを含む 3 つのビュー コンポーネントが必要です。コード スニペットを簡素化するために、ビュー コンポーネントに短いテンプレートがありますが、必要に応じてそれらをより識別しやすくしてください。また、これらのビューコンポーネントを `app.module.ts` ファイルにインポートします。
 
 ```typescript
 // bottomnav-routing.component.ts
@@ -320,7 +319,7 @@ export class TabbarRoutingModule { }
 </igx-bottom-nav>
 ```
 
-上記のコードは、3 つのタブ項目を持つ BottomNavigation コンポーネントを作成します。All tab items are having the `RouterLinkActive` directive applied which tracks whether the linked route is currently active. Please, note, that the `RouterLink` directive is applied on the header element itself, not on the tab item. これらのリンクのいずれかがアクティブになると、`RouterLinkActive` ディレクティブの `isActive` プロパティにバインドされるため、対応するタブ項目の `selected` プロパティが設定されます。このようにして、選択したタブ項目は常に現在のブラウザーのアドレスと同期したままになります。
+上記のコードは、3 つのタブ項目を持つ BottomNavigation コンポーネントを作成します。すべてのタブ項目には、リンクされたルートが現在アクティブであるかどうかを追跡する `RouterLinkActive` ディレクティブが適用されています。`RouterLink` ディレクティブは、タブ項目ではなく、ヘッダー要素自体に適用されることに注意してください。これらのリンクのいずれかがアクティブになると、`RouterLinkActive` ディレクティブの `isActive` プロパティにバインドされるため、対応するタブ項目の `selected` プロパティが設定されます。このようにして、選択したタブ項目は常に現在のブラウザーのアドレスと同期したままになります。
 
 上記のアプローチは、BottomNavigation コンポーネントを使用したルーティングを示すために、次のサンプルで使用されています。
 

@@ -77,8 +77,8 @@ public grid: IgxGridComponent;
 
 [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) プロパティは、データソース フィールドに基づいて **igx-grid** にグリッドの[`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) を自動生成させます。列の適切なデータ型の決定を試みます。それ以外の場合、開発者は列およびデータ ソース フィールドへのマッピングを明示的に定義する必要があります。
 
-## Angular Bootstrap Grid Definition
-<p>Ignite UI for Angular includes a powerful bootstrap grid like flex-based layout system. Any modern application today is expected to follow a responsive web design approach, meaning it can gracefully adjust layout of HTML elements based on the device size, or from simply resizing the browser. An Angular bootstrap grid layout was the most used approach in the past, but a flex-based layout system like CSS grid has become more popular, as it works in any browser. The Ignite UI for Angular Layout Directive allows vertical and horizontal flow, including content / text wrapping, justification, and alignment. The Ignite UI for Angular grid supports a responsive layout using CSS, giving you the ultimate flexibility in how the grid behaves on resize. </p>
+## Angular Bootstrap グリッドの定義
+<p>Ignite UI for Angular には、Flex に基づくレイアウト システムのような強力なブートストラップ グリッドが含まれています。今日の最新のアプリケーションは、レスポンシブ Web デザインのアプローチに従うことが期待されています。つまり、デバイスのサイズに基づいて、または単にブラウザーのサイズを変更するだけで、HTML 要素のレイアウトを適切に調整できます。Angular ブートストラップ グリッド レイアウトはこれまで最も使用されていたアプローチでしたが、CSS グリッドのようなFlex に基づくレイアウト システムは、どのブラウザーでも機能するため、より一般的になりました。Ignite UI for Angular Layout ディレクティブにより、コンテンツ/テキストの折り返し、両端揃え、配置など、垂直方向と水平方向のフローが可能になります。Ignite UI for Angular グリッドは、CSS を使用したレスポンシブ レイアウトをサポートし、サイズ変更時のグリッドの動作に究極の柔軟性を提供します。</p>
 
 ## Angular Grid スタイルの構成
 > [!NOTE]
@@ -100,10 +100,10 @@ public grid: IgxGridComponent;
  ...
  ```
 
-## Editable Grid Angular
-<p>Each operation for Angular grid editing includes Batch operations, meaning the API gives you the option to group edits into a single server call, or you can perform grid edit / update operations as they occur with grid interactions. Along with a great developer experience as an editable Angular grid with CRUD operations, the Angular grid includes Excel-like keyboard navigation. Common default grid navigation is included, plus the option to override any navigation option to meet the needs of your customers. An editable grid in Angular with a great navigation scheme is critical to any modern line of business application, with the Ignite UI grid we make it easy.</p>
+## 編集可能な Angular グリッド
+<p>Angular グリッド編集の各操作にはバッチ操作が含まれます。つまり、API には、編集を単一のサーバー呼び出しにグループ化するオプションがあります。または、グリッドの操作を使用して、グリッドの編集を実行したり、発生した操作を更新したりできます。CRUD 操作を備えた編集可能な Angular グリッドとしての優れた開発者エクスペリエンスに加えて、Angular グリッドには Excel のようなキーボード ナビゲーションが含まれています。一般的なデフォルトのグリッド ナビゲーションに加えて、お客様のニーズを満たすためにナビゲーション オプションを上書きするオプションが含まれています。優れたナビゲーション スキームを備えた Angular の編集可能なグリッドは、最新の業務アプリケーションにとって重要であり、Ignite UI グリッドを使用すると簡単になります。</p>
 
-Following this topic you will learn more about [cell template](grid.md#cell-template) and [cell editing template](grid.md#cell-editing-template) and editing.
+このトピックに続いて、[セル テンプレート](grid.md#セル-テンプレート)と[セル編集テンプレート](grid.md#セル編集テンプレート)および編集について詳しく学習します。
 
 ## Angular Grid 列の構成
 

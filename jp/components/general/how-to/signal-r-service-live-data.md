@@ -34,7 +34,7 @@ SignalR はいくつかの転送を利用し、クライアントとサーバー
 <img style="-webkit-box-shadow: 8px 9px 9px 5px #ccc; -moz-box-shadow: 8px 9px 9px 5px #ccc; box-shadow: 8px 9px 9px 5px #ccc; min-width: calc(100% - 650px); max-width: calc(100% - 400px);"
   src="../../../images/general/how-to/ws-lets-party.jpg"
   data-src="../../../images/general/how-to/ws-lets-party.jpg"
-  alt="Real-time Web App with Web Sockets"
+  alt="Web Sockets を備えたリアルタイム Web アプリ"
   title="Real-time Web App with Web Sockets" />
 
 ## SignalR の例
@@ -128,7 +128,7 @@ SignalR ハブ API を使用すると、サーバーから接続されたクラ�
 <img style="-webkit-box-shadow: 8px 9px 9px 5px #ccc; -moz-box-shadow: 8px 9px 9px 5px #ccc; box-shadow: 8px 9px 9px 5px #ccc; min-width: calc(100% - 650px); max-width: calc(100% - 400px);"
   src="../../../images/general/how-to/ws-hub-callers.jpg"
   data-src="../../../images/general/how-to/ws-hub-callers.jpg"
-  alt="SignalR Hub Setup with callers"
+  alt="呼び出し元との SignalR ハブのセットアップ"
   title="SignalR Hub Setup with callers" />
 
 接続、グループ、およびメッセージの管理を担当する基本 Hub クラスを継承する [StreamHub クラス](https://github.com/IgniteUI/finjs-web-api/blob/d493f159e0a6f14b5ffea3e893f543f057fdc92a/WebAPI/Models/StreamHub.cs#L9)を作成しました。Hub クラスはステートレスであり、特定のメソッドの新しい呼び出しはそれぞれ、このクラスの新しいインスタンスにあることに注意してください。インスタンス プロパティに状態を保存することは無意味です。代わりに、静的プロパティを使用することをお勧めします。この場合、静的キー値ペアのコレクションを使用して、接続されている各クライアントのデータを保存します。 

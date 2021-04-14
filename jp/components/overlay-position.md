@@ -150,7 +150,7 @@ overlay.attach(element, { positionStrategy: myPositionStrategy });
 
 ### 設定の変更
 
-既存ストラテジのポジション設定の変更は、そのストラテジの設定のいずれかをオーバーライドします。If a strategy was already attached you should detach the previously generated ID:
+既存ストラテジのポジション設定の変更は、そのストラテジの設定のいずれかをオーバーライドします。ストラテジーがすでにアタッチされている場合は、以前に生成された ID をデタッチする必要があります:
 ```typescript
 // overlaySettings is an existing object of type OverlaySettings
 // overlaySettings.positionStrategy is an existing PositionStrategy with settings of type PositionSettings

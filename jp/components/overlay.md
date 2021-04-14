@@ -114,14 +114,14 @@ Overlay サービスの [`attach()`]({environment:angularApiUrl}/classes/igxover
   - コンポーネント定義 - コンポーネントを最初の引数として渡す場合、オーバーレイ サービスがそのコンポーネントの新しいインスタンスを作成し、その `ElementRef` を動的に `オーバーレイ` DOM にアタッチします。`moduleRef` を指定した場合、サービスは `ComponentRef` を作成する際にルートのものではなくモジュールの `ComponentFactoryResolver` と `Injector` を使用します。
   - `ElementRef` から既存の DOM 要素 (上記のサンプルを参照) - ページで既に描画されたビューはオーバーレイ サービスで渡して、オーバーレイ DOM で描画できます。
 
-  In both cases the [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) method will:
-  - Get the reference to the passed view from Angular
-  - Detach the view from the DOM and leave an anchor in its place
-  - Re-attach the view to the overlay using the provided [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) or falling back to the default overlay ones
+  どちらの場合も、[`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) メソッドは次のようになります:
+  - Angular から渡されるビューへの参照を取得します。
+  - ビューを DOM からデタッチし、そこにアンカーを追加します。
+  - 提供されている[`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html)を使用するか、デフォルトのオーバーレイにフォールバックして、ビューをオーバーレイに再アタッチします。
 
-Calling then [`show(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#show) will play the open animation, if there is any, and will show the attached content. Calling [`hide(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#hide) will play close animation, if there is any, and will hide the attached content.
+次に [`show(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#show) を呼び出すと、開くアニメーションが再生され、添付されたコンテンツが表示されます。[`hide(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#hide) を呼び出すと、閉じるアニメーションが再生され、添付されているコンテンツが非表示になります。
 
-Finally calling [`detach(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#detach) method will re-attach the view back to its original location in the DOM. If a component was provided to the [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) method calling [`detach(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#detach) will destroy the created instance.
+最後に [`detach(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#detach) メソッドを呼び出すと、ビューが DOM 内の元の場所に再アタッチされます。コンポーネントが [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) メソッドに提供された場合、[`detach(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#detach) を呼び出すと、作成されたインスタンスが破棄されます。
 
 <div class="divider--half"></div>
 
@@ -206,9 +206,9 @@ const connectedOverlaySettings = IgxOverlayService.createRelativeOverlaySettings
 
 ## オーバーレイの非表示
 
-The [`hide(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#hide) hides the overlay content. All of the elements rendered by the overlay service have a unique ID, assigned to them by the service. The [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) method returns the identifier of the rendered content. To hide the content this ID needs to be passed to the overlay's [`hide(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#hide) method. To hide all overlays [`hideAll()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#hideAll) method could be called.
+[`hide(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#hide) は、オーバーレイ コンテンツを非表示にします。すべてのオーバーレイ サービスで描画される要素がサービスによって割り当てられた一意の ID があります。[`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) メソッドは、描画されたコンテンツの識別子を返します。コンテンツを非表示にするには、この ID をオーバーレイの [`hide(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#hide) メソッドに渡す必要があります。すべてのオーバーレイを非表示にするには、[`hideAll（）`]（{environment：angularApiUrl} /classes/igxoverlayservice.html#hideAll）メソッドを呼び出すことができます。
 
-When rendered content is not needed anymore [`detach(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#detach) method should be called. This method removes the content from the overlay and, if applicable, re-attaches it to its original location in the DOM. [`detach(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#detach) method also accepts as mandatory parameter the ID generated from [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) method. To remove all the overlays [`detachAll()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#detachAll) method could be called.
+描画されたコンテンツが不要になったら、[`detach(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#detach) メソッドを呼び出す必要があります。このメソッドは、オーバーレイからコンテンツを削除し、該当する場合は、DOM 内の元の場所にコンテンツを再アタッチします。[`detach(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#detach) メソッドは、[`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) メソッドから生成された ID も必須パラメーターとして受け入れます。すべてのオーバーレイを削除するには、[`detachAll()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#detachAll) メソッドを呼び出すことができます。
 
 以前に定義されたオーバーレイ メソッドをオーバーレイ要素を表示して非表示するために変更できます。
 ```typescript

@@ -39,7 +39,7 @@ import { IgxTabsModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-We set the tabs header by providing content to [`igx-tab-header`]({environment:angularApiUrl}/classes/igxtabheader.html}). To set the tab's name we simply add a span with [`igxTabHeaderLabel`]({environment:angularApiUrl}/classes/igxtabheaderlabeldirective.html) directive. Any content that will appear as a tab item's content should be added between [`igx-tab-content`]({environment:angularApiUrl}/classes/igxtabcontent.html}) tags.
+[`igx-tab-header`]({environment:angularApiUrl}/classes/igxtabheader.html}) にコンテンツを提供することにより、タブ ヘッダーを設定します。タブの名前を設定するには、[`igxTabHeaderLabel`]({environment:angularApiUrl}/classes/igxtabheaderlabeldirective.html) ディレクティブを使用してスパンを追加するだけです。タブ項目のコンテンツとして表示されるコンテンツは、[`igx-tab-content`]({environment:angularApiUrl}/classes/igxtabcontent.html}) タグの間に追加する必要があります。
 
 ```html
 <igx-tabs>
@@ -97,15 +97,15 @@ We set the tabs header by providing content to [`igx-tab-header`]({environment:a
 
 <div class="divider"></div>
 
-## Tabs Alignment
-`IgxTabs` [`tabAlignment`]({environment:angularApiUrl}/classes/igxtabscomponent.html#tabalignment) input property controls how tabs are positioned and arranged. It accepts four different values - start, center, end and justify.
-- **Start** (default): the width of the tab header depends on the content (label, icon, both) and all tabs have equal padding. First tab is aligned to the tabs container left side.
-- **Center**: the width of the tab header depends on the content and occupies the tabs container center. If the space is not enough to fit all items, scroll buttons are displayed.
-- **End**: the width of the tab header depends on the content and all tabs have equal padding. Last tab is aligned to the tabs container right side.
-- **Justify**: all tab headers are equal in width and fully fit the tabs container. If the space is not enough to fit all items, scroll buttons are displayed.
+## タブの配置
+`IgxTabs` [`tabAlignment`]({environment:angularApiUrl}/classes/igxtabscomponent.html#tabalignment) 入力プロパティは、タブの配置と配置の方法を制御します。start、center、end、justify の 4 つの異なる値を受け入れます。
+- **Start** (デフォルト）: タブ ヘッダーの幅はコンテンツ (ラベル、アイコン、両方) によって異なり、すべてのタブに同じパディングがあります。最初のタブは、タブ コンテナの左側に配置されます。
+- **Center**: タブ ヘッダーの幅はコンテンツによって異なり、タブ コンテナの中央を占めます。スペースが足りない場合、スクロール ボタンが表示されます。
+- **End** (デフォルト）: タブヘッダーの幅はコンテンツによって異なり、すべてのタブに同じパディングがあります。最後のタブは、タブ コンテナの右側に配置されます。
+- **Justify**: すべてのタブ ヘッダーは幅が等しく、タブ コンテナに完全に適合します。スペースが足りない場合、スクロール ボタンが表示されます。
 
 
-Sample below demostrates how tabs get aligned when switching between `tabAlignment` property values.
+以下のサンプルは、`tabAlignment` プロパティ値を切り替えるときにタブがどのように整列されるかを示しています。
 
 <code-view style="height: 250px; border: 1px solid #ededed"
            data-demos-base-url="{environment:demosBaseUrl}"
@@ -119,9 +119,9 @@ Sample below demostrates how tabs get aligned when switching between `tabAlignme
 
 タブに [`igxTabHeaderIcon`]({environment:angularApiUrl}/classes/igxtabheadericondirective.html) ディレクティブを追加します。`igx-tabs` コントロールはマテリアル デザイン [**アイコン**](https://material.io/icons/)と互換性があるため、アプリケーションにアイコンを簡単に追加できます。
 > [!NOTE]
-> If you haven't used the `igx-icon` in your application so far, please make sure to import the `IgxIconModule` in the **app.module.ts** before proceeding.
+> これまでアプリケーションで `igx-icon` を使用したことがない場合は、続行する前に必ず **app.module.ts** の `IgxIconModule` をインポートしてください。
 
-はじめに Material Icons をメイン アプリケーション フォルダーの 'styles.scss' ファイルにインポートします。Next, add `igx-icon` with [`igxTabHeaderIcon`]({environment:angularApiUrl}/classes/igxtabheadericondirective.html}) directive set, as a child of [`igx-tab-header`]({environment:angularApiUrl}/classes/igxtabheader.html}) .
+はじめに Material Icons をメイン アプリケーション フォルダーの 'styles.scss' ファイルにインポートします。次に、[`igx-tab-header`]({environment:angularApiUrl}/classes/igxtabheader.html}) の子として、[`igxTabHeaderIcon`]({environment:angularApiUrl}/classes/igxtabheadericondirective.html}) ディレクティブが設定された `igx-icon` を追加します。 
 
 ```css
 // styles.scss
@@ -174,7 +174,7 @@ Sample below demostrates how tabs get aligned when switching between `tabAlignme
 
 <div class="divider--half"></div>
 
-If setting the labels and icons is not enough, you can also provide your own custom content directly between [`igx-tab-header`]({environment:angularApiUrl}/classes/igxtabheader.html}) tags.
+ラベルとアイコンを設定するだけでは不十分な場合は、[`igx-tab-header`]({environment:angularApiUrl}/classes/igxtabheader.html}) タグの間に独自のカスタム コンテンツを直接提供することもできます。
 
 ```html
 <igx-tabs>
@@ -193,7 +193,7 @@ If setting the labels and icons is not enough, you can also provide your own cus
 </igx-tabs>
 ```
 
-You can also add you own custom tab header's prefix and suffix simply by using `igxPrefix` and `igxSuffix` directives. The sample below demonstrates how to add a tab with custom header content and prefix/suffix.
+`igxPrefix` および `igxSuffix` ディレクティブを使用するだけで、独自のカスタム タブ ヘッダーのプレフィックスとサフィックスを追加することもできます。以下のサンプルは、カスタム ヘッダー コンテンツとプレフィックス/サフィックスを含むタブを追加する方法を示しています。
 
 <code-view style="height: 250px; border: 1px solid #ededed;"
            data-demos-base-url="{environment:demosBaseUrl}"
@@ -321,7 +321,7 @@ export class AppRoutingModule { }
 </code-view>
 
 > [!NOTE]
-> Please note that the routerLink directive is set to the `igx-tab-header`, not directly to the `igx-tab-item`.
+> routerLink ディレクティブは、直接 `igx-tab-item` ではなく、`igx-tab-header` に設定されていることに注意してください。
 
 
 ## スタイル設定
