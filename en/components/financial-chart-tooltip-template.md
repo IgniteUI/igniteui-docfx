@@ -2,7 +2,7 @@
 title: Angular Financial Chart | Tooltip Templates | Infragistics
 _description: Use Infragistics' Angular financial chart's tooltips to display important data. View our Ignite UI for Angular graph tutorials!
 _keywords: Angular charts, financial chart, stock chart, tooltip templates, Ignite UI for Angular, Infragistics
-mentionedTypes: ['XamFinancialChart']
+mentionedTypes: ['FinancialChart']
 ---
 
 # Angular Tooltip Templates
@@ -11,10 +11,10 @@ The Angular financial chart component provides default tooltips for each type of
 
 ## Angular Tooltip Templates Example
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-tooltip-template" 
-           alt="Angular Tooltip Templates Example" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-tooltip-template"
+           alt="Angular Tooltip Templates Example"
            github-src="charts/financial-chart/tooltip-template">
 </code-view>
 
