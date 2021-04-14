@@ -7,7 +7,7 @@ mentionedTypes: ["XamDataChart"]
 
 # Angular Pyramid Chart
 
-Angular Pyramid Chart, also called an age pyramid or population pyramid, is a graphical illustration that shows distribution of various age groups in a population, which forms the shape of a pyramid when the population is growing. It is also used in ecology to determine the overall age distribution of a population; an indication of the reproductive capabilities and likelihood of the continuation of a species.
+The Ignite UI for Angular Pyramid Chart, also called an age pyramid or population pyramid, is a graphical illustration that shows distribution of various age groups in a population, which forms the shape of a pyramid when the population is growing. It is also used in ecology to determine the overall age distribution of a population; an indication of the reproductive capabilities and likelihood of the continuation of a species.
 
 ## Angular Pyramid Chart Example
 

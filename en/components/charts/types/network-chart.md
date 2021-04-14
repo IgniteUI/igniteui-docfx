@@ -7,7 +7,7 @@ mentionedTypes: ["XamDataChart"]
 
 # Angular Network Chart
 
-Angular Network Chart, also called Network Graph or Polyline Chart, visualizes complex relationships between a large amount of elements. This visualization displays undirected and directed graph structures. It also shows relationships between entities that are displayed as round nodes and lines show the relationships between them.
+The Ignite UI for Angular Network Chart, also called Network Graph or Polyline Chart, visualizes complex relationships between a large amount of elements. This visualization displays undirected and directed graph structures. It also shows relationships between entities that are displayed as round nodes and lines show the relationships between them.
 
 The following sections provide examples of various types of Network Charts.
 

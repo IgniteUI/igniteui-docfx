@@ -7,7 +7,7 @@ mentionedTypes: ["XamDataChart"]
 
 # Angular Composite / Combo Chart
 
-Angular Composite Chart, also called a Combo Chart, is visualization that combines different types of chart types in the same plot area. It is very useful when presenting two data series that have a very different scale and might be expressed in different units. The most common example is dollars on one axis and percentage on the other axis.
+The Ignite UI for Angular Composite Chart, also called a Combo Chart, is visualization that combines different types of chart types in the same plot area. It is very useful when presenting two data series that have a very different scale and might be expressed in different units. The most common example is dollars on one axis and percentage on the other axis.
 
 ## Angular Composite / Combo Example
 
