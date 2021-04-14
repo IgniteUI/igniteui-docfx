@@ -5,13 +5,13 @@ _keywords: Angular Charts, Radial Chart, Infragistics
 mentionedTypes: ["XamDataChart", "RadialLineSeries"]
 ---
 
-# Angular Radial Charts
+# Angular Radial Chart
 
-Angular Radial Charts are a group of charts that takes data and render it as collection of data points wrapped around a circle (rather than stretching along a horizontal line). Radial Charts are also mapping a list of categories from the minimum to the maximum of the extent of the chart, and support the category grouping mechanisms.
+The Ignite UI for Angular Radial Chart takes data and render it as collection of data points wrapped around a circle (rather than stretching along a horizontal line). Radial Chart is also mapping a list of categories from the minimum to the maximum of the extent of the chart, and support the category grouping mechanisms.
 
 ## Angular Radial Area Chart
 
-The Ignite UI for Angular Radial Area Chart has a shape of a filled polygon that is bound by a collection of straight lines connecting data points. This chart type uses the same concept of data plotting as the [Area Chart](area-chart.md), but wraps the data points around a circular axis rather than stretching them along a horizontal line.
+The Ignite UI for Angular Radial Area Chart has a shape of a filled polygon that is bound by a collection of straight lines connecting data points. This chart type uses the same concept of data plotting as the [Area Chart](area-chart.md), but wraps the data points around a circular axis rather than stretching them horizontally.
 
 You can create this type of chart in [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) control by binding your data to [`IgxRadialAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialareaseriescomponent.html), as shown in the example below.
 
@@ -25,7 +25,7 @@ You can create this type of chart in [`IgxDataChartComponent`]({environment:dvAp
 
 ## Angular Radial Column Chart
 
-The Radial Column Chart is visualized by using a collection of rectangles that extend from the center of the chart toward the locations of data points. This utilizes the same concepts of data plotting as the [Column Chart](column-chart.md), but wraps data points around a circle rather than stretching them along a horizontal line.
+The Radial Column Chart is visualized by using a collection of rectangles that extend from the center of the chart toward the locations of data points. This utilizes the same concepts of data plotting as the [Column Chart](column-chart.md), but wraps data points around a circle rather than stretching them horizontally.
 
 You can create this type of chart in the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) control by binding your data to a [`IgxRadialColumnSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialcolumnseriescomponent.html), as shown in the example below:
 
@@ -39,7 +39,7 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
 
 ## Angular Radial Line Chart
 
-The Ignite UI for Angular Radial Line Chart has renders as a collection of straight lines connecting data points. This chart type uses the same concept of data plotting as the [Line Chart](area-chart.md), but wraps the data points around a circular axis rather than stretching them along a horizontal line.
+The Ignite UI for Angular Radial Line Chart has renders as a collection of straight lines connecting data points. This chart type uses the same concept of data plotting as the [Line Chart](line-chart.md), but wraps the data points around a circular axis rather than stretching them horizontally.
 
 You can create this type of chart in the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) control by binding your data to [`IgxRadialLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradiallineseriescomponent.html), as shown in the example below:
 
@@ -83,11 +83,11 @@ This example demonstrates how to customize Angular Radial Chart.
 
 You can find more information about related chart types in these topics:
 
--   [Area Charts](area-chart.md)
--   [Column Charts](column-chart.md)
--   [Donut Charts](donut-chart.md)
--   [Line Charts](line-chart.md)
--   [Pie Charts](pie-chart.md)
+-   [Area Chart](area-chart.md)
+-   [Column Chart](column-chart.md)
+-   [Donut Chart](donut-chart.md)
+-   [Line Chart](line-chart.md)
+-   [Pie Chart](pie-chart.md)
 
 ## API Members
 

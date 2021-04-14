@@ -1,15 +1,15 @@
 ---
-title: Angular Bar Charts and Graphs | Ignite UI for Angular
-_description: Angular Bar Charts are among the most common category chart types used to quickly compare frequency, count, total, or average of data in different categories. Try for FREE.
-_keywords: Angular Charts, Bar Chart, Infragistics
+title: Angular Bar Chart and Graph | Ignite UI for Angular
+_description: Angular Bar Chart is among the most common category chart types used to quickly compare frequency, count, total, or average of data in different categories. Try for FREE.
+_keywords: Angular Charts, Bar Chart, Bar Graph, Horizontal Chart, Infragistics
 mentionedTypes: ["XamDataChart", "BarSeries", "StackedBarSeries", "Stacked100BarSeries"]
 ---
 
-# Angular Bar Charts
+# Angular Bar Chart
 
-Angular Bar Charts, Bar Graphs, or Horizontal Bar Charts, are among the most common category chart types used to quickly compare frequency, count, total, or average of data in different categories with data encoded by horizontal bars with equal heights but different lengths. They are ideal for showing variations in the value of an item over time. Data is represented using a collection of rectangles that extend from the left to right of the chart towards the values of data points. Bar Charts are very similar to [Column Charts](column-chart.md) except that Bar Charts render with 90 degrees clockwise rotation and therefore they have horizontal orientation (left to right) while [Column Charts](column-chart.md) have vertical orientation (up and down)
+The Ignite UI for Angular Bar Chart, Bar Graph, or Horizontal Bar Chart, is among the most common category chart types used to quickly compare frequency, count, total, or average of data in different categories with data encoded by horizontal bars with equal heights but different lengths. This chart is ideal for showing variations in the value of an item over time. Data is represented using a collection of rectangles that extend from the left to right of the chart towards the values of data points. Bar Chart is very similar to [Column Chart](column-chart.md) except that Bar Chart renders with 90 degrees clockwise rotation and therefore it has horizontal orientation (left to right) while [Column Chart](column-chart.md) has vertical orientation (up and down)
 
-## Angular Category Bar Chart
+## Angular Bar Chart Example
 
 The Ignite UI for Angular Category Bar Chart groups data items from multiple data sources into categories and renders them as horizontal bars or rectangles. Values are represented on the X-Axis and categories are displayed on the Y-Axis.
 
@@ -127,7 +127,7 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
 
 ## Angular Stacked 100% Bar Chart
 
-The Ignite UI for Angular Stacked 100% Bar Chart is identical to the Angular stacked bar chart in all aspects except in their treatment of the values on X-Axis (bottom labels of the chart). Instead of presenting a direct representation of the data, the stacked 100 bar chart presents the data in terms of percent of the sum of all values in a data point.
+The Ignite UI for Angular Stacked 100% Bar Chart is identical to the Angular Stacked Bar Chart in all aspects except in their treatment of the values on X-Axis (bottom labels of the chart). Instead of presenting a direct representation of the data, the stacked 100 bar chart presents the data in terms of percent of the sum of all values in a data point.
 
 You can create this type of chart in the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) control by binding your data to a [`IgxStacked100BarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstacked100barseriescomponent.html), as shown in the example below:
 
@@ -143,11 +143,11 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
 
 You can find more information about related chart types in these topics:
 
--   [Area Charts](area-chart.md)
--   [Column Charts](column-chart.md)
--   [Line Charts](line-chart.md)
--   [Spline Charts](spline-chart.md)
--   [Stacked Charts](stacked-chart.md)
+-   [Area Chart](area-chart.md)
+-   [Column Chart](column-chart.md)
+-   [Line Chart](line-chart.md)
+-   [Spline Chart](spline-chart.md)
+-   [Stacked Chart](stacked-chart.md)
 
 ## API Members
 

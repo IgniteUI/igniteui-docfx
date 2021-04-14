@@ -26,16 +26,16 @@ SignalR はいくつかの転送を利用し、クライアントとサーバー
 <img style="-webkit-box-shadow: 8px 9px 9px 5px #ccc; -moz-box-shadow: 8px 9px 9px 5px #ccc; box-shadow: 8px 9px 9px 5px #ccc; min-width: calc(100% - 950px); max-width: calc(100% - 400px);"
   src="../../../images/general/how-to/ws-party-1.jpg"
   data-src="../../../images/general/how-to/ws-party-1.jpg"
-  alt="パーティの仕方"
-  title="How to party" />
+  alt="ASP.NET CoreSignalR を使用したリアルタイム Web アプリ"
+  title="Real-time Web App with ASP.NET Core SignalR" />
 
 それはハンドシェイクのようなもので、クライアントとサーバーは何を使用するかについて合意します。これは**プロセス ネゴシエーション**と呼ばれます。
 
 <img style="-webkit-box-shadow: 8px 9px 9px 5px #ccc; -moz-box-shadow: 8px 9px 9px 5px #ccc; box-shadow: 8px 9px 9px 5px #ccc; min-width: calc(100% - 650px); max-width: calc(100% - 400px);"
   src="../../../images/general/how-to/ws-lets-party.jpg"
   data-src="../../../images/general/how-to/ws-lets-party.jpg"
-  alt="WebSocket を使用しましょう"
-  title="Let's use WebSocket" />
+  alt="Web Sockets を備えたリアルタイム Web アプリ"
+  title="Real-time Web App with Web Sockets" />
 
 ## SignalR の例
 このデモの目的は、[ASP.NET Core SignalR](https://dotnet.microsoft.com/apps/aspnet/signalr) を使用してリアルタイム データ ストリームを表示する財務用スクリーン ボードを紹介することです。
@@ -54,8 +54,8 @@ Visual Studio の **[ファイル]** >> **[新規作成]** >> **[プロジェク
 <img style="-webkit-box-shadow: 8px 9px 9px 5px #ccc; -moz-box-shadow: 8px 9px 9px 5px #ccc; box-shadow: 8px 9px 9px 5px #ccc; min-width: calc(100% - 650px); max-width: calc(100% - 400px);"
   src="../../../images/general/how-to/create-new-project.jpg"
   data-src="../../../images/general/how-to/create-new-project.jpg"
-  alt="新しい asp.net core プロジェクトの作成"
-  title="Create new asp.net core project" />
+  alt="ASP.NET Core アプリプロジェクトを作成する"
+  title="Create ASP.NET Core App project" />
 
 
 ### SignalR 構成のセットアップ
@@ -128,8 +128,8 @@ SignalR ハブ API を使用すると、サーバーから接続されたクラ�
 <img style="-webkit-box-shadow: 8px 9px 9px 5px #ccc; -moz-box-shadow: 8px 9px 9px 5px #ccc; box-shadow: 8px 9px 9px 5px #ccc; min-width: calc(100% - 650px); max-width: calc(100% - 400px);"
   src="../../../images/general/how-to/ws-hub-callers.jpg"
   data-src="../../../images/general/how-to/ws-hub-callers.jpg"
-  alt="呼び出し元とのハブの例"
-  title="Hub example with callers" />
+  alt="呼び出し元との SignalR ハブのセットアップ"
+  title="SignalR Hub Setup with callers" />
 
 接続、グループ、およびメッセージの管理を担当する基本 Hub クラスを継承する [StreamHub クラス](https://github.com/IgniteUI/finjs-web-api/blob/d493f159e0a6f14b5ffea3e893f543f057fdc92a/WebAPI/Models/StreamHub.cs#L9)を作成しました。Hub クラスはステートレスであり、特定のメソッドの新しい呼び出しはそれぞれ、このクラスの新しいインスタンスにあることに注意してください。インスタンス プロパティに状態を保存することは無意味です。代わりに、静的プロパティを使用することをお勧めします。この場合、静的キー値ペアのコレクションを使用して、接続されている各クライアントのデータを保存します。 
 

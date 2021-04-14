@@ -7,7 +7,7 @@ mentionedTypes: ["XamDataChart"]
 
 # Angular Gantt Chart
 
-Angular Gantt Chart is a type of bar chart, that visualizes various categories into time series. Gantt charts illustrate the start and finish time in time period blocks. It is often used in project management as one of the most popular and useful ways of showing activities (tasks or events) displayed against time. On the left of the chart is a list of the activities and along the top is a suitable time scale. Each activity is represented by a bar; the position and length of the bar reflects the start date, duration and end date of the activity.
+The Ignite UI for Angular Gantt Chart is a type of bar chart, that visualizes various categories into time series. Gantt charts illustrate the start and finish time in time period blocks. It is often used in project management as one of the most popular and useful ways of showing activities (tasks or events) displayed against time. On the left of the chart is a list of the activities and along the top is a suitable time scale. Each activity is represented by a bar; the position and length of the bar reflects the start date, duration and end date of the activity.
 
 ## Angular Gantt Chart Example
 
