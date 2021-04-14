@@ -375,7 +375,7 @@ Ignite UI for Angular のデータ グリッドは、大量のリアルタイム
     <li>[列移動](grid/column-moving.md)</li>
     <li>[セルのコピーおよび貼り付け](grid/clipboard-interactions.md)</li>
     <li>[セルのスタイル設定](grid/conditional-cell-styling.md)</li>
-    <li>[リアルタイム/ライブ データのテーマ化](grid/live-data.md)</li>
+    <li>[リアルタイム/ライブ データのテーマ](grid/live-data.md)</li>
     <li>[カスタム ツールバー](grid/toolbar.md)</li>
     <li>[グリッド ページング](grid/paging.md)</li>
     <li>[行選択](grid/selection.md)</li>

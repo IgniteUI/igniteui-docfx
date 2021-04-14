@@ -441,7 +441,7 @@ $dark-button: igx-button-theme(
 
 この例では、入力グループとボタンのパラメーターの一部のみを変更しましたが、[`igx-input-group-theme`]({environment:sassApiUrl}/index.html#function-igx-input-group-theme) と [`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) は、それぞれのスタイルを制御するためのより多くのパラメーターを提供します。
 
-最後の手順は、それぞれのテーマを持つコンポーネント mixins を**含める**ことです。また、入力のプレース ホルダーの色プロパティを設定します。
+最後の手順は、それぞれのテーマを持つコンポーネント ミックスインを**含める**ことです。また、入力のプレース ホルダーの色プロパティを設定します。
 
 ```scss
 @include igx-grid($custom-grid);
@@ -456,7 +456,7 @@ $dark-button: igx-button-theme(
 ```
 
 >[!NOTE]
->`.igx-grid__filtering-row` 内で **igx-button** および **igx-input-group** mixins をスコープし、行フィルター ボタンとその入力グループのみのスタイルを設定します。そうでない場合は、グリッド内の他のボタンと入力グループも影響を受けます。
+>`.igx-grid__filtering-row` 内で **igx-button** および **igx-input-group** ミックスインをスコープし、行フィルター ボタンとその入力グループのみのスタイルを設定します。そうでない場合は、グリッド内の他のボタンと入力グループも影響を受けます。
 
  >[!NOTE]
  >コンポーネントが [`Emulated`](../themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。

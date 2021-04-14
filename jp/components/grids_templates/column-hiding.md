@@ -460,7 +460,7 @@ export class AppModule {}
 
 ## スタイル設定
 
-列操作コンポーネントのスタイル設定を開始するには、すべてのテーマ関数とコンポーネント mixins が存在するインデックス ファイルをインポートする必要があります。
+列操作コンポーネントのスタイル設定を開始するには、すべてのテーマ関数とコンポーネント ミックスインが存在するインデックス ファイルをインポートする必要があります。
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
@@ -483,7 +483,7 @@ $custom-button: igx-button-theme($flat-text-color: gold, $disabled-color: black)
 
 この例では、フラットボタンのテキストの色とボタンの無効な色のみを変更しましたが、[`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) の方がより多くの方法を提供します。ボタンのスタイルを制御するパラメーター。
 
-最後にそれぞれのテーマを持つコンポーネント mixins を**含める**ことです。 
+最後にそれぞれのテーマを持つコンポーネント ミックスインを**含める**ことです。 
 
 ```scss
 @include igx-column-actions($custom-column-actions-theme);
