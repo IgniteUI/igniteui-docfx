@@ -11,7 +11,7 @@ The Ignite UI for Angular Column Char, Column Graph, or Vertical Bar Chart is am
 
 ## Angular Column Chart Example
 
-The Ignite UI for Angular Category Column Chart groups data items from multiple data sources into categories and renders them as vertical columns or rectangles. Values are represented on the Y-Axis and categories are displayed on the X-Axis.
+The Angular Category Column Chart groups data items from multiple data sources into categories and renders them as vertical columns or rectangles. Values are represented on the Y-Axis and categories are displayed on the X-Axis.
 
 You can create this type of chart in the [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html) control by binding your data and setting [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#charttype) to Column enum, as shown in the example below:
 
@@ -139,7 +139,7 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
 
 ## Angular Range Column Chart
 
-The Ignite UI for Angular Range Column Chart belongs to a group of range charts and is rendered using vertical rectangles that can appear in the middle of the plot area of the chart, rather than stretching from the bottom like the traditional [Category Column Chart](column-chart.md#angular-column-chart-example). This type of series emphasizes the amount of change between low values and high values in the same data point over a period of time or compares multiple items. Range values are represented on the Y-Axis and categories are displayed on the X-Axis.
+The Angular Range Column Chart belongs to a group of range charts and is rendered using vertical rectangles that can appear in the middle of the plot area of the chart, rather than stretching from the bottom like the traditional [Category Column Chart](column-chart.md#angular-column-chart-example). This type of series emphasizes the amount of change between low values and high values in the same data point over a period of time or compares multiple items. Range values are represented on the Y-Axis and categories are displayed on the X-Axis.
 
 The Range Column Chart is identical to the [Range Area Chart](area-chart.md)(area-chart.md#Angular-Range-Area-chart) in all aspects except that the ranges are represented as a set of vertical columns rather than a filled area.
 

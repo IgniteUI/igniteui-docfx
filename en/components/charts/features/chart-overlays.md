@@ -8,7 +8,7 @@ namespace: Infragistics.Controls.Charts
 
 # Angular Chart Overlays
 
-The Ignite UI for Angular data chart allows for placement of horizontal or vertical lines at a single numeric value that you define through usage of the [`IgxValueOverlayComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxvalueoverlaycomponent.html). This can help you to visualize data such as the mean or median of a particular series.
+The Angular [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) allows for placement of horizontal or vertical lines at a single numeric value that you define through usage of the [`IgxValueOverlayComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxvalueoverlaycomponent.html). This can help you to visualize data such as the mean or median of a particular series.
 
 ## Angular Value Overlay Example
 
@@ -37,7 +37,7 @@ It is also possible to show an axis annotation on a [`IgxValueOverlayComponent`]
 
 ## Angular Financial Overlays
 
-You can also plot built-in financial overlays and indicators in Ignite UI for Angular [Stock Chart](../types/stock-chart.md).
+You can also plot built-in financial overlays and indicators in Angular [Stock Chart](../types/stock-chart.md).
 
 ## Additional Resources
 
