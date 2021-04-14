@@ -51,7 +51,7 @@ If you need to plot data sources with large number of data points (e.g. 10,000+)
 
 ### Data Structure
 
-Although Angular charts support rendering of multiple data sources by binding array of arrays of data points to `ItemsSource` property. It is much faster for charts if multiple data sources are flatten into single data source where each data item contains multiple data columns rather just one data column. For example:
+Although Angular charts support rendering of multiple data sources by binding array of arrays of data points to `DataSource` property. It is much faster for charts if multiple data sources are flatten into single data source where each data item contains multiple data columns rather just one data column. For example:
 
 ```ts
 this.CategoryChart.dataSource = FlattenDataSource.create();

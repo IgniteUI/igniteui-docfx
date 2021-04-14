@@ -9,7 +9,7 @@ mentionedTypes: ["CategoryChart"]
 
 In all Ignite UI for Angular charts, the axes provide properties for visual configurations such as titles, labels, and ranges. These features are demonstrated in the examples provided below.
 
-## Axis Titles Example
+## Angular Axis Titles
 
 The axis titles feature of the Angular charts, allows you to add contextual information to the your chart. You can customize the look and feel of the axis titles in many different ways such as applying different font styles, colors, margins, and alignments.
 
@@ -22,9 +22,9 @@ The axis titles feature of the Angular charts, allows you to add contextual info
 
 <div class="divider--half"></div>
 
-## Axis Labels Example
+## Angular Axis Labels
 
-The Ignite UI for Angular charts allows you full control over configuring, formatting, and styling the font of the labels displayed on an axis in your chart. You can change the rotation angle, margin, horizontal and vertical alignment, color, padding, and visibility of axis labels.
+The Angular Charts allows you full control over configuring, formatting, and styling the font of the labels displayed on an axis in your chart. You can change the rotation angle, margin, horizontal and vertical alignment, color, padding, and visibility of axis labels.
 
 <code-view style="height: 450px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
@@ -35,7 +35,7 @@ The Ignite UI for Angular charts allows you full control over configuring, forma
 
 <div class="divider--half"></div>
 
-## Axis Range Example
+## Angular Axis Range
 
 In the Angular charts, you can define a range minimum and range maximum value of a numeric or time axis. The range minimum is the lowest value of the axis and the range maximum is the highest value of the axis. These are set by setting the [`yAxisMinimumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#yaxisminimumvalue) and [`yAxisMaximumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#yaxismaximumvalue) options.
 
@@ -51,7 +51,7 @@ By default, the Angular charts will calculate the minimum and maximum values for
 <div class="divider--half"></div>
 
 <!--
-## Axis Scale Example
+## Angular Axis Scale
 
 TODO add info/example of financial chart with  YAxisMode and YAxisIsLogarithm
 

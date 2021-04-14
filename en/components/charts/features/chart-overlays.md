@@ -8,7 +8,7 @@ namespace: Infragistics.Controls.Charts
 
 # Angular Chart Overlays
 
-The Ignite UI for Angular data chart allows for placement of horizontal or vertical lines at a single numeric value that you define through usage of the [`IgxValueOverlayComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxvalueoverlaycomponent.html). This can help you to visualize data such as the mean or median of a particular series.
+The Angular [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) allows for placement of horizontal or vertical lines at a single numeric value that you define through usage of the [`IgxValueOverlayComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxvalueoverlaycomponent.html). This can help you to visualize data such as the mean or median of a particular series.
 
 ## Angular Value Overlay Example
 
@@ -25,7 +25,7 @@ The following example depicts a [Column Chart](../types/column-chart.md) with a 
 
 ## Angular Value Overlay Properties
 
-Unlike other series types that use a `ItemsSource` for data binding, the value overlay uses a `ValueMemberPath` property to bind a single numeric value. In addition, the value overlay requires you to define a single [`axis`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxvalueoverlaycomponent.html#axis) to use. If you use an X-axis, the value overlay will be a vertical line, and if you use a Y-axis, it will be a horizontal line.
+Unlike other series types that use a `DataSource` for data binding, the value overlay uses a `ValueMemberPath` property to bind a single numeric value. In addition, the value overlay requires you to define a single [`axis`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxvalueoverlaycomponent.html#axis) to use. If you use an X-axis, the value overlay will be a vertical line, and if you use a Y-axis, it will be a horizontal line.
 
 When using a numeric X or Y axis, the `ValueMemberPath` property should reflect the actual numeric value on the axis where you want the value overlay to be drawn. When using a category X or Y axis, the `ValueMemberPath` should reflect the index of the category at which you want the value overlay to appear.
 
@@ -37,7 +37,7 @@ It is also possible to show an axis annotation on a [`IgxValueOverlayComponent`]
 
 ## Angular Financial Overlays
 
-You can also plot built-in financial overlays and indicators in Ignite UI for Angular [Stock Chart](../types/stock-chart.md).
+You can also plot built-in financial overlays and indicators in Angular [Stock Chart](../types/stock-chart.md).
 
 ## Additional Resources
 
@@ -53,7 +53,7 @@ You can find more information about related chart types in these topics:
 The following is a list of API members mentioned in the above sections:
 
 -   [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html)
--   `ItemsSource`
+-   `DataSource`
 -   [`IgxValueOverlayComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxvalueoverlaycomponent.html)
 -   [`axis`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxvalueoverlaycomponent.html#axis)
 -   [`brush`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriescomponent.html#brush)
