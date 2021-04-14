@@ -8,7 +8,7 @@ _keywords: Angular Charts, Chart, Infragistics
 
 Ignite UI for Angular Charts & Graphs is an extensive library of data visualizations that enable stunning, interactive charts and dashboards for your web and mobile apps. Built for speed and beauty, designed to work on every modern browser, and with complete touch and interactivity, you can quickly and easily build responsive visuals into your next app on any device.
 
-The Angular Charts support over 65 types of series and combinations that let you visualize any type of data, including Category Series, Financial Series, Polar Series, Radial Series, Range Series, Scatter Series, Shape Series, and Geospatial Series. No matter the type of comparison you are doing, or what type of data story you are trying to tell, you can represent your data in any of these ways:
+The Ignite UI for Angular Charts support over 65 types of series and combinations that let you visualize any type of data, including Category Series, Financial Series, Polar Series, Radial Series, Range Series, Scatter Series, Shape Series, and Geospatial Series. No matter the type of comparison you are doing, or what type of data story you are trying to tell, you can represent your data in any of these ways:
 
 -   Change Over Time
 -   Comparison
@@ -234,7 +234,7 @@ A Time-Series Chart, or Timeline Graph, is a visualization that treats the data 
 
 ### Angular Treemap
 
-The Angular Treemap displays hierarchical (tree-structured) data as a set of nested nodes. Each branch of the tree is given a treemap node, which is then tiled with smaller nodes representing sub-branches. Each node's rectangle has an area proportional to a specified dimension on the data. Often the nodes are colored to show a separate dimension of the data. Learn more about our [treemaps](../treemap-overview.md).
+The Ignite UI for Angular Treemap displays hierarchical (tree-structured) data as a set of nested nodes. Each branch of the tree is given a treemap node, which is then tiled with smaller nodes representing sub-branches. Each node's rectangle has an area proportional to a specified dimension on the data. Often the nodes are colored to show a separate dimension of the data. Learn more about our [treemaps](../treemap-overview.md).
 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
