@@ -157,7 +157,7 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
     | Bootstrap | $bootstrap-typeface | $bootstrap-type-scale |
     | Indigo | $indigo-typeface | $indigo-type-scale |
 
-### **IgxBottomNav** and **IgxTabs** components
+### IgxBottomNav and IgxTabs components
 The two components were completely refactored in order to provide more flexible and descriptive way to define tab headers and contents. It is recommended that you update via **ng update** in order to migrate the existing **igx-tabs** and **igx-bottom-nav** definitions to the new ones.
 
 * [**IgxBottomNavComponent**]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html)
