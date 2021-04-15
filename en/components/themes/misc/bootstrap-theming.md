@@ -174,9 +174,7 @@ Ignite UI for Angular comes with predefined themes inspired by the [Bootstrap 4]
 
 The background color for our application needs to be set explicitly on the host element. In our sample, we want to use the `surface` color of the passed palette.
 
-At this point we have to modify the Bootstrap `$theme-colors` map with the Sass variables we created earlier.
-
-Lastly, we need to import the Bootstrap library - *always import it at the end!*
+At this point we have to modify the Bootstrap `$theme-colors` map with the Sass variables we created earlier:
 
 ```scss
 // Make sure you always include the igx-core mixin first
@@ -199,10 +197,6 @@ Lastly, we need to import the Bootstrap library - *always import it at the end!*
                 "warning": $light-warning,
                 "danger": $light-danger
             );
-
-            // Importing Bootstrap .scss file
-            // Make sure you always import it last
-            @import "~bootstrap/scss/bootstrap";
         }
     }
 }
@@ -242,6 +236,16 @@ All components in Ignite UI for Angular use colors from the passed palette, ther
             // Applying our custom dark palette 
             @include igx-bootstrap-dark-theme($custom-dark-palette);
 
+            // Overriding bootstrap button colors with colors from the custom dark palette
+            .igx-card-actions .btn-primary {
+                background-color: $dark-primary;
+                border-color: $dark-primary;
+
+                &:hover {
+                    background-color: igx-color($custom-dark-palette, 'primary', 600);
+                }
+            }
+
             // Overriding ngb-accordion colors with colors from the custom dark palette
             .accordion {
                 .card-header {
@@ -274,10 +278,19 @@ All components in Ignite UI for Angular use colors from the passed palette, ther
                 "primary": $dark-primary,
                 "secondary": $dark-secondary
             );
-
-            // Importing Bootstrap .scss file
-            @import "~bootstrap/scss/bootstrap";
         }
+    }
+}
+```
+
+Lastly, we need to import the Bootstrap library - *always import it at the end!*
+
+```scss
+:host {
+    ::ng-deep {
+        // Importing Bootstrap .scss file
+        // Make sure you always import it last
+        @import "~bootstrap/scss/bootstrap";
     }
 }
 ```
