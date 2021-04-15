@@ -74,15 +74,15 @@ Follow our [`Getting Started`](../../general/getting-started.md) topic for a com
 
 ## Components
 
-Let's see how our demo sample is done. It is a mixture of Ignite UI and NG Bootstrap components, styled to fit nicely in one application. The navigation in our example is created using the bootstrap `navbar` together with igx `buttons` and `avatar`. The `dropdown` under the Campaigns button is also taken from the bootstrap library. Below the nav, we are using the `igx-card` component to display some statistics. Within the cards, we have placed multiple items - igx `avatars` and `icons` as well as bootstrap `buttons` and `ngb-ratings`. 
+Let's see how our demo sample is done. It is a mixture of Ignite UI and NG Bootstrap components, styled to fit nicely in one application. The navigation in our example is created using the bootstrap [`navbar`](https://getbootstrap.com/docs/4.0/components/navbar/) together with [`igx-buttons`]({environment:angularApiUrl}/classes/igxbuttondirective.html) and [`igx-avatar`]({environment:angularApiUrl}/classes/igxavatarcomponent.html). The [`dropdown`](https://ng-bootstrap.github.io/#/components/dropdown/examples) under the Campaigns button is also taken from the bootstrap library. Below the nav, we are using the [`igx-card`]({environment:angularApiUrl}/classes/igxcardcomponent.html) component to display some statistics. Within the cards, we have placed multiple items - [`igx-avatars`]({environment:angularApiUrl}/classes/igxavatarcomponent.html) and [`igx-icons`]({environment:angularApiUrl}/classes/igxiconcomponent.html) as well as bootstrap [`buttons`](https://getbootstrap.com/docs/4.0/components/buttons/) and [`ngb-ratings`](https://ng-bootstrap.github.io/#/components/rating/examples). 
 
 <img src="../../../images/igx-cards.png" width="100%">
 
-Clicking on the `More` buttons, you will see the `igx-dialog`:
+Clicking on the `More` buttons, you will see the [`igx-dialog`]({environment:angularApiUrl}/classes/igxdialogcomponent.html):
 
 <img src="../../../images/igx-dialog.png" width="100%">
 
-Next, we have added an `ngb-accordion` showing information about credit cards. Inside its content, there is an `igx-list` and `igx-button`.
+Next, we have added an [`ngb-accordion`](https://ng-bootstrap.github.io/#/components/accordion/examples) showing information about credit cards. Inside its content, there is an [`igx-list`]({environment:angularApiUrl}/classes/igxlistcomponent.html) and `igx-button`.
 
 <img src="../../../images/ngb-accordion.png" width="100%">
 
@@ -100,9 +100,9 @@ To get started with styling components using the Ignite UI theming engine, creat
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-### Colors
+### Palettes
 
-The Bootstrap library makes use of a sass map called `$theme-colors` to provide a palette composed of eight colors:
+The Bootstrap library makes use of a sass map called [`$theme-colors`](https://getbootstrap.com/docs/4.0/getting-started/theming/#theme-colors) to provide a palette composed of eight colors:
 
 ```scss
 $theme-colors: (
@@ -117,7 +117,7 @@ $theme-colors: (
 );
 ```
 
-On the other hand, the Ignite UI `igx-palette` function generates a color palette map including `primary`, `secondary`, `grays`, `info`, `success`, `warn`, and `error` colors and their 74 color variants. Our predefined bootstrap palette in turn consists of seven colors: 
+On the other hand, the Ignite UI [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) function generates a color palette map including `primary`, `secondary`, `grays`, `info`, `success`, `warn`, and `error` colors and their 74 color variants. Our predefined bootstrap palette in turn consists of seven colors: 
 
 ```scss
 $bootstrap-palette: igx-palette(
@@ -133,7 +133,7 @@ $bootstrap-palette: igx-palette(
 
 As you can see most of the colors in their palette overlap the colors in the palettes of Ignite UI. Thus, we can simply map the Bootstrap theme colors with our light or dark bootstrap palette colors. 
 
-First, we are going to define Sass variables for the `$light-bootstrap-palette` colors:
+First, we are going to define Sass variables for the [`$light-bootstrap-palette`]({environment:sassApiUrl}/index.html#variable-light-bootstrap-palette) colors:
 
 ```scss
 // Colors from the Ignite UI light bootstrap color palette
@@ -164,7 +164,7 @@ $dark-secondary: igx-color($custom-dark-palette, "secondary");
 >[!NOTE]
 >Visit our [`palettes with sass`](../sass/palettes.md) section to discover more about the palettes provided by Ignite UI for Angular and learn how to create a new one.
 
-### Color mode
+### Themes
 
 In order to switch between `light` and `dark` mode, we are adding a custom class to the `host` element which will be changed on button click event. In our stylesheet file, we are going to include different color palettes according to that class.
 
@@ -284,11 +284,38 @@ All the colors in the Ignite UI components come from the passed palette, therefo
 Once we are done with modifying the `$theme-colors` map, the bootstrap components will already use the colors from the igx `$light-bootstrap-palette` for the light mode, and `$custom-dark-palette` for the dark one.
 
 >[!WARNING]
->Be sure to place the above code inside the `::ng-deep` selector to `penetrate` the [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation.
+>Be sure to place the above code inside the `::ng-deep` selector to `penetrate` the [`Emulated`](../sass/component-themes.md#view-encapsulation) ViewEncapsulation.
+
+
+### Generate class
+
+The bootstrap `navbar` uses CSS classes for its background color. In our sample, we want that color to change according to the selected theme, hence we are going to use the `igx-color-classes` mixin. It will generate CSS class names for all colors for a given property and color palette, with optional prefix and suffix attached to the class name. For the demo, we will include the mixin twice - once for the light mode with the respective `$light-bootstrap-palette` as a first value and second time for the dark mode with the `$custom-dark-palette`:
+
+```scss
+:host {
+    &.light {
+        @include igx-color-classes(
+            $palette: $light-bootstrap-palette,
+            $prop: 'background',
+            $prefix: 'bg'
+        );
+    }
+
+    &.dark {
+        @include igx-color-classes(
+            $palette: $custom-dark-palette,
+            $prop: 'background',
+            $prefix: 'bg'
+        );
+    }
+}
+```
+
+Then, add a CSS class to your navbar component following the pattern "bg - color from the palette - color variant". In our sample app, we are using `bg-grays-200`.
 
 ### Typography
 
-Ignite UI exposes `type-scale` and `typeface` variables for each of its themes, which can be used inside the `igx-typography` mixin to define the global typography styles for an application. In our example, we are going to apply the bootstrap predifined styles but you can create your custom ones if you wish. 
+Ignite UI for Angular exposes four default type scales for each of its themes, which can be used inside the [`igx-typography`]({environment:sassApiUrl}/index.html#mixin-igx-typography) mixin to define the global typography styles for an application. In our example, we are going to apply the bootstrap predifined `typeface` and `type-scale` but you can create your custom ones if you wish. 
 
 ```scss
 :host {
@@ -299,16 +326,23 @@ Ignite UI exposes `type-scale` and `typeface` variables for each of its themes, 
 ## API References
 <div class="divider--half"></div>
 
-* [IgxAvatarComponent]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
-* [IgxButtonComponent]({environment:angularApiUrl}/classes/igxbuttoncomponent.html)
-* [IgxDialogComponent]({environment:angularApiUrl}/classes/igxdialogcomponent.html)
-* [IgxListComponent]({environment:angularApiUrl}/classes/igxlistcomponent.html)
+* [Light Bootstrap Palette]({environment:sassApiUrl}/index.html#variable-light-bootstrap-palette)
+* [Dark Bootstrap Palette]({environment:sassApiUrl}/index.html#variable-dark-bootstrap-palette)
+* [Light Bootstrap Theme]({environment:sassApiUrl}/index.html#mixin-igx-bootstrap-light-theme)
+* [Dark Bootstrap Theme]({environment:sassApiUrl}/index.html#mixin-igx-bootstrap-dark-theme)
+* [Palette Function]({environment:sassApiUrl}/index.html#function-igx-palette)
+* [Typography Mixin]({environment:sassApiUrl}/index.html#mixin-igx-typography)
 
 Related topics: 
 
-* [Component Themes](../component-themes.md)
 * [Palettes](../sass/palettes.md)
+* [Component Themes](../sass/component-themes.md)
 * [Typography](../sass/typography.md)
+* [Avatar Component](../../avatar.md)
+* [Button Component](../../button.md)
+* [Dialog Component](../../dialog.md)
+* [Icon Component](../../icon.md)
+* [List Component](../../list.md)
 
 ## Additional Resources
 <div class="divider--half"></div>
