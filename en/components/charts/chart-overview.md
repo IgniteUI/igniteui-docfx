@@ -8,7 +8,7 @@ _keywords: Angular Charts, Chart, Infragistics
 
 Ignite UI for Angular Charts & Graphs is an extensive library of data visualizations that enable stunning, interactive charts and dashboards for your web and mobile apps. Built for speed and beauty, designed to work on every modern browser, and with complete touch and interactivity, you can quickly and easily build responsive visuals into your next app on any device.
 
-The Angular charting component supports over 65 types of series and combinations that let you visualize any type of data, including Category Series, Financial Series, Polar Series, Radial Series, Range Series, Scatter Series, Shape Series, and Geospatial Series. No matter the type of comparison you are doing, or what type of data story you are trying to tell, you can represent your data in any of these ways:
+The Ignite UI for Angular Charts support over 65 types of series and combinations that let you visualize any type of data, including Category Series, Financial Series, Polar Series, Radial Series, Range Series, Scatter Series, Shape Series, and Geospatial Series. No matter the type of comparison you are doing, or what type of data story you are trying to tell, you can represent your data in any of these ways:
 
 -   Change Over Time
 -   Comparison
@@ -218,7 +218,7 @@ The Angular Spline Chart, or Spline Graph is a type of category line graph shows
 
 ### Angular Step Chart
 
-A Step Line Chart, or Step Line Graph, is a category charts that renders a collection of data points connected by continuous vertical and horizontal lines forming a step-like progression. Values are represented on the Y-Axis (left labels) and categories are displayed on the X-Axis (bottom labels). The Angular Step Line chart emphasizes the amount of change over a period of time or compares multiple items. The Angular Step Line chart is identical to the Angular step area chart in all aspects except that the area below the step lines is not filled in. Learn more about our [step chart](types/step-chart.md)
+The Angular Step Chart, or Step Graph, is a category charts that renders a collection of data points connected by continuous vertical and horizontal lines forming a step-like progression. Values are represented on the Y-Axis (left labels) and categories are displayed on the X-Axis (bottom labels). The Angular Step Line chart emphasizes the amount of change over a period of time or compares multiple items. The Angular Step Line chart is identical to the Angular Step Area Chart in all aspects except that the area below the step lines is not filled in. Learn more about our [step chart](types/step-chart.md)
 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
@@ -234,7 +234,7 @@ A Time-Series Chart, or Timeline Graph, is a visualization that treats the data 
 
 ### Angular Treemap
 
-The Ignite UI for Angular Treemap chart displays hierarchical (tree-structured) data as a set of nested nodes. Each branch of the tree is given a treemap node, which is then tiled with smaller nodes representing sub-branches. Each node's rectangle has an area proportional to a specified dimension on the data. Often the nodes are colored to show a separate dimension of the data. Learn more about our [treemaps](../treemap-overview.md).
+The Ignite UI for Angular Treemap displays hierarchical (tree-structured) data as a set of nested nodes. Each branch of the tree is given a treemap node, which is then tiled with smaller nodes representing sub-branches. Each node's rectangle has an area proportional to a specified dimension on the data. Often the nodes are colored to show a separate dimension of the data. Learn more about our [treemaps](../treemap-overview.md).
 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
@@ -300,12 +300,12 @@ Use one of 10 [Marker Types](features/chart-markers.md) or create your own [Mark
 If you are considering any other Angular Charts on the market, here are a few things to think about:
 
 -   We include over 65 Angular chart types and combination charts, with the simplest configuration on the market with our smart data adapter.
--   Our chart components are optimized on all platforms including Angular, Blazor, jQuery / JavaScript, React, UNO, UWP, WPF, Windows Forms, WebComponents, WinUI, and Xamarin. They support the same API and same features on every platform.
+-   Our charts are optimized on all platforms including Angular, Blazor, jQuery / JavaScript, React, UNO, UWP, WPF, Windows Forms, WebComponents, WinUI, and Xamarin. They support the same API and same features on every platform.
 -   Our stock chart and financial charting gives you everything you need for a Yahoo Finance or Google Finance-like experience – all with a single line of code.
 -   We test against everyone elses performance. Everyone says they are fast and can handle lots of data, but we can prove it. See for yourself how we handle high-volume data and real-time data streaming.
 -   We are here 24x5. Infragistics has global support that is always online. For North America, Asia Pacific, Middle East, and Europe, we are on the clock when you are!
--   We have many more UI controls and components in Angular besides the Charts. We offer a complete Angular solution to build your applications!
+-   We have many more UI controls in Angular besides the Charts. We offer a complete Angular solution to build your applications!
     <!-- Angular -->
 -   Ignite UI for Angular is built on Angular for the Angular developer, with zero 3rd party dependencies. We are 100% optimized for Angular.
--   We offer the world’s first, and only, end-to-end comprehensive design to code platform for UX Designers, Visual Designers, and Developers that will generate pixel-perfect Angular components from Sketch designs. With Indigo.Design, everything you craft in Sketch from our Indigo Design System matches to our Ignite UI for Angular components.
+-   We offer the world’s first, and only, end-to-end comprehensive design to code platform for UX Designers, Visual Designers, and Developers that will generate pixel-perfect Angular controls from Sketch designs. With Indigo.Design, everything you craft in Sketch from our Indigo Design System matches to our Ignite UI for Angular controls.
     <!-- end: Angular -->

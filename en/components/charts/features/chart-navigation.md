@@ -7,7 +7,7 @@ mentionedTypes: ["XamDataChart", "CategoryChart", "FinancialChart", "ModifierKey
 
 # Angular Chart Navigation
 
-The $PlatformName$ chart component allows for interactive panning and zooming via the mouse, keyboard and touch.
+The $PlatformName$ charts allows for interactive panning and zooming via the mouse, keyboard and touch.
 
 ## Angular Chart Navigation Example
 

@@ -2,7 +2,7 @@
 title: Angular Bubble Chart | Data Visualization | Infragistics
 _description: Infragistics' Angular Bubble Chart
 _keywords: Angular Charts, Bubble Chart, Infragistics
-mentionedTypes: ["XamDataChart", "BubbleSeries", "ScatterSeries"]
+mentionedTypes: ["Series", "BubbleSeries", "ScatterSeries"]
 ---
 
 # Angular Bubble Chart
@@ -23,7 +23,7 @@ You can create the Bubble Chart in [`IgxDataChartComponent`]({environment:dvApiB
 
 ## Angular Bubble Chart with Single Series
 
-You can bind your data to `ItemsSource` property of [`IgxBubbleSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbubbleseriescomponent.html) and map data columns using its [`xMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterbasecomponent.html#xmemberpath), [`yMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterbasecomponent.html#ymemberpath), [`radiusMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbubbleseriescomponent.html#radiusmemberpath) properties, as shown in the example below:
+You can bind your data to `DataSource` property of [`IgxBubbleSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbubbleseriescomponent.html) and map data columns using its [`xMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterbasecomponent.html#xmemberpath), [`yMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterbasecomponent.html#ymemberpath), [`radiusMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbubbleseriescomponent.html#radiusmemberpath) properties, as shown in the example below:
 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
@@ -35,7 +35,7 @@ You can bind your data to `ItemsSource` property of [`IgxBubbleSeriesComponent`]
 
 ## Angular Bubble Chart with Multiple Series
 
-In Angular Bubble Chart, binding multiple data sources works by setting each new data source to `ItemsSource` property of a additional [`IgxBubbleSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbubbleseriescomponent.html), as shown in the example below:
+In Angular Bubble Chart, binding multiple data sources works by setting each new data source to `DataSource` property of a additional [`IgxBubbleSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbubbleseriescomponent.html), as shown in the example below:
 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
@@ -69,7 +69,7 @@ The following table lists API members mentioned in the above sections:
 -   [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html)
 -   [`IgxBubbleSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbubbleseriescomponent.html)
 -   [`IgxScatterSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterseriescomponent.html)
--   `ItemsSource`
+-   `DataSource`
 -   [`fillMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbubbleseriescomponent.html#fillmemberpath)
 -   [`fillScale`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbubbleseriescomponent.html#fillscale)
 -   [`markerType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxmarkerseriescomponent.html#markertype)

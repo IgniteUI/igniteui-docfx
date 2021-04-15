@@ -7,9 +7,9 @@ mentionedTypes: []
 
 # Angular Chart Features
 
-The Ignite UI for Angular chart component allows you to display many different features to portray the full data story to be told with your chart. Each of these features are fully customizable, and can be styled to suit your design needs - allowing you full control. Interactions such as highlighting and annotations allow you to call out important data details allowing for a deeper data analysis within your chart.
+The Ignite UI for Angular Charts allow you to display many different features to portray the full data story to be told with your chart. Each of these features are fully customizable, and can be styled to suit your design needs - allowing you full control. Interactions such as highlighting and annotations allow you to call out important data details allowing for a deeper data analysis within your chart.
 
-The Angular chart offers the following chart features:
+The Angular Charts offer the following chart features:
 
 ### Axis
 
