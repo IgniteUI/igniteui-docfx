@@ -45,11 +45,11 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 )}
 ```
 
-At this point your applications is ready to use the NG Bootstrap components. You can find more information about using Bootstrap library at their [`official documentation`](https://ng-bootstrap.github.io/#/getting-started).
+At this point your applications is ready to use the NG Bootstrap components. You can find more information about using the Bootstrap library at their [`official documentation`](https://ng-bootstrap.github.io/#/getting-started).
 
 ### Add Ignite UI for Angular 
 
-To install the Ignite UI for Angular package, along with all of its dependencies, font imports and styles references to your project, run the following command: 
+To install the Ignite UI for Angular package along with all of its dependencies, font imports, and styles references, run the following command in your project:
 
 ```cmd
 ng add igniteui-angular
@@ -86,7 +86,7 @@ Next, we have added an [`ngb-accordion`](https://ng-bootstrap.github.io/#/compon
 
 <img src="../../../images/ngb-accordion.png" width="100%">
 
-Finally, we inserted an igx `icon button` in the top right corner, that changes the color palette for the whole app: 
+Finally, we inserted an Ignite UI for Angular `icon button` in the top right corner, that changes the theme of the whole app:  
 
 <img src="../../../images/dark-variant.png" width="100%">
 
@@ -102,7 +102,7 @@ To get started with styling components using the Ignite UI theming engine, creat
 
 ### Palettes
 
-The Bootstrap library makes use of a sass map called [`$theme-colors`](https://getbootstrap.com/docs/4.0/getting-started/theming/#theme-colors) to provide a palette composed of eight colors:
+The Bootstrap library makes use of a Sass map called [`$theme-colors`](https://getbootstrap.com/docs/4.0/getting-started/theming/#theme-colors) to provide a palette composed of eight colors:
 
 ```scss
 $theme-colors: (
@@ -117,7 +117,7 @@ $theme-colors: (
 );
 ```
 
-On the other hand, the Ignite UI [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) function generates a color palette map including `primary`, `secondary`, `grays`, `info`, `success`, `warn`, and `error` colors and their 74 color variants. Our predefined bootstrap palette in turn consists of seven colors: 
+Ignite UI for Angular's [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) function generates a color palette map including `primary`, `secondary`, `grays`, `info`, `success`, `warn`, and `error` colors and their color variants. Our predefined bootstrap palette in turn consists of seven colors:
 
 ```scss
 $bootstrap-palette: igx-palette(
@@ -131,9 +131,9 @@ $bootstrap-palette: igx-palette(
 );
 ```
 
-As you can see most of the colors in their palette overlap the colors in the palettes of Ignite UI. Thus, we can simply map the Bootstrap theme colors with our light or dark bootstrap palette colors. 
+As you can see most of the colors in the Bootstrap palette overlap with the colors defined in the Bootstrap palette of Ignite UI for Angular. Hence, we can simply map the Bootstrap theme colors to our light or dark bootstrap palette colors.
 
-First, we are going to define Sass variables for the [`$light-bootstrap-palette`]({environment:sassApiUrl}/index.html#variable-light-bootstrap-palette) colors:
+First, we are going to define Sass variables that extract values from the [`$light-bootstrap-palette`]({environment:sassApiUrl}/index.html#variable-light-bootstrap-palette):
 
 ```scss
 // Colors from the Ignite UI light bootstrap color palette
@@ -156,26 +156,27 @@ $custom-dark-palette: igx-palette(
     $surface: #222
 );
 
-// Creating Sass variables for its primary and secondary colors
+// Creating Sass variables for primary and secondary colors
 $dark-primary: igx-color($custom-dark-palette, "primary");
 $dark-secondary: igx-color($custom-dark-palette, "secondary");
 ```
 
 >[!NOTE]
->Visit our [`palettes with sass`](../sass/palettes.md) section to discover more about the palettes provided by Ignite UI for Angular and learn how to create a new one.
+>Visit our [`palettes with Sass`](../sass/palettes.md) section to discover more about the palettes provided by Ignite UI for Angular and learn how to create a new one.
 
 ### Themes
 
-In order to switch between `light` and `dark` mode, we are adding a custom class to the `host` element which will be changed on button click event. In our stylesheet file, we are going to include different color palettes according to that class.
+In order to switch between `light` and `dark` mode, we are adding a custom class to the `host` element which will be changed on button click. In our stylesheet file, we are going to include different color palettes scoped to each class.
 
 #### Light mode
 
-The Ignite UI for Angular comes in with a predefined theme inspired by [Bootstrap 4](https://getbootstrap.com/) library. To use it, first, you have to include our `igx-core` mixin and then our built-in theme mixin - [igx-bootstrap-light-theme]({environment:sassApiUrl}/index.html#mixin-igx-bootstrap-light-theme). We will also make use of our predefined bootstrap palette - [$light-bootstrap-palette]({environment:sassApiUrl}/index.html#variable-light-bootstrap-palette). 
+Ignite UI for Angular comes with predefined themes inspired by the [Bootstrap 4](https://getbootstrap.com/) library. To use them, first, you have to include our `igx-core` mixin and then our built-in theme mixin - [igx-bootstrap-light-theme]({environment:sassApiUrl}/index.html#mixin-igx-bootstrap-light-theme). We will also make use of our predefined bootstrap palette - [$light-bootstrap-palette]({environment:sassApiUrl}/index.html#variable-light-bootstrap-palette).
 
 The background color for our application needs to be set explicitly on the host element. In our sample, we want to use the `surface` color of the passed palette.
 
-Along with including the themes, at this point, we have to modify the bootstrap `$theme-colors` map with our sass variables created earlier.
-Lastly, we need to import the bootstrap library - *always import it at the end!*
+At this point we have to modify the Bootstrap `$theme-colors` map with the Sass variables we created earlier.
+
+Lastly, we need to import the Bootstrap library - *always import it at the end!*
 
 ```scss
 // Make sure you always include the igx-core mixin first
@@ -199,7 +200,7 @@ Lastly, we need to import the bootstrap library - *always import it at the end!*
                 "danger": $light-danger
             );
 
-            // Importing Bootstrap SCSS file
+            // Importing Bootstrap .scss file
             // Make sure you always import it last
             @import "~bootstrap/scss/bootstrap";
         }
@@ -227,9 +228,9 @@ $custom-dark: igx-color($light-bootstrap-palette, "grays", 800);
 
 #### Dark mode
 
-For our dark variant of the application we are going to use our newly created `$custom-dark-palette` so we have to include it in the `dark class` styles and also modify the `$theme-colors` map with the new values. 
+For our dark variant, we are going to use our newly created `$custom-dark-palette`. We have to include it in the `dark` class styles and also modify the `$theme-colors` map with the new values. 
 
-All the colors in the Ignite UI components come from the passed palette, therefore they fit nicely in the dark mode without any additional adjustments. However, we have to do some more styling changes for the ng-bootstrap components: 
+All components in Ignite UI for Angular use colors from the passed palette, therefore they fit nicely in the dark mode without any additional adjustments. However, we have to do some more styling changes for the ng-bootstrap components:
 
 ```scss
 :host {
@@ -274,7 +275,7 @@ All the colors in the Ignite UI components come from the passed palette, therefo
                 "secondary": $dark-secondary
             );
 
-            // Importing Bootstrap SCSS file
+            // Importing Bootstrap .scss file
             @import "~bootstrap/scss/bootstrap";
         }
     }
@@ -315,7 +316,7 @@ Then, add a CSS class to your navbar component following the pattern "bg - color
 
 ### Typography
 
-Ignite UI for Angular exposes four default type scales for each of its themes, which can be used inside the [`igx-typography`]({environment:sassApiUrl}/index.html#mixin-igx-typography) mixin to define the global typography styles for an application. In our example, we are going to apply the bootstrap predifined `typeface` and `type-scale` but you can create your custom ones if you wish. 
+Ignite UI for Angular exposes four default type scales for each of its themes, which can be used inside the [`igx-typography`]({environment:sassApiUrl}/index.html#mixin-igx-typography) mixin to define the global typography styles of an application. In our example, we are going to apply the bootstrap predifined `typeface` and `type-scale` but you can create custom ones if you wish. 
 
 ```scss
 :host {
