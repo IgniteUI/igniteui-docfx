@@ -164,8 +164,8 @@ The [**IgxBottomNavComponent**]({environment:angularApiUrl}/classes/igxbottomnav
 
 * Template
     * The new structure defines bottom navigation item components each wrapping a header and a content component. The headers usually contain an icon ([`Material guidelines`](https://material.io/components/bottom-navigation#usage)) but may as well have a label or any other custom content.
-    * For header styling purposes we introduced two new directives - `IgxBottomNavHeaderLabel` and `IgxBottomNavHeaderIcon`.
-    * Since the header component now allows adding any content, the `IgxTab` directive, which was previously used to retemplate the tab's header, was removed because it is no longer necessary.
+    * For header styling purposes we introduced two new directives - `igxBottomNavHeaderLabel` and `igxBottomNavHeaderIcon`.
+    * Since the header component now allows adding any content, the `igxTab` directive, which was previously used to retemplate the tab's header, was removed because it is no longer necessary.
     * When the component is used in navigation scenario, the `routerLink` directive needs to be attached to the header component.
 
     ```html
@@ -183,11 +183,11 @@ The [**IgxBottomNavComponent**]({environment:angularApiUrl}/classes/igxbottomnav
     </igx-bottom-nav>
     ```
 * API changes
-    * The `id`, `itemStyle`, `panels`, `viewTabs`, `contentTabs` and `tabs` properties were removed. Currently, the `items` property returns the collection of tabs.
+    * The `id`, `itemStyle`, `panels`, `viewTabs`, `contentTabs` and `tabs` properties were removed. Currently, the [`items`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html#items) property returns the collection of tabs.
     * The following properties were changed:
-        * The tab item's `isSelected` property was renamed to `selected`.
-        * The `selectedTab` property was renamed to `selectedItem`.
-    * The `onTabSelected` and `onTabDeselected` events were removed. We introduced three new events, `selectedIndexChanging`, `selectedIndexChange` and `selectedItemChange`, which provide more flexibility and control over the tabs' selection. Unfortunately, having an adequate migration for these event changes is complicated to say the least, so any errors should be handled at project level.
+        * The tab item's `isSelected` property was renamed to [`selected`]({environment:angularApiUrl}/classes/igxbottomnavitemcomponent.html#selected).
+        * The `selectedTab` property was renamed to [`selectedItem`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html#selecteditem).
+    * The `onTabSelected` and `onTabDeselected` events were removed. We introduced three new events, [`selectedIndexChanging`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html#selectedindexchanging),[`selectedIndexChange`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html#selectedindexchange) and [`selectedItemChange`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html#selecteditemchange), which provide more flexibility and control over the tabs' selection. Unfortunately, having an adequate migration for these event changes is complicated to say the least, so any errors should be handled at project level.
 
 ### IgxTabs component
 The [**IgxTabsComponent**]({environment:angularApiUrl}/classes/igxtabscomponent.html) was completely refactored in order to provide more flexible and descriptive way to define tab headers and contents. It is recommended that you update via **ng update** in order to migrate the existing **igx-tabs** definitions to the new ones.
@@ -195,8 +195,8 @@ The [**IgxTabsComponent**]({environment:angularApiUrl}/classes/igxtabscomponent.
 
 * Template
     * The new structure defines tab item components each wrapping a header and a content component. The headers usually contain an icon and a label but may as well have any other custom content.
-    * For header styling purposes we introduced two new directives - `IgxTabHeaderLabel` and `IgxTabHeaderIcon`.
-    * Since the header component now allows adding any content, the `IgxTab` directive, which was previously used to retemplate the tab's header, was removed because it is no longer necessary.
+    * For header styling purposes we introduced two new directives - `igxTabHeaderLabel` and `igxTabHeaderIcon`.
+    * Since the header component now allows adding any content, the `igxTab` directive, which was previously used to retemplate the tab's header, was removed because it is no longer necessary.
     * When the component is used in navigation scenario, the `routerLink` directive needs to be attached to the header component.
 
     ```html
@@ -215,12 +215,12 @@ The [**IgxTabsComponent**]({environment:angularApiUrl}/classes/igxtabscomponent.
     </igx-tabs>
     ```
 * API changes
-    * The `id`, `groups`, `viewTabs`, `contentTabs` and `tabs` properties were removed. Currently, the `items` property returns the collection of tabs.
+    * The `id`, `groups`, `viewTabs`, `contentTabs` and `tabs` properties were removed. Currently, the [`items`]({environment:angularApiUrl}/classes/igxtabscomponent.html#items) property returns the collection of tabs.
     * The following properties were changed:
-        * The tab item's `isSelected` property was renamed to `selected`.
-        * The `selectedTabItem` property was shortten to `selectedItem`.
-        * The `type` property, with its contentFit and fixed options, is no longer available. The header sizing & positioning mode is currently controlled by the `tabAlignment` input property which accepts four different values - start (default), center, end and justify. The old `contentFit` type corresponds to the current `start` alignment value and the old `fixed` type - to the current `justify` value.
-    * The `tabItemSelected` and `tabItemDeselected` events were removed. We introduced three new events, `selectedIndexChanging`, `selectedIndexChange` and `selectedItemChange`, which provide more flexibility and control over the tabs' selection. Unfortunately, having an adequate migration for these event changes is complicated to say the least, so any errors should be handled at project level.
+        * The tab item's `isSelected` property was renamed to [`selected`]({environment:angularApiUrl}/classes/igxtabitemcomponent.html#selected).
+        * The `selectedTabItem` property was shortten to [`selectedItem`]({environment:angularApiUrl}/classes/igxtabscomponent.html#selecteditem).
+        * The `type` property, with its contentFit and fixed options, is no longer available. The header sizing & positioning mode is currently controlled by the [`tabAlignment`]({environment:angularApiUrl}/classes/igxtabscomponent.html#tabalignment) input property which accepts four different values - start (default), center, end and justify. The old `contentFit` type corresponds to the current `start` alignment value and the old `fixed` type - to the current `justify` value.
+    * The `tabItemSelected` and `tabItemDeselected` events were removed. We introduced three new events, [`selectedIndexChanging`]({environment:angularApiUrl}/classes/igxtabscomponent.html#selectedindexchanging), [`selectedIndexChange`]({environment:angularApiUrl}/classes/igxtabscomponent.html#selectedindexchange) and [`selectedItemChange`]({environment:angularApiUrl}/classes/igxtabscomponent.html#selecteditemchange), which provide more flexibility and control over the tabs' selection. Unfortunately, having an adequate migration for these event changes is complicated to say the least, so any errors should be handled at project level.
 
 ## From 10.2.x to 11.0.x
 * IgxGrid, IgxTreeGrid, IgxHierarchicalGrid
