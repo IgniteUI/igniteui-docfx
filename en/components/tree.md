@@ -6,12 +6,12 @@ _keywords:
 
 # Angular Tree Component Overview
 
-The Angular Tree Component allows users to represent hierarchical data in a tree fashion, maintaining parent-child relationship. It's primary purpose is to navigate within nested data structures.
+The Angular Tree Component allows users to represent hierarchical data in a tree fashion, maintaining parent-child relationships. It's primary purpose is to navigate within nested data structures.
 
 ## Angular Tree Example
 
 <code-view style="height: 513px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}/lists/tree-basic-sample" 
            iframe-src="" alt="Angular Tree Example">
 </code-view>
 
@@ -19,14 +19,14 @@ The Angular Tree Component allows users to represent hierarchical data in a tree
 
 ## Getting Started with Ignite UI for Angular Tree
 
-To get started with the Angular Tree component, first you need to install Ignite UI for Angular by typing the following command:
+To get started with the Angular Tree component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
 
 ```cmd
 ng add igniteui-angular
 ```
 For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
 
-The next step is to import the `IgxTreeModule`  in your  app.module file. 
+The next step is to import the `IgxTreeModule` in your app.module file. 
 
 ```typescript
 // app.module.ts
@@ -41,18 +41,19 @@ import { IgxTreeModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
-Now that we have the grid module imported, let’s get started with a basic configuration of the igx-tree and its nodes.
+Now that we have the tree module imported, let’s get started with a basic configuration of the `igx-tree` and its nodes.
 
 ## Usage
 
 [IgxTreeNodesComponent]({environment:angularApiUrl}/classes/igxtreenodecomponent.html) is the representation of every node that belongs to the [IgxTreeComponent]({environment:angularApiUrl}/classes/igxtreecomponent.html).  
 Nodes provide [disabled]({environment:angularApiUrl}/classes/igxtreenodecomponent.html#disabled), [active]({environment:angularApiUrl}/classes/igxtreenodecomponent.html#active), [selected]({environment:angularApiUrl}/classes/igxtreenodecomponent.html#selected) and [expanded]({environment:angularApiUrl}/classes/igxtreenodecomponent.html#expanded) properties, which give you opportunity to configure the look and feel of the node as per your requirement. 
-[data]({environment:angularApiUrl}/classes/igxtreenodecomponent.html#data) property refers to the data entry that the node visualizes and it is required for searching through nodes.
+[data]({environment:angularApiUrl}/classes/igxtreenodecomponent.html#data) property can be used to add a reference to data entry the node visualizing. Binding `[data]` is required for searching through nodes using [IgxTreeComponent.findNodes()]({environment:angularApiUrl}/classes/igxtreecomponent.html#findNodes).
 
-Nodes can be declared using one of the following approaches.
 ### Declaring a tree
 
-- **Declaring the tree and its nodes by specifying the node hierarchy and iterating through a data set**
+Nodes can be declared using one of the following approaches.
+
+- Declaring the tree and its nodes by specifying the node hierarchy and iterating through a data set
 
 ```html
 <igx-tree>
@@ -74,17 +75,17 @@ Nodes can be bound to a data model so that their expanded and selected states ar
 		{{ node.text }}
 		<img [src]="node.image" alt="node.imageAlt" />
 		<igx-tree-node *ngFor="let child of node.children" [data]="child">
-				<a igxTreeNodeLink href="child.url" target="_blank">
-                    {{ child.text }}
-                </a>
+			<a igxTreeNodeLink href="child.url" target="_blank">
+                {{ child.text }}
+            </a>
 		</igx-tree-node>
 	</igx-tree-node>
 </igx-tree>
 ```
 
-- **Declaring a tree by creating individual nodes manually**
+- Declaring a tree by creating individual nodes manually
 
-In order to render a tree you do not necessarily need a data set - users can create individual nodes without binding them to data:
+In order to render a tree you do not necessarily need a data set - individual nodes can be created without binding them to data:
 
 ```html
 <igx-tree>
@@ -176,33 +177,45 @@ export class MyTreeViewComponent {
 }
 ```
 ### Templating
-To create a custom node template within igx-tree, declare `<ng-template>`. From the template you can access the implicitly provided context variable, with properties that give you information about the node. 
+To create a reusable template for your nodes, declare `<ng-template>` **within `igx-tree`**. 
 ```html
  <igx-tree>
-    <igx-tree-node #node>
-        <ng-template *ngTemplateOutlet="nodeTemplate; context { $implicit: node }">
+    <igx-tree-node #myNode *ngFor="let node of data" [data]="node">
+        <ng-template *ngTemplateOutlet="nodeTemplate; context { $implicit: myNode }">
         </ng-template>
-    </igx-tree-node>
+        <igx-tree-node *ngFor="let child of node.ChildCompanies" [data]="child">
+            {{ child.CompanyName }}                           
+        </igx-tree-node>
+    </igx-tree-node>                      
+                   
     <ng-template #nodeTemplate let-node>
         <igx-combo type="line" [(ngModel)]="node.CompanyName" [displayKey]="'CompanyName'" [data]="data" width="220px"></igx-combo>
     </ng-template>
 </igx-tree>
 ```
 Additionally, by using the [expandIndicator]({environment:angularApiUrl}/classes/igxtreecomponent.html#expandIndicator) input you have the ability to set a custom template to be used for rendering the expand/collapse indicators of nodes.
-
+```html
+<igx-tree>
+    <igx-tree-node *ngFor="let node of data" [data]="node">
+    </igx-tree-node>
+    <ng-template igxTreeExpandIndicator let-expanded>
+        <igx-icon>{{ expanded ? 'expand_less' : 'expand_more' }}</igx-icon>
+    </ng-template>
+</igx-tree>
+```
 
 ## Selection
-In order to setup node selection in the igx-tree, you just need to set its selection property. This property accepts the following three modes: **None**, **Bi-State** and **Cascading**. Below we will take a look at each of them in more detail.
+In order to setup node selection in the `igx-tree`, you just need to set its [selection]({environment:angularApiUrl}/classes/igxtreecomponent.html#selection) property. This property accepts the following three modes: **None**, **Bi-State** and **Cascading**. Below we will take a look at each of them in more detail.
 ### None
-In the igx-tree by default node selection is disabled. So you can not select or deselect a row through interaction with the Tree UI, the only way to complete these actions is to use the provided API method.
+In the `igx-tree` by default node selection is disabled. Users cannot select or deselect a row through UI interaction, but these actions can still be completed through the provided API method.
 ### Bi-State
-To enable bi-state node selection in the igx-tree just set the [selection]({environment:angularApiUrl}/classes/igxtreecomponent.html#selection) property to **BiState**. This will render a checkbox for every node.  Each node has two states - selected or not.  This mode supports multiple selection.
+To enable bi-state node selection in the `igx-tree` just set the [selection]({environment:angularApiUrl}/classes/igxtreecomponent.html#selection) property to **BiState**. This will render a checkbox for every node.  Each node has two states - selected or not.  This mode supports multiple selection.
 ```html
 <igx-tree [selection]="'BiState'">
 </igx-tree>
 ```
 ### Cascading
-To enable cascade node selection in the igx-tree just set the selection property to **Cascading**. This will render a checkbox for every node. 
+To enable cascade node selection in the `igx-tree` just set the selection property to **Cascading**. This will render a checkbox for every node. 
 ```html
 <igx-tree [selection]="'Cascading'">
 </igx-tree>
@@ -227,22 +240,68 @@ The IgxTree navigation is compliant with W3C accesibility standards and convenie
  - <kbd>Tab</kbd> - navigates to the next focusable element on the page, outside of the tree
  - <kbd>Shift + Tab</kbd> - navigates to the previous focusable element on the page, outside of the tree
  - <kbd>Space</kbd> - toggles selection of the current node. Marks the node as active.
+ - <kbd>Shift + Space</kbd> - toggles selection of all nodes between the active one and the one pressed Space while holding Shift if selection is enabled
  - <kbd>Enter</kbd> - activate the focused node. If the node has link in it, open the link
  - <kbd>*</kbd> - expand the node and all sibling nodes on the same level
 
 When selection is enabled, end-user selection of nodes is only allowed through the rendered checkbox. Since both selection types allow multiple selection, the following mouse + keyboard interaction is available
 
- - <kbd>Click</kbd> - toggles selection of the node if selection is enabled. Otherwise, focuses the node
- - <kbd>Shift + Click</kbd> - toggles selection of all nodes between the active one and the one clicked while holding SHIFT if selection is enabled
+ - <kbd>Click</kbd> - when performed on the node checkbox toggles selection of the node if selection is enabled. Otherwise, focuses the node
+ - <kbd>Shift + Click</kbd> - when performed on the node checkbox toggles selection of all nodes between the active one and the one clicked while holding Shift if selection is enabled
 
 ## Load On Demand
-## Styling
 
+The Ignite UI for Angular IgxTree can be rendered in such way that it requires the minimal amount of data to be retrieved from the server so the user could see it as quickly as possible. Then, only after the user expands a node, the children for that particular parent node will be loaded. This mechanism, also known as Load on Demand, can be easily configured to work with any remote data.
+### Demo
+<code-view style="height: 513px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="" alt="Tree Load On Demand Example">
+</code-view>
+
+After the user clicks the expand icon, it is replaced by a loading indicator. When the loading property resolves to false, the loading indicator disappears and the children are loaded.
+
+## Angular Tree Styling
+Using the [Ignite UI for Angular Theming](themes/index.md), we can greatly alter the tree appearance. First, in order for us to use the functions exposed by the theme engine, we need to import the `index` file in our style file: 
+
+```scss
+@import '~igniteui-angular/lib/core/styles/themes/index';
+```
+
+Following the simplest approach, we create a new theme that extends the [igx-tree-theme]({environment:sassApiUrl}/index.html#function-igx-tree-theme) and pass the parameters, which we would like to change: 
+```scss
+$custom-tree-theme: igx-tree-theme(
+    $background-selected: #ffe6cc,
+    $background-active:#ECAA53,
+    $background-active-selected:  #ff8c1a
+);
+```
+
+### Using CSS Variables
+
+The last step is to include the component's theme.
+```scss
+:host {
+    @include igx-css-vars($custom-tree-theme);
+}
+```
+
+### Using Theme Overrides
+
+In order to style components for older browsers, like Internet Explorer 11, we have to use a different approach, since CSS variables are not supported there.
+
+If the component is using the [Emulated](themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`. To prevent the custom theme to leak into other components, be sure to include the `:host` selector before `::ng-deep`: 
+```scss
+:host {
+    ::ng-deep {
+        @include igx-combo($custom-tree-theme);    
+    }
+}
+```
 ## Known Issues and Limitations
 
 |Limitation|Description|
 |--- |--- |
-| Recursive template nodes | The igx-tree does not support recursively creating the igx-tree-nodes via template. [Learn more](https://github.com/IgniteUI/igniteui-angular/wiki/Tree-Specification#assumptions-and-limitations). All of the nodes should be declared manually, meaning if you intend to visualize a very deep hierarchy, this would impact the size of your template file. The tree is intended to be primarily used as a layout / navigational component. If a hierarchical data source with numerous levels of depth and homogenous data needs to be visualized, you could use the [**IgxTreeGrid**](treegrid/tree-grid.md)|
+| Recursive template nodes | The `igx-tree` does not support recursively creating the igx-tree-nodes via template. [Learn more](https://github.com/IgniteUI/igniteui-angular/wiki/Tree-Specification#assumptions-and-limitations). All of the nodes should be declared manually, meaning if you intend to visualize a very deep hierarchy, this would impact the size of your template file. The tree is intended to be primarily used as a layout / navigational component. If a hierarchical data source with numerous levels of depth and homogenous data needs to be visualized, you could use the [**IgxTreeGrid**](treegrid/tree-grid.md)|
 |Using IgxTreeNodes with old View Engine (pre-Ivy)|There is an issue in Angular's View Engine (pre-Ivy) that prevents the tree from being used when `enableIvy: false` is set in tsconfig.json|
 |Tab navigation in FireFox|Tabbing into the tree via keyboard navigation, when the tree has a scrollbar, will first focus the igx-tree-node element. This is the default behavior in FireFox, however it can be resolved by putting an explicit `tabIndex = -1` on the tree.
 ## API References
