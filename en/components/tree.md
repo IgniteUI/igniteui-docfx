@@ -1,7 +1,7 @@
 ---
-title: Tree Component - Native Angular | Ignite UI for Angular 
-_description: 
-_keywords: 
+title: Angular Tree Component | Ignite UI for Angular | Infragistics
+_description: The Ignite UI for Angular Tree allows rendering hierarchical data in an easy-to-navigate view and supports features like selection and load on demand. Try it for FREE
+_keywords: angular tree, angular tree component, ignite ui for angular, UI controls, infragistics
 ---
 
 # Angular Tree Component Overview
@@ -11,8 +11,8 @@ The Angular Tree Component allows users to represent hierarchical data in a tree
 ## Angular Tree Example
 
 <code-view style="height: 513px" 
-           data-demos-base-url="{environment:demosBaseUrl}/lists/tree-basic-sample" 
-           iframe-src="" alt="Angular Tree Example">
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/lists/tree-basic-sample" alt="Angular Tree Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -91,8 +91,7 @@ In order to render a tree you do not necessarily need a data set - individual no
 <igx-tree>
 	<igx-tree-node [expanded]="true" [selected]="false">
 		I am a parent node 1
-		<img [src]="hard_coded_src.webb" alt="Alt Text" />
-		
+		<img [src]="hard_coded_src.webb" alt="Alt Text" />		
 		<igx-tree-node [expanded]="true" [selected]="false">
 			I am a child node 1
 			<igx-tree-url-node [url]="https://google.com">
@@ -108,18 +107,9 @@ In order to render a tree you do not necessarily need a data set - individual no
 			I am a child node 1
 		</igx-tree-node>
 	</igx-tree-node>
-
-	<igx-tree-node [expanded]="false" [selected]="false">
+	
+    <igx-tree-node [selected]="false" [disabled]="true">
 		I am a parent node 3
-		<img [src]="hard_coded_src.webb" alt="Alt Text" />
-		
-		<igx-tree-node [expanded]="false" [selected]="false">
-			I am a child node 1
-		</igx-tree-node>
-	</igx-tree-node>
-
-    <igx-tree-node [expanded]="false" [selected]="false" [disabled]="true">
-		I am a parent node 4
 	</igx-tree-node>
 </igx-tree>
 ```
@@ -158,7 +148,7 @@ When finding nodes, you can pass a custom comparer function in order to find the
 		{{ node.text }}
 		<img [src]="node.image" alt="node.imageAlt" />
 		<igx-tree-node *ngFor="let child of node.children" [data]="child" [expanded]="isNodeExpaded(child)" [selected]="isNodeSelected(child)">
-      {{ child.text }}
+            {{ child.text }}
 		</igx-tree-node>
 	</igx-tree-node>
 </igx-tree>
@@ -255,10 +245,10 @@ The Ignite UI for Angular IgxTree can be rendered in such way that it requires t
 ### Demo
 <code-view style="height: 513px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="" alt="Tree Load On Demand Example">
+           iframe-src="{environment:demosBaseUrl}/lists/tree-advanced-sample" alt="Tree Load On Demand Example">
 </code-view>
 
-After the user clicks the expand icon, it is replaced by a loading indicator. When the loading property resolves to false, the loading indicator disappears and the children are loaded.
+After the user clicks the expand icon, it is replaced by a loading indicator. When the [loading]({environment:angularApiUrl}/classes/igxtreenodecomponent.html#loading) property resolves to false, the loading indicator disappears and the children are loaded.
 
 ## Angular Tree Styling
 Using the [Ignite UI for Angular Theming](themes/index.md), we can greatly alter the tree appearance. First, in order for us to use the functions exposed by the theme engine, we need to import the `index` file in our style file: 
