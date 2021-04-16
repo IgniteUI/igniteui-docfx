@@ -157,66 +157,70 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
     | Bootstrap | $bootstrap-typeface | $bootstrap-type-scale |
     | Indigo | $indigo-typeface | $indigo-type-scale |
 
-### IgxBottomNav and IgxTabs components
-The two components were completely refactored in order to provide more flexible and descriptive way to define tab headers and contents. It is recommended that you update via **ng update** in order to migrate the existing **igx-tabs** and **igx-bottom-nav** definitions to the new ones.
+### IgxBottomNav component
 
-* [**IgxBottomNavComponent**]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html)
-    * Template
-        * The new structure defines bottom navigation item components each wrapping a header and a content component. The headers usually contain an icon ([`Material guidelines`](https://material.io/components/bottom-navigation#usage)) but may as well have a label or any other custom content.
-        * For header styling purposes we introduced two new directives - `IgxBottomNavHeaderLabel` and `IgxBottomNavHeaderIcon`.
-        * Since the header component now allows adding any content, the `IgxTab` directive, which was previously used to retemplate the tab's header, was removed because it is no longer necessary.
-        * When the component is used in navigation scenario, the `routerLink` directive needs to be attached to the header component.
+The [**IgxBottomNavComponent**]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html) was completely refactored in order to provide more flexible and descriptive way to define tab headers and contents. It is recommended that you update via **ng update** in order to migrate the existing **igx-bottom-nav** definitions to the new ones.
 
-        ```html
-        <igx-bottom-nav>
-            <igx-bottom-nav-item>
-                <igx-bottom-nav-header>
-                    <igx-icon igxBottomNavHeaderIcon>folder</igx-icon>
-                    <span igxBottomNavHeaderLabel>Tab 1</span>
-                </igx-bottom-nav-header>
-                <igx-bottom-nav-content>
-                    Content 1
-                </igx-bottom-nav-content>
-            </igx-bottom-nav-item>
-            ...
-        </igx-bottom-nav>
-        ```
-    * API changes
-        * The `id`, `itemStyle`, `panels`, `viewTabs`, `contentTabs` and `tabs` properties were removed. Currently, the `items` property returns the collection of tabs.
-        * The following properties were changed:
-            * The tab item's `isSelected` property was renamed to `selected`.
-            * The `selectedTab` property was renamed to `selectedItem`.
-        * The `onTabSelected` and `onTabDeselected` events were removed. We introduced three new events, `selectedIndexChanging`, `selectedIndexChange` and `selectedItemChange`, which provide more flexibility and control over the tabs' selection. Unfortunately, having an adequate migration for these event changes is complicated to say the least, so any errors should be handled at project level.
 
-* [**IgxTabsComponent**]({environment:angularApiUrl}/classes/igxtabscomponent.html)
-    * Template
-        * The new structure defines tab item components each wrapping a header and a content component. The headers usually contain an icon and a label but may as well have any other custom content.
-        * For header styling purposes we introduced two new directives - `IgxTabHeaderLabel` and `IgxTabHeaderIcon`.
-        * Since the header component now allows adding any content, the `IgxTab` directive, which was previously used to retemplate the tab's header, was removed because it is no longer necessary.
-        * When the component is used in navigation scenario, the `routerLink` directive needs to be attached to the header component.
+* Template
+    * The new structure defines bottom navigation item components each wrapping a header and a content component. The headers usually contain an icon ([`Material guidelines`](https://material.io/components/bottom-navigation#usage)) but may as well have a label or any other custom content.
+    * For header styling purposes we introduced two new directives - `IgxBottomNavHeaderLabel` and `IgxBottomNavHeaderIcon`.
+    * Since the header component now allows adding any content, the `IgxTab` directive, which was previously used to retemplate the tab's header, was removed because it is no longer necessary.
+    * When the component is used in navigation scenario, the `routerLink` directive needs to be attached to the header component.
 
-        ```html
-        <igx-tabs>
-            <igx-tab-item>
-                <igx-tab-header>
-                    <igx-icon igxTabHeaderIcon>folder</igx-icon>
-                    <span igxTabHeaderLabel>Tab 1</span>
-                </igx-tab-header>
-                <igx-tab-content>
-                    <h1>Tab 1 Content</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </igx-tab-content>
-            </igx-tab-item>
+    ```html
+    <igx-bottom-nav>
+        <igx-bottom-nav-item>
+            <igx-bottom-nav-header>
+                <igx-icon igxBottomNavHeaderIcon>folder</igx-icon>
+                <span igxBottomNavHeaderLabel>Tab 1</span>
+            </igx-bottom-nav-header>
+            <igx-bottom-nav-content>
+                Content 1
+            </igx-bottom-nav-content>
+        </igx-bottom-nav-item>
         ...
-        </igx-tabs>
-        ```
-    * API changes
-        * The `id`, `groups`, `viewTabs`, `contentTabs` and `tabs` properties were removed. Currently, the `items` property returns the collection of tabs.
-        * The following properties were changed:
-            * The tab item's `isSelected` property was renamed to `selected`.
-            * The `selectedTabItem` property was shortten to `selectedItem`.
-            * The `type` property, with its contentFit and fixed options, is no longer available. The header sizing & positioning mode is currently controlled by the `tabAlignment` input property which accepts four different values - start (default), center, end and justify. The old `contentFit` type corresponds to the current `start` alignment value and the old `fixed` type - to the current `justify` value.
-        * The `tabItemSelected` and `tabItemDeselected` events were removed. We introduced three new events, `selectedIndexChanging`, `selectedIndexChange` and `selectedItemChange`, which provide more flexibility and control over the tabs' selection. Unfortunately, having an adequate migration for these event changes is complicated to say the least, so any errors should be handled at project level.
+    </igx-bottom-nav>
+    ```
+* API changes
+    * The `id`, `itemStyle`, `panels`, `viewTabs`, `contentTabs` and `tabs` properties were removed. Currently, the `items` property returns the collection of tabs.
+    * The following properties were changed:
+        * The tab item's `isSelected` property was renamed to `selected`.
+        * The `selectedTab` property was renamed to `selectedItem`.
+    * The `onTabSelected` and `onTabDeselected` events were removed. We introduced three new events, `selectedIndexChanging`, `selectedIndexChange` and `selectedItemChange`, which provide more flexibility and control over the tabs' selection. Unfortunately, having an adequate migration for these event changes is complicated to say the least, so any errors should be handled at project level.
+
+### IgxTabs component
+The [**IgxTabsComponent**]({environment:angularApiUrl}/classes/igxtabscomponent.html) was completely refactored in order to provide more flexible and descriptive way to define tab headers and contents. It is recommended that you update via **ng update** in order to migrate the existing **igx-tabs** definitions to the new ones.
+
+
+* Template
+    * The new structure defines tab item components each wrapping a header and a content component. The headers usually contain an icon and a label but may as well have any other custom content.
+    * For header styling purposes we introduced two new directives - `IgxTabHeaderLabel` and `IgxTabHeaderIcon`.
+    * Since the header component now allows adding any content, the `IgxTab` directive, which was previously used to retemplate the tab's header, was removed because it is no longer necessary.
+    * When the component is used in navigation scenario, the `routerLink` directive needs to be attached to the header component.
+
+    ```html
+    <igx-tabs>
+        <igx-tab-item>
+            <igx-tab-header>
+                <igx-icon igxTabHeaderIcon>folder</igx-icon>
+                <span igxTabHeaderLabel>Tab 1</span>
+            </igx-tab-header>
+            <igx-tab-content>
+                <h1>Tab 1 Content</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </igx-tab-content>
+        </igx-tab-item>
+    ...
+    </igx-tabs>
+    ```
+* API changes
+    * The `id`, `groups`, `viewTabs`, `contentTabs` and `tabs` properties were removed. Currently, the `items` property returns the collection of tabs.
+    * The following properties were changed:
+        * The tab item's `isSelected` property was renamed to `selected`.
+        * The `selectedTabItem` property was shortten to `selectedItem`.
+        * The `type` property, with its contentFit and fixed options, is no longer available. The header sizing & positioning mode is currently controlled by the `tabAlignment` input property which accepts four different values - start (default), center, end and justify. The old `contentFit` type corresponds to the current `start` alignment value and the old `fixed` type - to the current `justify` value.
+    * The `tabItemSelected` and `tabItemDeselected` events were removed. We introduced three new events, `selectedIndexChanging`, `selectedIndexChange` and `selectedItemChange`, which provide more flexibility and control over the tabs' selection. Unfortunately, having an adequate migration for these event changes is complicated to say the least, so any errors should be handled at project level.
 
 ## From 10.2.x to 11.0.x
 * IgxGrid, IgxTreeGrid, IgxHierarchicalGrid
