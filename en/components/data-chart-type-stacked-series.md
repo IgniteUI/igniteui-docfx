@@ -12,10 +12,10 @@ This topic explains the various types of stacked series in the Angular data char
 
 ## Angular Stacked Series Example
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-stacked-series" 
-           alt="Angular Stacked Series Example" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-stacked-series"
+           alt="Angular Stacked Series Example"
            github-src="charts/data-chart/type-stacked-series">
 </code-view>
 

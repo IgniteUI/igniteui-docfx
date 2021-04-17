@@ -11,10 +11,10 @@ The Ignite UI for Angular category chart component is capable of handling high v
 
 ## Angular High Volume Data Example
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-high-volume" 
-           alt="Angular High Volume Data Example" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-high-volume"
+           alt="Angular High Volume Data Example"
            github-src="charts/category-chart/high-volume">
 </code-view>
 

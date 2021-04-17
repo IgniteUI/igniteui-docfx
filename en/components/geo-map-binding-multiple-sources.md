@@ -11,10 +11,10 @@ In the Ignite UI for Angular map, you can add multiple geographic series objects
 
 ## Angular Binding Multiple Data Sources Example
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-binding-multiple-sources" 
-           alt="Angular Binding Multiple Data Sources Example" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-binding-multiple-sources"
+           alt="Angular Binding Multiple Data Sources Example"
            github-src="maps/geo-map/binding-multiple-sources">
 </code-view>
 

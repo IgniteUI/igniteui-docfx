@@ -13,10 +13,10 @@ The [`IgxScatterLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite
 
 ## Angular Scatter Line Chart Example
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-scatter-line-series" 
-           alt="Angular Scatter Line Chart Example" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-scatter-line-series"
+           alt="Angular Scatter Line Chart Example"
            github-src="charts/data-chart/type-scatter-line-series">
 </code-view>
 

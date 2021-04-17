@@ -11,10 +11,10 @@ mentionedTypes: ['XamDataChart']
 
 ## Angular Axis Locations Example
 
-<code-view style="height: 450px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-axis-locations" 
-           alt="Angular Axis Locations Example" 
+<code-view style="height: 450px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-axis-locations"
+           alt="Angular Axis Locations Example"
            github-src="charts/data-chart/axis-locations">
 </code-view>
 

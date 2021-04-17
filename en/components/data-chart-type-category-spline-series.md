@@ -11,10 +11,10 @@ The Ignite UI for Angular spline chart belongs to a group of category charts and
 
 ## Angular Spline Chart Example
 
-<code-view style="height: 400px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-category-spline-series" 
-           alt="Angular Spline Chart Example" 
+<code-view style="height: 400px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-category-spline-series"
+           alt="Angular Spline Chart Example"
            github-src="charts/data-chart/type-category-spline-series">
 </code-view>
 

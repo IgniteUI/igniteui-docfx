@@ -11,10 +11,10 @@ The Angular [`IgxBingMapsMapImagery`]({environment:dvApiBaseUrl}/products/ignite
 
 ## Angular Displaying Imagery from Bing Maps Example
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-display-bing-imagery" 
-           alt="Angular Displaying Imagery from Bing Maps Example" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-display-bing-imagery"
+           alt="Angular Displaying Imagery from Bing Maps Example"
            github-src="maps/geo-map/display-bing-imagery">
 </code-view>
 

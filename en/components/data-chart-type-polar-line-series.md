@@ -11,10 +11,10 @@ The Ignite UI for Angular polar area chart belongs to a group of polar charts an
 
 ## Angular Polar Line Chart Example
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-polar-line-series" 
-           alt="Angular Polar Line Chart Example" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-polar-line-series"
+           alt="Angular Polar Line Chart Example"
            github-src="charts/data-chart/type-polar-line-series">
 </code-view>
 

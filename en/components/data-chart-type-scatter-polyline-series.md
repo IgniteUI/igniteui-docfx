@@ -14,10 +14,10 @@ Scatter shape series are often used highlight regions in scientific data or they
 
 ## Angular Scatter Polyline Chart Example
 
-<code-view style="height: 400px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-scatter-polyline-series" 
-           alt="Angular Scatter Polyline Chart Example" 
+<code-view style="height: 400px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-scatter-polyline-series"
+           alt="Angular Scatter Polyline Chart Example"
            github-src="charts/data-chart/type-scatter-polyline-series">
 </code-view>
 

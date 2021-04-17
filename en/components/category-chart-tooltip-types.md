@@ -11,10 +11,10 @@ This topic provides conceptual information about the tooltip types available on 
 
 ## Angular Tooltip Types Example
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-tooltip-types" 
-           alt="Angular Tooltip Types Example" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-tooltip-types"
+           alt="Angular Tooltip Types Example"
            github-src="charts/category-chart/tooltip-types">
 </code-view>
 

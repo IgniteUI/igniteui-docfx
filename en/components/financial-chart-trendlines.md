@@ -11,10 +11,10 @@ The Angular financial chart component provides many visuals that can be customiz
 
 ## Angular Chart Trendlines Example
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-trendlines" 
-           alt="Angular Chart Trendlines Example" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-trendlines"
+           alt="Angular Chart Trendlines Example"
            github-src="charts/financial-chart/trendlines">
 </code-view>
 

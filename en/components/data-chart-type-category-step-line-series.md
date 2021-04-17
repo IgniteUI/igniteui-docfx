@@ -11,10 +11,10 @@ The Ignite UI for Angular step line chart belongs to a group of category charts 
 
 ## Angular Step Line Chart Example
 
-<code-view style="height: 400px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-category-step-line-series" 
-           alt="Angular Step Line Chart Example" 
+<code-view style="height: 400px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-category-step-line-series"
+           alt="Angular Step Line Chart Example"
            github-src="charts/data-chart/type-category-step-line-series">
 </code-view>
 

@@ -11,10 +11,10 @@ The Angular financial chart component has multiple panes to display financial da
 
 ## Angular Chart Panes Example
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-panes" 
-           alt="Angular Chart Panes Example" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-panes"
+           alt="Angular Chart Panes Example"
            github-src="charts/financial-chart/panes">
 </code-view>
 

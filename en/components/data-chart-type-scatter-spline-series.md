@@ -13,10 +13,10 @@ The [`IgxScatterSplineSeriesComponent`]({environment:dvApiBaseUrl}/products/igni
 
 ## Angular Scatter Spline Chart Example
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-scatter-spline-series" 
-           alt="Angular Scatter Spline Chart Example" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-scatter-spline-series"
+           alt="Angular Scatter Spline Chart Example"
            github-src="charts/data-chart/type-scatter-spline-series">
 </code-view>
 

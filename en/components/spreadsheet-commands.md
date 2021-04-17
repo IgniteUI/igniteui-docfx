@@ -1,6 +1,6 @@
 ---
 title: Angular Spreadsheet | Commands | Infragistics
-_description: Perform commands to activate different features of Infragistics' Angular spreadsheet control. Learn commnads such as ZoomIn and ZoomOut with Ignite UI for Angular spreadsheet!
+_description: Perform commands to activate different features of Infragistics' Angular spreadsheet control. Learn commands such as ZoomIn and ZoomOut with Ignite UI for Angular spreadsheet!
 _keywords: Spreadsheet, commands, Ignite UI for Angular, Infragistics
 mentionedTypes: ['Spreadsheet', 'SpreadsheetAction']
 ---
@@ -11,10 +11,10 @@ The Angular Spreadsheet component allows you to perform commands for activating 
 
 ## Angular Working with Commands Example
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/excel/spreadsheet-commands" 
-           alt="Angular Working with Commands Example" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/excel/spreadsheet-commands"
+           alt="Angular Working with Commands Example"
            github-src="excel/spreadsheet/commands">
 </code-view>
 

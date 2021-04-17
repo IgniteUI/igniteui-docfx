@@ -11,10 +11,10 @@ The Angular data chart component supports layers that allow you to display conte
 
 ## Angular Series Annotations Example
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-series-annotations" 
-           alt="Angular Series Annotations Example" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-series-annotations"
+           alt="Angular Series Annotations Example"
            github-src="charts/data-chart/series-annotations">
 </code-view>
 

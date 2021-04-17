@@ -11,10 +11,10 @@ The Angular data chart component has support for showing tooltips along with a c
 
 ## Angular Tooltips Example
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-series-tooltips" 
-           alt="Angular Tooltips Example" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-series-tooltips"
+           alt="Angular Tooltips Example"
            github-src="charts/data-chart/series-tooltips">
 </code-view>
 

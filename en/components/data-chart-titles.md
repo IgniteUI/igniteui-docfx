@@ -11,10 +11,10 @@ The [`chartTitle`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/doc
 
 ## Angular Title and Subtitle Example
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-chart-titles" 
-           alt="Angular Title and Subtitle Example" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-chart-titles"
+           alt="Angular Title and Subtitle Example"
            github-src="charts/data-chart/chart-titles">
 </code-view>
 

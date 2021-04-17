@@ -11,10 +11,10 @@ The Ignite UI for Angular area chart belongs to a group of category charts and i
 
 ## Angular Area Chart Example
 
-<code-view style="height: 400px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-category-area-series" 
-           alt="Angular Area Chart Example" 
+<code-view style="height: 400px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-category-area-series"
+           alt="Angular Area Chart Example"
            github-src="charts/data-chart/type-category-area-series">
 </code-view>
 

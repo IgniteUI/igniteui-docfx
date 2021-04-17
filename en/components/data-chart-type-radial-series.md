@@ -13,10 +13,10 @@ This topic explains various types of radial series in the Angular data chart com
 
 ## Angular Radial Series Example
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-radial-series" 
-           alt="Angular Radial Series Example" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-radial-series"
+           alt="Angular Radial Series Example"
            github-src="charts/data-chart/type-radial-series">
 </code-view>
 

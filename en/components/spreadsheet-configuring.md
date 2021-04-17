@@ -11,10 +11,10 @@ The Angular Spreadsheet component allows the user to configure many different as
 
 ## Angular Configuring Spreadsheet Example
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/excel/spreadsheet-config-options" 
-           alt="Angular Configuring Spreadsheet Example" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/excel/spreadsheet-config-options"
+           alt="Angular Configuring Spreadsheet Example"
            github-src="excel/spreadsheet/config-options">
 </code-view>
 

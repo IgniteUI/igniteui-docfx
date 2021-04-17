@@ -12,10 +12,10 @@ The Ignite UI for Angular stacked area chart belongs to a group of category char
 
 ## Angular Stacked Area Chart Example
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-stacked-area-series" 
-           alt="Angular Stacked Area Chart Example" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-stacked-area-series"
+           alt="Angular Stacked Area Chart Example"
            github-src="charts/data-chart/type-stacked-area-series">
 </code-view>
 

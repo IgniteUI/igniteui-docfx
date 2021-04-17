@@ -11,10 +11,10 @@ TODO
 
 ## Angular Working with Grids Example
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/excel/excel-library-working-with-grids" 
-           alt="Angular Working with Grids Example" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/excel/excel-library-working-with-grids"
+           alt="Angular Working with Grids Example"
            github-src="excel/excel-library/working-with-grids">
 </code-view>
 
