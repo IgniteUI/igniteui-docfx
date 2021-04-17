@@ -11,10 +11,10 @@ The Ignite UI for Angular waterfall chart belongs to a group of category charts 
 
 ## Angular Waterfall Chart Example
 
-<code-view style="height: 400px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-category-waterfall-series" 
-           alt="Angular Waterfall Chart Example" 
+<code-view style="height: 400px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-category-waterfall-series"
+           alt="Angular Waterfall Chart Example"
            github-src="charts/data-chart/type-category-waterfall-series">
 </code-view>
 

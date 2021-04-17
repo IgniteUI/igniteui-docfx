@@ -13,10 +13,10 @@ draws colored contour lines based on a triangulation of X and Y data with a nume
 
 ## Angular Scatter Contour Chart Example
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-scatter-contour-series" 
-           alt="Angular Scatter Contour Chart Example" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-scatter-contour-series"
+           alt="Angular Scatter Contour Chart Example"
            github-src="charts/data-chart/type-scatter-contour-series">
 </code-view>
 

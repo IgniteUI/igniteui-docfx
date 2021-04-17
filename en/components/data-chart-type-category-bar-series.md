@@ -11,10 +11,10 @@ The Ignite UI for Angular bar chart belongs to a group of category charts and it
 
 ## Angular Bar Chart Example
 
-<code-view style="height: 400px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-category-bar-series" 
-           alt="Angular Bar Chart Example" 
+<code-view style="height: 400px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-category-bar-series"
+           alt="Angular Bar Chart Example"
            github-src="charts/data-chart/type-category-bar-series">
 </code-view>
 

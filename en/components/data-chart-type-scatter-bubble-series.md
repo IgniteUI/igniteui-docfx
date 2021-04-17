@@ -13,10 +13,10 @@ is similar to [Scatter Marker Series](data-chart-type-scatter-point-series.md) w
 
 ## Angular Scatter Bubble Chart Example
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-scatter-bubble-series" 
-           alt="Angular Scatter Bubble Chart Example" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-scatter-bubble-series"
+           alt="Angular Scatter Bubble Chart Example"
            github-src="charts/data-chart/type-scatter-bubble-series">
 </code-view>
 

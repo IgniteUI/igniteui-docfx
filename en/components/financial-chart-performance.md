@@ -11,10 +11,10 @@ The Angular financial chart component has very good performance of rendering a l
 
 ## Angular Chart Performance Example
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-performance" 
-           alt="Angular Chart Performance Example" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-performance"
+           alt="Angular Chart Performance Example"
            github-src="charts/financial-chart/performance">
 </code-view>
 

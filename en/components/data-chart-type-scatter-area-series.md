@@ -11,10 +11,10 @@ This topic explains, with code examples, how to use  [`IgxScatterAreaSeriesCompo
 
 ## Angular Scatter Area Chart Example
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-scatter-area-series" 
-           alt="Angular Scatter Area Chart Example" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-scatter-area-series"
+           alt="Angular Scatter Area Chart Example"
            github-src="charts/data-chart/type-scatter-area-series">
 </code-view>
 

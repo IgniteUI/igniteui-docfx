@@ -12,10 +12,10 @@ The Ignite UI for Angular stacked 100 bar chart belongs to a group of category c
 
 ## Angular Stacked 100 Bar Chart Example
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-stacked-100-bar-series" 
-           alt="Angular Stacked 100 Bar Chart Example" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-stacked-100-bar-series"
+           alt="Angular Stacked 100 Bar Chart Example"
            github-src="charts/data-chart/type-stacked-100-bar-series">
 </code-view>
 

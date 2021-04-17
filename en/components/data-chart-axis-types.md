@@ -11,10 +11,10 @@ In the Angular data chart component, an axis provides base properties for specif
 
 ## Angular Axis Example
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-axis-types" 
-           alt="Angular Axis Example" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-axis-types"
+           alt="Angular Axis Example"
            github-src="charts/data-chart/axis-types">
 </code-view>
 

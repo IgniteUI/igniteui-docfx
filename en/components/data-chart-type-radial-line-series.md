@@ -11,10 +11,10 @@ The Ignite UI for Angular radial line chart belongs to a group of radial charts 
 
 ## Angular Radial Line Chart Example
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-radial-line-series" 
-           alt="Angular Radial Line Chart Example" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-radial-line-series"
+           alt="Angular Radial Line Chart Example"
            github-src="charts/data-chart/type-radial-line-series">
 </code-view>
 

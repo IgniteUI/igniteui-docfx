@@ -13,10 +13,10 @@ The Angular data chart supports single or multiple point series objects to be re
 
 ## Angular Point Chart Example
 
-<code-view style="height: 400px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-category-point-series" 
-           alt="Angular Point Chart Example" 
+<code-view style="height: 400px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-category-point-series"
+           alt="Angular Point Chart Example"
            github-src="charts/data-chart/type-category-point-series">
 </code-view>
 

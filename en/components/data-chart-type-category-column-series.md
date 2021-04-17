@@ -11,10 +11,10 @@ The Ignite UI for Angular column chart belongs to a group of category charts and
 
 ## Angular Column Chart Example
 
-<code-view style="height: 400px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-category-column-series" 
-           alt="Angular Column Chart Example" 
+<code-view style="height: 400px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-category-column-series"
+           alt="Angular Column Chart Example"
            github-src="charts/data-chart/type-category-column-series">
 </code-view>
 

@@ -12,10 +12,10 @@ The Angular data chart component has support for trendlines, which help to ident
 
 ## Angular Trendlines Example
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-series-trendlines" 
-           alt="Angular Trendlines Example" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-series-trendlines"
+           alt="Angular Trendlines Example"
            github-src="charts/data-chart/series-trendlines">
 </code-view>
 

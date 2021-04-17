@@ -12,10 +12,10 @@ The Ignite UI for Angular stacked bar chart belongs to a group of category chart
 
 ## Angular Stacked Bar Chart Example
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-stacked-bar-series" 
-           alt="Angular Stacked Bar Chart Example" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-stacked-bar-series"
+           alt="Angular Stacked Bar Chart Example"
            github-src="charts/data-chart/type-stacked-bar-series">
 </code-view>
 

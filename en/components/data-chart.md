@@ -11,10 +11,10 @@ The Angular data chart is a charting component that provides modular design of a
 
 ## Angular Data Chart Example
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-chart-overview" 
-           alt="Angular Data Chart Example" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-chart-overview"
+           alt="Angular Data Chart Example"
            github-src="charts/data-chart/chart-overview">
 </code-view>
 

@@ -11,10 +11,10 @@ This topic explains various types of financial series in the Angular data chart 
 
 ## Angular Financial Series Example
 
-<code-view style="height: 400px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-financial-series" 
-           alt="Angular Financial Series Example" 
+<code-view style="height: 400px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-financial-series"
+           alt="Angular Financial Series Example"
            github-src="charts/data-chart/type-financial-series">
 </code-view>
 

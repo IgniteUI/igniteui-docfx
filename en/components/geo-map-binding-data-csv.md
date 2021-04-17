@@ -11,10 +11,10 @@ With the Ignite UI for Angular map component, you can plot geographic data loade
 
 ## Angular Binding CSV Files with Geographic Locations Example
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-binding-data-csv" 
-           alt="Angular Binding CSV Files with Geographic Locations Example" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-binding-data-csv"
+           alt="Angular Binding CSV Files with Geographic Locations Example"
            github-src="maps/geo-map/binding-data-csv">
 </code-view>
 

@@ -11,10 +11,10 @@ The Ignite UI for Angular financial price chart in [`Candlestick`]({environment:
 
 ## Angular Financial Candlestick Chart Example
 
-<code-view style="height: 400px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-financial-candlestick-series" 
-           alt="Angular Financial Candlestick Chart Example" 
+<code-view style="height: 400px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-financial-candlestick-series"
+           alt="Angular Financial Candlestick Chart Example"
            github-src="charts/data-chart/type-financial-candlestick-series">
 </code-view>
 

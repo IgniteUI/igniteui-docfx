@@ -11,10 +11,10 @@ This topic provides conceptual information about the annotations and overlay int
 
 ## Angular Annotations Example
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-annotations" 
-           alt="Angular Annotations Example" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-annotations"
+           alt="Angular Annotations Example"
            github-src="charts/category-chart/annotations">
 </code-view>
 

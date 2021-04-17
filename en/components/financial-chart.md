@@ -1,6 +1,6 @@
 ---
 title: Angular Financial Chart | React Tables and Controls | Infragistics
-_description: Our Angular financial chart component helps you visualize financial data using a simple API. Create fast, editable financial graphs with $PlatformName$!
+_description: Our Angular financial chart component helps you visualize financial data using a simple API. Create fast, editable financial graphs with Ignite UI for Angular!
 _keywords: Angular charts, financial chart, stock chart, Ignite UI for Angular, Infragistics
 mentionedTypes: ['FinancialChart', 'FinancialChartType', 'FinancialOverlayType']
 ---
