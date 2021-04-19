@@ -1143,6 +1143,9 @@
       - name: 印刷スタイル
         href: themes/misc/printing-styles.md
         new: false
+      - name: Bootstrap Theming
+        href: themes/misc/bootstrap-theming.md
+        new: true
 - name: データ入力と表示
   header: true
   sortable: true
