@@ -11,10 +11,10 @@ Legends help end-users identify visuals of data chart series with contextual inf
 
 ## Angular Legends Example
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-legends" 
-           alt="Angular Legends Example" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-legends"
+           alt="Angular Legends Example"
            github-src="charts/data-chart/legends">
 </code-view>
 

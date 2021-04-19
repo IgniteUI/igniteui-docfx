@@ -11,10 +11,10 @@ With the Ignite UI for Angular map, you can plot geographic data loaded from var
 
 ## Angular Binding JSON Files with Geographic Locations Example
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-binding-data-json-points" 
-           alt="Angular Binding JSON Files with Geographic Locations Example" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-binding-data-json-points"
+           alt="Angular Binding JSON Files with Geographic Locations Example"
            github-src="maps/geo-map/binding-data-json-points">
 </code-view>
 

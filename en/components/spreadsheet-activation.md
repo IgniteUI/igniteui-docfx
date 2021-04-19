@@ -12,10 +12,10 @@ The Angular Spreadsheet component exposes properties that allow you to determine
 
 ## Angular Spreadsheet Activation Example
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/excel/spreadsheet-activation" 
-           alt="Angular Spreadsheet Activation Example" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/excel/spreadsheet-activation"
+           alt="Angular Spreadsheet Activation Example"
            github-src="excel/spreadsheet/activation">
 </code-view>
 

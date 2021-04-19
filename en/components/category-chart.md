@@ -11,10 +11,10 @@ The Angular category chart component make it easy to organize and visualize cate
 
 ## Angular Chart Example
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-overview" 
-           alt="Angular Chart Example" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-overview"
+           alt="Angular Chart Example"
            github-src="charts/category-chart/overview">
 </code-view>
 

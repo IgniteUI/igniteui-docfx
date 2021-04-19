@@ -11,10 +11,10 @@ There are many areas of the Ignite UI for Angular category chart component that 
 
 ## Angular Configuration Options Example
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-marker-options" 
-           alt="Angular Configuration Options Example" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-marker-options"
+           alt="Angular Configuration Options Example"
            github-src="charts/category-chart/marker-options">
 </code-view>
 

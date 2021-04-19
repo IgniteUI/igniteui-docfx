@@ -12,10 +12,10 @@ The Ignite UI for Angular stacked 100 spline area chart belongs to a group of ca
 
 ## Angular Stacked 100 Spline Area Chart Example
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-stacked-100-spline-area-series" 
-           alt="Angular Stacked 100 Spline Area Chart Example" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-stacked-100-spline-area-series"
+           alt="Angular Stacked 100 Spline Area Chart Example"
            github-src="charts/data-chart/type-stacked-100-spline-area-series">
 </code-view>
 

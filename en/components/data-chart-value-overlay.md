@@ -12,10 +12,10 @@ The Ignite UI for Angular data chart component allows for placement of horizonta
 
 ## Angular Value Overlay Example
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-series-value-overlay" 
-           alt="Angular Value Overlay Example" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-series-value-overlay"
+           alt="Angular Value Overlay Example"
            github-src="charts/data-chart/series-value-overlay">
 </code-view>
 

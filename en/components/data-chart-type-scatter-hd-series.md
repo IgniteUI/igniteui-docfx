@@ -11,10 +11,10 @@ The Data Chart is ... TODO ...
 
 ## Angular Data Chart (TODO add feature name) Example
 
-<code-view style="height: 400px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-scatter-hd-series" 
-           alt="Angular Data Chart (TODO add feature name) Example" 
+<code-view style="height: 400px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-scatter-hd-series"
+           alt="Angular Data Chart (TODO add feature name) Example"
            github-src="charts/data-chart/type-scatter-hd-series">
 </code-view>
 

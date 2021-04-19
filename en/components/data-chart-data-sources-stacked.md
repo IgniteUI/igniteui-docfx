@@ -26,7 +26,7 @@ This topic provides an example on how to implement data source for Stacked Serie
         }
 
         public class SampleCategoryItem
-        {    
+        {
             public int USA { get; set; }
             public int CHN { get; set; }
             public int RUS { get; set; }

@@ -11,10 +11,10 @@ In the Ignite UI for Angular map, you can add multiple geographic series objects
 
 ## Angular Binding and Overlaying Multiple Shape Files Example
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-binding-multiple-shapes" 
-           alt="Angular Binding and Overlaying Multiple Shape Files Example" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-binding-multiple-shapes"
+           alt="Angular Binding and Overlaying Multiple Shape Files Example"
            github-src="maps/geo-map/binding-multiple-shapes">
 </code-view>
 

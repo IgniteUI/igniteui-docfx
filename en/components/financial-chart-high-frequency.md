@@ -11,10 +11,10 @@ The Angular financial chart component is very fast control that can handle rende
 
 ## Angular Binding Real-Time Data Example
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-high-frequency" 
-           alt="Angular Binding Real-Time Data Example" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-high-frequency"
+           alt="Angular Binding Real-Time Data Example"
            github-src="charts/financial-chart/high-frequency">
 </code-view>
 

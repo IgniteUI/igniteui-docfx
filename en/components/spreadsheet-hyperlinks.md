@@ -11,10 +11,10 @@ The Angular Spreadsheet component allows display of pre-existing hyperlinks in y
 
 ## Angular Spreadsheet Hyperlinks Example
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/excel/spreadsheet-hyperlinks" 
-           alt="Angular Spreadsheet Hyperlinks Example" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/excel/spreadsheet-hyperlinks"
+           alt="Angular Spreadsheet Hyperlinks Example"
            github-src="excel/spreadsheet/hyperlinks">
 </code-view>
 

@@ -11,10 +11,10 @@ The Ignite UI for Angular radial area chart belongs to a group of radial charts 
 
 ## Angular Radial Area Chart Example
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-radial-area-series" 
-           alt="Angular Radial Area Chart Example" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-radial-area-series"
+           alt="Angular Radial Area Chart Example"
            github-src="charts/data-chart/type-radial-area-series">
 </code-view>
 

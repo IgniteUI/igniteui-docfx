@@ -11,10 +11,10 @@ The Ignite UI for Angular line chart belongs to a group of category charts and i
 
 ## Angular Line Chart Example
 
-<code-view style="height: 400px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-category-line-series" 
-           alt="Angular Line Chart Example" 
+<code-view style="height: 400px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-category-line-series"
+           alt="Angular Line Chart Example"
            github-src="charts/data-chart/type-category-line-series">
 </code-view>
 

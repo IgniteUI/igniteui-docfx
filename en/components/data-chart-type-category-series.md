@@ -13,10 +13,10 @@ This topic explains various types of category series in the Angular data chart c
 
 ## Angular Category Series Example
 
-<code-view style="height: 400px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-category-series" 
-           alt="Angular Category Series Example" 
+<code-view style="height: 400px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-category-series"
+           alt="Angular Category Series Example"
            github-src="charts/data-chart/type-category-series">
 </code-view>
 

@@ -11,10 +11,10 @@ The Ignite UI for Angular polar spline chart belongs to a group of polar charts 
 
 ## Angular Polar Spline Chart Example
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-polar-spline-series" 
-           alt="Angular Polar Spline Chart Example" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-polar-spline-series"
+           alt="Angular Polar Spline Chart Example"
            github-src="charts/data-chart/type-polar-spline-series">
 </code-view>
 

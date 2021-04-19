@@ -11,10 +11,10 @@ Use the Angular map component's [`IgxGeographicContourLineSeriesComponent`]({env
 
 ## Angular Using Scatter Contour Series Example
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-type-scatter-contour-series" 
-           alt="Angular Using Scatter Contour Series Example" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-type-scatter-contour-series"
+           alt="Angular Using Scatter Contour Series Example"
            github-src="maps/geo-map/type-scatter-contour-series">
 </code-view>
 

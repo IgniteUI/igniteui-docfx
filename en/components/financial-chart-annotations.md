@@ -11,10 +11,10 @@ This topic provides conceptual information about the annotations available on th
 
 ## Angular Chart Annotations Example
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-annotations" 
-           alt="Angular Chart Annotations Example" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-annotations"
+           alt="Angular Chart Annotations Example"
            github-src="charts/financial-chart/annotations">
 </code-view>
 

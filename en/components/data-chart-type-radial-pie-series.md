@@ -11,10 +11,10 @@ The Ignite UI for Angular radial pie chart belongs to a group of radial charts a
 
 ## Angular Radial Pie Chart Example
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-radial-pie-series" 
-           alt="Angular Radial Pie Chart Example" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-radial-pie-series"
+           alt="Angular Radial Pie Chart Example"
            github-src="charts/data-chart/type-radial-pie-series">
 </code-view>
 

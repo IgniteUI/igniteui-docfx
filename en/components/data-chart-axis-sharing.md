@@ -11,10 +11,10 @@ mentionedTypes: ['XamDataChart', 'CategoryXAxis', 'NumericYAxis', 'CategoryDateT
 
 ## Angular Axis Sharing and Multiple Axes Example
 
-<code-view style="height: 450px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-axis-sharing" 
-           alt="Angular Axis Sharing and Multiple Axes Example" 
+<code-view style="height: 450px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-axis-sharing"
+           alt="Angular Axis Sharing and Multiple Axes Example"
            github-src="charts/data-chart/axis-sharing">
 </code-view>
 

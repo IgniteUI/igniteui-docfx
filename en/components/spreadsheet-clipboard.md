@@ -11,10 +11,10 @@ This topic explains how to perform clipboard operations on the Ignite UI for Ang
 
 ## Angular Working with Clipboard Example
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/excel/spreadsheet-clipboard" 
-           alt="Angular Working with Clipboard Example" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/excel/spreadsheet-clipboard"
+           alt="Angular Working with Clipboard Example"
            github-src="excel/spreadsheet/clipboard">
 </code-view>
 

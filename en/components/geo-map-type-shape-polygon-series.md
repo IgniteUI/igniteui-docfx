@@ -11,10 +11,10 @@ Use the Angular map component's [`IgxGeographicShapeSeriesComponent`]({environme
 
 ## Angular Using Shape Polygon Series Example
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-type-shape-polygon-series" 
-           alt="Angular Using Shape Polygon Series Example" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-type-shape-polygon-series"
+           alt="Angular Using Shape Polygon Series Example"
            github-src="maps/geo-map/type-shape-polygon-series">
 </code-view>
 
