@@ -116,7 +116,7 @@ In order to render a tree you do not necessarily need a data set - individual no
 ```
 
 ### Nodes with links
-When a node should render a link, the `IgxTreeNodeLink` directive should be added to the a tag. This will ensure the proper aria role is assigned to the node's DOM elements.
+When a node should render a link, the `IgxTreeNodeLink` directive should be added to the <**a**> tag. This will ensure the proper aria role is assigned to the node's DOM elements.
 
 ```html
 <igx-tree>
@@ -214,11 +214,11 @@ To enable cascade node selection in the `igx-tree` just set the selection proper
 In this mode a parent's selection state entirely depends on the selection state of its children. When a parent has some selected and some deselected children, its checkbox is in an indeterminate state.
 
 ### Angular Tree Checkbox
-The Angular Tree component provides built-in support for check boxes, allowing users to select more than one item.
+The Angular Tree component provides built-in support for checkboxes, allowing users to select more than one item.
 
-The TreeView check boxes also have a tri-state mode, which is applicable only for parent nodes. In this mode, the parent node will go into the indeterminate state when the child nodes are partially checked.
+The TreeView checkboxes also have a tri-state mode, which is applicable only for parent nodes. In this mode, the parent node will go into the indeterminate state when the child nodes are partially checked.
 ## Keyboard Navigation
-Keyboard navigation in IgxTree provides a rich variety of keyboard interactions for the user. This functionality is enabled by default and allows to navigate through the nodes.
+Keyboard navigation in IgxTree provides a rich variety of keyboard interactions for the user. This functionality is enabled by default and allows users to navigate through the nodes.
 
 The IgxTree navigation is compliant with W3C accesibility standards and convenient to use.
 
@@ -236,13 +236,13 @@ The IgxTree navigation is compliant with W3C accesibility standards and convenie
  - <kbd>Shift + Tab</kbd> - navigates to the previous focusable element on the page, outside of the tree
  - <kbd>Space</kbd> - toggles selection of the current node. Marks the node as active.
  - <kbd>Shift + Space</kbd> - toggles selection of all nodes between the active one and the one pressed Space while holding Shift if selection is enabled
- - <kbd>Enter</kbd> - activate the focused node. If the node has link in it, open the link
- - <kbd>*</kbd> - expand the node and all sibling nodes on the same level
+ - <kbd>Enter</kbd> - activates the focused node. If the node has link in it, open the link
+ - <kbd>*</kbd> - expands the node and all sibling nodes on the same level
 
-When selection is enabled, end-user selection of nodes is only allowed through the rendered checkbox. Since both selection types allow multiple selection, the following mouse + keyboard interaction is available
+When selection is enabled, end-user selection of nodes is only allowed through the rendered checkbox. Since both selection types allow multiple selection, the following mouse + keyboard interactions are available
 
- - <kbd>Click</kbd> - when performed on the node checkbox toggles selection of the node if selection is enabled. Otherwise, focuses the node
- - <kbd>Shift + Click</kbd> - when performed on the node checkbox toggles selection of all nodes between the active one and the one clicked while holding Shift if selection is enabled
+ - <kbd>Click</kbd> - when performed on the node checkbox, toggles selection of the node if selection is enabled. Otherwise, focuses the node
+ - <kbd>Shift + Click</kbd> - when performed on the node checkbox, toggles selection of all nodes between the active one and the one clicked while holding Shift if selection is enabled
 
 ## Angular Tree Load On Demand
 
