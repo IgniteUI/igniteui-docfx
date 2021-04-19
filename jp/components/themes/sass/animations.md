@@ -51,7 +51,7 @@ Ignite UI for Angular [keyframes]({environment:sassApiUrl}/index.html#mixin-keyf
 
 ### アニメーション Mixin
 
-[аnimation]({environment:sassApiUrl}/index.html#mixin-animation) mixin は、パラメーターとして渡されたアニメーション プロパティのリストを使用して要素をアニメーション化するための機能を果たします。ユーザーは、`名前`、`期間`、`遅`延、`方向`、`繰り返し回数`などのアニメーション プロパティを指定できます。複数のキーフレーム アニメーションを`animation` mixin に渡すことができます。
+[аnimation]({environment:sassApiUrl}/index.html#mixin-animation) mixin は、パラメーターとして渡されたアニメーション プロパティのリストを使用して要素をアニメーション化するための機能を果たします。ユーザーは、`名前`、`期間`、`遅延`、`方向`、`繰り返し回数`などのアニメーション プロパティを指定できます。複数のキーフレーム アニメーションを `animation` mixin に渡すことができます。
 
 ```scss
 //include the 'fade-in-top' keyframes animation mixin
