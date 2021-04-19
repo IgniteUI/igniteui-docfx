@@ -60,7 +60,7 @@ Nodes can be declared using one of the following approaches.
 <igx-tree>
 	<igx-tree-node *ngFor="let node of data" [data]="node" [expanded]="isNodeExpaded(node)" [selected]="isNodeSelected(node)">
 		{{ node.text }}
-		<img [src]="node.image" alt="node.imageAlt" />
+		<img [src]="node.image" [alt]="node.imageAlt" />
 		<igx-tree-node *ngFor="let child of node.children" [data]="child" [expanded]="isNodeExpaded(child)" [selected]="isNodeSelected(child)">
             {{ child.text }}
 		</igx-tree-node>
@@ -72,11 +72,11 @@ Nodes can be bound to a data model so that their expanded and selected states ar
 
 ```html
 <igx-tree (nodeSelection)="handleSelectionEvent($event)">
-	<igx-tree-node *ngFor="let nodes of data" [data]="node" [(expanded)]="node.expanded" [(selected)]="node.selected">
+	<igx-tree-node *ngFor="let node of data" [data]="node" [(expanded)]="node.expanded" [(selected)]="node.selected">
 		{{ node.text }}
-		<img [src]="node.image" alt="node.imageAlt" />
+		<img [src]="node.image" [alt]="node.imageAlt" />
 		<igx-tree-node *ngFor="let child of node.children" [data]="child">
-			<a igxTreeNodeLink href="child.url" target="_blank">
+			<a igxTreeNodeLink [href]="child.url" target="_blank">
                 {{ child.text }}
             </a>
 		</igx-tree-node>
@@ -92,23 +92,25 @@ In order to render a tree you do not necessarily need a data set - individual no
 <igx-tree>
 	<igx-tree-node [expanded]="true" [selected]="false">
 		I am a parent node 1
-		<img [src]="hard_coded_src.webb" alt="Alt Text" />		
+		<img src="hard_coded_src.webb" alt="Alt Text" />		
 		<igx-tree-node [expanded]="true" [selected]="false">
 			I am a child node 1
-			<igx-tree-url-node [url]="https://google.com">
-				I am a child node of the child
-			</igx-tree-url-node>
+			<igx-tree-node>
+				<a igxTreeNodeLink href="https://google.com" target="_blank">
+				    I am a child node of the child
+				</a>
+			</igx-tree-node>
 		</igx-tree-node>
 	</igx-tree-node>
-	
+
 	<igx-tree-node [expanded]="false" [selected]="false">
 		I am a parent node 2
-		<img [src]="hard_coded_src.webb" alt="Alt Text" />
+		<img src="hard_coded_src.webb" alt="Alt Text" />
         <igx-tree-node [expanded]="false" [selected]="false">
 			I am a child node 1
 		</igx-tree-node>
 	</igx-tree-node>
-	
+
     <igx-tree-node [selected]="false" [disabled]="true">
 		I am a parent node 3
 	</igx-tree-node>
@@ -116,15 +118,15 @@ In order to render a tree you do not necessarily need a data set - individual no
 ```
 
 ### Nodes with links
-When a node should render a link, the `IgxTreeNodeLink` directive should be added to the <**a**> tag. This will ensure the proper aria role is assigned to the node's DOM elements.
+When a node should render a link, the `IgxTreeNodeLink` directive should be added to the `<a>` tag. This will ensure the proper aria role is assigned to the node's DOM elements.
 
 ```html
 <igx-tree>
-	<igx-tree-node *ngFor="let nodes of data" [data]="node" [expanded]="isNodeExpaded(node)" [selected]="isNodeSelected(node)">
+	<igx-tree-node *ngFor="let node of data" [data]="node" [expanded]="isNodeExpaded(node)" [selected]="isNodeSelected(node)">
 		{{ node.text }}
-		<img [src]="node.image" alt="node.imageAlt" />
+		<img [src]="node.image" [alt]="node.imageAlt" />
 		<igx-tree-node *ngFor="let child of node.children" [data]="child">
-            <a igxTreeNodeLink href="child.url" target="_blank">
+            <a igxTreeNodeLink [href]="child.url" target="_blank">
                 {{ child.text }}
             </a>
 		</igx-tree-node>
@@ -145,7 +147,7 @@ You can find a specific node within an IgxTree by using the [findNodes]({environ
 When finding nodes in more complex data structure scenarios, like composite primary keys, you can pass a custom comparer function in order to specify the criteria for finding nodes based on the data.
 ```html
 <igx-tree>
-	<igx-tree-node *ngFor="let nodes of data" [data]="node" [expanded]="isNodeExpaded(node)" [selected]="isNodeSelected(node)">
+	<igx-tree-node *ngFor="let node of data" [data]="node" [expanded]="isNodeExpaded(node)" [selected]="isNodeSelected(node)">
 		{{ node.text }}
 		<img [src]="node.image" alt="node.imageAlt" />
 		<igx-tree-node *ngFor="let child of node.children" [data]="child" [expanded]="isNodeExpaded(child)" [selected]="isNodeSelected(child)">
@@ -172,7 +174,7 @@ To create a reusable template for your nodes, declare `<ng-template>` **within `
 ```html
 <igx-tree>
     <igx-tree-node *ngFor="let node of data" [data]="node">
-        <ng-template *ngTemplateOutlet="#nodeTemplate; context: { $implicit: data }"></ng-template>
+        <ng-template *ngTemplateOutlet="#nodeTemplate; context: { $implicit: node }"></ng-template>
         <igx-tree-node *ngFor="let child of node.ChildCompanies" [data]="child">
             <ng-template *ngTemplateOutlet="#nodeTemplate; context: { $implicit: child}"></ng-template>
         </igx-tree-node>
@@ -199,17 +201,17 @@ Additionally, by using the [expandIndicator]({environment:angularApiUrl}/classes
 ## Angular Tree Selection
 In order to setup node selection in the `igx-tree`, you just need to set its [selection]({environment:angularApiUrl}/classes/igxtreecomponent.html#selection) property. This property accepts the following three modes: **None**, **BiState** and **Cascading**. Below we will take a look at each of them in more detail.
 ### None
-In the `igx-tree` by default node selection is disabled. Users cannot select or deselect a row through UI interaction, but these actions can still be completed through the provided API method.
+In the `igx-tree` by default node selection is disabled. Users cannot select or deselect a node through UI interaction, but these actions can still be completed through the provided API method.
 ### Bi-State
 To enable bi-state node selection in the `igx-tree` just set the [selection]({environment:angularApiUrl}/classes/igxtreecomponent.html#selection) property to **BiState**. This will render a checkbox for every node. Each node has two states - selected or not. This mode supports multiple selection.
 ```html
-<igx-tree [selection]="'BiState'">
+<igx-tree selection="BiState">
 </igx-tree>
 ```
 ### Cascading
 To enable cascading node selection in the `igx-tree`, just set the selection property to **Cascading**. This will render a checkbox for every node. 
 ```html
-<igx-tree [selection]="'Cascading'">
+<igx-tree selection="Cascading">
 </igx-tree>
 ```
 In this mode a parent's selection state entirely depends on the selection state of its children. When a parent has some selected and some deselected children, its checkbox is in an indeterminate state.
@@ -254,7 +256,7 @@ The Ignite UI for Angular IgxTree can be rendered in such way that it requires t
            iframe-src="{environment:demosBaseUrl}/lists/tree-advanced-sample" alt="Tree Load On Demand Example">
 </code-view>
 
-After the user clicks the expand icon, it is replaced by a loading indicator. When the [loading]({environment:angularApiUrl}/classes/igxtreenodecomponent.html#loading) property resolves to false, the loading indicator disappears and the children are loaded.
+After the user clicks the expand icon, it is replaced by a loading indicator. When the [loading]({environment:angularApiUrl}/classes/igxtreenodecomponent.html#loading) property resolves to `false`, the loading indicator disappears and the children are loaded.
 
 ## Angular Tree Styling
 Using the [Ignite UI for Angular Theming](themes/index.md), we can greatly alter the tree appearance. First, in order for us to use the functions exposed by the theme engine, we need to import the `index` file in our style file: 
