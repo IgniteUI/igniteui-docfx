@@ -161,26 +161,27 @@ export class MyTreeViewComponent {
   public tree;
 
   findNode(valueKey: string) {
-    const comparer: (nodeData: any, node: IgxTreeNodeComponent) => boolean =
-      (data: any, node: IgxTreeNodeComponent) => nodeData.valueKey === data;
-    this.tree.findData(valueKey, comparer);
+    const comparer: IgxTreeSearchResolver =
+      (data: any, node: IgxTreeNodeComponent) => node.data.valueKey === data;
+    const matchingNodes: IgxTreeNode<{ [key: string]: any, valueKey: string }>[] = this.tree.findNodes(valueKey, comparer);
   }
 }
 ```
 ### Templating
 To create a reusable template for your nodes, declare `<ng-template>` **within `igx-tree`**. 
 ```html
- <igx-tree>
-    <igx-tree-node #myNode *ngFor="let node of data" [data]="node">
-        <ng-template *ngTemplateOutlet="nodeTemplate; context { $implicit: myNode }">
-        </ng-template>
+<igx-tree>
+    <igx-tree-node *ngFor="let node of data" [data]="node">
+        <ng-template *ngTemplateOutlet="#nodeTemplate; context: { $implicit: data }"></ng-template>
         <igx-tree-node *ngFor="let child of node.ChildCompanies" [data]="child">
-            {{ child.CompanyName }}                           
+            <ng-template *ngTemplateOutlet="#nodeTemplate; context: { $implicit: child}"></ng-template>
         </igx-tree-node>
-    </igx-tree-node>                      
-                   
-    <ng-template #nodeTemplate let-node>
-        <igx-combo type="line" [(ngModel)]="node.CompanyName" [displayKey]="'CompanyName'" [data]="data" width="220px"></igx-combo>
+    </igx-tree-node>
+    <ng-template #nodeTemplate let-data>
+        <div class="node-header company">
+            <igx-icon class="company__logo">{{ data.Logo }}</igx-icon>
+            <div class="company__name">{{ data.CompanyName }}</div>
+        </div>
     </ng-template>
 </igx-tree>
 ```
