@@ -11,10 +11,10 @@ In the Ignite UI for Angular category chart component, an Axis provides base pro
 
 ## Angular Axis Options Example
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-axis-options" 
-           alt="Angular Axis Options Example" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-axis-options"
+           alt="Angular Axis Options Example"
            github-src="charts/category-chart/axis-options">
 </code-view>
 

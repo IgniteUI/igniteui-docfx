@@ -1145,6 +1145,9 @@
       - name: Printing styles
         href: themes/misc/printing-styles.md
         new: false
+      - name: Bootstrap Theming
+        href: themes/misc/bootstrap-theming.md
+        new: true
 - name: Data Entry & Display
   header: true
   sortable: true

@@ -1,6 +1,6 @@
 ---
 title: Angular Data Chart | Data Visualization Tools |  Highlighting | Infragistics
-_description: Infragistics' Angular charts control allows you to highlight areas of the graph. Learn about Ignite UI for Angular highlighing features!
+_description: Infragistics' Angular charts control allows you to highlight areas of the graph. Learn about Ignite UI for Angular highlighting features!
 _keywords: Angular charts, data chart, highlighting, Ignite UI for Angular, Infragistics
 mentionedTypes: ['XamDataChart']
 ---
@@ -14,10 +14,10 @@ The Angular data chart component allows you to highlight the plotted series in t
 
 ## Angular Highlighting Example
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-series-highlighting" 
-           alt="Angular Highlighting Example" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-series-highlighting"
+           alt="Angular Highlighting Example"
            github-src="charts/data-chart/series-highlighting">
 </code-view>
 

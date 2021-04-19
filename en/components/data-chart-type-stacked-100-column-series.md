@@ -12,10 +12,10 @@ The Ignite UI for Angular stacked 100 column chart belongs to a group of categor
 
 ## Angular Stacked 100 Column Chart Example
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-stacked-100-column-series" 
-           alt="Angular Stacked 100 Column Chart Example" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-stacked-100-column-series"
+           alt="Angular Stacked 100 Column Chart Example"
            github-src="charts/data-chart/type-stacked-100-column-series">
 </code-view>
 

@@ -11,10 +11,10 @@ In the Angular data chart component's plot area, markers are visual elements dis
 
 ## Angular Markers Example
 
-<code-view style="height: 300px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-series-markers" 
-           alt="Angular Markers Example" 
+<code-view style="height: 300px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-series-markers"
+           alt="Angular Markers Example"
            github-src="charts/data-chart/series-markers">
 </code-view>
 

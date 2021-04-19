@@ -11,10 +11,10 @@ The Angular category chart component provides default tooltips for each type of 
 
 ## Angular Tooltip Templates Example
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-tooltip-template" 
-           alt="Angular Tooltip Templates Example" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-tooltip-template"
+           alt="Angular Tooltip Templates Example"
            github-src="charts/category-chart/tooltip-template">
 </code-view>
 

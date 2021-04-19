@@ -12,10 +12,10 @@ The Ignite UI for Angular stacked line chart belongs to a group of category char
 
 ## Angular Stacked Line Chart Example
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-stacked-line-series" 
-           alt="Angular Stacked Line Chart Example" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-stacked-line-series"
+           alt="Angular Stacked Line Chart Example"
            github-src="charts/data-chart/type-stacked-line-series">
 </code-view>
 

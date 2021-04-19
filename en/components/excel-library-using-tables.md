@@ -12,9 +12,9 @@ The Infragistics Angular Excel Engine's [`WorksheetTable`]({environment:dvApiBas
 <!--## Angular Using Tables Example
 
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/excel/excel-library-working-with-tables" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/excel/excel-library-working-with-tables"
            alt="Angular Using Tables Example" >
 </code-view>
 

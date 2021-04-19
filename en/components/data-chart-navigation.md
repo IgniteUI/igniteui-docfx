@@ -11,10 +11,10 @@ In the Angular data chart component, navigation is disabled by default. Once ena
 
 ## Angular Navigation Example
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-chart-navigation" 
-           alt="Angular Navigation Example" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-chart-navigation"
+           alt="Angular Navigation Example"
            github-src="charts/data-chart/chart-navigation">
 </code-view>
 

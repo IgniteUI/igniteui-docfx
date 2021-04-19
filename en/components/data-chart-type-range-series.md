@@ -11,10 +11,10 @@ This topic explains various types of range series in the Angular data chart comp
 
 ## Angular Range Series Example
 
-<code-view style="height: 400px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-range-series" 
-           alt="Angular Range Series Example" 
+<code-view style="height: 400px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-range-series"
+           alt="Angular Range Series Example"
            github-src="charts/data-chart/type-range-series">
 </code-view>
 

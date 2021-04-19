@@ -11,10 +11,10 @@ In the Ignite UI for Angular data chart component, you are able to add annotatio
 
 ## Angular Axis Annotations Example
 
-<code-view style="height: 450px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-axis-annotations" 
-           alt="Angular Axis Annotations Example" 
+<code-view style="height: 450px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-axis-annotations"
+           alt="Angular Axis Annotations Example"
            github-src="charts/data-chart/axis-annotations">
 </code-view>
 

@@ -11,10 +11,10 @@ Use the Angular map component's [`IgxGeographicPolylineSeriesComponent`]({enviro
 
 ## Angular Using Shape Polyline Series Example
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-type-shape-polyline-series" 
-           alt="Angular Using Shape Polyline Series Example" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-type-shape-polyline-series"
+           alt="Angular Using Shape Polyline Series Example"
            github-src="maps/geo-map/type-shape-polyline-series">
 </code-view>
 

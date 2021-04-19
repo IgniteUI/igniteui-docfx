@@ -11,10 +11,10 @@ Financial indicators are often used by traders to measure changes and to show tr
 
 ## Angular Financial Column Indicators Example
 
-<code-view style="height: 400px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-financial-column-indicators" 
-           alt="Angular Financial Column Indicators Example" 
+<code-view style="height: 400px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-financial-column-indicators"
+           alt="Angular Financial Column Indicators Example"
            github-src="charts/data-chart/type-financial-column-indicators">
 </code-view>
 

@@ -11,10 +11,10 @@ The Ignite UI for Angular step area chart belongs to a group of category charts 
 
 ## Angular Step Area Chart Example
 
-<code-view style="height: 400px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-category-step-area-series" 
-           alt="Angular Step Area Chart Example" 
+<code-view style="height: 400px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-category-step-area-series"
+           alt="Angular Step Area Chart Example"
            github-src="charts/data-chart/type-category-step-area-series">
 </code-view>
 

@@ -15,10 +15,10 @@ Polar series draw attention to uneven intervals or clusters of data. They are of
 
 ## Angular Polar Series Example
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-polar-series" 
-           alt="Angular Polar Series Example" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-polar-series"
+           alt="Angular Polar Series Example"
            github-src="charts/data-chart/type-polar-series">
 </code-view>
 

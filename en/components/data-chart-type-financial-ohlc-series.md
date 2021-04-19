@@ -11,10 +11,10 @@ The Ignite UI for Angular financial price chart in [`OHLC`]({environment:dvApiBa
 
 ## Angular Financial OHLC Chart Example
 
-<code-view style="height: 400px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-financial-ohlc-series" 
-           alt="Angular Financial OHLC Chart Example" 
+<code-view style="height: 400px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-financial-ohlc-series"
+           alt="Angular Financial OHLC Chart Example"
            github-src="charts/data-chart/type-financial-ohlc-series">
 </code-view>
 

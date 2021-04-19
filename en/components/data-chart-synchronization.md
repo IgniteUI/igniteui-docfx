@@ -1,6 +1,6 @@
 ---
 title: Angular Data Chart | Data Visualization Tools | Synchronization | Infragistics
-_description: Synchronize between multiple Infragistics' Angular charts controls including zooming, panning and crosshair events. Learn about our Ignite UI for Angular graph synchronization capabilies!
+_description: Synchronize between multiple Infragistics' Angular charts controls including zooming, panning and crosshair events. Learn about our Ignite UI for Angular graph synchronization capabilities!
 _keywords: Angular charts, data chart, synchronization, Ignite UI for Angular, Infragistics
 mentionedTypes: ['XamDataChart']
 ---
@@ -11,10 +11,10 @@ The Ignite UI for Angular data chart component allows for synchronization with r
 
 ## Angular Chart Synchronization Example
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-chart-synchronization" 
-           alt="Angular Chart Synchronization Example" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-chart-synchronization"
+           alt="Angular Chart Synchronization Example"
            github-src="charts/data-chart/chart-synchronization">
 </code-view>
 

@@ -11,10 +11,10 @@ This topic explains how to configure and set the built-in data validation rules.
 
 ## Angular Data Validation Example
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/excel/spreadsheet-data-validation" 
-           alt="Angular Data Validation Example" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/excel/spreadsheet-data-validation"
+           alt="Angular Data Validation Example"
            github-src="excel/spreadsheet/data-validation">
 </code-view>
 

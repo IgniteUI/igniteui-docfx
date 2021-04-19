@@ -11,10 +11,10 @@ The Ignite UI for Angular range column chart belongs to a group of range charts 
 
 ## Angular Range Column Chart Example
 
-<code-view style="height: 400px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-range-column-series" 
-           alt="Angular Range Column Chart Example" 
+<code-view style="height: 400px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-range-column-series"
+           alt="Angular Range Column Chart Example"
            github-src="charts/data-chart/type-range-column-series">
 </code-view>
 
