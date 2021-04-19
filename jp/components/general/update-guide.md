@@ -46,7 +46,7 @@ ng update @angular/cli
 ### テーマ:
 * 重大な変更:
     * `IgxAvatar` テーマが簡略化されました。テーマ パラメーター (`igx-avatar-theme`) の数が大幅に削減され、接頭辞付きのパラメーター (`icon-*`, `initials-*`, `image-*`) と接尾辞付きのパラメーター (`border-radius-*`) が含まれなくなりました。`ng update` で実行された更新は、既存のボタン テーマを移行しますが、接頭辞付きと接尾辞付きのパラメーターがないことを考慮して、いくつかの追加の調整が必要になる場合があります。
-    
+
     既存のタイプ固有のアバター テーマを以下のように変更する必要があります。
 
     例えば、次の例は
@@ -127,11 +127,12 @@ ng update @angular/cli
             @include igx-css-vars($my-outlined-button);
         }
         ```
-    ご覧のとおり、`igx-button-theme` パラメーターはボタン タイプごとに同じ名前になっているため、タイプごとに異なる色を使用するには、ボタン テーマのスコープを CSS セレクターに設定する必要があります。
 
-    ここでは、`igx-button-theme` のすべての[利用可能なプロパティ](https://jp.infragistics.com/products/ignite-ui-angular/docs/sass/latest/index.html#function-igx-button-theme)を確認できます。
+ご覧のとおり、`igx-button-theme` パラメーターはボタン タイプごとに同じ名前になっているため、タイプごとに異なる色を使用するには、ボタン テーマのスコープを CSS セレクターに設定する必要があります。
 
-    * `igx-typography` mixin は `igx-core` に暗黙的に含まれなくなりました。タイポグラフィ スタイルを使用するには、`igx-core` の後と `igx-theme` の前に mixin を明示的に含める必要があります。
+ここでは、`igx-button-theme` のすべての[利用可能なプロパティ](https://jp.infragistics.com/products/ignite-ui-angular/docs/sass/latest/index.html#function-igx-button-theme)を確認できます。
+
+* `igx-typography` mixin は `igx-core` に暗黙的に含まれなくなりました。タイポグラフィ スタイルを使用するには、`igx-core` の後と `igx-theme` の前に mixin を明示的に含める必要があります。
 
     ```scss
     // in styles.scss
@@ -229,7 +230,6 @@ The [**IgxTabsComponent**]({environment:angularApiUrl}/classes/igxtabscomponent.
     [ツールバー トピック](../grid/toolbar.md)で説明されているように、ツールバー機能を有効にするための推奨される方法に従うことをお勧めします。
     * `igxToolbarCustomContent` ディレクティブが削除されました。移行により、テンプレート コンテンツがツールバー コンテンツ内に移動しますが、テンプレート バインディングは解決されません。移行後は、必ずテンプレート ファイルを確認してください。
     * ツールバー コンポーネントの API はリファクタリング中に変更され、古いプロパティの多くが削除されました。残念ながら、これらの変更に対して適切な移行を行うことはとても複雑であるため、エラーはプロジェクト レベルで処理する必要があります。
-
 
 ## 10.0.x から 10.1.x の場合:
 * IgxGrid、IgxTreeGrid、IgxHierarchicalGrid
