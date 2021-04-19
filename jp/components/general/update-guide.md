@@ -158,7 +158,7 @@ ng update @angular/cli
     | Bootstrap | $bootstrap-typeface | $bootstrap-type-scale |
     | Indigo | $indigo-typeface | $indigo-type-scale |
 
-### IgxBottomNav component
+### IgxBottomNav コンポーネント
 
 The [**IgxBottomNavComponent**]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html) was completely refactored in order to provide more flexible and descriptive way to define tab headers and contents. It is recommended that you update via **ng update** in order to migrate the existing **igx-bottom-nav** definitions to the new ones.
 
