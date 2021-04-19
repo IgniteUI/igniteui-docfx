@@ -1,14 +1,15 @@
 ---
-title: Angular Tree Component | Ignite UI for Angular | Infragistics
-_description: The Ignite UI for Angular Tree allows rendering hierarchical data in an easy-to-navigate view and supports features like selection and load on demand. Try it for FREE
+title: Angular Tree Component - Ignite UI for Angular
+_description: With Ignite UI for Angular Tree component, you can display hierarchical data in a tree-view structure, customize nodes easily and load data on demand. Try for FREE
 _keywords: angular tree, angular tree component, ignite ui for angular, UI controls, infragistics
 ---
 
 # Angular Tree Component Overview
 
-The Angular Tree Component allows users to represent hierarchical data in a tree fashion, maintaining parent-child relationships. It's primary purpose is to navigate within nested data structures.
+The Angular Tree Component allows users to represent hierarchical data in a tree fashion, maintaining parent-child relationships. Its primary purpose is to navigate within nested data structures. The Ignite UI for Angular Tree Component provides also load on demand capabilities, bi-state and cascading selection of items, built-in support for checkboxes and more.
 
 ## Angular Tree Example
+In this basic Angular Tree example, you can see how to define an `igx-tree` and its nodes by specifying the node hierarchy and iterating through a data set.
 
 <code-view style="height: 513px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -194,7 +195,7 @@ Additionally, by using the [expandIndicator]({environment:angularApiUrl}/classes
 </igx-tree>
 ```
 
-## Selection
+## Angular Tree Selection
 In order to setup node selection in the `igx-tree`, you just need to set its [selection]({environment:angularApiUrl}/classes/igxtreecomponent.html#selection) property. This property accepts the following three modes: **None**, **Bi-State** and **Cascading**. Below we will take a look at each of them in more detail.
 ### None
 In the `igx-tree` by default node selection is disabled. Users cannot select or deselect a row through UI interaction, but these actions can still be completed through the provided API method.
@@ -212,6 +213,10 @@ To enable cascade node selection in the `igx-tree` just set the selection proper
 ```
 In this mode a parent's selection state entirely depends on the selection state of its children. When a parent has some selected and some deselected children, its checkbox is in an indeterminate state.
 
+### Angular Tree Checkbox
+The Angular Tree component provides built-in support for check boxes, allowing users to select more than one item.
+
+The TreeView check boxes also have a tri-state mode, which is applicable only for parent nodes. In this mode, the parent node will go into the indeterminate state when the child nodes are partially checked.
 ## Keyboard Navigation
 Keyboard navigation in IgxTree provides a rich variety of keyboard interactions for the user. This functionality is enabled by default and allows to navigate through the nodes.
 
@@ -239,9 +244,9 @@ When selection is enabled, end-user selection of nodes is only allowed through t
  - <kbd>Click</kbd> - when performed on the node checkbox toggles selection of the node if selection is enabled. Otherwise, focuses the node
  - <kbd>Shift + Click</kbd> - when performed on the node checkbox toggles selection of all nodes between the active one and the one clicked while holding Shift if selection is enabled
 
-## Load On Demand
+## Angular Tree Load On Demand
 
-The Ignite UI for Angular IgxTree can be rendered in such way that it requires the minimal amount of data to be retrieved from the server so the user could see it as quickly as possible. Then, only after the user expands a node, the children for that particular parent node will be loaded. This mechanism, also known as Load on Demand, can be easily configured to work with any remote data.
+The Ignite UI for Angular IgxTree can be rendered in such way that it requires the minimal amount of data to be retrieved from the server so the user could see it as quickly as possible. With this dynamic data loading approach, only after the user expands a node, the children for that particular parent node will be retrieved. This mechanism, also known as Load on Demand, can be easily configured to work with any remote data.
 ### Demo
 <code-view style="height: 513px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
