@@ -331,8 +331,8 @@ class MySummary extends IgxNumberSummaryOperand {
 
 }
 
-### Formatting summaries
-By default, summary results, produced by the built-in summary operands, are localized and formatted according to the grid [`locale`]({environment:angularApiUrl}/classes/igxgridcomponent.html#locale) and column [`pipeArgs`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#pipeArgs). When using custom operands, the `locale` and `pipeArgs` are not applied. If you want to change the default appearance of the summary results, you may format them using the [`summaryFormatter`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#summaryFormatter) property.
+### 集計のフォーマット
+デフォルトでは、組み込みの集計オペランドによって生成される集計結果は、グリッド [`locale`]({environment:angularApiUrl}/classes/igxgridcomponent.html#locale) および列 [`pipeArgs`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#pipeArgs) に従ってローカライズおよびフォーマットされます。カスタム オペランドを使用する場合、`locale` と `pipeArgs` は適用されません。集計結果のデフォルトの外観を変更する場合は、[`summaryFormatter`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#summaryFormatter) プロパティを使用してフォーマットできます。
 
 ```typescript
 public dateSummaryFormat(summary: IgxSummaryResult, summaryOperand: IgxSummaryOperand): string {
