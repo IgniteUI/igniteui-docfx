@@ -475,6 +475,9 @@
     - name: State Persistence
       href: hierarchicalgrid/state-persistence.md
       new: true
+- name: Tree
+  href: tree.md
+  new: true
 - name: List View
   href: list.md
 - name: Combo
