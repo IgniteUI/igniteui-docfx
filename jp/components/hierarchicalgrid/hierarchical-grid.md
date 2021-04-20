@@ -393,6 +393,9 @@ $custom-theme: igx-grid-theme(
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-styling" >
 </code-view>
 
+>[!NOTE]
+>The sample will not be affected by the selected global theme from `Change Theme`.
+
 
 ## 既知の問題と制限
 
