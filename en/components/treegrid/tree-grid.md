@@ -380,6 +380,9 @@ Don't forget to include the themes in the same way as it was demonstrated above.
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-style" alt="Angular tree grid styling demo">
 </code-view>
 
+>[!NOTE]
+>The sample will not be affected by the selected global theme from `Change Theme`.
+
 <div class="divider--half"></div>
 
 ## Known Limitations
