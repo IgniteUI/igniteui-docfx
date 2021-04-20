@@ -1,19 +1,19 @@
 ---
-title: Bootstrap テーマ
+title: Bootstrap のテーマ
 _description: 
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ、テーマ 
 _language: ja
 ---
 
-# Bootstrap Theming
-<p class="highlight">The Ignite UI for Angular theming engine provides an opportunity to be used in conjunction with other component libraries such as the popular [`NG Bootstrap`](https://ng-bootstrap.github.io/) based on Bootstrap’s markup and CSS.</p>
+# Bootstrap のテーマ
+<p class="highlight">Ignite UI for Angular テーマ エンジンは、Bootstrap のマークアップと CSS に基づいた人気のある [`NG Bootstrap`](https://ng-bootstrap.github.io/) などの他のコンポーネント ライブラリと組み合わせて使用できます。</p>
 <div class="divider--half"></div>
 
-## Overview
+## 概要
 
-The Ignite UI for Angular is a complete set of Material-based UI Widgets, Components & Sketch UI kits and supporting directives for Angular that enables developers to build modern high-performance apps. Our theming engine is easy to use and allows theming granularity on different levels from a single component, multiple components, or the entire suite. Therefore, some users want to take advantage of it not only with Ignite UI components but also with other libraries. In this article, we will look through the usage of Ignite UI together with Ng Bootstrap components.
+Ignite UI for Angular は、マテリアル ベースの UI ウィジェット、コンポーネント、および Sketch UI キットの完全なセットで、Angular のディレクティブをサポートします。テーマ エンジンは使いやすく、単一のコンポーネント、複数のコンポーネント、またはスイート全体からさまざまなレベルでテーマを設定できます。そのため、一部のユーザーが Ignite UI コンポーネントだけでなく他のライブラリでも利用できます。このトピックでは、Ignite UI と Ng Bootstrap コンポーネントの使用方法について説明します。
 
-## Demo
+## デモ
 
 <code-view style="height: 1000px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -22,17 +22,17 @@ The Ignite UI for Angular is a complete set of Material-based UI Widgets, Compon
 
 <div class="divider--half"></div>
 
-## Basic Usage
+## 基本的な使用方法
 
-### Add NG Bootstrap
+### NG Bootstrap の追加
 
-If you are using Angular CLI and have an existing Angular project, you can install NG Bootstrap with the command below: 
+Angular CLI を使用しており、既存の Angular プロジェクトがある場合、以下のコマンドで NG Bootstrap をインストールできます。 
 
 ```cmd 
 ng add @ng-bootstrap/ng-bootstrap
 ```
 
-Once installed, you have to import the NG Bootstrap main module into your *app.module.ts* file: 
+インストール後、NG Bootstrap メイン モジュールを *app.module.ts* ファイルにインポートする必要があります。 
 
 ```ts
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
@@ -46,17 +46,17 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 )}
 ```
 
-At this point your applications is ready to use the NG Bootstrap components. You can find more information about using the Bootstrap library at their [`official documentation`](https://ng-bootstrap.github.io/#/getting-started).
+これで、アプリケーションで NG Bootstrap コンポーネントを使用する準備が整いました。Bootstrap ライブラリの使用方法の詳細については、[`公式ドキュメント`](https://ng-bootstrap.github.io/#/getting-started)を参照してください。
 
-### Add Ignite UI for Angular 
+### Ignite UI for Angular の追加 
 
-To install the Ignite UI for Angular package along with all of its dependencies, font imports, and styles references, run the following command in your project:
+Ignite UI for Angular パッケージをすべての依存関係、フォント インポート、およびスタイル参照と共にインストールするには、プロジェクトで以下のコマンドを実行します。
 
 ```cmd
 ng add igniteui-angular
 ```
 
-Then, you can use the Ignite UI components by importing their respective modules in your *app.module.ts* file:
+次に、*app.module.ts* ファイルにそれぞれのモジュールをインポートして Ignite UI コンポーネントを使用できます。
 
 ```ts
 // manually addition of the Igx Avatar component 
@@ -71,29 +71,29 @@ import { IgxAvatarModule } from 'igniteui-angular';
 )}
 ```
 
-Follow our [`Getting Started`](../../general/getting-started.md) topic for a complete introduction about using Ignite UI for Angular in existing projects. Further information on how to import and use each of our components along with guided examples can be found in the component's documentation.
+既存のプロジェクトで Ignite UI for Angular を使用する方法については、[`「作業の開始」`](../../general/getting-started.md)トピックを参照してください。各コンポーネントをインポートして使用する方法の詳細およびガイド付きの例は、コンポーネントのドキュメントを参照してください。
 
-## Components
+## コンポーネント
 
-Let's see how our demo sample is done. It is a mixture of Ignite UI and NG Bootstrap components, styled to fit nicely in one application. The navigation in our example is created using the bootstrap [`navbar`](https://getbootstrap.com/docs/4.0/components/navbar/) together with [`igx-buttons`]({environment:angularApiUrl}/classes/igxbuttondirective.html) and [`igx-avatar`]({environment:angularApiUrl}/classes/igxavatarcomponent.html). The [`dropdown`](https://ng-bootstrap.github.io/#/components/dropdown/examples) under the Campaigns button is also taken from the bootstrap library. Below the nav, we are using the [`igx-card`]({environment:angularApiUrl}/classes/igxcardcomponent.html) component to display some statistics. Within the cards, we have placed multiple items - [`igx-avatars`]({environment:angularApiUrl}/classes/igxavatarcomponent.html) and [`igx-icons`]({environment:angularApiUrl}/classes/igxiconcomponent.html) as well as bootstrap [`buttons`](https://getbootstrap.com/docs/4.0/components/buttons/) and [`ngb-ratings`](https://ng-bootstrap.github.io/#/components/rating/examples). 
+デモ サンプルの実行方法を見てみましょう。Ignite UI コンポーネントと NG Bootstrap コンポーネントを組み合わせたもので、1 つのアプリケーションにうまく収まります。この例のナビゲーションは、[`igx-buttons`]({environment:angularApiUrl}/classes/igxbuttondirective.html) および [`igx-avatar`]({environment:angularApiUrl}/classes/igxavatarcomponent.html) とともに bootstrap [`navbar`](https://getbootstrap.com/docs/4.0/components/navbar/) を使用して作成されます。[Campaigns] ボタンの下の[`ドロップダウン`](https://ng-bootstrap.github.io/#/components/dropdown/examples)も bootstrap ライブラリから取得されます。ナビゲーションの下で、[`igx-card`]({environment:angularApiUrl}/classes/igxcardcomponent.html) コンポーネントを使用して統計を表示します。カード内に複数の項目を配置しました - [`igx-avatars`]({environment:angularApiUrl}/classes/igxavatarcomponent.html)、[`igx-icons`]({environment:angularApiUrl}/classes/igxiconcomponent.html)、[`buttons`](https://getbootstrap.com/docs/4.0/components/buttons/) および [`ngb-ratings`](https://ng-bootstrap.github.io/#/components/rating/examples)。 
 
 <img src="../../../images/igx-cards.png" width="100%">
 
-Clicking on the `More` buttons, you will see the [`igx-dialog`]({environment:angularApiUrl}/classes/igxdialogcomponent.html):
+`[その他]` ボタンをクリックすると、[`igx-dialog`]({environment:angularApiUrl}/classes/igxdialogcomponent.html) が表示されます。
 
 <img src="../../../images/igx-dialog.png" width="100%">
 
-Next, we have added an [`ngb-accordion`](https://ng-bootstrap.github.io/#/components/accordion/examples) showing information about credit cards. Inside its content, there is an [`igx-list`]({environment:angularApiUrl}/classes/igxlistcomponent.html) and `igx-button`.
+次に、クレジット カードに関する情報を表示する [`ngb-accordion`](https://ng-bootstrap.github.io/#/components/accordion/examples) を追加しました。コンテンツの中には、[`igx-list`]({environment:angularApiUrl}/classes/igxlistcomponent.html) と `igx-button` があります。
 
 <img src="../../../images/ngb-accordion.png" width="100%">
 
-Finally, we inserted an Ignite UI for Angular `icon button` in the top right corner, that changes the theme of the whole app:  
+最後に、右上隅に Ignite UI for Angular `アイコン ボタン`を挿入し、アプリ全体のテーマを変更します。  
 
 <img src="../../../images/dark-variant.png" width="100%">
 
-## Styling
+## スタイル設定
 
-To get started with styling components using the Ignite UI theming engine, create an scss file named of your choice that would be the base file for your global theme. We will call this file `_variables.scss`. Next, we need to import the `index` file, where all the theme functions and component mixins live: 
+Ignite UI テーマ エンジンを使用してコンポーネントのスタイル設定を開始するには、グローバル テーマのベース ファイルとなる scss ファイルを作成します。このファイルを `_variables.scss` と呼びます。次に、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。 
 
 ```scss
 // _variables.scss
@@ -101,9 +101,9 @@ To get started with styling components using the Ignite UI theming engine, creat
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-### Palettes
+### パレット
 
-The Bootstrap library makes use of a Sass map called [`$theme-colors`](https://getbootstrap.com/docs/4.0/getting-started/theming/#theme-colors) to provide a palette composed of eight colors:
+Bootstrap ライブラリは、[`$theme-colors`](https://getbootstrap.com/docs/4.0/getting-started/theming/#theme-colors) と呼ばれる Sass マップを使用して、8 カラーで構成されるパレットを提供します。
 
 ```scss
 $theme-colors: (
@@ -118,7 +118,7 @@ $theme-colors: (
 );
 ```
 
-Ignite UI for Angular's [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) function generates a color palette map including `primary`, `secondary`, `grays`, `info`, `success`, `warn`, and `error` colors and their color variants. Our predefined bootstrap palette in turn consists of seven colors:
+Ignite UI for Angular の [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) 関数は、`primary`、`secondary`、`grays`、`info`、`success`、`warn`、`error` の各カラーとそのカラー バリアントを含むカラー パレット マップを生成します。定義済みの bootstrap パレットは 7 カラーで構成されます。
 
 ```scss
 $bootstrap-palette: igx-palette(
@@ -132,9 +132,9 @@ $bootstrap-palette: igx-palette(
 );
 ```
 
-As you can see most of the colors in the Bootstrap palette overlap with the colors defined in the Bootstrap palette of Ignite UI for Angular. Hence, we can simply map the Bootstrap theme colors to our light or dark bootstrap palette colors.
+ご覧の通り、Bootstrap パレットのほとんどのカラーは、Ignite UI for Angular の Bootstrap パレットで定義されたカラーと重複しています。したがって、Bootstrap テーマのカラーを light (明るい) または dark (暗い) bootstrap palette カラーにマップできます。
 
-First, we are going to define Sass variables that extract values from the [`$light-bootstrap-palette`]({environment:sassApiUrl}/index.html#variable-light-bootstrap-palette):
+最初に、[`$light-bootstrap-palette`]({environment:sassApiUrl}/index.html#variable-light-bootstrap-palette) から値を抽出する Sass 変数を定義します。
 
 ```scss
 // Colors from the Ignite UI light bootstrap color palette
@@ -146,7 +146,7 @@ $light-warning: igx-color($light-bootstrap-palette, "warn");
 $light-danger: igx-color($light-bootstrap-palette, "error");
 ```
 
-After that, we will create a new color palette which will be used for the dark mode of the sample:
+その後、サンプルの dark モードに使用する新しいカラー パレットを作成します。
 
 ```scss
 // Defining custom color palette
@@ -163,19 +163,19 @@ $dark-secondary: igx-color($custom-dark-palette, "secondary");
 ```
 
 >[!NOTE]
->Visit our [`palettes with Sass`](../sass/palettes.md) section to discover more about the palettes provided by Ignite UI for Angular and learn how to create a new one.
+>Ignite UI for Angular が提供するパレットと新しいパレットの作成方法については、[`Sass のパレット`](../sass/palettes.md) セクションを参照してください。
 
-### Themes
+### テーマ
 
-In order to switch between `light` and `dark` mode, we are adding a custom class to the `host` element which will be changed on button click. In our stylesheet file, we are going to include different color palettes scoped to each class.
+`Light` モードと `Dark` モードを切り替えるために、ボタン クリックで変更されるカスタム要素を `host` 要素に追加します。スタイルシート ファイルに、各クラスにスコープされた異なるカラー パレットを含めます。
 
-#### Light mode
+#### Light モード
 
-Ignite UI for Angular comes with predefined themes inspired by the [Bootstrap 4](https://getbootstrap.com/) library. To use them, first, you have to include our `igx-core` mixin and then our built-in theme mixin - [igx-bootstrap-light-theme]({environment:sassApiUrl}/index.html#mixin-igx-bootstrap-light-theme). We will also make use of our predefined bootstrap palette - [$light-bootstrap-palette]({environment:sassApiUrl}/index.html#variable-light-bootstrap-palette).
+Ignite UI for Angular には、[Bootstrap 4](https://getbootstrap.com/) ライブラリに基づいて構築された定義済みのテーマがあります。これらを使用するには、まず `igx-core` ミックスインを含めて、次に定義済みテーマ ミックスイン ([igx-bootstrap-light-theme]({environment:sassApiUrl}/index.html#mixin-igx-bootstrap-light-theme)) を含める必要があります。定義済みの bootstrap パレット ([$light-bootstrap-palette]({environment:sassApiUrl}/index.html#variable-light-bootstrap-palette)) も使用します。
 
-The background color for our application needs to be set explicitly on the host element. In our sample, we want to use the `surface` color of the passed palette.
+アプリケーションの背景色は、host 要素で明示的に設定する必要があります。サンプルでは、渡されたパレットの `surface` カラーを使用します。
 
-At this point we have to modify the Bootstrap `$theme-colors` map with the Sass variables we created earlier:
+この時点で、Bootstrap の `$theme-colors` マップを前に作成した Sass 変数で変更する必要があります。
 
 ```scss
 // Make sure you always include the igx-core mixin first
@@ -203,7 +203,7 @@ At this point we have to modify the Bootstrap `$theme-colors` map with the Sass 
 }
 ```
 
-The `light` and `dark` colors from the `$theme-colors` map, which don't have corresponding values in the Ignite UI palettes, can also be replaced with values at our discretion. For instance: 
+Ignite UI パレットに対応する値がない `$theme-colors` マップの `light` カラーと `dark` カラーは、当社の任意により、他の値に置き換えることができます。次に例を示します。 
 
 ```scss
 $custom-light: igx-color($light-bootstrap-palette, "grays", 100);
@@ -221,11 +221,11 @@ $custom-dark: igx-color($light-bootstrap-palette, "grays", 800);
 }
 ```
 
-#### Dark mode
+#### Dark モード
 
-For our dark variant, we are going to use our newly created `$custom-dark-palette`. We have to include it in the `dark` class styles and also modify the `$theme-colors` map with the new values. 
+Dark バリアントには、新しく作成した `$custom-dark-palette` を使用します。`dark` クラス スタイルに追加し、`$theme-colors` マップを新しい値で変更する必要があります。 
 
-All components in Ignite UI for Angular use colors from the passed palette, therefore they fit nicely in the dark mode without any additional adjustments. However, we have to do some more styling changes for the ng-bootstrap components:
+Ignite UI for Angular のすべてのコンポーネントは渡されたパレット カラーを使用するため、追加の調整なしで dark モードにうまくフィットします。ただし、ng-bootstrap コンポーネントのスタイル設定を変更する必要があります。
 
 ```scss
 :host {
@@ -284,7 +284,7 @@ All components in Ignite UI for Angular use colors from the passed palette, ther
 }
 ```
 
-Lastly, we need to import the Bootstrap library - *always import it at the end!*
+最後に、Bootstrap ライブラリをインポートする必要があります。**常に最後にインポートしてください**。
 
 ```scss
 :host {
@@ -296,15 +296,15 @@ Lastly, we need to import the Bootstrap library - *always import it at the end!*
 }
 ```
 
-Once we are done with modifying the `$theme-colors` map, the bootstrap components will already use the colors from the igx `$light-bootstrap-palette` for the light mode, and `$custom-dark-palette` for the dark one.
+`$theme-colors` マップの変更終了後、bootstrap コンポーネントはすでに igx `$light-bootstrap-palette` のカラーを light モードに使用し、`$custom-dark-palette` を dark モードに使用します。
 
 >[!WARNING]
->Be sure to place the above code inside the `::ng-deep` selector to `penetrate` the [`Emulated`](../sass/component-themes.md#view-encapsulation) ViewEncapsulation.
+>[`Emulated`](../sass/component-themes.md#表示のカプセル化) ViewEncapsulation を`解除する`ために、上記のコードを `::ng-deep` セレクター内に配置してください。
 
 
-### Generate class
+### クラスの生成
 
-The bootstrap `navbar` uses CSS classes for its background color. In our sample, we want that color to change according to the selected theme, hence we are going to use the `igx-color-classes` mixin. It will generate CSS class names for all colors for a given property and color palette, with optional prefix and suffix attached to the class name. For the demo, we will include the mixin twice - once for the light mode with the respective `$light-bootstrap-palette` as a first value and second time for the dark mode with the `$custom-dark-palette`:
+Bootstrap `navbar` は背景色に CSS クラスを使用します。サンプルでは、選択したテーマに応じてカラーを変更するため、`igx-color-classes` ミックスインを使用します。指定したプロパティおよびカラー パレットのすべてのカラーの CSS クラス名を生成し、オプションでプレフィックスとサフィックスをクラス名に添付します。デモでは、ミックスインを 2 回使用します。1 回目はそれぞれの `$light-bootstrap-palette` を最初の値として使用する light モード、2 回目は `$custom-dark-palette` を使用する dark モードです。
 
 ```scss
 :host {
@@ -326,11 +326,11 @@ The bootstrap `navbar` uses CSS classes for its background color. In our sample,
 }
 ```
 
-Then, add a CSS class to your navbar component following the pattern "bg - color from the palette - color variant". In our sample app, we are using `bg-grays-200`.
+次に、「bg-パレットのカラー-カラー バリアント」パターンに従って CSS クラスを navbar コンポーネントに追加します。サンプル アプリでは `bg-grays-200` を使用しています。
 
-### Typography
+### タイポグラフィ
 
-Ignite UI for Angular exposes four default type scales for each of its themes, which can be used inside the [`igx-typography`]({environment:sassApiUrl}/index.html#mixin-igx-typography) mixin to define the global typography styles of an application. In our example, we are going to apply the bootstrap predifined `typeface` and `type-scale` but you can create custom ones if you wish. 
+Ignite UI for Angular は、テーマごとに 4 つのデフォルト タイプ スケールを公開します。これは、[`igx-typography`]({environment:sassApiUrl}/index.html#mixin-igx-typography) ミックスイン内でアプリケーションのグローバル タイポグラフィ スタイルを定義するために使用できます。この例では、bootstrap で定義済みの `typeface` および `type-scale` を適用しますが、必要に応じてカスタムの書体を作成できます。 
 
 ```scss
 :host {
@@ -338,30 +338,30 @@ Ignite UI for Angular exposes four default type scales for each of its themes, w
 }
 ```
 
-## API References
+## API リファレンス
 <div class="divider--half"></div>
 
-* [Light Bootstrap Palette]({environment:sassApiUrl}/index.html#variable-light-bootstrap-palette)
-* [Dark Bootstrap Palette]({environment:sassApiUrl}/index.html#variable-dark-bootstrap-palette)
-* [Light Bootstrap Theme]({environment:sassApiUrl}/index.html#mixin-igx-bootstrap-light-theme)
-* [Dark Bootstrap Theme]({environment:sassApiUrl}/index.html#mixin-igx-bootstrap-dark-theme)
+* [Light Bootstrap パレット]({environment:sassApiUrl}/index.html#variable-light-bootstrap-palette)
+* [Dark Bootstrap パレット]({environment:sassApiUrl}/index.html#variable-dark-bootstrap-palette)
+* [Light Bootstrap テーマ]({environment:sassApiUrl}/index.html#mixin-igx-bootstrap-light-theme)
+* [Dark Bootstrap テーマ]({environment:sassApiUrl}/index.html#mixin-igx-bootstrap-dark-theme)
 * [Palette Function]({environment:sassApiUrl}/index.html#function-igx-palette)
 * [Typography Mixin]({environment:sassApiUrl}/index.html#mixin-igx-typography)
 
-Related topics: 
+関連トピック: 
 
-* [Palettes](../sass/palettes.md)
-* [Component Themes](../sass/component-themes.md)
-* [Typography](../sass/typography.md)
-* [Avatar Component](../../avatar.md)
-* [Button Component](../../button.md)
-* [Dialog Component](../../dialog.md)
-* [Icon Component](../../icon.md)
-* [List Component](../../list.md)
+* [パレット](../sass/palettes.md)
+* [コンポーネント テーマ](../sass/component-themes.md)
+* [タイポグラフィ](../sass/typography.md)
+* [Avatar コンポーネント](../../avatar.md)
+* [Button コンポーネント](../../button.md)
+* [Dialog コンポーネント](../../dialog.md)
+* [Icon コンポーネント](../../icon.md)
+* [List コンポーネント](../../list.md)
 
-## Additional Resources
+## その他のリソース
 <div class="divider--half"></div>
 
-Our community is active and always welcoming to new ideas.
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+コミュニティに参加して新しいアイデアをご提案ください。
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
