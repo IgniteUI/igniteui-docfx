@@ -48,7 +48,12 @@ The Excel Exporter service can export data to excel from the @@igxName. The data
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-    <!-- todo -->
+
+<code-view style="height: 800px;" 
+        data-demos-base-url="{environment:demosBaseUrl}" 
+        iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-export" alt="Angular Excel Exporter Example">
+</code-view>
+
 }
 
 <div class="divider--half"></div>
@@ -92,7 +97,7 @@ import { IgxExcelExporterService, IgxExcelExporterOptions } from "igniteui-angul
 import { @@igxNameComponent } from "igniteui-angular";
 ...
 
-@ViewChild("@@igObjectRef") public @@igObjectRef: IgxGridComponent;
+@ViewChild("@@igObjectRef") public @@igObjectRef: @@igxNameComponent;
 
 constructor(private excelExportService: IgxExcelExporterService) {
 }
@@ -151,7 +156,25 @@ When you are exporting data from the @@igComponent component, the export process
 @@if (igxName === 'IgxGrid') {
 |Limitation|Description|
 |--- |--- |
+|Max worksheet size|The maximum worksheet size supported by Excel is 1,048,576 rows by 16,384 columns.|
 |Exporting multi column headers|The excel exporter service doesn't support exporting @@igComponent with multi column headers.|
+}
+
+@@if (igxName === 'IgxTreeGrid') {
+|Limitation|Description|
+|--- |--- |
+|Hierarchy levels|The excel exporter service can create up to 8 levels of hierarchy.|
+|Max worksheet size|The maximum worksheet size supported by Excel is 1,048,576 rows by 16,384 columns.|
+|Exporting multi column headers|The excel exporter service doesn't support exporting @@igComponent with multi column headers.|
+}
+
+@@if (igxName === 'IgxHierarchicalGrid') {
+|Limitation|Description|
+|--- |--- |
+|Hierarchy levels|The excel exporter service can create up to 8 levels of hierarchy.|
+|Max worksheet size|The maximum worksheet size supported by Excel is 1,048,576 rows by 16,384 columns.|
+|Exporting multi column headers|The excel exporter service doesn't support exporting @@igComponent with multi column headers.|
+|Exporting pinned columns|In the exported Excel file, the pinned columns will not be frozen but will be displayed in the same order as they appear in the grid.|
 }
 
 > [!NOTE]
