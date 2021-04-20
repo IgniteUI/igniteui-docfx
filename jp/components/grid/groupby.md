@@ -440,6 +440,9 @@ $custom-theme: igx-grid-theme(
            iframe-src="{environment:demosBaseUrl}/grid/grid-groupby-styling" >
 </code-view>
 
+>[!NOTE]
+>The sample will not be affected by the selected global theme from `Change Theme`.
+
 
 ## 既知の制限
 

@@ -336,7 +336,6 @@ Don't forget to include the theme in the same way as it was demonstrated above.
            iframe-src="{environment:demosBaseUrl}/grid/grid-resize-line-styling-sample" >
 </code-view>
 
-<div class="divider--half"></div>
 }
 @@if (igxName === 'IgxTreeGrid') {
 
@@ -345,7 +344,6 @@ Don't forget to include the theme in the same way as it was demonstrated above.
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-resize-line-styling" >
 </code-view>
 
-<div class="divider--half"></div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
@@ -354,8 +352,10 @@ Don't forget to include the theme in the same way as it was demonstrated above.
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-resize-line-styling" >
 </code-view>
 
-<div class="divider--half"></div>
 }
+
+>[!NOTE]
+>The sample will not be affected by the selected global theme from `Change Theme`.
 
 ## API References
 <div class="divider--half"></div>

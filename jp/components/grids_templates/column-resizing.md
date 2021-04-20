@@ -337,7 +337,6 @@ $custom-grid-theme: igx-grid-theme(
            iframe-src="{environment:demosBaseUrl}/grid/grid-resize-line-styling-sample" >
 </code-view>
 
-<div class="divider--half"></div>
 }
 @@if (igxName === 'IgxTreeGrid') {
 
@@ -346,7 +345,6 @@ $custom-grid-theme: igx-grid-theme(
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-resize-line-styling" >
 </code-view>
 
-<div class="divider--half"></div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
@@ -355,8 +353,10 @@ $custom-grid-theme: igx-grid-theme(
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-resize-line-styling" >
 </code-view>
 
-<div class="divider--half"></div>
 }
+
+>[!NOTE]
+>The sample will not be affected by the selected global theme from `Change Theme`.
 
 ## API リファレンス
 <div class="divider--half"></div>

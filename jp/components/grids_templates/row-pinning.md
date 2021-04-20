@@ -465,6 +465,9 @@ Internet Explorer 11 のコンポーネントをスタイル設定するには�
 
 }
 
+>[!NOTE]
+>The sample will not be affected by the selected global theme from `Change Theme`.
+
 ## API リファレンス
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 * [IgxRowComponent]({environment:angularApiUrl}/classes/igxrowcomponent.html)

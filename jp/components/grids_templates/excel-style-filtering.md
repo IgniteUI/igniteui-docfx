@@ -845,6 +845,8 @@ $custom-drop-down: igx-drop-down-theme(
 
 }
 
+>[!NOTE]
+>The sample will not be affected by the selected global theme from `Change Theme`.
 <div class="divider--half"></div>
 
 ## API リファレンス
