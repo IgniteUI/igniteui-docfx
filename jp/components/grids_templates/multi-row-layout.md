@@ -245,6 +245,8 @@ $my-custom-schema: extend($light-schema, (
            iframe-src="{environment:demosBaseUrl}/grid/grid-multi-row-layout-styling" >
 </code-view>
 
+>[!NOTE]
+>The sample will not be affected by the selected global theme from `Change Theme`.
 
 
 ## API リファレンス

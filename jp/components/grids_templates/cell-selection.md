@@ -292,7 +292,6 @@ $custom-grid-theme: igx-grid-theme(
            iframe-src="{environment:demosBaseUrl}/grid/grid-multi-cell-selection-style" >
 </code-view>
 
-<div class="divider--half"></div>
 }
 
 @@if (igxName === 'IgxHierarchicalGrid'){
@@ -316,6 +315,8 @@ $custom-grid-theme: igx-grid-theme(
 
 }
 
+>[!NOTE]
+>The sample will not be affected by the selected global theme from `Change Theme`.
 
 ## API リファレンス
 

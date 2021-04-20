@@ -539,6 +539,9 @@ $custom-grid-theme: igx-grid-theme(
 </code-view>
 
 }
+
+>[!NOTE]
+>The sample will not be affected by the selected global theme from `Change Theme`.
 <div class="divider--half"></div>
 
 ## API リファレンス
