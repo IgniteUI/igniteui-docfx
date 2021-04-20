@@ -266,6 +266,9 @@ $custom-theme: igx-grid-theme(
 
 }
 
+>[!NOTE]
+>The sample will not be affected by the selected global theme from `Change Theme`.
+
 ## API リファレンス
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 * [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)

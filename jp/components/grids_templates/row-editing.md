@@ -447,6 +447,9 @@ $button-theme: igx-button-theme(
 
 }
 
+>[!NOTE]
+>The sample will not be affected by the selected global theme from `Change Theme`.
+
 ## API リファレンス
 
 * [rowEditable]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable)

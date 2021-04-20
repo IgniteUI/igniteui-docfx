@@ -393,6 +393,9 @@ $custom-theme: igx-grid-theme(
 
 }
 
+>[!NOTE]
+>The sample will not be affected by the selected global theme from `Change Theme`.
+
 ## 既知の問題と制限
 
 - IE11 で複数列ヘッダーの @@igComponent コンポーネントを使用するには、Angular アプリケーションの polyfill.ts に配列ポリフィルを明示的にインポートする必要があります。

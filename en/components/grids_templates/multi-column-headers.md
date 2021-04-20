@@ -392,6 +392,9 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 
 }
 
+>[!NOTE]
+>The sample will not be affected by the selected global theme from `Change Theme`.
+
 ## Known Issues and Limitations
 
 - Using @@igComponent with multi-column headers on IE11 requires the explicit import of the array polyfill in polyfill.ts of the angular application.

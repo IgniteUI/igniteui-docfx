@@ -383,6 +383,9 @@ $custom-theme: igx-grid-theme(
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-style" alt="Angular ツリー グリッド スタイル設定のデモ">
 </code-view>
 
+>[!NOTE]
+>The sample will not be affected by the selected global theme from `Change Theme`.
+
 <div class="divider--half"></div>
 
 ## 既知の制限

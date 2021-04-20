@@ -637,6 +637,8 @@ $custom-input-group: igx-input-group-theme(
 </code-view>
 
 }
+>[!NOTE]
+>The sample will not be affected by the selected global theme from `Change Theme`.
 
 ## 既知の制限
 

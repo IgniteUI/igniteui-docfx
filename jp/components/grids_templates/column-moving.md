@@ -285,7 +285,6 @@ $dark-grid-column-moving-theme: igx-grid-theme(
            iframe-src="{environment:demosBaseUrl}/grid/grid-moving-styled-sample" >
 </code-view>
 
-<div class="divider--half"></div>
 }
 
 @@if (igxName === 'IgxTreeGrid') {
@@ -295,7 +294,6 @@ $dark-grid-column-moving-theme: igx-grid-theme(
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-column-moving-styled" >
 </code-view>
 
-<div class="divider--half"></div>
 }
 
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -305,8 +303,10 @@ $dark-grid-column-moving-theme: igx-grid-theme(
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-moving-styled" >
 </code-view>
 
-<div class="divider--half"></div>
 }
+
+>[!NOTE]
+>The sample will not be affected by the selected global theme from `Change Theme`.
 
 ## API リファレンス
 <div class="divider--half"></div>

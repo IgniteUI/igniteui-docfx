@@ -336,7 +336,6 @@ Don't forget to include the theme in the same way as it was demonstrated above.
            iframe-src="{environment:demosBaseUrl}/grid/grid-resize-line-styling-sample" >
 </code-view>
 
-<div class="divider--half"></div>
 }
 @@if (igxName === 'IgxTreeGrid') {
 
@@ -345,19 +344,18 @@ Don't forget to include the theme in the same way as it was demonstrated above.
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-resize-line-styling" >
 </code-view>
 
-<div class="divider--half"></div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<div class="sample-container loading" style="height:550px">
-    <iframe id="hierarchical-grid-resize-line-styling-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-resize-line-styling' width="100%" height="100%" seamless frameborder="0" class="lazyload no-theming"></iframe>
-</div>
-<div class="divider--half"></div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="hierarchical-grid-resize-line-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-resize-line-styling-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
-<div class="divider--half"></div>
+
+<code-view style="height:550px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-resize-line-styling" >
+</code-view>
+
 }
+
+>[!NOTE]
+>The sample will not be affected by the selected global theme from `Change Theme`.
 
 ## API References
 <div class="divider--half"></div>
