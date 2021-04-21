@@ -13,7 +13,7 @@ _language: ja
 
 ### キーフレーム Mixin
 
-Ignite UI for Angular [keyframes]({environment:sassApiUrl}/index.html#mixin-keyframes) mixin は、新しいキーフレーム アニメーションを登録するために使用されます。Mixin はパラメーターとしてキーフレーム アニメーションの名前を取得し、グローバル キーフレーム レジスタ リストに追加します。同じキーフレーム アニメーションを複数回含む場合、エクスポートされた CSS でキーフレームは複製されません。
+Ignite UI for Angular [keyframes]({environment:sassApiUrl}/index.html#mixin-keyframes) ミックスインは、新しいキーフレーム アニメーションを登録するために使用されます。ミックスイン はパラメーターとしてキーフレーム アニメーションの名前を取得し、グローバル キーフレーム レジスタ リストに追加します。同じキーフレーム アニメーションを複数回含む場合、エクスポートされた CSS でキーフレームは複製されません。
 
 例えば、以下を実行する場合、
 
@@ -51,7 +51,7 @@ Ignite UI for Angular [keyframes]({environment:sassApiUrl}/index.html#mixin-keyf
 
 ### アニメーション Mixin
 
-[аnimation]({environment:sassApiUrl}/index.html#mixin-animation) mixin は、パラメーターとして渡されたアニメーション プロパティのリストを使用して要素をアニメーション化するための機能を果たします。ユーザーは、`名前`、`期間`、`遅延`、`方向`、`繰り返し回数`などのアニメーション プロパティを指定できます。複数のキーフレーム アニメーションを `animation` mixin に渡すことができます。
+[аnimation]({environment:sassApiUrl}/index.html#mixin-animation) ミックスインは、パラメーターとして渡されたアニメーション プロパティのリストを使用して要素をアニメーション化するための機能を果たします。ユーザーは、`名前`、`期間`、`遅延`、`方向`、`繰り返し回数`などのアニメーション プロパティを指定できます。複数のキーフレーム アニメーションを `animation` ミックスインに渡すことができます。
 
 ```scss
 //include the 'fade-in-top' keyframes animation mixin

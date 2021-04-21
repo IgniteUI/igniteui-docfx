@@ -225,7 +225,7 @@ $custom-panel-theme: igx-expansion-panel-theme(
 > [`テーマ`](themes/component-themes.md)エンジンを介したスタイル設定に使用可能なすべてのパラメーターを確認するには、[`API ヘルプ`]({environment:sassApiUrl}/index.html#function-igx-expansion-panel-theme) を参照してください。
 
 ### コンポーネント テーマの適用
-コンポーネント テーマを適用するには、`igx-css-vars` mixin をインクルードし、`$custom-panel-theme` マップを渡します。 
+コンポーネント テーマを適用するには、`igx-css-vars` ミックスインをインクルードし、`$custom-panel-theme` マップを渡します。 
 ```scss
 // In expansion-styling.component.scss
 // Pass our custom-panel-theme to `igx-expansion-panel` mixin.
@@ -236,7 +236,7 @@ $custom-panel-theme: igx-expansion-panel-theme(
 ```
 
  >[!NOTE]
- > Internet Explorer 11 をサポートする場合は、`igm-css-vars` の代わりにコンポーネント mixin の `igx-expansion-panel` を使用する必要があります。コンポーネントの ViewEncapsulation が [`Emulated`](themes/component-themes.md#表示のカプセル化)であるため、` :: ng-deep` を使用してカプセル化を解除する必要があります。
+ > Internet Explorer 11 をサポートする場合は、`igm-css-vars` の代わりにコンポーネントミックスインの `igx-expansion-panel` を使用する必要があります。コンポーネントの ViewEncapsulation が [`Emulated`](themes/component-themes.md#表示のカプセル化)であるため、` :: ng-deep` を使用してカプセル化を解除する必要があります。
  > カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含める必要があります。
 
 ```scss

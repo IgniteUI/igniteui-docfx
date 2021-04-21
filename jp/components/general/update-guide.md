@@ -132,7 +132,7 @@ ng update @angular/cli
 
 ここでは、`igx-button-theme` のすべての[利用可能なプロパティ](https://jp.infragistics.com/products/ignite-ui-angular/docs/sass/latest/index.html#function-igx-button-theme)を確認できます。
 
-* `igx-typography` mixin は `igx-core` に暗黙的に含まれなくなりました。タイポグラフィ スタイルを使用するには、`igx-core` の後と `igx-theme` の前に mixin を明示的に含める必要があります。
+* `igx-typography` ミックスインは `igx-core` に暗黙的に含まれなくなりました。タイポグラフィ スタイルを使用するには、`igx-core` の後と `igx-theme` の前に ミックスインを明示的に含める必要があります。
 
     ```scss
     // in styles.scss
@@ -148,7 +148,7 @@ ng update @angular/cli
     ```
 
     > [!IMPORTANT]
-    > `igx-core` mixin は常に最初に含める必要があります。
+    > `igx-core` ミックスインは常に最初に含める必要があります。
 
     Ignite UI for Angular に含まれるテーマごとに、使用できる特定の `font-family` 変数と `type-scale` 変数を提供します。
 
@@ -199,7 +199,7 @@ ng update @angular/cli
     * 新しい構造は、ヘッダーとコンテンツ コンポーネントをそれぞれラップするタブ項目コンポーネントを定義します。ヘッダーには通常、アイコンおよびラベルが含まれていますが、その他のカスタム コンテンツが含まれている場合もあります。
     * ヘッダーのスタイル設定のために、`igxTabHeaderLabel` と `igxTabHeaderIcon` の 2 つの新しいディレクティブを導入しました。
     * ヘッダー コンポーネントで任意のコンテンツを追加できるようになったため、以前はタブのヘッダーを再テンプレート化するために使用されていた `igxTab` ディレクティブは、不要になったため削除されました。
-    * コンポーネントをナビゲーション シナリオで使用する場合、 `routerLink` ディレクティブをヘッダー コンポーネントにアタッチする必要があります。
+    * コンポーネントをナビゲーション シナリオで使用する場合、`routerLink` ディレクティブをヘッダー コンポーネントにアタッチする必要があります。
 
     ```html
     <igx-tabs>
@@ -217,7 +217,7 @@ ng update @angular/cli
     </igx-tabs>
     ```
 * API 変更
-    * `id`、`groups`、 `viewTabs`、`contentTabs`、および `tabs` プロパティが削除されました。現在、[`items`]({environment:angularApiUrl}/classes/igxtabscomponent.html#items) プロパティはタブのコレクションを返します。
+    * `id`、`groups`、`viewTabs`、`contentTabs`、および `tabs` プロパティが削除されました。現在、[`items`]({environment:angularApiUrl}/classes/igxtabscomponent.html#items) プロパティはタブのコレクションを返します。
     * 次のプロパティが変更されました。
         * タブ項目の `isSelected` プロパティの名前が [` selected`]({environment:angularApiUrl}/classes/igxtabitemcomponent.html#selected) に変更されました。
         * `selectedTabItem` プロパティは [`selectedItem`]({environment:angularApiUrl}/classes/igxtabscomponent.html#selecteditem) に変更されました。

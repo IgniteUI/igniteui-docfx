@@ -10,7 +10,7 @@ _language: ja
 ---
 title: Angular Tree Grid 集計 | グループ フッター | Ignite UI for Angular | インフラジスティックス
 _description: 列のグループ フッターに Angular のグリッド集計を設定し、Angular マテリアル UI の Ignite UI でカスタム Angular テンプレートを設定するオプションがあります。
-_keywords: Angular Hierarchical Grid 集計
+_keywords: gngular grid 集計, igniteui for angular, infragistics
 _language: ja
 ---
 }
@@ -18,7 +18,7 @@ _language: ja
 ---
 title: Angular Hierarchical Grid 集計 | グループ フッター | Ignite UI for Angular | インフラジスティックス
 _description: 列のグループ フッターに Angular のグリッド集計を設定し、Angular マテリアル UI の Ignite UI でカスタム Angular テンプレートを設定するオプションがあります。
-_keywords: Angular Hierarchical Grid 集計
+_keywords: gngular grid 集計, igniteui for angular, infragistics
 _language: ja
 ---
 }
@@ -379,7 +379,7 @@ public dateSummaryFormat(summary: IgxSummaryResult, summaryOperand: IgxSummaryOp
  - childLevelsOnly - 子レベルのみ集計が計算されます。
  - rootAndChildLevels - ルートと子レベルの両方の集計が計算されます。これがデフォルト値です。
 
-以下は、使用可能な [`summaryPosition`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summarycalculationmode) プロパティの値です。
+以下は、使用可能な [`summaryPosition`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summaryposition) プロパティの値です。
  - top - 集計行はグループ列の子の前に表示されます。
  - bottom - 集計行はグループ列の子の後に表示されます。これがデフォルト値です。
 
@@ -409,7 +409,7 @@ public dateSummaryFormat(summary: IgxSummaryResult, summaryOperand: IgxSummaryOp
  - childLevelsOnly - 子レベルのみ集計が計算されます。
  - rootAndChildLevels - ルートと子レベルの両方の集計が計算されます。これがデフォルト値です。
 
-以下は、使用可能な [`summaryPosition`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summarycalculationmode) プロパティの値です。
+以下は、使用可能な [`summaryPosition`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summaryposition) プロパティの値です。
  - top - 集計行は子行のリストの前に表示されます。
  - bottom - 集計行は子行のリストの後に表示されます。これがデフォルト値です。
 
