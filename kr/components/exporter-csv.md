@@ -14,14 +14,12 @@ The exporting functionality is encapsulated in the [`IgxCsvExporterService`]({en
 
 ### CSV Exporter Demo
 
-<div class="sample-container loading" style="height: 150px;">
-    <iframe id="csv-export-sample-iframe" src="{environment:demosBaseUrl}/services/export-csv"
-        width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="csv-export-sample-iframe"
-    data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
-</div>
+
+<code-view style="height: 150px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/services/export-csv" >
+</code-view>
+
 <div class="divider--half"></div>
 
 To start using the IgniteUI CSV Exporter first import the [`IgxCsvExporterService`]({environment:angularApiUrl}/classes/igxcsvexporterservice.html) in the app.module.ts file and add the service to the `providers` array:
@@ -113,13 +111,12 @@ public exportButtonHandler() {
 
 ```
 
-<div class="sample-container loading" style="height: 300px;">
-    <iframe id="csv-export-sample-iframe2" data-src="{environment:demosBaseUrl}/services/export-csv-sample-1" width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="csv-export-sample-iframe2"
-    data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
-</div>
+
+<code-view style="height: 300px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/services/export-csv-sample-1" >
+</code-view>
+
 
 
 ### Customizing the Exported Format

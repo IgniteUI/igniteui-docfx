@@ -13,14 +13,12 @@ The overlay service is fully integrated in the toggle directive.
 
 ## Angular Overlay Example
 
-<div class="sample-container loading" style="height: 350px">
-    <iframe id="overlay-position-sample-1-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-sample-main-1" onload="onSampleIframeContentLoaded(this);" alt="Angular Overlay Example"></iframe>
-</div>
-<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="overlay-position-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on codesandbox</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-position-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on Stackblitz</button>
-</div>
+
+<code-view style="height: 350px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/interactions/overlay-sample-main-1" alt="Angular Overlay Example">
+</code-view>
+
 <div class="divider--half"></div>
 
 ## Getting Started
@@ -36,7 +34,7 @@ import { IgxOverlayService } from `igniteui-angular`;
 export class MyOverlayComponent {
     constructor(
         @Inject(IgxOverlayService) private overlayService: IgxOverlayService
-    )
+    ) {}
 }
 
 ...
@@ -112,25 +110,30 @@ The Overlay Service's [`attach()`]({environment:angularApiUrl}/classes/igxoverla
   - `attach(component, settings?, moduleRef?)`
 
 The first parameter in both overloads is mandatory and represents the content that will be shown in the overlay. There are a couple of different scenarios how the content can be passed:
-  - A component definition - When passing a component in as the first argument, the overlay service creates a new instance of that component and dynamically attaches it to the `overlay` DOM. If `moduleRef` is provided the service will use the module's `ComponentFactoryResolver` and `Injector` when creating the `ComponentRef` instead of the root ones.
-  - An `ElementRef` to an existing DOM element (illustrated in the sample above) - Any view that is already rendered on the page can be passed through the overlay service and be rendered in the overlay DOM. Using this approach when [`show(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#show) is called, overlay will:
-    - Get the reference to the passed view from Angular 
-    - Detach the view from the DOM and leave an anchor in its place
-    - Re-attach the view to the overlay, using the [`show()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#show) method settings or falling back to the default overlay settings
-    - On close, it will re-attach the view back to it's original location in the DOM
+  - A component definition - When passing a component in as the first argument, the overlay service creates a new instance of that component and dynamically attaches its `ElementRef` to the `overlay` DOM. If `moduleRef` is provided the service will use the module's `ComponentFactoryResolver` and `Injector` when creating the `ComponentRef` instead of the root ones.
+  - An `ElementRef` to an existing DOM element (illustrated in the sample above) - Any view that is already rendered on the page can be passed through the overlay service and be rendered in the overlay DOM.
+
+In both cases the [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) method will:
+  - Get the reference to the passed view from Angular
+  - Detach the view from the DOM and leave an anchor in its place
+  - Re-attach the view to the overlay using the provided [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) or falling back to the default overlay ones
+
+Calling then [`show(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#show) will play the open animation, if there is any, and will show the attached content. Calling [`hide(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#hide) will play close animation, if there is any, and will hide the attached content.
+
+Finally calling [`detach(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#detach) method will re-attach the view back to its original location in the DOM. If a component was provided to the [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) method calling [`detach(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#detach) will destroy the created instance.
+
 <div class="divider--half"></div>
 
 ## Attaching Components
 In the below demo, we can pass the [IgxCard](card.md#card-demo) component through the Overlay Service's [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) method to generate an ID. Then we call the [`show()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#show) method with the provided ID to dynamically attach the card to the DOM in a modal container.
 
 
-<div class="sample-container loading" style="height: 400px">
-    <iframe id="overlay-sample-main-1-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-sample-main-1" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="overlay-sample-main-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on codesandbox</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-sample-main-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on Stackblitz</button>
-</div>
+
+<code-view style="height: 400px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/interactions/overlay-sample-main-1" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ## Overlay Settings
@@ -171,15 +174,15 @@ Clicking on the button will now show `MyDynamicComponent` positioned relative to
 
 ## Preset Overlay Settings
 
-The [`IgxOverlayService.createAbsolutePositionSettings()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#createabsolutepositionsettings)] and [`IgxOverlayService.createRelativePositionSettings()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#createrelativepositionsettings)] methods provide an easy way to create an [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) based on a predefined settings sets.
+The [`IgxOverlayService.createAbsolutePositionSettings()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#createabsolutepositionsettings) and [`IgxOverlayService.createRelativePositionSettings()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#createrelativepositionsettings) methods provide an easy way to create an [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) based on a predefined settings sets.
 
-The [`IgxOverlayService.createAbsolutePositionSettings()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#createabsolutepositionsettings)] method creates non-modal [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) with [`GlobalPositionStrategy`]({environment:angularApiUrl}/classes/globalpositionstrategy.html) or [`ContainerPositionStrategy`]({environment:angularApiUrl}/classes/containerpositionstrategy.html) in case the `outlet` parameter is provided. The `AbsolutePosition` enumeration defines the possible positions to choose from: `Center`, `Top` or `Bottom`. The default position is `Center`.
+The [`IgxOverlayService.createAbsolutePositionSettings()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#createabsolutepositionsettings) method creates non-modal [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) with [`GlobalPositionStrategy`]({environment:angularApiUrl}/classes/globalpositionstrategy.html) or [`ContainerPositionStrategy`]({environment:angularApiUrl}/classes/containerpositionstrategy.html) in case the `outlet` parameter is provided. The `AbsolutePosition` enumeration defines the possible positions to choose from: `Center`, `Top` or `Bottom`. The default position is `Center`.
 
 ```typescript
 const globalOverlaySettings = IgxOverlayService.createAbsoluteOverlaySettings(AbsolutePosition.Top);
 ```
 
-The [`IgxOverlayService.createRelativePositionSettings()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#createrelativepositionsettings)] method creates [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) with [`AutoPositionStrategy`]({environment:angularApiUrl}/classes/autopositionstrategy.html), [`ConnectedPositioningStrategy`]({environment:angularApiUrl}/classes/connectedpositioningstrategy.html) or [`ElasticPositionStrategy`]({environment:angularApiUrl}/classes/elasticpositionstrategy.html). Accepts target, position and strategy. The `target` is the attaching point or element for the component to show. The `position` is a `RelativePosition` enumeration with the following options: `Above`, `Below`, `Before`, `After` and `Default`. The `Default` option positions the element below the target, left aligned. The position strategy can be set through the `RelativePositionStrategy` enumeration, which default value is `Auto`.
+The [`IgxOverlayService.createRelativePositionSettings()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#createrelativepositionsettings) method creates [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) with [`AutoPositionStrategy`]({environment:angularApiUrl}/classes/autopositionstrategy.html), [`ConnectedPositioningStrategy`]({environment:angularApiUrl}/classes/connectedpositioningstrategy.html) or [`ElasticPositionStrategy`]({environment:angularApiUrl}/classes/elasticpositionstrategy.html). Accepts target, position and strategy. The `target` is the attaching point or element for the component to show. The `position` is a `RelativePosition` enumeration with the following options: `Above`, `Below`, `Before`, `After` and `Default`. The `Default` option positions the element below the target, left aligned. The position strategy can be set through the `RelativePositionStrategy` enumeration, which default value is `Auto`.
 
 ```typescript
 const targetElement = this.myAnchorButton.nativeElement;
@@ -191,21 +194,20 @@ const connectedOverlaySettings = IgxOverlayService.createRelativeOverlaySettings
 
 ### Demo
 
-<div class="sample-container loading" style="height: 750px">
-    <iframe id="overlay-preset-settings-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/interactions/overlay-preset-settings-sample" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="overlay-preset-settings-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on codesandbox</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-preset-settings-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on Stackblitz</button>
-</div>
+
+<code-view style="height: 750px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/interactions/overlay-preset-settings-sample" >
+</code-view>
+
 
 <div class="divider--half"></div>
 
 ## Hiding the Overlay
 
-The [`IgxOverlayService.hide()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#hide) method removes the content from the overlay and, if applicable, re-attaches it to it's original location in the DOM. 
+The [`hide(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#hide) hides the overlay content. All of the elements rendered by the overlay service have a unique ID, assigned to them by the service. The [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) method returns the identifier of the rendered content. To hide the content this ID needs to be passed to the overlay's [`hide(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#hide) method. To hide all overlays [`hideAll()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#hideAll) method could be called.
 
-All of the elements rendered by the overlay service have a unique ID, assigned to them by the service. The [`IgxOverlayService.attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) method returns the identifier of the rendered content. To remove content from the overlay, that ID needs to be passed to the overlay's [`hide()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#hide) method.
+When rendered content is not needed anymore [`detach(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#detach) method should be called. This method removes the content from the overlay and, if applicable, re-attaches it to its original location in the DOM. [`detach(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#detach) method also accepts as mandatory parameter the ID generated from [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) method. To remove all the overlays [`detachAll()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#detachAll) method could be called.
 
 We can modify the previously defined overlay method to not only show but also hide the overlay element
 ```typescript
@@ -213,7 +215,7 @@ We can modify the previously defined overlay method to not only show but also hi
 // add an import for the definion of ConnectedPositioningStategy class
 import { ConnectedPositioningStrategy } from 'igniteui-angular';
 ...
-export class MyOverlayComponent {
+export class MyOverlayComponent implements OnDestroy {
     private _overlayId = ''; // The unique identifier assigned to the component by the Overlay service
     private _overlayShown = false; // Is the component rendered in the Overlay?
 
@@ -234,10 +236,18 @@ export class MyOverlayComponent {
             }
 
             this.overlayService.show(this._overlayId);
-        } else { // If the element is visible, hide it
-            this.overlayService.hide(this._overlayId); // Find and remove the component from the overlay container
+        } else {
+            this.overlayService.hide(this._overlayId); // If element if visible, hide it
         }
         this._overlayShown = !this._overlayShown;
+    }
+
+    // finally detach overlay content
+    public ngOnDestroy(): void {
+        if (this._overlayId) {
+            this.overlayService.detach(this._overlayId);
+            delete this._overlayId;
+        }
     }
 }
 ```
@@ -252,13 +262,12 @@ export class MyOverlayComponent {
 
 Using the [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) parameter of the [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) method, we can change how the content is shown - e.g. where the content is positioned, how the scroll should behave and if the container is modal or not
 
-<div class="sample-container loading" style="height: 400px">
-    <iframe id="overlay-sample-main-2-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/interactions/overlay-sample-main-2" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="overlay-sample-main-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on codesandbox</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="overlay-sample-main-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">View on Stackblitz</button>
-</div>
+
+<code-view style="height: 400px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/interactions/overlay-sample-main-2" >
+</code-view>
+
 <div class="divider--half"></div>
 
 

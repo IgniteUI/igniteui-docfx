@@ -10,12 +10,12 @@ _language: kr
 <div class="divider"></div>
 
 ### Ripple Demo
-<div class="sample-container loading" style="height: 558px">
-    <iframe id="ripple-sample-1-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/interactions/ripple-sample-1" onload="onSampleIframeContentLoaded(this);">
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="ripple-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
-</div>
+
+<code-view style="height: 558px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/interactions/ripple-sample-1" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ### Dependencies
@@ -45,7 +45,7 @@ Use [`igxRipple`]({environment:angularApiUrl}/classes/igxrippledirective.html) t
 <button igxButton="raised" igxRipple>Click Me</button>
 ```
 <div class="sample-container loading" style="height: 68px">
-    <iframe seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-5" class="lazyload">
+    <iframe seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-5" class="lazyload">
 </iframe></div>
 
 #### Custom Color
@@ -56,7 +56,7 @@ You can set the ripple color using [`igxRipple`]({environment:angularApiUrl}/cla
 <button igxButton="raised" igxRipple="white">White</button>
 ```
 <div class="sample-container loading" style="height: 68px">
-    <iframe seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-6" class="lazyload">
+    <iframe seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-6" class="lazyload">
 </iframe></div>
 
 #### Centered Ripple Effect 
@@ -66,7 +66,7 @@ The ripple effect starts from the position of the click event. You can change th
 <button igxButton="raised" igxRipple="white" igxRippleCentered="true">Centered</button>
 ```
 <div class="sample-container loading" style="height: 68px">
-    <iframe seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-3" class="lazyload">
+    <iframe seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-3" class="lazyload">
 </iframe></div>
 
 #### Ripple Target
@@ -82,7 +82,7 @@ Use [`igxRippleTarget`]({environment:angularApiUrl}/classes/igxrippledirective.h
 ```
 Notice that if you click on the parent or the child divs the ripple effect will only appear inside the child div. The child div position has to be set to **relative**.
 <div class="sample-container loading" style="height: 168px">
-    <iframe seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-2" class="lazyload">
+    <iframe seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-2" class="lazyload">
 </iframe></div>
 
 #### Ripple Duration
@@ -94,7 +94,7 @@ Use [`igxRippleDuration`]({environment:angularApiUrl}/classes/igxrippledirective
 </div>
 ```
 <div class="sample-container loading" style="height: 148px">
-    <iframe seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-4" class="lazyload">
+    <iframe seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-4" class="lazyload">
 </iframe></div>
 
 The [`igxRipple`]({environment:angularApiUrl}/classes/igxrippledirective.html) uses the Web Animation API and runs natively on
@@ -196,13 +196,12 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
   > A color that is set using the `igxRiple` directive, would take precedence from the one, set within a custom theme.  
 
 #### Demo
-<div class="sample-container loading" style="height:700px">
-    <iframe id="ripple-styling-sample-iframe" data-src='{environment:demosBaseUrl}/interactions/ripple-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
-</div>
-<br/>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="ripple-styling-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height:700px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/interactions/ripple-styling" >
+</code-view>
+
 
 ### API References
 <div class="divider--half"></div>

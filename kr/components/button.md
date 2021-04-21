@@ -11,12 +11,12 @@ The Button directive within Ignite UI for Angular is intended to be used on any 
 
 ### Button Demo
 
-<div class="sample-container loading" style="height: 436px">
-    <iframe id="buttons-sample-iframe" seamless="" width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/buttons-sample-1" onload="onSampleIframeContentLoaded(this);">
-</iframe></div>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttons-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
-</div>
+
+<code-view style="height: 436px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-entries/buttons-sample-1" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ### Dependencies
@@ -48,7 +48,7 @@ Setting a simple [`igxButton`]({environment:angularApiUrl}/classes/igxbuttondire
 
 Result:
 <div class="sample-container loading" style="height: 48px">
-    <iframe seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-2" class="lazyload">
+    <iframe seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-2" class="lazyload">
 </iframe></div>
 
 You can add a Ripple effect. And also set its color `igxRipple="blue"`.
@@ -59,7 +59,7 @@ You can add a Ripple effect. And also set its color `igxRipple="blue"`.
 
 Default ripple color. Custom ripple color:
 <div class="sample-container loading" style="height: 48px">
-    <iframe seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-3" class="lazyload">
+    <iframe seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-3" class="lazyload">
 </iframe></div>
 
 Outlined button style:
@@ -70,7 +70,7 @@ Outlined button style:
 
 Result:
 <div class="sample-container loading" style="height: 48px">
-    <iframe class="lazyload" seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-8">
+    <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-8">
 </iframe></div>
 
 
@@ -82,7 +82,7 @@ Using [`igxButton`]({environment:angularApiUrl}/classes/igxbuttondirective.html)
 
 The span now looks like:
 <div class="sample-container loading" style="height: 54px">
-    <iframe seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-4" class="lazyload">
+    <iframe seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-4" class="lazyload">
 </iframe></div>
 
 You can create a rased button.
@@ -92,7 +92,7 @@ You can create a rased button.
 ```
 
 <div class="sample-container loading" style="height: 54px">
-    <iframe seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-5" class="lazyload">
+    <iframe seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-5" class="lazyload">
 </iframe></div>
 
 A floating action button and use an icon to display:
@@ -103,7 +103,7 @@ A floating action button and use an icon to display:
 </button>
 ```
 <div class="sample-container loading" style="height: 74px">
-    <iframe seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-6" class="lazyload">
+    <iframe seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-6" class="lazyload">
 </iframe></div>
 
 Or use icons as buttons:
@@ -120,7 +120,7 @@ Or use icons as buttons:
 ```
 Icon results:
 <div class="sample-container loading" style="height: 54px">
-    <iframe seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-7" class="lazyload">
+    <iframe seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-7" class="lazyload">
 </iframe></div>
 
 <div class="divider--half"></div>
@@ -176,12 +176,11 @@ public selectDensity(event) {
 
 And the final result:
 
-<div class="sample-container loading" style="height: 300px">
-    <iframe id="buttons-display-density-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/buttons-display-density" onload="onSampleIframeContentLoaded(this);">
-</div>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttons-display-density-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+<code-view style="height: 300px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-entries/buttons-display-density" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ### API References

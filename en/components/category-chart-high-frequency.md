@@ -11,15 +11,12 @@ The Ignite UI for Angular category chart component is capable of handling high v
 
 ## Angular Real Time Data Example
 
-<div class="sample-container loading" style="height: 500px;">
-    <iframe id="category-chart-high-frequency-iframe" align="center" src='{environment:dvDemosBaseUrl}/charts/category-chart-high-frequency' height="100%" width="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Real Time Data Example"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="category-chart-high-frequency-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
-    </button>
-
-
-</div>
+<code-view style="height: 500px;"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-high-frequency"
+           alt="Angular Real Time Data Example"
+           github-src="charts/category-chart/high-frequency">
+</code-view>
 
 <div class="divider--half"></div>
 

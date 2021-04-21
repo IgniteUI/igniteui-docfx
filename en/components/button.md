@@ -9,14 +9,12 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ## Angular Button Example
 <div class="divider--half"></div>
-<div class="sample-container loading" style="height: 150px">
-    <iframe id="buttons-sample-iframe" seamless="" width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/buttons-sample-1" onload="onSampleIframeContentLoaded(this);" alt="Angular Button Example">
-</iframe></div>
-<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="buttons-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttons-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height: 150px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-entries/buttons-sample-1" alt="Angular Button Example">
+</code-view>
+
 <div class="divider--half"></div>
 
 ## Usage
@@ -207,13 +205,10 @@ public selectDensity(event) {
 
 If all went well, you should see something like the following in the browser:
 
-<div class="sample-container loading" style="height: 150px">
-    <iframe id="buttons-display-density-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/buttons-display-density" onload="onSampleIframeContentLoaded(this);">
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="buttons-display-density-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttons-display-density-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+<code-view style="height: 150px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-entries/buttons-display-density" alt="Angular Button Example">
+</code-view>
 <div class="divider--half"></div>
 
 ## Styling
@@ -224,21 +219,19 @@ To get started with styling the button, we need to import the `index` file, wher
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) and accepts the `$raised-text-color` and the `$raised-background` parameters with their respective hover and focus parameters.
+Following the simplest approach, we create a new theme that extends the [`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) and accepts the `$foreground` and the `$background` parameters with their respective hover and focus parameters.
 
 ```scss
 $custom-button-theme: igx-button-theme(
-    $raised-text-color: #fdfdfd,
-    $raised-hover-text-color: #fdfdfd,
-    $raised-background: #345779,
-    $raised-hover-background: #2e4d6b,
-    $raised-focus-text-color: #fdfdfd,
-    $raised-focus-background: #2e4d6b,
-    $disabled-color: #2e4d6b
+    $foreground: #fdfdfd,
+    $hover-foreground: #fdfdfd,
+    $focus-foreground: #fdfdfd,
+    $background: #345779,
+    $hover-background: #2e4d6b,
+    $focus-background: #2e4d6b,
+    $disabled-foreground: #2e4d6b
 );
 ```
-
-In our custom theme we have provided parameter values only for the `raised` button. In order to implement this for any other type of button, we simply have to target the corresponding parameters.
 
 Take a look at the [`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) section for a complete list of available parameters for styling any type of button.
 
@@ -266,13 +259,12 @@ If the component is using the [`Emulated`](themes/component-themes.md#view-encap
 
 ### Demo
 
-<div class="sample-container loading" style="height: 100px">
-    <iframe id="buttons-style-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/buttons-style" class="lazyload no-theming">
-</iframe></div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="buttons-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttons-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height: 100px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-entries/buttons-style" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ## API References

@@ -40,14 +40,12 @@ _language: ja
 *_Photo_ および _Debut_ 列の選択が無効になっています。
 }
 
-<div class="sample-container loading" style="height:570px">
-    <iframe id="@@igObjectRef-column-selection-iframe" src='{environment:demosBaseUrl}/@@igDemoBasePath/column-selection' width="100%" height="100%" seamless frameborder="0" class="no-theming" onload="onSampleIframeContentLoaded(this);" alt="Angular 列選択の例"></iframe>
-</div>
-<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="@@igObjectRef-column-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="@@igObjectRef-column-selection-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
-</div>
+
+<code-view style="height:570px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/@@igDemoBasePath/column-selection" alt="Angular 列選択の例">
+</code-view>
+
 <div class="divider--half"></div>
 
 ## 基本的な使用方法
@@ -70,14 +68,12 @@ _language: ja
 *_Location_ 列グループでは、_City_ 列のみを選択できます。
 }
 
-<div class="sample-container loading" style="height:570px">
-    <iframe id="@@igObjectRef-column-group-selection" src='{environment:demosBaseUrl}/@@igDemoBasePath/column-group-selection' width="100%" height="100%" seamless frameborder="0" class="lazyload"></iframe>
-</div>
-<br/>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="@@igObjectRef-column-group-selection" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="@@igObjectRef-column-group-selection" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
-</div>
+
+<code-view style="height:570px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/@@igDemoBasePath/column-group-selection" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ## キーボードの組み合わせ
@@ -98,7 +94,7 @@ _language: ja
 API 操作の詳細については、[`API リファレンス`](#api-references) セクションを参照してください。
 
 ## スタイル設定
-スタイル設定オプションに移動する前に、core ジュールとすべてのコンポーネント mixins をインポートする必要があります。
+スタイル設定オプションに移動する前に、core ジュールとすべてのコンポーネント ミックスインをインポートする必要があります。
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
@@ -163,14 +159,14 @@ Internet Explorer 11 のコンポーネントをスタイル設定するには�
 ```
 ### デモ
 
-<div class="sample-container loading" style="height:570px">
-    <iframe id="@@igObjectRef-column-selection-styles" src='{environment:demosBaseUrl}/@@igDemoBasePath/column-selection-styles' width="100%" height="100%" seamless frameborder="0" class="lazyload no-theming"></iframe>
-</div>
-<br/>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="@@igObjectRef-column-selection-styles" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="@@igObjectRef-column-selection-styles" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
-</div>
+
+<code-view style="height:570px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/@@igDemoBasePath/column-selection-styles" >
+</code-view>
+
+>[!NOTE]
+>The sample will not be affected by the selected global theme from `Change Theme`.
 <div class="divider--half"></div>
 
 # <a name="api-references"></a>API リファレンス

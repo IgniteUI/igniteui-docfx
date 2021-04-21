@@ -14,14 +14,12 @@ _language: ja
 
 デフォルトでは、デバイダは水平の実線です。
 
-<div class="sample-container loading" style="height:207px">
-    <iframe id="divider-sample-1-iframe" src='{environment:demosBaseUrl}/layouts/divider-sample-1' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular Divider の例"></iframe>
-</div>
-<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="divider-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="divider-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
+
+<code-view style="height:207px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/layouts/divider-sample-1" alt="Angular Divider の例">
+</code-view>
+
 
 ## 使用方法
 
@@ -35,13 +33,12 @@ _language: ja
 ```html
 <igx-divider [vertical]="true"></igx-divider>
 ```
-<div class="sample-container loading" style="height:238px">
-    <iframe id="divider-sample-2-iframe" data-src='{environment:demosBaseUrl}/layouts/divider-sample-2' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="divider-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="divider-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
+
+<code-view style="height:238px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/layouts/divider-sample-2" >
+</code-view>
+
 
 ## 破線の仕切り
 デバイダのデフォルト スタイルは`実線`ですが、`破線`も使用できます。
@@ -50,13 +47,12 @@ _language: ja
 ```html
 <igx-divider type="dashed"></igx-divider>
 ```
-<div class="sample-container loading" style="height:187px">
-    <iframe id="divider-sample-3-iframe" data-src='{environment:demosBaseUrl}/layouts/divider-sample-3' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="divider-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="divider-sample-3-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
+
+<code-view style="height:187px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/layouts/divider-sample-3" >
+</code-view>
+
 
 ## インセット デバイダ
 デバイダは両側に設定できます。
@@ -72,13 +68,12 @@ _language: ja
 <igx-divider inset="40px"></igx-divider>
 
 ```
-<div class="sample-container loading" style="height:311px">
-    <iframe id="divider-sample-4-iframe" data-src='{environment:demosBaseUrl}/layouts/divider-sample-4' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="divider-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="divider-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
+
+<code-view style="height:311px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/layouts/divider-sample-4" >
+</code-view>
+
 
 `middle` 属性の値が誤った値に設定されている場合、または属性がそれ以外で省略されている場合は、デバイダは左側にのみ設定されます。
 

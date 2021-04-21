@@ -1,6 +1,6 @@
 ---
 title: Angular Excel Library| Using Worksheets | Infragistics
-_description: Use Infragistics' Angular excel library to input data by working with the worksheet's row and cells and setting thier corresponding values. Easily transfer data from Ignite UI for Angular excel to your application!
+_description: Use Infragistics' Angular excel library to input data by working with the worksheet's row and cells and setting their corresponding values. Easily transfer data from Ignite UI for Angular excel to your application!
 _keywords: Excel library, worksheet, Ignite UI for Angular, Infragistics
 mentionedTypes: ['Workbook', 'Worksheet', 'WorksheetCell', 'DisplayOptions', 'WorksheetFilterSettings', 'IWorksheetCellFormat']
 ---
@@ -11,10 +11,12 @@ The Infragistics Angular Excel Engine's [`worksheet`]({environment:dvApiBaseUrl}
 
 ## Angular Using Worksheets Example
 
-<div class="sample-container loading" style="height: 200px">
-    <iframe id="excel-library-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/excel/excel-library-operations-on-worksheets' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Using Worksheets Example"></iframe>
-</div>
-
+<code-view style="height: 200px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/excel/excel-library-operations-on-worksheets"
+           alt="Angular Using Worksheets Example"
+           github-src="excel/excel-library/operations-on-worksheets">
+</code-view>
 
 <div class="divider--half"></div>
 

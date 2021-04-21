@@ -2,7 +2,7 @@
 title: Angular Financial Chart | High Volume Data | Infragistics
 _description: Learn how to optimize the performance of the Infragistics' Angular financial chart control. Improve the Ignite UI for Angulargraph's performance!
 _keywords: Angular charts, financial chart, stock chart, performance, Ignite UI for Angular, Infragistics
-mentionedTypes: ['XamFinancialChart']
+mentionedTypes: ['FinancialChart']
 ---
 
 # Angular Binding High Volume Data
@@ -11,15 +11,13 @@ The Angular financial chart component is capable of handling high volumes of dat
 
 ## Angular Binding High Volume Data Example
 
-<div class="sample-container loading" style="height: 500px">
-    <iframe id="financial-chart-high-volume-iframe" src='{environment:dvDemosBaseUrl}/charts/financial-chart-high-volume' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Binding High Volume Data Example"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-high-volume-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
-    </button>
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-high-volume"
+           alt="Angular Binding High Volume Data Example"
+           github-src="charts/financial-chart/high-volume">
+</code-view>
 
-
-</div>
 <div class="divider--half"></div>
 
 There are several chart features and Angular specific features that affect performance of the chart and they should be considered when optimizing performance in your application.

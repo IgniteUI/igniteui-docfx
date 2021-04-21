@@ -10,12 +10,12 @@ _language: kr
 <div class="divider"></div>
 
 ### Navbar Demo
-<div class="sample-container loading" style="height: 530px">
-    <iframe id="nav-bar-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/menus/navbar" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-bar-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
-</div>
+
+<code-view style="height: 530px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/menus/navbar" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ### Usage
@@ -89,12 +89,12 @@ Next, we need to update our template with an icon for each of the options we wan
 ```
 
 If all went well, you should see the following in your browser:
-<div class="sample-container loading" style="height: 330px">
-    <iframe id="nav-bar-sample-1-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src='{environment:demosBaseUrl}/menus/navbar-sample-1' class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-bar-sample-1-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
-</div>
+
+<code-view style="height: 330px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/menus/navbar-sample-1" >
+</code-view>
+
 <div class="divider--half"></div>
 
 #### Custom action icon
@@ -130,12 +130,12 @@ We can easily achieve this by using the [`igx-action-icon`]({environment:angular
 
 Finally, this is how our navbar should look like with its custom action icon:
 
-<div class="sample-container loading" style="height: 330px">
-    <iframe id="nav-bar-sample-2-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src='{environment:demosBaseUrl}/menus/navbar-sample-2' class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="nav-bar-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
-</div>
+
+<code-view style="height: 330px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/menus/navbar-sample-2" >
+</code-view>
+
 <div class="divider--half"></div>
 
 > [!NOTE]

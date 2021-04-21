@@ -24,35 +24,49 @@ _canonicalLink: grid/export-excel
 
 # @@igComponent Export to Excel Service
 
+@@if (igxName === 'IgxGrid' || igxName === 'IgxTreeGrid') {
+
 <p class="highlight">
-The Excel Exporter service can export data to excel from the @@igxName. The data export functionality is encapsulated in the [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) class and the data is exported in MS Excel table format. This format allows features like filtering, sorting, etc. To do this you need to invoke the [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html)'s [`export`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#export) method and pass the @@igxName component as first argument to export grid easily.</p>
+  The Excel Exporter service can export data to excel from the @@igxName. The data export functionality is encapsulated in the [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) class and the data is exported in MS Excel table format. This format allows features like filtering, sorting, etc. To do this you need to invoke the [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html)'s [`export`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#export) method and pass the @@igxName component as first argument to export grid easily.
+</p>
+
+}
+
+@@if (igxName === 'IgxHierarchicalGrid') {
+
+<p class="highlight">
+  The Excel Exporter service can export data to excel from the @@igxName. The data export functionality is encapsulated in the [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) class. To trigger the process, you need to invoke the [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html)'s [`export`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#export) method and pass the @@igxName component as the first argument.
+</p>
+
+}
 
 <div class="divider"></div>
 
 ## Angular Excel Exporter Example
 
 @@if (igxName === 'IgxGrid') {
-<div class="sample-container loading" style="height: 800px;">
-    <iframe id="excel-export-sample-iframe" src="{environment:demosBaseUrl}/services/export-excel-sample-1"
-        width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular Excel Exporter Example"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="excel-export-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="excel-export-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height: 800px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/services/export-excel-sample-1" alt="Angular Excel Exporter Example">
+</code-view>
+
 }
 @@if (igxName === 'IgxTreeGrid') {
-<div class="sample-container loading" style="height: 350px;">
-    <iframe id="excel-export-sample-iframe" src="{environment:demosBaseUrl}/services/export-excel-tree-grid-sample"
-        width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular Excel Exporter Example"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="excel-export-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="excel-export-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height: 350px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/services/export-excel-tree-grid-sample" alt="Angular Excel Exporter Example">
+</code-view>
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-    <!-- todo -->
+
+<code-view style="height: 800px;" 
+        data-demos-base-url="{environment:demosBaseUrl}" 
+        iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-export" alt="Angular Excel Exporter Example">
+</code-view>
+
 }
 
 <div class="divider--half"></div>
@@ -96,7 +110,7 @@ import { IgxExcelExporterService, IgxExcelExporterOptions } from "igniteui-angul
 import { @@igxNameComponent } from "igniteui-angular";
 ...
 
-@ViewChild("@@igObjectRef") public @@igObjectRef: IgxGridComponent;
+@ViewChild("@@igObjectRef") public @@igObjectRef: @@igxNameComponent;
 
 constructor(private excelExportService: IgxExcelExporterService) {
 }
@@ -124,14 +138,12 @@ public exportButtonHandler() {
 
 To export grouped data you just need to group the @@igComponent by one or more columns. The browser will download a file named "ExportedDataFile.xlsx" which contains the data from the @@igComponent component in MS Excel format grouped by the selected column. Example:
 
-<div class="sample-container loading" style="height: 800px;">
-    <iframe id="excel-group-export-sample-iframe" src="{environment:demosBaseUrl}/services/export-excel-sample-1"
-        width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);" alt="Angular Grouped Data Excel Exporter Example"></iframe>
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="excel-group-export-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on codesandbox</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="excel-group-export-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height: 800px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/services/export-excel-sample-1" alt="Angular Grouped Data Excel Exporter Example">
+</code-view>
+
 }
 
 ## Customizing the Exported Content
@@ -157,7 +169,25 @@ When you are exporting data from the @@igComponent component, the export process
 @@if (igxName === 'IgxGrid') {
 |Limitation|Description|
 |--- |--- |
+|Max worksheet size|The maximum worksheet size supported by Excel is 1,048,576 rows by 16,384 columns.|
 |Exporting multi column headers|The excel exporter service doesn't support exporting @@igComponent with multi column headers.|
+}
+
+@@if (igxName === 'IgxTreeGrid') {
+|Limitation|Description|
+|--- |--- |
+|Hierarchy levels|The excel exporter service can create up to 8 levels of hierarchy.|
+|Max worksheet size|The maximum worksheet size supported by Excel is 1,048,576 rows by 16,384 columns.|
+|Exporting multi column headers|The excel exporter service doesn't support exporting @@igComponent with multi column headers.|
+}
+
+@@if (igxName === 'IgxHierarchicalGrid') {
+|Limitation|Description|
+|--- |--- |
+|Hierarchy levels|The excel exporter service can create up to 8 levels of hierarchy.|
+|Max worksheet size|The maximum worksheet size supported by Excel is 1,048,576 rows by 16,384 columns.|
+|Exporting multi column headers|The excel exporter service doesn't support exporting @@igComponent with multi column headers.|
+|Exporting pinned columns|In the exported Excel file, the pinned columns will not be frozen but will be displayed in the same order as they appear in the grid.|
 }
 
 > [!NOTE]

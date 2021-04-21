@@ -11,14 +11,12 @@ Use the Angular map component's [`IgxGeographicSymbolSeriesComponent`]({environm
 
 ## Angular Using Scatter Symbol Series Example
 
-<div class="sample-container loading" style="height: 500px">
-    <iframe id="geo-map-type-scatter-symbol-series-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-type-scatter-symbol-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Using Scatter Symbol Series Example"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="geo-map-type-scatter-symbol-series-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
-    </button>
-</div>
-
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-type-scatter-symbol-series"
+           alt="Angular Using Scatter Symbol Series Example"
+           github-src="maps/geo-map/type-scatter-symbol-series">
+</code-view>
 
 <div class="divider--half"></div>
 

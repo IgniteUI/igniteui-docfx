@@ -11,14 +11,12 @@ The Ignite UI for Angular map component is designed to display geo-spatial data 
 
 ## Angular Binding Geographic Data Models Example
 
-<div class="sample-container loading" style="height: 500px">
-    <iframe id="geo-map-binding-data-model-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-binding-data-model' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Binding Geographic Data Models Example"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="geo-map-binding-data-model-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
-    </button>
-</div>
-
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-binding-data-model"
+           alt="Angular Binding Geographic Data Models Example"
+           github-src="maps/geo-map/binding-data-model">
+</code-view>
 
 <div class="divider--half"></div>
 

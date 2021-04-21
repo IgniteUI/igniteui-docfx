@@ -4,6 +4,10 @@
 - name: Getting started
   href: general/getting-started.md
   new: false
+- name: Localization (i18n)
+  href: general/localization.md
+  new: false
+  updated: true
 - name: Update guide
   href: general/update-guide.md
   new: false
@@ -897,7 +901,4 @@
   new: false
 - name: Excel Exporter
   href: exporter-excel.md
-  new: false
-- name: Localization
-  href: localization.md
   new: false

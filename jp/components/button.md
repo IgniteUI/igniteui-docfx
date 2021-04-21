@@ -10,13 +10,11 @@ _language: ja
 
 ## Angular Button の例
 <div class="divider--half"></div>
-<div class="sample-container loading" style="height: 150px">
-    <iframe id="buttons-sample-iframe" seamless="" width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/buttons-sample-1" onload="onSampleIframeContentLoaded(this);" alt="Angular Button の例">
-</iframe></div>
-<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttons-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
+
+<code-view style="height: 150px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-entries/buttons-sample-1" alt="Angular Button の例">
+</code-view>
 <div class="divider--half"></div>
 
 ## 使用方法
@@ -216,6 +214,42 @@ public selectDensity(event) {
 </div>
 <div class="divider--half"></div>
 
+## 使用方法
+
+Button ディレクティブは `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に `IgxButtonModule` をインポートする必要があります:
+
+```typescript
+// app.module.ts
+
+import { IgxButtonModule } from 'igniteui-angular';
+
+@NgModule({
+    imports: [
+        ...
+        IgxButtonModule,
+        ...
+    ]
+})
+export class AppModule {}
+```
+
+## ボタン タイプ
+
+### フラットボタン
+
+[`igxButton`]({environment:angularApiUrl}/classes/igxbuttondirective.html) ディレクティブを使用して、コンポーネント テンプレートにシンプルなフラット ボタンをコンポーネント テンプレートに追加します。タイプを選択しない場合、デフォルト値は `flat` です。
+
+```html
+<button igxButton="flat">Flat</button>
+```
+
+
+<div class="sample-container loading" style="height: 70px">
+    <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-2">
+</iframe></div>
+
+<div class="divider--half"></div>
+
 ## スタイル設定
 
 ボタンのスタイル設定を始めるには、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
@@ -224,21 +258,19 @@ public selectDensity(event) {
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-次に、[`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) を拡張し、それぞれのホバーとフォーカス パラメーターと共に `$raised-text-color` と `$raised-background` パラメーターを受け入れる新しいテーマを作成します。
+次に、[`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) を拡張し、それぞれのホバーとフォーカス パラメーターと共に `$foreground` と `$background` パラメーターを受け入れる新しいテーマを作成します。
 
 ```scss
 $custom-button-theme: igx-button-theme(
-    $raised-text-color: #fdfdfd,
-    $raised-hover-text-color: #fdfdfd,
-    $raised-background: #345779,
-    $raised-hover-background: #2e4d6b,
-    $raised-focus-text-color: #fdfdfd,
-    $raised-focus-background: #2e4d6b,
-    $disabled-color: #2e4d6b
+    $foreground: #fdfdfd,
+    $hover-foreground: #fdfdfd,
+    $focus-foreground: #fdfdfd,
+    $background: #345779,
+    $hover-background: #2e4d6b,
+    $focus-background: #2e4d6b,
+    $disabled-foreground: #2e4d6b
 );
 ```
-
-カスタム テーマでは、`raised` ボタンにのみパラメーター値を提供しました。その他のタイプのボタンに実装するには、対応するパラメーターをターゲットにします。
 
 ボタンのスタイル設定に使用できるパラメーターの完全なリストについては、[`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) セクションを参照してください。
 
@@ -266,13 +298,12 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 
 ### デモ
 
-<div class="sample-container loading" style="height: 100px">
-    <iframe id="buttons-style-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/buttons-style" class="lazyload no-theming">
-</iframe></div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="buttons-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttons-style-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
+
+<code-view style="height: 100px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-entries/buttons-style" >
+</code-view>
+
 <div class="divider--half"></div>
 
 ## API リファレンス

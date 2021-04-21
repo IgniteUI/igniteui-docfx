@@ -10,17 +10,14 @@ mentionedTypes: ['XamDoughnutChart']
 
 The Ignite UI for Angular doughnut chart component is similar to the Pie Chart component, proportionally illustrating the occurrences of a variable. The doughnut chart can display multiple variables in concentric rings, and provides built-in support for visualizing hierarchical data.
 
-## Angular Doughnut Chart Overview Example
+## Angular Doughnut Chart Example
 
-<div class="sample-container loading" style="height: 450px">
-    <iframe id="doughnut-chart-overview-iframe" src='{environment:dvDemosBaseUrl}/charts/doughnut-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Doughnut Chart Overview Example"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-overview-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
-    </button>
-
-
-</div>
+<code-view style="height: 450px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/doughnut-chart-overview"
+           alt="Angular Doughnut Chart Example"
+           github-src="charts/doughnut-chart/overview">
+</code-view>
 
 <div class="divider--half"></div>
 
@@ -140,15 +137,11 @@ are used to bind to multiple rings:
 
 ## Multiple Rings Demo
 
-<div class="sample-container loading" style="height: 450px">
-    <iframe id="doughnut-chart-rings-iframe" data-src='{environment:dvDemosBaseUrl}/charts/doughnut-chart-rings' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-rings-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
-    </button>
-
-
-</div>
+<code-view style="height: 450px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/doughnut-chart-rings"
+           github-src="charts/doughnut-chart/rings">
+</code-view>
 
 <div class="divider--half"></div>
 
@@ -168,15 +161,11 @@ The doughnut chart component exposes the API for setting the state of one or mor
 
 ## Slice Selection Demo
 
-<div class="sample-container loading" style="height: 450px">
-    <iframe id="doughnut-chart-selection-iframe" data-src='{environment:dvDemosBaseUrl}/charts/doughnut-chart-selection' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-selection-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
-    </button>
-
-
-</div>
+<code-view style="height: 450px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/doughnut-chart-selection"
+           github-src="charts/doughnut-chart/selection">
+</code-view>
 
 <div class="divider--half"></div>
 
@@ -200,15 +189,11 @@ You can change the exploded slices by changing the contents of the `ExplodedSlic
 
 ## Slice Explosion Demo
 
-<div class="sample-container loading" style="height: 450px">
-    <iframe id="doughnut-chart-explosion-iframe" data-src='{environment:dvDemosBaseUrl}/charts/doughnut-chart-explosion' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-explosion-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
-    </button>
-
-
-</div>
+<code-view style="height: 450px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/doughnut-chart-explosion"
+           github-src="charts/doughnut-chart/explosion">
+</code-view>
 
 <div class="divider--half"></div>
 <!-- end: Angular, React, WebComponents -->
@@ -219,15 +204,11 @@ The doughnut chart component supports the use of a legend. The legend used is th
 
 ## Legend Demo
 
-<div class="sample-container loading" style="height: 450px">
-    <iframe id="doughnut-chart-legend-iframe" data-src='{environment:dvDemosBaseUrl}/charts/doughnut-chart-legend' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="doughnut-chart-legend-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
-    </button>
-
-
-</div>
+<code-view style="height: 450px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/doughnut-chart-legend"
+           github-src="charts/doughnut-chart/legend">
+</code-view>
 
 ## Animation
 
@@ -257,12 +238,8 @@ public tick(): void {
 
 ## Animation Demo
 
-<div class="sample-container loading" style="height: 450px">
-    <iframe id="doughnut-chart-animation-iframe" data-src='{environment:dvDemosBaseUrl}/charts/doughnut-chart-animation' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="doughnut-chart-animation-iframe" data-demos-base-url="environment:dvDemosBaseUrl}">View on StackBlitz
-    </button>
-
-
-</div>
+<code-view style="height: 450px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/doughnut-chart-animation"
+           github-src="charts/doughnut-chart/animation">
+</code-view>

@@ -11,14 +11,12 @@ The Ignite UI for Angular map component, the `ShapeDataSource` class loads geo-s
 
 ## Angular Binding Shape Files with Geo-spatial Data Example
 
-<div class="sample-container loading" style="height: 500px">
-    <iframe id="geo-map-binding-shp-polylines-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-binding-shp-polylines' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Binding Shape Files with Geo-spatial Data Example"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="geo-map-binding-shp-polylines-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
-    </button>
-</div>
-
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-binding-shp-polylines"
+           alt="Angular Binding Shape Files with Geo-spatial Data Example"
+           github-src="maps/geo-map/binding-shp-polylines">
+</code-view>
 
 <div class="divider--half"></div>
 

@@ -46,8 +46,8 @@ code .
 
 次にこれらの各ファイルを見て、それらが WPF アプリケーションとどのように関連しているかを見てみましょう。最良の方法は、各プロジェクトを並べて比較することです。左側は、WPF アプリです。右側は、Angular アプリです。
 
-<img src="../../../images/general/WPF_project_structure.png" />
-<img src="../../../images/general/Angular_project_structure.png" />
+<img class="responsive-img" src="../../../images/general/WPF_project_structure.png" />
+<img class="responsive-img" src="../../../images/general/Angular_project_structure.png" />
 
 Angular アプリケーションは単一ページアプリケーション (SPA) であり、アプリ全体に 1 ページしかないこと、つまり index.html であることを覚えておくことが重要です。`Index.html` ファイルは、WPFアプリケーションの `App.xaml` と比較できます。これらは両方ともグローバルであり、すべてアプリケーションのすべてのページに表示されます。`index.html` ファイルには、`App.xaml` ファイルの `StartupUri` に似たセクション `<app-root></app-root>` が含まれており、アプリの起動時に表示する最初のページを指定します。
 
@@ -100,7 +100,7 @@ npm start
 
 作成した Angular アプリケーションは以下のようになります。
 
-<img src="../../../images/general/First_angular_app.png" />
+<img class="responsive-img" src="../../../images/general/First_angular_app.png" />
 
 ## その他のリソース
 * [デスクトップから Web: はじめての Angular アプリを作成](https://www.youtube.com/watch?v=dhjrAPPad54&list=PLG8rj6Rr0BU-AqcJMuwggKy0GMIkjkt3j)

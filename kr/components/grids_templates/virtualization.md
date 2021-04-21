@@ -1,4 +1,4 @@
-﻿@@if (igxName === 'IgxGrid') {
+@@if (igxName === 'IgxGrid') {
 ---
 title: 가상화 지시문 - 네이티브 Angular | Ignite UI for Angular 
 _description: The Ignite UI for Angular Virtualization directive is the core mechanic behind the speed and performance of the grid when handling large data sets, since its virtual rendering mechanism allows the user to effortlessly scroll by its fixing of the number of DOM objects in memory. 
@@ -29,23 +29,21 @@ Ignite UI for Angular에서 [@@igxName]({environment:angularApiUrl}/classes/@@ig
 @@if (igxName === 'IgxGrid') {
 #### 데모
 
-<div class="sample-container loading" style="height:550px">
-    <iframe id="grid-sample-2-iframe" src='{environment:demosBaseUrl}/grid/grid-sample-2' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<br/>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기</button>
-</div>
+
+<code-view style="height:550px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/grid/grid-sample-2" >
+</code-view>
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 #### 데모
-<div class="sample-container loading" style="height:620px">
-    <iframe id="hierarchical-grid-lod-iframe" src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-lod' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<br/>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-lod-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기</button>
-</div>
+
+<code-view style="height:620px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-lod" >
+</code-view>
+
 <div class="divider--half"></div>
 }
 
@@ -69,13 +67,12 @@ Ignite UI for Angular에서 [@@igxName]({environment:angularApiUrl}/classes/@@ig
 
 ### 원격 가상화 데모
 
-<div class="sample-container loading" style="height:550px">
-    <iframe id="grid-sample-4-iframe" data-src='{environment:demosBaseUrl}/grid/grid-sample-4' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
-</div>
-<br/>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-sample-4-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기</button>
-</div>
+
+<code-view style="height:550px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/grid/grid-sample-4" >
+</code-view>
+
 
 이 기능을 사용하려면 얻은 인수를 기반으로 적절한 요청을 하기 위해 [`onDataPreLoad`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#ondatapreload) 출력에 서브스크라이브하고 서비스에서 제공하는 해당 정보와 공개 [@@igxName]({environment:angularApiUrl}/classes/@@igTypeDoc.html) 속성 [`totalItemCount`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalitemcount)를 설정해야 합니다.
 
@@ -118,13 +115,12 @@ public processData() {
 
 원격 데이터를 요청할 때 필터링 작업은 대소문자를 구분합니다.
 
-<div class="sample-container loading" style="height:550px">
-    <iframe id="grid-remote-filtering-iframe" data-src='{environment:demosBaseUrl}/grid/grid-remote-filtering' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
-</div>
-<br/>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-remote-filtering-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기</button>
-</div>
+
+<code-view style="height:550px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/grid/grid-remote-filtering" >
+</code-view>
+
 }
 
 @@if (igxName === 'IgxTreeGrid') {
@@ -152,25 +148,24 @@ public ngAfterViewInit() {
 }
 
 public processData() {
-    this.toast.show();
+    this.toast.open();
 
     const filteringExpr = this.treeGrid.filteringExpressionsTree;
 
     this._remoteService.getData(filteringExpr, () => {
-        this.toast.hide();
+        this.toast.close();
     });
 }
 ```
 
 원격 필터링은 플랫 컬렉션에서 직접 실행해야 합니다. 상위가 필터링과 일치하는지 여부에 관계없이 필터링 조건과 일치하는 모든 레코드에 대해 모든 상위를 포함시켜야 합니다(계층 구조를 유지하기 위해 이 작업을 실행함). 결과는 다음과 같습니다:
 
-<div class="sample-container loading" style="height:550px">
-    <iframe id="treegrid-remotefiltering-iframe" src='{environment:demosBaseUrl}/tree-grid/treegrid-remote-filtering' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<br/>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-remotefiltering-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기</button>
-</div>
+
+<code-view style="height:550px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-remote-filtering" >
+</code-view>
+
 <div class="divider--half"></div>
 
 원격 데이터를 요청할 때 필터링 작업은 대소문자를 구분합니다.

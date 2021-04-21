@@ -10,12 +10,12 @@ _language: kr
 The [`igx-tabs`]({environment:angularApiUrl}/classes/igxtabscomponent.html) component in Ignite UI for Angular is used to organize or switch between similar data sets. It functions as a wrapper for [`igx-tab-item`]({environment:angularApiUrl}/classes/igxtabitemcomponent.html) and [`igx-tabs-group`]({environment:angularApiUrl}/classes/igxtabsgroupcomponent.html), as these respectively represent the container for the data and the tab header. The tabs component places tabs at the top and allows scrolling when there are multiple tab items on the screen.
 
 ### Tabs Demo
-<div class="sample-container loading" style="height: 250px; width: 600px;">
-    <iframe id="tabs-sample-0" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/layouts/tabs-sample-3" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabs-sample-0" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
-</div>
+
+<code-view style="height: 250px; width: 600px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/layouts/tabs-sample-3" >
+</code-view>
+
 <div class="divider--half"></div>
 
 > [!NOTE]
@@ -53,13 +53,12 @@ Then, specify several tabs groups with [`label`]({environment:angularApiUrl}/cla
 
 If the sample is configured properly, the final result should look like that:
 
-<div class="sample-container loading" style="height: 200px; width: 600px; border: 1px solid gray;">
-    <iframe id="tabs-sample-1-iframe" data-src='{environment:demosBaseUrl}/layouts/tabs-sample-1' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabs-sample-1-iframe"
-    data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
-</div>
+
+<code-view style="height: 200px; width: 600px; border: 1px solid gray;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/layouts/tabs-sample-1" >
+</code-view>
+
 
 <div class="divider"></div>
 
@@ -97,13 +96,12 @@ Nevertheless what type of tabs you have chosen, the tab header width is limited 
 </div>
 ```
 
-<div class="sample-container loading" style="height: 450px; width: 800px;">
-    <iframe id="tabs-sample-2-iframe" data-src='{environment:demosBaseUrl}/layouts/tabs-sample-2' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabs-sample-2-iframe"
-    data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
-</div>
+
+<code-view style="height: 450px; width: 800px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/layouts/tabs-sample-2" >
+</code-view>
+
 
 <div class="divider"></div>
 
@@ -157,13 +155,12 @@ First add the Material+Icons import in your 'styles.css' file in the main applic
 
 If the sample is configured properly, the tabs should look like the following example:
 
-<div class="sample-container loading" style="height: 250px; width: 600px;">
-    <iframe id="tabs-sample-3-iframe" data-src='{environment:demosBaseUrl}/layouts/tabs-sample-3' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabs-sample-3-iframe"
-    data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
-</div>
+
+<code-view style="height: 250px; width: 600px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/layouts/tabs-sample-3" >
+</code-view>
+
 
 <div class="divider--half"></div>
 
@@ -289,13 +286,12 @@ public ngOnInit() {
 }
 ```
 
-<div class="sample-container loading">
-    <iframe id="tabs-sample-4-iframe" data-src='{environment:demosBaseUrl}/layouts/tabs-sample-4' seamless="" frameBorder="0" style="display: none" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabs-sample-4-iframe"
-    data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
-</div>
+
+<code-view style 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/layouts/tabs-sample-4" >
+</code-view>
+
 
 #### Using Separate router-outlet as Tabs Content
 In order to render views inside the [`igx-tabs`]({environment:angularApiUrl}/classes/igxtabscomponent.html) content, use named router outlets. In this case, implement [`onTabItemSelected`]({environment:angularApiUrl}/classes/igxtabscomponent.html#ontabitemselected) event handler to navigate and render the specified view.
@@ -381,13 +377,12 @@ const routes: Routes = [
 ...
 ```
 
-<div class="sample-container loading">
-    <iframe id="tabs-sample-5-iframe" data-src='{environment:demosBaseUrl}/layouts/tabs-sample-5' seamless="" frameBorder="0" style="display: none" class="lazyload"></iframe>
-</div>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="tabs-sample-5-iframe"
-    data-demos-base-url="{environment:demosBaseUrl}">StackBlitz 에서보기</button>
-</div>
+
+<code-view style 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/layouts/tabs-sample-5" >
+</code-view>
+
 
 ### API References
 <div class="divider"></div>
