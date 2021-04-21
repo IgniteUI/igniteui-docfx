@@ -449,8 +449,8 @@ export class GridRowReorderComponent {
         const currRowIndex = this.getCurrentRowIndex(this.grid.rowList.toArray(),
             { x: event.clientX, y: event.clientY });
         if (currRowIndex === -1) { return; }
-        this.grid.deleteRow(args.dragData.rowID);
-        this.data.splice(currRowIndex, 0, args.dragData.rowData);
+        this.grid.deleteRow(args.dragData.key);
+        this.data.splice(currRowIndex, 0, args.dragData.data);
     }
 
     private getCurrentRowIndex(rowList, cursorPosition) {
@@ -458,7 +458,7 @@ export class GridRowReorderComponent {
             const rowRect = row.nativeElement.getBoundingClientRect();
             if (cursorPosition.y > rowRect.top + window.scrollY && cursorPosition.y < rowRect.bottom + window.scrollY &&
                 cursorPosition.x > rowRect.left + window.scrollX && cursorPosition.x < rowRect.right + window.scrollX) {
-                return this.data.indexOf(this.data.find((r) => r.ID === row.data.ID));
+                return this.data.indexOf(this.data.find((r) => r.rowID === row.rowID));
             }
         }
 
@@ -472,21 +472,21 @@ export class GridRowReorderComponent {
     export class TreeGridRowReorderComponent {
     ...
     public rowDragStart(args: any): void {
-        const targetRow: IgxTreeGridRowComponent = args.dragData;
+        const targetRow = args.dragData;
         if (targetRow.expanded) {
             this.treeGrid.collapseRow(targetrow.key);
         }
     }
 
     public dropInGrid(args: IDropDroppedEventArgs): void {
-        const draggedRow: IgxTreeGridRowComponent = args.dragData;
+        const draggedRow = args.dragData;
         const event = args.originalEvent;
         const cursorPosition: Point = { x: event.clientX, y: event.clientY };
         this.moveRow(draggedRow, cursorPosition);
     }
 
-    private moveRow(draggedRow: IgxTreeGridRowComponent, cursorPosition: Point): void {
-        const row: IgxTreeGridRowComponent = this.catchCursorPosOnElem(this.treeGrid.rowList.toArray(), cursorPosition);
+    private moveRow(draggedRow: RowType, cursorPosition: Point): void {
+        const row = this.catchCursorPosOnElem(this.treeGrid.rowList.toArray(), cursorPosition);
         if (!row) { return; }
         if (row.data.ParentID === -1) {
             this.performDrop(draggedRow, row).ParentID = -1;
@@ -500,7 +500,7 @@ export class GridRowReorderComponent {
         }
         if (draggedRow.selected) {
             this.treeGrid.selectRows([this.treeGrid.rowList.toArray()
-                .find((r) => r.rowData.ID === draggedrow.data.ID).rowID], false);
+                .find((r) => r.rowID === draggedrow.key).rowID], false);
         }
 
         this.localData = [...this.localData];
@@ -520,8 +520,8 @@ export class GridRowReorderComponent {
         return this.localData.indexOf(rowData);
     }
 
-    private catchCursorPosOnElem(rowListArr: any[], cursorPosition: Point)
-        : any {
+    private catchCursorPosOnElem(rowListArr: IgxTreeGridRowComponent[], cursorPosition: Point)
+        : IgxTreeGridRowComponent {
         for (const row of rowListArr) {
             const rowRect = row.nativeElement.getBoundingClientRect();
             if (cursorPosition.y > rowRect.top + window.scrollY && cursorPosition.y < rowRect.bottom + window.scrollY &&
@@ -540,9 +540,9 @@ export class GridRowReorderComponent {
     export class HGridRowReorderComponent {
     ...
     public rowDragStart(args: any): void {
-        const targetRow: IgxHierarchicalRowComponent = args.dragData;
+        const targetRow = args.dragData;
         if (targetRow.expanded) {
-            targetRow.expanded = false;
+            targetRow.toggle();
         }
     }
 
@@ -553,25 +553,28 @@ export class GridRowReorderComponent {
         this.moveRow(targetRow, cursorPosition);
     }
 
-    private moveRow(draggedRow: IgxHierarchicalRowComponent, cursorPosition: Point): void {
-        const parent: IgxHierarchicalGridComponent = draggedRow.grid;
+    private moveRow(draggedRow: RowType, cursorPosition: Point): void {
+        // const parent: IgxHierarchicalGridComponent = (draggedRow as any).grid;
+        // const parent = args.drag.ghostContext.grid;
+        const parent = this.hGrid;
         const rowIndex: number = this.getTargetRowIndex(parent.rowList.toArray(), cursorPosition);
         if (rowIndex === -1) { return; }
+        const wasSelected = draggedRow.selected;
         draggedRow.delete();
-        parent.data.splice(rowIndex, 0, draggedrow.data);
-        if (draggedRow.selected) {
+        parent.data.splice(rowIndex, 0, draggedRow.data);
+        if (wasSelected) {
             parent.selectRows([parent.rowList.toArray()
-                .find((r) => r.rowData.id === draggedrow.data.id).rowID], false);
+                .find((r) => r.rowID === draggedRow.key).rowID], false);
         }
     }
 
-    private getTargetRowIndex(rowListArr: any[], cursorPosition: Point): number {
+    private getTargetRowIndex(rowListArr: RowType[], cursorPosition: Point): number {
         const targetElem: IgxHierarchicalRowComponent = this.catchCursorPosOnElem(rowListArr, cursorPosition);
         return rowListArr.indexOf(rowListArr.find((r) => r.rowData.id === targetElem.rowData.id));
     }
 
     private catchCursorPosOnElem(rowListArr: any[], cursorPosition: Point)
-        : any {
+        : IgxHierarchicalRowComponent {
         for (const row of rowListArr) {
             const rowRect = row.nativeElement.getBoundingClientRect();
             if (cursorPosition.y > rowRect.top + window.scrollY && cursorPosition.y < rowRect.bottom + window.scrollY &&
