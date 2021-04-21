@@ -7,13 +7,13 @@ _language: kr
 
 # Angular 주석
 
-이 항목에서는 `XamFinancialChart`에서 사용할 수 있는 주석에 대한 개념 정보를 제공합니다.
+이 항목에서는 [`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html)에서 사용할 수 있는 주석에 대한 개념 정보를 제공합니다.
 
 ## 데모
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-annotations"  
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-annotations"
            github-src="charts/financial-chart/annotations">
 </code-view>
 

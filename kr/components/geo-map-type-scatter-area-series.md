@@ -10,8 +10,8 @@ Use the map component's [`IgxGeographicScatterAreaSeriesComponent`]({environment
 
 ## Demo
 
-<code-view style="height: 400px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
+<code-view style="height: 400px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-type-scatter-area-series"  >
 </code-view>
 
