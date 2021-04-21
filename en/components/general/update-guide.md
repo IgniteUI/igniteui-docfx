@@ -222,6 +222,22 @@ The [**IgxTabsComponent**]({environment:angularApiUrl}/classes/igxtabscomponent.
         * The `type` property, with its contentFit and fixed options, is no longer available. The header sizing & positioning mode is currently controlled by the [`tabAlignment`]({environment:angularApiUrl}/classes/igxtabscomponent.html#tabalignment) input property which accepts four different values - start (default), center, end and justify. The old `contentFit` type corresponds to the current `start` alignment value and the old `fixed` type - to the current `justify` value.
     * The `tabItemSelected` and `tabItemDeselected` events were removed. We introduced three new events, [`selectedIndexChanging`]({environment:angularApiUrl}/classes/igxtabscomponent.html#selectedindexchanging), [`selectedIndexChange`]({environment:angularApiUrl}/classes/igxtabscomponent.html#selectedindexchange) and [`selectedItemChange`]({environment:angularApiUrl}/classes/igxtabscomponent.html#selecteditemchange), which provide more flexibility and control over the tabs' selection. Unfortunately, having an adequate migration for these event changes is complicated to say the least, so any errors should be handled at project level.
 
+### IgxGridComponent, IgxTreeGridComponent, IgxHierarchicalGridComponent
+* `IgxGridRowComponent`, `IgxTreeGridRowComponent`, `IgxHierarchicalRowComponent`, `IgxGridGroupByRowComponent` are no longer exposed in the public API.
+* Public APIs, which used to return an instance of one of the above, now return objects implementing the public `RowType` interface:
+
+        const row = grid.getRowByIndex(0);
+        const row = grid.getRowByKey(2);
+        const row = cell.row;
+
+* `row` property in the event arguments emitted by `onRowPinning`, and `dragData` property in the event arguments emitted by `onRowDragStart`, `onRowDragEnd` is now implementing `RowType`
+* `ng update` will migrate most of the uses of `IgxGridRowComponent`, `IgxTreeGridRowComponent`, `IgxHierarchicalRowComponent`, `IgxGridGroupByRowComponent` , like imports, typings and casts. If a place in your code using any of the above is not migrated, just remove the typing/cast, or change it with `RowType`.
+* `getRowByIndex` will now return a `RowType` object, if the row at that index is a summary row (previously used to returnd undefined). `row.isSummaryRow` and `row.isGroupByRow` return true if the row at the index is a summary row or a group by row.
+* While the public API of `RowType` is the same as what `IgxRowComponent` and others used to expose, please note:
+
+        `row.rowData` and `row.rowID` are deprecated and will be entirely removed with version 13. Please use `row.data` and `row.key` instead.
+
+
 ## From 10.2.x to 11.0.x
 * IgxGrid, IgxTreeGrid, IgxHierarchicalGrid
     * The way the toolbar is instantiated in the grid has changed. It is now a separate component projected in the grid tree. Thus the `showToolbar` property is removed from

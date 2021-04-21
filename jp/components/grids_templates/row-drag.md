@@ -458,7 +458,7 @@ export class GridRowReorderComponent {
             const rowRect = row.nativeElement.getBoundingClientRect();
             if (cursorPosition.y > rowRect.top + window.scrollY && cursorPosition.y < rowRect.bottom + window.scrollY &&
                 cursorPosition.x > rowRect.left + window.scrollX && cursorPosition.x < rowRect.right + window.scrollX) {
-                return this.data.indexOf(this.data.find((r) => r.ID === row.rowData.ID));
+                return this.data.indexOf(this.data.find((r) => r.ID === row.data.ID));
             }
         }
 
@@ -474,7 +474,7 @@ export class GridRowReorderComponent {
     public rowDragStart(args: any): void {
         const targetRow: IgxTreeGridRowComponent = args.dragData;
         if (targetRow.expanded) {
-            this.treeGrid.collapseRow(targetRow.rowID);
+            this.treeGrid.collapseRow(targetrow.key);
         }
     }
 
@@ -488,19 +488,19 @@ export class GridRowReorderComponent {
     private moveRow(draggedRow: IgxTreeGridRowComponent, cursorPosition: Point): void {
         const row: IgxTreeGridRowComponent = this.catchCursorPosOnElem(this.treeGrid.rowList.toArray(), cursorPosition);
         if (!row) { return; }
-        if (row.rowData.ParentID === -1) {
+        if (row.data.ParentID === -1) {
             this.performDrop(draggedRow, row).ParentID = -1;
         } else {
-            if (row.rowData.ParentID === draggedRow.rowData.ParentID) {
+            if (row.data.ParentID === draggedrow.data.ParentID) {
                 this.performDrop(draggedRow, row);
             } else {
-                const rowIndex = this.getRowIndex(draggedRow.rowData);
-                this.localData[rowIndex].ParentID = row.rowData.ParentID;
+                const rowIndex = this.getRowIndex(draggedrow.data);
+                this.localData[rowIndex].ParentID = row.data.ParentID;
             }
         }
         if (draggedRow.selected) {
             this.treeGrid.selectRows([this.treeGrid.rowList.toArray()
-                .find((r) => r.rowData.ID === draggedRow.rowData.ID).rowID], false);
+                .find((r) => r.rowData.ID === draggedrow.data.ID).rowID], false);
         }
 
         this.localData = [...this.localData];
@@ -508,11 +508,11 @@ export class GridRowReorderComponent {
 
     private performDrop(
         draggedRow: IgxTreeGridRowComponent, targetRow: IgxTreeGridRowComponent) {
-        const draggedRowIndex = this.getRowIndex(draggedRow.rowData);
-        const targetRowIndex: number = this.getRowIndex(targetRow.rowData);
+        const draggedRowIndex = this.getRowIndex(draggedrow.data);
+        const targetRowIndex: number = this.getRowIndex(targetrow.data);
         if (draggedRowIndex === -1 || targetRowIndex === -1) { return; }
         this.localData.splice(draggedRowIndex, 1);
-        this.localData.splice(targetRowIndex, 0, draggedRow.rowData);
+        this.localData.splice(targetRowIndex, 0, draggedrow.data);
         return this.localData[targetRowIndex];
     }
 
@@ -520,8 +520,8 @@ export class GridRowReorderComponent {
         return this.localData.indexOf(rowData);
     }
 
-    private catchCursorPosOnElem(rowListArr: IgxTreeGridRowComponent[], cursorPosition: Point)
-        : IgxTreeGridRowComponent {
+    private catchCursorPosOnElem(rowListArr: any[], cursorPosition: Point)
+        : any {
         for (const row of rowListArr) {
             const rowRect = row.nativeElement.getBoundingClientRect();
             if (cursorPosition.y > rowRect.top + window.scrollY && cursorPosition.y < rowRect.bottom + window.scrollY &&
@@ -558,10 +558,10 @@ export class GridRowReorderComponent {
         const rowIndex: number = this.getTargetRowIndex(parent.rowList.toArray(), cursorPosition);
         if (rowIndex === -1) { return; }
         draggedRow.delete();
-        parent.data.splice(rowIndex, 0, draggedRow.rowData);
+        parent.data.splice(rowIndex, 0, draggedrow.data);
         if (draggedRow.selected) {
             parent.selectRows([parent.rowList.toArray()
-                .find((r) => r.rowData.id === draggedRow.rowData.id).rowID], false);
+                .find((r) => r.rowData.id === draggedrow.data.id).rowID], false);
         }
     }
 
