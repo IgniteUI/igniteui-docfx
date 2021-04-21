@@ -53,6 +53,9 @@ In the @@igComponent if you set rowEditable property to true, and editable prope
  - For `string` data type, default template is using [igxInput]({environment:angularApiUrl}/classes/igxinputdirective.html)
  - For `number` data type, default template is using [igxInput]({environment:angularApiUrl}/classes/igxinputdirective.html) type="number", so if you try to update cell to a value which can not be parsed to a number your change is going to be discarded, and the value in the cell will be set to 0.
  - For `date` data type, default template is using [igxDatePicker]({environment:angularApiUrl}/classes/igxdatepickercomponent.html)
+ - For `dateTime` data type, default template is using [IgxDateTimeEditor directive]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html). This editor will give you a mask directions for the input elements part of the DateTime object.
+ - For `date` data type, default template is using [IgxDatePicker component]({environment:angularApiUrl}/classes/igxdatepickercomponent.html). 
+ - For `time` -  data type, default template is using [IgxTimePicker component]({environment:angularApiUrl}/classes/igxtimepickercomponent.html). 
  - For `boolean` data type, default template is using [igxCheckbox]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html)
  - For `currency` data type, default template is using [IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) with prefix/suffix configuration based on application or grid locale settings. 
  - For `percent` data type, default template is using [IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) with suffix element that shows a preview of the edited value in percents. 
