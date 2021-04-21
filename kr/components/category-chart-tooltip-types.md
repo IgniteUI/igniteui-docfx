@@ -11,9 +11,9 @@ _language: kr
 
 ## 데모
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-tooltip-types"  
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-tooltip-types"
            github-src="charts/category-chart/tooltip-types">
 </code-view>
 

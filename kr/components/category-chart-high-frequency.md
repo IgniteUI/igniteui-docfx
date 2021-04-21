@@ -11,9 +11,9 @@ Ignite UI for Angular 카테고리 차트 컴포넌트는 다음 데모에서 �
 
 ## 데모
 
-<code-view style="height: 500px;" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-high-frequency"  
+<code-view style="height: 500px;"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-high-frequency"
            github-src="charts/category-chart/high-frequency">
 </code-view>
 

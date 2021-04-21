@@ -10,8 +10,8 @@ Use the map component's [`IgxGeographicShapeSeriesComponent`]({environment:dvApi
 
 ## Demo
 
-<code-view style="height: 400px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
+<code-view style="height: 400px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-type-shape-polygon-series"  >
 </code-view>
 

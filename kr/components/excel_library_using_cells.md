@@ -10,9 +10,9 @@ The [`WorksheetCell`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/
 
 ## Demo
 
-<code-view style="height: 150px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/excel/excel-library-working-with-cells"  
+<code-view style="height: 150px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/excel/excel-library-working-with-cells"
            github-src="excel/excel-library/working-with-cells">
 </code-view>
 
