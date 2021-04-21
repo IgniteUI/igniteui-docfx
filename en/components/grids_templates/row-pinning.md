@@ -464,6 +464,9 @@ If the component is using an [`Emulated`](themes/component-themes.md#view-encaps
 
 }
 
+>[!NOTE]
+>The sample will not be affected by the selected global theme from `Change Theme`.
+
 ## API References
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 * [IgxRowComponent]({environment:angularApiUrl}/classes/igxrowcomponent.html)

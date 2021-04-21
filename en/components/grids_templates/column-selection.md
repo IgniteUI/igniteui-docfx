@@ -164,6 +164,8 @@ In order to style components for Internet Explorer 11, we have to use a differen
            iframe-src="{environment:demosBaseUrl}/@@igDemoBasePath/column-selection-styles" >
 </code-view>
 
+>[!NOTE]
+>The sample will not be affected by the selected global theme from `Change Theme`.
 <div class="divider--half"></div>
 
 ## <a name="api-references"></a>API References

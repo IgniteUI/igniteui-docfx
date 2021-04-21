@@ -392,13 +392,15 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-styling" >
 </code-view>
 
+>[!NOTE]
+>The sample will not be affected by the selected global theme from `Change Theme`.
+
 
 ## Known Limitations
 
 |Limitation|Description|
 |--- |--- |
 |Group By|Group By feature is not supported by the hierarchical grid.|
-|Export to Excel|Export to Excel is currently not supported by the Hierarchical Grid, but it would be available in future versions of Ignite UI for Angular.|
 
 > [!NOTE]
 > `igxHierarchicalGrid` uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for `igxHierarchicalGrid`. For more details see [igxForOf Known Issues](../for-of.html#known-limitations) section.
