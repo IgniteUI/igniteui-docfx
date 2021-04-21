@@ -197,7 +197,7 @@ The last step is to **include** the component mixins with its respective theme:
 ```
 
 > [!NOTE]
-> Depending on the component [**View Encapsulation**](/components/themes/component-themes.html#view-encapsulation) strategy, it may be necessary to `penetrate` this encapsulation using `::ng-deep`
+> Depending on the component [**View Encapsulation**](/components/themes/sass/component-themes.html#view-encapsulation) strategy, it may be necessary to `penetrate` this encapsulation using `::ng-deep`
 
 ```scss
 :host {
@@ -237,7 +237,7 @@ $dark-grid-column-moving-theme: igx-grid-theme(
 
 ### Using Schemas
 
-Going further with the theming engine, you can build a robust and flexible structure that benefits from [schemas](/components/themes/schemas.html). A **schema** is a recipe of a theme.
+Going further with the theming engine, you can build a robust and flexible structure that benefits from [schemas](/components/themes/sass/schemas.html). A **schema** is a recipe of a theme.
 
 Extend one of the two predefined schemas, that are provided for every component, in this case - [light-grid]({environment:sassApiUrl}/index.html#variable-_light-grid).
 
