@@ -8,7 +8,7 @@ _language: ja
 
 # Angular ワールド コネクション
 
-リソース　トピックは、空港の位置、飛行経路、および地理的なグリッド線を生成するためのデータユーティリティの実装を提供します。これらのデータソースを独自の地理データを作成するための参照点として使用できます。このユーティリティは [WorldUtil](geo-map-resources-world-util.md) と [WorldLocations](geo-map-resources-world-locations.md) スクリプトに依存していることに注意してください。
+リソース トピックは、空港の位置、飛行経路、および地理的なグリッド線を生成するためのデータユーティリティの実装を提供します。これらのデータソースを独自の地理データを作成するための参照点として使用できます。このユーティリティは [WorldUtil](geo-map-resources-world-util.md) と [WorldLocations](geo-map-resources-world-locations.md) スクリプトに依存していることに注意してください。
 
 ## コード スニペット
 
