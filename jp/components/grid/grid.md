@@ -714,7 +714,9 @@ Grid のキーボード ナビゲーションは、さまざまなキーボー�
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 * [IgxGridComponent スタイル]({environment:sassApiUrl}/#function-igx-grid-theme)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
-* [IgxGridRowComponent]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)
+* [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html)
+* [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)
+* [IgxHierarchicalGridRow]({environment:angularApiUrl}/classes/igxhierarchicalgridrow.html)
 * [IgxGridCellComponent]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
 
 ## その他のリソース

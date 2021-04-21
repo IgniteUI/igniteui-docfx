@@ -411,7 +411,7 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 * [IgxGridComponent 스타일]({environment:sassApiUrl}/#function-igx-grid-theme)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
-* [IgxGridRowComponent]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)
+* [IgxHierarchicalGridRow]({environment:angularApiUrl}/classes/igxhierarchicalgridrow.html)
 * [IgxGridCellComponent]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
 
 ### 추가 리소스

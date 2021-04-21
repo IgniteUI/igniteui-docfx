@@ -541,7 +541,7 @@ export class GridRowReorderComponent {
     public rowDragStart(args: any): void {
         const targetRow = args.dragData;
         if (targetRow.expanded) {
-            targetRow.toggle();
+            targetRow.expanded = false;
         }
     }
 

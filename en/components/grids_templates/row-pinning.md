@@ -102,7 +102,7 @@ The built-in row pinning UI is enabled by adding an `igxActionStrip` component w
 
 ## Row Pinning API
 
-Row pinning is controlled through the `pinned` input of the [`igx-row`]({environment:angularApiUrl}/classes/igxrowcomponent.html). Pinned rows are rendered at the top of the @@igComponent by default and stay fixed through vertical scrolling of the unpinned rows in the @@igComponent body.
+Row pinning is controlled through the `pinned` input of the [`row`]({environment:angularApiUrl}/interfaces/rowtype.html). Pinned rows are rendered at the top of the @@igComponent by default and stay fixed through vertical scrolling of the unpinned rows in the @@igComponent body.
 
 @@if (igxName === 'IgxGrid') {
 ```typescript
@@ -348,15 +348,15 @@ public onDropAllowed(args) {
         currRowPinnedIndex = this.grid.pinnedRows.indexOf(this.grid.pinnedRows.find((r) => r.rowID === currRowID));
     }
     // remove the row that was dragged and place it onto its new location
-    this.grid.deleteRow(args.dragData.rowID);
-    this.data.splice(currRowIndex, 0, args.dragData.rowData);
+    this.grid.deleteRow(args.dragData.key);
+    this.data.splice(currRowIndex, 0, args.dragData.data);
     if (currentRow.pinned && !args.dragData.pinned) {
-        this.grid.pinRow(args.dragData.rowID, currRowPinnedIndex);
+        this.grid.pinRow(args.dragData.key, currRowPinnedIndex);
     } else if (!currentRow.pinned && args.dragData.pinned) {
-        this.grid.unpinRow(args.dragData.rowID);
+        this.grid.unpinRow(args.dragData.key);
     } else if (currentRow.pinned && args.dragData.pinned) {
-        this.grid.unpinRow(args.dragData.rowID);
-        this.grid.pinRow(args.dragData.rowID, currRowPinnedIndex);
+        this.grid.unpinRow(args.dragData.key);
+        this.grid.pinRow(args.dragData.key, currRowPinnedIndex);
     }
 }
 ```
@@ -469,7 +469,10 @@ If the component is using an [`Emulated`](themes/component-themes.md#view-encaps
 
 ## API References
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [IgxRowComponent]({environment:angularApiUrl}/classes/igxrowcomponent.html)
+* [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html)
+* [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)
+* [IgxHierarchicalGridRow]({environment:angularApiUrl}/classes/igxhierarchicalgridrow.html)
+* [RowType]({environment:angularApiUrl}/interfaces/RowType.html)
 * [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 
 ## Additional Resources
