@@ -11,9 +11,9 @@ The [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-an
 
 ## Demo
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/excel/spreadsheet-config-options"  
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/excel/spreadsheet-config-options"
            github-src="excel/spreadsheet/config-options">
 </code-view>
 

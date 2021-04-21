@@ -47,7 +47,7 @@ npm install --save igniteui-angular-charts
 
 ## モジュールの要件
 
-[`IgxZoomSliderComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxzoomslidercomponent.html) には、以下のモジュールが必要です。
+[`IgxZoomSliderComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxzoomslidercomponent.html) を作成するには、以下のモジュールが必要です。
 
 ```ts
 import { IgxZoomSliderModule } from 'igniteui-angular-charts';

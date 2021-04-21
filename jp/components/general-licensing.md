@@ -17,7 +17,7 @@ _language: ja
 > [!NOTE]
 > 現在、プライベート npm フィードで **igniteui-dockmanager** パッケージのみ使用できますが、今後は他の Ignite UI for Angular パッケージを追加する予定です。
 
-**市販されない製品**をビルドする場合は、[お気軽にお、問い合わせください](https://jp.infragistics.com/about-us/contact-us)。適切なライセンスを提供します。
+**市販されない製品**をビルドする場合は、[お気軽にお問い合わせください](https://jp.infragistics.com/about-us/contact-us)。適切なライセンスを提供します。
 
 ## プライベート npm フィードの使用
 
