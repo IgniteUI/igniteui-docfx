@@ -67,13 +67,7 @@ this.state = { dataSource: SampleRadialData.create() }
 
 ## モジュールの要件
 
-ラジアル シリーズを作成するには、以下のモジュールが必要です。<!-- Angular, React, WebComponents --> <!-- end: Angular, React, WebComponents --><!-- Blazor -->モジュールはアプリケーションのエントリ ポイントに登録する必要があります。
-
--   DataChartCoreModule        
--   DataChartRadialSeriesModule
--   DataChartRadialSeriesCoreModule      
--   DataChartInteractivityModule
-    <!-- end: Blazor -->
+ラジアル シリーズを作成するには、以下のモジュールが必要です。
 
 ```ts
 // axis' modules:
@@ -103,7 +97,7 @@ import { IgxDataChartRadialModule } from 'igniteui-angular-charts';
 
 ## コード例
 
-このコードは、[`IgxRadialAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialareaseriescomponent.html) でデータチャートのインスタンスを作成し、データソースにバインドする方法を説明します。
+このコードは、[`IgxRadialAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialareaseriescomponent.html) でデータ チャートのインスタンスを作成し、データソースにバインドする方法を説明します。
 
 ```html
  <igx-data-chart
