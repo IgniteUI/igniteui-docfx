@@ -26,7 +26,7 @@ Ignite UI for Angular 放射状円チャートはラジアル チャートのグ
 
 ## 軸の要件
 
-Angular データチャート コンポーネントはさまざまなタイプの軸を提供しますが、[`IgxRadialPieSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialpieseriescomponent.html) で使用できるのは以下のタイプの軸のみです。
+Angular データ チャート コンポーネントはさまざまなタイプの軸を提供しますが、[`IgxRadialPieSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialpieseriescomponent.html) で使用できるのは以下のタイプの軸のみです。
 
 -   [`IgxNumericRadiusAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericradiusaxiscomponent.html)
 -   [`IgxCategoryAngleAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryangleaxiscomponent.html)
@@ -48,13 +48,7 @@ public dataSource: any[] = SampleRadialData.create();
 
 ## モジュールの要件
 
-[`IgxRadialPieSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialpieseriescomponent.html) を作成するには、以下のモジュールが必要です。<!-- Angular, React, WebComponents --> <!-- end: Angular, React, WebComponents --><!-- Blazor -->モジュールはアプリケーションのエントリ ポイントに登録する必要があります。
-
--   DataChartCoreModule        
--   RadialPieSeriesModule
--   RadialPieSeriesCoreModule      
--   DataChartInteractivityModule
-    <!-- end: Blazor -->
+[`IgxRadialPieSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialpieseriescomponent.html) を作成するには、以下のモジュールが必要です。
 
 ```ts
 // axis' modules:

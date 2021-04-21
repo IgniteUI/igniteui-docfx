@@ -11,9 +11,9 @@ The Angular Spreadsheet component allows you to perform commands for activating 
 
 ## Demo
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/excel/spreadsheet-commands"  
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/excel/spreadsheet-commands"
            github-src="excel/spreadsheet/commands">
 </code-view>
 

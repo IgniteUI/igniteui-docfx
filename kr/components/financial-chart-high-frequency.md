@@ -7,13 +7,13 @@ _language: kr
 
 # Angular 실시간 데이터 바인딩
 
-`XamFinancialChart` 제어는 실시간으로 데이터의 렌더링을 처리할 수 있는 매우 빠른 컨트롤입니다. 다음 데모에서는 금융 차트의 데이터가 높은 빈도로 업데이트되는 방법을 보여줍니다.
+[`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html) 제어는 실시간으로 데이터의 렌더링을 처리할 수 있는 매우 빠른 컨트롤입니다. 다음 데모에서는 금융 차트의 데이터가 높은 빈도로 업데이트되는 방법을 보여줍니다.
 
 ## 데모
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-high-frequency"  
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-high-frequency"
            github-src="charts/financial-chart/high-frequency">
 </code-view>
 

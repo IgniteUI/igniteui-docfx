@@ -11,9 +11,9 @@ In the Ignite UI for Angular data chart component, you are able to add annotatio
 
 ## Demo
 
-<code-view style="height: 450px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-axis-annotations"  
+<code-view style="height: 450px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-axis-annotations"
            github-src="charts/data-chart/axis-annotations">
 </code-view>
 

@@ -10,9 +10,9 @@ The Infragistics Excel Engine's [`Worksheet`]({environment:dvApiBaseUrl}/product
 
 ## Demo
 
-<code-view style="height: 200px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/excel/excel-library-operations-on-worksheets"  
+<code-view style="height: 200px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/excel/excel-library-operations-on-worksheets"
            github-src="excel/excel-library/operations-on-worksheets">
 </code-view>
 
