@@ -284,7 +284,6 @@ Don't forget to include the theme in the same way as it was demonstrated above.
            iframe-src="{environment:demosBaseUrl}/grid/grid-moving-styled-sample" >
 </code-view>
 
-<div class="divider--half"></div>
 }
 
 @@if (igxName === 'IgxTreeGrid') {
@@ -294,7 +293,6 @@ Don't forget to include the theme in the same way as it was demonstrated above.
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-column-moving-styled" >
 </code-view>
 
-<div class="divider--half"></div>
 }
 
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -304,8 +302,10 @@ Don't forget to include the theme in the same way as it was demonstrated above.
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-moving-styled" >
 </code-view>
 
-<div class="divider--half"></div>
 }
+
+>[!NOTE]
+>The sample will not be affected by the selected global theme from `Change Theme`.
 
 ## API References
 <div class="divider--half"></div>

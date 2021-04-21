@@ -538,6 +538,9 @@ In addition to the steps above, we can also style the controls that are used for
 </code-view>
 
 }
+
+>[!NOTE]
+>The sample will not be affected by the selected global theme from `Change Theme`.
 <div class="divider--half"></div>
 
 ## API References
