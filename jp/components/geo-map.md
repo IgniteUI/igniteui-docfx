@@ -49,14 +49,6 @@ npm install --save igniteui-angular-maps
 
 <!-- end: Angular, React, WebComponents -->
 
-<!-- Blazor -->
-
-[`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html) には以下のモジュールが必要ですが、DataChartInteractivityModule は、マップ コンテンツのパンやズームなどのマウス操作にのみ必要です。
-
--   GeographicMapModule
--   DataChartInteractivityModule
-    <!-- end: Blazor -->
-
 ```ts
 // app.module.ts
 import { IgxGeographicMapModule } from 'igniteui-angular-maps';

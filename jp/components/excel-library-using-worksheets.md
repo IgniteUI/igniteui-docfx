@@ -19,6 +19,8 @@ Angular Excel Engine の [`worksheet`]({environment:dvApiBaseUrl}/products/ignit
 
 <div class="divider--half"></div>
 
+<!-- Angular, React, WebComponents -->
+
 以下のコードは、以下のコード スニペットを使用するインポートを示します。
 
 ```ts
@@ -35,6 +37,8 @@ import { RelativeIndex } from "igniteui-angular-excel";
 import { SortDirection } from "igniteui-angular-excel";
 import { WorkbookColorInfo } from "igniteui-angular-excel";
 ```
+
+<!-- end: Angular, React, WebComponents -->
 
 ## ガイドラインの設定
 
