@@ -542,7 +542,7 @@ export class GridRowReorderComponent {
     public rowDragStart(args: any): void {
         const targetRow: IgxHierarchicalRowComponent = args.dragData;
         if (targetRow.expanded) {
-            targetRow.toggle();
+            targetRow.expanded = false;
         }
     }
 
@@ -565,13 +565,13 @@ export class GridRowReorderComponent {
         }
     }
 
-    private getTargetRowIndex(rowListArr: IgxHierarchicalRowComponent[], cursorPosition: Point): number {
+    private getTargetRowIndex(rowListArr: any[], cursorPosition: Point): number {
         const targetElem: IgxHierarchicalRowComponent = this.catchCursorPosOnElem(rowListArr, cursorPosition);
         return rowListArr.indexOf(rowListArr.find((r) => r.rowData.id === targetElem.rowData.id));
     }
 
-    private catchCursorPosOnElem(rowListArr: IgxHierarchicalRowComponent[], cursorPosition: Point)
-        : IgxHierarchicalRowComponent {
+    private catchCursorPosOnElem(rowListArr: any[], cursorPosition: Point)
+        : any {
         for (const row of rowListArr) {
             const rowRect = row.nativeElement.getBoundingClientRect();
             if (cursorPosition.y > rowRect.top + window.scrollY && cursorPosition.y < rowRect.bottom + window.scrollY &&

@@ -230,6 +230,11 @@ The [**IgxTabsComponent**]({environment:angularApiUrl}/classes/igxtabscomponent.
         const row = grid.getRowByKey(2);
         const row = cell.row;
 
+* `toggle` method, exposed by the `IgxHierarchicalRowComponent` is not available. Use `expanded` property for all row types:
+
+        grid.getRowByIndex(0).expanded = false;
+
+
 * `row` property in the event arguments emitted by `onRowPinning`, and `dragData` property in the event arguments emitted by `onRowDragStart`, `onRowDragEnd` is now implementing `RowType`
 * `ng update` will migrate most of the uses of `IgxGridRowComponent`, `IgxTreeGridRowComponent`, `IgxHierarchicalRowComponent`, `IgxGridGroupByRowComponent` , like imports, typings and casts. If a place in your code using any of the above is not migrated, just remove the typing/cast, or change it with `RowType`.
 * `getRowByIndex` will now return a `RowType` object, if the row at that index is a summary row (previously used to returnd undefined). `row.isSummaryRow` and `row.isGroupByRow` return true if the row at the index is a summary row or a group by row.
