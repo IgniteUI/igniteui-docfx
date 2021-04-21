@@ -391,6 +391,9 @@
         - name: Batch Editing
           href: hierarchicalgrid/batch-editing.md
           new: false
+    - name: Export to Excel
+      href: hierarchicalGrid/export-excel.md
+      new: true
     - name: Row Drag
       href: hierarchicalgrid/row-drag.md
       new: false
