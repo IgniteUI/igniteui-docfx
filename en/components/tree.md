@@ -287,7 +287,7 @@ The last step is to include the component's theme.
 
 In order to style components for older browsers, like Internet Explorer 11, we have to use a different approach, since CSS variables are not supported there.
 
-If the component is using the [Emulated](themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`. To prevent the custom theme to leak into other components, be sure to include the `:host` selector before `::ng-deep`: 
+If the component is using the [Emulated](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`. To prevent the custom theme to leak into other components, be sure to include the `:host` selector before `::ng-deep`: 
 ```scss
 :host {
     ::ng-deep {
