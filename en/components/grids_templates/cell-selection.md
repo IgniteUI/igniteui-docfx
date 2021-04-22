@@ -268,7 +268,7 @@ Afterwards, all we need to do is include the mixin in our component's style (cou
 ```
 
  >[!NOTE]
- >If the component is using an [`Emulated ViewEncapsulation`](../themes/component-themes.md#view-encapsulation), it is necessary to penetrate this encapsulation using `::ng-deep`.
+ >If the component is using an [`Emulated ViewEncapsulation`](../themes/sass/component-themes.md#view-encapsulation), it is necessary to penetrate this encapsulation using `::ng-deep`.
  > We scope the style under `:host` selector so as not to affect any other grids we might have in our application.
 
  ```scss
