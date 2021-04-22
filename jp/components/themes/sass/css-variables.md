@@ -11,7 +11,7 @@ _language: ja
 
 ## 概要
 
-Ignite UI for Angular のテーマは、図形、影、タイポグラフィ、および **カラー** によって定義されます。テーマの カラーを変更するデフォルトの方法は、[igx-palette]({environment:sassApiUrl}/index.html#function-igx-palette) 関数によって生成されたパレットを [igx-theme]({environment:sassApiUrl}/index.html#mixin-igx-theme) mixin に渡すことです。このパレットには、すべて HEX/rgba  カラー値で表される 40 を超える色合い (ビルド時に生成) が含まれます。これらの値は、ビルド時にコントラスト カラーを自動的に生成するために、個々のコンポーネント テーマによって順番に使用されます。たとえば、エンボス加工されたボタンは、背景に `secondary` カラーを使用します。`secondary` カラーが明るい色相に設定されている場合、エンボス加工されたボタンは、WCAG AAA アクセシビリティ要件に準拠するコントラスト カラーにテキストのカラーを自動的に計算します。この機能は、Grid や Calendar などのより複雑なコンポーネントで真に優れています。これは素晴らしいことですが、このアプローチには 1 つの大きな欠点があります。カスタム CSS プロパティのように、Sass ビルド時に不明なカラーへの参照を [igx-palette]({environment:sassApiUrl}/index.html#function-igx-palette) 関数に渡すことができません。
+Ignite UI for Angular のテーマは、図形、影、タイポグラフィ、および **カラー** によって定義されます。テーマの カラーを変更するデフォルトの方法は、[igx-palette]({environment:sassApiUrl}/index.html#function-igx-palette) 関数によって生成されたパレットを [igx-theme]({environment:sassApiUrl}/index.html#mixin-igx-theme) ミックスインに渡すことです。このパレットには、すべて HEX/rgba  カラー値で表される 40 を超える色合い (ビルド時に生成) が含まれます。これらの値は、ビルド時にコントラスト カラーを自動的に生成するために、個々のコンポーネント テーマによって順番に使用されます。たとえば、エンボス加工されたボタンは、背景に `secondary` カラーを使用します。`secondary` カラーが明るい色相に設定されている場合、エンボス加工されたボタンは、WCAG AAA アクセシビリティ要件に準拠するコントラスト カラーにテキストのカラーを自動的に計算します。この機能は、Grid や Calendar などのより複雑なコンポーネントで真に優れています。これは素晴らしいことですが、このアプローチには 1 つの大きな欠点があります。カスタム CSS プロパティのように、Sass ビルド時に不明なカラーへの参照を [igx-palette]({environment:sassApiUrl}/index.html#function-igx-palette) 関数に渡すことができません。
 
 一部のユーザーは、実行時にコンポーネント テーマのカラーを変更できることを望んでおり、`$legacy-support` をオフにして作成されたテーマのカスタム CSS 変数を公開することでそれを許可しています。明らかに、実行時にカラーの値が再計算されないため、これによってコントラストカラーが自動的に生成されることはありません。
 

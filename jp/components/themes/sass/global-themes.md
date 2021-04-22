@@ -133,7 +133,7 @@ Ignite UI for Angular には、事前定義されたテーマのセットから�
 > [!NOTE]
 > すべてのハイレベルなテーマ ミックスインは、基本の `igx-theme` ミックスインをラップすることに注意してください。
 
-すべてのテーマ mixin は、独自のテーマを作成するための開始ポイントとして使用できます。`igx-bootstrap-theme` ミックスインを使用して、新しいテーマを作成しましょう。
+すべてのテーマ ミックスインは、独自のテーマを作成するための開始ポイントとして使用できます。`igx-bootstrap-theme` ミックスインを使用して、新しいテーマを作成しましょう。
 
 ```scss
 // Import the IgniteUI themes library first
