@@ -269,7 +269,7 @@ $custom-grid-theme: igx-grid-theme(
 ```
 
  >[!NOTE]
- >コンポーネントが [`Emulated ViewEncapsulation`](../themes/component-themes.md#表示のカプセル化) を使用している場合、`::ng-deep` を使用してこのカプセル化に侵入する必要があります。
+ >コンポーネントが [`Emulated ViewEncapsulation`](../themes/sass/component-themes.md#表示のカプセル化) を使用している場合、`::ng-deep` を使用してこのカプセル化に侵入する必要があります。
  > アプリケーション内に存在する可能性のある他のグリッドに影響を与えないように、スタイルを `:host` セレクターの下で範囲指定します。
 
  ```scss
@@ -292,7 +292,6 @@ $custom-grid-theme: igx-grid-theme(
            iframe-src="{environment:demosBaseUrl}/grid/grid-multi-cell-selection-style" >
 </code-view>
 
-<div class="divider--half"></div>
 }
 
 @@if (igxName === 'IgxHierarchicalGrid'){
@@ -316,6 +315,8 @@ $custom-grid-theme: igx-grid-theme(
 
 }
 
+>[!NOTE]
+>The sample will not be affected by the selected global theme from `Change Theme`.
 
 ## API リファレンス
 

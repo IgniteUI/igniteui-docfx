@@ -11,7 +11,7 @@ The Angular Tree Component allows users to represent hierarchical data in a tree
 ## Angular Tree Example
 In this basic Angular Tree example, you can see how to define an `igx-tree` and its nodes by specifying the node hierarchy and iterating through a hierarchical data set.
 
-<code-view style="height: 513px" 
+<code-view style="height: 400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/lists/tree-basic-sample" alt="Angular Tree Example">
 </code-view>
@@ -251,7 +251,7 @@ When selection is enabled, end-user selection of nodes is only allowed through t
 
 The Ignite UI for Angular IgxTree can be rendered in such way that it requires the minimal amount of data to be retrieved from the server so the user could see it as quickly as possible. With this dynamic data loading approach, only after the user expands a node, the children for that particular parent node will be retrieved. This mechanism, also known as Load on Demand, can be easily configured to work with any remote data.
 ### Demo
-<code-view style="height: 513px" 
+<code-view style="height: 400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/lists/tree-advanced-sample" alt="Tree Load On Demand Example">
 </code-view>
@@ -287,7 +287,7 @@ The last step is to include the component's theme.
 
 In order to style components for older browsers, like Internet Explorer 11, we have to use a different approach, since CSS variables are not supported there.
 
-If the component is using the [Emulated](themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`. To prevent the custom theme to leak into other components, be sure to include the `:host` selector before `::ng-deep`: 
+If the component is using the [Emulated](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`. To prevent the custom theme to leak into other components, be sure to include the `:host` selector before `::ng-deep`: 
 ```scss
 :host {
     ::ng-deep {

@@ -147,7 +147,7 @@ The last step is to include the custom `igx-grid` theme.
 In order to style components for Internet Explorer 11, we have to use a different approach, since it doesn't support CSS variables.
 
 >[!NOTE]
->If the component is using the [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`. In order to prevent the custom theme from leaking into other components, be sure that you have included the `:host` selector before `::ng-deep`.
+>If the component is using the [`Emulated`](../themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`. In order to prevent the custom theme from leaking into other components, be sure that you have included the `:host` selector before `::ng-deep`.
 
 ```scss
 :host {
@@ -164,6 +164,8 @@ In order to style components for Internet Explorer 11, we have to use a differen
            iframe-src="{environment:demosBaseUrl}/@@igDemoBasePath/column-selection-styles" >
 </code-view>
 
+>[!NOTE]
+>The sample will not be affected by the selected global theme from `Change Theme`.
 <div class="divider--half"></div>
 
 ## <a name="api-references"></a>API References

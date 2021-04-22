@@ -11,9 +11,9 @@ Ignite UI for Angular 도넛형 차트 컴포넌트는 파이형 차트 컴포�
 
 ## 데모
 
-<code-view style="height: 450px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/doughnut-chart-overview"  
+<code-view style="height: 450px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/doughnut-chart-overview"
            github-src="charts/doughnut-chart/overview">
 </code-view>
 
@@ -96,9 +96,9 @@ this.state = {
 
 ## 조각 선택 데모
 
-<code-view style="height: 450px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/doughnut-chart-selection"  
+<code-view style="height: 450px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/doughnut-chart-selection"
            github-src="charts/doughnut-chart/selection">
 </code-view>
 
@@ -122,9 +122,9 @@ this.state = {
 
 ## 조각 전개 데모
 
-<code-view style="height: 450px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/doughnut-chart-explosion"  
+<code-view style="height: 450px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/doughnut-chart-explosion"
            github-src="charts/doughnut-chart/explosion">
 </code-view>
 
@@ -136,8 +136,8 @@ this.state = {
 
 ## 범례 데모
 
-<code-view style="height: 450px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/doughnut-chart-legend"  
+<code-view style="height: 450px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/doughnut-chart-legend"
            github-src="charts/doughnut-chart/legend">
 </code-view>
