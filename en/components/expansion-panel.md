@@ -221,7 +221,7 @@ $custom-panel-theme: igx-expansion-panel-theme(
 );
 ```
 >[!NOTE]
-> To see all the available parameters for styling trough the [`theming`](themes/component-themes.md) engine check the [`API documentation`]({environment:sassApiUrl}/index.html#function-igx-expansion-panel-theme)
+> To see all the available parameters for styling trough the [`theming`](themes/sass/component-themes.md) engine check the [`API documentation`]({environment:sassApiUrl}/index.html#function-igx-expansion-panel-theme)
 
 ### Applying the Component Theme
 Now to apply the component theme all that's left is to include `igx-css-vars` mixin and pass the `$custom-panel-theme` map.
@@ -235,7 +235,7 @@ Now to apply the component theme all that's left is to include `igx-css-vars` mi
 ```
 
  >[!NOTE]
- > If you need to support Internet explorer 11 you have to use the component mixin `igx-expansion-panel` instead of `igx-css-vars` and because our component have [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation we have to penetrate it by using `::ng-deep`.
+ > If you need to support Internet explorer 11 you have to use the component mixin `igx-expansion-panel` instead of `igx-css-vars` and because our component have [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation we have to penetrate it by using `::ng-deep`.
  > Also in order to prevent our custom theme from leaking into other components, we have to include the `:host` selector before `::ng-deep`:
 
 ```scss
@@ -249,7 +249,7 @@ Now to apply the component theme all that's left is to include `igx-css-vars` mi
 }
 ```
 
-To find out more on how you can use Ignite UI theming engine [`click here`](themes/component-themes.md)
+To find out more on how you can use Ignite UI theming engine [`click here`](themes/sass/component-themes.md)
 
 ## Using Animations
 ### Using specific animation
