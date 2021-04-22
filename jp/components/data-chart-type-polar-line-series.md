@@ -12,15 +12,12 @@ Ignite UI for Angular 極座標エリア チャートは、極座標チャート
 
 ## Angular 極座標折れ線チャートの例
 
-<div class="sample-container loading" style="height: 500px">
-    <iframe id="data-chart-type-polar-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-polar-line-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular 極座標折れ線チャートの例"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-polar-line-series-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
-    </button>
-
-
-</div>
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-polar-line-series"
+           alt="Angular 極座標折れ線チャートの例"
+           github-src="charts/data-chart/type-polar-line-series">
+</code-view>
 
 <div class="divider--half"></div>
 
