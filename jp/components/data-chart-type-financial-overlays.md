@@ -12,15 +12,12 @@ _language: ja
 
 ## Angular ファイナンシャル オーバーレイの例
 
-<div class="sample-container loading" style="height: 400px">
-    <iframe id="data-chart-type-financial-overlays-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-financial-overlays' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular ファイナンシャル オーバーレイの例"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-financial-overlays-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
-    </button>
-
-
-</div>
+<code-view style="height: 400px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-financial-overlays"
+           alt="Angular ファイナンシャル オーバーレイの例"
+           github-src="charts/data-chart/type-financial-overlays">
+</code-view>
 
 <div class="divider--half"></div>
 

@@ -12,7 +12,7 @@ _language: ja
 }
 
 h1 {
-   margin-top: 1.5rem; 
+   margin-top: 1.5rem;
 }
 
 .h3{
@@ -152,7 +152,7 @@ div#faqs-accordion-wrapper {
         width: 70%;
         margin-right: auto;
     }
-    
+
     div.support-section:last-child:last-child{
         border-left: none;
     }
@@ -180,9 +180,11 @@ div#faqs-accordion-wrapper {
 
 <div class="divider--half"></div>
 
-<div class="sample-container loading" style="height: 435px">
-    <iframe id="data-grid-overview-sample-iframe" src='{environment:demosBaseUrl}/grids/data-grid-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Grid の例" alt="Angular Grid 例"></iframe>
-</div>
+<code-view style="height: 435px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/grids/data-grid-overview"
+           alt="Angular Grid 例" >
+</code-view>
 
 このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a href="{environment:infragisticsBaseUrl}/products/ignite-ui-angular/download">無料でダウンロードできます。</a>
 
@@ -219,12 +221,12 @@ Ignite UI for Angular のデータ グリッドは、大量のリアルタイム
 
 ### 高速 Angular データ グリッド例
 
-<span class="h3">サンプル</span>
+<span class="h3">Demo</span>
 
-<div class="sample-container loading" style="height: 435px">
-    <iframe id="icon-sample-1-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/grids/data-grid-type-marketing-table" onload="onSampleIframeContentLoaded(this);">
-    </iframe>
-</div>
+<code-view style="height: 435px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/grids/data-grid-type-marketing-table"  >
+</code-view>
 
 <div class="divider--half"></div>
 

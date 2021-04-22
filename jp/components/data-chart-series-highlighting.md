@@ -1,7 +1,7 @@
 ---
 title: Angular データ チャート | データ可視化ツール | 強調表示 | インフラジスティックス
-_description: インフラジスティックスの Angular チャート コントロールを使用すると、グラフの領域を強調表示できます。$Product Name$ 強調表示機能について説明します。
-_keywords: Angular charts, data chart, highlighting, Ignite UI for Angular, Infragistics, Angular チャート, データ チャート, 強調表示, インフラジスティックス 
+_description: インフラジスティックスの Angular チャート コントロールを使用すると、グラフの領域を強調表示できます。Ignite UI for Angular 強調表示機能について説明します。
+_keywords: Angular charts, data chart, highlighting, Ignite UI for Angular, Infragistics, Angular チャート, データ チャート, 強調表示, インフラジスティックス
 mentionedTypes: ['XamDataChart']
 _language: ja
 ---
@@ -15,15 +15,12 @@ Angular データ チャート コンポネントを使用すると、データ 
 
 ## Angular ハイライトの例
 
-<div class="sample-container loading" style="height: 500px">
-    <iframe id="data-chart-series-highlighting-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-series-highlighting' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular ハイライトの例"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-series-highlighting-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
-    </button>
-
-
-</div>
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-series-highlighting"
+           alt="Angular ハイライトの例"
+           github-src="charts/data-chart/series-highlighting">
+</code-view>
 
 <div class="divider--half"></div>
 
@@ -43,7 +40,7 @@ import { IgxDataChartAnnotationModule } from 'igniteui-angular-charts';
 
 ## シリーズ ビジュアルをハイライト
 
-Angular データ チャート コンポネントのシリーズ ハイライト機能を使用すると、単一のアイテムまたはシリーズ全体を強調表示できます。たとえば、折れ線シリーズを使用している場合、ハイライトは線の形状全体を 1 つの単一形状として強調表示します。ただし、列シリーズなどのシリーズの各項目にハイライトを適用することはできます。
+Angular データ チャート コンポネントのシリーズ ハイライト機能を使用すると、単一の項目またはシリーズ全体を強調表示できます。たとえば、折れ線シリーズを使用している場合、ハイライトは線の形状全体を 1 つの単一形状として強調表示します。ただし、列シリーズなどのシリーズの各項目にハイライトを適用することはできます。
 
 次のコード スニペットは、データ チャートのシリーズで強調表示を有効にする方法を示しています。
 
