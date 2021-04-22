@@ -538,7 +538,7 @@ Angular コンポーネント テンプレートの上側に入力フィール�
 <div class="divider--half"></div>
 
 > [!NOTE]
-> 注: コンポーネントの .scss ファイルにコンポーネントテーマを作成する場合、表示のカプセル化を渡すために `::ng-deep` を使用する必要があります。そうでない場合、新しいテーマが動作しません。詳細は、[コンポーネント テーマ](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/themes/component-themes.html)トピックを参照してください。
+> 注: コンポーネントの .scss ファイルにコンポーネントテーマを作成する場合、表示のカプセル化を渡すために `::ng-deep` を使用する必要があります。そうでない場合、新しいテーマが動作しません。詳細は、[コンポーネント テーマ](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/themes/sass/component-themes.html)トピックを参照してください。
 
 リスト コンポーネントに変更できるパラメーターの完全なリストについては、[IgxListComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-list-theme)を参照してください。
 

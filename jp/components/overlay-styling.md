@@ -14,7 +14,7 @@ _language: ja
 
 ## オーバーレイ コンポーネントのスタイル設定
 
-ほとんどの場合、[グローバル](themes/global-theme.md) テーマのスタイルはオーバーレイ アウトレットの影響を受けません。例として、グローバル [`igx-css-vars`]({environment:sassApiUrl}/index.html#mixin-igx-css-vars) ミックスインで[スタイル設定された](drop-down.md#スタイル設定)ドロップダウンを見てみましょう。
+ほとんどの場合、[グローバル](themes/sass/global-theme.md) テーマのスタイルはオーバーレイ アウトレットの影響を受けません。例として、グローバル [`igx-css-vars`]({environment:sassApiUrl}/index.html#mixin-igx-css-vars) mixin で[スタイル設定された](drop-down.md#スタイル設定)ドロップダウンを見てみましょう。
 
 ```html
 <!-- overlay-styling.component.html -->
@@ -58,7 +58,7 @@ $my-drop-down-theme: igx-drop-down-theme(
 テーマの `$legacy-support` 変数が `true` に設定されている場合、コンポーネントのテーマ関数を使用してスタイル設定します。
 
 >[!NOTE]
->コンポーネントが [`Emulated`](./themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
+>コンポーネントが [`Emulated`](./themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
 
 ```scss
 // overlay-styling.component.scss
@@ -148,7 +148,7 @@ $my-overlay-theme: igx-overlay-theme(
 ```
 
 >[!NOTE]
->コンポーネントが [`Emulated`](./themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用していて、`$legacy-support` が `true` に設定されている場合、オーバーレイのテーマ関数を使用して `::ng-deep` によってこのカプセル化を`ペネトレーションします`。
+>コンポーネントが [`Emulated`](./themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用していて、`$legacy-support` が `true` に設定されている場合、オーバーレイのテーマ関数を使用して `::ng-deep` によってこのカプセル化を`ペネトレーションします`。
 
 ## API リファレンス
 * [IgniteUI for Angular - テーマ ライブラリ](themes/index.md)

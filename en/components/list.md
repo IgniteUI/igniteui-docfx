@@ -538,7 +538,7 @@ The result from the above code is
 <div class="divider--half"></div>
 
 > [!NOTE]
-> Please note that if we create our component theme in the component .scss file we need to use `::ng-deep` in order to pass the view encapsulation otherwise our new theme will not work! for more info please refer to:  [Component Themes](https://www.infragistics.com/products/ignite-ui-angular/angular/components/themes/component-themes.html).
+> Please note that if we create our component theme in the component .scss file we need to use `::ng-deep` in order to pass the view encapsulation otherwise our new theme will not work! for more info please refer to:  [Component Themes](https://www.infragistics.com/products/ignite-ui-angular/angular/components/themes/sass/component-themes.html).
 
 For full list of parameters that you can change for the list component please refer to: [IgxListComponent Styles]({environment:sassApiUrl}/index.html#function-igx-list-theme)
 

@@ -254,7 +254,7 @@ The last step is to pass the custom banner theme:
 
 In order to style components for older browsers, like Internet Explorer 11, we have to use a different approach, since it doesn't support CSS variables. 
 
-If the component is using the [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`. To prevent the custom theme to leak into other components, be sure to include the `:host` selector before `::ng-deep`:
+If the component is using the [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`. To prevent the custom theme to leak into other components, be sure to include the `:host` selector before `::ng-deep`:
 
 ```scss
 :host {
@@ -293,7 +293,7 @@ $custom-banner-theme: igx-banner-theme(
 
 ### Using schemas
 
-You can build a robust and flexible structure that benefits from [`schemas`](themes/schemas.md).
+You can build a robust and flexible structure that benefits from [`schemas`](themes/sass/schemas.md).
 Extend one of the two predefined schemas, that are provided for every component, in this case - [`light-banner`]({environment:sassApiUrl}/index.html#variable-_light-banner) schema: 
 
 ```scss
