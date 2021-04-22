@@ -13,7 +13,7 @@ To display the content above other elements, the service moves it into a special
 
 ## Styling Overlay Components
 
-In most cases [global](themes/global-theme.md) theme styles are not affected by the overlay outlets. For example, let's take a look at a Drop Down, [styled](drop-down.md#styling) by the global [`igx-css-vars`]({environment:sassApiUrl}/index.html#mixin-igx-css-vars) mixin:
+In most cases [global](themes/sass/global-theme.md) theme styles are not affected by the overlay outlets. For example, let's take a look at a Drop Down, [styled](drop-down.md#styling) by the global [`igx-css-vars`]({environment:sassApiUrl}/index.html#mixin-igx-css-vars) mixin:
 
 ```html
 <!-- overlay-styling.component.html -->
@@ -57,7 +57,7 @@ For example, let's take the `igx-combo` - its item [styles](combo.md#styling) us
 If the `$legacy-support` variable in your theme is set to `true`, you have to style your component, using the component's theme function.
 
 >[!NOTE]
->If the component is using an [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`
+>If the component is using an [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`
 
 ```scss
 // overlay-styling.component.scss
@@ -147,7 +147,7 @@ To make sure the theme **does not** affect other components in our app, use the 
 ```
 
 >[!NOTE]
->If the component is using an [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation and the `$legacy-support` is set to `true`, use the overlay's theme function and `penetrate` the encapsulation using `::ng-deep`
+>If the component is using an [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation and the `$legacy-support` is set to `true`, use the overlay's theme function and `penetrate` the encapsulation using `::ng-deep`
 
 ## API References
 * [IgniteUI for Angular - Theme Library](themes/index.md)
