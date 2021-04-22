@@ -151,8 +151,8 @@ The context menu will have the following functions:
     }
 
     public copyRowData(event) {
-        const selectedData = this.cell.row.rowData ;
-        this.copyData(JSON.stringify(this.cell.row.rowData));
+        const selectedData = this.cell.row.data ;
+        this.copyData(JSON.stringify(this.cell.row.data));
         this.onCellValueCopy.emit({ data: selectedData });
     }
 

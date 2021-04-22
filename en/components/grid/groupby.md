@@ -82,7 +82,9 @@ As with [`groupingExpressions`]({environment:angularApiUrl}/classes/igxgridcompo
 
 ```typescript
     const groupRow = this.grid.groupsRecords.find(r => r.value === "France");
+    const groupRow = this.grid.getRowByIndex(0).groupRow;
     grid.toggleGroup(groupRow);
+    groupRow.expanded = false;
 ```
 
 Groups can be created expanded (***default***) or collapsed and the expansion states would generally only contain the state opposite to the default behavior. You can control whether groups should be created expanded or not through the [`groupsExpanded`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupsexpanded) property.
@@ -95,6 +97,7 @@ The code snippet below can be used to select all rows within a group using the g
 
 ```typescript
     const groupRow = this.grid.groupsRecords.find(r => r.value === "France");
+    const groupRow = this.grid.getRowByIndex(0).groupRow;
     grid.selectRowsInGroup(groupRow);
 ```
 
@@ -102,6 +105,7 @@ If you need to deselect all rows within a group programmatically, you can use th
 
 ```typescript
     const groupRow = this.grid.groupsRecords.find(r => r.value === "France");
+    const groupRow = this.grid.getRowByIndex(0).groupRow;
     grid.deselectRowsInGroup(groupRow);
 ```
 
@@ -452,6 +456,7 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 ## API References
 
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+* [IgxGroupByRow](({environment:angularApiUrl}/classes/igxgroupbyrow.html)
 * [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 * [ISortingExpression]({environment:angularApiUrl}/interfaces/isortingexpression.html)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)

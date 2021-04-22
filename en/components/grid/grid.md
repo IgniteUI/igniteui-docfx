@@ -633,11 +633,11 @@ The custom template:
                 <ng-template #compositeTemp igxCell let-cell="cell">
                     <div class="address-container">
                     // In the Address column combine the Country, City and PostCode values of the corresponding data record
-                        <span><strong>Country:</strong> {{cell.row.rowData.Country}}</span>
+                        <span><strong>Country:</strong> {{cell.row.data.Country}}</span>
                         <br/>
-                        <span><strong>City:</strong> {{cell.row.rowData.City}}</span>
+                        <span><strong>City:</strong> {{cell.row.data.City}}</span>
                         <br/>
-                        <span><strong>Postal Code:</strong> {{cell.row.rowData.PostalCode}}</span>
+                        <span><strong>Postal Code:</strong> {{cell.row.data.PostalCode}}</span>
                     </div>
                 </ng-template>
 ...
@@ -649,20 +649,20 @@ Keep in mind that with the above defined template you will not be able to make e
                  <ng-template  igxCellEditor let-cell="cell">
                         <div class="address-container">
                         <span>
-                            <strong>Country:</strong> {{cell.row.rowData.Country}}
+                            <strong>Country:</strong> {{cell.row.data.Country}}
                             <igx-input-group width="100%">
-                                    <input igxInput [(ngModel)]="cell.row.rowData.Country" />
+                                    <input igxInput [(ngModel)]="cell.row.data.Country" />
                             </igx-input-group>
                         </span>
                             <br/>
-                            <span><strong>City:</strong> {{cell.row.rowData.City}}</span>
+                            <span><strong>City:</strong> {{cell.row.data.City}}</span>
                             <igx-input-group width="100%">
-                                    <input igxInput [(ngModel)]="cell.row.rowData.City" />
+                                    <input igxInput [(ngModel)]="cell.row.data.City" />
                             </igx-input-group>
                             <br/>
-                            <span><strong>Postal Code:</strong> {{cell.row.rowData.PostalCode}}</span>
+                            <span><strong>Postal Code:</strong> {{cell.row.data.PostalCode}}</span>
                             <igx-input-group width="100%">
-                                    <input igxInput [(ngModel)]="cell.row.rowData.PostalCode" />
+                                    <input igxInput [(ngModel)]="cell.row.data.PostalCode" />
                             </igx-input-group>
                             <br/>
                         </div>
@@ -718,7 +718,7 @@ See the [Grid Sizing](sizing.md) topic.
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 * [IgxGridComponent Styles]({environment:sassApiUrl}/#function-igx-grid-theme)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
-* [IgxGridRowComponent]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)
+* [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html)
 * [IgxGridCellComponent]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
 
 ## Additional Resources

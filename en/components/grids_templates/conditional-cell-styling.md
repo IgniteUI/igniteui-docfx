@@ -67,8 +67,8 @@ You can conditionally style the @@igxName cells by setting the [`IgxColumnCompon
 <!-- sample.component.html -->
 <igx-column field="UnitPrice" header="Unit Price" [dataType]="'number'" [cellClasses] = "priceClasses">
     <ng-template igxCell let-cell="cell" let-val>
-        <span *ngIf="cell.row.rowData.UnitPrice == 0">-</span>
-        <span *ngIf="cell.row.rowData.UnitPrice != 0">${{val}}</span>
+        <span *ngIf="cell.row.data.UnitPrice == 0">-</span>
+        <span *ngIf="cell.row.data.UnitPrice != 0">${{val}}</span>
     </ng-template>
 </igx-column>
 ```

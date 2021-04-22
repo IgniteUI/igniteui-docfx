@@ -103,7 +103,7 @@ _language: ja
 
 ## 行のピン固定 API
 
-行のピン固定は、[`igx-row`]({environment:angularApiUrl}/classes/igxrowcomponent.html) の `pinned` 設定によって制御されます。デフォルトでピン固定行は @@igComponent の上側に固定して描画され、@@igComponent 本体のピン固定されていない行は垂直スクロールされます。
+行のピン固定は、[`row`]({environment:angularApiUrl}/interfaces/rowtype.html) の `pinned` 設定によって制御されます。デフォルトでピン固定行は @@igComponent の上側に固定して描画され、@@igComponent 本体のピン固定されていない行は垂直スクロールされます。
 
 @@if (igxName === 'IgxGrid') {
 ```typescript
@@ -349,15 +349,15 @@ public onDropAllowed(args) {
         currRowPinnedIndex = this.grid.pinnedRows.indexOf(this.grid.pinnedRows.find((r) => r.rowID === currRowID));
     }
     // remove the row that was dragged and place it onto its new location
-    this.grid.deleteRow(args.dragData.rowID);
-    this.data.splice(currRowIndex, 0, args.dragData.rowData);
+    this.grid.deleteRow(args.dragData.key);
+    this.data.splice(currRowIndex, 0, args.dragData.data);
     if (currentRow.pinned && !args.dragData.pinned) {
-        this.grid.pinRow(args.dragData.rowID, currRowPinnedIndex);
+        this.grid.pinRow(args.dragData.key, currRowPinnedIndex);
     } else if (!currentRow.pinned && args.dragData.pinned) {
-        this.grid.unpinRow(args.dragData.rowID);
+        this.grid.unpinRow(args.dragData.key);
     } else if (currentRow.pinned && args.dragData.pinned) {
-        this.grid.unpinRow(args.dragData.rowID);
-        this.grid.pinRow(args.dragData.rowID, currRowPinnedIndex);
+        this.grid.unpinRow(args.dragData.key);
+        this.grid.pinRow(args.dragData.key, currRowPinnedIndex);
     }
 }
 ```
@@ -470,7 +470,10 @@ Internet Explorer 11 のコンポーネントをスタイル設定するには�
 
 ## API リファレンス
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [IgxRowComponent]({environment:angularApiUrl}/classes/igxrowcomponent.html)
+* [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html)
+* [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)
+* [IgxHierarchicalGridRow]({environment:angularApiUrl}/classes/igxhierarchicalgridrow.html)
+* [RowType]({environment:angularApiUrl}/interfaces/RowType.html)
 * [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 
 ## その他のリソース
