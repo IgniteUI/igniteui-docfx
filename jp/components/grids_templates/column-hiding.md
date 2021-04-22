@@ -493,7 +493,7 @@ $custom-button: igx-button-theme($flat-text-color: gold, $disabled-color: black)
 ```
 
 >[!NOTE]
->`.igx-column-actions` 内で **igx-button** mixin のスコープを設定し、列非表示ボタンのみがスタイル設定されるようにします。そうでない場合は、グリッド内の他のボタンも影響を受けます。
+>`.igx-column-actions` 内で **igx-button** ミックスインのスコープを設定し、列非表示ボタンのみがスタイル設定されるようにします。そうでない場合は、グリッド内の他のボタンも影響を受けます。
 
  >[!NOTE]
  >コンポーネントが [`Emulated`](../themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
