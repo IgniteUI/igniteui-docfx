@@ -166,7 +166,7 @@ Internet Explorer 11 のコンポーネントをスタイル設定するには�
 </code-view>
 
 >[!NOTE]
->The sample will not be affected by the selected global theme from `Change Theme`.
+>このサンプルは、「テーマの変更」から選択したグローバル テーマに影響を受けません。
 <div class="divider--half"></div>
 
 # <a name="api-references"></a>API リファレンス
