@@ -364,7 +364,7 @@ If `$legacy-support` is set to `true`, include the **component theme** like that
 ```
 
 >[!NOTE]
->If the component is using an [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`
+>If the component is using an [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`
 
 ```scss
 :host {
@@ -383,7 +383,7 @@ If `$legacy-support` is set to `false`(default), include the component **css var
 ```
 
 >[!NOTE]
->If the component is using an [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, you still have to use `:host` because you need a global selector in order to override the variables.
+>If the component is using an [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, you still have to use `:host` because you need a global selector in order to override the variables.
 
 ```scss
 :host {
@@ -413,7 +413,7 @@ $dark-bottom-nav: igx-bottom-nav-theme(
 
 ### Using Schemas
 
-Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](themes/schemas.md). A **schema** is a recipe of a theme.
+Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](themes/sass/schemas.md). A **schema** is a recipe of a theme.
 
 Extend one of the two predefined schemas, that are provided for every component, in this case - [`dark-bottom-nav`]({environment:sassApiUrl}/index.html#variable-_dark-bottom-nav) schema:
 
