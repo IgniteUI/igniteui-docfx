@@ -213,7 +213,7 @@ _keywords: アクセシビリティ準拠, angular, ignite ui for angular, イ�
 
 #### 手順 2 - それぞれの方向の[テーマ エンジン](../themes/index.md)に通知します。
 
-そのためには、[igx-core]({environment:sassApiUrl}/index.html#mixin-igx-core) mixin の `$direction` パラメーターを設定します。
+そのためには、[igx-core]({environment:sassApiUrl}/index.html#mixin-igx-core) ミックスインの `$direction` パラメーターを設定します。
 
 ```scss 
 @include igx-core($direction: rtl);
@@ -227,7 +227,7 @@ _keywords: アクセシビリティ準拠, angular, ignite ui for angular, イ�
 
 **CSS ベース**のプロジェクトの場合、`node_modules/igniteui-angular/styles/igniteui-angular-rtl.css` を `angular.json` スタイル コレクションに追加します。
 
-**Sass ベース**のプロジェクトの場合、ルート スタイルシートの `igx-core` mixin に `$direction` を渡します。
+**Sass ベース**のプロジェクトの場合、ルート スタイルシートの `igx-core` ミックスインに `$direction` を渡します。
 
 例:
 
