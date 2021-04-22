@@ -105,7 +105,7 @@ $my-primary-800-text: igx-contrast-color($my-palette, "primary", 600);
 このトピックの最初の例から始めます。ここでは、`igx-core` および `igx-theme` の 2 つのミックスインを追加します。`igx-core` は引数を受け取りません。ただし、`igx-theme` は `$palette` および `$exclude` の 2 つの引数を受け取ります。ここでは `$palette` 引数について説明します。
 
 > [!IMPORTANT]
-> `igx-core` を `igx-theme` の前に含める必要があります。`igx-core` mixin は `igx-theme` の基本定義を提供します。
+> `igx-core` を `igx-theme` の前に含める必要があります。`igx-core` ミックスインは `igx-theme` の基本定義を提供します。
 
 ```scss
 // Import the IgniteUI themes library first
@@ -133,7 +133,7 @@ $my-color-palette: igx-palette(
 
 今回のリリースで、カスタム タイポグラフィの定義はアプリケーションのフォント ファミリの更新に限られています。機能は今後追加される予定ですが、これはアプリケーションでタイポグラフィをカスタマイズする堅牢性を提供することが目的です。
 
-タイポグラフィをカスタマイズするには、`igx-typography` mixin を使用します。単一の `config` 引数を取得します。
+タイポグラフィをカスタマイズするには、`igx-typography` ミックスインを使用します。単一の `config` 引数を取得します。
 
 > [!IMPORTANT]
 > `igx-core` の後に `igx-typography` を含める必要があります。今後のリリースで条件が変わることがあります。

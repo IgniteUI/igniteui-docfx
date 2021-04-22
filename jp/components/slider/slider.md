@@ -450,7 +450,7 @@ $custom-slider-theme: igx-slider-theme(
 ```
 
 #### コンポーネント テーマの適用
-コンポーネント テーマを適用するには、`igx-css-vars` mixin をインクルードし、`$custom-slider-theme` マップを渡します。
+コンポーネント テーマを適用するには、`igx-css-vars` ミックスインをインクルードし、`$custom-slider-theme` マップを渡します。
 ```scss
 // In app-slider-styling.component.scss
 

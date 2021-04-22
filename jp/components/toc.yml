@@ -476,6 +476,9 @@
     - name: 状態保持
       href: hierarchicalgrid/state-persistence.md
       new: true
+- name: Tree
+  href: tree.md
+  new: true
 - name: List View
   href: list.md
 - name: Combo
@@ -1143,6 +1146,9 @@
       - name: 印刷スタイル
         href: themes/misc/printing-styles.md
         new: false
+      - name: Bootstrap のテーマ
+        href: themes/misc/bootstrap-theming.md
+        new: true
 - name: データ入力と表示
   header: true
   sortable: true
