@@ -3,7 +3,7 @@
  
 `Material` から `Fluent` へ切り替えるには、定義済みのミックスインの 1 つを使用できます。
 
-Word および Excel パレットをサポートしています。使用するには、2 つのマップ `$ light-fluent-excel-palette` または `$ light-fluent-word-palette` のいずれかを mixin テーマに渡すだけです。
+Word および Excel パレットをサポートしています。使用するには、2 つのマップ `$light-fluent-excel-palette` または `$light-fluent-word-palette` のいずれかをミックスイン テーマに渡すだけです。
 
 ## Fluent Light テーマ
 ```scss

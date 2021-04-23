@@ -138,7 +138,9 @@ public onSorting(event: ISortingEventArgs) {
 
 * [IgxGridCellComponent]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
 * [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
-@@if (igxName !== 'IgxTreeGrid') {* [IgxGridRowComponent]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRowComponent]({environment:angularApiUrl}/classes/igxtreegridrowcomponent.html)}
+* [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html)
+* [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)
+* [IgxHierarchicalGridRow]({environment:angularApiUrl}/classes/igxhierarchicalgridrow.html)
 * [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
 * [IgxDatePickerComponent]({environment:angularApiUrl}/classes/igxdatepickercomponent.html)
 * [IgxDatePickerComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-date-picker-theme)

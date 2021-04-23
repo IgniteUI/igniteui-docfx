@@ -119,17 +119,17 @@ In the sample below **Product Name** and **Discontinued** columns have all four 
     </igx-column>
     <igx-column field="UnitPrice" header="Unit Price" [dataType]="'number'" [sortable]="false" [disablePinning]="true" [disableHiding]="true" [movable]="false">
         <ng-template igxCell let-cell="cell" let-val>
-            <span *ngIf="cell.row.rowData.UnitPrice == 0">-</span>
-            <span *ngIf="cell.row.rowData.UnitPrice != 0">${{val}}</span>
+            <span *ngIf="cell.row.data.UnitPrice == 0">-</span>
+            <span *ngIf="cell.row.data.UnitPrice != 0">${{val}}</span>
         </ng-template>
     </igx-column>
     <igx-column field="AddedDate" header="Added Date" [dataType]="'date'" [formatter]="formatDate" [sortable]="false" [movable]="false">
     </igx-column>
     <igx-column field="Discontinued" header="Discontinued" [dataType]="'boolean'" [sortable]="true" [movable]="true">
         <ng-template igxCell let-cell="cell" let-val>
-            <span *ngIf="cell.row.rowData.UnitPrice == 0">-</span>
-            <img *ngIf="cell.row.rowData.UnitPrice != 0 && val" src="assets/images/grid/active.png" title="Continued" alt="Continued" />
-            <img *ngIf="cell.row.rowData.UnitPrice != 0 && !val" src="assets/images/grid/expired.png" title="Discontinued" alt="Discontinued" />
+            <span *ngIf="cell.row.data.UnitPrice == 0">-</span>
+            <img *ngIf="cell.row.data.UnitPrice != 0 && val" src="assets/images/grid/active.png" title="Continued" alt="Continued" />
+            <img *ngIf="cell.row.data.UnitPrice != 0 && !val" src="assets/images/grid/expired.png" title="Discontinued" alt="Discontinued" />
         </ng-template>
     </igx-column>
 </igx-tree-grid>
@@ -665,7 +665,7 @@ $custom-drop-down: igx-drop-down-theme(
 ```
 
 >[!NOTE]
->The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](../themes/palette.md) topic for detailed guidance on how to use them.
+>The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](../themes/sass/palettes.md) topic for detailed guidance on how to use them.
 
 ### Using Schemas
 
