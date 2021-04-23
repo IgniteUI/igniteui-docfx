@@ -174,7 +174,7 @@ If the sample is configured properly, the tabs should look like the following ex
 
 <div class="divider--half"></div>
 
-If setting the labels and icons is not enough, you can also provide your own custom content directly between [`igx-tab-header`]({environment:angularApiUrl}/classes/igxtabheader.html}) tags.
+If setting the labels and icons is not enough, you can also provide your own custom content directly between `igx-tab-header` tags.
 
 ```html
 <igx-tabs>
