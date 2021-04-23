@@ -214,8 +214,8 @@ In the sample below 'Artist' column have all four features enabled, 'Debut' have
 ## Templates
 
 If you want to further customize the Excel style filter menu without disabling the column features you could use custom templates. The Excel Style filter menu provides two directives for templating:
-- [`IgxExcelStyleColumnOperationsTemplateDirective`]({environment:angularApiUrl}/classes/igxexcelstylecolumnoperationstemplatedirective.html) - re-templates the area with all column operations like sorting, moving, pinning, etc.
-- [`IgxExcelStyleFilterOperationsTemplateDirective`]({environment:angularApiUrl}/classes/igxexcelstylefilteroperationstemplatedirective.html) - re-templates the area with all filter specific operations.
+- `IgxExcelStyleColumnOperationsTemplateDirective` - re-templates the area with all column operations like sorting, moving, pinning, etc.
+- `IgxExcelStyleFilterOperationsTemplateDirective` - re-templates the area with all filter specific operations.
 
 You could either re-template only one of those areas or both of them. You could put any custom content inside those directives or you could use any of our built-in Excel style filtering components.
 
