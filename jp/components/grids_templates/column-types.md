@@ -65,9 +65,9 @@ public formatOptions = this.options;
 <igx-column [pipeArgs]="formatOptions" [dataType]="'number'">
 </igx-column>
 ```
-### Date (日付)
+### DateTime、Date と Time
 日付部分の外観は、[`locale`]({environment:angularApiUrl}/classes/igxgridcomponent.html#locale) の形式または [`pipeArgs`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#pipeArgs) 入力に基づいて設定されます (例: 日、月、年)。Pipe 引数はカスタム[日付書式](https://angular.io/api/common/DatePipe#pre-defined-format-options)または[タイムゾーン](https://angular.io/api/common/DatePipe#parameters)を指定するために使用できます。
- - **format** - 日付の書式設定のデフォルト値は 'mediumDate' です。その他の利用可能なオプションは 'short'、'long'、'shortDate'、'fullDate' です。以下は利用可能なすべての[定義済みの書式オプション](https://angular.io/api/common/DatePipe#pre-defined-format-options)の完全なリストです。
+ - **format** - 日付の書式設定のデフォルト値は 'mediumDate' です。その他の利用可能なオプションは 'short'、'long'、'shortDate'、'fullDate'、'longTime'、'fullTime' などです。以下は利用可能なすべての[定義済みの書式オプション](https://angular.io/api/common/DatePipe#pre-defined-format-options)の完全なリストです。
  - **timezone** - ユーザーのローカル システム タイムゾーンがデフォルト値です。タイムゾーン オフセットまたは標準の UTC/GMT または米国本土のタイムゾーンの略語も渡すことができます。世界の任意の場所の対応する時間を表示するさまざまなタイムゾーンの例:
 
 
@@ -107,6 +107,37 @@ public formatOptions = this.options;
 
 @@igComponent は、**Date オブジェクト**、**数値 (ミリ秒)** または **ISO 日付/時刻文字列**の日付値を受け取ります。このセクションは、[カスタム表示書式を構成する方法](grid.md#カスタム表示形式)を示します。
 
+As you can see in the sample, we specify a different format options in order to showcase the available formats for the specific column type. For example, below you can find the format options for the *time* portion of the date object:
+
+```ts
+// Time format with equivalent example
+public timeFormats = [
+    { format: "shortTime", eq: "'h:mm a'" },
+    { format: "mediumTime", eq: "'h:mm:ss a'"},
+    { format: "longTime", eq: "'h:mm:ss a z'"},
+    { format: "fullTime", eq: "'h:mm:ss a zzzz'"},
+];
+```
+
+#### Cell editing
+When it comes to cell editing based on the column type a different editor will appear:
+- dateTime - [IgxDateTimeEditor directive]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html) will be used. This editor will give you a mask directions for the input elements part of the DateTime object.
+- date - [IgxDatePicker component]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) will be used. 
+- time - [IgxTimePicker component]({environment:angularApiUrl}/classes/igxtimepickercomponent.html) will be used. 
+
+#### Filtering
+The same editors listed above will be used when it comes to Quick Filtering/Excel-style Filtering. These are the following filtering operands that each type exposes:
+- dateTime and date - Equals, Does Not Equal, Before, After, Today, Yesterday, This Month, Last Month, Next Month, This Year, Last Year, Next Year, Empty, Not Empty, Null, Not Null;
+- time - At, Not At, Before, After, At or Before, At or After, Empty, Not Empty, Null, Not Null;
+
+#### Summaries
+The available Summary operands will be **Count**, **Earliest** (date/time) and **Latest** (date/time).
+
+#### Sorting
+
+Time type column sorts based on the time portion of the object, ms will be disregarded.
+Date type column sorts based on the date portion, disregards the time portion.
+DateTime column sorts based on the full date
 ### Boolean (ブール値)
 
 デフォルトのテンプレートは、ブール値の可視化にマテリアル アイコンを使用します。*false* 値には 'clear' アイコン、*true* 値には 'check' アイコンを使用します。編集テンプレートは [igx-checkbox]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html) コンポーネントを使用しています。

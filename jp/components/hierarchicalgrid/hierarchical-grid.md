@@ -402,7 +402,6 @@ $custom-theme: igx-grid-theme(
 |制限|説明|
 |--- |--- |
 |グループ化|グループ化機能は、階層グリッドでサポートされません。|
-|Excel エクスポート|Excel へのエクスポートは Hierarchical Grid でサポートされませんが、今後の Ignite UI for Angular アップデートでサポート予定です。|
 
 > [!NOTE]
 > `igxHierarchicalGrid` は内部で `igxForOf` ディレクティブを使用するため、すべての `igxForOf` の制限が `igxForOf` で有効です。詳細については、[igxForOf 既知の問題](../for-of.html#既知の問題と制限) のセクションを参照してください。
