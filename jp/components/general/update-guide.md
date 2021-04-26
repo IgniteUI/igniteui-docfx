@@ -88,29 +88,32 @@ ng update @angular/cli
 
   以下のコード スニペットと同じ結果を得るには: 
 
-        ```html
-        <button igxButton="raised">Raised button</button>
-        <button igxButton="outlined">Outlined button</button>
-        ```
-        ```scss
-        $my-button-theme: igx-button-theme(
-            $raised-background: red,
-            $outlined-outline-color: green
-        );
+    ```html
+    <button igxButton="raised">Raised button</button>
+    <button igxButton="outlined">Outlined button</button>
+    ```
 
-        @include igx-css-vars($my-button-theme);
-        ```
+    ```scss
+    $my-button-theme: igx-button-theme(
+        $raised-background: red,
+        $outlined-outline-color: green
+    );
+
+    @include igx-css-vars($my-button-theme);
+    ```
+
     ボタン タイプごとに個別のテーマを作成し、CSS セレクターにスコープする必要があります。
-        ```html
+
+    ```html
         <div class="my-raised-btn">
             <button igxButton="raised">Raised button</button>
         </div>
         <div class="my-outlined-btn">
             <button igxButton="outlined">Outlined button</button>
         </div>
-        ```
+    ```
 
-        ```scss
+    ```scss
         $my-raised-button: igx-button-theme(
             $background: red
         );
@@ -126,7 +129,7 @@ ng update @angular/cli
         .my-outlined-btn {
             @include igx-css-vars($my-outlined-button);
         }
-        ```
+    ```
 
 ご覧のとおり、`igx-button-theme` パラメーターはボタン タイプごとに同じ名前になっているため、タイプごとに異なる色を使用するには、ボタン テーマのスコープを CSS セレクターに設定する必要があります。
 
