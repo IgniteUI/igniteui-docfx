@@ -88,29 +88,32 @@ ng update @angular/cli
 
   以下のコード スニペットと同じ結果を得るには: 
 
-        ```html
-        <button igxButton="raised">Raised button</button>
-        <button igxButton="outlined">Outlined button</button>
-        ```
-        ```scss
-        $my-button-theme: igx-button-theme(
-            $raised-background: red,
-            $outlined-outline-color: green
-        );
+    ```html
+    <button igxButton="raised">Raised button</button>
+    <button igxButton="outlined">Outlined button</button>
+    ```
 
-        @include igx-css-vars($my-button-theme);
-        ```
+    ```scss
+    $my-button-theme: igx-button-theme(
+        $raised-background: red,
+        $outlined-outline-color: green
+    );
+
+    @include igx-css-vars($my-button-theme);
+    ```
+
     ボタン タイプごとに個別のテーマを作成し、CSS セレクターにスコープする必要があります。
-        ```html
+
+    ```html
         <div class="my-raised-btn">
             <button igxButton="raised">Raised button</button>
         </div>
         <div class="my-outlined-btn">
             <button igxButton="outlined">Outlined button</button>
         </div>
-        ```
+    ```
 
-        ```scss
+    ```scss
         $my-raised-button: igx-button-theme(
             $background: red
         );
@@ -126,7 +129,7 @@ ng update @angular/cli
         .my-outlined-btn {
             @include igx-css-vars($my-outlined-button);
         }
-        ```
+    ```
 
 ご覧のとおり、`igx-button-theme` パラメーターはボタン タイプごとに同じ名前になっているため、タイプごとに異なる色を使用するには、ボタン テーマのスコープを CSS セレクターに設定する必要があります。
 
@@ -223,6 +226,29 @@ ng update @angular/cli
         * `selectedTabItem` プロパティは [`selectedItem`]({environment:angularApiUrl}/classes/igxtabscomponent.html#selecteditem) に変更されました。
         * contentFit と固定オプションを含む `type` プロパティは使用できなくなりました。ヘッダーのサイズ設定と配置モードは現在、[`tabAlignment`]({environment:angularApiUrl}/classes/igxtabscomponent.html#tabalignment) 入力プロパティによって制御されています。この入力プロパティは、start (デフォルト)、center、end、justify の 4 つのいずれかが設定できます。古い `contentFit` タイプは現在の `start` 配置値に対応し、古い  `fixed` タイプは現在の `justify` 値に対応します。
     * `tabItemSelected` および `tabItemDeselected` イベントが削除されました。[`selectedIndexChanging`]({environment:angularApiUrl}/classes/igxtabscomponent.html#selectedindexchanging)、[`selectedIndexChange`]({environment:angularApiUrl}/classes/igxtabscomponent.html#selectedindexchange)、[`selectedItemChange`]({environment:angularApiUrl}/classes/igxtabscomponent.html#selecteditemchange) の 3 つの新しいイベントが導入されました。これらのイベントにより、タブの選択をより柔軟に制御できます。残念ながら、これらのイベント変更に対して適切な移行を行うことはとても複雑であるため、エラーはプロジェクト レベルで処理する必要があります。
+
+### IgxGridComponent、IgxTreeGridComponent、IgxHierarchicalGridComponent
+* *IgxGridRowComponent*、*IgxTreeGridRowComponent*、*IgxHierarchicalRowComponent*、*IgxGridGroupByRowComponent* はパブリック API で公開されなくなりました。
+* 以前は上記のいずれかのインスタンスを返していたパブリック API は、パブリック [`RowType`]({environment:angularApiUrl}/interfaces/rowtype.html) インターフェースを実装するオブジェクトを返すようになりました。
+
+```ts
+const row = grid.getRowByIndex(0);
+const row = grid.getRowByKey(2);
+const row = cell.row;
+```
+
+[`RowType`]({environment:angularApiUrl}/interfaces/rowtype.html) のパブリック API は、*IgxRowComponent* などが公開していたものと同じですが、次の点に注意してください:
+
+* *IgxHierarchicalRowComponent* によって公開される *toggle* メソッドは使用できません。すべての行タイプに [`expanded`]({environment:angularApiUrl}/interfaces/rowtype.html#expanded) プロパティを使用します:
+
+```ts
+grid.getRowByIndex(0).expanded = false;
+```
+*row.rowData* および *row.rowID* は非推奨であり、バージョン 13 で完全に削除されます。代わりに *row.data* と *row.key* を使用してください。
+
+* *onRowPinning* によって発行されたイベント引数の *row* プロパティ、および *onRowDragStart* によって発行されたイベント引数の *dragData* プロパティ、*onRowDragEnd* は [`RowType`]({environment:angularApiUrl}/interfaces/rowtype.html) を実装しています。 
+* *ng update* は、*IgxGridRowComponent*、*IgxTreeGridRowComponent*、*IgxHierarchicalRowComponent*、*IgxGridGroupByRowComponent* のインポート、入力、キャストなどの使用方法のほとんどが移行されます上記のいずれかを使用するコード内の場所が移行されない場合は、入力/キャストを削除するか、[`RowType`]({environment:angularApiUrl}/interfaces/rowtype.html) で変更してください。
+* *getRowByIndex* は、そのインデックスの行が集計行である場合、[`RowType`]({environment:angularApiUrl}/interfaces/rowtype.html) オブジェクトを返すようになりました (以前は *undefined* を返していました)。*row.isSummaryRow* および *row.isGroupByRow* は、インデックスの行が集計行またはグループ行の場合に true を返します。
 
 ## 10.2.x から 11.0.x の場合:
 * IgxGrid、IgxTreeGrid、IgxHierarchicalGrid

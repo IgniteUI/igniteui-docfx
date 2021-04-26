@@ -392,6 +392,9 @@
         - name: 一括編集
           href: hierarchicalgrid/batch-editing.md
           new: false
+    - name: Excel へエクスポート
+      href: hierarchicalgrid/export-excel.md
+      new: true
     - name: 行ドラッグ
       href: hierarchicalgrid/row-drag.md
       new: false
