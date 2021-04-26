@@ -1,53 +1,30 @@
-@@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid Batch Editing | Angular CRUD | Ignite UI for Angular | Infragistics
-_description: Perform data manipulation without affecting the underlying data with Grid Batch Editing and with Angular CRUD using Material UI table by Ignite UI for Angular
+title: Angular @@igComponent Batch Editing | Angular CRUD | Ignite UI for Angular | Infragistics
+_description: Perform data manipulation without affecting the underlying data with @@igComponent Batch Editing and with Angular CRUD using Material UI table by Ignite UI for Angular
 _keywords: angular crud, ignite ui for angular, infragistics
 ---
-}
-@@if (igxName === 'IgxTreeGrid') {
----
-title: Angular Tree Grid Batch Editing | Angular CRUD | Ignite UI for Angular | Infragistics
-_description: Perform data manipulation without affecting the underlying data with Grid Batch Editing and with Angular CRUD using Material UI table by Ignite UI for Angular
-_keywords: angular crud, ignite ui for angular, infragistics
-_canonicalLink: grid/batch-editing
----
-}
-@@if (igxName === 'IgxHierarchicalGrid') {
----
-title: Angular HierarchicalGrid Grid Batch Editing | Angular CRUD | Ignite UI for Angular | Infragistics
-_description: Perform data manipulation without affecting the underlying data with Grid Batch Editing and with Angular CRUD using Material UI table by Ignite UI for Angular
-_keywords: angular crud, ignite ui for angular, infragistics
-_canonicalLink: grid/batch-editing
----
-}
 
 # @@igComponent Batch Editing and Transactions
 
 @@if (igxName === 'IgxGrid') {
-The Batch Editing feature of the igxGrid is based on the [`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html). Follow the [`Transaction Service class hierarchy`](../transaction-classes.md) topic to see an overview of the igxTransactionService and details how it is implemented.
-
-Below is a detailed example of how is Batch Editing enabled for the igxGrid component.
+The Batch Editing feature of the @@igxName is based on the [`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html). Follow the [`Transaction Service class hierarchy`](../transaction-classes.md) topic to see an overview of the `igxTransactionService` and details how it is implemented.
 }
-@@if (igxName === 'IgxTreeGrid') {
-The Batch Editing feature of the IgxTreeGrid is based on the [`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html). Follow the [`Transaction Service class hierarchy`](../transaction-classes.md) topic to see an overview of the igxHierarchicalTransactionService and details how it is implemented.
 
-Below is a detailed example of how is Batch Editing enabled for the IgxTreeGrid component.
+@@if (igxName === 'IgxTreeGrid' || igxName === 'IgxHierarchicalGrid') {
+The Batch Editing feature of the @@igxName is based on the [`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html). Follow the [`Transaction Service class hierarchy`](../transaction-classes.md) topic to see an overview of the `igxHierarchicalTransactionService` and details how it is implemented.
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-The Batch Editing feature of the IgxHierarchicalGrid is based on the [`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html). Follow the [`Transaction Service class hierarchy`](../transaction-classes.md) topic to see an overview of the igxHierarchicalTransactionService and details how it is implemented.
 
-In order to use the [`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) with [`IgxHierarchicalGridComponent`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html), but have it accumulating separate transaction logs for each island, a service factory should be provided instead. One is exported and ready for use as [`IgxHierarchicalTransactionServiceFactory`]({environment:angularApiUrl}/index.html#igxhierarchicaltransactionservicefactory). 
-
-Below is a detailed example of how is Batch Editing enabled for the IgxHierarchicalGrid component.
+In order to use the [`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) with [`@@igxName`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html), but have it accumulating separate transaction logs for each island, a service factory should be provided instead. One is exported and ready for use as [`IgxHierarchicalTransactionServiceFactory`]({environment:angularApiUrl}/index.html#igxhierarchicaltransactionservicefactory). 
 }
+
+Below is a detailed example of how is Batch Editing enabled for the @@igComponent component.
 
 ## Angular @@igComponent Batch Editing and Transactions Example
 
+The following sample demonstrates a scenario, where the @@igObjectRef has the Transaction as provider and has row editing enabled. The latter will ensure that transaction will be added after the entire row edit is confirmed.
+
 @@if (igxName === 'IgxGrid') {
-The following sample demonstrates a scenario, where the grid has the Transaction as provider and has row editing enabled. The latter will ensure that transaction will be added after the entire row edit is confirmed.
-
-
 <code-view style="height:650px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/grid/grid-batch-editing" alt="Angular @@igComponent Batch Editing and Transactions Example">
@@ -56,9 +33,6 @@ The following sample demonstrates a scenario, where the grid has the Transaction
 <div class="divider--half"></div>
 }
 @@if (igxName === 'IgxTreeGrid') {
-The following sample illustrates how to enable and use Batch Editing via Transaction as provider and has row editing enabled. The latter will ensure that transaction will be added after the entire row edit is confirmed. The sample uses a flat data source.
-
-
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-batchediting" alt="Angular @@igComponent Batch Editing and Transactions Example">
@@ -67,7 +41,6 @@ The following sample illustrates how to enable and use Batch Editing via Transac
 <div class="divider--half"></div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-
 <code-view style="height:680px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-batch-editing" alt="Angular @@igComponent Batch Editing and Transactions Example">
@@ -97,7 +70,7 @@ import { @@igxNameModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Then you need to define the igxTransactionService as a provider for the @@igComponent or for some of its parent components:
+Then you need to define the transaction service as a provider for the @@igComponent:
 
 @@if (igxName === 'IgxGrid') {
 ```typescript
@@ -115,17 +88,15 @@ export class GridWithTransactionsComponent { }
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```typescript
-import { Component, ViewChild } from "@angular/core";
-import { IgxGridComponent, IgxGridTransaction, IgxToggleDirective,
-    IgxHierarchicalTransactionService, IgxTreeGridComponent } from "igniteui-angular";
+import { Component } from "@angular/core";
+import { IgxGridTransaction, IgxHierarchicalTransactionService } from "igniteui-angular";
 
 @Component({
     providers: [{ provide: IgxGridTransaction, useClass: IgxHierarchicalTransactionService }],
-    selector: "app-tree-grid-batch-editing-sample",
-    styleUrls: ["tree-grid-batch-editing-sample.component.scss"],
-    templateUrl: "tree-grid-batch-editing-sample.component.html"
+    selector: "app-tree-grid-with-transactions",
+    template: '<ng-content></ng-content>'
 })
-export class TreeGridBatchEditingSampleComponent { }
+export class TreeGridWithTransactionsComponent { }
 
 ```
 }
@@ -141,52 +112,59 @@ import { IgxHierarchicalTransactionServiceFactory } from "igniteui-angular";
 export class HierarchicalGridWithTransactionsComponent { }
 ```
 }
+@@if (igxName === 'IgxGrid') {
 > [!NOTE]
-> `IgxGridTransaction` is an injection token defined by the grid.
-
-Then define a @@igComponent with bound data source and [`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable) set to true and bind:
+> By default the `@@igxName` has `IgxGridTransaction` injection token defined in its module. This token provides [`igxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html). Providing this service allows `@@igxName` to perform row editing. To enable transactions in `@@igxName` [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) should be provided. This could be done in the component's `providers` array. However, as each `@@igxName` needs its own transaction service, when component has several `@@igxNames` defined in its body, each `@@igxName` should be encapsulated in a component where transaction service should be provided. In the sample above `@@igxName` is wrapped in `GridWithTransactionsComponent` component. In the later [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) is provided in its `providers` array.
+}
+@@if (igxName === 'IgxTreeGrid') {
+> [!NOTE]
+> By default the `@@igxName` has `IgxGridTransaction` injection token defined in its module. This token provides [`igxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html). Providing this service allows `@@igxName` to perform row editing. To enable transactions in `@@igxName` [`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) should be provided. This could be done in the component's `providers` array. However, as each `@@igxName` needs its own transaction service, when component has several `@@igxNames` defined in its body, each `@@igxName` should be encapsulated in a component where transaction service should be provided. In the sample above `@@igxName` is wrapped in `TreeGridWithTransactionsComponent` component. In the later [`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) is provided in its `providers` array.
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+> [!NOTE]
+> By default the `@@igxName` has `IgxGridTransaction` injection token defined in its module. This token provides [`igxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html). Providing this service allows `@@igxName` to perform row editing. To enable transactions in `@@igxName` [`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) should be provided. This could be done in the component's `providers` array. However, as each `@@igxName` needs its own transaction service, when component has several `@@igxNames` defined in its body, each `@@igxName` should be encapsulated in a component where transaction service should be provided. In the sample above `@@igxName` is wrapped in `HierarchicalGridWithTransactionsComponent` component. In the later [`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) is provided in its `providers` array.
+}
+Then define a `@@igxName` with bound data source and [`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable) set to true and bind:
 
 @@if (igxName === 'IgxGrid') {
 ```html
 <app-grid-with-transactions>
-    <igx-grid #gridRowEditTransaction [data]="data" [primaryKey]="'ProductID'" width="100%" height="500px"
+    <igx-grid #grid [data]="data" [primaryKey]="'ProductID'" width="100%" height="500px"
         [rowEditable]="true">
         ...
     </igx-grid>
 </app-grid-with-transactions>
 ...
-<button igxButton [disabled]="!undoEnabled" (click)="undo()">Undo</button>
-<button igxButton [disabled]="!redoEnabled" (click)="redo()">Redo</button>
-...
-<button igxButton (click)="commit()">Commit</button>
-<button igxButton (click)="discard()">Discard</button>
+<button igxButton [disabled]="!grid.transactions.canUndo" (click)="undo()">Undo</button>
+<button igxButton [disabled]="!grid.transactions.canRedo" (click)="redo()">Redo</button>
+<button igxButton [disabled]="grid.transactions.getAggregatedChanges(false).length < 1"
+    (click)="openCommitDialog(dialogGrid)">Commit</button>
 ...
 
 ```
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```html
-<igx-tree-grid #treeGrid [data]="data" primaryKey="employeeID" foreignKey="PID" width ="100%" height ="500px" rowEditable=true rowSelectable=true>
+<igx-tree-grid #treeGrid [data]="data" primaryKey="employeeID" foreignKey="PID"
+    width ="100%" height ="500px" rowEditable=true>
     ...
 </igx-tree-grid>
 ...
     <button igxButton (click)="addRow()">Add Root Level Row</button>
-    <button igxButton [disabled]="!undoEnabled" (click)="undo()">Undo</button>
-    <button igxButton [disabled]="!redoEnabled" (click)="redo()">Redo</button>
-    <button igxButton [disabled]="!hasTransactions" (click)="openCommitDialog()">Commit</button>
+    <button igxButton [disabled]="!treeGrid.transactions.canUndo" (click)="undo()">Undo</button>
+    <button igxButton [disabled]="!treeGrid.transactions.canRedo" (click)="redo()">Redo</button>
+    <button igxButton [disabled]="treeGrid.transactions.getAggregatedChanges(false).length < 1"
+        (click)="openCommitDialog()">Commit</button>
 ...
 ```
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
 <app-hierarchical-grid-with-transactions>
-    <igx-hierarchical-grid igxPreventDocumentScroll #hierarchicalGrid class="hgrid" [data]="localdata" [primaryKey]="'Artist'"
-        [rowEditable]="true" [height]="'580px'" [width]="'100%'">
-        <igx-column field="Artist" header="Artist" [editable]="false" [dataType]="'string'"></igx-column>
-        <igx-column field="HasGrammyAward" header="Has Grammy Award?" [editable]="true" [dataType]="'boolean'">
-        </igx-column>
+    <igx-hierarchical-grid #hierarchicalGrid [data]="data" [primaryKey]="'Artist'"
+        [height]="'580px'" [width]="'100%'" [rowEditable]="true" >
         ...
-        <igx-row-island [key]="'Albums'" #layout1 [primaryKey]="'Album'" [rowEditable]="true">
+        <igx-row-island #childGrid [key]="'Albums'" [primaryKey]="'Album'" [rowEditable]="true">
             <igx-grid-toolbar></igx-grid-toolbar>
             ...
             <ng-template igxToolbarCustomContent let-grid="grid">
@@ -216,32 +194,23 @@ The following code demonstrates the usage of the [`transactions`]({environment:a
 export class GridBatchEditingSampleComponent {
     @ViewChild("gridRowEditTransaction", { read: IgxGridComponent }) public gridRowEditTransaction: IgxGridComponent;
     ...
-    public get undoEnabled(): boolean {
-        return this.gridRowEditTransaction.transactions.canUndo;
-    }
-
-    public get redoEnabled(): boolean {
-        return this.gridRowEditTransaction.transactions.canRedo;
-    }
-
     public undo() {
-        /* exit edit mode */
-        this.gridRowEditTransaction.endEdit(/* commit the edit transaction */ false);
-        this.gridRowEditTransaction.transactions.undo();
+        /* exit edit mode and commit changes */
+        this.grid.endEdit(true);
+        this.grid.transactions.undo();
     }
 
     public redo() {
-        this.gridRowEditTransaction.transactions.redo();
+        /* exit edit mode and commit changes */
+        this.grid.endEdit(true);
+        this.grid.transactions.redo()
     }
 
     public commit() {
-        this.gridRowEditTransaction.transactions.commit(this.data);
+        this.grid.transactions.commit(this.data);
         this.toggle.close();
     }
-
-    public discard() {
-        this.gridRowEditTransaction.transactions.clear();
-    }
+    ...
 }
 ```
 }
@@ -252,71 +221,23 @@ The following code demonstrates the usage of the [`HierarchicalTransactionServic
 export class TreeGridBatchEditingSampleComponent {
     @ViewChild("treeGrid", { read: IgxTreeGridComponent }) public treeGrid: IgxTreeGridComponent;
     ...
-    public addRow() {
-        this.treeGrid.addRow({
-            PID: -1,
-            Title: "Junior Sales Representative",
-            employeeID: this.data.length + this.nextRow++,
-            firstName: "John",
-            lastName: "Doe"
-        });
-    }
-
-    public addChildRow(id) {
-        this.treeGrid.addRow(
-            {
-                Title: "Sales Manager",
-                employeeID: this.data.length + this.nextRow++,
-                firstName: `Added `,
-                lastName: "Added"
-            },
-            id);
-    }
-
-    public deleteRow(id) {
-        this.treeGrid.deleteRow(id);
-    }
-
     public undo() {
-        /* exit edit mode */
-        this.treeGrid.endEdit(/* commit the edit transaction */ false);
+        /* exit edit mode and commit changes */
+        this.treeGrid.endEdit(true);
         this.treeGrid.transactions.undo();
     }
 
     public redo() {
+        /* exit edit mode and commit changes */
+        this.treeGrid.endEdit(true);
         this.treeGrid.transactions.redo();
     }
 
     public commit() {
         this.treeGrid.transactions.commit(this.data);
-        this.toggle.close();
-    }
-
-    public cancel() {
         this.dialog.close();
     }
-
-    public discard() {
-        this.treeGrid.transactions.clear();
-        this.dialog.close();
-    }
-
-    public get undoEnabled(): boolean {
-        return this.treeGrid.transactions.canUndo;
-    }
-
-    public get redoEnabled(): boolean {
-       return this.treeGrid.transactions.canRedo;
-    }
-
-    public openCommitDialog() {
-        this.dialog.open();
-        this.dialogGrid.reflow();
-    }
-
-    public get hasTransactions(): boolean {
-        return this.treeGrid.transactions.getAggregatedChanges(false).length > 0;
-    }
+    ...
 }
 ```
 }
@@ -326,69 +247,39 @@ The following code demonstrates the usage of the [`transactions`]({environment:a
 ```typescript
 ...
 export class HierarchicalGridBatchEditingSampleComponent {
-    @ViewChild("layout1", { static: true })
-    private layout1: IgxRowIslandComponent;
-
-    @ViewChild("hierarchicalGrid", { static: true })
-    private hierarchicalGrid: IgxHierarchicalGridComponent;
-    
     ...
-    
-    public get undoEnabledParent(): boolean {
-        return this.hierarchicalGrid.transactions.canUndo;
-    }
-
-    public get redoEnabledParent(): boolean {
-        return this.hierarchicalGrid.transactions.canRedo;
-    }
-
-    public get hasTransactions(): boolean {
-        return this.hierarchicalGrid.transactions.getAggregatedChanges(false).length > 0 || this.hasChildTransactions;
-    }
-
-    public get hasChildTransactions(): boolean {
-        return this.layout1.hgridAPI.getChildGrids()
-            .find(c => c.transactions.getAggregatedChanges(false).length > 0) !== undefined;
-    }
-    
-    ...
-    
     public undo(grid: IgxHierarchicalGridComponent) {
-        /* exit edit mode */
-        grid.endEdit(/* commit the edit transaction */ false);
+        /* exit edit mode and commit changes */
+        grid.endEdit(true);
         grid.transactions.undo();
     }
 
     public redo(grid: IgxHierarchicalGridComponent) {
+        /* exit edit mode and commit changes */
+        grid.endEdit(true);
         grid.transactions.redo();
     }
 
     public commit() {
-        this.hierarchicalGrid.transactions.commit(this.localdata);
-        this.layout1.hgridAPI.getChildGrids().forEach((grid) => {
+        this.hierarchicalGrid.transactions.commit(this.data);
+        this.childGrid.hgridAPI.getChildGrids().forEach((grid) => {
             grid.transactions.commit(grid.data);
         });
-    }
-
-    public discard() {
-        this.hierarchicalGrid.transactions.clear();
-        this.layout1.hgridAPI.getChildGrids().forEach((grid) => {
-            grid.transactions.clear();
-        });
+        this.dialogChanges.close();
     }
 }
 ```
 }
 
 > [!NOTE] 
-> The transactions API won't handle end of edit and you'd need to do it by yourself. Otherwise, the grid would stay in edit mode. One way to do that is by calling [`endEdit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#endedit) in the respective method.
+> The transactions API won't handle end of edit and you'd need to do it by yourself. Otherwise, `@@igComponent` would stay in edit mode. One way to do that is by calling [`endEdit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#endedit) in the respective method.
 
 @@if (igxName === 'IgxTreeGrid') {
-Deleting a parent node in the grid has some peculiarities. If you are using a hierarchical data, the children will be deleted when deleting their parent. If you are using a flat data, you may set the desired behavior using the [`cascadeOnDelete`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#cascadeondelete) property of the grid. This property indicates whether the child records should be deleted when their parent gets deleted (by default, it is set to `true`).
+Deleting a parent node in `@@igComponent` has some peculiarities. If you are using a hierarchical data, the children will be deleted when deleting their parent. If you are using a flat data, you may set the desired behavior using the [`cascadeOnDelete`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#cascadeondelete) property of `@@igComponent`. This property indicates whether the child records should be deleted when their parent gets deleted (by default, it is set to `true`).
 }
 
 > [!NOTE]
-> Disabling [`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable) property will modify @@igComponent to create transactions on cell change and will not expose row editing overlay in the UI.
+> Disabling [`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable) property will modify `@@igComponent` to create transactions on cell change and will not expose row editing overlay in the UI.
 
 ## API References
 
