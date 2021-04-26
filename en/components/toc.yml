@@ -845,15 +845,15 @@
 - name: Charts
   href: charts/chart-overview.md
   header: true
-- name: Binding Real Time Data
-  href: category-chart-high-frequency.md
-  new: false
-- name: Binding High Volume Data
-  href: category-chart-high-volume.md
-  new: false
-- name: Binding Multiple Data Source
-  href: financial-chart-multiple-data.md
-  new: false
+#- name: Binding Real Time Data
+#  href: category-chart-high-frequency.md
+#  new: false
+#- name: Binding High Volume Data
+#  href: category-chart-high-volume.md
+#  new: false
+#- name: Binding Multiple Data Source
+#  href: financial-chart-multiple-data.md
+#  new: false
 - name: Area Chart
   href: charts/types/area-chart.md
   new: false
