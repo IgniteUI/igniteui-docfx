@@ -36,7 +36,7 @@ Excel Exporter サービスは @@igxName のデータを MS Excel へエクス�
 @@if (igxName === 'IgxHierarchicalGrid') {
 
 <p class="highlight">
-  Excel Exporter サービスは @@igxName のデータを MS Excel へエクスポートできます。エクスポート機能は、[`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) クラスでカプセル化されています。To trigger the process, you need to invoke the [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html)'s [`export`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#export) method and pass the @@igxName component as the first argument.
+  Excel Exporter サービスは @@igxName のデータを MS Excel へエクスポートできます。エクスポート機能は、[`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) クラスでカプセル化されています。プロセスをトリガーするには、[`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) の [`export`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#export) メソッドを呼び出し、最初の引数として @@igxName コンポーネントを渡す必要があります。
 </p>
 
 }
@@ -170,25 +170,25 @@ this.excelExportService.export(this.@@igObjectRef, new IgxExcelExporterOptions("
 @@if (igxName === 'IgxGrid') {
 |制限|説明|
 |--- |--- |
-|Max worksheet size|The maximum worksheet size supported by Excel is 1,048,576 rows by 16,384 columns.|
-|Exporting multi column headers|The excel exporter service doesn't support exporting @@igComponent with multi column headers.|
+|ワークシートの最大サイズ|Excel でサポートされているワークシートの最大サイズは、1,048,576 行 x 16,384 列です。|
+|複数列ヘッダーのエクスポート|Excel エクスポーター サービスは、複数列ヘッダーを持つ @@ igComponent のエクスポートをサポートしていません。|
 }
 
 @@if (igxName === 'IgxTreeGrid') {
 |制限|説明|
 |--- |--- |
-|Hierarchy levels|The excel exporter service can create up to 8 levels of hierarchy.|
-|Max worksheet size|The maximum worksheet size supported by Excel is 1,048,576 rows by 16,384 columns.|
-|Exporting multi column headers|The excel exporter service doesn't support exporting @@igComponent with multi column headers.|
+|階層レベル|Excel エクスポーター サービスは、最大 8 レベルの階層を作成できます。|
+|ワークシートの最大サイズ|Excel でサポートされているワークシートの最大サイズは、1,048,576 行 x 16,384 列です。|
+|複数列ヘッダーのエクスポート|Excel エクスポーター サービスは、複数列ヘッダーを持つ @@ igComponent のエクスポートをサポートしていません。|
 }
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 |制限|説明|
 |--- |--- |
-|Hierarchy levels|The excel exporter service can create up to 8 levels of hierarchy.|
-|Max worksheet size|The maximum worksheet size supported by Excel is 1,048,576 rows by 16,384 columns.|
+|階層レベル|Excel エクスポーター サービスは、最大 8 レベルの階層を作成できます。|
+|ワークシートの最大サイズ|Excel でサポートされているワークシートの最大サイズは、1,048,576 行 x 16,384 列です。|
 |複数列ヘッダーのエクスポート|Excel エクスポーター サービスは、複数列ヘッダーを持つ @@igComponent のエクスポートをサポートしていません。|
-|Exporting pinned columns|In the exported Excel file, the pinned columns will not be frozen but will be displayed in the same order as they appear in the grid.|
+|ピン固定列された列のエクスポート|エクスポートされた Excel ファイルでは、ピン固定列は固定されませんが、グリッドに表示されるのと同じ順序で表示されます。|
 }
 
 > [!NOTE]

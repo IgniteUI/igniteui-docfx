@@ -107,7 +107,7 @@ public formatOptions = this.options;
 
 @@igComponent は、**Date オブジェクト**、**数値 (ミリ秒)** または **ISO 日付/時刻文字列**の日付値を受け取ります。このセクションは、[カスタム表示書式を構成する方法](grid.md#カスタム表示形式)を示します。
 
-As you can see in the sample, we specify a different format options in order to showcase the available formats for the specific column type. For example, below you can find the format options for the *time* portion of the date object:
+サンプルでは、特定の列タイプで使用可能な書式を紹介するために、さまざまな書式設定オプションを指定しています。たとえば、以下は日付オブジェクトの *time* 部分の書式設定オプションのサンプルです。
 
 ```ts
 // Time format with equivalent example
@@ -119,25 +119,25 @@ public timeFormats = [
 ];
 ```
 
-#### Cell editing
-When it comes to cell editing based on the column type a different editor will appear:
-- dateTime - [IgxDateTimeEditor directive]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html) will be used. This editor will give you a mask directions for the input elements part of the DateTime object.
-- date - [IgxDatePicker component]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) will be used. 
-- time - [IgxTimePicker component]({environment:angularApiUrl}/classes/igxtimepickercomponent.html) will be used. 
+#### セル編集
+列タイプに基づくセル編集に関しては、別のエディターが表示されます。
+- dateTime - [IgxDateTimeEditor ディレクティブ]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html) が使用されます。このエディターは、DateTime オブジェクトの入力要素部分のマスクを提供します。
+- date - [IgxDatePicker コンポーネント]({environment:angularApiUrl}/classes/igxdatepickercomponent.html)が使用されます。 
+- time - [IgxTimePicker コンポーネント]({environment:angularApiUrl}/classes/igxtimepickercomponent.html)が使用されます。
 
-#### Filtering
-The same editors listed above will be used when it comes to Quick Filtering/Excel-style Filtering. These are the following filtering operands that each type exposes:
-- dateTime and date - Equals, Does Not Equal, Before, After, Today, Yesterday, This Month, Last Month, Next Month, This Year, Last Year, Next Year, Empty, Not Empty, Null, Not Null;
-- time - At, Not At, Before, After, At or Before, At or After, Empty, Not Empty, Null, Not Null;
+#### フィルタリング
+クイック フィルタリング/Excel スタイル フィルタリングに関しては、上記と同じエディターが使用されます。これらは、各タイプが公開する次のフィルタリング オペランドです。
+- dateTime and date - Equals、Does Not Equal、Before、After、Today、Yesterday、This Month、Last Month、Next Month、This Year、Last Year、Next Year、Empty、Not Empty、Null、Not Null;
+- time - At、Not At、Before、After、At または Before、At または After、Empty、Not Empty、Null、Not Null;
 
-#### Summaries
-The available Summary operands will be **Count**, **Earliest** (date/time) and **Latest** (date/time).
+#### 集計
+使用可能な集計オペランドは、**Count**、**Earliest** (date/time)、および **Latest** (date/time) になります。
 
-#### Sorting
+#### ソート
 
-Time type column sorts based on the time portion of the object, ms will be disregarded.
-Date type column sorts based on the date portion, disregards the time portion.
-DateTime column sorts based on the full date
+Time タイプの列は、オブジェクトの時間部分に基づいてソートされます。分/秒は無視されます。
+Date タイプの列は、日付部分に基づいてソートされ、時間部分は無視されます。
+DateTime 列は、日付に基づいてソートされます。
 ### Boolean (ブール値)
 
 デフォルトのテンプレートは、ブール値の可視化にマテリアル アイコンを使用します。*false* 値には 'clear' アイコン、*true* 値には 'check' アイコンを使用します。編集テンプレートは [igx-checkbox]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html) コンポーネントを使用しています。
