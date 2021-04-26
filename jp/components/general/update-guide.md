@@ -236,7 +236,7 @@ const row = cell.row;
 
 [`RowType`]({environment:angularApiUrl}/interfaces/rowtype.html) のパブリック API は、*IgxRowComponent* などが公開していたものと同じですが、次の点に注意してください:
 
-* *IgxHierarchicalRowComponent* によって公開される *toggle* メソッドは使用できません。すべての行タイプに [`expanded`]({environment:angularApiUrl}/interfaces/rowtype.html#expanded）プロパティを使用します:
+* *IgxHierarchicalRowComponent* によって公開される *toggle* メソッドは使用できません。すべての行タイプに [`expanded`]({environment:angularApiUrl}/interfaces/rowtype.html#expanded) プロパティを使用します:
 
 ```ts
 grid.getRowByIndex(0).expanded = false;

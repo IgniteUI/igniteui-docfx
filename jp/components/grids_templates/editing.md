@@ -51,15 +51,15 @@ Ignite UI for Angular @@igComponent コンポーネントは、レコードの�
 
  データ型固有の**編集テンプレート**を使用する場合、列 [`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype) プロパティを指定する必要があります。次に各型のデフォルト テンプレートについて説明します。
 
-- `string` データ型の場合、デフォルトのテンプレートは [igxInput]({environment:angularApiUrl}/classes/igxinputdirective.html) を使用します。
-- `number` データ型のデフォルト テンプレートは [igxInput]({environment:angularApiUrl}/classes/igxinputdirective.html) type="number" を使用します。数値に解析できない値にセルを更新した場合、変更は無視されてセルの値が 0 に設定されます。
-- `date` データ型ではデフォルトのテンプレートは [igxDatePicker]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) を使用します。
+ - `string` データ型の場合、デフォルトのテンプレートは [igxInput]({environment:angularApiUrl}/classes/igxinputdirective.html) を使用します。
+ - `number` データ型のデフォルト テンプレートは [igxInput]({environment:angularApiUrl}/classes/igxinputdirective.html) type="number" を使用します。数値に解析できない値にセルを更新した場合、変更は無視されてセルの値が 0 に設定されます。
+ - `date` データ型ではデフォルトのテンプレートは [igxDatePicker]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) を使用します。
  - `dateTime` データ型の場合、デフォルトのテンプレートは [IgxDateTimeEditor directive]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html) を使用しています。このエディターは、DateTime オブジェクトの入力要素部分のマスク方向を提供します。
  - `date` データ型の場合、デフォルトのテンプレートは [IgxDatePicker component]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) を使用しています。
  - `time` データ型の場合、デフォルトのテンプレートは [IgxTimePicker component]({environment:angularApiUrl}/classes/igxtimepickercomponent.html) を使用しています。
 - `boolean` データ型ではデフォルトのテンプレートは [igxCheckbox]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html) を使用します。
-- `currency` データ型の場合、デフォルトのテンプレートは、アプリケーションまたはグリッドのロケール設定に基づいたプレフィックス/サフィックス構成の [IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) を使用します。
-- `percent` パーセントデータ型の場合、デフォルトのテンプレートは、編集された値のプレビューをパーセントで表示するサフィックス要素を持つ [IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) を使用します。 
+ - `currency` データ型の場合、デフォルトのテンプレートは、アプリケーションまたはグリッドのロケール設定に基づいたプレフィックス/サフィックス構成の [IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) を使用します。
+ - `percent` パーセントデータ型の場合、デフォルトのテンプレートは、編集された値のプレビューをパーセントで表示するサフィックス要素を持つ [IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) を使用します。 
 - カスタム テンプレートについては、[セル編集トピック](cell-editing.md#セル編集テンプレート)を参照してください。
 
 すべての利用可能な列データ型は、公式の[列タイプ トピック](column-types.md#デフォルトのテンプレート)にあります。

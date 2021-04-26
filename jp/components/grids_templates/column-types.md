@@ -126,18 +126,16 @@ public timeFormats = [
 - time - [IgxTimePicker コンポーネント]({environment:angularApiUrl}/classes/igxtimepickercomponent.html)が使用されます。
 
 #### フィルタリング
-クイック フィルタリング/Excel スタイル フィルタリングに関しては、上記と同じエディターが使用されます。これらは、各タイプが公開する次のフィルタリング オペランドです。
+クイック フィルタリング / Excel スタイル フィルタリングに関しては、上記と同じエディターが使用されます。これらは、各タイプが公開する次のフィルタリング オペランドです。
 - dateTime and date - Equals、Does Not Equal、Before、After、Today、Yesterday、This Month、Last Month、Next Month、This Year、Last Year、Next Year、Empty、Not Empty、Null、Not Null;
-- time - At、Not At、Before、After、At または Before、At または After、Empty、Not Empty、Null、Not Null;
+- time - At、Not At、Before、After、At or Before、At or After、Empty、Not Empty、Null、Not Null;
 
 #### 集計
 使用可能な集計オペランドは、**Count**、**Earliest** (date/time)、および **Latest** (date/time) になります。
 
 #### ソート
 
-Time タイプの列は、オブジェクトの時間部分に基づいてソートされます。分/秒は無視されます。
-Date タイプの列は、日付部分に基づいてソートされ、時間部分は無視されます。
-DateTime 列は、日付に基づいてソートされます。
+Time タイプの列は、オブジェクトの時間部分に基づいてソートされます。分/秒は無視されます。Date タイプの列は、日付部分に基づいてソートされ、時間部分は無視されます。DateTime 列は、日付に基づいてソートされます。
 ### Boolean (ブール値)
 
 デフォルトのテンプレートは、ブール値の可視化にマテリアル アイコンを使用します。*false* 値には 'clear' アイコン、*true* 値には 'check' アイコンを使用します。編集テンプレートは [igx-checkbox]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html) コンポーネントを使用しています。
