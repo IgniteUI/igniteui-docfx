@@ -22,24 +22,24 @@ Pagination is used to split a large set of data into a sequence of pages that ha
 The following example represents @@igComponent pagination and exposes the options usage of `items per page` and how paging can be enabled. The user can also quickly navigate through the @@igComponent pages via "Go to last page" and "Go to first page" buttons.
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:550px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-paging-sample" alt="Angular Pagination Example">
 </code-view>
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:550px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-paging" alt="Angular Pagination Example">
 </code-view>
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:580px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:580px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-paging" alt="Angular Pagination Example">
 </code-view>
 
@@ -142,8 +142,8 @@ The `igx-paginator` component is used along with the `igx-grid` component in the
 
 ### Paginator Component Demo
 
-<code-view style="height:600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-pager-sample" >
 </code-view>
 
@@ -161,7 +161,7 @@ In some cases you may want to define your own paging behavior and this is when w
 }
 
 ## Localization
-With only a few lines of code you can easily localize all strings part of the Paging component. In order to localize a given Paging instance use the input property [resourceStrings]({environment:angularApiUrl}/classes/@@igTypeDoc.html#resourceStrings). You can use this 
+With only a few lines of code you can easily localize all strings part of the Paging component. In order to localize a given Paging instance use the input property [resourceStrings]({environment:angularApiUrl}/classes/@@igTypeDoc.html#resourceStrings). You can use this
 
 **Step 1** - Import `IPaginatorResourceStrings` interface and [changei18n]({environment:angularApiUrl}/#changei18n) function:
 
@@ -303,7 +303,7 @@ $dark-button: igx-button-theme(
 ```
 
 >[!NOTE]
->The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](../themes/palette.md) topic for detailed guidance on how to use them.
+>The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](../themes/sass/palettes.md) topic for detailed guidance on how to use them.
 
 ### Using Schemas
 
@@ -378,8 +378,8 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 ### Pagination Style Example
 
 
-<code-view style="height:560px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:560px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/custom-grid-paging-style" >
 </code-view>
 
@@ -389,8 +389,8 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 @@if (igxName === 'IgxHierarchicalGrid'){
 ### Demo
 
-<code-view style="height:560px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:560px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-paging-style" >
 </code-view>
 
@@ -400,8 +400,8 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 @@if (igxName === 'IgxTreeGrid'){
 ### Demo
 
-<code-view style="height:560px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:560px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-paging-style" >
 </code-view>
 

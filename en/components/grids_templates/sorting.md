@@ -30,8 +30,8 @@ In Ignite UI for Angular @@igComponent, data sorting is enabled on a per-column 
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:550px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-sorting-sample" alt="Angular @@igComponent Sorting Overview Example">
 </code-view>
 
@@ -40,8 +40,8 @@ In Ignite UI for Angular @@igComponent, data sorting is enabled on a per-column 
 Additionally there is a custom contextmenu added for sorting using **@@igSelector**'s [`onContextMenu`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncontextmenu) Output.
 
 
-<code-view style="height:550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:550px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-sorting" alt="Angular @@igComponent Sorting Overview Example">
 </code-view>
 
@@ -50,8 +50,8 @@ Additionally there is a custom contextmenu added for sorting using **@@igSelecto
 Additionally there is a custom contextmenu added for sorting using **@@igSelector**'s [`onContextMenu`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncontextmenu) Output.
 
 
-<code-view style="height:510px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:510px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-sorting" alt="Angular @@igComponent Sorting Overview Example">
 </code-view>
 
@@ -66,14 +66,14 @@ This is done via the [`sortable`]({environment:angularApiUrl}/classes/igxcolumnc
 ```
 
 ## Sorting Indicators
-Having a certain amount of sorted columns could be really confusing if there is no indication of the sorted order. 
+Having a certain amount of sorted columns could be really confusing if there is no indication of the sorted order.
 
 The **@@igxName** provides a solution for this problem by indicating the index of each sorted column.
 
 @@if(igxName === "IgxGrid"){
 
-<code-view style="height:550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:550px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-sorting-indicators" >
 </code-view>
 
@@ -147,7 +147,7 @@ To get started with styling the sorting behavior, we need to import the `index` 
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+```
 
 Following the simplest approach, we create a new theme that extends the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) and accepts the `$sorted-header-icon-color` and `sortable-header-icon-hover-color` parameters.
 
@@ -157,7 +157,7 @@ $custom-theme: igx-grid-theme(
     $sortable-header-icon-hover-color: black
 );
 ```
-The last step is to **include** the component mixins: 
+The last step is to **include** the component mixins:
 
 ```scss
  @include igx-grid($custom-theme);
@@ -197,13 +197,13 @@ $custom-theme: igx-grid-theme(
 ```
 
 >[!NOTE]
->The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](../themes/palette.md) topic for detailed guidance on how to use them.
+>The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](../themes/sass/palettes.md) topic for detailed guidance on how to use them.
 
 ### Using Schemas
 
 Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](../themes/sass/schemas.md). A **schema** is a recipe of a theme.
 
-Extend one of the two predefined schemas, that are provided for every component, in this case - [`_light-grid`]({environment:sassApiUrl}/index.html#variable-_light-grid):  
+Extend one of the two predefined schemas, that are provided for every component, in this case - [`_light-grid`]({environment:sassApiUrl}/index.html#variable-_light-grid):
 
 ```scss
 // Extending the light grid schema
@@ -219,7 +219,7 @@ In order to apply our custom schema we have to **extend** one of the globals ([`
 
 ```scss
 // Extending the global light-schema
-$my-custom-schema: extend($light-schema, 
+$my-custom-schema: extend($light-schema,
     (
         igx-grid: $custom-grid-schema
     )
@@ -238,8 +238,8 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 ### Demo
 
 
-<code-view style="height:550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:550px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-sorting-styling" >
 </code-view>
 
@@ -248,8 +248,8 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 ### Demo
 
 
-<code-view style="height:550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:550px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-sorting-styling" >
 </code-view>
 
@@ -258,8 +258,8 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 ### Demo
 
 
-<code-view style="height:510px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:510px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-sorting-styling" >
 </code-view>
 

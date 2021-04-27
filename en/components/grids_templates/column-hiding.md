@@ -30,8 +30,8 @@ The Ignite UI for Angular @@igComponent provides an [`IgxColumnActionsComponent`
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-column-hiding-toolbar-sample" alt="Angular @@igComponent Column Hiding Example">
 </code-view>
 
@@ -39,8 +39,8 @@ The Ignite UI for Angular @@igComponent provides an [`IgxColumnActionsComponent`
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-column-hiding-toolbar" alt="Angular @@igComponent Column Hiding Example">
 </code-view>
 
@@ -48,8 +48,8 @@ The Ignite UI for Angular @@igComponent provides an [`IgxColumnActionsComponent`
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:570px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:570px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-hiding" alt="Angular @@igComponent Column Hiding Example">
 </code-view>
 
@@ -240,7 +240,7 @@ By using the [`columnsAreaMaxHeight`]({environment:angularApiUrl}/classes/igxcol
 ```typescript
 // columnHiding.component.ts
 
-public ngAfterViewInit() {        
+public ngAfterViewInit() {
     this.@@igObjectRef.toolbar.columnHidingUI.columnsAreaMaxHeight = "200px";
 }
 ```
@@ -261,7 +261,7 @@ Let's say we want to manually define our [`IgxColumnActionsComponent`]({environm
 ...
 import {
     ...
-    IgxColumnActionsModule 
+    IgxColumnActionsModule
 } from 'igniteui-angular';
 
 @NgModule({
@@ -339,7 +339,7 @@ Now let's create our [`IgxColumnActionsComponent`]({environment:angularApiUrl}/c
     min-width: 200px;
     display: flex;
     flex-direction: column;
-    margin-left: 30px;    
+    margin-left: 30px;
 }
 ```
 }
@@ -373,12 +373,12 @@ Let's create a couple of nicely designed radio buttons for our options! We just 
 ...
 import {
     ...
-    IgxRadioModule    
+    IgxRadioModule
 } from 'igniteui-angular';
 
 @NgModule({
     ...
-    imports: [..., IgxRadioModule],    
+    imports: [..., IgxRadioModule],
 })
 export class AppModule {}
 ```
@@ -439,8 +439,8 @@ If all went well, this is how our column hiding UI component should look like:
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-column-hiding-sample" >
 </code-view>
 
@@ -448,8 +448,8 @@ If all went well, this is how our column hiding UI component should look like:
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-column-hiding" >
 </code-view>
 
@@ -482,7 +482,7 @@ $custom-button: igx-button-theme($flat-text-color: gold, $disabled-color: black)
 
 In this example we only changed the text-color of the flat buttons and the button disabled color, but the [`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) provides way more parameters to control the button style.
 
-The last step is to **include** the component mixins, each with its respective theme: 
+The last step is to **include** the component mixins, each with its respective theme:
 
 ```scss
 @include igx-column-actions($custom-column-actions-theme);
@@ -521,7 +521,7 @@ $blue-color: steelblue;
 $custom-palette: igx-palette($primary: $blue-color, $secondary: $yellow-color);
 ```
 
-And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette. 
+And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette.
 
 ```scss
 $custom-column-actions-theme: igx-column-actions-theme(
@@ -538,7 +538,7 @@ $custom-button: igx-button-theme(
 ```
 
 >[!NOTE]
->The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](../themes/palette.md) topic for detailed guidance on how to use them.
+>The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](../themes/sass/palettes.md) topic for detailed guidance on how to use them.
 
 ### Using Schemas
 
@@ -558,7 +558,7 @@ $custom-column-actions-schema: extend($_dark-column-actions,
 );
 // Extending the dark button schema
 $custom-button-schema: extend($_dark-button,
-    (           
+    (
         flat-text-color:(
             igx-color:("secondary", 500)
         ),
@@ -597,8 +597,8 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-column-hiding-style" >
 </code-view>
 
@@ -606,8 +606,8 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-column-hiding-style" >
 </code-view>
 
@@ -615,8 +615,8 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:570px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:570px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-column-hiding-style" >
 </code-view>
 
