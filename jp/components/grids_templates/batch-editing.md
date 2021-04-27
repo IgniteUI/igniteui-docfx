@@ -8,18 +8,18 @@ _language: ja
 # @@igComponent 一括編集とトランザクション
 
 @@if (igxName === 'IgxGrid') {
-The Batch Editing feature of the @@igxName is based on the [`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html). Follow the [`Transaction Service class hierarchy`](../transaction-classes.md) topic to see an overview of the `igxTransactionService` and details how it is implemented.
+@@igxName の一括編集機能は、[`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) に基づいています。[`トランザクション サービス クラス階層`](../transaction-classes.md)トピックに従って、`igxTransactionService` の概要と、その実装方法の詳細を確認してください。
 }
 
 @@if (igxName === 'IgxTreeGrid' || igxName === 'IgxHierarchicalGrid') {
-The Batch Editing feature of the @@igxName is based on the [`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html). Follow the [`Transaction Service class hierarchy`](../transaction-classes.md) topic to see an overview of the `igxHierarchicalTransactionService` and details how it is implemented.
+@@igxName の一括編集機能は、[`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) に基づいています。[`トランザクション サービス クラス階層`](../transaction-classes.md)トピックに従って、`igxHierarchicalTransactionService` の概要と、その実装方法の詳細を確認してください。
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-In order to use the [`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) with [`@@igxName`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html), but have it accumulating separate transaction logs for each island, a service factory should be provided instead. One is exported and ready for use as [`IgxHierarchicalTransactionServiceFactory`]({environment:angularApiUrl}/index.html#igxhierarchicaltransactionservicefactory). 
+[`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) を [`@@igxName`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html) と一緒に使用し、アイランドごとに個別のトランザクション ログを蓄積するには、代わりにサービス ファクトリを提供する必要があります。[`IgxHierarchicalTransactionServiceFactory`]({environment:angularApiUrl}/index.html#igxhierarchicaltransactionservicefactory) として使用できるようになります。
 }
 
-Below is a detailed example of how is Batch Editing enabled for the @@igComponent component.
+以下は、@@igComponent コンポーネントに対して一括編集を有効にする方法の詳細な例です。
 
 ## Angular @@igComponent 一括編集とトランザクションの例
 
@@ -115,15 +115,15 @@ export class HierarchicalGridWithTransactionsComponent { }
 }
 @@if (igxName === 'IgxGrid') {
 > [!NOTE]
-> By default the `@@igxName` has `IgxGridTransaction` injection token defined in its module. This token provides [`igxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html). Providing this service allows `@@igxName` to perform row editing. To enable transactions in `@@igxName` [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) should be provided. This could be done in the component's `providers` array. However, as each `@@igxName` needs its own transaction service, when component has several `@@igxNames` defined in its body, each `@@igxName` should be encapsulated in a component where transaction service should be provided. In the sample above `@@igxName` is wrapped in `GridWithTransactionsComponent` component. In the later [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) is provided in its `providers` array.
+> デフォルトでは、`@@igxName` のモジュールに `IgxGridTransaction` インジェクション トークンが定義されています。このトークンは [`igxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html) を提供します。このサービスを提供することで、`@@igxName` は行編集を実行できます。`@@igxName` でトランザクションを有効にするには、[`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) を指定する必要があります。これは、コンポーネントの `providers` 配列で実行できます。ただし、各 `@@igxName` には独自のトランザクション サービスが必要なため、コンポーネントの本体に複数の `@@igxNames` が定義されている場合、各 `@@igxName` はトランザクション サービスを提供するコンポーネントにカプセル化される必要があります。上記のサンプルでは、`@@igxName` は `GridWithTransactionsComponent` コンポーネントでラップされています。後者では、[`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) は、その `providers` 配列で提供されます。
 }
 @@if (igxName === 'IgxTreeGrid') {
 > [!NOTE]
-> By default the `@@igxName` has `IgxGridTransaction` injection token defined in its module. This token provides [`igxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html). Providing this service allows `@@igxName` to perform row editing. To enable transactions in `@@igxName` [`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) should be provided. This could be done in the component's `providers` array. However, as each `@@igxName` needs its own transaction service, when component has several `@@igxNames` defined in its body, each `@@igxName` should be encapsulated in a component where transaction service should be provided. In the sample above `@@igxName` is wrapped in `TreeGridWithTransactionsComponent` component. In the later [`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) is provided in its `providers` array.
+> デフォルトでは、`@@igxName` のモジュールに `IgxGridTransaction` インジェクション トークンが定義されています。このトークンは [`igxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html) を提供します。このサービスを提供することで、`@@igxName` は行編集を実行できます。`@@igxName` でトランザクションを有効にするには、`@@igxName` [`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) を指定する必要があります。これは、コンポーネントの `providers` 配列で実行できます。ただし、各 `@@igxName` には独自のトランザクション サービスが必要なため、コンポーネントの本体に複数の `@@igxNames` が定義されている場合、各 `@@igxName` はトランザクション サービスを提供するコンポーネントにカプセル化される必要があります。上記のサンプルでは、`@@igxName` は `TreeGridWithTransactionsComponent` コンポーネントでラップされています。後者では、[`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) は、その `providers` 配列で提供されます。
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 > [!NOTE]
-> By default the `@@igxName` has `IgxGridTransaction` injection token defined in its module. This token provides [`igxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html). Providing this service allows `@@igxName` to perform row editing. To enable transactions in `@@igxName` [`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) should be provided. This could be done in the component's `providers` array. However, as each `@@igxName` needs its own transaction service, when component has several `@@igxNames` defined in its body, each `@@igxName` should be encapsulated in a component where transaction service should be provided. In the sample above `@@igxName` is wrapped in `HierarchicalGridWithTransactionsComponent` component. In the later [`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) is provided in its `providers` array.
+> デフォルトでは、`@@igxName` のモジュールに `IgxGridTransaction` インジェクション トークンが定義されています。このトークンは [`igxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html) を提供します。このサービスを提供することで、`@@igxName` は行編集を実行できます。`@@igxName` でトランザクションを有効にするには、`@@igxName` [`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) を指定する必要があります。これは、コンポーネントの `providers` 配列で実行できます。ただし、各 `@@igxName` には独自のトランザクション サービスが必要なため、コンポーネントの本体に複数の `@@igxNames` が定義されている場合、各 `@@igxName` はトランザクション サービスを提供するコンポーネントにカプセル化される必要があります。上記のサンプルでは、`@@igxName` は `HierarchicalGridWithTransactionsComponent` コンポーネントでラップされています。後者では、[`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) は、その `providers` 配列で提供されます。
 }
 次に `@@igxName` をバインドしたデータ ソースで定義し、[`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable) を true に設定してバインドします。
 
