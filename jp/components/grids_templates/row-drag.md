@@ -189,7 +189,7 @@ enum DragIcon {
 export class @@igxNameRowDragComponent {
     ...
     public onDropAllowed(args: IDropDroppedEventArgs) {
-        const draggedRow: @@igxNameGridRowComponent = args.dragData;
+        const draggedRow: RowType = args.dragData;
         draggedRow.delete();
     }
 
@@ -206,8 +206,8 @@ export class @@igxNameRowDragComponent {
     @ViewChild("targetGrid", { read: IgxGridComponent }) public targetGrid: IgxGridComponent;
     ... 
     public onDropAllowed(args) {
-        this.targetGrid.addRow(args.dragData.rowData);
-        this.sourceGrid.deleteRow(args.dragData.rowID);
+        this.targetGrid.addRow(args.dragData.data);
+        this.sourceGrid.deleteRow(args.dragData.key);
     }
     ...
 }
@@ -219,7 +219,7 @@ export class @@igxNameRowDragComponent {
 }
 
 > [!NOTE]
-> イベント引数 (`args.dragData.rowData`) または他の行プロパティからの行データを使用する場合、行全体が参照として引数に渡されることに注意してください。つまり、ソースグリッドのデータと区別する必要がある場合は、必要なデータを複製する必要があります。
+> イベント引数 (`args.dragData.data`) または他の行プロパティからの行データを使用する場合、行全体が参照として引数に渡されることに注意してください。つまり、ソースグリッドのデータと区別する必要がある場合は、必要なデータを複製する必要があります。
 
 #### ドラッグ ゴーストのテンプレート化
 ドラッグゴーストは、`@@igSelector` の本文内の `<ng-template>` に適用される `IgxRowDragGhost` ディレクティブを使用してテンプレート化できます。

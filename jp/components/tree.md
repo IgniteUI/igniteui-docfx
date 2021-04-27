@@ -12,7 +12,7 @@ Angular Tree コンポーネントを使用すると、ユーザーはツリー�
 ## Angular Tree の例
 この基本的な Angular Tree の例では、ノード階層を指定し、階層データセットを反復処理することにより、`igx-tree` とそのノードを定義する方法を確認できます。
 
-<code-view style="height: 513px" 
+<code-view style="height: 400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/lists/tree-basic-sample" alt="Angular Tree の例">
 </code-view>
@@ -252,7 +252,7 @@ IgxTree ナビゲーションは、W3C アクセシビリティ標準に準拠�
 
 Ignite UI for Angular IgxTree は、サーバーから最小限のデータのみ取得して描画されるため、ユーザーにすばやくデータを表示できます。この動的データ読み込みアプローチでは、ユーザーがノードを展開した後にのみ、その特定の親ノードの子が取得されます。このメカニズムは、ロードオンデマンドであらゆるリモートデータとの設定が簡単にできます。
 ### デモ
-<code-view style="height: 513px" 
+<code-view style="height: 400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/lists/tree-advanced-sample" alt="Tree ロードオンデマンドの例">
 </code-view>
