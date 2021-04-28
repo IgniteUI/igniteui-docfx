@@ -142,11 +142,19 @@ The `igx-paginator` component is used along with the `igx-grid` component in the
 
 ### Paginator Component Demo
 
+@@if (igxName === 'IgxGrid') {
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/grid/grid-pager-sample" >
 </code-view>
+}
 
+@@if (igxName === 'IgxTreeGrid') {
+<code-view style="height:600px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-reusable-paginator" >
+</code-view>
+}
 
 <div class="divider--half"></div>
 
