@@ -125,6 +125,8 @@ The `igx-paginator` exposes a couple of input and output properties that enable 
 | perPageChange   |  the event is emitted when the number items per page is changed. |
 
 ### Usage
+
+@@if (igxName === 'IgxGrid') {
 The `igx-paginator` component is used along with the `igx-grid` component in the example below, but you can use it with any other component in case paging functionality is needed.
 
 ```html
@@ -139,6 +141,25 @@ The `igx-paginator` component is used along with the `igx-grid` component in the
     </igx-paginator>
 </ng-template>
 ```
+}
+
+
+@@if (igxName === 'IgxTreeGrid') {
+The `igx-paginator` component is used along with the `igx-tree-grid` component in the example below, but you can use it with any other component in case paging functionality is needed.
+
+```html
+<igx-tree-grid #treegrid [data]="data" [paging]="true" [perPage]="10" [paginationTemplate]="pager">
+...
+</igx-tree-grid>
+
+<ng-template #pager>
+    <igx-paginator #paginator [(page)]="treegrid.page" [totalRecords]="treegrid.totalRecords" [(perPage)]="treegrid.perPage"
+            [dropdownHidden]="isDropdownHidden" [pagerHidden]="isPagerHidden"
+            [selectOptions]="selectOptions" [displayDensity]="treegrid.displayDensity">
+    </igx-paginator>
+</ng-template>
+```
+}
 
 ### Paginator Component Demo
 
