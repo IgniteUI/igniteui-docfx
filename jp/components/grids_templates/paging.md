@@ -127,6 +127,8 @@ this.@@igObjectRef.totalRecords = 30;
 | perPageChange   |  イベントは、ページごとの項目数が変更されたときに発生されます。 |
 
 ### 使用方法
+
+@@if (igxName === 'IgxGrid') {
 以下の例では、`igx-paginator` コンポーネントは `igx-grid` コンポーネントとともに使用されますが、ページング機能が必要な場合は、他のコンポーネントとともに使用できます。
 
 ```html
@@ -141,14 +143,41 @@ this.@@igObjectRef.totalRecords = 30;
     </igx-paginator>
 </ng-template>
 ```
+}
+
+
+@@if (igxName === 'IgxTreeGrid') {
+以下の例では、`igx-paginator` コンポーネントは `igx-tree-grid` コンポーネントとともに使用されますが、ページング機能が必要な場合は、他のコンポーネントとともに使用できます。
+
+```html
+<igx-tree-grid #treegrid [data]="data" [paging]="true" [perPage]="10" [paginationTemplate]="pager">
+...
+</igx-tree-grid>
+
+<ng-template #pager>
+    <igx-paginator #paginator [(page)]="treegrid.page" [totalRecords]="treegrid.totalRecords" [(perPage)]="treegrid.perPage"
+            [dropdownHidden]="isDropdownHidden" [pagerHidden]="isPagerHidden"
+            [selectOptions]="selectOptions" [displayDensity]="treegrid.displayDensity">
+    </igx-paginator>
+</ng-template>
+```
+}
 
 ### ページネータ コンポネント デモ
 
+@@if (igxName === 'IgxGrid') {
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/grid/grid-pager-sample" >
 </code-view>
+}
 
+@@if (igxName === 'IgxTreeGrid') {
+<code-view style="height:600px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-reusable-paginator" >
+</code-view>
+}
 
 <div class="divider--half"></div>
 
