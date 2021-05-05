@@ -145,7 +145,6 @@ this.@@igObjectRef.totalRecords = 30;
 ```
 }
 
-
 @@if (igxName === 'IgxTreeGrid') {
 以下の例では、`igx-paginator` コンポーネントは `igx-tree-grid` コンポーネントとともに使用されますが、ページング機能が必要な場合は、他のコンポーネントとともに使用できます。
 
@@ -158,6 +157,23 @@ this.@@igObjectRef.totalRecords = 30;
     <igx-paginator #paginator [(page)]="treegrid.page" [totalRecords]="treegrid.totalRecords" [(perPage)]="treegrid.perPage"
             [dropdownHidden]="isDropdownHidden" [pagerHidden]="isPagerHidden"
             [selectOptions]="selectOptions" [displayDensity]="treegrid.displayDensity">
+    </igx-paginator>
+</ng-template>
+```
+}
+
+@@if (igxName === 'IgxHierarchicalGrid') {
+以下の例では、`igx-paginator` コンポーネントは `igx-grid` コンポーネントとともに使用されますが、ページング機能が必要な場合は、他のコンポーネントとともに使用できます。
+
+```html
+<igx-hierarchical-grid #hGrid [data]="data" [paging]="true" [perPage]="10" [paginationTemplate]="pager">
+...
+</igx-hierarchical-grid>
+
+<ng-template #pager>
+    <igx-paginator #paginator [(page)]="hGrid.page" [totalRecords]="hGrid.totalRecords" [(perPage)]="hGrid.perPage"
+            [dropdownHidden]="isDropdownHidden" [pagerHidden]="isPagerHidden"
+            [selectOptions]="selectOptions" [displayDensity]="hGrid.displayDensity">
     </igx-paginator>
 </ng-template>
 ```
@@ -176,6 +192,13 @@ this.@@igObjectRef.totalRecords = 30;
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-reusable-paginator" >
+</code-view>
+}
+
+@@if (igxName === 'IgxHierarchicalGrid') {
+<code-view style="height:600px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-reusable-paginator" >
 </code-view>
 }
 
