@@ -245,6 +245,10 @@ grid.getRowByIndex(0).expanded = false;
 * *ng update* will migrate most of the uses of *IgxGridRowComponent*, *IgxTreeGridRowComponent*, *IgxHierarchicalRowComponent*, *IgxGridGroupByRowComponent* , like imports, typings and casts. If a place in your code using any of the above is not migrated, just remove the typing/cast, or change it with [`RowType`]({environment:angularApiUrl}/interfaces/rowtype.html).
 * *getRowByIndex* will now return a [`RowType`]({environment:angularApiUrl}/interfaces/rowtype.html) object, if the row at that index is a summary row (previously used to returned *undefined*). *row.isSummaryRow* and *row.isGroupByRow* return true if the row at the index is a summary row or a group by row.
 
+### IgxDateTimeDirective, IgxDatePickerComponent, IgxTimePickerComponent, IgxDateRangePickerComponent
+
+* The `value` property for IgxDateTimeDirective, IgxDatePickerComponent, IgxTimePickerComponent, IgxDateRangePickerComponent now accepts ISO 8601 string format. This means that `value` type could be `Date` or `string`.
+* The `inputFormat` property of IgxDateTimeDirective, IgxDatePickerComponent, IgxTimePickerComponent, IgxDateRangePickerComponent now doesn't accept `y` for the year part. You should update it to `yy`.
 
 ## From 10.2.x to 11.0.x
 * IgxGrid, IgxTreeGrid, IgxHierarchicalGrid

@@ -17,6 +17,25 @@ _keywords: angular date picker, angular component, ignite ui for angular
 <div class="divider--half"></div>
 
 ## Usage
+### Binding
+Note ### Binding to ISO string
+
+### Templating/Projecting components - sample 8
+
+### Keyboard Navigation
+    
+## Examples
+### Dialog Mode - sample
+### Display and input format - snippet + locale
+### Increment and decrement (delta) - point to DateTimeEditor
+### In Angular Forms - point to Reactive Forms Integration sample
+    #### Min max value
+### Calendar Specific settings - calendar topic reference and API reference
+## Styling - datepicker-styling-sample/timepicker-styling.component
+
+## API References
+
+## Additional Resources
 
 ### First Steps
 To get started with the Date Picker component, first you need to import the `IgxDatePickerModule` in our **app.module.ts** file. 

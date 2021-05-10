@@ -58,6 +58,10 @@ To create a two-way data-binding, set an ngModel:
 ```
 <div class="divider--half"></div>
 
+#### Binding to ISO string
+
+description + snippet
+
 
 ### Keyboard Navigation
 Date Time Editor Directive has intuitive keyboard navigation that makes it easy to increment, decrement, or jump through different DateParts among others without having to touch the mouse.
@@ -105,6 +109,9 @@ public maxDate = new Date(2020, 11, 1);
 In the first scenario, if no specific DatePart is passed to the method, a default DatePart will increment or decrement, based on the specified `inputFormat` and the internal directive implementation.
 In the second scenario, you can explicitly specify what DatePart to manipulate as it may suite different requirements.
 You may compare both in the following sample:
+
+
+#### Spin Delta
 
 <code-view style="height:150px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
