@@ -35,7 +35,6 @@ import { IgxDateTimeEditorModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-
 To use an input as a date time editor, set an igxDateTimeEditor directive and a valid date object as value. In order to have complete editor look and feel, wrap the input in an [input group](input-group.md). This will allow you to not only take advantage of the following directives [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html), [`igxLabel`]({environment:angularApiUrl}/classes/igxlabeldirective.html), `igx-prefix`, `igx-suffix`, [`igx-hint`]({environment:angularApiUrl}/classes/igxhintdirective.html), but will cover common scenarios when dealing with form inputs as well.
 
 ### Binding 
@@ -58,10 +57,21 @@ To create a two-way data-binding, set an ngModel:
 ```
 <div class="divider--half"></div>
 
-#### Binding to ISO string
+#### <a name="iso">Binding to ISO strings</a>
+The `IgxDateTimeEditorDirective` accepts an [`ISO 8601`](https://tc39.es/ecma262/#sec-date-time-string-format) strings.
 
-description + snippet
+The string can be a full `ISO` string, in the format `YYYY-MM-DDTHH:mm:ss.sssZ` or it could be separated into date-only and time-only portions.
 
+##### Date-only
+If a date-only string is bound to the directive, it needs to follow the format - `YYYY-MM-DD`. This applies only when binding a string value to the directive, the `inputFormat` is still used when typing values in the editor and it does not have to be in the same format. Additionally, when binding a date-only string, the directive will prevent time shifts by coercing the time to be `T00:00:00`.
+
+##### Time-only
+Time-only strings are normally not defined in the `ECMA` specification, however to allow the directive to be integrated in scenarios which require time-only solutions, it supports the 24 hour format - `HH:mm:ss`. The 12 hour format is not supported. Please also note that this applies for _bound values only_.
+
+##### Full ISO string
+If a full `ISO` string is bound, the directive will parse it only if all elements required by [`Date.parse`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/parse#date_time_string_format) are provided.
+
+All falsy values, including `InvalidDate` will be parsed as `null`. Incomplete date-only, time-only, or full `ISO` strings will be parsed as `InvalidDate`.
 
 ### Keyboard Navigation
 Date Time Editor Directive has intuitive keyboard navigation that makes it easy to increment, decrement, or jump through different DateParts among others without having to touch the mouse.
@@ -72,22 +82,40 @@ Date Time Editor Directive has intuitive keyboard navigation that makes it easy 
 
 - <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>;</kbd> - set the current day and time in the editor.
 
-
 ## Examples
 
 ### Display and input format
-IgxDateTimeEditor supports different display and input formats.
+The `IgxDateTimeEditor` supports different display and input formats.
 
-It uses Angular's [DatePipe](https://angular.io/api/common/DatePipe), which allows it to support predefined format options, such as `shortDate` and `longDate`. It can also accept a constructed format string using characters supported by the DatePipe, e.g. `EE/MM/yyyy`. Notice that formats like shortDate, longDate, etc., can be used as `displayFormat` only.
+It uses Angular's [`DatePipe`](https://angular.io/api/common/DatePipe), which allows it to support predefined format options, such as `shortDate` and `longDate`. It can also accept a constructed format string using characters supported by the `DatePipe`, e.g. `EE/MM/yyyy`. Notice that formats like `shortDate`, `longDate`, etc., can be used as `displayFormat` only. Also, if no `displayFormat` is provided, the editor will use the `inputFormat` as its `displayFormat`.
 
-To set a specific input format, pass it as a string to the IgxDateTimeEditor directive. This will set both the expected user input format and the [mask](mask.md) for the editor.
-
+To set a specific input format, pass it as a string to the IgxDateTimeEditor directive. This will set both the expected user input format and the [mask](mask.md) for the editor. Additionally, the `inputFormat` is locale based, so if none is provided, the editor will default to the one used by the browser.
 
 ```html
 <igx-input-group>
     <input type="text" igxInput [displayFormat]="'shortDate'" [igxDateTimeEditor]="'dd/MM/yyyy'" [(ngModel)]="date"/>
 </igx-input-group>
 ```
+
+The table bellow shows formats that are supported by the directive's `inputFormat`:
+| Format | Description |
+|:-------:|:-----------|
+| `d` | Date, will be coerced with a leading zero while editing. |
+| `dd` | Date with an explicitly set leading zero. |
+| `M` | Month, will be coerced with a leading zero while editing. |
+| `MM` | Month with an explicitly set leading zero. |
+| `yy` | Short year format. |
+| `yyyy` | Full year format. |
+| `h` | Hours in 12-hour format, will be coerced with a leading zero while editing. |
+| `hh` | Hours in 12-hour format with an explicitly set leading zero. |
+| `H` | Hours in 24-hour format, will be coerced with a leading zero while editing. |
+| `HH` | Hours in 24-hour format, with an explicitly set leading zero. |
+| `m` | Minutes, will be coerced with a leading zero while editing. |
+| `mm` | Minutes with an explicitly set leading zero. |
+| `tt` | AM/PM section for 12-hour format. |
+
+> [!NOTE]
+> Single digit **y** format for year is not supported.
 
 ### Min max value
 You can specify [`minValue`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#minvalue) and [`maxValue`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#maxvalue) properties to restrict input and control the validity of the ngModel.
@@ -102,17 +130,15 @@ public maxDate = new Date(2020, 11, 1);
 </igx-input-group>
 
 ```
+The `minValue` and `maxValue` inputs can also be of type `string`, see [Binding to ISO strings](#iso).
 
-### Increment and decrement
+### <a name="increment-decrement">Increment and decrement </a>
 `igxDateTimeEditor` directive exposes public `increment` and `decrement` methods. They increment or decrement a specific `DatePart` of the currently set date and time and can be used in a couple of ways.
 
-In the first scenario, if no specific DatePart is passed to the method, a default DatePart will increment or decrement, based on the specified `inputFormat` and the internal directive implementation.
-In the second scenario, you can explicitly specify what DatePart to manipulate as it may suite different requirements.
+In the first scenario, if no specific `DatePart` is passed to the method, a default `DatePart` will increment or decrement, based on the specified `inputFormat` and the internal directive implementation. In the second scenario, you can explicitly specify what `DatePart` to manipulate as it may suite different requirements.
+Also, both methods accept an optional `delta` parameter of type `number` which can be used to set the increment/decrement step.
+
 You may compare both in the following sample:
-
-
-#### Spin Delta
-
 <code-view style="height:150px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/scheduling/datetime-advanced" >
@@ -120,9 +146,10 @@ You may compare both in the following sample:
 
 <div class="divider--half"></div>
 
+Additionally, `spinDelta` is an input property of type [`DatePartDeltas`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html) and it can be used to apply a different delta to each date time segment. It will be applied when spinning with the keyboard, as well as when spinning with the `increment` and `decrement` methods, as long as they don't have the `delta` parameter provided since it will take precedence over `spinDelta`.
 
 ### In Angular Forms
-The Date Time Editor Directive supports all of the form directives from the core FormsModule [NgModel](https://angular.io/api/forms/NgModel) and [ReactiveFormsModule](https://angular.io/api/forms/ReactiveFormsModule) (FormControl, FormGroup, etc.). This also includes the [Forms Validators](https://angular.io/api/forms/Validators) functions. The following example illustrates the use of the `required` validator in a Template-driven Form.
+The Date Time Editor Directive supports all of the form directives from the core FormsModule [`NgModel`](https://angular.io/api/forms/NgModel) and [`ReactiveFormsModule`](https://angular.io/api/forms/ReactiveFormsModule) (FormControl, FormGroup, etc.). This also includes the [Forms `Validators`](https://angular.io/api/forms/Validators) functions. The following example illustrates the use of the `required` validator in a Template-driven Form.
 
 > Note: If needed, you can revert back to a valid state by handling the `validationFailed` event and changing the `newValue` property of the available arguments.
 
