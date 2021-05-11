@@ -245,6 +245,25 @@ grid.getRowByIndex(0).expanded = false;
 * *ng update* will migrate most of the uses of *IgxGridRowComponent*, *IgxTreeGridRowComponent*, *IgxHierarchicalRowComponent*, *IgxGridGroupByRowComponent* , like imports, typings and casts. If a place in your code using any of the above is not migrated, just remove the typing/cast, or change it with [`RowType`]({environment:angularApiUrl}/interfaces/rowtype.html).
 * *getRowByIndex* will now return a [`RowType`]({environment:angularApiUrl}/interfaces/rowtype.html) object, if the row at that index is a summary row (previously used to returned *undefined*). *row.isSummaryRow* and *row.isGroupByRow* return true if the row at the index is a summary row or a group by row.
 
+### IgxInputGroupComponent
+* `disabled` property has been removed. The property was misleading, as the state of the input group was always managed by the underlying `igxInput`.
+* Running `ng update` will handle all instances in which `[disabled]` was used as an `@Input` in templates.
+* If you are referencing the property in a `.ts` file:
+```typescript
+export class CustomComponent {
+    public inputGroup: IgxInputGroupComponent
+    ...
+    this.inputGroup.disabled = false;
+}
+```
+please manually update your code to reference the underlying input directive's `disabled` property:
+```typescript
+export class CustomComponent {
+    public input: IgxInputDirective
+    ...
+    this.input.disabled = false;
+}
+```
 
 ## From 10.2.x to 11.0.x
 * IgxGrid, IgxTreeGrid, IgxHierarchicalGrid
