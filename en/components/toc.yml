@@ -1304,6 +1304,7 @@
 - name: Date Time Editor
   href: date-time-editor.md
   new: false
+  updated: true
 - name: Calendar
   href: calendar.md
   updated: true
@@ -1313,6 +1314,7 @@
 - name: Date Range Picker
   href: date-range-picker.md
   new: false
+  updated: true
 - name: Month Picker
   href: month-picker.md
   new: false
