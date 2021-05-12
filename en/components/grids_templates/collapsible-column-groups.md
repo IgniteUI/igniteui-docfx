@@ -51,14 +51,14 @@ Multi-column headers allow you to have multiple levels of nested columns and col
 
 ## Setup
 
-To get started with the @@if (igxName === 'IgxGrid') {`IgxGrid`} @@if (igxName === 'IgxTreeGrid') {`IgxTreeGrid`} @@if (igxName === 'IgxHierarchicalGrid') {`IgxHierarchicalGrid`} and the **Collapsible multi-column headers** , first you need to install Ignite UI for Angular by typing the following command:
+To get started with the @@igxName and the **Collapsible multi-column headers** , first you need to install Ignite UI for Angular by typing the following command:
 
 ```cmd
 ng add igniteui-angular
 ```
 For a complete introduction to the Ignite UI for Angular, read the [*getting started*](../general/getting-started.md) topic.
 
-The next step is to import the @@if (igxName === 'IgxGrid') {`IgxGridModule`} @@if (igxName === 'IgxTreeGrid') {`IgxTreeGridModule`} @@if (igxName === 'IgxHierarchicalGrid') {`IgxHierarchicalGridModule`} in the app.module.ts file. Also, we strongly suggest that you take a brief look at [*multi-column groups*](./multi-column-headers.md) topic, to see more detailed information on how to setup the column groups in your grid.
+The next step is to import the `@@igxNameModule` in the app.module.ts file. Also, we strongly suggest that you take a brief look at [*multi-column groups*](./multi-column-headers.md) topic, to see more detailed information on how to setup the column groups in your grid.
 
 ## Usage
 
@@ -104,7 +104,7 @@ Default collapse indicator for the igxGrid is the following:
 
 <img class="responsive-img" src="../../images/general/collapsed_indicator.png" style="width: 400px; height: 130px"/>
 
-Also, if you need to change the default expand/collapse , we provide two easy ways to do so - via an input property and via a directive.
+Also, if you need to change the default expand/collapse indicator, we provide two easy ways to do so - via an input property or through a directive.
 ### Using an input property
 
 You can define custom expand/collapse template and provide it to each of the collapsible column groups using **collapsibleIndicatorTemplate** input property. Check the markup below:
@@ -156,7 +156,7 @@ Another way to achieve this behavior is to use the igxCollapsibleIndicator direc
 ## Additional Resources
 <div class="divider--half"></div>
 
-* @@if(igxName ==='IgxGrid') {[Grid overview](grid.md)} @@if(igxName ==='IgxTreeGrid') {[Tree Grid overview](tree-grid.md)} @@if(igxName ==='IgxHierarchicalGrid') {[Hierarchical Grid overview](hierarchical-grid.md)}
+* [@@igComponent overview](@@igMainTopic.md)
 * [Virtualization and Performance](virtualization.md)
 * [Paging](paging.md)
 * [Filtering](filtering.md)
