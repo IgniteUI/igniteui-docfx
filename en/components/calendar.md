@@ -220,7 +220,7 @@ The following demo illustrates a calendar with a vacation request option:
 </code-view>
 
 
-### <a name="week-numbers">Week numbers</a>
+### Week numbers
 
 You can now use [`showWeekNumbers`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#showWeekNumbers) input to show the week numbers for both Calendar and DatePicker components.
 
@@ -360,7 +360,7 @@ When an `year` inside the decade view is focused, use:
 >[!NOTE]
 >Following version 8.2.0, keyboard navigation will not focus days that are outside of current month, but will rather change the month in view.
 
-## <a=name="multi-view"> Multi View Calendar </a>
+## Multi View Calendar>
 Multiview calendar supports all three types of selection. Use the [`monthsViewNumber`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#monthsviewnumber) input to set the number of displayed months, which will be shown horizontally in a flex container. There is no limit on the max value set. While using a multi view calendar, you may want to hide the days that do not belong to the current month. You are able to do it with the [`hideOutsideDays`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#hideoutsidedays) property.  Keyboard navigation moves to next/previous months when those are in view.
 
 
