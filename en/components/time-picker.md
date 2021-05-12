@@ -59,22 +59,41 @@ The time picker can be bound to either a Date object or time-only string value i
 First create a time string in `ISO 8601` format:
 
 ```typescript
-public time = '09:15:30 AM';
+public time = '09:15:30';
 ```
 
-Then use the [`value`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#value) input in the template:
-
-```html
-<igx-time-picker [value]="time"></igx-time-picker>
-```
-
-or set `ngModel` to create a two-way data-binding:
+Then use the  `ngModel` to create a two-way data-binding:
 
 ```html
 <igx-time-picker [(ngModel)]="time"></igx-time-picker>
 ```
 
-### Templating/Projecting components
+or set [`value`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#value) input in the template:
+
+```html
+<igx-time-picker [value]="time"></igx-time-picker>
+```
+
+To use it in a reactive form you need to set a `formControlName` on the picker
+```html
+<form [formGroup]="form">
+    <igx-time-picker formControlName="timePicker"></igx-time-picker>
+</form>
+```
+
+```typescript
+export class SampleFormComponent {
+    // ...
+    public form: FormGroup;
+    constructor(private fb: FormBuilder) {
+        this.form = this.fb.group({
+            timePicker: ['', Validators.required]
+        });
+    }
+}
+```
+
+### Projecting components
 The time picker component allows projecting child components - the same as in the [`IgxInputGroupComponent`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html): [`igxLabel`](label-input.md), [`IgxHint`](input-group.md#hints), [`igxPrefix`](input-group.md#prefix--suffix), [`igxSuffix`](input-group.md#prefix--suffix), excluding [`IgxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html). More detailed information about this can be found in the [Label & Input](label-input.md) topic.
 
 In the default configuration, a dropdown/dialog toggle icon is shown as a prefix. It can be changed or redefined using the [`IgxPickerToggleComponent`]({environment:angularApiUrl}/classes/igxpickertogglecomponent.html) component. It can be decorated with either [`igxPrefix`](input-group.md#prefix--suffix) or [`igxSuffix`](input-group.md#prefix--suffix), which will define its position - at the start of the input or at the end respectively. 
@@ -101,7 +120,7 @@ And here's our templated time picker:
            iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-5" >
 </code-view>
 
-## Custom button action
+## Custom action buttons
 The [`IgxTimePickerComponent`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html) supports action button customization. To achieve that, wrap the buttons in `ng-template` marked with the `igxTimePickerActions` directive selector.
 
 In the example below, custom action buttons are added for 'CANCEL', 'DONE' and 'NOW' actions.
