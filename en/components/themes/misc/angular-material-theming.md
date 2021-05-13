@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 # Angular Material Theming
-<p class="highlight">The Ignite UI for Angular theming engine makes it easy to be used together with external components imported from other theming libraries like the [`Angular Material`](https://material.angular.io/).</p>
+<p class="highlight">The Ignite UI for Angular theming engine makes it easy to be used together with external components imported from other theming libraries like the [`Angular Material`](https://material.angular.io/) library.</p>
 <div class="divider--half"></div>
 
 ## Ignite UI and Angular Material Overview
@@ -132,7 +132,7 @@ $mat-purple: (
 
 ### Generating Theme Palettes
 
-To define a theme palete, we will have to use their `mat-palette` function which generates a map of hues to colors. In our sample, we want to style Angular Material components with Ignite UI theme therefore we need to trasform our `light-material-palette` according to their structure. 
+To define a theme palete, we will have to use material `mat-palette` function which generates a map of hues to colors. In our sample, we want to style Angular Material components with Ignite UI theme therefore we need to transform our `$light-material-palette` according to their structure. 
 
 To achieve this, we are going to create a Sass function with parameters for `$color`, `$saturations` and `$palette` that returns a map of all color variants followed by the contrast colors. The saturations we are using follow the [`Material Design color system`](https://material.io/design/color/the-color-system.html).
 
@@ -148,8 +148,12 @@ $saturations: (50, 100, 200, 300, 400, 500, 600, 700, 800, 900, A100, A200, A400
     $contrast: ();
     $result: ();
     @each $saturation in $saturations {
-        $shade: map-merge($shade, ($saturation: igx-color($palette, $color, $saturation)));
-        $contrast: map-merge($contrast, ($saturation: igx-color($palette, $color, #{$saturation}-contrast)));
+        $shade: map-merge($shade, (
+            $saturation: igx-color($palette, $color, $saturation)
+        ));
+        $contrast: map-merge($contrast, (
+            $saturation: igx-color($palette, $color, #{$saturation}-contrast)
+        ));
         $result: map-merge($shade, (contrast: $contrast));
     }
 
@@ -175,7 +179,7 @@ $light-palette-accent: mat-palette(
 );
 ```
 
-Finally, we are ready to pass the two color palettes to the `mat-light-theme` function which will create an Angular Material theme with colors taken from the Ignite UI color palette:
+Finally, we are ready to pass the two color palettes to the `mat-light-theme` function which will create an Angular Material theme with colors taken from the Ignite UI material color palette:
 
 ```scss
 $custom-mat-light-theme: mat-light-theme(
@@ -288,7 +292,7 @@ $custom-typography: mat-typography-config(
 );
 ```
 
-Then, the typography config have to be passed either to the `mat-core` mixin:
+Then, the typography config has to be passed either to the `mat-core` mixin:
 
 ```scss
 ::ng-deep {
