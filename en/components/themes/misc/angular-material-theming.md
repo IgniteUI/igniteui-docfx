@@ -161,7 +161,7 @@ $saturations: (50, 100, 200, 300, 400, 500, 600, 700, 800, 900, A100, A200, A400
 }
 ```
 
-#### Light Mode
+#### Light Theme Palette
 
 We will define a light primary material theme palette using the `primary` color of the Ignite UI `$igx-light-palette` and our newly created `material-like-palette` function. The result has to be passed as a parameter to the `mat-palette` function which will generate color values for the `default`, `lighter`, `darker` and `text` shades and add them to the palette map:
 
@@ -191,7 +191,7 @@ $custom-mat-light-theme: mat-light-theme(
 >[!NOTE]
 >Visit our [`palettes with Sass`](../sass/palettes.md) section to discover more about the palettes provided by Ignite UI for Angular and learn how to create a new one.
 
-#### Dark Mode
+#### Dark Theme Palette
 
 Following the previous approach, we are going to create material palettes for the dark mode. This time, we are also going to define a custom `igx-palette`: 
 
@@ -246,6 +246,71 @@ For the Angular Material components, we need to include their `mat-core` mixin a
 >[!WARNING]
 >Be sure to place the above code inside the `::ng-deep` selector to `penetrate` the [`Emulated`](../sass/component-themes.md#view-encapsulation) ViewEncapsulation.
 
+#### Light Mode
+
+Once we are done configuring color palettes and themes, we can make some additional color changes to our components. The background color for our application needs to be set explicitly on the host element. In our sample, we want to use the `surface` color of the passed palette. The logo is an SVG image hence we can easily change its color using the CSS:
+
+```scss
+:host {
+    &.light {
+        // The background color of the application in light mode
+        background: igx-color($igx-light-palette, 'surface');
+
+        // The application logo fill color
+        #Path1 {
+            fill: igx-color($igx-light-palette, 'secondary');
+        }
+
+        // The application logo stroke color
+        #Path2 {
+            stroke: igx-color($igx-light-palette, 'secondary');
+            stroke-width: "0.8";
+        }
+    }
+}
+```
+
+#### Dark Mode
+
+For our dark variant, we are going to apply the same CSS styles but using the `$custom-dark-palette`. Also, we will change some of the colors of the `mat-stepper` and `mat-slider` components so that they can fit better in our app: 
+
+```scss
+:host {
+    &.dark {
+        // The background color of the application in dark mode
+        background: igx-color($custom-dark-palette, 'surface');
+
+        // The application logo fill color
+        #Path1 {
+            fill: igx-color($custom-dark-palette, 'secondary');
+        }
+
+        // The application logo stroke color
+        #Path2 {
+            stroke: igx-color($custom-dark-palette, 'secondary');
+            stroke-width: "0.8";
+        }
+
+        ::ng-deep {
+            // The background of the selected step icon inside the material stepper
+            .mat-step-header .mat-step-icon-selected {
+                background-color: igx-color($custom-dark-palette, 'secondary');
+            }
+
+            // The background of the material slider thumb and track
+            .mat-accent .mat-slider-thumb,
+            .mat-accent .mat-slider-track-fill {
+                background-color: igx-color($custom-dark-palette, 'primary', 100);
+            }
+
+            // The background of the material stepper
+            .mat-stepper-horizontal {
+                background: igx-color($custom-dark-palette, 'surface');
+            }
+        }
+    }
+}
+```
 
 ### Generate class
 
