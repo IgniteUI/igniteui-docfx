@@ -35,7 +35,7 @@ import { IgxDateTimeEditorModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-To use an input as a date time editor, set an igxDateTimeEditor directive and a valid date object as value. In order to have complete editor look and feel, wrap the input in an [input group](input-group.md). This will allow you to not only take advantage of the following directives [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html), [`igxLabel`]({environment:angularApiUrl}/classes/igxlabeldirective.html), `igx-prefix`, `igx-suffix`, [`igx-hint`]({environment:angularApiUrl}/classes/igxhintdirective.html), but will cover common scenarios when dealing with form inputs as well.
+To use an input as a date time editor, set an igxDateTimeEditor directive and a valid date object as value. In order to have complete editor look and feel, wrap the input in an [input group](input-group.md). This will allow you to not only take advantage of the following directives [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html), [`igxLabel`]({environment:angularApiUrl}/classes/igxlabeldirective.html), [`igxPrefix`](input-group.md#prefix--suffix), [`igxSuffix`](input-group.md#prefix--suffix), [`igx-hint`]({environment:angularApiUrl}/classes/igxhintdirective.html), but will cover common scenarios when dealing with form inputs as well.
 
 ### Binding 
 A basic configuration scenario setting a Date object as a [`value`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#value):
@@ -49,7 +49,7 @@ public date = new Date();
 </igx-input-group>
 ```
 
-To create a two-way data-binding, set an ngModel:
+To create a two-way data-binding, set an `ngModel`:
 ```html
 <igx-input-group>
     <input type="text" igxInput igxDateTimeEditor [(ngModel)]="date"/>
@@ -78,7 +78,7 @@ Date Time Editor Directive has intuitive keyboard navigation that makes it easy 
 
 - <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>Arrow Left</kbd> / <kbd>Right</kbd> - navigates between date sections. On <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>Right</kbd> it goes to the end of the section. If already there it goes to the end of next section if any. It works in a similar fashion in the opposite direction.
 
-- <kbd>Arrow Up</kbd> / <kbd>Down</kbd> - increment/decrement date portions. See related [`isSpinLoop`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#isspinloop)
+- <kbd>Arrow Up</kbd> / <kbd>Down</kbd> - increment/decrement date portions. See related [`spinLoop`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#spinloop)
 
 - <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>;</kbd> - set the current day and time in the editor.
 
@@ -162,7 +162,7 @@ Template-driven form example:
 ```
 
 ### Text Selection
-You can force the component to select all of the input text on focus using [`igxTextSelection`]({environment:angularApiUrl}/classes/igxtextselectiondirective.html). Find more info on `igxTextSelection`]({environment:angularApiUrl}/classes/igxtextselectiondirective.html) at [Label & Input](label-input.md#focus--text-selection).
+You can force the component to select all of the input text on focus using [`igxTextSelection`]({environment:angularApiUrl}/classes/igxtextselectiondirective.html). Find more info on [`igxTextSelection`]({environment:angularApiUrl}/classes/igxtextselectiondirective.html) at [Label & Input](label-input.md#focus--text-selection).
 
 ```html
 <igx-input-group>
@@ -170,7 +170,7 @@ You can force the component to select all of the input text on focus using [`igx
 </igx-input-group>
 ```
 
-> NOTE: In order for the component to work properly, it is crucial to set `igxTextSelection`]({environment:angularApiUrl}/classes/igxtextselectiondirective.html) after the [`igxDateTimeEditor`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html) directive. The reason for this is both directives operate on the input `focus` event so text selection should happen after the mask is set.
+> NOTE: In order for the component to work properly, it is crucial to set [`igxTextSelection`]({environment:angularApiUrl}/classes/igxtextselectiondirective.html) after the [`igxDateTimeEditor`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html) directive. The reason for this is both directives operate on the input `focus` event so text selection should happen after the mask is set.
 
 ## Styling 
 For details check out the [`Input Group styling guide`](input-group.md#styling).
