@@ -160,7 +160,7 @@ Since the [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdate
 ## Examples
 
 ### Dialog Mode
-The [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html)` also supports a `dialog` mode:
+The [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) also supports a `dialog` mode:
 ```html
 <igx-date-picker [mode]="'dropdown'"></igx-date-picker>
 ```
