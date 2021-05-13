@@ -264,6 +264,7 @@ grid.getRowByIndex(0).expanded = false;
         this.input.disabled = false;
     }
     ```
+
 ### IgxDateTimeDirective, IgxDatePickerComponent, IgxTimePickerComponent, IgxDateRangePickerComponent
 
 * The `value` property for IgxDateTimeDirective, IgxDatePickerComponent, IgxTimePickerComponent, IgxDateRangePickerComponent now accepts ISO 8601 string format. This means that `value` type could be `Date` or `string`.
