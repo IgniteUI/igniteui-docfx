@@ -225,7 +225,7 @@ public noopSortStrategy = NoopSortingStrategy.instance();
 
 ### Remote Sorting/Filtering Demo
 
-You can see the result of the code from above at the beginning of this article in the first example.
+You can see the result of the code from above at the beginning of this article in the [Demo](#angular-grid-remote-data-operations-overview-example) section.
 }
 @@if (igxName === 'IgxTreeGrid') {
 ### Remote Filtering
@@ -287,7 +287,7 @@ The remote filtering will have to be performed over the flat collection directly
 
 ### Remote Filtering Demo
 
-You can see the result of the code from above at the beginning of this article in the [Demo](#angular-grid-remote-data-operations-overview-example) section.
+You can see the result of the code from above at the beginning of this article in the [Demo](#angular-tree-grid-remote-data-operations-overview-example) section.
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
  <!-- TODO -->
