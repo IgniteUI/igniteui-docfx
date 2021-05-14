@@ -1,6 +1,6 @@
 ---
 title: Angular Material Theming
-_description: 
+_description: The Ignite UI for Angular theming engine makes it easy to be used together with external components imported from other theming libraries like the Angular Material library.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, theming, Angular Material, Material components
 ---
 
