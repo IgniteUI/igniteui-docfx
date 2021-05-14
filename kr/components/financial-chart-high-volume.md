@@ -7,19 +7,16 @@ _language: kr
 
 # Angular 대용량 데이터
 
-`XamFinancialChart` 제어는 대량의 데이터를 처리할 수 있습니다. 다음 데모는 20년간의 데이터를 바인딩하고 선형 차트를 사용하여 1시간 간격으로 주가를 표시합니다.
+[`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html) 제어는 대량의 데이터를 처리할 수 있습니다. 다음 데모는 20년간의 데이터를 바인딩하고 선형 차트를 사용하여 1시간 간격으로 주가를 표시합니다.
 
 ## 데모
 
-<div class="sample-container loading" style="height: 500px">
-    <iframe id="financial-chart-high-volume-iframe" src='{environment:dvDemosBaseUrl}/charts/financial-chart-high-volume' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-high-volume-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">STACKBLITZ 에서 보기
-    </button>
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-high-volume"
+           github-src="charts/financial-chart/high-volume">
+</code-view>
 
-
-</div>
 <div class="divider--half"></div>
 
 차트의 퍼포먼스에 영향을 주는 여러 기능 및 Angular 고유 기능이 있으므로 애플리케이션에서 퍼포먼스를 최적화할 때 이를 고려해야 합니다.

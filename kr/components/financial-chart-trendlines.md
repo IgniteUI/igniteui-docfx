@@ -7,30 +7,26 @@ _language: kr
 
 # Angular 컨피규레이터 옵션
 
-`XamFinancialChart` 제어는 탐색 동작, 추세선 레이어, 오버레이, 범례, 차트 제목, 부제 등의 사용자 지정이 가능한 많은 비주얼을 제공합니다.
+[`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html) 제어는 탐색 동작, 추세선 레이어, 오버레이, 범례, 차트 제목, 부제 등의 사용자 지정이 가능한 많은 비주얼을 제공합니다.
 
 ## 데모
 
-<div class="sample-container loading" style="height: 500px">
-    <iframe id="financial-chart-trendlines-iframe" src='{environment:dvDemosBaseUrl}/charts/financial-chart-trendlines' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-trendlines-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">STACKBLITZ 에서 보기
-    </button>
-
-
-</div>
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-trendlines"
+           github-src="charts/financial-chart/trendlines">
+</code-view>
 
 <div class="divider--half"></div>
 
 ## 탐색 구성
 
-`XamFinancialChart` 제어에서 차트 탐색은 기본적으로 활성화됩니다. 그러나, 다음 속성을 설정하여 사용자 정의를 실시할 수 있습니다:
+[`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html) 제어에서 차트 탐색은 기본적으로 활성화됩니다. 그러나, 다음 속성을 설정하여 사용자 정의를 실시할 수 있습니다:
 
--   `IsHorizontalZoomEnabled` - 차트가 사용자 조작에 의해 수평 방향으로 줌이 가능한지 여부를 지정합니다. 기본적으로 이 속성은 true로 설정됩니다.
--   `IsVerticalZoomEnabled` - 차트가 사용자 조작에 의해 수직 방향으로 줌이 가능한지 여부를 지정합니다. 기본적으로 이 속성은 false로 설정됩니다.
--   `IsWindowSyncedToVisibleRange` - true로 설정하면 Y축의 표시 데이터 범위가 자동으로 조정됩니다. 기본적으로 이 속성은 false로 설정됩니다.
--   `windowRect` - `XamFinancialChart` 의 스크롤 상태 및 줌 상태를 검색하거나 지정하는데 사용할 수 있습니다. `windowRect`는 좌표 및 크기가 0~1 사이인 직사각형으로 표현됩니다.
+-   [`isHorizontalZoomEnabled`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#ishorizontalzoomenabled) - 차트가 사용자 조작에 의해 수평 방향으로 줌이 가능한지 여부를 지정합니다. 기본적으로 이 속성은 true로 설정됩니다.
+-   [`isVerticalZoomEnabled`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#isverticalzoomenabled) - 차트가 사용자 조작에 의해 수직 방향으로 줌이 가능한지 여부를 지정합니다. 기본적으로 이 속성은 false로 설정됩니다.
+-   [`isWindowSyncedToVisibleRange`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#iswindowsyncedtovisiblerange) - true로 설정하면 Y축의 표시 데이터 범위가 자동으로 조정됩니다. 기본적으로 이 속성은 false로 설정됩니다.
+-   `windowRect` - [`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html) 의 스크롤 상태 및 줌 상태를 검색하거나 지정하는데 사용할 수 있습니다. `windowRect`는 좌표 및 크기가 0~1 사이인 직사각형으로 표현됩니다.
 
 ```html
  <igx-financial-chart

@@ -7,19 +7,16 @@ _language: kr
 
 # Angular 퍼포먼스
 
-`XamFinancialChart` 컨트롤은 대량의 데이터 점을 렌더링할 수 있는 매우 우수한 성능을 제공합니다. 다음의 데모는 20년간의 데이터를 바인딩하고 캔들 스틱을 사용하여 1일 간격으로 주가를 표시합니다.
+[`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html) 컨트롤은 대량의 데이터 점을 렌더링할 수 있는 매우 우수한 성능을 제공합니다. 다음의 데모는 20년간의 데이터를 바인딩하고 캔들 스틱을 사용하여 1일 간격으로 주가를 표시합니다.
 
 ## 데모
 
-<div class="sample-container loading" style="height: 500px">
-    <iframe id="financial-chart-performance-iframe" src='{environment:dvDemosBaseUrl}/charts/financial-chart-performance' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-performance-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">STACKBLITZ 에서 보기
-    </button>
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-performance"
+           github-src="charts/financial-chart/performance">
+</code-view>
 
-
-</div>
 <div class="divider--half"></div>
 
 다음의 코드는 금융 차트를 대량의 데이터에 바인딩하는 방법을 보여줍니다.

@@ -11,7 +11,7 @@ _keywords: Angular data grid, infragistics, grids, Ignite UI for Angular, table
 }
 
 h1 {
-   margin-top: 1.5rem; 
+   margin-top: 1.5rem;
 }
 
 .h3{
@@ -151,7 +151,7 @@ div#faqs-accordion-wrapper {
         width: 70%;
         margin-right: auto;
     }
-    
+
     div.support-section:last-child:last-child{
         border-left: none;
     }
@@ -179,9 +179,11 @@ In this Angular grid example, you can see how users can customize their view of 
 
 <div class="divider--half"></div>
 
-<div class="sample-container loading" style="height: 435px">
-    <iframe id="data-grid-overview-sample-iframe" src='{environment:demosBaseUrl}/grids/data-grid-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Grid Example" alt="Angular Grid Example"></iframe>
-</div>
+<code-view style="height: 435px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/grids/data-grid-overview"
+           alt="Angular Grid Example" >
+</code-view>
 
 Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a href="{environment:infragisticsBaseUrl}/products/ignite-ui-angular/download">Download it for free.</a>
 
@@ -220,10 +222,10 @@ This example demonstrates a few of the data grid’s key features:
 
 <span class="h3">Demo</span>
 
-<div class="sample-container loading" style="height: 435px">
-    <iframe id="icon-sample-1-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/grids/data-grid-type-marketing-table" onload="onSampleIframeContentLoaded(this);">
-    </iframe>
-</div>
+<code-view style="height: 435px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/grids/data-grid-type-marketing-table"  >
+</code-view>
 
 <div class="divider--half"></div>
 

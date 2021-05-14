@@ -15,9 +15,9 @@ _language: ja
 
 <code-view style="height:800px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/services/localization-all-resources" alt="Angular ローカライズ例">
+           iframe-src="{environment:demosBaseUrl}/services/localization-all-resources" 
+           alt="Angular ローカライズの例">
 </code-view>
-
 
 ## 使用方法
 

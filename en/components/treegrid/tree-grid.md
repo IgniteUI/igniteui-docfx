@@ -22,6 +22,13 @@ In this example, you can see how users can manipulate hierarchical or flat data.
 
 <div class="divider--half"></div>
 
+<code-view style="height:850px" 
+           data-demos-base-url="{environment:lobDemosBaseUrl}" 
+           iframe-src="{environment:lobDemosBaseUrl}/tree-grid/treegrid-childdatakey" alt="Angular tree grid example">
+</code-view>
+
+<div class="divider--half"></div>
+
 ## Getting Started with Ignite UI for Angular Tree Grid
 To get started with the tree grid, first you need to install Ignite UI for Angular by typing the following command:
 
@@ -164,7 +171,7 @@ Finally, we will enable the toolbar of our tree grid, along with the column hidi
 </igx-tree-grid>
 ```
 
-You can see the result of the code from above at the beginning of this article in the [Demo](#demo) section.
+You can see the result of the code from above at the beginning of this article in the [Angular Tree Grid Example](#angular-tree-grid-example) section.
 
 ### Primary and Foreign keys
 When we are using the **primary and foreign keys** option, every data object contains a primary key and a foreign key. The primary key is the unique identifier of the current data object and the foreign key is the unique identifier of its parent. In this case the [`data`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#data) property of our tree grid that contains the original data source will be a flat collection.
@@ -233,12 +240,9 @@ In addition we will enable the row selection feature of the tree grid by using t
 
 And here is the final result:
 
-
 <code-view style="height:450px" 
            data-demos-base-url="{environment:lobDemosBaseUrl}" 
            iframe-src="{environment:lobDemosBaseUrl}/tree-grid/treegrid-primaryforeignkey" >
-</code-view>
-
 <div class="divider--half"></div>
 
 ## Persistence and Integration
@@ -259,7 +263,7 @@ See the [Grid Sizing](sizing.md) topic.
 
 ## Angular Tree Grid Styling
 
-The Tree Grid allows styling through the [Ignite UI for Angular Theme Library](../themes/component-themes.md). The tree grid's [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) exposes a wide variety of properties, which allows the customization of all the tree grid's features.
+The Tree Grid allows styling through the [Ignite UI for Angular Theme Library](../themes/sass/component-themes.md). The tree grid's [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) exposes a wide variety of properties, which allows the customization of all the tree grid's features.
 
 To get started with styling the Tree Grid, we need to import the `index` file, where all the theme functions and component mixins live:
 
@@ -294,7 +298,7 @@ The last step is to **include** the component theme in our application.
 ```
 
 >[!NOTE]
->If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
+>If the component is using an [`Emulated`](../themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
 
 ```scss
 :host {
@@ -335,7 +339,7 @@ $custom-theme: igx-grid-theme(
 
 ### Using Schemas
 
-Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](../themes/schemas.md). A **schema** is a recipe of a theme.
+Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](../themes/sass/schemas.md). A **schema** is a recipe of a theme.
 
 Extend one of the two predefined schemas, that are provided for every component, in this case - [`light-grid`]({environment:sassApiUrl}/index.html#variable-_light-grid) schema:
 
@@ -380,6 +384,9 @@ Don't forget to include the themes in the same way as it was demonstrated above.
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-style" alt="Angular tree grid styling demo">
 </code-view>
 
+>[!NOTE]
+>The sample will not be affected by the selected global theme from `Change Theme`.
+
 <div class="divider--half"></div>
 
 ## Known Limitations
@@ -409,11 +416,10 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 
 * [IgxTreeGridComponent]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)
 * [IgxTreeGridCellComponent]({environment:angularApiUrl}/classes/igxtreegridcellcomponent.html)
-* [IgxTreeGridRowComponent]({environment:angularApiUrl}/classes/igxtreegridrowcomponent.html)
+* [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 * [IgxGridComponent Styles]({environment:sassApiUrl}/#function-igx-grid-theme)
 * [IgxGridCellComponent]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
-* [IgxGridRowComponent]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)
 * [IgxBaseTransactionService]({environment:angularApiUrl}/classes/igxbasetransactionservice.html)
 
 

@@ -10,13 +10,10 @@ In the [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-
 
 ## Demo
 
-<div class="sample-container loading" style="height: 400px">
-    <iframe id="geo-map-binding-multiple-sources-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-binding-multiple-sources' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="geo-map-binding-multiple-sources-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
-    </button>
-</div>
+<code-view style="height: 400px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-binding-multiple-sources"  >
+</code-view>
 
 <div class="divider--half"></div>
 

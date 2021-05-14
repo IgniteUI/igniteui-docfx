@@ -149,7 +149,7 @@
       updated: true
     - name: Summaries
       href: grid/summaries.md
-      updated: false
+      updated: true
     - name: Column Moving
       href: grid/column-moving.md
       new: false
@@ -287,6 +287,7 @@
     - name: Summaries
       href: treegrid/summaries.md
       new: false
+      updated: true
     - name: Column Moving
       href: treegrid/column-moving.md
       new: false
@@ -390,6 +391,9 @@
         - name: Batch Editing
           href: hierarchicalgrid/batch-editing.md
           new: false
+    - name: Export to Excel
+      href: hierarchicalGrid/export-excel.md
+      new: true
     - name: Row Drag
       href: hierarchicalgrid/row-drag.md
       new: false
@@ -412,6 +416,7 @@
     - name: Summaries
       href: hierarchicalgrid/summaries.md
       new: false
+      updated: true
     - name: Column Moving
       href: hierarchicalgrid/column-moving.md
       new: false
@@ -473,6 +478,9 @@
     - name: State Persistence
       href: hierarchicalgrid/state-persistence.md
       new: true
+- name: Tree
+  href: tree.md
+  new: true
 - name: List View
   href: list.md
 - name: Combo
@@ -519,305 +527,305 @@
     - name: Hyperlinks
       href: spreadsheet-hyperlinks.md
       new: false
-- name: Charts
-  header: true
-  sortable: true
-- name: Category Chart
-  href: category-chart.md
-  new: false
-  items:
-    - name: Annotations
-      href: category-chart-annotations.md
-      new: false
-    - name: Axis Options
-      href: category-chart-axis-options.md
-      new: false
-    - name: Real Time Data
-      href: category-chart-high-frequency.md
-      new: false
-    - name: High Volume Data
-      href: category-chart-high-volume.md
-      new: false
-    - name: Configuration Options
-      href: category-chart-config-options.md
-      new: false
-    - name: Highlighting
-      href: category-chart-highlighting.md
-      new: false
-    - name: Tooltip Types
-      href: category-chart-tooltip-types.md
-      new: false
+#- name: Charts
+#  header: true
+#  sortable: true
+#- name: Category Chart
+#  href: category-chart.md
+#  new: false
+#  items:
+#    - name: Annotations
+#      href: category-chart-annotations.md
+#      new: false
+#    - name: Axis Options
+#      href: category-chart-axis-options.md
+#      new: false
+#    - name: Real Time Data
+#      href: category-chart-high-frequency.md
+#      new: false
+#    - name: High Volume Data
+#      href: category-chart-high-volume.md
+#      new: false
+#    - name: Configuration Options
+#      href: category-chart-config-options.md
+#      new: false
+#    - name: Highlighting
+#      href: category-chart-highlighting.md
+#      new: false
+#    - name: Tooltip Types
+#      href: category-chart-tooltip-types.md
+#      new: false
 #   - name: Tooltip Templates
 #     href: category-chart-tooltip-template.md
 #     new: false
-- name: Data Chart
-  href: data-chart.md
-  new: false
-  items:
-    - name: Axis
-      href: data-chart-axis-types.md
-      new: false
-      items:
-        - name: Axis Annotations
-          href: data-chart-axis-annotations.md
-          new: false
-        - name: Axis Settings
-          href: data-chart-axis-settings.md
-          new: false
-        #- name: Axis Scales
-        #  href: data-chart-axis-scales.md
-        #  new: true
-        - name: Axis Locations
-          href: data-chart-axis-locations.md
-          new: false
-        - name: Axis Sharing
-          href: data-chart-axis-sharing.md
-          new: false
-    - name: Chart Types
-      href: data-chart-series-types.md
-      new: false
-      items:
-        - name: Area
-          href: data-chart-types-overview-area.md
-          new: false
-          items:
-            - name: Area Chart
-              href: data-chart-type-category-area-series.md
-              new: false
-            - name: Polar Area Chart
-              href: data-chart-type-polar-area-series.md
-              new: false
-            - name: Polar Spline Area Chart
-              href: data-chart-type-polar-spline-area-series.md
-              new: false
-            - name: Radial Area Chart
-              href: data-chart-type-radial-area-series.md
-              new: false
-            - name: Range Area Chart
-              href: data-chart-type-range-area-series.md
-              new: false
-            - name: Scatter Area Chart
-              href: data-chart-type-scatter-area-series.md
-              new: false
-            - name: Scatter Polygon Chart
-              href: data-chart-type-scatter-polygon-series.md
-              new: false
-            - name: Spline Area Chart
-              href: data-chart-type-category-spline-area-series.md
-              new: false
-            - name: Stacked 100 Area Chart
-              href: data-chart-type-stacked-100-area-series.md
-              new: false
-            - name: Stacked 100 Spline Area Chart
-              href: data-chart-type-stacked-100-spline-area-series.md
-              new: false
-            - name: Stacked Area Chart
-              href: data-chart-type-stacked-area-series.md
-              new: false
-            - name: Stacked Spline Area Chart
-              href: data-chart-type-stacked-spline-area-series.md
-              new: false
-            - name: Step Area Chart
-              href: data-chart-type-category-step-area-series.md
-              new: false
-        - name: Bar and Column
-          href: data-chart-types-overview-column.md
-          new: false
-          items:
-            - name: Bar Chart
-              href: data-chart-type-category-bar-series.md
-              new: false
-            - name: Column Chart
-              href: data-chart-type-category-column-series.md
-              new: false
-            - name: Radial Column Chart
-              href: data-chart-type-radial-column-series.md
-              new: false
-            - name: Range Column Chart
-              href: data-chart-type-range-column-series.md
-              new: false
-            - name: Stacked 100 Bar Chart
-              href: data-chart-type-stacked-100-bar-series.md
-              new: false
-            - name: Stacked 100 Column Chart
-              href: data-chart-type-stacked-100-column-series.md
-              new: false
-            - name: Stacked Bar Chart
-              href: data-chart-type-stacked-bar-series.md
-              new: false
-            - name: Stacked Column Chart
-              href: data-chart-type-stacked-column-series.md
-              new: false
-            - name: Waterfall Chart
-              href: data-chart-type-category-waterfall-series.md
-              new: false
-        - name: Financial
-          href: data-chart-types-overview-financial.md
-          new: false
-          items:
-            - name: Financial Candlestick Chart
-              href: data-chart-type-financial-candlestick-series.md
-              new: false
-            - name: Financial OHLC Chart
-              href: data-chart-type-financial-ohlc-series.md
-              new: false
-            - name: Financial Area Indicators
-              href: data-chart-type-financial-area-indicators.md
-              new: false
-            - name: Financial Column Indicators
-              href: data-chart-type-financial-column-indicators.md
-              new: false
-            - name: Financial Line Indicators
-              href: data-chart-type-financial-line-indicators.md
-              new: false
-            - name: Financial Overlays
-              href: data-chart-type-financial-overlays.md
-              new: false
-        - name: Line
-          href: data-chart-types-overview-line.md
-          new: false
-          items:
-            - name: Line Chart
-              href: data-chart-type-category-line-series.md
-              new: false
-            - name: Polar Line Chart
-              href: data-chart-type-polar-line-series.md
-              new: false
-            - name: Polar Spline Chart
-              href: data-chart-type-polar-spline-series.md
-              new: false
-            - name: Radial Line Chart
-              href: data-chart-type-radial-line-series.md
-              new: false
-            - name: Scatter Contour Chart
-              href: data-chart-type-scatter-contour-series.md
-              new: false
-            - name: Scatter Line Chart
-              href: data-chart-type-scatter-line-series.md
-              new: false
-            - name: Scatter Spline Chart
-              href: data-chart-type-scatter-spline-series.md
-              new: false
-            - name: Scatter Polyline Chart
-              href: data-chart-type-scatter-polyline-series.md
-              new: false
-            - name: Spline Chart
-              href: data-chart-type-category-spline-series.md
-              new: false
-            - name: Stacked 100 Line Chart
-              href: data-chart-type-stacked-100-line-series.md
-              new: false
-            - name: Stacked 100 Spline Chart
-              href: data-chart-type-stacked-100-spline-series.md
-              new: false
-            - name: Stacked Line Chart
-              href: data-chart-type-stacked-line-series.md
-              new: false
-            - name: Stacked Spline Chart
-              href: data-chart-type-stacked-spline-series.md
-              new: false
-            - name: Step Line Chart
-              href: data-chart-type-category-step-line-series.md
-              new: false
-        - name: Pie and Doughnut
-          href: data-chart-types-overview-pie.md
-          new: false
-          items:
-            - name: Doughnut Chart
-              href: doughnut-chart.md
-              new: false
-            - name: Pie Chart
-              href: pie-chart.md
-              new: false
-            - name: Radial Pie Chart
-              href: data-chart-type-radial-pie-series.md
-              new: false
-        - name: Point
-          href: data-chart-types-overview-point.md
-          new: false
-          items:
-            - name: Point Chart
-              href: data-chart-type-category-point-series.md
-              new: false
-            - name: Polar Scatter Chart
-              href: data-chart-type-polar-scatter-series.md
-              new: false
-            - name: Scatter Bubble Chart
-              href: data-chart-type-scatter-bubble-series.md
-              new: false
-            - name: Scatter Marker Chart
-              href: data-chart-type-scatter-point-series.md
-              new: false
-          # - name: Scatter HD Series
-          #  href: data-chart-type-scatter-hd-series.md
-          #  new: true
-    - name: Legend
-      href: data-chart-legends.md
-      new: false
-    - name: Navigation
-      href: data-chart-navigation.md
-      new: false
-    - name: Synchronization
-      href: data-chart-synchronization.md
-      new: false
-    - name: Title and Subtitle
-      href: data-chart-titles.md
-      new: false
-    - name: Series Annotations
-      href: data-chart-series-annotations.md
-      new: false
-    - name: Series Highlighting
-      href: data-chart-series-highlighting.md
-      new: false
-    - name: Series Markers
-      href: data-chart-series-markers.md
-      new: false
-    - name: Series Tooltips
-      href: data-chart-series-tooltips.md
-      new: false
-    - name: Series Trendlines
-      href: data-chart-series-trendlines.md
-      new: false
-    - name: Data Sources
-      href: data-chart-data-sources.md
-      new: false
-    #- name: Data Triangulation
-    #  href: data-chart-data-triangulation.md
-    #  new: true
-    #- name: Series Error Bars
-    #  href: data-chart-series-errorbars.md
-    #  new: true
-    - name: Value Overlay
-      href: data-chart-value-overlay.md
-      new: true
-- name: Financial Chart
-  href: financial-chart.md
-  new: false
-  items:
-    - name: Binding Real-Time Data
-      href: financial-chart-high-frequency.md
-      new: false
-    - name: Binding High Volume Data
-      href: financial-chart-high-volume.md
-      new: false
-    - name: Binding Multiple Data Sources
-      href: financial-chart-multiple-data.md
-      new: false
-    - name: Chart Annotations
-      href: financial-chart-annotations.md
-      new: false
-    - name: Chart Trendlines
-      href: financial-chart-trendlines.md
-      new: false
-    - name: Chart Axis Types
-      href: financial-chart-axis-types.md
-      new: false
-    - name: Chart Performance
-      href: financial-chart-performance.md
-      new: false
-    - name: Chart Panes
-      href: financial-chart-panes.md
-      new: false
+#- name: Data Chart
+#  href: data-chart.md
+#  new: false
+#  items:
+#    - name: Axis
+#      href: data-chart-axis-types.md
+#      new: false
+#      items:
+#        - name: Axis Annotations
+#          href: data-chart-axis-annotations.md
+#          new: false
+#        - name: Axis Settings
+#          href: data-chart-axis-settings.md
+#          new: false
+#        #- name: Axis Scales
+#        #  href: data-chart-axis-scales.md
+#        #  new: true
+#        - name: Axis Locations
+#          href: data-chart-axis-locations.md
+#          new: false
+#        - name: Axis Sharing
+#          href: data-chart-axis-sharing.md
+#          new: false
+#    - name: Chart Types
+#      href: data-chart-series-types.md
+#      new: false
+#      items:
+#        - name: Area
+#          href: data-chart-types-overview-area.md
+#          new: false
+#          items:
+#            - name: Area Chart
+#              href: data-chart-type-category-area-series.md
+#              new: false
+#            - name: Polar Area Chart
+#              href: data-chart-type-polar-area-series.md
+#              new: false
+#            - name: Polar Spline Area Chart
+#              href: data-chart-type-polar-spline-area-series.md
+#              new: false
+#            - name: Radial Area Chart
+#              href: data-chart-type-radial-area-series.md
+#              new: false
+#            - name: Range Area Chart
+#              href: data-chart-type-range-area-series.md
+#              new: false
+#            - name: Scatter Area Chart
+#              href: data-chart-type-scatter-area-series.md
+#              new: false
+#            - name: Scatter Polygon Chart
+#              href: data-chart-type-scatter-polygon-series.md
+#              new: false
+#            - name: Spline Area Chart
+#              href: data-chart-type-category-spline-area-series.md
+#              new: false
+#            - name: Stacked 100 Area Chart
+#              href: data-chart-type-stacked-100-area-series.md
+#              new: false
+#            - name: Stacked 100 Spline Area Chart
+#              href: data-chart-type-stacked-100-spline-area-series.md
+#              new: false
+#            - name: Stacked Area Chart
+#              href: data-chart-type-stacked-area-series.md
+#              new: false
+#            - name: Stacked Spline Area Chart
+#              href: data-chart-type-stacked-spline-area-series.md
+#              new: false
+#            - name: Step Area Chart
+#              href: data-chart-type-category-step-area-series.md
+#              new: false
+#        - name: Bar and Column
+#          href: data-chart-types-overview-column.md
+#          new: false
+#          items:
+#            - name: Bar Chart
+#              href: data-chart-type-category-bar-series.md
+#              new: false
+#            - name: Column Chart
+#              href: data-chart-type-category-column-series.md
+#              new: false
+#            - name: Radial Column Chart
+#              href: data-chart-type-radial-column-series.md
+#              new: false
+#            - name: Range Column Chart
+#              href: data-chart-type-range-column-series.md
+#              new: false
+#            - name: Stacked 100 Bar Chart
+#              href: data-chart-type-stacked-100-bar-series.md
+#              new: false
+#            - name: Stacked 100 Column Chart
+#              href: data-chart-type-stacked-100-column-series.md
+#              new: false
+#            - name: Stacked Bar Chart
+#              href: data-chart-type-stacked-bar-series.md
+#              new: false
+#            - name: Stacked Column Chart
+#              href: data-chart-type-stacked-column-series.md
+#              new: false
+#            - name: Waterfall Chart
+#              href: data-chart-type-category-waterfall-series.md
+#              new: false
+#        - name: Financial
+#          href: data-chart-types-overview-financial.md
+#          new: false
+#          items:
+#            - name: Financial Candlestick Chart
+#              href: data-chart-type-financial-candlestick-series.md
+#              new: false
+#            - name: Financial OHLC Chart
+#              href: data-chart-type-financial-ohlc-series.md
+#              new: false
+#            - name: Financial Area Indicators
+#              href: data-chart-type-financial-area-indicators.md
+#              new: false
+#            - name: Financial Column Indicators
+#              href: data-chart-type-financial-column-indicators.md
+#              new: false
+#            - name: Financial Line Indicators
+#              href: data-chart-type-financial-line-indicators.md
+#              new: false
+#            - name: Financial Overlays
+#              href: data-chart-type-financial-overlays.md
+#              new: false
+#        - name: Line
+#          href: data-chart-types-overview-line.md
+#          new: false
+#          items:
+#            - name: Line Chart
+#              href: data-chart-type-category-line-series.md
+#              new: false
+#            - name: Polar Line Chart
+#              href: data-chart-type-polar-line-series.md
+#              new: false
+#            - name: Polar Spline Chart
+#              href: data-chart-type-polar-spline-series.md
+#              new: false
+#            - name: Radial Line Chart
+#              href: data-chart-type-radial-line-series.md
+#              new: false
+#            - name: Scatter Contour Chart
+#              href: data-chart-type-scatter-contour-series.md
+#              new: false
+#            - name: Scatter Line Chart
+#              href: data-chart-type-scatter-line-series.md
+#              new: false
+#            - name: Scatter Spline Chart
+#              href: data-chart-type-scatter-spline-series.md
+#              new: false
+#            - name: Scatter Polyline Chart
+#              href: data-chart-type-scatter-polyline-series.md
+#              new: false
+#            - name: Spline Chart
+#              href: data-chart-type-category-spline-series.md
+#              new: false
+#            - name: Stacked 100 Line Chart
+#              href: data-chart-type-stacked-100-line-series.md
+#              new: false
+#            - name: Stacked 100 Spline Chart
+#              href: data-chart-type-stacked-100-spline-series.md
+#              new: false
+#            - name: Stacked Line Chart
+#              href: data-chart-type-stacked-line-series.md
+#              new: false
+#            - name: Stacked Spline Chart
+#              href: data-chart-type-stacked-spline-series.md
+#              new: false
+#            - name: Step Line Chart
+#              href: data-chart-type-category-step-line-series.md
+#              new: false
+#        - name: Pie and Doughnut
+#          href: data-chart-types-overview-pie.md
+#          new: false
+#          items:
+#            - name: Doughnut Chart
+#              href: doughnut-chart.md
+#              new: false
+#            - name: Pie Chart
+#              href: pie-chart.md
+#              new: false
+#            - name: Radial Pie Chart
+#              href: data-chart-type-radial-pie-series.md
+#              new: false
+#        - name: Point
+#          href: data-chart-types-overview-point.md
+#          new: false
+#          items:
+#            - name: Point Chart
+#              href: data-chart-type-category-point-series.md
+#              new: false
+#            - name: Polar Scatter Chart
+#              href: data-chart-type-polar-scatter-series.md
+#              new: false
+#            - name: Scatter Bubble Chart
+#              href: data-chart-type-scatter-bubble-series.md
+#              new: false
+#            - name: Scatter Marker Chart
+#              href: data-chart-type-scatter-point-series.md
+#              new: false
+#          # - name: Scatter HD Series
+#          #  href: data-chart-type-scatter-hd-series.md
+#          #  new: true
+#    - name: Legend
+#      href: data-chart-legends.md
+#      new: false
+#    - name: Navigation
+#      href: data-chart-navigation.md
+#      new: false
+#    - name: Synchronization
+#      href: data-chart-synchronization.md
+#      new: false
+#    - name: Title and Subtitle
+#      href: data-chart-titles.md
+#      new: false
+#    - name: Series Annotations
+#      href: data-chart-series-annotations.md
+#      new: false
+#    - name: Series Highlighting
+#      href: data-chart-series-highlighting.md
+#      new: false
+#    - name: Series Markers
+#      href: data-chart-series-markers.md
+#      new: false
+#    - name: Series Tooltips
+#      href: data-chart-series-tooltips.md
+#      new: false
+#    - name: Series Trendlines
+#      href: data-chart-series-trendlines.md
+#      new: false
+#    - name: Data Sources
+#      href: data-chart-data-sources.md
+#      new: false
+#    #- name: Data Triangulation
+#    #  href: data-chart-data-triangulation.md
+#    #  new: true
+#    #- name: Series Error Bars
+#    #  href: data-chart-series-errorbars.md
+#    #  new: true
+#    - name: Value Overlay
+#      href: data-chart-value-overlay.md
+#      new: true
+#- name: Financial Chart
+#  href: financial-chart.md
+#  new: false
+#  items:
+#    - name: Binding Real-Time Data
+#      href: financial-chart-high-frequency.md
+#      new: false
+#    - name: Binding High Volume Data
+#      href: financial-chart-high-volume.md
+#      new: false
+#    - name: Binding Multiple Data Sources
+#      href: financial-chart-multiple-data.md
+#      new: false
+#    - name: Chart Annotations
+#      href: financial-chart-annotations.md
+#      new: false
+#    - name: Chart Trendlines
+#      href: financial-chart-trendlines.md
+#      new: false
+#    - name: Chart Axis Types
+#      href: financial-chart-axis-types.md
+#      new: false
+#    - name: Chart Performance
+#      href: financial-chart-performance.md
+#      new: false
+#    - name: Chart Panes
+#      href: financial-chart-panes.md
+#      new: false
 #    - name: Custom Indicators
 #      href: financial-chart-custom-indicators.md
 #      new: false
@@ -827,14 +835,130 @@
 #    - name: Tooltip Templates
 #      href: financial-chart-tooltip-template.md
 #      new: false
-- name: Sparkline
-  href: sparkline.md
+# - name: Sparkline
+#   href: sparkline.md
+#   new: false
+# ==============================================
+# keeping old TOC nodes above
+# ported new TOC nodes from xplat-docfx repo:
+# ==============================================
+- name: Charts
+  href: charts/chart-overview.md
+  header: true
+#- name: Binding Real Time Data
+#  href: category-chart-high-frequency.md
+#  new: false
+#- name: Binding High Volume Data
+#  href: category-chart-high-volume.md
+#  new: false
+#- name: Binding Multiple Data Source
+#  href: financial-chart-multiple-data.md
+#  new: false
+- name: Area Chart
+  href: charts/types/area-chart.md
   new: false
+- name: Bar Chart
+  href: charts/types/bar-chart.md
+  new: false
+- name: Bubble Chart
+  href: charts/types/bubble-chart.md
+  new: false
+- name: Column Chart
+  href: charts/types/column-chart.md
+  new: false
+- name: Composite Chart
+  href: charts/types/composite-chart.md
+  new: false
+- name: Donut Chart
+  href: charts/types/donut-chart.md
+  new: false
+- name: Financial / Stock Chart
+  href: charts/types/stock-chart.md
+  new: false
+- name: Line Chart
+  href: charts/types/line-chart.md
+  new: false
+- name: Pie Chart
+  href: charts/types/pie-chart.md
+  new: false
+- name: Point Chart
+  href: charts/types/point-chart.md
+  new: false
+- name: Polar Chart
+  href: charts/types/polar-chart.md
+  new: false
+- name: Radial Chart
+  href: charts/types/radial-chart.md
+  new: false
+- name: Scatter Chart
+  href: charts/types/scatter-chart.md
+  new: false
+- name: Shape Chart
+  href: charts/types/shape-chart.md
+  new: false
+- name: Spline Chart
+  href: charts/types/spline-chart.md
+  new: false
+- name: Sparkline Chart
+  href: charts/types/sparkline-chart.md
+  new: false
+- name: Stacked Chart
+  href: charts/types/stacked-chart.md
+  new: false
+- name: Step Chart
+  href: charts/types/step-chart.md
+  new: false
+- name: Treemap
+  href: charts/types/treemap-chart.md
+  new: false
+- name: Chart Features
+  href: charts/chart-features.md
+  new: false
+  items:
+    - name: Axis Gridlines
+      href: charts/features/chart-axis-gridlines.md
+      new: false
+    - name: Axis Layouts
+      href: charts/features/chart-axis-layouts.md
+      new: false
+    - name: Axis Options
+      href: charts/features/chart-axis-options.md
+      new: false
+    - name: Chart Animations
+      href: charts/features/chart-animations.md
+      new: false
+    - name: Chart Annotations
+      href: charts/features/chart-annotations.md
+      new: false
+    - name: Chart Highlighting
+      href: charts/features/chart-highlighting.md
+      new: false
+    - name: Chart Markers
+      href: charts/features/chart-markers.md
+      new: false
+    - name: Chart Navigation
+      href: charts/features/chart-navigation.md
+      new: false
+    - name: Chart Overlays
+      href: charts/features/chart-overlays.md
+      new: false
+    - name: Chart Performance
+      href: charts/features/chart-performance.md
+      new: false
+    - name: Chart Synchronization
+      href: charts/features/chart-synchronization.md
+      new: false
+    - name: Chart Tooltips
+      href: charts/features/chart-tooltips.md
+      new: false
+    - name: Chart Trendlines
+      href: charts/features/chart-trendlines.md
+      new: false
+    - name: Zoom Slider
+      href: zoomslider-overview.md
+      new: false
 - name: Maps
   header: true
-- name: Treemap
-  href: treemap-overview.md
-  new: false
 - name: Map
   href: geo-map.md
   new: false
@@ -955,56 +1079,78 @@
   new: false
 - name: Styling & Themes
   header: true
-  sortable: true
-- name: Themes
+  sortable: false
+- name: Overview
   href: themes/index.md
   new: false
+- name: Palettes
+  href: themes/palettes.md
+  new: false
+- name: Elevations
+  href: themes/elevations.md
+  new: false
+- name: Typography
+  href: themes/typography.md
+  new: false
+- name: Display Density
+  href: display-density.md
+- name: Sass
+  new: false
   items:
-    - name: Palettes
-      href: themes/palette.md
+    - name: Overview
+      href: themes/sass/index.md
       new: false
-    - name: Schemas
-      href: themes/schemas.md
+    - name: Configuration
+      href: themes/sass/configuration.md
+      new: true
+    - name: Palettes
+      href: themes/sass/palettes.md
+      new: false
+    - name: Elevations
+      href: themes/sass/elevations.md
       new: false
     - name: Typography
-      href: themes/typography.md
+      href: themes/sass/typography.md
+      new: false
+    - name: Schemas
+      href: themes/sass/schemas.md
+      new: false
+    - name: Animations
+      href: themes/sass/animations.md
+      new: false
+    - name: Roundness
+      href: themes/sass/roundness.md
       new: false
     - name: Global Themes
-      href: themes/global-theme.md
+      href: themes/sass/global-themes.md
       new: false
     - name: Component Themes
-      href: themes/component-themes.md
+      href: themes/sass/component-themes.md
       new: false
     - name: Predefined Themes
       new: false
       items:
         - name: Material
-          href: themes/themes-list/material.md
+          href: themes/sass/presets/material.md
           new: false
         - name: Fluent
-          href: themes/themes-list/fluent.md
+          href: themes/sass/presets/fluent.md
           new: false
         - name: Bootstrap
-          href: themes/themes-list/bootstrap.md
+          href: themes/sass/presets/bootstrap.md
           new: false
         - name: Indigo
-          href: themes/themes-list/indigo.md
+          href: themes/sass/presets/indigo.md
           new: true
-    - name: Printing styles
-      href: themes/printing-styles.md
-      new: false
-    - name: Theming with CSS Variables
-      href: themes/css-variables-theming.md
-      new: false
-- name: Components Roundness
-  href: roundness.md
-  new: false
-- name: Shadows
-  href: shadows.md
-- name: Animations
-  href: animations.md
-- name: Display Density
-  href: display-density.md
+    - name: Misc
+      new: true
+      items:
+      - name: Printing styles
+        href: themes/misc/printing-styles.md
+        new: false
+      - name: Bootstrap Theming
+        href: themes/misc/bootstrap-theming.md
+        new: true
 - name: Data Entry & Display
   header: true
   sortable: true
@@ -1124,6 +1270,7 @@
   new: false
 - name: Bottom Navigation
   href: tabbar.md
+  updated: true
 - name: Tabs
   href: tabs.md
   new: false
@@ -1157,6 +1304,7 @@
 - name: Date Time Editor
   href: date-time-editor.md
   new: false
+  updated: true
 - name: Calendar
   href: calendar.md
   updated: true
@@ -1166,6 +1314,7 @@
 - name: Date Range Picker
   href: date-range-picker.md
   new: false
+  updated: true
 - name: Month Picker
   href: month-picker.md
   new: false

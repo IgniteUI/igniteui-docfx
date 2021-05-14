@@ -150,7 +150,7 @@
       updated: true
     - name: 集計
       href: grid/summaries.md
-      updated: false
+      updated: true
     - name: 列移動
       href: grid/column-moving.md
       new: false
@@ -288,6 +288,7 @@
     - name: 集計
       href: treegrid/summaries.md
       new: false
+      updated: true
     - name: 列移動
       href: treegrid/column-moving.md
       new: false
@@ -342,8 +343,8 @@
     - name: 条件付きセルのスタイル設定
       href: treegrid/conditional-cell-styling.md
       new: false
-    - name: 集計
-      href: treegrid/aggregations.md
+    - name: グループ化
+      href: treegrid/groupby.md
       new: false
     - name: キーボードナビゲーション
       href: treegrid/keyboard-navigation.md
@@ -391,6 +392,9 @@
         - name: 一括編集
           href: hierarchicalgrid/batch-editing.md
           new: false
+    - name: Excel へエクスポート
+      href: hierarchicalgrid/export-excel.md
+      new: true
     - name: 行ドラッグ
       href: hierarchicalgrid/row-drag.md
       new: false
@@ -413,6 +417,7 @@
     - name: 集計
       href: hierarchicalgrid/summaries.md
       new: false
+      updated: true
     - name: 列移動
       href: hierarchicalgrid/column-moving.md
       new: false
@@ -474,6 +479,9 @@
     - name: 状態保持
       href: hierarchicalgrid/state-persistence.md
       new: true
+- name: Tree
+  href: tree.md
+  new: true
 - name: List View
   href: list.md
 - name: Combo
@@ -520,305 +528,305 @@
     - name: ハイパーリンク
       href: spreadsheet-hyperlinks.md
       new: false
-- name: チャート
-  header: true
-  sortable: true
-- name: カテゴリ チャート
-  href: category-chart.md
-  new: false
-  items:
-    - name: 注釈とオーバーレイ
-      href: category-chart-annotations.md
-      new: false
-    - name: 軸オプション
-      href: category-chart-axis-options.md
-      new: false
-    - name: リアルタイム データ
-      href: category-chart-high-frequency.md
-      new: false
-    - name: 大規模なデータの処理
-      href: category-chart-high-volume.md
-      new: false
-    - name: 構成オプション
-      href: category-chart-config-options.md
-      new: false
-    - name: ハイライト
-      href: category-chart-highlighting.md
-      new: false
-    - name: ツールチップ タイプ
-      href: category-chart-tooltip-types.md
-      new: false
+#- name: チャート
+#  header: true
+#  sortable: true
+#- name: カテゴリ チャート
+#  href: category-chart.md
+#  new: false
+#  items:
+#    - name: 注釈
+#      href: category-chart-annotations.md
+#      new: false
+#    - name: 軸オプション
+#      href: category-chart-axis-options.md
+#      new: false
+#    - name: リアルタイム データ
+#      href: category-chart-high-frequency.md
+#      new: false
+#    - name: 大規模データのバインド
+#      href: category-chart-high-volume.md
+#      new: false
+#    - name: 構成オプション
+#      href: category-chart-config-options.md
+#      new: false
+#    - name: ハイライト
+#      href: category-chart-highlighting.md
+#      new: false
+#    - name: ツールチップ タイプ
+#      href: category-chart-tooltip-types.md
+#      new: false
 #   - name: ツールチップ テンプレート
 #     href: category-chart-tooltip-template.md
 #     new: false
-- name: データ チャート
-  href: data-chart.md
-  new: false
-  items:
-    - name: 軸
-      href: data-chart-axis-types.md
-      new: false
-      items:
-        - name: 軸の注釈
-          href: data-chart-axis-annotations.md
-          new: false
-        - name: 軸設定
-          href: data-chart-axis-settings.md
-          new: false
-        #- name: Axis Scales
-        #  href: data-chart-axis-scales.md
-        #  new: true
-        - name: 軸の位置
-          href: data-chart-axis-locations.md
-          new: false
-        - name: 軸共有
-          href: data-chart-axis-sharing.md
-          new: false
-    - name: チャート タイプ
-      href: data-chart-series-types.md
-      new: false
-      items:
-        - name: エリア
-          href: data-chart-types-overview-area.md
-          new: false
-          items:
-            - name: エリア チャート
-              href: data-chart-type-category-area-series.md
-              new: false
-            - name: 極座標エリア チャート
-              href: data-chart-type-polar-area-series.md
-              new: false
-            - name: 極座標スプライン エリア チャート
-              href: data-chart-type-polar-spline-area-series.md
-              new: false
-            - name: ラジアル エリア チャート
-              href: data-chart-type-radial-area-series.md
-              new: false
-            - name: 範囲エリア チャート
-              href: data-chart-type-range-area-series.md
-              new: false
-            - name: 散布エリア チャート
-              href: data-chart-type-scatter-area-series.md
-              new: false
-            - name: 散布ポリゴンチャート
-              href: data-chart-type-scatter-polygon-series.md
-              new: false
-            - name: スプライン エリア チャート
-              href: data-chart-type-category-spline-area-series.md
-              new: false
-            - name: 積層 100 エリア チャート
-              href: data-chart-type-stacked-100-area-series.md
-              new: false
-            - name: 積層 100 スプライン エリア チャート
-              href: data-chart-type-stacked-100-spline-area-series.md
-              new: false
-            - name: 積層エリア チャート
-              href: data-chart-type-stacked-area-series.md
-              new: false
-            - name: 積層スプライン エリア チャート
-              href: data-chart-type-stacked-spline-area-series.md
-              new: false
-            - name: ステップ エリア チャート
-              href: data-chart-type-category-step-area-series.md
-              new: false
-        - name: 棒チャートと縦棒チャート
-          href: data-chart-types-overview-column.md
-          new: false
-          items:
-            - name: 棒チャート
-              href: data-chart-type-category-bar-series.md
-              new: false
-            - name: 縦棒チャート
-              href: data-chart-type-category-column-series.md
-              new: false
-            - name: ラジアル縦棒チャート
-              href: data-chart-type-radial-column-series.md
-              new: false
-            - name: 範囲縦棒チャート
-              href: data-chart-type-range-column-series.md
-              new: false
-            - name: 積層 100 棒チャート
-              href: data-chart-type-stacked-100-bar-series.md
-              new: false
-            - name: 積層 100 縦棒チャート
-              href: data-chart-type-stacked-100-column-series.md
-              new: false
-            - name: 積層棒チャート
-              href: data-chart-type-stacked-bar-series.md
-              new: false
-            - name: 積層縦棒チャート
-              href: data-chart-type-stacked-column-series.md
-              new: false
-            - name: ウォーターフォール チャート
-              href: data-chart-type-category-waterfall-series.md
-              new: false
-        - name: ファイナンシャル
-          href: data-chart-types-overview-financial.md
-          new: false
-          items:
-            - name: ファイナンシャルローソク足チャート
-              href: data-chart-type-financial-candlestick-series.md
-              new: false
-            - name: ファイナンシャル OHLC チャート
-              href: data-chart-type-financial-ohlc-series.md
-              new: false
-            - name: ファイナンシャル エリア インジケーター
-              href: data-chart-type-financial-area-indicators.md
-              new: false
-            - name: ファイナンシャル縦棒インジケーター
-              href: data-chart-type-financial-column-indicators.md
-              new: false
-            - name: ファイナンシャル ライン インジケーター
-              href: data-chart-type-financial-line-indicators.md
-              new: false
-            - name: ファイナンシャル オーバーレイ
-              href: data-chart-type-financial-overlays.md
-              new: false
-        - name: 折れ線チャート
-          href: data-chart-types-overview-line.md
-          new: false
-          items:
-            - name: 折れ線チャート
-              href: data-chart-type-category-line-series.md
-              new: false
-            - name: 極座標折れ線チャート
-              href: data-chart-type-polar-line-series.md
-              new: false
-            - name: 極座標スプラインチャート
-              href: data-chart-type-polar-spline-series.md
-              new: false
-            - name: ラジアル折れ線チャート
-              href: data-chart-type-radial-line-series.md
-              new: false
-            - name: 散布等高線チャート
-              href: data-chart-type-scatter-contour-series.md
-              new: false
-            - name: 散布折れ線チャート
-              href: data-chart-type-scatter-line-series.md
-              new: false
-            - name: 散布スプライン チャート
-              href: data-chart-type-scatter-spline-series.md
-              new: false
-            - name: 散布ポリライン チャート
-              href: data-chart-type-scatter-polyline-series.md
-              new: false
-            - name: スプライン チャート
-              href: data-chart-type-category-spline-series.md
-              new: false
-            - name: 積層 100 折れ線チャート
-              href: data-chart-type-stacked-100-line-series.md
-              new: false
-            - name: 積層 100 スプライン チャート
-              href: data-chart-type-stacked-100-spline-series.md
-              new: false
-            - name: 積層折れ線チャート
-              href: data-chart-type-stacked-line-series.md
-              new: false
-            - name: 積層スプラインチャート
-              href: data-chart-type-stacked-spline-series.md
-              new: false
-            - name: ステップ折れ線チャート
-              href: data-chart-type-category-step-line-series.md
-              new: false
-        - name: 円チャートとドーナツ チャート
-          href: data-chart-types-overview-pie.md
-          new: false
-          items:
-            - name: ドーナツ チャート
-              href: doughnut-chart.md
-              new: false
-            - name: 円チャート
-              href: pie-chart.md
-              new: false
-            - name: ラジアル円チャート
-              href: data-chart-type-radial-pie-series.md
-              new: false
-        - name: ポイント チャート
-          href: data-chart-types-overview-point.md
-          new: false
-          items:
-            - name: ポイント チャート
-              href: data-chart-type-category-point-series.md
-              new: false
-            - name: 極座標散布チャート
-              href: data-chart-type-polar-scatter-series.md
-              new: false
-            - name: 散布バブル チャート
-              href: data-chart-type-scatter-bubble-series.md
-              new: false
-            - name: 散布マーカー チャート
-              href: data-chart-type-scatter-point-series.md
-              new: false
-          # - name: Scatter HD Series
-          #  href: data-chart-type-scatter-hd-series.md
-          #  new: true
-    - name: 凡例
-      href: data-chart-legends.md
-      new: false
-    - name: ナビゲーション
-      href: data-chart-navigation.md
-      new: false
-    - name: 同期
-      href: data-chart-synchronization.md
-      new: false
-    - name: タイトルとサブタイトル
-      href: data-chart-titles.md
-      new: false
-    - name: シリーズ注釈
-      href: data-chart-series-annotations.md
-      new: false
-    - name: シリーズのハイライト
-      href: data-chart-series-highlighting.md
-      new: false
-    - name: シリーズのマーカー
-      href: data-chart-series-markers.md
-      new: false
-    - name: シリーズのツールチップ
-      href: data-chart-series-tooltips.md
-      new: false
-    - name: シリーズ トレンドライン
-      href: data-chart-series-trendlines.md
-      new: false
-    - name: データソース
-      href: data-chart-data-sources.md
-      new: false
-    #- name: Data Triangulation
-    #  href: data-chart-data-triangulation.md
-    #  new: true
-    #- name: Series Error Bars
-    #  href: data-chart-series-errorbars.md
-    #  new: true
-    - name: 値オーバーレイ
-      href: data-chart-value-overlay.md
-      new: true
-- name: ファイナンシャル チャート
-  href: financial-chart.md
-  new: false
-  items:
-    - name: リアルタイムデータのバインド
-      href: financial-chart-high-frequency.md
-      new: false
-    - name: 大量データのバインド
-      href: financial-chart-high-volume.md
-      new: false
-    - name: 複数データソースのバインド
-      href: financial-chart-multiple-data.md
-      new: false
-    - name: チャートの注釈
-      href: financial-chart-annotations.md
-      new: false
-    - name: チャートのトレンドライン
-      href: financial-chart-trendlines.md
-      new: false
-    - name: チャートの軸タイプ
-      href: financial-chart-axis-types.md
-      new: false
-    - name: チャートのパフォーマンス
-      href: financial-chart-performance.md
-      new: false
-    - name: チャートペイン
-      href: financial-chart-panes.md
-      new: false
+#- name: データ チャート
+#  href: data-chart.md
+#  new: false
+#  items:
+#    - name: 軸
+#      href: data-chart-axis-types.md
+#      new: false
+#      items:
+#        - name: 軸の注釈
+#          href: data-chart-axis-annotations.md
+#          new: false
+#        - name: 軸設定
+#          href: data-chart-axis-settings.md
+#          new: false
+#        #- name: Axis Scales
+#        #  href: data-chart-axis-scales.md
+#        #  new: true
+#        - name: 軸の位置
+#          href: data-chart-axis-locations.md
+#          new: false
+#        - name: 軸の共有
+#          href: data-chart-axis-sharing.md
+#          new: false
+#    - name: チャート タイプ
+#      href: data-chart-series-types.md
+#      new: false
+#      items:
+#        - name: エリア
+#          href: data-chart-types-overview-area.md
+#          new: false
+#          items:
+#            - name: エリア チャート
+#              href: data-chart-type-category-area-series.md
+#              new: false
+#            - name: 極座標エリア チャート
+#              href: data-chart-type-polar-area-series.md
+#              new: false
+#            - name: 極座標スプライン エリア チャート
+#              href: data-chart-type-polar-spline-area-series.md
+#              new: false
+#            - name: ラジアル エリア チャート
+#              href: data-chart-type-radial-area-series.md
+#              new: false
+#           - name: 範囲エリア チャート
+#              href: data-chart-type-range-area-series.md
+#              new: false
+#            - name: 散布エリア チャート
+#              href: data-chart-type-scatter-area-series.md
+#              new: false
+#           - name: 散布ポリゴンチャート
+#              href: data-chart-type-scatter-polygon-series.md
+#              new: false
+#            - name: スプライン エリア チャート
+#              href: data-chart-type-category-spline-area-series.md
+#              new: false
+#            - name: 積層 100 エリア チャート
+#             href: data-chart-type-stacked-100-area-series.md
+#              new: false
+#            - name: 積層 100 スプライン エリア チャート
+#             href: data-chart-type-stacked-100-spline-area-series.md
+#              new: false
+#           - name: 積層エリア チャート
+#              href: data-chart-type-stacked-area-series.md
+#              new: false
+#            - name: 積層スプライン エリア チャート
+#              href: data-chart-type-stacked-spline-area-series.md
+#              new: false
+#            - name: ステップ エリア チャート
+#              href: data-chart-type-category-step-area-series.md
+#             new: false
+#        - name: 棒チャートと縦棒チャート
+#          href: data-chart-types-overview-column.md
+#          new: false
+#          items:
+#            - name: 棒チャート
+#              href: data-chart-type-category-bar-series.md
+#              new: false
+#            - name: 縦棒チャート
+#              href: data-chart-type-category-column-series.md
+#              new: false
+#            - name: ラジアル縦棒チャート
+#              href: data-chart-type-radial-column-series.md
+#              new: false
+#            - name: 範囲縦棒チャート
+#              href: data-chart-type-range-column-series.md
+#              new: false
+#            - name: 積層 100 棒チャート
+#              href: data-chart-type-stacked-100-bar-series.md
+#              new: false
+#            - name: 積層 100 縦棒チャート
+#              href: data-chart-type-stacked-100-column-series.md
+#              new: false
+#            - name: 積層棒チャート
+#              href: data-chart-type-stacked-bar-series.md
+#              new: false
+#            - name: 積層縦棒チャート
+#              href: data-chart-type-stacked-column-series.md
+#              new: false
+#            - name: ウォーターフォール チャート
+#              href: data-chart-type-category-waterfall-series.md
+#              new: false
+#       - name: ファイナンシャル
+#          href: data-chart-types-overview-financial.md
+#          new: false
+#          items:
+#            - name: ファイナンシャルローソク足チャート
+#              href: data-chart-type-financial-candlestick-series.md
+#              new: false
+#            - name: ファイナンシャル OHLC チャート
+#              href: data-chart-type-financial-ohlc-series.md
+#              new: false
+#            - name: ファイナンシャル エリア インジケーター
+#              href: data-chart-type-financial-area-indicators.md
+#              new: false
+#            - name: ファイナンシャル縦棒インジケーター
+#              href: data-chart-type-financial-column-indicators.md
+#              new: false
+#            - name: ファイナンシャル ライン インジケーター
+#              href: data-chart-type-financial-line-indicators.md
+#              new: false
+#            - name: ファイナンシャル オーバーレイ
+#              href: data-chart-type-financial-overlays.md
+#              new: false
+#        - name: 折れ線チャート
+#          href: data-chart-types-overview-line.md
+#          new: false
+#          items:
+#            - name: 折れ線チャート
+#              href: data-chart-type-category-line-series.md
+#              new: false
+#            - name: 極座標折れ線チャート
+#              href: data-chart-type-polar-line-series.md
+#              new: false
+#            - name: 極座標スプラインチャート
+#              href: data-chart-type-polar-spline-series.md
+#              new: false
+#            - name: ラジアル折れ線チャート
+#              href: data-chart-type-radial-line-series.md
+#              new: false
+#            - name: 散布等高線チャート
+#              href: data-chart-type-scatter-contour-series.md
+#              new: false
+#            - name: 散布折れ線チャート
+#              href: data-chart-type-scatter-line-series.md
+#              new: false
+#            - name: 散布スプライン チャート
+#              href: data-chart-type-scatter-spline-series.md
+#              new: false
+#            - name: 散布ポリライン チャート
+#              href: data-chart-type-scatter-polyline-series.md
+#              new: false
+#            - name: スプライン チャート
+#              href: data-chart-type-category-spline-series.md
+#              new: false
+#            - name: 積層 100 折れ線チャート
+#              href: data-chart-type-stacked-100-line-series.md
+#              new: false
+#            - name: 積層 100 スプライン チャート
+#              href: data-chart-type-stacked-100-spline-series.md
+#              new: false
+#            - name: 積層折れ線チャート
+#              href: data-chart-type-stacked-line-series.md
+#              new: false
+#            - name: 積層スプラインチャート
+#              href: data-chart-type-stacked-spline-series.md
+#              new: false
+#            - name: ステップ折れ線チャート
+#              href: data-chart-type-category-step-line-series.md
+#              new: false
+#      - name: 円チャートとドーナツ チャート
+#          href: data-chart-types-overview-pie.md
+#          new: false
+#          items:
+#            - name: ドーナツ チャート
+#              href: doughnut-chart.md
+#              new: false
+#            - name: 円チャート
+#              href: pie-chart.md
+#              new: false
+#            - name: ラジアル円チャート
+#              href: data-chart-type-radial-pie-series.md
+#              new: false
+#        - name: ポイント チャート
+#          href: data-chart-types-overview-point.md
+#          new: false
+#          items:
+#            - name: ポイント チャート
+#              href: data-chart-type-category-point-series.md
+#              new: false
+#           - name: 極座標散布チャート
+#              href: data-chart-type-polar-scatter-series.md
+#              new: false
+#            - name: 散布バブル チャート
+#              href: data-chart-type-scatter-bubble-series.md
+#              new: false
+#            - name: 散布マーカー チャート
+#              href: data-chart-type-scatter-point-series.md
+#              new: false
+#          # - name: Scatter HD Series
+#          #  href: data-chart-type-scatter-hd-series.md
+#          #  new: true
+#    - name: 凡例
+#      href: data-chart-legends.md
+#      new: false
+#    - name: ナビゲーション
+#      href: data-chart-navigation.md
+#      new: false
+#    - name: 同期
+#      href: data-chart-synchronization.md
+#      new: false
+#    - name: タイトルとサブタイトル
+#      href: data-chart-titles.md
+#      new: false
+#    - name: シリーズ注釈
+#      href: data-chart-series-annotations.md
+#      new: false
+#    - name: シリーズのハイライト
+#      href: data-chart-series-highlighting.md
+#      new: false
+#    - name: シリーズのマーカー
+#      href: data-chart-series-markers.md
+#      new: false
+#   - name: シリーズのツールチップ
+#      href: data-chart-series-tooltips.md
+#      new: false
+#    - name: シリーズ トレンドライン
+#      href: data-chart-series-trendlines.md
+#      new: false
+#    - name: データソース
+#      href: data-chart-data-sources.md
+#      new: false
+#    #- name: Data Triangulation
+#    #  href: data-chart-data-triangulation.md
+#    #  new: true
+#    #- name: Series Error Bars
+#    #  href: data-chart-series-errorbars.md
+#    #  new: true
+#    - name: 値オーバーレイ
+#      href: data-chart-value-overlay.md
+#     new: true
+#- name: ファイナンシャル チャート
+#  href: financial-chart.md
+#  new: false
+#  items:
+#    - name: リアルタイムデータのバインド
+#      href: financial-chart-high-frequency.md
+#      new: false
+#    - name: 大量データのバインド
+#      href: financial-chart-high-volume.md
+#      new: false
+#    - name: 複数データソースのバインド
+#      href: financial-chart-multiple-data.md
+#      new: false
+#    - name: チャートの注釈
+#      href: financial-chart-annotations.md
+#      new: false
+#    - name: チャートのトレンドライン
+#      href: financial-chart-trendlines.md
+#      new: false
+#    - name: チャートの軸タイプ
+#      href: financial-chart-axis-types.md
+#      new: false
+#    - name: チャートのパフォーマンス
+#      href: financial-chart-performance.md
+#      new: false
+#    - name: チャートペイン
+#      href: financial-chart-panes.md
+#      new: false
 #    - name: Custom Indicators
 #      href: financial-chart-custom-indicators.md
 #      new: false
@@ -828,14 +836,130 @@
 #    - name: Tooltip Templates
 #      href: financial-chart-tooltip-template.md
 #      new: false
-- name: スパークライン
-  href: sparkline.md
+#- name: スパークライン
+#  href: sparkline.md
+#  new: false
+# ==============================================
+# keeping old TOC nodes above
+# ported new TOC nodes from xplat-docfx repo:
+# ==============================================
+- name: チャート
+  href: charts/chart-overview.md
+  header: true
+- name: リアルタイムデータのバインド
+  href: category-chart-high-frequency.md
   new: false
+- name: 大量データのバインド
+  href: category-chart-high-volume.md
+  new: false
+- name: 複数データソースのバインド
+  href: financial-chart-multiple-data.md
+  new: false
+- name: エリア チャート
+  href: charts/types/area-chart.md
+  new: false
+- name: 棒チャート
+  href: charts/types/bar-chart.md
+  new: false
+- name: バブル チャート
+  href: charts/types/bubble-chart.md
+  new: false
+- name: 縦棒チャート
+  href: charts/types/column-chart.md
+  new: false
+- name: 複合チャート
+  href: charts/types/composite-chart.md
+  new: false
+- name: ドーナツ チャート
+  href: charts/types/donut-chart.md
+  new: false
+- name: ファイナンシャル / 株価チャート
+  href: charts/types/stock-chart.md
+  new: false
+- name: 折れ線チャート
+  href: charts/types/line-chart.md
+  new: false
+- name: 円チャート
+  href: charts/types/pie-chart.md
+  new: false
+- name: ポイント チャート
+  href: charts/types/point-chart.md
+  new: false
+- name: 極座標チャート
+  href: charts/types/polar-chart.md
+  new: false
+- name: ラジアル チャート
+  href: charts/types/radial-chart.md
+  new: false
+- name: 散布図
+  href: charts/types/scatter-chart.md
+  new: false
+- name: シェープ チャート
+  href: charts/types/shape-chart.md
+  new: false
+- name: スプライン チャート
+  href: charts/types/spline-chart.md
+  new: false
+- name: スパークライン
+  href: charts/types/sparkline-chart.md
+  new: false
+- name: 積層型チャート
+  href: charts/types/stacked-chart.md
+  new: false
+- name: ステップ チャート
+  href: charts/types/step-chart.md
+  new: false
+- name: ツリーマップ
+  href: charts/types/treemap-chart.md
+  new: false
+- name: チャート機能
+  href: charts/chart-features.md
+  new: false
+  items:
+    - name: 軸グリッド線
+      href: charts/features/chart-axis-gridlines.md
+      new: false
+    - name: 軸レイアウト
+      href: charts/features/chart-axis-layouts.md
+      new: false
+    - name: 軸オプション
+      href: charts/features/chart-axis-options.md
+      new: false
+    - name: チャート アニメーション
+      href: charts/features/chart-animations.md
+      new: false
+    - name: チャートの注釈
+      href: charts/features/chart-annotations.md
+      new: false
+    - name: チャート強調表示
+      href: charts/features/chart-highlighting.md
+      new: false
+    - name: チャート マーカー
+      href: charts/features/chart-markers.md
+      new: false
+    - name: チャート ナビゲーション
+      href: charts/features/chart-navigation.md
+      new: false
+    - name: チャート オーバーレイ
+      href: charts/features/chart-overlays.md
+      new: false
+    - name: チャートのパフォーマンス
+      href: charts/features/chart-performance.md
+      new: false
+    - name: チャートの同期
+      href: charts/features/chart-synchronization.md
+      new: false
+    - name: チャート ツールチップ
+      href: charts/features/chart-tooltips.md
+      new: false
+    - name: チャート トレンドライン
+      href: charts/features/chart-trendlines.md
+      new: false
+    - name: ズーム スライダー
+      href: zoomslider-overview.md
+      new: false
 - name: マップ
   header: true
-- name: ツリーマップ
-  href: treemap-overview.md
-  new: false
 - name: マップ
   href: geo-map.md
   new: false
@@ -956,56 +1080,78 @@
   new: false
 - name: スタイルとテーマ
   header: true
-  sortable: true
-- name: Themes
+  sortable: false
+- name: 概要
   href: themes/index.md
   new: false
+- name: パレット
+  href: themes/palettes.md
+  new: false
+- name: エレベーション
+  href: themes/elevations.md
+  new: false
+- name: タイポグラフィ
+  href: themes/typography.md
+  new: false
+- name: 表示密度
+  href: display-density.md
+- name: Sass
+  new: false
   items:
-    - name: パレット
-      href: themes/palette.md
+    - name: 概要
+      href: themes/sass/index.md
       new: false
-    - name: スキーマ
-      href: themes/schemas.md
+    - name: 構成
+      href: themes/sass/configuration.md
+      new: true
+    - name: パレット
+      href: themes/sass/palettes.md
+      new: false
+    - name: エレベーション
+      href: themes/sass/elevations.md
       new: false
     - name: タイポグラフィ
-      href: themes/typography.md
+      href: themes/sass/typography.md
+      new: false
+    - name: スキーマ
+      href: themes/sass/schemas.md
+      new: false
+    - name: アニメーション
+      href: themes/sass/animations.md
+      new: false
+    - name: 丸み
+      href: themes/sass/roundness.md
       new: false
     - name: グローバル テーマ
-      href: themes/global-theme.md
+      href: themes/sass/global-themes.md
       new: false
     - name: コンポーネント テーマ
-      href: themes/component-themes.md
+      href: themes/sass/component-themes.md
       new: false
     - name: 定義済みのテーマ
       new: false
       items:
         - name: Material
-          href: themes/themes-list/material.md
+          href: themes/sass/presets/material.md
           new: false
         - name: Fluent
-          href: themes/themes-list/fluent.md
+          href: themes/sass/presets/fluent.md
           new: false
         - name: Bootstrap
-          href: themes/themes-list/bootstrap.md
+          href: themes/sass/presets/bootstrap.md
           new: false
         - name: Indigo
-          href: themes/themes-list/indigo.md
+          href: themes/sass/presets/indigo.md
           new: true
-    - name: 印刷スタイル
-      href: themes/printing-styles.md
-      new: false
-    - name: CSS 変数を使用したテーマ設定
-      href: themes/css-variables-theming.md
-      new: false
-- name: 丸み付け
-  href: roundness.md
-  new: false
-- name: シャドウ
-  href: shadows.md
-- name: アニメーション
-  href: animations.md
-- name: 密度の表示
-  href: display-density.md
+    - name: その他
+      new: true
+      items:
+      - name: 印刷スタイル
+        href: themes/misc/printing-styles.md
+        new: false
+      - name: Bootstrap のテーマ
+        href: themes/misc/bootstrap-theming.md
+        new: true
 - name: データ入力と表示
   header: true
   sortable: true
@@ -1099,7 +1245,7 @@
     new: false
 - name: Drag and Drop
   href: drag-drop.md
-  new: true
+  new: false
 - name: Zoom Slider
   new: false
   href: zoomslider-overview.md
@@ -1125,6 +1271,7 @@
   new: false
 - name: Bottom Navigation
   href: tabbar.md
+  updated: true
 - name: Tabs
   href: tabs.md
   new: false
@@ -1158,6 +1305,7 @@
 - name: Date Time Editor
   href: date-time-editor.md
   new: false
+  updated: true
 - name: Calendar
   href: calendar.md
   updated: true
@@ -1167,6 +1315,7 @@
 - name: Date Range Picker
   href: date-range-picker.md
   new: false
+  updated: true
 - name: Month Picker
   href: month-picker.md
   new: false

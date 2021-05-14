@@ -37,9 +37,238 @@ ng update @angular/cli
 ## Additional manual changes
 
 
-Unfortunately not all changes can be automatically updated. Changes bellow are split into sections as they occur in the versions, so if any updates are required you should start from your current version and apply further updates from bottom to top.
+Unfortunately not all changes can be automatically updated. Changes below are split into sections as they occur in the versions, so if any updates are required you should start from your current version and apply further updates from bottom to top.
 
 For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from the "From 6.x .." section apply those changes and work your way up:
+
+## From 11.1.x to 12.0.x
+### Themes
+* Breaking Changes:
+    * `IgxAvatar` theme has been simplified. The number of theme params (`igx-avatar-theme`) has been reduced significantly and no longer includes prefixed parameters(`icon-*`, `initials-*`, `image-*`) and suffixed parameters(`border-radius-*`). Updates performed with `ng update` will migrate existing avatar themes, but some additional tweaking may be required to account for the absence of prefixed and suffixed params.
+
+    You will need to modify existing type specific avatar themes in the following way:
+
+    For example, this:
+
+        ```scss
+        $avatar-theme: igx-avatar-theme(
+            $initials-background: blue,
+            $initials-color: orange,
+            $icon-background: blue,
+            $icon-color: orange,
+        );
+
+        @include igx-avatar($avatar-theme);
+        ```
+
+    Needs to be transformed into this:
+
+        ```scss
+        $initials-avatar: igx-avatar-theme(
+            $background: blue,
+            $color: orange,
+        );
+
+        $icon-avatar: igx-avatar-theme(
+            $background: blue,
+            $color: orange,
+        );
+
+        .initials-avatar {
+            @include igx-avatar($initials-avatar);
+        }
+
+        .icon-avatar {
+            @include igx-avatar($icon-avatar);
+        }
+        ```
+
+    * `IgxButton` theme has been simplified. The number of theme params (`igx-button-theme`) has been reduced significantly and no longer includes prefixed parameters (`flat-*`, `raised-*`, etc.). Updates performed with `ng update` will migrate existing button themes, but some additional tweaking may be required to account for the absence of prefixed params.
+
+    In order to achieve the same result as from the code snippet below.
+
+        ```html
+        <button igxButton="raised">Raised button</button>
+        <button igxButton="outlined">Outlined button</button>
+        ```
+        ```scss
+        $my-button-theme: igx-button-theme(
+            $raised-background: red,
+            $outlined-outline-color: green
+        );
+
+        @include igx-css-vars($my-button-theme);
+        ```
+    You have to create a separate theme for each button type and scope it to a CSS selector.
+        ```html
+        <div class="my-raised-btn">
+            <button igxButton="raised">Raised button</button>
+        </div>
+        <div class="my-outlined-btn">
+            <button igxButton="outlined">Outlined button</button>
+        </div>
+        ```
+
+        ```scss
+        $my-raised-button: igx-button-theme(
+            $background: red
+        );
+
+        $my-outlined-button: igx-button-theme(
+            $border-color: red
+        );
+
+        .my-raised-btn {
+            @include igx-css-vars($my-raised-button);
+         }
+
+        .my-outlined-btn {
+            @include igx-css-vars($my-outlined-button);
+        }
+        ```
+    As you can see, since the `igx-button-theme` params now have the same names for each button type, we have to scope our button themes to a CSS selector in order to have different colors for different types.
+
+    Here you can see all the [available properties](https://www.infragistics.com/products/ignite-ui-angular/docs/sass/latest/index.html#function-igx-button-theme) of the `igx-button-theme`
+
+    * The `igx-typography` mixin is no longer implicitly included with `igx-core`. To use our typography styles you have to include the mixin explicitly after `igx-core` and before `igx-theme`:
+
+    ```scss
+    // in styles.scss
+
+    @include igx-core();
+
+    @include igx-typography(
+        $font-family: $material-typeface,
+        $type-scale: $material-type-scale
+    );
+
+    @include igx-theme();
+    ```
+
+    > [!IMPORTANT]
+    > The `igx-core` mixin should always be included first.
+
+    For each theme included in Ignite UI for Angular we provide specific `font-family` and `type-scale` variables which you can use:
+
+    | **Theme** | **Font Family** | **Type Scale** |
+    |----------------|-----------------|-----------------|
+    | Material | $material-typeface | $material-type-scale |
+    | Fluent | $fluent-typeface | $fluent-type-scale |
+    | Bootstrap | $bootstrap-typeface | $bootstrap-type-scale |
+    | Indigo | $indigo-typeface | $indigo-type-scale |
+
+### IgxBottomNav component
+
+The [**IgxBottomNavComponent**]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html) was completely refactored in order to provide more flexible and descriptive way to define tab headers and contents. It is recommended that you update via **ng update** in order to migrate the existing **igx-bottom-nav** definitions to the new ones.
+
+
+* Template
+    * The new structure defines bottom navigation item components each wrapping a header and a content component. The headers usually contain an icon ([`Material guidelines`](https://material.io/components/bottom-navigation#usage)) but may as well have a label or any other custom content.
+    * For header styling purposes we introduced two new directives - `igxBottomNavHeaderLabel` and `igxBottomNavHeaderIcon`.
+    * Since the header component now allows adding any content, the `igxTab` directive, which was previously used to retemplate the tab's header, was removed because it is no longer necessary.
+    * When the component is used in navigation scenario, the `routerLink` directive needs to be attached to the header component.
+
+    ```html
+    <igx-bottom-nav>
+        <igx-bottom-nav-item>
+            <igx-bottom-nav-header>
+                <igx-icon igxBottomNavHeaderIcon>folder</igx-icon>
+                <span igxBottomNavHeaderLabel>Tab 1</span>
+            </igx-bottom-nav-header>
+            <igx-bottom-nav-content>
+                Content 1
+            </igx-bottom-nav-content>
+        </igx-bottom-nav-item>
+        ...
+    </igx-bottom-nav>
+    ```
+* API changes
+    * The `id`, `itemStyle`, `panels`, `viewTabs`, `contentTabs` and `tabs` properties were removed. Currently, the [`items`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html#items) property returns the collection of tabs.
+    * The following properties were changed:
+        * The tab item's `isSelected` property was renamed to [`selected`]({environment:angularApiUrl}/classes/igxbottomnavitemcomponent.html#selected).
+        * The `selectedTab` property was renamed to [`selectedItem`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html#selecteditem).
+    * The `onTabSelected` and `onTabDeselected` events were removed. We introduced three new events, [`selectedIndexChanging`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html#selectedindexchanging),[`selectedIndexChange`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html#selectedindexchange) and [`selectedItemChange`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html#selecteditemchange), which provide more flexibility and control over the tabs' selection. Unfortunately, having an adequate migration for these event changes is complicated to say the least, so any errors should be handled at project level.
+
+### IgxTabs component
+The [**IgxTabsComponent**]({environment:angularApiUrl}/classes/igxtabscomponent.html) was completely refactored in order to provide more flexible and descriptive way to define tab headers and contents. It is recommended that you update via **ng update** in order to migrate the existing **igx-tabs** definitions to the new ones.
+
+
+* Template
+    * The new structure defines tab item components each wrapping a header and a content component. The headers usually contain an icon and a label but may as well have any other custom content.
+    * For header styling purposes we introduced two new directives - `igxTabHeaderLabel` and `igxTabHeaderIcon`.
+    * Since the header component now allows adding any content, the `igxTab` directive, which was previously used to retemplate the tab's header, was removed because it is no longer necessary.
+    * When the component is used in navigation scenario, the `routerLink` directive needs to be attached to the header component.
+
+    ```html
+    <igx-tabs>
+        <igx-tab-item>
+            <igx-tab-header>
+                <igx-icon igxTabHeaderIcon>folder</igx-icon>
+                <span igxTabHeaderLabel>Tab 1</span>
+            </igx-tab-header>
+            <igx-tab-content>
+                <h1>Tab 1 Content</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </igx-tab-content>
+        </igx-tab-item>
+    ...
+    </igx-tabs>
+    ```
+* API changes
+    * The `id`, `groups`, `viewTabs`, `contentTabs` and `tabs` properties were removed. Currently, the [`items`]({environment:angularApiUrl}/classes/igxtabscomponent.html#items) property returns the collection of tabs.
+    * The following properties were changed:
+        * The tab item's `isSelected` property was renamed to [`selected`]({environment:angularApiUrl}/classes/igxtabitemcomponent.html#selected).
+        * The `selectedTabItem` property was shortten to [`selectedItem`]({environment:angularApiUrl}/classes/igxtabscomponent.html#selecteditem).
+        * The `type` property, with its contentFit and fixed options, is no longer available. The header sizing & positioning mode is currently controlled by the [`tabAlignment`]({environment:angularApiUrl}/classes/igxtabscomponent.html#tabalignment) input property which accepts four different values - start (default), center, end and justify. The old `contentFit` type corresponds to the current `start` alignment value and the old `fixed` type - to the current `justify` value.
+    * The `tabItemSelected` and `tabItemDeselected` events were removed. We introduced three new events, [`selectedIndexChanging`]({environment:angularApiUrl}/classes/igxtabscomponent.html#selectedindexchanging), [`selectedIndexChange`]({environment:angularApiUrl}/classes/igxtabscomponent.html#selectedindexchange) and [`selectedItemChange`]({environment:angularApiUrl}/classes/igxtabscomponent.html#selecteditemchange), which provide more flexibility and control over the tabs' selection. Unfortunately, having an adequate migration for these event changes is complicated to say the least, so any errors should be handled at project level.
+
+### IgxGridComponent, IgxTreeGridComponent, IgxHierarchicalGridComponent
+* *IgxGridRowComponent*, *IgxTreeGridRowComponent*, *IgxHierarchicalRowComponent*, *IgxGridGroupByRowComponent* are no longer exposed in the public API.
+* Public APIs, which used to return an instance of one of the above, now return objects implementing the public [`RowType`]({environment:angularApiUrl}/interfaces/rowtype.html) interface:
+
+```ts
+const row = grid.getRowByIndex(0);
+const row = grid.getRowByKey(2);
+const row = cell.row;
+```
+
+While the public API of [`RowType`]({environment:angularApiUrl}/interfaces/rowtype.html) is the same as what *IgxRowComponent* and others used to expose, please note:
+
+* *toggle* method, exposed by the *IgxHierarchicalRowComponent* is not available. Use [`expanded`]({environment:angularApiUrl}/interfaces/rowtype.html#expanded) property for all row types:
+
+```ts
+grid.getRowByIndex(0).expanded = false;
+```
+*row.rowData* and *row.rowID* are deprecated and will be entirely removed with version 13. Please use *row.data* and *row.key* instead.
+
+* *row* property in the event arguments emitted by *onRowPinning*, and *dragData* property in the event arguments emitted by *onRowDragStart*, *onRowDragEnd* is now implementing [`RowType`]({environment:angularApiUrl}/interfaces/rowtype.html)
+* *ng update* will migrate most of the uses of *IgxGridRowComponent*, *IgxTreeGridRowComponent*, *IgxHierarchicalRowComponent*, *IgxGridGroupByRowComponent* , like imports, typings and casts. If a place in your code using any of the above is not migrated, just remove the typing/cast, or change it with [`RowType`]({environment:angularApiUrl}/interfaces/rowtype.html).
+* *getRowByIndex* will now return a [`RowType`]({environment:angularApiUrl}/interfaces/rowtype.html) object, if the row at that index is a summary row (previously used to returned *undefined*). *row.isSummaryRow* and *row.isGroupByRow* return true if the row at the index is a summary row or a group by row.
+### IgxInputGroupComponent
+* The `disabled` property has been removed. The property was misleading, as the state of the input group was always managed by the underlying `igxInput`.
+    * Running `ng update` will handle all instances in which `[disabled]` was used as an `@Input` in templates.
+    * If you are referencing the property in a `.ts` file:
+    ```typescript
+    export class CustomComponent {
+        public inputGroup: IgxInputGroupComponent
+        ...
+        this.inputGroup.disabled = false;
+    }
+    ```
+
+    you should please manually update your code to reference the underlying input directive's `disabled` property:
+    ```typescript
+    export class CustomComponent {
+        public input: IgxInputDirective
+        ...
+        this.input.disabled = false;
+    }
+    ```
+
+### IgxDateTimeDirective, IgxDatePickerComponent, IgxTimePickerComponent, IgxDateRangePickerComponent
+
+* The `value` property for IgxDateTimeDirective, IgxDatePickerComponent, IgxTimePickerComponent, IgxDateRangePickerComponent now accepts ISO 8601 string format. This means that `value` type could be `Date` or `string`.
+* The `inputFormat` property of IgxDateTimeDirective, IgxDatePickerComponent, IgxTimePickerComponent, IgxDateRangePickerComponent now doesn't accept `y` for the year part. You should update it to `yy`.
 
 ## From 10.2.x to 11.0.x
 * IgxGrid, IgxTreeGrid, IgxHierarchicalGrid
@@ -68,7 +297,6 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
     </igx-grid>
     ```
 
-
 ## From 9.0.x to 10.0.x
 * IgxDropdown
     * The display property of the dropdown item has been changed from `flex` to `block`. We have done this in order to have truncated text enabled by default. Due to that change, if there is more than text in the content of the dropdown item, the layout needs to be handled on the application level.
@@ -95,7 +323,7 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
     ```
 
 ## From 8.x.x to 9.0.x
-Due to a breaking change in Angular 9 Hammer providers are no longer implicitly added 
+Due to a breaking change in Angular 9 Hammer providers are no longer implicitly added
 [please, refer to the following document for details:](https://github.com/angular/angular/blob/master/CHANGELOG.md#breaking-changes-9 ) Because of this the following components require `HammerModule` to be imported in the root module of the application in order for **touch** interactions to work as expected:
 
 * igxGrid

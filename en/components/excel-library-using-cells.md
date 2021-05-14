@@ -11,10 +11,12 @@ The [`WorksheetCell`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/
 
 ## Angular Using Cells Example
 
-<div class="sample-container loading" style="height: 150px">
-    <iframe id="excel-library-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/excel/excel-library-working-with-cells' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Using Cells Example"></iframe>
-</div>
-
+<code-view style="height: 150px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/excel/excel-library-working-with-cells"
+           alt="Angular Using Cells Example"
+           github-src="excel/excel-library/working-with-cells">
+</code-view>
 
 <div class="divider--half"></div>
 

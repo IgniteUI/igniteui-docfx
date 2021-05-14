@@ -10,13 +10,10 @@ The Ignite UI for Angular map component, the `ShapeDataSource` class loads geo-s
 
 ## Demo
 
-<div class="sample-container loading" style="height: 400px">
-    <iframe id="geo-map-binding-shp-polylines-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-binding-shp-polylines' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="geo-map-binding-shp-polylines-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
-    </button>
-</div>
+<code-view style="height: 400px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-binding-shp-polylines"  >
+</code-view>
 
 <div class="divider--half"></div>
 
@@ -39,7 +36,7 @@ The following code creates an instance of the `ShapeDataSource` object for loadi
 
 ## Binding Shapefiles
 
-In the map component, Geographic Series are used for displaying geo-spatial data that is loaded from shape files. All types of Geographic Series have an `ItemsSource` property which can be bound to an array of objects. The `ShapeDataSource` is an example such array because it contains a list of [`IgxShapefileRecord`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapefilerecord.html) objects.
+In the map component, Geographic Series are used for displaying geo-spatial data that is loaded from shape files. All types of Geographic Series have an `DataSource` property which can be bound to an array of objects. The `ShapeDataSource` is an example such array because it contains a list of [`IgxShapefileRecord`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapefilerecord.html) objects.
 
 The [`IgxShapefileRecord`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapefilerecord.html) class provides properties for storing geo-spatial data, listed in the following table.
 

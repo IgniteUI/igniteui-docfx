@@ -82,7 +82,9 @@ As with [`groupingExpressions`]({environment:angularApiUrl}/classes/igxgridcompo
 
 ```typescript
     const groupRow = this.grid.groupsRecords.find(r => r.value === "France");
+    const groupRow = this.grid.getRowByIndex(0).groupRow;
     grid.toggleGroup(groupRow);
+    groupRow.expanded = false;
 ```
 
 Groups can be created expanded (***default***) or collapsed and the expansion states would generally only contain the state opposite to the default behavior. You can control whether groups should be created expanded or not through the [`groupsExpanded`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupsexpanded) property.
@@ -95,6 +97,7 @@ The code snippet below can be used to select all rows within a group using the g
 
 ```typescript
     const groupRow = this.grid.groupsRecords.find(r => r.value === "France");
+    const groupRow = this.grid.getRowByIndex(0).groupRow;
     grid.selectRowsInGroup(groupRow);
 ```
 
@@ -102,6 +105,7 @@ If you need to deselect all rows within a group programmatically, you can use th
 
 ```typescript
     const groupRow = this.grid.groupsRecords.find(r => r.value === "France");
+    const groupRow = this.grid.getRowByIndex(0).groupRow;
     grid.deselectRowsInGroup(groupRow);
 ```
 
@@ -295,7 +299,7 @@ A [`groupingComparer`]({environment:angularApiUrl}/interfaces/igroupingexpressio
 
 ## Styling
 
-The igxGrid allows styling through the [Ignite UI for Angular Theme Library](../themes/component-themes.md). The grid's [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) exposes a wide variety of properties, which allow the customization of all the features of the grid. 
+The igxGrid allows styling through the [Ignite UI for Angular Theme Library](../themes/sass/component-themes.md). The grid's [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) exposes a wide variety of properties, which allow the customization of all the features of the grid. 
 
 In the below steps, we are going through the steps of customizing the grid's Group By styling.
 
@@ -376,7 +380,7 @@ $custom-chips-theme: igx-chip-theme(
 );
 ```
 ### Defining custom schemas
-You can go even further and build flexible structure that has all the benefits of a [**schema**](../themes/schemas.md). The **schema** is the recipe of a theme. 
+You can go even further and build flexible structure that has all the benefits of a [**schema**](../themes/sass/schemas.md). The **schema** is the recipe of a theme. 
 Extend one of the two predefined schemas, that are provided for every component. In our case, we would use `$_light_grid`.   
 ```scss
 $custom-grid-schema: extend($_light-grid,(
@@ -418,7 +422,7 @@ In order for the custom theme to affect only specific component, you can move al
 This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Component#encapsulation), your styles will be applied only to your custom component.
 
  >[!NOTE]
- >If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to penetrate this encapsulation using `::ng-deep` in order to style the grid.
+ >If the component is using an [`Emulated`](../themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to penetrate this encapsulation using `::ng-deep` in order to style the grid.
  >[!NOTE]
  >Wrap the statement inside of a `:host` selector to prevent your styles from affecting elements *outside of* our component:
 
@@ -439,6 +443,9 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
            iframe-src="{environment:demosBaseUrl}/grid/grid-groupby-styling" >
 </code-view>
 
+>[!NOTE]
+>The sample will not be affected by the selected global theme from `Change Theme`.
+
 
 ## Known Limitations
 
@@ -449,6 +456,7 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 ## API References
 
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+* [IgxGroupByRow](({environment:angularApiUrl}/classes/igxgroupbyrow.html)
 * [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 * [ISortingExpression]({environment:angularApiUrl}/interfaces/isortingexpression.html)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)

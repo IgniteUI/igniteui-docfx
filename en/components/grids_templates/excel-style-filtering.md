@@ -119,17 +119,17 @@ In the sample below **Product Name** and **Discontinued** columns have all four 
     </igx-column>
     <igx-column field="UnitPrice" header="Unit Price" [dataType]="'number'" [sortable]="false" [disablePinning]="true" [disableHiding]="true" [movable]="false">
         <ng-template igxCell let-cell="cell" let-val>
-            <span *ngIf="cell.row.rowData.UnitPrice == 0">-</span>
-            <span *ngIf="cell.row.rowData.UnitPrice != 0">${{val}}</span>
+            <span *ngIf="cell.row.data.UnitPrice == 0">-</span>
+            <span *ngIf="cell.row.data.UnitPrice != 0">${{val}}</span>
         </ng-template>
     </igx-column>
     <igx-column field="AddedDate" header="Added Date" [dataType]="'date'" [formatter]="formatDate" [sortable]="false" [movable]="false">
     </igx-column>
     <igx-column field="Discontinued" header="Discontinued" [dataType]="'boolean'" [sortable]="true" [movable]="true">
         <ng-template igxCell let-cell="cell" let-val>
-            <span *ngIf="cell.row.rowData.UnitPrice == 0">-</span>
-            <img *ngIf="cell.row.rowData.UnitPrice != 0 && val" src="assets/images/grid/active.png" title="Continued" alt="Continued" />
-            <img *ngIf="cell.row.rowData.UnitPrice != 0 && !val" src="assets/images/grid/expired.png" title="Discontinued" alt="Discontinued" />
+            <span *ngIf="cell.row.data.UnitPrice == 0">-</span>
+            <img *ngIf="cell.row.data.UnitPrice != 0 && val" src="assets/images/grid/active.png" title="Continued" alt="Continued" />
+            <img *ngIf="cell.row.data.UnitPrice != 0 && !val" src="assets/images/grid/expired.png" title="Discontinued" alt="Discontinued" />
         </ng-template>
     </igx-column>
 </igx-tree-grid>
@@ -214,8 +214,8 @@ In the sample below 'Artist' column have all four features enabled, 'Debut' have
 ## Templates
 
 If you want to further customize the Excel style filter menu without disabling the column features you could use custom templates. The Excel Style filter menu provides two directives for templating:
-- [`IgxExcelStyleColumnOperationsTemplateDirective`]({environment:angularApiUrl}/classes/igxexcelstylecolumnoperationsdirective.html) - re-templates the area with all column operations like sorting, moving, pinning, etc.
-- [`IgxExcelStyleFilterOperationsTemplateDirective`]({environment:angularApiUrl}/classes/igxexcelstylefilteroperationsdirective.html) - re-templates the area with all filter specific operations.
+- `IgxExcelStyleColumnOperationsTemplateDirective` - re-templates the area with all column operations like sorting, moving, pinning, etc.
+- `IgxExcelStyleFilterOperationsTemplateDirective` - re-templates the area with all filter specific operations.
 
 You could either re-template only one of those areas or both of them. You could put any custom content inside those directives or you could use any of our built-in Excel style filtering components.
 
@@ -443,7 +443,7 @@ As you see at the demos above the default appearance of the Excel Style filterin
 
 ### Usage
 
-In order to configure the Excel style filtering component, you should set its [`column`]({environment:angularApiUrl}/classes/igxexcelstylefilteringdialogcomponent.html#column) property to one of the @@igComponent's columns. In the sample above, we have bound the [`column`]({environment:angularApiUrl}/classes/igxexcelstylefilteringdialogcomponent.html#column) property to the value of an IgxSelectComponent that displays the @@igComponent's columns.
+In order to configure the Excel style filtering component, you should set its [`column`]({environment:angularApiUrl}/classes/igxgridexcelstylefilteringcomponent.html#column) property to one of the @@igComponent's columns. In the sample above, we have bound the [`column`]({environment:angularApiUrl}/classes/igxgridexcelstylefilteringcomponent.html#column) property to the value of an IgxSelectComponent that displays the @@igComponent's columns.
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -538,15 +538,10 @@ We obviously have a lot more components inside the excel like filtering dialog, 
 
 ```scss
 $dark-button: igx-button-theme(
-    $flat-background: #FFCD0F,
-    $flat-text-color: #292826,
-    $flat-hover-background: #292826,
-    $flat-hover-text-color: #FFCD0F,
-
-    $raised-background: #FFCD0F,
-    $raised-text-color: #292826,
-    $raised-hover-background: #292826,
-    $raised-hover-text-color: #FFCD0F
+    $background: #FFCD0F,
+    $foreground: #292826,
+    $hover-background: #292826,
+    $hover-foreground: #FFCD0F
 );
 
 $dark-input-group: igx-input-group-theme(
@@ -597,7 +592,7 @@ The last step is to **include** the component mixins, each with its respective t
 >We scope most of the components' mixins within `.igx-excel-filter` and `.igx-excel-filter__secondary`, so that these custom themes will affect only components nested in the excel style filtering dialog and all of its sub-dialogs. Otherwise other buttons, checkboxes, input-groups and lists would be affected too.
 
 >[!NOTE]
->If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
+>If the component is using an [`Emulated`](../themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
 
 ```scss
 :host {
@@ -637,15 +632,10 @@ $custom-grid: igx-grid-theme(
 );
 
 $dark-button: igx-button-theme(
-    $flat-background: igx-color($dark-palette, "secondary", 400),
-    $flat-text-color: igx-color($dark-palette, "primary", 400),
-    $flat-hover-background: igx-color($dark-palette, "primary", 400),
-    $flat-hover-text-color: igx-color($dark-palette, "secondary", 400),
-
-    $raised-background: igx-color($dark-palette, "secondary", 400),
-    $raised-text-color: igx-color($dark-palette, "primary", 400),
-    $raised-hover-background: igx-color($dark-palette, "primary", 400),
-    $raised-hover-text-color: igx-color($dark-palette, "secondary", 400)
+    $background: igx-color($dark-palette, "secondary", 400),
+    $foreground: igx-color($dark-palette, "primary", 400),
+    $hover-background: igx-color($dark-palette, "primary", 400),
+    $hover-foreground: igx-color($dark-palette, "secondary", 400)
 );
 
 $dark-input-group: igx-input-group-theme(
@@ -675,11 +665,11 @@ $custom-drop-down: igx-drop-down-theme(
 ```
 
 >[!NOTE]
->The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](../themes/palette.md) topic for detailed guidance on how to use them.
+>The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](../themes/sass/palettes.md) topic for detailed guidance on how to use them.
 
 ### Using Schemas
 
-Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](../themes/schemas.md). A **schema** is a recipe of a theme.
+Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](../themes/sass/schemas.md). A **schema** is a recipe of a theme.
 
 Extend one of the two predefined schemas, that are provided for every component, in this case - [`light-grid`]({environment:sassApiUrl}/index.html#variable-_light-grid), [`light-input-group`]({environment:sassApiUrl}/index.html#variable-_light-input-group), [`light-button`]({environment:sassApiUrl}/index.html#variable-_light-button), [`light-list`]({environment:sassApiUrl}/index.html#variable-_light-list), [`light-checkbox`]({environment:sassApiUrl}/index.html#variable-_light-checkbox) and [`light-drop-down`]({environment:sassApiUrl}/index.html#variable-_light-drop-down) schemas:
 
@@ -854,6 +844,8 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 
 }
 
+>[!NOTE]
+>The sample will not be affected by the selected global theme from `Change Theme`.
 <div class="divider--half"></div>
 
 ## API References

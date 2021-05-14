@@ -357,7 +357,7 @@ This will apply our custom banner theme to the Row Editing overlay. However, sin
 Since the Row Editing overlay makes use of a lot of other components' themes, styling it via the global styles can affect other parts of our application (e.g. banners, buttons, etc.). The best way to prevent that is to scope our banner theme. We can define our styles (including the [`theme/index` import](#import-theme)) in the component containing our @@igSelector.
 
 >[!NOTE]
->If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to penetrate this encapsulation using `::ng-deep` in order to style the grid.
+>If the component is using an [`Emulated`](../themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to penetrate this encapsulation using `::ng-deep` in order to style the grid.
 >We wrap the statement inside of a `:host` selector to prevent our styles from affecting elements *outside of* our component:
 
 ```scss
@@ -444,6 +444,9 @@ After styling the banner and buttons, we also define a custom style for [the cel
 </code-view>
 
 }
+
+>[!NOTE]
+>The sample will not be affected by the selected global theme from `Change Theme`.
 
 ## API References
 

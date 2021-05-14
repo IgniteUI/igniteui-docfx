@@ -123,7 +123,9 @@ this.hubConnection.invoke('updateparameters', frequency, volume, live, updateAll
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 * [IgxGridComponent スタイル]({environment:sassApiUrl}/#function-igx-grid-theme)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
-* [IgxGridRowComponent]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)
+* [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html)
+* [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)
+* [IgxHierarchicalGridRow]({environment:angularApiUrl}/classes/igxhierarchicalgridrow.html)
 * [IgxGridCellComponent]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
 
 ## その他のリソース
@@ -160,11 +162,10 @@ this.hubConnection.invoke('updateparameters', frequency, volume, live, updateAll
 
 * [IgxTreeGridComponent]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)
 * [IgxTreeGridCellComponent]({environment:angularApiUrl}/classes/igxtreegridcellcomponent.html)
-* [IgxTreeGridRowComponent]({environment:angularApiUrl}/classes/igxtreegridrowcomponent.html)
+* [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 * [IgxGridComponent スタイル]({environment:sassApiUrl}/#function-igx-grid-theme)
 * [IgxGridCellComponent]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
-* [IgxGridRowComponent]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)
 * [IgxBaseTransactionService]({environment:angularApiUrl}/classes/igxbasetransactionservice.html)
 
 

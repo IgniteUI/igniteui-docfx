@@ -67,3 +67,22 @@ yarn add igniteui-angular-spreadsheet igniteui-angular-core
 ## モジュールのインポート
 
 はじめに、使いたいコンポーネントの必要なモジュールをインポートします。[**GeographicMap**](geo-map.md) に対してこれを行います。
+
+## コンポーネントの使用
+
+マークアップに Ignite UI for Angular マップ コンポーネントを使用する準備が整いました。以下のように定義します。
+
+## アプリケーションの実行
+
+以下のコマンドを使用して新しいアプリケーションを実行できます。
+
+<pre style="background:#141414;color:white;display:inline-block;padding:16x;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
+npm run-script start
+</pre>
+
+コマンドを実行した後、プロジェクトがローカルでビルドされて提供されます。これでデフォルトのブラウザーで自動的に開き、プロジェクトで Ignite UI for Angular コンポーネントを使用できるようになります。
+
+以下の画像は、上記を実行した結果です。
+
+<img src="../images/general/geo-map.png" />
+<!-- end: Angular, React -->

@@ -11,7 +11,7 @@ _language: kr
 
 ### Carousel Demo
 <div class="sample-container loading" style="height: 620px">
-    <iframe seamless="" width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/layouts/carousel-sample-4" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/layouts/carousel-sample-4" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 
 

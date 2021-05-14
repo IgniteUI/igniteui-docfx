@@ -120,17 +120,17 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
     </igx-column>
     <igx-column field="UnitPrice" header="Unit Price" [dataType]="'number'" [sortable]="false" [disablePinning]="true" [disableHiding]="true" [movable]="false">
         <ng-template igxCell let-cell="cell" let-val>
-            <span *ngIf="cell.row.rowData.UnitPrice == 0">-</span>
-            <span *ngIf="cell.row.rowData.UnitPrice != 0">${{val}}</span>
+            <span *ngIf="cell.row.data.UnitPrice == 0">-</span>
+            <span *ngIf="cell.row.data.UnitPrice != 0">${{val}}</span>
         </ng-template>
     </igx-column>
     <igx-column field="AddedDate" header="Added Date" [dataType]="'date'" [formatter]="formatDate" [sortable]="false" [movable]="false">
     </igx-column>
     <igx-column field="Discontinued" header="Discontinued" [dataType]="'boolean'" [sortable]="true" [movable]="true">
         <ng-template igxCell let-cell="cell" let-val>
-            <span *ngIf="cell.row.rowData.UnitPrice == 0">-</span>
-            <img *ngIf="cell.row.rowData.UnitPrice != 0 && val" src="assets/images/grid/active.png" title="Continued" alt="Continued" />
-            <img *ngIf="cell.row.rowData.UnitPrice != 0 && !val" src="assets/images/grid/expired.png" title="Discontinued" alt="Discontinued" />
+            <span *ngIf="cell.row.data.UnitPrice == 0">-</span>
+            <img *ngIf="cell.row.data.UnitPrice != 0 && val" src="assets/images/grid/active.png" title="Continued" alt="Continued" />
+            <img *ngIf="cell.row.data.UnitPrice != 0 && !val" src="assets/images/grid/expired.png" title="Discontinued" alt="Discontinued" />
         </ng-template>
     </igx-column>
 </igx-tree-grid>
@@ -215,8 +215,8 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
 ## テンプレート
 
 列機能を無効にせずに Excel スタイル フィルター メニューをさらにカスタマイズする場合は、カスタム テンプレートを使用できます。Excel スタイル フィルター メニューには、テンプレート化のための 2 つのディレクティブがあります:
-- [`IgxExcelStyleColumnOperationsTemplateDirective`]({environment:angularApiUrl}/classes/igxexcelstylecolumnoperationsdirective.html) - ソート、移動、固定などのすべての列操作で領域を再テンプレート化します。
-- [`IgxExcelStyleFilterOperationsTemplateDirective`]({environment:angularApiUrl}/classes/igxexcelstylefilteroperationsdirective.html) - すべてのフィルター固有の操作で領域を再テンプレート化します。
+- `IgxExcelStyleColumnOperationsTemplateDirective` - ソート、移動、固定などのすべての列操作で領域を再テンプレート化します。
+- `IgxExcelStyleFilterOperationsTemplateDirective` - すべてのフィルター固有の操作で領域を再テンプレート化します。
 
 これらの領域の 1 つだけ、または両方を再テンプレート化できます。これらのディレクティブ内にカスタム コンテンツを配置したり、組み込みの Excel スタイル フィルタリング コンポーネントを使用できます。
 
@@ -444,7 +444,7 @@ Excel スタイル フィルタリング ダイアログ内のリスト項目は
 
 ### 使用方法
 
-Excel スタイル フィルタリング コンポーネントを設定するには、[`column`]({environment:angularApiUrl}/classes/igxexcelstylefilteringdialogcomponent.html#column) プロパティを @@igComponent 列の 1 つに設定する必要があります。上記のサンプルで、[`column`]({environment:angularApiUrl}/classes/igxexcelstylefilteringdialogcomponent.html#column) プロパティは @@igComponent 列を表示する IgxSelectComponent の値にバインドされています。
+Excel スタイル フィルタリング コンポーネントを設定するには、[`column`]({environment:angularApiUrl}/classes/igxgridexcelstylefilteringcomponent.html#column) プロパティを @@igComponent 列の 1 つに設定する必要があります。上記のサンプルで、[`column`]({environment:angularApiUrl}/classes/igxgridexcelstylefilteringcomponent.html#column) プロパティは @@igComponent 列を表示する IgxSelectComponent の値にバインドされています。
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -539,15 +539,10 @@ $custom-grid: igx-grid-theme(
 
 ```scss
 $dark-button: igx-button-theme(
-    $flat-background: #FFCD0F,
-    $flat-text-color: #292826,
-    $flat-hover-background: #292826,
-    $flat-hover-text-color: #FFCD0F,
-
-    $raised-background: #FFCD0F,
-    $raised-text-color: #292826,
-    $raised-hover-background: #292826,
-    $raised-hover-text-color: #FFCD0F
+    $background: #FFCD0F,
+    $foreground: #292826,
+    $hover-background: #292826,
+    $hover-foreground: #FFCD0F
 );
 
 $dark-input-group: igx-input-group-theme(
@@ -578,7 +573,7 @@ $custom-drop-down: igx-drop-down-theme(
 
 この例では、リストされたコンポーネントのパラメーターの一部のみを変更しましたが、[`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme)、[`igx-checkbox-theme`]({environment:sassApiUrl}/index.html#function-igx-checkbox-theme)、[`igx-drop-down-theme`]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme)、[`igx-input-group-theme`]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)、[`igx-list-theme`]({environment:sassApiUrl}/index.html#function-igx-list-theme) テーマは、それぞれのスタイルを制御するためのより多くのパラメーターを提供します。
 
-最後の手順は、それぞれのテーマを持つコンポーネント mixins を**含める**ことです。また、入力のプレース ホルダーの色プロパティを設定します。
+最後の手順は、それぞれのテーマを持つコンポーネント ミックスインを**含める**ことです。また、入力のプレース ホルダーの色プロパティを設定します。
 
 ```scss
 @include igx-drop-down($custom-drop-down);
@@ -598,7 +593,7 @@ $custom-drop-down: igx-drop-down-theme(
 >`.igx-excel-filter` と `.igx-excel-filter__secondary` 内のほとんどのコンポーネントのミックスインをスコープするため、これらのカスタムテーマは、Excel スタイル フィルタリング ダイアログとそのすべてのサブダイアログにネストされたコンポーネントのみに影響します。そうでない場合、他のボタン、チェックボックス、入力グループ、およびリストも影響を受けます。
 
 >[!NOTE]
->コンポーネントが [`Emulated`](../themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
+>コンポーネントが [`Emulated`](../themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
 
 ```scss
 :host {
@@ -638,15 +633,10 @@ $custom-grid: igx-grid-theme(
 );
 
 $dark-button: igx-button-theme(
-    $flat-background: igx-color($dark-palette, "secondary", 400),
-    $flat-text-color: igx-color($dark-palette, "primary", 400),
-    $flat-hover-background: igx-color($dark-palette, "primary", 400),
-    $flat-hover-text-color: igx-color($dark-palette, "secondary", 400),
-
-    $raised-background: igx-color($dark-palette, "secondary", 400),
-    $raised-text-color: igx-color($dark-palette, "primary", 400),
-    $raised-hover-background: igx-color($dark-palette, "primary", 400),
-    $raised-hover-text-color: igx-color($dark-palette, "secondary", 400)
+    $background: igx-color($dark-palette, "secondary", 400),
+    $foreground: igx-color($dark-palette, "primary", 400),
+    $hover-background: igx-color($dark-palette, "primary", 400),
+    $hover-foreground: igx-color($dark-palette, "secondary", 400)
 );
 
 $dark-input-group: igx-input-group-theme(
@@ -676,11 +666,11 @@ $custom-drop-down: igx-drop-down-theme(
 ```
 
 >[!NOTE]
->`igx-color` および `igx-palette` は、色を生成および取得するための重要な機能です。使い方の詳細については[`パレット`](../themes/palette.md)のトピックを参照してください。
+>`igx-color` および `igx-palette` は、色を生成および取得するための重要な機能です。使い方の詳細については[`パレット`](../themes/sass/palettes.md)のトピックを参照してください。
 
 ### スキーマの使用
 
-テーマ エンジンを使用して[**スキーマ**](../themes/schemas.md)の利点を使用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
+テーマ エンジンを使用して[**スキーマ**](../themes/sass/schemas.md)の利点を使用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
 
 すべてのコンポーネント (この場合は[`light-grid`]({environment:sassApiUrl}/index.html#variable-_light-grid)、[`light-input-group`]({environment:sassApiUrl}/index.html#variable-_light-input-group)、[`light-button`]({environment:sassApiUrl}/index.html#variable-_light-button)、[`light-list`]({environment:sassApiUrl}/index.html#variable-_light-list)、[`light-checkbox`]({environment:sassApiUrl}/index.html#variable-_light-checkbox)、[`light-drop-down`]({environment:sassApiUrl}/index.html#variable-_light-drop-down)) に提供される 2 つの定義済みスキーマのいずれかを拡張します。
 
@@ -855,6 +845,8 @@ $custom-drop-down: igx-drop-down-theme(
 
 }
 
+>[!NOTE]
+>このサンプルは、「テーマの変更」から選択したグローバル テーマに影響を受けません。
 <div class="divider--half"></div>
 
 ## API リファレンス

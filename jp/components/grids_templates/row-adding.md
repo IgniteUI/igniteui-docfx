@@ -1,8 +1,21 @@
+@@if(igxName==='IgxGrid') {
 ---
 title: Angular グリッド行追加 | UI グリッド | Ignite UI for Angular | インフラジスティックス
 _description: Ignite UI for Angular を使用して、定義済みの行追加機能の使用およびカスタマイズする方法を学びます。UI グリッドで、直感的なグリッド行の追加と CRUD 機能を利用できます。
-_keywords: 行追加, igniteui for angular, infragistics, インフラジスティックス
+_keywords: row adding, 行追加, igniteui for angular, infragistics, インフラジスティックス
+_language: ja
 ---
+}
+
+@@if(igxName!=='IgxGrid') {
+---
+title: Angular グリッド行追加 | UI グリッド | Ignite UI for Angular | インフラジスティックス
+_description: Ignite UI for Angular を使用して、定義済みの行追加機能の使用およびカスタマイズする方法を学びます。UI グリッドで、直感的なグリッド行の追加と CRUD 機能を利用できます。
+_keywords: row adding, 行追加, igniteui for angular, infragistics, インフラジスティックス
+_language: ja
+_canonicalLink: grid/row-adding
+---
+}
 
 # @@igComponent 行追加
 
@@ -90,7 +103,7 @@ export class AppModule {}
     <igx-column [field]="'HireDate'" dataType="date"></igx-column>
     <igx-column [field]="'OnPTO'" dataType="boolean" width="130px">
         <ng-template igxCell let-cell="cell" let-val>
-            <igx-icon [color]="cell.row.rowData.OnPTO? 'red': 'green'">account_circle</igx-icon>
+            <igx-icon [color]="cell.row.data.OnPTO? 'red': 'green'">account_circle</igx-icon>
         </ng-template>
     </igx-column>
     <igx-column [field]="'Age'" dataType="number"></igx-column>
@@ -193,6 +206,31 @@ export class AppModule {}
 
 - 階層グリッドの UI を生成すると、エンド ユーザーが [行の追加] ボタンをクリックした行に対して現在展開されている子レイアウトはすべて縮小されます。
 }
+
+## 行追加オーバーレイのカスタマイズ
+
+### テキストのカスタマイズ
+
+行追加オーバーレイのテキストのカスタマイズは、`igxRowAddTextDirective` を使用して可能です。
+
+```html
+<ng-template igxRowAddText>
+	Adding Row
+</ng-template>
+ ```
+
+### ボタンのカスタマイズ
+`igxRowEditActionsDirective` を使用して行編集オーバーレイのボタンのカスタマイズが可能です。
+キーボード ナビゲーションにボタンを含める場合、各ボタンに `igxRowEditTabStopDirective` が必要です。
+
+ ```html
+ <ng-template igxRowEditActions let-endRowEdit>
+	<button igxButton igxRowEditTabStop (click)="endRowEdit(false)">Cancel</button>
+	<button igxButton igxRowEditTabStop (click)="endRowEdit(true)">Apply</button>
+</ng-template>
+ ```
+> [!NOTE]
+> `igxRowEditActions` ディレクティブを使用すると、オーバーレイ ボタンの編集と追加の両方の編集アクションが変更されます。
 
 ## リモート シナリオ
 

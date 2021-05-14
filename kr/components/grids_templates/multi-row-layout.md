@@ -11,12 +11,12 @@ _language: kr
 
 #### 데모
 
-<div class="sample-container loading" style="height:600px">
-    <iframe id="grid-multi-row-layout-iframe" src='{environment:demosBaseUrl}/grid/grid-multi-row-layout' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-multi-row-layout-iframe" data-demos-base-url="{environment:demosBaseUrl}">STACKBLITZ 에서 보기</button>
-</div>
+
+<code-view style="height:600px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/grid/grid-multi-row-layout" >
+</code-view>
+
 
 다중 행 레이아웃 선언은 [`igx-column-layout`]({environment:angularApiUrl}/classes/igxcolumnlayoutcomponent.html) 컴포넌트를 통해 이루어집니다. 각 `igx-column-layout` 컴포넌트는 하나 이상의 `igx-column` 컴포넌트를 포함하는 블록으로 간주해야 합니다. 일부 그리드 기능은 블록 수준에서 작동합니다(아래의 "기능 통합" 섹션에서 열거). 예를 들면, 가상화는 블록을 사용하여 가상 청크를 결정하므로 성능을 향상하려면 레이아웃이 허용하는 경우, 열을 더 많은 `igx-column-layout` 블록으로 분할합니다. 다중 행 레이아웃을 구성할 경우, 이러한 블록 이외에 열이 없어야 하며, `IgxColumnGroupComponent`를 사용하지 않아야 합니다. 다중 행 레이아웃은 [grid layout](https://www.w3.org/TR/css-grid-1/) 사양 상에서 구현되며 요구 사항을 준수해야 합니다.
 
@@ -104,12 +104,12 @@ The demo below adds additional navigation down/up via the <kbd>Enter</kbd> and <
 
 #### Demo
 
-<div class="sample-container loading" style="height:605px">
-    <iframe id="grid-mrl-custom-navigation-iframe" src='{environment:demosBaseUrl}/grid/grid-mrl-custom-navigation' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-mrl-custom-navigation-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height:605px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/grid/grid-mrl-custom-navigation" >
+</code-view>
+
 
 ### Layout Configurator
 
@@ -131,7 +131,7 @@ By default we have set the same columns as our previous sample, but it can be cl
 </div>
 
 ### Styling
-The igxGrid allows styling through the [Ignite UI for Angular Theme Library](../themes/component-themes.md). The grid's [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) exposes a wide variety of properties, which allow the customization of all the features of the grid. 
+The igxGrid allows styling through the [Ignite UI for Angular Theme Library](../themes/sass/component-themes.md). The grid's [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) exposes a wide variety of properties, which allow the customization of all the features of the grid. 
 
 In the below steps, we are going through the steps of customizing the grid's Multi Row Layout styling.     
 
@@ -188,7 +188,7 @@ $custom-theme: igx-grid-theme(
 ```
 
 #### Defining custom schemas
-You can go even further and build flexible structure that has all the benefits of a [**schema**](../themes/schemas.md). The **schema** is the recipe of a theme.   
+You can go even further and build flexible structure that has all the benefits of a [**schema**](../themes/sass/schemas.md). The **schema** is the recipe of a theme.   
 Extend one of the two predefined schemas, that are provided for every component. In our case, we would use `$_light_grid`.   
 ```scss
 $custom-grid-schema: extend($_light-grid,(
@@ -228,7 +228,7 @@ In order for the custom theme do affect only specific component, you can move al
 This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Component#encapsulation), your styles will be applied only to your custom component.
 
  >[!NOTE]
- >If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to penetrate this encapsulation using `::ng-deep` in order to style the grid.
+ >If the component is using an [`Emulated`](../themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to penetrate this encapsulation using `::ng-deep` in order to style the grid.
  >[!NOTE]
  >Wrap the statement inside of a `:host` selector to prevent your styles from affecting elements *outside of* our component: 
 
@@ -242,12 +242,12 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 
 #### Demo 
 
-<div class="sample-container loading" style="height:755px">
-    <iframe id="grid-multi-row-layout-styling" data-src='{environment:demosBaseUrl}/grid/grid-multi-row-layout-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-multi-row-layout-styling" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
-</div>
+
+<code-view style="height:755px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/grid/grid-multi-row-layout-styling" >
+</code-view>
+
 
 ### API 참조
 <div class="divider--half"></div>

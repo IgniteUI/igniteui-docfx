@@ -460,7 +460,7 @@ export class AppModule {}
 
 ## スタイル設定
 
-列操作コンポーネントのスタイル設定を開始するには、すべてのテーマ関数とコンポーネント mixins が存在するインデックス ファイルをインポートする必要があります。
+列操作コンポーネントのスタイル設定を開始するには、すべてのテーマ関数とコンポーネント ミックスインが存在するインデックス ファイルをインポートする必要があります。
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
@@ -483,7 +483,7 @@ $custom-button: igx-button-theme($flat-text-color: gold, $disabled-color: black)
 
 この例では、フラットボタンのテキストの色とボタンの無効な色のみを変更しましたが、[`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) の方がより多くの方法を提供します。ボタンのスタイルを制御するパラメーター。
 
-最後にそれぞれのテーマを持つコンポーネント mixins を**含める**ことです。 
+最後にそれぞれのテーマを持つコンポーネント ミックスインを**含める**ことです。 
 
 ```scss
 @include igx-column-actions($custom-column-actions-theme);
@@ -493,10 +493,10 @@ $custom-button: igx-button-theme($flat-text-color: gold, $disabled-color: black)
 ```
 
 >[!NOTE]
->`.igx-column-actions` 内で **igx-button** mixin のスコープを設定し、列非表示ボタンのみがスタイル設定されるようにします。そうでない場合は、グリッド内の他のボタンも影響を受けます。
+>`.igx-column-actions` 内で **igx-button** ミックスインのスコープを設定し、列非表示ボタンのみがスタイル設定されるようにします。そうでない場合は、グリッド内の他のボタンも影響を受けます。
 
  >[!NOTE]
- >コンポーネントが [`Emulated`](../themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
+ >コンポーネントが [`Emulated`](../themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
 
 ```scss
 :host {
@@ -543,7 +543,7 @@ $custom-button: igx-button-theme(
 
 ### スキーマの使用
 
-テーマ エンジンを使用して[**スキーマ**](../themes/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
+テーマ エンジンを使用して[**スキーマ**](../themes/sass/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
 
 ```scss
 // Extending the dark column actions schema

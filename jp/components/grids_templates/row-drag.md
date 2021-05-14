@@ -189,7 +189,7 @@ enum DragIcon {
 export class @@igxNameRowDragComponent {
     ...
     public onDropAllowed(args: IDropDroppedEventArgs) {
-        const draggedRow: @@igxNameGridRowComponent = args.dragData;
+        const draggedRow: RowType = args.dragData;
         draggedRow.delete();
     }
 
@@ -206,8 +206,8 @@ export class @@igxNameRowDragComponent {
     @ViewChild("targetGrid", { read: IgxGridComponent }) public targetGrid: IgxGridComponent;
     ... 
     public onDropAllowed(args) {
-        this.targetGrid.addRow(args.dragData.rowData);
-        this.sourceGrid.deleteRow(args.dragData.rowID);
+        this.targetGrid.addRow(args.dragData.data);
+        this.sourceGrid.deleteRow(args.dragData.key);
     }
     ...
 }
@@ -219,7 +219,7 @@ export class @@igxNameRowDragComponent {
 }
 
 > [!NOTE]
-> イベント引数 (`args.dragData.rowData`) または他の行プロパティからの行データを使用する場合、行全体が参照として引数に渡されることに注意してください。つまり、ソースグリッドのデータと区別する必要がある場合は、必要なデータを複製する必要があります。
+> イベント引数 (`args.dragData.data`) または他の行プロパティからの行データを使用する場合、行全体が参照として引数に渡されることに注意してください。つまり、ソースグリッドのデータと区別する必要がある場合は、必要なデータを複製する必要があります。
 
 #### ドラッグ ゴーストのテンプレート化
 ドラッグゴーストは、`@@igSelector` の本文内の `<ng-template>` に適用される `IgxRowDragGhost` ディレクティブを使用してテンプレート化できます。
@@ -449,8 +449,8 @@ export class GridRowReorderComponent {
         const currRowIndex = this.getCurrentRowIndex(this.grid.rowList.toArray(),
             { x: event.clientX, y: event.clientY });
         if (currRowIndex === -1) { return; }
-        this.grid.deleteRow(args.dragData.rowID);
-        this.data.splice(currRowIndex, 0, args.dragData.rowData);
+        this.grid.deleteRow(args.dragData.key);
+        this.data.splice(currRowIndex, 0, args.dragData.data);
     }
 
     private getCurrentRowIndex(rowList, cursorPosition) {
@@ -458,7 +458,7 @@ export class GridRowReorderComponent {
             const rowRect = row.nativeElement.getBoundingClientRect();
             if (cursorPosition.y > rowRect.top + window.scrollY && cursorPosition.y < rowRect.bottom + window.scrollY &&
                 cursorPosition.x > rowRect.left + window.scrollX && cursorPosition.x < rowRect.right + window.scrollX) {
-                return this.data.indexOf(this.data.find((r) => r.ID === row.rowData.ID));
+                return this.data.indexOf(this.data.find((r) => r.rowID === row.rowID));
             }
         }
 
@@ -472,35 +472,35 @@ export class GridRowReorderComponent {
     export class TreeGridRowReorderComponent {
     ...
     public rowDragStart(args: any): void {
-        const targetRow: IgxTreeGridRowComponent = args.dragData;
+        const targetRow = args.dragData;
         if (targetRow.expanded) {
-            this.treeGrid.collapseRow(targetRow.rowID);
+            this.treeGrid.collapseRow(targetrow.key);
         }
     }
 
     public dropInGrid(args: IDropDroppedEventArgs): void {
-        const draggedRow: IgxTreeGridRowComponent = args.dragData;
+        const draggedRow = args.dragData;
         const event = args.originalEvent;
         const cursorPosition: Point = { x: event.clientX, y: event.clientY };
         this.moveRow(draggedRow, cursorPosition);
     }
 
-    private moveRow(draggedRow: IgxTreeGridRowComponent, cursorPosition: Point): void {
-        const row: IgxTreeGridRowComponent = this.catchCursorPosOnElem(this.treeGrid.rowList.toArray(), cursorPosition);
+    private moveRow(draggedRow: RowType, cursorPosition: Point): void {
+        const row = this.catchCursorPosOnElem(this.treeGrid.rowList.toArray(), cursorPosition);
         if (!row) { return; }
-        if (row.rowData.ParentID === -1) {
+        if (row.data.ParentID === -1) {
             this.performDrop(draggedRow, row).ParentID = -1;
         } else {
-            if (row.rowData.ParentID === draggedRow.rowData.ParentID) {
+            if (row.data.ParentID === draggedrow.data.ParentID) {
                 this.performDrop(draggedRow, row);
             } else {
-                const rowIndex = this.getRowIndex(draggedRow.rowData);
-                this.localData[rowIndex].ParentID = row.rowData.ParentID;
+                const rowIndex = this.getRowIndex(draggedrow.data);
+                this.localData[rowIndex].ParentID = row.data.ParentID;
             }
         }
         if (draggedRow.selected) {
             this.treeGrid.selectRows([this.treeGrid.rowList.toArray()
-                .find((r) => r.rowData.ID === draggedRow.rowData.ID).rowID], false);
+                .find((r) => r.rowID === draggedrow.key).rowID], false);
         }
 
         this.localData = [...this.localData];
@@ -508,11 +508,11 @@ export class GridRowReorderComponent {
 
     private performDrop(
         draggedRow: IgxTreeGridRowComponent, targetRow: IgxTreeGridRowComponent) {
-        const draggedRowIndex = this.getRowIndex(draggedRow.rowData);
-        const targetRowIndex: number = this.getRowIndex(targetRow.rowData);
+        const draggedRowIndex = this.getRowIndex(draggedrow.data);
+        const targetRowIndex: number = this.getRowIndex(targetrow.data);
         if (draggedRowIndex === -1 || targetRowIndex === -1) { return; }
         this.localData.splice(draggedRowIndex, 1);
-        this.localData.splice(targetRowIndex, 0, draggedRow.rowData);
+        this.localData.splice(targetRowIndex, 0, draggedrow.data);
         return this.localData[targetRowIndex];
     }
 
@@ -540,9 +540,9 @@ export class GridRowReorderComponent {
     export class HGridRowReorderComponent {
     ...
     public rowDragStart(args: any): void {
-        const targetRow: IgxHierarchicalRowComponent = args.dragData;
+        const targetRow = args.dragData;
         if (targetRow.expanded) {
-            targetRow.toggle();
+            targetRow.expanded = false;
         }
     }
 
@@ -553,24 +553,27 @@ export class GridRowReorderComponent {
         this.moveRow(targetRow, cursorPosition);
     }
 
-    private moveRow(draggedRow: IgxHierarchicalRowComponent, cursorPosition: Point): void {
-        const parent: IgxHierarchicalGridComponent = draggedRow.grid;
+    private moveRow(draggedRow: RowType, cursorPosition: Point): void {
+        // const parent: IgxHierarchicalGridComponent = (draggedRow as any).grid;
+        // const parent = args.drag.ghostContext.grid;
+        const parent = this.hGrid;
         const rowIndex: number = this.getTargetRowIndex(parent.rowList.toArray(), cursorPosition);
         if (rowIndex === -1) { return; }
+        const wasSelected = draggedRow.selected;
         draggedRow.delete();
-        parent.data.splice(rowIndex, 0, draggedRow.rowData);
-        if (draggedRow.selected) {
+        parent.data.splice(rowIndex, 0, draggedRow.data);
+        if (wasSelected) {
             parent.selectRows([parent.rowList.toArray()
-                .find((r) => r.rowData.id === draggedRow.rowData.id).rowID], false);
+                .find((r) => r.rowID === draggedRow.key).rowID], false);
         }
     }
 
-    private getTargetRowIndex(rowListArr: IgxHierarchicalRowComponent[], cursorPosition: Point): number {
+    private getTargetRowIndex(rowListArr: RowType[], cursorPosition: Point): number {
         const targetElem: IgxHierarchicalRowComponent = this.catchCursorPosOnElem(rowListArr, cursorPosition);
         return rowListArr.indexOf(rowListArr.find((r) => r.rowData.id === targetElem.rowData.id));
     }
 
-    private catchCursorPosOnElem(rowListArr: IgxHierarchicalRowComponent[], cursorPosition: Point)
+    private catchCursorPosOnElem(rowListArr: any[], cursorPosition: Point)
         : IgxHierarchicalRowComponent {
         for (const row of rowListArr) {
             const rowRect = row.nativeElement.getBoundingClientRect();

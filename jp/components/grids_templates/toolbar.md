@@ -413,7 +413,7 @@ configureExport(args: IGridToolbarExportEventArgs) {
 
 ## スタイル設定
 
-ツールバーのスタイル設定を始めるには、すべてのテーマ関数とコンポーネント mixins が存在する index ファイルをインポートする必要があります。
+ツールバーのスタイル設定を始めるには、すべてのテーマ関数とコンポーネント ミックスインが存在する index ファイルをインポートする必要があります。
 
 ```scss
 // custom-grid-paging-style.component.scss
@@ -500,7 +500,7 @@ $dark-input-group-theme: igx-input-group-theme(
 ```
 
 >[!NOTE]
->コンポーネントが [`Emulated`](../themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
+>コンポーネントが [`Emulated`](../themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
 
 ```scss
 :host {

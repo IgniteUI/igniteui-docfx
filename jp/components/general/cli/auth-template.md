@@ -83,6 +83,7 @@ export class AppModule {
 
 特定のサードパーティ プロバイダーでユーザー ログインを有効にするには、特定の行のコメントを解除して、アプリのクライアント ID に置き換えます。
 Google アカウントのサインインなどで取得する必要がある場合は、以下のプロバイダー固有のガイドに従ってください。
+
 - [資格情報を取得する](https://developers.google.com/identity/protocols/OpenIDConnect#getcredentials)
 
 - [詳細バージョン](https://support.google.com/cloud/answer/6158849?hl=en&ref_topic=6262490)

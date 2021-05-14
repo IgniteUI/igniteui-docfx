@@ -83,7 +83,9 @@ export interface IGroupByExpandState {
 
 ```typescript
     const groupRow = this.grid.groupsRecords.find(r => r.value === "France");
+    const groupRow = this.grid.getRowByIndex(0).groupRow;
     grid.toggleGroup(groupRow);
+    groupRow.expanded = false;
 ```
 
 グループは展開済み (**デフォルト**) または縮小済みに作成でき、展開状態は一般的にデフォルト動作の反対の状態のみ含みます。グループを作成して展開するかどうか、または [`groupsExpanded`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupsexpanded) プロパティを介すかどうかを制御できます。
@@ -96,6 +98,7 @@ export interface IGroupByExpandState {
 
 ```typescript
     const groupRow = this.grid.groupsRecords.find(r => r.value === "France");
+    const groupRow = this.grid.getRowByIndex(0).groupRow;
     grid.selectRowsInGroup(groupRow);
 ```
 
@@ -103,6 +106,7 @@ export interface IGroupByExpandState {
 
 ```typescript
     const groupRow = this.grid.groupsRecords.find(r => r.value === "France");
+    const groupRow = this.grid.getRowByIndex(0).groupRow;
     grid.deselectRowsInGroup(groupRow);
 ```
 
@@ -296,7 +300,7 @@ class WeekSortingStrategy extends BaseSortingStrategy {
 
 ## スタイル設定
 
-igxGridを使用すると、[Ignite UI for Angular テーマ ライブラリ](../themes/component-themes.md)でスタイルを設定できます。グリッドの [テーマ]({environment:sassApiUrl}/index.html#function-igx-grid-theme) は、グリッドのすべての機能をカスタマイズできるさまざまなプロパティを公開します。 
+igxGridを使用すると、[Ignite UI for Angular テーマ ライブラリ](../themes/sass/component-themes.md)でスタイルを設定できます。グリッドの [テーマ]({environment:sassApiUrl}/index.html#function-igx-grid-theme) は、グリッドのすべての機能をカスタマイズできるさまざまなプロパティを公開します。 
 
 以下の手順では、グリッドの Group By スタイルをカスタマイズする手順を実行しています。
 
@@ -377,7 +381,7 @@ $custom-chips-theme: igx-chip-theme(
 );
 ```
 ### カスタム スキーマの定義
-さらに進んで、[**スキーマ**](../themes/schemas.md) のすべての利点を備えた柔軟な構造を構築できます。**スキーマ**はテーマを作成させるための方法です。 
+さらに進んで、[**スキーマ**](../themes/sass/schemas.md) のすべての利点を備えた柔軟な構造を構築できます。**スキーマ**はテーマを作成させるための方法です。 
 すべてのコンポーネントに提供される 2 つの事前定義されたスキーマの 1 つを拡張します。この場合、`$_light_grid` を使用します。   
 ```scss
 $custom-grid-schema: extend($_light-grid,(
@@ -419,7 +423,7 @@ $custom-theme: igx-grid-theme(
 このように、Angular の [ViewEncapsulation](https://angular.io/api/core/Component#encapsulation) により、スタイルはカスタム コンポーネントにのみ適用されます。
 
  >[!NOTE]
- >コンポーネントが [`Emulated`](../themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
+ >コンポーネントが [`Emulated`](../themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
  >[!NOTE]
  >ステートメントがコンポーネントの外にある要素に影響を与えないよう、ステートメントを `:host` セレクター内にラップします。
 
@@ -440,6 +444,9 @@ $custom-theme: igx-grid-theme(
            iframe-src="{environment:demosBaseUrl}/grid/grid-groupby-styling" >
 </code-view>
 
+>[!NOTE]
+>このサンプルは、「テーマの変更」から選択したグローバル テーマに影響を受けません。
+
 
 ## 既知の制限
 
@@ -450,6 +457,7 @@ $custom-theme: igx-grid-theme(
 ## API リファレンス
 
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+* [IgxGroupByRow](({environment:angularApiUrl}/classes/igxgroupbyrow.html)
 * [IgxGridComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 * [ISortingExpression]({environment:angularApiUrl}/interfaces/isortingexpression.html)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)

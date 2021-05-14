@@ -45,7 +45,7 @@ Use [`igxRipple`]({environment:angularApiUrl}/classes/igxrippledirective.html) t
 <button igxButton="raised" igxRipple>Click Me</button>
 ```
 <div class="sample-container loading" style="height: 68px">
-    <iframe seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-5" class="lazyload">
+    <iframe seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-5" class="lazyload">
 </iframe></div>
 
 #### Custom Color
@@ -56,7 +56,7 @@ You can set the ripple color using [`igxRipple`]({environment:angularApiUrl}/cla
 <button igxButton="raised" igxRipple="white">White</button>
 ```
 <div class="sample-container loading" style="height: 68px">
-    <iframe seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-6" class="lazyload">
+    <iframe seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-6" class="lazyload">
 </iframe></div>
 
 #### Centered Ripple Effect 
@@ -66,7 +66,7 @@ The ripple effect starts from the position of the click event. You can change th
 <button igxButton="raised" igxRipple="white" igxRippleCentered="true">Centered</button>
 ```
 <div class="sample-container loading" style="height: 68px">
-    <iframe seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-3" class="lazyload">
+    <iframe seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-3" class="lazyload">
 </iframe></div>
 
 #### Ripple Target
@@ -82,7 +82,7 @@ Use [`igxRippleTarget`]({environment:angularApiUrl}/classes/igxrippledirective.h
 ```
 Notice that if you click on the parent or the child divs the ripple effect will only appear inside the child div. The child div position has to be set to **relative**.
 <div class="sample-container loading" style="height: 168px">
-    <iframe seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-2" class="lazyload">
+    <iframe seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-2" class="lazyload">
 </iframe></div>
 
 #### Ripple Duration
@@ -94,7 +94,7 @@ Use [`igxRippleDuration`]({environment:angularApiUrl}/classes/igxrippledirective
 </div>
 ```
 <div class="sample-container loading" style="height: 148px">
-    <iframe seamless="" width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-4" class="lazyload">
+    <iframe seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-4" class="lazyload">
 </iframe></div>
 
 The [`igxRipple`]({environment:angularApiUrl}/classes/igxrippledirective.html) uses the Web Animation API and runs natively on
@@ -106,7 +106,7 @@ for other browsers.
 > Use a relatively positioned element for the ripple animation. You can also use [`igxRippleTarget`]({environment:angularApiUrl}/classes/igxrippledirective.html#rippletarget) to target a child element.
 
 ### Styling
-The igxRipple allows styling through the [Ignite UI for Angular Theme Library](../themes/component-themes.md). The ripple's [theme]({environment:sassApiUrl}/index.html#function-igx-ripple-theme) exposes a property that allows customization of the color of the effect.        
+The igxRipple allows styling through the [Ignite UI for Angular Theme Library](../themes/sass/component-themes.md). The ripple's [theme]({environment:sassApiUrl}/index.html#function-igx-ripple-theme) exposes a property that allows customization of the color of the effect.        
 
 #### Importing global theme
 To begin styling of the predefined ripple color, you need to import the `index` file, where all styling functions and mixins are located.  
@@ -146,7 +146,7 @@ $custom-theme: igx-ripple-theme(
 ```
 
 #### Defining custom schemas
-You can go even further and build flexible structure that has all the benefits of a [**schema**](../themes/schemas.md). The **schema** is the recipe of a theme.   
+You can go even further and build flexible structure that has all the benefits of a [**schema**](../themes/sass/schemas.md). The **schema** is the recipe of a theme.   
 Extend one of the two predefined schemas, that are provided for every component. In our case, we would use `$_dark_ripple`.   
 
 ```scss
@@ -180,7 +180,7 @@ In order for the custom theme to affect only specific component, you can move al
 This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Component#encapsulation), your styles will be applied only to your custom component.
 
  >[!NOTE]
- >If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to penetrate this encapsulation using `::ng-deep` in order to style the grid.
+ >If the component is using an [`Emulated`](../themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to penetrate this encapsulation using `::ng-deep` in order to style the grid.
  >[!NOTE]
  >Wrap the statement inside of a `:host` selector to prevent your styles from affecting elements *outside of* our component:
 
@@ -197,7 +197,7 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 
 #### Demo
 
-<code-view style="height: 700px" 
+<code-view style="height:700px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/interactions/ripple-styling" >
 </code-view>

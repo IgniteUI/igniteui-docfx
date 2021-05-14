@@ -30,24 +30,24 @@ The Angular UI grid in Ignite UI for Angular has a **summaries** feature that fu
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:650px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:650px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-summary" alt="Angular @@igComponent Summaries Overview Example">
 </code-view>
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:750px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:750px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-summary" alt="Angular @@igComponent Summaries Overview Example">
 </code-view>
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-  
-<code-view style="height:650px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+
+<code-view style="height:650px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-summary" alt="Angular @@igComponent Summaries Overview Example">
 </code-view>
 
@@ -228,7 +228,7 @@ interface IgxSummaryResult {
 }
 ```
 and take optional parameters for calculating the summaries.
-See [Custom summaries, which access all data](#custom-summaries-which-access-all-grid-data) and [Custom summaries with localization](#custom-summaries-with-localization) sections below.
+See [Custom summaries, which access all data](#custom-summaries-which-access-all-data) section below.
 
 > [!NOTE]
 > In order to calculate the summary row height properly, the @@igComponent needs the [`operate`]({environment:angularApiUrl}/classes/igxsummaryoperand.html#operate) method to always return an array of [`IgxSummaryResult`]({environment:angularApiUrl}/interfaces/igxsummaryresult.html) with the proper length even when the data is empty.
@@ -285,8 +285,8 @@ export class HGridSummarySampleComponent implements OnInit {
 ```
 }
 
-### Custom summaries, which access all @@igComponent data
- Now you can access all grid data inside the custom column summary. Two additional optional parameters are introduced in the IgxSummaryOperand `operate` method.
+### Custom summaries, which access all data
+ Now you can access all @@igComponent data inside the custom column summary. Two additional optional parameters are introduced in the IgxSummaryOperand `operate` method.
 As you can see in the code snippet below the operate method has the following three parameters:
 - columnData - gives you an array that contains the values only for the current column
 - allGridData - gives you the whole grid data source
@@ -307,46 +307,66 @@ class MySummary extends IgxNumberSummaryOperand {
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:650px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:650px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-alldata-summaries" >
 </code-view>
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:650px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:650px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-allData-summary" >
 </code-view>
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-  
-<code-view style="height:650px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+
+<code-view style="height:650px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-allData-summary" >
 </code-view>
 
 }
 
-### Custom summaries with localization
-By default, summary results are localized and formatted according to the grid [`locale`]({environment:angularApiUrl}/classes/igxgridcomponent.html#locale) and column [`pipeArgs`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#pipeArgs). When you are providing custom summaries, you may want to format the result in the corresponding localization and format, thus to match the values in the column.
+## Formatting summaries
+By default, summary results, produced by the built-in summary operands, are localized and formatted according to the grid [`locale`]({environment:angularApiUrl}/classes/igxgridcomponent.html#locale) and column [`pipeArgs`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#pipeArgs). When using custom operands, the `locale` and `pipeArgs` are not applied. If you want to change the default appearance of the summary results, you may format them using the [`summaryFormatter`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#summaryFormatter) property.
 
-Use the `locale` parameter to get localized summary data (as per the grid locale. If not passed, `locale` defaults to `'en-US'`). Use the `pipeArgs` parameter only if you want to customize the format of the date and numeric values that will be returned.
 ```typescript
-class MySummary extends IgxDateSummaryOperand {
-    operate(columnData: any[], allData = [], fieldName, locale: string, pipeArgs: IColumnPipeArgs): IgxSummaryResult[] {
-        const pipeArgs: IColumnPipeArgs = {
-            format: 'longDate',
-            timezone: 'UTC',
-            digitsInfo: '1.1-2'
-        }
-        const result = super.operate(columnData, allData, fieldName, locale, pipeArgs);
-        return result;
+public dateSummaryFormat(summary: IgxSummaryResult, summaryOperand: IgxSummaryOperand): string {
+    const result = summary.summaryResult;
+    if(summaryOperand instanceof IgxDateSummaryOperand && summary.key !== 'count'
+        && result !== null && result !== undefined) {
+        const pipe = new DatePipe('en-US');
+        return pipe.transform(result,'MMM YYYY');
     }
+    return result;
 }
 ```
+
+```html
+<igx-column ... [summaryFormatter]="dateSummaryFormat"></igx-column>
+```
+
+@@if (igxName === 'IgxGrid') {
+<code-view style="height:650px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/grid/grid-summary-formatter" >
+</code-view>
+}
+@@if (igxName === 'IgxTreeGrid') {
+<code-view style="height:650px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-summary-formatter" >
+</code-view>
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+<code-view style="height:650px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hGrid-summary-formatter" >
+</code-view>
+}
 
 @@if (igxName === 'IgxGrid') {
 ## Summaries with Group By
@@ -371,8 +391,8 @@ The [`showSummaryOnCollapse`]({environment:angularApiUrl}/classes/@@igTypeDoc.ht
 ### Demo
 
 
-<code-view style="height:720px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:720px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-groupby-summary" >
 </code-view>
 
@@ -398,8 +418,8 @@ The [`showSummaryOnCollapse`]({environment:angularApiUrl}/classes/@@igTypeDoc.ht
 > The [`summaryPosition`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summaryposition) property applies only for the child level summaries. The root level summaries appear always fixed at the bottom of the @@igComponent.
 
 
-<code-view style="height:720px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:720px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-summary2" >
 </code-view>
 
@@ -447,7 +467,7 @@ The last step is to **include** the component mixins:
 ```
 
 >[!NOTE]
- >If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
+ >If the component is using an [`Emulated`](../themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
 
  ```scss
 :host {
@@ -489,7 +509,7 @@ $custom-theme: igx-grid-summary-theme(
 
 ### Using Schemas
 
-Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](../themes/schemas.md). A **schema** is a recipe of a theme.
+Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](../themes/sass/schemas.md). A **schema** is a recipe of a theme.
 
 Extend one of the two predefined schemas, that are provided for every component, in this case - [`_light-grid-summary`]({environment:sassApiUrl}/index.html#variable-_light-grid-summary):
 
@@ -531,8 +551,8 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 ### Demo
 
 
-<code-view style="height:710px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:710px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-groupby-summary-styling" >
 </code-view>
 
@@ -541,8 +561,8 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 ### Demo
 
 
-<code-view style="height:710px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:710px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-summary-styling" >
 </code-view>
 
@@ -551,8 +571,8 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 ### Demo
 
 
-<code-view style="height:710px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:710px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-summary-styling" >
 </code-view>
 

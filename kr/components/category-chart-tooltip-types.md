@@ -11,15 +11,12 @@ _language: kr
 
 ## 데모
 
-<div class="sample-container loading" style="height: 500px">
-    <iframe id="category-chart-tooltip-types-iframe" src='{environment:dvDemosBaseUrl}/charts/category-chart-tooltip-types' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="category-chart-tooltip-types-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">STACKBLITZ 에서 보기
-    </button>
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-tooltip-types"
+           github-src="charts/category-chart/tooltip-types">
+</code-view>
 
-
-</div>
 <div class="divider--half"></div>
 
 ## 도구 설명 유형

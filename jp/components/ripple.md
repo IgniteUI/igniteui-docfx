@@ -10,12 +10,10 @@ _language: ja
 
 ### Ripple デモ
 <div class="divider--half"></div>
-
-<code-view style="height: 100px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/ripple-sample-5" alt="Ripple デモ">
-</code-view>
-
+<div class="sample-container loading" style="height: 100px">
+    <iframe seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-5" class="lazyload" alt="Ripple デモ">
+</iframe></div>
+<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div class="divider--half"></div>
 
 ## 使用方法
@@ -131,7 +129,7 @@ $custom-ripple-theme: igx-ripple-theme(
 
 Internet Explorer 11 などの古いブラウザーのコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、別のアプローチを用いる必要があります。
 
-コンポーネントが [`Emulated`](themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
+コンポーネントが [`Emulated`](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
 
 ```scss
 :host {
@@ -147,10 +145,11 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 
 ## Angular Ripple の例
 
-<code-view style="height: 200px" 
+<code-view style="height:200px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/interactions/ripple-styling" alt="Angular Ripple の例">
 </code-view>
+
 
 
 ## API リファレンス

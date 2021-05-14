@@ -101,7 +101,7 @@ Then define a @@igComponent with bound data source and [`rowEditable`]({environm
     <igx-column [field]="'HireDate'" dataType="date"></igx-column>
     <igx-column [field]="'OnPTO'" dataType="boolean" width="130px">
         <ng-template igxCell let-cell="cell" let-val>
-            <igx-icon [color]="cell.row.rowData.OnPTO? 'red': 'green'">account_circle</igx-icon>
+            <igx-icon [color]="cell.row.data.OnPTO? 'red': 'green'">account_circle</igx-icon>
         </ng-template>
     </igx-column>
     <igx-column [field]="'Age'" dataType="number"></igx-column>
@@ -204,6 +204,31 @@ After a new row is added through the row adding UI, its position and/or visibili
 
 - When spawning the UI for Hierarchical Grids, any child layout currently expanded for a row that the end user clicks the add row button for is collapsed.
 }
+
+## Customizing Row Adding Overlay
+
+### Customizing Text
+
+Customizing the text of the row adding overlay is possible using the `igxRowAddTextDirective`.
+
+```html
+<ng-template igxRowAddText>
+	Adding Row
+</ng-template>
+ ```
+
+### Customizing Buttons
+Customizing the buttons of the row editing overlay is possible using the `igxRowEditActionsDirective`.
+If you want the buttons to be part of the keyboard navigation, then each on of them should have the `igxRowEditTabStopDirective`.
+
+ ```html
+ <ng-template igxRowEditActions let-endRowEdit>
+	<button igxButton igxRowEditTabStop (click)="endRowEdit(false)">Cancel</button>
+	<button igxButton igxRowEditTabStop (click)="endRowEdit(true)">Apply</button>
+</ng-template>
+ ```
+> [!NOTE]
+> Using `igxRowEditActions` directive will change edit actions for both editing and adding overlay buttons.
 
 ## Remote scenarios
 

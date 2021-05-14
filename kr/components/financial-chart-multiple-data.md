@@ -7,19 +7,16 @@ _language: kr
 
 # Angular 금융 차트를 복수의 데이터 소스에 바인딩
 
-`XamFinancialChart` 제어는 다음 데모에서처럼 복수의 데이터 소스에 간단히 바인딩할 수 있습니다.
+[`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html) 제어는 다음 데모에서처럼 복수의 데이터 소스에 간단히 바인딩할 수 있습니다.
 
 ## 데모
 
-<div class="sample-container loading" style="height: 500px">
-    <iframe id="financial-chart-multiple-data-iframe" src='{environment:dvDemosBaseUrl}/charts/financial-chart-multiple-data' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="financial-chart-multiple-data-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">STACKBLITZ 에서 보기
-    </button>
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-multiple-data"
+           github-src="charts/financial-chart/multiple-data">
+</code-view>
 
-
-</div>
 <div class="divider--half"></div>
 
 각 데이터 소스를 배열에 추가하여 금융 차트에서 복수의 데이터 소스를 작성할 수 있습니다. 다음의 코드 조작은 복수의 데이터 소스를 작성하는 방법을 보여줍니다.

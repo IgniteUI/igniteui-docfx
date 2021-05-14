@@ -112,10 +112,12 @@ Ignite UI for Angular は、`type="file"` の入力スタイルも提供し、�
 ```
 
 
-<code-view style="height:520px" 
+
+<code-view style="height:695px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-entries/input-group-sample-5" >
 </code-view>
+
 
 
 ### Input Group テーマ
@@ -161,7 +163,7 @@ $custom-input-group: igx-input-group-theme(
 
 Internet Explorer 11 などの古いブラウザーのコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、[input group mixin]({environment:sassApiUrl}/index.html#mixin-igx-input-group) を用いる必要があります。
 
-ただし、先の手順に示すように、インクルード ステートメントをそのままにすると、スタイルは適切に適用されません。テキストの色が適切に変更された場合も、下の境界線と背景は同じままです。これは、コンポーネントが [`Emulated`](themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用しているためです。`input` 要素と `label` 要素はビューの一部であるため、スタイルが正しく適用されます。下の境界線は `igx-input-group` コンポーネントによって生成され、コンポーネントのスタイルの**影響を受けません**。
+ただし、先の手順に示すように、インクルード ステートメントをそのままにすると、スタイルは適切に適用されません。テキストの色が適切に変更された場合も、下の境界線と背景は同じままです。これは、コンポーネントが [`Emulated`](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用しているためです。`input` 要素と `label` 要素はビューの一部であるため、スタイルが正しく適用されます。下の境界線は `igx-input-group` コンポーネントによって生成され、コンポーネントのスタイルの**影響を受けません**。
 
 境界線のスタイルを設定するには、`:: ng-deep` を使用してこのカプセル化を解除する必要があります。カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターでスタイルのスコープを設定する必要があります。
 

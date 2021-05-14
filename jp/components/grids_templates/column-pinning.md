@@ -53,7 +53,7 @@ _language: ja
 
 }
 
-#### 列固定 API
+## 列固定 API
 
 列ピン固定は、[`igx-column`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) の `pinned` 入力によって制御されます。ピン固定列は常に @@igComponent の左側に描画され、@@igComponent 本体のピン固定されていない列の水平スクロールで固定されます。
 
@@ -155,7 +155,7 @@ public columnPinning(event) {
 ```
 }
 
-### ピン固定の位置
+## ピン固定の位置
 
 [`pinning`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#pinning) 設定オプションを使用して、列のピン固定の位置を変更できます。列の位置を Start または End のいずれかに設定できます。End に設定すると、列がピン固定されていない列の後に、グリッドの最後にレンダリングされます。
 ピン固定されていない列は水平にスクロールできますが、ピン固定された列は右側に固定されます。
@@ -181,7 +181,7 @@ public columnPinning(event) {
 ```typescript
 public pinningConfig: IPinningConfig = { columns: ColumnPinningPosition.End };
 ```
-#### デモ
+### デモ
 
 @@if (igxName === 'IgxGrid') {
 
@@ -210,7 +210,7 @@ public pinningConfig: IPinningConfig = { columns: ColumnPinningPosition.End };
 
 }
 
-### カスタム列ピン固定 UI
+## カスタム列ピン固定 UI
 
 カスタム UI を定義し、関連する API を介して列のピン状態を変更できます。
 
@@ -303,7 +303,7 @@ public toggleColumn(col: IgxColumnComponent) {
 }
 ```
 
-#### デモ
+### デモ
 
 @@if (igxName === 'IgxGrid') {
 
@@ -331,26 +331,26 @@ public toggleColumn(col: IgxColumnComponent) {
 }
 
 
-### ピン固定の制限
+## ピン固定の制限
 
 *   列幅をパーセンテージ (%) で設定した場合にピン固定列があると @@igComponent 本体およびヘッダー コンテンツが正しく配置されません。列のピン固定を正しく設定するには、列幅をピクセル (px) に設定するか、@@igComponent によって自動的に割り当てる必要があります。
 
 <div class="divider--half"></div>
 
 @@if (igxName === 'IgxGrid') {
-### スタイル設定   
+## スタイル設定   
 
-igxGridを使用すると、[Ignite UI for Angular テーマ ライブラリ](../themes/component-themes.md) でスタイルを設定できます。[テーマ]({environment:sassApiUrl}/index.html#function-igx-grid-theme) は、グリッドのすべての機能をカスタマイズできるさまざまなプロパティを公開します。      
+igxGridを使用すると、[Ignite UI for Angular テーマ ライブラリ](../themes/sass/component-themes.md) でスタイルを設定できます。[テーマ]({environment:sassApiUrl}/index.html#function-igx-grid-theme) は、グリッドのすべての機能をカスタマイズできるさまざまなプロパティを公開します。      
 
 以下の手順では、グリッドのピン固定スタイルをカスタマイズする手順を実行しています。
 
-#### グローバル テーマのインポート
+### グローバル テーマのインポート
 グループ化機能のカスタマイズは、すべてのスタイリング機能とミックスインが配置されている `index` ファイルをインポートする必要があります。
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index'
 ```
 
-#### カスタム テーマの定義
+### カスタム テーマの定義
 次に、[`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) を拡張し、必要に応じて Group By をカスタマイズするために必要なパラメーターを受け入れる新しいテーマを作成します。   
 
 ```scss
@@ -364,7 +364,7 @@ $custom-theme: igx-grid-theme(
 );
 ```    
 
-#### カスタム カラー パレットの定義
+### カスタム カラー パレットの定義
 上記で説明したアプローチでは、色の値がハード コーディングされていました。または、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) および [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用して、柔軟性を高めることができます。   
 `Igx-palette` は指定した一次色と二次色に基づいてカラーパレットを生成します。 
 
@@ -392,8 +392,8 @@ $custom-theme: igx-grid-theme(
 
 `$custom-theme` には前のセクションと同じプロパティが含まれていますが、今回は色がハードコードされていません。代わりに、カスタム `igx-palette` パレットが使用され、特定のカラーバリアントを使用して、プライマリ カラーとセカンダリ カラーから色が取得されました。   
 
-#### カスタム スキーマの定義
-さらに進んで、[**スキーマ**](../themes/schemas.md) のすべての利点を備えた柔軟な構造を構築できます。**スキーマ**はテーマを作成させるための方法です。   
+### カスタム スキーマの定義
+さらに進んで、[**スキーマ**](../themes/sass/schemas.md) のすべての利点を備えた柔軟な構造を構築できます。**スキーマ**はテーマを作成させるための方法です。   
 すべてのコンポーネントに提供される 2 つの事前定義されたスキーマの 1 つを拡張します。この場合、`$_light_grid` を使用します。   
 ```scss
 $custom-grid-schema: extend($_light-grid,(
@@ -414,19 +414,19 @@ $custom-theme: igx-grid-theme(
 );
 ```
 
-#### カスタム テーマの適用
+### カスタム テーマの適用
 テーマを適用する最も簡単な方法は、グローバル スタイル ファイルに `sass` `@include` ステートメントを使用することです。 
 ```scss
 @include igx-grid($custom-theme);
 ```
 
-#### スコープ コンポーネント テーマ
+### スコープ コンポーネント テーマ
 
 カスタム テーマが特定のコンポーネントのみに影響するように、定義したすべてのスタイルをグローバル スタイル ファイルからカスタム コンポーネントのスタイルファイルに移動できます (`index` ファイルのインポートを含む)。
 
 このように、Angular の [ViewEncapsulation](https://angular.io/api/core/Component#encapsulation) により、スタイルはカスタム コンポーネントにのみ適用されます。
  >[!NOTE]
- >コンポーネントが [`Emulated`](../themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、グリッドのスタイル設定は `::ng-deep` を使用してこのカプセル化を解除する必要があります。
+ >コンポーネントが [`Emulated`](../themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、グリッドのスタイル設定は `::ng-deep` を使用してこのカプセル化を解除する必要があります。
  >[!NOTE]
  >ステートメントがコンポーネントの外にある要素に影響を与えないよう、ステートメントを `:host` セレクター内にラップします。
 
@@ -437,7 +437,7 @@ $custom-theme: igx-grid-theme(
     }
 }
 ```
-#### デモ
+### デモ
 
 
 <code-view style="height:506px" 
@@ -445,13 +445,16 @@ $custom-theme: igx-grid-theme(
            iframe-src="{environment:demosBaseUrl}/grid/grid-pinning-styling" >
 </code-view>
 
+>[!NOTE]
+>このサンプルは、「テーマの変更」から選択したグローバル テーマに影響を受けません。
+
 }
 
-### API リファレンス
+## API リファレンス
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 
-### その他のリソース
+## その他のリソース
 <div class="divider--half"></div>
 
 * [@@igComponent 概要](@@igMainTopic.md)

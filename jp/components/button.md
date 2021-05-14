@@ -15,7 +15,6 @@ _language: ja
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-entries/buttons-sample-1" alt="Angular Button の例">
 </code-view>
-
 <div class="divider--half"></div>
 
 ## 使用方法
@@ -208,7 +207,7 @@ public selectDensity(event) {
 
 <code-view style="height: 150px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/buttons-display-density" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/buttons-display-density" alt="Angular Button の例">
 </code-view>
 <div class="divider--half"></div>
 
@@ -220,21 +219,19 @@ public selectDensity(event) {
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-次に、[`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) を拡張し、それぞれのホバーとフォーカス パラメーターと共に `$raised-text-color` と `$raised-background` パラメーターを受け入れる新しいテーマを作成します。
+次に、[`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) を拡張し、それぞれのホバーとフォーカス パラメーターと共に `$foreground` と `$background` パラメーターを受け入れる新しいテーマを作成します。
 
 ```scss
 $custom-button-theme: igx-button-theme(
-    $raised-text-color: #fdfdfd,
-    $raised-hover-text-color: #fdfdfd,
-    $raised-background: #345779,
-    $raised-hover-background: #2e4d6b,
-    $raised-focus-text-color: #fdfdfd,
-    $raised-focus-background: #2e4d6b,
-    $disabled-color: #2e4d6b
+    $foreground: #fdfdfd,
+    $hover-foreground: #fdfdfd,
+    $focus-foreground: #fdfdfd,
+    $background: #345779,
+    $hover-background: #2e4d6b,
+    $focus-background: #2e4d6b,
+    $disabled-foreground: #2e4d6b
 );
 ```
-
-カスタム テーマでは、`raised` ボタンにのみパラメーター値を提供しました。その他のタイプのボタンに実装するには、対応するパラメーターをターゲットにします。
 
 ボタンのスタイル設定に使用できるパラメーターの完全なリストについては、[`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) セクションを参照してください。
 
@@ -250,7 +247,7 @@ $custom-button-theme: igx-button-theme(
 
 Internet Explorer 11 などの古いブラウザーのコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、別のアプローチを用いる必要があります。
 
-コンポーネントが [`Emulated`](themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
+コンポーネントが [`Emulated`](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
 
 ```scss
 :host {

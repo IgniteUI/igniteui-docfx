@@ -28,8 +28,6 @@ Currently the following components have only partial RTL support:
 ## RTL Example
 This section shows the accessibility (ARIA) support of the framework as well as how easily manageable the `directionality` of the components is.
 
-<div class="divider--half"></div>
-
 <code-view style="height: 600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/scheduling/calendar-rtl-sample" alt="Angular RTL Support Example">

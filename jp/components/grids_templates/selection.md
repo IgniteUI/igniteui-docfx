@@ -152,8 +152,8 @@ Ignite UI for Angular @@igComponent コンポーネントは、[行選択](row-s
     }
 
     public copyRowData(event) {
-        const selectedData = this.cell.row.rowData ;
-        this.copyData(JSON.stringify(this.cell.row.rowData));
+        const selectedData = this.cell.row.data ;
+        this.copyData(JSON.stringify(this.cell.row.data));
         this.onCellValueCopy.emit({ data: selectedData });
     }
 

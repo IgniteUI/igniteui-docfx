@@ -244,7 +244,7 @@ $dark-button: igx-button-theme(
 
 この例では、アイコンの色と背景、ボタンの無効な色のみを変更しましたが、[`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) ではボタン スタイルを制御するためのパラメータを増やすことができます。
 
-最後の手順は、それぞれのテーマを持つコンポーネント mixin を**含める**ことです。
+最後の手順は、それぞれのテーマを持つコンポーネント ミックスインを**含める**ことです。
 
 ```scss
 @include igx-grid-paginator($dark-grid-paginator);
@@ -254,10 +254,10 @@ $dark-button: igx-button-theme(
 ```
 
 >[!NOTE]
->igx-button mixin を `.igx-paginator__pager` 内でスコープして、ページネータ ボタンのみにスタイルが設定されるようにします。そうでない場合は、グリッド内の他のボタンも影響を受けます。
+>igx-button ミックスインを `.igx-paginator__pager` 内でスコープして、ページネータ ボタンのみにスタイルが設定されるようにします。そうでない場合は、グリッド内の他のボタンも影響を受けます。
 
  >[!NOTE]
- >コンポーネントが [`Emulated`](../themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
+ >コンポーネントが [`Emulated`](../themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
 
 ```scss
 :host {
@@ -309,7 +309,7 @@ $dark-button: igx-button-theme(
 
 ### スキーマの使用
 
-テーマ エンジンには [**スキーマ**](../themes/schemas.md)を使用できる利点があり、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用するための方法です。
+テーマ エンジンには [**スキーマ**](../themes/sass/schemas.md)を使用できる利点があり、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用するための方法です。
 
 すべてのコンポーネントに提供されている 2 つの定義済みスキーマ (この場合は ([`dark-pagination`]({environment:sassApiUrl}/index.html#variable-_dark-pagination) と [`dark-button`]({environment:sassApiUrl}/index.html#variable-_dark-button) スキーマ) の 1 つを拡張します。
 

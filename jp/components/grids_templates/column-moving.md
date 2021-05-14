@@ -191,14 +191,14 @@ $dark-grid-column-moving-theme: igx-grid-theme(
 );
 ```
 
-最後の手順は、それぞれのテーマを持つコンポーネント mixins を**含める**ことです。
+最後の手順は、それぞれのテーマを持つコンポーネント ミックスインを**含める**ことです。
 
 ```scss
 @include igx-grid($dark-grid-column-moving-theme);
 ```
 
 > [!NOTE]
-> コンポーネントの [**View Encapsulation**](../themes/component-themes.md#表示のカプセル化) ストラテジに基づいて、`::ng-deep` を使用してこのカプセル化を解除する必要な場合があります。
+> コンポーネントの [**View Encapsulation**](../themes/sass/component-themes.md#表示のカプセル化) ストラテジに基づいて、`::ng-deep` を使用してこのカプセル化を解除する必要な場合があります。
 
 ```scss
 :host {
@@ -238,7 +238,7 @@ $dark-grid-column-moving-theme: igx-grid-theme(
 
 ### スキーマの使用
 
-テーマ エンジンを使用して[スキーマ](../themes/schemas.md)の利点を使用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
+テーマ エンジンを使用して[スキーマ](../themes/sass/schemas.md)の利点を使用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
 
 すべてのコンポーネントに提供されている 2 つの定義済みスキーマ (ここでは [light-grid]({environment:sassApiUrl}/index.html#variable-_light-grid)) の 1 つを拡張します。
 
@@ -285,7 +285,6 @@ $dark-grid-column-moving-theme: igx-grid-theme(
            iframe-src="{environment:demosBaseUrl}/grid/grid-moving-styled-sample" >
 </code-view>
 
-<div class="divider--half"></div>
 }
 
 @@if (igxName === 'IgxTreeGrid') {
@@ -295,7 +294,6 @@ $dark-grid-column-moving-theme: igx-grid-theme(
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-column-moving-styled" >
 </code-view>
 
-<div class="divider--half"></div>
 }
 
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -305,8 +303,10 @@ $dark-grid-column-moving-theme: igx-grid-theme(
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-moving-styled" >
 </code-view>
 
-<div class="divider--half"></div>
 }
+
+>[!NOTE]
+>このサンプルは、「テーマの変更」から選択したグローバル テーマに影響を受けません。
 
 ## API リファレンス
 <div class="divider--half"></div>

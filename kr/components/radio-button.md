@@ -50,7 +50,7 @@ To get a started with some radio buttons, add the following code inside the comp
 If all went well, you should see something like the following in the browser:
 
 <div class="sample-container loading" style="height: 88px">
-    <iframe data-src='{environment:demosBaseUrl}/data-entries/radio-sample-1' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+    <iframe data-src='{environment:demosBaseUrl}/data-entries/radio-sample-1' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 
 #### Radio Button Properties
@@ -96,7 +96,7 @@ Pay attention that before using the ngModel directive in a two-way data binding,
 Try it! The final result would be something like that:
 
 <div class="sample-container loading" style="height: 384px">
-    <iframe data-src='{environment:demosBaseUrl}/data-entries/radio-sample-2' width="100%" height="100%" seamless="" frameBorder="0" class="lazyload"></iframe>
+    <iframe data-src='{environment:demosBaseUrl}/data-entries/radio-sample-2' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 
 ### Radio Group

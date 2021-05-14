@@ -11,7 +11,7 @@ What you'll need:
 - A basic knowledge of ASP.NET Core and Angular.
 - .NET Core 3.1 installed and IDE such as Visual Studio.
 
-What you'll know by the end of this topic:
+What you'll know by the end of this article:
 - How to add and use SignalR.
 - How to open Client connection and use the *method invocation* concept to stream data per Client.
 - How to consume the SignalR service with Angular application by using Observables.

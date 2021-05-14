@@ -1,4 +1,3 @@
-
 @@if (igxName === 'IgxGrid') {
 ---
 title: Grid Live Data - Native Angular | Ignite UI for Angular | Infragistics
@@ -69,10 +68,9 @@ Updating the view works the same way for columns with a default template and for
 The purpose of this demo is to showcase a financial screen board with Real-time data stream using a [SignalR](https://dotnet.microsoft.com/apps/aspnet/signalr) hub back-end. 
 As you can see the igxGrid component handles with ease the high-frequency updates from the server. The code for the ASP.NET Core application using SignalR could be found in this [public GitHub repository](https://github.com/IgniteUI/finjs-web-api).
 
-
-<code-view style="height: 580px;" 
+<code-view style="height:700px" 
            data-demos-base-url="{environment:lobDemosBaseUrl}" 
-           iframe-src="{environment:lobDemosBaseUrl}/grid-finjs-dock-manager/grid-finjs-dock-manager" >
+           iframe-src="{environment:lobDemosBaseUrl}/grid-finjs-dock-manager/grid-finjs-dock-manager" alt="Angular Live-data Update Example with a service">
 </code-view>
 
 ### Start the hub connection
@@ -91,7 +89,8 @@ this.hubConnection = new signalR.HubConnectionBuilder()
             this.registerSignalEvents();
             this.broadcastParams(interval, volume, live, updateAll);
         })
-        .catch(() => {});
+        .catch(() => {})
+        ...
 ```
 
 Based on the specified frequency a total of 30 new updates will be received by the Grids from the server. A specific cellStyle classes are applied to the three columns that are handling the changes (Price, Change and Change in percent).
@@ -121,7 +120,9 @@ Take leverage of the [Dock Manager](../dock-manager.md) WebComponent and build y
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 * [IgxGridComponent Styles]({environment:sassApiUrl}/#function-igx-grid-theme)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
-* [IgxGridRowComponent]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)
+* [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html)
+* [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)
+* [IgxHierarchicalGridRow]({environment:angularApiUrl}/classes/igxhierarchicalgridrow.html)
 * [IgxGridCellComponent]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
 
 ## Additional Resources
@@ -158,11 +159,10 @@ Our community is active and always welcoming to new ideas.
 
 * [IgxTreeGridComponent]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)
 * [IgxTreeGridCellComponent]({environment:angularApiUrl}/classes/igxtreegridcellcomponent.html)
-* [IgxTreeGridRowComponent]({environment:angularApiUrl}/classes/igxtreegridrowcomponent.html)
+* [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 * [IgxGridComponent Styles]({environment:sassApiUrl}/#function-igx-grid-theme)
 * [IgxGridCellComponent]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
-* [IgxGridRowComponent]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)
 * [IgxBaseTransactionService]({environment:angularApiUrl}/classes/igxbasetransactionservice.html)
 
 

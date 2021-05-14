@@ -51,7 +51,7 @@ In order to display the snackbar component, use its [`show()`]({environment:angu
 If the sample is configured properly, a snackbar appears displaying a text message when the button is clicked.
 
 <div class="sample-container loading" style="height: 170px">
-    <iframe id="snackbar-sample-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/snackbar-sample-1" class="lazyload"></iframe>
+    <iframe id="snackbar-sample-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/snackbar-sample-1" class="lazyload"></iframe>
 </div>
 
 #### Hide/Auto Hide
@@ -77,7 +77,7 @@ public close(element) {
 If the sample is configured properly, a snackbar appears when the button is clicked showing message and action button. The auto hide feature is disabled and the snackbar disappears on 'CLOSE' button click.
 
 <div class="sample-container loading" style="height: 170px">
-    <iframe id="snackbar-sample-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/snackbar-sample-2" class="lazyload"></iframe>
+    <iframe id="snackbar-sample-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/snackbar-sample-2" class="lazyload"></iframe>
 </div>
 
 #### Display Time
@@ -95,7 +95,7 @@ Use [`displayTime`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.htm
 If the sample is configured properly, the snackbar auto hides faster.
 
 <div class="sample-container loading" style="height: 170px">
-    <iframe id="snackbar-sample-iframe" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/snackbar-sample-3" class="lazyload"></iframe>
+    <iframe id="snackbar-sample-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/snackbar-sample-3" class="lazyload"></iframe>
 </div>
 
 #### Customize Snackbar
