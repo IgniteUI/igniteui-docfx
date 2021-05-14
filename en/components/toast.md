@@ -75,6 +75,9 @@ public showMessage() {
 }
 ```
 
+> [!WARNING]
+> The igx-toast component `show` and `hide` methods have been deprecated. `open` and `close` should be used instead.
+
 ## Examples
 
 ### Hide/Auto Hide
@@ -121,7 +124,7 @@ Use [`position`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#posi
 <!--sample.component.html-->
 
 <div>
-    <button igxButton="raised" (click)="show(toast)">Show notification on top</button>
+    <button igxButton="raised" (click)="open(toast)">Show notification on top</button>
     <igx-toast #toast message="Notification displayed" [position]="toastPosition"></igx-toast>
 </div>
 
@@ -134,9 +137,9 @@ import { IgxToastPosition } from 'igniteui-angular';
 
 ...
 public toastPosition: IgxToastPosition;
-public show(toast) {
+public open(toast) {
     this.toastPosition = "top";
-    toast.show();
+    toast.open();
 }
 ...
 

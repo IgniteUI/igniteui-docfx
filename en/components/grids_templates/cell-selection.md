@@ -291,7 +291,6 @@ With the custom theme applied, the selected grid cells are highlighted with our 
            iframe-src="{environment:demosBaseUrl}/grid/grid-multi-cell-selection-style" >
 </code-view>
 
-
 }
 
 @@if (igxName === 'IgxHierarchicalGrid'){

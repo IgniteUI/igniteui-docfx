@@ -102,12 +102,10 @@ public ngOnInit() {
 <igx-icon name="contains" fontSet="filter-icons"></igx-icon>
 ```
 
-
 <code-view style="height: 50px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-display/svg-icon-sample" >
 </code-view>
-
 
 ### Styling
 The igxIcon allows styling through the [Ignite UI for Angular Theme Library](../themes/sass/component-themes.md). The icon's [theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme) exposes a property that allows customization of the color of the component.

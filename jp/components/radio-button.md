@@ -101,12 +101,10 @@ public selectedColor: string = this.colors[3].hex;
 
 結果は以下のようになります。
 
-
 <code-view style="height: 450px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-entries/radio-sample-2" >
 </code-view>
-
 
 ## スタイル設定
 
