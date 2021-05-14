@@ -37,7 +37,7 @@ The Ignite UI for Angular @@igComponent supports remote data operations such as 
 
 }
 @@if (igxName === 'IgxTreeGrid') {
-### Demo
+## Angular @@igComponent Remote Data Operations Overview Example
 
 
 <code-view style="height:550px" 
@@ -287,7 +287,7 @@ The remote filtering will have to be performed over the flat collection directly
 
 ### Remote Filtering Demo
 
-You can see the result of the code from above at the beginning of this article in the [Demo](#demo) section.
+You can see the result of the code from above at the beginning of this article in the [Demo](#angular-tree-grid-remote-data-operations-overview-example) section.
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
  <!-- TODO -->

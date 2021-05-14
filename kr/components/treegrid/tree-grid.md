@@ -146,7 +146,7 @@ IgxTreeGridComponent가 계층을 구축하려면 [`childDataKey`]({environment:
 </igx-tree-grid>
 ```
 
-[Demo](#demo) 섹션에서 이 내용 시작 부분에 있는 코드 결과를 확인할 수 있습니다.
+섹션에서 이 내용 시작 부분에 있는 코드 결과를 확인할 수 있습니다.
 
 ### 기본 키와 외부 키
 **기본 키와 외부 키** 옵션을 사용하는 경우에는 모든 데이터 개체에 기본 키와 외부 키가 포함됩니다. 기본 키는 현재 데이터 객체의 고유 식별자이며, 외부 키는 해당 상위 객체의 고유 식별자입니다. 이 경우, 원본 데이터 소스가 포함된 트리 그리드의 [`data`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#data) 속성은 플랫 컬렉션이 됩니다.
