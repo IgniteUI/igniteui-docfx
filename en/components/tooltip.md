@@ -101,7 +101,7 @@ Now that we have both our target and tooltip defined, all that's left for us to 
 </div>
 ```
 
-If everything went well, you should see the sample shown in the [Tooltip Demo](#demo) section.
+If everything went well, you should see the sample shown in the [Tooltip Demo](#angular-tooltip-example) section.
 
 ### Show/Hide delay settings
 What if we want to control the amount of time that should pass before showing and hiding the tooltip? For this purpose we can use the [`showDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#showdelay) and the [`hideDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hidedelay) properties of the [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) directive. Both properties are of type **number** and take time in milliseconds.
