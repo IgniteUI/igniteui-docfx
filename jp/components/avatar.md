@@ -158,12 +158,10 @@ Internet Explorer 11 のコンポーネントをスタイル設定するには�
 
 ここまでの内容が正しければ、以下のように表示されます。
 
-
 <code-view style="height:120px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/layouts/avatar-styling" >
 </code-view>
-
 <div class="divider--half"></div>
 
 ## API リファレンス
