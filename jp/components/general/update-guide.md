@@ -249,6 +249,31 @@ grid.getRowByIndex(0).expanded = false;
 * *onRowPinning* によって発行されたイベント引数の *row* プロパティ、および *onRowDragStart* によって発行されたイベント引数の *dragData* プロパティ、*onRowDragEnd* は [`RowType`]({environment:angularApiUrl}/interfaces/rowtype.html) を実装しています。 
 * *ng update* は、*IgxGridRowComponent*、*IgxTreeGridRowComponent*、*IgxHierarchicalRowComponent*、*IgxGridGroupByRowComponent* のインポート、入力、キャストなどの使用方法のほとんどが移行されます上記のいずれかを使用するコード内の場所が移行されない場合は、入力/キャストを削除するか、[`RowType`]({environment:angularApiUrl}/interfaces/rowtype.html) で変更してください。
 * *getRowByIndex* は、そのインデックスの行が集計行である場合、[`RowType`]({environment:angularApiUrl}/interfaces/rowtype.html) オブジェクトを返すようになりました (以前は *undefined* を返していました)。*row.isSummaryRow* および *row.isGroupByRow* は、インデックスの行が集計行またはグループ行の場合に true を返します。
+### IgxInputGroupComponent
+* The `disabled` property has been removed. The property was misleading, as the state of the input group was always managed by the underlying `igxInput`.
+    * Running `ng update` will handle all instances in which `[disabled]` was used as an `@Input` in templates.
+    * If you are referencing the property in a `.ts` file:
+    ```typescript
+    export class CustomComponent {
+        public inputGroup: IgxInputGroupComponent
+        ...
+        this.inputGroup.disabled = false;
+    }
+    ```
+
+    you should please manually update your code to reference the underlying input directive's `disabled` property:
+    ```typescript
+    export class CustomComponent {
+        public input: IgxInputDirective
+        ...
+        this.input.disabled = false;
+    }
+    ```
+
+### IgxDateTimeDirective, IgxDatePickerComponent, IgxTimePickerComponent, IgxDateRangePickerComponent
+
+* The `value` property for IgxDateTimeDirective, IgxDatePickerComponent, IgxTimePickerComponent, IgxDateRangePickerComponent now accepts ISO 8601 string format. This means that `value` type could be `Date` or `string`.
+* The `inputFormat` property of IgxDateTimeDirective, IgxDatePickerComponent, IgxTimePickerComponent, IgxDateRangePickerComponent now doesn't accept `y` for the year part. You should update it to `yy`.
 
 ## 10.2.x から 11.0.x の場合:
 * IgxGrid、IgxTreeGrid、IgxHierarchicalGrid
