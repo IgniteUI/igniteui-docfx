@@ -16,7 +16,7 @@ _canonicalLink: grid/collapsible-column-groups
 
 # Grid Collapsible Column Groups Overview
 
-Multi-column headers allow you to have multiple levels of nested columns and column groups, also they provide you the ability to mark each column group as **collapsible**. **Collapsible multi-column headers** make it possible to collapse/expand, e.g. to show and hide the nested headers under the current one, which will give you a shortened/summarized information for example.
+Multi-column headers allow you to have multiple levels of nested columns and column groups. They also provide the ability to mark each column group as **collapsible**. **Collapsible multi-column headers** make it possible to collapse/expand, i.e. to show and hide the nested headers under the current one, which will give you a shortened/summarized information for example.
 
 ## Angular Grid Collapsible Column Groups Overview Example
 
@@ -51,14 +51,14 @@ Multi-column headers allow you to have multiple levels of nested columns and col
 
 ## Setup
 
-To get started with the IgxGrid and the **Collapsible multi-column headers** , first you need to install Ignite UI for Angular by typing the following command:
+To get started with the @@igxName and the **Collapsible multi-column headers** , first you need to install Ignite UI for Angular by typing the following command:
 
 ```cmd
 ng add igniteui-angular
 ```
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](../general/getting-started.md) topic.
 
-The next step is to import the @@if (igxName === 'IgxGrid') {`IgxGridModule`} @@if (igxName === 'IgxTreeGrid') {`IgxTreeGridModule`} @@if (igxName === 'IgxHierarchicalGrid') {`IgxHierarchicalGridModule`} in the app.module.ts file. Also we strongly suggest you to take a brief look at [*multi-column groups*](./multi-column-headers.md) topic, to see more detailed information on how to setup the column groups in your grid.
+The next step is to import the `@@igxNameModule` in the app.module.ts file. Also, we strongly suggest that you take a brief look at [*multi-column groups*](./multi-column-headers.md) topic, to see more detailed information on how to setup the column groups in your grid.
 
 ## Usage
 
@@ -87,10 +87,10 @@ So let's see the markup below:
 </igx-column-group>
 ```
 
-And now let's sum up: every child column has tree states:
--	Can be always visible, no matter expand state of its parent;
--	Can be visible, when its parent is expanded;
+And now let's sum up: every child column has three states:
+-	Can be always visible, no matter the expanded state of its parent;
 -	Can be visible, when its parent is collapsed;
+-	Can be hidden, when its parent is collapsed;
 
 The initial state of the column group which is specified as collapsible is `[expanded]="true"`. But you can easily change this behavour by setting the property `[expanded]="false"`.
 
@@ -104,8 +104,8 @@ Default collapse indicator for the igxGrid is the following:
 
 <img class="responsive-img" src="../../images/general/collapsed_indicator.png" style="width: 400px; height: 130px"/>
 
-Also if you need to change the default expand/collapse indicator we introduce you two easy ways to do it.
-### By input property
+Also, if you need to change the default expand/collapse indicator, we provide two easy ways to do so - via an input property or through a directive.
+### Using an input property
 
 You can define custom expand/collapse template and provide it to each of the collapsible column groups using **collapsibleIndicatorTemplate** input property. Check the markup below:
 
@@ -156,7 +156,7 @@ Another way to achieve this behavior is to use the igxCollapsibleIndicator direc
 ## Additional Resources
 <div class="divider--half"></div>
 
-* [Grid overview](grid.md)
+* [@@igComponent overview](@@igMainTopic.md)
 * [Virtualization and Performance](virtualization.md)
 * [Paging](paging.md)
 * [Filtering](filtering.md)

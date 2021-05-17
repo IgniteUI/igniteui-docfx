@@ -166,7 +166,7 @@ Finally, we will enable the toolbar of our tree grid, along with the column hidi
 </igx-tree-grid>
 ```
 
-You can see the result of the code from above at the beginning of this article in the [Demo](#demo) section.
+You can see the result of the code from above at the beginning of this article in the [Angular Tree Grid Example](#angular-tree-grid-example) section.
 
 ### Primary and Foreign keys
 When we are using the **primary and foreign keys** option, every data object contains a primary key and a foreign key. The primary key is the unique identifier of the current data object and the foreign key is the unique identifier of its parent. In this case the [`data`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#data) property of our tree grid that contains the original data source will be a flat collection.

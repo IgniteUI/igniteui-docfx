@@ -224,7 +224,7 @@ public ngAfterViewInit() {
 
 열 숨기기 UI에 확장된 기능 세트를 사용하려면 열 숨기 UI 컴포넌트 자체에 대한 참조를 반환하는 도구 모음의 [`columnHidingUI`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html#columnhidingui) 속성을 사용합니다. 이렇게 하면 각 API에 접속하여 애플리케이션의 요구에 따라 사용할 수 있습니다.
 
-이 조항 시작 부분에 있는 코드의 결과는 [열 숨기기 데모](#demo) 부분에서 확인할 수 있습니다.
+이 조항 시작 부분에 있는 코드의 결과는 열 숨기기 데모 부분에서 확인할 수 있습니다.
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
 ### 사용자 열 숨기기 UI
