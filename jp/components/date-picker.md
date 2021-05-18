@@ -148,7 +148,7 @@ With it you gain access to the date picker's [`calendar`](calendar.md) and all o
 
 Opening and closing the [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html)'s calendar UI with the keyboard is available only for `dropdown` mode and can be triggered via the key combinations below:
 
-|Keys|Description|
+|キー|説明|
 |----|-----------|
 | <kbd>Space</kbd> | Displays the calendar pop-up and focuses it |
 | <kbd>Alt</kbd> + <kbd>&darr;</kbd> | Displays the calendar pop-up and focuses it |

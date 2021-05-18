@@ -99,7 +99,7 @@ To set a specific input format, pass it as a string to the IgxDateTimeEditor dir
 ```
 
 The table bellow shows formats that are supported by the directive's [`inputFormat`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#inputformat):
-| Format | Description |
+| 形式 | 説明 |
 |:-------:|:-----------|
 | `d` | Date, will be coerced with a leading zero while editing. |
 | `dd` | Date with an explicitly set leading zero. |
