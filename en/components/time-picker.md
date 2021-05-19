@@ -121,7 +121,7 @@ And here's our templated time picker:
 </code-view>
 
 ## Custom action buttons
-The [`IgxTimePickerComponent`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html) supports action button customization. To achieve that, wrap the buttons in `ng-template` marked with the `igxTimePickerActions` directive selector.
+The [`IgxTimePickerComponent`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html) supports action button customization. To achieve that, wrap the buttons in `ng-template` marked with the [`igxPickerActions`]({environment:angularApiUrl}/classes/igxpickeractionsdirective.html) directive selector.
 
 In the example below, custom action buttons are added for 'CANCEL', 'DONE' and 'NOW' actions.
 
@@ -167,7 +167,7 @@ And there we have it, a re-templated time picker with dropdown, custom actions a
 
 ## Examples
 ### Dialog Mode
-The default time picker mode is editable dropdown mode. To change the time picker mode to read-only dialog mode, set the [`mode`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#mode) input to [`dialog`]({environment:angularApiUrl}/enums/interactionmode.html#dialog):
+The default time picker mode is editable dropdown mode. To change the time picker mode to read-only dialog mode, set the [`mode`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#mode) input to [`dialog`]({environment:angularApiUrl}/index.html#pickerinteractionmode):
 
 ```typescript
 // timePickerDropdown.component.ts
