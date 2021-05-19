@@ -52,7 +52,7 @@ To instantiate a date range picker in its default mode, use the following code:
 public range: DateRange = { start: new Date(2020, 4, 20), end: new Date(2020, 4, 25) };
 ```
 
->Note: The Date Range Picker value is of type [`DateRange`](({environment:angularApiUrl}/interfaces/daterange.html)), which contains a start and an end date.
+>Note: The Date Range Picker value is of type [`DateRange`]({environment:angularApiUrl}/interfaces/daterange.html}), which contains a start and an end date.
 
 To create a two-way data-binding, use `ngModel`:
 ```html
