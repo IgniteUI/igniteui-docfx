@@ -8,9 +8,10 @@
         "angularApiUrl": "https://staging.infragistics.com/products/ignite-ui-angular/docs/typescript/latest",
         "sassApiUrl": "https://staging.infragistics.com/products/ignite-ui-angular/docs/sass/latest",
         "dvApiBaseUrl": "https://staging.infragistics.com",
-        "GTMContainerId": "GTM-WLXLBZD",
+        "GTMContainerId": "GTM-NNHVMC7",
         "themeApiUrl": "http://localhost:59296/api/taas",
-        "themingWidgetVersion": "latest"
+        "themingWidgetVersion": "latest",
+        "baseUrl": "/docfx-test-ja/"
     },
     "staging": {
         "demosBaseUrl": "https://staging.infragistics.co.kr/angular-demos",
@@ -21,9 +22,10 @@
         "angularApiUrl": "https://staging.infragistics.com/products/ignite-ui-angular/docs/typescript/latest",
         "sassApiUrl": "https://staging.infragistics.com/products/ignite-ui-angular/docs/sass/latest",
         "dvApiBaseUrl": "https://staging.infragistics.com",
-        "GTMContainerId": "GTM-NCKNPN",
+        "GTMContainerId": "GTM-WLWSDK",
         "themeApiUrl": "https://igniteuithemingwidget-staging.infragistics.com/api/taas",
-        "themingWidgetVersion": "latest"
+        "themingWidgetVersion": "latest",
+        "baseUrl": "/products/ignite-ui-angular/angular/"
     },
     "production": {
         "demosBaseUrl": "https://www.infragistics.co.kr/angular-demos",
@@ -34,8 +36,9 @@
         "angularApiUrl": "https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/latest",
         "sassApiUrl": "https://www.infragistics.com/products/ignite-ui-angular/docs/sass/latest",
         "dvApiBaseUrl": "https://www.infragistics.com",
-        "GTMContainerId": "GTM-T65CF7",
+        "GTMContainerId": "GTM-KVNSWJ",
         "themeApiUrl": "https://igniteuithemingwidget-prod.infragistics.com/api/taas",
-        "themingWidgetVersion": "latest-stable"
+        "themingWidgetVersion": "latest-stable",
+        "baseUrl": "/products/ignite-ui-angular/angular/"
     }
 }
