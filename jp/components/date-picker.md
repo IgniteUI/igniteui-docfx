@@ -203,7 +203,7 @@ export class SampleFormComponent {
 ```
 
 ### Angular Forms で
-[`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) は、コア [FormsModule](https://angular.io/api/forms/FormsModule)、[NgModel](https://angular.io/api/forms/NgModel)、および [ReactiveFormsModule](https://angular.io/api/forms/ReactiveFormsModule)（[`FormControl`](https://angular.io/api/forms/FormControl)、[`FormGroup`](https://angular.io/api/forms/FormGroup) など) からのすべてのディレクティブをサポートします。これには、[フォーム バリデーター](https://angular.io/api/forms/Validators)機能も含まれます。さらに、コンポーネントの [`minValue`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#minvalue) プロパティと [`maxValue`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#maxvalue) プロパティはフォーム バリデーターとして機能します。
+[`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) は、コア [FormsModule](https://angular.io/api/forms/FormsModule)、[NgModel](https://angular.io/api/forms/NgModel)、および [ReactiveFormsModule](https://angular.io/api/forms/ReactiveFormsModule) ([`FormControl`](https://angular.io/api/forms/FormControl)、[`FormGroup`](https://angular.io/api/forms/FormGroup) など) からのすべてのディレクティブをサポートします。これには、[フォーム バリデーター](https://angular.io/api/forms/Validators)機能も含まれます。さらに、コンポーネントの [`minValue`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#minvalue) プロパティと [`maxValue`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#maxvalue) プロパティはフォーム バリデーターとして機能します。
 
 [リアクティブ フォームの統合](input-group-reactive-forms.md)トピックにアクセスすると、[`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) をリアクティブ フォームで確認できます。
 

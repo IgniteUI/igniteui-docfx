@@ -82,7 +82,7 @@ export class ComboDemo implements OnInit {
 ```
 
 > [!Note]
-> データソースが単純なタイプ (`string[]`、`number[]` など）で構成されている場合、`valueKey` と `displayKey` を**指定しないでください**。
+> データソースが単純なタイプ (`string[]`、`number[]` など) で構成されている場合、`valueKey` と `displayKey` を**指定しないでください**。
 
 ### 双方向バインディング
 
