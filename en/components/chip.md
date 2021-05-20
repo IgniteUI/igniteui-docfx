@@ -461,6 +461,9 @@ If `$legacy-support` is set to `false`(default), include the component **css var
 * [IgxChipComponent Styles]({environment:sassApiUrl}/index.html#function-igx-chip-theme)
 * [IgxChipsAreaComponent]({environment:angularApiUrl}/classes/igxchipsareacomponent.html)
 
+## Theming Dependencies
+* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+
 ## References
 
 <div class="divider--half"></div>
