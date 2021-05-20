@@ -241,6 +241,9 @@ public alignment = RadioGroupAlignment.vertical;
 * [IgxRadioComponent]({environment:angularApiUrl}/classes/igxradiocomponent.html)
 * [IgxRadioComponent Styles]({environment:sassApiUrl}/index.html#function-igx-radio-theme)
 
+## Theming Dependencies
+* [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
+
 ## Additional Resources
 <div class="divider--half"></div>
 

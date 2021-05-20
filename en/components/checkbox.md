@@ -281,6 +281,9 @@ If `$legacy-support` is set to `false`(default), include the component **css var
 * [IgxCheckboxComponent Styles]({environment:sassApiUrl}/index.html#function-igx-checkbox-theme)
 * [LabelPosition]({environment:angularApiUrl}/enums/labelposition.html)
 
+## Theming Dependencies
+* [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-igx-riple-theme)
+
 ## Additional Resources
 <div class="divider--half"></div>
 
