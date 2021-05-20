@@ -6,7 +6,7 @@ _language: ja
 ---
 
 # Angular Date Picker
-The Ignite UI for Angular Date Picker Component lets users pick a single date through a month-view calendar dropdown or editable input field. The picker also supports a `dialog` mode for selection from the calendar only, locale-aware and customizable date formatting and validation integration.
+Ignite UI for Angular Date Picker コンポーネントを使用すると、ユーザーは月表示のカレンダード ロップダウンまたは編集可能な入力フィールドから単一の日付を選択できます。ピッカーは、カレンダーからのみ選択するための `dialog` モード、ロケール対応でカスタマイズ可能な日付の書式設定と検証の統合もサポートしています。
 
 ## Angular Date Picker の例
 <!-- TODO: datepicker sample with several options enabled -->
@@ -19,7 +19,7 @@ The Ignite UI for Angular Date Picker Component lets users pick a single date th
 ## 使用方法
 
 ### はじめに
-To get started with the Date Picker component, first you need to import the `IgxDatePickerModule` in the module that you would like to use it in, for our example we will be using the **app.module.ts** file. 
+Date Picker コンポーネントの使用を開始するには、まず、使用するモジュールに `IgxDatePickerModule` をインポートする必要があります。この例では、**app.module.ts** ファイルを使用します。 
 
 >[!NOTE]
 > デートピッカーが [**IgxCalendarComponent**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) を使用し、 タッチ操作のために **BrowserAnimationsModule**  と **HammerModule** に依存関係があり、これらもモジュールに追加する必要があります。
@@ -54,7 +54,7 @@ export class AppModule {}
 ```
 
 ### オプション
-The `IgxDatePickerComponent` can be bound to a `date` or a `string`.
+`IgxDatePickerComponent` は `date` または `string` にバインドできます。
 
 ```html
 <igx-date-picker [value]="date"></igx-date-picker>
@@ -64,23 +64,23 @@ The `IgxDatePickerComponent` can be bound to a `date` or a `string`.
 public date = new Date(2000, 0, 1);
 ```
 
-If a string is bound to the picker, it needs to be a date-only string in the `ISO 8601` format:
+文字列がピッカーにバインドされている場合は、`ISO8601` 形式の日付のみの文字列である必要があります。
 ```html
 <igx-date-picker [value]="'2000-01-01'"></igx-date-picker>
 ```
-More information about this can be found in [DateTime Editor's ISO section](date-time-editor.md#iso).
+これについての詳細は、[DateTime Editor の ISO セクション](date-time-editor.md#iso)にあります。
 
-Two-way binding is possible through `ngModel`:
+`ngModel` を介して双方向バインディングが可能です:
 ```html
 <igx-date-picker [(ngModel)]="date"></igx-date-picker>
 ```
 
-As well as through the `value` input:
+`value` 入力を介しても可能です:
 ```html
 <igx-date-picker [(value)]="date"></igx-date-picker>
 ```
 
-Additionally, `formControlName` can be set on the picker, to use it in a reactive form:
+さらに、`formControlName` をピッカーに設定して、リアクティブ フォームで使用することができます:
 ```html
 <form [formGroup]="form">
     <igx-date-picker formControlName="datePicker"></igx-date-picker>
@@ -100,20 +100,20 @@ export class SampleFormComponent {
 ```
 
 > [!NOTE]
-> The picker always returns a `Date` value, this means that If it is model bound or two-way bound to a string variable, after a new date has been chosen, it will be of type `Date`.
+> ピッカーは常に `Date` 値を返します。これは、モデルにバインドされている場合、または文字列変数への双方向バインドの場合、新しい日付が選択された後、タイプが `Date` になることを意味します。
 
 ### コンポーネントの投影
-The [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) allows the projection of child components that the  [`IgxInputGroupComponent`]({input-group.md) supports (with the exception of [`IgxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html)) - [`igxLabel`](label-input.md), [`IgxHint`](input-group.md#hints), [`igxPrefix`](input-group.md#prefix--suffix), [`igxSuffix`](input-group.md#prefix--suffix). 詳細については、[Label および Input](label-input.md) トピックを参照してください。
+[`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) は、[`IgxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) を除く [`IgxInputGroupComponent`]({input-group.md) がサポートする子コンポーネントの投影を許可します。それは、[`igxLabel`](label-input.md)、[`IgxHint`](input-group.md#hint)、[`igxPrefix`](input-group.md#prefix--suffix)、[`igxSuffix`](input-group.md#prefix--suffix) です。詳細については、[Label および Input](label-input.md) トピックを参照してください。
 
 ```html
 <igx-date-picker #datePicker>
     <igx-icon igxSuffix (click)="datePicker.open()">keyboard_arrow_down</igx-icon>
 </igx-date-picker>
 ```
-The above sample will add an additional toggle icon at the end of the input, right after the default clear icon. This will not remove the default toggle icon, though as prefixes and suffixes can be stacked one after the other. 
+上記のサンプルでは、​​入力の最後、デフォルトのクリア アイコンの直後に追加のトグル アイコンが追加されます。プレフィックスとサフィックスを次々に積み重ねることができるため、これによってデフォルトのトグル アイコンが削除されることはありません。 
 
-#### Customizing the toggle and clear icons 
-The [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) can be configured with [`IgxPickerToggleComponent`]({environment:angularApiUrl}/classes/igxpickertogglecomponent.html) and [`IgxPickerClearComponent`]({environment:angularApiUrl}/classes/igxpickerclearcomponent.html), these can be used to change the toggle and clear icons without having to add your own click handlers.
+#### トグル アイコンとクリア アイコンのカスタマイズ 
+[`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) は [`IgxPickerToggleComponent`]({environment:angularApiUrl}/classes/igxpickertogglecomponent.html) と [`IgxPickerClearComponent`]({environment:angularApiUrl}/classes/igxpickerclearcomponent.html) で構成できます。これらを使用すると、独自のクリック ハンドラーを追加しなくても、トグル アイコンとクリア アイコンを変更できます。
 
 ```html
  <igx-date-picker>
@@ -128,14 +128,14 @@ The [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepicker
 ```
 
 #### カスタム アクション ボタン
-The picker's action buttons can be modified in two ways:
-- the button's text can be changed using the [`todayButtonLabel`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#todaybuttonlabel)) and the [`cancelButtonLabel`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#cancelbuttonlabel) input properties:
+ピッカーのアクション ボタンは、次の 2 つの方法で変更できます:
+- ボタンのテキストは、[`todayButtonLabel`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#todaybuttonlabel)) と [`cancelButtonLabel`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#cancelbuttonlabel) 入力プロパティを使用して変更できます:
 ```html
 <igx-date-picker [todayButtonLabel]="'今日'" [cancelButtonLabel]="'キャンセル'"></igx-date-picker>
 ```
 
-- the whole buttons can be templated using the [`igxPickerActions`]({environment:angularApiUrl}/classes/pickeractionsdirective.html) directive:
-With it you gain access to the date picker's [`calendar`](calendar.md) and all of its members:
+- ボタン全体は、[`igxPickerActions`]({environment:angularApiUrl}/classes/pickeractionsdirective.html) ディレクティブを使用してテンプレート化できます。
+これを使用すると、日付ピッカーの [`calendar`](calendar.md) とそのすべてのメンバーにアクセスできます。
 ```html
 <igx-date-picker>
     <ng-template igxPickerActions let-calendar>
@@ -146,22 +146,22 @@ With it you gain access to the date picker's [`calendar`](calendar.md) and all o
 
 ### キーボード ナビゲーション
 
-Opening and closing the [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html)'s calendar UI with the keyboard is available only for `dropdown` mode and can be triggered via the key combinations below:
+キーボードを使用して [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) のカレンダー UI を開いたり閉じたりすることは、`dropdown` モードでのみ使用でき、以下のキーの組み合わせを介してトリガーできます。
 
 |キー|説明|
 |----|-----------|
-| <kbd>Space</kbd> | Displays the calendar pop-up and focuses it |
-| <kbd>Alt</kbd> + <kbd>&darr;</kbd> | Displays the calendar pop-up and focuses it |
-| <kbd>Esc</kbd> | Closes the calendar pop-up and focuses the input field |
-| <kbd>Enter</kbd> | Closes the calendar pop-up, selecting the focused date and moves the focus to the input field |
-| <kbd>Alt</kbd> + <kbd>&uarr;</kbd> | Closes the calendar pop-up and focuses the input field |
+| <kbd>Space</kbd> | カレンダーのポップアップを表示し、フォーカスを合わせます。 |
+| <kbd>Alt</kbd> + <kbd>&darr;</kbd> | カレンダーのポップアップを表示し、フォーカスを合わせます。 |
+| <kbd>Esc</kbd> | カレンダーのポップアップを閉じて、入力フィールドにフォーカを合わせます。 |
+| <kbd>Enter</kbd> | カレンダーのポップアップを閉じ、フォーカスされた日付を選択して、フォーカスを入力フィールドに移動します。 |
+| <kbd>Alt</kbd> + <kbd>&uarr;</kbd> | カレンダーのポップアップを閉じて、入力フィールドにフォーカを合わせます。 |
 
-Since the [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html)` uses the [`IgxDateTimeEditorDirective`](date-time-editor.md) it inherits its keyboard navigation.
+[`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) は [`IgxDateTimeEditorDirective`](date-time-editor.md) を使用するため、キーボード ナビゲーションを継承します。
 
 ## コード例
 
-### Dialog Mode
-The [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) also supports a `dialog` mode:
+### ダイアログ モード
+[`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) は、`dialog` モードもサポートしています:
 ```html
 <igx-date-picker [mode]="'dropdown'"></igx-date-picker>
 ```
@@ -173,13 +173,13 @@ The [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepicker
 <div class="divider--half"></div>
 
 ### 表示および入力形式
-[`inputFormat`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#inputformat) and [`displayFormat`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#displayFormat) are properties which can be set to make the picker's editor follow a specified format. The [`inputFormat`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#inputformat) property is used when the picker is in `dropdown` mode and it governs the input's editable mask, as well as its placeholder (if none is set). Additionally, the [`inputFormat`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#inputformat) is locale based, so if none is provided, the picker will default to the one used by the browser.
+[`inputFormat`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#inputformat) および [`displayFormat`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#displayFormat) は、ピッカーのエディターが指定された形式に従うように設定できるプロパティです。[`inputFormat`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#inputformat) プロパティは、ピッカーが `dropdown` モードのときに使用され、入力の編集可能なマスクとそのプレースホルダー (何も設定されていない場合) を管理します。さらに、[`inputFormat`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#inputformat) はロケール ベースであるため、何も指定されていない場合、ピッカーはデフォルトでブラウザーで使用されるものになります。
 
-A good thing to note is that the picker will always add a leading zero on the `date` and `month` portions if they were provided in a format that does not have it, e.g. `d/M/yy` becomes `dd/MM/yy`. This applies only during editing.
+注意すべき点は、ピッカーが `date` と `month` の部分がない形式で提供された場合、それらの部分に常に先行ゼロを追加することです。例えば、`d/M/yy` は `dd/MM/yy` になります。これは編集中にのみ適用されます。
 
-[`displayFormat`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#displayformat) on the other hand uses Angular's [`DatePipe`](https://angular.io/api/common/DatePipe) and is used to format the picker's input when it is not focused. If no [`displayFormat`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#displayformat) is provided, the picker will use the [`inputFormat`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#inputformat) as its [`displayFormat`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#displayformat).
+一方、[`displayFormat`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#displayformat) は Angular の [`DatePipe`](https://angular.io/api/common/DatePipe) を使用し、フォーカスされていないときにピッカーの入力を書式設定するために使用されます。[`displayFormat`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#displayformat) が指定されていない場合、ピッカーは [`inputFormat`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#inputformat) を [`displayFormat`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#displayformat) として使用します。
 
-More information about these can be found in the [`IgxDateTimeEditor`](date-time-editor.md#examples) examples section.
+これらの詳細については、[`IgxDateTimeEditor`](date-time-editor.md#例) の例のセクションを参照してください。
 
 <code-view style="height: 680px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -189,7 +189,7 @@ More information about these can be found in the [`IgxDateTimeEditor`](date-time
 <div class="divider--half"></div>
 
 ### 増加および減少
-The [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) exposes [`increment`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#increment) and [`decrement`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#decrement) methods. Both of which come from the  [`IgxDateTimeEditorDirective`](date-time-editor.md#increment-decrement) and can be used for incrementing and decrementing a specific [`DatePart`]({environment:angularApiUrl}/classes/datepart.html) of the currently set date.
+[`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) は、[`increment`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#increment) メソッドと [`decrement`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#decrement) メソッドを公開します。どちらも [`IgxDateTimeEditorDirective`](date-time-editor.md#increment-decrement) から取得され、現在設定されている日付の特定の [`DatePart`]({environment:angularApiUrl}/classes/datepart.html) を増加および減少するために使用できます。
 
 ```html
 <igx-date-picker #datePicker>
@@ -198,18 +198,18 @@ The [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepicker
 </igx-date-picker>
 ```
 
-It also has as a [`spinDelta`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#spindelta) input property which can be used to increment or decrement a specific date part of the currently set date. 
+また、[`spinDelta`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#spindelta) 入力プロパティとして、現在設定されている日付の特定の日付部分を増加または減少するために使用できます。 
 ```html
 <igx-date-picker [spinDelta]="{date: 2, month: 3, year: 4}"></igx-date-picker>
 ```
 
-### In Angular Forms
-The [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) supports all directives from the core [FormsModule](https://angular.io/api/forms/FormsModule), [NgModel](https://angular.io/api/forms/NgModel) and [ReactiveFormsModule](https://angular.io/api/forms/ReactiveFormsModule) ([`FormControl`](https://angular.io/api/forms/FormControl), [`FormGroup`](https://angular.io/api/forms/FormGroup), etc.). これには、[フォーム バリデーター](https://angular.io/api/forms/Validators)機能も含まれます。 In addition, the component's [`minValue`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#minvalue) and [`maxValue`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#maxvalue) properties act as form validators.
+### Angular Forms で
+[`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) は、コア [FormsModule](https://angular.io/api/forms/FormsModule)、[NgModel](https://angular.io/api/forms/NgModel)、および [ReactiveFormsModule](https://angular.io/api/forms/ReactiveFormsModule)（[`FormControl`](https://angular.io/api/forms/FormControl)、[`FormGroup`](https://angular.io/api/forms/FormGroup) など) からのすべてのディレクティブをサポートします。これには、[フォーム バリデーター](https://angular.io/api/forms/Validators)機能も含まれます。さらに、コンポーネントの [`minValue`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#minvalue) プロパティと [`maxValue`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#maxvalue) プロパティはフォーム バリデーターとして機能します。
 
-You can see the [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) in a reactive form by visiting our [Reactive Forms Integration](input-group-reactive-forms.md) topic.
+[リアクティブ フォームの統合](input-group-reactive-forms.md)トピックにアクセスすると、[`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) をリアクティブ フォームで確認できます。
 
-### Calendar Specific settings
-The [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) uses the [`IgxCalendarComponent`](calendar.md) and you can modify some of its settings via the properties that the date picker exposes. Some of these include [`displayMonthsCount`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#displaymonthscount) which allows more than one calendar to be displayed when the picker expands, [`weekStart`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#weekstart) which determines the starting day of the week, [`showWeekNumbers`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#showweeknumbers) which shows the number for each week in the year and more.
+### カレンダー固有の設定
+[`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) は [`IgxCalendarComponent`](calendar.md) を使用し、日付ピッカーが公開するプロパティを介してその設定の一部を変更できます。これらの一部には、ピッカーが展開されたときに複数のカレンダーを表示できる [`displayMonthsCount`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#displaymonthscount)、週の開始日を決定する [`weekStart`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#weekstart)、年の各週の番号を表示する [`showWeekNumbers`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#showweeknumbers) などが含まれます。
 
 ## インターナショナリゼーション
 [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) のローカライズは、[`locale`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#locale) 入力で制御できます。さらに、[`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) によって提供される `igxCalendarHeader` と `igxCalendarSubheader` テンプレートを使用して、ヘッダーとサブヘッダーの外観を指定できます。このテンプレートを使用する方法の詳細については、[**IgxCalendarComponent**](calendar.md) トピックを参照してください。

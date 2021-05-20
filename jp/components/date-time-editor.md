@@ -58,21 +58,21 @@ public date = new Date();
 ```
 <div class="divider--half"></div>
 
-#### <a name="iso">Binding to ISO strings</a>
-The `IgxDateTimeEditorDirective` accepts an [`ISO 8601`](https://tc39.es/ecma262/#sec-date-time-string-format) strings.
+#### <a name="iso">ISO 文字列へのバインド</a>
+`IgxDateTimeEditorDirective` は、[`ISO 8601`](https://tc39.es/ecma262/#sec-date-time-string-format) 文字列を受け入れます。
 
-The string can be a full `ISO` string, in the format `YYYY-MM-DDTHH:mm:ss.sssZ` or it could be separated into date-only and time-only portions.
+文字列は、`YYYY-MM-DDTHH:mm:ss.sssZ` の形式の完全な `ISO` 文字列にすることも、日付のみと時刻のみの部分に分割することもできます。
 
-##### Date-only
-If a date-only string is bound to the directive, it needs to follow the format - `YYYY-MM-DD`. This applies only when binding a string value to the directive, the [`inputFormat`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#inputformat) is still used when typing values in the editor and it does not have to be in the same format. Additionally, when binding a date-only string, the directive will prevent time shifts by coercing the time to be `T00:00:00`.
+##### 日付のみ
+日付のみの文字列がディレクティブにバインドされている場合は、 `YYYY-MM-DD` の形式に従う必要があります。これは、文字列値をディレクティブにバインドする場合にのみ適用されます。[`inputFormat`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#inputformat) は、エディターで値を入力するときに引き続き使用され、同じ形式である必要はありません。さらに、日付のみの文字列をバインドする場合、ディレクティブは時刻を `T00:00:00` に強制することにより、時刻のずれを防ぎます。
 
-##### Time-only
-Time-only strings are normally not defined in the `ECMA` specification, however to allow the directive to be integrated in scenarios which require time-only solutions, it supports the 24 hour format - `HH:mm:ss`. The 12 hour format is not supported. Please also note that this applies for _bound values only_.
+##### 時刻のみ
+時刻のみの文字列は通常、`ECMA` 仕様では定義されていませんが、時刻のみのソリューションを必要とするシナリオにディレクティブを統合できるようにするために、24 時間形式 (`Hh:mm:ss`) をサポートしています。12 時間形式はサポートされていません。これはバインドされた値のみに適用されることにも注意してください。
 
-##### Full ISO string
-If a full `ISO` string is bound, the directive will parse it only if all elements required by [`Date.parse`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/parse#date_time_string_format) are provided.
+##### 完全な ISO 文字列
+完全な `ISO` 文字列がバインドされている場合、ディレクティブは [`Date.parse`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/parse#date_time_string_format) に必要なすべての要素が指定されている場合にのみそれを解析します。
 
-All falsy values, including `InvalidDate` will be parsed as `null`. Incomplete date-only, time-only, or full `ISO` strings will be parsed as `InvalidDate`.
+`InvalidDate` を含むすべての falsy 値は `null` として解析されます。不完全な日付のみ、時刻のみ、または完全な `ISO` 文字列は `InvalidDate` として解析されます。
 
 ### キーボード ナビゲーション
 Date Time Editor ディレクティブには直感的なキーボード ナビゲーション機能があり、マウス操作なしでさまざまな DatePart を移動、インクリメント、デクリメントなどができます。
@@ -85,12 +85,12 @@ Date Time Editor ディレクティブには直感的なキーボード ナビ�
 
 ## 例
 
-#### 表示および入力形式
+### 表示および入力形式
 [`IgxDateTimeEditor`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html) は、さまざまな表示および入力の形式をサポートします。
 
-It uses Angular's [`DatePipe`](https://angular.io/api/common/DatePipe), which allows it to support predefined format options, such as `shortDate` and `longDate`. It can also accept a constructed format string using characters supported by the `DatePipe`, e.g. `EE/MM/yyyy`. Notice that formats like `shortDate`, `longDate`, etc., can be used as [`displayFormat`]([`minValue`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#displayformat)) only. Also, if no [`displayFormat`]([`minValue`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#displayformat)) is provided, the editor will use the [`inputFormat`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#inputformat) as its [`displayFormat`]([`minValue`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#displayformat)).
+Angular の [`DatePipe`](https://angular.io/api/common/DatePipe) を使用しており、`shortDate` や `longDate` などの事前定義された形式オプションをサポートできます。また、`DatePipe` でサポートされている文字を使用して構築されたフォーマット文字列を受け入れることもできます。例えば、`EE/MM/yyyy` です。`shortDate`、`longDate` などの形式は、[`displayFormat`]（[`minValue`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#displayformat)） としてのみ使用できることに注意してください。また、[`displayFormat`]([`minValue`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#displayformat)) が指定されていない場合、エディターは [`inputFormat`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#inputformat) を [`displayFormat`]([`minValue`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#displayformat)) として使用します。
 
-To set a specific input format, pass it as a string to the IgxDateTimeEditor directive. This will set both the expected user input format and the [mask](mask.md) for the editor. Additionally, the [`inputFormat`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#inputformat) is locale based, so if none is provided, the editor will default to the one used by the browser.
+特定の入力形式を設定するには、文字列として IgxDateTimeEditor ディレクティブに渡します。これにより、予期されるユーザー入力形式とエディターの[マスク](mask.md)の両方が設定されます。さらに、[`inputFormat`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#inputformat) はロケール ベースであるため、何も指定されていない場合、ピッカーはデフォルトでブラウザーで使用されるものになります。
 
 ```html
 <igx-input-group>
@@ -98,22 +98,22 @@ To set a specific input format, pass it as a string to the IgxDateTimeEditor dir
 </igx-input-group>
 ```
 
-The table bellow shows formats that are supported by the directive's [`inputFormat`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#inputformat):
+次の表は、ディレクティブの [`inputFormat`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#inputformat) でサポートされている形式を示しています:
 | 形式 | 説明 |
 |:-------:|:-----------|
-| `d` | Date, will be coerced with a leading zero while editing. |
-| `dd` | Date with an explicitly set leading zero. |
-| `M` | Month, will be coerced with a leading zero while editing. |
-| `MM` | Month with an explicitly set leading zero. |
-| `yy` | Short year format. |
-| `yyyy` | Full year format. |
-| `h` | Hours in 12-hour format, will be coerced with a leading zero while editing. |
-| `hh` | Hours in 12-hour format with an explicitly set leading zero. |
-| `H` | Hours in 24-hour format, will be coerced with a leading zero while editing. |
-| `HH` | Hours in 24-hour format, with an explicitly set leading zero. |
-| `m` | Minutes, will be coerced with a leading zero while editing. |
-| `mm` | Minutes with an explicitly set leading zero. |
-| `tt` | AM/PM section for 12-hour format. |
+| `d` | 日付。編集中は先行ゼロで強制されます。 |
+| `dd` | 先行ゼロが明示的に設定された日付。 |
+| `M` | 月。編集中は先行ゼロで強制されます。 |
+| `MM` | 先行ゼロが明示的に設定されている月。 |
+| `yy` | 短い年形式。 |
+| `yyyy` | 完全な年形式。 |
+| `h` | 12 時間形式の時間。編集中は先行ゼロで強制されます。 |
+| `hh` | 明示的に先行ゼロが設定された 12 時間形式の時間。 |
+| `H` | 24 時間形式の時間。編集中は先行ゼロで強制されます。 |
+| `HH` | 明示的に先行ゼロが設定された 24 時間形式の時間。 |
+| `m` | 分。編集中に先行ゼロで強制されます。 |
+| `mm` | 先行ゼロが明示的に設定された分。 |
+| `tt` | 12 時間形式の AM/PM セクション。 |
 ### 最小値と最大値
 [`minValue`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#minvalue) および [`maxValue`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#maxvalue) プロパティを指定して、ngModel の入力を制限し、有効性を制御できます。
 ```typescript
@@ -127,15 +127,15 @@ public maxDate = new Date(2020, 11, 1);
 </igx-input-group>
 
 ```
-The [`minValue`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#minvalue) and [`minValue`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#maxvalue) inputs can also be of type `string`, see [Binding to ISO strings](#iso).
+[`minValue`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#minvalue) および [`minValue`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#maxvalue) 入力は、タイプ `string` にすることもできます。 [ISO 文字列へのバインド](#iso)を参照してください。
 
-### <a name="increment-decrement">Increment and decrement </a>
-[`igxDateTimeEditor`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html) directive exposes public [`increment`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#increment) and [`decrement`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#decrement) methods. They increment or decrement a specific [`DatePart`]({environment:angularApiUrl}/classes/datepart.html) of the currently set date and time and can be used in a couple of ways.
+### <a name="increment-decrement">増加および減少</a>
+[`igxDateTimeEditor`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html) ディレクティブは、公開 [`increment`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#increment) および [`decrement`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#decrement) メソッドを公開します。これらは、現在設定されている日時の特定の [`DatePart`]({environment:angularApiUrl}/classes/datepart.html) を増加または減少し、いくつかの方法で使用できます。
 
-In the first scenario, if no specific [`DatePart`]({environment:angularApiUrl}/classes/datepart.html) is passed to the method, a default [`DatePart`]({environment:angularApiUrl}/classes/datepart.html) will increment or decrement, based on the specified [`inputFormat`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#inputformat) and the internal directive implementation. In the second scenario, you can explicitly specify what [`DatePart`]({environment:angularApiUrl}/classes/datepart.html) to manipulate as it may suite different requirements.
-Also, both methods accept an optional `delta` parameter of type `number` which can be used to set the increment/decrement step.
+最初のシナリオでは、特定の [`DatePart`]({environment:angularApiUrl}/classes/datepart.html) がメソッドに渡されない場合、デフォルトの [`DatePart`]({environment:angularApiUrl}/classes/datepart.html) は指定された [`inputFormat`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#inputformat) と内部ディレクティブの実装に基づいて増加または減少します。2 番目のシナリオでは、さまざまな要件に適合する可能性があるため、操作する [`DatePart`]({environment:angularApiUrl}/classes/datepart.html) を明示的に指定できます。
+また、どちらのメソッドも、増加/減少手順を設定するために使用できるタイプ `number` のオプションの `delta` パラメーターを受け入れます。
 
-You may compare both in the following sample:
+以下のサンプルで両方を比較できます。
 <code-view style="height:150px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/scheduling/datetime-advanced" >
@@ -143,7 +143,7 @@ You may compare both in the following sample:
 
 <div class="divider--half"></div>
 
-Additionally, `spinDelta` is an input property of type [`DatePartDeltas`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html) and it can be used to apply a different delta to each date time segment. It will be applied when spinning with the keyboard, as well as when spinning with the [`increment`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#increment) and [`decrement`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#decrement) methods, as long as they don't have the `delta` parameter provided since it will take precedence over `spinDelta`.
+さらに、`spinDelta` はタイプ [`DatePartDeltas`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html) の入力プロパティであり、各日時セグメントに異なるデルタを適用するために使用できます。これは、キーボードで回転するとき、および [`increment`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#increment) メソッドと [`decrement`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#decrement) メソッドで回転するときに適用されます。ただし、`spinDelta` よりも優先されるため `delta` パラメーターが指定されていない場合に限ります。
 
 ### Angular フォーム
 Date Time Editor ディレクティブは、コア FormsModule [NgModel](https://angular.io/api/forms/NgModel) と [ReactiveFormsModule](https://angular.io/api/forms/ReactiveFormsModule) (FormControl、FormGroup など) のすべてのフォーム ディレクティブをサポートします。これには、[フォーム バリデーター](https://angular.io/api/forms/Validators)機能も含まれます。次の例は、テンプレート駆動型フォームで `required` バリデーターを使用する方法を示しています。

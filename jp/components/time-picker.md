@@ -6,7 +6,7 @@ _language: ja
 ---
 
 # Time Picker
-<p class="highlight">The time picker component allows users to input or select time portions from a dropdown/dialog with spinners, which is then mirrored in the input field. In dropdown mode, which is the default one, the input field is editable and users can also edit selected time.</p>
+<p class="highlight">Time Picker コンポーネントを使用すると、スピン ボタンがあるドロップダウン/ダイアログから時間を選択し、入力フィールドに値が設定されます。デフォルトのドロップダウン モードでは、入力フィールドは編集可能であり、ユーザーは選択した時間を編集することもできます。</p>
 <div class="divider--half"></div>
 
 ## Angular Time Picker の例
@@ -55,27 +55,27 @@ Time Picker の追加は、以下のコードを使用してください。
 <div class="divider--half"></div>
 
 ### バインディング
-The time picker can be bound to either a Date object or time-only string value in `ISO 8601` format by setting the [`value`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#value) property or `ngModel`.
+Time Picker は、[`value`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#value) プロパティまたは `ngModel` を設定することにより、Date オブジェクトまたは `ISO8601` 形式の時刻のみの文字列値のいずれかにバインドできます。
 
-First create a time string in `ISO 8601` format:
+まず、`ISO8601` 形式で時刻文字列を作成します。
 
 ```typescript
 public time = '09:15:30';
 ```
 
-Then use the  `ngModel` to create a two-way data-binding:
+次に、`ngModel` を使用して、双方向のデータ バインディングを作成します:
 
 ```html
 <igx-time-picker [(ngModel)]="time"></igx-time-picker>
 ```
 
-or set [`value`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#value) input in the template:
+または、テンプレートに [`value`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#value) 入力を設定します:
 
 ```html
 <igx-time-picker [value]="time"></igx-time-picker>
 ```
 
-To use it in a reactive form you need to set a `formControlName` on the picker
+リアクティブ フォームで使用するには、ピッカーで `formControlName` を設定する必要があります。
 ```html
 <form [formGroup]="form">
     <igx-time-picker formControlName="timePicker"></igx-time-picker>
@@ -95,11 +95,11 @@ export class SampleFormComponent {
 ```
 
 ### コンポーネントの投影
-The time picker component allows projecting child components - the same as in the [`IgxInputGroupComponent`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html): [`igxLabel`](label-input.md), [`IgxHint`](input-group.md#hints), [`igxPrefix`](input-group.md#prefix--suffix), [`igxSuffix`](input-group.md#prefix--suffix), excluding [`IgxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html). 詳細については、[Label および Input](label-input.md) トピックを参照してください。
+Time Picker コンポーネントを使用すると、子コンポーネントを投影できます。これは [`IgxInputGroupComponent`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) と同じです: [`IgxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) を除いて、[`igxLabel`](label-input.md)、[`IgxHint`](input-group.md#hints)、[`igxPrefix`](input-group.md#prefix--suffix)、[`igxSuffix`](input-group.md#prefix--suffix)。詳細については、[Label および Input](label-input.md) トピックを参照してください。
 
-In the default configuration, a dropdown/dialog toggle icon is shown as a prefix. It can be changed or redefined using the [`IgxPickerToggleComponent`]({environment:angularApiUrl}/classes/igxpickertogglecomponent.html) component. 入力の開始位置または終了位置を定義する [`igxPrefix`](input-group.md#prefix--suffix) または [`igxSuffix`](input-group.md#prefix--suffix) で設定できます。 
+デフォルト設定では、ドロップダウン/ダイアログ トグル アイコンがプレフィックスとして表示されます。[`IgxPickerToggleComponent`]({environment:angularApiUrl}/classes/igxpickertogglecomponent.html) コンポーネントを使用して変更または再定義できます。入力の開始位置または終了位置を定義する [`igxPrefix`](input-group.md#prefix--suffix) または [`igxSuffix`](input-group.md#prefix--suffix) で設定できます。 
 
-In the following example we have added a custom label and hint and changed the default toggle icon position to be displayed as a suffix:
+次の例では、カスタム ラベルとヒントを追加し、サフィックスとして表示されるようにデフォルトのトグル アイコンの位置を変更しました。
 
 ```html
 <igx-time-picker [(ngModel)]="date" mode="dialog" [inputFormat]="'hh:mm'">
@@ -122,9 +122,9 @@ public date: Date = new Date();
 </code-view>
 
 ## カスタム アクション ボタン
-The [`IgxTimePickerComponent`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html) supports action button customization. To achieve that, wrap the buttons in `ng-template` marked with the `igxTimePickerActions` directive selector.
+[`IgxTimePickerComponent`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html) は、アクション ボタンのカスタマイズをサポートしています。これを実現するには、`igxTimePickerActions` ディレクティブ セレクターでマークされた `ng-template` でボタンをラップします。
 
-In the example below, custom action buttons are added for 'CANCEL', 'DONE' and 'NOW' actions.
+以下の例では、'CANCEL'、'DONE'、および 'NOW' アクションにカスタム アクション ボタンが追加されています。
 
 ```html
 <!-- sample.component.html -->
@@ -160,15 +160,15 @@ public selectNow(timePicker: IgxTimePickerComponent) {
 <div class="divider--half"></div>
 
 ### キーボード ナビゲーション
-* Users can navigate the component's time portions via the keyboard <kbd>Up</kbd> and <kbd>Down</kbd> arrow keys or by scrolling in the input field and in the dropdown/dialog. Navigation in the input is possible regardless of the [`minValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#minvalue) or [`maxValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#maxvalue), while navigation in the dropdown/dialog will be restricted within the [`minValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#minvalue) and [`maxValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#maxvalue) range.
-* The time picker dropdown can be opened either by toggle icon click, <kbd>Space</kbd> key or <kbd>Alt</kbd> + <kbd>Down</kbd> keys press. In dialog mode this can be done by input click.
-* <kbd>Enter</kbd> key press or mouse click outside the dropdown/dialog applies the selection and closes the dropdown/dialog.
-* Pressing the <kbd>Escape</kbd> key cancels the selection and closes the dropdown/dialog.
-* When entered a new value while dropdown is closed, click outside of the time picker or press <kbd>Tab</kbd> to move the focus so that the value is accepted.
+* ユーザーは、キーボードの <kbd>Up</kbd> および <kbd>Down</kbd> 矢印キーを使用するか、入力フィールドとドロップダウン/ダイアログをスクロールして、コンポーネントの時間部分をナビゲートできます。[`minValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#minvalue) または [`maxValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#maxvalue) に関係なく、入力でのナビゲーションが可能ですが、ドロップダウン/ダイアログでのナビゲーションは [`minValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#minvalue) および [`maxValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#maxvalue) の範囲内に制限されます。
+* Time Picker のドロップダウンは、トグル アイコンをクリックするか、<kbd>Space</kbd> キーを押すか、<kbd>Alt</kbd> + <kbd>Down</kbd> キーを押すことで開くことができます。ダイアログ モードでは、これは入力クリックで実行できます。
+* ドロップダウン/ダイアログの外側で <kbd>Enter</kbd> キーを押すかマウス クリックすると、選択が適用され、ドロップダウン/ダイアログが閉じます。
+* <kbd>Escape</kbd> キーを押すと、選択がキャンセルされ、ドロップダウン/ダイアログが閉じます。
+* ドロップダウンが閉じているときに新しい値を入力したら、Time Picker の外側をクリックするか、<kbd>Tab</kbd> を押してフォーカスを移動し、値が受け入れられるようにします。
 
 ## コード例
-### Dialog Mode
-The default time picker mode is editable dropdown mode. To change the time picker mode to read-only dialog mode, set the [`mode`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#mode) input to [`dialog`]({environment:angularApiUrl}/enums/interactionmode.html#dialog):
+### ダイアログ モード
+デフォルトの Time Picker モードは、編集可能なドロップダウン モードです。Time Picker モードを読み取り専用ダイアログ モードに変更するには、[`mode`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#mode) 入力を [`dialog`]({environment:angularApiUrl}/enums/interactionmode.html#dialog) に設定します。
 
 ```typescript
 // timePickerDropdown.component.ts
@@ -183,14 +183,14 @@ public mode = PickerInteractionMode.Dialog;
 <igx-time-picker [mode]="mode"></igx-time-picker>
 ```
 
-or just change the [`mode`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#mode) in the time picker like this:
+または、タイムピッカーで [`モード`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#mode) を次のように変更します。
 
 ```html
 <!--timePickerDropdown.component.html-->
 <igx-time-picker mode="dialog"></igx-time-picker>
 ```
 
-In dialog mode, the dialog header displays the currently selected time in the picker's [`input format`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#inputformat). You can change the header position by setting the [`headerOrientation`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#headerorientation) property.
+ダイアログ モードでは、ダイアログ ヘッダーに、現在選択されている時刻がピッカーの [`input format`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#inputformat) で表示されます。[`headerOrientation`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#headerorientation) プロパティを設定することで、ヘッダーの位置を変更できます。
 
 <code-view style="height: 600px;"
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -199,14 +199,14 @@ In dialog mode, the dialog header displays the currently selected time in the pi
 
 <div class="divider--half"></div>
 
-When the [`minValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#minvalue) and [`maxValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#maxvalue) are set the dialog displays the time within that range only. See the [Min max value](#min-max-value) example below, for more details.
+[`minValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#minvalue) と [`maxValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#maxvalue) が設定されている場合、ダイアログにはその範囲内のみの時間が表示されます。詳細については、以下の[最小値と最大値](#最小値と最大値)の例を参照してください。
 
 ### 表示および入力形式
-The time picker component supports different display and input formats.
+Time Picker コンポーネントは、さまざまな表示形式と入力形式をサポートしています。
 
-The display format is the format of the value when in edit mode and can be one of the listed Angular [DatePipe](https://angular.io/api/common/DatePipe) formats. This allows it to support predefined format options, such as `shortTime` and `longTime`.
+表示形式は、編集モードでの値の形式であり、リストされている Angular [DatePipe](https://angular.io/api/common/DatePipe) 形式の 1 つにすることができます。これにより、`shortTime` や `longTime` などの事前定義されたフォーマット オプションをサポートできます。
 
-The input format is the format of the value when not in edit mode and the format, in which the time portions are displayed in the dropdown/dialog. The `inputFormat` property accepts a constructed format string using characters supported by the DatePipe, e.g. `hh:mm:ss`, but doesn't support predefined format options, such as `shortTime` and `longTime`. If the `inputFormat` property is not defined, it defaults to `hh:mm tt`.
+入力形式は、編集モードでないときの値の形式と、時間部分がドロップダウン/ダイアログに表示される形式です。`inputFormat` プロパティは、DatePipe でサポートされている文字を使用して構築されたフォーマット文字列を受け入れます。`hh:mm:ss` ですが、`shortTime` や `longTime` などの事前定義されたフォーマット オプションはサポートしていません。`inputFormat` プロパティが定義されていない場合、デフォルトで `hh：mmtt` になります。
 
 ```html
 <igx-time-picker
@@ -217,20 +217,20 @@ The input format is the format of the value when not in edit mode and the format
 ```
 
 ### 増加および減少
-The time picker exposes public [`increment`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#increment) and [`decrement`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#decrement) methods, which accept two optional parametars: the `DatePart` to be modified and the `delta` by which it will be changed. If not specified the `DatePart` defaults to `Hours` and the `delta` defaults to [`itemsDelta`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#itemsdelta).
+Time Picker は、パブリックの [`increment`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#increment) メソッドと [`decrement`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#decrement) メソッドを公開します。それらは 2 つのオプションのパラメターを受け入れます: 変更される `DatePart` とそれが変更される `delta` です。指定しない場合、`DatePart` はデフォルトで `Hours` になり、 `delta` はデフォルトで [`itemsDelta`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#itemsdelta) になります。
 
-You can find a sample that illustrates the use of both methods at [Date Time Editor Directive](date-time-editor.md#increment-and-decrement).
+[Date Time Editor ディレクティブ](date-time-editor.md#増加および減少)で、両方の方法の使用法を示すサンプルを見つけることができます。
 
 ### フォームと検証
-The time picker component supports all directives from the core FormsModule [NgModel](https://angular.io/api/forms/NgModel) and [ReactiveFormsModule](https://angular.io/api/forms/ReactiveFormsModule) (FormControl, FormGroup, etc.). これには、[フォーム バリデーター](https://angular.io/api/forms/Validators)機能も含まれます。 In addition, the component's [min and max values](#min-and-max-values) also act as form validators.
+Time Picker コンポーネントは、コア FormsModule [NgModel](https://angular.io/api/forms/NgModel) および [ReactiveFormsModule](https://angular.io/api/forms/ReactiveFormsModule) (FormControl, FormGroup など) からのすべてのディレクティブをサポートします。これには、[フォーム バリデーター](https://angular.io/api/forms/Validators)機能も含まれます。さらに、コンポーネントの[最小値と最大値](#最小値と最大値)はフォーム バリデーターとしても機能します。
 
-The [Reactive Forms Integration](input-group-reactive-forms.md) sample demonstrates how to use the igxTimePicker in Reactive Forms.
+[リアクティブ フォームの統合](input-group-reactive-forms.md)サンプルは、ReactiveForms で igxTimePicker を使用する方法を示しています。
 
 #### 最小値と最大値
-You can specify [`minValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#minvalue) and [`maxValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#maxvalue) to restrict the user input, in which case the dropdown/dialog will display the time within that range only. In dropdown mode however, it is still possible for the user to type in an invalid time. You can handle the [`validationFailed`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#validationfailed) event in order to notify the user if that happens. 
+[`minValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#minvalue) および [`maxValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#maxvalue) を指定して、ユーザー入力を制限できます。その場合、ドロップダウン/ダイアログにはその範囲内の時刻のみが表示されます。ただし、ドロップダウン モードでは、ユーザーが無効な時間を入力する可能性があります。[`validationFailed`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#validationfailed) イベントを処理して、それが発生した場合にユーザーに通知することができます。
 
 >[!NOTE]
->The min/max values should be a Date object or a time-only string in the `ISO 8601` format:
+>最小/最大値は、Date オブジェクトまたは `ISO8601` 形式の時刻のみの文字列である必要があります。
 
 ```typescript
 // app.module.ts
@@ -276,10 +276,10 @@ public onValidationFailed() {
 
 ```
 
-The dropdown displays values within the min/max range (09:15:30 AM~06:15:30 PM) based on the items delta. A toast is added to show a message when an invalid time has been typed in.
+ドロップダウンには、項目のデルタに基づいて、最小/最大範囲 (09:15:30 AM~06:15:30 PM) 内の値が表示されます。無効な時間が入力されたときにメッセージを表示するためにトーストが追加されます。
 
  >[!NOTE]
->The displayed values for each time portion in the dropdown/dialog are calculated based on the items delta always starting from zero. If the [`minValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#minvalue) and [`maxValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#maxvalue) does not match the items delta, the displayed values will start/end from the next/last possible value that matches the threshold.
+>ドロップダウン/ダイアログの各時間部分に表示される値は、常にゼロから始まる項目のデルタに基づいて計算されます。[`minValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#minvalue) と [`maxValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#maxvalue) が項目のデルタと一致しない場合、表示される値は、しきい値に一致する次の/最後の可能な値から開始/終了します。
 
 以下は結果です。
 

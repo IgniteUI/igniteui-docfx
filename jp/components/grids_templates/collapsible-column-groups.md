@@ -104,8 +104,8 @@ igxGrid のデフォルトの展開インジケーターは次のとおりです
 
 <img class="responsive-img" src="../../images/general/collapsed_indicator.png" style="width: 400px; height: 130px"/>
 
-Also, if you need to change the default expand/collapse indicator, we provide two easy ways to do so - via an input property or through a directive.
-### Using an input property
+また、デフォルトの展開/縮小インジケーターを変更する必要がある場合は、入力プロパティまたはディレクティブを使用して、2 つの簡単な方法を提供します。
+### 入力プロパティの使用
 
 **collapsibleIndicatorTemplate** 入力プロパティを使用して、カスタムの展開/縮小テンプレートを定義し、それを各縮小可能な列グループに提供できます。以下のマークアップを確認してください。
 
