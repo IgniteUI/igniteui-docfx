@@ -249,6 +249,7 @@ grid.getRowByIndex(0).expanded = false;
 * *onRowPinning* によって発行されたイベント引数の *row* プロパティ、および *onRowDragStart* によって発行されたイベント引数の *dragData* プロパティ、*onRowDragEnd* は [`RowType`]({environment:angularApiUrl}/interfaces/rowtype.html) を実装しています。 
 * *ng update* は、*IgxGridRowComponent*、*IgxTreeGridRowComponent*、*IgxHierarchicalRowComponent*、*IgxGridGroupByRowComponent* のインポート、入力、キャストなどの使用方法のほとんどが移行されます上記のいずれかを使用するコード内の場所が移行されない場合は、入力/キャストを削除するか、[`RowType`]({environment:angularApiUrl}/interfaces/rowtype.html) で変更してください。
 * *getRowByIndex* は、そのインデックスの行が集計行である場合、[`RowType`]({environment:angularApiUrl}/interfaces/rowtype.html) オブジェクトを返すようになりました (以前は *undefined* を返していました)。*row.isSummaryRow* および *row.isGroupByRow* は、インデックスの行が集計行またはグループ行の場合に true を返します。
+
 ### IgxInputGroupComponent
 * `disabled` プロパティは削除されました。入力グループの状態は常に基になる `igxInput` によって管理されていたため、このプロパティは誤解を招く可能性がありました。
     * `ng update` を実行すると、テンプレートで `[disabled]` が `@Input` として使用されたすべてのインスタンスが処理されます。

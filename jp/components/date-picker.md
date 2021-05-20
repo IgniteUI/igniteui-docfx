@@ -22,7 +22,7 @@ Ignite UI for Angular Date Picker コンポーネントを使用すると、ユ�
 Date Picker コンポーネントの使用を開始するには、まず、使用するモジュールに `IgxDatePickerModule` をインポートする必要があります。この例では、**app.module.ts** ファイルを使用します。 
 
 >[!NOTE]
-> デートピッカーが [**IgxCalendarComponent**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) を使用し、 タッチ操作のために **BrowserAnimationsModule**  と **HammerModule** に依存関係があり、これらもモジュールに追加する必要があります。
+> Date Picker が [**IgxCalendarComponent**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) を使用し、タッチ操作のために **BrowserAnimationsModule** と**HammerModule** に依存関係があり、これらもモジュールに追加する必要があります。
 
 ```typescript
 ...
@@ -129,13 +129,12 @@ export class SampleFormComponent {
 
 #### カスタム アクション ボタン
 ピッカーのアクション ボタンは、次の 2 つの方法で変更できます:
-- ボタンのテキストは、[`todayButtonLabel`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#todaybuttonlabel)) と [`cancelButtonLabel`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#cancelbuttonlabel) 入力プロパティを使用して変更できます:
+- ボタンのテキストは、[`todayButtonLabel`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#todaybuttonlabel) と [`cancelButtonLabel`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#cancelbuttonlabel) 入力プロパティを使用して変更できます:
 ```html
 <igx-date-picker [todayButtonLabel]="'今日'" [cancelButtonLabel]="'キャンセル'"></igx-date-picker>
 ```
 
-- ボタン全体は、[`igxPickerActions`]({environment:angularApiUrl}/classes/pickeractionsdirective.html) ディレクティブを使用してテンプレート化できます。
-これを使用すると、日付ピッカーの [`calendar`](calendar.md) とそのすべてのメンバーにアクセスできます。
+- ボタン全体は、[`igxPickerActions`]({environment:angularApiUrl}/classes/pickeractionsdirective.html) ディレクティブを使用してテンプレート化できます。これを使用すると、日付ピッカーの [`calendar`](calendar.md) とそのすべてのメンバーにアクセスできます。
 ```html
 <igx-date-picker>
     <ng-template igxPickerActions let-calendar>
