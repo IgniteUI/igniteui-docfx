@@ -345,6 +345,12 @@ $custom-banner-theme: igx-banner-theme(
 * [IgxNavbarComponent]({environment:angularApiUrl}/classes/igxnavbarcomponent.html)
 * [IgxToastComponent]({environment:angularApiUrl}/classes/igxtoastcomponent.html)
 
+## Theming Dependencies
+* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxButton Theme]({environment:sassApiUrl}/index.html#function-igx-button-theme)
+* [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
+* [IgxExpansionPanel Theme]({environment:sassApiUrl}/index.html#function-igx-expansion-panel-theme)
+
 ## その他のリソース
 <div class="divider--half"></div>
 

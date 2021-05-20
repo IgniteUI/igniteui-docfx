@@ -194,6 +194,10 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 * [IgxInputGroupComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
 
+## Theming Dependencies
+* [IgxButton Theme]({environment:sassApiUrl}/index.html#function-igx-button-theme)
+* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+
 ## その他のリソース
 <div class="divider--half"></div>
 

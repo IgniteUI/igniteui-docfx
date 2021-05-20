@@ -291,6 +291,10 @@ $custom-badge-theme: igx-badge-theme(
 * [IgxListItemComponent]({environment:angularApiUrl}/classes/igxlistitemcomponent.html)
 * [IgxBadgeType]({environment:angularApiUrl}/enums/igxbadgetype.html)
 
+## Theming Dependencies
+* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+
+
 ## その他のリソース
 <div class="divider--half"></div>
 

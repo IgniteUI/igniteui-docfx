@@ -395,3 +395,6 @@ export class ExpansionPanelComponent {
 * [IgxExpansionPanelHeader API]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html)
 * [IgxExpansionPanelBody API]({environment:angularApiUrl}/classes/igxexpansionpanelbodycomponent.html)
 * [IgxExpansionPanel スタイル]({environment:sassApiUrl}/index.html#mixin-igx-expansion-panel)
+
+## Theming Dependencies
+* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
