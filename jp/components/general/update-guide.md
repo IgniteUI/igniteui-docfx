@@ -250,6 +250,32 @@ grid.getRowByIndex(0).expanded = false;
 * *ng update* は、*IgxGridRowComponent*、*IgxTreeGridRowComponent*、*IgxHierarchicalRowComponent*、*IgxGridGroupByRowComponent* のインポート、入力、キャストなどの使用方法のほとんどが移行されます上記のいずれかを使用するコード内の場所が移行されない場合は、入力/キャストを削除するか、[`RowType`]({environment:angularApiUrl}/interfaces/rowtype.html) で変更してください。
 * *getRowByIndex* は、そのインデックスの行が集計行である場合、[`RowType`]({environment:angularApiUrl}/interfaces/rowtype.html) オブジェクトを返すようになりました (以前は *undefined* を返していました)。*row.isSummaryRow* および *row.isGroupByRow* は、インデックスの行が集計行またはグループ行の場合に true を返します。
 
+### IgxInputGroupComponent
+* `disabled` プロパティは削除されました。入力グループの状態は常に基になる `igxInput` によって管理されていたため、このプロパティは誤解を招く可能性がありました。
+    * `ng update` を実行すると、テンプレートで `[disabled]` が `@Input` として使用されたすべてのインスタンスが処理されます。
+    * `.ts` ファイルでプロパティを参照している場合:
+    ```typescript
+    export class CustomComponent {
+        public inputGroup: IgxInputGroupComponent
+        ...
+        this.inputGroup.disabled = false;
+    }
+    ```
+
+    基になる入力ディレクティブの `disabled` プロパティを参照するように、コードを手動で更新する必要があります:
+    ```typescript
+    export class CustomComponent {
+        public input: IgxInputDirective
+        ...
+        this.input.disabled = false;
+    }
+    ```
+
+### IgxDateTimeDirective、IgxDatePickerComponent、IgxTimePickerComponent、IgxDateRangePickerComponent
+
+* IgxDateTimeDirective、IgxDatePickerComponent、IgxTimePickerComponent、IgxDateRangePickerComponent の `value` プロパティは、ISO 8601 文字列形式を受け入れるようになりました。これは、`value` タイプが `date` または `string` である可能性があることを意味します。
+* IgxDateTimeDirective、IgxDatePickerComponent、IgxTimePickerComponent、IgxDateRangePickerComponent の `inputFormat` プロパティは、年の部分に `y` を受け入れないようになりました。`yy` に更新する必要があります。
+
 ## 10.2.x から 11.0.x の場合:
 * IgxGrid、IgxTreeGrid、IgxHierarchicalGrid
     * グリッドでツール バーをインスタンス化される方法が変更されました。グリッド ツリーに投影される別個のコンポーネントになりました。したがって、`showToolbar` プロパティはすべてのグリッドから削除され、グリッド内のツールバーに関連する他のすべてのプロパティは非推奨です。
