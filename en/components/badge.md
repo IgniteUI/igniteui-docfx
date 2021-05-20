@@ -290,6 +290,9 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 * [IgxListItemComponent]({environment:angularApiUrl}/classes/igxlistitemcomponent.html)
 * [IgxBadgeType]({environment:angularApiUrl}/enums/igxbadgetype.html)
 
+## Theming Dependencies
+* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+
 ## Additional Resources
 <div class="divider--half"></div>
 

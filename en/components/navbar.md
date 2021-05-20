@@ -350,6 +350,10 @@ Additional components and/or directives with relative APIs that were used:
 * [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
 * [IgxIconComponent Styles]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
 
+## Theming Dependencies
+* [IgxIconComponent Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxButtonComponent Theme]({environment:sassApiUrl}/index.html#function-igx-button-theme)
+
 ## Additional Resources
 
 <div class="divider--half"></div>
