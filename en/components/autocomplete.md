@@ -215,9 +215,12 @@ Take a look at the [`igxInputGroup`](input-group.md#styling) and the [`igxDropdo
 
 * [IgxAutocompleteDirective]({environment:angularApiUrl}/classes/igxautocompletedirective.html)
 * [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html)
-* [IgxDropDownComponent Styles]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme)
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
-* [IgxInputGroupComponent Styles]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
+
+
+## Theming Dependencies
+* [IgxDropDown Theme]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme)
+* [IgxInputGroup Theme]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>

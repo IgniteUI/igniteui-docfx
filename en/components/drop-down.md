@@ -448,6 +448,9 @@ If the component is using the [`Emulated`](themes/sass/component-themes.md#view-
 * [IgxDividerDirective]({environment:angularApiUrl}/classes/igxdividerdirective.html)
 * [IgxDividerDirective Styles]({environment:sassApiUrl}/index.html#function-igx-divider-theme)
 
+## Theming Dependencies
+* [IgxOverlay Theme]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+
 ## Additional Resources
 
 <div class="divider--half"></div>

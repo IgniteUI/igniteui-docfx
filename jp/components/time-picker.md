@@ -398,6 +398,12 @@ Time Picker の項目がコンポーネントのホスト**内**に適切にレ�
 * [IgxOverlayService]({environment:angularApiUrl}/classes/igxoverlayservice.html)
 * [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 
+## Theming Dependencies
+* [IgxInputGroup Theme]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
+* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxButton Theme]({environment:sassApiUrl}/index.html#function-igx-button-theme)
+* [IgxOverlay Theme]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+
 ## その他のリソース
 * [Date Time Editor](date-time-editor.md)
 * [Label および Input](label-input.md)

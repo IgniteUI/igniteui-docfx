@@ -291,6 +291,16 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 * [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 
+## Theming Dependencies
+<div class="divider--half"></div>
+
+* [IgxCalendar Theme]({environment:sassApiUrl}/index.html#function-igx-calendar-theme)
+* [IgxOverlay Theme]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxButton Theme]({environment:sassApiUrl}/index.html#function-igx-button-theme)
+* [IgxInputGroup Theme]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
+* [IgxDropDown Theme]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme)
+
 ## その他のリソース
 * [Time Picker](time-picker.md)
 * [Date Time Editor](date-time-editor.md)

@@ -356,6 +356,11 @@ $colorful-card: igx-card-theme(
 
 <div class="divider"></div>
 
+## Theming Dependencies
+* [IgxButton Theme]({environment:sassApiUrl}/index.html#function-igx-button-theme)
+* [IgxAvatar Theme]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
+* [IgxIconTheme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+
 ## その他のリソース
 
 <div class="divider--half"></div>

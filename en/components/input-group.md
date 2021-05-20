@@ -192,6 +192,10 @@ In order to style the border, we have to `penetrate` this encapsulation using `:
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 * [IgxInputGroupComponent Styles]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
 
+## Theming Dependencies
+* [IgxButton Theme]({environment:sassApiUrl}/index.html#function-igx-button-theme)
+* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+
 ## Additional Resources
 <div class="divider--half"></div>
 
