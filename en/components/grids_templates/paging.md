@@ -256,8 +256,6 @@ public ngOnInit(): void {
 }
 ```
 
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-pager-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz demo</button>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-pager-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Codesandbox demo</button>
 </div>
 
 ## Pagination Styling in Angular

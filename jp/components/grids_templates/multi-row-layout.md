@@ -239,7 +239,6 @@ $my-custom-schema: extend($light-schema, (
 
 ### デモ 
 
-
 <code-view style="height:755px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/grid/grid-multi-row-layout-styling" >

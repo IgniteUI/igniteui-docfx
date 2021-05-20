@@ -259,12 +259,10 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 
 ### デモ
 
-
 <code-view style="height: 100px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-entries/buttons-style" >
 </code-view>
-
 <div class="divider--half"></div>
 
 ## API リファレンス

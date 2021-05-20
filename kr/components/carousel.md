@@ -46,12 +46,10 @@ Then in the template of our carousel component we can add the following markup t
 
 This is enough to have the carousel instantiated on our page, let's have a look at it:
 
-
 <code-view style="height: 230px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/layouts/carousel-sample-1" >
 </code-view>
-
 
 ### Displaying slides using the ngFor directive
 

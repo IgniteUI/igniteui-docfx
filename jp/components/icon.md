@@ -114,12 +114,10 @@ public ngOnInit() {
 <igx-icon name="contains" family="filter-icons"></igx-icon>
 ```
 
-
 <code-view style="height: 70px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-display/svg-icon-sample" >
 </code-view>
-
 
 ## サーバーサイド レンダリング時の注意
 

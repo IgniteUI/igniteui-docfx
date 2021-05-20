@@ -148,12 +148,10 @@ We can also customize the content of the Snackbar to display more complex elemen
 
 As a result, a message and three loading dots appear in the snackbar.
 
-
 <code-view style="height: 170px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/notifications/snackbar-sample-5" >
 </code-view>
-
 
 #### Snackbar in list
 Having all main snackbar features covered, we can integrate this component in more interesting scenario. We can use the snackbar to provide a notification and ability to revert actions.

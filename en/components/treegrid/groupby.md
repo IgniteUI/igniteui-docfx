@@ -10,7 +10,6 @@ If you have non-hierarchical data and you want to **group by** one or more colum
 
 ## Angular Tree Grid Group By Example
 
-
 <code-view style="height:850px" 
            data-demos-base-url="{environment:lobDemosBaseUrl}" 
            iframe-src="{environment:lobDemosBaseUrl}/treegrid-finjs" alt="Angular Tree Grid Group By Example">
