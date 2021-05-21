@@ -420,10 +420,10 @@ $dark-tabs: igx-tabs-theme(
 * [IgxTabHeaderComponent]({environment:angularApiUrl}/classes/igxtabheadercomponent.html)
 * [IgxTabContentComponent]({environment:angularApiUrl}/classes/igxtabcontentcomponent.html)
 
-## Theming Dependencies
-* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
-* [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
-* [IgxButton Theme]({environment:sassApiUrl}/index.html#function-igx-button-theme)
+## テーマの依存関係
+* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
+* [IgxButton テーマ]({environment:sassApiUrl}/index.html#function-igx-button-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>
