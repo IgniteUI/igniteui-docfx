@@ -171,7 +171,7 @@ Internet Explorer 11 のコンポーネントをスタイル設定するには�
 * [IgxAvatarComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
 
 ## テーマの依存関係
-* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

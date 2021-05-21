@@ -233,8 +233,8 @@ $my-calendar-theme: igx-calendar-theme(
 ## テーマの依存関係
 <div class="divider--half"></div>
 
-* [IgxCalendar Theme]({environment:sassApiUrl}/index.html#function-igx-calendar-theme)
-* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxCalendar テーマ]({environment:sassApiUrl}/index.html#function-igx-calendar-theme)
+* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

@@ -352,8 +352,8 @@ $cutom-navbar-theme: igx-navbar-theme(
 * [IgxIconComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
 
 ## テーマの依存関係
-* [IgxIconComponent Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
-* [IgxButtonComponent Theme]({environment:sassApiUrl}/index.html#function-igx-button-theme)
+* [IgxIconComponent テーマ]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxButtonComponent テーマ]({environment:sassApiUrl}/index.html#function-igx-button-theme)
 
 ### その他のリソース
 

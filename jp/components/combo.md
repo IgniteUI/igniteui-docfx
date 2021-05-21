@@ -356,10 +356,10 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 * [IgxCheckboxComponent]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html)
 
 ## テーマの依存関係
-* [IgxDropDown Theme]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme)
-* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
-* [IgxCheckbox Theme]({environment:sassApiUrl}/index.html#function-igx-checkbox-theme)
-* [IgxOverlay Theme]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+* [IgxDropDown テーマ]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme)
+* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxCheckbox テーマ]({environment:sassApiUrl}/index.html#function-igx-checkbox-theme)
+* [IgxOverlay テーマ]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

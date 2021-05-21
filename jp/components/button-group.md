@@ -296,9 +296,9 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 * [IgxButton スタイル]({environment:sassApiUrl}/index.html#function-igx-button-theme)
 
 ## テーマの依存関係
-* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
-* [IgxButton Theme]({environment:sassApiUrl}/index.html#function-igx-button-theme)
-* [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
+* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxButton テーマ]({environment:sassApiUrl}/index.html#function-igx-button-theme)
+* [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
 
 
 ## その他のリソース

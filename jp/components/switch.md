@@ -177,7 +177,7 @@ $custom-switch-theme: igx-switch-theme(
 * [IgxSwitchComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-switch-theme)
 
 ## テーマの依存関係
-* [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
+* [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

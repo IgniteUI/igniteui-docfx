@@ -467,8 +467,8 @@ $dark-bottom-nav: igx-bottom-nav-theme(
 * [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
 
 ## テーマの依存関係
-* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
-* [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
+* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

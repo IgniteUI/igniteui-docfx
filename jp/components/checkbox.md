@@ -283,7 +283,7 @@ $custom-checkbox-theme: igx-checkbox-theme(
 * [LabelPosition]({environment:angularApiUrl}/enums/labelposition.html)
 
 ## テーマの依存関係
-* [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-igx-riple-theme)
+* [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-igx-riple-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>
