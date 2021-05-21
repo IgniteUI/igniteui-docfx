@@ -356,7 +356,7 @@ $colorful-card: igx-card-theme(
 
 <div class="divider"></div>
 
-## Theming Dependencies
+## テーマの依存関係
 * [IgxButton Theme]({environment:sassApiUrl}/index.html#function-igx-button-theme)
 * [IgxAvatar Theme]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
 * [IgxIconTheme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)

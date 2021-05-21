@@ -213,7 +213,7 @@ Internet Explorer 11 のコンポーネントをスタイル設定するには�
 
 <div class="divider--half"></div>
 
-## Theming Dependencies
+## テーマの依存関係
 * [IgxDropDown Theme]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme)
 * [IgxIcon Styles]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
 

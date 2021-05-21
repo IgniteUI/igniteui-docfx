@@ -230,7 +230,7 @@ $my-calendar-theme: igx-calendar-theme(
 
 <div class="divider--half"></div>
 
-## Theming Dependencies
+## テーマの依存関係
 <div class="divider--half"></div>
 
 * [IgxCalendar Theme]({environment:sassApiUrl}/index.html#function-igx-calendar-theme)

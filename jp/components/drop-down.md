@@ -449,7 +449,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 * [IgxDividerDirective]({environment:angularApiUrl}/classes/igxdividerdirective.html)
 * [IgxDividerDirective スタイル]({environment:sassApiUrl}/index.html#function-igx-divider-theme)
 
-## Theming Dependencies
+## テーマの依存関係
 * [IgxOverlay Theme]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 
 ## その他のリソース

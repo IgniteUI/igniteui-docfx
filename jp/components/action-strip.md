@@ -165,7 +165,7 @@ $custom-strip: igx-action-strip-theme(
 
 <div class="divider"></div>
 
-## Theming Dependencies
+## テーマの依存関係
 * [IgxButton Theme]({environment:sassApiUrl}/index.html#function-igx-button-theme)
 * [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
 * [IgxDropDown Theme]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme)

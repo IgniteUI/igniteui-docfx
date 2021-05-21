@@ -194,7 +194,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 * [IgxInputGroupComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
 
-## Theming Dependencies
+## テーマの依存関係
 * [IgxButton Theme]({environment:sassApiUrl}/index.html#function-igx-button-theme)
 * [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
 

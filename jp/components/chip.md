@@ -461,7 +461,7 @@ $custom-theme: igx-chip-theme(
 * [IgxChipComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-chip-theme)
 * [IgxChipsAreaComponent]({environment:angularApiUrl}/classes/igxchipsareacomponent.html)
 
-## Theming Dependencies
+## テーマの依存関係
 * [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
 
 ## 参照

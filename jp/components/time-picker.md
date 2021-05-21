@@ -122,7 +122,7 @@ public date: Date = new Date();
 </code-view>
 
 ## カスタム アクション ボタン
-[`IgxTimePickerComponent`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html) は、アクション ボタンのカスタマイズをサポートしています。これを実現するには、`igxTimePickerActions` ディレクティブ セレクターでマークされた `ng-template` でボタンをラップします。
+[`IgxTimePickerComponent`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html) は、アクション ボタンのカスタマイズをサポートしています。これを実現するには、[`igxPickerActions`]({environment:angularApiUrl}/classes/igxpickeractionsdirective.html) ディレクティブ セレクターでマークされた `ng-template` でボタンをラップします。
 
 以下の例では、'CANCEL'、'DONE'、および 'NOW' アクションにカスタム アクション ボタンが追加されています。
 
@@ -168,7 +168,7 @@ public selectNow(timePicker: IgxTimePickerComponent) {
 
 ## コード例
 ### ダイアログ モード
-デフォルトの Time Picker モードは、編集可能なドロップダウン モードです。Time Picker モードを読み取り専用ダイアログ モードに変更するには、[`mode`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#mode) 入力を [`dialog`]({environment:angularApiUrl}/enums/interactionmode.html#dialog) に設定します。
+デフォルトの Time Picker モードは、編集可能なドロップダウン モードです。Time Picker モードを読み取り専用ダイアログ モードに変更するには、[`mode`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#mode) 入力を [`dialog`]({environment:angularApiUrl}/index.html#pickerinteractionmode) に設定します。
 
 ```typescript
 // timePickerDropdown.component.ts
@@ -398,7 +398,7 @@ Time Picker の項目がコンポーネントのホスト**内**に適切にレ�
 * [IgxOverlayService]({environment:angularApiUrl}/classes/igxoverlayservice.html)
 * [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 
-## Theming Dependencies
+## テーマの依存関係
 * [IgxInputGroup Theme]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
 * [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
 * [IgxButton Theme]({environment:sassApiUrl}/index.html#function-igx-button-theme)

@@ -282,7 +282,7 @@ $custom-checkbox-theme: igx-checkbox-theme(
 * [IgxCheckboxComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-checkbox-theme)
 * [LabelPosition]({environment:angularApiUrl}/enums/labelposition.html)
 
-## Theming Dependencies
+## テーマの依存関係
 * [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-igx-riple-theme)
 
 ## その他のリソース

@@ -295,7 +295,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 * [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
 * [IgxButton スタイル]({environment:sassApiUrl}/index.html#function-igx-button-theme)
 
-## Theming Dependencies
+## テーマの依存関係
 * [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
 * [IgxButton Theme]({environment:sassApiUrl}/index.html#function-igx-button-theme)
 * [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)

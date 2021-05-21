@@ -202,7 +202,7 @@ public offsetToggle() {
 * [IgxOverlayService]({environment:angularApiUrl}/classes/igxoverlayservice.html)
 * [igxNavigationService]({environment:angularApiUrl}/classes/igxnavigationservice.html)
 
-## Theming Dependencies
+## テーマの依存関係
 * [IgxOverlay Theme]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 
 

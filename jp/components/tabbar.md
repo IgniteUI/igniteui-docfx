@@ -466,7 +466,7 @@ $dark-bottom-nav: igx-bottom-nav-theme(
 * [IgxBottomNavComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-bottom-nav-theme)
 * [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
 
-## Theming Dependencies
+## テーマの依存関係
 * [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
 * [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
 

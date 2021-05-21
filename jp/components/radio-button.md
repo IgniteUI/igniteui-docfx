@@ -240,7 +240,7 @@ public alignment = RadioGroupAlignment.vertical;
 * [IgxRadioComponent]({environment:angularApiUrl}/classes/igxradiocomponent.html)
 * [IgxRadioComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-radio-theme)
 
-## Theming Dependencies
+## テーマの依存関係
 * [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
 
 ## その他のリソース

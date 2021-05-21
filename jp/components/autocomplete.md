@@ -220,7 +220,7 @@ export class AutocompleteComponent {
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 * [IgxInputGroupComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
 
-## Theming Dependencies
+## テーマの依存関係
 * [IgxDropDown Theme]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme)
 * [IgxInputGroup Theme]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
 

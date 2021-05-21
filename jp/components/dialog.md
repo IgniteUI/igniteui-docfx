@@ -285,7 +285,7 @@ $my-dialog-theme: igx-dialog-theme(
 * [IgxOverlay]({environment:angularApiUrl}/interfaces/overlaysettings.html)
 * [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 
-## Theming Dependencies
+## テーマの依存関係
 
 * [IgxButton Theme]({environment:sassApiUrl}/index.html#function-igx-button-theme)
 * [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)

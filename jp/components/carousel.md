@@ -370,7 +370,7 @@ public slides = [
 * [IgxListComponent]({environment:angularApiUrl}/classes/igxlistcomponent.html)
 * [IgxListItemComponent]({environment:angularApiUrl}/classes/igxlistitemcomponent.html)
 
-## Theming Dependencies
+## テーマの依存関係
 * [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
 
 ## その他のリソース

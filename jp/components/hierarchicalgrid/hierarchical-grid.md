@@ -416,7 +416,7 @@ $custom-theme: igx-grid-theme(
 * [IgxHierarchicalGridRow]({environment:angularApiUrl}/classes/igxhierarchicalgridrow.html)
 * [IgxGridCellComponent]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
 
-## Theming Dependencies
+## テーマの依存関係
 * [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
 * [IgxInputGroup Theme]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
 * [IgxChip Theme]({environment:sassApiUrl}/index.html#function-igx-chip-theme)

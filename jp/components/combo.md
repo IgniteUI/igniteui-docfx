@@ -355,7 +355,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) 
 * [IgxCheckboxComponent]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html)
 
-## Theming Dependencies
+## テーマの依存関係
 * [IgxDropDown Theme]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme)
 * [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
 * [IgxCheckbox Theme]({environment:sassApiUrl}/index.html#function-igx-checkbox-theme)

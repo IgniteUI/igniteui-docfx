@@ -176,7 +176,7 @@ $custom-switch-theme: igx-switch-theme(
 * [IgxSwitchComponent]({environment:angularApiUrl}/classes/igxswitchcomponent.html)
 * [IgxSwitchComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-switch-theme)
 
-## Theming Dependencies
+## テーマの依存関係
 * [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
 
 ## その他のリソース

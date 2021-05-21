@@ -53,7 +53,7 @@ Date Range Picker をデフォルトのモードでインスタンス化する�
 public range: DateRange = { start: new Date(2020, 4, 20), end: new Date(2020, 4, 25) };
 ```
 
->注: Date Range Picker の値は開始日と終了日を含む [`DateRange`](({environment:angularApiUrl}/interfaces/daterange.html)) 型です。
+>注: Date Range Picker の値は開始日と終了日を含む [`DateRange`]({environment:angularApiUrl}/interfaces/daterange.html) 型です。
 
 双方向のデータバインディングを作成するには、`ngModel` を使用します。
 ```html
@@ -416,7 +416,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 * [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 
-## Theming Dependencies
+## テーマの依存関係
 
 * [IgxCalendar Theme]({environment:sassApiUrl}/index.html#function-igx-calendar-theme)
 * [IgxOverlay Theme]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)

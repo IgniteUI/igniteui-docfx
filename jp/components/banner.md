@@ -345,7 +345,7 @@ $custom-banner-theme: igx-banner-theme(
 * [IgxNavbarComponent]({environment:angularApiUrl}/classes/igxnavbarcomponent.html)
 * [IgxToastComponent]({environment:angularApiUrl}/classes/igxtoastcomponent.html)
 
-## Theming Dependencies
+## テーマの依存関係
 * [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
 * [IgxButton Theme]({environment:sassApiUrl}/index.html#function-igx-button-theme)
 * [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
