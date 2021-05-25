@@ -17,9 +17,9 @@ Polar series draw attention to uneven intervals or clusters of data. They are of
 
 <code-view style="height: 500px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-polar-series"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-polar-chart-types"
            alt="Angular Polar Series Example"
-           github-src="charts/data-chart/type-polar-series">
+           github-src="charts/data-chart/polar-chart-types">
 </code-view>
 
 <div class="divider--half"></div>

@@ -13,9 +13,9 @@ The Ignite UI for Angular polar spline area chart belongs to a group of polar ch
 
 <code-view style="height: 500px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-polar-spline-area-series"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-polar-spline-area-chart"
            alt="Angular Polar Spline Area Chart Example"
-           github-src="charts/data-chart/type-polar-spline-area-series">
+           github-src="charts/data-chart/polar-spline-area-chart">
 </code-view>
 
 <div class="divider--half"></div>
