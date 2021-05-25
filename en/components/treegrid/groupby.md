@@ -6,7 +6,30 @@ _keywords: angular group by, igniteui for angular, infragistics
 
 # Angular Tree Grid Group By
 
-If you have non-hierarchical data and you want to **group by** one or more columns and populate the parent rows with **aggregated values**, you could use the [`IgxTreeGridComponent`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html) and a custom implementation like in the demo below.
+If you have non-hierarchical data and you want to **group by** one or more columns and populate the parent rows with **aggregated values**, you could use the [`IgxTreeGridComponent`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html) and a custom implementation like in the demos below.
+
+> [!NOTE]
+> These samples contains custom logic which is not built in the [`IgxTreeGridComponent`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html). It is similar to the grouping and summaries features of the [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html), but instead inside separate summary rows, the calculated data is displayed inside the parent rows.
+
+In these samples we have also created an UI component with selector `igx-tree-grid-group-area` which handles the UI interactions related to the columns that are used for the grouping. For more information on how this component works you can take a look at the `IgxTreeGridGroupAreaComponent` class in the `tree-grid-group-area.component.ts` file. The component is completely configurable so you could copy and re-use it in your own project.
+
+Here is an example of how to use the component in the template:
+
+```html
+<igx-grid-toolbar *ngIf="showToolbar">
+    <igx-grid-toolbar-title class="grid-toolbar-title">
+        <igx-tree-grid-group-area
+            [grid]='grid1'
+            [(groupColumns)]='groupColumns'
+            [groupColumnKey]='groupColumnKey'>
+        </igx-tree-grid-group-area>
+    </igx-grid-toolbar-title>
+```
+
+The component's inputs are the following:
+- grid - `IgxTreeGridComponent` that is used for the grouping
+- groupColumns - an array of string values which contains the fields used to generate the hierarchy
+- groupColumnKey - a string value for the name of the generated hierarchy column
 
 ## Angular Tree Grid Group By Example
 
@@ -16,9 +39,6 @@ If you have non-hierarchical data and you want to **group by** one or more colum
 </code-view>
 
 <div class="divider--half"></div>
-
-> [!NOTE]
-> The sample contains custom logic which is not built in the [`IgxTreeGridComponent`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html). It is similar to the grouping and summaries features of the [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html), but instead inside separate summary rows, the calculated data is displayed inside the parent rows.
 
 #### Implementation
 
@@ -67,25 +87,59 @@ public childDataKey = "children";
 public groupColumnKey = "categories";
 ```
 
-In this sample we have also created an UI component with selector `igx-tree-grid-group-area` which handles the UI interactions related to the columns that are used for the grouping. For more information on how this component works you can take a look at the `IgxTreeGridGroupAreaComponent` class in the `tree-grid-group-area.component.ts` file. The component is completely configurable so you could copy and re-use it in your own project.
+## Angular Tree Grid Group By Load On Demand Example
 
-Here is an example of how to use the component in the template:
+<code-view style="height:850px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-group-by-load-on-demand" alt="Angular Tree Grid Group By Load On Demand Example">
+</code-view>
+
+<div class="divider--half"></div>
+
+#### Implementation
+
+In this sample data is loaded only for a certain row on expansion. For more information on this, please refer to the [Tree Grid Load On Demand](load-on-demand.md) topic. The data is grouped by the **"ShipCountry"**, **"ShipCity"** and **"Discontinued"** fields and the resulting hierarchy is displayed in a separate column. The grouping is performed on a remote service - for more information on how this service works you can take a look at the `TreeGridGroupingLoadOnDemandService` class in the `remoteService.ts` file.
+
+Here is an example of how to use load on demand:
 
 ```html
-<igx-grid-toolbar *ngIf="showToolbar">
-    <igx-grid-toolbar-title class="grid-toolbar-title">
-        <igx-tree-grid-group-area
-            [grid]='grid1'
-            [(groupColumns)]='groupColumns'
-            [groupColumnKey]='groupColumnKey'>
-        </igx-tree-grid-group-area>
-    </igx-grid-toolbar-title>
+<igx-tree-grid #treeGrid
+    [data]="data" [loadChildrenOnDemand]="loadChildren"
+    [primaryKey]="primaryKey" [childDataKey]="childDataKey" [hasChildrenKey]="hasChildrenKey">
+    <igx-column [field]="groupColumnKey" [width]="'180px'" [resizable]='true' [disableHiding]="true"></igx-column>
 ```
 
-The component's inputs are the following:
-- grid - `IgxTreeGridComponent` that is used for the grouping
-- groupColumns - an array of string values which contains the fields used to generate the hierarchy
-- groupColumnKey - a string value for the name of the generated hierarchy column
+In order to load the child rows when the user expands a row, the Tree Grid provides the callback input property [`loadChildrenOnDemand`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#loadchildrenondemand).
+
+
+```typescript
+public groupColumns = ['ShipCountry', 'ShipCity', 'Discontinued'];
+public primaryKey = 'id';
+public childDataKey = 'children';
+public hasChildrenKey = 'children';
+public groupColumnKey = '';
+
+private dataService = new TreeGridGroupingLoadOnDemandService();
+
+public ngOnInit() {
+    this.reloadData();
+}
+
+public loadChildren = (parentID: any, done: (children: any[]) => void) => {
+    const groupingParameters = this.assembleGroupingParameters();
+    this.dataService.getData(parentID, groupingParameters, (children) => done(children));
+};
+
+private reloadData() {
+    this.treeGrid.isLoading = true;
+    this.treeGrid.expansionStates.clear();
+    const groupingParameters = this.assembleGroupingParameters();
+    this.dataService.getData(null, groupingParameters, (children) => {
+        this.data = children;
+        this.treeGrid.isLoading = false;
+    });
+}
+```
 
 ### API References
 
@@ -107,6 +161,3 @@ Our community is active and always welcoming to new ideas.
 
 * [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
-
-
-
