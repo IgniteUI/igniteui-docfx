@@ -170,7 +170,7 @@ The Angular Polar Area Chart or Polar Graph belongs to a group of polar charts a
 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-polar-line-series"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-polar-line-chart"
            alt="Angular Polar Line Chart" >
 </code-view>
 

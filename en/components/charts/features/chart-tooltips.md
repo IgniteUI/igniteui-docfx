@@ -30,11 +30,13 @@ The [`toolTipType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/do
 | [`Item`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/tooltiptype.html#item)  Tooltip        | Display a tooltip for each data item in the category that the pointer is positioned over.          |
 | [`Category`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/tooltiptype.html#category) Tooltip | Display a grouped tooltip for all data points in the category that the pointer is positioned over. |
 
-## Angular Chart Tooltip Template
+<div class="divider--half"></div>
+
+## $PlatformShort$ Chart Tooltip Template
 
 If none of built-in types of tooltips are matching your requirements, you can create your own tooltips to display and style series title, data values, and axis values. The following sections demonstrate how to do this in different types of Angular charts.
 
-### Custom Tooltips in Category Chart
+## Custom Tooltips in Category Chart
 
 This example shows how to create custom tooltips for all series in Angular [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html) control. Note that you can also apply the same logic to custom tooltips in Angular [`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html) control.
 
@@ -47,7 +49,7 @@ This example shows how to create custom tooltips for all series in Angular [`Igx
 
 <div class="divider--half"></div>
 
-### Custom Tooltips in Data Chart
+## Custom Tooltips in Data Chart
 
 This example shows how to create custom tooltips for each series in Angular Data Chart control.
 
