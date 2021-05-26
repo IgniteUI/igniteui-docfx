@@ -113,41 +113,6 @@ eg.
 -   Added support for highlighting of the shape series
 -   Added support for some annotation layers for the shape series
 
-### Data Grid
-
--   Added [`EditModeClickAction`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/editmodeclickaction.html) property - aka Excel-style Editing, instantly begin editing when typing. Normally double-clicking is required to enter edit mode. 
-
--   Added [`EnterKeyBehaviors`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/enterkeybehaviors.html) property - aka Excel-style Navigation (Enter Behavior) – controls the behavior of the enter key. eg. Options are (none, edit, move up, down, left, right) 
-
--   Added [`EnterKeyBehaviorAfterEdit`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/enterkeybehaviorafteredit.html) property - While in edit-mode, this property controls when enter is pressed. eg. Options are (moves to the cell below, above, right, left)
-
--   Added `SelectAllRows` - method.
-
--   Added Row Range Selection - With [`GridSelectionMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/gridselectionmode.html) property set to MultipleRow the following new functionality is now included:
-
-    -   Click and drag to select rows
-    -   Shift and click to select multiple rows.
-    -   Shift and press the up/down arrow keys to select multiple rows.
-
--   Pressing space bar toggles selection of active row via [`GridSelectionMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/gridselectionmode.html) property set to MultipleRow or SingleRow
-
--   Added Column Summaries to Column Options Dialog. 
-
-### Date Picker
-
--   `ShowTodayButton` - Toggles Today button visibility
--   [`IgxLabelComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlabelcomponent.html) - Adds a label above the date value
--   `Placeholder` property - adds custom text when no value is selected 
--   `FormatString` - Customize input date string eg. (`yyyy-MM-dd`)
--   `DateFormat` - Specifies whether to display selected dates as LongDate or ShortDate
--   `FirstDayOfWeek` - Specifies first day of week 
--   `FirstWeekOfYear` - Specifies when to display first week of the year. eg. (First Full Week, First Four day Week)
--   `ShowWeekNumbers` - Toggles Week number visibility
--   `MinDate` & `MaxDate` - Date limits, specifying a range of available selectable dates.
--   Added Accessibility
-
-<div class="divider--half"></div>
-
 <div class="divider--half"></div>
 
 <!-- Angular, React, WebComponents -->
