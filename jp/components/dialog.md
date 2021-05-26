@@ -285,6 +285,12 @@ $my-dialog-theme: igx-dialog-theme(
 * [IgxOverlay]({environment:angularApiUrl}/interfaces/overlaysettings.html)
 * [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 
+## テーマの依存関係
+
+* [IgxButton テーマ]({environment:sassApiUrl}/index.html#function-igx-button-theme)
+* [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
+* [IgxOverlay テーマ]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+
 ## その他のリソース
 
 <div class="divider--half"></div>

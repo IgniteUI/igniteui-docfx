@@ -239,14 +239,13 @@ $my-custom-schema: extend($light-schema, (
 
 ### デモ 
 
-
 <code-view style="height:755px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/grid/grid-multi-row-layout-styling" >
 </code-view>
 
 >[!NOTE]
->The sample will not be affected by the selected global theme from `Change Theme`.
+>このサンプルは、「テーマの変更」から選択したグローバル テーマに影響を受けません。
 
 
 ## API リファレンス

@@ -230,6 +230,12 @@ $my-calendar-theme: igx-calendar-theme(
 
 <div class="divider--half"></div>
 
+## テーマの依存関係
+<div class="divider--half"></div>
+
+* [IgxCalendar テーマ]({environment:sassApiUrl}/index.html#function-igx-calendar-theme)
+* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+
 ## その他のリソース
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

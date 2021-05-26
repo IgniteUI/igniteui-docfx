@@ -845,15 +845,15 @@
 - name: Charts
   href: charts/chart-overview.md
   header: true
-- name: Binding Real Time Data
-  href: category-chart-high-frequency.md
-  new: false
-- name: Binding High Volume Data
-  href: category-chart-high-volume.md
-  new: false
-- name: Binding Multiple Data Source
-  href: financial-chart-multiple-data.md
-  new: false
+#- name: Binding Real Time Data
+#  href: category-chart-high-frequency.md
+#  new: false
+#- name: Binding High Volume Data
+#  href: category-chart-high-volume.md
+#  new: false
+#- name: Binding Multiple Data Source
+#  href: financial-chart-multiple-data.md
+#  new: false
 - name: Area Chart
   href: charts/types/area-chart.md
   new: false
@@ -1148,6 +1148,9 @@
       - name: Printing styles
         href: themes/misc/printing-styles.md
         new: false
+      - name: Angular Material Theming
+        href: themes/misc/angular-material-theming.md
+        new: true
       - name: Bootstrap Theming
         href: themes/misc/bootstrap-theming.md
         new: true
@@ -1304,6 +1307,7 @@
 - name: Date Time Editor
   href: date-time-editor.md
   new: false
+  updated: true
 - name: Calendar
   href: calendar.md
   updated: true
@@ -1313,6 +1317,7 @@
 - name: Date Range Picker
   href: date-range-picker.md
   new: false
+  updated: true
 - name: Month Picker
   href: month-picker.md
   new: false

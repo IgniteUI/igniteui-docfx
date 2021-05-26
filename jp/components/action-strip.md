@@ -165,6 +165,12 @@ $custom-strip: igx-action-strip-theme(
 
 <div class="divider"></div>
 
+## テーマの依存関係
+* [IgxButton テーマ]({environment:sassApiUrl}/index.html#function-igx-button-theme)
+* [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
+* [IgxDropDown テーマ]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme)
+* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+
 ## その他のリソース
 
 <div class="divider--half"></div>

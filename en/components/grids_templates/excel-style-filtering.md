@@ -119,17 +119,17 @@ In the sample below **Product Name** and **Discontinued** columns have all four 
     </igx-column>
     <igx-column field="UnitPrice" header="Unit Price" [dataType]="'number'" [sortable]="false" [disablePinning]="true" [disableHiding]="true" [movable]="false">
         <ng-template igxCell let-cell="cell" let-val>
-            <span *ngIf="cell.row.rowData.UnitPrice == 0">-</span>
-            <span *ngIf="cell.row.rowData.UnitPrice != 0">${{val}}</span>
+            <span *ngIf="cell.row.data.UnitPrice == 0">-</span>
+            <span *ngIf="cell.row.data.UnitPrice != 0">${{val}}</span>
         </ng-template>
     </igx-column>
     <igx-column field="AddedDate" header="Added Date" [dataType]="'date'" [formatter]="formatDate" [sortable]="false" [movable]="false">
     </igx-column>
     <igx-column field="Discontinued" header="Discontinued" [dataType]="'boolean'" [sortable]="true" [movable]="true">
         <ng-template igxCell let-cell="cell" let-val>
-            <span *ngIf="cell.row.rowData.UnitPrice == 0">-</span>
-            <img *ngIf="cell.row.rowData.UnitPrice != 0 && val" src="assets/images/grid/active.png" title="Continued" alt="Continued" />
-            <img *ngIf="cell.row.rowData.UnitPrice != 0 && !val" src="assets/images/grid/expired.png" title="Discontinued" alt="Discontinued" />
+            <span *ngIf="cell.row.data.UnitPrice == 0">-</span>
+            <img *ngIf="cell.row.data.UnitPrice != 0 && val" src="assets/images/grid/active.png" title="Continued" alt="Continued" />
+            <img *ngIf="cell.row.data.UnitPrice != 0 && !val" src="assets/images/grid/expired.png" title="Discontinued" alt="Discontinued" />
         </ng-template>
     </igx-column>
 </igx-tree-grid>
@@ -214,8 +214,8 @@ In the sample below 'Artist' column have all four features enabled, 'Debut' have
 ## Templates
 
 If you want to further customize the Excel style filter menu without disabling the column features you could use custom templates. The Excel Style filter menu provides two directives for templating:
-- [`IgxExcelStyleColumnOperationsTemplateDirective`]({environment:angularApiUrl}/classes/igxexcelstylecolumnoperationsdirective.html) - re-templates the area with all column operations like sorting, moving, pinning, etc.
-- [`IgxExcelStyleFilterOperationsTemplateDirective`]({environment:angularApiUrl}/classes/igxexcelstylefilteroperationsdirective.html) - re-templates the area with all filter specific operations.
+- `IgxExcelStyleColumnOperationsTemplateDirective` - re-templates the area with all column operations like sorting, moving, pinning, etc.
+- `IgxExcelStyleFilterOperationsTemplateDirective` - re-templates the area with all filter specific operations.
 
 You could either re-template only one of those areas or both of them. You could put any custom content inside those directives or you could use any of our built-in Excel style filtering components.
 
@@ -443,7 +443,7 @@ As you see at the demos above the default appearance of the Excel Style filterin
 
 ### Usage
 
-In order to configure the Excel style filtering component, you should set its [`column`]({environment:angularApiUrl}/classes/igxexcelstylefilteringdialogcomponent.html#column) property to one of the @@igComponent's columns. In the sample above, we have bound the [`column`]({environment:angularApiUrl}/classes/igxexcelstylefilteringdialogcomponent.html#column) property to the value of an IgxSelectComponent that displays the @@igComponent's columns.
+In order to configure the Excel style filtering component, you should set its [`column`]({environment:angularApiUrl}/classes/igxgridexcelstylefilteringcomponent.html#column) property to one of the @@igComponent's columns. In the sample above, we have bound the [`column`]({environment:angularApiUrl}/classes/igxgridexcelstylefilteringcomponent.html#column) property to the value of an IgxSelectComponent that displays the @@igComponent's columns.
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -665,7 +665,7 @@ $custom-drop-down: igx-drop-down-theme(
 ```
 
 >[!NOTE]
->The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](../themes/palette.md) topic for detailed guidance on how to use them.
+>The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](../themes/sass/palettes.md) topic for detailed guidance on how to use them.
 
 ### Using Schemas
 

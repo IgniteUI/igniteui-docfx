@@ -22,9 +22,14 @@ In this example, you can see how users can manipulate hierarchical or flat data.
 
 <div class="divider--half"></div>
 
+<code-view style="height:850px" 
+           data-demos-base-url="{environment:lobDemosBaseUrl}" 
+           iframe-src="{environment:lobDemosBaseUrl}/tree-grid/treegrid-childdatakey" alt="Angular tree grid example">
+</code-view>
+
+<div class="divider--half"></div>
 
 ## Getting Started with Ignite UI for Angular Tree Grid
-
 To get started with the tree grid, first you need to install Ignite UI for Angular by typing the following command:
 
 ```cmd
@@ -166,7 +171,7 @@ Finally, we will enable the toolbar of our tree grid, along with the column hidi
 </igx-tree-grid>
 ```
 
-You can see the result of the code from above at the beginning of this article in the [Demo](#demo) section.
+You can see the result of the code from above at the beginning of this article in the [Angular Tree Grid Example](#angular-tree-grid-example) section.
 
 ### Primary and Foreign keys
 When we are using the **primary and foreign keys** option, every data object contains a primary key and a foreign key. The primary key is the unique identifier of the current data object and the foreign key is the unique identifier of its parent. In this case the [`data`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#data) property of our tree grid that contains the original data source will be a flat collection.
@@ -303,7 +308,6 @@ The last step is to **include** the component theme in our application.
 }
 ```
 
-
 ### Defining a Color Palette
 
 Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
@@ -412,12 +416,23 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 
 * [IgxTreeGridComponent]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)
 * [IgxTreeGridCellComponent]({environment:angularApiUrl}/classes/igxtreegridcellcomponent.html)
-* [IgxTreeGridRowComponent]({environment:angularApiUrl}/classes/igxtreegridrowcomponent.html)
+* [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 * [IgxGridComponent Styles]({environment:sassApiUrl}/#function-igx-grid-theme)
 * [IgxGridCellComponent]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
-* [IgxGridRowComponent]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)
 * [IgxBaseTransactionService]({environment:angularApiUrl}/classes/igxbasetransactionservice.html)
+
+## Theming Dependencies
+* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxInputGroup Theme]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
+* [IgxChip Theme]({environment:sassApiUrl}/index.html#function-igx-chip-theme)
+* [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
+* [IgxButton Theme]({environment:sassApiUrl}/index.html#function-igx-button-theme)
+* [IgxOverlay Theme]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+* [IgxDropDown Theme]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme)
+* [IgxCalendar Theme]({environment:sassApiUrl}/index.html#function-igx-calendar-theme)
+* [IgxSnackBar Theme]({environment:sassApiUrl}/index.html#function-igx-snackbar-theme)
+* [IgxBadge Theme]({environment:sassApiUrl}/index.html#function-igx-badge-theme)
 
 
 ## Additional Resources

@@ -83,7 +83,9 @@ export interface IGroupByExpandState {
 
 ```typescript
     const groupRow = this.grid.groupsRecords.find(r => r.value === "France");
+    const groupRow = this.grid.getRowByIndex(0).groupRow;
     grid.toggleGroup(groupRow);
+    groupRow.expanded = false;
 ```
 
 グループは展開済み (**デフォルト**) または縮小済みに作成でき、展開状態は一般的にデフォルト動作の反対の状態のみ含みます。グループを作成して展開するかどうか、または [`groupsExpanded`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupsexpanded) プロパティを介すかどうかを制御できます。
@@ -96,6 +98,7 @@ export interface IGroupByExpandState {
 
 ```typescript
     const groupRow = this.grid.groupsRecords.find(r => r.value === "France");
+    const groupRow = this.grid.getRowByIndex(0).groupRow;
     grid.selectRowsInGroup(groupRow);
 ```
 
@@ -103,6 +106,7 @@ export interface IGroupByExpandState {
 
 ```typescript
     const groupRow = this.grid.groupsRecords.find(r => r.value === "France");
+    const groupRow = this.grid.getRowByIndex(0).groupRow;
     grid.deselectRowsInGroup(groupRow);
 ```
 
@@ -441,7 +445,7 @@ $custom-theme: igx-grid-theme(
 </code-view>
 
 >[!NOTE]
->The sample will not be affected by the selected global theme from `Change Theme`.
+>このサンプルは、「テーマの変更」から選択したグローバル テーマに影響を受けません。
 
 
 ## 既知の制限
@@ -453,6 +457,7 @@ $custom-theme: igx-grid-theme(
 ## API リファレンス
 
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+* [IgxGroupByRow](({environment:angularApiUrl}/classes/igxgroupbyrow.html)
 * [IgxGridComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 * [ISortingExpression]({environment:angularApiUrl}/interfaces/isortingexpression.html)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)

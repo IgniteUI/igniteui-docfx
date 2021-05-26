@@ -91,7 +91,7 @@ IgniteUI for Angular @@igComponent コンポーネントは、[クイック フ�
 ```
 
 >[!NOTE]
->@@igComponent で [`quickFilter`]({environment:angularApiUrl}/enums/filtermode.html#quickfilter)/[`excelStyleFilter`]({environment:angularApiUrl}/enums/filtermode.html#excelstylefilter) と高度なフィルタリング ユーザー インターフェイスの両方を有効にできます。両フィルタリング ユーザー インターフェイスは、互いに依存せずに機能します。@@igComponent の最終的なフィルター結果は、2 つのフィルター結果の共通部分です。
+>@@igComponent で `quickFilter`/`excelStyleFilter` と高度なフィルタリング ユーザー インターフェイスの両方を有効にできます。両フィルタリング ユーザー インターフェイスは、互いに依存せずに機能します。@@igComponent の最終的なフィルター結果は、2 つのフィルター結果の共通部分です。
 
 ## インタラクション
 
@@ -99,7 +99,7 @@ IgniteUI for Angular @@igComponent コンポーネントは、[クイック フ�
 
 列に適用したフィルターがある場合、フィルター行が閉じられるとチップの閉じるボタンをクリックした条件の削除やいずれかのチップを選択してフィルター行を開くことができます。すべての条件を表示するための十分なスペースがない場合、条件数を示すバッジ付きのフィルター アイコンが表示されます。フィルター行を開くためにクリックできます。
 
-###使用方法
+## 使用方法
 
 デフォルトの定義済みフィルタリングおよび標準のフィルタリング条件があり、カスタム実装で置き換えることも可能です。また、カスタム フィルタリング条件を追加することもできます。@@igComponent には、簡易なフィルター UI と詳細なフィルター オプションがあります。列で設定された [`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype) に基づいて、適切な[**フィルタリング処理**]({environment:angularApiUrl}/interfaces/ifilteringoperation.html)のセットがフィルター UI ドロップダウンに読み込まれます。また、[`ignoreCase`]({environment:angularApiUrl}/interfaces/ifilteringexpression.html) と最初の [`condition`]({environment:angularApiUrl}/interfaces/ifilteringexpression.html#condition) プロパティを設定できます。
 
@@ -516,7 +516,7 @@ $dark-button: igx-button-theme(
 ```
 
 >[!NOTE]
->`igx-color` と `igx-palette` は色の生成や取得のための関数です。使い方の詳細については[`パレット`](../themes/palette.md)のトピックを参照してください。
+>`igx-color` と `igx-palette` は色の生成や取得のための関数です。使い方の詳細については[`パレット`](../themes/sass/palettes.md)のトピックを参照してください。
 
 ### スキーマの使用
 
@@ -638,7 +638,7 @@ $custom-input-group: igx-input-group-theme(
 
 }
 >[!NOTE]
->The sample will not be affected by the selected global theme from `Change Theme`.
+>このサンプルは、「テーマの変更」から選択したグローバル テーマに影響を受けません。
 
 ## 既知の制限
 

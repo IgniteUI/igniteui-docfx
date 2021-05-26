@@ -167,7 +167,7 @@ IgxTreeGridComponent を階層にバインドするには、[`childDataKey`]({en
 </igx-tree-grid>
 ```
 
-このトピックのはじめにあるコードの結果は、[デモ](#デモ)で確認できます。
+このトピックのはじめにあるコードの結果は、[Angular ツリー グリッドの例](#angular-ツリー-グリッドの例)で確認できます。
 
 ### プライマリと外部キー
 **Primary and foreign keys** オプションを使用した際に各データオブジェクトはプライマリキーと外部キーを含みます。プライマリキーは現在のデータ オブジェクトの一意識別子、外部キーは親の一意識別子です。元のデータソースを含むツリー グリッドの [`data`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#data) プロパティがフラットコレクションになります。
@@ -384,7 +384,7 @@ $custom-theme: igx-grid-theme(
 </code-view>
 
 >[!NOTE]
->The sample will not be affected by the selected global theme from `Change Theme`.
+>このサンプルは、「テーマの変更」から選択したグローバル テーマに影響を受けません。
 
 <div class="divider--half"></div>
 
@@ -415,12 +415,23 @@ $custom-theme: igx-grid-theme(
 
 * [IgxTreeGridComponent]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)
 * [IgxTreeGridCellComponent]({environment:angularApiUrl}/classes/igxtreegridcellcomponent.html)
-* [IgxTreeGridRowComponent]({environment:angularApiUrl}/classes/igxtreegridrowcomponent.html)
+* [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 * [IgxGridComponent スタイル]({environment:sassApiUrl}/#function-igx-grid-theme)
 * [IgxGridCellComponent]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
-* [IgxGridRowComponent]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)
 * [IgxBaseTransactionService]({environment:angularApiUrl}/classes/igxbasetransactionservice.html)
+
+## テーマの依存関係
+* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxInputGroup テーマ]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
+* [IgxChip テーマ]({environment:sassApiUrl}/index.html#function-igx-chip-theme)
+* [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
+* [IgxButton テーマ]({environment:sassApiUrl}/index.html#function-igx-button-theme)
+* [IgxOverlay テーマ]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+* [IgxDropDown テーマ]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme)
+* [IgxCalendar テーマ]({environment:sassApiUrl}/index.html#function-igx-calendar-theme)
+* [IgxSnackBar テーマ]({environment:sassApiUrl}/index.html#function-igx-snackbar-theme)
+* [IgxBadge テーマ]({environment:sassApiUrl}/index.html#function-igx-badge-theme)
 
 
 ## その他のリソース

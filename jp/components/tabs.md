@@ -39,7 +39,7 @@ import { IgxTabsModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-[`igx-tab-header`]({environment:angularApiUrl}/classes/igxtabheader.html}) にコンテンツを提供することにより、タブ ヘッダーを設定します。タブの名前を設定するには、[`igxTabHeaderLabel`]({environment:angularApiUrl}/classes/igxtabheaderlabeldirective.html) ディレクティブを使用してスパンを追加するだけです。タブ項目のコンテンツとして表示されるコンテンツは、[`igx-tab-content`]({environment:angularApiUrl}/classes/igxtabcontent.html}) タグの間に追加する必要があります。
+`igx-tab-header` にコンテンツを提供することにより、タブ ヘッダーを設定します。タブの名前を設定するには、`igxTabHeaderLabel` ディレクティブを使用してスパンを追加するだけです。タブ項目のコンテンツとして表示されるコンテンツは、`igx-tab-content` タグの間に追加する必要があります。
 
 ```html
 <igx-tabs>
@@ -117,11 +117,11 @@ export class AppModule {}
 
 ## タブのカスタマイズ
 
-タブに [`igxTabHeaderIcon`]({environment:angularApiUrl}/classes/igxtabheadericondirective.html) ディレクティブを追加します。`igx-tabs` コントロールはマテリアル デザイン [**アイコン**](https://material.io/icons/)と互換性があるため、アプリケーションにアイコンを簡単に追加できます。
+タブに `igxTabHeaderIcon` ディレクティブを追加します。`igx-tabs` コントロールはマテリアル デザイン [**アイコン**](https://material.io/icons/)と互換性があるため、アプリケーションにアイコンを簡単に追加できます。
 > [!NOTE]
 > これまでアプリケーションで `igx-icon` を使用したことがない場合は、続行する前に必ず **app.module.ts** の `IgxIconModule` をインポートしてください。
 
-はじめに Material Icons をメイン アプリケーション フォルダーの 'styles.scss' ファイルにインポートします。次に、[`igx-tab-header`]({environment:angularApiUrl}/classes/igxtabheader.html}) の子として、[`igxTabHeaderIcon`]({environment:angularApiUrl}/classes/igxtabheadericondirective.html}) ディレクティブが設定された `igx-icon` を追加します。 
+はじめに Material Icons をメイン アプリケーション フォルダーの 'styles.scss' ファイルにインポートします。次に、`igx-tab-header` の子として、`igxTabHeaderIcon` ディレクティブが設定された `igx-icon` を追加します。 
 
 ```css
 // styles.scss
@@ -174,7 +174,7 @@ export class AppModule {}
 
 <div class="divider--half"></div>
 
-ラベルとアイコンを設定するだけでは不十分な場合は、[`igx-tab-header`]({environment:angularApiUrl}/classes/igxtabheader.html}) タグの間に独自のカスタム コンテンツを直接提供することもできます。
+ラベルとアイコンを設定するだけでは不十分な場合は、`igx-tab-header` タグの間に独自のカスタム コンテンツを直接提供することもできます。
 
 ```html
 <igx-tabs>
@@ -358,7 +358,7 @@ $dark-tabs: igx-tabs-theme(
 @include igx-css-vars($dark-tabs);
 ```
 
-CSS 変数をサポートしないブラウザー (IE 11 など) をターゲットにしている場合、テーマ コンポーネント mixin を使用してデフォルト テーマを上書きできます。
+CSS 変数をサポートしないブラウザー (IE 11 など) をターゲットにしている場合、テーマ コンポーネント ミックスインを使用してデフォルト テーマを上書きできます。
 
 ```scss
 :host {
@@ -419,6 +419,11 @@ $dark-tabs: igx-tabs-theme(
 * [IgxTabItemComponent]({environment:angularApiUrl}/classes/igxtabitemcomponent.html)
 * [IgxTabHeaderComponent]({environment:angularApiUrl}/classes/igxtabheadercomponent.html)
 * [IgxTabContentComponent]({environment:angularApiUrl}/classes/igxtabcontentcomponent.html)
+
+## テーマの依存関係
+* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
+* [IgxButton テーマ]({environment:sassApiUrl}/index.html#function-igx-button-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

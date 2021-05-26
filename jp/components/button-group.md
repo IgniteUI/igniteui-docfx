@@ -295,6 +295,12 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 * [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
 * [IgxButton スタイル]({environment:sassApiUrl}/index.html#function-igx-button-theme)
 
+## テーマの依存関係
+* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxButton テーマ]({environment:sassApiUrl}/index.html#function-igx-button-theme)
+* [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
+
+
 ## その他のリソース
 <div class="divider--half"></div>
 

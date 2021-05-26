@@ -630,11 +630,11 @@ export const DATA: any[] = [
                 <ng-template #compositeTemp igxCell let-cell="cell">
                     <div class="address-container">
                     // In the Address column combine the Country, City and PostCode values of the corresponding data record
-                        <span><strong>Country:</strong> {{cell.row.rowData.Country}}</span>
+                        <span><strong>Country:</strong> {{cell.row.data.Country}}</span>
                         <br/>
-                        <span><strong>City:</strong> {{cell.row.rowData.City}}</span>
+                        <span><strong>City:</strong> {{cell.row.data.City}}</span>
                         <br/>
-                        <span><strong>Postal Code:</strong> {{cell.row.rowData.PostalCode}}</span>
+                        <span><strong>Postal Code:</strong> {{cell.row.data.PostalCode}}</span>
                     </div>
                 </ng-template>
 ...
@@ -646,20 +646,20 @@ export const DATA: any[] = [
                  <ng-template  igxCellEditor let-cell="cell">
                         <div class="address-container">
                         <span>
-                            <strong>Country:</strong> {{cell.row.rowData.Country}}
+                            <strong>Country:</strong> {{cell.row.data.Country}}
                             <igx-input-group width="100%">
-                                    <input igxInput [(ngModel)]="cell.row.rowData.Country" />
+                                    <input igxInput [(ngModel)]="cell.row.data.Country" />
                             </igx-input-group>
                         </span>
                             <br/>
-                            <span><strong>City:</strong> {{cell.row.rowData.City}}</span>
+                            <span><strong>City:</strong> {{cell.row.data.City}}</span>
                             <igx-input-group width="100%">
-                                    <input igxInput [(ngModel)]="cell.row.rowData.City" />
+                                    <input igxInput [(ngModel)]="cell.row.data.City" />
                             </igx-input-group>
                             <br/>
-                            <span><strong>Postal Code:</strong> {{cell.row.rowData.PostalCode}}</span>
+                            <span><strong>Postal Code:</strong> {{cell.row.data.PostalCode}}</span>
                             <igx-input-group width="100%">
-                                    <input igxInput [(ngModel)]="cell.row.rowData.PostalCode" />
+                                    <input igxInput [(ngModel)]="cell.row.data.PostalCode" />
                             </igx-input-group>
                             <br/>
                         </div>
@@ -714,8 +714,22 @@ Grid のキーボード ナビゲーションは、さまざまなキーボー�
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 * [IgxGridComponent スタイル]({environment:sassApiUrl}/#function-igx-grid-theme)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
-* [IgxGridRowComponent]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)
+* [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html)
+* [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)
+* [IgxHierarchicalGridRow]({environment:angularApiUrl}/classes/igxhierarchicalgridrow.html)
 * [IgxGridCellComponent]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
+
+## テーマの依存関係
+* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxInputGroup テーマ]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
+* [IgxChip テーマ]({environment:sassApiUrl}/index.html#function-igx-chip-theme)
+* [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
+* [IgxButton テーマ]({environment:sassApiUrl}/index.html#function-igx-button-theme)
+* [IgxOverlay テーマ]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+* [IgxDropDown テーマ]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme)
+* [IgxCalendar テーマ]({environment:sassApiUrl}/index.html#function-igx-calendar-theme)
+* [IgxSnackBar テーマ]({environment:sassApiUrl}/index.html#function-igx-snackbar-theme)
+* [IgxBadge テーマ]({environment:sassApiUrl}/index.html#function-igx-badge-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

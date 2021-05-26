@@ -225,7 +225,7 @@ $custom-panel-theme: igx-expansion-panel-theme(
 > [`テーマ`](themes/sass/component-themes.md)エンジンを介したスタイル設定に使用可能なすべてのパラメーターを確認するには、[`API ヘルプ`]({environment:sassApiUrl}/index.html#function-igx-expansion-panel-theme) を参照してください。
 
 ### コンポーネント テーマの適用
-コンポーネント テーマを適用するには、`igx-css-vars` mixin をインクルードし、`$custom-panel-theme` マップを渡します。 
+コンポーネント テーマを適用するには、`igx-css-vars` ミックスインをインクルードし、`$custom-panel-theme` マップを渡します。 
 ```scss
 // In expansion-styling.component.scss
 // Pass our custom-panel-theme to `igx-expansion-panel` mixin.
@@ -395,3 +395,6 @@ export class ExpansionPanelComponent {
 * [IgxExpansionPanelHeader API]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html)
 * [IgxExpansionPanelBody API]({environment:angularApiUrl}/classes/igxexpansionpanelbodycomponent.html)
 * [IgxExpansionPanel スタイル]({environment:sassApiUrl}/index.html#mixin-igx-expansion-panel)
+
+## テーマの依存関係
+* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-igx-icon-theme)

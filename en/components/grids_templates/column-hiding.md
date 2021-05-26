@@ -247,7 +247,7 @@ public ngAfterViewInit() {
 
 In order to use the expanded set of functionalities for the column hiding UI, we can use the toolbar's [`columnHidingUI`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html#columnhidingui) property, which returns a reference to the column hiding UI component itself. This way we can access its respective API and use it according to our application's requirements.
 
-You can see the result of the code from above at the beginning of this article in the [Column Hiding Demo](#demo) section.
+You can see the result of the code from above at the beginning of this article in the Angular Column Hiding Example section.
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
 
@@ -538,7 +538,7 @@ $custom-button: igx-button-theme(
 ```
 
 >[!NOTE]
->The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](../themes/palette.md) topic for detailed guidance on how to use them.
+>The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](../themes/sass/palettes.md) topic for detailed guidance on how to use them.
 
 ### Using Schemas
 

@@ -101,12 +101,10 @@ public selectedColor: string = this.colors[3].hex;
 
 結果は以下のようになります。
 
-
 <code-view style="height: 450px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-entries/radio-sample-2" >
 </code-view>
-
 
 ## スタイル設定
 
@@ -241,6 +239,9 @@ public alignment = RadioGroupAlignment.vertical;
 * [IgxRadioGroupDirective]({environment:angularApiUrl}/classes/igxradiogroupdirective.html)
 * [IgxRadioComponent]({environment:angularApiUrl}/classes/igxradiocomponent.html)
 * [IgxRadioComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-radio-theme)
+
+## テーマの依存関係
+* [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

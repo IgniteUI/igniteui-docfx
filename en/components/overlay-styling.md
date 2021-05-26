@@ -13,7 +13,7 @@ To display the content above other elements, the service moves it into a special
 
 ## Styling Overlay Components
 
-In most cases [global](themes/sass/global-theme.md) theme styles are not affected by the overlay outlets. For example, let's take a look at a Drop Down, [styled](drop-down.md#styling) by the global [`igx-css-vars`]({environment:sassApiUrl}/index.html#mixin-igx-css-vars) mixin:
+In most cases [global](themes/sass/global-themes.md) theme styles are not affected by the overlay outlets. For example, let's take a look at a Drop Down, [styled](drop-down.md#styling) by the global [`igx-css-vars`]({environment:sassApiUrl}/index.html#mixin-igx-css-vars) mixin:
 
 ```html
 <!-- overlay-styling.component.html -->

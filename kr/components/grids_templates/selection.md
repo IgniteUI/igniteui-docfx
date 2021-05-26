@@ -247,7 +247,7 @@ Change the selection to see summaries of the currently selected range.
 public handleRowSelection(args) {
     const targetCell = args.cell as IgxGridCellComponent;
     if (!this.selection) {
-        this.grid1.selectRows([targetCell.row.rowID], true);
+        this.grid1.selectRows([targetCell.row.key], true);
     }
 }
 ```
@@ -268,7 +268,7 @@ public handleRowSelection(event) {
     const targetCell = event.cell;
     if (!this.selection) {
         this.treeGrid.deselectAllRows();
-        this.treeGrid.selectRows([targetCell.row.rowID]);
+        this.treeGrid.selectRows([targetCell.row.key]);
     }
 }
 ```
@@ -288,7 +288,7 @@ public handleRowSelection(event) {
         const targetCell = event.cell;
         if (!this.selection) {
             this.hGrid.deselectAllRows();
-            this.hGrid.selectRows([targetCell.row.rowID]);
+            this.hGrid.selectRows([targetCell.row.key]);
         }
     }
 ```

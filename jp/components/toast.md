@@ -124,7 +124,7 @@ public showMessage() {
 <!--sample.component.html-->
 
 <div>
-    <button igxButton="raised" (click)="show(toast)">Show notification on top</button>
+    <button igxButton="raised" (click)="open(toast)">Show notification on top</button>
     <igx-toast #toast message="Notification displayed" [position]="toastPosition"></igx-toast>
 </div>
 
@@ -137,20 +137,18 @@ import { IgxToastPosition } from 'igniteui-angular';
 
 ...
 public toastPosition: IgxToastPosition;
-public show(toast) {
+public open(toast) {
     this.toastPosition = "top";
-    toast.show();
+    toast.open();
 }
 ...
 
 ```
 
-
 <code-view style="height: 300px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/notifications/toast-sample-5" >
 </code-view>
-
 
 <div class="divider--half"></div>
 

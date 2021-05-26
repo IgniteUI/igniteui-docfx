@@ -392,6 +392,9 @@
         - name: 一括編集
           href: hierarchicalgrid/batch-editing.md
           new: false
+    - name: Excel へエクスポート
+      href: hierarchicalgrid/export-excel.md
+      new: true
     - name: 行ドラッグ
       href: hierarchicalgrid/row-drag.md
       new: false
@@ -476,6 +479,9 @@
     - name: 状態保持
       href: hierarchicalgrid/state-persistence.md
       new: true
+- name: Tree
+  href: tree.md
+  new: true
 - name: List View
   href: list.md
 - name: Combo
@@ -1143,6 +1149,12 @@
       - name: 印刷スタイル
         href: themes/misc/printing-styles.md
         new: false
+      - name: Angular Material のテーマ
+        href: themes/misc/angular-material-theming.md
+        new: true
+      - name: Bootstrap のテーマ
+        href: themes/misc/bootstrap-theming.md
+        new: true
 - name: データ入力と表示
   header: true
   sortable: true
@@ -1296,6 +1308,7 @@
 - name: Date Time Editor
   href: date-time-editor.md
   new: false
+  updated: true
 - name: Calendar
   href: calendar.md
   updated: true
@@ -1305,6 +1318,7 @@
 - name: Date Range Picker
   href: date-range-picker.md
   new: false
+  updated: true
 - name: Month Picker
   href: month-picker.md
   new: false

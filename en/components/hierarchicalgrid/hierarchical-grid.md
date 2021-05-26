@@ -412,8 +412,21 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 * [IgxGridComponent Styles]({environment:sassApiUrl}/#function-igx-grid-theme)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
-* [IgxGridRowComponent]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)
+* [IgxHierarchicalGridRow]({environment:angularApiUrl}/classes/igxhierarchicalgridrow.html)
 * [IgxGridCellComponent]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
+
+## Theming Dependencies
+* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxInputGroup Theme]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
+* [IgxChip Theme]({environment:sassApiUrl}/index.html#function-igx-chip-theme)
+* [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
+* [IgxButton Theme]({environment:sassApiUrl}/index.html#function-igx-button-theme)
+* [IgxOverlay Theme]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+* [IgxDropDown Theme]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme)
+* [IgxCalendar Theme]({environment:sassApiUrl}/index.html#function-igx-calendar-theme)
+* [IgxActionStrip Theme]({environment:sassApiUrl}/index.html#function-igx-action-strip-theme)
+* [IgxSnackBar Theme]({environment:sassApiUrl}/index.html#function-igx-snackbar-theme)
+* [IgxBadge Theme]({environment:sassApiUrl}/index.html#function-igx-badge-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>

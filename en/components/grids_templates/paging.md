@@ -125,6 +125,8 @@ The `igx-paginator` exposes a couple of input and output properties that enable 
 | perPageChange   |  the event is emitted when the number items per page is changed. |
 
 ### Usage
+
+@@if (igxName === 'IgxGrid') {
 The `igx-paginator` component is used along with the `igx-grid` component in the example below, but you can use it with any other component in case paging functionality is needed.
 
 ```html
@@ -139,14 +141,64 @@ The `igx-paginator` component is used along with the `igx-grid` component in the
     </igx-paginator>
 </ng-template>
 ```
+}
+
+@@if (igxName === 'IgxTreeGrid') {
+The `igx-paginator` component is used along with the `igx-tree-grid` component in the example below, but you can use it with any other component in case paging functionality is needed.
+
+```html
+<igx-tree-grid #treegrid [data]="data" [paging]="true" [perPage]="10" [paginationTemplate]="pager">
+...
+</igx-tree-grid>
+
+<ng-template #pager>
+    <igx-paginator #paginator [(page)]="treegrid.page" [totalRecords]="treegrid.totalRecords" [(perPage)]="treegrid.perPage"
+            [dropdownHidden]="isDropdownHidden" [pagerHidden]="isPagerHidden"
+            [selectOptions]="selectOptions" [displayDensity]="treegrid.displayDensity">
+    </igx-paginator>
+</ng-template>
+```
+}
+
+@@if (igxName === 'IgxHierarchicalGrid') {
+The `igx-paginator` component is used along with the `igx-hierarchical-grid` component in the example below, but you can use it with any other component in case paging functionality is needed.
+
+```html
+<igx-hierarchical-grid #hGrid [data]="data" [paging]="true" [perPage]="10" [paginationTemplate]="pager">
+...
+</igx-hierarchical-grid>
+
+<ng-template #pager>
+    <igx-paginator #paginator [(page)]="hGrid.page" [totalRecords]="hGrid.totalRecords" [(perPage)]="hGrid.perPage"
+            [dropdownHidden]="isDropdownHidden" [pagerHidden]="isPagerHidden"
+            [selectOptions]="selectOptions" [displayDensity]="hGrid.displayDensity">
+    </igx-paginator>
+</ng-template>
+```
+}
 
 ### Paginator Component Demo
 
+@@if (igxName === 'IgxGrid') {
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/grid/grid-pager-sample" >
 </code-view>
+}
 
+@@if (igxName === 'IgxTreeGrid') {
+<code-view style="height:600px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-reusable-paginator" >
+</code-view>
+}
+
+@@if (igxName === 'IgxHierarchicalGrid') {
+<code-view style="height:600px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-reusable-paginator" >
+</code-view>
+}
 
 <div class="divider--half"></div>
 
@@ -204,8 +256,6 @@ public ngOnInit(): void {
 }
 ```
 
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-pager-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz demo</button>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-pager-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Codesandbox demo</button>
 </div>
 
 ## Pagination Styling in Angular
@@ -303,7 +353,7 @@ $dark-button: igx-button-theme(
 ```
 
 >[!NOTE]
->The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](../themes/palette.md) topic for detailed guidance on how to use them.
+>The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](../themes/sass/palettes.md) topic for detailed guidance on how to use them.
 
 ### Using Schemas
 

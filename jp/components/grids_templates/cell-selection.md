@@ -262,7 +262,7 @@ $custom-grid-theme: igx-grid-theme(
 
 ### テーマの適用
 
-次にコンポーネントのスタイルに mixin を含め (アプリ スタイルにすることも可能)、@@igSelector がデフォルトのテーマの代わりに新しく作成されたテーマを使用するようになります。
+次にコンポーネントのスタイルにミックスインを含め (アプリ スタイルにすることも可能)、@@igSelector がデフォルトのテーマの代わりに新しく作成されたテーマを使用するようになります。
 
 ```scss
     @include igx-grid($custom-grid-theme);
@@ -316,7 +316,7 @@ $custom-grid-theme: igx-grid-theme(
 }
 
 >[!NOTE]
->The sample will not be affected by the selected global theme from `Change Theme`.
+>このサンプルは、「テーマの変更」から選択したグローバル テーマに影響を受けません。
 
 ## API リファレンス
 

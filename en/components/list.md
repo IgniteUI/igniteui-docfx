@@ -559,6 +559,10 @@ Additional Angular components that were used:
 
 <div class="divider"></div>
 
+## Theming Dependencies
+* [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
+* [IgxAvatar Theme]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
+
 ## Additional Resources
 
 <div class="divider--half"></div>

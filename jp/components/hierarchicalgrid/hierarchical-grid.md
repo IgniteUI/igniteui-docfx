@@ -394,7 +394,7 @@ $custom-theme: igx-grid-theme(
 </code-view>
 
 >[!NOTE]
->The sample will not be affected by the selected global theme from `Change Theme`.
+>このサンプルは、「テーマの変更」から選択したグローバル テーマに影響を受けません。
 
 
 ## 既知の問題と制限
@@ -402,7 +402,6 @@ $custom-theme: igx-grid-theme(
 |制限|説明|
 |--- |--- |
 |グループ化|グループ化機能は、階層グリッドでサポートされません。|
-|Excel エクスポート|Excel へのエクスポートは Hierarchical Grid でサポートされませんが、今後の Ignite UI for Angular アップデートでサポート予定です。|
 
 > [!NOTE]
 > `igxHierarchicalGrid` は内部で `igxForOf` ディレクティブを使用するため、すべての `igxForOf` の制限が `igxForOf` で有効です。詳細については、[igxForOf 既知の問題](../for-of.html#既知の問題と制限) のセクションを参照してください。
@@ -414,8 +413,21 @@ $custom-theme: igx-grid-theme(
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 * [IgxGridComponent スタイル]({environment:sassApiUrl}/#function-igx-grid-theme)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
-* [IgxGridRowComponent]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)
+* [IgxHierarchicalGridRow]({environment:angularApiUrl}/classes/igxhierarchicalgridrow.html)
 * [IgxGridCellComponent]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
+
+## テーマの依存関係
+* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxInputGroup テーマ]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
+* [IgxChip テーマ]({environment:sassApiUrl}/index.html#function-igx-chip-theme)
+* [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
+* [IgxButton テーマ]({environment:sassApiUrl}/index.html#function-igx-button-theme)
+* [IgxOverlay テーマ]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+* [IgxDropDown テーマ]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme)
+* [IgxCalendar テーマ]({environment:sassApiUrl}/index.html#function-igx-calendar-theme)
+* [IgxActionStrip テーマ]({environment:sassApiUrl}/index.html#function-igx-action-strip-theme)
+* [IgxSnackBar テーマ]({environment:sassApiUrl}/index.html#function-igx-snackbar-theme)
+* [IgxBadge テーマ]({environment:sassApiUrl}/index.html#function-igx-badge-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

@@ -7,17 +7,17 @@ _language: ja
 
 # ローカライズ (i18n)
 
-現在、Ignite UI for Angular は、次の言語とスクリプトのリソース文字列で出荷されます: ドイツ語、フランス語、イタリア語、日本語、韓国語、スペイン語、繁体字中国語、簡体字中国語。これらは `igniteui-angular-i18n` パッケージを介して使用できます。
+現在、Ignite UI for Angular は、次の言語とスクリプトのリソース文字列で出荷されます: ドイツ語、フランス語、イタリア語、スペイン語、ブルガリア語、日本語、韓国語、繁体字中国語、簡体字中国語。これらは `igniteui-angular-i18n` パッケージを介して使用できます。
 
 最小限のコードで Ignite UI for Angular コンポーネントの文字列を簡単にローカライズできます。
 
 ## Angular ローカライズの例
 
-<code-view style="height:550px" 
+<code-view style="height:800px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/services/localization-sample-1" alt="Angular ローカライズ例">
+           iframe-src="{environment:demosBaseUrl}/services/localization-all-resources" 
+           alt="Angular ローカライズの例">
 </code-view>
-
 
 ## 使用方法
 

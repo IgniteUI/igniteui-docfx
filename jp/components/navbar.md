@@ -285,7 +285,7 @@ $custom-navbar-theme: igx-navbar-theme(
 ```
 
 >[!NOTE]
->`igx-color` および `igx-palette` は、色を生成および取得するための重要な機能です。使い方の詳細については[`パレット`](themes/palette.md)のトピックを参照してください。
+>`igx-color` および `igx-palette` は、色を生成および取得するための重要な機能です。使い方の詳細については[`パレット`](themes/sass/palettes.md)のトピックを参照してください。
 
 ### スキーマの使用
 
@@ -350,6 +350,10 @@ $cutom-navbar-theme: igx-navbar-theme(
 
 * [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
 * [IgxIconComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+
+## テーマの依存関係
+* [IgxIconComponent テーマ]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxButtonComponent テーマ]({environment:sassApiUrl}/index.html#function-igx-button-theme)
 
 ### その他のリソース
 

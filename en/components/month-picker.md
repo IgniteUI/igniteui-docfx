@@ -229,6 +229,12 @@ After everything's done, your component should look like this:
 
 <div class="divider--half"></div>
 
+## Theming Dependencies
+<div class="divider--half"></div>
+
+* [IgxCalendar Theme]({environment:sassApiUrl}/index.html#function-igx-calendar-theme)
+* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+
 ## Additional Resources
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

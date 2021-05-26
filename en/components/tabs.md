@@ -38,7 +38,7 @@ import { IgxTabsModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-We set the tabs header by providing content to [`igx-tab-header`]({environment:angularApiUrl}/classes/igxtabheader.html}). To set the tab's name we simply add a span with [`igxTabHeaderLabel`]({environment:angularApiUrl}/classes/igxtabheaderlabeldirective.html) directive. Any content that will appear as a tab item's content should be added between [`igx-tab-content`]({environment:angularApiUrl}/classes/igxtabcontent.html}) tags.
+We set the tabs header by providing content to `igx-tab-header`. To set the tab's name we simply add a span with `igxTabHeaderLabel` directive. Any content that will appear as a tab item's content should be added between `igx-tab-content` tags.
 
 ```html
 <igx-tabs>
@@ -116,12 +116,12 @@ Sample below demostrates how tabs get aligned when switching between `tabAlignme
 
 ## Customizing Tabs
 
-Let's modify the tabs and make them more appealing by including icons using the [`igxTabHeaderIcon`]({environment:angularApiUrl}/classes/igxtabheadericondirective.html) directive. The `igx-tabs` component is compatible with the Material Design
+Let's modify the tabs and make them more appealing by including icons using the `igxTabHeaderIcon` directive. The `igx-tabs` component is compatible with the Material Design
 [**Icons**](https://material.io/icons/) so it will be very easy to adopt them in your application.
 > [!NOTE]
 > If you haven't used the `igx-icon` in your application so far, please make sure to import the `IgxIconModule` in the **app.module.ts** before proceeding.
 
-First, add the Material Icons in your 'styles.scss' file in the main application folder. Next, add `igx-icon` with [`igxTabHeaderIcon`]({environment:angularApiUrl}/classes/igxtabheadericondirective.html}) directive set, as a child of [`igx-tab-header`]({environment:angularApiUrl}/classes/igxtabheader.html}) .
+First, add the Material Icons in your 'styles.scss' file in the main application folder. Next, add `igx-icon` with `igxTabHeaderIcon` directive set, as a child of `igx-tab-header`.
 
 ```css
 // styles.scss
@@ -174,7 +174,7 @@ If the sample is configured properly, the tabs should look like the following ex
 
 <div class="divider--half"></div>
 
-If setting the labels and icons is not enough, you can also provide your own custom content directly between [`igx-tab-header`]({environment:angularApiUrl}/classes/igxtabheader.html}) tags.
+If setting the labels and icons is not enough, you can also provide your own custom content directly between `igx-tab-header` tags.
 
 ```html
 <igx-tabs>
@@ -419,6 +419,11 @@ $dark-tabs: igx-tabs-theme(
 * [IgxTabItemComponent]({environment:angularApiUrl}/classes/igxtabitemcomponent.html)
 * [IgxTabHeaderComponent]({environment:angularApiUrl}/classes/igxtabheadercomponent.html)
 * [IgxTabContentComponent]({environment:angularApiUrl}/classes/igxtabcontentcomponent.html)
+
+## Theming Dependencies
+* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
+* [IgxButton Theme]({environment:sassApiUrl}/index.html#function-igx-button-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>

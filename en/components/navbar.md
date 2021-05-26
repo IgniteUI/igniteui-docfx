@@ -284,7 +284,7 @@ $custom-navbar-theme: igx-navbar-theme(
 ```
 
 >[!NOTE]
->The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to the [`Palettes`](themes/palette.md) topic for detailed guidance on how to use them.
+>The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to the [`Palettes`](themes/sass/palettes.md) topic for detailed guidance on how to use them.
 
 ### Using schemas
 
@@ -349,6 +349,10 @@ Additional components and/or directives with relative APIs that were used:
 
 * [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
 * [IgxIconComponent Styles]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+
+## Theming Dependencies
+* [IgxIconComponent Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxButtonComponent Theme]({environment:sassApiUrl}/index.html#function-igx-button-theme)
 
 ## Additional Resources
 

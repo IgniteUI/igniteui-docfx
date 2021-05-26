@@ -6,7 +6,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 # Localization (i18n)
 
-Currently, Ignite UI for Angular ships with resource strings for the following languages and scripts: German, French, Italian, Japanese, Korean, Spanish, Traditional Chinese (zh-Hant) and Simplified Chinese (zh-Hans). These are available via the `igniteui-angular-i18n` package.
+Currently, Ignite UI for Angular ships with resource strings for the following languages and scripts: German, French, Italian, Spanish, Bulgarian, Japanese, Korean, Traditional Chinese (zh-Hant) and Simplified Chinese (zh-Hans). These are available via the `igniteui-angular-i18n` package.
 
 With only a few lines of code, users can easily localize the strings in Ignite UI for Angular components.
 
@@ -53,19 +53,19 @@ you can pass a custom object containing your string resources for the language a
 import { changei18n } from "igniteui-angular";
 ...
 
-public customBG: IResourceStrings;
+public partialCustomHindi: IResourceStrings;
 public ngOnInit(): void {
     ...
-    this.customBG = {
+    this.partialCustomHindi = {
         ...
-        igx_grid_summary_count: 'Общ брой',
-        igx_grid_summary_min: 'Минимум',
-        igx_grid_summary_max: 'Максимум',
-        igx_grid_summary_sum: 'Сума',
-        igx_grid_summary_average: 'Средна стойност'
+        igx_grid_summary_count: 'गणना',
+        igx_grid_summary_min: 'न्यून',
+        igx_grid_summary_max: 'अधिक',
+        igx_grid_summary_sum: 'योग',
+        igx_grid_summary_average: 'औसत'
         ...
     };
-    changei18n(this.customBG);
+    changei18n(this.partialCustomHindi);
     ...
 }
 ```
@@ -97,7 +97,7 @@ public ngOnInit(): void {
 </button>
 </div>
 
-### Localize particular strings for all components
+### Localize specific strings for all components
 
 Another approach is to localize/change only some of the strings for all components of given type. There is a `resourceStrings` property for the components that could be localized, which is of `IResourceStrings` type.
 
@@ -113,7 +113,7 @@ currentRS.igx_grid_filter_row_close = '[Localized]Close';
     </button>
 </div>
 
-### Localize particular strings for particular instance of a component
+### Localize specific strings for a specific instance of a component
 
 If only a single `igx-grid` instance should be localized, there is a way. The `resourceStrings` property should be used and it should be set to a new instance of `IGridResourceStrings` type.
 
@@ -126,6 +126,17 @@ const newGridRes: IGridResourceStrings = {
 this.grid.resourceStrings = newGridRes;
 ```
 
+### Available resource strings
+
+* [IgxResourceStringsBG](https://github.com/IgniteUI/igniteui-angular-i18n/blob/master/src/i18n/BG/resources.ts) 
+* [IgxResourceStringsDE](https://github.com/IgniteUI/igniteui-angular-i18n/blob/master/src/i18n/DE/resources.ts) 
+* [IgxResourceStringsES](https://github.com/IgniteUI/igniteui-angular-i18n/blob/master/src/i18n/ES/resources.ts) 
+* [IgxResourceStringsFR](https://github.com/IgniteUI/igniteui-angular-i18n/blob/master/src/i18n/FR/resources.ts) 
+* [IgxResourceStringsIT](https://github.com/IgniteUI/igniteui-angular-i18n/blob/master/src/i18n/IT/resources.ts) 
+* [IgxResourceStringsJA](https://github.com/IgniteUI/igniteui-angular-i18n/blob/master/src/i18n/JA/resources.ts) 
+* [IgxResourceStringsKO](https://github.com/IgniteUI/igniteui-angular-i18n/blob/master/src/i18n/KO/resources.ts) 
+* [IgxResourceStringsZHHANS](https://github.com/IgniteUI/igniteui-angular-i18n/blob/master/src/i18n/ZH-HANS/resources.ts) 
+* [IgxResourceStringsZHHANT](https://github.com/IgniteUI/igniteui-angular-i18n/blob/master/src/i18n/ZH-HANT/resources.ts) 
 
 ## Additional Resources
 

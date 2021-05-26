@@ -339,6 +339,12 @@ Take a look at the [`Input Group`](input-group.md#styling) and the [`Drop Down`]
 * [AbsoluteScrollStrategy]({environment:angularApiUrl}/classes/absolutescrollstrategy.html)  
 * [PositionSettings]({environment:angularApiUrl}/interfaces/positionsettings.html)
 
+## Theming Dependencies
+* [IgxDropDown Theme]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme)
+* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxOverlay Theme]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+* [IgxInputGroup Theme]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
+
 ## Additional Resources
 * [NgModel](https://angular.io/api/forms/NgModel)
 * [ViewChild](https://angular.io/api/core/ViewChild)

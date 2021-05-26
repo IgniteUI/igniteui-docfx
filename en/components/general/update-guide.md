@@ -44,7 +44,7 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
 ## From 11.1.x to 12.0.x
 ### Themes
 * Breaking Changes:
-    * `IgxAvatar` theme has been simplified. The number of theme params (`igx-avatar-theme`) has been reduced significantly and no longer includes prefixed parameters(`icon-*`, `initials-*`, `image-*`) and suffixed parameters(`border-radius-*`). Updates performed with `ng update` will migrate existing button themes, but some additional tweaking may be required to account for the absence of prefixed and suffixed params.
+    * `IgxAvatar` theme has been simplified. The number of theme params (`igx-avatar-theme`) has been reduced significantly and no longer includes prefixed parameters(`icon-*`, `initials-*`, `image-*`) and suffixed parameters(`border-radius-*`). Updates performed with `ng update` will migrate existing avatar themes, but some additional tweaking may be required to account for the absence of prefixed and suffixed params.
 
     You will need to modify existing type specific avatar themes in the following way:
 
@@ -221,6 +221,54 @@ The [**IgxTabsComponent**]({environment:angularApiUrl}/classes/igxtabscomponent.
         * The `selectedTabItem` property was shortten to [`selectedItem`]({environment:angularApiUrl}/classes/igxtabscomponent.html#selecteditem).
         * The `type` property, with its contentFit and fixed options, is no longer available. The header sizing & positioning mode is currently controlled by the [`tabAlignment`]({environment:angularApiUrl}/classes/igxtabscomponent.html#tabalignment) input property which accepts four different values - start (default), center, end and justify. The old `contentFit` type corresponds to the current `start` alignment value and the old `fixed` type - to the current `justify` value.
     * The `tabItemSelected` and `tabItemDeselected` events were removed. We introduced three new events, [`selectedIndexChanging`]({environment:angularApiUrl}/classes/igxtabscomponent.html#selectedindexchanging), [`selectedIndexChange`]({environment:angularApiUrl}/classes/igxtabscomponent.html#selectedindexchange) and [`selectedItemChange`]({environment:angularApiUrl}/classes/igxtabscomponent.html#selecteditemchange), which provide more flexibility and control over the tabs' selection. Unfortunately, having an adequate migration for these event changes is complicated to say the least, so any errors should be handled at project level.
+
+### IgxGridComponent, IgxTreeGridComponent, IgxHierarchicalGridComponent
+* *IgxGridRowComponent*, *IgxTreeGridRowComponent*, *IgxHierarchicalRowComponent*, *IgxGridGroupByRowComponent* are no longer exposed in the public API.
+* Public APIs, which used to return an instance of one of the above, now return objects implementing the public [`RowType`]({environment:angularApiUrl}/interfaces/rowtype.html) interface:
+
+```ts
+const row = grid.getRowByIndex(0);
+const row = grid.getRowByKey(2);
+const row = cell.row;
+```
+
+While the public API of [`RowType`]({environment:angularApiUrl}/interfaces/rowtype.html) is the same as what *IgxRowComponent* and others used to expose, please note:
+
+* *toggle* method, exposed by the *IgxHierarchicalRowComponent* is not available. Use [`expanded`]({environment:angularApiUrl}/interfaces/rowtype.html#expanded) property for all row types:
+
+```ts
+grid.getRowByIndex(0).expanded = false;
+```
+*row.rowData* and *row.rowID* are deprecated and will be entirely removed with version 13. Please use *row.data* and *row.key* instead.
+
+* *row* property in the event arguments emitted by *onRowPinning*, and *dragData* property in the event arguments emitted by *onRowDragStart*, *onRowDragEnd* is now implementing [`RowType`]({environment:angularApiUrl}/interfaces/rowtype.html)
+* *ng update* will migrate most of the uses of *IgxGridRowComponent*, *IgxTreeGridRowComponent*, *IgxHierarchicalRowComponent*, *IgxGridGroupByRowComponent* , like imports, typings and casts. If a place in your code using any of the above is not migrated, just remove the typing/cast, or change it with [`RowType`]({environment:angularApiUrl}/interfaces/rowtype.html).
+* *getRowByIndex* will now return a [`RowType`]({environment:angularApiUrl}/interfaces/rowtype.html) object, if the row at that index is a summary row (previously used to returned *undefined*). *row.isSummaryRow* and *row.isGroupByRow* return true if the row at the index is a summary row or a group by row.
+### IgxInputGroupComponent
+* The `disabled` property has been removed. The property was misleading, as the state of the input group was always managed by the underlying `igxInput`.
+    * Running `ng update` will handle all instances in which `[disabled]` was used as an `@Input` in templates.
+    * If you are referencing the property in a `.ts` file:
+    ```typescript
+    export class CustomComponent {
+        public inputGroup: IgxInputGroupComponent
+        ...
+        this.inputGroup.disabled = false;
+    }
+    ```
+
+    you should please manually update your code to reference the underlying input directive's `disabled` property:
+    ```typescript
+    export class CustomComponent {
+        public input: IgxInputDirective
+        ...
+        this.input.disabled = false;
+    }
+    ```
+
+### IgxDateTimeDirective, IgxDatePickerComponent, IgxTimePickerComponent, IgxDateRangePickerComponent
+
+* The `value` property for IgxDateTimeDirective, IgxDatePickerComponent, IgxTimePickerComponent, IgxDateRangePickerComponent now accepts ISO 8601 string format. This means that `value` type could be `Date` or `string`.
+* The `inputFormat` property of IgxDateTimeDirective, IgxDatePickerComponent, IgxTimePickerComponent, IgxDateRangePickerComponent now doesn't accept `y` for the year part. You should update it to `yy`.
 
 ## From 10.2.x to 11.0.x
 * IgxGrid, IgxTreeGrid, IgxHierarchicalGrid

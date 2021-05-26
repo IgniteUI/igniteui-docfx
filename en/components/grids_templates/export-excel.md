@@ -62,7 +62,7 @@ _canonicalLink: grid/export-excel
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height: 800px;" 
+<code-view style="height: 600px;" 
         data-demos-base-url="{environment:demosBaseUrl}" 
         iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-export" alt="Angular Excel Exporter Example">
 </code-view>

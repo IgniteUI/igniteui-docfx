@@ -158,12 +158,10 @@ Internet Explorer 11 のコンポーネントをスタイル設定するには�
 
 ここまでの内容が正しければ、以下のように表示されます。
 
-
 <code-view style="height:120px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/layouts/avatar-styling" >
 </code-view>
-
 <div class="divider--half"></div>
 
 ## API リファレンス
@@ -171,6 +169,9 @@ Internet Explorer 11 のコンポーネントをスタイル設定するには�
 
 * [IgxAvatarComponent]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
 * [IgxAvatarComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
+
+## テーマの依存関係
+* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

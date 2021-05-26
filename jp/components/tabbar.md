@@ -465,7 +465,10 @@ $dark-bottom-nav: igx-bottom-nav-theme(
 * [IgxBottomNavComponent]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html)
 * [IgxBottomNavComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-bottom-nav-theme)
 * [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
-* [IgxTabComponent]({environment:angularApiUrl}/classes/igxtabcomponent.html)
+
+## テーマの依存関係
+* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

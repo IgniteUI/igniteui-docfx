@@ -464,7 +464,10 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 * [IgxBottomNavComponent]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html)
 * [IgxBottomNavComponent Styles]({environment:sassApiUrl}/index.html#function-igx-bottom-nav-theme)
 * [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
-* [IgxTabComponent]({environment:angularApiUrl}/classes/igxtabcomponent.html)
+
+## Theming Dependencies
+* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>
