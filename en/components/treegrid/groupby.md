@@ -98,7 +98,7 @@ public groupColumnKey = "categories";
 
 #### Implementation
 
-In this sample data is loaded only for a certain row on expansion. For more information on this, please refer to the [Tree Grid Load On Demand](load-on-demand.md) topic. The data is grouped by the **"ShipCountry"**, **"ShipCity"** and **"Discontinued"** fields and the resulting hierarchy is displayed in a separate column. The grouping is performed on a remote service - for more information on how this service works you can take a look at the `TreeGridGroupingLoadOnDemandService` class in the `remoteService.ts` file.
+In this sample data is loaded only for a certain row on expansion. For more information on this, please refer to the [Tree Grid Load On Demand](load-on-demand.md) topic. The data is grouped by the **"ShipCountry"**, **"ShipCity"** and **"Discontinued"** fields and the resulting hierarchy is displayed in a separate column. The grouping is performed on a remote service - the data is modified and corresponding child and parent keys are assigned that are used to display the final data in a hierarchical view. For more information on how this service works you can take a look at the `TreeGridGroupingLoadOnDemandService` class in the `remoteService.ts` file.
 
 Here is an example of how to use load on demand:
 
@@ -109,8 +109,7 @@ Here is an example of how to use load on demand:
     <igx-column [field]="groupColumnKey" [width]="'180px'" [resizable]='true' [disableHiding]="true"></igx-column>
 ```
 
-In order to load the child rows when the user expands a row, the Tree Grid provides the callback input property [`loadChildrenOnDemand`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#loadchildrenondemand).
-
+In order to load the child rows when the user expands a row, the Tree Grid provides the callback input property [`loadChildrenOnDemand`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#loadchildrenondemand) - the children data is retrieved from the server and it is assigned to the requested parent row based on the grouping parameters.
 
 ```typescript
 public groupColumns = ['ShipCountry', 'ShipCity', 'Discontinued'];
