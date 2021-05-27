@@ -4,7 +4,20 @@ _description: Learn about new features in the Ignite UI for Angular.
 _keywords: Changelog, What's New,  Ignite UI for Angular, Infragistics
 ---
 
-# Ignite UI for Angular Change Log
+# Ignite UI for Angular Changelog (Data Visualization)
+
+<div class="divider--half"></div>
+
+<!-- Angular -->
+
+> [!NOTE]
+> This file is specific to igniteui-angular-\* packages only. (eg. igniteui-angular-charts) 
+>
+> For additional changes, please see [Ignite UI Angular Changes](https://github.com/igniteui/igniteui-angular/blob/master/changelog.md) 
+>
+> <!-- end: Angular -->
+
+<div class="divider--half"></div>
 
 All notable changes for each version of this project will be documented in this file.
 
@@ -112,6 +125,10 @@ eg.
 -   Added support for shifting display of some map series while wrapping around the coordinate origin  
 -   Added support for highlighting of the shape series
 -   Added support for some annotation layers for the shape series
+
+<div class="divider--half"></div>
+
+<div class="divider--half"></div>
 
 <div class="divider--half"></div>
 
