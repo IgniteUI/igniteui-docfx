@@ -14,13 +14,13 @@ Ignite UI for Angular 極座標チャートは、デカルト (x、y) 座標系�
 
 ## Angular 極座標エリア チャート
 
-極座標型エリア チャートは、データ ポイントを接続するポリゴンのコレクションを使用してレ描画され、[カテゴリ エリア チャート](area-chart.md#angular-エリア-チャートの例)と同じデータ プロットの概念を使用しますが、 視覚化によってデータ ポイントが水平線に沿って配置されるのではなく、円の周りに配置される点が異なります。
+極座標型エリア チャートは、データ ポイントを接続するポリゴンのコレクションを使用してレ描画され、[カテゴリ エリア チャート](area-chart.md#angular-エリア-チャートの例)と同じデータ プロットの概念を使用しますが、視覚化によってデータ ポイントが水平線に沿って配置されるのではなく、円の周りに配置される点が異なります。
 
 [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) コントロールでこのチャート タイプを作成するには、以下の例のように、データを [`IgxPolarAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarareaseriescomponent.html) にバインドします:
 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-polar-area-series"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-polar-area-chart"
            alt="Angular 極座標型エリア チャート" >
 </code-view>
 
@@ -34,7 +34,7 @@ Ignite UI for Angular 極座標チャートは、デカルト (x、y) 座標系�
 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-polar-spline-area-series"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-polar-spline-area-chart"
            alt="Angular 極座標型エリア チャート" >
 </code-view>
 
@@ -48,7 +48,7 @@ Ignite UI for Angular 極座標チャートは、デカルト (x、y) 座標系�
 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-polar-scatter-series"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-polar-scatter-chart"
            alt="Angular 極座標型マーカー チャート" >
 </code-view>
 
@@ -62,7 +62,7 @@ Ignite UI for Angular 極座標チャートは、デカルト (x、y) 座標系�
 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-polar-line-series"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-polar-line-chart"
            alt="Angular 極座標型折れ線チャート" >
 </code-view>
 
@@ -76,7 +76,7 @@ Ignite UI for Angular 極座標チャートは、デカルト (x、y) 座標系�
 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-polar-spline-series"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-polar-spline-chart"
            alt="Angular 極座標スプライン チャート" >
 </code-view>
 
@@ -118,7 +118,7 @@ Ignite UI for Angular 極座標チャートは、デカルト (x、y) 座標系�
 -   [`IgxPolarSplineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarsplineseriescomponent.html)
 -   [`IgxPolarSplineAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarsplineareaseriescomponent.html)
 -   [`IgxPolarScatterSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarscatterseriescomponent.html)
--   `ItemsSource`
+-   `DataSource`
 -   `AngleAxisName`
 -   [`angleMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarbasecomponent.html#anglememberpath)
 -   `RadiusAxisName`

@@ -27,7 +27,7 @@ Angular マップ コンポーネントの [`IgxGeographicHighDensityScatterSeri
 
 ## データ要件
 
-マップ コントロールの他のタイプの散布図シリーズと同様に、[`IgxGeographicHighDensityScatterSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html) シリーズには、オブジェクトの配列にバインドできる `ItemsSource` プロパティがあります。また、項目ソースの各項目は、地理経度および緯度を表す 2 つのデータ列があります。[`longitudeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html#longitudememberpath) と [`latitudeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html#latitudememberpath) プロパティを使用してこのデータ列をマップします。
+マップ コントロールの他のタイプの散布図シリーズと同様に、[`IgxGeographicHighDensityScatterSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html) シリーズには、オブジェクトの配列にバインドできる `DataSource` プロパティがあります。また、項目ソースの各項目は、地理経度および緯度を表す 2 つのデータ列があります。[`longitudeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html#longitudememberpath) と [`latitudeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html#latitudememberpath) プロパティを使用してこのデータ列をマップします。
 
 ### データ バインディング
 
@@ -35,7 +35,7 @@ Angular マップ コンポーネントの [`IgxGeographicHighDensityScatterSeri
 
 | プロパティ                                                                                                                                                                                     | タイプ                                               | 概要                                                |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- |
-| `ItemsSource`                                                                                                                                                                             | any                                               | 項目ソースを取得または設定します。                                 |
+| `DataSource`                                                                                                                                                                              | any                                               | 項目ソースを取得または設定します。                                 |
 | [`longitudeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html#longitudememberpath) | 経度値が割り当てられた項目上の位置を決定するには ItemsSource プロパティを使用します。 |                                                   |
 | [`latitudeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html#latitudememberpath)   | string                                            | 緯度値が割り当てられた項目上の位置を決定するには ItemsSource プロパティを使用します。 |
 
