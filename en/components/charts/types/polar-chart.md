@@ -19,7 +19,7 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-polar-area-series"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-polar-area-chart"
            alt="Angular Polar Area Chart" >
 </code-view>
 
@@ -33,7 +33,7 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-polar-spline-area-series"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-polar-spline-area-chart"
            alt="Angular Polar Area Chart" >
 </code-view>
 
@@ -47,7 +47,7 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-polar-scatter-series"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-polar-scatter-chart"
            alt="Angular Polar Marker Chart" >
 </code-view>
 
@@ -61,7 +61,7 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-polar-line-series"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-polar-line-chart"
            alt="Angular Polar Line Chart" >
 </code-view>
 
@@ -75,7 +75,7 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-polar-spline-series"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-polar-spline-chart"
            alt="Angular Polar Spline Chart" >
 </code-view>
 

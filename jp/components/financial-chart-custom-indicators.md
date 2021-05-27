@@ -2,7 +2,7 @@
 title: Angular ファイナンシャル チャート | データ可視化ツール | カスタム インジケーター | インフラジスティックス
 _description: 簡単な API を使用して財務データを可視化するには、ファイナンシャル チャート コンポーネントを使用します。詳細については、デモ、依存関係、使用方法、およびツールバーを参照してください。
 _keywords: Angular charts, financial chart, Ignite UI for Angular, Infragistics, Angular チャート, ファイナンシャル チャート, インフラジスティックス
-mentionedTypes: ['XamFinancialChart']
+mentionedTypes: ['FinancialChart']
 _language: ja
 ---
 
@@ -12,15 +12,12 @@ Angular Financial Chart コンポーネントでは、インジケーター ペ�
 
 ## Angular カスタム インジケーターの例
 
-<div class="sample-container loading" style="height: 500px">
-    <iframe id="financial-chart-custom-indicators-iframe" src='{environment:dvDemosBaseUrl}/charts/financial-chart-custom-indicators' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular カスタム インジケーターの例"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-custom-indicators-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
-    </button>
-
-
-</div>
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-custom-indicators"
+           alt="Angular カスタム インジケーターの例"
+           github-src="charts/financial-chart/custom-indicators">
+</code-view>
 
 <div class="divider--half"></div>
 

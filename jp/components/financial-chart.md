@@ -1,6 +1,6 @@
 ---
 title: Angular ファイナンシャル チャート | React テーブルとコントロール | インフラジスティックス
-_description: 簡単な API を使用して財務データを可視化するには、Angular ファイナンシャル チャート コンポーネントを使用します。$PlatformName$ を使用して高速で編集可能なファイナンシャル チャートを作成できます。
+_description: 簡単な API を使用して財務データを可視化するには、Angular ファイナンシャル チャート コンポーネントを使用します。Ignite UI for Angular を使用して高速で編集可能なファイナンシャル チャートを作成できます。
 _keywords: Angular charts, financial chart, stock chart, Ignite UI for Angular, Infragistics, Angular チャート, ファイナンシャル チャート, 株価チャート, インフラジスティックス
 mentionedTypes: ['FinancialChart', 'FinancialChartType', 'FinancialOverlayType']
 _language: ja
@@ -12,15 +12,12 @@ Angular Financial Chart コンポーネントは、シンプルな API を使用
 
 ## Angular ファイナンシャル チャートの例
 
-<div class="sample-container loading" style="height: 500px">
-    <iframe id="financial-chart-overview-iframe" src='{environment:dvDemosBaseUrl}/charts/financial-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular ファイナンシャル チャートの例"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-overview-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
-    </button>
-
-
-</div>
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-overview"
+           alt="Angular ファイナンシャル チャートの例"
+           github-src="charts/financial-chart/overview">
+</code-view>
 
 <div class="divider--half"></div>
 
@@ -41,9 +38,9 @@ Angular Financial Chart コンポーネントは、シンプルな API を使用
 その他のチャート ペインの詳細については、[Financial Chart ペイン](financial-chart-panes.md) トピックを参照してください。
 
 ```html
-<igx-financial-chart
-   chartType="candle">
-</igx-financial-chart>
+ <igx-financial-chart
+    chartType="candle">
+ </igx-financial-chart>
 ```
 
 <!-- Angular, React, WebComponents -->
@@ -105,7 +102,7 @@ let data = [
 
 ```html
  <igx-financial-chart
-   [dataSource]="data"
+    [dataSource]="data"
     width="850px"
     height="600px">
  </igx-financial-chart>

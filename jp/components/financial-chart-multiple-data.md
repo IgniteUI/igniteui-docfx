@@ -2,7 +2,7 @@
 title: Angular ファイナンシャル チャート | 大規模データ | インフラジスティックス
 _description: インフラジスティックスの Angular ファイナンシャル チャート コントロールのパフォーマンスを最適化する方法について説明します。Ignite UI for Angular チャートのパフォーマンスを向上させます。
 _keywords: Angular charts, financial chart, stock chart, binding to data, Ignite UI for Angular, Infragistics, Angular チャート, ファイナンシャル チャート, 株価チャート, パフォーマンス, インフラジスティックス
-mentionedTypes: ['XamFinancialChart']
+mentionedTypes: ['FinancialChart']
 _language: ja
 ---
 
@@ -12,15 +12,13 @@ Angular Financial Chart コンポーネントは、以下のように複数の�
 
 ## Angular 複数データ ソースへバインドの例
 
-<div class="sample-container loading" style="height: 500px">
-    <iframe id="financial-chart-multiple-data-iframe" src='{environment:dvDemosBaseUrl}/charts/financial-chart-multiple-data' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular 複数データ ソースへバインドの例"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="financial-chart-multiple-data-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
-    </button>
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-multiple-data"
+           alt="Angular 複数データ ソースへバインドの例"
+           github-src="charts/financial-chart/multiple-data">
+</code-view>
 
-
-</div>
 <div class="divider--half"></div>
 
 ファイナンシャル チャート コンポーネントは、各データ ソースを配列に追加し、複数のデータ ソースを描画することができます。ファイナンシャル チャート コンポーネントは、データ ソースの項目の数が異なる場合、Time モードで XAxis に複数のデータ ソースをプロットできません。コントロールは複数のデータ ソースの項目も整列しません。結果として、データ ソースに対応する項目がない場合、null 項目を挿入してデータ項目を整列する必要があります。

@@ -68,7 +68,6 @@ Now, we can assign `$my-palette` to `$default-palette` and store it in our `_var
 // _variables.scss
 
 $legacy-support: true;
-$my-palette: igx-color(red, blue);
 
 $my-palette: igx-palette(
   $primary: red, 

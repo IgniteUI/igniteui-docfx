@@ -14,9 +14,9 @@ This topic explains the various types of stacked series in the Angular data char
 
 <code-view style="height: 500px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-stacked-series"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-stacked-chart-types"
            alt="Angular Stacked Series Example"
-           github-src="charts/data-chart/type-stacked-series">
+           github-src="charts/data-chart/stacked-chart-types">
 </code-view>
 
 <div class="divider--half"></div>

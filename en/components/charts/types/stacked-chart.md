@@ -15,7 +15,7 @@ The following example, you can use the drop-down to switch between all of the di
 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-stacked-series"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-stacked-chart-types"
            alt="Angular Stacked Chart Types" >
 </code-view>
 
