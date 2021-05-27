@@ -1,7 +1,7 @@
 ---
 title: Angular データ チャート | データ可視化ツール | 積層 100 折れ線チャート | データ バインディング | インフラジスティックス
 _description: インフラジスティックスの Angular チャート コントロールを使用して積層 100 折れ線チャートを作成します。Ignite UI for Angular グラフ タイプについて説明します。
-_keywords: Angular charts, data chart, stacked 100 line, Ignite UI for Angular, Infragistics, Angular チャート, データ チャート, 積層 100 折れ線チャート, インフラジスティックス 
+_keywords: Angular charts, data chart, stacked 100 line, Ignite UI for Angular, Infragistics, Angular チャート, データ チャート, 積層 100 折れ線チャート, インフラジスティックス
 mentionedTypes: ['XamDataChart','Stacked100LineSeries']
 namespace: Infragistics.Controls.Charts
 _language: ja
@@ -13,15 +13,12 @@ Ignite UI for Angular 積層型 100 折れ線チャートはカテゴリ チャ�
 
 ## Angular 積層型 100 折れ線チャートの例
 
-<div class="sample-container loading" style="height: 500px">
-    <iframe id="data-chart-overview-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-stacked-100-line-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular 積層型 100 折れ線チャートの例"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-overview-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
-    </button>
-
-
-</div>
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-stacked-100-line-series"
+           alt="Angular 積層型 100 折れ線チャートの例"
+           github-src="charts/data-chart/type-stacked-100-line-series">
+</code-view>
 
 <div class="divider--half"></div>
 

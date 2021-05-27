@@ -1,5 +1,5 @@
 ---
-title: ドーナツ チャート | 階層データの可視化 | インフラジスティックス
+title: Angular ドーナツ チャート | 階層データの可視化 | インフラジスティックス
 _description: インフラジスティックスの Angular ドーナツ チャート コントロールを使用して、複数の変数を同心円で表示し、階層データを可視化します。詳細については、Ignite UI for Angular ドーナツ チャートのサンプルを参照してください。
 _keywords: Angular charts, doughnut chart, Ignite UI for Angular, Infragistics, data binding, slice selection, slice explosion, animation, multiple rings, Angular チャート, ドーナツ チャート, データ バインディング, スライス選択, スライス切り離し, アニメーション, 複数リング, インフラジスティックス
 mentionedTypes: ['XamDoughnutChart']
@@ -12,15 +12,12 @@ Ignite UI for Angular Doughnut Chart コンポーネントは円チャートと�
 
 ## Angular ドーナツ チャートの例
 
-<div class="sample-container loading" style="height: 450px">
-    <iframe id="doughnut-chart-overview-iframe" src='{environment:dvDemosBaseUrl}/charts/doughnut-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular ドーナツ チャートの例"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-overview-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
-    </button>
-
-
-</div>
+<code-view style="height: 450px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/doughnut-chart-overview"
+           alt="Angular ドーナツ チャートの例"
+           github-src="charts/doughnut-chart/overview">
+</code-view>
 
 <div class="divider--half"></div>
 
@@ -139,15 +136,11 @@ this.data = [
 
 ## 複数リング サンプル
 
-<div class="sample-container loading" style="height: 450px">
-    <iframe id="doughnut-chart-rings-iframe" data-src='{environment:dvDemosBaseUrl}/charts/doughnut-chart-rings' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-rings-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
-    </button>
-
-
-</div>
+<code-view style="height: 450px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/doughnut-chart-rings"
+           github-src="charts/doughnut-chart/rings">
+</code-view>
 
 <div class="divider--half"></div>
 
@@ -167,15 +160,11 @@ this.data = [
 
 ## スライス選択のサンプル
 
-<div class="sample-container loading" style="height: 450px">
-    <iframe id="doughnut-chart-selection-iframe" data-src='{environment:dvDemosBaseUrl}/charts/doughnut-chart-selection' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-selection-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
-    </button>
-
-
-</div>
+<code-view style="height: 450px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/doughnut-chart-selection"
+           github-src="charts/doughnut-chart/selection">
+</code-view>
 
 <div class="divider--half"></div>
 
@@ -199,15 +188,11 @@ this.data = [
 
 ## スライスの分割のサンプル
 
-<div class="sample-container loading" style="height: 450px">
-    <iframe id="doughnut-chart-explosion-iframe" data-src='{environment:dvDemosBaseUrl}/charts/doughnut-chart-explosion' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-explosion-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
-    </button>
-
-
-</div>
+<code-view style="height: 450px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/doughnut-chart-explosion"
+           github-src="charts/doughnut-chart/explosion">
+</code-view>
 
 <div class="divider--half"></div>
 <!-- end: Angular, React, WebComponents -->
@@ -218,15 +203,11 @@ this.data = [
 
 ## 凡例サンプル
 
-<div class="sample-container loading" style="height: 450px">
-    <iframe id="doughnut-chart-legend-iframe" data-src='{environment:dvDemosBaseUrl}/charts/doughnut-chart-legend' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="doughnut-chart-legend-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
-    </button>
-
-
-</div>
+<code-view style="height: 450px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/doughnut-chart-legend"
+           github-src="charts/doughnut-chart/legend">
+</code-view>
 
 ## アニメーション
 
@@ -254,14 +235,10 @@ public tick(): void {
 }
 ```
 
-## サンプル
+## アニメーションのサンプル
 
-<div class="sample-container loading" style="height: 450px">
-    <iframe id="doughnut-chart-animation-iframe" data-src='{environment:dvDemosBaseUrl}/charts/doughnut-chart-animation' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="doughnut-chart-animation-iframe" data-demos-base-url="environment:dvDemosBaseUrl}">StackBlitz で表示
-    </button>
-
-
-</div>
+<code-view style="height: 450px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/doughnut-chart-animation"
+           github-src="charts/doughnut-chart/animation">
+</code-view>

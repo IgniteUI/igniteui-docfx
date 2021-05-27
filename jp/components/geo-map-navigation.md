@@ -1,7 +1,7 @@
 ---
 title: Angular マップ | データ可視化ツール | マップ ナビゲーション | インフラジスティックス
 _description: インフラジスティックスの Angular マップをナビゲートするには、マウスまたはタッチを使用して左右にパンニングし、水平および垂直にズームします。Ignite UI for Angular マップのナビゲーション機能について説明します。
-_keywords: Angular map, navigations, Ignite UI for Angular, Infragistics, Angular マップ, ナビゲーション, インフラジスティックス
+_keywords: Angular map, navigation, Ignite UI for Angular, Infragistics, Angular マップ, ナビゲーション, インフラジスティックス
 mentionedTypes: ['XamGeographicMap']
 _language: ja
 ---
@@ -12,14 +12,12 @@ _language: ja
 
 ## Angular コンテンツのナビゲーションの例
 
-<div class="sample-container loading" style="height: 500px">
-    <iframe id="geo-map-navigation-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-navigation' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular コンテンツのナビゲーションの例"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="geo-map-navigation-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
-    </button>
-    
-</div>
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-navigation"
+           alt="Angular コンテンツのナビゲーションの例"
+           github-src="maps/geo-map/navigation">
+</code-view>
 
 <div class="divider--half"></div>
 

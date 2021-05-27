@@ -69,7 +69,6 @@ $my-palette: igx-palette(
 // _variables.scss
 
 $legacy-support: true;
-$my-palette: igx-color(red, blue);
 
 $my-palette: igx-palette(
   $primary: red, 

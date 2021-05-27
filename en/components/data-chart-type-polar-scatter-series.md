@@ -13,9 +13,9 @@ The Ignite UI for Angular polar scatter chart belongs to a group of polar charts
 
 <code-view style="height: 500px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-polar-scatter-series"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-polar-scatter-chart"
            alt="Angular Polar Scatter Chart Example"
-           github-src="charts/data-chart/type-polar-scatter-series">
+           github-src="charts/data-chart/polar-scatter-chart">
 </code-view>
 
 <div class="divider--half"></div>

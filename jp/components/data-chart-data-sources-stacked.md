@@ -27,7 +27,7 @@ _language: ja
         }
 
         public class SampleCategoryItem
-        {    
+        {
             public int USA { get; set; }
             public int CHN { get; set; }
             public int RUS { get; set; }

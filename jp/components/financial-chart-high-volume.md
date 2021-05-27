@@ -2,7 +2,7 @@
 title: Angular ファイナンシャル チャート | 大規模データ | インフラジスティックス
 _description: インフラジスティックスの Angular ファイナンシャル チャート コントロールのパフォーマンスを最適化する方法について説明します。Ignite UI for Angular チャートのパフォーマンスを向上させます。
 _keywords: Angular charts, financial chart, stock chart, performance, Ignite UI for Angular, Infragistics, Angular チャート, ファイナンシャル チャート, 株価チャート, パフォーマンス, インフラジスティックス
-mentionedTypes: ['XamFinancialChart']
+mentionedTypes: ['FinancialChart']
 _language: ja
 ---
 
@@ -12,15 +12,13 @@ Angular Financial Chart  コンポーネントは大量のデータを処理で�
 
 ## Angular 大規模データのバインドの例
 
-<div class="sample-container loading" style="height: 500px">
-    <iframe id="financial-chart-high-volume-iframe" src='{environment:dvDemosBaseUrl}/charts/financial-chart-high-volume' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular 大規模データのバインドの例"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-high-volume-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
-    </button>
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-high-volume"
+           alt="Angular 大規模データのバインドの例"
+           github-src="charts/financial-chart/high-volume">
+</code-view>
 
-
-</div>
 <div class="divider--half"></div>
 
 チャートのパフォーマンスに影響を及ぼすチャート機能および Angular 固有の機能があり、アプリケーションのパフォーマンスを最適化する際に検討する必要があります。

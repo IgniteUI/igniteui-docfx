@@ -12,14 +12,12 @@ _language: ja
 
 ## Angular Bing Maps 画像の表示の例
 
-<div class="sample-container loading" style="height: 500px">
-    <iframe id="geo-map-display-bing-imagery-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-display-bing-imagery' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Bing Maps 画像の表示の例"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="geo-map-display-bing-imagery-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
-    </button>
-</div>
-
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-display-bing-imagery"
+           alt="Angular Bing Maps 画像の表示の例"
+           github-src="maps/geo-map/display-bing-imagery">
+</code-view>
 
 <div class="divider--half"></div>
 
