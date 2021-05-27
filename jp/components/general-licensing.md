@@ -1,7 +1,7 @@
 ---
 title: Angular ライセンス | ドック マネージャー | Ignite UI for Angular | インフラジスティックス
 _description: インフラジスティックスの Ignite UI for Angular ライセンス npm フィードの使用方法について説明します。
-_keywords: npm package license,  $PlatformName$ license feed,  licensing, npm パッケージのライセンス, $PlatformName$ ライセンス フィード, ライセンス
+_keywords: npm package license,  Ignite UI for Angular license feed,  licensing, npm パッケージのライセンス, Angular ライセンス フィード, ライセンス
 _language: ja
 ---
 

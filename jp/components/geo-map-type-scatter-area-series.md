@@ -12,14 +12,12 @@ Angular マップ コンポーネントの [`IgxGeographicScatterAreaSeriesCompo
 
 ## Angular 散布エリア シリーズの使用の例
 
-<div class="sample-container loading" style="height: 500px">
-    <iframe id="geo-map-type-scatter-area-series-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-type-scatter-area-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular 散布エリア シリーズの使用の例"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="geo-map-type-scatter-area-series-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
-    </button>
-</div>
-
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-type-scatter-area-series"
+           alt="Angular 散布エリア シリーズの使用の例"
+           github-src="maps/geo-map/type-scatter-area-series">
+</code-view>
 
 <div class="divider--half"></div>
 
@@ -37,8 +35,8 @@ Angular マップ コンポーネントの [`IgxGeographicScatterAreaSeriesCompo
 | プロパティ名                                                                                                                                                                                             | プロパティ型 | 説明                                                                                                                                                                                                                                                                                           |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `ItemsSource`                                                                                                                                                                                      | 任意     | [`trianglesSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicxytriangulatingseriescomponent.html#trianglessource) プロパティが三角測量データを提供しない場合に三角測量を実行するデータ項目のソースです。                                                                   |
-| [`longitudeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicxytriangulatingseriescomponent.html#longitudememberpath)             | 文字列    | `ItemsSource` にバインドされているすべてのアイテムの経度を含むプロパティの名前。                                                                                                                                                                                                                                              |
-| [`latitudeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicxytriangulatingseriescomponent.html#latitudememberpath)               | 文字列    | `ItemsSource` にバインドされているすべてのアイテムの Latitude を含むプロパティの名前。                                                                                                                                                                                                                                      |
+| [`longitudeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicxytriangulatingseriescomponent.html#longitudememberpath)             | 文字列    | `ItemsSource` にバインドされているすべての項目の経度を含むプロパティの名前。                                                                                                                                                                                                                                                |
+| [`latitudeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicxytriangulatingseriescomponent.html#latitudememberpath)               | 文字列    | `ItemsSource` にバインドされているすべての項目の Latitude を含むプロパティの名前。                                                                                                                                                                                                                                        |
 | [`colorMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicscatterareaseriescomponent.html#colormemberpath)                         | 文字列    | 各データ項目の緯度および経度座標の値を含むプロパティの名前。[`colorScale`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicscatterareaseriescomponent.html#colorscale) プロパティが設定されている場合、この数値は色に変換されます。                                                                |
 | [`trianglesSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicxytriangulatingseriescomponent.html#trianglessource)                     | 任意     | 三角測量データのソース。`TriangulationSource` オブジェクトの Triangles をこのプロパティに設定すると、ランタイム パフォーマンスと地理的シリーズの描画の両方が改善します。                                                                                                                                                                                        |
 | [`triangleVertexMemberPath1`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicxytriangulatingseriescomponent.html#trianglevertexmemberpath1) | 文字列    | 各三角形に対して ItemsSource の最初の頂点のインデックスを含む、[`trianglesSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicxytriangulatingseriescomponent.html#trianglessource) 項目のプロパティ名。このプロパティを設定することは義務ではありません。カスタムの三角測量ロジックが提供されない場合はデフォルトで取得されます。 |
