@@ -18,6 +18,8 @@ With only a few lines of code, users can easily localize the strings in Ignite U
            alt="Angular Localization Example">
 </code-view>
 
+>Note: Hindi (HI) included in the sample is only for illustrational purposes and to emphasize on the possibility to pass a custom object. In this sample, it contains only several localized strings for the summary. More details at [Utilize own localized resources](#utilize-own-localized-resources) section below.
+
 ## Usage
 
 ### Load localized resources from npm package

@@ -1,19 +1,22 @@
 ---
-title: Angular Breaking Changes | Ignite UI for Angular | Infragistics
-_description: Learn about breaking changes in the Ignite UI for Angular and how to update your code to latest API.
-_keywords: Breaking Changes,  Ignite UI for Angular, Infragistics
+title: Angular What's New | Ignite UI for Angular | Infragistics
+_description: Learn about new features in the Ignite UI for Angular.
+_keywords: Changelog, What's New,  Ignite UI for Angular, Infragistics
 ---
 
-# Breaking Changes in Ignite UI for Angular
+# Ignite UI for Angular Change Log
 
-This topic provides information about breaking changes in Ignite UI for Angular as well as how to update older code to latest API.
+All notable changes for each version of this project will be documented in this file.
 
-## Redesigned Chart Defaults
+## **11.2.0**
 
-> [!NOTE]
-> These breaking changes were introduce in version **11.2.0** of these packages and components:
+### Charts
 
--   All types of charts/series have new colors for brush/fill and outlines 
+This release introduces several new and improved visual design and configuration options for all of the chart components. e.g. Data Chart, Category Chart, and Financial Chart.
+
+Redesigned Chart Defaults:
+
+-   New color palette for series/markers in all charts. - All types of charts/series have new colors for brush/fill and outlines 
 
 | Old series brushes outlines | New series outline brushes |
 | --------------------------- | -------------------------- |
@@ -28,17 +31,16 @@ This topic provides information about breaking changes in Ignite UI for Angular 
 | `Color_009=#795548`         | `Color_009=#e051a9`        |
 | `Color_010=#9A9A9A`         | `Color_010=#a8a8b7`        |
 
--   All types of charts/series have marker outlines with 2px thickness  
+eg.
 
--   Bar/Column/Waterfall series have outlines with 1px thickness (other series have 2px thickness) 
+| <img class="responsive-img" src="../images/chartDefaults1.png" /> | <img class="responsive-img" src="../images/chartDefaults2.png" /> |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| <img class="responsive-img" src="../images/chartDefaults3.png" /> | <img class="responsive-img" src="../images/chartDefaults4.png" /> |
 
--   Bar/Column/Waterfall series have square corners instead of rounded corners anymore 
+<div class="divider--half"></div>
 
--   Point/Bubble/ScatterSeries/PolarScatter series have markers with 70% transparent fill 
-
--   Point/Bubble/ScatterSeries/PolarScatter series have markers with fill that matches marker outline. To revert to the previous styling behavior for these series a new property has been added to the series, `MarkerFillMode`, which can be set to normal to mimic the prior behavior. 
-
--   Scatter High Density series has new colors for min/max heat properties 
+-   Changed Bar/Column/Waterfall series to have square corners instead of rounded corners 
+-   Changed Scatter High Density series’ colors for min/max heat properties
 
     | Old heat min color | New heat min color |
     | ------------------ | ------------------ |
@@ -48,24 +50,81 @@ This topic provides information about breaking changes in Ignite UI for Angular 
     | ------------------ | ------------------ |
     | `#FFC62828`        | `#ffee5879`        |
 
--   Financial/Waterfall series have new colors for negative fill of their visuals 
+-   Changed Financial/Waterfall series’ colors for negative fill of their visuals 
 
     | Old negative brush | new negative brush |
     | ------------------ | ------------------ |
     | `#FFC62828`        | `#ffee5879`        |
 
-<div class="divider--half"></div>
+-   Changed marker's thickness to 2px from 1px
+-   Changed marker's fill to match the marker's outline for PointSeries, BubbleSeries, ScatterSeries, PolarScatterSeries 
+    -   Note, you can use set `MarkerFillMode` property to Normal to undo this change
+-   Compressed labelling for the TimeXAxis and OrdinalTimeXAxis
+-   New Marker Properties:
+    -   `MarkerFillMode` - Can be set to 'MatchMarkerOutline' so the marker depends on the outline
+    -   `MarkerFillOpacity` - Can be set to a value 0 to 1
+    -   `MarkerOutlineMode` - Can be set to 'MatchMarkerBrush' so the marker's outline depends on the fill brush color
+-   New Series `OutlineMode` Property:
+    -   Can be set to toggle the series outline visibility. Note, for Data Chart, the property is on the series
+-   New Plot Area Margin Properties:
+    -   `PlotAreaMarginLeft` 
+    -   `PlotAreaMarginTop`
+    -   `PlotAreaMarginRight`
+    -   `PlotAreaMarginBottom`
+    -   [`ComputedPlotAreaMarginMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/computedplotareamarginmode.html)
+    -   The plot area margin properties define the bleed over area introduced into the viewport when the chart is at the default zoom level. A common use case is to provide space between the axes and first/last data points. Note, the [`ComputedPlotAreaMarginMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/computedplotareamarginmode.html), listed below, will automatically set the margin when markers are enabled. The others are designed to specify a `Double` to represent the thickness, where PlotAreaMarginLeft etc. adjusts the space to all four sides of the chart.   
+-   New Highlighting Properties
+    -   [`HighlightingMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/highlightingmode.html) - Sets whether hovered or non-hovered series to fade, brighten
+    -   `HighlightingBehavior` - Sets whether the series highlights depending on mouse position eg. directly over or nearest item
+    -   Note, in previous releases the highlighting was limited to fade on hover. 
+-   Added Highlighting for the following series:
+    -   Stacked
+    -   Scatter
+    -   Polar
+    -   Radial 
+    -   Shape
+-   Added Annotation layers to the following series:
+    -   Stacked
+    -   Scatter
+    -   Polar
+    -   Radial
+    -   Shape
+-   Added support for overriding the data source of individual stack fragments within a stacked series 
+-   Added custom style events to Stacked, Scatter, Range, Polar, Radial, and Shape series
+-   Added support to automatically sync the vertical zoom to the series content
+-   Added support to automatically expanding the horizontal margins of the chart based on the initial labels displayed 
+
+### Chart Legend
+
+-   Added Horizontal Orientation for ItemLegend
+    -   The following chart types can use ItemLegend in horizontal orientation:
+        -   Bubble
+        -   Donut
+        -   Pie 
+-   [`LegendHighlightingMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/legendhighlightingmode.html) - Enables series highlighting when hovering over legend items
+
+### Geographic Map
+
+> [!NOTE]
+> These features are CTP
+
+-   Added support for wrap around display of the map (scroll infinitely horizontally)  
+-   Added support for shifting display of some map series while wrapping around the coordinate origin  
+-   Added support for highlighting of the shape series
+-   Added support for some annotation layers for the shape series
 
 <div class="divider--half"></div>
 
 <!-- Angular, React, WebComponents -->
 
-## Changed Import Statements
+## **8.2.12**
+
+-   Changed Import Statements
 
 Import statements have been simplified to use just package names instead of full paths to API classes and enums.
 
 > [!NOTE]
-> These breaking changes were introduce in version **8.2.12** of these packages and components:
+> These breaking changes were introduce in these packages and components only:
 
 | Affected Packages                                                                                                              | Affected Components                                                                                         |
 | ------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------- |
@@ -77,7 +136,7 @@ Import statements have been simplified to use just package names instead of full
 | <a href="https://www.npmjs.com/package/igniteui-angular-grids/v/8.2.12" target="_blank">igniteui-angular-grids</a>             | [Data Grid](data-grid.md)                                                                                   |
 | <a href="https://www.npmjs.com/package/igniteui-angular-core/v/8.2.12" target="_blank">igniteui-angular-core</a>               | all classes and enums                                                                                       |
 
-## Code After Changes
+-   Code After Changes
 
 Now, you need to use just package names instead of full paths to API classes and enums.
 
@@ -105,7 +164,7 @@ import { IgxGeographicMapComponent } from "igniteui-angular-maps";
 import { IgxGeographicMapModule } from "igniteui-angular-maps";
 ```
 
-## Code Before Changes
+-   Code Before Changes
 
 Before, you had to import using full paths to API classes and enums:
 
