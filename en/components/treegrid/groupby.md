@@ -98,7 +98,7 @@ public groupColumnKey = "categories";
 
 #### Implementation
 
-In this sample data is loaded only for a certain row on expansion. For more information on this, please refer to the [Tree Grid Load On Demand](load-on-demand.md) topic. The data is grouped by the **"ShipCountry"**, **"ShipCity"** and **"Discontinued"** fields and the resulting hierarchy is displayed in a separate column. The grouping is performed on a remote service - the data is modified and corresponding child and parent keys are assigned that are used to display the final data in a hierarchical view. For more information on how this service works you can take a look at the `TreeGridGroupingLoadOnDemandService` class in the `remoteService.ts` file.
+In this sample, data is loaded in portions. Initially, only the top level categories are displayed, then child data is served once a parent row is expanded. For more information on this approach, please refer to the [Tree Grid Load On Demand](load-on-demand.md) topic. The data is grouped by the **"ShipCountry"**, **"ShipCity"** and **"Discontinued"** fields and the resulting hierarchy is displayed in a separate column. The grouping is performed on a remote service - the data is modified and corresponding child and parent keys are assigned that are used to display the final data in a hierarchical view. For more information on how this service works you can take a look at the `TreeGridGroupingLoadOnDemandService` class in the `remoteService.ts` file.
 
 Here is an example of how to use load on demand:
 
