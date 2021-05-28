@@ -18,9 +18,9 @@ _language: ja
 
 <code-view style="height: 500px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-polar-series"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-polar-chart"
            alt="Angular 極座標シリーズの例"
-           github-src="charts/data-chart/type-polar-series">
+           github-src="charts/data-chart/polar-chart">
 </code-view>
 
 <div class="divider--half"></div>

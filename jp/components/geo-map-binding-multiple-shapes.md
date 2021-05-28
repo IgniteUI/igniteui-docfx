@@ -126,7 +126,7 @@ sdsLocations.dataBind();
 
 ## ポリゴンの処理
 
-世界の国々の`ShapeDataSource` に読み込まれた形状データを処理し、[`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html) オブジェクトに割り当てます。
+世界の国々の `ShapeDataSource` に読み込まれた形状データを処理し、[`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html) オブジェクトに割り当てます。
 
 ```ts
 import { IgxGeographicPolylineSeriesComponent } from 'igniteui-angular-maps';

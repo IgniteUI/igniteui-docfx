@@ -14,9 +14,9 @@ Ignite UI for Angular 極座標エリア チャートは、極座標チャート
 
 <code-view style="height: 500px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-polar-line-series"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-polar-line-chart"
            alt="Angular 極座標折れ線チャートの例"
-           github-src="charts/data-chart/type-polar-line-series">
+           github-src="charts/data-chart/polar-line-chart">
 </code-view>
 
 <div class="divider--half"></div>

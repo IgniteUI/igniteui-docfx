@@ -14,9 +14,9 @@ Ignite UI for Angular 極座標スプライン チャートは、極座標チャ
 
 <code-view style="height: 500px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-polar-spline-series"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-polar-spline-chart"
            alt="Angular 極座標スプライン チャートの例"
-           github-src="charts/data-chart/type-polar-spline-series">
+           github-src="charts/data-chart/polar-spline-chart">
 </code-view>
 
 <div class="divider--half"></div>
