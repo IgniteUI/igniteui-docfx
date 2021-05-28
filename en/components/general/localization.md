@@ -6,7 +6,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 # Localization (i18n)
 
-Currently, Ignite UI for Angular ships with resource strings for the following languages and scripts: German, French, Italian, Spanish, Bulgarian, Japanese, Korean, Traditional Chinese (zh-Hant) and Simplified Chinese (zh-Hans). These are available via the `igniteui-angular-i18n` package.
+Currently, Ignite UI for Angular ships with resource strings for the following languages and scripts: Bulgarian, Czech, Danish, Dutch, French, German, Hungarian, Italian, Japanese, Korean, Polish, Portuguese, Romanian, Spanish, Swedish, Turkish, Traditional Chinese (zh-Hant) and Simplified Chinese (zh-Hans). These are available via the `igniteui-angular-i18n` package.
 
 With only a few lines of code, users can easily localize the strings in Ignite UI for Angular components.
 
@@ -130,13 +130,22 @@ this.grid.resourceStrings = newGridRes;
 
 ### Available resource strings
 
-* [IgxResourceStringsBG](https://github.com/IgniteUI/igniteui-angular-i18n/blob/master/src/i18n/BG/resources.ts) 
-* [IgxResourceStringsDE](https://github.com/IgniteUI/igniteui-angular-i18n/blob/master/src/i18n/DE/resources.ts) 
+* [IgxResourceStringsBG](https://github.com/IgniteUI/igniteui-angular-i18n/blob/master/src/i18n/BG/resources.ts)
+* [IgxResourceStringsCS](https://github.com/IgniteUI/igniteui-angular-i18n/blob/master/src/i18n/CS/resources.ts)
+* [IgxResourceStringsDA](https://github.com/IgniteUI/igniteui-angular-i18n/blob/master/src/i18n/DA/resources.ts)
+* [IgxResourceStringsDE](https://github.com/IgniteUI/igniteui-angular-i18n/blob/master/src/i18n/DE/resources.ts)
 * [IgxResourceStringsES](https://github.com/IgniteUI/igniteui-angular-i18n/blob/master/src/i18n/ES/resources.ts) 
 * [IgxResourceStringsFR](https://github.com/IgniteUI/igniteui-angular-i18n/blob/master/src/i18n/FR/resources.ts) 
+* [IgxResourceStringsHU](https://github.com/IgniteUI/igniteui-angular-i18n/blob/master/src/i18n/HU/resources.ts)
 * [IgxResourceStringsIT](https://github.com/IgniteUI/igniteui-angular-i18n/blob/master/src/i18n/IT/resources.ts) 
 * [IgxResourceStringsJA](https://github.com/IgniteUI/igniteui-angular-i18n/blob/master/src/i18n/JA/resources.ts) 
 * [IgxResourceStringsKO](https://github.com/IgniteUI/igniteui-angular-i18n/blob/master/src/i18n/KO/resources.ts) 
+* [IgxResourceStringsNL](https://github.com/IgniteUI/igniteui-angular-i18n/blob/master/src/i18n/NL/resources.ts)
+* [IgxResourceStringsPL](https://github.com/IgniteUI/igniteui-angular-i18n/blob/master/src/i18n/PL/resources.ts)
+* [IgxResourceStringsPT](https://github.com/IgniteUI/igniteui-angular-i18n/blob/master/src/i18n/PT/resources.ts)
+* [IgxResourceStringsRO](https://github.com/IgniteUI/igniteui-angular-i18n/blob/master/src/i18n/RO/resources.ts)
+* [IgxResourceStringsSV](https://github.com/IgniteUI/igniteui-angular-i18n/blob/master/src/i18n/SV/resources.ts)
+* [IgxResourceStringsTR](https://github.com/IgniteUI/igniteui-angular-i18n/blob/master/src/i18n/TR/resources.ts)
 * [IgxResourceStringsZHHANS](https://github.com/IgniteUI/igniteui-angular-i18n/blob/master/src/i18n/ZH-HANS/resources.ts) 
 * [IgxResourceStringsZHHANT](https://github.com/IgniteUI/igniteui-angular-i18n/blob/master/src/i18n/ZH-HANT/resources.ts) 
 
