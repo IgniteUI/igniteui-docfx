@@ -12,7 +12,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 If you've included the _`igniteui-angular.css`_ file in your application project, now is a good time to remove it. We are going to use our own _`my-app-theme.scss`_ file to generate a global theme for all components in our application.
 
 **Ignite UI for Angular** uses a global theme by default to theme the entire suite of components. You can, however, create themes scoped to components you have in your app, depending on your use case. For now, we will be including all of our themes in a single file.
-To generate a global theme we're going to be including two mixins `igx-core` and `igx-theme`. Both of those mixins accepts a few arguments: 
+To generate a global theme we're going to be including two mixins `igx-core` and `igx-theme`. Both of those mixins accept a few arguments: 
 
 ### igx-core  
 <div class="divider--half"></div>
