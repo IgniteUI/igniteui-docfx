@@ -11,5 +11,6 @@
     "_themeUsage": true,
     "_demosBaseUrlVar": "{environment:demosBaseUrl}",
     "_platform": "angular",
-    "_initialPage": "components/general/getting-started"
+    "_initialPage": "components/general/getting-started",
+    "_toc-dir": "components"
 }
