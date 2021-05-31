@@ -11,7 +11,7 @@
         "GTMContainerId": "GTM-NNHVMC7",
         "themeApiUrl": "http://localhost:59296/api/taas",
         "themingWidgetVersion": "latest",
-        "baseDir": "/docfx-test-ja/"
+        "baseDir": "/"
     },
     "staging": {
         "demosBaseUrl": "https://jp.staging.infragistics.com/angular-demos",

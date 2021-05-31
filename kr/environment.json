@@ -8,10 +8,10 @@
         "angularApiUrl": "https://staging.infragistics.com/products/ignite-ui-angular/docs/typescript/latest",
         "sassApiUrl": "https://staging.infragistics.com/products/ignite-ui-angular/docs/sass/latest",
         "dvApiBaseUrl": "https://staging.infragistics.com",
-        "GTMContainerId": "GTM-NNHVMC7",
+        "GTMContainerId": "GTM-WLXLBZD",
         "themeApiUrl": "http://localhost:59296/api/taas",
         "themingWidgetVersion": "latest",
-        "baseDir": "/docfx-test-ja/"
+        "baseDir": "/"
     },
     "staging": {
         "demosBaseUrl": "https://staging.infragistics.co.kr/angular-demos",
@@ -22,7 +22,7 @@
         "angularApiUrl": "https://staging.infragistics.com/products/ignite-ui-angular/docs/typescript/latest",
         "sassApiUrl": "https://staging.infragistics.com/products/ignite-ui-angular/docs/sass/latest",
         "dvApiBaseUrl": "https://staging.infragistics.com",
-        "GTMContainerId": "GTM-WLWSDK",
+        "GTMContainerId": "GTM-NCKNPN",
         "themeApiUrl": "https://igniteuithemingwidget-staging.infragistics.com/api/taas",
         "themingWidgetVersion": "latest",
         "baseDir": "/products/ignite-ui-angular/angular/"
@@ -36,7 +36,7 @@
         "angularApiUrl": "https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/latest",
         "sassApiUrl": "https://www.infragistics.com/products/ignite-ui-angular/docs/sass/latest",
         "dvApiBaseUrl": "https://www.infragistics.com",
-        "GTMContainerId": "GTM-KVNSWJ",
+        "GTMContainerId": "GTM-T65CF7",
         "themeApiUrl": "https://igniteuithemingwidget-prod.infragistics.com/api/taas",
         "themingWidgetVersion": "latest-stable",
         "baseDir": "/products/ignite-ui-angular/angular/"
