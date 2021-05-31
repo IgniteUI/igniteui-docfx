@@ -63,7 +63,7 @@ Angular スパークライン コンポーネントは、それに応じて  [`d
 
 -   [`Line`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/sparklinedisplaytype.html#line):  スパークラインの折れ線チャート タイプを数値データで表示し、データ ポイントを線分で接続します。スパークラインでデータを視覚化するには、少なくとも 2 つのデータ ポイントを指定する必要があります。
 -   [`Area`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/sparklinedisplaytype.html#area): Area: スパークラインのエリア チャート タイプを数値データで表示します。これは折れ線タイプに似ており、各線が描画された後に領域を閉じる追加の手順があります。スパークラインでデータを視覚化するには、少なくとも 2 つのデータ ポイントを指定する必要があります。
--   [`Column`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/sparklinedisplaytype.html#column): スパークラインの縦棒チャート タイプを数値データで表示します。縦棒と表現される場合もあります。このタイプは単一データ ポイントを描画できますが、Sparkline に最小の値範囲プロパティ（minimum）を指定する必要があるので、供給される単一データ ポイントは表示可能です。そうでなければ、値は最小値として取り扱われ、表示されません。
+-   [`Column`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/sparklinedisplaytype.html#column): スパークラインの縦棒チャート タイプを数値データで表示します。縦棒と表現される場合もあります。このタイプは単一データ ポイントを描画できますが、Sparkline に最小の値範囲プロパティ (minimum) を指定する必要があるので、供給される単一データ ポイントは表示可能です。そうでなければ、値は最小値として取り扱われ、表示されません。
 -   [`WinLoss`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/sparklinedisplaytype.html#winloss): このタイプは、外観は柱状チャートに似ています。各列の値はデータセットの正の最大値 (正の値の場合) または負の最小値 (負の値の場合) に等しくなります。ウィンまたはロス シナリオを示すのが目的です。Win/Loss チャートを正しく表示するには、データセットには正の値と負の値がなければなりません。WinLoss スパークラインが、数値のコレクションにバインドできる Line タイプなどの他のタイプと同じデータにバインドされている場合、Angular スパークライン コンポーネントはそのコレクションから最大値と最小値の 2 つの値を選択し、それらの値に基づいてスパークラインをレンダリングします。
 
 <code-view style="height: 450px"

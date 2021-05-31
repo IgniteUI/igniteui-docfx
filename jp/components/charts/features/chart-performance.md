@@ -373,7 +373,7 @@ this.LineSeries.Resolution = 10;
 -   [スプライン チャート](../types/spline-chart.md)
 -   [散布図](../types/scatter-chart.md)
 -   [積層型チャート](../types/stacked-chart.md)
--   [ステップ チャート](../types/shape-chart.md)
+-   [ステップ チャート](../types/step-chart.md)
 -   [株価チャート](../types/stock-chart.md)
 -   [チャート アニメーション](chart-animations.md)
 -   [チャート注釈](chart-annotations.md)
