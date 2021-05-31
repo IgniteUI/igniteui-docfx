@@ -10,7 +10,8 @@
         "dvApiBaseUrl": "https://staging.infragistics.com",
         "GTMContainerId": "GTM-NNHVMC7",
         "themeApiUrl": "http://localhost:59296/api/taas",
-        "themingWidgetVersion": "latest"
+        "themingWidgetVersion": "latest",
+        "baseDir": "/"
     },
     "staging": {
         "demosBaseUrl": "https://jp.staging.infragistics.com/angular-demos",
@@ -23,7 +24,8 @@
         "dvApiBaseUrl": "https://staging.infragistics.com",
         "GTMContainerId": "GTM-WLWSDK",
         "themeApiUrl": "https://igniteuithemingwidget-staging.infragistics.com/api/taas",
-        "themingWidgetVersion": "latest"
+        "themingWidgetVersion": "latest",
+        "baseDir": "/products/ignite-ui-angular/angular/"
     },
     "production": {
         "demosBaseUrl": "https://jp.infragistics.com/angular-demos",
@@ -36,6 +38,7 @@
         "dvApiBaseUrl": "https://www.infragistics.com",
         "GTMContainerId": "GTM-KVNSWJ",
         "themeApiUrl": "https://igniteuithemingwidget-prod.infragistics.com/api/taas",
-        "themingWidgetVersion": "latest-stable"
+        "themingWidgetVersion": "latest-stable",
+        "baseDir": "/products/ignite-ui-angular/angular/"
     }
 }
