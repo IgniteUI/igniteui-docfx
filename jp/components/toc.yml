@@ -1149,6 +1149,9 @@
       - name: 印刷スタイル
         href: themes/misc/printing-styles.md
         new: false
+      - name: Angular Material のテーマ
+        href: themes/misc/angular-material-theming.md
+        new: true
       - name: Bootstrap のテーマ
         href: themes/misc/bootstrap-theming.md
         new: true

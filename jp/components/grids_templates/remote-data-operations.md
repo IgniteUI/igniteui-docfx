@@ -38,7 +38,7 @@ Ignite UI for Angular @@igComponent は、リモート仮想化、リモート �
 
 }
 @@if (igxName === 'IgxTreeGrid') {
-### デモ
+## Angular @@igComponent リモート データ操作の例
 
 
 <code-view style="height:550px" 
@@ -288,7 +288,7 @@ public processData() {
 
 ### リモート フィルタリングのデモ
 
-このトピックのはじめにあるコードの結果は、[デモ](#デモ)で確認できます。
+このトピックのはじめにあるコードの結果は、[デモ](#angular-tree-grid-リモート-データ操作の例)で確認できます。
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
  <!-- TODO -->

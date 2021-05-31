@@ -13,9 +13,9 @@ The Ignite UI for Angular polar area chart belongs to a group of polar charts an
 
 <code-view style="height: 500px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-polar-line-series"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-polar-line-chart"
            alt="Angular Polar Line Chart Example"
-           github-src="charts/data-chart/type-polar-line-series">
+           github-src="charts/data-chart/polar-line-chart">
 </code-view>
 
 <div class="divider--half"></div>

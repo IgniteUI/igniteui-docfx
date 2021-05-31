@@ -52,7 +52,7 @@ To instantiate a date range picker in its default mode, use the following code:
 public range: DateRange = { start: new Date(2020, 4, 20), end: new Date(2020, 4, 25) };
 ```
 
->Note: The Date Range Picker value is of type [`DateRange`]({environment:angularApiUrl}/interfaces/daterange.html}), which contains a start and an end date.
+>Note: The Date Range Picker value is of type [`DateRange`]({environment:angularApiUrl}/interfaces/daterange.html), which contains a start and an end date.
 
 To create a two-way data-binding, use `ngModel`:
 ```html
@@ -414,6 +414,15 @@ The demo below defines a form for flight tickets that uses the [`IgxDateRangePic
 * [IgxCalendarComponent Styles]({environment:sassApiUrl}/index.html#function-igx-calendar-theme)
 * [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
+
+## Theming Dependencies
+
+* [IgxCalendar Theme]({environment:sassApiUrl}/index.html#function-igx-calendar-theme)
+* [IgxOverlay Theme]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxButton Theme]({environment:sassApiUrl}/index.html#function-igx-button-theme)
+* [IgxInputGroup Theme]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
+* [IgxDropDown Theme]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme)
 
 ## Additional Resources
 Related topics:

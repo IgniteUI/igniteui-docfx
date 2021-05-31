@@ -212,6 +212,11 @@ Internet Explorer 11 のコンポーネントをスタイル設定するには�
 * [IgxSplitterComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-splitter-theme)
 
 <div class="divider--half"></div>
+
+## テーマの依存関係
+* [IgxDropDown テーマ]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme)
+* [IgxIcon スタイル]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+
 コミュニティに参加して新しいアイデアをご提案ください。
 
 * [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)

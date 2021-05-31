@@ -349,10 +349,15 @@ If the component is using the [Emulated](themes/sass/component-themes.md#view-en
 
 Additional components and/or directives with relative APIs that were used:
 
-* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 * [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html)
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) 
 * [IgxCheckboxComponent]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html)
+
+## Theming Dependencies
+* [IgxDropDown Theme]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme)
+* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxCheckbox Theme]({environment:sassApiUrl}/index.html#function-igx-checkbox-theme)
+* [IgxOverlay Theme]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>

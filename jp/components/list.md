@@ -559,6 +559,10 @@ Angular コンポーネント テンプレートの上側に入力フィール�
 
 <div class="divider"></div>
 
+## テーマの依存関係
+* [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
+* [IgxAvatar テーマ]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
+
 ## その他のリソース
 
 <div class="divider--half"></div>

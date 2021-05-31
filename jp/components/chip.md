@@ -461,6 +461,9 @@ $custom-theme: igx-chip-theme(
 * [IgxChipComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-chip-theme)
 * [IgxChipsAreaComponent]({environment:angularApiUrl}/classes/igxchipsareacomponent.html)
 
+## テーマの依存関係
+* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+
 ## 参照
 
 <div class="divider--half"></div>
