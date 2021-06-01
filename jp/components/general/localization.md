@@ -19,7 +19,7 @@ _language: ja
            alt="Angular ローカライズの例">
 </code-view>
 
->Note: Hindi (HI) included in the sample is only for illustrational purposes and to emphasize on the possibility to pass a custom object. In this sample, it contains only several localized strings for the summary. More details at [Utilize own localized resources](#utilize-own-localized-resources) section below.
+>注: サンプルに含まれているヒンディー語 (HI) は、説明のみを目的としており、カスタム オブジェクトを渡す可能性を強調するためのものです。このサンプルでは、集計用にローカライズされたいくつかの文字列のみが含まれています。詳細については、以下の[独自のローカライズされたリソースを使用する](#独自のローカライズされたリソースを活用する)セクションを参照してください。
 
 ## 使用方法
 

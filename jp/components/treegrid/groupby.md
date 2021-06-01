@@ -10,11 +10,11 @@ _language: ja
 階層以外のデータ列を **グループ化**し、**集計値**で親行を生成する場合、[`IgxTreeGridComponent`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html) と以下のデモのようなカスタム実装を使用します。
 
 > [!NOTE]
-> These samples contains custom logic which is not built in the [`IgxTreeGridComponent`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html). It is similar to the grouping and summaries features of the [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html), but instead inside separate summary rows, the calculated data is displayed inside the parent rows.
+> これらのサンプルには、[`IgxTreeGridComponent`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html) に組み込まれていないカスタム ロジックが含まれています。以下の [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) のグループ化や集計機能と同様ですが、集計行内ではなく、集計データが親行に表示されます。
 
-In these samples we have also created an UI component with selector `igx-tree-grid-group-area` which handles the UI interactions related to the columns that are used for the grouping. For more information on how this component works you can take a look at the `IgxTreeGridGroupAreaComponent` class in the `tree-grid-group-area.component.ts` file. The component is completely configurable so you could copy and re-use it in your own project.
+このサンプルでは、グループ化に使用される列に関連する UI 操作を処理するセレクター `igx-tree-grid-group-area` を使用して UI コンポーネントも作成しました。このコンポーネントの動作の詳細については、 `tree-grid-group-area.component.ts` ファイルの `IgxTreeGridGroupAreaComponent` クラスを参照してください。コンポーネントは完全にカスタマイズが可能でカスタム プロジェクトに使用できます。
 
-Here is an example of how to use the component in the template:
+以下はテンプレートでコンポーネントを使用した例です。
 
 ```html
 <igx-grid-toolbar *ngIf="showToolbar">
@@ -27,10 +27,10 @@ Here is an example of how to use the component in the template:
     </igx-grid-toolbar-title>
 ```
 
-The component's inputs are the following:
-- grid - `IgxTreeGridComponent` that is used for the grouping
-- groupColumns - an array of string values which contains the fields used to generate the hierarchy
-- groupColumnKey - a string value for the name of the generated hierarchy column
+コンポーネントの入力は次のとおりです:
+- grid - グループ化に使用される `IgxTreeGridComponent`。
+- groupColumns - 階層を生成するために使用されるフィールドを含む文字列の配列。
+- groupColumnKey - 生成した階層列の名前の文字列値。
 
 ## Angular Tree Grid グループ化の例
 
@@ -99,9 +99,9 @@ public groupColumnKey = "categories";
 
 #### 実装
 
-In this sample, data is loaded in portions. Initially, only the top level categories are displayed, then child data is served once a parent row is expanded. For more information on this approach, please refer to the [Tree Grid Load On Demand](load-on-demand.md) topic. The data is grouped by the **"ShipCountry"**, **"ShipCity"** and **"Discontinued"** fields and the resulting hierarchy is displayed in a separate column. The grouping is performed on a remote service - the data is modified and corresponding child and parent keys are assigned that are used to display the final data in a hierarchical view. For more information on how this service works you can take a look at the `TreeGridGroupingLoadOnDemandService` class in the `remoteService.ts` file.
+このサンプルでは、データを部分的に読み込みます。最初は最上位のカテゴリのみが表示され、親行が展開されると子データが提供されます。このアプローチの詳細については、[ツリー グリッド ロードオンデマンド](load-on-demand.md) トピックを参照してください。データは、**ShipCountry**、**ShipCity**、**Discontinued** フィールドによってグループ化され、結果の階層が別の列に表示されます。グループ化はリモート サービスで実行されます。データが変更され、対応する子キーと親キーが割り当てられ、最終データを階層ビューで表示するために使用されます。このサービスの仕組みについて詳しくは、`remoteService.ts` ファイルの `TreeGridGroupingLoadOnDemandService` クラスをご覧ください。
 
-Here is an example of how to use load on demand:
+ロードオンデマンドの使用方法の例を次に示します。
 
 ```html
 <igx-tree-grid #treeGrid
@@ -110,7 +110,7 @@ Here is an example of how to use load on demand:
     <igx-column [field]="groupColumnKey" [width]="'180px'" [resizable]='true' [disableHiding]="true"></igx-column>
 ```
 
-In order to load the child rows when the user expands a row, the Tree Grid provides the callback input property [`loadChildrenOnDemand`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#loadchildrenondemand) - the children data is retrieved from the server and it is assigned to the requested parent row based on the grouping parameters.
+ユーザーが行を展開するときに子行を読み込むために、ツリーグリッドはコールバック入力プロパティ [`loadChildrenOnDemand`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#loadchildrenondemand) を提供します - 子データはサーバーから取得され、グループ化パラメーターに基づいて要求された親行に割り当てられます。
 
 ```typescript
 public groupColumns = ['ShipCountry', 'ShipCity', 'Discontinued'];
