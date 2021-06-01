@@ -43,7 +43,7 @@ _language: ja
 
 #### 実装
 
-サンプルでは、パイプ クラス `TreeGridGroupingPipe` を作成しました。このクラスは、**"category"**、**"type"**、**"contract"** で表形式のデータをグループ化します。ソート後の階層は新しく作成された **Categories** 列に表示されます。パイプは、**"price"**、**"change"**、**"changeP"** 列に生成した親行の集計値を計算します。パイプの詳細については、`tree-grid-grouping.pipe.ts` ファイルの `TreeGridGroupingPipe` クラスを参照してください。パイプは完全にカスタマイズが可能でカスタム プロジェクトに使用できます。
+サンプルでは、パイプ クラス `TreeGridGroupingPipe` を作成しました。このクラスは、**category**、**type**、**contract** で表形式のデータをグループ化します。ソート後の階層は新しく作成された **Categories** 列に表示されます。パイプは、**price**、**change**、**changeP** 列に生成した親行の集計値を計算します。パイプの詳細については、`tree-grid-grouping.pipe.ts` ファイルの `TreeGridGroupingPipe` クラスを参照してください。パイプは完全にカスタマイズが可能でカスタム プロジェクトに使用できます。
 
 以下はテンプレートでパイプを使用した例です。
 
