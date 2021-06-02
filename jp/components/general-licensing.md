@@ -5,7 +5,7 @@ _keywords: npm package license,  Ignite UI for Angular license feed,  licensing,
 _language: ja
 ---
 
-# Angular 使用許諾契約
+# Ignite UI for Angular 使用許諾契約
 
 購入して使用する Ignite UI for Angular に関するすべての[使用条件](https://jp.infragistics.com/legal/license/igultimate-la)を知っておくことが重要です。
 
@@ -17,7 +17,7 @@ _language: ja
 > [!NOTE]
 > 現在、プライベート npm フィードで **igniteui-dockmanager** パッケージのみ使用できますが、今後は他の Ignite UI for Angular パッケージを追加する予定です。
 
-**市販されない製品**をビルドする場合は、[お気軽にお、問い合わせください](https://jp.infragistics.com/about-us/contact-us)。適切なライセンスを提供します。
+**市販されない製品**をビルドする場合は、[お気軽にお問い合わせください](https://jp.infragistics.com/about-us/contact-us)。適切なライセンスを提供します。
 
 ## プライベート npm フィードの使用
 
@@ -96,8 +96,8 @@ npm を既に使用していて、Ignite UI for Angular ライセンスがある
 <img class="responsive-img" style="margin-bottom:10px; -webkit-box-shadow: 4px 4px 4px 4px #ccc; -moz-box-shadow: 4px 4px 4px 4px #ccc; box-shadow: 4px 4px 4px 4px #ccc; max-width: 600px"
   src="../images/general/generate-token.jpg"
   data-src="../images/general/generate-token.jpg"
-  alt="生成されたトークンの作成"
-  title="生成されたトークンの作成" />
+  alt="New Token Generated"
+  title="Generate new token" />
 
 > 注: 各トークンは Base64 エンコードです。
 
@@ -123,22 +123,22 @@ npm config set _auth=$(token) --scope:@infragistics
 <img class="responsive-img" style="margin-bottom:10px; -webkit-box-shadow: 4px 4px 4px 4px #ccc; -moz-box-shadow: 4px 4px 4px 4px #ccc; box-shadow: 4px 4px 4px 4px #ccc; max-width: 380px"
   src="../images/general/azure-ci-pipelines-ci-yml-3.jpg"
   data-src="../images/general/azure-ci-pipelines-ci-yml-3.jpg"
-  alt="Azure Pipelines CI yml の更新"
-  title="Azure Pipelines CI yml の更新" />
+  alt="Azure Pipelines CI yml update"
+  title="Azure Pipelines CI yml update" />
 
 **npm registry** および **token** 変数を追加します。
 
 <img class="responsive-img" style="margin-bottom:10px; -webkit-box-shadow: 4px 4px 4px 4px #ccc; -moz-box-shadow: 4px 4px 4px 4px #ccc; box-shadow: 4px 4px 4px 4px #ccc; max-width: 600px"
   src="../images/general/azure-ci-new-variable-2.jpg"
   data-src="../images/general/azure-ci-new-variable-2.jpg"
-  alt="npm Registry および token 変数の設定"
-  title="npm Registry および token 変数の設定" />
+  alt="Set npm Registry and token variables"
+  title="Set npm Registry and token variables" />
 
 <img class="responsive-img" style="margin-bottom:10px; -webkit-box-shadow: 4px 4px 4px 4px #ccc; -moz-box-shadow: 4px 4px 4px 4px #ccc; box-shadow: 4px 4px 4px 4px #ccc; max-width: 380px"
   src="../images/general/azure-ci-add-token-variable-1.jpg"
   data-src="../images/general/azure-ci-add-token-variable-1.jpg"
-  alt="npm Registry および token 変数"
-  title="npm Registry および token 変数" />
+  alt="npm Registry and token variables"
+  title="npm Registry and token variables" />
 
 ## Travis CI の構成
 

@@ -23,7 +23,7 @@ Angular Financial Chart コンポーネントはリアルタイムでデータ�
 
 ## コード例
 
-高頻度でデータを更新する Angular Financial Chart コンポーネントを作成するには、データ ソースの最初のデータ項目を削除し、新しいデータ項目をデータの最後に追加します。また、チャートに変更について通知するために [`notifyRemoveItem`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#notifyremoveitem) および [`notifyInsertItem`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#notifyinsertitem) 関数を呼び出します。バインドしたデータの変更をチャートに通知する方法の詳細については、ファイナンシャル チャートの `notify*` メソッドを参照してください。
+高頻度でデータを更新する Angular Financial Chart コンポーネントを作成するには、データ ソースの最初のデータ項目を削除し、新しいデータ項目をデータの最後に追加します。また、チャートに変更について通知するために [`notifyRemoveItem`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#notifyremoveitem) および [`notifyInsertItem`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#notifyinsertitem) 関数を呼び出します。バインドしたデータの変更をチャートに通知する方法の詳細については、ファイナンシャル チャートの notify メソッドを参照してください。
 
 以下の例は、高頻度のデータ更新について Financial Chart を通知する方法を紹介します。
 
