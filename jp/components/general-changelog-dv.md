@@ -15,8 +15,8 @@ _language: ja
 > このファイルは、igniteui-angular-\* パッケージ (例: igniteui-angular-charts) のみに固有です。
 >
 > 追加の変更については、[Ignite UI Angular 変更](https://github.com/igniteui/igniteui-angular/blob/master/changelog.md)を参照してください。
->
-> <!-- end: Angular -->
+
+<!-- end: Angular -->
 
 <div class="divider--half"></div>
 
