@@ -26,17 +26,17 @@
 </div>
 
 ### Bold, italic and scratched
-
 This text is **bold**.  
 This text is *italic*.  
 This text is ~~scratched~~.
 
-# Header 1
-## Header 2
-### Header 3
-#### Header 4
-##### Header 5
-###### Header 6
+### Headings
+<div class="h1"> Header text h1</div>
+<div class="h2"> Header text h2</div>
+<div class="h3"> Header text h3</div>
+<div class="h4"> Header text h4</div>
+<div class="h5"> Header text h5</div>
+<div class="h5"> Header text h6</div>
 
 ### Paragraph(Line Continuation)
 
