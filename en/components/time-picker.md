@@ -62,7 +62,7 @@ First create a time string in `ISO 8601` format:
 public time = '09:15:30';
 ```
 
-Then use the  `ngModel` to create a two-way data-binding:
+Then use the `ngModel` to create a two-way data-binding:
 
 ```html
 <igx-time-picker [(ngModel)]="time"></igx-time-picker>
@@ -288,6 +288,9 @@ And there we have it:
 </code-view>
 
 <div class="divider--half"></div>
+
+#### Using date and time picker together
+The [Date & Time Picker samples](date-picker.md#using-date-and-time-picker-together) demonstrate how to use the [`IgxDatePicker`](date-picker.md) and IgxTimePicker together and how to bind both components to one and the same Date object value.
 
 ## Styling
 
