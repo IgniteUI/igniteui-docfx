@@ -1,5 +1,30 @@
 # Style guide
 
+### Colors
+
+<div class="sg-palette">
+    <div class="sg-color-block sg-color-block--primary">
+        <strong>Primary</strong>
+        <span></span>
+    </div>
+    <div class="sg-color-block sg-color-block--info">
+        <strong>Info</strong>
+        <span></span>
+    </div>
+    <div class="sg-color-block sg-color-block--success">
+        <strong>Success</strong>
+        <span></span>
+    </div>
+    <div class="sg-color-block sg-color-block--warning">
+        <strong>Warning</strong>
+        <span></span>
+    </div>
+    <div class="sg-color-block sg-color-block--error">
+        <strong>Error</strong>
+        <span></span>
+    </div>
+</div>
+
 ### Bold, italic and scratched
 ```markdown
 This text **is bold**.
@@ -12,6 +37,7 @@ This text is *italic*.
 This text is ~~scratched~~.
 
 ### Header Text
+
 ```markdown
 # Header 1
 ## Header 2
@@ -20,6 +46,7 @@ This text is ~~scratched~~.
 ##### Header 5
 ###### Header 6
 ```
+
 <h1>Header text h1</h1>
 <h2>Header text h2</h2>
 <h3>Header text h3</h3>
@@ -28,6 +55,7 @@ This text is ~~scratched~~.
 <h6>Header text h6</h6>
 
 ### Paragraph(Line Continuation)
+
 By default Markdown adds paragraphs at double line breaks. 
 Single line breaks by themselves are simply wrapped together into a single line. 
 If you want to have soft returns that break a single line, add two spaces at the end of the line.
@@ -42,6 +70,7 @@ This line should be following on the very next line.
 This line has a paragraph break at the end (empty line after).
 
 ### Links
+
 ```markdown
 [www.infragistics.com](https://www.infragistics.com/)
 ```
@@ -51,11 +80,13 @@ This line has a paragraph break at the end (empty line after).
 If you need additional tags like targets or title attributes you can also embed HTML directly:
 
 #### Link attributes
+
 ```markdown
 Go the Help Builder sitest Wind site: <a href="https://www.infragistics.com" target="_blank">Help Builder Site</a>.
 ```
 
 ### Block Quotes
+
 Block quotes are callouts that are great for adding notes or warnings into documentation.
 
 ```markdown
@@ -71,6 +102,7 @@ as they are block elements and automatically break.
 Only text lines require the double spaces for single line breaks.
 
 ###Unordered Lists
+
 ```markdown
 * Item 1
 * Item 2
@@ -82,6 +114,7 @@ Only text lines require the double spaces for single line breaks.
 * Item 3
 
 ### Ordered Lists
+
 ```markdown
 1. **Item 1**  
    Item 1 is really something
@@ -95,6 +128,7 @@ Only text lines require the double spaces for single line breaks.
    Item two is really something else
 
 ### Inline Code
+
 If you want to embed code in the middle of a paragraph of text to highlight a coding syntax or class/member name you can use inline code syntax:
 
 ```markdown
@@ -105,6 +139,7 @@ can be codified using single back ticks.
 Structured statements like for `x =1 to 10` loop <a href="#"><code>structures</code></a> can be codified using single back ticks.
 
 ### Code Blocks
+
 You can also use triple back ticks plus an optional coding language to support for syntax highlighting (space injected before last ` to avoid markdown parsing):
 
 ```markdown
@@ -128,6 +163,7 @@ Many languages are supported: html, xml, javascript, css, csharp, foxpro, vbnet,
 You can also leave out the language to get no syntax coloring but the code box.
 
 ### Alerts
+
 ```markdown
 > [!WARNING]
 > This is some Note Text  
