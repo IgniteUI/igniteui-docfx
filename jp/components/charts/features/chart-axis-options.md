@@ -10,7 +10,7 @@ _language: ja
 
 すべての Ignite UI for Angular チャートで、軸はタイトル、ラベル、範囲などの視覚的構成のプロパティを提供します。これらの機能は、以下の例で示されています。
 
-## 軸タイトルの例
+## Angular 軸タイトル
 
 Angular チャートの軸タイトル機能を使用すると、チャートにコンテキスト情報を追加できます。さまざまなフォントスタイル、色、マージン、および配置を適用するなど、さまざまな方法で軸タイトルの外観をカスタマイズできます。
 
@@ -23,9 +23,9 @@ Angular チャートの軸タイトル機能を使用すると、チャートに
 
 <div class="divider--half"></div>
 
-## 軸ラベルの例
+## Angular 軸ラベル
 
-Ignite UI for Angular チャートは、チャートで表示されるラベルの構成、書式設定、およびラベル フォントのスタイル設定を制御することが可能です。軸ラベルの回転角度、マージン、水平および垂直方向の配置、色、余白、および表示設定を変更できます。
+Angular チャートは、チャートで表示されるラベルの構成、書式設定、およびラベル フォントのスタイル設定を制御することが可能です。軸ラベルの回転角度、マージン、水平および垂直方向の配置、色、余白、および表示設定を変更できます。
 
 <code-view style="height: 450px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
@@ -36,7 +36,7 @@ Ignite UI for Angular チャートは、チャートで表示されるラベル�
 
 <div class="divider--half"></div>
 
-## 軸範囲の例
+## Angular 軸範囲
 
 Angular チャートでは、数値軸または時間軸の範囲の最小値と最大値を定義できます。範囲の最小値は軸の最小値で、範囲の最大値は軸の最大値です。これらは、[`yAxisMinimumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#yaxisminimumvalue) および [`yAxisMaximumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#yaxismaximumvalue) オプションを設定することによって設定されます。
 
@@ -52,7 +52,7 @@ Angular チャートでは、数値軸または時間軸の範囲の最小値と
 <div class="divider--half"></div>
 
 <!--
-## 軸スケールの例
+## Angular 軸スケール
 
 TODO add info/example of financial chart with  YAxisMode and YAxisIsLogarithm
 

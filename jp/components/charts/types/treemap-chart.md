@@ -12,7 +12,7 @@ Ignite UI for Angular ツリーマップ チャートは、ネストされた一
 
 ## Angular ツリーマップの例
 
-次の例では、ツリーマップは世界の最大総面積の上位30 の国を示しています。
+次の例では、ツリーマップは世界の最大総面積の上位 30 の国を示しています。
 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
@@ -78,7 +78,7 @@ Ignite UI for Angular ツリーマップ チャートは、ネストされた一
 ツリーマップ チャートは、データの相対的な重みを表示します。さまざまなアルゴリズムを使用して、データ項目のレイアウトをどのように行うかを決定します。
 
 -   [`SliceAndDice`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/treemaplayouttype.html#sliceanddice) - レイアウトのアルゴリズムは、縦横比を代わりに最初の順番を維持するようにします。
--   [`Squarified`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/treemaplayouttype.html#squarified) - レイアウトのタイリング アルゴリズムでは、SliceAndDice より縦横比がより正確で、Squarified より適切に並べ替えされます。
+-   [`Squarified`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/treemaplayouttype.html#squarified) - レイアウトのタイリング アルゴリズムでは、[`SliceAndDice`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/treemaplayouttype.html#sliceanddice) より縦横比がより正確で、Squarified より適切に並べ替えされます。
 -   [`Stripped`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/treemaplayouttype.html#stripped) - タイプのアルゴリズムは、最適な縦横比を描画しますが、オブジェクトがサイズによって並べ替えられます。
 
 ツリーマップを使用すると、要件に最適なアルゴリズムを選択できます。デフォルトでは、Squarified メソッドが使用されます。また、次の 2 つのメカニズムを使用してノードに色を付けることができる機能も含まれています。

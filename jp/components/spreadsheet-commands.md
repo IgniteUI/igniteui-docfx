@@ -15,7 +15,7 @@ Angular Spreadsheet コンポーネントは、スプレッドシートのさま
 <code-view style="height: 500px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/excel/spreadsheet-commands"
-           alt="Angular Spreadsheet コンポーネントは、スプレッドシートのさまざまな機能をアクティブにするためのコマンドを実行できます。このトピックでは、コマンドによりコントロールを使用してさまざまな操作を実行する方法を説明します。多くのコマンドは、アクティブセル、行、またはワークシートに基づいてアクションを実行します。例"
+           alt="コマンドの使用の例"
            github-src="excel/spreadsheet/commands">
 </code-view>
 
