@@ -119,25 +119,25 @@ The following table lists chart types in order from the fastest performance to s
 
 ### Chart Animations
 
-Enabling [Chart Animations](chart-animations.md) will slightly delay final rendering series in the $PlatformShort$ charts while they play transition-in animations.
+Enabling [Chart Animations](chart-animations.md) will slightly delay final rendering series in the Angular charts while they play transition-in animations.
 
 ### Chart Annotations
 
-Enabling [Chart Annotations](chart-annotations.md) such as the Callout Annotations, Crosshairs Annotations, or Final Value Annotations, will slightly decrease performance of the $PlatformShort$ chart.
+Enabling [Chart Annotations](chart-annotations.md) such as the Callout Annotations, Crosshairs Annotations, or Final Value Annotations, will slightly decrease performance of the Angular chart.
 
 ### Chart Highlighting
 
-Enabling the [Chart Highlighting](chart-highlighting.md) will slightly decrease performance of the $PlatformShort$ chart.
+Enabling the [Chart Highlighting](chart-highlighting.md) will slightly decrease performance of the Angular chart.
 
 ### Chart Legend
 
-Adding a legend to the $PlatformShort$ charts might decrease performance if titles of series or data items mapped to legend are changing often at runtime.
+Adding a legend to the Angular charts might decrease performance if titles of series or data items mapped to legend are changing often at runtime.
 
 ### Chart Markers
 
-In $PlatformShort$ charts, [Markers](chart-markers.md) are especially expensive when it comes to chart performance because they add to the layout complexity of the chart, and perform data binding to obtain certain information. Also, markers decrease performance when there are a lot of data points or if there are many data sources bound. Therefore, if markers are not needed, they should be removed from the chart.
+In Angular charts, [Markers](chart-markers.md) are especially expensive when it comes to chart performance because they add to the layout complexity of the chart, and perform data binding to obtain certain information. Also, markers decrease performance when there are a lot of data points or if there are many data sources bound. Therefore, if markers are not needed, they should be removed from the chart.
 
-This code snippet shows how to remove markers from the $PlatformShort$ charts.
+This code snippet shows how to remove markers from the Angular charts.
 
 <!-- Angular, React, WebComponents -->
 
@@ -154,7 +154,7 @@ this.LineSeries.markerType = MarkerType.None;
 
 Setting the [`resolution`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#resolution) property to a higher value will improve performance, but it will lower the graphical fidelity of lines of plotted series. As such, it can be increased up until the fidelity is unacceptable.
 
-This code snippet shows how to decrease resolution in the $PlatformShort$ charts.
+This code snippet shows how to decrease resolution in the Angular charts.
 
 <!-- Angular, React, WebComponents -->
 
@@ -168,11 +168,11 @@ this.LineSeries.Resolution = 10;
 
 ### Chart Overlays
 
-Enabling [Chart Overlays](chart-overlays.md) will slightly decrease performance of the $PlatformShort$ chart.
+Enabling [Chart Overlays](chart-overlays.md) will slightly decrease performance of the Angular chart.
 
 ### Chart Trendlines
 
-Enabling [Chart Trendlines](chart-trendlines.md) will slightly decrease performance of the $PlatformShort$ chart.
+Enabling [Chart Trendlines](chart-trendlines.md) will slightly decrease performance of the Angular chart.
 
 ### Axis Types
 
@@ -192,11 +192,11 @@ This code snippet shows how to ordinal/category x-axis in the [`IgxFinancialChar
 
 ### Axis Intervals
 
-By default, $PlatformShort$ charts will automatically calculate [`yAxisInterval`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#yaxisinterval) based on range of your data. Therefore, you should avoid setting axis interval especially to a small value to prevent rendering of too many of axis gridlines and axis labels. Also, you might want to consider increasing [`yAxisInterval`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#yaxisinterval) property to a larger value than the automatically calculated axis interval if you do not need many axis gridlines or axis labels.
+By default, Angular charts will automatically calculate [`yAxisInterval`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#yaxisinterval) based on range of your data. Therefore, you should avoid setting axis interval especially to a small value to prevent rendering of too many of axis gridlines and axis labels. Also, you might want to consider increasing [`yAxisInterval`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#yaxisinterval) property to a larger value than the automatically calculated axis interval if you do not need many axis gridlines or axis labels.
 
 > Note, we do not recommend setting axis minor interval as it will decrease chart performance.
 
-This code snippet shows how to set axis major interval in the $PlatformShort$ charts.
+This code snippet shows how to set axis major interval in the Angular charts.
 
 ```html
 <igx-category-chart xAxisInterval="5" yAxisInterval="50"></igx-category-chart>
@@ -217,7 +217,7 @@ Setting the [`yAxisIsLogarithmic`]({environment:dvApiBaseUrl}/products/ignite-ui
 
 In the same way as Markers, axis labels are also expensive because they use templates and bindings, and may have their data context changed often. If labels are not used, they should be hidden or their interval should be increased to decrease number of axis labels.
 
-This code snippet shows how to hide axis labels in the $PlatformShort$ charts.
+This code snippet shows how to hide axis labels in the Angular charts.
 
 ```html
 <igx-category-chart xAxisLabelVisibility="Collapsed" yAxisLabelVisibility="Collapsed">
@@ -234,9 +234,9 @@ This code snippet shows how to hide axis labels in the $PlatformShort$ charts.
 
 ### Axis Labels Abbreviation
 
-Although, the $PlatformShort$ charts support abbreviation of large numbers (e.g. 10,000+) displayed in axis labels when [`yAxisAbbreviateLargeNumbers`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#yaxisabbreviatelargenumbers) is set to true. We recommend, instead pre-processing large values in your data items by dividing them a common factor and then setting [`yAxisTitle`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxxychartcomponent.html#yaxistitle) to a string that represents factor used used to abbreviate your data values.
+Although, the Angular charts support abbreviation of large numbers (e.g. 10,000+) displayed in axis labels when [`yAxisAbbreviateLargeNumbers`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#yaxisabbreviatelargenumbers) is set to true. We recommend, instead pre-processing large values in your data items by dividing them a common factor and then setting [`yAxisTitle`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxxychartcomponent.html#yaxistitle) to a string that represents factor used used to abbreviate your data values.
 
-This code snippet shows how to set axis title in the $PlatformShort$ charts.
+This code snippet shows how to set axis title in the Angular charts.
 
 ```html
 <igx-category-chart yAxisTitle="In millions of Dollars"></igx-category-chart>
@@ -250,9 +250,9 @@ This code snippet shows how to set axis title in the $PlatformShort$ charts.
 
 ### Axis Labels Extent
 
-At runtime, the $PlatformShort$ charts adjust extent of labels on y-axis based on a label with longest value. This might decrease chart performance if range of data changes and labels need to be updated often. Therefore, it is recommended to set label extent at design time in order to improve chart performance.
+At runtime, the Angular charts adjust extent of labels on y-axis based on a label with longest value. This might decrease chart performance if range of data changes and labels need to be updated often. Therefore, it is recommended to set label extent at design time in order to improve chart performance.
 
-The following code snippet shows how to set a fixed extent for labels on y-axis in the $PlatformShort$ charts.
+The following code snippet shows how to set a fixed extent for labels on y-axis in the Angular charts.
 
 ```html
 <igx-category-chart xAxisLabelExtent="50" yAxisLabelExtent="50"></igx-category-chart>
@@ -267,7 +267,7 @@ The following code snippet shows how to set a fixed extent for labels on y-axis 
 
 ### Axis Other Visuals
 
-Enabling additional axis visuals (e.g. axis titles) or changing their default values might decrease performance in the $PlatformShort$ charts.
+Enabling additional axis visuals (e.g. axis titles) or changing their default values might decrease performance in the Angular charts.
 
 For example, changing these properties on the [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html) or [`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html) control:
 
@@ -295,7 +295,7 @@ Or changing properties of an [`IgxAxisComponent`]({environment:dvApiBaseUrl}/pro
 
 ## Performance in Financial Chart
 
-In addition to above performance guidelines, the $PlatformShort$ [`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html) control has the following unique features that affect performance.
+In addition to above performance guidelines, the Angular [`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html) control has the following unique features that affect performance.
 
 ### Y-Axis Mode
 
@@ -320,7 +320,7 @@ Setting the [`volumeType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular
 
 ## Performance in Data Chart
 
-In addition to the general performance guidelines, the $PlatformShort$ [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) control has the following unique features that affect performance.
+In addition to the general performance guidelines, the Angular [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) control has the following unique features that affect performance.
 
 ### Axes Collection
 
