@@ -433,7 +433,6 @@ $custom-theme: igx-grid-theme(
 * [IgxSnackBar テーマ]({environment:sassApiUrl}/index.html#function-igx-snackbar-theme)
 * [IgxBadge テーマ]({environment:sassApiUrl}/index.html#function-igx-badge-theme)
 
-
 ## その他のリソース
 
 <div class="divider--half"></div>
