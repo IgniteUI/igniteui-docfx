@@ -207,6 +207,27 @@ The [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepicker
 
 You can see the [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) in a reactive form by visiting our [Reactive Forms Integration](input-group-reactive-forms.md) topic.
 
+#### Using date and time picker together
+In some cases when the IgxDatePicker and the [`IgxTimePicker`](time-picker.md) are used together, we might need them to be bound to one and the same Date object value.
+
+To achieve that in template driven forms, use the `ngModel` to bind both components to the same Date object.
+
+<code-view style="height: 540px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/scheduling/template-driven-form" >
+</code-view>
+
+<div class="divider--half"></div>
+
+In reactive forms, we can handle the [`valueChange`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#valuechange) event of each component and update the value of the other.
+
+<code-view style="height: 540px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/scheduling/reactive-form" >
+</code-view>
+
+<div class="divider--half"></div>
+
 ### Calendar Specific settings
 The [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) uses the [`IgxCalendarComponent`](calendar.md) and you can modify some of its settings via the properties that the date picker exposes. Some of these include [`displayMonthsCount`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#displaymonthscount) which allows more than one calendar to be displayed when the picker expands, [`weekStart`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#weekstart) which determines the starting day of the week, [`showWeekNumbers`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#showweeknumbers) which shows the number for each week in the year and more.
 
