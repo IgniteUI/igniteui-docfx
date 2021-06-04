@@ -117,7 +117,7 @@ Angular Financial Chart コンポーネントで、チャートのデータが Y
 
 -   [`yAxisIsLogarithmic`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#yaxisislogarithmic) - Y 軸がリニア スケールの代わりに対数目盛を使用するかどうかを指定します。デフォルトでこのプロパティは False に設定されます。
 -   [`yAxisLogarithmBase`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#yaxislogarithmbase) - Y 軸にデータ項目の位置をマップするときに log 関数で使用する基本値。
-    これは yAxisIsLogarithmic が True の場合のみ効果があります。
+    これは yAxisIsLogarithmic が true の場合のみ効果があります。
 
 以下のコード スニペットは、x 軸の目盛りの色、長さ、太さを設定します。
 

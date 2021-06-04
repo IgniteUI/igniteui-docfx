@@ -40,7 +40,7 @@ Ignite UI for Angular Map コンポーネントの `ShapeDataSource` クラス�
 
 ## シェープファイルをバインド
 
-Map コンポーネントでは、Geographic Series は、シェイプ ファイルから読み込まれる地理的データを表示するために使用されます。すべてのタイプの地理的シリーズには、オブジェクトの配列にバインドできる `ItemsSource` プロパティがあります。`ShapeDataSource` は [`IgxShapefileRecord`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapefilerecord.html) オブジェクトのリストを含むため、このような配列の例です。
+Map コンポーネントでは、Geographic Series は、シェイプ ファイルから読み込まれる地理的データを表示するために使用されます。すべてのタイプの地理的シリーズには、オブジェクトの配列にバインドできる `DataSource` プロパティがあります。`ShapeDataSource` は [`IgxShapefileRecord`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapefilerecord.html) オブジェクトのリストを含むため、このような配列の例です。
 
 [`IgxShapefileRecord`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapefilerecord.html) クラスは、以下の表にリストする地理的データを保存するためのプロパティを提供します。
 
