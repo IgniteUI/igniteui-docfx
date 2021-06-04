@@ -40,8 +40,8 @@ Angular 地理的画像は、上空から見た世界の詳細な表現です。
 
 さらに、`BackgroundContent` プロパティは、このクラスを継承するオブジェクトに設定できます。ただし、[`IgxGeographicMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapimagery.html) クラスを継承するオブジェクトだけが、マップ背景コンテンツのパンおよびズームができます。
 
-マップ コンポーネントでは、マップの背景コンテンツは常にすべての地理的シリーズの背後にレンダリングされます。つまり、地理的画像タイルは常に最初にレンダリングされ、マップ コンポーネントの Series プロパティ内の地理的シリーズは地理的画像タイルの上にレンダリングされます。地理的画像タイルはマップ ビューにすばやく埋め込まれるため、これは、マップ コンポーネントの同じプロット領域に複数の地理的シリーズを表示する場合に特に重要です。
+マップ コンポーネントでは、マップの背景コンテンツは常にすべての地理的シリーズの背後にレンダリングされます。つまり、地理的画像タイルは常に最初にレンダリングされ、マップ コンポーネントの [`IgxSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriescomponent.html) プロパティ内の地理的シリーズは地理的画像タイルの上にレンダリングされます。地理的画像タイルはマップ ビューにすばやく埋め込まれるため、これは、マップ コンポーネントの同じプロット領域に複数の地理的シリーズを表示する場合に特に重要です。
 
 ## コード スニペット
 
-このコード例では、マップコンポーネントの `BackgroundContent` を、[`IgxOpenStreetMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxopenstreetmapimagery.html) の地理的画像タイルを提供する OpenStreetMapImagery オブジェクトに明示的に設定しています。
+このコード例では、マップコンポーネントの `BackgroundContent` を、Open Street Maps の地理的画像タイルを提供する [`IgxOpenStreetMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxopenstreetmapimagery.html) オブジェクトに明示的に設定しています。

@@ -8,7 +8,7 @@ _language: ja
 
 # Angular Spreadsheet ハイパーリンク
 
-Angular Spreadsheet コンポーネントは、Excel ワークブックに既存のハイパーリンクを表示、Webサイト、ファイルディレクトリ、およびワークブック内の他のワークシートにリンクできる新しいハイパーリンクを挿入できます。
+Angular Spreadsheet コンポーネントは、Excel ワークブックに既存のハイパーリンクを表示、Web サイト、ファイル ディレクトリ、およびワークブック内の他のワークシートにリンクできる新しいハイパーリンクを挿入できます。
 
 ## Angular Spreadsheet ハイパーリンクの例
 
@@ -23,7 +23,7 @@ Angular Spreadsheet コンポーネントは、Excel ワークブックに既存
 
 ## ハイパーリンク概要
 
-ハイパーリンクを配置するワークシートの `Hyperlinks` コレクションにアクセスすると、ハイパーリンクが `表計算、スプレッドシート` コントロールに追加されます。このコレクションには、[`WorksheetHyperlink`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheethyperlink.html) オブジェクトを受け取る `add` メソッドがあり、セル アドレス、移動先のハイパーリンク URL、表示テキスト、およびオプションでホバー時に表示するツールチップを定義できます。
+ハイパーリンクを配置するワークシートの `Hyperlinks` コレクションにアクセスすると、ハイパーリンクが表計算、[`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) コントロールに追加されます。このコレクションには、[`WorksheetHyperlink`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheethyperlink.html) オブジェクトを受け取る `Add` メソッドがあり、セル アドレス、移動先のハイパーリンク URL、表示テキスト、およびオプションでホバー時に表示するツールチップを定義できます。
 
 ## 依存関係
 
