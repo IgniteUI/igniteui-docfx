@@ -25,6 +25,12 @@
     </div>
 </div>
 
+### badges
+<div class="sg-flex-row sg-align-i-center sg-badges">
+    <div class="new__badge">NEW</div>
+    <div class="updated__badge">UPDATED</div>
+</div>
+
 ### Bold, italic and scratched
 This text is **bold**.  
 This text is *italic*.  
@@ -38,7 +44,7 @@ This text is ~~scratched~~.
 <div class="h5"> Header text h5</div>
 <div class="h5"> Header text h6</div>
 
-### Paragraph(Line Continuation)
+### Paragraph
 
 By default Markdown adds paragraphs at double line breaks. 
 Single line breaks by themselves are simply wrapped together into a single line. 
@@ -58,7 +64,8 @@ This line has a paragraph break at the end (empty line after).
 [www.infragistics.com](https://www.infragistics.com/)
 
 ### Block Quotes
-> ### Headers break on their own
+> <div class="h4">Headers break on their own</div>
+
 > Note that headers don't need line continuation characters
 as they are block elements and automatically break.
 Only text lines require the double spaces for single line breaks.
@@ -94,12 +101,7 @@ Structured statements like for `x =1 to 10` loop <a href="#"><code>structures</c
 > that spreads across two lines
 
 > [!NOTE]
-> Singe line note.
-
-A block of text between note boxes.
-
-> [!TIP]
-> Tipping my hat to the clown
+> Singe line NOTE.
 
 > [!IMPORTANT]
 > Don't forget to screw on your hat!
