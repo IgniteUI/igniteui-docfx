@@ -12,11 +12,11 @@ Ignite UI for Angular 複合チャートまたはコンボ チャートは、同
 
 ## Angular 複合 / コンボ チャートの例
 
-次の例は、[`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) コンポーネントで [`IgxColumnSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcolumnseriescomponent.html) と [`IgxLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineseriescomponent.html) を使用して複合チャートを作成する方法を示しています。
+次の例は、[`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) コントロールで [`IgxColumnSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcolumnseriescomponent.html) と [`IgxLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineseriescomponent.html) を使用して複合チャートを作成する方法を示しています。
 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-Composite-chart"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-composite-chart"
            alt="Angular 複合チャートの例" >
 </code-view>
 
