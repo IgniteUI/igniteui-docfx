@@ -10,8 +10,7 @@
         "dvApiBaseUrl": "https://staging.infragistics.com",
         "GTMContainerId": "GTM-WLXLBZD",
         "themeApiUrl": "http://localhost:59296/api/taas",
-        "themingWidgetVersion": "latest",
-        "baseDir": "/"
+        "themingWidgetVersion": "latest"
     },
     "staging": {
         "demosBaseUrl": "https://staging.infragistics.co.kr/angular-demos",
@@ -24,8 +23,7 @@
         "dvApiBaseUrl": "https://staging.infragistics.com",
         "GTMContainerId": "GTM-NCKNPN",
         "themeApiUrl": "https://igniteuithemingwidget-staging.infragistics.com/api/taas",
-        "themingWidgetVersion": "latest",
-        "baseDir": "/products/ignite-ui-angular/angular/"
+        "themingWidgetVersion": "latest"
     },
     "production": {
         "demosBaseUrl": "https://www.infragistics.co.kr/angular-demos",
@@ -38,7 +36,6 @@
         "dvApiBaseUrl": "https://www.infragistics.com",
         "GTMContainerId": "GTM-T65CF7",
         "themeApiUrl": "https://igniteuithemingwidget-prod.infragistics.com/api/taas",
-        "themingWidgetVersion": "latest-stable",
-        "baseDir": "/products/ignite-ui-angular/angular/"
+        "themingWidgetVersion": "latest-stable"
     }
 }
