@@ -186,9 +186,9 @@ Angular 折れ線チャートは、次のデモに示すように、数百万に
 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-polar-line-series"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-polar-line-chart"
            alt="Angular 極座標型折れ線チャート"
-           github-src="charts/data-chart/type-polar-line-series">
+           github-src="charts/data-chart/polar-line-chart">
 </code-view>
 
 <div class="divider--half"></div>

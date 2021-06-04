@@ -36,31 +36,31 @@ Angular Financial Chart コンポーネントでカスタム財務指標を有�
 ```
 
 ```ts
-    public applyCustomIndicators(event: { sender: any, args: IgxFinancialChartCustomIndicatorArgs }) {
-        if (event.args.index === 0) {
-            const info: IgxFinancialEventArgs = event.args.indicatorInfo;
-            const ds = info.dataSource;
-            const open = ds.openColumn;
-            for (let i = 0; i < ds.indicatorColumn.length; i++) {
-                ds.indicatorColumn[i] = open[i];
+public applyCustomIndicators(event: { sender: any, args: IgxFinancialChartCustomIndicatorArgs }) {
+    if (event.args.index === 0) {
+        const info: IgxFinancialEventArgs = event.args.indicatorInfo;
+        const ds = info.dataSource;
+        const open = ds.openColumn;
+        for (let i = 0; i < ds.indicatorColumn.length; i++) {
+            ds.indicatorColumn[i] = open[i];
+        }
+    } else {
+        const info: IgxFinancialEventArgs = event.args.indicatorInfo;
+        const ds = info.dataSource;
+        const close = ds.closeColumn;
+        for (let i = 0; i < ds.indicatorColumn.length; i++) {
+            let startIndex = i - 9;
+            if (startIndex < 0) {
+                startIndex = 0;
             }
-        } else {
-            const info: IgxFinancialEventArgs = event.args.indicatorInfo;
-            const ds = info.dataSource;
-            const close = ds.closeColumn;
-            for (let i = 0; i < ds.indicatorColumn.length; i++) {
-                let startIndex = i - 9;
-                if (startIndex < 0) {
-                    startIndex = 0;
-                }
-                const count = (i - startIndex) + 1;
+            const count = (i - startIndex) + 1;
 
-                let sum = 0;
-                for (let j = startIndex; j <= i; j++) {
-                    sum += close[j];
-                }
-                ds.indicatorColumn[i] = sum / count;
+            let sum = 0;
+            for (let j = startIndex; j <= i; j++) {
+                sum += close[j];
             }
+            ds.indicatorColumn[i] = sum / count;
         }
     }
+}
 ```
