@@ -48,7 +48,7 @@ This text is ~~scratched~~.
 
 By default Markdown adds paragraphs at double line breaks. 
 Single line breaks by themselves are simply wrapped together into a single line. 
-If you want to have soft <a hre="#">returns</a> that break a single line, add two spaces at the end of the line.
+If you want to have soft <a href="#">returns</a> that break a single line, add two spaces at the end of the line.
 
 This line has a paragraph break at the end (empty line after).
 
