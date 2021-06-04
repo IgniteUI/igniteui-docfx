@@ -63,6 +63,10 @@ This line has a paragraph break at the end (empty line after).
 
 [www.infragistics.com](https://www.infragistics.com/)
 
+[Link to other topic](general/getting-started.md)
+
+[Internal link](#colors)
+
 ### Block Quotes
 > <div class="h4">Headers break on their own</div>
 
