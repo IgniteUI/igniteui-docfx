@@ -13,7 +13,7 @@ _keywords: Changelog, What's New,  Ignite UI for Angular, Infragistics
 > [!NOTE]
 > This file is specific to igniteui-angular-\* packages only. (eg. igniteui-angular-charts) 
 >
-> For additional changes, please see [Ignite UI Angular Changes](https://github.com/igniteui/igniteui-angular/blob/master/CHANGELOG.md) 
+> For additional changes, please see [Ignite UI Angular Changes](https://github.com/igniteui/igniteui-angular/blob/master/changelog.md) 
 
 <!-- end: Angular -->
 
