@@ -11,9 +11,9 @@ _keywords: Changelog, What's New,  Ignite UI for Angular, Infragistics
 <!-- Angular -->
 
 > [!NOTE]
-> This file is specific to igniteui-angular-\* packages only. (eg. igniteui-angular-charts) 
+> This file is specific to igniteui-angular-\* packages only. (eg. igniteui-angular-charts)
 >
-> For additional changes, please see [Ignite UI Angular Changes](https://github.com/igniteui/igniteui-angular/blob/master/changelog.md) 
+> For additional changes, please see [Ignite UI Angular Changes](https://github.com/igniteui/igniteui-angular/blob/master/changelog.md)
 
 <!-- end: Angular -->
 
@@ -29,7 +29,7 @@ This release introduces several new and improved visual design and configuration
 
 Redesigned Chart Defaults:
 
--   New color palette for series/markers in all charts. - All types of charts/series have new colors for brush/fill and outlines 
+-   New color palette for series/markers in all charts. - All types of charts/series have new colors for brush/fill and outlines
 
 | Old series brushes outlines | New series outline brushes |
 | --------------------------- | -------------------------- |
@@ -52,7 +52,7 @@ eg.
 
 <div class="divider--half"></div>
 
--   Changed Bar/Column/Waterfall series to have square corners instead of rounded corners 
+-   Changed Bar/Column/Waterfall series to have square corners instead of rounded corners
 -   Changed Scatter High Density series’ colors for min/max heat properties
 
     | Old heat min color | New heat min color |
@@ -63,14 +63,14 @@ eg.
     | ------------------ | ------------------ |
     | `#FFC62828`        | `#ffee5879`        |
 
--   Changed Financial/Waterfall series’ colors for negative fill of their visuals 
+-   Changed Financial/Waterfall series’ colors for negative fill of their visuals
 
     | Old negative brush | new negative brush |
     | ------------------ | ------------------ |
     | `#FFC62828`        | `#ffee5879`        |
 
 -   Changed marker's thickness to 2px from 1px
--   Changed marker's fill to match the marker's outline for PointSeries, BubbleSeries, ScatterSeries, PolarScatterSeries 
+-   Changed marker's fill to match the marker's outline for PointSeries, BubbleSeries, ScatterSeries, PolarScatterSeries
     -   Note, you can use set `MarkerFillMode` property to Normal to undo this change
 -   Compressed labelling for the TimeXAxis and OrdinalTimeXAxis
 -   New Marker Properties:
@@ -80,21 +80,21 @@ eg.
 -   New Series `OutlineMode` Property:
     -   Can be set to toggle the series outline visibility. Note, for Data Chart, the property is on the series
 -   New Plot Area Margin Properties:
-    -   `PlotAreaMarginLeft` 
+    -   `PlotAreaMarginLeft`
     -   `PlotAreaMarginTop`
     -   `PlotAreaMarginRight`
     -   `PlotAreaMarginBottom`
     -   [`ComputedPlotAreaMarginMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/computedplotareamarginmode.html)
-    -   The plot area margin properties define the bleed over area introduced into the viewport when the chart is at the default zoom level. A common use case is to provide space between the axes and first/last data points. Note, the [`ComputedPlotAreaMarginMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/computedplotareamarginmode.html), listed below, will automatically set the margin when markers are enabled. The others are designed to specify a `Double` to represent the thickness, where PlotAreaMarginLeft etc. adjusts the space to all four sides of the chart.   
+    -   The plot area margin properties define the bleed over area introduced into the viewport when the chart is at the default zoom level. A common use case is to provide space between the axes and first/last data points. Note, the [`ComputedPlotAreaMarginMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/computedplotareamarginmode.html), listed below, will automatically set the margin when markers are enabled. The others are designed to specify a `Double` to represent the thickness, where PlotAreaMarginLeft etc. adjusts the space to all four sides of the chart.
 -   New Highlighting Properties
     -   [`HighlightingMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/highlightingmode.html) - Sets whether hovered or non-hovered series to fade, brighten
     -   `HighlightingBehavior` - Sets whether the series highlights depending on mouse position eg. directly over or nearest item
-    -   Note, in previous releases the highlighting was limited to fade on hover. 
+    -   Note, in previous releases the highlighting was limited to fade on hover.
 -   Added Highlighting for the following series:
     -   Stacked
     -   Scatter
     -   Polar
-    -   Radial 
+    -   Radial
     -   Shape
 -   Added Annotation layers to the following series:
     -   Stacked
@@ -102,10 +102,10 @@ eg.
     -   Polar
     -   Radial
     -   Shape
--   Added support for overriding the data source of individual stack fragments within a stacked series 
+-   Added support for overriding the data source of individual stack fragments within a stacked series
 -   Added custom style events to Stacked, Scatter, Range, Polar, Radial, and Shape series
 -   Added support to automatically sync the vertical zoom to the series content
--   Added support to automatically expanding the horizontal margins of the chart based on the initial labels displayed 
+-   Added support to automatically expanding the horizontal margins of the chart based on the initial labels displayed
 
 ### Chart Legend
 
@@ -113,7 +113,7 @@ eg.
     -   The following chart types can use ItemLegend in horizontal orientation:
         -   Bubble
         -   Donut
-        -   Pie 
+        -   Pie
 -   [`LegendHighlightingMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/legendhighlightingmode.html) - Enables series highlighting when hovering over legend items
 
 ### Geographic Map
@@ -121,8 +121,8 @@ eg.
 > [!NOTE]
 > These features are CTP
 
--   Added support for wrap around display of the map (scroll infinitely horizontally)  
--   Added support for shifting display of some map series while wrapping around the coordinate origin  
+-   Added support for wrap around display of the map (scroll infinitely horizontally)
+-   Added support for shifting display of some map series while wrapping around the coordinate origin
 -   Added support for highlighting of the shape series
 -   Added support for some annotation layers for the shape series
 
@@ -147,7 +147,7 @@ Import statements have been simplified to use just package names instead of full
 | ------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------- |
 | <a href="https://www.npmjs.com/package/igniteui-angular-excel/v/8.2.12" target="_blank">igniteui-angular-excel</a>             | [Excel Library](excel-library.md)                                                                           |
 | <a href="https://www.npmjs.com/package/igniteui-angular-spreadsheet/v/8.2.12" target="_blank">igniteui-angular-spreadsheet</a> | [Spreadsheet](spreadsheet-overview.md)                                                                      |
-| <a href="https://www.npmjs.com/package/igniteui-angular-maps/v/8.2.12" target="_blank">igniteui-angular-maps</a>               | [Geo Map](geo-map.md), [Treemap](treemap-overview.md)                                                       |
+| <a href="https://www.npmjs.com/package/igniteui-angular-maps/v/8.2.12" target="_blank">igniteui-angular-maps</a>               | [Geo Map](geo-map.md), [Treemap](charts/types/treemap-chart.md)                                             |
 | <a href="https://www.npmjs.com/package/igniteui-angular-gauges/v/8.2.12" target="_blank">igniteui-angular-gauges</a>           | [Bullet Graph](bullet-graph.md), [Linear Gauge](linear-gauge.md), [Radial Gauge](radial-gauge.md)           |
 | <a href="https://www.npmjs.com/package/igniteui-angular-charts/v/8.2.12" target="_blank">igniteui-angular-charts</a>           | Category Chart, Data Chart, Donut Chart, Financial Chart], Pie Chart, [Zoom Slider](zoomslider-overview.md) |
 | <a href="https://www.npmjs.com/package/igniteui-angular-grids/v/8.2.12" target="_blank">igniteui-angular-grids</a>             | [Data Grid](data-grid.md)                                                                                   |
