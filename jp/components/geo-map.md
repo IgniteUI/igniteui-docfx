@@ -10,14 +10,13 @@ _language: ja
 
 Ignite UI for Angular Map コンポーネントを使用すると、ビューモデルからの地理的位置を含むデータ、またはシェープ ファイルからロードされた地理空間データを地理的画像マップに表示できます。
 
-<div class="sample-container loading" style="height: 500px">
-    <iframe id="geo-map-type-scatter-bubble-series-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-type-scatter-bubble-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="geo-map-type-scatter-bubble-series-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
-    </button>
-</div>
+# Angular マップの例
 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-type-scatter-bubble-series"
+           github-src="maps/geo-map/type-scatter-bubble-series">
+</code-view>
 
 <div class="divider--half"></div>
 
@@ -43,11 +42,7 @@ npm install --save igniteui-angular-maps
 
 ## モジュールの要件
 
-<!-- Angular, React, WebComponents -->
-
-[`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html) には以下のモジュールが必要ですが、Ig$DataChartInteractivityModule は、マップ コンテンツのパンやズームなどのマウス操作にのみ必要です。
-
-<!-- end: Angular, React, WebComponents -->
+[`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html) には以下のモジュールが必要ですが、DataChartInteractivityModule は、マップ コンテンツのパンやズームなどのマウス操作にのみ必要です。
 
 ```ts
 // app.module.ts

@@ -189,7 +189,7 @@ The Angular Polar Area Chart belongs to a group of [Polar Chart](polar-chart.md)
 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-polar-area-series"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-polar-area-chart"
            alt="Angular Polar Area Chart" >
 </code-view>
 
@@ -201,7 +201,7 @@ The Angular Polar Spline Area Chart belongs to a group of [Polar Chart](polar-ch
 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-polar-spline-area-series"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-polar-spline-area-chart"
            alt="Angular Polar Spline Area Chart" >
 </code-view>
 

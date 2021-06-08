@@ -12,15 +12,12 @@ Angular データ チャート コンポーネントでは、チャート ナビ
 
 ## Angular ナビゲーションの例
 
-<div class="sample-container loading" style="height: 500px">
-    <iframe id="data-chart-navigation-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-chart-navigation' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular ナビゲーションの例"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-navigation-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
-    </button>
-
-
-</div>
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-chart-navigation"
+           alt="Angular ナビゲーションの例"
+           github-src="charts/data-chart/chart-navigation">
+</code-view>
 
 <div class="divider--half"></div>
 
@@ -57,7 +54,7 @@ UI でのナビゲーションを許可するには、ズームを許可する�
 Angular データ チャート コンポーネントのナビゲーションは、マウスまたはキーボードのいずれかを有効にすると発生します。以下の操作は、デフォルトで以下のマウスまたはキーボード操作を使用して呼び出すことができます。
 
 -   **Panning**:  キーボードの矢印キーを使用するか、Shift キーを押しながらマウスでクリックしてドラッグします。
--   **Zoom In**:  キーボードのPageUpキーを使用するか、マウスホイールを回転させます。
+-   **Zoom In**:  キーボードの PageUp キーを使用するか、マウスホイールを回転させます。
 -   **Zoom Out**:  キーボードの PageDown キーを使用するか、マウスホイールを回転させます。
 -   **チャート プロット領域に合わせる**: キーボードの Home キー。これに対するマウス操作はありません。
 -   **領域ズーム**: [`defaultInteraction`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriesviewercomponent.html#defaultinteraction) プロパティをデフォルトの `DragZoom` に設定して、プロット領域内でマウスをクリックしてドラッグします。

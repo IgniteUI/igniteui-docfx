@@ -12,9 +12,14 @@ Infragistics Angular Excel Engine の [`WorksheetTable`]({environment:dvApiBaseU
 
 <!--## Angular Using Tables Example
 
-<div class="sample-container loading" style="height: 500px">
-    <iframe id="excel-library-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/excel/excel-library-working-with-tables' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Using Tables Example"></iframe>
-</div>-->
+
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/excel/excel-library-working-with-tables"
+           alt="Angular Using Tables Example" >
+</code-view>
+
+-->
 
 <div class="divider--half"></div>
 

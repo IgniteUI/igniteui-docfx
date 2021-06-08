@@ -28,7 +28,7 @@ $melon-palette: igx-palette(
 >[!WARNING]
 > The value you pass to `$primary`, `$secondary`, or any other color **must be of type color**. You cannot pass CSS variables as arguments as those can't be resolved at Sass build-time.
 
-We created a palette that contains variants for all colors in the it, including automatically created text contrast colors for each variant. If you haven't checked [the documentation](../palettes.md) regarding palettes with CSS variables, go check it out now. It contains information about all the color variants of a palette.
+We created a palette that contains variants for all colors in it, including automatically created text contrast colors for each variant. If you haven't checked [the documentation](../palettes.md) regarding palettes with CSS variables, go check it out now. It contains information about all the color variants of a palette.
 
 The `igx-palette` function does a lot internally to help you create colors at build-time that you can reuse throughout your `.scss` documents. The function is nice in that it will create a huge map of colors for you, but the algorithm for generating the color variants is very opinionated and may not match your exact needs. Our component themes don't care how the palette is generated, it only cares about the shape of the map.
 

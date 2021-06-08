@@ -14,15 +14,12 @@ _language: ja
 
 ## Angular 散布図 - シェイプ シリーズの例
 
-<div class="sample-container loading" style="height: 400px">
-    <iframe id="data-chart-type-shape-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-shape-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular 散布図 - シェイプ シリーズの例"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-shape-series-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
-    </button>
-
-
-</div>
+<code-view style="height: 400px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-shape-series"
+           alt="Angular 散布図 - シェイプ シリーズの例"
+           github-src="charts/data-chart/type-shape-series">
+</code-view>
 
 <div class="divider--half"></div>
 
@@ -50,7 +47,7 @@ Angular データ チャート コンポーネントはさまざまな軸タイ�
 
 -   データソースはデータ項目の配列やリストである必要があります。
 -   データソースはデータ項目を少なくとも 1 つ含む必要があります。含まない場合はチャートに散布シェイプ シリーズを描画しません。
--   すべてのデータ項目には、スキャッタシェイプシリーズの [`shapeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapeseriesbasecomponent.html#shapememberpath) プロパティにマッピングする必要がある1つのシェイプデータ列（XまたはY座標の配列）を含める必要があります ([`IgxScatterPolygonSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolygonseriescomponent.html) など)
+-   すべてのデータ項目には、スキャッタシェイプシリーズの [`shapeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapeseriesbasecomponent.html#shapememberpath) プロパティにマッピングする必要がある1つのシェイプデータ列 (X または Y 座標の配列) を含める必要があります ([`IgxScatterPolygonSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolygonseriescomponent.html) など)
 
 上記データ要件を満たすデータソースとして [SampleShapeData](data-chart-data-sources-shape.md) を使用できます。
 

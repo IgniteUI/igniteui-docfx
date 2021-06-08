@@ -220,9 +220,9 @@ export class AutocompleteComponent {
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 * [IgxInputGroupComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
 
-## Theming Dependencies
-* [IgxDropDown Theme]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme)
-* [IgxInputGroup Theme]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
+## テーマの依存関係
+* [IgxDropDown テーマ]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme)
+* [IgxInputGroup テーマ]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

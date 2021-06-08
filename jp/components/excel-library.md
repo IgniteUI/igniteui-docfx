@@ -12,10 +12,12 @@ Infragistics Angular Excel ライブラリは、Workbook、Worksheet、Cell、Fo
 
 ## Angular Excel ライブラリの例
 
-<div class="sample-container loading" style="height: 100px">
-    <iframe id="excel-library-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/excel/excel-library-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Excel ライブラリの例"></iframe>
-</div>
-
+<code-view style="height: 100px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/excel/excel-library-overview"
+           alt="Angular Excel ライブラリの例"
+           github-src="excel/excel-library/overview">
+</code-view>
 
 <div class="divider--half"></div>
 
@@ -89,7 +91,7 @@ Excel ライブラリには、アプリのバンドル サイズを制限する�
 
 <!-- Angular, React, WebComponents -->
 
-次のコードスニペットでは、外部の [ExcelUtility](excel-utility.md) クラスを使用して [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) を保存およびロードしています。
+次のコード スニペットでは、外部の [ExcelUtility](excel-utility.md) クラスを使用して [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) を保存およびロードしています。
 
 <!-- end: Angular, React, WebComponents -->
 
