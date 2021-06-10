@@ -62,7 +62,7 @@ First create a time string in `ISO 8601` format:
 public time = '09:15:30';
 ```
 
-Then use the  `ngModel` to create a two-way data-binding:
+Then use the `ngModel` to create a two-way data-binding:
 
 ```html
 <igx-time-picker [(ngModel)]="time"></igx-time-picker>
@@ -285,6 +285,27 @@ And there we have it:
 <code-view style="height: 540px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-4" >
+</code-view>
+
+<div class="divider--half"></div>
+
+#### Using date and time picker together
+In some cases when the [`IgxDatePicker`](date-picker.md) and the IgxTimePicker are used together, we might need them to be bound to one and the same Date object value.
+
+To achieve that in template driven forms, use the `ngModel` to bind both components to the same Date object.
+
+<code-view style="height: 540px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/scheduling/template-driven-form" >
+</code-view>
+
+<div class="divider--half"></div>
+
+In reactive forms, we can handle the [`valueChange`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#valuechange) event of each component and update the value of the other.
+
+<code-view style="height: 540px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/scheduling/reactive-form" >
 </code-view>
 
 <div class="divider--half"></div>
