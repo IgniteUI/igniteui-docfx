@@ -22,12 +22,12 @@ _keywords: data analysis, ignite ui for angular, infragistics
         outline-style: none;
         -webkit-transition: all 0.25s ease-out;
         transition: all 0.25s ease-out;
-        background: #0099ff; 
+        background: #0099ff;
     }
     .full-screen-btn:hover, .full-screen-btn:focus {
         color: white;
         -webkit-box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.26), 0 8px 10px 1px rgba(0, 0, 0, 0.12), 0 3px 14px 2px rgba(0, 0, 0, 0.08);
-        box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.26), 0 8px 10px 1px rgba(0, 0, 0, 0.12), 0 3px 14px 2px rgba(0, 0, 0, 0.08); 
+        box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.26), 0 8px 10px 1px rgba(0, 0, 0, 0.12), 0 3px 14px 2px rgba(0, 0, 0, 0.08);
     }
     .full-screen-btn::before {
         content: "";
@@ -37,16 +37,16 @@ _keywords: data analysis, ignite ui for angular, infragistics
         margin-right: 8px;
         background-image: url("../../images/general/fullscreen-white-18dp.svg");
         background-size: 100%;
-        background-repeat: no-repeat; 
+        background-repeat: no-repeat;
     }
     .full-screen-btn[disabled] {
         color: rgba(0, 0, 0, 0.28);
         background: #eee;
         -webkit-box-shadow: none;
-        box-shadow: none; 
+        box-shadow: none;
     }
     .full-screen-btn[disabled]::before {
-        background-image: url("../../images/general/fullscreen-white-18dp.svg"); 
+        background-image: url("../../images/general/fullscreen-white-18dp.svg");
     }
 
 </style>
@@ -79,7 +79,7 @@ Keep in mind (sample related):
 
 ## Data Analysis Package
 
-You can start using this functionality by following the steps below. Keep in mind that **igniteui-angular-extras** package is only available through our [private npm feed](https://packages.infragistics.com/npm/js-licensed/). If you have a [valid commercial license](https://www.infragistics.com/products/ignite-ui-angular/angular/components/general/ignite-ui-licensing.html#license-agreements), you will have access to the private feed. 
+You can start using this functionality by following the steps below. Keep in mind that **igniteui-angular-extras** package is only available through our [private npm feed](https://packages.infragistics.com/npm/js-licensed/). If you have a [valid commercial license](https://www.infragistics.com/products/ignite-ui-angular/angular/components/general/ignite-ui-licensing.html#license-agreements), you will have access to the private feed.
 
 Lets start with:
 
@@ -98,7 +98,7 @@ npm install @infragistics/igniteui-angular igniteui-angular-core igniteui-angula
   - Apply `igxChartIntegration`, `igxConditionalFormatting`, `igxContextMenu` directives to your grid
 
 ```html
-<igx-grid #grid1 igxChartIntegration igxConditionalFormatting igxContextMenu 
+<igx-grid #grid1 igxChartIntegration igxConditionalFormatting igxContextMenu
     [data]="localData" [autoGenerate]="true" [paging]="true" >
 </igx-grid>
 ```
@@ -128,16 +128,21 @@ The chart will be shown by selecting a range of cells and by clicking on the sho
 <button class="full-screen-btn" onclick='window.open("{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis")'>View in full screen</button>
 
 We currently support the following Chart types:
-- [ColumnGrouped](../data-chart-type-category-series.md), [AreaGrouped](../data-chart-type-category-area-series.md), [LineGrouped](../data-chart-type-category-line-series.md), [BarGrouped](../data-chart-type-category-series.md)
-- [ColumnStacked](../data-chart-type-stacked-column-series.md), [AreaStacked](../data-chart-type-category-spline-area-series.md), [LineStacked](../data-chart-type-stacked-line-series.md), [BarStacked](../data-chart-type-stacked-bar-series.md)
-- Column100Stacked, [Area100Stacked](../data-chart-type-stacked-100-area-series.md), [Line100Stacked](../data-chart-type-stacked-100-line-series.md), [Bar100Stacked](../data-chart-type-stacked-100-bar-series.md)
-- ScatterPoint, ScatterBubble, ScatterLine. In order to show meaningful Scatter Bubble Chart we disable the preview when the data is not in valid format.
-- [Pie Chart](../pie-chart.md)
+- [Column Chart](../charts/types/column-chart.md),
+[Area Chart](../charts/types/stacked-chart.md),
+[Line Chart](../charts/types/line-chart.md),
+[Bar Chart](../charts/types/line-chart.md),
+- [Stacked Chart](../charts/types/stacked-chart.md),
+[Stacked 100% Chart](../charts/types/stacked-chart.md),
+- [Pie Chart](../charts/types/pie-chart.md),
+[Scatter Chart](../charts/types/stacked-chart.md),
+[Bubble Chart](../charts/types/bubble-chart.md)
+ In order to show meaningful Bubble Chart we disable the preview when the data is not in valid format.
 
-## Conditional Cell Formatting 
-If you have a Grid with thousands of rows of data it would be very difficult to see patterns and trends just from examining the raw information. Similar to charts and sparklines, `Conditional formatting` provides another way to visualize data and make it easier to understand. 
+## Conditional Cell Formatting
+If you have a Grid with thousands of rows of data it would be very difficult to see patterns and trends just from examining the raw information. Similar to charts and sparklines, `Conditional formatting` provides another way to visualize data and make it easier to understand.
 
-Understanding conditional formatting - it allows for applying formatting such as colors and data bars to cells based on `their value` in the range selection. The [sample below](#demo) demonstrates how you can configure the Grid to apply `Conditional Formatting`. It depends on the `Conditional formatting selection type` what condition `rules` will be shown. Below you will find the predefined styles (presets) that you can use in order to quickly apply conditional formatting to your data. The formatting of a range gets cleared when performing formatting on different range or through the clear button. The clear button is only active when there is an applied formatting.  
+Understanding conditional formatting - it allows for applying formatting such as colors and data bars to cells based on `their value` in the range selection. The [sample below](#demo) demonstrates how you can configure the Grid to apply `Conditional Formatting`. It depends on the `Conditional formatting selection type` what condition `rules` will be shown. Below you will find the predefined styles (presets) that you can use in order to quickly apply conditional formatting to your data. The formatting of a range gets cleared when performing formatting on different range or through the clear button. The clear button is only active when there is an applied formatting.
 
 ### Number range selection
 - `Data Bars` - Data bars can help you spot larger and smaller numbers, such as top-selling and bottom-selling products. This preset makes it very easy to visualize values in a range of selected cells. A longer bar represents a higher value. A cell that holds  value of 0 has no data bar all other cells are filled proportionally. Positive values are with `green` color  and  negative values will be `red`
@@ -148,7 +153,7 @@ Understanding conditional formatting - it allows for applying formatting such as
 
 > `Lowest threshold` - Below 33% of the maximum cell value in range selection.
 
-> `Highest threshold` - Above 66% of the maximum cell value in range selection. 
+> `Highest threshold` - Above 66% of the maximum cell value in range selection.
 
 <img class="responsive-img" src="../../images/general/color-scale-formatting.png" />
 
@@ -182,7 +187,7 @@ Understanding conditional formatting - it allows for applying formatting such as
 <button class="full-screen-btn" onclick='window.open("{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis")'>View in full screen</button>
 
 ## Data Analysis Package API
- 
+
 ### IgxConditionalFormattingDirective
 <div class="divider--half"></div>
 
@@ -202,7 +207,7 @@ Understanding conditional formatting - it allows for applying formatting such as
 | API | Description | Arguments |
 |---------|-------------|-----------|
 | `CHART_TYPE` | An **enum**, representing the supported chart types |
-| `OPTIONS_TYPE` | An **enum**, representing the supported options type, which can be applied to a chart component| 
+| `OPTIONS_TYPE` | An **enum**, representing the supported options type, which can be applied to a chart component|
 | `IOptions` | An **interface** for chart property options |
 | `chartFactory`| Creates a chart component, based on the provided chart type. Usage: <br /> **this.chartIntegration.chartFactory(CHART_TYPE.COLUMN_GROUPED, this.viewContainerRef)** | `type`: **any[ ]**, viewContainerRef: [`ViewContainerRef`](https://angular.io/api/core/ViewContainerRef) |
 | `setChartComponentOptions` | Sets property options to a chart component. Usage: <br /> **this.chartIntegration.setChartComponentOptions(CHART_TYPE.PIE, OPTIONS_TYPE.CHART, {allowSliceExplosion: true, sliceClick: (evt) => { evt.args.isExploded = !evt.args.isExploded; } })** | `chart`: *CHART_TYPE*, `optionsType`: *OPTIONS_TYPE*, `options`: *IOptions* |
