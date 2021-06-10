@@ -81,7 +81,7 @@ Ignite UI for Angular マップに表示するすべての地理的シリーズ�
 
 ## フライトのオーバーレイ
 
-主要空港間のフライト接続を持つ最初の [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) オブジェクトを作成し、Ignite UI for Angular マップの [`IgxSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriescomponent.html) コレクションに追加します。
+主要空港間のフライト接続を持つ最初の [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) オブジェクトを作成し、Ignite UI for Angular マップの Series コレクションに追加します。
 
 ```html
 <igx-geographic-polyline-series  #polylineSeries
@@ -95,7 +95,7 @@ Ignite UI for Angular マップに表示するすべての地理的シリーズ�
 
 ## グリッド線のオーバーレイ
 
-地理グリッド線を使用して2番目の [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) オブジェクトを作成し、それを XamGeographicMap の [`IgxSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriescomponent.html) コレクションに追加します。
+地理グリッド線を使用して2番目の [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) オブジェクトを作成し、それを XamGeographicMap の Series コレクションに追加します。
 
 ```html
   <igx-geographic-polyline-series  #polylineSeries
@@ -110,7 +110,7 @@ Ignite UI for Angular マップに表示するすべての地理的シリーズ�
 
 ## 空港のオーバーレイ
 
-空港ポイントを使用して [`IgxGeographicSymbolSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html) オブジェクトを作成し、それを Ignite UI for Angular 地理マップの [`IgxSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriescomponent.html) コレクションに追加します。
+空港ポイントを使用して [`IgxGeographicSymbolSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html) オブジェクトを作成し、それを Ignite UI for Angular 地理マップの Series コレクションに追加します。
 
 ```html
 <igx-geographic-symbol-series  #symbolSeries
