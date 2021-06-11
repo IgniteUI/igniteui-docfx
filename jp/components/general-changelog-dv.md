@@ -30,7 +30,7 @@ _language: ja
 
 チャート デフォルト値のデザイン更新:
 
--   すべてのチャートのシリーズ/マーカーの新しい色パレット。すべてのタイプのチャート/シリーズには、ブラシ/塗りつぶしとアウトラインの新しい色があります。 
+-   すべてのチャートのシリーズ/マーカーの新しい色パレット。すべてのタイプのチャート/シリーズには、ブラシ/塗りつぶしとアウトラインの新しい色があります。
 
 | 古いシリーズのブラシのアウトライン   | 新シリーズのブラシのアウトライン    |
 | ------------------- | ------------------- |
@@ -53,7 +53,7 @@ _language: ja
 
 <div class="divider--half"></div>
 
--   棒/縦棒/ウォーターフォール シリーズを、角丸ではなく角が四角になるように変更しました。 
+-   棒/縦棒/ウォーターフォール シリーズを、角丸ではなく角が四角になるように変更しました。
 -   散布高密度シリーズの最小/最大ヒート プロパティの色を変更しました。
 
     | 古いヒート最小色    | 新しいヒート最小色   |
@@ -64,7 +64,7 @@ _language: ja
     | ----------- | ----------- |
     | `#FFC62828` | `#ffee5879` |
 
--   ファイナンシャル/ウォーターフォール シリーズのビジュアルの負の塗りつぶしの色を変更しました。 
+-   ファイナンシャル/ウォーターフォール シリーズのビジュアルの負の塗りつぶしの色を変更しました。
 
     | 古いマイナス値のブラシ | 新しいマイナス値のブラシ |
     | ----------- | ------------ |
@@ -81,21 +81,21 @@ _language: ja
 -   新シリーズ `OutlineMode` プロパティ:
     -   シリーズ アウトラインの表示を切り替えるように設定できます。データ チャートの場合、プロパティはシリーズ上にあることに注意してください。
 -   新しいプロット エリア マージン プロパティ:
-    -   `PlotAreaMarginLeft` 
+    -   `PlotAreaMarginLeft`
     -   `PlotAreaMarginTop`
     -   `PlotAreaMarginRight`
     -   `PlotAreaMarginBottom`
     -   [`ComputedPlotAreaMarginMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/computedplotareamarginmode.html)
-    -   プロット領域のマージン プロパティは、チャートがデフォルト ズーム レベルにある場合、ビューポートのブリード オーバー領域を定義します。一般的な使用例では、軸と最初/最後のデータ ポイントの間にスペースを提供します。以下にリストされている [`ComputedPlotAreaMarginMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/computedplotareamarginmode.html) は、マーカーが有効になっているときに自動的にマージンを設定することに注意してください。その他は、厚さを表す `Double` を指定するように設計されており、PlotAreaMarginLeft などがチャートの 4 辺すべてにスペースを調整します。  
+    -   プロット領域のマージン プロパティは、チャートがデフォルト ズーム レベルにある場合、ビューポートのブリード オーバー領域を定義します。一般的な使用例では、軸と最初/最後のデータ ポイントの間にスペースを提供します。以下にリストされている [`ComputedPlotAreaMarginMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/computedplotareamarginmode.html) は、マーカーが有効になっているときに自動的にマージンを設定することに注意してください。その他は、厚さを表す `Double` を指定するように設計されており、PlotAreaMarginLeft などがチャートの 4 辺すべてにスペースを調整します。
 -   新しい強調表示プロパティ:
     -   [`HighlightingMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/highlightingmode.html) - ホバーされたシリーズとホバーされていないシリーズをフェードまたは明るくするかを設定します。
     -   `HighlightingBehavior` - 真上または最も近い項目など、マウスの位置に応じてシリーズを強調表示するかどうかを設定します。
-    -   以前のリリースでは、強調表示はホバー時にフェードするように制限されていたことに注意してください。 
+    -   以前のリリースでは、強調表示はホバー時にフェードするように制限されていたことに注意してください。
 -   次のシリーズの強調表示を追加しました:
     -   積層型
     -   散布図
     -   極座標
-    -   ラジアル 
+    -   ラジアル
     -   図形
 -   次のシリーズに注釈レイヤーを追加しました:
     -   積層型
@@ -103,7 +103,7 @@ _language: ja
     -   極座標
     -   ラジアル
     -   図形
--   積層型シリーズ内の個々の積層フラグメントのデータ ソースをオーバーライドするためのサポートが追加されました。 
+-   積層型シリーズ内の個々の積層フラグメントのデータ ソースをオーバーライドするためのサポートが追加されました。
 -   積層型、散布、範囲、極座標、ラジアル、シェイプ シリーズにカスタム スタイルのイベントを追加しました。
 -   垂直ズームをシリーズ コンテンツに自動的に同期するサポートが追加されました。
 -   表示された最初のラベルに基づいてチャートの水平マージンを自動的に拡張するサポートが追加されました。
@@ -114,7 +114,7 @@ _language: ja
     -   次のチャート タイプでは、ItemLegend を水平方向で使用できます:
         -   バブル
         -   ドーナツ
-        -   円 
+        -   円
 -   [`LegendHighlightingMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/legendhighlightingmode.html) - 凡例項目にカーソルを合わせると、シリーズの強調表示が有効になります。
 
 ### 地理マップ
@@ -122,8 +122,8 @@ _language: ja
 > [!NOTE]
 > これらの機能は CTP です。
 
--   マップの表示を折り返すためのサポートが追加されました (水平方向に無限にスクロールできます)。  
--   座標原点を折り返しながら、一部のマップ シリーズの表示をシフトするためのサポートが追加されました。  
+-   マップの表示を折り返すためのサポートが追加されました (水平方向に無限にスクロールできます)。
+-   座標原点を折り返しながら、一部のマップ シリーズの表示をシフトするためのサポートが追加されました。
 -   シェイプ シリーズの強調表示のサポートが追加されました。
 -   シェイプ シリーズの一部の注釈レイヤーのサポートが追加されました。
 
@@ -148,7 +148,7 @@ Import ステートメントは、API クラスと列挙型へのフル パス�
 | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
 | <a href="https://www.npmjs.com/package/igniteui-angular-excel/v/8.2.12" target="_blank">igniteui-angular-excel</a>             | [Excel ライブラリ](excel-library.md)                                                      |
 | <a href="https://www.npmjs.com/package/igniteui-angular-spreadsheet/v/8.2.12" target="_blank">igniteui-angular-spreadsheet</a> | [スプレッドシート](spreadsheet-overview.md)                                                  |
-| <a href="https://www.npmjs.com/package/igniteui-angular-maps/v/8.2.12" target="_blank">igniteui-angular-maps</a>               | [マップ](geo-map.md)、[ツリーマップ](treemap-overview.md)                                      |
+| <a href="https://www.npmjs.com/package/igniteui-angular-maps/v/8.2.12" target="_blank">igniteui-angular-maps</a>               | [マップ](geo-map.md)、[ツリーマップ](charts/types/treemap-chart.md)                            |
 | <a href="https://www.npmjs.com/package/igniteui-angular-gauges/v/8.2.12" target="_blank">igniteui-angular-gauges</a>           | [ブレット グラフ](bullet-graph.md)、[リニア ゲージ](linear-gauge.md)、[ラジアル ゲージ](radial-gauge.md)   |
 | <a href="https://www.npmjs.com/package/igniteui-angular-charts/v/8.2.12" target="_blank">igniteui-angular-charts</a>           | カテゴリ チャート、データ チャート、ドーナツ チャート、ファイナンシャル チャート、円チャート、[ズーム スライダー](zoomslider-overview.md) |
 | <a href="https://www.npmjs.com/package/igniteui-angular-grids/v/8.2.12" target="_blank">igniteui-angular-grids</a>             | [データ グリッド](data-grid.md)                                                             |
