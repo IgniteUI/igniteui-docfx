@@ -207,6 +207,27 @@ export class SampleFormComponent {
 
 [リアクティブ フォームの統合](input-group-reactive-forms.md)トピックにアクセスすると、[`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) をリアクティブ フォームで確認できます。
 
+#### 日付ピッカーとタイム ピッカーを併用する
+IgxDatePicker と [`IgxTimePicker`](time-picker.md) を一緒に使用する場合、それらを 1 つの同じ Date オブジェクト値にバインドする必要がある場合があります。
+
+テンプレート駆動フォームでこれを実現するには、`ngModel` を使用して両方のコンポーネントを同じ Date オブジェクトにバインドします。
+
+<code-view style="height: 540px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/scheduling/template-driven-form" >
+</code-view>
+
+<div class="divider--half"></div>
+
+リアクティブ フォームでは、各コンポーネントの [`valueChange`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#valuechange) イベントを処理し、他のコンポーネントの値を更新できます。
+
+<code-view style="height: 540px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/scheduling/reactive-form" >
+</code-view>
+
+<div class="divider--half"></div>
+
 ### カレンダー固有の設定
 [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) は [`IgxCalendarComponent`](calendar.md) を使用し、日付ピッカーが公開するプロパティを介してその設定の一部を変更できます。これらの一部には、ピッカーが展開されたときに複数のカレンダーを表示できる [`displayMonthsCount`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#displaymonthscount)、週の開始日を決定する [`weekStart`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#weekstart)、年の各週の番号を表示する [`showWeekNumbers`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#showweeknumbers) などが含まれます。
 
