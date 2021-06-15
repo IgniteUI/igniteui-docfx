@@ -98,7 +98,7 @@ this.Chart.excludedProperties = [ "CHN",  "FRN", "GER" ];
 
 ### チャート タイプ
 
-[折れ線チャート](../types/line-chart.md)などの単純なチャート タイプは、データ ポイント間のスプライン線の補間が複雑であるため、[スプライン チャート](../types/spline-chart.md)を使用するよりもパフォーマンスが速くなります。したがって、Angular `XamCategoryChart` の [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#charttype) プロパティまたは `XamFinancialChart` コントロールを使用して、描画が高速なチャートのタイプを選択する必要があります。または、Angular [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) コントロールで、シリーズのタイプをより高速なシリーズに変更することもできます。
+[折れ線チャート](../types/line-chart.md)などの単純なチャート タイプは、データ ポイント間のスプライン線の補間が複雑であるため、[スプライン チャート](../types/spline-chart.md)を使用するよりもパフォーマンスが速くなります。したがって、Angular [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html) の [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#charttype) プロパティまたは [`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html) コントロールを使用して、描画が高速なチャートのタイプを選択する必要があります。または、Angular [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) コントロールで、シリーズのタイプをより高速なシリーズに変更することもできます。
 
 次の表に、チャートの各グループで、パフォーマンスが速いものから遅いものの順にチャートのタイプを示します。
 
@@ -120,25 +120,25 @@ this.Chart.excludedProperties = [ "CHN",  "FRN", "GER" ];
 
 ### チャート アニメーション
 
-[チャート アニメーション](chart-animations.md)を有効にすると、トランジションイン アニメーションを再生している間、$ProductShort$ チャートの最終描画シリーズがわずかに遅れます
+[チャート アニメーション](chart-animations.md)を有効にすると、トランジションイン アニメーションを再生している間、Angular チャートの最終描画シリーズがわずかに遅れます
 
 ### チャート注釈
 
-コールアウト注釈、十字線注釈、最終値注釈などの[チャート注釈](chart-annotations.md)を有効にすると、$ProductShort$ チャートのパフォーマンスがわずかに低下します。
+コールアウト注釈、十字線注釈、最終値注釈などの[チャート注釈](chart-annotations.md)を有効にすると、Angular チャートのパフォーマンスがわずかに低下します。
 
 ### チャートの強調表示
 
-[チャートの強調表示](chart-highlighting.md)を有効にすると、$ProductShort$ チャートのパフォーマンスがわずかに低下します。
+[チャートの強調表示](chart-highlighting.md)を有効にすると、Angular チャートのパフォーマンスがわずかに低下します。
 
 ### チャート凡例
 
-凡例を $ProductShort$ チャートに追加すると、凡例にマップされたシリーズまたはデータ項目のタイトルが実行時に頻繁に変更される場合、パフォーマンスが低下する可能性があります。
+凡例を Angular チャートに追加すると、凡例にマップされたシリーズまたはデータ項目のタイトルが実行時に頻繁に変更される場合、パフォーマンスが低下する可能性があります。
 
 ### チャート マーカー
 
-$ProductShort$ チャートでは、[チャート マーカー](chart-markers.md)はチャートのレイアウトの複雑さを増し、特定の情報を取得するためにデータ バインディングを実行するため、チャートのパフォーマンスに関しては特に手間がかかります。また、データ ポイントが多い場合、またはバインドされているデータ ソースが多い場合、マーカーはパフォーマンスを低下させます。したがって、マーカーが不要な場合は、チャートから削除する必要があります。
+Angular チャートでは、[チャート マーカー](chart-markers.md)はチャートのレイアウトの複雑さを増し、特定の情報を取得するためにデータ バインディングを実行するため、チャートのパフォーマンスに関しては特に手間がかかります。また、データ ポイントが多い場合、またはバインドされているデータ ソースが多い場合、マーカーはパフォーマンスを低下させます。したがって、マーカーが不要な場合は、チャートから削除する必要があります。
 
-以下のコード例は、$ProductShort$ チャートからマーカーを削除する方法を示します。
+以下のコード例は、Angular チャートからマーカーを削除する方法を示します。
 
 <!-- Angular, React, WebComponents -->
 
@@ -155,7 +155,7 @@ this.LineSeries.markerType = MarkerType.None;
 
 [`resolution`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#resolution) プロパティをより大きな値に設定するとパフォーマンスは向上しますが、プロットされた系列の線のグラフィカルな忠実度は低下します。このようなわけで、忠実度が受け入れられなくなるまで値を大きくする可能性があります。
 
-このコード スニペットは、$ProductShort$ チャートの解像度を下げる方法を示しています。
+このコード スニペットは、Angular チャートの解像度を下げる方法を示しています。
 
 <!-- Angular, React, WebComponents -->
 
@@ -169,11 +169,11 @@ this.LineSeries.Resolution = 10;
 
 ### チャート オーバーレイ
 
-[チャート オーバーレイ](chart-overlays.md)を有効にすると、$ProductShort$ チャートのパフォーマンスがわずかに低下します。
+[チャート オーバーレイ](chart-overlays.md)を有効にすると、Angular チャートのパフォーマンスがわずかに低下します。
 
 ### チャート トレンドライン
 
-[チャート トレンドライン](chart-trendlines.md)を有効にすると、$ProductShort$ チャートのパフォーマンスがわずかに低下します。
+[チャート トレンドライン](chart-trendlines.md)を有効にすると、Angular チャートのパフォーマンスがわずかに低下します。
 
 ### 軸のタイプ
 
@@ -183,35 +183,31 @@ this.LineSeries.Resolution = 10;
 
 このコード スニペットは、[`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html) および [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) コントロールで x 軸を順序付け/カテゴリ化する方法を示しています。
 
-<!-- Angular, React, WebComponents -->
+```html
+<igx-financial-chart xAxisMode="Ordinal"></igx-financial-chart>
 
-```ts
-<Ig$FinancialChart xAxisMode="Ordinal"/>
-
-<Ig$DataChart>
-    <Ig$CategoryXAxis label="Time" />
-</Ig$DataChart>
+<igx-data-chart>
+    <igx-category-x-axis label="Time"></igx-category-x-axis>
+</igx-data-chart>
 ```
 
 ### 軸の間隔
 
-デフォルトでは、$ProductShort$ チャートは、データの範囲に基づいて [`yAxisInterval`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#yaxisinterval) を自動的に計算します。したがって、軸のグリッド線と軸のラベルが多すぎないように、軸の間隔を特に小さい値に設定することは避けてください。  また、多くの軸グリッド線または軸ラベルが必要ない場合は、[`yAxisInterval`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#yaxisinterval) プロパティを自動的に計算された軸間隔よりも大きい値に増やすことを検討することをお勧めします。
+デフォルトでは、Angular チャートは、データの範囲に基づいて [`yAxisInterval`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#yaxisinterval) を自動的に計算します。したがって、軸のグリッド線と軸のラベルが多すぎないように、軸の間隔を特に小さい値に設定することは避けてください。  また、多くの軸グリッド線または軸ラベルが必要ない場合は、[`yAxisInterval`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#yaxisinterval) プロパティを自動的に計算された軸間隔よりも大きい値に増やすことを検討することをお勧めします。
 
 > チャートのパフォーマンスが低下するため、軸の副間隔を設定することはお勧めしません。
 
-このコード スニペットは、$ProductShort$ チャートで軸の主間隔を設定する方法を示しています。
+このコード スニペットは、Angular チャートで軸の主間隔を設定する方法を示しています。
 
-<!-- Angular, React, WebComponents -->
+```html
+<igx-category-chart xAxisInterval="5" yAxisInterval="50"></igx-category-chart>
 
-```ts
-<Ig$CategoryChart  xAxisInterval="5" yAxisInterval="50"/>
+<igx-financial-chart xAxisInterval="5" yAxisInterval="50"></igx-financial-chart>
 
-<Ig$FinancialChart xAxisInterval="5" yAxisInterval="50"/>
-
-<Ig$DataChart>
-    <Ig$CategoryXAxis name="xAxis" interval="5" />
-    <Ig$NumericYAxis  name="yAxis" interval="50"/>
-</Ig$DataChart>
+<igx-data-chart>
+    <igx-category-x-axis name="xAxis" interval="5"></igx-category-x-axis>
+    <igx-numeric-y-axis name="yAxis" interval="50"></igx-numeric-y-axis>
+</igx-data-chart>
 ```
 
 ### 軸スケール
@@ -222,67 +218,57 @@ this.LineSeries.Resolution = 10;
 
 マーカーと同じように、軸ラベルはテンプレートとバインドを使用し、データ コンテキストが頻繁に変更されるために、軸ラベルも負荷がかかります。ラベルを使用しない場合は、非表示にするか、間隔を長くして軸ラベルの数を減らす必要があります。
 
-このコード スニペットは、$ProductShort$ チャートで軸ラベルを非表示にする方法を示しています。
+このコード スニペットは、Angular チャートで軸ラベルを非表示にする方法を示しています。
 
-<!-- Angular, React, WebComponents -->
+```html
+<igx-category-chart xAxisLabelVisibility="Collapsed" yAxisLabelVisibility="Collapsed">
+</igx-category-chart>
 
-```ts
-<Ig$CategoryChart
-    xAxisLabelVisibility="Collapsed"
-    yAxisLabelVisibility="Collapsed" >
-</Ig$CategoryChart>
+<igx-financial-chart xAxisLabelVisibility="Collapsed" yAxisLabelVisibility="Collapsed">
+</igx-financial-chart>
 
-<Ig$FinancialChart
-    xAxisLabelVisibility="Collapsed"
-    yAxisLabelVisibility="Collapsed" >
-</Ig$FinancialChart>
-
-<Ig$DataChart>
-    <Ig$CategoryXAxis name="xAxis" LabelVisibility="Collapsed" />
-    <Ig$NumericYAxis  name="yAxis" LabelVisibility="Collapsed" />
-</Ig$DataChart>
+<igx-data-chart>
+    <igx-category-x-axis name="xAxis" labelVisibility="Collapsed"></igx-category-x-axis>
+    <igx-numeric-y-axis name="yAxis" labelVisibility="Collapsed"></igx-numeric-y-axis>
+</igx-data-chart>
 ```
 
 ### 軸ラベルの省略形
 
-ただし、$ProductShort$ チャートは、[`yAxisAbbreviateLargeNumbers`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#yaxisabbreviatelargenumbers) が true に設定されている場合に、軸ラベルに表示される大きな数値 (10,000 以上など) の省略形をサポートします。代わりに、データ 項目の大きな値を公約数で除算して前処理し、[`yAxisTitle`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxxychartcomponent.html#yaxistitle) をデータ値の省略形に使用される約数を表す文字列に設定することをお勧めします。
+ただし、Angular チャートは、[`yAxisAbbreviateLargeNumbers`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#yaxisabbreviatelargenumbers) が true に設定されている場合に、軸ラベルに表示される大きな数値 (10,000 以上など) の省略形をサポートします。代わりに、データ 項目の大きな値を公約数で除算して前処理し、[`yAxisTitle`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxxychartcomponent.html#yaxistitle) をデータ値の省略形に使用される約数を表す文字列に設定することをお勧めします。
 
-このコード スニペットは、$ProductShort$ チャートで軸のタイトルを設定する方法を示しています。
+このコード スニペットは、Angular チャートで軸のタイトルを設定する方法を示しています。
 
-<!-- Angular, React, WebComponents -->
+```html
+<igx-category-chart yAxisTitle="In millions of Dollars"></igx-category-chart>
 
-```ts
-<Ig$CategoryChart  yAxisTitle="In millions of Dollars" />
+<igx-financial-chart yAxisTitle="In millions of Dollars"></igx-financial-chart>
 
-<Ig$FinancialChart yAxisTitle="In millions of Dollars" />
-
-<Ig$DataChart>
-    <Ig$NumericYAxis title="In millions of Dollars" />
-</Ig$DataChart>
+<igx-data-chart>
+    <igx-numeric-y-axis title="In millions of Dollars"></igx-numeric-y-axis>
+</igx-data-chart>
 ```
 
 ### 軸ラベルの範囲
 
-実行時に、$ProductShort$ チャートは、最も長い値を持つラベルに基づいて、y 軸上のラベルの範囲を調整します。これにより、データの範囲やラベルを頻繁に更新する必要がある場合に、チャートのパフォーマンスが低下する可能性があります。そのため、チャート パフォーマンスを向上させるためにデザイン時にラベル範囲を設定することをお勧めします。
+実行時に、Angular チャートは、最も長い値を持つラベルに基づいて、y 軸上のラベルの範囲を調整します。これにより、データの範囲やラベルを頻繁に更新する必要がある場合に、チャートのパフォーマンスが低下する可能性があります。そのため、チャート パフォーマンスを向上させるためにデザイン時にラベル範囲を設定することをお勧めします。
 
-次のコード スニペットは、$ProductShort$ チャートの y 軸のラベルに固定されたラベル範囲を設定する方法を示します。
+次のコード スニペットは、Angular チャートの y 軸のラベルに固定されたラベル範囲を設定する方法を示します。
 
-<!-- Angular, React, WebComponents -->
+```html
+<igx-category-chart xAxisLabelExtent="50" yAxisLabelExtent="50"></igx-category-chart>
 
-```ts
-<Ig$CategoryChart  xAxisLabelExtent="50" yAxisLabelExtent="50"/>
+<igx-financial-chart xAxisLabelExtent="50" yAxisLabelExtent="50"></igx-financial-chart>
 
-<Ig$FinancialChart xAxisLabelExtent="50" yAxisLabelExtent="50"/>
-
-<Ig$DataChart>
-    <Ig$CategoryXAxis name="xAxis" labelExtent="50" />
-    <Ig$NumericYAxis  name="yAxis" labelExtent="50"/>
-</Ig$DataChart>
+<igx-data-chart>
+    <igx-category-x-axis name="xAxis" labelExtent="50"></igx-category-x-axis>
+    <igx-numeric-y-axis name="yAxis" labelExtent="50"></igx-numeric-y-axis>
+</igx-data-chart>
 ```
 
 ### 軸その他のビジュアル
 
-追加の軸ビジュアル (軸タイトルなど) を有効にしたり、デフォルト値を変更したりすると、$ProductShort$ チャートのパフォーマンスが低下する可能性があります。
+追加の軸ビジュアル (軸タイトルなど) を有効にしたり、デフォルト値を変更したりすると、Angular チャートのパフォーマンスが低下する可能性があります。
 
 たとえば、[`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html) または [`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html) コントロールでこれらのプロパティを変更します。
 
@@ -298,19 +284,19 @@ this.LineSeries.Resolution = 10;
 
 または、[`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) コントロールの [`IgxAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxaxiscomponent.html) のプロパティを変更します。
 
-| 軸ビジュアル     | 軸プロパティ                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| すべての軸ビジュアル | `Interval`, `MinorInterval`                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| 軸目盛        | [`tickStroke`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxaxiscomponent.html#tickstroke) , [`tickStrokeThickness`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxaxiscomponent.html#tickstrokethickness), [`tickLength`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxaxiscomponent.html#ticklength) |
-| 軸主グリッド線    | [`majorStroke`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxaxiscomponent.html#majorstroke), [`majorStrokeThickness`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxaxiscomponent.html#majorstrokethickness)                                                                                                                                         |
-| 軸の副グリッド線   | [`minorStroke`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxaxiscomponent.html#minorstroke), [`minorStrokeThickness`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxaxiscomponent.html#minorstrokethickness)                                                                                                                                         |
-| 軸主線        | [`stroke`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxaxiscomponent.html#stroke), [`strokeThickness`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxaxiscomponent.html#strokethickness)                                                                                                                                                             |
-| 軸タイトル      | [`title`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxaxiscomponent.html#title), `TitleAngle`                                                                                                                                                                                                                                                                                                      |
-| 軸ストリップ     | [`strip`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxaxiscomponent.html#strip)                                                                                                                                                                                                                                                                                                                    |
+| 軸ビジュアル     | 軸プロパティ                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| すべての軸ビジュアル | `Interval`、`MinorInterval`                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| 軸目盛        | [`tickStroke`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxaxiscomponent.html#tickstroke) 、[`tickStrokeThickness`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxaxiscomponent.html#tickstrokethickness)、[`tickLength`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxaxiscomponent.html#ticklength) |
+| 軸主グリッド線    | [`majorStroke`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxaxiscomponent.html#majorstroke)、[`majorStrokeThickness`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxaxiscomponent.html#majorstrokethickness)                                                                                                                                        |
+| 軸の副グリッド線   | [`minorStroke`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxaxiscomponent.html#minorstroke)、[`minorStrokeThickness`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxaxiscomponent.html#minorstrokethickness)                                                                                                                                        |
+| 軸主線        | [`stroke`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxaxiscomponent.html#stroke)、[`strokeThickness`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxaxiscomponent.html#strokethickness)                                                                                                                                                            |
+| 軸タイトル      | [`title`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxaxiscomponent.html#title)、`TitleAngle`                                                                                                                                                                                                                                                                                                     |
+| 軸ストリップ     | [`strip`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxaxiscomponent.html#strip)                                                                                                                                                                                                                                                                                                                  |
 
 ## ファイナンシャル チャートのパフォーマンス
 
-上記のパフォーマンスガイドラインに加えて、$ProductShort$ [`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html) コントロールには、パフォーマンスに影響を与える次の独自の機能があります。
+上記のパフォーマンスガイドラインに加えて、Angular [`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html) コントロールには、パフォーマンスに影響を与える次の独自の機能があります。
 
 ### Y 軸モード
 
@@ -335,7 +321,7 @@ this.LineSeries.Resolution = 10;
 
 ## データ チャートのパフォーマンス
 
-一般的なパフォーマンス ガイドラインに加えて、$ProductShort$ [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) コントロールには、パフォーマンスに影響を与える次の固有の機能があります。
+一般的なパフォーマンス ガイドラインに加えて、Angular [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) コントロールには、パフォーマンスに影響を与える次の固有の機能があります。
 
 ### 軸コレクション
 
