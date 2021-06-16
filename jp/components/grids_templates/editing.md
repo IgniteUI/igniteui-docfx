@@ -28,7 +28,7 @@ _language: ja
 Ignite UI for Angular @@igComponent コンポーネントは、レコードの作成、更新、削除などのデータ操作を簡単に実行できます。データの変更のフェーズは次のとおりです: [セル編集](cell-editing.md)、[行編集](row-editing.md)、および[一括編集](batch-editing.md)。@@igComponent は、これらの操作をカスタマイズできる強力なパブリック API を提供します。さらに、**セル編集**は、列のデータ型に基づいていくつかのデフォルト エディターを公開します。これらは、[igxCellEditor ディレクティブ](cell-editing.md#セル編集テンプレート)または [igxRow ディレクティブ](row-editing.md#行編集オーバーレイのカスタマイズ)を介して簡単にカスタマイズできます。 
 
 ## 設定
-有効にする編集モードを指定するために、@@igComponent は [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) および [`rowEditable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#roweditable) ブール値プロパティを公開します。
+有効にする編集モードを指定するために、@@igComponent は [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) および [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) ブール値プロパティを公開します。
 
 以下のオプションは、プロパティ **editable** で指定できます。
 - **false** - 対応する列の編集は無効になります。 /デフォルト値/
@@ -80,7 +80,7 @@ Ignite UI for Angular @@igComponent コンポーネントは、レコードの�
 
 ### イベントのキャンセル
  - `RowEditEnter` - 行もセルも編集モードに入りません。
- - `CellEditEnter` - セル編集に入ることを防止します。[`rowEditable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#roweditable) が有効になっている場合、セル編集は禁止されたままですが、行編集がトリガーされます。
+ - `CellEditEnter` - セル編集に入ることを防止します。[`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) が有効になっている場合、セル編集は禁止されたままですが、行編集がトリガーされます。
  - `CellEdit` - セル/行の編集を許可し、**[完了]** ボタンまたは **[Enter]** を押しても値または行のトランザクションはコミットされません。**[キャンセル]** ボタンをクリックするまで、セル編集と行編集は閉じません。
  - `RowEdit` - 行全体ではなくセルのコミットは可能です。行は編集モードのままになり、行トランザクションは開いていると見なされます。**[完了]** を押しても、行をコミットまたは閉じません。**[キャンセル]** ボタンは、変更をコミットせずに編集プロセスとトランザクションを閉じます。
 
