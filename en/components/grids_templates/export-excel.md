@@ -156,7 +156,7 @@ It is now possible to export @@igComponent with defined [multi-column headers](.
 
 <code-view style="height: 800px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/multi-column-header-export" alt="Angular Grouped Data Excel Exporter Example">
+           iframe-src="{environment:demosBaseUrl}/grid/multi-column-headers-export" alt="Angular Multi-Column Headers Export">
 </code-view>
 
 }
