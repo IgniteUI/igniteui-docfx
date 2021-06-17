@@ -126,9 +126,9 @@ Angular が `node-sass` のサポートを終了するとすぐに、Sass モジ
 | `$keyframes`  | すべてのキーフレーム アニメーション ミックスインのレジスタを格納します。tree-shaking に使用されます。  |
 
 
-## Scrollbar Styling
+## スクロールバーのスタイル設定
 
-The Ignite UI for Angular themes ship with custom scrollbar styles that allow you to change the width and/or the colors of all scrollbars in your application. To apply the included styles, make sure to set the `igx-scrollbar` class to an element that contains your root app component.
+Ignite UI for Angular テーマには、アプリケーション内のすべてのスクロールバーの幅や色を変更できるカスタム スクロールバー スタイルが付属しています。含まれているスタイルを適用するには、ルート アプリ コンポーネントを含む要素に `igx-scrollbar` クラスを設定してください。
 
 <div class="divider"></div>
 
