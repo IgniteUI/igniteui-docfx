@@ -72,8 +72,7 @@ ng g @igniteui/angular-schematics:upgrade-packages
 ```bash
 ig upgrade-packages
 ```
-Schematic はプロジェクトのパッケージの依存関係を切り替え、ソース参照を更新します。
-[まだセットアップされていない場合、NPM レジストリへのログインが要求されます](../general/ignite-ui-licensing.md#プライベート-npm-フィードを使用するための環境設定方法)。
+Schematic はプロジェクトのパッケージの依存関係を切り替え、ソース参照を更新します。[まだセットアップされていない場合、NPM レジストリへのログインが要求されます](../general/ignite-ui-licensing.md#プライベート-npm-フィードを使用するための環境設定方法)。
 
 #### 新しいセットアップで npm レジストリにログイン
 上記の方法は、Ignite UI for Angular トライアル版パッケージが既にインストールされているシナリオのみを対象としています。プロジェクトの新しいセットアップを実行する場合、または Ignite UI for Angular を使用する場合は、以下のガイダンスに従ってください。
