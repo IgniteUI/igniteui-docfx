@@ -958,6 +958,9 @@
   new: false
 - name: Card
   href: card.md
+- name: Accordion
+  href: accordion.md
+  new: true
 - name: Avatar
   href: avatar.md
 - name: Expansion Panel
