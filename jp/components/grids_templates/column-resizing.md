@@ -288,7 +288,7 @@ $custom-grid-theme: igx-grid-theme(
 ```
 
 >[!NOTE]
->`igx-color` と `igx-palette` は色を生成したり取り出したりするための関数です。使い方の詳細については [`パレット`](../themes/palette.md) のトピックを参照してください。
+>`igx-color` と `igx-palette` は色を生成したり取り出したりするための関数です。使い方の詳細については [`パレット`](../themes/palettes.md) のトピックを参照してください。
 
 ### スキーマの使用
 テーマ エンジンを使用して[**スキーマ**](../themes/sass/schemas.md)の利点を使用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。

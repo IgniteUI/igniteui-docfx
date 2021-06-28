@@ -288,7 +288,7 @@ $custom-tree-theme: igx-tree-theme(
 
 Internet Explorer 11 などの古いブラウザーのコンポーネントのスタイルを設定するには、CSS 変数がサポートされていないため、別のアプローチを使用する必要があります。
 
-コンポーネントが [Emulated](themes/component-themes.md#view-encapsulation) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化に`ペネトレーション`する必要があります。カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
+コンポーネントが [Emulated](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化に`ペネトレーション`する必要があります。カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
 ```scss
 :host {
     ::ng-deep {
