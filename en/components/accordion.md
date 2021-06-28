@@ -1,15 +1,15 @@
 ---
 title: Angular Accordion Component - Ignite UI for Angular
-_description: With Ignite UI for Angular Tree component, you can display hierarchical data in a tree-view structure, customize nodes easily and load data on demand. Try for FREE
-_keywords: angular tree, angular tree component, ignite ui for angular, UI controls, infragistics
+_description: With Ignite UI for Angular Accordion component, you can display a collection of vertically collapsible expansion panels. Try for FREE
+_keywords: angular accordion, angular accordion component, angular accordion example, ignite ui for angular, UI controls, infragistics
 ---
 
 # Angular Accordion Component Overview
 
-The Angular Accordion Components is a collection vertically collapsible of igx-expansion panels. Its primary purpose it to provide users with data and the ability to drill into it in a compact manner, using progressive disclosure.  It also provides two expansion modes, templating, built in keyboard navigation, option for nested accordions and more.
+The Angular Accordion Components is a collection of vertically collapsible igx-expansion panels. Its primary purpose it to provide users with data and the ability to drill into it in a compact manner, using progressive disclosure. It also provides two expansion modes, templating, built in keyboard navigation, option for nested accordions and more.
 
 ## Angular Accordion Example
-In this basic Angular Accordion example, you can see how to define an igx-accrodion and its expansion panels. The sample also demonstrates the two types of expansion behavior. The switch button toggled the singleBranchExpand option to either set single or multiple branches to be expanded at a time.
+In this basic Angular Accordion example, you can see how to define an igx-accrodion and its expansion panels. The sample also demonstrates the two types of expansion behavior. The switch button toggles the [singleBranchExpand]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#singleBranchExpand) option to either set single or multiple branches to be expanded at a time.
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -18,7 +18,7 @@ In this basic Angular Accordion example, you can see how to define an igx-accrod
 
 <div class="divider--half"></div>
 
-## Getting Started with Ignite UI for Angular Tree
+## Getting Started with Ignite UI for Angular Accordion
 
 To get started with the Ignite UI for Angular Accordion component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
 
@@ -54,7 +54,7 @@ Panels provide [disabled]({environment:angularApiUrl}/classes/igxexpansionpanelc
 In order to declare an accordion components you have to describe all its expansion panels.
 
 ```html
-<igx-accordion #accordion [singleBranchExpanded]="true">
+<igx-accordion #accordion [singleBranchExpand]="true">
      <igx-expansion-panel>
         <igx-expansion-panel-header>
             <igx-expansion-panel-title>Title Panel 1</igx-expansion-panel-title>
@@ -83,7 +83,7 @@ public accordion: IgxAccordionComponent;
 this.accordion.panels;
 ```
 
-As demonstrated above, singleBranchExpand option gives you the opportunity to set whether single or multiple branches to be expanded at a time.
+As demonstrated above, [singleBranchExpand]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#singleBranchExpand) option gives you the opportunity to set whether single or multiple branches to be expanded at a time.
 In regards to animation, you have two options. First, to set the animationSettings option on a higher level for the entire accordion component. 
 
 ```typescript
@@ -111,7 +111,7 @@ export class AccordionComponent {
 }
 ```
 
-As you can see, we are going to use [`slideInLeft`]({environment:sassApiUrl}/index.html#mixin-slide-in-left) and [`slideOutRight`]({environment:sassApiUrl}/index.html#mixin-slide-out-right) animations from our [**inbuilt suite of animations**]({environment:sassApiUrl}/index.html#animations) to make the component content appear more dramatically from the left side and disappear on the right when collapsing the content. In the process, we override some of the existing parameters with the specific ones we want to use.
+As you can see, we are going to use [`slideInLeft`]({environment:sassApiUrl}/index.html#mixin-slide-in-left) and [`slideOutRight`]({environment:sassApiUrl}/index.html#mixin-slide-out-right) animations from our [**inbuilt suite of animations**]({environment:sassApiUrl}/index.html#animations) to make the component content appear from the left side and disappear on the right when collapsing the content. In the process, we override some of the existing parameters with the specific ones we want to use.
 
 The sample shows some user information and the key point here is passing the animation settings to the component like:
 `[animationSettings] = "animationSettingsCustom"`
@@ -123,10 +123,10 @@ The sample shows some user information and the key point here is passing the ani
 ```
 
 > Note: If you would like to turn off the animation for the [IgxAccordionComponent]({environment:angularApiUrl}/classes/igxaccordioncomponent.html}) the animationSettings could be set to null.
-Alternatively, you have the ability to set every single [IgxExpansionPanel]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html)`s [animationSettings]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#animationSettings}) option.
+Alternatively, you have the ability to set every single [IgxExpansionPanel]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html)`s [animationSettings]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html#animationSettings}) option.
 
 ```html
-<igx-accordion #accordion [singleBranchExpanded]="true">
+<igx-accordion #accordion [singleBranchExpand]="true">
      <igx-expansion-panel [animationSettings]="animationSettingsCustom">
         <igx-expansion-panel-header>
             <igx-expansion-panel-title>Title Panel 1</igx-expansion-panel-title>
@@ -145,12 +145,12 @@ Alternatively, you have the ability to set every single [IgxExpansionPanel]({env
     </igx-expansion-panel>
 </igx-accordion>
 ```
-Using the [collapseAll]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#collapseAll}) and [expandAll]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#expandAll}) methods you can respectively collapse and expand all [IgxExpansionPanels]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html}) of the [IgxAccordion]({environment:angularApiUrl}/classes/igxaccordioncomponent.html}).
+Using the [collapseAll]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#collapseAll}) and [expandAll]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#expandAll}) methods you can respectively collapse and expand all [IgxExpansionPanels]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) of the [IgxAccordion]({environment:angularApiUrl}/classes/igxaccordioncomponent.html}).
 
-> Note: [обяснение как работи с тру и фолс на singleBranchExpanд)
+> Note: If [singleBranchExpand]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#singleBranchExpand) property is set to *true* calling [expandAll]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#expandAll}) method would expand only the last [IgxExpansionPanel]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html).
 
 ### Angular Accordion Templating Example
-The sample below demonstrates how elaborate filtering options can be implemented using the built in templating functionality of the [IgxExpansionPanel]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html}).
+The sample below demonstrates how elaborate filtering options can be implemented using the built in templating functionality of the [IgxExpansionPanel]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html).
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -160,7 +160,7 @@ The sample below demonstrates how elaborate filtering options can be implemented
 <div class="divider--half"></div>
 
 ### Nested Angular Accordions Scenario
-In the following example, we are going to implement more like an application scenario where you want to create a complex FAQ section. In the sample …..[describe how nested accordion is achieved]
+In the following example, we are going to implement more like an application scenario where you want to create a complex FAQ section. In the sample nested [IgxAccordionComponent]({environment:angularApiUrl}/classes/igxaccordioncomponent.html) is achieved by adding an [IgxAccordionComponent]({environment:angularApiUrl}/classes/igxaccordioncomponent.html) inside the body of an [IgxExpansionPanel]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html).
 
 ```html
 <igx-accordion #accordion>
@@ -196,7 +196,7 @@ You can see the result below.
 <div class="divider--half"></div>
 
 ## Keyboard Navigation
-Keyboard navigation in [IgxAccordion]({environment:angularApiUrl}/classes/igxaccordioncomponent.html}) provides a rich variety of keyboard interactions for the user. This functionality is enabled by default and allows users to navigate through the [IgxExpansionPanels]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html}).
+Keyboard navigation in [IgxAccordion]({environment:angularApiUrl}/classes/igxaccordioncomponent.html}) provides a rich variety of keyboard interactions for the user. This functionality is enabled by default and allows users to navigate through the [IgxExpansionPanels]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html).
 The [IgxAccordion]({environment:angularApiUrl}/classes/igxaccordioncomponent.html}) navigation is compliant with W3C accessibility standards and convenient to use.
 
 **Key Combinations**
@@ -212,8 +212,8 @@ The [IgxAccordion]({environment:angularApiUrl}/classes/igxaccordioncomponent.htm
  - <kbd>Home</kbd> - navigates to the FIRST enabled panel in the accordion
  - <kbd>End</kbd> - navigates to the LAST enabled panel in the accordion
 
-## Angular Tree Styling
-The [IgxAccordion]({environment:angularApiUrl}/classes/igxaccordioncomponent.html}) serves only as a container for the [IgxExpansionPanels]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html}). This is the reason styles could be applied only through the [IgxExpansionPanels]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html}). Styling of the [IgxExpansionPanels]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html}) is described in the [Styling section of the IgxExpansionPanel topic](expansion-panel.html#styling).
+## Angular Accordion Styling
+The [IgxAccordion]({environment:angularApiUrl}/classes/igxaccordioncomponent.html}) serves only as a container for the [IgxExpansionPanels]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html). This is the reason styles could be applied only through the [IgxExpansionPanels]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html). Styling of the [IgxExpansionPanels]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) is described in the [Styling section of the IgxExpansionPanel topic](expansion-panel.html#styling).
 
 ## API Reference
 * [IgxAccordion API]({environment:angularApiUrl}/classes/igxaccordioncomponent.html})
