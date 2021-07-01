@@ -143,6 +143,30 @@ public open(toast) {
            iframe-src="{environment:demosBaseUrl}/notifications/toast-sample-5" >
 </code-view>
 
+### Overlay Settings
+The [`IgxToastComponent`]({environment:angularApiUrl}/classes/igxtoastcomponent.html) uses [Overlay Settings]({environment:angularApiUrl}/interfaces/overlaysettings.html) to control the position of its container. The default settings can be changed by defining Custom OverlaySettings and passing them to the toast `open()` method:
+
+```typescript
+public customSettings: OverlaySettings = {
+    positionStrategy: new GlobalPositionStrategy(
+        { 
+            horizontalDirection: HorizontalAlignment.Left,
+            verticalDirection: VerticalAlignment.Top
+        }),
+    modal: true,
+    closeOnOutsideClick: true,
+};
+
+toast.open(customSettings);
+```
+
+Users can also provide a specific outlet where the toast will be placed in the DOM when it is visible:
+
+```html
+<igx-toast [outlet]="igxBodyOverlayOutlet"></igx-toast>
+<div #igxBodyOverlayOutlet igxOverlayOutlet></div>
+```
+
 <div class="divider--half"></div>
 
 ## Styling

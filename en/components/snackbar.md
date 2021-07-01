@@ -4,7 +4,7 @@ _description: Easily integrate a brief, single-line message within your mobile a
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Snackbar component, Angular Snackbar control
 ---
 # Snackbar
-<p class="highlight">The Ignite UI for Angular Snackbar component provides feedback about an operation with a single-line message, which can include a link to an action such as Undo. The Snackbar message appears above all other screen elements, located at the bottom of a mobile device screen or at the lower left of larger device screens.</p>
+<p class="highlight">The Ignite UI for Angular Snackbar component provides feedback about an operation with a single-line message, which can include an action. The Snackbar message appears above all other elements and is positioned at the bottom center of the screen.</p>
 <div class="divider"></div>
 
 ## Angular Snackbar Example
@@ -80,7 +80,7 @@ public close(element) {
 }
 ```
 
-If the sample is configured properly, the first snackbar appears when the button is clicked, showing both the *message* and *action button*. The auto-hide feature is disabled and the snackbar disappears on 'CLOSE' button click. Another snackbar passes a different message through the [`open()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#open) method and hide it when the *display time* ends. The third component passes a message as a param to the [`open()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#open) method and adds an icon using the content projection.
+If the sample is configured properly, the first snackbar appears when the button is clicked, showing both the *message* and *action button*. The auto-hide feature is disabled and the snackbar disappears on 'CLOSE' button click. Another snackbar passes a different message through the [`open()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#open) method and hides it when the *display time* expires. The third component passes a message as a param to the [`open()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#open) method and adds an icon using content projection.
 
 <code-view style="height: 230px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -227,6 +227,29 @@ public restore() {
            iframe-src="{environment:demosBaseUrl}/notifications/snackbar-sample-4" >
 </code-view>
 
+### Overlay Settings
+The [`IgxSnackbarComponent`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html) uses [Overlay Settings]({environment:angularApiUrl}/interfaces/overlaysettings.html) to control the position of its container. The default settings can be changed by defining Custom OverlaySettings and passing them to the snackbar `open()` method:
+
+```typescript
+public customSettings: OverlaySettings = {
+    positionStrategy: new GlobalPositionStrategy(
+        { 
+            horizontalDirection: HorizontalAlignment.Left,
+            verticalDirection: VerticalAlignment.Top
+        }),
+    modal: true,
+    closeOnOutsideClick: true,
+};
+
+snackbar.open(customSettings);
+```
+
+Users can also provide a specific outlet where the snackbar will be placed in the DOM when it is visible:
+
+```html
+<igx-snackbar [outlet]="igxBodyOverlayOutlet"></igx-snackbar>
+<div #igxBodyOverlayOutlet igxOverlayOutlet></div>
+```
 ## Styling
 To get started with styling the snackbar, we need to import the index file, where all the theme functions and component mixins live:
 
