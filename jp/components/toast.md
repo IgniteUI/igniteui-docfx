@@ -47,10 +47,8 @@ Toast コンポーネントを表示するには、ボタン クリックで [`o
 <!--sample.component.html-->
 
 <button igxButton="raised" (click)="toast.open()">Show notification</button>
-<igx-toast #toast >Notification displayed</igx-toast>
+<igx-toast #toast>Notification displayed</igx-toast>
 ```
-
-サンプルが正しく構成された場合、ボタン クリック時に通知を表示する Toast が表示されます。
 
 Toast コンテンツを設定する別の方法は、メッセージをパラメーターとして [`open()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#open) メソッドに直接渡すことです。
 
@@ -58,7 +56,7 @@ Toast コンテンツを設定する別の方法は、メッセージをパラ�
 <!--sample.component.html-->
 
 <button igxButton="raised" (click)="toast.open('Notification displayed')">Show notification</button>
-<igx-toast #toast ></igx-toast>
+<igx-toast #toast></igx-toast>
 ```
 
 [`open()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#open) メソッドを AppComponent ファイルで使用して、メッセージの値を管理することもできます。
@@ -78,6 +76,9 @@ public showMessage() {
 }
 ```
 
+> [!WARNING]
+> igx-toast コンポーネントの `show` メソッドと `hide` メソッドは非推奨になりました。代わりに `open` と `close` を使用する必要があります。
+
 ## 例
 
 ### 非表示/自動的に隠す
@@ -88,18 +89,16 @@ public showMessage() {
 
 <button igxButton="raised" (click)="toast.open()">Show Toast</button>
 <button igxButton="raised" (click)="toast.close()">Hide Toast</button>
-<igx-toast #toast message="Notification displayed" [autoHide]="false"></igx-toast>
+<igx-toast #toast [autoHide]="false">Notification displayed</igx-toast>
 ```
 
 サンプルが正しく構成されると、[SHOW] ボタンをクリックしたときに Toast が表示されます。自動的に隠す機能が無効で、[HIDE] ボタンのクリックで Toast が非表示になります。
 他の 2 つのコンポーネントでは、[`open()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#open) メソッドを介してさまざまなメッセージを渡し、コンテンツ プロジェクションを使用する方法を実際に見ることができます。
 
-
 <code-view style="height: 450px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/notifications/toast-sample-3" >
 </code-view>
-
 
 ### 表示期間
 [`displayTime`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#displaytime) でミリ秒間隔に設定し、Toast コンポーネントが表示される期間を構成します。
@@ -108,7 +107,7 @@ public showMessage() {
 <!--sample.component.html-->
 
 <button igxButton="raised" (click)="toast.open()">Show notification</button>
-<igx-toast #toast message="Notification displayed" displayTime="1000"></igx-toast>
+<igx-toast #toast displayTime="1000">Notification displayed</igx-toast>
 ```
 
 サンプルが正しく構成された場合、Toast が自動ですばやく非表示になります。
@@ -122,19 +121,15 @@ public showMessage() {
 
 ```html
 <!--sample.component.html-->
-
 <div>
     <button igxButton="raised" (click)="open(toast)">Show notification on top</button>
-    <igx-toast #toast message="Notification displayed" [position]="toastPosition"></igx-toast>
+    <igx-toast #toast [position]="toastPosition">Notification displayed</igx-toast>
 </div>
-
 ```
 
 ```typescript
 // sample.component.ts
-
 import { IgxToastPosition } from 'igniteui-angular';
-
 ...
 public toastPosition: IgxToastPosition;
 public open(toast) {
@@ -142,13 +137,36 @@ public open(toast) {
     toast.open();
 }
 ...
-
 ```
 
 <code-view style="height: 300px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/notifications/toast-sample-5" >
 </code-view>
+
+### オーバーレイ設定
+The [`IgxToastComponent`]({environment:angularApiUrl}/classes/igxtoastcomponent.html) uses [Overlay Settings]({environment:angularApiUrl}/interfaces/overlaysettings.html) to control the position of its container. The default settings can be changed by defining Custom OverlaySettings and passing them to the toast `open()` method:
+
+```typescript
+public customSettings: OverlaySettings = {
+    positionStrategy: new GlobalPositionStrategy(
+        { 
+            horizontalDirection: HorizontalAlignment.Left,
+            verticalDirection: VerticalAlignment.Top
+        }),
+    modal: true,
+    closeOnOutsideClick: true,
+};
+
+toast.open(customSettings);
+```
+
+Users can also provide a specific outlet where the toast will be placed in the DOM when it is visible:
+
+```html
+<igx-toast [outlet]="igxBodyOverlayOutlet"></igx-toast>
+<div #igxBodyOverlayOutlet igxOverlayOutlet></div>
+```
 
 <div class="divider--half"></div>
 
@@ -170,9 +188,9 @@ $custom-toast-theme: igx-toast-theme(
 );
 ```
 
-### CSS 変数の使用 
+### CSS 変数の使用
 
-最後に Toast のカスタム テーマを設定します。 
+最後に Toast のカスタム テーマを設定します。
 
 ```scss
 @include igx-css-vars($custom-toast-theme);
@@ -256,7 +274,6 @@ $custom-toast-theme: igx-toast-theme(
 ```
 
 上記と同じ方法でテーマを含める必要があることに注意してください。
-
 
 <code-view style="height: 600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
