@@ -6,10 +6,9 @@ _keywords: angular accordion, angular accordion component, angular accordion exa
 
 # Angular Accordion Component Overview
 
-The Angular Accordion Components is a collection of vertically collapsible igx-expansion panels. Its primary purpose it to provide users with data and the ability to drill into it in a compact manner, using progressive disclosure. It also provides two expansion modes, templating, built in keyboard navigation, option for nested accordions and more.
-
+The Angular Accordion Component enables the user to navigate among multiple collapsing panels displayed in a single container. The accordion offers keyboard navigation and API to control the underlying panels' expansion state.
 ## Angular Accordion Example
-In this basic Angular Accordion example, you can see how to define an igx-accrodion and its expansion panels. The sample also demonstrates the two types of expansion behavior. The switch button toggles the [singleBranchExpand]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#singleBranchExpand) option to either set single or multiple branches to be expanded at a time.
+In this basic Angular Accordion example, you can see how to define an igx-accrodion and its  [IgxExpansionPanels]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html). The sample also demonstrates the two types of expansion behavior. The switch button toggles the [singleBranchExpand]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#singleBranchExpand) option to either set single or multiple branches to be expanded at a time.
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -47,11 +46,11 @@ Now that we have the accordion module imported, let’s get started with a basic
 ## Usage
 
 [IgxExpansionPanelComponent]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) is the representation of every level that belongs to the [IgxAccordionComponent]({environment:angularApiUrl}/classes/igxaccordioncomponent.html).  
-Panels provide [disabled]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html#disabled), [collapsed]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html#collapsed) and [animationSettings]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html#animationSettings}) properties, which give you opportunity to configure the states of the panel as per your requirement. 
+Panels provide [disabled]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html#disabled), [collapsed]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html#collapsed) and [animationSettings]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html#animationSettings}) properties, which give you the opportunity to configure the states of the panel as per your requirement. 
 
 ### Declaring an accordion
 
-In order to declare an accordion components you have to describe all its expansion panels.
+In order to declare an accordion component you have to describe all its  [IgxExpansionPanels]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html).
 
 ```html
 <igx-accordion #accordion [singleBranchExpand]="true">
@@ -111,9 +110,9 @@ export class AccordionComponent {
 }
 ```
 
-As you can see, we are going to use [`slideInLeft`]({environment:sassApiUrl}/index.html#mixin-slide-in-left) and [`slideOutRight`]({environment:sassApiUrl}/index.html#mixin-slide-out-right) animations from our [**inbuilt suite of animations**]({environment:sassApiUrl}/index.html#animations) to make the component content appear from the left side and disappear on the right when collapsing the content. In the process, we override some of the existing parameters with the specific ones we want to use.
+As you can see, we are going to use [`slideInLeft`]({environment:sassApiUrl}/index.html#mixin-slide-in-left) and [`slideOutRight`]({environment:sassApiUrl}/index.html#mixin-slide-out-right) animations from our [**inbuilt suite of animations**]({environment:sassApiUrl}/index.html#animations) to make the component content appear from the left side and disappear on the right when collapsing the content. We further customize the animations by overwriting some of the animations' parameters.
 
-The sample shows some user information and the key point here is passing the animation settings to the component like:
+The following snippet demonstrates some user information and the key point here is passing the animation settings to the component like:
 `[animationSettings] = "animationSettingsCustom"`
 
 ```html
@@ -123,6 +122,7 @@ The sample shows some user information and the key point here is passing the ani
 ```
 
 > Note: If you would like to turn off the animation for the [IgxAccordionComponent]({environment:angularApiUrl}/classes/igxaccordioncomponent.html}) the animationSettings could be set to null.
+
 Alternatively, you have the ability to set every single [IgxExpansionPanel]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html)`s [animationSettings]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html#animationSettings}) option.
 
 ```html
