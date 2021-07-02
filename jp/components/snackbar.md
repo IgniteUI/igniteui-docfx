@@ -229,7 +229,7 @@ public restore() {
 </code-view>
 
 ### オーバーレイ設定
-The [`IgxSnackbarComponent`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html) uses [Overlay Settings]({environment:angularApiUrl}/interfaces/overlaysettings.html) to control the position of its container. The default settings can be changed by defining Custom OverlaySettings and passing them to the snackbar `open()` method:
+[`IgxSnackbarComponent`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html) は、[オーバーレイ設定]({environment:angularApiUrl}/interfaces/overlaysettings.html)を使用してコンテナの位置を制御します。デフォルト設定は、カスタム オーバーレイ設定を定義し、それらをスナックバーの `open()` メソッドに渡すことで変更できます。
 
 ```typescript
 public customSettings: OverlaySettings = {
@@ -245,7 +245,7 @@ public customSettings: OverlaySettings = {
 snackbar.open(customSettings);
 ```
 
-Users can also provide a specific outlet where the snackbar will be placed in the DOM when it is visible:
+ユーザーは、スナックバーが表示されたときに DOM に配置される特定のアウトレットを提供することもできます。
 
 ```html
 <igx-snackbar [outlet]="igxBodyOverlayOutlet"></igx-snackbar>

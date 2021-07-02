@@ -145,7 +145,7 @@ public open(toast) {
 </code-view>
 
 ### オーバーレイ設定
-The [`IgxToastComponent`]({environment:angularApiUrl}/classes/igxtoastcomponent.html) uses [Overlay Settings]({environment:angularApiUrl}/interfaces/overlaysettings.html) to control the position of its container. The default settings can be changed by defining Custom OverlaySettings and passing them to the toast `open()` method:
+[`IgxToastComponent`]({environment:angularApiUrl}/classes/igxtoastcomponent.html) は、[オーバーレイ設定]({environment:angularApiUrl}/interfaces/overlaysettings.html)を使用してコンテナの位置を制御します。デフォルト設定は、カスタム オーバーレイ設定を定義し、それらをトーストの `open()` メソッドに渡すことで変更できます。
 
 ```typescript
 public customSettings: OverlaySettings = {
@@ -161,7 +161,7 @@ public customSettings: OverlaySettings = {
 toast.open(customSettings);
 ```
 
-Users can also provide a specific outlet where the toast will be placed in the DOM when it is visible:
+ユーザーは、トーストが表示されたときに DOM に配置される特定のアウトレットを提供することもできます。
 
 ```html
 <igx-toast [outlet]="igxBodyOverlayOutlet"></igx-toast>
