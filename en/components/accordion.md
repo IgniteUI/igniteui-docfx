@@ -215,7 +215,7 @@ The [IgxAccordionComponent]({environment:angularApiUrl}/classes/igxaccordioncomp
 ## Angular Accordion Styling
 The [accordion]({environment:angularApiUrl}/classes/igxaccordioncomponent.html}) serves only as a container for the underlying [panels]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html). Styles can be applied directly through the panel's theme, as described in the [styling section of the IgxExpansionPanel topic](expansion-panel.html#styling).
 
-By design, there is a margin set to the expanded panels, in case that they are positioned within an `igx-accordion`. In order to modify it there is a variable exposed inside the igx-expansion-panel theme.
+By design, there is a margin set to the expanded panels, in case that they are positioned within an `igx-accordion`. In order to modify it there is a property exposed inside the igx-expansion-panel theme.
 In order to take advantage of the functions exposed by the theme engine, we have to import the `index` file in our style file:
 
 ```scss
