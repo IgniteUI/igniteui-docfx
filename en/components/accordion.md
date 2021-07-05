@@ -10,7 +10,7 @@ The Angular Accordion Component allows users to navigate among multiple collapsi
 ## Angular Accordion Example
 In this basic Angular Accordion example, you can see how to define an `igx-accrodion` and its [expansion panels]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html). The sample also demonstrates the two types of expansion behavior. The switch button toggles the [singleBranchExpand]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#singleBranchExpand) option to either set single or multiple branches to be expanded at a time.
 
-<code-view style="height:550px" 
+<code-view style="height:460px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/layouts/accordion-sample-1" alt="Angular Avatar Example">
 </code-view>
