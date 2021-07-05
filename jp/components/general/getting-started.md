@@ -47,7 +47,7 @@ Angular CLI を使用して Angular アプリケーションを作成するに�
 ```cmd
 ng new <project name> --style=scss
 ```
-`--style` オプションでアプリケーションのスタイルフ ァイルに使用するファイル拡張子またはプリプロセッサを指定できます。コンポーネントのスタイルは [Ignite UI for Angular テーマ ライブラリ](../themes.md) に基づいているため、Scss を使用することをお勧めします。後で、Ignite UI for Angular パッケージをインストールすると、アプリケーションはデフォルトのスタイリング テーマを使用するように構成され、すべてのコンポーネント インスタンスまたは特定のコンポーネント インスタンスに対して簡単にカスタマイズできます。
+`--style` オプションでアプリケーションのスタイルフ ァイルに使用するファイル拡張子またはプリプロセッサを指定できます。コンポーネントのスタイルは [Ignite UI for Angular テーマ ライブラリ](../themes.md) に基づいているため、SCSS を使用することをお勧めします。後で、Ignite UI for Angular パッケージをインストールすると、アプリケーションはデフォルトのスタイリング テーマを使用するように構成され、すべてのコンポーネント インスタンスまたは特定のコンポーネント インスタンスに対して簡単にカスタマイズできます。
 
 その後、次のコマンドを実行して、Ignite UI for Angular パッケージを、その依存関係、フォントのインポートおよびプロジェクトへのスタイル参照とともにインストールできます。 
 
@@ -55,7 +55,33 @@ ng new <project name> --style=scss
 ng add igniteui-angular
 ```
 
+>[!NOTE]
+> 上記のコマンドで Ignite UI for Angular のトライアル版をインストールすることに注意してください。
+
 インストール時に IE、Edge、および Safari のポリフィルを有効にするかどうかのプロンプトが表示されます。 これにより、プロジェクトに `web-animations-js` パッケージがインストールされます。これは、アプリケーションとこれらのブラウザーのいずれかで `AnimationBuilder` を使用する場合に必要です。ブラウザーで HTML 要素のスタイルをリセットする CSS ライブラリを追加することもできます。`minireset.css` がアプリケーションにインストールされます。
+
+**ライセンス版の Ignite UI for Angular パッケージ**の使用を開始する場合、[Schematics および Ignite UI CLI を使用したパッケージのアップグレードガイド](../general/ignite-ui-licensing.md#angular-schematics-または-ignite-ui-cli-を使用したパッケージのアップグレード)に従うことをお勧めします。
+
+以下は、**ライセンス版の Ignite UI for Angular** の使用を開始するために実行する必要がある手順の概要です。プロジェクトのセットアップに応じて、プロジェクトで以下の schematic を実行します。
+
+```bash
+ng g @igniteui/angular-schematics:upgrade-packages
+```
+または `igniteui-cli` を使用する場合:
+
+```bash
+ig upgrade-packages
+```
+Schematic はプロジェクトのパッケージの依存関係を切り替え、ソース参照を更新します。[まだセットアップされていない場合、NPM レジストリへのログインが要求されます](../general/ignite-ui-licensing.md#プライベート-npm-フィードを使用するための環境設定方法)。
+
+#### 新しいセットアップで npm レジストリにログイン
+上記の方法は、Ignite UI for Angular トライアル版パッケージが既にインストールされているシナリオのみを対象としています。プロジェクトの新しいセットアップを実行する場合、または Ignite UI for Angular を使用する場合は、以下のガイダンスに従ってください。
+
+次の方法で[プライベート npm フィード環境の正しいセットアップを実行する](../general/ignite-ui-licensing.md#プライベート-npm-フィードを使用するための環境設定方法)ことが重要です:
+- プライベート レジストリの有効なセットアップを確認します。
+- トライアル版以外のユーザー アカウントとパスワードを指定して npm を使用してプライベート フィードにログインします。
+
+プロセス全体の詳細は[こちらにあります](../general/ignite-ui-licensing.md#プライベート-npm-フィードを使用するための環境設定方法)。
 
 ### Angular Schematics & Ignite UI CLI のクイック スタート
 アプリケーションをゼロから作成し、Ignite UI for Angular コンポーネントを使用するように構成するには、Ignite UI for Angular Schematics または Ignite UI CLI を使用できます。最初の手順には、以下のように各パッケージをグローバルにインストールします。
@@ -81,11 +107,15 @@ CLI ツール を使用する場合は、以下のコマンドを実行します
 ig
 ```
 
+>[!NOTE]
+> [まだセットアップされていない場合、手順の実行中のある時点で NPM レジストリへのログインが要求されます](../general/ignite-ui-licensing.md#プライベート-npm-フィードを使用するための環境設定方法)。これは、トライアル版からライセンス アカウントのセットアップの一部です。
+
 <div style="display:inline-block;">
-    <a style="background: url(../../images/general/buildCLIapp.gif); display:flex; justify-content:center; width: 80vw; max-width:540px; min-height:315px;" href="https://youtu.be/QK_NsdtdA70" target="_blank">
+    <a style="background: url(../../images/general/buildCLIapp.gif); display:flex; justify-content:center; width: 80vw; max-width:540px; min-height:315px;"
+       href="https://youtu.be/QK_NsdtdA70" target="_blank">
         <img src="../../images/general/play.svg" style="vertical-align: middle;" />
     </a>
-    <p style="text-align:center;">Building Your First Ignite UI CLI App</p>
+    <p style="text-align:center;">はじめての Ignite UI CLI アプリ開発</p>
 </div>
 
 [Angular Schematics & Ignite UI CLI](cli-overview.md) についての詳細。
