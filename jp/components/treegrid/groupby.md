@@ -12,7 +12,7 @@ _language: ja
 > [!NOTE]
 > これらのサンプルには、[`IgxTreeGridComponent`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html) に組み込まれていないカスタム ロジックが含まれています。以下の [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) のグループ化や集計機能と同様ですが、集計行内ではなく、集計データが親行に表示されます。
 
-このサンプルでは、グループ化に使用される列に関連する UI 操作を処理するセレクター `igx-tree-grid-group-area` を使用して UI コンポーネントも作成しました。このコンポーネントの動作の詳細については、 `tree-grid-group-area.component.ts` ファイルの `IgxTreeGridGroupAreaComponent` クラスを参照してください。コンポーネントは完全にカスタマイズが可能でカスタム プロジェクトに使用できます。
+このサンプルでは、グループ化に使用される列に関連する UI 操作を処理するセレクター `igx-tree-grid-group-area` を使用して UI コンポーネントも作成しました。このコンポーネントの動作の詳細については、`tree-grid-group-area.component.ts` ファイルの `IgxTreeGridGroupAreaComponent` クラスを参照してください。コンポーネントは完全にカスタマイズが可能でカスタム プロジェクトに使用できます。
 
 以下はテンプレートでコンポーネントを使用した例です。
 
