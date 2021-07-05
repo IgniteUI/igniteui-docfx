@@ -6,9 +6,9 @@ _keywords: angular accordion, angular accordion component, angular accordion exa
 
 # Angular Accordion Component Overview
 
-The Angular Accordion Component enables the user to navigate among multiple collapsing panels displayed in a single container. The accordion offers keyboard navigation and API to control the underlying panels' expansion state.
+The Angular Accordion Component allows users to navigate among multiple collapsible panels displayed in a single container. The accordion offers keyboard navigation and API to control the underlying panels' expansion state.
 ## Angular Accordion Example
-In this basic Angular Accordion example, you can see how to define an igx-accrodion and its [expansion panels]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html). The sample also demonstrates the two types of expansion behavior. The switch button toggles the [singleBranchExpand]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#singleBranchExpand) option to either set single or multiple branches to be expanded at a time.
+In this basic Angular Accordion example, you can see how to define an `igx-accrodion` and its [expansion panels]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html). The sample also demonstrates the two types of expansion behavior. The switch button toggles the [singleBranchExpand]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#singleBranchExpand) option to either set single or multiple branches to be expanded at a time.
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -73,7 +73,7 @@ The accordion simply renders any [`igx-expansion-panels`]({environment:angularAp
 </igx-accordion>
 ```
 
-Using the [panels]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#panels) option you can get a reference to the collection containing all [expansion panels]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) children of the accordion.
+Using the [panels]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#panels) option you can get a reference to the collection containing all [expansion panels]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) children of the `igx-accordion`.
 
 ```typescript
 @ViewChild('accordion', { static: true })
@@ -83,6 +83,7 @@ this.accordion.panels;
 ```
 
 As demonstrated above, [singleBranchExpand]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#singleBranchExpand) option gives you the opportunity to set whether single or multiple panels can be expanded at a time.
+
 In regards to animation, you have two options. First, you could set the `animationSettings` option on a higher level for the entire accordion component:
 
 ```typescript
@@ -112,8 +113,7 @@ export class AccordionComponent {
 
 As you can see, we are going to use [`slideInLeft`]({environment:sassApiUrl}/index.html#mixin-slide-in-left) and [`slideOutRight`]({environment:sassApiUrl}/index.html#mixin-slide-out-right) animations from our [**inbuilt suite of animations**]({environment:sassApiUrl}/index.html#animations) to make the component content appear from the left side and disappear on the right when collapsing the content. We further customize the animations by overwriting some of the animations' parameters.
 
-The following snippet demonstrates some user information and the key point here is passing the animation settings to the component like:
-`[animationSettings] = "animationSettingsCustom"`
+The following snippet demonstrates some user information and the key point here is passing the animation settings to the component. For example:
 
 ```html
 <igx-accordion #accordion [animationSettings]="animationSettingsCustom">
@@ -150,7 +150,7 @@ Using the [collapseAll]({environment:angularApiUrl}/classes/igxaccordioncomponen
 > Note: If [singleBranchExpand]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#singleBranchExpand) property is set to *true* calling [expandAll]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#expandAll}) method would expand only the last [panel]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html).
 
 ### Angular Accordion Templating Example
-The sample below demonstrates how elaborate filtering options can be implemented using the built in templating functionality of the [IgxExpansionPanel]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html).
+The sample below demonstrates how elaborate filtering options can be implemented using the built-in templating functionality of the [IgxExpansionPanel]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html).
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -160,7 +160,7 @@ The sample below demonstrates how elaborate filtering options can be implemented
 <div class="divider--half"></div>
 
 ### Nested Angular Accordions Scenario
-In the following example, we are going to create a complex FAQ section in order to illustrate how you can go about this commont application scenario. In the sample nested [IgxAccordionComponent]({environment:angularApiUrl}/classes/igxaccordioncomponent.html) is achieved by adding an [accordion]({environment:angularApiUrl}/classes/igxaccordioncomponent.html) inside the body of an [expansion panel]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html).
+In the following example, we are going to create a complex FAQ section in order to illustrate how you can go about this common application scenario. In the sample nested [IgxAccordionComponent]({environment:angularApiUrl}/classes/igxaccordioncomponent.html) is achieved by adding an [accordion]({environment:angularApiUrl}/classes/igxaccordioncomponent.html) inside the body of an [expansion panel]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html).
 
 ```html
 <igx-accordion #accordion>
@@ -213,16 +213,16 @@ The [IgxAccordionComponent]({environment:angularApiUrl}/classes/igxaccordioncomp
  - <kbd>End</kbd> - navigates to the LAST enabled panel in the accordion
 
 ## Angular Accordion Styling
-The [accordion]({environment:angularApiUrl}/classes/igxaccordioncomponent.html}) serves only as a container for the underlying [panels]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html). Styles can be applied directly through the panel's theme, as describe in the [styling section of the IgxExpansionPanel topic](expansion-panel.html#styling).
+The [accordion]({environment:angularApiUrl}/classes/igxaccordioncomponent.html}) serves only as a container for the underlying [panels]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html). Styles can be applied directly through the panel's theme, as described in the [styling section of the IgxExpansionPanel topic](expansion-panel.html#styling).
 
-By design, there is a margin set to the expanded panels, in case that they are positioned within an igx-accordion. In order to modify it there is a variable exposed inside the igx-expansion-panel theme.
-In order to take advantage of the functions exposed by the theme engine, we have to import the `index` file in our system file:
+By design, there is a margin set to the expanded panels, in case that they are positioned within an `igx-accordion`. In order to modify it there is a variable exposed inside the igx-expansion-panel theme.
+In order to take advantage of the functions exposed by the theme engine, we have to import the `index` file in our style file:
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Following the simplest approach, we create a new theme that extends the [igx-expansion-panel-theme]({environment:sassApiUrl}/index.html#function-igx-expansion-panel-theme) and pass the parameters, which we would like to change: 
+Following the simplest approach, we create a new theme that extends the [igx-expansion-panel-theme]({environment:sassApiUrl}/index.html#function-igx-expansion-panel-theme) and accepts the `$expanded-margin`   parameter. 
 ```scss
 $custom-panel-theme: igx-expansion-panel-theme(
     $expanded-margin: 0px
