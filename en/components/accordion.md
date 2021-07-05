@@ -8,7 +8,7 @@ _keywords: angular accordion, angular accordion component, angular accordion exa
 
 The Angular Accordion Component enables the user to navigate among multiple collapsing panels displayed in a single container. The accordion offers keyboard navigation and API to control the underlying panels' expansion state.
 ## Angular Accordion Example
-In this basic Angular Accordion example, you can see how to define an igx-accrodion and its  [IgxExpansionPanels]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html). The sample also demonstrates the two types of expansion behavior. The switch button toggles the [singleBranchExpand]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#singleBranchExpand) option to either set single or multiple branches to be expanded at a time.
+In this basic Angular Accordion example, you can see how to define an igx-accrodion and its [expansion panels]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html). The sample also demonstrates the two types of expansion behavior. The switch button toggles the [singleBranchExpand]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#singleBranchExpand) option to either set single or multiple branches to be expanded at a time.
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -36,7 +36,7 @@ import { IgxAccordionModule } from 'igniteui-angular';
 
 @NgModule({
     ...
-    imports: [..., IgxAccordioneModule],
+    imports: [..., IgxAccordionModule],
     ...
 })
 export class AppModule {}
@@ -45,12 +45,12 @@ Now that we have the accordion module imported, let’s get started with a basic
 
 ## Usage
 
-[IgxExpansionPanelComponent]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) is the representation of every level that belongs to the [IgxAccordionComponent]({environment:angularApiUrl}/classes/igxaccordioncomponent.html).  
+Every separate section in the [IgxAccordionComponent]({environment:angularApiUrl}/classes/igxaccordioncomponent.html) is defined with an [expansion panel]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html).
 Panels provide [disabled]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html#disabled), [collapsed]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html#collapsed) and [animationSettings]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html#animationSettings}) properties, which give you the opportunity to configure the states of the panel as per your requirement. 
 
 ### Declaring an accordion
 
-In order to declare an accordion component you have to describe all its  [IgxExpansionPanels]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html).
+The accordion simply renders any [`igx-expansion-panels`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) declared inside it.
 
 ```html
 <igx-accordion #accordion [singleBranchExpand]="true">
@@ -73,17 +73,17 @@ In order to declare an accordion component you have to describe all its  [IgxExp
 </igx-accordion>
 ```
 
-Using the [panels]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#panels) option you can get reference to the collection containing all [IgxExpansionPanels]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) children of the accordion.
+Using the [panels]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#panels) option you can get a reference to the collection containing all [expansion panels]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) children of the accordion.
 
-```ts
+```typescript
 @ViewChild('accordion', { static: true })
-public accordion: IgxAccordionComponent;
+public accordion!: IgxAccordionComponent;
 
 this.accordion.panels;
 ```
 
-As demonstrated above, [singleBranchExpand]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#singleBranchExpand) option gives you the opportunity to set whether single or multiple branches to be expanded at a time.
-In regards to animation, you have two options. First, to set the animationSettings option on a higher level for the entire accordion component. 
+As demonstrated above, [singleBranchExpand]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#singleBranchExpand) option gives you the opportunity to set whether single or multiple panels can be expanded at a time.
+In regards to animation, you have two options. First, you could set the `animationSettings` option on a higher level for the entire accordion component:
 
 ```typescript
 import { useAnimation } from "@angular/animations";
@@ -121,13 +121,13 @@ The following snippet demonstrates some user information and the key point here 
 </igx-accordion>
 ```
 
-> Note: If you would like to turn off the animation for the [IgxAccordionComponent]({environment:angularApiUrl}/classes/igxaccordioncomponent.html}) the animationSettings could be set to null.
+> Note: If you would like to turn off the animation for the [IgxAccordionComponent]({environment:angularApiUrl}/classes/igxaccordioncomponent.html}) the `animationSettings` could be set to `null`.
 
-Alternatively, you have the ability to set every single [IgxExpansionPanel]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html)`s [animationSettings]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html#animationSettings}) option.
+Alternatively, you have the ability to set every single [expansion panel]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html)`s [animationSettings]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html#animationSettings}) input.
 
 ```html
 <igx-accordion #accordion [singleBranchExpand]="true">
-     <igx-expansion-panel [animationSettings]="animationSettingsCustom">
+     <igx-expansion-panel [animationSettings]="slideLeftRightSettings">
         <igx-expansion-panel-header>
             <igx-expansion-panel-title>Title Panel 1</igx-expansion-panel-title>
         </igx-expansion-panel-header>
@@ -135,7 +135,7 @@ Alternatively, you have the ability to set every single [IgxExpansionPanel]({env
             Content Panel 1
         </igx-expansion-panel-body>
     </igx-expansion-panel>
-    <igx-expansion-panel [animationSettings]="animationSettingsCustom">
+    <igx-expansion-panel [animationSettings]="slideTopBottomSettings">
         <igx-expansion-panel-header>
             <igx-expansion-panel-title>Title Panel 2</igx-expansion-panel-title>
         </igx-expansion-panel-header>
@@ -147,7 +147,7 @@ Alternatively, you have the ability to set every single [IgxExpansionPanel]({env
 ```
 Using the [collapseAll]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#collapseAll}) and [expandAll]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#expandAll}) methods you can respectively collapse and expand all [IgxExpansionPanels]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) of the [IgxAccordion]({environment:angularApiUrl}/classes/igxaccordioncomponent.html}).
 
-> Note: If [singleBranchExpand]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#singleBranchExpand) property is set to *true* calling [expandAll]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#expandAll}) method would expand only the last [IgxExpansionPanel]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html).
+> Note: If [singleBranchExpand]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#singleBranchExpand) property is set to *true* calling [expandAll]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#expandAll}) method would expand only the last [panel]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html).
 
 ### Angular Accordion Templating Example
 The sample below demonstrates how elaborate filtering options can be implemented using the built in templating functionality of the [IgxExpansionPanel]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html).
@@ -160,7 +160,7 @@ The sample below demonstrates how elaborate filtering options can be implemented
 <div class="divider--half"></div>
 
 ### Nested Angular Accordions Scenario
-In the following example, we are going to implement more like an application scenario where you want to create a complex FAQ section. In the sample nested [IgxAccordionComponent]({environment:angularApiUrl}/classes/igxaccordioncomponent.html) is achieved by adding an [IgxAccordionComponent]({environment:angularApiUrl}/classes/igxaccordioncomponent.html) inside the body of an [IgxExpansionPanel]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html).
+In the following example, we are going to create a complex FAQ section in order to illustrate how you can go about this commont application scenario. In the sample nested [IgxAccordionComponent]({environment:angularApiUrl}/classes/igxaccordioncomponent.html) is achieved by adding an [accordion]({environment:angularApiUrl}/classes/igxaccordioncomponent.html) inside the body of an [expansion panel]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html).
 
 ```html
 <igx-accordion #accordion>
@@ -196,8 +196,8 @@ You can see the result below.
 <div class="divider--half"></div>
 
 ## Keyboard Navigation
-Keyboard navigation in [IgxAccordion]({environment:angularApiUrl}/classes/igxaccordioncomponent.html}) provides a rich variety of keyboard interactions for the user. This functionality is enabled by default and allows users to navigate through the [IgxExpansionPanels]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html).
-The [IgxAccordion]({environment:angularApiUrl}/classes/igxaccordioncomponent.html}) navigation is compliant with W3C accessibility standards and convenient to use.
+Keyboard navigation in the accordion provides a rich variety of keyboard interactions for the user. This functionality is enabled by default and allows users to easily navigate through the panels.
+The [IgxAccordionComponent]({environment:angularApiUrl}/classes/igxaccordioncomponent.html}) navigation is compliant with W3C accessibility standards and convenient to use.
 
 **Key Combinations**
 
@@ -213,8 +213,42 @@ The [IgxAccordion]({environment:angularApiUrl}/classes/igxaccordioncomponent.htm
  - <kbd>End</kbd> - navigates to the LAST enabled panel in the accordion
 
 ## Angular Accordion Styling
-The [IgxAccordion]({environment:angularApiUrl}/classes/igxaccordioncomponent.html}) serves only as a container for the [IgxExpansionPanels]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html). This is the reason styles could be applied only through the [IgxExpansionPanels]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html). Styling of the [IgxExpansionPanels]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) is described in the [Styling section of the IgxExpansionPanel topic](expansion-panel.html#styling).
+The [accordion]({environment:angularApiUrl}/classes/igxaccordioncomponent.html}) serves only as a container for the underlying [panels]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html). Styles can be applied directly through the panel's theme, as describe in the [styling section of the IgxExpansionPanel topic](expansion-panel.html#styling).
 
+By design, there is a margin set to the expanded panels, in case that they are positioned within an igx-accordion. In order to modify it there is a variable exposed inside the igx-expansion-panel theme.
+In order to take advantage of the functions exposed by the theme engine, we have to import the `index` file in our system file:
+
+```scss
+@import '~igniteui-angular/lib/core/styles/themes/index';
+```
+
+Following the simplest approach, we create a new theme that extends the [igx-expansion-panel-theme]({environment:sassApiUrl}/index.html#function-igx-expansion-panel-theme) and pass the parameters, which we would like to change: 
+```scss
+$custom-panel-theme: igx-expansion-panel-theme(
+    $expanded-margin: 0px
+);
+```
+### Using CSS Variables
+
+The last step is to include the component's theme.
+```scss
+:host {
+    @include igx-css-vars($custom-panel-theme);
+}
+```
+
+### Using Theme Overrides
+
+In order to style components for older browsers, like Internet Explorer 11, we have to use a different approach, since CSS variables are not supported there.
+
+If the component is using the [Emulated](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`. To prevent the custom theme to leak into other components, be sure to include the `:host` selector before `::ng-deep`: 
+```scss
+:host {
+    ::ng-deep {
+        @include igx-expansion-panel($custom-panel-theme);    
+    }
+}
+```
 ## API Reference
 * [IgxAccordion API]({environment:angularApiUrl}/classes/igxaccordioncomponent.html})
 * [IgxExpansionPanel API]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html)
