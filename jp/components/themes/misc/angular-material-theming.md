@@ -95,7 +95,7 @@ Ignite UI テーマ エンジンを使用してコンポーネントのスタイ
 
 ### カラー パレット
 
-Ignite UI for Angular の [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) 関数は、`primary`、 `secondary`、`grays` 影の 3 つのサブパレットと、`info`、`success`、`warn`、`error` および `surface` の 5 つの追加カラーを含むカラー パレット マップを生成します。テーマ エンジンは、カラー バリエーションごとに、ビルド時にテキストのコントラスト カラーを自動的に生成します。これもパレットに含まれています。以下に、事前定義されたライト マテリアル パレットを示します:
+Ignite UI for Angular の [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) 関数は、`primary`、`secondary`、`grays` 影の 3 つのサブパレットと、`info`、`success`、`warn`、`error` および `surface` の 5 つの追加カラーを含むカラー パレット マップを生成します。テーマ エンジンは、カラー バリエーションごとに、ビルド時にテキストのコントラスト カラーを自動的に生成します。これもパレットに含まれています。以下に、事前定義されたライト マテリアル パレットを示します:
 
 ```scss
 $igx-light-palette: igx-palette(
@@ -163,7 +163,7 @@ $saturations: (50, 100, 200, 300, 400, 500, 600, 700, 800, 900, A100, A200, A400
 
 #### ライト テーマ パレット
 
-Ignite UI の `primary` カラー `$ igx-light-palette` と新しく作成した `material-like-palette` 関数を使用して、ライト プライマリ マテリアル テーマ パレットを定義します。結果をパラメーターとして `mat-palette` 関数に渡す必要があります。この関数は、`default`、 `lighter`、` darker`、および `text` 影のカラー値を生成し、それらをパレット マップに追加します。
+Ignite UI の `primary` カラー `$igx-light-palette` と新しく作成した `material-like-palette` 関数を使用して、ライト プライマリ マテリアル テーマ パレットを定義します。結果をパラメーターとして `mat-palette` 関数に渡す必要があります。この関数は、`default`、`lighter`、`darker`、および `text` 影のカラー値を生成し、それらをパレット マップに追加します。
 
 ```scss
 $light-palette-primary: mat-palette(
@@ -348,7 +348,7 @@ Ignite UI for Angular は、テーマごとに 4 つのデフォルト タイプ
 }
 ```
 
-Angular Material のタイポグラフィをカスタマイズするには、 `mat-typography-config` 関数を使用する必要があります。次のように、`$ font-family` を Ignite UI の `$material-typeface` と `$ button` スタイルでオーバーライドします。 
+Angular Material のタイポグラフィをカスタマイズするには、`mat-typography-config` 関数を使用する必要があります。次のように、`$ font-family` を Ignite UI の `$material-typeface` と `$ button` スタイルでオーバーライドします。 
 
 ```scss
 $custom-typography: mat-typography-config(

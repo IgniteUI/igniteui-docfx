@@ -301,7 +301,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントの�
 |制限|説明|
 |--- |--- |
 | 再帰的なテンプレート ノード | `igx-tree` は、テンプレートを介した igx-tree-nodes の再帰的な作成をサポートしていません。[詳細](https://github.com/IgniteUI/igniteui-angular/wiki/Tree-Specification#assumptions-and-limitations)をご覧ください。すべてのノードを手動で宣言する必要があります。つまり、非常に深い階層を視覚化する場合は、テンプレート ファイルのサイズに影響します。ツリーは、主にレイアウト/ナビゲーション コンポーネントとして使用することを目的としています。多数のレベルの深度と同種のデータを含む階層データ ソースを視覚化する必要がある場合は、[**IgxTreeGrid**](treegrid/tree-grid.md) を使用できます。|
-|古い ViewEngine (Ivy 以前) での IgxTreeNodes の使用|`enableIvy：false` が tsconfig.json に設定されている場合、Angular の View Engine (Ivy以前) にツリーが使用されないという問題があります。|
+|古い ViewEngine (Ivy 以前) での IgxTreeNodes の使用|`enableIvy:false` が tsconfig.json に設定されている場合、Angular の View Engine (Ivy以前) にツリーが使用されないという問題があります。|
 |FireFox のタブ ナビゲーション|ツリーにスクロールバーがある場合、キーボード ナビゲーションを介してツリーにタブで移動すると、最初に igx-tree-node 要素にフォーカスされます。これは FireFox のデフォルトの動作ですが、ツリーに明示的な `tabIndex = -1` を設定することで解決できます。
 ## API リファレンス
 <div class="divider"></div>

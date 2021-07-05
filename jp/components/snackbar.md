@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 # Snackbar
-<p class="highlight">Ignite UI for Angular SnackBar コンポーネントは、アクションを含むことができる単一行のメッセージで操作のフィードバックを提供します。SnackBar メッセージがその他の画面要素の上に表示され、画面の中央下に配置されます。</p>
+<p class="highlight">Ignite UI for Angular Snackbar コンポーネントは、アクションを含むことができる単一行のメッセージで操作のフィードバックを提供します。SnackBar メッセージがその他の画面要素の上に表示され、画面の中央下に配置されます。</p>
 <div class="divider"></div>
 
 ## Angular Snackbar の例
@@ -81,7 +81,7 @@ public close(element) {
 }
 ```
 
-サンプルを正しく構成した後、ボタンをクリックするとメッセージおよびアクション ボタンを含む Snackbar が表示されます。自動的に隠す機能が無効で、[CLOSE] ボタンのクリックで Snackbar が非表示になります。別のスナックバーが [`show()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#show) メソッドを介して別のメッセージを渡し、*表示時間*が終了すると非表示にします。 3 番目のコンポーネントは、メッセージをパラメーターとして [`show()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#show) メソッドに渡し、コンテンツ プロジェクションを使用してアイコンを追加します。
+サンプルを正しく構成した後、ボタンをクリックするとメッセージおよびアクション ボタンを含む Snackbar が表示されます。自動的に隠す機能が無効で、[CLOSE] ボタンのクリックで Snackbar が非表示になります。別のスナックバーが [`open()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#open) メソッドを介して別のメッセージを渡し、**表示時間**が終了すると非表示にします。3 番目のコンポーネントは、メッセージをパラメーターとして [`open()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#open) メソッドに渡し、コンテンツ プロジェクションを使用してアイコンを追加します。
 
 <code-view style="height: 230px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
