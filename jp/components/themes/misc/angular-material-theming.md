@@ -132,9 +132,9 @@ $mat-purple: (
 
 ### テーマ パレットの生成
 
-テーマ パレットを定義するには、色相から色へのマップを生成するマテリアルの `mat-palette` 関数を使用する必要があります。このサンプルでは、Ignite UI テーマを使用して Angular Material コンポーネントのスタイルを設定するため、構造に応じて `$ light-material-palette` を変換する必要があります。
+テーマ パレットを定義するには、色相から色へのマップを生成するマテリアルの `mat-palette` 関数を使用する必要があります。このサンプルでは、Ignite UI テーマを使用して Angular Material コンポーネントのスタイルを設定するため、構造に応じて `$light-material-palette` を変換する必要があります。
 
-これを実現するために、すべてのカラー バリアントのマップとそれに続くコントラスト カラーを返す `$color`、`$saturations`、および `$ palette` のパラメーターを使用して Sass 関数を作成します。使用している彩度は、[`マテリアル デザイン カラー システム`](https://material.io/design/color/the-color-system.html)に従います。
+これを実現するために、すべてのカラー バリアントのマップとそれに続くコントラスト カラーを返す `$color`、`$saturations`、および `$palette` のパラメーターを使用して Sass 関数を作成します。使用している彩度は、[`マテリアル デザイン カラー システム`](https://material.io/design/color/the-color-system.html)に従います。
 
 ```scss
 $saturations: (50, 100, 200, 300, 400, 500, 600, 700, 800, 900, A100, A200, A400, A700);
@@ -348,7 +348,7 @@ Ignite UI for Angular は、テーマごとに 4 つのデフォルト タイプ
 }
 ```
 
-Angular Material のタイポグラフィをカスタマイズするには、`mat-typography-config` 関数を使用する必要があります。次のように、`$ font-family` を Ignite UI の `$material-typeface` と `$ button` スタイルでオーバーライドします。 
+Angular Material のタイポグラフィをカスタマイズするには、`mat-typography-config` 関数を使用する必要があります。次のように、`$font-family` を Ignite UI の `$material-typeface` と `$button` スタイルでオーバーライドします。 
 
 ```scss
 $custom-typography: mat-typography-config(
