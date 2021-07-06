@@ -235,7 +235,7 @@ $custom-toast-theme: igx-toast-theme(
 ```
 
 >[!NOTE]
->`igx-color` および `igx-palette` は、色を生成および取得するための重要な機能です。使い方の詳細については[`パレット`](themes/palette.md)のトピックを参照してください。
+>`igx-color` および `igx-palette` は、色を生成および取得するための重要な機能です。使い方の詳細については[`パレット`](themes/palettes.md)のトピックを参照してください。
 
 ### スキーマの使用
 

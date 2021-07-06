@@ -389,7 +389,7 @@ Ignite UI for Angular のデータ グリッドは、大量のリアルタイム
     <li>[仮想化とパフォーマンス](grid/virtualization.md)</li>
     <li>[リモート データのロードオンデマンド](grid/virtualization.md#リモート仮想化)</li>
     <li>[セル テンプレート](grid/grid.md#cell-template)</li>
-    <li>[ARIA/a11y サポート](general/accessibility-compliance.md)</li>
+    <li>[ARIA/a11y サポート](interactivity/accessibility-compliance.md)</li>
 </ul>
 </div>
 
