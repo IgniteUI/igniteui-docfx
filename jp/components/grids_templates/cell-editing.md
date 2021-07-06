@@ -459,7 +459,7 @@ export class MyHGridEventsComponent {
 
 ### パレットの定義
 
-インデックス ファイルをインポート後、カスタム パレットを作成します。好きな 2 つの色を定義し、それらを使用して [`igx-palette`](../themes/palette.md) でパレットを作成しましょう。
+インデックス ファイルをインポート後、カスタム パレットを作成します。好きな 2 つの色を定義し、それらを使用して [`igx-palette`](../themes/palettes.md) でパレットを作成しましょう。
 
 ```scss
 $white: #fff;

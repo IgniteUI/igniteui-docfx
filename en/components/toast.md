@@ -234,7 +234,7 @@ $custom-toast-theme: igx-toast-theme(
 ```
 
 >[!NOTE]
->The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to the [`Palettes`](themes/palette.md) topic for detailed guidance on how to use them.
+>The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to the [`Palettes`](themes/palettes.md) topic for detailed guidance on how to use them.
 
 ### Using schemas
 

@@ -126,7 +126,21 @@ Let's turn the [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcompo
 </igx-grid>
 ```
 
-Each of the columns of the grid can be templated separately. The column expects `ng-template`  Angular grid module directives.
+Each of the columns of the grid can be templated separately. The column expects `ng-template` Angular grid module directives.
+
+It also expose [`additionalTemplateContext`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#additionaltemplatecontext) input that can be used for custom properties and any type of data context that you want to pass to the column itself:
+
+```html
+<igx-column [additionalTemplateContext]="contextObject">
+    <ng-template igxCell let-cell="cell" let-props="additionalTemplateContext">
+        {{ props.firstProperty }}
+    </ng-template>
+</igx-column>
+```
+
+```ts
+public contextObject = { firstProperty: 'testValue', secondProperty: 'testValue1'};
+```
 
 ### Header Template
 
