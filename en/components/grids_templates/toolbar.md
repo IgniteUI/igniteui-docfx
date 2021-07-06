@@ -165,6 +165,42 @@ toolbar interaction components.
 </igx-grid-toolbar>
 ```
 
+Each action now exposes a way to change the overlay settings of the actions dialog by using the [`overlaySettings`]({environment:angularApiUrl}/classes/igxgridtoolbarhidingcomponent.html#overlaysettings) input, example:
+
+```html
+<igx-grid-toolbar-actions>
+    <igx-grid-toolbar-pinning [overlaySettings]="overlaySettingsScaleCenter"></igx-grid-toolbar-pinning>
+    <igx-grid-toolbar-hiding [overlaySettings]="overlaySettingsAuto"></igx-grid-toolbar-hiding>
+</igx-grid-toolbar-actions>
+```
+
+```ts
+public data: any[];
+public positionStrategyScaleCenter = new GlobalPositionStrategy({
+    openAnimation: scaleInCenter,
+    closeAnimation: scaleOutCenter
+});
+public overlaySettingsScaleCenter = {
+    positionStrategy: this.positionStrategyScaleCenter,
+    scrollStrategy: new AbsoluteScrollStrategy(),
+    modal: true,
+    closeOnEscape: true
+};
+
+public positionStrategyAuto = new AutoPositionStrategy();
+public overlaySettingsAuto = {
+    positionStrategy: this.positionStrategyAuto,
+    scrollStrategy: new AbsoluteScrollStrategy(),
+    modal: false,
+    closeOnEscape: false
+};
+constructor() {
+    this.data = athletesData;
+}
+```
+
+The default overlaySettings are using *ConnectedPositionStrategy* with *Absolute* scroll strategy, *modal* set to false, with enabled *close on escape* and *close on outside click* interactions.
+
 ### Column pinning
 [This component]({environment:angularApiUrl}/classes/igxgridtoolbarpinningcomponent.html) provides the default UI for interacting with column pinning in the grid.
 The component is setup to work out of the box with the parent grid containing the toolbar as well as several input properties for customizing the UI, such as the component
