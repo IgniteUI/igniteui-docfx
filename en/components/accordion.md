@@ -73,7 +73,7 @@ The accordion simply renders any [`igx-expansion-panels`]({environment:angularAp
 </igx-accordion>
 ```
 
-Using the [panels]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#panels) option you can get a reference to the collection containing all [expansion panels]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) children of the `igx-accordion`.
+Using the [panels]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#panels) accessor you can get a reference to the collection containing all [expansion panels]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) children of the `igx-accordion`.
 
 ```typescript
 @ViewChild('accordion', { static: true })
@@ -84,7 +84,7 @@ this.accordion.panels;
 
 As demonstrated above, [singleBranchExpand]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#singleBranchExpand) option gives you the opportunity to set whether single or multiple panels can be expanded at a time.
 
-In regards to animation, you have two options. First, you could set the `animationSettings` option on a higher level for the entire accordion component:
+In regards to animation, you have two options. First, you could set the `animationSettings` property on a higher level for the entire accordion component:
 
 ```typescript
 import { useAnimation } from "@angular/animations";
