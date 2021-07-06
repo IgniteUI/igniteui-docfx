@@ -128,6 +128,20 @@ public grid: IgxGridComponent;
 
 グリッドの各列は別のテンプレートを持つことができます。列に `ng-template` Angular グリッド モジュール ディレクティブが必要です。
 
+It also expose [`additionalTemplateContext`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#additionaltemplatecontext) input that can be used for custom properties and any type of data context that you want to pass to the column itself:
+
+```html
+<igx-column [additionalTemplateContext]="contextObject">
+    <ng-template igxCell let-cell="cell" let-props="additionalTemplateContext">
+        {{ props.firstProperty }}
+    </ng-template>
+</igx-column>
+```
+
+```ts
+public contextObject = { firstProperty: 'testValue', secondProperty: 'testValue1'};
+```
+
 ### ヘッダー テンプレート
 
 `igxHeader` は列ヘッダーを対象とし、列オブジェクトをコンテキストとして提供します。
