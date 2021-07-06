@@ -14,7 +14,7 @@ An application can define multiple typography `scales` that may share scale cate
 
 Ignite UI for Angular exposes four default type scales for each of its themes - `$material-type-scale`, `$fluent-type-scale`, `$bootstrap-type-scale`, and `$indigo-type-scale`, which are in turn used by the `igx-typography` mixin to set the typography styles. You can, however, create additional type scales.
 
-In many cases you would only need to make slight modifications to the typography, thus it's recommended that you read the [Typography](./typography.md) section of the CSS Variables documentation first, if you haven't already. Using Sass to modify the typography is only required if you want to make deeper changes pertaining to the entire typographic scale.
+In many cases you would only need to make slight modifications to the typography, thus it's recommended that you read the [Typography](../typography.md) section of the CSS Variables documentation first, if you haven't already. Using Sass to modify the typography is only required if you want to make deeper changes pertaining to the entire typographic scale.
 
 ## Usage
 > [!IMPORTANT]

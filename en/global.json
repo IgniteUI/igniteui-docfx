@@ -10,5 +10,9 @@
     "_gitHubBtnLbl": "View page on ",
     "_themeUsage": true,
     "_demosBaseUrlVar": "{environment:demosBaseUrl}",
-    "_platform": "angular"
+    "_platform": "angular",
+    "_initialPage": "components/general/getting-started",
+    "_toc-dir": "components",
+    "_useRedirects": true,
+    "_enableSearch": true
 }

@@ -9,10 +9,10 @@ _keywords: angular data grid, igniteui for angular, infragistics
 The Ignite UI for Angular Hierarchical Data Grid is used to display and manipulate hierarchical data with ease. Quickly bind your data with very little code or use a variety of events to customize different behaviors. This component provides a rich set of features like data selection, excel style filtering, sorting, paging, templating and column moving. The Hierarchical Grid builds upon the Flat Grid Component and extends its functionality by allowing the users to expand or collapse the rows of the parent grid, revealing the corresponding child grid, when more detailed information is needed. Displaying of hierarchical data has never been easier and beautiful thanks to the Material Table-based UI Grid.
 
 ## Angular Hierarchical Data Grid Example
-In this angular grid example you can see how users can visualize hierarchical sets of data and use cell templating to add other visual components like [Sparkline](../sparkline.md).
+In this angular grid example you can see how users can visualize hierarchical sets of data and use cell templating to add other visual components like [Sparkline](../charts/types/sparkline-chart.md).
 
-<code-view style="height:520px" 
-           data-demos-base-url="{environment:lobDemosBaseUrl}" 
+<code-view style="height:520px"
+           data-demos-base-url="{environment:lobDemosBaseUrl}"
            iframe-src="{environment:lobDemosBaseUrl}/hierarchical-grid/hierarchical-grid-resizing" alt="Angular Hierarchical Data Grid Example">
 </code-view>
 
@@ -57,7 +57,7 @@ public hgrid1: IgxHierarchicalGridComponent;
 ## Data Binding
 
 **igx-hierarchical-grid** derives from **igx-grid** and shares most of its functionality. The main difference is that it allows multiple levels of hierarchy to be defined. They are configured through a separate tag within the definition of **igx-hierarchical-grid**, called **igx-row-island**. The **igx-row-island** component defines the configuration for each child grid for the particular level. Multiple row islands per level are also supported.
-The Hierarchical Grid supports two ways of binding to data: 
+The Hierarchical Grid supports two ways of binding to data:
 
 ### Using hierarchical data
 
@@ -210,7 +210,7 @@ This UI is disabled by default for performance reasons and it is not recommended
 
 ## Features
 
-The grid features could be enabled and configured through the **igx-row-island** markup - they get applied for every grid that is created for it. Changing options at runtime through the row island instance changes them for each of the grids it has spawned. 
+The grid features could be enabled and configured through the **igx-row-island** markup - they get applied for every grid that is created for it. Changing options at runtime through the row island instance changes them for each of the grids it has spawned.
 
 ```html
 <igx-hierarchical-grid [data]="localData" [displayDensity]="density" [autoGenerate]="false"
@@ -242,16 +242,16 @@ The following grid features work on a per grid level, which means that each grid
 - Summaries
 - Search
 
-The Selection and Navigation features work globally for the whole **igx-hierarchical-grid** 
+The Selection and Navigation features work globally for the whole **igx-hierarchical-grid**
 
-- Selection 
+- Selection
     Selection does not allow selected cells to be present for two different child grids at once.
 - Navigation
     When navigating up/down, if next/prev element is a child grid, navigation will continue in the related child grid, marking the related cell as selected and focused. If the child cell is outside the current visible view port it is scrolled into view so that selected cell is always visible.
 
 ## Collapse All Button
 
-The Hierarchical Grid allows the users to conveniently collapse all its currently expanded rows by pressing the "Collapse All" button at its top left corner. Additionally, every child grid which contains other grids and is a Hierarchical Grid itself, also has such a button - this way the user is able to collapse only a given grid in the hierarchy: 
+The Hierarchical Grid allows the users to conveniently collapse all its currently expanded rows by pressing the "Collapse All" button at its top left corner. Additionally, every child grid which contains other grids and is a Hierarchical Grid itself, also has such a button - this way the user is able to collapse only a given grid in the hierarchy:
 
 <img class="responsive-img" src="../../images/unfold_less_icon_screenshot.jpg" srcset="../../images/unfold_less_icon_screenshoto@2x.jpg 2x" />
 
@@ -268,12 +268,12 @@ Calling CRUD API methods should still be done through each separate grid instanc
 
 ## Styling
 
-The igxHierarchicalGrid allows styling through the [Ignite UI for Angular Theme Library](../themes/sass/component-themes.md). The grid's [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) exposes a wide variety of properties, which allow the customization of all the features of the grid. 
+The igxHierarchicalGrid allows styling through the [Ignite UI for Angular Theme Library](../themes/sass/component-themes.md). The grid's [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) exposes a wide variety of properties, which allow the customization of all the features of the grid.
 
-In the below steps, we are going through the steps of customizing the igxHierarchicalGrid styling.     
+In the below steps, we are going through the steps of customizing the igxHierarchicalGrid styling.
 
-### Importing global theme   
-To begin the customization of the hierarchical grid, you need to import the `index` file, where all styling functions and mixins are located. 
+### Importing global theme
+To begin the customization of the hierarchical grid, you need to import the `index` file, where all styling functions and mixins are located.
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index'
@@ -299,22 +299,22 @@ $custom-theme: igx-grid-theme(
   $resize-line-color: #ffcd0f,
   $row-highlight: #ffcd0f
 );
-```   
+```
 
 ### Defining a custom color palette
-In the approach, that was described above, the color values were hardcoded. Alternatively, you can achieve greater flexibility, using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.   
-`igx-palette` generates a color palette, based on provided primary and secondary colors.  
+In the approach, that was described above, the color values were hardcoded. Alternatively, you can achieve greater flexibility, using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
+`igx-palette` generates a color palette, based on provided primary and secondary colors.
 
  ```scss
 $black-color: #494949;
 $yellow-color: #FFCD0F;
- 
+
 $custom-palette: igx-palette(
   $primary: $black-color,
   $secondary: $yellow-color
 );
 ```
-After a custom palette has been generated, the `igx-color` function can be used to obtain different varieties of the primary and the secondary colors.   
+After a custom palette has been generated, the `igx-color` function can be used to obtain different varieties of the primary and the secondary colors.
 ```scss
 $custom-theme: igx-grid-theme(
     $cell-active-border-color: (igx-color($custom-palette, "secondary", 500)),
@@ -328,10 +328,10 @@ $custom-theme: igx-grid-theme(
     $resize-line-color: (igx-color($custom-palette, "secondary", 500)),
     $row-highlight: (igx-color($custom-palette, "secondary", 500))
 );
-```   
+```
 
 ### Defining custom schemas
-You can go even further and build flexible structure that has all the benefits of a [**schema**](../themes/sass/schemas.md). The **schema** is the recipe of a theme.   
+You can go even further and build flexible structure that has all the benefits of a [**schema**](../themes/sass/schemas.md). The **schema** is the recipe of a theme.
 Extend one of the two predefined schemas, that are provided for every component. In our case, we will use `$_light_grid`.
 ```scss
 $custom-grid-schema: extend($_light-grid,(
@@ -347,9 +347,9 @@ $custom-grid-schema: extend($_light-grid,(
     row-highlight: (igx-color:('secondary', 500))
 ));
 ```
-In order for the custom schema to be applied, either `light`, or `dark` globals has to be extended. The whole process is actually supplying a component with a custom schema and adding it to the respective component theme afterwards.   
+In order for the custom schema to be applied, either `light`, or `dark` globals has to be extended. The whole process is actually supplying a component with a custom schema and adding it to the respective component theme afterwards.
 ```scss
-$my-custom-schema: extend($light-schema, ( 
+$my-custom-schema: extend($light-schema, (
     igx-grid: $custom-grid-schema
 ));
 
@@ -357,10 +357,10 @@ $custom-theme: igx-grid-theme(
     $palette: $custom-palette,
     $schema: $my-custom-schema
 );
-```   
+```
 
 ### Applying the custom theme
-The easiest way to apply your theme is with a `sass` `@include` statement in the global styles file: 
+The easiest way to apply your theme is with a `sass` `@include` statement in the global styles file:
 
 ```scss
 @include igx-grid($custom-theme);
@@ -383,12 +383,12 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
         @include igx-grid($custom-theme);
     }
 }
-```   
+```
 
 ### Demo
 
-<code-view style="height:505px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:505px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-styling" >
 </code-view>
 

@@ -12,10 +12,12 @@ Angular Excel Engine の [`worksheet`]({environment:dvApiBaseUrl}/products/ignit
 
 ## Angular ワークシートの使用の例
 
-<div class="sample-container loading" style="height: 200px">
-    <iframe id="excel-library-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/excel/excel-library-operations-on-worksheets' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular ワークシートの使用の例"></iframe>
-</div>
-
+<code-view style="height: 200px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/excel/excel-library-operations-on-worksheets"
+           alt="Angular ワークシートの使用の例"
+           github-src="excel/excel-library/operations-on-worksheets">
+</code-view>
 
 <div class="divider--half"></div>
 

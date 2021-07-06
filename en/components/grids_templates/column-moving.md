@@ -233,7 +233,7 @@ $dark-grid-column-moving-theme: igx-grid-theme(
 
 
 > [!NOTE]
-> The igx-color and igx-palette are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](/components/themes/palette.html) topic for detailed guidance on how to use them.
+> The igx-color and igx-palette are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](/components/themes/palettes.html) topic for detailed guidance on how to use them.
 
 ### Using Schemas
 

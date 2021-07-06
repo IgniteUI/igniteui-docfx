@@ -12,15 +12,12 @@ Ignite UI for Angular 極座標スプライン エリア チャートは、極�
 
 ## Angular 極座標スプライン エリア チャートの例
 
-<div class="sample-container loading" style="height: 500px">
-    <iframe id="data-chart-type-polar-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-polar-spline-area-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular 極座標スプライン エリア チャートの例"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-polar-spline-area-series-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
-    </button>
-
-
-</div>
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-polar-spline-area-chart"
+           alt="Angular 極座標スプライン エリア チャートの例"
+           github-src="charts/data-chart/polar-spline-area-chart">
+</code-view>
 
 <div class="divider--half"></div>
 

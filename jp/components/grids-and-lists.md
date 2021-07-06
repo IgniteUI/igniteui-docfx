@@ -389,7 +389,7 @@ Ignite UI for Angular のデータ グリッドは、大量のリアルタイム
     <li>[仮想化とパフォーマンス](grid/virtualization.md)</li>
     <li>[リモート データのロードオンデマンド](grid/virtualization.md#リモート仮想化)</li>
     <li>[セル テンプレート](grid/grid.md#cell-template)</li>
-    <li>[ARIA/a11y サポート](general/accessibility-compliance.md)</li>
+    <li>[ARIA/a11y サポート](interactivity/accessibility-compliance.md)</li>
 </ul>
 </div>
 
@@ -499,22 +499,3 @@ Ignite UI for Angular は、サブスクリプション モデルで利用可能
         </div>
     </div>
 </div>
-
-<script>
-    (function(){
-        var acc = document.getElementsByClassName("faqs-accordion-content");
-        var i;
-
-        for (i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var panel = this.lastElementChild;
-            if (panel.style.maxHeight) {
-            panel.style.maxHeight = null;
-            } else {
-            panel.style.maxHeight = panel.scrollHeight + "px";
-            }
-        });
-        }
-    })()
-</script>

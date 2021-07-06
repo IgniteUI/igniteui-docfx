@@ -10,12 +10,12 @@ The Ignite UI for Angular Data Grid is used to display and manipulate data with 
 
 ## Angular Data Grid Example
 
-Boston Marathon 2020 – In this angular grid example, you can see how users can do both basic and excel-style filtering, live-data sorting, as well as using of grid summaries and cell templating that includes our [Sparkline](../sparkline.md) component,
+Boston Marathon 2020 – In this angular grid example, you can see how users can do both basic and excel-style filtering, live-data sorting, as well as using of grid summaries and cell templating that includes our [Sparkline](../charts/types/sparkline-chart.md) component,
 [Circular Progress Indicator](../circular-progress.md) component, and [Icons](../icon.md). The demo also includes  custom paging and per page usage part of the [Angular Pagination](paging.md).
 
 
-<code-view style="height:700px" 
-           data-demos-base-url="{environment:lobDemosBaseUrl}" 
+<code-view style="height:700px"
+           data-demos-base-url="{environment:lobDemosBaseUrl}"
            iframe-src="{environment:lobDemosBaseUrl}/grid/grid" alt="Angular data grid example">
 </code-view>
 
@@ -126,7 +126,21 @@ Let's turn the [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcompo
 </igx-grid>
 ```
 
-Each of the columns of the grid can be templated separately. The column expects `ng-template`  Angular grid module directives.
+Each of the columns of the grid can be templated separately. The column expects `ng-template` Angular grid module directives.
+
+It also expose [`additionalTemplateContext`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#additionaltemplatecontext) input that can be used for custom properties and any type of data context that you want to pass to the column itself:
+
+```html
+<igx-column [additionalTemplateContext]="contextObject">
+    <ng-template igxCell let-cell="cell" let-props="additionalTemplateContext">
+        {{ props.firstProperty }}
+    </ng-template>
+</igx-column>
+```
+
+```ts
+public contextObject = { firstProperty: 'testValue', secondProperty: 'testValue1'};
+```
 
 ### Header Template
 
@@ -504,8 +518,8 @@ configuration. Same goes for grouping and editing operations with or without tra
 >The grids **do not** support this kind of binding for `primary key`, `foreign key` and `child key` properties where applicable.
 
 
-<code-view style="height:460px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:460px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-nested-data-binding-2" >
 </code-view>
 
@@ -594,8 +608,8 @@ The custom template for the column, that will render the nested data:
 And the result from this configuration is:
 
 
-<code-view style="height:460px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:460px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-nested-data-binding" >
 </code-view>
 
@@ -673,8 +687,8 @@ Keep in mind that with the above defined template you will not be able to make e
 And the result is:
 
 
-<code-view style="height:550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:550px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-composite-data-binding" >
 </code-view>
 
