@@ -13,8 +13,8 @@ If your trial has ended or your subscription [has expired](http://www.infragisti
 
 For detailed explanation of the Ignite UI license agreement and terms of use, [click here](https://www.infragistics.com/legal/license/igultimate-la).
 Infragistics offers free, non-commercial, not-for-resale (NFR) licenses for the following:
-  -	If you are part of a developer program like the Microsoft MVP, Microsoft Regional Director, Google Developer Expert, etc.  
-  -	If you are a primary, secondary or university student, or an academic institution, or a professor.  
+  - If you are part of a developer program like the Microsoft MVP, Microsoft Regional Director, Google Developer Expert, etc.  
+  - If you are a primary, secondary or university student, or an academic institution, or a professor.  
   - If you qualify for a free, non-commercial, NFR license or if you have any license questions, please [contact us](https://www.infragistics.com/about-us/contact-us).
 
 ## Ignite UI for Angular npm packages - Using the Private npm feed
