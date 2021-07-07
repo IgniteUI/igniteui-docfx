@@ -9,7 +9,7 @@ _keywords: angular accordion, angular accordion component, angular accordion exa
 The Angular Accordion Component allows users to navigate among multiple collapsible panels displayed in a single container. The accordion offers keyboard navigation and API to control the underlying panels' expansion state.
 
 ## Angular Accordion Example
-In this basic Angular Accordion example, you can see how to define an `igx-accrodion` and its [expansion panels]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html). The sample also demonstrates the two types of expansion behavior. The switch button toggles the [singleBranchExpand]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#singleBranchExpand) option to toggle between single and multiple branches to be expanded at a time.
+In this basic Angular Accordion example, you can see how to define an `igx-accrodion` and its [expansion panels]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html). The sample also demonstrates the two types of expansion behavior. The switch button sets the [singleBranchExpand]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#singleBranchExpand) property to toggle between single and multiple branches to be expanded at a time.
 
 <code-view style="height:460px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -83,7 +83,7 @@ public accordion: IgxAccordionComponent;
 this.accordion.panels;
 ```
 
-As demonstrated above, the [singleBranchExpand]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#singleBranchExpand) option gives you the ability to set whether single or multiple panels can be expanded at a time.
+As demonstrated above, the [singleBranchExpand]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#singleBranchExpand) property gives you the ability to set whether single or multiple panels can be expanded at a time.
 
 With regards to animation, you have two options. First, you could set the `animationSettings` property on the accordion component:
 
