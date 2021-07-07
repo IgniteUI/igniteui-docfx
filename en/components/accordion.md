@@ -78,7 +78,7 @@ Using the [panels]({environment:angularApiUrl}/classes/igxaccordioncomponent.htm
 
 ```typescript
 @ViewChild('accordion', { static: true })
-public accordion: IgxAccordionComponent;
+public accordion!: IgxAccordionComponent;
 
 this.accordion.panels;
 ```
