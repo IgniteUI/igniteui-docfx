@@ -249,7 +249,7 @@ This will ensure that the remotely generated ids are always reflected in the loc
 The row adding UI comprises the buttons in the `IgxActionStrip` editing actions, the editing editors and overlay, as well as the snackbar which allows end users to scroll to the newly added row. To style these components you may refer to these comprehensive guides in their respective topics:
 
 - [@@igComponent Row Editing](row-editing.md#styling)
-- [IgxSnackbar](../snackbar.html#styling)
+- [IgxSnackbar](../snackbar.md#styling)
 - [IgxActionStrip](../action-strip.md#styling)
 
 ## API References

@@ -113,9 +113,9 @@ The following code snippet demonstrates how to use colors from Bootstrap 4 with 
 <div class="divider--half"></div>
 
 Related topics:
-* [Palettes](palette.md)
+* [Palettes](../palettes.md)
 * [Schemas](schemas.md)
-* [Global Theme](global-theme.md)
+* [Global Themes](global-themes.md)
 * [Component Themese](component-themes.md)
 
 Our community is active and always welcoming to new ideas.

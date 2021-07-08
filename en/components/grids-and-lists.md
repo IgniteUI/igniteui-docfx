@@ -234,7 +234,7 @@ This example demonstrates a few of the data grid’s key features:
 <ul id="features-list">
 <li>[**Virtualized Rows and Columns**](grid/virtualization.md) so you can load millions of records</li>
 
-<li>[**Inline Editing**](grid/row-editing.md) with Cell, Row, and [**Batch**](grid/batch-editing.md) Update options</li>
+<li>[**Inline Editing**](grid/editing.md) with [**Cell**](grid/cell-editing.md), [**Row**](grid/row-editing.md), and [**Batch**](grid/batch-editing.md) Update options</li>
 
 <li>[**Excel-style Filtering**](grid/excel-style-filtering.md) and full [**Excel Keyboard Navigation**](grid/keyboard-navigation.md) capability</li>
 

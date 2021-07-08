@@ -214,7 +214,7 @@ The [IgxAccordionComponent]({environment:angularApiUrl}/classes/igxaccordioncomp
  - <kbd>End</kbd> - navigates to the LAST enabled panel in the accordion
 
 ## Angular Accordion Styling
-The [accordion]({environment:angularApiUrl}/classes/igxaccordioncomponent.html}) serves only as a container for the underlying [panels]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html). Styles can be applied directly through the panel's theme, as described in the [styling section of the IgxExpansionPanel topic](expansion-panel.html#styling).
+The [accordion]({environment:angularApiUrl}/classes/igxaccordioncomponent.html}) serves only as a container for the underlying [panels]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html). Styles can be applied directly through the panel's theme, as described in the [styling section of the IgxExpansionPanel topic](expansion-panel.md#styling).
 
 By design, there is a margin set to the expanded panels, in case that they are positioned within an `igx-accordion`. In order to modify it there is a property exposed inside the igx-expansion-panel theme.
 In order to take advantage of the functions exposed by the theming engine, we have to import the `index` file in our style file:

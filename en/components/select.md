@@ -67,7 +67,7 @@ By default, the Select component will use the `innerText` of the item element in
     </igx-select-item>
 </igx-select>
 ```
-To see the `text` property in action with a bit more sophisticated item templates, check the grouping sample below [Select with Groups](#grouped-select).
+To see the `text` property in action with a bit more sophisticated item templates, check the grouping sample below [Select with Groups](#group-select-items).
 
 ### Input Properties
 
