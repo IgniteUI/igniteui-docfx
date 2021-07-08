@@ -117,7 +117,7 @@ ig new newAngularProject --framework=angular --type=igx-ts --template=side-nav
     <code>--skip-git</code> (alias: <code>--sg</code>)
   </p>
   <p>
-    このオプションを使用すると、Git によるリポジトリの自動初期化はスキップされます。オプションを省略すると、グローバルな <a href="config">skipGit</a>構成プロパティが使用されます。
+    このオプションを使用すると、Git によるリポジトリの自動初期化はスキップされます。オプションを省略すると、グローバルな skip-git 構成プロパティが使用されます。
   </p>
 </details>
 

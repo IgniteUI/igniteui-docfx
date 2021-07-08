@@ -59,7 +59,7 @@ ng add igniteui-angular
 
 During the installation process you will be asked if you would like to enable polyfills for IE, Edge and Safari. This will install the `web-animations-js` package in your project, which is required if you use `AnimationBuilder` in your application and one of these browsers. You can also choose to add CSS library to reset HTML element styles across browsers and the `minireset.css` will be installed in your application.
 
-If you want to start using the **Licensed Ignite UI for Angular package** it is strongly recommended to follow the [Upgrading packages guide with Schematics and Ignite UI CLI](../general/ignite-ui-licensing.md#upgrading-packages-using-our-angular-schematics-or-ignite-ui-cli).
+If you want to start using the **Licensed Ignite UI for Angular package** it is strongly recommended to follow the [Upgrading packages guide with Schematics and Ignite UI CLI](ignite-ui-licensing.md#upgrading-packages-using-our-angular-schematics-or-ignite-ui-cli).
 
 Following is a quick overview of the steps that you need to perform in order to start using the **Licensed version of Ignite UI for Angular**. Depending on your project setup, either run the following schematic in your project:
 
@@ -72,16 +72,16 @@ or if using `igniteui-cli`:
 ig upgrade-packages
 ```
 The schematic will take care of switching the package dependencies of the project and update source references.
-[You'll be asked to login to our npm registry if not already setup](../general/ignite-ui-licensing.md#how-to-setup-your-environment-to-use-the-private-npm-feed-step-by-step-guide).
+[You'll be asked to login to our npm registry if not already setup](ignite-ui-licensing.md#how-to-setup-your-environment-to-use-the-private-npm-feed-step-by-step-guide).
 
 #### Login to our npm registry with a new setup
 The approach described above covers only the scenarios where Ignite UI for Angular Trial package is already installed. If you are performing a new setup of a project or just starting with using Ignite UI for Angular, follow the guidance below.
 
-It's very important to [perform a correct setup of the private npm feed environment](../general/ignite-ui-licensing.md#how-to-setup-your-environment-to-use-the-private-npm-feed-step-by-step-guide), by:
+It's very important to [perform a correct setup of the private npm feed environment](ignite-ui-licensing.md#how-to-setup-your-environment-to-use-the-private-npm-feed-step-by-step-guide), by:
 - Ensuring a valid setup of the private registry.
 - Log in to our private feed using npm by specifying a non-trial user account and password.
 
-Details on the entire process [could be found here](../general/ignite-ui-licensing.md#how-to-setup-your-environment-to-use-the-private-npm-feed-step-by-step-guide).
+Details on the entire process [could be found here](ignite-ui-licensing.md#how-to-setup-your-environment-to-use-the-private-npm-feed-step-by-step-guide).
 
 ### Quick Start with Angular Schematics & Ignite UI  CLI
 To create an application from scratch and configure it to use the Ignite UI for Angular components you can use either the Ignite UI for Angular Schematics or the Ignite UI CLI. The first step is to install the respective package globally as follows:
@@ -108,7 +108,7 @@ ig
 ```
 
 >[!NOTE]
-> At some point during the steps execution [you'll be asked to login to our npm registry if not already setup](../general/ignite-ui-licensing.md#how-to-setup-your-environment-to-use-the-private-npm-feed-step-by-step-guide). This is part of the Trial to License account setup.
+> At some point during the steps execution [you'll be asked to login to our npm registry if not already setup](ignite-ui-licensing.md#how-to-setup-your-environment-to-use-the-private-npm-feed-step-by-step-guide). This is part of the Trial to License account setup.
 
 <div style="display:inline-block;">
     <a style="background: url(../../images/general/buildCLIapp.gif); display:flex; justify-content:center; width: 80vw; max-width:540px; min-height:315px;"
