@@ -125,7 +125,7 @@ Finally calling [`detach(id)`]({environment:angularApiUrl}/classes/igxoverlayser
 <div class="divider--half"></div>
 
 ## Attaching Components
-In the below demo, we can pass the [IgxCard](card.md#card-demo) component through the Overlay Service's [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) method to generate an ID. Then we call the [`show()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#show) method with the provided ID to dynamically attach the card to the DOM in a modal container.
+In the below demo, we can pass the [IgxCard](card.md#angular-card-example) component through the Overlay Service's [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) method to generate an ID. Then we call the [`show()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#show) method with the provided ID to dynamically attach the card to the DOM in a modal container.
 
 
 

@@ -403,7 +403,7 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 |Group By|Group By feature is not supported by the hierarchical grid.|
 
 > [!NOTE]
-> `igxHierarchicalGrid` uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for `igxHierarchicalGrid`. For more details see [igxForOf Known Issues](../for-of.html#known-limitations) section.
+> `igxHierarchicalGrid` uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for `igxHierarchicalGrid`. For more details see [igxForOf Known Issues](../for-of.md#known-limitations) section.
 
 ## API References
 

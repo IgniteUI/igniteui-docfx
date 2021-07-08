@@ -60,7 +60,7 @@ ng add igniteui-angular
 
 インストール時に IE、Edge、および Safari のポリフィルを有効にするかどうかのプロンプトが表示されます。 これにより、プロジェクトに `web-animations-js` パッケージがインストールされます。これは、アプリケーションとこれらのブラウザーのいずれかで `AnimationBuilder` を使用する場合に必要です。ブラウザーで HTML 要素のスタイルをリセットする CSS ライブラリを追加することもできます。`minireset.css` がアプリケーションにインストールされます。
 
-**ライセンス版の Ignite UI for Angular パッケージ**の使用を開始する場合、[Schematics および Ignite UI CLI を使用したパッケージのアップグレードガイド](../general/ignite-ui-licensing.md#angular-schematics-または-ignite-ui-cli-を使用したパッケージのアップグレード)に従うことをお勧めします。
+**ライセンス版の Ignite UI for Angular パッケージ**の使用を開始する場合、[Schematics および Ignite UI CLI を使用したパッケージのアップグレードガイド](ignite-ui-licensing.md#angular-schematics-または-ignite-ui-cli-を使用したパッケージのアップグレード)に従うことをお勧めします。
 
 以下は、**ライセンス版の Ignite UI for Angular** の使用を開始するために実行する必要がある手順の概要です。プロジェクトのセットアップに応じて、プロジェクトで以下の schematic を実行します。
 
@@ -72,16 +72,16 @@ ng g @igniteui/angular-schematics:upgrade-packages
 ```bash
 ig upgrade-packages
 ```
-Schematic はプロジェクトのパッケージの依存関係を切り替え、ソース参照を更新します。[まだセットアップされていない場合、NPM レジストリへのログインが要求されます](../general/ignite-ui-licensing.md#プライベート-npm-フィードを使用するための環境設定方法)。
+Schematic はプロジェクトのパッケージの依存関係を切り替え、ソース参照を更新します。[まだセットアップされていない場合、NPM レジストリへのログインが要求されます](ignite-ui-licensing.md#プライベート-npm-フィードを使用するための環境設定方法)。
 
 #### 新しいセットアップで npm レジストリにログイン
 上記の方法は、Ignite UI for Angular トライアル版パッケージが既にインストールされているシナリオのみを対象としています。プロジェクトの新しいセットアップを実行する場合、または Ignite UI for Angular を使用する場合は、以下のガイダンスに従ってください。
 
-次の方法で[プライベート npm フィード環境の正しいセットアップを実行する](../general/ignite-ui-licensing.md#プライベート-npm-フィードを使用するための環境設定方法)ことが重要です:
+次の方法で[プライベート npm フィード環境の正しいセットアップを実行する](ignite-ui-licensing.md#プライベート-npm-フィードを使用するための環境設定方法)ことが重要です:
 - プライベート レジストリの有効なセットアップを確認します。
 - トライアル版以外のユーザー アカウントとパスワードを指定して npm を使用してプライベート フィードにログインします。
 
-プロセス全体の詳細は[こちらにあります](../general/ignite-ui-licensing.md#プライベート-npm-フィードを使用するための環境設定方法)。
+プロセス全体の詳細は[こちらにあります](ignite-ui-licensing.md#プライベート-npm-フィードを使用するための環境設定方法)。
 
 ### Angular Schematics & Ignite UI CLI のクイック スタート
 アプリケーションをゼロから作成し、Ignite UI for Angular コンポーネントを使用するように構成するには、Ignite UI for Angular Schematics または Ignite UI CLI を使用できます。最初の手順には、以下のように各パッケージをグローバルにインストールします。
@@ -108,7 +108,7 @@ ig
 ```
 
 >[!NOTE]
-> [まだセットアップされていない場合、手順の実行中のある時点で NPM レジストリへのログインが要求されます](../general/ignite-ui-licensing.md#プライベート-npm-フィードを使用するための環境設定方法)。これは、トライアル版からライセンス アカウントのセットアップの一部です。
+> [まだセットアップされていない場合、手順の実行中のある時点で NPM レジストリへのログインが要求されます](ignite-ui-licensing.md#プライベート-npm-フィードを使用するための環境設定方法)。これは、トライアル版からライセンス アカウントのセットアップの一部です。
 
 <div style="display:inline-block;">
     <a style="background: url(../../images/general/buildCLIapp.gif); display:flex; justify-content:center; width: 80vw; max-width:540px; min-height:315px;"
