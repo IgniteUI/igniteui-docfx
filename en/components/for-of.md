@@ -133,7 +133,7 @@ Virtualization works similarly to Paging by slicing the data into smaller chucks
 
 The `igxFor` directivе is used to virtualize data in both vertical and horizontal directions inside the `igxGrid`. 
 
-Follow the [Grid Virtualization](virtualization.md) topic for more detailed information and demos.
+Follow the [Grid Virtualization](grid/virtualization.md) topic for more detailed information and demos.
 
 ### igxFor bound to remote service
 The [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) directive can be bound to a remote service using the `Observable` property - `remoteData` (in the following case). The `chunkLoading` event should also be utilized to trigger the requests for data.
