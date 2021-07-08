@@ -14,8 +14,8 @@ Ignite UI for Angular Data Grid は、データの表示や操作が簡単にで
 Boston Marathon 2020 – この Angular グリッドの例では、ユーザーが基本スタイルと Excel スタイルの両方のフィルタリング、ライブ データのソート、および[スパークライン](../sparkline.md) コンポーネント、[Circular Progress Indicator](../circular-progress.md) コンポーネントと [Icons](../icon.md) を含むグリッド集計とセル テンプレートの使用を実行する方法を確認できます。デモには、[Angular ページネーション](paging.md)のカスタム ページングとページごとの使用法も含まれています。
 
 
-<code-view style="height:700px" 
-           data-demos-base-url="{environment:lobDemosBaseUrl}" 
+<code-view style="height:700px"
+           data-demos-base-url="{environment:lobDemosBaseUrl}"
            iframe-src="{environment:lobDemosBaseUrl}/grid/grid" alt="Angular データ グリッドの例">
 </code-view>
 
@@ -127,6 +127,20 @@ public grid: IgxGridComponent;
 ```
 
 グリッドの各列は別のテンプレートを持つことができます。列に `ng-template` Angular グリッド モジュール ディレクティブが必要です。
+
+また、カスタム プロパティや列自体に渡す任意のタイプのデータ コンテキストに使用できる [`additionalTemplateContext`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#additionaltemplatecontext) 入力も公開します。
+
+```html
+<igx-column [additionalTemplateContext]="contextObject">
+    <ng-template igxCell let-cell="cell" let-props="additionalTemplateContext">
+        {{ props.firstProperty }}
+    </ng-template>
+</igx-column>
+```
+
+```ts
+public contextObject = { firstProperty: 'testValue', secondProperty: 'testValue1'};
+```
 
 ### ヘッダー テンプレート
 
