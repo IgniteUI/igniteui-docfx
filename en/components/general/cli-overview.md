@@ -116,7 +116,7 @@ Additionally, you can specify **arguments** to control the theme or skip package
     <code>--skip-git</code> (alias: <code>--sg</code>)
   </p>
   <p>
-    When this option is used, the automatic repository initialization with Git will be skipped. If the option is omitted, then the global <a href="config">skipGit</a> configuration property is used.
+    When this option is used, the automatic repository initialization with Git will be skipped. If the option is omitted, then the global skip-git configuration property is used.
   </p>
 </details>
 

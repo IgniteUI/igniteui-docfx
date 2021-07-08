@@ -3,6 +3,7 @@ title: Ignite UI for Angular Accessibility Compliance | Ignite UI for Angular | 
 _description: Ignite UI for Angular Accessibility Support and Compliance - Section 508 Compliance, WCAG and ARIA .
 _keywords: accessibility, angular, ignite ui for angular, infragistics
 ---
+
 <style>
 .greenCheck {
   content:url("../../images/general/greenCheck.png");
@@ -84,7 +85,8 @@ The matrix below provides a high-level outline of the accessibility support prov
 |<span class="redCheck" />|The control/component is not entirely accessible unless you perform some sort of action.||
 |'white space'|this particular rule does not apply to the control||
 
-> [!WARNING] The table above is relevant only to the *Default theme* of Ignite UI for Angular theming library. The checklist compliance might be different when it comes to custom themes, typography and any visual changes related to animations and colors.
+> [!WARNING] 
+> The table above is relevant only to the *Default theme* of Ignite UI for Angular theming library. The checklist compliance might be different when it comes to custom themes, typography and any visual changes related to animations and colors.
 
  ### Compliance Information
 
@@ -165,7 +167,8 @@ The matrix below provides a high-level outline of the accessibility support prov
 |<span class="redCheck" />|The control/component is not entirely accessible unless you perform some sort of action.||
 |'white space'|this particular rule does not apply to the control||
 
-> [!WARNING] The table above is relevant only to the *Default theme* of Ignite UI for Angular theming library. The checklist compliance might be different when it comes to custom themes, typography and any visual changes related to animations and colors.
+> [!WARNING] 
+> The table above is relevant only to the *Default theme* of Ignite UI for Angular theming library. The checklist compliance might be different when it comes to custom themes, typography and any visual changes related to animations and colors.
 
 ### Compliance Information
 
@@ -211,7 +214,7 @@ With that being said, let's move to the following example:
 
 The precedence takes the inner tag which in the above case is the attribute at the `body` tag.
 
-#### Step - 2 - Notifying the [theming engine](../../themes/index.md) for the respective direction.
+#### Step - 2 - Notifying the [theming engine](../themes/index.md) for the respective direction.
 
 Setting the `$direction` parameter of [igx-core]({environment:sassApiUrl}/index.html#mixin-igx-core) mixin does the magic.
 

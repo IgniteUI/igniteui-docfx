@@ -26,7 +26,7 @@ Angular ComboBox コンポーネントは、編集可能な機能を提供する
 
 Combo コンポーネントは以下の機能を公開します。
     - データ バインディング- ローカル データおよび[リモート データ](combo-remote.md)
-    - [値バインディング](combo-features.md#value-binding)
+    - [値バインディング](combo-features.md#data-binding)
     - [フィルタリング](combo-features.md#フィルタリング)
     - [グループ化](combo-features.md#グループ化)
     - [カスタム値](combo-features.md#カスタム値)
@@ -86,7 +86,7 @@ export class ComboDemo implements OnInit {
 
 ### 双方向バインディング
 
-Combo コンポーネントは、`[(ngModel)]` との双方向のデータ バインディングを完全にサポートし、[テンプレート駆動型](https://angular.io/guide/forms)および[リアクティブ型](https://angular.io/guide/reactive-forms)での使用もサポートします。コンボ選択には、双方向バインディングまたは[選択 API](#selection)を使用してアクセスできます。コンボの選択項目 (`valueKey` に基づく) と同じタイプの項目の配列を渡すことができ、いずれかが変更されるたびに、他方がそれに応じて更新されます。
+Combo コンポーネントは、`[(ngModel)]` との双方向のデータ バインディングを完全にサポートし、[テンプレート駆動型](https://angular.io/guide/forms)および[リアクティブ型](https://angular.io/guide/reactive-forms)での使用もサポートします。コンボ選択には、双方向バインディングまたは[選択 API](#選択-api)を使用してアクセスできます。コンボの選択項目 (`valueKey` に基づく) と同じタイプの項目の配列を渡すことができ、いずれかが変更されるたびに、他方がそれに応じて更新されます。
 
 以下の例は、cities の Sofia と London があらかじめ選択済みになります。コンボの選択におけるそれ以上の変更は、`selectedCities` 配列に反映されます。
 
@@ -340,7 +340,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 - コンボの高さを変更するための入力はありません。将来、[IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) コンポーネントは、カスタムのサイズ変更オプションを公開し、[IgxCombo]({environment:angularApiUrl}/classes/igxcombocomponent.html) は適切なスタイル設定と外観の統一に同じ機能を使用します。
 
 > [!NOTE]
-> `igxCombo` は内部で `igxForOf` ディレクティブを使用するため、すべての `igxForOf` の制限が Combo で有効です。詳細については、[igxForOf 既知の制限](for-of.html#既知の制限)セクションを参照してください。
+> `igxCombo` は内部で `igxForOf` ディレクティブを使用するため、すべての `igxForOf` の制限が Combo で有効です。詳細については、[igxForOf 既知の制限](for-of.md#既知の制限)セクションを参照してください。
 
 ## API まとめ
 <div class="divider--half"></div>
