@@ -26,7 +26,7 @@ Ignite UI for Angular Accordion コンポーネントを初期化するには、
 ```cmd
 ng add igniteui-angular
 ```
-Ignite UI for Angular については、[*はじめに*](general/getting-started.md) トピックををご覧ください。
+Ignite UI for Angular については、[*はじめに*](general/getting-started.md)トピックををご覧ください。
 
 次に、app.module ファイルに  `IgxAccordionModule` をインポートします。 
 
@@ -52,7 +52,7 @@ Accordion モジュールをインポート後、`igx-accordion` とそのパネ
 
 ### Accordion の宣言
 
-Accordion は、その内部で宣言されたすべての [`igx-expansion-panel]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) をラップします。
+Accordion は、その内部で宣言されたすべての [`igx-expansion-panel`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) をラップします。
 
 ```html
 <igx-accordion #accordion [singleBranchExpand]="true">
