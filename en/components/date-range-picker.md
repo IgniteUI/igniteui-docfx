@@ -187,6 +187,9 @@ When two separate inputs are used, [keyboard navigation](date-time-editor.md#key
 
 <div class="divider--half"></div>
 
+#### IME Support
+- The `IgxDateRangePicker` now supports IME input. When composition ends, the control converts the wide-character numbers to ASCII characters.
+
 ### Formatting
 
 The Date Range Picker Component supports different display and input formats.
