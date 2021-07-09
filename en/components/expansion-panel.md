@@ -316,78 +316,8 @@ You can see the results below:
 
 
 ## Multiple panel scenario
-In the following example, we are going to implement more like app case scenario, where you want to follow a particular workflow showing and requiring more user details on portions. In this sample, the default `growVerIn` and `growVerOut` animations from our inbuilt animations suite are used thus there is no need to pass any specific animation settings or import animations. Notice how we do not allow more than one `igxExpansionPanel` to be expanded at a time, handling the [`onInteraction`]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html#oninteraction)  event.
 
-```typescript
-// in expansion-panel.component.ts
-import { Component, QueryList, ViewChildren } from "@angular/core";
-import { IgxExpansionPanelComponent } from "igniteui-angular";
-
-@Component({
-    ...
-})
-export class ExpansionPanelComponent {
-    @ViewChildren(IgxExpansionPanelComponent)
-    public accordion: QueryList<IgxExpansionPanelComponent>;
-
-    public collapsed(index: number) {
-         if (!this.accordion) {
-            return true;
-         }
-         return this.accordion.toArray()[index] && this.accordion.toArray()[index].collapsed;
-     }
-
-    public onInteraction(event) {
-        const expandedPanels = this.accordion.filter((panel) => !panel.collapsed);
-        expandedPanels.forEach((expandedPanel) => {
-            if (expandedPanel.elementRef !==  event.event.currentTarget) {
-                expandedPanel.collapse();
-            }
-        });
-    }
-}
-```
-
-```html
-<!-- in expansion-panel.component.html -->
-<igx-expansion-panel class="my-expansion-panel">
-    <igx-expansion-panel-header (onInteraction)="onInteraction($event)" [disabled]="false">
-        <igx-expansion-panel-title class="sample-title">HTML5</igx-expansion-panel-title>
-    </igx-expansion-panel-header>
-    <igx-expansion-panel-body>
-        <div class="example-content">
-            HTML5 is a software solution stack that defines the properties and behaviors of web page content by implementing a markup-based pattern to it.            
-    </div>
-    </igx-expansion-panel-body>
-</igx-expansion-panel>
-<igx-expansion-panel class="my-expansion-panel">
-    <igx-expansion-panel-header (onInteraction)="onInteraction($event)" [disabled]="false">
-        <igx-expansion-panel-title class="sample-title">CSS3</igx-expansion-panel-title>
-    </igx-expansion-panel-header>
-    <igx-expansion-panel-body>
-        <div class="example-content">
-            Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language like HTML            
-        </div>
-    </igx-expansion-panel-body>
-</igx-expansion-panel>
-<igx-expansion-panel class="my-expansion-panel">
-    <igx-expansion-panel-header (onInteraction)="onInteraction($event)" [disabled]="false">
-        <igx-expansion-panel-title class="sample-title">SASS/SCSS</igx-expansion-panel-title>
-    </igx-expansion-panel-header>
-    <igx-expansion-panel-body>
-        <div class="example-content">
-            Sass is a preprocessor scripting language that is interpreted or compiled into Cascading Style Sheets (CSS). 
-        </div>
-    </igx-expansion-panel-body>
-</igx-expansion-panel>
-```
-You can see the results below:
-
-<code-view style="height: 480px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-4" >
-</code-view>
-
+See the [igxAccordion topic](accordion.md)
 
 ## API Reference
 * [IgxExpansionPanel API]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html)

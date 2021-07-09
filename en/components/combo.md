@@ -25,7 +25,7 @@ In this Angular ComboBox example, you can see how users can filter items and per
 
 The combo control exposes the following features:
     - Data Binding - local data and [remote data](combo-remote.md)
-    - [Value Binding](combo-features.md#value-binding)
+    - [Value Binding](combo-features.md#data-binding)
     - [Filtering](combo-features.md#filtering)
     - [Grouping](combo-features.md#grouping)
     - [Custom Values](combo-features.md#custom-values)
@@ -85,7 +85,7 @@ In our case, we want the combo to display the `name` of each city and the combo 
 
 ### Two-Way Binding
 
-The combo component fully supports two-way data-binding with `[(ngModel)]` as well as usage in [template driven](https://angular.io/guide/forms) and [reactive](https://angular.io/guide/reactive-forms) forms. The combo selection can be accessed either through two-way binding or through the [selection API](#selection). We can pass an array of items of the same type as the ones in the combo's selection (based on `valueKey`) and any time one changes, the other is updated accordingly.
+The combo component fully supports two-way data-binding with `[(ngModel)]` as well as usage in [template driven](https://angular.io/guide/forms) and [reactive](https://angular.io/guide/reactive-forms) forms. The combo selection can be accessed either through two-way binding or through the [selection API](#selection-api). We can pass an array of items of the same type as the ones in the combo's selection (based on `valueKey`) and any time one changes, the other is updated accordingly.
 
 In the following example, the cities Sofia and London will initially be selected. Any further changes in the combo's selection will reflect on the `selectedCities` array.
 
@@ -339,7 +339,7 @@ If the component is using the [Emulated](themes/sass/component-themes.md#view-en
 - The combo does not have input for sizing its height. In the future, the [IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) component will expose an option that allows custom sizing, and then the [IgxCombo]({environment:angularApiUrl}/classes/igxcombocomponent.html) will use the same functionality for proper styling and better consistency.
 
 > [!NOTE]
-> The `igxCombo` uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for the combo. For more details see [igxForOf Known Issues](for-of.html#known-limitations) section.
+> The `igxCombo` uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for the combo. For more details see [igxForOf Known Issues](for-of.md#known-limitations) section.
 
 ## API Summary
 <div class="divider--half"></div>
