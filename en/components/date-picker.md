@@ -157,6 +157,9 @@ Opening and closing the [`IgxDatePickerComponent`]({environment:angularApiUrl}/c
 
 Since the [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html)` uses the [`IgxDateTimeEditorDirective`](date-time-editor.md) it inherits its keyboard navigation.
 
+
+#### IME Support
+- The `IgxDatePicker` now supports IME input. When composition ends, the control converts the wide-character numbers to ASCII characters.
 ## Examples
 
 ### Dialog Mode

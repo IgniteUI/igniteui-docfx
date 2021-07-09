@@ -165,6 +165,9 @@ And there we have it, a re-templated time picker with dropdown, custom actions a
 * Pressing the <kbd>Escape</kbd> key cancels the selection and closes the dropdown/dialog.
 * When entered a new value while dropdown is closed, click outside of the time picker or press <kbd>Tab</kbd> to move the focus so that the value is accepted.
 
+#### IME Support
+- The `IgxTimePicker` now supports IME input. When composition ends, the control converts the wide-character numbers to ASCII characters.
+
 ## Examples
 ### Dialog Mode
 The default time picker mode is editable dropdown mode. To change the time picker mode to read-only dialog mode, set the [`mode`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#mode) input to [`dialog`]({environment:angularApiUrl}/index.html#pickerinteractionmode):
@@ -172,7 +175,7 @@ The default time picker mode is editable dropdown mode. To change the time picke
 ```typescript
 // timePickerDropdown.component.ts
 
-import { InteractionMode } from 'igniteui-angular';
+import { PickerInteractionMode } from 'igniteui-angular';
 ...
 public mode = PickerInteractionMode.Dialog;
 ```

@@ -82,6 +82,9 @@ Date Time Editor Directive has intuitive keyboard navigation that makes it easy 
 
 - <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>;</kbd> - set the current day and time in the editor.
 
+#### IME Support
+The `IgxDateTimeEditorDirective` directive supports IME input. When typing in an Asian language input, the control will display input method compositions and candidate lists directly in the control’s editing area, and immediately re-flow surrounding text as the composition ends.
+
 ## Examples
 
 ### Display and input format
