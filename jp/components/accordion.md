@@ -209,8 +209,8 @@ Accordion のキーボード ナビゲーションは、さまざまなキーボ
  - <kbd>上矢印</kbd> - フォーカスを上のパネルに移動します
  - <kbd>Alt + 下矢印</kbd> - Accordion でフォーカスされたパネルを展開します
  - <kbd>Alt + 上矢印</kbd> - Accordion のフォーカスされたパネルを縮小します
- - <kbd>Shift + Alt +下矢印</kbd> - 有効なすべてのパネルを展開します (singleBranchExpand が true に設定されている場合、最後の有効なパネルを展開します)
- - <kbd>Shift + Alt +上矢印</kbd> - 有効なすべてのパネルを縮小します
+ - <kbd>Shift + Alt + 下矢印</kbd> - 有効なすべてのパネルを展開します (singleBranchExpand が true に設定されている場合、最後の有効なパネルを展開します)
+ - <kbd>Shift + Alt + 上矢印</kbd> - 有効なすべてのパネルを縮小します
  - <kbd>Home</kbd> - Accordion の最初の有効なパネルに移動します
  - <kbd>END</kbd> - Accordion の最後の有効なパネルに移動します
 
