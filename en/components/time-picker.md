@@ -218,10 +218,10 @@ The input format is the format of the value when not in edit mode and the format
 ### Increment and decrement
 The time picker exposes public [`increment`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#increment) and [`decrement`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#decrement) methods, which accept two optional parametars: the `DatePart` to be modified and the `delta` by which it will be changed. If not specified the `DatePart` defaults to `Hours` and the `delta` defaults to [`itemsDelta`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#itemsdelta).
 
-You can find a sample that illustrates the use of both methods at [Date Time Editor Directive](date-time-editor.md#increment-and-decrement).
+You can find a sample that illustrates the use of both methods at [Date Time Editor Directive](date-time-editor.md#increment-decrement).
 
 ### Forms and Validation
-The time picker component supports all directives from the core FormsModule [NgModel](https://angular.io/api/forms/NgModel) and [ReactiveFormsModule](https://angular.io/api/forms/ReactiveFormsModule) (FormControl, FormGroup, etc.). This also includes the [Forms Validators](https://angular.io/api/forms/Validators) functions. In addition, the component's [min and max values](#min-and-max-values) also act as form validators.
+The time picker component supports all directives from the core FormsModule [NgModel](https://angular.io/api/forms/NgModel) and [ReactiveFormsModule](https://angular.io/api/forms/ReactiveFormsModule) (FormControl, FormGroup, etc.). This also includes the [Forms Validators](https://angular.io/api/forms/Validators) functions. In addition, the component's [min and max values](#min-max-value) also act as form validators.
 
 The [Reactive Forms Integration](input-group-reactive-forms.md) sample demonstrates how to use the igxTimePicker in Reactive Forms.
 
@@ -357,7 +357,7 @@ export class TimepickerStylingComponent {
 Now, the time picker's items are properly rendered **inside** of our component's host, which means that our custom theme will take effect:
 
 >[!NOTE]
->In order to learn more about the various options for providing themes to elements that are shown by using the [`IgxOverlayService`](overlay.md), you can take a look at this [link](overlay.md#styling).
+>In order to learn more about the various options for providing themes to elements that are shown by using the [`IgxOverlayService`](overlay.md), you can take a look at the [Overlay styling topic](overlay-styling.md).
 
 ### Including Themes
 
