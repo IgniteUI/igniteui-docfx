@@ -12,7 +12,7 @@ _language: ja
 
 If your trial has ended or your subscription [has expired](http://jp.infragistics.com/renewal), each developer on your team using Ignite UI will need to [purchase](https://jp.infragistics.com/how-to-buy/product-pricing) a subscription. これにより、<https://packages.infragistics.com/npm/js-licensed/>  でホストされるプライベート npm フィードを開発に使用できます。ここには、Ignite UI for Angular パッケージの最新バージョンがあります。現在のサブスクリプションがある場合、Ignite UI for Angular の製品版をプライベート フィードによりアクセスできます。
 
-For detailed explanation of the Ignite UI license agreement and terms of use, [click here](https://jp.infragistics.com/legal/license/igultimate-la).
+For detailed explanation of the Ignite UI license agreement and terms of use、[click here](https://jp.infragistics.com/legal/license/igultimate-la).
 
 Infragistics offers free, non-commercial, not-for-resale (NFR) licenses for the following:
 
