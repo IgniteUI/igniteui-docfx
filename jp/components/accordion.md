@@ -1,7 +1,7 @@
 ---
-titleAngular Accordion コンポーネント - Ignite UI for Angular
+title: Angular Accordion コンポーネント - Ignite UI for Angular
 _description: Ignite UI for Angular Accordion コンポーネントを使用すると、垂直方向に縮小可能な展開パネルのコレクションを表示できます。無料でお試しください。
-_keywords: angular accordion, angular accordion コンポーネント、angular アコーディオン、angular アコーディオン コンポーネント、angular アコーディオンの例、ignite ui for angular、UI コントロール、infragistics、インフラジスティックス
+_keywords: angular accordion, angular accordion コンポーネント, angular アコーディオン, angular アコーディオン コンポーネント, angular アコーディオンの例, ignite ui for angular, UI コントロール, infragistics, インフラジスティックス
 _language: ja
 ---
 
