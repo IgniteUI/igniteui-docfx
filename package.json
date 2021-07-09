@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "gulp serve",
+    "start:jp": "npm start -- --lang jp",
+    "start:kr": "npm start -- --lang kr",
     "build": "gulp build",
     "build-gh-actions": "gulp buildTravis",
     "build-staging": "set NODE_ENV=staging && gulp build",
@@ -14,7 +16,7 @@
   "author": "Infragistics",
   "license": "ISC",
   "dependencies": {
-    "igniteui-docfx-template": "^3.0.11",
+    "igniteui-docfx-template": "^3.0.12",
     "natives": "^1.1.6",
     "yargs": "^10.0.3"
   },

@@ -14,7 +14,7 @@
 - name: Getting started
   href: general/getting-started.md
   new: false
-- name: Changelog
+- name: Data Visualization Changelog
   href: general-changelog-dv.md
   new: false
   updated: true
@@ -958,6 +958,9 @@
   new: false
 - name: Card
   href: card.md
+- name: Accordion
+  href: accordion.md
+  new: true
 - name: Avatar
   href: avatar.md
 - name: Expansion Panel

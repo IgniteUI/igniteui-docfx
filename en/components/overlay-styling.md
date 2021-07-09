@@ -42,7 +42,7 @@ The global styles are not generated under a scoped rule and are not affected by 
 
 When scoping styles for elements that are displayed in the overlay, we need to specify to the position of the overlay `outlet` in the DOM. CSS rules that are scoped require a specific hierarchical structure of the elements - we need to make sure the overlay content is displayed in the correct context of the styles we want to apply.
 
-For example, let's take the `igx-combo` - its item [styles](combo.md#styling) use the `igx-drop-down` theme, because the combo defines its content inside of its own view.
+For example, let's take the `igx-combo` - its item [styles](combo.md#angular-combobox-styling) use the `igx-drop-down` theme, because the combo defines its content inside of its own view.
 
 > [!NOTE]
 > Always scope your styles in a `:host` selector to prevent the styles from leaking.

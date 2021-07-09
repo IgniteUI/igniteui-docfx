@@ -157,7 +157,7 @@ $custom-theme: igx-progress-circular-theme(
 );
 ```
 
-You can learn more about styling the circular progress bar in the [`Styling Section`](./circular-progress.html#styling)
+You can learn more about styling the circular progress bar in the [`Styling Section`](#styling)
 
 To provide a gradient that has more than 2 color stops, we have to use the directive on an `ng-template` in our `igx-circular-bar` like that:
 
