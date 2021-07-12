@@ -5,13 +5,21 @@ _keywords: npm package license, ignite ui license feed, licensing, npm パッケ
 _language: ja
 ---
 
+# ライセンス FAQ とインストール
 ## 使用許諾契約
 購入して使用する製品に関するすべての[使用条件](https://jp.infragistics.com/legal/license/igultimate-la)を知っておくことが重要です。
 注: ライセンス条件およびサブスクリプション モデルを更新しました。
 
-**商用製品**をビルドする場合、またはライセンスが[期限切れ](http://jp.infragistics.com/renewal)の場合は、[商用ライセンスを取得する](https://jp.infragistics.com/how-to-buy/product-pricing)必要があります。これにより、https://packages.infragistics.com/npm/js-licensed/  でホストされるプライベート npm フィードを開発に使用できます。ここには、Ignite UI for Angular パッケージの最新バージョンがあります。有効な商用ライセンスがある場合、Ignite UI for Angular の製品版をプライベート フィードによりアクセスできます。
+トライアル期間が終了した場合、またはサブスクリプションの[有効期限が切れた](http://jp.infragistics.com/renewal)場合、Ignite UI を使用するチームの各開発者はサブスクリプションを[購入する](https://jp.infragistics.com/how-to-buy/product-pricing)必要があります。これにより、<https://packages.infragistics.com/npm/js-licensed/>  でホストされるプライベート npm フィードを開発に使用できます。ここには、Ignite UI for Angular パッケージの最新バージョンがあります。現在のサブスクリプションがある場合、Ignite UI for Angular の製品版をプライベート フィードによりアクセスできます。
 
-**市販されない製品**をビルドする場合は、[お気軽にお問い合わせください](https://jp.infragistics.com/about-us/contact-us)。適切なライセンスを提供します。
+Ignite UI 使用許諾契約と利用規約の詳細については、[ここをクリック](https://jp.infragistics.com/legal/license/igultimate-la)を参照してください。
+
+インフラジスティックスは、以下の無料の非営利および再販禁止 (NFR) ライセンスを提供しています。
+
+  - Microsoft MVP、Microsoft Regional Director、Google Developer Expert などの開発者プログラムに参加している場合。  
+  - 小学生、中学生、大学生、または教育機関、または教授である場合。  
+
+無料の非営利および再販禁止 (NFR) ライセンスの資格がある場合、またはライセンスに関する質問がある場合は、[お問い合わせ](https://jp.infragistics.com/about-us/contact-us)ください。
 
 ## Ignite UI for Angular npm パッケージ - プライベート npm フィードの使用
 Npm は Node.js ランタイム環境で使用する一般的なデフォルト パッケージ マネージャーです。プロジェクトに依存するパッケージをすばやく簡単に処理できます。npm の使用方法の詳細については、[npm ヘルプ](https://docs.npmjs.com/)を参照してください。

@@ -126,7 +126,7 @@ public exportButtonHandler() {
 
 ## すべてのデータのエクスポート
 
-ページングなどのリモート操作を使用している場合に、Grid がすべてのデータにアクセスできない場合があります。このような場合、[Excel Export サービス](../exporter-excel.html#excel-exporter)を使用してデータ コレクション全体を渡すことをお勧めします。例:
+ページングなどのリモート操作を使用している場合に、Grid がすべてのデータにアクセスできない場合があります。このような場合、[Excel Export サービス](../exporter-excel.md)を使用してデータ コレクション全体を渡すことをお勧めします。例:
 
 ```ts
 public exportButtonHandler() {
