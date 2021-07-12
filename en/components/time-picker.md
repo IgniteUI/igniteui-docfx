@@ -165,9 +165,6 @@ And there we have it, a re-templated time picker with dropdown, custom actions a
 * Pressing the <kbd>Escape</kbd> key cancels the selection and closes the dropdown/dialog.
 * When entered a new value while dropdown is closed, click outside of the time picker or press <kbd>Tab</kbd> to move the focus so that the value is accepted.
 
-#### IME Support
-- The `IgxTimePicker` now supports IME input. When composition ends, the control converts the wide-character numbers to ASCII characters.
-
 ## Examples
 ### Dialog Mode
 The default time picker mode is editable dropdown mode. To change the time picker mode to read-only dialog mode, set the [`mode`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#mode) input to [`dialog`]({environment:angularApiUrl}/index.html#pickerinteractionmode):
@@ -217,6 +214,7 @@ The input format is the format of the value when not in edit mode and the format
 [displayFormat]="`shortTime`">
 </igx-time-picker>
 ```
+> Note: The `IgxTimePicker` now supports IME input. When composition ends, the control converts the wide-character numbers to ASCII characters.
 
 ### Increment and decrement
 The time picker exposes public [`increment`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#increment) and [`decrement`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#decrement) methods, which accept two optional parametars: the `DatePart` to be modified and the `delta` by which it will be changed. If not specified the `DatePart` defaults to `Hours` and the `delta` defaults to [`itemsDelta`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#itemsdelta).

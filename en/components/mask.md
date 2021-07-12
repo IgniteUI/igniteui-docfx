@@ -70,8 +70,7 @@ In the following example, we apply a phone number with an extension mask to an i
 
 If configured properly, you should see the demo sample in your browser.
 
-#### IME Support
-The `IgxMaskDirective` supports IME input and updates the mask when composition ends.
+> Note: The `IgxMaskDirective` supports IME input and updates the mask when composition ends.
 
 ### Bind to Formatted/Raw Value
 Use the [`includeLiterals`]({environment:angularApiUrl}/classes/igxmaskdirective.html#includeliterals) input to configure which input value (formatted or raw) to bind in your form when a specific mask is applied. By default, [`includeLiterals`]({environment:angularApiUrl}/classes/igxmaskdirective.html#includeliterals) is set to *false* and the raw value is used.

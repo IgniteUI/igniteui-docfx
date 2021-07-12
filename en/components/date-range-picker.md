@@ -187,9 +187,6 @@ When two separate inputs are used, [keyboard navigation](date-time-editor.md#key
 
 <div class="divider--half"></div>
 
-#### IME Support
-- The `IgxDateRangePicker` now supports IME input. When composition ends, the control converts the wide-character numbers to ASCII characters.
-
 ### Formatting
 
 The Date Range Picker Component supports different display and input formats.
@@ -204,7 +201,7 @@ The `inputFormat` property accepts a constructed format string using characters 
 </igx-date-range-picker>
 ```
 
-
+> Note: The `IgxDateRangePicker` now supports IME input. When composition ends, the control converts the wide-character numbers to ASCII characters.
 ### Forms and Validation
 The Date Range Picker Component supports all directives from the core [FormsModule](https://angular.io/api/forms/FormsModule), [NgModel](https://angular.io/api/forms/NgModel) and [ReactiveFormsModule](https://angular.io/api/forms/ReactiveFormsModule) ([`FormControl`](https://angular.io/api/forms/FormControl), [`FormGroup`](https://angular.io/api/forms/FormGroup), etc.). This also includes the [Forms Validators](https://angular.io/api/forms/Validators) functions. In addition, the component's [min and max values](#min-and-max-values) also act as form validators.
 
