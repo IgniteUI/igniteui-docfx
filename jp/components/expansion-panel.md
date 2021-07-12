@@ -317,78 +317,8 @@ export class ExpansionPanelComponent {
 
 
 ## 複数パネルの場合
-以下の例は、アプリのようなシナリオを実装します。ユーザーの詳細を表示または要求するような特定のワークフローに従います。このサンプルでは、​​ビルトイン アニメーション スイートのデフォルトの `growVerIn` と `growVerOut` アニメーションが使用されるため、特定のアニメーション設定を渡したり、アニメーションをインポートしたりする必要はありません。複数の `igxExpansionPanel` は一度に展開して [`onInteraction`]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html#oninteraction) イベントを処理することはできません。
 
-```typescript
-// expansion-panel.component.ts 内
-import { Component, QueryList, ViewChildren } from "@angular/core";
-import { IgxExpansionPanelComponent } from "igniteui-angular";
-
-@Component({
-    ...
-})
-export class ExpansionPanelComponent {
-    @ViewChildren(IgxExpansionPanelComponent)
-    public accordion: QueryList<IgxExpansionPanelComponent>;
-
-    public collapsed(index: number) {
-         if (!this.accordion) {
-            return true;
-         }
-         return this.accordion.toArray()[index] && this.accordion.toArray()[index].collapsed;
-     }
-
-    public onInteraction(event) {
-        const expandedPanels = this.accordion.filter((panel) => !panel.collapsed);
-        expandedPanels.forEach((expandedPanel) => {
-            if (expandedPanel.elementRef !==  event.event.currentTarget) {
-                expandedPanel.collapse();
-            }
-        });
-    }
-}
-```
-
-```html
-<!-- in expansion-panel.component.html -->
-<igx-expansion-panel class="my-expansion-panel">
-    <igx-expansion-panel-header (onInteraction)="onInteraction($event)" [disabled]="false">
-        <igx-expansion-panel-title class="sample-title">HTML5</igx-expansion-panel-title>
-    </igx-expansion-panel-header>
-    <igx-expansion-panel-body>
-        <div class="example-content">
-            HTML5 is a software solution stack that defines the properties and behaviors of web page content by implementing a markup-based pattern to it.            
-    </div>
-    </igx-expansion-panel-body>
-</igx-expansion-panel>
-<igx-expansion-panel class="my-expansion-panel">
-    <igx-expansion-panel-header (onInteraction)="onInteraction($event)" [disabled]="false">
-        <igx-expansion-panel-title class="sample-title">CSS3</igx-expansion-panel-title>
-    </igx-expansion-panel-header>
-    <igx-expansion-panel-body>
-        <div class="example-content">
-            Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language like HTML            
-        </div>
-    </igx-expansion-panel-body>
-</igx-expansion-panel>
-<igx-expansion-panel class="my-expansion-panel">
-    <igx-expansion-panel-header (onInteraction)="onInteraction($event)" [disabled]="false">
-        <igx-expansion-panel-title class="sample-title">SASS/SCSS</igx-expansion-panel-title>
-    </igx-expansion-panel-header>
-    <igx-expansion-panel-body>
-        <div class="example-content">
-            Sass is a preprocessor scripting language that is interpreted or compiled into Cascading Style Sheets (CSS). 
-        </div>
-    </igx-expansion-panel-body>
-</igx-expansion-panel>
-```
-以下は結果です。
-
-<code-view style="height: 480px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-4" >
-</code-view>
-
+[igxAccordion トピック](accordion.md)を参照してください。
 
 ## API リファレンス
 * [IgxExpansionPanel API]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html)
