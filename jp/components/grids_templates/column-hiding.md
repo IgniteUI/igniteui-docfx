@@ -66,8 +66,8 @@ Ignite UI for Angular @@igComponent は、[`IgxColumnHidingDirective`]({environm
 <!--columnHiding.component.html-->
 
 <igx-grid #grid id="grid" [data]="data" [autoGenerate]="false" width="100%" height="560px" columnWidth="200px" [allowFiltering]="true">
-    <igx-column [field]="'ID'" dataType="string" [sortable]="true"></igx-column>
-    <igx-column [field]="'ContactName'" dataType="string" [sortable]="true"></igx-column>
+    <igx-column [field]="'ID'" dataType="string" [sortable]="true" [hidden]="true"></igx-column>
+    <igx-column [field]="'ContactName'" dataType="string" [sortable]="true" [hidden]="true"></igx-column>
     <igx-column [field]="'ContactTitle'" dataType="string" [sortable]="true"></igx-column>
     <igx-column [field]="'City'" dataType="string" [sortable]="true"></igx-column>
     <igx-column [field]="'CompanyName'" dataType="string" [sortable]="true"></igx-column>
@@ -85,11 +85,11 @@ Ignite UI for Angular @@igComponent は、[`IgxColumnHidingDirective`]({environm
 
 <igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="false" width="100%"
     height="560px" columnWidth="200px" [allowFiltering]="true">
-    <igx-column [field]="'Name'" dataType="string" [sortable]="true"></igx-column>
+    <igx-column [field]="'Name'" dataType="string" [sortable]="true" [disableHiding]="true"></igx-column>
     <igx-column [field]="'ID'" dataType="number" [sortable]="true"></igx-column>
-    <igx-column [field]="'Title'" dataType="string" [sortable]="true"></igx-column>
-    <igx-column [field]="'HireDate'" dataType="date" [sortable]="true"></igx-column>
-    <igx-column [field]="'Age'" dataType="number" [sortable]="true"></igx-column>
+    <igx-column [field]="'Title'" dataType="string" [sortable]="true" [disableHiding]="true"></igx-column>
+    <igx-column [field]="'HireDate'" dataType="date" [sortable]="true" [hidden]="true"></igx-column>
+    <igx-column [field]="'Age'" dataType="number" [sortable]="true" [hidden]="true"></igx-column>
     <igx-column [field]="'Address'" dataType="string" [sortable]="true"></igx-column>
     <igx-column [field]="'City'" dataType="string" [sortable]="true"></igx-column>
     <igx-column [field]="'Country'" dataType="string" [sortable]="true"></igx-column>
@@ -111,8 +111,8 @@ Ignite UI for Angular @@igComponent は、[`IgxColumnHidingDirective`]({environm
                     </div>
                 </ng-template>
             </igx-column>
-            <igx-column field="Debut" [sortable]="true"></igx-column>
-            <igx-column field="Grammy Nominations" [sortable]="true"></igx-column>
+            <igx-column field="Debut" [sortable]="true" [hidden]="true"></igx-column>
+            <igx-column field="Grammy Nominations" [sortable]="true" [hidden]="true"></igx-column>
             <igx-column field="Grammy Awards" [sortable]="true"></igx-column>
 
             <igx-row-island [key]="'Albums'" [autoGenerate]="false" #layout1 >
