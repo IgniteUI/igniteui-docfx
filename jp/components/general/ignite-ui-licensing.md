@@ -10,16 +10,16 @@ _language: ja
 購入して使用する製品に関するすべての[使用条件](https://jp.infragistics.com/legal/license/igultimate-la)を知っておくことが重要です。
 注: ライセンス条件およびサブスクリプション モデルを更新しました。
 
-If your trial has ended or your subscription [has expired](http://jp.infragistics.com/renewal), each developer on your team using Ignite UI will need to [purchase](https://jp.infragistics.com/how-to-buy/product-pricing) a subscription. これにより、<https://packages.infragistics.com/npm/js-licensed/>  でホストされるプライベート npm フィードを開発に使用できます。ここには、Ignite UI for Angular パッケージの最新バージョンがあります。現在のサブスクリプションがある場合、Ignite UI for Angular の製品版をプライベート フィードによりアクセスできます。
+トライアル期間が終了した場合、またはサブスクリプションの[有効期限が切れた](http://jp.infragistics.com/renewal)場合、Ignite UI を使用するチームの各開発者はサブスクリプションを[購入する](https://jp.infragistics.com/how-to-buy/product-pricing)必要があります。これにより、<https://packages.infragistics.com/npm/js-licensed/>  でホストされるプライベート npm フィードを開発に使用できます。ここには、Ignite UI for Angular パッケージの最新バージョンがあります。現在のサブスクリプションがある場合、Ignite UI for Angular の製品版をプライベート フィードによりアクセスできます。
 
-For detailed explanation of the Ignite UI license agreement and terms of use、[click here](https://jp.infragistics.com/legal/license/igultimate-la).
+Ignite UI 使用許諾契約と利用規約の詳細については、[ここをクリック](https://jp.infragistics.com/legal/license/igultimate-la)を参照してください。
 
-Infragistics offers free, non-commercial, not-for-resale (NFR) licenses for the following:
+インフラジスティックスは、以下の無料の非営利および再販禁止 (NFR) ライセンスを提供しています。
 
-  - If you are part of a developer program like the Microsoft MVP, Microsoft Regional Director, Google Developer Expert, etc.  
-  - If you are a primary, secondary or university student, or an academic institution, or a professor.  
+  - Microsoft MVP、Microsoft Regional Director、Google Developer Expert などの開発者プログラムに参加している場合。  
+  - 小学生、中学生、大学生、または教育機関、または教授である場合。  
 
-If you qualify for a free, non-commercial, NFR license or if you have any license questions, please [contact us](https://jp.infragistics.com/about-us/contact-us).
+無料の非営利および再販禁止 (NFR) ライセンスの資格がある場合、またはライセンスに関する質問がある場合は、[お問い合わせ](https://jp.infragistics.com/about-us/contact-us)までお問い合わせください。
 
 ## Ignite UI for Angular npm パッケージ - プライベート npm フィードの使用
 Npm は Node.js ランタイム環境で使用する一般的なデフォルト パッケージ マネージャーです。プロジェクトに依存するパッケージをすばやく簡単に処理できます。npm の使用方法の詳細については、[npm ヘルプ](https://docs.npmjs.com/)を参照してください。
