@@ -173,7 +173,7 @@ $my-color-palette: igx-palette(
 
 各コンポーネント テーマの作成する方法:
 
-* [コンポーネント テーマ](./component-themes.md)
+* [コンポーネント テーマ](component-themes.md)
 
 コミュニティに参加して新しいアイデアをご提案ください。
 

@@ -53,7 +53,7 @@ _keywords: aria support, aria サポート, a11y, ignite ui for angular, infragi
 
 上記の場合、`body` タグの内部属性タグが優先されます。
 
-### 手順 2 - それぞれの方向の[テーマ エンジン](../../themes/index.md)に通知します。
+### 手順 2 - それぞれの方向の[テーマ エンジン](../themes/index.md)に通知します。
 
 そのためには、[igx-core]({environment:sassApiUrl}/index.html#mixin-igx-core) ミックスインの `$direction` パラメーターを設定します。
 
