@@ -426,7 +426,7 @@ public type = SliderType.RANGE;
 
 
 ### コンポーネント テーマの作成
-はじめに、[カスタム パレット](../themes/palette.md)を作成します。
+はじめに、[カスタム パレット](../themes/palettes.md)を作成します。
 コンポーネント テーマを作成し、カスタム パレットを適用します。 
 ```scss
 // In app-slider-styling.component.scss

@@ -184,7 +184,7 @@ Groups that span multiple pages are split between them. The group row is visible
 
 ## Group By with Summaries
 
-Integration between Group By and Summaries is described in the [Summaries](summaries.html#summaries-with-group-by) topic.
+Integration between Group By and Summaries is described in the [Summaries](summaries.md#summaries-with-group-by) topic.
 
 ## Keyboard Navigation
 

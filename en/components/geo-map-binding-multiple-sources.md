@@ -2,7 +2,7 @@
 title: Angular Map | Data Visualization Tools | Binding Multiple Data Source | Infragistics
 _description: Use Infragistics' Angular JavaScript map to add multiple geographic series objects to overlay custom data sources with geo-spacial data. View Ignite UI for Angular map tutorials!
 _keywords: Angular map, geographic series, Ignite UI for Angular, Infragistics, data binding
-mentionedTypes: ['XamGeographicMap']
+mentionedTypes: ['XamGeographicMap', 'SeriesViewer']
 ---
 
 # Angular Binding Multiple Data Sources
@@ -80,7 +80,7 @@ Create data sources for all geographic series that you want to display in the Ig
 
 ## Overlaying Flights
 
-Create first [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) object with flight connections between major airports and add it to [`IgxSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriescomponent.html) collection of the Ignite UI for Angular map.
+Create first [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) object with flight connections between major airports and add it to the Series collection of the Ignite UI for Angular map.
 
 ```html
 <igx-geographic-polyline-series  #polylineSeries
@@ -94,7 +94,7 @@ Create first [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}
 
 ## Overlaying Gridlines
 
-Create second [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) object with geographic gridlines and add it to [`IgxSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriescomponent.html) collection of the Ignite UI for Angular map.
+Create second [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) object with geographic gridlines and add it to the Series collection of the Ignite UI for Angular map.
 
 ```html
   <igx-geographic-polyline-series  #polylineSeries
@@ -109,7 +109,7 @@ Create second [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl
 
 ## Overlaying Airports
 
-Create [`IgxGeographicSymbolSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html) object with airport points and add it to [`IgxSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriescomponent.html) collection of the geographic Ignite UI for Angular map.
+Create [`IgxGeographicSymbolSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html) object with airport points and add it to the Series collection of the geographic Ignite UI for Angular map.
 
 ```html
 <igx-geographic-symbol-series  #symbolSeries

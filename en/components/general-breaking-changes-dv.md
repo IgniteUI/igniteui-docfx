@@ -13,7 +13,7 @@ This topic provides information about breaking changes in Ignite UI for Angular 
 > [!NOTE]
 > These breaking changes were introduce in version **11.2.0** of these packages and components:
 
--   All types of charts/series have new colors for brush/fill and outlines 
+-   All types of charts/series have new colors for brush/fill and outlines
 
 | Old series brushes outlines | New series outline brushes |
 | --------------------------- | -------------------------- |
@@ -28,17 +28,17 @@ This topic provides information about breaking changes in Ignite UI for Angular 
 | `Color_009=#795548`         | `Color_009=#e051a9`        |
 | `Color_010=#9A9A9A`         | `Color_010=#a8a8b7`        |
 
--   All types of charts/series have marker outlines with 2px thickness  
+-   All types of charts/series have marker outlines with 2px thickness
 
--   Bar/Column/Waterfall series have outlines with 1px thickness (other series have 2px thickness) 
+-   Bar/Column/Waterfall series have outlines with 1px thickness (other series have 2px thickness)
 
--   Bar/Column/Waterfall series have square corners instead of rounded corners anymore 
+-   Bar/Column/Waterfall series have square corners instead of rounded corners anymore
 
--   Point/Bubble/ScatterSeries/PolarScatter series have markers with 70% transparent fill 
+-   Point/Bubble/ScatterSeries/PolarScatter series have markers with 70% transparent fill
 
--   Point/Bubble/ScatterSeries/PolarScatter series have markers with fill that matches marker outline. To revert to the previous styling behavior for these series a new property has been added to the series, `MarkerFillMode`, which can be set to normal to mimic the prior behavior. 
+-   Point/Bubble/ScatterSeries/PolarScatter series have markers with fill that matches marker outline. To revert to the previous styling behavior for these series a new property has been added to the series, `MarkerFillMode`, which can be set to normal to mimic the prior behavior.
 
--   Scatter High Density series has new colors for min/max heat properties 
+-   Scatter High Density series has new colors for min/max heat properties
 
     | Old heat min color | New heat min color |
     | ------------------ | ------------------ |
@@ -48,7 +48,7 @@ This topic provides information about breaking changes in Ignite UI for Angular 
     | ------------------ | ------------------ |
     | `#FFC62828`        | `#ffee5879`        |
 
--   Financial/Waterfall series have new colors for negative fill of their visuals 
+-   Financial/Waterfall series have new colors for negative fill of their visuals
 
     | Old negative brush | new negative brush |
     | ------------------ | ------------------ |
@@ -71,10 +71,9 @@ Import statements have been simplified to use just package names instead of full
 | ------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------- |
 | <a href="https://www.npmjs.com/package/igniteui-angular-excel/v/8.2.12" target="_blank">igniteui-angular-excel</a>             | [Excel Library](excel-library.md)                                                                           |
 | <a href="https://www.npmjs.com/package/igniteui-angular-spreadsheet/v/8.2.12" target="_blank">igniteui-angular-spreadsheet</a> | [Spreadsheet](spreadsheet-overview.md)                                                                      |
-| <a href="https://www.npmjs.com/package/igniteui-angular-maps/v/8.2.12" target="_blank">igniteui-angular-maps</a>               | [Geo Map](geo-map.md), [Treemap](treemap-overview.md)                                                       |
+| <a href="https://www.npmjs.com/package/igniteui-angular-maps/v/8.2.12" target="_blank">igniteui-angular-maps</a>               | [Geo Map](geo-map.md), [Treemap](charts/types/treemap-chart.md)                                                       |
 | <a href="https://www.npmjs.com/package/igniteui-angular-gauges/v/8.2.12" target="_blank">igniteui-angular-gauges</a>           | [Bullet Graph](bullet-graph.md), [Linear Gauge](linear-gauge.md), [Radial Gauge](radial-gauge.md)           |
 | <a href="https://www.npmjs.com/package/igniteui-angular-charts/v/8.2.12" target="_blank">igniteui-angular-charts</a>           | Category Chart, Data Chart, Donut Chart, Financial Chart], Pie Chart, [Zoom Slider](zoomslider-overview.md) |
-| <a href="https://www.npmjs.com/package/igniteui-angular-grids/v/8.2.12" target="_blank">igniteui-angular-grids</a>             | [Data Grid](data-grid.md)                                                                                   |
 | <a href="https://www.npmjs.com/package/igniteui-angular-core/v/8.2.12" target="_blank">igniteui-angular-core</a>               | all classes and enums                                                                                       |
 
 ## Code After Changes

@@ -20,11 +20,11 @@ The @@igComponent component is able to handle thousands of updates per second, w
 
 ## Angular Live-data Update Example
 The sample below demonstrates the @@igComponent performance when all records are updated multiple times per second. Use the UI controls to choose the number of records loaded and the frequency of updates.
-Feed the same data into the [Category Chart](../category-chart.md) to experience the powerful charting capabilities of Ignite UI for Angular. The `Chart` button will show `Category Prices per Region` data for the selected rows and the `Chart` column button will show the same for the current row.
+Feed the same data into the [Line Chart](../charts/types/line-chart.md) to experience the powerful charting capabilities of Ignite UI for Angular. The `Chart` button will show `Category Prices per Region` data for the selected rows and the `Chart` column button will show the same for the current row.
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:700px" 
-           data-demos-base-url="{environment:lobDemosBaseUrl}" 
+<code-view style="height:700px"
+           data-demos-base-url="{environment:lobDemosBaseUrl}"
            iframe-src="{environment:lobDemosBaseUrl}/grid-finjs" alt="Angular Live-data Update Example">
 </code-view>
 
@@ -65,11 +65,11 @@ Updating the view works the same way for columns with a default template and for
 
 ## Live-data feed with Dock Manager and igxGrid Components
 
-The purpose of this demo is to showcase a financial screen board with Real-time data stream using a [SignalR](https://dotnet.microsoft.com/apps/aspnet/signalr) hub back-end. 
+The purpose of this demo is to showcase a financial screen board with Real-time data stream using a [SignalR](https://dotnet.microsoft.com/apps/aspnet/signalr) hub back-end.
 As you can see the igxGrid component handles with ease the high-frequency updates from the server. The code for the ASP.NET Core application using SignalR could be found in this [public GitHub repository](https://github.com/IgniteUI/finjs-web-api).
 
-<code-view style="height:700px" 
-           data-demos-base-url="{environment:lobDemosBaseUrl}" 
+<code-view style="height:700px"
+           data-demos-base-url="{environment:lobDemosBaseUrl}"
            iframe-src="{environment:lobDemosBaseUrl}/grid-finjs-dock-manager/grid-finjs-dock-manager" alt="Angular Live-data Update Example with a service">
 </code-view>
 
@@ -147,8 +147,8 @@ Our community is active and always welcoming to new ideas.
 
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:700px" 
-           data-demos-base-url="{environment:lobDemosBaseUrl}" 
+<code-view style="height:700px"
+           data-demos-base-url="{environment:lobDemosBaseUrl}"
            iframe-src="{environment:lobDemosBaseUrl}/treegrid-finjs" alt="Angular Live-data Update Example">
 </code-view>
 

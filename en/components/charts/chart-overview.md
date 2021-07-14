@@ -234,7 +234,7 @@ A Time-Series Chart, or Timeline Graph, is a visualization that treats the data 
 
 ### Angular Treemap
 
-The Ignite UI for Angular Treemap displays hierarchical (tree-structured) data as a set of nested nodes. Each branch of the tree is given a treemap node, which is then tiled with smaller nodes representing sub-branches. Each node's rectangle has an area proportional to a specified dimension on the data. Often the nodes are colored to show a separate dimension of the data. Learn more about our [treemaps](../treemap-overview.md).
+The Ignite UI for Angular Treemap displays hierarchical (tree-structured) data as a set of nested nodes. Each branch of the tree is given a treemap node, which is then tiled with smaller nodes representing sub-branches. Each node's rectangle has an area proportional to a specified dimension on the data. Often the nodes are colored to show a separate dimension of the data. Learn more about our [treemaps](types/treemap-chart.md).
 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
@@ -269,35 +269,35 @@ Optimize [Chart Performance](features/chart-performance.md) to render millions o
 
 The Angular chart is designed for modularity. Only features that are needed are part of your deployment, so you get the smallest possible footprint in your rendered pages.
 
-<img class="img" src="../../images/charts/ignite-ui-angular-financial-chart-modular-design-1100.jpg"
+<img class="responsive-img" src="../../images/charts/ignite-ui-angular-financial-chart-modular-design-1100.jpg"
 alt="Angular Charts Modular Design"  />
 
 ### Smart Data Binding
 
 Let us choose the chart type. Our smart Data Adapter automatically chooses the best chart type for the data. All you do is set the data source and we do the rest.
 
-<img class="img" src="../../images/charts/ignite-ui-angular-financial-chart-smart-data-binding-1100.jpg"
+<img class="responsive-img" src="../../images/charts/ignite-ui-angular-financial-chart-smart-data-binding-1100.jpg"
 alt="Angular Charts Smart Data Binding"/>
 
 ### Trendlines
 
 Angular Charts support all [Trendlines](features/chart-trendlines.md) you’ll ever need, including linear (x), quadratic (x2), cubic (x3), quartic (x4), quintic (x5), logarithmic (log x), exponential (ex), and power law (axk + o(xk)) trend lines.
 
-<img class="img" src="../../images/charts/ignite-ui-angular-financial-chart-trendlines-1100.jpg"
+<img class="responsive-img" src="../../images/charts/ignite-ui-angular-financial-chart-trendlines-1100.jpg"
 alt="Angular Charts Trendlines"/>
 
 ### Interactive Panning and Zooming
 
 Use single or multi-touch, keyboard, zoom bar, mouse wheel, drag-select for any rectangular region with the mouse to zoom in for close-up look at data points, scroll data history, or pan data regions.
 
-<img class="img" src="../../images/charts/ignite-ui-angular-financial-chart-zooming-1100.gif"
+<img class="responsive-img" src="../../images/charts/ignite-ui-angular-financial-chart-zooming-1100.gif"
 alt="Angular Charts Interactive Panning and Zooming"/>
 
 ### Markers, Tooltips, and Templates
 
 Use one of 10 [Marker Types](features/chart-markers.md) or create your own [Marker Template](features/chart-markers.md#angular-chart-marker-templates) to highlight data or use simple [Tooltips](features/chart-tooltips.md) or multi-axis and multi-series chart with [Custom Tooltips](features/chart-tooltips.md#angular-chart-tooltip-template) to give more context and meaning to your data.
 
-<img class="img" src="../../images/charts/ignite-ui-angular-financial-chart-custom-tooltips-1100.jpg"
+<img class="responsive-img" src="../../images/charts/ignite-ui-angular-financial-chart-custom-tooltips-1100.jpg"
 alt="Angular Charts Markers, Tooltips, and Templates"/>
 
 ## But Wait, There’s More!

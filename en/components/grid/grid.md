@@ -10,12 +10,12 @@ The Ignite UI for Angular Data Grid is used to display and manipulate data with 
 
 ## Angular Data Grid Example
 
-Boston Marathon 2020 – In this angular grid example, you can see how users can do both basic and excel-style filtering, live-data sorting, as well as using of grid summaries and cell templating that includes our [Sparkline](../sparkline.md) component,
+Boston Marathon 2020 – In this angular grid example, you can see how users can do both basic and excel-style filtering, live-data sorting, as well as using of grid summaries and cell templating that includes our [Sparkline](../charts/types/sparkline-chart.md) component,
 [Circular Progress Indicator](../circular-progress.md) component, and [Icons](../icon.md). The demo also includes  custom paging and per page usage part of the [Angular Pagination](paging.md).
 
 
-<code-view style="height:700px" 
-           data-demos-base-url="{environment:lobDemosBaseUrl}" 
+<code-view style="height:700px"
+           data-demos-base-url="{environment:lobDemosBaseUrl}"
            iframe-src="{environment:lobDemosBaseUrl}/grid/grid" alt="Angular data grid example">
 </code-view>
 
@@ -126,7 +126,21 @@ Let's turn the [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcompo
 </igx-grid>
 ```
 
-Each of the columns of the grid can be templated separately. The column expects `ng-template`  Angular grid module directives.
+Each of the columns of the grid can be templated separately. The column expects `ng-template` Angular grid module directives.
+
+It also expose [`additionalTemplateContext`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#additionaltemplatecontext) input that can be used for custom properties and any type of data context that you want to pass to the column itself:
+
+```html
+<igx-column [additionalTemplateContext]="contextObject">
+    <ng-template igxCell let-cell="cell" let-props="additionalTemplateContext">
+        {{ props.firstProperty }}
+    </ng-template>
+</igx-column>
+```
+
+```ts
+public contextObject = { firstProperty: 'testValue', secondProperty: 'testValue1'};
+```
 
 ### Header Template
 
@@ -190,14 +204,14 @@ In the snippet above we "take" a reference to the implicitly provided cell value
 <igx-grid>
 ```
 
-When changing data through the **cell template** using `ngModel`, you need to call the appropriate API methods to make sure the value is correctly updated in the Angular grid's underlying data collection. In the snippet above, the `ngModelChange` call passes through the grid's [editing API](editing.md#editing-through-api) and goes through the grid's editing pipeline, properly triggering [transactions](batch-editing.md)(if applicable) and handling of [summaries](summaries.md), [selection](selection.md), etc. However, this `ngModelChange` will fire every time the value of the cell changes, not just when the user is done editing, resulting in a lot more API calls.
+When changing data through the **cell template** using `ngModel`, you need to call the appropriate API methods to make sure the value is correctly updated in the Angular grid's underlying data collection. In the snippet above, the `ngModelChange` call passes through the grid's [editing API](cell-editing.md#editing-through-api) and goes through the grid's editing pipeline, properly triggering [transactions](batch-editing.md)(if applicable) and handling of [summaries](summaries.md), [selection](selection.md), etc. However, this `ngModelChange` will fire every time the value of the cell changes, not just when the user is done editing, resulting in a lot more API calls.
 
 > [!NOTE]
 > The grid exposes a default handling for number, string, date and boolean column types. For example, the column will display `check` or `close` icon, instead of true/false by default, for boolean column type.
 
 If the data in a cell is bound with `[(ngModel)]` and the value change is not handled, the new value will **not** be properly updated in the Angular grid's underlying data source. When dealing with cell editing with a custom template, it is strongly advised to use the cell's **cell editing template**.
 
-When properly implemented, the cell editing template also ensures that the cell's `editValue` will correctly pass through the grid [editing event cycle](editing.md#editing-events).
+When properly implemented, the cell editing template also ensures that the cell's `editValue` will correctly pass through the grid [editing event cycle](editing.md#event-arguments-and-sequence).
 
 ### Cell Editing Template
 
@@ -504,8 +518,8 @@ configuration. Same goes for grouping and editing operations with or without tra
 >The grids **do not** support this kind of binding for `primary key`, `foreign key` and `child key` properties where applicable.
 
 
-<code-view style="height:460px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:460px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-nested-data-binding-2" >
 </code-view>
 
@@ -594,8 +608,8 @@ The custom template for the column, that will render the nested data:
 And the result from this configuration is:
 
 
-<code-view style="height:460px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:460px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-nested-data-binding" >
 </code-view>
 
@@ -673,8 +687,8 @@ Keep in mind that with the above defined template you will not be able to make e
 And the result is:
 
 
-<code-view style="height:550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:550px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-composite-data-binding" >
 </code-view>
 
@@ -709,7 +723,7 @@ See the [Grid Sizing](sizing.md) topic.
 | Row height is not affected by the height of cells that are not currently rendered in view. | Because of virtualization a column with a custom template (that changes the cell height) that is not in the view will not affect the row height. The row height will be affected only while the related column is scrolled in the view.
 
 > [!NOTE]
-> `igxGrid` uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for `igxGrid`. For more details see [igxForOf Known Issues](../for-of.html#known-limitations) section.
+> `igxGrid` uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for `igxGrid`. For more details see [igxForOf Known Issues](../for-of.md#known-limitations) section.
 
 <div class="divider--half"></div>
 

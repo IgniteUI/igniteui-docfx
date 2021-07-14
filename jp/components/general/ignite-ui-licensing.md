@@ -5,18 +5,29 @@ _keywords: npm package license, ignite ui license feed, licensing, npm パッケ
 _language: ja
 ---
 
+# ライセンス FAQ とインストール
 ## 使用許諾契約
 購入して使用する製品に関するすべての[使用条件](https://jp.infragistics.com/legal/license/igultimate-la)を知っておくことが重要です。
 注: ライセンス条件およびサブスクリプション モデルを更新しました。
 
-**商用製品**をビルドする場合、またはライセンスが[期限切れ](http://jp.infragistics.com/renewal)の場合は、[商用ライセンスを取得する](https://jp.infragistics.com/how-to-buy/product-pricing)必要があります。これにより、https://packages.infragistics.com/npm/js-licensed/  でホストされるプライベート npm フィードを開発に使用できます。ここには、Ignite UI for Angular パッケージの最新バージョンがあります。有効な商用ライセンスがある場合、Ignite UI for Angular の製品版をプライベート フィードによりアクセスできます。
+トライアル期間が終了した場合、またはサブスクリプションの[有効期限が切れた](http://jp.infragistics.com/renewal)場合、Ignite UI を使用するチームの各開発者はサブスクリプションを[購入する](https://jp.infragistics.com/how-to-buy/product-pricing)必要があります。これにより、<https://packages.infragistics.com/npm/js-licensed/>  でホストされるプライベート npm フィードを開発に使用できます。ここには、Ignite UI for Angular パッケージの最新バージョンがあります。現在のサブスクリプションがある場合、Ignite UI for Angular の製品版をプライベート フィードによりアクセスできます。
 
-**市販されない製品**をビルドする場合は、[お気軽にお問い合わせください](https://jp.infragistics.com/about-us/contact-us)。適切なライセンスを提供します。
+Ignite UI 使用許諾契約と利用規約の詳細については、[ここをクリック](https://jp.infragistics.com/legal/license/igultimate-la)を参照してください。
+
+インフラジスティックスは、以下の無料の非営利および再販禁止 (NFR) ライセンスを提供しています。
+
+  - Microsoft MVP、Microsoft Regional Director、Google Developer Expert などの開発者プログラムに参加している場合。  
+  - 小学生、中学生、大学生、または教育機関、または教授である場合。  
+
+無料の非営利および再販禁止 (NFR) ライセンスの資格がある場合、またはライセンスに関する質問がある場合は、[お問い合わせ](https://jp.infragistics.com/about-us/contact-us)ください。
 
 ## Ignite UI for Angular npm パッケージ - プライベート npm フィードの使用
 Npm は Node.js ランタイム環境で使用する一般的なデフォルト パッケージ マネージャーです。プロジェクトに依存するパッケージをすばやく簡単に処理できます。npm の使用方法の詳細については、[npm ヘルプ](https://docs.npmjs.com/)を参照してください。
 
 Infragistics Ignite UI for Angular は npm パッケージで提供され、[`いくつかの簡単な手順`](cli/step-by-step-guide.md)でプロジェクトの依存関係として追加できます。この方法を選択する場合、npm を構成する必要はありません。このパッケージをインストールすると、製品の [Ignite UI for Angular トライアル版](https://jp.infragistics.com/products/ignite-ui-angular)の使用が開始されます。
+
+>[!NOTE]
+> トライアル版の使用を開始するとはどういう意味ですか? これは、Web ビューの**ウォーターマーク**部分を含む製品バージョンを使用することを意味し、1 か月など一定期間ライセンス パッケージを使用することを意味します。
 
 Infragistics Ignite UI Dock Manager Web コンポーネントは、別の npm パッケージとして利用できます。インストールすると、製品の [Ignite UI Dock Manager Web コンポーネント トライアル版](https://jp.infragistics.com/products/ignite-ui-angular)の使用が開始されます。
 
@@ -28,7 +39,7 @@ Ignite UI for Angular が [`ng add`](./getting-started.md) を使用してプロ
 >[!NOTE]
 > パッケージが変更されるため、切り替える前にプロジェクトを更新することをお勧めします。このように、IgniteUI Angular の高いバージョンを使用せず、更新の移行のトラブルを防止します。[アップデート ガイド](./update-guide.md)を参照してください。
 
-プロジェクトのセットアップに応じて、プロジェクトで以下 の schematic を実行します。
+プロジェクトのセットアップに応じて、プロジェクトで以下の schematic を実行します。
 ```bash
 ng g @igniteui/angular-schematics:upgrade-packages
 ```
@@ -41,10 +52,10 @@ schematic またはコマンドはプロジェクトのパッケージの依存�
 まだセットアップされていない場合、NPM レジストリへのログインが要求されます。
 
 >[!NOTE]
-> プロジェクトが [`yarn`](https://yarnpkg.com/) を使用している場合は、`--skip-install` フラグを指定して `upgrade-packages` を実行します。その後、`yarn install` (現在 upgrade コマンドはインストールに `npm` を使用します) を実行して `yarn.lock` を適切に更新します。
+> プロジェクトが [`yarn`](https://yarnpkg.com/) を使用している場合は、`--skip-install` フラグを指定して `upgrade-packages` を実行します。その後、`yarn install` (現在 `upgrade` コマンドはインストールに `npm` を使用します) を実行して `yarn.lock` を適切に更新します。
 
 
-### プライベート npm フィードを使用するための環境設定方法
+### プライベート npm フィードを使用するための環境設定方法 (ステップバイステップ ガイド)
 
 #### 最初にプライベート レジストリを構成し、レジストリを Infragistics スコープと関連付けます。 
 
@@ -58,6 +69,9 @@ schematic またはコマンドはプロジェクトのパッケージの依存�
 ```cmd
 npm adduser --registry=https://packages.infragistics.com/npm/js-licensed/ --scope=@infragistics --always-auth
 ```
+
+> [!IMPORTANT]
+> アカウントのライセンスがない場合 (トライアル版アカウントを使用している場合)、プライベート パッケージ フィードにアクセスできません (たとえば、404 または 403 エラーメッセージが返されます)。**ライセンスされているアカウントのみが packages.infragistics プライベート フィードにアクセスできます。**
 
 #### 完了した後に、ログイン済みの状態で、プロジェクトで Ignite UI の最新バージョンをインストールできます。
 
@@ -144,8 +158,8 @@ npm を既に使用していて、Ignite UI for Angular ライセンスがある
 
 ```cmd
 @infragistics:registry=https://packages.infragistics.com/npm/js-licensed/
-//packages.infragistics.com/npm/js-licensed/:_auth={YOUR_ACCESS_TOKEN}
-//packages.infragistics.com/npm/js-licensed/:username={YOUR_USERNAME}
+//packages.infragistics.com/npm/js-licensed/:_auth=YOUR_ACCESS_TOKEN
+//packages.infragistics.com/npm/js-licensed/:username=YOUR_USERNAME
 //packages.infragistics.com/npm/js-licensed/:always-auth=true
 ```
 

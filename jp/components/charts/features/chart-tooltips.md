@@ -31,11 +31,13 @@ Angular チャートでは、ツールチップはバインドされたデータ
 | [`Item`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/tooltiptype.html#item) ツールチップ         | ツールチップは、ポインタが位置されているカテゴリの各データ項目のツールチップを表示します。                 |
 | [`Category`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/tooltiptype.html#category) ツールチップ | ツールチップはポインターがデータ ポイント上に配置されたときにすべてのデータ ポイントに対してツールチップを表示できます。 |
 
+<div class="divider--half"></div>
+
 ## Angular チャート ツールチップ テンプレート
 
 組み込みタイプのツールチップがいずれも要件に一致しない場合は、独自のツールチップを作成して、シリーズ タイトル、データ値、および軸値を表示およびスタイル設定できます。次のセクションでは、さまざまなタイプの Angular チャートでこれを行う方法を示します。
 
-### カテゴリ チャートのカスタム ツールチップ
+## カテゴリ チャートのカスタム ツールチップ
 
 この例は、Angular [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html) コントロールですべてのシリーズのカスタム ツールチップを作成する方法を示しています。Angular [`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html) コントロールのカスタム ツールチップにも同じロジックを適用できることに注意してください。
 
