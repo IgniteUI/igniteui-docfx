@@ -115,6 +115,7 @@ The table bellow shows formats that are supported by the directive's [`inputForm
 | `tt` | AM/PM section for 12-hour format. |
 
 > Note: The `IgxDateTimeEditorDirective` directive supports IME input. When typing in an Asian language input, the control will display input method compositions and candidate lists directly in the control’s editing area, and immediately re-flow surrounding text as the composition ends.
+
 ### Min max value
 You can specify [`minValue`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#minvalue) and [`maxValue`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#maxvalue) properties to restrict input and control the validity of the ngModel.
 ```typescript
