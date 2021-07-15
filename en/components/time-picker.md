@@ -172,7 +172,7 @@ The default time picker mode is editable dropdown mode. To change the time picke
 ```typescript
 // timePickerDropdown.component.ts
 
-import { InteractionMode } from 'igniteui-angular';
+import { PickerInteractionMode } from 'igniteui-angular';
 ...
 public mode = PickerInteractionMode.Dialog;
 ```
@@ -214,6 +214,7 @@ The input format is the format of the value when not in edit mode and the format
 [displayFormat]="`shortTime`">
 </igx-time-picker>
 ```
+> Note: The `IgxTimePicker` now supports IME input. When composition ends, the control converts the wide-character numbers to ASCII characters.
 
 ### Increment and decrement
 The time picker exposes public [`increment`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#increment) and [`decrement`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#decrement) methods, which accept two optional parametars: the `DatePart` to be modified and the `delta` by which it will be changed. If not specified the `DatePart` defaults to `Hours` and the `delta` defaults to [`itemsDelta`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#itemsdelta).

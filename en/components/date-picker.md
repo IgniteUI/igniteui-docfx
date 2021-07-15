@@ -187,6 +187,8 @@ More information about these can be found in the [`IgxDateTimeEditor`](date-time
 
 <div class="divider--half"></div>
 
+> Note:  The `IgxDatePicker` now supports IME input. When composition ends, the control converts the wide-character numbers to ASCII characters.
+
 ### Increment and decrement
 The [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) exposes [`increment`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#increment) and [`decrement`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#decrement) methods. Both of which come from the  [`IgxDateTimeEditorDirective`](date-time-editor.md#increment-decrement) and can be used for incrementing and decrementing a specific [`DatePart`]({environment:angularApiUrl}/enums/datepart.html) of the currently set date.
 
