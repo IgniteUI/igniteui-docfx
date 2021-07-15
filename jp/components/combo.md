@@ -26,7 +26,7 @@ Angular ComboBox コンポーネントは、編集可能な機能を提供する
 
 Combo コンポーネントは以下の機能を公開します。
     - データ バインディング- ローカル データおよび[リモート データ](combo-remote.md)
-    - [値バインディング](combo-features.md#data-binding)
+    - [値バインディング](combo-features.md#データ-バインディング)
     - [フィルタリング](combo-features.md#フィルタリング)
     - [グループ化](combo-features.md#グループ化)
     - [カスタム値](combo-features.md#カスタム値)

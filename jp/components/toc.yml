@@ -15,7 +15,7 @@
 - name: 作業の開始
   href: general/getting-started.md
   new: false
-- name: 変更ログ
+- name: データ可視化の変更ログ
   href: general-changelog-dv.md
   new: false
   updated: true
@@ -961,6 +961,9 @@
   new: false
 - name: Card
   href: card.md
+- name: Accordion
+  href: accordion.md
+  new: true
 - name: Avatar
   href: avatar.md
 - name: Expansion Panel

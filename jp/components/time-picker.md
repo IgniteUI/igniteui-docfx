@@ -358,7 +358,7 @@ export class TimepickerStylingComponent {
 Time Picker の項目がコンポーネントのホスト**内**に適切にレンダリングされます。つまり、カスタム テーマが有効になります。
 
 >[!NOTE]
->[`IgxOverlayService`](overlay.md) を使用して表示される要素にテーマを提供するためのさまざまなオプションの詳細については、[こちら](overlay.md#スタイル設定)をご覧ください。
+>[`IgxOverlayService`](overlay.md) を使用して表示される要素にテーマを提供するためのさまざまなオプションの詳細については、[オーバーレイ スタイリングのトピック](overlay-styling.md)をご覧ください。
 
 ### テーマを含む
 

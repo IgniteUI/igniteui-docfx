@@ -146,6 +146,34 @@ To export grouped data you just need to group the @@igComponent by one or more c
 
 }
 
+## Export Multi Column Headers Grid
+
+It is now possible to export @@igComponent with defined [multi-column headers](multi-column-headers.md). All headers will be reflected in the exported excel file as they are displayed in the @@igComponent. If you want to exclude the defined multi-column headers from the exported data you can set the [exporter option]({environment:angularApiUrl}/classes/igxexporteroptionsbase.html) [ignoreMultiColumnHeaders]({environment:angularApiUrl}/classes/igxexporteroptionsbase.html#ignoremulticolumnheaders) to `true`.
+
+> [!NOTE]
+> The exported @@igComponent will not be formatted as a table, since Excel tables do not support multiple row headers.
+
+@@if (igxName === 'IgxGrid') {
+<code-view style="height: 800px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/grid/multi-column-headers-export" alt="Angular Multi-Column Headers Export">
+</code-view>
+}
+
+@@if (igxName === 'IgxTreeGrid') {
+<code-view style="height: 800px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-multi-column-headers-export" alt="Angular Multi-Column Headers Export">
+</code-view>
+}
+
+@@if (igxName === 'IgxHierarchicalGrid') {
+<code-view style="height: 800px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-column-export" alt="Angular Multi-Column Headers Export">
+</code-view>
+}
+
 ## Customizing the Exported Content
 
 In the above examples the Excel Exporter service was exporting all available data. There are situations in which you may want to skip exporting a row or even an entire column. To achieve this you may hook to the [`columnExporting`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#columnexporting) and/or [`rowExporting`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#rowexporting) events which are fired respectively for each column and/or each row and cancel the respective event by setting the event argument object's [`cancel`]({environment:angularApiUrl}/interfaces/irowexportingeventargs.html#cancel) property to `true`.
@@ -170,7 +198,6 @@ When you are exporting data from the @@igComponent component, the export process
 |Limitation|Description|
 |--- |--- |
 |Max worksheet size|The maximum worksheet size supported by Excel is 1,048,576 rows by 16,384 columns.|
-|Exporting multi column headers|The excel exporter service doesn't support exporting @@igComponent with multi column headers.|
 }
 
 @@if (igxName === 'IgxTreeGrid') {
@@ -178,7 +205,6 @@ When you are exporting data from the @@igComponent component, the export process
 |--- |--- |
 |Hierarchy levels|The excel exporter service can create up to 8 levels of hierarchy.|
 |Max worksheet size|The maximum worksheet size supported by Excel is 1,048,576 rows by 16,384 columns.|
-|Exporting multi column headers|The excel exporter service doesn't support exporting @@igComponent with multi column headers.|
 }
 
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -186,7 +212,6 @@ When you are exporting data from the @@igComponent component, the export process
 |--- |--- |
 |Hierarchy levels|The excel exporter service can create up to 8 levels of hierarchy.|
 |Max worksheet size|The maximum worksheet size supported by Excel is 1,048,576 rows by 16,384 columns.|
-|Exporting multi column headers|The excel exporter service doesn't support exporting @@igComponent with multi column headers.|
 |Exporting pinned columns|In the exported Excel file, the pinned columns will not be frozen but will be displayed in the same order as they appear in the grid.|
 }
 
