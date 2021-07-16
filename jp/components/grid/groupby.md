@@ -457,7 +457,7 @@ $custom-theme: igx-grid-theme(
 ## API リファレンス
 
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGroupByRow](({environment:angularApiUrl}/classes/igxgroupbyrow.html)
+* [IgxGroupByRow]({environment:angularApiUrl}/classes/igxgroupbyrow.html)
 * [IgxGridComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 * [ISortingExpression]({environment:angularApiUrl}/interfaces/isortingexpression.html)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)

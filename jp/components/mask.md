@@ -71,6 +71,8 @@ export class AppModule {}
 
 正しく構成されていれば、ブラウザ上でデモサンプルを確認することができます。
 
+> Note: The `IgxMaskDirective` supports IME input and updates the mask when composition ends.
+
 ### 書式設定付き/Raw 値にバインド
 [`includeLiterals`]({environment:angularApiUrl}/classes/igxmaskdirective.html#includeliterals) 入力を使用して、指定したマスクが適用される場合にフォームにバインドする入力値 (書式設定付きまたは Raw) を構成します。デフォルトで [`includeLiterals`]({environment:angularApiUrl}/classes/igxmaskdirective.html#includeliterals) が *false* に設定し、Raw 値が使用されます。
 

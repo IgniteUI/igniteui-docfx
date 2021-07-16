@@ -173,7 +173,7 @@ public selectNow(timePicker: IgxTimePickerComponent) {
 ```typescript
 // timePickerDropdown.component.ts
 
-import { InteractionMode } from 'igniteui-angular';
+import { PickerInteractionMode } from 'igniteui-angular';
 ...
 public mode = PickerInteractionMode.Dialog;
 ```
@@ -215,6 +215,7 @@ Time Picker コンポーネントは、さまざまな表示形式と入力形�
 [displayFormat]="`shortTime`">
 </igx-time-picker>
 ```
+> Note: The `IgxTimePicker` now supports IME input. When composition ends, the control converts the wide-character numbers to ASCII characters.
 
 ### 増加および減少
 Time Picker は、パブリックの [`increment`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#increment) メソッドと [`decrement`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#decrement) メソッドを公開します。それらは 2 つのオプションのパラメターを受け入れます: 変更される `DatePart` とそれが変更される `delta` です。指定しない場合、`DatePart` はデフォルトで `Hours` になり、`delta` はデフォルトで [`itemsDelta`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#itemsdelta) になります。

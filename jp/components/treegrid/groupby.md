@@ -7,30 +7,44 @@ _language: ja
 
 # Angular Tree Grid グループ化
 
-階層以外のデータ列を **グループ化**し、**集計値**で親行を生成する場合、[`IgxTreeGridComponent`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html) と以下のデモのようなカスタム実装を使用します。
+階層以外のデータ列を **グループ化**し、**集計値**で親行を生成する場合、[`IgxTreeGridComponent`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html) along with `treeGridGrouping` pipe and the UI component with selector `igx-tree-grid-group-by-area`.
 
-> [!NOTE]
-> これらのサンプルには、[`IgxTreeGridComponent`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html) に組み込まれていないカスタム ロジックが含まれています。以下の [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) のグループ化や集計機能と同様ですが、集計行内ではなく、集計データが親行に表示されます。
-
-このサンプルでは、グループ化に使用される列に関連する UI 操作を処理するセレクター `igx-tree-grid-group-area` を使用して UI コンポーネントも作成しました。このコンポーネントの動作の詳細については、`tree-grid-group-area.component.ts` ファイルの `IgxTreeGridGroupAreaComponent` クラスを参照してください。コンポーネントは完全にカスタマイズが可能でカスタム プロジェクトに使用できます。
-
-以下はテンプレートでコンポーネントを使用した例です。
+The `treeGridGrouping` pipe groups the data based on the provided parameters and the resulting hierarchy is displayed in a separate column. The pipe can also calculate aggregated values for the generated parent rows if aggregations are provided. Here is an example of how to use the pipe in the template:
 
 ```html
-<igx-grid-toolbar *ngIf="showToolbar">
-    <igx-grid-toolbar-title class="grid-toolbar-title">
-        <igx-tree-grid-group-area
-            [grid]='grid1'
-            [(groupColumns)]='groupColumns'
-            [groupColumnKey]='groupColumnKey'>
-        </igx-tree-grid-group-area>
-    </igx-grid-toolbar-title>
+<igx-tree-grid #grid 
+               [data]="data | treeGridGrouping:groupingExpressions:groupKey:childDataKey:grid:aggregations"
+               [childDataKey]="childDataKey"
+               [sortStrategy]="sorting">
+```
+
+The pipe arguments are the following:
+- groupingExpressions - an array of [`IGroupingExpression`]({environment:angularApiUrl}/interfaces/igroupingexpression.html) objects which contains information about the fields used to generate the hierarchy and the sorting details for each group
+- groupKey - a string value for the name of the generated hierarchy column
+- childDataKey - a string value for the field where the child collection of the generated parent rows is stored
+- grid - `IgxTreeGridComponent` that is used for the grouping
+- aggregations (optional) - an array of `ITreeGridAggregation` objects which contains information about the aggregation functions
+
+The UI component with selector `igx-tree-grid-group-by-area` handles the UI interactions related to the columns that are used for the grouping. Here is an example of how to use the component in the template:
+
+```html
+<igx-tree-grid-group-by-area
+    [grid]='grid'
+    [(expressions)]='groupingExpressions'
+    [hideGroupedColumns]='true'>
+</igx-tree-grid-group-by-area>
 ```
 
 コンポーネントの入力は次のとおりです:
 - grid - グループ化に使用される `IgxTreeGridComponent`。
-- groupColumns - 階層を生成するために使用されるフィールドを含む文字列の配列。
-- groupColumnKey - 生成した階層列の名前の文字列値。
+- expressions - an array of [`IGroupingExpression`]({environment:angularApiUrl}/interfaces/igroupingexpression.html) objects which contains the fields used to generate the hierarchy
+- hideGroupedColumns - a boolean value indicating whether to hide the columns by which grouping was performed
+- density - a [`displayDensity`]({environment:angularApiUrl}/classes/igxgridcomponent.html#displaydensity) that can be used to change the view
+- dropAreaTemplate - a template for the drop area that can be used to override the default drop area template
+- dropAreaMessage - a string that can be used to override the default message for the default drop area template
+
+> [!NOTE]
+> In order for the sorting to work correctly you should set the `sortStrategy` property of the `IgxTreeGridComponent` to an instance of `IgxGroupedTreeGridSorting`.
 
 ## Angular Tree Grid グループ化の例
 
@@ -43,49 +57,46 @@ _language: ja
 
 #### 実装
 
-サンプルでは、パイプ クラス `TreeGridGroupingPipe` を作成しました。このクラスは、**category**、**type**、**contract** で表形式のデータをグループ化します。ソート後の階層は新しく作成された **Categories** 列に表示されます。パイプは、**price**、**change**、**changeP** 列に生成した親行の集計値を計算します。パイプの詳細については、`tree-grid-grouping.pipe.ts` ファイルの `TreeGridGroupingPipe` クラスを参照してください。パイプは完全にカスタマイズが可能でカスタム プロジェクトに使用できます。
-
-以下はテンプレートでパイプを使用した例です。
+In this sample we are using the `treeGridGrouping` pipe and the UI component with selector `igx-tree-grid-group-by-area` for the grouping. The data is grouped by the **"category"**, **"type"** and **"contract"** fields. The resulting hierarchy is displayed in the newly created **"categories"** column. The pipe also calculates aggregated values for the generated parent rows for the **"price"**, **"change"** and **"changeP"** columns. 
 
 ```html
-<igx-tree-grid #grid1 
-               [data]="data$ | async | treeGridGrouping:groupColumns:aggregations:groupColumnKey:primaryKey:childDataKey"
-               [primaryKey]="primaryKey" [childDataKey]="childDataKey">
-    <igx-column [field]="groupColumnKey" [width]="'180px'" [sortable]='true' [resizable]='true' [disableHiding]="true"></igx-column>
+<igx-tree-grid #grid1
+    [data]="data$ | async | treeGridGrouping:groupingExpressions:groupColumnKey:childDataKey:grid1:aggregations"
+    [childDataKey]="childDataKey"
+    [sortStrategy]="sorting">
+    <igx-tree-grid-group-by-area
+        [grid]="grid1"
+        [(expressions)]="groupingExpressions"
+        [hideGroupedColumns]="true">
+    </igx-tree-grid-group-by-area>
+    <igx-column [field]="groupColumnKey"></igx-column>
 ```
 
-以下は引数です。
-- groupColumns - 階層を生成するために使用されるフィールドを含む文字列の配列。
-- aggregations - 集計関数の情報を含む `ITreeGridAggregation` オブジェクトの配列。
-- groupColumnKey - 生成した階層列の名前の文字列値。
-- primaryKey - プライマリキー フィールドの文字列値。
-- childDataKey - 生成された親行の子コレクションが保存されるフィールドのための文字列値。
+Here you can see how the grouping expressions and aggregations are defined:
 
 ```typescript
-public groupColumns = ["category", "type", "contract"];
+public groupingExpressions: IGroupingExpression[] = [
+    { fieldName: 'category', dir: 2, ignoreCase: true, strategy: DefaultSortingStrategy.instance() },
+    { fieldName: 'type', dir: 1, ignoreCase: true, strategy: DefaultSortingStrategy.instance() },
+    { fieldName: 'contract', dir: 1, ignoreCase: true, strategy: DefaultSortingStrategy.instance() }
+];
 public aggregations: ITreeGridAggregation[] = [
     {
-        aggregate: (parent: any, data: any[]) => {
-            return data.map((r) => r.change).reduce((ty, u) => ty + u, 0);
-        },
-        field: "change"
+        aggregate: (parent: any, data: any[]) => data.map((r) => r.change).reduce((ty, u) => ty + u, 0),
+        field: 'change'
     },
     {
-        aggregate: (parent: any, data: any[]) => {
-            return data.map((r) => r.price).reduce((ty, u) => ty + u, 0);
-        },
-        field: "price"
+        aggregate: (parent: any, data: any[]) => data.map((r) => r.price).reduce((ty, u) => ty + u, 0),
+        field: 'price'
     },
     {
-        aggregate: (parent: any, data: any[]) => {
-            return parent.change / (parent.price - parent.change) * 100;
-        },
-        field: "changeP"
+        aggregate: (parent: any, data: any[]) => parent.change / (parent.price - parent.change) * 100,
+        field: 'changeP'
     }
 ];
-public primaryKey = "id";
-public childDataKey = "children";
-public groupColumnKey = "categories";
+public childDataKey = 'children';
+public groupColumnKey = 'categories';
+public sorting = IgxGroupedTreeGridSorting.instance();
 ```
 
 ## Angular Tree Grid グループ化 ロード オン デマンドの例
@@ -104,18 +115,31 @@ public groupColumnKey = "categories";
 ロードオンデマンドの使用方法の例を次に示します。
 
 ```html
-<igx-tree-grid #treeGrid
-    [data]="data" [loadChildrenOnDemand]="loadChildren"
-    [primaryKey]="primaryKey" [childDataKey]="childDataKey" [hasChildrenKey]="hasChildrenKey">
-    <igx-column [field]="groupColumnKey" [width]="'180px'" [resizable]='true' [disableHiding]="true"></igx-column>
+    <igx-tree-grid #treeGrid
+        [data]="data"
+        [loadChildrenOnDemand]="loadChildren"
+        [primaryKey]="primaryKey"
+        [foreignKey]="foreignKey"
+        [hasChildrenKey]="hasChildrenKey">
+        <igx-tree-grid-group-by-area
+            [grid]="treeGrid"
+            [(expressions)]="groupingExpressions"
+            (expressionsChange)="onExpressionsChange($event)"
+            [hideGroupedColumns]="true">
+        </igx-tree-grid-group-by-area>
+        <igx-column [field]="groupColumnKey"></igx-column>
 ```
 
 ユーザーが行を展開するときに子行を読み込むために、ツリーグリッドはコールバック入力プロパティ [`loadChildrenOnDemand`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#loadchildrenondemand) を提供します - 子データはサーバーから取得され、グループ化パラメーターに基づいて要求された親行に割り当てられます。
 
 ```typescript
-public groupColumns = ['ShipCountry', 'ShipCity', 'Discontinued'];
+public groupingExpressions: IGroupingExpression[] = [
+    { fieldName: 'ShipCountry', dir: 2, ignoreCase: true, strategy: DefaultSortingStrategy.instance() },
+    { fieldName: 'ShipCity', dir: 1, ignoreCase: true, strategy: DefaultSortingStrategy.instance() },
+    { fieldName: 'Discontinued', dir: 1, ignoreCase: true, strategy: DefaultSortingStrategy.instance() }
+];
 public primaryKey = 'id';
-public childDataKey = 'children';
+public foreignKey = 'parentId';
 public hasChildrenKey = 'children';
 public groupColumnKey = '';
 
@@ -127,16 +151,17 @@ public ngOnInit() {
 
 public loadChildren = (parentID: any, done: (children: any[]) => void) => {
     const groupingParameters = this.assembleGroupingParameters();
-    this.dataService.getData(parentID, groupingParameters, (children) => done(children));
+    this.dataService.getData(parentID, this.hasChildrenKey, groupingParameters, (children) => done(children));
 };
 
 private reloadData() {
     this.treeGrid.isLoading = true;
     this.treeGrid.expansionStates.clear();
     const groupingParameters = this.assembleGroupingParameters();
-    this.dataService.getData(null, groupingParameters, (children) => {
+    this.dataService.getData(null, this.hasChildrenKey, groupingParameters, (children) => {
         this.data = children;
         this.treeGrid.isLoading = false;
+        this.treeGrid.reflow();
     });
 }
 ```
