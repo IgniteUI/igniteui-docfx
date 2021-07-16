@@ -44,4 +44,4 @@ Angular 地理的画像は、上空から見た世界の詳細な表現です。
 
 ## コード スニペット
 
-このコード例では、マップコンポーネントの `BackgroundContent` を、[`IgxOpenStreetMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxopenstreetmapimagery.html) の地理的画像タイルを提供する OpenStreetMapImagery オブジェクトに明示的に設定しています。
+このコード例では、マップコンポーネントの `BackgroundContent` を、Open Street Maps の地理的画像タイルを提供する [`IgxOpenStreetMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxopenstreetmapimagery.html) オブジェクトに明示的に設定しています。

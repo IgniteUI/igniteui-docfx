@@ -3,6 +3,7 @@ title: Ignite UI for Angular アクセシビリティ準拠 | Ignite UI for Angu
 _description: Ignite UI for Angular のアクセシビリティ準拠 - 第 508 条の遵守、WCAG および ARIA。
 _keywords: アクセシビリティ準拠, angular, ignite ui for angular, インフラジスティックス
 ---
+
 <style>
 .greenCheck {
   content:url("../../images/general/greenCheck.png");
@@ -84,7 +85,8 @@ _keywords: アクセシビリティ準拠, angular, ignite ui for angular, イ�
 |<span class="redCheck" />|コントロール/コンポーネント: 一部の種類のアクションを実行しない限り、完全にはユーザー補助に対応しません。||
 |'空白'|この特定の規則はコントロールに適用されません。||
 
-> [!WARNING] 上記のテーブルは、Ignite UI for Angular テーマ ライブラリの*デフォルト テーマ*にのみ関連しています。カスタム テーマ、タイポグラフィ、およびアニメーションと色に関連する視覚的な変更に関しては、チェックリストへの準拠が異なる場合があります。
+> [!WARNING] 
+> 上記のテーブルは、Ignite UI for Angular テーマ ライブラリの*デフォルト テーマ*にのみ関連しています。カスタム テーマ、タイポグラフィ、およびアニメーションと色に関連する視覚的な変更に関しては、チェックリストへの準拠が異なる場合があります。
 
  ### 法令遵守情報
 
@@ -165,7 +167,8 @@ _keywords: アクセシビリティ準拠, angular, ignite ui for angular, イ�
 |<span class="redCheck" />|コントロール/コンポーネント: 一部の種類のアクションを実行しない限り、完全にはユーザー補助に対応しません。||
 |'空白'|この特定の規則はコントロールに適用されません。||
 
-> [!WARNING] 上記のテーブルは、Ignite UI for Angular テーマ ライブラリの*デフォルト テーマ*にのみ関連しています。カスタム テーマ、タイポグラフィ、およびアニメーションと色に関連する視覚的な変更に関しては、チェックリストへの準拠が異なる場合があります。
+> [!WARNING] 
+> 上記のテーブルは、Ignite UI for Angular テーマ ライブラリの*デフォルト テーマ*にのみ関連しています。カスタム テーマ、タイポグラフィ、およびアニメーションと色に関連する視覚的な変更に関しては、チェックリストへの準拠が異なる場合があります。
 
 ### 法令遵守情報
 

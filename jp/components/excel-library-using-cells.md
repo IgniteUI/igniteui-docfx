@@ -12,10 +12,12 @@ Excel ワークシートの [`WorksheetCell`]({environment:dvApiBaseUrl}/product
 
 ## Angular セルの使用の例
 
-<div class="sample-container loading" style="height: 150px">
-    <iframe id="excel-library-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/excel/excel-library-working-with-cells' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular セルの使用の例"></iframe>
-</div>
-
+<code-view style="height: 200px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/excel/excel-library-working-with-cells"
+           alt="Angular セルの使用の例"
+           github-src="excel/excel-library/working-with-cells">
+</code-view>
 
 <div class="divider--half"></div>
 
@@ -258,9 +260,9 @@ RGB またはテーマの色が使用される場合、色を明るくする、�
 
 セルを結合した場合、領域の各セルが同じ値とセル書式になります。結合セルは同じ [`WorksheetMergedCellsRegion`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetmergedcellsregion.html) オブジェクトに関連付けされ、[`associatedMergedCellsRegion`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#associatedmergedcellsregion) プロパティからアクセスできるようになります。[`WorksheetMergedCellsRegion`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetmergedcellsregion.html) オブジェクトも結果としてセルと同じ値およびセル書式になります。
 
-領域または領域内の任意のセルの値（またはセル書式）を設定すると、すべてのセルおよび領域の値を変更します。セルを結合を解除する場合、以前結合したセルすべて結合以前に指定された共有のセル書式を保持します。ただし、領域の左上のセルのみが共有値を保持します。
+領域または領域内の任意のセルの値 (またはセル書式) を設定すると、すべてのセルおよび領域の値を変更します。セルを結合を解除する場合、以前結合したセルすべて結合以前に指定された共有のセル書式を保持します。ただし、領域の左上のセルのみが共有値を保持します。
 
-結合されたセル領域を作成するには、セルの範囲を [`worksheet`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#worksheet) オブジェクトの [`mergedCellsRegions`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html#mergedcellsregions) コレクションに追加する必要があります。このコレクションは、4 つの整数パラメーターを取得する `Add` メソッドを公開します。4 つのパラメーターは、開始する行と列（左上隅のセル）のインデックス、および終了する行と列（右下隅のセル）のインデックスを決定します。
+結合されたセル領域を作成するには、セルの範囲を [`worksheet`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#worksheet) オブジェクトの [`mergedCellsRegions`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html#mergedcellsregions) コレクションに追加する必要があります。このコレクションは、4 つの整数パラメーターを取得する `Add` メソッドを公開します。4 つのパラメーターは、開始する行と列 (左上隅のセル) のインデックス、および終了する行と列 (右下隅のセル) のインデックスを決定します。
 
 ```ts
 var workbook = new Workbook();

@@ -11,19 +11,19 @@ The Ignite UI for Angular Tree Grid is used to display and manipulate hierarchic
 
 ## Angular Tree Grid Example
 
-In this example, you can see how users can manipulate hierarchical or flat data. We have included filtering and sorting options, pinning and hiding, row selection, export to excel and csv, and cell templating that uses our [Sparkline](../sparkline.md) component. In addition, you can see an example of custom pagination with [Angular Pagination](paging.md).
+In this example, you can see how users can manipulate hierarchical or flat data. We have included filtering and sorting options, pinning and hiding, row selection, export to excel and csv, and cell templating that uses our [Sparkline](../charts/types/sparkline-chart.md) component. In addition, you can see an example of custom pagination with [Angular Pagination](paging.md).
 
 
 
-<code-view style="height:850px" 
-           data-demos-base-url="{environment:lobDemosBaseUrl}" 
+<code-view style="height:850px"
+           data-demos-base-url="{environment:lobDemosBaseUrl}"
            iframe-src="{environment:lobDemosBaseUrl}/tree-grid/treegrid-childdatakey" alt="Angular tree grid example">
 </code-view>
 
 <div class="divider--half"></div>
 
-<code-view style="height:850px" 
-           data-demos-base-url="{environment:lobDemosBaseUrl}" 
+<code-view style="height:850px"
+           data-demos-base-url="{environment:lobDemosBaseUrl}"
            iframe-src="{environment:lobDemosBaseUrl}/tree-grid/treegrid-childdatakey" alt="Angular tree grid example">
 </code-view>
 
@@ -240,8 +240,8 @@ In addition we will enable the row selection feature of the tree grid by using t
 
 And here is the final result:
 
-<code-view style="height:450px" 
-           data-demos-base-url="{environment:lobDemosBaseUrl}" 
+<code-view style="height:450px"
+           data-demos-base-url="{environment:lobDemosBaseUrl}"
            iframe-src="{environment:lobDemosBaseUrl}/tree-grid/treegrid-primaryforeignkey" >
 <div class="divider--half"></div>
 
@@ -320,7 +320,7 @@ $black-color: #494949;
 $custom-palette: igx-palette($primary: $black-color, $secondary: $yellow-color);
 ```
 
-And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette. 
+And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette.
 
 ```scss
 $custom-theme: igx-grid-theme(
@@ -371,7 +371,7 @@ $my-custom-schema: extend($light-schema, (
 $custom-theme: igx-grid-theme(
     $palette: $custom-palette,
     $schema: $my-custom-schema
-); 
+);
 ```
 
 Don't forget to include the themes in the same way as it was demonstrated above.
@@ -379,8 +379,8 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 ### Angular Tree Grid Styling Demo
 
 
-<code-view style="height:600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-style" alt="Angular tree grid styling demo">
 </code-view>
 
@@ -406,7 +406,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 ```
 
 > [!NOTE]
-> `igxTreeGrid` uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for `igxTreeGrid`. For more details see [igxForOf Known Issues](../for-of.html#known-limitations) section.
+> `igxTreeGrid` uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for `igxTreeGrid`. For more details see [igxForOf Known Issues](../for-of.md#known-limitations) section.
 
 <div class="divider--half"></div>
 

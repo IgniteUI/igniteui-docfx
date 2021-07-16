@@ -351,9 +351,9 @@ $cutom-navbar-theme: igx-navbar-theme(
 * [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
 * [IgxIconComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
 
-## Theming Dependencies
-* [IgxIconComponent Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
-* [IgxButtonComponent Theme]({environment:sassApiUrl}/index.html#function-igx-button-theme)
+## テーマの依存関係
+* [IgxIconComponent テーマ]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxButtonComponent テーマ]({environment:sassApiUrl}/index.html#function-igx-button-theme)
 
 ### その他のリソース
 

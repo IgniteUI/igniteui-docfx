@@ -53,7 +53,7 @@ With that being said, let's move to the following example:
 
 The precedence takes the inner tag which in the above case is the attribute at the `body` tag.
 
-### Step 2 - Notifying the [theming engine](../../themes/index.md) for the respective direction.
+### Step 2 - Notifying the [theming engine](../themes/index.md) for the respective direction.
 
 Setting the `$direction` parameter of [igx-core]({environment:sassApiUrl}/index.html#mixin-igx-core) mixin does the magic.
 

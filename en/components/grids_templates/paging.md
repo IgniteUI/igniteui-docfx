@@ -98,7 +98,7 @@ this.@@igObjectRef.totalRecords = 30;
 @@if (igxName === 'IgxGrid') {
 ## Paging with Group By
 Group rows participate in the paging process along with data rows. They count towards the page size for each page. Collapsed rows are not included in the paging process.
-Integration between Paging and Group By is described in the [Group By](groupby.html#group-by-with-paging) topic.
+Integration between Paging and Group By is described in the [Group By](groupby.md#angular-grid-group-by-with-paging) topic.
 }
 
 ## Reusable Paginator Component in Angular
@@ -256,8 +256,6 @@ public ngOnInit(): void {
 }
 ```
 
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-pager-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Stackblitz demo</button>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="grid-pager-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">Codesandbox demo</button>
 </div>
 
 ## Pagination Styling in Angular

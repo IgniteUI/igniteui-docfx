@@ -175,7 +175,7 @@ h3#excel-library-for-the-angular-grid ~ h3{
         width: 70%;
         margin-right: auto;
     }
-    
+
     div.support-section:last-child:last-child{
         border-left: none;
     }
@@ -214,7 +214,7 @@ In this angular grid example, you can see how users can customize their _data vi
 
 <div class="divider--half"></div>
 
-## What is an Angular Data Grid? 
+## What is an Angular Data Grid?
 
 An Angular data grid is a component used to display tabular data in a series of rows and columns. Data grids, also known as tables, are well known in the desktop world with popular software such as Microsoft Excel. While grids have been available on desktop platforms for a long time, they have recently become part of web app UIs, such as Angular UI. Modern grids can be complex and may include a range of functionalities, including data binding, editing, Excel-like filtering, custom sorting, grouping, row reordering, row and column freezing, row aggregation, and exporting to Excel, CSV, and pdf formats.
 
@@ -234,7 +234,7 @@ This example demonstrates a few of the data grid’s key features:
 <ul id="features-list">
 <li>[**Virtualized Rows and Columns**](grid/virtualization.md) so you can load millions of records</li>
 
-<li>[**Inline Editing**](grid/row-editing.md) with Cell, Row, and [**Batch**](grid/batch-editing.md) Update options</li>
+<li>[**Inline Editing**](grid/editing.md) with [**Cell**](grid/cell-editing.md), [**Row**](grid/row-editing.md), and [**Batch**](grid/batch-editing.md) Update options</li>
 
 <li>[**Excel-style Filtering**](grid/excel-style-filtering.md) and full [**Excel Keyboard Navigation**](grid/keyboard-navigation.md) capability</li>
 
@@ -246,7 +246,7 @@ This example demonstrates a few of the data grid’s key features:
 
 <li>[**Display Density**](grid/display-density.md) to adjust the height and sizing of the rows</li>
 
-<li>Column templates like [**Sparkline Column**](sparkline.md#demo) and Image Column</li>
+<li>Column templates like [**Sparkline Column**](charts/types/sparkline-chart.md) and Image Column</li>
 </ul>
 
 <div class="divider"></div>
@@ -388,7 +388,7 @@ Seamlessly scroll through unlimited rows and columns in your Angular grid, with 
     <li>[Virtualization and Performance](grid/virtualization.md)</li>
     <li>[Remote Data Load on Demand](grid/virtualization.md#remote-virtualization)</li>
     <li>[Cell Templates](grid/grid.md#cell-template)</li>
-    <li>[ARIA/a11y Support](general/accessibility-compliance.md)</li>
+    <li>[ARIA/a11y Support](interactivity/accessibility-compliance.md)</li>
 </ul>
 </div>
 
@@ -465,7 +465,7 @@ There are multiple options to get access to our award-winning support at Infragi
                 <li>[Column Summaries](grid/summaries.md) based on any data in a grid cell or column</li>
                 <li>[Export to Excel](grid/export-excel.md), including [Data Visualization](excel-library-working-with-charts.md)</li>
                 <li>[Display Density](grid/display-density.md) to adjust the height and sizing of the rows</li>
-                <li>Column templates like [Sparkline Column](sparkline.md) and Image Column</li>
+                <li>Column templates like [Sparkline Column](charts/types/sparkline-chart.md) and Image Column</li>
             </ul>
         </div>
     </div>
@@ -498,22 +498,3 @@ If you are developing applications on multiple platforms, consider our complete 
         </div>
     </div>
 </div>
-
-<script>
-    (function(){
-        var acc = document.getElementsByClassName("faqs-accordion-content");
-        var i;
-
-        for (i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var panel = this.lastElementChild;
-            if (panel.style.maxHeight) {
-            panel.style.maxHeight = null;
-            } else {
-            panel.style.maxHeight = panel.scrollHeight + "px";
-            }
-        });
-        }
-    })()
-</script>

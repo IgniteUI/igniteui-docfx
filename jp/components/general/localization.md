@@ -7,7 +7,7 @@ _language: ja
 
 # ローカライズ (i18n)
 
-現在、Ignite UI for Angular は、次の言語とスクリプトのリソース文字列で出荷されます: ドイツ語、フランス語、イタリア語、日本語、韓国語、スペイン語、繁体字中国語、簡体字中国語。これらは `igniteui-angular-i18n` パッケージを介して使用できます。
+現在、Ignite UI for Angular は、次の言語とスクリプトのリソース文字列で出荷されます: ブルガリア語、チェコ語、デンマーク語、オランダ語、フランス語、ドイツ語、ハンガリー語、イタリア語、日本語、韓国語、ポーランド語、ポルトガル語、ルーマニア語、スペイン語、スウェーデン語、トルコ語、繁体字中国語、簡体字中国語。これらは `igniteui-angular-i18n` パッケージを介して使用できます。
 
 最小限のコードで Ignite UI for Angular コンポーネントの文字列を簡単にローカライズできます。
 
@@ -18,6 +18,8 @@ _language: ja
            iframe-src="{environment:demosBaseUrl}/services/localization-all-resources" 
            alt="Angular ローカライズの例">
 </code-view>
+
+>注: サンプルに含まれているヒンディー語 (HI) は、説明のみを目的としており、カスタム オブジェクトを渡す可能性を強調するためのものです。このサンプルでは、集計用にローカライズされたいくつかの文字列のみが含まれています。詳細については、以下の[独自のローカライズされたリソースを使用する](#独自のローカライズされたリソースを活用する)セクションを参照してください。
 
 ## 使用方法
 
@@ -53,19 +55,19 @@ public ngOnInit(): void {
 import { changei18n } from "igniteui-angular";
 ...
 
-public customBG: IResourceStrings;
+public partialCustomHindi: IResourceStrings;
 public ngOnInit(): void {
     ...
-    this.customBG = {
+    this.partialCustomHindi = {
         ...
-        igx_grid_summary_count: 'Общ брой',
-        igx_grid_summary_min: 'Минимум',
-        igx_grid_summary_max: 'Максимум',
-        igx_grid_summary_sum: 'Сума',
-        igx_grid_summary_average: 'Средна стойност'
+        igx_grid_summary_count: 'गणना',
+        igx_grid_summary_min: 'न्यून',
+        igx_grid_summary_max: 'अधिक',
+        igx_grid_summary_sum: 'योग',
+        igx_grid_summary_average: 'औसत'
         ...
     };
-    changei18n(this.customBG);
+    changei18n(this.partialCustomHindi);
     ...
 }
 ```
@@ -126,6 +128,26 @@ const newGridRes: IGridResourceStrings = {
 this.grid.resourceStrings = newGridRes;
 ```
 
+### 利用可能なリソース文字列
+
+* [IgxResourceStringsBG](https://github.com/IgniteUI/igniteui-angular-i18n/blob/master/src/i18n/BG/resources.ts)
+* [IgxResourceStringsCS](https://github.com/IgniteUI/igniteui-angular-i18n/blob/master/src/i18n/CS/resources.ts)
+* [IgxResourceStringsDA](https://github.com/IgniteUI/igniteui-angular-i18n/blob/master/src/i18n/DA/resources.ts)
+* [IgxResourceStringsDE](https://github.com/IgniteUI/igniteui-angular-i18n/blob/master/src/i18n/DE/resources.ts)
+* [IgxResourceStringsES](https://github.com/IgniteUI/igniteui-angular-i18n/blob/master/src/i18n/ES/resources.ts) 
+* [IgxResourceStringsFR](https://github.com/IgniteUI/igniteui-angular-i18n/blob/master/src/i18n/FR/resources.ts) 
+* [IgxResourceStringsHU](https://github.com/IgniteUI/igniteui-angular-i18n/blob/master/src/i18n/HU/resources.ts)
+* [IgxResourceStringsIT](https://github.com/IgniteUI/igniteui-angular-i18n/blob/master/src/i18n/IT/resources.ts) 
+* [IgxResourceStringsJA](https://github.com/IgniteUI/igniteui-angular-i18n/blob/master/src/i18n/JA/resources.ts) 
+* [IgxResourceStringsKO](https://github.com/IgniteUI/igniteui-angular-i18n/blob/master/src/i18n/KO/resources.ts) 
+* [IgxResourceStringsNL](https://github.com/IgniteUI/igniteui-angular-i18n/blob/master/src/i18n/NL/resources.ts)
+* [IgxResourceStringsPL](https://github.com/IgniteUI/igniteui-angular-i18n/blob/master/src/i18n/PL/resources.ts)
+* [IgxResourceStringsPT](https://github.com/IgniteUI/igniteui-angular-i18n/blob/master/src/i18n/PT/resources.ts)
+* [IgxResourceStringsRO](https://github.com/IgniteUI/igniteui-angular-i18n/blob/master/src/i18n/RO/resources.ts)
+* [IgxResourceStringsSV](https://github.com/IgniteUI/igniteui-angular-i18n/blob/master/src/i18n/SV/resources.ts)
+* [IgxResourceStringsTR](https://github.com/IgniteUI/igniteui-angular-i18n/blob/master/src/i18n/TR/resources.ts)
+* [IgxResourceStringsZHHANS](https://github.com/IgniteUI/igniteui-angular-i18n/blob/master/src/i18n/ZH-HANS/resources.ts) 
+* [IgxResourceStringsZHHANT](https://github.com/IgniteUI/igniteui-angular-i18n/blob/master/src/i18n/ZH-HANT/resources.ts)
 
 ## その他のリソース
 
