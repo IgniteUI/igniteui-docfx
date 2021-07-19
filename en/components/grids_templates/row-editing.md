@@ -312,7 +312,7 @@ The Row Editing overlay is a composite element - its UI is comprised of a couple
     - [`igx-button`](../button.md)s are rendered in the default template (for the `Done` and `Cancel` buttons).
 
 In the below example, we will make use of those two components' styling options, ([button styling](../button.md#styling) & [banner-styling](../banner.md#styling)), to customize the experience of our @@igxName's Row Editing.
-We will also style the current cell's editor and background to make it more distinct. You can learn more about cell styling [here](editing.md#styling).
+We will also style the current cell's editor and background to make it more distinct. You can learn more about cell styling [here](cell-editing.md#styling).
 
 ### Import theme
 
@@ -414,7 +414,7 @@ We scope our `@include` statement in `.custom-buttons` so that it is only applie
 
 ### Demo
 
-After styling the banner and buttons, we also define a custom style for [the cell in edit mode](editing.md#styling). The result of all the combined styles can be seen below:
+After styling the banner and buttons, we also define a custom style for [the cell in edit mode](cell-editing.md#styling). The result of all the combined styles can be seen below:
 
 @@if (igxName === 'IgxGrid'){
 

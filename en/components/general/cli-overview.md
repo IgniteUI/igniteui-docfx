@@ -70,6 +70,7 @@ The new application is created in a directory with the same name (`newAngularPro
 
 Additionally, you can specify **arguments** to control the theme or skip packages install:
 
+<div class="fancy-details">
 <details>
   <summary>name</summary>
   <p>
@@ -116,7 +117,7 @@ Additionally, you can specify **arguments** to control the theme or skip package
     <code>--skip-git</code> (alias: <code>--sg</code>)
   </p>
   <p>
-    When this option is used, the automatic repository initialization with Git will be skipped. If the option is omitted, then the global <a href="config">skipGit</a> configuration property is used.
+    When this option is used, the automatic repository initialization with Git will be skipped. If the option is omitted, then the global skip-git configuration property is used.
   </p>
 </details>
 
@@ -139,7 +140,7 @@ Additionally, you can specify **arguments** to control the theme or skip package
     Use this option if there are different project templates for a specific framework type. 
     Currently this option is available only for Ignite UI for Angular igx-ts project types.</p>
 </details>
-
+</div>
 
 ## Add template
 To add one of the [available Ignite UI Angular templates](cli/component-templates.md) you need to provide template ID and a name for the new component or use the [Step-by-Step Guide](cli/step-by-step-guide.md#add-view). Supported only inside existing projects created with the Angular Schematics, Ignite UI CLI or where Ignite UI for Angular has been [installed using `ng add`](getting-started.md#installing-ignite-ui-for-angular).

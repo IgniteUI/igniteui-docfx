@@ -9,30 +9,6 @@ _language: ja
 
 このトピックでは、Ignite UI for Angular の重大な変更に関する情報と、古いコードを最新の API に更新する方法について説明します。
 
-## PropertyPath の名称変更
-
-データ グリッド コンポーネントの `propertyPath` プロパティ名が `field` に変更されました。これは、すべての Column タイプ、GroupDescription、SortDescription および SummaryDescription に適用します。
-
-> [!NOTE]
-> これらの重大な変更は、グリッド パッケージの **{PackageVerChangedFields}** バージョンで導入されました。
-
-## Live Grid の名称変更
-
-Data Grid コンポーネントおよび対応するモジュールの名前が 「LiveGrid」 から 「DataGrid」 に変更されました。
-
-> [!NOTE]
-> これらの重大な変更は、パッケージおよびコンポーネントの **{PackageVerRenamedGrid}** バージョンで導入されました。
-
-グリッドとそれに対応するモジュールをインポートする新しいコードは以下のとおりです。
-
-## Data Grid の必須ピア依存関係
-
-Data Grid コンポーネントには 「inputs」 パッケージが必要です。
-
-```ts
-**npm install --save {PackageInputs}**
-```
-
 ## Import ステートメントの変更
 
 Import ステートメントは、API クラスと列挙型へのフル パスではなくパッケージ名のみを使用するように簡素化されました。
@@ -47,7 +23,6 @@ Import ステートメントは、API クラスと列挙型へのフル パス�
 | <a href="https://www.npmjs.com/package/igniteui-angular-maps/v/8.2.12" target="_blank">igniteui-angular-maps</a>               | [地理マップ](geo-map.md)、[ツリーマップ](treemap-overview.md)                                    |
 | <a href="https://www.npmjs.com/package/igniteui-angular-gauges/v/8.2.12" target="_blank">igniteui-angular-gauges</a>           | [ブレット グラフ](bullet-graph.md)、[リニア ゲージ](linear-gauge.md)、[ラジアル ゲージ](radial-gauge.md)   |
 | <a href="https://www.npmjs.com/package/igniteui-angular-charts/v/8.2.12" target="_blank">igniteui-angular-charts</a>           | カテゴリ チャート、データ チャート、ドーナツ チャート、ファイナンシャル チャート、円チャート、[ズーム スライダー](zoomslider-overview.md) |
-| <a href="https://www.npmjs.com/package/igniteui-angular-grids/v/8.2.12" target="_blank">igniteui-angular-grids</a>             | [データ グリッド](data-grid.md)                                                             |
 | <a href="https://www.npmjs.com/package/igniteui-angular-core/v/8.2.12" target="_blank">igniteui-angular-core</a>               | すべてのクラスと列挙型                                                                          |
 
 ## 変更後のコード

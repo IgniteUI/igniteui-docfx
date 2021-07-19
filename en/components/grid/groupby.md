@@ -184,7 +184,7 @@ Groups that span multiple pages are split between them. The group row is visible
 
 ## Group By with Summaries
 
-Integration between Group By and Summaries is described in the [Summaries](summaries.html#summaries-with-group-by) topic.
+Integration between Group By and Summaries is described in the [Summaries](summaries.md#summaries-with-group-by) topic.
 
 ## Keyboard Navigation
 
@@ -456,7 +456,7 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 ## API References
 
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGroupByRow](({environment:angularApiUrl}/classes/igxgroupbyrow.html)
+* [IgxGroupByRow]({environment:angularApiUrl}/classes/igxgroupbyrow.html)
 * [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 * [ISortingExpression]({environment:angularApiUrl}/interfaces/isortingexpression.html)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)

@@ -178,7 +178,8 @@ public positionSettings: PositionSettings = {
 };
 ```
 
-> [!Note] The same approach should be used for the animation settings, use the `openAnimation` and `closeAnimation` properties to define animation params like duration. 
+> [!Note] 
+> The same approach should be used for the animation settings, use the `openAnimation` and `closeAnimation` properties to define animation params like duration. 
 `params` object example:
 
 ```typescript
@@ -226,7 +227,7 @@ Since the dialog window uses the [`IgxOverlayService`](overlay.md), in order for
 ```
 
 > [!NOTE]
-> In order to learn more about the various options for providing themes to elements that are shown by using the [`IgxOverlayService`](overlay.md), you can take a look at this [link](overlay.md#styling).
+> In order to learn more about the various options for providing themes to elements that are shown by using the [`IgxOverlayService`](overlay.md), you can take a look at the [Overlay styling topic](overlay-styling.md).
 
 ### Including Themes
 

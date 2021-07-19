@@ -62,7 +62,7 @@ First create a time string in `ISO 8601` format:
 public time = '09:15:30';
 ```
 
-Then use the  `ngModel` to create a two-way data-binding:
+Then use the `ngModel` to create a two-way data-binding:
 
 ```html
 <igx-time-picker [(ngModel)]="time"></igx-time-picker>
@@ -172,7 +172,7 @@ The default time picker mode is editable dropdown mode. To change the time picke
 ```typescript
 // timePickerDropdown.component.ts
 
-import { InteractionMode } from 'igniteui-angular';
+import { PickerInteractionMode } from 'igniteui-angular';
 ...
 public mode = PickerInteractionMode.Dialog;
 ```
@@ -214,14 +214,15 @@ The input format is the format of the value when not in edit mode and the format
 [displayFormat]="`shortTime`">
 </igx-time-picker>
 ```
+> Note: The `IgxTimePicker` now supports IME input. When composition ends, the control converts the wide-character numbers to ASCII characters.
 
 ### Increment and decrement
 The time picker exposes public [`increment`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#increment) and [`decrement`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#decrement) methods, which accept two optional parametars: the `DatePart` to be modified and the `delta` by which it will be changed. If not specified the `DatePart` defaults to `Hours` and the `delta` defaults to [`itemsDelta`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#itemsdelta).
 
-You can find a sample that illustrates the use of both methods at [Date Time Editor Directive](date-time-editor.md#increment-and-decrement).
+You can find a sample that illustrates the use of both methods at [Date Time Editor Directive](date-time-editor.md#increment-decrement).
 
 ### Forms and Validation
-The time picker component supports all directives from the core FormsModule [NgModel](https://angular.io/api/forms/NgModel) and [ReactiveFormsModule](https://angular.io/api/forms/ReactiveFormsModule) (FormControl, FormGroup, etc.). This also includes the [Forms Validators](https://angular.io/api/forms/Validators) functions. In addition, the component's [min and max values](#min-and-max-values) also act as form validators.
+The time picker component supports all directives from the core FormsModule [NgModel](https://angular.io/api/forms/NgModel) and [ReactiveFormsModule](https://angular.io/api/forms/ReactiveFormsModule) (FormControl, FormGroup, etc.). This also includes the [Forms Validators](https://angular.io/api/forms/Validators) functions. In addition, the component's [min and max values](#min-max-value) also act as form validators.
 
 The [Reactive Forms Integration](input-group-reactive-forms.md) sample demonstrates how to use the igxTimePicker in Reactive Forms.
 
@@ -289,6 +290,27 @@ And there we have it:
 
 <div class="divider--half"></div>
 
+#### Using date and time picker together
+In some cases when the [`IgxDatePicker`](date-picker.md) and the IgxTimePicker are used together, we might need them to be bound to one and the same Date object value.
+
+To achieve that in template driven forms, use the `ngModel` to bind both components to the same Date object.
+
+<code-view style="height: 540px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/scheduling/template-driven-form" >
+</code-view>
+
+<div class="divider--half"></div>
+
+In reactive forms, we can handle the [`valueChange`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#valuechange) event of each component and update the value of the other.
+
+<code-view style="height: 540px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/scheduling/reactive-form" >
+</code-view>
+
+<div class="divider--half"></div>
+
 ## Styling
 
 To get started with styling the time picker, we need to import the `index` file, where all the theme functions and component mixins live:
@@ -336,7 +358,7 @@ export class TimepickerStylingComponent {
 Now, the time picker's items are properly rendered **inside** of our component's host, which means that our custom theme will take effect:
 
 >[!NOTE]
->In order to learn more about the various options for providing themes to elements that are shown by using the [`IgxOverlayService`](overlay.md), you can take a look at this [link](overlay.md#styling).
+>In order to learn more about the various options for providing themes to elements that are shown by using the [`IgxOverlayService`](overlay.md), you can take a look at the [Overlay styling topic](overlay-styling.md).
 
 ### Including Themes
 

@@ -265,7 +265,7 @@ $dark-tooltip: igx-tooltip-theme(
 ```
 
 > [!NOTE]
-> [`IgxOverlayService`](overlay.md) を使用して表示される要素にテーマを提供するためのさまざまなオプションの詳細については、この[リンク](overlay.md#スタイル設定)をご覧ください。
+> [`IgxOverlayService`](overlay.md) を使用して表示される要素にテーマを提供するためのさまざまなオプションの詳細については、[オーバーレイ スタイリングのトピック](overlay-styling.md)をご覧ください。
 
 ### テーマを含む
 

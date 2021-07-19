@@ -119,7 +119,7 @@ Angular Financial Chart コンポーネントでは、チャート ナビゲー�
     width="850px"
     height="600px"
     trendLineType="QuinticFit"
-	trendLineThickness="2"
+    trendLineThickness="2"
     trendLineBrushes="Green, Blue">
  </igx-financial-chart>
 ```

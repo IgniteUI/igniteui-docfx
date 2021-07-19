@@ -1,6 +1,6 @@
 ---
 title: Angular 円チャートとグラフ | Ignite UI for Angular
-_description: Ignite UI for Angular 円チャートは、セクションに分割された円形領域で構成される円チャートを描画する特殊なコンポーネントです。無料でお試しください。
+_description: Ignite UI for Angular 円チャートは、セクションに分割された円形領域で構成される円チャートを描画する特殊な UI コントロールです。無料でお試しください。
 _keywords: Angular charts, pie chart, Ignite UI for Angular, Infragistics, data binding, slice selection, slice explosion, animation, チャート, 円チャート, データ バインディング, スライス選択, スライス切り離し, アニメーション, インフラジスティックス
 mentionedTypes: ["XamPieChart", "XamDataChart"]
 _language: ja

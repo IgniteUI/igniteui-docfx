@@ -201,6 +201,7 @@ The `inputFormat` property accepts a constructed format string using characters 
 </igx-date-range-picker>
 ```
 
+> Note: The `IgxDateRangePicker` now supports IME input. When composition ends, the control converts the wide-character numbers to ASCII characters.
 
 ### Forms and Validation
 The Date Range Picker Component supports all directives from the core [FormsModule](https://angular.io/api/forms/FormsModule), [NgModel](https://angular.io/api/forms/NgModel) and [ReactiveFormsModule](https://angular.io/api/forms/ReactiveFormsModule) ([`FormControl`](https://angular.io/api/forms/FormControl), [`FormGroup`](https://angular.io/api/forms/FormGroup), etc.). This also includes the [Forms Validators](https://angular.io/api/forms/Validators) functions. In addition, the component's [min and max values](#min-and-max-values) also act as form validators.
@@ -386,7 +387,7 @@ If the component is using the [`Emulated`](themes/sass/component-themes.md#view-
 ```
 
 ### Scoping Styles
-Regarding style scoping, you should refer to both styling sections [Overlay Scoped Component Styles](overlay-styling.md#scoped-component-styles) and [Input Group Scoping Styles](input-group.md#scoping-styles) as they provide more information.
+Regarding style scoping, you should refer to both styling sections [Overlay Scoped Component Styles](overlay-styling.md#scoped-component-styles) and [Input Group Scoping Styles](input-group.md#styling) as they provide more information.
 
 
 <code-view style="height:600px" 
