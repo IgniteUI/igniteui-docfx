@@ -6,11 +6,11 @@ _keywords: angular crud, ignite ui for angular, infragistics
 
 # @@igComponent Batch Editing and Transactions
 
-@@if (igxName === 'IgxGrid') {
+@@if (igxName === 'IgxGrid' || igxName === 'IgxHierarchicalGrid') {
 The Batch Editing feature of the @@igxName is based on the [`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html). Follow the [`Transaction Service class hierarchy`](../transaction-classes.md) topic to see an overview of the `igxTransactionService` and details how it is implemented.
 }
 
-@@if (igxName === 'IgxTreeGrid' || igxName === 'IgxHierarchicalGrid') {
+@@if (igxName === 'IgxTreeGrid') {
 The Batch Editing feature of the @@igxName is based on the [`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html). Follow the [`Transaction Service class hierarchy`](../transaction-classes.md) topic to see an overview of the `igxHierarchicalTransactionService` and details how it is implemented.
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -22,7 +22,7 @@ Below is a detailed example of how is Batch Editing enabled for the @@igComponen
 
 ## Angular @@igComponent Batch Editing and Transactions Example
 
-The following sample demonstrates a scenario, where the @@igObjectRef has the Transaction as provider and has row editing enabled. The latter will ensure that transaction will be added after the entire row edit is confirmed.
+The following sample demonstrates a scenario, where the @@igObjectRef has [`batchEditing`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#batchEditing) enabled and has row editing enabled. The latter will ensure that transaction will be added after the entire row edit is confirmed.
 
 @@if (igxName === 'IgxGrid') {
 <code-view style="height:650px" 
@@ -70,74 +70,21 @@ import { @@igxNameModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Then you need to define the transaction service as a provider for the @@igComponent:
+Then, all you need to do is enable `batchEditing` from your @@igComponent:
 
-@@if (igxName === 'IgxGrid') {
-```typescript
-import { Component } from "@angular/core";
-import { IgxGridTransaction, IgxTransactionService } from "igniteui-angular";
-
-@Component({
-    selector: 'app-grid-row-edit',
-    styleUrls: [`grid-batch-editing-sample.component.scss`],
-    templateUrl: 'grid-batch-editing-sample.component.html',
-    providers: [{ provide: IgxGridTransaction, useClass: IgxTransactionService }]
-})
-export class GridBatchEditingSampleComponent {
-    ...
-}
-
+```html
+<@@igSelector [data]="data" [batchEditing]="true">
+  ...
+</@@igSelector>
 ```
-}
-@@if (igxName === 'IgxTreeGrid') {
-```typescript
-import { Component } from "@angular/core";
-import { IgxGridTransaction, IgxHierarchicalTransactionService } from "igniteui-angular";
 
-@Component({
-    selector: 'app-tree-grid-batch-editing-sample',
-    styleUrls: ['tree-grid-batch-editing-sample.component.scss'],
-    templateUrl: 'tree-grid-batch-editing-sample.component.html',
-    providers: [{ provide: IgxGridTransaction, useClass: IgxHierarchicalTransactionService }]
-})
-export class TreeGridBatchEditingSampleComponent {
-    ...
-}
+This will ensue a proper instance of `Transaction` service is provided for the @@igSelector.
 
-```
-}
-@@if (igxName === 'IgxHierarchicalGrid') {
-```typescript
-import { Component } from "@angular/core";
-import { IgxHierarchicalTransactionServiceFactory } from "igniteui-angular";
-@Component({
-    selector: 'app-hierarchical-grid-batch-editing',
-    styleUrls: ['./hierarchical-grid-batch-editing.component.scss'],
-    templateUrl: 'hierarchical-grid-batch-editing.component.html',
-    providers: [ IgxHierarchicalTransactionServiceFactory ]
-})
-export class HGridBatchEditingSampleComponent {
-    ...
-}
-```
-}
-@@if (igxName === 'IgxGrid') {
-> [!NOTE]
-> By default the `@@igxName` has `IgxGridTransaction` injection token defined in its module. This token provides [`igxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html). Providing this service allows `@@igxName` to perform row editing. To enable transactions in `@@igxName` [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) should be provided. This could be done in the component's `providers` array. However, as each `@@igxName` needs its own transaction service, when component has several `@@igxNames` defined in its body, each `@@igxName` should be encapsulated in a component where transaction service should be provided.
-}
-@@if (igxName === 'IgxTreeGrid') {
-> [!NOTE]
-> By default the `@@igxName` has `IgxGridTransaction` injection token defined in its module. This token provides [`igxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html). Providing this service allows `@@igxName` to perform row editing. To enable transactions in `@@igxName` [`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) should be provided. This could be done in the component's `providers` array. However, as each `@@igxName` needs its own transaction service, when component has several `@@igxNames` defined in its body, each `@@igxName` should be encapsulated in a component where transaction service should be provided.
-}
-@@if (igxName === 'IgxHierarchicalGrid') {
-> [!NOTE]
-> By default the `@@igxName` has `IgxGridTransaction` injection token defined in its module. This token provides [`igxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html). Providing this service allows `@@igxName` to perform row editing. To enable transactions in `@@igxName` [`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) should be provided. This could be done in the component's `providers` array. However, as each `@@igxName` needs its own transaction service, when component has several `@@igxNames` defined in its body, each `@@igxName` should be encapsulated in a component where transaction service should be provided.
-}
-Then define a `@@igxName` with bound data source and [`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable) set to true and bind:
+After batch editing is enabled, define a `@@igxName` with bound data source and [`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable) set to true and bind:
 
 @@if (igxName === 'IgxGrid') {
 ```html
-<igx-grid #grid [data]="data" [primaryKey]="'ProductID'" width="100%" height="500px"
+<igx-grid #grid [batchEditing]="true" [data]="data" [primaryKey]="'ProductID'" width="100%" height="500px"
     [rowEditable]="true">
     ...
 </igx-grid>
@@ -152,7 +99,7 @@ Then define a `@@igxName` with bound data source and [`rowEditable`]({environmen
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```html
-<igx-tree-grid #treeGrid [data]="data" primaryKey="employeeID" foreignKey="PID"
+<igx-tree-grid #treeGrid [batchEditing]="true" [data]="data" primaryKey="employeeID" foreignKey="PID"
     width ="100%" height ="500px" rowEditable=true>
     ...
 </igx-tree-grid>
@@ -167,7 +114,7 @@ Then define a `@@igxName` with bound data source and [`rowEditable`]({environmen
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid #hierarchicalGrid [data]="data" [primaryKey]="'Artist'"
+<igx-hierarchical-grid #hierarchicalGrid [batchEditing]="true" [data]="data" [primaryKey]="'Artist'"
     [height]="'580px'" [width]="'100%'" [rowEditable]="true" >
     ...
     <igx-row-island #childGrid [key]="'Albums'" [primaryKey]="'Album'" [rowEditable]="true">
@@ -197,7 +144,7 @@ The following code demonstrates the usage of the [`transactions`]({environment:a
 ```typescript
 ...
 export class GridBatchEditingSampleComponent {
-    @ViewChild("gridRowEditTransaction", { read: IgxGridComponent }) public gridRowEditTransaction: IgxGridComponent;
+    @ViewChild("grid", { read: IgxGridComponent }) public gridRowEditTransaction: IgxGridComponent;
     ...
     public undo() {
         /* exit edit mode and commit changes */
