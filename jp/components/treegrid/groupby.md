@@ -7,9 +7,9 @@ _language: ja
 
 # Angular Tree Grid グループ化
 
-階層以外のデータ列を **グループ化**し、**集計値**で親行を生成する場合、[`IgxTreeGridComponent`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html) along with `treeGridGrouping` pipe and the UI component with selector `igx-tree-grid-group-by-area`.
+階層以外のデータ列を **グループ化し**、**集計値**で親行を生成する場合、[`IgxTreeGridComponent`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html) を `treeGridGrouping` パイプと一緒に使用し、UI コンポーネントをセレクター `igx-tree-grid-group-by-area` と一緒に使用できます。
 
-The `treeGridGrouping` pipe groups the data based on the provided parameters and the resulting hierarchy is displayed in a separate column. The pipe can also calculate aggregated values for the generated parent rows if aggregations are provided. Here is an example of how to use the pipe in the template:
+`treeGridGrouping` パイプは、提供されたパラメーターに基づいてデータをグループ化し、結果の階層は別の列に表示されます。集計が提供されている場合、パイプは生成された親行の集計値を計算することもできます。以下はテンプレートでパイプを使用した例です。
 
 ```html
 <igx-tree-grid #grid 
@@ -18,14 +18,14 @@ The `treeGridGrouping` pipe groups the data based on the provided parameters and
                [sortStrategy]="sorting">
 ```
 
-The pipe arguments are the following:
-- groupingExpressions - an array of [`IGroupingExpression`]({environment:angularApiUrl}/interfaces/igroupingexpression.html) objects which contains information about the fields used to generate the hierarchy and the sorting details for each group
-- groupKey - a string value for the name of the generated hierarchy column
-- childDataKey - a string value for the field where the child collection of the generated parent rows is stored
-- grid - `IgxTreeGridComponent` that is used for the grouping
-- aggregations (optional) - an array of `ITreeGridAggregation` objects which contains information about the aggregation functions
+以下は引数です。
+- groupingExpressions - [`IGroupingExpression`]({environment:angularApiUrl}/interfaces/igroupingexpression.html) オブジェクトの配列。これには、階層の生成に使用されるフィールドと各グループの並べ替えの詳細に関する情報が含まれます。
+- groupKey - 生成された階層列の名前の文字列値。
+- childDataKey - 生成された親行の子コレクションが保存されるフィールドのための文字列値。
+- grid - グループ化に使用される `IgxTreeGridComponent`。
+- aggregations (オプション) - 集計関数の情報を含む `ITreeGridAggregation` オブジェクトの配列。
 
-The UI component with selector `igx-tree-grid-group-by-area` handles the UI interactions related to the columns that are used for the grouping. Here is an example of how to use the component in the template:
+`igx-tree-grid-group-by-area` セレクターを備えた UI コンポーネントは、グループ化に使用される列に関連する UI 操作を処理します。以下はテンプレートでコンポーネントを使用した例です。
 
 ```html
 <igx-tree-grid-group-by-area
@@ -37,14 +37,14 @@ The UI component with selector `igx-tree-grid-group-by-area` handles the UI inte
 
 コンポーネントの入力は次のとおりです:
 - grid - グループ化に使用される `IgxTreeGridComponent`。
-- expressions - an array of [`IGroupingExpression`]({environment:angularApiUrl}/interfaces/igroupingexpression.html) objects which contains the fields used to generate the hierarchy
-- hideGroupedColumns - a boolean value indicating whether to hide the columns by which grouping was performed
-- density - a [`displayDensity`]({environment:angularApiUrl}/classes/igxgridcomponent.html#displaydensity) that can be used to change the view
-- dropAreaTemplate - a template for the drop area that can be used to override the default drop area template
-- dropAreaMessage - a string that can be used to override the default message for the default drop area template
+- expressions - [`IGroupingExpression`]({environment:angularApiUrl}/interfaces/igroupingexpression.html) オブジェクトの配列。これには、階層の生成に使用されるフィールドと各グループの並べ替えの詳細が含まれます。
+- hideGroupedColumns - グループ化が実行された列を非表示にするかどうかを示すブール値。
+- density - ビューを変更するために使用できる [`displayDensity`]({environment:angularApiUrl}/classes/igxgridcomponent.html#displaydensity)。
+- dropAreaTemplate - デフォルトのドロップ エリア テンプレートを上書きするために使用できるドロッ プエリアのテンプレート。
+- dropAreaMessage - デフォルトのドロップ エリア テンプレートのデフォルト メッセージを上書きするために使用できる文字列。
 
 > [!NOTE]
-> In order for the sorting to work correctly you should set the `sortStrategy` property of the `IgxTreeGridComponent` to an instance of `IgxGroupedTreeGridSorting`.
+> ソートが正しく機能するためには、`IgxTreeGridComponent` の `sortStrategy` プロパティを `IgxGroupedTreeGridSorting` のインスタンスに設定する必要があります。
 
 ## Angular Tree Grid グループ化の例
 
@@ -57,7 +57,7 @@ The UI component with selector `igx-tree-grid-group-by-area` handles the UI inte
 
 #### 実装
 
-In this sample we are using the `treeGridGrouping` pipe and the UI component with selector `igx-tree-grid-group-by-area` for the grouping. The data is grouped by the **"category"**, **"type"** and **"contract"** fields. The resulting hierarchy is displayed in the newly created **"categories"** column. The pipe also calculates aggregated values for the generated parent rows for the **"price"**, **"change"** and **"changeP"** columns. 
+このサンプルでは、`treeGridGrouping` パイプと UI コンポーネントを使用してグループ化にセレクター `igx-tree-grid-group-by-area` を使用しています。データは、**"category"**、**"type"**、および **"contract"** フィールドによってグループ化されます。結果の階層は、新しく作成された **"categories"** 列に表示されます。パイプは、**"price"**、**"change"** および **"changeP"** 列に対して生成された親行の集計値も計算します。
 
 ```html
 <igx-tree-grid #grid1
@@ -72,7 +72,7 @@ In this sample we are using the `treeGridGrouping` pipe and the UI component wit
     <igx-column [field]="groupColumnKey"></igx-column>
 ```
 
-Here you can see how the grouping expressions and aggregations are defined:
+ここでは、グループ化式と集計がどのように定義されているかを確認できます。
 
 ```typescript
 public groupingExpressions: IGroupingExpression[] = [
