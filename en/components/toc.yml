@@ -123,6 +123,7 @@
           new: true
         - name: Batch Editing
           href: grid/batch-editing.md
+          updated: true
           new: false
     - name: Row Drag
       href: grid/row-drag.md
@@ -264,6 +265,7 @@
           new: true
         - name: Batch Editing
           href: treegrid/batch-editing.md
+          updated: true
           new: false
     - name: Row Drag
       href: treegrid/row-drag.md
@@ -390,6 +392,7 @@
           new: true
         - name: Batch Editing
           href: hierarchicalgrid/batch-editing.md
+          updated: true
           new: false
     - name: Export to Excel
       href: hierarchicalGrid/export-excel.md
