@@ -41,6 +41,38 @@ Unfortunately not all changes can be automatically updated. Changes below are sp
 
 For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from the "From 6.x .." section apply those changes and work your way up:
 
+## From 12.0.x to 12.1.x
+### Grids
+
+* Deprecation:
+    * The DI pattern for providing `IgxGridTransaction` is deprecated. The following will still work, but you are advised to refactor it, as it **will likely be removed** in a future version:
+
+    ```typescript
+    @Component({
+        template: `<igx-grid [data]="data">
+        ...
+        </igx-grid>`,
+        providers: [{ provide: IgxGridTransaction, useClass: IgxTransactionService }],
+        ...
+    })
+    export class MyCustomComponent {
+        ...
+    }
+    ```
+
+    In order to achieve the above behavior, you should use the the newly added [`batchEditing`](../grid/batch-editing.md) input:
+    ```typescript
+    @Component({
+        template: `<igx-grid [data]="data" [batchEditing]="true">
+        ...
+        </igx-grid>`
+        ...
+    })
+    export class MyCustomComponent {
+        ...
+    }
+    ```
+
 ## From 11.1.x to 12.0.x
 ### Themes
 * Breaking Changes:
