@@ -73,6 +73,25 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
     }
     ```
 
+### Themes
+We've removed support for [`node-sass`](https://github.com/sass/node-sass). Node Sass uses the [`libsass`](https://sass-lang.com/blog/libsass-is-deprecated) compiler internally to compile Sass to CSS. LibSass has been deprecated for some time now and doesn't implement new Sass language features present in recent versions of Sass. Due to complaints pertaining to compilation warnings (see [#9793](https://github.com/IgniteUI/igniteui-angular/issues/9793)) we now use the [`math.div`](https://sass-lang.com/documentation/modules/math#div) function intruduced in Sass 1.33.0; This functionality is supported only by the [Dart Sass](https://sass-lang.com/dart-sass) compiler.
+
+#### Solution
+If you see Sass compilation errors saying `math.div` is not a known function it means you are either using an old version of Sass in your project or you are using `node-sass` in your project.
+
+Update to the latest version of Angular using `ng update` - Angular 12.1.0+ uses the dart-sass compiler by default.
+
+```sh
+ng update [options]
+```
+
+If for some reason you don't use the Ignite UI/Angular CLI, you'd need to replace `node-sass` with `sass` in your Node project.
+
+```sh
+npm uninstall node-sass
+npm install sass --save-dev
+```
+
 ## From 11.1.x to 12.0.x
 ### Themes
 * Breaking Changes:
