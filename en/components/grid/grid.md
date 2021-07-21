@@ -107,14 +107,14 @@ Following this topic you will learn more about [cell template](grid.md#cell-temp
 
 ## Angular Grid Column Configuration
 
-[`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) is used to define the grid's [`columns`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columns) collection and to enable features per column like **sorting** and **paging**. Cell, header, and footer templates are also available.
+[`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) is used to define the grid's [`columns`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columns) collection and to enable features per column like **sorting** and **filtering**. Cell, header, and footer templates are also available.
 
 ### Defining Columns
 
 Let's turn the [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) property off and define the columns collection in the markup:
 
 ```html
-<igx-grid #grid1 [data]="data | async" [autoGenerate]="false" [paging]="true" [perPage]="6" (onColumnInit)="initColumns($event)"
+<igx-grid #grid1 [data]="data | async" [autoGenerate]="false" (onColumnInit)="initColumns($event)"
     (onSelection)="selectCell($event)" [allowFiltering]="true">
     <igx-column field="Name" [sortable]="true" header=" "></igx-column>
     <igx-column field="AthleteNumber" [sortable]="true" header="Athlete number" [filterable]="false"></igx-column>
@@ -123,6 +123,8 @@ Let's turn the [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcompo
             <igx-linear-bar [stripped]="false" [value]="value" [max]="100"></igx-linear-bar>
         </ng-template>
     </igx-column>
+    <igx-paginator [perPage]="6">
+    </igx-paginator>
 </igx-grid>
 ```
 

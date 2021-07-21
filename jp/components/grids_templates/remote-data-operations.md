@@ -509,7 +509,7 @@ export class HGridRemotePagingSampleComponent implements OnInit, AfterViewInit, 
 }
 }
 @@if (igxName === 'IgxTreeGrid') {
-このサンプルでは、​​子レコードがいくつあっても、ページごとに一定数のルート レコードを表示する方法を示します。レベル (root または child) に関係なく一定数のレコードを表示するビルトインの Tree Grid ページング アルゴリズムをキャンセルするには、[`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) プロパティを `Number.MAX_SAFE_INTEGER` に設定してください。
+このサンプルでは、​​子レコードがいくつあっても、ページごとに一定数のルート レコードを表示する方法を示します。レベル (root または child) に関係なく一定数のレコードを表示するビルトインの Tree Grid ページング アルゴリズムをキャンセルするには、[`perPage`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#perPage) プロパティを `Number.MAX_SAFE_INTEGER` に設定してください。
 ```html
 <igx-tree-grid #treeGrid ...
                [paging]="true" [perPage]="maxPerPage">
@@ -519,11 +519,11 @@ public maxPerPage = Number.MAX_SAFE_INTEGER;
 ```
 }
 
-要求されたページのデータのみを取得し、選択したページと項目 [`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) に基づいて `skip` と `top` パラメーターをリモート サービスに渡すためのカスタム ページャー テンプレートを作成します。構成を簡単にするには、`<igx-paginator>` を使用します。
+要求されたページのデータのみを取得し、選択したページと項目 [`perPage`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#perPage) に基づいて `skip` と `top` パラメーターをリモート サービスに渡すためのカスタム ページャー テンプレートを作成します。構成を簡単にするには、`<igx-paginator>` を使用します。
 
 ### デフォルト テンプレートのリモート ページング
 
-デフォルトのページング テンプレートを使用する場合、[`totalRecords`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalrecords) プロパティを設定する必要があります。それにより、グリッドはリモートの合計レコード数に基づいて合計ページ番号を計算できます。リモート ページネーションを実行する場合、グリッドに現在のページのデータのみを渡すため、グリッドは提供されたデータソースのページネーションを試行しません。そのため、[`pagingMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#pagingmode) プロパティを *GridPagingMode.remote* に設定する必要があります。リモート サービスからデータをフェッチするために [`onPagingDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onpagingdone) または [`perPageChange`]({environment:angularApiUrl}/classes/igxpaginatorcomponent.html#perpagechange) イベントにサブスクライブする必要があります。イベントが使用されるユース ケースによって異なります。
+デフォルトのページング テンプレートを使用する場合、[`totalRecords`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#totalRecords) プロパティを設定する必要があります。それにより、グリッドはリモートの合計レコード数に基づいて合計ページ番号を計算できます。リモート ページネーションを実行する場合、グリッドに現在のページのデータのみを渡すため、グリッドは提供されたデータソースのページネーションを試行しません。そのため、[`pagingMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#pagingMode) プロパティを *GridPagingMode.remote* に設定する必要があります。リモート サービスからデータをフェッチするために [`onPagingDone`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#pagingDone) または [`perPageChange`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#perPageChange) イベントにサブスクライブする必要があります。イベントが使用されるユース ケースによって異なります。
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -620,7 +620,7 @@ public paginate() {
 
 ### カスタム テンプレートのリモート ページング
 
-カスタム ページング テンプレートを定義する場合、デフォルト テンプレートでのカスタム ページングのように [`pagingMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#pagingmode) や [`totalRecords`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalrecords) のような @@igComponent プロパティを定義する必要はありません。要求されたページのデータのみを取得し、選択したページと項目 [`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) に基づいて **skip** と **top** パラメーターをリモート サービスに渡すためのカスタム ページャー テンプレートを作成します。設定例を簡単にするために `<igx-paginator>` を使用します。
+カスタム ページング テンプレートを定義する場合、デフォルト テンプレートでのカスタム ページングのように [`pagingMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#pagingMode) や [`totalRecords`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#totalRecords) のような @@igComponent プロパティを定義する必要はありません。要求されたページのデータのみを取得し、選択したページと項目 [`perPage`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#perPage) に基づいて **skip** と **top** パラメーターをリモート サービスに渡すためのカスタム ページャー テンプレートを作成します。設定例を簡単にするために `<igx-paginator>` を使用します。
 
 @@if (igxName === 'IgxGrid') {
 ```html

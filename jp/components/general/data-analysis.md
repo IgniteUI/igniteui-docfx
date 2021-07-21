@@ -100,7 +100,9 @@ npm install @infragistics/igniteui-angular igniteui-angular-core igniteui-angula
 
 ```html
 <igx-grid #grid1 igxChartIntegration igxConditionalFormatting igxContextMenu 
-    [data]="localData" [autoGenerate]="true" [paging]="true" >
+    [data]="localData" [autoGenerate]="true">
+    <igx-paginator>
+    </igx-paginator>
 </igx-grid>
 ```
 以上です! **セル範囲の選択**を実行し、データ分析フローを実行できます。

@@ -25,7 +25,7 @@ _language: kr
 
 ### @@igComponent 페이징
 
-Ignite UI for Angular @@igComponent에서 **Paging**은 루트 `@@igSelector` 컴포넌트에서 초기화되며 [`paging`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#paging) 및 [`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) 입력으로 설정할 수 있습니다.
+Ignite UI for Angular @@igComponent에서 **Paging**은 루트 `@@igSelector` 컴포넌트에서 초기화되며 [`paging`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#paging) 및 [`perPage`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#perPage) 입력으로 설정할 수 있습니다.
 
 #### 데모
 
@@ -56,7 +56,7 @@ Ignite UI for Angular @@igComponent에서 **Paging**은 루트 `@@igSelector` �
 }
 
 
-페이징은 해당 기능이 사용되는지 여부를 제어하는 불 속성이며 [`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) 속성은 페이지당 표시할 수 있는 레코드를 제어합니다. 페이징을 활성화하기 위해 @@igComponent를 업데이트합니다:
+페이징은 해당 기능이 사용되는지 여부를 제어하는 불 속성이며 [`perPage`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#perPage) 속성은 페이지당 표시할 수 있는 레코드를 제어합니다. 페이징을 활성화하기 위해 @@igComponent를 업데이트합니다:
 
 ```html
 <@@igSelector #@@igObjectRef [data]="data" [paging]="true" [perPage]="10" [paginationTemplate]="pager" height="500px" width="100%" displayDensity="cosy">
@@ -77,7 +77,7 @@ Ignite UI for Angular @@igComponent에서 **Paging**은 루트 `@@igSelector` �
 </@@igSelector>
 ```
 
-페이징은 [`paginate`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#paginate), [`previousPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#previouspage), [`nextPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#nextpage) 메소드를 사용하여 @@igComponent API를 통해 프로그래밍 방식으로 실행할 수도 있습니다:
+페이징은 [`paginate`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#paginate), [`previousPage`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#previouspage), [`nextPage`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#nextPage) 메소드를 사용하여 @@igComponent API를 통해 프로그래밍 방식으로 실행할 수도 있습니다:
 
 ```typescript
 // Go to page 6
@@ -183,7 +183,7 @@ export class HGridRemotePagingSampleComponent implements OnInit, AfterViewInit, 
 }
 ```
 }
-요청된 페이지에 대한 데이터만 가져오고 선택된 페이지 및  [`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage)에 따라 정확한 `skip` 및 `top` 매개 변수를 원격 서비스에 전달하려면 사용자 호출 템플릿을 생성해야 합니다.
+요청된 페이지에 대한 데이터만 가져오고 선택된 페이지 및  [`perPage`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#perPage)에 따라 정확한 `skip` 및 `top` 매개 변수를 원격 서비스에 전달하려면 사용자 호출 템플릿을 생성해야 합니다.
 또한, 호출 버튼의 비활성화 및 활성화도 관리해야 합니다.
 
 @@if (igxName === 'IgxGrid') {

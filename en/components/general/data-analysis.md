@@ -99,7 +99,9 @@ npm install @infragistics/igniteui-angular igniteui-angular-core igniteui-angula
 
 ```html
 <igx-grid #grid1 igxChartIntegration igxConditionalFormatting igxContextMenu
-    [data]="localData" [autoGenerate]="true" [paging]="true" >
+    [data]="localData" [autoGenerate]="true">
+    <igx-paginator>
+    </igx-paginator>
 </igx-grid>
 ```
 And that's it! You can now perform **cell range selection** and follow the data analysis flow.
