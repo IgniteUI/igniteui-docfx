@@ -60,11 +60,11 @@ Ignite UI for Angular @@igComponent は、リモート仮想化、リモート �
 
 [@@igxName]({environment:angularApiUrl}/classes/@@igTypeDoc.html) は、データ チャンクがリモート サービスから要求されるシナリオをサポートし、内部で使用される [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html) ディレクティブで実装された動作を公開します。
 
-この機能を使用するには、[`onDataPreLoad`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#ondatapreload) 出力にサブスクライブし、取得した引数に基づいて適切な要求を行い、パブリック [@@igxName]({environment:angularApiUrl}/classes/@@igTypeDoc.html) プロパティ [`totalItemCount`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalitemcount) とサービスの各情報を設定します。
+この機能を使用するには、[`dataPreLoad`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#datapreload) 出力にサブスクライブし、取得した引数に基づいて適切な要求を行い、パブリック [@@igxName]({environment:angularApiUrl}/classes/@@igTypeDoc.html) プロパティ [`totalItemCount`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalitemcount) とサービスの各情報を設定します。
 
 ```html
 <igx-grid #grid [data]="remoteData | async" [height]="'500px'" [width]="'100%'" [autoGenerate]='false'
-          (onDataPreLoad)="processData(false)"
+          (dataPreLoad)="processData(false)"
           (onSortingDone)="processData(true)">
     <igx-column [field]="'ProductID'" [sortable]="true"></igx-column>
     <igx-column [field]="'ProductName'" [sortable]="true"></igx-column>
@@ -135,7 +135,7 @@ public ngAfterViewInit() {
 }
 ```
 
-さらに、`onDataPreLoad` 出力にサブスクライブする必要があります。これにより、グリッドが現在ロードされているものではなく、異なるチャンクを表示しようとするときに必要なデータを提供できます。イベント ハンドラーで、ローカルに既にキャッシュされている新しいデータをフェッチするか、データを返すかを決定する必要があります。
+さらに、`dataPreLoad` 出力にサブスクライブする必要があります。これにより、グリッドが現在ロードされているものではなく、異なるチャンクを表示しようとするときに必要なデータを提供できます。イベント ハンドラーで、ローカルに既にキャッシュされている新しいデータをフェッチするか、データを返すかを決定する必要があります。
 
 ```typescript
 public handlePreLoad() {
@@ -173,7 +173,7 @@ public handlePreLoad() {
 
 ## リモート ソート/フィルタリング
 
-リモート ソートとフィルタリングには、取得した引数に基づいて適切な要求を実行するために [`onDataPreLoad`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#ondatapreload)、[`sortingExpressionsChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sortingexpressionschange) および [`filteringExpressionsTreeChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringexpressionstreechange) 出力にサブスクライブし、サービスから送信される相対する情報とパブリック [@@igxName]({environment:angularApiUrl}/classes/@@igTypeDoc.html) の [`totalItemCount`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalitemcount) プロパティを設定する必要があります。
+リモート ソートとフィルタリングには、取得した引数に基づいて適切な要求を実行するために [`dataPreLoad`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#datapreload)、[`sortingExpressionsChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sortingexpressionschange) および [`filteringExpressionsTreeChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringexpressionstreechange) 出力にサブスクライブし、サービスから送信される相対する情報とパブリック [@@igxName]({environment:angularApiUrl}/classes/@@igTypeDoc.html) の [`totalItemCount`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalitemcount) プロパティを設定する必要があります。
 
 また、**rxjs** `debounceTime` 関数を使用します。この関数は、特定の期間の経過後、別のソースが出力されない場合にのみ、Observable のソースから値を出力します。この方法では、ユーザーが中断することなく指定された時間が経過した場合にのみ、リモート操作がトリガーされます。
 
@@ -182,7 +182,7 @@ const DEBOUNCE_TIME = 300;
 ...
 public ngAfterViewInit() {
     ...
-    this.grid.onDataPreLoad.pipe(
+    this.grid.dataPreLoad.pipe(
         debounceTime(DEBOUNCE_TIME),
         takeUntil(this.destroy$)
     ).subscribe(() => {

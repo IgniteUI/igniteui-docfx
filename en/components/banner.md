@@ -159,13 +159,13 @@ export class MyBannerComponent {
 
 
 ### Binding to events
-The banner component emits events when changing its state - [`onOpening`]({environment:angularApiUrl}/classes/igxbannercomponent.html#onopening) and [`onOpened`]({environment:angularApiUrl}/classes/igxbannercomponent.html#onopened) are called when the banner is shown (before and after, resp.), while [`onClosing`]({environment:angularApiUrl}/classes/igxbannercomponent.html#onclosing) and [`onClosed`]({environment:angularApiUrl}/classes/igxbannercomponent.html#onclosed) are emitted when the banner is closed. The *ing* events (`onOpening`, `onClosing`) are cancelable - they use the `ICancelEventArgs` interface and the emitted object has a `cancel` property. If the `cancel` property is set to true, the corresponding end action and event will not be triggered - e.g. if we cancel `onOpening`, the banner's `open` method will not finish and the banner will not be shown.
+The banner component emits events when changing its state - [`opening`]({environment:angularApiUrl}/classes/igxbannercomponent.html#opening) and [`opened`]({environment:angularApiUrl}/classes/igxbannercomponent.html#opened) are called when the banner is shown (before and after, resp.), while [`closing`]({environment:angularApiUrl}/classes/igxbannercomponent.html#closing) and [`closed`]({environment:angularApiUrl}/classes/igxbannercomponent.html#closed) are emitted when the banner is closed. The *ing* events (`opening`, `closing`) are cancelable - they use the `ICancelEventArgs` interface and the emitted object has a `cancel` property. If the `cancel` property is set to true, the corresponding end action and event will not be triggered - e.g. if we cancel `opening`, the banner's `open` method will not finish and the banner will not be shown.
 
 To cancel an event, bind it to the emitted object and set its `cancel` property to `true`.
 
 ```html
 <!--banner.component.html-->
-    <igx-banner #connectionBanner (onOpening)="handleOpen($event)">
+    <igx-banner #connectionBanner (opening)="handleOpen($event)">
         ...
     </igx-banner>
 ```

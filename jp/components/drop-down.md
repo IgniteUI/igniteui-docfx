@@ -71,7 +71,7 @@ export class MyDropDownComponent {
 ## 例
 
 ### 定義済みの選択項目
-定義済みの選択項目を作成したいとします。1 つの方法は、ドロップダウン コンポーネントの [onOpening]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#onopening) イベントを処理することです。
+定義済みの選択項目を作成したいとします。1 つの方法は、ドロップダウン コンポーネントの [opening]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#opening) イベントを処理することです。
 
 ```html
 <!-- dropdown.component.html -->
@@ -80,7 +80,7 @@ export class MyDropDownComponent {
         [igxDropDownItemNavigation]="dropdown">
         Options
 </button>
-<igx-drop-down #dropdown (onOpening)="dropdown.setSelectedItem(0)">
+<igx-drop-down #dropdown (opening)="dropdown.setSelectedItem(0)">
     <igx-drop-down-item *ngFor="let item of items">
         {{ item.field }}
     </igx-drop-down-item>
@@ -235,7 +235,7 @@ export class MyCustomDropDownComponent {
 
 
 ### ドロップダウン メニュー
-ドロップダウンをメニューとして動作するように構成できます。[onSelection]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#onselection) イベント ハンドラーで [ISelectionEventArgs]({environment:angularApiUrl}/interfaces/iselectioneventargs.html) インターフェイスの [cancel]({environment:angularApiUrl}/interfaces/iselectioneventargs.html#cancel) メンバーを true に設定します。この方法では、メニューを開いた際に選択した項目が保持されず、前の選択が無効になります。クリックされた項目は、イベントの [newSelection]({environment:angularApiUrl}/interfaces/iselectioneventargs.html#newselection) メンバー値で取得できます。
+ドロップダウンをメニューとして動作するように構成できます。[selecting]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#selecting) イベント ハンドラーで [ISelectionEventArgs]({environment:angularApiUrl}/interfaces/iselectioneventargs.html) インターフェイスの [cancel]({environment:angularApiUrl}/interfaces/iselectioneventargs.html#cancel) メンバーを true に設定します。この方法では、メニューを開いた際に選択した項目が保持されず、前の選択が無効になります。クリックされた項目は、イベントの [newSelection]({environment:angularApiUrl}/interfaces/iselectioneventargs.html#newselection) メンバー値で取得できます。
 
 ```html
 <!-- dropdown.component.html -->
@@ -248,7 +248,7 @@ export class MyCustomDropDownComponent {
                 igxButton="icon">
             <igx-icon fontSet="material">more_vert</igx-icon>
         </button>
-        <igx-drop-down #menu (onSelection)="onSelection($event)">
+        <igx-drop-down #menu (selecting)="selecting($event)">
             <igx-drop-down-item *ngFor="let item of items" [value]="item.text">
                 <div>{{ item.text }}</div>
             </igx-drop-down-item>
@@ -280,7 +280,7 @@ export class MyMenuComponent {
         scrollStrategy: new NoOpScrollStrategy()
     };
 
-    public onSelection(eventArgs: ISelectionEventArgs) {
+    public selecting(eventArgs: ISelectionEventArgs) {
         this.text = eventArgs.newSelection.value;
         eventArgs.cancel = true;
     }

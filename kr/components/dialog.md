@@ -40,7 +40,7 @@ export class AppModule {}
 #### Alert
 
 To add alert, in the template of our email component we can add the following code to get the notification dialog. We have to set the [`title`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#title), [`message`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#message), 
-[`leftButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftbuttonlabel) and handle [`onLeftButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#onleftbuttonselect) event:
+[`leftButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftbuttonlabel) and handle [`leftButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftbuttonselect) event:
 
 ```html
 <!--email.component.html-->
@@ -49,7 +49,7 @@ To add alert, in the template of our email component we can add the following co
     title="Notification"
     message="Your email has been sent successfully!"
     leftButtonLabel="OK"
-    (onLeftButtonSelect)="alert.close()">
+    (leftButtonSelect)="alert.close()">
 </igx-dialog>
 ```
 
@@ -64,16 +64,16 @@ To add alert, in the template of our email component we can add the following co
 ####Standard Dialog
 
 To add standard dialog, in the template of our file manager component we can add the following code to get the standard dialog. We have to set the [`title`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#title), [`message`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#message), 
-[`leftButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftbuttonlabel), [`rightButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#rightbuttonlabel), and handle [`onLeftButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#onleftbuttonselect) and [`onRightButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#onrightbuttonselect) events:
+[`leftButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftbuttonlabel), [`rightButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#rightbuttonlabel), and handle [`leftButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftbuttonselect) and [`rightButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#rightbuttonselect) events:
 
 ```html
 <!--file-manager.component.html-->
 
 <igx-dialog #dialog title="Confirmation"
     leftButtonLabel="Cancel"
-    (onLeftButtonSelect)="dialog.close()"
+    (leftButtonSelect)="dialog.close()"
     rightButtonLabel="OK"
-    (onRightButtonSelect)="onDialogOKSelected($event)"
+    (rightButtonSelect)="onDialogOKSelected($event)"
     message="Are you sure you want to delete the Microsoft_Annual_Report_2015.pdf and Microsoft_Annual_Report_2015.pdf files?">
 </igx-dialog>
 ```
@@ -88,7 +88,7 @@ To add standard dialog, in the template of our file manager component we can add
 
 ####Custom Dialog
 
-To add custom dialog, in the template of our sign in component we can add the following code to get the custom dialog. We have to set the [`title`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#title),[`leftButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftbuttonlabel), [`rightButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#rightbuttonlabel), [`closeOnOutsideSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#closeonoutsideselect) and handle [`onLeftButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#onleftbuttonselect) and [`onRightButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#onrightbuttonselect) event.
+To add custom dialog, in the template of our sign in component we can add the following code to get the custom dialog. We have to set the [`title`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#title),[`leftButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftbuttonlabel), [`rightButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#rightbuttonlabel), [`closeOnOutsideSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#closeonoutsideselect) and handle [`leftButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftbuttonselect) and [`rightButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#rightbuttonselect) event.
 Also we can add two groups of label and input decorated with the [**igxLabel**](input-group.md) and [**igxInput**](input-group.md) directives.
 
 ```html
@@ -96,8 +96,8 @@ Also we can add two groups of label and input decorated with the [**igxLabel**](
 
 <igx-dialog #form title="Sign In"
     leftButtonLabel="Cancel"
-    (onLeftButtonSelect)="form.close()"
-    (onRightButtonSelect)="signIn($event)"
+    (leftButtonSelect)="form.close()"
+    (rightButtonSelect)="signIn($event)"
     rightButtonLabel="Sign In"
     [closeOnOutsideSelect]="true">
     <form class="signInForm">

@@ -42,11 +42,11 @@ The APIs of both components are used to get the selected item from one and load 
 
 ```html
 <igx-select type="box" #cntr placeholder="Choose Country..."
-    (onSelection)="selectCountry($event)" [(ngModel)]="location.country">
+    (selecting)="selectCountry($event)" [(ngModel)]="location.country">
     <igx-select-item *ngFor="let c of countryData" [value]="c"> {{ c }} </igx-select-item>
 </igx-select>
 <igx-select type="box" #prvnc placeholder="Choose Province..." [disabled]="!cntr.value"
-    (onSelection)="selectProvince($event)" [(ngModel)]="location.province">
+    (selecting)="selectProvince($event)" [(ngModel)]="location.province">
     <igx-select-item *ngFor="let p of provinceData" [value]="p"> {{ p }} </igx-select-item>
 </igx-select>
 <igx-combo #twn [itemsMaxHeight]="225" [data]="townData" [disabled]="!prvnc.value"
