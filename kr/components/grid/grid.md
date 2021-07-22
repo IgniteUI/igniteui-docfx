@@ -27,13 +27,11 @@ _language: kr
 // app.module.ts
 
 import { IgxGridModule } from 'igniteui-angular';
-// Or
-import { IgxGridModule } from 'igniteui-angular/grid';
 
 @NgModule({
     imports: [
         ...
-        IgxGridModule.forRoot(),
+        IgxGridModule,
         ...
     ]
 })
@@ -43,8 +41,6 @@ export class AppModule {}
 `IgxGridModule`의 각 컴포넌트, 지시문 및 도우미 클래스는 하위 패키지 또는 igniteui-angular의 기본 번들을 통해 가져올 수 있습니다. 그리드를 인스턴스화하고 사용하기 위해 모든 항목을 가져올 필요는 없지만 일반적으로 그리드 API의 일부인 유형을 선언할 때 가져옵니다(또는 편집기가 자동으로 가져옵니다).
 
 ```typescript
-import { IgxGridComponent } from 'igniteui-angular/grid/';
-// Or
 import { IgxGridComponent } from 'igniteui-angular'
 ...
 

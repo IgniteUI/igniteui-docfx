@@ -51,7 +51,9 @@ _language: ja
 [`paging`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#paging) は機能が有効かどうかを制御する Boolean プロパティです。[`perPage`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#perPage) プロパティはページごとに表示レコードを制御します。以下のように @@igComponent でページングを有効にします。
 
 ```html
-<@@igSelector #@@igObjectRef [data]="data" [paging]="true" [perPage]="10" height="500px" width="100%" displayDensity="cosy">
+<@@igSelector #@@igObjectRef [data]="data" [height]="'500px'" [width]="'100%'" [displayDensity]="'cosy'">
+    <igx-paginator [perPage]="10">
+    </igx-paginator>
 </@@igSelector>
 ```
 
@@ -59,15 +61,11 @@ _language: ja
 ページング領域でテンプレート化がサポートされますが、初期化でテンプレート参照を @@igComponent に渡す必要があります。以下は、ページングが入力によって制御されるテンプレートの例です。
 
 ```html
-<ng-template #myTemplate let-grid>
-    Current page: {{ @@igObjectRef.page }}
-    <input type="number" [(ngModel)]="grid.page" />
-    Total pages: {{ @@igObjectRef.totalPages }}
-</ng-template>
-
-<@@igSelector [paging]="true" [paginationTemplate]="myTemplate">
-    ...
-</@@igSelector>
+<igx-paginator #paginator>
+    <igx-paginator-content>
+        ...
+    </igx-paginator-content>
+</igx-paginator>
 ```
 
 ページングは、@@igComponent API によって [`paginate`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#paginate)、[`previousPage`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#previouspage)、[`nextPage`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#nextPage) メソッドおよび [`page`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#page)、[`perPage`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#perPage) と [`totalRecords`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#totalRecords) 入力を使用してプログラムで実行することもできます。ここで page は現在のページを設定できます。perPage は 1 ページに表示される項目の数を設定できます。totalRecords はグリッドにあるレコードの数を設定できます。`TotalRecords` プロパティは、リモート データのページングがあり、リモート レコードの合計数に基づいてページの数を変更する場合に役に立ちます。ページングを使用しており、すべてのデータがグリッドに渡される場合、totalRecords プロパティの値は提供されたデータソースの長さにデフォルトで設定されることに注意してください。totalRecords が設定されている場合、データソースに基づいてデフォルトの長さよりも優先されます。
@@ -127,20 +125,52 @@ this.@@igObjectRef.totalRecords = 30;
 | perPageChange   |  イベントは、ページごとの項目数が変更されたときに発生されます。 |
 
 ### 使用方法
-以下の例では、`igx-paginator` コンポーネントは `igx-grid` コンポーネントとともに使用されますが、ページング機能が必要な場合は、他のコンポーネントとともに使用できます。
+
+@@if (igxName === 'IgxGrid') {
+The `igx-paginator` component is used along with the `igx-grid` component in the example below, but you can use it with any other component in case paging functionality is needed.
 
 ```html
-<igx-grid #grid [data]="data" [paging]="true" [perPage]="10" [paginationTemplate]="pager">
-...
-</igx-grid>
-
-<ng-template #pager>
-    <igx-paginator #paginator [(page)]="grid.page" [totalRecords]="grid.totalRecords" [(perPage)]="grid.perPage"
-            [dropdownHidden]="isDropdownHidden" [pagerHidden]="isPagerHidden"
+<igx-grid #grid [data]="data">
+    <igx-paginator #paginator [(page)]="grid.page" [totalRecords]="grid.totalRecords" [(perPage)]="10"
             [selectOptions]="selectOptions" [displayDensity]="grid.displayDensity">
     </igx-paginator>
-</ng-template>
+</igx-grid>
 ```
+}
+
+@@if (igxName === 'IgxTreeGrid') {
+The `igx-paginator` component is used along with the `igx-tree-grid` component in the example below, but you can use it with any other component in case paging functionality is needed.
+
+```html
+<igx-tree-grid #treeGrid [data]="data">
+    <igx-paginator #paginator [(page)]="treeGrid.page" [totalRecords]="treeGrid.length" [(perPage)]="10"
+            [selectOptions]="selectOptions" [displayDensity]="treeGrid.displayDensity">
+    </igx-paginator>
+</igx-tree-grid>
+```
+}
+
+@@if (igxName === 'IgxHierarchicalGrid') {
+The `igx-paginator` component is used along with the `igx-hierarchical-grid` component in the example below, but you can use it with any other component in case paging functionality is needed.
+
+```html
+<igx-hierarchical-grid #hGrid >
+    <igx-column *ngFor="let c of hColumns" [field]="c.field">
+    </igx-column>
+    <igx-row-island [key]="'childData'" [autoGenerate]="true">
+        <igx-row-island [key]="'childData'" [autoGenerate]="true">
+            <igx-paginator *igxPaginator></igx-paginator>
+        </igx-row-island>
+        <igx-paginator *igxPaginator></igx-paginator>
+    </igx-row-island>
+    <igx-row-island [key]="'childData2'" [autoGenerate]="true">
+        <igx-paginator *igxPaginator></igx-paginator>
+    </igx-row-island>
+
+    <igx-paginator></igx-paginator>
+</igx-hierarchical-grid>
+```
+}
 
 ### ページネータ コンポネント デモ
 

@@ -546,7 +546,7 @@ If you want to use the *default paging template* you need to set the Paginator's
 <igx-hierarchical-grid #hierarchicalGrid [primaryKey]="'CustomerID'" [pagingMode]="mode">
     <igx-column field="CustomerID"></igx-column>
     ...
-    <igx-paginator [paging]="true" [(page)]="page" [(perPage)]="perPage" [totalRecords]="totalCount" 
+    <igx-paginator [(page)]="page" [(perPage)]="perPage" [totalRecords]="totalCount" 
         (pagingDone)="paginate($event.current)" (perPageChange)="getFirstPage()">
     </igx-paginator>
 </igx-hierarchical-grid>
