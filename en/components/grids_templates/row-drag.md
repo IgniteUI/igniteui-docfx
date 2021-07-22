@@ -618,6 +618,186 @@ Notice that we also have row selection enabled and we preserve the selection whe
 }
 <div class="divider--half"></div>
 
+## Getting advantage of knowing the target row while dragging
+
+Being able to obtain the row index which is currently below the cursor provides you with the opportunity to build rich custom functionalities and to improve the UX of your application. For example, you can change the drag ghost or display a drop indicator, based on the position of the dragged row over the grid. Another useful behavior that you can achieve that way is to scroll the grid up or down while dragging a row, when reaching the border of the grid.
+
+Below you can find example snippets of such custom implementation, however, you are not limited to those uses.
+
+### Changing the drag ghost based on cursor position
+In the snippets below you see how you can change the text inside the drag ghost to display the name of the hovered row. `getCurrentRowIndex` function is doing the same as it does in the Row Reordering demo above.
+
+```html
+<ng-template igxRowDragGhost>
+    <div class="customGhost">
+        <div>{{ dropName }}</div>
+    </div>
+</ng-template>
+```
+
+```typescript
+public onRowDrag(args: IDragMoveEventArgs) {
+    const cursorPosition = this.getCursorPosition(args.originalEvent);
+    const overRow = this.getCurrentRowIndex(
+        this.grid.rowList.toArray(),
+        cursorPosition
+    );
+    if (!overRow) {
+        args.cancel = true;
+        return;
+    }
+    const rowID = overRow?.rowData.ID;
+    if (rowID !== null) {
+        let newName = this.dropName;
+        if (rowID !== -1) {
+            const targetRow = this.grid.rowList.find((e) => {
+                return e.rowData.ID === rowID;
+            });
+            newName = targetRow?.rowData.Name;
+        }
+        if (newName !== this.dropName) {
+            this.dropName = newName;
+            args.owner.cdr.detectChanges();
+        }
+    }
+}
+```
+
+### Displaying a drop indicator based on cursor position
+
+In the example code below you see how you can display an indicator of where the dragged row would be dropped. You can customize this indicator as you like - it may be a placeholder row, placed at the position the dragged row would be dropped, a border style indicating if the dragged row would be dropped above or below the currently hovered row, etc.
+
+In order to track the position of the cursor, we bind to the `over` event of the [`IgxDropDirective`]({environment:angularApiUrl}/classes/igxdropdirective.html#over).
+
+```html
+<igx-grid #grid [data]="data" [autoGenerate]="false" [rowDraggable]="true"
+[primaryKey]="'ID'" igxDrop (dropped)="onDropAllowed($event)" (over)="handleOver($event)">
+ <igx-column [field]="'ID'" [header]="'ID'" width="100px"></igx-column>
+    ...
+</igx-grid>
+```
+
+While `getCurrentRowIndex` in the Row Reordering demo above is getting the row index of the hovered row, in the following snippet `getHoverRowElement` function is getting the row element itself.
+
+```typescript
+public handleOver(event: IDropBaseEventArgs) {
+    const ghostRect = event.drag.ghostElement.getBoundingClientRect();
+    const currentElement = this.getHoverRowElement(
+        this.grid.rowList.toArray(),
+        { x: ghostRect.x, y: ghostRect.y }
+    );
+    this.changeHighlightedElement(currentElement);
+}
+
+private getHoverRowElement(rowList: IgxRowComponent<IgxGridComponent>[], cursorPosition) {
+    for (const row of rowList) {
+        const rowRect = row.nativeElement.getBoundingClientRect();
+        if (cursorPosition.y > rowRect.top && cursorPosition.y < rowRect.bottom) {
+        // return the element of the targeted row
+            return row.element.nativeElement;
+        }
+    }
+}
+
+private clearHighlightElement() {
+    if (this.highlightedRow !== undefined) {
+        this.renderer.removeClass(this.highlightedRow, "underlined-class");
+    }
+}
+
+private setHightlightElement(newElement) {
+    this.renderer.addClass(newElement, "underlined-class");
+    this.highlightedRow = newElement;
+}
+
+private changeHighlightedElement(newElement) {
+    if (newElement !== undefined) {
+        if (newElement !== this.highlightedRow) {
+            this.clearHighlightElement()
+            this.setHightlightElement(newElement);
+        } else {
+            return;
+        }
+    }
+}
+```
+<div class="divider--half"></div>
+
+## Scrolling the grid when a row is dragged to the top or bottom of it
+
+A very useful scenario is being able to scroll the grid when the dragged row reaches its' top or bottom border. This allows to reorder rows outside of the current viewport when the number of rows in the grid requires a scrollbar.
+
+Below you see an example of the two functions we use to check if we have reached the edge of the viewport and to scroll it if needed.
+
+```typescript
+private isScrolledToEdge() {
+    return this.grid.data[0] === this.grid.rowList.first.data || 
+        this.grid.data[this.grid.data.length - 1] === this.grid.rowList.last.data;
+}
+
+public scrollGrid(dir: number) {
+    if (this.grid.data[0] === this.grid.rowList.first.data && dir === -1) {
+        return;
+    } else if (this.grid.data[this.grid.data.length - 1] === this.grid.rowList.last.data && dir === 1) {
+        return;
+    } else {
+        if (dir === 1) {
+            this.grid.verticalScrollContainer.scrollNext();
+        } else {
+            this.grid.verticalScrollContainer.scrollPrev();
+        }
+    }
+}
+```
+
+You can use those functions inside the `ngAfterViewInit()` method to handle row dragging and scrolling.
+
+```typescript
+ngAfterViewInit() {
+    const sub$ = new Subject();
+    let moved$ = new Subject();
+    let interval$;
+    this.grid.onRowDragStart.pipe(takeUntil(this.destroy$)).subscribe((e: IRowDragStartEventArgs) => {
+    if (e !== null) {
+        moved$.next();
+        moved$.complete();
+        this._draggedRow = e.dragData.rowData;
+    }
+    const directive = e.dragDirective;
+        directive.dragMove.pipe(takeUntil(sub$)).subscribe((moveEvt) => {
+        moved$.next();
+        moved$.complete();
+        const gridRect = this.grid.nativeElement.querySelector(".igx-grid__tbody").getBoundingClientRect();
+        let dir = 0;
+        if (moveEvt.pageY >= gridRect.bottom) {
+            dir = 1;
+        } else if (moveEvt.pageY <= gridRect.top){
+            dir = -1;
+        }
+        if (dir === 0) {
+            return;
+        }
+        this.scrollGrid(dir);
+        if (!interval$) {
+            moved$ = new Subject();
+            interval$ = interval(1000);
+            interval$.pipe(takeUntil(moved$)).subscribe(() => {
+                if (!this.isScrolledToEdge()) {
+                this.scrollGrid(dir);
+                }
+            });
+            }
+        });
+    });
+    this.grid.onRowDragEnd.pipe(takeUntil(this.destroy$)).subscribe(() => {
+        sub$.next();
+        sub$.complete();
+    })
+}
+```
+
+<div class="divider--half"></div>
+
 ## Limitations
 
 Currently, there are no known limitations for the `rowDraggable` directive.
