@@ -11,7 +11,7 @@ Ignite UI for Angular Data Grid は、データの表示や操作が簡単にで
 
 ## Angular データ グリッドの例
 
-Boston Marathon 2020 – この Angular グリッドの例では、ユーザーが基本スタイルと Excel スタイルの両方のフィルタリング、ライブ データのソート、および[スパークライン](../sparkline.md) コンポーネント、[Circular Progress Indicator](../circular-progress.md) コンポーネントと [Icons](../icon.md) を含むグリッド集計とセル テンプレートの使用を実行する方法を確認できます。デモには、[Angular ページネーション](paging.md)のカスタム ページングとページごとの使用法も含まれています。
+Boston Marathon 2021 – この Angular グリッドの例では、ユーザーが基本スタイルと Excel スタイルの両方のフィルタリング、ライブ データのソート、および[スパークライン](../sparkline.md) コンポーネント、[Circular Progress Indicator](../circular-progress.md) コンポーネントと [Icons](../icon.md) を含むグリッド集計とセル テンプレートの使用を実行する方法を確認できます。デモには、[Angular ページネーション](paging.md)のカスタム ページングとページごとの使用法も含まれています。
 
 
 <code-view style="height:700px"
@@ -40,13 +40,11 @@ Angular グリッドが `NgModule` としてエクスポートされるため、
 // app.module.ts
 
 import { IgxGridModule } from 'igniteui-angular';
-// Or
-import { IgxGridModule } from 'igniteui-angular/grid';
 
 @NgModule({
     imports: [
         ...
-        IgxGridModule.forRoot(),
+        IgxGridModule,
         ...
     ]
 })
@@ -56,8 +54,6 @@ export class AppModule {}
 `IgxGridModule` の各コンポーネント、ディレクティブ、およびヘルパー クラスはグリッド サブパッケージまたは igniteui-angular のメイン バンドルでインポートできます。グリッドをインスタンス化して使用するためにすべての機能をインポートする必要はありませんが、グリッド API の一部である型を宣言する場合はインポート (またはエディターで自動的にインポート) します。
 
 ```typescript
-import { IgxGridComponent } from 'igniteui-angular/grid/';
-// Or
 import { IgxGridComponent } from 'igniteui-angular';
 ...
 
@@ -114,7 +110,7 @@ public grid: IgxGridComponent;
 [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) プロパティを無効にし、マークアップで列コレクションを定義します。
 
 ```html
-<igx-grid #grid1 [data]="data | async" [autoGenerate]="false" [paging]="true" [perPage]="6" (onColumnInit)="initColumns($event)"
+<igx-grid #grid1 [data]="data | async" [autoGenerate]="false" (onColumnInit)="initColumns($event)"
     (onSelection)="selectCell($event)" [allowFiltering]="true">
     <igx-column field="Name" [sortable]="true" header=" "></igx-column>
     <igx-column field="AthleteNumber" [sortable]="true" header="Athlete number" [filterable]="false"></igx-column>
@@ -123,6 +119,8 @@ public grid: IgxGridComponent;
             <igx-linear-bar [stripped]="false" [value]="value" [max]="100"></igx-linear-bar>
         </ng-template>
     </igx-column>
+    <igx-paginator [perPage]="10">
+    </igx-paginator>
 </igx-grid>
 ```
 

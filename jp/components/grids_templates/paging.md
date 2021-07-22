@@ -17,7 +17,7 @@ _language: ja
 }
 
 # Angular @@igComponent ページネーション
-ページネーションは、大量のデータセットを類似したコンテンツを持つ一連のページに分割するために使用されます。Angular テーブルのページネーションにより、ユーザー エクスペリエンスとデータ操作が向上します。@@igComponent ページネーションは、[`paging`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#paging) および [` perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) 入力で設定できます。他の Angular Material テーブルと同様に、@@igComponent のページネーションはカスタム ページのテンプレートをサポートします。
+ページネーションは、大量のデータセットを類似したコンテンツを持つ一連のページに分割するために使用されます。Angular テーブルのページネーションにより、ユーザー エクスペリエンスとデータ操作が向上します。@@igComponent ページネーションは、[`paging`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#paging) および [` perPage`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#perPage) 入力で設定できます。他の Angular Material テーブルと同様に、@@igComponent のページネーションはカスタム ページのテンプレートをサポートします。
 
 ## Angular ページネーションの例
 
@@ -48,10 +48,12 @@ _language: ja
 <div class="divider--half"></div>
 }
 
-[`paging`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#paging) は機能が有効かどうかを制御する Boolean プロパティです。[`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) プロパティはページごとに表示レコードを制御します。以下のように @@igComponent でページングを有効にします。
+[`paging`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#paging) は機能が有効かどうかを制御する Boolean プロパティです。[`perPage`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#perPage) プロパティはページごとに表示レコードを制御します。以下のように @@igComponent でページングを有効にします。
 
 ```html
-<@@igSelector #@@igObjectRef [data]="data" [paging]="true" [perPage]="10" height="500px" width="100%" displayDensity="cosy">
+<@@igSelector #@@igObjectRef [data]="data" [height]="'500px'" [width]="'100%'" [displayDensity]="'cosy'">
+    <igx-paginator [perPage]="10">
+    </igx-paginator>
 </@@igSelector>
 ```
 
@@ -59,18 +61,14 @@ _language: ja
 ページング領域でテンプレート化がサポートされますが、初期化でテンプレート参照を @@igComponent に渡す必要があります。以下は、ページングが入力によって制御されるテンプレートの例です。
 
 ```html
-<ng-template #myTemplate let-grid>
-    Current page: {{ @@igObjectRef.page }}
-    <input type="number" [(ngModel)]="grid.page" />
-    Total pages: {{ @@igObjectRef.totalPages }}
-</ng-template>
-
-<@@igSelector [paging]="true" [paginationTemplate]="myTemplate">
-    ...
-</@@igSelector>
+<igx-paginator #paginator>
+    <igx-paginator-content>
+        ...
+    </igx-paginator-content>
+</igx-paginator>
 ```
 
-ページングは、@@igComponent API によって [`paginate`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#paginate)、[`previousPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#previouspage)、[`nextPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#nextpage) メソッドおよび [`page`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#page)、[`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) と [`totalRecords`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalrecords) 入力を使用してプログラムで実行することもできます。ここで page は現在のページを設定できます。perPage は 1 ページに表示される項目の数を設定できます。totalRecords はグリッドにあるレコードの数を設定できます。`TotalRecords` プロパティは、リモート データのページングがあり、リモート レコードの合計数に基づいてページの数を変更する場合に役に立ちます。ページングを使用しており、すべてのデータがグリッドに渡される場合、totalRecords プロパティの値は提供されたデータソースの長さにデフォルトで設定されることに注意してください。totalRecords が設定されている場合、データソースに基づいてデフォルトの長さよりも優先されます。
+ページングは、@@igComponent API によって [`paginate`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#paginate)、[`previousPage`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#previouspage)、[`nextPage`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#nextPage) メソッドおよび [`page`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#page)、[`perPage`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#perPage) と [`totalRecords`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#totalRecords) 入力を使用してプログラムで実行することもできます。ここで page は現在のページを設定できます。perPage は 1 ページに表示される項目の数を設定できます。totalRecords はグリッドにあるレコードの数を設定できます。`TotalRecords` プロパティは、リモート データのページングがあり、リモート レコードの合計数に基づいてページの数を変更する場合に役に立ちます。ページングを使用しており、すべてのデータがグリッドに渡される場合、totalRecords プロパティの値は提供されたデータソースの長さにデフォルトで設定されることに注意してください。totalRecords が設定されている場合、データソースに基づいてデフォルトの長さよりも優先されます。
 
 ```typescript
 // Go to page 6
@@ -127,20 +125,52 @@ this.@@igObjectRef.totalRecords = 30;
 | perPageChange   |  イベントは、ページごとの項目数が変更されたときに発生されます。 |
 
 ### 使用方法
-以下の例では、`igx-paginator` コンポーネントは `igx-grid` コンポーネントとともに使用されますが、ページング機能が必要な場合は、他のコンポーネントとともに使用できます。
+
+@@if (igxName === 'IgxGrid') {
+The `igx-paginator` component is used along with the `igx-grid` component in the example below, but you can use it with any other component in case paging functionality is needed.
 
 ```html
-<igx-grid #grid [data]="data" [paging]="true" [perPage]="10" [paginationTemplate]="pager">
-...
-</igx-grid>
-
-<ng-template #pager>
-    <igx-paginator #paginator [(page)]="grid.page" [totalRecords]="grid.totalRecords" [(perPage)]="grid.perPage"
-            [dropdownHidden]="isDropdownHidden" [pagerHidden]="isPagerHidden"
+<igx-grid #grid [data]="data">
+    <igx-paginator #paginator [(page)]="grid.page" [totalRecords]="grid.totalRecords" [(perPage)]="10"
             [selectOptions]="selectOptions" [displayDensity]="grid.displayDensity">
     </igx-paginator>
-</ng-template>
+</igx-grid>
 ```
+}
+
+@@if (igxName === 'IgxTreeGrid') {
+The `igx-paginator` component is used along with the `igx-tree-grid` component in the example below, but you can use it with any other component in case paging functionality is needed.
+
+```html
+<igx-tree-grid #treeGrid [data]="data">
+    <igx-paginator #paginator [(page)]="treeGrid.page" [totalRecords]="treeGrid.length" [(perPage)]="10"
+            [selectOptions]="selectOptions" [displayDensity]="treeGrid.displayDensity">
+    </igx-paginator>
+</igx-tree-grid>
+```
+}
+
+@@if (igxName === 'IgxHierarchicalGrid') {
+The `igx-paginator` component is used along with the `igx-hierarchical-grid` component in the example below, but you can use it with any other component in case paging functionality is needed.
+
+```html
+<igx-hierarchical-grid #hGrid >
+    <igx-column *ngFor="let c of hColumns" [field]="c.field">
+    </igx-column>
+    <igx-row-island [key]="'childData'" [autoGenerate]="true">
+        <igx-row-island [key]="'childData'" [autoGenerate]="true">
+            <igx-paginator *igxPaginator></igx-paginator>
+        </igx-row-island>
+        <igx-paginator *igxPaginator></igx-paginator>
+    </igx-row-island>
+    <igx-row-island [key]="'childData2'" [autoGenerate]="true">
+        <igx-paginator *igxPaginator></igx-paginator>
+    </igx-row-island>
+
+    <igx-paginator></igx-paginator>
+</igx-hierarchical-grid>
+```
+}
 
 ### ページネータ コンポネント デモ
 
@@ -163,7 +193,7 @@ this.@@igObjectRef.totalRecords = 30;
 }
 
 ## ローカライズ
-最小限のコードで、ページング コンポーネントのすべての文字列を簡単にローカライズできます。特定のページング インスタンスをローカライズするには、入力プロパティ [resourceStrings]({environment:angularApiUrl}/classes/@@igTypeDoc.html#resourceStrings) を使用します。次の手順に従います。 
+最小限のコードで、ページング コンポーネントのすべての文字列を簡単にローカライズできます。特定のページング インスタンスをローカライズするには、入力プロパティ [resourceStrings]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#resourceStrings) を使用します。次の手順に従います。 
 
 **手順 1** - `IPaginatorResourceStrings`  インターフェースと [changei18n]({environment:angularApiUrl}/#changei18n) 関数をインポートします:
 
@@ -193,7 +223,7 @@ public ngOnInit(): void {
 }
 ```
 
-リソース文字列を特定のページング コンポーネントに変更するには、@ ViewChild を使用して、ページが再描画される前に呼び出されるコールバックを使用して、`requestAnimationFrame` メソッド内で目的の [resourceStrings]({environment:angularApiUrl}/classes/@@igTypeDoc.html#resourceStrings) を設定します。新しくインスタンス化されたオブジェクトを [resourceStrings]({environment:angularApiUrl}/classes/@@igTypeDoc.html#resourceStrings) プロパティに設定すると、指定されたコンポーネントのインスタンスのみがローカライズされます。
+リソース文字列を特定のページング コンポーネントに変更するには、@ ViewChild を使用して、ページが再描画される前に呼び出されるコールバックを使用して、`requestAnimationFrame` メソッド内で目的の [resourceStrings]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#resourceStrings) を設定します。新しくインスタンス化されたオブジェクトを [resourceStrings]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#resourceStrings) プロパティに設定すると、指定されたコンポーネントのインスタンスのみがローカライズされます。
 
 ```ts
 @ViewChild("paginator", { read: IgxPaginatorComponent, static: false }) public paginator: IgxPaginatorComponent;

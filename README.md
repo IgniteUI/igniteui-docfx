@@ -19,6 +19,12 @@ In macOS You can use _brew_ to install the latest version of DocFX:
 brew install docfx
 ```
 
+If _brew_ is missing on your environment, go ahead and install it with:
+
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+```
+
 For Windows based platforms use [_chocolatey_](https://chocolatey.org/):
 
 Download the chocolatey.exe or use the command lister under [Install with PowerShell.exe](https://docs.chocolatey.org/en-us/choco/setup#install-with-powershell.exe):

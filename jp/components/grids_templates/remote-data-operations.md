@@ -509,48 +509,54 @@ export class HGridRemotePagingSampleComponent implements OnInit, AfterViewInit, 
 }
 }
 @@if (igxName === 'IgxTreeGrid') {
-このサンプルでは、​​子レコードがいくつあっても、ページごとに一定数のルート レコードを表示する方法を示します。レベル (root または child) に関係なく一定数のレコードを表示するビルトインの Tree Grid ページング アルゴリズムをキャンセルするには、[`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) プロパティを `Number.MAX_SAFE_INTEGER` に設定してください。
+このサンプルでは、​​子レコードがいくつあっても、ページごとに一定数のルート レコードを表示する方法を示します。レベル (root または child) に関係なく一定数のレコードを表示するビルトインの Tree Grid ページング アルゴリズムをキャンセルするには、[`perPage`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#perPage) プロパティを `Number.MAX_SAFE_INTEGER` に設定してください。
 ```html
-<igx-tree-grid #treeGrid ...
-               [paging]="true" [perPage]="maxPerPage">
+<igx-tree-grid #treeGrid ...>
+        <igx-paginator [perPage]="maxPerPage">
+        </igx-paginator>
+...
 ```
 ```typescript
 public maxPerPage = Number.MAX_SAFE_INTEGER;
 ```
 }
 
-要求されたページのデータのみを取得し、選択したページと項目 [`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) に基づいて `skip` と `top` パラメーターをリモート サービスに渡すためのカスタム ページャー テンプレートを作成します。構成を簡単にするには、`<igx-paginator>` を使用します。
+要求されたページのデータのみを取得し、選択したページと項目 [`perPage`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#perPage) に基づいて `skip` と `top` パラメーターをリモート サービスに渡すためのカスタム ページャー テンプレートを作成します。構成を簡単にするには、`<igx-paginator>` を使用します。
 
 ### デフォルト テンプレートのリモート ページング
 
-デフォルトのページング テンプレートを使用する場合、[`totalRecords`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalrecords) プロパティを設定する必要があります。それにより、グリッドはリモートの合計レコード数に基づいて合計ページ番号を計算できます。リモート ページネーションを実行する場合、グリッドに現在のページのデータのみを渡すため、グリッドは提供されたデータソースのページネーションを試行しません。そのため、[`pagingMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#pagingmode) プロパティを *GridPagingMode.remote* に設定する必要があります。リモート サービスからデータをフェッチするために [`onPagingDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onpagingdone) または [`perPageChange`]({environment:angularApiUrl}/classes/igxpaginatorcomponent.html#perpagechange) イベントにサブスクライブする必要があります。イベントが使用されるユース ケースによって異なります。
+デフォルトのページング テンプレートを使用する場合、[`totalRecords`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#totalRecords) プロパティを設定する必要があります。それにより、グリッドはリモートの合計レコード数に基づいて合計ページ番号を計算できます。リモート ページネーションを実行する場合、グリッドに現在のページのデータのみを渡すため、グリッドは提供されたデータソースのページネーションを試行しません。そのため、[`pagingMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#pagingMode) プロパティを *GridPagingMode.remote* に設定する必要があります。リモート サービスからデータをフェッチするために [`onPagingDone`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#pagingDone) または [`perPageChange`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#perPageChange) イベントにサブスクライブする必要があります。イベントが使用されるユース ケースによって異なります。
 
 @@if (igxName === 'IgxGrid') {
 ```html
-<igx-grid #grid1 [data]="data | async" [isLoading]="isLoading"
-        [paging]="true" [(page)]="page" [(perPage)]="perPage" 
-        [pagingMode]="mode" [totalRecords]="totalCount" 
-        (onPagingDone)="paginate($event.current)">
+<igx-grid #grid1 [data]="data | async" [isLoading]="isLoading" [pagingMode]="mode">
     <igx-column field="ID"></igx-column>
     ...
+    <igx-paginator [(page)]="page" [(perPage)]="perPage"  [totalRecords]="totalCount" 
+        (pagingDone)="paginate($event.current)">
+    </igx-paginator>
 </igx-grid>
 ```
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```html
-<igx-tree-grid #treeGrid [data]="data | async" childDataKey="Content" [(page)]="page" [(perPage)]="perPage"
-        [pagingMode]="mode" [totalRecords]="totalCount" (onPagingDone)="paginate($event.current)">
+<igx-tree-grid #treeGrid [data]="data | async" childDataKey="Content" [pagingMode]="mode">
     <igx-column field="Name"></igx-column>
     ...
+    <igx-paginator [(page)]="page" [(perPage)]="perPage" [totalRecords]="totalCount" 
+        (pagingDone)="paginate($event.current)">
+    </igx-paginator>
 </igx-tree-grid>
 ```
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid [paging]="true" [primaryKey]="'CustomerID'" (perPageChange)="getFirstPage()"
-    [pagingMode]="mode"  [totalRecords]="totalCount" (onPagingDone)="pagingDone($event)" #hierarchicalGrid>
+<igx-hierarchical-grid #hierarchicalGrid [primaryKey]="'CustomerID'" [pagingMode]="mode">
     <igx-column field="CustomerID"></igx-column>
     ...
+    <igx-paginator [(page)]="page" [(perPage)]="perPage" [totalRecords]="totalCount" 
+        (pagingDone)="paginate($event.current)" (perPageChange)="getFirstPage()">
+    </igx-paginator>
 </igx-hierarchical-grid>
 ```
 }
@@ -620,7 +626,7 @@ public paginate() {
 
 ### カスタム テンプレートのリモート ページング
 
-カスタム ページング テンプレートを定義する場合、デフォルト テンプレートでのカスタム ページングのように [`pagingMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#pagingmode) や [`totalRecords`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalrecords) のような @@igComponent プロパティを定義する必要はありません。要求されたページのデータのみを取得し、選択したページと項目 [`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) に基づいて **skip** と **top** パラメーターをリモート サービスに渡すためのカスタム ページャー テンプレートを作成します。設定例を簡単にするために `<igx-paginator>` を使用します。
+カスタム ページング テンプレートを定義する場合、デフォルト テンプレートでのカスタム ページングのように [`pagingMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#pagingMode) や [`totalRecords`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#totalRecords) のような @@igComponent プロパティを定義する必要はありません。要求されたページのデータのみを取得し、選択したページと項目 [`perPage`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#perPage) に基づいて **skip** と **top** パラメーターをリモート サービスに渡すためのカスタム ページャー テンプレートを作成します。設定例を簡単にするために `<igx-paginator>` を使用します。
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -735,48 +741,43 @@ public paginate(page: number) {
 ```
 }
 最後にグリッドのテンプレートを宣言します。
+
+>[!NOTE]
+> In order the Remote Paging to be configured properly a `GridPagingMode.Remote` should be set:
+
 @@if (igxName === 'IgxGrid') {
 ```html
-<@@igSelector #@@igObjectRef [data]="data | async" width="960px" height="550px" [paging]="true" [(perPage)]="perPage" [paginationTemplate]="customPager">
-    <igx-column field="ID"></igx-column>
-    <igx-column field="ProductName"></igx-column>
-    <igx-column field="QuantityPerUnit"></igx-column>
-    <igx-column field="SupplierName"></igx-column>
-    <igx-column field="UnitsInStock"></igx-column>
-    <igx-column field="Rating"></igx-column>
-</@@igSelector>
+<igx-grid #grid1 [data]="data | async" width="100%" height="580px" [pagingMode]="mode"></igx-grid>
+...
+public mode = GridPagingMode.Remote;
 ```
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid #hierarchicalGrid [data]="data | async" [paging]="true" 
-        [(perPage)]="perPage" [(page)]="page" [paginationTemplate]="customPager">
-    <igx-column field="CustomerID"></igx-column>
-        <igx-column field="CompanyName"></igx-column>
-        <igx-column field="ContactName"></igx-column>
-        <igx-column field="ContactTitle"></igx-column>
-        <igx-column field="Country"></igx-column>
-        <igx-column field="Phone"></igx-column>
-        ...
-</igx-hierarchical-grid>
+<igx-hierarchical-grid #hierarchicalGrid [data]="data | async" [primaryKey]="'CustomerID'" 
+    [height]="'550px'" [width]="'100%'" [pagingMode]="mode"></igx-hierarchical-grid>
+...
+public mode = GridPagingMode.Remote;
 ```
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```html
-<igx-tree-grid #treeGrid [data]="data | async" childDataKey="Content" expansionDepth="0" width="100%"
-                [paging]="true" [perPage]="maxPerPage" [paginationTemplate]="customPager">
-    <igx-column field="Name">
-        <ng-template igxCell let-cell="cell" let-val>
-            <igx-icon *ngIf="cell.rowData.Type === 'File folder'" fontSet="material" class="typeIcon">folder</igx-icon>
-            <igx-icon *ngIf="cell.rowData.Type === 'JPG File'" fontSet="material" class="typeIcon">photo</igx-icon>
-            {{val}}
-        </ng-template>
-    </igx-column>
-    <igx-column field="Type"></igx-column>
-    <igx-column field="Size" dataType="number" [formatter]="formatSize"></igx-column>
-</igx-tree-grid>
+<igx-tree-grid #treeGrid [data]="data | async" childDataKey="Content" 
+        expansionDepth="0" width="100%" height="540px" [pagingMode]="mode"></igx-tree-grid>
+...
+public mode = GridPagingMode.Remote;
 ```
 }
+
+The last step will be to declare the paginator content based on your requirements.
+
+```html
+<igx-paginator-content>
+    <igx-page-size></igx-page-size>
+    [This is my custom content]
+    <igx-page-nav></igx-page-nav>
+</igx-paginator-content>
+```
 
 上記すべての設定を完了すると以下のような結果になります。
 
