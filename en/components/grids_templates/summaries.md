@@ -175,7 +175,7 @@ If these functions do not fulfill your requirements you can provide a custom sum
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
 ```typescript
-import { IgxSummaryResult, IgxSummaryOperand, IgxNumberSummaryOperand, IgxDateSummaryOperand } from 'igniteui-angular/grid/grid-summary';
+import { IgxSummaryResult, IgxSummaryOperand, IgxNumberSummaryOperand, IgxDateSummaryOperand } from 'igniteui-angular';
 
 class MySummary extends IgxNumberSummaryOperand {
 

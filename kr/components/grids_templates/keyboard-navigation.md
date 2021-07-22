@@ -72,10 +72,12 @@ The sample below shows how to:
 
 ```html
 <igx-grid #grid1 [data]="data" [primaryKey]="'ProductID'" [autoGenerate]="false" [displayDensity]="'compact'"
-    width="100%" height="350px" [paging]="true" [rowSelectable]="true" (onGridKeydown)="customKeydown($event)">
+    width="100%" height="350px" [rowSelectable]="true" (onGridKeydown)="customKeydown($event)">
     <igx-column field="ProductID" header="Product ID" width="16%" [headerClasses]="'prodId'"
         [editable]="true">
     </igx-column>
+    <igx-paginator>
+    </igx-paginator>
 ```
 
 ```typescript
@@ -179,10 +181,12 @@ You can try the `actions below` in order to observe the custom keyboard navigati
 
 ```html
 <igx-tree-grid #grid1 [data]="data" [primaryKey]="'ProductID'" [autoGenerate]="false" [displayDensity]="'compact'"
-    width="100%" height="350px" [paging]="true" [rowSelectable]="true" (onGridKeydown)="customKeydown($event)">
+    width="100%" height="350px" [rowSelectable]="true" (onGridKeydown)="customKeydown($event)">
     <igx-column field="ProductID" header="Product ID" width="16%" [headerClasses]="'prodId'"
         [editable]="true">
     </igx-column>
+    <igx-paginator>
+    </igx-paginator>
     ...
 ```
 

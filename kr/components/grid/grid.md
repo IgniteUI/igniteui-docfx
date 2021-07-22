@@ -27,13 +27,11 @@ _language: kr
 // app.module.ts
 
 import { IgxGridModule } from 'igniteui-angular';
-// Or
-import { IgxGridModule } from 'igniteui-angular/grid';
 
 @NgModule({
     imports: [
         ...
-        IgxGridModule.forRoot(),
+        IgxGridModule,
         ...
     ]
 })
@@ -43,8 +41,6 @@ export class AppModule {}
 `IgxGridModule`의 각 컴포넌트, 지시문 및 도우미 클래스는 하위 패키지 또는 igniteui-angular의 기본 번들을 통해 가져올 수 있습니다. 그리드를 인스턴스화하고 사용하기 위해 모든 항목을 가져올 필요는 없지만 일반적으로 그리드 API의 일부인 유형을 선언할 때 가져옵니다(또는 편집기가 자동으로 가져옵니다).
 
 ```typescript
-import { IgxGridComponent } from 'igniteui-angular/grid/';
-// Or
 import { IgxGridComponent } from 'igniteui-angular'
 ...
 
@@ -91,7 +87,7 @@ public grid: IgxGridComponent;
 [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) 속성을 해제하고 마크업에서 열 집합을 정의합니다:
 
 ```html
-<igx-grid #grid1 [data]="data | async" [autoGenerate]="false" [paging]="true" [perPage]="6" (onColumnInit)="initColumns($event)"
+<igx-grid #grid1 [data]="data | async" [autoGenerate]="false" (onColumnInit)="initColumns($event)"
     (onSelection)="selectCell($event)" [allowFiltering]="true">
     <igx-column field="Name" [sortable]="true" header=" "></igx-column>
     <igx-column field="AthleteNumber" [sortable]="true" header="Athlete number" [filterable]="false"></igx-column>
@@ -100,6 +96,8 @@ public grid: IgxGridComponent;
             <igx-linear-bar [stripped]="false" [value]="value" [max]="100"></igx-linear-bar>
         </ng-template>
     </igx-column>
+    <igx-paginator [perPage]="6">
+    </igx-paginator>
 </igx-grid>
 ```
 

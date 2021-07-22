@@ -123,11 +123,13 @@ IgxTreeGridComponent가 계층을 구축하려면 [`childDataKey`]({environment:
 <!--treeGridSample.component.html-->
 
 <igx-tree-grid #treeGrid [data]="localData" childDataKey="Employees"
-               [autoGenerate]="false" [rowSelectable]="true" [paging]="true" [allowFiltering]="true">
+               [autoGenerate]="false" [rowSelectable]="true" [allowFiltering]="true">
     <igx-column field="Name" dataType="string" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"
                 [hasSummary]="true"></igx-column>
     <igx-column field="HireDate" dataType="date" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
     <igx-column field="Age" dataType="number" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
+    <igx-paginator>
+    </igx-paginator>
 </igx-tree-grid>
 ```
 
@@ -137,12 +139,12 @@ IgxTreeGridComponent가 계층을 구축하려면 [`childDataKey`]({environment:
 <!--treeGridSample.component.html-->
 
 <igx-tree-grid #treeGrid [data]="localData" childDataKey="Employees"
-               [autoGenerate]="false" [rowSelectable]="true" [paging]="true" [allowFiltering]="true"
-               [showToolbar]="true" toolbarTitle="Employees" [columnHiding]="true" [columnPinning]="true"
-               [exportExcel]="true" [exportCsv]="true" exportExcelText="To Excel" exportCsvText="To CSV">
+               [autoGenerate]="false" [rowSelectable]="true" [allowFiltering]="true">
     <igx-column field="Name" dataType="string" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
     <igx-column field="HireDate" dataType="date" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
     <igx-column field="Age" dataType="number" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
+    <igx-paginator>
+    </igx-paginator>
 </igx-tree-grid>
 ```
 

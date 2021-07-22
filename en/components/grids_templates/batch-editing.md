@@ -233,6 +233,18 @@ Deleting a parent node in `@@igComponent` has some peculiarities. If you are usi
 > [!NOTE]
 > Disabling [`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable) property will modify `@@igComponent` to create transactions on cell change and will not expose row editing overlay in the UI.
 
+@@if (igxName === 'IgxGrid') {
+
+## Remote Paging with Batch Editing Demo
+
+[Check out the full demo configuration](remote-data-operations.html#remote-paging-with-batch-editing)
+
+<code-view style="height:620px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/grid/remote-paging-batch-editing" >
+</code-view>
+
+}
 ## API References
 
 @@if (igxName === 'IgxGrid') {

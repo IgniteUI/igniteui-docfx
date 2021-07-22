@@ -229,7 +229,7 @@ public updateExactSearch() {
 
 #### 지속성
 
-@@igComponent를 필터링하고 정렬하거나 레코드를 추가하고 제거하려는 경우 어떻게 해야 합니까? 이러한 처리가 끝나면 현재 검색의 강조 표시가 자동으로 업데이트되고 **searchText**와 일치하는 텍스트가 유지됩니다! 또한, 검색이 페이징으로 작동하며 @@igComponent의 [`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) 속성 변경 시에도 강조 표시가 유지됩니다.
+@@igComponent를 필터링하고 정렬하거나 레코드를 추가하고 제거하려는 경우 어떻게 해야 합니까? 이러한 처리가 끝나면 현재 검색의 강조 표시가 자동으로 업데이트되고 **searchText**와 일치하는 텍스트가 유지됩니다! 또한, 검색이 페이징으로 작동하며 @@igComponent의 [`perPage`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#perPage) 속성 변경 시에도 강조 표시가 유지됩니다.
 
 #### 아이콘 추가
 

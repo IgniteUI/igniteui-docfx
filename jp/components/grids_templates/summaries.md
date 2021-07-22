@@ -176,7 +176,7 @@ public disableSummary() {
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
 ```typescript
-import { IgxSummaryResult, IgxSummaryOperand, IgxNumberSummaryOperand, IgxDateSummaryOperand } from 'igniteui-angular/grid/grid-summary';
+import { IgxSummaryResult, IgxSummaryOperand, IgxNumberSummaryOperand, IgxDateSummaryOperand } from 'igniteui-angular';
 
 class MySummary extends IgxNumberSummaryOperand {
 
