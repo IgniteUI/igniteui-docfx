@@ -44,56 +44,67 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
 ## From 12.0.x to 12.1.x
 ### Grids
 * Breaking Changes:
-    * [`IgxPaginatorComponent`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html) - The way the Paginator is instantiated in the grid has changed. It is now a separate component projected in the grid tree. Thus the `[paging]="true"` property is removed from all grids and all other properties related to the paginator in the grid are deprecated.
-    It is recommended to follow the recommended way for enabling `Grid Paging` features as described in the [Paging topic](../grid/paging.md).
-    * While the migration will move your template content inside the `igx-paginator-content` content, it might not resolve all template bindings. Make sure to check your template files after the migration. The following bindings should be changed manually as these properties have been removed (`pagerEnabled`, `pagerHidden`, `dropdownEnabled`, `dropdownHidden`):
+    * [`IgxPaginatorComponent`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html) - The way the Paginator is instantiated in the grid has changed. It is now a separate component projected in the grid tree. Thus the `[paging]="true"` property is removed from all grids and all other properties related to the paginator in the grid are deprecated. It is recommended to follow the guidance for enabling `Grid Paging` features as described in the [Paging topic](../grid/paging.md).
+    * [`IgxPageSizeSelectorComponent`]({environment:angularApiUrl}/classes/IgxPageSizeSelectorComponent.html) and [`IgxPageNavigationComponent`]({environment:angularApiUrl}/classes/IgxPageNavigationComponent.html) are introduced to ease the implementation of any custom content:
 
-From:
-```html
-<igx-paginator #paginator 
-    [pagerEnabled]="!isPagerDisabled" [pagerHidden]="isPagerHidden"
-    [dropdownHidden]="isDropdownHidden">
-</igx-paginator>
-`
+    ```html
+    <igx-paginator #paginator>
+        <igx-paginator-content>
+            <igx-page-size></igx-page-size>
+            [My custom text]
+            <igx-page-nav></igx-page-nav>
+        </igx-paginator-content>
+    </igx-paginator>
+    ```
 
-To:
-```html
-<igx-paginator #paginator *ngIf="!isPagerDisabled">
-    <igx-paginator-content>
-        <igx-page-size *ngIf="isDropdownHidden"></igx-page-size>
-        <igx-page-nav *ngIf="isPagerHidden"></igx-page-nav>
-    </igx-paginator-content>
-</igx-paginator>
-```
-    * [`IgxPageSizeSelectorComponent`]({environment:angularApiUrl}/classes/IgxPageSizeSelectorComponent.html) and [`IgxPageNavigationComponent`]({environment:angularApiUrl}/classes/IgxPageNavigationComponent.html) are introduced and now the paginator components allows you to define a custom content, as it is shown in the example above.
     * The API for the paging component was changed during the refactor and many of the old properties are now deprecated. Unfortunately, having
     an adequate migration for some of these changes is complicated to say the least, so any errors should be handled at application level.
     * The following properties are deprecated from the Grid:
-    - paging, perPage page, totalPages, isFirstPage, isLastPage, pageChange, perPageChange, pagingDone
+        - paging, perPage page, totalPages, isFirstPage, isLastPage, pageChange, perPageChange, pagingDone
     * The following methods, also are deprecated:
-    - nextPage()
-    - previousPage()
+        - nextPage()
+        - previousPage()
     * The following property has been removed:
-    - paginationTemplate - in order to define a custom template, use the `igx-paginator-content`
-    * HierarchicalGrid specifics - The following paginator definition is necessary when it comes to enabling paging on RowIslands:
+        - paginationTemplate - in order to define a custom template, use the `igx-paginator-content`
+    * HierarchicalGrid specifics - The following usage of `*igxPaginator` Directive is necessary when it comes to enabling paging on RowIslands:
 
-```html
-<igx-hierarchical-grid #hGrid >
-            <igx-column *ngFor="let c of hColumns" [field]="c.field">
-            </igx-column>
+    ```html
+    <igx-hierarchical-grid #hGrid >
+        <igx-column *ngFor="let c of hColumns" [field]="c.field">
+        </igx-column>
+        <igx-row-island [key]="'childData'" [autoGenerate]="true">
             <igx-row-island [key]="'childData'" [autoGenerate]="true">
-                <igx-row-island [key]="'childData'" [autoGenerate]="true">
-                    <igx-paginator *igxPaginator></igx-paginator>
-                </igx-row-island>
                 <igx-paginator *igxPaginator></igx-paginator>
             </igx-row-island>
-            <igx-row-island [key]="'childData2'" [autoGenerate]="true">
-                <igx-paginator *igxPaginator></igx-paginator>
-            </igx-row-island>
-    
-            <igx-paginator></igx-paginator>
-        </igx-hierarchical-grid>
-```
+            <igx-paginator *igxPaginator></igx-paginator>
+        </igx-row-island>
+        <igx-row-island [key]="'childData2'" [autoGenerate]="true">
+            <igx-paginator *igxPaginator></igx-paginator>
+        </igx-row-island>
+
+        <igx-paginator></igx-paginator>
+    </igx-hierarchical-grid>
+    ```
+
+    * While the migration will move your template content inside the `igx-paginator-content` content, it might not resolve all template bindings. Make sure to check your template files after the migration. The following bindings should be changed manually as these properties have been removed (`pagerEnabled`, `pagerHidden`, `dropdownEnabled`, `dropdownHidden`):
+
+    _From:_
+    ```html
+    <igx-paginator #paginator 
+        [pagerEnabled]="!isPagerDisabled" [pagerHidden]="isPagerHidden"
+        [dropdownHidden]="isDropdownHidden">
+    </igx-paginator>
+    ```
+
+    _To:_
+    ```html
+    <igx-paginator #paginator *ngIf="!isPagerDisabled">
+        <igx-paginator-content>
+            <igx-page-size *ngIf="isDropdownHidden"></igx-page-size>
+            <igx-page-nav *ngIf="isPagerHidden"></igx-page-nav>
+        </igx-paginator-content>
+    </igx-paginator>
+    ```
 
 * Grid Deprecation:
     * The DI pattern for providing `IgxGridTransaction` is deprecated. The following will still work, but you are advised to refactor it, as it **will likely be removed** in a future version:
