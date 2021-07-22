@@ -1,15 +1,21 @@
 ---
-title: Angular Accordion Component - Ignite UI for Angular
-_description: With Ignite UI for Angular Accordion component, you can display a collection of vertically collapsible expansion panels. Try for FREE
+title: Angular Accordion – Fully-featured collapsible panels - Infragistics 
+_description: Angular Accordion is used to build vertical expandable panels in accordion menu. Check how to do it with Ignite UI for Angular accordion component. 
 _keywords: angular accordion, angular accordion component, angular accordion example, ignite ui for angular, UI controls, infragistics
 ---
 
 # Angular Accordion Component Overview
 
-The Angular Accordion Component allows users to navigate among multiple collapsible panels displayed in a single container. The accordion offers keyboard navigation and API to control the underlying panels' expansion state.
+## What is Angular Accordion? 
+
+The Angular Accordion is a GUI component for building vertical expandable panels with clickable headers and associated content sections, displayed in a single container. The accordion is commonly used to reduce the need of scrolling across multiple sections of content on a single page. It offers keyboard navigation and API to control the underlying panels' expansion state. 
+
+Users are enabled to interact and navigate among a list of items, such as thumbnails or labels. Each one of those items can be toggled (expanded or collapsed) in order to reveal the containing information. Depending on the configuration, there can be a single or multiple expanded items at a time. 
 
 ## Angular Accordion Example
-In this basic Angular Accordion example, you can see how to define an `igx-accrodion` and its [expansion panels]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html). The sample also demonstrates the two types of expansion behavior. The switch button sets the [singleBranchExpand]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#singlebranchexpand) property to toggle between single and multiple branches to be expanded at a time.
+The following is a basic Angular Accordion example of a FAQ section. It operates as an accordion, with individually working sections. You can toggle each text block with a single click, while expanding multiple panels at the same time. This way you can read information more easily, without having to go back and forth between an automatically expanding and collapsing panel, which conceals the previously opened section every time. 
+
+In it, you can see how to define an `igx-accrodion` and its [expansion panels]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html). The sample also demonstrates the two types of expansion behavior. The switch button sets the [singleBranchExpand]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#singlebranchexpand) property to toggle between single and multiple branches to be expanded at a time.
 
 <code-view style="height:460px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -18,7 +24,8 @@ In this basic Angular Accordion example, you can see how to define an `igx-accro
 
 <div class="divider--half"></div>
 
-## Getting Started with Ignite UI for Angular Accordion
+## How to install angular accordion?
+### Getting Started with Ignite UI for Angular Accordion
 
 To get started with the Ignite UI for Angular Accordion component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
 
@@ -42,7 +49,7 @@ import { IgxAccordionModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
-Now that we have the accordion module imported, let’s get started with a basic configuration of the `igx-accordion` and its panels.
+Now that you have the Angular Material Accordion module imported, you can start with a basic configuration of the `igx-accordion` and its panels.
 
 ## Usage
 
@@ -84,6 +91,10 @@ this.accordion.panels;
 ```
 
 As demonstrated above, the [singleBranchExpand]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#singlebranchexpand) property gives you the ability to set whether single or multiple panels can be expanded at a time.
+
+### Angular Accordion Animations 
+
+Angular Accordion supports animations for both expanding and collapsing actions of the panels. Animation behavior can be customized. Normally, animations can be set for each expansion panel individually. However, it could also be applied to all panels at once on [IgxAccordionComponent]({environment:angularApiUrl}/classes/igxaccordioncomponent.html) level. This gives users the ability to disable animations for all sections at once via the animations property of the [IgxAccordionComponent]({environment:angularApiUrl}/classes/igxaccordioncomponent.html). 
 
 With regards to animation, you have two options. First, you could set the `animationSettings` property on the accordion component:
 
@@ -151,6 +162,7 @@ Using the [collapseAll]({environment:angularApiUrl}/classes/igxaccordioncomponen
 > Note: If [singleBranchExpand]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#singlebranchexpand) property is set to *true* calling [expandAll]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#expandall) method would expand only the last [panel]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html).
 
 ### Angular Accordion Templating Example
+With the Angular [Accordion component]({environment:angularApiUrl}/classes/igxaccordioncomponent.html), you can customize the header and content panel`s appearance. 
 The sample below demonstrates how elaborate filtering options can be implemented using the built-in templating functionality of the [IgxExpansionPanel]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html).
 
 <code-view style="height:550px" 
@@ -161,7 +173,7 @@ The sample below demonstrates how elaborate filtering options can be implemented
 <div class="divider--half"></div>
 
 ### Nested Angular Accordions Scenario
-In the following example, we are going to create a complex FAQ section in order to illustrate how you can go about this common application scenario. In the sample nested [IgxAccordionComponent]({environment:angularApiUrl}/classes/igxaccordioncomponent.html) is achieved by adding an [accordion]({environment:angularApiUrl}/classes/igxaccordioncomponent.html) inside the body of an [expansion panel]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html).
+In the following Angular accordion example, we are going to create a complex FAQ section in order to illustrate how you can go about this common application scenario. In the sample nested [IgxAccordionComponent]({environment:angularApiUrl}/classes/igxaccordioncomponent.html) is achieved by adding an [accordion]({environment:angularApiUrl}/classes/igxaccordioncomponent.html) inside the body of an [expansion panel]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html).
 
 ```html
 <igx-accordion #accordion>
@@ -197,7 +209,7 @@ You can see the result below.
 <div class="divider--half"></div>
 
 ## Keyboard Navigation
-Keyboard navigation in the accordion provides a rich variety of keyboard interactions to the end-user. This functionality is enabled by default and allows end-users to easily navigate through the panels.
+Keyboard navigation in the Angular Material Accordion provides a rich variety of keyboard interactions to the end-user. This functionality is enabled by default and allows end-users to easily navigate through the panels.
 The [IgxAccordionComponent]({environment:angularApiUrl}/classes/igxaccordioncomponent.html) navigation is compliant with W3C accessibility standards and convenient to use.
 
 **Key Combinations**
