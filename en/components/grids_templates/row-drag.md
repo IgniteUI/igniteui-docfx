@@ -716,7 +716,7 @@ In order to track the position of the cursor, we bind to the `over` event of the
 [primaryKey]="'ID'" igxDrop (dropped)="onDropAllowed($event)" (over)="handleOver($event)">
  <igx-column [field]="'ID'" [header]="'ID'" width="100px"></igx-column>
     ...
-</igx-grid>
+</@@igSelector>
 ```
 
 While `getCurrentRowIndex` in the Row Reordering demo above is getting the row index of the hovered row, in the following snippet `getHoverRowElement` function is getting the row element itself.
