@@ -622,7 +622,7 @@ Notice that we also have row selection enabled and we preserve the selection whe
 
 Being able to obtain the row index which is currently below the cursor provides you with the opportunity to build rich custom functionalities and to improve the UX of your application. For example, you can change the drag ghost or display a drop indicator, based on the position of the dragged row over the grid. Another useful behavior that you can achieve that way is to scroll the grid up or down while dragging a row, when reaching the border of the grid.
 
-Below you can find example snippets of such custom implementation, however, you are not limited to those uses.
+Below you can find example snippets of a couple of custom implementations you can achieve by knowing the row's position.
 
 #### Changing the drag ghost based on cursor position
 In the snippets below you see how you can change the text inside the drag ghost to display the name of the hovered row.
