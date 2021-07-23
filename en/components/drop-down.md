@@ -234,7 +234,7 @@ You can see the results in the sample below:
 
 
 ### Drop Down as menu
-You can configure the drop-down to behave as a menu. To do this, set the [ISelectionEventArgs]({environment:angularApiUrl}/interfaces/iselectioneventargs.html) interface [cancel]({environment:angularApiUrl}/interfaces/iselectioneventargs.html#cancel) member to *true* in the [selection]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#selection) event handler. In this way, the selected item is not preserved when opening the menu and previous selections get invalidated. Still, you can get the clicked item through the [newSelection]({environment:angularApiUrl}/interfaces/iselectioneventargs.html#newselection) member value in the event.
+You can configure the drop-down to behave as a menu. To do this, set the [ISelectionEventArgs]({environment:angularApiUrl}/interfaces/iselectioneventargs.html) interface [cancel]({environment:angularApiUrl}/interfaces/iselectioneventargs.html#cancel) member to *true* in the [selectionChanging]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#selectionchanging) event handler. In this way, the selected item is not preserved when opening the menu and previous selections get invalidated. Still, you can get the clicked item through the [newSelection]({environment:angularApiUrl}/interfaces/iselectioneventargs.html#newselection) member value in the event.
 
 ```html
 <!-- dropdown.component.html -->
@@ -247,7 +247,7 @@ You can configure the drop-down to behave as a menu. To do this, set the [ISelec
                 igxButton="icon">
             <igx-icon fontSet="material">more_vert</igx-icon>
         </button>
-        <igx-drop-down #menu (selection)="selectionHandler($event)">
+        <igx-drop-down #menu (selectionChanging)="selectionHandler($event)">
             <igx-drop-down-item *ngFor="let item of items" [value]="item.text">
                 <div>{{ item.text }}</div>
             </igx-drop-down-item>

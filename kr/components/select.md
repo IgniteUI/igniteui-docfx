@@ -134,7 +134,7 @@ You can make use of the `opened` event like so:
 - Emitted when setting an item's `selected` property.
 
 ```html
-<igx-select (selecting)="handleSelection($event)">
+<igx-select (selectionChanging)="handleSelection($event)">
     <igx-select-item [value]="Apple">Apple</igx-select-item>
     <igx-select-item [value]="Pear">Pear</igx-select-item>
 </igx-select>

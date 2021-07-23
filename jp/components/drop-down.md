@@ -248,7 +248,7 @@ export class MyCustomDropDownComponent {
                 igxButton="icon">
             <igx-icon fontSet="material">more_vert</igx-icon>
         </button>
-        <igx-drop-down #menu (selecting)="selecting($event)">
+        <igx-drop-down #menu (selectionChanging)="selecting($event)">
             <igx-drop-down-item *ngFor="let item of items" [value]="item.text">
                 <div>{{ item.text }}</div>
             </igx-drop-down-item>
