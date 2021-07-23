@@ -712,7 +712,7 @@ In the example code below you see how you can display an indicator of where the 
 In order to track the position of the cursor, we bind to the `over` event of the [`IgxDropDirective`]({environment:angularApiUrl}/classes/igxdropdirective.html#over).
 
 ```html
-<igx-grid #grid [data]="data" [autoGenerate]="false" [rowDraggable]="true"
+<@@igSelector #@@igClass [data]="data" [autoGenerate]="false" [rowDraggable]="true"
 [primaryKey]="'ID'" igxDrop (dropped)="onDropAllowed($event)" (over)="handleOver($event)">
  <igx-column [field]="'ID'" [header]="'ID'" width="100px"></igx-column>
     ...
