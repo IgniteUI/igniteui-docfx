@@ -59,11 +59,11 @@ You can perform these tasks remotely and feed the resulting data to the @@igComp
 
 The [@@igxName]({environment:angularApiUrl}/classes/@@igTypeDoc.html) supports the scenario in which the data chunks are requested from a remote service, exposing the behavior implemented in the [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html) directive it uses internally.
 
-To utilize this feature, you need to subscribe to the [`onDataPreLoad`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#ondatapreload) output so that you make the appropriate request based on the arguments received, as well as set the public [@@igxName]({environment:angularApiUrl}/classes/@@igTypeDoc.html) property [`totalItemCount`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalitemcount) with the respective information coming from the service.
+To utilize this feature, you need to subscribe to the [`dataPreLoad`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#datapreload) output so that you make the appropriate request based on the arguments received, as well as set the public [@@igxName]({environment:angularApiUrl}/classes/@@igTypeDoc.html) property [`totalItemCount`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalitemcount) with the respective information coming from the service.
 
 ```html
 <igx-grid #grid [data]="remoteData | async" [height]="'500px'" [width]="'100%'" [autoGenerate]='false'
-          (onDataPreLoad)="processData(false)"
+          (dataPreLoad)="processData(false)"
           (onSortingDone)="processData(true)">
     <igx-column [field]="'ProductID'" [sortable]="true"></igx-column>
     <igx-column [field]="'ProductName'" [sortable]="true"></igx-column>
@@ -134,7 +134,7 @@ public ngAfterViewInit() {
 }
 ```
 
-Additionally, you have to subscribe to the `onDataPreLoad` output, so that you can provide the data needed by the grid when it tries to display a different chunk, rather than the currently loaded one. In the event handler, you have to determine whether to fetch new data or return data, that's already cached locally.
+Additionally, you have to subscribe to the `dataPreLoad` output, so that you can provide the data needed by the grid when it tries to display a different chunk, rather than the currently loaded one. In the event handler, you have to determine whether to fetch new data or return data, that's already cached locally.
 
 ```typescript
 public handlePreLoad() {
@@ -172,7 +172,7 @@ public handlePreLoad() {
 
 ## Remote Sorting/Filtering
 
-To provide remote sorting and filtering, you need to subscribe to the [`onDataPreLoad`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#ondatapreload), [`sortingExpressionsChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sortingexpressionschange) and [`filteringExpressionsTreeChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringexpressionstreechange) outputs, so that you make the appropriate request based on the arguments received, as well as set the public [@@igxName]({environment:angularApiUrl}/classes/@@igTypeDoc.html) property [`totalItemCount`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalitemcount) with the respective information coming from the service.
+To provide remote sorting and filtering, you need to subscribe to the [`dataPreLoad`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#datapreload), [`sortingExpressionsChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sortingexpressionschange) and [`filteringExpressionsTreeChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringexpressionstreechange) outputs, so that you make the appropriate request based on the arguments received, as well as set the public [@@igxName]({environment:angularApiUrl}/classes/@@igTypeDoc.html) property [`totalItemCount`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalitemcount) with the respective information coming from the service.
 
 We will also take advantage of the **rxjs** `debounceTime` function, which emits a value from the source Observable only after a particular time span has passed without another source emission. This way the remote operation will be triggered only when the specified amount of time has passed without the user interrupting it.
 
@@ -181,7 +181,7 @@ const DEBOUNCE_TIME = 300;
 ...
 public ngAfterViewInit() {
     ...
-    this.grid.onDataPreLoad.pipe(
+    this.grid.dataPreLoad.pipe(
         debounceTime(DEBOUNCE_TIME),
         takeUntil(this.destroy$)
     ).subscribe(() => {

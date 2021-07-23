@@ -345,7 +345,7 @@ You can see the results below:
 
 
 ### Multiple panel scenario
-In the following example we are going to implement more like app case scenario, where you want to follow a particular workflow showing and requiring more user details on portions. In this sample the default `growVerIn` and `growVerOut` animations from our inbuilt animations suite are used thus there is no need to pass any specific animation settings or import animations. Notice how we do not allow more than one `igxExpansionPanel` to be expanded at a time, handling the [`onInteraction`]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html#oninteraction)  event.
+In the following example we are going to implement more like app case scenario, where you want to follow a particular workflow showing and requiring more user details on portions. In this sample the default `growVerIn` and `growVerOut` animations from our inbuilt animations suite are used thus there is no need to pass any specific animation settings or import animations. Notice how we do not allow more than one `igxExpansionPanel` to be expanded at a time, handling the [`interaction`]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html#interaction)  event.
 
 ```typescript
 // in expansion-panel.component.ts
@@ -386,7 +386,7 @@ export class ExpansionPanelComponent {
          return this.accordion.toArray()[index] && this.accordion.toArray()[index].collapsed;
      }
 
-    public onInteraction(event) {
+    public interaction(event) {
         const expandedPanels = this.accordion.filter((panel) => !panel.collapsed);
         expandedPanels.forEach((expandedPanel) => {
             if (expandedPanel.elementRef !==  event.event.currentTarget) {
@@ -401,7 +401,7 @@ export class ExpansionPanelComponent {
 <!-- in expansion-panel.component.html -->
 ...
 <igx-expansion-panel class="content__collapsible">
-    <igx-expansion-panel-header (onInteraction)="onInteraction($event)" [disabled]="false">
+    <igx-expansion-panel-header (interaction)="interaction($event)" [disabled]="false">
         <igx-expansion-panel-title class="sample-title">Personal Information</igx-expansion-panel-title>
         <igx-expansion-panel-icon>
             <igx-icon fontSet="material">{{collapsed(0) ? 'expand_more':'expand_less'}}</igx-icon>
@@ -435,7 +435,7 @@ export class ExpansionPanelComponent {
 </igx-expansion-panel>
 
 <igx-expansion-panel class="content__collapsible">
-    <igx-expansion-panel-header (onInteraction)="onInteraction($event)" [disabled]="false">
+    <igx-expansion-panel-header (interaction)="interaction($event)" [disabled]="false">
         <igx-expansion-panel-title class="sample-title">Billing Address</igx-expansion-panel-title>
         <igx-expansion-panel-icon>
             <igx-icon fontSet="material">{{collapsed(1) ? 'expand_more':'expand_less'}}</igx-icon>
@@ -474,7 +474,7 @@ export class ExpansionPanelComponent {
 </igx-expansion-panel>
 
 <igx-expansion-panel class="content__collapsible">
-    <igx-expansion-panel-header (onInteraction)="onInteraction($event)" [disabled]="false">
+    <igx-expansion-panel-header (interaction)="interaction($event)" [disabled]="false">
         <igx-expansion-panel-title class="sample-title">Shipping Address</igx-expansion-panel-title>
         <igx-expansion-panel-icon>
             <igx-icon fontSet="material">{{collapsed(2) ? 'expand_more':'expand_less'}}</igx-icon>

@@ -10,7 +10,7 @@ The Ignite UI for Angular Combo Component exposes an API that allows binding a c
 </p>
 
 ## Angular Combo Remote Binding Example
-The sample below demonstrates remote binding using the [onDataPreLoad]({environment:angularApiUrl}/classes/igxcombocomponent.html#ondatapreload) property to load new chunk of remote data:
+The sample below demonstrates remote binding using the [dataPreLoad]({environment:angularApiUrl}/classes/igxcombocomponent.html#datapreload) property to load new chunk of remote data:
 
 
 <code-view style="height: 400px;" 
@@ -70,15 +70,15 @@ When data is returned from a service as an observable, we can set it to the comb
 <igx-combo [data]="rData | async" 
            [valueKey]="'ProductID'" 
            [displayKey]="'ProductName'" 
-           (onDataPreLoad)="dataLoading($event)"
-           (onSearchInput)="searchInput($event)"
-           (onOpening)="searchInput('')">
+           (dataPreLoad)="dataLoading($event)"
+           (searchInputUpdate)="searchInput($event)"
+           (opening)="searchInput('')">
 </igx-combo>
 ```
 
 Here are some common cases when the combo component needs to request new data:
     - when the combo is initialized
-    - when we scroll combo's list - it will emit `onDataPreLoad` along with the new combo `virtualizationState`, which allows making a new request to the remote service.
+    - when we scroll combo's list - it will emit `dataPreLoad` along with the new combo `virtualizationState`, which allows making a new request to the remote service.
     - when searching in a combo - we need to make request to filter remote results.
     - when combo is opened - we need to clear the results from any previous filter operations.
 
