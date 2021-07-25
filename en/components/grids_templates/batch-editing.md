@@ -78,7 +78,7 @@ Then, all you need to do is enable `batchEditing` from your @@igComponent:
 </@@igSelector>
 ```
 
-This will ensue a proper instance of `Transaction` service is provided for the @@igSelector.
+This will ensure a proper instance of `Transaction` service is provided for the @@igSelector. The proper `TransactionService` is provided through a `TransactionFactory`. You can learn more about this internal implementation in the [transactions topic](../transaction-classes.md#transaction-factory).
 
 After batch editing is enabled, define a `@@igxName` with bound data source and [`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable) set to true and bind:
 

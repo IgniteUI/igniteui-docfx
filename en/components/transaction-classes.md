@@ -70,6 +70,78 @@ You may find a detailed examples of how [`igxTreeGrid`]({environment:angularApiU
 * [Tree Grid Batch Editing](treegrid/batch-editing.md)
 * [Hierarchical Grid Batch Editing](hierarchicalgrid/batch-editing.md)
 
+## Transaction Factory
+In the concrete implementation of transactions inside of Ignite UI for Angular grids, a factory is used in order to instantiate the proper transaction service, depending on the value of the grid's [`batchEditing`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#batchediting). There are two separate transaction factories - the [`IgxFlatTransactionFactory`]({environment:angularApiUrl}/classes/igxflatransactionfactory.html) (used for [`Grid`](grid/batch-editing.md) and [`Hierarchical Grid`](hierarchicalgrid/batch-editing.md)) and [`IgxHierarchicalTransactionFactory`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionfactory.html) (used for [Tree Grid](treegrid/batch-editing.md)). Both classes expose only one method - `create` - which returns a new instance of the proper [type](#general-information-on-igxtransactionservice-and-igxhierarchicaltransactionservice). The parameter passed (`TRANSACTION_TYPE`) is internally used - `None` is used when `batchEditing` is **false** and `Base` - when batch editing is enabled. An `enum` is used (instead of a `true` - `false` flag), as it allows to be expanded upon.
+
+## Using Transaction Factory
+Both [`IgxFlatTransactionFactory`]({environment:angularApiUrl}/classes/igxflatransactionfactory.html) and [`IgxHierarchicalTransactionFactory`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionfactory.html) are provided in `root` and are exposed in the public API. If you want to instantiate a new instance of a transaction service, depending on some arbitrary check, you can use a transaction factory.
+
+In the below example, you can see how you can instantiate different transaction services depending on an arbitrary (`hasUndo`) flag:
+
+```typescript
+import { IgxFlatTransactionFactory, TRANSACTION_TYPE } from 'igniteui-angular';
+
+export class MyCustomComponent {
+    ...
+    constructor(private transactionFactory: IgxFlatTransactionFactory) {}
+    ...
+    public transaction!: IgxTransactionService<Transaction, State>;
+
+    public set hasUndo(val: boolean) {
+        if (val) {
+            this.transactions = this.transactionFactory.create(TRANSACTION_TYPE.Base);
+        } else {
+            this.transactions = this.transactionFactory.create(TRANSACTION_TYPE.None);
+        }
+    }
+}
+```
+
+Both factory classes can be extended and overriden in the DI hierarchy (using the `providers` array) in order to provide your own, custom implementation. This, combined with the fact that all of the classes the get instantiated by the factories are also public, gives you a lot of control over what's provided to the components that use transaction implementations internally.
+
+For example, to override the transaction service used internally by the `IgxGridComponent`, you can do the following:
+
+First, define a custom factory class
+
+```typescript
+import { IgxFlatTransactionFactory, TRANSACTION_TYPE, IgxBaseTransactionService,
+TransactionService, Transaction, State } from 'igniteui-angular';
+
+class CustomTransactionService extends IgxBaseTransactionService {
+    ...
+}
+
+export class CustomTransactionFactory extends IgxFlatTransactionFactory {
+    ...
+    create(type: TRANSACTION_TYPE): TransactionService<Transaction, State> {
+        if (type === TRANSACTION_TYPE.Base) {
+            return new CustomTransactionService();
+        }
+        super.create(type);
+    }
+}
+
+```
+
+Then, in your component's `providers` array, override the `IgxFlatTransactionFactory` (used by `igx-grid`) with your custom implementation.
+
+```typescript
+import { IgxFlatTransactionFactory } from 'igniteui-angular';
+import { CustomTransactionFactory } from '../custom-factory.ts';
+
+@Component({
+    selector: 'app-grid-view',
+    template: `<igx-grid [batchEditing]="true" [data]="data" [autoGenerate]="true"></igx-grid>`,
+    providers: [{ provide: IgxFlatTransactionFactory, useClass: CustomTransactionFactory }]
+})
+
+export class GridViewComponent {
+    ...
+}
+```
+
+Now, when `batchEditing` is set to `true`, the grid will receive an instance of `CustomTransactionService`.
+
 ## Additional Resources
 <div class="divider--half"></div>
 
