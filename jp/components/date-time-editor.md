@@ -114,6 +114,9 @@ Angular の [`DatePipe`](https://angular.io/api/common/DatePipe) を使用して
 | `m` | 分。編集中に先行ゼロで強制されます。 |
 | `mm` | 先行ゼロが明示的に設定された分。 |
 | `tt` | 12 時間形式の AM/PM セクション。 |
+
+> 注: `IgxDateTimeEditorDirective` が IME 入力をサポートします。アジア言語の入力を入力すると、コントロールは入力メソッドの構成と候補リストをコントロールの編集領域に直接表示し、構成が終了するとすぐに周囲のテキストを再フローします。
+
 ### 最小値と最大値
 [`minValue`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#minvalue) および [`maxValue`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#maxvalue) プロパティを指定して、ngModel の入力を制限し、有効性を制御できます。
 ```typescript

@@ -124,6 +124,7 @@
           new: true
         - name: 一括編集
           href: grid/batch-editing.md
+          updated: true
           new: false
     - name: 行ドラッグ
       href: grid/row-drag.md
@@ -265,6 +266,7 @@
           new: true
         - name: 一括編集
           href: treegrid/batch-editing.md
+          updated: true
           new: false
     - name: 行ドラッグ
       href: treegrid/row-drag.md
@@ -391,6 +393,7 @@
           new: true
         - name: 一括編集
           href: hierarchicalgrid/batch-editing.md
+          updated: true
           new: false
     - name: Excel へエクスポート
       href: hierarchicalgrid/export-excel.md

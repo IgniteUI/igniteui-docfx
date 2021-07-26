@@ -7,11 +7,11 @@ _language: ja
 
 # @@igComponent 一括編集とトランザクション
 
-@@if (igxName === 'IgxGrid') {
+@@if (igxName === 'IgxGrid' || igxName === 'IgxHierarchicalGrid') {
 @@igxName の一括編集機能は、[`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) に基づいています。[`トランザクション サービス クラス階層`](../transaction-classes.md)トピックに従って、`igxTransactionService` の概要と、その実装方法の詳細を確認してください。
 }
 
-@@if (igxName === 'IgxTreeGrid' || igxName === 'IgxHierarchicalGrid') {
+@@if (igxName === 'IgxTreeGrid') {
 @@igxName の一括編集機能は、[`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) に基づいています。[`トランザクション サービス クラス階層`](../transaction-classes.md)トピックに従って、`igxHierarchicalTransactionService` の概要と、その実装方法の詳細を確認してください。
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -23,7 +23,7 @@ _language: ja
 
 ## Angular @@igComponent 一括編集とトランザクションの例
 
-以下のサンプルは、@@igObjectRef にプロバイダーのトランザクションがあり、行編集が有効にされています。行編集全体を確定後にトランザクションが追加されるようにします。
+以下のサンプルは、@@igObjectRef にプロバイダーのトランザクションがあり、[`batchEditing`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#batchEditing) と行編集が有効にされています。行編集全体を確定後にトランザクションが追加されるようにします。
 
 @@if (igxName === 'IgxGrid') {
 <code-view style="height:650px" 
@@ -71,70 +71,24 @@ import { @@igxNameModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-次に、トランザクション サービスを @@igComponent のプロバイダーとして定義する必要があります。
+次に、@@igComponent から `batchEditing` を有効にします。
 
-@@if (igxName === 'IgxGrid') {
-```typescript
-import { Component } from "@angular/core";
-import { IgxGridTransaction, IgxTransactionService } from "igniteui-angular";
-
-@Component({
-    providers: [{ provide: IgxGridTransaction, useClass: IgxTransactionService }],
-    selector: "app-grid-with-transactions",
-    template: "<ng-content></ng-content>"
-})
-export class GridWithTransactionsComponent { }
-
+```html
+<@@igSelector [data]="data" [batchEditing]="true">
+  ...
+</@@igSelector>
 ```
-}
-@@if (igxName === 'IgxTreeGrid') {
-```typescript
-import { Component } from "@angular/core";
-import { IgxGridTransaction, IgxHierarchicalTransactionService } from "igniteui-angular";
 
-@Component({
-    providers: [{ provide: IgxGridTransaction, useClass: IgxHierarchicalTransactionService }],
-    selector: "app-tree-grid-with-transactions",
-    template: '<ng-content></ng-content>'
-})
-export class TreeGridWithTransactionsComponent { }
+これにより、@@igSelector に `Transaction` サービスの適切なインスタンスが提供されます。
 
-```
-}
-@@if (igxName === 'IgxHierarchicalGrid') {
-```typescript
-import { Component } from "@angular/core";
-import { IgxHierarchicalTransactionServiceFactory } from "igniteui-angular";
-@Component({
-    providers: [ IgxHierarchicalTransactionServiceFactory ],
-    selector: "app-hierarchical-grid-with-transactions",
-    template: "<ng-content></ng-content>"
-})
-export class HierarchicalGridWithTransactionsComponent { }
-```
-}
-@@if (igxName === 'IgxGrid') {
-> [!NOTE]
-> デフォルトでは、`@@igxName` のモジュールに `IgxGridTransaction` インジェクション トークンが定義されています。このトークンは [`igxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html) を提供します。このサービスを提供することで、`@@igxName` は行編集を実行できます。`@@igxName` でトランザクションを有効にするには、[`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) を指定する必要があります。これは、コンポーネントの `providers` 配列で実行できます。ただし、各 `@@igxName` には独自のトランザクション サービスが必要なため、コンポーネントの本体に複数の `@@igxNames` が定義されている場合、各 `@@igxName` はトランザクション サービスを提供するコンポーネントにカプセル化される必要があります。上記のサンプルでは、`@@igxName` は `GridWithTransactionsComponent` コンポーネントでラップされています。後者では、[`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) は、その `providers` 配列で提供されます。
-}
-@@if (igxName === 'IgxTreeGrid') {
-> [!NOTE]
-> デフォルトでは、`@@igxName` のモジュールに `IgxGridTransaction` インジェクション トークンが定義されています。このトークンは [`igxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html) を提供します。このサービスを提供することで、`@@igxName` は行編集を実行できます。`@@igxName` でトランザクションを有効にするには、`@@igxName` [`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) を指定する必要があります。これは、コンポーネントの `providers` 配列で実行できます。ただし、各 `@@igxName` には独自のトランザクション サービスが必要なため、コンポーネントの本体に複数の `@@igxNames` が定義されている場合、各 `@@igxName` はトランザクション サービスを提供するコンポーネントにカプセル化される必要があります。上記のサンプルでは、`@@igxName` は `TreeGridWithTransactionsComponent` コンポーネントでラップされています。後者では、[`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) は、その `providers` 配列で提供されます。
-}
-@@if (igxName === 'IgxHierarchicalGrid') {
-> [!NOTE]
-> デフォルトでは、`@@igxName` のモジュールに `IgxGridTransaction` インジェクション トークンが定義されています。このトークンは [`igxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html) を提供します。このサービスを提供することで、`@@igxName` は行編集を実行できます。`@@igxName` でトランザクションを有効にするには、`@@igxName` [`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) を指定する必要があります。これは、コンポーネントの `providers` 配列で実行できます。ただし、各 `@@igxName` には独自のトランザクション サービスが必要なため、コンポーネントの本体に複数の `@@igxNames` が定義されている場合、各 `@@igxName` はトランザクション サービスを提供するコンポーネントにカプセル化される必要があります。上記のサンプルでは、`@@igxName` は `HierarchicalGridWithTransactionsComponent` コンポーネントでラップされています。後者では、[`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) は、その `providers` 配列で提供されます。
-}
-次に `@@igxName` をバインドしたデータ ソースで定義し、[`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable) を true に設定してバインドします。
+一括編集を有効にした後、バインドされたデータ ソースと [`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable) を true に設定して `@@igxName` を定義し、バインドします。
 
 @@if (igxName === 'IgxGrid') {
 ```html
-<app-grid-with-transactions>
-    <igx-grid #grid [data]="data" [primaryKey]="'ProductID'" width="100%" height="500px"
-        [rowEditable]="true">
-        ...
-    </igx-grid>
-</app-grid-with-transactions>
+<igx-grid #grid [batchEditing]="true" [data]="data" [primaryKey]="'ProductID'" width="100%" height="500px"
+    [rowEditable]="true">
+    ...
+</igx-grid>
 ...
 <button igxButton [disabled]="!grid.transactions.canUndo" (click)="undo()">Undo</button>
 <button igxButton [disabled]="!grid.transactions.canRedo" (click)="redo()">Redo</button>
@@ -146,7 +100,7 @@ export class HierarchicalGridWithTransactionsComponent { }
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```html
-<igx-tree-grid #treeGrid [data]="data" primaryKey="employeeID" foreignKey="PID"
+<igx-tree-grid #treeGrid [batchEditing]="true" [data]="data" primaryKey="employeeID" foreignKey="PID"
     width ="100%" height ="500px" rowEditable=true>
     ...
 </igx-tree-grid>
@@ -161,20 +115,18 @@ export class HierarchicalGridWithTransactionsComponent { }
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<app-hierarchical-grid-with-transactions>
-    <igx-hierarchical-grid #hierarchicalGrid [data]="data" [primaryKey]="'Artist'"
-        [height]="'580px'" [width]="'100%'" [rowEditable]="true" >
+<igx-hierarchical-grid #hierarchicalGrid [batchEditing]="true" [data]="data" [primaryKey]="'Artist'"
+    [height]="'580px'" [width]="'100%'" [rowEditable]="true" >
+    ...
+    <igx-row-island #childGrid [key]="'Albums'" [primaryKey]="'Album'" [rowEditable]="true">
+        <igx-grid-toolbar></igx-grid-toolbar>
         ...
-        <igx-row-island #childGrid [key]="'Albums'" [primaryKey]="'Album'" [rowEditable]="true">
-            <igx-grid-toolbar></igx-grid-toolbar>
-            ...
-            <ng-template igxToolbarCustomContent let-grid="grid">
-                <button igxButton [disabled]="!grid.transactions.canUndo" (click)="undo(grid)">Undo</button>
-                <button igxButton [disabled]="!grid.transactions.canRedo" (click)="redo(grid)">Redo</button>
-            </ng-template>
-        </igx-row-island>
-    </igx-hierarchical-grid>
-</app-hierarchical-grid-with-transactions>
+        <ng-template igxToolbarCustomContent let-grid="grid">
+            <button igxButton [disabled]="!grid.transactions.canUndo" (click)="undo(grid)">Undo</button>
+            <button igxButton [disabled]="!grid.transactions.canRedo" (click)="redo(grid)">Redo</button>
+        </ng-template>
+    </igx-row-island>
+</igx-hierarchical-grid>
 ...
 <div class="buttons-row">
     <div class="buttons-wrapper">
