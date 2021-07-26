@@ -43,7 +43,7 @@ In both cases (cell editing and row editing) the state of the grid edits consist
 
 [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) extends [`igxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html).
 
-If you want your component to use transactions when making data operation, you need to define the [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) as a provider for in your component's `providers` array.
+If you want your component to use transactions when making data operation, you need to define the [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) as a provider in your component's `providers` array.
 
 The [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) provides an undo stack so you may get advantage of the undo/redo functionality. The Undo stack is actually an array that contains arrays of transactions. When using the [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html), you may check the [`canUndo`]({environment:angularApiUrl}/classes/igxtransactionservice.html#canundo) accessor in order to understand if there are any transactions in the Undo stack. If there are - you may use the [`undo`]({environment:angularApiUrl}/classes/igxtransactionservice.html#undo) method to remove the last transaction and [`redo`]({environment:angularApiUrl}/classes/igxtransactionservice.html#redo) to apply the last undone transaction.
 
