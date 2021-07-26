@@ -42,6 +42,38 @@ ng update @angular/cli
 
 例: 6.2.4 から 7.1.0 にアップデートする場合、[6.x .. から] セクションから始めて変更を適用していきます。
 
+## 12.0.x から 12.1.x の場合:
+### グリッド
+
+* 非推奨:
+    * `IgxGridTransaction` を提供するための DI パターンは非推奨になりました。以下は引き続き機能しますが、将来のバージョンで**削除される可能性がある**ため、リファクタリングすることをお勧めします。
+
+    ```typescript
+    @Component({
+        template: `<igx-grid [data]="data">
+        ...
+        </igx-grid>`,
+        providers: [{ provide: IgxGridTransaction, useClass: IgxTransactionService }],
+        ...
+    })
+    export class MyCustomComponent {
+        ...
+    }
+    ```
+
+    上記の動作を実現するには、新しく追加された [`batchEditing`](../grid/batch-editing.md) 入力を使用する必要があります。
+    ```typescript
+    @Component({
+        template: `<igx-grid [data]="data" [batchEditing]="true">
+        ...
+        </igx-grid>`
+        ...
+    })
+    export class MyCustomComponent {
+        ...
+    }
+    ```
+
 ## 11.1.x から 12.0.x の場合:
 ### テーマ:
 * 重大な変更:
@@ -92,7 +124,6 @@ ng update @angular/cli
     <button igxButton="raised">Raised button</button>
     <button igxButton="outlined">Outlined button</button>
     ```
-
     ```scss
     $my-button-theme: igx-button-theme(
         $raised-background: red,
