@@ -215,7 +215,7 @@ export class RemoteLoDService {
 
 ```html
 <igx-hierarchical-grid [data]="localData" [displayDensity]="density" [autoGenerate]="false"
-    [allowFiltering]='true' [paging]="true" [height]="'600px'" [width]="'800px'" #hGrid>
+    [allowFiltering]='true' [height]="'600px'" [width]="'800px'" #hGrid>
     <igx-column field="ID" [pinned]="true" [filterable]='true'></igx-column>
     <igx-column-group header="Information">
         <igx-column field="ChildLevels"></igx-column>
@@ -227,7 +227,10 @@ export class RemoteLoDService {
             <igx-column field="ChildLevels"></igx-column>
             <igx-column field="ProductName"></igx-column>
         </igx-column-group>
+        <igx-paginator *igxPaginator [perPage]="5"></igx-paginator>
     </igx-row-island>
+    <igx-paginator>
+    </igx-paginator>
 </igx-hierarchical-grid>
 ```
 

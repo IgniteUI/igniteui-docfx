@@ -161,13 +161,13 @@ export class MyExampleCombo {
 }
 ```
 
-また、コンボは、選択が変更されるたびにイベントを発生させます - [onSelectionChange()]({environment:angularApiUrl}/classes/igxcombocomponent.html#onselectionchange)。発行されたイベント引数 [IComboSelectionChangeEventArgs]({environment:angularApiUrl}/interfaces/icomboselectionchangeeventargs.html) には、変更前の選択、現在の選択、追加または削除された項目に関する情報が含まれています。また、イベントをキャンセルして、新しいアイテムの配列で選択を更新できないようにすることもできます。
+また、コンボは、選択が変更されるたびにイベントを発生させます - [selectionChanging()]({environment:angularApiUrl}/classes/igxcombocomponent.html#selectionchanging)。発行されたイベント引数 [IComboSelectionChangeEventArgs]({environment:angularApiUrl}/interfaces/icomboselectionchangeeventargs.html) には、変更前の選択、現在の選択、追加または削除された項目に関する情報が含まれています。また、イベントをキャンセルして、新しいアイテムの配列で選択を更新できないようにすることもできます。
 
 イベントへのバインドは、`igx-combo` タグの適切な `@Output` プロパティを介して実行できます。
 
 ```html
 <igx-combo [data]="cities" displayKey="name" valueKey="id"
-           (onSelectionChange)="handleCityChange($event)">
+           (selectionChanging)="handleCityChange($event)">
 </igx-combo>
 ```
 
@@ -189,10 +189,10 @@ export class MyExampleCombo {
 
 ## 単一選択
 
-デフォルトでは、Combo コントロールは複数選択を提供します。以下のコード例は、ハンドラーを `onSelectionChange` イベントにアタッチすることで、コンポーネントで単一選択を可能にする方法を示します。
+デフォルトでは、Combo コントロールは複数選択を提供します。以下のコード例は、ハンドラーを `selectionChanging` イベントにアタッチすることで、コンポーネントで単一選択を可能にする方法を示します。
 
 ```html
-<igx-combo [data]="lData" (onSelectionChange)="singleSelection($event)"></igx-combo>
+<igx-combo [data]="lData" (selectionChanging)="singleSelection($event)"></igx-combo>
 ```
 
 ```typescript

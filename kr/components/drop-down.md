@@ -81,14 +81,14 @@ If the sample is configured properly, a dropdown with several options should be 
 <div class="divider--half"></div>
 
 #### Predefined selected item
-Let's say we want to have a predefined selected item. One way to do this, is by handling **igx-drop-down** [onOpening]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#onopening) event of [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html).
+Let's say we want to have a predefined selected item. One way to do this, is by handling **igx-drop-down** [opening]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#opening) event of [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html).
 
 ```html
 <!-- dropdown.component.html -->
 
 <div class="sample-wrapper">
     <button class="button" igxButton="raised" [igxToggleAction]="dropdown" [igxDropDownItemNavigation]="dropdown">Options</button>
-    <igx-drop-down #dropdown (onOpening)="dropdown.setSelectedItem(0)" [width]="'100px'">
+    <igx-drop-down #dropdown (opening)="dropdown.setSelectedItem(0)" [width]="'100px'">
         <igx-drop-down-item *ngFor="let item of items">
             {{ item.field }}
         </igx-drop-down-item>
@@ -240,7 +240,7 @@ You can see the results in the sample below:
 
 
 #### Drop Down as menu
-You can configure the [`igxDropDown`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) to behave as a menu. To do this, set the [`ISelectionEventArgs`]({environment:angularApiUrl}/interfaces/iselectioneventargs.html) [`cancel`]({environment:angularApiUrl}/interfaces/iselectioneventargs.html#cancel) member to *true* in the [`onSelection`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#onselection) event handler. Thus, the selected item is not preserved on menu opening and selection is invalidated. Still, you can get the clicked item through the [`ISelectionEventArgs`]({environment:angularApiUrl}/interfaces/iselectioneventargs.html) [`newSelection`]({environment:angularApiUrl}/interfaces/iselectioneventargs.html#newselection) member value.
+You can configure the [`igxDropDown`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) to behave as a menu. To do this, set the [`ISelectionEventArgs`]({environment:angularApiUrl}/interfaces/iselectioneventargs.html) [`cancel`]({environment:angularApiUrl}/interfaces/iselectioneventargs.html#cancel) member to *true* in the [`selecting`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#selecting) event handler. Thus, the selected item is not preserved on menu opening and selection is invalidated. Still, you can get the clicked item through the [`ISelectionEventArgs`]({environment:angularApiUrl}/interfaces/iselectioneventargs.html) [`newSelection`]({environment:angularApiUrl}/interfaces/iselectioneventargs.html#newselection) member value.
 
 ```html
 <!-- dropdown.component.html -->
@@ -251,7 +251,7 @@ You can configure the [`igxDropDown`]({environment:angularApiUrl}/classes/igxdro
             igxButton="icon">
             <igx-icon fontSet="material">more_vert</igx-icon>
         </button>
-        <igx-drop-down #menu (onSelection)="onSelection($event)">
+        <igx-drop-down #menu (selectionChanging)="selecting($event)">
             <igx-drop-down-item *ngFor="let item of items" [value]="item.text">
                 <div>{{ item.text }}</div>
             </igx-drop-down-item>
@@ -284,7 +284,7 @@ export class MyMenuComponent {
         scrollStrategy: new NoOpScrollStrategy()
     };
 
-    public onSelection(eventArgs: ISelectionEventArgs) {
+    public selecting(eventArgs: ISelectionEventArgs) {
         this.text = eventArgs.newSelection.value;
         eventArgs.cancel = true;
     }

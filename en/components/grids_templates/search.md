@@ -233,7 +233,7 @@ public updateExactSearch() {
 
 ### Persistence
 
-What if we would like to filter and sort our @@igComponent or even to add and remove records? After such operations, the highlights of our current search automatically update and persist over any text that matches the **searchText**! Furthermore, the search will work with paging and will persist the highlights through changes of the @@igComponent's [`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) property.
+What if we would like to filter and sort our @@igComponent or even to add and remove records? After such operations, the highlights of our current search automatically update and persist over any text that matches the **searchText**! Furthermore, the search will work with paging and will persist the highlights through changes of the @@igComponent's [`perPage`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#perPage) property.
 
 ### Adding icons
 

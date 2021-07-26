@@ -138,11 +138,13 @@ IgxTreeGridComponent を階層にバインドするには、[`childDataKey`]({en
 <!--treeGridSample.component.html-->
 
 <igx-tree-grid #treeGrid [data]="localData" childDataKey="Employees"
-               [autoGenerate]="false" [rowSelectable]="true" [paging]="true" [allowFiltering]="true">
+               [autoGenerate]="false" [rowSelectable]="true" [allowFiltering]="true">
     <igx-column field="Name" dataType="string" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"
                 [hasSummary]="true"></igx-column>
     <igx-column field="HireDate" dataType="date" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
     <igx-column field="Age" dataType="number" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
+    <igx-paginator>
+    </igx-paginator>
 </igx-tree-grid>
 ```
 
@@ -152,7 +154,7 @@ IgxTreeGridComponent を階層にバインドするには、[`childDataKey`]({en
 <!--treeGridSample.component.html-->
 
 <igx-tree-grid #treeGrid [data]="localData" childDataKey="Employees"
-               [autoGenerate]="false" [rowSelectable]="true" [paging]="true" [allowFiltering]="true">
+               [autoGenerate]="false" [rowSelectable]="true" [allowFiltering]="true">
     <igx-grid-toolbar>
             <igx-grid-toolbar-title>Employees</igx-grid-toolbar-title>
             <igx-grid-toolbar-actions>
@@ -164,6 +166,8 @@ IgxTreeGridComponent を階層にバインドするには、[`childDataKey`]({en
     <igx-column field="Name" dataType="string" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
     <igx-column field="HireDate" dataType="date" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
     <igx-column field="Age" dataType="number" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
+    <igx-paginator>
+    </igx-paginator>
 </igx-tree-grid>
 ```
 

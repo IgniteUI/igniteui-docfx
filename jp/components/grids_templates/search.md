@@ -234,7 +234,7 @@ public updateExactSearch() {
 
 ### 永続化
 
-@@igComponent のフィルターやソート、レコードの追加や削除をする場合を想定します。そのような処理の後、現在の検索が自動的に更新されて **searchText** に一致するテキストが保持されます。更に検索がページングで動作し、@@igComponent の [`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) プロパティの変更時も強調表示が保持されます。
+@@igComponent のフィルターやソート、レコードの追加や削除をする場合を想定します。そのような処理の後、現在の検索が自動的に更新されて **searchText** に一致するテキストが保持されます。更に検索がページングで動作し、@@igComponent の [`perPage`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#perPage) プロパティの変更時も強調表示が保持されます。
 
 ### アイコンの追加
 

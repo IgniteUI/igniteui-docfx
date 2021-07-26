@@ -160,13 +160,13 @@ export class MyExampleCombo {
 }
 ```
 
-The combo also fires an event every time its selection changes - [onSelectionChange()]({environment:angularApiUrl}/classes/igxcombocomponent.html#onselectionchange). The emitted event arguments, [IComboSelectionChangeEventArgs]({environment:angularApiUrl}/interfaces/icomboselectionchangeeventargs.html), contain information about the selection prior to the change, the current selection and the items that were added or removed. The event can also be cancelled, preventing the selection update with the new array of items.
+The combo also fires an event every time its selection changes - [selectionChanging()]({environment:angularApiUrl}/classes/igxcombocomponent.html#selectionchanging). The emitted event arguments, [IComboSelectionChangeEventArgs]({environment:angularApiUrl}/interfaces/icomboselectionchangeeventargs.html), contain information about the selection prior to the change, the current selection and the items that were added or removed. The event can also be cancelled, preventing the selection update with the new array of items.
 
 Binding to the event can be done through the proper `@Output` property on the `igx-combo` tag:
 
 ```html
 <igx-combo [data]="cities" displayKey="name" valueKey="id"
-           (onSelectionChange)="handleCityChange($event)">
+           (selectionChanging)="handleCityChange($event)">
 </igx-combo>
 ```
 
@@ -188,10 +188,10 @@ export class MyExampleCombo {
 
 ## Single Selection
 
-By default, the combo control provides multiple selection. The example below demonstrates how to achieve single selection in the component by attaching a handler to the `onSelectionChange` event:
+By default, the combo control provides multiple selection. The example below demonstrates how to achieve single selection in the component by attaching a handler to the `selectionChanging` event:
 
 ```html
-<igx-combo [data]="lData" (onSelectionChange)="singleSelection($event)"></igx-combo>
+<igx-combo [data]="lData" (selectionChanging)="singleSelection($event)"></igx-combo>
 ```
 
 ```typescript
