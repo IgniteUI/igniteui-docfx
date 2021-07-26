@@ -260,7 +260,7 @@ Using the drop down with a virtualized list of items enforce some limitations. P
  - `<igx-drop-down-item-group>`s cannot be used for grouping items when the list is virtualized. Use the `isHeader` propery instead
  - The `items` accessor will return only the list of non-header `igx-drop-down-item`s that are currently in the virtualized view.
  - [`dropdown.selectedItem`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#selecteditem) is of type `{ value: any, index: number }`
- - The object emitted by [`onSelection`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#onselection) changes to 
+ - The object emitted by [`selecting`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#selecting) changes to 
  ```typescript
  const emittedEvent: {
      newSelection: { value: any, index: number },

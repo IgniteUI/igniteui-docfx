@@ -11,7 +11,7 @@ Ignite UI for Angular Combo コンポーネントは、コンボをリモート 
 </p>
 
 ## Angular コンボ リモート バインディングの例
-以下のサンプルは、[onDataPreLoad]({environment:angularApiUrl}/classes/igxcombocomponent.html#ondatapreload) プロパティを使用してリモート データの新しい部分をロードするリモート バインディングを示しています。
+以下のサンプルは、[dataPreLoad]({environment:angularApiUrl}/classes/igxcombocomponent.html#datapreload) プロパティを使用してリモート データの新しい部分をロードするリモート バインディングを示しています。
 
 
 <code-view style="height: 400px;" 
@@ -71,15 +71,15 @@ export class RemoteService {
 <igx-combo [data]="rData | async" 
            [valueKey]="'ProductID'" 
            [displayKey]="'ProductName'" 
-           (onDataPreLoad)="dataLoading($event)"
-           (onSearchInput)="searchInput($event)"
-           (onOpening)="searchInput('')">
+           (dataPreLoad)="dataLoading($event)"
+           (searchInputUpdate)="searchInput($event)"
+           (opening)="searchInput('')">
 </igx-combo>
 ```
 
 以下は、コンボ コンポーネントが新しいデータを要求する必要がある一般的な例です。
     - コンボが初期化されたとき
-    - コンボのリストをスクロールしたとき - 新しいコンボ `virtualizationState` と `onDataPreLoad` を発生し、リモート サービスに新しい要求を送ることができます。
+    - コンボのリストをスクロールしたとき - 新しいコンボ `virtualizationState` と `dataPreLoad` を発生し、リモート サービスに新しい要求を送ることができます。
     - コンボで検索するとき - リモート結果のフィルターを要求する必要があります。
     - コンボが開いたとき - 以前のフィルター処理の結果をクリアします。
 
