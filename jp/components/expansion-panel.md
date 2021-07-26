@@ -1,6 +1,6 @@
 ---
 title: Angular Panel | Expandable | Ignite UI for Angular | インフラジスティックス
-_description: Angular アコーディオン/マテリアル拡張パネルは、折りたたみと展開の 2 つの状態を持つ、簡単に設定できる拡張可能なコンポーネントを提供します。
+_description: Angular アコーディオン/マテリアル展開パネルは、折りたたみと展開の 2 つの状態を持つ、簡単に設定できる拡張可能なコンポーネントを提供します。
 _keywords: angular accordion, igniteui for angular, インフラジスティックス
 _language: ja
 ---
@@ -147,7 +147,7 @@ export class ExpansionPanelComponent {
 ```
 このコンポーネントは、パネルの縮小時に「更に表示」を描画し、完全に展開した後に「簡易表示」を描画します。
 
-`IgxExpansionPanel` コントロールを使用すると、あらゆる種類のコンテンツを `igx-expansion-panel-body` 内に追加できます。[`IgxGrid`](grid/grid.md)、[`IgxCombo`](combo.md)、チャート、その他の拡張パネルもレンダリングできます。
+`IgxExpansionPanel` コントロールを使用すると、あらゆる種類のコンテンツを `igx-expansion-panel-body` 内に追加できます。[`IgxGrid`](grid/grid.md)、[`IgxCombo`](combo.md)、チャート、その他の展開パネルもレンダリングできます。
 
 展開パネルの本体にいくつかの基本的なマークアップを追加します。
 ```html
