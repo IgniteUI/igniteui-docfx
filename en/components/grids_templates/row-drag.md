@@ -707,66 +707,62 @@ class MyRowGhostComponent {
 
 #### Displaying a drop indicator based on cursor position
 
-In the example code below you see how you can display an indicator of where the dragged row would be dropped. You can customize this indicator as you like - it may be a placeholder row, placed at the position the dragged row would be dropped, a border style indicating if the dragged row would be dropped above or below the currently hovered row, etc.
+In the demo in the next section you see how you can display an indicator of where the dragged row would be dropped. You can customize this indicator as you like - it may be a placeholder row, placed at the position where the dragged row would be dropped, a border style indicating if the dragged row would be dropped above or below the currently hovered row, etc.
 
-In order to track the position of the cursor, we bind to the `over` event of the [`IgxDropDirective`]({environment:angularApiUrl}/classes/igxdropdirective.html#over).
+In order to track the position of the cursor, we bind to the `dragMove` event of the [`IgxDragDirective`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragmove).
 
-```html
-<@@igSelector #@@igClass [data]="data" [autoGenerate]="false" [rowDraggable]="true"
-[primaryKey]="'ID'" igxDrop (dropped)="onDropAllowed($event)" (over)="handleOver($event)">
- <igx-column [field]="'ID'" [header]="'ID'" width="100px"></igx-column>
-    ...
-</@@igSelector>
-```
+> [!NOTE]
+> Make sure that there is a `primaryKey` specified for the grid! The logic needs an unique identifier for the rows so they can be properly reordered
 
-While `getCurrentRowIndex` in the Row Reordering demo above is getting the row index of the hovered row, in the following snippet `getHoverRowElement` function is getting the row element itself.
-
+@@if (igxName === 'IgxGrid') {
 ```typescript
-class HighlightDragDropComponent {
-    ...
-    public handleOver(event: IDropBaseEventArgs): void {
-        const ghostRect = event.drag.ghostElement.getBoundingClientRect();
-        const currentElement = this.getHoverRowElement(
-            this.grid.rowList.toArray(),
-            { x: ghostRect.x, y: ghostRect.y }
-        );
-        this.changeHighlightedElement(currentElement);
+    private handleDragMove(event: IDragMoveEventArgs): void {
+      this.handleOver(event);
+       ...
     }
 
-    private getHoverRowElement(rowList: IgxRowComponent<IgxGridComponent>[], cursorPosition: Point): HTMLElement {
-        for (const row of rowList) {
-            const rowRect = row.nativeElement.getBoundingClientRect();
-            if (cursorPosition.y > rowRect.top && cursorPosition.y < rowRect.bottom) {
-            // return the element of the targeted row
-                return row.element.nativeElement;
-            }
-        }
+    private handleOver(event: IDragMoveEventArgs) {
+    const ghostRect = event.owner.ghostElement.getBoundingClientRect();
+    const rowIndex = this.getRowIndexAtPoint(this.grid.rowList.toArray(), {
+      x: ghostRect.x,
+      y: ghostRect.y
+    });
+    if (rowIndex === -1) {
+      return;
     }
+    const rowElement = this.grid.rowList.find(
+      e => e.rowData.ID === this.grid.data[rowIndex].ID
+    );
+    if (rowElement) {
+      this.changeHighlightedElement(rowElement.element.nativeElement);
+    }
+  }
 
-    private clearHighlightElement(): void {
-        if (this.highlightedRow !== undefined) {
-            this.renderer.removeClass(this.highlightedRow, "underlined-class");
-        }
+  private clearHighlightElement(): void {
+    if (this.highlightedRow !== undefined) {
+      this.renderer.removeClass(this.highlightedRow, 'underlined-class');
     }
+  }
+  private setHightlightElement(newElement: HTMLElement) {
+    this.renderer.addClass(newElement, 'underlined-class');
+    this.highlightedRow = newElement;
+  }
 
-    private setHightlightElement(newElement: HTMLElement): void {
-        this.renderer.addClass(newElement, "underlined-class");
-        this.highlightedRow = newElement;
+  private changeHighlightedElement(newElement: HTMLElement) {
+    if (newElement !== undefined) {
+      if (newElement !== this.highlightedRow) {
+        this.clearHighlightElement();
+        this.setHightlightElement(newElement);
+      } else {
+        return;
+      }
     }
-
-    private changeHighlightedElement(newElement): void {
-        if (newElement !== undefined) {
-            if (newElement !== this.highlightedRow) {
-                this.clearHighlightElement();
-                this.setHightlightElement(newElement);
-            } else {
-                return;
-            }
-        }
-    }
+  }
+```
 }
 
-```
+
+
 <div class="divider--half"></div>
 
 ### Scrolling the grid when a row is dragged to the top or bottom of it
@@ -808,6 +804,7 @@ We'll still be subscribing to the `dragMove` event of the specific row in the wa
 
 We create and subscribe to the `interval` when the pointer reaches the grid's edge and we `unsubscribe` from that `interval` everytime the mouse moves or the row is dropped (regardless of cursor position).
 
+@@if (igxName === 'IgxGrid') {
 ```typescript
 class MyGridScrollComponent {
     public ngAfterViewInit() {
@@ -840,6 +837,18 @@ class MyGridScrollComponent {
     }
 }
 ```
+}
+
+Following is the example of both scenarios described above - showing a drop indicator and scrolling the viewport when border's edge is reached.
+
+@@if (igxName === 'IgxGrid') {
+
+<code-view style="height:830px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/grid/grid-drop-indicator" >
+</code-view>
+
+}
 
 <div class="divider--half"></div>
 
