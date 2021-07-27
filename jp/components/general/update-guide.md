@@ -45,8 +45,8 @@ ng update @angular/cli
 ## 12.0.x から 12.1.x の場合:
 ### グリッド
 * 重大な変更:
-    * [`IgxPaginatorComponent`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html) - The way the Paginator is instantiated in the grid has changed. It is now a separate component projected in the grid tree. Thus the `[paging]="true"` property is removed from all grids and all other properties related to the paginator in the grid are deprecated. It is recommended to follow the guidance for enabling `Grid Paging` features as described in the [Paging topic](../grid/paging.md).
-    * [`IgxPageSizeSelectorComponent`]({environment:angularApiUrl}/classes/IgxPageSizeSelectorComponent.html) and [`IgxPageNavigationComponent`]({environment:angularApiUrl}/classes/IgxPageNavigationComponent.html) are introduced to ease the implementation of any custom content:
+    * [`IgxPaginatorComponent`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html) - グリッドでページネータがインスタンス化される方法が変更されました。グリッド ツリーに投影される別個のコンポーネントになりました。したがって、`[paging]="true"` プロパティはすべてのグリッドから削除され、グリッド内のページネータに関連する他のすべてのプロパティは非推奨です。[ページン グトピック](../grid/paging.md)で説明されているように、`Grid Paging` 機能を有効にするためのガイドに従うことをお勧めします。
+    * [`IgxPageSizeSelectorComponent`]({environment:angularApiUrl}/classes/IgxPageSizeSelectorComponent.html) および [`IgxPageNavigationComponent`]({environment:angularApiUrl}/classes/IgxPageNavigationComponent.html) が導入され、カスタム コンテンツの実装が容易になりました。
 
     ```html
     <igx-paginator #paginator>
@@ -58,16 +58,15 @@ ng update @angular/cli
     </igx-paginator>
     ```
 
-    * The API for the paging component was changed during the refactor and many of the old properties are now deprecated. Unfortunately, having
-    an adequate migration for some of these changes is complicated to say the least, so any errors should be handled at application level.
-    * The following properties are deprecated from the Grid:
-        - paging, perPage page, totalPages, isFirstPage, isLastPage, pageChange, perPageChange, pagingDone
-    * The following methods, also are deprecated:
+    * ページング コンポーネントの API はリファクタリング中に変更され、古いプロパティの多くは非推奨になりました。残念ながら、これらの変更の一部を適切に移行することは控えめに言っても複雑であるため、エラーはアプリケーション レベルで処理する必要があります。
+    * 次のプロパティはグリッドから非推奨になりました:
+        - paging、perPage page、totalPages、isFirstPage、isLastPage、pageChange、perPageChange、pagingDone
+    * 次のメソッドも非推奨です:
         - nextPage()
         - previousPage()
-    * The following property has been removed:
-        - paginationTemplate - in order to define a custom template, use the `igx-paginator-content`
-    * HierarchicalGrid specifics - The following usage of `*igxPaginator` Directive is necessary when it comes to enabling paging on RowIslands:
+    * 次のプロパティが削除されました:
+        - paginationTemplate - カスタム テンプレートを定義するには、`igx-paginator-content` を使用します。
+   * HierarchicalGrid の詳細 - RowIslands でページングを有効にする場合は、次の `*igxPaginator` ディレクティブの使用法が必要です。
 
     ```html
     <igx-hierarchical-grid #hGrid >
@@ -87,9 +86,9 @@ ng update @angular/cli
     </igx-hierarchical-grid>
     ```
 
-    * While the migration will move your template content inside the `igx-paginator-content` content, it might not resolve all template bindings. Make sure to check your template files after the migration. The following bindings should be changed manually as these properties have been removed (`pagerEnabled`, `pagerHidden`, `dropdownEnabled`, `dropdownHidden`):
+    * 移行によりテンプレート コンテンツが `igx-paginator-content` コンテンツ内に移動しますが、すべてのテンプレート バインディングが解決されるとは限りません。移行後は、必ずテンプレート ファイルを確認してください。次のバインディングは、これらのプロパティ (`pagerEnabled`、`pagerHidden`、`dropdownEnabled`、`dropdownHidden`) が削除されているため、手動で変更する必要があります:
 
-    _From:_
+    次から:
     ```html
     <igx-paginator #paginator 
         [pagerEnabled]="!isPagerDisabled" [pagerHidden]="isPagerHidden"
@@ -97,7 +96,7 @@ ng update @angular/cli
     </igx-paginator>
     ```
 
-    _To:_
+    次へ:
     ```html
     <igx-paginator #paginator *ngIf="!isPagerDisabled">
         <igx-paginator-content>

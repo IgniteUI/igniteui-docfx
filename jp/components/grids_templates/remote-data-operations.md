@@ -514,7 +514,7 @@ public maxPerPage = Number.MAX_SAFE_INTEGER;
 ```
 }
 
-Now we can choose between setting-up our own *custom paging template* or using the default one that the `igx-paginator` provides. Let's first take a look what is necessary to set-up remote paging by using the *default paging template*.
+これで、独自のカスタム ページング テンプレートを設定するか、`igx-paginator` が提供するデフォルトのテンプレートを使用するかを選択できます。まず、デフォルトのページング テンプレートを使用してリモート ページングを設定するために必要なものを見てみましょう。
 
 ### デフォルト テンプレートのリモート ページング
 
@@ -621,7 +621,7 @@ public paginate(page: number) {
 
 ### カスタム igx-paginator-content のリモート ページング
 
-When we define a custom paginator content we need to define the content in a way to get the data only for the requested page and to pass the correct **skip** and **top** parameters to the remote service according to the selected page and items [`perPage`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#perPage). We are going to use the `<igx-paginator>` in order to ease our example configuration, along with the [`IgxPageSizeSelectorComponent`]({environment:angularApiUrl}/classes/IgxPageSizeSelectorComponent.html) and [`IgxPageNavigationComponent`]({environment:angularApiUrl}/classes/IgxPageNavigationComponent.html) that were introduced - `igx-page-size` will add the per page dropdown and label and `igx-page-nav` will add the navigation action buttons and labels.
+カスタム ページネータ コンテンツを定義するときは、要求されたページのデータのみを取得するようにコンテンツを定義し、選択したページと [`perPage`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#perPage) 項目に応じて正しい **skip** および **top** パラメーターをリモート サービスに渡す必要があります。導入された [`IgxPageSizeSelectorComponent`]({environment:angularApiUrl}/classes/IgxPageSizeSelectorComponent.html) と [`IgxPageNavigationComponent`]({environment:angularApiUrl}/classes/IgxPageNavigationComponent.html) とともに、設定例を簡単にするために `<igx-paginator>` を使用します。`igx-page-size` はページごとのドロップダウンとラベルを追加し、`igx-page-nav` はナビゲーション アクション ボタンとラベルを追加します。
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -740,7 +740,7 @@ public paginate(page: number) {
 }
 
 >[!NOTE]
-> In order the Remote Paging to be configured properly a `GridPagingMode.Remote` should be set:
+> リモート ページングを適切に構成するには、`GridPagingMode.Remote` を設定する必要があります。 
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -766,7 +766,7 @@ public mode = GridPagingMode.Remote;
 ```
 }
 
-The last step will be to declare the paginator content based on your requirements.
+最後の手順は、要件に基づいてページネータのコンテンツを宣言することです。
 
 ```html
 <igx-paginator-content>

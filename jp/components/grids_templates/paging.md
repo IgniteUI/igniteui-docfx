@@ -17,7 +17,7 @@ _language: ja
 }
 
 # Angular @@igComponent ページネーション
-ページネーションは、大量のデータセットを類似したコンテンツを持つ一連のページに分割するために使用されます。Angular テーブルのページネーションにより、ユーザー エクスペリエンスとデータ操作が向上します。 @@igComponent pagination is configurable via a separate component projected in the grid tree by defining a `igx-paginator` tag, similar to adding of a column. 他の Angular Material テーブルと同様に、@@igComponent のページネーションはカスタム ページのテンプレートをサポートします。
+ページネーションは、大量のデータセットを類似したコンテンツを持つ一連のページに分割するために使用されます。Angular テーブルのページネーションにより、ユーザー エクスペリエンスとデータ操作が向上します。 @@igComponent ページネーションは、列の追加と同様に、`igx-paginator` タグを定義することにより、グリッド ツリーに投影された個別のコンポーネントを介して構成できます。他の Angular Material テーブルと同様に、@@igComponent のページネーションはカスタム ページのテンプレートをサポートします。
 
 ## Angular ページネーションの例
 
@@ -48,7 +48,7 @@ _language: ja
 <div class="divider--half"></div>
 }
 
-Adding a `igx-paginator` component will control whether the feature is present, you can enable/disable it by using a simple `*ngIf` with a toggle property. The [`perPage`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#perPage) input controls the visible records per page. Let’s update our @@igComponent to enable paging:
+`igx-paginator` コンポーネントを追加すると、機能が存在するかどうかが制御されます。トグル プロパティを持つ単純な `*ngIf` を使用して、機能を有効/無効にできます。[`perPage`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#perPage) 入力は、ページごとに表示されるレコードを制御します。以下のように @@igComponent でページングを有効にします。
 
 ```html
 <@@igSelector #@@igObjectRef [data]="data" [height]="'500px'" [width]="'100%'" [displayDensity]="'cosy'">
@@ -68,7 +68,7 @@ Adding a `igx-paginator` component will control whether the feature is present, 
 </igx-paginator>
 ```
 
-In addition, [`IgxPageSizeSelectorComponent`]({environment:angularApiUrl}/classes/IgxPageSizeSelectorComponent.html) and [`IgxPageNavigationComponent`]({environment:angularApiUrl}/classes/IgxPageNavigationComponent.html) were introduced and now the paginator components allows a custom content to be defined, as it is shown in the example below. The first will add the dropdown element and label corresponding for the page size and the latter will handle the page navigation with all action buttons.
+さらに、[`IgxPageSizeSelectorComponent`]({environment:angularApiUrl}/classes/IgxPageSizeSelectorComponent.html) と [`IgxPageNavigationComponent`]({environment:angularApiUrl}/classes/IgxPageNavigationComponent.html) が導入され、次の例に示すように、ページネータ コンポーネントでカスタム コンテンツを定義できるようになりました。前者はページ サイズに対応するドロップダウン要素とラベルを追加し、後者はすべてのアクション ボタンでページ ナビゲーションを処理します。
 
 ```html
 <igx-paginator #paginator>
@@ -112,7 +112,7 @@ In addition, [`IgxPageSizeSelectorComponent`]({environment:angularApiUrl}/classe
 | displayDensity  | ページネーションの表示密度を取得または設定します。 |
 | page            | 現在のページをを取得または設定します。 |
 | perPage         | ページごとに表示される項目数を取得または設定します。 |
-| selectOptions   | Gets/Sets custom options in the Select element of the paginator. Default select values [5, 10, 15, 25, 50, 100, 500] |
+| selectOptions   | パジネーターの Select 要素でカスタム オプションを取得または設定します。デフォルトの選択値 [5、10、15、25、50、100、500] |
 | totalRecords    | 合計レコード数を取得または設定します。 |
 | totalPages      | 合計ページ数を取得または設定します。 |
 | resourceStrings | リソース文字列を取得または設定します。デフォルトで EN リソースを使用します。 |
@@ -120,15 +120,15 @@ In addition, [`IgxPageSizeSelectorComponent`]({environment:angularApiUrl}/classe
 
 | 出力          |      説明                           |
 |-----------------|:------------------------------------------:|
-| perPageChange   | Emitted when `perPage` property value of the paginator is changed. |
+| perPageChange   | ページネータの `perPage` プロパティ値が変更されたときに発生します。 |
 | pageChange      | 現在のページが変更されたときに発生されます。 |
-| paging          | Emitted before paging is performed. Cancelable.|
-| pagingDone      | Emitted after paging is performed. |
+| paging          | ページングが実行さる前に発生されます。キャンセル可能。|
+| pagingDone      | ページングが実行された後に発生されます。 |
 
 ### 使用方法
 
 @@if (igxName === 'IgxGrid') {
-The `igx-paginator` component is used along with the `igx-grid` component in the example below, but you can use it with any other component in case paging functionality is needed.
+以下の例では、`igx-paginator` コンポーネントが `igx-grid` コンポーネントと一緒に使用されていますが、ページング機能が必要な場合は、他のコンポーネントと一緒に使用できます。
 
 ```html
 <igx-grid #grid [data]="data">
@@ -140,7 +140,7 @@ The `igx-paginator` component is used along with the `igx-grid` component in the
 }
 
 @@if (igxName === 'IgxTreeGrid') {
-The `igx-paginator` component is used along with the `igx-tree-grid` component in the example below, but you can use it with any other component in case paging functionality is needed.
+以下の例では、`igx-paginator` コンポーネントが `igx-tree-grid` コンポーネントと一緒に使用されていますが、ページング機能が必要な場合は、他のコンポーネントと一緒に使用できます。
 
 ```html
 <igx-tree-grid #treeGrid [data]="data">
@@ -152,7 +152,7 @@ The `igx-paginator` component is used along with the `igx-tree-grid` component i
 }
 
 @@if (igxName === 'IgxHierarchicalGrid') {
-The `igx-paginator` component is used along with the `igx-hierarchical-grid` component in the example below, but you can use it with any other component in case paging functionality is needed.
+以下の例では、`igx-paginator` コンポーネントが `igx-hierarchical-grid` コンポーネントと一緒に使用されていますが、ページング機能が必要な場合は、他のコンポーネントと一緒に使用できます。
 
 ```html
 <igx-hierarchical-grid #hGrid >
