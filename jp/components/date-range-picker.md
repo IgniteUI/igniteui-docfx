@@ -11,8 +11,8 @@ Ignite UI for Angular Date Range Picker コンポーネントは開始日と終�
 
 ## Angular Date Range Picker の例
 
-<code-view style="height:600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/basic-daterangepicker" alt="Angular Date Range Picker 例">
 </code-view>
 
@@ -92,8 +92,8 @@ Date Range Picker コンポーネントは、開始日と終了日の 2 つの�
 - 両方の入力で日付編集を有効にするには、[`igxDateTimeEditor`](date-time-editor.md) ディレクティブでデコレートする必要があります。
 
 
-<code-view style="height:600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/daterangepicker-start-end" >
 </code-view>
 
@@ -103,7 +103,7 @@ Date Range Picker コンポーネントは、開始日と終了日の 2 つの�
 
 単一の読み取り専用入力のデフォルト構成では、入力の任意の場所 (カレンダーのアイコンを含む) をクリックすると、カレンダーを開くことができます。開始日と終了日の 2 つの入力がある場合、両方の入力がデフォルトで編集可能なため、カレンダーはカレンダー アイコンからのみ開きます。
 
-カレンダーが表示されている場合、開始日と終了日を選択して範囲を選択できます。日付を選択すると、2 番目の日付が選択されるまで開始日と終了日が設定されます。選択された範囲がある場合、カレンダーでその他の日付をクリックすると、新しい範囲選択を開始します。 
+カレンダーが表示されている場合、開始日と終了日を選択して範囲を選択できます。日付を選択すると、2 番目の日付が選択されるまで開始日と終了日が設定されます。選択された範囲がある場合、カレンダーでその他の日付をクリックすると、新しい範囲選択を開始します。
 
 コンポーネントの読み取り専用入力で表示される場合、開始日と終了日はハイフン (-) で区切られます。Start と end に異なる入力を定義する場合、`to` で区切ります。後者はローカライズまたはテンプレートで上書きできます。詳細については、以下の[テンプレート化](#テンプレート化)の例を参照してください。
 
@@ -155,8 +155,8 @@ Date Range Picker に開始日と終了日の 2 つの入力がある場合、�
 ```
 
 
-<code-view style="height:500px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:500px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/daterangepicker-mode" >
 </code-view>
 
@@ -197,7 +197,7 @@ Date Range Picker コンポーネントはさまざまな表示および入力�
 `inputFormat` プロパティは、DatePipe でサポートされる文字 (`MM/dd/yyyy` など) を使用して構成された書式文字列を受け入れますが、`shortDate` や `longDate` などの定義済みの形式オプションはサポートしていません。`inputFormat` プロパティが定義されていない場合、[Angular locale ID](https://angular.io/api/core/LOCALE_ID) トークンがビルド時に使用されます。
 
 ```html
-<igx-date-range-picker [(ngModel)]="range" required 
+<igx-date-range-picker [(ngModel)]="range" required
     inputFormat="dd/MM/yyyy" displayFormat="`shortDate`">
 </igx-date-range-picker>
 ```
@@ -251,8 +251,8 @@ Date Range Picker コンポーネントは、コア FormsModule [NgModel](https:
 ```
 
 
-<code-view style="height:600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/daterangepicker-validation" >
 </code-view>
 
@@ -323,7 +323,7 @@ public maxDate = new Date(2020, 11, 1);
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+```
 
 Date Range Picker コンポーネントは `igx-date-range-picker-theme` を公開し、`igxInputGroupComponent`、`igxCalendar`、`igxOverlay` などの複数のコンポーネントおよびディレクティブを使用します。前述のコンポーネントおよびディレクティブのグローバル スタイル設定は `igxDateRangeComponent` に影響します。Date Range Picker コンポーネントは入力グループおよびカレンダーテーマを使用するため、[`igx-calendar-theme`]({environment:sassApiUrl}/index.html#function-igx-calendar-theme) および [`igx-input-group-theme`]({environment:sassApiUrl}/index.html#function-igx-input-group-theme) を拡張する新しいテーマを作成し、それらのパラメーターの一部と日付範囲の選択テーマを使用して日付範囲ピッカーをスタイル設定する必要があります。単一のカスタム カラー パレットを使用して、すべてのテーマで使用する色を定義します。
 
@@ -373,7 +373,7 @@ $custom-calendar-theme: igx-calendar-theme(
 
 ### テーマ オーバーライドの使用
 
-Internet Explorer 11 などの古いブラウザーのコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、別のアプローチを用いる必要があります。 
+Internet Explorer 11 などの古いブラウザーのコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、別のアプローチを用いる必要があります。
 
 コンポーネントが [`Emulated`](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
 
@@ -391,8 +391,8 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 スタイルのスコーピングについては、詳細は[オーバーレイのスコープ コンポーネント スタイル](overlay-styling.md#スコープ-コンポーネント-スタイル)および[入力グループのスタイル スコーピング](input-group.md#スタイル設定)の両方のスタイル設定セクションを参照してください。
 
 
-<code-view style="height:600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/styled-daterangepicker" >
 </code-view>
 
@@ -401,8 +401,8 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 以下のデモは、[`IgxDateRangePickerComponent`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html) を使用する航空券のフォームを定義します。日付が選択されていない場合、検証エラーを表示するために [`IgxHint`]({environment:angularApiUrl}/classes/igxhintdirective.html)  が使用されます。日付の選択は、[`IgxDateRangePickerComponent`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html) の [`minValue`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html#minvalue) および [`maxValue`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html#maxvalue) プロパティによって制限されます。
 
 
-<code-view style="height:600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/flight-booking" >
 </code-view>
 
@@ -430,7 +430,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 関連トピック:
 * [Date Time Editor](date-time-editor.md)
 * [Label および Input](label-input.md)
-* [リアクティブ フォームの統合](input-group-reactive-forms.md)
+* [リアクティブ フォームの統合](angular-reactive-form-validation.md)
 * [Date Picker](date-picker.md)
 
 

@@ -1,20 +1,20 @@
 ---
 title: Combo Features
-_description: Combo control exposes several of features including data and value binding, custom values, filtering, grouping, etc. 
+_description: Combo control exposes several of features including data and value binding, custom values, filtering, grouping, etc.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Combo components, Angular Features, Angular Combo Features, Angular Combo Data Binding, Angular Combo Value Binding, Angular Combo Data Filtering, Angular Combo Grouping, Angular Combo Custom Values
 ---
 
 # Combo Features
 <p class="highlight">
-The Ignite UI for Angular Combo control exposes several features including data and value binding, custom values, filtering, grouping, etc. 
+The Ignite UI for Angular Combo control exposes several features including data and value binding, custom values, filtering, grouping, etc.
 </p>
 
 ## Angular Combo Features Example
 The following demo demonstrates some of the igx-combo features that are enabled/disabled at runtime:
 
 
-<code-view style="height: 440px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 440px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/combo-features" alt="Angular Combo Features Example">
 </code-view>
 
@@ -109,9 +109,9 @@ export class CustomOverlayCombo {
     ...
     public customSettings: OverlaySettings = {
         positionStrategy: new GlobalPositionStrategy(
-            { 
+            {
                 openAnimation: scaleInCenter,
-                closeAnimation: scaleOutCenter 
+                closeAnimation: scaleOutCenter
             }),
         modal: true,
         closeOnOutsideClick: true,
@@ -126,8 +126,8 @@ export class CustomOverlayCombo {
 If everything is set up correctly, the combo's list will display centered, using the [GlobalPositionStrategy](overlay-position.md#global):
 
 
-<code-view style="height: 440px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 440px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/combo-overlay" >
 </code-view>
 
@@ -187,7 +187,7 @@ Defining a combo's `groupKey` option will group the items, according to the prov
 ## API Summary
 <div class="divider--half"></div>
 
-* [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html) 
+* [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html)
 * [IgxComboComponent Styles]({environment:sassApiUrl}/index.html#function-igx-combo-theme)
 
 Additional components and/or directives with relative APIs that were used:
@@ -200,7 +200,7 @@ Additional components and/or directives with relative APIs that were used:
 * [Combo Remote Binding](combo-remote.md)
 * [Combo Templates](combo-templates.md)
 * [Template Driven Forms Integration](input-group.md)
-* [Reactive Forms Integration](input-group-reactive-forms.md)
+* [Reactive Forms Integration](angular-reactive-form-validation.md)
 * [Cascading Scenario](combo-cascading.md)
 
 Our community is active and always welcoming to new ideas.

@@ -10,7 +10,7 @@ The Ignite UI for Angular Date Picker Component lets users pick a single date th
 ## Angular Date Picker Example
 <!-- TODO: datepicker sample with several options enabled -->
 <code-view style="height: 550px;"
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-1" alt="Angular Date Picker Example">
 </code-view>
 <div class="divider--half"></div>
@@ -18,7 +18,7 @@ The Ignite UI for Angular Date Picker Component lets users pick a single date th
 ## Usage
 
 ### First Steps
-To get started with the Date Picker component, first you need to import the `IgxDatePickerModule` in the module that you would like to use it in, for our example we will be using the **app.module.ts** file. 
+To get started with the Date Picker component, first you need to import the `IgxDatePickerModule` in the module that you would like to use it in, for our example we will be using the **app.module.ts** file.
 
 >[!NOTE]
 > As the picker uses the [**IgxCalendarComponent**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html), it is also dependent on the **BrowserAnimationsModule** and on the **HammerModule** for touch interactions, so they need to be added to the module as well:
@@ -31,7 +31,7 @@ import { IgxDatePickerModule } from 'igniteui-angular';
 
 @NgModule({
     ...
-    imports: [ 
+    imports: [
         ...,
         IgxDatePickerModule,
         BrowserAnimationsModule,
@@ -109,9 +109,9 @@ The [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepicker
     <igx-icon igxSuffix (click)="datePicker.open()">keyboard_arrow_down</igx-icon>
 </igx-date-picker>
 ```
-The above sample will add an additional toggle icon at the end of the input, right after the default clear icon. This will not remove the default toggle icon, though as prefixes and suffixes can be stacked one after the other. 
+The above sample will add an additional toggle icon at the end of the input, right after the default clear icon. This will not remove the default toggle icon, though as prefixes and suffixes can be stacked one after the other.
 
-#### Customizing the toggle and clear icons 
+#### Customizing the toggle and clear icons
 The [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) can be configured with [`IgxPickerToggleComponent`]({environment:angularApiUrl}/classes/igxpickertogglecomponent.html) and [`IgxPickerClearComponent`]({environment:angularApiUrl}/classes/igxpickerclearcomponent.html), these can be used to change the toggle and clear icons without having to add your own click handlers.
 
 ```html
@@ -164,8 +164,8 @@ The [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepicker
 ```html
 <igx-date-picker [mode]="'dropdown'"></igx-date-picker>
 ```
-<code-view style="height: 540px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 540px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-2" >
 </code-view>
 
@@ -180,8 +180,8 @@ A good thing to note is that the picker will always add a leading zero on the `d
 
 More information about these can be found in the [`IgxDateTimeEditor`](date-time-editor.md#examples) examples section.
 
-<code-view style="height: 680px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 680px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-3" >
 </code-view>
 
@@ -199,7 +199,7 @@ The [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepicker
 </igx-date-picker>
 ```
 
-It also has as a [`spinDelta`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#spindelta) input property which can be used to increment or decrement a specific date part of the currently set date. 
+It also has as a [`spinDelta`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#spindelta) input property which can be used to increment or decrement a specific date part of the currently set date.
 ```html
 <igx-date-picker [spinDelta]="{date: 2, month: 3, year: 4}"></igx-date-picker>
 ```
@@ -207,15 +207,15 @@ It also has as a [`spinDelta`]({environment:angularApiUrl}/classes/igxdatepicker
 ### In Angular Forms
 The [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) supports all directives from the core [FormsModule](https://angular.io/api/forms/FormsModule), [NgModel](https://angular.io/api/forms/NgModel) and [ReactiveFormsModule](https://angular.io/api/forms/ReactiveFormsModule) ([`FormControl`](https://angular.io/api/forms/FormControl), [`FormGroup`](https://angular.io/api/forms/FormGroup), etc.). This also includes the [Forms Validators](https://angular.io/api/forms/Validators) functions. In addition, the component's [`minValue`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#minvalue) and [`maxValue`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#maxvalue) properties act as form validators.
 
-You can see the [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) in a reactive form by visiting our [Reactive Forms Integration](input-group-reactive-forms.md) topic.
+You can see the [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) in a reactive form by visiting our [Reactive Forms Integration](angular-reactive-form-validation.md) topic.
 
 #### Using date and time picker together
 In some cases when the IgxDatePicker and the [`IgxTimePicker`](time-picker.md) are used together, we might need them to be bound to one and the same Date object value.
 
 To achieve that in template driven forms, use the `ngModel` to bind both components to the same Date object.
 
-<code-view style="height: 540px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 540px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/template-driven-form" >
 </code-view>
 
@@ -223,8 +223,8 @@ To achieve that in template driven forms, use the `ngModel` to bind both compone
 
 In reactive forms, we can handle the [`valueChange`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#valuechange) event of each component and update the value of the other.
 
-<code-view style="height: 540px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 540px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/reactive-form" >
 </code-view>
 
@@ -254,7 +254,7 @@ To get started with styling the date picker, we need to import the `index` file,
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+```
 
 The date picker uses the calendar's theme, so we have to create a new theme that extends the [`igx-calendar-theme`]({environment:sassApiUrl}/index.html#function-igx-calendar-theme) and use some of its parameters to style the date picker's items:
 
@@ -277,9 +277,9 @@ $custom-datepicker-theme: igx-calendar-theme(
 );
 ```
 
-### Using CSS variables 
+### Using CSS variables
 
-The last step is to pass the custom date picker theme: 
+The last step is to pass the custom date picker theme:
 
 ```scss
 @include igx-css-vars($custom-datepicker-theme);
@@ -287,7 +287,7 @@ The last step is to pass the custom date picker theme:
 
 ### Using Theme Overrides
 
-In order to style components for older browsers, like Internet Explorer 11, we have to use a different approach, since it doesn't support CSS variables. 
+In order to style components for older browsers, like Internet Explorer 11, we have to use a different approach, since it doesn't support CSS variables.
 
 If the component is using the [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`. To prevent the custom theme to leak into other components, be sure to include the `:host` selector before `::ng-deep`:
 
@@ -299,8 +299,8 @@ If the component is using the [`Emulated`](themes/sass/component-themes.md#view-
 }
 ```
 
-<code-view style="height:500px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:500px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/datepicker-styling-sample" >
 </code-view>
 
@@ -329,7 +329,7 @@ If the component is using the [`Emulated`](themes/sass/component-themes.md#view-
 * [Time Picker](time-picker.md)
 * [Date Time Editor](date-time-editor.md)
 * [Date Range Picker](date-range-picker.md)
-* [Reactive Forms Integration](input-group-reactive-forms.md)
+* [Reactive Forms Integration](angular-reactive-form-validation.md)
 
 Our community is active and always welcoming to new ideas.
 * [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)

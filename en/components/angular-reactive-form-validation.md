@@ -130,7 +130,7 @@ With reactive forms, generating such is just as easy as writing a new function. 
 Below you can see how to write and implement a custom form validator in your reactive form.
 
 ```typescript
-import { FormGroup, Validators, ValidatorFn, ValidationErrors } from '@angular/forms';
+import { FormGroup, FormControl, Validators, ValidatorFn, ValidationErrors } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
 @Component({/* ... */})
@@ -139,7 +139,7 @@ export class MyComponent implements OnInit {
 
     public ngOnInit(): void {
         this.form = new FormGroup({
-            datePicker: ['', Validators.required, this.dateValidator(new Date())]
+            datePicker: new FormControl('', [Validators.required, this.dateValidator(new Date())])
         });
     }
 

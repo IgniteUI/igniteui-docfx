@@ -14,8 +14,8 @@ Ignite UI for Angular Combo コンポーネントは、コンボをリモート 
 以下のサンプルは、[dataPreLoad]({environment:angularApiUrl}/classes/igxcombocomponent.html#datapreload) プロパティを使用してリモート データの新しい部分をロードするリモート バインディングを示しています。
 
 
-<code-view style="height: 400px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 400px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/combo-remote" alt="Angular コンボ リモート バインディングの例">
 </code-view>
 
@@ -30,7 +30,7 @@ import { HttpClientModule } from "@angular/common/http";
 @NgModule({
     imports: [
         ...
-        IgxComboModule, 
+        IgxComboModule,
         HttpClientModule,
         ...
     ]
@@ -68,9 +68,9 @@ export class RemoteService {
 データがサービスから observable として返されると [async](https://angular.io/api/common/AsyncPipe) パイプを使用して Combo コンポーネントに設定します。
 
 ```html
-<igx-combo [data]="rData | async" 
-           [valueKey]="'ProductID'" 
-           [displayKey]="'ProductName'" 
+<igx-combo [data]="rData | async"
+           [valueKey]="'ProductID'"
+           [displayKey]="'ProductName'"
            (dataPreLoad)="dataLoading($event)"
            (searchInputUpdate)="searchInput($event)"
            (opening)="searchInput('')">
@@ -152,7 +152,7 @@ export class ComboRemoteComponent implements OnInit {
 ## API まとめ
 <div class="divider--half"></div>
 
-* [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html) 
+* [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html)
 * [IgxComboComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-combo-theme)
 
 ## その他のリソース
@@ -162,7 +162,7 @@ export class ComboRemoteComponent implements OnInit {
 * [コンボ機能](combo-features.md)
 * [コンボ テンプレート](combo-templates.md)
 * [テンプレート駆動フォームの統合](input-group.md)
-* [リアクティブ フォームの統合](input-group-reactive-forms.md)
+* [リアクティブ フォームの統合](angular-reactive-form-validation.md)
 * [カスケーディング](combo-cascading.md)
 
 コミュニティに参加して新しいアイデアをご提案ください。

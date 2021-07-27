@@ -1,5 +1,5 @@
 ---
-title: Angular Combobox コンポーネント | データ バインディング ComboBox | インフラジスティックス 
+title: Angular Combobox コンポーネント | データ バインディング ComboBox | インフラジスティックス
 _description: Ignite UI for Angular ComboBox は、基本的な HTML 入力、選択、フィルタリング、およびカスタム ドロップダウン リストの機能を組み合わせた強力な入力を提供します。無料でお試しください。
 _keywords: angular combobox, ignite ui for angular, インフラジスティックス
 _language: ja
@@ -16,8 +16,8 @@ Angular ComboBox コンポーネントは、編集可能な機能を提供する
 
 <div class="divider--half"></div>
 
-<code-view style="height: 400px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 400px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/combo-main" alt="Angular ComboBox の例">
 </code-view>
 
@@ -31,7 +31,7 @@ Combo コンポーネントは以下の機能を公開します。
     - [グループ化](combo-features.md#グループ化)
     - [カスタム値](combo-features.md#カスタム値)
     - [テンプレート](combo-templates.md)
-    - [テンプレート駆動フォーム](input-group.md)および[リアクティブ フォーム](input-group-reactive-forms.md)との統合
+    - [テンプレート駆動フォーム](input-group.md)および[リアクティブ フォーム](angular-reactive-form-validation.md)との統合
 
 ## 使用方法
 
@@ -73,7 +73,7 @@ export class ComboDemo implements OnInit {
 コンボは複雑なデータ (オブジェクト) の配列にバインドされているため、選択したアイテムを処理するためにコントロールが使用するプロパティを指定する必要があります。コントロールは、[valueKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#valuekey) と [displayKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#displaykey) の 2 つの `@Input` プロパティを公開します。
 
  - `valueKey` - **オプション、オブジェクト配列に推奨。** - コンボの選択のために保存されるデータ エントリのプロパティを指定します。`valueKey` が省略された場合、コンボ値はデータ エントリへの参照を使用します (選択は `combo.data` からのエントリの配列になります)。
- - `displayKey` - **オブジェクト配列に必須。** - アイテムのテキストに使用するプロパティを指定します。`displayKey` に値が指定されていない場合、コンボは指定された `valueKey` (存在する場合) を使用します。 
+ - `displayKey` - **オブジェクト配列に必須。** - アイテムのテキストに使用するプロパティを指定します。`displayKey` に値が指定されていない場合、コンボは指定された `valueKey` (存在する場合) を使用します。
 
 この例では、コンボに各都市の`名前`を表示し、コンボ値には各都市の `id` を格納します。格納するには、これらのプロパティをコンボの`displayKey` と `valueKey` にそれぞれ提供します。
 
@@ -103,8 +103,8 @@ export class MyCombo {
 ```
 
 
-<code-view style="height: 550px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 550px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/combo-valuekey" >
 </code-view>
 
@@ -120,15 +120,15 @@ export class MyCombo {
 ```
 
 
-<code-view style="height: 600px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 600px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/combo-binding" >
 </code-view>
 
 
 ### 選択 API
 
-Combo コンポーネントは、コントロールの現在の選択状態を取得および操作できる API を公開します。 
+Combo コンポーネントは、コントロールの現在の選択状態を取得および操作できる API を公開します。
 
 コンボの選択を取得する 1 つの方法は、[selectedItems()]({environment:angularApiUrl}/classes/igxcombocomponent.html#selecteditems) メソッドを使用することです。指定された [valueKey](#data-value-and-display-properties) (存在する場合) に応じて、選択された項目に対応する値の配列を返します。
 
@@ -204,8 +204,8 @@ public singleSelection(event: IComboSelectionChangeEventArgs) {
 ```
 
 
-<code-view style="height: 400px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 400px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/combo-single-selection" >
 </code-view>
 
@@ -220,7 +220,7 @@ igxCombo を開いて検索入力にフォーカスがある場合:
 - `上矢印`または `Alt` キー + `上矢印`はコンボ ドロップダウンを閉じ、フォーカスを閉じたコンボに移動します。
 
 - `下矢印`は、フォーカスを検索入力から最初のリスト項目に移動します。リストが空でカスタム値が有効な場合、新しい項目の追加ボタンに移動します。
-  
+
 > [!NOTE]
 > その他のキー ストロークは入力によって処理されます。
 
@@ -248,20 +248,20 @@ igxCombo を開くと、カスタム値が有効になり、項目の追加ボ�
 
 ## Angular ComboBox スタイル設定
 
-[Ignite UI for Angular テーマ](themes/index.md)を使用して、drop-down の外観を変更できます。はじめに、テーマ エンジンによって公開されている関数を使用するために、スタイル ファイルに `index` ファイルをインポートする必要があります。 
+[Ignite UI for Angular テーマ](themes/index.md)を使用して、drop-down の外観を変更できます。はじめに、テーマ エンジンによって公開されている関数を使用するために、スタイル ファイルに `index` ファイルをインポートする必要があります。
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-[igx-combo-theme]({environment:sassApiUrl}/index.html#function-igx-combo-theme) を拡張する新しいテーマを作成し、`$search-separator-border-color` パラメーターを受け取ります。 
+[igx-combo-theme]({environment:sassApiUrl}/index.html#function-igx-combo-theme) を拡張する新しいテーマを作成し、`$search-separator-border-color` パラメーターを受け取ります。
 ```scss
 $custom-combo-theme: igx-combo-theme(
     $search-separator-border-color: #1a5214
 );
 ```
 
-[IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html) は、項目コンテナーとして [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) を内部使用します。[IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) および [IgxCheckbox]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html) コンポーネントも含まれます。テーマを拡張する新しいテーマを作成し、それぞれのクラスの下にスコープすることで、コンボのスタイル設定を変更できます。 
+[IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html) は、項目コンテナーとして [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) を内部使用します。[IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) および [IgxCheckbox]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html) コンポーネントも含まれます。テーマを拡張する新しいテーマを作成し、それぞれのクラスの下にスコープすることで、コンボのスタイル設定を変更できます。
 
 ```scss
 $custom-drop-down-theme: igx-drop-down-theme(
@@ -289,7 +289,7 @@ $custom-checkbox-theme: igx-checkbox-theme(
 );
 ```
 
-### CSS 変数の使用 
+### CSS 変数の使用
 
 最後にコンポーネントのテーマを含めます。
 
@@ -303,7 +303,7 @@ $custom-checkbox-theme: igx-checkbox-theme(
 
 ### テーマ オーバーライドの使用
 
-Internet Explorer 11 などの古いブラウザーのコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、別のアプローチを用いる必要があります。 
+Internet Explorer 11 などの古いブラウザーのコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、別のアプローチを用いる必要があります。
 
 コンポーネントが [Emulated](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
 
@@ -325,8 +325,8 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 
 ### デモ
 
-<code-view style="height:410px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:410px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/combo-styling" >
 </code-view>
 
@@ -345,14 +345,14 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 ## API まとめ
 <div class="divider--half"></div>
 
-* [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html) 
+* [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html)
 * [IgxComboComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-combo-theme)
 
 その他のコンポーネントおよびディレクティブ (またはそのいずれか) で使用した API:
 
 * [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 * [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html)
-* [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) 
+* [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 * [IgxCheckboxComponent]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html)
 
 ## テーマの依存関係
@@ -368,7 +368,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 * [コンボ リモート バインディング](combo-remote.md)
 * [コンボ テンプレート](combo-templates.md)
 * [テンプレート駆動フォームの統合](input-group.md)
-* [リアクティブ フォームの統合](input-group-reactive-forms.md)
+* [リアクティブ フォームの統合](angular-reactive-form-validation.md)
 * [カスケーディング](combo-cascading.md)
 
 コミュニティに参加して新しいアイデアをご提案ください。

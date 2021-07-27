@@ -18,8 +18,8 @@ The [`igx-autocomplete`]({environment:angularApiUrl}/classes/igxautocompletedire
 ### Demo
 The following sample demonstrates simple use of the `igx-autocomplete` directive, applied on an `igx-input`. The directive is provided with an `igx-drop-down` which has a defined filtering pipe.
 
-<code-view style="height: 400px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 400px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/autocomplete" >
 </code-view>
 
@@ -36,16 +36,16 @@ To use the [`igx-autocomplete`]({environment:angularApiUrl}/classes/igxautocompl
 // app.module.ts
 
 ...
-import { 
+import {
     IgxAutocompleteModule,
-    IgxDropDownModule, 
-    IgxInputGroupModule 
+    IgxDropDownModule,
+    IgxInputGroupModule
 } from 'igniteui-angular';
 
 @NgModule({
     ...
     imports: [
-        ..., 
+        ...,
         IgxAutocompleteModule,
         IgxDropDownModule,
         IgxInputGroupModule,
@@ -200,8 +200,8 @@ export class AutocompleteSampleComponent {
 The following sample demonstrates an autocomplete, which allows selecting a cinema, where movies are grouped by a city. Type in the input or use the `Arrow Down` key to open the list and choose a cinema, then select a movie and its date and time:
 
 
-<code-view style="height: 650px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 650px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/movie" >
 </code-view>
 
@@ -230,8 +230,8 @@ The following sample demonstrates an `igxAutocomplete` with a drop-down bound to
 
 For the purpose of the sample there is a delay in the data loading, in order to apply and show a custom loading template instead of the drop-down:
 
-<code-view style="height: 400px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 400px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/autocomplete-remote" >
 </code-view>
 
@@ -250,7 +250,7 @@ For the purpose of the sample there is a delay in the data loading, in order to 
 * [IgxDropDownComponent](drop-down.md)
 * [IgxInputGroup](input-group.md)
 * [Template Driven Forms Integration](input-group.md)
-* [Reactive Forms Integration](input-group-reactive-forms.md)
+* [Reactive Forms Integration](angular-reactive-form-validation.md)
 
 Our community is active and always welcoming to new ideas.
 
