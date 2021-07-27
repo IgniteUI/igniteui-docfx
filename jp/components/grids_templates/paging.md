@@ -68,7 +68,7 @@ _language: ja
 </igx-paginator>
 ```
 
-さらに、[`IgxPageSizeSelectorComponent`]({environment:angularApiUrl}/classes/IgxPageSizeSelectorComponent.html) と [`IgxPageNavigationComponent`]({environment:angularApiUrl}/classes/IgxPageNavigationComponent.html) が導入され、次の例に示すように、ページネータ コンポーネントでカスタム コンテンツを定義できるようになりました。前者はページ サイズに対応するドロップダウン要素とラベルを追加し、後者はすべてのアクション ボタンでページ ナビゲーションを処理します。
+さらに、[`IgxPageSizeSelectorComponent`]({environment:angularApiUrl}/classes/IgxPageSizeSelectorComponent.html) と [`IgxPageNavigationComponent`]({environment:angularApiUrl}/classes/IgxPageNavigationComponent.html) が導入され、次の例に示すように、ページネーター コンポーネントでカスタム コンテンツを定義できるようになりました。前者はページ サイズに対応するドロップダウン要素とラベルを追加し、後者はすべてのアクション ボタンでページ ナビゲーションを処理します。
 
 ```html
 <igx-paginator #paginator>
@@ -120,7 +120,7 @@ _language: ja
 
 | 出力          |      説明                           |
 |-----------------|:------------------------------------------:|
-| perPageChange   | ページネータの `perPage` プロパティ値が変更されたときに発生します。 |
+| perPageChange   | ページネーターの `perPage` プロパティ値が変更されたときに発生します。 |
 | pageChange      | 現在のページが変更されたときに発生されます。 |
 | paging          | ページングが実行さる前に発生されます。キャンセル可能。|
 | pagingDone      | ページングが実行された後に発生されます。 |
@@ -173,7 +173,7 @@ _language: ja
 ```
 }
 
-### ページネータ コンポネント デモ
+### ページネーター コンポネント デモ
 
 @@if (igxName === 'IgxGrid') {
 <code-view style="height:600px" 
@@ -256,7 +256,7 @@ public ngOnInit(): void {
 
 ## Angular のページネーション スタイリング
 
-ページネータのスタイル設定を始めるには、すべてのテーマ関数とコンポーネントミックスインが存在する `index` ファイルをインポートする必要があります。
+ページネーターのスタイル設定を始めるには、すべてのテーマ関数とコンポーネントミックスインが存在する `index` ファイルをインポートする必要があります。
 
 ```scss
 // custom-grid-paging-style.component.scss
@@ -298,7 +298,7 @@ $dark-button: igx-button-theme(
 ```
 
 >[!NOTE]
->igx-button ミックスインを `.igx-paginator__pager` 内でスコープして、ページネータ ボタンのみにスタイルが設定されるようにします。そうでない場合は、グリッド内の他のボタンも影響を受けます。
+>igx-button ミックスインを `.igx-paginator__pager` 内でスコープして、ページネーター ボタンのみにスタイルが設定されるようにします。そうでない場合は、グリッド内の他のボタンも影響を受けます。
 
  >[!NOTE]
  >コンポーネントが [`Emulated`](../themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
