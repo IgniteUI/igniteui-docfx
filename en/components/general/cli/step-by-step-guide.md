@@ -79,7 +79,7 @@ For some templates, like `Custom Grid`, for example you will be provided with a 
 
 If you choose to add a scenario to your application you will also get a list of the available [scenario templates](component-templates.md#scenario-templates):
 
-![](../../../images/general/ig-step-by-step-scenario-templates.png)
+<img class="responsive-img"  src="../../../images/general/ig-step-by-step-scenario-templates.png" />
 
 After adding a template to your application, you will be asked weather you want to complete the process or to proceed with adding more controls. When you choose to complete the process, the required packages will be installed (on project creation) and the application will be served and opened in your default browser.
 
