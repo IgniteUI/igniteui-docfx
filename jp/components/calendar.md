@@ -207,7 +207,7 @@ export class CalendarSample7Component {
 </igx-calendar>
 <igx-dialog #alert title="Request Time Off" 
     leftButtonLabel="OK" 
-    (onLeftButtonSelect)="alert.close()">
+    (leftButtonSelect)="alert.close()">
 </igx-dialog>
 <button igxButton="raised" (click)="submitPTOdays($event)">Submit Request</button>
 ```

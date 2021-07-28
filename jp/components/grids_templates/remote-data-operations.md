@@ -60,11 +60,11 @@ Ignite UI for Angular @@igComponent は、リモート仮想化、リモート �
 
 [@@igxName]({environment:angularApiUrl}/classes/@@igTypeDoc.html) は、データ チャンクがリモート サービスから要求されるシナリオをサポートし、内部で使用される [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html) ディレクティブで実装された動作を公開します。
 
-この機能を使用するには、[`onDataPreLoad`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#ondatapreload) 出力にサブスクライブし、取得した引数に基づいて適切な要求を行い、パブリック [@@igxName]({environment:angularApiUrl}/classes/@@igTypeDoc.html) プロパティ [`totalItemCount`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalitemcount) とサービスの各情報を設定します。
+この機能を使用するには、[`dataPreLoad`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#datapreload) 出力にサブスクライブし、取得した引数に基づいて適切な要求を行い、パブリック [@@igxName]({environment:angularApiUrl}/classes/@@igTypeDoc.html) プロパティ [`totalItemCount`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalitemcount) とサービスの各情報を設定します。
 
 ```html
 <igx-grid #grid [data]="remoteData | async" [height]="'500px'" [width]="'100%'" [autoGenerate]='false'
-          (onDataPreLoad)="processData(false)"
+          (dataPreLoad)="processData(false)"
           (onSortingDone)="processData(true)">
     <igx-column [field]="'ProductID'" [sortable]="true"></igx-column>
     <igx-column [field]="'ProductName'" [sortable]="true"></igx-column>
@@ -135,7 +135,7 @@ public ngAfterViewInit() {
 }
 ```
 
-さらに、`onDataPreLoad` 出力にサブスクライブする必要があります。これにより、グリッドが現在ロードされているものではなく、異なるチャンクを表示しようとするときに必要なデータを提供できます。イベント ハンドラーで、ローカルに既にキャッシュされている新しいデータをフェッチするか、データを返すかを決定する必要があります。
+さらに、`dataPreLoad` 出力にサブスクライブする必要があります。これにより、グリッドが現在ロードされているものではなく、異なるチャンクを表示しようとするときに必要なデータを提供できます。イベント ハンドラーで、ローカルに既にキャッシュされている新しいデータをフェッチするか、データを返すかを決定する必要があります。
 
 ```typescript
 public handlePreLoad() {
@@ -173,7 +173,7 @@ public handlePreLoad() {
 
 ## リモート ソート/フィルタリング
 
-リモート ソートとフィルタリングには、取得した引数に基づいて適切な要求を実行するために [`onDataPreLoad`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#ondatapreload)、[`sortingExpressionsChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sortingexpressionschange) および [`filteringExpressionsTreeChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringexpressionstreechange) 出力にサブスクライブし、サービスから送信される相対する情報とパブリック [@@igxName]({environment:angularApiUrl}/classes/@@igTypeDoc.html) の [`totalItemCount`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalitemcount) プロパティを設定する必要があります。
+リモート ソートとフィルタリングには、取得した引数に基づいて適切な要求を実行するために [`dataPreLoad`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#datapreload)、[`sortingExpressionsChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sortingexpressionschange) および [`filteringExpressionsTreeChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringexpressionstreechange) 出力にサブスクライブし、サービスから送信される相対する情報とパブリック [@@igxName]({environment:angularApiUrl}/classes/@@igTypeDoc.html) の [`totalItemCount`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalitemcount) プロパティを設定する必要があります。
 
 また、**rxjs** `debounceTime` 関数を使用します。この関数は、特定の期間の経過後、別のソースが出力されない場合にのみ、Observable のソースから値を出力します。この方法では、ユーザーが中断することなく指定された時間が経過した場合にのみ、リモート操作がトリガーされます。
 
@@ -182,7 +182,7 @@ const DEBOUNCE_TIME = 300;
 ...
 public ngAfterViewInit() {
     ...
-    this.grid.onDataPreLoad.pipe(
+    this.grid.dataPreLoad.pipe(
         debounceTime(DEBOUNCE_TIME),
         takeUntil(this.destroy$)
     ).subscribe(() => {
@@ -413,7 +413,7 @@ Excel スタイル フィルタリングのカスタム ロード テンプレ�
 
 <div class="divider--half"></div>
 
-### リモート ページング
+## リモート ページング
 
 @@if (igxName === 'IgxGrid' || igxName === 'IgxHierarchicalGrid') {
 はじめにデータ フェッチングを行うサービスを宣言します。デフォルトのページング テンプレートを使用する場合、`totalRecords` プロパティを設定する必要があります。それにより、グリッドは合計リモート レコードに基づいて合計ページ番号を計算できます。注: リモート サービスからフェッチ データを実装する必要があります。ページ カウントを計算するためにすべてのデータ項目のカウントをが必要なため、ロジックをサービスに追加する必要があります。
@@ -423,14 +423,14 @@ Excel スタイル フィルタリングのカスタム ロード テンプレ�
 export class RemotePagingService {
     public remoteData: BehaviorSubject<any[]>;
     public dataLenght: BehaviorSubject<number> = new BehaviorSubject(0);
-    public url = "https://www.igniteui.com/api/products";
+    public url = 'https://www.igniteui.com/api/products';
 
     constructor(private http: HttpClient) {
-        this.remoteData = new BehaviorSubject([]);
+        this.remoteData = new BehaviorSubject([]) as any;
     }
 
     public getData(index?: number, perPage?: number): any {
-        let qS = "";
+        let qS = '';
 
         if (perPage) {
             qS = `?$skip=${index}&$top=${perPage}&$count=true`;
@@ -438,17 +438,13 @@ export class RemotePagingService {
 
         this.http
             .get(`${this.url + qS}`).pipe(
-                map((data: any) => {
-                    return data;
-                })
+                map((data: any) => data)
             ).subscribe((data) => this.remoteData.next(data));
     }
 
     public getDataLength(): any {
         return this.http.get(this.url).pipe(
-            map((data: any) => {
-                return data.length;
-            })
+            map((data: any) => data.length)
         );
     }
 }
@@ -456,7 +452,7 @@ export class RemotePagingService {
 サービスを宣言した後にコンポーネントを作成する必要があり、@@igComponent コンストラクションとデータ サブスクリプションを処理します。
 @@if (igxName === 'IgxGrid') {
 ```typescript
-export class RemotePagingGridSample implements OnInit, AfterViewInit {
+export class RemotePagingGridSample implements OnInit, AfterViewInit, OnDestroy {
     public data: Observable<any[]>;
     private _dataLengthSubscriber;
 
@@ -482,11 +478,8 @@ export class RemotePagingGridSample implements OnInit, AfterViewInit {
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```typescript
 export class HGridRemotePagingSampleComponent implements OnInit, AfterViewInit, OnDestroy {
-    public page = 0;
-    public lastPage = false;
-    public firstPage = true;
-    public totalPages: number = 1;
-    public totalCount = 0;
+    public data: BehaviorSubject<any> = new BehaviorSubject([]);
+    private _dataLengthSubscriber;
 
     constructor(private remoteService: RemotePagingService) {}
 
@@ -521,7 +514,7 @@ public maxPerPage = Number.MAX_SAFE_INTEGER;
 ```
 }
 
-要求されたページのデータのみを取得し、選択したページと項目 [`perPage`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#perPage) に基づいて `skip` と `top` パラメーターをリモート サービスに渡すためのカスタム ページャー テンプレートを作成します。構成を簡単にするには、`<igx-paginator>` を使用します。
+これで、独自のカスタム ページング テンプレートを設定するか、`igx-paginator` が提供するデフォルトのテンプレートを使用するかを選択できます。まず、デフォルトのページング テンプレートを使用してリモート ページングを設定するために必要なものを見てみましょう。
 
 ### デフォルト テンプレートのリモート ページング
 
@@ -577,11 +570,10 @@ public set perPage(val: number) {
 
 public ngOnInit() {
     this.data = this.remoteService.remoteData.asObservable();
-    this.data.subscribe(() => {
-        this.isLoading = false;
-    })
-    this._dataLengthSubscriber = this.remoteService.getDataLength().subscribe((data) => {
+
+    this._dataLengthSubscriber = this.remoteService.getDataLength().subscribe((data: any) => {
         this.totalCount = data;
+        this.grid1.isLoading = false;
     });
 }
 ...
@@ -590,10 +582,13 @@ public ngAfterViewInit() {
     this.remoteService.getData(skip, this.perPage);
 }
 
-public paginate() {
-    this.isLoading = true;
-    const skip = page * this.perPage;
-    this.remoteService.getData(skip, this.perPage);
+
+public paginate(page: number) {
+    this.page = page;
+    const skip = this.page * this.perPage;
+    const top = this.perPage;
+
+    this.remoteService.getData(skip, top);
 }
 ```
 
@@ -624,37 +619,36 @@ public paginate() {
 <div class="divider--half"></div>
 }
 
-### カスタム テンプレートのリモート ページング
+### カスタム igx-paginator-content のリモート ページング
 
-カスタム ページング テンプレートを定義する場合、デフォルト テンプレートでのカスタム ページングのように [`pagingMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#pagingMode) や [`totalRecords`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#totalRecords) のような @@igComponent プロパティを定義する必要はありません。要求されたページのデータのみを取得し、選択したページと項目 [`perPage`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#perPage) に基づいて **skip** と **top** パラメーターをリモート サービスに渡すためのカスタム ページャー テンプレートを作成します。設定例を簡単にするために `<igx-paginator>` を使用します。
+カスタム ページネーター コンテンツを定義するときは、要求されたページのデータのみを取得するようにコンテンツを定義し、選択したページと [`perPage`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#perPage) 項目に応じて正しい **skip** および **top** パラメーターをリモート サービスに渡す必要があります。導入された [`IgxPageSizeSelectorComponent`]({environment:angularApiUrl}/classes/IgxPageSizeSelectorComponent.html) と [`IgxPageNavigationComponent`]({environment:angularApiUrl}/classes/IgxPageNavigationComponent.html) とともに、設定例を簡単にするために `<igx-paginator>` を使用します。`igx-page-size` はページごとのドロップダウンとラベルを追加し、`igx-page-nav` はナビゲーション アクション ボタンとラベルを追加します。
 
 @@if (igxName === 'IgxGrid') {
 ```html
-<ng-template #customPager let-api>
-    <igx-paginator #paginator
-        [totalRecords]="totalCount"
-        [(page)]="page" 
-        [(perPage)]="perPage"
-        [selectOptions]="selectOptions"
-        [displayDensity]="grid1.displayDensity"
-        (pageChange)="paginate($event)"
-        (perPageChange)="perPageChange($event)">
-    </igx-paginator>
-</ng-template>
+<igx-paginator #paginator
+    [totalRecords]="totalCount"
+    [(page)]="page" 
+    [(perPage)]="perPage"
+    [selectOptions]="selectOptions"
+    [displayDensity]="grid1.displayDensity"
+    (pageChange)="paginate($event)"
+    (perPageChange)="perPageChange($event)">
+    <igx-paginator-content>
+	    <igx-page-size></igx-page-size>
+        [This is my custom content]
+	    <igx-page-nav></igx-page-nav>
+    </igx-paginator-content>
+</igx-paginator>
 ```
 
 ```typescript
-@ViewChild("customPager", { read: TemplateRef, static: true }) public remotePager: TemplateRef<any>;
 @ViewChild("grid1", { static: true }) public grid1: IgxGridComponent;
 
-private _perPage = 10;
-private _dataLengthSubscriber;
+private _perPage = 15;
+private _dataLengthSubscriber: { unsubscribe: () => void; } | undefined;
 
-constructor(private remoteService: RemotePagingService) {
-}
-
+constructor(private remoteService: RemotePagingService) { }
 ...
-
 public ngAfterViewInit() {
     this.grid1.isLoading = true;
     this.remoteService.getData(0, this.perPage);
@@ -668,66 +662,70 @@ public paginate(page: number) {
     this.remoteService.getData(skip, top);
 }
 
+public perPageChange(perPage: number) {
+    const skip = this.page * perPage;
+    const top = perPage;
+
+    this.remoteService.getData(skip, top);
+}
 ```
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<ng-template #customPager let-api>
-    <igx-paginator #paginator
-        [totalRecords]="totalCount"
-        [(page)]="page" 
-        [(perPage)]="perPage"
-        [selectOptions]="selectOptions"
-        [displayDensity]="grid1.displayDensity"
-        (pageChange)="paginate($event.current)">
-    </igx-paginator>
-</ng-template>
+<igx-paginator #paginator
+    [totalRecords]="totalCount"
+    [(perPage)]="perPage"
+    [(page)]="page"
+    [selectOptions]="selectOptions"
+    (pageChange)="paginate($event)"
+    (perPageChange)="perPageChange($event)">
+    <igx-paginator-content>
+        <igx-page-size></igx-page-size>
+        [This is my custom content]
+        <igx-page-nav></igx-page-nav>
+    </igx-paginator-content>
+</igx-paginator>
 ```
 ```typescript
-@ViewChild("customPager", { read: TemplateRef })
-public remotePager: TemplateRef<any>;
-public title = "gridPaging";
-
-@ViewChild("layout1")
-public layout1: IgxRowIslandComponent;
-
-@ViewChild("hierarchicalGrid")
-public hierarchicalGrid: IgxHierarchicalGridComponent;
-
+@ViewChild('hierarchicalGrid', { static: true }) public hierarchicalGrid: IgxHierarchicalGridComponent;
 ...
+public ngOnInit(): void {
+    this._dataLengthSubscriber = this.remoteService.getDataLength(
+        { parentID: null, rootLevel: true, key: 'Customers' }).subscribe((length) => {
+            this.totalCount = length;
+        });
+}
 
 public ngAfterViewInit() {
     this.hierarchicalGrid.isLoading = true;
-    this.remoteService.getData(
-        { parentID: null, rootLevel: true, key: "Customers" }, 0, this.perPage).subscribe((data) => {
-        this.hierarchicalGrid.isLoading = false;
-        this.hierarchicalGrid.data = data;
-        this.hierarchicalGrid.paginationTemplate = this.remotePager;
-        this.hierarchicalGrid.cdr.detectChanges();
-    });
-}
-
-public paginate(page: number) {
-    this.page = page;
-    const skip = this.page * this.perPage;
-    const top = this.perPage;
-
-    this.remoteService.getData(skip, top);
+    this._dataSubscriber = this.remoteService.getData({parentID: null, rootLevel: true, key: 'Customers' }, 0, this.perPage)
+        .subscribe((data) => {
+            this.hierarchicalGrid.isLoading = false;
+            this.data.next(data);
+        },(error) => {
+                this.hierarchicalGrid.emptyGridMessage = error.message;
+                this.hierarchicalGrid.isLoading = false;
+                this.hierarchicalGrid.cdr.detectChanges();
+            }
+        );
 }
 
 ```
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```html
-<ng-template #customPager let-api>
-    <igx-paginator #paginator
-        [totalRecords]="totalCount"
-        [(perPage)]="perPage"
-        [selectOptions]="selectOptions"
-        [displayDensity]="grid1.displayDensity"
-        (pageChange)="paginate($event)">
-    </igx-paginator>
-</ng-template>
+<igx-paginator #paginator
+    [totalRecords]="totalCount"
+    [(perPage)]="perPage" 
+    [selectOptions]="selectOptions"
+    [displayDensity]="treeGrid.displayDensity"
+    (pageChange)="paginate($event)">
+    <igx-paginator-content>
+        <igx-page-size></igx-page-size>
+        [This is my custom content]
+        <igx-page-nav></igx-page-nav>
+    </igx-paginator-content>
+</igx-paginator>
 ```
 
 ```typescript
@@ -740,10 +738,9 @@ public paginate(page: number) {
 }
 ```
 }
-最後にグリッドのテンプレートを宣言します。
 
 >[!NOTE]
-> In order the Remote Paging to be configured properly a `GridPagingMode.Remote` should be set:
+> リモート ページングを適切に構成するには、`GridPagingMode.Remote` を設定する必要があります。 
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -769,7 +766,7 @@ public mode = GridPagingMode.Remote;
 ```
 }
 
-The last step will be to declare the paginator content based on your requirements.
+最後の手順は、要件に基づいてページネーターのコンテンツを宣言することです。
 
 ```html
 <igx-paginator-content>
@@ -823,8 +820,12 @@ The last step will be to declare the paginator content based on your requirement
 以下は、独自の `next` および `previous` ページ操作を実装するために定義したメソッドです。
 
 ```typescript
-@ViewChild("customPager", { read: TemplateRef, static: true }) public remotePager: TemplateRef<any>;
 @ViewChild("grid1", { static: true }) public grid1: IgxGridComponent;
+...
+public ngAfterViewInit() {
+    this.grid1.isLoading = true;
+    this.remoteService.getData(0, this.perPage);
+}
 
 public nextPage() {
     this.firstPage = false;
@@ -850,30 +851,20 @@ public previousPage() {
     this.setNumberOfPagingItems(this.page, this.totalPages);
 }
 
-public paginate(page: number, recalc = false) {
+public paginate(page: number, recalculate = false) {
     this.page = page;
     const skip = this.page * this.perPage;
     const top = this.perPage;
-    if (recalc) {
+    if (recalculate) {
         this.totalPages = Math.ceil(this.totalCount / this.perPage);
     }
     this.setNumberOfPagingItems(this.page, this.totalPages);
     this.remoteService.getData(skip, top);
     this.buttonDeselection(this.page, this.totalPages);
 }
-
-public buttonDeselection(page: number, totalPages: number) {
 ...
-}
-
-...
-public ngAfterViewInit() {
-    this.grid1.isLoading = true;
-    this.remoteService.getData(0, this.perPage);
-}
 
 ```
-
 }
 
 @@if (igxName === 'IgxGrid') {
@@ -886,14 +877,14 @@ public ngAfterViewInit() {
 
 ```typescript
 public ngOnInit() {
-  ...
+    ...
     this._dataLengthSubscriber = this.remoteService.getDataLength().subscribe((data) => {
         this.totalCount = data;
         this._recordOnServer = data;
         this._totalPagesOnServer = Math.floor(this.totalCount / this.perPage);
         this.grid1.isLoading = false;
     });
-    }
+}
 ```
 
 このユースケースを適切に処理するには、カスタム ロジックを実装する必要があります。最初に、サーバー上にあるレコードの総数を知る必要があります。サーバーのデータ ページの総数を計算し (`this._totalPagesOnServer ` を参照)、その値に基づいてカスタム ページネーション ロジックを実装します。
@@ -907,11 +898,11 @@ public paginate(page: number) {
             const skipEl = this._totalPagesOnServer * this.perPage;
             this.remoteService.getData(skipEl, this.perPage);
         }
-        this.grid1.page = page - this._totalPagesOnServer;
+        this.page = page - this._totalPagesOnServer;
         this.page = page;
         return;
     } else {
-        this.grid1.page = 0;
+        this.page = 0;
     }
     this.page = page;
     const skip = this.page * this.perPage;
@@ -925,8 +916,6 @@ public paginate(page: number) {
 
 #### 一括編集のリモート ページングのデモ
 
-
-
 <code-view style="height:620px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/grid/remote-paging-batch-editing" >
@@ -937,17 +926,18 @@ public paginate(page: number) {
 ## API リファレンス
 <div class="divider--half"></div>
 
+* [IgxPaginatorComponent API]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html)
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 * [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>
 
+* [ページング](paging.md)
 * [@@igComponent 概要](@@igMainTopic.md)
 * [仮想化とパフォーマンス](virtualization.md)
 * [フィルタリング](filtering.md)
 * [ソート](sorting.md)
-* [ページング](paging.md)
 * [集計](summaries.md)
 * [列移動](column-moving.md)
 * [列のピン固定](column-pinning.md)

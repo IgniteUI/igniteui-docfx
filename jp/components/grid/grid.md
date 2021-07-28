@@ -51,7 +51,7 @@ import { IgxGridModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-`IgxGridModule` の各コンポーネント、ディレクティブ、およびヘルパー クラスはグリッド サブパッケージまたは igniteui-angular のメイン バンドルでインポートできます。グリッドをインスタンス化して使用するためにすべての機能をインポートする必要はありませんが、グリッド API の一部である型を宣言する場合はインポート (またはエディターで自動的にインポート) します。
+`IgxGridModule` の各コンポーネント、ディレクティブ、およびヘルパー クラスは _igniteui-angular_ のメイン バンドルでインポートできます。グリッドをインスタンス化して使用するためにすべての機能をインポートする必要はありませんが、グリッド API の一部である型を宣言する場合はインポート (またはエディターで自動的にインポート) します。
 
 ```typescript
 import { IgxGridComponent } from 'igniteui-angular';
@@ -103,7 +103,7 @@ public grid: IgxGridComponent;
 
 ## Angular Grid 列の構成
 
-[`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) は、グリッドの [`columns`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columns) コレクションを定義し、**ソート**、**ページング**など、列ごとの機能を有効にするために使用します。セル、ヘッダー、およびフッター テンプレートも利用できます。
+[`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) は、グリッドの [`columns`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columns) コレクションを定義し、**ソート**、**フィルタリング**など、列ごとの機能を有効にするために使用します。セル、ヘッダー、およびフッター テンプレートも利用できます。
 
 ### 列の定義
 

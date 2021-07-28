@@ -16,16 +16,21 @@ Ignite UI for Angular Tree Grid は、階層データまたはフラットデー
 
 
 
-<code-view style="height:850px" 
-           data-demos-base-url="{environment:lobDemosBaseUrl}" 
+<code-view style="height:850px"
+           data-demos-base-url="{environment:lobDemosBaseUrl}"
            iframe-src="{environment:lobDemosBaseUrl}/tree-grid/treegrid-childdatakey" alt="Angular ツリー グリッドの例">
 </code-view>
 
 <div class="divider--half"></div>
 
+<code-view style="height:850px"
+           data-demos-base-url="{environment:lobDemosBaseUrl}"
+           iframe-src="{environment:lobDemosBaseUrl}/tree-grid/treegrid-childdatakey" alt="Angular ツリー グリッドの例">
+</code-view>
+
+<div class="divider--half"></div>
 
 ## Ignite UI for Angular Tree Grid で作業を開始
-
 ツリー グリッドを初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
 
 ```cmd
@@ -166,7 +171,7 @@ IgxTreeGridComponent を階層にバインドするには、[`childDataKey`]({en
     <igx-column field="Name" dataType="string" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
     <igx-column field="HireDate" dataType="date" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
     <igx-column field="Age" dataType="number" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
-    <igx-paginator>
+    <igx-paginator [perPage]="6">
     </igx-paginator>
 </igx-tree-grid>
 ```
@@ -240,12 +245,9 @@ export class MyComponent implements OnInit {
 
 以下は結果です。
 
-
-<code-view style="height:450px" 
-           data-demos-base-url="{environment:lobDemosBaseUrl}" 
+<code-view style="height:450px"
+           data-demos-base-url="{environment:lobDemosBaseUrl}"
            iframe-src="{environment:lobDemosBaseUrl}/tree-grid/treegrid-primaryforeignkey" >
-</code-view>
-
 <div class="divider--half"></div>
 
 ## パーシステンスとインテグレーション
@@ -374,7 +376,7 @@ $my-custom-schema: extend($light-schema, (
 $custom-theme: igx-grid-theme(
     $palette: $custom-palette,
     $schema: $my-custom-schema
-); 
+);
 ```
 
 上記と同じ方法でテーマを含める必要があることに注意してください。
@@ -382,8 +384,8 @@ $custom-theme: igx-grid-theme(
 ### Angular ツリー グリッド スタイル設定のデモ
 
 
-<code-view style="height:600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-style" alt="Angular ツリー グリッド スタイル設定のデモ">
 </code-view>
 

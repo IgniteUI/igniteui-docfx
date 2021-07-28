@@ -1,3 +1,10 @@
+<style>
+    /* Fix for the overlapping right side-affix when the screen is shrinked */
+    .table-responsive {
+        width:63vw;
+    }
+</style>
+
 @@if (igxName === 'IgxGrid') {
 ---
 title: Angular Grid 編集| データの変更 | Ignite UI for Angular| インフラジスティックス

@@ -42,6 +42,99 @@ ng update @angular/cli
 
 例: 6.2.4 から 7.1.0 にアップデートする場合、[6.x .. から] セクションから始めて変更を適用していきます。
 
+## 12.0.x から 12.1.x の場合:
+### グリッド
+* 重大な変更:
+    * [`IgxPaginatorComponent`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html) - グリッドでページネーターがインスタンス化される方法が変更されました。グリッド ツリーに投影される別個のコンポーネントになりました。したがって、`[paging]="true"` プロパティはすべてのグリッドから削除され、グリッド内のページネーターに関連する他のすべてのプロパティは非推奨です。[ページング トピック](../grid/paging.md)で説明されているように、`Grid Paging` 機能を有効にするためのガイドに従うことをお勧めします。
+    * [`IgxPageSizeSelectorComponent`]({environment:angularApiUrl}/classes/IgxPageSizeSelectorComponent.html) および [`IgxPageNavigationComponent`]({environment:angularApiUrl}/classes/IgxPageNavigationComponent.html) が導入され、カスタム コンテンツの実装が容易になりました。
+
+    ```html
+    <igx-paginator #paginator>
+        <igx-paginator-content>
+            <igx-page-size></igx-page-size>
+            [My custom text]
+            <igx-page-nav></igx-page-nav>
+        </igx-paginator-content>
+    </igx-paginator>
+    ```
+
+    * ページング コンポーネントの API はリファクタリング中に変更され、古いプロパティの多くは非推奨になりました。残念ながら、これらの変更の一部を適切に移行することは控えめに言っても複雑であるため、エラーはアプリケーション レベルで処理する必要があります。
+    * 次のプロパティはグリッドから非推奨になりました:
+        - paging、perPage page、totalPages、isFirstPage、isLastPage、pageChange、perPageChange、pagingDone
+    * 次のメソッドも非推奨です:
+        - nextPage()
+        - previousPage()
+    * 次のプロパティが削除されました:
+        - paginationTemplate - カスタム テンプレートを定義するには、`igx-paginator-content` を使用します。
+   * HierarchicalGrid の詳細 - RowIslands でページングを有効にする場合は、次の `*igxPaginator` ディレクティブの使用法が必要です。
+
+    ```html
+    <igx-hierarchical-grid #hGrid >
+        <igx-column *ngFor="let c of hColumns" [field]="c.field">
+        </igx-column>
+        <igx-row-island [key]="'childData'" [autoGenerate]="true">
+            <igx-row-island [key]="'childData'" [autoGenerate]="true">
+                <igx-paginator *igxPaginator></igx-paginator>
+            </igx-row-island>
+            <igx-paginator *igxPaginator></igx-paginator>
+        </igx-row-island>
+        <igx-row-island [key]="'childData2'" [autoGenerate]="true">
+            <igx-paginator *igxPaginator></igx-paginator>
+        </igx-row-island>
+
+        <igx-paginator></igx-paginator>
+    </igx-hierarchical-grid>
+    ```
+
+    * 移行によりテンプレート コンテンツが `igx-paginator-content` コンテンツ内に移動しますが、すべてのテンプレート バインディングが解決されるとは限りません。移行後は、必ずテンプレート ファイルを確認してください。次のバインディングは、これらのプロパティ (`pagerEnabled`、`pagerHidden`、`dropdownEnabled`、`dropdownHidden`) が削除されているため、手動で変更する必要があります:
+
+    次から:
+    ```html
+    <igx-paginator #paginator 
+        [pagerEnabled]="!isPagerDisabled" [pagerHidden]="isPagerHidden"
+        [dropdownHidden]="isDropdownHidden">
+    </igx-paginator>
+    ```
+
+    次へ:
+    ```html
+    <igx-paginator #paginator *ngIf="!isPagerDisabled">
+        <igx-paginator-content>
+            <igx-page-size *ngIf="isDropdownHidden"></igx-page-size>
+            <igx-page-nav *ngIf="isPagerHidden"></igx-page-nav>
+        </igx-paginator-content>
+    </igx-paginator>
+    ```
+
+* グリッド非推奨:
+    * `IgxGridTransaction` を提供するための DI パターンは非推奨になりました。以下は引き続き機能しますが、将来のバージョンで**削除される可能性がある**ため、リファクタリングすることをお勧めします。
+
+    ```typescript
+    @Component({
+        template: `<igx-grid [data]="data">
+        ...
+        </igx-grid>`,
+        providers: [{ provide: IgxGridTransaction, useClass: IgxTransactionService }],
+        ...
+    })
+    export class MyCustomComponent {
+        ...
+    }
+    ```
+
+    上記の動作を実現するには、新しく追加された [`batchEditing`](../grid/batch-editing.md) 入力を使用する必要があります。
+    ```typescript
+    @Component({
+        template: `<igx-grid [data]="data" [batchEditing]="true">
+        ...
+        </igx-grid>`
+        ...
+    })
+    export class MyCustomComponent {
+        ...
+    }
+    ```
+
 ## 11.1.x から 12.0.x の場合:
 ### テーマ:
 * 重大な変更:
@@ -92,7 +185,6 @@ ng update @angular/cli
     <button igxButton="raised">Raised button</button>
     <button igxButton="outlined">Outlined button</button>
     ```
-
     ```scss
     $my-button-theme: igx-button-theme(
         $raised-background: red,

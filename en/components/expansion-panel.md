@@ -105,7 +105,7 @@ export class ExpansionPanelComponent {
 ```
 ```html
 <!-- in expansion-component.component.html -->
-<igx-expansion-panel (onExpanded)="handleExpansion($event)  (onCollapsed)="handleCollapse($event)"></igx-expansion-panel>
+<igx-expansion-panel (onExpanded)="handleExpansion($event)  (contentCollapsed)="handleCollapse($event)"></igx-expansion-panel>
 ```
 
 Below we have the results:
