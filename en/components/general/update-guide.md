@@ -106,6 +106,10 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
     </igx-paginator>
     ```
 
+    * IgxGridCellComponent, IgxTreeGridCellComponent, IgxHierarchicalGridCellComponent, IgxGridExpandableCellComponent are no longer exposed in the public API. See sections below for detail guide on upgrading to the new `IgxGridCell`.
+
+
+
 * Grid Deprecation:
     * The DI pattern for providing `IgxGridTransaction` is deprecated. The following will still work, but you are advised to refactor it, as it **will likely be removed** in a future version:
 
@@ -134,6 +138,34 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
         ...
     }
     ```
+
+    * `getCellByColumnVisibleIndex` is now deprecated and will be removed in next major version. Use `getCellByKey`, `getCellByColumn` instead.
+
+
+### IgxGridCell migration
+
+* *IgxGridCellComponent*, *IgxTreeGridCellComponent*, *IgxHierarchicalGridCellComponent*, *IgxGridExpandableCellComponent* are no longer exposed in the public API.
+
+* Public APIs, which used to return an instance of one of the above, now return an instance of [`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html):
+
+```ts
+const cell = grid.getCellByColumn(0, 'ProductID');     // returns IgxGridCell
+const cell = grid.getCellByKey('ALFKI', 'ProductID');  // returns IgxGridCell
+const cell = grid.getCellByColumnVisibleIndex(0, 0);   // returns IgxGridCell
+const rowCells = grid.getRowByIndex(0).cells;          // returns IgxGridCell[]
+const selectedCells = grid.selectedCells;              // returns IgxGridCell[]
+const cells = grid.getColumnByName('ProductID').cells; // returns IgxGridCell[]
+```
+
+- `cell` property in the `IGridCellEventArgs` event arguments emitted by *cellClick*, *selected*, *contextMenu* and *doubleClick* events is now an instance of [`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html)
+- `let-cell` property in cell template is now `IgxGridCell`.
+- `getCellByColumnVisibleIndex` is now deprecated and will be removed in next major version. Use `getCellByKey`, `getCellByColumn` instead.
+
+Please note:
+
+* *ng update* will migrate the uses of *IgxGridCellComponent*, *IgxTreeGridCellComponent*, *IgxHierarchicalGridCellComponent*, *IgxGridExpandableCellComponent*, like imports, typings and casts. If a place in your code using any of the above is not migrated, just remove the typing/cast, or change it with [`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html).
+* *getCellByIndex* and other methods will return undefined, if the row at that index is not a data row, but is IgxGroupByRow, IgxSummaryRow, details row, etc.
+
 
 ## From 11.1.x to 12.0.x
 ### Themes

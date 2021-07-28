@@ -6,7 +6,7 @@ _keywords: Angular Date Range Picker, Date Range Picker, Date Picker
 
 # Date Range Picker Component
 
-The Ignite UI for Angular Date Range Picker Component displays a month-view calendar that lets the end-user select a date range by defining its start and end date. The calendar's UI is shown either in a dialog (default) or as a dropdown upon user interaction with the calendar icon that is part of the input field. In addition, the component provides an advanced setup option, exposing two separate editable input fields. The component supports locales and custom date formatting.
+The Ignite UI for Angular Date Range Picker Component displays a month-view calendar that lets the end-user select a date range by defining its start and end date. The calendar's UI is shown either in a dropdown (default) or as a dialog upon user interaction with the calendar icon that is part of the input field. In addition, the component provides an advanced setup option, exposing two separate editable input fields. The component supports locales and custom date formatting.
 
 ## Angular Date Range Picker Example
 
@@ -147,10 +147,10 @@ When a Date Range Picker has two separate inputs, for start and end dates, it do
 
 ### Dropdown mode
 
-The [`IgxDateRangePickerComponent`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html) component has two modes - dialog (default) and dropdown. To switch to dropdown mode, do the following:
+The [`IgxDateRangePickerComponent`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html) component has two modes - dropdown (default) and dialog. To switch to `dialog` mode, do the following:
 
 ```html
-<igx-date-range-picker [mode]="'dropdown'"></igx-date-range-picker>
+<igx-date-range-picker [mode]="'dialog'"></igx-date-range-picker>
 ```
 
 
@@ -248,7 +248,6 @@ When using two separate inputs, it is possible to set the model and required pro
     </igx-date-end>
 </igx-date-range-picker>
 ```
-
 
 <code-view style="height:600px"
            data-demos-base-url="{environment:demosBaseUrl}"

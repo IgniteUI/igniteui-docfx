@@ -1026,6 +1026,7 @@
     - name: Transaction Service class hierarchy
       href: transaction-classes.md
       new: false
+      updated: true
     - name: How to use the Transaction Service
       href: transaction-how-to-use.md
       new: false
