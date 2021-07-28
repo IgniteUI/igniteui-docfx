@@ -141,6 +141,7 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
 
     * `getCellByColumnVisibleIndex` is now deprecated and will be removed in next major version. Use `getCellByKey`, `getCellByColumn` instead.
 
+
 ### IgxGridCell migration
 
 * *IgxGridCellComponent*, *IgxTreeGridCellComponent*, *IgxHierarchicalGridCellComponent*, *IgxGridExpandableCellComponent* are no longer exposed in the public API.
@@ -164,6 +165,7 @@ Please note:
 
 * *ng update* will migrate the uses of *IgxGridCellComponent*, *IgxTreeGridCellComponent*, *IgxHierarchicalGridCellComponent*, *IgxGridExpandableCellComponent*, like imports, typings and casts. If a place in your code using any of the above is not migrated, just remove the typing/cast, or change it with [`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html).
 * *getCellByIndex* and other methods will return undefined, if the row at that index is not a data row, but is IgxGroupByRow, IgxSummaryRow, details row, etc.
+
 
 ## From 11.1.x to 12.0.x
 ### Themes
