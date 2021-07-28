@@ -141,7 +141,7 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
 
     * `getCellByColumnVisibleIndex` is now deprecated and will be removed in next major version. Use `getCellByKey`, `getCellByColumn` instead.
 
-## IgxGridCell migration
+### IgxGridCell migration
 
 * *IgxGridCellComponent*, *IgxTreeGridCellComponent*, *IgxHierarchicalGridCellComponent*, *IgxGridExpandableCellComponent* are no longer exposed in the public API.
 
