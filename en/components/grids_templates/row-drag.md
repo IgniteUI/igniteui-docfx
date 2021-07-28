@@ -709,13 +709,30 @@ class MyRowGhostComponent {
 
 In the demo in the next section you see how you can display an indicator of where the dragged row would be dropped. You can customize this indicator as you like - it may be a placeholder row, placed at the position where the dragged row would be dropped, a border style indicating if the dragged row would be dropped above or below the currently hovered row, etc.
 
-In order to track the position of the cursor, we bind to the `dragMove` event of the [`IgxDragDirective`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragmove).
+In order to track the position of the cursor, we bind to the `dragMove` event of the [`IgxDragDirective`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragmove) when we start dragging a row.
 
 > [!NOTE]
 > Make sure that there is a `primaryKey` specified for the grid! The logic needs an unique identifier for the rows so they can be properly reordered
 
 @@if (igxName === 'IgxGrid') {
 ```typescript
+    public ngAfterViewInit() {
+        this.grid.rowDragStart
+        .pipe(takeUntil(this.destroy$))
+        .subscribe(this.handleRowStart.bind(this));
+          ...
+    }
+
+    private handleRowStart(e: IRowDragStartEventArgs): void {
+        if (e !== null) {
+        this._draggedRow = e.dragData.data;
+        }
+        const directive = e.dragDirective;
+        directive.dragMove
+        .pipe(takeUntil(this.grid.rowDragEnd))
+        .subscribe(this.handleDragMove.bind(this));
+    }
+
     private handleDragMove(event: IDragMoveEventArgs): void {
       this.handleOver(event);
        ...
