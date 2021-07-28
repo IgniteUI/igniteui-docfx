@@ -141,8 +141,11 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
 
     * `getCellByColumnVisibleIndex` is now deprecated and will be removed in next major version. Use `getCellByKey`, `getCellByColumn` instead.
 
-*IgxGridCellComponent*, *IgxTreeGridCellComponent*, *IgxHierarchicalGridCellComponent*, *IgxGridExpandableCellComponent* are no longer exposed in the public API.
-* Public APIs, which used to return an instance of one of the above, now return an [`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html) instance, implementing the public [`CellType`]({environment:angularApiUrl}/interfaces/celltype.html) interface:
+## IgxGridCell migration
+
+* *IgxGridCellComponent*, *IgxTreeGridCellComponent*, *IgxHierarchicalGridCellComponent*, *IgxGridExpandableCellComponent* are no longer exposed in the public API.
+
+* Public APIs, which used to return an instance of one of the above, now return an instance of [`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html):
 
 ```ts
 const cell = grid.getCellByColumn(0, 'ProductID');     // returns IgxGridCell
