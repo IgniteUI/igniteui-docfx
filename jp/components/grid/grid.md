@@ -115,7 +115,7 @@ public grid: IgxGridComponent;
 
 ```html
 <igx-grid #grid1 [data]="data | async" [autoGenerate]="false" [paging]="true" [perPage]="6" (onColumnInit)="initColumns($event)"
-    (onSelection)="selectCell($event)" [allowFiltering]="true">
+    (selected)="selectCell($event)" [allowFiltering]="true">
     <igx-column field="Name" [sortable]="true" header=" "></igx-column>
     <igx-column field="AthleteNumber" [sortable]="true" header="Athlete number" [filterable]="false"></igx-column>
     <igx-column field="TrackProgress" header="Track progress" [filterable]="false">

@@ -60,7 +60,7 @@ _language: ja
 @@if (igxName === 'IgxGrid') {
 ```html
 <igx-grid #grid1 [data]="data | async" [width]="700px" [autoGenerate]="false" [paging]="true" [perPage]="6" (onColumnInit)="initColumns($event)"
-    (onSelection)="selectCell($event)">
+    (selected)="selectCell($event)">
     <igx-column [field]="Name" [pinned]="true"></igx-column>
     <igx-column [field]="AthleteNumber"></igx-column>
     <igx-column [field]="TrackProgress"></igx-column>

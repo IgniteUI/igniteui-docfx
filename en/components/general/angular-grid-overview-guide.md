@@ -47,7 +47,7 @@ To start using Ignite UI for Angular components without the Ignite UI CLI, make 
 Once you finish with the development environment setup, you can continue adding and configuring other Ignite UI components. Here’s how to use [our schematics](https://www.infragistics.com/products/ignite-ui-angular/angular/components/general/cli-overview.html#add-template "Ignite UI CLI Overview page") to add a grid with basic configuration and add templates to some of our columns. 
 
 ```html
-<igx-grid #grid1 [data]="localData" [paging]="true" [perPage]="10" height="600px" (onSelection)="cellSelection($event)">
+<igx-grid #grid1 [data]="localData" [paging]="true" [perPage]="10" height="600px" (selected)="cellSelection($event)">
     <igx-column header="Rank" headerClasses="myClass" width="115px" field="Id" sortable="true" [filterable]="false"></igx-column>
     <igx-column field="Name" header="Athlete" width="280"></igx-column>
     <igx-column field="Speed" header="Speed" [width]="'190px'" [filterable]="false"></igx-column>

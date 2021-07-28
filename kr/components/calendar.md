@@ -124,7 +124,7 @@ Let's explore the events emitted by the calendar:
 ```html
 <!-- app.component.html -->
 <igx-calendar #calendar 
-    (onSelection)="onSelection($event)"
+    (selected)="onSelection($event)"
     (viewDateChanged)="viewDateChanged($event)"
     (activeViewChanged)="activeViewChanged($event)">
 </igx-calendar>
@@ -318,7 +318,7 @@ export class CalendarSample7Component {
     <span>Request Time Off</span>
     <igx-calendar #calendar
         selection="multi"
-        (onSelection)="selectPTOdays($event)">
+        (selected)="selectPTOdays($event)">
     </igx-calendar>
     <button igxButton="raised" (click)="submitPTOdays($event)">Submit Request</button>
 </article>

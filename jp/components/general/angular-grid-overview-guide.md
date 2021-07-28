@@ -48,7 +48,7 @@ Ignite UI CLI せずに Ignite UI for Angular コンポーネントを使用す�
 開発の環境設定が完了した後、他の Ignite UI コンポーネントの追加および構成を続行できます。以下には、[schematics](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/general/cli-overview.html#テンプレートの追加 "Ignite UI CLI 概要ページ") を使用して基本構成のグリッドを追加し、一部の列にテンプレートを追加する方法です。 
 
 ```html
-<igx-grid #grid1 [data]="localData" [paging]="true" [perPage]="10" height="600px" (onSelection)="cellSelection($event)">
+<igx-grid #grid1 [data]="localData" [paging]="true" [perPage]="10" height="600px" (selected)="cellSelection($event)">
     <igx-column header="Rank" headerClasses="myClass" width="115px" field="Id" sortable="true" [filterable]="false"></igx-column>
     <igx-column field="Name" header="Athlete" width="280"></igx-column>
     <igx-column field="Speed" header="Speed" [width]="'190px'" [filterable]="false"></igx-column>
