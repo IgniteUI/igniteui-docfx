@@ -22,6 +22,11 @@ To activate the guide using the Ignite UI CLI run:
 ```cmd
 ig
 ```
+or
+
+```cmd
+ig new
+```
 
 <div style="display:inline-block;">
     <a style="background: url(../../../images/general/buildCLIapp.gif); display:flex; justify-content:center; width: 80vw; max-width:540px; min-height:315px;"
@@ -133,7 +138,7 @@ To get a list of all the [available templates](component-templates.md) you can a
 Additionally, you can specify the module in which the component will be registered or skip the auto-generation of app navigation route:
 
 <details>
-  <summary>module</summary>
+  <summary><u>module</u></summary>
   <p>
     <code>--module</code> (alias: <code>-m</code>)
   </p>
@@ -147,7 +152,7 @@ Additionally, you can specify the module in which the component will be register
 </details>
 
 <details>
-  <summary>skip-route</summary>
+  <summary><u>skip-route</u></summary>
   <p>
     <code>--skip-route</code> (alias: <code>-srk</code>)
   </p>

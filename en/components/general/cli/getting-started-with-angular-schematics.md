@@ -5,11 +5,12 @@ _keywords: angular cli, ignite ui for angular, infragistics
 ---
 
 ## Getting Started with Ignite UI for Angular Schematics
-Install Ignite UI for Angular Schematics globally:
+To get started install [Ignite UI for Angular Schematics](https://github.com/IgniteUI/igniteui-cli/tree/master/packages/ng-schematics) globally:
+
 ```cmd
 npm i -g @igniteui/angular-schematics
 ```
-The above install will make the schematics available to use a collection parameter for the ng new command.
+The above install will make the schematics available to use a collection parameter for the `ng  new` command.
 
 ### Using guided experience
 
