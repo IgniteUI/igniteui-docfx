@@ -5,7 +5,7 @@ _keywords: angular cli, ignite ui for angular, infragistics
 ---
 
 # Step-by-Step Guide
-If you want to get a guided experience through the available options, you can initialize the step by step mode that will help you create and setup your new application, as well as update project previously created with the [Ignite UI Angular Schematics or Ignite UI CLI](../cli-overview.md).
+If you want to get a guided experience through the available options, you can initialize the step by step mode that will help you create and setup your new application, as well as update project previously created with the [Ignite UI Angular Schematics](getting-started-with-angular-schematics.md) or [Ignite UI CLI](getting-started-with-cli.md).
 
 To activate the guide using the Schematics collection run:
 

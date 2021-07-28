@@ -1,24 +1,23 @@
 ---
-title: Step-by-Step Guide | Ignite UI for Angular | Infragistics
+title: Getting Started with Ignite UI CLI | Ignite UI for Angular | Infragistics
 _description: The Step-by-Step mode contains guided experience through the Ignite UI CLI options.
 _keywords: angular cli, ignite ui for angular, infragistics
 ---
 
 ## Getting Started with Ignite UI CLI
 
->[!NOTE]
->If you’re creating a new application from scratch, we recommend the following approach.
+If you are creating a new Angular application from scratch, we recommend using the approach described bellow as it will provide you with an user-friendly guided experience. The guide will lead you through all the setup options and your project will be scaffolded in a blink of an eye.
 
-Install [Ignite UI CLI](https://github.com/IgniteUI/igniteui-cli) globally:
+To get started install [Ignite UI CLI](https://github.com/IgniteUI/igniteui-cli) globally:
 
 ```cmd
 npm install -g igniteui-cli 
 ```
 
 ### Using guided experience
-The shortest and easiest way to bootstrap an application is to use the [Step-by-Step Guide](cli/step-by-step-guide.md). 
+The shortest and easiest way to bootstrap an application is to use the [Step-by-Step Guide](step-by-step-guide.md). 
 
-To activate the guide using the gnite UI CLI run:
+To activate the guide using the Ignite UI CLI run:
 
 ```cmd
 ig
@@ -45,7 +44,7 @@ The new application is created in a directory with the same name (`newAngularPro
 | ---           | ---                  |
 | empty         | Project structure with routing and a home page |
 | side-nav      | Project structure with side navigation drawer |
-| side-nav-auth | Side navigation project extended with user authentication module. <br> [Angular Authentication Project Template](cli/auth-template.md) topic covers the project template in detail. |
+| side-nav-auth | Side navigation project extended with user authentication module. <br> [Angular Authentication Project Template](auth-template.md) topic covers the project template in detail. |
 
 Additionally, you can specify **arguments** to control the theme or skip packages install:
 
@@ -121,7 +120,7 @@ Additionally, you can specify **arguments** to control the theme or skip package
 
 ## Add template
 
-To add one of the [available Ignite UI Angular templates](cli/component-templates.md) you need to provide template ID and a name for the new component or use the [Step-by-Step Guide](cli/step-by-step-guide.md#add-view). Their usage is supported only inside existing projects created with the Ignite UI CLI, Angular Schematics or where Ignite UI for Angular has been [installed using `ng add`](getting-started.md#installing-ignite-ui-for-angular).
+To add one of the [available Ignite UI Angular templates](component-templates.md) you need to provide template ID and a name for the new component or use the [Step-by-Step Guide](step-by-step-guide.md#add-view). Their usage is supported only inside existing projects created with the Ignite UI CLI, Angular Schematics or where Ignite UI for Angular has been [installed using `ng add`](../getting-started.md#installing-ignite-ui-for-angular).
 
 We use the `ig add [template] [name]` command:
 
@@ -129,7 +128,7 @@ We use the `ig add [template] [name]` command:
 ig add grid newGrid
 ```
 
-To get a list of all the [available templates](cli/component-templates.md) you can also execute the [`ig list`](https://github.com/IgniteUI/igniteui-cli/wiki/list) command in your project directory.
+To get a list of all the [available templates](component-templates.md) you can also execute the [`ig list`](https://github.com/IgniteUI/igniteui-cli/wiki/list) command in your project directory.
 
 Additionally, you can specify the module in which the component will be registered or skip the auto-generation of app navigation route:
 

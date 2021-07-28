@@ -22,7 +22,7 @@ Infragistics Ignite UI Dock Manager Web Component is available as a separate npm
 > More information on how to start using the Ignite UI for Angular npm package can be found in [this topic](getting-started.md#installing-ignite-ui-for-angular) and more information on Ignite UI Dock Manager Web Component can be found [here](../dock-manager.md).
 
 ### Upgrading packages using our Angular Schematics or Ignite UI CLI
-If Ignite UI for Angular has been added to the project using [`ng add`](./getting-started.md) or the project has been created through our [schematics collection or Ignite UI CLI](./cli-overview.md), you can use our `upgrade-packages` to automatically upgrade your app to using our licensed packages. You project package dependencies will include either `@igniteui/angular-schematics` or `igniteui-cli` and both support the upgrade command.
+If Ignite UI for Angular has been added to the project using [`ng add`](./getting-started.md) or the project has been created through our [schematics collection](./getting-started-with-angular-schematics.md) or [Ignite UI CLI](./cli/getting-started-with-cli.md), you can use our `upgrade-packages` to automatically upgrade your app to using our licensed packages. You project package dependencies will include either `@igniteui/angular-schematics` or `igniteui-cli` and both support the upgrade command.
 
 >[!NOTE]
 > As the process changes packages, we recommend that you update your project first before switching to avoid picking up a higher version of Ignite UI Angular and missing on potential update migrations. Follow our [Update Guide](./update-guide.md).

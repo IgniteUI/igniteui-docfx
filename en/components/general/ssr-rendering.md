@@ -96,7 +96,7 @@ npm run build:ssr && npm run serve:ssr
 
 ## Build a new application from scratch 
 
-1. Use `ng new` or the [Ignite UI CLI](cli-overview.md) `ig new` command.
+1. Use `ng new` or the [Ignite UI CLI](./cli/getting-started-with-cli.md) `ig new` command.
 2. Execute `ng add igniteui-angular` which installs the library's npm packages to your workspace and configures the project in the current working directory to use that library.
 4. Add Angular Universal with `ng add @nguniversal/express-engine --clientProject ig-ssr-example`. "ig-ssr-example" is your project name.
 3. Add Ignite UI for Angular components - e.g. Grid, Calendar et
