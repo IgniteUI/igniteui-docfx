@@ -154,8 +154,6 @@ Ignite UI for Angular @@igComponent コンポーネントは、Angular CRUD 操�
 ```
 }
 
-[`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html) への参照を介して更新するセルが @@igComponent の表示コンテナー外にある場合、新しい値は送信されません。
-
 ### セル編集テンプレート
 
 デフォルトのセル編集テンプレートの詳細については、[編集トピック](editing.md#テンプレートの編集)を参照してください。

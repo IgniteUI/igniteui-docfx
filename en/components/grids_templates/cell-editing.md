@@ -153,8 +153,6 @@ Another way to update cell is directly through [`update`]({environment:angularAp
 ```
 }
 
-Please notice that if the cell you want to update, via reference to [`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html), is outside @@igComponent's display container the new value will not be submitted.
-
 ### Cell Editing Templates
 
 You can see and learn more for default cell editing templates in the [general editing topic](editing.md#editing-templates).
