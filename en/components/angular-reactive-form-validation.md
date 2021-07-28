@@ -146,7 +146,7 @@ export class MyComponent implements OnInit {
     private dateValidator(val: Date): ValidatorFn {
         return (control: AbstractControl): ValidationErrors | null => {
             if (this.isDate(control.value)
-                || this.valGreaterThanToday(control.value, val)) {
+                || this.valGreaterThanDate(control.value, val)) {
                 return { value: true };
             }
 
@@ -154,10 +154,10 @@ export class MyComponent implements OnInit {
         }
     }
 
-    private valGreaterThanToday(value: Date, today: Date): boolean {
-        value.setHours(0, 0, 0, 0);
-        today.setHours(0, 0, 0, 0);
-        return value.getTime() > today.getTime();
+    private valGreaterThanDate(value: Date, date: Date): boolean {
+        const value1 = new Date(value).setHours(0, 0, 0, 0);
+        const value2 = new Date(date).setHours(0, 0, 0, 0);
+        return value.getTime() > date.getTime();
     }
 
     private isDate(value: unknown): value is Date {
@@ -166,10 +166,6 @@ export class MyComponent implements OnInit {
     }
 }
 ```
-
-## Angular reset form validation
-
-When a form reset is performed, the `FormControl` members `touched`, `dirty`, etc can be updated through an API call. This will not reflect on the style of the `IgxInputGroupComponent` as the validity of the `igxInput` directive will not be updated. Since all controls shown in this document are using the `IgxInputGroupComponent` internally, this behavior applies to all of them as well. Currently, the validity of the `igxInput` directive is updated based on the `AbstractControl.statusChanges` as well as on `blur` and on `focus` events. In order to update the validity state of the `igxInput` while updating the `FormControl` members through API, an additional call to `updateValueAndValidity` should be performed. This will force the `igxInput` to update its state and in turn will set the appropriate style based on the control's validity.
 
 ## Additional Resources
 <div class="divider--half"></div>
