@@ -1,16 +1,22 @@
 ---
-title: Angular Accordion コンポーネント - Ignite UI for Angular
-_description: Ignite UI for Angular Accordion コンポーネントを使用すると、垂直方向に縮小可能な展開パネルのコレクションを表示できます。無料でお試しください。
+title: Angular Accordion – 完全機能の縮小可能なパネル - インフラジスティックス
+_description: Angular Accordion は、アコーディオン メニューで垂直方向に展開可能なパネルを作成するために使用します。Ignite UI for Angular Accordion コンポーネントで実行方法をお試しください。
 _keywords: angular accordion, angular accordion コンポーネント, angular アコーディオン, angular アコーディオン コンポーネント, angular アコーディオンの例, ignite ui for angular, UI コントロール, infragistics, インフラジスティックス
 _language: ja
 ---
 
 # Angular Accordion コンポーネントの概要
 
-Angular Accordion コンポーネントは、単一のコンテナーに表示された複数の縮小可能なパネル間を移動できます。Accordion は、基になるパネルの展開状態を制御するキーボード ナビゲーションと API を提供します。
+## Angular Accordion とは? 
+
+Angular Accordion は、単一のコンテナーに表示されるクリック可能なヘッダーと関連するコンテンツ セクションを含む垂直方向に展開可能なパネルを構築するための GUI コンポーネントです。Accordion は、単一のページのコンテンツの複数のセクションでスクロールする必要性を軽減するためによく使用されます。キーボード ナビゲーションと基になるパネルの展開状態を制御する API を提供します。
+
+ユーザーは、サムネイルやラベルなどの項目のリスト間で操作および移動できます。含まれる情報を表示するために、各項目を切り替えることができます (展開または縮小)。構成に応じて、一度に 1 つまたは複数の展開されている項目があります。
 
 ## Angular Accordion の例
-この基本的な Angular Accordion の例では、`igx-accrodion` とその[拡張パネル]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html)を定義する方法を紹介します。このサンプルは、2 種類の展開動作も示します。切り替えボタンは [singleBranchExpand]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#singlebranchexpand) プロパティを設定し、一度に展開する単一ブランチと複数ブランチを切り替えます。
+以下は FAQ セクションの基本的な Angular Accordion の例です。アコーディオンとして動作し、個別に動作します。複数のパネルを同時に展開しながら、各テキスト ブロックをシングルクリックで切り替えることができます。これにより、自動的に展開および縮小パネル間を前後に移動することなく、情報をより簡単に読み取ることができます。このパネルは、以前に開いたセクションを毎回非表示にします。
+
+ここでは、`igx-accrodion` とその[展開パネル]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html)を定義する方法を確認できます。このサンプルは、2 種類の展開動作も示します。切り替えボタンは [singleBranchExpand]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#singlebranchexpand) プロパティを設定し、一度に展開する単一ブランチと複数ブランチを切り替えます。
 
 <code-view style="height:460px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -19,7 +25,8 @@ Angular Accordion コンポーネントは、単一のコンテナーに表示�
 
 <div class="divider--half"></div>
 
-## Ignite UI for Angular Accordion で作業を開始
+## Angular Accordion のインストール方法
+### Ignite UI for Angular Accordion で作業を開始
 
 Ignite UI for Angular Accordion コンポーネントを初期化するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
 
@@ -43,7 +50,7 @@ import { IgxAccordionModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
-Accordion モジュールをインポート後、`igx-accordion` とそのパネルの基本設定を開始します。
+Angular Material Accordion モジュールをインポート後、`igx-accordion` とそのパネルの基本設定を開始します。
 
 ## 使用方法
 
@@ -75,7 +82,7 @@ Accordion は、その内部で宣言されたすべての [`igx-expansion-panel
 </igx-accordion>
 ```
 
-[panels]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#panels) アクセサーを使用して、`igx-accordion` のすべての子の[拡張パネル]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html)を含むコレクションへの参照を取得できます。
+[panels]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#panels) アクセサーを使用して、`igx-accordion` のすべての子の[展開パネル]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html)を含むコレクションへの参照を取得できます。
 
 ```typescript
 @ViewChild('accordion', { static: true })
@@ -85,6 +92,10 @@ this.accordion.panels;
 ```
 
 上記で示したように、[singleBranchExpand]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#singlebranchexpand) プロパティを使用すると、一度に 1 つまたは複数のパネルを展開できるかどうかを設定できます。
+
+### Angular Accordion のアニメーション
+
+Angular Accordion は、パネルの展開と縮小の両方のアニメーションをサポートします。アニメーションの動作をカスタマイズできます。通常、アニメーションは各展開パネルに個別に設定できます。ただし、[IgxAccordionComponent]({environment:angularApiUrl}/classes/igxaccordioncomponent.html) レベルで一度にすべてのパネルに適用することもできます。これにより、ユーザーは [IgxAccordionComponent]({environment:angularApiUrl}/classes/igxaccordioncomponent.html) の animations プロパティですべてのセクションのアニメーションを一度に無効にできます。
 
 アニメーションに関して、2 つのオプションがあります。最初に、Accordion コンポーネントの `animationSettings` プロパティを設定します。
 
@@ -125,7 +136,7 @@ export class AccordionComponent {
 
 > 注: [IgxAccordionComponent]({environment:angularApiUrl}/classes/igxaccordioncomponent.html) のアニメーションを無効にするには、`animationSettings` を `null` に設定します。
 
-または、各[拡張パネル]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html)の [animationSettings]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html#animationsettings) 入力を設定することもできます。
+または、各[展開パネル]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html)の [animationSettings]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html#animationsettings) 入力を設定することもできます。
 
 ```html
 <igx-accordion #accordion [singleBranchExpand]="true">
@@ -152,6 +163,7 @@ export class AccordionComponent {
 > 注: [singleBranchExpand]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#singlebranchexpand) プロパティが *true* に設定されている場合、[expandAll]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#expandall) メソッドを呼び出すと、最後の[パネル]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html)のみが展開されます。
 
 ### Angular Accordion テンプレート化の例
+Angular [Accordion コンポーネント]({environment:angularApiUrl}/classes/igxaccordioncomponent.html)を使用すると、ヘッダーとコンテンツ パネルの外観をカスタマイズできます。
 以下のサンプルは、[IgxExpansionPanel]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) の組み込みテンプレート機能を使用して詳細なフィルタリング オプションを実装する方法を示しています。
 
 <code-view style="height:550px" 
@@ -162,7 +174,7 @@ export class AccordionComponent {
 <div class="divider--half"></div>
 
 ### ネストされた Angular Accoridon のシナリオ
-以下の例では、この一般的なアプリケーション シナリオを説明するために、複雑な FAQ セクションを作成します。サンプルでネストされた [IgxAccordionComponent]({environment:angularApiUrl}/classes/igxaccordioncomponent.html) は、[展開パネル]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html)の本体内に [Accordion]({environment:angularApiUrl}/classes/igxaccordioncomponent.html) を追加することによって実現されます。
+以下の Angular Accordion 例では、この一般的なアプリケーション シナリオを説明するために、複雑な FAQ セクションを作成します。サンプルでネストされた [IgxAccordionComponent]({environment:angularApiUrl}/classes/igxaccordioncomponent.html) は、[展開パネル]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html)の本体内に [Accordion]({environment:angularApiUrl}/classes/igxaccordioncomponent.html) を追加することによって実現されます。
 
 ```html
 <igx-accordion #accordion>
@@ -198,8 +210,7 @@ export class AccordionComponent {
 <div class="divider--half"></div>
 
 ## キーボード ナビゲーション
-Accordion のキーボード ナビゲーションは、さまざまなキーボード操作をエンドユーザーに提供します。この機能はデフォルトで有効になっており、エンドユーザーは簡単にパネル間を移動できます。
-[IgxAccordionComponent]({environment:angularApiUrl}/classes/igxaccordioncomponent.html) ナビゲーションは W3C アクセシビリティ標準に準拠しており、便利に使用できます。
+Angular Material Accordion のキーボード ナビゲーションは、さまざまなキーボード操作をエンドユーザーに提供します。この機能はデフォルトで有効になっており、エンドユーザーは簡単にパネル間を移動できます。[IgxAccordionComponent]({environment:angularApiUrl}/classes/igxaccordioncomponent.html) ナビゲーションは W3C アクセシビリティ標準に準拠しており、便利に使用できます。
 
 **キーの組み合わせ**
 
