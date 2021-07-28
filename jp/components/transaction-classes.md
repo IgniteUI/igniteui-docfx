@@ -36,7 +36,7 @@ _language: ja
 
 [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) と [`igxHierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) は、[`Transaction Service`]({environment:angularApiUrl}/interfaces/transactionservice.html)インターフェイスを実装する注入可能なミドルウェアです。コンポーネントはこれらを使用して、基になるデータに影響を与えることなく変更を蓄積できます。プロバイダーは、*access*、*manipulate* (元に戻すとやり直し)、およびデータへの 1 つまたはすべての変更を*破棄またはコミット*するための API を公開します。
 
-より具体的な例では、[`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) と [`igxHierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) は、[`IgxGrid`](grid/grid.md) のセル編集と行編集の両方で機能します。セルが編集モードを終了すると、セル編集のトランザクションが追加されます。行の編集が開始されると、グリッドは [`startPending`]({environment:angularApiUrl}/interfaces/transactionservice.html#startpending) を呼び出してトランザクションサービスを保留状態に設定します。編集された各セルは、保留中のトランザクションログに追加されますが、メイン トランザクション ログには追加されません。行が編集モードを終了すると、すべての変更がメイン トランザクション ログと undo ログに単一のトランザクションとして追加されます。
+より具体的な例では、[`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) と [`igxHierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) は、[`IgxGrid`](grid/grid.md) のセル編集と行編集の両方で機能します。セルが編集モードを終了すると、セル編集のトランザクションが追加されます。行の編集が開始されると、グリッドは [`startPending`]({environment:angularApiUrl}/interfaces/transactionservice.html#startpending) を呼び出してトランザクション サービスを保留状態に設定します。編集された各セルは、保留中のトランザクション ログに追加されますが、メイン トランザクション ログには追加されません。行が編集モードを終了すると、すべての変更がメイン トランザクション ログと undo ログに単一のトランザクションとして追加されます。
 
 いずれのケース (セル編集と行編集) も、グリッド編集の状態は、更新、追加、削除されたすべての行とその最後の状態で構成されます。これらは、後で一度に、または ID ごとに検査、操作、および送信できます。編集モードに応じて、個々のセルまたは行の変更が収集され、データ行/レコードごとに蓄積されます。
 
