@@ -45,7 +45,7 @@ Validation of user-input from the UI can be done either with template-driven for
 * ControlValueAccessor
 
 ## Angular reactive form validation
-Reactive forms deliver a model-driven approach to managing form inputs the values of which change with respect to time. Because reactive forms are built on a component class, Angular reactive form validation happens by adding validator functions directly to the form control model in the component class.  
+Reactive forms deliver a model-driven approach to managing form inputs, the values of which change with respect to time. Because reactive forms are built on a component class, Angular reactive form validation happens by adding validator functions directly to the form control model in the component class.  
 
 When the value is valid, validators return `null`. If the value is invalid, validators generate a set of errors, and you can display a specific error message on the screen.
 
