@@ -234,6 +234,18 @@ export class HierarchicalGridBatchEditingSampleComponent {
 > [!NOTE]
 > [`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable) プロパティを無効にすると `@@igComponent` を変更してセル変更でトランザクションを作成し、UI で行編集オーバーレイを公開しません。
 
+@@if (igxName === 'IgxGrid') {
+
+## 一括編集のリモート ページング デモ
+
+[完全なデモ構成をご覧ください](remote-data-operations.html#一括編集のリモート-ページング)。
+
+<code-view style="height:620px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/grid/remote-paging-batch-editing" >
+</code-view>
+
+}
 ## API リファレンス
 
 @@if (igxName === 'IgxGrid') {

@@ -64,7 +64,7 @@ _language: ja
     <igx-column [field]="Name" [pinned]="true"></igx-column>
     <igx-column [field]="AthleteNumber"></igx-column>
     <igx-column [field]="TrackProgress"></igx-column>
-    <igx-paginator [perPage]="6">
+    <igx-paginator [perPage]="10">
     </igx-paginator>
 </igx-grid>
 ```
