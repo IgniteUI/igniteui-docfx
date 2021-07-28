@@ -115,7 +115,7 @@ Ignite UI for Angular @@igComponent コンポーネントは、Angular CRUD 操�
 ```
 }
 
-セルを更新するその他の方法として [`IgxGridCellComponent`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html) の [`update`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html#update) メソッドで直接更新する方法があります。
+セルを更新するその他の方法として [`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html) の [`update`]({environment:angularApiUrl}/classes/igxgridcell.html#update) メソッドで直接更新する方法があります。
 
 @@if (igxName === 'IgxGrid') {
 ```typescript
@@ -154,13 +154,13 @@ Ignite UI for Angular @@igComponent コンポーネントは、Angular CRUD 操�
 ```
 }
 
-[`IgxGridCellComponent`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html) への参照を介して更新するセルが @@igComponent の表示コンテナー外にある場合、新しい値は送信されません。
+[`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html) への参照を介して更新するセルが @@igComponent の表示コンテナー外にある場合、新しい値は送信されません。
 
 ### セル編集テンプレート
 
 デフォルトのセル編集テンプレートの詳細については、[編集トピック](editing.md#テンプレートの編集)を参照してください。
 
-セルが編集モードのときに適用されるカスタム テンプレートを提供する場合は、[`igxCellEditor` ディレクティブ]({environment:angularApiUrl}/classes/igxcelltemplatedirective.html)を使用できます。これを行うには、`igxCellEditor` ディレクティブでマークされた `ng-template` を渡し、カスタム コントロールを [`cell.editValue`]({environment:angularApiUrl}/classes/igxcellcomponent.html#editvalue) に適切にバインドする必要があります:
+セルが編集モードのときに適用されるカスタム テンプレートを提供する場合は、[`igxCellEditor` ディレクティブ]({environment:angularApiUrl}/classes/igxcelltemplatedirective.html)を使用できます。これを行うには、`igxCellEditor` ディレクティブでマークされた `ng-template` を渡し、カスタム コントロールを [`cell.editValue`]({environment:angularApiUrl}/classes/igxgridcell.html#editvalue) に適切にバインドする必要があります:
 
 ```html
 <igx-column field="class" header="Class" [editable]="true">
@@ -184,7 +184,7 @@ Ignite UI for Angular @@igComponent コンポーネントは、Angular CRUD 操�
 <div class="divider--half"></div>
 
 > [!NOTE]
-> 編集モードでセルの [`editValue`]({environment:angularApiUrl}/classes/igxcellcomponent.html#editvalue) に加えられた変更は、終了時に適切な[`編集イベント`](editing.md#イベントの引数とシーケンス)をトリガーし、[トランザクション状態](./batch-editing.md)に適用されます (トランザクションが有効な場合)。
+> 編集モードでセルの [`editValue`]({environment:angularApiUrl}/classes/igxgridcell.html#editvalue) に加えられた変更は、終了時に適切な[`編集イベント`](editing.md#イベントの引数とシーケンス)をトリガーし、[トランザクション状態](./batch-editing.md)に適用されます (トランザクションが有効な場合)。
 
 > [!NOTE]
 > セルテンプレート [`igxCell`](../grid/grid.md#セル-テンプレート) は、編集モード外での列のセルの表示方法を制御します。
@@ -546,7 +546,7 @@ $custom-grid-theme: igx-grid-theme(
 
 ## API リファレンス
 
-* [IgxGridCellComponent]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
+* [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
 * [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 @@if (igxName !== 'IgxTreeGrid') {* [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)}
 * [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)

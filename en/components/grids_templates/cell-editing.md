@@ -114,7 +114,7 @@ You can also modify the cell value through the @@igxName API but only if primary
 ```
 }
 
-Another way to update cell is directly through [`update`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html#update) method of [`IgxGridCellComponent`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html):
+Another way to update cell is directly through [`update`]({environment:angularApiUrl}/classes/igxgridcell.html#update) method of [`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html):
 
 @@if (igxName === 'IgxGrid') {
 ```typescript
@@ -153,13 +153,13 @@ Another way to update cell is directly through [`update`]({environment:angularAp
 ```
 }
 
-Please notice that if the cell you want to update, via reference to [`IgxGridCellComponent`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html), is outside @@igComponent's display container the new value will not be submitted.
+Please notice that if the cell you want to update, via reference to [`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html), is outside @@igComponent's display container the new value will not be submitted.
 
 ### Cell Editing Templates
 
 You can see and learn more for default cell editing templates in the [general editing topic](editing.md#editing-templates).
 
-If you want to provide a custom template which will be applied when a cell is in edit mode, you can make use of the [`igxCellEditor` directive]({environment:angularApiUrl}/classes/igxcelltemplatedirective.html). To do this, you need to pass an `ng-template` marked with the `igxCellEditor` directive and properly bind your custom control to the [`cell.editValue`]({environment:angularApiUrl}/classes/igxcellcomponent.html#editvalue):
+If you want to provide a custom template which will be applied when a cell is in edit mode, you can make use of the [`igxCellEditor` directive]({environment:angularApiUrl}/classes/igxcelltemplatedirective.html). To do this, you need to pass an `ng-template` marked with the `igxCellEditor` directive and properly bind your custom control to the [`cell.editValue`]({environment:angularApiUrl}/classes/igxgridcell.html#editvalue):
 
 ```html
 <igx-column field="class" header="Class" [editable]="true">
@@ -183,7 +183,7 @@ This code is used in the sample below which implements an [`IgxSelectComponent`]
 <div class="divider--half"></div>
 
 > [!NOTE]
-> Any changes made to the cell's [`editValue`]({environment:angularApiUrl}/classes/igxcellcomponent.html#editvalue) in edit mode, will trigger the appropriate [editing event](editing.md#event-arguments-and-sequence) on exit and apply to the [transaction state](batch-editing.md) (if transactions are enabled).
+> Any changes made to the cell's [`editValue`]({environment:angularApiUrl}/classes/igxgridcell.html#editvalue) in edit mode, will trigger the appropriate [editing event](editing.md#event-arguments-and-sequence) on exit and apply to the [transaction state](batch-editing.md) (if transactions are enabled).
 
 > [!NOTE]
 > The cell template [`igxCell`](../grid/grid.md#cell-template) controls how a column's cells are shown when outside of edit mode.
@@ -545,7 +545,7 @@ In addition to the steps above, we can also style the controls that are used for
 
 ## API References
 
-* [IgxGridCellComponent]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
+* [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
 * [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 @@if (igxName !== 'IgxTreeGrid') {* [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)}
 * [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
