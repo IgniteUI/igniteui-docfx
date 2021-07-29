@@ -1029,6 +1029,7 @@
     - name: トランザクション サービス クラス階層
       href: transaction-classes.md
       new: false
+      updated: true
     - name: トランザクション サービスの使用方法
       href: transaction-how-to-use.md
       new: false
