@@ -357,9 +357,7 @@ public clearSearch() {
 -   [clearSearch]({environment:angularApiUrl}/classes/@@igTypeDoc.html#clearsearch)
 -   [refreshSearch]({environment:angularApiUrl}/classes/@@igTypeDoc.html#refreshsearch)
 
-[`IgxGridCellComponent`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html) 메소드:
--   [highlightText]({environment:angularApiUrl}/classes/igxgridcellcomponent.html#highlighttext)
--   [clearHighlight]({environment:angularApiUrl}/classes/igxgridcellcomponent.html#clearhighlight)
+[`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html) 메소드:
 
 [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) 속성:
 -   [searchable]({environment:angularApiUrl}/classes/igxcolumncomponent.html#searchable)

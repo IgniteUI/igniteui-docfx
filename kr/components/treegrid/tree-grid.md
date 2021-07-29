@@ -47,8 +47,8 @@ export class AppModule {}
 
 트리 그리드의 계층 구조(하위 컬렉션 또는 기본 키와 외부 키)를 작성하는 데 사용되는 옵션과 관계없이 트리 그리드의 행은 2가지 유형의 셀로 구성됩니다:
 
-- [`IgxGridCellComponent`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html) - 값이 포함된 표준 셀입니다.
-- [`IgxTreeGridCellComponent`]({environment:angularApiUrl}/classes/igxtreegridcellcomponent.html) - 셀의 행 수준을 기반으로 한 값, 인디케이터의 전개/축소, 인덴트 div 요소가 포함된 트리 셀입니다. 행 컴포넌트의 수준은 내부 [`treeRow`]({environment:angularApiUrl}/classes/igxtreegridrowcomponent.html#treerow)의 [`level`]({environment:angularApiUrl}/interfaces/itreegridrecord.html#level) 속성을 통해 접근할 수 있습니다.
+- [`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html) - 값이 포함된 표준 셀입니다.
+- [`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html) - 셀의 행 수준을 기반으로 한 값, 인디케이터의 전개/축소, 인덴트 div 요소가 포함된 트리 셀입니다. 행 컴포넌트의 수준은 내부 [`treeRow`]({environment:angularApiUrl}/classes/igxtreegridrowcomponent.html#treerow)의 [`level`]({environment:angularApiUrl}/interfaces/itreegridrecord.html#level) 속성을 통해 접근할 수 있습니다.
 
 > [!NOTE]
 > 각 행에는 하나의 트리 셀만 가질 수 있지만 표준 셀은 여러 개 가질 수 있습니다.
@@ -290,11 +290,11 @@ See the [Grid Sizing](sizing.md) topic.
 <div class="divider--half"></div>
 
 * [IgxTreeGridComponent]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)
-* [IgxTreeGridCellComponent]({environment:angularApiUrl}/classes/igxtreegridcellcomponent.html)
+* [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
 * [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 * [IgxGridComponent 스타일]({environment:sassApiUrl}/#function-igx-grid-theme)
-* [IgxGridCellComponent]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
+* [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
 * [IgxBaseTransactionService]({environment:angularApiUrl}/classes/igxbasetransactionservice.html)
 
 

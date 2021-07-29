@@ -85,7 +85,7 @@ const cell = args.event.shiftKey ?
     this.grid1.getPreviousCell(target.rowIndex, target.visibleColumnIndex, (col) => col.editable) :
     this.grid1.getNextCell(target.rowIndex, target.visibleColumnIndex, (col) => col.editable);
 
-this.grid1.navigateTo(cell.rowIndex, cell.visibleColumnIndex,
+this.grid1.navigateTo(cell.row.index, cell.column.visibleIndex,
     (obj) => { obj.target.nativeElement.focus(); });
 ```
 - perform column based navigation (vertical) on `enter key` press.
@@ -153,7 +153,7 @@ public customKeydown(args: IGridKeydownEventArgs, grid) {
             grid.getPreviousCell(target.rowIndex, target.visibleColumnIndex, (col) => col.editable) :
             grid.getNextCell(target.rowIndex, target.visibleColumnIndex, (col) => col.editable);
 
-        grid.navigateTo(cell.rowIndex, cell.visibleColumnIndex,
+        grid.navigateTo(cell.row.index, cell.column.visibleIndex,
             (obj) => { obj.target.nativeElement.focus(); });
     } else if (type === "dataCell" && evt.key.toLowerCase() === "enter") {
         ...
@@ -195,7 +195,7 @@ const cell = args.event.shiftKey ?
     this.grid1.getPreviousCell(target.rowIndex, target.visibleColumnIndex, (col) => col.editable) :
     this.grid1.getNextCell(target.rowIndex, target.visibleColumnIndex, (col) => col.editable);
 
-this.grid1.navigateTo(cell.rowIndex, cell.visibleColumnIndex,
+this.grid1.navigateTo(cell.row.index, cell.column.visibleIndex,
     (obj) => { obj.target.nativeElement.focus(); });
 ```
 - perform column based navigation (vertical) on `enter key` press.
