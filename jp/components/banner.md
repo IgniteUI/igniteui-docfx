@@ -160,13 +160,13 @@ export class MyBannerComponent {
 
 
 ### イベントにバインド
-Banner コンポーネントは状態の変更時にイベントを発生します。[`onOpening`]({environment:angularApiUrl}/classes/igxbannercomponent.html#onopening) と [`onOpened`]({environment:angularApiUrl}/classes/igxbannercomponent.html#onopened) が Banner が表示される (前と後に) ときに呼び出されます。一方、[`onClosing`]({environment:angularApiUrl}/classes/igxbannercomponent.html#onclosing) と [`onClosed`]({environment:angularApiUrl}/classes/igxbannercomponent.html#onclosed) は Banner が閉じるときにエミットされます。*Ing* イベント (`onOpening`, `onClosing`) はキャンセル可能です。 `ICancelEventArgs` インターフェイスを使用してオブジェクトは `cancel` プロパティを持ちます。`cancel` プロパティを true に設定します。対応するエンド操作とイベントはトリガーされません。たとえば、`onOpening` をキャンセルした場合、Banner の `open` メソッドは完了せずに Banner が表示されません。
+Banner コンポーネントは状態の変更時にイベントを発生します。[`opening`]({environment:angularApiUrl}/classes/igxbannercomponent.html#opening) と [`opened`]({environment:angularApiUrl}/classes/igxbannercomponent.html#opened) が Banner が表示される (前と後に) ときに呼び出されます。一方、[`closing`]({environment:angularApiUrl}/classes/igxbannercomponent.html#closing) と [`closed`]({environment:angularApiUrl}/classes/igxbannercomponent.html#closed) は Banner が閉じるときにエミットされます。*Ing* イベント (`opening`, `closing`) はキャンセル可能です。 `ICancelEventArgs` インターフェイスを使用してオブジェクトは `cancel` プロパティを持ちます。`cancel` プロパティを true に設定します。対応するエンド操作とイベントはトリガーされません。たとえば、`opening` をキャンセルした場合、Banner の `open` メソッドは完了せずに Banner が表示されません。
 
 発生したオブジェクトへバインドしたイベントをキャンセルするために `cancel` プロパティに `true` に設定します。
 
 ```html
 <!--banner.component.html-->
-    <igx-banner #connectionBanner (onOpening)="handleOpen($event)">
+    <igx-banner #connectionBanner (opening)="handleOpen($event)">
         ...
     </igx-banner>
 ```

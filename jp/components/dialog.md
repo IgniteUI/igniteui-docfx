@@ -39,7 +39,7 @@ export class AppModule {}
 
 ### 通知ダイアログ
 
-通知のダイアログを作成するには、メールコンポーネントのテンプレートに以下のコードを追加します。[`title`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#title)、[`message`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#message)、[`leftButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftbuttonlabel) を設定し、[`onLeftButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#onleftbuttonselect) イベントを処理します。 
+通知のダイアログを作成するには、メールコンポーネントのテンプレートに以下のコードを追加します。[`title`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#title)、[`message`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#message)、[`leftButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftbuttonlabel) を設定し、[`leftButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftbuttonselect) イベントを処理します。 
 
 ```html
 <!--email.component.html-->
@@ -49,7 +49,7 @@ export class AppModule {}
     title="Notification"
     message="Your email has been sent successfully!"
     leftButtonLabel="OK"
-    (onLeftButtonSelect)="alert.close()">
+    (leftButtonSelect)="alert.close()">
 </igx-dialog>
 ```
 
@@ -59,7 +59,7 @@ export class AppModule {}
 
 ### 標準ダイアログ
 
-標準のダイアログを作成するには、ファイル マネージャー コンポーネントのテンプレートに以下のコードを追加します。[`title`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#title)、[`message`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#message)、[`leftButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftbuttonlabel)、[`rightButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#rightbuttonlabel) を設定し、[`onLeftButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#onleftbuttonselect) および [`onRightButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#onrightbuttonselect) イベントを処理します。 
+標準のダイアログを作成するには、ファイル マネージャー コンポーネントのテンプレートに以下のコードを追加します。[`title`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#title)、[`message`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#message)、[`leftButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftbuttonlabel)、[`rightButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#rightbuttonlabel) を設定し、[`leftButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftbuttonselect) および [`rightButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#rightbuttonselect) イベントを処理します。 
 
 ```html
 <!--file-manager.component.html-->
@@ -67,9 +67,9 @@ export class AppModule {}
 
 <igx-dialog #dialog title="Confirmation"
     leftButtonLabel="Cancel"
-    (onLeftButtonSelect)="dialog.close()"
+    (leftButtonSelect)="dialog.close()"
     rightButtonLabel="OK"
-    (onRightButtonSelect)="onDialogOKSelected($event)"
+    (rightButtonSelect)="onDialogOKSelected($event)"
     message="Are you sure you want to delete the Microsoft_Annual_Report_2015.pdf and Microsoft_Annual_Report_2015.pdf files?">
 </igx-dialog>
 ```

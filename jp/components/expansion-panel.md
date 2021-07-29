@@ -1,6 +1,6 @@
 ---
 title: Angular Panel | Expandable | Ignite UI for Angular | インフラジスティックス
-_description: Angular アコーディオン/マテリアル拡張パネルは、折りたたみと展開の 2 つの状態を持つ、簡単に設定できる拡張可能なコンポーネントを提供します。
+_description: Angular アコーディオン/マテリアル展開パネルは、折りたたみと展開の 2 つの状態を持つ、簡単に設定できる拡張可能なコンポーネントを提供します。
 _keywords: angular accordion, igniteui for angular, インフラジスティックス
 _language: ja
 ---
@@ -106,7 +106,7 @@ export class ExpansionPanelComponent {
 ```
 ```html
 <!-- in expansion-component.component.html -->
-<igx-expansion-panel (onExpanded)="handleExpansion($event)  (onCollapsed)="handleCollapse($event)"></igx-expansion-panel>
+<igx-expansion-panel (onExpanded)="handleExpansion($event)  (contentCollapsed)="handleCollapse($event)"></igx-expansion-panel>
 ```
 
 以下は結果です。
@@ -147,7 +147,7 @@ export class ExpansionPanelComponent {
 ```
 このコンポーネントは、パネルの縮小時に「更に表示」を描画し、完全に展開した後に「簡易表示」を描画します。
 
-`IgxExpansionPanel` コントロールを使用すると、あらゆる種類のコンテンツを `igx-expansion-panel-body` 内に追加できます。[`IgxGrid`](grid/grid.md)、[`IgxCombo`](combo.md)、チャート、その他の拡張パネルもレンダリングできます。
+`IgxExpansionPanel` コントロールを使用すると、あらゆる種類のコンテンツを `igx-expansion-panel-body` 内に追加できます。[`IgxGrid`](grid/grid.md)、[`IgxCombo`](combo.md)、チャート、その他の展開パネルもレンダリングできます。
 
 展開パネルの本体にいくつかの基本的なマークアップを追加します。
 ```html
@@ -236,7 +236,7 @@ $custom-panel-theme: igx-expansion-panel-theme(
 ```
 
  >[!NOTE]
- > Internet Explorer 11 をサポートする場合は、`igm-css-vars` の代わりにコンポーネント mixin の `igx-expansion-panel` を使用する必要があります。コンポーネントの ViewEncapsulation が [`Emulated`](themes/sass/component-themes.md#表示のカプセル化)であるため、` :: ng-deep` を使用してカプセル化を解除する必要があります。
+ > Internet Explorer 11 をサポートする場合は、`igm-css-vars` の代わりにコンポーネント mixin の `igx-expansion-panel` を使用する必要があります。コンポーネントの ViewEncapsulation が [`Emulated`](themes/sass/component-themes.md#表示のカプセル化)であるため、`:: ng-deep` を使用してカプセル化を解除する必要があります。
  > カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含める必要があります。
 
 ```scss
