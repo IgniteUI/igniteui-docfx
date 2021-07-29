@@ -655,7 +655,7 @@ class MyRowGhostComponent {
 }
 ```
 
-Finally, we create method that will be used to handle the [`IgxDragDirective.dragMove`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragmove) event (emitted for the dragged row). The method will change the value of the property used in the `igxRowDragGhost` template and force a rerender.
+Finally, we create a method that will be used to handle the [`IgxDragDirective.dragMove`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragmove) event (emitted for the dragged row). The method will change the value of the property used in the `igxRowDragGhost` template and force a rerender.
 We want to subscribe to the `dragMove` event only of the specific row we're dragging and unsub from it (to prevent memory leaks) each time a row is dropped.
 
 ```typescript
