@@ -14,8 +14,8 @@ The [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) expo
 ### Demo
 The sample below demonstrates remote binding using combo API - defining [valueKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#valuekey) and [displayKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#displaykey), and using [dataPreLoad]({environment:angularApiUrl}/classes/igxcombocomponent.html#datapreload) to load new chunk of remote data:
 
-<code-view style="height: 400px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 400px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/combo-remote" >
 </code-view>
 
@@ -67,7 +67,7 @@ export class RemoteService {
 When the data is returned from the service as an observable, then we can set it to the [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) using the [`async`](https://angular.io/api/common/AsyncPipe) pipe:
 
 ```html
-<igx-combo [data]="rData | async" [valueKey]="'ProductID'" [displayKey]="'ProductName'" 
+<igx-combo [data]="rData | async" [valueKey]="'ProductID'" [displayKey]="'ProductName'"
     (dataPreLoad)="dataLoading($event)" (searchInputUpdate)="searchInput($event)" (opening)="searchInput('')"></igx-combo>
 ```
 Let's define the cases, when the [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) will need to request new data:
@@ -138,7 +138,7 @@ export class ComboRemoteComponent implements OnInit {
 * [Combo Features](combo-features.md)
 * [Combo Templates](combo-templates.md)
 * [Template Driven Forms Integration](input-group.md)
-* [Reactive Forms Integration](input-group-reactive-forms.md)
+* [Reactive Forms Integration](angular-reactive-form-validation.md)
 * [Cascading Scenario](combo-cascading.md)
 
 Our community is active and always welcoming to new ideas.

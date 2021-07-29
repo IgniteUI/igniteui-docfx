@@ -17,8 +17,8 @@ The [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) and 
 The following sample demonstrates scenario, using two [igx-select]({environment:angularApiUrl}/classes/igxselectcomponent.html) and [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) components:
 
 
-<code-view style="height: 540px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 540px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/cascading-combos" >
 </code-view>
 
@@ -99,7 +99,7 @@ export class CascadingCombos {
 * [Combo Remote Binding](combo-remote.md)
 * [Combo Templates](combo-templates.md)
 * [Template Driven Forms Integration](input-group.md)
-* [Reactive Forms Integration](input-group-reactive-forms.md)
+* [Reactive Forms Integration](angular-reactive-form-validation.md)
 * [IgxOverlay]({environment:angularApiUrl}/classes/igxoverlayservice.html)
 
 Our community is active and always welcoming to new ideas.

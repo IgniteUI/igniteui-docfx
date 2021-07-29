@@ -1,6 +1,6 @@
 ---
-title: Time Picker Component - Native Angular | Ignite UI for Angular 
-_description: The Ignite UI for Angular Time Picker component allows the user to select time from a dialog with spinners which is then mirrored in the input field. 
+title: Time Picker Component - Native Angular | Ignite UI for Angular
+_description: The Ignite UI for Angular Time Picker component allows the user to select time from a dialog with spinners which is then mirrored in the input field.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components, Angular Time Picker component, Angular Time Picker control, Time Picker, Angular Time Picker
 ---
 
@@ -10,15 +10,15 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ## Angular Time Picker Example
 
-<code-view style="height:540px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:540px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-dropdown" >
 </code-view>
 
 <div class="divider--half"></div>
 
 ## Usage
-The first step is to import the `IgxTimePickerModule` in the **app.module.ts** file. 
+The first step is to import the `IgxTimePickerModule` in the **app.module.ts** file.
 
 >[!NOTE]
 >The IgxTimePicker is also dependent on both the **BrowserAnimationsModule** and **HammerModule** for touch interactions. They need to be added to the AppModule as well.
@@ -96,7 +96,7 @@ export class SampleFormComponent {
 ### Projecting components
 The time picker component allows projecting child components - the same as in the [`IgxInputGroupComponent`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html): [`igxLabel`](label-input.md), [`IgxHint`](input-group.md#hints), [`igxPrefix`](input-group.md#prefix--suffix), [`igxSuffix`](input-group.md#prefix--suffix), excluding [`IgxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html). More detailed information about this can be found in the [Label & Input](label-input.md) topic.
 
-In the default configuration, a dropdown/dialog toggle icon is shown as a prefix. It can be changed or redefined using the [`IgxPickerToggleComponent`]({environment:angularApiUrl}/classes/igxpickertogglecomponent.html) component. It can be decorated with either [`igxPrefix`](input-group.md#prefix--suffix) or [`igxSuffix`](input-group.md#prefix--suffix), which will define its position - at the start of the input or at the end respectively. 
+In the default configuration, a dropdown/dialog toggle icon is shown as a prefix. It can be changed or redefined using the [`IgxPickerToggleComponent`]({environment:angularApiUrl}/classes/igxpickertogglecomponent.html) component. It can be decorated with either [`igxPrefix`](input-group.md#prefix--suffix) or [`igxSuffix`](input-group.md#prefix--suffix), which will define its position - at the start of the input or at the end respectively.
 
 In the following example we have added a custom label and hint and changed the default toggle icon position to be displayed as a suffix:
 
@@ -115,8 +115,8 @@ public date: Date = new Date();
 
 And here's our templated time picker:
 
-<code-view style="height: 600px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 600px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-5" >
 </code-view>
 
@@ -151,8 +151,8 @@ public selectNow(timePicker: IgxTimePickerComponent) {
 
 And there we have it, a re-templated time picker with dropdown, custom actions and two-way binding support:
 
-<code-view style="height: 600px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 600px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-6" >
 </code-view>
 
@@ -192,7 +192,7 @@ or just change the [`mode`]({environment:angularApiUrl}/classes/igxtimepickercom
 In dialog mode, the dialog header displays the currently selected time in the picker's [`input format`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#inputformat). You can change the header position by setting the [`headerOrientation`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#headerorientation) property.
 
 <code-view style="height: 600px;"
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-1" alt="Angular Time Picker Example">
 </code-view>
 
@@ -224,10 +224,10 @@ You can find a sample that illustrates the use of both methods at [Date Time Edi
 ### Forms and Validation
 The time picker component supports all directives from the core FormsModule [NgModel](https://angular.io/api/forms/NgModel) and [ReactiveFormsModule](https://angular.io/api/forms/ReactiveFormsModule) (FormControl, FormGroup, etc.). This also includes the [Forms Validators](https://angular.io/api/forms/Validators) functions. In addition, the component's [min and max values](#min-max-value) also act as form validators.
 
-The [Reactive Forms Integration](input-group-reactive-forms.md) sample demonstrates how to use the igxTimePicker in Reactive Forms.
+The [Reactive Forms Integration](angular-reactive-form-validation.md) sample demonstrates how to use the igxTimePicker in Reactive Forms.
 
 #### Min max value
-You can specify [`minValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#minvalue) and [`maxValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#maxvalue) to restrict the user input, in which case the dropdown/dialog will display the time within that range only. In dropdown mode however, it is still possible for the user to type in an invalid time. You can handle the [`validationFailed`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#validationfailed) event in order to notify the user if that happens. 
+You can specify [`minValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#minvalue) and [`maxValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#maxvalue) to restrict the user input, in which case the dropdown/dialog will display the time within that range only. In dropdown mode however, it is still possible for the user to type in an invalid time. You can handle the [`validationFailed`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#validationfailed) event in order to notify the user if that happens.
 
 >[!NOTE]
 >The min/max values should be a Date object or a time-only string in the `ISO 8601` format:
@@ -283,8 +283,8 @@ The dropdown displays values within the min/max range (09:15:30 AM~06:15:30 PM) 
 
 And there we have it:
 
-<code-view style="height: 540px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 540px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-4" >
 </code-view>
 
@@ -295,8 +295,8 @@ In some cases when the [`IgxDatePicker`](date-picker.md) and the IgxTimePicker a
 
 To achieve that in template driven forms, use the `ngModel` to bind both components to the same Date object.
 
-<code-view style="height: 540px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 540px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/template-driven-form" >
 </code-view>
 
@@ -304,8 +304,8 @@ To achieve that in template driven forms, use the `ngModel` to bind both compone
 
 In reactive forms, we can handle the [`valueChange`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#valuechange) event of each component and update the value of the other.
 
-<code-view style="height: 540px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 540px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/reactive-form" >
 </code-view>
 
@@ -317,7 +317,7 @@ To get started with styling the time picker, we need to import the `index` file,
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+```
 
 Following the simplest approach, we create a new theme that extends the [`igx-time-picker-theme`]({environment:sassApiUrl}/index.html#function-igx-dialog-theme) and accepts parameters that style the time picker.
 
@@ -401,8 +401,8 @@ If `$legacy-support` is set to `false`(default), include the component **css var
 
 ### Demo
 
-<code-view style="height: 600px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 600px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-styling" >
 </code-view>
 
@@ -428,7 +428,7 @@ If `$legacy-support` is set to `false`(default), include the component **css var
 ## Additional Resources
 * [Date Time Editor](date-time-editor.md)
 * [Label & Input](label-input.md)
-* [Reactive Forms Integration](input-group-reactive-forms.md)
+* [Reactive Forms Integration](angular-reactive-form-validation.md)
 
 Our community is active and always welcoming to new ideas.
 * [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)

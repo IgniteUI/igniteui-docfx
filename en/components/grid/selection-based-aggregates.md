@@ -50,7 +50,7 @@ Change the selection to see summaries of the currently selected range.
 ## API References
 
 * [IgxGridComponent API]({environment:angularApiUrl}/classes/igxgridcomponent.html)    
-* [IgxGridCellComponent API]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)    
+* [IgxGridCell API]({environment:angularApiUrl}/classes/igxgridcell.html)    
 * [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)     
 
 ## Additional Resources

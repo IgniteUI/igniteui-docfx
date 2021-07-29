@@ -189,11 +189,11 @@ public childGridCreated(event: IGridCreatedEventArgs) {
 
 ```typescript
 public customKeydown(args: IGridKeydownEventArgs) {
-    const target: IgxGridCellComponent = args.target as IgxGridCellComponent;
+    const target: IgxGridCell = args.target as IgxGridCell;
     const evt: KeyboardEvent = args.event as KeyboardEvent;
     const type = args.targetType;
 
-    if (type === "dataCell" && target.inEditMode && evt.key.toLowerCase() === "tab") {
+    if (type === "dataCell" && target.editMode && evt.key.toLowerCase() === "tab") {
         // 1. USER INPUT VALIDATON ON TAB
     }
     if (type === "dataCell" && evt.key.toLowerCase() === "enter") {

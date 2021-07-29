@@ -11,7 +11,7 @@ _language: kr
 The [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) component provides a powerful input, combining the features of the basic HTML `input`, select and the IgniteUI for Angular [igx-drop-down]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) components.<br />
 The combo component provides easy **[filtering](combo-features.md#filtering)** and **multiple selection** of items, **[grouping](combo-features.md#grouping)** and adding **[custom values](combo-features.md#custom-values)** to the dropdown list.<br />
 **[Custom templates](combo-templates.md)** could be provided in order to customize different areas of the components, such as items, header, footer, etc.<br />
-The [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) component is integrated with the **[Template Driven Forms](input-group.md)** and **[Reactive Forms](input-group-reactive-forms.md)**.<br />
+The [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) component is integrated with the **[Template Driven Forms](input-group.md)** and **[Reactive Forms](angular-reactive-form-validation.md)**.<br />
 The [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) exposes intuitive **keyboard navigation** and it is **accessibility compliant**.<br />
 Drop Down items are **virtualized**, which guarantees smooth work, even if the [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) is bound to data source with a lot of items.
 </p>
@@ -19,8 +19,8 @@ Drop Down items are **virtualized**, which guarantees smooth work, even if the [
 
 ### Demo
 
-<code-view style="height: 400px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 400px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/combo" >
 </code-view>
 
@@ -73,7 +73,7 @@ Combo control exposes the following features:
     - [Grouping](combo-features.md#grouping)
     - [Custom values](combo-features.md#custom-values)
     - [Templates](combo-templates.md)
-    - Integration with [Template Driven Forms](input-group.md) and [Reactive Forms](input-group-reactive-forms.md)
+    - Integration with [Template Driven Forms](input-group.md) and [Reactive Forms](angular-reactive-form-validation.md)
 
 ## Keyboard Navigation
 
@@ -110,7 +110,7 @@ When igxCombo is opened, allow custom values are enabled and add item button is 
 ## API
 <div class="divider--half"></div>
 
-* [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html) 
+* [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html)
 * [IgxComboComponent Styles]({environment:sassApiUrl}/index.html#themes-mixin-igx-combo)
 * [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 
@@ -130,10 +130,10 @@ When igxCombo is opened, allow custom values are enabled and add item button is 
 * [Combo Remote Binding](combo-remote.md)
 * [Combo Templates](combo-templates.md)
 * [Template Driven Forms Integration](input-group.md)
-* [Reactive Forms Integration](input-group-reactive-forms.md)
+* [Reactive Forms Integration](angular-reactive-form-validation.md)
 * [Cascading Scenario](combo-cascading.md)
 * [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html)
-* [IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) 
+* [IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 
 Our community is active and always welcoming to new ideas.
 

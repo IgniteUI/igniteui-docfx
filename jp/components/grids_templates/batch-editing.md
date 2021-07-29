@@ -79,7 +79,7 @@ export class AppModule {}
 </@@igSelector>
 ```
 
-これにより、@@igSelector に `Transaction` サービスの適切なインスタンスが提供されます。
+これにより、@@igSelector に `Transaction` サービスの適切なインスタンスが提供されます。適切な `TransactionService` は `TransactionFactory` を通じて提供されます。この内部実装の詳細については、[トランザクション トピック](../transaction-classes.md#トランザクション-ファクトリ)を参照してください。
 
 一括編集を有効にした後、バインドされたデータ ソースと [`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable) を true に設定して `@@igxName` を定義し、バインドします。
 
@@ -234,6 +234,18 @@ export class HierarchicalGridBatchEditingSampleComponent {
 > [!NOTE]
 > [`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable) プロパティを無効にすると `@@igComponent` を変更してセル変更でトランザクションを作成し、UI で行編集オーバーレイを公開しません。
 
+@@if (igxName === 'IgxGrid') {
+
+## 一括編集のリモート ページング デモ
+
+[完全なデモ構成をご覧ください](remote-data-operations.html#一括編集のリモート-ページング)。
+
+<code-view style="height:620px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/grid/remote-paging-batch-editing" >
+</code-view>
+
+}
 ## API リファレンス
 
 @@if (igxName === 'IgxGrid') {

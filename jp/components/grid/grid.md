@@ -51,7 +51,7 @@ import { IgxGridModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-`IgxGridModule` の各コンポーネント、ディレクティブ、およびヘルパー クラスはグリッド サブパッケージまたは igniteui-angular のメイン バンドルでインポートできます。グリッドをインスタンス化して使用するためにすべての機能をインポートする必要はありませんが、グリッド API の一部である型を宣言する場合はインポート (またはエディターで自動的にインポート) します。
+`IgxGridModule` の各コンポーネント、ディレクティブ、およびヘルパー クラスは _igniteui-angular_ のメイン バンドルでインポートできます。グリッドをインスタンス化して使用するためにすべての機能をインポートする必要はありませんが、グリッド API の一部である型を宣言する場合はインポート (またはエディターで自動的にインポート) します。
 
 ```typescript
 import { IgxGridComponent } from 'igniteui-angular';
@@ -103,7 +103,7 @@ public grid: IgxGridComponent;
 
 ## Angular Grid 列の構成
 
-[`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) は、グリッドの [`columns`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columns) コレクションを定義し、**ソート**、**ページング**など、列ごとの機能を有効にするために使用します。セル、ヘッダー、およびフッター テンプレートも利用できます。
+[`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) は、グリッドの [`columns`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columns) コレクションを定義し、**ソート**、**フィルタリング**など、列ごとの機能を有効にするために使用します。セル、ヘッダー、およびフッター テンプレートも利用できます。
 
 ### 列の定義
 
@@ -183,14 +183,14 @@ public contextObject = { firstProperty: 'testValue', secondProperty: 'testValue1
 ...
 ```
 
-上記のスニペットで暗示的に提供されたセル値への参照を取得します。データを表示し、セルの値にカスタム スタイル設定およびパイプ変換を適用する場合に使用します。ただし、[`IgxGridCellComponent`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html) オブジェクトを以下のように使用するとより効果的です。
+上記のスニペットで暗示的に提供されたセル値への参照を取得します。データを表示し、セルの値にカスタム スタイル設定およびパイプ変換を適用する場合に使用します。ただし、[`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html) オブジェクトを以下のように使用するとより効果的です。
 
 ```html
 <igx-grid #grid [data]="data">
     <igx-column dataType="string" field="Name">
         <ng-template igxCell let-cell="cell">
             <!-- Implement row deleting inside the cell template itself -->
-            <span tabindex="0" (keydown.delete)="grid.deleteRow(cell.rowIndex)">{{ cell.value | titlecase }}</span>
+            <span tabindex="0" (keydown.delete)="grid.deleteRow(cell.row.index)">{{ cell.value | titlecase }}</span>
         </ng-template>
     </igx-column>
     <igx-column dataType="boolean" field="Subscribtion">
@@ -226,7 +226,7 @@ public contextObject = { firstProperty: 'testValue', secondProperty: 'testValue1
 </igx-column>
 ```
 
-テンプレートで使用可能なプロパティの詳細については、[`IgxGridCellComponent`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html) の API を参照してください。
+テンプレートで使用可能なプロパティの詳細については、[`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html) の API を参照してください。
 
 ### 列テンプレート API
 
@@ -729,7 +729,7 @@ Grid のキーボード ナビゲーションは、さまざまなキーボー�
 * [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html)
 * [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)
 * [IgxHierarchicalGridRow]({environment:angularApiUrl}/classes/igxhierarchicalgridrow.html)
-* [IgxGridCellComponent]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
+* [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
 
 ## テーマの依存関係
 * [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-igx-icon-theme)

@@ -111,7 +111,7 @@ Ignite UI for Angular @@igComponent component provides a great data manipulation
 }
 업데이트하려는 셀이 @@igComponent의 표시 컨테이너 외부에 있는 경우 새로운 값이 제출되지 않습니다.
 
-셀을 업데이트하는 또 다른 방법은 [`IgxGridCellComponent`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)의 [`update`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html#update) 메소드를 직접 호출하는 것입니다:
+셀을 업데이트하는 또 다른 방법은 [`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html)의 [`update`]({environment:angularApiUrl}/classes/igxgridcell.html#update) 메소드를 직접 호출하는 것입니다:
 
 @@if (igxName === 'IgxGrid') {
 ```typescript
@@ -288,7 +288,7 @@ row.delete();
 
 ### API 참조
 
-* [IgxGridCellComponent]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
+* [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
 * [@@igxNameComponent 스타일]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 * [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html)
 * [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)

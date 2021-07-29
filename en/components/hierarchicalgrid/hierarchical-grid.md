@@ -416,7 +416,7 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 * [IgxGridComponent Styles]({environment:sassApiUrl}/#function-igx-grid-theme)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [IgxHierarchicalGridRow]({environment:angularApiUrl}/classes/igxhierarchicalgridrow.html)
-* [IgxGridCellComponent]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
+* [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
 
 ## Theming Dependencies
 * [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
