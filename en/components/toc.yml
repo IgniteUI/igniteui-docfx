@@ -135,6 +135,7 @@
     - name: Paging
       href: grid/paging.md
       new: false
+      updated: true
     - name: Filtering
       href: grid/filtering.md
       new: false
@@ -277,6 +278,7 @@
     - name: Paging
       href: treegrid/paging.md
       new: false
+      updated: true
     - name: Filtering
       href: treegrid/filtering.md
       new: false
@@ -407,6 +409,7 @@
     - name: Paging
       href: hierarchicalgrid/paging.md
       new: false
+      updated: true
     - name: Filtering
       href: hierarchicalgrid/filtering.md
       new: false
@@ -1011,6 +1014,13 @@
   href: time-picker.md
   new: false
   updated: true
+- name: Pagination
+  header: true
+  sortable: true
+- name: Paginator
+  href: paginator.md
+  new: true
+  updated: false
 - name: Services
   header: true
   sortable: true
