@@ -1,13 +1,13 @@
 ---
 title: Combo Features
-_description: Combo control exposes several of features including data and value binding, custom values, filtering, grouping, etc. 
+_description: Combo control exposes several of features including data and value binding, custom values, filtering, grouping, etc.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Combo components, Angular Features, Angular Combo Features, Angular Combo Data Binding, Angular Combo Value Binding, Angular Combo Data Filtering, Angular Combo Grouping, Angular Combo Custom Values
 _language: kr
 ---
 
 ## Combo Features
 <p class="highlight">
-Combo control exposes several features including data and value binding, **[custom values](combo-features.md#custom-values)**, **[filtering](combo-features.md#filtering)**, **[grouping](combo-features.md#grouping)**, etc. 
+Combo control exposes several features including data and value binding, **[custom values](combo-features.md#custom-values)**, **[filtering](combo-features.md#filtering)**, **[grouping](combo-features.md#grouping)**, etc.
 </p>
 <div class="divider"></div>
 
@@ -15,8 +15,8 @@ Combo control exposes several features including data and value binding, **[cust
 The following demo demonstrates some of the combo features that are enabled/disabled at runtime:
 
 
-<code-view style="height: 440px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 440px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/combo-features" >
 </code-view>
 
@@ -162,7 +162,7 @@ Defining a combo's groupKey option will group the items, according to the provid
 * [Combo Remote Binding](combo-remote.md)
 * [Combo Templates](combo-templates.md)
 * [Template Driven Forms Integration](input-group.md)
-* [Reactive Forms Integration](input-group-reactive-forms.md)
+* [Reactive Forms Integration](angular-reactive-form-validation.md)
 * [Cascading Scenario](combo-cascading.md)
 * [IgxSwitch](switch.md)
 

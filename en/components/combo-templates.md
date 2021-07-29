@@ -12,8 +12,8 @@ The Ignite UI for Angular Combo Component allows defining custom templates for d
 ## Angular Combo Templates Example
 
 
-<code-view style="height: 450px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 450px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/combo-template" alt="Angular Combo Templates Example">
 </code-view>
 
@@ -132,7 +132,7 @@ When used with templates, the `igxComboClearIcon` and the `igxComboToggleIcon` s
 ## API Summary
 <div class="divider--half"></div>
 
-* [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html) 
+* [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html)
 * [IgxComboComponent Styles]({environment:sassApiUrl}/index.html#function-igx-combo-theme)
 
 ## Additional Resources
@@ -142,7 +142,7 @@ When used with templates, the `igxComboClearIcon` and the `igxComboToggleIcon` s
 * [Combo Features](combo-features.md)
 * [Combo Remote Binding](combo-remote.md)
 * [Template Driven Forms Integration](input-group.md)
-* [Reactive Forms Integration](input-group-reactive-forms.md)
+* [Reactive Forms Integration](angular-reactive-form-validation.md)
 * [Cascading Scenario](combo-cascading.md)
 
 Our community is active and always welcoming to new ideas.

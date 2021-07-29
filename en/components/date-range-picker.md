@@ -428,7 +428,7 @@ The demo below defines a form for flight tickets that uses the [`IgxDateRangePic
 Related topics:
 * [Date Time Editor](date-time-editor.md)
 * [Label & Input](label-input.md)
-* [Reactive Forms Integration](input-group-reactive-forms.md)
+* [Reactive Forms Integration](angular-reactive-form-validation.md)
 * [Date Picker](date-picker.md)
 
 
