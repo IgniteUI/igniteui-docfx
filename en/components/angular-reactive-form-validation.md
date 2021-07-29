@@ -113,7 +113,7 @@ So, if you enter values for movie title, full name, phone, and email, they will 
 
 <code-view style="height: 850px;"
     data-demos-base-url="{environment:demosBaseUrl}"
-    iframe-src="{environment:demosBaseUrl}/how-to/reactive-forms"
+    iframe-src="{environment:demosBaseUrl}/data-entries/reactive-forms"
     alt="Angular Reactive Forms Integration Example">
 </code-view>
 
