@@ -14,8 +14,8 @@ Ignite UI for Angular の Combo と Select コンポーネントは、コント�
 以下のサンプルは、[igx-select]({environment:angularApiUrl}/classes/igxselectcomponent.html) と [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) コンポーネントが一緒に使用されています。
 
 
-<code-view style="height: 540px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 540px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/cascading-combos" alt="Angular カスケーディングの例">
 </code-view>
 
@@ -93,11 +93,11 @@ export class CascadingCombos {
 ## API まとめ
 <div class="divider--half"></div>
 
-* [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html) 
+* [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html)
 * [IgxComboComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-combo-theme)
 
 その他のコンポーネントおよびディレクティブ (またはそのいずれか) で使用した API:
-* [IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html)  
+* [IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html)
 
 ## その他のリソース
 <div class="divider--half"></div>
@@ -107,7 +107,7 @@ export class CascadingCombos {
 * [コンボ リモート バインディング](combo-remote.md)
 * [コンボ テンプレート](combo-templates.md)
 * [テンプレート駆動フォームの統合](input-group.md)
-* [リアクティブ フォームの統合](input-group-reactive-forms.md)
+* [リアクティブ フォームの統合](angular-reactive-form-validation.md)
 
 コミュニティに参加して新しいアイデアをご提案ください。
 

@@ -1,5 +1,5 @@
 ---
-title: Date Time Editor Directive - Native Angular | Ignite UI for Angular 
+title: Date Time Editor Directive - Native Angular | Ignite UI for Angular
 _description: The Ignite UI for Angular Date Time Editor Directive allows the user to handle date and time using a Date Object.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components, Angular Date Time Editor Directive, Angular Date Time Directive control, Date Time Editor, Angular Date Time Directive
 ---
@@ -10,8 +10,8 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ## Angular Date Time Editor Directive Example
 
-<code-view style="height:100px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:100px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/datetime-basic" alt="Angular Date Time Editor Directive Example">
 </code-view>
 
@@ -37,7 +37,7 @@ export class AppModule {}
 
 To use an input as a date time editor, set an igxDateTimeEditor directive and a valid date object as value. In order to have complete editor look and feel, wrap the input in an [input group](input-group.md). This will allow you to not only take advantage of the following directives [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html), [`igxLabel`]({environment:angularApiUrl}/classes/igxlabeldirective.html), [`igxPrefix`](input-group.md#prefix--suffix), [`igxSuffix`](input-group.md#prefix--suffix), [`igx-hint`]({environment:angularApiUrl}/classes/igxhintdirective.html), but will cover common scenarios when dealing with form inputs as well.
 
-### Binding 
+### Binding
 A basic configuration scenario setting a Date object as a [`value`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#value):
 ```typescript
 public date = new Date();
@@ -121,7 +121,7 @@ You can specify [`minValue`]({environment:angularApiUrl}/classes/igxdatetimeedit
 ```typescript
 public minDate = new Date(2020, 1, 15);
 public maxDate = new Date(2020, 11, 1);
-``` 
+```
 
 ```html
 <igx-input-group>
@@ -138,8 +138,8 @@ In the first scenario, if no specific [`DatePart`]({environment:angularApiUrl}/e
 Also, both methods accept an optional `delta` parameter of type `number` which can be used to set the increment/decrement step.
 
 You may compare both in the following sample:
-<code-view style="height:150px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:150px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/datetime-advanced" >
 </code-view>
 
@@ -175,7 +175,7 @@ You can force the component to select all of the input text on focus using [`igx
 
 > NOTE: In order for the component to work properly, it is crucial to set [`igxTextSelection`]({environment:angularApiUrl}/classes/igxtextselectiondirective.html) after the [`igxDateTimeEditor`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html) directive. The reason for this is both directives operate on the input `focus` event so text selection should happen after the mask is set.
 
-## Styling 
+## Styling
 For details check out the [`Input Group styling guide`](input-group.md#styling).
 <div class="divider--half"></div>
 
@@ -193,7 +193,7 @@ For details check out the [`Input Group styling guide`](input-group.md#styling).
 Related topics:
 * [Mask](mask.md)
 * [Label & Input](label-input.md)
-* [Reactive Forms Integration](input-group-reactive-forms.md)
+* [Reactive Forms Integration](angular-reactive-form-validation.md)
 
 
 Our community is active and always welcoming to new ideas.
