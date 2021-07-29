@@ -618,7 +618,7 @@ Notice that we also have row selection enabled and we preserve the selection whe
 }
 <div class="divider--half"></div>
 
-@@if (igxName === 'IgxHierarchicalGrid') {
+@@if (igxName === 'IgxGrid') {
 ### Improving UX in row drag scenarios
 
 Being able to obtain the row index which is currently below the cursor provides you with the opportunity to build rich custom functionalities and to improve the UX of your application. For example, you can change the drag ghost or display a drop indicator, based on the position of the dragged row over the grid. Another useful behavior that you can achieve that way is to scroll the grid up or down while dragging a row, when reaching the border of the grid.
@@ -847,8 +847,8 @@ class MyGridScrollComponent {
     ...
     private unsubInterval(): void {
         if (this.intervalSub) {
-        this.intervalSub.unsubscribe();
-        this.intervalSub = null;
+            this.intervalSub.unsubscribe();
+            this.intervalSub = null;
         }
     }
 }
