@@ -268,7 +268,7 @@ switch (column.field) {
 
 ## API References
 
-* [IgxGridCellComponent]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
+* [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
 * Column [pipeArgs]({environment:angularApiUrl}/classes/igxcolumncomponent.html#pipeArgs)
 * @@igComponent [locale]({environment:angularApiUrl}/classes/igxgridcomponent.html#locale)
 * Column [dataType]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype)

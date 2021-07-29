@@ -362,9 +362,7 @@ public clearSearch() {
 -   [clearSearch]({environment:angularApiUrl}/classes/@@igTypeDoc.html#clearsearch)
 -   [refreshSearch]({environment:angularApiUrl}/classes/@@igTypeDoc.html#refreshsearch)
 
-[`IgxGridCellComponent`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html) メソッド:
--   [highlightText]({environment:angularApiUrl}/classes/igxgridcellcomponent.html#highlighttext)
--   [clearHighlight]({environment:angularApiUrl}/classes/igxgridcellcomponent.html#clearhighlight)
+[`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html) メソッド:
 
 [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) プロパティ:
 -   [searchable]({environment:angularApiUrl}/classes/igxcolumncomponent.html#searchable)

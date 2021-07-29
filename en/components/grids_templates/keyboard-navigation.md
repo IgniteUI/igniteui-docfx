@@ -189,7 +189,7 @@ public childGridCreated(event: IGridCreatedEventArgs) {
 
 ```typescript
 public customKeydown(args: IGridKeydownEventArgs) {
-    const target: IgxGridCellComponent = args.target as IgxGridCellComponent;
+    const target: IgxGridCell = args.target as IgxGridCell;
     const evt: KeyboardEvent = args.event as KeyboardEvent;
     const type = args.targetType;
 

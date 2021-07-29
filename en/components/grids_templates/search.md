@@ -361,9 +361,7 @@ In this article we implemented our own search bar for the @@igComponent with som
 -   [clearSearch]({environment:angularApiUrl}/classes/@@igTypeDoc.html#clearsearch)
 -   [refreshSearch]({environment:angularApiUrl}/classes/@@igTypeDoc.html#refreshsearch)
 
-[`IgxGridCellComponent`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html) methods:
--   [highlightText]({environment:angularApiUrl}/classes/igxgridcellcomponent.html#highlighttext)
--   [clearHighlight]({environment:angularApiUrl}/classes/igxgridcellcomponent.html#clearhighlight)
+[`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html) methods:
 
 [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) properties:
 -   [searchable]({environment:angularApiUrl}/classes/igxcolumncomponent.html#searchable)

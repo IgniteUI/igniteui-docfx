@@ -161,7 +161,7 @@ expectedData = [
 ```
 
 > [!NOTE] 
-> 셀이 그리드 뷰 포트에 표시되지 않은 경우, [`selectedCells()`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#selectedcells)는 결과를 반환하지 않지만 [`getSelectedData()`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#getselecteddata)는 선택된 셀 데이터를 반환합니다.
+> [`selectedCells()`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#selectedcells) will DO return the correct result even if the cell is not visible in grids view port. [`getSelectedData()`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#getselecteddata) will also return the selected cell data.
 > [`getSelectedRanges(): GridSelectionRange[]`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#getselectedranges)는 키보드와 포인터 상호 작용으로 그리드에서 현재 선택된 범위를 반환합니다. 유형은 GridSelectionRange[]입니다.
 
 
@@ -245,7 +245,7 @@ Change the selection to see summaries of the currently selected range.
 /* selectionExample.component.ts */
 
 public handleRowSelection(args) {
-    const targetCell = args.cell as IgxGridCellComponent;
+    const targetCell = args.cell as IgxGridCell;
     if (!this.selection) {
         this.grid1.selectRows([targetCell.row.key], true);
     }
@@ -408,7 +408,7 @@ public handleRowSelectionChange(args) {
 
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 @@if (igxName !== 'IgxTreeGrid') {* [IgxGridRowComponent API]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRowComponent API]({environment:angularApiUrl}/classes/igxtreegridrowcomponent.html)}
-* [IgxGridCellComponent API]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
+* [IgxGridCell API]({environment:angularApiUrl}/classes/igxgridcell.html)
 * [@@igxNameComponent 스타일]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 
 ### 추가 리소스
