@@ -336,6 +336,7 @@
     - name: Export to Excel
       href: treegrid/export-excel.md
       new: false
+      updated: true
     - name: Multi-column Headers
       href: treegrid/multi-column-headers.md
       new: false
@@ -350,6 +351,7 @@
       new: false
     - name: Group By
       href: treegrid/groupby.md
+      updated: true
       new: false
     - name: Keyboard navigation
       href: treegrid/keyboard-navigation.md
@@ -400,7 +402,8 @@
           new: false
     - name: Export to Excel
       href: hierarchicalGrid/export-excel.md
-      new: true
+      new: false
+      updated: true
     - name: Row Drag
       href: hierarchicalgrid/row-drag.md
       new: false
