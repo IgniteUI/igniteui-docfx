@@ -250,7 +250,6 @@ Date Range Picker コンポーネントは、コア FormsModule [NgModel](https:
 </igx-date-range-picker>
 ```
 
-
 <code-view style="height:600px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/daterangepicker-validation" >
