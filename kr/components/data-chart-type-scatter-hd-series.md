@@ -11,9 +11,9 @@ The Data Chart is ... TODO ...
 
 ## Demo
 
-<code-view style="height: 400px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-scatter-hd-series"  
+<code-view style="height: 400px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-scatter-hd-series"
            github-src="charts/data-chart/type-scatter-hd-series">
 </code-view>
 

@@ -209,7 +209,7 @@ expectedData = [
 ```
 
 > [!NOTE]
-> セルがグリッドビューポートに表示されていない場合、[`selectedCells()`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#selectedcells) は結果を返しませんが、[`getSelectedData()`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#getselecteddata) は選択されたセルデータを返します。
+> [`selectedCells()`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#selectedcells) will DO return the correct result even if the cell is not visible in grids view port. [`getSelectedData()`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#getselecteddata) will also return the selected cell data.
 > [`getSelectedRanges(): GridSelectionRange[]`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#getselectedranges) は、キーボードとポインターの両方の操作からグリッドで現在選択されている範囲を返します。
 
 
@@ -262,14 +262,14 @@ $custom-grid-theme: igx-grid-theme(
 
 ### テーマの適用
 
-次にコンポーネントのスタイルに mixin を含め (アプリ スタイルにすることも可能)、@@igSelector がデフォルトのテーマの代わりに新しく作成されたテーマを使用するようになります。
+次にコンポーネントのスタイルにミックスインを含め (アプリ スタイルにすることも可能)、@@igSelector がデフォルトのテーマの代わりに新しく作成されたテーマを使用するようになります。
 
 ```scss
     @include igx-grid($custom-grid-theme);
 ```
 
  >[!NOTE]
- >コンポーネントが [`Emulated ViewEncapsulation`](../themes/component-themes.md#表示のカプセル化) を使用している場合、`::ng-deep` を使用してこのカプセル化に侵入する必要があります。
+ >コンポーネントが [`Emulated ViewEncapsulation`](../themes/sass/component-themes.md#表示のカプセル化) を使用している場合、`::ng-deep` を使用してこのカプセル化に侵入する必要があります。
  > アプリケーション内に存在する可能性のある他のグリッドに影響を与えないように、スタイルを `:host` セレクターの下で範囲指定します。
 
  ```scss
@@ -292,7 +292,6 @@ $custom-grid-theme: igx-grid-theme(
            iframe-src="{environment:demosBaseUrl}/grid/grid-multi-cell-selection-style" >
 </code-view>
 
-<div class="divider--half"></div>
 }
 
 @@if (igxName === 'IgxHierarchicalGrid'){
@@ -316,12 +315,14 @@ $custom-grid-theme: igx-grid-theme(
 
 }
 
+>[!NOTE]
+>このサンプルは、「テーマの変更」から選択したグローバル テーマに影響を受けません。
 
 ## API リファレンス
 
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 @@if (igxName !== 'IgxTreeGrid') {* [IgxGridRowComponent API]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRowComponent API]({environment:angularApiUrl}/classes/igxtreegridrowcomponent.html)}
-* [IgxGridCellComponent API]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
+* [IgxGridCell API]({environment:angularApiUrl}/classes/igxgridcell.html)
 * [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 
 ## その他のリソース

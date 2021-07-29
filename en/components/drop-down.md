@@ -70,7 +70,7 @@ export class MyDropDownComponent {
 ## Examples
 
 ### Predefined selected item
-Let's say we want to have a predefined selected item. One way to do this, is by handling the [onOpening]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#onopening) event of the drop-down component.
+Let's say we want to have a predefined selected item. One way to do this, is by handling the [opening]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#opening) event of the drop-down component.
 
 ```html
 <!-- dropdown.component.html -->
@@ -79,7 +79,7 @@ Let's say we want to have a predefined selected item. One way to do this, is by 
         [igxDropDownItemNavigation]="dropdown">
         Options
 </button>
-<igx-drop-down #dropdown (onOpening)="dropdown.setSelectedItem(0)">
+<igx-drop-down #dropdown (opening)="dropdown.setSelectedItem(0)">
     <igx-drop-down-item *ngFor="let item of items">
         {{ item.field }}
     </igx-drop-down-item>
@@ -234,7 +234,7 @@ You can see the results in the sample below:
 
 
 ### Drop Down as menu
-You can configure the drop-down to behave as a menu. To do this, set the [ISelectionEventArgs]({environment:angularApiUrl}/interfaces/iselectioneventargs.html) interface [cancel]({environment:angularApiUrl}/interfaces/iselectioneventargs.html#cancel) member to *true* in the [onSelection]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#onselection) event handler. In this way, the selected item is not preserved when opening the menu and previous selections get invalidated. Still, you can get the clicked item through the [newSelection]({environment:angularApiUrl}/interfaces/iselectioneventargs.html#newselection) member value in the event.
+You can configure the drop-down to behave as a menu. To do this, set the [ISelectionEventArgs]({environment:angularApiUrl}/interfaces/iselectioneventargs.html) interface [cancel]({environment:angularApiUrl}/interfaces/iselectioneventargs.html#cancel) member to *true* in the [selectionChanging]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#selectionchanging) event handler. In this way, the selected item is not preserved when opening the menu and previous selections get invalidated. Still, you can get the clicked item through the [newSelection]({environment:angularApiUrl}/interfaces/iselectioneventargs.html#newselection) member value in the event.
 
 ```html
 <!-- dropdown.component.html -->
@@ -247,7 +247,7 @@ You can configure the drop-down to behave as a menu. To do this, set the [ISelec
                 igxButton="icon">
             <igx-icon fontSet="material">more_vert</igx-icon>
         </button>
-        <igx-drop-down #menu (onSelection)="onSelection($event)">
+        <igx-drop-down #menu (selectionChanging)="selectionHandler($event)">
             <igx-drop-down-item *ngFor="let item of items" [value]="item.text">
                 <div>{{ item.text }}</div>
             </igx-drop-down-item>
@@ -279,7 +279,7 @@ export class MyMenuComponent {
         scrollStrategy: new NoOpScrollStrategy()
     };
 
-    public onSelection(eventArgs: ISelectionEventArgs) {
+    public selectionHandler(eventArgs: ISelectionEventArgs) {
         this.text = eventArgs.newSelection.value;
         eventArgs.cancel = true;
     }
@@ -416,7 +416,7 @@ The last step is to pass the custom drop-down theme:
 
 In order to style components for older browsers, like Internet Explorer 11, we have to use a different approach, since it doesn't support CSS variables.
 
-If the component is using the [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`. To prevent the custom theme to leak into other components, be sure to include the `:host` selector before `::ng-deep`:
+If the component is using the [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`. To prevent the custom theme to leak into other components, be sure to include the `:host` selector before `::ng-deep`:
 
  ```scss
 :host {
@@ -447,6 +447,9 @@ If the component is using the [`Emulated`](themes/component-themes.md#view-encap
 * [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 * [IgxDividerDirective]({environment:angularApiUrl}/classes/igxdividerdirective.html)
 * [IgxDividerDirective Styles]({environment:sassApiUrl}/index.html#function-igx-divider-theme)
+
+## Theming Dependencies
+* [IgxOverlay Theme]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 
 ## Additional Resources
 

@@ -20,4 +20,4 @@ Angular データ チャート コンポーネントでは、すべてのシリ�
 -   [散布図 - 等高線シリーズ](data-chart-type-scatter-contour-series.md) の [SampleScatterData](data-chart-data-sources-scatter.md)
 -   [散布バブル シリーズ](data-chart-type-scatter-bubble-series.md) の [SampleScatterStats](data-chart-data-sources-stats.md)
 -   [散布図 - マーカー シリーズ](data-chart-type-scatter-point-series.md) の [SampleScatterStats](data-chart-data-sources-stats.md)
--   [散布図 - 図形シリーズ](data-chart-type-shape-series.md) の [SampleShapeData](data-chart-data-sources-shape.md)
+-   [散布図 - シェイプ シリーズ](data-chart-type-shape-series.md) の [SampleShapeData](data-chart-data-sources-shape.md)

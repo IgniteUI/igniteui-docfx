@@ -11,9 +11,9 @@ Ignite UI for Angular 카테고리 차트 컴포넌트에서는 축은 축 기�
 
 ## 데모
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-axis-options"  
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-axis-options"
            github-src="charts/category-chart/axis-options">
 </code-view>
 

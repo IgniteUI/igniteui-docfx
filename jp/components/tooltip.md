@@ -102,7 +102,7 @@ avatar をターゲットにして、[`igxTooltipTarget`]({environment:angularAp
 </div>
 ```
 
-すべて適切に設定できると、[Tooltip デモ](#デモ) セクションで示されるデモサンプルを確認することができます。
+すべて適切に設定できると、[Tooltip デモ](#angular-tooltip-の例) セクションで示されるデモサンプルを確認することができます。
 
 ### 設定の表示/非表示
 ツールチップを表示または非表示にするまでの時間を制御する場合は、[`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) ディレクティブの [`showDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#showdelay) と [`hideDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hidedelay) プロパティを使用します。両プロパティは型 **number** でミリセカンドでタイムスパンを取得できます。
@@ -265,7 +265,7 @@ $dark-tooltip: igx-tooltip-theme(
 ```
 
 > [!NOTE]
-> [`IgxOverlayService`](overlay.md) を使用して表示される要素にテーマを提供するためのさまざまなオプションの詳細については、この[リンク](overlay.md#スタイル設定)をご覧ください。
+> [`IgxOverlayService`](overlay.md) を使用して表示される要素にテーマを提供するためのさまざまなオプションの詳細については、[オーバーレイ スタイリングのトピック](overlay-styling.md)をご覧ください。
 
 ### テーマを含む
 
@@ -279,7 +279,7 @@ $dark-tooltip: igx-tooltip-theme(
  @include igx-tooltip($dark-tooltip);
 ```
 >[!NOTE]
->コンポーネントが [`Emulated`](themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
+>コンポーネントが [`Emulated`](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
 
 ```scss
 :host {
@@ -298,7 +298,7 @@ $dark-tooltip: igx-tooltip-theme(
 ```
 
 >[!NOTE]
->コンポーネントが [`Emulated`](themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合においても、変数をオーバーライドするにはグローバル セレクターが必要なため、`:host` を使用する必要があります。
+>コンポーネントが [`Emulated`](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合においても、変数をオーバーライドするにはグローバル セレクターが必要なため、`:host` を使用する必要があります。
 
 ```scss
 :host {

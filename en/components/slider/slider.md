@@ -425,7 +425,7 @@ This is the final result from applying our new theme.
 
 
 ### Creating a component theme
-First we need to [create a custom palette](../themes/palette.md)
+First we need to [create a custom palette](../themes/palettes.md)
 Now let's create our component theme and pass that custom palette to it.
 ```scss
 // In app-slider-styling.component.scss

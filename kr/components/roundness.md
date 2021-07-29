@@ -11,7 +11,7 @@ _language: kr
 <div class="divider--half"></div>
 
 ### Overview
-Border radius as any other property is set through the theme schema like it's shown in the example bellow.
+Border radius as any other property is set through the theme schema like it's shown in the example below.
 
 ```scss
 $_light-button: (

@@ -8,7 +8,7 @@ _language: ja
 # トランザクション サービス
 
 [`トランザクション サービス`]({environment:angularApiUrl}/interfaces/transactionservice.html) は、基になるデータに影響せずに変更を蓄積するためにコンポーネントが使用できる組み込み可能なミドルウェアです ([Angular DI により](https://angular.io/guide/dependency-injection))。
-    <img src="https://cdn-images-1.medium.com/max/800/1*O-6DidcFW_XCSqgKRfXf_Q.png"
+    <img class="responsive-img" src="https://cdn-images-1.medium.com/max/800/1*O-6DidcFW_XCSqgKRfXf_Q.png"
         style="display:flex;max-height:400px;margin:auto auto 20px auto;" />
 
 > [!NOTE]

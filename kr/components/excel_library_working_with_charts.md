@@ -10,9 +10,9 @@ The Infragistics Excel Engine's [`WorksheetChart`]({environment:dvApiBaseUrl}/pr
 
 ## Demo
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/excel/excel-library-working-with-charts"  
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/excel/excel-library-working-with-charts"
            github-src="excel/excel-library/working-with-charts">
 </code-view>
 

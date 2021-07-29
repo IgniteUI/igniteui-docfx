@@ -10,9 +10,9 @@ The Infragistics Excel Library allows you to work with spreadsheet data using fa
 
 ## Demo
 
-<code-view style="height: 100px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/excel/excel-library-overview"  
+<code-view style="height: 100px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/excel/excel-library-overview"
            github-src="excel/excel-library/overview">
 </code-view>
 

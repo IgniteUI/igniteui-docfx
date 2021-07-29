@@ -8,23 +8,20 @@ _language: ja
 
 # Angular 軸の注釈
 
-Ignite UI for Angular データチャート コンポーネントでは、軸に注釈を追加して、その軸上のさまざまな点に特定の値を表示することができます。これによって最終的なシリーズ値、オーバーレイ値、チャート内の十字線に対応する値などを可視化するのに役立ちます。
+Ignite UI for Angular データ チャート コンポーネントでは、軸に注釈を追加して、その軸上のさまざまな点に特定の値を表示することができます。これによって最終的なシリーズ値、オーバーレイ値、チャート内の十字線に対応する値などを可視化するのに役立ちます。
 
 ## Angular 軸の注釈の例
 
-<div class="sample-container loading" style="height: 450px">
-    <iframe id="data-chart-axis-locations-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-axis-annotations' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular 軸の注釈の例"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-axis-locations-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
-    </button>
-
-
-</div>
+<code-view style="height: 450px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-axis-annotations"
+           alt="Angular 軸の注釈の例"
+           github-src="charts/data-chart/axis-annotations">
+</code-view>
 
 <div class="divider--half"></div>
 
-以下は、Ignite UI for Angular データチャートで軸の注釈をサポートするシリーズとレイヤーです。
+以下は、Ignite UI for Angular データ チャートで軸の注釈をサポートするシリーズとレイヤーです。
 
 -   [`IgxCrosshairLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcrosshairlayercomponent.html)
 -   [`IgxFinalValueLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinalvaluelayercomponent.html)
@@ -42,7 +39,7 @@ Ignite UI for Angular データチャート コンポーネントでは、軸に
 
 ## コード例
 
-このコードは、各レイヤーとそれに対して有効になっている軸注釈を使用したオーバーレイを使用して Ignite UI for Angular データチャートを作成する方法を示します。ここでは、[`IgxFinalValueLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinalvaluelayercomponent.html) も黄色のテキスト色になるようにカスタマイズされています。
+このコードは、各レイヤーとそれに対して有効になっている軸注釈を使用したオーバーレイを使用して Ignite UI for Angular データ チャートを作成する方法を示します。ここでは、[`IgxFinalValueLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinalvaluelayercomponent.html) も黄色のテキスト色になるようにカスタマイズされています。
 
 ```html
 <igx-data-chart [dataSource]="data" width="100%" height="500px">

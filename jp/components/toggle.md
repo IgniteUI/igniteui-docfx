@@ -202,6 +202,9 @@ public offsetToggle() {
 * [IgxOverlayService]({environment:angularApiUrl}/classes/igxoverlayservice.html)
 * [igxNavigationService]({environment:angularApiUrl}/classes/igxnavigationservice.html)
 
+## テーマの依存関係
+* [IgxOverlay テーマ]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+
 
 ## その他のリソース
 <div class="divider--half"></div>

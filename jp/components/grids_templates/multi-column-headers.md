@@ -279,14 +279,14 @@ $custom-theme: igx-grid-theme(
     $header-border-color: rgba(0, 0, 0, 0.08)
 );
 ```
-最後の手順は、それぞれのテーマを持つコンポーネント mixins を**含める**ことです。 
+最後の手順は、それぞれのテーマを持つコンポーネント ミックスインを**含める**ことです。 
 
 ```scss
 @include igx-grid($custom-theme);
 ```
 
 >[!NOTE]
- >コンポーネントが [`Emulated`](../themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
+ >コンポーネントが [`Emulated`](../themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
 
  ```scss
 :host {
@@ -322,11 +322,11 @@ $custom-theme: igx-grid-theme(
 ```
 
 >[!NOTE]
->`igx-color` と `igx-palette` は色の生成や取得のための関数です。使い方の詳細については [`パレット`](../themes/palette.md) のトピックをご覧ください。
+>`igx-color` と `igx-palette` は色の生成や取得のための関数です。使い方の詳細については [`パレット`](../themes/palettes.md) のトピックをご覧ください。
 
 ### スキーマの使用
 
-テーマ エンジンを使用して[**スキーマ**](../themes/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
+テーマ エンジンを使用して[**スキーマ**](../themes/sass/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
 
 すべてのコンポーネントに提供されている 2 つの定義済みスキーマ (ここでは [`_light-grid`]({environment:sassApiUrl}/index.html#variable-_light-grid)) の 1 つを拡張します。  
 
@@ -392,6 +392,9 @@ $custom-theme: igx-grid-theme(
 </code-view>
 
 }
+
+>[!NOTE]
+>このサンプルは、「テーマの変更」から選択したグローバル テーマに影響を受けません。
 
 ## 既知の問題と制限
 

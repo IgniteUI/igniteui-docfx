@@ -39,7 +39,7 @@ const overlayId = overlay.attach(dummyElement, overlaySettings);
 ``` 
 <div class="divider"></div>
 
-To change the scrolling strategy, used by the overlay, override the [`scrollStrategy`]({environment:angularApiUrl}/interfaces/iscrollstrategy.html) property of the [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) object passed to the overlay:
+To change the scrolling strategy, used by the overlay, override the [`scrollStrategy`]({environment:angularApiUrl}/interfaces/iscrollstrategy.html) property of the [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) object passed to the overlay. If a strategy was already attached you should detach the previously generated ID:
 ```typescript
 // overlaySettings is an existing object of type OverlaySettings
 // to override the scroll strategy
@@ -47,7 +47,8 @@ const newOverlaySettings = Object.assing({}, overlaySettings);
 Object.assing(newOverlaySettings, {
     scrollStrategy: new CloseScrollStrategy()
 })
-overlay.show(overlayId, newOverlaySettings); 
+const overlayId = overlay.attach(dummyElement, newOverlaySettings);
+overlay.show(overlayId);
 ```
 <div class="divider--half"></div>
 

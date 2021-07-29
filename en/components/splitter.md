@@ -182,7 +182,7 @@ The next step is to pass the custom splitter theme:
 
 In order to style components for Internet Explorer 11, we have to use different approach, since it doesn't support CSS variables. 
 
-If the component is using an [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`. On the other side, in order to prevent the custom theme to leak to other components, be sure to include the `:host` selector before `::ng-deep`:
+If the component is using an [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`. On the other side, in order to prevent the custom theme to leak to other components, be sure to include the `:host` selector before `::ng-deep`:
 
 ```scss
 :host {
@@ -212,6 +212,11 @@ This is the final result from applying your new theme.
 * [IgxSplitterComponent Styles]({environment:sassApiUrl}/index.html#function-igx-splitter-theme)
 
 <div class="divider--half"></div>
+
+## Theming Dependencies
+* [IgxDropDown Theme]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme)
+* [IgxIcon Styles]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+
 Our community is active and always welcoming to new ideas.
 * [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

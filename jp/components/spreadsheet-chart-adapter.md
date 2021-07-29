@@ -12,10 +12,12 @@ Angular Spreadsheet コンポーネントを使用して [`IgxSpreadsheetCompone
 
 ## Angular Spreadsheet チャート アダプターの例
 
-<div class="sample-container loading" style="height: 500px">
-    <iframe id="spreadsheet-adapter-iframe" src='{environment:dvDemosBaseUrl}/excel/spreadsheet-adapter-chart' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Spreadsheet チャート アダプターの例"></iframe>
-</div>
-
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/excel/spreadsheet-adapter-chart"
+           alt="Angular Spreadsheet チャート アダプターの例"
+           github-src="excel/spreadsheet/adapter-chart">
+</code-view>
 
 <div class="divider--half"></div>
 

@@ -91,7 +91,7 @@ This is how the phone field with hint looks:
 Our inputs could be styled differently by using the [`type`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html#type) property of the [`igxInputGroup`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) component. Currently we support four different ways of styling: line (the default one), box, border and search. This is how they look:
 
 
-<code-view style="height:520px" 
+<code-view style="height:695px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-entries/input-group-sample-5" >
 </code-view>

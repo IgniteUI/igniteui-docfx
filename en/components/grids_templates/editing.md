@@ -1,3 +1,10 @@
+<style>
+    /* Fix for the overlapping right side-affix when the screen is shrinked */
+    .table-responsive {
+        width:63vw;
+    }
+</style>
+
 @@if (igxName === 'IgxGrid') {
 ---
 title: Angular Grid Editing | Data Manipulation | Ignite UI for Angular | Infragistics
@@ -27,7 +34,7 @@ _canonicalLink: grid/editing
 Ignite UI for Angular @@igComponent component provides an easy way to perform data manipulation operations like creating, updating, and deleting records. The data manipulation phases are: [Cell Editing](cell-editing.md), [Row Editing](row-editing.md), and [Batch Editing](batch-editing.md). The @@igComponent gives you a powerful public API which allows you to customize the way these operations are performed. Additionally, **Cell editing** exposes several default editors based on the column data type, that could be easily customized via [igxCellEditor directive](cell-editing.md#cell-editing-templates) or [igxRow directives](row-editing.md#customizing-row-editing-overlay).
 
 ## Setup
-In order to specify which edit mode should be enabled, the @@igComponent exposes the following boolean properties - [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) and [`rowEditable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#roweditable).
+In order to specify which edit mode should be enabled, the @@igComponent exposes the following boolean properties - [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) and [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable).
 
 Property **editable** enables you to specify the following options:
 - **false** - the editing for the corresponding column will be disabled; /default value/
@@ -53,6 +60,9 @@ In the @@igComponent if you set rowEditable property to true, and editable prope
  - For `string` data type, default template is using [igxInput]({environment:angularApiUrl}/classes/igxinputdirective.html)
  - For `number` data type, default template is using [igxInput]({environment:angularApiUrl}/classes/igxinputdirective.html) type="number", so if you try to update cell to a value which can not be parsed to a number your change is going to be discarded, and the value in the cell will be set to 0.
  - For `date` data type, default template is using [igxDatePicker]({environment:angularApiUrl}/classes/igxdatepickercomponent.html)
+ - For `dateTime` data type, default template is using [IgxDateTimeEditor directive]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html). This editor will give you a mask directions for the input elements part of the DateTime object.
+ - For `date` data type, default template is using [IgxDatePicker component]({environment:angularApiUrl}/classes/igxdatepickercomponent.html). 
+ - For `time` -  data type, default template is using [IgxTimePicker component]({environment:angularApiUrl}/classes/igxtimepickercomponent.html). 
  - For `boolean` data type, default template is using [igxCheckbox]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html)
  - For `currency` data type, default template is using [IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) with prefix/suffix configuration based on application or grid locale settings. 
  - For `percent` data type, default template is using [IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) with suffix element that shows a preview of the edited value in percents. 
@@ -76,7 +86,7 @@ The grid exposes a wide array of events that provide greater control over the ed
 
 ### Event cancelation
  - `RowEditEnter` - Neither Row nor Cell will enter edit mode.
- - `CellEditEnter` - Prevents entering cell edit. If [`rowEditable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#roweditable) is enabled, row edit will be triggered, although cell edit will remain forbidden.
+ - `CellEditEnter` - Prevents entering cell edit. If [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) is enabled, row edit will be triggered, although cell edit will remain forbidden.
  - `CellEdit` - Allowed Cell/Row edit, hitting **Done** button or **Enter** won't commit the value or row transaction. Cell editing and Row editing won't be closed until **Cancel** button is clicked.
  - `RowEdit` - Committing cell is possible, but not the whole row. The row will stay in edit mode and the row transaction will be considered open. Hitting **Done** does not commit or close the row. **Cancel** button closes the editing process and the transaction without committing the changes.
 
@@ -135,9 +145,9 @@ public onSorting(event: ISortingEventArgs) {
 
 ## API References
 
-* [IgxGridCellComponent]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
+* [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
 * [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
-@@if (igxName !== 'IgxTreeGrid') {* [IgxGridRowComponent]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRowComponent]({environment:angularApiUrl}/classes/igxtreegridrowcomponent.html)}
+@@if (igxName !== 'IgxTreeGrid') {* [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)}
 * [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
 * [IgxDatePickerComponent]({environment:angularApiUrl}/classes/igxdatepickercomponent.html)
 * [IgxDatePickerComponent Styles]({environment:sassApiUrl}/index.html#function-igx-date-picker-theme)

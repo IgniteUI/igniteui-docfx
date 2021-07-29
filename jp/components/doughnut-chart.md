@@ -1,5 +1,5 @@
 ---
-title: ドーナツ チャート | 階層データの可視化 | インフラジスティックス
+title: Angular ドーナツ チャート | 階層データの可視化 | インフラジスティックス
 _description: インフラジスティックスの Angular ドーナツ チャート コントロールを使用して、複数の変数を同心円で表示し、階層データを可視化します。詳細については、Ignite UI for Angular ドーナツ チャートのサンプルを参照してください。
 _keywords: Angular charts, doughnut chart, Ignite UI for Angular, Infragistics, data binding, slice selection, slice explosion, animation, multiple rings, Angular チャート, ドーナツ チャート, データ バインディング, スライス選択, スライス切り離し, アニメーション, 複数リング, インフラジスティックス
 mentionedTypes: ['XamDoughnutChart']
@@ -12,15 +12,12 @@ Ignite UI for Angular Doughnut Chart コンポーネントは円チャートと�
 
 ## Angular ドーナツ チャートの例
 
-<div class="sample-container loading" style="height: 450px">
-    <iframe id="doughnut-chart-overview-iframe" src='{environment:dvDemosBaseUrl}/charts/doughnut-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular ドーナツ チャートの例"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-overview-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
-    </button>
-
-
-</div>
+<code-view style="height: 450px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/doughnut-chart-overview"
+           alt="Angular ドーナツ チャートの例"
+           github-src="charts/doughnut-chart/overview">
+</code-view>
 
 <div class="divider--half"></div>
 
@@ -39,11 +36,7 @@ npm install --save igniteui-angular-charts
 
 ## モジュールの要件
 
-Angular ドーナツ チャートを作成するには、以下のモジュールが必要です。<!-- Angular, React, WebComponents --> <!-- end: Angular, React, WebComponents --><!-- Blazor -->モジュールはアプリケーションのエントリ ポイントに登録する必要があります。
-
--   DoughnutChartModule
--   RingSeriesModule
-    <!-- end: Blazor -->
+Angular ドーナツ チャートを作成するには、以下のモジュールが必要です。
 
 ```ts
 // app.module.ts
@@ -94,32 +87,31 @@ this.data = [
 
 ドーナツ チャート コンポーネントは、複数のリングを、異なるデータ項目にバインド可能な各リングと同時に表示できます。または共通のデータ ソースを共有できます。たとえば、以下の 2 つのデータ ソースは、複数のリングにバインドするために使用されます。
 
-```ts
-public Months: any[];
-public Seasons: any[];
-/// ...
+    ```ts
+    public Months: any[];
+    public Seasons: any[];
+    /// ...
 
-this.Months = [
-    { Value: 1, Label: "December" },
-    { Value: 1, Label: "January" },
-    { Value: 1, Label: "February" },
-    { Value: 1, Label: "March" },
-    { Value: 1, Label: "April" },
-    { Value: 1, Label: "May" },
-    { Value: 1, Label: "June" },
-    { Value: 1, Label: "July" },
-    { Value: 1, Label: "August" },
-    { Value: 1, Label: "September" },
-    { Value: 1, Label: "October" },
-    { Value: 1, Label: "November" },
-];
-this.Seasons = [
-    { Value: 4, Label: "Winter" },
-    { Value: 4, Label: "Spring" },
-    { Value: 4, Label: "Summer" },
-    { Value: 4, Label: "Fall" },
-];
-```
+    this.Months = [
+        { Value: 1, Label: "December" },
+        { Value: 1, Label: "January" },
+        { Value: 1, Label: "February" },
+        { Value: 1, Label: "March" },
+        { Value: 1, Label: "April" },
+        { Value: 1, Label: "May" },
+        { Value: 1, Label: "June" },
+        { Value: 1, Label: "July" },
+        { Value: 1, Label: "August" },
+        { Value: 1, Label: "September" },
+        { Value: 1, Label: "October" },
+        { Value: 1, Label: "November" },
+    ];
+    this.Seasons = [
+        { Value: 4, Label: "Winter" },
+        { Value: 4, Label: "Spring" },
+        { Value: 4, Label: "Summer" },
+        { Value: 4, Label: "Fall" },
+    ];
 
 ```html
  <igx-doughnut-chart width="100%" height="100%">
@@ -144,15 +136,11 @@ this.Seasons = [
 
 ## 複数リング サンプル
 
-<div class="sample-container loading" style="height: 450px">
-    <iframe id="doughnut-chart-rings-iframe" data-src='{environment:dvDemosBaseUrl}/charts/doughnut-chart-rings' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-rings-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
-    </button>
-
-
-</div>
+<code-view style="height: 450px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/doughnut-chart-rings"
+           github-src="charts/doughnut-chart/rings">
+</code-view>
 
 <div class="divider--half"></div>
 
@@ -172,15 +160,11 @@ this.Seasons = [
 
 ## スライス選択のサンプル
 
-<div class="sample-container loading" style="height: 450px">
-    <iframe id="doughnut-chart-selection-iframe" data-src='{environment:dvDemosBaseUrl}/charts/doughnut-chart-selection' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-selection-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
-    </button>
-
-
-</div>
+<code-view style="height: 450px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/doughnut-chart-selection"
+           github-src="charts/doughnut-chart/selection">
+</code-view>
 
 <div class="divider--half"></div>
 
@@ -204,15 +188,11 @@ this.Seasons = [
 
 ## スライスの分割のサンプル
 
-<div class="sample-container loading" style="height: 450px">
-    <iframe id="doughnut-chart-explosion-iframe" data-src='{environment:dvDemosBaseUrl}/charts/doughnut-chart-explosion' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="doughnut-chart-explosion-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
-    </button>
-
-
-</div>
+<code-view style="height: 450px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/doughnut-chart-explosion"
+           github-src="charts/doughnut-chart/explosion">
+</code-view>
 
 <div class="divider--half"></div>
 <!-- end: Angular, React, WebComponents -->
@@ -223,22 +203,18 @@ this.Seasons = [
 
 ## 凡例サンプル
 
-<div class="sample-container loading" style="height: 450px">
-    <iframe id="doughnut-chart-legend-iframe" data-src='{environment:dvDemosBaseUrl}/charts/doughnut-chart-legend' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="doughnut-chart-legend-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
-    </button>
-
-
-</div>
+<code-view style="height: 450px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/doughnut-chart-legend"
+           github-src="charts/doughnut-chart/legend">
+</code-view>
 
 ## アニメーション
 
 チャートの半径をスケールする `radiusFactor` プロパティを設定してドーナツ チャートをアニメーション化できます。
 `startAngle` プロパティを設定してチャートが回転する間、チャートの角度が増加し続けるようにします。
 
-以下のコードでは、radiusFactor がチャートをサイズの 0.25％ 増加し、startAngle がチャートを 1 度回転しています。radiusFactor と startAngle が最大値に達すると、アニメーション フラグをリセットし、間隔をクリアしてアニメーションを停止します。
+以下のコードでは、radiusFactor がチャートをサイズの 0.25% 増加し、startAngle がチャートを 1 度回転しています。radiusFactor と startAngle が最大値に達すると、アニメーション フラグをリセットし、間隔をクリアしてアニメーションを停止します。
 
 ```ts
 window.setInterval(() => this.tick(), 15);
@@ -259,14 +235,10 @@ public tick(): void {
 }
 ```
 
-## サンプル
+## アニメーションのサンプル
 
-<div class="sample-container loading" style="height: 450px">
-    <iframe id="doughnut-chart-animation-iframe" data-src='{environment:dvDemosBaseUrl}/charts/doughnut-chart-animation' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="doughnut-chart-animation-iframe" data-demos-base-url="environment:dvDemosBaseUrl}">StackBlitz で表示
-    </button>
-
-
-</div>
+<code-view style="height: 450px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/doughnut-chart-animation"
+           github-src="charts/doughnut-chart/animation">
+</code-view>

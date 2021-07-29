@@ -2,7 +2,7 @@
 title: Angular マップ | データ可視化ツール | 複数のデータソースのバインディング | インフラジスティックス
 _description: インフラジスティックスの Angular JavaScript マップを使用して、複数の地理的シリーズオブジェクトを追加し、カスタム データソースを地理空間データとオーバーレイすることができます。Ignite UI for Angular マップ チュートリアルを是非お試しください!
 _keywords: Angular map, geographic series, Ignite UI for Angular, Infragistics, data binding, Angular マップ, 地理的シリーズ, データ バインディング, インフラジスティックス
-mentionedTypes: ['XamGeographicMap']
+mentionedTypes: ['XamGeographicMap', 'SeriesViewer']
 _language: ja
 ---
 
@@ -12,14 +12,12 @@ Ignite UI for Angular マップでは、カスタム データソースを地理
 
 ## Angular 複数データ ソースのバインドの例
 
-<div class="sample-container loading" style="height: 500px">
-    <iframe id="geo-map-binding-multiple-sources-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-binding-multiple-sources' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular 複数データ ソースのバインドの例"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="geo-map-binding-multiple-sources-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
-    </button>
-</div>
-
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-binding-multiple-sources"
+           alt="Angular 複数データ ソースのバインドの例"
+           github-src="maps/geo-map/binding-multiple-sources">
+</code-view>
 
 <div class="divider--half"></div>
 
@@ -83,7 +81,7 @@ Ignite UI for Angular マップに表示するすべての地理的シリーズ�
 
 ## フライトのオーバーレイ
 
-主要空港間のフライト接続を持つ最初の [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) オブジェクトを作成し、Ignite UI for Angular マップの [`IgxSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriescomponent.html) コレクションに追加します。
+主要空港間のフライト接続を持つ最初の [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) オブジェクトを作成し、Ignite UI for Angular マップの Series コレクションに追加します。
 
 ```html
 <igx-geographic-polyline-series  #polylineSeries
@@ -97,7 +95,7 @@ Ignite UI for Angular マップに表示するすべての地理的シリーズ�
 
 ## グリッド線のオーバーレイ
 
-地理グリッド線を使用して2番目の [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) オブジェクトを作成し、それを XamGeographicMap の [`IgxSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriescomponent.html) コレクションに追加します。
+地理グリッド線を使用して2番目の [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) オブジェクトを作成し、それを XamGeographicMap の Series コレクションに追加します。
 
 ```html
   <igx-geographic-polyline-series  #polylineSeries
@@ -112,7 +110,7 @@ Ignite UI for Angular マップに表示するすべての地理的シリーズ�
 
 ## 空港のオーバーレイ
 
-空港ポイントを使用して [`IgxGeographicSymbolSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html) オブジェクトを作成し、それを Ignite UI for Angular 地理マップの [`IgxSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriescomponent.html) コレクションに追加します。
+空港ポイントを使用して [`IgxGeographicSymbolSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html) オブジェクトを作成し、それを Ignite UI for Angular 地理マップの Series コレクションに追加します。
 
 ```html
 <igx-geographic-symbol-series  #symbolSeries

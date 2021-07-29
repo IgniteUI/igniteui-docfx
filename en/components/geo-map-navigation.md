@@ -1,7 +1,7 @@
 ---
 title: Angular Map | Data Visualization Tools | Map Navigation | Infragistics
 _description: Navigate Infragistics' Angular map by panning right and left and zooming horizontally and vertically using mouse or touch. Learn about Ignite UI for Angular map's navigation capabilities!
-_keywords: Angular map, navigations, Ignite UI for Angular, Infragistics
+_keywords: Angular map, navigation, Ignite UI for Angular, Infragistics
 mentionedTypes: ['XamGeographicMap']
 ---
 
@@ -11,14 +11,12 @@ Navigation in the [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/produ
 
 ## Angular Navigating Map Content Example
 
-<div class="sample-container loading" style="height: 500px">
-    <iframe id="geo-map-navigation-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-navigation' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Navigating Map Content Example"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="geo-map-navigation-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
-    </button>
-    
-</div>
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-navigation"
+           alt="Angular Navigating Map Content Example"
+           github-src="maps/geo-map/navigation">
+</code-view>
 
 <div class="divider--half"></div>
 

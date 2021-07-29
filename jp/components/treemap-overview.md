@@ -11,15 +11,14 @@ Ignite UI for Angular ツリーマップは、ネストされた一連のノー�
 
 ## Angular ツリーマップの例
 
-<div class="sample-container loading" style="height: 600px">
-    <iframe id="tree-map-overview-iframe" src='{environment:dvDemosBaseUrl}/charts/tree-map-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular ツリーマップの例"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="tree-map-overview-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
-    </button>
+次のサンプルは、ツリーマップコンポーネントでノードを作成およびレイアウトする方法を示しています。
 
-
-</div>
+<code-view style="height: 600px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/tree-map-overview"
+           alt="Angular ツリーマップの例"
+           github-src="charts/tree-map/overview">
+</code-view>
 
 <div class="divider--half"></div>
 
@@ -78,10 +77,7 @@ npm install --save igniteui-angular-charts
 
 ## モジュールの要件
 
-[`IgxTreemapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtreemapcomponent.html) を作成するには、以下のモジュールが必要です。<!-- Angular, React, WebComponents --> <!-- end: Angular, React, WebComponents --><!-- Blazor -->モジュールはアプリケーションのエントリ ポイントに登録する必要があります。
-
--   TreemapModule
-    <!-- end: Blazor -->
+[`IgxTreemapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtreemapcomponent.html) を作成するには、以下のモジュールが必要です。
 
 ```ts
 import { IgxTreemapModule } from "igniteui-angular-charts";

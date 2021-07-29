@@ -3,6 +3,7 @@ title: Ignite UI for Angular アクセシビリティ準拠 | Ignite UI for Angu
 _description: Ignite UI for Angular のアクセシビリティ準拠 - 第 508 条の遵守、WCAG および ARIA。
 _keywords: アクセシビリティ準拠, angular, ignite ui for angular, インフラジスティックス
 ---
+
 <style>
 .greenCheck {
   content:url("../../images/general/greenCheck.png");
@@ -84,7 +85,8 @@ _keywords: アクセシビリティ準拠, angular, ignite ui for angular, イ�
 |<span class="redCheck" />|コントロール/コンポーネント: 一部の種類のアクションを実行しない限り、完全にはユーザー補助に対応しません。||
 |'空白'|この特定の規則はコントロールに適用されません。||
 
-> [!WARNING] 上記のテーブルは、Ignite UI for Angular テーマ ライブラリの*デフォルト テーマ*にのみ関連しています。カスタム テーマ、タイポグラフィ、およびアニメーションと色に関連する視覚的な変更に関しては、チェックリストへの準拠が異なる場合があります。
+> [!WARNING] 
+> 上記のテーブルは、Ignite UI for Angular テーマ ライブラリの*デフォルト テーマ*にのみ関連しています。カスタム テーマ、タイポグラフィ、およびアニメーションと色に関連する視覚的な変更に関しては、チェックリストへの準拠が異なる場合があります。
 
  ### 法令遵守情報
 
@@ -165,7 +167,8 @@ _keywords: アクセシビリティ準拠, angular, ignite ui for angular, イ�
 |<span class="redCheck" />|コントロール/コンポーネント: 一部の種類のアクションを実行しない限り、完全にはユーザー補助に対応しません。||
 |'空白'|この特定の規則はコントロールに適用されません。||
 
-> [!WARNING] 上記のテーブルは、Ignite UI for Angular テーマ ライブラリの*デフォルト テーマ*にのみ関連しています。カスタム テーマ、タイポグラフィ、およびアニメーションと色に関連する視覚的な変更に関しては、チェックリストへの準拠が異なる場合があります。
+> [!WARNING] 
+> 上記のテーブルは、Ignite UI for Angular テーマ ライブラリの*デフォルト テーマ*にのみ関連しています。カスタム テーマ、タイポグラフィ、およびアニメーションと色に関連する視覚的な変更に関しては、チェックリストへの準拠が異なる場合があります。
 
 ### 法令遵守情報
 
@@ -213,7 +216,7 @@ _keywords: アクセシビリティ準拠, angular, ignite ui for angular, イ�
 
 #### 手順 2 - それぞれの方向の[テーマ エンジン](../themes/index.md)に通知します。
 
-そのためには、[igx-core]({environment:sassApiUrl}/index.html#mixin-igx-core) mixin の `$direction` パラメーターを設定します。
+そのためには、[igx-core]({environment:sassApiUrl}/index.html#mixin-igx-core) ミックスインの `$direction` パラメーターを設定します。
 
 ```scss 
 @include igx-core($direction: rtl);
@@ -227,7 +230,7 @@ _keywords: アクセシビリティ準拠, angular, ignite ui for angular, イ�
 
 **CSS ベース**のプロジェクトの場合、`node_modules/igniteui-angular/styles/igniteui-angular-rtl.css` を `angular.json` スタイル コレクションに追加します。
 
-**Sass ベース**のプロジェクトの場合、ルート スタイルシートの `igx-core` mixin に `$direction` を渡します。
+**Sass ベース**のプロジェクトの場合、ルート スタイルシートの `igx-core` ミックスインに `$direction` を渡します。
 
 例:
 

@@ -1,6 +1,6 @@
 ---
 title: Angular マップ | データ可視化ツール | シェイプ スタイリング | 条件付き書式 | インフラジスティックス
-_description: インフラジスティックスの Angular マップの図形シリーズにカスタム スタイルを適用する方法について説明します。Ignite UI for Angular マップ チュートリアルを是非お試しください!
+_description: インフラジスティックスの Angular マップのシェイプ シリーズにカスタム スタイルを適用する方法について説明します。Ignite UI for Angular マップ チュートリアルを是非お試しください!
 _keywords: Angular map, custom styling, Ignite UI for Angular, Infragistics, conditional formatting, shape styling, Angular マップ, カスタム スタイル設定, インフラジスティックス, 条件付き書式, シェイプ スタイリング
 mentionedTypes: ['XamGeographicMap', 'GeographicShapeSeries']
 _language: ja
@@ -12,14 +12,12 @@ _language: ja
 
 ## Angular 地理シェイプ シリーズのスタイル設定の例
 
-<div class="sample-container loading" style="height: 500px">
-    <iframe id="geo-map-shape-styling-iframe" src='{environment:dvDemosBaseUrl}/maps/geo-map-shape-styling' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular 地理シェイプ シリーズのスタイル設定の例"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="geo-map-shape-styling-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
-    </button>
-</div>
-
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-shape-styling"
+           alt="Angular 地理シェイプ シリーズのスタイル設定の例"
+           github-src="maps/geo-map/map-shape-styling">
+</code-view>
 
 <div class="divider--half"></div>
 
@@ -34,7 +32,7 @@ import { IgxShapeDataSource } from 'igniteui-angular-core';
 import { IgxShapefileRecord } from 'igniteui-angular-core';
 ```
 
-次のコード例は、シェイプ スタイリングを設定する 4 つの異なる方法を提供する [シェイプ スタイリング ユーティリティ](geo-map-resources-shape-styling-utility.md) ファイルを使用していることに注意してください。
+次のコード例は、シェイプ スタイリングを設定する 4 つの異なる方法を提供する[シェイプ スタイリング ユーティリティ](geo-map-resources-shape-styling-utility.md) ファイルを使用していることに注意してください。
 
 -   [シェイプ比較スタイリング](#シェイプ比較スタイリング)
 -   [シェイプ ランダム スタイリング](#シェイプ-ランダム-スタイリング)

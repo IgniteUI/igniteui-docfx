@@ -4,18 +4,29 @@ _description: Information on using the Licensed Ignite UI npm package
 _keywords: npm package license, ignite ui license feed, licensing
 ---
 
-# License Agreements
+# License FAQ and Installation
+## License Agreements
 It is important to know all the [legal terms and conditions](https://www.infragistics.com/legal/license/igultimate-la) regarding the products that you purchase and use.
 PLEASE NOTE: We have updated our license terms and subscription model.
 
-If you are building a **commercial product** or your license [has expired](http://www.infragistics.com/renewal), you will need to [acquire a commercial license](https://www.infragistics.com/how-to-buy/product-pricing). This will enable you to use our private npm feed hosted on https://packages.infragistics.com/npm/js-licensed/ for development. There you will find the latest versions of the Ignite UI for Angular packages. If you have a valid commercial license, you can use this private feed and you will have access to the full version of Ignite UI for Angular.
+If your trial has ended or your subscription [has expired](http://www.infragistics.com/renewal), each developer on your team using Ignite UI will need to [purchase](https://www.infragistics.com/how-to-buy/product-pricing) a subscription. This will enable you to use our private npm feed hosted on <https://packages.infragistics.com/npm/js-licensed/> for development. There you will find the latest versions of the Ignite UI for Angular packages. If you have a current subscription, you can use this private feed and you will have access to the full version of Ignite UI for Angular.
 
-If you are building a **non-commercial product** [contact us](https://www.infragistics.com/about-us/contact-us) and we will provide you with the appropriate license.
+For detailed explanation of the Ignite UI license agreement and terms of use, [click here](https://www.infragistics.com/legal/license/igultimate-la).
+
+Infragistics offers free, non-commercial, not-for-resale (NFR) licenses for the following:
+
+  - If you are part of a developer program like the Microsoft MVP, Microsoft Regional Director, Google Developer Expert, etc.  
+  - If you are a primary, secondary or university student, or an academic institution, or a professor.  
+
+If you qualify for a free, non-commercial, NFR license or if you have any license questions, please [contact us](https://www.infragistics.com/about-us/contact-us).
 
 ## Ignite UI for Angular npm packages - Using the Private npm feed
 Npm is the most popular package manager and is also the default one for the runtime environment Node.js. It is highly adopted and is one of the fastest and easiest ways to manage the packages that you depend on in your project. For more information on how npm works, read the official [npm documentation](https://docs.npmjs.com/).
 
-Infragistics Ignite UI for Angular is available as a npm package and you can add it as a dependency to your project in a [`few easy steps`](cli/step-by-step-guide.md). Choosing this approach will not require configuring npm. By installing this package you will start using the [Ignite UI for Angular Trial version](https://www.infragistics.com/products/ignite-ui-angular) of the product.
+Infragistics Ignite UI for Angular is available as a npm package and you can add it as a dependency to your project in a [few easy steps](cli/step-by-step-guide.md). Choosing this approach will not require configuring npm. By installing this package you will start using the [Ignite UI for Angular Trial version](https://www.infragistics.com/products/ignite-ui-angular) of the product.
+
+>[!NOTE]
+> What does it mean to start using a trial version? It means that you will be using a version of our product with a **Watermark** part of your web view, and not that you will be using the licensed package for a certain amount of time, for example one month.
 
 Infragistics Ignite UI Dock Manager Web Component is available as a separate npm package and by installing it you will start using the [Ignite UI Dock Manager Web Component Trial version](https://www.infragistics.com/products/ignite-ui-angular) of the product.
 
@@ -43,7 +54,7 @@ You'll be asked to login to our npm registry if not already setup.
 > If your project is using [`yarn`](https://yarnpkg.com/), make sure to run `upgrade-packages` with the `--skip-install` flag and execute `yarn install` after to properly update your `yarn.lock` as the upgrade command currently uses `npm` for the install.
 
 
-### How to setup your environment to use the private npm feed
+### How to setup your environment to use the private npm feed (Step by step guide)
 
 #### First you need to setup the private registry and to associate this registry with the Infragistics scope. 
 
@@ -57,6 +68,9 @@ This will allow you to seamlessly use a mix of packages from the public npm regi
 ```cmd
 npm adduser --registry=https://packages.infragistics.com/npm/js-licensed/ --scope=@infragistics --always-auth
 ```
+
+> [!IMPORTANT]
+> If your account is not licensed (you are still using a Trial account) the private package feed won't be accessible to you e.g. it will return 404 or 403 error message. **Only licensed accounts can access the packages.infragistics private feed.**
 
 #### After this is done, you will be logged in and you will be able to install the latest versions of the Ignite UI packages into your project:
 
@@ -143,8 +157,8 @@ The following information is on how to setup authentication to our private npm r
 
 ```cmd
 @infragistics:registry=https://packages.infragistics.com/npm/js-licensed/
-//packages.infragistics.com/npm/js-licensed/:_auth={YOUR_ACCESS_TOKEN}
-//packages.infragistics.com/npm/js-licensed/:username={YOUR_USERNAME}
+//packages.infragistics.com/npm/js-licensed/:_auth=YOUR_ACCESS_TOKEN
+//packages.infragistics.com/npm/js-licensed/:username=YOUR_USERNAME
 //packages.infragistics.com/npm/js-licensed/:always-auth=true
 ```
 

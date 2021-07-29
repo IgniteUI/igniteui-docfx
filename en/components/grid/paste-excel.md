@@ -85,7 +85,7 @@ You should add the `paste-handler` directive (you can find its code in the next 
         const pk = this.grid1.primaryKey;
         if (!cell) { return; }
         const rowIndex = cell.row.index;
-        // const rowPkValue = cell.row.rowData[pk];
+        // const rowPkValue = cell.row.data[pk];
         const cellIndex = cell.column.visibleIndex;
         const columns = this.grid1.visibleColumns;
         let index = 0;

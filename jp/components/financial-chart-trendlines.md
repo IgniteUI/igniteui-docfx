@@ -12,15 +12,12 @@ Angular Financial Chart コンポーネントで、ナビゲーション動作�
 
 ## Angular 近似曲線の例
 
-<div class="sample-container loading" style="height: 500px">
-    <iframe id="financial-chart-trendlines-iframe" src='{environment:dvDemosBaseUrl}/charts/financial-chart-trendlines' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular 近似曲線の例"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="financial-chart-trendlines-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
-    </button>
-
-
-</div>
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-trendlines"
+           alt="Angular 近似曲線の例"
+           github-src="charts/financial-chart/trendlines">
+</code-view>
 
 <div class="divider--half"></div>
 
@@ -31,7 +28,7 @@ Angular Financial Chart コンポーネントでは、チャート ナビゲー�
 -   [`isHorizontalZoomEnabled`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#ishorizontalzoomenabled) - チャートがユーザー操作により水平方向にズーム可能かどうかを指定します。デフォルトでこのプロパティは true に設定されます。
 -   [`isVerticalZoomEnabled`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#isverticalzoomenabled) - チャートがユーザー操作により垂直方向にズーム可能かどうかを指定します。デフォルトでこのプロパティは false に設定されます。
 -   [`isWindowSyncedToVisibleRange`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#iswindowsyncedtovisiblerange) - true に設定される場合、Y 軸は表示データ範囲に自動的にサイズ変更します。デフォルトでこのプロパティは false に設定されます。
--   [`windowRect`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#windowrect) - [`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html) のスクロール状態およびズーム状態を取得または設定するために使用できます。[`windowRect`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#windowrect) は、 0 ~ 1 の間の座標およびサイズの Rectangle として表現されます。
+-   [`windowRect`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#windowrect) - [`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html) のスクロール状態およびズーム状態を取得または設定するために使用できます。[`windowRect`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#windowrect) は、0 ~ 1 の間の座標およびサイズの Rectangle として表現されます。
 
 ```html
  <igx-financial-chart
@@ -122,7 +119,7 @@ Angular Financial Chart コンポーネントでは、チャート ナビゲー�
     width="850px"
     height="600px"
     trendLineType="QuinticFit"
-	trendLineThickness="2"
+    trendLineThickness="2"
     trendLineBrushes="Green, Blue">
  </igx-financial-chart>
 ```

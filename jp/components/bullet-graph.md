@@ -16,15 +16,13 @@ Angular Bullet Graph コンポーネントは、目盛り上でメジャーの�
 
 以下のサンプルは、同じゲージでいくつかのプロパティを設定して全く異なるゲージにする方法を示します。
 
-<div class="sample-container loading" style="height: 155px">
-    <iframe id="bullet-graph-sample-iframe" src='{environment:dvDemosBaseUrl}/gauges/bullet-graph-animation' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular ブレット グラフの例"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="bullet-graph-sample-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
-    </button>
+<code-view style="height: 155px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/gauges/bullet-graph-animation"
+           alt="Angular ブレット グラフの例"
+           github-src="gauges/bullet-graph/animation">
+</code-view>
 
-
-</div>
 <div class="divider--half"></div>
 
 このゲージは、スケール、針、目盛 (1 組)、ラベル (1 組) をサポートします。このコンポーネントには、アニメーション化されたトランジションのサポートも組み込まれています。アニメーションは、[`transitionDuration`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbulletgraphcomponent.html#transitionduration) プロパティの設定で簡単にカスタマイズできます。
@@ -45,25 +43,18 @@ npm install --save igniteui-angular-gauges
 
 ## モジュールの要件
 
-<!-- Blazor -->
-
-[`IgxBulletGraphComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbulletgraphcomponent.html) を作成するには、以下のモジュールが必要です。<!-- Angular, React, WebComponents --> <!-- end: Angular, React, WebComponents --><!-- Blazor -->モジュールはアプリケーションのエントリ ポイントに登録する必要があります。
-
--   BulletGraphModule
-    <!-- end: Blazor -->
+[`IgxBulletGraphComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbulletgraphcomponent.html) を作成するには、以下のモジュールが必要です。
 
 <!-- Angular, React, WebComponents -->
 
 ```ts
 // app.module.ts
 import { IgxBulletGraphModule } from 'igniteui-angular-gauges';
-import { IgxBulletGraphComponent } from 'igniteui-angular-gauges';
 
 @NgModule({
     imports: [
         // ...
-        IgxBulletGraphModule,
-        IgxBulletGraphComponent
+        IgxBulletGraphModule
         // ...
     ]
 })
@@ -126,15 +117,11 @@ export class AppModule {}
 </igx-bullet-graph>
 ```
 
-<div class="sample-container loading" style="height: 125px">
-    <iframe id="bullet-graph-measures-iframe" data-src='{environment:dvDemosBaseUrl}/gauges/bullet-graph-measures' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="bullet-graph-measures-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
-    </button>
-
-
-</div>
+<code-view style="height: 125px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/gauges/bullet-graph-measures"
+           github-src="gauges/bullet-graph/measures">
+</code-view>
 
 ## 比較範囲
 
@@ -165,15 +152,11 @@ export class AppModule {}
 </igx-bullet-graph>
 ```
 
-<div class="sample-container loading" style="height: 125px">
-    <iframe id="bullet-graph-ranges-iframe" data-src='{environment:dvDemosBaseUrl}/gauges/bullet-graph-ranges' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="bullet-graph-ranges-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
-    </button>
-
-
-</div>
+<code-view style="height: 125px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/gauges/bullet-graph-ranges"
+           github-src="gauges/bullet-graph/ranges">
+</code-view>
 
 ## 目盛
 
@@ -202,15 +185,11 @@ export class AppModule {}
 </igx-bullet-graph>
 ```
 
-<div class="sample-container loading" style="height: 125px">
-    <iframe id="bullet-graph-tickmarks-iframe" data-src='{environment:dvDemosBaseUrl}/gauges/bullet-graph-tickmarks' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="bullet-graph-tickmarks-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
-    </button>
-
-
-</div>
+<code-view style="height: 125px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/gauges/bullet-graph-tickmarks"
+           github-src="gauges/bullet-graph/tickmarks">
+</code-view>
 
 ## ラベル
 
@@ -230,15 +209,11 @@ export class AppModule {}
 </igx-bullet-graph>
 ```
 
-<div class="sample-container loading" style="height: 125px">
-    <iframe id="bullet-graph-labels-iframe" data-src='{environment:dvDemosBaseUrl}/gauges/bullet-graph-labels' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="bullet-graph-labels-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
-    </button>
-
-
-</div>
+<code-view style="height: 125px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/gauges/bullet-graph-labels"
+           github-src="gauges/bullet-graph/labels">
+</code-view>
 
 ## バッキング
 
@@ -257,15 +232,11 @@ export class AppModule {}
 </igx-bullet-graph>
 ```
 
-<div class="sample-container loading" style="height: 125px">
-    <iframe id="bullet-graph-background-iframe" data-src='{environment:dvDemosBaseUrl}/gauges/bullet-graph-background' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="bullet-graph-background-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
-    </button>
-
-
-</div>
+<code-view style="height: 125px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/gauges/bullet-graph-background"
+           github-src="gauges/bullet-graph/background">
+</code-view>
 
 ## スケール
 
@@ -285,15 +256,11 @@ export class AppModule {}
 </igx-bullet-graph>
 ```
 
-<div class="sample-container loading" style="height: 125px">
-    <iframe id="bullet-graph-scale-iframe" data-src='{environment:dvDemosBaseUrl}/gauges/bullet-graph-scale' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="bullet-graph-scale-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
-    </button>
-
-
-</div>
+<code-view style="height: 125px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/gauges/bullet-graph-scale"
+           github-src="gauges/bullet-graph/scale">
+</code-view>
 
 ## まとめ
 

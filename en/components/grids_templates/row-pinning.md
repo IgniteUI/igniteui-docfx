@@ -102,7 +102,7 @@ The built-in row pinning UI is enabled by adding an `igxActionStrip` component w
 
 ## Row Pinning API
 
-Row pinning is controlled through the `pinned` input of the [`igx-row`]({environment:angularApiUrl}/classes/igxrowcomponent.html). Pinned rows are rendered at the top of the @@igComponent by default and stay fixed through vertical scrolling of the unpinned rows in the @@igComponent body.
+Row pinning is controlled through the `pinned` input of the [`row`]({environment:angularApiUrl}/interfaces/rowtype.html). Pinned rows are rendered at the top of the @@igComponent by default and stay fixed through vertical scrolling of the unpinned rows in the @@igComponent body.
 
 @@if (igxName === 'IgxGrid') {
 ```typescript
@@ -348,15 +348,15 @@ public onDropAllowed(args) {
         currRowPinnedIndex = this.grid.pinnedRows.indexOf(this.grid.pinnedRows.find((r) => r.rowID === currRowID));
     }
     // remove the row that was dragged and place it onto its new location
-    this.grid.deleteRow(args.dragData.rowID);
-    this.data.splice(currRowIndex, 0, args.dragData.rowData);
+    this.grid.deleteRow(args.dragData.key);
+    this.data.splice(currRowIndex, 0, args.dragData.data);
     if (currentRow.pinned && !args.dragData.pinned) {
-        this.grid.pinRow(args.dragData.rowID, currRowPinnedIndex);
+        this.grid.pinRow(args.dragData.key, currRowPinnedIndex);
     } else if (!currentRow.pinned && args.dragData.pinned) {
-        this.grid.unpinRow(args.dragData.rowID);
+        this.grid.unpinRow(args.dragData.key);
     } else if (currentRow.pinned && args.dragData.pinned) {
-        this.grid.unpinRow(args.dragData.rowID);
-        this.grid.pinRow(args.dragData.rowID, currRowPinnedIndex);
+        this.grid.unpinRow(args.dragData.key);
+        this.grid.pinRow(args.dragData.key, currRowPinnedIndex);
     }
 }
 ```
@@ -387,7 +387,7 @@ This would allow reordering the rows and moving them between the pinned and unpi
 
 ## Styling
 
-The @@igxName allows styling through the [Ignite UI for Angular Theme Library](../themes/component-themes.md). The @@igComponent's [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) exposes a wide variety of properties, which allow the customization of all the features of the @@igComponent.
+The @@igxName allows styling through the [Ignite UI for Angular Theme Library](../themes/sass/component-themes.md). The @@igComponent's [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) exposes a wide variety of properties, which allow the customization of all the features of the @@igComponent.
 
 Below, we are going through the steps of customizing the @@igComponent's row pinning styling.
 
@@ -426,7 +426,7 @@ The last step is to pass the custom grid theme:
 
 In order to style components for Internet Explorer 11, you have to use different approach, since it doesn't support CSS variables. 
 
-If the component is using an [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`. However, in order to prevent the custom theme to leak to other components, be sure to include the `:host` selector before `::ng-deep`:
+If the component is using an [`Emulated`](../themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`. However, in order to prevent the custom theme to leak to other components, be sure to include the `:host` selector before `::ng-deep`:
 
 ```scss
 :host {
@@ -464,9 +464,15 @@ If the component is using an [`Emulated`](themes/component-themes.md#view-encaps
 
 }
 
+>[!NOTE]
+>The sample will not be affected by the selected global theme from `Change Theme`.
+
 ## API References
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [IgxRowComponent]({environment:angularApiUrl}/classes/igxrowcomponent.html)
+* [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html)
+* [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)
+* [IgxHierarchicalGridRow]({environment:angularApiUrl}/classes/igxhierarchicalgridrow.html)
+* [RowType]({environment:angularApiUrl}/interfaces/RowType.html)
 * [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 
 ## Additional Resources

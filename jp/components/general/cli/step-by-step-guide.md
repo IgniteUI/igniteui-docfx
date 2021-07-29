@@ -26,7 +26,7 @@ ig new
 これにより、ステップバイステップ モードがアクティブになり、新しいプロジェクトの作成に役立つ一連の質問が表示されます。
 
 <div style="display:inline-block;">
-    <a style="background: url(../../../images/general/buildCLIapp.gif); display:flex; justify-content:center; min-width:540px; min-height:315px;"
+    <a style="background: url(../../../images/general/buildCLIapp.gif); display:flex; justify-content:center; width: 80vw; max-width:540px; min-height:315px;"
        href="https://youtu.be/QK_NsdtdA70" target="_blank">
         <img src="../../../images/general/play.svg" style="vertical-align: middle;" />
     </a>
@@ -40,19 +40,19 @@ ig new
 
 最初に、アプリケーションの名前を入力します。
 
-![](../../../images/general/ig-step-by-step-new-project-name.png)
+<img class="responsive-img"  src="../../../images/general/ig-step-by-step-new-project-name.png" />
 
 次に、利用可能なプロジェクト テンプレートのいずれかを選択します。空のプロジェクト、サイド ナビゲーションのあるプロジェクト、または基本認証モジュールのある[認証プロジェクト](auth-template.md)を作成できます。矢印キーを使用して使用可能なオプションをナビゲートし、ENTER を押して選択を確認します。
 
-![](../../../images/general/ig-step-by-step-new-project-template.png)
+<img class="responsive-img"  src="../../../images/general/ig-step-by-step-new-project-template.png" />
 
 次のステップでは、アプリケーションのテーマを選択します。デフォルトのオプションを選択すると、Ignite UI for Angular のデフォルト テーマの Ignite UI がプリコンパイルされた CSS ファイル (`igniteui-angular.css`) がプロジェクトの `angular.json` に含まれます。カスタムオプションは、`app/styles.scss` の [Theming API](../../themes.md) を使用して、カラーパレットとテーマのコードを生成します。
 
-![](../../../images/general/ig-step-by-step-new-project-theme.png)
+<img class="responsive-img"  src="../../../images/general/ig-step-by-step-new-project-theme.png" />
 
 上記の手順を完了すると、アプリケーション構造が生成され、git リポジトリが初期化され、プロジェクトがコミットされます。次に、プロセスを完了するか、アプリケーションに新しいビューを追加するかのプロンプトが表示されます。
 
-![](../../../images/general/ig-step-by-step-new-project-action.png)
+<img class="responsive-img"  src="../../../images/general/ig-step-by-step-new-project-action.png" />
 
 ## ビューの追加
 
@@ -69,17 +69,17 @@ ig add
 ```
 新しいコントロールを追加することを選択した場合、カテゴリにグループ化された[使用可能なテンプレート](component-templates.md#コンポーネント-テンプレート)のリストが提供されます。
 
-![](../../../images/general/ig-step-by-step-template-group.png)
+<img class="responsive-img"  src="../../../images/general/ig-step-by-step-template-group.png" />
 
 矢印キーを使用してオプションをナビゲートし、ENTER を使用して選択したオプションを選択します。
 
 たとえば、`カスタムグリッド`などの一部のテンプレートでは、有効にできるオプションのリストが提供されます。オプションは、スペース キーで切り替えることができます。
 
-![](../../../images/general/ig-step-by-step-component-features.png)
+<img class="responsive-img"  src="../../../images/general/ig-step-by-step-component-features.png" />
 
 アプリケーションにシナリオを追加することを選択した場合、使用可能な[シナリオ テンプレート](component-templates.md#シナリオ-テンプレート)のリストも取得できます。
 
-![](../../../images/general/ig-step-by-step-scenario-templates.png)
+<img class="responsive-img"  src="../../../images/general/ig-step-by-step-scenario-templates.png" />
 
 アプリケーションにテンプレートを追加した後、プロセスを完了するかコントロールの追加を続行するかどうかを選択します。プロセスの完了を選択すると、必要なパッケージが (プロジェクト作成時に) インストールされ、アプリケーションがデフォルトのブラウザーで開かれます。
 

@@ -10,8 +10,8 @@ The ZoomSlider control provides zooming functionality to range-enabled controls.
 
 ## Demo
 
-<code-view style="height: 400px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
+<code-view style="height: 400px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/zoomslider-overview"  >
 </code-view>
 

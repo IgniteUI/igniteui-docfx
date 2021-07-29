@@ -194,7 +194,7 @@ The chip can be focused using the `Tab` key or by clicking on it. When in chip a
   - <kbd>SPACE</kbd> or <kbd>ENTER</kbd> Fires the [`remove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#remove) output so the chip deletion can be handled manually.
 
 ### Styling
-The igxChip allows styling through the [Ignite UI for Angular Theme Library](../themes/component-themes.md). The chip's [theme]({environment:sassApiUrl}/index.html#function-igx-chip-theme) exposes a wide variety of properties, which allow the customization of many of the aspects of the chip.        
+The igxChip allows styling through the [Ignite UI for Angular Theme Library](../themes/sass/component-themes.md). The chip's [theme]({environment:sassApiUrl}/index.html#function-igx-chip-theme) exposes a wide variety of properties, which allow the customization of many of the aspects of the chip.        
 
  #### Importing global theme
 To begin styling of the predefined chip layout, you need to import the `index` file, where all styling functions and mixins are located.  
@@ -253,7 +253,7 @@ $custom-theme: igx-chip-theme(
 ```
 
 #### Defining custom schemas
-You can go even further and build flexible structure that has all the benefits of a [**schema**](../themes/schemas.md). The **schema** is the recipe of a theme.   
+You can go even further and build flexible structure that has all the benefits of a [**schema**](../themes/sass/schemas.md). The **schema** is the recipe of a theme.   
 Extend one of the two predefined schemas, that are provided for every component. In our case, we would use `$_light_chip`.   
 
 ```scss
@@ -296,7 +296,7 @@ In order for the custom theme to affect only specific component, you can move al
 This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Component#encapsulation), your styles will be applied only to your custom component.
 
  >[!NOTE]
- >If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to penetrate this encapsulation using `::ng-deep` in order to style the grid.
+ >If the component is using an [`Emulated`](../themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to penetrate this encapsulation using `::ng-deep` in order to style the grid.
  >[!NOTE]
  >Wrap the statement inside of a `:host` selector to prevent your styles from affecting elements *outside of* our component:
 

@@ -182,7 +182,7 @@ If `$legacy-support` is set to `true`, include the **component theme** like that
  @include igx-calendar($my-calendar-theme);
 ```
 >[!NOTE]
->If the component is using an [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`
+>If the component is using an [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`
 
 ```scss
 :host {
@@ -201,7 +201,7 @@ If `$legacy-support` is set to `false`(default), include the component **css var
 ```
 
 >[!NOTE]
->If the component is using an [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, you still have to use `:host` because you need a global selector in order to override the variables.
+>If the component is using an [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, you still have to use `:host` because you need a global selector in order to override the variables.
 
 ```scss
 :host {
@@ -228,6 +228,12 @@ After everything's done, your component should look like this:
 * [IgxCalendarComponent Styles]({environment:sassApiUrl}/index.html#function-igx-calendar-theme)
 
 <div class="divider--half"></div>
+
+## Theming Dependencies
+<div class="divider--half"></div>
+
+* [IgxCalendar Theme]({environment:sassApiUrl}/index.html#function-igx-calendar-theme)
+* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>

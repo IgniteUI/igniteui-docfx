@@ -5,8 +5,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 # Component Themes
-<div class="highlight">Component themes allow you to change the styles of specific component instances by overriding the globally defined theme.</div>
-<div class="divider"></div>
+<p class="highlight">Component themes allow you to change the styles of specific component instances by overriding the globally defined theme.</p>
 
 ## Overview
 <div class="divider--half"></div>
@@ -28,7 +27,7 @@ There are several parts to a component theme:
 - **The component mixin** - A Sass mixin that consumes a component theme and produces *CSS rules* used to style a particular component.
 
 Say you want to create a new global avatar theme that has a different background color to the one we set in the avatar's default theme. As mentioned in the [**overview section**](#overview) there are 2 general approaches to creating a component theme. 
-There are even more ways you can organize and scope your component themes. The most straightforward way to do that is in the same file you defined your [**global theme**](./global-theme.md).
+There are even more ways you can organize and scope your component themes. The most straightforward way to do that is in the same file you defined your [**global theme**](./global-themes.md).
 
 Defining an avatar theme:
 
@@ -198,17 +197,17 @@ $avatar-theme: igx-avatar-theme($initials-background: royalblue);
 <div class="divider"></div>
 
 ## API Overview
-* [Global Theme]({environment:sassApiUrl}/index.html#mixin-igx-theme)
-* [Avatar Theme]({environment:sassApiUrl}/index.html#function-igx-avatar)
-
 <div class="divider--half"></div>
+
+* [Global Theme]({environment:sassApiUrl}/index.html#mixin-igx-theme)
+* [Avatar Theme]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>
 
 Learn how to configure a global theme:
 
-* [Global Themes](./global-theme.md)
+* [Global Themes](./global-themes.md)
 
 Our community is active and always welcoming to new ideas.
 

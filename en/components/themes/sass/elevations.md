@@ -136,7 +136,7 @@ $elevations: (
 ```
 
 ## Elevation Schema Declarations
-The elevation levels are also used in theme schema declarations. More on that in the [Schema](./schemes.md) section of the documentation.
+The elevation levels are also used in theme schema declarations. More on that in the [Schema](schemas.md) section of the documentation.
 <div class="divider--half"></div>
 
 ## API References

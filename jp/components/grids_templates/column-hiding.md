@@ -66,8 +66,8 @@ Ignite UI for Angular @@igComponent は、[`IgxColumnHidingDirective`]({environm
 <!--columnHiding.component.html-->
 
 <igx-grid #grid id="grid" [data]="data" [autoGenerate]="false" width="100%" height="560px" columnWidth="200px" [allowFiltering]="true">
-    <igx-column [field]="'ID'" dataType="string" [sortable]="true"></igx-column>
-    <igx-column [field]="'ContactName'" dataType="string" [sortable]="true"></igx-column>
+    <igx-column [field]="'ID'" dataType="string" [sortable]="true" [hidden]="true"></igx-column>
+    <igx-column [field]="'ContactName'" dataType="string" [sortable]="true" [hidden]="true"></igx-column>
     <igx-column [field]="'ContactTitle'" dataType="string" [sortable]="true"></igx-column>
     <igx-column [field]="'City'" dataType="string" [sortable]="true"></igx-column>
     <igx-column [field]="'CompanyName'" dataType="string" [sortable]="true"></igx-column>
@@ -85,11 +85,11 @@ Ignite UI for Angular @@igComponent は、[`IgxColumnHidingDirective`]({environm
 
 <igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="false" width="100%"
     height="560px" columnWidth="200px" [allowFiltering]="true">
-    <igx-column [field]="'Name'" dataType="string" [sortable]="true"></igx-column>
+    <igx-column [field]="'Name'" dataType="string" [sortable]="true" [disableHiding]="true"></igx-column>
     <igx-column [field]="'ID'" dataType="number" [sortable]="true"></igx-column>
-    <igx-column [field]="'Title'" dataType="string" [sortable]="true"></igx-column>
-    <igx-column [field]="'HireDate'" dataType="date" [sortable]="true"></igx-column>
-    <igx-column [field]="'Age'" dataType="number" [sortable]="true"></igx-column>
+    <igx-column [field]="'Title'" dataType="string" [sortable]="true" [disableHiding]="true"></igx-column>
+    <igx-column [field]="'HireDate'" dataType="date" [sortable]="true" [hidden]="true"></igx-column>
+    <igx-column [field]="'Age'" dataType="number" [sortable]="true" [hidden]="true"></igx-column>
     <igx-column [field]="'Address'" dataType="string" [sortable]="true"></igx-column>
     <igx-column [field]="'City'" dataType="string" [sortable]="true"></igx-column>
     <igx-column [field]="'Country'" dataType="string" [sortable]="true"></igx-column>
@@ -111,8 +111,8 @@ Ignite UI for Angular @@igComponent は、[`IgxColumnHidingDirective`]({environm
                     </div>
                 </ng-template>
             </igx-column>
-            <igx-column field="Debut" [sortable]="true"></igx-column>
-            <igx-column field="Grammy Nominations" [sortable]="true"></igx-column>
+            <igx-column field="Debut" [sortable]="true" [hidden]="true"></igx-column>
+            <igx-column field="Grammy Nominations" [sortable]="true" [hidden]="true"></igx-column>
             <igx-column field="Grammy Awards" [sortable]="true"></igx-column>
 
             <igx-row-island [key]="'Albums'" [autoGenerate]="false" #layout1 >
@@ -248,7 +248,7 @@ public ngAfterViewInit() {
 
 列非表示 UI の機能セットを使用するには、列非表示 UI コンポーネントへの参照を返すツールバーの [`columnHidingUI`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html#columnhidingui) プロパティを使用します。相対する API にアクセスし、アプリケーションの要件に基づいて使用できます。
 
-このトピックのはじめにあるコードの結果は、[列非表示のデモ](#デモ)セクションで確認できます。
+このトピックのはじめにあるコードの結果は、列非表示の例セクションで確認できます。
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
 
@@ -460,7 +460,7 @@ export class AppModule {}
 
 ## スタイル設定
 
-列操作コンポーネントのスタイル設定を開始するには、すべてのテーマ関数とコンポーネント mixins が存在するインデックス ファイルをインポートする必要があります。
+列操作コンポーネントのスタイル設定を開始するには、すべてのテーマ関数とコンポーネント ミックスインが存在するインデックス ファイルをインポートする必要があります。
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
@@ -483,7 +483,7 @@ $custom-button: igx-button-theme($flat-text-color: gold, $disabled-color: black)
 
 この例では、フラットボタンのテキストの色とボタンの無効な色のみを変更しましたが、[`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) の方がより多くの方法を提供します。ボタンのスタイルを制御するパラメーター。
 
-最後にそれぞれのテーマを持つコンポーネント mixins を**含める**ことです。 
+最後にそれぞれのテーマを持つコンポーネント ミックスインを**含める**ことです。 
 
 ```scss
 @include igx-column-actions($custom-column-actions-theme);
@@ -493,10 +493,10 @@ $custom-button: igx-button-theme($flat-text-color: gold, $disabled-color: black)
 ```
 
 >[!NOTE]
->`.igx-column-actions` 内で **igx-button** mixin のスコープを設定し、列非表示ボタンのみがスタイル設定されるようにします。そうでない場合は、グリッド内の他のボタンも影響を受けます。
+>`.igx-column-actions` 内で **igx-button** ミックスインのスコープを設定し、列非表示ボタンのみがスタイル設定されるようにします。そうでない場合は、グリッド内の他のボタンも影響を受けます。
 
  >[!NOTE]
- >コンポーネントが [`Emulated`](../themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
+ >コンポーネントが [`Emulated`](../themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
 
 ```scss
 :host {
@@ -539,11 +539,11 @@ $custom-button: igx-button-theme(
 ```
 
 >[!NOTE]
->`Igx-color` と `igx-palette` は色の生成や取得のための関数です。使い方の詳細については [`パレット`](../themes/palette.md) のトピックをご覧ください。
+>`Igx-color` と `igx-palette` は色の生成や取得のための関数です。使い方の詳細については [`パレット`](../themes/palettes.md) のトピックをご覧ください。
 
 ### スキーマの使用
 
-テーマ エンジンを使用して[**スキーマ**](../themes/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
+テーマ エンジンを使用して[**スキーマ**](../themes/sass/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
 
 ```scss
 // Extending the dark column actions schema

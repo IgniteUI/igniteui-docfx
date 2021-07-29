@@ -53,7 +53,7 @@ Date Range Picker をデフォルトのモードでインスタンス化する�
 public range: DateRange = { start: new Date(2020, 4, 20), end: new Date(2020, 4, 25) };
 ```
 
->注: Date Range Picker の値は開始日と終了日を含む [`DateRange`](({environment:angularApiUrl}/interfaces/daterange.html)) 型です。
+>注: Date Range Picker の値は開始日と終了日を含む [`DateRange`]({environment:angularApiUrl}/interfaces/daterange.html) 型です。
 
 双方向のデータバインディングを作成するには、`ngModel` を使用します。
 ```html
@@ -202,9 +202,10 @@ Date Range Picker コンポーネントはさまざまな表示および入力�
 </igx-date-range-picker>
 ```
 
+> 注: `IgxDateRangePicker` が IME 入力をサポートするようになりました。合成が終了すると、コントロールはワイド文字の数字を ASCII 文字に変換します。
 
 ### フォームと検証
-Date Range Picker コンポーネントは、コア FormsModule [NgModel](https://angular.io/api/forms/NgModel) と [ReactiveFormsModule](https://angular.io/api/forms/ReactiveFormsModule) (FormControl、FormGroup など) のすべてのフォーム ディレクティブをサポートします。これには、[フォーム バリデーター](https://angular.io/api/forms/Validators)機能も含まれます。さらに、コンポーネントの[最小値と最大値](#最小値と最大値)もフォーム バリデーターとして機能します。
+Date Range Picker コンポーネントは、コア FormsModule [NgModel](https://angular.io/api/forms/NgModel) と [ReactiveFormsModule](https://angular.io/api/forms/ReactiveFormsModule) ([`FormControl`](https://angular.io/api/forms/FormControl)、[`FormGroup`](https://angular.io/api/forms/FormGroup) など) のすべてのフォーム ディレクティブをサポートします。これには、[フォーム バリデーター](https://angular.io/api/forms/Validators)機能も含まれます。さらに、コンポーネントの[最小値と最大値](#最小値と最大値)もフォーム バリデーターとして機能します。
 
 [NgModel](https://angular.io/api/forms/NgModel) とバリデーターは、[`IgxDateRangePickerComponent`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html) で、または個々の開始日と終了日で設定できます。
 
@@ -374,7 +375,7 @@ $custom-calendar-theme: igx-calendar-theme(
 
 Internet Explorer 11 などの古いブラウザーのコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、別のアプローチを用いる必要があります。 
 
-コンポーネントが [`Emulated`](themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
+コンポーネントが [`Emulated`](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
 
  ```scss
 :host {
@@ -387,7 +388,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 ```
 
 ### スタイルのスコーピング
-スタイルのスコーピングについては、詳細は[オーバーレイのスコープ コンポーネント スタイル](overlay-styling.md#スコープ-コンポーネント-スタイル)および[入力グループのスタイル スコーピング](input-group.md#スタイルのスコーピング)の両方のスタイル設定セクションを参照してください。
+スタイルのスコーピングについては、詳細は[オーバーレイのスコープ コンポーネント スタイル](overlay-styling.md#スコープ-コンポーネント-スタイル)および[入力グループのスタイル スコーピング](input-group.md#スタイル設定)の両方のスタイル設定セクションを参照してください。
 
 
 <code-view style="height:600px" 
@@ -415,6 +416,15 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 * [IgxCalendarComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-calendar-theme)
 * [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
+
+## テーマの依存関係
+
+* [IgxCalendar テーマ]({environment:sassApiUrl}/index.html#function-igx-calendar-theme)
+* [IgxOverlay テーマ]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxButton テーマ]({environment:sassApiUrl}/index.html#function-igx-button-theme)
+* [IgxInputGroup テーマ]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
+* [IgxDropDown テーマ]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme)
 
 ## その他のリソース
 関連トピック:

@@ -25,7 +25,7 @@ In this Angular ComboBox example, you can see how users can filter items and per
 
 The combo control exposes the following features:
     - Data Binding - local data and [remote data](combo-remote.md)
-    - [Value Binding](combo-features.md#value-binding)
+    - [Value Binding](combo-features.md#data-binding)
     - [Filtering](combo-features.md#filtering)
     - [Grouping](combo-features.md#grouping)
     - [Custom Values](combo-features.md#custom-values)
@@ -85,7 +85,7 @@ In our case, we want the combo to display the `name` of each city and the combo 
 
 ### Two-Way Binding
 
-The combo component fully supports two-way data-binding with `[(ngModel)]` as well as usage in [template driven](https://angular.io/guide/forms) and [reactive](https://angular.io/guide/reactive-forms) forms. The combo selection can be accessed either through two-way binding or through the [selection API](#selection). We can pass an array of items of the same type as the ones in the combo's selection (based on `valueKey`) and any time one changes, the other is updated accordingly.
+The combo component fully supports two-way data-binding with `[(ngModel)]` as well as usage in [template driven](https://angular.io/guide/forms) and [reactive](https://angular.io/guide/reactive-forms) forms. The combo selection can be accessed either through two-way binding or through the [selection API](#selection-api). We can pass an array of items of the same type as the ones in the combo's selection (based on `valueKey`) and any time one changes, the other is updated accordingly.
 
 In the following example, the cities Sofia and London will initially be selected. Any further changes in the combo's selection will reflect on the `selectedCities` array.
 
@@ -160,13 +160,13 @@ export class MyExampleCombo {
 }
 ```
 
-The combo also fires an event every time its selection changes - [onSelectionChange()]({environment:angularApiUrl}/classes/igxcombocomponent.html#onselectionchange). The emitted event arguments, [IComboSelectionChangeEventArgs]({environment:angularApiUrl}/interfaces/icomboselectionchangeeventargs.html), contain information about the selection prior to the change, the current selection and the items that were added or removed. The event can also be cancelled, preventing the selection update with the new array of items.
+The combo also fires an event every time its selection changes - [selectionChanging()]({environment:angularApiUrl}/classes/igxcombocomponent.html#selectionchanging). The emitted event arguments, [IComboSelectionChangeEventArgs]({environment:angularApiUrl}/interfaces/icomboselectionchangeeventargs.html), contain information about the selection prior to the change, the current selection and the items that were added or removed. The event can also be cancelled, preventing the selection update with the new array of items.
 
 Binding to the event can be done through the proper `@Output` property on the `igx-combo` tag:
 
 ```html
 <igx-combo [data]="cities" displayKey="name" valueKey="id"
-           (onSelectionChange)="handleCityChange($event)">
+           (selectionChanging)="handleCityChange($event)">
 </igx-combo>
 ```
 
@@ -188,10 +188,10 @@ export class MyExampleCombo {
 
 ## Single Selection
 
-By default, the combo control provides multiple selection. The example below demonstrates how to achieve single selection in the component by attaching a handler to the `onSelectionChange` event:
+By default, the combo control provides multiple selection. The example below demonstrates how to achieve single selection in the component by attaching a handler to the `selectionChanging` event:
 
 ```html
-<igx-combo [data]="lData" (onSelectionChange)="singleSelection($event)"></igx-combo>
+<igx-combo [data]="lData" (selectionChanging)="singleSelection($event)"></igx-combo>
 ```
 
 ```typescript
@@ -304,7 +304,7 @@ The last step is to include the component's theme.
 
 In order to style components for older browsers, like Internet Explorer 11, we have to use a different approach, since it doesn't support CSS variables. 
 
-If the component is using the [Emulated](themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`. To prevent the custom theme to leak into other components, be sure to include the `:host` selector before `::ng-deep`:
+If the component is using the [Emulated](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`. To prevent the custom theme to leak into other components, be sure to include the `:host` selector before `::ng-deep`:
 
 ```scss
 :host {
@@ -339,7 +339,7 @@ If the component is using the [Emulated](themes/component-themes.md#view-encapsu
 - The combo does not have input for sizing its height. In the future, the [IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) component will expose an option that allows custom sizing, and then the [IgxCombo]({environment:angularApiUrl}/classes/igxcombocomponent.html) will use the same functionality for proper styling and better consistency.
 
 > [!NOTE]
-> The `igxCombo` uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for the combo. For more details see [igxForOf Known Issues](for-of.html#known-limitations) section.
+> The `igxCombo` uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for the combo. For more details see [igxForOf Known Issues](for-of.md#known-limitations) section.
 
 ## API Summary
 <div class="divider--half"></div>
@@ -349,10 +349,15 @@ If the component is using the [Emulated](themes/component-themes.md#view-encapsu
 
 Additional components and/or directives with relative APIs that were used:
 
-* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 * [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html)
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) 
 * [IgxCheckboxComponent]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html)
+
+## Theming Dependencies
+* [IgxDropDown Theme]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme)
+* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxCheckbox Theme]({environment:sassApiUrl}/index.html#function-igx-checkbox-theme)
+* [IgxOverlay Theme]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>

@@ -52,7 +52,7 @@ export class AppModule {
 </igx-nav-drawer>
 ```
 Drawer のコンテンツを igxDrawer ディレクティブでデコレートした <ng-template> で設定します。
-任意のコンテンツをテンプレートに設定できますが、[`igxDrawerItem`]({environment:angularApiUrl}/classes/igxnavdraweritemdirective.html) ディレクティブ ([項目のスタイル](#項目のスタイル)を参照) が定義済みのスタイル設定を項目に適用します。 
+任意のコンテンツをテンプレートに設定できますが、[`igxDrawerItem`]({environment:angularApiUrl}/classes/igxnavdraweritemdirective.html) ディレクティブ ([項目のスタイル](#スタイル設定)を参照) が定義済みのスタイル設定を項目に適用します。 
 このディレクティブに 2 つの `@Input` プロパティがあります。
 - `active` - 項目を選択済みとしてスタイル設定します。
 - `isHeader` - 項目をグループ ヘッダーとしてスタイル設定します。active に設定できません。
@@ -352,7 +352,7 @@ $custom-theme: igx-navdrawer-theme(
  @include igx-navdrawer($custom-theme);
 ```
 >[!NOTE]
->コンポーネントが [`Emulated`](./themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
+>コンポーネントが [`Emulated`](./themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
 
 ```scss
 :host {
@@ -371,7 +371,7 @@ $custom-theme: igx-navdrawer-theme(
 ```
 
 >[!NOTE]
->コンポーネントが [`Emulated`](./themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、変数をオーバーライドするにはグローバル セレクターが必要なため、`:host` を使用する必要があります。
+>コンポーネントが [`Emulated`](./themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、変数をオーバーライドするにはグローバル セレクターが必要なため、`:host` を使用する必要があります。
 
 ```scss
 :host {

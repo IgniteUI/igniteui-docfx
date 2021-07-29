@@ -7,13 +7,13 @@ _language: kr
 
 # Angular 차트 유형 탐색
 
-`XamFinancialChart` 제어에서는 축은 축 기본 선, 눈금 표시, 제목 및 축 라벨 모양을 설정하는 기본 속성을 제공합니다.
+[`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html) 제어에서는 축은 축 기본 선, 눈금 표시, 제목 및 축 라벨 모양을 설정하는 기본 속성을 제공합니다.
 
 ## 데모
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-axis-types"  
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-axis-types"
            github-src="charts/financial-chart/axis-types">
 </code-view>
 
@@ -23,7 +23,7 @@ _language: kr
 
 ## 축 간격
 
-금융 차트 제어에서 `YAxisInterval` 속성은 주 격자선 및 축 레이블이 축에 렌더링되는 빈도를 지정합니다. 마찬가지로 `YAxisMinorInterval` 속성은 축에 부 격자선이 렌더링되는 빈도를 지정합니다.
+금융 차트 제어에서 [`yAxisInterval`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#yaxisinterval) 속성은 주 격자선 및 축 레이블이 축에 렌더링되는 빈도를 지정합니다. 마찬가지로 [`yAxisMinorInterval`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#yaxisminorinterval) 속성은 축에 부 격자선이 렌더링되는 빈도를 지정합니다.
 
 다음 코드 조각은 Y축의 간격을 설정하는 방법을 보여줍니다.
 
@@ -66,7 +66,7 @@ _language: kr
 
 ## 축 모드
 
-`XamFinancialChart` 제어를 사용하면 X축 및 Y축에 다른 모드를 설정할 수 있습니다.
+[`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html) 제어를 사용하면 X축 및 Y축에 다른 모드를 설정할 수 있습니다.
 X축의 경우 다음 모드 중에서 선택할 수 있습니다:
 
 -   Time - 이 모드는 데이터의 갭을 X축에 스페이스를 사용해 렌더링하는데 예를 들면, 주간이나 공휴일에 주식 거래가 없음을 나타냅니다.
@@ -93,7 +93,7 @@ Y축의 경우 다음 모드 중에서 선택할 수 있습니다:
 
 ## 축 범위
 
-금융 차트 컨트롤에서 숫자 축의 범위는 축 시작부터 끝까지이며 데이터의 최소값에서 최대값까지의 수치 값의 차이입니다. 범위 최소값은 축의 최소값입니다. 범위 최대값은 축의 최대값입니다. 기본적으로 금융 차트 컨트롤은 차트 플롯 영역을 최대화하기 위해 최저 및 최고 데이터 점을 기준으로 Y축 범위의 최소값 및 최대값을 계산합니다. 축의 최소값과 최대값을 자동으로 계산하면 데이터 점의 세트에 적합하지 않을 수 있습니다. 예를 들면, 데이터의 최소값이 850인 경우, Y축의 `YAxisMinimumValue` 속성을 사용하여 축의 최소값을 800으로 설정하면 축의 최소값과 데이터 점의 최소값 사이에 50의 스페이스 값이 생깁니다. Y축의 `YAxisMaximumValue` 속성을 사용하여 축의 최대값과 데이터 점의 최대값에도 동일하게 적용할 수 있습니다.
+금융 차트 컨트롤에서 숫자 축의 범위는 축 시작부터 끝까지이며 데이터의 최소값에서 최대값까지의 수치 값의 차이입니다. 범위 최소값은 축의 최소값입니다. 범위 최대값은 축의 최대값입니다. 기본적으로 금융 차트 컨트롤은 차트 플롯 영역을 최대화하기 위해 최저 및 최고 데이터 점을 기준으로 Y축 범위의 최소값 및 최대값을 계산합니다. 축의 최소값과 최대값을 자동으로 계산하면 데이터 점의 세트에 적합하지 않을 수 있습니다. 예를 들면, 데이터의 최소값이 850인 경우, Y축의 [`yAxisMinimumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#yaxisminimumvalue) 속성을 사용하여 축의 최소값을 800으로 설정하면 축의 최소값과 데이터 점의 최소값 사이에 50의 스페이스 값이 생깁니다. Y축의 [`yAxisMaximumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#yaxismaximumvalue) 속성을 사용하여 축의 최대값과 데이터 점의 최대값에도 동일하게 적용할 수 있습니다.
 
 다음 예제 코드는 Y축의 축 범위를 변경하는 방법을 보여줍니다.
 
@@ -113,8 +113,8 @@ Y축의 경우 다음 모드 중에서 선택할 수 있습니다:
 
 금융 차트 컨트롤에서 차트의 데이터가 Y축에 대해 대수적으로 매핑되는지 여부를 제어할 수 있는데 이 작업은 다음의 속성을 설정하여 실행합니다:
 
--   `YAxisIsLogarithmic` - Y축이 선형 축적 대신에 대수 축적을 사용하는지 여부를 지정합니다. 기본적으로 이 속성은 false로 설정됩니다.
--   `YAxisLogarithmBase` - Y축에 데이터 항목의 위치를 매핑할 때 로그 함수에 사용하는 기준값입니다.
+-   [`yAxisIsLogarithmic`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#yaxisislogarithmic) - Y축이 선형 축적 대신에 대수 축적을 사용하는지 여부를 지정합니다. 기본적으로 이 속성은 false로 설정됩니다.
+-   [`yAxisLogarithmBase`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#yaxislogarithmbase) - Y축에 데이터 항목의 위치를 매핑할 때 로그 함수에 사용하는 기준값입니다.
     yAxisIsLogarithmic이 true인 경우에만 유효합니다.
 
 다음의 코드 조각은 X축에서 눈금 표시의 색상, 길이, 두께를 설정하는 방법을 보여줍니다.

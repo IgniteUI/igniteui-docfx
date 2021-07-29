@@ -86,7 +86,7 @@ Ignite UI for Angular [`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcom
         const pk = this.grid1.primaryKey;
         if (!cell) { return; }
         const rowIndex = cell.row.index;
-        // const rowPkValue = cell.row.rowData[pk];
+        // const rowPkValue = cell.row.data[pk];
         const cellIndex = cell.column.visibleIndex;
         const columns = this.grid1.visibleColumns;
         let index = 0;

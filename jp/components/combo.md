@@ -26,7 +26,7 @@ Angular ComboBox コンポーネントは、編集可能な機能を提供する
 
 Combo コンポーネントは以下の機能を公開します。
     - データ バインディング- ローカル データおよび[リモート データ](combo-remote.md)
-    - [値バインディング](combo-features.md#value-binding)
+    - [値バインディング](combo-features.md#データ-バインディング)
     - [フィルタリング](combo-features.md#フィルタリング)
     - [グループ化](combo-features.md#グループ化)
     - [カスタム値](combo-features.md#カスタム値)
@@ -82,11 +82,11 @@ export class ComboDemo implements OnInit {
 ```
 
 > [!Note]
-> データソースが単純なタイプ (`string[]`、`number[]` など）で構成されている場合、`valueKey` と `displayKey` を**指定しないでください**。
+> データソースが単純なタイプ (`string[]`、`number[]` など) で構成されている場合、`valueKey` と `displayKey` を**指定しないでください**。
 
 ### 双方向バインディング
 
-Combo コンポーネントは、`[(ngModel)]` との双方向のデータ バインディングを完全にサポートし、[テンプレート駆動型](https://angular.io/guide/forms)および[リアクティブ型](https://angular.io/guide/reactive-forms)での使用もサポートします。コンボ選択には、双方向バインディングまたは[選択 API](#selection)を使用してアクセスできます。コンボの選択項目 (`valueKey` に基づく) と同じタイプの項目の配列を渡すことができ、いずれかが変更されるたびに、他方がそれに応じて更新されます。
+Combo コンポーネントは、`[(ngModel)]` との双方向のデータ バインディングを完全にサポートし、[テンプレート駆動型](https://angular.io/guide/forms)および[リアクティブ型](https://angular.io/guide/reactive-forms)での使用もサポートします。コンボ選択には、双方向バインディングまたは[選択 API](#選択-api)を使用してアクセスできます。コンボの選択項目 (`valueKey` に基づく) と同じタイプの項目の配列を渡すことができ、いずれかが変更されるたびに、他方がそれに応じて更新されます。
 
 以下の例は、cities の Sofia と London があらかじめ選択済みになります。コンボの選択におけるそれ以上の変更は、`selectedCities` 配列に反映されます。
 
@@ -161,13 +161,13 @@ export class MyExampleCombo {
 }
 ```
 
-また、コンボは、選択が変更されるたびにイベントを発生させます - [onSelectionChange()]({environment:angularApiUrl}/classes/igxcombocomponent.html#onselectionchange)。発行されたイベント引数 [IComboSelectionChangeEventArgs]({environment:angularApiUrl}/interfaces/icomboselectionchangeeventargs.html) には、変更前の選択、現在の選択、追加または削除された項目に関する情報が含まれています。また、イベントをキャンセルして、新しいアイテムの配列で選択を更新できないようにすることもできます。
+また、コンボは、選択が変更されるたびにイベントを発生させます - [selectionChanging()]({environment:angularApiUrl}/classes/igxcombocomponent.html#selectionchanging)。発行されたイベント引数 [IComboSelectionChangeEventArgs]({environment:angularApiUrl}/interfaces/icomboselectionchangeeventargs.html) には、変更前の選択、現在の選択、追加または削除された項目に関する情報が含まれています。また、イベントをキャンセルして、新しいアイテムの配列で選択を更新できないようにすることもできます。
 
 イベントへのバインドは、`igx-combo` タグの適切な `@Output` プロパティを介して実行できます。
 
 ```html
 <igx-combo [data]="cities" displayKey="name" valueKey="id"
-           (onSelectionChange)="handleCityChange($event)">
+           (selectionChanging)="handleCityChange($event)">
 </igx-combo>
 ```
 
@@ -189,10 +189,10 @@ export class MyExampleCombo {
 
 ## 単一選択
 
-デフォルトでは、Combo コントロールは複数選択を提供します。以下のコード例は、ハンドラーを `onSelectionChange` イベントにアタッチすることで、コンポーネントで単一選択を可能にする方法を示します。
+デフォルトでは、Combo コントロールは複数選択を提供します。以下のコード例は、ハンドラーを `selectionChanging` イベントにアタッチすることで、コンポーネントで単一選択を可能にする方法を示します。
 
 ```html
-<igx-combo [data]="lData" (onSelectionChange)="singleSelection($event)"></igx-combo>
+<igx-combo [data]="lData" (selectionChanging)="singleSelection($event)"></igx-combo>
 ```
 
 ```typescript
@@ -305,7 +305,7 @@ $custom-checkbox-theme: igx-checkbox-theme(
 
 Internet Explorer 11 などの古いブラウザーのコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、別のアプローチを用いる必要があります。 
 
-コンポーネントが [Emulated](themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
+コンポーネントが [Emulated](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
 
 ```scss
 :host {
@@ -340,7 +340,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 - コンボの高さを変更するための入力はありません。将来、[IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) コンポーネントは、カスタムのサイズ変更オプションを公開し、[IgxCombo]({environment:angularApiUrl}/classes/igxcombocomponent.html) は適切なスタイル設定と外観の統一に同じ機能を使用します。
 
 > [!NOTE]
-> `igxCombo` は内部で `igxForOf` ディレクティブを使用するため、すべての `igxForOf` の制限が Combo で有効です。詳細については、[igxForOf 既知の制限](for-of.html#既知の制限)セクションを参照してください。
+> `igxCombo` は内部で `igxForOf` ディレクティブを使用するため、すべての `igxForOf` の制限が Combo で有効です。詳細については、[igxForOf 既知の制限](for-of.md#既知の制限)セクションを参照してください。
 
 ## API まとめ
 <div class="divider--half"></div>
@@ -354,6 +354,12 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 * [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html)
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) 
 * [IgxCheckboxComponent]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html)
+
+## テーマの依存関係
+* [IgxDropDown テーマ]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme)
+* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxCheckbox テーマ]({environment:sassApiUrl}/index.html#function-igx-checkbox-theme)
+* [IgxOverlay テーマ]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

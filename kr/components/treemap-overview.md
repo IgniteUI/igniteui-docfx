@@ -14,9 +14,9 @@ Treemaps are not designed to convey numerical quantities; the intent is to show 
 
 ## Demo
 
-<code-view style="height: 400px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/tree-map-overview"  
+<code-view style="height: 400px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/tree-map-overview"
            github-src="charts/tree-map/overview">
 </code-view>
 

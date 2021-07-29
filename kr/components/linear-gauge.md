@@ -15,9 +15,9 @@ The linear gauge component allows for visualizing data in the form of a linear g
 
 The following sample demonstrates how setting multiple properties on the same gauge can transform it to completely different gauge.
 
-<code-view style="height: 125px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/gauges/linear-gauge-animation"  
+<code-view style="height: 125px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/gauges/linear-gauge-animation"
            github-src="gauges/linear-gauge/animation">
 </code-view>
 
@@ -109,9 +109,9 @@ This is the primary measure displayed by the component and is visualized as a ba
 </igx-linear-gauge>
 ```
 
-<code-view style="height: 125px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/gauges/linear-gauge-needle"  
+<code-view style="height: 125px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/gauges/linear-gauge-needle"
            github-src="gauges/linear-gauge/needle">
 </code-view>
 
@@ -139,9 +139,9 @@ The ranges are visual elements that highlight a specified range of values on a s
 </igx-linear-gauge>
 ```
 
-<code-view style="height: 125px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/gauges/linear-gauge-ranges"  
+<code-view style="height: 125px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/gauges/linear-gauge-ranges"
            github-src="gauges/linear-gauge/ranges">
 </code-view>
 
@@ -173,9 +173,9 @@ Minor tick marks – The minor tick marks represent helper tick marks, which mig
 </igx-linear-gauge>
 ```
 
-<code-view style="height: 125px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/gauges/linear-gauge-tickmarks"  
+<code-view style="height: 125px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/gauges/linear-gauge-tickmarks"
            github-src="gauges/linear-gauge/tickmarks">
 </code-view>
 
@@ -197,9 +197,9 @@ The labels indicate the measures on the scale.
 </igx-linear-gauge>
 ```
 
-<code-view style="height: 125px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/gauges/linear-gauge-labels"  
+<code-view style="height: 125px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/gauges/linear-gauge-labels"
            github-src="gauges/linear-gauge/labels">
 </code-view>
 
@@ -220,9 +220,9 @@ The backing element represents background and border of the bullet graph control
 </igx-linear-gauge>
 ```
 
-<code-view style="height: 125px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/gauges/linear-gauge-backing"  
+<code-view style="height: 125px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/gauges/linear-gauge-backing"
            github-src="gauges/linear-gauge/backing">
 </code-view>
 
@@ -246,9 +246,9 @@ The scale is a visual element that highlights the full range of values in the ga
 </igx-linear-gauge>
 ```
 
-<code-view style="height: 125px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/gauges/linear-gauge-scale"  
+<code-view style="height: 125px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/gauges/linear-gauge-scale"
            github-src="gauges/linear-gauge/scale">
 </code-view>
 

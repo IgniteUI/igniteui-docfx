@@ -65,8 +65,8 @@ Let's start by creating our @@igComponent and binding it to our data. We will al
 <!--columnHiding.component.html-->
 
 <igx-grid #grid id="grid" [data]="data" [autoGenerate]="false" width="100%" height="560px" columnWidth="200px" [allowFiltering]="true">
-    <igx-column [field]="'ID'" dataType="string" [sortable]="true"></igx-column>
-    <igx-column [field]="'ContactName'" dataType="string" [sortable]="true"></igx-column>
+    <igx-column [field]="'ID'" dataType="string" [sortable]="true" [hidden]="true"></igx-column>
+    <igx-column [field]="'ContactName'" dataType="string" [sortable]="true" [hidden]="true"></igx-column>
     <igx-column [field]="'ContactTitle'" dataType="string" [sortable]="true"></igx-column>
     <igx-column [field]="'City'" dataType="string" [sortable]="true"></igx-column>
     <igx-column [field]="'CompanyName'" dataType="string" [sortable]="true"></igx-column>
@@ -84,11 +84,11 @@ Let's start by creating our @@igComponent and binding it to our data. We will al
 
 <igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="false" width="100%"
     height="560px" columnWidth="200px" [allowFiltering]="true">
-    <igx-column [field]="'Name'" dataType="string" [sortable]="true"></igx-column>
+    <igx-column [field]="'Name'" dataType="string" [sortable]="true" [disableHiding]="true"></igx-column>
     <igx-column [field]="'ID'" dataType="number" [sortable]="true"></igx-column>
-    <igx-column [field]="'Title'" dataType="string" [sortable]="true"></igx-column>
-    <igx-column [field]="'HireDate'" dataType="date" [sortable]="true"></igx-column>
-    <igx-column [field]="'Age'" dataType="number" [sortable]="true"></igx-column>
+    <igx-column [field]="'Title'" dataType="string" [sortable]="true" [disableHiding]="true"></igx-column>
+    <igx-column [field]="'HireDate'" dataType="date" [sortable]="true" [hidden]="true"></igx-column>
+    <igx-column [field]="'Age'" dataType="number" [sortable]="true" [hidden]="true"></igx-column>
     <igx-column [field]="'Address'" dataType="string" [sortable]="true"></igx-column>
     <igx-column [field]="'City'" dataType="string" [sortable]="true"></igx-column>
     <igx-column [field]="'Country'" dataType="string" [sortable]="true"></igx-column>
@@ -110,8 +110,8 @@ Let's start by creating our @@igComponent and binding it to our data. We will al
                     </div>
                 </ng-template>
             </igx-column>
-            <igx-column field="Debut" [sortable]="true"></igx-column>
-            <igx-column field="Grammy Nominations" [sortable]="true"></igx-column>
+            <igx-column field="Debut" [sortable]="true" [hidden]="true"></igx-column>
+            <igx-column field="Grammy Nominations" [sortable]="true" [hidden]="true"></igx-column>
             <igx-column field="Grammy Awards" [sortable]="true"></igx-column>
 
             <igx-row-island [key]="'Albums'" [autoGenerate]="false" #layout1 >
@@ -247,7 +247,7 @@ public ngAfterViewInit() {
 
 In order to use the expanded set of functionalities for the column hiding UI, we can use the toolbar's [`columnHidingUI`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html#columnhidingui) property, which returns a reference to the column hiding UI component itself. This way we can access its respective API and use it according to our application's requirements.
 
-You can see the result of the code from above at the beginning of this article in the [Column Hiding Demo](#demo) section.
+You can see the result of the code from above at the beginning of this article in the Angular Column Hiding Example section.
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
 
@@ -495,7 +495,7 @@ The last step is to **include** the component mixins, each with its respective t
 >We scope the **igx-button** mixin within `.igx-column-actions`, so that only the column hiding buttons would be styled. Otherwise other buttons in the grid would be affected too.
 
  >[!NOTE]
- >If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
+ >If the component is using an [`Emulated`](../themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
 
 ```scss
 :host {
@@ -538,11 +538,11 @@ $custom-button: igx-button-theme(
 ```
 
 >[!NOTE]
->The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](../themes/palette.md) topic for detailed guidance on how to use them.
+>The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](../themes/sass/palettes.md) topic for detailed guidance on how to use them.
 
 ### Using Schemas
 
-Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](../themes/schemas.md). A **schema** is a recipe of a theme.
+Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](../themes/sass/schemas.md). A **schema** is a recipe of a theme.
 
 ```scss
 // Extending the dark column actions schema

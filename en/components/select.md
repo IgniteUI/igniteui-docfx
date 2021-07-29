@@ -67,7 +67,7 @@ By default, the Select component will use the `innerText` of the item element in
     </igx-select-item>
 </igx-select>
 ```
-To see the `text` property in action with a bit more sophisticated item templates, check the grouping sample below [Select with Groups](#grouped-select).
+To see the `text` property in action with a bit more sophisticated item templates, check the grouping sample below [Select with Groups](#group-select-items).
 
 ### Input Properties
 
@@ -314,7 +314,7 @@ export class MyClass implements OnInit {
 }
 ```
 >[!NOTE]
->If you pass in your custom settings both as an argument in the `open` function and in the template, `igx-select` will use the one provided in the `open` function. However, if you bind the settings to an internal event, such as `onOpening` or `onOpened` then `igx-select` will use the settings that are provided in the template.
+>If you pass in your custom settings both as an argument in the `open` function and in the template, `igx-select` will use the one provided in the `open` function. However, if you bind the settings to an internal event, such as `opening` or `opened` then `igx-select` will use the settings that are provided in the template.
 
 ## Styling
 Every component has its own theme.
@@ -338,6 +338,12 @@ Take a look at the [`Input Group`](input-group.md#styling) and the [`Drop Down`]
 * [GlobalPositionStrategy]({environment:angularApiUrl}/classes/globalpositionstrategy.html#constructor)  
 * [AbsoluteScrollStrategy]({environment:angularApiUrl}/classes/absolutescrollstrategy.html)  
 * [PositionSettings]({environment:angularApiUrl}/interfaces/positionsettings.html)
+
+## Theming Dependencies
+* [IgxDropDown Theme]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme)
+* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxOverlay Theme]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+* [IgxInputGroup Theme]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
 
 ## Additional Resources
 * [NgModel](https://angular.io/api/forms/NgModel)

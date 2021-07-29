@@ -159,13 +159,13 @@ export class MyBannerComponent {
 
 
 ### Binding to events
-The banner component emits events when changing its state - [`onOpening`]({environment:angularApiUrl}/classes/igxbannercomponent.html#onopening) and [`onOpened`]({environment:angularApiUrl}/classes/igxbannercomponent.html#onopened) are called when the banner is shown (before and after, resp.), while [`onClosing`]({environment:angularApiUrl}/classes/igxbannercomponent.html#onclosing) and [`onClosed`]({environment:angularApiUrl}/classes/igxbannercomponent.html#onclosed) are emitted when the banner is closed. The *ing* events (`onOpening`, `onClosing`) are cancelable - they use the `ICancelEventArgs` interface and the emitted object has a `cancel` property. If the `cancel` property is set to true, the corresponding end action and event will not be triggered - e.g. if we cancel `onOpening`, the banner's `open` method will not finish and the banner will not be shown.
+The banner component emits events when changing its state - [`opening`]({environment:angularApiUrl}/classes/igxbannercomponent.html#opening) and [`opened`]({environment:angularApiUrl}/classes/igxbannercomponent.html#opened) are called when the banner is shown (before and after, resp.), while [`closing`]({environment:angularApiUrl}/classes/igxbannercomponent.html#closing) and [`closed`]({environment:angularApiUrl}/classes/igxbannercomponent.html#closed) are emitted when the banner is closed. The *ing* events (`opening`, `closing`) are cancelable - they use the `ICancelEventArgs` interface and the emitted object has a `cancel` property. If the `cancel` property is set to true, the corresponding end action and event will not be triggered - e.g. if we cancel `opening`, the banner's `open` method will not finish and the banner will not be shown.
 
 To cancel an event, bind it to the emitted object and set its `cancel` property to `true`.
 
 ```html
 <!--banner.component.html-->
-    <igx-banner #connectionBanner (onOpening)="handleOpen($event)">
+    <igx-banner #connectionBanner (opening)="handleOpen($event)">
         ...
     </igx-banner>
 ```
@@ -254,7 +254,7 @@ The last step is to pass the custom banner theme:
 
 In order to style components for older browsers, like Internet Explorer 11, we have to use a different approach, since it doesn't support CSS variables. 
 
-If the component is using the [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`. To prevent the custom theme to leak into other components, be sure to include the `:host` selector before `::ng-deep`:
+If the component is using the [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`. To prevent the custom theme to leak into other components, be sure to include the `:host` selector before `::ng-deep`:
 
 ```scss
 :host {
@@ -289,11 +289,11 @@ $custom-banner-theme: igx-banner-theme(
 ```
 
 >[!NOTE]
->The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to the [`Palettes`](themes/palette.md) topic for detailed guidance on how to use them.
+>The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to the [`Palettes`](themes/palettes.md) topic for detailed guidance on how to use them.
 
 ### Using schemas
 
-You can build a robust and flexible structure that benefits from [`schemas`](themes/schemas.md).
+You can build a robust and flexible structure that benefits from [`schemas`](themes/sass/schemas.md).
 Extend one of the two predefined schemas, that are provided for every component, in this case - [`light-banner`]({environment:sassApiUrl}/index.html#variable-_light-banner) schema: 
 
 ```scss
@@ -343,6 +343,13 @@ Additional components and/or directives with relative APIs that were used:
 * [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
 * [IgxNavbarComponent]({environment:angularApiUrl}/classes/igxnavbarcomponent.html)
 * [IgxToastComponent]({environment:angularApiUrl}/classes/igxtoastcomponent.html)
+
+## Theming Dependencies
+* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxButton Theme]({environment:sassApiUrl}/index.html#function-igx-button-theme)
+* [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
+* [IgxExpansionPanel Theme]({environment:sassApiUrl}/index.html#function-igx-expansion-panel-theme)
+
 
 ## Additional Resources
 <div class="divider--half"></div>

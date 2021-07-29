@@ -12,10 +12,12 @@ Angular Spreadsheet は、スプレッドシート データの視覚化と編�
 
 ## Angular Spreadsheet の例
 
-<div class="sample-container loading" style="height: 500px">
-    <iframe id="spreadsheet-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/excel/spreadsheet-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Spreadsheet の例"></iframe>
-</div>
-
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/excel/spreadsheet-overview"
+           alt="Angular Spreadsheet の例"
+           github-src="excel/spreadsheet/overview">
+</code-view>
 
 <div class="divider--half"></div>
 
@@ -31,11 +33,7 @@ npm install --save igniteui-angular-spreadsheet
 
 ## モジュールの要件
 
-[`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) を作成するには、以下のモジュールが必要です。<!-- Angular, React, WebComponents --> <!-- end: Angular, React, WebComponents --><!-- Blazor -->モジュールはアプリケーションのエントリ ポイントに登録する必要があります。
-
--   ExcelModule
--   SpreadsheetModule
-    <!-- end: Blazor -->
+[`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) を作成するには、以下のモジュールが必要です。
 
 ```ts
 import { IgxExcelModule } from 'igniteui-angular-excel';

@@ -160,13 +160,13 @@ export class MyBannerComponent {
 
 
 ### イベントにバインド
-Banner コンポーネントは状態の変更時にイベントを発生します。[`onOpening`]({environment:angularApiUrl}/classes/igxbannercomponent.html#onopening) と [`onOpened`]({environment:angularApiUrl}/classes/igxbannercomponent.html#onopened) が Banner が表示される (前と後に) ときに呼び出されます。一方、[`onClosing`]({environment:angularApiUrl}/classes/igxbannercomponent.html#onclosing) と [`onClosed`]({environment:angularApiUrl}/classes/igxbannercomponent.html#onclosed) は Banner が閉じるときにエミットされます。*Ing* イベント (`onOpening`, `onClosing`) はキャンセル可能です。 `ICancelEventArgs` インターフェイスを使用してオブジェクトは `cancel` プロパティを持ちます。`cancel` プロパティを true に設定します。対応するエンド操作とイベントはトリガーされません。たとえば、`onOpening` をキャンセルした場合、Banner の `open` メソッドは完了せずに Banner が表示されません。
+Banner コンポーネントは状態の変更時にイベントを発生します。[`opening`]({environment:angularApiUrl}/classes/igxbannercomponent.html#opening) と [`opened`]({environment:angularApiUrl}/classes/igxbannercomponent.html#opened) が Banner が表示される (前と後に) ときに呼び出されます。一方、[`closing`]({environment:angularApiUrl}/classes/igxbannercomponent.html#closing) と [`closed`]({environment:angularApiUrl}/classes/igxbannercomponent.html#closed) は Banner が閉じるときにエミットされます。*Ing* イベント (`opening`, `closing`) はキャンセル可能です。 `ICancelEventArgs` インターフェイスを使用してオブジェクトは `cancel` プロパティを持ちます。`cancel` プロパティを true に設定します。対応するエンド操作とイベントはトリガーされません。たとえば、`opening` をキャンセルした場合、Banner の `open` メソッドは完了せずに Banner が表示されません。
 
 発生したオブジェクトへバインドしたイベントをキャンセルするために `cancel` プロパティに `true` に設定します。
 
 ```html
 <!--banner.component.html-->
-    <igx-banner #connectionBanner (onOpening)="handleOpen($event)">
+    <igx-banner #connectionBanner (opening)="handleOpen($event)">
         ...
     </igx-banner>
 ```
@@ -255,7 +255,7 @@ $custom-banner-theme: igx-banner-theme(
 
 Internet Explorer 11 などの古いブラウザーのコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、別のアプローチを用いる必要があります。
 
-コンポーネントが [`Emulated`](./themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
+コンポーネントが [`Emulated`](./themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
 
 ```scss
 :host {
@@ -290,11 +290,11 @@ $custom-banner-theme: igx-banner-theme(
 ```
 
 >[!NOTE]
->`igx-color` と `igx-palette` は色の生成や取得のための関数です。使い方の詳細については [`パレット`](./themes/palette.md) のトピックをご覧ください。
+>`igx-color` と `igx-palette` は色の生成や取得のための関数です。使い方の詳細については [`パレット`](./themes/palettes.md) のトピックをご覧ください。
 
 ### スキーマの使用
 
-テーマ エンジンを使用して[`スキーマ`](./themes/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。
+テーマ エンジンを使用して[`スキーマ`](./themes/sass/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。
 すべてのコンポーネントに提供されている 2 つの定義済みスキーマ (ここでは [`light-banner`]({environment:sassApiUrl}/index.html#variable-_light-banner)) の 1 つを拡張します。
 
 ```scss
@@ -344,6 +344,12 @@ $custom-banner-theme: igx-banner-theme(
 * [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
 * [IgxNavbarComponent]({environment:angularApiUrl}/classes/igxnavbarcomponent.html)
 * [IgxToastComponent]({environment:angularApiUrl}/classes/igxtoastcomponent.html)
+
+## テーマの依存関係
+* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxButton テーマ]({environment:sassApiUrl}/index.html#function-igx-button-theme)
+* [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
+* [IgxExpansionPanel テーマ]({environment:sassApiUrl}/index.html#function-igx-expansion-panel-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>
