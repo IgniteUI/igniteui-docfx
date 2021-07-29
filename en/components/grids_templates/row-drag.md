@@ -667,7 +667,7 @@ class MyRowGhostComponent {
     ...
     private onRowDragStart(e: IRowDragStartEventArgs) {
         if (e !== null) {
-        this._draggedRow = e.dragData.rowData;
+            this._draggedRow = e.dragData.rowData;
         }
         const directive = e.dragDirective;
         directive.dragMove
