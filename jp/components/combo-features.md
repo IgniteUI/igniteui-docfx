@@ -7,15 +7,15 @@ _language: ja
 
 # コンボ機能
 <p class="highlight">
-Ignite UI for Angular Combo コントロールは、データと値のバインディング、カスタム値、フィルタリング、グループ化など複数の機能を公開します。 
+Ignite UI for Angular Combo コントロールは、データと値のバインディング、カスタム値、フィルタリング、グループ化など複数の機能を公開します。
 </p>
 
 ## Angular コンボ機能の例
 以下のデモは、ランタイムで有効または無効にできるいくつかの igx-combo 機能を示します。
 
 
-<code-view style="height: 440px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 440px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/combo-features" alt="Angular コンボ機能の例">
 </code-view>
 
@@ -110,9 +110,9 @@ export class CustomOverlayCombo {
     ...
     public customSettings: OverlaySettings = {
         positionStrategy: new GlobalPositionStrategy(
-            { 
+            {
                 openAnimation: scaleInCenter,
-                closeAnimation: scaleOutCenter 
+                closeAnimation: scaleOutCenter
             }),
         modal: true,
         closeOnOutsideClick: true,
@@ -127,8 +127,8 @@ export class CustomOverlayCombo {
 すべてが適切に設定されると、[GlobalPositionStrategy](overlay-position.md#グローバル) を使用してコンボのリストが中央に表示されます。
 
 
-<code-view style="height: 440px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 440px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/combo-overlay" >
 </code-view>
 
@@ -188,7 +188,7 @@ Combo の [autoFocusSearch]({environment:angularApiUrl}/classes/igxcombocomponen
 ## API まとめ
 <div class="divider--half"></div>
 
-* [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html) 
+* [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html)
 * [IgxComboComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-combo-theme)
 
 その他のコンポーネントおよびディレクティブ (またはそのいずれか) で使用した API:
@@ -201,7 +201,7 @@ Combo の [autoFocusSearch]({environment:angularApiUrl}/classes/igxcombocomponen
 * [コンボ リモート バインディング](combo-remote.md)
 * [コンボ テンプレート](combo-templates.md)
 * [テンプレート駆動フォームの統合](input-group.md)
-* [リアクティブ フォームの統合](input-group-reactive-forms.md)
+* [リアクティブ フォームの統合](angular-reactive-form-validation.md)
 * [カスケーディング](combo-cascading.md)
 
 コミュニティに参加して新しいアイデアをご提案ください。

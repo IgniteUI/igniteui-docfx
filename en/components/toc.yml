@@ -35,6 +35,9 @@
     - name: Build Real-time SignalR App with .NET Core
       href: general/how-to/signal-r-service-live-data.md
       new: true
+    - name: Angular Reactive Forms
+      href: angular-reactive-form-validation.md
+      new: true
 - name: Angular Schematics & Ignite UI CLI
   href: general/cli-overview.md
   new: false
@@ -133,10 +136,12 @@
           new: false
     - name: Row Drag
       href: grid/row-drag.md
+      updated: true
       new: false
     - name: Paging
       href: grid/paging.md
       new: false
+      updated: true
     - name: Filtering
       href: grid/filtering.md
       new: false
@@ -279,6 +284,7 @@
     - name: Paging
       href: treegrid/paging.md
       new: false
+      updated: true
     - name: Filtering
       href: treegrid/filtering.md
       new: false
@@ -409,6 +415,7 @@
     - name: Paging
       href: hierarchicalgrid/paging.md
       new: false
+      updated: true
     - name: Filtering
       href: hierarchicalgrid/filtering.md
       new: false
@@ -874,9 +881,6 @@
 - name: Input Group
   href: input-group.md
   new: false
-  items:
-    - name: Reactive Forms
-      href: input-group-reactive-forms.md
 - name: Mask
   href: mask.md
   new: false
@@ -1016,6 +1020,13 @@
   href: time-picker.md
   new: false
   updated: true
+- name: Pagination
+  header: true
+  sortable: true
+- name: Paginator
+  href: paginator.md
+  new: true
+  updated: false
 - name: Services
   header: true
   sortable: true

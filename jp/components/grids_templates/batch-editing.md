@@ -79,7 +79,7 @@ export class AppModule {}
 </@@igSelector>
 ```
 
-これにより、@@igSelector に `Transaction` サービスの適切なインスタンスが提供されます。
+これにより、@@igSelector に `Transaction` サービスの適切なインスタンスが提供されます。適切な `TransactionService` は `TransactionFactory` を通じて提供されます。この内部実装の詳細については、[トランザクション トピック](../transaction-classes.md#トランザクション-ファクトリ)を参照してください。
 
 一括編集を有効にした後、バインドされたデータ ソースと [`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable) を true に設定して `@@igxName` を定義し、バインドします。
 

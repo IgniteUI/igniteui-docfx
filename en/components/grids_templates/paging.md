@@ -22,24 +22,24 @@ Pagination is used to split a large set of data into a sequence of pages that ha
 The following example represents @@igComponent pagination and exposes the options usage of `items per page` and how paging can be enabled. The user can also quickly navigate through the @@igComponent pages via "Go to last page" and "Go to first page" buttons.
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:550px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-paging-sample" alt="Angular Pagination Example">
 </code-view>
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:550px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-paging" alt="Angular Pagination Example">
 </code-view>
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:580px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:580px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-paging" alt="Angular Pagination Example">
 </code-view>
 
@@ -55,29 +55,7 @@ Adding a `igx-paginator` component will control whether the feature is present, 
 </@@igSelector>
 ```
 
-## Angular Pagination Template
-The paging area supports templating by the user, if a `igx-paginator-content` reference is defined within the @@igComponent:
 
-```html
-<igx-paginator #paginator>
-    <igx-paginator-content>
-        ...
-    </igx-paginator-content>
-</igx-paginator>
-```
-
-In addition, [`IgxPageSizeSelectorComponent`]({environment:angularApiUrl}/classes/IgxPageSizeSelectorComponent.html) and [`IgxPageNavigationComponent`]({environment:angularApiUrl}/classes/IgxPageNavigationComponent.html) were introduced and now the paginator components allows a custom content to be defined, as it is shown in the example below. The first will add the dropdown element and label corresponding for the page size and the latter will handle the page navigation with all action buttons.
-
-```html
-<igx-paginator #paginator>
-	<igx-paginator-content>
-		<igx-page-size></igx-page-size>
-		<igx-page-nav></igx-page-nav>
-	</igx-paginator-content>
-</igx-paginator>
-```
-
-Paging can also be done programmatically through the Paging API, using the [`paginate`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#paginate), [`previousPage`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#previouspage), [`nextPage`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#nextPage) methods and the inputs [`page`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#page), [`perPage`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#perPage) and [`totalRecords`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#totalRecords). Where *page* allows you to set the current page, *perPage* - the number of items that are displayed at one page and *totalRecords* - the number of the records that are in the grid. `TotalRecords` property is useful when you have paging with remote data and you want to alter the page count based on total remote records. Keep in mind that If you are using paging and all the data is passed to the grid, the value of `totalRecords` property will be set by default to the length of the provided data source. If `totalRecords` is set, it will take precedence over the default length based on the data source.
 
 Example:
 ```html
@@ -104,26 +82,7 @@ Group rows participate in the paging process along with data rows. They count to
 Integration between Paging and Group By is described in the [Group By](groupby.md#angular-grid-group-by-with-paging) topic.
 }
 
-## Paging API
-| Input           |      Description                           |
-|-----------------|:------------------------------------------:|
-| displayDensity  | Gets/Sets the display density of the paginator. |
-| page            | Gets/Sets the current page. |
-| perPage         | Gets/Sets the number of visible items per page. |
-| selectOptions   | Gets/Sets custom options in the Select element of the paginator. Default select values [5, 10, 15, 25, 50, 100, 500] |
-| totalRecords    | Gets/Sets the total records count. |
-| totalPages      | Gets/Sets the total Pages count. |
-| resourceStrings | Gets/Sets the resource strings. By default it uses EN resource strings. |
-| overlaySettings | Gets/Sets a custom OverlaySettings. |
-
-| Output          |      Description                           |
-|-----------------|:------------------------------------------:|
-| perPageChange   | Emitted when `perPage` property value of the paginator is changed. |
-| pageChange      | Emitted after the current page is changed. |
-| paging          | Emitted before paging is performed. Cancelable.|
-| pagingDone      | Emitted after paging is performed. |
-
-### Usage
+## Usage
 
 @@if (igxName === 'IgxGrid') {
 The `igx-paginator` component is used along with the `igx-grid` component in the example below, but you can use it with any other component in case paging functionality is needed.
@@ -171,26 +130,46 @@ The `igx-paginator` component is used along with the `igx-hierarchical-grid` com
 ```
 }
 
+@@if (igxName === 'IgxHierarchicalGrid') {
+### Paginator Configuration within child grids
+
+Due to certain limitations in how the child grids of an IgxHierarchicalGrid are implemented and how DI scope works, when defining a paginator component inside the igx-row-island tags, always make sure to use the IgxPaginator directive on the paginator itself. This will make sure that the child grid have the correct paginator instance as a reference:
+
+```html
+<igx-hierarchical-grid>
+    ...
+    <igx-row-island>
+        ...
+        <igx-grid-toolbar *igxPaginator>
+           ...
+        </igx-grid-toolbar>
+    </igx-row-island>
+    ...
+</igx-hierarchical-grid>
+```
+
+}
+
 ### Paginator Component Demo
 
 @@if (igxName === 'IgxGrid') {
-<code-view style="height:600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-pager-sample" >
 </code-view>
 }
 
 @@if (igxName === 'IgxTreeGrid') {
-<code-view style="height:600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-reusable-paginator" >
 </code-view>
 }
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-reusable-paginator" >
 </code-view>
 }
@@ -205,52 +184,6 @@ Remote paging can be achieved by declaring a service, responsible for data fetch
 
 In some cases you may want to define your own paging behavior and this is when we can take advantage of the `igx-paginator-content` and add our custom logic along with it. [This section](remote-data-operations.md#remote-paging-with-custom-template) explains how we are going to extend the Remote Paging example in order to demonstrate this.
 }
-
-## Localization
-With only a few lines of code you can easily localize all strings part of the Paging component. In order to localize a given Paging instance use the input property [resourceStrings]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#resourceStrings). You can use this 
-
-**Step 1** - Import `IPaginatorResourceStrings` interface and [changei18n]({environment:angularApiUrl}/#changei18n) function:
-
-```ts
-import { IPaginatorResourceStrings, changei18n } from "igniteui-angular";
-```
-
-**Step 2** - Define the Paging resource strings:
-
-```ts
-private paginatorResourceStrings: IPaginatorResourceStrings = {
-    igx_paginator_label: "Records per page:",
-    igx_paginator_first_page_button_text: "Custom first page text",
-    igx_paginator_last_page_button_text: "Custom last page text",
-    igx_paginator_next_page_button_text: "Custom next page text",
-    igx_paginator_previous_page_button_text: "Custom previous page text",
-    igx_paginator_pager_text: "out of"
-};
-```
-
-
-**Step 3** - Pass the object to the [changei18n]({environment:angularApiUrl}/#changei18n) function as a parameter in order to change the global i18n for the component on app.module level. This will change the resource string of all Paging components part of your application:
-
-```ts
-public ngOnInit(): void {
-    changei18n(this.paginatorResourceStrings as any);
-}
-```
-
-In order to change the resource string to a specific Paging component, you can use a @ViewChild and set the desired [resourceStrings]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#resourceStrings) within a `requestAnimationFrame` method with a callback, that will be invoked before the page repaint. Setting a newly instantiated object to the [resourceStrings]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#resourceStrings) property will localize only that given component's instance.
-
-```ts
-@ViewChild("paginator", { read: IgxPaginatorComponent, static: false }) public paginator: IgxPaginatorComponent;
-...
-
-public ngOnInit(): void {
-    requestAnimationFrame(() => {
-        this.paginator.resourceStrings = this.paginatorResourceStrings;
-    });
-}
-```
-
-</div>
 
 ## Pagination Styling in Angular
 
@@ -422,8 +355,8 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 ### Pagination Style Example
 
 
-<code-view style="height:560px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:560px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/custom-grid-paging-style" >
 </code-view>
 
@@ -433,8 +366,8 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 @@if (igxName === 'IgxHierarchicalGrid'){
 ### Demo
 
-<code-view style="height:560px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:560px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-paging-style" >
 </code-view>
 
@@ -444,8 +377,8 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 @@if (igxName === 'IgxTreeGrid'){
 ### Demo
 
-<code-view style="height:560px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:560px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-paging-style" >
 </code-view>
 

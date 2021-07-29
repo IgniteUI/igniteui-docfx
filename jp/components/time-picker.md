@@ -11,15 +11,15 @@ _language: ja
 
 ## Angular Time Picker の例
 
-<code-view style="height:540px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:540px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-dropdown" >
 </code-view>
 
 <div class="divider--half"></div>
 
 ## 使用方法
-はじめに、**app.module.ts** ファイルに `IgxTimePickerModule` をインポートします。 
+はじめに、**app.module.ts** ファイルに `IgxTimePickerModule` をインポートします。
 
 >[!NOTE]
 >IgxTimePicker は、タッチ操作において、**BrowserAnimationsModule** と **HammerModule** に依存しています。これらも AppModule に追加する必要があります。
@@ -97,7 +97,7 @@ export class SampleFormComponent {
 ### コンポーネントの投影
 Time Picker コンポーネントを使用すると、子コンポーネントを投影できます。これは [`IgxInputGroupComponent`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) と同じです: [`IgxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) を除いて、[`igxLabel`](label-input.md)、[`IgxHint`](input-group.md#hints)、[`igxPrefix`](input-group.md#prefix--suffix)、[`igxSuffix`](input-group.md#prefix--suffix)。詳細については、[Label および Input](label-input.md) トピックを参照してください。
 
-デフォルト設定では、ドロップダウン/ダイアログ トグル アイコンがプレフィックスとして表示されます。[`IgxPickerToggleComponent`]({environment:angularApiUrl}/classes/igxpickertogglecomponent.html) コンポーネントを使用して変更または再定義できます。入力の開始位置または終了位置を定義する [`igxPrefix`](input-group.md#prefix--suffix) または [`igxSuffix`](input-group.md#prefix--suffix) で設定できます。 
+デフォルト設定では、ドロップダウン/ダイアログ トグル アイコンがプレフィックスとして表示されます。[`IgxPickerToggleComponent`]({environment:angularApiUrl}/classes/igxpickertogglecomponent.html) コンポーネントを使用して変更または再定義できます。入力の開始位置または終了位置を定義する [`igxPrefix`](input-group.md#prefix--suffix) または [`igxSuffix`](input-group.md#prefix--suffix) で設定できます。
 
 次の例では、カスタム ラベルとヒントを追加し、サフィックスとして表示されるようにデフォルトのトグル アイコンの位置を変更しました。
 
@@ -116,8 +116,8 @@ public date: Date = new Date();
 
 以下はテンプレート化された Time Picker です。
 
-<code-view style="height: 600px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 600px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-5" >
 </code-view>
 
@@ -152,8 +152,8 @@ public selectNow(timePicker: IgxTimePickerComponent) {
 
 ドロップダウン、カスタム アクションと双方向バインディングをサポートする、再テンプレート化されたタイムピッカーです。
 
-<code-view style="height: 600px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 600px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-6" >
 </code-view>
 
@@ -193,7 +193,7 @@ public mode = PickerInteractionMode.Dialog;
 ダイアログ モードでは、ダイアログ ヘッダーに、現在選択されている時刻がピッカーの [`input format`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#inputformat) で表示されます。[`headerOrientation`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#headerorientation) プロパティを設定することで、ヘッダーの位置を変更できます。
 
 <code-view style="height: 600px;"
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-1" alt="Angular Time Picker Example">
 </code-view>
 
@@ -225,7 +225,7 @@ Time Picker は、パブリックの [`increment`]({environment:angularApiUrl}/c
 ### フォームと検証
 Time Picker コンポーネントは、コア FormsModule [NgModel](https://angular.io/api/forms/NgModel) および [ReactiveFormsModule](https://angular.io/api/forms/ReactiveFormsModule) (FormControl, FormGroup など) からのすべてのディレクティブをサポートします。これには、[フォーム バリデーター](https://angular.io/api/forms/Validators)機能も含まれます。さらに、コンポーネントの[最小値と最大値](#最小値と最大値)はフォーム バリデーターとしても機能します。
 
-[リアクティブ フォームの統合](input-group-reactive-forms.md)サンプルは、ReactiveForms で igxTimePicker を使用する方法を示しています。
+[リアクティブ フォームの統合](angular-reactive-form-validation.md)サンプルは、ReactiveForms で igxTimePicker を使用する方法を示しています。
 
 #### 最小値と最大値
 [`minValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#minvalue) および [`maxValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#maxvalue) を指定して、ユーザー入力を制限できます。その場合、ドロップダウン/ダイアログにはその範囲内の時刻のみが表示されます。ただし、ドロップダウン モードでは、ユーザーが無効な時間を入力する可能性があります。[`validationFailed`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#validationfailed) イベントを処理して、それが発生した場合にユーザーに通知することができます。
@@ -284,8 +284,8 @@ public onValidationFailed() {
 
 以下は結果です。
 
-<code-view style="height: 540px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 540px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-4" >
 </code-view>
 
@@ -296,8 +296,8 @@ public onValidationFailed() {
 
 テンプレート駆動フォームでこれを実現するには、`ngModel` を使用して両方のコンポーネントを同じ Date オブジェクトにバインドします。
 
-<code-view style="height: 540px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 540px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/template-driven-form" >
 </code-view>
 
@@ -305,8 +305,8 @@ public onValidationFailed() {
 
 リアクティブ フォームでは、各コンポーネントの [`valueChange`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#valuechange) イベントを処理し、他のコンポーネントの値を更新できます。
 
-<code-view style="height: 540px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 540px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/reactive-form" >
 </code-view>
 
@@ -318,7 +318,7 @@ Time Picker のスタイル設定は、すべてのテーマ関数とコンポ�
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+```
 
 [`igx-time-picker-theme`]({environment:sassApiUrl}/index.html#function-igx-dialog-theme) を拡張する新しいテーマを作成し、Time Picker のスタイルを設定できるさまざまなパラメーターを受け取ります。
 
@@ -402,8 +402,8 @@ Time Picker の項目がコンポーネントのホスト**内**に適切にレ�
 
 ### デモ
 
-<code-view style="height: 600px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 600px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-styling" >
 </code-view>
 
@@ -429,7 +429,7 @@ Time Picker の項目がコンポーネントのホスト**内**に適切にレ�
 ## その他のリソース
 * [Date Time Editor](date-time-editor.md)
 * [Label および Input](label-input.md)
-* [リアクティブ フォームの統合](input-group-reactive-forms.md)
+* [リアクティブ フォームの統合](angular-reactive-form-validation.md)
 
 コミュニティに参加して新しいアイデアをご提案ください。
 * [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
