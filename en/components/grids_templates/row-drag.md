@@ -782,7 +782,7 @@ In order to track the position of the cursor, we bind to the `dragMove` event of
 
 <div class="divider--half"></div>
 
-### Scrolling the grid when a row is dragged to the top or bottom of it
+#### Scrolling the grid on row drag
 
 A very useful scenario is being able to scroll the grid when the dragged row reaches its' top or bottom border. This allows reordering rows outside of the current viewport when the number of rows in the grid requires a scrollbar.
 
