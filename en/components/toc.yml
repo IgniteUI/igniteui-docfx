@@ -127,6 +127,7 @@
           new: false
     - name: Row Drag
       href: grid/row-drag.md
+      updated: true
       new: false
     - name: Paging
       href: grid/paging.md
