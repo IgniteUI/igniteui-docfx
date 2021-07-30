@@ -354,7 +354,7 @@ public selection = true;
 **참고:** @@igComponent에 원격 가상화가 설정된 경우, 헤더 체크 박스를 클릭하면 모든 레코드가 선택/선택 취소됩니다. 그러나, 헤더 체크 박스를 통해 모든 레코드가 선택된 후 가시적인 행이 선택 해제된 경우, 필요에 따라 새로운 데이터가 @@igComponent에 로딩되면 새롭게 로드된 행이 선택되지 않는 제한이 있습니다.
 }
 
-**참고:** 셀 선택은 [`onRowSelectionChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowselectionchange)가 아닌 [`selected`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#selected)이 트리거됩니다.
+**참고:** 셀 선택은 [`rowSelected`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowSelected)가 아닌 [`selected`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#selected)이 트리거됩니다.
 
 ### 코드 조각
 
@@ -391,7 +391,7 @@ public selection = true;
 ```html
 <!-- selectionExample.component.html -->
 
-<@@igSelector (onRowSelectionChange)="handleRowSelectionChange($event)">
+<@@igSelector (rowSelected)="handleRowSelectionChange($event)">
 ...
 </@@igSelector>
 ```
