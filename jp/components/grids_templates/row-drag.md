@@ -397,7 +397,7 @@ enum DragIcon {
 ### 行の並べ替えデモ
 グリッドの行ドラッグ イベントと `igxDrop` ディレクティブを使用して、ドラッグよる行の並べ替えるが可能なグリッドを作成できます。
 
-すべてのアクションはグリッド本体の _内側_ で発生するため、ここで `igxDrop` ディレクティブをアタッチする必要があります:
+すべてのアクションはグリッド本体の内側で発生するため、ここで `igxDrop` ディレクティブをアタッチする必要があります:
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -620,16 +620,16 @@ export class GridRowReorderComponent {
 <div class="divider--half"></div>
 
 @@if (igxName === 'IgxGrid') {
-### Improving UX in row drag scenarios
+### 行ドラッグ シナリオでの UX の改善
 
-Being able to obtain the row index which is currently below the cursor provides you with the opportunity to build rich custom functionalities and to improve the UX of your application. For example, you can change the drag ghost or display a drop indicator, based on the position of the dragged row over the grid. Another useful behavior that you can achieve that way is to scroll the grid up or down while dragging a row, when reaching the border of the grid.
+現在カーソルの下にある行インデックスを取得できることで、豊富なカスタム機能を構築し、アプリケーションの UX を向上させる機会が得られます。たとえば、グリッド上のドラッグされた行の位置に基づいて、ドラッグ ゴーストを変更したり、ドロップ インジケーターを表示したりできます。この方法で実現できるもう 1 つの便利な動作は、グリッドの境界に達したときに、行をドラッグしながらグリッドを上下にスクロールすることです。
 
-Below you can find example snippets of a couple of custom implementations you can achieve by knowing the row's position.
+以下に、行の位置を知ることで実現できるいくつかのカスタム実装のスニペットの例を示します。
 
-#### Changing the drag ghost based on cursor position
-In the snippets below you see how you can change the text inside the drag ghost to display the name of the hovered row.
+#### カーソル位置に基づいてドラッグ ゴーストを変更する
+以下のスニペットでは、ドラッグ ゴースト内のテキストを変更して、ホバーされた行の名前を表示する方法を示しています。
 
-First, you specify a template which you'd like to use for the drag ghost. The `dropName` property will dynamically change, getting the name of the row over which the cursor is hovering:
+まず、ドラッグ ゴーストに使用するテンプレートを指定します。`dropName` プロパティは動的に変化し、カーソルが置かれている行の名前を取得します。
 
 ```html
 <ng-template igxRowDragGhost>
@@ -639,7 +639,7 @@ First, you specify a template which you'd like to use for the drag ghost. The `d
 </ng-template>
 ```
 
-Then, define a method that returns the instance of the row you're over (similar to the one used in the [row reordering demo](#row-reordering-demo)):
+次に、終了した行のインスタンスを返すメソッド ([行の並べ替えデモ](#row-reordering-demo)で使用されているものと同様) を定義します。
 
 ```typescript
 class MyRowGhostComponent {
@@ -657,8 +657,8 @@ class MyRowGhostComponent {
 }
 ```
 
-Finally, we create a method that will be used to handle the [`IgxDragDirective.dragMove`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragmove) event (emitted for the dragged row). The method will change the value of the property used in the `igxRowDragGhost` template and force a rerender.
-We want to subscribe to the `dragMove` event only of the specific row we're dragging and unsub from it (to prevent memory leaks) each time a row is dropped.
+最後に、[`IgxDragDirective.dragMove`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragmove) イベント (ドラッグされた行に対して発行) を処理するために使用されるメソッドを作成します。このメソッドは、`igxRowDragGhost` テンプレートで使用されているプロパティの値を変更し、強制的に再描画します。
+ドラッグしている特定の行の `dragMove` イベントのみをサブスクライブし、行がドロップされるたびに (メモリ リークを防ぐために) サブスクライブを解除します。
 
 ```typescript
 class MyRowGhostComponent {
@@ -707,14 +707,14 @@ class MyRowGhostComponent {
 
 ```
 
-#### Displaying a drop indicator based on cursor position
+#### カーソル位置に基づいたドロップ インジケーターの表示
 
-In the demo in the next section you see how you can display an indicator of where the dragged row would be dropped. You can customize this indicator as you like - it may be a placeholder row, placed at the position where the dragged row would be dropped, a border style indicating if the dragged row would be dropped above or below the currently hovered row, etc.
+次のセクションのデモでは、ドラッグされた行がドロップされる場所のインジケーターを表示する方法を確認します。このインジケーターは好きなようにカスタマイズできます - ドラッグされた行がドロップされる位置に配置されたプレースホルダー行、ドラッグされた行が現在ホバーされている行の上または下にドロップされるかどうかを示す境界線スタイルなどです。
 
-In order to track the position of the cursor, we bind to the `dragMove` event of the [`IgxDragDirective`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragmove) when we start dragging a row.
+カーソルの位置を追跡するために、行のドラッグを開始するときに [`IgxDragDirective`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragmove) の `dragMove` イベントにバインドします。
 
 > [!NOTE]
-> Make sure that there is a `primaryKey` specified for the grid! The logic needs an unique identifier for the rows so they can be properly reordered
+> グリッドに `primaryKey` が指定されていることを確認してください! ロジックが行を適切に並べ替えられるように、行には一意の識別子が必要です。
 
 ```typescript
 public ngAfterViewInit() {
@@ -783,11 +783,11 @@ private changeHighlightedElement(newElement: HTMLElement) {
 
 <div class="divider--half"></div>
 
-#### Scrolling the grid on row drag
+#### 行ドラッグでグリッドをスクロールする
 
-A very useful scenario is being able to scroll the grid when the dragged row reaches its' top or bottom border. This allows reordering rows outside of the current viewport when the number of rows in the grid requires a scrollbar.
+非常に便利なシナリオは、ドラッグされた行がその上部または下部の境界に達したときにグリッドをスクロールできることです。これにより、グリッド内の行数にスクロールバーが必要な場合に、現在のビューポートの外側で行を並べ替えることができます。
 
-Below you see an example of the two methods we use to check if we have reached the edge of the viewport and to scroll it if needed. The `isGridScrolledToEdge` accepts one parameter - the direction we'd like to scroll the grid (1 for "Down", -1 for "Up") and returns `true` if we've reach the final row in that direction. The `scrollGrid` method will attempt to scroll the grid in a direction (1 or -1), doing nothing if the grid is already at _that_ edge.
+以下に、ビューポートの端に到達したかどうかを確認し、必要に応じてスクロールするために使用する 2 つの方法の例を示します。`isGridScrolledToEdge` は、グリッドをスクロールする方向 (「下」の場合は 1、「上」の場合は -1) の 1 つのパラメーターを受け入れ、その方向の最後の行に到達した場合は `true` を返します。`scrollGrid` メソッドは、グリッドをある方向 (1 または -1) にスクロールしようとしますが、グリッドがすでにその端にある場合は何もしません。
 
 ```typescript
 class MyGridScrollComponent {
@@ -818,9 +818,9 @@ class MyGridScrollComponent {
 
 ```
 
-We'll still be subscribing to the `dragMove` event of the specific row in the way we did in the previous example. Since `dragMove` is fired only when the cursor actually moves, we want to have a nice and simple way to auto-scroll the grid when the row is at one of the edges, but the user **does not** move the mouse. We'll an additional method which will setup an `interval`, auto-scrolling the grid every `500ms`.
+前の例で行ったように、特定の行の `dragMove` イベントをサブスクライブします。`dragMove` はカーソルが実際に移動したときにのみ起動されるため、行が端の 1 つにあるときにグリッドを自動スクロールするための便利で簡単な方法が必要ですが、ユーザーはマウスを**移動しません** 。`500Ms` ごとにグリッドを自動スクロールする `interval` を設定するメソッドを追加します。
 
-We create and subscribe to the `interval` when the pointer reaches the grid's edge and we `unsubscribe` from that `interval` everytime the mouse moves or the row is dropped (regardless of cursor position).
+ポインタがグリッドの端に達したときに `interval` を作成してサブスクライブし、マウスが移動したり行がドロップされたりするたびに (カーソル位置に関係なく)、その `interval` からサブスクライブを解除します。
 
 ```typescript
 class MyGridScrollComponent {
@@ -855,7 +855,7 @@ class MyGridScrollComponent {
 }
 ```
 
-Following is the example of both scenarios described above - showing a drop indicator and scrolling the viewport when border's edge is reached.
+以下は、上記の両方のシナリオの例です。ドロップ インジケーターを表示し、境界線の端に達したときにビューポートをスクロールします。
 
 <code-view style="height:830px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
