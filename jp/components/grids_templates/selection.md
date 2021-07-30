@@ -172,7 +172,7 @@ IgxGrid はコピーされたデータを取得し、コンテナ要素に貼り
 <div class="wrapper">
     <div class="grid__wrapper" (window:click)="disableContextMenu()">
         <igx-grid #grid1 [data]="data" [autoGenerate]="false" height="500px" width="100%"
-            (contextMenu)="rightClick($event)" (onRangeSelection)="getCells($event)"
+            (contextMenu)="rightClick($event)" (rangeSelected)="getCells($event)"
             (selected)="cellSelection($event)">
         <!-- Columns area -->
         </igx-grid>

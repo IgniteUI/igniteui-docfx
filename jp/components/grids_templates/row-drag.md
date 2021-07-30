@@ -67,7 +67,7 @@ Ignite UI for Angular @@igComponent では、**RowDrag** がルート `@@igSelec
  ...
 </@@igSelector>
 ```
-ドラッグ ハンドルをクリックしてボタンを押しながらカーソルを動かすと、グリッドの [`onRowDragStart`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowdragstart) イベントが発生します。クリックをリリースすると、[`onRowDragEnd`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowdragend) イベントが発生します。
+ドラッグ ハンドルをクリックしてボタンを押しながらカーソルを動かすと、グリッドの [`rowDragStart`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowDragStart) イベントが発生します。クリックをリリースすると、[`rowDragEnd`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowDragEnd) イベントが発生します。
 
 以下は、行ドラッグをサポートするための `@@igSelector` の設定方法と、ドロップイベントの適切な処理方法についてのチュートリアルです。
 
@@ -122,7 +122,7 @@ import { ..., IgxDragDropModule } from 'igniteui-angular';
 ```
 }
 
-[`onRowDragEnd`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowdragend) イベントの `animation` パラメーターを使用して、ドロップできない領域に行がドロップされたときにアニメーションを有効にできます。true に設定されている場合、ドラッグされた行は、ドロップできない領域の上にドロップされると元の位置に戻ります。
+[`rowDragEnd`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowDragEnd) イベントの `animation` パラメーターを使用して、ドロップできない領域に行がドロップされたときにアニメーションを有効にできます。true に設定されている場合、ドラッグされた行は、ドロップできない領域の上にドロップされると元の位置に戻ります。
 
 以下はアニメーションを有効にする方法です。
 
@@ -408,14 +408,14 @@ enum DragIcon {
 }
 @@if (igxName === 'IgxTreeGrid') {
     <igx-tree-grid igxPreventDocumentScroll  #treeGrid [data]="localData" childDataKey="Employees" [rowDraggable]="true" foreignKey="ParentID"
-    [primaryKey]="'ID'" (onRowDragStart)="rowDragStart($event)" igxDrop (dropped)="dropInGrid($event)">
+    [primaryKey]="'ID'" (rowDragStart)="rowDragStart($event)" igxDrop (dropped)="dropInGrid($event)">
     ...
     </igx-tree-grid>
     
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
     <igx-hierarchical-grid #grid [data]="localData" [primaryKey]="'id'"
-    [rowDraggable]="true" (onRowDragStart)="rowDragStart($event)" igxDrop (dropped)="rowDrop($event)">
+    [rowDraggable]="true" (rowDragStart)="rowDragStart($event)" igxDrop (dropped)="rowDrop($event)">
     ...
     </igx-hierarchical-grid>
 }
@@ -626,8 +626,8 @@ export class GridRowReorderComponent {
 ## API リファレンス
 
 * [rowDraggable]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowdraggable)
-* [onRowDragStart]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowdragstart)
-* [onRowDragEnd]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowdragend)
+* [rowDragStart]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowDragStart)
+* [rowDragEnd]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowDragEnd)
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 
 ## その他のリソース

@@ -113,16 +113,16 @@ const idColumn = grid.getColumnByName("ID");
 idColumn.move(3);
 ```
 
-Note that when using the API, only the [`onColumnMovingEnd`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncolumnmovingend) event will be emitted, if the operation was successful. Also note that in comparison to the drag and drop functionality, using the API does not require setting the `movable` property to true. 
+Note that when using the API, only the [`columnMovingEnd`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnMovingend) event will be emitted, if the operation was successful. Also note that in comparison to the drag and drop functionality, using the API does not require setting the `movable` property to true. 
 
 ## Events
 
-There are several events related to the column moving to provide a means for tapping into the columns' drag and drop operations. These are [`onColumnMovingStart`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncolumnmovingstart), [`onColumnMoving`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncolumnmoving) and [`onColumnMovingEnd`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncolumnmovingend). 
-You can subscribe to the [`onColumnMovingEnd`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncolumnmovingend) event of the [`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) to implement some custom logic when a column is dropped to a new position. For example, you can cancel dropping the Category after the Change On Year(%) column.
+There are several events related to the column moving to provide a means for tapping into the columns' drag and drop operations. These are [`columnMovingStart`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnMovingStart), [`columnMoving`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnMoving) and [`columnMovingEnd`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnMovinEnd). 
+You can subscribe to the [`columnMovingEnd`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnMovingEnd) event of the [`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) to implement some custom logic when a column is dropped to a new position. For example, you can cancel dropping the Category after the Change On Year(%) column.
 
 @@if (igxName === 'IgxGrid') {
 ```html
-<igx-grid #dataGrid [data]="data" [autoGenerate]="false" (onColumnMovingEnd)="onColumnMovingEnd($event)">
+<igx-grid #dataGrid [data]="data" [autoGenerate]="false" (columnMovingEnd)="onColumnMovingEnd($event)">
     <igx-column [field]="'Category'" [movable]="true"></igx-column>
     <igx-column [field]="'Change On Year(%)'" [dataType]="'number'" [movable]="true" ></igx-column>
 </igx-grid>
@@ -139,7 +139,7 @@ public onColumnMovingEnd(event) {
 
 @@if (igxName === 'IgxTreeGrid') {
 ```html
-<igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="false" (onColumnMovingEnd)="onColumnMovingEnd($event)">
+<igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="false" (columnMovingEnd)="onColumnMovingEnd($event)">
     <igx-column [field]="'Name'" dataType="string" [movable]="true" width="250px"></igx-column>
     <igx-column [field]="'Title'" dataType="string" [movable]="true" width="250px"></igx-column>
 </igx-tree-grid>
@@ -155,7 +155,7 @@ public onColumnMovingEnd(event) {
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid #hierarchicalGrid [data]="data" [autoGenerate]="false" (onColumnMovingEnd)="onColumnMovingEnd($event)">
+<igx-hierarchical-grid #hierarchicalGrid [data]="data" [autoGenerate]="false" (columnMovingEnd)="onColumnMovingEnd($event)">
     <igx-column [field]="'Country'" [movable]="true"></igx-column>
     <igx-column [field]="'Phone'" [dataType]="'number'" [movable]="true" ></igx-column>
 </igx-hierarchical-grid>
