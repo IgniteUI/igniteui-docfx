@@ -38,7 +38,7 @@ Ignite UI for Angular @@igComponent では、列レベルでのデータ ソー�
 
 }
 @@if (igxName === 'IgxTreeGrid') {
-更に **@@igSelector** の [`onContextMenu`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncontextmenu) 出力を使用してソートにカスタム contextmenu が追加されます。
+更に **@@igSelector** の [`contextMenu`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#contextMenu) 出力を使用してソートにカスタム contextmenu が追加されます。
 
 
 <code-view style="height:550px" 
@@ -48,7 +48,7 @@ Ignite UI for Angular @@igComponent では、列レベルでのデータ ソー�
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-更に **@@igSelector** の [`onContextMenu`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncontextmenu) 出力を使用してソートにカスタム contextmenu が追加されます。
+更に **@@igSelector** の [`contextMenu`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#contextMenu) 出力を使用してソートにカスタム contextmenu が追加されます。
 
 
 <code-view style="height:510px" 

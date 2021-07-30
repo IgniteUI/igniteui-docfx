@@ -178,7 +178,7 @@ Setting a data source on the chart component will apply to all series, but you c
 Angular data grids support easy sorting, filtering, and pagination. With rich APIs and an intuitive feature set-up, using Ignite UI for Angular components has never been easier. 
 
 ```html
-<igx-grid #grid1 (onSortingDone)="removeSorting($event)"
+<igx-grid #grid1 (sortingDone)="removeSorting($event)"
         [data]="data"
         [paging]="true"
         [perPage]="10"

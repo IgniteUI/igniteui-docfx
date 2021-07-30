@@ -179,7 +179,7 @@ export class MyComponent implements OnInit {
 Angular データ グリッドは、簡単なソート、フィルタリング、ページネーションをサポートします。豊富な API と直感的な機能のセットアップにより、Ignite UI for Angular コンポーネントを簡単に使用できます。 
 
 ```html
-<igx-grid #grid1 (onSortingDone)="removeSorting($event)"
+<igx-grid #grid1 (sortingDone)="removeSorting($event)"
         [data]="data"
         [paging]="true"
         [perPage]="10"

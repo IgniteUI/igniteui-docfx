@@ -197,7 +197,7 @@ this.@@igObjectRef.filteringLogic = FilteringLogic.OR;
 
 @@if (igxName === 'IgxGrid') {
 #### 원격 필터링
-[`onDataPreLoad`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#ondatapreload) 및 [`onFilteringDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onfilteringdone) 출력에 서브스크라이브하여 @@igComponent의 원격 필터링을 제공할 수 있습니다. 사용 방법에 대한 자세한 정보는 `그리드 가상화 및 성능` [문서](virtualization.md#remote-sortingfiltering-virtualization)를 참조하십시오.
+[`onDataPreLoad`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#ondatapreload) 및 [`filteringDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringDone) 출력에 서브스크라이브하여 @@igComponent의 원격 필터링을 제공할 수 있습니다. 사용 방법에 대한 자세한 정보는 `그리드 가상화 및 성능` [문서](virtualization.md#remote-sortingfiltering-virtualization)를 참조하십시오.
 
 <div class="divider--half"></div>
 }
@@ -366,7 +366,7 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
   * `value` - 필터링에 사용할 값.
   * `conditionOrExpressionTree`(옵션) - 이 매개 변수는 [`IFilteringOperation`]({environment:angularApiUrl}/interfaces/ifilteringoperation.html) 또는 [`IFilteringExpressionsTree`]({environment:angularApiUrl}/interfaces/ifilteringexpressionstree.html) 유형의 객체를 받아들입니다. 간단한 필터링만 필요한 경우 필터링 처리를 인수로 전달할 수 있습니다. 고급 필터링의 경우, 복잡한 필터링 로직을 포함하는 식 트리를 인수로 전달할 수 있습니다.
   * `ignoreCase`(옵션) - 필터링이 대/소문자를 구분하는지 여부.
-* [`onFilteringDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onfilteringdone) 이벤트에는 이제 필터링된 열의 필터링 상태를 포함하는 유형 [`IFilteringExpressionsTree`]({environment:angularApiUrl}/interfaces/ifilteringexpressionstree.html)의 매개 변수가 하나만 있습니다.
+* [`filteringDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringDone) 이벤트에는 이제 필터링된 열의 필터링 상태를 포함하는 유형 [`IFilteringExpressionsTree`]({environment:angularApiUrl}/interfaces/ifilteringexpressionstree.html)의 매개 변수가 하나만 있습니다.
 * 필터링 오퍼랜드: [`IFilteringExpression`]({environment:angularApiUrl}/interfaces/ifilteringexpression.html) 조건 속성은 필터링 조건 메소드에 직접 참조하지 않고 대신에 [`IFilteringOperation`]({environment:angularApiUrl}/interfaces/ifilteringoperation.html)을 참조하게 됩니다.
 * [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html)는 [`IgxFilteringOperand`]({environment:angularApiUrl}/classes/igxfilteringoperand.html) 클래스 참조를 사용하는 [`filters`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#filters) 속성을 공개합니다.
 * 사용자 필터는 [`IFilteringOperation`]({environment:angularApiUrl}/interfaces/ifilteringoperation.html) 유형의 작업으로 [`IgxFilteringOperand`]({environment:angularApiUrl}/classes/igxfilteringoperand.html)의 [`operations`]({environment:angularApiUrl}/classes/igxfilteringoperand.html#operations) 속성을 생성하여 @@igComponent 열에 제공할 수 있습니다.

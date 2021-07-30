@@ -64,7 +64,7 @@ To utilize this feature, you need to subscribe to the [`onDataPreLoad`]({environ
 ```html
 <igx-grid #grid [data]="remoteData | async" [height]="'500px'" [width]="'100%'" [autoGenerate]='false'
           (onDataPreLoad)="processData(false)"
-          (onSortingDone)="processData(true)">
+          (sortingDone)="processData(true)">
     <igx-column [field]="'ProductID'" [sortable]="true"></igx-column>
     <igx-column [field]="'ProductName'" [sortable]="true"></igx-column>
     <igx-column [field]="'UnitPrice'" [dataType]="'number'" [formatter]="formatCurrency" [sortable]="true"></igx-column>
@@ -522,14 +522,14 @@ Now we can choose between setting-up our own *custom paging template* or using t
 
 ### Remote paging with default template
 
-If you want to use the *default paging template* you need to set the [`totalRecords`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalrecords) property, only then the grid will be able to calculate the *total page number* based on total remote records. When performing a remote pagination we pass to the grid only the data for the current page, so the grid will not try to paginate the provided data source. That's why we should set the [`pagingMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#pagingmode) property to *GridPagingMode.remote*. Also it is necessary to subscribe to [`onPagingDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onpagingdone) or [`perPageChange`]({environment:angularApiUrl}/classes/igxpaginatorcomponent.html#perpagechange) events in order to fetch the data from your remote service, it depends on the use case which event will be used.
+If you want to use the *default paging template* you need to set the [`totalRecords`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalrecords) property, only then the grid will be able to calculate the *total page number* based on total remote records. When performing a remote pagination we pass to the grid only the data for the current page, so the grid will not try to paginate the provided data source. That's why we should set the [`pagingMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#pagingmode) property to *GridPagingMode.remote*. Also it is necessary to subscribe to [`pagingDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#pagingDone) or [`perPageChange`]({environment:angularApiUrl}/classes/igxpaginatorcomponent.html#perpagechange) events in order to fetch the data from your remote service, it depends on the use case which event will be used.
 
 @@if (igxName === 'IgxGrid') {
 ```html
 <igx-grid #grid1 [data]="data | async" [isLoading]="isLoading"
         [paging]="true" [(page)]="page" [(perPage)]="perPage" 
         [pagingMode]="mode" [totalRecords]="totalCount" 
-        (onPagingDone)="paginate($event.current)">
+        (pagingDone)="paginate($event.current)">
     <igx-column field="ID"></igx-column>
     ...
 </igx-grid>
@@ -538,7 +538,7 @@ If you want to use the *default paging template* you need to set the [`totalReco
 @@if (igxName === 'IgxTreeGrid') {
 ```html
 <igx-tree-grid #treeGrid [data]="data | async" childDataKey="Content" [(page)]="page" [(perPage)]="perPage"
-        [pagingMode]="mode" [totalRecords]="totalCount" (onPagingDone)="paginate($event.current)">
+        [pagingMode]="mode" [totalRecords]="totalCount" (pagingDone)="paginate($event.current)">
     <igx-column field="Name"></igx-column>
     ...
 </igx-tree-grid>
@@ -547,7 +547,7 @@ If you want to use the *default paging template* you need to set the [`totalReco
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
 <igx-hierarchical-grid [paging]="true" [primaryKey]="'CustomerID'" (perPageChange)="getFirstPage()"
-    [pagingMode]="mode"  [totalRecords]="totalCount" (onPagingDone)="pagingDone($event)" #hierarchicalGrid>
+    [pagingMode]="mode"  [totalRecords]="totalCount" (pagingDone)="pagingDone($event)" #hierarchicalGrid>
     <igx-column field="CustomerID"></igx-column>
     ...
 </igx-hierarchical-grid>

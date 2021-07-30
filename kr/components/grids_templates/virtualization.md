@@ -78,7 +78,7 @@ Ignite UI for Angular에서 [@@igxName]({environment:angularApiUrl}/classes/@@ig
 
 ```html
 <igx-grid #grid [data]="remoteData | async" [height]="'500px'" [width]="'100%'" [autoGenerate]='false' (onDataPreLoad)="processData(false)"
-    (onSortingDone)="processData(true)">
+    (sortingDone)="processData(true)">
     <igx-column [field]="'ProductID'" [sortable]="true"></igx-column>
     <igx-column [field]="'ProductName'" [sortable]="true"></igx-column>
     <igx-column [field]="'UnitPrice'" [dataType]="'number'" [formatter]="formatCurrency" [sortable]="true"></igx-column>
@@ -111,7 +111,7 @@ public processData() {
 ***참고:*** 첫 번째 [`chunkSize`]({environment:angularApiUrl}/interfaces/iforofstate.html#chunksize)는 항상 0이며 특정 애플리케이션애플리케이션 시나리오에 따라 결정해야 합니다.
 
 ### 원격 정렬/필터링 가상화
-원격 정렬 및 필터링을 제공하려면 [`onDataPreLoad`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#ondatapreload), [`onSortingDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onsortingdone), [`onFilteringDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onfilteringdone) 출력에 서브스크라이브해야 하므로 받은 인수를 기반으로 적절한 요청을 하고 공개 [@@igxName]({environment:angularApiUrl}/classes/@@igTypeDoc.html) 속성 [`totalItemCount`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalitemcount)를 설정해야 합니다.
+원격 정렬 및 필터링을 제공하려면 [`onDataPreLoad`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#ondatapreload), [`sortingDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sortingDone), [`filteringDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringDone) 출력에 서브스크라이브해야 하므로 받은 인수를 기반으로 적절한 요청을 하고 공개 [@@igxName]({environment:angularApiUrl}/classes/@@igTypeDoc.html) 속성 [`totalItemCount`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalitemcount)를 설정해야 합니다.
 
 원격 데이터를 요청할 때 필터링 작업은 대소문자를 구분합니다.
 
@@ -126,13 +126,13 @@ public processData() {
 @@if (igxName === 'IgxTreeGrid') {
 ### 원격 필터링 가상화
 
-원격 필터링을 제공하려면 [`onFilteringDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onfilteringdone) 출력에 서브스크라이브해야 하므로 받은 인수를 기반으로 적절한 요청을 실행해야 합니다. [`primaryKey`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primarykey) 와 [`foreignKey`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#foreignkey)를 제공하여 트리 그리드의 데이터 소스로 플랫 컬렉션을 사용합니다.
+원격 필터링을 제공하려면 [`filteringDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringDone) 출력에 서브스크라이브해야 하므로 받은 인수를 기반으로 적절한 요청을 실행해야 합니다. [`primaryKey`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primarykey) 와 [`foreignKey`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#foreignkey)를 제공하여 트리 그리드의 데이터 소스로 플랫 컬렉션을 사용합니다.
 
 ```html
 <!-- tree-grid-remote-filtering-sample.html -->
 
 <igx-tree-grid #treeGrid [data]="remoteData | async" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="false" width="100%" height="450px"
-                [autoGenerate]="false" (onFilteringDone)="processData()" [allowFiltering]="true">
+                [autoGenerate]="false" (filteringDone)="processData()" [allowFiltering]="true">
     <igx-column [field]="'Name'" dataType="string"></igx-column>
     <igx-column [field]="'Title'" dataType="string"></igx-column>
     <igx-column [field]="'Age'" dataType="number"></igx-column>

@@ -65,7 +65,7 @@ Ignite UI for Angular @@igComponent は、リモート仮想化、リモート �
 ```html
 <igx-grid #grid [data]="remoteData | async" [height]="'500px'" [width]="'100%'" [autoGenerate]='false'
           (onDataPreLoad)="processData(false)"
-          (onSortingDone)="processData(true)">
+          (sortingDone)="processData(true)">
     <igx-column [field]="'ProductID'" [sortable]="true"></igx-column>
     <igx-column [field]="'ProductName'" [sortable]="true"></igx-column>
     <igx-column [field]="'UnitPrice'" [dataType]="'number'" [formatter]="formatCurrency" [sortable]="true"></igx-column>
@@ -523,14 +523,14 @@ public maxPerPage = Number.MAX_SAFE_INTEGER;
 
 ### デフォルト テンプレートのリモート ページング
 
-デフォルトのページング テンプレートを使用する場合、[`totalRecords`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalrecords) プロパティを設定する必要があります。それにより、グリッドはリモートの合計レコード数に基づいて合計ページ番号を計算できます。リモート ページネーションを実行する場合、グリッドに現在のページのデータのみを渡すため、グリッドは提供されたデータソースのページネーションを試行しません。そのため、[`pagingMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#pagingmode) プロパティを *GridPagingMode.remote* に設定する必要があります。リモート サービスからデータをフェッチするために [`onPagingDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onpagingdone) または [`perPageChange`]({environment:angularApiUrl}/classes/igxpaginatorcomponent.html#perpagechange) イベントにサブスクライブする必要があります。イベントが使用されるユース ケースによって異なります。
+デフォルトのページング テンプレートを使用する場合、[`totalRecords`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalrecords) プロパティを設定する必要があります。それにより、グリッドはリモートの合計レコード数に基づいて合計ページ番号を計算できます。リモート ページネーションを実行する場合、グリッドに現在のページのデータのみを渡すため、グリッドは提供されたデータソースのページネーションを試行しません。そのため、[`pagingMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#pagingmode) プロパティを *GridPagingMode.remote* に設定する必要があります。リモート サービスからデータをフェッチするために [`pagingDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#pagingDone) または [`perPageChange`]({environment:angularApiUrl}/classes/igxpaginatorcomponent.html#perpagechange) イベントにサブスクライブする必要があります。イベントが使用されるユース ケースによって異なります。
 
 @@if (igxName === 'IgxGrid') {
 ```html
 <igx-grid #grid1 [data]="data | async" [isLoading]="isLoading"
         [paging]="true" [(page)]="page" [(perPage)]="perPage" 
         [pagingMode]="mode" [totalRecords]="totalCount" 
-        (onPagingDone)="paginate($event.current)">
+        (pagingDone)="paginate($event.current)">
     <igx-column field="ID"></igx-column>
     ...
 </igx-grid>
@@ -539,7 +539,7 @@ public maxPerPage = Number.MAX_SAFE_INTEGER;
 @@if (igxName === 'IgxTreeGrid') {
 ```html
 <igx-tree-grid #treeGrid [data]="data | async" childDataKey="Content" [(page)]="page" [(perPage)]="perPage"
-        [pagingMode]="mode" [totalRecords]="totalCount" (onPagingDone)="paginate($event.current)">
+        [pagingMode]="mode" [totalRecords]="totalCount" (pagingDone)="paginate($event.current)">
     <igx-column field="Name"></igx-column>
     ...
 </igx-tree-grid>
@@ -548,7 +548,7 @@ public maxPerPage = Number.MAX_SAFE_INTEGER;
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
 <igx-hierarchical-grid [paging]="true" [primaryKey]="'CustomerID'" (perPageChange)="getFirstPage()"
-    [pagingMode]="mode"  [totalRecords]="totalCount" (onPagingDone)="pagingDone($event)" #hierarchicalGrid>
+    [pagingMode]="mode"  [totalRecords]="totalCount" (pagingDone)="pagingDone($event)" #hierarchicalGrid>
     <igx-column field="CustomerID"></igx-column>
     ...
 </igx-hierarchical-grid>
