@@ -203,7 +203,7 @@ export class CalendarSample7Component {
 ```html
 <igx-calendar #calendar weekStart="1"
     selection="multi" 
-    (onSelection)="selectPTOdays($event)">
+    (selected)="selectPTOdays($event)">
 </igx-calendar>
 <igx-dialog #alert title="Request Time Off" 
     leftButtonLabel="OK" 
@@ -241,19 +241,19 @@ export class CalendarSample7Component {
 
 ## カレンダー イベント
 カレンダーが発するイベントを見てみましょう:
-- [`onSelection`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#onselection) - カレンダーで日付を選択すると発生されます。
+- [`selected`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#selected) - カレンダーで日付を選択すると発生されます。
 - [`viewDateChanged`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#viewdatechanged) - 表示されている月/年が変更されるたびに発行されます。たとえば、`next` または `previous` の月に移動した後。
 - [`activeViewChanged`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#activeviewchanged) - アクティブなビューが変更された後に発生します。たとえば、ユーザーがヘッダーの `month` または `year` セクションをクリックした後。
 
 ```html
 <!-- app.component.html -->
 <igx-calendar #calendar
-    (onSelection)="onSelection($event)"
+    (selected)="onSelection($event)"
     (viewDateChanged)="viewDateChanged($event)"
     (activeViewChanged)="activeViewChanged($event)">
 </igx-calendar>
 ```
-[`onSelection`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#onselection)イベントは、入力検証ロジックを構築するのに適しています。以下のコードを使用して、選択が 5 日を超えた場合にユーザーに警告し、選択をリセットします。
+[`selected`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#selected)イベントは、入力検証ロジックを構築するのに適しています。以下のコードを使用して、選択が 5 日を超えた場合にユーザーに警告し、選択をリセットします。
 
 ```typescript
 // app.component.ts

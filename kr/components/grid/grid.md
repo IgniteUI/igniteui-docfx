@@ -87,8 +87,8 @@ public grid: IgxGridComponent;
 [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) 속성을 해제하고 마크업에서 열 집합을 정의합니다:
 
 ```html
-<igx-grid #grid1 [data]="data | async" [autoGenerate]="false" (onColumnInit)="initColumns($event)"
-    (onSelection)="selectCell($event)" [allowFiltering]="true">
+<igx-grid #grid1 [data]="data | async" [autoGenerate]="false" (columnInit)="initColumns($event)"
+    (selected)="selectCell($event)" [allowFiltering]="true">
     <igx-column field="Name" [sortable]="true" header=" "></igx-column>
     <igx-column field="AthleteNumber" [sortable]="true" header="Athlete number" [filterable]="false"></igx-column>
     <igx-column field="TrackProgress" header="Track progress" [filterable]="false">

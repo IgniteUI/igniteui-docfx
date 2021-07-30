@@ -117,7 +117,7 @@ Note that when using the API, only the [`columnMovingEnd`]({environment:angularA
 
 ## Events
 
-There are several events related to the column moving to provide a means for tapping into the columns' drag and drop operations. These are [`columnMovingStart`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnMovingStart), [`onColumnMoving`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncolumnmoving) and [`columnMovingEnd`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnMovingEnd). 
+There are several events related to the column moving to provide a means for tapping into the columns' drag and drop operations. These are [`columnMovingStart`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnMovingStart), [`columnMoving`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnMoving) and [`columnMovingEnd`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnMovingEnd). 
 You can subscribe to the [`columnMovingEnd`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnMovingEnd) event of the [`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) to implement some custom logic when a column is dropped to a new position. For example, you can cancel dropping the Category after the Change On Year(%) column.
 
 @@if (igxName === 'IgxGrid') {
