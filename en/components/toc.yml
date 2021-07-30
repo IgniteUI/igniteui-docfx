@@ -40,8 +40,14 @@
       new: true
 - name: Angular Schematics & Ignite UI CLI
   href: general/cli-overview.md
-  new: false
+  sortable: false
   items:
+    - name: Getting Started with Ignite UI for Angular Schematics
+      href: general/cli/getting-started-with-angular-schematics.md
+      new: false
+    - name: Getting Started with Ignite UI CLI
+      href: general/cli/getting-started-with-cli.md
+      new: false
     - name: Step-by-Step Guide
       href: general/cli/step-by-step-guide.md
       new: false
@@ -50,12 +56,6 @@
       new: false
     - name: Authentication Project Template
       href: general/cli/auth-template.md
-      new: false
-    - name: Getting Started with Ignite UI for Angular Schematics
-      href: general/cli/getting-started-with-angular-schematics.md
-      new: false
-    - name: Getting Started with Ignite UI CLI
-      href: general/cli/getting-started-with-cli.md
       new: false
 - name: WPF to Angular guide
   href: general/wpf-to-angular-guide/wpf-to-angular-guide.md
