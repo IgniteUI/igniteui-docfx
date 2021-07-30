@@ -366,7 +366,7 @@ public childSelectedRows = ['Initiation', 'Emergency'];
 </ng-template>
 ```
 
-`selectedCount` および `totalCount` プロパティを使用して、ヘッド セレクターをチェックするか、不確定にする（部分的に選択する）かを決定できます。
+`selectedCount` および `totalCount` プロパティを使用して、ヘッド セレクターをチェックするか、不確定にする (部分的に選択する) かを決定できます。
 @@if (igxName === 'IgxGrid') {
 ```html
 <igx-grid #grid [data]="gridData" primaryKey="ProductID" rowSelection="multiple">
@@ -499,7 +499,7 @@ public childSelectedRows = ['Initiation', 'Emergency'];
 
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 @@if (igxName !== 'IgxTreeGrid') {* [IgxGridRowComponent API]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRowComponent API]({environment:angularApiUrl}/classes/igxtreegridrowcomponent.html)}
-* [IgxGridCellComponent API]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
+* [IgxGridCell API]({environment:angularApiUrl}/classes/igxgridcell.html)
 * [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 
 ## その他のリソース

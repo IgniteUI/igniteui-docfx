@@ -106,7 +106,7 @@ for other browsers.
 > Use a relatively positioned element for the ripple animation. You can also use [`igxRippleTarget`]({environment:angularApiUrl}/classes/igxrippledirective.html#rippletarget) to target a child element.
 
 ### Styling
-The igxRipple allows styling through the [Ignite UI for Angular Theme Library](../themes/component-themes.md). The ripple's [theme]({environment:sassApiUrl}/index.html#function-igx-ripple-theme) exposes a property that allows customization of the color of the effect.        
+The igxRipple allows styling through the [Ignite UI for Angular Theme Library](../themes/sass/component-themes.md). The ripple's [theme]({environment:sassApiUrl}/index.html#function-igx-ripple-theme) exposes a property that allows customization of the color of the effect.        
 
 #### Importing global theme
 To begin styling of the predefined ripple color, you need to import the `index` file, where all styling functions and mixins are located.  
@@ -146,7 +146,7 @@ $custom-theme: igx-ripple-theme(
 ```
 
 #### Defining custom schemas
-You can go even further and build flexible structure that has all the benefits of a [**schema**](../themes/schemas.md). The **schema** is the recipe of a theme.   
+You can go even further and build flexible structure that has all the benefits of a [**schema**](../themes/sass/schemas.md). The **schema** is the recipe of a theme.   
 Extend one of the two predefined schemas, that are provided for every component. In our case, we would use `$_dark_ripple`.   
 
 ```scss
@@ -180,7 +180,7 @@ In order for the custom theme to affect only specific component, you can move al
 This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Component#encapsulation), your styles will be applied only to your custom component.
 
  >[!NOTE]
- >If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to penetrate this encapsulation using `::ng-deep` in order to style the grid.
+ >If the component is using an [`Emulated`](../themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to penetrate this encapsulation using `::ng-deep` in order to style the grid.
  >[!NOTE]
  >Wrap the statement inside of a `:host` selector to prevent your styles from affecting elements *outside of* our component:
 

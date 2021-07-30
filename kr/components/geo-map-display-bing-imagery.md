@@ -10,8 +10,8 @@ Bing Maps is Microsoft’s® licensed geographic imagery mapping service. This g
 
 ## Demo
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-display-bing-imagery"  >
 </code-view>
 

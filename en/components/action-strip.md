@@ -111,7 +111,7 @@ Next, we have to create a new theme that extends the `igx-action-strip-theme` an
 $custom-strip: igx-action-strip-theme(
     $background: rgba(150, 133, 143, 0.4),
     $actions-background: rgba(109, 121, 147, 0.6),
-    $color:  null,
+    $icon-color: null,
     $delete-action: null,
     $actions-border-radius: 0
 );
@@ -129,12 +129,10 @@ When `$legacy-support` is set to `true`, include the component theme like this:
 @include igx-action-strip($custom-strip);
 ```
 
-
 <code-view style="height: 400px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/menus/action-strip-styling" >
 </code-view>
-
 
 ## Known Issues and Limitations
 
@@ -163,6 +161,12 @@ Additional components and/or directives that can be used within the Action Strip
 
 
 <div class="divider"></div>
+
+## Theming Dependencies
+* [IgxButton Theme]({environment:sassApiUrl}/index.html#function-igx-button-theme)
+* [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
+* [IgxDropDown Theme]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme)
+* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
 
 ## Additional Resources
 

@@ -14,8 +14,8 @@ Custom templates for different areas of the [igx-combo]({environment:angularApiU
 ### Demo
 
 
-<code-view style="height: 450px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 450px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/combo-template" >
 </code-view>
 
@@ -153,7 +153,7 @@ Use selector `[igxComboClearIcon]`:
 <div class="divider--half"></div>
 
 ### Templating combo input
-The above-mentioned selectors, `[igxComboClearIcon]` and `[igxComboToggleIcon]`, used with templates will change how the respective buttons appear in the combo input. 
+The above-mentioned selectors, `[igxComboClearIcon]` and `[igxComboToggleIcon]`, used with templates will change how the respective buttons appear in the combo input.
 Passing content inside of the `igx-combo` also allows templating of the combo input similar to the way an `igx-input-group` can be templated (using `igx-prefix`, `igx-suffix` and `[igxLabel]`). The code snippet below illustrates how to add an appropriate label and `igx-prefix` to the combo input, as well as changing the `clear` button icon:
 ```html
     <igx-combo [data]="myMusic">
@@ -173,7 +173,7 @@ Passing content inside of the `igx-combo` also allows templating of the combo in
 * [Combo Features](combo-features.md)
 * [Combo Remote Binding](combo-remote.md)
 * [Template Driven Forms Integration](input-group.md)
-* [Reactive Forms Integration](input-group-reactive-forms.md)
+* [Reactive Forms Integration](angular-reactive-form-validation.md)
 * [Cascading Scenario](combo-cascading.md)
 
 Our community is active and always welcoming to new ideas.

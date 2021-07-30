@@ -11,9 +11,9 @@ The Ignite UI for Angular data chart component allows for synchronization with r
 
 ## Demo
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-chart-synchronization"  
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-chart-synchronization"
            github-src="charts/data-chart/chart-synchronization">
 </code-view>
 

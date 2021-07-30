@@ -14,21 +14,18 @@ Ignite UI for Angular 散布ポイント チャートは、デカルト (x, y) �
 
 ## Angular 散布ポイント チャートの例
 
-<div class="sample-container loading" style="height: 500px">
-    <iframe id="data-chart-type-scatter-point-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-scatter-point-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular 散布ポイント チャートの例"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-scatter-point-series-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
-    </button>
-
-
-</div>
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-scatter-point-series"
+           alt="Angular 散布ポイント チャートの例"
+           github-src="charts/data-chart/type-scatter-point-series">
+</code-view>
 
 <div class="divider--half"></div>
 
 ## 軸の要件
 
-Angular データチャート コンポーネントはさまざまなタイプの軸を提供しますが、[`IgxScatterSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterseriescomponent.html) で使用できるのは以下のタイプの軸のみです。
+Angular データ チャート コンポーネントはさまざまなタイプの軸を提供しますが、[`IgxScatterSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterseriescomponent.html) で使用できるのは以下のタイプの軸のみです。
 
 -   [`IgxNumericXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericxaxiscomponent.html)
 -   [`IgxNumericYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericyaxiscomponent.html)
@@ -49,14 +46,7 @@ public dataSource: any[] = SampleScatterStats.getCountries();
 
 ## モジュールの要件
 
-[`IgxScatterSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterseriescomponent.html) を作成するには、以下のモジュールが必要です。<!-- Angular, React, WebComponents --> <!-- end: Angular, React, WebComponents --><!-- Blazor -->モジュールはアプリケーションのエントリ ポイントに登録する必要があります。
-
--   DataChartCoreModule        
--   DataChartScatterCoreModule
--   DataChartScatterModule       
--   DataChartInteractivityModule
--   NumberAbbreviatorModule
-    <!-- end: Blazor -->
+[`IgxScatterSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterseriescomponent.html) を作成するには、以下のモジュールが必要です。
 
 ```ts
 // axis' modules:

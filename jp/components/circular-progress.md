@@ -158,7 +158,7 @@ $custom-theme: igx-progress-circular-theme(
 );
 ```
 
-円形のプログレス バーのスタイル設定については、[`スタイル設定セクション`](./circular-progress.html#スタイル設定) を参照してください。
+円形のプログレス バーのスタイル設定については、[`スタイル設定セクション`](#スタイル設定) を参照してください。
 
 3つ以上の色経由点を持つグラデーションを提供するには、`igx-circular-bar` の `ng-template` でディレクティブを使用する必要があります。
 
@@ -229,7 +229,7 @@ $custom-theme: igx-progress-circular-theme(
  @include igx-progress-circular($custom-theme);
 ```
 >[!NOTE]
->コンポーネントが [`Emulated`](themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
+>コンポーネントが [`Emulated`](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
 
 ```scss
 :host {
@@ -248,7 +248,7 @@ $custom-theme: igx-progress-circular-theme(
 ```
 
 >[!NOTE]
->コンポーネントが [`Emulated`](themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合においても、変数をオーバーライドするにはグローバル セレクターが必要なため、`:host` を使用する必要があります。
+>コンポーネントが [`Emulated`](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合においても、変数をオーバーライドするにはグローバル セレクターが必要なため、`:host` を使用する必要があります。
 
 ```scss
 :host {

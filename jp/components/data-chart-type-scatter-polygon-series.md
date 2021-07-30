@@ -14,15 +14,12 @@ _language: ja
 
 ## Angular 散布ポリゴン チャートの例
 
-<div class="sample-container loading" style="height: 400px">
-    <iframe id="data-chart-type-scatter-polygon-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-scatter-polygon-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular 散布ポリゴン チャートの例"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-scatter-polygon-series-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
-    </button>
-
-
-</div>
+<code-view style="height: 400px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-scatter-polygon-series"
+           alt="Angular 散布ポリゴン チャートの例"
+           github-src="charts/data-chart/type-scatter-polygon-series">
+</code-view>
 
 <div class="divider--half"></div>
 
@@ -49,14 +46,7 @@ public dataSource: any[] = SampleShapeData.create();
 
 ## モジュールの要件
 
-[`IgxScatterPolygonSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolygonseriescomponent.html) を作成するには、以下のモジュールが必要です。<!-- Angular, React, WebComponents --> <!-- end: Angular, React, WebComponents --><!-- Blazor -->モジュールはアプリケーションのエントリ ポイントに登録する必要があります。
-
--   DataChartCoreModule        
--   DataChartScatterCoreModule
--   DataChartScatterModule   
--   DataChartInteractivityModule
--   ScatterPolygonSeriesModule
-    <!-- end: Blazor -->
+[`IgxScatterPolygonSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolygonseriescomponent.html) を作成するには、以下のモジュールが必要です。
 
 ```ts
 // axis' modules:

@@ -150,7 +150,6 @@ IgxHierarchicalGrid の子グリッドの実装方法と DI スコープの動�
 ### 操作
 ツールバーは、ユーザーが親グリッドに関連して操作/インタラクションを配置できる[特定のコンテナ]({environment:angularApiUrl}/classes/igxgridtoolbaractionsdirective.html)を公開します。
 ツールバーのタイトル部分と同様に、ユーザーは、デフォルトのツールバー インタラクション コンポーネントを含め、そのテンプレート部分内にどんなものでも提供できます。
-
 ```html
 <igx-grid-toolbar>
     <igx-grid-toolbar-actions>
@@ -160,6 +159,42 @@ IgxHierarchicalGrid の子グリッドの実装方法と DI スコープの動�
     </igx-grid-toolbar-actions>
 </igx-grid-toolbar>
 ```
+
+各アクションは、[`overlaySettings`]({environment:angularApiUrl}/classes/igxgridtoolbarhidingcomponent.html#overlaysettings) 入力を使用して、アクション ダイアログのオーバーレイ設定を変更する方法を公開するようになりました。例:
+
+```html
+<igx-grid-toolbar-actions>
+    <igx-grid-toolbar-pinning [overlaySettings]="overlaySettingsScaleCenter"></igx-grid-toolbar-pinning>
+    <igx-grid-toolbar-hiding [overlaySettings]="overlaySettingsAuto"></igx-grid-toolbar-hiding>
+</igx-grid-toolbar-actions>
+```
+
+```ts
+public data: any[];
+public positionStrategyScaleCenter = new GlobalPositionStrategy({
+    openAnimation: scaleInCenter,
+    closeAnimation: scaleOutCenter
+});
+public overlaySettingsScaleCenter = {
+    positionStrategy: this.positionStrategyScaleCenter,
+    scrollStrategy: new AbsoluteScrollStrategy(),
+    modal: true,
+    closeOnEscape: true
+};
+
+public positionStrategyAuto = new AutoPositionStrategy();
+public overlaySettingsAuto = {
+    positionStrategy: this.positionStrategyAuto,
+    scrollStrategy: new AbsoluteScrollStrategy(),
+    modal: false,
+    closeOnEscape: false
+};
+constructor() {
+    this.data = athletesData;
+}
+```
+
+デフォルトの overlaySettings は、*ConnectedPositionStrategy* と *Absolute* スクロール方法を使用しています。モーダルは false に設定されており、[Esc] キーを押して閉じるインタラクションと外側のクリックで閉じるインタラクションが有効になっています。
 
 ### 列のピン固定
 [このコンポーネント]({environment:angularApiUrl}/classes/igxgridtoolbarpinningcomponent.html)は、グリッド内の列のピン固定を操作するためのデフォルトの UI を提供します。
@@ -413,7 +448,7 @@ configureExport(args: IGridToolbarExportEventArgs) {
 
 ## スタイル設定
 
-ツールバーのスタイル設定を始めるには、すべてのテーマ関数とコンポーネント mixins が存在する index ファイルをインポートする必要があります。
+ツールバーのスタイル設定を始めるには、すべてのテーマ関数とコンポーネント ミックスインが存在する index ファイルをインポートする必要があります。
 
 ```scss
 // custom-grid-paging-style.component.scss
@@ -500,7 +535,7 @@ $dark-input-group-theme: igx-input-group-theme(
 ```
 
 >[!NOTE]
->コンポーネントが [`Emulated`](../themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
+>コンポーネントが [`Emulated`](../themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
 
 ```scss
 :host {

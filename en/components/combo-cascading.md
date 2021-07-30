@@ -14,8 +14,8 @@ The Ignite UI for Angular Combo and Select components expose events, properties 
 The following sample demonstrates a scenario where the [igx-select]({environment:angularApiUrl}/classes/igxselectcomponent.html) and the [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) components are used together:
 
 
-<code-view style="height: 540px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 540px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/cascading-combos" alt="Angular Cascading Scenario Example">
 </code-view>
 
@@ -42,11 +42,11 @@ The APIs of both components are used to get the selected item from one and load 
 
 ```html
 <igx-select type="box" #cntr placeholder="Choose Country..."
-    (onSelection)="selectCountry($event)" [(ngModel)]="location.country">
+    (selectionChanging)="selectCountry($event)" [(ngModel)]="location.country">
     <igx-select-item *ngFor="let c of countryData" [value]="c"> {{ c }} </igx-select-item>
 </igx-select>
 <igx-select type="box" #prvnc placeholder="Choose Province..." [disabled]="!cntr.value"
-    (onSelection)="selectProvince($event)" [(ngModel)]="location.province">
+    (selectionChanging)="selectProvince($event)" [(ngModel)]="location.province">
     <igx-select-item *ngFor="let p of provinceData" [value]="p"> {{ p }} </igx-select-item>
 </igx-select>
 <igx-combo #twn [itemsMaxHeight]="225" [data]="townData" [disabled]="!prvnc.value"
@@ -93,11 +93,11 @@ export class CascadingCombos {
 ## API Summary
 <div class="divider--half"></div>
 
-* [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html) 
+* [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html)
 * [IgxComboComponent Styles]({environment:sassApiUrl}/index.html#function-igx-combo-theme)
 
 Additional components and/or directives with relative APIs that were used:
-* [IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html)  
+* [IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html)
 
 ## Additional Resources
 <div class="divider--half"></div>
@@ -107,7 +107,7 @@ Additional components and/or directives with relative APIs that were used:
 * [Combo Remote Binding](combo-remote.md)
 * [Combo Templates](combo-templates.md)
 * [Template Driven Forms Integration](input-group.md)
-* [Reactive Forms Integration](input-group-reactive-forms.md)
+* [Reactive Forms Integration](angular-reactive-form-validation.md)
 
 Our community is active and always welcoming to new ideas.
 

@@ -197,7 +197,7 @@ The last step is to **include** the component mixins with its respective theme:
 ```
 
 > [!NOTE]
-> Depending on the component [**View Encapsulation**](/components/themes/component-themes.html#view-encapsulation) strategy, it may be necessary to `penetrate` this encapsulation using `::ng-deep`
+> Depending on the component [**View Encapsulation**](/components/themes/sass/component-themes.html#view-encapsulation) strategy, it may be necessary to `penetrate` this encapsulation using `::ng-deep`
 
 ```scss
 :host {
@@ -233,11 +233,11 @@ $dark-grid-column-moving-theme: igx-grid-theme(
 
 
 > [!NOTE]
-> The igx-color and igx-palette are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](/components/themes/palette.html) topic for detailed guidance on how to use them.
+> The igx-color and igx-palette are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](/components/themes/palettes.html) topic for detailed guidance on how to use them.
 
 ### Using Schemas
 
-Going further with the theming engine, you can build a robust and flexible structure that benefits from [schemas](/components/themes/schemas.html). A **schema** is a recipe of a theme.
+Going further with the theming engine, you can build a robust and flexible structure that benefits from [schemas](/components/themes/sass/schemas.html). A **schema** is a recipe of a theme.
 
 Extend one of the two predefined schemas, that are provided for every component, in this case - [light-grid]({environment:sassApiUrl}/index.html#variable-_light-grid).
 
@@ -284,7 +284,6 @@ Don't forget to include the theme in the same way as it was demonstrated above.
            iframe-src="{environment:demosBaseUrl}/grid/grid-moving-styled-sample" >
 </code-view>
 
-<div class="divider--half"></div>
 }
 
 @@if (igxName === 'IgxTreeGrid') {
@@ -294,7 +293,6 @@ Don't forget to include the theme in the same way as it was demonstrated above.
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-column-moving-styled" >
 </code-view>
 
-<div class="divider--half"></div>
 }
 
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -304,8 +302,10 @@ Don't forget to include the theme in the same way as it was demonstrated above.
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-moving-styled" >
 </code-view>
 
-<div class="divider--half"></div>
 }
+
+>[!NOTE]
+>The sample will not be affected by the selected global theme from `Change Theme`.
 
 ## API References
 <div class="divider--half"></div>

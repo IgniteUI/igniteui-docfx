@@ -292,7 +292,7 @@ $colorful-card: igx-card-theme(
  @include igx-card($colorful-card);
 ```
 >[!NOTE]
->コンポーネントが [`Emulated`](./themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
+>コンポーネントが [`Emulated`](./themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
 
 ```scss
 :host {
@@ -311,7 +311,7 @@ $colorful-card: igx-card-theme(
 ```
 
 >[!NOTE]
->コンポーネントが [`Emulated`](./themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、変数をオーバーライドするにはグローバル セレクターが必要なため、`:host` を使用する必要があります。
+>コンポーネントが [`Emulated`](./themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、変数をオーバーライドするにはグローバル セレクターが必要なため、`:host` を使用する必要があります。
 
 ```scss
 :host {
@@ -355,6 +355,11 @@ $colorful-card: igx-card-theme(
 * [`IgxButtonDirective スタイル`]({environment:sassApiUrl}/index.html#function-igx-button-theme)
 
 <div class="divider"></div>
+
+## テーマの依存関係
+* [IgxButton テーマ]({environment:sassApiUrl}/index.html#function-igx-button-theme)
+* [IgxAvatar テーマ]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
+* [IgxIconTheme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
 
 ## その他のリソース
 

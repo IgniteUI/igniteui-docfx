@@ -68,7 +68,7 @@ public items: string[] = ["Orange", "Apple", "Banana", "Mango"];
     </igx-select-item>
 </igx-select>
 ```
-より複雑な項目テンプレートで `text` プロパティを確認するには、以下のグループ化サンプル [グループ選択](#grouped-select) を参照してください。
+より複雑な項目テンプレートで `text` プロパティを確認するには、以下のグループ化サンプル [グループ選択](#選択項目のグループ化)を参照してください。
 
 ### 入力プロパティ
 
@@ -315,7 +315,7 @@ export class MyClass implements OnInit {
 }
 ```
 >[!NOTE]
->テンプレートと同様に関数 `open` の引数としてカスタム設定を渡す場合、`igx-select` は関数 `open` で提供されるものを使用します。ただし、`onOpening` または `onOpened` などのインターナル イベントにバインドした場合は、`igx-select` はテンプレートの設定を使用します。
+>テンプレートと同様に関数 `open` の引数としてカスタム設定を渡す場合、`igx-select` は関数 `open` で提供されるものを使用します。ただし、`opening` または `opened` などのインターナル イベントにバインドした場合は、`igx-select` はテンプレートの設定を使用します。
 
 ## スタイル設定
 各コンポーネントには独自のテーマがあります。
@@ -339,6 +339,12 @@ Select のスタイルを設定するには、それに含まれるコンポー�
 * [GlobalPositionStrategy]({environment:angularApiUrl}/classes/globalpositionstrategy.html#constructor)  
 * [AbsoluteScrollStrategy]({environment:angularApiUrl}/classes/absolutescrollstrategy.html)  
 * [PositionSettings]({environment:angularApiUrl}/interfaces/positionsettings.html)
+
+## テーマの依存関係
+* [IgxDropDown テーマ]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme)
+* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxOverlay テーマ]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+* [IgxInputGroup テーマ]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
 
 ## その他のリソース
 * [NgModel](https://angular.io/api/forms/NgModel)

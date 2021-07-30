@@ -101,7 +101,7 @@ Now that we have both our target and tooltip defined, all that's left for us to 
 </div>
 ```
 
-If everything went well, you should see the sample shown in the [Tooltip Demo](#demo) section.
+If everything went well, you should see the sample shown in the [Tooltip Demo](#angular-tooltip-example) section.
 
 ### Show/Hide delay settings
 What if we want to control the amount of time that should pass before showing and hiding the tooltip? For this purpose we can use the [`showDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#showdelay) and the [`hideDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hidedelay) properties of the [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) directive. Both properties are of type **number** and take time in milliseconds.
@@ -264,7 +264,7 @@ Since the tooltip uses the [`IgxOverlayService`](overlay.md), in order for our c
 ```
 
 > [!NOTE]
-> In order to learn more about various options for providing themes to elements that are shown by using the [`IgxOverlayService`](overlay.md), you can take a look at this [link](overlay.md#styling).
+> In order to learn more about various options for providing themes to elements that are shown by using the [`IgxOverlayService`](overlay.md), you can take a look at the [Overlay styling topic](overlay-styling.md).
 
 ### Including Themes
 
@@ -278,7 +278,7 @@ If `$legacy-support` is set to `true`, include the **component theme** like that
  @include igx-tooltip($dark-tooltip);
 ```
 >[!NOTE]
->If the component is using an [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`
+>If the component is using an [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`
 
 ```scss
 :host {
@@ -297,7 +297,7 @@ If `$legacy-support` is set to `false`(default), include the component **css var
 ```
 
 >[!NOTE]
->If the component is using an [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, you still have to use `:host` because you need a global selector in order to override the variables.
+>If the component is using an [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, you still have to use `:host` because you need a global selector in order to override the variables.
 
 ```scss
 :host {

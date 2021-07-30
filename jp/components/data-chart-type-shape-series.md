@@ -6,23 +6,20 @@ mentionedTypes: ['XamDataChart','ShapeColumnSeries','ScatterPolygonSeries','Scat
 _language: ja
 ---
 
-# Angular 散布図 - 図形シリーズ
+# Angular 散布図 - シェイプ シリーズ
 
-このトピックは、Angular データ チャート コンポーネントの図形シリーズのさまざまなタイプについて説明します。散布図シリーズは、一連の形状 (1 つまたは複数の X/Y 座標の配列) をとり、それらをデカルト (x、y) 座標系のポリゴン ([`IgxScatterPolygonSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolygonseriescomponent.html)) またはポリライン ([`IgxScatterPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolylineseriescomponent.html)) のコレクションとして描画するチャート シリーズのグループです。
+このトピックは、Angular データ チャート コンポーネントのシェイプ シリーズのさまざまなタイプについて説明します。散布図シリーズは、一連の形状 (1 つまたは複数の X/Y 座標の配列) をとり、それらをデカルト (x、y) 座標系のポリゴン ([`IgxScatterPolygonSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolygonseriescomponent.html)) またはポリライン ([`IgxScatterPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolylineseriescomponent.html)) のコレクションとして描画するチャート シリーズのグループです。
 
 散布図シリーズは科学データの強調領域でよく使用されますが、ダイアグラム、青写真、さらには建物の間取り図のプロットにも使用できます。
 
-## Angular 散布図 - 図形シリーズの例
+## Angular 散布図 - シェイプ シリーズの例
 
-<div class="sample-container loading" style="height: 400px">
-    <iframe id="data-chart-type-shape-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-shape-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular 散布図 - 図形シリーズの例"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-shape-series-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
-    </button>
-
-
-</div>
+<code-view style="height: 400px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-shape-series"
+           alt="Angular 散布図 - シェイプ シリーズの例"
+           github-src="charts/data-chart/type-shape-series">
+</code-view>
 
 <div class="divider--half"></div>
 
@@ -50,7 +47,7 @@ Angular データ チャート コンポーネントはさまざまな軸タイ�
 
 -   データソースはデータ項目の配列やリストである必要があります。
 -   データソースはデータ項目を少なくとも 1 つ含む必要があります。含まない場合はチャートに散布シェイプ シリーズを描画しません。
--   すべてのデータ項目には、スキャッタシェイプシリーズの [`shapeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapeseriesbasecomponent.html#shapememberpath) プロパティにマッピングする必要がある1つのシェイプデータ列（XまたはY座標の配列）を含める必要があります ([`IgxScatterPolygonSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolygonseriescomponent.html) など)
+-   すべてのデータ項目には、スキャッタシェイプシリーズの [`shapeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapeseriesbasecomponent.html#shapememberpath) プロパティにマッピングする必要がある1つのシェイプデータ列 (X または Y 座標の配列) を含める必要があります ([`IgxScatterPolygonSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolygonseriescomponent.html) など)
 
 上記データ要件を満たすデータソースとして [SampleShapeData](data-chart-data-sources-shape.md) を使用できます。
 
@@ -60,14 +57,7 @@ public dataSource: any[] = SampleShapeData.create();
 
 ## モジュールの要件
 
-散布多角形シリーズを作成するには、以下のモジュールが必要です。<!-- Angular, React, WebComponents --> <!-- end: Angular, React, WebComponents --><!-- Blazor -->モジュールはアプリケーションのエントリ ポイントに登録する必要があります。
-
--   DataChartCoreModule        
--   DataChartScatterCoreModule
--   DataChartScatterModule   
--   DataChartInteractivityModule
--   ScatterPolygonSeriesModule
-    <!-- end: Blazor -->
+散布多角形シリーズを作成するには、以下のモジュールが必要です。
 
 ```ts
 // axis' modules:
@@ -95,7 +85,7 @@ export class AppModule { /* ... */ }
 
 ## コード例
 
-このコードは、`ShapeColumnSeries` でデータチャートのインスタンスを作成し、データソースにバインドする方法を説明します。
+このコードは、`ShapeColumnSeries` でデータ チャートのインスタンスを作成し、データソースにバインドする方法を説明します。
 
 ```html
  <igx-data-chart

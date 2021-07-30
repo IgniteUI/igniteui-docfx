@@ -165,6 +165,42 @@ toolbar interaction components.
 </igx-grid-toolbar>
 ```
 
+Each action now exposes a way to change the overlay settings of the actions dialog by using the [`overlaySettings`]({environment:angularApiUrl}/classes/igxgridtoolbarhidingcomponent.html#overlaysettings) input, example:
+
+```html
+<igx-grid-toolbar-actions>
+    <igx-grid-toolbar-pinning [overlaySettings]="overlaySettingsScaleCenter"></igx-grid-toolbar-pinning>
+    <igx-grid-toolbar-hiding [overlaySettings]="overlaySettingsAuto"></igx-grid-toolbar-hiding>
+</igx-grid-toolbar-actions>
+```
+
+```ts
+public data: any[];
+public positionStrategyScaleCenter = new GlobalPositionStrategy({
+    openAnimation: scaleInCenter,
+    closeAnimation: scaleOutCenter
+});
+public overlaySettingsScaleCenter = {
+    positionStrategy: this.positionStrategyScaleCenter,
+    scrollStrategy: new AbsoluteScrollStrategy(),
+    modal: true,
+    closeOnEscape: true
+};
+
+public positionStrategyAuto = new AutoPositionStrategy();
+public overlaySettingsAuto = {
+    positionStrategy: this.positionStrategyAuto,
+    scrollStrategy: new AbsoluteScrollStrategy(),
+    modal: false,
+    closeOnEscape: false
+};
+constructor() {
+    this.data = athletesData;
+}
+```
+
+The default overlaySettings are using *ConnectedPositionStrategy* with *Absolute* scroll strategy, *modal* set to false, with enabled *close on escape* and *close on outside click* interactions.
+
 ### Column pinning
 [This component]({environment:angularApiUrl}/classes/igxgridtoolbarpinningcomponent.html) provides the default UI for interacting with column pinning in the grid.
 The component is setup to work out of the box with the parent grid containing the toolbar as well as several input properties for customizing the UI, such as the component
@@ -265,7 +301,7 @@ Here is a snippet showing some of the options which can be customized through th
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
 
-In addition to changing the exported filename, the user can further configure the exporter options by waiting for the (onToolbarExporting)[environment:angularApiUrl}/classes/@@igTypeDoc.html#ontoolbarexporting] event and customizing the options entry in the event properties.
+In addition to changing the exported filename, the user can further configure the exporter options by waiting for the [onToolbarExporting]({environment:angularApiUrl}/classes/@@igTypeDoc.html#ontoolbarexporting) event and customizing the options entry in the event properties.
 
 > [!NOTE]
 > By default when exporting to CSV the exporter exports using a comma separator and uses a '.csv' extension for the output file.
@@ -304,6 +340,7 @@ configureExport(args: IGridToolbarExportEventArgs) {
     });
 }
 ```
+}
 
 The following sample demonstrates how to customize the exported files:
 
@@ -510,7 +547,7 @@ The last step is to **include** the newly created themes.
 ```
 
 >[!NOTE]
->If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
+>If the component is using an [`Emulated`](../themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
 
 ```scss
 :host {

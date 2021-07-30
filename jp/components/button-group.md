@@ -268,7 +268,7 @@ $custom-button-group: igx-button-group-theme(
 
 Internet Explorer 11 などの古いブラウザーのコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、別のアプローチを用いる必要があります。 
 
-コンポーネントが [`Emulated`](themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
+コンポーネントが [`Emulated`](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
 
 ```scss
 :host {
@@ -294,6 +294,12 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 * [IgxButtonGroup スタイル]({environment:sassApiUrl}/index.html#function-igx-button-group-theme)
 * [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
 * [IgxButton スタイル]({environment:sassApiUrl}/index.html#function-igx-button-theme)
+
+## テーマの依存関係
+* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxButton テーマ]({environment:sassApiUrl}/index.html#function-igx-button-theme)
+* [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
+
 
 ## その他のリソース
 <div class="divider--half"></div>

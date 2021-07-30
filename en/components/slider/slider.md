@@ -39,7 +39,7 @@ export class AppModule {}
 ```
 
 ### Discrete Slider
-By default, the Slider Component is set to discrete type. A discrete slider provides a visualization of the current value with a numeric label (bubble). The bubble can be visible all the time or it can be shown upon hovering on the slider thumb.  
+By default, the Slider Component is set to discrete type. A discrete slider provides a visualization of the current value with a numeric label (bubble). The bubble can be shown upon hovering on the slider thumb.  
 You can also use the slider with predefined steps, for example, to track only meaningful values for the user.  
 
 In the following example, we define a discrete slider that displays values from 0% to 100% and the [`step`]({environment:angularApiUrl}/classes/igxslidercomponent.html#step) is set to 10.  
@@ -425,7 +425,7 @@ This is the final result from applying our new theme.
 
 
 ### Creating a component theme
-First we need to [create a custom palette](../themes/palette.md)
+First we need to [create a custom palette](../themes/palettes.md)
 Now let's create our component theme and pass that custom palette to it.
 ```scss
 // In app-slider-styling.component.scss

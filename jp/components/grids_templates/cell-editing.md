@@ -115,7 +115,7 @@ Ignite UI for Angular @@igComponent コンポーネントは、Angular CRUD 操�
 ```
 }
 
-セルを更新するその他の方法として [`IgxGridCellComponent`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html) の [`update`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html#update) メソッドで直接更新する方法があります。
+セルを更新するその他の方法として [`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html) の [`update`]({environment:angularApiUrl}/classes/igxgridcell.html#update) メソッドで直接更新する方法があります。
 
 @@if (igxName === 'IgxGrid') {
 ```typescript
@@ -154,13 +154,11 @@ Ignite UI for Angular @@igComponent コンポーネントは、Angular CRUD 操�
 ```
 }
 
-[`IgxGridCellComponent`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html) への参照を介して更新するセルが @@igComponent の表示コンテナー外にある場合、新しい値は送信されません。
-
 ### セル編集テンプレート
 
 デフォルトのセル編集テンプレートの詳細については、[編集トピック](editing.md#テンプレートの編集)を参照してください。
 
-セルが編集モードのときに適用されるカスタム テンプレートを提供する場合は、[`igxCellEditor` ディレクティブ]({environment:angularApiUrl}/classes/igxcelltemplatedirective.html)を使用できます。これを行うには、`igxCellEditor` ディレクティブでマークされた `ng-template` を渡し、カスタム コントロールを [`cell.editValue`]({environment:angularApiUrl}/classes/igxcellcomponent.html#editvalue) に適切にバインドする必要があります:
+セルが編集モードのときに適用されるカスタム テンプレートを提供する場合は、[`igxCellEditor` ディレクティブ]({environment:angularApiUrl}/classes/igxcelltemplatedirective.html)を使用できます。これを行うには、`igxCellEditor` ディレクティブでマークされた `ng-template` を渡し、カスタム コントロールを [`cell.editValue`]({environment:angularApiUrl}/classes/igxgridcell.html#editvalue) に適切にバインドする必要があります:
 
 ```html
 <igx-column field="class" header="Class" [editable]="true">
@@ -184,7 +182,7 @@ Ignite UI for Angular @@igComponent コンポーネントは、Angular CRUD 操�
 <div class="divider--half"></div>
 
 > [!NOTE]
-> 編集モードでセルの [`editValue`]({environment:angularApiUrl}/classes/igxcellcomponent.html#editvalue) に加えられた変更は、終了時に適切な[`編集イベント`]({environment:angularApiUrl}/classes/igxcellcomponent.html#editvalue)をトリガーし、[トランザクション状態](./batch-editing.md)に適用されます (トランザクションが有効な場合)。
+> 編集モードでセルの [`editValue`]({environment:angularApiUrl}/classes/igxgridcell.html#editvalue) に加えられた変更は、終了時に適切な[`編集イベント`](editing.md#イベントの引数とシーケンス)をトリガーし、[トランザクション状態](./batch-editing.md)に適用されます (トランザクションが有効な場合)。
 
 > [!NOTE]
 > セルテンプレート [`igxCell`](../grid/grid.md#セル-テンプレート) は、編集モード外での列のセルの表示方法を制御します。
@@ -443,11 +441,11 @@ export class MyHGridEventsComponent {
 
 ## スタイル設定
 
-@@ igxName で [Ignite UI for Angular テーマ ライブラリ](../themes/component-themes.md) を使用してセルのスタイルを設定できます。グリッドの [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) は、ユーザーがグリッドのさまざまな側面をスタイル設定できる広範なプロパティを公開します。
+@@ igxName で [Ignite UI for Angular テーマ ライブラリ](../themes/sass/component-themes.md) を使用してセルのスタイルを設定できます。グリッドの [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) は、ユーザーがグリッドのさまざまな側面をスタイル設定できる広範なプロパティを公開します。
 
 以下の手順では、編集モードでグリッドのセルのスタイルを設定する方法と、それらのスタイルの範囲を設定する方法について説明します。
 
-[Ignite UI Theming ライブラリ](../themes/component-themes.md)を使用するには、まずグローバル スタイルでテーマ `index` ファイルをインポートする必要があります。
+[Ignite UI Theming ライブラリ](../themes/sass/component-themes.md)を使用するには、まずグローバル スタイルでテーマ `index` ファイルをインポートする必要があります。
 
 ### スタイル ライブラリのインポート
 
@@ -459,7 +457,7 @@ export class MyHGridEventsComponent {
 
 ### パレットの定義
 
-インデックス ファイルをインポート後、カスタム パレットを作成します。好きな 2 つの色を定義し、それらを使用して [`igx-palette`](../themes/palette.md) でパレットを作成しましょう。
+インデックス ファイルをインポート後、カスタム パレットを作成します。好きな 2 つの色を定義し、それらを使用して [`igx-palette`](../themes/palettes.md) でパレットを作成しましょう。
 
 ```scss
 $white: #fff;
@@ -498,7 +496,7 @@ $custom-grid-theme: igx-grid-theme(
 このように、Angular の [`ViewEncapsulation`](https://angular.io/api/core/Component#encapsulation) により、スタイルはカスタム コンポーネントにのみ適用されます。
 
  >[!NOTE]
- >コンポーネントが [`Emulated`](../themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、グリッドのスタイルを設定するには、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
+ >コンポーネントが [`Emulated`](../themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、グリッドのスタイルを設定するには、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
  >[!NOTE]
  >ステートメントがコンポーネントの外にある要素に影響を与えないよう、ステートメントを `:host` セレクター内にラップします。
 
@@ -539,13 +537,16 @@ $custom-grid-theme: igx-grid-theme(
 </code-view>
 
 }
+
+>[!NOTE]
+>このサンプルは、「テーマの変更」から選択したグローバル テーマに影響を受けません。
 <div class="divider--half"></div>
 
 ## API リファレンス
 
-* [IgxGridCellComponent]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
+* [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
 * [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
-@@if (igxName !== 'IgxTreeGrid') {* [IgxGridRowComponent]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRowComponent]({environment:angularApiUrl}/classes/igxtreegridrowcomponent.html)}
+@@if (igxName !== 'IgxTreeGrid') {* [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)}
 * [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
 * [IgxDatePickerComponent]({environment:angularApiUrl}/classes/igxdatepickercomponent.html)
 * [IgxDatePickerComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-date-picker-theme)

@@ -1,6 +1,6 @@
 ---
 title: Angular データ チャート | データ可視化ツール | マーカー | インフラジスティックス
-_description: インフラジスティックスの $Platform Short$ チャートのマーカーを使用して、値が主グリッド線と副グリッド線の間にある場合でもデータ 　ポイントを識別します。Ignite UI for Angular グラフのマーク機能をお試しください!
+_description: インフラジスティックスの $Platform Short$ チャートのマーカーを使用して、値が主グリッド線と副グリッド線の間にある場合でもデータ ポイントを識別します。Ignite UI for Angular グラフのマーク機能をお試しください!
 _keywords: Angular charts, data chart, markers, Ignite UI for Angular, Infragistics, Angular チャート, データ チャート, マーカー, インフラジスティックス
 mentionedTypes: ['XamDataChart', 'MarkerSeries']
 _language: ja
@@ -12,15 +12,12 @@ Angular データ チャート コンポーネントのプロット領域では�
 
 ## Angular マーカーの例
 
-<div class="sample-container loading" style="height: 300px">
-    <iframe id="data-chart-series-markers-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-series-markers' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular マーカーの例"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-series-markers-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
-    </button>
-
-
-</div>
+<code-view style="height: 300px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-series-markers"
+           alt="Angular マーカーの例"
+           github-src="charts/data-chart/series-markers">
+</code-view>
 
 <div class="divider--half"></div>
 

@@ -11,9 +11,9 @@ The Data Chart is ... TODO ...
 
 ## Demo
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-chart-performance"  
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-chart-performance"
            github-src="charts/data-chart/chart-performance">
 </code-view>
 

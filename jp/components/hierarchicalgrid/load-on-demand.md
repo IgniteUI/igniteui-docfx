@@ -46,7 +46,7 @@ public getData(dataState): Observable<any[]> {
 
 次に GET 要求の URL をビルドする方法を定義します。メイン グリッドのデータを取得できますが含まれる子グリッドのデータも取得できます。ルート レベルに `https://services.odata.org/V4/Northwind/Northwind.svc/` の `Customers` データを使用し、それ以外のレベルには `Order` と `Order_Details` を使用します。このモデルはアプリケーションごとに異なりますが、ここでは以下を使用します。
 
-![Dragging](../../images/hgrid-database.jpg)
+<img class="responsive-img" src="../../images/hgrid-database.jpg" />
 
  はじめに必要となるのはグリッドのデータ、親業のプライマリキーとその一意の ID をどこから取得するかを決定するテーブルの `key` が必要です。インターフェイス `IDataState` でこれらすべてを定義します。例:
 

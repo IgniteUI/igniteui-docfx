@@ -10,11 +10,11 @@ The Ignite UI for Angular Combo Component exposes an API that allows binding a c
 </p>
 
 ## Angular Combo Remote Binding Example
-The sample below demonstrates remote binding using the [onDataPreLoad]({environment:angularApiUrl}/classes/igxcombocomponent.html#ondatapreload) property to load new chunk of remote data:
+The sample below demonstrates remote binding using the [dataPreLoad]({environment:angularApiUrl}/classes/igxcombocomponent.html#datapreload) property to load new chunk of remote data:
 
 
-<code-view style="height: 400px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 400px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/combo-remote" alt="Angular Combo Remote Binding Example">
 </code-view>
 
@@ -29,7 +29,7 @@ import { HttpClientModule } from "@angular/common/http";
 @NgModule({
     imports: [
         ...
-        IgxComboModule, 
+        IgxComboModule,
         HttpClientModule,
         ...
     ]
@@ -67,18 +67,18 @@ export class RemoteService {
 When data is returned from a service as an observable, we can set it to the combo component using the [async](https://angular.io/api/common/AsyncPipe) pipe:
 
 ```html
-<igx-combo [data]="rData | async" 
-           [valueKey]="'ProductID'" 
-           [displayKey]="'ProductName'" 
-           (onDataPreLoad)="dataLoading($event)"
-           (onSearchInput)="searchInput($event)"
-           (onOpening)="searchInput('')">
+<igx-combo [data]="rData | async"
+           [valueKey]="'ProductID'"
+           [displayKey]="'ProductName'"
+           (dataPreLoad)="dataLoading($event)"
+           (searchInputUpdate)="searchInput($event)"
+           (opening)="searchInput('')">
 </igx-combo>
 ```
 
 Here are some common cases when the combo component needs to request new data:
     - when the combo is initialized
-    - when we scroll combo's list - it will emit `onDataPreLoad` along with the new combo `virtualizationState`, which allows making a new request to the remote service.
+    - when we scroll combo's list - it will emit `dataPreLoad` along with the new combo `virtualizationState`, which allows making a new request to the remote service.
     - when searching in a combo - we need to make request to filter remote results.
     - when combo is opened - we need to clear the results from any previous filter operations.
 
@@ -151,7 +151,7 @@ When the combo is bound to remote data, setting value/selected items through API
 ## API Summary
 <div class="divider--half"></div>
 
-* [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html) 
+* [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html)
 * [IgxComboComponent Styles]({environment:sassApiUrl}/index.html#function-igx-combo-theme)
 
 ## Additional Resources
@@ -161,7 +161,7 @@ When the combo is bound to remote data, setting value/selected items through API
 * [Combo Features](combo-features.md)
 * [Combo Templates](combo-templates.md)
 * [Template Driven Forms Integration](input-group.md)
-* [Reactive Forms Integration](input-group-reactive-forms.md)
+* [Reactive Forms Integration](angular-reactive-form-validation.md)
 * [Cascading Scenario](combo-cascading.md)
 
 Our community is active and always welcoming to new ideas.

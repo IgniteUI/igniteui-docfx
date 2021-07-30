@@ -11,11 +11,11 @@ Ignite UI for Angular Data Grid は、データの表示や操作が簡単にで
 
 ## Angular データ グリッドの例
 
-Boston Marathon 2020 – この Angular グリッドの例では、ユーザーが基本スタイルと Excel スタイルの両方のフィルタリング、ライブ データのソート、および[スパークライン](../sparkline.md) コンポーネント、[Circular Progress Indicator](../circular-progress.md) コンポーネントと [Icons](../icon.md) を含むグリッド集計とセル テンプレートの使用を実行する方法を確認できます。デモには、[Angular ページネーション](paging.md)のカスタム ページングとページごとの使用法も含まれています。
+Boston Marathon 2021 – この Angular グリッドの例では、ユーザーが基本スタイルと Excel スタイルの両方のフィルタリング、ライブ データのソート、および[スパークライン](../sparkline.md) コンポーネント、[Circular Progress Indicator](../circular-progress.md) コンポーネントと [Icons](../icon.md) を含むグリッド集計とセル テンプレートの使用を実行する方法を確認できます。デモには、[Angular ページネーション](paging.md)のカスタム ページングとページごとの使用法も含まれています。
 
 
-<code-view style="height:700px" 
-           data-demos-base-url="{environment:lobDemosBaseUrl}" 
+<code-view style="height:700px"
+           data-demos-base-url="{environment:lobDemosBaseUrl}"
            iframe-src="{environment:lobDemosBaseUrl}/grid/grid" alt="Angular データ グリッドの例">
 </code-view>
 
@@ -40,24 +40,20 @@ Angular グリッドが `NgModule` としてエクスポートされるため、
 // app.module.ts
 
 import { IgxGridModule } from 'igniteui-angular';
-// Or
-import { IgxGridModule } from 'igniteui-angular/grid';
 
 @NgModule({
     imports: [
         ...
-        IgxGridModule.forRoot(),
+        IgxGridModule,
         ...
     ]
 })
 export class AppModule {}
 ```
 
-`IgxGridModule` の各コンポーネント、ディレクティブ、およびヘルパー クラスはグリッド サブパッケージまたは igniteui-angular のメイン バンドルでインポートできます。グリッドをインスタンス化して使用するためにすべての機能をインポートする必要はありませんが、グリッド API の一部である型を宣言する場合はインポート (またはエディターで自動的にインポート) します。
+`IgxGridModule` の各コンポーネント、ディレクティブ、およびヘルパー クラスは _igniteui-angular_ のメイン バンドルでインポートできます。グリッドをインスタンス化して使用するためにすべての機能をインポートする必要はありませんが、グリッド API の一部である型を宣言する場合はインポート (またはエディターで自動的にインポート) します。
 
 ```typescript
-import { IgxGridComponent } from 'igniteui-angular/grid/';
-// Or
 import { IgxGridComponent } from 'igniteui-angular';
 ...
 
@@ -76,6 +72,9 @@ public grid: IgxGridComponent;
 **id** プロパティは文字列値で、設定されない場合に自動生成されるグリッドの一意識別子です。**data** はグリッドをローカル データにバインドします。
 
 [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) プロパティは、データソース フィールドに基づいて **igx-grid** にグリッドの[`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) を自動生成させます。列の適切なデータ型の決定を試みます。それ以外の場合、開発者は列およびデータ ソース フィールドへのマッピングを明示的に定義する必要があります。
+
+## Angular Bootstrap グリッドの定義
+<p>Ignite UI for Angular には、Flex に基づくレイアウト システムのような強力なブートストラップ グリッドが含まれています。今日の最新のアプリケーションは、レスポンシブ Web デザインのアプローチに従うことが期待されています。つまり、デバイスのサイズに基づいて、または単にブラウザーのサイズを変更するだけで、HTML 要素のレイアウトを適切に調整できます。Angular ブートストラップ グリッド レイアウトはこれまで最も使用されていたアプローチでしたが、CSS グリッドのような Flex に基づくレイアウト システムは、どのブラウザーでも機能するため、より一般的になりました。Ignite UI for Angular Layout ディレクティブにより、コンテンツ/テキストの折り返し、両端揃え、配置など、垂直方向と水平方向のフローが可能になります。Ignite UI for Angular グリッドは、CSS を使用したレスポンシブ レイアウトをサポートし、サイズ変更時のグリッドの動作に究極の柔軟性を提供します。</p>
 
 ## Angular Grid スタイルの構成
 > [!NOTE]
@@ -97,17 +96,21 @@ public grid: IgxGridComponent;
  ...
  ```
 
+## 編集可能な Angular グリッド
+<p>Angular グリッド編集の各操作にはバッチ操作が含まれます。つまり、API には、編集を単一のサーバー呼び出しにグループ化するオプションがあります。または、グリッドの操作を使用して、グリッドの編集を実行したり、発生した操作を更新したりできます。CRUD 操作を備えた編集可能な Angular グリッドとしての優れた開発者エクスペリエンスに加えて、Angular グリッドには Excel のようなキーボード ナビゲーションが含まれています。一般的なデフォルトのグリッド ナビゲーションに加えて、お客様のニーズを満たすためにナビゲーション オプションを上書きするオプションが含まれています。優れたナビゲーション スキームを備えた Angular の編集可能なグリッドは、最新の業務アプリケーションにとって重要であり、Ignite UI グリッドを使用すると簡単になります。</p>
+
+このトピックに続いて、[セル テンプレート](grid.md#セル-テンプレート)と[セル編集テンプレート](grid.md#セル編集テンプレート)および編集について詳しく学習します。
+
 ## Angular Grid 列の構成
 
-[`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) は、グリッドの [`columns`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columns) コレクションを定義し、**ソート**、**ページング**など、列ごとの機能を有効にするために使用します。セル、ヘッダー、およびフッター テンプレートも利用できます。
-
+[`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) は、グリッドの [`columns`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columns) コレクションを定義し、**ソート**、**フィルタリング**など、列ごとの機能を有効にするために使用します。セル、ヘッダー、およびフッター テンプレートも利用できます。
 
 ### 列の定義
 
 [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) プロパティを無効にし、マークアップで列コレクションを定義します。
 
 ```html
-<igx-grid #grid1 [data]="data | async" [autoGenerate]="false" [paging]="true" [perPage]="6" (onColumnInit)="initColumns($event)"
+<igx-grid #grid1 [data]="data | async" [autoGenerate]="false" (onColumnInit)="initColumns($event)"
     (onSelection)="selectCell($event)" [allowFiltering]="true">
     <igx-column field="Name" [sortable]="true" header=" "></igx-column>
     <igx-column field="AthleteNumber" [sortable]="true" header="Athlete number" [filterable]="false"></igx-column>
@@ -116,10 +119,26 @@ public grid: IgxGridComponent;
             <igx-linear-bar [stripped]="false" [value]="value" [max]="100"></igx-linear-bar>
         </ng-template>
     </igx-column>
+    <igx-paginator [perPage]="10">
+    </igx-paginator>
 </igx-grid>
 ```
 
 グリッドの各列は別のテンプレートを持つことができます。列に `ng-template` Angular グリッド モジュール ディレクティブが必要です。
+
+また、カスタム プロパティや列自体に渡す任意のタイプのデータ コンテキストに使用できる [`additionalTemplateContext`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#additionaltemplatecontext) 入力も公開します。
+
+```html
+<igx-column [additionalTemplateContext]="contextObject">
+    <ng-template igxCell let-cell="cell" let-props="additionalTemplateContext">
+        {{ props.firstProperty }}
+    </ng-template>
+</igx-column>
+```
+
+```ts
+public contextObject = { firstProperty: 'testValue', secondProperty: 'testValue1'};
+```
 
 ### ヘッダー テンプレート
 
@@ -164,14 +183,14 @@ public grid: IgxGridComponent;
 ...
 ```
 
-上記のスニペットで暗示的に提供されたセル値への参照を取得します。データを表示し、セルの値にカスタム スタイル設定およびパイプ変換を適用する場合に使用します。ただし、[`IgxGridCellComponent`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html) オブジェクトを以下のように使用するとより効果的です。
+上記のスニペットで暗示的に提供されたセル値への参照を取得します。データを表示し、セルの値にカスタム スタイル設定およびパイプ変換を適用する場合に使用します。ただし、[`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html) オブジェクトを以下のように使用するとより効果的です。
 
 ```html
 <igx-grid #grid [data]="data">
     <igx-column dataType="string" field="Name">
         <ng-template igxCell let-cell="cell">
             <!-- Implement row deleting inside the cell template itself -->
-            <span tabindex="0" (keydown.delete)="grid.deleteRow(cell.rowIndex)">{{ cell.value | titlecase }}</span>
+            <span tabindex="0" (keydown.delete)="grid.deleteRow(cell.row.index)">{{ cell.value | titlecase }}</span>
         </ng-template>
     </igx-column>
     <igx-column dataType="boolean" field="Subscribtion">
@@ -183,14 +202,14 @@ public grid: IgxGridComponent;
 <igx-grid>
 ```
 
-`ngModel` を使用して**セル テンプレート**を介してデータを変更する場合、適切な API メソッドを呼び出して、Angular グリッドの基になるデータ コレクションで値が正しく更新されることを確認する必要があります。上記のスニペットでは、`ngModelChange` 呼び出しはグリッドの[編集 API](editing.md#API-を介した編集) を通過し、グリッドの編集パイプラインを通過し、トランザクション (該当する場合) を適切にトリガーし、[集計](summaries.md)、[選択](selection.md) などの処理を行います。ただし、この `ngModelChange` はユーザーが編集を完了したときだけでなく、セルが変更され、より多くの API 呼び出しが発生します。
+`ngModel` を使用して**セル テンプレート**を介してデータを変更する場合、適切な API メソッドを呼び出して、Angular グリッドの基になるデータ コレクションで値が正しく更新されることを確認する必要があります。上記のスニペットでは、`ngModelChange` 呼び出しはグリッドの[編集 API](cell-editing.md#api-を介した編集) を通過し、グリッドの編集パイプラインを通過し、トランザクション (該当する場合) を適切にトリガーし、[集計](summaries.md)、[選択](selection.md) などの処理を行います。ただし、この `ngModelChange` はユーザーが編集を完了したときだけでなく、セルが変更され、より多くの API 呼び出しが発生します。
 
 > [!NOTE]
 > グリッドは、数値、文字列、日付、およびブール列タイプのデフォルトの処理を公開します。例えば、ブール列タイプの場合に列はデフォルトで true/false の代わりに`チェック`または`閉じる`アイコンを表示します。
 
 セル内のデータが `[(ngModel)]` でバインドされていて、値の変更が処理されない場合、新しい値は Angular グリッドの基になるデータソースで適切に**更新されません**。カスタム テンプレートを使用してセルの編集を行う場合は、セルの**セル編集テンプレート**を使用することを強くお勧めします。
 
-適切に実装されると、セル編集テンプレートは、セルの `editValue` がグリッド[編集イベント サイクル](editing.md#編集イベント) を正しく渡します。
+適切に実装されると、セル編集テンプレートは、セルの `editValue` がグリッド[編集イベント サイクル](editing.md#イベントの引数とシーケンス) を正しく渡します。
 
 ### セル編集テンプレート
 
@@ -207,7 +226,7 @@ public grid: IgxGridComponent;
 </igx-column>
 ```
 
-テンプレートで使用可能なプロパティの詳細については、[`IgxGridCellComponent`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html) の API を参照してください。
+テンプレートで使用可能なプロパティの詳細については、[`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html) の API を参照してください。
 
 ### 列テンプレート API
 
@@ -623,11 +642,11 @@ export const DATA: any[] = [
                 <ng-template #compositeTemp igxCell let-cell="cell">
                     <div class="address-container">
                     // In the Address column combine the Country, City and PostCode values of the corresponding data record
-                        <span><strong>Country:</strong> {{cell.row.rowData.Country}}</span>
+                        <span><strong>Country:</strong> {{cell.row.data.Country}}</span>
                         <br/>
-                        <span><strong>City:</strong> {{cell.row.rowData.City}}</span>
+                        <span><strong>City:</strong> {{cell.row.data.City}}</span>
                         <br/>
-                        <span><strong>Postal Code:</strong> {{cell.row.rowData.PostalCode}}</span>
+                        <span><strong>Postal Code:</strong> {{cell.row.data.PostalCode}}</span>
                     </div>
                 </ng-template>
 ...
@@ -639,20 +658,20 @@ export const DATA: any[] = [
                  <ng-template  igxCellEditor let-cell="cell">
                         <div class="address-container">
                         <span>
-                            <strong>Country:</strong> {{cell.row.rowData.Country}}
+                            <strong>Country:</strong> {{cell.row.data.Country}}
                             <igx-input-group width="100%">
-                                    <input igxInput [(ngModel)]="cell.row.rowData.Country" />
+                                    <input igxInput [(ngModel)]="cell.row.data.Country" />
                             </igx-input-group>
                         </span>
                             <br/>
-                            <span><strong>City:</strong> {{cell.row.rowData.City}}</span>
+                            <span><strong>City:</strong> {{cell.row.data.City}}</span>
                             <igx-input-group width="100%">
-                                    <input igxInput [(ngModel)]="cell.row.rowData.City" />
+                                    <input igxInput [(ngModel)]="cell.row.data.City" />
                             </igx-input-group>
                             <br/>
-                            <span><strong>Postal Code:</strong> {{cell.row.rowData.PostalCode}}</span>
+                            <span><strong>Postal Code:</strong> {{cell.row.data.PostalCode}}</span>
                             <igx-input-group width="100%">
-                                    <input igxInput [(ngModel)]="cell.row.rowData.PostalCode" />
+                                    <input igxInput [(ngModel)]="cell.row.data.PostalCode" />
                             </igx-input-group>
                             <br/>
                         </div>
@@ -707,8 +726,22 @@ Grid のキーボード ナビゲーションは、さまざまなキーボー�
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 * [IgxGridComponent スタイル]({environment:sassApiUrl}/#function-igx-grid-theme)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
-* [IgxGridRowComponent]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)
-* [IgxGridCellComponent]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
+* [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html)
+* [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)
+* [IgxHierarchicalGridRow]({environment:angularApiUrl}/classes/igxhierarchicalgridrow.html)
+* [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
+
+## テーマの依存関係
+* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxInputGroup テーマ]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
+* [IgxChip テーマ]({environment:sassApiUrl}/index.html#function-igx-chip-theme)
+* [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
+* [IgxButton テーマ]({environment:sassApiUrl}/index.html#function-igx-button-theme)
+* [IgxOverlay テーマ]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+* [IgxDropDown テーマ]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme)
+* [IgxCalendar テーマ]({environment:sassApiUrl}/index.html#function-igx-calendar-theme)
+* [IgxSnackBar テーマ]({environment:sassApiUrl}/index.html#function-igx-snackbar-theme)
+* [IgxBadge テーマ]({environment:sassApiUrl}/index.html#function-igx-badge-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

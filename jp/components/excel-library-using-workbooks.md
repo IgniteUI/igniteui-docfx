@@ -12,10 +12,12 @@ Infragistics Angular Excel Engine は、データを Microsoft® Excel® に保�
 
 ## Angular ワークブックの使用の例
 
-<div class="sample-container loading" style="height: 500px">
-    <iframe id="excel-library-overview-sample-iframe" src='{environment:dvDemosBaseUrl}/excel/excel-library-operations-on-workbooks' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular ワークブックの使用の例"></iframe>
-</div>
-
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/excel/excel-library-operations-on-workbooks"
+           alt="Angular ワークブックの使用の例"
+           github-src="excel/excel-library/operations-on-workbooks">
+</code-view>
 
 <div class="divider--half"></div>
 
@@ -39,19 +41,19 @@ Microsoft Excel® ドキュメント プロパティは、ドキュメントの�
 
 -   `Title`
 
--   `subject`
+-   `Subject`
 
--   `keywords`
+-   `Keywords`
 
--   `category`
+-   `Category`
 
--   `status`
+-   `Status`
 
--   `comments`
+-   `Comments`
 
--   `company`
+-   `Company`
 
--   `manager`
+-   `Manager`
 
 以下のコードは、ブックを作成し、`title` および `status` ドキュメント プロパティを設定する方法を示します。
 
@@ -80,16 +82,12 @@ var workbook = new Workbook();
 workbook.protect(false, false);
 ```
 
--   isProtected
-
 ブックが保護されているかどうかの確認この読み取り専用プロパティは、ワークブックに Protect メソッドのオーバーロードを使用して設定された保護がある場合、true を返します。
 
 ```ts
 var workbook = new Workbook();
 var protect = workbook.isProtected;
 ```
-
--   protection
 
 この読み取り専用プロパティは、保護の各設定を個別に取得するためにプロパティを含む WorkbookProtection 型のオブジェクトを返します。
 

@@ -85,7 +85,7 @@ import {
 // Initialize and use overlay settings
 const overlaySettings: OverlaySettings = {
     // Set the target where content should be shown
-        target: this.buttonElement.nativeElement
+    target: this.buttonElement.nativeElement,
     // Pass in the positioning strategy
     positionStrategy: new ConnectedPositioningStrategy()
 };
@@ -138,9 +138,8 @@ this._overlayId = this.overlayService.attach(MyDynamicCardComponent, overlaySett
 
 ```typescript
 const myPositionStrategy = new AutoPositionStrategy();
-overlay.show(overlayId, { positionStrategy: myPositionStrategy }); 
+overlay.attach(element, { positionStrategy: myPositionStrategy }); 
 ```
-
 
 <code-view style="height: 500px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -151,7 +150,7 @@ overlay.show(overlayId, { positionStrategy: myPositionStrategy });
 
 ### 設定の変更
 
-既存ストラテジのポジション設定の変更は、そのストラテジの設定のいずれかをオーバーライドします。
+既存ストラテジのポジション設定の変更は、そのストラテジの設定のいずれかをオーバーライドします。ストラテジーがすでにアタッチされている場合は、以前に生成された ID をデタッチする必要があります:
 ```typescript
 // overlaySettings is an existing object of type OverlaySettings
 // overlaySettings.positionStrategy is an existing PositionStrategy with settings of type PositionSettings
@@ -162,7 +161,8 @@ Object.assign(overlaySettings.positionStrategy.settings, {
 overlaySettings.target = dummyHTMLElement;
 // the element will now start to the left of the target (dummyHTMLElement)
 // and will align itself to the left
-overlay.show(overlayId, overlaySettings);
+const overlayId = overlay.attach(overlayId, overlaySettings);
+overlay.show(overlayId);
 ```
 
 ### コンテンツのオフセット

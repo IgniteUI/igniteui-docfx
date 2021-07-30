@@ -9,21 +9,18 @@ mentionedTypes: ['XamLinearGauge']
 
 Use the Angular linear gauge component to see a simple display of a value compared against a scale and one or more ranges.
 
-## Angular Linear Gauge Overview Example
-
 The Ignite UI for Angular linear gauge component allows for visualizing data in the form of a linear gauge. It provides a simple and concise view of a value compared against a scale and one or more ranges. It supports one scale, one set of tick marks and one set of labels. The component has also a built-in support for animated transitions. This animation is easily customizable by setting the [`transitionDuration`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineargaugecomponent.html#transitionduration) property. The features of the linear gauge component include configurable orientation and direction, configurable visual elements such as the needle, and more.
+
+## Angular Linear Gauge Example
 
 The following sample demonstrates how setting multiple properties on the same linear gauge can transform it to completely different linear gauge.
 
-<div class="sample-container loading" style="height: 155px">
-    <iframe id="linear-gauge-sample-iframe" src='{environment:dvDemosBaseUrl}/gauges/linear-gauge-animation' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Linear Gauge Overview Example"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="linear-gauge-sample-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
-    </button>
-
-
-</div>
+<code-view style="height: 155px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/gauges/linear-gauge-animation"
+           alt="Angular Linear Gauge Example"
+           github-src="gauges/linear-gauge/animation">
+</code-view>
 
 <div class="divider--half"></div>
 
@@ -114,15 +111,11 @@ This is the primary measure displayed by the linear gauge component and is visua
 </igx-linear-gauge>
 ```
 
-<div class="sample-container loading" style="height: 125px">
-    <iframe id="linear-gauge-needle-iframe" data-src='{environment:dvDemosBaseUrl}/gauges/linear-gauge-needle' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="linear-gauge-needle-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
-    </button>
-
-
-</div>
+<code-view style="height: 125px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/gauges/linear-gauge-needle"
+           github-src="gauges/linear-gauge/needle">
+</code-view>
 
 ## Ranges
 
@@ -148,15 +141,11 @@ The ranges are visual elements that highlight a specified range of values on a s
 </igx-linear-gauge>
 ```
 
-<div class="sample-container loading" style="height: 125px">
-    <iframe id="linear-gauge-ranges-iframe" data-src='{environment:dvDemosBaseUrl}/gauges/linear-gauge-ranges' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="linear-gauge-ranges-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
-    </button>
-
-
-</div>
+<code-view style="height: 125px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/gauges/linear-gauge-ranges"
+           github-src="gauges/linear-gauge/ranges">
+</code-view>
 
 ## Tick Marks
 
@@ -186,15 +175,11 @@ Minor tick marks – The minor tick marks represent helper tick marks, which mig
 </igx-linear-gauge>
 ```
 
-<div class="sample-container loading" style="height: 125px">
-    <iframe id="linear-gauge-tickmarks-iframe" data-src='{environment:dvDemosBaseUrl}/gauges/linear-gauge-tickmarks' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="linear-gauge-tickmarks-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
-    </button>
-
-
-</div>
+<code-view style="height: 125px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/gauges/linear-gauge-tickmarks"
+           github-src="gauges/linear-gauge/tickmarks">
+</code-view>
 
 ## Labels
 
@@ -214,15 +199,11 @@ The labels indicate the measures on the scale.
 </igx-linear-gauge>
 ```
 
-<div class="sample-container loading" style="height: 125px">
-    <iframe id="linear-gauge-labels-iframe" data-src='{environment:dvDemosBaseUrl}/gauges/linear-gauge-labels' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="linear-gauge-labels-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
-    </button>
-
-
-</div>
+<code-view style="height: 125px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/gauges/linear-gauge-labels"
+           github-src="gauges/linear-gauge/labels">
+</code-view>
 
 ## Backing
 
@@ -241,15 +222,11 @@ The backing element represents background and border of the linear gauge compone
 </igx-linear-gauge>
 ```
 
-<div class="sample-container loading" style="height: 125px">
-    <iframe id="linear-gauge-backing-iframe" data-src='{environment:dvDemosBaseUrl}/gauges/linear-gauge-backing' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="linear-gauge-backing-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
-    </button>
-
-
-</div>
+<code-view style="height: 125px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/gauges/linear-gauge-backing"
+           github-src="gauges/linear-gauge/backing">
+</code-view>
 
 ## Scale
 
@@ -271,15 +248,11 @@ The scale is a visual element that highlights the full range of values in the li
 </igx-linear-gauge>
 ```
 
-<div class="sample-container loading" style="height: 125px">
-    <iframe id="linear-gauge-scale-iframe" data-src='{environment:dvDemosBaseUrl}/gauges/linear-gauge-scale' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="linear-gauge-scale-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
-    </button>
-
-
-</div>
+<code-view style="height: 125px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/gauges/linear-gauge-scale"
+           github-src="gauges/linear-gauge/scale">
+</code-view>
 
 ## Summary
 

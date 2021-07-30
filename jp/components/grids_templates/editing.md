@@ -1,3 +1,10 @@
+<style>
+    /* Fix for the overlapping right side-affix when the screen is shrinked */
+    .table-responsive {
+        width:63vw;
+    }
+</style>
+
 @@if (igxName === 'IgxGrid') {
 ---
 title: Angular Grid 編集| データの変更 | Ignite UI for Angular| インフラジスティックス
@@ -28,7 +35,7 @@ _language: ja
 Ignite UI for Angular @@igComponent コンポーネントは、レコードの作成、更新、削除などのデータ操作を簡単に実行できます。データの変更のフェーズは次のとおりです: [セル編集](cell-editing.md)、[行編集](row-editing.md)、および[一括編集](batch-editing.md)。@@igComponent は、これらの操作をカスタマイズできる強力なパブリック API を提供します。さらに、**セル編集**は、列のデータ型に基づいていくつかのデフォルト エディターを公開します。これらは、[igxCellEditor ディレクティブ](cell-editing.md#セル編集テンプレート)または [igxRow ディレクティブ](row-editing.md#行編集オーバーレイのカスタマイズ)を介して簡単にカスタマイズできます。 
 
 ## 設定
-有効にする編集モードを指定するために、@@igComponent は [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) および [`rowEditable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#roweditable) ブール値プロパティを公開します。
+有効にする編集モードを指定するために、@@igComponent は [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) および [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) ブール値プロパティを公開します。
 
 以下のオプションは、プロパティ **editable** で指定できます。
 - **false** - 対応する列の編集は無効になります。 /デフォルト値/
@@ -51,12 +58,15 @@ Ignite UI for Angular @@igComponent コンポーネントは、レコードの�
 
  データ型固有の**編集テンプレート**を使用する場合、列 [`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype) プロパティを指定する必要があります。次に各型のデフォルト テンプレートについて説明します。
 
-- `string` データ型の場合、デフォルトのテンプレートは [igxInput]({environment:angularApiUrl}/classes/igxinputdirective.html) を使用します。
-- `number` データ型のデフォルト テンプレートは [igxInput]({environment:angularApiUrl}/classes/igxinputdirective.html) type="number" を使用します。数値に解析できない値にセルを更新した場合、変更は無視されてセルの値が 0 に設定されます。
-- `date` データ型ではデフォルトのテンプレートは [igxDatePicker]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) を使用します。
+ - `string` データ型の場合、デフォルトのテンプレートは [igxInput]({environment:angularApiUrl}/classes/igxinputdirective.html) を使用します。
+ - `number` データ型のデフォルト テンプレートは [igxInput]({environment:angularApiUrl}/classes/igxinputdirective.html) type="number" を使用します。数値に解析できない値にセルを更新した場合、変更は無視されてセルの値が 0 に設定されます。
+ - `date` データ型ではデフォルトのテンプレートは [igxDatePicker]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) を使用します。
+ - `dateTime` データ型の場合、デフォルトのテンプレートは [IgxDateTimeEditor directive]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html) を使用しています。このエディターは、DateTime オブジェクトの入力要素部分のマスク方向を提供します。
+ - `date` データ型の場合、デフォルトのテンプレートは [IgxDatePicker component]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) を使用しています。
+ - `time` データ型の場合、デフォルトのテンプレートは [IgxTimePicker component]({environment:angularApiUrl}/classes/igxtimepickercomponent.html) を使用しています。
 - `boolean` データ型ではデフォルトのテンプレートは [igxCheckbox]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html) を使用します。
-- `currency` データ型の場合、デフォルトのテンプレートは、アプリケーションまたはグリッドのロケール設定に基づいたプレフィックス/サフィックス構成の [IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) を使用します。 
-- `percent` パーセントデータ型の場合、デフォルトのテンプレートは、編集された値のプレビューをパーセントで表示するサフィックス要素を持つ [IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) を使用します。 
+ - `currency` データ型の場合、デフォルトのテンプレートは、アプリケーションまたはグリッドのロケール設定に基づいたプレフィックス/サフィックス構成の [IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) を使用します。
+ - `percent` パーセント データ型の場合、デフォルトのテンプレートは、編集された値のプレビューをパーセントで表示するサフィックス要素を持つ [IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) を使用します。 
 - カスタム テンプレートについては、[セル編集トピック](cell-editing.md#セル編集テンプレート)を参照してください。
 
 すべての利用可能な列データ型は、公式の[列タイプ トピック](column-types.md#デフォルトのテンプレート)にあります。
@@ -77,7 +87,7 @@ Ignite UI for Angular @@igComponent コンポーネントは、レコードの�
 
 ### イベントのキャンセル
  - `RowEditEnter` - 行もセルも編集モードに入りません。
- - `CellEditEnter` - セル編集に入ることを防止します。[`rowEditable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#roweditable) が有効になっている場合、セル編集は禁止されたままですが、行編集がトリガーされます。
+ - `CellEditEnter` - セル編集に入ることを防止します。[`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditable) が有効になっている場合、セル編集は禁止されたままですが、行編集がトリガーされます。
  - `CellEdit` - セル/行の編集を許可し、**[完了]** ボタンまたは **[Enter]** を押しても値または行のトランザクションはコミットされません。**[キャンセル]** ボタンをクリックするまで、セル編集と行編集は閉じません。
  - `RowEdit` - 行全体ではなくセルのコミットは可能です。行は編集モードのままになり、行トランザクションは開いていると見なされます。**[完了]** を押しても、行をコミットまたは閉じません。**[キャンセル]** ボタンは、変更をコミットせずに編集プロセスとトランザクションを閉じます。
 
@@ -136,9 +146,9 @@ public onSorting(event: ISortingEventArgs) {
 
 ## API リファレンス
 
-* [IgxGridCellComponent]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
+* [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
 * [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
-@@if (igxName !== 'IgxTreeGrid') {* [IgxGridRowComponent]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRowComponent]({environment:angularApiUrl}/classes/igxtreegridrowcomponent.html)}
+@@if (igxName !== 'IgxTreeGrid') {* [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)}
 * [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
 * [IgxDatePickerComponent]({environment:angularApiUrl}/classes/igxdatepickercomponent.html)
 * [IgxDatePickerComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-date-picker-theme)

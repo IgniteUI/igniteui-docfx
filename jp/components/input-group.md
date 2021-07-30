@@ -11,8 +11,8 @@ _language: ja
 
 ## Angular Input Group の例
 
-<code-view style="height:100px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:100px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/input-group-sample-1" alt="Angular Input Group の例">
 </code-view>
 
@@ -100,7 +100,7 @@ providers: [{provide: IGX_input-group_TYPE, useValue: 'box' }]
 ```
 
 >[!NOTE]
->[`type`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html#type) プロパティは [IGX_INPUT_GROUP_TYPE]({environment:angularApiUrl}/index.html#igx_input_group_type) よりも優先されるため、type プロパティが明示的に設定されている場合トークン値をコンポーネントレベルでオーバーライドできます。  
+>[`type`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html#type) プロパティは [IGX_INPUT_GROUP_TYPE]({environment:angularApiUrl}/index.html#igx_input_group_type) よりも優先されるため、type プロパティが明示的に設定されている場合トークン値をコンポーネントレベルでオーバーライドできます。
 >`igniteui-angular` フォーム コントロールのほとんどは、内部で input-group コンポーネントを使用するか、カスタム テンプレートを使用します。グローバル トークンの設定は、これらのコンポーネントにも影響します。
 
 Ignite UI for Angular は、`type="file"` の入力スタイルも提供し、すべての入力グループ タイプとテーマをサポートします。以下をテンプレートに追加するだけです:
@@ -113,8 +113,8 @@ Ignite UI for Angular は、`type="file"` の入力スタイルも提供し、�
 
 
 
-<code-view style="height:520px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:695px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/input-group-sample-5" >
 </code-view>
 
@@ -134,7 +134,7 @@ Ignite UI for Angular は、`type="file"` の入力スタイルも提供し、�
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+```
 
 次に、[`igx-input-group-theme`]({environment:sassApiUrl}/index.html#function-igx-input-group-theme) を拡張する新しいテーマを作成し、変更するパラメーターを渡します。
 
@@ -163,7 +163,7 @@ $custom-input-group: igx-input-group-theme(
 
 Internet Explorer 11 などの古いブラウザーのコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、[input group mixin]({environment:sassApiUrl}/index.html#mixin-igx-input-group) を用いる必要があります。
 
-ただし、先の手順に示すように、インクルード ステートメントをそのままにすると、スタイルは適切に適用されません。テキストの色が適切に変更された場合も、下の境界線と背景は同じままです。これは、コンポーネントが [`Emulated`](themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用しているためです。`input` 要素と `label` 要素はビューの一部であるため、スタイルが正しく適用されます。下の境界線は `igx-input-group` コンポーネントによって生成され、コンポーネントのスタイルの**影響を受けません**。
+ただし、先の手順に示すように、インクルード ステートメントをそのままにすると、スタイルは適切に適用されません。テキストの色が適切に変更された場合も、下の境界線と背景は同じままです。これは、コンポーネントが [`Emulated`](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用しているためです。`input` 要素と `label` 要素はビューの一部であるため、スタイルが正しく適用されます。下の境界線は `igx-input-group` コンポーネントによって生成され、コンポーネントのスタイルの**影響を受けません**。
 
 境界線のスタイルを設定するには、`:: ng-deep` を使用してこのカプセル化を解除する必要があります。カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターでスタイルのスコープを設定する必要があります。
 
@@ -178,8 +178,8 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 ### デモ
 
 
-<code-view style="height:120px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:120px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/input-group-style" >
 </code-view>
 
@@ -194,13 +194,17 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 * [IgxInputGroupComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
 
+## テーマの依存関係
+* [IgxButton テーマ]({environment:sassApiUrl}/index.html#function-igx-button-theme)
+* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+
 ## その他のリソース
 <div class="divider--half"></div>
 
 関連トピック:
 
 * [Label および Input](label-input.md)
-* [リアクティブ フォームの統合](input-group-reactive-forms.md)
+* [リアクティブ フォームの統合](angular-reactive-form-validation.md)
 
 コミュニティに参加して新しいアイデアをご提案ください。
 

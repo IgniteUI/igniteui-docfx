@@ -68,8 +68,8 @@ private downFontCondition = (rowData: any, columnKey: any): boolean => {
 <!-- sample.component.html -->
 <igx-column field="UnitPrice" header="Unit Price" [dataType]="'number'" [cellClasses] = "priceClasses">
     <ng-template igxCell let-cell="cell" let-val>
-        <span *ngIf="cell.row.rowData.UnitPrice == 0">-</span>
-        <span *ngIf="cell.row.rowData.UnitPrice != 0">${{val}}</span>
+        <span *ngIf="cell.row.data.UnitPrice == 0">-</span>
+        <span *ngIf="cell.row.data.UnitPrice != 0">${{val}}</span>
     </ng-template>
 </igx-column>
 ```
@@ -192,7 +192,7 @@ public styles = {
 ### cellStyles の使用
 列の `cellStyles` プロパティを公開。列セルの条件付きスタイリングが可能になりました。`cellClasses` と同様、キーがスタイル プロパティであり、値が評価用の式であるオブジェクト リテラルを受け取ります。また、通常のスタイリングを簡単に適用できます (条件なし)。
 
-[上記のサンプル](conditional-cell-styling.md#cellStyles-を使用したデモ)で作成した項目:
+[上記のサンプル](#デモ)で作成した項目:
 - 列インデックスに基づいて適用される 2 つの異なるスタイル。 
 - また、偶数/奇数行に基づいて`テキストの色`を変更します。
 

@@ -197,7 +197,7 @@ this.@@igObjectRef.filteringLogic = FilteringLogic.OR;
 
 @@if (igxName === 'IgxGrid') {
 #### 원격 필터링
-[`onDataPreLoad`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#ondatapreload) 및 [`onFilteringDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onfilteringdone) 출력에 서브스크라이브하여 @@igComponent의 원격 필터링을 제공할 수 있습니다. 사용 방법에 대한 자세한 정보는 `그리드 가상화 및 성능` [문서](virtualization.md#remote-sortingfiltering-virtualization)를 참조하십시오.
+[`dataPreLoad`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#datapreload) 및 [`onFilteringDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onfilteringdone) 출력에 서브스크라이브하여 @@igComponent의 원격 필터링을 제공할 수 있습니다. 사용 방법에 대한 자세한 정보는 `그리드 가상화 및 성능` [문서](virtualization.md#remote-sortingfiltering-virtualization)를 참조하십시오.
 
 <div class="divider--half"></div>
 }

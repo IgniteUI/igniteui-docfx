@@ -103,7 +103,7 @@ export class AppModule {}
     <igx-column [field]="'HireDate'" dataType="date"></igx-column>
     <igx-column [field]="'OnPTO'" dataType="boolean" width="130px">
         <ng-template igxCell let-cell="cell" let-val>
-            <igx-icon [color]="cell.row.rowData.OnPTO? 'red': 'green'">account_circle</igx-icon>
+            <igx-icon [color]="cell.row.data.OnPTO? 'red': 'green'">account_circle</igx-icon>
         </ng-template>
     </igx-column>
     <igx-column [field]="'Age'" dataType="number"></igx-column>
@@ -251,7 +251,7 @@ export class AppModule {}
 行追加 UI は `IgxActionStrip` 編集操作のボタン、編集エディター、オーバーレイ、エンドユーザーが新しく追加された行にスクロールできるスナックバーが構成されます。これらのコンポーネントのスタイル設定には、それぞれのトピックのガイドを参照してください。
 
 - [@@igComponent 行追加](row-editing.md#スタイル設定)
-- [IgxSnackbar](../snackbar.html#スタイル設定)
+- [IgxSnackbar](../snackbar.md#スタイル設定)
 - [IgxActionStrip](../action-strip.md#スタイル設定)
 
 ## API リファレンス

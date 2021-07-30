@@ -46,7 +46,7 @@ In order to display the toast component, use its [`open()`]({environment:angular
 <!--sample.component.html-->
 
 <button igxButton="raised" (click)="toast.open()">Show notification</button>
-<igx-toast #toast >Notification displayed</igx-toast>
+<igx-toast #toast>Notification displayed</igx-toast>
 ```
 
 Another way to set the toast content is to directly pass the message as a parameter to the [`open()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#open) method.
@@ -55,7 +55,7 @@ Another way to set the toast content is to directly pass the message as a parame
 <!--sample.component.html-->
 
 <button igxButton="raised" (click)="toast.open('Notification displayed')">Show notification</button>
-<igx-toast #toast ></igx-toast>
+<igx-toast #toast></igx-toast>
 ```
 
 The [`open()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#open) method can also be used in the AppComponent file to manage the value of the message.
@@ -75,6 +75,9 @@ public showMessage() {
 }
 ```
 
+> [!WARNING]
+> The igx-toast component `show` and `hide` methods have been deprecated. `open` and `close` should be used instead.
+
 ## Examples
 
 ### Hide/Auto Hide
@@ -85,18 +88,16 @@ Once opened, the toast disappears after a period specified by the [`displayTime`
 
 <button igxButton="raised" (click)="toast.open()">Show Toast</button>
 <button igxButton="raised" (click)="toast.close()">Hide Toast</button>
-<igx-toast #toast message="Notification displayed" [autoHide]="false"></igx-toast>
+<igx-toast #toast [autoHide]="false">Notification displayed</igx-toast>
 ```
 
 If the sample is configured properly, the toast will appear when the *Show button* is clicked. For the first component auto-hide feature is disabled and the toast will disappear on 'Hide' button click.
 In the other two components you can see in action how to pass different messages through the [`open()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#open) method and use content projection.
 
-
 <code-view style="height: 450px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/notifications/toast-sample-3" >
 </code-view>
-
 
 ### Display Time
 Use [`displayTime`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#displaytime) and set it to an interval in milliseconds to configure how long the toast component is visible.
@@ -105,7 +106,7 @@ Use [`displayTime`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#d
 <!--sample.component.html-->
 
 <button igxButton="raised" (click)="toast.open()">Show notification</button>
-<igx-toast #toast message="Notification displayed" displayTime="1000"></igx-toast>
+<igx-toast #toast displayTime="1000">Notification displayed</igx-toast>
 ```
 
 If the sample is configured properly, the toast auto hides faster.
@@ -119,35 +120,52 @@ Use [`position`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#posi
 
 ```html
 <!--sample.component.html-->
-
 <div>
-    <button igxButton="raised" (click)="show(toast)">Show notification on top</button>
-    <igx-toast #toast message="Notification displayed" [position]="toastPosition"></igx-toast>
+    <button igxButton="raised" (click)="open(toast)">Show notification on top</button>
+    <igx-toast #toast [position]="toastPosition">Notification displayed</igx-toast>
 </div>
-
 ```
 
 ```typescript
 // sample.component.ts
-
 import { IgxToastPosition } from 'igniteui-angular';
-
 ...
 public toastPosition: IgxToastPosition;
-public show(toast) {
+public open(toast) {
     this.toastPosition = "top";
-    toast.show();
+    toast.open();
 }
 ...
-
 ```
-
 
 <code-view style="height: 300px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/notifications/toast-sample-5" >
 </code-view>
 
+### Overlay Settings
+The [`IgxToastComponent`]({environment:angularApiUrl}/classes/igxtoastcomponent.html) uses [Overlay Settings]({environment:angularApiUrl}/interfaces/overlaysettings.html) to control the position of its container. The default settings can be changed by defining Custom OverlaySettings and passing them to the toast `open()` method:
+
+```typescript
+public customSettings: OverlaySettings = {
+    positionStrategy: new GlobalPositionStrategy(
+        { 
+            horizontalDirection: HorizontalAlignment.Left,
+            verticalDirection: VerticalAlignment.Top
+        }),
+    modal: true,
+    closeOnOutsideClick: true,
+};
+
+toast.open(customSettings);
+```
+
+Users can also provide a specific outlet where the toast will be placed in the DOM when it is visible:
+
+```html
+<igx-toast [outlet]="igxBodyOverlayOutlet"></igx-toast>
+<div #igxBodyOverlayOutlet igxOverlayOutlet></div>
+```
 
 <div class="divider--half"></div>
 
@@ -181,7 +199,7 @@ The last step is to pass the custom toast theme:
 
 In order to style components for older browsers, like Internet Explorer 11, we have to use a different approach, since it doesn't support CSS variables.
 
-If the component is using the [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`. To prevent the custom theme to leak into other components, be sure to include the `:host` selector before `::ng-deep`:
+If the component is using the [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`. To prevent the custom theme to leak into other components, be sure to include the `:host` selector before `::ng-deep`:
 
 ```scss
 :host {
@@ -216,11 +234,11 @@ $custom-toast-theme: igx-toast-theme(
 ```
 
 >[!NOTE]
->The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to the [`Palettes`](themes/palette.md) topic for detailed guidance on how to use them.
+>The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to the [`Palettes`](themes/palettes.md) topic for detailed guidance on how to use them.
 
 ### Using schemas
 
-You can build a robust and flexible structure that benefits from [**schemas**](themes/schemas.md). A **schema** is a recipe of a theme.
+You can build a robust and flexible structure that benefits from [**schemas**](themes/sass/schemas.md). A **schema** is a recipe of a theme.
 
 Extend one of the two predefined schemas, that are provided for every component, in this case - [`light-toast`]({environment:sassApiUrl}/index.html#variable-_light-toast) schema:
 
@@ -255,7 +273,6 @@ $custom-toast-theme: igx-toast-theme(
 ```
 
 Don't forget to include the themes in the same way as it was demonstrated above.
-
 
 <code-view style="height: 600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 

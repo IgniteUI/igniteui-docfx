@@ -90,8 +90,7 @@ Excel 내보내기 서비스는 [**IgxGrid**](grid/grid.md)에서 MS Excel 형�
 // component.ts
 
 ...
-import { IgxExcelExporterService, IgxExcelExporterOptions } from "igniteui-angular/services/index";
-import { IgxGridComponent } from "igniteui-angular/grid/grid.component";
+import { IgxCsvExporterService, IgxCsvExporterOptions, CsvFileTypes, IgxGridComponent } from 'igniteui-angular';
 ...
 
 @ViewChild("igxGrid1") public igxGrid1: IgxGridComponent;

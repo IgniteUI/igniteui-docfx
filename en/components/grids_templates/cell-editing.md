@@ -114,7 +114,7 @@ You can also modify the cell value through the @@igxName API but only if primary
 ```
 }
 
-Another way to update cell is directly through [`update`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html#update) method of [`IgxGridCellComponent`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html):
+Another way to update cell is directly through [`update`]({environment:angularApiUrl}/classes/igxgridcell.html#update) method of [`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html):
 
 @@if (igxName === 'IgxGrid') {
 ```typescript
@@ -153,13 +153,11 @@ Another way to update cell is directly through [`update`]({environment:angularAp
 ```
 }
 
-Please notice that if the cell you want to update, via reference to [`IgxGridCellComponent`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html), is outside @@igComponent's display container the new value will not be submitted.
-
 ### Cell Editing Templates
 
 You can see and learn more for default cell editing templates in the [general editing topic](editing.md#editing-templates).
 
-If you want to provide a custom template which will be applied when a cell is in edit mode, you can make use of the [`igxCellEditor` directive]({environment:angularApiUrl}/classes/igxcelltemplatedirective.html). To do this, you need to pass an `ng-template` marked with the `igxCellEditor` directive and properly bind your custom control to the [`cell.editValue`]({environment:angularApiUrl}/classes/igxcellcomponent.html#editvalue):
+If you want to provide a custom template which will be applied when a cell is in edit mode, you can make use of the [`igxCellEditor` directive]({environment:angularApiUrl}/classes/igxcelltemplatedirective.html). To do this, you need to pass an `ng-template` marked with the `igxCellEditor` directive and properly bind your custom control to the [`cell.editValue`]({environment:angularApiUrl}/classes/igxgridcell.html#editvalue):
 
 ```html
 <igx-column field="class" header="Class" [editable]="true">
@@ -183,7 +181,7 @@ This code is used in the sample below which implements an [`IgxSelectComponent`]
 <div class="divider--half"></div>
 
 > [!NOTE]
-> Any changes made to the cell's [`editValue`]({environment:angularApiUrl}/classes/igxcellcomponent.html#editvalue) in edit mode, will trigger the appropriate [editing event](#editing-events) on exit and apply to the [transaction state](batch-editing.md) (if transactions are enabled).
+> Any changes made to the cell's [`editValue`]({environment:angularApiUrl}/classes/igxgridcell.html#editvalue) in edit mode, will trigger the appropriate [editing event](editing.md#event-arguments-and-sequence) on exit and apply to the [transaction state](batch-editing.md) (if transactions are enabled).
 
 > [!NOTE]
 > The cell template [`igxCell`](../grid/grid.md#cell-template) controls how a column's cells are shown when outside of edit mode.
@@ -193,7 +191,7 @@ This code is used in the sample below which implements an [`IgxSelectComponent`]
 >By using `igxCellEditor` with any type of editor component, the keyboard navigation flow will be disrupted. The same applies to direct editing of the custom cell that enters edit mode. This is because the `focus` will remain on the `cell element`, not on the editor component that we've added - [`igxSelect`](../select.md), [`igxCombo`](../combo.md), etc. This is why we should take leverage of the `igxFocus` directive, which will move the focus directly in the in-cell component and will preserve `a fluent editing flow` of the cell/row.
 
 
-For more information on how to configure columns and their templates, you can see the documentation for [Grid Columns configuration](grid.md#columns-configuration).
+For more information on how to configure columns and their templates, you can see the documentation for [Grid Columns configuration](../grid/grid.md#angular-grid-column-configuration).
 
 ## CRUD operations
 
@@ -442,11 +440,11 @@ The result of the above validation being applied to our `@@igSelector` can be se
 
 ## Styling
 
-The @@igxName allows for its cells to be styled through the [Ignite UI for Angular Theme Library](../themes/component-themes.md). The grid's [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) exposes a wide range of properties, which allow users to style many different aspects of the grid.
+The @@igxName allows for its cells to be styled through the [Ignite UI for Angular Theme Library](../themes/sass/component-themes.md). The grid's [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) exposes a wide range of properties, which allow users to style many different aspects of the grid.
 
 In the below steps, we are going to go over how you can style the grid's cell in edit mode and how you can scope those styles.
 
-In order to use the [Ignite UI Theming Library](../themes/component-themes.md), we must first import the theme `index` file in our global styles:
+In order to use the [Ignite UI Theming Library](../themes/sass/component-themes.md), we must first import the theme `index` file in our global styles:
 
 ### Importing style library
 
@@ -458,7 +456,7 @@ Now we can make use of all of the functions exposed by the Ignite UI for Angular
 
 ### Defining a palette
 
-After we've properly imported the index file, we create a custom palette that we can use. Let's define two colors that we like and use them to build a palette with [`igx-palette`](../themes/palette.md):
+After we've properly imported the index file, we create a custom palette that we can use. Let's define two colors that we like and use them to build a palette with [`igx-palette`](../themes/palettes.md):
 
 ```scss
 $white: #fff;
@@ -497,7 +495,7 @@ In order for the custom theme to affect only our specific component, we can move
 This way, due to Angular's [`ViewEncapsulation`](https://angular.io/api/core/Component#encapsulation), our styles will be applied only to our custom component.
 
  >[!NOTE]
- >If the component is using an [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to penetrate this encapsulation using `::ng-deep` in order to style the grid.
+ >If the component is using an [`Emulated`](../themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to penetrate this encapsulation using `::ng-deep` in order to style the grid.
  >[!NOTE]
  >We wrap the statement inside of a `:host` selector to prevent our styles from affecting elements *outside of* our component:
 
@@ -538,13 +536,16 @@ In addition to the steps above, we can also style the controls that are used for
 </code-view>
 
 }
+
+>[!NOTE]
+>The sample will not be affected by the selected global theme from `Change Theme`.
 <div class="divider--half"></div>
 
 ## API References
 
-* [IgxGridCellComponent]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
+* [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
 * [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
-@@if (igxName !== 'IgxTreeGrid') {* [IgxGridRowComponent]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRowComponent]({environment:angularApiUrl}/classes/igxtreegridrowcomponent.html)}
+@@if (igxName !== 'IgxTreeGrid') {* [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)}
 * [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
 * [IgxDatePickerComponent]({environment:angularApiUrl}/classes/igxdatepickercomponent.html)
 * [IgxDatePickerComponent Styles]({environment:sassApiUrl}/index.html#function-igx-date-picker-theme)

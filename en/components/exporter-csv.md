@@ -7,7 +7,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 # CSV Exporter
 
 <p class="highlight">
-The IgniteUI CSV Exporter service can export data in a Character Separated Values format from both raw data (array) or from an [**IgxGrid**](grid/grid.md).
+The IgniteUI CSV Exporter service can export data in a Character Separated Values format from both raw data (array) or from an [**IgxGrid**](grid/grid.md), [**IgxHierarchicalGrid**](hierarchicalgrid/hierarchical-grid.md) and [**IgxTreeGrid**](treegrid/tree-grid.md).
 The exporting functionality is encapsulated in the [`IgxCsvExporterService`]({environment:angularApiUrl}/classes/igxcsvexporterservice.html) class.</p>
 <div class="divider"></div>
 
@@ -35,8 +35,6 @@ import { IgxCsvExporterService } from "igniteui-angular/services/index";
 
 export class AppModule {}
 ```
-
-> Note: The CSV Exporter service has a peer dependency on the JSZip library. The JSZip library should be installed when using the CSV Exporter.
 
 To initiate an export process you may use the handler of a button in your component's template.
 
@@ -89,8 +87,7 @@ Here is an example:
 // component.ts
 
 ...
-import { IgxCsvExporterService, IgxCsvExporterOptions, CsvFileTypes } from "igniteui-angular/services/index";
-import { IgxGridComponent } from "igniteui-angular/grid/grid.component";
+import { IgxCsvExporterService, IgxCsvExporterOptions, CsvFileTypes, IgxGridComponent } from 'igniteui-angular';
 ...
 
 @ViewChild("igxGrid1") public igxGrid1: IgxGridComponent;

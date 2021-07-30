@@ -24,7 +24,7 @@ WPF では、アプリケーション内で要素をレイアウトするには�
 </StackPanel>
 ```
 
-<img src="../../../images/general/wpf_stackpanel.png" />
+<img class="responsive-img" src="../../../images/general/wpf_stackpanel.png" />
 
 Angular で同様のレイアウトを実現する場合は、CSS Flexbox レイアウトを使用できます。フレキシブル ボックス レイアウト モジュールは、柔軟でレスポンシブなレイアウト構造の設計が可能な構造になっています。Flexbox レイアウトを使用するには、[`display`](https://www.w3schools.com/cssref/pr_class_display.asp) プロパティを `flex` に設定したコンテナを定義する必要があります。また、アイテムを垂直に積み重ねるために、[`flex-direction`](https://www.w3schools.com/cssref/css3_pr_flex-direction.asp) プロパティを `column` に設定する必要があります。
 
@@ -47,7 +47,7 @@ Angular で同様のレイアウトを実現する場合は、CSS Flexbox レイ
 
 ブラウザでの最終結果は次のとおりです。
 
-<img src="../../../images/general/angular_stackpanel.png" />
+<img class="responsive-img" src="../../../images/general/angular_stackpanel.png" />
 
 [`flex-direction`](https://www.w3schools.com/cssref/css3_pr_flex-direction.asp) プロパティのデフォルト値は `row` です。これは、WPF の水平方向の StackPanel と同等です。フレックス ボックスは、アイテムを右から左、下から上にそれぞれ積み重ねる `row-reverse` と `column-reverse` 方向もサポートしています。
 
@@ -70,7 +70,7 @@ Angular で同様のレイアウトを実現する場合は、CSS Flexbox レイ
 </WrapPanel>
 ```
 
-<img src="../../../images/general/wpf_wrappanel.png" />
+<img class="responsive-img" src="../../../images/general/wpf_wrappanel.png" />
 
 Angular で同様の結果を得るために、Flexbox レイアウトを再び使用します。StackPanelの場合と同様に、[`display`](https://www.w3schools.com/cssref/pr_class_display.asp) プロパティを `flex` に設定する必要がありますが、[`flex-wrap`](https://www.w3schools.com/cssref/css3_pr_flex-wrap.asp) プロパティを `wrap` に設定する必要もあります。
 
@@ -97,7 +97,7 @@ button {
 
 以下は、ブラウザーでの最終結果です。
 
-<img src="../../../images/general/angular_wrappanel.png" />
+<img class="responsive-img" src="../../../images/general/angular_wrappanel.png" />
 
 Orientation="Vertical" の WrapPane と同様の結果を得るには、[`flex-direction`](https://www.w3schools.com/cssref/css3_pr_flex-direction.asp) プロパティを `column` に設定する必要があります。[`flex-flow`](https://www.w3schools.com/cssref/css3_pr_flex-flow.asp) プロパティは、`flex-direction` プロパティと `flex-wrap` プロパティの両方を設定するための略記プロパティです。 
 
@@ -137,7 +137,7 @@ Orientation="Vertical" の WrapPane と同様の結果を得るには、[`flex-d
 </Grid>
 ```
 
-<img src="../../../images/general/wpf_grid.png" />
+<img class="responsive-img" src="../../../images/general/wpf_grid.png" />
 
 Angular では、CSS グリッド レイアウト モジュールを使用できます。CSS グリッド レイアウト モジュールは、行と列を持つグリッド ベースのレイアウト システムを提供します。グリッド レイアウトを使用するには、`grid` または `inline-grid` に設定された [`display`](https://www.w3schools.com/cssref/pr_class_display.asp) プロパティを持つコンテナを定義します。
 
@@ -192,7 +192,7 @@ width `auto` を使用して 3 つの列を定義すると、同じ幅になり�
 
 アプリケーションを開くと、以下のようになります。
 
-<img src="../../../images/general/angular_grid.png" />
+<img class="responsive-img" src="../../../images/general/angular_grid.png" />
 
 WPF グリッドと CSS グリッドの重要な違いが 1 つあります。WPF では、Grid.Row および Grid.Column のデフォルト値は 0 ですが、CSS グリッド レイアウトは、次に使用可能な行と列をその子に自動的に割り当てます。
 
@@ -230,7 +230,7 @@ WPF グリッドと CSS グリッドの重要な違いが 1 つあります。WP
 }
 ```
 
-<img src="../../../images/general/angular_grid_span.png" />
+<img class="responsive-img" src="../../../images/general/angular_grid_span.png" />
 
 `grid-row` および `grid-column` プロパティは、[`grid-row-start`](https://www.w3schools.com/cssref/pr_grid-row-start.asp)、[`grid-row-end`](https://www.w3schools.com/cssref/pr_grid-row-end.asp)、[`grid-column-start`](https://www.w3schools.com/cssref/pr_grid-column-start.asp)、[`grid-column-end`](https://www.w3schools.com/cssref/pr_grid-column-end.asp) プロパティの略記プロパティです。CSS グリッド コンテナと項目プロパティの詳細については、**その他のリソース**セクションのチュートリアルをご覧ください。
 

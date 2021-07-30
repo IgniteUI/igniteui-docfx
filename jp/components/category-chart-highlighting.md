@@ -1,6 +1,6 @@
 ---
 title: Angular チャートおよびグラフ | データ可視化ツール | 強調表示 | インフラジスティックス
-_description: インフラジスティックスの Angular チャート コントロールを使用すると、グラフの領域を強調表示できます。$Product Name$ 強調表示機能について説明します。
+_description: インフラジスティックスの Angular チャート コントロールを使用すると、グラフの領域を強調表示できます。Ignite UI for Angular 強調表示機能について説明します。
 _keywords: Angular charts, category chart, Highlight Layers, Highlighting, Ignite UI for Angular, Infragistics, Angular チャート, カテゴリ チャート, 強調表示レイヤー, 強調表示, インフラジスティックス
 mentionedTypes: ['CategoryChart']
 _language: ja
@@ -12,15 +12,13 @@ Ignite UI for Angular カテゴリ チャート コンポネントには、ハ�
 
 ## Angular ハイライトの例
 
-<div class="sample-container loading" style="height: 500px">
-    <iframe id="category-chart-highlighting-iframe" src='{environment:dvDemosBaseUrl}/charts/category-chart-highlighting' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular ハイライトの例"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="category-chart-highlighting-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
-    </button>
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-highlighting"
+           alt="Angular ハイライトの例"
+           github-src="charts/category-chart/highlighting">
+</code-view>
 
-
-</div>
 <div class="divider--half"></div>
 
 ## Ignite UI for Angular レイヤーのハイライト

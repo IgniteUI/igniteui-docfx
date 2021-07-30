@@ -11,8 +11,8 @@ Input groups in the Ignite UI for Angular controls allow developers to create ea
 
 ### Input Group Demo
 
-<code-view style="height:800px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:800px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/input-group-sample-6" >
 </code-view>
 
@@ -91,8 +91,8 @@ This is how the phone field with hint looks:
 Our inputs could be styled differently by using the [`type`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html#type) property of the [`igxInputGroup`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) component. Currently we support four different ways of styling: line (the default one), box, border and search. This is how they look:
 
 
-<code-view style="height:520px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:695px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/input-group-sample-5" >
 </code-view>
 
@@ -106,7 +106,7 @@ Our inputs could be styled differently by using the [`type`]({environment:angula
 ### Additional Resources
 Related topics:
 
-* [Reactive Forms Integration](input-group-reactive-forms.md)
+* [Reactive Forms Integration](angular-reactive-form-validation.md)
 * [Label & Input](label-input.md)
 * [Combo](combo.md)
 * [Select](select.md)

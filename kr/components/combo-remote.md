@@ -12,10 +12,10 @@ The [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) expo
 <div class="divider"></div>
 
 ### Demo
-The sample below demonstrates remote binding using combo API - defining [valueKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#valuekey) and [displayKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#displaykey), and using [onDataPreLoad]({environment:angularApiUrl}/classes/igxcombocomponent.html#ondatapreload) to load new chunk of remote data:
+The sample below demonstrates remote binding using combo API - defining [valueKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#valuekey) and [displayKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#displaykey), and using [dataPreLoad]({environment:angularApiUrl}/classes/igxcombocomponent.html#datapreload) to load new chunk of remote data:
 
-<code-view style="height: 400px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 400px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/combo-remote" >
 </code-view>
 
@@ -67,12 +67,12 @@ export class RemoteService {
 When the data is returned from the service as an observable, then we can set it to the [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) using the [`async`](https://angular.io/api/common/AsyncPipe) pipe:
 
 ```html
-<igx-combo [data]="rData | async" [valueKey]="'ProductID'" [displayKey]="'ProductName'" 
-    (onDataPreLoad)="dataLoading($event)" (onSearchInput)="searchInput($event)" (onOpening)="searchInput('')"></igx-combo>
+<igx-combo [data]="rData | async" [valueKey]="'ProductID'" [displayKey]="'ProductName'"
+    (dataPreLoad)="dataLoading($event)" (searchInputUpdate)="searchInput($event)" (opening)="searchInput('')"></igx-combo>
 ```
 Let's define the cases, when the [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) will need to request new data:
     - when combo is initialized
-    - when we scroll combo's list. Then combo will emit [onDataPreLoad]({environment:angularApiUrl}/classes/igxcombocomponent.html#ondatapreload) along with the new combo `virtualizationState`, which allows to make a new request to the remote service.
+    - when we scroll combo's list. Then combo will emit [dataPreLoad]({environment:angularApiUrl}/classes/igxcombocomponent.html#datapreload) along with the new combo `virtualizationState`, which allows to make a new request to the remote service.
     - when we search in the [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) then we need to make request to filter remote results.
     - when combo is opened we need to clear results from any previous filter operations.
 
@@ -138,7 +138,7 @@ export class ComboRemoteComponent implements OnInit {
 * [Combo Features](combo-features.md)
 * [Combo Templates](combo-templates.md)
 * [Template Driven Forms Integration](input-group.md)
-* [Reactive Forms Integration](input-group-reactive-forms.md)
+* [Reactive Forms Integration](angular-reactive-form-validation.md)
 * [Cascading Scenario](combo-cascading.md)
 
 Our community is active and always welcoming to new ideas.

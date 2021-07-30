@@ -9,16 +9,14 @@ mentionedTypes: ['ZoomSlider, XamDataChart']
 
 The Angular ZoomSlider control provides zooming functionality to range-enabled controls. The ZoomSlider features a horizontal scroll bar, a thumbnail of the whole range, and a resizable zoom-range window. The ZoomSlider cannot work as a standalone control and it acts as an enhancement for range-based controls like the DataChart or CategoryChart.
 
-## Angular Zoom Slider Overview Example
+## Angular Zoom Slider Example
 
-<div class="sample-container loading" style="height: 600px">
-    <iframe id="zoomslider-overview-iframe" src='{environment:dvDemosBaseUrl}/charts/zoomslider-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular Zoom Slider Overview Example"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn"   data-iframe-id="zoomslider-overview-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">View on StackBlitz
-    </button>
-</div>
-
+<code-view style="height: 600px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/zoomslider-overview"
+           alt="Angular Zoom Slider Example"
+           github-src="charts/zoomslider/overview">
+</code-view>
 
 <div class="divider--half"></div>
 

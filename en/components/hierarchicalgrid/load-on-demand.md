@@ -43,9 +43,10 @@ As you can see `this.http` will be a reference to our `HttpCLient` module, and `
 
 #### Building our request url
 
-Next we will define how we should build our URL for the GET request. This is where we will be able to get the data for our main grid but also for any child grid inside it. We will use the `Customers` data from `https://services.odata.org/V4/Northwind/Northwind.svc/` for our root level and use `Order` and `Order_Details` for the lower levels. The model will differ per application but we will use the following one:
+Next we will define how we should build our URL for the GET request. This is where we will be able to get the data for our main grid but also for any child grid inside it. We will use the `Customers` data from [here](https://services.odata.org/V4/Northwind/Northwind.svc/) for our root level and use `Order` and `Order_Details` for the lower levels. The model will differ per application but we will use the following one:
 
-![Dragging](../../images/hgrid-database.jpg)
+<img class="responsive-img" src="../../images/hgrid-database.jpg" />
+
 
  What we first need is the `key` of our table to determine from where to get the data for the desired grid, the primary key of the parent row and its unique ID. We will define all this in an interface called `IDataState`. An example:
 

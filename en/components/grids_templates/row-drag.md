@@ -188,7 +188,7 @@ Next, we have to define what should happen when the user actually *drops* the ro
 export class @@igxNameRowDragComponent {
     ...
     public onDropAllowed(args: IDropDroppedEventArgs) {
-        const draggedRow: @@igxNameGridRowComponent = args.dragData;
+        const draggedRow: RowType = args.dragData;
         draggedRow.delete();
     }
 
@@ -205,8 +205,8 @@ export class @@igxNameRowDragComponent {
     @ViewChild("targetGrid", { read: IgxGridComponent }) public targetGrid: IgxGridComponent;
     ... 
     public onDropAllowed(args) {
-        this.targetGrid.addRow(args.dragData.rowData);
-        this.sourceGrid.deleteRow(args.dragData.rowID);
+        this.targetGrid.addRow(args.dragData.data);
+        this.sourceGrid.deleteRow(args.dragData.key);
     }
     ...
 }
@@ -218,7 +218,7 @@ We define a reference to each of our grids via the `ViewChild` decorator and the
 }
 
 > [!NOTE]
-> When using row data from the event arguments (`args.dragData.rowData`) or any other row property, note that the entire row is passed in the arguments as a reference, which means that you must clone the data you need, if you want to distinguish it from the one in the source grid.
+> When using row data from the event arguments (`args.dragData.data`) or any other row property, note that the entire row is passed in the arguments as a reference, which means that you must clone the data you need, if you want to distinguish it from the one in the source grid.
 
 ### Templating the drag ghost
 The drag ghost can be templated using the `IgxRowDragGhost` directive, applied to a `<ng-template>` inside of the `@@igSelector`'s body:
@@ -448,8 +448,8 @@ export class GridRowReorderComponent {
         const currRowIndex = this.getCurrentRowIndex(this.grid.rowList.toArray(),
             { x: event.clientX, y: event.clientY });
         if (currRowIndex === -1) { return; }
-        this.grid.deleteRow(args.dragData.rowID);
-        this.data.splice(currRowIndex, 0, args.dragData.rowData);
+        this.grid.deleteRow(args.dragData.key);
+        this.data.splice(currRowIndex, 0, args.dragData.data);
     }
 
     private getCurrentRowIndex(rowList, cursorPosition) {
@@ -457,7 +457,7 @@ export class GridRowReorderComponent {
             const rowRect = row.nativeElement.getBoundingClientRect();
             if (cursorPosition.y > rowRect.top + window.scrollY && cursorPosition.y < rowRect.bottom + window.scrollY &&
                 cursorPosition.x > rowRect.left + window.scrollX && cursorPosition.x < rowRect.right + window.scrollX) {
-                return this.data.indexOf(this.data.find((r) => r.ID === row.rowData.ID));
+                return this.data.indexOf(this.data.find((r) => r.rowID === row.rowID));
             }
         }
 
@@ -471,35 +471,35 @@ export class GridRowReorderComponent {
     export class TreeGridRowReorderComponent {
     ...
     public rowDragStart(args: any): void {
-        const targetRow: IgxTreeGridRowComponent = args.dragData;
+        const targetRow = args.dragData;
         if (targetRow.expanded) {
-            this.treeGrid.collapseRow(targetRow.rowID);
+            this.treeGrid.collapseRow(targetrow.key);
         }
     }
 
     public dropInGrid(args: IDropDroppedEventArgs): void {
-        const draggedRow: IgxTreeGridRowComponent = args.dragData;
+        const draggedRow = args.dragData;
         const event = args.originalEvent;
         const cursorPosition: Point = { x: event.clientX, y: event.clientY };
         this.moveRow(draggedRow, cursorPosition);
     }
 
-    private moveRow(draggedRow: IgxTreeGridRowComponent, cursorPosition: Point): void {
-        const row: IgxTreeGridRowComponent = this.catchCursorPosOnElem(this.treeGrid.rowList.toArray(), cursorPosition);
+    private moveRow(draggedRow: RowType, cursorPosition: Point): void {
+        const row = this.catchCursorPosOnElem(this.treeGrid.rowList.toArray(), cursorPosition);
         if (!row) { return; }
-        if (row.rowData.ParentID === -1) {
+        if (row.data.ParentID === -1) {
             this.performDrop(draggedRow, row).ParentID = -1;
         } else {
-            if (row.rowData.ParentID === draggedRow.rowData.ParentID) {
+            if (row.data.ParentID === draggedrow.data.ParentID) {
                 this.performDrop(draggedRow, row);
             } else {
-                const rowIndex = this.getRowIndex(draggedRow.rowData);
-                this.localData[rowIndex].ParentID = row.rowData.ParentID;
+                const rowIndex = this.getRowIndex(draggedrow.data);
+                this.localData[rowIndex].ParentID = row.data.ParentID;
             }
         }
         if (draggedRow.selected) {
             this.treeGrid.selectRows([this.treeGrid.rowList.toArray()
-                .find((r) => r.rowData.ID === draggedRow.rowData.ID).rowID], false);
+                .find((r) => r.rowID === draggedrow.key).rowID], false);
         }
 
         this.localData = [...this.localData];
@@ -507,11 +507,11 @@ export class GridRowReorderComponent {
 
     private performDrop(
         draggedRow: IgxTreeGridRowComponent, targetRow: IgxTreeGridRowComponent) {
-        const draggedRowIndex = this.getRowIndex(draggedRow.rowData);
-        const targetRowIndex: number = this.getRowIndex(targetRow.rowData);
+        const draggedRowIndex = this.getRowIndex(draggedrow.data);
+        const targetRowIndex: number = this.getRowIndex(targetrow.data);
         if (draggedRowIndex === -1 || targetRowIndex === -1) { return; }
         this.localData.splice(draggedRowIndex, 1);
-        this.localData.splice(targetRowIndex, 0, draggedRow.rowData);
+        this.localData.splice(targetRowIndex, 0, draggedrow.data);
         return this.localData[targetRowIndex];
     }
 
@@ -539,9 +539,9 @@ export class GridRowReorderComponent {
     export class HGridRowReorderComponent {
     ...
     public rowDragStart(args: any): void {
-        const targetRow: IgxHierarchicalRowComponent = args.dragData;
+        const targetRow = args.dragData;
         if (targetRow.expanded) {
-            targetRow.toggle();
+            targetRow.expanded = false;
         }
     }
 
@@ -552,24 +552,27 @@ export class GridRowReorderComponent {
         this.moveRow(targetRow, cursorPosition);
     }
 
-    private moveRow(draggedRow: IgxHierarchicalRowComponent, cursorPosition: Point): void {
-        const parent: IgxHierarchicalGridComponent = draggedRow.grid;
+    private moveRow(draggedRow: RowType, cursorPosition: Point): void {
+        // const parent: IgxHierarchicalGridComponent = (draggedRow as any).grid;
+        // const parent = args.drag.ghostContext.grid;
+        const parent = this.hGrid;
         const rowIndex: number = this.getTargetRowIndex(parent.rowList.toArray(), cursorPosition);
         if (rowIndex === -1) { return; }
+        const wasSelected = draggedRow.selected;
         draggedRow.delete();
-        parent.data.splice(rowIndex, 0, draggedRow.rowData);
-        if (draggedRow.selected) {
+        parent.data.splice(rowIndex, 0, draggedRow.data);
+        if (wasSelected) {
             parent.selectRows([parent.rowList.toArray()
-                .find((r) => r.rowData.id === draggedRow.rowData.id).rowID], false);
+                .find((r) => r.rowID === draggedRow.key).rowID], false);
         }
     }
 
-    private getTargetRowIndex(rowListArr: IgxHierarchicalRowComponent[], cursorPosition: Point): number {
+    private getTargetRowIndex(rowListArr: RowType[], cursorPosition: Point): number {
         const targetElem: IgxHierarchicalRowComponent = this.catchCursorPosOnElem(rowListArr, cursorPosition);
         return rowListArr.indexOf(rowListArr.find((r) => r.rowData.id === targetElem.rowData.id));
     }
 
-    private catchCursorPosOnElem(rowListArr: IgxHierarchicalRowComponent[], cursorPosition: Point)
+    private catchCursorPosOnElem(rowListArr: any[], cursorPosition: Point)
         : IgxHierarchicalRowComponent {
         for (const row of rowListArr) {
             const rowRect = row.nativeElement.getBoundingClientRect();
@@ -613,6 +616,252 @@ Notice that we also have row selection enabled and we preserve the selection whe
 </code-view>
 
 }
+<div class="divider--half"></div>
+
+@@if (igxName === 'IgxGrid') {
+### Improving UX in row drag scenarios
+
+Being able to obtain the row index which is currently below the cursor provides you with the opportunity to build rich custom functionalities and to improve the UX of your application. For example, you can change the drag ghost or display a drop indicator, based on the position of the dragged row over the grid. Another useful behavior that you can achieve that way is to scroll the grid up or down while dragging a row, when reaching the border of the grid.
+
+Below you can find example snippets of a couple of custom implementations you can achieve by knowing the row's position.
+
+#### Changing the drag ghost based on cursor position
+In the snippets below you see how you can change the text inside the drag ghost to display the name of the hovered row.
+
+First, you specify a template which you'd like to use for the drag ghost. The `dropName` property will dynamically change, getting the name of the row over which the cursor is hovering:
+
+```html
+<ng-template igxRowDragGhost>
+    <div class="customGhost">
+        <div>{{ dropName }}</div>
+    </div>
+</ng-template>
+```
+
+Then, define a method that returns the instance of the row you're over (similar to the one used in the [row reordering demo](#row-reordering-demo)):
+
+```typescript
+class MyRowGhostComponent {
+    ...
+    private getRowDataAtPoint(rowList: IgxGridRowComponent[], cursorPosition: Point): any {
+        for (const row of rowList) {
+            const rowRect = row.nativeElement.getBoundingClientRect();
+            if (cursorPosition.y > rowRect.top + window.scrollY && cursorPosition.y < rowRect.bottom + window.scrollY &&
+                cursorPosition.x > rowRect.left + window.scrollX && cursorPosition.x < rowRect.right + window.scrollX) {
+                return this.data.find((r) => r.rowID === row.rowID);
+            }
+        }
+        return null;
+    }
+}
+```
+
+Finally, we create a method that will be used to handle the [`IgxDragDirective.dragMove`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragmove) event (emitted for the dragged row). The method will change the value of the property used in the `igxRowDragGhost` template and force a rerender.
+We want to subscribe to the `dragMove` event only of the specific row we're dragging and unsub from it (to prevent memory leaks) each time a row is dropped.
+
+```typescript
+class MyRowGhostComponent {
+    ...
+    public ngAfterViewInit(): void {
+        this.grid.onRowDragStart.pipe(takeUntil(this.destroy$)).subscribe(this.onRowDragStart.bind(this));
+    }
+    ...
+    private onRowDragStart(e: IRowDragStartEventArgs) {
+        if (e !== null) {
+            this._draggedRow = e.dragData.rowData;
+        }
+        const directive = e.dragDirective;
+        directive.dragMove
+            .pipe(takeUntil(this.grid.onRowDragEnd))
+            .subscribe(this.onDragMove.bind(this));
+    }
+    ...
+    private onDragMove(args: IDragMoveEventArgs) {
+        const cursorPosition = this.getCursorPosition(args.originalEvent);
+        const hoveredRowData = this.getRowDataAtPoint(
+            this.grid.rowList.toArray(),
+            cursorPosition
+        );
+        if (!hoveredRowData) {
+            args.cancel = true;
+            return;
+        }
+        const rowID = hoveredRowData.ID;
+        if (rowID !== null) {
+            let newName = this.dropName;
+            if (rowID !== -1) {
+                const targetRow = this.grid.rowList.find((e) => {
+                    return e.rowData.ID === rowID;
+                });
+                newName = targetRow?.rowData.Name;
+            }
+            if (newName !== this.dropName) {
+                this.dropName = newName;
+                args.owner.cdr.detectChanges();
+            }
+        }
+    }
+    
+}
+
+```
+
+#### Displaying a drop indicator based on cursor position
+
+In the demo in the next section you see how you can display an indicator of where the dragged row would be dropped. You can customize this indicator as you like - it may be a placeholder row, placed at the position where the dragged row would be dropped, a border style indicating if the dragged row would be dropped above or below the currently hovered row, etc.
+
+In order to track the position of the cursor, we bind to the `dragMove` event of the [`IgxDragDirective`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragmove) when we start dragging a row.
+
+> [!NOTE]
+> Make sure that there is a `primaryKey` specified for the grid! The logic needs an unique identifier for the rows so they can be properly reordered
+
+```typescript
+public ngAfterViewInit() {
+  this.grid.rowDragStart
+  .pipe(takeUntil(this.destroy$))
+  .subscribe(this.handleRowStart.bind(this));
+     ...
+}
+
+private handleRowStart(e: IRowDragStartEventArgs): void {
+  if (e !== null) {
+    this._draggedRow = e.dragData.data;
+  }
+  const directive = e.dragDirective;
+  directive.dragMove
+  .pipe(takeUntil(this.grid.rowDragEnd))
+  .subscribe(this.handleDragMove.bind(this));
+}
+
+private handleDragMove(event: IDragMoveEventArgs): void {
+  this.handleOver(event);
+    ...
+}
+
+private handleOver(event: IDragMoveEventArgs) {
+  const ghostRect = event.owner.ghostElement.getBoundingClientRect();
+  const rowIndex = this.getRowIndexAtPoint(this.grid.rowList.toArray(), {
+    x: ghostRect.x,
+    y: ghostRect.y
+  });
+  if (rowIndex === -1) {
+    return;
+  }
+  const rowElement = this.grid.rowList.find(
+    e => e.rowData.ID === this.grid.data[rowIndex].ID
+  );
+  if (rowElement) {
+    this.changeHighlightedElement(rowElement.element.nativeElement);
+  }
+}
+
+private clearHighlightElement(): void {
+  if (this.highlightedRow !== undefined) {
+    this.renderer.removeClass(this.highlightedRow, 'underlined-class');
+  }
+}
+
+private setHightlightElement(newElement: HTMLElement) {
+  this.renderer.addClass(newElement, 'underlined-class');
+  this.highlightedRow = newElement;
+}
+
+private changeHighlightedElement(newElement: HTMLElement) {
+  if (newElement !== undefined) {
+    if (newElement !== this.highlightedRow) {
+      this.clearHighlightElement();
+      this.setHightlightElement(newElement);
+    } else {
+      return;
+    }
+  }
+}
+```
+
+
+
+<div class="divider--half"></div>
+
+#### Scrolling the grid on row drag
+
+A very useful scenario is being able to scroll the grid when the dragged row reaches its' top or bottom border. This allows reordering rows outside of the current viewport when the number of rows in the grid requires a scrollbar.
+
+Below you see an example of the two methods we use to check if we have reached the edge of the viewport and to scroll it if needed. The `isGridScrolledToEdge` accepts one parameter - the direction we'd like to scroll the grid (1 for "Down", -1 for "Up") and returns `true` if we've reach the final row in that direction. The `scrollGrid` method will attempt to scroll the grid in a direction (1 or -1), doing nothing if the grid is already at _that_ edge.
+
+```typescript
+class MyGridScrollComponent {
+    ...
+    private isGridScrolledToEdge(dir: 1 | -1): boolean {
+        if (this.grid.data[0] === this.grid.rowList.first.data && dir === -1) {
+            return true;
+        }
+        if (
+            this.grid.data[this.grid.data.length - 1] === this.grid.rowList.last.data &&
+            dir === 1
+        ) {
+            return true;
+        }
+        return false;
+    }
+
+    private scrollGrid(dir: 1 | -1): void {
+        if (!this.isGridScrolledToEdge(dir)) {
+            if (dir === 1) {
+                this.grid.verticalScrollContainer.scrollNext();
+            } else {
+                this.grid.verticalScrollContainer.scrollPrev();
+            }
+        }
+    }
+}
+
+```
+
+We'll still be subscribing to the `dragMove` event of the specific row in the way we did in the previous example. Since `dragMove` is fired only when the cursor actually moves, we want to have a nice and simple way to auto-scroll the grid when the row is at one of the edges, but the user **does not** move the mouse. We'll an additional method which will setup an `interval`, auto-scrolling the grid every `500ms`.
+
+We create and subscribe to the `interval` when the pointer reaches the grid's edge and we `unsubscribe` from that `interval` everytime the mouse moves or the row is dropped (regardless of cursor position).
+
+```typescript
+class MyGridScrollComponent {
+    public ngAfterViewInit() {
+        this.grid.onRowDragStart
+            .pipe(takeUntil(this.destroy$))
+            .subscribe(this.onDragStart.bind(this));
+        this.grid.onRowDragEnd
+            .pipe(takeUntil(this.destroy$))
+            .subscribe(() => this.unsubInterval());
+    }
+    ...
+    private onDragMove(event: IDragMoveEventArgs): void {
+        this.unsubInterval();
+        const dir = this.isPointOnGridEdge(event.pageY);
+        if (!dir) {
+            return;
+        }
+        this.scrollGrid(dir);
+        if (!this.intervalSub) {
+            this.interval$ = interval(500);
+            this.intervalSub = this.interval$.subscribe(() => this.scrollGrid(dir));
+        }
+    }
+    ...
+    private unsubInterval(): void {
+        if (this.intervalSub) {
+            this.intervalSub.unsubscribe();
+            this.intervalSub = null;
+        }
+    }
+}
+```
+
+Following is the example of both scenarios described above - showing a drop indicator and scrolling the viewport when border's edge is reached.
+
+<code-view style="height:830px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/grid/grid-drop-indicator" >
+</code-view>
+}
+
 <div class="divider--half"></div>
 
 ## Limitations

@@ -39,7 +39,7 @@ export class AppModule {}
 
 ### 通知ダイアログ
 
-通知のダイアログを作成するには、メールコンポーネントのテンプレートに以下のコードを追加します。[`title`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#title)、[`message`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#message)、[`leftButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftbuttonlabel) を設定し、[`onLeftButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#onleftbuttonselect) イベントを処理します。 
+通知のダイアログを作成するには、メールコンポーネントのテンプレートに以下のコードを追加します。[`title`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#title)、[`message`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#message)、[`leftButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftbuttonlabel) を設定し、[`leftButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftbuttonselect) イベントを処理します。 
 
 ```html
 <!--email.component.html-->
@@ -49,7 +49,7 @@ export class AppModule {}
     title="Notification"
     message="Your email has been sent successfully!"
     leftButtonLabel="OK"
-    (onLeftButtonSelect)="alert.close()">
+    (leftButtonSelect)="alert.close()">
 </igx-dialog>
 ```
 
@@ -59,7 +59,7 @@ export class AppModule {}
 
 ### 標準ダイアログ
 
-標準のダイアログを作成するには、ファイル マネージャー コンポーネントのテンプレートに以下のコードを追加します。[`title`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#title)、[`message`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#message)、[`leftButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftbuttonlabel)、[`rightButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#rightbuttonlabel) を設定し、[`onLeftButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#onleftbuttonselect) および [`onRightButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#onrightbuttonselect) イベントを処理します。 
+標準のダイアログを作成するには、ファイル マネージャー コンポーネントのテンプレートに以下のコードを追加します。[`title`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#title)、[`message`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#message)、[`leftButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftbuttonlabel)、[`rightButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#rightbuttonlabel) を設定し、[`leftButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftbuttonselect) および [`rightButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#rightbuttonselect) イベントを処理します。 
 
 ```html
 <!--file-manager.component.html-->
@@ -67,9 +67,9 @@ export class AppModule {}
 
 <igx-dialog #dialog title="Confirmation"
     leftButtonLabel="Cancel"
-    (onLeftButtonSelect)="dialog.close()"
+    (leftButtonSelect)="dialog.close()"
     rightButtonLabel="OK"
-    (onRightButtonSelect)="onDialogOKSelected($event)"
+    (rightButtonSelect)="onDialogOKSelected($event)"
     message="Are you sure you want to delete the Microsoft_Annual_Report_2015.pdf and Microsoft_Annual_Report_2015.pdf files?">
 </igx-dialog>
 ```
@@ -227,7 +227,7 @@ $my-dialog-theme: igx-dialog-theme(
 ```
 
 > [!NOTE]
-> [`IgxOverlayService`](overlay.md) を使用して表示される要素にテーマを提供するためのさまざまなオプションの詳細については、[こちら](overlay.md#スタイル設定)をご覧ください。
+> [`IgxOverlayService`](overlay.md) を使用して表示される要素にテーマを提供するためのさまざまなオプションの詳細については、[オーバーレイ スタイリングのトピック](overlay-styling.md)をご覧ください。
 
 ### テーマを含む
 
@@ -241,7 +241,7 @@ $my-dialog-theme: igx-dialog-theme(
  @include igx-dialog($my-dialog-theme);
 ```
 >[!NOTE]
->コンポーネントが [`Emulated`](themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`解除する`必要があります。
+>コンポーネントが [`Emulated`](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`解除する`必要があります。
 
 ```scss
 :host {
@@ -260,7 +260,7 @@ $my-dialog-theme: igx-dialog-theme(
 ```
 
 >[!NOTE]
->コンポーネントが [`Emulated`](themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合においても、変数をオーバーライドするにはグローバル セレクターが必要なため、`:host` を使用する必要があります。
+>コンポーネントが [`Emulated`](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合においても、変数をオーバーライドするにはグローバル セレクターが必要なため、`:host` を使用する必要があります。
 
 ```scss
 :host {
@@ -284,6 +284,12 @@ $my-dialog-theme: igx-dialog-theme(
 * [IgxDialogComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-dialog-theme)
 * [IgxOverlay]({environment:angularApiUrl}/interfaces/overlaysettings.html)
 * [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+
+## テーマの依存関係
+
+* [IgxButton テーマ]({environment:sassApiUrl}/index.html#function-igx-button-theme)
+* [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
+* [IgxOverlay テーマ]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 
 ## その他のリソース
 

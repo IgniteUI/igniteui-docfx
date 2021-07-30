@@ -157,7 +157,7 @@ $custom-theme: igx-progress-circular-theme(
 );
 ```
 
-You can learn more about styling the circular progress bar in the [`Styling Section`](./circular-progress.html#styling)
+You can learn more about styling the circular progress bar in the [`Styling Section`](#styling)
 
 To provide a gradient that has more than 2 color stops, we have to use the directive on an `ng-template` in our `igx-circular-bar` like that:
 
@@ -228,7 +228,7 @@ If `$legacy-support` is set to `true`, include the **component theme** like that
  @include igx-progress-circular($custom-theme);
 ```
 >[!NOTE]
->If the component is using an [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`
+>If the component is using an [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`
 
 ```scss
 :host {
@@ -247,7 +247,7 @@ If `$legacy-support` is set to `false`(default), include the component **css var
 ```
 
 >[!NOTE]
->If the component is using an [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, you still have to use `:host` because you need a global selector in order to override the variables.
+>If the component is using an [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, you still have to use `:host` because you need a global selector in order to override the variables.
 
 ```scss
 :host {

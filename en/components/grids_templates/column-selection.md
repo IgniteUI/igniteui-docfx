@@ -49,7 +49,7 @@ The sample below demonstrates the three types of @@igComponent's **column select
 
 ## Basic usage
 
-The column selection feature can be enabled through the [`columnSelection`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnselection) input, which takes [GridSelectionMode]({environment:angularApiUrl}/enums/gridselectionmode.html) values.
+The column selection feature can be enabled through the [`columnSelection`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnselection) input, which takes [GridSelectionMode]({environment:angularApiUrl}/index.html#gridselectionmode) values.
 
 ## Interactions
 The default selection mode is `none`. If set to `single` or `multiple` all of the presented columns will be [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable). With that being said, in order to select a column, we just need to click on one, which will mark it as [`selected`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selected). If the column is not selectable, no selection style will be applied on the header, while hovering.
@@ -78,7 +78,7 @@ The default selection mode is `none`. If set to `single` or `multiple` all of th
 ## Keyboard combinations
 
 > [!NOTE]
-> The keyboard combinations are available only when the grid [`columnSelection`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnselection) input is set to [`multiple`]({environment:angularApiUrl}/enums/gridselectionmode.html#multiple).
+> The keyboard combinations are available only when the grid [`columnSelection`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnselection) input is set to `multiple`.
 
 There are two scenarios for keyboard navigation of the **Column Selection** feature:
 - Multi-column selection - holding <kbd>ctrl</kbd> + <kbd>click</kbd> on every **selectable** header cell.
@@ -147,7 +147,7 @@ The last step is to include the custom `igx-grid` theme.
 In order to style components for Internet Explorer 11, we have to use a different approach, since it doesn't support CSS variables.
 
 >[!NOTE]
->If the component is using the [`Emulated`](../themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`. In order to prevent the custom theme from leaking into other components, be sure that you have included the `:host` selector before `::ng-deep`.
+>If the component is using the [`Emulated`](../themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`. In order to prevent the custom theme from leaking into other components, be sure that you have included the `:host` selector before `::ng-deep`.
 
 ```scss
 :host {
@@ -164,6 +164,8 @@ In order to style components for Internet Explorer 11, we have to use a differen
            iframe-src="{environment:demosBaseUrl}/@@igDemoBasePath/column-selection-styles" >
 </code-view>
 
+>[!NOTE]
+>The sample will not be affected by the selected global theme from `Change Theme`.
 <div class="divider--half"></div>
 
 ## <a name="api-references"></a>API References
@@ -171,7 +173,7 @@ In order to style components for Internet Explorer 11, we have to use a differen
 The column selection UI has a few more APIs to explore, which are listed below.
 
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumnomponent.html)
+* [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [IgxColumnGrpupComponent]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html)
 * [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 
@@ -183,7 +185,7 @@ The column selection UI has a few more APIs to explore, which are listed below.
 * [selectAllColumns]({environment:angularApiUrl}/classes/@@igTypeDoc.html#selectAllColumns)
 * [deselectAllColumns]({environment:angularApiUrl}/classes/@@igTypeDoc.html#deselectAllColumns)
 
-[`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumnomponent.html) properties:
+[`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) properties:
 * [selectable]({environment:angularApiUrl}/classes/IgxColumnComponent.html#selectable)
 * [selected]({environment:angularApiUrl}/classes/IgxColumnComponent.html#selected)
 

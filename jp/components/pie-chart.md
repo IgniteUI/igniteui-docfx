@@ -14,15 +14,12 @@ Ignite UI for Angular 円チャート コンポネントは、セクションに
 
 ## Angular 円チャートの例
 
-<div class="sample-container loading" style="height: 350px">
-    <iframe id="pie-chart-data-sample-iframe" src='{environment:dvDemosBaseUrl}/charts/pie-chart-overview' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular 円チャートの例"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="pie-chart-overview-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
-    </button>
-
-
-</div>
+<code-view style="height: 350px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart-overview"
+           alt="Angular 円チャートの例"
+           github-src="charts/pie-chart/overview">
+</code-view>
 
 <div class="divider--half"></div>
 
@@ -41,10 +38,7 @@ npm install --save igniteui-angular-charts
 
 ## モジュールの要件
 
-[`IgxPieChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartcomponent.html) を作成するには、以下のモジュールが必要です。<!-- Angular, React, WebComponents --> <!-- end: Angular, React, WebComponents --><!-- Blazor -->モジュールはアプリケーションのエントリ ポイントに登録する必要があります。
-
--   PieChartModule
-    <!-- end: Blazor -->
+[`IgxPieChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartcomponent.html) を作成するには、以下のモジュールが必要です。
 
 ```ts
 // app.module.ts
@@ -108,21 +102,17 @@ var data = [
 </igx-pie-chart>
 ```
 
-<div class="sample-container loading" style="height: 350px">
-    <iframe id="pie-chart-legend-iframe" data-src='{environment:dvDemosBaseUrl}/charts/pie-chart-legend' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="pie-chart-legend-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
-    </button>
-
-
-</div>
+<code-view style="height: 350px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart-legend"
+           github-src="charts/pie-chart/legend">
+</code-view>
 
 <div class="divider--half"></div>
 
 ## その他の分類項目
 
-Pie Chart  コンポーネントの基本データに、小さい値を含む多くの項目が含まれる場合があります。この場合、Others カテゴリは、単一スライスへの複数のデータ値の自動集計を許可します。
+Pie Chart コンポーネントの基本データに、小さい値を含む多くの項目が含まれる場合があります。この場合、Others カテゴリは、単一スライスへの複数のデータ値の自動集計を許可します。
 
 以下のサンプルは、[`othersCategoryThreshold`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartbasecomponent.html#otherscategorythreshold) を 2 に設定、[`othersCategoryType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartbasecomponent.html#otherscategorytype) は Number に設定されています。したがって、2 以下の値を含む項目は、Others カテゴリに割り当てられます。
 
@@ -140,15 +130,11 @@ Pie Chart  コンポーネントの基本データに、小さい値を含む多
 </igx-pie-chart>
 ```
 
-<div class="sample-container loading" style="height: 350px">
-    <iframe id="pie-chart-others-iframe" data-src='{environment:dvDemosBaseUrl}/charts/pie-chart-others' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="pie-chart-others-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
-    </button>
-
-
-</div>
+<code-view style="height: 350px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart-others"
+           github-src="charts/pie-chart/others">
+</code-view>
 
 <div class="divider--half"></div>
 
@@ -165,15 +151,11 @@ Pie Chart  コンポーネントの基本データに、小さい値を含む多
 </igx-pie-chart>
 ```
 
-<div class="sample-container loading" style="height: 350px">
-    <iframe id="pie-chart-explosion-iframe" data-src='{environment:dvDemosBaseUrl}/charts/pie-chart-explosion' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="pie-chart-explosion-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
-    </button>
-
-
-</div>
+<code-view style="height: 350px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart-explosion"
+           github-src="charts/pie-chart/explosion">
+</code-view>
 
 <div class="divider--half"></div>
 
@@ -196,7 +178,7 @@ Pie Chart  コンポーネントの基本データに、小さい値を含む多
 -   SelectedItemsChanging
 -   SelectedItemsChanged
 
-「Changing」で終わるイベントはキャンセル可能なイベントです。すなわち、イベント引数プロパティ  `Cancel` を true に設定することで、スライスの選択を停止します。True に設定すると、関連付けられたプロパティは更新されず、その結果スライスは選択されません。この設定はたとえば、スライスのデータによって一定のスライスの選択を無効化する場合に使用します。
+「Changing」で終わるイベントはキャンセル可能なイベントです。すなわち、イベント引数プロパティ `Cancel` を true に設定することで、スライスの選択を停止します。True に設定すると、関連付けられたプロパティは更新されず、その結果スライスは選択されません。この設定はたとえば、スライスのデータによって一定のスライスの選択を無効化する場合に使用します。
 
 「その他」スライスをクリックすると、[`IgxPieSliceOthersContext`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiesliceotherscontext.html) オブジェクトが返されます。オブジェクトは、「その他」スライスに含まれるデータ項目のリストがあります。
 
@@ -212,15 +194,11 @@ Pie Chart  コンポーネントの基本データに、小さい値を含む多
 </igx-pie-chart>
 ```
 
-<div class="sample-container loading" style="height: 350px">
-    <iframe id="pie-chart-selection-iframe" data-src='{environment:dvDemosBaseUrl}/charts/pie-chart-selection' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="pie-chart-selection-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
-    </button>
-
-
-</div>
+<code-view style="height: 350px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart-selection"
+           github-src="charts/pie-chart/selection">
+</code-view>
 
 <div class="divider--half"></div>
 
@@ -228,7 +206,7 @@ Pie Chart  コンポーネントの基本データに、小さい値を含む多
 
 チャートの半径をスケールする `radiusFactor` プロパティを設定して円チャートをすばやくアニメーション化できます。`startAngle` プロパティを設定してチャートが回転する間、チャートの角度が増加し続けるようにします。
 
-以下のコードでは、radiusFactor がチャートをサイズの 0.25％ 増加し、startAngle がチャートを 1 度回転しています。radiusFactor と startAngle が最大値に達すると、アニメーション フラグをリセットし、間隔をクリアしてアニメーションを停止します。
+以下のコードでは、radiusFactor がチャートをサイズの 0.25% 増加し、startAngle がチャートを 1 度回転しています。radiusFactor と startAngle が最大値に達すると、アニメーション フラグをリセットし、間隔をクリアしてアニメーションを停止します。
 
 ```ts
 window.setInterval(() => this.tick(), 15);
@@ -250,14 +228,10 @@ public tick(): void {
 }
 ```
 
-<div class="sample-container loading" style="height: 350px">
-    <iframe id="pie-chart-animation-iframe" data-src='{environment:dvDemosBaseUrl}/charts/pie-chart-animation' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" class="stackblitz-btn"   data-iframe-id="pie-chart-animation-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
-    </button>
-
-
-</div>
+<code-view style="height: 350px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart-animation"
+           github-src="charts/pie-chart/animation">
+</code-view>
 
 <div class="divider--half"></div>

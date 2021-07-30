@@ -47,8 +47,8 @@ export class AppModule {}
 
 트리 그리드의 계층 구조(하위 컬렉션 또는 기본 키와 외부 키)를 작성하는 데 사용되는 옵션과 관계없이 트리 그리드의 행은 2가지 유형의 셀로 구성됩니다:
 
-- [`IgxGridCellComponent`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html) - 값이 포함된 표준 셀입니다.
-- [`IgxTreeGridCellComponent`]({environment:angularApiUrl}/classes/igxtreegridcellcomponent.html) - 셀의 행 수준을 기반으로 한 값, 인디케이터의 전개/축소, 인덴트 div 요소가 포함된 트리 셀입니다. 행 컴포넌트의 수준은 내부 [`treeRow`]({environment:angularApiUrl}/classes/igxtreegridrowcomponent.html#treerow)의 [`level`]({environment:angularApiUrl}/interfaces/itreegridrecord.html#level) 속성을 통해 접근할 수 있습니다.
+- [`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html) - 값이 포함된 표준 셀입니다.
+- [`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html) - 셀의 행 수준을 기반으로 한 값, 인디케이터의 전개/축소, 인덴트 div 요소가 포함된 트리 셀입니다. 행 컴포넌트의 수준은 내부 [`treeRow`]({environment:angularApiUrl}/classes/igxtreegridrowcomponent.html#treerow)의 [`level`]({environment:angularApiUrl}/interfaces/itreegridrecord.html#level) 속성을 통해 접근할 수 있습니다.
 
 > [!NOTE]
 > 각 행에는 하나의 트리 셀만 가질 수 있지만 표준 셀은 여러 개 가질 수 있습니다.
@@ -123,11 +123,13 @@ IgxTreeGridComponent가 계층을 구축하려면 [`childDataKey`]({environment:
 <!--treeGridSample.component.html-->
 
 <igx-tree-grid #treeGrid [data]="localData" childDataKey="Employees"
-               [autoGenerate]="false" [rowSelectable]="true" [paging]="true" [allowFiltering]="true">
+               [autoGenerate]="false" [rowSelectable]="true" [allowFiltering]="true">
     <igx-column field="Name" dataType="string" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"
                 [hasSummary]="true"></igx-column>
     <igx-column field="HireDate" dataType="date" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
     <igx-column field="Age" dataType="number" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
+    <igx-paginator>
+    </igx-paginator>
 </igx-tree-grid>
 ```
 
@@ -137,16 +139,16 @@ IgxTreeGridComponent가 계층을 구축하려면 [`childDataKey`]({environment:
 <!--treeGridSample.component.html-->
 
 <igx-tree-grid #treeGrid [data]="localData" childDataKey="Employees"
-               [autoGenerate]="false" [rowSelectable]="true" [paging]="true" [allowFiltering]="true"
-               [showToolbar]="true" toolbarTitle="Employees" [columnHiding]="true" [columnPinning]="true"
-               [exportExcel]="true" [exportCsv]="true" exportExcelText="To Excel" exportCsvText="To CSV">
+               [autoGenerate]="false" [rowSelectable]="true" [allowFiltering]="true">
     <igx-column field="Name" dataType="string" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
     <igx-column field="HireDate" dataType="date" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
     <igx-column field="Age" dataType="number" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
+    <igx-paginator>
+    </igx-paginator>
 </igx-tree-grid>
 ```
 
-[Demo](#demo) 섹션에서 이 내용 시작 부분에 있는 코드 결과를 확인할 수 있습니다.
+섹션에서 이 내용 시작 부분에 있는 코드 결과를 확인할 수 있습니다.
 
 ### 기본 키와 외부 키
 **기본 키와 외부 키** 옵션을 사용하는 경우에는 모든 데이터 개체에 기본 키와 외부 키가 포함됩니다. 기본 키는 현재 데이터 객체의 고유 식별자이며, 외부 키는 해당 상위 객체의 고유 식별자입니다. 이 경우, 원본 데이터 소스가 포함된 트리 그리드의 [`data`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#data) 속성은 플랫 컬렉션이 됩니다.
@@ -288,12 +290,11 @@ See the [Grid Sizing](sizing.md) topic.
 <div class="divider--half"></div>
 
 * [IgxTreeGridComponent]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)
-* [IgxTreeGridCellComponent]({environment:angularApiUrl}/classes/igxtreegridcellcomponent.html)
-* [IgxTreeGridRowComponent]({environment:angularApiUrl}/classes/igxtreegridrowcomponent.html)
+* [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
+* [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 * [IgxGridComponent 스타일]({environment:sassApiUrl}/#function-igx-grid-theme)
-* [IgxGridCellComponent]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
-* [IgxGridRowComponent]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)
+* [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
 * [IgxBaseTransactionService]({environment:angularApiUrl}/classes/igxbasetransactionservice.html)
 
 

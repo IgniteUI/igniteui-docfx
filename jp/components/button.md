@@ -205,49 +205,10 @@ public selectDensity(event) {
 
 以下は結果です。
 
-<div class="sample-container loading" style="height: 150px">
-    <iframe id="buttons-display-density-iframe" seamless width="100%" height="100%" frameborder="0" src="{environment:demosBaseUrl}/data-entries/buttons-display-density" onload="onSampleIframeContentLoaded(this);">
-</div>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="buttons-display-density-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttons-display-density-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz で表示</button>
-</div>
-<div class="divider--half"></div>
-
-## 使用方法
-
-Button ディレクティブは `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に `IgxButtonModule` をインポートする必要があります:
-
-```typescript
-// app.module.ts
-
-import { IgxButtonModule } from 'igniteui-angular';
-
-@NgModule({
-    imports: [
-        ...
-        IgxButtonModule,
-        ...
-    ]
-})
-export class AppModule {}
-```
-
-## ボタン タイプ
-
-### フラットボタン
-
-[`igxButton`]({environment:angularApiUrl}/classes/igxbuttondirective.html) ディレクティブを使用して、コンポーネント テンプレートにシンプルなフラット ボタンをコンポーネント テンプレートに追加します。タイプを選択しない場合、デフォルト値は `flat` です。
-
-```html
-<button igxButton="flat">Flat</button>
-```
-
-
-<div class="sample-container loading" style="height: 70px">
-    <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-2">
-</iframe></div>
-
+<code-view style="height: 150px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-entries/buttons-display-density" alt="Angular Button の例">
+</code-view>
 <div class="divider--half"></div>
 
 ## スタイル設定
@@ -286,7 +247,7 @@ $custom-button-theme: igx-button-theme(
 
 Internet Explorer 11 などの古いブラウザーのコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、別のアプローチを用いる必要があります。
 
-コンポーネントが [`Emulated`](themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
+コンポーネントが [`Emulated`](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
 
 ```scss
 :host {
@@ -298,12 +259,10 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 
 ### デモ
 
-
 <code-view style="height: 100px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-entries/buttons-style" >
 </code-view>
-
 <div class="divider--half"></div>
 
 ## API リファレンス

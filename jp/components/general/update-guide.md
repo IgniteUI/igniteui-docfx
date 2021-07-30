@@ -42,11 +42,104 @@ ng update @angular/cli
 
 例: 6.2.4 から 7.1.0 にアップデートする場合、[6.x .. から] セクションから始めて変更を適用していきます。
 
+## 12.0.x から 12.1.x の場合:
+### グリッド
+* 重大な変更:
+    * [`IgxPaginatorComponent`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html) - グリッドでページネーターがインスタンス化される方法が変更されました。グリッド ツリーに投影される別個のコンポーネントになりました。したがって、`[paging]="true"` プロパティはすべてのグリッドから削除され、グリッド内のページネーターに関連する他のすべてのプロパティは非推奨です。[ページング トピック](../grid/paging.md)で説明されているように、`Grid Paging` 機能を有効にするためのガイドに従うことをお勧めします。
+    * [`IgxPageSizeSelectorComponent`]({environment:angularApiUrl}/classes/IgxPageSizeSelectorComponent.html) および [`IgxPageNavigationComponent`]({environment:angularApiUrl}/classes/IgxPageNavigationComponent.html) が導入され、カスタム コンテンツの実装が容易になりました。
+
+    ```html
+    <igx-paginator #paginator>
+        <igx-paginator-content>
+            <igx-page-size></igx-page-size>
+            [My custom text]
+            <igx-page-nav></igx-page-nav>
+        </igx-paginator-content>
+    </igx-paginator>
+    ```
+
+    * ページング コンポーネントの API はリファクタリング中に変更され、古いプロパティの多くは非推奨になりました。残念ながら、これらの変更の一部を適切に移行することは控えめに言っても複雑であるため、エラーはアプリケーション レベルで処理する必要があります。
+    * 次のプロパティはグリッドから非推奨になりました:
+        - paging、perPage page、totalPages、isFirstPage、isLastPage、pageChange、perPageChange、pagingDone
+    * 次のメソッドも非推奨です:
+        - nextPage()
+        - previousPage()
+    * 次のプロパティが削除されました:
+        - paginationTemplate - カスタム テンプレートを定義するには、`igx-paginator-content` を使用します。
+   * HierarchicalGrid の詳細 - RowIslands でページングを有効にする場合は、次の `*igxPaginator` ディレクティブの使用法が必要です。
+
+    ```html
+    <igx-hierarchical-grid #hGrid >
+        <igx-column *ngFor="let c of hColumns" [field]="c.field">
+        </igx-column>
+        <igx-row-island [key]="'childData'" [autoGenerate]="true">
+            <igx-row-island [key]="'childData'" [autoGenerate]="true">
+                <igx-paginator *igxPaginator></igx-paginator>
+            </igx-row-island>
+            <igx-paginator *igxPaginator></igx-paginator>
+        </igx-row-island>
+        <igx-row-island [key]="'childData2'" [autoGenerate]="true">
+            <igx-paginator *igxPaginator></igx-paginator>
+        </igx-row-island>
+
+        <igx-paginator></igx-paginator>
+    </igx-hierarchical-grid>
+    ```
+
+    * 移行によりテンプレート コンテンツが `igx-paginator-content` コンテンツ内に移動しますが、すべてのテンプレート バインディングが解決されるとは限りません。移行後は、必ずテンプレート ファイルを確認してください。次のバインディングは、これらのプロパティ (`pagerEnabled`、`pagerHidden`、`dropdownEnabled`、`dropdownHidden`) が削除されているため、手動で変更する必要があります:
+
+    次から:
+    ```html
+    <igx-paginator #paginator 
+        [pagerEnabled]="!isPagerDisabled" [pagerHidden]="isPagerHidden"
+        [dropdownHidden]="isDropdownHidden">
+    </igx-paginator>
+    ```
+
+    次へ:
+    ```html
+    <igx-paginator #paginator *ngIf="!isPagerDisabled">
+        <igx-paginator-content>
+            <igx-page-size *ngIf="isDropdownHidden"></igx-page-size>
+            <igx-page-nav *ngIf="isPagerHidden"></igx-page-nav>
+        </igx-paginator-content>
+    </igx-paginator>
+    ```
+
+* グリッド非推奨:
+    * `IgxGridTransaction` を提供するための DI パターンは非推奨になりました。以下は引き続き機能しますが、将来のバージョンで**削除される可能性がある**ため、リファクタリングすることをお勧めします。
+
+    ```typescript
+    @Component({
+        template: `<igx-grid [data]="data">
+        ...
+        </igx-grid>`,
+        providers: [{ provide: IgxGridTransaction, useClass: IgxTransactionService }],
+        ...
+    })
+    export class MyCustomComponent {
+        ...
+    }
+    ```
+
+    上記の動作を実現するには、新しく追加された [`batchEditing`](../grid/batch-editing.md) 入力を使用する必要があります。
+    ```typescript
+    @Component({
+        template: `<igx-grid [data]="data" [batchEditing]="true">
+        ...
+        </igx-grid>`
+        ...
+    })
+    export class MyCustomComponent {
+        ...
+    }
+    ```
+
 ## 11.1.x から 12.0.x の場合:
 ### テーマ:
 * 重大な変更:
     * `IgxAvatar` テーマが簡略化されました。テーマ パラメーター (`igx-avatar-theme`) の数が大幅に削減され、接頭辞付きのパラメーター (`icon-*`, `initials-*`, `image-*`) と接尾辞付きのパラメーター (`border-radius-*`) が含まれなくなりました。`ng update` で実行された更新は、既存のボタン テーマを移行しますが、接頭辞付きと接尾辞付きのパラメーターがないことを考慮して、いくつかの追加の調整が必要になる場合があります。
-    
+
     既存のタイプ固有のアバター テーマを以下のように変更する必要があります。
 
     例えば、次の例は
@@ -88,66 +181,69 @@ ng update @angular/cli
 
   以下のコード スニペットと同じ結果を得るには: 
 
-        ```html
-        <button igxButton="raised">Raised button</button>
-        <button igxButton="outlined">Outlined button</button>
-        ```
-        ```scss
-        $my-button-theme: igx-button-theme(
-            $raised-background: red,
-            $outlined-outline-color: green
-        );
-            
-        @include igx-css-vars($my-button-theme);
-        ```
+    ```html
+    <button igxButton="raised">Raised button</button>
+    <button igxButton="outlined">Outlined button</button>
+    ```
+    ```scss
+    $my-button-theme: igx-button-theme(
+        $raised-background: red,
+        $outlined-outline-color: green
+    );
+
+    @include igx-css-vars($my-button-theme);
+    ```
+
     ボタン タイプごとに個別のテーマを作成し、CSS セレクターにスコープする必要があります。
-        ```html
+
+    ```html
         <div class="my-raised-btn">
             <button igxButton="raised">Raised button</button>
         </div>
         <div class="my-outlined-btn">
             <button igxButton="outlined">Outlined button</button>
         </div>
-        ```
-	
-        ```scss
+    ```
+
+    ```scss
         $my-raised-button: igx-button-theme(
             $background: red
         );
-    
+
         $my-outlined-button: igx-button-theme(
             $border-color: red
         );
-    
+
         .my-raised-btn {
             @include igx-css-vars($my-raised-button);
          }
-    
+
         .my-outlined-btn {
             @include igx-css-vars($my-outlined-button);
         }
-        ```
-    ご覧のとおり、`igx-button-theme` パラメーターはボタン タイプごとに同じ名前になっているため、タイプごとに異なる色を使用するには、ボタン テーマのスコープを CSS セレクターに設定する必要があります。
+    ```
 
-    ここでは、`igx-button-theme` のすべての[利用可能なプロパティ](https://jp.infragistics.com/products/ignite-ui-angular/docs/sass/latest/index.html#function-igx-button-theme)を確認できます。
+ご覧のとおり、`igx-button-theme` パラメーターはボタン タイプごとに同じ名前になっているため、タイプごとに異なる色を使用するには、ボタン テーマのスコープを CSS セレクターに設定する必要があります。
 
-    * `igx-typography` mixin は `igx-core` に暗黙的に含まれなくなりました。タイポグラフィ スタイルを使用するには、`igx-core` の後と `igx-theme` の前に mixin を明示的に含める必要があります。
+ここでは、`igx-button-theme` のすべての[利用可能なプロパティ](https://jp.infragistics.com/products/ignite-ui-angular/docs/sass/latest/index.html#function-igx-button-theme)を確認できます。
+
+* `igx-typography` ミックスインは `igx-core` に暗黙的に含まれなくなりました。タイポグラフィ スタイルを使用するには、`igx-core` の後と `igx-theme` の前に ミックスインを明示的に含める必要があります。
 
     ```scss
     // in styles.scss
-    
+
     @include igx-core();
-    
+
     @include igx-typography(
         $font-family: $material-typeface,
         $type-scale: $material-type-scale
     );
-    
+
     @include igx-theme();
     ```
 
     > [!IMPORTANT]
-    > `igx-core` mixin は常に最初に含める必要があります。
+    > `igx-core` ミックスインは常に最初に含める必要があります。
 
     Ignite UI for Angular に含まれるテーマごとに、使用できる特定の `font-family` 変数と `type-scale` 変数を提供します。
 
@@ -157,7 +253,121 @@ ng update @angular/cli
     | Fluent | $fluent-typeface | $fluent-type-scale |
     | Bootstrap | $bootstrap-typeface | $bootstrap-type-scale |
     | Indigo | $indigo-typeface | $indigo-type-scale |
- 
+
+### IgxBottomNav コンポーネント
+
+[**IgxBottomNavComponent**]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html) は、タブ ヘッダーとコンテンツの定義を、より柔軟な方法を提供するために、リファクタリングされました。既存の **igx-bottom-nav** 定義を新しい定義に移行するには、**ng update** を介して更新することをお勧めします。
+
+
+* テンプレート
+    * *新しい構造は、ヘッダーとコンテンツ コンポーネントをそれぞれラップする下部ナビゲーション項目コンポーネントを定義します。ヘッダーには通常、アイコン ([`マテリアル ガイドライン`](https://material.io/components/bottom-navigation#usage)) が含まれていますが、ラベルやその他のカスタム コンテンツが含まれている場合もあります。
+    * ヘッダーのスタイル設定のために、`igxBottomNavHeaderLabel` と `igxBottomNavHeaderIcon` の 2 つの新しいディレクティブを用意しました。
+    * ヘッダー コンポーネントで任意のコンテンツを追加できるようになったため、以前はタブのヘッダーを再テンプレート化するために使用されていた `igxTab` ディレクティブは、不要になったため削除されました。
+    * コンポーネントをナビゲーション シナリオで使用する場合、`routerLink` ディレクティブをヘッダー コンポーネントにアタッチする必要があります。
+
+    ```html
+    <igx-bottom-nav>
+        <igx-bottom-nav-item>
+            <igx-bottom-nav-header>
+                <igx-icon igxBottomNavHeaderIcon>folder</igx-icon>
+                <span igxBottomNavHeaderLabel>Tab 1</span>
+            </igx-bottom-nav-header>
+            <igx-bottom-nav-content>
+                Content 1
+            </igx-bottom-nav-content>
+        </igx-bottom-nav-item>
+        ...
+    </igx-bottom-nav>
+    ```
+* API 変更
+    * `id`、`itemStyle`、`panels`、`viewTabs`、`contentTabs`、`tabs` プロパティが削除されました。現在、[`items`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html#items) プロパティはタブのコレクションを返します。
+    * 次のプロパティが変更されました。
+        * タブ項目の `isSelected` プロパティの名前が [` selected`]({environment:angularApiUrl}/classes/igxbottomnavitemcomponent.html#selected) に変更されました。
+        * `selectedTab` プロパティの名前が [`selectedItem`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html#selecteditem) に変更されました。
+    * `onTabSelected` および `onTabDeselected` イベントが削除されました。[`selectedIndexChanging`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html#selectedindexchanging)、[`selectedIndexChange`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html#selectedindexchange)、[`selectedItemChange`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html#selecteditemchange) の 3 つの新しいイベントが導入されました。これらのイベントにより、タブの選択をより柔軟に制御できます。残念ながら、これらのイベント変更に対して適切な移行を行うことはとても複雑であるため、エラーはプロジェクト レベルで処理する必要があります。
+
+### IgxTabs コンポーネント
+[**IgxTabsComponent**]({environment:angularApiUrl}/classes/igxtabscomponent.html) は、タブ ヘッダーとコンテンツを定義するためのより柔軟で説明的な方法を提供するために、完全にリファクタリングされました。既存の **igx-tabs** 定義を新しい定義に変更するには、**ng update** を介して更新することをお勧めします。
+
+
+* テンプレート
+    * 新しい構造は、ヘッダーとコンテンツ コンポーネントをそれぞれラップするタブ項目コンポーネントを定義します。ヘッダーには通常、アイコンおよびラベルが含まれていますが、その他のカスタム コンテンツが含まれている場合もあります。
+    * ヘッダーのスタイル設定のために、`igxTabHeaderLabel` と `igxTabHeaderIcon` の 2 つの新しいディレクティブを導入しました。
+    * ヘッダー コンポーネントで任意のコンテンツを追加できるようになったため、以前はタブのヘッダーを再テンプレート化するために使用されていた `igxTab` ディレクティブは、不要になったため削除されました。
+    * コンポーネントをナビゲーション シナリオで使用する場合、`routerLink` ディレクティブをヘッダー コンポーネントにアタッチする必要があります。
+
+    ```html
+    <igx-tabs>
+        <igx-tab-item>
+            <igx-tab-header>
+                <igx-icon igxTabHeaderIcon>folder</igx-icon>
+                <span igxTabHeaderLabel>Tab 1</span>
+            </igx-tab-header>
+            <igx-tab-content>
+                <h1>Tab 1 Content</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </igx-tab-content>
+        </igx-tab-item>
+    ...
+    </igx-tabs>
+    ```
+* API 変更
+    * `id`、`groups`、`viewTabs`、`contentTabs`、および `tabs` プロパティが削除されました。現在、[`items`]({environment:angularApiUrl}/classes/igxtabscomponent.html#items) プロパティはタブのコレクションを返します。
+    * 次のプロパティが変更されました。
+        * タブ項目の `isSelected` プロパティの名前が [` selected`]({environment:angularApiUrl}/classes/igxtabitemcomponent.html#selected) に変更されました。
+        * `selectedTabItem` プロパティは [`selectedItem`]({environment:angularApiUrl}/classes/igxtabscomponent.html#selecteditem) に変更されました。
+        * contentFit と固定オプションを含む `type` プロパティは使用できなくなりました。ヘッダーのサイズ設定と配置モードは現在、[`tabAlignment`]({environment:angularApiUrl}/classes/igxtabscomponent.html#tabalignment) 入力プロパティによって制御されています。この入力プロパティは、start (デフォルト)、center、end、justify の 4 つのいずれかが設定できます。古い `contentFit` タイプは現在の `start` 配置値に対応し、古い  `fixed` タイプは現在の `justify` 値に対応します。
+    * `tabItemSelected` および `tabItemDeselected` イベントが削除されました。[`selectedIndexChanging`]({environment:angularApiUrl}/classes/igxtabscomponent.html#selectedindexchanging)、[`selectedIndexChange`]({environment:angularApiUrl}/classes/igxtabscomponent.html#selectedindexchange)、[`selectedItemChange`]({environment:angularApiUrl}/classes/igxtabscomponent.html#selecteditemchange) の 3 つの新しいイベントが導入されました。これらのイベントにより、タブの選択をより柔軟に制御できます。残念ながら、これらのイベント変更に対して適切な移行を行うことはとても複雑であるため、エラーはプロジェクト レベルで処理する必要があります。
+
+### IgxGridComponent、IgxTreeGridComponent、IgxHierarchicalGridComponent
+* *IgxGridRowComponent*、*IgxTreeGridRowComponent*、*IgxHierarchicalRowComponent*、*IgxGridGroupByRowComponent* はパブリック API で公開されなくなりました。
+* 以前は上記のいずれかのインスタンスを返していたパブリック API は、パブリック [`RowType`]({environment:angularApiUrl}/interfaces/rowtype.html) インターフェースを実装するオブジェクトを返すようになりました。
+
+```ts
+const row = grid.getRowByIndex(0);
+const row = grid.getRowByKey(2);
+const row = cell.row;
+```
+
+[`RowType`]({environment:angularApiUrl}/interfaces/rowtype.html) のパブリック API は、*IgxRowComponent* などが公開していたものと同じですが、次の点に注意してください:
+
+* *IgxHierarchicalRowComponent* によって公開される *toggle* メソッドは使用できません。すべての行タイプに [`expanded`]({environment:angularApiUrl}/interfaces/rowtype.html#expanded) プロパティを使用します:
+
+```ts
+grid.getRowByIndex(0).expanded = false;
+```
+*row.rowData* および *row.rowID* は非推奨であり、バージョン 13 で完全に削除されます。代わりに *row.data* と *row.key* を使用してください。
+
+* *onRowPinning* によって発行されたイベント引数の *row* プロパティ、および *onRowDragStart* によって発行されたイベント引数の *dragData* プロパティ、*onRowDragEnd* は [`RowType`]({environment:angularApiUrl}/interfaces/rowtype.html) を実装しています。 
+* *ng update* は、*IgxGridRowComponent*、*IgxTreeGridRowComponent*、*IgxHierarchicalRowComponent*、*IgxGridGroupByRowComponent* のインポート、入力、キャストなどの使用方法のほとんどが移行されます上記のいずれかを使用するコード内の場所が移行されない場合は、入力/キャストを削除するか、[`RowType`]({environment:angularApiUrl}/interfaces/rowtype.html) で変更してください。
+* *getRowByIndex* は、そのインデックスの行が集計行である場合、[`RowType`]({environment:angularApiUrl}/interfaces/rowtype.html) オブジェクトを返すようになりました (以前は *undefined* を返していました)。*row.isSummaryRow* および *row.isGroupByRow* は、インデックスの行が集計行またはグループ行の場合に true を返します。
+
+### IgxInputGroupComponent
+* `disabled` プロパティは削除されました。入力グループの状態は常に基になる `igxInput` によって管理されていたため、このプロパティは誤解を招く可能性がありました。
+    * `ng update` を実行すると、テンプレートで `[disabled]` が `@Input` として使用されたすべてのインスタンスが処理されます。
+    * `.ts` ファイルでプロパティを参照している場合:
+    ```typescript
+    export class CustomComponent {
+        public inputGroup: IgxInputGroupComponent
+        ...
+        this.inputGroup.disabled = false;
+    }
+    ```
+
+    基になる入力ディレクティブの `disabled` プロパティを参照するように、コードを手動で更新する必要があります:
+    ```typescript
+    export class CustomComponent {
+        public input: IgxInputDirective
+        ...
+        this.input.disabled = false;
+    }
+    ```
+
+### IgxDateTimeDirective、IgxDatePickerComponent、IgxTimePickerComponent、IgxDateRangePickerComponent
+
+* IgxDateTimeDirective、IgxDatePickerComponent、IgxTimePickerComponent、IgxDateRangePickerComponent の `value` プロパティは、ISO 8601 文字列形式を受け入れるようになりました。これは、`value` タイプが `date` または `string` である可能性があることを意味します。
+* IgxDateTimeDirective、IgxDatePickerComponent、IgxTimePickerComponent、IgxDateRangePickerComponent の `inputFormat` プロパティは、年の部分に `y` を受け入れないようになりました。`yy` に更新する必要があります。
+
 ## 10.2.x から 11.0.x の場合:
 * IgxGrid、IgxTreeGrid、IgxHierarchicalGrid
     * グリッドでツール バーをインスタンス化される方法が変更されました。グリッド ツリーに投影される別個のコンポーネントになりました。したがって、`showToolbar` プロパティはすべてのグリッドから削除され、グリッド内のツールバーに関連する他のすべてのプロパティは非推奨です。
@@ -207,7 +417,8 @@ ng update @angular/cli
     ```
 
 ## 8.x.x から 9.0.x の場合:
-Angular 9 の重大な変更により、Hammer プロバイダー は暗黙的に追加されていません (詳細は、https://github.com/angular/angular/blob/master/CHANGELOG.md#breaking-changes-9 を参照してください)。このため、以下のコンポネントの**タッチ**操作が正しく動作するには、アプリケーションのルート モジュールに `HammerModule` をインポートする必要があります。
+Angular 9 の重大な変更により、Hammer プロバイダー は暗黙的に追加されていません 
+[詳細は](https://github.com/angular/angular/blob/master/CHANGELOG.md#breaking-changes-9 )を参照してください。このため、以下のコンポネントの**タッチ**操作が正しく動作するには、アプリケーションのルート モジュールに `HammerModule` をインポートする必要があります。
 
 * igxGrid
 * igxHierarchicalGrid
@@ -340,7 +551,7 @@ import { HammerModule } from "@angular/platform-browser";
     }
     ```
 
-    コンボの設定の詳細については、[readme](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/combo/README.md#value-binding) および[ドキュメント](../combo.md#選択)をご覧ください。
+    コンボの設定の詳細については、[readme](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/combo/README.md#value-binding) および[ドキュメント](../combo.md#選択-api)をご覧ください。
 
 ## 8.0.x から 8.1.x の場合:
 * `igx-paginator` コンポーネントはスタンドアロン コンポーネントとして導入され、Grid コンポーネントでも使用されます。

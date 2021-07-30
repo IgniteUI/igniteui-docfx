@@ -183,7 +183,7 @@ $my-calendar-theme: igx-calendar-theme(
  @include igx-calendar($my-calendar-theme);
 ```
 >[!NOTE]
->コンポーネントが [`Emulated`](./themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
+>コンポーネントが [`Emulated`](./themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
 
 ```scss
 :host {
@@ -202,7 +202,7 @@ $my-calendar-theme: igx-calendar-theme(
 ```
 
 >[!NOTE]
->コンポーネントが [`Emulated`](./themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合においても、変数をオーバーライドするにはグローバル セレクターが必要なため、`:host` を使用する必要があります。
+>コンポーネントが [`Emulated`](./themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合においても、変数をオーバーライドするにはグローバル セレクターが必要なため、`:host` を使用する必要があります。
 
 ```scss
 :host {
@@ -229,6 +229,12 @@ $my-calendar-theme: igx-calendar-theme(
 * [IgxCalendarComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-calendar-theme)
 
 <div class="divider--half"></div>
+
+## テーマの依存関係
+<div class="divider--half"></div>
+
+* [IgxCalendar テーマ]({environment:sassApiUrl}/index.html#function-igx-calendar-theme)
+* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

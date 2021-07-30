@@ -13,10 +13,10 @@ _language: kr
 
 ## 데모
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-polar-series"  
-           github-src="charts/data-chart/type-polar-series">
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-polar-chart-types"
+           github-src="charts/data-chart/polar-chart-types">
 </code-view>
 
 <div class="divider--half"></div>

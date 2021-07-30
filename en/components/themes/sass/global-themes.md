@@ -12,7 +12,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 If you've included the _`igniteui-angular.css`_ file in your application project, now is a good time to remove it. We are going to use our own _`my-app-theme.scss`_ file to generate a global theme for all components in our application.
 
 **Ignite UI for Angular** uses a global theme by default to theme the entire suite of components. You can, however, create themes scoped to components you have in your app, depending on your use case. For now, we will be including all of our themes in a single file.
-To generate a global theme we're going to be including two mixins `igx-core` and `igx-theme`; both of those mixins accepts a few arguments: 
+To generate a global theme we're going to be including two mixins `igx-core` and `igx-theme`. Both of those mixins accept a few arguments: 
 
 ### igx-core  
 <div class="divider--half"></div>
@@ -119,15 +119,15 @@ The table below shows all the built-in themes that you can use right away.
 
 | Theme                                                                        | Mixin                                                                                             |  Schema                   |  color palette                                            | Available in version |
 |------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|---------------------------|-----------------------------------------------------------|----------------------|
-| [**Material (base)**](./themes-list/material.html)                           |  [igx-theme()]({environment:sassApiUrl}/index.html#mixin-igx-theme)                               | `$light-schema          ` | $default-palette                                          |      **all**         |
-| [**Material (light)**](./themes-list/material.html)                          |  [igx-light-theme()]({environment:sassApiUrl}/index.html#mixin-igx-light-theme)                   | `$light-material-schema          ` | $light-material-palette                                          |      **6.2 +**       |
-| [**Material (dark)**](./themes-list/material.html)                           |  [igx-dark-theme()]({environment:sassApiUrl}/index.html#mixin-igx-dark-theme)                     | `$dark-material-schema           ` | $dark-material-palette                                             |      **6.2 +**       |
-| [**Fluent**](./themes-list/fluent.html)                                      |  [igx-fluent-light-theme()]({environment:sassApiUrl}/index.html#mixin-igx-fluent-light-theme)                 | `$light-fluent-schema   ` | $light-fluent-excel-palette <br> $light-fluent-word-palette           |      **8.2 +**       |
-| [**Fluent (dark)**](./themes-list/fluent.html)                               |  [igx-fluent-dark-theme()]({environment:sassApiUrl}/index.html#mixin-igx-fluent-dark-theme)       | `$dark-fluent-schema    ` | $dark-fluent-excel-palette <br> $dark-fluent-word-palette |      **8.2 +**       |
-| [**Bootstrap**](./themes-list/bootstrap.html)                                |  [igx-bootstrap-light-theme()]({environment:sassApiUrl}/index.html#mixin-igx-bootstrap-light-theme)            | `$light-bootstrap-schema` | $light-bootstrap-palette                                        |      **9.0 +**       |
-| [**Bootstrap (dark)**](./themes-list/bootstrap.html)                         |  [igx-bootstrap-dark-theme()]({environment:sassApiUrl}/index.html#mixin-igx-bootstrap-dark-theme)  | `$dark-bootstrap-schema ` | $dark-bootstrap-palette                                   |      **9.0 +**       |
-| [**Indigo**](./themes-list/indigo.html)                                |  [igx-indigo-light-theme()]({environment:sassApiUrl}/index.html#mixin-igx-indigo-light-theme)            | `$light-indigo-schema` | $light-indigo-palette                                        |      **10.1 +**       |
-| [**Indigo (dark)**](./themes-list/indigo.html)                         |  [igx-indigo-dark-theme()]({environment:sassApiUrl}/index.html#mixin-igx-indigo-dark-theme)  | `$dark-indigo-schema ` | $dark-indigo-palette                                   |      **10.1 +**       |
+| [**Material (base)**](presets/material.md)                           |  [igx-theme()]({environment:sassApiUrl}/index.html#mixin-igx-theme)                               | `$light-schema          ` | $default-palette                                          |      **all**         |
+| [**Material (light)**](presets/material.md#material-light-theme)     |  [igx-light-theme()]({environment:sassApiUrl}/index.html#mixin-igx-light-theme)                   | `$light-material-schema          ` | $light-material-palette                                          |      **6.2 +**       |
+| [**Material (dark)**](presets/material.md#material-dark-theme)       |  [igx-dark-theme()]({environment:sassApiUrl}/index.html#mixin-igx-dark-theme)                     | `$dark-material-schema           ` | $dark-material-palette                                             |      **6.2 +**       |
+| [**Fluent**](presets/fluent.md)                                      |  [igx-fluent-light-theme()]({environment:sassApiUrl}/index.html#mixin-igx-fluent-light-theme)                 | `$light-fluent-schema   ` | $light-fluent-excel-palette <br> $light-fluent-word-palette           |      **8.2 +**       |
+| [**Fluent (dark)**](presets/fluent.md#fluent-dark-theme)             |  [igx-fluent-dark-theme()]({environment:sassApiUrl}/index.html#mixin-igx-fluent-dark-theme)       | `$dark-fluent-schema    ` | $dark-fluent-excel-palette <br> $dark-fluent-word-palette |      **8.2 +**       |
+| [**Bootstrap**](presets/bootstrap.md)                                |  [igx-bootstrap-light-theme()]({environment:sassApiUrl}/index.html#mixin-igx-bootstrap-light-theme)            | `$light-bootstrap-schema` | $light-bootstrap-palette                                        |      **9.0 +**       |
+| [**Bootstrap (dark)**](presets/bootstrap.md#bootstrap-dark-theme)    |  [igx-bootstrap-dark-theme()]({environment:sassApiUrl}/index.html#mixin-igx-bootstrap-dark-theme)  | `$dark-bootstrap-schema ` | $dark-bootstrap-palette                                   |      **9.0 +**       |
+| [**Indigo**](presets/indigo.md)                                      |  [igx-indigo-light-theme()]({environment:sassApiUrl}/index.html#mixin-igx-indigo-light-theme)            | `$light-indigo-schema` | $light-indigo-palette                                        |      **10.1 +**       |
+| [**Indigo (dark)**](presets/indigo.md#indigo-dark-theme)             |  [igx-indigo-dark-theme()]({environment:sassApiUrl}/index.html#mixin-igx-indigo-dark-theme)  | `$dark-indigo-schema ` | $dark-indigo-palette                                   |      **10.1 +**       |
 
 > [!NOTE]
 > Note that all high-level theme mixins wrap the base `igx-theme` mixin.
@@ -157,7 +157,7 @@ $my-color-palette: igx-palette(
 
 The value of `$igx-legacy-support` is quite important as it determines how component themes work. When its value is set to `true`, individual component style rules will have their values set at build time to the hard-coded values defined in their theme. If you set the value of `$igx-legacy-support` to `false`, however, style rules will look for values from CSS variables defined at the `:root` scope, or the nearest block scope.
 
-The general rule of thumb regarding what the value of `$legacy-support` should be is dictated by whether you will be including support for Internet Explorer 11 or not. If you want to include support for IE11 set the `$legacy-support` value to `true`, otherwise setting its value to `false` (default) will force CSS variables for theming.
+The general rule of thumb regarding what the value of `$legacy-support` should be dictated by whether you will be including support for Internet Explorer 11 or not. If you want to include support for IE11 set the `$legacy-support` value to `true`, otherwise setting its value to `false` (default) will force CSS variables for theming.
 
 ## API Overview
 * [Global Theme]({environment:sassApiUrl}/index.html#mixin-igx-theme)
@@ -172,7 +172,7 @@ The general rule of thumb regarding what the value of `$legacy-support` should b
 
 Learn how to create individual component themes:
 
-* [Component Themes](./component-themes.md)
+* [Component Themes](component-themes.md)
 
 Our community is active and always welcoming to new ideas.
 

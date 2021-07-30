@@ -13,9 +13,9 @@ Ignite UI for Angular 파이형 차트 컴포넌트는 원형 영역을 섹션�
 
 ## 데모
 
-<code-view style="height: 350px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart-overview"  
+<code-view style="height: 350px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart-overview"
            github-src="charts/pie-chart/overview">
 </code-view>
 
@@ -94,9 +94,9 @@ var data = [
 </igx-pie-chart>
 ```
 
-<code-view style="height: 350px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart-legend"  
+<code-view style="height: 350px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart-legend"
            github-src="charts/pie-chart/legend">
 </code-view>
 
@@ -122,9 +122,9 @@ var data = [
 </igx-pie-chart>
 ```
 
-<code-view style="height: 350px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart-others"  
+<code-view style="height: 350px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart-others"
            github-src="charts/pie-chart/others">
 </code-view>
 
@@ -143,8 +143,8 @@ var data = [
 </igx-pie-chart>
 ```
 
-<code-view style="height: 350px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
+<code-view style="height: 350px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart-explosion"  >
 </code-view>
 
@@ -181,9 +181,9 @@ var data = [
 </igx-pie-chart>
 ```
 
-<code-view style="height: 350px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart-selection"  
+<code-view style="height: 350px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart-selection"
            github-src="charts/pie-chart/explosion">
 </code-view>
 

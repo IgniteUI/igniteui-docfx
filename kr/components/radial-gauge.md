@@ -15,9 +15,9 @@ The radial gauge component is a data visualization tool capable of displaying a 
 
 The following sample demonstrates how setting multiple properties on the same gauge can transform it to completely different gauge.
 
-<code-view style="height: 350px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge-animation"  
+<code-view style="height: 350px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge-animation"
            github-src="gauges/radial-gauge/animation">
 </code-view>
 
@@ -106,9 +106,9 @@ The backing can be circular or fitted. A circular shape creates a 360 degree cir
 </igx-radial-gauge>
 ```
 
-<code-view style="height: 320px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge-backing"  
+<code-view style="height: 320px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge-backing"
            github-src="gauges/radial-gauge/backing">
 </code-view>
 
@@ -132,9 +132,9 @@ The scale is visual element that highlights full range of values in the gauge wh
 </igx-radial-gauge>
 ```
 
-<code-view style="height: 320px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge-scale"  
+<code-view style="height: 320px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge-scale"
            github-src="gauges/radial-gauge/scale">
 </code-view>
 
@@ -154,15 +154,15 @@ The gauge labels are visual elements displaying numeric values at a specified in
 </igx-radial-gauge>
 ```
 
-<code-view style="height: 320px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge-labels"  
+<code-view style="height: 320px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge-labels"
            github-src="gauges/radial-gauge/labels">
 </code-view>
 
 ## Tick Marks
 
-Tick marks are thin lines radiating from the center of the radial gauge. There are two types of tick marks: major and minor. Major tick marks are displayed at the `interval` between the `minimumValue` and `maximumValue` properties. Use the `minorTickCount` property to specify the number of minor tick marks displayed between each major tick mark. You can control the length of tick marks by setting a fraction (beteen 0 and 1) to `tickStartExtent`, `tickEndExtent`, `minorTickStartExtent`, and `minorTickEndExtent` properties.
+Tick marks are thin lines radiating from the center of the radial gauge. There are two types of tick marks: major and minor. Major tick marks are displayed at the `interval` between the `minimumValue` and `maximumValue` properties. Use the `minorTickCount` property to specify the number of minor tick marks displayed between each major tick mark. You can control the length of tick marks by setting a fraction (between 0 and 1) to `tickStartExtent`, `tickEndExtent`, `minorTickStartExtent`, and `minorTickEndExtent` properties.
 
 ```html
 <igx-radial-gauge
@@ -181,9 +181,9 @@ Tick marks are thin lines radiating from the center of the radial gauge. There a
 </igx-radial-gauge>
 ```
 
-<code-view style="height: 320px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge-tickmarks"  
+<code-view style="height: 320px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge-tickmarks"
            github-src="gauges/radial-gauge/tickmarks">
 </code-view>
 
@@ -210,9 +210,9 @@ A range highlights a set of continuous values bound by a specified `minimumValue
 </igx-radial-gauge>
 ```
 
-<code-view style="height: 320px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge-ranges"  
+<code-view style="height: 320px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge-ranges"
            github-src="gauges/radial-gauge/ranges">
 </code-view>
 
@@ -245,9 +245,9 @@ You can enable an interactive mode of the gauge (using [`isNeedleDraggingEnabled
 </igx-radial-gauge>
 ```
 
-<code-view style="height: 320px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge-needle"  
+<code-view style="height: 320px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge-needle"
            github-src="gauges/radial-gauge/needle">
 </code-view>
 

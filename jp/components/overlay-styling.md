@@ -14,7 +14,7 @@ _language: ja
 
 ## オーバーレイ コンポーネントのスタイル設定
 
-ほとんどの場合、[グローバル](themes/global-theme.md) テーマのスタイルはオーバーレイ アウトレットの影響を受けません。例として、グローバル [`igx-css-vars`]({environment:sassApiUrl}/index.html#mixin-igx-css-vars) mixin で[スタイル設定された](drop-down.md#スタイル設定)ドロップダウンを見てみましょう。
+ほとんどの場合、[グローバル](themes/sass/global-themes.md) テーマのスタイルはオーバーレイ アウトレットの影響を受けません。例として、グローバル [`igx-css-vars`]({environment:sassApiUrl}/index.html#mixin-igx-css-vars) mixin で[スタイル設定された](drop-down.md#スタイル設定)ドロップダウンを見てみましょう。
 
 ```html
 <!-- overlay-styling.component.html -->
@@ -43,7 +43,7 @@ $my-drop-down-theme: igx-drop-down-theme(
 
 オーバーレイに表示される要素のスタイルをスコーピングする際に DOM のオーバーレイ `アウトレット`の位置を指定する必要があります。スコープが設定された CSS ルールには、要素の特定の階層構造が必要です - オーバーレイ コンテンツが、適用するスタイルの正しいコンテキストで表示されることを確認してください。
 
-たとえば、`igx-combo` を取り上げます。コンボは独自のビュー内でコンテンツを定義するため、項目の[スタイル設定](combo.md#スタイル設定)は `igx-drop-down` テーマを使用します。
+たとえば、`igx-combo` を取り上げます。コンボは独自のビュー内でコンテンツを定義するため、項目の[スタイル設定](combo.md#angular-combobox-スタイル設定)は `igx-drop-down` テーマを使用します。
 
 > [!NOTE]
 > スタイルが他に影響しないようにするには、スタイルのスコープを `:host` セレクター内にしてください。
@@ -58,7 +58,7 @@ $my-drop-down-theme: igx-drop-down-theme(
 テーマの `$legacy-support` 変数が `true` に設定されている場合、コンポーネントのテーマ関数を使用してスタイル設定します。
 
 >[!NOTE]
->コンポーネントが [`Emulated`](./themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
+>コンポーネントが [`Emulated`](./themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
 
 ```scss
 // overlay-styling.component.scss
@@ -148,7 +148,7 @@ $my-overlay-theme: igx-overlay-theme(
 ```
 
 >[!NOTE]
->コンポーネントが [`Emulated`](./themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用していて、`$legacy-support` が `true` に設定されている場合、オーバーレイのテーマ関数を使用して `::ng-deep` によってこのカプセル化を`ペネトレーションします`。
+>コンポーネントが [`Emulated`](./themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用していて、`$legacy-support` が `true` に設定されている場合、オーバーレイのテーマ関数を使用して `::ng-deep` によってこのカプセル化を`ペネトレーションします`。
 
 ## API リファレンス
 * [IgniteUI for Angular - テーマ ライブラリ](themes/index.md)

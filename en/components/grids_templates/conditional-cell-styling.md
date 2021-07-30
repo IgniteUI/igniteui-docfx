@@ -67,8 +67,8 @@ You can conditionally style the @@igxName cells by setting the [`IgxColumnCompon
 <!-- sample.component.html -->
 <igx-column field="UnitPrice" header="Unit Price" [dataType]="'number'" [cellClasses] = "priceClasses">
     <ng-template igxCell let-cell="cell" let-val>
-        <span *ngIf="cell.row.rowData.UnitPrice == 0">-</span>
-        <span *ngIf="cell.row.rowData.UnitPrice != 0">${{val}}</span>
+        <span *ngIf="cell.row.data.UnitPrice == 0">-</span>
+        <span *ngIf="cell.row.data.UnitPrice != 0">${{val}}</span>
     </ng-template>
 </igx-column>
 ```
@@ -191,7 +191,7 @@ public styles = {
 ### Using cellStyles
 Columns now expose the `cellStyles` property which allows conditional styling of the column cells. Similar to `cellClasses` it accepts an object literal where the keys are style properties and the values are expressions for evaluation. Also, you can apply regular styling with ease (without any conditions).
 
-In the [sample above](conditional-cell-styling.md#demo-with-cellstyles) we've created:
+In the [sample above](#demo) we've created:
 - Two different styles that will be applied based on the column index. 
 - You will also change the `text color` based on even/odd rows.
 

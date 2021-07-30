@@ -39,7 +39,7 @@ export class AppModule {}
 ### Alert Dialog
 
 To create an alert dialog, in the template of our email component, we add the following code. We have to set the [`title`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#title), [`message`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#message), 
-[`leftButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftbuttonlabel) and handle [`onLeftButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#onleftbuttonselect) event:
+[`leftButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftbuttonlabel) and handle [`leftButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftbuttonselect) event:
 
 ```html
 <!--email.component.html-->
@@ -49,7 +49,7 @@ To create an alert dialog, in the template of our email component, we add the fo
     title="Notification"
     message="Your email has been sent successfully!"
     leftButtonLabel="OK"
-    (onLeftButtonSelect)="alert.close()">
+    (leftButtonSelect)="alert.close()">
 </igx-dialog>
 ```
 
@@ -60,7 +60,7 @@ If everything's done right, you should see the demo sample shown above in your b
 ### Standard Dialog
 
 To create a standard dialog, in the template of our file manager component, we add the following code. We have to set the [`title`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#title), [`message`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#message), 
-[`leftButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftbuttonlabel), [`rightButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#rightbuttonlabel), and handle [`onLeftButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#onleftbuttonselect) and [`onRightButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#onrightbuttonselect) events:
+[`leftButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftbuttonlabel), [`rightButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#rightbuttonlabel), and handle [`leftButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftbuttonselect) and [`rightButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#rightbuttonselect) events:
 
 ```html
 <!--file-manager.component.html-->
@@ -68,9 +68,9 @@ To create a standard dialog, in the template of our file manager component, we a
 
 <igx-dialog #dialog title="Confirmation"
     leftButtonLabel="Cancel"
-    (onLeftButtonSelect)="dialog.close()"
+    (leftButtonSelect)="dialog.close()"
     rightButtonLabel="OK"
-    (onRightButtonSelect)="onDialogOKSelected($event)"
+    (rightButtonSelect)="onDialogOKSelected($event)"
     message="Are you sure you want to delete the Microsoft_Annual_Report_2015.pdf and Microsoft_Annual_Report_2015.pdf files?">
 </igx-dialog>
 ```
@@ -178,7 +178,8 @@ public positionSettings: PositionSettings = {
 };
 ```
 
-> [!Note] The same approach should be used for the animation settings, use the `openAnimation` and `closeAnimation` properties to define animation params like duration. 
+> [!Note] 
+> The same approach should be used for the animation settings, use the `openAnimation` and `closeAnimation` properties to define animation params like duration. 
 `params` object example:
 
 ```typescript
@@ -226,7 +227,7 @@ Since the dialog window uses the [`IgxOverlayService`](overlay.md), in order for
 ```
 
 > [!NOTE]
-> In order to learn more about the various options for providing themes to elements that are shown by using the [`IgxOverlayService`](overlay.md), you can take a look at this [link](overlay.md#styling).
+> In order to learn more about the various options for providing themes to elements that are shown by using the [`IgxOverlayService`](overlay.md), you can take a look at the [Overlay styling topic](overlay-styling.md).
 
 ### Including Themes
 
@@ -240,7 +241,7 @@ If `$legacy-support` is set to `true`, include the **theme** like that:
  @include igx-dialog($my-dialog-theme);
 ```
 >[!NOTE]
->If the component is using an [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`
+>If the component is using an [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`
 
 ```scss
 :host {
@@ -259,7 +260,7 @@ If `$legacy-support` is set to `false`(default), include the component **css var
 ```
 
 >[!NOTE]
->If the component is using an [`Emulated`](themes/component-themes.md#view-encapsulation) ViewEncapsulation, you still have to use `:host` because you need a global selector in order to override the variables.
+>If the component is using an [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, you still have to use `:host` because you need a global selector in order to override the variables.
 
 ```scss
 :host {
@@ -283,6 +284,12 @@ If `$legacy-support` is set to `false`(default), include the component **css var
 * [IgxDialogComponent Styles]({environment:sassApiUrl}/index.html#function-igx-dialog-theme)
 * [IgxOverlay]({environment:angularApiUrl}/interfaces/overlaysettings.html)
 * [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+
+## Theming Dependencies
+
+* [IgxButton Theme]({environment:sassApiUrl}/index.html#function-igx-button-theme)
+* [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
+* [IgxOverlay Theme]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 
 ## Additional Resources
 

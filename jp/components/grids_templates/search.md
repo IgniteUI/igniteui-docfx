@@ -234,7 +234,7 @@ public updateExactSearch() {
 
 ### 永続化
 
-@@igComponent のフィルターやソート、レコードの追加や削除をする場合を想定します。そのような処理の後、現在の検索が自動的に更新されて **searchText** に一致するテキストが保持されます。更に検索がページングで動作し、@@igComponent の [`perPage`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#perpage) プロパティの変更時も強調表示が保持されます。
+@@igComponent のフィルターやソート、レコードの追加や削除をする場合を想定します。そのような処理の後、現在の検索が自動的に更新されて **searchText** に一致するテキストが保持されます。更に検索がページングで動作し、@@igComponent の [`perPage`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#perPage) プロパティの変更時も強調表示が保持されます。
 
 ### アイコンの追加
 
@@ -362,9 +362,7 @@ public clearSearch() {
 -   [clearSearch]({environment:angularApiUrl}/classes/@@igTypeDoc.html#clearsearch)
 -   [refreshSearch]({environment:angularApiUrl}/classes/@@igTypeDoc.html#refreshsearch)
 
-[`IgxGridCellComponent`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html) メソッド:
--   [highlightText]({environment:angularApiUrl}/classes/igxgridcellcomponent.html#highlighttext)
--   [clearHighlight]({environment:angularApiUrl}/classes/igxgridcellcomponent.html#clearhighlight)
+[`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html) メソッド:
 
 [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) プロパティ:
 -   [searchable]({environment:angularApiUrl}/classes/igxcolumncomponent.html#searchable)

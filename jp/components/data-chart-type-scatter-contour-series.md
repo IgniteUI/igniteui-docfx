@@ -13,15 +13,12 @@ _language: ja
 
 ## Angular 散布図 - 等高線シリーズの例
 
-<div class="sample-container loading" style="height: 500px">
-    <iframe id="data-chart-type-scatter-contour-series-iframe" src='{environment:dvDemosBaseUrl}/charts/data-chart-type-scatter-contour-series' width="100%" height="100%" seamless frameBorder="0" onload="onXPlatSampleIframeContentLoaded(this);" alt="Angular 散布図 - 等高線シリーズの例"></iframe>
-</div>
-<div>
-    <button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="data-chart-type-scatter-contour-series-iframe" data-demos-base-url="{environment:dvDemosBaseUrl}">StackBlitz で表示
-    </button>
-
-
-</div>
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-scatter-contour-series"
+           alt="Angular 散布図 - 等高線シリーズの例"
+           github-src="charts/data-chart/type-scatter-contour-series">
+</code-view>
 
 <div class="divider--half"></div>
 
@@ -45,14 +42,7 @@ public dataSource: any[] = SampleScatterData.create();
 
 ## モジュールの要件
 
-散布等高線シリーズを作成するには、以下のモジュールが必要です。<!-- Angular, React, WebComponents --> <!-- end: Angular, React, WebComponents --><!-- Blazor -->モジュールはアプリケーションのエントリ ポイントに登録する必要があります。
-
--   DataChartCoreModule        
--   DataChartScatterCoreModule
--   DataChartScatterModule   
--   DataChartInteractivityModule
--   ScatterContourSeriesModule
-    <!-- end: Blazor -->
+散布等高線シリーズを作成するには、以下のモジュールが必要です。
 
 ```ts
 // axis' modules:
@@ -81,7 +71,7 @@ export class AppModule { /* ... */ }
 
 ## コード例
 
-このコードは、[`IgxScatterContourSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscattercontourseriescomponent.html) でデータチャートのインスタンスを作成し、データソースにバインドする方法を説明します。
+このコードは、[`IgxScatterContourSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscattercontourseriescomponent.html) でデータ チャートのインスタンスを作成し、データソースにバインドする方法を説明します。
 
 ```html
  <igx-data-chart

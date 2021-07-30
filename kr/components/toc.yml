@@ -793,7 +793,7 @@
   new: false
   items:
     - name: Reactive Forms
-      href: input-group-reactive-forms.md
+      href: angular-reactive-form-validation.md
 - name: Mask
   href: mask.md
   new: false

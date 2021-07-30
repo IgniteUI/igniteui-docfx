@@ -215,7 +215,7 @@ export class RemoteLoDService {
 
 ```html
 <igx-hierarchical-grid [data]="localData" [displayDensity]="density" [autoGenerate]="false"
-    [allowFiltering]='true' [paging]="true" [height]="'600px'" [width]="'800px'" #hGrid>
+    [allowFiltering]='true' [height]="'600px'" [width]="'800px'" #hGrid>
     <igx-column field="ID" [pinned]="true" [filterable]='true'></igx-column>
     <igx-column-group header="Information">
         <igx-column field="ChildLevels"></igx-column>
@@ -227,7 +227,10 @@ export class RemoteLoDService {
             <igx-column field="ChildLevels"></igx-column>
             <igx-column field="ProductName"></igx-column>
         </igx-column-group>
+        <igx-paginator *igxPaginator [perPage]="5"></igx-paginator>
     </igx-row-island>
+    <igx-paginator>
+    </igx-paginator>
 </igx-hierarchical-grid>
 ```
 
@@ -269,12 +272,12 @@ CRUD API メソッドの呼び出しは,各グリッド インスタンスで可
 
 ## スタイル設定
 
-igxHierarchicalGrid を使用すると、[Ignite UI for Angular テーマ ライブラリ](../themes/component-themes.md) でスタイルを設定できます。[テーマ]({environment:sassApiUrl}/index.html#function-igx-grid-theme) は、グリッドのすべての機能をカスタマイズできるさまざまなプロパティを公開します。 
+igxHierarchicalGrid を使用すると、[Ignite UI for Angular テーマ ライブラリ](../themes/sass/component-themes.md) でスタイルを設定できます。[テーマ]({environment:sassApiUrl}/index.html#function-igx-grid-theme) は、グリッドのすべての機能をカスタマイズできるさまざまなプロパティを公開します。 
 
 以下の手順では、igxHierarchicalGrid スタイルをカスタマイズする手順を実行しています。     
 
 ### グローバル テーマのインポート   
-階層グリッドのカスタマイズは、すべてのスタイリング機能と mixins が配置されている `index` ファイルをインポートする必要があります。 
+階層グリッドのカスタマイズは、すべてのスタイリング機能とミックスインが配置されている `index` ファイルをインポートする必要があります。 
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index'
@@ -332,7 +335,7 @@ $custom-theme: igx-grid-theme(
 ```   
 
 ### カスタム スキーマの定義
-さらに進んで、[**スキーマ**](../themes/schemas.md) のすべての利点を備えた柔軟な構造を構築できます。**スキーマ**はテーマを作成させるための方法です。   
+さらに進んで、[**スキーマ**](../themes/sass/schemas.md) のすべての利点を備えた柔軟な構造を構築できます。**スキーマ**はテーマを作成させるための方法です。   
 すべてのコンポーネントに提供される 2 つの事前定義されたスキーマの 1 つを拡張します。この場合、`$_light_grid` を使用します。
 ```scss
 $custom-grid-schema: extend($_light-grid,(
@@ -374,7 +377,7 @@ $custom-theme: igx-grid-theme(
 このように、Angular の [ViewEncapsulation](https://angular.io/api/core/Component#encapsulation) により、スタイルはカスタム コンポーネントにのみ適用されます。
 
  >[!NOTE]
- >コンポーネントが [`Emulated`](../themes/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、グリッドのスタイル設定は `::ng-deep` を使用してこのカプセル化を解除する必要があります。
+ >コンポーネントが [`Emulated`](../themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、グリッドのスタイル設定は `::ng-deep` を使用してこのカプセル化を解除する必要があります。
  >[!NOTE]
  >ステートメントがコンポーネントの外にある要素に影響を与えないよう、ステートメントを `:host` セレクター内にラップします。
 
@@ -393,16 +396,18 @@ $custom-theme: igx-grid-theme(
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-styling" >
 </code-view>
 
+>[!NOTE]
+>このサンプルは、「テーマの変更」から選択したグローバル テーマに影響を受けません。
+
 
 ## 既知の問題と制限
 
 |制限|説明|
 |--- |--- |
 |グループ化|グループ化機能は、階層グリッドでサポートされません。|
-|Excel エクスポート|Excel へのエクスポートは Hierarchical Grid でサポートされませんが、今後の Ignite UI for Angular アップデートでサポート予定です。|
 
 > [!NOTE]
-> `igxHierarchicalGrid` は内部で `igxForOf` ディレクティブを使用するため、すべての `igxForOf` の制限が `igxForOf` で有効です。詳細については、[igxForOf 既知の問題](../for-of.html#既知の問題と制限) のセクションを参照してください。
+> `igxHierarchicalGrid` は内部で `igxForOf` ディレクティブを使用するため、すべての `igxForOf` の制限が `igxForOf` で有効です。詳細については、[igxForOf 既知の問題](../for-of.md#既知の問題と制限) のセクションを参照してください。
 
 ## API リファレンス
 
@@ -411,8 +416,21 @@ $custom-theme: igx-grid-theme(
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 * [IgxGridComponent スタイル]({environment:sassApiUrl}/#function-igx-grid-theme)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
-* [IgxGridRowComponent]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)
-* [IgxGridCellComponent]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
+* [IgxHierarchicalGridRow]({environment:angularApiUrl}/classes/igxhierarchicalgridrow.html)
+* [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
+
+## テーマの依存関係
+* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxInputGroup テーマ]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
+* [IgxChip テーマ]({environment:sassApiUrl}/index.html#function-igx-chip-theme)
+* [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
+* [IgxButton テーマ]({environment:sassApiUrl}/index.html#function-igx-button-theme)
+* [IgxOverlay テーマ]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+* [IgxDropDown テーマ]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme)
+* [IgxCalendar テーマ]({environment:sassApiUrl}/index.html#function-igx-calendar-theme)
+* [IgxActionStrip テーマ]({environment:sassApiUrl}/index.html#function-igx-action-strip-theme)
+* [IgxSnackBar テーマ]({environment:sassApiUrl}/index.html#function-igx-snackbar-theme)
+* [IgxBadge テーマ]({environment:sassApiUrl}/index.html#function-igx-badge-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

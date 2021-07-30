@@ -68,7 +68,6 @@ Now, we can assign `$my-palette` to `$default-palette` and store it in our `_var
 // _variables.scss
 
 $legacy-support: true;
-$my-palette: igx-color(red, blue);
 
 $my-palette: igx-palette(
   $primary: red, 
@@ -125,6 +124,10 @@ Here's a list of those variables:
 | `$components` | Stores a register of all component themes. Used for tree-shaking.           |
 | `$keyframes`  | Stores a register of all keyframe animation mixins. Used for tree-shaking. |
 
+
+## Scrollbar Styling
+
+The Ignite UI for Angular themes ship with custom scrollbar styles that allow you to change the width and/or the colors of all scrollbars in your application. To apply the included styles, make sure to set the `igx-scrollbar` class to an element that contains your root app component.
 
 <div class="divider"></div>
 
