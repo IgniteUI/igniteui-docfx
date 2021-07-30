@@ -161,7 +161,7 @@
     - name: Group By
       href: grid/groupby.md
       new: false
-      updated: true
+      updated: false
     - name: Summaries
       href: grid/summaries.md
       updated: true
