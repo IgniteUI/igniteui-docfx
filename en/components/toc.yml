@@ -39,9 +39,6 @@
   href: general/cli-overview.md
   new: false
   items:
-    - name: Step-by-Step Guide
-      href: general/cli/step-by-step-guide.md
-      new: false
     - name: Templates
       href: general/cli/component-templates.md
       new: false
@@ -53,6 +50,12 @@
       new: false
     - name: Getting Started with Ignite UI CLI
       href: general/cli/getting-started-with-cli.md
+      new: false
+    - name: Step by Step guide using Ignite UI CLI
+      href: general/cli/step-by-step-guide-using-cli.md
+      new: false
+    - name: Step by Step guide using Ignite UI for Angular Schematics
+      href: general/cli/step-by-step-guide-using-angular-schematics.md
       new: false
 - name: WPF to Angular guide
   href: general/wpf-to-angular-guide/wpf-to-angular-guide.md

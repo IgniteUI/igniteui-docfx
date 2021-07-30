@@ -15,7 +15,7 @@ npm install -g igniteui-cli
 ```
 
 ### Using guided experience
-The shortest and easiest way to bootstrap an application is to use the [Step-by-Step Guide](step-by-step-guide.md). 
+The shortest and easiest way to bootstrap an application is to use the [step by step guide using Ignite UI CLI](step-by-step-guide-using-cli.md). 
 
 To activate the guide using the Ignite UI CLI run:
 
@@ -36,7 +36,7 @@ ig new
     <p style="text-align:center;">Building Your First Ignite UI CLI App</p>
 </div>
 
-## Create new project
+## Create a new project
 
 When using [Ignite UI CLI](https://github.com/IgniteUI/igniteui-cli) you need to provide `angular` as framework and `igx-ts` as your project type argument to the `new` command:
 

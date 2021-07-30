@@ -6,7 +6,7 @@ _keywords: igniteui for angular | angular schematics | templates | infragistics
 
 # Authentication Project Template
 
-There are multiple versions of a project (called project templates) to choose from when using either the [`new` command](../cli-overview.md#create-new-project) or the [Step by step mode](step-by-step-guide.md).
+There are multiple versions of a project (called project templates) to choose from when using either the [`new` command with Ignite UI CLI](getting-started-with-cli.md#create-new-project), [with Ignite UI for Angular Schematics](getting-started-with-angular-schematics.md#create-new-project) or the [Step by step mode using Ignite UI CLI](step-by-step-guide-using-cli.md) or [Ignite UI for Angular Schematics](step-by-step-guide-using-angular-schematics.md).
 
 When creating Ignite UI for Angular project with Angular Schematics or Ignite UI CLI you can select a template with an basic implementation of a client-side authentication module that require as little additional setup as possible to jump-start apps with user management.
 

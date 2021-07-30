@@ -14,7 +14,7 @@ The above install will make the schematics available to use a collection paramet
 
 ### Using guided experience
 
-The shortest and easiest way to bootstrap an application is to use the [Step-by-Step Guide](step-by-step-guide.md). 
+The shortest and easiest way to bootstrap an application is to use the [step by step guide using Ignite UI for Angular Schematics](step-by-step-guide-using-angular-schematics.md). 
 
 To activate the guide using the Ignite UI for Angular Schematics run:
 
@@ -22,12 +22,18 @@ To activate the guide using the Ignite UI for Angular Schematics run:
 ng new --collection="@igniteui/angular-schematics"
 ```
 
-## Create new project
+## Create a new project
 
 To create an application that is configured to use the Ignite UI for Angular controls, run the `ng new` command providing `@igniteui/angular-schematics` to the collection option.
 
 ```cmd
 ng new newAngularProject --collection="@igniteui/angular-schematics" --template=side-nav
+```
+
+If you already have an Angular project, created without providing the `@igniteui/angular-schematics` collection as described above, you can add the Ignite UI for Angular product, using the following command:
+
+```cmd
+ng add igniteui-angular
 ```
 
 The new application is created in a directory with the same name (`newAngularProject`). There are several project templates from which you can choose when creating an Ignite UI for Angular application:

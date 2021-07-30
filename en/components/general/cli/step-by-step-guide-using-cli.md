@@ -1,17 +1,11 @@
 ---
-title: Step-by-Step Guide | Ignite UI for Angular | Infragistics
+title: Step-by-Step Guide Using Ignite UI CLI| Ignite UI for Angular | Infragistics
 _description: The Step-by-Step mode contains guided experience through the Ignite UI CLI options.
 _keywords: angular cli, ignite ui for angular, infragistics
 ---
 
-# Step-by-Step Guide
-If you want to get a guided experience through the available options, you can initialize the step by step mode that will help you create and setup your new application, as well as update project previously created with the [Ignite UI Angular Schematics](getting-started-with-angular-schematics.md) or [Ignite UI CLI](getting-started-with-cli.md).
-
-To activate the guide using the Schematics collection run:
-
-```cmd
-ng new --collection="@igniteui/angular-schematics"
-```
+# Step-by-Step Guide using Ignite UI CLI
+If you want to get a guided experience through the available options, you can initialize the step by step mode that will help you create and setup your new application, as well as update project previously created with the [Ignite UI CLI](getting-started-with-cli.md).
 
 To start the guide using the Ignite UI CLI, simply run the `ig` command:
 
@@ -32,7 +26,8 @@ This will activate the step by step mode and you will be asked a series of quest
     </a>
 </div>
 
-> **Note** Step by step mode relies on `Inquirer.js`, see [supported terminals](https://github.com/SBoudrias/Inquirer.js#support-os-terminals)
+> [!Note] 
+> Step by step mode relies on `Inquirer.js`, see [supported terminals](https://github.com/SBoudrias/Inquirer.js#support-os-terminals)
 
 
 
@@ -58,11 +53,6 @@ After completing the above steps the application structure will be generated, gi
 
 Ignite UI CLI supports multiple component templates, as well as some more elaborated scenario templates, that can be added to a project. This mode can be activated either after completing project creation or inside an existing project using the commands below.
 
-To activate the the step by step mode using the Schematics collection run the `component`(alias:`c`) schematic:
-```bash
-ng g @igniteui/angular-schematics:component
-```
-
 When using Ignite UI CLI, run the `add` command:
 ```bash	
 ig add
@@ -83,4 +73,5 @@ If you choose to add a scenario to your application you will also get a list of 
 
 After adding a template to your application, you will be asked weather you want to complete the process or to proceed with adding more controls. When you choose to complete the process, the required packages will be installed (on project creation) and the application will be served and opened in your default browser.
 
-You can always add more Ignite UI for Angular views to your application at latter moment using the `add` command.
+You can always add more Ignite UI for Angular views to your application at latter moment using the [`add`](getting-started-with-cli.md#add-template) command using the following syntax:
+`ig add [template] [name]`.
