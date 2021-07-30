@@ -55,7 +55,7 @@ Keyboard navigation is available by default in any grid and aims at covering as 
 ### Custom keyboard navigation
 Customizing the default behavior, that we described above when a certain key is pressed is one of the great benefits that our keyboard navigation feature provides. Like when `Enter key` or `Tab key` are pressed. Actions like `going to the next cell` or `cell below` could be handled easily with the powerful keyboard navigation API.
 
-- [`onGridKeydown`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#ongridkeydown) is exposed. The event will emit [`IGridKeydownEventArgs`]({environment:angularApiUrl}/interfaces/igridkeydowneventargs.html). This event is available only through the keyboard key combinations mentioned above, for all other key actions you can use `keydown` event `(keydown)="onKeydown($event)"`
+- [`gridKeydown`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#gridKeydown) is exposed. The event will emit [`IGridKeydownEventArgs`]({environment:angularApiUrl}/interfaces/igridkeydowneventargs.html). This event is available only through the keyboard key combinations mentioned above, for all other key actions you can use `keydown` event `(keydown)="onKeydown($event)"`
 - [`navigateTo`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#navigateto) - this method allows you to navigate to a position based on provided `rowindex` and `visibleColumnIndex`
 - [`getNextCell`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#navigateto) - returns [`ICellPosition`]({environment:angularApiUrl}/interfaces/icellposition.html) which defines the next cell, according to the current position, that match specific criteria. You can pass callback function as a third parameter of [`getPreviousCell`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#getpreviouscell) method
 - [`getPreviousCell`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#getpreviouscell) - returns [`ICellPosition`]({environment:angularApiUrl}/interfaces/icellposition.html) which defines the previous cell, according to the current position, that match specific criteria. You can pass callback function as a third parameter of [`getPreviousCell`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#getpreviouscell) method.
@@ -72,7 +72,7 @@ The sample below shows how to:
 
 ```html
 <igx-grid #grid1 [data]="data" [primaryKey]="'ProductID'" [autoGenerate]="false" [displayDensity]="'compact'"
-    width="100%" height="350px" [rowSelectable]="true" (onGridKeydown)="customKeydown($event)">
+    width="100%" height="350px" [rowSelectable]="true" (gridKeydown)="customKeydown($event)">
     <igx-column field="ProductID" header="Product ID" width="16%" [headerClasses]="'prodId'"
         [editable]="true">
     </igx-column>
@@ -113,19 +113,19 @@ You can try the `actions below` in order to observe the custom keyboard navigati
 }
 
 @@if (igxName === 'IgxHierarchicalGrid') {
-In order to add custom keyboard navigation to igxHierarchicalGrid child grids [`onGridCreated`]({environment:angularApiUrl}/classes/igxrowislandcomponent.html#ongridcreated) should be handled and each child grid should subscribe to [`onGridKeydown`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#ongridkeydown) event.
+In order to add custom keyboard navigation to igxHierarchicalGrid child grids [`onGridCreated`]({environment:angularApiUrl}/classes/igxrowislandcomponent.html#ongridcreated) should be handled and each child grid should subscribe to [`gridKeydown`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#gridKeydown) event.
 
 ```typescript
 public childGridCreated(event: IGridCreatedEventArgs) {
     const grid = event.grid;
-    event.grid.onGridKeydown.subscribe((args) => {
+    event.grid.gridKeydown.subscribe((args) => {
         this.customKeydown(args, grid);
     });
 }
 ```
 
 ```html
-<igx-hierarchical-grid #grid1 class="hgrid" [data]="data" (onGridKeydown)="customKeydown($event, grid1)"
+<igx-hierarchical-grid #grid1 class="hgrid" [data]="data" (gridKeydown)="customKeydown($event, grid1)"
     [height]="'500px'" [width]="'80%'" [rowHeight]="'65px'">
         <igx-column field="Artist" editable="true" width="20%"></igx-column>
         ...
@@ -181,7 +181,7 @@ You can try the `actions below` in order to observe the custom keyboard navigati
 
 ```html
 <igx-tree-grid #grid1 [data]="data" [primaryKey]="'ProductID'" [autoGenerate]="false" [displayDensity]="'compact'"
-    width="100%" height="350px" [rowSelectable]="true" (onGridKeydown)="customKeydown($event)">
+    width="100%" height="350px" [rowSelectable]="true" (gridKeydown)="customKeydown($event)">
     <igx-column field="ProductID" header="Product ID" width="16%" [headerClasses]="'prodId'"
         [editable]="true">
     </igx-column>

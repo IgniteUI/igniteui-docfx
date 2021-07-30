@@ -67,7 +67,7 @@ Ignite UI for Angular @@igComponent에서 **RowDrag**는 루트 `@@igSelector` �
  ...
 </@@igSelector>
 ```
-버튼을 누른 상태에서 드래그 핸들을 클릭하고 *커서를 움직이면* 그리드의 [`onRowDragStart`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowdragstart) 이벤트가 실행됩니다. 언제든지 클릭을 해제하면 [`onRowDragEnd`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowdragend) 이벤트가 실행됩니다.
+버튼을 누른 상태에서 드래그 핸들을 클릭하고 *커서를 움직이면* 그리드의 [`rowDragStart`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowDragStart) 이벤트가 실행됩니다. 언제든지 클릭을 해제하면 [`rowDragEnd`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowDragEnd) 이벤트가 실행됩니다.
 
 아래에서 행 드래그를 지원하도록 `@@igSelector`를 구성하는 방법과 드롭 이벤트를 적절하게 처리하는 방법에 대한 내용을 살펴볼 수 있습니다.
 
@@ -331,8 +331,8 @@ Notice that we also have row selection enabled and we preserve the selection whe
 ## API 참조
 
 * [rowDraggable]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowdraggable)
-* [onRowDragStart]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowdragstart)
-* [onRowDragEnd]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowdragend)
+* [rowDragStart]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowDragStart)
+* [rowDragEnd]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowDragEnd)
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 
 ## 추가 리소스

@@ -171,7 +171,7 @@ The template we are going to use to combine the grid with the context menu:
 <div class="wrapper">
     <div class="grid__wrapper" (window:click)="disableContextMenu()">
         <igx-grid #grid1 [data]="data" [autoGenerate]="false" height="500px" width="100%"
-            (onContextMenu)="rightClick($event)" (onRangeSelection)="getCells($event)"
+            (onContextMenu)="rightClick($event)" (rangeSelected)="getCells($event)"
             (onSelection)="cellSelection($event)">
         <!-- Columns area -->
         </igx-grid>

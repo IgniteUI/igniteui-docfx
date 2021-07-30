@@ -194,7 +194,7 @@ const column = this.grid.getColumnByName("User");
 column.bodyTemplate = this.smallView;
 ```
 
-열 속성은 열이 그리드에서 초기화될 때 생성되는 [`initColumns`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncolumninit) 이벤트 코드에서 설정할 수도 있습니다.
+열 속성은 열이 그리드에서 초기화될 때 생성되는 [`columnInit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columnInit) 이벤트 코드에서 설정할 수도 있습니다.
 
 ```typescript
 public initColumns(column: IgxGridColumn) {

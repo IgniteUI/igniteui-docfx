@@ -114,17 +114,17 @@ const idColumn = grid.getColumnByName("ID");
 idColumn.move(3);
 ```
 
-Note that when using the API, only the [`onColumnMovingEnd`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncolumnmovingend) event will be emitted, if the operation was successful. Also note that in comparison to the drag and drop functionality, using the API does not require setting the `movable` property to true. 
+Note that when using the API, only the [`columnMovingEnd`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnMovingEnd) event will be emitted, if the operation was successful. Also note that in comparison to the drag and drop functionality, using the API does not require setting the `movable` property to true. 
 
 
 #### 이벤트
 
-열의 드래그 앤드 드롭 조작을 설정하기 위해 열 이동과 관련된 복수의 이벤트가 제공됩니다. [`onColumnMovingStart`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncolumnmovingstart), [`onColumnMoving`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncolumnmoving) 및 [`onColumnMovingEnd`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncolumnmovingend)가 있습니다. 
-[`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html)의 [`onColumnMovingEnd`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncolumnmovingend) 이벤트를 처리하고 열을 새로운 위치로 드롭할 때 일부 사용자 논리를 구현할 수 있습니다. 예를 들면, Change On Year(%) 열 뒤에 카테고리 드롭을 취소할 수 있습니다.
+열의 드래그 앤드 드롭 조작을 설정하기 위해 열 이동과 관련된 복수의 이벤트가 제공됩니다. [`columnMovingStart`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnMovingStart), [`columnMoving`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnmoving) 및 [`columnMovingEnd`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnMovingEnd)가 있습니다. 
+[`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html)의 [`columnMovingEnd`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnMovingEnd) 이벤트를 처리하고 열을 새로운 위치로 드롭할 때 일부 사용자 논리를 구현할 수 있습니다. 예를 들면, Change On Year(%) 열 뒤에 카테고리 드롭을 취소할 수 있습니다.
 
 @@if (igxName === 'IgxGrid') {
 ```html
-<igx-grid #dataGrid [data]="data" [autoGenerate]="false" (onColumnMovingEnd)="onColumnMovingEnd($event)">
+<igx-grid #dataGrid [data]="data" [autoGenerate]="false" (columnMovingEnd)="onColumnMovingEnd($event)">
     <igx-column [field]="'Category'" [movable]="true"></igx-column>
     <igx-column [field]="'Change On Year(%)'" [dataType]="'number'" [movable]="true" ></igx-column>
 </igx-grid>
@@ -140,7 +140,7 @@ public onColumnMovingEnd(event) {
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```html
-<igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="false" (onColumnMovingEnd)="onColumnMovingEnd($event)">
+<igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="false" (columnMovingEnd)="onColumnMovingEnd($event)">
     <igx-column [field]="'Name'" dataType="string" [movable]="true" width="250px"></igx-column>
     <igx-column [field]="'Title'" dataType="string" [movable]="true" width="250px"></igx-column>
 </igx-tree-grid>
@@ -156,7 +156,7 @@ public onColumnMovingEnd(event) {
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid #hierarchicalGrid [data]="data" [autoGenerate]="false" (onColumnMovingEnd)="onColumnMovingEnd($event)">
+<igx-hierarchical-grid #hierarchicalGrid [data]="data" [autoGenerate]="false" (columnMovingEnd)="onColumnMovingEnd($event)">
     <igx-column [field]="'Country'" [movable]="true"></igx-column>
     <igx-column [field]="'Phone'" [dataType]="'number'" [movable]="true" ></igx-column>
 </igx-hierarchical-grid>

@@ -385,7 +385,7 @@ public toggleColumn(col: IgxColumnComponent) {
 
 #### 경고
 
-* `@@igxName - 핀 고정 영역이 최대 핀 고정 폭을 초과합니다. 다음 열은 다른 문제를 방지하기 위해 핀 고정 해제되었습니다:... .` - 사용자가 처음에 너무 많은 핀 고정 열을 정의한 경우에 이 경고가 표시됩니다. 처음에 핀 고정된 열의 합계 너비는 @@igComponent 너비의 80%를 넘지 않아야 합니다. 그렇지 않으면 기본적으로 @@igComponent의 제한을 초과하지 않는 최초의 열(정의된 순서)을 취하고 나머지(경고에 나열된 열)는 핀 고정 해제됩니다. @@igComponent에서 핀 고정을 초기화하기 전에 [`onColumnInit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncolumninit) 이벤트를 사용하여 초기화할 때 일부 열을 수동으로 핀 고정 해제할지 결정하기 위해 자체 논리를 실행할 수 있습니다. 각 열에 트리거됩니다.
+* `@@igxName - 핀 고정 영역이 최대 핀 고정 폭을 초과합니다. 다음 열은 다른 문제를 방지하기 위해 핀 고정 해제되었습니다:... .` - 사용자가 처음에 너무 많은 핀 고정 열을 정의한 경우에 이 경고가 표시됩니다. 처음에 핀 고정된 열의 합계 너비는 @@igComponent 너비의 80%를 넘지 않아야 합니다. 그렇지 않으면 기본적으로 @@igComponent의 제한을 초과하지 않는 최초의 열(정의된 순서)을 취하고 나머지(경고에 나열된 열)는 핀 고정 해제됩니다. @@igComponent에서 핀 고정을 초기화하기 전에 [`columnInit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnInit) 이벤트를 사용하여 초기화할 때 일부 열을 수동으로 핀 고정 해제할지 결정하기 위해 자체 논리를 실행할 수 있습니다. 각 열에 트리거됩니다.
 
 <div class="divider--half"></div>
 

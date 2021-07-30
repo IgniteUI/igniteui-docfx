@@ -114,16 +114,16 @@ const idColumn = grid.getColumnByName("ID");
 idColumn.move(3);
 ```
 
-API を使用する時、操作が成功した場合、[`onColumnMovingEnd`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncolumnmovingend) イベントのみが発行されることに注意してください。また、ドラッグアンドドロップ機能と比較して、API を使用するために `movable` プロパティを true に設定する必要がないことにも注意してください。 
+API を使用する時、操作が成功した場合、[`columnMovingEnd`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnMovingEnd) イベントのみが発行されることに注意してください。また、ドラッグアンドドロップ機能と比較して、API を使用するために `movable` プロパティを true に設定する必要がないことにも注意してください。 
 
 ## イベント
 
-列のドラッグアンドドロップ操作をカスタマイズするための列移動に関連するイベントが複数あります。[`onColumnMovingStart`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncolumnmovingstart)、[`onColumnMoving`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncolumnmoving)、[`onColumnMovingEnd`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncolumnmovingend) があります。
-[`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) の [`onColumnMovingEnd`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncolumnmovingend) イベントを処理し、列が新しい位置にドロップされたときにカスタム ロジックを実装できます。たとえば、Change On Year(%) 列の後に Category のドロップをキャンセルできます。
+列のドラッグアンドドロップ操作をカスタマイズするための列移動に関連するイベントが複数あります。[`columnMovingStart`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columnMovingStart)、[`columnMoving`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columnmoving)、[`columnMovingEnd`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columnMovingEnd) があります。
+[`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) の [`columnMovingEnd`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columnMovingEnd) イベントを処理し、列が新しい位置にドロップされたときにカスタム ロジックを実装できます。たとえば、Change On Year(%) 列の後に Category のドロップをキャンセルできます。
 
 @@if (igxName === 'IgxGrid') {
 ```html
-<igx-grid #dataGrid [data]="data" [autoGenerate]="false" (onColumnMovingEnd)="onColumnMovingEnd($event)">
+<igx-grid #dataGrid [data]="data" [autoGenerate]="false" (columnMovingEnd)="onColumnMovingEnd($event)">
     <igx-column [field]="'Category'" [movable]="true"></igx-column>
     <igx-column [field]="'Change On Year(%)'" [dataType]="'number'" [movable]="true" ></igx-column>
 </igx-grid>
@@ -140,7 +140,7 @@ public onColumnMovingEnd(event) {
 
 @@if (igxName === 'IgxTreeGrid') {
 ```html
-<igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="false" (onColumnMovingEnd)="onColumnMovingEnd($event)">
+<igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="false" (columnMovingEnd)="onColumnMovingEnd($event)">
     <igx-column [field]="'Name'" dataType="string" [movable]="true" width="250px"></igx-column>
     <igx-column [field]="'Title'" dataType="string" [movable]="true" width="250px"></igx-column>
 </igx-tree-grid>
@@ -156,7 +156,7 @@ public onColumnMovingEnd(event) {
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid #hierarchicalGrid [data]="data" [autoGenerate]="false" (onColumnMovingEnd)="onColumnMovingEnd($event)">
+<igx-hierarchical-grid #hierarchicalGrid [data]="data" [autoGenerate]="false" (columnMovingEnd)="onColumnMovingEnd($event)">
     <igx-column [field]="'Country'" [movable]="true"></igx-column>
     <igx-column [field]="'Phone'" [dataType]="'number'" [movable]="true" ></igx-column>
 </igx-hierarchical-grid>
