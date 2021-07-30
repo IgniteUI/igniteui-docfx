@@ -82,7 +82,7 @@ All available column data types could be found in the official [Column types top
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
 ```html
-<@@igSelector #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (onColumnInit)="initColumn($event)">
+<@@igSelector #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (columnInit)="initColumn($event)">
     <igx-column field="ProductID" header="Product ID" width="200px"  [sortable]="true">
     </igx-column>
     <igx-column field="ProductName" header="Product Name" width="200px" [sortable]="true" [hasSummary]="true">
@@ -116,7 +116,7 @@ The other way to enable/disable summaries for a specific column or a list of col
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
 ```html
-<@@igSelector #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (onColumnInit)="initColumn($event)" >
+<@@igSelector #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (columnInit)="initColumn($event)" >
     <igx-column field="ProductID" header="Product ID" width="200px"  [sortable]="true">
     </igx-column>
     <igx-column field="ProductName" header="Product Name" width="200px" [sortable]="true" [hasSummary]="true">
@@ -141,7 +141,7 @@ public disableSummary() {
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<@@igSelector #hierarchicalGrid [data]="data" [autoGenerate]="false" height="800px" width="800px" (onColumnInit)="initColumn($event)" >
+<@@igSelector #hierarchicalGrid [data]="data" [autoGenerate]="false" height="800px" width="800px" (columnInit)="initColumn($event)" >
   <igx-column field="Artist" [hasSummary]='true'></igx-column>
         <igx-column field="Photo">
             <ng-template igxCell let-cell="cell">
@@ -235,7 +235,7 @@ See [Custom summaries, which access all data](#custom-summaries-which-access-all
 @@if (igxName !== 'IgxHierarchicalGrid') {
 And now let's add our custom summary to the column `UnitsInStock`. We will achieve that by setting the [`summaries`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#summaries) property to the class we create below.
 ```html
-<@@igSelector #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (onColumnInit)="initColumn($event)" >
+<@@igSelector #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (columnInit)="initColumn($event)" >
     <igx-column field="ProductID" width="200px"  [sortable]="true">
     </igx-column>
     <igx-column field="ProductName" width="200px" [sortable]="true" [hasSummary]="true">

@@ -91,7 +91,7 @@ public grid: IgxGridComponent;
 [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) 속성을 해제하고 마크업에서 열 집합을 정의합니다:
 
 ```html
-<igx-grid #grid1 [data]="data | async" [autoGenerate]="false" [paging]="true" [perPage]="6" (onColumnInit)="initColumns($event)"
+<igx-grid #grid1 [data]="data | async" [autoGenerate]="false" [paging]="true" [perPage]="6" (columnInit)="initColumns($event)"
     (selected)="selectCell($event)" [allowFiltering]="true">
     <igx-column field="Name" [sortable]="true" header=" "></igx-column>
     <igx-column field="AthleteNumber" [sortable]="true" header="Athlete number" [filterable]="false"></igx-column>
@@ -196,7 +196,7 @@ const column = this.grid.getColumnByName("User");
 column.bodyTemplate = this.smallView;
 ```
 
-열 속성은 열이 그리드에서 초기화될 때 생성되는 [`initColumns`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncolumninit) 이벤트 코드에서 설정할 수도 있습니다.
+열 속성은 열이 그리드에서 초기화될 때 생성되는 [`columnInit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columnInit) 이벤트 코드에서 설정할 수도 있습니다.
 
 ```typescript
 public initColumns(column: IgxGridColumn) {

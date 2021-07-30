@@ -114,7 +114,7 @@ public grid: IgxGridComponent;
 [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) プロパティを無効にし、マークアップで列コレクションを定義します。
 
 ```html
-<igx-grid #grid1 [data]="data | async" [autoGenerate]="false" [paging]="true" [perPage]="6" (onColumnInit)="initColumns($event)"
+<igx-grid #grid1 [data]="data | async" [autoGenerate]="false" [paging]="true" [perPage]="6" (columnInit)="initColumns($event)"
     (selected)="selectCell($event)" [allowFiltering]="true">
     <igx-column field="Name" [sortable]="true" header=" "></igx-column>
     <igx-column field="AthleteNumber" [sortable]="true" header="Athlete number" [filterable]="false"></igx-column>
@@ -264,7 +264,7 @@ const column = this.grid.getColumnByName("User");
 column.bodyTemplate = this.smallView;
 ```
 
-列プロパティもグリッドで列が初期化されるときに発生される [`initColumns`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncolumninit) イベントのコードで設定できます。
+列プロパティもグリッドで列が初期化されるときに発生される [`columnInit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columnInit) イベントのコードで設定できます。
 
 ```typescript
 public initColumns(column: IgxGridColumn) {

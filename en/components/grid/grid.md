@@ -114,7 +114,7 @@ Following this topic you will learn more about [cell template](grid.md#cell-temp
 Let's turn the [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) property off and define the columns collection in the markup:
 
 ```html
-<igx-grid #grid1 [data]="data | async" [autoGenerate]="false" [paging]="true" [perPage]="6" (onColumnInit)="initColumns($event)"
+<igx-grid #grid1 [data]="data | async" [autoGenerate]="false" [paging]="true" [perPage]="6" (columnInit)="initColumns($event)"
     (selected)="selectCell($event)" [allowFiltering]="true">
     <igx-column field="Name" [sortable]="true" header=" "></igx-column>
     <igx-column field="AthleteNumber" [sortable]="true" header="Athlete number" [filterable]="false"></igx-column>
@@ -265,7 +265,7 @@ const column = this.grid.getColumnByName("User");
 column.bodyTemplate = this.smallView;
 ```
 
-Column properties can also be set in code in the [`initColumns`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncolumninit) event which is emitted when the columns are initialized in the grid.
+Column properties can also be set in code in the [`columnInit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columnInit) event which is emitted when the columns are initialized in the grid.
 
 ```typescript
 public initColumns(column: IgxGridColumn) {

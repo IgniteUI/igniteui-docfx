@@ -57,7 +57,7 @@ A column or multiple columns can be pinned to the left-hand side of the Angular 
 
 @@if (igxName === 'IgxGrid') {
 ```html
-<igx-grid #grid1 [data]="data | async" [width]="700px" [autoGenerate]="false" [paging]="true" [perPage]="6" (onColumnInit)="initColumns($event)"
+<igx-grid #grid1 [data]="data | async" [width]="700px" [autoGenerate]="false" [paging]="true" [perPage]="6" (columnInit)="initColumns($event)"
     (selected)="selectCell($event)">
     <igx-column [field]="Name" [pinned]="true"></igx-column>
     <igx-column [field]="AthleteNumber"></igx-column>
@@ -151,11 +151,11 @@ var succeed = this.hierarchicalGrid.pinColumn("Artist"); // pinning fails and su
 `Artist` 열을 핀 고정하는 것이 허용되면 핀 고정된 영역은 @@igComponent의 너비보다 커집니다.
 }
 
-열은 가장 오른쪽에 배치된 핀 고정된 열의 오른쪽에 핀 고정됩니다. [`onColumnPinning`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncolumnpinning) 이벤트에서 이벤트 인수인 [`insertAtIndex`]({environment:angularApiUrl}/interfaces/ipincolumneventargs.html#insertatindex) 속성을 원하는 위치 인덱스로 변경하면 핀 고정 열의 순서를 변경할 수 있습니다.
+열은 가장 오른쪽에 배치된 핀 고정된 열의 오른쪽에 핀 고정됩니다. [`columnPin`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnPin) 이벤트에서 이벤트 인수인 [`insertAtIndex`]({environment:angularApiUrl}/interfaces/ipincolumneventargs.html#insertatindex) 속성을 원하는 위치 인덱스로 변경하면 핀 고정 열의 순서를 변경할 수 있습니다.
 
 @@if (igxName === 'IgxGrid') {
 ```html
-<igx-grid #grid1 [data]="data | async" [autoGenerate]="true" (onColumnPinning)="columnPinning($event)"></igx-grid>
+<igx-grid #grid1 [data]="data | async" [autoGenerate]="true" (columnPin)="columnPinning($event)"></igx-grid>
 ```
 
 ```typescript
@@ -168,7 +168,7 @@ public columnPinning(event) {
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```html
-<igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="true" (onColumnPinning)="columnPinning($event)"></igx-tree-grid>
+<igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="true" (columnPin)="columnPinning($event)"></igx-tree-grid>
 ```
 
 ```typescript
@@ -183,7 +183,7 @@ public columnPinning(event) {
 ```html
 <igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="false"
         [height]="'600px'" [width]="'800px'" 
-        (onColumnPinning)="columnPinning($event)" #hierarchicalGrid>
+        (columnPin)="columnPinning($event)" #hierarchicalGrid>
 </igx-hierarchical-grid> 
 ```
 
@@ -383,7 +383,7 @@ public toggleColumn(col: IgxColumnComponent) {
 
 #### 경고
 
-* `@@igxName - 핀 고정 영역이 최대 핀 고정 폭을 초과합니다. 다음 열은 다른 문제를 방지하기 위해 핀 고정 해제되었습니다:... .` - 사용자가 처음에 너무 많은 핀 고정 열을 정의한 경우에 이 경고가 표시됩니다. 처음에 핀 고정된 열의 합계 너비는 @@igComponent 너비의 80%를 넘지 않아야 합니다. 그렇지 않으면 기본적으로 @@igComponent의 제한을 초과하지 않는 최초의 열(정의된 순서)을 취하고 나머지(경고에 나열된 열)는 핀 고정 해제됩니다. @@igComponent에서 핀 고정을 초기화하기 전에 [`onColumnInit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncolumninit) 이벤트를 사용하여 초기화할 때 일부 열을 수동으로 핀 고정 해제할지 결정하기 위해 자체 논리를 실행할 수 있습니다. 각 열에 트리거됩니다.
+* `@@igxName - 핀 고정 영역이 최대 핀 고정 폭을 초과합니다. 다음 열은 다른 문제를 방지하기 위해 핀 고정 해제되었습니다:... .` - 사용자가 처음에 너무 많은 핀 고정 열을 정의한 경우에 이 경고가 표시됩니다. 처음에 핀 고정된 열의 합계 너비는 @@igComponent 너비의 80%를 넘지 않아야 합니다. 그렇지 않으면 기본적으로 @@igComponent의 제한을 초과하지 않는 최초의 열(정의된 순서)을 취하고 나머지(경고에 나열된 열)는 핀 고정 해제됩니다. @@igComponent에서 핀 고정을 초기화하기 전에 [`columnInit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnInit) 이벤트를 사용하여 초기화할 때 일부 열을 수동으로 핀 고정 해제할지 결정하기 위해 자체 논리를 실행할 수 있습니다. 각 열에 트리거됩니다.
 
 <div class="divider--half"></div>
 
