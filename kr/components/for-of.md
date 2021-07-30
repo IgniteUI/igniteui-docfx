@@ -112,7 +112,7 @@ The [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxf
 
 ```html
 <div style='height: 500px; overflow: hidden; position: relative;'>
-    <ng-template igxFor let-item [igxForOf]="remoteData | async" (onChunkPreload)="chunkLoading($event)"
+    <ng-template igxFor let-item [igxForOf]="remoteData | async" (chunkPreload)="chunkLoading($event)"
         [igxForScrollOrientation]="'vertical'"
         [igxForContainerSize]='"500px"'
         [igxForItemSize]='"50px"'
@@ -172,7 +172,7 @@ private buildUrl(dataState: any): string {
     return `${this.url}${qS}`;
 }
 ```
-And every time the [`onChunkPreload`]({environment:angularApiUrl}/classes/igxforofdirective.html#onchunkpreload) event is thrown the new chunk of data should be requested:
+And every time the [`chunkPreload`]({environment:angularApiUrl}/classes/igxforofdirective.html#chunkPreload) event is thrown the new chunk of data should be requested:
 ```typescript
 chunkLoading(evt) {
     if(this.prevRequest){

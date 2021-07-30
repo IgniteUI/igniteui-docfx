@@ -142,7 +142,7 @@ export class AppModule {}
 ```html
 <div style='height: 500px; overflow: hidden; position: relative;'>
     <ng-template igxFor let-item [igxForOf]="remoteData | async"
-        (onChunkPreload)="chunkLoading($event)"
+        (chunkPreload)="chunkLoading($event)"
         [igxForScrollOrientation]="'vertical'"
         [igxForContainerSize]='"500px"'
         [igxForItemSize]='"50px"'
@@ -210,7 +210,7 @@ private buildUrl(dataState: any): string {
 }
 ```
 
-[`onChunkPreload`]({environment:angularApiUrl}/classes/igxforofdirective.html#onchunkpreload) イベントが発生するたびに、新しいデータのチャンクがリクエストされます。
+[`chunkPreload`]({environment:angularApiUrl}/classes/igxforofdirective.html#chunkPreload) イベントが発生するたびに、新しいデータのチャンクがリクエストされます。
 
 ```typescript
 chunkLoading(evt) {
