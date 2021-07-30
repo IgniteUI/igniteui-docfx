@@ -20,7 +20,7 @@ Among its many benefits, Ignite UI for Angular offers easy integration, rapid de
 
 ### Installing and Creating a Project 
 
-You can install Ignite UI for Angular with either the Angular CLI or with the [Ignite UI CLI](https://www.infragistics.com/products/ignite-ui-angular/angular/components/general/cli-overview.html "Ignite UI CLI Overview page"). To start quickly with the Angular CLI, run the following command: 
+You can install Ignite UI for Angular with either the Angular CLI or with the [Ignite UI CLI](https://www.infragistics.com/products/ignite-ui-angular/angular/components/general/cli/getting-started-with-cli.html "Ignite UI CLI Overview page"). To start quickly with the Angular CLI, run the following command: 
 
 `ng add igniteui-angular` 
 
@@ -30,7 +30,7 @@ If you’re creating a new application from scratch, we recommend the following 
 
 `npm install –g igniteui-cli` 
 
-Once the igniteui cli is installed you can easily bootstrap an application by following cli’s [guided experience](https://www.infragistics.com/products/ignite-ui-angular/angular/components/general/cli/step-by-step-guide.html "Step by step guide"), which builds a configured app that the end user can run with a single command: 
+Once the igniteui cli is installed you can easily bootstrap an application by following cli’s [guided experience using the Ignite UI CLI](https://www.infragistics.com/products/ignite-ui-angular/angular/components/general/cli/step-by-step-guide-using-cli.html "Step by step guide using Ignite UI CLI") or [Ignite UI for Angular Schematics](https://www.infragistics.com/products/ignite-ui-angular/angular/components/general/cli/step-by-step-guide-using-angular-schematics.html "Step by step guide using Ignite UI for Angular Schematics"), which builds a configured app that the end user can run with a single command: 
 
 `ig` 
 

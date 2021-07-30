@@ -96,7 +96,7 @@ or:
 npm install -g igniteui-cli 
 ```
 
-Our [`guided experience`](cli/step-by-step-guide.md) is the easiest way to bootstrap a configured application.
+Our [guided experience using the Ignite UI CLI](cli/step-by-step-guide-using-cli.md) or [Ignite UI for Angular Schematics](cli/step-by-step-guide-using-angular-schematics.md) is the easiest way to bootstrap a configured application.
 
 To activate the guide using the Ignite UI for Angular Schematics run:
 ```cmd
