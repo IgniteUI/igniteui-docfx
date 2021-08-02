@@ -66,7 +66,7 @@ ng update @angular/cli
         - previousPage()
     * 次のプロパティが削除されました:
         - paginationTemplate - カスタム テンプレートを定義するには、`igx-paginator-content` を使用します。
-   * HierarchicalGrid の詳細 - RowIslands でページングを有効にする場合は、次の `*igxPaginator` ディレクティブの使用法が必要です。
+    * HierarchicalGrid の詳細 - RowIslands でページングを有効にする場合は、次の `*igxPaginator` ディレクティブの使用法が必要です。
 
     ```html
     <igx-hierarchical-grid #hGrid >

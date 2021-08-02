@@ -639,7 +639,7 @@ export class GridRowReorderComponent {
 </ng-template>
 ```
 
-次に、終了した行のインスタンスを返すメソッド ([行の並べ替えデモ](#row-reordering-demo)で使用されているものと同様) を定義します。
+次に、終了した行のインスタンスを返すメソッド ([行の並べ替えデモ](#行の並べ替えデモ)で使用されているものと同様) を定義します。
 
 ```typescript
 class MyRowGhostComponent {
@@ -657,8 +657,7 @@ class MyRowGhostComponent {
 }
 ```
 
-最後に、[`IgxDragDirective.dragMove`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragmove) イベント (ドラッグされた行に対して発行) を処理するために使用されるメソッドを作成します。このメソッドは、`igxRowDragGhost` テンプレートで使用されているプロパティの値を変更し、強制的に再描画します。
-ドラッグしている特定の行の `dragMove` イベントのみをサブスクライブし、行がドロップされるたびに (メモリ リークを防ぐために) サブスクライブを解除します。
+最後に、[`IgxDragDirective.dragMove`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragmove) イベント (ドラッグされた行に対して発行) を処理するために使用されるメソッドを作成します。このメソッドは、`igxRowDragGhost` テンプレートで使用されているプロパティの値を変更し、強制的に再描画します。ドラッグしている特定の行の `dragMove` イベントのみをサブスクライブし、行がドロップされるたびに (メモリ リークを防ぐために) サブスクライブを解除します。
 
 ```typescript
 class MyRowGhostComponent {
