@@ -132,3 +132,16 @@ The build command for staging is:
 ```
 npm run build-production --lang jp
 ```
+
+## Using explicit editor for live-editing samples
+
+The explicit-editor attribute for code-view elements is allowing to set explicitly live editor for specified sample and supports "csb" and "stackblitz" as values.
+
+
+```
+<code-view explicit-editor="csb"</code-view>
+```
+
+```
+<code-view explicit-editor="stackblitz"</code-view>
+```
