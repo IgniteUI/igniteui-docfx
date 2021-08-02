@@ -66,7 +66,7 @@ ng update @angular/cli
         - previousPage()
     * 次のプロパティが削除されました:
         - paginationTemplate - カスタム テンプレートを定義するには、`igx-paginator-content` を使用します。
-   * HierarchicalGrid の詳細 - RowIslands でページングを有効にする場合は、次の `*igxPaginator` ディレクティブの使用法が必要です。
+    * HierarchicalGrid の詳細 - RowIslands でページングを有効にする場合は、次の `*igxPaginator` ディレクティブの使用法が必要です。
 
     ```html
     <igx-hierarchical-grid #hGrid >
@@ -106,6 +106,10 @@ ng update @angular/cli
     </igx-paginator>
     ```
 
+    * IgxGridCellComponent、IgxTreeGridCellComponent、IgxHierarchicalGridCellComponent、IgxGridExpandableCellComponent はパブリック API で公開されなくなりました。新しい `IgxGridCell` へのアップグレードの詳細ガイドについては、以下のセクションを参照してください。
+
+
+
 * グリッド非推奨:
     * `IgxGridTransaction` を提供するための DI パターンは非推奨になりました。以下は引き続き機能しますが、将来のバージョンで**削除される可能性がある**ため、リファクタリングすることをお勧めします。
 
@@ -134,6 +138,34 @@ ng update @angular/cli
         ...
     }
     ```
+
+    * `getCellByColumnVisibleIndex` は非推奨になり、次のメジャー バージョンで削除される予定です。代わりに `getCellByKey`、`getCellByColumn` を使用してください。
+
+
+### IgxGridCell の移行
+
+* *IgxGridCellComponent*、*IgxTreeGridCellComponent*、*IgxHierarchicalGridCellComponent*、*IgxGridExpandableCellComponent* はパブリック API で公開されなくなりました。
+
+* 上記のいずれかのインスタンスを返すために使用されていたパブリック API は、[`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html) のインスタンスを返すようになりました。
+
+```ts
+const cell = grid.getCellByColumn(0, 'ProductID');     // returns IgxGridCell
+const cell = grid.getCellByKey('ALFKI', 'ProductID');  // returns IgxGridCell
+const cell = grid.getCellByColumnVisibleIndex(0, 0);   // returns IgxGridCell
+const rowCells = grid.getRowByIndex(0).cells;          // returns IgxGridCell[]
+const selectedCells = grid.selectedCells;              // returns IgxGridCell[]
+const cells = grid.getColumnByName('ProductID').cells; // returns IgxGridCell[]
+```
+
+- *cellClick*、*selected*、*contextMenu*、および *doubleClick* イベントによって発行される `IGridCellEventArgs` イベント引数の `cell` プロパティは、[`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html) のインスタンスになりました。 
+- セル テンプレートの `let-cell` プロパティは `IgxGridCell` になりました。
+- `getCellByColumnVisibleIndex` は非推奨になり、次のメジャー バージョンで削除される予定です。代わりに `getCellByKey`、`getCellByColumn` を使用してください。
+
+ご注意ください:
+
+*ng update* は、*IgxGridRowComponent*、*IgxTreeGridRowComponent*、*IgxHierarchicalRowComponent*、*IgxGridGroupByRowComponen* のインポート、入力、キャストなどの使用方法を移行します。上記のいずれかを使用するコード内の場所が移行されない場合は、入力/キャストを削除するか、[`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html) で変更してください。
+* *getCellByIndex* およびその他のメソッドは、そのインデックスの行がデータ行ではなく、IgxGroupByRow、IgxSummaryRow、詳細行などである場合、undefined を返します。
+
 
 ## 11.1.x から 12.0.x の場合:
 ### テーマ:
@@ -177,35 +209,33 @@ ng update @angular/cli
         }
         ```
 
-    * `IgxButton` テーマが簡略化されました。テーマ パラメーター (`igx-button-theme`) の数が大幅に削減され、接頭辞付きのパラメーター (`flat-*`、`raised-*` など) が含まれなくなりました。`ng update` で実行された更新は、既存のボタン テーマを移行しますが、接頭辞付きのパラメーターがないことを考慮して、いくつかの追加の調整が必要になる場合があります。 
+    * `IgxButton` テーマが簡略化されました。テーマ パラメーター (`igx-button-theme`) 数が大幅に削減され、接頭辞付きのパラメーター (`flat-*`、`raised-*` など) が含まれなくなりました。`ng update` で実行された更新は、既存のボタン テーマを移行しますが、接頭辞付きのパラメーターがないことを考慮して、いくつかの追加の調整が必要になる場合があります。 
 
-  以下のコード スニペットと同じ結果を得るには: 
+    以下のコード スニペットと同じ結果を得るには: 
 
-    ```html
-    <button igxButton="raised">Raised button</button>
-    <button igxButton="outlined">Outlined button</button>
-    ```
-    ```scss
-    $my-button-theme: igx-button-theme(
-        $raised-background: red,
-        $outlined-outline-color: green
-    );
+        ```html
+        <button igxButton="raised">Raised button</button>
+        <button igxButton="outlined">Outlined button</button>
+        ```
+        ```scss
+        $my-button-theme: igx-button-theme(
+            $raised-background: red,
+            $outlined-outline-color: green
+        );
 
-    @include igx-css-vars($my-button-theme);
-    ```
-
+        @include igx-css-vars($my-button-theme);
+        ```
     ボタン タイプごとに個別のテーマを作成し、CSS セレクターにスコープする必要があります。
-
-    ```html
+        ```html
         <div class="my-raised-btn">
             <button igxButton="raised">Raised button</button>
         </div>
         <div class="my-outlined-btn">
             <button igxButton="outlined">Outlined button</button>
         </div>
-    ```
+        ```
 
-    ```scss
+        ```scss
         $my-raised-button: igx-button-theme(
             $background: red
         );
@@ -221,8 +251,7 @@ ng update @angular/cli
         .my-outlined-btn {
             @include igx-css-vars($my-outlined-button);
         }
-    ```
-
+        ```
 ご覧のとおり、`igx-button-theme` パラメーターはボタン タイプごとに同じ名前になっているため、タイプごとに異なる色を使用するには、ボタン テーマのスコープを CSS セレクターに設定する必要があります。
 
 ここでは、`igx-button-theme` のすべての[利用可能なプロパティ](https://jp.infragistics.com/products/ignite-ui-angular/docs/sass/latest/index.html#function-igx-button-theme)を確認できます。

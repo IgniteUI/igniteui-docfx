@@ -182,7 +182,7 @@ Remote paging can be achieved by declaring a service, responsible for data fetch
 @@if (igxName === 'IgxGrid') {
 ## Remote Paging with Custom Template
 
-In some cases you may want to define your own paging behavior and this is when we can take advantage of the `igx-paginator-content` and add our custom logic along with it. [This section](remote-data-operations.md#remote-paging-with-custom-template) explains how we are going to extend the Remote Paging example in order to demonstrate this.
+In some cases you may want to define your own paging behavior and this is when we can take advantage of the `igx-paginator-content` and add our custom logic along with it. [This section](remote-data-operations.md#remote-paging-with-custom-igx-paginator-content) explains how we are going to extend the Remote Paging example in order to demonstrate this.
 }
 
 ## Pagination Styling in Angular

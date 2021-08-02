@@ -130,10 +130,10 @@ public ngOnInit(): void {
 ## Additional Resources
 <div class="divider--half"></div>
 
-* [Grid](grid.md)
+* [Grid](grid/grid.md)
 * [Virtualization and Performance](grid/virtualization.md)
 * [Filtering](grid/filtering.md)
-* [Sorting](grid/orting.md)
+* [Sorting](grid/sorting.md)
 * [Summaries](grid/summaries.md)
 
 
