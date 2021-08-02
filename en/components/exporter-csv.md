@@ -15,7 +15,8 @@ The exporting functionality is encapsulated in the [`IgxCsvExporterService`]({en
 
 
 <code-view style="height: 150px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
+           explicit-editor="stackblitz" 
            iframe-src="{environment:demosBaseUrl}/services/export-csv" alt="Angular CSV Exporter Example">
 </code-view>
 
@@ -109,7 +110,8 @@ public exportButtonHandler() {
 
 
 <code-view style="height: 300px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
+           explicit-editor="stackblitz"
            iframe-src="{environment:demosBaseUrl}/services/export-csv-sample-1" >
 </code-view>
 
