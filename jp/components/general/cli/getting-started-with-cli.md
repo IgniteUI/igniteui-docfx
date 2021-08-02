@@ -126,7 +126,7 @@ ig new newAngularProject --framework=angular --type=igx-ts --template=side-nav
 
 ## テンプレートの追加
 
-[利用可能な Ignite UI Angular テンプレート](component-templates.md)を追加するには、新しいコンポーネントのテンプレート ID と名前を指定するか、[ステップ バイ ステップ ガイド](step-by-step-guide.md#add-view)を使用する必要があります。 Their usage is supported only inside existing projects created with the Ignite UI CLI, Angular Schematics or where Ignite UI for Angular has been [installed using `ng add`](../getting-started.md#installing-ignite-ui-for-angular).
+[利用可能な Ignite UI Angular テンプレート](component-templates.md)を追加するには、新しいコンポーネントのテンプレート ID と名前を指定するか、[ステップ バイ ステップ ガイド](step-by-step-guide-using-cli.md#add-view)を使用する必要があります。 Their usage is supported only inside existing projects created with the Ignite UI CLI, Angular Schematics or where Ignite UI for Angular has been [installed using `ng add`](../getting-started.md#installing-ignite-ui-for-angular).
 
 We use the `ig add [template] [name]` command:
 

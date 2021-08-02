@@ -200,7 +200,7 @@ _language: ja
 <div class="divider--half"></div>
 
 ## リモート ページング
-リモート ページングは、データ取得を担当するサービスと、グリッドの構築とデータ サブスクリプションを担当するコンポーネントを宣言することで実現できます。詳細については、[@@igComponent リモート データ操作](remote-data-operations.md#リモート-ページング)トピックをご覧ください。
+リモート ページングは、データ取得を担当するサービスと、グリッドの構築とデータ サブスクリプションを担当するコンポーネントを宣言することで実現できます。詳細については、[@@igComponent リモート データ操作](remote-data-operations.md#remote-paging-with-custom-igx-paginator-content)トピックをご覧ください。
 
 @@if (igxName === 'IgxGrid') {
 ## カスタム テンプレートのリモート ページング

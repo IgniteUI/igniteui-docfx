@@ -119,7 +119,7 @@ ng add igniteui-angular
 
 ## テンプレートの追加
 
-[利用可能な Ignite UI Angular テンプレート](component-templates.md)を追加するには、新しいコンポーネントのテンプレート ID と名前を指定するか、[ステップ バイ ステップ ガイド](step-by-step-guide.md#add-view)を使用する必要があります。Angular Schematics、Ignite UI CLI で作成された既存のプロジェクト内、または Ignite UI for Angular が [`ng add` でインストールされている](getting_started.md#Ignite-UI-for-Angular-のインストール) 場合にのみサポートされます。
+[利用可能な Ignite UI Angular テンプレート](component-templates.md)を追加するには、新しいコンポーネントのテンプレート ID と名前を指定するか、[ステップ バイ ステップ ガイド](step-by-step-guide-using-cli.md#add-view)を使用する必要があります。Angular Schematics、Ignite UI CLI で作成された既存のプロジェクト内、または Ignite UI for Angular が [`ng add` でインストールされている](getting_started.md#Ignite-UI-for-Angular-のインストール) 場合にのみサポートされます。
 
 Schematics には、Ignite UI for Angular コレクションと `component [template] [name]` の `ng generate` を使用します。
 

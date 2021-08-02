@@ -46,6 +46,15 @@
     - name: ステップバイステップガイド
       href: general/cli/step-by-step-guide.md
       new: false
+    - name: Step by Step guide using Ignite UI for Angular Schematics
+      href: general/cli/step-by-step-guide-using-angular-schematics.md
+      new: false
+    - name: Getting Started with Ignite UI CLI
+      href: general/cli/getting-started-with-cli.md
+      new: false
+    - name: Step by Step guide using Ignite UI CLI
+      href: general/cli/step-by-step-guide-using-cli.md
+      new: false
     - name: テンプレート
       href: general/cli/component-templates.md
       new: false
@@ -136,6 +145,7 @@
     - name: ページング
       href: grid/paging.md
       new: false
+      updated: true
     - name: フィルタリング
       href: grid/filtering.md
       new: false
@@ -152,7 +162,7 @@
     - name: グループ化
       href: grid/groupby.md
       new: false
-      updated: true
+      updated: false
     - name: 集計
       href: grid/summaries.md
       updated: true
@@ -278,6 +288,7 @@
     - name: ページング
       href: treegrid/paging.md
       new: false
+      updated: true
     - name: フィルタリング
       href: treegrid/filtering.md
       new: false
@@ -337,6 +348,7 @@
     - name: Excel エクスポート
       href: treegrid/export-excel.md
       new: false
+      updated: true
     - name: 複数列ヘッダー
       href: treegrid/multi-column-headers.md
       new: false
@@ -351,6 +363,7 @@
       new: false
     - name: グループ化
       href: treegrid/groupby.md
+      updated: true
       new: false
     - name: キーボードナビゲーション
       href: treegrid/keyboard-navigation.md
@@ -401,13 +414,15 @@
           new: false
     - name: Excel へエクスポート
       href: hierarchicalgrid/export-excel.md
-      new: true
+      new: false
+      updated: true
     - name: 行ドラッグ
       href: hierarchicalgrid/row-drag.md
       new: false
     - name: ページング
       href: hierarchicalgrid/paging.md
       new: false
+      updated: true
     - name: フィルタリング
       href: hierarchicalgrid/filtering.md
       new: false
@@ -1015,6 +1030,13 @@
   new: false
   updated: true
 - name: サービス
+  header: true
+  sortable: true
+- name: Paginator
+  href: paginator.md
+  new: true
+  updated: false
+- name: Services
   header: true
   sortable: true
 - name: CSV エクスポーター
