@@ -314,6 +314,14 @@ export class HGridRowEditingSampleComponent implements OnInit {
 </ng-template>
  ```
 
+ ## Known Issues and Limitations
+
+- When the grid has no `primaryKey` set and remote data scenarios are enabled (when paging, sorting, filtering, scrolling trigger requests to a remote server to retrieve the data to be displayed in the grid), following features may not work as expected:
+    * Row Selection
+    * Row Expand/collapse
+    * Row Editing
+    * Row Pinning
+
 ### API 참조
 
 * [rowEditable]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable)
