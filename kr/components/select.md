@@ -105,9 +105,9 @@ Since `igx-select` extends `igx-drop-down`, it also makes good use of its events
 #### Opened event
 - Emitted when the drop-down is fully opened.
 
-You can make use of the `onOpened` event like so:
+You can make use of the `opened` event like so:
 ```html
-<igx-select (onOpened)="handleOpened($event)">
+<igx-select (opened)="handleOpened($event)">
     <igx-select-item [value]="Apple">Apple</igx-select-item>
 </igx-select>
 ```
@@ -118,10 +118,10 @@ You can make use of the `onOpened` event like so:
     - select expand/collapse button click (app scenario)
 - Triggered on key interaction
 
- The `onOpening` and `onClosing` events are fired *before* the animation finishes playing, i.e. before the drop-down is fully **opened** or **closed**. They can also be canceled by setting the `cancel` property to `true` in the event handler function.
+ The `opening` and `closing` events are fired *before* the animation finishes playing, i.e. before the drop-down is fully **opened** or **closed**. They can also be canceled by setting the `cancel` property to `true` in the event handler function.
 
 ```html
-<igx-select (onOpening)="handleOpening($event)" (onClosing)="handleClosing($event)">
+<igx-select (opening)="handleOpening($event)" (closing)="handleClosing($event)">
     <igx-select-item [value]="Apple">Apple</igx-select-item>
 </igx-select>
 ```
@@ -134,7 +134,7 @@ You can make use of the `onOpened` event like so:
 - Emitted when setting an item's `selected` property.
 
 ```html
-<igx-select (onSelection)="handleSelection($event)">
+<igx-select (selectionChanging)="handleSelection($event)">
     <igx-select-item [value]="Apple">Apple</igx-select-item>
     <igx-select-item [value]="Pear">Pear</igx-select-item>
 </igx-select>
@@ -143,9 +143,9 @@ You can make use of the `onOpened` event like so:
 #### Closed event
 - Emitted on clicking outside of the component, when the drop-down is fully closed.
 
-You can make use of the `onClosed` event like so:
+You can make use of the `closed` event like so:
 ```html
-<igx-select (onClosed)="handleClosed($event)">
+<igx-select (closed)="handleClosed($event)">
     <igx-select-item [value]="Apple">Apple</igx-select-item>
 </igx-select>
 ```
@@ -353,7 +353,7 @@ export class MyClass implements OnInit {
     /* -- */
 }
 ```
-- We should mention that if you pass the custom settings both as an argument in the `open` function as well as into the template, `igx-select` will use the ones provided *in the `open` function*. However, if you bind the settings to an internal event, such as `onOpening` or `onOpened` then `igx-select` will use the settings that are provided in the template.
+- We should mention that if you pass the custom settings both as an argument in the `open` function as well as into the template, `igx-select` will use the ones provided *in the `open` function*. However, if you bind the settings to an internal event, such as `opening` or `opened` then `igx-select` will use the settings that are provided in the template.
 
 ## API Reference 
 [**IgxSelectComponent**](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/igxselectcomponent.html)  

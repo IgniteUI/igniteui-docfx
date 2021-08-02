@@ -204,11 +204,11 @@ Additionally, by using the [expandIndicator]({environment:angularApiUrl}/classes
 ```
 
 ## Angular Tree Selection
-In order to setup node selection in the `igx-tree`, you just need to set its [selection]({environment:angularApiUrl}/classes/igxtreecomponent.html#selection) property. This property accepts the following three modes: **None**, **BiState** and **Cascading**. Below we will take a look at each of them in more detail.
+In order to setup node selection in the `igx-tree`, you just need to set its [selectionChanging]({environment:angularApiUrl}/classes/igxtreecomponent.html#selectionchanging) property. This property accepts the following three modes: **None**, **BiState** and **Cascading**. Below we will take a look at each of them in more detail.
 ### None
 In the `igx-tree` by default node selection is disabled. Users cannot select or deselect a node through UI interaction, but these actions can still be completed through the provided API method.
 ### Bi-State
-To enable bi-state node selection in the `igx-tree` just set the [selection]({environment:angularApiUrl}/classes/igxtreecomponent.html#selection) property to **BiState**. This will render a checkbox for every node. Each node has two states - selected or not. This mode supports multiple selection.
+To enable bi-state node selection in the `igx-tree` just set the [selectionChanging]({environment:angularApiUrl}/classes/igxtreecomponent.html#selectionchanging) property to **BiState**. This will render a checkbox for every node. Each node has two states - selected or not. This mode supports multiple selection.
 ```html
 <igx-tree selection="BiState">
 </igx-tree>

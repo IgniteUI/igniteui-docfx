@@ -99,7 +99,9 @@ npm install @infragistics/igniteui-angular igniteui-angular-core igniteui-angula
 
 ```html
 <igx-grid #grid1 igxChartIntegration igxConditionalFormatting igxContextMenu
-    [data]="localData" [autoGenerate]="true" [paging]="true" >
+    [data]="localData" [autoGenerate]="true">
+    <igx-paginator>
+    </igx-paginator>
 </igx-grid>
 ```
 And that's it! You can now perform **cell range selection** and follow the data analysis flow.
@@ -231,4 +233,5 @@ Understanding conditional formatting - it allows for applying formatting such as
 * [Ignite UI Starter Kit](https://github.com/IgniteUI/ng-universal-example)
 * [Server-side rendering terminology](https://developers.google.com/web/updates/2019/02/rendering-on-the-web)
 * [Getting started with Ignite UI for Angular](getting-started.md)
-* [Ignite UI CLI Guide](cli/step-by-step-guide.md)
+* [Ignite UI CLI Guide](cli/step-by-step-guide-using-cli.md)
+* [Ignite UI for Angular Schematics Guide](cli/step-by-step-guide-using-angular-schematics.md)

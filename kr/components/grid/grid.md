@@ -27,13 +27,11 @@ _language: kr
 // app.module.ts
 
 import { IgxGridModule } from 'igniteui-angular';
-// Or
-import { IgxGridModule } from 'igniteui-angular/grid';
 
 @NgModule({
     imports: [
         ...
-        IgxGridModule.forRoot(),
+        IgxGridModule,
         ...
     ]
 })
@@ -43,8 +41,6 @@ export class AppModule {}
 `IgxGridModule`의 각 컴포넌트, 지시문 및 도우미 클래스는 하위 패키지 또는 igniteui-angular의 기본 번들을 통해 가져올 수 있습니다. 그리드를 인스턴스화하고 사용하기 위해 모든 항목을 가져올 필요는 없지만 일반적으로 그리드 API의 일부인 유형을 선언할 때 가져옵니다(또는 편집기가 자동으로 가져옵니다).
 
 ```typescript
-import { IgxGridComponent } from 'igniteui-angular/grid/';
-// Or
 import { IgxGridComponent } from 'igniteui-angular'
 ...
 
@@ -91,7 +87,7 @@ public grid: IgxGridComponent;
 [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) 속성을 해제하고 마크업에서 열 집합을 정의합니다:
 
 ```html
-<igx-grid #grid1 [data]="data | async" [autoGenerate]="false" [paging]="true" [perPage]="6" (onColumnInit)="initColumns($event)"
+<igx-grid #grid1 [data]="data | async" [autoGenerate]="false" (onColumnInit)="initColumns($event)"
     (onSelection)="selectCell($event)" [allowFiltering]="true">
     <igx-column field="Name" [sortable]="true" header=" "></igx-column>
     <igx-column field="AthleteNumber" [sortable]="true" header="Athlete number" [filterable]="false"></igx-column>
@@ -100,6 +96,8 @@ public grid: IgxGridComponent;
             <igx-linear-bar [stripped]="false" [value]="value" [max]="100"></igx-linear-bar>
         </ng-template>
     </igx-column>
+    <igx-paginator [perPage]="6">
+    </igx-paginator>
 </igx-grid>
 ```
 
@@ -129,14 +127,14 @@ public grid: IgxGridComponent;
 ...
 ```
 
-위의 부분에서는 암시적으로 제공된 셀 값에 대한 참조를 "사용"합니다. 이것은 일부 데이터를 표시하고 셀 값에 대해 사용자 스타일이나 파이프 변환을 적용하려는 경우에 충분합니다. 단, 다음과 같이 [`IgxGridCellComponent`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html) 객체 자체를 사용하는 것이 더 유용합니다:
+위의 부분에서는 암시적으로 제공된 셀 값에 대한 참조를 "사용"합니다. 이것은 일부 데이터를 표시하고 셀 값에 대해 사용자 스타일이나 파이프 변환을 적용하려는 경우에 충분합니다. 단, 다음과 같이 [`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html) 객체 자체를 사용하는 것이 더 유용합니다:
 
 ```html
 <igx-grid #grid [data]="data">
     <igx-column dataType="string" field="Name">
         <ng-template igxCell let-cell="cell">
             <!-- Implement row deleting inside the cell template itself -->
-            <span tabindex="0" (keydown.delete)="grid.deleteRow(cell.rowIndex)">{{ cell.value | titlecase }}</span>
+            <span tabindex="0" (keydown.delete)="grid.deleteRow(cell.row.index)">{{ cell.value | titlecase }}</span>
         </ng-template>
     </igx-column>
     <igx-column dataType="boolean" field="Subscribtion">
@@ -162,7 +160,7 @@ public grid: IgxGridComponent;
 </igx-column>
 ```
 
-템플릿에 사용할 수 있는 제공된 속성에 익숙해 지려면 [`IgxGridCellComponent`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)의 API를 확인하십시오.
+템플릿에 사용할 수 있는 제공된 속성에 익숙해 지려면 [`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html)의 API를 확인하십시오.
 
 각 열 템플릿은 [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) 객체 자체를 통해 언제든지 프로그래밍 방식으로 변경할 수 있습니다. 예를 들면, 아래 코드에서 사용자 데이터에 대해 2개의 템플릿을 선언했습니다. TypeScript 코드에서 템플릿 자체에 대한 참조를 확인한 후 일부 조건에 따라 애플리케이션의 해당 열에 적합한 템플릿을 렌더링합니다.
 
@@ -444,7 +442,7 @@ See the [Grid Sizing](sizing.md) topic.
 * [IgxGridComponent 스타일]({environment:sassApiUrl}/#function-igx-grid-theme)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html)
-* [IgxGridCellComponent]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
+* [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
 
 ## 추가 리소스
 <div class="divider--half"></div>

@@ -112,7 +112,7 @@ Ignite UI for Angular Action Strip コンポーネントは、ホバーなどの
 $custom-strip: igx-action-strip-theme(
     $background: rgba(150, 133, 143, 0.4),
     $actions-background: rgba(109, 121, 147, 0.6),
-    $color:  null,
+    $icon-color: null,
     $delete-action: null,
     $actions-border-radius: 0
 );
@@ -130,12 +130,10 @@ $custom-strip: igx-action-strip-theme(
 @include igx-action-strip($custom-strip);
 ```
 
-
 <code-view style="height: 400px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/menus/action-strip-styling" >
 </code-view>
-
 
 ## 既知の問題と制限
 

@@ -4,7 +4,7 @@ _description: Easily integrate a brief, single-line message within your mobile a
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Snackbar component, Angular Snackbar control
 ---
 # Snackbar
-<p class="highlight">The Ignite UI for Angular Snack Bar component provides feedback about an operation with a single-line message, which can include a link to an action such as Undo. The Snack Bar message appears above all other screen elements, located at the bottom of a mobile device screen or at the lower left of larger device screens.</p>
+<p class="highlight">The Ignite UI for Angular Snackbar component provides feedback about an operation with a single-line message, which can include an action. The Snackbar message appears above all other elements and is positioned at the bottom center of the screen.</p>
 <div class="divider"></div>
 
 ## Angular Snackbar Example
@@ -37,36 +37,36 @@ import { IgxSnackbarModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 ### Show Snackbar
-In order to display the snackbar component, use its [`show()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#show) method and call it on a button click.
+In order to display the snackbar component, use its [`open()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#open) method and call it on a button click.
 
 ```html
 <!--sample.component.html-->
 
-<button igxButton="raised" (click)="snackbar.show()">Delete Message</button>
+<button igxButton="raised" (click)="snackbar.open()">Delete Message</button>
 <div>
     <igx-snackbar #snackbar>Message deleted</igx-snackbar>
 </div>
 ```
 If the sample is configured properly, you should see the demo sample. A snackbar appears displaying a text message when the button is clicked.
-As you can see in the code snippet above, one way to set the massage displayed in the snackbar is to use the content projection. But if you need to switch the value programmatically based on some custom logic you can just pass the value as a parameter to the [`show()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#show) method.
+As you can see in the code snippet above, one way to set the massage displayed in the snackbar is to use the content projection. But if you need to switch the value programmatically based on some custom logic you can just pass the value as a parameter to the [`open()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#open) method.
 
 ```html
 <!--sample.component.html-->
 
-<button igxButton="raised" (click)="snackbar.show('Message deleted')">Delete Message</button>
-<button igxButton="raised" (click)="snackbar.show('Message deletion was not successful. Please try again')">Delete Message</button>
+<button igxButton="raised" (click)="snackbar.open('Message deleted')">Delete Message</button>
+<button igxButton="raised" (click)="snackbar.open('Message deletion was not successful. Please try again')">Delete Message</button>
 <div>
     <igx-snackbar #snackbar></igx-snackbar>
 </div>
 ```
 
 ### Hide/Auto Hide
-Once opened, the snackbar disappears after a period specified by the [`displayTime`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#displaytime) input which is set initially to 4000 milliseconds. This behavior is enabled by default but you can change this by setting [`autoHide`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#autohide) to **false**. In this way, the snackbar will remain visible. Using the snackbar [`hide()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#hide) method, you can close the component in the code.
+Once opened, the snackbar disappears after a period specified by the [`displayTime`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#displaytime) input which is set initially to 4000 milliseconds. This behavior is enabled by default but you can change it by setting [`autoHide`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#autohide) to **false**. In this way, the snackbar will remain visible. Using the snackbar [`close()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#close) method, you can close the component in the code.
 
 ```html
 <!--sample.component.html-->
 
-<button igxButton="raised" (click)="snackbar.show()">Send message</button>
+<button igxButton="raised" (click)="snackbar.open()">Send message</button>
 <div>
   <igx-snackbar #snackbar [autoHide]="false" actionText="CLOSE" (clicked)="close(snackbar)">Message sent</igx-snackbar>
 </div>
@@ -76,18 +76,16 @@ Once opened, the snackbar disappears after a period specified by the [`displayTi
 // sample.component.ts
 
 public close(element) {
-    element.hide();
+    element.close();
 }
 ```
 
-If the sample is configured properly, the first snackbar appears when the button is clicked, showing both the *message* and *action button*. The auto-hide feature is disabled and the snackbar disappears on 'CLOSE' button click. Another snackbar passes a different message through the [`show()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#show) method and hide it when the *display time* ends. The third component passes a message as a param to the [`show()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#show) method and add an icon using the content projection.
-
+If the sample is configured properly, the first snackbar appears when the button is clicked, showing both the *message* and *action button*. The auto-hide feature is disabled and the snackbar disappears on 'CLOSE' button click. Another snackbar passes a different message through the [`open()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#open) method and hides it when the *display time* expires. The third component passes a message as a param to the [`open()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#open) method and adds an icon using content projection.
 
 <code-view style="height: 230px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/notifications/snackbar-sample-2" >
 </code-view>
-
 
 ### Display Time
 Use [`displayTime`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#displaytime) and set it to an interval in milliseconds to configure how long the snackbar component is visible. By default, as we said, it's initially set to 4000 miliseconds.
@@ -97,7 +95,7 @@ We can also customize the content of the Snackbar to display more complex elemen
 
 ```html
 <!--sample.component.html-->
-<button igxButton="raised" (click)="snackbar.show()">Load file</button>
+<button igxButton="raised" (click)="snackbar.open()">Load file</button>
 <div>
   <igx-snackbar #snackbar displayTime="5000">File loading
     <svg id="dots" height="20px">
@@ -214,26 +212,45 @@ public ngOnInit() {
 public delete(item) {
     this.deletedItems.push([item, this.navItems.indexOf(item)]);
     this.navItems.splice(this.navItems.indexOf(item), 1);
-    this.snackbar.show();
+    this.snackbar.open();
 }
 
 public restore() {
     const [item, index] = this.deletedItems.pop();
     this.navItems.splice(index, 0, item);
-    this.snackbar.hide();
+    this.snackbar.close();
 }
-
 ```
-
 
 <code-view style="height: 350px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/notifications/snackbar-sample-4" >
 </code-view>
 
+### Overlay Settings
+The [`IgxSnackbarComponent`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html) uses [Overlay Settings]({environment:angularApiUrl}/interfaces/overlaysettings.html) to control the position of its container. The default settings can be changed by defining Custom OverlaySettings and passing them to the snackbar `open()` method:
 
+```typescript
+public customSettings: OverlaySettings = {
+    positionStrategy: new GlobalPositionStrategy(
+        { 
+            horizontalDirection: HorizontalAlignment.Left,
+            verticalDirection: VerticalAlignment.Top
+        }),
+    modal: true,
+    closeOnOutsideClick: true,
+};
+
+snackbar.open(customSettings);
+```
+
+Users can also provide a specific outlet where the snackbar will be placed in the DOM when it is visible:
+
+```html
+<igx-snackbar [outlet]="igxBodyOverlayOutlet"></igx-snackbar>
+<div #igxBodyOverlayOutlet igxOverlayOutlet></div>
+```
 ## Styling
-
 To get started with styling the snackbar, we need to import the index file, where all the theme functions and component mixins live:
 
 ```scss

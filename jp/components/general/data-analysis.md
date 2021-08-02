@@ -23,12 +23,12 @@ _language: ja
         outline-style: none;
         -webkit-transition: all 0.25s ease-out;
         transition: all 0.25s ease-out;
-        background: #0099ff; 
+        background: #0099ff;
     }
     .full-screen-btn:hover, .full-screen-btn:focus {
         color: white;
         -webkit-box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.26), 0 8px 10px 1px rgba(0, 0, 0, 0.12), 0 3px 14px 2px rgba(0, 0, 0, 0.08);
-        box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.26), 0 8px 10px 1px rgba(0, 0, 0, 0.12), 0 3px 14px 2px rgba(0, 0, 0, 0.08); 
+        box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.26), 0 8px 10px 1px rgba(0, 0, 0, 0.12), 0 3px 14px 2px rgba(0, 0, 0, 0.08);
     }
     .full-screen-btn::before {
         content: "";
@@ -38,16 +38,16 @@ _language: ja
         margin-right: 8px;
         background-image: url("../../images/general/fullscreen-white-18dp.svg");
         background-size: 100%;
-        background-repeat: no-repeat; 
+        background-repeat: no-repeat;
     }
     .full-screen-btn[disabled] {
         color: rgba(0, 0, 0, 0.28);
         background: #eee;
         -webkit-box-shadow: none;
-        box-shadow: none; 
+        box-shadow: none;
     }
     .full-screen-btn[disabled]::before {
-        background-image: url("../../images/general/fullscreen-white-18dp.svg"); 
+        background-image: url("../../images/general/fullscreen-white-18dp.svg");
     }
 
 </style>
@@ -99,8 +99,10 @@ npm install @infragistics/igniteui-angular igniteui-angular-core igniteui-angula
   - `igxChartIntegration`、`igxConditionalFormatting`、`igxContextMenu` ディレクティブをグリッドに適用します。
 
 ```html
-<igx-grid #grid1 igxChartIntegration igxConditionalFormatting igxContextMenu 
-    [data]="localData" [autoGenerate]="true" [paging]="true" >
+<igx-grid #grid1 igxChartIntegration igxConditionalFormatting igxContextMenu
+    [data]="localData" [autoGenerate]="true">
+    <igx-paginator>
+    </igx-paginator>
 </igx-grid>
 ```
 以上です! **セル範囲の選択**を実行し、データ分析フローを実行できます。

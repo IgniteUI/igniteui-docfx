@@ -10,8 +10,8 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ## Angular Input Group Example
 
-<code-view style="height:100px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:100px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/input-group-sample-1" alt="Angular Input Group Example">
 </code-view>
 
@@ -98,7 +98,7 @@ providers: [{provide: IGX_input-group_TYPE, useValue: 'box' }]
 ```
 
 >[!NOTE]
->The [`type`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html#type) property has precedence over a [IGX_INPUT_GROUP_TYPE]({environment:angularApiUrl}/index.html#igx_input_group_type), thus a token value can be overridden on a component level if the type property is set explicitly.  
+>The [`type`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html#type) property has precedence over a [IGX_INPUT_GROUP_TYPE]({environment:angularApiUrl}/index.html#igx_input_group_type), thus a token value can be overridden on a component level if the type property is set explicitly.
 >Most of the `igniteui-angular` form controls use input-group component internally, or allow for a custom template. Setting a global token will affect these components as well.
 
 Ignite UI for Angular also provides styling for the input of `type="file"` and it supports all the input group types and themes, just add this to your template:
@@ -111,8 +111,8 @@ Ignite UI for Angular also provides styling for the input of `type="file"` and i
 
 
 
-<code-view style="height:695px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:695px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/input-group-sample-5" >
 </code-view>
 
@@ -132,7 +132,7 @@ The first thing we need to do, in order to get started with the input group styl
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+```
 
 Next, we have to create a new theme that extends the [`igx-input-group-theme`]({environment:sassApiUrl}/index.html#function-igx-input-group-theme) and pass the parameters which we'd like to change:
 
@@ -176,8 +176,8 @@ In order to style the border, we have to `penetrate` this encapsulation using `:
 ### Demo
 
 
-<code-view style="height:120px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:120px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/input-group-style" >
 </code-view>
 
@@ -202,7 +202,7 @@ In order to style the border, we have to `penetrate` this encapsulation using `:
 Related topics:
 
 * [Label & Input](label-input.md)
-* [Reactive Forms Integration](input-group-reactive-forms.md)
+* [Reactive Forms Integration](angular-reactive-form-validation.md)
 
 Our community is active and always welcoming to new ideas.
 

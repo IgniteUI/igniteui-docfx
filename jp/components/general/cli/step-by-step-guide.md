@@ -5,7 +5,7 @@ _keywords: angular cli, ignite ui for angular, インフラジスティックス
 ---
 
 # ステップバイステップ ガイド
-利用可能なオプションでガイドを取得する場合、ステップバイステップ モードを初期化して新しいアプリケーションの作成およびセットアップ、同様に [Ignite UI Angular Schematics または Ignite UI CLI](../cli-overview.md) で以前作成したプロジェクトを更新できます。
+利用可能なオプションでガイドを取得する場合、ステップバイステップ モードを初期化して新しいアプリケーションの作成およびセットアップ、同様に [Ignite UI Angular Schematics](getting-started-with-angular-schematics.md) または [Ignite UI CLI](getting-started-with-cli.md) で以前作成したプロジェクトを更新できます。
 
 Schematics コレクションを使用してガイドをアクティブにするには、以下のコマンドを実行します。
 

@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 # Snackbar
-<p class="highlight">Ignite UI for Angular Snack Bar コンポーネントは単一行のメッセージで操作のフィードバックを提供します。元に戻すなどの操作へのリンクを追加できます。Snack Bar メッセージがその他の画面要素の上に表示されます。モバイル デバイス画面の下部に配置され、より大きいデバイス画面の左下に配置されます。</p>
+<p class="highlight">Ignite UI for Angular Snackbar コンポーネントは、アクションを含むことができる単一行のメッセージで操作のフィードバックを提供します。SnackBar メッセージがその他の画面要素の上に表示され、画面の中央下に配置されます。</p>
 <div class="divider"></div>
 
 ## Angular Snackbar の例
@@ -38,36 +38,36 @@ import { IgxSnackbarModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 ### Snackbar の表示
-Snackbar コンポーネントを表示するには、ボタン クリックで [`show()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#show) メソッドを呼び出します。
+Snackbar コンポーネントを表示するには、ボタン クリックで [`open()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#open) メソッドを呼び出します。
 
 ```html
 <!--sample.component.html-->
 
-<button igxButton="raised" (click)="snackbar.show()">Delete Message</button>
+<button igxButton="raised" (click)="snackbar.open()">Delete Message</button>
 <div>
     <igx-snackbar #snackbar>Message deleted</igx-snackbar>
 </div>
 ```
 サンプルが正しく構成された場合、デモ サンプルが表示されます。ボタン クリック時にテキスト メッセージを表示する Snackbar が表示されます。
-以上のコード スニペットで示されるように、スナックバーに表示されるメッセージを設定する 1 つの方法は、コンテンツ プロジェクションを使用することです。 ただし、カスタム ロジックに基づいてプログラムによって値を切り替える必要がある場合は、値をパラメーターとして [`show()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#show) メソッドに渡すだけです。
+以上のコード スニペットで示されるように、スナックバーに表示されるメッセージを設定する 1 つの方法は、コンテンツ プロジェクションを使用することです。 ただし、カスタム ロジックに基づいてプログラムによって値を切り替える必要がある場合は、値をパラメーターとして [`open()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#open) メソッドに渡すだけです。
 
 ```html
 <!--sample.component.html-->
 
-<button igxButton="raised" (click)="snackbar.show('Message deleted')">Delete Message</button>
-<button igxButton="raised" (click)="snackbar.show('Message deletion was not successful. Please try again')">Delete Message</button>
+<button igxButton="raised" (click)="snackbar.open('Message deleted')">Delete Message</button>
+<button igxButton="raised" (click)="snackbar.open('Message deletion was not successful. Please try again')">Delete Message</button>
 <div>
     <igx-snackbar #snackbar></igx-snackbar>
 </div>
 ```
 
 ### 非表示/自動的に隠す
-開いた後は、[`displayTime`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#displaytime) 入力によって指定した期間遅延後に非表示になります。デフォルト値は 4000 ミリ秒です。この動作はデフォルトで有効ですが、[`autoHide`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#autohide) を **false** に設定して変更できます。この場合、Snackbar は非表示になりません。Snackbar の [`hide()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#hide) メソッドを使用して、コードでコンポーネントを閉じることができます。
+開いた後は、[`displayTime`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#displaytime) 入力によって指定した期間遅延後に非表示になります。デフォルト値は 4000 ミリ秒です。この動作はデフォルトで有効ですが、[`autoHide`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#autohide) を **false** に設定して変更できます。この場合、Snackbar は非表示になりません。Snackbar の [`close()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#close) メソッドを使用して、コードでコンポーネントを閉じることができます。
 
 ```html
 <!--sample.component.html-->
 
-<button igxButton="raised" (click)="snackbar.show()">Send message</button>
+<button igxButton="raised" (click)="snackbar.open()">Send message</button>
 <div>
   <igx-snackbar #snackbar [autoHide]="false" actionText="CLOSE" (clicked)="close(snackbar)">Message sent</igx-snackbar>
 </div>
@@ -77,18 +77,16 @@ Snackbar コンポーネントを表示するには、ボタン クリックで 
 // sample.component.ts
 
 public close(element) {
-    element.hide();
+    element.close();
 }
 ```
 
-サンプルを正しく構成した後、ボタンをクリックするとメッセージおよびアクション ボタンを含む Snackbar が表示されます。自動的に隠す機能が無効で、[CLOSE] ボタンのクリックで Snackbar が非表示になります。別のスナックバーが [`show()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#show) メソッドを介して別のメッセージを渡し、*表示時間*が終了すると非表示にします。 3 番目のコンポーネントは、メッセージをパラメーターとして [`show()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#show) メソッドに渡し、コンテンツ プロジェクションを使用してアイコンを追加します。
-
+サンプルを正しく構成した後、ボタンをクリックするとメッセージおよびアクション ボタンを含む Snackbar が表示されます。自動的に隠す機能が無効で、[CLOSE] ボタンのクリックで Snackbar が非表示になります。別のスナックバーが [`open()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#open) メソッドを介して別のメッセージを渡し、**表示時間**が終了すると非表示にします。3 番目のコンポーネントは、メッセージをパラメーターとして [`open()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#open) メソッドに渡し、コンテンツ プロジェクションを使用してアイコンを追加します。
 
 <code-view style="height: 230px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/notifications/snackbar-sample-2" >
 </code-view>
-
 
 ### 表示時間
 [`displayTime`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#displaytime) でミリ秒間隔に設定し、Snackbar コンポーネントが表示される時間を設定します。デフォルトでは 4000 ミリ秒に設定されています。 
@@ -98,7 +96,7 @@ Snackbar の内容をカスタマイズして、メッセージやボタンよ�
 
 ```html
 <!--sample.component.html-->
-<button igxButton="raised" (click)="snackbar.show()">Load file</button>
+<button igxButton="raised" (click)="snackbar.open()">Load file</button>
 <div>
   <igx-snackbar #snackbar displayTime="5000">File loading
     <svg id="dots" height="20px">
@@ -215,24 +213,44 @@ public ngOnInit() {
 public delete(item) {
     this.deletedItems.push([item, this.navItems.indexOf(item)]);
     this.navItems.splice(this.navItems.indexOf(item), 1);
-    this.snackbar.show();
+    this.snackbar.open();
 }
 
 public restore() {
     const [item, index] = this.deletedItems.pop();
     this.navItems.splice(index, 0, item);
-    this.snackbar.hide();
+    this.snackbar.close();
 }
-
 ```
-
 
 <code-view style="height: 350px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/notifications/snackbar-sample-4" >
 </code-view>
 
+### オーバーレイ設定
+[`IgxSnackbarComponent`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html) は、[オーバーレイ設定]({environment:angularApiUrl}/interfaces/overlaysettings.html)を使用してコンテナの位置を制御します。デフォルト設定は、カスタム オーバーレイ設定を定義し、それらをスナックバーの `open()` メソッドに渡すことで変更できます。
 
+```typescript
+public customSettings: OverlaySettings = {
+    positionStrategy: new GlobalPositionStrategy(
+        { 
+            horizontalDirection: HorizontalAlignment.Left,
+            verticalDirection: VerticalAlignment.Top
+        }),
+    modal: true,
+    closeOnOutsideClick: true,
+};
+
+snackbar.open(customSettings);
+```
+
+ユーザーは、スナックバーが表示されたときに DOM に配置される特定のアウトレットを提供することもできます。
+
+```html
+<igx-snackbar [outlet]="igxBodyOverlayOutlet"></igx-snackbar>
+<div #igxBodyOverlayOutlet igxOverlayOutlet></div>
+```
 ## スタイル設定
 
 スナックバーのスタイル設定を始めるには、すべてのテーマ関数とコンポーネント ミックスインが存在する index ファイルをインポートする必要があります。

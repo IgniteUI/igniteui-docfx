@@ -36,6 +36,9 @@
     - name: .NET Core を使用してリアルタイム SignalR アプリの構築
       href: general/how-to/signal-r-service-live-data.md
       new: true
+    - name: Angular リアクティブ フォーム
+      href: angular-reactive-form-validation.md
+      new: true
 - name: Angular Schematics & Ignite UI CLI
   href: general/cli-overview.md
   new: false
@@ -124,9 +127,11 @@
           new: true
         - name: 一括編集
           href: grid/batch-editing.md
+          updated: true
           new: false
     - name: 行ドラッグ
       href: grid/row-drag.md
+      updated: true
       new: false
     - name: ページング
       href: grid/paging.md
@@ -265,6 +270,7 @@
           new: true
         - name: 一括編集
           href: treegrid/batch-editing.md
+          updated: true
           new: false
     - name: 行ドラッグ
       href: treegrid/row-drag.md
@@ -391,6 +397,7 @@
           new: true
         - name: 一括編集
           href: hierarchicalgrid/batch-editing.md
+          updated: true
           new: false
     - name: Excel へエクスポート
       href: hierarchicalgrid/export-excel.md
@@ -868,9 +875,6 @@
 - name: Input Group
   href: input-group.md
   new: false
-  items:
-    - name: リアクティブ フォーム
-      href: input-group-reactive-forms.md
 - name: Mask
   href: mask.md
   new: false
@@ -961,6 +965,9 @@
   new: false
 - name: Card
   href: card.md
+- name: Accordion
+  href: accordion.md
+  new: true
 - name: Avatar
   href: avatar.md
 - name: Expansion Panel
@@ -1023,6 +1030,7 @@
     - name: トランザクション サービス クラス階層
       href: transaction-classes.md
       new: false
+      updated: true
     - name: トランザクション サービスの使用方法
       href: transaction-how-to-use.md
       new: false

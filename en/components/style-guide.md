@@ -7,6 +7,18 @@
         <strong>Primary</strong>
         <span></span>
     </div>
+    <div class="sg-color-block sg-color-block--secondary-1">
+        <strong>Secondary 1</strong>
+        <span></span>
+    </div>
+    <div class="sg-color-block sg-color-block--secondary-2">
+        <strong>Secondary 2</strong>
+        <span></span>
+    </div>
+    <div class="sg-color-block sg-color-block--accent">
+        <strong>Accent </strong>
+        <span></span>
+    </div>
     <div class="sg-color-block sg-color-block--info">
         <strong>Info</strong>
         <span></span>
@@ -116,3 +128,42 @@ Structured statements like for `x =1 to 10` loop <a href="#"><code>structures</c
 | val  | Using the Table menu set the desired size of the table. | val  | val  | val  |
 | val  | Using the Table menu set the desired size of the table. | val  | val  | val  |
 | val  | Using the Table menu set the desired size of the table. | val  | val  | val  |
+
+
+### Page pagination
+<ul class="pagination">
+    <li class="page-item first disabled">
+        <a class="page-link">First</a>
+    </li>
+    <li class="page-item prev disabled">
+        <a class="page-link">Previous</a>
+    </li>
+    <li class="page-item active">
+        <a class="page-link">1</a>
+    </li>
+    <li class="page-item">
+        <a class="page-link">2</a>
+    </li>
+    <li class="page-item">
+        <a class="page-link">3</a>
+    </li>
+    <li class="page-item next">
+        <a class="page-link">Next</a>
+    </li>
+    <li class="page-item last">
+        <a class="page-link">Last</a>
+    </li>
+</ul>
+
+### Details 
+<div class="fancy-details">
+    <details>
+        <summary>summary text</summary>
+        <p>To achieve this look you need to wrap your <code>details</code> inside a div with a class <code>.fancy-details</code></p>
+    </details>
+    <details>
+        <summary>summary text</summary>
+        <p>To achieve this look you need to wrap your <code>details</code> inside a div with a class <code>.fancy-details</code></p>
+    </details>
+</div>
+

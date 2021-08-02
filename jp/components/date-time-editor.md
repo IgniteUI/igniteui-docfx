@@ -1,5 +1,5 @@
 ---
-title: 日時エディター ディレクティブ - ネイティブ Angular | Ignite UI for Angular 
+title: 日時エディター ディレクティブ - ネイティブ Angular | Ignite UI for Angular
 _description: Ignite UI for Angular Date Time Editor ディレクティブでは、Date オブジェクトによって日付と時刻を処理できます。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular Date Time Editor ディレクティブAngular Date Time ディレクティブ コントロール, Date Time Editor, Angular Date Time ディレクティブ
 _language: ja
@@ -11,8 +11,8 @@ _language: ja
 
 ## Angular Date Time Editor の例
 
-<code-view style="height:100px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:100px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/datetime-basic" alt="Angular Date Time Editor 例">
 </code-view>
 
@@ -38,7 +38,7 @@ export class AppModule {}
 
 input 要素を日時エディターとして使用するには、igxDateTimeEditor ディレクティブと有効なdateオブジェクトを値として設定します。エディターの外観を完全にするには、入力要素を[入力グループ](input-group.md)にラップします。これにより、[`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html)、[`igxLabel`]({environment:angularApiUrl}/classes/igxlabeldirective.html)、[`igxPrefix`](input-group.md#prefix-および-suffix)、[`igxSuffix`](input-group.md#prefix-および-suffix)、[`igx-hint`]({environment:angularApiUrl}/classes/igxhintdirective.html) ディレクティブを利用できるだけでなく、フォーム入力を扱うときの一般的なシナリオに対処できます。
 
-### バインディング 
+### バインディング
 以下は、Date オブジェクトを [`value`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#value) として設定する基本的な構成シナリオです。
 ```typescript
 public date = new Date();
@@ -114,12 +114,15 @@ Angular の [`DatePipe`](https://angular.io/api/common/DatePipe) を使用して
 | `m` | 分。編集中に先行ゼロで強制されます。 |
 | `mm` | 先行ゼロが明示的に設定された分。 |
 | `tt` | 12 時間形式の AM/PM セクション。 |
+
+> 注: `IgxDateTimeEditorDirective` が IME 入力をサポートします。アジア言語の入力を入力すると、コントロールは入力メソッドの構成と候補リストをコントロールの編集領域に直接表示し、構成が終了するとすぐに周囲のテキストを再フローします。
+
 ### 最小値と最大値
 [`minValue`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#minvalue) および [`maxValue`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#maxvalue) プロパティを指定して、ngModel の入力を制限し、有効性を制御できます。
 ```typescript
 public minDate = new Date(2020, 1, 15);
 public maxDate = new Date(2020, 11, 1);
-``` 
+```
 
 ```html
 <igx-input-group>
@@ -136,8 +139,8 @@ public maxDate = new Date(2020, 11, 1);
 また、どちらのメソッドも、増加/減少手順を設定するために使用できるタイプ `number` のオプションの `delta` パラメーターを受け入れます。
 
 以下のサンプルで両方を比較できます。
-<code-view style="height:150px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:150px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/datetime-advanced" >
 </code-view>
 
@@ -148,7 +151,7 @@ public maxDate = new Date(2020, 11, 1);
 ### Angular フォーム
 Date Time Editor ディレクティブは、コア FormsModule [NgModel](https://angular.io/api/forms/NgModel) と [ReactiveFormsModule](https://angular.io/api/forms/ReactiveFormsModule) (FormControl、FormGroup など) のすべてのフォーム ディレクティブをサポートします。これには、[フォーム バリデーター](https://angular.io/api/forms/Validators)機能も含まれます。次の例は、テンプレート駆動型フォームで `required` バリデーターを使用する方法を示しています。
 
-> 注: 必要に応じて、`validationFailed` イベントを処理し、利用可能な引数の `newValue` プロパティを変更して有効な状態に戻すことができます。  
+> 注: 必要に応じて、`validationFailed` イベントを処理し、利用可能な引数の `newValue` プロパティを変更して有効な状態に戻すことができます。
 
 テンプレート駆動フォームの例:
 ```html
@@ -173,7 +176,7 @@ Date Time Editor ディレクティブは、コア FormsModule [NgModel](https:/
 
 > 注: コンポーネントが正しく動作するためには、[`igxDateTimeEditor`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html) ディレクティブの後に [`igxTextSelection`]({environment:angularApiUrl}/classes/igxtextselectiondirective.html) を設定することが重要です。これは、両方のディレクティブが入力 `focus` イベントで動作するため、マスクが設定された後にテキスト選択が行われるからです。
 
-## スタイル設定 
+## スタイル設定
 詳細については、[`Input Group スタイル ガイド`](input-group.md#スタイル設定)を参照してください。
 <div class="divider--half"></div>
 
@@ -191,7 +194,7 @@ Date Time Editor ディレクティブは、コア FormsModule [NgModel](https:/
 関連トピック:
 * [Mask](mask.md)
 * [Label および Input](label-input.md)
-* [リアクティブ フォームの統合](input-group-reactive-forms.md)
+* [リアクティブ フォームの統合](angular-reactive-form-validation.md)
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
