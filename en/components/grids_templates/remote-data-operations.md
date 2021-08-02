@@ -923,6 +923,14 @@ As you can see in the **paginate** method, custom pagination logic is performed,
 
 }
 
+## Known Issues and Limitations
+
+- When the grid has no `primaryKey` set and remote data scenarios are enabled (when paging, sorting, filtering, scrolling trigger requests to a remote server to retrieve the data to be displayed in the grid), a row will lose the following state after a data request completes:
+    * Row Selection
+    * Row Expand/collapse
+    * Row Editing
+    * Row Pinning
+
 ## API References
 <div class="divider--half"></div>
 
