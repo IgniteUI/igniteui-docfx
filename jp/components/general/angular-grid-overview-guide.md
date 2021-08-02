@@ -31,7 +31,7 @@ Ignite UI for Angular を[既存の Angular アプリケーション](https://jp
 
 `npm install –g igniteui-cli` 
 
-IgniteUI CLI をインストールすると、cli の[ガイド](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/general/cli/step-by-step-guide.html "ステップバイステップ ガイド")を参照してアプリケーションを簡単にブートストラップでき、エンド ユーザーが単一のコマンドで実行できる構成済みのアプリを作成します。 
+Once the igniteui cli is installed you can easily bootstrap an application by following cli’s [guided experience using the Ignite UI CLI](https://www.infragistics.com/products/ignite-ui-angular/angular/components/general/cli/step-by-step-guide-using-cli.html "Step by step guide using Ignite UI CLI") or [Ignite UI for Angular Schematics](https://www.infragistics.com/products/ignite-ui-angular/angular/components/general/cli/step-by-step-guide-using-angular-schematics.html "Step by step guide using Ignite UI for Angular Schematics"), which builds a configured app that the end user can run with a single command: 
 
 `ig` 
 
