@@ -235,7 +235,7 @@ The [`hiddenColumnsText`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#h
 ```
 }
 
-By using the [`columnsAreaMaxHeight`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html#columnsareamaxheight) property of the column hiding UI, we can set the maximum height of the area that contains the columns. This way if we have a lot of columns and not all of them can fit in the container, a scrollbar will appear, which will allow us to navigate to any column we want by keeping the search input pinned at the top and the show/hide all buttons at the bottom.
+By using the [`columnsAreaMaxHeight`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html#columnsareamaxheight) property of the column hiding UI, we can set the maximum height of the area that contains the columns. This way if we have a lot of columns and not all of them can fit in the container, a scrollbar will appear, which will allow us to navigate to any column we want by keeping the search input pinned at the top and the show/hide all buttons at the bottom.
 
 ```typescript
 // columnHiding.component.ts
