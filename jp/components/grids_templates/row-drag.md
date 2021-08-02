@@ -397,7 +397,7 @@ enum DragIcon {
 ### 行の並べ替えデモ
 グリッドの行ドラッグ イベントと `igxDrop` ディレクティブを使用して、ドラッグよる行の並べ替えるが可能なグリッドを作成できます。
 
-すべてのアクションはグリッド本体の _内側_ で発生するため、ここで `igxDrop` ディレクティブをアタッチする必要があります:
+すべてのアクションはグリッド本体の内側で発生するため、ここで `igxDrop` ディレクティブをアタッチする必要があります:
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -617,6 +617,251 @@ export class GridRowReorderComponent {
 </code-view>
 
 }
+<div class="divider--half"></div>
+
+@@if (igxName === 'IgxGrid') {
+### 行ドラッグ シナリオでの UX の改善
+
+現在カーソルの下にある行インデックスを取得できることで、豊富なカスタム機能を構築し、アプリケーションの UX を向上させる機会が得られます。たとえば、グリッド上のドラッグされた行の位置に基づいて、ドラッグ ゴーストを変更したり、ドロップ インジケーターを表示したりできます。この方法で実現できるもう 1 つの便利な動作は、グリッドの境界に達したときに、行をドラッグしながらグリッドを上下にスクロールすることです。
+
+以下に、行の位置を知ることで実現できるいくつかのカスタム実装のスニペットの例を示します。
+
+#### カーソル位置に基づいてドラッグ ゴーストを変更する
+以下のスニペットでは、ドラッグ ゴースト内のテキストを変更して、ホバーされた行の名前を表示する方法を示しています。
+
+まず、ドラッグ ゴーストに使用するテンプレートを指定します。`dropName` プロパティは動的に変化し、カーソルが置かれている行の名前を取得します。
+
+```html
+<ng-template igxRowDragGhost>
+    <div class="customGhost">
+        <div>{{ dropName }}</div>
+    </div>
+</ng-template>
+```
+
+次に、終了した行のインスタンスを返すメソッド ([行の並べ替えデモ](#行の並べ替えデモ)で使用されているものと同様) を定義します。
+
+```typescript
+class MyRowGhostComponent {
+    ...
+    private getRowDataAtPoint(rowList: IgxGridRowComponent[], cursorPosition: Point): any {
+        for (const row of rowList) {
+            const rowRect = row.nativeElement.getBoundingClientRect();
+            if (cursorPosition.y > rowRect.top + window.scrollY && cursorPosition.y < rowRect.bottom + window.scrollY &&
+                cursorPosition.x > rowRect.left + window.scrollX && cursorPosition.x < rowRect.right + window.scrollX) {
+                return this.data.find((r) => r.rowID === row.rowID);
+            }
+        }
+        return null;
+    }
+}
+```
+
+最後に、[`IgxDragDirective.dragMove`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragmove) イベント (ドラッグされた行に対して発行) を処理するために使用されるメソッドを作成します。このメソッドは、`igxRowDragGhost` テンプレートで使用されているプロパティの値を変更し、強制的に再描画します。ドラッグしている特定の行の `dragMove` イベントのみをサブスクライブし、行がドロップされるたびに (メモリ リークを防ぐために) サブスクライブを解除します。
+
+```typescript
+class MyRowGhostComponent {
+    ...
+    public ngAfterViewInit(): void {
+        this.grid.onRowDragStart.pipe(takeUntil(this.destroy$)).subscribe(this.onRowDragStart.bind(this));
+    }
+    ...
+    private onRowDragStart(e: IRowDragStartEventArgs) {
+        if (e !== null) {
+            this._draggedRow = e.dragData.rowData;
+        }
+        const directive = e.dragDirective;
+        directive.dragMove
+            .pipe(takeUntil(this.grid.onRowDragEnd))
+            .subscribe(this.onDragMove.bind(this));
+    }
+    ...
+    private onDragMove(args: IDragMoveEventArgs) {
+        const cursorPosition = this.getCursorPosition(args.originalEvent);
+        const hoveredRowData = this.getRowDataAtPoint(
+            this.grid.rowList.toArray(),
+            cursorPosition
+        );
+        if (!hoveredRowData) {
+            args.cancel = true;
+            return;
+        }
+        const rowID = hoveredRowData.ID;
+        if (rowID !== null) {
+            let newName = this.dropName;
+            if (rowID !== -1) {
+                const targetRow = this.grid.rowList.find((e) => {
+                    return e.rowData.ID === rowID;
+                });
+                newName = targetRow?.rowData.Name;
+            }
+            if (newName !== this.dropName) {
+                this.dropName = newName;
+                args.owner.cdr.detectChanges();
+            }
+        }
+    }
+    
+}
+
+```
+
+#### カーソル位置に基づいたドロップ インジケーターの表示
+
+次のセクションのデモでは、ドラッグされた行がドロップされる場所のインジケーターを表示する方法を確認します。このインジケーターは好きなようにカスタマイズできます - ドラッグされた行がドロップされる位置に配置されたプレースホルダー行、ドラッグされた行が現在ホバーされている行の上または下にドロップされるかどうかを示す境界線スタイルなどです。
+
+カーソルの位置を追跡するために、行のドラッグを開始するときに [`IgxDragDirective`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragmove) の `dragMove` イベントにバインドします。
+
+> [!NOTE]
+> グリッドに `primaryKey` が指定されていることを確認してください! ロジックが行を適切に並べ替えられるように、行には一意の識別子が必要です。
+
+```typescript
+public ngAfterViewInit() {
+  this.grid.rowDragStart
+  .pipe(takeUntil(this.destroy$))
+  .subscribe(this.handleRowStart.bind(this));
+     ...
+}
+
+private handleRowStart(e: IRowDragStartEventArgs): void {
+  if (e !== null) {
+    this._draggedRow = e.dragData.data;
+  }
+  const directive = e.dragDirective;
+  directive.dragMove
+  .pipe(takeUntil(this.grid.rowDragEnd))
+  .subscribe(this.handleDragMove.bind(this));
+}
+
+private handleDragMove(event: IDragMoveEventArgs): void {
+  this.handleOver(event);
+    ...
+}
+
+private handleOver(event: IDragMoveEventArgs) {
+  const ghostRect = event.owner.ghostElement.getBoundingClientRect();
+  const rowIndex = this.getRowIndexAtPoint(this.grid.rowList.toArray(), {
+    x: ghostRect.x,
+    y: ghostRect.y
+  });
+  if (rowIndex === -1) {
+    return;
+  }
+  const rowElement = this.grid.rowList.find(
+    e => e.rowData.ID === this.grid.data[rowIndex].ID
+  );
+  if (rowElement) {
+    this.changeHighlightedElement(rowElement.element.nativeElement);
+  }
+}
+
+private clearHighlightElement(): void {
+  if (this.highlightedRow !== undefined) {
+    this.renderer.removeClass(this.highlightedRow, 'underlined-class');
+  }
+}
+
+private setHightlightElement(newElement: HTMLElement) {
+  this.renderer.addClass(newElement, 'underlined-class');
+  this.highlightedRow = newElement;
+}
+
+private changeHighlightedElement(newElement: HTMLElement) {
+  if (newElement !== undefined) {
+    if (newElement !== this.highlightedRow) {
+      this.clearHighlightElement();
+      this.setHightlightElement(newElement);
+    } else {
+      return;
+    }
+  }
+}
+```
+
+
+
+<div class="divider--half"></div>
+
+#### 行ドラッグでグリッドをスクロールする
+
+非常に便利なシナリオは、ドラッグされた行がその上部または下部の境界に達したときにグリッドをスクロールできることです。これにより、グリッド内の行数にスクロールバーが必要な場合に、現在のビューポートの外側で行を並べ替えることができます。
+
+以下に、ビューポートの端に到達したかどうかを確認し、必要に応じてスクロールするために使用する 2 つの方法の例を示します。`isGridScrolledToEdge` は、グリッドをスクロールする方向 (「下」の場合は 1、「上」の場合は -1) の 1 つのパラメーターを受け入れ、その方向の最後の行に到達した場合は `true` を返します。`scrollGrid` メソッドは、グリッドをある方向 (1 または -1) にスクロールしようとしますが、グリッドがすでにその端にある場合は何もしません。
+
+```typescript
+class MyGridScrollComponent {
+    ...
+    private isGridScrolledToEdge(dir: 1 | -1): boolean {
+        if (this.grid.data[0] === this.grid.rowList.first.data && dir === -1) {
+            return true;
+        }
+        if (
+            this.grid.data[this.grid.data.length - 1] === this.grid.rowList.last.data &&
+            dir === 1
+        ) {
+            return true;
+        }
+        return false;
+    }
+
+    private scrollGrid(dir: 1 | -1): void {
+        if (!this.isGridScrolledToEdge(dir)) {
+            if (dir === 1) {
+                this.grid.verticalScrollContainer.scrollNext();
+            } else {
+                this.grid.verticalScrollContainer.scrollPrev();
+            }
+        }
+    }
+}
+
+```
+
+前の例で行ったように、特定の行の `dragMove` イベントをサブスクライブします。`dragMove` はカーソルが実際に移動したときにのみ起動されるため、行が端の 1 つにあるときにグリッドを自動スクロールするための便利で簡単な方法が必要ですが、ユーザーはマウスを**移動しません** 。`500Ms` ごとにグリッドを自動スクロールする `interval` を設定するメソッドを追加します。
+
+ポインタがグリッドの端に達したときに `interval` を作成してサブスクライブし、マウスが移動したり行がドロップされたりするたびに (カーソル位置に関係なく)、その `interval` からサブスクライブを解除します。
+
+```typescript
+class MyGridScrollComponent {
+    public ngAfterViewInit() {
+        this.grid.onRowDragStart
+            .pipe(takeUntil(this.destroy$))
+            .subscribe(this.onDragStart.bind(this));
+        this.grid.onRowDragEnd
+            .pipe(takeUntil(this.destroy$))
+            .subscribe(() => this.unsubInterval());
+    }
+    ...
+    private onDragMove(event: IDragMoveEventArgs): void {
+        this.unsubInterval();
+        const dir = this.isPointOnGridEdge(event.pageY);
+        if (!dir) {
+            return;
+        }
+        this.scrollGrid(dir);
+        if (!this.intervalSub) {
+            this.interval$ = interval(500);
+            this.intervalSub = this.interval$.subscribe(() => this.scrollGrid(dir));
+        }
+    }
+    ...
+    private unsubInterval(): void {
+        if (this.intervalSub) {
+            this.intervalSub.unsubscribe();
+            this.intervalSub = null;
+        }
+    }
+}
+```
+
+以下は、上記の両方のシナリオの例です。ドロップ インジケーターを表示し、境界線の端に達したときにビューポートをスクロールします。
+
+<code-view style="height:830px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/grid/grid-drop-indicator" >
+</code-view>
+}
+
 <div class="divider--half"></div>
 
 ## 制限

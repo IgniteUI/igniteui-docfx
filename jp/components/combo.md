@@ -350,7 +350,6 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 
 その他のコンポーネントおよびディレクティブ (またはそのいずれか) で使用した API:
 
-* [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
 * [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html)
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 * [IgxCheckboxComponent]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html)
