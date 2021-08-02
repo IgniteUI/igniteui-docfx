@@ -5,54 +5,54 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-# Angular reactive form validation 
+# Angular リアクティブ フォームの検証 
 
-## What are reactive forms in Angular?
+## Angular のリアクティブ フォームとは?
 
-Reactive forms in Angular provide a direct access to the underlying form object model, offering an immutable and explicit approach to handling form inputs. As the values of those inputs change in time, the state of the form is managed by reactive forms, relying on fixed or inflexible methods. 
+Angular のリアクティブ フォームは、基になるフォーム オブジェクト モデルへの直接アクセスを提供し、フォーム入力を処理するための不変で明示的なアプローチを提供します。これらの入力の値は時間とともに変化するため、フォームの状態は、固定または柔軟性のない方法に依存したリアクティブ フォームによって管理されます。 
 
-Which means that, each time a change is triggered to the data model, the so-called observable operators return a new data model, instead of updating the already existing one again and again. And that keeps the state of a form clean. 
+つまり、データ モデルに変更がトリガーされるたびに、いわゆる監視可能な演算子は、既存のデータ モデルを何度も更新するのではなく、新しいデータ モデルを返します。そして、それはフォームの状態をきれいに保ちます。 
 
-Angular reactive forms are considered extremely scalable, reusable, and robust due to their:
+Angular リアクティブ フォームは、次の理由により、非常にスケール可能で、再利用可能で、堅牢であると見なされます。
 
-**Immutability**
+**不変性**
 
-Reactive forms in Angular provide an immutable or fixed data structure. Once the state of the underlying model is altered, you get a new “version” of this particular model which is updated. It has new values but remains aligned with all the (UI) controls in any moment.
+Angular のリアクティブ フォームは、不変または固定のデータ構造を提供します。基になるモデルの状態が変更されると、この特定のモデルの新しい「バージョン」が取得され、更新されます。新しい値がありますが、いつでもすべての (UI) コントロールと整合したままです。
 
-**Better testability**
+**より良いテスト容易性**
 
-Testing is pretty straightforward with reactive forms and requires less setup. When it comes to large applications this is very beneficial. Here, you get a synchronous access to streams of input and the possibility to test the form and data models without having to render UI.
+テストはリアクティブ フォームを使用すると非常に簡単で、セットアップも少なくて済みます。大規模なアプリケーションになると、これは非常に有益です。ここでは、入力ストリームへの同期アクセスと、UI を描画せずにフォーム モデルとデータ モデルをテストする可能性があります。
 
-**Predictability**
+**予測可能性**
 
-Reactive forms are built around observable streams which track every unique change in the form and allow you to access input values synchronously (thanks to the well-structured data flow). Which, in turn, makes reactive forms highly predictable.
+リアクティブ フォームは、フォーム内のすべての一意の変更を追跡し、適切に構造化されたデータ フローのおかげで、入力値に同期的にアクセスできるようにする監視可能なストリームを中心に構築されています。これにより、リアクティブ フォームが非常に予測可能になります。
 
-**Consistent & structured data flow**
+**一貫性のある構造化されたデータ フロー**
 
-The data flow in Angular reactive forms is well-structured because the form logic is led by the component class. This enables you to add validator functions directly to the FormControl instance in the component class. Whenever a change occurs, Angular calls these functions.
+フォーム ロジックはコンポーネント クラスによって主導されるため、Angular リアクティブ フォームのデータ フローは適切に構造化されています。これにより、コンポーネント クラスの FormControl インスタンスに検証関数を直接追加できます。変更が発生するたびに、Angular はこれらの関数を呼び出します。
 
 
-## What is angular form validation? 
-Angular form validation is an integral technical process that verifies if any input provided by a user into a web-form is correct and complete. You can manage validation in a template-driven approach or with Angular reactive forms. Based on what is entered, the form will either allow users to proceed or will display a specific error message to help the user know where they went wrong with their data input. 
+## Angular フォーム検証とは? 
+Angular フォーム検証は、ユーザーが Web フォームに入力した内容が正しく完全であるかどうかを検証する重要な技術プロセスです。テンプレート駆動型アプローチまたは Angular リアクティブ フォームを使用して検証を管理できます。入力内容に基づいて、フォームはユーザーが続行できるようにするか、特定のエラー メッセージを表示して、ユーザーがデータ入力のどこで問題が発生したかを知るのに役立ちます。 
 
-Depending on which validator failed, the on-screen error message gives feedback, indicating what is wrong and what exactly needs to be filled in or re-entered as data. In general, apps use forms to allow users to perform data-entry tasks like signing up, logging in, updating online profiles, submitting sensitive information, and more.  
+どの検証が失敗したかに応じて、画面上のエラー メッセージはフィードバックを提供し、何が間違っているのか、何が正確にデータとして入力または再入力する必要があるのかを示します。一般に、アプリはフォームを使用して、ユーザーがサインアップ、ログイン、オンライン プロファイルの更新、機密情報の送信などのデータ入力タスクを実行できるようにします。  
 
-Angular runs form validation every time the value of a form input is changed and to confirm if data inputs filled in a web-form by a user are accurate and complete. To do that properly, Angular calls a list of validators which are run on every change that occurs.  
+Angular は、フォーム入力の値が変更されるたびにフォーム検証を実行し、ユーザーが Web フォームに入力したデータ入力が正確で完全であるかどうかを確認します。これを適切に行うために、Angular は、発生する変更ごとに実行される検証のリストを呼び出します。  
 
-Validation of user-input from the UI can be done either with template-driven forms or with Angular reactive forms. Both of these forms are built on the following base classes:
+UI からのユーザー入力の検証は、テンプレート駆動型フォームまたは Angular リアクティブ フォームのいずれかを使用して実行できます。これらのフォームは両方とも、次の基本クラスに基づいて構築されています:
 * FormControl
 * FormGroup
 * FormArray  
 * ControlValueAccessor
 
-## Angular reactive form validation
-Reactive forms deliver a model-driven approach to managing form inputs, the values of which change with respect to time. Because reactive forms are built on a component class, Angular reactive form validation happens by adding validator functions directly to the form control model in the component class.  
+## Angular リアクティブ フォームの検証
+リアクティブ フォームは、フォーム入力を管理するためのモデル駆動型アプローチを提供します。フォーム入力の値は時間とともに変化します。リアクティブ フォームはコンポーネント クラスに基づいて構築されているため、Angular リアクティブ フォームの検証は、コンポーネント クラスのフォーム コントロール モデルに検証関数を直接追加することで行われます。  
 
-When the value is valid, validators return `null`. If the value is invalid, validators generate a set of errors, and you can display a specific error message on the screen.
+値が有効な場合、検証は `null` を返します。値が無効な場合、検証は一連のエラーを生成し、画面に特定のエラー メッセージを表示できます。
 
-There are built-in validators such as `required`, `minlength`, `maxlength` etc. However, you can also create your own validators.
+`required`、`minlength`、`maxlength` などの組み込みの検証があります。ただし、独自の検証を作成することもできます。
 
-A simple custom reactive form validator can look like this:
+単純なカスタム リアクティブ フォーム検証は次のようになります:
 ```typescript
 import { Directive, OnInit } from '@angular/core';
 import { Validator, NG_VALIDATORS, AbstractControl, ValidationErrors } from '@angular/forms';
@@ -77,7 +77,7 @@ export class DateValueValidatorDirective implements Validator {
 }
 ```
 
-Also a validator can be asynchronous:
+また、検証は非同期にすることもできます:
 ```typescript
 import { Directive, OnInit } from '@angular/core';
 import { AsyncValidator, NG_ASYNC_VALIDATORS, AbstractControl, ValidationErrors } from '@angular/forms';
@@ -103,32 +103,32 @@ export class DateValueAsyncValidatorDirective implements AsyncValidator {
 }
 ```
 
-## Angular Reactive form validation example
-Let’s see how you can set up reactive form validation in practice with this Angular form validation example.
+## Angular リアクティブ フォーム検証の例
+この Angular フォーム検証の例を使用して、リアクティブ フォーム検証の実践を設定する方法を見てみましょう。
 
-It is a quick demo of a pretty standard booking form for a movie. It shows what happens if one or several of the form inputs are incomplete and you can see how the specific error message is visualized.
+これは、映画の一般的な標準フォームの簡単なデモです。1 つまたは複数のフォーム入力が不完全な場合に何が起こるかを示し、特定のエラー メッセージがどのように視覚化されるかを確認できます。
 
-For the purposes of our example of Angular reactive form validation, the fields which are required include: movie, full name, email, and genre. Unless you get all of them completed, you won’t be able to proceed with your booking and the `book button` will remain disabled.
+Angular リアクティブ フォーム検証の例では、必要なフィールドには、映画、氏名、電子メール、およびジャンルが含まれます。すべて完了しない限り、予約を続行することはできず、`予約ボタン`は無効のままになります。
 
-So, if you enter values for movie title, full name, phone, and email, they will be highlighted in green. But if you forget to select `favorite genre`, this field will be highlighted in red, indicating incomplete value inputs. Once the values are all set right, the field will be highlighted in green, indicating correct value inputs. The `book button` will be activated and the form can be successfully submitted afterwards.
+そのため、映画のタイトル、氏名、電話番号、メール アドレスの値を入力すると、緑色で強調表示されます。ただし、`お気に入りのジャンル`を選択するのを忘れた場合、このフィールドは赤で強調表示され、値の入力が不完全であることを示します。値がすべて正しく設定されると、フィールドは緑色で強調表示され、正しい値の入力を示します。`予約ボタン`がアクティブになり、フォームを後で正常に送信できます。
 
 <code-view style="height: 850px;"
     data-demos-base-url="{environment:demosBaseUrl}"
     iframe-src="{environment:demosBaseUrl}/data-entries/reactive-forms"
-    alt="Angular Reactive Forms Integration Example">
+    alt="Angular リアクティブ フォーム統合の例">
 </code-view>
 
 <div class="divider--half"></div>
 
-## Angular form group validation
-Form groups are basically a group of multiple related `FormControlls` that enable you to access the state of the encapsulated controls. Angular from group validation helps you track the value of group controls or a form as well as to track validation of the state of the form control. `FormGroup` is used with `FormControl`. 
+## Angular フォーム グループの検証
+フォーム グループは基本的に、カプセル化されたコントロールの状態にアクセスできるようにする複数の関連する `FormControlls` のグループです。Angular フォーム グループの検証は、グループ コントロールまたはフォームの値を追跡したり、フォーム コントロールの状態の検証を追跡したりするのに役立ちます。`FormGroup` は `FormControl` とともに使用されます。
 
-## Why would you need Angular form custom validation?
-With custom validators you can address different functionality and ensure the values in a form meet certain criteria, which sometimes isn’t possible to do when using built-in validators only. If you want to validate a phone number or a specific password pattern, it’s best to create custom validator and rely on Angular form custom validation.
+## なぜ Angular フォームのカスタム検証が必要なのか?
+カスタム検証を使用すると、さまざまな機能に対応し、フォームの値が特定の基準を満たしていることを確認できます。これは、組み込みの検証のみを使用している場合には実行できない場合があります。電話番号または特定のパスワード パターンを検証する場合は、カスタム検証を作成し、Angular フォーム カスタム検証に依存することをお勧めします。
 
-With reactive forms, generating such is just as easy as writing a new function. And for model-driven forms (such is the reactive form in Angular) we create custom validation functions and send them to the `FormControl` constructor.
+リアクティブ フォームを使用すると、新しい関数を作成するのと同じくらい簡単にそのようなフォームを生成できます。また、モデル駆動型フォーム （Angular のリアクティブ フォームなど）の場合、カスタム検証関数を作成して `FormControl` コンストラクターに送信します。
 
-Below you can see how to write and implement a custom form validator in your reactive form.
+以下に、リアクティブ フォームでカスタム フォーム検証を作成して実装する方法を示します。
 
 ```typescript
 import { FormGroup, FormControl, Validators, ValidatorFn, ValidationErrors } from '@angular/forms';
@@ -168,17 +168,17 @@ export class MyComponent implements OnInit {
 }
 ```
 
-## Additional Resources
+## その他のリソース
 <div class="divider--half"></div>
 
-Related topics:
+関連トピック:
 * [Combo](combo.md)
 * [Select](select.md)
 * [Input Group](input-group.md)
 * [Date Picker](date-picker.md)
 * [Time Picker](time-picker.md)
 
-Our community is active and always welcoming to new ideas.
+コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
