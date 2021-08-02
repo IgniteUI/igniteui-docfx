@@ -118,7 +118,7 @@ Additionally, you can specify **arguments** to control the theme or skip package
 
 ## Add template
 
-To add one of the [available Ignite UI Angular templates](component-templates.md) you need to provide template ID and a name for the new component or use the [Step-by-Step Guide](step-by-step-guide.md#add-view). Their usage is supported only inside existing projects created with the Angular Schematics, Ignite UI CLI or where Ignite UI for Angular has been [installed using `ng add`](../getting-started.md#installing-ignite-ui-for-angular).
+To add one of the [available Ignite UI Angular templates](component-templates.md) you need to provide template ID and a name for the new component or use the [Step-by-Step Guide](step-by-step-guide-using-cli.md#add-view). Their usage is supported only inside existing projects created with the Angular Schematics, Ignite UI CLI or where Ignite UI for Angular has been [installed using `ng add`](../getting-started.md#installing-ignite-ui-for-angular).
 
 With Schematics, use `ng generate` with the Ignite UI for Angular collection and `component [template] [name]`:
 
