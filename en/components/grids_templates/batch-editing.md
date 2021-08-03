@@ -237,7 +237,7 @@ Deleting a parent node in `@@igComponent` has some peculiarities. If you are usi
 
 ## Remote Paging with Batch Editing Demo
 
-[Check out the full demo configuration](remote-data-operations.html#remote-paging-with-batch-editing)
+[Check out the full demo configuration](remote-data-operations.md#remote-paging-with-batch-editing)
 
 <code-view style="height:620px" 
            data-demos-base-url="{environment:demosBaseUrl}" 

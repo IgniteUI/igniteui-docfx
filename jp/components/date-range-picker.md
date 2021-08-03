@@ -7,7 +7,7 @@ _language: ja
 
 # Date Range Picker コンポーネント (日付範囲ピッカー)
 
-Ignite UI for Angular Date Range Picker コンポーネントは開始日と終了日を定義して日付範囲を選択できる月表示カレンダーを表示します。カレンダーの UI は、ダイアログ (デフォルトの設定) または入力フィールドにあるカレンダー アイコンへのユーザー操作によってドロップダウンとして表示されます。さらに、このコンポーネントには高度なセットアップ オプションがあり、2 つの異なる編集可能な入力フィールドを公開します。コンポーネントはロケールおよびカスタム日付書式設定をサポートします。
+Ignite UI for Angular Date Range Picker コンポーネントは開始日と終了日を定義して日付範囲を選択できる月表示カレンダーを表示します。カレンダーの UI は、ドロップダウン (デフォルトの設定) または入力フィールドにあるカレンダー アイコンへのユーザー操作によってダイアログとして表示されます。さらに、このコンポーネントには高度なセットアップ オプションがあり、2 つの異なる編集可能な入力フィールドを公開します。コンポーネントはロケールおよびカスタム日付書式設定をサポートします。
 
 ## Angular Date Range Picker の例
 
@@ -148,10 +148,10 @@ Date Range Picker に開始日と終了日の 2 つの入力がある場合、�
 
 ### ドロップダウン モード
 
-[`IgxDateRangePickerComponent`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html) コンポーネントには、ダイアログ (デフォルト) とドロップダウンの 2 つのモードがあります。ドロップダウン モードに切り替えるには、以下の手順を実行します。
+[`IgxDateRangePickerComponent`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html) コンポーネントには、ドロップダウン (デフォルト) とダイアログの 2 つのモードがあります。ドロップダウン モードに切り替えるには、以下の手順を実行します。
 
 ```html
-<igx-date-range-picker [mode]="'dropdown'"></igx-date-range-picker>
+<igx-date-range-picker [mode]="'dialog'"></igx-date-range-picker>
 ```
 
 
@@ -249,7 +249,6 @@ Date Range Picker コンポーネントは、コア FormsModule [NgModel](https:
     </igx-date-end>
 </igx-date-range-picker>
 ```
-
 
 <code-view style="height:600px"
            data-demos-base-url="{environment:demosBaseUrl}"

@@ -208,6 +208,12 @@ IgxGrid はコピーされたデータを取得し、コンテナ要素に貼り
     import 'core-js/es7/array';
     ```
 
+- When the grid has no `primaryKey` set and remote data scenarios are enabled (when paging, sorting, filtering, scrolling trigger requests to a remote server to retrieve the data to be displayed in the grid), a row will lose the following state after a data request completes:
+    * Row Selection
+    * Row Expand/collapse
+    * Row Editing
+    * Row Pinning
+
 ## API リファレンス
 
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
