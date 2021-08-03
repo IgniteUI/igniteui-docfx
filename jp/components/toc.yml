@@ -36,7 +36,7 @@
     - name: .NET Core を使用してリアルタイム SignalR アプリの構築
       href: general/how-to/signal-r-service-live-data.md
       new: true
-    - name: リアクティブ フォーム
+    - name: Angular リアクティブ フォーム
       href: angular-reactive-form-validation.md
       new: true
 - name: Angular Schematics & Ignite UI CLI
@@ -131,6 +131,7 @@
           new: false
     - name: 行ドラッグ
       href: grid/row-drag.md
+      updated: true
       new: false
     - name: ページング
       href: grid/paging.md
