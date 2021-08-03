@@ -7,7 +7,7 @@ _language: ja
 
 # 認証プロジェクト テンプレート
 
-There are multiple versions of a project (called project templates) to choose from when using either the [`new` command with Ignite UI CLI](getting-started-with-cli.md#create-a-new-project), [with Ignite UI for Angular Schematics](getting-started-with-angular-schematics.md#create-a-new-project) or the [Step by step mode using Ignite UI CLI](step-by-step-guide-using-cli.md) or [Ignite UI for Angular Schematics](step-by-step-guide-using-angular-schematics.md).
+[Ignite UI CLI](getting-started-with-cli.md#create-a-new-project) (または [Ignite UI for Angular Schematics](getting-started-with-angular-schematics.md#create-a-new-project)) で `new` コマンドを使用する場合、または [Ignite UI CLI を使用したステップ バイ ステップ モード](step-by-step-guide-using-cli.md)/[Ignite UI for Angular Schematics](step-by-step-guide-using-angular-schematics.md) を使用する場合は、プロジェクトの複数のバージョン (プロジェクト テンプレート) から選択できます。
 
 Angular Schematics または Ignite UI CLI を使用して Angular プロジェクト作成する場合は、ユーザー管理でアプリを開始するために追加セットアップをできるだけ必要としないクライアント側認証モジュールの基本的な実装を含むテンプレートを選択できます。
 

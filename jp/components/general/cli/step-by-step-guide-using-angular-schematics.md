@@ -1,11 +1,11 @@
 ---
-title: Step-by-Step Guide Using Ignite UI for Angular Schematics | Ignite UI for Angular | インフラジスティックス
-_description: The Step-by-Step mode contains guided experience through the Ignite UI CLI options.
+title: Ignite UI for Angular Schematics を使用したステップ バイ ステップ ガイド | Ignite UI for Angular | インフラジスティックス
+_description: ステップ バイ ステップ モードには、Ignite UI CLI オプションによるガイドが含まれます。
 _keywords: angular cli, ignite ui for angular, infragistics
 _language: ja
 ---
 
-# Step-by-Step Guide Using Ignite UI for Angular Schematics
+# Ignite UI for Angular Schematics を使用したステップ バイ ステップ ガイド
 利用可能なオプションでガイドを取得する場合、ステップバイステップ モードを初期化して新しいアプリケーションの作成およびセットアップ、同様に [Ignite UI Angular Schematics](getting-started-with-angular-schematics.md) で以前作成したプロジェクトを更新できます。
 
 Schematics コレクションを使用してガイドをアクティブにするには、以下のコマンドを実行します。

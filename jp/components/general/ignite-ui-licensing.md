@@ -24,7 +24,7 @@ Ignite UI 使用許諾契約と利用規約の詳細については、[ここを
 ## Ignite UI for Angular npm パッケージ - プライベート npm フィードの使用
 Npm は Node.js ランタイム環境で使用する一般的なデフォルト パッケージ マネージャーです。プロジェクトに依存するパッケージをすばやく簡単に処理できます。npm の使用方法の詳細については、[npm ヘルプ](https://docs.npmjs.com/)を参照してください。
 
-Infragistics Ignite UI for Angular is available as a npm package and you can add it as a dependency to your project in a [`few easy steps using the Ignite  UI CLI`](./cli/step-by-step-guide-using-cli.md) or [using Ignite UI for Angular Schematics](./cli/step-by-step-guide-using-angular-schematics.md).このパッケージをインストールすると、製品の [Ignite UI for Angular トライアル版](https://jp.infragistics.com/products/ignite-ui-angular)の使用が開始されます。
+Infragistics Ignite UI for Angular は npm パッケージとして提供され、[`Ignite UI CLI`](./cli/step-by-step-guide-using-cli.md) または [Ignite UI for Angular Schematics](./cli/step-by-step-guide-using-angular-schematics.md) でプロジェクトに依存関係として追加できます。このパッケージをインストールすると、製品の [Ignite UI for Angular トライアル版](https://jp.infragistics.com/products/ignite-ui-angular)の使用が開始されます。
 
 >[!NOTE]
 > トライアル版の使用を開始するとはどういう意味ですか? これは、Web ビューの**ウォーターマーク**部分を含む製品バージョンを使用することを意味し、1 か月など一定期間ライセンス パッケージを使用することを意味します。

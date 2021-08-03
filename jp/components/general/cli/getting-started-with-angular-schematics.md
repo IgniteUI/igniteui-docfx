@@ -1,12 +1,12 @@
 ---
 title: Ignite UI for Angular Schematics を使用した作業の開始 | Ignite UI for Angular | インフラジスティックス
-_description: The Step-by-Step mode contains guided experience through the Ignite UI CLI options.
+_description: ステップ バイ ステップ モードには、Ignite UI CLI オプションによるガイドが含まれます。
 _keywords: angular cli, ignite ui for angular, infragistics
 _language: ja
 ---
 
 ## Ignite UI for Angular Schematics を使用した作業の開始
-To get started install [Ignite UI for Angular Schematics](https://github.com/IgniteUI/igniteui-cli/tree/master/packages/ng-schematics) globally:
+はじめに [Ignite UI for Angular Schematics](https://github.com/IgniteUI/igniteui-cli/tree/master/packages/ng-schematics) をグローバルにインストールします。
 
 ```cmd
 npm i -g @igniteui/angular-schematics
@@ -31,7 +31,7 @@ Ignite UI for Angular コントロールを使用するように設定された�
 ng new newAngularProject --collection="@igniteui/angular-schematics" --template=side-nav
 ```
 
-If you already have an Angular project, created without providing the `@igniteui/angular-schematics` collection as described above, you can add the Ignite UI for Angular product, using the following command:
+上記のように `@igniteui/angular-schematics` コレクションを提供せずに作成された Angular プロジェクトが既にある場合、以下のコマンドを使用して Ignite UI for Angular 製品を追加できます。
 
 ```cmd
 ng add igniteui-angular
@@ -136,7 +136,7 @@ List of all the [available templates](component-templates.md).
     <code>--module</code> (alias: <code>-m</code>)
   </p>
   <p>
-    <i>note: module argument is applicable only in Angular projects.</i>
+    <i>注: module 引数は Angular プロジェクトにのみ適用できます。</i>
   </p> 
   <p>
     新しいコンポーネントを登録するモジュールの、/src/app/ folder を基準とした module.ts ファイルのパス。

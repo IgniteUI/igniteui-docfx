@@ -1,11 +1,11 @@
 ---
-title: Step-by-Step Guide Using Ignite UI CLI| Ignite UI for Angular | インフラジスティックス
-_description: The Step-by-Step mode contains guided experience through the Ignite UI CLI options.
+title: Ignite UI CLI を使用したステップ バイ ステップ ガイド| Ignite UI for Angular | インフラジスティックス
+_description: ステップ バイ ステップ モードには、Ignite UI CLI オプションによるガイドが含まれます。
 _keywords: angular cli, ignite ui for angular, infragistics
 _language: ja
 ---
 
-# Step-by-Step Guide using Ignite UI CLI
+# Ignite UI CLI を使用したステップ バイ ステップ ガイド
 利用可能なオプションでガイドを取得する場合、ステップバイステップ モードを初期化して新しいアプリケーションの作成およびセットアップ、同様に [Ignite UI CLI](getting-started-with-cli.md) で以前作成したプロジェクトを更新できます。
 
 Ignite UI CLI を使用してガイドを開始するには、`ig` コマンドを実行します。

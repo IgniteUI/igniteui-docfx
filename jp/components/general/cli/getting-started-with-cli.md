@@ -1,15 +1,15 @@
 ---
 title: Ignite UI CLI を使用した作業の開始 | Ignite UI for Angular | インフラジスティックス
-_description: The Step-by-Step mode contains guided experience through the Ignite UI CLI options.
+_description: ステップ バイ ステップ モードには、Ignite UI CLI オプションによるガイドが含まれます。
 _keywords: angular cli, ignite ui for angular, infragistics
 _language: ja
 ---
 
 ## Ignite UI CLI を使用した作業の開始
 
-If you are creating a new Angular application from scratch, we recommend using the approach described bellow as it will provide you with an user-friendly guided experience. The guide will lead you through all the setup options and your project will be scaffolded in a blink of an eye.
+新しい Angular アプリケーションを最初から作成する場合、ユーザー フレンドリな付きエクスペリエンスを提供するため、以下に説明する方法を使用することをお勧めします。このガイドでは、すべてのセットアップ オプションについて説明します。
 
-To get started install [Ignite UI CLI](https://github.com/IgniteUI/igniteui-cli) globally:
+はじめに [Ignite UI CLI](https://github.com/IgniteUI/igniteui-cli) をグローバルにインストールします。
 
 ```cmd
 npm install -g igniteui-cli 
@@ -126,9 +126,9 @@ ig new newAngularProject --framework=angular --type=igx-ts --template=side-nav
 
 ## テンプレートの追加
 
-[利用可能な Ignite UI Angular テンプレート](component-templates.md)を追加するには、新しいコンポーネントのテンプレート ID と名前を指定するか、[ステップ バイ ステップ ガイド](step-by-step-guide-using-cli.md#add-view)を使用する必要があります。 Their usage is supported only inside existing projects created with the Ignite UI CLI, Angular Schematics or where Ignite UI for Angular has been [installed using `ng add`](../getting-started.md#installing-ignite-ui-for-angular).
+[利用可能な Ignite UI Angular テンプレート](component-templates.md)を追加するには、新しいコンポーネントのテンプレート ID と名前を指定するか、[ステップ バイ ステップ ガイド](step-by-step-guide-using-cli.md#add-view)を使用する必要があります。Angular Schematics、Ignite UI CLI で作成された既存のプロジェクト内、または Ignite UI for Angular が [`ng add` でインストールされている](../getting_started.md#Ignite-UI-for-Angular-のインストール)場合にのみサポートされます。
 
-We use the `ig add [template] [name]` command:
+`ig add [template] [name]` コマンドを使用します。
 
 ```cmd
 ig add grid newGrid
@@ -144,7 +144,7 @@ ig add grid newGrid
     <code>--module</code> (alias: <code>-m</code>)
   </p>
   <p>
-    <i>note: module argument is applicable only in Angular projects.</i>
+    <i>注: module 引数は Angular プロジェクトにのみ適用できます。</i>
   </p> 
   <p>
     新しいコンポーネントを登録するモジュールの、/src/app/ folder を基準とした module.ts ファイルのパス。
@@ -164,7 +164,7 @@ ig add grid newGrid
 
 ## アプリケーションの実行
 
-The `start` command will build the application, start a web server and open it in your default browser:
+`start` コマンドはアプリケーションがビルドされ、Web サーバーが起動してデフォルトのブラウザーで開きます。
 
 ```cmd
 ig start
