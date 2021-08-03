@@ -48,23 +48,26 @@ Excel Exporter サービスは @@igxName のデータを MS Excel へエクス�
 @@if (igxName === 'IgxGrid') {
 
 <code-view style="height: 800px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/services/export-excel-sample-1" alt="Angular Excel Exporter 例">
+           data-demos-base-url="{environment:demosBaseUrl}"
+           explicit-editor="stackblitz"
+           iframe-src="{environment:demosBaseUrl}/services/export-excel-sample-1" alt="Angular Excel Exporter の例">
 </code-view>
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 
 <code-view style="height: 350px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/services/export-excel-tree-grid-sample" alt="Angular Excel Exporter 例">
+           data-demos-base-url="{environment:demosBaseUrl}"
+           explicit-editor="stackblitz"
+           iframe-src="{environment:demosBaseUrl}/services/export-excel-tree-grid-sample" alt="Angular Excel Exporter の例">
 </code-view>
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height: 800px;" 
-        data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 600px;" 
+        data-demos-base-url="{environment:demosBaseUrl}"
+        explicit-editor="stackblitz"
         iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-export" alt="Angular Excel Exporter の例">
 </code-view>
 
@@ -141,10 +144,42 @@ public exportButtonHandler() {
 
 
 <code-view style="height: 800px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/services/export-excel-sample-1" alt="Angular Grouped Data Excel Exporter Example">
+           data-demos-base-url="{environment:demosBaseUrl}"
+           explicit-editor="stackblitz" 
+           iframe-src="{environment:demosBaseUrl}/services/export-excel-sample-1" alt="Angular Grouped Data Excel Exporter の例">
 </code-view>
 
+}
+
+## Export Multi Column Headers Grid
+
+It is now possible to export @@igComponent with defined [multi-column headers](multi-column-headers.md). All headers will be reflected in the exported excel file as they are displayed in the @@igComponent. If you want to exclude the defined multi-column headers from the exported data you can set the [exporter option]({environment:angularApiUrl}/classes/igxexporteroptionsbase.html) [ignoreMultiColumnHeaders]({environment:angularApiUrl}/classes/igxexporteroptionsbase.html#ignoremulticolumnheaders) to `true`.
+
+> [!NOTE]
+> The exported @@igComponent will not be formatted as a table, since Excel tables do not support multiple row headers.
+
+@@if (igxName === 'IgxGrid') {
+<code-view style="height: 800px;" 
+           data-demos-base-url="{environment:demosBaseUrl}"
+           explicit-editor="stackblitz"
+           iframe-src="{environment:demosBaseUrl}/grid/multi-column-headers-export" alt="Angular Multi-Column Headers Export">
+</code-view>
+}
+
+@@if (igxName === 'IgxTreeGrid') {
+<code-view style="height: 800px;" 
+           data-demos-base-url="{environment:demosBaseUrl}"
+           explicit-editor="stackblitz" 
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-multi-column-headers-export" alt="Angular Multi-Column Headers Export">
+</code-view>
+}
+
+@@if (igxName === 'IgxHierarchicalGrid') {
+<code-view style="height: 800px;" 
+           data-demos-base-url="{environment:demosBaseUrl}"
+           explicit-editor="stackblitz"
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-column-export" alt="Angular Multi-Column Headers Export">
+</code-view>
 }
 
 ## エクスポートするコンテンツのカスタマイズ
