@@ -139,7 +139,7 @@ The explicit-editor attribute for code-view elements is allowing to set explicit
 
 
 ```
-<code-view explicit-editor="csb"</code-view>
+<code-view explicit-editor="csb" ... ></code-view>
 ```
 
 ```
