@@ -12,7 +12,7 @@ Pagination allows us to divide a set of data into a number of similar pages. Thi
 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/paginator/main-pagination" alt="Angular Paginator Example">
+           iframe-src="{environment:demosBaseUrl}/pagination/main-pagination" alt="Angular Paginator Example">
 </code-view>
 
 <div class="divider--half"></div>
