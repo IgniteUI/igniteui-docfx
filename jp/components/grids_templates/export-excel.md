@@ -151,12 +151,12 @@ public exportButtonHandler() {
 
 }
 
-## Export Multi Column Headers Grid
+## 複数列ヘッダー グリッドのエクスポート
 
-It is now possible to export @@igComponent with defined [multi-column headers](multi-column-headers.md). All headers will be reflected in the exported excel file as they are displayed in the @@igComponent. If you want to exclude the defined multi-column headers from the exported data you can set the [exporter option]({environment:angularApiUrl}/classes/igxexporteroptionsbase.html) [ignoreMultiColumnHeaders]({environment:angularApiUrl}/classes/igxexporteroptionsbase.html#ignoremulticolumnheaders) to `true`.
+定義された[複数列ヘッダー](multi-column-headers.md)を使用して @@igComponent をエクスポートできるようになりました。すべてのヘッダーは、@@igComponent に表示されるときに、エクスポートされた Excel ファイルに反映されます。エクスポートされたデータから定義された複数列ヘッダーを除外する場合は、[エクスポーター オプション]({environment:angularApiUrl}/classes/igxexporteroptionsbase.html) [ignoreMultiColumnHeaders]({environment:angularApiUrl}/classes/igxexporteroptionsbase.html#ignoremulticolumnheaders) を `true` に設定できます。
 
 > [!NOTE]
-> The exported @@igComponent will not be formatted as a table, since Excel tables do not support multiple row headers.
+> Excel テーブルは複数の行ヘッダーをサポートしていないため、エクスポートされた @@igComponent はテーブルとしてフォーマットされません。
 
 @@if (igxName === 'IgxGrid') {
 <code-view style="height: 800px;" 
