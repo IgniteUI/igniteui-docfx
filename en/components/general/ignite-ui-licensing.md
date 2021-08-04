@@ -26,7 +26,7 @@ Npm is the most popular package manager and is also the default one for the runt
 Infragistics Ignite UI for Angular is available as a npm package and you can add it as a dependency to your project in a [`few easy steps using the Ignite  UI CLI`](./cli/step-by-step-guide-using-cli.md) or [using Ignite UI for Angular Schematics](./cli/step-by-step-guide-using-angular-schematics.md). Choosing this approach will not require configuring npm. By installing this package you will start using the [Ignite UI for Angular Trial version](https://www.infragistics.com/products/ignite-ui-angular) of the product.
 
 >[!NOTE]
-> What does it mean to start using a trial version? It means that you will be using a version of our product with a **Watermark** part of your web view.It doesn’t mean that you will be using the licensed package for a certain amount of time before it expires. For example, for a month.
+> What does it mean to start using a trial version? It means that you will be using a version of our product with a **Watermark** part of your web view. It doesn’t mean that you will be using the licensed package for a certain amount of time before it expires. For example, for a month.
 
 Infragistics Ignite UI Dock Manager Web Component is available as a separate npm package and by installing it you will start using the [Ignite UI Dock Manager Web Component Trial version](https://www.infragistics.com/products/ignite-ui-angular) of the product.
 
