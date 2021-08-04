@@ -35,12 +35,24 @@
     - name: Build Real-time SignalR App with .NET Core
       href: general/how-to/signal-r-service-live-data.md
       new: true
+    - name: Angular Reactive Forms
+      href: angular-reactive-form-validation.md
+      new: true
 - name: Angular Schematics & Ignite UI CLI
   href: general/cli-overview.md
-  new: false
+  sortable: false
   items:
-    - name: Step-by-Step Guide
-      href: general/cli/step-by-step-guide.md
+    - name: Getting Started with Ignite UI for Angular Schematics
+      href: general/cli/getting-started-with-angular-schematics.md
+      new: false
+    - name: Step by Step guide using Ignite UI for Angular Schematics
+      href: general/cli/step-by-step-guide-using-angular-schematics.md
+      new: false
+    - name: Getting Started with Ignite UI CLI
+      href: general/cli/getting-started-with-cli.md
+      new: false
+    - name: Step by Step guide using Ignite UI CLI
+      href: general/cli/step-by-step-guide-using-cli.md
       new: false
     - name: Templates
       href: general/cli/component-templates.md
@@ -127,10 +139,12 @@
           new: false
     - name: Row Drag
       href: grid/row-drag.md
+      updated: true
       new: false
     - name: Paging
       href: grid/paging.md
       new: false
+      updated: true
     - name: Filtering
       href: grid/filtering.md
       new: false
@@ -147,7 +161,7 @@
     - name: Group By
       href: grid/groupby.md
       new: false
-      updated: true
+      updated: false
     - name: Summaries
       href: grid/summaries.md
       updated: true
@@ -273,6 +287,7 @@
     - name: Paging
       href: treegrid/paging.md
       new: false
+      updated: true
     - name: Filtering
       href: treegrid/filtering.md
       new: false
@@ -332,6 +347,7 @@
     - name: Export to Excel
       href: treegrid/export-excel.md
       new: false
+      updated: true
     - name: Multi-column Headers
       href: treegrid/multi-column-headers.md
       new: false
@@ -346,6 +362,7 @@
       new: false
     - name: Group By
       href: treegrid/groupby.md
+      updated: true
       new: false
     - name: Keyboard navigation
       href: treegrid/keyboard-navigation.md
@@ -396,13 +413,15 @@
           new: false
     - name: Export to Excel
       href: hierarchicalGrid/export-excel.md
-      new: true
+      new: false
+      updated: true
     - name: Row Drag
       href: hierarchicalgrid/row-drag.md
       new: false
     - name: Paging
       href: hierarchicalgrid/paging.md
       new: false
+      updated: true
     - name: Filtering
       href: hierarchicalgrid/filtering.md
       new: false
@@ -868,9 +887,6 @@
 - name: Input Group
   href: input-group.md
   new: false
-  items:
-    - name: Reactive Forms
-      href: input-group-reactive-forms.md
 - name: Mask
   href: mask.md
   new: false
@@ -1010,6 +1026,13 @@
   href: time-picker.md
   new: false
   updated: true
+- name: Pagination
+  header: true
+  sortable: true
+- name: Paginator
+  href: paginator.md
+  new: true
+  updated: false
 - name: Services
   header: true
   sortable: true
@@ -1026,6 +1049,7 @@
     - name: Transaction Service class hierarchy
       href: transaction-classes.md
       new: false
+      updated: true
     - name: How to use the Transaction Service
       href: transaction-how-to-use.md
       new: false

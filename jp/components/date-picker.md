@@ -11,7 +11,7 @@ Ignite UI for Angular Date Picker コンポーネントを使用すると、ユ�
 ## Angular Date Picker の例
 <!-- TODO: datepicker sample with several options enabled -->
 <code-view style="height: 550px;"
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-1" alt="Angular Date Picker の例">
 </code-view>
 <div class="divider--half"></div>
@@ -19,7 +19,7 @@ Ignite UI for Angular Date Picker コンポーネントを使用すると、ユ�
 ## 使用方法
 
 ### はじめに
-Date Picker コンポーネントの使用を開始するには、まず、使用するモジュールに `IgxDatePickerModule` をインポートする必要があります。この例では、**app.module.ts** ファイルを使用します。 
+Date Picker コンポーネントの使用を開始するには、まず、使用するモジュールに `IgxDatePickerModule` をインポートする必要があります。この例では、**app.module.ts** ファイルを使用します。
 
 >[!NOTE]
 > Date Picker が [**IgxCalendarComponent**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) を使用し、タッチ操作のために **BrowserAnimationsModule** と**HammerModule** に依存関係があり、これらもモジュールに追加する必要があります。
@@ -32,7 +32,7 @@ import { IgxDatePickerModule } from 'igniteui-angular';
 
 @NgModule({
     ...
-    imports: [ 
+    imports: [
         ...,
         IgxDatePickerModule,
         BrowserAnimationsModule,
@@ -110,9 +110,9 @@ export class SampleFormComponent {
     <igx-icon igxSuffix (click)="datePicker.open()">keyboard_arrow_down</igx-icon>
 </igx-date-picker>
 ```
-上記のサンプルでは、​​入力の最後、デフォルトのクリア アイコンの直後に追加のトグル アイコンが追加されます。プレフィックスとサフィックスを次々に積み重ねることができるため、これによってデフォルトのトグル アイコンが削除されることはありません。 
+上記のサンプルでは、​​入力の最後、デフォルトのクリア アイコンの直後に追加のトグル アイコンが追加されます。プレフィックスとサフィックスを次々に積み重ねることができるため、これによってデフォルトのトグル アイコンが削除されることはありません。
 
-#### トグル アイコンとクリア アイコンのカスタマイズ 
+#### トグル アイコンとクリア アイコンのカスタマイズ
 [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) は [`IgxPickerToggleComponent`]({environment:angularApiUrl}/classes/igxpickertogglecomponent.html) と [`IgxPickerClearComponent`]({environment:angularApiUrl}/classes/igxpickerclearcomponent.html) で構成できます。これらを使用すると、独自のクリック ハンドラーを追加しなくても、トグル アイコンとクリア アイコンを変更できます。
 
 ```html
@@ -164,8 +164,8 @@ export class SampleFormComponent {
 ```html
 <igx-date-picker [mode]="'dropdown'"></igx-date-picker>
 ```
-<code-view style="height: 540px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 540px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-2" >
 </code-view>
 
@@ -180,12 +180,14 @@ export class SampleFormComponent {
 
 これらの詳細については、[`IgxDateTimeEditor`](date-time-editor.md#例) の例のセクションを参照してください。
 
-<code-view style="height: 680px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 680px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-3" >
 </code-view>
 
 <div class="divider--half"></div>
+
+> 注: `IgxDatePicker` が IME 入力をサポートするようになりました。合成が終了すると、コントロールはワイド文字の数字を ASCII 文字に変換します。
 
 ### 増加および減少
 [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) は、[`increment`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#increment) メソッドと [`decrement`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#decrement) メソッドを公開します。どちらも [`IgxDateTimeEditorDirective`](date-time-editor.md#increment-decrement) から取得され、現在設定されている日付の特定の [`DatePart`]({environment:angularApiUrl}/enums/datepart.html) を増加および減少するために使用できます。
@@ -197,7 +199,7 @@ export class SampleFormComponent {
 </igx-date-picker>
 ```
 
-また、[`spinDelta`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#spindelta) 入力プロパティとして、現在設定されている日付の特定の日付部分を増加または減少するために使用できます。 
+また、[`spinDelta`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#spindelta) 入力プロパティとして、現在設定されている日付の特定の日付部分を増加または減少するために使用できます。
 ```html
 <igx-date-picker [spinDelta]="{date: 2, month: 3, year: 4}"></igx-date-picker>
 ```
@@ -205,15 +207,15 @@ export class SampleFormComponent {
 ### Angular Forms で
 [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) は、コア [FormsModule](https://angular.io/api/forms/FormsModule)、[NgModel](https://angular.io/api/forms/NgModel)、および [ReactiveFormsModule](https://angular.io/api/forms/ReactiveFormsModule) ([`FormControl`](https://angular.io/api/forms/FormControl)、[`FormGroup`](https://angular.io/api/forms/FormGroup) など) からのすべてのディレクティブをサポートします。これには、[フォーム バリデーター](https://angular.io/api/forms/Validators)機能も含まれます。さらに、コンポーネントの [`minValue`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#minvalue) プロパティと [`maxValue`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#maxvalue) プロパティはフォーム バリデーターとして機能します。
 
-[リアクティブ フォームの統合](input-group-reactive-forms.md)トピックにアクセスすると、[`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) をリアクティブ フォームで確認できます。
+[リアクティブ フォームの統合](angular-reactive-form-validation.md)トピックにアクセスすると、[`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) をリアクティブ フォームで確認できます。
 
 #### 日付ピッカーとタイム ピッカーを併用する
 IgxDatePicker と [`IgxTimePicker`](time-picker.md) を一緒に使用する場合、それらを 1 つの同じ Date オブジェクト値にバインドする必要がある場合があります。
 
 テンプレート駆動フォームでこれを実現するには、`ngModel` を使用して両方のコンポーネントを同じ Date オブジェクトにバインドします。
 
-<code-view style="height: 540px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 540px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/template-driven-form" >
 </code-view>
 
@@ -221,8 +223,8 @@ IgxDatePicker と [`IgxTimePicker`](time-picker.md) を一緒に使用する場�
 
 リアクティブ フォームでは、各コンポーネントの [`valueChange`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#valuechange) イベントを処理し、他のコンポーネントの値を更新できます。
 
-<code-view style="height: 540px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 540px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/reactive-form" >
 </code-view>
 
@@ -252,7 +254,7 @@ IgxDatePicker と [`IgxTimePicker`](time-picker.md) を一緒に使用する場�
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+```
 
 日付ピッカーはカレンダーのテーマを使用するので、[`igx-calendar-theme`]({environment:sassApiUrl}/index.html#function-igx-calendar-theme) を拡張する新しいテーマを作成し、そのパラメーターを使用して日付ピッカーの項目をスタイル設定します。
 
@@ -275,9 +277,9 @@ $custom-datepicker-theme: igx-calendar-theme(
 );
 ```
 
-### CSS 変数の使用 
+### CSS 変数の使用
 
-最後に日付ピッカーのカスタム テーマを設定します。 
+最後に日付ピッカーのカスタム テーマを設定します。
 
 ```scss
 @include igx-css-vars($custom-datepicker-theme);
@@ -285,7 +287,7 @@ $custom-datepicker-theme: igx-calendar-theme(
 
 ### テーマ オーバーライドの使用
 
-Internet Explorer 11 などの古いブラウザーのコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、別のアプローチを用いる必要があります。 
+Internet Explorer 11 などの古いブラウザーのコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、別のアプローチを用いる必要があります。
 
 コンポーネントが [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化に`ペネトレーション`する必要があります。カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
 
@@ -297,8 +299,8 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 }
 ```
 
-<code-view style="height:500px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:500px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/datepicker-styling-sample" >
 </code-view>
 
@@ -326,7 +328,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 * [Time Picker](time-picker.md)
 * [Date Time Editor](date-time-editor.md)
 * [Date Range Picker](date-range-picker.md)
-* [リアクティブ フォームの統合](input-group-reactive-forms.md)
+* [リアクティブ フォームの統合](angular-reactive-form-validation.md)
 
 コミュニティに参加して新しいアイデアをご提案ください。
 * [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)

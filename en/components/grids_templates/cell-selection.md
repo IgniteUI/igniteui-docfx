@@ -208,7 +208,7 @@ expectedData = [
 ```
 
 > [!NOTE]
-> [`selectedCells()`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#selectedcells) will not return any result if the cell is not visible in grids view port, although [`getSelectedData()`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#getselecteddata) will return the selected cell data.
+> [`selectedCells()`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#selectedcells) will DO return the correct result even if the cell is not visible in grids view port. [`getSelectedData()`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#getselecteddata) will also return the selected cell data.
 > [`getSelectedRanges(): GridSelectionRange[]`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#getselectedranges) will return the current selected ranges in the grid from both keyboard and pointer interactions. The type is GridSelectionRange[].
 
 
@@ -321,7 +321,7 @@ With the custom theme applied, the selected grid cells are highlighted with our 
 
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 @@if (igxName !== 'IgxTreeGrid') {* [IgxGridRowComponent API]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRowComponent API]({environment:angularApiUrl}/classes/igxtreegridrowcomponent.html)}
-* [IgxGridCellComponent API]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
+* [IgxGridCell API]({environment:angularApiUrl}/classes/igxgridcell.html)
 * [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 
 ## Additional Resources

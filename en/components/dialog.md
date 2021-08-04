@@ -39,7 +39,7 @@ export class AppModule {}
 ### Alert Dialog
 
 To create an alert dialog, in the template of our email component, we add the following code. We have to set the [`title`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#title), [`message`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#message), 
-[`leftButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftbuttonlabel) and handle [`onLeftButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#onleftbuttonselect) event:
+[`leftButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftbuttonlabel) and handle [`leftButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftbuttonselect) event:
 
 ```html
 <!--email.component.html-->
@@ -49,7 +49,7 @@ To create an alert dialog, in the template of our email component, we add the fo
     title="Notification"
     message="Your email has been sent successfully!"
     leftButtonLabel="OK"
-    (onLeftButtonSelect)="alert.close()">
+    (leftButtonSelect)="alert.close()">
 </igx-dialog>
 ```
 
@@ -60,7 +60,7 @@ If everything's done right, you should see the demo sample shown above in your b
 ### Standard Dialog
 
 To create a standard dialog, in the template of our file manager component, we add the following code. We have to set the [`title`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#title), [`message`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#message), 
-[`leftButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftbuttonlabel), [`rightButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#rightbuttonlabel), and handle [`onLeftButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#onleftbuttonselect) and [`onRightButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#onrightbuttonselect) events:
+[`leftButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftbuttonlabel), [`rightButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#rightbuttonlabel), and handle [`leftButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftbuttonselect) and [`rightButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#rightbuttonselect) events:
 
 ```html
 <!--file-manager.component.html-->
@@ -68,9 +68,9 @@ To create a standard dialog, in the template of our file manager component, we a
 
 <igx-dialog #dialog title="Confirmation"
     leftButtonLabel="Cancel"
-    (onLeftButtonSelect)="dialog.close()"
+    (leftButtonSelect)="dialog.close()"
     rightButtonLabel="OK"
-    (onRightButtonSelect)="onDialogOKSelected($event)"
+    (rightButtonSelect)="onDialogOKSelected($event)"
     message="Are you sure you want to delete the Microsoft_Annual_Report_2015.pdf and Microsoft_Annual_Report_2015.pdf files?">
 </igx-dialog>
 ```

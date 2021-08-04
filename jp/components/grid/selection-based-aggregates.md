@@ -50,7 +50,7 @@ const dates = data.filter(rec => isDate(rec));
 ## API リファレンス
 
 * [IgxGridComponent API]({environment:angularApiUrl}/classes/igxgridcomponent.html)    
-* [IgxGridCellComponent API]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)    
+* [IgxGridCell API]({environment:angularApiUrl}/classes/igxgridcell.html)    
 * [IgxGridComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)     
 
 ## その他のリソース

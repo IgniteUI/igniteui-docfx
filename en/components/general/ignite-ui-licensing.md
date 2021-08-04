@@ -23,7 +23,7 @@ If you qualify for a free, non-commercial, NFR license or if you have any licens
 ## Ignite UI for Angular npm packages - Using the Private npm feed
 Npm is the most popular package manager and is also the default one for the runtime environment Node.js. It is highly adopted and is one of the fastest and easiest ways to manage the packages that you depend on in your project. For more information on how npm works, read the official [npm documentation](https://docs.npmjs.com/).
 
-Infragistics Ignite UI for Angular is available as a npm package and you can add it as a dependency to your project in a [few easy steps](cli/step-by-step-guide.md). Choosing this approach will not require configuring npm. By installing this package you will start using the [Ignite UI for Angular Trial version](https://www.infragistics.com/products/ignite-ui-angular) of the product.
+Infragistics Ignite UI for Angular is available as a npm package and you can add it as a dependency to your project in a [`few easy steps using the Ignite  UI CLI`](./cli/step-by-step-guide-using-cli.md) or [using Ignite UI for Angular Schematics](./cli/step-by-step-guide-using-angular-schematics.md). Choosing this approach will not require configuring npm. By installing this package you will start using the [Ignite UI for Angular Trial version](https://www.infragistics.com/products/ignite-ui-angular) of the product.
 
 >[!NOTE]
 > What does it mean to start using a trial version? It means that you will be using a version of our product with a **Watermark** part of your web view, and not that you will be using the licensed package for a certain amount of time, for example one month.
@@ -33,7 +33,7 @@ Infragistics Ignite UI Dock Manager Web Component is available as a separate npm
 > More information on how to start using the Ignite UI for Angular npm package can be found in [this topic](getting-started.md#installing-ignite-ui-for-angular) and more information on Ignite UI Dock Manager Web Component can be found [here](../dock-manager.md).
 
 ### Upgrading packages using our Angular Schematics or Ignite UI CLI
-If Ignite UI for Angular has been added to the project using [`ng add`](./getting-started.md) or the project has been created through our [schematics collection or Ignite UI CLI](./cli-overview.md), you can use our `upgrade-packages` to automatically upgrade your app to using our licensed packages. You project package dependencies will include either `@igniteui/angular-schematics` or `igniteui-cli` and both support the upgrade command.
+If Ignite UI for Angular has been added to the project using [`ng add`](./getting-started.md) or the project has been created through our [schematics collection](./cli/getting-started-with-angular-schematics.md) or [Ignite UI CLI](./cli/getting-started-with-cli.md), you can use our `upgrade-packages` to automatically upgrade your app to using our licensed packages. You project package dependencies will include either `@igniteui/angular-schematics` or `igniteui-cli` and both support the upgrade command.
 
 >[!NOTE]
 > As the process changes packages, we recommend that you update your project first before switching to avoid picking up a higher version of Ignite UI Angular and missing on potential update migrations. Follow our [Update Guide](./update-guide.md).

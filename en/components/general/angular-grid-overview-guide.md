@@ -20,7 +20,7 @@ Among its many benefits, Ignite UI for Angular offers easy integration, rapid de
 
 ### Installing and Creating a Project 
 
-You can install Ignite UI for Angular with either the Angular CLI or with the [Ignite UI CLI](https://www.infragistics.com/products/ignite-ui-angular/angular/components/general/cli-overview.html "Ignite UI CLI Overview page"). To start quickly with the Angular CLI, run the following command: 
+You can install Ignite UI for Angular with either the Angular CLI or with the [Ignite UI CLI](https://www.infragistics.com/products/ignite-ui-angular/angular/components/general/cli/getting-started-with-cli.html "Ignite UI CLI Overview page"). To start quickly with the Angular CLI, run the following command: 
 
 `ng add igniteui-angular` 
 
@@ -30,7 +30,7 @@ If you’re creating a new application from scratch, we recommend the following 
 
 `npm install –g igniteui-cli` 
 
-Once the igniteui cli is installed you can easily bootstrap an application by following cli’s [guided experience](https://www.infragistics.com/products/ignite-ui-angular/angular/components/general/cli/step-by-step-guide.html "Step by step guide"), which builds a configured app that the end user can run with a single command: 
+Once the igniteui cli is installed you can easily bootstrap an application by following cli’s [guided experience using the Ignite UI CLI](https://www.infragistics.com/products/ignite-ui-angular/angular/components/general/cli/step-by-step-guide-using-cli.html "Step by step guide using Ignite UI CLI") or [Ignite UI for Angular Schematics](https://www.infragistics.com/products/ignite-ui-angular/angular/components/general/cli/step-by-step-guide-using-angular-schematics.html "Step by step guide using Ignite UI for Angular Schematics"), which builds a configured app that the end user can run with a single command: 
 
 `ig` 
 
@@ -47,7 +47,7 @@ To start using Ignite UI for Angular components without the Ignite UI CLI, make 
 Once you finish with the development environment setup, you can continue adding and configuring other Ignite UI components. Here’s how to use [our schematics](https://www.infragistics.com/products/ignite-ui-angular/angular/components/general/cli-overview.html#add-template "Ignite UI CLI Overview page") to add a grid with basic configuration and add templates to some of our columns. 
 
 ```html
-<igx-grid #grid1 [data]="localData" [paging]="true" [perPage]="10" height="600px" (onSelection)="cellSelection($event)">
+<igx-grid #grid1 [data]="localData" height="600px" (onSelection)="cellSelection($event)">
     <igx-column header="Rank" headerClasses="myClass" width="115px" field="Id" sortable="true" [filterable]="false"></igx-column>
     <igx-column field="Name" header="Athlete" width="280"></igx-column>
     <igx-column field="Speed" header="Speed" [width]="'190px'" [filterable]="false"></igx-column>
@@ -58,6 +58,8 @@ Once you finish with the development environment setup, you can continue adding 
             </div>
         </ng-template>
     </igx-column>
+    <igx-paginator [perPage]="10">
+    </igx-paginator>
 </igx-grid>
 ```
 The grid itself consist of different components such as the IgxColumnComponent which is used to define the grid's columns collection and to enable features per column like sorting and paging. 
@@ -180,13 +182,13 @@ Angular data grids support easy sorting, filtering, and pagination. With rich AP
 ```html
 <igx-grid #grid1 (onSortingDone)="removeSorting($event)"
         [data]="data"
-        [paging]="true"
-        [perPage]="10"
         [allowFiltering]="true">   
     <igx-column field="OrderID" header="Order ID">
     </igx-column>
     <igx-column field="CategoryName" header="Category Name" [dataType]="'string'" sortable="true">
     </igx-column>
+    <igx-paginator [perPage]="10">
+    </igx-paginator>
 ```
 
 The Grid provides three types of Filtering with custom filtering conditions: 

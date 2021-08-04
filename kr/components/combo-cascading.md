@@ -17,8 +17,8 @@ The [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) and 
 The following sample demonstrates scenario, using two [igx-select]({environment:angularApiUrl}/classes/igxselectcomponent.html) and [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) components:
 
 
-<code-view style="height: 540px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 540px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/cascading-combos" >
 </code-view>
 
@@ -45,11 +45,11 @@ In the sample below are used an [igx-combo]({environment:angularApiUrl}/classes/
 
 ```html
 <igx-select type="box" #cntr placeholder="Choose Country..."
-    (onSelection)="selectCountry($event)" [(ngModel)]="location.country">
+    (selectionChanging)="selectCountry($event)" [(ngModel)]="location.country">
     <igx-select-item *ngFor="let c of countryData" [value]="c"> {{ c }} </igx-select-item>
 </igx-select>
 <igx-select type="box" #prvnc placeholder="Choose Province..." [disabled]="!cntr.value"
-    (onSelection)="selectProvince($event)" [(ngModel)]="location.province">
+    (selectionChanging)="selectProvince($event)" [(ngModel)]="location.province">
     <igx-select-item *ngFor="let p of provinceData" [value]="p"> {{ p }} </igx-select-item>
 </igx-select>
 <igx-combo #twn [itemsMaxHeight]="225" [data]="townData" [disabled]="!prvnc.value"
@@ -99,7 +99,7 @@ export class CascadingCombos {
 * [Combo Remote Binding](combo-remote.md)
 * [Combo Templates](combo-templates.md)
 * [Template Driven Forms Integration](input-group.md)
-* [Reactive Forms Integration](input-group-reactive-forms.md)
+* [Reactive Forms Integration](angular-reactive-form-validation.md)
 * [IgxOverlay]({environment:angularApiUrl}/classes/igxoverlayservice.html)
 
 Our community is active and always welcoming to new ideas.

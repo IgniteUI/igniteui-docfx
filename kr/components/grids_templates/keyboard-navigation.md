@@ -72,10 +72,12 @@ The sample below shows how to:
 
 ```html
 <igx-grid #grid1 [data]="data" [primaryKey]="'ProductID'" [autoGenerate]="false" [displayDensity]="'compact'"
-    width="100%" height="350px" [paging]="true" [rowSelectable]="true" (onGridKeydown)="customKeydown($event)">
+    width="100%" height="350px" [rowSelectable]="true" (onGridKeydown)="customKeydown($event)">
     <igx-column field="ProductID" header="Product ID" width="16%" [headerClasses]="'prodId'"
         [editable]="true">
     </igx-column>
+    <igx-paginator>
+    </igx-paginator>
 ```
 
 ```typescript
@@ -83,7 +85,7 @@ const cell = args.event.shiftKey ?
     this.grid1.getPreviousCell(target.rowIndex, target.visibleColumnIndex, (col) => col.editable) :
     this.grid1.getNextCell(target.rowIndex, target.visibleColumnIndex, (col) => col.editable);
 
-this.grid1.navigateTo(cell.rowIndex, cell.visibleColumnIndex,
+this.grid1.navigateTo(cell.row.index, cell.column.visibleIndex,
     (obj) => { obj.target.nativeElement.focus(); });
 ```
 - perform column based navigation (vertical) on `enter key` press.
@@ -151,7 +153,7 @@ public customKeydown(args: IGridKeydownEventArgs, grid) {
             grid.getPreviousCell(target.rowIndex, target.visibleColumnIndex, (col) => col.editable) :
             grid.getNextCell(target.rowIndex, target.visibleColumnIndex, (col) => col.editable);
 
-        grid.navigateTo(cell.rowIndex, cell.visibleColumnIndex,
+        grid.navigateTo(cell.row.index, cell.column.visibleIndex,
             (obj) => { obj.target.nativeElement.focus(); });
     } else if (type === "dataCell" && evt.key.toLowerCase() === "enter") {
         ...
@@ -179,10 +181,12 @@ You can try the `actions below` in order to observe the custom keyboard navigati
 
 ```html
 <igx-tree-grid #grid1 [data]="data" [primaryKey]="'ProductID'" [autoGenerate]="false" [displayDensity]="'compact'"
-    width="100%" height="350px" [paging]="true" [rowSelectable]="true" (onGridKeydown)="customKeydown($event)">
+    width="100%" height="350px" [rowSelectable]="true" (onGridKeydown)="customKeydown($event)">
     <igx-column field="ProductID" header="Product ID" width="16%" [headerClasses]="'prodId'"
         [editable]="true">
     </igx-column>
+    <igx-paginator>
+    </igx-paginator>
     ...
 ```
 
@@ -191,7 +195,7 @@ const cell = args.event.shiftKey ?
     this.grid1.getPreviousCell(target.rowIndex, target.visibleColumnIndex, (col) => col.editable) :
     this.grid1.getNextCell(target.rowIndex, target.visibleColumnIndex, (col) => col.editable);
 
-this.grid1.navigateTo(cell.rowIndex, cell.visibleColumnIndex,
+this.grid1.navigateTo(cell.row.index, cell.column.visibleIndex,
     (obj) => { obj.target.nativeElement.focus(); });
 ```
 - perform column based navigation (vertical) on `enter key` press.

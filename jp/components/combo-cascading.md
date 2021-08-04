@@ -14,8 +14,8 @@ Ignite UI for Angular の Combo と Select コンポーネントは、コント�
 以下のサンプルは、[igx-select]({environment:angularApiUrl}/classes/igxselectcomponent.html) と [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) コンポーネントが一緒に使用されています。
 
 
-<code-view style="height: 540px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 540px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/cascading-combos" alt="Angular カスケーディングの例">
 </code-view>
 
@@ -42,11 +42,11 @@ export class AppModule {}
 
 ```html
 <igx-select type="box" #cntr placeholder="Choose Country..."
-    (onSelection)="selectCountry($event)" [(ngModel)]="location.country">
+    (selectionChanging)="selectCountry($event)" [(ngModel)]="location.country">
     <igx-select-item *ngFor="let c of countryData" [value]="c"> {{ c }} </igx-select-item>
 </igx-select>
 <igx-select type="box" #prvnc placeholder="Choose Province..." [disabled]="!cntr.value"
-    (onSelection)="selectProvince($event)" [(ngModel)]="location.province">
+    (selectionChanging)="selectProvince($event)" [(ngModel)]="location.province">
     <igx-select-item *ngFor="let p of provinceData" [value]="p"> {{ p }} </igx-select-item>
 </igx-select>
 <igx-combo #twn [itemsMaxHeight]="225" [data]="townData" [disabled]="!prvnc.value"
@@ -93,11 +93,11 @@ export class CascadingCombos {
 ## API まとめ
 <div class="divider--half"></div>
 
-* [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html) 
+* [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html)
 * [IgxComboComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-combo-theme)
 
 その他のコンポーネントおよびディレクティブ (またはそのいずれか) で使用した API:
-* [IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html)  
+* [IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html)
 
 ## その他のリソース
 <div class="divider--half"></div>
@@ -107,7 +107,7 @@ export class CascadingCombos {
 * [コンボ リモート バインディング](combo-remote.md)
 * [コンボ テンプレート](combo-templates.md)
 * [テンプレート駆動フォームの統合](input-group.md)
-* [リアクティブ フォームの統合](input-group-reactive-forms.md)
+* [リアクティブ フォームの統合](angular-reactive-form-validation.md)
 
 コミュニティに参加して新しいアイデアをご提案ください。
 

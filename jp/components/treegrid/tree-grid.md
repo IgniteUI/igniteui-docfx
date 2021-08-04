@@ -16,16 +16,21 @@ Ignite UI for Angular Tree Grid は、階層データまたはフラットデー
 
 
 
-<code-view style="height:850px" 
-           data-demos-base-url="{environment:lobDemosBaseUrl}" 
+<code-view style="height:850px"
+           data-demos-base-url="{environment:lobDemosBaseUrl}"
            iframe-src="{environment:lobDemosBaseUrl}/tree-grid/treegrid-childdatakey" alt="Angular ツリー グリッドの例">
 </code-view>
 
 <div class="divider--half"></div>
 
+<code-view style="height:850px"
+           data-demos-base-url="{environment:lobDemosBaseUrl}"
+           iframe-src="{environment:lobDemosBaseUrl}/tree-grid/treegrid-childdatakey" alt="Angular ツリー グリッドの例">
+</code-view>
+
+<div class="divider--half"></div>
 
 ## Ignite UI for Angular Tree Grid で作業を開始
-
 ツリー グリッドを初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
 
 ```cmd
@@ -62,8 +67,8 @@ export class AppModule {}
 
 ツリー グリッド階層の構築に使用するオプション (子コレクションまたは主キーまたは外部キー) にかかわらず、ツリー グリッドの行は 2 タイプのセルで構成されます。
 
-- [`IgxGridCellComponent`]({environment:angularApiUrl}/classes/igxgridcellcomponent.html) - 値を含む標準セル。
-- [`IgxTreeGridCellComponent`]({environment:angularApiUrl}/classes/igxtreegridcellcomponent.html) - セル行のレベルに基づいた値、インジケーターの展開/縮小、インデント div 要素を含むツリー セル。インナー [`treeRow`]({environment:angularApiUrl}/classes/igxtreegridrowcomponent.html#treerow) の [`level`]({environment:angularApiUrl}/interfaces/itreegridrecord.html#level) プロパティでアクセスできる行コンポーネント レベル。
+- [`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html) - 値を含む標準セル。
+- [`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html) - セル行のレベルに基づいた値、インジケーターの展開/縮小、インデント div 要素を含むツリー セル。インナー [`treeRow`]({environment:angularApiUrl}/classes/igxtreegridrowcomponent.html#treerow) の [`level`]({environment:angularApiUrl}/interfaces/itreegridrecord.html#level) プロパティでアクセスできる行コンポーネント レベル。
 
 > [!NOTE]
 > 各行にはツリー セルを 1 つのみ含むことができますが、標準セルは複数含むことが可能です。
@@ -138,11 +143,13 @@ IgxTreeGridComponent を階層にバインドするには、[`childDataKey`]({en
 <!--treeGridSample.component.html-->
 
 <igx-tree-grid #treeGrid [data]="localData" childDataKey="Employees"
-               [autoGenerate]="false" [rowSelectable]="true" [paging]="true" [allowFiltering]="true">
+               [autoGenerate]="false" [rowSelectable]="true" [allowFiltering]="true">
     <igx-column field="Name" dataType="string" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"
                 [hasSummary]="true"></igx-column>
     <igx-column field="HireDate" dataType="date" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
     <igx-column field="Age" dataType="number" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
+    <igx-paginator>
+    </igx-paginator>
 </igx-tree-grid>
 ```
 
@@ -152,7 +159,7 @@ IgxTreeGridComponent を階層にバインドするには、[`childDataKey`]({en
 <!--treeGridSample.component.html-->
 
 <igx-tree-grid #treeGrid [data]="localData" childDataKey="Employees"
-               [autoGenerate]="false" [rowSelectable]="true" [paging]="true" [allowFiltering]="true">
+               [autoGenerate]="false" [rowSelectable]="true" [allowFiltering]="true">
     <igx-grid-toolbar>
             <igx-grid-toolbar-title>Employees</igx-grid-toolbar-title>
             <igx-grid-toolbar-actions>
@@ -164,6 +171,8 @@ IgxTreeGridComponent を階層にバインドするには、[`childDataKey`]({en
     <igx-column field="Name" dataType="string" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
     <igx-column field="HireDate" dataType="date" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
     <igx-column field="Age" dataType="number" [sortable]="true" [editable]="true" [movable]="true" [resizable]="true"></igx-column>
+    <igx-paginator [perPage]="6">
+    </igx-paginator>
 </igx-tree-grid>
 ```
 
@@ -236,12 +245,9 @@ export class MyComponent implements OnInit {
 
 以下は結果です。
 
-
-<code-view style="height:450px" 
-           data-demos-base-url="{environment:lobDemosBaseUrl}" 
+<code-view style="height:450px"
+           data-demos-base-url="{environment:lobDemosBaseUrl}"
            iframe-src="{environment:lobDemosBaseUrl}/tree-grid/treegrid-primaryforeignkey" >
-</code-view>
-
 <div class="divider--half"></div>
 
 ## パーシステンスとインテグレーション
@@ -370,7 +376,7 @@ $my-custom-schema: extend($light-schema, (
 $custom-theme: igx-grid-theme(
     $palette: $custom-palette,
     $schema: $my-custom-schema
-); 
+);
 ```
 
 上記と同じ方法でテーマを含める必要があることに注意してください。
@@ -378,8 +384,8 @@ $custom-theme: igx-grid-theme(
 ### Angular ツリー グリッド スタイル設定のデモ
 
 
-<code-view style="height:600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-style" alt="Angular ツリー グリッド スタイル設定のデモ">
 </code-view>
 
@@ -414,11 +420,10 @@ $custom-theme: igx-grid-theme(
 <div class="divider--half"></div>
 
 * [IgxTreeGridComponent]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)
-* [IgxTreeGridCellComponent]({environment:angularApiUrl}/classes/igxtreegridcellcomponent.html)
+* [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
 * [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 * [IgxGridComponent スタイル]({environment:sassApiUrl}/#function-igx-grid-theme)
-* [IgxGridCellComponent]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
 * [IgxBaseTransactionService]({environment:angularApiUrl}/classes/igxbasetransactionservice.html)
 
 ## テーマの依存関係

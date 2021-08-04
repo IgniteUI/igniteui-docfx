@@ -89,8 +89,7 @@ CSV Exporter サービスも [**IgxGrid**](grid/grid.md) からのデータを C
 // component.ts
 
 ...
-import { IgxCsvExporterService, IgxCsvExporterOptions, CsvFileTypes } from "igniteui-angular/services/index";
-import { IgxGridComponent } from "igniteui-angular/grid/grid.component";
+import { IgxCsvExporterService, IgxCsvExporterOptions, CsvFileTypes, IgxGridComponent } from 'igniteui-angular';
 ...
 
 @ViewChild("igxGrid1") public igxGrid1: IgxGridComponent;

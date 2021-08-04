@@ -43,8 +43,74 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
 
 ## From 12.0.x to 12.1.x
 ### Grids
+* Breaking Changes:
+    * [`IgxPaginatorComponent`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html) - The way the Paginator is instantiated in the grid has changed. It is now a separate component projected in the grid tree. Thus the `[paging]="true"` property is removed from all grids and all other properties related to the paginator in the grid are deprecated. It is recommended to follow the guidance for enabling `Grid Paging` features as described in the [Paging topic](../grid/paging.md).
+    * [`IgxPageSizeSelectorComponent`]({environment:angularApiUrl}/classes/IgxPageSizeSelectorComponent.html) and [`IgxPageNavigationComponent`]({environment:angularApiUrl}/classes/IgxPageNavigationComponent.html) are introduced to ease the implementation of any custom content:
 
-* Deprecation:
+    ```html
+    <igx-paginator #paginator>
+        <igx-paginator-content>
+            <igx-page-size></igx-page-size>
+            [My custom text]
+            <igx-page-nav></igx-page-nav>
+        </igx-paginator-content>
+    </igx-paginator>
+    ```
+
+    * The API for the paging component was changed during the refactor and many of the old properties are now deprecated. Unfortunately, having
+    an adequate migration for some of these changes is complicated to say the least, so any errors should be handled at application level.
+    * The following properties are deprecated from the Grid:
+        - paging, perPage page, totalPages, isFirstPage, isLastPage, pageChange, perPageChange, pagingDone
+    * The following methods, also are deprecated:
+        - nextPage()
+        - previousPage()
+    * The following property has been removed:
+        - paginationTemplate - in order to define a custom template, use the `igx-paginator-content`
+    * HierarchicalGrid specifics - The following usage of `*igxPaginator` Directive is necessary when it comes to enabling paging on RowIslands:
+
+    ```html
+    <igx-hierarchical-grid #hGrid >
+        <igx-column *ngFor="let c of hColumns" [field]="c.field">
+        </igx-column>
+        <igx-row-island [key]="'childData'" [autoGenerate]="true">
+            <igx-row-island [key]="'childData'" [autoGenerate]="true">
+                <igx-paginator *igxPaginator></igx-paginator>
+            </igx-row-island>
+            <igx-paginator *igxPaginator></igx-paginator>
+        </igx-row-island>
+        <igx-row-island [key]="'childData2'" [autoGenerate]="true">
+            <igx-paginator *igxPaginator></igx-paginator>
+        </igx-row-island>
+
+        <igx-paginator></igx-paginator>
+    </igx-hierarchical-grid>
+    ```
+
+    * While the migration will move your template content inside the `igx-paginator-content` content, it might not resolve all template bindings. Make sure to check your template files after the migration. The following bindings should be changed manually as these properties have been removed (`pagerEnabled`, `pagerHidden`, `dropdownEnabled`, `dropdownHidden`):
+
+    _From:_
+    ```html
+    <igx-paginator #paginator 
+        [pagerEnabled]="!isPagerDisabled" [pagerHidden]="isPagerHidden"
+        [dropdownHidden]="isDropdownHidden">
+    </igx-paginator>
+    ```
+
+    _To:_
+    ```html
+    <igx-paginator #paginator *ngIf="!isPagerDisabled">
+        <igx-paginator-content>
+            <igx-page-size *ngIf="isDropdownHidden"></igx-page-size>
+            <igx-page-nav *ngIf="isPagerHidden"></igx-page-nav>
+        </igx-paginator-content>
+    </igx-paginator>
+    ```
+
+    * IgxGridCellComponent, IgxTreeGridCellComponent, IgxHierarchicalGridCellComponent, IgxGridExpandableCellComponent are no longer exposed in the public API. See sections below for detail guide on upgrading to the new `IgxGridCell`.
+
+
+
+* Grid Deprecation:
     * The DI pattern for providing `IgxGridTransaction` is deprecated. The following will still work, but you are advised to refactor it, as it **will likely be removed** in a future version:
 
     ```typescript
@@ -72,6 +138,33 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
         ...
     }
     ```
+    * `getCellByColumnVisibleIndex` is now deprecated and will be removed in next major version. Use `getCellByKey`, `getCellByColumn` instead.
+
+
+### IgxGridCell migration
+
+* *IgxGridCellComponent*, *IgxTreeGridCellComponent*, *IgxHierarchicalGridCellComponent*, *IgxGridExpandableCellComponent* are no longer exposed in the public API.
+
+* Public APIs, which used to return an instance of one of the above, now return an instance of [`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html):
+
+```ts
+const cell = grid.getCellByColumn(0, 'ProductID');     // returns IgxGridCell
+const cell = grid.getCellByKey('ALFKI', 'ProductID');  // returns IgxGridCell
+const cell = grid.getCellByColumnVisibleIndex(0, 0);   // returns IgxGridCell
+const rowCells = grid.getRowByIndex(0).cells;          // returns IgxGridCell[]
+const selectedCells = grid.selectedCells;              // returns IgxGridCell[]
+const cells = grid.getColumnByName('ProductID').cells; // returns IgxGridCell[]
+```
+
+- `cell` property in the `IGridCellEventArgs` event arguments emitted by *cellClick*, *selected*, *contextMenu* and *doubleClick* events is now an instance of [`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html)
+- `let-cell` property in cell template is now `IgxGridCell`.
+- `getCellByColumnVisibleIndex` is now deprecated and will be removed in next major version. Use `getCellByKey`, `getCellByColumn` instead.
+
+Please note:
+
+* *ng update* will migrate the uses of *IgxGridCellComponent*, *IgxTreeGridCellComponent*, *IgxHierarchicalGridCellComponent*, *IgxGridExpandableCellComponent*, like imports, typings and casts. If a place in your code using any of the above is not migrated, just remove the typing/cast, or change it with [`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html).
+* *getCellByIndex* and other methods will return undefined, if the row at that index is not a data row, but is IgxGroupByRow, IgxSummaryRow, details row, etc.
+
 
 ### Themes
 Due to complaints pertaining to compilation warnings (see [#9793](https://github.com/IgniteUI/igniteui-angular/issues/9793)) we now use the [`math.div`](https://sass-lang.com/documentation/modules/math#div) function; This functionality is supported by [Dart Sass](https://sass-lang.com/dart-sass) from version 1.33.0 onward.

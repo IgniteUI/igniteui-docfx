@@ -15,8 +15,8 @@ In this Angular ComboBox example, you can see how users can filter items and per
 
 <div class="divider--half"></div>
 
-<code-view style="height: 400px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 400px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/combo-main" alt="Angular ComboBox Example">
 </code-view>
 
@@ -30,7 +30,7 @@ The combo control exposes the following features:
     - [Grouping](combo-features.md#grouping)
     - [Custom Values](combo-features.md#custom-values)
     - [Templates](combo-templates.md)
-    - Integration with [Template Driven Forms](input-group.md) and [Reactive Forms](input-group-reactive-forms.md)
+    - Integration with [Template Driven Forms](input-group.md) and [Reactive Forms](angular-reactive-form-validation.md)
 
 ## Usage
 
@@ -72,7 +72,7 @@ Our combo is now bound to the array of cities.
 Since the combo is bound to an array of complex data (i.e. objects), we need to specify a property that the control will use to handle the selected items. The control exposes two `@Input` properties - [valueKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#valuekey) and [displayKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#displaykey):
 
  - `valueKey` - *Optional, recommended for object arrays* - Specifies which property of the data entries will be stored for the combo's selection. If `valueKey` is omitted, the combo value will use references to the data entries (i.e. the selection will be an array of entries from `combo.data`).
- - `displayKey` - *Required for object arrays* - Specifies which property will be used for the items' text. If no value is specified for `displayKey`, the combo will use the specified `valueKey` (if any). 
+ - `displayKey` - *Required for object arrays* - Specifies which property will be used for the items' text. If no value is specified for `displayKey`, the combo will use the specified `valueKey` (if any).
 
 In our case, we want the combo to display the `name` of each city and the combo value to store the `id` of each city. Therefore, we are providing these properties to the combo's `displayKey` and `valueKey`, respectively:
 
@@ -102,8 +102,8 @@ export class MyCombo {
 ```
 
 
-<code-view style="height: 550px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 550px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/combo-valuekey" >
 </code-view>
 
@@ -119,15 +119,15 @@ export class MyCombo {
 ```
 
 
-<code-view style="height: 600px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 600px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/combo-binding" >
 </code-view>
 
 
 ### Selection API
 
-The combo component exposes API that allows getting and manipulating the current selection state of the control. 
+The combo component exposes API that allows getting and manipulating the current selection state of the control.
 
 One way to get the combo's selection is via the [selectedItems()]({environment:angularApiUrl}/classes/igxcombocomponent.html#selecteditems) method. It returns an array of values which correspond to the selected items, depending on the specified [valueKey](#data-value-and-display-properties) (if any).
 
@@ -160,13 +160,13 @@ export class MyExampleCombo {
 }
 ```
 
-The combo also fires an event every time its selection changes - [onSelectionChange()]({environment:angularApiUrl}/classes/igxcombocomponent.html#onselectionchange). The emitted event arguments, [IComboSelectionChangeEventArgs]({environment:angularApiUrl}/interfaces/icomboselectionchangeeventargs.html), contain information about the selection prior to the change, the current selection and the items that were added or removed. The event can also be cancelled, preventing the selection update with the new array of items.
+The combo also fires an event every time its selection changes - [selectionChanging()]({environment:angularApiUrl}/classes/igxcombocomponent.html#selectionchanging). The emitted event arguments, [IComboSelectionChangeEventArgs]({environment:angularApiUrl}/interfaces/icomboselectionchangeeventargs.html), contain information about the selection prior to the change, the current selection and the items that were added or removed. The event can also be cancelled, preventing the selection update with the new array of items.
 
 Binding to the event can be done through the proper `@Output` property on the `igx-combo` tag:
 
 ```html
 <igx-combo [data]="cities" displayKey="name" valueKey="id"
-           (onSelectionChange)="handleCityChange($event)">
+           (selectionChanging)="handleCityChange($event)">
 </igx-combo>
 ```
 
@@ -188,10 +188,10 @@ export class MyExampleCombo {
 
 ## Single Selection
 
-By default, the combo control provides multiple selection. The example below demonstrates how to achieve single selection in the component by attaching a handler to the `onSelectionChange` event:
+By default, the combo control provides multiple selection. The example below demonstrates how to achieve single selection in the component by attaching a handler to the `selectionChanging` event:
 
 ```html
-<igx-combo [data]="lData" (onSelectionChange)="singleSelection($event)"></igx-combo>
+<igx-combo [data]="lData" (selectionChanging)="singleSelection($event)"></igx-combo>
 ```
 
 ```typescript
@@ -203,8 +203,8 @@ public singleSelection(event: IComboSelectionChangeEventArgs) {
 ```
 
 
-<code-view style="height: 400px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 400px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/combo-single-selection" >
 </code-view>
 
@@ -219,7 +219,7 @@ When igxCombo is opened and search input is focused:
 - `ArrowUp` or `Alt` + `ArrowUp` will close the combo drop down and will move focus to the closed combo.
 
 - `ArrowDown` will move focus from the search input to the first list item. If the list is empty and custom values are enabled will move it to the Add new item button.
-  
+
 > [!NOTE]
 > Any other key stroke will be handled by the input.
 
@@ -247,20 +247,20 @@ When igxCombo is opened, allow custom values are enabled and add item button is 
 
 ## Angular ComboBox Styling
 
-Using the [Ignite UI for Angular Theming](themes/index.md), we can greatly alter the drop-down appearance. First, in order for us to use the functions exposed by the theme engine, we need to import the `index` file in our style file: 
+Using the [Ignite UI for Angular Theming](themes/index.md), we can greatly alter the drop-down appearance. First, in order for us to use the functions exposed by the theme engine, we need to import the `index` file in our style file:
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Following the simplest approach, we create a new theme that extends the [igx-combo-theme]({environment:sassApiUrl}/index.html#function-igx-combo-theme) and accepts the `$search-separator-border-color` parameter: 
+Following the simplest approach, we create a new theme that extends the [igx-combo-theme]({environment:sassApiUrl}/index.html#function-igx-combo-theme) and accepts the `$search-separator-border-color` parameter:
 ```scss
 $custom-combo-theme: igx-combo-theme(
     $search-separator-border-color: #1a5214
 );
 ```
 
-The [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html) uses the [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) internally as an item container. It also includes the [IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) and the [IgxCheckbox]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html) components. Creating new themes that extend theirs and scoping them under the respective classes will let you drill deeper and change the combo styles more: 
+The [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html) uses the [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) internally as an item container. It also includes the [IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) and the [IgxCheckbox]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html) components. Creating new themes that extend theirs and scoping them under the respective classes will let you drill deeper and change the combo styles more:
 
 ```scss
 $custom-drop-down-theme: igx-drop-down-theme(
@@ -288,7 +288,7 @@ $custom-checkbox-theme: igx-checkbox-theme(
 );
 ```
 
-### Using CSS Variables 
+### Using CSS Variables
 
 The last step is to include the component's theme.
 
@@ -302,7 +302,7 @@ The last step is to include the component's theme.
 
 ### Using Theme Overrides
 
-In order to style components for older browsers, like Internet Explorer 11, we have to use a different approach, since it doesn't support CSS variables. 
+In order to style components for older browsers, like Internet Explorer 11, we have to use a different approach, since it doesn't support CSS variables.
 
 If the component is using the [Emulated](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`. To prevent the custom theme to leak into other components, be sure to include the `:host` selector before `::ng-deep`:
 
@@ -324,8 +324,8 @@ If the component is using the [Emulated](themes/sass/component-themes.md#view-en
 
 ### Demo
 
-<code-view style="height:410px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:410px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/combo-styling" >
 </code-view>
 
@@ -344,13 +344,13 @@ If the component is using the [Emulated](themes/sass/component-themes.md#view-en
 ## API Summary
 <div class="divider--half"></div>
 
-* [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html) 
+* [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html)
 * [IgxComboComponent Styles]({environment:sassApiUrl}/index.html#function-igx-combo-theme)
 
 Additional components and/or directives with relative APIs that were used:
 
 * [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html)
-* [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) 
+* [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 * [IgxCheckboxComponent]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html)
 
 ## Theming Dependencies
@@ -366,7 +366,7 @@ Additional components and/or directives with relative APIs that were used:
 * [Combo Remote Binding](combo-remote.md)
 * [Combo Templates](combo-templates.md)
 * [Template Driven Forms Integration](input-group.md)
-* [Reactive Forms Integration](input-group-reactive-forms.md)
+* [Reactive Forms Integration](angular-reactive-form-validation.md)
 * [Cascading Scenario](combo-cascading.md)
 
 Our community is active and always welcoming to new ideas.

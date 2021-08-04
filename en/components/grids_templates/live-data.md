@@ -123,7 +123,7 @@ Take leverage of the [Dock Manager](../dock-manager.md) WebComponent and build y
 * [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html)
 * [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)
 * [IgxHierarchicalGridRow]({environment:angularApiUrl}/classes/igxhierarchicalgridrow.html)
-* [IgxGridCellComponent]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
+* [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
 
 ## Additional Resources
 <div class="divider--half"></div>
@@ -158,11 +158,11 @@ Our community is active and always welcoming to new ideas.
 <div class="divider--half"></div>
 
 * [IgxTreeGridComponent]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)
-* [IgxTreeGridCellComponent]({environment:angularApiUrl}/classes/igxtreegridcellcomponent.html)
+* [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
 * [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 * [IgxGridComponent Styles]({environment:sassApiUrl}/#function-igx-grid-theme)
-* [IgxGridCellComponent]({environment:angularApiUrl}/classes/igxgridcellcomponent.html)
+* [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
 * [IgxBaseTransactionService]({environment:angularApiUrl}/classes/igxbasetransactionservice.html)
 
 

@@ -13,8 +13,8 @@ Ignite UI for Angular Combo コンポーネントでは、ヘッダー、フッ�
 ## Angular コンボ テンプレートの例
 
 
-<code-view style="height: 450px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 450px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/combo-template" alt="Angular コンボ テンプレートの例">
 </code-view>
 
@@ -133,7 +133,7 @@ export class AppModule {}
 ## API まとめ
 <div class="divider--half"></div>
 
-* [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html) 
+* [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html)
 * [IgxComboComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-combo-theme)
 
 ## その他のリソース
@@ -143,7 +143,7 @@ export class AppModule {}
 * [コンボ機能](combo-features.md)
 * [コンボ リモート バインディング](combo-remote.md)
 * [テンプレート駆動フォームの統合](input-group.md)
-* [リアクティブ フォームの統合](input-group-reactive-forms.md)
+* [リアクティブ フォームの統合](angular-reactive-form-validation.md)
 * [カスケーディング](combo-cascading.md)
 
 コミュニティに参加して新しいアイデアをご提案ください。
