@@ -21,7 +21,7 @@ Ignite UI for Angular の多くの利点のうち、簡単な統合、迅速な�
 
 ### プロジェクトのインストールと作成 
 
-Ignite UI for Angular は、Angular CLI または [Ignite UI CLI](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/general/cli-overview.html "Ignite UI CLI 概要ページ") でインストールできます。Angular CLI をすばやく開始するには、以下のコマンドを実行します。 
+Ignite UI for Angular は、Angular CLI または [Ignite UI CLI](./cli/getting-started-with-cli.md "Ignite UI CLI 概要ページ") でインストールできます。Angular CLI をすばやく開始するには、以下のコマンドを実行します。 
 
 `ng add igniteui-angular` 
 
@@ -31,7 +31,7 @@ Ignite UI for Angular を[既存の Angular アプリケーション](https://jp
 
 `npm install –g igniteui-cli` 
 
-Ignite UI CLI がインストールされると、cli の [Ignite UI CLI を使用したガイド付きエクスペリエンス](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/general/cli/step-by-step-guide-using-cli.html "Ignite UI CLI を使用したステップ バイ ステップ ガイド")または [IgniteUI for Angular Schematics](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/general/cli/step-by-step-guide-using-angular-schematics.html "Ignite UI for Angular Schematics を使用したステップ バイ ステップ ガイド") に従ってアプリケーションを簡単にブートストラップできます。これにより、エンドユーザーが 1 つのコマンドで実行できる構成済みアプリが構築されます。
+Ignite UI CLI がインストールされると、cli の [Ignite UI CLI を使用したガイド付きエクスペリエンス](./cli/step-by-step-guide-using-cli.md "Ignite UI CLI を使用したステップ バイ ステップ ガイド")または [IgniteUI for Angular Schematics](./cli/step-by-step-guide-using-angular-schematics.md "Ignite UI for Angular Schematics を使用したステップ バイ ステップ ガイド") に従ってアプリケーションを簡単にブートストラップできます。これにより、エンドユーザーが 1 つのコマンドで実行できる構成済みアプリが構築されます。
 
 `ig` 
 

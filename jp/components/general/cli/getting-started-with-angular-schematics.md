@@ -25,7 +25,7 @@ ng new --collection="@igniteui/angular-schematics"
 
 ## 新しいプロジェクトを作成します。
 
-Ignite UI for Angular コントロールを使用するように設定されたアプリケーションを作成するには、コレクションオプションに `@igniteui/angular-schematics` を提供する `ng new` コマンドを実行します。
+Ignite UI for Angular コントロールを使用するように設定されたアプリケーションを作成するには、コレクション オプションに `@igniteui/angular-schematics` を提供する `ng new` コマンドを実行します。
 
 ```cmd
 ng new newAngularProject --collection="@igniteui/angular-schematics" --template=side-nav
@@ -41,9 +41,9 @@ ng add igniteui-angular
 
 | テンプレートの ID   | テンプレートの説明 |
 | ---           | ---                  |
-| empty         | ルーティングとホームページを備えたプロジェクト構造 |
+| empty         | ルーティングとホーム ページを備えたプロジェクト構造 |
 | side-nav      | サイド ナビゲーション ドロワーを備えたプロジェクト構造 |
-| side-nav-auth | ユーザー認証モジュールで拡張されたサイド ナビゲーション プロジェクト<br> プロジェクト テンプレートの詳細は、[Angular 認証プロジェクト テンプレート](auth-template.md) トピックをご覧ください。 |
+| side-nav-auth | ユーザー認証モジュールで拡張されたサイド ナビゲーション プロジェクト<br> プロジェクト テンプレートの詳細は、[Angular 認証プロジェクト テンプレート](auth-template.md)トピックをご覧ください。 |
 
 さらに、**引数**を指定してテーマを制御したり、パッケージのインストールをスキップしたりできます。
 
@@ -119,14 +119,14 @@ ng add igniteui-angular
 
 ## テンプレートの追加
 
-[利用可能な Ignite UI Angular テンプレート](component-templates.md)を追加するには、新しいコンポーネントのテンプレート ID と名前を指定するか、[ステップ バイ ステップ ガイド](step-by-step-guide-using-cli.md#add-view)を使用する必要があります。Angular Schematics、Ignite UI CLI で作成された既存のプロジェクト内、または Ignite UI for Angular が [`ng add` でインストールされている](getting_started.md#Ignite-UI-for-Angular-のインストール) 場合にのみサポートされます。
+[利用可能な Ignite UI Angular テンプレート](component-templates.md)を追加するには、新しいコンポーネントのテンプレート ID と名前を指定するか、[ステップ バイ ステップ ガイド](step-by-step-guide-using-cli.md#add-view)を使用する必要があります。Angular Schematics、Ignite UI CLI で作成された既存のプロジェクト内、または Ignite UI for Angular が [`ng add` でインストールされている](../getting-started.md#ignite-ui-for-angular-のインストール)場合にのみサポートされます。
 
 Schematics には、Ignite UI for Angular コレクションと `component [template] [name]` の `ng generate` を使用します。
 
 ```cmd
 ng g @igniteui/angular-schematics:component grid newGrid
 ```
-List of all the [available templates](component-templates.md).
+すべての[利用可能なテンプレート](component-templates.md)のリスト。
 
 また、コンポーネントを登録するモジュールを指定するか、アプリ ナビゲーション ルートの自動生成をスキップできます。
 

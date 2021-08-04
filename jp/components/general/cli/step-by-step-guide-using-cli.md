@@ -42,7 +42,7 @@ ig new
 
 ![](../../../images/general/ig-step-by-step-new-project-template.png)
 
-次のステップでは、アプリケーションのテーマを選択します。デフォルトのオプションを選択すると、Ignite UI for Angular のデフォルト テーマの Ignite UI がプリコンパイルされた CSS ファイル (igniteui-angular.css) がプロジェクトの angular.json に含まれます。カスタムオプションは、`app/styles.scss` の [Theming API](../../themes.md) を使用して、カラーパレットとテーマのコードを生成します。
+次のステップでは、アプリケーションのテーマを選択します。デフォルトのオプションを選択すると、Ignite UI for Angular のデフォルト テーマの Ignite UI がプリコンパイルされた CSS ファイル (`igniteui-angular.css`) がプロジェクトの `angular.json` に含まれます。カスタムオプションは、`app/styles.scss` の [Theming API](../../themes.md) を使用して、カラーパレットとテーマのコードを生成します。
 
 ![](../../../images/general/ig-step-by-step-new-project-theme.png)
 
@@ -58,7 +58,7 @@ Ignite UI CLI を使用する場合、`add` コマンドを実行します。
 ```bash	
 ig add
 ```
-新しいコントロールを追加することを選択した場合、カテゴリにグループ化された[使用可能なテンプレート](component-templates.md#component-templates)のリストが提供されます。
+新しいコントロールを追加することを選択した場合、カテゴリにグループ化された[使用可能なテンプレート](component-templates.md#コンポーネント-テンプレート)のリストが提供されます。
 
 ![](../../../images/general/ig-step-by-step-template-group.png)
 
@@ -68,7 +68,7 @@ ig add
 
 ![](../../../images/general/ig-step-by-step-component-features.png)
 
-アプリケーションにシナリオを追加することを選択した場合、使用可能な[シナリオ テンプレート](component-templates.md#scenario-templates)のリストも取得できます。
+アプリケーションにシナリオを追加することを選択した場合、使用可能な[シナリオ テンプレート](component-templates.md#シナリオ-テンプレート)のリストも取得できます。
 
 <img class="responsive-img"  src="../../../images/general/ig-step-by-step-scenario-templates.png" />
 
