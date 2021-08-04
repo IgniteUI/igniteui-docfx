@@ -1029,14 +1029,14 @@
   href: time-picker.md
   new: false
   updated: true
-- name: サービス
+- name: ページネーション
   header: true
   sortable: true
 - name: Paginator
   href: paginator.md
   new: true
   updated: false
-- name: Services
+- name: サービス
   header: true
   sortable: true
 - name: CSV エクスポーター
