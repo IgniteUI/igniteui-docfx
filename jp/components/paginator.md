@@ -1,21 +1,30 @@
 ---
 title: Angular ページング | Table Pagination | インフラジスティックス
-_description: Configure Angular pagination and create custom pages in the Angular Material table by Ignite UI, get data for the requested pages with variety of angular events.
-_keywords: paginator, igniteui for angular, infragistics
+_description: Angular ページネーションを設定し、Ignite UI を使用して Angular Material テーブルにカスタム ページを作成し、要求されたページのデータをさまざまな Angular イベントで取得。
+_keywords: ページネーター, igniteui for angular, インフラジスティックス
 _language: ja
 ---
 
 # ページネーター
-Pagination allows us to divide a set of data into a number of similar pages. This method of pagination is particularly well-suited for large data-sets and "infinite" scrolling user interfaces, that is why the paginator is typically used with a list of items or data table. The Pagination component enables the user to select a specific page from a range of pages and to determine how many records should see on each page.
+ページネーションを使用すると、データセットを複数の同様のページに分割できます。このページネーション方法は、特に大きなデータセットや無限スクロール ユーザー インターフェイスに適しています。ページネーション コンポーネントを使用すると、ページの範囲から特定のページを選択し、各ページに表示するレコード数を決定できます。
+
+## Angular Paginator の例
+
+
+<code-view style="height: 600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/pagination/main-pagination" alt="Angular Paginator の例">
+</code-view>
+
+<div class="divider--half"></div>
 
 ## 使用方法
 
-Each paginator instance requires:
+各ページネーター インスタンスには以下が必要です。
 
-- The number of items per page (default set to 15)
-- The total number of items being paged
-
-Also by default the current page is set to 0 when the paginator component is initialized but this can be changed through **page** property.
+- ページごとの項目数 (デフォルト値は 15 です)。
+- ページングされている項目の合計数
+また、デフォルトでは、ページネーター コンポーネントが初期化されると現在のページは 0 に設定されますが、**page** プロパティで変更できます。
 
 ```html
 <igx-paginator #paginator [totalRecords]="120" [perPage]="25">
@@ -24,9 +33,9 @@ Also by default the current page is set to 0 when the paginator component is ini
 
 ## Angular ページネーションのテンプレート
 
-Default pagination template is consisted of two main parts. The first is a drop-down, which allows you define the number of items that are displayed on each page and the second are the navigation buttons which allows you to easily navigate through out the pages.
+デフォルトのページネーション テンプレートは 2 つの主要部分で構成されます。1 つ目はドロップダウンで各ページに表示される項目の数を定義できます。2 つ目はナビゲーション ボタンでページ間を簡単に移動できます。
 
-Also, the paging area supports adding custom template by the user, if a `igx-paginator-content` reference is defined within the `igx-paginator`:
+また、`igx-paginator-content` 参照が `igx-paginator` 内で定義されている場合、ページング領域はユーザーによるカスタム テンプレートの追加をサポートします。
 
 ```html
 <igx-paginator #paginator>
@@ -36,7 +45,7 @@ Also, the paging area supports adding custom template by the user, if a `igx-pag
 </igx-paginator>
 ```
 
-In addition, [`IgxPageSizeSelectorComponent`]({environment:angularApiUrl}/classes/IgxPageSizeSelectorComponent.html) and [`IgxPageNavigationComponent`]({environment:angularApiUrl}/classes/IgxPageNavigationComponent.html) were introduced and now the paginator components allows a custom content to be defined, as it is shown in the example below. The first will add the dropdown element and label corresponding for the page size and the latter will handle the page navigation with all action buttons.
+さらに、[`IgxPageSizeSelectorComponent`]({environment:angularApiUrl}/classes/IgxPageSizeSelectorComponent.html) と [`IgxPageNavigationComponent`]({environment:angularApiUrl}/classes/IgxPageNavigationComponent.html) が導入され、ページネーター コンポーネントでカスタム コンテンツを定義できるようになりました。以下に例を示します。前者はページ サイズに対応するドロップダウン要素とラベルを追加し、後者はすべてのアクション ボタンでページナビゲーションを処理します。
 
 ```html
 <igx-paginator #paginator>
@@ -47,7 +56,7 @@ In addition, [`IgxPageSizeSelectorComponent`]({environment:angularApiUrl}/classe
 </igx-paginator>
 ```
 
-Paging can also be done programmatically through the Paging API /which is described in more details in the section below/ using the [`paginate`]({environment:angularApiUrl}/classes/igxpaginatorcomponent.html#paginate), [`previousPage`]({environment:angularApiUrl}/classes/igxpaginatorcomponent.html#previouspage), [`nextPage`]({environment:angularApiUrl}/classes/igxpaginatorcomponent.html#nextpage) methods and the inputs [`page`]({environment:angularApiUrl}/classes/igxpaginatorcomponent.html#page), [`perPage`]({environment:angularApiUrl}/classes/igxpaginatorcomponent.html#perpage) and [`totalRecords`]({environment:angularApiUrl}/classes/igxpaginatorcomponent.html#totalrecords). ここで *page* は現在のページを設定できます。*perPage* は 1 ページに表示される項目の数を設定できます。*totalRecords* はグリッドにあるレコードの数を設定できます。`TotalRecords` プロパティは、リモート データのページングがあり、リモート レコードの合計数に基づいてページの数を変更する場合に役に立ちます。ページングを使用しており、すべてのデータがグリッドに渡される場合、`totalRecords` プロパティの値は提供されたデータソースの長さにデフォルトで設定されることに注意してください。`totalRecords` が設定されている場合、データソースに基づいてデフォルトの長さよりも優先されます。
+ページングは、[`paginate`]({environment:angularApiUrl}/classes/igxpaginatorcomponent.html#paginate)、[`previousPage`]({environment:angularApiUrl}/classes/igxpaginatorcomponent.html#previouspage)、[`nextPage`]({environment:angularApiUrl}/classes/igxpaginatorcomponent.html#nextpage) メソッドおよび [`page`]({environment:angularApiUrl}/classes/igxpaginatorcomponent.html#page)、[`perPage`]({environment:angularApiUrl}/classes/igxpaginatorcomponent.html#perpage)、[`totalRecords`]({environment:angularApiUrl}/classes/igxpaginatorcomponent.html#totalrecords) 入力を使用して、Paging API (以下のセクションで詳細に説明されています) を介してプログラムで実行することもできます。ここで *page* は現在のページを設定できます。*perPage* は 1 ページに表示される項目の数を設定できます。*totalRecords* はグリッドにあるレコードの数を設定できます。`TotalRecords` プロパティは、リモート データのページングがあり、リモート レコードの合計数に基づいてページの数を変更する場合に役に立ちます。ページングを使用しており、すべてのデータがグリッドに渡される場合、`totalRecords` プロパティの値は提供されたデータソースの長さにデフォルトで設定されることに注意してください。`totalRecords` が設定されている場合、データソースに基づいてデフォルトの長さよりも優先されます。
 
 ## ページング API
 | 入力           |      説明                           |

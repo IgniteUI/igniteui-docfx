@@ -81,7 +81,7 @@ _language: ja
 @@if (igxName === 'IgxGrid') {
 ## グループ化によるページング
 グループ行は、データ行とともにページング プロセスに関係します。それらは各ページのページ サイズにカウントされます。折りたたまれた行はページング プロセスに含まれません。
-ページングとグループ化の統合については、[グループ化](groupby.md#angular-grid-group-by-with-paging)のトピックで説明しています。
+ページングとグループ化の統合については、[グループ化](groupby.md#angular-grid-ページングでグループ化)のトピックで説明しています。
 }
 
 ## 使用方法
@@ -133,9 +133,9 @@ _language: ja
 }
 
 @@if (igxName === 'IgxHierarchicalGrid') {
-### Paginator Configuration within child grids
+### 子グリッド内のページネーター設定
 
-Due to certain limitations in how the child grids of an IgxHierarchicalGrid are implemented and how DI scope works, when defining a paginator component inside the igx-row-island tags, always make sure to use the IgxPaginator directive on the paginator itself. This will make sure that the child grid have the correct paginator instance as a reference:
+IgxHierarchicalGrid の子グリッドの実装方法および DI スコープの動作には一定の制限があるため、igx-row-island タグ内でページネーターコンポーネントを定義する場合、ページネーター自体で IgxPaginator ディレクティブを必ず使用してください。これにより、子グリッドが参照として正しいページネーター インスタンスを持つようになります。
 
 ```html
 <igx-hierarchical-grid>
@@ -179,12 +179,12 @@ Due to certain limitations in how the child grids of an IgxHierarchicalGrid are 
 <div class="divider--half"></div>
 
 ## リモート ページング
-リモート ページングは、データ取得を担当するサービスと、グリッドの構築とデータ サブスクリプションを担当するコンポーネントを宣言することで実現できます。詳細については、[`@@igComponent リモート データ操作](remote-data-operations.md#remote-paging)トピックをご覧ください。
+リモート ページングは、データ取得を担当するサービスと、グリッドの構築とデータ サブスクリプションを担当するコンポーネントを宣言することで実現できます。詳細については、[`@@igComponent リモート データ操作](remote-data-operations.md#リモート-ページング)トピックをご覧ください。
 
 @@if (igxName === 'IgxGrid') {
 ## カスタム テンプレートのリモート ページング
 
-独自のページング動作を定義するために、`igx-paginator-content` を使用してカスタム ロジックを追加できます。[このセクション](remote-data-operations.md#remote-paging-with-custom-igx-paginator-content)では、上記を実証するために、リモート ページングの例を拡張する方法を説明します。
+独自のページング動作を定義するために、`igx-paginator-content` を使用してカスタム ロジックを追加できます。[このセクション](remote-data-operations.md#カスタム-igx-paginator-content-のリモート-ページング)では、上記を実証するために、リモート ページングの例を拡張する方法を説明します。
 }
 
 ## Angular のページネーション スタイリング

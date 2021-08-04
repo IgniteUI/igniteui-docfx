@@ -43,16 +43,16 @@
   href: general/cli-overview.md
   new: false
   items:
-    - name: ステップバイステップガイド
-      href: general/cli/step-by-step-guide.md
+    - name: Ignite UI for Angular Schematics を使用した作業の開始
+      href: general/cli/getting-started-with-angular-schematics.md
       new: false
-    - name: Step by Step guide using Ignite UI for Angular Schematics
+    - name: Ignite UI for Angular Schematics を使用したステップ バイ ステップ ガイド
       href: general/cli/step-by-step-guide-using-angular-schematics.md
       new: false
-    - name: Getting Started with Ignite UI CLI
+    - name: Ignite UI CLI を使用した作業の開始
       href: general/cli/getting-started-with-cli.md
       new: false
-    - name: Step by Step guide using Ignite UI CLI
+    - name: Ignite UI CLI を使用したステップ バイ ステップ ガイド
       href: general/cli/step-by-step-guide-using-cli.md
       new: false
     - name: テンプレート
