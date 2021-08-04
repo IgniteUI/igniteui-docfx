@@ -21,28 +21,28 @@ Infragistics offers free, non-commercial, not-for-resale (NFR) licenses for the 
 If you qualify for a free, non-commercial, NFR license or if you have any license questions, please [contact us](https://www.infragistics.com/about-us/contact-us).
 
 ## Ignite UI for Angular npm packages - Using the Private npm feed
-Npm is the most popular package manager and is also the default one for the runtime environment Node.js. It is highly adopted and is one of the fastest and easiest ways to manage the packages that you depend on in your project. For more information on how npm works, read the official [npm documentation](https://docs.npmjs.com/).
+Npm is the most popular package manager and is also the default one for the runtime environment Node.js. Highly adopted, it is one of the fastest and easiest ways to manage the packages that you depend on in your project. For more information on how npm works, read the official [npm documentation](https://docs.npmjs.com/).
 
 Infragistics Ignite UI for Angular is available as a npm package and you can add it as a dependency to your project in a [`few easy steps using the Ignite  UI CLI`](./cli/step-by-step-guide-using-cli.md) or [using Ignite UI for Angular Schematics](./cli/step-by-step-guide-using-angular-schematics.md). Choosing this approach will not require configuring npm. By installing this package you will start using the [Ignite UI for Angular Trial version](https://www.infragistics.com/products/ignite-ui-angular) of the product.
 
 >[!NOTE]
-> What does it mean to start using a trial version? It means that you will be using a version of our product with a **Watermark** part of your web view, and not that you will be using the licensed package for a certain amount of time, for example one month.
+> What does it mean to start using a trial version? It means that you will be using a version of our product with a **Watermark** part of your web view. It doesn’t mean that you will be using the licensed package for a certain amount of time before it expires. For example, for a month.
 
 Infragistics Ignite UI Dock Manager Web Component is available as a separate npm package and by installing it you will start using the [Ignite UI Dock Manager Web Component Trial version](https://www.infragistics.com/products/ignite-ui-angular) of the product.
 
-> More information on how to start using the Ignite UI for Angular npm package can be found in [this topic](getting-started.md#installing-ignite-ui-for-angular) and more information on Ignite UI Dock Manager Web Component can be found [here](../dock-manager.md).
+> More information on how to start using the Ignite UI for Angular npm package can be found in [this topic](getting-started.md#installing-ignite-ui-for-angular). Additional information on Ignite UI Dock Manager Web Component can be found [here](../dock-manager.md).
 
 ### Upgrading packages using our Angular Schematics or Ignite UI CLI
-If Ignite UI for Angular has been added to the project using [`ng add`](./getting-started.md) or the project has been created through our [schematics collection](./cli/getting-started-with-angular-schematics.md) or [Ignite UI CLI](./cli/getting-started-with-cli.md), you can use our `upgrade-packages` to automatically upgrade your app to using our licensed packages. You project package dependencies will include either `@igniteui/angular-schematics` or `igniteui-cli` and both support the upgrade command.
+If Ignite UI for Angular has been added to the project using [`ng add`](./getting-started.md) or the project has been created through our [schematics collection](./cli/getting-started-with-angular-schematics.md) or [Ignite UI CLI](./cli/getting-started-with-cli.md), you can use our `upgrade-packages` to automatically upgrade your app to using our licensed packages. You project package dependencies will include either `@igniteui/angular-schematics` or `igniteui-cli`, with both of them supporting the upgrade command.
 
 >[!NOTE]
-> As the process changes packages, we recommend that you update your project first before switching to avoid picking up a higher version of Ignite UI Angular and missing on potential update migrations. Follow our [Update Guide](./update-guide.md).
+> As the process changes the packages, we recommend that you update your project first before switching. This way you will avoid picking up a higher version of Ignite UI Angular and missing on potential update migrations. Follow our [Update Guide](./update-guide.md).
 
 Depending on your project setup, either run the following schematic in your project:
 ```bash
 ng g @igniteui/angular-schematics:upgrade-packages
 ```
-or if using `igniteui-cli`:
+or use `igniteui-cli`:
 
 ```bash
 ig upgrade-packages
@@ -51,7 +51,7 @@ The schematic or command will take care of switching the package dependencies of
 You'll be asked to login to our npm registry if not already setup.
 
 >[!NOTE]
-> If your project is using [`yarn`](https://yarnpkg.com/), make sure to run `upgrade-packages` with the `--skip-install` flag and execute `yarn install` after to properly update your `yarn.lock` as the upgrade command currently uses `npm` for the install.
+> If your project is using [`yarn`](https://yarnpkg.com/), make sure to run `upgrade-packages` with the `--skip-install` flag. Then execute `yarn install` after to properly update your `yarn.lock` as the upgrade command currently uses `npm` for the install.
 
 
 ### How to setup your environment to use the private npm feed (Step by step guide)
@@ -139,7 +139,7 @@ So, if you've already adopted npm and you have an Ignite UI for Angular license,
 
 ## Access Token Usage
 
-You can also authenticate to our private npm feed using an access token, which you can acquire through your [infragistics.com user account](https://account.infragistics.com/access-tokens). The access token authentication is the preferred alternative when you want to integrate a CI process in a publicly accessible repository, which uses the Ignite UI for Angular licensed packages.
+You can also authenticate to our private npm feed using an access token, which you can acquire through your [infragistics.com user account](https://account.infragistics.com/access-tokens). The access token authentication is the preferred alternative when you want to integrate a CI process in a publicly accessible repository which uses the Ignite UI for Angular licensed packages.
 
 The following information is on how to setup authentication to our private npm registry using an access token in local configuration, Azure Pipelines build procedures and Travis CI build process: 
 
@@ -206,7 +206,7 @@ In the most common case, you [set the variables and use them](https://docs.micro
   title="npm Registry and token variables" />
 
 ### Travis CI Configuration
-We will follow almost the same approach here, the only difference would be that the configuration will be set on [before_install](https://docs.travis-ci.com/user/job-lifecycle/#the-job-lifecycle)
+We will follow almost the same approach here. The only difference would be that the configuration will be set on [before_install](https://docs.travis-ci.com/user/job-lifecycle/#the-job-lifecycle)
 
 ```cmd
 before_install:
@@ -215,7 +215,7 @@ before_install:
 - echo "//packages.infragistics.com/npm/js-licensed/:always-auth=true" >> ~/.npmrc
 ```
 
-The best way to define an environment variable depends on what type of information it will contain, so [you have two options](https://docs.travis-ci.com/user/environment-variables/):
+The best way to define an environment variable depends on what type of information it will contain. So [you have two options](https://docs.travis-ci.com/user/environment-variables/):
 
 * encrypt it and add it [to your .travis.yml](https://docs.travis-ci.com/user/environment-variables/#defining-encrypted-variables-in-travisyml)
 * add it to your [Repository Settings](https://docs.travis-ci.com/user/environment-variables/#defining-variables-in-repository-settings)
