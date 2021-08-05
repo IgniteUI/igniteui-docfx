@@ -16,7 +16,7 @@
   "author": "Infragistics",
   "license": "ISC",
   "dependencies": {
-    "igniteui-docfx-template": "^3.0.13",
+    "igniteui-docfx-template": "^3.0.14",
     "natives": "^1.1.6",
     "yargs": "^10.0.3"
   },

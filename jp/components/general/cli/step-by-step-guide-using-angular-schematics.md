@@ -1,26 +1,17 @@
-﻿---
-title: ステップバイステップ ガイド | Ignite UI for Angular | インフラジスティックス
-_description: ステップバイステップ モードには、Ignite UI CLI オプションによるガイドが含まれます。
-_keywords: angular cli, ignite ui for angular, インフラジスティックス
+---
+title: Ignite UI for Angular Schematics を使用したステップ バイ ステップ ガイド | Ignite UI for Angular | インフラジスティックス
+_description: ステップ バイ ステップ モードには、Ignite UI CLI オプションによるガイドが含まれます。
+_keywords: angular cli, ignite ui for angular, infragistics
+_language: ja
 ---
 
-# ステップバイステップ ガイド
-利用可能なオプションでガイドを取得する場合、ステップバイステップ モードを初期化して新しいアプリケーションの作成およびセットアップ、同様に [Ignite UI Angular Schematics](getting-started-with-angular-schematics.md) または [Ignite UI CLI](getting-started-with-cli.md) で以前作成したプロジェクトを更新できます。
+# Ignite UI for Angular Schematics を使用したステップ バイ ステップ ガイド
+利用可能なオプションでガイドを取得する場合、ステップバイステップ モードを初期化して新しいアプリケーションの作成およびセットアップ、同様に [Ignite UI Angular Schematics](getting-started-with-angular-schematics.md) で以前作成したプロジェクトを更新できます。
 
 Schematics コレクションを使用してガイドをアクティブにするには、以下のコマンドを実行します。
 
 ```cmd
 ng new --collection="@igniteui/angular-schematics"
-```
-
-Ignite UI CLI を使用してガイドを開始するには、`ig` コマンドを実行します。
-
-```bash
-ig
-```
-または
-```bash
-ig new
 ```
 
 これにより、ステップバイステップ モードがアクティブになり、新しいプロジェクトの作成に役立つ一連の質問が表示されます。
@@ -32,7 +23,8 @@ ig new
     </a>
 </div>
 
-> **注** ステップバイステップ モードは `Inquirer.js` に依存しています。[サポートされている端末](https://github.com/SBoudrias/Inquirer.js#support-os-terminals) を参照してください。
+> [!Note] 
+> ステップ バイ ステップ モードは `Inquirer.js` に依存しています。[サポートされている端末](https://github.com/SBoudrias/Inquirer.js#support-os-terminals)を参照してください。
 
 
 
@@ -58,22 +50,18 @@ ig new
 
 Ignite UI CLI は、プロジェクトに追加できる複数のコンポーネント テンプレート、およびより詳細なシナリオ テンプレートをサポートしています。このモードは、プロジェクトの作成が完了した後、または以下のコマンドを使用して既存のプロジェクト内でアクティブにできます。
 
-Schematics コレクションを使用してステップバイステップ モードをアクティブにするには、`component` (alias:`c`) スケマティックを実行します。
+Schematics コレクションを使用してステップバイステップ モードをアクティブにするには、`component`(alias:`c`) schematic を実行します。
 ```bash
 ng g @igniteui/angular-schematics:component
 ```
 
-Ignite UI CLI を使用する場合、`add` コマンドを実行します。
-```bash	
-ig add
-```
 新しいコントロールを追加することを選択した場合、カテゴリにグループ化された[使用可能なテンプレート](component-templates.md#コンポーネント-テンプレート)のリストが提供されます。
 
 <img class="responsive-img"  src="../../../images/general/ig-step-by-step-template-group.png" />
 
 矢印キーを使用してオプションをナビゲートし、ENTER を使用して選択したオプションを選択します。
 
-たとえば、`カスタムグリッド`などの一部のテンプレートでは、有効にできるオプションのリストが提供されます。オプションは、スペース キーで切り替えることができます。
+たとえば、カスタムグリッドなどの一部のテンプレートでは、有効にできるオプションのリストが提供されます。オプションは、スペース キーで切り替えることができます。
 
 <img class="responsive-img"  src="../../../images/general/ig-step-by-step-component-features.png" />
 
@@ -83,4 +71,4 @@ ig add
 
 アプリケーションにテンプレートを追加した後、プロセスを完了するかコントロールの追加を続行するかどうかを選択します。プロセスの完了を選択すると、必要なパッケージが (プロジェクト作成時に) インストールされ、アプリケーションがデフォルトのブラウザーで開かれます。
 
-`add` コマンドを使用して、後からいつでも、Angular ビューの Ignite UI をアプリケーションに追加できます。
+`ng g @igniteui/angular-schematics:c [template] [name]` コマンドを使用して、後からいつでも、Ignite UI for Angular ビューをアプリケーションに追加できます。

@@ -238,7 +238,7 @@ export class HierarchicalGridBatchEditingSampleComponent {
 
 ## 一括編集のリモート ページング デモ
 
-[完全なデモ構成をご覧ください](remote-data-operations.html#一括編集のリモート-ページング)。
+[完全なデモ構成をご覧ください](remote-data-operations.md#一括編集のリモート-ページング)。
 
 <code-view style="height:620px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
