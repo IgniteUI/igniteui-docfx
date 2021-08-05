@@ -923,9 +923,9 @@ public paginate(page: number) {
 
 }
 
-## Known Issues and Limitations
+## 既知の問題と制限
 
-- When the grid has no `primaryKey` set and remote data scenarios are enabled (when paging, sorting, filtering, scrolling trigger requests to a remote server to retrieve the data to be displayed in the grid), a row will lose the following state after a data request completes:
+- グリッドに `primaryKey` が設定されておらず、リモート データ シナリオが有効になっている場合 (ページング、ソート、フィルタリング、スクロール時に、グリッドに表示されるデータを取得するためのリモート サーバーへのリクエストがトリガーされる場合)、データ要求が完了すると、行は次の状態を失います:
     * Row Selection
     * Row Expand/collapse
     * Row Editing

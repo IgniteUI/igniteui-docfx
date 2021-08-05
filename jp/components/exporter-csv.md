@@ -16,13 +16,14 @@ Ignite UI CSV Exporter サービスは、文字分割値 (CSV) 形式で生デ�
 
 
 <code-view style="height: 150px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
+           explicit-editor="stackblitz" 
            iframe-src="{environment:demosBaseUrl}/services/export-csv" alt="Angular CSV Exporter の例">
 </code-view>
 
 <div class="divider--half"></div>
 
-IgniteUI CSV Exporter をインスタンス化するには、[`IgxCsvExporterService`]({environment:angularApiUrl}/classes/igxcsvexporterservice.html) を app.module.ts ファイルにインポートし、サービスを `providers` 配列に追加します。
+Ignite UI CSV Exporter をインスタンス化するには、[`IgxCsvExporterService`]({environment:angularApiUrl}/classes/igxcsvexporterservice.html) を app.module.ts ファイルにインポートし、サービスを `providers` 配列に追加します。
 
 ```typescript
 // app.module.ts
@@ -36,8 +37,6 @@ import { IgxCsvExporterService } from "igniteui-angular/services/index";
 
 export class AppModule {}
 ```
-
-> 注: CSV Exporter サービスは JSZip にピア依存関係があります。 JSZip ライブラリは CSV Exporter 使用時にインストールしてください。
 
 エクスポート処理を開始するためにコンポーネントのテンプレートでボタンのハンドラーを使用できます。
 
@@ -111,7 +110,8 @@ public exportButtonHandler() {
 
 
 <code-view style="height: 300px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
+           explicit-editor="stackblitz"
            iframe-src="{environment:demosBaseUrl}/services/export-csv-sample-1" >
 </code-view>
 
