@@ -7,6 +7,16 @@ _keywords: paginator, igniteui for angular, infragistics
 # Paginator
 Pagination allows us to divide a set of data into a number of similar pages. This method of pagination is particularly well-suited for large data-sets and "infinite" scrolling user interfaces, that is why the paginator is typically used with a list of items or data table. The Pagination component enables the user to select a specific page from a range of pages and to determine how many records should see on each page.
 
+## Angular Paginator Example
+
+
+<code-view style="height: 600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/pagination/main-pagination" alt="Angular Paginator Example">
+</code-view>
+
+<div class="divider--half"></div>
+
 ## Usage
 
 Each paginator instance requires:
