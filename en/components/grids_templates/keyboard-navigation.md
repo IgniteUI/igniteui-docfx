@@ -162,12 +162,12 @@ Let's try the API to demonstrate how to achieve common scenarios like user input
 
 ```html
 <igx-hierarchical-grid #grid1 [data]="data" (gridKeydown)="customKeydown($event, grid1)">
-    <igx-row-island [key]="'Albums'" (onGridCreated)="childGridCreated($event)">
+    <igx-row-island [key]="'Albums'" (gridCreated)="childGridCreated($event)">
     </igx-row-island>
 </igx-hierarchical-grid>
 ```
 
-In order to add custom keyboard navigation to igxHierarchicalGrid child grids too, each child grid should subscribe to [`gridKeydown`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#gridKeydown) event. That's why in example above we have registered and event handler for for the [`onGridCreated`]({environment:angularApiUrl}/classes/igxrowislandcomponent.html#ongridcreated) event:
+In order to add custom keyboard navigation to igxHierarchicalGrid child grids too, each child grid should subscribe to [`gridKeydown`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#gridKeydown) event. That's why in example above we have registered and event handler for for the [`gridCreated`]({environment:angularApiUrl}/classes/igxrowislandcomponent.html#gridCreated) event:
 
 ```typescript
 public childGridCreated(event: IGridCreatedEventArgs) {

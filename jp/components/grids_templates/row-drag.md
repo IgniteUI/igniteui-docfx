@@ -663,7 +663,7 @@ class MyRowGhostComponent {
 class MyRowGhostComponent {
     ...
     public ngAfterViewInit(): void {
-        this.grid.onRowDragStart.pipe(takeUntil(this.destroy$)).subscribe(this.onRowDragStart.bind(this));
+        this.grid.rowDragStart.pipe(takeUntil(this.destroy$)).subscribe(this.onRowDragStart.bind(this));
     }
     ...
     private onRowDragStart(e: IRowDragStartEventArgs) {
@@ -672,7 +672,7 @@ class MyRowGhostComponent {
         }
         const directive = e.dragDirective;
         directive.dragMove
-            .pipe(takeUntil(this.grid.onRowDragEnd))
+            .pipe(takeUntil(this.grid.rowDragEnd))
             .subscribe(this.onDragMove.bind(this));
     }
     ...
@@ -824,10 +824,10 @@ class MyGridScrollComponent {
 ```typescript
 class MyGridScrollComponent {
     public ngAfterViewInit() {
-        this.grid.onRowDragStart
+        this.grid.rowDragStart
             .pipe(takeUntil(this.destroy$))
             .subscribe(this.onDragStart.bind(this));
-        this.grid.onRowDragEnd
+        this.grid.rowDragEnd
             .pipe(takeUntil(this.destroy$))
             .subscribe(() => this.unsubInterval());
     }

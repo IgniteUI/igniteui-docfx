@@ -118,7 +118,7 @@ API を使用する時、操作が成功した場合、[`columnMovingEnd`]({envi
 
 ## イベント
 
-列のドラッグアンドドロップ操作をカスタマイズするための列移動に関連するイベントが複数あります。[`columnMovingStart`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columnMovingStart)、[`columnMoving`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columnmoving)、[`columnMovingEnd`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columnMovingEnd) があります。
+列のドラッグアンドドロップ操作をカスタマイズするための列移動に関連するイベントが複数あります。[`columnMovingStart`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columnMovingStart)、[`columnMoving`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columnMoving)、[`columnMovingEnd`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columnMovingEnd) があります。
 [`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) の [`columnMovingEnd`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columnMovingEnd) イベントを処理し、列が新しい位置にドロップされたときにカスタム ロジックを実装できます。たとえば、Change On Year(%) 列の後に Category のドロップをキャンセルできます。
 
 @@if (igxName === 'IgxGrid') {

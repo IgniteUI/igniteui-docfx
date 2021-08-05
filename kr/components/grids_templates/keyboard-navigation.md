@@ -113,7 +113,7 @@ You can try the `actions below` in order to observe the custom keyboard navigati
 }
 
 @@if (igxName === 'IgxHierarchicalGrid') {
-In order to add custom keyboard navigation to igxHierarchicalGrid child grids [`onGridCreated`]({environment:angularApiUrl}/classes/igxrowislandcomponent.html#ongridcreated) should be handled and each child grid should subscribe to [`gridKeydown`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#gridKeydown) event.
+In order to add custom keyboard navigation to igxHierarchicalGrid child grids [`gridCreated`]({environment:angularApiUrl}/classes/igxrowislandcomponent.html#gridCreated) should be handled and each child grid should subscribe to [`gridKeydown`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#gridKeydown) event.
 
 ```typescript
 public childGridCreated(event: IGridCreatedEventArgs) {
@@ -132,7 +132,7 @@ public childGridCreated(event: IGridCreatedEventArgs) {
         <igx-column field="Grammy Awards" editable="true" dataType="number" width="20%"></igx-column>
 
         <igx-row-island [key]="'Albums'" [autoGenerate]="false" [showToolbar]="true" toolbarTitle="Albums"
-        (onGridCreated)="childGridCreated($event)">
+        (gridCreated)="childGridCreated($event)">
             <igx-column field="Album"></igx-column>
             <igx-column field="Launch Date" [dataType]="'date'"></igx-column>
             <igx-column field="Billboard Review" editable="true"></igx-column>

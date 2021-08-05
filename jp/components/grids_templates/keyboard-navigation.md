@@ -162,12 +162,12 @@ API を使用して、ユーザー入力の検証やカスタム ナビゲーシ
 
 ```html
 <igx-hierarchical-grid #grid1 [data]="data" (gridKeydown)="customKeydown($event, grid1)">
-    <igx-row-island [key]="'Albums'" (onGridCreated)="childGridCreated($event)">
+    <igx-row-island [key]="'Albums'" (gridCreated)="childGridCreated($event)">
     </igx-row-island>
 </igx-hierarchical-grid>
 ```
 
-igxHierarchicalGrid子グリッドにカスタムキーボードナビゲーションを追加するには、各子グリッドを [`gridKeydown`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#gridKeydown) イベントにサブスクライブする必要があります。そのため、上記の例で[`onGridCreated`]({environment:angularApiUrl}/classes/igxrowislandcomponent.html#ongridcreated) イベントのイベント ハンドラーを登録しました。
+igxHierarchicalGrid子グリッドにカスタムキーボードナビゲーションを追加するには、各子グリッドを [`gridKeydown`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#gridKeydown) イベントにサブスクライブする必要があります。そのため、上記の例で[`gridCreated`]({environment:angularApiUrl}/classes/igxrowislandcomponent.html#gridCreated) イベントのイベント ハンドラーを登録しました。
 
 ```typescript
 public childGridCreated(event: IGridCreatedEventArgs) {
