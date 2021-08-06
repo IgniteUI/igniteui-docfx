@@ -96,7 +96,7 @@ npm i -g @igniteui/angular-schematics
 npm install -g igniteui-cli 
 ```
 
-[Ignite UI CLI を使用したガイド付きエクスペリエンス](cli/step-by-step-guide-using-cli.md) または [Ignite UI for Angular Schematics](cli/step-by-step-guide-using-angular-schematics.md) は、構成したアプリケーションをブートストラップする最も簡単な方法です。
+[Ignite UI CLI を使用したガイド付きエクスペリエンス](cli/step-by-step-guide-using-cli.md)または [Ignite UI for Angular Schematics](cli/step-by-step-guide-using-angular-schematics.md) は、構成したアプリケーションをブートストラップする最も簡単な方法です。
 
 Ignite UI for Angular Schematics を使用してガイドをアクティブにするには、次のコマンドを実行します。
 ```cmd

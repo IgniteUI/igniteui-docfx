@@ -135,7 +135,7 @@ _language: ja
 @@if (igxName === 'IgxHierarchicalGrid') {
 ### 子グリッド内のページネーター設定
 
-IgxHierarchicalGrid の子グリッドの実装方法および DI スコープの動作には一定の制限があるため、igx-row-island タグ内でページネーターコンポーネントを定義する場合、ページネーター自体で IgxPaginator ディレクティブを必ず使用してください。これにより、子グリッドが参照として正しいページネーター インスタンスを持つようになります。
+IgxHierarchicalGrid の子グリッドの実装方法および DI スコープの動作には一定の制限があるため、igx-row-island タグ内でページネーター コンポーネントを定義する場合、ページネーター自体で IgxPaginator ディレクティブを必ず使用してください。これにより、子グリッドが参照として正しいページネーター インスタンスを持つようになります。
 
 ```html
 <igx-hierarchical-grid>
