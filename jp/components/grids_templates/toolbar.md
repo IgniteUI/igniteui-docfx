@@ -291,7 +291,7 @@ export class AppModule { ... }
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
 
-エクスポートされたファイル名を変更することに加えて、ユーザーは [onToolbarExporting](environment:angularApiUrl}/classes/@@igTypeDoc.html#ontoolbarexporting) イベントを待機し、イベント プロパティのオプション エントリをカスタマイズすることで、エクスポーター オプションをさらに構成できます。
+エクスポートされたファイル名を変更することに加えて、ユーザーは [toolbarExporting](environment:angularApiUrl}/classes/@@igTypeDoc.html#toolbarExporting) イベントを待機し、イベント プロパティのオプション エントリをカスタマイズすることで、エクスポーター オプションをさらに構成できます。
 
 > [!NOTE]
 > デフォルトで CSV にエクスポートした際にエクスポーターがカンマ区切りセパレーターを使用してエクスポートし、出力ファイルに .csv 拡張しを使用します。
@@ -301,7 +301,7 @@ export class AppModule { ... }
 次のコード スニペットは、ツールバーのエクスポート イベントのサブスクライブとエクスポーター オプションの構成を示しています。
 
 ```html
-<@@igSelector (onToolbarExporting)="configureExport($event)" ></@@igSelector>
+<@@igSelector (toolbarExporting)="configureExport($event)" ></@@igSelector>
 ```
 
 ```typescript
@@ -593,7 +593,7 @@ $dark-input-group-theme: igx-input-group-theme(
 
 
 [`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) イベント:
-* [`onToolbarExporting`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#ontoolbarexporting)
+* [`toolbarExporting`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#toolbarExporting)
 
 スタイル:
 

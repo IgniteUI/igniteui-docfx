@@ -301,7 +301,7 @@ Here is a snippet showing some of the options which can be customized through th
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
 
-In addition to changing the exported filename, the user can further configure the exporter options by waiting for the [onToolbarExporting]({environment:angularApiUrl}/classes/@@igTypeDoc.html#ontoolbarexporting) event and customizing the options entry in the event properties.
+In addition to changing the exported filename, the user can further configure the exporter options by waiting for the [toolbarExporting]({environment:angularApiUrl}/classes/@@igTypeDoc.html#toolbarExporting) event and customizing the options entry in the event properties.
 
 > [!NOTE]
 > By default when exporting to CSV the exporter exports using a comma separator and uses a '.csv' extension for the output file.
@@ -311,7 +311,7 @@ In addition to changing the exported filename, the user can further configure th
 The following code snippet demonstrates subscribing to the toolbar exporting event and configuring the exporter options:
 
 ```html
-<@@igSelector (onToolbarExporting)="configureExport($event)" ></@@igSelector>
+<@@igSelector (toolbarExporting)="configureExport($event)" ></@@igSelector>
 ```
 
 ```typescript
@@ -605,7 +605,7 @@ The Grid Toolbar service has a few more APIs to explore, which are listed below.
 
 
 [`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) events:
-* [`onToolbarExporting`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#ontoolbarexporting)
+* [`toolbarExporting`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#toolbarExporting)
 
 Styles:
 

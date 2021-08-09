@@ -159,11 +159,11 @@ export class RemoteLoDService {
 
 ルート レベル階層グリッドと最終的にはその子のデータがテンプレートに必要となります。`#hGrid` 参照が使用できるため、コードでサービスからデータ取得後にルート グリッドのデータを簡単に設定できます。展開されている子にデータを設定する方法は異なります。
 
-行がはじめて展開されたときに新し子 `IgxHierarchicalGrid` が描画がされるため、データを設定するために新しく作成されたグリッドの参照を取得する必要があります。各 [`IgxRowIsland`]({environment:angularApiUrl}/classes/igxrowislandcomponent.html) コンポーネントに [`onGridCreated`]({environment:angularApiUrl}/classes/igxrowislandcomponent.html#ongridcreated) イベントがあり、特定の子アイランドに新しい子グリッドが作成されたときに発生します。新しいグリッドの参照を取得するために使用でき、サービスからデータを要求して適用します。
+行がはじめて展開されたときに新し子 `IgxHierarchicalGrid` が描画がされるため、データを設定するために新しく作成されたグリッドの参照を取得する必要があります。各 [`IgxRowIsland`]({environment:angularApiUrl}/classes/igxrowislandcomponent.html) コンポーネントに [`gridCreated`]({environment:angularApiUrl}/classes/igxrowislandcomponent.html#gridCreated) イベントがあり、特定の子アイランドに新しい子グリッドが作成されたときに発生します。新しいグリッドの参照を取得するために使用でき、サービスからデータを要求して適用します。
 
 サービスをビルドしているためルートレベルの場合に情報のみが必要なため、すべてのアイランドに 1 メソッドを使用できます。このすべての情報には、イベント引数から直接またはイベントをトリガーする行アイランドからアクセスできます。 
 
-`gridCreated` を使用するメソッドに名前を付けます。イベント [`onGridCreated`]({environment:angularApiUrl}/classes/igxrowislandcomponent.html#ongridcreated) は [`parentID`]({environment:angularApiUrl}/interfaces/igridcreatedeventargs.html#parentid) プロパティ、[`owner`]({environment:angularApiUrl}/interfaces/igridcreatedeventargs.html#owner) として行アイランドへの参照、新しい子 [`grid`]({environment:angularApiUrl}/interfaces/igridcreatedeventargs.html#grid) プロパティを提供するため、最初の引数として渡されます。
+`gridCreated` を使用するメソッドに名前を付けます。イベント [`gridCreated`]({environment:angularApiUrl}/classes/igxrowislandcomponent.html#gridCreated) は [`parentID`]({environment:angularApiUrl}/interfaces/igridcreatedeventargs.html#parentid) プロパティ、[`owner`]({environment:angularApiUrl}/interfaces/igridcreatedeventargs.html#owner) として行アイランドへの参照、新しい子 [`grid`]({environment:angularApiUrl}/interfaces/igridcreatedeventargs.html#grid) プロパティを提供するため、最初の引数として渡されます。
 親行の `primaryKey` についての情報はありませんが、バインドした行アイランドに基づいて 2 つ目の引数として簡単に渡すことができます。 
 
 変更を加えたテンプレート ファイル `hierarchical-grid-lod.component.html` は以下のようになります。
@@ -176,13 +176,13 @@ export class RemoteLoDService {
     <igx-column field="ContactTitle"></igx-column>
     <igx-column field="Country"></igx-column>
     <igx-column field="Phone"></igx-column>
-    <igx-row-island [key]="'Orders'" [primaryKey]="'OrderID'" [autoGenerate]="false" (onGridCreated)="gridCreated($event, 'CustomerID')">
+    <igx-row-island [key]="'Orders'" [primaryKey]="'OrderID'" [autoGenerate]="false" (gridCreated)="gridCreated($event, 'CustomerID')">
         <igx-column field="OrderID" [hidden]="true"></igx-column>
         <igx-column field="ShipCountry"></igx-column>
         <igx-column field="ShipCity"></igx-column>
         <igx-column field="ShipAddress"></igx-column>
         <igx-column field="OrderDate"></igx-column>
-        <igx-row-island [key]="'Order_Details'" [primaryKey]="'ProductID'" [autoGenerate]="false" (onGridCreated)="gridCreated($event, 'OrderID')">
+        <igx-row-island [key]="'Order_Details'" [primaryKey]="'ProductID'" [autoGenerate]="false" (gridCreated)="gridCreated($event, 'OrderID')">
             <igx-column field="ProductID" [hidden]="true"></igx-column>
             <igx-column field="Quantity"></igx-column>
             <igx-column field="UnitPrice"></igx-column>

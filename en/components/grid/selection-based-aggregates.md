@@ -14,9 +14,9 @@ To achieve the selection-based aggregates functionality, you can use our [`Grid 
 The Summaries are allowing for customization of the basic Summary feature functionality through extending one of the base classess, [`IgxSummaryOperand`]({environment:angularApiUrl}/classes/igxsummaryoperand.html), [`IgxNumberSummaryOperand`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html) or [`IgxDateSummaryOperand`]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html), depending on the column data type and your needs.  
 
 ## Selection
-To start working with the data in the selected grid range, you will have to subscribe to events that are notifying of changes in the grid selection. That can be done by subscribing to the [`onSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onrangeselection) event and to the [`onRangeSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onselection) event. You need to bind to both of them because the Selection feature differentiates between selecting a single cell and selecting a range of cells.     
+To start working with the data in the selected grid range, you will have to subscribe to events that are notifying of changes in the grid selection. That can be done by subscribing to the [`selected`]({environment:angularApiUrl}/classes/igxgridcomponent.html#selected) event and to the [`rangeSelected`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rangeSelected) event. You need to bind to both of them because the Selection feature differentiates between selecting a single cell and selecting a range of cells.     
 
-In the events subscription logic, you can extract the selected data using the grid's [`getSelectedData`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onrangeselection) function and pass the selected data to the custom summary operand.
+In the events subscription logic, you can extract the selected data using the grid's [`getSelectedData`]({environment:angularApiUrl}/classes/igxgridcomponent.html#getSelectedData) function and pass the selected data to the custom summary operand.
 
 
 ## Summary
