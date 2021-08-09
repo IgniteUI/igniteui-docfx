@@ -140,10 +140,10 @@ public options =  { cellSelection: false; sorting: false; }
 
 [`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) はデフォルトで列テンプレート、列フォーマッタなどを保持しません ([`制限`](state-persistence.md#制限)を参照)。これらの復元は、アプリケーション レベルのコードで実現できます。テンプレート化された列でこれを行う方法を示します。
 
-1. テンプレート参照変数 (以下の例では `#activeTemplate`) を定義し、[`onColumnInit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncolumninit) イベントにイベント ハンドラーを割り当てます。
+1. テンプレート参照変数 (以下の例では `#activeTemplate`) を定義し、[`columnInit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columnInit) イベントにイベント ハンドラーを割り当てます。
 @@if (igxName === 'IgxGrid') {
 ```html
-<igx-grid id="grid" #grid igxGridState (onColumnInit)="onColumnInit($event)">
+<igx-grid id="grid" #grid igxGridState (columnInit)="onColumnInit($event)">
     <igx-column [field]="'IsActive'" header="IsActive">
         <ng-template igxCell #activeTemplate let-column let-val="val">
             <igx-checkbox [checked]="val"></igx-checkbox>
@@ -155,7 +155,7 @@ public options =  { cellSelection: false; sorting: false; }
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid id="grid" #grid igxGridState (onColumnInit)="onColumnInit($event)">
+<igx-hierarchical-grid id="grid" #grid igxGridState (columnInit)="onColumnInit($event)">
     <igx-column [field]="'IsActive'" header="IsActive">
         <ng-template igxCell #activeTemplate let-column let-val="val">
             <igx-checkbox [checked]="val"></igx-checkbox>
@@ -167,7 +167,7 @@ public options =  { cellSelection: false; sorting: false; }
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```html
-<igx-tree-grid id="grid" #grid igxGridState (onColumnInit)="onColumnInit($event)">
+<igx-tree-grid id="grid" #grid igxGridState (columnInit)="onColumnInit($event)">
     <igx-column [field]="'IsActive'" header="IsActive">
         <ng-template igxCell #activeTemplate let-column let-val="val">
             <igx-checkbox [checked]="val"></igx-checkbox>
@@ -177,7 +177,7 @@ public options =  { cellSelection: false; sorting: false; }
 </igx-tree-grid>
 ```
 }
-2. @ViewChild または @ViewChildren デコレータを使用して、コンポーネントのテンプレート ビューをクエリします。[`onColumnInit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncolumninit) イベント ハンドラーで、テンプレートを列の `bodyTemplate` プロパティに割り当てます。
+2. @ViewChild または @ViewChildren デコレータを使用して、コンポーネントのテンプレート ビューをクエリします。[`columnInit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columnInit) イベント ハンドラーで、テンプレートを列の `bodyTemplate` プロパティに割り当てます。
 
 ```typescript
 @ViewChild('activeTemplate', { static: true }) public activeTemplate: TemplateRef<any>;

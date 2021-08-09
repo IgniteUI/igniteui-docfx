@@ -213,8 +213,8 @@ export class DropDownRemoteComponent implements OnInit, OnDestroy {
         this.remoteService.getData(initialState, (data) => {
             this.remoteForDir.totalItemCount = data["@odata.count"];
         });
-        // Subscribe to igxForOf.onChunkPreload and load new data from service
-        this.remoteForDir.onChunkPreload.pipe(takeUntil(this.destroy$)).subscribe((data) => {
+        // Subscribe to igxForOf.chunkPreload and load new data from service
+        this.remoteForDir.chunkPreload.pipe(takeUntil(this.destroy$)).subscribe((data) => {
             this.dataLoading(data);
         });
     }
@@ -240,7 +240,7 @@ export class DropDownRemoteComponent implements OnInit, OnDestroy {
     }
 }
 ```
-Inside of the `ngAfterViewInit` hook, we call to get data for the initial state and subscribe to the `igxForOf` directive's [`onChunkPreload`]({environment:angularApiUrl}/classes/igxforofdirective.html#onchunkpreload) emitter. This subscription will be responsible for fetching data everytime the loaded chunk changes. We use `pipe(takeUntil(this.destroy$))` so we can easily unsubscribe from the emitter on component destroy.
+Inside of the `ngAfterViewInit` hook, we call to get data for the initial state and subscribe to the `igxForOf` directive's [`chunkPreload`]({environment:angularApiUrl}/classes/igxforofdirective.html#chunkPreload) emitter. This subscription will be responsible for fetching data everytime the loaded chunk changes. We use `pipe(takeUntil(this.destroy$))` so we can easily unsubscribe from the emitter on component destroy.
 
 ### Remote Virtualization - Demo
 The result of the above configuration is a drop-down that dynamically loads the data in should display, depending on the scrollbar's state. You can view the demo and play around with the configuration below:

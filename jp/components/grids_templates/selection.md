@@ -99,7 +99,7 @@ Ignite UI for Angular @@igComponent コンポーネントは、[行選択](row-s
 @@if (igxName === 'IgxGrid'){
 ## グリッドのコンテキスト メニュー
 
-[`onContextMenu`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncontextmenu) イベントは、カスタム コンテキスト メニューを追加して、**IgxGrid** での作業をアシストします。グリッドの本体を**右クリック**すると、イベントはトリガーされたセルを放出します。**コンテキスト メニュー**は、放出されたセルで動作します。
+[`contextMenu`]({environment:angularApiUrl}/classes/igxgridcomponent.html#contextMenu) イベントは、カスタム コンテキスト メニューを追加して、**IgxGrid** での作業をアシストします。グリッドの本体を**右クリック**すると、イベントはトリガーされたセルを放出します。**コンテキスト メニュー**は、放出されたセルで動作します。
 
 **複数セルの選択**がある場合、選択したセルが複数セルの選択領域にあるかどうかをチェックするロジックを配置します。その場合、選択したセルの値も出力します。
 
@@ -172,8 +172,8 @@ IgxGrid はコピーされたデータを取得し、コンテナ要素に貼り
 <div class="wrapper">
     <div class="grid__wrapper" (window:click)="disableContextMenu()">
         <igx-grid #grid1 [data]="data" [autoGenerate]="false" height="500px" width="100%"
-            (onContextMenu)="rightClick($event)" (onRangeSelection)="getCells($event)"
-            (onSelection)="cellSelection($event)">
+            (contextMenu)="rightClick($event)" (rangeSelected)="getCells($event)"
+            (selected)="cellSelection($event)">
         <!-- Columns area -->
         </igx-grid>
         <div *ngIf="contextmenu==true">

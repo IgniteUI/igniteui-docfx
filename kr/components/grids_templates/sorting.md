@@ -112,7 +112,7 @@ public ngOnInit() {
 
 @@if (igxName === 'IgxGrid') {
 #### 원격 정렬
-[`dataPreLoad`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#datapreload) 및 [`onSortingDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onsortingdone) 출력에 서브스크라이브하여 @@igComponent의 원격 정렬을 제공할 수 있습니다. 사용 방법에 대한 자세한 정보는 `@@igComponent 가상화 및 성능` [문서](virtualization.md#remote-sortingfiltering-virtualization)를 참조하십시오.
+[`dataPreLoad`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#datapreload) 및 [`sortingDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sortingDone) 출력에 서브스크라이브하여 @@igComponent의 원격 정렬을 제공할 수 있습니다. 사용 방법에 대한 자세한 정보는 `@@igComponent 가상화 및 성능` [문서](virtualization.md#remote-sortingfiltering-virtualization)를 참조하십시오.
 
 <div class="divider--half"></div>
 }

@@ -70,7 +70,7 @@ Ignite UI for Angular [`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcom
         // scroll to last added row
         this.grid1.verticalScrollContainer.scrollTo(this.grid1.data.length);
 
-        this.grid1.verticalScrollContainer.onChunkLoad.pipe(take(1)).subscribe(() => {
+        this.grid1.verticalScrollContainer.chunkLoad.pipe(take(1)).subscribe(() => {
             this.clearStyles();
             for (const data of addedData) {
                 const row = this.grid1.getRowByKey(data[pk]);

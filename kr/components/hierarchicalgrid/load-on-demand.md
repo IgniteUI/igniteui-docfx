@@ -159,11 +159,11 @@ export class RemoteLoDService {
 
 템플릿에는 한 가지 부족한 것이 있는데 루트 수준의 계층 그리드와 최종적으로 하위 데이터가 필요합니다. `#hGrid` 참조를 사용할 수 있으므로 나중에 코드에서 서비스로부터 데이터를 얻은 후에 루트 그리드의 데이터를 간단하게 설정할 수 있습니다. 확장된 하위에 대한 데이터 설정 방법은 약간 다릅니다.
 
-처음으로 행이 확장되면 새로운 하위 `IgxHierarchicalGrid`가 렌더링되며 새롭게 생성된 그리드에 대한 참조를 가져와 데이터를 설정해야 합니다. 그래서 각 [`IgxRowIsland`]({environment:angularApiUrl}/classes/igxrowislandcomponent.html) 컴포넌트는 특정 행 아일랜드에 대해 새로운 하위 그리드가 생성될 때 발생하는 [`onGridCreated`]({environment:angularApiUrl}/classes/igxrowislandcomponent.html#ongridcreated)  이벤트를 제공합니다. 이를 사용하여 새로운 그리드에 필요한 참조를 얻고 서비스에서 데이터를 요청하고 적용할 수 있습니다.
+처음으로 행이 확장되면 새로운 하위 `IgxHierarchicalGrid`가 렌더링되며 새롭게 생성된 그리드에 대한 참조를 가져와 데이터를 설정해야 합니다. 그래서 각 [`IgxRowIsland`]({environment:angularApiUrl}/classes/igxrowislandcomponent.html) 컴포넌트는 특정 행 아일랜드에 대해 새로운 하위 그리드가 생성될 때 발생하는 [`gridCreated`]({environment:angularApiUrl}/classes/igxrowislandcomponent.html#gridCreated)  이벤트를 제공합니다. 이를 사용하여 새로운 그리드에 필요한 참조를 얻고 서비스에서 데이터를 요청하고 적용할 수 있습니다.
 
 루트 수준, 행 아일랜드의 키, 상위 행의 기본 키 및 고유 식별자인 경우에만 정보가 필요하도록 서비스를 구축했기 때문에 모든 행 아일랜드에 대해 하나의 메소드를 사용할 수 있습니다. 이 모든 정보는 이벤트 인수에서 직접 액세스하거나 이벤트를 트리거하는 행 아일랜드에서 액세스할 수 있습니다. 
 
-`gridCreated`를 사용하는 메소드의 이름을 지정합니다. [`onGridCreated`]({environment:angularApiUrl}/classes/igxrowislandcomponent.html#ongridcreated) 이벤트는 [`owner`]({environment:angularApiUrl}/interfaces/igridcreatedeventargs.html#owner) 및 새로운 하위 [`grid`]({environment:angularApiUrl}/interfaces/igridcreatedeventargs.html#grid)성으로 행 아일랜드에 대해 참조하는 [`parentID`]({environment:angularApiUrl}/interfaces/igridcreatedeventargs.html#parentid) 속성을 제공하므로 첫 번째 인수로 전달됩니다. 상위 행의 `primaryKey`에 대한 정보는 없지만 바인딩한 행 아일랜드에 따라 두 번째 인수로 간단하게 전달할 수 있습니다. 
+`gridCreated`를 사용하는 메소드의 이름을 지정합니다. [`gridCreated`]({environment:angularApiUrl}/classes/igxrowislandcomponent.html#gridCreated) 이벤트는 [`owner`]({environment:angularApiUrl}/interfaces/igridcreatedeventargs.html#owner) 및 새로운 하위 [`grid`]({environment:angularApiUrl}/interfaces/igridcreatedeventargs.html#grid)성으로 행 아일랜드에 대해 참조하는 [`parentID`]({environment:angularApiUrl}/interfaces/igridcreatedeventargs.html#parentid) 속성을 제공하므로 첫 번째 인수로 전달됩니다. 상위 행의 `primaryKey`에 대한 정보는 없지만 바인딩한 행 아일랜드에 따라 두 번째 인수로 간단하게 전달할 수 있습니다. 
 
 `hierarchical-grid-lod.component.html`템플릿 파일은 다음과 같이 변경됩니다:
 
@@ -175,13 +175,13 @@ export class RemoteLoDService {
     <igx-column field="ContactTitle"></igx-column>
     <igx-column field="Country"></igx-column>
     <igx-column field="Phone"></igx-column>
-    <igx-row-island [key]="'Orders'" [primaryKey]="'OrderID'" [autoGenerate]="false" (onGridCreated)="gridCreated($event, 'CustomerID')">
+    <igx-row-island [key]="'Orders'" [primaryKey]="'OrderID'" [autoGenerate]="false" (gridCreated)="gridCreated($event, 'CustomerID')">
         <igx-column field="OrderID" [hidden]="true"></igx-column>
         <igx-column field="ShipCountry"></igx-column>
         <igx-column field="ShipCity"></igx-column>
         <igx-column field="ShipAddress"></igx-column>
         <igx-column field="OrderDate"></igx-column>
-        <igx-row-island [key]="'Order_Details'" [primaryKey]="'ProductID'" [autoGenerate]="false" (onGridCreated)="gridCreated($event, 'OrderID')">
+        <igx-row-island [key]="'Order_Details'" [primaryKey]="'ProductID'" [autoGenerate]="false" (gridCreated)="gridCreated($event, 'OrderID')">
             <igx-column field="ProductID" [hidden]="true"></igx-column>
             <igx-column field="Quantity"></igx-column>
             <igx-column field="UnitPrice"></igx-column>
