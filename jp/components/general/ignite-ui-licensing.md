@@ -22,28 +22,28 @@ Ignite UI 使用許諾契約と利用規約の詳細については、[ここを
 無料の非営利および再販禁止 (NFR) ライセンスの資格がある場合、またはライセンスに関する質問がある場合は、[お問い合わせ](https://jp.infragistics.com/about-us/contact-us)ください。
 
 ## Ignite UI for Angular npm パッケージ - プライベート npm フィードの使用
-Npm は Node.js ランタイム環境で使用する一般的なデフォルト パッケージ マネージャーです。プロジェクトに依存するパッケージをすばやく簡単に処理できます。npm の使用方法の詳細については、[npm ヘルプ](https://docs.npmjs.com/)を参照してください。
+Npm は Node.js ランタイム環境で使用する一般的なデフォルト パッケージ マネージャーです。広く採用されており、プロジェクトに依存するパッケージをすばやく簡単に処理できます。npm の使用方法の詳細については、[npm ヘルプ](https://docs.npmjs.com/)を参照してください。
 
-Infragistics Ignite UI for Angular は npm パッケージで提供され、[`いくつかの簡単な手順`](cli/step-by-step-guide.md)でプロジェクトの依存関係として追加できます。この方法を選択する場合、npm を構成する必要はありません。このパッケージをインストールすると、製品の [Ignite UI for Angular トライアル版](https://jp.infragistics.com/products/ignite-ui-angular)の使用が開始されます。
+Infragistics Ignite UI for Angular は npm パッケージとして提供され、[`Ignite UI CLI`](./cli/step-by-step-guide-using-cli.md) または [Ignite UI for Angular Schematics](./cli/step-by-step-guide-using-angular-schematics.md) でプロジェクトに依存関係として追加できます。このパッケージをインストールすると、製品の [Ignite UI for Angular トライアル版](https://jp.infragistics.com/products/ignite-ui-angular)の使用が開始されます。
 
 >[!NOTE]
-> トライアル版の使用を開始するとはどういう意味ですか? これは、Web ビューの**ウォーターマーク**部分を含む製品バージョンを使用することを意味し、1 か月など一定期間ライセンス パッケージを使用することを意味します。
+> トライアル版の使用を開始するとはどういう意味ですか? これは、Web ビューの**ウォーターマーク**部分を含む製品バージョンを使用することを意味します。ライセンス パッケージを有効期限が切れる前に一定期間 (たとえば、1 か月間) 使用するという意味ではありません。
 
 Infragistics Ignite UI Dock Manager Web コンポーネントは、別の npm パッケージとして利用できます。インストールすると、製品の [Ignite UI Dock Manager Web コンポーネント トライアル版](https://jp.infragistics.com/products/ignite-ui-angular)の使用が開始されます。
 
 > Ignite UI for Angular npm パッケージの使用方法の詳細については、[このトピック](getting-started.md#ignite-ui-for-angular-のインストール)を参照してください。Ignite UI Dock Manager Web コンポーネントの詳細については、[こちら](../dock-manager.md) を参照してください。
 
 ### Angular Schematics または Ignite UI CLI を使用したパッケージのアップグレード
-Ignite UI for Angular が [`ng add`](./getting-started.md) を使用してプロジェクトに追加された場合、またはプロジェクトが [schematic コレクション](./cli/getting-started-with-angular-schematics.md)または [Ignite UI CLI](./cli/cli-overview.md) を使用して作成された場合、`upgrade-packages` を使用して、ライセンス パッケージを使用するようにアプリを自動的にアップグレードできます。プロジェクト パッケージの依存関係には、`@igniteui/angular-schematics` または `igniteui-cli` が含まれ、どちらも upgrade コマンドをサポートします。
+Ignite UI for Angular が [`ng add`](./getting-started.md) を使用してプロジェクトに追加された場合、またはプロジェクトが [schematic コレクション](./cli/getting-started-with-angular-schematics.md)または [Ignite UI CLI](./cli/getting-started-with-cli.md) を使用して作成された場合、`upgrade-packages` を使用して、ライセンス パッケージを使用するようにアプリを自動的にアップグレードできます。プロジェクト パッケージの依存関係には、`@igniteui/angular-schematics` または `igniteui-cli` が含まれ、どちらも upgrade コマンドをサポートします。
 
 >[!NOTE]
-> パッケージが変更されるため、切り替える前にプロジェクトを更新することをお勧めします。このように、IgniteUI Angular の高いバージョンを使用せず、更新の移行のトラブルを防止します。[アップデート ガイド](./update-guide.md)を参照してください。
+> パッケージが変更されるため、切り替える前にプロジェクトを更新することをお勧めします。このように、Ignite UI Angular の高いバージョンを使用せず、更新の移行のトラブルを防止します。[アップデート ガイド](./update-guide.md)を参照してください。
 
 プロジェクトのセットアップに応じて、プロジェクトで以下の schematic を実行します。
 ```bash
 ng g @igniteui/angular-schematics:upgrade-packages
 ```
-または `igniteui-cli` を使用する場合:
+または `igniteui-cli` を使用します:
 
 ```bash
 ig upgrade-packages
@@ -216,7 +216,7 @@ before_install:
 - echo "//packages.infragistics.com/npm/js-licensed/:always-auth=true" >> ~/.npmrc
 ```
 
-環境変数を定義する方法は、含まれる情報のタイプによって異なるため、[2つ のオプションがあります](https://docs.travis-ci.com/user/environment-variables/)。
+環境変数を定義する最良の方法は、含まれる情報のタイプによって異なるため、[2 つのオプションがあります](https://docs.travis-ci.com/user/environment-variables/)。
 
 * 暗号化して [.travis.yml](https://docs.travis-ci.com/user/environment-variables/#defining-encrypted-variables-in-travisyml) に追加します。
 * [リポジトリ設定](https://docs.travis-ci.com/user/environment-variables/#defining-variables-in-repository-settings)に追加します。

@@ -142,4 +142,5 @@ npm run build:ssr && npm run serve:ssr
 * [Ignite UI スターターキット (英語)](https://github.com/IgniteUI/ng-universal-example)
 * [サーバー側レンダリング用語](https://developers.google.com/web/updates/2019/02/rendering-on-the-web)
 * [Ignite UI で作業を開始](getting-started.md)
-* [Ignite UI CLI ガイド](cli/step-by-step-guide.md)
+* [Ignite UI CLI ガイド](cli/step-by-step-guide-using-cli.md)
+* [Ignite UI for Angular Schematics](cli/step-by-step-guide-using-angular-schematics.md)

@@ -14,9 +14,9 @@ _keywords: データ集計, 選択, ignite ui for angular, インフラジステ
 集計では、列のデータ タイプとニーズに応じて、[`IgxSummaryOperand`]({environment:angularApiUrl}/classes/igxsummaryoperand.html)、[`IgxNumberSummaryOperand`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html)、[`IgxDateSummaryOperand`]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html) のいずれかの基本クラスを拡張することにより、基本的な集計機能をカスタマイズできます。  
 
 ## 選択
-選択したグリッド範囲のデータの操作を開始するには、グリッド選択の変更を通知するイベントにサブスクライブする必要があります。これは、[`onSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onrangeselection) と [`onRangeSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onselection) イベントにサブスクライブすることで実行できます。選択機能では、単一のセル選択とセル範囲の選択が区別されるため、両方にバインドする必要があります。     
+選択したグリッド範囲のデータの操作を開始するには、グリッド選択の変更を通知するイベントにサブスクライブする必要があります。これは、[`selected`]({environment:angularApiUrl}/classes/igxgridcomponent.html#selected) と [`rangeSelected`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rangeSelected) イベントにサブスクライブすることで実行できます。選択機能では、単一のセル選択とセル範囲の選択が区別されるため、両方にバインドする必要があります。     
 
-イベント サブスクリプション ロジックでは、グリッドの [`getSelectedData`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onrangeselection) 関数を使用して選択したデータを抽出し、選択したデータをカスタム集計オペランドに渡すことができます。
+イベント サブスクリプション ロジックでは、グリッドの [`getSelectedData`]({environment:angularApiUrl}/classes/igxgridcomponent.html#getSelectedData) 関数を使用して選択したデータを抽出し、選択したデータをカスタム集計オペランドに渡すことができます。
 
 
 ## まとめ

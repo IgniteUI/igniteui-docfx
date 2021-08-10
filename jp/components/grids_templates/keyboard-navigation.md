@@ -139,7 +139,7 @@ _language: ja
 
 | API | 説明 | 引数 |
 |---------|-------------|-----------|
-| [`onGridKeydown`]({environment:angularApiUrl}/classes/igxgridcomponent.html#ongridkeydown) | 上記のキー押下やキー押下の組み合わせのいずれかが実行されたときに発生されるイベント。キャンセルできます。その他のキーの押下/組み合わせには、デフォルトの `onkeydown`イベントを使用します。 | [IGridKeydownEventArgs]({environment:angularApiUrl}/interfaces/igridkeydowneventargs.html) |
+| [`gridKeydown`]({environment:angularApiUrl}/classes/igxgridcomponent.html#gridKeydown) | 上記のキー押下やキー押下の組み合わせのいずれかが実行されたときに発生されるイベント。キャンセルできます。その他のキーの押下/組み合わせには、デフォルトの `onkeydown`イベントを使用します。 | [IGridKeydownEventArgs]({environment:angularApiUrl}/interfaces/igridkeydowneventargs.html) |
 | [`activeNodeChange`]({environment:angularApiUrl}/classes/igxgridcomponent.html#activenodechange) | アクティブ ノードが変更されたときに発生するイベント。これを使用して、アクティブ フォーカス位置 (ヘッダー、tbody など)、列インデックス、行インデックス、またはネストされたレベルを決定できます。| [IActiveNodeChangeEventArgs]({environment:angularApiUrl}/interfaces/iactivenodechangeeventargs.html) |
 | [`navigateTo`]({environment:angularApiUrl}/classes/igxgridcomponent.html#navigateto) | 提供された `rowindex` と `visibleColumnIndex` に基づいてグリッド内の位置に移動します。`{ targetType: GridKeydownTargetType, target: Object }` タイプのパラメーターを受け入れるコールバック関数を通してターゲット要素上でカスタム ロジックを実行することもできます。使用方法: <br />*grid.navigateTo(10, 3, (args) => { args.target.nativeElement.focus(); });* | `rowindex`: number, `visibleColumnIndex`: number, `callback`: (`{ targetType: GridKeydownTargetType, target: Object }`) => {} |
 | [`getNextCell`]({environment:angularApiUrl}/classes/igxgridcomponent.html#getnextcell)| `rowIndex` と `visibileColumnIndex` で次のセルを定義する [`ICellPosition`]({environment:angularApiUrl}/interfaces/icellposition.html) オブジェクトを返します。コールバック関数は、[`getNextCell`]({environment:angularApiUrl}/classes/igxgridcomponent.html#getnextcell) メソッドの 3 番目のパラメーターとして渡すことができます。コールバック関数は、パラメーターとして `IgxColumnComponent` を受け取り、指定された条件が満たされた場合に `boolean` 値を返します: <br />*const nextEditableCell = grid.getNextCell(0, 4, (col) => col.editable);* | `currentRowIndex`: number, `currentVisibleColumnIndex`: number, `callback`: (`IgxColumnComponent`) => boolean |
@@ -150,29 +150,29 @@ _language: ja
 >[`getNextCell`]({environment:angularApiUrl}/classes/igxgridcomponent.html#getnextcell) および [`getPreviousCell`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#getpreviouscell) は現在のレベルで使用し、上位または下位レベルのセルにアクセスできません。
 }
 
-API を使用して、ユーザー入力の検証やカスタム ナビゲーションなどの一般的なシナリオを実現する方法を示します。最初に、[`onGridKeydown`]({environment:angularApiUrl}/classes/igxgridcomponent.html#ongridkeydown) イベントのイベント ハンドラーを登録する必要があります。
+API を使用して、ユーザー入力の検証やカスタム ナビゲーションなどの一般的なシナリオを実現する方法を示します。最初に、[`gridKeydown`]({environment:angularApiUrl}/classes/igxgridcomponent.html#gridKeydown) イベントのイベント ハンドラーを登録する必要があります。
 
 @@if (igxName === 'IgxGrid') {
 ```html
-<igx-grid #grid1 [data]="data" [primaryKey]="'ProductID'" (onGridKeydown)="customKeydown($event)">
+<igx-grid #grid1 [data]="data" [primaryKey]="'ProductID'" (gridKeydown)="customKeydown($event)">
 ```
 }
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 
 ```html
-<igx-hierarchical-grid #grid1 [data]="data" (onGridKeydown)="customKeydown($event, grid1)">
-    <igx-row-island [key]="'Albums'" (onGridCreated)="childGridCreated($event)">
+<igx-hierarchical-grid #grid1 [data]="data" (gridKeydown)="customKeydown($event, grid1)">
+    <igx-row-island [key]="'Albums'" (gridCreated)="childGridCreated($event)">
     </igx-row-island>
 </igx-hierarchical-grid>
 ```
 
-igxHierarchicalGrid子グリッドにカスタムキーボードナビゲーションを追加するには、各子グリッドを [`onGridKeydown`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#ongridkeydown) イベントにサブスクライブする必要があります。そのため、上記の例で[`onGridCreated`]({environment:angularApiUrl}/classes/igxrowislandcomponent.html#ongridcreated) イベントのイベント ハンドラーを登録しました。
+igxHierarchicalGrid子グリッドにカスタムキーボードナビゲーションを追加するには、各子グリッドを [`gridKeydown`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#gridKeydown) イベントにサブスクライブする必要があります。そのため、上記の例で[`gridCreated`]({environment:angularApiUrl}/classes/igxrowislandcomponent.html#gridCreated) イベントのイベント ハンドラーを登録しました。
 
 ```typescript
 public childGridCreated(event: IGridCreatedEventArgs) {
     const grid = event.grid;
-    event.grid.onGridKeydown.subscribe((args) => {
+    event.grid.gridKeydown.subscribe((args) => {
         this.customKeydown(args, grid);
     });
 }
@@ -182,7 +182,7 @@ public childGridCreated(event: IGridCreatedEventArgs) {
 
 @@if (igxName === 'IgxTreeGrid') {
 ```html
-<igx-tree-grid #grid1 [data]="data" (onGridKeydown)="customKeydown($event)">
+<igx-tree-grid #grid1 [data]="data" (gridKeydown)="customKeydown($event)">
 </igx-tree-grid>
 ```
 }

@@ -37,7 +37,7 @@ In Ignite UI for Angular @@igComponent, data sorting is enabled on a per-column 
 
 }
 @@if (igxName === 'IgxTreeGrid') {
-Additionally there is a custom contextmenu added for sorting using **@@igSelector**'s [`onContextMenu`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncontextmenu) Output.
+Additionally there is a custom contextmenu added for sorting using **@@igSelector**'s [`contextMenu`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#contextMenu) Output.
 
 
 <code-view style="height:550px" 
@@ -47,7 +47,7 @@ Additionally there is a custom contextmenu added for sorting using **@@igSelecto
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-Additionally there is a custom contextmenu added for sorting using **@@igSelector**'s [`onContextMenu`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncontextmenu) Output.
+Additionally there is a custom contextmenu added for sorting using **@@igSelector**'s [`contextMenu`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#contextMenu) Output.
 
 
 <code-view style="height:510px" 

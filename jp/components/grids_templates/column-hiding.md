@@ -236,7 +236,7 @@ Ignite UI for Angular @@igComponent は、[`IgxColumnHidingDirective`]({environm
 ```
 }
 
-列非表示 UI の [`columnsAreaMaxHeight`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html#columnsareamaxheight) プロパティを使用すると、列を含む領域の最大の高さを設定できます。列が多すぎてコンテナにすべて収まらない場合にスクロールバーが表示されるため、スクロールバーを使用して任意の列に移動できます。検索入力は上にピン固定されて、[すべて表示]/[すべて非表示] ボタンが下にピン固定されます。
+列非表示 UI の [`columnsAreaMaxHeight`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html#columnsareamaxheight) プロパティを使用すると、列を含む領域の最大の高さを設定できます。列が多すぎてコンテナにすべて収まらない場合にスクロールバーが表示されるため、スクロールバーを使用して任意の列に移動できます。検索入力は上にピン固定されて、[すべて表示]/[すべて非表示] ボタンが下にピン固定されます。
 
 ```typescript
 // columnHiding.component.ts
@@ -660,7 +660,7 @@ $custom-button: igx-button-theme(
 * [toggleColumnHidingUI]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html#togglecolumnhidingui)
 
 [`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) イベント:
-* [onColumnVisibilityChanged]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncolumnvisibilitychanged)
+* [columnVisibilityChanged]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnVisibilityChanged)
 
 [IgxRadioComponent]({environment:angularApiUrl}/classes/igxradiocomponent.html)
 

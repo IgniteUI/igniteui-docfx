@@ -159,11 +159,11 @@ First we will define our hierarchical grid template with the levels of hierarchy
 
 There is one thing missing in our template though, and that is the data for our root level hierarchical grid, and eventually its children. We will easily set the data of the root grid after getting its data from the service in our code later, since we can use the `#hGrid` reference. Setting the data for any child that has been expanded is a bit different.
 
-When a row is expanded for the first time, a new child `IgxHierarchicalGrid` is rendered for it and we need to get the reference for the newly created grid to set its data. That is why each [`IgxRowIsland`]({environment:angularApiUrl}/classes/igxrowislandcomponent.html) component provides the [`onGridCreated`]({environment:angularApiUrl}/classes/igxrowislandcomponent.html#ongridcreated)  event that is fired when a new child grid is created for that specific row island. We can use that to get the reference we need for the new grid, request its data from the service, and apply it.
+When a row is expanded for the first time, a new child `IgxHierarchicalGrid` is rendered for it and we need to get the reference for the newly created grid to set its data. That is why each [`IgxRowIsland`]({environment:angularApiUrl}/classes/igxrowislandcomponent.html) component provides the [`gridCreated`]({environment:angularApiUrl}/classes/igxrowislandcomponent.html#gridCreated)  event that is fired when a new child grid is created for that specific row island. We can use that to get the reference we need for the new grid, request its data from the service, and apply it.
 
 We can use one method for all row islands since we built our service so that it needs only information if it is the root level, the key of the row island, the primary key of the parent row, and its unique identifier. All this information can be accessed either directly from the event arguments, or from the row island responsible for triggering the event. 
 
-Let's name the method that we will use `gridCreated`. Since the event [`onGridCreated`]({environment:angularApiUrl}/classes/igxrowislandcomponent.html#ongridcreated) provides the [`parentID`]({environment:angularApiUrl}/interfaces/igridcreatedeventargs.html#parentid) property, a reference to the row island as [`owner`]({environment:angularApiUrl}/interfaces/igridcreatedeventargs.html#owner) and the new child [`grid`]({environment:angularApiUrl}/interfaces/igridcreatedeventargs.html#grid) property, it will be passed as the first argument. We are only missing information about the parent row's `primaryKey`, but we can easily pass that as a second argument, depending on which row island we bind. 
+Let's name the method that we will use `gridCreated`. Since the event [`gridCreated`]({environment:angularApiUrl}/classes/igxrowislandcomponent.html#gridCreated) provides the [`parentID`]({environment:angularApiUrl}/interfaces/igridcreatedeventargs.html#parentid) property, a reference to the row island as [`owner`]({environment:angularApiUrl}/interfaces/igridcreatedeventargs.html#owner) and the new child [`grid`]({environment:angularApiUrl}/interfaces/igridcreatedeventargs.html#grid) property, it will be passed as the first argument. We are only missing information about the parent row's `primaryKey`, but we can easily pass that as a second argument, depending on which row island we bind. 
 
 The template file `hierarchical-grid-lod.component.html`, with these changes added, would look like this:
 
@@ -175,13 +175,13 @@ The template file `hierarchical-grid-lod.component.html`, with these changes add
     <igx-column field="ContactTitle"></igx-column>
     <igx-column field="Country"></igx-column>
     <igx-column field="Phone"></igx-column>
-    <igx-row-island [key]="'Orders'" [primaryKey]="'OrderID'" [autoGenerate]="false" (onGridCreated)="gridCreated($event, 'CustomerID')">
+    <igx-row-island [key]="'Orders'" [primaryKey]="'OrderID'" [autoGenerate]="false" (gridCreated)="gridCreated($event, 'CustomerID')">
         <igx-column field="OrderID" [hidden]="true"></igx-column>
         <igx-column field="ShipCountry"></igx-column>
         <igx-column field="ShipCity"></igx-column>
         <igx-column field="ShipAddress"></igx-column>
         <igx-column field="OrderDate"></igx-column>
-        <igx-row-island [key]="'Order_Details'" [primaryKey]="'ProductID'" [autoGenerate]="false" (onGridCreated)="gridCreated($event, 'OrderID')">
+        <igx-row-island [key]="'Order_Details'" [primaryKey]="'ProductID'" [autoGenerate]="false" (gridCreated)="gridCreated($event, 'OrderID')">
             <igx-column field="ProductID" [hidden]="true"></igx-column>
             <igx-column field="Quantity"></igx-column>
             <igx-column field="UnitPrice"></igx-column>
