@@ -117,19 +117,19 @@ Great, we should now have a calendar with customized dates display that also cha
 
 #### Events
 Let's explore the events emitted by the calendar:
-- [`onSelection`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#onselection) - emitted when selecting date(s) in the calendar.
+- [`selected`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#selected) - emitted when selecting date(s) in the calendar.
 - [`viewDateChanged`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#viewdatechanged) - emitted every time when the presented month/year is changed - for example after navigating to the `next` or `previous` month.
 - [`activeViewChanged`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#activeviewchanged) - emitted after the active view is changed - for example after the user has clicked on the `month` or `year` section in the header.
 
 ```html
 <!-- app.component.html -->
 <igx-calendar #calendar 
-    (onSelection)="onSelection($event)"
+    (selected)="onSelection($event)"
     (viewDateChanged)="viewDateChanged($event)"
     (activeViewChanged)="activeViewChanged($event)">
 </igx-calendar>
 ```
-The [`onSelection`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#onselection) event is suitable to build input validation logic. Use the code from below to alert the user if selection exceeds 5 days, and then reset the selection:
+The [`selected`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#selected) event is suitable to build input validation logic. Use the code from below to alert the user if selection exceeds 5 days, and then reset the selection:
 
 ```typescript
 // app.component.ts
@@ -318,7 +318,7 @@ export class CalendarSample7Component {
     <span>Request Time Off</span>
     <igx-calendar #calendar
         selection="multi"
-        (onSelection)="selectPTOdays($event)">
+        (selected)="selectPTOdays($event)">
     </igx-calendar>
     <button igxButton="raised" (click)="submitPTOdays($event)">Submit Request</button>
 </article>

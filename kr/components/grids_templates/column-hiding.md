@@ -465,7 +465,7 @@ export class AppModule {}
 * [toggleColumnHidingUI]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html#togglecolumnhidingui)
 
 [`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) 이벤트:
-* [onColumnVisibilityChanged]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncolumnvisibilitychanged)
+* [columnVisibilityChanged]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnVisibilityChanged)
 
 [IgxRadioComponent]({environment:angularApiUrl}/classes/igxradiocomponent.html)
 

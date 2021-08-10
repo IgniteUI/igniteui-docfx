@@ -70,11 +70,11 @@ _language: kr
 <igx-column [field]="'Artist'" [resizable]="true"></igx-column>
 ```
 }
-[`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html)의 [`onColumnResized`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncolumnresized) 이벤트를 처리하고 열의 크기를 조정할 때 일부 사용자 논리를 구현할 수 있습니다. [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) 객체뿐 아니라 이전 및 새로운 열 너비는 이벤트 인수를 통해 공개됩니다.
+[`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html)의 [`columnResized`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnResized) 이벤트를 처리하고 열의 크기를 조정할 때 일부 사용자 논리를 구현할 수 있습니다. [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) 객체뿐 아니라 이전 및 새로운 열 너비는 이벤트 인수를 통해 공개됩니다.
 
 @@if (igxName === 'IgxGrid') {
 ```html
-<igx-grid [data]="data" (onColumnResized)="onResize($event)" [autoGenerate]="false">
+<igx-grid [data]="data" (columnResized)="onResize($event)" [autoGenerate]="false">
     <igx-column [field]="'ID'" width="100px" [resizable]="true"></igx-column>
     <igx-column [field]="'CompanyName'" width="100px" [resizable]="true"></igx-column>
 </igx-grid>
@@ -90,7 +90,7 @@ public onResize(event) {
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```html
-<igx-tree-grid [data]="data" primaryKey="ID" foreignKey="ParentID" (onColumnResized)="onResize($event)" [autoGenerate]="false">
+<igx-tree-grid [data]="data" primaryKey="ID" foreignKey="ParentID" (columnResized)="onResize($event)" [autoGenerate]="false">
     <igx-column [field]="'Title'" [resizable]="true" [width]="'100px'"></igx-column>
     <igx-column [field]="'HireDate'" [resizable]="true" [width]="'100px'"></igx-column>
 </igx-tree-grid>
@@ -106,7 +106,7 @@ public onResize(event) {
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-  <igx-hierarchical-grid class="hgrid" [data]="localdata" (onColumnResized)="onResize($event)" [autoGenerate]="false"
+  <igx-hierarchical-grid class="hgrid" [data]="localdata" (columnResized)="onResize($event)" [autoGenerate]="false"
         [height]="'600px'" [width]="'100%'" #hierarchicalGrid>
         <igx-column field="Artist" [resizable]="true"></igx-column>
         ...
@@ -129,7 +129,7 @@ This means that the following configuration is possible:
 
 @@if (igxName === 'IgxGrid') {
 ```html
-<igx-grid [data]="data" (onColumnResized)="onResize($event)" [autoGenerate]="false">
+<igx-grid [data]="data" (columnResized)="onResize($event)" [autoGenerate]="false">
     <igx-column [field]="'ID'" width="10%" [resizable]="true"></igx-column>
     <igx-column [field]="'CompanyName'" width="100px" [resizable]="true"></igx-column>
     <igx-column [field]="'ContactTitle'" [resizable]="true"></igx-column>
@@ -138,7 +138,7 @@ This means that the following configuration is possible:
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```html
-<igx-tree-grid [data]="data" primaryKey="ID" foreignKey="ParentID" (onColumnResized)="onResize($event)" [autoGenerate]="false">
+<igx-tree-grid [data]="data" primaryKey="ID" foreignKey="ParentID" (columnResized)="onResize($event)" [autoGenerate]="false">
     <igx-column [field]="'Title'" [resizable]="true" [width]="'10%'"></igx-column>
     <igx-column [field]="'HireDate'" [resizable]="true" [width]="'100px'"></igx-column>
     <igx-column [field]="'Age'" dataType="number" [resizable]="true"></igx-column>
@@ -147,7 +147,7 @@ This means that the following configuration is possible:
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-  <igx-hierarchical-grid class="hgrid" [data]="localdata" (onColumnResized)="onResize($event)" [autoGenerate]="false"
+  <igx-hierarchical-grid class="hgrid" [data]="localdata" (columnResized)="onResize($event)" [autoGenerate]="false"
         [height]="'600px'" [width]="'100%'" #hierarchicalGrid>
         <igx-column field="Artist" [resizable]="true" [width]="'10%'"></igx-column>
         <igx-column field="GrammyNominations" [resizable]="true" [width]="'100px'"></igx-column>

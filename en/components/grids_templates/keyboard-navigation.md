@@ -138,7 +138,7 @@ Overriding the default behavior for a certain key or keys combination is one of 
 
 | API | Description | Arguments |
 |---------|-------------|-----------|
-| [`onGridKeydown`]({environment:angularApiUrl}/classes/igxgridcomponent.html#ongridkeydown) | An event that is emitted when any of key press/combinations described above is performed. Can be canceled. For any other key press/combination, use the default `onkeydown` event. | [IGridKeydownEventArgs]({environment:angularApiUrl}/interfaces/igridkeydowneventargs.html) |
+| [`gridKeydown`]({environment:angularApiUrl}/classes/igxgridcomponent.html#gridKeydown) | An event that is emitted when any of key press/combinations described above is performed. Can be canceled. For any other key press/combination, use the default `onkeydown` event. | [IGridKeydownEventArgs]({environment:angularApiUrl}/interfaces/igridkeydowneventargs.html) |
 | [`activeNodeChange`]({environment:angularApiUrl}/classes/igxgridcomponent.html#activenodechange) | An event that is emitted when the active node is changed. You can use it to determine the Active focus position (header, tbody etc.), column index, row index or nested level. | [IActiveNodeChangeEventArgs]({environment:angularApiUrl}/interfaces/iactivenodechangeeventargs.html) |
 | [`navigateTo`]({environment:angularApiUrl}/classes/igxgridcomponent.html#navigateto) | Navigates to a position in the grid, based on provided `rowindex` and `visibleColumnIndex`. It can also execute a custom logic over the target element, through a callback function that accepts param of type `{ targetType: GridKeydownTargetType, target: Object }` . Usage: <br />*grid.navigateTo(10, 3, (args) => { args.target.nativeElement.focus(); });* | `rowindex`: number, `visibleColumnIndex`: number, `callback`: (`{ targetType: GridKeydownTargetType, target: Object }`) => {} |
 | [`getNextCell`]({environment:angularApiUrl}/classes/igxgridcomponent.html#getnextcell)| returns [`ICellPosition`]({environment:angularApiUrl}/interfaces/icellposition.html) object, which defines the next cell by `rowIndex` and `visibileColumnIndex`. A callback function can be passed as a third parameter of [`getNextCell`]({environment:angularApiUrl}/classes/igxgridcomponent.html#getnextcell) method. The callback function accepts `IgxColumnComponent` as a param and returns a `boolean` value indication if a given criteria is met: <br />*const nextEditableCell = grid.getNextCell(0, 4, (col) => col.editable);* | `currentRowIndex`: number, `currentVisibleColumnIndex`: number, `callback`: (`IgxColumnComponent`) => boolean |
@@ -150,29 +150,29 @@ Overriding the default behavior for a certain key or keys combination is one of 
 > availabe for the current level and cannot access cells from upper or lower level.
 }
 
-Let's try the API to demonstrate how to achieve common scenarios like user input validation and custom navigation. First we need to register an event handler for the [`onGridKeydown`]({environment:angularApiUrl}/classes/igxgridcomponent.html#ongridkeydown) event:
+Let's try the API to demonstrate how to achieve common scenarios like user input validation and custom navigation. First we need to register an event handler for the [`gridKeydown`]({environment:angularApiUrl}/classes/igxgridcomponent.html#gridKeydown) event:
 
 @@if (igxName === 'IgxGrid') {
 ```html
-<igx-grid #grid1 [data]="data" [primaryKey]="'ProductID'" (onGridKeydown)="customKeydown($event)">
+<igx-grid #grid1 [data]="data" [primaryKey]="'ProductID'" (gridKeydown)="customKeydown($event)">
 ```
 }
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 
 ```html
-<igx-hierarchical-grid #grid1 [data]="data" (onGridKeydown)="customKeydown($event, grid1)">
-    <igx-row-island [key]="'Albums'" (onGridCreated)="childGridCreated($event)">
+<igx-hierarchical-grid #grid1 [data]="data" (gridKeydown)="customKeydown($event, grid1)">
+    <igx-row-island [key]="'Albums'" (gridCreated)="childGridCreated($event)">
     </igx-row-island>
 </igx-hierarchical-grid>
 ```
 
-In order to add custom keyboard navigation to igxHierarchicalGrid child grids too, each child grid should subscribe to [`onGridKeydown`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#ongridkeydown) event. That's why in example above we have registered and event handler for for the [`onGridCreated`]({environment:angularApiUrl}/classes/igxrowislandcomponent.html#ongridcreated) event:
+In order to add custom keyboard navigation to igxHierarchicalGrid child grids too, each child grid should subscribe to [`gridKeydown`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#gridKeydown) event. That's why in example above we have registered and event handler for for the [`gridCreated`]({environment:angularApiUrl}/classes/igxrowislandcomponent.html#gridCreated) event:
 
 ```typescript
 public childGridCreated(event: IGridCreatedEventArgs) {
     const grid = event.grid;
-    event.grid.onGridKeydown.subscribe((args) => {
+    event.grid.gridKeydown.subscribe((args) => {
         this.customKeydown(args, grid);
     });
 }
@@ -182,7 +182,7 @@ public childGridCreated(event: IGridCreatedEventArgs) {
 
 @@if (igxName === 'IgxTreeGrid') {
 ```html
-<igx-tree-grid #grid1 [data]="data" (onGridKeydown)="customKeydown($event)">
+<igx-tree-grid #grid1 [data]="data" (gridKeydown)="customKeydown($event)">
 </igx-tree-grid>
 ```
 }

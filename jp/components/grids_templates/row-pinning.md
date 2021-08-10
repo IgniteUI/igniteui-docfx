@@ -144,11 +144,11 @@ this.hierarchicalGrid.unpinRow("ALFKI");
 
 注: 行の ID は、グリッドの [`primaryKey`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primarykey) またはレコード インスタンス自体によって定義される主キー値です。両方のメソッドは操作に成功したかどうかを示すブール値を返します。よくある失敗の原因に行がすでにその状態になっていることがあります。
 
-行は、最後にピンされた行の下にピン固定されます。ピン固定行の順序を変更するには、[`onRowPinning`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowpinning) イベントにサブスクライブして [`insertAtIndex`]({environment:angularApiUrl}/interfaces/ipinroweventargs.html#insertatindex) プロパティを適切な位置インデックスに変更します。
+行は、最後にピンされた行の下にピン固定されます。ピン固定行の順序を変更するには、[`rowPinning`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowPinning) イベントにサブスクライブして [`insertAtIndex`]({environment:angularApiUrl}/interfaces/ipinroweventargs.html#insertatindex) プロパティを適切な位置インデックスに変更します。
 
 @@if (igxName === 'IgxGrid') {
 ```html
-<igx-grid #grid1 [data]="data" [autoGenerate]="true" (onRowPinning)="rowPinning($event)">
+<igx-grid #grid1 [data]="data" [autoGenerate]="true" (rowPinning)="rowPinning($event)">
 </igx-grid>
 ```
 
@@ -160,7 +160,7 @@ public rowPinning(event) {
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```html
-<igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="true" (onRowPinning)="rowPinning($event)">
+<igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="true" (rowPinning)="rowPinning($event)">
 </igx-tree-grid>
 ```
 
@@ -172,7 +172,7 @@ public rowPinning(event) {
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="true" (onRowPinning)="rowPinning($event)">
+<igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="true" (rowPinning)="rowPinning($event)">
 </igx-hierarchical-grid>
 ```
 

@@ -47,7 +47,7 @@ To start using Ignite UI for Angular components without the Ignite UI CLI, make 
 Once you finish with the development environment setup, you can continue adding and configuring other Ignite UI components. Here’s how to use [our schematics](https://www.infragistics.com/products/ignite-ui-angular/angular/components/general/cli-overview.html#add-template "Ignite UI CLI Overview page") to add a grid with basic configuration and add templates to some of our columns. 
 
 ```html
-<igx-grid #grid1 [data]="localData" height="600px" (onSelection)="cellSelection($event)">
+<igx-grid #grid1 [data]="localData" height="600px" (selected)="cellSelection($event)">
     <igx-column header="Rank" headerClasses="myClass" width="115px" field="Id" sortable="true" [filterable]="false"></igx-column>
     <igx-column field="Name" header="Athlete" width="280"></igx-column>
     <igx-column field="Speed" header="Speed" [width]="'190px'" [filterable]="false"></igx-column>
@@ -180,7 +180,7 @@ Setting a data source on the chart component will apply to all series, but you c
 Angular data grids support easy sorting, filtering, and pagination. With rich APIs and an intuitive feature set-up, using Ignite UI for Angular components has never been easier. 
 
 ```html
-<igx-grid #grid1 (onSortingDone)="removeSorting($event)"
+<igx-grid #grid1 (sortingDone)="removeSorting($event)"
         [data]="data"
         [allowFiltering]="true">   
     <igx-column field="OrderID" header="Order ID">

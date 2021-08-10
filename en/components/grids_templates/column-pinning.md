@@ -58,8 +58,8 @@ Column pinning is controlled through the `pinned` input of the [`igx-column`]({e
 
 @@if (igxName === 'IgxGrid') {
 ```html
-<igx-grid #grid1 [data]="data | async" [width]="700px" [autoGenerate]="false" (onColumnInit)="initColumns($event)"
-    (onSelection)="selectCell($event)">
+<igx-grid #grid1 [data]="data | async" [width]="700px" [autoGenerate]="false" (columnInit)="initColumns($event)"
+    (selected)="selectCell($event)">
     <igx-column [field]="Name" [pinned]="true"></igx-column>
     <igx-column [field]="AthleteNumber"></igx-column>
     <igx-column [field]="TrackProgress"></igx-column>
@@ -111,11 +111,11 @@ this.hierarchicalGrid.unpinColumn("Debut");
 
 Both methods return a boolean value indicating whether their respective operation is successful or not. Usually the reason they fail is that the column is already in the desired state.
 
-A column is pinned to the right of the rightmost pinned column. Changing the order of the pinned columns can be done by subscribing to the [`onColumnPinning`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncolumnpinning) event and changing the [`insertAtIndex`]({environment:angularApiUrl}/interfaces/ipincolumneventargs.html#insertatindex) property of the event arguments to the desired position index.
+A column is pinned to the right of the rightmost pinned column. Changing the order of the pinned columns can be done by subscribing to the [`columnPin`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnPin) event and changing the [`insertAtIndex`]({environment:angularApiUrl}/interfaces/ipincolumneventargs.html#insertatindex) property of the event arguments to the desired position index.
 
 @@if (igxName === 'IgxGrid') {
 ```html
-<igx-grid #grid1 [data]="data | async" [autoGenerate]="true" (onColumnPinning)="columnPinning($event)"></igx-grid>
+<igx-grid #grid1 [data]="data | async" [autoGenerate]="true" (columnPin)="columnPinning($event)"></igx-grid>
 ```
 
 ```typescript
@@ -128,7 +128,7 @@ public columnPinning(event) {
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```html
-<igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="true" (onColumnPinning)="columnPinning($event)"></igx-tree-grid>
+<igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="true" (columnPin)="columnPinning($event)"></igx-tree-grid>
 ```
 
 ```typescript
@@ -143,7 +143,7 @@ public columnPinning(event) {
 ```html
 <igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="false"
         [height]="'600px'" [width]="'800px'" 
-        (onColumnPinning)="columnPinning($event)" #hierarchicalGrid>
+        (columnPin)="columnPinning($event)" #hierarchicalGrid>
 </igx-hierarchical-grid> 
 ```
 
