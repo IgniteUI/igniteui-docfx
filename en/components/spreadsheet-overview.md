@@ -26,7 +26,7 @@ The Angular Spreadsheet  (Excel viewer) component is lightweight, feature-rich a
 
 Just like in Excel spreadsheet, you can apply filtering functionality, sorting, move cells, customization in terms of cells color, keyboard shortcuts, and add the ability to even calculate formulas.
 
-Why using Ignite UI for React spreadsheet? 
+## Spreadsheet Usage
 
 -   Performance 
 
