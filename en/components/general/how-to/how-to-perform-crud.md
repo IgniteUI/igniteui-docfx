@@ -148,7 +148,7 @@ The rich Grid API allows you to customize the editing process in almost any way,
     - cancel further processing, based on business rules
     - manual commiting of the cnages
 
-### Events
+## Events
 The grid exposes a wide array of events that provide greater control over the editing experience. These events are fired during the [**Row Editing**](row-editing.md) and [**Cell Editing**](cell-editing.md) lifecycle - when starting, committing or canceling the editing action.
 
  | Event | Description | Arguments | Cancellable |
