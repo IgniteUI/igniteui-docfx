@@ -239,9 +239,9 @@ igxCombo を開いてリスト項目にフォーカスがある場合:
 
 - `Esc` キーはリストを閉じます。
 
-igxCombo を開くと、カスタム値が有効になり、項目の追加ボタンがフォーカスされます。
+igxCombo を開くと、[`allowCustomValues`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#allowcustomvalues) が有効になり、項目の追加ボタンがフォーカスされます。
 
-- `Enter` キーは、検索入力のテキストと等しい valueKey と displayKey を持つ新しい項目を追加し、その項目を選択します。
+- `Enter` キーは、検索入力のテキストと等しい `valueKey` と `displayKey` を持つ新しい項目を追加し、その項目を選択します。
 
 - `上矢印` - フォーカスは最後のリスト項目に戻るか、あるいはリストが空の場合、検索入力に移動します。
 
