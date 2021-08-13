@@ -20,9 +20,12 @@ If you are building a **non-commercial** product, [contact us](https://www.infra
 
 ## Using the Private npm feed
 
+This will allow you to seamlessly use a mix of packages from the public npm registry and the Infragistics private registry. You will be asked to provide the username and the password that you use for logging into your Infragistics account. You should also provide the email that is registered to your Infragistics profile.
+
+
 Npm is the most popular package manager and is also the default one for the runtime environment Node.js. It is highly adopted and is one of the fastest and easiest ways to manage the packages that you depend on in your project. For more information on how npm works, read the official [npm documentation](https://docs.npmjs.com/).
 
-Infragistics Ignite UI for Angular is available as npm packages and you can add them as dependencies to your project in a [few easy steps](./general-getting-started.md). Choosing this approach will not require configuring npm. By installing this package you will start using the **Ignite UI for Angular Trial version** of the product.
+Infragistics Ignite UI for Angular is available as npm packages and you can add them as dependencies to your project in a [few easy steps](treegrid/groupby.md). Choosing this approach will not require configuring npm. By installing this package you will start using the **Ignite UI for Angular Trial version** of the product.
 
 > [!NOTE]
 > Currently only the [igniteui-dockmanager](https://www.npmjs.com/package/igniteui-dockmanager) npm package has a trial watermark, but in the future we will add it to the other Ignite UI for Angular packages as well.
