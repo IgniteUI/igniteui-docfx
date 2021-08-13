@@ -128,36 +128,11 @@ this._crudService.delete(event.data).subscribe({
 });
 ```
 
-> [NOTE]
-> The above examples are based on the default grid UI for editing actions. Another valid approach is if you provide your own external UI. In such case, responding to user interactions with the UI should work with the grid editing API (**make sure the grid has a primaryKey set**):
+> [!NOTE]
+> The above examples are based on the default grid UI for editing actions. Another valid approach is if you provide your own external UI. In such case, responding to user interactions with the UI should work with the grid editing API (**make sure the grid has a primaryKey set**). See [**API**](how-to-perform-crud.md#editing-api) section for reference.
 
-## API
-Updating data in the grid is achieved through methods exposed both by the grid:
-- [`updateRow`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#updaterow)
-- [`updateCell`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#updatecell) 
-- [`deleteRow`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#deleterow)
-- [`addRow`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#addrow)
-
-and `update` method exposed by the [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html) and [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html) instances:
-
-```typescript
-// Through the grid methods
-this.grid.updateRow(newData, rowKey);
-this.grid.updateCell(newData, rowKey, columnField);
-this.grid1.deleteRow(0);
-this.grid.addRow(data);
-
-// Through the methods exposed by cell/row
-this.grid.getCellByColumn(rowIndex, columnField).update(newData);
-this.grid.getCellByKey(rowKey, columnField).value = newData;
-this.grid.getRowByKey(rowID).update(newData);
-this.grid.getRowByKey(rowID).delete();
-```
-
-More details and information about using the grid API can be found in the [Cell Editing CRUD Operations](../../grid/cell-editing.md#crud-operations) section.
-
-> [NOTE]
-> Make sure to follow best practices and ano allow difference in your local data compared to the server database. For example - you may decide to first make a request to the server to delete a record, but if request fails, do not delete the data on the local grid data:
+> [!NOTE]
+> Make sure to follow best practices and prevent any differences in your local data compared to the server database. For example - you may decide to first make a request to the server to delete a record, but if the request fails, do not delete the data on the local grid data:
 
 ```typescript
 this._crudService.delete(event.data).subscribe({
@@ -189,6 +164,7 @@ The rich Grid API allows you to customize the editing process in almost any way 
     - prompt user for expected type of input
     - cancel further processing, based on business rules
     - manual committing of the changes
+- [**Rich API**](how-to-perform-crud.md#editing-api)
 
 ## Batch Editing
  - Enable **Batch Editing** to keep your updates on the client, and commit all of them with single request. Batch updating is enabled bysetting `batchEditing` option to true:
@@ -223,16 +199,41 @@ The grid exposes a wide array of events that provide greater control over the ed
 
  | Event | Description | Arguments | Cancellable |
 |-------|-------------|-----------|-------------|
-| [`rowEditEnter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditEnter) | If `rowEditing` is enabled, fires when a row enters edit mode | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
-| [`cellEditEnter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#cellEditEnter) | Fires when a cell **enters edit mode** (after `rowEditEnter`) | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
-| [`cellEdit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#cellEdit) | If value is changed, fires just **before** a cell's value is **committed** (e.g. by pressing `Enter`) | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
-| [`cellEditDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#celleditdone) | If value is changed, fires **after** a cell has been edited and cell's value is **committed** | [IGridEditDoneEventArgs]({environment:angularApiUrl}/interfaces/igrideditdoneeventargs.html) | `false` |
-| [`cellEditExit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#cellEditExit) | Fires when a cell **exits edit mode** | [IGridEditDoneEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `false` |
-| [`rowEdit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowedit) | If `rowEditing` is enabled, fires just before a row in edit mode's value is **committed** (e.g. by clicking the `Done` button on the Row Editing Overlay) | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
-| [`rowEditDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditdone) | If `rowEditing` is enabled, fires **after** a row has been edited and new row's value has been **committed**. | [IGridEditDoneEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `false` |
-| [`rowEditExit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditExit) | If `rowEditing` is enabled, fires when a row **exits edit mode** | [IGridEditDoneEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `false` |
+| [`rowEditEnter`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowEditEnter) | If `rowEditing` is enabled, fires when a row enters edit mode | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
+| [`cellEditEnter`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellEditEnter) | Fires when a cell **enters edit mode** (after `rowEditEnter`) | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
+| [`cellEdit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellEdit) | If value is changed, fires just **before** a cell's value is **committed** (e.g. by pressing `Enter`) | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
+| [`cellEditDone`]({environment:angularApiUrl}/classes/igxgridcomponent.html#celleditdone) | If value is changed, fires **after** a cell has been edited and cell's value is **committed** | [IGridEditDoneEventArgs]({environment:angularApiUrl}/interfaces/igrideditdoneeventargs.html) | `false` |
+| [`cellEditExit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellEditExit) | Fires when a cell **exits edit mode** | [IGridEditDoneEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `false` |
+| [`rowEdit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowedit) | If `rowEditing` is enabled, fires just before a row in edit mode's value is **committed** (e.g. by clicking the `Done` button on the Row Editing Overlay) | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
+| [`rowEditDone`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditdone) | If `rowEditing` is enabled, fires **after** a row has been edited and new row's value has been **committed**. | [IGridEditDoneEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `false` |
+| [`rowEditExit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowEditExit) | If `rowEditing` is enabled, fires when a row **exits edit mode** | [IGridEditDoneEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `false` |
 
 Go to [Events](../../grid/editing.md#event-arguments-and-sequence) for more details and demo samples.
+
+## Editing API
+Updating data in the grid is achieved through methods exposed both by the grid:
+- [`updateRow`]({environment:angularApiUrl}/classes/igxgridcomponent.html#updateRow)
+- [`updateCell`]({environment:angularApiUrl}/classes/igxgridcomponent.html#updateCell) 
+- [`deleteRow`]({environment:angularApiUrl}/classes/igxgridcomponent.html#deleteRow)
+- [`addRow`]({environment:angularApiUrl}/classes/igxgridcomponent.html#addRow)
+
+and `update` method exposed by the [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html) and [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html) instances:
+
+```typescript
+// Through the grid methods
+this.grid.updateRow(newData, rowKey);
+this.grid.updateCell(newData, rowKey, columnField);
+this.grid1.deleteRow(0);
+this.grid.addRow(data);
+
+// Through the methods exposed by cell/row
+this.grid.getCellByColumn(rowIndex, columnField).update(newData);
+this.grid.getCellByKey(rowKey, columnField).value = newData;
+this.grid.getRowByKey(rowID).update(newData);
+this.grid.getRowByKey(rowID).delete();
+```
+
+More details and information about using the grid API can be found in the [Cell Editing CRUD Operations](../../grid/cell-editing.md#crud-operations) section.
 
 # Takeaway
 Enabling CRUD in a robust way is major milestone for any data driven application. The IgxGrid is built with the CRID capabilities in mind, providing UI out of the box and flexible APIs that will save you lots of time when implementing a CRUD against any database out there.
@@ -242,7 +243,6 @@ Enabling CRUD in a robust way is major milestone for any data driven application
 * [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html)
 * [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
 * [`IgxActionStripComponent API`]({environment:angularApiUrl}/classes/igxactionstripcomponent.html)
-* [`IgxActionStripMenuItemDirective`]({environment:angularApiUrl}/classes/igxmenuitemdirective.html)
 * [`IgxGridActionsBaseDirective `]({environment:angularApiUrl}/classes/igxgridactionsbasedirective.html)
 * [`IgxGridPinningActionsComponent`]({environment:angularApiUrl}/classes/igxpinningactionscomponent.html)
 * [`IgxGridEditingActionsComponent`]({environment:angularApiUrl}/classes/igxeditingactionscomponent.html)
