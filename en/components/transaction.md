@@ -32,6 +32,7 @@ A more detailed overview of the opportunities that the [`Transaction Service`]({
 * [Transaction Service API]({environment:angularApiUrl}/interfaces/transactionservice.html)
 * [Transaction Service class hierarchy](transaction-classes.md)
 * [How to use the Transaction service](transaction-how-to-use.md)
+* [Build CRUD operations with igxGrid](general/how-to/how-to-perform-crud.md)
 * [Grid Batch Editing](grid/batch-editing.md)
 * [Tree Grid Batch Editing](treegrid/batch-editing.md)
 * [Hierarchical Grid Batch Editing](hierarchicalgrid/batch-editing.md)

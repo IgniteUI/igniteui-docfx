@@ -473,6 +473,7 @@ After styling the banner and buttons, we also define a custom style for [the cel
 ## Additional Resources
 <div class="divider--half"></div>
 
+* [Build CRUD operations with igxGrid](../general/how-to/how-to-perform-crud.md)
 * [@@igComponent Overview](@@igMainTopic.md)
 * [@@igComponent Editing](editing.md)
 * [@@igComponent Transactions](batch-editing.md)
