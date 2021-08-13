@@ -757,6 +757,7 @@ See the [Grid Sizing](sizing.md) topic.
 * [Column Resizing](column-resizing.md)
 * [Selection](selection.md)
 * [Column Data Types](column-types.md#default-template)
+* [Build CRUD operations with igxGrid](../general/how-to/how-to-perform-crud.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

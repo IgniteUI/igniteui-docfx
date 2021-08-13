@@ -377,6 +377,7 @@ export class HierarchicalGridBatchEditingSampleComponent {
 
 ### 추가 리소스
 
+* [Build CRUD operations with igxGrid](../general/how-to/how-to-perform-crud.md)
 * [@@igComponent 개요](@@igMainTopic.md)
 * [@@igComponent 편집](editing.md)
 * [@@igComponent 행 편집](row-editing.md)

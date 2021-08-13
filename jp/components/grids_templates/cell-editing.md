@@ -559,6 +559,7 @@ $custom-grid-theme: igx-grid-theme(
 ## その他のリソース
 <div class="divider--half"></div>
 
+* [Build CRUD operations with igxGrid](../general/how-to/how-to-perform-crud.md)
 * [@@igComponent 概要](@@igMainTopic.md)
 * [仮想化とパフォーマンス](virtualization.md)
 * [ページング](paging.md)

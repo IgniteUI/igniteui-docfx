@@ -263,6 +263,7 @@ Deleting a parent node in `@@igComponent` has some peculiarities. If you are usi
 
 ## Additional Resources
 
+* [Build CRUD operations with igxGrid](../general/how-to/how-to-perform-crud.md)
 * [@@igComponent Overview](@@igMainTopic.md)
 * [@@igComponent Editing](editing.md)
 * [@@igComponent Row Editing](row-editing.md)

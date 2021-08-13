@@ -269,6 +269,8 @@ See the [Grid Sizing](sizing.md) topic.
 
 Calling CRUD API methods should still be done through each separate grid instance.
 
+Check out the How-to [Build CRUD operations with igxGrid](../general/how-to/how-to-perform-crud.md) topic.
+
 ## Styling
 
 The igxHierarchicalGrid allows styling through the [Ignite UI for Angular Theme Library](../themes/sass/component-themes.md). The grid's [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) exposes a wide variety of properties, which allow the customization of all the features of the grid.

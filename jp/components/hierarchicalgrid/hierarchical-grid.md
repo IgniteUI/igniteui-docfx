@@ -270,6 +270,8 @@ export class RemoteLoDService {
 
 CRUD API メソッドの呼び出しは,各グリッド インスタンスで可能です。
 
+Check out the How-to [Build CRUD operations with igxGrid](../general/how-to/how-to-perform-crud.md) topic.
+
 ## スタイル設定
 
 igxHierarchicalGrid を使用すると、[Ignite UI for Angular テーマ ライブラリ](../themes/sass/component-themes.md) でスタイルを設定できます。[テーマ]({environment:sassApiUrl}/index.html#function-igx-grid-theme) は、グリッドのすべての機能をカスタマイズできるさまざまなプロパティを公開します。 
