@@ -236,7 +236,7 @@ this.grid.getRowByKey(rowID).delete();
 More details and information about using the grid API can be found in the [Cell Editing CRUD Operations](../../grid/cell-editing.md#crud-operations) section.
 
 # Takeaway
-Enabling CRUD in a robust way is major milestone for any data driven application. The IgxGrid is built with the CRID capabilities in mind, providing UI out of the box and flexible APIs that will save you lots of time when implementing a CRUD against any database out there.
+Enabling CRUD in a robust way is major milestone for any data-driven application. In order to streamline the entire process, we've built the IgxGrid with the CRUD capabilities in mind, providing out-of-the-box UI and flexible APIs. How will this benefit you? It will save you lots of time when implementing CRUD against any database out there. And when we talk about modern-day data-driven apps, it all comes down to robustness, speed, and flexibility.
 
 # API References
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
