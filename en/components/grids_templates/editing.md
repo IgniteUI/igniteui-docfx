@@ -160,7 +160,9 @@ public onSorting(event: ISortingEventArgs) {
 ## Additional Resources
 <div class="divider--half"></div>
 
+
 * [@@igComponent overview](@@igMainTopic.md)
+* [Build CRUD operations with igxGrid](../general/how-to/how-to-perform-crud.md)
 * [Column Data Types](column-types.md#default-template)
 * [Virtualization and Performance](virtualization.md)
 * [Paging](paging.md)
