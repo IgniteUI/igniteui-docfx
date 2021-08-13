@@ -7,7 +7,6 @@ _keywords: angular, crud, crud operations, infragistics, crud tutorial
 # What is CRUD
 
 CRUD is an acronym in computer programming that stands for the CREATE, READ, UPDATE, DELETE operations that can be performed against a data collection. In computer world, talking about CRUD applications, is a main difference compared to applications that provide read-only data to users.
-
 # Angular CRUD
 
 While talking about Angular CRUD, or CRUD operations in Angular, it is important to note that the data storage is on a remote server. The Angular application can not directly access the data layer, so it needs to communicate with it through a Web API that provides endpoints for the CRUD operations, i.e.:
@@ -67,13 +66,15 @@ For more examples and guidance, refer to the [HTTP Services](https://angular.io/
 
 # CRUD Operations with Grid 
 
-Enabling CRUD in the Grid means providing UI for the users to perform these CRUD operations from within the grid. This is quite easy - the Grid provides **Cell Editing**, **Row Editing**, **Row Adding** and **Row Deleting** UI out of the box, and powerful API to do this on your own. Next, we want to take the result of each editing action and communicate it to the corresponding method in our CRUD service, thus preserving all changes to the original database. By completing this, we may say the grid is CRUD enabled.
+Enabling CRUD in the Grid means providing UI for the users to perform these CRUD operations from within the grid. This is quite easy - the Grid provides [**Cell Editing**](../../grid/cell-editing.md), [**Row Editing**](../../grid/row-editing.md), [**Row Adding**](../../grid/row-adding.md) and **Row Deleting** UI out of the box, and powerful API to do this on your own. Next, we want to take the result of each editing action and communicate it to the corresponding method in our CRUD service, thus preserving all changes to the original database. By completing this, we may say the grid is CRUD enabled.
 
 
-This section is written as HOW-TO tutorial on enabling CRUD operations in Grid, accompanied by code snippets that you can take and copy paste in your code
+This section is written as HOW-TO tutorial on enabling CRUD operations in Grid, accompanied by code snippets that you can take and copy paste in your code.
+
+
 
 ## How to
-Let's first enable the rowEditing behavior, bring the UI we need for the editing actions, benefiting from the `IgxActionStrip`, and attach event handlers:
+Let's first enable the rowEditing behavior, bring the UI we need for the editing actions, benefiting from the `IgxActionStrip` (see more about the [`IgxActionStrip`](../../action-strip.md)), and attach event handlers:
 
 ```html
 <igx-grid 
@@ -116,7 +117,7 @@ A good practice is to add validation, notifying the users that all actions have 
 ```typescript
 this._crudService.delete(event.data).subscribe({
     next: (data: any) => {
-      console.log('succes');
+      console.log('success');
     },
     error: err => {
       console.log(err);
@@ -127,9 +128,51 @@ this._crudService.delete(event.data).subscribe({
 });
 ```
 
+> [NOTE]
+> The above examples are based on the default grid UI for editing actions. Another valid approach is if you provide your own external UI. In such case, responding to user interactions with the UI should work with the grid editing API (**make sure the grid has a primaryKey set**):
+
+## API
+Updating data in the grid is achieved through methods exposed both by the grid:
+- [`updateRow`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#updaterow)
+- [`updateCell`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#updatecell) 
+- [`deleteRow`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#deleterow)
+- [`addRow`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#addrow)
+
+and `update` method exposed by the [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html) and [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html) instances:
+
+```typescript
+// Through the grid methods
+this.grid.updateRow(newData, rowKey);
+this.grid.updateCell(newData, rowKey, columnField);
+this.grid1.deleteRow(0);
+this.grid.addRow(data);
+
+// Through the methods exposed by cell/row
+this.grid.getCellByColumn(rowIndex, columnField).update(newData);
+this.grid.getCellByKey(rowKey, columnField).value = newData;
+this.grid.getRowByKey(rowID).update(newData);
+this.grid.getRowByKey(rowID).delete();
+```
+
+More details and information about using the grid API can be found in the [Cell Editing CRUD Operations](../../grid/cell-editing.md#crud-operations) section.
+
+> [NOTE]
+> Make sure to follow best practices and ano allow difference in your local data compared to the server database. For example - you may decide to first make a request to the server to delete a record, but if request fails, do not delete the data on the local grid data:
+
+```typescript
+this._crudService.delete(event.data).subscribe({
+    next: (data: any) => {
+      this.grid.getRowByKey(event.data[this.grid.primaryKey]).delete();
+    },
+    error: err => {
+      console.log(err); // notify and don't delete the grid row
+    }
+});
+```
+
 ## Demo
 
-See the demo that was build following the guidance. Play around with it and try the examples for customization to fit your scenario in the best possible way.
+See the demo that was built following the guidance. Play around with it and try the examples for customization to fit your scenario in the best possible way.
 
 <code-view style="height:410px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -191,6 +234,18 @@ The grid exposes a wide array of events that provide greater control over the ed
 
 Go to [Events](../../grid/editing.md#event-arguments-and-sequence) for more details and demo samples.
 
+# Takeaway
+Enabling CRUD in a robust way is major milestone for any data driven application. The IgxGrid is built with the CRID capabilities in mind, providing UI out of the box and flexible APIs that will save you lots of time when implementing a CRUD against any database out there.
+
+# API References
+* [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+* [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html)
+* [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
+* [`IgxActionStripComponent API`]({environment:angularApiUrl}/classes/igxactionstripcomponent.html)
+* [`IgxActionStripMenuItemDirective`]({environment:angularApiUrl}/classes/igxmenuitemdirective.html)
+* [`IgxGridActionsBaseDirective `]({environment:angularApiUrl}/classes/igxgridactionsbasedirective.html)
+* [`IgxGridPinningActionsComponent`]({environment:angularApiUrl}/classes/igxpinningactionscomponent.html)
+* [`IgxGridEditingActionsComponent`]({environment:angularApiUrl}/classes/igxeditingactionscomponent.html)
 
 
 
