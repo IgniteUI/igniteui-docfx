@@ -163,6 +163,15 @@ The [`IgxDateRangePickerComponent`]({environment:angularApiUrl}/classes/igxdater
 
 The range value is set when dates are picked from the calendar. You will notice that in dropdown mode, the `Done` button is not available.
 
+### Custom Action Buttons
+
+The Date Range Picker’s action buttons can be templated using the [`igxPickerActions`]({environment:angularApiUrl}/classes/igxpickeractionsdirective.html) directive. A common scenario is allowing the user to select from pre-defined ranges, as in the following demo: 
+
+<code-view style="height:500px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/scheduling/daterangepicker-range-buttons" >
+</code-view>
+
 ### Keyboard Navigation
 > Note: Use the demos for [Dropdown mode](#dropdown-mode) and [Display Separate Editable Inputs](#display-separate-editable-inputs) to try the keyboard combinations defined below.
 
