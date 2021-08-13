@@ -271,6 +271,8 @@ See the [Grid Sizing](sizing.md) topic.
 
 CRUD API 메소드 호출은 각 개별 그리드 인스턴스를 통해 실행해야 합니다.
 
+Check out the How-to [Build CRUD operations with igxGrid](../general/how-to/how-to-perform-crud.md) topic.
+
 ### 알려진 제한 사항
 
 |제한 사항|설명|
