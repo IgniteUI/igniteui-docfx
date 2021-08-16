@@ -755,7 +755,7 @@ Grid のキーボード ナビゲーションは、さまざまなキーボー�
 * [列のサイズ変更](column-resizing.md)
 * [選択](selection.md)
 * [列のデータ型](column-types.md#デフォルトのテンプレート)
-* [Build CRUD operations with igxGrid](../general/how-to/how-to-perform-crud.md)
+* [igxGrid を使用して CRUD 操作の構築](general/how-to/how-to-perform-crud.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

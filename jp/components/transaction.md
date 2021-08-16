@@ -33,7 +33,7 @@ _language: ja
 * [トランザクション サービス API]({environment:angularApiUrl}/interfaces/transactionservice.html)
 * [トランザクション サービス クラス階層](transaction-classes.md)
 * [トランザクション サービスの使用方法](transaction-how-to-use.md)
-* [Build CRUD operations with igxGrid](general/how-to/how-to-perform-crud.md)
+* [igxGrid を使用して CRUD 操作の構築](general/how-to/how-to-perform-crud.md)
 * [Grid 一括編集](grid/batch-editing.md)
 * [Tree Grid 一括編集](treegrid/batch-editing.md)
 * [Hierarchical Grid 一括編集](hierarchicalgrid/batch-editing.md)
