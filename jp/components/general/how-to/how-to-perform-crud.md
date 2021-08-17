@@ -1,30 +1,30 @@
 ---
-title: How to enable CRUD operations in Angular.
-_description: What is Angular Crud? How to Build a CRUD service in Angular and use it to perform CRUD operations with the Grid data? Learn more here.
-_keywords: angular, crud, crud operations, infragistics, crud tutorial
+title: Angular で CRUD 操作を有効にする方法
+_description: Angular で CRUD サービスを構築し、それを使用してグリッド データで CRUD 操作を実行する方法を紹介します。
+_keywords: angular, crud, crud 操作, インフラジスティックス, crud チュートリアル
 _language: ja
 ---
 
-# What is CRUD
+# CRUD とは?
 
-CRUD is an acronym in computer programming that stands for the CREATE, READ, UPDATE, DELETE operations that can be performed against a data collection. In computer world, talking about CRUD applications, is a main difference compared to applications that provide read-only data to users.
+CRUD は、データ コレクションに対して実行できる CREATE、READ、UPDATE、DELETE 操作を表すコンピューター プログラミングの頭字語です。
 # Angular CRUD
 
-While talking about Angular CRUD, or CRUD operations in Angular, it is important to note that the data storage is on a remote server. The Angular application can not directly access the data layer, so it needs to communicate with it through a Web API that provides endpoints for the CRUD operations, i.e.:
+Angular CRUD、または Angular での CRUD 操作に関しては、データ ストレージがリモート サーバー上にあることに注意することが重要です。Angular アプリケーションはデータ レイヤーに直接アクセスできないため、CRUD 操作のエンドポイントを提供する Web API を介して Angular アプリケーションと通信する必要があります。例えば:
  
-| API | Operation | HTTP methods |
+| API | 操作 | HTTP メソッド |
 |-----|-----------| ----------- |
-| "api/entities" | READ all entities | GET |
-| "api/entities/id" | READ the entity with corresponding id | GET |
-| "api/entities/update" | UPDATE the entity with corresponding id  | PUT / PATCH |
-| "api/entities/create" | CREATE a new entity | POST |
-| "api/entities/delete" | DELETE the entity with corresponding id | DELETE |
+| "api/entities" | すべてのエンティティを読み取る | GET |
+| "api/entities/id" | 対応する ID を持つエンティティを読み取る | GET |
+| "api/entities/update" | 対応する ID でエンティティを更新する  | PUT / PATCH |
+| "api/entities/create" | 新しいエンティティを生成する | POST |
+| "api/entities/delete" | 対応する ID を持つエンティティを削除する | DELETE |
 
-Notice that the CRUD operations also map conceptually to the HTTP methods that are used to communicate with APIs over HTTP.
+CRUD 操作は、HTTP を介して API と通信するために使用される HTTP メソッドにも概念的にマップされていることに注意してください。
 
-The entire code that will work with the above mentioned API can be abstracted in an Angular service. Such a service is injectable and can be reused by any component that needs to perform CRUD operations against the same database. A good practice is to write such service as generic as possible, thus making it suitable to be reused in many components, and against different servers as well.
+上記の API で動作するコード全体は、Angular サービスで抽象化できます。このようなサービスは注入可能であり、同じデータベースに対して CRUD 操作を実行する必要がある任意のコンポーネントで再利用できます。このようなサービスをできるだけ汎用的に記述して、多くのコンポーネントで、またさまざまなサーバーに対しても再利用できるようにすることをお勧めします。
 
-A generic example of such service will look like this:
+このようなサービスの一般的な例は次のようになります:
 
 
 ```typescript
@@ -60,22 +60,22 @@ export class CRUDService {
 }
 ```
 
-What the above service is missing is configuration for filtering/sorting/paging, etc. Depending on the exact API implementation of the endpoints, requests to the server may need optional parameters to handle filtering/sorting/paging for you. See our [Remote Data Operations](../../grid/remote-data-operations.md) for demos accompanied with code examples.
+上記のサービスに欠けているのは、フィルタリング / ソート / ページングなどの構成です。エンドポイントの正確な API 実装によっては、サーバーへのリクエストで、フィルタリング / ソート / ページングを処理するためのオプションのパラメーターが必要になる場合があります。コード例を伴うデモについては、[リモート データ操作](../../grid/remote-data-operations.md)を参照してください。
 
-For more examples and guidance, refer to the [HTTP Services](https://angular.io/tutorial/toh-pt6) tutorial in the official Angular documentation.
-
-
-# CRUD Operations with Grid 
-
-Enabling CRUD in the Grid means providing UI for the users to perform these CRUD operations from within the grid. This is quite easy - the Grid provides [**Cell Editing**](../../grid/cell-editing.md), [**Row Editing**](../../grid/row-editing.md), [**Row Adding**](../../grid/row-adding.md) and **Row Deleting** UI out of the box, and powerful API to do this on your own. Next, we want to take the result of each editing action and communicate it to the corresponding method in our CRUD service, thus preserving all changes to the original database. By completing this, we may say the grid is CRUD enabled.
+その他の例とガイダンスについては、公式の Angular ドキュメントの [HTTP Services (英語)](https://angular.io/tutorial/toh-pt6) チュートリアルを参照してください。
 
 
-This section is written as HOW-TO tutorial on enabling CRUD operations in Grid, accompanied by code snippets that you can take and copy paste in your code.
+# グリッドを使用した CRUD 操作 
+
+グリッドで CRUD を有効にするということは、ユーザーがグリッド内からこれらの CRUD 操作を実行するための UI を提供することを意味します。これは非常に簡単です。グリッドには、[**セル編集**](../../grid/cell-editing.md)、[**行編集**](../../grid/row-editing.md)、[**行追加**](../../grid/row-adding.md)、**行削除** UI が用意されており、これを独自に実行するための強力な API が用意されています。次に、各編集アクションの結果を取得し、それを CRUD サービスの対応するメソッドに伝達して、元のデータベースへのすべての変更を保持します。これを完了することで、グリッドで CRUD が有効になっていると言えます。
+
+
+このセクションは、グリッドで CRUD 操作を有効にするためのチュートリアルであり、コード スニペットを取得してコードにコピーし貼り付けることができます。
 
 
 
-## How to
-Let's first enable the rowEditing behavior, bring the UI we need for the editing actions, benefiting from the `IgxActionStrip` (see more about the [`IgxActionStrip`](../../action-strip.md)), and attach event handlers:
+## 操作方法
+まず、rowEditing 動作を有効にし、編集アクションに必要な UI を用意して、`IgxActionStrip` ([`IgxActionStrip`](../../action-strip.md) の詳細を参照) を利用し、イベント ハンドラーをアタッチします。
 
 ```html
 <igx-grid 
@@ -90,7 +90,7 @@ Let's first enable the rowEditing behavior, bring the UI we need for the editing
   </igx-action-strip>
 ```
 
-In the Angular component, inject the data service using DI. Now we are ready to use the service to do full CRUD operations against our data layer:
+Angular コンポーネントで、DI を使用してデータ サービスを注入します。これで、サービスを使用してデータ レイヤーに対して完全な CRUD 操作を実行する準備が整いました。
 
 ```typescript
 constructor(private crudService: CRUDService) { }
@@ -111,9 +111,9 @@ public rowEditDone(event: IGridEditDoneEventArgs) {
 }
 ```
 
-In the above example, we only call the corresponding methods and pass the data that is read from the event arguments. Most API endpoints will return the updated/added/deleted entity, which indicates that the request was successful. 
+上記の例では、対応するメソッドのみを呼び出し、イベント引数から読み取られたデータを渡します。ほとんどの API エンドポイントは、更新/追加/削除されたエンティティを返します。これは、リクエストが成功したことを示します。 
 
-A good practice is to add validation, notifying the users that all actions have been completed successfully or that an error has occurred. In such case, you may want to pass handlers for the error and complete notifications too:
+検証を追加して、すべてのアクションが正常に完了したこと、またはエラーが発生したことをユーザーに通知することをお勧めします。このような場合は、エラーのハンドラーを渡して通知を完了することもできます。
 
 ```typescript
 this._crudService.delete(event.data).subscribe({
@@ -130,10 +130,10 @@ this._crudService.delete(event.data).subscribe({
 ```
 
 > [!NOTE]
-> The above examples are based on the default grid UI for editing actions. Another valid approach is if you provide your own external UI. In such case, responding to user interactions with the UI should work with the grid editing API (**make sure the grid has a primaryKey set**). See [**API**](how-to-perform-crud.md#editing-api) section for reference.
+> 上記の例は、アクションを編集するためのデフォルトのグリッド UI に基づいています。もう 1 つの有効なアプローチは、独自の外部 UI を提供する場合です。このような場合、UI を使用したユーザーの操作への応答は、グリッド編集 API で機能する必要があります (**グリッドに primaryKey が設定されていることを確認してください**)。参考のために [**API**](how-to-perform-crud.md#editing-api) セクションを参照してください。
 
 > [!NOTE]
-> Make sure to follow best practices and prevent any differences in your local data compared to the server database. For example - you may decide to first make a request to the server to delete a record, but if the request fails, do not delete the data on the local grid data:
+> ベスト プラクティスに従い、サーバー データベースと比較してローカル データに違いがないようにしてください。たとえば、最初にサーバーにレコードの削除をリクエストすることもできますが、リクエストが失敗した場合は、ローカル グリッド データのデータを削除しないでください。
 
 ```typescript
 this._crudService.delete(event.data).subscribe({
@@ -146,40 +146,40 @@ this._crudService.delete(event.data).subscribe({
 });
 ```
 
-## Demo
+## デモ
 
-See the demo that was built following the guidance. Play around with it and try the examples for customization to fit your scenario in the best possible way.
+ガイダンスに従って作成されたデモを参照してください。それを試してみて、シナリオに最適な方法でカスタマイズするための例を試してください。
 
 <code-view style="height:410px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/grid/grid-crud" >
 </code-view>
 
-# Customizations
-The rich Grid API allows you to customize the editing process in almost any way in order to fit your needs. This includes, but is not limited to:
- - [**Batch Editing**](how-to-perform-crud.md#batch-editing): Enable Batch Editing to batch all updates, and commit everything with single request.
- - [**Templating**](how-to-perform-crud.md#templates): Add tenplates for cell editing, or use your own external UI for row/cell editing, row adding and row deleting.
- - [**Events**](how-to-perform-crud.md#events): Monitor the editing flow and react accordingly. Attach event handlers for all events emitted during editing, will allow you to do:
-    - data validation per cell
-    - data validation per row
-    - prompt user for expected type of input
-    - cancel further processing, based on business rules
-    - manual committing of the changes
-- [**Rich API**](how-to-perform-crud.md#editing-api)
+# カスタマイズ
+豊富な Grid API を使用すると、ニーズに合わせて編集プロセスをほぼすべての方法でカスタマイズできます。これには以下が含まれますが、これらに限定されません:
+ - [**一括編集**](how-to-perform-crud.md#一括編集):  一括編集を有効にすると、すべての更新を一括処理し、単一のリクエストですべてをコミットできます。
+ - [**テンプレート**](how-to-perform-crud.md#テンプレート):  セル編集用のテンプレートを追加するか、行 / セル編集、行追加、および行削除に独自の外部 UI を使用します。
+ - [**イベント**](how-to-perform-crud.md#イベント):  編集フローを監視し、それに応じて対応します。編集中に発行されたすべてのイベントにイベント ハンドラーをアタッチすると、次のことが可能になります:
+    - セルごとのデータ検証
+    - 行ごとのデータ検証
+    - 予想される入力タイプの入力をユーザーにプロンプト
+    - ビジネス ルールに基づいて、それ以上の処理をキャンセル
+    - 変更の手動コミット
+- [**リッチな API**](how-to-perform-crud.md#api-の編集)
 
-## Batch Editing
- - Enable **Batch Editing** to keep your updates on the client, and commit all of them with single request. Batch updating is enabled bysetting `batchEditing` option to true:
+## 一括編集
+ - **一括編集**を有効にして更新をクライアントに保持し、単一のリクエストですべてをコミットします。一括更新は、`batchEditing` オプションを true に設定することで有効になります。
  ```html
  <igx-grid [batchEditing]="'true'" ...>
  ```
  
-Go to [Batch Editing](../../grid/batch-editing.md) for more details and demo samples.
+詳細とデモ サンプルについては、[一括編集](../../grid/batch-editing.md)にアクセスしてください。
 
-## Templates
+## テンプレート
 
-You can see and learn more about default cell editing templates in the [general editing topic](../../grid/editing.md#editing-templates).
+デフォルトのセル編集テンプレートの詳細については、[一般的な編集トピック](../../grid/editing.md#テンプレートの編集)を参照してください。
 
-If you want to provide a custom template which will be applied when a cell is in edit mode, you can make use of the [`igxCellEditor` directive]({environment:angularApiUrl}/classes/igxcelltemplatedirective.html). To do this, you need to pass an `ng-template` marked with the `igxCellEditor` directive and properly bind your custom control to the [`cell.editValue`]({environment:angularApiUrl}/classes/igxgridcell.html#editvalue):
+セルが編集モードのときに適用されるカスタム テンプレートを提供する場合は、[`igxCellEditor` ディレクティブ]({environment:angularApiUrl}/classes/igxcelltemplatedirective.html)を使用できます。これを行うには、`igxCellEditor` ディレクティブでマークされた `ng-template` を渡し、カスタム コントロールを [`cell.editValue`]({environment:angularApiUrl}/classes/igxgridcell.html#editvalue) に適切にバインドする必要があります。
 
 ```html
 <igx-column field="class" header="Class" [editable]="true">
@@ -193,32 +193,32 @@ If you want to provide a custom template which will be applied when a cell is in
 </igx-column>
 ```
 
-For more information and demos, see the [Cell Editing](../../grid/cell-editing.md) topic.
+詳細とデモについては、[セル編集](../../grid/cell-editing.md)のトピックを参照してください。
 
-## Events
-The grid exposes a wide array of events that provide greater control over the editing experience. These events are fired during the [**Row Editing**](../../grid/row-editing.md) and [**Cell Editing**](../../grid/cell-editing.md) lifecycle - when starting, committing or canceling the editing action.
+## イベント
+グリッドは、編集エクスペリエンスをより詳細に制御できる広範なイベントを公開します。これらのイベントは、[**行編集**](../../grid/row-editing.md)および[**セル編集**](../../grid/cell-editing.md)のライフサイクル中、つまり編集アクションを開始、コミット、またはキャンセルするときに発生します。
 
- | Event | Description | Arguments | Cancellable |
+ | イベント | 説明 | 引数 | キャンセル可能 |
 |-------|-------------|-----------|-------------|
-| [`rowEditEnter`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowEditEnter) | If `rowEditing` is enabled, fires when a row enters edit mode | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
-| [`cellEditEnter`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellEditEnter) | Fires when a cell **enters edit mode** (after `rowEditEnter`) | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
-| [`cellEdit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellEdit) | If value is changed, fires just **before** a cell's value is **committed** (e.g. by pressing `Enter`) | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
-| [`cellEditDone`]({environment:angularApiUrl}/classes/igxgridcomponent.html#celleditdone) | If value is changed, fires **after** a cell has been edited and cell's value is **committed** | [IGridEditDoneEventArgs]({environment:angularApiUrl}/interfaces/igrideditdoneeventargs.html) | `false` |
-| [`cellEditExit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellEditExit) | Fires when a cell **exits edit mode** | [IGridEditDoneEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `false` |
-| [`rowEdit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowedit) | If `rowEditing` is enabled, fires just before a row in edit mode's value is **committed** (e.g. by clicking the `Done` button on the Row Editing Overlay) | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
-| [`rowEditDone`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditdone) | If `rowEditing` is enabled, fires **after** a row has been edited and new row's value has been **committed**. | [IGridEditDoneEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `false` |
-| [`rowEditExit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowEditExit) | If `rowEditing` is enabled, fires when a row **exits edit mode** | [IGridEditDoneEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `false` |
+| [`rowEditEnter`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowEditEnter) | `rowEditing` が有効になっている場合、行が編集モードに入ると発生します。 | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
+| [`cellEditEnter`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellEditEnter) | セルが**編集モード**に入ると発生します (`rowEditEnter` の後)。 | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
+| [`cellEdit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellEdit) | 値が変更された場合、セルの値が**コミットされる**直**前に**発生します (たとえば、`Enter` キーを押すことによって)。 | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
+| [`cellEditDone`]({environment:angularApiUrl}/classes/igxgridcomponent.html#celleditdone) | 値が変更された場合、セルが編集され、セルの値が**コミットされた後に**発生します。 | [IGridEditDoneEventArgs]({environment:angularApiUrl}/interfaces/igrideditdoneeventargs.html) | `false` |
+| [`cellEditExit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellEditExit) | セルが**編集モードを終了する**と発生します。 | [IGridEditDoneEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `false` |
+| [`rowEdit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowedit) | `rowEditing` が有効になっている場合、編集モードの値の行が**コミットされる**直前に発生します (たとえば、行編集オーバーレイの `Done` ボタンをクリックすることにより)。 | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
+| [`rowEditDone`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditdone) | `rowEditing` が有効になっている場合、行が編集され、新しい行の値が**コミットされた後に**発生します。 | [IGridEditDoneEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `false` |
+| [`rowEditExit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowEditExit) | `rowEditing` が有効になっている場合、行が**編集モードを終了する**と発生します。 | [IGridEditDoneEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `false` |
 
-Go to [Events](../../grid/editing.md#event-arguments-and-sequence) for more details and demo samples.
+詳細とデモ サンプルについては、[イベント](../../grid/editing.md#イベントの引数とシーケンス)にアクセスしてください。
 
-## Editing API
-Updating data in the grid is achieved through methods exposed both by the grid:
+## API の編集
+グリッド内のデータの更新は、グリッドによって公開される方法によって実現されます:
 - [`updateRow`]({environment:angularApiUrl}/classes/igxgridcomponent.html#updateRow)
 - [`updateCell`]({environment:angularApiUrl}/classes/igxgridcomponent.html#updateCell) 
 - [`deleteRow`]({environment:angularApiUrl}/classes/igxgridcomponent.html#deleteRow)
 - [`addRow`]({environment:angularApiUrl}/classes/igxgridcomponent.html#addRow)
 
-and `update` method exposed by the [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html) and [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html) instances:
+また、[IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html) インスタンスと [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html) インスタンスによって公開される `update` メソッドによって実現されます:
 
 ```typescript
 // Through the grid methods
@@ -234,12 +234,12 @@ this.grid.getRowByKey(rowID).update(newData);
 this.grid.getRowByKey(rowID).delete();
 ```
 
-More details and information about using the grid API can be found in the [Cell Editing CRUD Operations](../../grid/cell-editing.md#crud-operations) section.
+グリッド API の使用に関する詳細と情報は、[セル編集 CRUD 操作](../../grid/cell-editing.md#crud-操作)セクションにあります。
 
-# Takeaway
-Enabling CRUD in a robust way is major milestone for any data-driven application. In order to streamline the entire process, we've built the IgxGrid with the CRUD capabilities in mind, providing out-of-the-box UI and flexible APIs. How will this benefit you? It will save you lots of time when implementing CRUD against any database out there. And when we talk about modern-day data-driven apps, it all comes down to robustness, speed, and flexibility.
+# トピックの重要ポイント
+堅牢な方法で CRUD を有効にすることは、データ駆動型アプリケーションにとって重要なマイルストーンです。プロセス全体を合理化するために、CRUD 機能を念頭に置いて IgxGrid を構築し、すぐに使用できる UI と柔軟な API を提供します。利点としては、任意のデータベースに対して CRUD を実装する場合、多くの時間を節約できます。そして、現代のデータ駆動型アプリに関しては、堅牢性、速度、柔軟性が最も重要です。
 
-# API References
+# API リファレンス
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 * [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html)
 * [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)

@@ -270,7 +270,7 @@ export class RemoteLoDService {
 
 CRUD API メソッドの呼び出しは,各グリッド インスタンスで可能です。
 
-Check out the How-to [igxGrid を使用して CRUD 操作を構築する](../general/how-to/how-to-perform-crud.md) topic.
+igxGrid を使用して [CRUD 操作を構築する方法](../general/how-to/how-to-perform-crud.md)のトピックをご覧ください。
 
 ## スタイル設定
 
