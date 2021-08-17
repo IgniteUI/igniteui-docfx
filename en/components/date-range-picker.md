@@ -145,7 +145,7 @@ When a Date Range Picker has two separate inputs, for start and end dates, it do
 </igx-date-range-picker>
 ```
 
-### Dropdown mode
+### Dialog mode
 
 The [`IgxDateRangePickerComponent`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html) component has two modes - dropdown (default) and dialog. To switch to `dialog` mode, do the following:
 
@@ -173,7 +173,7 @@ The Date Range Picker’s action buttons can be templated using the [`igxPickerA
 </code-view>
 
 ### Keyboard Navigation
-> Note: Use the demos for [Dropdown mode](#dropdown-mode) and [Display Separate Editable Inputs](#display-separate-editable-inputs) to try the keyboard combinations defined below.
+> Note: Use the demos for [Dialog mode](#dialog-mode) and [Display Separate Editable Inputs](#display-separate-editable-inputs) to try the keyboard combinations defined below.
 
 Opening and closing the [`IgxDateRangePickerComponent`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html) calendar UI with the keyboard is available only for `dropdown` mode and can be triggered via the key combinations below:
 
