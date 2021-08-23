@@ -264,7 +264,7 @@ export class HierarchicalGridBatchEditingSampleComponent {
 
 ## その他のリソース
 
-* [Build CRUD operations with igxGrid](../general/how-to/how-to-perform-crud.md)
+* [igxGrid を使用して CRUD 操作の構築](../general/how-to/how-to-perform-crud.md)
 * [@@igComponent 概要](@@igMainTopic.md)
 * [@@igComponent 編集](editing.md)
 * [@@igComponent 行編集](row-editing.md)
