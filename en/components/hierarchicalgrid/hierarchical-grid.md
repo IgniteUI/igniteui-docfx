@@ -269,7 +269,6 @@ See the [Grid Sizing](sizing.md) topic.
 
 Calling CRUD API methods should still be done through each separate grid instance.
 
-
 Check out the How-to [Build CRUD operations with igxGrid](../general/how-to/how-to-perform-crud.md) topic.
 
 ## Styling
