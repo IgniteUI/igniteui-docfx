@@ -457,6 +457,7 @@ See the [Grid Sizing](sizing.md) topic.
 * [열 핀 고정](column_pinning.md)
 * [열 크기 조정](column-resizing.md)
 * [선택](selection.md)
+* [Build CRUD operations with igxGrid](../general/how-to/how-to-perform-crud.md)
 
 <div class="divider--half"></div>
 커뮤니티는 활동적이고 새로운 아이디어를 항상 환영합니다.

@@ -39,6 +39,9 @@
     - name: Angular リアクティブ フォーム
       href: angular-reactive-form-validation.md
       new: true
+    - name: IgxGrid を使用して CRUD 操作の構築
+      href: general/how-to/how-to-perform-crud.md
+      new: true
 - name: Angular Schematics & Ignite UI CLI
   href: general/cli-overview.md
   new: false
