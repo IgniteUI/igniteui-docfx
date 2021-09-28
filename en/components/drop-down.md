@@ -1,14 +1,16 @@
 ---
-title: Drop Down Component
-_description: Use Ignite UI for Angular Drop Down component to display a list of items which supports a single item selection.
+title: Angular Drop Down Component –  Ignite UI For Angular
+_description: Add interactivity and see styling options to a scrollable list of items in your app. Get started using the Drop Down Component in Ignite UI for Angular now. 
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Drop Down components, Angular Drop Down controls
 ---
 
-# Drop Down
-<p class="highlight">The Ignite UI for Angular Drop Down component displays a scrollable list of items which may be visually grouped. Clicking or tapping an item selects it and closes the drop down</p>
+# Angular Drop Down Overview
+<p class="highlight">The Ignite UI for Angular Drop Down is a component, which displays a toggleable list of predefined values and allows users to easily select a single option item with a click. It can be quickly configured to act as a drop down menu or you can simply use it to deliver more useful visual information by grouping data. With grouping you can use both flat and hierarchical data. Drop Down component allows declarative binding, which makes it possible for you to embed additional content and links. This also leaves room for further UI customization and styling of the Angular drop down list appearance. In addition to this, it is packed with key features like keyboard dropdown navigation and virtualization. </p>
 <div class="divider"></div>
 
 ## Angular Drop Down Example
+
+This Angular drop down example demonstrates the basic functionalities of a drop down list. Click on it to expand the preset options, select an item, and then close the drop down.
 
 <code-view style="height:200px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -17,7 +19,9 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 <div class="divider--half"></div>
 
-## Usage
+## Getting Started with Ignite UI for Angular Drop Down
+
+See how you can easily configure the Ignite UI Drop Down component for your Angular app. The sections below explain how to import the IgxDropDownModule and create a simple Angular Drop Down list.
 
 ### First Steps
 
@@ -67,7 +71,9 @@ export class MyDropDownComponent {
 }
 ```
 
-## Examples
+## More Angular Drop Down Examples
+
+The default demo shows the use of a toggleable Drop Down List in Angular that lets end-users expand all predefined items and opt for one of them. Check out the following example and see the Angular Drop Down list in action.
 
 ### Predefined selected item
 Let's say we want to have a predefined selected item. One way to do this, is by handling the [opening]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#opening) event of the drop-down component.
