@@ -1,17 +1,17 @@
 ---
 title: Angular Drop Down コンポーネント –  Ignite UI For Angular
-_description: Add interactivity and see styling options to a scrollable list of items in your app. Get started using the Drop Down Component in Ignite UI for Angular now.
+_description: インタラクティブ機能を追加し、アプリ内の項目のスクロール可能なリストにスタイル設定オプションを表示します。今すぐ Ignite UI for Angular の Drop Down コンポーネントをお試しください。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Drop Down コンポーネント, Angular Drop Down コントロール
 _language: ja
 ---
 
 # Angular Drop Down の概要
-<p class="highlight">The Ignite UI for Angular Drop Down is a component, which displays a toggleable list of predefined values and allows users to easily select a single option item with a click. It can be quickly configured to act as a drop down menu or you can simply use it to deliver more useful visual information by grouping data. With grouping you can use both flat and hierarchical data. Drop Down component allows declarative binding, which makes it possible for you to embed additional content and links. This also leaves room for further UI customization and styling of the Angular drop down list appearance. In addition to this, it is packed with key features like keyboard dropdown navigation and virtualization. </p>
+<p class="highlight">Ignite UI for Angular Drop Down は事前定義された値の切り替え可能なリストを表示し、ユーザーがクリックするだけで 1 つのオプション項目を簡単に選択できるようにするコンポーネントです。ドロップダウン メニューとして機能するようにすばやく構成することも、データをグループ化することでより有用な視覚情報を提供するために使用することもできます。グループ化を使用すると、フラット データと階層データの両方を使用できます。Drop Down コンポーネントを使用すると、宣言型のバインディングが可能になり、追加のコンテンツやリンクを埋め込むことができます。これにより、UI をさらにカスタマイズして Angular ドロップダウン リストの外観をスタイル設定する余地も残されます。これに加えて、キーボードのドロップダウン ナビゲーションや仮想化などの主要な機能が満載です。</p>
 <div class="divider"></div>
 
 ## Angular Drop Down の例
 
-This Angular drop down example demonstrates the basic functionalities of a drop down list. Click on it to expand the preset options, select an item, and then close the drop down.
+この Angular ドロップダウンの例は、ドロップダウン リストの基本的な機能を示しています。それをクリックしてプリセット オプションを展開し、項目を選択して、ドロップダウンを閉じます。
 
 <code-view style="height:200px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -20,9 +20,9 @@ This Angular drop down example demonstrates the basic functionalities of a drop 
 
 <div class="divider--half"></div>
 
-## Getting Started with Ignite UI for Angular Drop Down
+## Ignite UI for Angular Drop Down で作業を開始
 
-See how you can easily configure the Ignite UI Drop Down component for your Angular app. The sections below explain how to import the IgxDropDownModule and create a simple Angular Drop Down list.
+Angular アプリの Ignite UI Drop Down コンポーネントを簡単に構成する方法をご覧ください。以下のセクションでは、IgxDropDownModule をインポートし、単純な Angular Drop Down リストを作成する方法について説明します。
 
 ### はじめに
 
@@ -72,9 +72,9 @@ export class MyDropDownComponent {
 }
 ```
 
-## More Angular Drop Down Examples
+## その他の Angular Drop Down の例
 
-The default demo shows the use of a toggleable Drop Down List in Angular that lets end-users expand all predefined items and opt for one of them. Check out the following example and see the Angular Drop Down list in action.
+デフォルトのデモでは、Angular で切り替え可能な Drop Down リストを使用して、エンドユーザーが事前定義されたすべての項目を展開し、そのうちの 1 つを選択できるようにしています。次の例は、Angular Drop Down リストの動作を示しています。
 
 ### 定義済みの選択項目
 定義済みの選択項目を作成したいとします。1 つの方法は、ドロップダウン コンポーネントの [opening]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#opening) イベントを処理することです。
