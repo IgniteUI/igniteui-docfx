@@ -181,6 +181,18 @@ It is now possible to export @@igComponent with defined [multi-column headers](m
 </code-view>
 }
 
+## Export Grid with Frozen Column Headers
+
+By default Excel Exporter service exports the grid with scrollable (unfrozen) column headers. There are scenarios in which you may want to freeze all headers on top of the exported excel file so they always stay in view as the user scrolls through the records. To achieve this you could set the [exporter option]({environment:angularApiUrl}/classes/igxexporteroptionsbase.html) [freezeHeaders]({environment:angularApiUrl}/classes/igxexporteroptionsbase.html#freezeHeaders) to `true`.
+
+```typescript
+public exportButtonHandler() {
+        const exporterOptions = new IgxExcelExporterOptions('ExportedDataFile');
+        exporterOptions.freezeHeaders = true;
+        this.excelExportService.export(this.grid, exporterOptions);
+    }
+```
+
 ## Customizing the Exported Content
 
 In the above examples the Excel Exporter service was exporting all available data. There are situations in which you may want to skip exporting a row or even an entire column. To achieve this you may hook to the [`columnExporting`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#columnexporting) and/or [`rowExporting`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#rowexporting) events which are fired respectively for each column and/or each row and cancel the respective event by setting the event argument object's [`cancel`]({environment:angularApiUrl}/interfaces/irowexportingeventargs.html#cancel) property to `true`.
