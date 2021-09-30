@@ -7,7 +7,7 @@ _language: ja
 
 # ローカライズ (i18n)
 
-現在、Ignite UI for Angular は、次の言語とスクリプトのリソース文字列で出荷されます: ブルガリア語、チェコ語、デンマーク語、オランダ語、フランス語、ドイツ語、ハンガリー語、イタリア語、日本語、韓国語、ポーランド語、ポルトガル語、ルーマニア語、スペイン語、スウェーデン語、トルコ語、繁体字中国語、簡体字中国語。これらは `igniteui-angular-i18n` パッケージを介して使用できます。
+現在、Ignite UI for Angular は、次の言語とスクリプトのリソース文字列で出荷されます: ブルガリア語、チェコ語、デンマーク語、オランダ語、フランス語、ドイツ語、ハンガリー語、イタリア語、日本語、韓国語、ノルウェー語、ポーランド語、ポルトガル語、ルーマニア語、スペイン語、スウェーデン語、トルコ語、繁体字中国語、簡体字中国語。これらは `igniteui-angular-i18n` パッケージを介して使用できます。
 
 最小限のコードで Ignite UI for Angular コンポーネントの文字列を簡単にローカライズできます。
 
@@ -139,7 +139,8 @@ this.grid.resourceStrings = newGridRes;
 * [IgxResourceStringsHU](https://github.com/IgniteUI/igniteui-angular/tree/master/projects/igniteui-angular-i18n/src/i18n/HU/resources.ts)
 * [IgxResourceStringsIT](https://github.com/IgniteUI/igniteui-angular/tree/master/projects/igniteui-angular-i18n/src/i18n/IT/resources.ts) 
 * [IgxResourceStringsJA](https://github.com/IgniteUI/igniteui-angular/tree/master/projects/igniteui-angular-i18n/src/i18n/JA/resources.ts) 
-* [IgxResourceStringsKO](https://github.com/IgniteUI/igniteui-angular/tree/master/projects/igniteui-angular-i18n/src/i18n/KO/resources.ts) 
+* [IgxResourceStringsKO](https://github.com/IgniteUI/igniteui-angular/tree/master/projects/igniteui-angular-i18n/src/i18n/KO/resources.ts)
+* [IgxResourceStringsNB](https://github.com/IgniteUI/igniteui-angular/tree/master/projects/igniteui-angular-i18n/src/i18n/NB/resources.ts)
 * [IgxResourceStringsNL](https://github.com/IgniteUI/igniteui-angular/tree/master/projects/igniteui-angular-i18n/src/i18n/NL/resources.ts)
 * [IgxResourceStringsPL](https://github.com/IgniteUI/igniteui-angular/tree/master/projects/igniteui-angular-i18n/src/i18n/PL/resources.ts)
 * [IgxResourceStringsPT](https://github.com/IgniteUI/igniteui-angular/tree/master/projects/igniteui-angular-i18n/src/i18n/PT/resources.ts)
