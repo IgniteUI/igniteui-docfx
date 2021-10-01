@@ -228,6 +228,7 @@
     - name: Conditional Styling
       href: grid/conditional-cell-styling.md
       new: false
+      updated: true
     - name: Keyboard navigation
       href: grid/keyboard-navigation.md
       new: false
@@ -363,6 +364,7 @@
     - name: Conditional Styling
       href: treegrid/conditional-cell-styling.md
       new: false
+      updated: true
     - name: Group By
       href: treegrid/groupby.md
       updated: true
@@ -487,6 +489,10 @@
     - name: Collapsible Column Groups
       href: hierarchicalgrid/collapsible-column-groups.md
       new: false
+    - name: Conditional Styling
+      href: hierarchicalgrid/conditional-cell-styling.md
+      new: false
+      updated: true
     - name: Display Density
       href: hierarchicalgrid/display-density.md
       new: false
