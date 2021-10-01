@@ -43,7 +43,7 @@ igxGridState ディレクティブによって開発者がグリッドの状態�
 * `展開`
 * `グループ化`
 * `複数の列`
-    * NEW: Multi column headers are now supported out of the box
+    * 複数列ヘッダーが標準でサポートされるようになりました。
     * 列の順序
     * [`IColumnState`]({environment:angularApiUrl}/interfaces/icolumnstate.html) インターフェイスによって定義される列プロパティ。
     * 列テンプレートおよび関数はアプリケーション レベルのコードを使用して復元されます。[列の復元](state-persistence.md#restoring-columns)セクションを参照してください。
@@ -62,7 +62,7 @@ igxGridState ディレクティブによって開発者がグリッドの状態�
 * `行のピン固定`
 * `展開`
 * `複数の列`
-    * NEW: Multi column headers are now supported out of the box
+    * 複数列ヘッダーが標準でサポートされるようになりました。
     * 列の順序
     * [`IColumnState`]({environment:angularApiUrl}/interfaces/icolumnstate.html) インターフェイスによって定義される列プロパティ。
     * 列テンプレートおよび関数はアプリケーション レベルのコードを使用して復元されます。[列の復元](state-persistence.md#列の復元)セクションを参照してください。
