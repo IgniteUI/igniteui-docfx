@@ -225,7 +225,7 @@
     - name: Display Density
       href: grid/display-density.md
       new: false
-    - name: Conditional Cell Styling
+    - name: Conditional Styling
       href: grid/conditional-cell-styling.md
       new: false
     - name: Keyboard navigation
@@ -360,7 +360,7 @@
     - name: Display Density
       href: treegrid/display-density.md
       new: false
-    - name: Conditional Cell Styling
+    - name: Conditional Styling
       href: treegrid/conditional-cell-styling.md
       new: false
     - name: Group By
