@@ -171,6 +171,42 @@ export class AppModule {}
 
 内部の [`IgxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html) は @@igComponent に自動的に提供されます。行の状態が送信またはキャンセルされるまで、保留中のセルの変更を保持します。
 
+## プログラムで行の追加を開始
+
+@@igComponent を使用すると、2 つの異なるパブリック メソッドを使用して、プログラムで行追加 UI を生成できます。1 つは UI が生成される行を指定するための行 ID を受け入れ、もう 1 つはインデックスによって機能します。これらのメソッドを使用して、現在のデータ ビュー内の任意の場所に UI を生成できます。ページの変更や、たとえばフィルターで除外された行の指定はサポートされていません。
+
+`beginAddRowById` を使用するには、rowID (PK) によって操作のコンテキストとして使用する行を指定する必要があります。このメソッドは、エンドユーザーが指定された行の [行の追加] アクション ストリップ ボタンをクリックしたかのように機能し、その下に UI を生成します。@@if (igxName === 'IgxTreeGrid') { 2 番目のパラメーターは、行を子としてコンテキスト行に追加するか、兄弟として追加するかを制御します。} 最初のパラメーターに `null` を渡すことで、UI をグリッドの最初の行としてス生成させることもできます。
+
+@@if (igxName !== 'IgxTreeGrid') {
+```typescript
+this.grid.beginAddRowById('ALFKI');  // spawns the add row UI under the row with PK 'ALFKI'
+this.grid.beginAddRowById(null);     // spawns the add row UI as the first record
+```
+}
+@@if (igxName === 'IgxTreeGrid') {
+```typescript
+this.treeGrid.beginAddRowById('ALFKI', true);   // spawns the add row UI to add a child for the row with PK 'ALFKI'
+this.treeGrid.beginAddRowById(null);            // spawns the add row UI as the first record
+```
+}
+
+@@if (igxName !== 'IgxTreeGrid') {
+`beginAddRowByIndex`メソッドも同様に機能しますが、UI が生成されるインデックスを指定する必要があります。許可される値の範囲は、0 からデータ ビューのサイズ -1 までです。
+
+```typescript
+this.grid.beginAddRowByIndex(10);   // spawns the add row UI at index 10
+this.grid.beginAddRowByIndex(0);    // spawns the add row UI as the first record
+```
+}
+@@if (igxName === 'IgxTreeGrid') {
+`beginAddRowByIndex` メソッドも同様に機能しますが、コンテキストとして使用する行はインデックスによって指定されます。
+
+```typescript
+this.treeGrid.beginAddRowByIndex(10, true);   // spawns the add row UI to add a child for the row at index 10
+this.treeGrid.beginAddRowByIndex(null);       // spawns the add row UI as the first record
+```
+}
+
 ## 位置
 
 - 行追加 UI のデフォルト位置は、エンド ユーザーが [行の追加] ボタンをクリックした行の下にあります。
