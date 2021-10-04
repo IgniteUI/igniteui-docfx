@@ -191,7 +191,7 @@ this.treeGrid.beginAddRowById(null);            // spawns the add row UI as the 
 }
 
 @@if (igxName !== 'IgxTreeGrid') {
-`beginAddRowByIndex`メソッドも同様に機能しますが、UI が生成されるインデックスを指定する必要があります。許可される値の範囲は、0 からデータ ビューのサイズ -1 までです。
+`beginAddRowByIndex` メソッドも同様に機能しますが、UI が生成されるインデックスを指定する必要があります。許可される値の範囲は、0 からデータ ビューのサイズ -1 までです。
 
 ```typescript
 this.grid.beginAddRowByIndex(10);   // spawns the add row UI at index 10
