@@ -17,6 +17,7 @@ Ignite UI for Angular 株価チャート (Angular ファイナンシャル チ�
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-multiple-data"
+           github-src="charts/financial-chart/multiple-data"
            alt="Angular 株価チャートの例" >
 </code-view>
 
@@ -66,6 +67,7 @@ Ignite UI for Angular 株価チャート (Angular ファイナンシャル チ�
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-multiple-data"
+           github-src="charts/financial-chart/multiple-data"
            alt="Angular 株価指数チャート" >
 </code-view>
 
@@ -78,6 +80,7 @@ Ignite UI for Angular 株価チャート (Angular ファイナンシャル チ�
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-stock-index-chart"
+           github-src="charts/financial-chart/stock-index-chart"
            alt="Angular 株価指数チャート" >
 </code-view>
 
@@ -108,6 +111,7 @@ Ignite UI for Angular 株価チャート (Angular ファイナンシャル チ�
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-annotations"
+           github-src="charts/financial-chart/annotations"
            alt="Angular チャートの注釈" >
 </code-view>
 
@@ -149,6 +153,7 @@ Ignite UI for Angular 株価チャート (Angular ファイナンシャル チ�
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-panes"
+           github-src="charts/financial-chart/panes"
            alt="Angular チャートのペイン" >
 </code-view>
 

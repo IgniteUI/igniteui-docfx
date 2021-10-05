@@ -19,6 +19,7 @@ Ignite UI for Angular ラジアル エリア チャートは、データ ポイ�
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-radial-area-chart"
+           github-src="charts/data-chart/radial-area-chart"
            alt="Angular ラジアル エリア チャート" >
 </code-view>
 
@@ -33,6 +34,7 @@ Ignite UI for Angular ラジアル エリア チャートは、データ ポイ�
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-radial-column-chart"
+           github-src="charts/data-chart/radial-column-chart"
            alt="Angular ラジアル縦棒チャート" >
 </code-view>
 
@@ -47,6 +49,7 @@ Ignite UI for Angular ラジアル折れ線チャートは、データ ポイン
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-radial-line-chart"
+           github-src="charts/data-chart/radial-line-chart"
            alt="Angular ラジアル折れ線チャート" >
 </code-view>
 
@@ -61,6 +64,7 @@ Ignite UI for Angular ラジアル折れ線チャートは、データ ポイン
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-radial-pie-chart"
+           github-src="charts/data-chart/radial-pie-chart"
            alt="Angular ラジアル円チャート" >
 </code-view>
 
@@ -75,6 +79,7 @@ Ignite UI for Angular ラジアル折れ線チャートは、データ ポイン
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-radial-area-chart-styling"
+           github-src="charts/data-chart/radial-area-chart-styling"
            alt="Angular ラジアル エリア チャートのスタイル設定" >
 </code-view>
 

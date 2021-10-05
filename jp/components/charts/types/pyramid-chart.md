@@ -17,6 +17,7 @@ Ignite UI for Angular ピラミッド チャートは、年齢ピラミッドま
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-pyramid-chart"
+           github-src="charts/data-chart/pyramid-chart"
            alt="Angular ピラミッド チャートの例" >
 </code-view>
 

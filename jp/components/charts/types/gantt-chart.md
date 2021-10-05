@@ -17,6 +17,7 @@ Ignite UI for Angular ガント チャートは棒チャートの一種で、さ
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-gantt-chart"
+           github-src="charts/data-chart/gantt-chart"
            alt="Angular ガント チャートの例" >
 </code-view>
 

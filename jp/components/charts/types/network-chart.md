@@ -19,6 +19,7 @@ Ignite UI for Angular ネットワーク チャートは、ネットワーク �
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-network-polar-chart"
+           github-src="charts/data-chart/network-polar-chart"
            alt="Angular ネットワーク極座標チャート" >
 </code-view>
 
@@ -31,6 +32,7 @@ Ignite UI for Angular ネットワーク チャートは、ネットワーク �
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-network-scatter-chart"
+           github-src="charts/data-chart/network-scatter-chart"
            alt="Angular ネットワーク散布図" >
 </code-view>
 
