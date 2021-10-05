@@ -182,6 +182,18 @@ public exportButtonHandler() {
 </code-view>
 }
 
+## 固定された列ヘッダーを使用してグリッドをエクスポートする
+
+デフォルトでは、Excel エクスポーター サービスは、スクロール可能な (固定されていない) 列ヘッダーを使用してグリッドをエクスポートします。エクスポートされた Excel ファイルの上にあるすべてのヘッダーを固定して、ユーザーがレコードをスクロールしても常に表示されたままにするシナリオがあります。これを実現するには、[エクスポーター オプション]({environment:angularApiUrl}/classes/igxexporteroptionsbase.html) [freezeHeaders]({environment:angularApiUrl}/classes/igxexporteroptionsbase.html#freezeHeaders) を `true` に設定します。
+
+```typescript
+public exportButtonHandler() {
+        const exporterOptions = new IgxExcelExporterOptions('ExportedDataFile');
+        exporterOptions.freezeHeaders = true;
+        this.excelExportService.export(this.grid, exporterOptions);
+    }
+```
+
 ## エクスポートするコンテンツのカスタマイズ
 
 上記の例では、Excel Exporter サービスで利用可能なデータをすべてエクスポートしました。行または列全体のエクスポートをしない方が良い場合があります。実装は、各列で発生される [`columnExporting`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#columnexporting) または各行で発生される [`rowExporting`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#rowexporting) イベントを処理し、イベント引数オブジェクトの [`cancel`]({environment:angularApiUrl}/interfaces/irowexportingeventargs.html#cancel) プロパティを `true` に設定して各イベントをキャンセルします。
@@ -206,7 +218,6 @@ this.excelExportService.export(this.@@igObjectRef, new IgxExcelExporterOptions("
 |制限|説明|
 |--- |--- |
 |ワークシートの最大サイズ|Excel でサポートされているワークシートの最大サイズは、1,048,576 行 x 16,384 列です。|
-|複数列ヘッダーのエクスポート|Excel エクスポーター サービスは、複数列ヘッダーを持つ @@ igComponent のエクスポートをサポートしていません。|
 }
 
 @@if (igxName === 'IgxTreeGrid') {
@@ -214,7 +225,6 @@ this.excelExportService.export(this.@@igObjectRef, new IgxExcelExporterOptions("
 |--- |--- |
 |階層レベル|Excel エクスポーター サービスは、最大 8 レベルの階層を作成できます。|
 |ワークシートの最大サイズ|Excel でサポートされているワークシートの最大サイズは、1,048,576 行 x 16,384 列です。|
-|複数列ヘッダーのエクスポート|Excel エクスポーター サービスは、複数列ヘッダーを持つ @@ igComponent のエクスポートをサポートしていません。|
 }
 
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -222,7 +232,6 @@ this.excelExportService.export(this.@@igObjectRef, new IgxExcelExporterOptions("
 |--- |--- |
 |階層レベル|Excel エクスポーター サービスは、最大 8 レベルの階層を作成できます。|
 |ワークシートの最大サイズ|Excel でサポートされているワークシートの最大サイズは、1,048,576 行 x 16,384 列です。|
-|複数列ヘッダーのエクスポート|Excel エクスポーター サービスは、複数列ヘッダーを持つ @@igComponent のエクスポートをサポートしていません。|
 |ピン固定列された列のエクスポート|エクスポートされた Excel ファイルでは、ピン固定列は固定されませんが、グリッドに表示されるのと同じ順序で表示されます。|
 }
 
