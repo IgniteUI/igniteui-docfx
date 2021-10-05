@@ -24,19 +24,19 @@ _language: ja
 }
 
 # @@igComponent 条件付きスタイル設定
-If you need to provide any custom styling in the @@igxName component, you can do it on either row or cell level.
+@@igxName コンポーネントでカスタム スタイルを提供する必要がある場合は、行レベルまたはセル レベルで行うことができます。
 
-## @@igComponent Conditional Row Styling
+## @@igComponent 条件付き行のスタイル設定
 
-The @@igxName component in Ignite UI for Angular provides two ways to **conditional styling of rows** based on custom rules.
+Ignite UI for Angular の @@igxName コンポーネントは、カスタム ルールに基づいて**行の条件付きスタイル設定**を作成する次の 2 つの方法を提供します:
 
-- By setting [`rowClasses`]({environment:angularApiUrl}/classes/IgxGridBaseDirective.html#rowClasses) input on the @@igxName component;
-- By setting [`rowStyles`]({environment:angularApiUrl}/classes/IgxGridBaseDirective.html#rowStyles) input on the @@igxName component;
+- @@igxName コンポーネントで [`rowClasses`]({environment:angularApiUrl}/classes/IgxGridBaseDirective.html#rowClasses) 入力を設定する方法。
+- @@igxName コンポーネントで [`rowStyles`]({environment:angularApiUrl}/classes/IgxGridBaseDirective.html#rowStyles) 入力を設定する方法。
 
-Further in this topic wi will cover both of them in more details.
+さらにこのトピックでは、両方について詳しく説明します。
 
-### Using rowClasses
-You can conditionally style the @@igxName rows by setting the [`rowClasses`]({environment:angularApiUrl}/classes/IgxGridBaseDirective.html#rowClasses) input and define custom rules.
+### rowClasses の使用
+[`rowClasses`]({environment:angularApiUrl}/classes/IgxGridBaseDirective.html#rowClasses) 入力を設定し、カスタム ルールを定義することで、@@igxName 行のスタイルを条件付きで設定できます。
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -63,7 +63,7 @@ You can conditionally style the @@igxName rows by setting the [`rowClasses`]({en
 }
 
 
-The [`rowClasses`]({environment:angularApiUrl}/classes/IgxGridBaseDirective.html#rowClasses) input accepts an object literal, containing key-value pairs, where the key is the name of the CSS class, while the value is either a callback function that returns a boolean, or boolean value.
+[`rowClasses`]({environment:angularApiUrl}/classes/IgxGridBaseDirective.html#rowClasses) 入力は、キー値のペアを含むオブジェクト リテラルを受け入れます。ここで、キーは CSS クラスの名前であり、値はブール値またはブール値を返すコールバック関数となります。
 
 ```typescript
 // sample.component.ts
@@ -86,7 +86,7 @@ public activeRowCondition = (row: RowType) => this.grid?.navigation.activeNode?.
 }
 ```
 
-Use **::ng-deep** or **`ViewEncapsulation.None`** to force the custom styles down through the current component and its children.
+**::ng-deep** または **`ViewEncapsulation.None`** を使用してカスタム スタイルを現在のコンポーネントとその子コンポーネントに適用します。
 
 
 
@@ -117,16 +117,16 @@ Use **::ng-deep** or **`ViewEncapsulation.None`** to force the custom styles dow
 <div class="divider--half"></div>
 
 
-### Using rowStyles
-Columns now expose the `rowStyles` property which allows conditional styling of the data rows. Similar to `rowClasses` it accepts an object literal where the keys are style properties and the values are expressions for evaluation. Also, you can apply regular styling (without any conditions).
+### rowStyles の使用
+列は、データ行の条件付きスタイル設定を可能にする `rowStyles` プロパティを公開するようになりました。`rowClasses` と同様、キーがスタイル プロパティであり、値が評価用の式であるオブジェクト リテラルを受け取ります。また、通常のスタイル設定 (条件なし) を適用することもできます。
 
-> The callback signature for both `rowStyles` and `rowClasses` is:
+> `rowStyles` と `rowClasses` の両方のコールバック署名は次のとおりです:
 
 ```ts
 (rowData: RowType) => boolean
 ```
 
-Let's define our styles:
+次にスタイルを定義します。
 
 ```typescript
 // component.ts

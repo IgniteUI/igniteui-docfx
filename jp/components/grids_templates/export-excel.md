@@ -182,9 +182,9 @@ public exportButtonHandler() {
 </code-view>
 }
 
-## Export Grid with Frozen Column Headers
+## 固定された列ヘッダーを使用してグリッドをエクスポートする
 
-By default Excel Exporter service exports the grid with scrollable (unfrozen) column headers. There are scenarios in which you may want to freeze all headers on top of the exported excel file so they always stay in view as the user scrolls through the records. To achieve this you could set the [exporter option]({environment:angularApiUrl}/classes/igxexporteroptionsbase.html) [freezeHeaders]({environment:angularApiUrl}/classes/igxexporteroptionsbase.html#freezeHeaders) to `true`.
+デフォルトでは、Excel エクスポーター サービスは、スクロール可能な (固定されていない) 列ヘッダーを使用してグリッドをエクスポートします。エクスポートされた Excel ファイルの上にあるすべてのヘッダーを固定して、ユーザーがレコードをスクロールしても常に表示されたままにするシナリオがあります。これを実現するには、[エクスポーター オプション]({environment:angularApiUrl}/classes/igxexporteroptionsbase.html) [freezeHeaders]({environment:angularApiUrl}/classes/igxexporteroptionsbase.html#freezeHeaders) を `true` に設定します。
 
 ```typescript
 public exportButtonHandler() {

@@ -404,8 +404,8 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
 
 @@if (igxName === 'IgxTreeGrid') {
     
-## Matching Records Only Filtering Strategy
-By default, after a filtering is applied, the Tree Grid component displays the records matching the criterion that have been set and their parents in a grayed-out fashion to provide additional context. However, in some cases, you may want to display only the records matching particular filtering condition without any trace for their parents. This can be achieved by using the `TreeGridMatchingRecordsOnlyFilteringStrategy`:
+## マッチング レコードのみのフィルタリング方式
+デフォルトでは、フィルタリングが適用された後、ツリー グリッド コンポーネントは、設定された基準に一致するレコードとその親をグレー表示されて、追加のコンテキストを提供します。ただし、場合によっては、親のトレースなしで、特定のフィルタリング条件に一致するレコードのみを表示したいことがあります。これは、`TreeGridMatchingRecordsOnlyFilteringStrategy` を使用して実現できます。
 
 ```html
 <igx-grid #grid1 [data]="data" [allowFiltering]="true" [filterStrategy]="matchingRecordsOnlyStrategy">
