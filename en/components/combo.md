@@ -11,7 +11,7 @@ The Angular ComboBox component represents a drop-down list that provides editabl
 
 ## Angular ComboBox Example
 
-In this Angular ComboBox example, you can see how users can filter items and perform single or multiple selection with the provided data. In addition, the ComboBox expose keyboard navigation and custom styling capabilities.
+In this Angular ComboBox example, you can see how users can filter items and perform single or multiple selection with the provided data. In addition, the ComboBox exposes keyboard navigation and custom styling capabilities.
 
 <div class="divider--half"></div>
 
@@ -238,9 +238,9 @@ When igxCombo is opened and list item is focused:
 
 - `Esc` will close the list.
 
-When igxCombo is opened, allow custom values are enabled and add item button is focused:
+When igxCombo is opened, [`allowCustomValues`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#allowcustomvalues) is enabled and add item button is focused:
 
-- `Enter` will add a new item with valueKey and displayKey equal to the text in the search input and will select the new item.
+- `Enter` will add a new item with `valueKey` and `displayKey` equal to the text in the search input and will select the new item.
 
 - `ArrowUp` focus will be moved back to the last list item or if the list is empty, will be moved to the search input.
 
