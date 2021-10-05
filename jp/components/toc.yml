@@ -226,9 +226,10 @@
     - name: 表示密度
       href: grid/display-density.md
       new: false
-    - name: 条件付きセルのスタイル設定
+    - name: 条件付きスタイル設定
       href: grid/conditional-cell-styling.md
       new: false
+      updated: true
     - name: キーボード ナビゲーション
       href: grid/keyboard-navigation.md
       new: false
@@ -361,9 +362,10 @@
     - name: 表示密度
       href: treegrid/display-density.md
       new: false
-    - name: 条件付きセルのスタイル設定
+    - name: 条件付きスタイル設定
       href: treegrid/conditional-cell-styling.md
       new: false
+      updated: true
     - name: グループ化
       href: treegrid/groupby.md
       updated: true
@@ -488,6 +490,10 @@
     - name: 列グループの折りたたみ
       href: hierarchicalgrid/collapsible-column-groups.md
       new: false
+    - name: 条件付きスタイル設定
+      href: hierarchicalgrid/conditional-cell-styling.md
+      new: false
+      updated: true
     - name: 表示密度
       href: hierarchicalgrid/display-density.md
       new: false
