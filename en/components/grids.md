@@ -180,8 +180,8 @@ In this Angular grid example, you can see how users can customize their view of 
 <div class="divider--half"></div>
 
 <code-view style="height: 435px"
-           data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grids/data-grid-overview"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/grids/data-grid-overview"
            alt="Angular Grid Example" >
 </code-view>
 
@@ -223,8 +223,8 @@ This example demonstrates a few of the data grid’s key features:
 <span class="h3">Demo</span>
 
 <code-view style="height: 435px"
-           data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grids/data-grid-type-marketing-table"  >
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/grids/data-grid-type-marketing-table"  >
 </code-view>
 
 <div class="divider--half"></div>

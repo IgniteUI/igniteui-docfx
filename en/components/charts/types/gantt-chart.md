@@ -16,6 +16,7 @@ The following example demonstrates how to create Gantt Chart using [`IgxScatterP
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-gantt-chart"
+           github-src="charts/data-chart/gantt-chart"
            alt="Angular Gantt Chart Example" >
 </code-view>
 

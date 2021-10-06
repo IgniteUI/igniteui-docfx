@@ -16,6 +16,7 @@ You can create Stock Chart using the [`IgxFinancialChartComponent`]({environment
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-multiple-data"
+           github-src="charts/financial-chart/multiple-data"
            alt="Angular Stock Chart Example" >
 </code-view>
 
@@ -65,6 +66,7 @@ As a Stock Chart is meant to allow the user to perform data analysis functions, 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-multiple-data"
+           github-src="charts/financial-chart/multiple-data"
            alt="Angular Stock Index Chart" >
 </code-view>
 
@@ -77,6 +79,7 @@ In this example the Stock Chart is representing the S&P 500 over the course of a
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-stock-index-chart"
+           github-src="charts/financial-chart/stock-index-chart"
            alt="Angular Stock Index Chart" >
 </code-view>
 
@@ -107,6 +110,7 @@ Note: When using the ordinal X axis mode, the CalloutsXMemberPath should point t
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-annotations"
+           github-src="charts/financial-chart/annotations"
            alt="Angular Chart Annotations" >
 </code-view>
 
@@ -149,6 +153,7 @@ In this example, the stock chart is plotting revenue for United States.
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-panes"
+           github-src="charts/financial-chart/panes"
            alt="Angular Chart Panes" >
 </code-view>
 

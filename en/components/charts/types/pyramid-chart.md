@@ -16,6 +16,7 @@ The following example demonstrates how to create Pyramid Chart using [`IgxBarSer
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-pyramid-chart"
+           github-src="charts/data-chart/pyramid-chart"
            alt="Angular Pyramid Chart Example" >
 </code-view>
 

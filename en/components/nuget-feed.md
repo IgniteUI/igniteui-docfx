@@ -1,3 +1,10 @@
+---
+title: Infragistics NuGet Feed
+_description: Infragistics NuGet Feed for Angular components.
+_keywords: Angular, NuGet, Feed, Infragistics
+mentionedTypes: []
+---
+
 # Infragistics NuGet Feed
 
 Infragistics provides a private NuGet feed for licensed users to consume and add licensed Ignite UI for Blazor NuGet packages to their applications via the NuGet Package Manager.
@@ -13,7 +20,7 @@ This topic contains the following sections:
 
 <img src="../images/nuget-package-manager-setting-menu-item.jpg" />
 
-2 - In the **Package Sources** section, add a new package source by clicking the **plus icon** in the top right corner of the dialog. 
+2 - In the **Package Sources** section, add a new package source by clicking the **plus icon** in the top right corner of the dialog.
 
 -   Set the Name to **Infragistics**
 -   Set the Source to **<https://packages.infragistics.com/nuget/licensed>**
@@ -31,7 +38,7 @@ This topic contains the following sections:
 2 - Open a command prompt in the folder path of the `nuget.exe` file you just downloaded.
 3 - Execute the following command
 
-    nuget sources add -name "Infragistics" -source "https://packages.infragistics.com/nuget/licensed" -username "your login email" -password "your password" 
+    nuget sources add -name "Infragistics" -source "https://packages.infragistics.com/nuget/licensed" -username "your login email" -password "your password"
 
 > [!Note]
 > The password will be stored encrypted in the NuGet config file and can only be decrypted in the same user context as it was encrypted. The default location of the config file can be found here `%AppData%\NuGet\NuGet.config`

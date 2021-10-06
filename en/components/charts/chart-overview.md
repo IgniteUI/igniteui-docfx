@@ -42,6 +42,7 @@ The Angular Bar Chart, or Bar Graph is among the most common category chart type
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-bar-chart-multiple-sources"
+           github-src="charts/data-chart/bar-chart-multiple-sources"
            alt="Angular Bar Chart Multiple Sources" >
 </code-view>
 
@@ -54,6 +55,7 @@ The Angular Pie Chart, or Pie Graph, is a very common part-to-whole chart type. 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart-overview"
+           github-src="charts/pie-chart/overview"
            alt="Angular Pie Chart Overview" >
 </code-view>
 
@@ -66,6 +68,7 @@ The Angular Line Chart, or Line Graph is a type of category line graph shows the
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-line-chart-multiple-sources"
+           github-src="charts/category-chart/line-chart-multiple-sources"
            alt="Angular Line Chart Multiple Sources" >
 </code-view>
 
@@ -78,6 +81,7 @@ The Angular Donut Chart or Donut Graph, is a variant of a Pie Chart, proportiona
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/doughnut-chart-legend"
+           github-src="charts/doughnut-chart/doughnut-chart-legend"
            alt="Angular Doughnut Legend" >
 </code-view>
 
@@ -90,6 +94,7 @@ The Angular Area Chart is rendered using a collection of points connected by str
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-area-chart-multiple-sources"
+           github-src="charts/category-chart/area-chart-multiple-sources"
            alt="Angular Area Chart Multiple Sources" >
 </code-view>
 
@@ -115,6 +120,7 @@ The Angular Bubble Chart, or Bubble Graph, is used to show data comprising of th
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-scatter-bubble-chart-multiple-sources"
+           github-src="charts/data-chart/scatter-bubble-chart-multiple-sources"
            alt="Angular Bubble Chart" >
 </code-view>
 
@@ -127,6 +133,7 @@ The Angular Financial or Stock Chart, is a composite visualization that renders 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-multiple-data"
+           github-src="charts/financial-chart/multiple-data"
            alt="Angular Stock Chart Example" >
 </code-view>
 
@@ -139,6 +146,7 @@ The Angular Column Chart, or Column Graph is among the most common category char
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-column-chart-multiple-sources"
+           github-src="charts/category-chart/column-chart-multiple-sources"
            alt="Angular Column Chart Multiple Sources" >
 </code-view>
 
@@ -151,6 +159,7 @@ The Angular Composite Chart, also called a Combo Chart, is visualization that co
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-composite-chart"
+           github-src="charts/data-chart/composite-chart"
            alt="Angular Composite Chart Example" >
 </code-view>
 
@@ -171,6 +180,7 @@ The Angular Polar Area Chart or Polar Graph belongs to a group of polar charts a
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-polar-line-chart"
+           github-src="charts/data-chart/polar-line-chart"
            alt="Angular Polar Line Chart" >
 </code-view>
 
@@ -187,6 +197,7 @@ The Angular Scatter Chart, or Scatter Graph, is used to show the relationship be
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-scatter-point-chart"
+           github-src="charts/data-chart/scatter-point-chart"
            alt="Angular Scatter Marker Chart" >
 </code-view>
 
@@ -199,6 +210,7 @@ The Angular Shape Charts is a group of chart that take array of shapes (array or
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-scatter-polygon-series"
+           github-src="charts/data-chart/type-scatter-polygon-series"
            alt="Angular Scatter Polygon Chart" >
 </code-view>
 
@@ -211,6 +223,7 @@ The Angular Spline Chart, or Spline Graph is a type of category line graph shows
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-spline-multiple-sources"
+           github-src="charts/category-chart/spline-multiple-sources"
            alt="Angular Spline Chart Multiple Sources" >
 </code-view>
 
@@ -223,6 +236,7 @@ The Angular Step Chart, or Step Graph, is a category charts that renders a colle
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-step-line-multiple-sources"
+           github-src="charts/category-chart/step-line-multiple-sources"
            alt="Angular Step Line Chart Multiple Sources" >
 </code-view>
 

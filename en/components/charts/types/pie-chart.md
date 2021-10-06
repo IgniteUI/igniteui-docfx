@@ -18,6 +18,7 @@ This example of an Angular Pie Chart includes a simple data set with 6 values. E
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart-overview"
+           github-src="charts/pie-chart/overview"
            alt="Angular Pie Chart Overview" >
 </code-view>
 
@@ -75,6 +76,7 @@ Additionally you can use the [`legendItemTemplate`]({environment:dvApiBaseUrl}/p
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart-legend"
+           github-src="charts/pie-chart/legend"
            alt="Angular Pie Chart Legend" >
 </code-view>
 
@@ -91,6 +93,7 @@ If you set [`othersCategoryType`]({environment:dvApiBaseUrl}/products/ignite-ui-
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart-others"
+           github-src="charts/pie-chart/others"
            alt="Angular Pie Chart Others" >
 </code-view>
 
@@ -103,6 +106,7 @@ The pie chart supports explosion of individual pie slices as well as a `SliceCli
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart-explosion"
+           github-src="charts/pie-chart/explosion"
            alt="Angular Pie Chart Explosion" >
 </code-view>
 
@@ -134,6 +138,7 @@ For scenarios where you click on the Others slice, the pie chart will return an 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart-selection"
+           github-src="charts/pie-chart/selection"
            alt="Angular Pie Chart Selection" >
 </code-view>
 
@@ -148,6 +153,7 @@ In the code below, the radiusFactor is increasing the chart by 0.25% of the size
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart-animation"
+           github-src="charts/pie-chart/animation"
            alt="Angular Pie Chart Animation" >
 </code-view>
 

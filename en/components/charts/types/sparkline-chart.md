@@ -17,9 +17,9 @@ The following example shows all the different sparkline types available. The typ
 
 <code-view style="height: 450px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/sparkline-display-types"
-           alt="Angular Sparkline Example"
-           github-src="charts/sparkline/display-types">
+           iframe-src="{environment:dvDemosBaseUrl}/charts/sparkline-display-types" 
+           github-src="charts/sparkline/display-types"
+           alt="Angular Sparkline Example" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -67,7 +67,9 @@ The Angular Sparkline supports the following types of sparklines by setting the 
 
 <code-view style="height: 450px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/sparkline-display-types"  >
+           iframe-src="{environment:dvDemosBaseUrl}/charts/sparkline-display-types" 
+           github-src="charts/sparkline/display-types"
+           alt="Angular Sparkline Example" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -89,7 +91,8 @@ All of the markers mentioned above can be customized using the related marker ty
 
 <code-view style="height: 300px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/sparkline-markers"  >
+           iframe-src="{environment:dvDemosBaseUrl}/charts/sparkline-markers"
+           github-src="charts/sparkline/markers" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -110,7 +113,8 @@ You can also configure whether to show the normal range in front of or behind th
 
 <code-view style="height: 300px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/sparkline-normal-range"  >
+           iframe-src="{environment:dvDemosBaseUrl}/charts/sparkline-normal-range"
+           github-src="charts/sparkline/normal-range" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -127,7 +131,8 @@ The sample below shows all the available trendlines via the dropdown:
 
 <code-view style="height: 300px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/sparkline-trendlines"  >
+           iframe-src="{environment:dvDemosBaseUrl}/charts/sparkline-trendlines"
+           github-src="charts/sparkline/trendlines" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -140,7 +145,8 @@ To plot the unknown values, you can set the [`unknownValuePlotting`]({environm
 
 <code-view style="height: 300px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/sparkline-unknown-values"  >
+           iframe-src="{environment:dvDemosBaseUrl}/charts/sparkline-unknown-values"
+           github-src="charts/sparkline/unknown-values"  >
 </code-view>
 
 <div class="divider--half"></div>
@@ -151,7 +157,8 @@ You can embed the Angular Sparkline in a template column of data grid or other U
 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/sparkline-grid"  >
+           iframe-src="{environment:dvDemosBaseUrl}/charts/sparkline-grid"
+           github-src="charts/sparkline/grid" >
 </code-view>
 
 ## Additional Resources

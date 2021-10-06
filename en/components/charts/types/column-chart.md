@@ -18,6 +18,7 @@ You can create this type of chart in the [`IgxCategoryChartComponent`]({environm
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-column-chart-multiple-sources"
+           github-src="charts/category-chart/column-chart-multiple-sources"
            alt="Angular Column Chart Multiple Sources" >
 </code-view>
 
@@ -58,6 +59,7 @@ You can create this type of chart in the [`IgxCategoryChartComponent`]({environm
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-column-chart-single-source"
+           github-src="charts/category-chart/column-chart-single-source"
            alt="Angular Column Chart with Single Source" >
 </code-view>
 
@@ -104,6 +106,7 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-waterfall-chart"
+           github-src="charts/data-chart/waterfall-chart"
            alt="Angular Waterfall Chart" >
 </code-view>
 
@@ -118,6 +121,7 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-stacked-column-chart"
+           github-src="charts/data-chart/stacked-column-chart"
            alt="Angular Stacked Column Chart" >
 </code-view>
 
@@ -132,6 +136,7 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-stacked-100-column-chart"
+           github-src="charts/data-chart/stacked-100-column-chart"
            alt="Angular Stacked 100 Column Chart" >
 </code-view>
 
@@ -148,6 +153,7 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-range-column-chart"
+           github-src="charts/data-chart/range-column-chart"
            alt="Angular Range Column Chart" >
 </code-view>
 
@@ -162,6 +168,7 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-radial-column-chart"
+           github-src="charts/data-chart/radial-column-chart"
            alt="Angular Radial Column Chart" >
 </code-view>
 

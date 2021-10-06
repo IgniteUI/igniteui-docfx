@@ -16,6 +16,7 @@ You can create the Bubble Chart in [`IgxDataChartComponent`]({environment:dvApiB
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-scatter-bubble-chart-multiple-sources"
+           github-src="charts/data-chart/scatter-bubble-chart-multiple-sources"
            alt="Angular Bubble Chart Example" >
 </code-view>
 
@@ -28,6 +29,7 @@ You can bind your data to `DataSource` property of [`IgxBubbleSeriesComponent`](
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-scatter-bubble-chart-single-source"
+           github-src="charts/data-chart/scatter-bubble-chart-single-source"
            alt="Angular Bubble Chart with Single Series" >
 </code-view>
 
@@ -40,6 +42,7 @@ In Angular Bubble Chart, binding multiple data sources works by setting each new
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-scatter-bubble-chart-multiple-sources"
+           github-src="charts/data-chart/scatter-bubble-chart-multiple-sources"
            alt="Angular Bubble Chart with Multiple Series" >
 </code-view>
 
@@ -52,6 +55,7 @@ In Angular Bubble Chart, you can customize shape of bubble markers using [`marke
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-scatter-bubble-chart-styling"
+           github-src="charts/data-chart/scatter-bubble-chart-styling"
            alt="Angular Bubble Chart Styling" >
 </code-view>
 

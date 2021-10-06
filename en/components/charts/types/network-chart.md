@@ -18,6 +18,7 @@ This example demonstrates how to create Network Polar Chart using [`IgxPolarScat
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-network-polar-chart"
+           github-src="charts/data-chart/network-polar-chart"
            alt="Angular Network Polar Chart" >
 </code-view>
 
@@ -30,6 +31,7 @@ This example shows how to create Network Scatter Chart using [`IgxScatterSeriesC
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-network-scatter-chart"
+           github-src="charts/data-chart/network-scatter-chart"
            alt="Angular Network Scatter Chart" >
 </code-view>
 
