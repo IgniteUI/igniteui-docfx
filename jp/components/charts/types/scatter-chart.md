@@ -19,6 +19,7 @@ Angular 散布図は、マーカーのコレクションとして描画されま
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-scatter-point-chart"
+           github-src="charts/data-chart/scatter-point-chart"
            alt="Angular 散布マーカー チャート" >
 </code-view>
 
@@ -33,6 +34,7 @@ Angular は、直線で接続されたマーカーのコレクションとして
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-scatter-line-chart"
+           github-src="charts/data-chart/scatter-line-chart"
            alt="Angular 散布折れ線チャート" >
 </code-view>
 
@@ -46,7 +48,8 @@ Angular は、曲線スプラインで接続されたマーカーのコレクシ
 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-scatter-line-chart"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-scatter-spline-chart"
+           github-src="charts/data-chart/scatter-spline-chart"
            alt="Angular 散布スプライン チャート" >
 </code-view>
 
@@ -61,6 +64,7 @@ Angular 散布高密度 (HD) チャートを使用して、わずかな読み込
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-scatter-hd-series"
+           github-src="charts/data-chart/type-scatter-hd-series"
            alt="Angular 散布 HD チャート" >
 </code-view>
 
@@ -75,6 +79,7 @@ Angular 散布エリア チャートは各ポイントに割り当てられた�
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-scatter-area-series"
+           github-src="charts/data-chart/type-scatter-area-series"
            alt="Angular 散布エリア チャート" >
 </code-view>
 
@@ -89,6 +94,7 @@ Angular 散布等高線チャートは、X データと Y データの三角形�
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-scatter-contour-series"
+           github-src="charts/data-chart/type-scatter-contour-series"
            alt="Angular 散布等高線チャート" >
 </code-view>
 

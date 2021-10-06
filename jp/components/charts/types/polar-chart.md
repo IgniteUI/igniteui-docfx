@@ -21,6 +21,7 @@ Ignite UI for Angular 極座標チャートは、デカルト (x、y) 座標系�
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-polar-area-chart"
+           github-src="charts/data-chart/polar-area-chart"
            alt="Angular 極座標型エリア チャート" >
 </code-view>
 
@@ -35,6 +36,7 @@ Ignite UI for Angular 極座標チャートは、デカルト (x、y) 座標系�
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-polar-spline-area-chart"
+           github-src="charts/data-chart/polar-spline-area-chart"
            alt="Angular 極座標型エリア チャート" >
 </code-view>
 
@@ -49,6 +51,7 @@ Ignite UI for Angular 極座標チャートは、デカルト (x、y) 座標系�
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-polar-scatter-chart"
+           github-src="charts/data-chart/polar-scatter-chart"
            alt="Angular 極座標型マーカー チャート" >
 </code-view>
 
@@ -63,6 +66,7 @@ Ignite UI for Angular 極座標チャートは、デカルト (x、y) 座標系�
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-polar-line-chart"
+           github-src="charts/data-chart/polar-line-chart"
            alt="Angular 極座標型折れ線チャート" >
 </code-view>
 
@@ -77,6 +81,7 @@ Ignite UI for Angular 極座標チャートは、デカルト (x、y) 座標系�
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-polar-spline-chart"
+           github-src="charts/data-chart/polar-spline-chart"
            alt="Angular 極座標スプライン チャート" >
 </code-view>
 
@@ -91,6 +96,7 @@ Ignite UI for Angular 極座標チャートは、デカルト (x、y) 座標系�
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-polar-area-chart-styling"
+           github-src="charts/data-chart/polar-area-chart-styling"
            alt="Angular 極座標チャートのスタイル設定" >
 </code-view>
 
