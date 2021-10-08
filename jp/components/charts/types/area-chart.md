@@ -19,6 +19,7 @@ Ignite UI for Angular エリア チャートは、線の下の領域が塗りつ
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-area-chart-multiple-sources"
+           github-src="charts/category-chart/area-chart-multiple-sources"
            alt="Angular 複数ソースのエリア チャート" >
 </code-view>
 
@@ -63,6 +64,7 @@ Angular エリア チャートは、生産される再生可能電力の量な�
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-area-chart-single-source"
+           github-src="charts/category-chart/area-chart-single-source"
            alt="単一シリーズの Angular エリア チャート" >
 </code-view>
 
@@ -75,6 +77,7 @@ Angular エリア チャートは、生産される再生可能電力の量な�
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-area-chart-multiple-sources"
+           github-src="charts/category-chart/area-chart-multiple-sources"
            alt="複数シリーズの Angular エリア チャート" >
 </code-view>
 
@@ -87,6 +90,7 @@ Angular エリア チャートは、生産される再生可能電力の量な�
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-area-chart-styling"
+           github-src="charts/category-chart/area-chart-styling"
            alt="Angular エリア チャートのスタイル設定" >
 </code-view>
 
@@ -119,6 +123,7 @@ Ignite UI for Angular 範囲エリア チャートは、時間の経過ととも
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-range-area-chart"
+           github-src="charts/data-chart/range-area-chart"
            alt="Angular 範囲エリア チャート" >
 </code-view>
 
@@ -131,6 +136,7 @@ Ignite UI for Angular 積層型エリア チャートは、線分で接続され
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-stacked-area-chart"
+           github-src="charts/data-chart/stacked-area-chart"
            alt="Angular 積層型エリア チャート" >
 </code-view>
 
@@ -203,6 +209,7 @@ Angular 極座標スプライン エリア チャートは[極座標チャート
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-polar-spline-area-chart"
+           github-src="charts/data-chart/polar-spline-area-chart"
            alt="Angular 極座標型スプライン エリア チャート" >
 </code-view>
 
