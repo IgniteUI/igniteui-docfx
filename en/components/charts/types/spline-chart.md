@@ -16,6 +16,7 @@ The following example shows how to create Angular Spline Chart in the [`IgxCateg
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-spline-multiple-sources"
+           github-src="charts/category-chart/spline-multiple-sources"
            alt="Angular Spline Chart Multiple Sources" >
 </code-view>
 
@@ -30,6 +31,7 @@ You can create this type of chart in the [`IgxCategoryChartComponent`]({environm
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-spline-single-source"
+           github-src="charts/category-chart/spline-single-source"
            alt="Angular Spline Chart with Single Source" >
 </code-view>
 
@@ -44,6 +46,7 @@ You can create this type of chart in the [`IgxCategoryChartComponent`]({environm
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-spline-multiple-sources"
+           github-src="charts/category-chart/spline-multiple-sources"
            alt="Angular Spline Chart with Multiple Sources" >
 </code-view>
 
@@ -58,6 +61,7 @@ You can create this type of chart in the [`IgxCategoryChartComponent`]({environm
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-spline-styling"
+           github-src="charts/category-chart/spline-styling"
            alt="Angular Spline Chart Styling" >
 </code-view>
 
@@ -76,6 +80,7 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-stacked-spline-chart"
+           github-src="charts/data-chart/stacked-spline-chart"
            alt="Angular Stacked Spline Chart" >
 </code-view>
 
@@ -90,6 +95,7 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-stacked-100-spline-chart"
+           github-src="charts/data-chart/stacked-100-spline-chart"
            alt="Angular Stacked 100 Spline Chart" >
 </code-view>
 
