@@ -157,7 +157,7 @@ As you see the demo above the Advanced filtering dialog is hosted in an overlay 
 
 ### Usage
 
-It's super easy to configure the advanced filtering to work outside of the @@igComponent. All you need to do is to create the dialog and set its [`grid`]({environment:angularApiUrl}/classes/igxadvancedfilteringdialogcomponent.html#grid) property:
+It's super easy to configure the advanced filtering to work outside of the @@igComponent. All you need to do is to create the dialog and set its [`grid`]({environment:angularApiUrl}/classes/igxgridtoolbaradvancedfilteringcomponent.html#grid) property:
 
 @@if (igxName === 'IgxGrid') {
 ```html
