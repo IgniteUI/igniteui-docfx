@@ -20,6 +20,7 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-polar-area-chart"
+           github-src="charts/data-chart/polar-area-chart"
            alt="Angular Polar Area Chart" >
 </code-view>
 
@@ -34,6 +35,7 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-polar-spline-area-chart"
+           github-src="charts/data-chart/polar-spline-area-chart"
            alt="Angular Polar Area Chart" >
 </code-view>
 
@@ -48,6 +50,7 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-polar-scatter-chart"
+           github-src="charts/data-chart/polar-scatter-chart"
            alt="Angular Polar Marker Chart" >
 </code-view>
 
@@ -62,6 +65,7 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-polar-line-chart"
+           github-src="charts/data-chart/polar-line-chart"
            alt="Angular Polar Line Chart" >
 </code-view>
 
@@ -76,6 +80,7 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-polar-spline-chart"
+           github-src="charts/data-chart/polar-spline-chart"
            alt="Angular Polar Spline Chart" >
 </code-view>
 
@@ -90,6 +95,7 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-polar-area-chart-styling"
+           github-src="charts/data-chart/polar-area-chart-styling"
            alt="Angular Polar Area Chart Styling" >
 </code-view>
 
