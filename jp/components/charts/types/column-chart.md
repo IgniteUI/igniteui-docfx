@@ -19,6 +19,7 @@ Ignite UI for Angular カテゴリ縦棒チャートは、複数のデータ ソ
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-column-chart-multiple-sources"
+           github-src="charts/category-chart/column-chart-multiple-sources"
            alt="Angular 複数ソースの縦棒チャート" >
 </code-view>
 
@@ -59,6 +60,7 @@ Ignite UI for Angular カテゴリ縦棒チャートは、複数のデータ ソ
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-column-chart-single-source"
+           github-src="charts/category-chart/column-chart-single-source"
            alt="単一シリーズの Angular 縦棒チャート" >
 </code-view>
 
@@ -71,7 +73,8 @@ Ignite UI for Angular カテゴリ縦棒チャートは、複数のデータ ソ
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-column-chart-multiple-sources"
-           alt="複数シリーズの Angular 縦棒チャート"           github-src="charts/category-chart/column-chart-multiple-sources" >
+           alt="Angular 複数シリーズの Angular 縦棒チャート"
+           github-src="charts/category-chart/column-chart-multiple-sources" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -104,6 +107,7 @@ Angular 縦棒チャートには、外観のスタイル設定と変更のため
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-waterfall-chart"
+           github-src="charts/data-chart/waterfall-chart"
            alt="Angular ウォーターフォール チャート" >
 </code-view>
 
@@ -118,6 +122,7 @@ Angular 縦棒チャートには、外観のスタイル設定と変更のため
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-stacked-column-chart"
+           github-src="charts/data-chart/stacked-column-chart"
            alt="Angular 積層型縦棒チャート" >
 </code-view>
 
@@ -132,6 +137,7 @@ Angular 縦棒チャートには、外観のスタイル設定と変更のため
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-stacked-100-column-chart"
+           github-src="charts/data-chart/stacked-100-column-chart"
            alt="Angular 積層型 100% 縦棒チャート" >
 </code-view>
 
@@ -148,6 +154,7 @@ Ignite UI for Angular 範囲縦棒チャートは、範囲チャートのグル�
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-range-column-chart"
+           github-src="charts/data-chart/range-column-chart"
            alt="Angular 範囲縦棒チャート" >
 </code-view>
 
@@ -162,6 +169,7 @@ Ignite UI for Angular 範囲縦棒チャートは、範囲チャートのグル�
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-radial-column-chart"
+           github-src="charts/data-chart/radial-column-chart"
            alt="Angular ラジアル縦棒チャート" >
 </code-view>
 
