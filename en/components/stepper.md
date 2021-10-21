@@ -30,7 +30,7 @@
 ### Step States 
 
 ### Linear Stepper
-<code-view style="height: 814px" 
+<code-view style="height: 430px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/layouts/stepper-linear-sample" alt="Angular Linear Stepper Example">
 </code-view>
