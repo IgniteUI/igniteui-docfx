@@ -4,7 +4,7 @@
 
 ## Angular Stepper Example
 
-<code-view style="height: 400px" 
+<code-view style="height: 725px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/layouts/stepper-overview-sample" alt="Angular Stepper Example">
 </code-view>
@@ -20,7 +20,7 @@
 ### Declaring a Stepper
 
 ### Changing the Stepper Orientation
-<code-view style="height: 300px" 
+<code-view style="height: 528px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/layouts/stepper-label-position-and-orientation-sample" alt="Angular Stepper Orientation Example">
 </code-view>
@@ -30,7 +30,7 @@
 ### Step States 
 
 ### Linear Stepper
-<code-view style="height: 400px" 
+<code-view style="height: 814px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/layouts/stepper-linear-sample" alt="Angular Linear Stepper Example">
 </code-view>
@@ -53,7 +53,7 @@
 
 ## Angular Stepper Styling
 
-<code-view style="height: 300px" 
+<code-view style="height: 264px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/layouts/stepper-styling-sample" alt="Angular Stepper Styling Example">
 </code-view>
