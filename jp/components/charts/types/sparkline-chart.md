@@ -16,11 +16,14 @@ Ignite UI for Angular スパークラインは、軽量なチャート コント
 
 次の例は、使用可能なすべての異なるスパークライン タイプを示しています。タイプは [`displayType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#displaytype) プロパティの設定により定義されます。[`displayType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#displaytype) プロパティが指定されていない場合は、既定では [`Line`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/sparklinedisplaytype.html#line) 型が表示されます。
 
-<code-view style="height: 450px"
+&lt;code-view style="height: 450px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/sparkline-display-types"
+           github-src="charts/sparkline/display-types"
            alt="Angular スパークラインの例"
-           github-src="charts/sparkline/display-types">
+
+           >
+
 </code-view>
 
 <div class="divider--half"></div>
@@ -68,7 +71,9 @@ Angular スパークライン コンポーネントは、それに応じて  [`d
 
 <code-view style="height: 450px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/sparkline-display-types"  >
+           iframe-src="{environment:dvDemosBaseUrl}/charts/sparkline-display-types"
+           github-src="charts/sparkline/display-types"
+           alt="Angular スパークラインの例"    >
 </code-view>
 
 <div class="divider--half"></div>
@@ -90,7 +95,8 @@ Angular スパークライン コンポーネントを使用すると、マー�
 
 <code-view style="height: 300px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/sparkline-markers"  >
+           iframe-src="{environment:dvDemosBaseUrl}/charts/sparkline-markers"
+           github-src="charts/sparkline/markers" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -111,7 +117,8 @@ Angular スパークラインの通常の範囲機能は、データが視覚化
 
 <code-view style="height: 300px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/sparkline-normal-range"  >
+           iframe-src="{environment:dvDemosBaseUrl}/charts/sparkline-normal-range"
+           github-src="charts/sparkline/normal-range" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -128,7 +135,8 @@ Angular スパークラインは、実際のスパークライン レイヤー�
 
 <code-view style="height: 300px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/sparkline-trendlines"  >
+           iframe-src="{environment:dvDemosBaseUrl}/charts/sparkline-trendlines"
+           github-src="charts/sparkline/trendlines" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -141,7 +149,8 @@ Angular スパークラインは、不明な値を検出し、指定された補
 
 <code-view style="height: 300px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/sparkline-unknown-values"  >
+           iframe-src="{environment:dvDemosBaseUrl}/charts/sparkline-unknown-values"
+           github-src="charts/sparkline/unknown-values"  >
 </code-view>
 
 <div class="divider--half"></div>
@@ -152,7 +161,8 @@ Angular スパークラインは、データ グリッドのテンプレート�
 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/sparkline-grid"  >
+           iframe-src="{environment:dvDemosBaseUrl}/charts/sparkline-grid"
+           github-src="charts/sparkline/grid" >
 </code-view>
 
 ## その他のリソース
