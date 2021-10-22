@@ -109,6 +109,7 @@ Angular charts are optimized for high performance of rendering millions of data 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-high-volume"
+           github-src="charts/category-chart/high-volume"
            alt="Angular Chart Performance Example" >
 </code-view>
 
