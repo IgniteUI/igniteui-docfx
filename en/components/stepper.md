@@ -8,8 +8,8 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 The Angular material stepper is a highly customizable component that visualizes content as a process and shows its progress by dividing the content into chronological steps. It usually appears as a vertical or horizontal line. Supported by the Ignite UI for Angular library, the stepper component delivers a wizard-like workflow and multiple features like step validation, styling, orientation, keyboard navigation. 
 
 ## Angular Stepper Example
-In this Angular Stepper example, you can see how users are enabled to choose their business card and pass trough the process in 5 logical steps all together - selecting card type, adding business information, filling in personal information, providing shipping details, and confirmation.
-Note that the 4th step in our Angular stepper demo gets enabled only if the user ticks the checkbox in the second step, signifying that their mailing address is different from the business physical address.
+In this Angular Stepper example, you can see how users are enabled to choose their business card and pass trough the process in fix logical steps all together - selecting card type, adding business information, filling in personal information, providing shipping details, and confirmation.
+Note that the fourth step in our Angular stepper demo gets enabled only if the user ticks the checkbox in the second step, signifying that their mailing address is different from the business physical address.
 
 <code-view style="height: 725px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -96,21 +96,21 @@ For each step the user has the ability to configure indicator, title, subtitle a
     </igx-step>
 </igx-stepper>
 ```
-<img class="responsive-img"  src="../images/stepper/stepper-step.png" />
+<img class="responsive-img" style="margin-bottom:10px; -webkit-box-shadow: 4px 4px 4px 4px #ccc; -moz-box-shadow: 4px 4px 4px 4px #ccc; box-shadow: 4px 4px 4px 4px #ccc; max-width: 500px" src="../images/stepper/stepper-step.png" />
 
 ### Changing the Stepper Orientation
-You can customize the stepper orientation through the exposed orientation property. It takes a member of the [IgxStepperOrientation]({environment:angularApiUrl}/enums/igxstepperorientation.html) enum - `Horizontal` *(default value)* or `Vertical`.
+You can customize the stepper orientation through the exposed [orientation]({environment:angularApiUrl}/classes/igxsteppercomponent.html#orientation) property. It takes a member of the [IgxStepperOrientation]({environment:angularApiUrl}/enums/igxstepperorientation.html) enum - `Horizontal` *(default value)* or `Vertical`.
 
 **Horizontal Stepper Orientation**
 
-`horizontal` is the default value for the IgxStepper [orientation]({environment:angularApiUrl}/classes/igxsteppercomponent.html#orientation) property.
-When the stepper is horizontally orientated you have the opportunity to determine whether the steps’ content would be displayed above or below the steps’ headers. This could be achieved by setting the IgxStepperComponent [contentTop]({environment:angularApiUrl}/classes/igxsteppercomponent.html#contentTop) boolean property, which default value is `false`. In case it is enabled the steps’ content would be displayed above the steps’ headers.
+`horizontal` is the default value for the `igx-stepper` [orientation]({environment:angularApiUrl}/classes/igxsteppercomponent.html#orientation) property.
+When the stepper is horizontally orientated you have the opportunity to determine whether the steps’ content would be displayed above or below the steps’ headers. This could be achieved by setting the [IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponent.html) [contentTop]({environment:angularApiUrl}/classes/igxsteppercomponent.html#contentTop) boolean property, which default value is `false`. In case it is enabled the steps’ content would be displayed above the steps’ headers.
 
-<img class="responsive-img"  src="../images/stepper/stepper-contentTop.png" />
+<img class="responsive-img" style="margin-bottom:10px; -webkit-box-shadow: 4px 4px 4px 4px #ccc; -moz-box-shadow: 4px 4px 4px 4px #ccc; box-shadow: 4px 4px 4px 4px #ccc; max-width: 800px"  src="../images/stepper/stepper-contentTop.png" />
 
 **Vertical Stepper Orientation**
 
-You can easily switch from the horizontal Angular Stepper and enable vertical layout. In order to change the default [orientation]({environment:angularApiUrl}/classes/igxsteppercomponent.html#orientation) you should set the orientation property to `vertical`.
+You can easily switch from the horizontal to vertical layout. In order to change the default orientation you should set the [orientation]({environment:angularApiUrl}/classes/igxsteppercomponent.html#orientation) property to `vertical`.
 ```html
 <igx-stepper [orientation]="'vertical'">
 	<igx-step>    
@@ -122,7 +122,7 @@ You can easily switch from the horizontal Angular Stepper and enable vertical la
 	</igx-step>
 </igx-stepper>
 ```
-The sample below demonstrates how stepper orientation could be changed runtime as well as changing the [titles position](). 
+The sample below demonstrates how stepper [orientation]({environment:angularApiUrl}/classes/igxsteppercomponent.html#orientation) and [titles position](stepper.md#customizing-the-steps) could be changed runtime. 
 
 <code-view style="height: 528px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -132,7 +132,7 @@ The sample below demonstrates how stepper orientation could be changed runtime a
 <div class="divider--half"></div>
 
 ### Step States 
-[IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponent.html) supports four steps states, with different styles by default:
+[IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponent.html) supports four steps states and each of them apply different styles by default:
 - [**active**]({environment:angularApiUrl}/classes/igxstepcomponent.html#active) - Determines whether the step is the currently displayed. By design, if the user does not explicitly set some step’s active attribute to `true`, the initial active step would be the first non-disabled step.
 - [**disabled**]({environment:angularApiUrl}/classes/igxstepcomponent.html#disabled) - Determines whether the step is interactable. By default, the disabled attribute of a step is set to `false`.
 - [**optional**]({environment:angularApiUrl}/classes/igxstepcomponent.html#optional) - By default, the optional attribute of a step is set to `false`. If validity of a step in linear stepper is not required, then the optional attribute can be enabled in order to be able to move forward independently from the step validity.
@@ -240,7 +240,7 @@ The [IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponen
 
 ### Angular Stepper Animations
 
-Angular Stepper Animations provide the end-users  experience when interacting with the defined steps. The available animation options differs depending on the orientation of the stepper.
+Angular Stepper Animations provide the end-users a nice experience when interacting with the defined steps. The available animation options differ depending on the orientation of the stepper.
 
 When the stepper is **horizontally orientated**, it is configured to use the `slide` animation by default. It also supports `fade` as an alternative. The animations are configured through the [horizontalAnimationType]({environment:angularApiUrl}/classes/igxsteppercomponent.html#horizontalAnimationType) input.
 
@@ -261,9 +261,9 @@ The [IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponen
  - <kbd>Shift + Tab</kbd> - moves the focus to the previous tabbable element
  - <kbd>Arrow Down</kbd> - moves the focus to the header of the next accessible step when the `igx-stepper` is **vertically orientated**
  - <kbd>Arrow Up</kbd> - moves the focus to the header of the previous accessible step when the `igx-stepper` is **vertically orientated**
- - <kbd>Arrow Left</kbd> - moves the focus to the header of the previous accessible step in both orientation
- - <kbd>Arrow Right</kbd> - moves the focus to the header of the next accessible step in both orientation
- - <kbd>Home</kbd> - moves the focus to the keader of the FIRST enabled step in the `igx-stepper`
+ - <kbd>Arrow Left</kbd> - moves the focus to the header of the previous accessible step in both orientations
+ - <kbd>Arrow Right</kbd> - moves the focus to the header of the next accessible step in both orientations
+ - <kbd>Home</kbd> - moves the focus to the header of the FIRST enabled step in the `igx-stepper`
  - <kbd>End</kbd> - moves the focus to the header of the LAST enabled step in the `igx-stepper`
  - <kbd>Enter / Space</kbd> - activates the currently focused step
  
@@ -311,6 +311,8 @@ If the component is using the [Emulated](themes/sass/component-themes.md#view-en
 ```
 
 ### Demo
+The sample below demonstrates a simple styling applied through the [Ignite UI for Angular Theming](themes/index.md).
+
 <code-view style="height: 264px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/layouts/stepper-styling-sample" alt="Angular Stepper Styling Example">
