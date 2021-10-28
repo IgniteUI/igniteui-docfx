@@ -162,11 +162,11 @@ export class AppModule {}
 
 @@if (igxName !== 'IgxTreeGrid') {
 > [!NOTE]
-> [行の追加] のボタンの表示状態を制御する IgxGridEditingActions 入力は、アクション ストリップ コンテキスト (タイプ [`IgxGridRowComponent`]({environment:angularApiUrl}/classes/igxgridrow.html)) を使用して、ボタンが表示するレコードを調整できます。
+> [行の追加] のボタンの表示状態を制御する IgxGridEditingActions 入力は、アクション ストリップ コンテキスト (タイプ [`RowType`]({environment:angularApiUrl}/classes/rowtype.html)) を使用して、ボタンが表示するレコードを調整できます。
 }
 @@if (igxName === 'IgxTreeGrid') {
 > [!NOTE]
-> [行の追加] と [子の追加] のボタンの表示状態を制御する IgxGridEditingActions 入力は、アクション ストリップ コンテキスト (タイプ [`IgxTreeGridRowComponent`]({environment:angularApiUrl}/classes/igxtreegridrow.html)) を使用して、ボタンが表示するレコードを調整できます。
+> [行の追加] と [子の追加] のボタンの表示状態を制御する IgxGridEditingActions 入力は、アクション ストリップ コンテキスト (タイプ [`IgxTreeGridRow`]({environment:angularApiUrl}/classes/igxtreegridrow.html)) を使用して、ボタンが表示するレコードを調整できます。
 }
 
 内部の [`IgxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html) は @@igComponent に自動的に提供されます。行の状態が送信またはキャンセルされるまで、保留中のセルの変更を保持します。

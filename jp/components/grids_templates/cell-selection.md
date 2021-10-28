@@ -235,7 +235,17 @@ expectedData = [
 選択のスタイル設定を始めるには、すべてのテーマ関数とコンポーネントミックスインが存在する `index` ファイルをインポートする必要があります。
 
 ```scss
-// in component.scss
+// in 
+
+
+
+
+
+
+
+
+
+.scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
