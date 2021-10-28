@@ -158,7 +158,7 @@ ngAfterViewInit(): void {
 
 ### 使用方法
 
-@@igComponent の外部で動作するように高度なフィルタリングを構成する方法は簡単です。ダイアログを作成して、その [`grid`]({environment:angularApiUrl}/classes/igxadvancedfilteringdialogcomponent.html#grid) プロパティを設定するだけです。
+@@igComponent の外部で動作するように高度なフィルタリングを構成する方法は簡単です。ダイアログを作成して、その [`grid`]({environment:angularApiUrl}/classes/igxgridtoolbaradvancedfilteringcomponent.html#grid) プロパティを設定するだけです。
 
 @@if (igxName === 'IgxGrid') {
 ```html
