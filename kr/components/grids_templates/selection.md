@@ -230,7 +230,7 @@ Change the selection to see summaries of the currently selected range.
 
 #### 단일 선택
 
-@@igComponent의 단일 선택은 @@igComponent의 [`selected`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#selected) 이벤트를 사용하여 간단하게 설정할 수 있습니다. 이 이벤트는 셀 컴포넌트에 대한 참조를 내보냅니다. 셀 컴포넌트에는 포함되는 행 컴포넌트에 대한 참조가 있습니다. 행 컴포넌트 참조의 [`rowID`](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/igxgridrowcomponent.html#rowid) 게터를 사용하여 행([`rowData[primaryKey]`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primarykey) 또는 [`rowData`]({environment:angularApiUrl}/classes/igxgridrowcomponent.html#rowdata) 객체 자체를 사용하여)의 고유 식별자를 선택의 적절한 목록에 전달합니다. 단일 행만 항상 선택되도록 하기 위해 선택 행 선택 목록을 미리 비웁니다([`selectRows`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#selectrows) 메소드 호출의 두 번째 인수):
+@@igComponent의 단일 선택은 @@igComponent의 [`selected`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#selected) 이벤트를 사용하여 간단하게 설정할 수 있습니다. 이 이벤트는 셀 컴포넌트에 대한 참조를 내보냅니다. 셀 컴포넌트에는 포함되는 행 컴포넌트에 대한 참조가 있습니다. 행 컴포넌트 참조의 [`key`](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/igxgridrow.html#key) 게터를 사용하여 행([`data[primaryKey]`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primarykey) 또는 [`data`]({environment:angularApiUrl}/classes/igxgridrow.html#data) 객체 자체를 사용하여)의 고유 식별자를 선택의 적절한 목록에 전달합니다. 단일 행만 항상 선택되도록 하기 위해 선택 행 선택 목록을 미리 비웁니다([`selectRows`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#selectrows) 메소드 호출의 두 번째 인수):
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -407,7 +407,7 @@ public handleRowSelectionChange(args) {
 ### API 참조
 
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-@@if (igxName !== 'IgxTreeGrid') {* [IgxGridRowComponent API]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRowComponent API]({environment:angularApiUrl}/classes/igxtreegridrowcomponent.html)}
+@@if (igxName !== 'IgxTreeGrid') {* [IgxGridRow API]({environment:angularApiUrl}/classes/igxgridrow.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRowComponent API]({environment:angularApiUrl}/classes/igxtreegridrowcomponent.html)}
 * [IgxGridCell API]({environment:angularApiUrl}/classes/igxgridcell.html)
 * [@@igxNameComponent 스타일]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 

@@ -162,7 +162,7 @@ export class AppModule {}
 
 @@if (igxName !== 'IgxTreeGrid') {
 > [!NOTE]
-> [行の追加] のボタンの表示状態を制御する IgxGridEditingActions 入力は、アクション ストリップ コンテキスト (タイプ [`IgxGridRowComponent`]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)) を使用して、ボタンが表示するレコードを調整できます。
+> [行の追加] のボタンの表示状態を制御する IgxGridEditingActions 入力は、アクション ストリップ コンテキスト (タイプ [`RowType`]({environment:angularApiUrl}/classes/rowtype.html)) を使用して、ボタンが表示するレコードを調整できます。
 }
 @@if (igxName === 'IgxTreeGrid') {
 > [!NOTE]

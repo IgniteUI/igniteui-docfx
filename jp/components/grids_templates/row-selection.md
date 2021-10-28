@@ -498,7 +498,7 @@ public childSelectedRows = ['Initiation', 'Emergency'];
 ## API リファレンス
 
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-@@if (igxName !== 'IgxTreeGrid') {* [IgxGridRowComponent API]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRowComponent API]({environment:angularApiUrl}/classes/igxtreegridrowcomponent.html)}
+@@if (igxName !== 'IgxTreeGrid') {* [IgxGridRow API]({environment:angularApiUrl}/classes/igxgridrow.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRowComponent API]({environment:angularApiUrl}/classes/igxtreegridrowcomponent.html)}
 * [IgxGridCell API]({environment:angularApiUrl}/classes/igxgridcell.html)
 * [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 
