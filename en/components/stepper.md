@@ -5,10 +5,10 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 # Angular Stepper Component Overview
-The Angular material stepper is a highly customizable component that visualizes content as a process and shows its progress by dividing the content into chronological steps. It usually appears as a vertical or horizontal line. Supported by the Ignite UI for Angular library, the stepper component delivers a wizard-like workflow and multiple features like step validation, styling, orientation, keyboard navigation. 
+The Angular material stepper is a highly customizable component that visualizes content as a process and shows its progress by dividing the content into successive steps. It appears as a vertical or horizontal line. Supported by the Ignite UI for Angular library, the stepper component delivers a wizard-like workflow and multiple features like step validation, styling, orientation and keyboard navigation. 
 
 ## Angular Stepper Example
-In this Angular Stepper example, you can see how users are enabled to choose their business card and pass trough the process in five logical steps all together - selecting card type, adding business information, filling in personal information, providing shipping details, and confirmation.
+In this Angular Stepper example, you can see how users are enabled to choose their business card and pass trough the process in five logical steps all together - selecting card type, adding business information, filling in personal information, providing shipping details and confirmation.
 Note that the fourth step in our Angular stepper demo gets enabled only if the user ticks the checkbox in the second step, signifying that their mailing address is different from the business physical address.
 
 <code-view style="height: 725px" 
@@ -200,13 +200,13 @@ When the orientation is set to vertical layout the title position by default is 
 
 If you want to display only indicators for the steps, set the [stepType]({environment:angularApiUrl}/classes/igxsteppercomponent.html#stepType) option to `indicator`.
 
-The step indicator supports any content, however, with the restriction that its size would be always **24 pixels**. Having this in mind, we recommend using [IgxIconComponent](icon.md) or [IgxAvatarComponent](avatar.md) as step indicators.
+The step indicator supports any content, however with the restriction that its size would be always **24 pixels**. Having this in mind, we recommend using [IgxIconComponent](icon.md) or [IgxAvatarComponent](avatar.md) as step indicators.
 
 **Title**
 
 If you want to display only titles for the steps, set the [stepType]({environment:angularApiUrl}/classes/igxsteppercomponent.html#stepType) option to `title`.
 
-This way if subtitles are defined, they will also be rendered below the step title.
+In this way if subtitles are defined, they will also be rendered below the step title.
 
 > Note: This container could be re-templated as per your requirement without any size restrictions. For example, you could an indicator inside with size greater than 24 pixels.
 
@@ -241,15 +241,15 @@ The [IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponen
 
 ### Angular Stepper Animations
 
-Angular Stepper Animations provide the end-users a nice experience when interacting with the defined steps. The available animation options differ depending on the orientation of the stepper.
+Angular Stepper Animations provide the end-users a beautiful experience of interacting with the defined steps. The available animation options differ depending on the orientation of the stepper.
 
 When the stepper is **horizontally orientated**, it is configured to use the `slide` animation by default. It also supports `fade` as an alternative. The animations are configured through the [horizontalAnimationType]({environment:angularApiUrl}/classes/igxsteppercomponent.html#horizontalAnimationType) input.
 
 In **vertically orientated** layout, the animation type could be defined using the [verticalAnimationType]({environment:angularApiUrl}/classes/igxsteppercomponent.html#verticalAnimationType) property. By default, its value is `grow` and the user has the ability to set it to `fade` as well.
 
-Setting `none` to both animation type inputs disables stepper’s animations.
+Setting `none` to the both animation type inputs disables stepper animations.
 
-[IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponent.html) gives you the ability to configure the duration of the transition between the steps. This could be achieved through the [animationDuration]({environment:angularApiUrl}/classes/igxsteppercomponent.html#animationDuration) property, which takes a number as an argument and it is common to both orientations.
+[IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponent.html) gives you the ability to configure the duration of the transition between the steps. This could be achieved through the [animationDuration]({environment:angularApiUrl}/classes/igxsteppercomponent.html#animationDuration) property, which takes a number as an argument and it is common to the both orientations.
 
 ## Keyboard Navigation
 
@@ -273,7 +273,7 @@ The [IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponen
 ## Angular Stepper Styling
 Using the [Ignite UI for Angular Theming](themes/index.md), we can greatly alter the `igx-stepper` appearance. 
 
-First, in order for us to use the functions exposed by the theme engine, we need to import the `index` file in our style file: 
+First, in order to use the functions exposed by the theme engine, we need to import the `index` file in our style file: 
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
