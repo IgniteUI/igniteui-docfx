@@ -208,7 +208,7 @@ If you want to display only titles for the steps, set the [stepType]({environmen
 
 In this way if subtitles are defined, they will also be rendered below the step title.
 
-> Note: This container could be re-templated as per your requirement without any size restrictions. For example, you could an indicator inside with size greater than 24 pixels.
+> Note: This container could be re-templated as per your requirement without any size restrictions. For example, you could add an indicator with size greater than 24 pixels inside it.
 
 The sample below demonstrates all exposed step types and how they could be changed:
 
