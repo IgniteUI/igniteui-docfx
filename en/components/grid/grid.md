@@ -524,7 +524,7 @@ configuration. Same goes for grouping and editing operations with or without tra
 
 An alternative way to bind complex data, or to visualize composite data (from more than one column) in the **IgxGrid** is to use a custom body template for the column. Generally, one can:
     - use the `value` of the cell, that contains the nested data
-    - use the `cell` object in the template, from which to access the `rowData`, therefore retrieve any value from it, i.e `cell.rowData[field]`
+    - use the `cell` object in the template, from which to access the `data`, therefore retrieve any value from it, i.e `cell.data[field]`
 
 and interpolate it those in the template.
 

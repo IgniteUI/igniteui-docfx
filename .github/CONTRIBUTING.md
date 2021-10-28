@@ -42,7 +42,7 @@ There are a few questions one can ask, when charting such plan.
 ```markdown
 [IgxGridComponent API]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#mixin-igx-grid)
-[IgxGridRowComponent API]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)
+[IgxGridRow API]({environment:angularApiUrl}/classes/igxgridrow.html)
 ```
 
     Also any text in the article that mentions a component class, or other class/interface that can be linked to in the API docs, should be accompanied by a link to the corresponding class in the API documentation. Example of linking a corresponding item in the article to the API documentation in the grid filtering topic:

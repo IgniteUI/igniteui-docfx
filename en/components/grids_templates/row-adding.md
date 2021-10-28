@@ -160,11 +160,11 @@ Then define a @@igComponent with bound data source and [`rowEditable`]({environm
 
 @@if (igxName !== 'IgxTreeGrid') {
 > [!NOTE]
-> The IgxGridEditingActions input controlling the visibility of the add row button may use the action strip context (which is of type [`IgxGridRowComponent`]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)) to fine tune which records the button shows for.
+> The IgxGridEditingActions input controlling the visibility of the add row button may use the action strip context (which is of type [`IgxGridRowComponent`]({environment:angularApiUrl}/classes/igxgridrow.html)) to fine tune which records the button shows for.
 }
 @@if (igxName === 'IgxTreeGrid') {
 > [!NOTE]
-> The IgxGridEditingActions inputs controlling the visibility of the add row and add child buttons may use the action strip context (which is of type [`IgxTreeGridRowComponent`]({environment:angularApiUrl}/classes/igxtreegridrowcomponent.html)) to fine tune which records the buttons show for.
+> The IgxGridEditingActions inputs controlling the visibility of the add row and add child buttons may use the action strip context (which is of type [`IgxTreeGridRowComponent`]({environment:angularApiUrl}/classes/igxtreegridrow.html)) to fine tune which records the buttons show for.
 }
 
 The internal [`IgxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html) is automatically provided for @@igComponent. It holds pending cell changes until the row state is submitted or cancelled.
