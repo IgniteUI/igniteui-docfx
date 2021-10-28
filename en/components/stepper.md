@@ -8,7 +8,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 The Angular material stepper is a highly customizable component that visualizes content as a process and shows its progress by dividing the content into chronological steps. It usually appears as a vertical or horizontal line. Supported by the Ignite UI for Angular library, the stepper component delivers a wizard-like workflow and multiple features like step validation, styling, orientation, keyboard navigation. 
 
 ## Angular Stepper Example
-In this Angular Stepper example, you can see how users are enabled to choose their business card and pass trough the process in fix logical steps all together - selecting card type, adding business information, filling in personal information, providing shipping details, and confirmation.
+In this Angular Stepper example, you can see how users are enabled to choose their business card and pass trough the process in five logical steps all together - selecting card type, adding business information, filling in personal information, providing shipping details, and confirmation.
 Note that the fourth step in our Angular stepper demo gets enabled only if the user ticks the checkbox in the second step, signifying that their mailing address is different from the business physical address.
 
 <code-view style="height: 725px" 
@@ -184,16 +184,17 @@ This could be achieved through the [stepType]({environment:angularApiUrl}/classe
 If titles and subtitles are defined, with this setup both indicators and titles would be rendered.
 
 The user would also have the ability to define the position of the title for the steps, so it could be placed before, after, above or below the step indicator.
-There are two exposed properties which would set the title position based on the stepper orientation. Both properties take member of [IgxStepperTitlePosition]({environment:angularApiUrl}/enums/igxsteptitleposition.html) enum:
+The user can configure the title position using the [titlePosition]({environment:angularApiUrl}/classes/igxsteppercomponent.html#titlePosition) property. Both properties take member of [IgxStepperTitlePosition]({environment:angularApiUrl}/enums/igxsteptitleposition.html) enum:
 - end
 - start
 - bottom
 - top
 
-When the `igx-stepper` is horizontally orientated, the user can configure the title position using the [horizontalTitlePosition]({environment:angularApiUrl}/classes/igxsteppercomponent.html#horizontalTitlePosition) property, which default value is `bottom`.
-When the orientation is set to vertical layout the title position could be changed using the [verticalTitlePosition]({environment:angularApiUrl}/classes/igxsteppercomponent.html#verticalTitlePosition) property, which by default is set to `end`.
+When the `igx-stepper` is horizontally orientated, the title position default value is `bottom`.
 
-> Note: Both [horizontalTitlePosition]({environment:angularApiUrl}/classes/igxsteppercomponent.html#horizontalTitlePosition) and [verticalTitlePosition]({environment:angularApiUrl}/classes/igxsteppercomponent.html#verticalTitlePosition) properties are applicable **only** when the stepper [stepType]({environment:angularApiUrl}/classes/igxsteppercomponent.html#stepType) property is set to `full`.
+When the orientation is set to vertical layout the title position by default is `end`.
+
+> Note: [titlePosition]({environment:angularApiUrl}/classes/igxsteppercomponent.html#titlePosition) property is applicable **only** when the stepper [stepType]({environment:angularApiUrl}/classes/igxsteppercomponent.html#stepType) property is set to `full`.
 
 **Indicator**
 
@@ -248,7 +249,7 @@ In **vertically orientated** layout, the animation type could be defined using t
 
 Setting `none` to both animation type inputs disables stepper’s animations.
 
-[IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponent.html) gives you the ability to configure the duration of the transition between the steps. This could be achieved through the [animationDuration]() property, which takes a number as an argument and it is common to both orientations.
+[IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponent.html) gives you the ability to configure the duration of the transition between the steps. This could be achieved through the [animationDuration]({environment:angularApiUrl}/classes/igxsteppercomponent.html#animationDuration) property, which takes a number as an argument and it is common to both orientations.
 
 ## Keyboard Navigation
 
