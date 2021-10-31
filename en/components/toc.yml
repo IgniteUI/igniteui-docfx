@@ -997,6 +997,9 @@
 - name: Splitter
   href: splitter.md
   new: false
+- name: Stepper
+  href: stepper.md
+  new: true
 - name: Dock Manager
   href: dock-manager.md
   new: false
