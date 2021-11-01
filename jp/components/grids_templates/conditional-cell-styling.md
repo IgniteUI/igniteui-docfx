@@ -123,7 +123,7 @@ public activeRowCondition = (row: RowType) => this.grid?.navigation.activeNode?.
 > `rowStyles` と `rowClasses` の両方のコールバック署名は次のとおりです:
 
 ```ts
-(rowData: RowType) => boolean
+(row: RowType) => boolean
 ```
 
 次にスタイルを定義します。

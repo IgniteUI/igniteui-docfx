@@ -183,6 +183,22 @@ Combo の [autoFocusSearch]({environment:angularApiUrl}/classes/igxcombocomponen
 <igx-combo [groupKey]="'primaryKey'"></igx-combo>
 ```
 
+グループを昇順または降順のどちらでソートするかを設定できます。デフォルトでは、ソート順序は、昇順に設定されています。
+
+```html
+<igx-combo [groupSortingDirection]="groupSortingDirection"></igx-combo>
+```
+
+```typescript
+...
+import { SortingDirection } from 'igniteui-angular'
+
+export class ComboDemo {
+    ...
+    public groupSortingDirection: SortingDirection = SortingDirection.Asc;
+}
+```
+
 <div class="divider--half"></div>
 
 ## API まとめ

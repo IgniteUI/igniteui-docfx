@@ -68,7 +68,7 @@ export class AppModule {}
 ツリー グリッド階層の構築に使用するオプション (子コレクションまたは主キーまたは外部キー) にかかわらず、ツリー グリッドの行は 2 タイプのセルで構成されます。
 
 - [`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html) - 値を含む標準セル。
-- [`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html) - セル行のレベルに基づいた値、インジケーターの展開/縮小、インデント div 要素を含むツリー セル。インナー [`treeRow`]({environment:angularApiUrl}/classes/igxtreegridrowcomponent.html#treerow) の [`level`]({environment:angularApiUrl}/interfaces/itreegridrecord.html#level) プロパティでアクセスできる行コンポーネント レベル。
+- [`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html) - セル行のレベルに基づいた値、インジケーターの展開/縮小、インデント div 要素を含むツリー セル。インナー [`treeRow`]({environment:angularApiUrl}/classes/igxtreegridrow.html#treerow) の [`level`]({environment:angularApiUrl}/interfaces/itreegridrecord.html#level) プロパティでアクセスできる行コンポーネント レベル。
 
 > [!NOTE]
 > 各行にはツリー セルを 1 つのみ含むことができますが、標準セルは複数含むことが可能です。
