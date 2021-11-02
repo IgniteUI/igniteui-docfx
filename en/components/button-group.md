@@ -124,14 +124,14 @@ The [`displayDensity`]({environment:angularApiUrl}/classes/igxbuttongroupcompone
 ```typescript
 // sample.component.ts
 ...
-public displayDensity = "comfortable";
+public displayDensity = 'comfortable';
 public displayDensities;
 
 public ngOnInit() {
     this.displayDensities = [
-        { label: "compact", selected: this.displayDensity === "compact", togglable: true },
-        { label: "cosy", selected: this.displayDensity === "cosy", togglable: true },
-        { label: "comfortable", selected: this.displayDensity === "comfortable", togglable: true }
+        { label: 'compact', selected: this.displayDensity === 'compact', togglable: true },
+        { label: 'cosy', selected: this.displayDensity === 'cosy', togglable: true },
+        { label: 'comfortable', selected: this.displayDensity === 'comfortable', togglable: true }
     ];
 }
 
@@ -182,7 +182,7 @@ class ToggleButton {
     private icon: string;
 
     constructor(obj?: IButton) {
-        this.ripple = obj.ripple || "gray";
+        this.ripple = obj.ripple || 'gray';
         this.label = obj.label;
         this.selected = obj.selected || false;
         this.togglable = obj.togglable || true;
@@ -197,19 +197,19 @@ public bordersButtons: ToggleButton[];
 public ngOnInit() {
     this.bordersButtons = [
         new ToggleButton({
-            icon: "border_top",
+            icon: 'border_top',
             selected: true
         }),
         new ToggleButton({
-            icon: "border_right",
+            icon: 'border_right',
             selected: false
         }),
         new ToggleButton({
-            icon: "border_bottom",
+            icon: 'border_bottom',
             selected: false
         }),
         new ToggleButton({
-            icon: "border_left",
+            icon: 'border_left',
             selected: false
         })
     ];

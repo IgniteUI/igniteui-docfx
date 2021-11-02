@@ -137,10 +137,10 @@ We're going to create our members in the typescript file like this:
 
 ...
  public members: Member[] = [
-    new Member("Terrance Orta", "online"),
-    new Member("Donna Price", "online"),
-    new Member("Lisa Landers", "away"),
-    new Member("Dorothy H. Spencer", "offline"),
+    new Member('Terrance Orta', 'online'),
+    new Member('Donna Price', 'online'),
+    new Member('Lisa Landers', 'away'),
+    new Member('Dorothy H. Spencer', 'offline'),
   ];
 
 ```
@@ -158,17 +158,17 @@ class Member {
         this.name = name;
         this.status = status;
         switch (status) {
-            case "online":
-                this.type = "success";
-                this.icon = "check";
+            case 'online':
+                this.type = 'success';
+                this.icon = 'check';
                 break;
-            case "away":
-                this.type = "warning";
-                this.icon = "schedule";
+            case 'away':
+                this.type = 'warning';
+                this.icon = 'schedule';
                 break;
-            case "offline":
-                this.type = "error";
-                this.icon = "remove";
+            case 'offline':
+                this.type = 'error';
+                this.icon = 'remove';
                 break;
         }
     }

@@ -24,7 +24,7 @@ The first step is to import the `IgxCalendarModule` inside our **app.module.ts**
 ```typescript
 // app.module.ts
 ...
-import { HammerModule } from "@angular/platform-browser";
+import { HammerModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IgxCalendarModule } from 'igniteui-angular';
 @NgModule({
@@ -38,7 +38,7 @@ export class AppModule {}
 You will usually also import the [`IgxMonthPickerComponent`]({environment:angularApiUrl}/classes/igxmonthpickercomponent.html) in the AppComponent file (or your editor will auto-import them for you) when declaring types that are part of the month picker API:
 
 ```typescript
-import { IgxMonthPickerComponent } from "igniteui-angular";
+import { IgxMonthPickerComponent } from 'igniteui-angular';
 ...
 
 @ViewChild('monthPicker', { read: IgxMonthPickerComponent }) public monthPicker: IgxMonthPickerComponent;
@@ -93,7 +93,7 @@ Change the month picker display format, using the [`formatOptions`]({environment
 
 public date: Date = new Date();
 public numericFormatOptions = {
-        month: "2-digit"
+    month: '2-digit'
 };
 ```
 
@@ -110,9 +110,9 @@ Use the [`locale`]({environment:angularApiUrl}/classes/igxmonthpickercomponent.h
 // month-picker-sample.component.ts
 
 public date: Date = new Date();
-public locale: "fr";
+public locale: 'fr';
 public formatOptions = {
-        month: "long"
+    month: 'long'
 };
 ```
 

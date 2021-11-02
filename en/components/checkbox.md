@@ -161,9 +161,9 @@ And finally, we'll create the logic of our application:
 // app.component.ts
 
 public tasks = [
-    { done: true, description: "Research" },
-    { done: true, description: "Implement" },
-    { done: false, description: "Test" }
+    { done: true, description: 'Research' },
+    { done: true, description: 'Implement' },
+    { done: false, description: 'Test' }
 ];
 
 public get masterCheckbox() {

@@ -24,16 +24,16 @@ npm install @igniteui/material-icons-extended
 First, let's see how we can register a single icon in our component:
 
 ```typescript
-import { Component, OnInit } from "@angular/core";
-import { IgxIconService } from "igniteui-angular";
-import { github } from "@igniteui/material-icons-extended";
+import { Component, OnInit } from '@angular/core';
+import { IgxIconService } from 'igniteui-angular';
+import { github } from '@igniteui/material-icons-extended';
 // ...
 export class SampleComponent implements OnInit {
   constructor(private iconService: IgxIconService) {}
 
   ngOnInit(): void {
     // Register a single icon
-    this.iconService.addSvgIconFromText(github.name, github.value, "imx-icons");
+    this.iconService.addSvgIconFromText(github.name, github.value, 'imx-icons');
   }
 }
 ```
@@ -42,7 +42,7 @@ Now, let's see how to register multiple icons/categories:
 
 ```typescript
 //...
-import { health, programming } from "@igniteui/material-icons-extended";
+import { health, programming } from '@igniteui/material-icons-extended';
 
 export class SampleComponent implements OnInit {
   public allIcons = [
@@ -52,7 +52,7 @@ export class SampleComponent implements OnInit {
   //...
   addIcons() {
     for (let icon of this.allIcons) {
-      this.iconService.addSvgIconFromText(icon.name, icon.value, "imx-icons");
+      this.iconService.addSvgIconFromText(icon.name, icon.value, 'imx-icons');
     }
   }
 

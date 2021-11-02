@@ -53,16 +53,16 @@ Since our slides are going to contain only images, we are going to create an arr
 ```typescript
 ...
 public slides = [
-      {
-        src: "/assets/images/carousel/ignite-ui-angular-indigo-design.png"
-      },
-      {
-        src: "/assets/images/carousel/slider-image-chart.png"
-      },
-      {
-        src: "/assets/images/carousel/ignite-ui-angular-charts.png"
-      }
-  ];
+  {
+    src: '/assets/images/carousel/ignite-ui-angular-indigo-design.png'
+  },
+  {
+    src: '/assets/images/carousel/slider-image-chart.png'
+  },
+  {
+    src: '/assets/images/carousel/ignite-ui-angular-charts.png'
+  }
+];
 ...
 ```
 

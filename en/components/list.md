@@ -306,15 +306,15 @@ import { IgxButtonGroupModule } from 'igniteui-angular';
 ```typescript
 // contacts.component.ts
 
-public density = "comfortable";
+public density = 'comfortable';
 public displayDensities;
 
 public ngOnInit() {
-this.displayDensities = [
-    { label: 'comfortable', selected: this.density === 'comfortable', togglable: true },
-    { label: 'cosy', selected: this.density === 'cosy', togglable: true },
-    { label: 'compact', selected: this.density === 'compact', togglable: true }
-];
+    this.displayDensities = [
+        { label: 'comfortable', selected: this.density === 'comfortable', togglable: true },
+        { label: 'cosy', selected: this.density === 'cosy', togglable: true },
+        { label: 'compact', selected: this.density === 'compact', togglable: true }
+    ];
 }
 
 public selectDensity(event) {
@@ -411,19 +411,19 @@ And finally here is the typescript code handling the panning events:
 // contacts.component.ts
 
 ...
-@ViewChild("toast")
+@ViewChild('toast')
 public toast: IgxToastComponent;
 
 public rightPanPerformed(args) {
   args.keepItem = true;
-  this.toast.message = "Dialing " + this.contacts[args.item.index - 1].name;
+  this.toast.message = 'Dialing ' + this.contacts[args.item.index - 1].name;
   this.toast.open();
 }
 
 public leftPanPerformed(args) {
   args.keepItem = false;
   setTimeout((idx = args.item.index - 1) => {
-    this.toast.message = "Contact " + this.contacts[idx].name + " removed.";
+    this.toast.message = 'Contact ' + this.contacts[idx].name + ' removed.';
     this.toast.open();
     this.contacts.splice(idx, 1);
   }, 500);

@@ -26,8 +26,8 @@ Note that the `IgxInputGroup` also depends on the **FormsModule** in order to ha
 // app.module.ts
 
 ...
-import { IgxInputGroupModule } from "igniteui-angular";
-import { FormsModule } from "@angular/forms";
+import { IgxInputGroupModule } from 'igniteui-angular';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
     ...
@@ -109,14 +109,10 @@ Ignite UI for Angular also provides styling for the input of `type="file"` and i
 </igx-input-group>
 ```
 
-
-
 <code-view style="height:695px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/input-group-sample-5" >
 </code-view>
-
-
 
 ### Input Group Theme
 

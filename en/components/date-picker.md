@@ -25,7 +25,7 @@ To get started with the Date Picker component, first you need to import the `Igx
 
 ```typescript
 ...
-import { HammerModule } from "@angular/platform-browser";
+import { HammerModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IgxDatePickerModule } from 'igniteui-angular';
 

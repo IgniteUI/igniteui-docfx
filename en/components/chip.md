@@ -113,28 +113,28 @@ Dragging can be enabled by setting the [`draggable`]({environment:angularApiUrl}
 Then, we need to add the `chipList` and the function, that handles the [`remove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#remove) event:
 
 ```ts
-import { IBaseChipEventArgs } from "igniteui-angular";
+import { IBaseChipEventArgs } from 'igniteui-angular';
 ...
 public chipList = [
     {
-        text: "Country",
-        id: "1",
-        icon: "place"
+        text: 'Country',
+        id: '1',
+        icon: 'place'
     },
     {
-        text: "City",
-        id: "2",
-        icon: "location_city"
+        text: 'City',
+        id: '2',
+        icon: 'location_city'
     },
     {
-        text: "Town",
-        id: "3",
-        icon: "store"
+        text: 'Town',
+        id: '3',
+        icon: 'store'
     },
     {
-        text: "First Name",
-        id: "4",
-        icon: "person_pin"
+        text: 'First Name',
+        id: '4',
+        icon: 'person_pin'
     }
 ];
 
@@ -325,23 +325,23 @@ Resize the avatar to fit the chip:
 Add the `chipList` and the functions that handle the events:
 
 ```ts
-import { IBaseChipEventArgs, IChipsAreaReorderEventArgs } from "igniteui-angular";
+import { IBaseChipEventArgs, IChipsAreaReorderEventArgs } from 'igniteui-angular';
 ...
 public chipList = [
     {
-        id: "770-504-2217",
-        name: "Terrance Orta",
-        photo: "https://www.infragistics.com/angular-demos/assets/images/men/27.jpg"
+        id: '770-504-2217',
+        name: 'Terrance Orta',
+        photo: 'https://www.infragistics.com/angular-demos/assets/images/men/27.jpg'
     },
     {
-        id: "423-676-2869",
-        name: "Richard Mahoney",
-        photo: "https://www.infragistics.com/angular-demos/assets/images/men/13.jpg"
+        id: '423-676-2869',
+        name: 'Richard Mahoney',
+        photo: 'https://www.infragistics.com/angular-demos/assets/images/men/13.jpg'
     },
     {
-        id: "859-496-2817",
-        name: "Donna Price",
-        photo: "https://www.infragistics.com/angular-demos/assets/images/women/50.jpg"
+        id: '859-496-2817',
+        name: 'Donna Price',
+        photo: 'https://www.infragistics.com/angular-demos/assets/images/women/50.jpg'
     }
 ];
 
