@@ -31,8 +31,7 @@ import { IgxForOfModule } from 'igniteui-angular';
 @NgModule({
     imports: [
         ...
-        IgxForOfModule,
-        ...
+        IgxForOfModule
     ]
 })
 export class AppModule {}

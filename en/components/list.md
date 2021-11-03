@@ -469,29 +469,29 @@ Let's add an input field to the top in our Angular component template first and 
 It's time to import the `IgxFilterModule` and the `IgxInputGroupModule` in our app.module.ts file and [`IgxFilterOptions`]({environment:angularApiUrl}/classes/igxfilteroptions.html) in our contacts component:
 
 ```typescript
-    // app.module.ts
+// app.module.ts
+...
+import { IgxFilterModule, IgxInputGroupModule } from 'igniteui-angular';
+
+@NgModule({
+    imports: [..., IgxFilterModule, IgxInputGroupModule]
+})
+
+// contacts.component.ts
+...
+import { IgxFilterOptions } from 'igniteui-angular';
+
+@Component({...})
+export class ContactListComponent {
+    public searchContact: string;
     ...
-    import { IgxFilterModule, IgxInputGroupModule } from 'igniteui-angular';
-
-    @NgModule({
-        imports: [..., IgxFilterModule, IgxInputGroupModule]
-    })
-
-    // contacts.component.ts
-    ...
-    import { IgxFilterOptions } from 'igniteui-angular';
-
-    @Component({...})
-    export class ContactListComponent {
-        public searchContact: string;
-        ...
-        get filterContacts(): IgxFilterOptions {
-            const fo = new IgxFilterOptions();
-            fo.key = 'name';
-            fo.inputValue = this.searchContact;
-            return fo;
-        }
+    get filterContacts(): IgxFilterOptions {
+        const fo = new IgxFilterOptions();
+        fo.key = 'name';
+        fo.inputValue = this.searchContact;
+        return fo;
     }
+}
 ```
 
 After importing the [`IgxFilterOptions`]({environment:angularApiUrl}/classes/igxfilteroptions.html), we need to register a new getter method that will return the filtering options to be used by the pipe each time the `searchContact` property gets updated. For the filter to work we need to register a `key` to filter the contact object by. In our case that would be the `name` of each contact. The second property that has to be registered on the [`IgxFilterOptions`]({environment:angularApiUrl}/classes/igxfilteroptions.html) object is the value that we should check against when comparing our contact name. This would be the `searchContact` property that we bound to the input field above our contacts list.

@@ -54,9 +54,9 @@ export class AppModule {}
 // tasks.component.ts
 ...
 public tasks = [
-  { done: true, description: 'Research' },
-  { done: true, description: 'Implement' },
-  { done: false, description: 'Test' },
+    { done: true, description: 'Research' },
+    { done: true, description: 'Implement' },
+    { done: false, description: 'Test' }
 ];
 
 ...
@@ -162,9 +162,9 @@ igx-checkbox.tasks {
 // app.component.ts
 
 public tasks = [
-    { done: true, description: "Research" },
-    { done: true, description: "Implement" },
-    { done: false, description: "Test" }
+    { done: true, description: 'Research' },
+    { done: true, description: 'Implement' },
+    { done: false, description: 'Test' }
 ];
 
 public get masterCheckbox() {

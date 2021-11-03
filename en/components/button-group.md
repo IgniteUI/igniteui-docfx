@@ -66,7 +66,7 @@ Use the [`alignment`]({environment:angularApiUrl}/classes/igxbuttongroupcomponen
 
 ```typescript
 //sample.component.ts
-import { ButtonGroupAlignment } from "igniteui-angular";
+import { ButtonGroupAlignment } from 'igniteui-angular';
 ...
 public alignment = ButtonGroupAlignment.vertical;
 ...

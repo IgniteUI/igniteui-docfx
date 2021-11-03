@@ -181,8 +181,8 @@ export class MyCustomDropDownComponent {
             name: 'Cucumber',
             refNo: '00000'
         }, {
-        name: 'Lettuce',
-        refNo: '00001'
+            name: 'Lettuce',
+            refNo: '00001'
         },
         ...]
     }, {

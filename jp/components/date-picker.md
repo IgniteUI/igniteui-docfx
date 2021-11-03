@@ -25,20 +25,13 @@ Date Picker コンポーネントの使用を開始するには、まず、使�
 > Date Picker が [**IgxCalendarComponent**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) を使用し、タッチ操作のために **BrowserAnimationsModule** と**HammerModule** に依存関係があり、これらもモジュールに追加する必要があります。
 
 ```typescript
-...
-import { HammerModule } from "@angular/platform-browser";
+import { HammerModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IgxDatePickerModule } from 'igniteui-angular';
 
 @NgModule({
     ...
-    imports: [
-        ...,
-        IgxDatePickerModule,
-        BrowserAnimationsModule,
-        HammerModule,
-        ...
-    ],
+    imports: [..., IgxDateRangePickerModule, BrowserAnimationsModule, HammerModule],
     ...
 })
 export class AppModule {}

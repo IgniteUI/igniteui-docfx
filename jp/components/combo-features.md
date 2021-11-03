@@ -64,7 +64,7 @@ export class AppModule {}
 グループ化は、[groupKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#groupkey) プロパティを対応するデータソース エンティティに設定、または空文字列に設定して有効または無効にできます。
 
 ```typescript
-    @ViewChild("combo", { read: IgxComboComponent }) public combo: IgxComboComponent;
+    @ViewChild('combo', { read: IgxComboComponent }) public combo: IgxComboComponent;
 
     public filterable = true;
     public showSearchCaseIcon = true;
@@ -72,7 +72,7 @@ export class AppModule {}
     public disabled = false;
 
     public enableGroups(event) {
-        this.combo.groupKey = event.checked ? "region" : "";
+        this.combo.groupKey = event.checked ? 'region' : '';
     }
 ```
 
@@ -86,7 +86,7 @@ export class AppModule {}
 ```
 
 ```typescript
-import { localData } from "./local-data";
+import { localData } from './local-data';
 
 export class ComboDemo implements OnInit {
     public lData: any[];

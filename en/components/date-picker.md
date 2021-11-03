@@ -24,20 +24,13 @@ To get started with the Date Picker component, first you need to import the `Igx
 > As the picker uses the [**IgxCalendarComponent**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html), it is also dependent on the **BrowserAnimationsModule** and on the **HammerModule** for touch interactions, so they need to be added to the module as well:
 
 ```typescript
-...
 import { HammerModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IgxDatePickerModule } from 'igniteui-angular';
 
 @NgModule({
     ...
-    imports: [
-        ...,
-        IgxDatePickerModule,
-        BrowserAnimationsModule,
-        HammerModule,
-        ...
-    ],
+    imports: [..., IgxDatePickerModule, BrowserAnimationsModule, HammerModule],
     ...
 })
 export class AppModule {}

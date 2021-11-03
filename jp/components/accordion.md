@@ -100,7 +100,7 @@ Angular Accordion は、パネルの展開と縮小の両方のアニメーシ�
 アニメーションに関して、2 つのオプションがあります。最初に、Accordion コンポーネントの `animationSettings` プロパティを設定します。
 
 ```typescript
-import { useAnimation } from "@angular/animations";
+import { useAnimation } from '@angular/animations';
 import { slideInLeft, slideOutRight } from 'igniteui-angular';
 @Component({
     ...
@@ -109,14 +109,14 @@ export class AccordionComponent {
     public animationSettingsCustom = {
         closeAnimation: useAnimation(slideOutRight, {
             params: {
-                duration: "100ms",
-                toPosition: "translateX(25px)"
+                duration: '100ms',
+                toPosition: 'translateX(25px)'
             }
         }),
         openAnimation: useAnimation(slideInLeft, {
             params: {
-                duration: "500ms",
-                fromPosition: "translateX(-15px)",
+                duration: '500ms',
+                fromPosition: 'translateX(-15px)',
                 startOpacity: 0.1
             }
         })

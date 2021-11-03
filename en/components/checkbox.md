@@ -53,9 +53,9 @@ Optionally, you can also bind the [`change`]({environment:angularApiUrl}/classes
 // tasks.component.ts
 ...
 public tasks = [
-  { done: true, description: 'Research' },
-  { done: true, description: 'Implement' },
-  { done: false, description: 'Test' },
+    { done: true, description: 'Research' },
+    { done: true, description: 'Implement' },
+    { done: false, description: 'Test' }
 ];
 
 ...

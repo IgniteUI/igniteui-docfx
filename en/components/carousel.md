@@ -53,15 +53,9 @@ Since our slides are going to contain only images, we are going to create an arr
 ```typescript
 ...
 public slides = [
-  {
-    src: '/assets/images/carousel/ignite-ui-angular-indigo-design.png'
-  },
-  {
-    src: '/assets/images/carousel/slider-image-chart.png'
-  },
-  {
-    src: '/assets/images/carousel/ignite-ui-angular-charts.png'
-  }
+    { src: '/assets/images/carousel/ignite-ui-angular-indigo-design.png' },
+    { src: '/assets/images/carousel/slider-image-chart.png' },
+    { src: '/assets/images/carousel/ignite-ui-angular-charts.png' }
 ];
 ...
 ```
@@ -308,7 +302,6 @@ syncing the components by hooking up on carousel's [`onSlideChanged`]({environme
 
 ```typescript
   public ngOnInit() {
-    ...
     this.list.itemClicked.subscribe((args: IListItemClickEventArgs) => {
         this.currentIndex = args.item.index;
         this.carousel.select(this.carousel.get(this.currentIndex));

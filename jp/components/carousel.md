@@ -54,16 +54,10 @@ export class AppModule {}
 ```typescript
 ...
 public slides = [
-      {
-        src: "/assets/images/carousel/ignite-ui-angular-indigo-design.png"
-      },
-      {
-        src: "/assets/images/carousel/slider-image-chart.png"
-      },
-      {
-        src: "/assets/images/carousel/ignite-ui-angular-charts.png"
-      }
-  ];
+    { src: '/assets/images/carousel/ignite-ui-angular-indigo-design.png' },
+    { src: '/assets/images/carousel/slider-image-chart.png' },
+    { src: '/assets/images/carousel/ignite-ui-angular-charts.png' }
+];
 ...
 ```
 
@@ -309,7 +303,6 @@ public slides = [
 
 ```typescript
   public ngOnInit() {
-    ...
     this.list.itemClicked.subscribe((args: IListItemClickEventArgs) => {
         this.currentIndex = args.item.index;
         this.carousel.select(this.carousel.get(this.currentIndex));

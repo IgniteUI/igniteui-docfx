@@ -91,12 +91,12 @@ import { IPaginatorResourceStrings, changei18n } from "igniteui-angular";
 
 ```ts
 private paginatorResourceStrings: IPaginatorResourceStrings = {
-    igx_paginator_label: "Records per page:",
-    igx_paginator_first_page_button_text: "Custom first page text",
-    igx_paginator_last_page_button_text: "Custom last page text",
-    igx_paginator_next_page_button_text: "Custom next page text",
-    igx_paginator_previous_page_button_text: "Custom previous page text",
-    igx_paginator_pager_text: "out of"
+    igx_paginator_label: 'Records per page:',
+    igx_paginator_first_page_button_text: 'Custom first page text',
+    igx_paginator_last_page_button_text: 'Custom last page text',
+    igx_paginator_next_page_button_text: 'Custom next page text',
+    igx_paginator_previous_page_button_text: 'Custom previous page text',
+    igx_paginator_pager_text: 'out of'
 };
 ```
 
@@ -112,7 +112,7 @@ public ngOnInit(): void {
 In order to change the resource string to a specific Paging component, you can use a @ViewChild and set the desired [resourceStrings]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#resourceStrings) within a `requestAnimationFrame` method with a callback, that will be invoked before the page repaint. Setting a newly instantiated object to the [resourceStrings]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#resourceStrings) property will localize only that given component's instance.
 
 ```ts
-@ViewChild("paginator", { read: IgxPaginatorComponent, static: false }) public paginator: IgxPaginatorComponent;
+@ViewChild('paginator', { read: IgxPaginatorComponent, static: false }) public paginator: IgxPaginatorComponent;
 ...
 
 public ngOnInit(): void {

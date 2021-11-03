@@ -137,12 +137,12 @@ export class AppModule {}
 // contacts.component.ts
 
 ...
- public members: Member[] = [
-    new Member("Terrance Orta", "online"),
-    new Member("Donna Price", "online"),
-    new Member("Lisa Landers", "away"),
-    new Member("Dorothy H. Spencer", "offline"),
-  ];
+public members: Member[] = [
+  new Member('Terrance Orta', 'online'),
+  new Member('Donna Price', 'online'),
+  new Member('Lisa Landers', 'away'),
+  new Member('Dorothy H. Spencer', 'offline'),
+];
 
 ```
 
@@ -159,17 +159,17 @@ class Member {
         this.name = name;
         this.status = status;
         switch (status) {
-            case "online":
-                this.type = "success";
-                this.icon = "check";
+            case 'online':
+                this.type = 'success';
+                this.icon = 'check';
                 break;
-            case "away":
-                this.type = "warning";
-                this.icon = "schedule";
+            case 'away':
+                this.type = 'warning';
+                this.icon = 'schedule';
                 break;
-            case "offline":
-                this.type = "error";
-                this.icon = "remove";
+            case 'offline':
+                this.type = 'error';
+                this.icon = 'remove';
                 break;
         }
     }
