@@ -93,12 +93,12 @@ Then, we will add a div with text and the IgxTextHighlight directive. Note that,
 In the .ts file of our component first we need to add the following fields, that are used for bindings in our component's template:
 
 ``` typescript
-public html = "...";
+public html = '...';
 
 @ViewChild(IgxTextHighlightDirective, {read: IgxTextHighlightDirective})
 public highlight: IgxTextHighlightDirective;
 
-public searchText: string = "";
+public searchText: string = '';
 public matchCount: number = 0;
 public caseSensitive: boolean = false;
 public index: number = 0;
@@ -114,10 +114,10 @@ Then we need to add the following methods which will allow the user to apply the
 ``` typescript
 public searchKeyDown(ev) {
     if (this.searchText) {
-        if (ev.key === "Enter" || ev.key === "ArrowDown" || ev.key === "ArrowRight") {
+        if (ev.key === 'Enter' || ev.key === 'ArrowDown' || ev.key === 'ArrowRight') {
             ev.preventDefault();
             this.findNext();
-        } else if (ev.key === "ArrowUp" || ev.key === "ArrowLeft") {
+        } else if (ev.key === 'ArrowUp' || ev.key === 'ArrowLeft') {
             ev.preventDefault();
             this.findPrev();
         }
@@ -135,7 +135,7 @@ public updateSearch() {
 }
 
 public clearSearch() {
-    this.searchText = "";
+    this.searchText = '';
     this.find(0);
 }
 
@@ -156,7 +156,7 @@ private find(increment: number) {
         this.index = this.index > this.matchCount - 1 ? 0 : this.index;
 
         if (this.matchCount) {
-            IgxTextHighlightDirective.setActiveHighlight("group1", {
+            IgxTextHighlightDirective.setActiveHighlight('group1', {
                 columnIndex: 0,
                 index: this.index,
                 page: 0,
@@ -242,7 +242,7 @@ private find(increment: number) {
 
             const actualIndex = row === 0 ? this.index : this.index - matchesArray[row - 1];
 
-            IgxTextHighlightDirective.setActiveHighlight("group1", {
+            IgxTextHighlightDirective.setActiveHighlight('group1', {
                 index: actualIndex,
                 rowIndex: row
             });

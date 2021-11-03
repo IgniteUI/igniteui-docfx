@@ -87,7 +87,7 @@ The `igxToggle` directive uses the [`IgxOverlayService`]({environment:angularApi
 
 ...
     @ViewChild(IgxToggleDirective) public igxToggle: IgxToggleDirective;
-    @ViewChild("button") public igxButton: ElementRef;
+    @ViewChild('button') public igxButton: ElementRef;
 
     public _positionSettings = {
         horizontalStartPoint: HorizontalAlignment.Left,

@@ -28,7 +28,7 @@ _language: ja
 // app.module.ts
 
 ...
-import { HammerModule } from "@angular/platform-browser";
+import { HammerModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IgxTimePickerModule } from 'igniteui-angular';
 
@@ -210,9 +210,9 @@ Time Picker コンポーネントは、さまざまな表示形式と入力形�
 
 ```html
 <igx-time-picker
-[(ngModel)]="time"
-[inputFormat]="`hh:mm:ss`"
-[displayFormat]="`shortTime`">
+    [(ngModel)]="time"
+    [inputFormat]="`hh:mm:ss`"
+    [displayFormat]="`shortTime`">
 </igx-time-picker>
 ```
 > 注: `IgxTimePicker` が IME 入力をサポートするようになりました。合成が終了すると、コントロールはワイド文字の数字を ASCII 文字に変換します。
@@ -253,7 +253,7 @@ public time = '10:00:00';
 public min = '09:15:30';
 public max = '18:15:30';
 
-@ViewChild("toast", { static: true })
+@ViewChild('toast', { static: true })
 private toast;
 
 public onValidationFailed() {
@@ -350,7 +350,6 @@ Time Picker内の項目は、コンポーネント `ホスト`の子孫**では�
 
 ```typescript
 export class TimepickerStylingComponent {
-    ...
     constructor(public element: ElementRef) {
     }
 }

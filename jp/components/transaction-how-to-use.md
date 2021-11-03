@@ -43,9 +43,9 @@ export class AppModule { }
 
 ```typescript
 @Component({
-    selector: "transaction-base",
-    styleUrls: ["./transaction-base.component.scss"],
-    templateUrl: "transaction-base.component.html",
+    selector: 'transaction-base',
+    styleUrls: ['./transaction-base.component.scss'],
+    templateUrl: 'transaction-base.component.html',
     providers: [IgxTransactionService]
 })
 export class TransactionBaseComponent { }
@@ -56,7 +56,7 @@ export class TransactionBaseComponent { }
 `ts` ファイルは、アプリケーションで必要となる [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) を `igniteui-angular` ライブラリからインポートし、[`State`]({environment:angularApiUrl}/interfaces/state.html) および [`Transaction`]({environment:angularApiUrl}/interfaces/transaction.html) インターフェイスと [`TransactionType`]({environment:angularApiUrl}/enums/TransactionType.html) enum をインポートする必要があります。
 
 ```typescript
-import { IgxTransactionService, State, Transaction, TransactionType } from "igniteui-angular";
+import { IgxTransactionService, State, Transaction, TransactionType } from 'igniteui-angular';
 ```
 
 次にトランザクション サービスをコンストラクターにインポートします。
@@ -89,7 +89,7 @@ html テンプレートで [`igxList`]({environment:angularApiUrl}/classes/igxli
 
 ```typescript
 @Pipe({
-    name: "transactionBasePipe",
+    name: 'transactionBasePipe',
     pure: false
 })
 export class TransactionBasePipe implements PipeTransform {
@@ -212,7 +212,7 @@ public isDeleted(id): boolean {
 ```typescript
 public onAdd(): void {
     // it must have a unique 'id' property
-    const item: WishlistItem = { id: 4, name: "Yacht", price: "A lot!" };
+    const item: WishlistItem = { id: 4, name: 'Yacht', price: 'A lot!' };
 
     // in an `ADD` transaction you do not need to provide a `recordRef` argument,
     // since there is nothing to refer to yet
