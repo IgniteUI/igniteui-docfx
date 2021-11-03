@@ -46,7 +46,7 @@ Then add the `igx-select` along with a list of items to choose from. We use [`ig
 Another way to do it would be to use a collection of items that we want to display using the [*ngFor](https://angular.io/api/common/NgForOf) structural directive:
 
 ```typescript
-public items: string[] = ["Orange", "Apple", "Banana", "Mango"];
+public items: string[] = ['Orange', 'Apple', 'Banana', 'Mango'];
 ```
 
 ```html
@@ -109,16 +109,16 @@ To help visually separate item groups, the select component supports item groupi
 This works best with hierarchical data that can be iterated to declare the components. In the following example, each group has a `label` and a collection of `items`:
 ```typescript
 public greengrocery: Array<{ label: string, items: Array<{ type: string, origin: string }> }> = [
-    { label: "Fruits", items: [
-            { type: "Apple", origin: "local" },
-            { type: "Orange", origin: "import" },
-            { type: "Banana", origin: "import"}
+    { label: 'Fruits', items: [
+            { type: 'Apple', origin: 'local' },
+            { type: 'Orange', origin: 'import' },
+            { type: 'Banana', origin: 'import'}
         ]
     },
-    { label: "Vegetables", items: [
-            { type: "Cucumber", origin: "local" },
-            { type: "Potato", origin: "import" },
-            { type: "Pepper", origin: "local" }
+    { label: 'Vegetables', items: [
+            { type: 'Cucumber', origin: 'local' },
+            { type: 'Potato', origin: 'import' },
+            { type: 'Pepper', origin: 'local' }
         ]
     }
 ];
@@ -255,7 +255,7 @@ Inside your class, you would have something along the lines of:
 export class MyClass implements OnInit {
     @ViewChild(IgxSelectComponent)
     public select: IgxSelectComponent;
-    public items: string[] = ["Orange", "Apple", "Banana", "Mango", "Tomato"];
+    public items: string[] = ['Orange', 'Apple', 'Banana', 'Mango', 'Tomato'];
     public customOverlaySettings: OverlaySettings;
 
     public ngOnInit(): void {

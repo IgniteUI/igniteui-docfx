@@ -52,12 +52,11 @@ Let's enhance the code above by binding the switch properties to some data. Say,
 ```typescript
 // toggle.component.ts
 ...
-  public settings = [
+public settings = [
     { name: 'WiFi', state: false},
     { name: 'Bluetooth', state: true},
     { name: 'Device visibility', state: false}
-  ];
-
+];
 ```
 Enhance the component template by adding a switch for each setting and then binding the corresponding property:
 

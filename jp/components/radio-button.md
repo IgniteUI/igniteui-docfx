@@ -66,18 +66,18 @@ export class AppModule {
 // radiogroup.component.ts
 ...
 public colors = [{
-    hex: "#f06a2f",
-    name: "Carrot"
+    hex: '#f06a2f',
+    name: 'Carrot'
 }, {
-    hex: "#ff134a",
-    name: "Watermelon"
+    hex: '#ff134a',
+    name: 'Watermelon'
 }, {
-    hex: "#7bc96f",
-    name: "Grass"
+    hex: '#7bc96f',
+    name: 'Grass'
 },
 {
-    hex: "transparent",
-    name: "No color"
+    hex: 'transparent',
+    name: 'No color'
 }];
 
 public selectedColor: string = this.colors[3].hex;

@@ -192,23 +192,13 @@ public deletedItems = [];
 constructor() { }
 
 public ngOnInit() {
-    this.navItems = [{
-        avatar: "assets/images/avatar/2.jpg",
-        text: "Richard Mahoney"
-    },
-    {
-        avatar: "assets/images/avatar/4.jpg",
-        text: "Lisa Landers"
-    },
-    {
-        avatar: "assets/images/avatar/14.jpg",
-        text: "Marianne Taylor"
-    },
-    {
-        avatar: "assets/images/avatar/17.jpg",
-        text: "Ward Riley"
-    }];
-  }
+    this.navItems = [
+        { avatar: 'assets/images/avatar/2.jpg', text: 'Richard Mahoney' },
+        { avatar: 'assets/images/avatar/4.jpg', text: 'Lisa Landers' },
+        { avatar: 'assets/images/avatar/14.jpg', text: 'Marianne Taylor' },
+        { avatar: 'assets/images/avatar/17.jpg', text: 'Ward Riley' }
+    ];
+}
 
 public delete(item) {
     this.deletedItems.push([item, this.navItems.indexOf(item)]);
