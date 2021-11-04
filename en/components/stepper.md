@@ -214,7 +214,7 @@ The sample below demonstrates all exposed step types and how they could be chang
 
 <code-view style="height: 300px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/stepper-stepstypes-sample" alt="Angular Step Types Example">
+           iframe-src="{environment:demosBaseUrl}/layouts/stepper-steptypes-sample" alt="Angular Step Types Example">
 </code-view>
 
 <div class="divider--half"></div>
