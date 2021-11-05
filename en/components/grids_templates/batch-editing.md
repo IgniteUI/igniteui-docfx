@@ -142,10 +142,9 @@ After batch editing is enabled, define a `@@igxName` with bound data source and 
 The following code demonstrates the usage of the [`transactions`]({environment:angularApiUrl}/classes/igxtransactionservice.html#) API - undo, redo, commit.
 
 ```typescript
-...
 export class GridBatchEditingSampleComponent {
-    @ViewChild("grid", { read: IgxGridComponent }) public gridRowEditTransaction: IgxGridComponent;
-    ...
+    @ViewChild('grid', { read: IgxGridComponent }) public gridRowEditTransaction: IgxGridComponent;
+
     public undo() {
         /* exit edit mode and commit changes */
         this.grid.endEdit(true);
@@ -162,17 +161,15 @@ export class GridBatchEditingSampleComponent {
         this.grid.transactions.commit(this.data);
         this.toggle.close();
     }
-    ...
 }
 ```
 }
 @@if (igxName === 'IgxTreeGrid') {
 The following code demonstrates the usage of the [`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) API - undo, redo, commit.
 ```typescript
-...
 export class TreeGridBatchEditingSampleComponent {
-    @ViewChild("treeGrid", { read: IgxTreeGridComponent }) public treeGrid: IgxTreeGridComponent;
-    ...
+    @ViewChild('treeGrid', { read: IgxTreeGridComponent }) public treeGrid: IgxTreeGridComponent;
+
     public undo() {
         /* exit edit mode and commit changes */
         this.treeGrid.endEdit(true);
@@ -189,7 +186,6 @@ export class TreeGridBatchEditingSampleComponent {
         this.treeGrid.transactions.commit(this.data);
         this.dialog.close();
     }
-    ...
 }
 ```
 }
@@ -199,7 +195,6 @@ The following code demonstrates the usage of the [`transactions`]({environment:a
 ```typescript
 ...
 export class HierarchicalGridBatchEditingSampleComponent {
-    ...
     public undo(grid: IgxHierarchicalGridComponent) {
         /* exit edit mode and commit changes */
         grid.endEdit(true);
