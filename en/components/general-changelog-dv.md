@@ -2,106 +2,107 @@
 title: Angular What's New | Ignite UI for Angular | Infragistics
 _description: Learn about new features in the Ignite UI for Angular.
 _keywords: Changelog, What's New,  Ignite UI for Angular, Infragistics
+mentionedTypes: ["SeriesViewer", "XYChart", "DomainChart"]
 ---
 
 # Ignite UI for Angular Changelog (Data Visualization)
 
-<div class="divider--half"></div>
+All notable changes for each version of Ignite UI for Angular are documented on this page.
 
 <!-- Angular -->
 
 > [!NOTE]
-> This file is specific to igniteui-angular-\* packages only. (eg. igniteui-angular-charts)
->
-> For additional changes, please see [Ignite UI Angular Changes](https://github.com/igniteui/igniteui-angular/blob/master/changelog.md)
+> For changes specific to Angular LOB components, please see [Ignite UI Angular Changes](https://github.com/igniteui/igniteui-angular/blob/master/changelog.md)
 
 <!-- end: Angular -->
 
 <div class="divider--half"></div>
 
-All notable changes for each version of this project will be documented in this file.
+## **Angular 11.3.0**
 
-## **11.2.0**
+### Charts & Maps
 
-### Charts
+This release introduces a few improvements and simplifications to visual design and configuration options for the geographic map and all chart components.
 
-This release introduces several new and improved visual design and configuration options for all of the chart components. e.g. Data Chart, Category Chart, and Financial Chart.
+-   Changed [`yAxisLabelLocation`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxxychartcomponent.html#yaxislabellocation) property's type to [`yAxisLabelLocation`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxxychartcomponent.html#yaxislabellocation) from `AxisLabelLocation` in [`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html) and [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html)
+-   Changed `XAxisLabelLocation` property's type to [`yAxisLabelLocation`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxxychartcomponent.html#yaxislabellocation) from `AxisLabelLocation` in [`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html)
+-   Added `XAxisLabelLocation` property to [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html)
+-   Added support for representing geographic series of `GeographicMap` in a Legend
+-   Added crosshair lines by default in [`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html) and [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html)
+-   Added crosshair annotations by default in [`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html) and [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html)
+-   Added final value annotation by default in [`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html)
+-   Added new properties in Category Chart and Financial Chart:
+    -   Crosshairs Line styling that allow customizing crosshairs lines
+    -   Crosshairs Annotation styling that allow customizing crosshairs annotations
+    -   Final Value Annotation styling that allow customizing final value annotations
+    -   `AreaFillOpacity` that allow changing opacity of series fill (e.g. Area chart)
+    -   `MarkerThickness` that allows changing thickness of markers
+    -   `MarkerAutomaticBehavior` that allows which marker type is assigned to multiple series in the same chart
+    -   chart's `LegendItemBadgeShape` for setting shape of all series represented in a legend
+    -   chart's `LegendItemBadgeMode` for setting simplified or complex shapes of all legend item badges
+    -   series' `LegendItemBadgeShape` for setting shape for a series represented in a legend
+    -   series' `LegendItemBadgeMode` for setting simplified or complex shape of one legend item badge
+-   Added new properties in Category Chart and Financial Chart:
+    -   `MarkerAutomaticBehavior` that allows which marker type is assigned to multiple series in the same chart
+    -   chart's `LegendItemBadgeShape` for setting shape of all series represented in a legend
+    -   chart's `LegendItemBadgeMode` for setting simplified or complex shapes of all legend item badges
+    -   series' `LegendItemBadgeShape` for setting shape for a series represented in a legend
+    -   series' `LegendItemBadgeMode` for setting simplified or complex shape of one legend item badge
+-   Changed default vertical crosshair line stroke from <span style="color:#000000">#000000</span> to <span style="color:#BBBBBB">#BBBBBB</span> in category chart and series
+-   Changed shape of markers to circle for all series plotted in the same chart. This can be reverted by setting chart's `MarkerAutomaticBehavior` property to `SmartIndexed` enum value
+-   Simplified shapes of series in chart's legend to display only circle, line, or square. This can be reverted by setting chart's `LegendItemBadgeMode` property to `MatchSeries` enum value
+-   Changed color palette of series and markers displayed in all charts to improve accessibility
 
-Redesigned Chart Defaults:
+| Old brushes/outlines                                                                                                                                                                                                                                                                                                                                                                                                                                                              | New outline/brushes                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <span style="color:#8BDC5C">#8BDC5C</span> <br><span style="color:#8B5BB1">#8B5BB1</span> <br><span style="color:#6DB1FF">#6DB1FF</span> <br><span style="color:#F8A15F">#F8A15F</span> <br><span style="color:#EE5879">#EE5879</span> <br><span style="color:#735656">#735656</span> <br><span style="color:#F7D262">#F7D262</span> <br><span style="color:#8CE7D9">#8CE7D9</span> <br><span style="color:#E051A9">#E051A9</span> <br><span style="color:#A8A8B7">#A8A8B7</span> | <span style="color:#8BDC5C">#8BDC5C</span> <br><span style="color:#8961A9">#8961A9</span> <br><span style="color:#6DB1FF">#6DB1FF</span> <br><span style="color:#82E9D9">#82E9D9</span> <br><span style="color:#EA3C63">#EA3C63</span> <br><span style="color:#735656">#735656</span> <br><span style="color:#F8CE4F">#F8CE4F</span> <br><span style="color:#A8A8B7">#A8A8B7</span> <br><span style="color:#E051A9">#E051A9</span> <br><span style="color:#FF903B">#FF903B</span> <br> |
 
--   New color palette for series/markers in all charts. - All types of charts/series have new colors for brush/fill and outlines
+## **Angular 11.2.0**
 
-| Old series brushes outlines | New series outline brushes |
-| --------------------------- | -------------------------- |
-| `Color_001=#7446B9`         | `Color_001=#8bdc5c`        |
-| `Color_002=#9FB328`         | `Color_002=#8b5bb1`        |
-| `Color_003=#F96232`         | `Color_003=#6db1ff`        |
-| `Color_004=#2E9CA6`         | `Color_004=#f8a15f`        |
-| `Color_005=#DC3F76`         | `Color_005=#ee5879`        |
-| `Color_006=#FF9800`         | `Color_006=#735656`        |
-| `Color_007=#3F51B5`         | `Color_007=#f7d262`        |
-| `Color_008=#439C47`         | `Color_008=#8ce7d9`        |
-| `Color_009=#795548`         | `Color_009=#e051a9`        |
-| `Color_010=#9A9A9A`         | `Color_010=#a8a8b7`        |
+### Charts & Maps
 
-eg.
+This release introduces several new and improved visual design and configuration options for all of the chart components. e.g. `DataChart`, [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html), and [`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html).
 
-| <img class="responsive-img" src="../images/chartDefaults1.png" /> | <img class="responsive-img" src="../images/chartDefaults2.png" /> |
-| ----------------------------------------------------------------- | ----------------------------------------------------------------- |
-| <img class="responsive-img" src="../images/chartDefaults3.png" /> | <img class="responsive-img" src="../images/chartDefaults4.png" /> |
+-   Redesigned color palette of series and markers:
+
+| Old brushes/outlines                                                                                                                                                                                                                                                                                                                                                                                                                                                              | New outline/brushes                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <span style="color:#7446B9">#7446B9</span> <br><span style="color:#9FB328">#9FB328</span> <br><span style="color:#F96232">#F96232</span> <br><span style="color:#2E9CA6">#2E9CA6</span> <br><span style="color:#DC3F76">#DC3F76</span> <br><span style="color:#FF9800">#FF9800</span> <br><span style="color:#3F51B5">#3F51B5</span> <br><span style="color:#439C47">#439C47</span> <br><span style="color:#795548">#795548</span> <br><span style="color:#9A9A9A">#9A9A9A</span> | <span style="color:#8bdc5c">#8bdc5c</span> <br><span style="color:#8b5bb1">#8b5bb1</span> <br><span style="color:#6db1ff">#6db1ff</span> <br><span style="color:#f8a15f">#f8a15f</span> <br><span style="color:#ee5879">#ee5879</span> <br><span style="color:#735656">#735656</span> <br><span style="color:#f7d262">#f7d262</span> <br><span style="color:#8ce7d9">#8ce7d9</span> <br><span style="color:#e051a9">#e051a9</span> <br><span style="color:#a8a8b7">#a8a8b7</span> <br> |
+
+for example:
+
+\|
+\------------- \| -------------
+<img class="responsive-img" src="../images/chartDefaults1.png" /> \| <img class="responsive-img" src="../images/chartDefaults2.png" />
+<img class="responsive-img" src="../images/chartDefaults3.png" /> \| <img class="responsive-img" src="../images/chartDefaults4.png" />
 
 <div class="divider--half"></div>
 
 -   Changed Bar/Column/Waterfall series to have square corners instead of rounded corners
--   Changed Scatter High Density series’ colors for min/max heat properties
-
-    | Old heat min color | New heat min color |
-    | ------------------ | ------------------ |
-    | `#FF7446B9`        | `#ff8b5bb1`        |
-
-    | Old heat max color | New heat max color |
-    | ------------------ | ------------------ |
-    | `#FFC62828`        | `#ffee5879`        |
-
--   Changed Financial/Waterfall series’ colors for negative fill of their visuals
-
-    | Old negative brush | new negative brush |
-    | ------------------ | ------------------ |
-    | `#FFC62828`        | `#ffee5879`        |
-
+-   Changed Scatter High Density series’ colors for heat min property from <span style="color:#8a5bb1">#8a5bb1</span> to <span style="color:#000000">#000000</span>
+-   Changed Scatter High Density series’ colors for heat max property from <span style="color:#ee5879">#ee5879</span> to <span style="color:#ee5879">#ee5879</span>
+-   Changed Financial/Waterfall series’ `NegativeBrush` and `NegativeOutline` properties from <span style="color:#C62828">#C62828</span> to <span style="color:#ee5879">#ee5879</span>
 -   Changed marker's thickness to 2px from 1px
--   Changed marker's fill to match the marker's outline for PointSeries, BubbleSeries, ScatterSeries, PolarScatterSeries
-    -   Note, you can use set `MarkerFillMode` property to Normal to undo this change
--   Compressed labelling for the TimeXAxis and OrdinalTimeXAxis
+-   Changed marker's fill to match the marker's outline for [`IgxPointSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpointseriescomponent.html), [`IgxBubbleSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbubbleseriescomponent.html), [`IgxScatterSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterseriescomponent.html), [`IgxPolarScatterSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarscatterseriescomponent.html). You can use set `MarkerFillMode` property to Normal to undo this change
+-   Compressed labelling for the [`IgxTimeXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtimexaxiscomponent.html) and [`IgxOrdinalTimeXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxordinaltimexaxiscomponent.html)
 -   New Marker Properties:
-    -   `MarkerFillMode` - Can be set to 'MatchMarkerOutline' so the marker depends on the outline
-    -   `MarkerFillOpacity` - Can be set to a value 0 to 1
-    -   `MarkerOutlineMode` - Can be set to 'MatchMarkerBrush' so the marker's outline depends on the fill brush color
--   New Series `OutlineMode` Property:
-    -   Can be set to toggle the series outline visibility. Note, for Data Chart, the property is on the series
--   New Plot Area Margin Properties:
-    -   `PlotAreaMarginLeft`
-    -   `PlotAreaMarginTop`
-    -   `PlotAreaMarginRight`
-    -   `PlotAreaMarginBottom`
-    -   [`ComputedPlotAreaMarginMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/computedplotareamarginmode.html)
-    -   The plot area margin properties define the bleed over area introduced into the viewport when the chart is at the default zoom level. A common use case is to provide space between the axes and first/last data points. Note, the [`ComputedPlotAreaMarginMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/computedplotareamarginmode.html), listed below, will automatically set the margin when markers are enabled. The others are designed to specify a `Double` to represent the thickness, where PlotAreaMarginLeft etc. adjusts the space to all four sides of the chart.
+    -   series.`MarkerFillMode` - Can be set to `MatchMarkerOutline` so the marker depends on the outline
+    -   series.`MarkerFillOpacity` - Can be set to a value 0 to 1
+    -   series.`MarkerOutlineMode` - Can be set to `MatchMarkerBrush` so the marker's outline depends on the fill brush color
+-   New Series Property:
+    -   series.`OutlineMode` - Can be set to toggle the series outline visibility. Note, for Data Chart, the property is on the series
+-   New chart properties that define bleed over area introduced into the viewport when the chart is at the default zoom level. A common use case is to provide space between the axes and first/last data points. Note, the [`ComputedPlotAreaMarginMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/computedplotareamarginmode.html), listed below, will automatically set the margin when markers are enabled. The others are designed to specify a `Double` to represent the thickness, where PlotAreaMarginLeft etc. adjusts the space to all four sides of the chart:
+    -   chart.`PlotAreaMarginLeft`
+    -   chart.`PlotAreaMarginTop`
+    -   chart.`PlotAreaMarginRight`
+    -   chart.`PlotAreaMarginBottom`
+    -   chart.[`ComputedPlotAreaMarginMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/computedplotareamarginmode.html)
 -   New Highlighting Properties
-    -   [`HighlightingMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/highlightingmode.html) - Sets whether hovered or non-hovered series to fade, brighten
-    -   `HighlightingBehavior` - Sets whether the series highlights depending on mouse position eg. directly over or nearest item
+    -   chart.[`highlightingMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriesviewercomponent.html#highlightingmode) - Sets whether hovered or non-hovered series to fade, brighten
+    -   chart.[`highlightingBehavior`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriesviewercomponent.html#highlightingbehavior) - Sets whether the series highlights depending on mouse position eg. directly over or nearest item
     -   Note, in previous releases the highlighting was limited to fade on hover.
--   Added Highlighting for the following series:
-    -   Stacked
-    -   Scatter
-    -   Polar
-    -   Radial
-    -   Shape
--   Added Annotation layers to the following series:
-    -   Stacked
-    -   Scatter
-    -   Polar
-    -   Radial
-    -   Shape
+-   Added Highlighting Stacked, Scatter, Polar, Radial, and Shape series:
+-   Added Annotation layers to Stacked, Scatter, Polar, Radial, and Shape series:
 -   Added support for overriding the data source of individual stack fragments within a stacked series
 -   Added custom style events to Stacked, Scatter, Range, Polar, Radial, and Shape series
 -   Added support to automatically sync the vertical zoom to the series content
@@ -109,12 +110,8 @@ eg.
 
 ### Chart Legend
 
--   Added Horizontal Orientation for ItemLegend
-    -   The following chart types can use ItemLegend in horizontal orientation:
-        -   Bubble
-        -   Donut
-        -   Pie
--   [`LegendHighlightingMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/legendhighlightingmode.html) - Enables series highlighting when hovering over legend items
+-   Added horizontal [`Orientation`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/orientation.html) property to ItemLegend that can be used with Bubble, Donut, and Pie Chart
+-   Added [`legendHighlightingMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriesviewercomponent.html#legendhighlightingmode) property - Enables series highlighting when hovering over legend items
 
 ### Geographic Map
 
@@ -134,7 +131,7 @@ eg.
 
 <!-- Angular, React, WebComponents -->
 
-## **8.2.12**
+## **Angular 8.2.12**
 
 -   Changed Import Statements
 
