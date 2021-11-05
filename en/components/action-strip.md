@@ -94,7 +94,9 @@ This can be utilized via grid action components and we are providing two default
 
 >Note: When `IgxActionStripComponent` is a child component of the grid, hovering a row will automatically show the UI.
 
-You can use the default ones or create custom component and then add it to the ActionStrip component. If you want to use Action strip to achieve a Gmail scenario with row actions such as `delete`, `edit` and etc. You can simply create button component with `igx-icon`, add click event to it and insert it into the `igx-action-strip` component.
+### Row actions topic as part of the Grids section 
+
+You can use the default ones or create custom component and then add it to the `ActionStrip`. If you want to use `ActionStrip` to achieve a Gmail scenario with row actions such as `delete`, `edit` and etc. You can simply create button component with `igx-icon`, add click event to it and insert it into the `igx-action-strip` component.
 
 ```html
  <igx-action-strip #actionstrip>
