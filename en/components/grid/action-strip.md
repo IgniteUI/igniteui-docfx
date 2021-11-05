@@ -6,11 +6,12 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 # Grid ActionStrip
 
-The Grid component in Ignite UI for Angular provides the ability to use `ActionStrip` component to achieve row actions. 
-By default, we are providing two grid action components:
+The grid component in Ignite UI for Angular provides the ability to use `ActionStrip` and utilize CRUD for row/cell components and row pinning.
+Two grid actions are provided by default:
 
-- [`IgxGridEditingActionsComponent`]({environment:angularApiUrl}/classes/igxgrideditingactionscomponent.html) - includes functionality and UI related to grid editing. It allows you to quickly toggle edit mode for cells or rows, depending on the value of the `rowEditable` option of the grid and whether deleting rows is allowed.
-- [`IgxGridPinningActionsComponent`]({environment:angularApiUrl}/classes/igxgridpinningactionscomponent.html) - includes functionality and UI related to grid row pinning. It allows you to quickly pin rows and navigate between pinned rows and their disabled counterparts.
+- [`IgxGridEditingActionsComponent`]({environment:angularApiUrl}/classes/igxgrideditingactionscomponent.html) - includes functionality and UI specifically designed for the grid editing. It allows you to quickly toggle edit mode for cells or rows, depending on the [`rowEditable`]({environment:angularApiUrl}/classes/IgxGridComponent.html#rowEditable) option and row deletion of the grid.
+
+- [`IgxGridPinningActionsComponent`]({environment:angularApiUrl}/classes/igxgridpinningactionscomponent.html) - includes functionality and UI specifically designed for the grid row pinning. It allows you to quickly pin rows and navigate between pinned rows and their disabled counterparts.
 
 ```html
 <igx-grid [data]="data" [rowEditable]="true" [primaryKey]="'ID'">
@@ -23,8 +24,12 @@ By default, we are providing two grid action components:
     </igx-action-strip>
 </igx-grid>
 ```
+>Note: These components inherit [`IgxGridActionsBaseDirective`]({environment:angularApiUrl}/classes/igxgridactionsbasedirective.html) and when creating a custom grid action component, it should also inherit `IgxGridActionsBaseDirective`.
 
-You can use the them or create custom component and then add it to the `ActionStrip`. If you want to use `ActionStrip` to achieve a Gmail scenario with row actions such as `delete`, `edit` and etc. You can simply create button component with `igx-icon`, add click event to it and insert it into the `igx-action-strip` component.
+>Note: When `IgxActionStripComponent` is a child component of the grid, hovering a row will automatically show the UI.
+
+## Custom implementation
+These components expose templates giving flexibility for customization. For instance, if we would like to use the `ActionStrip` for a Gmail scenario with row actions such as `delete`, `edit` and etc. You can simply create button component with `igx-icon`, add click event to it and insert it into the `igx-action-strip` component.
 
 ```html
  <igx-action-strip #actionstrip>
