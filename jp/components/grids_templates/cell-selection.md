@@ -158,8 +158,8 @@ this.grid1.selectRange(range);
 1. 3 つの異なる単一セルが選択されている場合:
 ```
 expectedData = [
-    { CompanyName: "Infragistics" },
-    { Name: "Michael Langdon" },
+    { CompanyName: 'Infragistics' },
+    { Name: 'Michael Langdon' },
     { ParentID: 147 }
 ];
 ```
@@ -167,44 +167,44 @@ expectedData = [
 2. 1 列から 3 つのセルが選択されている場合:
 ```
 expectedData = [
-    { Address: "Obere Str. 57"},
-    { Address: "Avda. de la Constitución 2222"},
-    { Address: "Mataderos 2312"}
+    { Address: 'Obere Str. 57'},
+    { Address: 'Avda. de la Constitución 2222'},
+    { Address: 'Mataderos 2312'}
 ];
 ```
 
 3. 1 行 3 列から 3 つのセルをマウスドラッグで選択した場合:
 ```
 expectedData = [
-    { Address: "Avda. de la Constitución 2222", City: "México D.F.", ContactTitle: "Owner" }
+    { Address: 'Avda. de la Constitución 2222', City: 'México D.F.', ContactTitle: 'Owner' }
 ];
 ```
 
 4. 2 行 3 列から 3 つのセルをマウスドラッグで選択した場合:
 ```
 expectedData = [
-    { ContactTitle: "Sales Agent", Address: "Cerrito 333", City: "Buenos Aires"},
-    { ContactTitle: "Marketing Manager", Address: "Sierras de Granada 9993", City: "México D.F."}
+    { ContactTitle: 'Sales Agent', Address: 'Cerrito 333', City: 'Buenos Aires'},
+    { ContactTitle: 'Marketing Manager', Address: 'Sierras de Granada 9993', City: 'México D.F.'}
 ];
 ```
 
 5. 2 つの異なる範囲が選択されている場合:
 ```
 expectedData = [
-    { ContactName: "Martín Sommer", ContactTitle: "Owner"},
-    { ContactName: "Laurence Lebihan", ContactTitle: "Owner"},
-    { Address: "23 Tsawassen Blvd.", City: "Tsawassen"},
-    { Address: "Fauntleroy Circus", City: "London"}
+    { ContactName: 'Martín Sommer', ContactTitle: 'Owner'},
+    { ContactName: 'Laurence Lebihan', ContactTitle: 'Owner'},
+    { Address: '23 Tsawassen Blvd.', City: 'Tsawassen'},
+    { Address: 'Fauntleroy Circus', City: 'London'}
 ];
 ```
 
 6. 2 つの重複範囲が選択されている場合、形式は次のようになります。
 ```
 expectedData = [
-    { ContactName: "Diego Roel", ContactTitle: "Accounting Manager", Address: "C/ Moralzarzal, 86"},
-    { ContactName: "Martine Rancé", ContactTitle: "Assistant Sales Agent", Address: "184, chaussée de Tournai", City: "Lille"},
-    { ContactName: "Maria Larsson", ContactTitle: "Owner", Address: "Åkergatan 24", City: "Bräcke"},
-    { ContactTitle: "Marketing Manager", Address: "Berliner Platz 43", City: "München"}
+    { ContactName: 'Diego Roel', ContactTitle: 'Accounting Manager', Address: 'C/ Moralzarzal, 86'},
+    { ContactName: 'Martine Rancé', ContactTitle: 'Assistant Sales Agent', Address: '184, chaussée de Tournai', City: 'Lille'},
+    { ContactName: 'Maria Larsson', ContactTitle: 'Owner', Address: 'Åkergatan 24', City: 'Bräcke'},
+    { ContactTitle: 'Marketing Manager', Address: 'Berliner Platz 43', City: 'München'}
 ];
 ```
 
@@ -235,17 +235,7 @@ expectedData = [
 選択のスタイル設定を始めるには、すべてのテーマ関数とコンポーネントミックスインが存在する `index` ファイルをインポートする必要があります。
 
 ```scss
-// in 
-
-
-
-
-
-
-
-
-
-.scss
+// in component.scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
