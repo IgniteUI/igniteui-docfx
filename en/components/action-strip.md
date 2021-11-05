@@ -94,29 +94,11 @@ This can be utilized via grid action components and we are providing two default
 
 >Note: When `IgxActionStripComponent` is a child component of the grid, hovering a row will automatically show the UI.
 
-### Row actions topic as part of the Grids section 
-
-You can use the default ones or create custom component and then add it to the `ActionStrip`. If you want to use `ActionStrip` to achieve a Gmail scenario with row actions such as `delete`, `edit` and etc. You can simply create button component with `igx-icon`, add click event to it and insert it into the `igx-action-strip` component.
-
-```html
- <igx-action-strip #actionstrip>
-    <igx-grid-pinning-actions></igx-grid-pinning-actions>
-        <button title="Edit" igxButton="icon" igxRipple 
-            (click)='startEdit(actionstrip.context)'>
-    <igx-icon>edit</igx-icon>
-        </button>
-        <button title="Delete" igxButton="icon" igxRipple *ngIf='!isDeleted(actionstrip.context)'
-            (click)='actionstrip.context.delete()'>
-            <igx-icon>delete</igx-icon>
-        </button>
-    </igx-action-strip>
-</igx-grid>
-```
-
 <code-view style="height: 600px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/grid/grid-action-strip" >
 </code-view>
+
 
 ## Styling
 
