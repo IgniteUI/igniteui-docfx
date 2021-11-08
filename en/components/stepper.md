@@ -5,10 +5,10 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 # Angular Stepper Component Overview
-The Angular material stepper is a highly customizable component that visualizes content as a process and shows its progress by dividing the content into successive steps. It appears as a vertical or horizontal line. Supported by the Ignite UI for Angular library, the stepper component delivers a wizard-like workflow and multiple features like step validation, styling, orientation and keyboard navigation. 
+The Angular material stepper is a highly customizable component that visualizes content as a process and shows its progress by dividing the content into successive steps. It appears as a vertical or horizontal line. Provided by the Ignite UI for Angular library, the stepper component delivers a wizard-like workflow and multiple features like step validation, styling, orientation and keyboard navigation. 
 
 ## Angular Stepper Example
-In this Angular Stepper example, you can see how users are enabled to choose their business card and pass trough the process in five logical steps all together - selecting card type, adding business information, filling in personal information, providing shipping details and confirmation.
+In this Angular Stepper example, you can see how users are given the opportunity to customize their credit card and they pass trough the process in five logical steps - selecting card type, adding business information, filling in personal information, providing shipping details and confirmation.
 Note that the fourth step in our Angular stepper demo gets enabled only if the user ticks the checkbox in the second step, signifying that their mailing address is different from the business physical address.
 
 <code-view style="height: 725px" 
@@ -58,13 +58,13 @@ Steps can be declared using one of the following approaches.
 ```html
 <igx-stepper>
     <igx-step *ngFor="let step of stepsData" [disabled]=”step.disabled”>
-       		<igx-icon igxStepIndicator>
+        <igx-icon igxStepIndicator>
 			{{step.indicator}}
-		    </igx-icon>
+        </igx-icon>
 
-       		<p igxStepTitle>
+        <p igxStepTitle>
 			{{step.title}}
-		    </p>
+        </p>
     </igx-step>
 </igx-stepper>
 ```
@@ -241,7 +241,7 @@ The [IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponen
 
 ### Angular Stepper Animations
 
-Angular Stepper Animations provide the end-users a beautiful experience of interacting with the defined steps. The available animation options differ depending on the orientation of the stepper.
+Angular Stepper Animations provide the end-users with a beautiful experience interacting with the defined steps. The available animation options differ depending on the orientation of the stepper.
 
 When the stepper is **horizontally orientated**, it is configured to use the `slide` animation by default. It also supports `fade` as an alternative. The animations are configured through the [horizontalAnimationType]({environment:angularApiUrl}/classes/igxsteppercomponent.html#horizontalAnimationType) input.
 
@@ -253,7 +253,7 @@ Setting `none` to the both animation type inputs disables stepper animations.
 
 ## Keyboard Navigation
 
-Keyboard navigation in the Angular Material Stepper provides a rich variety of keyboard interactions to the end-user. This functionality is enabled by default and allows end-users to easily navigate through the steps. 
+The Angular Material Stepper provides a rich variety of keyboard interactions to the end-user. This functionality is enabled by default and allows end-users to easily navigate through the steps. 
 The [IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponent.html) navigation is compliant with [W3 accessability standards](https://www.w3.org/TR/wai-aria-practices-1.1/#tabpanel) and convenient to use.
 
 **Key Combinations**
