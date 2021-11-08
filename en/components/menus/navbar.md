@@ -7,7 +7,7 @@ mentionedTypes: ['Navbar']
 
 # Angular Navbar Overview
 
- Angular [`IgcNavbarComponent`]({environment:wcApiUrl}/classes/IgcNavbarComponent.html) informs the user of their current position in an app. The Navigation Bar can also provide links to quick actions such as search or favorite, helping users navigate smoothly through an application without trying to move to invalid routes or states. The bar sits at the top of the container it is placed in.
+ Angular [`Navbar Component`]({environment:wcApiUrl}/classes/IgcNavbarComponent.html) informs the user of their current position in an app. The Navigation Bar can also provide links to quick actions such as search or favorite, helping users navigate smoothly through an application without trying to move to invalid routes or states. The bar sits at the top of the container it is placed in.
 
 ## Angular Navbar Example
 
@@ -94,7 +94,7 @@ For more detailed information regarding the navbar's API, refer to the following
 
 Additional components and/or directives that were used:
 
--   [`IgcIconComponent`]({environment:wcApiUrl}/classes/IgcIconComponent.html)
+-   [`IgcIconComponent API`]({environment:wcApiUrl}/classes/IgcIconComponent.html)
 
 <div class="divider"></div>
 
