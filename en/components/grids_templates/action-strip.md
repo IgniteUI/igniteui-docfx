@@ -3,21 +3,31 @@ title: Angular Grid ActionStrip | Ignite UI for Angular | infragistics 
 _description: Check how easy it is to use ActionStrip in Grid component to achieve row actions
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular ActionStrip components, Angular ActionStrip directives, Angular ActionStrip controls
 ---
-
+@@if (igxName === 'IgxGrid') {
 # Grid ActionStrip
 
 The grid component in Ignite UI for Angular provides the ability to use `ActionStrip` and utilize CRUD for row/cell components and row pinning.
 Two grid actions are provided by default:
+}
+@@if (igxName === 'IgxTreeGrid') {
+# Tree Grid ActionStrip
 
+The tree grid component in Ignite UI for Angular provides the ability to use `ActionStrip` and utilize CRUD for row/cell components and row pinning.
+Two grid actions are provided by default:
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+# Hierarchical Grid ActionStrip
 
-
+The hierarchical grid component in Ignite UI for Angular provides the ability to use `ActionStrip` and utilize CRUD for row/cell components and row pinning.
+Two grid actions are provided by default:
+}
 
 - [`IgxGridEditingActionsComponent`]({environment:angularApiUrl}/classes/igxgrideditingactionscomponent.html) - includes functionality and UI specifically designed for the grid editing. It allows you to quickly toggle edit mode for cells or rows, depending on the [`rowEditable`]({environment:angularApiUrl}/classes/IgxGridComponent.html#rowEditable) option and row deletion of the grid.
 
 - [`IgxGridPinningActionsComponent`]({environment:angularApiUrl}/classes/igxgridpinningactionscomponent.html) - includes functionality and UI specifically designed for the grid row pinning. It allows you to quickly pin rows and navigate between pinned rows and their disabled counterparts.
 
 
-
+@@if (igxName === 'IgxGrid') {
 ```html
 <igx-grid [data]="data" [rowEditable]="true" [primaryKey]="'ID'">
     <igx-column *ngFor="let c of columns" [field]="c.field">
@@ -29,9 +39,33 @@ Two grid actions are provided by default:
     </igx-action-strip>
 </igx-grid>
 ```
+}
+@@if (igxName === 'IgxTreeGrid') {
+```html
+<igx-tree-grid [data]="data" [rowEditable]="true" [primaryKey]="'ID'">
+    <igx-column *ngFor="let c of columns" [field]="c.field">
+    </igx-column>
 
+    <igx-action-strip #actionStrip>
+        <igx-grid-pinning-actions></igx-grid-pinning-actions>
+        <igx-grid-editing-actions></igx-grid-editing-actions>
+    </igx-action-strip>
+</igx-tree-grid>
+```
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+```html
+<igx-hierarchical-grid [data]="data" [rowEditable]="true" [primaryKey]="'ID'">
+    <igx-column *ngFor="let c of columns" [field]="c.field">
+    </igx-column>
 
-
+    <igx-action-strip #actionStrip>
+        <igx-grid-pinning-actions></igx-grid-pinning-actions>
+        <igx-grid-editing-actions></igx-grid-editing-actions>
+    </igx-action-strip>
+</igx-hierarchical-grid>
+```
+}
 
 >Note: These components inherit [`IgxGridActionsBaseDirective`]({environment:infragisticsBaseUrl}/classes/igxgridactionsbasedirective.html) and when creating a custom grid action component, it should also inherit `IgxGridActionsBaseDirective`.
 
@@ -53,15 +87,25 @@ These components expose templates giving flexibility for customization. For inst
 </igx-grid>
 ```
 
-
+@@if (igxName === 'IgxGrid') {
 <code-view style="height: 600px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/grid/grid-action-strip" >
 </code-view>
+}
+@@if (igxName === 'IgxTreeGrid') {
+<code-view style="height: 600px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/tree-grid/grid-action-strip" >
+</code-view>
+}
 
-
-
-
+@@if (igxName === 'IgxHierarchicalGrid') {
+<code-view style="height: 600px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hGrid-action-strip" >
+</code-view>
+}
 
 ## API References
 
