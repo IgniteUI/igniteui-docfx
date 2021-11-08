@@ -99,7 +99,7 @@ This can be utilized via grid action components and we are providing two default
            iframe-src="{environment:demosBaseUrl}/grid/grid-action-strip" >
 </code-view>
 
->Note: More information about how to use ActionStrip in a grid component could be found [here](/components/grid/action-strip.html).
+>Note: More information about how to use ActionStrip in the grid component could be found [here](/components/grid/action-strip.html).
 
 ## Styling
 
