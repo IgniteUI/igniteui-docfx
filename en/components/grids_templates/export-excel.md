@@ -80,9 +80,7 @@ To start using the IgniteUI Excel Exporter first import the [`IgxExcelExporterSe
 
 ```typescript
 // app.module.ts
-
-...
-import { IgxExcelExporterService } from "igniteui-angular/services/index";
+import { IgxExcelExporterService } from 'igniteui-angular/services/index';
 
 @NgModule({
   providers: [ IgxExcelExporterService ]
@@ -107,21 +105,17 @@ Here is the code which will execute the export process in the component's typesc
 
 ```typescript
 // component.ts
+import { IgxExcelExporterService, IgxExcelExporterOptions } from 'igniteui-angular';
+import { @@igxNameComponent } from 'igniteui-angular';
 
-...
-import { IgxExcelExporterService, IgxExcelExporterOptions } from "igniteui-angular";
-import { @@igxNameComponent } from "igniteui-angular";
-...
-
-@ViewChild("@@igObjectRef") public @@igObjectRef: @@igxNameComponent;
+@ViewChild('@@igObjectRef') public @@igObjectRef: @@igxNameComponent;
 
 constructor(private excelExportService: IgxExcelExporterService) {
 }
 
 public exportButtonHandler() {
-  this.excelExportService.export(this.@@igObjectRef, new IgxExcelExporterOptions("ExportedDataFile"));
+  this.excelExportService.export(this.@@igObjectRef, new IgxExcelExporterOptions('ExportedDataFile'));
 }
-
 ```
 
 If all went well, you should see the @@igxName component and a button under it. When pressing the button, it will trigger the export process and the browser will download a file named "ExportedDataFile.xlsx" which contains the data from the @@igComponent component in MS Excel format.
@@ -132,7 +126,7 @@ There are some cases when you might be using remote operations like *Paging* and
 
 ```ts
 public exportButtonHandler() {
-  this.excelExportService.exportData(this.localData, new IgxExcelExporterOptions("ExportedDataFile"));
+  this.excelExportService.exportData(this.localData, new IgxExcelExporterOptions('ExportedDataFile'));
 }
 ```
 
@@ -187,10 +181,10 @@ By default Excel Exporter service exports the grid with scrollable (unfrozen) co
 
 ```typescript
 public exportButtonHandler() {
-        const exporterOptions = new IgxExcelExporterOptions('ExportedDataFile');
-        exporterOptions.freezeHeaders = true;
-        this.excelExportService.export(this.grid, exporterOptions);
-    }
+    const exporterOptions = new IgxExcelExporterOptions('ExportedDataFile');
+    exporterOptions.freezeHeaders = true;
+    this.excelExportService.export(this.grid, exporterOptions);
+}
 ```
 
 ## Customizing the Exported Content
@@ -203,11 +197,11 @@ The following example will exclude a column from the export if its header is "Ag
 // component.ts
 
 this.excelExportService.columnExporting.subscribe((args: IColumnExportingEventArgs) => {
-  if (args.header == "Age" && args.columnIndex == 1) {
+  if (args.header == 'Age' && args.columnIndex == 1) {
       args.cancel = true;
   }
 });
-this.excelExportService.export(this.@@igObjectRef, new IgxExcelExporterOptions("ExportedDataFile"));
+this.excelExportService.export(this.@@igObjectRef, new IgxExcelExporterOptions('ExportedDataFile'));
 ```
 
 When you are exporting data from the @@igComponent component, the export process takes in account features like row filtering and column hiding and exports only the data visible in the @@igComponent. You can configure the exporter service to include filtered rows or hidden columns by setting properties on the [`IgxExcelExporterOptions`]({environment:angularApiUrl}/classes/igxexcelexporteroptions.html) object.
