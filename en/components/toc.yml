@@ -76,11 +76,11 @@
     - name: One-Way Binding
       href: general/wpf-to-angular-guide/one-way-binding.md
       new: false
-    - name: Angular Events
-      href: general/wpf-to-angular-guide/angular-events.md
-      new: false
     - name: Two-Way Binding
       href: general/wpf-to-angular-guide/two-way-binding.md
+      new: false
+    - name: Angular Events
+      href: general/wpf-to-angular-guide/angular-events.md
       new: false
     - name: Transforming Data with Angular Pipes
       href: general/wpf-to-angular-guide/angular-pipes.md
@@ -1006,6 +1006,9 @@
 - name: Splitter
   href: splitter.md
   new: false
+- name: Stepper
+  href: stepper.md
+  new: true
 - name: Dock Manager
   href: dock-manager.md
   new: false

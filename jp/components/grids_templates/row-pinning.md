@@ -278,7 +278,7 @@ public pinningConfig: IPinningConfig = { rows: RowPinningPosition.Bottom };
 カスタムアイコンをクリックすると、関連する行のピン状態は、行の API メソッドを使用して変更できます。
 
 ```typescript
-public togglePinning(row: IgxGridRowComponent, event) {
+public togglePinning(row: IgxGridRow, event) {
     event.preventDefault();
     if (row.pinned) {
         row.unpin();

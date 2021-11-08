@@ -182,6 +182,22 @@ Defining a combo's `groupKey` option will group the items, according to the prov
 <igx-combo [groupKey]="'primaryKey'"></igx-combo>
 ```
 
+You can set whether groups should be sorted in ascending or descending order. By default the sorting order is ascending.
+
+```html
+<igx-combo [groupSortingDirection]="groupSortingDirection"></igx-combo>
+```
+
+```typescript
+...
+import { SortingDirection } from 'igniteui-angular'
+
+export class ComboDemo {
+    ...
+    public groupSortingDirection: SortingDirection = SortingDirection.Asc;
+}
+```
+
 <div class="divider--half"></div>
 
 ## API Summary

@@ -524,7 +524,7 @@ configuration. Same goes for grouping and editing operations with or without tra
 
 An alternative way to bind complex data, or to visualize composite data (from more than one column) in the **IgxGrid** is to use a custom body template for the column. Generally, one can:
     - use the `value` of the cell, that contains the nested data
-    - use the `cell` object in the template, from which to access the `rowData`, therefore retrieve any value from it, i.e `cell.rowData[field]`
+    - use the `cell` object in the template, from which to access the `data`, therefore retrieve any value from it, i.e `cell.data[field]`
 
 and interpolate it those in the template.
 
@@ -614,9 +614,9 @@ And the result from this configuration is:
 
 ### Working with Flat data
 
-The flat data binding approach is similar to the one that we already described above, but instead of **cell value** we are going to use the [`rowData`]({environment:angularApiUrl}/classes/igxrowdirective.html#rowdata) property of the [IgxRowDirective]({environment:angularApiUrl}/classes/igxrowdirective.html).
+The flat data binding approach is similar to the one that we already described above, but instead of **cell value** we are going to use the [`data`]({environment:angularApiUrl}/classes/igxgridrow.html#data) property of the [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html).
 
-Since the Angular grid is a component for **rendering**, **manipulating** and **preserving** data records, having access to **every data record** gives you the opportunity to customize the approach of handling it. The [`rowData`]({environment:angularApiUrl}/classes/igxrowdirective.html#rowdata) property provides you this opportunity.
+Since the Angular grid is a component for **rendering**, **manipulating** and **preserving** data records, having access to **every data record** gives you the opportunity to customize the approach of handling it. The [`data`]({environment:angularApiUrl}/classes/igxgridrow.html#data) property provides you this opportunity.
 
 Below is the data that we are going to use:
 ```typescript

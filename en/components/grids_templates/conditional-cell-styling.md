@@ -122,7 +122,7 @@ Columns now expose the `rowStyles` property which allows conditional styling of 
 > The callback signature for both `rowStyles` and `rowClasses` is:
 
 ```ts
-(rowData: RowType) => boolean
+(row: RowType) => boolean
 ```
 
 Let's define our styles:
