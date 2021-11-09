@@ -122,7 +122,7 @@ Great, and now let's prepare for the search API of our @@igComponent! We can cre
 ```typescript
 // searchgrid.component.ts
 
-public searchText: string = "";
+public searchText: string = '';
 public caseSensitive: boolean = false;
 public exactMatch: boolean = false;
 ```
@@ -193,10 +193,10 @@ We can also allow the users to navigate the results by using the keyboard's arro
 // searchgrid.component.ts
 
 public searchKeyDown(ev) {
-    if (ev.key === "Enter" || ev.key === "ArrowDown" || ev.key === "ArrowRight") {
+    if (ev.key === 'Enter' || ev.key === 'ArrowDown' || ev.key === 'ArrowRight') {
         ev.preventDefault();
         this.@@igObjectRef.findNext(this.searchText, this.caseSensitive, this.exactMatch);
-    } else if (ev.key === "ArrowUp" || ev.key === "ArrowLeft") {
+    } else if (ev.key === 'ArrowUp' || ev.key === 'ArrowLeft') {
         ev.preventDefault();
         this.@@igObjectRef.findPrev(this.searchText, this.caseSensitive, this.exactMatch);
     }
@@ -286,7 +286,7 @@ We will wrap all of our components inside an [**IgxInputGroup**](../input-group.
 // searchgrid.component.ts
 
 public clearSearch() {
-    this.searchText = "";
+    this.searchText = '';
     this.@@igObjectRef.clearSearch();
 }
 ```
@@ -306,7 +306,7 @@ On the right in our input group, let's create three separate containers with the
             No results
         </span>
     </div>
-    ...
+</igx-suffix>
 ```
 - For displaying a couple of chips that toggle the **caseSensitive** and the **exactMatch** properties. We have replaced the checkboxes with two stylish chips that change color based on these properties. Whenever a chip is clicked, we invoke its respective handler - **updateSearch** or **updateExactSearch** depending on which chip has been clicked.
 
@@ -331,7 +331,7 @@ On the right in our input group, let's create three separate containers with the
 ```html
 <!--searchgrid.component.html-->
 
-    ...
+<igx-suffix>
     <div class="searchButtons">
         <button igxButton="icon" igxRipple igxRippleCentered="true" (click)="@@igObjectRef.findPrev(searchText, caseSensitive, exactMatch)">
             <igx-icon fontSet="material">navigate_before</igx-icon>
