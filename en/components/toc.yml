@@ -113,7 +113,7 @@
   items:
     - name: Action Strip
       href: grid/action-strip.md
-      new: false
+      new: true
     - name: Live Data / Real-Time
       href: grid/live-data.md
       new: false
@@ -258,7 +258,7 @@
   items:
     - name: Action Strip
       href: treegrid/action-strip.md
-      new: false
+      new: true
     - name: Live Data / Real-Time
       href: treegrid/live-data.md
       new: false
@@ -395,7 +395,7 @@
   items:
     - name: Action Strip
       href: hierarchicalgrid/action-strip.md
-      new: false
+      new: true
     - name: Virtualization and performance
       href: hierarchicalgrid/virtualization.md
       new: false
