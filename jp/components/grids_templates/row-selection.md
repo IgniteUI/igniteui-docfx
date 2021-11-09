@@ -78,9 +78,8 @@ Ignite UI for Angular の行選択では、行内の他のすべての列に先�
 ```html
 <!-- selectionExample.component.html -->
 
-<igx-grid #grid1 [data]="remote | async" [rowSelection]="'single'" (rowSelected)="handleRowSelection($event)"
-    [width]="'800px'" [height]="'600px'" [allowFiltering]="true">
-        ...
+<igx-grid [data]="remote | async" [rowSelection]="'single'" [autoGenerate]="true"
+          (rowSelected)="handleRowSelection($event)" [allowFiltering]="true">
 </igx-grid>
 ```
 ```typescript
@@ -97,9 +96,8 @@ public handleRowSelection(args) {
 ```html
 <!-- selectionExample.component.html -->
 
-<igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="false" [height]="'530px'" width="100%"
+<igx-tree-grid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="true"
             [rowSelection]="'single'" [allowFiltering]="true" (rowSelected)="handleRowSelection($event)">
-    ...
 </igx-tree-grid>
 ```
 ```typescript
@@ -114,20 +112,17 @@ public handleRowSelection(event) {
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="false"
-        [height]="'600px'" [width]="'100%'" [rowSelection]="'single'"
-        (rowSelected)="handleRowSelection($event)" #hierarchicalGrid>
-    ...
+<igx-hierarchical-grid [data]="localdata" [autoGenerate]="true" [rowSelection]="'single'" (rowSelected)="handleRowSelection($event)">
 </igx-hierarchical-grid>
 ```
 ```typescript
 /* selectionExample.component.ts */
 
-    public handleRowSelection(event) {
+public handleRowSelection(event) {
     if (args.added.lenght && args.added[0] === 3) {
         args.cancel = true;
     }
-    }
+}
 ```
 }
 
@@ -139,9 +134,8 @@ public handleRowSelection(event) {
 ```html
 <!-- selectionExample.component.html -->
 
-<igx-grid #grid1 [data]="remote | async" [primaryKey]="'ProductID'" [rowSelection]="'multiple'" (rowSelected)="handleRowSelection($event)"
-    [width]="'800px'" [height]="'600px'" [allowFiltering]="true">
-    ...
+<igx-grid [data]="remote | async" [primaryKey]="'ProductID'" [rowSelection]="'multiple'"
+        [autoGenerate]="true" (rowSelected)="handleRowSelection($event)" [allowFiltering]="true">
 </igx-grid>
 ```
 
@@ -150,18 +144,16 @@ public handleRowSelection(event) {
 ```html
 <!-- selectionExample.component.html -->
 
-<igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID" [height]="'530px'" width="100%" [rowSelection]="'multiple'" [allowFiltering]="true" (rowSelected)="handleRowSelection($event)">
-    ...
+<igx-tree-grid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="true"
+        [rowSelection]="'multiple'" [allowFiltering]="true" (rowSelected)="handleRowSelection($event)">
 </igx-tree-grid>
 ```
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="false"
-        [height]="'600px'" [width]="'100%'" [rowSelection]="'multiple'"
-        (rowSelected)="handleRowSelection($event)" #hierarchicalGrid>
-    ...
+<igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="true"
+        [rowSelection]="'multiple'" (rowSelected)="handleRowSelection($event)">
 </igx-hierarchical-grid>
 ```
 }
@@ -171,8 +163,8 @@ public handleRowSelection(event) {
 ```html
 <!-- selectionExample.component.html -->
 
-<igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID" [height]="'530px'" width="100%" [rowSelection]="'multipleCascade'" [allowFiltering]="true" (rowSelected)="handleRowSelection($event)">
-    ...
+<igx-tree-grid [data]="data" primaryKey="ID" foreignKey="ParentID" [rowSelection]="'multipleCascade'"
+        [autoGenerate]="true" [allowFiltering]="true" (rowSelected)="handleRowSelection($event)">
 </igx-tree-grid>
 ```
 このモードでは、親の選択状態はその子の選択状態に完全に依存します。親に選択された子と選択解除された子がある場合、そのチェックボックスは不確定な状態になります。
@@ -286,7 +278,7 @@ public getSelectedRows() {
 public mySelectedRows = [1, 2, 3]; // an array of row IDs
 ```
 ```html
-<igx-grid primaryKey="ProductID" rowSelection="multiple" [mySelectedRows]="selectedRows" [data]="data">
+<igx-grid primaryKey="ProductID" rowSelection="multiple" [autoGenerate]="false" [mySelectedRows]="selectedRows" [data]="data">
     <igx-column [field]="'ProductID'"></igx-column>
     <igx-column [field]="'ProductName'"></igx-column>
     <igx-column [field]="'UnitsInStock'"></igx-column>
@@ -299,7 +291,7 @@ public mySelectedRows = [1, 2, 3]; // an array of row IDs
 public mySelectedRows = ['Johnathan Winchester', 'Ana Sanders']; // an array of row IDs
 ```
 ```html
-<igx-tree-grid primaryKey="ID" rowSelection="multiple" [selectedRows]="mySelectedRows" [data]="data">
+<igx-tree-grid primaryKey="ID" rowSelection="multiple" [autoGenerate]="false" [selectedRows]="mySelectedRows" [data]="data">
     <igx-column [field]="'Name'"></igx-column>
     <igx-column [field]="'Title'"></igx-column>
 </igx-tree-grid>
@@ -314,7 +306,7 @@ public mySelectedRows = ['Naomi Yepes', 'Ahmad Nazeri'];
 public childSelectedRows = ['Initiation', 'Emergency'];
 ```
 ```html
-<igx-hierarchical-grid primaryKey="Artist" rowSelection="multiple" [selectedRows]="mySelectedRows" [data]="data">
+<igx-hierarchical-grid primaryKey="Artist" rowSelection="multiple" [autoGenerate]="false" [selectedRows]="mySelectedRows" [data]="data">
     <igx-column field="Artist"></igx-column>
     <igx-row-island [key]="'Albums'" rowSelection="multiple">
         <igx-column field="Album"></igx-column>
@@ -369,7 +361,7 @@ public childSelectedRows = ['Initiation', 'Emergency'];
 `selectedCount` および `totalCount` プロパティを使用して、ヘッド セレクターをチェックするか、不確定にする (部分的に選択する) かを決定できます。
 @@if (igxName === 'IgxGrid') {
 ```html
-<igx-grid #grid [data]="gridData" primaryKey="ProductID" rowSelection="multiple">
+<igx-grid [data]="gridData" primaryKey="ProductID" rowSelection="multiple">
     <!-- ... -->
     <ng-template igxHeadSelector let-headContext>
         <igx-checkbox
@@ -383,7 +375,7 @@ public childSelectedRows = ['Initiation', 'Emergency'];
 
 @@if (igxName === 'IgxTreeGrid') {
 ```html
-<igx-tree-grid #tGrid [data]="tGridData" primaryKey="ProductID" childDataKey="Products">
+<igx-tree-grid [data]="tGridData" primaryKey="ProductID" childDataKey="Products">
     <!-- ... -->
     <ng-template igxHeadSelector let-headContext>
         <igx-checkbox
@@ -397,7 +389,7 @@ public childSelectedRows = ['Initiation', 'Emergency'];
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid #hGrid [data]="hGridData" primaryKey="ProductID">
+<igx-hierarchical-grid [data]="hGridData" primaryKey="ProductID">
     <ng-template igxHeadSelector let-headContext>
         <igx-checkbox
             [checked]="headContext.selectedCount > 0 && headContext.selectedCount === headContext.totalCount"

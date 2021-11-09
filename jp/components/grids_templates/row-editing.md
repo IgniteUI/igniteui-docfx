@@ -76,21 +76,18 @@ export class AppModule {}
 次に @@igComponent をバインドしたデータソースで定義し、[`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable) を true に設定してバインドします。
 @@if (igxName ==='IgxGrid') {
 ```html
-<div class="sample-wrapper">
-    <igx-grid #gridRowEditTransaction [data]="data" [primaryKey]="'ProductID'" width="100%" height="500px"
-        [rowEditable]="true">
-        <igx-column field="ProductID" header="Product ID" editable="false"></igx-column>
-        <igx-column field="ReorderLevel" header="ReorderLever" [dataType]="'number'"></igx-column>
-        <igx-column field="ProductName" header="ProductName" [dataType]="'string'"></igx-column>
-        <igx-column field="UnitsInStock" header="UnitsInStock" [dataType]="'number'">
-            <ng-template igxCellEditor let-cell="cell">
-                <input name="units" [(ngModel)]="cell.value" style="color: black" />
-            </ng-template>
-        </igx-column>
-        <igx-column field="OrderDate" [dataType]="'date'"></igx-column>
-        <igx-column field="Discontinued" header="Discontinued" [dataType]="'boolean'"></igx-column>
-    </igx-grid>
-</div>
+<igx-grid [data]="data" [primaryKey]="'ProductID'" [rowEditable]="true">
+    <igx-column field="ProductID" header="Product ID" editable="false"></igx-column>
+    <igx-column field="ReorderLevel" header="ReorderLever" [dataType]="'number'"></igx-column>
+    <igx-column field="ProductName" header="ProductName" [dataType]="'string'"></igx-column>
+    <igx-column field="UnitsInStock" header="UnitsInStock" [dataType]="'number'">
+        <ng-template igxCellEditor let-cell="cell">
+            <input name="units" [(ngModel)]="cell.value" style="color: black" />
+        </ng-template>
+    </igx-column>
+    <igx-column field="OrderDate" [dataType]="'date'"></igx-column>
+    <igx-column field="Discontinued" header="Discontinued" [dataType]="'boolean'"></igx-column>
+</igx-grid>
 ```
 }
 @@if (igxName === 'IgxTreeGrid') {
@@ -112,36 +109,36 @@ export class AppModule {}
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-        <igx-hierarchical-grid #hierarchicalGrid class="hgrid" [data]="localdata" [autoGenerate]="false"
-        [height]="'600px'" [width]="'100%'">
-            <igx-column field="Artist" [editable]="true" [dataType]="'string'"></igx-column>
-            <igx-column field="HasGrammyAward" [editable]="true" [dataType]="'boolean'">
-            </igx-column>
-            <igx-column field="Debut" [editable]="true" [dataType]="'number'"></igx-column>
-            <igx-column field="GrammyNominations" [editable]="true" [dataType]="'number'" [hasSummary]="true"></igx-column>
-            <igx-column field="GrammyAwards" [editable]="true" [dataType]="'number'"
-            [hasSummary]="true"></igx-column>
-            <igx-column width="10%">
-                <ng-template igxCell let-cell="cell">
-                    <button igxButton="icon" (click)="removeRow(cell.cellID.rowIndex)">
-                        <igx-icon>delete</igx-icon>
-                    </button>
-                </ng-template>
-            </igx-column>
+<igx-hierarchical-grid #hierarchicalGrid class="hgrid" [data]="localdata" [autoGenerate]="false"
+    [height]="'600px'" [width]="'100%'">
+    <igx-column field="Artist" [editable]="true" [dataType]="'string'"></igx-column>
+    <igx-column field="HasGrammyAward" [editable]="true" [dataType]="'boolean'">
+    </igx-column>
+    <igx-column field="Debut" [editable]="true" [dataType]="'number'"></igx-column>
+    <igx-column field="GrammyNominations" [editable]="true" [dataType]="'number'" [hasSummary]="true"></igx-column>
+    <igx-column field="GrammyAwards" [editable]="true" [dataType]="'number'"
+    [hasSummary]="true"></igx-column>
+    <igx-column width="10%">
+        <ng-template igxCell let-cell="cell">
+            <button igxButton="icon" (click)="removeRow(cell.cellID.rowIndex)">
+                <igx-icon>delete</igx-icon>
+            </button>
+        </ng-template>
+    </igx-column>
 
-        <igx-row-island [key]="'Albums'" #layout1 [autoGenerate]="false">
-            <igx-column field="Album" [editable]="true" [dataType]="'string'"></igx-column>
-            <igx-column field="Launch Date" [editable]="true" [dataType]="'date'"></igx-column>
-            <igx-column field="Billboard Review" [editable]="true" [dataType]="'number'"></igx-column>
-            <igx-column field="US Billboard 200" [editable]="true" [dataType]="'number'"></igx-column>
-            <igx-row-island [key]="'Songs'" [autoGenerate]="false">
-                    <igx-column field="No."></igx-column>
-                    <igx-column field="Title"></igx-column>
-                    <igx-column field="Released"></igx-column>
-                    <igx-column field="Genre"></igx-column>
-            </igx-row-island>
+    <igx-row-island [key]="'Albums'" #layout1 [autoGenerate]="false">
+        <igx-column field="Album" [editable]="true" [dataType]="'string'"></igx-column>
+        <igx-column field="Launch Date" [editable]="true" [dataType]="'date'"></igx-column>
+        <igx-column field="Billboard Review" [editable]="true" [dataType]="'number'"></igx-column>
+        <igx-column field="US Billboard 200" [editable]="true" [dataType]="'number'"></igx-column>
+        <igx-row-island [key]="'Songs'" [autoGenerate]="false">
+            <igx-column field="No."></igx-column>
+            <igx-column field="Title"></igx-column>
+            <igx-column field="Released"></igx-column>
+            <igx-column field="Genre"></igx-column>
         </igx-row-island>
-    </igx-hierarchical-grid>
+    </igx-row-island>
+</igx-hierarchical-grid>
 ```
 }
 
@@ -153,17 +150,17 @@ export class AppModule {}
 
 @@if (igxName === 'IgxGrid') {
 ```typescript
-import { Component, ViewChild } from "@angular/core";
-import { data } from "./data";
-import { IgxGridComponent } from "igniteui-angular";
+import { Component, ViewChild } from '@angular/core';
+import { data } from './data';
+import { IgxGridComponent } from 'igniteui-angular';
 
 @Component({
-    selector: "app-grid-row-edit",
+    selector: 'app-grid-row-edit',
     styleUrls: [`grid-row-editing-sample.component.css`],
-    templateUrl: "grid-row-editing-sample.component.html"
+    templateUrl: 'grid-row-editing-sample.component.html'
 })
 export class GridRowEditSampleComponent {
-    @ViewChild("gridRowEdit", { read: IgxGridComponent }) public gridRowEdit: IgxGridComponent;
+    @ViewChild('gridRowEdit', { read: IgxGridComponent }) public gridRowEdit: IgxGridComponent;
 
     public data: any[];
 
@@ -176,30 +173,30 @@ export class GridRowEditSampleComponent {
 
 @@if (igxName === 'IgxTreeGrid') {
 ```typescript
-import { Component, OnInit, ViewChild } from "@angular/core";
-import { IgxTreeGridComponent } from "igniteui-angular";
-import { FLAT_DATA } from "./data";
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { IgxTreeGridComponent } from 'igniteui-angular';
+import { FLAT_DATA } from './data';
 
 @Component({
    providers: [],
-    selector: "app-tree-grid-row-editing-sample",
-    styleUrls: ["tree-grid-row-editing-sample.component.scss"],
-    templateUrl: "tree-grid-row-editing-sample.component.html"
+    selector: 'app-tree-grid-row-editing-sample',
+    styleUrls: ['tree-grid-row-editing-sample.component.scss'],
+    templateUrl: 'tree-grid-row-editing-sample.component.html'
 })
 export class TreeGridRowEditSampleComponent implements OnInit {
 
     public data: any[];
     public columns: any[];
 
-    @ViewChild("treeGrid") public treeGrid: IgxTreeGridComponent;
+    @ViewChild('treeGrid') public treeGrid: IgxTreeGridComponent;
     public ngOnInit(): void {
         this.data = FLAT_DATA;
 
         this.columns = [
-            { field: "FirstName", label: "First Name", resizable: true, movable: true, sortable: true, filterable: true, editable: true, dataType: "string" },
-            { field: "LastName", label: "Last Name", resizable: false, movable: false, sortable: false, filterable: false, editable: true, dataType: "string" },
-            { field: "Title", label: "Title", resizable: true, movable: true, sortable: true, filterable: true, editable: true, dataType: "string" },
-            { field: "HireDate", label: "Hire Date", resizable: true, movable: true, sortable: true, filterable: true, editable: true, dataType: "date" }
+            { field: 'FirstName', label: 'First Name', resizable: true, movable: true, sortable: true, filterable: true, editable: true, dataType: 'string' },
+            { field: 'LastName', label: 'Last Name', resizable: false, movable: false, sortable: false, filterable: false, editable: true, dataType: 'string' },
+            { field: 'Title', label: 'Title', resizable: true, movable: true, sortable: true, filterable: true, editable: true, dataType: 'string' },
+            { field: 'HireDate', label: 'Hire Date', resizable: true, movable: true, sortable: true, filterable: true, editable: true, dataType: 'date' }
         ];
     }
 }
@@ -207,14 +204,14 @@ export class TreeGridRowEditSampleComponent implements OnInit {
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```typescript
-import { Component, OnInit, ViewChild } from "@angular/core";
-import { IgxRowIslandComponent, IgxHierarchicalGridComponent } from "igniteui-angular";
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { IgxRowIslandComponent, IgxHierarchicalGridComponent } from 'igniteui-angular';
 import { SINGERS } from './data';
 
 @Component({
-    selector: "hierarchical-grid-row-editing",
-    styleUrls: ["./hierarchical-grid-row-editing.component.scss"],
-    templateUrl: "hierarchical-grid-row-editing.component.html"
+    selector: 'hierarchical-grid-row-editing',
+    styleUrls: ['./hierarchical-grid-row-editing.component.scss'],
+    templateUrl: 'hierarchical-grid-row-editing.component.html'
 })
 
 export class HGridRowEditingSampleComponent implements OnInit {
@@ -381,18 +378,16 @@ export class HGridRowEditingSampleComponent implements OnInit {
 ```html
 <!-- in component.html -->
 <@@igSelector>
-    ...
     <ng-template igxRowEditActions let-endRowEdit>
-            <div class="custom-buttons">
-                <button igxButton="icon" class="custom-button" igxRowEditTabStop (click)="endRowEdit(false)">
-                    <igx-icon>clear</igx-icon>
-                </button>
-                <button igxButton="icon" class="custom-button" igxRowEditTabStop (click)="endRowEdit(true)">
-                    <igx-icon>check</igx-icon>
-                </button>
-            </div>
-        </ng-template>
-    ...
+        <div class="custom-buttons">
+            <button igxButton="icon" class="custom-button" igxRowEditTabStop (click)="endRowEdit(false)">
+                <igx-icon>clear</igx-icon>
+            </button>
+            <button igxButton="icon" class="custom-button" igxRowEditTabStop (click)="endRowEdit(true)">
+                <igx-icon>check</igx-icon>
+            </button>
+        </div>
+    </ng-template>
 </@@igSelector>
 ```
 

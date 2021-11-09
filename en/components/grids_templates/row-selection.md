@@ -77,9 +77,8 @@ Single row selection can now be easily set up, the only thing you need to do, is
 ```html
 <!-- selectionExample.component.html -->
 
-<igx-grid #grid1 [data]="remote | async" [rowSelection]="'single'" (rowSelected)="handleRowSelection($event)"
-    [width]="'800px'" [height]="'600px'" [allowFiltering]="true">
-        ...
+<igx-grid [data]="remote | async" [rowSelection]="'single'" [autoGenerate]="true"
+          (rowSelected)="handleRowSelection($event)" [allowFiltering]="true">
 </igx-grid>
 ```
 ```typescript
@@ -96,9 +95,8 @@ public handleRowSelection(args) {
 ```html
 <!-- selectionExample.component.html -->
 
-<igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="false" [height]="'530px'" width="100%"
+<igx-tree-grid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="true"
             [rowSelection]="'single'" [allowFiltering]="true" (rowSelected)="handleRowSelection($event)">
-    ...
 </igx-tree-grid>
 ```
 ```typescript
@@ -113,20 +111,18 @@ public handleRowSelection(event) {
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="false"
-        [height]="'600px'" [width]="'100%'" [rowSelection]="'single'"
-        (rowSelected)="handleRowSelection($event)" #hierarchicalGrid>
-    ...
+<igx-hierarchical-grid [data]="localdata" [autoGenerate]="true"
+        [rowSelection]="'single'" (rowSelected)="handleRowSelection($event)">
 </igx-hierarchical-grid>
 ```
 ```typescript
 /* selectionExample.component.ts */
 
-    public handleRowSelection(event) {
+public handleRowSelection(event) {
     if (args.added.lenght && args.added[0] === 3) {
         args.cancel = true;
     }
-    }
+}
 ```
 }
 
@@ -138,9 +134,8 @@ To enable multiple row selection in the [`@@igSelector`]({environment:angularApi
 ```html
 <!-- selectionExample.component.html -->
 
-<igx-grid #grid1 [data]="remote | async" [primaryKey]="'ProductID'" [rowSelection]="'multiple'" (rowSelected)="handleRowSelection($event)"
-    [width]="'800px'" [height]="'600px'" [allowFiltering]="true">
-    ...
+<igx-grid [data]="remote | async" [primaryKey]="'ProductID'" [rowSelection]="'multiple'"
+        (rowSelected)="handleRowSelection($event)" [allowFiltering]="true" [autoGenerate]="true">
 </igx-grid>
 ```
 
@@ -149,18 +144,16 @@ To enable multiple row selection in the [`@@igSelector`]({environment:angularApi
 ```html
 <!-- selectionExample.component.html -->
 
-<igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID" [height]="'530px'" width="100%" [rowSelection]="'multiple'" [allowFiltering]="true" (rowSelected)="handleRowSelection($event)">
-    ...
+<igx-tree-grid [data]="data" primaryKey="ID" foreignKey="ParentID" [rowSelection]="'multiple'"
+        [allowFiltering]="true" (rowSelected)="handleRowSelection($event)" >
 </igx-tree-grid>
 ```
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="false"
-        [height]="'600px'" [width]="'100%'" [rowSelection]="'multiple'"
-        (rowSelected)="handleRowSelection($event)" #hierarchicalGrid>
-    ...
+<igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="true"
+        [rowSelection]="'multiple'" (rowSelected)="handleRowSelection($event)">
 </igx-hierarchical-grid>
 ```
 }
@@ -170,8 +163,8 @@ To enable cascade row selection in the [`@@igSelector`]({environment:angularApiU
 ```html
 <!-- selectionExample.component.html -->
 
-<igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID" [height]="'530px'" width="100%" [rowSelection]="'multipleCascade'" [allowFiltering]="true" (rowSelected)="handleRowSelection($event)">
-    ...
+<igx-tree-grid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="true"
+        [rowSelection]="'multipleCascade'" [allowFiltering]="true" (rowSelected)="handleRowSelection($event)">
 </igx-tree-grid>
 ```
 In this mode a parent's selection state entirely depends on the selection state of its children. When a parent has some selected and some deselected children, its checkbox is in an indeterminate state.
@@ -285,7 +278,7 @@ Additionally, assigning row IDs to `selectedRows` will allow you to change the g
 public mySelectedRows = [1, 2, 3]; // an array of row IDs
 ```
 ```html
-<igx-grid primaryKey="ProductID" rowSelection="multiple" [mySelectedRows]="selectedRows" [data]="data">
+<igx-grid primaryKey="ProductID" rowSelection="multiple" [autoGenerate]="false" [mySelectedRows]="selectedRows" [data]="data">
     <igx-column [field]="'ProductID'"></igx-column>
     <igx-column [field]="'ProductName'"></igx-column>
     <igx-column [field]="'UnitsInStock'"></igx-column>
@@ -298,7 +291,7 @@ public mySelectedRows = [1, 2, 3]; // an array of row IDs
 public mySelectedRows = ['Johnathan Winchester', 'Ana Sanders']; // an array of row IDs
 ```
 ```html
-<igx-tree-grid primaryKey="ID" rowSelection="multiple" [selectedRows]="mySelectedRows" [data]="data">
+<igx-tree-grid primaryKey="ID" rowSelection="multiple" [autoGenerate]="false" [selectedRows]="mySelectedRows" [data]="data">
     <igx-column [field]="'Name'"></igx-column>
     <igx-column [field]="'Title'"></igx-column>
 </igx-tree-grid>
@@ -313,7 +306,7 @@ public mySelectedRows = ['Naomi Yepes', 'Ahmad Nazeri'];
 public childSelectedRows = ['Initiation', 'Emergency'];
 ```
 ```html
-<igx-hierarchical-grid primaryKey="Artist" rowSelection="multiple" [selectedRows]="mySelectedRows" [data]="data">
+<igx-hierarchical-grid primaryKey="Artist" rowSelection="multiple" [autoGenerate]="false" [selectedRows]="mySelectedRows" [data]="data">
     <igx-column field="Artist"></igx-column>
     <igx-row-island [key]="'Albums'" rowSelection="multiple">
         <igx-column field="Album"></igx-column>
@@ -368,7 +361,7 @@ The `selectedCount` property shows you how many rows are currently selected whil
 The `selectedCount` and `totalCount` properties can be used to determine if the head selector should be checked or indeterminate (partially selected).
 @@if (igxName === 'IgxGrid') {
 ```html
-<igx-grid #grid [data]="gridData" primaryKey="ProductID" rowSelection="multiple">
+<igx-grid [data]="gridData" primaryKey="ProductID" rowSelection="multiple">
     <!-- ... -->
     <ng-template igxHeadSelector let-headContext>
         <igx-checkbox
@@ -382,7 +375,7 @@ The `selectedCount` and `totalCount` properties can be used to determine if the 
 
 @@if (igxName === 'IgxTreeGrid') {
 ```html
-<igx-tree-grid #tGrid [data]="tGridData" primaryKey="ProductID" childDataKey="Products">
+<igx-tree-grid [data]="tGridData" primaryKey="ProductID" childDataKey="Products">
     <!-- ... -->
     <ng-template igxHeadSelector let-headContext>
         <igx-checkbox
@@ -396,7 +389,7 @@ The `selectedCount` and `totalCount` properties can be used to determine if the 
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid #hGrid [data]="hGridData" primaryKey="ProductID">
+<igx-hierarchical-grid [data]="hGridData" primaryKey="ProductID">
     <ng-template igxHeadSelector let-headContext>
         <igx-checkbox
             [checked]="headContext.selectedCount > 0 && headContext.selectedCount === headContext.totalCount"
