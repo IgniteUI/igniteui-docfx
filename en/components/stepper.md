@@ -82,7 +82,7 @@ Steps can be declared using one of the following approaches.
     </igx-step>
 </igx-stepper>
 ```
-For each step the user has the ability to configure indicator, title, subtitle and content using the [igxStepIndicator]({environment:angularApiUrl}/classes/igxstepindicatordirective.html), [igxStepTitle]({environment:angularApiUrl}/classes/igxsteptitledirective.html), [igxStepSubTitle]({environment:angularApiUrl}/classes/igxstepsubtitledirective.html) and [igxStepContent]({environment:angularApiUrl}/classes/igxstepcontentdirective.html) directives as follows: 
+For each step the user has the ability to configure indicator, title, subtitle and content using the `igxStepIndicator`, `igxStepTitle`, `igxStepSubTitle` and `igxStepContent` directives as follows: 
 
 ```html
 <igx-stepper>
@@ -99,7 +99,7 @@ For each step the user has the ability to configure indicator, title, subtitle a
 <img class="responsive-img" style="margin-bottom:10px; -webkit-box-shadow: 4px 4px 4px 4px #ccc; -moz-box-shadow: 4px 4px 4px 4px #ccc; box-shadow: 4px 4px 4px 4px #ccc; max-width: 500px" src="../images/stepper/stepper-step.png" />
 
 ### Changing the Stepper Orientation
-You can customize the stepper orientation through the exposed [orientation]({environment:angularApiUrl}/classes/igxsteppercomponent.html#orientation) property. It takes a member of the [IgxStepperOrientation]({environment:angularApiUrl}/enums/igxstepperorientation.html) enum - `Horizontal` *(default value)* or `Vertical`.
+You can customize the stepper orientation through the exposed [orientation]({environment:angularApiUrl}/classes/igxsteppercomponent.html#orientation) property. It takes a member of the `IgxStepperOrientation` enum - `Horizontal` *(default value)* or `Vertical`.
 
 **Horizontal Stepper Orientation**
 
@@ -136,7 +136,7 @@ The sample below demonstrates how stepper [orientation]({environment:angularApiU
 - [**active**]({environment:angularApiUrl}/classes/igxstepcomponent.html#active) - Determines whether the step is the currently displayed. By design, if the user does not explicitly set some step’s active attribute to `true`, the initial active step would be the first non-disabled step.
 - [**disabled**]({environment:angularApiUrl}/classes/igxstepcomponent.html#disabled) - Determines whether the step is interactable. By default, the disabled attribute of a step is set to `false`.
 - [**optional**]({environment:angularApiUrl}/classes/igxstepcomponent.html#optional) - By default, the optional attribute of a step is set to `false`. If validity of a step in linear stepper is not required, then the optional attribute can be enabled in order to be able to move forward independently from the step validity.
-- [**completed**]({environment:angularApiUrl}/classes/igxstepcomponent.html#complete) - By default, the completed attribute of a step returns `false`. The user, however, can override this default completed behavior by setting the completed attribute as needed. When step is marked as completed not only that the style of the step header is changed by default, but also the style of the progress line between the completed step and the next one. Both styles could be modified using the exposed [CSS variables]({environment:sassApiUrl}/index.html#function-igx-stepper-theme).
+- [**completed**]({environment:angularApiUrl}/classes/igxstepcomponent.html#completed) - By default, the completed attribute of a step returns `false`. The user, however, can override this default completed behavior by setting the completed attribute as needed. When step is marked as completed not only that the style of the step header is changed by default, but also the style of the progress line between the completed step and the next one. Both styles could be modified using the exposed [CSS variables]({environment:sassApiUrl}/index.html#function-igx-stepper-theme).
 
 The [IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponent.html) gives you the opportunity to set validation logic for each step through the two-way bindable [**isValid**]({environment:angularApiUrl}/classes/igxstepcomponent.html#isValid) property. Based on its value it is decided whether the user will have the ability to move forward in linear stepper mode.
 By default, the [isValid]({environment:angularApiUrl}/classes/igxstepcomponent.html#isValid) property of a step is set to `true`.
@@ -174,7 +174,7 @@ The following example demonstrates how to configure a linear stepper:
 
 The Ignite UI for Angular Stepper gives you the ability to configure different options for titles, indicators and more.
 
-This could be achieved through the [stepType]({environment:angularApiUrl}/classes/igxsteppercomponent.html#stepType) property of the [IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponent.html). It takes a member of the [IgxStepType]({environment:angularApiUrl}/enums/igxsteptype.html) enum:
+This could be achieved through the [stepType]({environment:angularApiUrl}/classes/igxsteppercomponent.html#stepType) property of the [IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponent.html). It takes a member of the `IgxStepType` enum:
 - Full *(default value)*
 - Indicator
 - Title
@@ -184,7 +184,7 @@ This could be achieved through the [stepType]({environment:angularApiUrl}/classe
 If titles and subtitles are defined, with this setup both indicators and titles would be rendered.
 
 The user would also have the ability to define the position of the title for the steps, so it could be placed before, after, above or below the step indicator.
-The user can configure the title position using the [titlePosition]({environment:angularApiUrl}/classes/igxsteppercomponent.html#titlePosition) property. Both properties take member of [IgxStepperTitlePosition]({environment:angularApiUrl}/enums/igxsteptitleposition.html) enum:
+The user can configure the title position using the [titlePosition]({environment:angularApiUrl}/classes/igxsteppercomponent.html#titlePosition) property. Both properties take member of `IgxStepperTitlePosition` enum:
 - end
 - start
 - bottom
@@ -219,7 +219,7 @@ The sample below demonstrates all exposed step types and how they could be chang
 
 <div class="divider--half"></div>
 
-The [IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponent.html) also allows you to customize the rendered indicators for active, invalid and completed steps. This could be achieved through the [igxStepActiveIndicator]({environment:angularApiUrl}/classes/igxstepactiveindicatordirective.html), [igxStepInvalidIndicator]({environment:angularApiUrl}/classes/igxstepinvalidindicatordirective.html) and [igxStepCompletedIndicator]({environment:angularApiUrl}/classes/igxstepcompletedindicatordirective.html) directives:
+The [IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponent.html) also allows you to customize the rendered indicators for active, invalid and completed steps. This could be achieved through the `igxStepActiveIndicator`, `igxStepInvalidIndicator` and `igxStepCompletedIndicator` directives:
 ```html
 <igx-stepper>
     <ng-template igxStepActiveIndicator>
