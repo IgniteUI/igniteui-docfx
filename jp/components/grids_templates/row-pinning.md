@@ -60,7 +60,7 @@ _language: ja
 @@if (igxName === 'IgxGrid') {
 
 ```html
-<igx-grid #grid [data]="data">
+<igx-grid [data]="data" [autoGenerate]="false">
     <igx-column *ngFor="let c of columns" [field]="c.field" [header]="c.field">
     </igx-column>
 
@@ -74,7 +74,7 @@ _language: ja
 
 @@if (igxName === 'IgxTreeGrid') {
 ```html
-<igx-tree-grid #treeGrid [data]="data">
+<igx-tree-grid [data]="data" [autoGenerate]="false">
     <igx-column *ngFor="let c of columns" [field]="c.field" [header]="c.field">
     </igx-column>
 
@@ -88,7 +88,7 @@ _language: ja
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid #hierarchicalGrid [data]="data">
+<igx-hierarchical-grid [data]="data" [autoGenerate]="false">
     <igx-column *ngFor="let c of columns" [field]="c.field" [header]="c.field">
     </igx-column>
 
@@ -125,20 +125,20 @@ this.hierarchicalGrid.getRowByIndex(0).pinned = true;
 
 @@if (igxName === 'IgxGrid') {
 ```typescript
-this.grid.pinRow("ALFKI");
-this.grid.unpinRow("ALFKI");
+this.grid.pinRow('ALFKI');
+this.grid.unpinRow('ALFKI');
 ```
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```typescript
-this.treeGrid.pinRow("ALFKI");
-this.treeGrid.unpinRow("ALFKI");
+this.treeGrid.pinRow('ALFKI');
+this.treeGrid.unpinRow('ALFKI');
 ```
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```typescript
-this.hierarchicalGrid.pinRow("ALFKI");
-this.hierarchicalGrid.unpinRow("ALFKI");
+this.hierarchicalGrid.pinRow('ALFKI');
+this.hierarchicalGrid.unpinRow('ALFKI');
 ```
 }
 
@@ -223,7 +223,7 @@ public pinningConfig: IPinningConfig = { rows: RowPinningPosition.Bottom };
 @@if (igxName === 'IgxGrid') {
 
 ```html
-<igx-grid #grid [data]="data" [primaryKey]="'ID'">
+<igx-grid [data]="data" [primaryKey]="'ID'" [autoGenerate]="false">
     <igx-column width="70px">
         <ng-template igxCell let-cell="cell" let-val>
             <igx-icon class="pin-icon" (mousedown)="togglePinning(cell.row, $event)">
@@ -241,7 +241,7 @@ public pinningConfig: IPinningConfig = { rows: RowPinningPosition.Bottom };
 @@if (igxName === 'IgxTreeGrid') {
 
 ```html
-<igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID">
+<igx-tree-grid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="false">
     <igx-column width="70px">
         <ng-template igxCell let-cell="cell" let-val>
             <igx-icon class="pin-icon" (mousedown)="togglePinning(cell.row, $event)">
@@ -259,8 +259,8 @@ public pinningConfig: IPinningConfig = { rows: RowPinningPosition.Bottom };
 @@if (igxName === 'IgxHierarchicalGrid') {
 
 ```html
-<igx-hierarchical-grid [data]="localdata">
-     <igx-column width='70px' [filterable]='false'>
+<igx-hierarchical-grid [data]="localdata" [autoGenerate]="false">
+    <igx-column width='70px' [filterable]='false'>
         <ng-template igxCell let-cell="cell" let-val>
             <igx-icon class="pin-icon" (mousedown)="togglePinning(cell.row, $event)">
                 {{cell.row.pinned ? 'lock' : 'lock_open'}}

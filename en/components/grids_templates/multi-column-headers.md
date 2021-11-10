@@ -57,7 +57,7 @@ The declaration of `Multi-column header` could be achieved by wrapping a set of 
 
 @@if (igxName === 'IgxGrid') {
 ```html
-<igx-grid [data]="data" height="600px" [allowFiltering]="true">
+<igx-grid [data]="data" [allowFiltering]="true">
     <igx-column-group header="Contact Information">
         <igx-column sortable="true" resizable="true" field="Phone"></igx-column>
         <igx-column sortable="true" resizable="true" field="Fax"></igx-column>
@@ -79,9 +79,9 @@ The declaration of `Multi-column header` could be achieved by wrapping a set of 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid #hierarchicalGrid [data]="localdata" [height]="'600px'" [width]="'100%'" displayDensity="compact" [allowFiltering]="true">
+<igx-hierarchical-grid [data]="localdata" displayDensity="compact" [allowFiltering]="true">
     <igx-column field="CustomerID" [movable]="true" sortable="true" resizable="true"></igx-column>
-        ...
+    <igx-column-group header="Address Information">
         <igx-column-group header="Location">
             <igx-column field="Address" [movable]="true" sortable="true" resizable="true"></igx-column>
             <igx-column field="City" [movable]="true" sortable="true" resizable="true"></igx-column>
@@ -93,7 +93,6 @@ The declaration of `Multi-column header` could be achieved by wrapping a set of 
             <igx-column field="Fax" sortable="true" resizable="true"></igx-column>
         </igx-column-group>
     </igx-column-group>
-...
 </igx-hierarchical-grid>
 ```
 }
@@ -102,7 +101,7 @@ For achieving `n-th` level of nested headers, the declaration above should be fo
 
 @@if (igxName === 'IgxGrid') {
 ```html
-<igx-grid [data]="data" height="600px" [allowFiltering]="true">
+<igx-grid [data]="data" [allowFiltering]="true">
     <igx-column-group header="General Information">
         <igx-column [movable]="true" sortable="true" resizable="true" field="CompanyName"></igx-column>
         <igx-column-group [movable]="true" header="Person Details">
@@ -129,7 +128,7 @@ For achieving `n-th` level of nested headers, the declaration above should be fo
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid #hierarchicalGrid [data]="localdata" [height]="'600px'" [width]="'100%'" displayDensity="compact" [allowFiltering]="true">
+<igx-hierarchical-grid [data]="localdata" displayDensity="compact" [allowFiltering]="true">
     <igx-column field="CustomerID" [movable]="true" sortable="true" resizable="true"></igx-column>
     <igx-column-group [movable]="true" [pinned]="false" header="General Information">
         <igx-column field="CompanyName" [movable]="true" sortable="true" resizable="true"></igx-column>
@@ -138,8 +137,6 @@ For achieving `n-th` level of nested headers, the declaration above should be fo
             <igx-column field="ContactTitle" [movable]="true" sortable="true" resizable="true"></igx-column>
         </igx-column-group>
     </igx-column-group>
-   
-    ...
 </igx-hierarchical-grid>
 ```
 }
@@ -152,7 +149,7 @@ Every [`igx-column-group`]({environment:angularApiUrl}/classes/igxcolumngroupcom
 
 @@if (igxName === 'IgxGrid') {
 ```html
-<igx-grid [data]="data" height="600px" [allowFiltering]="true">
+<igx-grid [data]="data" [allowFiltering]="true">
     <igx-column-group  [movable]="true" [pinned]="true" header="General Information">
         <igx-column [movable]="true" sortable="true" resizable="true" field="CompanyName"></igx-column>
     </igx-column-group>
@@ -176,7 +173,7 @@ Every [`igx-column-group`]({environment:angularApiUrl}/classes/igxcolumngroupcom
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid #hierarchicalGrid [data]="localdata" [height]="'600px'" [width]="'100%'" displayDensity="compact" [allowFiltering]="true">
+<igx-hierarchical-grid [data]="localdata" displayDensity="compact" [allowFiltering]="true">
     <igx-column field="CustomerID" [movable]="true" sortable="true" resizable="true"></igx-column>
     <igx-column-group [movable]="true" [pinned]="false" header="General Information">
         <igx-column field="CompanyName" [movable]="true" sortable="true" resizable="true"></igx-column>

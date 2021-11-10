@@ -5,10 +5,10 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 # Angular Stepper Component Overview
-The Angular material stepper is a highly customizable component that visualizes content as a process and shows its progress by dividing the content into successive steps. It appears as a vertical or horizontal line. Supported by the Ignite UI for Angular library, the stepper component delivers a wizard-like workflow and multiple features like step validation, styling, orientation and keyboard navigation. 
+The Angular material stepper is a highly customizable component that visualizes content as a process and shows its progress by dividing the content into successive steps. It appears as a vertical or horizontal line. Provided by the Ignite UI for Angular library, the stepper component delivers a wizard-like workflow and multiple features like step validation, styling, orientation and keyboard navigation. 
 
 ## Angular Stepper Example
-In this Angular Stepper example, you can see how users are enabled to choose their business card and pass trough the process in five logical steps all together - selecting card type, adding business information, filling in personal information, providing shipping details and confirmation.
+In this Angular Stepper example, you can see how users are given the opportunity to customize their credit card and they pass trough the process in five logical steps - selecting card type, adding business information, filling in personal information, providing shipping details and confirmation.
 Note that the fourth step in our Angular stepper demo gets enabled only if the user ticks the checkbox in the second step, signifying that their mailing address is different from the business physical address.
 
 <code-view style="height: 725px" 
@@ -58,13 +58,13 @@ Steps can be declared using one of the following approaches.
 ```html
 <igx-stepper>
     <igx-step *ngFor="let step of stepsData" [disabled]=”step.disabled”>
-       		<igx-icon igxStepIndicator>
+        <igx-icon igxStepIndicator>
 			{{step.indicator}}
-		    </igx-icon>
+        </igx-icon>
 
-       		<p igxStepTitle>
+        <p igxStepTitle>
 			{{step.title}}
-		    </p>
+        </p>
     </igx-step>
 </igx-stepper>
 ```
@@ -82,7 +82,7 @@ Steps can be declared using one of the following approaches.
     </igx-step>
 </igx-stepper>
 ```
-For each step the user has the ability to configure indicator, title, subtitle and content using the [igxStepIndicator]({environment:angularApiUrl}/classes/igxstepindicatordirective.html), [igxStepTitle]({environment:angularApiUrl}/classes/igxsteptitledirective.html), [igxStepSubTitle]({environment:angularApiUrl}/classes/igxstepsubtitledirective.html) and [igxStepContent]({environment:angularApiUrl}/classes/igxstepcontentdirective.html) directives as follows: 
+For each step the user has the ability to configure indicator, title, subtitle and content using the `igxStepIndicator`, `igxStepTitle`, `igxStepSubTitle` and `igxStepContent` directives as follows: 
 
 ```html
 <igx-stepper>
@@ -99,7 +99,7 @@ For each step the user has the ability to configure indicator, title, subtitle a
 <img class="responsive-img" style="margin-bottom:10px; -webkit-box-shadow: 4px 4px 4px 4px #ccc; -moz-box-shadow: 4px 4px 4px 4px #ccc; box-shadow: 4px 4px 4px 4px #ccc; max-width: 500px" src="../images/stepper/stepper-step.png" />
 
 ### Changing the Stepper Orientation
-You can customize the stepper orientation through the exposed [orientation]({environment:angularApiUrl}/classes/igxsteppercomponent.html#orientation) property. It takes a member of the [IgxStepperOrientation]({environment:angularApiUrl}/enums/igxstepperorientation.html) enum - `Horizontal` *(default value)* or `Vertical`.
+You can customize the stepper orientation through the exposed [orientation]({environment:angularApiUrl}/classes/igxsteppercomponent.html#orientation) property. It takes a member of the `IgxStepperOrientation` enum - `Horizontal` *(default value)* or `Vertical`.
 
 **Horizontal Stepper Orientation**
 
@@ -136,7 +136,7 @@ The sample below demonstrates how stepper [orientation]({environment:angularApiU
 - [**active**]({environment:angularApiUrl}/classes/igxstepcomponent.html#active) - Determines whether the step is the currently displayed. By design, if the user does not explicitly set some step’s active attribute to `true`, the initial active step would be the first non-disabled step.
 - [**disabled**]({environment:angularApiUrl}/classes/igxstepcomponent.html#disabled) - Determines whether the step is interactable. By default, the disabled attribute of a step is set to `false`.
 - [**optional**]({environment:angularApiUrl}/classes/igxstepcomponent.html#optional) - By default, the optional attribute of a step is set to `false`. If validity of a step in linear stepper is not required, then the optional attribute can be enabled in order to be able to move forward independently from the step validity.
-- [**completed**]({environment:angularApiUrl}/classes/igxstepcomponent.html#complete) - By default, the completed attribute of a step returns `false`. The user, however, can override this default completed behavior by setting the completed attribute as needed. When step is marked as completed not only that the style of the step header is changed by default, but also the style of the progress line between the completed step and the next one. Both styles could be modified using the exposed [CSS variables]({environment:sassApiUrl}/index.html#function-igx-stepper-theme).
+- [**completed**]({environment:angularApiUrl}/classes/igxstepcomponent.html#completed) - By default, the completed attribute of a step returns `false`. The user, however, can override this default completed behavior by setting the completed attribute as needed. When step is marked as completed not only that the style of the step header is changed by default, but also the style of the progress line between the completed step and the next one. Both styles could be modified using the exposed [CSS variables]({environment:sassApiUrl}/index.html#function-igx-stepper-theme).
 
 The [IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponent.html) gives you the opportunity to set validation logic for each step through the two-way bindable [**isValid**]({environment:angularApiUrl}/classes/igxstepcomponent.html#isValid) property. Based on its value it is decided whether the user will have the ability to move forward in linear stepper mode.
 By default, the [isValid]({environment:angularApiUrl}/classes/igxstepcomponent.html#isValid) property of a step is set to `true`.
@@ -174,7 +174,7 @@ The following example demonstrates how to configure a linear stepper:
 
 The Ignite UI for Angular Stepper gives you the ability to configure different options for titles, indicators and more.
 
-This could be achieved through the [stepType]({environment:angularApiUrl}/classes/igxsteppercomponent.html#stepType) property of the [IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponent.html). It takes a member of the [IgxStepType]({environment:angularApiUrl}/enums/igxsteptype.html) enum:
+This could be achieved through the [stepType]({environment:angularApiUrl}/classes/igxsteppercomponent.html#stepType) property of the [IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponent.html). It takes a member of the `IgxStepType` enum:
 - Full *(default value)*
 - Indicator
 - Title
@@ -184,7 +184,7 @@ This could be achieved through the [stepType]({environment:angularApiUrl}/classe
 If titles and subtitles are defined, with this setup both indicators and titles would be rendered.
 
 The user would also have the ability to define the position of the title for the steps, so it could be placed before, after, above or below the step indicator.
-The user can configure the title position using the [titlePosition]({environment:angularApiUrl}/classes/igxsteppercomponent.html#titlePosition) property. Both properties take member of [IgxStepperTitlePosition]({environment:angularApiUrl}/enums/igxsteptitleposition.html) enum:
+The user can configure the title position using the [titlePosition]({environment:angularApiUrl}/classes/igxsteppercomponent.html#titlePosition) property. Both properties take member of `IgxStepperTitlePosition` enum:
 - end
 - start
 - bottom
@@ -219,7 +219,7 @@ The sample below demonstrates all exposed step types and how they could be chang
 
 <div class="divider--half"></div>
 
-The [IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponent.html) also allows you to customize the rendered indicators for active, invalid and completed steps. This could be achieved through the [igxStepActiveIndicator]({environment:angularApiUrl}/classes/igxstepactiveindicatordirective.html), [igxStepInvalidIndicator]({environment:angularApiUrl}/classes/igxstepinvalidindicatordirective.html) and [igxStepCompletedIndicator]({environment:angularApiUrl}/classes/igxstepcompletedindicatordirective.html) directives:
+The [IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponent.html) also allows you to customize the rendered indicators for active, invalid and completed steps. This could be achieved through the `igxStepActiveIndicator`, `igxStepInvalidIndicator` and `igxStepCompletedIndicator` directives:
 ```html
 <igx-stepper>
     <ng-template igxStepActiveIndicator>
@@ -241,7 +241,7 @@ The [IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponen
 
 ### Angular Stepper Animations
 
-Angular Stepper Animations provide the end-users a beautiful experience of interacting with the defined steps. The available animation options differ depending on the orientation of the stepper.
+Angular Stepper Animations provide the end-users with a beautiful experience interacting with the defined steps. The available animation options differ depending on the orientation of the stepper.
 
 When the stepper is **horizontally orientated**, it is configured to use the `slide` animation by default. It also supports `fade` as an alternative. The animations are configured through the [horizontalAnimationType]({environment:angularApiUrl}/classes/igxsteppercomponent.html#horizontalAnimationType) input.
 
@@ -253,7 +253,7 @@ Setting `none` to the both animation type inputs disables stepper animations.
 
 ## Keyboard Navigation
 
-Keyboard navigation in the Angular Material Stepper provides a rich variety of keyboard interactions to the end-user. This functionality is enabled by default and allows end-users to easily navigate through the steps. 
+Angular Material Stepper provides a rich variety of keyboard interactions to the end-user. This functionality is enabled by default and allows end-users to easily navigate through the steps. 
 The [IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponent.html) navigation is compliant with [W3 accessability standards](https://www.w3.org/TR/wai-aria-practices-1.1/#tabpanel) and convenient to use.
 
 **Key Combinations**

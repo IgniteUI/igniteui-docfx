@@ -130,11 +130,11 @@ public activeRowCondition = (row: RowType) => this.grid?.navigation.activeNode?.
 
 ```typescript
 // component.ts
-    public  customRowStyles = {
-        background: (row: RowType) => (+row.data['Change'] < 0  && +row.data['Change On Year(%)'] < 0) ? '#FF000088' : '#00000000',
-        border: (row: RowType) => (+row.data['Change'] < 0  && +row.data['Change On Year(%)'] < 0) ? '2px solid' : '1px solid',
-        'border-color': (row: RowType) => (+row.data['Change'] < 0  && +row.data['Change On Year(%)'] < 0) ? '#FF000099' : '#E9E9E9'
-    };
+public customRowStyles = {
+    background: (row: RowType) => (+row.data['Change'] < 0  && +row.data['Change On Year(%)'] < 0) ? '#FF000088' : '#00000000',
+    border: (row: RowType) => (+row.data['Change'] < 0  && +row.data['Change On Year(%)'] < 0) ? '2px solid' : '1px solid',
+    'border-color': (row: RowType) => (+row.data['Change'] < 0  && +row.data['Change On Year(%)'] < 0) ? '#FF000099' : '#E9E9E9'
+};
 
 
 ```
@@ -345,9 +345,9 @@ public priceClasses = {
 
 ```ts
 public styles = {
-    "background": "linear-gradient(180deg, #dd4c4c 0%, firebrick 100%)",
-    "text-shadow": "1px 1px 2px rgba(25,25,25,.25)",
-    "animation": "0.25s ease-in-out forwards alternate popin"
+    'background': 'linear-gradient(180deg, #dd4c4c 0%, firebrick 100%)',
+    'text-shadow': '1px 1px 2px rgba(25,25,25,.25)',
+    'animation': '0.25s ease-in-out forwards alternate popin'
 };
 ```
 
@@ -375,17 +375,16 @@ public styles = {
 ```typescript
 // component.ts
 public oddColStyles = {
-    background: "linear-gradient(to right, #b993d6, #8ca6db)",
-    color: (rowData, coljey, cellValue, rowIndex) => rowIndex % 2 === 0 ? "white" : "gray",
-    animation: "0.75s popin"
+    background: 'linear-gradient(to right, #b993d6, #8ca6db)',
+    color: (rowData, coljey, cellValue, rowIndex) => rowIndex % 2 === 0 ? 'white' : 'gray',
+    animation: '0.75s popin'
 };
 
 public evenColStyles = {
-    background: "linear-gradient(to right, #8ca6db, #b993d6)",
-    color: (rowData, coljey, cellValue, rowIndex) => rowIndex % 2 === 0 ? "gray" : "white",
-    animation: "0.75s popin"
+    background: 'linear-gradient(to right, #8ca6db, #b993d6)',
+    color: (rowData, coljey, cellValue, rowIndex) => rowIndex % 2 === 0 ? 'gray' : 'white',
+    animation: '0.75s popin'
 };
-
 ```
 
 `ngOnInit` で、@@igxName 列を動的に作成するために使用される事前定義 `columns` コレクションの各列に `cellStyles` 構成を追加します。
@@ -395,11 +394,11 @@ public evenColStyles = {
 public ngOnInit() {
     this.data = athletesData;
     this.columns = [
-        { field: "Id" },
-        { field: "Position" },
-        { field: "Name" },
-        { field: "AthleteNumber" },
-        { field: "CountryName" }
+        { field: 'Id' },
+        { field: 'Position' },
+        { field: 'Name' },
+        { field: 'AthleteNumber' },
+        { field: 'CountryName' }
     ];
 
     this.applyCSS();
@@ -504,7 +503,7 @@ editDone(evt) {
   <igx-column field="Col1" dataType="number" [cellClasses]="backgroundClasses"></igx-column>
   <igx-column field="Col2" dataType="number" [editable]="true" [cellClasses]="backgroundClasses"></igx-column>
   <igx-column field="Col3" header="Col3" dataType="string" [cellClasses]="backgroundClasses"></igx-column>
-  ...
+</igx-grid>
 ```
 
 ## API リファレンス

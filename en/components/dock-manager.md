@@ -44,10 +44,10 @@ export class AppModule {}
 Next, one should call the `defineCustomElements()` function in the `main.ts` file:
 
 ```typescript
-import { AppModule } from "./app/app.module";
-import { defineCustomElements } from "igniteui-dockmanager/loader";
+import { AppModule } from './app/app.module';
+import { defineCustomElements } from 'igniteui-dockmanager/loader';
 import { enableProdMode } from '@angular/core';
-import { environment } from ".environments/environment";
+import { environment } from '.environments/environment';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 if (environment.production) {

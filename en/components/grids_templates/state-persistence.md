@@ -81,7 +81,7 @@ const gridState = state.getState();
 const gridState: IGridState = state.getState(false);
 
 // get the sorting and filtering expressions
-const sortingFilteringStates: IGridState = state.getState(false, ["sorting", "filtering"]);
+const sortingFilteringStates: IGridState = state.getState(false, ['sorting', 'filtering']);
 ```
 
 [`setState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#setstate) - The [`setState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#setstate) method accepts the serialized JSON string or [`IGridState`]({environment:angularApiUrl}/interfaces/igridstate.html) object as argument and will restore the state of each feature found in the object/JSON string.
@@ -115,26 +115,26 @@ public options =  { cellSelection: false; sorting: false; }
 The simple to use single-point API's allows to achieve a full state persistence functionality in just a few lines of code. **Copy paste the code from below** - it will save the grid state in the browser `sessionStorage` object every time the user leaves the current page. Whenever the user returns to main page, the grid state will be restored. No more need to configure those complex advanced filtering and sorting expressions every time to get the data you want - do it once and have the code from below do the rest for your users:
 
 ```typescript
-  // app.component.ts
-  public ngOnInit() {
+// app.component.ts
+public ngOnInit() {
     this.router.events.pipe(take(1)).subscribe((event: NavigationStart) => {
         this.saveGridState();
-    });
-  }
+});
+}
 
-  public ngAfterViewInit() {
+public ngAfterViewInit() {
     this.restoreGridState();
-  }
+}
 
-  public saveGridState() {
-      const state = this.state.getState() as string;
-      window.sessionStorage.setItem("grid1-state", state);
-  }
+public saveGridState() {
+    const state = this.state.getState() as string;
+    window.sessionStorage.setItem('grid1-state', state);
+}
 
-  public restoreGridState() {
-      const state = window.sessionStorage.getItem("grid1-state");
-      this.state.setState(state);
-  }
+public restoreGridState() {
+    const state = window.sessionStorage.getItem('grid1-state');
+    this.state.setState(state);
+}
 ```
 
 ## Restoring columns
@@ -183,11 +183,11 @@ The simple to use single-point API's allows to achieve a full state persistence 
 ```typescript
 @ViewChild('activeTemplate', { static: true }) public activeTemplate: TemplateRef<any>;
 public onColumnInit(column: IgxColumnComponent) {
-   if (column.field === 'IsActive') {
+    if (column.field === 'IsActive') {
         column.bodyTemplate = this.activeTemplate;
         column.summaries = MySummary;
         column.filters = IgxNumberFilteringOperand.instance();
-   }
+    }
 }
 ```
 
@@ -201,7 +201,7 @@ Saving / Restoring state for the child grids is controlled by the [`rowIslands`]
 ```
 Then the `getState` API will return the state for all grids (root grid and child grids) features excluding `selection` and `sorting`. If later on the developer wants to restore only the `filtering` state for all grids, use:
 ```typescript
-this.state.setState(state, ['filtering', 'rowiIslands']);
+this.state.setState(state, ['filtering', 'rowIslands']);
 ```
 }
 

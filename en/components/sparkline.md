@@ -41,17 +41,12 @@ The Angular sparkline component requires the import of the following modules:
 
 ```ts
 // app.module.ts
-import { IgxSparklineModule } from "igniteui-angular-charts";
-import { IgxSparklineCoreModule } from "igniteui-angular-charts";
+import { IgxSparklineModule } from 'igniteui-angular-charts';
+import { IgxSparklineCoreModule } from 'igniteui-angular-charts';
 import { SparklineDisplayType } from 'igniteui-angular-charts';
 
 @NgModule({
-    imports: [
-        // ...
-        IgxSparklineCoreModule,
-        IgxSparklineModule
-        // ...
-    ]
+    imports: [ IgxSparklineCoreModule, IgxSparklineModule ]
 })
 export class AppModule {}
 ```

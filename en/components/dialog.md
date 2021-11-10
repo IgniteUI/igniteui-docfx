@@ -1,5 +1,5 @@
 ---
-title: Dialog Window Component
+title: Angular Dialog Window Component
 _description: Whether building informative dialogs or data manipulation windows, Ignite UI for Angular Dialog Window component can manage information shown in real-time for fast capability.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Dialog Window components, Angular Dialog Window controls
 ---
@@ -193,6 +193,10 @@ params: {
     toPosition: 'translateY(0)'
 }
 ```
+
+### Trap focus inside dialog
+
+By default when the dialog is opened the Tab key focus is trapped within it, i.e. the focus does not leave the element when the user keeps tabbing through the focusable elements. When the focus leaves the last element, it moves to the first one and vice versa, when SHIFT + TAB is pressed, when the focus leaves the first element, the last element should be focused. In case the dialog does not contain any focusable elements, the focus will be trapped on the dialog container itself. This behavior can be changed by setting the [`focusTrap`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#focustrap) property.
 
 ## Styling
 

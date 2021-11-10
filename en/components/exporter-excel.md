@@ -29,7 +29,7 @@ To start using the IgniteUI Excel Exporter first import the [`IgxExcelExporterSe
 // app.module.ts
 
 ...
-import { IgxExcelExporterService } from "igniteui-angular";
+import { IgxExcelExporterService } from 'igniteui-angular';
 
 @NgModule({
   providers: [ IgxExcelExporterService ]
@@ -55,20 +55,20 @@ Here is the code which will execute the export process in the component's typesc
 // component.ts
 
 ...
-import { IgxExcelExporterService, IgxExcelExporterOptions } from "igniteui-angular";
+import { IgxExcelExporterService, IgxExcelExporterOptions } from 'igniteui-angular';
 ...
 
 public localData = [
-  { Name: "Eric Ridley", Age: "26" },
-  { Name: "Alanis Brook", Age: "22" },
-  { Name: "Jonathan Morris", Age: "23" }
+  { Name: 'Eric Ridley', Age: '26' },
+  { Name: 'Alanis Brook', Age: '22' },
+  { Name: 'Jonathan Morris', Age: '23' }
 ];
 
 constructor(private excelExportService: IgxExcelExporterService) {
 }
 
 public exportButtonHandler() {
-  this.excelExportService.exportData(this.localData, new IgxExcelExporterOptions("ExportedDataFile"));
+  this.excelExportService.exportData(this.localData, new IgxExcelExporterOptions('ExportedDataFile'));
 }
 
 ```
@@ -85,11 +85,11 @@ The following example will exclude a column from the export if its header is "Ag
 // component.ts
 
 this.excelExportService.columnExporting.subscribe((args: IColumnExportingEventArgs) => {
-  if (args.header == "Age" && args.columnIndex == 1) {
+  if (args.header == 'Age' && args.columnIndex == 1) {
       args.cancel = true;
   }
 });
-this.excelExportService.export(this.igxGrid1, new IgxExcelExporterOptions("ExportedDataFile"));
+this.excelExportService.export(this.igxGrid1, new IgxExcelExporterOptions('ExportedDataFile'));
 ```
 
 ## Known Limitations

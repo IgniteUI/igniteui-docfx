@@ -63,7 +63,7 @@ export class AppModule {}
 Note that grouping is enabled/disabled by setting the [groupKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#groupkey) property to a corresponding data source entity or setting it to an empty string.
 
 ```typescript
-    @ViewChild("combo", { read: IgxComboComponent }) public combo: IgxComboComponent;
+    @ViewChild('combo', { read: IgxComboComponent }) public combo: IgxComboComponent;
 
     public filterable = true;
     public showSearchCaseIcon = true;
@@ -71,7 +71,7 @@ Note that grouping is enabled/disabled by setting the [groupKey]({environment:an
     public disabled = false;
 
     public enableGroups(event) {
-        this.combo.groupKey = event.checked ? "region" : "";
+        this.combo.groupKey = event.checked ? 'region' : '';
     }
 ```
 
@@ -85,7 +85,7 @@ The following code snippet illustrates a basic usage of the [igx-combo]({environ
 ```
 
 ```typescript
-import { localData } from "./local-data";
+import { localData } from './local-data';
 
 export class ComboDemo implements OnInit {
     public lData: any[];

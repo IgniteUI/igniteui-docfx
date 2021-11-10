@@ -1,5 +1,5 @@
 ---
-title: Angular Accordion – Fully-featured collapsible panels - Infragistics 
+title: Angular Accordion Component – Fully-featured collapsible panels - Infragistics 
 _description: Angular Accordion is used to build vertical expandable panels in accordion menu. Check how to do it with Ignite UI for Angular accordion component. 
 _keywords: angular accordion, angular accordion component, angular accordion example, ignite ui for angular, UI controls, infragistics
 ---
@@ -99,7 +99,7 @@ Angular Accordion supports animations for both expanding and collapsing actions 
 With regards to animation, you have two options. First, you could set the `animationSettings` property on the accordion component:
 
 ```typescript
-import { useAnimation } from "@angular/animations";
+import { useAnimation } from '@angular/animations';
 import { slideInLeft, slideOutRight } from 'igniteui-angular';
 @Component({
     ...
@@ -108,14 +108,14 @@ export class AccordionComponent {
     public animationSettingsCustom = {
         closeAnimation: useAnimation(slideOutRight, {
             params: {
-                duration: "100ms",
-                toPosition: "translateX(25px)"
+                duration: '100ms',
+                toPosition: 'translateX(25px)'
             }
         }),
         openAnimation: useAnimation(slideInLeft, {
             params: {
-                duration: "500ms",
-                fromPosition: "translateX(-15px)",
+                duration: '500ms',
+                fromPosition: 'translateX(-15px)',
                 startOpacity: 0.1
             }
         })

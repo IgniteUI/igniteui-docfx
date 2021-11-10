@@ -1,5 +1,5 @@
 ---
-title: Autocomplete Directive
+title: Angular Autocomplete Component – Ignite UI for Angular | Infragistics
 _description: The igxAutocomplete directive provides a way to enhance a text input by showing a panel of suggested options provided by the developer.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Autocomplete components, Angular Autocomplete directives, Angular Autocomplete controls
 ---
@@ -62,7 +62,7 @@ Then add the `igxAutocomplete` directive, referencing the dropdown:
 Add the list that will be shown in the dropdown. If you want the list to be filtered while typing, use the **PipeTransform** interface.
 
 ```typescript
-import { Component, Pipe, PipeTransform } from "@angular/core";
+import { Component, Pipe, PipeTransform } from '@angular/core';
 
 @Component({
     selector: 'app-autocomplete-sample',
@@ -71,15 +71,15 @@ import { Component, Pipe, PipeTransform } from "@angular/core";
 })
 export class AutocompleteSampleComponent {
     constructor() {
-        this.towns = [ "New York", "Washington, D.C.", "London", "Berlin", "Sofia", "Rome", "Kiev",
-            "Copenhagen", "Paris", "Barcelona", "Vienna", "Athens", "Dublin", "Yerevan",
-            "Oslo", "Helsinki", "Stockholm", "Prague", "Istanbul", "El Paso", "Florence", "Moscow" ];
+        this.towns = [ 'New York', 'Washington, D.C.', 'London', 'Berlin', 'Sofia', 'Rome', 'Kiev',
+            'Copenhagen', 'Paris', 'Barcelona', 'Vienna', 'Athens', 'Dublin', 'Yerevan',
+            'Oslo', 'Helsinki', 'Stockholm', 'Prague', 'Istanbul', 'El Paso', 'Florence', 'Moscow' ];
     }
 }
 
-@Pipe({ name: "startsWith" })
+@Pipe({ name: 'startsWith' })
 export class AutocompletePipeStartsWith implements PipeTransform {
-    public transform(collection: any[], term = "") {
+    public transform(collection: any[], term = '') {
         return collection.filter((item) => item.toString().toLowerCase().startsWith(term.toString().toLowerCase()));
     }
 }
@@ -134,28 +134,28 @@ export class AutocompleteComponent {
 
     public towns = [
         {
-          name: "New York",
+          name: 'New York',
           cinemas: [
-            "Regal Cinemas",
-            "Village East Cinema",
-            "Roxy Cinema",
-            "The Paris Theatre"
+            'Regal Cinemas',
+            'Village East Cinema',
+            'Roxy Cinema',
+            'The Paris Theatre'
         ]},
         {
-            name: "Los Angeles",
+            name: 'Los Angeles',
             cinemas: [
-                "Arc Light",
-                "Pacific Cinerama Dome",
-                "New Beverly Cinema",
-                "Downtown Independent"
+                'Arc Light',
+                'Pacific Cinerama Dome',
+                'New Beverly Cinema',
+                'Downtown Independent'
         ]},
         {
-            name: "Seattle",
+            name: 'Seattle',
             cinemas: [
-                "Central Cinema",
-                "Grand Illusion Cinema",
-                "Ark Lodge Cinemas",
-                "Skyway Outdoor Cinema"
+                'Central Cinema',
+                'Grand Illusion Cinema',
+                'Ark Lodge Cinemas',
+                'Skyway Outdoor Cinema'
         ]}
     ];
 }

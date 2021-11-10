@@ -88,7 +88,7 @@ export class Class {
 
 ...
     @ViewChild(IgxToggleDirective) public igxToggle: IgxToggleDirective;
-    @ViewChild("button") public igxButton: ElementRef;
+    @ViewChild('button') public igxButton: ElementRef;
 
     public _positionSettings = {
         horizontalStartPoint: HorizontalAlignment.Left,
