@@ -20,6 +20,7 @@ In High-Frequency scenario, the Angular Charts can render data items that are up
 <code-view style="height: 400px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-high-frequency"
+           github-src="charts/category-chart/high-frequency"
            alt="Angular Chart with High-Frequency" >
 </code-view>
 
@@ -32,6 +33,7 @@ In High-Volume scenario, the Angular Charts can render 1 million of data points 
 <code-view style="height: 400px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-high-volume"
+           github-src="charts/category-chart/high-volume"
            alt="Angular Chart with High-Volume" >
 </code-view>
 

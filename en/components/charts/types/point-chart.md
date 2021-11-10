@@ -16,6 +16,7 @@ You can create the Angular Point Chart in the [`IgxCategoryChartComponent`]({env
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-point-chart-multiple-sources"
+           github-src="charts/category-chart/point-chart-multiple-sources"
            alt="Angular Point Chart Example" >
 </code-view>
 
@@ -28,6 +29,7 @@ In the following example, the Angular Point Chart is comparing the generation of
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-point-chart-single-source"
+           github-src="charts/category-chart/point-chart-single-source"
            alt="Angular Point Chart with Single Series" >
 </code-view>
 
@@ -40,6 +42,7 @@ Since the Angular Point Chart allows you to combine multiple series and compare 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-point-chart-multiple-sources"
+           github-src="charts/category-chart/point-chart-multiple-sources"
            alt="Angular Point Chart with Multiple Series" >
 </code-view>
 
@@ -52,6 +55,7 @@ Once the Angular Point Chart is set up, we may want to make some further styling
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-point-chart-styling"
+           github-src="charts/category-chart/point-chart-styling"
            alt="Angular Point Chart Styling" >
 </code-view>
 

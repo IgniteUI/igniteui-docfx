@@ -18,6 +18,7 @@ You can create this type of chart in [`IgxDataChartComponent`]({environment:dvAp
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-radial-area-chart"
+           github-src="charts/data-chart/radial-area-chart"
            alt="Angular Radial Area Chart" >
 </code-view>
 
@@ -32,6 +33,7 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-radial-column-chart"
+           github-src="charts/data-chart/radial-column-chart"
            alt="Angular Radial Column Chart" >
 </code-view>
 
@@ -46,6 +48,7 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-radial-line-chart"
+           github-src="charts/data-chart/radial-line-chart"
            alt="Angular Radial Line Chart" >
 </code-view>
 
@@ -60,6 +63,7 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-radial-pie-chart"
+           github-src="charts/data-chart/radial-pie-chart"
            alt="Angular Radial Pie Chart" >
 </code-view>
 
@@ -74,6 +78,7 @@ This example demonstrates how to customize Angular Radial Chart.
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-radial-area-chart-styling"
+           github-src="charts/data-chart/radial-area-chart-styling"
            alt="Angular Radial Area Chart Styling" >
 </code-view>
 
