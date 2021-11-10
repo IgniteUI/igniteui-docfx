@@ -13,24 +13,22 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 The development of Ignite UI for Angular started back in 2016 when Internet Explorer 11 was still relevant. Some of our users depend on IE11 to this day. Our theming engine was built in a way that allows you to produce styles for ever-green and old browsers alike, using the same API. We allow you to configure how the engine behaves based on a single global variable - `$igx-legacy-support`. By default, it is set to `false`, but you can shadow its declaration. The value of this variable is also implicitly set when you specify the `$legacy-support` parameter on the `igx-theme` mixin.
 
+> [!WARNING]
+> The `$legacy-support` option was removed in igniteui-angular 13.0.x. Support for IE11 and legacy browsers was removed in version 13 and this option is no longer valid.
+
 Example:
 
 ```scss
-// styles.scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
-
 // Sets the global $igx-legacy-support variable to true
 @include igx-theme(
   $legacy-support: true
 );
 ```
 
-This is the default way to turn of legacy support for the theme you're building in your `styles.scss` file. If you have styles scoped to specific components, like the `app.component.scss` file, you will have to specify the legacy support there as well.
+This is the default way to turn off legacy support for the theme you're building in your `styles.scss` file. If you have styles scoped to specific components, like the `app.component.scss` file, you will have to specify the legacy support there as well.
 
 ```scss
 // app.component.scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
-
 $igx-legacy-support: true;
 
 $color: igx-color($default-palette, 'primary', 900);
@@ -40,16 +38,13 @@ We recommend you create a `_variables.scss` file in the `styles` directory of yo
 
 ## Default Palette
 
-Another global variable is `$default-palette`. Like `$igx-legacy-support`, it is implicitly set when you pass a palette to the `igx-theme` mixin. This variable sets the palette to be used by default by theming functions and mixin when a palette is not explicitly provided.
+Another global variable is `$default-palette`. It is implicitly set when you pass a palette to the `igx-theme` mixin. This variable sets the palette to be used by default by theming functions and mixin when a palette is not explicitly provided.
 
 For instance, the `igx-color` function may not be called with a specific palette in which case the value assigned to `$default-palette` will be used to retreive the color.
 
 You can change the default palette at any time by shadowing its declaration:
 
 ```scss
-// styles.scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
-
 $my-palette: igx-palette(
   $primary: red, 
   $secondary: blue
@@ -67,7 +62,7 @@ Now, we can assign `$my-palette` to `$default-palette` and store it in our `_var
 ```scss
 // _variables.scss
 
-$legacy-support: true;
+$legacy-support: true; /* not supported in Ignite UI for Angular 13 */
 
 $my-palette: igx-palette(
   $primary: red, 
@@ -79,9 +74,7 @@ $igx-legacy-support: $legacy-support;
 ```
 
 ```scss
-// styles.scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
-@import './variables';
+@use 'variables' as *;
 
 @include igx-theme(
   $palette: $my-palette,
@@ -91,7 +84,7 @@ $igx-legacy-support: $legacy-support;
 
 ## Direction
 
-Like `$igx-legacy-support` and `$default-palette`, we allow you to modify the direction (left-to-right vs. right-to-left) of the produced styles; By setting the global `$direction` variable, you can change the default direction from LTR to RTL.
+Like `$default-palette`, we allow you to modify the direction (left-to-right vs. right-to-left) of the produced styles; By setting the global `$direction` variable, you can change the default direction from LTR to RTL.
 
 
 ```scss
@@ -105,8 +98,7 @@ You can set the direction for the global theme by specifying it in the `igx-core
 
 ```scss
 // styles.scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
-@import './variables';
+@use './variables' as *;
 
 @include igx-core(
   $direction: $direction
@@ -115,15 +107,12 @@ You can set the direction for the global theme by specifying it in the `igx-core
 
 ## Global Variables
 
-We will be switching to Sass modules as soon as Angular drops support for `node-sass`. In the meantime, there are a few global variables that we depend upon. Be careful to not overwrite them in your Sass files.
-
-Here's a list of those variables:
+Here's a list of global Sass variables forwarded in the main theming module:
 
 | Variable Name | Description                                                                 |
 |:-------------:|:---------------------------------------------------------------------------:|
 | `$components` | Stores a register of all component themes. Used for tree-shaking.           |
 | `$keyframes`  | Stores a register of all keyframe animation mixins. Used for tree-shaking. |
-
 
 ## Scrollbar Styling
 

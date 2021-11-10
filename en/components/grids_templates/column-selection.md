@@ -95,8 +95,11 @@ More information regarding the API manipulations could be found in the [`API Ref
 ## Styling
 Before diving into the styling options, the core module and all component mixins need to be imported.
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
-```
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
 
 >[!NOTE]
 >Please note that [`row selection`](row-selection.md) and [`column selection`](column-selection.md) can't be manipulated   independently. They depend on the same `variables`.

@@ -107,7 +107,10 @@ If the `labelPosition` is not set, the label will be positioned after the switch
 To get started with styling the switch, we need to import the `index` file, where all the theme functions and component mixins live:
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
 Then, we create a new theme that extends the [`igx-switch-theme`]({environment:sassApiUrl}/index.html#function-igx-switch-theme) and use some of its parameters to style the switch's items:

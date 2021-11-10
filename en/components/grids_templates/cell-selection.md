@@ -234,9 +234,11 @@ The theme engine exposes properties that allows us to style the `range of select
 To get started with styling the selection, we need to import the `index` file, where all the theme functions and component mixins live:
 
 ```scss
-// in component.scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
-```
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
 
 ### Define colors
 

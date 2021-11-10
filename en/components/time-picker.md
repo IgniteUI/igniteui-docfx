@@ -316,8 +316,11 @@ In reactive forms, we can handle the [`valueChange`]({environment:angularApiUrl}
 To get started with styling the time picker, we need to import the `index` file, where all the theme functions and component mixins live:
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
-```
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
 
 Following the simplest approach, we create a new theme that extends the [`igx-time-picker-theme`]({environment:sassApiUrl}/index.html#function-igx-dialog-theme) and accepts parameters that style the time picker.
 

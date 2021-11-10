@@ -449,9 +449,11 @@ In order to use the [Ignite UI Theming Library](../themes/sass/component-themes.
 ### Importing style library
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
-...
-```
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
 Now we can make use of all of the functions exposed by the Ignite UI for Angular theme engine.
 
 ### Defining a palette

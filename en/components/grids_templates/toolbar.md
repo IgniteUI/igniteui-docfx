@@ -463,9 +463,11 @@ The following sample demonstrates how to add an additional button to the toolbar
 To get started with styling the toolbar, we need to import the index file, where all the theme functions and component mixins live:
 
 ```scss
-// custom-grid-paging-style.component.scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
-```
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
 
 First, let's create a new palette.
 

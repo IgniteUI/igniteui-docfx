@@ -511,14 +511,15 @@ Finally, we need to apply the filtering pipe to our contacts data before we can 
 Let's see how we can change the background of our list. First we need to import index.scss in to our component .scss file.
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
-```
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
 
 Then we need to create a theme for our component.
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
-
 :host ::ng-deep {
     $my-list-theme: igx-list-theme(
         $background: #0568ab

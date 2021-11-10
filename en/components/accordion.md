@@ -232,8 +232,11 @@ By design, there is a margin set to the expanded panels, in case that they are p
 In order to take advantage of the functions exposed by the theming engine, we have to import the `index` file in our style file:
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
-```
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
 
 Following the simplest approach, we create a new theme that extends the [igx-expansion-panel-theme]({environment:sassApiUrl}/index.html#function-igx-expansion-panel-theme) and accepts an `$expanded-margin` parameter. 
 ```scss

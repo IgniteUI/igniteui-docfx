@@ -271,8 +271,11 @@ private find(increment: number) {
 [`IgxTextHighlight`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html) ディレクティブは、指定された文字列のすべての発生の色と背景を変更してスタイル設定できます。まず、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
-```
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
 
 最も簡単な方法は、[`igx-highlight-theme`]({environment:sassApiUrl}/index.html#function-igx-highlight-theme) を拡張する新しいテーマを作成し、`$resting-background`、`$resting-color`、`$active-background` と `$active-color`パラメーターを受け取る方法です。
 

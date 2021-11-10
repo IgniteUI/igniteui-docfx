@@ -187,8 +187,10 @@ Fist we create a custom palette which can later be passed to our component:
 // In real life, this should be in our main sass file so we can share the palette between all components. 
 // In our case, it's in the component SCSS file "expansion-styling.component.scss".
 
-// Import theming engine functionality.
-@import '~igniteui-angular/lib/core/styles/themes/index';
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
 
 // Add your brand colors.
 $my-primary-color:#353a4b;
