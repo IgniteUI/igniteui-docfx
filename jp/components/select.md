@@ -47,7 +47,7 @@ export class AppModule {}
 その他 [*ngFor](https://angular.io/api/common/NgForOf) 構造ディレクティブに表示したい項目のコレクションを使用する方法があります。
 
 ```typescript
-public items: string[] = ["Orange", "Apple", "Banana", "Mango"];
+public items: string[] = ['Orange', 'Apple', 'Banana', 'Mango'];
 ```
 
 ```html
@@ -110,16 +110,16 @@ Select コンポーネントに [`placeholder`]({environment:angularApiUrl}/clas
 これは、コンポーネントを宣言するために反復可能な階層データに適しています。以下の例では、各グループには `label` と `items` のコレクションがあります。
 ```typescript
 public greengrocery: Array<{ label: string, items: Array<{ type: string, origin: string }> }> = [
-    { label: "Fruits", items: [
-            { type: "Apple", origin: "local" },
-            { type: "Orange", origin: "import" },
-            { type: "Banana", origin: "import"}
+    { label: 'Fruits', items: [
+            { type: 'Apple', origin: 'local' },
+            { type: 'Orange', origin: 'import' },
+            { type: 'Banana', origin: 'import'}
         ]
     },
-    { label: "Vegetables", items: [
-            { type: "Cucumber", origin: "local" },
-            { type: "Potato", origin: "import" },
-            { type: "Pepper", origin: "local" }
+    { label: 'Vegetables', items: [
+            { type: 'Cucumber', origin: 'local' },
+            { type: 'Potato', origin: 'import' },
+            { type: 'Pepper', origin: 'local' }
         ]
     }
 ];
@@ -256,7 +256,7 @@ public greengrocery: Array<{ label: string, items: Array<{ type: string, origin:
 export class MyClass implements OnInit {
     @ViewChild(IgxSelectComponent)
     public select: IgxSelectComponent;
-    public items: string[] = ["Orange", "Apple", "Banana", "Mango", "Tomato"];
+    public items: string[] = ['Orange', 'Apple', 'Banana', 'Mango', 'Tomato'];
     public customOverlaySettings: OverlaySettings;
 
     public ngOnInit(): void {

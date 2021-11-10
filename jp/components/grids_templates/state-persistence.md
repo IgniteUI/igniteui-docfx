@@ -82,7 +82,7 @@ const gridState = state.getState();
 const gridState: IGridState = state.getState(false);
 
 // get the sorting and filtering expressions
-const sortingFilteringStates: IGridState = state.getState(false, ["sorting", "filtering"]);
+const sortingFilteringStates: IGridState = state.getState(false, ['sorting', 'filtering']);
 ```
 
 [`setState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#setstate) - [`setState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#setstate) メソッドは、シリアル化されたJSON文字列または [`IGridState`]({environment:angularApiUrl}/classes/igridstate.html) オブジェクトを引数として受け入れ、オブジェクト/JSON 文字列で見つかった各機能の状態を復元します。
@@ -116,26 +116,26 @@ public options =  { cellSelection: false; sorting: false; }
 これらのシンプルなシングル ポイント API を使用すると、わずか数行のコードで完全な状態維持機能を実現できます。**下からコードをコピーして貼り付けます** - ユーザーが現在のページを離れるたびに、ブラウザーの `sessionStorage` オブジェクトにグリッドの状態が保存されます。ユーザーがメイン ページに戻るときに、グリッドの状態が復元されます。必要なデータを取得するために、複雑で高度なフィルタリングやソートの式を毎回設定する必要はなくなりました。一度実行して、以下のコードでユーザーに代わって処理してください。
 
 ```typescript
-  // app.component.ts
-  public ngOnInit() {
+// app.component.ts
+public ngOnInit() {
     this.router.events.pipe(take(1)).subscribe((event: NavigationStart) => {
         this.saveGridState();
     });
-  }
+}
 
-  public ngAfterViewInit() {
+public ngAfterViewInit() {
     this.restoreGridState();
-  }
+}
 
-  public saveGridState() {
-      const state = this.state.getState() as string;
-      window.sessionStorage.setItem("grid1-state", state);
-  }
+public saveGridState() {
+    const state = this.state.getState() as string;
+    window.sessionStorage.setItem('grid1-state', state);
+}
 
-  public restoreGridState() {
-      const state = window.sessionStorage.getItem("grid1-state");
-      this.state.setState(state);
-  }
+public restoreGridState() {
+    const state = window.sessionStorage.getItem('grid1-state');
+    this.state.setState(state);
+}
 ```
 
 ## 列の復元
@@ -184,11 +184,11 @@ public options =  { cellSelection: false; sorting: false; }
 ```typescript
 @ViewChild('activeTemplate', { static: true }) public activeTemplate: TemplateRef<any>;
 public onColumnInit(column: IgxColumnComponent) {
-   if (column.field === 'IsActive') {
+    if (column.field === 'IsActive') {
         column.bodyTemplate = this.activeTemplate;
         column.summaries = MySummary;
         column.filters = IgxNumberFilteringOperand.instance();
-   }
+    }
 }
 ```
 
@@ -202,7 +202,7 @@ public onColumnInit(column: IgxColumnComponent) {
 ```
 `getState` API は、`選択`と`ソート`を除くすべてのグリッド (ルート グリッドと子グリッド) 機能の状態を返します。開発者が後ですべてのグリッドの`フィルタリング`状態のみを復元するには、以下を使用します。
 ```typescript
-this.state.setState(state, ['filtering', 'rowiIslands']);
+this.state.setState(state, ['filtering', 'rowIslands']);
 ```
 }
 

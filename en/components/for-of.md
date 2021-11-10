@@ -1,5 +1,5 @@
 ---
-title: Virtual For Directive 
+title: Angular Virtual For Directive 
 _description: Ignite UI for Angular now exposes a virtual igxFor directive similar to ngFor, which virtualizes DOM object rendering by visualizing only the visible chunks of the data in the DOM.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Virtualization, Performance, Virtual directive, Virtual For
 ---
@@ -155,13 +155,13 @@ The [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxf
 ***Note:*** There is a requirement to set the [`totalItemCount`]({environment:angularApiUrl}/classes/igxforofdirective.html#totalitemcount) property in the instance of [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof).
 
 ```typescript
-this.virtDirRemote.totalItemCount = data["@odata.count"];
+this.virtDirRemote.totalItemCount = data['@odata.count'];
 ```
 
 In order to access the directive instance from the component, it should be marked as `ViewChild`:
 
 ```typescript
-@ViewChild("virtDirRemote", { read: IgxForOfDirective })
+@ViewChild('virtDirRemote', { read: IgxForOfDirective })
 public virtDirRemote: IgxForOfDirective<any>;
 ```
 
@@ -170,7 +170,7 @@ After the request for loading the first chunk, the [`totalItemCount`]({environme
 ```typescript
 public ngAfterViewInit() {
     this.remoteService.getData(this.virtDirRemote.state, (data) => {
-        this.virtDirRemote.totalItemCount = data["@odata.count"];
+        this.virtDirRemote.totalItemCount = data['@odata.count'];
     });
 }
 ```
@@ -195,7 +195,7 @@ public getData(data?: IForOfState, cb?: (any) => void): any {
 }
 
 private buildUrl(dataState: any): string {
-    let qS: string = "?", requiredChunkSize: number;
+    let qS: string = '?', requiredChunkSize: number;
     if (dataState) {
         const skip = dataState.startIndex;
             requiredChunkSize =  dataState.chunkSize === 0 ?

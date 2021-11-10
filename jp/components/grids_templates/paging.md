@@ -114,7 +114,7 @@ _language: ja
 以下の例では、`igx-paginator` コンポーネントは `igx-hierarchical-grid` コンポーネントとともに使用されますが、ページング機能が必要な場合は、他のコンポーネントとともに使用できます。
 
 ```html
-<igx-hierarchical-grid #hGrid >
+<igx-hierarchical-grid>
     <igx-column *ngFor="let c of hColumns" [field]="c.field">
     </igx-column>
     <igx-row-island [key]="'childData'" [autoGenerate]="true">

@@ -59,7 +59,7 @@ Adding a `igx-paginator` component will control whether the feature is present, 
 
 Example:
 ```html
-<igx-paginator #paginator [totalRecords]='20'>
+<igx-paginator #paginator [totalRecords]="20">
     <igx-paginator-content>
         <div id="numberPager" style="justify-content: center;">
             <button [disabled]="paginator.isFirstPage" (click)="paginator.previousPage()" igxButton="flat">
@@ -112,7 +112,7 @@ The `igx-paginator` component is used along with the `igx-tree-grid` component i
 The `igx-paginator` component is used along with the `igx-hierarchical-grid` component in the example below, but you can use it with any other component in case paging functionality is needed.
 
 ```html
-<igx-hierarchical-grid #hGrid >
+<igx-hierarchical-grid>
     <igx-column *ngFor="let c of hColumns" [field]="c.field">
     </igx-column>
     <igx-row-island [key]="'childData'" [autoGenerate]="true">

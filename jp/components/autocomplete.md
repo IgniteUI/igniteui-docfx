@@ -63,7 +63,7 @@ export class AppModule {}
 ドロップダウンに表示されるリストを追加します。入力する際にリストをフィルターするには、**PipeTransform** インターフェイスを使用します。
 
 ```typescript
-import { Component, Pipe, PipeTransform } from "@angular/core";
+import { Component, Pipe, PipeTransform } from '@angular/core';
 
 @Component({
     selector: 'app-autocomplete-sample',
@@ -72,15 +72,15 @@ import { Component, Pipe, PipeTransform } from "@angular/core";
 })
 export class AutocompleteSampleComponent {
     constructor() {
-        this.towns = [ "New York", "Washington, D.C.", "London", "Berlin", "Sofia", "Rome", "Kiev",
-            "Copenhagen", "Paris", "Barcelona", "Vienna", "Athens", "Dublin", "Yerevan",
-            "Oslo", "Helsinki", "Stockholm", "Prague", "Istanbul", "El Paso", "Florence", "Moscow" ];
+        this.towns = [ 'New York', 'Washington, D.C.', 'London', 'Berlin', 'Sofia', 'Rome', 'Kiev',
+            'Copenhagen', 'Paris', 'Barcelona', 'Vienna', 'Athens', 'Dublin', 'Yerevan',
+            'Oslo', 'Helsinki', 'Stockholm', 'Prague', 'Istanbul', 'El Paso', 'Florence', 'Moscow' ];
     }
 }
 
-@Pipe({ name: "startsWith" })
+@Pipe({ name: 'startsWith' })
 export class AutocompletePipeStartsWith implements PipeTransform {
-    public transform(collection: any[], term = "") {
+    public transform(collection: any[], term = '') {
         return collection.filter((item) => item.toString().toLowerCase().startsWith(term.toString().toLowerCase()));
     }
 }
@@ -135,28 +135,28 @@ export class AutocompleteComponent {
 
     public towns = [
         {
-          name: "New York",
+          name: 'New York',
           cinemas: [
-            "Regal Cinemas",
-            "Village East Cinema",
-            "Roxy Cinema",
-            "The Paris Theatre"
+            'Regal Cinemas',
+            'Village East Cinema',
+            'Roxy Cinema',
+            'The Paris Theatre'
         ]},
         {
-            name: "Los Angeles",
+            name: 'Los Angeles',
             cinemas: [
-                "Arc Light",
-                "Pacific Cinerama Dome",
-                "New Beverly Cinema",
-                "Downtown Independent"
+                'Arc Light',
+                'Pacific Cinerama Dome',
+                'New Beverly Cinema',
+                'Downtown Independent'
         ]},
         {
-            name: "Seattle",
+            name: 'Seattle',
             cinemas: [
-                "Central Cinema",
-                "Grand Illusion Cinema",
-                "Ark Lodge Cinemas",
-                "Skyway Outdoor Cinema"
+                'Central Cinema',
+                'Grand Illusion Cinema',
+                'Ark Lodge Cinemas',
+                'Skyway Outdoor Cinema'
         ]}
     ];
 }

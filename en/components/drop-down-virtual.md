@@ -1,5 +1,5 @@
 ---
-title: Drop Down Component
+title: Angular Drop Down Component – Ignite UI for Angular | Infragistics
 _description: Use Ignite UI for Angular Virtualized Drop Down to display a very large list of items which supports a single item selection.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Drop Down components, Angular Drop Down controls, Angular Control Large Item List, Angular Control Singe Selection
 ---
@@ -31,8 +31,7 @@ import { IgxForOfModule } from 'igniteui-angular';
 @NgModule({
     imports: [
         ...
-        IgxForOfModule,
-        ...
+        IgxForOfModule
     ]
 })
 export class AppModule {}
@@ -156,10 +155,10 @@ First, we need to define a remote service for fetching data:
 
 ```typescript
 // remote.service.ts
-import { HttpClient } from "@angular/common/http";
-import { Injectable } from "@angular/core";
-import { IForOfState } from "igniteui-angular";
-import { BehaviorSubject, Observable } from "rxjs";
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { IForOfState } from 'igniteui-angular';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable()
 export class RemoteService {
@@ -188,14 +187,14 @@ The service exposes an `Observable` under `remoteData`. We will inject our servi
 // remote-drop-down.component.ts
 @Component({
     providers: [RemoteService],
-    selector: "app-drop-down-remote",
-    templateUrl: "./drop-down-remote.component.html",
-    styleUrls: ["./drop-down-remote.component.scss"]
+    selector: 'app-drop-down-remote',
+    templateUrl: './drop-down-remote.component.html',
+    styleUrls: ['./drop-down-remote.component.scss']
 })
 export class DropDownRemoteComponent implements OnInit, OnDestroy {
     @ViewChild(IgxForOfDirective, { read: IgxForOfDirective })
     public remoteForDir: IgxForOfDirective<any>;
-    @ViewChild("remoteDropDown", { read: IgxDropDownComponent })
+    @ViewChild('remoteDropDown', { read: IgxDropDownComponent })
     public remoteDropDown: IgxDropDownComponent;
     public itemHeight = 48;
     public itemsMaxHeight = 480;
@@ -208,7 +207,7 @@ export class DropDownRemoteComponent implements OnInit, OnDestroy {
     public ngAfterViewInit() {
         const initialState = { startIndex: 0, chunkSize: Math.ceil(this.itemsMaxHeight / this.itemHeight) }
         this.remoteService.getData(initialState, (data) => {
-            this.remoteForDir.totalItemCount = data["@odata.count"];
+            this.remoteForDir.totalItemCount = data['@odata.count'];
         });
         // Subscribe to igxForOf.chunkPreload and load new data from service
         this.remoteForDir.chunkPreload.pipe(takeUntil(this.destroy$)).subscribe((data) => {
@@ -223,7 +222,7 @@ export class DropDownRemoteComponent implements OnInit, OnDestroy {
         this.prevRequest = this.remoteService.getData(
             evt,
             (data) => {
-                this.remoteForDir.totalItemCount = data["@odata.count"];
+                this.remoteForDir.totalItemCount = data['@odata.count'];
             });
     }
 

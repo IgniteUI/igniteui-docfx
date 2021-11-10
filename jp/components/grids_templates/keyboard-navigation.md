@@ -193,10 +193,10 @@ public customKeydown(args: IGridKeydownEventArgs) {
     const evt: KeyboardEvent = args.event as KeyboardEvent;
     const type = args.targetType;
 
-    if (type === "dataCell" && target.editMode && evt.key.toLowerCase() === "tab") {
+    if (type === 'dataCell' && target.editMode && evt.key.toLowerCase() === 'tab') {
         // 1. USER INPUT VALIDATON ON TAB
     }
-    if (type === "dataCell" && evt.key.toLowerCase() === "enter") {
+    if (type === 'dataCell' && evt.key.toLowerCase() === 'enter') {
         // 2. CUSTOM NAVIGATION ON ENTER KEY PRESS
     }
 }
@@ -207,7 +207,7 @@ public customKeydown(args: IGridKeydownEventArgs) {
 @@if (igxName === 'IgxGrid') {
 ```typescript
     // 1. USER INPUT VALIDATON ON TAB
-    if (target.column.dataType === "number" && target.editValue < 10) {
+    if (target.column.dataType === 'number' && target.editValue < 10) {
         // alert the user that the input is invalid
         return;
     }
@@ -234,7 +234,7 @@ public customKeydown(args: IGridKeydownEventArgs) {
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```typescript
     // 1. USER INPUT VALIDATON ON TAB
-    if (target.column.dataType === "number" && target.editValue < 0) {
+    if (target.column.dataType === 'number' && target.editValue < 0) {
         // alert the user that the input is invalid
         return;
     }
@@ -264,7 +264,7 @@ public customKeydown(args: IGridKeydownEventArgs) {
 @@if (igxName === 'IgxTreeGrid') {
 ```typescript
     // 1. USER INPUT VALIDATON ON TAB
-    if (target.column.dataType === "number" && target.editValue < 18) {
+    if (target.column.dataType === 'number' && target.editValue < 18) {
         // alert the user that the input is invalid
         return;
     }
