@@ -253,7 +253,7 @@ Setting `none` to the both animation type inputs disables stepper animations.
 
 ## Keyboard Navigation
 
-The Angular Material Stepper provides a rich variety of keyboard interactions to the end-user. This functionality is enabled by default and allows end-users to easily navigate through the steps. 
+Angular Material Stepper provides a rich variety of keyboard interactions to the end-user. This functionality is enabled by default and allows end-users to easily navigate through the steps. 
 The [IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponent.html) navigation is compliant with [W3 accessability standards](https://www.w3.org/TR/wai-aria-practices-1.1/#tabpanel) and convenient to use.
 
 **Key Combinations**
