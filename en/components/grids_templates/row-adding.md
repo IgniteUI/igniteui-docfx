@@ -160,14 +160,50 @@ Then define a @@igComponent with bound data source and [`rowEditable`]({environm
 
 @@if (igxName !== 'IgxTreeGrid') {
 > [!NOTE]
-> The IgxGridEditingActions input controlling the visibility of the add row button may use the action strip context (which is of type [`IgxGridRowComponent`]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)) to fine tune which records the button shows for.
+> The IgxGridEditingActions input controlling the visibility of the add row button may use the action strip context (which is of type [`RowType`]({environment:angularApiUrl}/classes/rowtype.html)) to fine tune which records the button shows for.
 }
 @@if (igxName === 'IgxTreeGrid') {
 > [!NOTE]
-> The IgxGridEditingActions inputs controlling the visibility of the add row and add child buttons may use the action strip context (which is of type [`IgxTreeGridRowComponent`]({environment:angularApiUrl}/classes/igxtreegridrowcomponent.html)) to fine tune which records the buttons show for.
+> The IgxGridEditingActions inputs controlling the visibility of the add row and add child buttons may use the action strip context (which is of type [`RowType`]({environment:angularApiUrl}/classes/rowtype.html)) to fine tune which records the buttons show for.
 }
 
 The internal [`IgxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html) is automatically provided for @@igComponent. It holds pending cell changes until the row state is submitted or cancelled.
+
+## Start Row Adding Programmatically
+
+@@igComponent allows to programmatically spawn the add row UI by using two different public methods. One that accepts a row ID for specifying the row under which the UI should spawn and another that works by index. You can use these methods to spawn the UI anywhere within the current data view. Changing the page or specifying a row that is e.g. filtered out is not supported.
+
+Using `beginAddRowById` requires you to specify the row to use as context for the operation by its rowID (PK). The method then functions as though the end-user clicked on the add row action strip button for the specified row, spawning the UI under it.@@if (igxName === 'IgxTreeGrid') { The second parameter controls if the row is added as a child to the context row or as a sibling.} You can also make the UI spawn as the very first row in the grid by passing `null` for the first parameter.
+
+@@if (igxName !== 'IgxTreeGrid') {
+```typescript
+this.grid.beginAddRowById('ALFKI');  // spawns the add row UI under the row with PK 'ALFKI'
+this.grid.beginAddRowById(null);     // spawns the add row UI as the first record
+```
+}
+@@if (igxName === 'IgxTreeGrid') {
+```typescript
+this.treeGrid.beginAddRowById('ALFKI', true);   // spawns the add row UI to add a child for the row with PK 'ALFKI'
+this.treeGrid.beginAddRowById(null);            // spawns the add row UI as the first record
+```
+}
+
+@@if (igxName !== 'IgxTreeGrid') {
+The `beginAddRowByIndex` method works similarly but requires you to specify the index _at_ which the UI should spawn. Allowed values range between 0 and the size of the data view - 1.
+
+```typescript
+this.grid.beginAddRowByIndex(10);   // spawns the add row UI at index 10
+this.grid.beginAddRowByIndex(0);    // spawns the add row UI as the first record
+```
+}
+@@if (igxName === 'IgxTreeGrid') {
+The `beginAddRowByIndex` method works similarly but the row to use as context is specified by index.
+
+```typescript
+this.treeGrid.beginAddRowByIndex(10, true);   // spawns the add row UI to add a child for the row at index 10
+this.treeGrid.beginAddRowByIndex(null);       // spawns the add row UI as the first record
+```
+}
 
 ## Positioning
 

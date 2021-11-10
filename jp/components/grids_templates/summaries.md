@@ -83,7 +83,7 @@ Ignite UI for Angular の Angular UI グリッドには、グループ フッタ
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
 ```html
-<@@igSelector #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (onColumnInit)="initColumn($event)">
+<@@igSelector #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (columnInit)="initColumn($event)">
     <igx-column field="ProductID" header="Product ID" width="200px"  [sortable]="true">
     </igx-column>
     <igx-column field="ProductName" header="Product Name" width="200px" [sortable]="true" [hasSummary]="true">
@@ -117,7 +117,7 @@ Ignite UI for Angular の Angular UI グリッドには、グループ フッタ
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
 ```html
-<@@igSelector #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (onColumnInit)="initColumn($event)" >
+<@@igSelector #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (columnInit)="initColumn($event)" >
     <igx-column field="ProductID" header="Product ID" width="200px"  [sortable]="true">
     </igx-column>
     <igx-column field="ProductName" header="Product Name" width="200px" [sortable]="true" [hasSummary]="true">
@@ -142,7 +142,7 @@ public disableSummary() {
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<@@igSelector #hierarchicalGrid [data]="data" [autoGenerate]="false" height="800px" width="800px" (onColumnInit)="initColumn($event)" >
+<@@igSelector #hierarchicalGrid [data]="data" [autoGenerate]="false" height="800px" width="800px" (columnInit)="initColumn($event)" >
   <igx-column field="Artist" [hasSummary]='true'></igx-column>
         <igx-column field="Photo">
             <ng-template igxCell let-cell="cell">
@@ -236,7 +236,7 @@ interface IgxSummaryResult {
 @@if (igxName !== 'IgxHierarchicalGrid') {
 `UnitsInStock` 列にカスタム集計を追加します。[`summaries`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#summaries) プロパティを以下に作成するクラスに設定します。
 ```html
-<@@igSelector #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (onColumnInit)="initColumn($event)" >
+<@@igSelector #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (columnInit)="initColumn($event)" >
     <igx-column field="ProductID" width="200px"  [sortable]="true">
     </igx-column>
     <igx-column field="ProductName" width="200px" [sortable]="true" [hasSummary]="true">

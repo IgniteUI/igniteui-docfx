@@ -21,7 +21,7 @@ Ignite UI for Angular の多くの利点のうち、簡単な統合、迅速な�
 
 ### プロジェクトのインストールと作成 
 
-Ignite UI for Angular は、Angular CLI または [Ignite UI CLI](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/general/cli-overview.html "Ignite UI CLI 概要ページ") でインストールできます。Angular CLI をすばやく開始するには、以下のコマンドを実行します。 
+Ignite UI for Angular は、Angular CLI または [Ignite UI CLI](./cli/getting-started-with-cli.md "Ignite UI CLI 概要ページ") でインストールできます。Angular CLI をすばやく開始するには、以下のコマンドを実行します。 
 
 `ng add igniteui-angular` 
 
@@ -31,7 +31,7 @@ Ignite UI for Angular を[既存の Angular アプリケーション](https://jp
 
 `npm install –g igniteui-cli` 
 
-IgniteUI CLI をインストールすると、cli の[ガイド](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/general/cli/step-by-step-guide.html "ステップバイステップ ガイド")を参照してアプリケーションを簡単にブートストラップでき、エンド ユーザーが単一のコマンドで実行できる構成済みのアプリを作成します。 
+Ignite UI CLI がインストールされると、cli の [Ignite UI CLI を使用したガイド付きエクスペリエンス](./cli/step-by-step-guide-using-cli.md "Ignite UI CLI を使用したステップ バイ ステップ ガイド")または [Ignite UI for Angular Schematics](./cli/step-by-step-guide-using-angular-schematics.md "Ignite UI for Angular Schematics を使用したステップ バイ ステップ ガイド") に従ってアプリケーションを簡単にブートストラップできます。これにより、エンドユーザーが 1 つのコマンドで実行できる構成済みアプリが構築されます。
 
 `ig` 
 
@@ -48,7 +48,7 @@ Ignite UI CLI せずに Ignite UI for Angular コンポーネントを使用す�
 開発の環境設定が完了した後、他の Ignite UI コンポーネントの追加および構成を続行できます。以下には、[schematics](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/general/cli-overview.html#テンプレートの追加 "Ignite UI CLI 概要ページ") を使用して基本構成のグリッドを追加し、一部の列にテンプレートを追加する方法です。 
 
 ```html
-<igx-grid #grid1 [data]="localData" height="600px" (onSelection)="cellSelection($event)">
+<igx-grid #grid1 [data]="localData" height="600px" (selected)="cellSelection($event)">
     <igx-column header="Rank" headerClasses="myClass" width="115px" field="Id" sortable="true" [filterable]="false"></igx-column>
     <igx-column field="Name" header="Athlete" width="280"></igx-column>
     <igx-column field="Speed" header="Speed" [width]="'190px'" [filterable]="false"></igx-column>
@@ -181,7 +181,7 @@ export class MyComponent implements OnInit {
 Angular データ グリッドは、簡単なソート、フィルタリング、ページネーションをサポートします。豊富な API と直感的な機能のセットアップにより、Ignite UI for Angular コンポーネントを簡単に使用できます。 
 
 ```html
-<igx-grid #grid1 (onSortingDone)="removeSorting($event)"
+<igx-grid #grid1 (sortingDone)="removeSorting($event)"
         [data]="data"
         [allowFiltering]="true">   
     <igx-column field="OrderID" header="Order ID">

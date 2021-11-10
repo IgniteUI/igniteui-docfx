@@ -64,7 +64,7 @@ To utilize this feature, you need to subscribe to the [`dataPreLoad`]({environme
 ```html
 <igx-grid #grid [data]="remoteData | async" [height]="'500px'" [width]="'100%'" [autoGenerate]='false'
           (dataPreLoad)="processData(false)"
-          (onSortingDone)="processData(true)">
+          (sortingDone)="processData(true)">
     <igx-column [field]="'ProductID'" [sortable]="true"></igx-column>
     <igx-column [field]="'ProductName'" [sortable]="true"></igx-column>
     <igx-column [field]="'UnitPrice'" [dataType]="'number'" [formatter]="formatCurrency" [sortable]="true"></igx-column>

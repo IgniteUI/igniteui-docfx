@@ -48,23 +48,26 @@ Excel Exporter サービスは @@igxName のデータを MS Excel へエクス�
 @@if (igxName === 'IgxGrid') {
 
 <code-view style="height: 800px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/services/export-excel-sample-1" alt="Angular Excel Exporter 例">
+           data-demos-base-url="{environment:demosBaseUrl}"
+           explicit-editor="stackblitz"
+           iframe-src="{environment:demosBaseUrl}/services/export-excel-sample-1" alt="Angular Excel Exporter の例">
 </code-view>
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 
 <code-view style="height: 350px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/services/export-excel-tree-grid-sample" alt="Angular Excel Exporter 例">
+           data-demos-base-url="{environment:demosBaseUrl}"
+           explicit-editor="stackblitz"
+           iframe-src="{environment:demosBaseUrl}/services/export-excel-tree-grid-sample" alt="Angular Excel Exporter の例">
 </code-view>
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height: 800px;" 
-        data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 600px;" 
+        data-demos-base-url="{environment:demosBaseUrl}"
+        explicit-editor="stackblitz"
         iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-export" alt="Angular Excel Exporter の例">
 </code-view>
 
@@ -141,11 +144,55 @@ public exportButtonHandler() {
 
 
 <code-view style="height: 800px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/services/export-excel-sample-1" alt="Angular Grouped Data Excel Exporter Example">
+           data-demos-base-url="{environment:demosBaseUrl}"
+           explicit-editor="stackblitz" 
+           iframe-src="{environment:demosBaseUrl}/services/export-excel-sample-1" alt="Angular Grouped Data Excel Exporter の例">
 </code-view>
 
 }
+
+## 複数列ヘッダー グリッドのエクスポート
+
+定義された[複数列ヘッダー](multi-column-headers.md)を使用して @@igComponent をエクスポートできるようになりました。すべてのヘッダーは、@@igComponent に表示されるときに、エクスポートされた Excel ファイルに反映されます。エクスポートされたデータから定義された複数列ヘッダーを除外する場合は、[エクスポーター オプション]({environment:angularApiUrl}/classes/igxexporteroptionsbase.html) [ignoreMultiColumnHeaders]({environment:angularApiUrl}/classes/igxexporteroptionsbase.html#ignoremulticolumnheaders) を `true` に設定できます。
+
+> [!NOTE]
+> Excel テーブルは複数の行ヘッダーをサポートしていないため、エクスポートされた @@igComponent はテーブルとしてフォーマットされません。
+
+@@if (igxName === 'IgxGrid') {
+<code-view style="height: 800px;" 
+           data-demos-base-url="{environment:demosBaseUrl}"
+           explicit-editor="stackblitz"
+           iframe-src="{environment:demosBaseUrl}/grid/multi-column-headers-export" alt="Angular Multi-Column Headers Export">
+</code-view>
+}
+
+@@if (igxName === 'IgxTreeGrid') {
+<code-view style="height: 800px;" 
+           data-demos-base-url="{environment:demosBaseUrl}"
+           explicit-editor="stackblitz" 
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-multi-column-headers-export" alt="Angular Multi-Column Headers Export">
+</code-view>
+}
+
+@@if (igxName === 'IgxHierarchicalGrid') {
+<code-view style="height: 800px;" 
+           data-demos-base-url="{environment:demosBaseUrl}"
+           explicit-editor="stackblitz"
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-column-export" alt="Angular Multi-Column Headers Export">
+</code-view>
+}
+
+## 固定された列ヘッダーを使用してグリッドをエクスポートする
+
+デフォルトでは、Excel エクスポーター サービスは、スクロール可能な (固定されていない) 列ヘッダーを使用してグリッドをエクスポートします。エクスポートされた Excel ファイルの上にあるすべてのヘッダーを固定して、ユーザーがレコードをスクロールしても常に表示されたままにするシナリオがあります。これを実現するには、[エクスポーター オプション]({environment:angularApiUrl}/classes/igxexporteroptionsbase.html) [freezeHeaders]({environment:angularApiUrl}/classes/igxexporteroptionsbase.html#freezeHeaders) を `true` に設定します。
+
+```typescript
+public exportButtonHandler() {
+        const exporterOptions = new IgxExcelExporterOptions('ExportedDataFile');
+        exporterOptions.freezeHeaders = true;
+        this.excelExportService.export(this.grid, exporterOptions);
+    }
+```
 
 ## エクスポートするコンテンツのカスタマイズ
 
@@ -171,7 +218,6 @@ this.excelExportService.export(this.@@igObjectRef, new IgxExcelExporterOptions("
 |制限|説明|
 |--- |--- |
 |ワークシートの最大サイズ|Excel でサポートされているワークシートの最大サイズは、1,048,576 行 x 16,384 列です。|
-|複数列ヘッダーのエクスポート|Excel エクスポーター サービスは、複数列ヘッダーを持つ @@ igComponent のエクスポートをサポートしていません。|
 }
 
 @@if (igxName === 'IgxTreeGrid') {
@@ -179,7 +225,6 @@ this.excelExportService.export(this.@@igObjectRef, new IgxExcelExporterOptions("
 |--- |--- |
 |階層レベル|Excel エクスポーター サービスは、最大 8 レベルの階層を作成できます。|
 |ワークシートの最大サイズ|Excel でサポートされているワークシートの最大サイズは、1,048,576 行 x 16,384 列です。|
-|複数列ヘッダーのエクスポート|Excel エクスポーター サービスは、複数列ヘッダーを持つ @@ igComponent のエクスポートをサポートしていません。|
 }
 
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -187,7 +232,6 @@ this.excelExportService.export(this.@@igObjectRef, new IgxExcelExporterOptions("
 |--- |--- |
 |階層レベル|Excel エクスポーター サービスは、最大 8 レベルの階層を作成できます。|
 |ワークシートの最大サイズ|Excel でサポートされているワークシートの最大サイズは、1,048,576 行 x 16,384 列です。|
-|複数列ヘッダーのエクスポート|Excel エクスポーター サービスは、複数列ヘッダーを持つ @@igComponent のエクスポートをサポートしていません。|
 |ピン固定列された列のエクスポート|エクスポートされた Excel ファイルでは、ピン固定列は固定されませんが、グリッドに表示されるのと同じ順序で表示されます。|
 }
 

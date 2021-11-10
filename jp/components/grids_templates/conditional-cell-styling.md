@@ -1,6 +1,6 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular 条件付きセル スタイル設定 | Ignite UI for Angular | インフラジスティックス 
+title: Angular 条件付きスタイル設定 | Ignite UI for Angular | インフラジスティックス 
 _description: 豊富な API でさまざまなマテリアル スタイリング ガイドラインを使用して、Material UI グリッドの条件付きスタイリング機能を使用してさまざまなスタイルの定義。
 _keywords: conditional styling, ignite ui for angular, infragistics
 _language: ja
@@ -8,7 +8,7 @@ _language: ja
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular 条件付きセル スタイル設定 | Ignite UI for Angular | インフラジスティックス 
+title: Angular 条件付きスタイル設定 | Ignite UI for Angular | インフラジスティックス 
 _description: 豊富な API でさまざまなマテリアル スタイリング ガイドラインを使用して、Material UI グリッドの条件付きスタイリング機能を使用してさまざまなスタイルの定義。
 _keywords: conditional styling, ignite ui for angular, infragistics
 _language: ja
@@ -16,14 +16,183 @@ _language: ja
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular 条件付きセル スタイル設定 | Ignite UI for Angular | インフラジスティックス 
+title: Angular 条件付きスタイル設定 | Ignite UI for Angular | インフラジスティックス 
 _description: 豊富な API でさまざまなマテリアル スタイリング ガイドラインを使用して、Material UI グリッドの条件付きスタイリング機能を使用してさまざまなスタイルの定義。
 _keywords: conditional styling, ignite ui for angular, infragistics
 _language: ja
 ---
 }
 
-# @@igComponent 条件付きセルのスタイル設定
+# @@igComponent 条件付きスタイル設定
+@@igxName コンポーネントでカスタム スタイルを提供する必要がある場合は、行レベルまたはセル レベルで行うことができます。
+
+## @@igComponent 条件付き行のスタイル設定
+
+Ignite UI for Angular の @@igxName コンポーネントは、カスタム ルールに基づいて**行の条件付きスタイル設定**を作成する次の 2 つの方法を提供します:
+
+- @@igxName コンポーネントで [`rowClasses`]({environment:angularApiUrl}/classes/IgxGridBaseDirective.html#rowClasses) 入力を設定する方法。
+- @@igxName コンポーネントで [`rowStyles`]({environment:angularApiUrl}/classes/IgxGridBaseDirective.html#rowStyles) 入力を設定する方法。
+
+さらにこのトピックでは、両方について詳しく説明します。
+
+### rowClasses の使用
+[`rowClasses`]({environment:angularApiUrl}/classes/IgxGridBaseDirective.html#rowClasses) 入力を設定し、カスタム ルールを定義することで、@@igxName 行のスタイルを条件付きで設定できます。
+
+@@if (igxName === 'IgxGrid') {
+```html
+<!-- sample.component.html -->
+<igx-grid #grid [data]="data" [height]="'600px'" [width]="'100%'" [rowClasses]="rowClasses">
+    ...
+</igx-grid>
+```
+}
+@@if (igxName === 'IgxTreeGrid'){
+```html
+<!-- sample.component.html -->
+<igx-tree-grid #treeGrid [data]="data" [height]="'600px'" [width]="'100%'" [rowClasses]="rowClasses">
+    ...
+</igx-tree-grid>
+```
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+```html
+<igx-hierarchical-grid  #hierarchicalGrid class="hgrid" [data]="localData" [height]="'580px'" [width]="'100%'" [rowStyles]="rowStyles">
+    ...
+</igx-hierarchical-grid>
+```
+}
+
+
+[`rowClasses`]({environment:angularApiUrl}/classes/IgxGridBaseDirective.html#rowClasses) 入力は、キー値のペアを含むオブジェクト リテラルを受け入れます。ここで、キーは CSS クラスの名前であり、値はブール値またはブール値を返すコールバック関数となります。
+
+```typescript
+// sample.component.ts
+
+public rowClasses = {
+    activeRow: this.activeRowCondition
+};
+
+public activeRowCondition = (row: RowType) => this.grid?.navigation.activeNode?.row === row.index;
+```
+
+```scss
+// sample.component.scss
+
+::ng-deep {
+ .activeRow {
+    border: 2px solid #fc81b8;
+    border-left: 3px solid #e41c77;
+ }
+}
+```
+
+**::ng-deep** または **`ViewEncapsulation.None`** を使用してカスタム スタイルを現在のコンポーネントとその子コンポーネントに適用します。
+
+
+
+### デモ
+
+@@if (igxName === 'IgxGrid') {
+
+<code-view style="height:530px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/grid/grid-rowClasses-sample" >
+</code-view>
+
+}
+@@if (igxName === 'IgxTreeGrid') {
+
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-classes" >
+</code-view>
+
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hGrid-row-classes" >
+</code-view>
+}
+<div class="divider--half"></div>
+
+
+### rowStyles の使用
+列は、データ行の条件付きスタイル設定を可能にする `rowStyles` プロパティを公開するようになりました。`rowClasses` と同様、キーがスタイル プロパティであり、値が評価用の式であるオブジェクト リテラルを受け取ります。また、通常のスタイル設定 (条件なし) を適用することもできます。
+
+> `rowStyles` と `rowClasses` の両方のコールバック署名は次のとおりです:
+
+```ts
+(row: RowType) => boolean
+```
+
+次にスタイルを定義します。
+
+```typescript
+// component.ts
+    public  customRowStyles = {
+        background: (row: RowType) => (+row.data['Change'] < 0  && +row.data['Change On Year(%)'] < 0) ? '#FF000088' : '#00000000',
+        border: (row: RowType) => (+row.data['Change'] < 0  && +row.data['Change On Year(%)'] < 0) ? '2px solid' : '1px solid',
+        'border-color': (row: RowType) => (+row.data['Change'] < 0  && +row.data['Change On Year(%)'] < 0) ? '#FF000099' : '#E9E9E9'
+    };
+
+
+```
+
+@@if (igxName === 'IgxGrid') {
+```html
+<!-- sample.component.html -->
+<igx-grid #grid [data]="data" [height]="'600px'" [width]="'100%'" [rowStyles]="customRowStyles">
+    ...
+</igx-grid>
+```
+}
+@@if (igxName === 'IgxTreeGrid'){
+```html
+<!-- sample.component.html -->
+<igx-tree-grid #treeGrid [data]="data" [height]="'600px'" [width]="'100%'" [rowStyles]="customRowStyles">
+    ...
+</igx-tree-grid>
+```
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+```html
+<igx-hierarchical-grid  #hierarchicalGrid class="hgrid" [data]="localData" [height]="'580px'" [width]="'100%'" [rowStyles]="customRowStyles">
+    ...
+</igx-hierarchical-grid>
+```
+}
+
+
+### デモ
+
+@@if (igxName === 'IgxGrid') {
+
+<code-view style="height:530px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/grid/grid-rowStyles-sample" >
+</code-view>
+
+}
+@@if (igxName === 'IgxTreeGrid') {
+
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-styles-sample" >
+</code-view>
+
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hGrid-row-styles" >
+</code-view>
+}
+<div class="divider--half"></div>
+
+
+## @@igComponent 条件付きセル スタイル設定
+## 概要
 Ignite UI for Angular の @@igxName コンポーネントは、カスタム条件に基づいて 2 通りの条件付きセルのスタイル設定をサポートします。
 
 - [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) を設定して、キーと値のペアを含むオブジェクト リテラルに [`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellclasses) を入力します。キーは CSS クラスの名前です。値はブール値を返すコールバック関数またはブール値です。その結果、セルのマテリアル スタイル設定が簡単にできます。
@@ -52,7 +221,6 @@ private downFontCondition = (rowData: any, columnKey: any): boolean => {
 }
 ```
 
-## デモ
 
 ### cellClasses の使用
 [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) [`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellclasses) 入力を設定してカスタム条件を定義することにより、@@igxName の条件付きセルのスタイルを設定できます。
@@ -154,16 +322,16 @@ public priceClasses = {
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:530px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:530px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-cell-styling" >
 </code-view>
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-conditional-cell-style" >
 </code-view>
 
@@ -193,7 +361,7 @@ public styles = {
 列の `cellStyles` プロパティを公開。列セルの条件付きスタイリングが可能になりました。`cellClasses` と同様、キーがスタイル プロパティであり、値が評価用の式であるオブジェクト リテラルを受け取ります。また、通常のスタイリングを簡単に適用できます (条件なし)。
 
 [上記のサンプル](#デモ)で作成した項目:
-- 列インデックスに基づいて適用される 2 つの異なるスタイル。 
+- 列インデックスに基づいて適用される 2 つの異なるスタイル。
 - また、偶数/奇数行に基づいて`テキストの色`を変更します。
 
 > 両方の `cellStyles` のコールバック署名は以下のとおりです。
@@ -293,16 +461,16 @@ public updateCSS(css: string) {
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:530px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:530px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-cell-cellStyling" >
 </code-view>
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-cell-cellStyling" >
 </code-view>
 
@@ -315,7 +483,7 @@ public updateCSS(css: string) {
 ## 既知の問題と制限
 
 - 他の列に同じ条件でバインドされたセルがある場合、その 1 つのセルが更新された際に条件が満たされて要る場合も他のセルが新しい値に基づいて更新されない問題。
-残りのセルに変更を適用するには、パイプ チェックを実行する必要があります。以下の例は、[`onCellEdit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncelledit) イベントで`スプレッド演算子`...を使用してチェックを実行する方法を示します。これにより、元のオブジェクトが新しいインスタンスでコピーされ、パイプのみ発生します。
+残りのセルに変更を適用するには、パイプ チェックを実行する必要があります。以下の例は、[`onCellEdit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncelledit) イベントで`スプレッド演算子` ... を使用してチェックを実行する方法を示します。これにより、元のオブジェクトが新しいインスタンスでコピーされ、パイプのみ発生します。
 
 ```ts
 public backgroundClasses = {

@@ -102,7 +102,7 @@ _language: ja
 
 `[cellSelection]="'single'"` を設定すると、一度にグリッド内で選択されたセルを1つだけ持つことができます。また、モード`マウスドラッグ`は機能せず、セルを選択する代わりに、デフォルトのテキスト選択が行われます。
 
-> `選択モード`が `single` であるか `multiple` であるかに関係なく、単一セルが [`onSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onselection) イベントが発生したときに発生します。複数セル選択モードでは、セル範囲を選択すると [`onRangeSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onrangeselection) イベントが発生します。
+> `選択モード`が `single` であるか `multiple` であるかに関係なく、単一セルが [`selected`]({environment:angularApiUrl}/classes/igxgridcomponent.html#selected) イベントが発生したときに発生します。複数セル選択モードでは、セル範囲を選択すると [`rangeSelected`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rangeSelected) イベントが発生します。
 
 ### @@igComponent 選択なし
 セルの選択を無効にする場合は、`[cellSelection]="'none'"` プロパティを設定するだけです。このモードでは、セルをクリックするかキーボードでナビゲートしようとすると、セルは**選択されず**、`アクティブ化のスタイル`のみが適用され、ページ上の他の要素をスクロールまたはクリックすると失われます。選択を定義する唯一の方法は、以下で説明する API メソッドを使用することです。
@@ -235,7 +235,17 @@ expectedData = [
 選択のスタイル設定を始めるには、すべてのテーマ関数とコンポーネントミックスインが存在する `index` ファイルをインポートする必要があります。
 
 ```scss
-// in component.scss
+// in 
+
+
+
+
+
+
+
+
+
+.scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
@@ -321,7 +331,7 @@ $custom-grid-theme: igx-grid-theme(
 ## API リファレンス
 
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-@@if (igxName !== 'IgxTreeGrid') {* [IgxGridRowComponent API]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRowComponent API]({environment:angularApiUrl}/classes/igxtreegridrowcomponent.html)}
+@@if (igxName !== 'IgxTreeGrid') {* [IgxGridRow API]({environment:angularApiUrl}/classes/igxgridrow.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRow API]({environment:angularApiUrl}/classes/igxtreegridrow.html)}
 * [IgxGridCell API]({environment:angularApiUrl}/classes/igxgridcell.html)
 * [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 

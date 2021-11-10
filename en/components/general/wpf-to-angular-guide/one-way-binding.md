@@ -4,13 +4,14 @@ _description: Learn about one-way data binding in Angular & how it's used to sho
 _keywords: one-way data binding in angular, ignite ui for angular, infragistics
 ---
 
-# One-way data binding in Angular
+# What is one-way data binding in Angular
+
+One-way data binding in Angular (i.e. unidirectional binding) is a way to bind data from the component to the view (DOM) or vice versa - from view to the component. It is used to display information to the end-user which automatically stays synchronized with each change of the underlying data. This is similar to the one-way binding in WPF. 
 
 > [!Video https://www.youtube.com/embed/fP7iVhFNTOk]
 
-The one-way data binding in Angular is used to display information to the end user which automatically stays synchronized with each change of the underlying data. This is similar to the one-way binding in WPF.
-
-Data binding in Angular is super easy, and unlike in WPF we don't have to worry about a data context, a view model, or `INotifyPropertyChanged` (INPC). All we have to worry about is an HTML file and a typescript file. With any data binding, the first thing you need are properties to bind to. So let's add a property called `text` into the component class, and set its value.
+### What is Angular data binding?
+Data binding is widely used by programmers as this type of services significantly streamlines the process of updating any UI and also reduces the amount of boilerplate when building an app. Data binding in Angular is super easy, and unlike in WPF we don't have to worry about a data context, a view model, or `INotifyPropertyChanged` (INPC). All we have to worry about is an HTML file and a typescript file. With any data binding, the first thing you need are properties to bind to. So let's add a property called `text` into the component class, and set its value.
 In WPF, we need to set the DataContext and bind the property in XAML:
 ```csharp
 public class IgniteUIClass
@@ -32,7 +33,7 @@ public MainWindow()
 ```xml
 <Label Content="{Binding Path=Text, Mode=OneWay}"></Label>
 ```
-In Angular, we are directly binding a DOM property to component's property:
+In Angular, we are directly binding a DOM property to a component's property:
 ```typescript
 export class SampleComponent implements OnInit {
 
@@ -46,7 +47,7 @@ export class SampleComponent implements OnInit {
 <h2>{{ text }}</h2>
 ```
 
-### Interpolation
+### Angular Data Binding Interpolation
 
 In the code from above, we simply display some text in the HTML by using a binding to the value of the `text` property. In this case, we are using `interpolation` to create a one-way binding. We do this by typing double curly braces, the name of the property - in our case `text`, and two closing curly braces. Another way to achieve the same result is to create h2 tag and bind the `text` property to its innerHTML property, by using the `interpolation` syntax again:
 ```html
@@ -100,9 +101,9 @@ We will now create a simple `input` of type text and bind the `isDisabled` prope
 The expected result is that the `input` should be enabled, but it's disabled. This is because the `interpolation` returns a string, but the input's disabled property is of boolean type and it requires a boolean value.
 In order for this to work correctly, Angular provides `property binding`. 
 
-### Property Binding
+### Angular Property Binding
 
-The syntax for a property binding is a bit different than that of interpolation. With property binding, the property name is wrapped into square brackets, and its value does not contain curly braces - just the name of the property that it is bound to.  
+Property binding in Angular is used to bind values for target properties of HTML elements or directives. The syntax here is a bit different than that of interpolation. With property binding, the property name is wrapped into square brackets, and its value does not contain curly braces - just the name of the property that it is bound to.  
 
 ```html
 <input type="text" [disabled]="isDisabled">

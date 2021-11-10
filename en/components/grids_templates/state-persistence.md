@@ -42,6 +42,7 @@ _canonicalLink: grid/state-persistence
 * `Expansion`
 * `GroupBy`
 * `Columns`
+    * **NEW**: Multi column headers are now supported out of the box
     * Columns order
     * Column properties defined by the [`IColumnState`]({environment:angularApiUrl}/interfaces/icolumnstate.html) interface.
     * Columns templates and functions are restored using application level code, see [Restoring Column](state-persistence.md#restoring-columns) section.
@@ -60,6 +61,7 @@ _canonicalLink: grid/state-persistence
 * `Row Pinning`
 * `Expansion`
 * `Columns`
+    * **NEW**: Multi column headers are now supported out of the box
     * Columns order
     * Column properties defined by the [`IColumnState`]({environment:angularApiUrl}/interfaces/icolumnstate.html) interface.
     * Columns templates and functions are restored using application level code, see [Restoring Column](state-persistence.md#restoring-columns) section.
@@ -139,10 +141,10 @@ The simple to use single-point API's allows to achieve a full state persistence 
 
 [`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) will not persist columns templates, column formatters, etc. by default (see [`limitations`](state-persistence.md#limitations)). Restoring any of these can be achieved with code on application level. Let's show how to do this for templated columns:
 
-1. Define a template reference variable (in the example below it is `#activeTemplate`) and assign an event handler for the [`onColumnInit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncolumninit) event:
+1. Define a template reference variable (in the example below it is `#activeTemplate`) and assign an event handler for the [`columnInit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columnInit) event:
 @@if (igxName === 'IgxGrid') {
 ```html
-<igx-grid id="grid" #grid igxGridState (onColumnInit)="onColumnInit($event)">
+<igx-grid id="grid" #grid igxGridState (columnInit)="onColumnInit($event)">
     <igx-column [field]="'IsActive'" header="IsActive">
         <ng-template igxCell #activeTemplate let-column let-val="val">
             <igx-checkbox [checked]="val"></igx-checkbox>
@@ -154,7 +156,7 @@ The simple to use single-point API's allows to achieve a full state persistence 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid id="grid" #grid igxGridState (onColumnInit)="onColumnInit($event)">
+<igx-hierarchical-grid id="grid" #grid igxGridState (columnInit)="onColumnInit($event)">
     <igx-column [field]="'IsActive'" header="IsActive">
         <ng-template igxCell #activeTemplate let-column let-val="val">
             <igx-checkbox [checked]="val"></igx-checkbox>
@@ -166,7 +168,7 @@ The simple to use single-point API's allows to achieve a full state persistence 
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```html
-<igx-tree-grid id="grid" #grid igxGridState (onColumnInit)="onColumnInit($event)">
+<igx-tree-grid id="grid" #grid igxGridState (columnInit)="onColumnInit($event)">
     <igx-column [field]="'IsActive'" header="IsActive">
         <ng-template igxCell #activeTemplate let-column let-val="val">
             <igx-checkbox [checked]="val"></igx-checkbox>
@@ -176,7 +178,7 @@ The simple to use single-point API's allows to achieve a full state persistence 
 </igx-tree-grid>
 ```
 }
-2. Query the template view in the component using @ViewChild or @ViewChildren decorator. In the [`onColumnInit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncolumninit) event handler, assign the template to the column `bodyTemplate` property:
+2. Query the template view in the component using @ViewChild or @ViewChildren decorator. In the [`columnInit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columnInit) event handler, assign the template to the column `bodyTemplate` property:
 
 ```typescript
 @ViewChild('activeTemplate', { static: true }) public activeTemplate: TemplateRef<any>;

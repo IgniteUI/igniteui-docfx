@@ -109,8 +109,8 @@ Following this topic you will learn more about [cell template](grid.md#cell-temp
 Let's turn the [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) property off and define the columns collection in the markup:
 
 ```html
-<igx-grid #grid1 [data]="data | async" [autoGenerate]="false" (onColumnInit)="initColumns($event)"
-    (onSelection)="selectCell($event)" [allowFiltering]="true">
+<igx-grid #grid1 [data]="data | async" [autoGenerate]="false" (columnInit)="initColumns($event)"
+    (selected)="selectCell($event)" [allowFiltering]="true">
     <igx-column field="Name" [sortable]="true" header=" "></igx-column>
     <igx-column field="AthleteNumber" [sortable]="true" header="Athlete number" [filterable]="false"></igx-column>
     <igx-column field="TrackProgress" header="Track progress" [filterable]="false">
@@ -262,7 +262,7 @@ const column = this.grid.getColumnByName("User");
 column.bodyTemplate = this.smallView;
 ```
 
-Column properties can also be set in code in the [`initColumns`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncolumninit) event which is emitted when the columns are initialized in the grid.
+Column properties can also be set in code in the [`columnInit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columnInit) event which is emitted when the columns are initialized in the grid.
 
 ```typescript
 public initColumns(column: IgxGridColumn) {
@@ -524,7 +524,7 @@ configuration. Same goes for grouping and editing operations with or without tra
 
 An alternative way to bind complex data, or to visualize composite data (from more than one column) in the **IgxGrid** is to use a custom body template for the column. Generally, one can:
     - use the `value` of the cell, that contains the nested data
-    - use the `cell` object in the template, from which to access the `rowData`, therefore retrieve any value from it, i.e `cell.rowData[field]`
+    - use the `cell` object in the template, from which to access the `data`, therefore retrieve any value from it, i.e `cell.data[field]`
 
 and interpolate it those in the template.
 
@@ -614,9 +614,9 @@ And the result from this configuration is:
 
 ### Working with Flat data
 
-The flat data binding approach is similar to the one that we already described above, but instead of **cell value** we are going to use the [`rowData`]({environment:angularApiUrl}/classes/igxrowdirective.html#rowdata) property of the [IgxRowDirective]({environment:angularApiUrl}/classes/igxrowdirective.html).
+The flat data binding approach is similar to the one that we already described above, but instead of **cell value** we are going to use the [`data`]({environment:angularApiUrl}/classes/igxgridrow.html#data) property of the [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html).
 
-Since the Angular grid is a component for **rendering**, **manipulating** and **preserving** data records, having access to **every data record** gives you the opportunity to customize the approach of handling it. The [`rowData`]({environment:angularApiUrl}/classes/igxrowdirective.html#rowdata) property provides you this opportunity.
+Since the Angular grid is a component for **rendering**, **manipulating** and **preserving** data records, having access to **every data record** gives you the opportunity to customize the approach of handling it. The [`data`]({environment:angularApiUrl}/classes/igxgridrow.html#data) property provides you this opportunity.
 
 Below is the data that we are going to use:
 ```typescript
@@ -757,6 +757,7 @@ See the [Grid Sizing](sizing.md) topic.
 * [Column Resizing](column-resizing.md)
 * [Selection](selection.md)
 * [Column Data Types](column-types.md#default-template)
+* [Build CRUD operations with igxGrid](../general/how-to/how-to-perform-crud.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

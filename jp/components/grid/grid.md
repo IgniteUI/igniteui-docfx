@@ -110,8 +110,8 @@ public grid: IgxGridComponent;
 [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) プロパティを無効にし、マークアップで列コレクションを定義します。
 
 ```html
-<igx-grid #grid1 [data]="data | async" [autoGenerate]="false" (onColumnInit)="initColumns($event)"
-    (onSelection)="selectCell($event)" [allowFiltering]="true">
+<igx-grid #grid1 [data]="data | async" [autoGenerate]="false" (columnInit)="initColumns($event)"
+    (selected)="selectCell($event)" [allowFiltering]="true">
     <igx-column field="Name" [sortable]="true" header=" "></igx-column>
     <igx-column field="AthleteNumber" [sortable]="true" header="Athlete number" [filterable]="false"></igx-column>
     <igx-column field="TrackProgress" header="Track progress" [filterable]="false">
@@ -262,7 +262,7 @@ const column = this.grid.getColumnByName("User");
 column.bodyTemplate = this.smallView;
 ```
 
-列プロパティもグリッドで列が初期化されるときに発生される [`initColumns`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncolumninit) イベントのコードで設定できます。
+列プロパティもグリッドで列が初期化されるときに発生される [`columnInit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columnInit) イベントのコードで設定できます。
 
 ```typescript
 public initColumns(column: IgxGridColumn) {
@@ -522,7 +522,7 @@ interface AminoAcid {
 
 **IgxGrid** で複雑なデータをバインドまたは複合データ (複数の列から) を可視化する別の方法は、列にカスタム ボディ テンプレートを使用することです。通常、以下のことができます。
     - ネストされたデータを含むセルの値を使用します。
-    - `rowData` にアクセスするためにテンプレートの `cell` オブジェクトを使用します。それから、セルから任意の値 (`cell.rowData[field]` など) を取得します。
+    - `data` にアクセスするためにテンプレートの `cell` オブジェクトを使用します。それから、セルから任意の値 (`cell.data[field]` など) を取得します。
 
 それをテンプレートに挿入します。
 
@@ -612,9 +612,9 @@ export const EMPLOYEE_DATA = [
 
 ### フラット データの使用
 
-フラットデータバインディングのアプローチは既に説明したものと似ていますが、**セル値**の代わりに、[IgxRowDirective]({environment:angularApiUrl}/classes/igxrowdirective.html) の [`rowData`]({environment:angularApiUrl}/classes/igxrowdirective.html#rowdata) プロパティを使用します。
+フラットデータバインディングのアプローチは既に説明したものと似ていますが、**セル値**の代わりに、[IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html) の [`data`]({environment:angularApiUrl}/classes/igxgridrow.html#data) プロパティを使用します。
 
-Angular グリッドはデータレコードを**レンダリング**、**操作**、**保存**するためのコンポーネントのため、**すべてのデータ レコード**へアクセスすることで、それを処理する方法をカスタマイズすることができます。それには、[`rowData`]({environment:angularApiUrl}/classes/igxrowdirective.html#rowdata) プロパティを使用します。
+Angular グリッドはデータレコードを**レンダリング**、**操作**、**保存**するためのコンポーネントのため、**すべてのデータ レコード**へアクセスすることで、それを処理する方法をカスタマイズすることができます。それには、[`data`]({environment:angularApiUrl}/classes/igxgridrow.html#data) プロパティを使用します。
 
 以下は使用するデータです。
 ```typescript
@@ -755,6 +755,7 @@ Grid のキーボード ナビゲーションは、さまざまなキーボー�
 * [列のサイズ変更](column-resizing.md)
 * [選択](selection.md)
 * [列のデータ型](column-types.md#デフォルトのテンプレート)
+* [igxGrid を使用して CRUD 操作の構築](../general/how-to/how-to-perform-crud.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

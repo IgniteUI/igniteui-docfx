@@ -144,11 +144,11 @@ this.hierarchicalGrid.unpinRow("ALFKI");
 
 注: 行の ID は、グリッドの [`primaryKey`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primarykey) またはレコード インスタンス自体によって定義される主キー値です。両方のメソッドは操作に成功したかどうかを示すブール値を返します。よくある失敗の原因に行がすでにその状態になっていることがあります。
 
-行は、最後にピンされた行の下にピン固定されます。ピン固定行の順序を変更するには、[`onRowPinning`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowpinning) イベントにサブスクライブして [`insertAtIndex`]({environment:angularApiUrl}/interfaces/ipinroweventargs.html#insertatindex) プロパティを適切な位置インデックスに変更します。
+行は、最後にピンされた行の下にピン固定されます。ピン固定行の順序を変更するには、[`rowPinning`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowPinning) イベントにサブスクライブして [`insertAtIndex`]({environment:angularApiUrl}/interfaces/ipinroweventargs.html#insertatindex) プロパティを適切な位置インデックスに変更します。
 
 @@if (igxName === 'IgxGrid') {
 ```html
-<igx-grid #grid1 [data]="data" [autoGenerate]="true" (onRowPinning)="rowPinning($event)">
+<igx-grid #grid1 [data]="data" [autoGenerate]="true" (rowPinning)="rowPinning($event)">
 </igx-grid>
 ```
 
@@ -160,7 +160,7 @@ public rowPinning(event) {
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```html
-<igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="true" (onRowPinning)="rowPinning($event)">
+<igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="true" (rowPinning)="rowPinning($event)">
 </igx-tree-grid>
 ```
 
@@ -172,7 +172,7 @@ public rowPinning(event) {
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="true" (onRowPinning)="rowPinning($event)">
+<igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="true" (rowPinning)="rowPinning($event)">
 </igx-hierarchical-grid>
 ```
 
@@ -278,7 +278,7 @@ public pinningConfig: IPinningConfig = { rows: RowPinningPosition.Bottom };
 カスタムアイコンをクリックすると、関連する行のピン状態は、行の API メソッドを使用して変更できます。
 
 ```typescript
-public togglePinning(row: IgxGridRowComponent, event) {
+public togglePinning(row: IgxGridRow, event) {
     event.preventDefault();
     if (row.pinned) {
         row.unpin();
@@ -383,7 +383,7 @@ public onDropAllowed(args) {
 * ピン固定行が内部でグリッドのピン固定領域と非固定領域の両方に存在するよう保存される仕様上、グリッド内のレコードがオンデマンドでリモート エンドポイントから取得される場合 (リモート仮想化)、行のピン固定はサポートされません。
 * グリッドのスクロール可能領域におけるピン固定行のコピーは、ピン固定行が存在する状態で他のグリッド機能が動作するのに不可欠な役割を果たします。そのため、その生成を無効化または削除することはできません。
 * 行選択 は 行 ID のみで動作するため、ピン固定行を選択するとそのコピーも選択されます (逆も同様)。さらに、ピン固定領域での範囲選択 (Shift + クリックにより) は、スクロール可能な領域で行を範囲選択する場合と同じように機能します。結果として、間にある行はピン固定されていなくてもすべて選択されます。API を 介して選択した行を取得すると、選択した各レコードの単一のインスタンスのみを返します。
-* When the grid has no `primaryKey` set and remote data scenarios are enabled (when paging, sorting, filtering, scrolling trigger requests to a remote server to retrieve the data to be displayed in the grid), a row will lose the following state after a data request completes:
+* グリッドに `primaryKey` が設定されておらず、リモート データ シナリオが有効になっている場合 (ページング、ソート、フィルタリング、スクロール時に、グリッドに表示されるデータを取得するためのリモート サーバーへのリクエストがトリガーされる場合)、データ要求が完了すると、行は次の状態を失います:
     * Row Selection
     * Row Expand/collapse
     * Row Editing

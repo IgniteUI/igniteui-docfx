@@ -401,6 +401,26 @@ You can add a template marked with `igxFilterCellTemplate` in order to retemplat
 }
 
 
+@@if (igxName === 'IgxTreeGrid') {
+    
+## Matching Records Only Filtering Strategy
+By default, after a filtering is applied, the Tree Grid component displays the records matching the criterion that have been set and their parents in a grayed-out fashion to provide additional context. However, in some cases, you may want to display only the records matching particular filtering condition without any trace for their parents. This can be achieved by using the `TreeGridMatchingRecordsOnlyFilteringStrategy`:
+
+```html
+<igx-grid #grid1 [data]="data" [allowFiltering]="true" [filterStrategy]="matchingRecordsOnlyStrategy">
+    ...
+</igx-grid>
+```
+
+```typescript
+import { TreeGridMatchingRecordsOnlyFilteringStrategy } from "igniteui-angular";
+...
+public matchingRecordsOnlyStrategy = new TreeGridMatchingRecordsOnlyFilteringStrategy();
+```
+
+}
+
+
 ## Styling
 
 To get started with styling the filtering row, we need to import the `index` file, where all the theme functions and component mixins live:
@@ -653,7 +673,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
   * `value` - the value to be used for filtering.
   * `conditionOrExpressionTree` (optional) - this parameter accepts object of type [`IFilteringOperation`]({environment:angularApiUrl}/interfaces/ifilteringoperation.html) or [`IFilteringExpressionsTree`]({environment:angularApiUrl}/interfaces/ifilteringexpressionstree.html). If only simple filtering is needed, a filtering operation could be passed as an argument. In case of advanced filtering, an expressions tree containing complex filtering logic could be passed as an argument.
   * `ignoreCase` (optional) - whether the filtering is case sensitive or not.
-* [`onFilteringDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onfilteringdone) event now have only one parameter of type [`IFilteringExpressionsTree`]({environment:angularApiUrl}/interfaces/ifilteringexpressionstree.html) which contains the filtering state of the filtered column.
+* [`filteringDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringDone) event now have only one parameter of type [`IFilteringExpressionsTree`]({environment:angularApiUrl}/interfaces/ifilteringexpressionstree.html) which contains the filtering state of the filtered column.
 * filtering operands: [`IFilteringExpression`]({environment:angularApiUrl}/interfaces/ifilteringexpression.html) condition property is no longer a direct reference to a filtering condition method, instead it's a reference to an [`IFilteringOperation`]({environment:angularApiUrl}/interfaces/ifilteringoperation.html).
 * [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) now exposes a [`filters`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#filters) property, which takes an [`IgxFilteringOperand`]({environment:angularApiUrl}/classes/igxfilteringoperand.html) class reference.
 * Custom filters can be provided to the @@igComponent columns by populating the [`operations`]({environment:angularApiUrl}/classes/igxfilteringoperand.html#operations) property of the [`IgxFilteringOperand`]({environment:angularApiUrl}/classes/igxfilteringoperand.html) with operations of [`IFilteringOperation`]({environment:angularApiUrl}/interfaces/ifilteringoperation.html) type.

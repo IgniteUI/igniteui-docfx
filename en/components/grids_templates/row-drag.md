@@ -66,7 +66,7 @@ In order to enable row-dragging for your `@@igSelector`, all you need to do is s
  ...
 </@@igSelector>
 ```
-Clicking on the drag-handle and *moving the cursor* while holding down the button will cause the grid's [`onRowDragStart`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowdragstart) event to fire. Releasing the click at any time will cause [`onRowDragEnd`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowdragend) event to fire.
+Clicking on the drag-handle and *moving the cursor* while holding down the button will cause the grid's [`rowDragStart`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowDragStart) event to fire. Releasing the click at any time will cause [`rowDragEnd`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowDragEnd) event to fire.
 
 Below, you can find a walkthrough on how to configure an `@@igSelector` to support row dragging and how to properly handle the drop event.
 
@@ -121,7 +121,7 @@ Since the grid will initially be empty, we also define a template that will be m
 ```
 }
 
-You may enable animation when a row is dropped on a non-droppable area using the `animation` parameter of the [`onRowDragEnd`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowdragend) event. If set to true, the dragged row will animate back to its' original position when dropped over a non-droppable area.
+You may enable animation when a row is dropped on a non-droppable area using the `animation` parameter of the [`rowDragEnd`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowDragEnd) event. If set to true, the dragged row will animate back to its' original position when dropped over a non-droppable area.
 
 You may enable animation like this:
 
@@ -407,14 +407,14 @@ Since all of the actions will be happening _inside_ of the grid's body, that's w
 }
 @@if (igxName === 'IgxTreeGrid') {
     <igx-tree-grid igxPreventDocumentScroll  #treeGrid [data]="localData" childDataKey="Employees" [rowDraggable]="true" foreignKey="ParentID"
-    [primaryKey]="'ID'" (onRowDragStart)="rowDragStart($event)" igxDrop (dropped)="dropInGrid($event)">
+    [primaryKey]="'ID'" (rowDragStart)="rowDragStart($event)" igxDrop (dropped)="dropInGrid($event)">
     ...
     </igx-tree-grid>
     
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
     <igx-hierarchical-grid #grid [data]="localData" [primaryKey]="'id'"
-    [rowDraggable]="true" (onRowDragStart)="rowDragStart($event)" igxDrop (dropped)="rowDrop($event)">
+    [rowDraggable]="true" (rowDragStart)="rowDragStart($event)" igxDrop (dropped)="rowDrop($event)">
     ...
     </igx-hierarchical-grid>
 }
@@ -663,7 +663,7 @@ We want to subscribe to the `dragMove` event only of the specific row we're drag
 class MyRowGhostComponent {
     ...
     public ngAfterViewInit(): void {
-        this.grid.onRowDragStart.pipe(takeUntil(this.destroy$)).subscribe(this.onRowDragStart.bind(this));
+        this.grid.rowDragStart.pipe(takeUntil(this.destroy$)).subscribe(this.onRowDragStart.bind(this));
     }
     ...
     private onRowDragStart(e: IRowDragStartEventArgs) {
@@ -672,7 +672,7 @@ class MyRowGhostComponent {
         }
         const directive = e.dragDirective;
         directive.dragMove
-            .pipe(takeUntil(this.grid.onRowDragEnd))
+            .pipe(takeUntil(this.grid.rowDragEnd))
             .subscribe(this.onDragMove.bind(this));
     }
     ...
@@ -824,10 +824,10 @@ We create and subscribe to the `interval` when the pointer reaches the grid's ed
 ```typescript
 class MyGridScrollComponent {
     public ngAfterViewInit() {
-        this.grid.onRowDragStart
+        this.grid.rowDragStart
             .pipe(takeUntil(this.destroy$))
             .subscribe(this.onDragStart.bind(this));
-        this.grid.onRowDragEnd
+        this.grid.rowDragEnd
             .pipe(takeUntil(this.destroy$))
             .subscribe(() => this.unsubInterval());
     }
@@ -871,8 +871,8 @@ Currently, there are no known limitations for the `rowDraggable` directive.
 ## API References
 
 * [rowDraggable]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowdraggable)
-* [onRowDragStart]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowdragstart)
-* [onRowDragEnd]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowdragend)
+* [rowDragStart]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowDragStart)
+* [rowDragEnd]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowDragEnd)
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 
 ## Additional Resources

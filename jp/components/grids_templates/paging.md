@@ -24,24 +24,24 @@ _language: ja
 次の例は、@@igComponent ページネーションを表しており、`items per page` のオプションの使用法と、ページングを有効にする方法を示しています。ユーザーは、[最後のページに移動] ボタンと [最初のページに移動] ボタンを使用して、@@igComponent ページをすばやくナビゲートすることもできます。
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:550px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-paging-sample" alt="Angular ページネーションの例">
 </code-view>
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:550px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-paging" alt="Angular ページネーションの例">
 </code-view>
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:580px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:580px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-paging" alt="Angular ページネーションの例">
 </code-view>
 
@@ -57,29 +57,7 @@ _language: ja
 </@@igSelector>
 ```
 
-## Angular ページネーションのテンプレート
-ページング領域でテンプレート化がサポートされますが、初期化でテンプレート参照を @@igComponent に渡す必要があります。以下は、ページングが入力によって制御されるテンプレートの例です。
 
-```html
-<igx-paginator #paginator>
-    <igx-paginator-content>
-        ...
-    </igx-paginator-content>
-</igx-paginator>
-```
-
-さらに、[`IgxPageSizeSelectorComponent`]({environment:angularApiUrl}/classes/IgxPageSizeSelectorComponent.html) と [`IgxPageNavigationComponent`]({environment:angularApiUrl}/classes/IgxPageNavigationComponent.html) が導入され、次の例に示すように、ページネーター コンポーネントでカスタム コンテンツを定義できるようになりました。前者はページ サイズに対応するドロップダウン要素とラベルを追加し、後者はすべてのアクション ボタンでページ ナビゲーションを処理します。
-
-```html
-<igx-paginator #paginator>
-	<igx-paginator-content>
-		<igx-page-size></igx-page-size>
-		<igx-page-nav></igx-page-nav>
-	</igx-paginator-content>
-</igx-paginator>
-```
-
-ページングは、ページング API によって [`paginate`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#paginate)、[`previousPage`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#previouspage)、[`nextPage`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#nextPage) メソッドおよび [`page`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#page)、[`perPage`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#perPage) と [`totalRecords`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#totalRecords) 入力を使用してプログラムで実行することもできます。ここで *page* は現在のページを設定できます。*perPage* は 1 ページに表示される項目の数を設定できます。*totalRecords* はグリッドにあるレコードの数を設定できます。`TotalRecords` プロパティは、リモート データのページングがあり、リモート レコードの合計数に基づいてページの数を変更する場合に役に立ちます。ページングを使用しており、すべてのデータがグリッドに渡される場合、`totalRecords` プロパティの値は提供されたデータソースの長さにデフォルトで設定されることに注意してください。`totalRecords` が設定されている場合、データソースに基づいてデフォルトの長さよりも優先されます。
 
 例:
 ```html
@@ -106,26 +84,7 @@ _language: ja
 ページングとグループ化の統合については、[グループ化](groupby.md#angular-grid-ページングでグループ化)のトピックで説明しています。
 }
 
-## ページング API
-| 入力           |      説明                           |
-|-----------------|:------------------------------------------:|
-| displayDensity  | ページネーションの表示密度を取得または設定します。 |
-| page            | 現在のページをを取得または設定します。 |
-| perPage         | ページごとに表示される項目数を取得または設定します。 |
-| selectOptions   | パジネーターの Select 要素でカスタム オプションを取得または設定します。デフォルトの選択値 [5、10、15、25、50、100、500] |
-| totalRecords    | 合計レコード数を取得または設定します。 |
-| totalPages      | 合計ページ数を取得または設定します。 |
-| resourceStrings | リソース文字列を取得または設定します。デフォルトで EN リソースを使用します。 |
-| overlaySettings | カスタム OverlaySettings を取得/設定します。 |
-
-| 出力          |      説明                           |
-|-----------------|:------------------------------------------:|
-| perPageChange   | ページネーターの `perPage` プロパティ値が変更されたときに発生します。 |
-| pageChange      | 現在のページが変更されたときに発生されます。 |
-| paging          | ページングが実行さる前に発生されます。キャンセル可能。|
-| pagingDone      | ページングが実行された後に発生されます。 |
-
-### 使用方法
+## 使用方法
 
 @@if (igxName === 'IgxGrid') {
 以下の例では、`igx-paginator` コンポーネントが `igx-grid` コンポーネントと一緒に使用されていますが、ページング機能が必要な場合は、他のコンポーネントと一緒に使用できます。
@@ -152,7 +111,7 @@ _language: ja
 }
 
 @@if (igxName === 'IgxHierarchicalGrid') {
-以下の例では、`igx-paginator` コンポーネントが `igx-hierarchical-grid` コンポーネントと一緒に使用されていますが、ページング機能が必要な場合は、他のコンポーネントと一緒に使用できます。
+以下の例では、`igx-paginator` コンポーネントは `igx-hierarchical-grid` コンポーネントとともに使用されますが、ページング機能が必要な場合は、他のコンポーネントとともに使用できます。
 
 ```html
 <igx-hierarchical-grid #hGrid >
@@ -173,26 +132,46 @@ _language: ja
 ```
 }
 
-### ページネーター コンポネント デモ
+@@if (igxName === 'IgxHierarchicalGrid') {
+### 子グリッド内のページネーター設定
+
+IgxHierarchicalGrid の子グリッドの実装方法および DI スコープの動作には一定の制限があるため、igx-row-island タグ内でページネーター コンポーネントを定義する場合、ページネーター自体で IgxPaginator ディレクティブを必ず使用してください。これにより、子グリッドが参照として正しいページネーター インスタンスを持つようになります。
+
+```html
+<igx-hierarchical-grid>
+    ...
+    <igx-row-island>
+        ...
+        <igx-grid-toolbar *igxPaginator>
+           ...
+        </igx-grid-toolbar>
+    </igx-row-island>
+    ...
+</igx-hierarchical-grid>
+```
+
+}
+
+### ページネーター コンポーネントのデモ
 
 @@if (igxName === 'IgxGrid') {
-<code-view style="height:600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-pager-sample" >
 </code-view>
 }
 
 @@if (igxName === 'IgxTreeGrid') {
-<code-view style="height:600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-reusable-paginator" >
 </code-view>
 }
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-reusable-paginator" >
 </code-view>
 }
@@ -200,63 +179,17 @@ _language: ja
 <div class="divider--half"></div>
 
 ## リモート ページング
-リモート ページングは、データ取得を担当するサービスと、グリッドの構築とデータ サブスクリプションを担当するコンポーネントを宣言することで実現できます。詳細については、[@@igComponent リモート データ操作](remote-data-operations.md#リモート-ページング)トピックをご覧ください。
+リモート ページングは、データ取得を担当するサービスと、グリッドの構築とデータ サブスクリプションを担当するコンポーネントを宣言することで実現できます。詳細については、[`@@igComponent リモート データ操作`](remote-data-operations.md#リモート-ページング)トピックをご覧ください。
 
 @@if (igxName === 'IgxGrid') {
 ## カスタム テンプレートのリモート ページング
 
-独自のページング動作を定義するために、`igx-paginator-content` を使用してカスタム ロジックを追加できます。[このセクション](remote-data-operations.md#カスタム-テンプレートのリモート-ページング)では、上記を実証するために、リモート ページングの例を拡張する方法を説明します。
+独自のページング動作を定義するために、`igx-paginator-content` を使用してカスタム ロジックを追加できます。[このセクション](remote-data-operations.md#カスタム-igx-paginator-content-のリモート-ページング)では、上記を実証するために、リモート ページングの例を拡張する方法を説明します。
 }
-
-## ローカライズ
-最小限のコードで、ページング コンポーネントのすべての文字列を簡単にローカライズできます。特定のページング インスタンスをローカライズするには、入力プロパティ [resourceStrings]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#resourceStrings) を使用します。次の手順に従います。 
-
-**手順 1** - `IPaginatorResourceStrings`  インターフェースと [changei18n]({environment:angularApiUrl}/#changei18n) 関数をインポートします:
-
-```ts
-import { IPaginatorResourceStrings, changei18n } from "igniteui-angular";
-```
-
-**手順 2** - ページング リソース文字列を定義します:
-
-```ts
-private paginatorResourceStrings: IPaginatorResourceStrings = {
-    igx_paginator_label: "Records per page:",
-    igx_paginator_first_page_button_text: "Custom first page text",
-    igx_paginator_last_page_button_text: "Custom last page text",
-    igx_paginator_next_page_button_text: "Custom next page text",
-    igx_paginator_previous_page_button_text: "Custom previous page text",
-    igx_paginator_pager_text: "out of"
-};
-```
-
-
-**手順 3** - app.module レベルでコンポーネントのグローバル i18n を変更するために、オブジェクトをパラメーターとして [changei18n]({environment:angularApiUrl}/#changei18n) 関数に渡します。これにより、アプリケーションのすべてのページング コンポーネントのリソース文字列が変更されます:
-
-```ts
-public ngOnInit(): void {
-    changei18n(this.paginatorResourceStrings as any);
-}
-```
-
-リソース文字列を特定のページング コンポーネントに変更するには、@ ViewChild を使用して、ページが再描画される前に呼び出されるコールバックを使用して、`requestAnimationFrame` メソッド内で目的の [resourceStrings]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#resourceStrings) を設定します。新しくインスタンス化されたオブジェクトを [resourceStrings]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#resourceStrings) プロパティに設定すると、指定されたコンポーネントのインスタンスのみがローカライズされます。
-
-```ts
-@ViewChild("paginator", { read: IgxPaginatorComponent, static: false }) public paginator: IgxPaginatorComponent;
-...
-
-public ngOnInit(): void {
-    requestAnimationFrame(() => {
-        this.paginator.resourceStrings = this.paginatorResourceStrings;
-    });
-}
-```
-
-</div>
 
 ## Angular のページネーション スタイリング
 
-ページネーターのスタイル設定を始めるには、すべてのテーマ関数とコンポーネントミックスインが存在する `index` ファイルをインポートする必要があります。
+ページネーターのスタイル設定は、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
 
 ```scss
 // custom-grid-paging-style.component.scss
@@ -288,7 +221,7 @@ $dark-button: igx-button-theme(
 
 この例では、アイコンの色と背景、ボタンの無効な色のみを変更しましたが、[`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) ではボタン スタイルを制御するためのパラメータを増やすことができます。
 
-最後の手順は、それぞれのテーマを持つコンポーネント ミックスインを**含める**ことです。
+最後にそれぞれのテーマを持つコンポーネント ミックスインを**含める**ことです。
 
 ```scss
 @include igx-grid-paginator($dark-grid-paginator);
@@ -298,7 +231,7 @@ $dark-button: igx-button-theme(
 ```
 
 >[!NOTE]
->igx-button ミックスインを `.igx-paginator__pager` 内でスコープして、ページネーター ボタンのみにスタイルが設定されるようにします。そうでない場合は、グリッド内の他のボタンも影響を受けます。
+>**igx-button** ミックスインを `.igx-paginator__pager` 内でスコープして、ページネーター ボタンのみにスタイルが設定されるようにします。そうでない場合は、グリッド内の他のボタンも影響を受けます。
 
  >[!NOTE]
  >コンポーネントが [`Emulated`](../themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
@@ -314,7 +247,7 @@ $dark-button: igx-button-theme(
 }
 ```
 
-### カラーパレットの定義
+### カラー パレットの定義
 
 上記のように色の値をハードコーディングする代わりに、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) および [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することによって色に関してより高い柔軟性を持つことができます。
 
@@ -349,7 +282,7 @@ $dark-button: igx-button-theme(
 ```
 
 >[!NOTE]
->`igx-color` および `igx-palette` は、色を生成および取得するための重要な機能です。使い方の詳細については[`パレット`](../themes/palettes.md)のトピックを参照してください。
+>`igx-color` および `igx-palette` は、色を生成および取得するための重要な機能です。使い方の詳細については[`パレット`](../themes/sass/palettes.md)のトピックを参照してください。
 
 ### スキーマの使用
 
@@ -424,8 +357,8 @@ $dark-button: igx-button-theme(
 ### ページネーション スタイルの例
 
 
-<code-view style="height:560px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:560px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/custom-grid-paging-style" >
 </code-view>
 
@@ -435,8 +368,8 @@ $dark-button: igx-button-theme(
 @@if (igxName === 'IgxHierarchicalGrid'){
 ### デモ
 
-<code-view style="height:560px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:560px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-paging-style" >
 </code-view>
 
@@ -446,8 +379,8 @@ $dark-button: igx-button-theme(
 @@if (igxName === 'IgxTreeGrid'){
 ### デモ
 
-<code-view style="height:560px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:560px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-paging-style" >
 </code-view>
 
@@ -474,5 +407,5 @@ $dark-button: igx-button-theme(
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語) ](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語) ](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

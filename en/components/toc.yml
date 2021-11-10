@@ -38,6 +38,9 @@
     - name: Angular Reactive Forms
       href: angular-reactive-form-validation.md
       new: true
+    - name: Build CRUD operations with IgxGrid
+      href: general/how-to/how-to-perform-crud.md
+      new: true
 - name: Angular Schematics & Ignite UI CLI
   href: general/cli-overview.md
   sortable: false
@@ -73,11 +76,11 @@
     - name: One-Way Binding
       href: general/wpf-to-angular-guide/one-way-binding.md
       new: false
-    - name: Angular Events
-      href: general/wpf-to-angular-guide/angular-events.md
-      new: false
     - name: Two-Way Binding
       href: general/wpf-to-angular-guide/two-way-binding.md
+      new: false
+    - name: Angular Events
+      href: general/wpf-to-angular-guide/angular-events.md
       new: false
     - name: Transforming Data with Angular Pipes
       href: general/wpf-to-angular-guide/angular-pipes.md
@@ -222,9 +225,10 @@
     - name: Display Density
       href: grid/display-density.md
       new: false
-    - name: Conditional Cell Styling
+    - name: Conditional Styling
       href: grid/conditional-cell-styling.md
       new: false
+      updated: true
     - name: Keyboard navigation
       href: grid/keyboard-navigation.md
       new: false
@@ -357,9 +361,10 @@
     - name: Display Density
       href: treegrid/display-density.md
       new: false
-    - name: Conditional Cell Styling
+    - name: Conditional Styling
       href: treegrid/conditional-cell-styling.md
       new: false
+      updated: true
     - name: Group By
       href: treegrid/groupby.md
       updated: true
@@ -484,6 +489,10 @@
     - name: Collapsible Column Groups
       href: hierarchicalgrid/collapsible-column-groups.md
       new: false
+    - name: Conditional Styling
+      href: hierarchicalgrid/conditional-cell-styling.md
+      new: false
+      updated: true
     - name: Display Density
       href: hierarchicalgrid/display-density.md
       new: false
@@ -988,6 +997,9 @@
 - name: Splitter
   href: splitter.md
   new: false
+- name: Stepper
+  href: stepper.md
+  new: true
 - name: Dock Manager
   href: dock-manager.md
   new: false

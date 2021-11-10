@@ -211,8 +211,8 @@ export class DropDownRemoteComponent implements OnInit, OnDestroy {
         this.remoteService.getData(initialState, (data) => {
             this.remoteForDir.totalItemCount = data["@odata.count"];
         });
-        // Subscribe to igxForOf.onChunkPreload and load new data from service
-        this.remoteForDir.onChunkPreload.pipe(takeUntil(this.destroy$)).subscribe((data) => {
+        // Subscribe to igxForOf.chunkPreload and load new data from service
+        this.remoteForDir.chunkPreload.pipe(takeUntil(this.destroy$)).subscribe((data) => {
             this.dataLoading(data);
         });
     }
@@ -239,7 +239,7 @@ export class DropDownRemoteComponent implements OnInit, OnDestroy {
 }
 ```
 
-`ngAfterViewInit` フックの内部で、初期状態のデータを取得し、`igxForOf` ディレクティブの [onChunkPreload]({environment:angularApiUrl}/classes/igxforofdirective.html#onchunkpreload) エミッターをサブスクライブするために呼び出します。このサブスクリプションは、ロードされたチャンクが変更されるたびにデータを取得します。コンポーネントの破棄時にエミッターから簡単にサブスクライブ解除できるように、`pipe(takeUntil(this.destroy$))` を使用します。
+`ngAfterViewInit` フックの内部で、初期状態のデータを取得し、`igxForOf` ディレクティブの [`chunkPreload`]({environment:angularApiUrl}/classes/igxforofdirective.html#chunkPreload) エミッターをサブスクライブするために呼び出します。このサブスクリプションは、ロードされたチャンクが変更されるたびにデータを取得します。コンポーネントの破棄時にエミッターから簡単にサブスクライブ解除できるように、`pipe(takeUntil(this.destroy$))` を使用します。
 
 ### リモートの仮想化 - デモ
 上記の設定の結果は、スクロールバーの状態に応じて表示されるはずのデータを動的にロードするドロップダウンです。

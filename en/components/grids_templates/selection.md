@@ -98,7 +98,7 @@ The [`selectable` property]({environment:angularApiUrl}/classes/igxcolumncompone
 @@if (igxName === 'IgxGrid'){
 ## Grid Context Menu
 
-Using the [`onContextMenu`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncontextmenu) event you can add a custom context menu to facilitate your work with **IgxGrid**. With a **right click** on the grid's body, the event emits the cell on which it is triggered. The **context menu** will operate with the emitted cell.
+Using the [`contextMenu`]({environment:angularApiUrl}/classes/igxgridcomponent.html#contextMenu) event you can add a custom context menu to facilitate your work with **IgxGrid**. With a **right click** on the grid's body, the event emits the cell on which it is triggered. The **context menu** will operate with the emitted cell.
 
 If there is a **multi-cell selection**, we will put logic, which will check whether the selected cell is in the area of the multi-cell selection. If it is, we will also emit the values of the selected cells.
 
@@ -171,8 +171,8 @@ The template we are going to use to combine the grid with the context menu:
 <div class="wrapper">
     <div class="grid__wrapper" (window:click)="disableContextMenu()">
         <igx-grid #grid1 [data]="data" [autoGenerate]="false" height="500px" width="100%"
-            (onContextMenu)="rightClick($event)" (onRangeSelection)="getCells($event)"
-            (onSelection)="cellSelection($event)">
+            (contextMenu)="rightClick($event)" (rangeSelected)="getCells($event)"
+            (selected)="cellSelection($event)">
         <!-- Columns area -->
         </igx-grid>
         <div *ngIf="contextmenu==true">
@@ -216,7 +216,7 @@ The template we are going to use to combine the grid with the context menu:
 ## API References
 
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-@@if (igxName !== 'IgxTreeGrid') {* [IgxGridRowComponent API]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRowComponent API]({environment:angularApiUrl}/classes/igxtreegridrowcomponent.html)}
+@@if (igxName !== 'IgxTreeGrid') {* [IgxGridRow API]({environment:angularApiUrl}/classes/igxgridrow.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRow API]({environment:angularApiUrl}/classes/igxtreegridrow.html)}
 * [IgxGridCell API]({environment:angularApiUrl}/classes/igxgridcell.html)
 * [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 

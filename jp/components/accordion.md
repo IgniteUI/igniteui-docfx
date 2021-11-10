@@ -214,8 +214,8 @@ Angular Material Accordion のキーボード ナビゲーションは、さま�
 
 **キーの組み合わせ**
 
- - <kbd>Tab</kbd> - フォーカスを最初 (フォーカスが Accordion の前にある場合)/次のパネルに移動します
- - <kbd>Shift + Tab</kbd> - フォーカスを最後 (フォーカスが Accordion の後にある場合)/前のパネルに移動します
+ - <kbd>Tab</kbd> - フォーカスを最初 (フォーカスが Accordion の前にある場合) /次のパネルに移動します
+ - <kbd>Shift + Tab</kbd> - フォーカスを最後 (フォーカスが Accordion の後にある場合) /前のパネルに移動します
  - <kbd>下矢印</kbd> - フォーカスを下のパネルに移動します
  - <kbd>上矢印</kbd> - フォーカスを上のパネルに移動します
  - <kbd>Alt + 下矢印</kbd> - Accordion でフォーカスされたパネルを展開します

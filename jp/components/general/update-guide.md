@@ -126,7 +126,7 @@ ng update @angular/cli
     }
     ```
 
-    上記の動作を実現するには、新しく追加された [`batchEditing`](../grid/batch-editing.md) 入力を使用する必要があります。
+    上記の動作を実現するには、新しく追加された[`一括編集`](../grid/batch-editing.md)入力を使用する必要があります。
     ```typescript
     @Component({
         template: `<igx-grid [data]="data" [batchEditing]="true">

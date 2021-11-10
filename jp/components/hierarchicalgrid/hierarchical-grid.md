@@ -117,8 +117,8 @@ export const singers = [{
 <!-- hierarchicalGridSample.component.html -->
 
     <igx-hierarchical-grid #hGrid [primaryKey]="'CustomerID'" [autoGenerate]="true" [height]="'600px'" [width]="'100%'">
-        <igx-row-island [key]="'Orders'" [primaryKey]="'OrderID'" [autoGenerate]="true"  (onGridCreated)="gridCreated($event, 'CustomerID')">
-            <igx-row-island [key]="'Order_Details'" [primaryKey]="'ProductID'" [autoGenerate]="true" (onGridCreated)="gridCreated($event, 'OrderID')">
+        <igx-row-island [key]="'Orders'" [primaryKey]="'OrderID'" [autoGenerate]="true"  (gridCreated)="gridCreated($event, 'CustomerID')">
+            <igx-row-island [key]="'Order_Details'" [primaryKey]="'ProductID'" [autoGenerate]="true" (gridCreated)="gridCreated($event, 'OrderID')">
             </igx-row-island>
         </igx-row-island>
     </igx-hierarchical-grid>
@@ -269,6 +269,8 @@ export class RemoteLoDService {
 > フラットな Data Grid と行アイランドの各インスタンスの重要な違いは、同じトランザクション サービス インスタンスがあり、同じトランザクション ログを蓄積する点です。CRUD 機能を有効にするには、`IgxHierarchicalTransactionServiceFactory` を注入する必要があります。
 
 CRUD API メソッドの呼び出しは,各グリッド インスタンスで可能です。
+
+igxGrid を使用して [CRUD 操作を構築する方法](../general/how-to/how-to-perform-crud.md)のトピックをご覧ください。
 
 ## スタイル設定
 

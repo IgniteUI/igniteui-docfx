@@ -558,6 +558,7 @@ In addition to the steps above, we can also style the controls that are used for
 ## Additional Resources
 <div class="divider--half"></div>
 
+* [Build CRUD operations with igxGrid](../general/how-to/how-to-perform-crud.md)
 * [@@igComponent overview](@@igMainTopic.md)
 * [Virtualization and Performance](virtualization.md)
 * [Paging](paging.md)

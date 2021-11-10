@@ -104,8 +104,8 @@ export const singers = [{
 <!-- hierarchicalGridSample.component.html -->
 
     <igx-hierarchical-grid #hGrid [primaryKey]="'CustomerID'" [autoGenerate]="true" [height]="'600px'" [width]="'100%'">
-        <igx-row-island [key]="'Orders'" [primaryKey]="'OrderID'" [autoGenerate]="true"  (onGridCreated)="gridCreated($event, 'CustomerID')">
-            <igx-row-island [key]="'Order_Details'" [primaryKey]="'ProductID'" [autoGenerate]="true" (onGridCreated)="gridCreated($event, 'OrderID')">
+        <igx-row-island [key]="'Orders'" [primaryKey]="'OrderID'" [autoGenerate]="true"  (gridCreated)="gridCreated($event, 'CustomerID')">
+            <igx-row-island [key]="'Order_Details'" [primaryKey]="'ProductID'" [autoGenerate]="true" (gridCreated)="gridCreated($event, 'OrderID')">
             </igx-row-island>
         </igx-row-island>
     </igx-hierarchical-grid>
@@ -270,6 +270,8 @@ See the [Grid Sizing](sizing.md) topic.
 > 플랫 데이터 그리드와 특정 행 아일랜드의 각 인스턴스과의 중요한 차이점은 동일한 트랜잭션 서비스 인스턴스를 가지며 동일한 트랜잭션 로그를 누적한다는 것입니다. CRUD 기능을 활성화하려면 `IgxHierarchicalTransactionServiceFactory`를 인젝트해야 합니다.
 
 CRUD API 메소드 호출은 각 개별 그리드 인스턴스를 통해 실행해야 합니다.
+
+Check out the How-to [Build CRUD operations with igxGrid](../general/how-to/how-to-perform-crud.md) topic.
 
 ### 알려진 제한 사항
 

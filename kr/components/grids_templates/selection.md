@@ -230,13 +230,13 @@ Change the selection to see summaries of the currently selected range.
 
 #### 단일 선택
 
-@@igComponent의 단일 선택은 @@igComponent의 [`onSelection`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onselection) 이벤트를 사용하여 간단하게 설정할 수 있습니다. 이 이벤트는 셀 컴포넌트에 대한 참조를 내보냅니다. 셀 컴포넌트에는 포함되는 행 컴포넌트에 대한 참조가 있습니다. 행 컴포넌트 참조의 [`rowID`](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/igxgridrowcomponent.html#rowid) 게터를 사용하여 행([`rowData[primaryKey]`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primarykey) 또는 [`rowData`]({environment:angularApiUrl}/classes/igxgridrowcomponent.html#rowdata) 객체 자체를 사용하여)의 고유 식별자를 선택의 적절한 목록에 전달합니다. 단일 행만 항상 선택되도록 하기 위해 선택 행 선택 목록을 미리 비웁니다([`selectRows`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#selectrows) 메소드 호출의 두 번째 인수):
+@@igComponent의 단일 선택은 @@igComponent의 [`selected`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#selected) 이벤트를 사용하여 간단하게 설정할 수 있습니다. 이 이벤트는 셀 컴포넌트에 대한 참조를 내보냅니다. 셀 컴포넌트에는 포함되는 행 컴포넌트에 대한 참조가 있습니다. 행 컴포넌트 참조의 [`key`](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/igxgridrow.html#key) 게터를 사용하여 행([`data[primaryKey]`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primarykey) 또는 [`data`]({environment:angularApiUrl}/classes/igxgridrow.html#data) 객체 자체를 사용하여)의 고유 식별자를 선택의 적절한 목록에 전달합니다. 단일 행만 항상 선택되도록 하기 위해 선택 행 선택 목록을 미리 비웁니다([`selectRows`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#selectrows) 메소드 호출의 두 번째 인수):
 
 @@if (igxName === 'IgxGrid') {
 ```html
 <!-- selectionExample.component.html -->
 
-<igx-grid #grid1 [data]="remote | async" [rowSelectable]="false" (onSelection)="handleRowSelection($event)"
+<igx-grid #grid1 [data]="remote | async" [rowSelectable]="false" (selected)="handleRowSelection($event)"
     [width]="'800px'" [height]="'600px'" [allowFiltering]="true">
         ...
 </igx-grid>
@@ -257,7 +257,7 @@ public handleRowSelection(args) {
 <!-- selectionExample.component.html -->
 
 <igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="false" [height]="'530px'" width="100%"
-            [rowSelectable]="selection" [allowFiltering]="true" (onSelection)="handleRowSelection($event)">
+            [rowSelectable]="selection" [allowFiltering]="true" (selected)="handleRowSelection($event)">
     ...
 </igx-tree-grid>
 ```
@@ -277,7 +277,7 @@ public handleRowSelection(event) {
 ```html
 <igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="false"
         [height]="'600px'" [width]="'100%'" [rowSelectable]="selection"
-        (onSelection)="handleRowSelection($event)" #hierarchicalGrid>
+        (selected)="handleRowSelection($event)" #hierarchicalGrid>
     ...
 </igx-hierarchical-grid>
 ```
@@ -302,7 +302,7 @@ public handleRowSelection(event) {
 ```html
 <!-- selectionExample.component.html -->
 
-<igx-grid #grid1 [data]="remote | async" [primaryKey]="'ProductID'" [rowSelectable]="selection" (onSelection)="handleRowSelection($event)"
+<igx-grid #grid1 [data]="remote | async" [primaryKey]="'ProductID'" [rowSelectable]="selection" (selected)="handleRowSelection($event)"
     [width]="'800px'" [height]="'600px'" [allowFiltering]="true">
     ...
 </igx-grid>
@@ -318,7 +318,7 @@ public selection = true;
 ```html
 <!-- selectionExample.component.html -->
 
-<igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID" [height]="'530px'" width="100%" [autoGenerate]="false" [rowSelectable]="selection" [allowFiltering]="true" (onSelection)="handleRowSelection($event)">
+<igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID" [height]="'530px'" width="100%" [autoGenerate]="false" [rowSelectable]="selection" [allowFiltering]="true" (selected)="handleRowSelection($event)">
     ...
 </igx-tree-grid>
 ```
@@ -333,7 +333,7 @@ public selection = true;
 ```html
 <igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="false"
         [height]="'600px'" [width]="'100%'" [rowSelectable]="selection"
-        (onSelection)="handleRowSelection($event)" #hierarchicalGrid>
+        (selected)="handleRowSelection($event)" #hierarchicalGrid>
     ...
 </igx-hierarchical-grid>
 ```
@@ -354,7 +354,7 @@ public selection = true;
 **참고:** @@igComponent에 원격 가상화가 설정된 경우, 헤더 체크 박스를 클릭하면 모든 레코드가 선택/선택 취소됩니다. 그러나, 헤더 체크 박스를 통해 모든 레코드가 선택된 후 가시적인 행이 선택 해제된 경우, 필요에 따라 새로운 데이터가 @@igComponent에 로딩되면 새롭게 로드된 행이 선택되지 않는 제한이 있습니다.
 }
 
-**참고:** 셀 선택은 [`onRowSelectionChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowselectionchange)가 아닌 [`onSelection`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onselection)이 트리거됩니다.
+**참고:** 셀 선택은 [`rowSelected`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowSelected)가 아닌 [`selected`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#selected)이 트리거됩니다.
 
 ### 코드 조각
 
@@ -391,7 +391,7 @@ public selection = true;
 ```html
 <!-- selectionExample.component.html -->
 
-<@@igSelector (onRowSelectionChange)="handleRowSelectionChange($event)">
+<@@igSelector (rowSelected)="handleRowSelectionChange($event)">
 ...
 </@@igSelector>
 ```
@@ -407,7 +407,7 @@ public handleRowSelectionChange(args) {
 ### API 참조
 
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-@@if (igxName !== 'IgxTreeGrid') {* [IgxGridRowComponent API]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRowComponent API]({environment:angularApiUrl}/classes/igxtreegridrowcomponent.html)}
+@@if (igxName !== 'IgxTreeGrid') {* [IgxGridRow API]({environment:angularApiUrl}/classes/igxgridrow.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRow API]({environment:angularApiUrl}/classes/igxtreegridrow.html)}
 * [IgxGridCell API]({environment:angularApiUrl}/classes/igxgridcell.html)
 * [@@igxNameComponent 스타일]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 

@@ -99,7 +99,7 @@ Ignite UI for Angular @@igComponent コンポーネントは、[行選択](row-s
 @@if (igxName === 'IgxGrid'){
 ## グリッドのコンテキスト メニュー
 
-[`onContextMenu`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncontextmenu) イベントは、カスタム コンテキスト メニューを追加して、**IgxGrid** での作業をアシストします。グリッドの本体を**右クリック**すると、イベントはトリガーされたセルを放出します。**コンテキスト メニュー**は、放出されたセルで動作します。
+[`contextMenu`]({environment:angularApiUrl}/classes/igxgridcomponent.html#contextMenu) イベントは、カスタム コンテキスト メニューを追加して、**IgxGrid** での作業をアシストします。グリッドの本体を**右クリック**すると、イベントはトリガーされたセルを放出します。**コンテキスト メニュー**は、放出されたセルで動作します。
 
 **複数セルの選択**がある場合、選択したセルが複数セルの選択領域にあるかどうかをチェックするロジックを配置します。その場合、選択したセルの値も出力します。
 
@@ -172,8 +172,8 @@ IgxGrid はコピーされたデータを取得し、コンテナ要素に貼り
 <div class="wrapper">
     <div class="grid__wrapper" (window:click)="disableContextMenu()">
         <igx-grid #grid1 [data]="data" [autoGenerate]="false" height="500px" width="100%"
-            (onContextMenu)="rightClick($event)" (onRangeSelection)="getCells($event)"
-            (onSelection)="cellSelection($event)">
+            (contextMenu)="rightClick($event)" (rangeSelected)="getCells($event)"
+            (selected)="cellSelection($event)">
         <!-- Columns area -->
         </igx-grid>
         <div *ngIf="contextmenu==true">
@@ -208,7 +208,7 @@ IgxGrid はコピーされたデータを取得し、コンテナ要素に貼り
     import 'core-js/es7/array';
     ```
 
-- When the grid has no `primaryKey` set and remote data scenarios are enabled (when paging, sorting, filtering, scrolling trigger requests to a remote server to retrieve the data to be displayed in the grid), a row will lose the following state after a data request completes:
+- グリッドに `primaryKey` が設定されておらず、リモート データ シナリオが有効になっている場合 (ページング、ソート、フィルタリング、スクロール時に、グリッドに表示されるデータを取得するためのリモート サーバーへのリクエストがトリガーされる場合)、データ要求が完了すると、行は次の状態を失います:
     * Row Selection
     * Row Expand/collapse
     * Row Editing
@@ -217,7 +217,7 @@ IgxGrid はコピーされたデータを取得し、コンテナ要素に貼り
 ## API リファレンス
 
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-@@if (igxName !== 'IgxTreeGrid') {* [IgxGridRowComponent API]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRowComponent API]({environment:angularApiUrl}/classes/igxtreegridrowcomponent.html)}
+@@if (igxName !== 'IgxTreeGrid') {* [IgxGridRow API]({environment:angularApiUrl}/classes/igxgridrow.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRow API]({environment:angularApiUrl}/classes/igxtreegridrow.html)}
 * [IgxGridCell API]({environment:angularApiUrl}/classes/igxgridcell.html)
 * [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 

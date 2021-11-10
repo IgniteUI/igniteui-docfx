@@ -1,13 +1,13 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Conditional Cell Styling | Ignite UI for Angular | Infragistics 
+title: Angular Conditional Styling | Ignite UI for Angular | Infragistics 
 _description: Define a variety of styles with the help of the conditional styling feature of the Material UI grid, by using different material styling guidelines with a rich API
 _keywords: conditional styling, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Conditional Cell Styling | Ignite UI for Angular | Infragistics 
+title: Angular Conditional Styling | Ignite UI for Angular | Infragistics 
 _description: Define a variety of styles with the help of the conditional styling feature of the Material UI grid, by using different material styling guidelines with a rich API
 _keywords: conditional styling, ignite ui for angular, infragistics
 _canonicalLink: grid/conditional-cell-styling
@@ -15,14 +15,183 @@ _canonicalLink: grid/conditional-cell-styling
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Conditional Cell Styling | Ignite UI for Angular | Infragistics 
+title: Angular Conditional  Styling | Ignite UI for Angular | Infragistics 
 _description: Define a variety of styles with the help of the conditional styling feature of the Material UI grid, by using different material styling guidelines with a rich API
 _keywords: conditional styling, ignite ui for angular, infragistics
 _canonicalLink: grid/conditional-cell-styling
 ---
 }
 
-# @@igComponent Conditional Cell Styling
+# @@igComponent Conditional Styling
+If you need to provide any custom styling in the @@igxName component, you can do it on either row or cell level.
+
+## @@igComponent Conditional Row Styling
+
+The @@igxName component in Ignite UI for Angular provides two ways to **conditional styling of rows** based on custom rules.
+
+- By setting [`rowClasses`]({environment:angularApiUrl}/classes/IgxGridBaseDirective.html#rowClasses) input on the @@igxName component;
+- By setting [`rowStyles`]({environment:angularApiUrl}/classes/IgxGridBaseDirective.html#rowStyles) input on the @@igxName component;
+
+Further in this topic wi will cover both of them in more details.
+
+### Using rowClasses
+You can conditionally style the @@igxName rows by setting the [`rowClasses`]({environment:angularApiUrl}/classes/IgxGridBaseDirective.html#rowClasses) input and define custom rules.
+
+@@if (igxName === 'IgxGrid') {
+```html
+<!-- sample.component.html -->
+<igx-grid #grid [data]="data" [height]="'600px'" [width]="'100%'" [rowClasses]="rowClasses">
+    ...
+</igx-grid>
+```
+}
+@@if (igxName === 'IgxTreeGrid'){
+```html
+<!-- sample.component.html -->
+<igx-tree-grid #treeGrid [data]="data" [height]="'600px'" [width]="'100%'" [rowClasses]="rowClasses">
+    ...
+</igx-tree-grid>
+```
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+```html
+<igx-hierarchical-grid  #hierarchicalGrid class="hgrid" [data]="localData" [height]="'580px'" [width]="'100%'" [rowStyles]="rowStyles">
+    ...
+</igx-hierarchical-grid>
+```
+}
+
+
+The [`rowClasses`]({environment:angularApiUrl}/classes/IgxGridBaseDirective.html#rowClasses) input accepts an object literal, containing key-value pairs, where the key is the name of the CSS class, while the value is either a callback function that returns a boolean, or boolean value.
+
+```typescript
+// sample.component.ts
+
+public rowClasses = {
+    activeRow: this.activeRowCondition
+};
+
+public activeRowCondition = (row: RowType) => this.grid?.navigation.activeNode?.row === row.index;
+```
+
+```scss
+// sample.component.scss
+
+::ng-deep {
+ .activeRow {
+    border: 2px solid #fc81b8;
+    border-left: 3px solid #e41c77;
+ }
+}
+```
+
+Use **::ng-deep** or **`ViewEncapsulation.None`** to force the custom styles down through the current component and its children.
+
+
+
+### Demo
+
+@@if (igxName === 'IgxGrid') {
+
+<code-view style="height:530px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/grid/grid-rowClasses-sample" >
+</code-view>
+
+}
+@@if (igxName === 'IgxTreeGrid') {
+
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-classes" >
+</code-view>
+
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hGrid-row-classes" >
+</code-view>
+}
+<div class="divider--half"></div>
+
+
+### Using rowStyles
+Columns now expose the `rowStyles` property which allows conditional styling of the data rows. Similar to `rowClasses` it accepts an object literal where the keys are style properties and the values are expressions for evaluation. Also, you can apply regular styling (without any conditions).
+
+> The callback signature for both `rowStyles` and `rowClasses` is:
+
+```ts
+(row: RowType) => boolean
+```
+
+Let's define our styles:
+
+```typescript
+// component.ts
+    public  customRowStyles = {
+        background: (row: RowType) => (+row.data['Change'] < 0  && +row.data['Change On Year(%)'] < 0) ? '#FF000088' : '#00000000',
+        border: (row: RowType) => (+row.data['Change'] < 0  && +row.data['Change On Year(%)'] < 0) ? '2px solid' : '1px solid',
+        'border-color': (row: RowType) => (+row.data['Change'] < 0  && +row.data['Change On Year(%)'] < 0) ? '#FF000099' : '#E9E9E9'
+    };
+
+
+```
+
+@@if (igxName === 'IgxGrid') {
+```html
+<!-- sample.component.html -->
+<igx-grid #grid [data]="data" [height]="'600px'" [width]="'100%'" [rowStyles]="customRowStyles">
+    ...
+</igx-grid>
+```
+}
+@@if (igxName === 'IgxTreeGrid'){
+```html
+<!-- sample.component.html -->
+<igx-tree-grid #treeGrid [data]="data" [height]="'600px'" [width]="'100%'" [rowStyles]="customRowStyles">
+    ...
+</igx-tree-grid>
+```
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+```html
+<igx-hierarchical-grid  #hierarchicalGrid class="hgrid" [data]="localData" [height]="'580px'" [width]="'100%'" [rowStyles]="customRowStyles">
+    ...
+</igx-hierarchical-grid>
+```
+}
+
+
+### Demo
+
+@@if (igxName === 'IgxGrid') {
+
+<code-view style="height:530px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/grid/grid-rowStyles-sample" >
+</code-view>
+
+}
+@@if (igxName === 'IgxTreeGrid') {
+
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-styles-sample" >
+</code-view>
+
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hGrid-row-styles" >
+</code-view>
+}
+<div class="divider--half"></div>
+
+
+## @@igComponent Conditional Cell Styling
+## Overview
 The @@igxName component in Ignite UI for Angular provides two ways to **conditional styling of cells** based on custom rules.
 
 - By setting the [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) input [`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellclasses) to an object literal containing key-value pairs. The key is the name of the CSS class, while the value is either a callback function that returns a boolean, or boolean value. The result is a convenient material styling of the cell.
@@ -51,7 +220,6 @@ private downFontCondition = (rowData: any, columnKey: any): boolean => {
 }
 ```
 
-## Overview
 
 ### Using cellClasses
 You can conditionally style the @@igxName cells by setting the [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) [`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellclasses) input and define custom rules.
@@ -153,16 +321,16 @@ Use **::ng-deep** or **`ViewEncapsulation.None`** to force the custom styles dow
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:530px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:530px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-cell-styling" >
 </code-view>
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-conditional-cell-style" >
 </code-view>
 
@@ -192,7 +360,7 @@ public styles = {
 Columns now expose the `cellStyles` property which allows conditional styling of the column cells. Similar to `cellClasses` it accepts an object literal where the keys are style properties and the values are expressions for evaluation. Also, you can apply regular styling with ease (without any conditions).
 
 In the [sample above](#demo) we've created:
-- Two different styles that will be applied based on the column index. 
+- Two different styles that will be applied based on the column index.
 - You will also change the `text color` based on even/odd rows.
 
 > The callback signature for both `cellStyles` is:
@@ -292,16 +460,16 @@ Define a `popin` animation
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:530px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:530px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-cell-cellStyling" >
 </code-view>
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-cell-cellStyling" >
 </code-view>
 
