@@ -1,5 +1,5 @@
 ---
-title: Angular Panel | Expandable | Ignite UI for Angular | Infragistics
+title: Angular Angular Panel | Expandable | Ignite UI for Angular | Infragistics
 _description: Use an Angular accordion/material expansion panel which provides an easily configurable expandable component with two states - collapsed and expanded.
 _keywords: angular accordion, igniteui for angular, infragistics
 ---

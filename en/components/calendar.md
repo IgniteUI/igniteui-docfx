@@ -1,5 +1,5 @@
 ---
-title: Angular Calendar | Calendar | Infragistics
+title: Angular Calendar Component | Calendar | Infragistics
 _description: Create an intuitive calendar for applications to display date information, and users to input date information with Ignite UI for Angular Calendar component.
 _keywords: angular calendar, angular component, ignite ui for angular
 ---

@@ -1,5 +1,5 @@
 ---
-title: Date Time Editor Directive - Native Angular | Ignite UI for Angular
+title: Angular Date Time Editor Component | Ignite UI for Angular
 _description: The Ignite UI for Angular Date Time Editor Directive allows the user to handle date and time using a Date Object.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components, Angular Date Time Editor Directive, Angular Date Time Directive control, Date Time Editor, Angular Date Time Directive
 ---

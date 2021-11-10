@@ -1,5 +1,5 @@
 ---
-title: Autocomplete Directive
+title: Angular Autocomplete Component – Ignite UI for Angular | Infragistics
 _description: The igxAutocomplete directive provides a way to enhance a text input by showing a panel of suggested options provided by the developer.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Autocomplete components, Angular Autocomplete directives, Angular Autocomplete controls
 ---

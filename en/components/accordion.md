@@ -1,5 +1,5 @@
 ---
-title: Angular Accordion – Fully-featured collapsible panels - Infragistics 
+title: Angular Accordion Component – Fully-featured collapsible panels - Infragistics 
 _description: Angular Accordion is used to build vertical expandable panels in accordion menu. Check how to do it with Ignite UI for Angular accordion component. 
 _keywords: angular accordion, angular accordion component, angular accordion example, ignite ui for angular, UI controls, infragistics
 ---

@@ -1,5 +1,5 @@
 ---
-title: Button Group Component
+title: Angular Button Group Component – Ignite UI for Angular | Infragistics
 _description: Provides button group functionality to developers and also allows horizontal/vertical alignment, single/multiple selection with toggling.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Button Group components, Angular Button Group controls, Angular Buttons components, Angular Buttons controls
 ---

@@ -95,21 +95,19 @@ Ignite UI for Angular の Angular UI グリッドには、グループ フッタ
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="false"
-        [height]="'600px'" [width]="'100%'" #hierarchicalGrid>
-        <igx-column field="Artist" [hasSummary]='true'></igx-column>
-        <igx-column field="Photo">
-            <ng-template igxCell let-cell="cell">
-                <div class="cell__inner_2">
-                    <img [src]="cell.value" class="photo" />
-                </div>
-            </ng-template>
-        </igx-column>
-        <igx-column field="Debut" [hasSummary]='true'></igx-column>
-        <igx-column field="Grammy Nominations" [hasSummary]='true' [dataType]="'number'" [summaries]="mySummary"></igx-column>
-        <igx-column field="Grammy Awards" [hasSummary]='true' [dataType]="'number'"></igx-column>
-        ...
-    </igx-hierarchical-grid>
+<igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="false">
+    <igx-column field="Artist" [hasSummary]='true'></igx-column>
+    <igx-column field="Photo">
+        <ng-template igxCell let-cell="cell">
+            <div class="cell__inner_2">
+                <img [src]="cell.value" class="photo" />
+            </div>
+        </ng-template>
+    </igx-column>
+    <igx-column field="Debut" [hasSummary]='true'></igx-column>
+    <igx-column field="Grammy Nominations" [hasSummary]='true' [dataType]="'number'" [summaries]="mySummary"></igx-column>
+    <igx-column field="Grammy Awards" [hasSummary]='true' [dataType]="'number'"></igx-column>
+</igx-hierarchical-grid>
 
 ```
 }
@@ -131,12 +129,12 @@ Ignite UI for Angular の Angular UI グリッドには、グループ フッタ
 ```typescript
 public enableSummary() {
     this.grid1.enableSummaries([
-        {fieldName: "ReorderLevel", customSummary: this.mySummary},
-        {fieldName: "ProductID"}
+        {fieldName: 'ReorderLevel', customSummary: this.mySummary},
+        {fieldName: 'ProductID'}
     ]);
 }
 public disableSummary() {
-    this.grid1.disableSummaries("ProductName");
+    this.grid1.disableSummaries('ProductName');
 }
 ```
 }
@@ -161,12 +159,12 @@ public disableSummary() {
 ```typescript
 public enableSummary() {
     this.hierarchicalGrid.enableSummaries([
-        {fieldName: "Grammy Nominations", customSummary: this.mySummary},
-        {fieldName: "Artist"}
+        {fieldName: 'Grammy Nominations', customSummary: this.mySummary},
+        {fieldName: 'Artist'}
     ]);
 }
 public disableSummary() {
-    this.hierarchicalGrid.disableSummaries("Photo");
+    this.hierarchicalGrid.disableSummaries('Photo');
 }
 ```
 }
@@ -179,7 +177,6 @@ public disableSummary() {
 import { IgxSummaryResult, IgxSummaryOperand, IgxNumberSummaryOperand, IgxDateSummaryOperand } from 'igniteui-angular';
 
 class MySummary extends IgxNumberSummaryOperand {
-
     constructor() {
         super();
     }
@@ -198,24 +195,23 @@ class MySummary extends IgxNumberSummaryOperand {
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```typescript
-import { IgxRowIslandComponent, IgxHierarchicalGridComponent, IgxNumberSummaryOperand, IgxSummaryResult } from "igniteui-angular";
+import { IgxRowIslandComponent, IgxHierarchicalGridComponent, IgxNumberSummaryOperand, IgxSummaryResult } from 'igniteui-angular';
 
 class MySummary extends IgxNumberSummaryOperand {
-
     constructor() {
-      super();
+        super();
     }
     public operate(data?: any[]): IgxSummaryResult[] {
-      const result = super.operate(data);
-      result.push({
-        key: "test",
-        label: "More than 5",
-        summaryResult: data.filter((rec) => rec > 5).length
-      });
+        const result = super.operate(data);
+        result.push({
+            key: 'test',
+            label: 'More than 5',
+            summaryResult: data.filter((rec) => rec > 5).length
+        });
 
-      return result;
+        return result;
     }
-  }
+}
 ```
 }
 
@@ -260,20 +256,18 @@ export class GridComponent implements OnInit {
 @@if (igxName === 'IgxHierarchicalGrid') {
 列 `GramyNominations` にカスタム集計を追加します。[`summaries`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#summaries) プロパティを以下に作成するクラスに設定します。
 ```html
- <igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="false"
-        [height]="'600px'" [width]="'100%'" #hierarchicalGrid>
-        <igx-column field="Artist" [hasSummary]='true'></igx-column>
-        <igx-column field="Photo">
-            <ng-template igxCell let-cell="cell">
-                <div class="cell__inner_2">
-                    <img [src]="cell.value" class="photo" />
-                </div>
-            </ng-template>
-        </igx-column>
-        <igx-column field="Debut" [hasSummary]='true'></igx-column>
-        <igx-column field="Grammy Nominations" [hasSummary]='true' [dataType]="'number'" [summaries]="mySummary"></igx-column>
-        <igx-column field="Grammy Awards" [hasSummary]='true' [dataType]="'number'"></igx-column>
-...
+ <igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="false">
+    <igx-column field="Artist" [hasSummary]='true'></igx-column>
+    <igx-column field="Photo">
+        <ng-template igxCell let-cell="cell">
+            <div class="cell__inner_2">
+                <img [src]="cell.value" class="photo" />
+            </div>
+        </ng-template>
+    </igx-column>
+    <igx-column field="Debut" [hasSummary]='true'></igx-column>
+    <igx-column field="Grammy Nominations" [hasSummary]='true' [dataType]="'number'" [summaries]="mySummary"></igx-column>
+    <igx-column field="Grammy Awards" [hasSummary]='true' [dataType]="'number'"></igx-column>
 </igx-hierarchical-grid>
 ```
 

@@ -1,5 +1,5 @@
 ---
-title: Angular Paging | Table Pagination | Infragistics
+title: Angular Paging | Paginator | Table Pagination | Infragistics
 _description: Configure Angular pagination and create custom pages in the Angular Material table by Ignite UI, get data for the requested pages with variety of angular events.
 _keywords: paginator, igniteui for angular, infragistics
 ---

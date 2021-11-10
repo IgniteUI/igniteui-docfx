@@ -1,5 +1,5 @@
 ---
-title: Month Picker Component
+title: Angular Month Picker Component – Ignite UI for Angular | Infragistics
 _description: The Ignite UI for Angular Month Picker component provides an easy and intuitive way to select a specific month and year using a month-year calendar view.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Month Picker components, Angular Month Picker controls
 ---

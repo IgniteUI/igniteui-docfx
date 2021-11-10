@@ -1,5 +1,5 @@
 ---
-title: Angular Select | Material Select | IgniteUI for Angular | Infragistics
+title: Angular Select Component | Material Select | IgniteUI for Angular | Infragistics
 _description: Learn how to configure an Angular select. The Material select provides an input with Angular dropdown list allowing single item selection of the angular combobox.
 _keywords:  angular select, igniteui for angular, infragistics
 ---
