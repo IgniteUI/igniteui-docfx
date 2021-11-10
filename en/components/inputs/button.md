@@ -13,13 +13,16 @@ The Ignite UI for Web Components Button provides different variants and styles w
 
 ## Usage
 
-To get started with the Button Web Component we need to import the [`IgcButtonComponent`]({environment:wcApiUrl}/classes/IgcButtonComponent.html) in our typescript file:
+To get started we need to import the [`IgcButtonComponent`]({environment:wcApiUrl}/classes/IgcButtonComponent.html) in our typescript file and register the component by calling the [`defineComponents()`]({environment:wcApiUrl}/index.html#defineComponents) function as follows:
 
 After we import the button component we are ready to start using it, so let's add our first button.
 
-With `prefix` and `suffix` slots we can add a different content before and after the main content of the button.
+With `prefix` and `suffix` slots we can add different content before and after the main content of the button.
 
-We can also specify button [`type`]({environment:wcApiUrl}/classes/IgcButtonComponent.html#type) by setting some of the following values:
+## Type
+
+The button component will change its internal structure from a [`<button>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button) to an [`<a>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a) type element when the [`href`]({environment:wcApiUrl}/classes/IgcButtonComponent.html#href) attribute is set. In that case the button can be thought of as a regular link. Setting the `href` attribute will allow you to also set the [`rel`]({environment:wcApiUrl}/classes/IgcButtonComponent.html#rel), [`target`]({environment:wcApiUrl}/classes/IgcButtonComponent.html#target) and [`download`]({environment:wcApiUrl}/classes/IgcButtonComponent.html#download) attributes.
+In the case when the button component uses an actual `button` element internally, we can specify its [`type`]({environment:wcApiUrl}/classes/IgcButtonComponent.html#type) by setting the property to any of the following values:
 
 -   `submit` - when we want to submit the form data
 -   `reset` - when we want to reset form data to its initial values
@@ -68,13 +71,21 @@ And here's the result of all that work:
 <code-view style="height: 200px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/inputs/button-size"
-           alt="Angular List Example"
+           alt="Angular Button Sizing Example"
            github-src="/inputs/button/size">
 </code-view>
 
+### Download
+
+Setting the [`download`]({environment:wcApiUrl}/classes/IgcButtonComponent.html#download) property will prompt the user to save the linked URL instead of navigating to it.
+
+<div class="sample-container loading" style="height: 70px">
+    <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:dvDemosBaseUrl}/inputs/button-download">
+</iframe></div>
+
 ## Styling
 
-The button component exposes `base` CSS part that allow us to style the wrapping element (`<button>`).
+The button component exposes `base` CSS part that allows us to style the wrapped element (`<button>` or `<a>`).
 
 ```css
 igc-button::part(base) {
@@ -87,7 +98,7 @@ igc-button::part(base) {
 <code-view style="height: 100px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/inputs/button-styling"
-           alt="Angular List Example"
+           alt="Angular Button Styling Example"
            github-src="/inputs/button/styling">
 </code-view>
 
