@@ -63,13 +63,12 @@ Ignite UI for Angular @@igComponent は、リモート仮想化、リモート �
 この機能を使用するには、[`dataPreLoad`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#datapreload) 出力にサブスクライブし、取得した引数に基づいて適切な要求を行い、パブリック [@@igxName]({environment:angularApiUrl}/classes/@@igTypeDoc.html) プロパティ [`totalItemCount`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalitemcount) とサービスの各情報を設定します。
 
 ```html
-<igx-grid #grid [data]="remoteData | async" [height]="'500px'" [width]="'100%'" [autoGenerate]='false'
+<igx-grid #grid [data]="remoteData | async" [autoGenerate]="false"
           (dataPreLoad)="processData(false)"
           (sortingDone)="processData(true)">
     <igx-column [field]="'ProductID'" [sortable]="true"></igx-column>
     <igx-column [field]="'ProductName'" [sortable]="true"></igx-column>
     <igx-column [field]="'UnitPrice'" [dataType]="'number'" [formatter]="formatCurrency" [sortable]="true"></igx-column>
-    ...
 </igx-grid>
 ```
 
@@ -78,7 +77,7 @@ public ngAfterViewInit() {
     this.grid.isLoading = true;
 
     this._remoteService.getData(this.grid.virtualizationState, this.grid.sortingExpressions[0], true, (data) => {
-            this.grid.totalItemCount = data["@odata.count"];
+            this.grid.totalItemCount = data['@odata.count'];
             this.grid.isLoading = false;
     });
 }
@@ -121,17 +120,15 @@ public processData(reset) {
 
 ```typescript
 public ngAfterViewInit() {
-    ...
     this._remoteService.loadDataForPage(this.page, this.pageSize, (request) => {
         if (request.data) {
             this.grid.totalItemCount = this.page * this.pageSize;
             this.grid.data = this._remoteService.getCachedData({startIndex: 0, chunkSize: 10});
-            this.totalItems = request.data["@odata.count"];
+            this.totalItems = request.data['@odata.count'];
             this.totalPageCount = Math.ceil(this.totalItems / this.pageSize);
             this.grid.isLoading = false;
         }
     });
-    ...
 }
 ```
 
@@ -208,7 +205,7 @@ public ngAfterViewInit() {
 リモート ソートとフィルタリングが提供される場合、グリッドの組み込みのソートとフィルタリングは必要ありません。グリッドの [`sortStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sortstrategy) および [`filterStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filterstrategy) 入力をそれぞれのインスタンスの `NoopSortingStrategy` および `NoopFilteringStrategy` に設定して、無効にできます。
 
 ```html
-<igx-grid #grid [data]="remoteData | async" [height]="'500px'" [width]="'100%'" [autoGenerate]='false'
+<igx-grid #grid [data]="remoteData | async" [autoGenerate]="false"
         [filterStrategy]="noopFilterStrategy"
         [sortStrategy]="noopSortStrategy"
         [allowFiltering]="true">
@@ -254,14 +251,13 @@ public ngAfterViewInit() {
 ```html
 <!-- tree-grid-remote-filtering-sample.html -->
 
-<igx-tree-grid #treeGrid [data]="remoteData | async" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="false" width="100%" height="450px"
+<igx-tree-grid #treeGrid [data]="remoteData | async" primaryKey="ID" foreignKey="ParentID"
                [autoGenerate]="false"
                [filterStrategy]="noopFilterStrategy"
                [allowFiltering]="true">
     <igx-column [field]="'Name'" dataType="string"></igx-column>
     <igx-column [field]="'Title'" dataType="string"></igx-column>
     <igx-column [field]="'Age'" dataType="number"></igx-column>
-    ...
 </igx-tree-grid>
 ```
 
@@ -377,7 +373,7 @@ public singersColumnValuesStrategy = (column: IgxColumnComponent,
                                       done: (uniqueValues: any[]) => void) => {
 // Get specific column data for the singers.
 this.remoteValuesService.getColumnData(
-    null, "Singers", column, columnExprTree, uniqueValues => done(uniqueValues));
+    null, 'Singers', column, columnExprTree, uniqueValues => done(uniqueValues));
 }
 
 public albumsColumnValuesStrategy = (column: IgxColumnComponent,
@@ -386,7 +382,7 @@ public albumsColumnValuesStrategy = (column: IgxColumnComponent,
 // Get specific column data for the albums of a specific singer.
 const parentRowId = (column.grid as any).foreignKey;
 this.remoteValuesService.getColumnData(
-    parentRowId, "Albums", column, columnExprTree, uniqueValues => done(uniqueValues));
+    parentRowId, 'Albums', column, columnExprTree, uniqueValues => done(uniqueValues));
 }
 ```
 
@@ -559,10 +555,10 @@ public totalCount = 0;
 public data: Observable<any[]>;
 public mode = GridPagingMode.remote;
 public isLoading = true;
-@ViewChild("grid1", { static: true }) public grid1: IgxGridComponent;
+@ViewChild('grid1', { static: true }) public grid1: IgxGridComponent;
 
 private _dataLengthSubscriber;
-...
+
 public set perPage(val: number) {
     this._perPage = val;
     this.paginate(0);
@@ -576,12 +572,11 @@ public ngOnInit() {
         this.grid1.isLoading = false;
     });
 }
-...
+
 public ngAfterViewInit() {
     const skip = this.page * this.perPage;
     this.remoteService.getData(skip, this.perPage);
 }
-
 
 public paginate(page: number) {
     this.page = page;
@@ -642,7 +637,7 @@ public paginate(page: number) {
 ```
 
 ```typescript
-@ViewChild("grid1", { static: true }) public grid1: IgxGridComponent;
+@ViewChild('grid1', { static: true }) public grid1: IgxGridComponent;
 
 private _perPage = 15;
 private _dataLengthSubscriber: { unsubscribe: () => void; } | undefined;
@@ -820,8 +815,8 @@ public mode = GridPagingMode.Remote;
 以下は、独自の `next` および `previous` ページ操作を実装するために定義したメソッドです。
 
 ```typescript
-@ViewChild("grid1", { static: true }) public grid1: IgxGridComponent;
-...
+@ViewChild('grid1', { static: true }) public grid1: IgxGridComponent;
+
 public ngAfterViewInit() {
     this.grid1.isLoading = true;
     this.remoteService.getData(0, this.perPage);
@@ -862,8 +857,6 @@ public paginate(page: number, recalculate = false) {
     this.remoteService.getData(skip, top);
     this.buttonDeselection(this.page, this.totalPages);
 }
-...
-
 ```
 }
 
@@ -877,7 +870,6 @@ public paginate(page: number, recalculate = false) {
 
 ```typescript
 public ngOnInit() {
-    ...
     this._dataLengthSubscriber = this.remoteService.getDataLength().subscribe((data) => {
         this.totalCount = data;
         this._recordOnServer = data;

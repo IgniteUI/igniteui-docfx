@@ -1,5 +1,5 @@
 ---
-title: Batch Editing | Angular Crud | Ignite UI for Angular | Infragistics
+title: Angular Batch Editing | Angular Crud | Ignite UI for Angular | Infragistics
 _description: How to configure batch editing for Ignite UI Angular components and execute CRUD operations on them, using Transaction service.
 _keywords: batch editing, igniteui for angular, infragistics
 ---
@@ -42,9 +42,9 @@ The other option is to provide it in the component, where the transaction servic
 
 ```typescript
 @Component({
-    selector: "transaction-base",
-    styleUrls: ["./transaction-base.component.scss"],
-    templateUrl: "transaction-base.component.html",
+    selector: 'transaction-base',
+    styleUrls: ['./transaction-base.component.scss'],
+    templateUrl: 'transaction-base.component.html',
     providers: [IgxTransactionService]
 })
 export class TransactionBaseComponent { }
@@ -55,7 +55,7 @@ export class TransactionBaseComponent { }
 In our `ts` file, we should import [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) from the `igniteui-angular` library, as well as the [`State`]({environment:angularApiUrl}/interfaces/state.html) and [`Transaction`]({environment:angularApiUrl}/interfaces/transaction.html) interfaces and the [`TransactionType`]({environment:angularApiUrl}/enums/TransactionType.html) enum, which will be needed by our application:
 
 ```typescript
-import { IgxTransactionService, State, Transaction, TransactionType } from "igniteui-angular";
+import { IgxTransactionService, State, Transaction, TransactionType } from 'igniteui-angular';
 ```
 
 Then Transaction Service should be imported in the constructor:
@@ -88,7 +88,7 @@ The list component from above uses the `transactionBasePipe` to display changes 
 
 ```typescript
 @Pipe({
-    name: "transactionBasePipe",
+    name: 'transactionBasePipe',
     pure: false
 })
 export class TransactionBasePipe implements PipeTransform {
@@ -211,7 +211,7 @@ When the button is pressed, inside the `onAdd` event handler, an 'ADD' transacti
 ```typescript
 public onAdd(): void {
     // it must have a unique 'id' property
-    const item: WishlistItem = { id: 4, name: "Yacht", price: "A lot!" };
+    const item: WishlistItem = { id: 4, name: 'Yacht', price: 'A lot!' };
 
     // in an `ADD` transaction you do not need to provide a `recordRef` argument,
     // since there is nothing to refer to yet

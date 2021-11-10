@@ -123,7 +123,7 @@ Angular @@igComponent 検索により、データのコレクション内の値�
 ```typescript
 // searchgrid.component.ts
 
-public searchText: string = "";
+public searchText: string = '';
 public caseSensitive: boolean = false;
 public exactMatch: boolean = false;
 ```
@@ -194,10 +194,10 @@ public exactMatch: boolean = false;
 // searchgrid.component.ts
 
 public searchKeyDown(ev) {
-    if (ev.key === "Enter" || ev.key === "ArrowDown" || ev.key === "ArrowRight") {
+    if (ev.key === 'Enter' || ev.key === 'ArrowDown' || ev.key === 'ArrowRight') {
         ev.preventDefault();
         this.@@igObjectRef.findNext(this.searchText, this.caseSensitive, this.exactMatch);
-    } else if (ev.key === "ArrowUp" || ev.key === "ArrowLeft") {
+    } else if (ev.key === 'ArrowUp' || ev.key === 'ArrowLeft') {
         ev.preventDefault();
         this.@@igObjectRef.findPrev(this.searchText, this.caseSensitive, this.exactMatch);
     }
@@ -255,7 +255,6 @@ import {
 } from 'igniteui-angular';
 
 @NgModule({
-    ...
     imports: [..., IgxInputGroupModule, IgxIconModule, IgxRippleModule, IgxButtonModule, IgxChipsModule],
 })
 export class AppModule {}
@@ -287,7 +286,7 @@ export class AppModule {}
 // searchgrid.component.ts
 
 public clearSearch() {
-    this.searchText = "";
+    this.searchText = '';
     this.@@igObjectRef.clearSearch();
 }
 ```
@@ -332,7 +331,7 @@ public clearSearch() {
 ```html
 <!--searchgrid.component.html-->
 
-    ...
+<igx-suffix>
     <div class="searchButtons">
         <button igxButton="icon" igxRipple igxRippleCentered="true" (click)="@@igObjectRef.findPrev(searchText, caseSensitive, exactMatch)">
             <igx-icon fontSet="material">navigate_before</igx-icon>

@@ -127,7 +127,7 @@ You may enable animation like this:
 
 ```typescript
 export class @@igxNameRowDragComponent {
-    ...
+
     public onRowDragEnd(args) {
         args.animation = true;
     }
@@ -143,7 +143,6 @@ First, let's take a look at our `enter` and `leave` handlers. In those methods, 
 
 ```typescript
 export class @@igxNameRowDragComponent {
-    ...
     public onEnterAllowed(args) {
         this.changeGhostIcon(args.drag.ghostElement, DragIcon.ALLOW);
     }
@@ -154,13 +153,12 @@ export class @@igxNameRowDragComponent {
 
     private changeGhostIcon(ghost, icon: string) {
         if (ghost) {
-            const currentIcon = ghost.querySelector(".igx-grid__drag-indicator  > igx-icon");
+            const currentIcon = ghost.querySelector('.igx-grid__drag-indicator > igx-icon');
             if (currentIcon) {
                 currentIcon.innerText = icon;
             }
         }
     }
-
 }
 ```
 The `changeGhostIcon` **private** method just changes the icon inside of the drag ghost. The logic in the method finds the element that contains the icon (using the `igx-grid__drag-indicator` class that is applied to the drag-indicator container), changing the element's inner text to the passed one.
@@ -168,16 +166,16 @@ The icons themselves are from the [`material` font set](https://material.io/tool
 @@if (igxName === 'IgxTreeGrid' || igxName === 'IgxHierarchicalGrid') {
 ```typescript
 enum DragIcon {
-    DEFAULT = "drag_indicator",
-    ALLOW = "remove"
+    DEFAULT = 'drag_indicator',
+    ALLOW = 'remove'
 }
 ```
 }
 @@if (igxName === 'IgxGrid') {
 ```typescript
 enum DragIcon {
-    DEFAULT = "drag_indicator",
-    ALLOW = "add"
+    DEFAULT = 'drag_indicator',
+    ALLOW = 'add'
 }
 ```
 }
@@ -186,7 +184,7 @@ Next, we have to define what should happen when the user actually *drops* the ro
 @@if (igxName === 'IgxTreeGrid' || igxName === 'IgxHierarchicalGrid') {
 ```typescript
 export class @@igxNameRowDragComponent {
-    ...
+
     public onDropAllowed(args: IDropDroppedEventArgs) {
         const draggedRow: RowType = args.dragData;
         draggedRow.delete();
@@ -201,14 +199,13 @@ Once the row is dropped, we just call the row's [`delete()`]({environment:angula
 @@if (igxName === 'IgxGrid') {
 ```typescript
 export class @@igxNameRowDragComponent {
-    @ViewChild("sourceGrid", { read: IgxGridComponent }) public sourceGrid: IgxGridComponent;
-    @ViewChild("targetGrid", { read: IgxGridComponent }) public targetGrid: IgxGridComponent;
-    ... 
+    @ViewChild('sourceGrid', { read: IgxGridComponent }) public sourceGrid: IgxGridComponent;
+    @ViewChild('targetGrid', { read: IgxGridComponent }) public targetGrid: IgxGridComponent;
+
     public onDropAllowed(args) {
         this.targetGrid.addRow(args.dragData.data);
         this.sourceGrid.deleteRow(args.dragData.key);
     }
-    ...
 }
 ```
 
@@ -400,23 +397,23 @@ Since all of the actions will be happening _inside_ of the grid's body, that's w
 
 @@if (igxName === 'IgxGrid') {
 ```html
-    <igx-grid #grid [data]="data" [rowDraggable]="true" [primaryKey]="'ID'" igxDrop (dropped)="onDropAllowed($event)">
-        ...
-    </igx-grid>
+<igx-grid #grid [data]="data" [rowDraggable]="true" [primaryKey]="'ID'" igxDrop (dropped)="onDropAllowed($event)">
+    ...
+</igx-grid>
 ```
 }
 @@if (igxName === 'IgxTreeGrid') {
-    <igx-tree-grid igxPreventDocumentScroll  #treeGrid [data]="localData" childDataKey="Employees" [rowDraggable]="true" foreignKey="ParentID"
+<igx-tree-grid igxPreventDocumentScroll  #treeGrid [data]="localData" childDataKey="Employees" [rowDraggable]="true" foreignKey="ParentID"
     [primaryKey]="'ID'" (rowDragStart)="rowDragStart($event)" igxDrop (dropped)="dropInGrid($event)">
     ...
-    </igx-tree-grid>
+</igx-tree-grid>
     
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-    <igx-hierarchical-grid #grid [data]="localData" [primaryKey]="'id'"
+<igx-hierarchical-grid #grid [data]="localData" [primaryKey]="'id'"
     [rowDraggable]="true" (rowDragStart)="rowDragStart($event)" igxDrop (dropped)="rowDrop($event)">
     ...
-    </igx-hierarchical-grid>
+</igx-hierarchical-grid>
 }
 
 
@@ -442,7 +439,6 @@ Below, you can see this implemented in the component's `.ts` file:
 @@if (igxName === 'IgxGrid') {
 ```typescript
 export class GridRowReorderComponent {
-    ...
     public onDropAllowed(args) {
         const event = args.originalEvent;
         const currRowIndex = this.getCurrentRowIndex(this.grid.rowList.toArray(),
@@ -468,8 +464,7 @@ export class GridRowReorderComponent {
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```typescript
-    export class TreeGridRowReorderComponent {
-    ...
+export class TreeGridRowReorderComponent {
     public rowDragStart(args: any): void {
         const targetRow = args.dragData;
         if (targetRow.expanded) {
@@ -536,8 +531,7 @@ export class GridRowReorderComponent {
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```typescript
-    export class HGridRowReorderComponent {
-    ...
+export class HGridRowReorderComponent {
     public rowDragStart(args: any): void {
         const targetRow = args.dragData;
         if (targetRow.expanded) {
@@ -642,7 +636,6 @@ Then, define a method that returns the instance of the row you're over (similar 
 
 ```typescript
 class MyRowGhostComponent {
-    ...
     private getRowDataAtPoint(rowList: IgxGridRowComponent[], cursorPosition: Point): any {
         for (const row of rowList) {
             const rowRect = row.nativeElement.getBoundingClientRect();
@@ -661,11 +654,10 @@ We want to subscribe to the `dragMove` event only of the specific row we're drag
 
 ```typescript
 class MyRowGhostComponent {
-    ...
     public ngAfterViewInit(): void {
         this.grid.rowDragStart.pipe(takeUntil(this.destroy$)).subscribe(this.onRowDragStart.bind(this));
     }
-    ...
+
     private onRowDragStart(e: IRowDragStartEventArgs) {
         if (e !== null) {
             this._draggedRow = e.dragData.rowData;
@@ -675,7 +667,7 @@ class MyRowGhostComponent {
             .pipe(takeUntil(this.grid.rowDragEnd))
             .subscribe(this.onDragMove.bind(this));
     }
-    ...
+
     private onDragMove(args: IDragMoveEventArgs) {
         const cursorPosition = this.getCursorPosition(args.originalEvent);
         const hoveredRowData = this.getRowDataAtPoint(
@@ -701,7 +693,6 @@ class MyRowGhostComponent {
             }
         }
     }
-    
 }
 
 ```
@@ -718,9 +709,8 @@ In order to track the position of the cursor, we bind to the `dragMove` event of
 ```typescript
 public ngAfterViewInit() {
   this.grid.rowDragStart
-  .pipe(takeUntil(this.destroy$))
-  .subscribe(this.handleRowStart.bind(this));
-     ...
+    .pipe(takeUntil(this.destroy$))
+    .subscribe(this.handleRowStart.bind(this));
 }
 
 private handleRowStart(e: IRowDragStartEventArgs): void {
@@ -729,13 +719,12 @@ private handleRowStart(e: IRowDragStartEventArgs): void {
   }
   const directive = e.dragDirective;
   directive.dragMove
-  .pipe(takeUntil(this.grid.rowDragEnd))
-  .subscribe(this.handleDragMove.bind(this));
+    .pipe(takeUntil(this.grid.rowDragEnd))
+    .subscribe(this.handleDragMove.bind(this));
 }
 
 private handleDragMove(event: IDragMoveEventArgs): void {
   this.handleOver(event);
-    ...
 }
 
 private handleOver(event: IDragMoveEventArgs) {
@@ -790,7 +779,6 @@ Below you see an example of the two methods we use to check if we have reached t
 
 ```typescript
 class MyGridScrollComponent {
-    ...
     private isGridScrolledToEdge(dir: 1 | -1): boolean {
         if (this.grid.data[0] === this.grid.rowList.first.data && dir === -1) {
             return true;
@@ -831,7 +819,7 @@ class MyGridScrollComponent {
             .pipe(takeUntil(this.destroy$))
             .subscribe(() => this.unsubInterval());
     }
-    ...
+
     private onDragMove(event: IDragMoveEventArgs): void {
         this.unsubInterval();
         const dir = this.isPointOnGridEdge(event.pageY);
@@ -844,7 +832,7 @@ class MyGridScrollComponent {
             this.intervalSub = this.interval$.subscribe(() => this.scrollGrid(dir));
         }
     }
-    ...
+
     private unsubInterval(): void {
         if (this.intervalSub) {
             this.intervalSub.unsubscribe();

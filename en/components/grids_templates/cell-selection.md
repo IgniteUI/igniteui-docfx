@@ -157,8 +157,8 @@ this.grid1.selectRange(range);
 1. If three different single cells are selected:
 ```
 expectedData = [
-    { CompanyName: "Infragistics" },
-    { Name: "Michael Langdon" },
+    { CompanyName: 'Infragistics' },
+    { Name: 'Michael Langdon' },
     { ParentID: 147 }
 ];
 ```
@@ -166,44 +166,44 @@ expectedData = [
 2. If three cells from one column are selected:
 ```
 expectedData = [
-    { Address: "Obere Str. 57"},
-    { Address: "Avda. de la Constitución 2222"},
-    { Address: "Mataderos 2312"}
+    { Address: 'Obere Str. 57'},
+    { Address: 'Avda. de la Constitución 2222'},
+    { Address: 'Mataderos 2312'}
 ];
 ```
 
 3. If three cells are selected with mouse drag from one row and three columns:
 ```
 expectedData = [
-    { Address: "Avda. de la Constitución 2222", City: "México D.F.", ContactTitle: "Owner" }
+    { Address: 'Avda. de la Constitución 2222', City: 'México D.F.', ContactTitle: 'Owner' }
 ];
 ```
 
 4. If three cells are selected with mouse drag from two rows and three columns:
 ```
 expectedData = [
-    { ContactTitle: "Sales Agent", Address: "Cerrito 333", City: "Buenos Aires"},
-    { ContactTitle: "Marketing Manager", Address: "Sierras de Granada 9993", City: "México D.F."}
+    { ContactTitle: 'Sales Agent', Address: 'Cerrito 333', City: 'Buenos Aires'},
+    { ContactTitle: 'Marketing Manager', Address: 'Sierras de Granada 9993', City: 'México D.F.'}
 ];
 ```
 
 5. If two different ranges are selected:
 ```
 expectedData = [
-    { ContactName: "Martín Sommer", ContactTitle: "Owner"},
-    { ContactName: "Laurence Lebihan", ContactTitle: "Owner"},
-    { Address: "23 Tsawassen Blvd.", City: "Tsawassen"},
-    { Address: "Fauntleroy Circus", City: "London"}
+    { ContactName: 'Martín Sommer', ContactTitle: 'Owner'},
+    { ContactName: 'Laurence Lebihan', ContactTitle: 'Owner'},
+    { Address: '23 Tsawassen Blvd.', City: 'Tsawassen'},
+    { Address: 'Fauntleroy Circus', City: 'London'}
 ];
 ```
 
 6. If two overlapping ranges are selected, the format would be:
 ```
 expectedData = [
-    { ContactName: "Diego Roel", ContactTitle: "Accounting Manager", Address: "C/ Moralzarzal, 86"},
-    { ContactName: "Martine Rancé", ContactTitle: "Assistant Sales Agent", Address: "184, chaussée de Tournai", City: "Lille"},
-    { ContactName: "Maria Larsson", ContactTitle: "Owner", Address: "Åkergatan 24", City: "Bräcke"},
-    { ContactTitle: "Marketing Manager", Address: "Berliner Platz 43", City: "München"}
+    { ContactName: 'Diego Roel', ContactTitle: 'Accounting Manager', Address: 'C/ Moralzarzal, 86'},
+    { ContactName: 'Martine Rancé', ContactTitle: 'Assistant Sales Agent', Address: '184, chaussée de Tournai', City: 'Lille'},
+    { ContactName: 'Maria Larsson', ContactTitle: 'Owner', Address: 'Åkergatan 24', City: 'Bräcke'},
+    { ContactTitle: 'Marketing Manager', Address: 'Berliner Platz 43', City: 'München'}
 ];
 ```
 

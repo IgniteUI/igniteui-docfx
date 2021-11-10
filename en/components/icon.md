@@ -1,5 +1,5 @@
 ---
-title: Icon Component
+title: Angular Icon Component – Ignite UI for Angular | Infragistics
 _description: Developers can unify and use various icon and font sets interchangeably with custom colors and more with Ignite UI for Angular Icon component. 
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Icon components, Angular Icon controls
 ---
@@ -105,7 +105,7 @@ constructor(private iconService: IgxIconService) { }
 
 public ngOnInit() {
     // register custom SVG icons
-    this.iconService.addSvgIcon("contains", "/assets/images/svg/contains.svg", "filter-icons");
+    this.iconService.addSvgIcon('contains', '/assets/images/svg/contains.svg', 'filter-icons');
 }
 ```
 

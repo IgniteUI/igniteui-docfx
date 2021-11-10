@@ -260,7 +260,7 @@ Assuming the igxExpansionPanel is already imported in `app.module.ts` as previou
 
 ```typescript
 // in expansion-panel.component.ts
-import { useAnimation } from "@angular/animations";
+import { useAnimation } from '@angular/animations';
 import { IgxExpansionPanelComponent, slideInLeft, slideOutRight } from 'igniteui-angular';
 @Component({
     ...
@@ -272,14 +272,14 @@ export class ExpansionPanelComponent {
     public animationSettingsCustom = {
         closeAnimation: useAnimation(slideOutRight, {
             params: {
-                duration: "100ms",
-                toPosition: "translateX(25px)"
+                duration: '100ms',
+                toPosition: 'translateX(25px)'
             }
         }),
         openAnimation: useAnimation(slideInLeft, {
             params: {
-                duration: "500ms",
-                fromPosition: "translateX(-15px)",
+                duration: '500ms',
+                fromPosition: 'translateX(-15px)',
                 startOpacity: 0.1
             }
         })

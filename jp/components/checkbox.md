@@ -1,5 +1,5 @@
 ---
-title: Checkbox コンポーネント
+title: Angular Checkbox コンポーネント
 _description: Ignite UI for Angular Checkbox コンポーネントは、特定の条件のバイナリ選択を許可する選択コントロールです。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Checkbox コンポーネント, Angular Checkbox コントロール
 _language: ja
@@ -54,9 +54,9 @@ export class AppModule {}
 // tasks.component.ts
 ...
 public tasks = [
-  { done: true, description: 'Research' },
-  { done: true, description: 'Implement' },
-  { done: false, description: 'Test' },
+    { done: true, description: 'Research' },
+    { done: true, description: 'Implement' },
+    { done: false, description: 'Test' }
 ];
 
 ...
@@ -162,9 +162,9 @@ igx-checkbox.tasks {
 // app.component.ts
 
 public tasks = [
-    { done: true, description: "Research" },
-    { done: true, description: "Implement" },
-    { done: false, description: "Test" }
+    { done: true, description: 'Research' },
+    { done: true, description: 'Implement' },
+    { done: false, description: 'Test' }
 ];
 
 public get masterCheckbox() {

@@ -96,8 +96,8 @@ In the following example, the cities Sofia and London will initially be selected
 ```typescript
 export class MyCombo {
     public cities: { name: string, id: string }[] = [
-                   { name: "Sofia", id: "BG01" }, { name: "London", id: "UK01" }, ...];
-    public selectedCities: string[] = ["BG01", "UK01"];
+                   { name: 'Sofia', id: 'BG01' }, { name: 'London', id: 'UK01' }, ...];
+    public selectedCities: string[] = ['BG01', 'UK01'];
 }
 ```
 
@@ -113,7 +113,7 @@ Two-way binding can also be achieved without a specified `valueKey`. For example
 ```typescript
 export class MyCombo {
     public cities: { name: string, id: string }[] = [
-                   { name: "Sofia", id: "BG01" }, { name: "London", id: "UK01" }, ...];
+                   { name: 'Sofia', id: 'BG01' }, { name: 'London', id: 'UK01' }, ...];
     public selectedCities: { name: string, id: string }[] = [this.cities[0], this.cities[1]];
 }
 ```

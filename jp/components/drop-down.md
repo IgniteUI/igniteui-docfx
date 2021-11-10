@@ -65,9 +65,9 @@ export class AppModule {}
 // dropdown.component.ts
 export class MyDropDownComponent {
     public items: Array<{ field: string }> = [
-        { field: "Option 1" },
-        { field: "Option 2" },
-        { field: "Option 3" }
+        { field: 'Option 1' },
+        { field: 'Option 2' },
+        { field: 'Option 3' }
     ];
 }
 ```
@@ -97,9 +97,9 @@ export class MyDropDownComponent {
 // dropdown.component.ts
 export class MyDropDownComponent {
     public items: Array<{ field: string }> = [
-        { field: "Option 1" },
-        { field: "Option 2" },
-        { field: "Option 3" }
+        { field: 'Option 1' },
+        { field: 'Option 2' },
+        { field: 'Option 3' }
     ];
 }
 ```
@@ -143,14 +143,14 @@ export class MyDropDownComponent {
 // dropdown.component.ts
 export class MyDropDownComponent {
     public items: any[] = [
-        { field: "European Union", code: "EU", header: true },
-        { field: "Germany", code: "DE" },
-        { field: "Bulgaria", code: "BG", selected: true },
-        { field: "France", code: "FR", disabled: true },
-        { field: "North America", code: "NA", header: true },
-        { field: "Canada", code: "CA" },
-        { field: "United States", code: "US" },
-        { field: "Mexico", code: "MX" }
+        { field: 'European Union', code: 'EU', header: true },
+        { field: 'Germany', code: 'DE' },
+        { field: 'Bulgaria', code: 'BG', selected: true },
+        { field: 'France', code: 'FR', disabled: true },
+        { field: 'North America', code: 'NA', header: true },
+        { field: 'Canada', code: 'CA' },
+        { field: 'United States', code: 'US' },
+        { field: 'Mexico', code: 'MX' }
     ];
 }
 ```
@@ -180,30 +180,30 @@ export class MyCustomDropDownComponent {
         name: 'Vegetables',
         entries: [{
             name: 'Cucumber',
-            refNo: `00000`
+            refNo: '00000'
         }, {
-        name: 'Lettuce',
-        refNo: `00001`
+            name: 'Lettuce',
+            refNo: '00001'
         },
         ...]
     }, {
         name: 'Fruits',
         entries: [{
             name: 'Banana',
-            refNo: `10000`
+            refNo: '10000'
         }, {
             name: 'Tomato',
-            refNo: `10001`
+            refNo: '10001'
         },
         ...]
     }, {
         name: 'Meats',
         entries: [{
             name: 'Chicken',
-            refNo: `20000`
+            refNo: '20000'
         }, {
             name: 'Beef',
-            refNo: `20001`
+            refNo: '20001'
         },
         ...]
     }];
@@ -275,7 +275,7 @@ export class MyCustomDropDownComponent {
 // dropdown.component.ts
 export class MyMenuComponent {
     public items: Array<{ text: string }> =
-        [{ text: "Add New Contact" }, { text: "Edit Contact" }, { text: "Refresh" }, { text: "Help" }];
+        [{ text: 'Add New Contact' }, { text: 'Edit Contact' }, { text: 'Refresh' }, { text: 'Help' }];
     public text: string;
     public overlaySettings = {
         positionStrategy: new ConnectedPositioningStrategy({
@@ -332,12 +332,12 @@ export class MyMenuComponent {
 // input-dropdown.component.ts
 export class InputDropDownComponent {
     @ViewChild(IgxDropDownComponent) public igxDropDown: IgxDropDownComponent;
-    @ViewChild("inputGroup", { read: IgxInputGroupComponent}) public inputGroup: IgxInputGroupComponent;
+    @ViewChild('inputGroup', { read: IgxInputGroupComponent}) public inputGroup: IgxInputGroupComponent;
 
     public items: Array<{ field: string }> = [
-        { field: "Option 1" },
-        { field: "Option 2" },
-        { field: "Option 3" }
+        { field: 'Option 1' },
+        { field: 'Option 2' },
+        { field: 'Option 3' }
     ];
 
     public openDropDown() {

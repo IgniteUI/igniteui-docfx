@@ -1,5 +1,5 @@
 ---
-title: Snackbar Component
+title: Angular Snackbar Component
 _description: Easily integrate a brief, single-line message within your mobile and desktop applications with Ignite UI for Angular Snackbar component.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Snackbar component, Angular Snackbar control
 ---
@@ -179,7 +179,7 @@ Let’s create a list with contacts that can be deleted. When an item is deleted
 ```typescript
 //sample.component.ts
 
-import { Component, OnInit, ViewChild } from "@angular/core";
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { IgxSnackbarComponent } from 'igniteui-angular';
 
 ...
@@ -191,23 +191,13 @@ public deletedItems = [];
 constructor() { }
 
 public ngOnInit() {
-    this.navItems = [{
-        avatar: "assets/images/avatar/2.jpg",
-        text: "Richard Mahoney"
-    },
-    {
-        avatar: "assets/images/avatar/4.jpg",
-        text: "Lisa Landers"
-    },
-    {
-        avatar: "assets/images/avatar/14.jpg",
-        text: "Marianne Taylor"
-    },
-    {
-        avatar: "assets/images/avatar/17.jpg",
-        text: "Ward Riley"
-    }];
-  }
+    this.navItems = [
+        { avatar: 'assets/images/avatar/2.jpg', text: 'Richard Mahoney'},
+        { avatar: 'assets/images/avatar/4.jpg', text: 'Lisa Landers' },
+        { avatar: 'assets/images/avatar/14.jpg', text: 'Marianne Taylor' },
+        { avatar: 'assets/images/avatar/17.jpg', text: 'Ward Riley' }
+    ];
+}
 
 public delete(item) {
     this.deletedItems.push([item, this.navItems.indexOf(item)]);
