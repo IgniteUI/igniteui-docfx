@@ -143,21 +143,7 @@ The @@igComponent supports remote sorting, which is demonstrated in the [`@@igCo
 
 ## Sorting Indicators Templates
 
-@@if (igxName === 'IgxGrid') {
-
-If you want to customize the sorting indicator icon in the column header you could use custom templates. The Grid provides three directives for templating the indicators for all states of the column sorting:
-
-}
-@@if (igxName === 'IgxTreeGrid') {
-
-If you want to customize the sorting indicator icon in the column header you could use custom templates. The Tree Grid provides three directives for templating the indicators for all states of the column sorting:
-
-}
-@@if (igxName === 'IgxHierarchicalGrid') {
-
-If you want to customize the sorting indicator icon in the column header you could use custom templates. The Hierarchical Grid provides three directives for templating the indicators for all states of the column sorting:
-
-}
+The sorting indicator icon in the column header can be customized using a template. The following directives are available for templating the sorting indicator for any sorting state (ascending, descending, none):
 
 - `IgxSortHeaderIconDirective` – re-templates the sorting icon when no sorting is applied.
 
