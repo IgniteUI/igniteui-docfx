@@ -527,9 +527,9 @@
     - name: Templates
       href: combo-templates.md
       new: false
-    - name: Cascading Scenario
-      href: combo-cascading.md
-      new: false
+    - name: Single Select ComboBox
+      href: simple-combo.md
+      new: true
 - name: Spreadsheet
   href: spreadsheet-overview.md
   new: false

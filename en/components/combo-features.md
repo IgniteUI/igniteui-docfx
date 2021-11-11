@@ -217,7 +217,7 @@ Additional components and/or directives with relative APIs that were used:
 * [ComboBox Templates](combo-templates.md)
 * [Template Driven Forms Integration](input-group.md)
 * [Reactive Forms Integration](angular-reactive-form-validation.md)
-* [Cascading Scenario](combo-cascading.md)
+* [Single Select ComboBox](simple-combo.md)
 
 Our community is active and always welcoming to new ideas.
 

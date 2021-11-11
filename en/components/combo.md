@@ -160,7 +160,7 @@ export class MyExampleCombo {
 }
 ```
 
-The combobox also fires an event every time its selection changes - [selectionChanging()]({environment:angularApiUrl}/classes/igxcombocomponent.html#selectionchanging). The emitted event arguments, [IComboSelectionChangeEventArgs]({environment:angularApiUrl}/interfaces/icomboselectionchangeeventargs.html), contain information about the selection prior to the change, the current selection and the items that were added or removed. The event can also be cancelled, preventing the selection update with the new array of items.
+The combobox also fires an event every time its selection changes - [selectionChanging()]({environment:angularApiUrl}/classes/igxcombocomponent.html#selectionchanging). The emitted event arguments, [IComboSelectionChangingEventArgs]({environment:angularApiUrl}/interfaces/icomboselectionchangingeventargs.html), contain information about the selection prior to the change, the current selection and the items that were added or removed. The event can also be cancelled, preventing the selection update with the new array of items.
 
 Binding to the event can be done through the proper `@Output` property on the `igx-combo` tag:
 
@@ -326,7 +326,7 @@ Additional components and/or directives with relative APIs that were used:
 * [ComboBox Templates](combo-templates.md)
 * [Template Driven Forms Integration](input-group.md)
 * [Reactive Forms Integration](angular-reactive-form-validation.md)
-* [Cascading Scenario](combo-cascading.md)
+* [Single Select ComboBox](simple-combo.md)
 
 Our community is active and always welcoming to new ideas.
 
