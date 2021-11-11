@@ -199,7 +199,7 @@ IgxGrid はコピーされたデータを取得し、コンテナ要素に貼り
 
 ## 既知の問題と制限
 
-- IE11 で選択を有効にした @@igComponent コンポーネントを使用するには、Angular アプリケーションの polyfill.ts に配列ポリフィルを明示的にインポートする必要があります。 IE11 is no longer supported as of version 13.0.0.
+- IE11 で選択を有効にした @@igComponent コンポーネントを使用するには、Angular アプリケーションの polyfill.ts に配列ポリフィルを明示的にインポートする必要があります。IE11 は、バージョン 13.0.0 でサポートされなくなりました。
 
     ```typescript
     import 'core-js/es7/array';
