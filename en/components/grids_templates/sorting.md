@@ -150,7 +150,7 @@ If you want to customize the sorting indicator icon in the column header you cou
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-If you want to customize the sorting indicator icon in the column header you could use custom templates. The Three Grid provides three directives for templating the indicators for all states of the column sorting:
+If you want to customize the sorting indicator icon in the column header you could use custom templates. The Tree Grid provides three directives for templating the indicators for all states of the column sorting:
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
