@@ -1,35 +1,36 @@
 ---
-title: Angular Stepper Component – Ignite UI for Angular
-_description: Use the Angular Stepper component to visualize content as a process and show its progress by dividing the content into logical steps. Learn how to do it.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Angular Stepper component, Infragistics
+title: Angular Stepper コンポーネント - Ignite UI for Angular
+_description: Angular Stepper コンポーネントを使用してコンテンツをプロセスとして可視化し、コンテンツを論理的なステップに分割して進行状況を表示します。使用方法について説明します。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, Angular Stepper コンポーネント, インフラジスティックス
+_language: ja
 ---
 
-# Angular Stepper Component Overview
-The Angular material stepper is a highly customizable component that visualizes content as a process and shows its progress by dividing the content into successive steps. It appears as a vertical or horizontal line. Provided by the Ignite UI for Angular library, the stepper component delivers a wizard-like workflow and multiple features like step validation, styling, orientation and keyboard navigation. 
+# Angular Stepper コンポーネントの概要
+Angular マテリアル ステッパーは高度にカスタマイズ可能なコンポーネントで、必要なプロセスを可視化し、進行状況を各ステップで表示します。垂直線または水平線で表示されます。Ignite UI for Angular ライブラリによって提供されるステッパー コンポーネントは、ウィザードのようなワークフローと、ステップ検証、スタイル設定、向き、キーボード ナビゲーションなどの複数の機能を提供します。 
 
-## Angular Stepper Example
-In this Angular Stepper example, you can see how users are given the opportunity to customize their credit card and they pass trough the process in five logical steps - selecting card type, adding business information, filling in personal information, providing shipping details and confirmation.
-Note that the fourth step in our Angular stepper demo gets enabled only if the user ticks the checkbox in the second step, signifying that their mailing address is different from the business physical address.
+## Angular Stepper の例
+この Angular Stepper の例では、クレジット カードをカスタマイズでき、カード タイプの選択、ビジネス情報の追加、個人情報の入力、出荷の詳細の提供、確認の 5 つの論理ステップでプロセスを実行します。
+Angular ステッパー デモの 4 番目のステップは、2 番目のステップでユーザーがチェックボックスにチェックを付けた場合にのみ有効になります。
 
 <code-view style="height: 725px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/stepper-overview-sample" alt="Angular Stepper Example">
+           iframe-src="{environment:demosBaseUrl}/layouts/stepper-overview-sample" alt="Angular Stepper の例">
 </code-view>
 
 <div class="divider--half"></div>
 
-## How to install Angular Stepper?
+## Angular Stepper のインストール方法
 
-### Getting Started with Ignite UI for Angular Stepper
+### Ignite UI for Angular Stepper を使用した作業の開始
 
-To get started with the Ignite UI for Angular Stepper component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+Ignite UI for Angular Stepper コンポーネントを初期化するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
 
 ```cmd
 ng add igniteui-angular
 ```
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+Ignite UI for Angular については、[*はじめに*](general/getting-started.md) トピックををご覧ください。
 
-The next step is to import the `IgxStepperModule` in your app.module file. 
+次に、app.module ファイルに `IgxStepperModule` をインポートします。 
 
 ```typescript
 // app.module.ts
@@ -44,16 +45,16 @@ import { IgxStepperModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
-Now that you have the Angular Material Stepper module imported, you can start with a basic configuration of the `igx-stepper` and its steps.
+Angular Material Stepper モジュールをインポート後、`igx-stepper` とそのステップの基本設定を開始します。
 
-## Usage
-[IgxStepComponent]({environment:angularApiUrl}/classes/igxstepcomponent.html) is the representation of every step that belongs to the [IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponent.html). Steps provide [isValid]({environment:angularApiUrl}/classes/igxstepcomponent.html#isValid), [active]({environment:angularApiUrl}/classes/igxstepcomponent.html#active), [optional]({environment:angularApiUrl}/classes/igxstepcomponent.html#optional), [disabled]({environment:angularApiUrl}/classes/igxstepcomponent.html#disabled) and [completed]({environment:angularApiUrl}/classes/igxstepcomponent.html#completed) properties, which give you the ability to configure the step states according to your business requirement.
+## 使用方法
+[IgxStepComponent]({environment:angularApiUrl}/classes/igxstepcomponent.html) は、[IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponent.html) に属するすべてのステップの表現です。ステップは [isValid]({environment:angularApiUrl}/classes/igxstepcomponent.html#isValid)、[active]({environment:angularApiUrl}/classes/igxstepcomponent.html#active)、[optional]({environment:angularApiUrl}/classes/igxstepcomponent.html#optional)、[disabled]({environment:angularApiUrl}/classes/igxstepcomponent.html#disabled)、[completed]({environment:angularApiUrl}/classes/igxstepcomponent.html#completed) プロパティを提供し、ビジネス要件に応じてステップの状態を構成できます。
 
-### Declaring a Stepper
-Now that we have the stepper module imported, let’s get started with its configuration.
+### ステッパーの宣言
+ステッパー モジュールをインポートした後で、構成を開始します。
 
-Steps can be declared using one of the following approaches.
-- Iterating through a data set
+ステップは、以下の方法のいずれかを使用して宣言できます。
+- データセットの繰り返し
 
 ```html
 <igx-stepper>
@@ -70,7 +71,7 @@ Steps can be declared using one of the following approaches.
 ```
 
 
-- Creating static steps
+- 静的ステップの作成
 
 ```html
 <igx-stepper>
@@ -82,7 +83,7 @@ Steps can be declared using one of the following approaches.
     </igx-step>
 </igx-stepper>
 ```
-For each step the user has the ability to configure indicator, title, subtitle and content using the `igxStepIndicator`, `igxStepTitle`, `igxStepSubTitle` and `igxStepContent` directives as follows: 
+各ステップで、`igxStepIndicator`、`igxStepTitle`、`igxStepSubTitle`、および `igxStepContent` ディレクティブを使用してインジケーター、タイトル、サブタイトル、コンテンツを構成できます。 
 
 ```html
 <igx-stepper>
@@ -98,19 +99,19 @@ For each step the user has the ability to configure indicator, title, subtitle a
 ```
 <img class="responsive-img" style="margin-bottom:10px; -webkit-box-shadow: 4px 4px 4px 4px #ccc; -moz-box-shadow: 4px 4px 4px 4px #ccc; box-shadow: 4px 4px 4px 4px #ccc; max-width: 500px" src="../images/stepper/stepper-step.png" />
 
-### Changing the Stepper Orientation
-You can customize the stepper orientation through the exposed [orientation]({environment:angularApiUrl}/classes/igxsteppercomponent.html#orientation) property. It takes a member of the `IgxStepperOrientation` enum - `Horizontal` *(default value)* or `Vertical`.
+### ステッパーの向きの変更
+公開された [orientation]({environment:angularApiUrl}/classes/igxsteppercomponent.html#orientation) プロパティでステッパーの向きをカスタマイズできます。`IgxStepperOrientation` 列挙型の `Horizontal` メンバー (デフォルト値) または `Vertical` メンバーを取得します。
 
-**Horizontal Stepper Orientation**
+**水平方向のステッパー**
 
-`horizontal` is the default value for the `igx-stepper` [orientation]({environment:angularApiUrl}/classes/igxsteppercomponent.html#orientation) property.
-When the stepper is horizontally orientated you have the opportunity to determine whether the steps’ content would be displayed above or below the steps’ headers. This could be achieved by setting the [IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponent.html) [contentTop]({environment:angularApiUrl}/classes/igxsteppercomponent.html#contentTop) boolean property, which default value is `false`. In case it is enabled the steps’ content would be displayed above the steps’ headers.
+`igx-stepper` の [orientation]({environment:angularApiUrl}/classes/igxsteppercomponent.html#orientation) プロパティのデフォルト値は `horizontal` です。
+ステッパーが水平方向の場合、ステップのコンテンツをステップのヘッダーの上または下に表示するかどうかを決定できます。これは、[IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponent.html) の [contentTop]({environment:angularApiUrl}/classes/igxsteppercomponent.html#contentTop) ブール型プロパティを設定することで実現できます。デフォルト値は `false` です。有効な場合、ステップのコンテンツはステップのヘッダーの上に表示されます。
 
 <img class="responsive-img" style="margin-bottom:10px; -webkit-box-shadow: 4px 4px 4px 4px #ccc; -moz-box-shadow: 4px 4px 4px 4px #ccc; box-shadow: 4px 4px 4px 4px #ccc; max-width: 800px"  src="../images/stepper/stepper-contentTop.png" />
 
-**Vertical Stepper Orientation**
+**水平方向のステッパー**
 
-You can easily switch from the horizontal to vertical layout. In order to change the default orientation you should set the [orientation]({environment:angularApiUrl}/classes/igxsteppercomponent.html#orientation) property to `vertical`.
+水平レイアウトから垂直レイアウトに簡単に切り替えることができます。デフォルトの方向を変更するには、[orientation]({environment:angularApiUrl}/classes/igxsteppercomponent.html#orientation) プロパティを `vertical` に設定します。
 ```html
 <igx-stepper [orientation]="'vertical'">
 	<igx-step>    
@@ -122,104 +123,104 @@ You can easily switch from the horizontal to vertical layout. In order to change
 	</igx-step>
 </igx-stepper>
 ```
-The sample below demonstrates how stepper [orientation]({environment:angularApiUrl}/classes/igxsteppercomponent.html#orientation) and [titles position](stepper.md#customizing-the-steps) could be changed runtime. 
+以下のサンプルは、実行時にステッパーの[向き]({environment:angularApiUrl}/classes/igxsteppercomponent.html#orientation)と[タイトルの位置](stepper.md#customizing-the-steps)を変更する方法を示しています。 
 
 <code-view style="height: 528px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/stepper-label-position-and-orientation-sample" alt="Angular Stepper Orientation Example">
+           iframe-src="{environment:demosBaseUrl}/layouts/stepper-label-position-and-orientation-sample" alt="Angular Stepper 向きの例">
 </code-view>
 
 <div class="divider--half"></div>
 
-### Step States 
-[IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponent.html) supports four steps states and each of them apply different styles by default:
-- [**active**]({environment:angularApiUrl}/classes/igxstepcomponent.html#active) - Determines whether the step is the currently displayed. By design, if the user does not explicitly set some step’s active attribute to `true`, the initial active step would be the first non-disabled step.
-- [**disabled**]({environment:angularApiUrl}/classes/igxstepcomponent.html#disabled) - Determines whether the step is interactable. By default, the disabled attribute of a step is set to `false`.
-- [**optional**]({environment:angularApiUrl}/classes/igxstepcomponent.html#optional) - By default, the optional attribute of a step is set to `false`. If validity of a step in linear stepper is not required, then the optional attribute can be enabled in order to be able to move forward independently from the step validity.
-- [**completed**]({environment:angularApiUrl}/classes/igxstepcomponent.html#completed) - By default, the completed attribute of a step returns `false`. The user, however, can override this default completed behavior by setting the completed attribute as needed. When step is marked as completed not only that the style of the step header is changed by default, but also the style of the progress line between the completed step and the next one. Both styles could be modified using the exposed [CSS variables]({environment:sassApiUrl}/index.html#function-igx-stepper-theme).
+### ステップ状態 
+[IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponent.html) は 4 つのステップ状態をサポートし、それぞれがデフォルトで異なるスタイルを適用します。
+- [**active**]({environment:angularApiUrl}/classes/igxstepcomponent.html#active) - ステップが現在表示されているかどうかを決定します。設計上、ユーザーが明示的にステップの active 属性を `true` に設定しない場合、最初の有効なステップがアクティブになります。
+- [**disabled**]({environment:angularApiUrl}/classes/igxstepcomponent.html#disabled) - ステップが操作可能かどうかを決定します。デフォルトでは、ステップの disabled 属性は `false` に設定されています。
+- [**optional**]({environment:angularApiUrl}/classes/igxstepcomponent.html#optional) - デフォルトで、ステップの optional 属性は `false` に設定されます。リニア ステッパーのステップの有効性が必要ない場合、オプションの属性を有効にして、ステップの有効性とは関係なく前進できます。
+- [**completed**]({environment:angularApiUrl}/classes/igxstepcomponent.html#completed) - デフォルトでは、ステップの completed 属性は `false` を返します。ユーザーは、completed 属性を必要に応じて設定することにより、このデフォルトの completed 動作をオーバーライドできます。ステップが完了済みとしてマークされると、ステップ ヘッダーのスタイルがデフォルトで変更されるだけでなく、完了したステップと次のステップの間の進捗線のスタイルも変更されます。両方のスタイルは、公開された [CSS 変数]({environment:sassApiUrl}/index.html#function-igx-stepper-theme)を使用して変更できます。
 
-The [IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponent.html) gives you the opportunity to set validation logic for each step through the two-way bindable [**isValid**]({environment:angularApiUrl}/classes/igxstepcomponent.html#isValid) property. Based on its value it is decided whether the user will have the ability to move forward in linear stepper mode.
-By default, the [isValid]({environment:angularApiUrl}/classes/igxstepcomponent.html#isValid) property of a step is set to `true`.
+[IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponent.html) は、双方向バインド可能な [**isValid**]({environment:angularApiUrl}/classes/igxstepcomponent.html#isValid) プロパティで各ステップの検証ロジックを設定できます。その値に基づいて、ユーザーがリニア ステッパー モードで前に進むことができるかどうかが決定されます。
+デフォルトで、ステップの [isValid]({environment:angularApiUrl}/classes/igxstepcomponent.html#isValid) プロパティは `true` に設定されます。
 
-### Linear Stepper
+### リニア ステッパー
 
-The `igx-stepper` gives you the opportunity to set its steps flow using the [linear]({environment:angularApiUrl}/classes/igxsteppercomponent.html#linear) property. By default, linear is set to `false` and the user is enabled to select any non-disabled step in the [IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponent.html).
+`igx-stepper` は、[linear]({environment:angularApiUrl}/classes/igxsteppercomponent.html#linear) プロパティを使用してステップ フローを設定できます。デフォルトで、linear は `false` に設定され、ユーザーは [IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponent.html) で無効にされていないステップを選択できます。
 
-When the [linear]({environment:angularApiUrl}/classes/igxsteppercomponent.html#linear) property is set to `true`, the stepper will require the current non-optional step to be valid before proceeding to the next one. 
+[linear]({environment:angularApiUrl}/classes/igxsteppercomponent.html#linear) プロパティが `true` に設定されている場合、ステッパーは次のステップに進む前に現在のオプションではないステップを有効にする必要があります。 
 
-If the current non-optional step is not valid you cannot go forward to the next step until you validate the current one. 
+現在のオプションではないステップが有効でない場合、現在のステップを検証するまで次のステップに進むことができません。 
 
-> Note: Optional steps validity is not taken into account in order to move forward.
+> 注: オプションのステップの有効性は考慮されません。
 
-The following example demonstrates how to configure a linear stepper:
+以下の例は、リニア ステッパーを構成する方法を示しています。
 
 <code-view style="height: 430px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/stepper-linear-sample" alt="Angular Linear Stepper Example">
+           iframe-src="{environment:demosBaseUrl}/layouts/stepper-linear-sample" alt="Angular Linear Stepper の例">
 </code-view>
 
 <div class="divider--half"></div>
 
-### Step Interactions
+### ステップ操作
 
-[IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponent.html) provides the following API methods for step interactions:
-- [**navigateTo**]({environment:angularApiUrl}/classes/igxsteppercomponent.html#navigateTo) – activates the step by given index.
-- [**next**]({environment:angularApiUrl}/classes/igxsteppercomponent.html#next) - activates the next non-disabled step.
-- [**prev**]({environment:angularApiUrl}/classes/igxsteppercomponent.html#prev) – activates the previous non-disabled step.
-- [**reset**]({environment:angularApiUrl}/classes/igxsteppercomponent.html#reset) – resets the stepper to its initial state.
+[IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponent.html) は、ステップ操作に以下の API メソッドを提供します。
+- [**navigateTo**]({environment:angularApiUrl}/classes/igxsteppercomponent.html#navigateTo) – 指定したインデックスでステップをアクティブ化します。
+- [**next**]({environment:angularApiUrl}/classes/igxsteppercomponent.html#next) - 次の無効化されていないステップをアクティブ化します。
+- [**prev**]({environment:angularApiUrl}/classes/igxsteppercomponent.html#prev) – 前の無効化されていないステップをアクティブ化します。
+- [**reset**]({environment:angularApiUrl}/classes/igxsteppercomponent.html#reset) – ステッパーを初期状態にリセットします。
 
-> Note: The reset method would not clear the step`s content. This should be done manually.
+> 注: reset メソッドはステップの内容をクリアしません。これは手動で行う必要があります。
 
-### Customizing the Steps
+### ステップのカスタマイズ
 
-The Ignite UI for Angular Stepper gives you the ability to configure different options for titles, indicators and more.
+Ignite UI for Angular Stepper では、タイトル、インジケーターなどのさまざまなオプションを構成できます。
 
-This could be achieved through the [stepType]({environment:angularApiUrl}/classes/igxsteppercomponent.html#stepType) property of the [IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponent.html). It takes a member of the `IgxStepType` enum:
-- Full *(default value)*
-- Indicator
-- Title
+これは、[IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponent.html) の [stepType]({environment:angularApiUrl}/classes/igxsteppercomponent.html#stepType) プロパティで実現できます。`IgxStepType` 列挙型のメンバーを取得します。
+- Full (フル、**デフォルト値**)
+- Indicator (インジケーター)
+- Title (タイトル)
 
-**Full**
+**Full (フル)**
 
-If titles and subtitles are defined, with this setup both indicators and titles would be rendered.
+タイトルとサブタイトルが定義されている場合、この設定ではインジケーターとタイトルの両方が描画されます。
 
-The user would also have the ability to define the position of the title for the steps, so it could be placed before, after, above or below the step indicator.
-The user can configure the title position using the [titlePosition]({environment:angularApiUrl}/classes/igxsteppercomponent.html#titlePosition) property. Both properties take member of `IgxStepperTitlePosition` enum:
+また、ユーザーはステップのタイトルの位置を定義できるため、ステップ インジケーターの前、後、上、または下に配置できます。
+ユーザーは [titlePosition]({environment:angularApiUrl}/classes/igxsteppercomponent.html#titlePosition) プロパティを使用してタイトル位置を構成できます。両方のプロパティは `IgxStepperTitlePosition` 列挙型のメンバーを取得します。
 - end
 - start
 - bottom
 - top
 
-When the `igx-stepper` is horizontally orientated, the title position default value is `bottom`.
+`Igx-stepper` が水平方向の場合、タイトル位置のデフォルト値は `bottom` です。
 
-When the orientation is set to vertical layout the title position by default is `end`.
+向きが垂直レイアウトに設定されている場合、タイトル位置のデフォルト値は `end` です。
 
-> Note: [titlePosition]({environment:angularApiUrl}/classes/igxsteppercomponent.html#titlePosition) property is applicable **only** when the stepper [stepType]({environment:angularApiUrl}/classes/igxsteppercomponent.html#stepType) property is set to `full`.
+> 注：[titlePosition]({environment:angularApiUrl}/classes/igxsteppercomponent.html#titlePosition) プロパティは、ステッパーの [stepType]({environment:angularApiUrl}/classes/igxsteppercomponent.html#stepType) プロパティが `full` に設定されている場合に**のみ**適用できます。
 
-**Indicator**
+**Indicator (インジケーター)**
 
-If you want to display only indicators for the steps, set the [stepType]({environment:angularApiUrl}/classes/igxsteppercomponent.html#stepType) option to `indicator`.
+ステップのインジケーターのみを表示する場合は、[stepType]({environment:angularApiUrl}/classes/igxsteppercomponent.html#stepType) オプションを `indicator` に設定します。
 
-The step indicator supports any content, however with the restriction that its size would be always **24 pixels**. Having this in mind, we recommend using [IgxIconComponent](icon.md) or [IgxAvatarComponent](avatar.md) as step indicators.
+ステップ インジケーターはすべてのコンテンツをサポートしますが、サイズが常に **24 ピクセル**になるという制限があります。この点に注意して、ステップ インジケーターとして [IgxIconComponent](icon.md) または [IgxAvatarComponent](avatar.md) を使用することをお勧めします。
 
-**Title**
+**Title (タイトル)**
 
-If you want to display only titles for the steps, set the [stepType]({environment:angularApiUrl}/classes/igxsteppercomponent.html#stepType) option to `title`.
+ステップのタイトルのみを表示する場合は、[stepType]({environment:angularApiUrl}/classes/igxsteppercomponent.html#stepType) オプションを `title` に設定します。
 
-In this way if subtitles are defined, they will also be rendered below the step title.
+このように、サブタイトルが定義されている場合、それらもステップ タイトルの下に描画されます。
 
-> Note: This container could be re-templated as per your requirement without any size restrictions. For example, you could add an indicator with size greater than 24 pixels inside it.
+> 注: このコンテナーは、サイズ制限なしで要件に応じて再テンプレート化できます。たとえば、サイズが 24 ピクセルより大きいインジケーターを中に追加できます。
 
-The sample below demonstrates all exposed step types and how they could be changed:
+以下のサンプルは公開されたすべてのステップ タイプと変更方法を示しています。
 
 <code-view style="height: 300px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/stepper-steptypes-sample" alt="Angular Step Types Example">
+           iframe-src="{environment:demosBaseUrl}/layouts/stepper-steptypes-sample" alt="Angular ステップ タイプの例">
 </code-view>
 
 <div class="divider--half"></div>
 
-The [IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponent.html) also allows you to customize the rendered indicators for active, invalid and completed steps. This could be achieved through the `igxStepActiveIndicator`, `igxStepInvalidIndicator` and `igxStepCompletedIndicator` directives:
+[IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponent.html) では、アクティブなステップ、無効なステップ、完了したステップの描画されたインジケーターをカスタマイズできます。これは、`igxStepActiveIndicator`、`igxStepInvalidIndicator`、および `igxStepCompletedIndicator` ディレクティブで実現できます。
 ```html
 <igx-stepper>
     <ng-template igxStepActiveIndicator>
@@ -237,49 +238,49 @@ The [IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponen
 </igx-stepper>
 ```
 
-> Note: This templates would be applied for all steps with the relevant state.
+> 注: このテンプレートは、関連する状態のすべてのステップに適用されます。
 
-### Angular Stepper Animations
+### Angular Stepper のアニメーション
 
-Angular Stepper Animations provide the end-users with a beautiful experience interacting with the defined steps. The available animation options differ depending on the orientation of the stepper.
+Angular Stepper のアニメーションにより、エンドユーザーは定義されたステッをプ操作しているときに高いエクスペリエンスを得ることができます。使用可能なアニメーション オプションは、ステッパーの向きによって異なります。
 
-When the stepper is **horizontally orientated**, it is configured to use the `slide` animation by default. It also supports `fade` as an alternative. The animations are configured through the [horizontalAnimationType]({environment:angularApiUrl}/classes/igxsteppercomponent.html#horizontalAnimationType) input.
+ステッパーが**水平方向**の場合、デフォルトで `slide` アニメーションを使用するように構成されます。`fade` もサポートします。アニメーションは、[horizontalAnimationType]({environment:angularApiUrl}/classes/igxsteppercomponent.html#horizontalAnimationType) 入力を介して構成されます。
 
-In **vertically orientated** layout, the animation type could be defined using the [verticalAnimationType]({environment:angularApiUrl}/classes/igxsteppercomponent.html#verticalAnimationType) property. By default, its value is `grow` and the user has the ability to set it to `fade` as well.
+**垂直方向**のレイアウトでは、アニメーション タイプは [verticalAnimationType]({environment:angularApiUrl}/classes/igxsteppercomponent.html#verticalAnimationType) プロパティを使用して定義できます。デフォルトで値は `grow` で、ユーザーは `fade` に設定できます。
 
-Setting `none` to the both animation type inputs disables stepper animations.
+両方のアニメーション タイプ入力に `none` を設定すると、ステッパー アニメーションが無効になります。
 
-[IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponent.html) gives you the ability to configure the duration of the transition between the steps. This could be achieved through the [animationDuration]({environment:angularApiUrl}/classes/igxsteppercomponent.html#animationDuration) property, which takes a number as an argument and it is common to the both orientations.
+[IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponent.html) は、ステップ間のトランジションの期間を構成する機能を提供します。これは、引数として数値を受け取る [animationDuration]({environment:angularApiUrl}/classes/igxsteppercomponent.html#animationDuration) プロパティで実現できます。これは両方の方向に共通です。
 
-## Keyboard Navigation
+## キーボード ナビゲーション
 
-Angular Material Stepper provides a rich variety of keyboard interactions to the end-user. This functionality is enabled by default and allows end-users to easily navigate through the steps. 
-The [IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponent.html) navigation is compliant with [W3 accessability standards](https://www.w3.org/TR/wai-aria-practices-1.1/#tabpanel) and convenient to use.
+Angular Material Stepper は、さまざまなキーボード操作をエンドユーザーに提供します。この機能はデフォルトで有効になっており、エンドユーザーは簡単にステップを移動できます。 
+[IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponent.html) ナビゲーションは [W3 アクセシビリティ標準](https://www.w3.org/TR/wai-aria-practices-1.1/#tabpanel)に準拠しており、便利に使用できます。
 
-**Key Combinations**
+**キーの組み合わせ**
 
- - <kbd>Tab</kbd> - moves the focus to the next tabbable element
- - <kbd>Shift + Tab</kbd> - moves the focus to the previous tabbable element
- - <kbd>Arrow Down</kbd> - moves the focus to the header of the next accessible step when the `igx-stepper` is **vertically orientated**
- - <kbd>Arrow Up</kbd> - moves the focus to the header of the previous accessible step when the `igx-stepper` is **vertically orientated**
- - <kbd>Arrow Left</kbd> - moves the focus to the header of the previous accessible step in both orientations
- - <kbd>Arrow Right</kbd> - moves the focus to the header of the next accessible step in both orientations
- - <kbd>Home</kbd> - moves the focus to the header of the FIRST enabled step in the `igx-stepper`
- - <kbd>End</kbd> - moves the focus to the header of the LAST enabled step in the `igx-stepper`
- - <kbd>Enter / Space</kbd> - activates the currently focused step
+ - <kbd>Tab</kbd> - 次の移動可能な要素にフォーカスを移動します。
+ - <kbd>Shift + Tab</kbd> - 前移動可能な要素にフォーカスを移動します。
+ - <kbd>下矢印</kbd> - `igx-stepper` が**垂直方向**の場合、次のアクセス可能なステップのヘッダーにフォーカスを移動します。
+ - <kbd>上矢印</kbd> - `igx-stepper` が**垂直方向**の場合、前のアクセス可能なステップのヘッダーにフォーカスを移動します。
+ - <kbd>左矢印</kbd>- 両方の方向で前のアクセス可能なステップのヘッダーにフォーカスを移動します。
+ - <kbd>右矢印</kbd>- 両方の方向で次にアクセス可能なステップのヘッダーにフォーカスを移動します。
+ - <kbd>Home</kbd> - `igx-stepper` の最初の有効なステップのヘッダーにフォーカスを移動します。
+ - <kbd>End</kbd> - `igx-stepper` の最後の有効なステップのヘッダーにフォーカスを移動します。
+ - <kbd>Enter/Space</kbd> - 現在フォーカスされているステップをアクティブ化します。
  
- > Note: By design when the user presses the <kbd>Tab</kbd> key over the step header the focus will move to the step content container. In case the container should be skipped the developer should set the content container `[tabIndex]="-1"`.
+ > 注: ユーザーがステップ ヘッダーで <kbd>Tab</kbd> キーを押すと、フォーカスはステップ コンテンツ コンテナーに移動します。コンテナーをスキップする場合、開発者は `[tabIndex]="-1"` コンテンツ コンテナーを設定する必要があります。
 
-## Angular Stepper Styling
-Using the [Ignite UI for Angular Theming](themes/index.md), we can greatly alter the `igx-stepper` appearance. 
+## Angular Stepper のスタイル設定
+[Ignite UI for Angular テーマ](themes/index.md)を使用して、`igx-stepper` の外観を変更できます。 
 
-First, in order to use the functions exposed by the theme engine, we need to import the `index` file in our style file: 
+はじめに、テーマ エンジンによって公開されている関数を使用するために、スタイル ファイルに `index` ファイルをインポートする必要があります。 
 
 ```scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Following the simplest approach, we create a new theme that extends the [igx-stepper-theme]({environment:sassApiUrl}/index.html#function-igx-stepper-theme) and pass the parameters, which we would like to change: 
+最も簡単な方法として、[igx-stepper-theme]({environment:sassApiUrl}/index.html#function-igx-stepper-theme) を拡張する新しいテーマを作成し、変更するパラメーターを渡す方法があります。 
 ```scss
 $custom-stepper-theme: igx-stepper-theme(
     $current-title-color: #351e65,
@@ -289,20 +290,20 @@ $custom-stepper-theme: igx-stepper-theme(
 
 ```
 
-### Using CSS Variables
+### CSS 変数の使用
 
-The last step is to include the component's theme.
+最後にコンポーネントのテーマを含めます。
 ```scss
 :host {
     @include igx-css-vars($custom-stepper-theme);
 }
 ```
 
-### Using Theme Overrides
+### テーマ オーバーライドの使用
 
-In order to style components for older browsers, like IE11, we have to use a different approach, since CSS variables are not supported there.
+IE11 のような古いブラウザー用にコンポーネントのスタイルを設定するには、CSS 変数がサポートされていないため、別の方法を使用する必要があります。
 
-If the component is using the [Emulated](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`. To prevent the custom theme to leak into other components, be sure to include the `:host` selector before `::ng-deep`: 
+コンポーネントが [Emulated](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`解除`する必要があります。カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。: 
 ```scss
 :host {
     ::ng-deep {
@@ -311,23 +312,23 @@ If the component is using the [Emulated](themes/sass/component-themes.md#view-en
 }
 ```
 
-### Demo
-The sample below demonstrates a simple styling applied through the [Ignite UI for Angular Theming](themes/index.md).
+### デモ
+以下のサンプルは、[Ignite UI for Angular テーマ](themes/index.md)で適用されるシンプルなスタイル設定を示します。
 
 <code-view style="height: 264px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/stepper-styling-sample" alt="Angular Stepper Styling Example">
+           iframe-src="{environment:demosBaseUrl}/layouts/stepper-linear-sample" alt="Angular Linear Stepper スタイル設定の例">
 </code-view>
 
 <div class="divider--half"></div>
 
-## API Reference
+## API リファレンス
 * [IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponent.html)
 * [IgxStepComponent]({environment:angularApiUrl}/classes/igxstepcomponent.html)
 
-## Additional Resources
-Our community is active and always welcoming new ideas.
+## その他のリソース
+コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
 
