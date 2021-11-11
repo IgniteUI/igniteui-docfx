@@ -194,9 +194,9 @@ params: {
 }
 ```
 
-### Trap focus inside dialog
+### ダイアログ内にフォーカスをトラップ
 
-By default when the dialog is opened the Tab key focus is trapped within it, i.e. the focus does not leave the element when the user keeps tabbing through the focusable elements. When the focus leaves the last element, it moves to the first one and vice versa, when SHIFT + TAB is pressed, when the focus leaves the first element, the last element should be focused. In case the dialog does not contain any focusable elements, the focus will be trapped on the dialog container itself. This behavior can be changed by setting the [`focusTrap`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#focustrap) property.
+デフォルトでは、ダイアログが開かれると、Tab キーのフォーカスがダイアログ内にトラップされます。つまり、ユーザーがフォーカス可能な要素をタブで移動し続けても、フォーカスは要素から離れません。フォーカスが最後の要素を離れると、最初の要素に移動します。その逆も同様です。Shift + Tab キーを押すと、フォーカスが最初の要素を離れると、最後の要素にフォーカスが移されます。ダイアログにフォーカス可能な要素が含まれていない場合、フォーカスはダイアログ コンテナ自体にトラップされます。この動作は、[`focusTrap`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#focustrap) プロパティを設定することで変更できます。
 
 ## スタイル設定
 
