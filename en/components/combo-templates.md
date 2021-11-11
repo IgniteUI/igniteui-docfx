@@ -1,15 +1,15 @@
 ---
-title: Combo Templates
+title: ComboBox Templates
 _description: Custom templates for different areas of the igx-combo component can be defined, including items, header, footer, empty list and adding button.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Combo components, Angular Templates, Angular Combo Templates
 ---
 
-# Combo Templates
+# ComboBox Templates
 <p class="highlight">
-The Ignite UI for Angular Combo Component allows defining custom templates for different areas such as header, footer, items, empty list and adding button.
+The Ignite UI for Angular ComboBox Component allows defining custom templates for different areas such as header, footer, items, empty list and adding button.
 </p>
 
-## Angular Combo Templates Example
+## Angular ComboBox Templates Example
 
 
 <code-view style="height: 450px;"
@@ -19,7 +19,7 @@ The Ignite UI for Angular Combo Component allows defining custom templates for d
 
 
 ## Usage
-To get started with the Combo component, first you need to import the `IgxComboModule` in your **app.module.ts** file:
+To get started with the ComboBox component, first you need to import the `IgxComboModule` in your **app.module.ts** file:
 
 ```typescript
 import { IgxComboModule } from 'igniteui-angular';
@@ -35,7 +35,7 @@ export class AppModule {}
 ```
 
 ## Template Types
-When defining `igx-combo` templates, you need to reference them using the following predefined reference names:
+When defining combobox templates, you need to reference them using the following predefined reference names:
 
 ### Item template
 Use selector `[igxComboItem]`:
@@ -119,8 +119,8 @@ Use selector `[igxComboClearIcon]`:
 </igx-combo>
 ```
 
-## Templating Combo Input
-When used with templates, the `igxComboClearIcon` and the `igxComboToggleIcon` selectors, change how the respective buttons appear in the combo input. Passing content inside of the `igx-combo` also allows templating of the combo input similar to the way an `igx-input-group` can be templated (using `igx-prefix`, `igx-suffix` and `igxLabel`). The code snippet below illustrates how to add an appropriate label and prefix to the combo input:
+## Templating ComboBox Input
+When used with templates, the `igxComboClearIcon` and the `igxComboToggleIcon` selectors, change how the respective buttons appear in the combobox input. Passing content inside of the `igx-combo` also allows templating of the combobox input similar to the way an `igx-input-group` can be templated (using `igx-prefix`, `igx-suffix` and `igxLabel`). The code snippet below illustrates how to add an appropriate label and prefix to the combobox input:
 
 ```html
     <igx-combo>
@@ -138,9 +138,9 @@ When used with templates, the `igxComboClearIcon` and the `igxComboToggleIcon` s
 ## Additional Resources
 <div class="divider--half"></div>
 
-* [Combo Component](combo.md)
-* [Combo Features](combo-features.md)
-* [Combo Remote Binding](combo-remote.md)
+* [ComboBox Component](combo.md)
+* [ComboBox Features](combo-features.md)
+* [ComboBox Remote Binding](combo-remote.md)
 * [Template Driven Forms Integration](input-group.md)
 * [Reactive Forms Integration](angular-reactive-form-validation.md)
 * [Cascading Scenario](combo-cascading.md)
