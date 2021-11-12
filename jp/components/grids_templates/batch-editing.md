@@ -143,10 +143,9 @@ export class AppModule {}
 以下のコード例は、[`transactions`]({environment:angularApiUrl}/classes/igxtransactionservice.html#) API (undo、redo、commit) の使用方法を示します。
 
 ```typescript
-...
 export class GridBatchEditingSampleComponent {
-    @ViewChild("gridRowEditTransaction", { read: IgxGridComponent }) public gridRowEditTransaction: IgxGridComponent;
-    ...
+    @ViewChild('gridRowEditTransaction', { read: IgxGridComponent }) public gridRowEditTransaction: IgxGridComponent;
+
     public undo() {
         /* exit edit mode and commit changes */
         this.grid.endEdit(true);
@@ -163,17 +162,15 @@ export class GridBatchEditingSampleComponent {
         this.grid.transactions.commit(this.data);
         this.toggle.close();
     }
-    ...
 }
 ```
 }
 @@if (igxName === 'IgxTreeGrid') {
 以下のコード例は、[`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) API (undo、redo、commit) の使用方法を示します。
 ```typescript
-...
 export class TreeGridBatchEditingSampleComponent {
-    @ViewChild("treeGrid", { read: IgxTreeGridComponent }) public treeGrid: IgxTreeGridComponent;
-    ...
+    @ViewChild('treeGrid', { read: IgxTreeGridComponent }) public treeGrid: IgxTreeGridComponent;
+
     public undo() {
         /* exit edit mode and commit changes */
         this.treeGrid.endEdit(true);
@@ -190,7 +187,6 @@ export class TreeGridBatchEditingSampleComponent {
         this.treeGrid.transactions.commit(this.data);
         this.dialog.close();
     }
-    ...
 }
 ```
 }
@@ -200,7 +196,6 @@ export class TreeGridBatchEditingSampleComponent {
 ```typescript
 ...
 export class HierarchicalGridBatchEditingSampleComponent {
-    ...
     public undo(grid: IgxHierarchicalGridComponent) {
         /* exit edit mode and commit changes */
         grid.endEdit(true);

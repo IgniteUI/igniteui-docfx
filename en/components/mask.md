@@ -1,5 +1,5 @@
 ---
-title: Mask Directive Component - Native Angular | Ignite UI for Angular
+title: Angular Mask Directive Component | Ignite UI for Angular
 _description: With the Mask Directive in Ignite UI for Angular, the developer can control user input and format the visible value based on configurable mask rules, providing different input options and ease in use and configuration.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular mask directive, Mask, Directive, Mask Editor, Angular Mask Editor
 ---
@@ -99,14 +99,14 @@ Use the [`includeLiterals`]({environment:angularApiUrl}/classes/igxmaskdirective
 ```typescript
 // sample.component.ts
 
-public socialSecurityNumber: string = "123-45-6789";
+public socialSecurityNumber: string = '123-45-6789';
 public includeLiterals: boolean = true;
 
 public clear() {
     if (this.includeLiterals === false){
-        this.socialSecurityNumber = "123-45-6789";
+        this.socialSecurityNumber = '123-45-6789';
     } else {
-        this.socialSecurityNumber = "";
+        this.socialSecurityNumber = '';
     }
 }
 ```
@@ -138,12 +138,12 @@ In addition to setting a mask to an input, you can validate the entered value as
 
 public validateDate(dateInput, snackbar) {
     if (!this.isDateValid(dateInput.value)) {
-        this.notify(snackbar, "Invalid Date", dateInput);
+        this.notify(snackbar, 'Invalid Date', dateInput);
     }
 }
 
 private isDateValid(date) {
-    return (new Date(date).toLocaleString() !== "Invalid Date");
+    return (new Date(date).toLocaleString() !== 'Invalid Date');
 }
 
 private notify(snackbar, message, input) {
@@ -195,14 +195,14 @@ In addition to the default mask behavior, the user can implement his own custom 
 
 Implement two pipes that will append/remove a '%' sign at the end of the displayed value:
 ```typescript
-@Pipe({ name: "displayFormat" })
+@Pipe({ name: 'displayFormat' })
 export class DisplayFormatPipe implements PipeTransform {
     public transform(value: any): string {
-        return value + " %";
+        return value + ' %';
     }
 }
 
-@Pipe({ name: "inputFormat" })
+@Pipe({ name: 'inputFormat' })
 export class InputFormatPipe implements PipeTransform {
     public transform(value: any): string {
         return value;

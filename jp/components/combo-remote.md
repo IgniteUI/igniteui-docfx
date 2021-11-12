@@ -25,7 +25,7 @@ Combo コンポーネントを初期化にするには、まず `IgxComboModule`
 
 ```typescript
 import { IgxComboModule } from 'igniteui-angular';
-import { HttpClientModule } from "@angular/common/http";
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
     imports: [
@@ -44,10 +44,10 @@ export class AppModule {}
 以下のコードは、`getData()` メソッドでシンプルなサービスを定義し、コンボの状態を受け取り、observable としてデータを返します。
 
 ```typescript
-import { HttpClient } from "@angular/common/http";
-import { Injectable } from "@angular/core";
-import { IForOfState } from "igniteui-angular";
-import { BehaviorSubject, Observable } from "rxjs";
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { IForOfState } from 'igniteui-angular';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable()
 export class RemoteService {
@@ -86,21 +86,21 @@ export class RemoteService {
 以下は定義済みの操作をリッスンしてサーバーへ要求するハンドラーです。
 
 ```typescript
-import { ChangeDetectorRef, Component, OnInit, ViewChild } from "@angular/core";
-import { IgxComboComponent } from "igniteui-angular";
-import { RemoteService } from "../../grid/services/remote.service";
+import { ChangeDetectorRef, Component, OnInit, ViewChild } from '@angular/core';
+import { IgxComboComponent } from 'igniteui-angular';
+import { RemoteService } from '../../grid/services/remote.service';
 
 @Component({
     providers: [RemoteService],
-    selector: "app-combo-remote",
-    styleUrls: ["./combo-remote.component.scss"],
-    templateUrl: "./combo-remote.component.html"
+    selector: 'app-combo-remote',
+    styleUrls: ['./combo-remote.component.scss'],
+    templateUrl: './combo-remote.component.html'
 })
 export class ComboRemoteComponent implements OnInit {
 
     public prevRequest: any;
     public rData: any;
-    @ViewChild("remoteCombo", { read: IgxComboComponent }) public remoteCombo: IgxComboComponent;
+    @ViewChild('remoteCombo', { read: IgxComboComponent }) public remoteCombo: IgxComboComponent;
 
     constructor(private remoteService: RemoteService, public cdr: ChangeDetectorRef) { }
 
@@ -110,7 +110,7 @@ export class ComboRemoteComponent implements OnInit {
 
     public ngAfterViewInit() {
         this.remoteService.getData(this.remoteCombo.virtualizationState, null, (data) => {
-            this.remoteCombo.totalItemCount = data["@odata.count"];
+            this.remoteCombo.totalItemCount = data['@odata.count'];
         });
     }
 
@@ -122,14 +122,14 @@ export class ComboRemoteComponent implements OnInit {
             this.remoteCombo.virtualizationState,
             null,
             (data) => {
-              this.remoteCombo.totalItemCount = data["@odata.count"];
+              this.remoteCombo.totalItemCount = data['@odata.count'];
               this.cdr.detectChanges();
         });
     }
 
     public searchInput(searchText) {
         this.remoteService.getData(this.remoteCombo.virtualizationState, searchText, (data) => {
-            this.remoteCombo.totalItemCount = data["@odata.count"];
+            this.remoteCombo.totalItemCount = data['@odata.count'];
         });
     }
 }

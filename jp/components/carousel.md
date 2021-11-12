@@ -1,5 +1,5 @@
 ---
-title: Carousel コンポーネント
+title: Angular Carousel コンポーネント
 _description: Ignite UI for Angular Carousel コンポーネントを使用すると、スライド、カード、またはページに基づいたインターフェイスのコレクション間を移動できます。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Carousel コンポーネント, Angular Carousel コントロール
 _language: ja
@@ -54,16 +54,10 @@ export class AppModule {}
 ```typescript
 ...
 public slides = [
-      {
-        src: "/assets/images/carousel/ignite-ui-angular-indigo-design.png"
-      },
-      {
-        src: "/assets/images/carousel/slider-image-chart.png"
-      },
-      {
-        src: "/assets/images/carousel/ignite-ui-angular-charts.png"
-      }
-  ];
+    { src: '/assets/images/carousel/ignite-ui-angular-indigo-design.png' },
+    { src: '/assets/images/carousel/slider-image-chart.png' },
+    { src: '/assets/images/carousel/ignite-ui-angular-charts.png' }
+];
 ...
 ```
 
@@ -309,7 +303,6 @@ public slides = [
 
 ```typescript
   public ngOnInit() {
-    ...
     this.list.itemClicked.subscribe((args: IListItemClickEventArgs) => {
         this.currentIndex = args.item.index;
         this.carousel.select(this.carousel.get(this.currentIndex));

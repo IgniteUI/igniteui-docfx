@@ -65,12 +65,13 @@ As you can see in the demo above, the [**@@igxName**]({environment:angularApiUrl
 <@@igSelector #@@igObjectRef [data]="data" [displayDensity]="'cosy'" >
 </@@igSelector>
 ```
+
 or
+
 ```typescript
-...
-this.@@igObjectRef.displayDensity = "cosy";
-...
+this.@@igObjectRef.displayDensity = 'cosy';
 ```
+
 And now let's see in details how each option reflects on the @@igComponent component. When you switch between different density options the height of each @@igComponent element and the corresponding paddings will be changed. Also if you want to apply custom column [**width**]({environment:angularApiUrl}/classes/igxcolumncomponent.html#width), please consider the fact that it must be bigger than the sum of left and right padding.
  - **comfortable** - this is the default @@igComponent display density with the lowest intense and row height equal to `50px`. Left and Right paddings are `24px`; Minimal column [`width`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#width) is `80px`;
  - **cosy** - this is the middle intense density with `40px` row height. Left and Right paddings are `16px`; Minimal column [`width`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#width) is `64px`;
@@ -89,24 +90,24 @@ Let's now continue with our sample and see in action how the [`displayDensity`](
 
 ```typescript
 @ViewChild(IgxButtonGroupComponent) public buttonGroup: IgxButtonGroupComponent;
-public density = "compact";
+public density = 'compact';
 public displayDensities;
 
 public ngOnInit() {
     this.displayDensities = [
         {
-            label: "compact",
-            selected: this.density === "compact",
+            label: 'compact',
+            selected: this.density === 'compact',
             togglable: true
         },
         {
-            label: "cosy",
-            selected: this.density === "cosy",
+            label: 'cosy',
+            selected: this.density === 'cosy',
             togglable: true
         },
         {
-            label: "comfortable",
-            selected: this.density === "comfortable",
+            label: 'comfortable',
+            selected: this.density === 'comfortable',
             togglable: true
         }
     ];
@@ -264,9 +265,9 @@ Now we can add the markup.
 Finally, let's provide the necessary logic in order to actually apply the density:
 
 ```typescript
-@ViewChild("@@igObjectRef", { read: @@igxNameComponent })
+@ViewChild('@@igObjectRef', { read: @@igxNameComponent })
 public @@igObjectRef: @@igxNameComponent;
-.....
+
 public selectDensity(event) {
     this.density = this.displayDensities[event.index].label;
 }

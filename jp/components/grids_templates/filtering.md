@@ -107,21 +107,18 @@ IgniteUI for Angular @@igComponent コンポーネントは、[クイック フ�
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
 ```html
-<@@igSelector #grid1 [data]="data" [autoGenerate]="false" [allowFiltering]="true">
+<@@igSelector [data]="data" [autoGenerate]="false" [allowFiltering]="true">
     <igx-column field="ProductName" dataType="string"></igx-column>
     <igx-column field="Price" dataType="number"></igx-column>
-    ...
     <igx-column field="Discontinued" [dataType]="'boolean'" [filterable]="false">
 </@@igSelector>
 ```
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
- <igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="false" [allowFiltering]='true' [height]="'600px'" 
- [width]="'100%'" #hierarchicalGrid>
-    <igx-column field="Artist" [filterable]='true'></igx-column>
-    <igx-column field="Photo" [filterable]='false'>
-    ...
+<igx-hierarchical-grid [data]="localdata" [autoGenerate]="false" [allowFiltering]="true">
+    <igx-column field="Artist" [filterable]="true"></igx-column>
+    <igx-column field="Photo" [filterable]="false">
 </igx-hierarchical-grid>
 ```
 }
@@ -144,7 +141,7 @@ IgniteUI for Angular @@igComponent コンポーネントは、[クイック フ�
 // Single column filtering
 
 // Filter the `ProductName` column for values which `contains` the `myproduct` substring, ignoring case
-this.@@igObjectRef.filter('ProductName', 'myproduct', IgxStringFilteringOperand.instance().condition("contains"), true);
+this.@@igObjectRef.filter('ProductName', 'myproduct', IgxStringFilteringOperand.instance().condition('contains'), true);
 ```
 
 必要なパラメーターは列フィールド キーとフィルター用語のみです。条件および大文字と小文字の区別を設定しない場合、列プロパティで推測されます。フィルターが複数ある場合、このメソッドはフィルター式の配列を受け取ります。
@@ -156,20 +153,20 @@ this.@@igObjectRef.filter('ProductName', 'myproduct', IgxStringFilteringOperand.
 // Multi column filtering
 
 const gridFilteringExpressionsTree = new FilteringExpressionsTree(FilteringLogic.And);
-const productFilteringExpressionsTree = new FilteringExpressionsTree(FilteringLogic.And, "ProductName");
+const productFilteringExpressionsTree = new FilteringExpressionsTree(FilteringLogic.And, 'ProductName');
 const productExpression = {
-    condition: IgxStringFilteringOperand.instance().condition("contains"),
-    fieldName: "ProductName",
+    condition: IgxStringFilteringOperand.instance().condition('contains'),
+    fieldName: 'ProductName',
     ignoreCase: true,
-    searchVal: "ch"
+    searchVal: 'ch'
 };
 productFilteringExpressionsTree.filteringOperands.push(productExpression);
 gridFilteringExpressionsTree.filteringOperands.push(productFilteringExpressionsTree);
 
-const priceFilteringExpressionsTree = new FilteringExpressionsTree(FilteringLogic.And, "Price");
+const priceFilteringExpressionsTree = new FilteringExpressionsTree(FilteringLogic.And, 'Price');
 const priceExpression = {
-    condition: IgxNumberFilteringOperand.instance().condition("greaterThan"),
-    fieldName: "UnitPrice",
+    condition: IgxNumberFilteringOperand.instance().condition('greaterThan'),
+    fieldName: 'UnitPrice',
     ignoreCase: true,
     searchVal: 20
 };
@@ -184,7 +181,7 @@ this.@@igObjectRef.filteringExpressionsTree = gridFilteringExpressionsTree;
 ```typescript
 // Filter all cells for a value which contains `myproduct`
 this.@@igObjectRef.filteringLogic = FilteringLogic.Or;
-this.@@igObjectRef.filterGlobal("myproduct", IgxStringFilteringOperand.instance().condition("contains"), false);
+this.@@igObjectRef.filterGlobal('myproduct', IgxStringFilteringOperand.instance().condition('contains'), false);
 ```
 
 *   [`clearFilter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#clearFilter) - 対象列から適用されたフィルターを削除します。引数がない場合、すべての列のフィルターをクリアします。
@@ -206,12 +203,12 @@ constructor(private cdr: ChangeDetectorRef) { }
 
 public ngAfterViewInit() {
     const gridFilteringExpressionsTree = new FilteringExpressionsTree(FilteringLogic.And);
-    const productFilteringExpressionsTree = new FilteringExpressionsTree(FilteringLogic.And, "ProductName");
+    const productFilteringExpressionsTree = new FilteringExpressionsTree(FilteringLogic.And, 'ProductName');
     const productExpression = {
-        condition: IgxStringFilteringOperand.instance().condition("contains"),
-        fieldName: "ProductName",
+        condition: IgxStringFilteringOperand.instance().condition('contains'),
+        fieldName: 'ProductName',
         ignoreCase: true,
-        searchVal: "c"
+        searchVal: 'c'
     };
     productFilteringExpressionsTree.filteringOperands.push(productExpression);
     gridFilteringExpressionsTree.filteringOperands.push(productFilteringExpressionsTree);
@@ -259,15 +256,14 @@ this.@@igObjectRef.filteringLogic = FilteringLogic.OR;
 export class GridCustomFilteringComponent implements OnInit {
     public caseSensitiveFilteringOperand = CaseSensitiveFilteringOperand.instance();
     public booleanFilteringOperand = BooleanFilteringOperand.instance();
-    ...
 }
-...
+
 export class CaseSensitiveFilteringOperand extends IgxStringFilteringOperand {
     private constructor() {
         super();
         const customOperations = [
             {
-                iconName: "contains",
+                iconName: 'contains',
                 isUnary: false,
                 logic: (target: string, searchVal: string, ignoreCase?: boolean) => {
                     ignoreCase = false;
@@ -275,10 +271,10 @@ export class CaseSensitiveFilteringOperand extends IgxStringFilteringOperand {
                     target = IgxStringFilteringOperand.applyIgnoreCase(target, ignoreCase);
                     return target.indexOf(search) !== -1;
                 },
-                name: "Contains (case sensitive)"
+                name: 'Contains (case sensitive)'
             },
             {
-                iconName: "does_not_contain",
+                iconName: 'does_not_contain',
                 isUnary: false,
                 logic: (target: string, searchVal: string, ignoreCase?: boolean) => {
                     ignoreCase = false;
@@ -286,14 +282,14 @@ export class CaseSensitiveFilteringOperand extends IgxStringFilteringOperand {
                     target = IgxStringFilteringOperand.applyIgnoreCase(target, ignoreCase);
                     return target.indexOf(search) === -1;
                 },
-                name: "Does Not Contain (case sensitive)"
+                name: 'Does Not Contain (case sensitive)'
             }
         ];
 
         const emptyOperators = [
-            // "Empty"
+            // 'Empty'
             this.operations[6],
-            // "Not Empty"
+            // 'Not Empty'
             this.operations[7]
         ];
 
@@ -305,11 +301,11 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
     private constructor() {
         super();
         this.operations = [
-            // "All"
+            // 'All'
             this.operations[0],
-            // "TRUE"
+            // 'TRUE'
             this.operations[1],
-            // "FALSE"
+            // 'FALSE'
             this.operations[2]
         ];
     }
@@ -319,7 +315,7 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
 ```html
 <!-- grid-custom-filtering.component.html -->
 
- <@@igSelector #grid1 [data]="data" [autoGenerate]="false" height="600px" width="100%" [allowFiltering]="true">
+<@@igSelector [data]="data" [autoGenerate]="false" [allowFiltering]="true">
     <igx-column field="ProductName" header="Product Name" [dataType]="'string'" [filters]="caseSensitiveFilteringOperand"></igx-column>
     <igx-column field="Discontinued" header="Discontinued" [dataType]="'boolean'" [filters]="booleanFilteringOperand">
         <ng-template igxCell let-cell="cell" let-val>
@@ -327,7 +323,6 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
             <img *ngIf="!val" src="assets/images/grid/expired.png" title="Discontinued" alt="Discontinued" />
         </ng-template>
     </igx-column>
-    ...
 </@@igSelector>
 ```
 }
@@ -335,17 +330,16 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
 ```html
 <!-- hierarchical-grid-custom-filtering.component.html -->
 
-  <igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="false" [allowFiltering]='true'
-        [height]="'600px'" [width]="'100%'" #hierarchicalGrid>
-        <igx-column field="Artist" [filterable]='true' [dataType]="'string'" [filters]="caseSensitiveFilteringOperand"></igx-column>
-        <igx-column field="HasGrammyAward" [filterable]='true' [dataType]="'boolean'" [filters]="booleanFilteringOperand">
-            <ng-template igxCell let-cell="cell" let-val>
-                <img *ngIf="val" src="https://www.infragistics.com/angular-demos/assets/images/grid/active.png" title="True" alt="True" />
-                <img *ngIf="!val" src="https://www.infragistics.com/angular-demos/assets/images/grid/expired.png" title="False" alt="False" />
-            </ng-template>
-        </igx-column>
-...
- </igx-hierarchical-grid>
+<igx-hierarchical-grid [data]="localdata" [autoGenerate]="false" [allowFiltering]="true">
+    <igx-column field="Artist" [filterable]='true' [dataType]="'string'" [filters]="caseSensitiveFilteringOperand"></igx-column>
+    <igx-column field="HasGrammyAward" [filterable]='true' [dataType]="'boolean'" [filters]="booleanFilteringOperand">
+        <ng-template igxCell let-cell="cell" let-val>
+            <img *ngIf="val" src="https://www.infragistics.com/angular-demos/assets/images/grid/active.png" title="True" alt="True" />
+            <img *ngIf="!val" src="https://www.infragistics.com/angular-demos/assets/images/grid/expired.png" title="False" alt="False" />
+        </ng-template>
+    </igx-column>
+
+</igx-hierarchical-grid>
 ```
 }
 @@if (igxName === 'IgxGrid') {
@@ -408,13 +402,13 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
 デフォルトでは、フィルタリングが適用された後、ツリー グリッド コンポーネントは、設定された基準に一致するレコードとその親をグレー表示されて、追加のコンテキストを提供します。ただし、場合によっては、親のトレースなしで、特定のフィルタリング条件に一致するレコードのみを表示したいことがあります。これは、`TreeGridMatchingRecordsOnlyFilteringStrategy` を使用して実現できます。
 
 ```html
-<igx-grid #grid1 [data]="data" [allowFiltering]="true" [filterStrategy]="matchingRecordsOnlyStrategy">
-    ...
+<igx-grid [data]="data" [allowFiltering]="true" [filterStrategy]="matchingRecordsOnlyStrategy">
+
 </igx-grid>
 ```
 
 ```typescript
-import { TreeGridMatchingRecordsOnlyFilteringStrategy } from "igniteui-angular";
+import { TreeGridMatchingRecordsOnlyFilteringStrategy } from 'igniteui-angular';
 ...
 public matchingRecordsOnlyStrategy = new TreeGridMatchingRecordsOnlyFilteringStrategy();
 ```

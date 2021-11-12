@@ -29,7 +29,7 @@ Ignite UI CSV Exporter をインスタンス化するには、[`IgxCsvExporterSe
 // app.module.ts
 
 ...
-import { IgxCsvExporterService } from "igniteui-angular/services/index";
+import { IgxCsvExporterService } from 'igniteui-angular/services/index';
 
 @NgModule({
   providers: [ IgxCsvExporterService ]
@@ -52,20 +52,20 @@ Exporter サービスにアクセスするには、コンポーネントのコ�
 // component.ts
 
 ...
-import { IgxCsvExporterService, IgxCsvExporterOptions, CsvFileTypes } from "igniteui-angular/services/index";
+import { IgxCsvExporterService, IgxCsvExporterOptions, CsvFileTypes } from 'igniteui-angular/services/index';
 ...
 
 public localData = [
-  { Name: "Eric Ridley", Age: "26" },
-  { Name: "Alanis Brook", Age: "22" },
-  { Name: "Jonathan Morris", Age: "23" }
+  { Name: 'Eric Ridley', Age: '26' },
+  { Name: 'Alanis Brook', Age: '22' },
+  { Name: 'Jonathan Morris', Age: '23' }
 ];
 
 constructor(private csvExportService: IgxCsvExporterService) {
 }
 
 public exportButtonHandler() {
-  this.csvExportService.exportData(this.localData, new IgxCsvExporterOptions("ExportedDataFile"), CsvFileTypes.CSV);
+  this.csvExportService.exportData(this.localData, new IgxCsvExporterOptions('ExportedDataFile'), CsvFileTypes.CSV);
 }
 
 ```
@@ -91,19 +91,19 @@ CSV Exporter サービスも [**IgxGrid**](grid/grid.md) からのデータを C
 import { IgxCsvExporterService, IgxCsvExporterOptions, CsvFileTypes, IgxGridComponent } from 'igniteui-angular';
 ...
 
-@ViewChild("igxGrid1") public igxGrid1: IgxGridComponent;
+@ViewChild('igxGrid1') public igxGrid1: IgxGridComponent;
 
 public localData = [
-  { Name: "Eric Ridley", Age: "26" },
-  { Name: "Alanis Brook", Age: "22" },
-  { Name: "Jonathan Morris", Age: "23" }
+  { Name: 'Eric Ridley', Age: '26' },
+  { Name: 'Alanis Brook', Age: '22' },
+  { Name: 'Jonathan Morris', Age: '23' }
 ];
 
 constructor(private csvExportService: IgxCsvExporterService) {
 }
 
 public exportButtonHandler() {
-  this.csvExportService.export(this.igxGrid1, new IgxCsvExporterOptions("ExportedDataFile", CsvFileTypes.CSV));
+  this.csvExportService.export(this.igxGrid1, new IgxCsvExporterOptions('ExportedDataFile', CsvFileTypes.CSV));
 }
 
 ```
@@ -145,11 +145,11 @@ CSV Exporter は複数のエクスポート形式タイプをサポートしま�
 // component.ts
 
 this.csvExportService.columnExporting.subscribe((args: IColumnExportingEventArgs) => {
-  if (args.header == "Age" && args.columnIndex == 1) {
+  if (args.header == 'Age' && args.columnIndex == 1) {
       args.cancel = true;
   }
 });
-this.csvExportService.export(this.igxGrid1, new IgxCsvExporterOptions("ExportedDataFile"));
+this.csvExportService.export(this.igxGrid1, new IgxCsvExporterOptions('ExportedDataFile'));
 ```
 
 [**IgxGrid**](grid/grid.md) からのデータのエクスポートで、エクスポート処理は行フィルタリングおよび列の非表示などの機能に応じてグリッドで表示されるデータのみをエクスポートします。[`IgxCsvExporterOptions`]({environment:angularApiUrl}/classes/igxcsvexporteroptions.html) オブジェクトのプロパティを設定し、エクスポーター サービスを構成してフィルターした行または非表示の列を含むことができます。このプロパティは以下の表で説明します。

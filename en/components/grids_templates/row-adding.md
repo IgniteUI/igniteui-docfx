@@ -78,7 +78,7 @@ Then define a @@igComponent with bound data source and [`rowEditable`]({environm
 
 @@if (igxName === 'IgxGrid') {
 ```html
-<igx-grid [data]="data" [primaryKey]="'ProductID'" width="100%" height="500px" [rowEditable]="true">
+<igx-grid [data]="data" [primaryKey]="'ProductID'" [autoGenerate]="false" [rowEditable]="true">
     <igx-column field="ProductID" header="Product ID" dataType="number"></igx-column>
     <igx-column field="ReorderLevel" header="ReorderLever" dataType="number"></igx-column>
     <igx-column field="ProductName" header="ProductName" dataType="string"></igx-column>
@@ -94,7 +94,7 @@ Then define a @@igComponent with bound data source and [`rowEditable`]({environm
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```html
-<igx-tree-grid igxPreventDocumentScroll #treeGrid [data]="data"
+<igx-tree-grid igxPreventDocumentScroll [data]="data"
     primaryKey="ID" foreignKey="ParentID" [rowEditable]="true">
     <igx-column [field]="'Name'" dataType="string"></igx-column>
     <igx-column [field]="'Title'" dataType="string"></igx-column>
@@ -114,8 +114,8 @@ Then define a @@igComponent with bound data source and [`rowEditable`]({environm
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid igxPreventDocumentScroll #hierarchicalGrid class="hgrid" [data]="localdata"
-    [autoGenerate]="false" [height]="'500px'" [width]="'100%'" [primaryKey]="'Debut'" [rowEditable]="true">
+<igx-hierarchical-grid igxPreventDocumentScroll [data]="localdata"
+    [autoGenerate]="false" [primaryKey]="'Debut'" [rowEditable]="true">
     <igx-column field="Artist" [dataType]="'string'"></igx-column>
     <igx-column field="HasGrammyAward" header="Has Grammy Award?" [dataType]="'boolean'">
     </igx-column>

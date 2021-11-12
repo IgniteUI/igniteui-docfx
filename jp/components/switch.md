@@ -53,12 +53,11 @@ export class AppModule {}
 ```typescript
 // toggle.component.ts
 ...
-  public settings = [
+public settings = [
     { name: 'WiFi', state: false},
     { name: 'Bluetooth', state: true},
     { name: 'Device visibility', state: false}
-  ];
-
+];
 ```
 コンポーネント テンプレートに各設定のためのスイッチを追加し、相対するプロパティにバインドします。
 
