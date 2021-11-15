@@ -168,7 +168,7 @@ Binding to the event can be done through the proper `@Output` property on the `i
 
 ## Keyboard Navigation
 
-When simple combobox is closed and focused:
+When the simple combobox is closed and focused:
 - `ArrowDown` or `Alt` + `ArrowDown` will open the simple combobox's drop down.
 
 > [!NOTE]
