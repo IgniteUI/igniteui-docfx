@@ -74,7 +74,7 @@ Since the simple combobox is bound to an array of complex data (i.e. objects), w
  - `valueKey` - *Optional, recommended for object arrays* - Specifies which property of the data entries will be stored for the simple combobox's selection. If `valueKey` is omitted, the simple combobox value will use references to the data entries (i.e. the selection will be an array of entries from `igxSimpleCombo.data`).
  - `displayKey` - *Required for object arrays* - Specifies which property will be used for the items' text. If no value is specified for `displayKey`, the simple combobox will use the specified `valueKey` (if any).
 
-In our case, we want the simple combobox to display the `name` of each city and the simple combobox value to store the `id` of each city. Therefore, we are providing these properties to the simple combobox's `displayKey` and `valueKey`, respectively:
+In our case, we want the simple combobox to display the `name` of each city and its value to store the `id` of each city. Therefore, we are binding these properties as values to the simple combobox's `displayKey` and `valueKey`, respectively:
 
 ```html
 <igx-simple-combo [data]="cities" [displayKey]="'name'" [valueKey]="'id'"></igx-simple-combo>
