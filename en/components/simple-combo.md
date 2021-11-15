@@ -11,7 +11,7 @@ The Angular Simple ComboBox component is a modification of [ComboBox component](
 
 ## Angular Simple ComboBox Example
 
-In this Angular Simple ComboBox example, you can see how users can select the chart's trend line type. In addition, the Simple ComboBox expose keyboard navigation and custom styling capabilities.
+In this Angular Simple ComboBox example, you can see how users can select the chart's trend line type. In addition, the Simple ComboBox exposes keyboard navigation and custom styling capabilities.
 
 <div class="divider--half"></div>
 
