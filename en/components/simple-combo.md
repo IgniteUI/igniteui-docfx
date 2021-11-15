@@ -49,7 +49,7 @@ import { IgxSimpleComboModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Then, in the template, you should bind the [igx-simple-combo]({environment:angularApiUrl}/classes/igxsimplecombocomponent.html) with some data.
+Then, in the template, you should bind the [igx-simple-combo]({environment:angularApiUrl}/classes/igxsimplecombocomponent.html) to some data.
 
 ```typescript
 export class MySimpleComboComponent implements OnInit {
