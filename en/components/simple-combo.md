@@ -123,7 +123,7 @@ export class MySimpleComboComponent {
 
 The simple combobox component exposes API that allows getting and manipulating the current selection state of the control.
 
-One way to get the simple combobox's selection is via the [selection]({environment:angularApiUrl}/classes/igxsimplecombocomponent.html#selection) property. It returns a value which correspond to the selected item, depending on the specified [valueKey](#data-value-and-display-properties) (if any).
+One way to get its selection is via the [selection]({environment:angularApiUrl}/classes/igxsimplecombocomponent.html#selection) property. It returns a value which corresponds to the selected item, depending on the specified [valueKey](#data-value-and-display-properties) (if any).
 
 In our example, `selection` will return the selected city's `id`:
 
