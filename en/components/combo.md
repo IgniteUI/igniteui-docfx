@@ -238,7 +238,7 @@ $custom-combo-theme: igx-combo-theme(
 );
 ```
 
-The [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html) uses the [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) internally as an item container. It also includes the [IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) and the [IgxCheckbox]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html) components. Creating new themes, that extend these components' themes, and scoping them under the respective classes will let's you change the combobox styles:
+The [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html) uses the [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) internally as an item container. It also includes the [IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) and the [IgxCheckbox]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html) components. Creating new themes, that extend these components' themes, and scoping them under the respective classes will let you change the combobox styles:
 
 ```scss
 $custom-drop-down-theme: igx-drop-down-theme(
