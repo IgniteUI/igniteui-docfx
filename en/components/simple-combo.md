@@ -189,7 +189,7 @@ When the simple combobox is opened and an item in the list is focused:
 
 - `Esc` will close the list.
 
-When combobox is opened, allow custom values are enabled and add item button is focused:
+When the simple combobox is opened and allow custom values are enabled, and add item button is focused:
 
 - `Enter` will add a new item with `valueKey` and `displayKey` equal to the text in the search input and will select the new item.
 
