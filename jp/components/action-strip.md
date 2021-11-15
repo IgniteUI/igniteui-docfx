@@ -100,6 +100,7 @@ Ignite UI for Angular Action Strip コンポーネントは、ホバーなどの
            iframe-src="{environment:demosBaseUrl}/grid/grid-action-strip" >
 </code-view>
 
+>注：グリッド コンポーネントで ActionStrip を使用する方法の詳細については、[こちら](/components/grid/action-strip.html)を参照してください。
 
 ## スタイル設定
 

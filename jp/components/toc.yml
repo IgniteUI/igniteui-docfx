@@ -112,6 +112,9 @@
   updated: true
   sortable: true
   items:
+    - name: Action Strip
+      href: grid/action-strip.md
+      new: true
     - name: ライブ データ/リアルタイム更新
       href: grid/live-data.md
       new: false
@@ -254,6 +257,9 @@
   new: false
   sortable: true
   items:
+    - name: Action Strip
+      href: treegrid/action-strip.md
+      new: true
     - name: ライブデータ/リアルタイム更新
       href: treegrid/live-data.md
       new: false
@@ -388,6 +394,9 @@
   new: false
   sortable: true
   items:
+    - name: Action Strip
+      href: hierarchicalgrid/action-strip.md
+      new: true
     - name: 仮想化とパフォーマンス
       href: hierarchicalgrid/virtualization.md
       new: false
