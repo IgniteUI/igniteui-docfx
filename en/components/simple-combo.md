@@ -169,7 +169,7 @@ Binding to the event can be done through the proper `@Output` property on the `i
 ## Keyboard Navigation
 
 When the simple combobox is closed and focused:
-- `ArrowDown` or `Alt` + `ArrowDown` will open the simple combobox's drop down.
+- `ArrowDown` or `Alt` + `ArrowDown` will open the simple combobox's dropdown.
 
 > [!NOTE]
 > Any other key stroke will be handled by the input.
