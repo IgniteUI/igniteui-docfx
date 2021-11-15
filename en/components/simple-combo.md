@@ -134,7 +134,7 @@ export class MySimpleComboComponent {
 }
 ```
 
-Using the selection API, you can also change the simple combobox's selected item without user interaction with the control - via a button click, as a response to an Observable changing, etc. For example, we can implement a button that selects a city, using the [select()]({environment:angularApiUrl}/classes/igxsimplecombocomponent.html#select) method:
+Using the selection API, you can also change the simple combobox's selected item without user interaction with the control - via a button click, as a response to an Observable changing, etc. For example, we can implement a button that selects a city, using the [select]({environment:angularApiUrl}/classes/igxsimplecombocomponent.html#select) method:
 
 ```html
 <igx-simple-combo [data]="cities" [displayKey]="'name'" [valueKey]="'id'"></igx-simple-combo>
