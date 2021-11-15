@@ -208,7 +208,7 @@ The following sample demonstrates a scenario where the [igx-simple-combo]({envir
 <div class="divider--half"></div>
 
 ### Template Configuration
-The API of simle combobox is used to get the selected item from one component and load data source for the next one, as well clear the selection and data source when needed.
+The API of the simple combobox is used to get the selected item from one component and load the data source for the next one, as well as clear the selection and data source when needed.
 
 ```html
 <igx-simple-combo #country
