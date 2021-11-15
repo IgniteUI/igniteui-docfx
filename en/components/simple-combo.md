@@ -85,7 +85,7 @@ In our case, we want the simple combobox to display the `name` of each city and 
 
 ### Two-Way Binding
 
-The simple combobox component fully supports two-way data-binding with `[(ngModel)]` as well as usage in [template driven](https://angular.io/guide/forms) and [reactive](https://angular.io/guide/reactive-forms) forms. The simple combobox selection can be accessed either through two-way binding or through the [selection API](#selection-api). We can pass an item of the same type as the ones in the simple combobox's selection (based on `valueKey`) and any time one changes, the other is updated accordingly.
+The simple combobox component fully supports two-way data-binding with `[(ngModel)]` as well as usage in [template driven](https://angular.io/guide/forms) and [reactive](https://angular.io/guide/reactive-forms) forms. The simple combobox selection can be accessed either through two-way binding or through the [selection API](#selection-api). We can pass in an item of the same type as the ones in the simple combobox's selection (based on `valueKey`) and any time one changes, the other is updated accordingly.
 
 In the following example, the Sofia city will initially be selected. Any further changes in the simple combobox's selection will reflect on the `selectedCities`.
 
