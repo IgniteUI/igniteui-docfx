@@ -141,7 +141,7 @@ Using the selection API, you can also change the simple combobox's selected item
 <button igxButton (click)="selectFavorite()">Select Favorite</button>
 ```
 
-When clicking the button, the London city will be added to the simple combobox's selection:
+When the button is clicked, `London` will be added to the simple combobox's selection:
 
 ```typescript
 export class MySimpleComboComponent {
