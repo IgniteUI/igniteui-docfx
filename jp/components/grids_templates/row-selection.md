@@ -72,14 +72,14 @@ Ignite UI for Angular の行選択では、行内の他のすべての列に先�
 
 ### 単一選択
 
-単一行の選択は、`[rowSelection] = '"single"'` プロパティの設定のみで簡単に設定できるようになりました。これにより、**グリッド内の 1 行のみを選択できます**。行のセルにフォーカスするときにセルをクリックするかスペースキーを押すと行を選択できます。もちろん、行セレクターフィールドをクリックして行を選択できます。行が選択または選択解除されると、**rowSelected** イベントが生成されます。
+単一行の選択は、`[rowSelection] = '"single"'` プロパティの設定のみで簡単に設定できるようになりました。これにより、**グリッド内の 1 行のみを選択できます**。行のセルにフォーカスするときにセルをクリックするかスペースキーを押すと行を選択できます。もちろん、行セレクターフィールドをクリックして行を選択できます。行が選択または選択解除されると、**rowSelectionChanging** イベントが生成されます。
 
 @@if (igxName === 'IgxGrid') {
 ```html
 <!-- selectionExample.component.html -->
 
 <igx-grid [data]="remote | async" [rowSelection]="'single'" [autoGenerate]="true"
-          (rowSelected)="handleRowSelection($event)" [allowFiltering]="true">
+          (rowSelectionChanging)="handleRowSelection($event)" [allowFiltering]="true">
 </igx-grid>
 ```
 ```typescript
@@ -97,7 +97,7 @@ public handleRowSelection(args) {
 <!-- selectionExample.component.html -->
 
 <igx-tree-grid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="true"
-            [rowSelection]="'single'" [allowFiltering]="true" (rowSelected)="handleRowSelection($event)">
+            [rowSelection]="'single'" [allowFiltering]="true" (rowSelectionChanging)="handleRowSelection($event)">
 </igx-tree-grid>
 ```
 ```typescript
@@ -112,7 +112,7 @@ public handleRowSelection(event) {
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid [data]="localdata" [autoGenerate]="true" [rowSelection]="'single'" (rowSelected)="handleRowSelection($event)">
+<igx-hierarchical-grid [data]="localdata" [autoGenerate]="true" [rowSelection]="'single'" (rowSelectionChanging)="handleRowSelection($event)">
 </igx-hierarchical-grid>
 ```
 ```typescript
@@ -135,7 +135,7 @@ public handleRowSelection(event) {
 <!-- selectionExample.component.html -->
 
 <igx-grid [data]="remote | async" [primaryKey]="'ProductID'" [rowSelection]="'multiple'"
-        [autoGenerate]="true" (rowSelected)="handleRowSelection($event)" [allowFiltering]="true">
+        [autoGenerate]="true" (rowSelectionChanging)="handleRowSelection($event)" [allowFiltering]="true">
 </igx-grid>
 ```
 
@@ -145,7 +145,7 @@ public handleRowSelection(event) {
 <!-- selectionExample.component.html -->
 
 <igx-tree-grid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="true"
-        [rowSelection]="'multiple'" [allowFiltering]="true" (rowSelected)="handleRowSelection($event)">
+        [rowSelection]="'multiple'" [allowFiltering]="true" (rowSelectionChanging)="handleRowSelection($event)">
 </igx-tree-grid>
 ```
 
@@ -153,7 +153,7 @@ public handleRowSelection(event) {
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
 <igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="true"
-        [rowSelection]="'multiple'" (rowSelected)="handleRowSelection($event)">
+        [rowSelection]="'multiple'" (rowSelectionChanging)="handleRowSelection($event)">
 </igx-hierarchical-grid>
 ```
 }
@@ -164,7 +164,7 @@ public handleRowSelection(event) {
 <!-- selectionExample.component.html -->
 
 <igx-tree-grid [data]="data" primaryKey="ID" foreignKey="ParentID" [rowSelection]="'multipleCascade'"
-        [autoGenerate]="true" [allowFiltering]="true" (rowSelected)="handleRowSelection($event)">
+        [autoGenerate]="true" [allowFiltering]="true" (rowSelectionChanging)="handleRowSelection($event)">
 </igx-tree-grid>
 ```
 このモードでは、親の選択状態はその子の選択状態に完全に依存します。親に選択された子と選択解除された子がある場合、そのチェックボックスは不確定な状態になります。
@@ -177,7 +177,7 @@ public handleRowSelection(event) {
 @@if (igxName !== 'IgxTreeGrid') {
 * @@igComponent でリモート仮想化を使用した場合、ヘッダーのチェックボックスをクリックすると、現在グリッドにあるすべてのレコードが選択/選択解除されます。新しいデータがオンデマンドで @@igComponent にロードされると、新、しく追加された行は選択されない制限があるため、これらの行を選択するには API メソッドを使用して動作を処理する必要があります。
 }
-* 行を選択すると、[`rowSelected`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowSelected) イベントがトリガーされます。このイベントは、新しい選択、古い選択、古い選択に対して追加および削除された行に関する情報を提供します。また、イベントはキャンセル可能であるため、選択を防ぐことができます。
+* 行を選択すると、[`rowSelectionChanging`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowSelectionChanging) イベントがトリガーされます。このイベントは、新しい選択、古い選択、古い選択に対して追加および削除された行に関する情報を提供します。また、イベントはキャンセル可能であるため、選択を防ぐことができます。
 * 行選択が有効になっている場合、行セレクターが表示されますが、表示しない場合は、`[hideRowSelectors] = true` に設定できます。
 * 行選択モードのランタイムを切り替えると、優先行選択状態がクリアされます。
 
@@ -227,7 +227,7 @@ public handleRowSelection(event) {
 ```
 
 ### 行選択イベント
-行選択に何らかの変更があると、**`rowSelected`** イベントが発生します。 **`rowSelected`** は次の引数を公開します。
+行選択に何らかの変更があると、**`rowSelectionChanging`** イベントが発生します。 **`rowSelectionChanging`** は次の引数を公開します。
 - `oldSelection` - 行選択の前の状態を含む行 ID の配列。
 - `newSelection` - 行選択の新しい状態に一致する行 ID の列。
 - `added` - 現在選択に追加されている行 ID の配列。
@@ -241,7 +241,7 @@ public handleRowSelection(event) {
 ```html
 <!-- selectionExample.component.html -->
 
-<@@igSelector (rowSelected)="handleRowSelectionChange($event)">
+<@@igSelector (rowSelectionChanging)="handleRowSelectionChange($event)">
 ...
 </@@igSelector>
 ```
@@ -319,7 +319,7 @@ public childSelectedRows = ['Initiation', 'Emergency'];
 ### 行セレクター テンプレート
 @@igComponent でヘッダーおよび行セレクターをテンプレート化し、さまざまなシナリオに役立つ機能を提供するコンテキストにアクセスすることもできます。
 
-デフォルトでは、@@igComponent は、行セレクターの親コンテナまたは行自体の**すべての行選択操作を処理**し、テンプレートの状態の可視化のみになります。基本機能のオーバーライドは通常、[`rowSelected` イベント](#行選択イベント) を使用して実行する必要があります。基本機能をオーバーライドする `click` ハンドラーを使用してカスタムテンプレートを実装する場合、イベントの伝播を停止して、正しい行の状態を保持する必要があります。
+デフォルトでは、@@igComponent は、行セレクターの親コンテナまたは行自体の**すべての行選択操作を処理**し、テンプレートの状態の可視化のみになります。基本機能のオーバーライドは通常、[`rowSelectionChanging` イベント](#行選択イベント) を使用して実行する必要があります。基本機能をオーバーライドする `click` ハンドラーを使用してカスタムテンプレートを実装する場合、イベントの伝播を停止して、正しい行の状態を保持する必要があります。
 
 #### 行テンプレート
 カスタム行セレクター テンプレートを作成するには、`@@igSelector` 内で` igxRowSelector` ディレクティブを使用して `<ng-template>` を宣言します。テンプレートから、行の状態に関する情報を提供するプロパティを使用して、暗黙的に提供されたコンテキスト変数にアクセスできます。
@@ -458,7 +458,7 @@ public childSelectedRows = ['Initiation', 'Emergency'];
 }
 
 ### 条件付き選択のデモ
-このデモでは、`rowSelected` イベントと、選択できない行のチェックボックスが無効になっているカスタム テンプレートを使用して、一部の行が選択されないようにします。
+このデモでは、`rowSelectionChanging` イベントと、選択できない行のチェックボックスが無効になっているカスタム テンプレートを使用して、一部の行が選択されないようにします。
 @@if (igxName === 'IgxGrid') {
 
 <code-view style="height:550px" 
