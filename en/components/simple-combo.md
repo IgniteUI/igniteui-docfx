@@ -154,7 +154,7 @@ export class MySimpleComboComponent {
 }
 ```
 
-The simple combobox also fires an event every time its selection changes - [selectionChanging()]({environment:angularApiUrl}/classes/igxsimplecombocomponent.html#selectionchanging). The emitted event arguments, [ISimpleComboSelectionChangingEventArgs]({environment:angularApiUrl}/interfaces/isimplecomboselectionchangingeventargs.html), contain information about the selection prior to the change, the current selection and the displayed item. The event can also be cancelled, preventing the selection update with the new  item.
+The simple combobox also fires an event every time its selection changes - [selectionChanging]({environment:angularApiUrl}/classes/igxsimplecombocomponent.html#selectionchanging). The emitted event arguments, [ISimpleComboSelectionChangingEventArgs]({environment:angularApiUrl}/interfaces/isimplecomboselectionchangingeventargs.html), contain information about the selection prior to the change, the current selection and the displayed item. The event can also be cancelled, preventing the selection from taking place.
 
 Binding to the event can be done through the proper `@Output` property on the `igx-simple-combo` tag:
 
