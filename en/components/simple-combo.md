@@ -174,7 +174,7 @@ When simple combobox is closed and focused:
 > [!NOTE]
 > Any other key stroke will be handled by the input.
 
-When simple combobox is opened and list item is focused:
+When the simple combobox is opened and an item in the list is focused:
 - `ArrowDown` will move to the next list item. If the active item is the last one in the list and custom values are enabled, the focus will be moved to the Add item button.
 
 - `ArrowUp` will move to the previous list item. If the active item is the first one in the list will close the list.
