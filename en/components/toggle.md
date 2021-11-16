@@ -1,5 +1,5 @@
 ---
-title: Toggle Component - Native Angular | Ignite UI for Angular 
+title: Angular Toggle Component | Ignite UI for Angular 
 _description: The Ignite UI for Angular Toggle directive allows the users to open, to interact with, to apply animations, and to close a toggle container. 
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components, Angular Toggle directives, Angular Toggle controls, Angular Toggle Component,
 ---
@@ -87,7 +87,7 @@ The `igxToggle` directive uses the [`IgxOverlayService`]({environment:angularApi
 
 ...
     @ViewChild(IgxToggleDirective) public igxToggle: IgxToggleDirective;
-    @ViewChild("button") public igxButton: ElementRef;
+    @ViewChild('button') public igxButton: ElementRef;
 
     public _positionSettings = {
         horizontalStartPoint: HorizontalAlignment.Left,

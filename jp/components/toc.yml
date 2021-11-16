@@ -44,7 +44,7 @@
       new: true
 - name: Angular Schematics & Ignite UI CLI
   href: general/cli-overview.md
-  new: false
+  sortable: false
   items:
     - name: Ignite UI for Angular Schematics を使用した作業の開始
       href: general/cli/getting-started-with-angular-schematics.md
@@ -77,11 +77,11 @@
     - name: 一方向バインディング
       href: general/wpf-to-angular-guide/one-way-binding.md
       new: false
-    - name: Angular イベント
-      href: general/wpf-to-angular-guide/angular-events.md
-      new: false
     - name: 双方向バインディング
       href: general/wpf-to-angular-guide/two-way-binding.md
+      new: false
+    - name: Angular イベント
+      href: general/wpf-to-angular-guide/angular-events.md
       new: false
     - name: Angular パイプでデータを変換
       href: general/wpf-to-angular-guide/angular-pipes.md
@@ -528,9 +528,9 @@
     - name: テンプレート
       href: combo-templates.md
       new: false
-    - name: カスケーディング
-      href: combo-cascading.md
-      new: false
+    - name: Single Select ComboBox
+      href: simple-combo.md
+      new: true
 - name: Spreadsheet
   href: spreadsheet-overview.md
   new: false
@@ -1000,6 +1000,9 @@
 - name: Splitter
   href: splitter.md
   new: false
+- name: Stepper
+  href: stepper.md
+  new: true
 - name: Dock Manager
   href: dock-manager.md
   new: false

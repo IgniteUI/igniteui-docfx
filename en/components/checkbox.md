@@ -1,5 +1,5 @@
 ---
-title: Checkbox Component
+title: Angular Checkbox Component – Ignite UI for Angular | Infragistics
 _description: Ignite UI for Angular Checkbox component is a selection control that allows users to make a binary choice for a certain condition.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Checkbox components, Angular Checkbox controls
 ---
@@ -53,9 +53,9 @@ Optionally, you can also bind the [`change`]({environment:angularApiUrl}/classes
 // tasks.component.ts
 ...
 public tasks = [
-  { done: true, description: 'Research' },
-  { done: true, description: 'Implement' },
-  { done: false, description: 'Test' },
+    { done: true, description: 'Research' },
+    { done: true, description: 'Implement' },
+    { done: false, description: 'Test' }
 ];
 
 ...
@@ -161,9 +161,9 @@ And finally, we'll create the logic of our application:
 // app.component.ts
 
 public tasks = [
-    { done: true, description: "Research" },
-    { done: true, description: "Implement" },
-    { done: false, description: "Test" }
+    { done: true, description: 'Research' },
+    { done: true, description: 'Implement' },
+    { done: false, description: 'Test' }
 ];
 
 public get masterCheckbox() {

@@ -133,7 +133,7 @@ import { IgxToastPosition } from 'igniteui-angular';
 ...
 public toastPosition: IgxToastPosition;
 public open(toast) {
-    this.toastPosition = "top";
+    this.toastPosition = IgxToastPosition.Top;
     toast.open();
 }
 ...

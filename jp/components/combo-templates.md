@@ -144,7 +144,7 @@ export class AppModule {}
 * [コンボ リモート バインディング](combo-remote.md)
 * [テンプレート駆動フォームの統合](input-group.md)
 * [リアクティブ フォームの統合](angular-reactive-form-validation.md)
-* [カスケーディング](combo-cascading.md)
+* [Single Select ComboBox](simple-combo.md)
 
 コミュニティに参加して新しいアイデアをご提案ください。
 

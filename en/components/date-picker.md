@@ -1,5 +1,5 @@
 ---
-title: Angular Date Picker | Date Picker | Infragistics
+title: Angular Date Picker Component | Date Picker | Infragistics
 _description: Learn how to use a functionality to select a date from a calendar to your web application with Ignite UI for Angular Date Picker control.
 _keywords: angular date picker, angular component, ignite ui for angular
 ---
@@ -24,20 +24,13 @@ To get started with the Date Picker component, first you need to import the `Igx
 > As the picker uses the [**IgxCalendarComponent**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html), it is also dependent on the **BrowserAnimationsModule** and on the **HammerModule** for touch interactions, so they need to be added to the module as well:
 
 ```typescript
-...
-import { HammerModule } from "@angular/platform-browser";
+import { HammerModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IgxDatePickerModule } from 'igniteui-angular';
 
 @NgModule({
     ...
-    imports: [
-        ...,
-        IgxDatePickerModule,
-        BrowserAnimationsModule,
-        HammerModule,
-        ...
-    ],
+    imports: [..., IgxDatePickerModule, BrowserAnimationsModule, HammerModule],
     ...
 })
 export class AppModule {}

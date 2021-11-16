@@ -97,8 +97,8 @@ Combo コンポーネントは、`[(ngModel)]` との双方向のデータ バ�
 ```typescript
 export class MyCombo {
     public cities: { name: string, id: string }[] = [
-                   { name: "Sofia", id: "BG01" }, { name: "London", id: "UK01" }, ...];
-    public selectedCities: string[] = ["BG01", "UK01"];
+                   { name: 'Sofia', id: 'BG01' }, { name: 'London', id: 'UK01' }, ...];
+    public selectedCities: string[] = ['BG01', 'UK01'];
 }
 ```
 
@@ -368,7 +368,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 * [コンボ テンプレート](combo-templates.md)
 * [テンプレート駆動フォームの統合](input-group.md)
 * [リアクティブ フォームの統合](angular-reactive-form-validation.md)
-* [カスケーディング](combo-cascading.md)
+* [Single Select ComboBox](simple-combo.md)
 
 コミュニティに参加して新しいアイデアをご提案ください。
 

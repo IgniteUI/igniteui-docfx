@@ -111,11 +111,11 @@ public onResize(event) {
 </igx-hierarchical-grid>
 ```
 ```typescript
-    public onResize(event) {
-        this.col = event.column;
-        this.pWidth = event.prevWidth;
-        this.nWidth = event.newWidth;
-    }
+public onResize(event) {
+    this.col = event.column;
+    this.pWidth = event.prevWidth;
+    this.nWidth = event.newWidth;
+}
 ```
 }
 

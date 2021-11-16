@@ -72,15 +72,14 @@ Ignite UI for Angular の行選択では、行内の他のすべての列に先�
 
 ### 単一選択
 
-単一行の選択は、`[rowSelection] = '"single"'` プロパティの設定のみで簡単に設定できるようになりました。これにより、**グリッド内の 1 行のみを選択できます**。行のセルにフォーカスするときにセルをクリックするかスペースキーを押すと行を選択できます。もちろん、行セレクターフィールドをクリックして行を選択できます。行が選択または選択解除されると、**rowSelected** イベントが生成されます。
+単一行の選択は、`[rowSelection] = '"single"'` プロパティの設定のみで簡単に設定できるようになりました。これにより、**グリッド内の 1 行のみを選択できます**。行のセルにフォーカスするときにセルをクリックするかスペースキーを押すと行を選択できます。もちろん、行セレクターフィールドをクリックして行を選択できます。行が選択または選択解除されると、**rowSelectionChanging** イベントが生成されます。
 
 @@if (igxName === 'IgxGrid') {
 ```html
 <!-- selectionExample.component.html -->
 
-<igx-grid #grid1 [data]="remote | async" [rowSelection]="'single'" (rowSelected)="handleRowSelection($event)"
-    [width]="'800px'" [height]="'600px'" [allowFiltering]="true">
-        ...
+<igx-grid [data]="remote | async" [rowSelection]="'single'" [autoGenerate]="true"
+          (rowSelectionChanging)="handleRowSelection($event)" [allowFiltering]="true">
 </igx-grid>
 ```
 ```typescript
@@ -97,9 +96,8 @@ public handleRowSelection(args) {
 ```html
 <!-- selectionExample.component.html -->
 
-<igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="false" [height]="'530px'" width="100%"
-            [rowSelection]="'single'" [allowFiltering]="true" (rowSelected)="handleRowSelection($event)">
-    ...
+<igx-tree-grid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="true"
+            [rowSelection]="'single'" [allowFiltering]="true" (rowSelectionChanging)="handleRowSelection($event)">
 </igx-tree-grid>
 ```
 ```typescript
@@ -114,20 +112,17 @@ public handleRowSelection(event) {
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="false"
-        [height]="'600px'" [width]="'100%'" [rowSelection]="'single'"
-        (rowSelected)="handleRowSelection($event)" #hierarchicalGrid>
-    ...
+<igx-hierarchical-grid [data]="localdata" [autoGenerate]="true" [rowSelection]="'single'" (rowSelectionChanging)="handleRowSelection($event)">
 </igx-hierarchical-grid>
 ```
 ```typescript
 /* selectionExample.component.ts */
 
-    public handleRowSelection(event) {
+public handleRowSelection(event) {
     if (args.added.lenght && args.added[0] === 3) {
         args.cancel = true;
     }
-    }
+}
 ```
 }
 
@@ -139,9 +134,8 @@ public handleRowSelection(event) {
 ```html
 <!-- selectionExample.component.html -->
 
-<igx-grid #grid1 [data]="remote | async" [primaryKey]="'ProductID'" [rowSelection]="'multiple'" (rowSelected)="handleRowSelection($event)"
-    [width]="'800px'" [height]="'600px'" [allowFiltering]="true">
-    ...
+<igx-grid [data]="remote | async" [primaryKey]="'ProductID'" [rowSelection]="'multiple'"
+        [autoGenerate]="true" (rowSelectionChanging)="handleRowSelection($event)" [allowFiltering]="true">
 </igx-grid>
 ```
 
@@ -150,18 +144,16 @@ public handleRowSelection(event) {
 ```html
 <!-- selectionExample.component.html -->
 
-<igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID" [height]="'530px'" width="100%" [rowSelection]="'multiple'" [allowFiltering]="true" (rowSelected)="handleRowSelection($event)">
-    ...
+<igx-tree-grid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="true"
+        [rowSelection]="'multiple'" [allowFiltering]="true" (rowSelectionChanging)="handleRowSelection($event)">
 </igx-tree-grid>
 ```
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="false"
-        [height]="'600px'" [width]="'100%'" [rowSelection]="'multiple'"
-        (rowSelected)="handleRowSelection($event)" #hierarchicalGrid>
-    ...
+<igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="true"
+        [rowSelection]="'multiple'" (rowSelectionChanging)="handleRowSelection($event)">
 </igx-hierarchical-grid>
 ```
 }
@@ -171,8 +163,8 @@ public handleRowSelection(event) {
 ```html
 <!-- selectionExample.component.html -->
 
-<igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID" [height]="'530px'" width="100%" [rowSelection]="'multipleCascade'" [allowFiltering]="true" (rowSelected)="handleRowSelection($event)">
-    ...
+<igx-tree-grid [data]="data" primaryKey="ID" foreignKey="ParentID" [rowSelection]="'multipleCascade'"
+        [autoGenerate]="true" [allowFiltering]="true" (rowSelectionChanging)="handleRowSelection($event)">
 </igx-tree-grid>
 ```
 このモードでは、親の選択状態はその子の選択状態に完全に依存します。親に選択された子と選択解除された子がある場合、そのチェックボックスは不確定な状態になります。
@@ -185,7 +177,7 @@ public handleRowSelection(event) {
 @@if (igxName !== 'IgxTreeGrid') {
 * @@igComponent でリモート仮想化を使用した場合、ヘッダーのチェックボックスをクリックすると、現在グリッドにあるすべてのレコードが選択/選択解除されます。新しいデータがオンデマンドで @@igComponent にロードされると、新、しく追加された行は選択されない制限があるため、これらの行を選択するには API メソッドを使用して動作を処理する必要があります。
 }
-* 行を選択すると、[`rowSelected`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowSelected) イベントがトリガーされます。このイベントは、新しい選択、古い選択、古い選択に対して追加および削除された行に関する情報を提供します。また、イベントはキャンセル可能であるため、選択を防ぐことができます。
+* 行を選択すると、[`rowSelectionChanging`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowSelectionChanging) イベントがトリガーされます。このイベントは、新しい選択、古い選択、古い選択に対して追加および削除された行に関する情報を提供します。また、イベントはキャンセル可能であるため、選択を防ぐことができます。
 * 行選択が有効になっている場合、行セレクターが表示されますが、表示しない場合は、`[hideRowSelectors] = true` に設定できます。
 * 行選択モードのランタイムを切り替えると、優先行選択状態がクリアされます。
 
@@ -235,7 +227,7 @@ public handleRowSelection(event) {
 ```
 
 ### 行選択イベント
-行選択に何らかの変更があると、**`rowSelected`** イベントが発生します。 **`rowSelected`** は次の引数を公開します。
+行選択に何らかの変更があると、**`rowSelectionChanging`** イベントが発生します。 **`rowSelectionChanging`** は次の引数を公開します。
 - `oldSelection` - 行選択の前の状態を含む行 ID の配列。
 - `newSelection` - 行選択の新しい状態に一致する行 ID の列。
 - `added` - 現在選択に追加されている行 ID の配列。
@@ -249,7 +241,7 @@ public handleRowSelection(event) {
 ```html
 <!-- selectionExample.component.html -->
 
-<@@igSelector (rowSelected)="handleRowSelectionChange($event)">
+<@@igSelector (rowSelectionChanging)="handleRowSelectionChange($event)">
 ...
 </@@igSelector>
 ```
@@ -286,7 +278,7 @@ public getSelectedRows() {
 public mySelectedRows = [1, 2, 3]; // an array of row IDs
 ```
 ```html
-<igx-grid primaryKey="ProductID" rowSelection="multiple" [mySelectedRows]="selectedRows" [data]="data">
+<igx-grid primaryKey="ProductID" rowSelection="multiple" [autoGenerate]="false" [mySelectedRows]="selectedRows" [data]="data">
     <igx-column [field]="'ProductID'"></igx-column>
     <igx-column [field]="'ProductName'"></igx-column>
     <igx-column [field]="'UnitsInStock'"></igx-column>
@@ -299,7 +291,7 @@ public mySelectedRows = [1, 2, 3]; // an array of row IDs
 public mySelectedRows = ['Johnathan Winchester', 'Ana Sanders']; // an array of row IDs
 ```
 ```html
-<igx-tree-grid primaryKey="ID" rowSelection="multiple" [selectedRows]="mySelectedRows" [data]="data">
+<igx-tree-grid primaryKey="ID" rowSelection="multiple" [autoGenerate]="false" [selectedRows]="mySelectedRows" [data]="data">
     <igx-column [field]="'Name'"></igx-column>
     <igx-column [field]="'Title'"></igx-column>
 </igx-tree-grid>
@@ -314,7 +306,7 @@ public mySelectedRows = ['Naomi Yepes', 'Ahmad Nazeri'];
 public childSelectedRows = ['Initiation', 'Emergency'];
 ```
 ```html
-<igx-hierarchical-grid primaryKey="Artist" rowSelection="multiple" [selectedRows]="mySelectedRows" [data]="data">
+<igx-hierarchical-grid primaryKey="Artist" rowSelection="multiple" [autoGenerate]="false" [selectedRows]="mySelectedRows" [data]="data">
     <igx-column field="Artist"></igx-column>
     <igx-row-island [key]="'Albums'" rowSelection="multiple">
         <igx-column field="Album"></igx-column>
@@ -327,7 +319,7 @@ public childSelectedRows = ['Initiation', 'Emergency'];
 ### 行セレクター テンプレート
 @@igComponent でヘッダーおよび行セレクターをテンプレート化し、さまざまなシナリオに役立つ機能を提供するコンテキストにアクセスすることもできます。
 
-デフォルトでは、@@igComponent は、行セレクターの親コンテナまたは行自体の**すべての行選択操作を処理**し、テンプレートの状態の可視化のみになります。基本機能のオーバーライドは通常、[`rowSelected` イベント](#行選択イベント) を使用して実行する必要があります。基本機能をオーバーライドする `click` ハンドラーを使用してカスタムテンプレートを実装する場合、イベントの伝播を停止して、正しい行の状態を保持する必要があります。
+デフォルトでは、@@igComponent は、行セレクターの親コンテナまたは行自体の**すべての行選択操作を処理**し、テンプレートの状態の可視化のみになります。基本機能のオーバーライドは通常、[`rowSelectionChanging` イベント](#行選択イベント) を使用して実行する必要があります。基本機能をオーバーライドする `click` ハンドラーを使用してカスタムテンプレートを実装する場合、イベントの伝播を停止して、正しい行の状態を保持する必要があります。
 
 #### 行テンプレート
 カスタム行セレクター テンプレートを作成するには、`@@igSelector` 内で` igxRowSelector` ディレクティブを使用して `<ng-template>` を宣言します。テンプレートから、行の状態に関する情報を提供するプロパティを使用して、暗黙的に提供されたコンテキスト変数にアクセスできます。
@@ -346,7 +338,7 @@ public childSelectedRows = ['Initiation', 'Emergency'];
 `rowID` プロパティを使用して、`@@igSelector` 行の参照を取得できます。行セレクター要素に `click` ハンドラーを実装する場合に便利です。
 ```html
 <ng-template igxRowSelector let-rowContext>
-    <igx-checkbox (click)="onSelectorClick($event, rowContext.rowID)"></igx-checkbox>
+    <igx-checkbox (click)="onSelectorClick($event, rowContext.key)"></igx-checkbox>
 </ng-template>
 ```
 上の例では、`igx-checkbox` を使用しており、`rowContext.selected` をその `checked` プロパティにバインドしています。[`行番号のデモ`](#行の番号付けデモ)で実際にこれをご覧ください。
@@ -369,7 +361,7 @@ public childSelectedRows = ['Initiation', 'Emergency'];
 `selectedCount` および `totalCount` プロパティを使用して、ヘッド セレクターをチェックするか、不確定にする (部分的に選択する) かを決定できます。
 @@if (igxName === 'IgxGrid') {
 ```html
-<igx-grid #grid [data]="gridData" primaryKey="ProductID" rowSelection="multiple">
+<igx-grid [data]="gridData" primaryKey="ProductID" rowSelection="multiple">
     <!-- ... -->
     <ng-template igxHeadSelector let-headContext>
         <igx-checkbox
@@ -383,7 +375,7 @@ public childSelectedRows = ['Initiation', 'Emergency'];
 
 @@if (igxName === 'IgxTreeGrid') {
 ```html
-<igx-tree-grid #tGrid [data]="tGridData" primaryKey="ProductID" childDataKey="Products">
+<igx-tree-grid [data]="tGridData" primaryKey="ProductID" childDataKey="Products">
     <!-- ... -->
     <ng-template igxHeadSelector let-headContext>
         <igx-checkbox
@@ -397,7 +389,7 @@ public childSelectedRows = ['Initiation', 'Emergency'];
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid #hGrid [data]="hGridData" primaryKey="ProductID">
+<igx-hierarchical-grid [data]="hGridData" primaryKey="ProductID">
     <ng-template igxHeadSelector let-headContext>
         <igx-checkbox
             [checked]="headContext.selectedCount > 0 && headContext.selectedCount === headContext.totalCount"
@@ -466,7 +458,7 @@ public childSelectedRows = ['Initiation', 'Emergency'];
 }
 
 ### 条件付き選択のデモ
-このデモでは、`rowSelected` イベントと、選択できない行のチェックボックスが無効になっているカスタム テンプレートを使用して、一部の行が選択されないようにします。
+このデモでは、`rowSelectionChanging` イベントと、選択できない行のチェックボックスが無効になっているカスタム テンプレートを使用して、一部の行が選択されないようにします。
 @@if (igxName === 'IgxGrid') {
 
 <code-view style="height:550px" 
@@ -498,7 +490,7 @@ public childSelectedRows = ['Initiation', 'Emergency'];
 ## API リファレンス
 
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-@@if (igxName !== 'IgxTreeGrid') {* [IgxGridRowComponent API]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRowComponent API]({environment:angularApiUrl}/classes/igxtreegridrowcomponent.html)}
+@@if (igxName !== 'IgxTreeGrid') {* [IgxGridRow API]({environment:angularApiUrl}/classes/igxgridrow.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRow API]({environment:angularApiUrl}/classes/igxtreegridrow.html)}
 * [IgxGridCell API]({environment:angularApiUrl}/classes/igxgridcell.html)
 * [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 

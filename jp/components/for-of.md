@@ -156,13 +156,13 @@ export class AppModule {}
 ***注:*** [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) のインスタンスで [`totalItemCount`]({environment:angularApiUrl}/classes/igxforofdirective.html#totalitemcount) プロパティを設定する必要があります。
 
 ```typescript
-this.virtDirRemote.totalItemCount = data["@odata.count"];
+this.virtDirRemote.totalItemCount = data['@odata.count'];
 ```
 
 コンポーネントからディレクティブ インスタンスにアクセスするには、`ViewChild` としてマークします。
 
 ```typescript
-@ViewChild("virtDirRemote", { read: IgxForOfDirective })
+@ViewChild('virtDirRemote', { read: IgxForOfDirective })
 public virtDirRemote: IgxForOfDirective<any>;
 ```
 
@@ -171,7 +171,7 @@ public virtDirRemote: IgxForOfDirective<any>;
 ```typescript
 public ngAfterViewInit() {
     this.remoteService.getData(this.virtDirRemote.state, (data) => {
-        this.virtDirRemote.totalItemCount = data["@odata.count"];
+        this.virtDirRemote.totalItemCount = data['@odata.count'];
     });
 }
 ```
@@ -196,7 +196,7 @@ public getData(data?: IForOfState, cb?: (any) => void): any {
 }
 
 private buildUrl(dataState: any): string {
-    let qS: string = "?", requiredChunkSize: number;
+    let qS: string = '?', requiredChunkSize: number;
     if (dataState) {
         const skip = dataState.startIndex;
             requiredChunkSize =  dataState.chunkSize === 0 ?

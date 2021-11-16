@@ -64,7 +64,7 @@ export class AppModule {}
 グループ化は、[groupKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#groupkey) プロパティを対応するデータソース エンティティに設定、または空文字列に設定して有効または無効にできます。
 
 ```typescript
-    @ViewChild("combo", { read: IgxComboComponent }) public combo: IgxComboComponent;
+    @ViewChild('combo', { read: IgxComboComponent }) public combo: IgxComboComponent;
 
     public filterable = true;
     public showSearchCaseIcon = true;
@@ -72,7 +72,7 @@ export class AppModule {}
     public disabled = false;
 
     public enableGroups(event) {
-        this.combo.groupKey = event.checked ? "region" : "";
+        this.combo.groupKey = event.checked ? 'region' : '';
     }
 ```
 
@@ -86,7 +86,7 @@ export class AppModule {}
 ```
 
 ```typescript
-import { localData } from "./local-data";
+import { localData } from './local-data';
 
 export class ComboDemo implements OnInit {
     public lData: any[];
@@ -183,6 +183,22 @@ Combo の [autoFocusSearch]({environment:angularApiUrl}/classes/igxcombocomponen
 <igx-combo [groupKey]="'primaryKey'"></igx-combo>
 ```
 
+グループを昇順または降順のどちらでソートするかを設定できます。デフォルトでは、ソート順序は、昇順に設定されています。
+
+```html
+<igx-combo [groupSortingDirection]="groupSortingDirection"></igx-combo>
+```
+
+```typescript
+...
+import { SortingDirection } from 'igniteui-angular'
+
+export class ComboDemo {
+    ...
+    public groupSortingDirection: SortingDirection = SortingDirection.Asc;
+}
+```
+
 <div class="divider--half"></div>
 
 ## API まとめ
@@ -202,7 +218,7 @@ Combo の [autoFocusSearch]({environment:angularApiUrl}/classes/igxcombocomponen
 * [コンボ テンプレート](combo-templates.md)
 * [テンプレート駆動フォームの統合](input-group.md)
 * [リアクティブ フォームの統合](angular-reactive-form-validation.md)
-* [カスケーディング](combo-cascading.md)
+* [Single Select ComboBox](simple-combo.md)
 
 コミュニティに参加して新しいアイデアをご提案ください。
 

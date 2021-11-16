@@ -28,7 +28,7 @@ Calendar コンポーネントを初期化する前に、`IgxCalendarModule` を
 ```typescript
 // app.module.ts
 ...
-import { HammerModule } from "@angular/platform-browser";
+import { HammerModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IgxCalendarModule } from 'igniteui-angular';
 @NgModule({
@@ -121,11 +121,11 @@ export class AppModule {}
 
 public formatOptions: any;
 public formatViews: any;
-public locales = ["EN", "DE", "FR", "AR", "ZH"];
-public locale = "EN";
+public locales = ['EN', 'DE', 'FR', 'AR', 'ZH'];
+public locale = 'EN';
 
 public ngOnInit() {
-    this.formatOptions = { day: "2-digit", month: "long", weekday: "long", year: "numeric" };
+    this.formatOptions = { day: '2-digit', month: 'long', weekday: 'long', year: 'numeric' };
     this.formatViews = { day: true, month: true, year: true };
 }
 ```
@@ -148,7 +148,7 @@ public ngOnInit() {
 
 ```typescript
 export class CalendarSample6Component {
-    @ViewChild("calendar") public calendar: IgxCalendarComponent;
+    @ViewChild('calendar') public calendar: IgxCalendarComponent;
     public today = new Date(Date.now());
     public range = [
         new Date(this.today.getFullYear(), this.today.getMonth(), 3),
@@ -177,9 +177,9 @@ export class CalendarSample6Component {
 
 ```typescript
 export class CalendarSample7Component {
-    @ViewChild("calendar", { static: true })
+    @ViewChild('calendar', { static: true })
     public calendar: IgxCalendarComponent;
-    @ViewChild("alert", { static: true })
+    @ViewChild('alert', { static: true })
     public dialog: IgxDialogComponent;
     public range = [];
 

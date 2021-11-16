@@ -105,8 +105,7 @@ If there is a **multi-cell selection**, we will put logic, which will check whet
 Basically the main function will look like this:
 
 ```typescript
-...
- public rightClick(eventArgs: any) {
+public rightClick(eventArgs: any) {
      // Prevent the default behavior of the right click
     eventArgs.event.preventDefault();
     this.multiCellArgs = {};
@@ -134,7 +133,6 @@ Basically the main function will look like this:
     // Enable the context menu
     this.contextmenu = true;
 }
-...
 ```
 The context menu will have the following functions:
 - Copy the selected cell's *value*
@@ -143,25 +141,24 @@ The context menu will have the following functions:
 
 ```typescript
 //contextmenu.component.ts
-...
-    public copySelectedCellData(event) {
-        const selectedData = { [this.cell.column.field]: this.cell.value };
-        this.copyData(JSON.stringify({ [this.cell.column.field]: this.cell.value }));
-        this.onCellValueCopy.emit({ data: selectedData });
-    }
 
-    public copyRowData(event) {
-        const selectedData = this.cell.row.data ;
-        this.copyData(JSON.stringify(this.cell.row.data));
-        this.onCellValueCopy.emit({ data: selectedData });
-    }
+public copySelectedCellData(event) {
+    const selectedData = { [this.cell.column.field]: this.cell.value };
+    this.copyData(JSON.stringify({ [this.cell.column.field]: this.cell.value }));
+    this.onCellValueCopy.emit({ data: selectedData });
+}
 
-    public copySelectedCells(event) {
-        const selectedData = this.selectedCells.data;
-        this.copyData(JSON.stringify(selectedData));
-        this.onCellValueCopy.emit({ data: selectedData });
-    }
-...
+public copyRowData(event) {
+    const selectedData = this.cell.row.data ;
+    this.copyData(JSON.stringify(this.cell.row.data));
+    this.onCellValueCopy.emit({ data: selectedData });
+}
+
+public copySelectedCells(event) {
+    const selectedData = this.selectedCells.data;
+    this.copyData(JSON.stringify(selectedData));
+    this.onCellValueCopy.emit({ data: selectedData });
+}
 ```
 
 The IgxGrid will fetch the copied data and will paste it in a container element.
@@ -201,7 +198,7 @@ The template we are going to use to combine the grid with the context menu:
 
 ## Known Issues and Limitations
 
-- Using the @@igComponent with Selection enabled on IE11 requires the explicit import of the array polyfill in polyfill.ts of the angular application.
+- Using the @@igComponent with Selection enabled on IE11 requires the explicit import of the array polyfill in polyfill.ts of the angular application. IE11 is no longer supported as of version 13.0.0.
 
     ```typescript
     import 'core-js/es7/array';
@@ -216,7 +213,7 @@ The template we are going to use to combine the grid with the context menu:
 ## API References
 
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-@@if (igxName !== 'IgxTreeGrid') {* [IgxGridRowComponent API]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRowComponent API]({environment:angularApiUrl}/classes/igxtreegridrowcomponent.html)}
+@@if (igxName !== 'IgxTreeGrid') {* [IgxGridRow API]({environment:angularApiUrl}/classes/igxgridrow.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRow API]({environment:angularApiUrl}/classes/igxtreegridrow.html)}
 * [IgxGridCell API]({environment:angularApiUrl}/classes/igxgridcell.html)
 * [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
 
