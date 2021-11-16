@@ -141,6 +141,36 @@ The @@igComponent supports remote sorting, which is demonstrated in the [`@@igCo
 <div class="divider--half"></div>
 }
 
+## Sorting Indicators Templates
+
+The sorting indicator icon in the column header can be customized using a template. The following directives are available for templating the sorting indicator for any sorting state (ascending, descending, none):
+
+- `IgxSortHeaderIconDirective` – re-templates the sorting icon when no sorting is applied.
+
+```html
+<ng-template igxSortHeaderIcon>
+    <igx-icon>unfold_more</igx-icon>
+</ng-template>
+```
+
+- `IgxSortAscendingHeaderIconDirective` – re-templates the sorting icon when the column is sorted in ascending order.
+
+```html
+<ng-template igxSortAscendingHeaderIcon>
+    <igx-icon>expand_less</igx-icon>
+</ng-template>
+```
+
+- `IgxSortDescendningHeaderIconDirective` – re-templates the sorting icon when the column is sorted in descending order.
+
+```html
+<ng-template igxSortDescendingHeaderIcon>
+    <igx-icon>expand_more</igx-icon>
+</ng-template>
+```
+
+<div class="divider--half"></div>
+
 ## Styling
 
 To get started with styling the sorting behavior, we need to import the `index` file, where all the theme functions and component mixins live:
