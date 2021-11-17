@@ -60,7 +60,7 @@ export class AppModule {}
 ```
 
 ### Component Definition
-Note that grouping is enabled/disabled by setting the [groupKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#groupkey) property to a corresponding data source entity or setting it to an empty string.
+Note that grouping is enabled/disabled by setting the [groupKey]({environment:angularApiUrl}/classes/IgxComboComponent.html#groupKey) property to a corresponding data source entity or setting it to an empty string.
 
 ```typescript
     @ViewChild('combo', { read: IgxComboComponent }) public combo: IgxComboComponent;
@@ -78,7 +78,7 @@ Note that grouping is enabled/disabled by setting the [groupKey]({environment:an
 ## Features
 
 ### Data Binding
-The following code snippet illustrates a basic usage of the [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) bound to a local data source. The [valueKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#valuekey) specifies which property of the data entries will be stored for the combobox's selection and the [displayKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#displaykey) specifies which property will be used for the combobox text:
+The following code snippet illustrates a basic usage of the [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) bound to a local data source. The [valueKey]({environment:angularApiUrl}/classes/IgxComboComponent.html#valueKey) specifies which property of the data entries will be stored for the combobox's selection and the [displayKey]({environment:angularApiUrl}/classes/IgxComboComponent.html#displayKey) specifies which property will be used for the combobox text:
 
 ```html
 <igx-combo [data]="lData" valueKey="ProductID" displayKey="ProductName"></igx-combo>
@@ -102,7 +102,7 @@ export class ComboDemo implements OnInit {
 Follow the [ComboBox Remote Binding topic](combo-remote.md) for more details about binding the combobox component with remote data.
 
 ### Custom Overlay Settings
-The combobox component allows users to change the way a list of items is shown. This can be done by defining [Custom OverlaySettings]({environment:angularApiUrl}/interfaces/overlaysettings.html) and passing them to the [ComboBox's OverlaySettings]({environment:angularApiUrl}/classes/igxcombocomponent.html#overlaysettings) input:
+The combobox component allows users to change the way a list of items is shown. This can be done by defining [Custom OverlaySettings]({environment:angularApiUrl}/interfaces/overlaysettings.html) and passing them to the [ComboBox's OverlaySettings]({environment:angularApiUrl}/classes/IgxComboComponent.html#overlaySettings) input:
 
 ```typescript
 export class CustomOverlayCombo {
@@ -140,7 +140,7 @@ If everything is set up correctly, the combobox's list will display centered, us
 ### Filtering
 By default, filtering in the combobox is enabled. It can be disabled by setting the [filterable]({environment:angularApiUrl}/classes/igxcombocomponent.html#filterable) property to false.
 
-Filtering options can be further enhanced by enabling the search case sensitivity. To display the case-sensitive icon in the search input, set the [showSearchCaseIcon]({environment:angularApiUrl}/classes/igxcombocomponent.html#showsearchcaseicon) property to true:
+Filtering options can be further enhanced by enabling the search case sensitivity. To display the case-sensitive icon in the search input, set the [showSearchCaseIcon]({environment:angularApiUrl}/classes/IgxComboComponent.html#showSearchCaseIcon) property to true:
 
 ```html
 <igx-combo [filterable]="false" [showSearchCaseIcon]="true"></igx-combo>
@@ -149,7 +149,7 @@ Filtering options can be further enhanced by enabling the search case sensitivit
 <div class="divider--half"></div>
 
 ### Custom Values
-The [allowCustomValues]({environment:angularApiUrl}/classes/igxcombocomponent.html#allowcustomvalues) property controls whether custom values can be added to the collection. If it is enabled, a missing item could be included using the UI of the combobox.
+The [allowCustomValues]({environment:angularApiUrl}/classes/IgxComboComponent.html#allowCustomValues) property controls whether custom values can be added to the collection. If it is enabled, a missing item could be included using the UI of the combobox.
 
 ```html
 <igx-combo [allowCustomValues]="true"></igx-combo>
@@ -158,7 +158,7 @@ The [allowCustomValues]({environment:angularApiUrl}/classes/igxcombocomponent.ht
 <div class="divider--half"></div>
 
 ### Search Input Focus
-The combobox's [autoFocusSearch]({environment:angularApiUrl}/classes/igxcombocomponent.html#autofocussearch)  property controls if the search input should receive focus when a combobox's dropdown list is opened. By default, the property is set to `true`. When set to `false`, the focus goes to the combobox's items container. For mobile devices, this can be used to prevent the software keyboard from popping up when opening the combobox's dropdown list.
+The combobox's [autoFocusSearch]({environment:angularApiUrl}/classes/IgxComboComponent.html#autoFocusSearch)  property controls if the search input should receive focus when a combobox's dropdown list is opened. By default, the property is set to `true`. When set to `false`, the focus goes to the combobox's items container. For mobile devices, this can be used to prevent the software keyboard from popping up when opening the combobox's dropdown list.
 
 ```html
 <igx-combo [autoFocusSearch]="false"></igx-combo>
