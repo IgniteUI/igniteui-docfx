@@ -111,8 +111,8 @@
   updated: true
   sortable: true
   items:
-    - name: Action Strip
-      href: grid/action-strip.md
+    - name: Row Actions
+      href: grid/row-actions.md
       new: true
     - name: Live Data / Real-Time
       href: grid/live-data.md
@@ -256,8 +256,8 @@
   new: false
   sortable: true
   items:
-    - name: Action Strip
-      href: treegrid/action-strip.md
+    - name: Row Actions
+      href: treegrid/row-actions.md
       new: true
     - name: Live Data / Real-Time
       href: treegrid/live-data.md
@@ -393,8 +393,8 @@
   new: false
   sortable: true
   items:
-    - name: Action Strip
-      href: hierarchicalgrid/action-strip.md
+    - name: Row Actions
+      href: hierarchicalgrid/row-actions.md
       new: true
     - name: Virtualization and performance
       href: hierarchicalgrid/virtualization.md
