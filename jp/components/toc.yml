@@ -537,7 +537,7 @@
     - name: テンプレート
       href: combo-templates.md
       new: false
-    - name: Single Select ComboBox
+    - name: 単一選択コンボボックス
       href: simple-combo.md
       new: true
 - name: Spreadsheet

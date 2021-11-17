@@ -1,27 +1,27 @@
 ---
-title: コンボ リモート バインディング
+title: ComboBox リモート バインディング
 _description: igx-combo は、コンボをリモートサービスにバインドしてデータをオンデマンドで取得する API を公開します。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Combo コンポーネント, Angular Combo コントロール, Angular Combo リモート バインディング
 _language: ja
 ---
 
-# コンボ リモート バインディング
+# ComboBox (コンボボックス) リモート バインディング
 <p class="highlight">
-Ignite UI for Angular Combo コンポーネントは、コンボをリモート サービスにバインドし、要求に応じてデータを取得できる API を公開します。
+Ignite UI for Angular ComboBox コンポーネントは、コンボボックスをリモート サービスにバインドし、要求に応じてデータを取得できる API を公開します。
 </p>
 
-## Angular コンボ リモート バインディングの例
+## Angular コンボボックス リモート バインディングの例
 以下のサンプルは、[dataPreLoad]({environment:angularApiUrl}/classes/igxcombocomponent.html#datapreload) プロパティを使用してリモート データの新しい部分をロードするリモート バインディングを示しています。
 
 
 <code-view style="height: 400px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/combo-remote" alt="Angular コンボ リモート バインディングの例">
+           iframe-src="{environment:demosBaseUrl}/lists/combo-remote" alt="Angular コンボボックス リモート バインディングの例">
 </code-view>
 
 
 ## 使用方法
-Combo コンポーネントを初期化にするには、まず `IgxComboModule` を **app.module.ts**  ファイルにインポートします。デモではサーバー要求にリモート サービスを使用しているため、追加で `HttpClientModule` を含む必要があります。
+ComboBox コンポーネントを初期化にするには、まず `IgxComboModule` を **app.module.ts**  ファイルにインポートします。デモではサーバー要求にリモート サービスを使用しているため、追加で `HttpClientModule` を含む必要があります。
 
 ```typescript
 import { IgxComboModule } from 'igniteui-angular';
@@ -39,9 +39,9 @@ export class AppModule {}
 ```
 
 ### リモート サービスの定義
-コンボをリモートデータへバインドする際にサーバーからデータをオンデマンドで読み込むための有効なサービスが必要です。Combo コンポーネントは [virtualizationState]({environment:angularApiUrl}/classes/igxcombocomponent.html#virtualizationstate) プロパティを公開し、コンボの状態 (最初のインデックスと読み込む必要のある項目数) を提供します。スクロール サイズを正しく表示するには、[totalItemCount]({environment:angularApiUrl}/classes/igxcombocomponent.html#totalitemcount) プロパティにサーバー上の全項目に対応する値が必要です。
+コンボボックスをリモートデータへバインドする際にサーバーからデータをオンデマンドで読み込むための有効なサービスが必要です。コンボボックス コンポーネントは [virtualizationState]({environment:angularApiUrl}/classes/igxcombocomponent.html#virtualizationstate) プロパティを公開し、コンボボックスの状態 (最初のインデックスと読み込む必要のある項目数) を提供します。スクロール サイズを正しく表示するには、[totalItemCount]({environment:angularApiUrl}/classes/igxcombocomponent.html#totalitemcount) プロパティにサーバー上の全項目に対応する値が必要です。
 
-以下のコードは、`getData()` メソッドでシンプルなサービスを定義し、コンボの状態を受け取り、observable としてデータを返します。
+以下のコードは、`getData()` メソッドでシンプルなサービスを定義し、コンボボックスの状態を受け取り、observable としてデータを返します。
 
 ```typescript
 import { HttpClient } from '@angular/common/http';
@@ -59,13 +59,13 @@ export class RemoteService {
         this.remoteData = this._remoteData.asObservable();
     }
 
-    // Use combo current virtualization state and search text to build URL and request the new data.
+    // Use combobox current virtualization state and search text to build URL and request the new data.
     public getData(data?: IForOfState, searchText?: string, cb?: (any) => void): any { }
 }
 ```
 
-### コンボをリモート サービスへバインド
-データがサービスから observable として返されると [async](https://angular.io/api/common/AsyncPipe) パイプを使用して Combo コンポーネントに設定します。
+### コンボボックスをリモート サービスへバインド
+データがサービスから observable として返されると [async](https://angular.io/api/common/AsyncPipe) パイプを使用してコンボボックス コンポーネントに設定します。
 
 ```html
 <igx-combo [data]="rData | async"
@@ -77,11 +77,11 @@ export class RemoteService {
 </igx-combo>
 ```
 
-以下は、コンボ コンポーネントが新しいデータを要求する必要がある一般的な例です。
-    - コンボが初期化されたとき
-    - コンボのリストをスクロールしたとき - 新しいコンボ `virtualizationState` と `dataPreLoad` を発生し、リモート サービスに新しい要求を送ることができます。
-    - コンボで検索するとき - リモート結果のフィルターを要求する必要があります。
-    - コンボが開いたとき - 以前のフィルター処理の結果をクリアします。
+以下は、コンボボックス コンポーネントが新しいデータを要求する必要がある一般的な例です。
+    - コンボボックスが初期化されたとき
+    - コンボボックスのリストをスクロールしたとき - 新しいコンボボックス `virtualizationState` と `dataPreLoad` を発生し、リモート サービスに新しい要求を送ることができます。
+    - コンボボックスで検索するとき - リモート結果のフィルターを要求する必要があります。
+    - コンボボックスが開いたとき - 以前のフィルター処理の結果をクリアします。
 
 以下は定義済みの操作をリッスンしてサーバーへ要求するハンドラーです。
 
@@ -142,12 +142,12 @@ export class ComboRemoteComponent implements OnInit {
 > サービスはプロバイダーとして含む必要があります。
 
 ### 選択の処理
-より複雑なデータ型 (オブジェクトなど) を扱うチャンクでロードされたリモート データにバインドされたコンボを使用する場合、`valueKey` を定義する必要があります。[コンボ トピック](combo.md#データ値と表示プロパティ)で述べたように、`valueKey` が指定されていない場合、コンボは選択を `equality (===)` で処理しようとします。選択済みとしてマークされるオブジェクトは、継続的にロードされるオブジェクトと同じではないため、選択は失敗します。
+より複雑なデータ型 (オブジェクトなど) を扱うチャンクでロードされたリモート データにバインドされたコンボボックスを使用する場合、`valueKey` を定義する必要があります。[コンボボックス トピック](combo.md#データ値と表示プロパティ)で述べたように、`valueKey` が指定されていない場合、コンボボックスは選択を `equality (===)` で処理しようとします。選択済みとしてマークされるオブジェクトは、継続的にロードされるオブジェクトと同じではないため、選択は失敗します。
 
 > [!Note]
-> コンボをリモートデータにバインドするときは、各項目に固有のプロパティを表す `valueKey` を指定してください。
+> コンボボックスをリモートデータにバインドするときは、各項目に固有のプロパティを表す `valueKey` を指定してください。
 
-コンボがリモートデータにバインドされている場合、APIを介して値/選択項目を設定すると、現在のチャンクにロードされた項目のみが考慮されます。初期値を設定したい場合は、選択する前にそれらの特定の項目がロードされていることを確認してください。
+コンボボックスがリモートデータにバインドされている場合、APIを介して値/選択項目を設定すると、現在のチャンクにロードされた項目のみが考慮されます。初期値を設定したい場合は、選択する前にそれらの特定の項目がロードされていることを確認してください。
 
 ## API まとめ
 <div class="divider--half"></div>
@@ -158,12 +158,12 @@ export class ComboRemoteComponent implements OnInit {
 ## その他のリソース
 <div class="divider--half"></div>
 
-* [コンボ コンポーネント](combo.md)
-* [コンボ機能](combo-features.md)
-* [コンボ テンプレート](combo-templates.md)
+* [コンボボックス コンポーネント](combo.md)
+* [コンボボックス機能](combo-features.md)
+* [コンボボックス テンプレート](combo-templates.md)
 * [テンプレート駆動フォームの統合](input-group.md)
 * [リアクティブ フォームの統合](angular-reactive-form-validation.md)
-* [Single Select ComboBox](simple-combo.md)
+* [単一選択コンボボックス](simple-combo.md)
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
