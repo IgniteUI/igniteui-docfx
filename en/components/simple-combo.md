@@ -69,7 +69,7 @@ Our simple combobox is now bound to the array of cities.
 
 ### Data value and display properties
 
-Since the simple combobox is bound to an array of complex data (i.e. objects), we need to specify a property that the control will use to handle the selected items. The control exposes two `@Input` properties - [valueKey]({environment:angularApiUrl}/classes/igxsimplecombocomponent.html#valuekey) and [displayKey]({environment:angularApiUrl}/classes/igxsimplecombocomponent.html#displaykey):
+Since the simple combobox is bound to an array of complex data (i.e. objects), we need to specify a property that the control will use to handle the selected items. The control exposes two `@Input` properties - [valueKey]({environment:angularApiUrl}/classes/IgxSimpleComboComponent.html#valueKey) and [displayKey]({environment:angularApiUrl}/classes/IgxSimpleComboComponent.html#displayKey):
 
  - `valueKey` - *Optional, recommended for object arrays* - Specifies which property of the data entries will be stored for the simple combobox's selection. If `valueKey` is omitted, the simple combobox value will use references to the data entries (i.e. the selection will be an array of entries from `igxSimpleCombo.data`).
  - `displayKey` - *Required for object arrays* - Specifies which property will be used for the items' text. If no value is specified for `displayKey`, the simple combobox will use the specified `valueKey` (if any).
@@ -154,7 +154,7 @@ export class MySimpleComboComponent {
 }
 ```
 
-The simple combobox also fires an event every time its selection changes - [selectionChanging]({environment:angularApiUrl}/classes/igxsimplecombocomponent.html#selectionchanging). The emitted event arguments, [ISimpleComboSelectionChangingEventArgs]({environment:angularApiUrl}/interfaces/isimplecomboselectionchangingeventargs.html), contain information about the selection prior to the change, the current selection and the displayed item. The event can also be cancelled, preventing the selection from taking place.
+The simple combobox also fires an event every time its selection changes - [selectionChanging]({environment:angularApiUrl}/classes/IgxSimpleComboComponent.html#selectionChanging). The emitted event arguments, [ISimpleComboSelectionChangingEventArgs]({environment:angularApiUrl}/interfaces/isimplecomboselectionchangingeventargs.html), contain information about the selection prior to the change, the current selection and the displayed item. The event can also be cancelled, preventing the selection from taking place.
 
 Binding to the event can be done through the proper `@Output` property on the `igx-simple-combo` tag:
 
