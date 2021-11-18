@@ -81,7 +81,27 @@ After:
 ```
 
 * Palettes and Schemas:
-Please ensure the correct palette and component schema are passed to your custom-made component and global themes. If you want to create a global dark theme, make sure to select a lighter color shade for your gray color, for instance:
+- CSS palette variables do not refer to HEX values anymore, instead they represent a list of 3 values H, S, and L, which means they should be passed to either the `hsl` or `hsla` CSS functions.
+
+Before:
+
+```scss
+.some-class {
+    background: var(--igx-surface-500); // returns HEX color
+}
+```
+
+After:
+
+```scss
+.some-class {
+    background: hsl(var(--igx-surface-500)); // returns a list of H, S, L
+}
+```
+
+This was done so that palettes can be changed at runtime using CSS variables only. In this way the alpha channel for a given palette color can be modified at runtime without affecting the underlying palette color.
+
+- Please ensure the correct palette and component schema are passed to your custom-made component and global themes. If you want to create a global dark theme, make sure to select a lighter color shade for your gray color, for instance:
 
 ```scss
 $my-dark-palette: igx-palette(
