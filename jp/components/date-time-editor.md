@@ -30,7 +30,7 @@ import { IgxDateTimeEditorModule } from 'igniteui-angular';
 
 @NgModule({
     ...
-    imports: [..., IgxDateTimeEditorModule ],
+    imports: [..., IgxDateTimeEditorModule],
     ...
 })
 export class AppModule {}

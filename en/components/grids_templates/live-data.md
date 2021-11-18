@@ -32,7 +32,7 @@ Feed the same data into the [Line Chart](../charts/types/line-chart.md) to exper
 ## Data binding and updates
 A service provides data to the component when the page loads, and when the slider controller is used to fetch a certain number of records. While in a real scenario updated data would be consumed from the service, here data is updated in code. This is done to keep the demo simple and focus on its main goal - demonstrate the grid performance.
 ```html
-<igx-grid #grid [data]="data" ...></igx-grid>
+<igx-grid #grid [data]="data"></igx-grid>
 ```
 ```typescript
 public ngOnInit() {
@@ -45,7 +45,7 @@ public ngOnInit() {
 Angular pipes are used internally to update the grid view. A change in the data field value or a change in the data object/data collection reference will trigger the corresponding pipes. However, this is not the case for columns, which are bound to [`complex data objects`](grid.md#complex-data-binding), because the Angular pure pipe will not detect a change in a nested property. To resolve the situation, provide a new object reference for the data object containing the property. Example:
 
 ```html
-<igx-grid #grid [data]="data" ...>
+<igx-grid #grid [data]="data">
     <igx-column field="price.usd"></igx-column>
 </igx-grid>
 ```
@@ -89,8 +89,7 @@ this.hubConnection = new signalR.HubConnectionBuilder()
             this.registerSignalEvents();
             this.broadcastParams(interval, volume, live, updateAll);
         })
-        .catch(() => {})
-        ...
+        .catch(() => {});
 ```
 
 Based on the specified frequency a total of 30 new updates will be received by the Grids from the server. A specific cellStyle classes are applied to the three columns that are handling the changes (Price, Change and Change in percent).

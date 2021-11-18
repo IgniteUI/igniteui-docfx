@@ -43,8 +43,8 @@ The declaration of Multi-row Layout is achieved through [`igx-column-layout`]({e
 	<igx-column [rowStart]="2" [colStart]="4" [colEnd]="7" field="Address"></igx-column>
 </igx-column-layout>
 <igx-column-layout>
-		<igx-column [rowStart]="1" [colStart]="1" field="Phone"></igx-column>
-		<igx-column [rowStart]="2" [colStart]="1" field="Fax"></igx-column>
+    <igx-column [rowStart]="1" [colStart]="1" field="Phone"></igx-column>
+    <igx-column [rowStart]="2" [colStart]="1" field="Fax"></igx-column>
 </igx-column-layout>
 ```
 

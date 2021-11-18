@@ -314,18 +314,18 @@ configureExport(args: IGridToolbarExportEventArgs) {
         options.columnWidth = 10;
     } else {
         options.fileType = CsvFileTypes.TSV;
-        options.valueDelimiter = "\t";
+        options.valueDelimiter = '\t';
     }
 
     args.exporter.columnExporting.subscribe((columnArgs: IColumnExportingEventArgs) => {
         @@if (igxName === 'IgxGrid') {
         // Don't export image fields
-        columnArgs.cancel = columnArgs.header === "Athlete" ||
-                            columnArgs.header === "Country";
+        columnArgs.cancel = columnArgs.header === 'Athlete' ||
+                            columnArgs.header === 'Country';
         }
         @@if (igxName === 'IgxTreeGrid') {
         // Don't export image field
-        columnArgs.cancel = columnArgs.header === "Name";
+        columnArgs.cancel = columnArgs.header === 'Name';
         }
     });
 }

@@ -259,7 +259,7 @@ Ignite UI テーマ エンジンの使用方法の詳細については、[`こ�
 
 ```typescript
 // expansion-panel.component.ts 内
-import { useAnimation } from "@angular/animations";
+import { useAnimation } from '@angular/animations';
 import { IgxExpansionPanelComponent, slideInLeft, slideOutRight } from 'igniteui-angular';
 @Component({
     ...
@@ -271,14 +271,14 @@ export class ExpansionPanelComponent {
     public animationSettingsCustom = {
         closeAnimation: useAnimation(slideOutRight, {
             params: {
-                duration: "100ms",
-                toPosition: "translateX(25px)"
+                duration: '100ms',
+                toPosition: 'translateX(25px)'
             }
         }),
         openAnimation: useAnimation(slideInLeft, {
             params: {
-                duration: "500ms",
-                fromPosition: "translateX(-15px)",
+                duration: '500ms',
+                fromPosition: 'translateX(-15px)',
                 startOpacity: 0.1
             }
         })

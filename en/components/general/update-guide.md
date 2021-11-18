@@ -244,7 +244,6 @@ To get a better grasp on the Sass Moule System, you can read [this great article
         ...
     }
     ```
-
     * `getCellByColumnVisibleIndex` is now deprecated and will be removed in next major version. Use `getCellByKey`, `getCellByColumn` instead.
 
 
@@ -272,6 +271,31 @@ Please note:
 * *ng update* will migrate the uses of *IgxGridCellComponent*, *IgxTreeGridCellComponent*, *IgxHierarchicalGridCellComponent*, *IgxGridExpandableCellComponent*, like imports, typings and casts. If a place in your code using any of the above is not migrated, just remove the typing/cast, or change it with [`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html).
 * *getCellByIndex* and other methods will return undefined, if the row at that index is not a data row, but is IgxGroupByRow, IgxSummaryRow, details row, etc.
 
+
+### Themes
+Due to complaints pertaining to compilation warnings (see [#9793](https://github.com/IgniteUI/igniteui-angular/issues/9793)) we now use the [`math.div`](https://sass-lang.com/documentation/modules/math#div) function; This functionality is supported by [Dart Sass](https://sass-lang.com/dart-sass) from version 1.33.0 onward.
+
+#### Solution
+If for any reason you see Sass compilation errors saying `math.div` is not a known function it means you are using an outdated version of Sass in your project.
+
+1. Update to the latest version of Angular using `ng update` - Angular 12.1.0+ uses the dart-sass compiler by default.
+
+```sh
+ng update [options]
+```
+
+If for some reason you don't use the Ignite UI/Angular CLI, you'd need to replace `node-sass` with `sass` in your Node project.
+
+```sh
+npm uninstall node-sass
+npm install sass --save-dev
+```
+
+2. If for some reason you cannot upgrade to the latest version of Angular using the method above, you can fall back to the old Sass division method by setting a global flag in your Sass file:
+
+```scss
+$__legacy-libsass: true;
+```
 
 ## From 11.1.x to 12.0.x
 ### Themes

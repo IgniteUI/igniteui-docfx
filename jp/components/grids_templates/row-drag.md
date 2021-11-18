@@ -128,7 +128,7 @@ import { ..., IgxDragDropModule } from 'igniteui-angular';
 
 ```typescript
 export class @@igxNameRowDragComponent {
-    ...
+
     public onRowDragEnd(args) {
         args.animation = true;
     }
@@ -144,7 +144,6 @@ export class @@igxNameRowDragComponent {
 
 ```typescript
 export class @@igxNameRowDragComponent {
-    ...
     public onEnterAllowed(args) {
         this.changeGhostIcon(args.drag.ghostElement, DragIcon.ALLOW);
     }
@@ -155,13 +154,12 @@ export class @@igxNameRowDragComponent {
 
     private changeGhostIcon(ghost, icon: string) {
         if (ghost) {
-            const currentIcon = ghost.querySelector(".igx-grid__drag-indicator  > igx-icon");
+            const currentIcon = ghost.querySelector('.igx-grid__drag-indicator > igx-icon');
             if (currentIcon) {
                 currentIcon.innerText = icon;
             }
         }
     }
-
 }
 ```
 `changeGhostIcon` **private** メソッドは、ドラッグ ゴースト内のアイコンを変更するだけです。メソッドのロジックは、アイコンを含む要素を検索し (ドラッグ インジケーター コンテナに適用される `igx-grid__drag-indicator` クラスを使用)、要素の内部テキストを渡されたものに変更します。
@@ -169,16 +167,16 @@ export class @@igxNameRowDragComponent {
 @@if (igxName === 'IgxTreeGrid' || igxName === 'IgxHierarchicalGrid') {
 ```typescript
 enum DragIcon {
-    DEFAULT = "drag_indicator",
-    ALLOW = "remove"
+    DEFAULT = 'drag_indicator',
+    ALLOW = 'remove'
 }
 ```
 }
 @@if (igxName === 'IgxGrid') {
 ```typescript
 enum DragIcon {
-    DEFAULT = "drag_indicator",
-    ALLOW = "add"
+    DEFAULT = 'drag_indicator',
+    ALLOW = 'add'
 }
 ```
 }
@@ -202,14 +200,13 @@ export class @@igxNameRowDragComponent {
 @@if (igxName === 'IgxGrid') {
 ```typescript
 export class @@igxNameRowDragComponent {
-    @ViewChild("sourceGrid", { read: IgxGridComponent }) public sourceGrid: IgxGridComponent;
-    @ViewChild("targetGrid", { read: IgxGridComponent }) public targetGrid: IgxGridComponent;
-    ... 
+    @ViewChild('sourceGrid', { read: IgxGridComponent }) public sourceGrid: IgxGridComponent;
+    @ViewChild('targetGrid', { read: IgxGridComponent }) public targetGrid: IgxGridComponent;
+
     public onDropAllowed(args) {
         this.targetGrid.addRow(args.dragData.data);
         this.sourceGrid.deleteRow(args.dragData.key);
     }
-    ...
 }
 ```
 
@@ -401,23 +398,23 @@ enum DragIcon {
 
 @@if (igxName === 'IgxGrid') {
 ```html
-    <igx-grid #grid [data]="data" [rowDraggable]="true" [primaryKey]="'ID'" igxDrop (dropped)="onDropAllowed($event)">
-        ...
-    </igx-grid>
+<igx-grid #grid [data]="data" [rowDraggable]="true" [primaryKey]="'ID'" igxDrop (dropped)="onDropAllowed($event)">
+    ...
+</igx-grid>
 ```
 }
 @@if (igxName === 'IgxTreeGrid') {
-    <igx-tree-grid igxPreventDocumentScroll  #treeGrid [data]="localData" childDataKey="Employees" [rowDraggable]="true" foreignKey="ParentID"
+<igx-tree-grid igxPreventDocumentScroll  #treeGrid [data]="localData" childDataKey="Employees" [rowDraggable]="true" foreignKey="ParentID"
     [primaryKey]="'ID'" (rowDragStart)="rowDragStart($event)" igxDrop (dropped)="dropInGrid($event)">
     ...
     </igx-tree-grid>
     
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-    <igx-hierarchical-grid #grid [data]="localData" [primaryKey]="'id'"
+<igx-hierarchical-grid #grid [data]="localData" [primaryKey]="'id'"
     [rowDraggable]="true" (rowDragStart)="rowDragStart($event)" igxDrop (dropped)="rowDrop($event)">
     ...
-    </igx-hierarchical-grid>
+</igx-hierarchical-grid>
 }
 
 
@@ -443,7 +440,6 @@ enum DragIcon {
 @@if (igxName === 'IgxGrid') {
 ```typescript
 export class GridRowReorderComponent {
-    ...
     public onDropAllowed(args) {
         const event = args.originalEvent;
         const currRowIndex = this.getCurrentRowIndex(this.grid.rowList.toArray(),
@@ -469,8 +465,7 @@ export class GridRowReorderComponent {
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```typescript
-    export class TreeGridRowReorderComponent {
-    ...
+export class TreeGridRowReorderComponent {
     public rowDragStart(args: any): void {
         const targetRow = args.dragData;
         if (targetRow.expanded) {
@@ -537,8 +532,7 @@ export class GridRowReorderComponent {
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```typescript
-    export class HGridRowReorderComponent {
-    ...
+export class HGridRowReorderComponent {
     public rowDragStart(args: any): void {
         const targetRow = args.dragData;
         if (targetRow.expanded) {
@@ -643,7 +637,6 @@ export class GridRowReorderComponent {
 
 ```typescript
 class MyRowGhostComponent {
-    ...
     private getRowDataAtPoint(rowList: IgxGridRowComponent[], cursorPosition: Point): any {
         for (const row of rowList) {
             const rowRect = row.nativeElement.getBoundingClientRect();
@@ -661,11 +654,10 @@ class MyRowGhostComponent {
 
 ```typescript
 class MyRowGhostComponent {
-    ...
     public ngAfterViewInit(): void {
         this.grid.rowDragStart.pipe(takeUntil(this.destroy$)).subscribe(this.onRowDragStart.bind(this));
     }
-    ...
+
     private onRowDragStart(e: IRowDragStartEventArgs) {
         if (e !== null) {
             this._draggedRow = e.dragData.rowData;
@@ -675,7 +667,7 @@ class MyRowGhostComponent {
             .pipe(takeUntil(this.grid.rowDragEnd))
             .subscribe(this.onDragMove.bind(this));
     }
-    ...
+
     private onDragMove(args: IDragMoveEventArgs) {
         const cursorPosition = this.getCursorPosition(args.originalEvent);
         const hoveredRowData = this.getRowDataAtPoint(
@@ -701,7 +693,6 @@ class MyRowGhostComponent {
             }
         }
     }
-    
 }
 
 ```
@@ -718,9 +709,8 @@ class MyRowGhostComponent {
 ```typescript
 public ngAfterViewInit() {
   this.grid.rowDragStart
-  .pipe(takeUntil(this.destroy$))
-  .subscribe(this.handleRowStart.bind(this));
-     ...
+    .pipe(takeUntil(this.destroy$))
+    .subscribe(this.handleRowStart.bind(this));
 }
 
 private handleRowStart(e: IRowDragStartEventArgs): void {
@@ -729,13 +719,12 @@ private handleRowStart(e: IRowDragStartEventArgs): void {
   }
   const directive = e.dragDirective;
   directive.dragMove
-  .pipe(takeUntil(this.grid.rowDragEnd))
-  .subscribe(this.handleDragMove.bind(this));
+    .pipe(takeUntil(this.grid.rowDragEnd))
+    .subscribe(this.handleDragMove.bind(this));
 }
 
 private handleDragMove(event: IDragMoveEventArgs): void {
   this.handleOver(event);
-    ...
 }
 
 private handleOver(event: IDragMoveEventArgs) {
@@ -790,7 +779,6 @@ private changeHighlightedElement(newElement: HTMLElement) {
 
 ```typescript
 class MyGridScrollComponent {
-    ...
     private isGridScrolledToEdge(dir: 1 | -1): boolean {
         if (this.grid.data[0] === this.grid.rowList.first.data && dir === -1) {
             return true;
@@ -831,7 +819,7 @@ class MyGridScrollComponent {
             .pipe(takeUntil(this.destroy$))
             .subscribe(() => this.unsubInterval());
     }
-    ...
+
     private onDragMove(event: IDragMoveEventArgs): void {
         this.unsubInterval();
         const dir = this.isPointOnGridEdge(event.pageY);
@@ -844,7 +832,7 @@ class MyGridScrollComponent {
             this.intervalSub = this.interval$.subscribe(() => this.scrollGrid(dir));
         }
     }
-    ...
+
     private unsubInterval(): void {
         if (this.intervalSub) {
             this.intervalSub.unsubscribe();

@@ -1,5 +1,5 @@
 ---
-title: Badge コンポーネント
+title: Angular Badge コンポーネント
 _description: Ignite UI for Angular の Badge コントロールは、アプリケーションでその他のコンポーネントを装飾するために定義済みスタイルでアクティブ カウントまたはアイコンを表示します。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Badge コンポーネント, Angular Badge コントロール
 _language: ja
@@ -137,12 +137,12 @@ export class AppModule {}
 // contacts.component.ts
 
 ...
- public members: Member[] = [
-    new Member("Terrance Orta", "online"),
-    new Member("Donna Price", "online"),
-    new Member("Lisa Landers", "away"),
-    new Member("Dorothy H. Spencer", "offline"),
-  ];
+public members: Member[] = [
+  new Member('Terrance Orta', 'online'),
+  new Member('Donna Price', 'online'),
+  new Member('Lisa Landers', 'away'),
+  new Member('Dorothy H. Spencer', 'offline'),
+];
 
 ```
 
@@ -159,17 +159,17 @@ class Member {
         this.name = name;
         this.status = status;
         switch (status) {
-            case "online":
-                this.type = "success";
-                this.icon = "check";
+            case 'online':
+                this.type = 'success';
+                this.icon = 'check';
                 break;
-            case "away":
-                this.type = "warning";
-                this.icon = "schedule";
+            case 'away':
+                this.type = 'warning';
+                this.icon = 'schedule';
                 break;
-            case "offline":
-                this.type = "error";
-                this.icon = "remove";
+            case 'offline':
+                this.type = 'error';
+                this.icon = 'remove';
                 break;
         }
     }

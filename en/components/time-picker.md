@@ -1,5 +1,5 @@
 ---
-title: Time Picker Component - Native Angular | Ignite UI for Angular
+title: Angular Time Picker Component | Ignite UI for Angular
 _description: The Ignite UI for Angular Time Picker component allows the user to select time from a dialog with spinners which is then mirrored in the input field.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components, Angular Time Picker component, Angular Time Picker control, Time Picker, Angular Time Picker
 ---
@@ -27,7 +27,7 @@ The first step is to import the `IgxTimePickerModule` in the **app.module.ts** f
 // app.module.ts
 
 ...
-import { HammerModule } from "@angular/platform-browser";
+import { HammerModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IgxTimePickerModule } from 'igniteui-angular';
 
@@ -209,9 +209,9 @@ The input format is the format of the value when not in edit mode and the format
 
 ```html
 <igx-time-picker
-[(ngModel)]="time"
-[inputFormat]="`hh:mm:ss`"
-[displayFormat]="`shortTime`">
+    [(ngModel)]="time"
+    [inputFormat]="`hh:mm:ss`"
+    [displayFormat]="`shortTime`">
 </igx-time-picker>
 ```
 > Note: The `IgxTimePicker` now supports IME input. When composition ends, the control converts the wide-character numbers to ASCII characters.
@@ -252,7 +252,7 @@ public time = '10:00:00';
 public min = '09:15:30';
 public max = '18:15:30';
 
-@ViewChild("toast", { static: true })
+@ViewChild('toast', { static: true })
 private toast;
 
 public onValidationFailed() {
@@ -349,7 +349,6 @@ Here, we can pass a reference to the element where we'd like our container to be
 
 ```typescript
 export class TimepickerStylingComponent {
-    ...
     constructor(public element: ElementRef) {
     }
 }

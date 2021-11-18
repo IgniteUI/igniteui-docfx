@@ -1,5 +1,5 @@
 ---
-title: Bottom Navigation Component
+title: Angular Bottom Navigation Component – Ignite UI for Angular | Infragistics
 _description: Display tabs for any occasion and implement a completely tabbed user interface. These UI controls manage every aspect of your tabs’ appearance and behavior.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Bottom Nav component, Angular Bottom Navigation controls
 ---
@@ -89,28 +89,26 @@ Let's modify the tabs by adding labels alongside the icons and make sure the hea
 First, define some object arrays for the data source in the component typescript file:
 
 ```typescript
-...
 public songsList: object[] = [
-  { title: "Havana", artist: "Camila Cabello" },
-  { title: "Meant To Be", artist: "Bebe Rexha & Florida Georgia Line" },
-  { title: "New Rules", artist: "Dua Lipa" },
-  { title: "Wolves", artist: "Selena Gomez & Marshmello" }
+    { title: 'Havana', artist: 'Camila Cabello' },
+    { title: 'Meant To Be', artist: 'Bebe Rexha & Florida Georgia Line' },
+    { title: 'New Rules', artist: 'Dua Lipa' },
+    { title: 'Wolves', artist: 'Selena Gomez & Marshmello' }
 ];
 
 public moviesList: object[] = [
-  { title: "Logan", genre: "Action, Drama, Sci-Fi" },
-  { title: "Wonder Woman", genre: "Action, Adventure, Fantasy" },
-  { title: "Guardians of the Galaxy Vol. 2", genre: "Action, Adventure, Sci-Fi" },
-  { title: "Star Wars: The Last Jedi", genre: "Action, Adventure, Fantasy" }
+    { title: 'Logan', genre: 'Action, Drama, Sci-Fi' },
+    { title: 'Wonder Woman', genre: 'Action, Adventure, Fantasy' },
+    { title: 'Guardians of the Galaxy Vol. 2', genre: 'Action, Adventure, Sci-Fi' },
+    { title: 'Star Wars: The Last Jedi', genre: 'Action, Adventure, Fantasy' }
 ];
 
 public booksList: object[] = [
-  { title: "Wonder", author: "R. J. Palacio" },
-  { title: "Milk and Honey", author: "Rupi Kaur" },
-  { title: "Giraffes Can't Dance", author: "Jeff Kinne" },
-  { title: "The Getaway", author: "Selena Gomez & Marshmello" }
+    { title: 'Wonder', author: 'R. J. Palacio' },
+    { title: 'Milk and Honey', author: 'Rupi Kaur' },
+    { title: 'Giraffes Can\'t Dance', author: 'Jeff Kinne' },
+    { title: 'The Getaway', author: 'Selena Gomez & Marshmello' }
 ];
-...
 ```
 
 Next, update the component's template markup as follows:
@@ -219,27 +217,27 @@ To start we need a main component hosting the Bottom Navigation component and th
 
 ```typescript
 // bottomnav-routing.component.ts
-import { Component } from "@angular/core";
+import { Component } from '@angular/core';
 
 @Component({
-    selector: "app-bottomnav-routing",
-    styleUrls: ["bottomnav-routing.component.scss"],
-    templateUrl: "bottomnav-routing.component.html"
+    selector: 'app-bottomnav-routing',
+    styleUrls: ['bottomnav-routing.component.scss'],
+    templateUrl: 'bottomnav-routing.component.html'
 })
 export class BottomNavRoutingComponent { }
 
 @Component({
-    template: "<p>Item 1 Content</p>"
+    template: '<p>Item 1 Content</p>'
 })
 export class BottomNavRoutingView1Component { }
 
 @Component({
-    template: "<p>Item 2 Content</p>"
+    template: '<p>Item 2 Content</p>'
 })
 export class BottomNavRoutingView2Component { }
 
 @Component({
-    template: "<p>Item 3 Content</p>"
+    template: '<p>Item 3 Content</p>'
 })
 export class BottomNavRoutingView3Component { }
 ```
@@ -247,7 +245,7 @@ export class BottomNavRoutingView3Component { }
 The next step is to create the appropriate navigation mappings in the `app-routing.module.ts` file:
 
 ```typescript
-import { RouterModule, Routes } from "@angular/router";
+import { RouterModule, Routes } from '@angular/router';
 
 import {
     TabbarRoutingComponent,
@@ -263,12 +261,12 @@ const routes: Routes = [
         redirectTo: '/tabbar-routing'
     },
     {
-        path: "tabbar-routing",
+        path: 'tabbar-routing',
         component: TabbarRoutingComponent,
         children: [
-            { path: "tabbar-view1", component: TabbarView1Component },
-            { path: "tabbar-view2", component: TabbarView2Component },
-            { path: "tabbar-view3", component: TabbarView3Component }
+            { path: 'tabbar-view1', component: TabbarView1Component },
+            { path: 'tabbar-view2', component: TabbarView2Component },
+            { path: 'tabbar-view3', component: TabbarView3Component }
         ]
     }
 ];

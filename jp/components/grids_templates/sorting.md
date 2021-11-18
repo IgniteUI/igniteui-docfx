@@ -142,6 +142,36 @@ public ngOnInit() {
 <div class="divider--half"></div>
 }
 
+## ソート インジケーのターテンプレート
+
+列ヘッダーのソート インジケーター アイコンは、テンプレートを使用してカスタマイズできます。以下のディレクティブは、ソート状態 (昇順、降順、なし) のソート インジケーターをテンプレート化するために使用できます。
+
+- `IgxSortHeaderIconDirective` – ソートが適用されない場合にソート アイコンを再テンプレート化します。
+
+```html
+<ng-template igxSortHeaderIcon>
+    <igx-icon>unfold_more</igx-icon>
+</ng-template>
+```
+
+- `IgxSortAscendingHeaderIconDirective` – 列が昇順にソートされたときにソート アイコンを再テンプレート化します。
+
+```html
+<ng-template igxSortAscendingHeaderIcon>
+    <igx-icon>expand_less</igx-icon>
+</ng-template>
+```
+
+- `IgxSortDescendningHeaderIconDirective` – 列が降順でソートされたときにソート アイコンを再テンプレート化します。
+
+```html
+<ng-template igxSortDescendingHeaderIcon>
+    <igx-icon>expand_more</igx-icon>
+</ng-template>
+```
+
+<div class="divider--half"></div>
+
 ## スタイル設定
 
 ソート動作のスタイル設定は、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。

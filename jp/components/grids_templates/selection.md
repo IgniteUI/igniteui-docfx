@@ -106,8 +106,7 @@ Ignite UI for Angular @@igComponent コンポーネントは、[行選択](row-s
 基本的に、メイン関数は次のようになります。
 
 ```typescript
-...
- public rightClick(eventArgs: any) {
+public rightClick(eventArgs: any) {
      // Prevent the default behavior of the right click
     eventArgs.event.preventDefault();
     this.multiCellArgs = {};
@@ -135,7 +134,6 @@ Ignite UI for Angular @@igComponent コンポーネントは、[行選択](row-s
     // Enable the context menu
     this.contextmenu = true;
 }
-...
 ```
 以下はコンテキストメニューの機能です。
 - 選択したセルの値のコピー。
@@ -144,25 +142,24 @@ Ignite UI for Angular @@igComponent コンポーネントは、[行選択](row-s
 
 ```typescript
 //contextmenu.component.ts
-...
-    public copySelectedCellData(event) {
-        const selectedData = { [this.cell.column.field]: this.cell.value };
-        this.copyData(JSON.stringify({ [this.cell.column.field]: this.cell.value }));
-        this.onCellValueCopy.emit({ data: selectedData });
-    }
 
-    public copyRowData(event) {
-        const selectedData = this.cell.row.data ;
-        this.copyData(JSON.stringify(this.cell.row.data));
-        this.onCellValueCopy.emit({ data: selectedData });
-    }
+public copySelectedCellData(event) {
+    const selectedData = { [this.cell.column.field]: this.cell.value };
+    this.copyData(JSON.stringify({ [this.cell.column.field]: this.cell.value }));
+    this.onCellValueCopy.emit({ data: selectedData });
+}
 
-    public copySelectedCells(event) {
-        const selectedData = this.selectedCells.data;
-        this.copyData(JSON.stringify(selectedData));
-        this.onCellValueCopy.emit({ data: selectedData });
-    }
-...
+public copyRowData(event) {
+    const selectedData = this.cell.row.data ;
+    this.copyData(JSON.stringify(this.cell.row.data));
+    this.onCellValueCopy.emit({ data: selectedData });
+}
+
+public copySelectedCells(event) {
+    const selectedData = this.selectedCells.data;
+    this.copyData(JSON.stringify(selectedData));
+    this.onCellValueCopy.emit({ data: selectedData });
+}
 ```
 
 IgxGrid はコピーされたデータを取得し、コンテナ要素に貼り付けます。
@@ -202,7 +199,7 @@ IgxGrid はコピーされたデータを取得し、コンテナ要素に貼り
 
 ## 既知の問題と制限
 
-- IE11 で選択を有効にした @@igComponent コンポーネントを使用するには、Angular アプリケーションの polyfill.ts に配列ポリフィルを明示的にインポートする必要があります。
+- IE11 で選択を有効にした @@igComponent コンポーネントを使用するには、Angular アプリケーションの polyfill.ts に配列ポリフィルを明示的にインポートする必要があります。IE11 は、バージョン 13.0.0 でサポートされなくなりました。
 
     ```typescript
     import 'core-js/es7/array';
