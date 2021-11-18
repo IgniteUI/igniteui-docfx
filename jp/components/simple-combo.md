@@ -72,8 +72,8 @@ export class MySimpleComboComponent implements OnInit {
 
 Simple ComboBox は複雑なデータ (つまりオブジェクト) の配列にバインドされているため、選択した項目を処理するためにコントロールが使用するプロパティを指定する必要があります。このコントロールは、[valueKey]({environment:angularApiUrl}/classes/IgxSimpleComboComponent.html#valueKey) と [displayKey]({environment:angularApiUrl}/classes/IgxSimpleComboComponent.html#displayKey) の 2 つの `@Input` プロパティを公開します:
 
- - `valueKey` - *オプション、オブジェクト配列に推奨* - Simple ComboBox の選択のためにデータ エントリのどのプロパティを保存するかを指定します。`valueKey` を省略すると、Simple ComboBox 値はデータ エントリへの参照を使用します (つまり、選択は `igxSimpleCombo.data` からのエントリの配列になります)。
- - `displayKey` - *オブジェクト配列に必要* - 項目のテキストに使用されるプロパティを指定します。`displayKey` に値が指定されていない場合、Simple ComboBox は指定された `valueKey` (存在する場合) を使用します。
+ - `valueKey` - **オプション、オブジェクト配列に推奨** - Simple ComboBox の選択のためにデータ エントリのどのプロパティを保存するかを指定します。`valueKey` を省略すると、Simple ComboBox 値はデータ エントリへの参照を使用します (つまり、選択は `igxSimpleCombo.data` からのエントリの配列になります)。
+ - `displayKey` - **オブジェクト配列に必要** - 項目のテキストに使用されるプロパティを指定します。`displayKey` に値が指定されていない場合、Simple ComboBox は指定された `valueKey` (存在する場合) を使用します。
 
 この場合、Simple ComboBox に各都市の `name` を表示し、Simple ComboBox の値に各都市の `id` を保存する必要があります。したがって、これらのプロパティを Simple ComboBox の `displayKey` と `valueKey` にそれぞれ提供します。
 
@@ -124,7 +124,7 @@ export class MySimpleComboComponent {
 
 Simple ComboBox コンポーネントは、コントロールの現在の選択状態を取得および操作できるようにする API を公開します。
 
-Simple ComboBox の選択を取得する 1 つの方法は、[selection]({environment:angularApiUrl}/classes/igxsimplecombocomponent.html#selection) プロパティを使用することです。指定された [valueKey](#data-value-and-display-properties) (存在する場合) に応じて、選択された項目に対応する値を返します。
+Simple ComboBox の選択を取得する 1 つの方法は、[selection]({environment:angularApiUrl}/classes/igxsimplecombocomponent.html#selection) プロパティを使用することです。指定された [valueKey](#データ値と表示プロパティ) (存在する場合) に応じて、選択された項目に対応する値を返します。
 
 この例では、`selection` は選択された都市の `id` を返します:
 
@@ -135,7 +135,7 @@ export class MySimpleComboComponent {
 }
 ```
 
-選択 API を使用すると、ユーザーがコントロールを操作せずに、Simple ComboBox の選択された項目を変更することもできます (ボタンのクリックを介して、Observable の変更への応答としてなどです)。たとえば、[select()]({environment:angularApiUrl}/classes/igxsimplecombocomponent.html#select) メソッドを使用して、都市を選択するボタンを実装できます。
+選択 API を使用すると、ユーザーがコントロールを操作せずに、Simple ComboBox の選択された項目を変更することもできます (ボタンのクリックを介して、Observable の変更への応答としてなどです)。たとえば、[select]({environment:angularApiUrl}/classes/igxsimplecombocomponent.html#select) メソッドを使用して、都市を選択するボタンを実装できます。
 
 ```html
 <igx-simple-combo [data]="cities" [displayKey]="'name'" [valueKey]="'id'"></igx-simple-combo>
@@ -334,7 +334,7 @@ $custom-drop-down-theme: igx-drop-down-theme(
 - Simple ComboBox には、高さのサイズを設定するための入力がありません。将来、[IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) コンポーネントは、カスタムのサイズ変更オプションを公開し、[IgxSimpleCombo]({environment:angularApiUrl}/classes/igxsimplecombocomponent.html) は適切なスタイル設定と外観の統一に同じ機能を使用します。
 
 > [!NOTE]
-> Simple ComboBox は内部で `igxForOf` ディレクティブを使用するため、すべての `igxForOf` 制限は Simple ComboBox に対して有効です。詳細については、[igxForOf Known Issues](for-of.md#known-limitations) の既知の問題のセクションを参照してください。
+> Simple ComboBox は内部で `igxForOf` ディレクティブを使用するため、すべての `igxForOf` 制限は Simple ComboBox に対して有効です。詳細については、[igxForOf Known Issues](for-of.md#既知の制限) の既知の問題のセクションを参照してください。
 
 ## API まとめ
 <div class="divider--half"></div>

@@ -24,7 +24,7 @@ Ignite UI for Angular ComboBox コントロールは、データと値のバイ�
 ## 使用方法
 
 ### はじめに
-コンボボックス コンポーネントを初期化にするには、まず `IgxComboModule` を **app.module.ts**  ファイルにインポートします。サンプルは[ igx-switch]({environment:angularApiUrl}/classes/igxswitchcomponent.html) コンポーネントを使用してコンボボックスのプロパティの値をトグルしているため、`IgxSwitchModule` も必要です。
+コンボボックス コンポーネントを初期化にするには、まず `IgxComboModule` を **app.module.ts**  ファイルにインポートします。サンプルは [igx-switch]({environment:angularApiUrl}/classes/igxswitchcomponent.html) コンポーネントを使用してコンボボックスのプロパティの値をトグルしているため、`IgxSwitchModule` も必要です。
 
 ```typescript
 import { IgxComboModule, IgxSwitchModule } from 'igniteui-angular';
@@ -61,7 +61,7 @@ export class AppModule {}
 ```
 
 ### コンポーネント定義
-グループ化は、[groupKey]({environment:angularApiUrl}/classes/IgxComboComponent.html#groupKey) プロパティを対応するデータソース エンティティに設定、または空文字列に設定して有効または無効にできます。
+グループ化は、[groupKey]({environment:angularApiUrl}/classes/IgxComboComponent.html#groupKey) プロパティを対応するデータ ソース エンティティに設定、または空文字列に設定して有効または無効にできます。
 
 ```typescript
     @ViewChild('combo', { read: IgxComboComponent }) public combo: IgxComboComponent;
