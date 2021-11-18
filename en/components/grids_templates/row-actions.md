@@ -96,7 +96,7 @@ These components expose templates giving flexibility for customization. For inst
 @@if (igxName === 'IgxTreeGrid') {
 <code-view style="height: 600px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/grid-action-strip" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-action-strip" >
 </code-view>
 }
 
