@@ -86,7 +86,7 @@ Simple ComboBox は複雑なデータ (つまりオブジェクト) の配列に
 
 ### 双方向バインディング
 
-Simple ComboBox コンポーネントは、`[(ngModel)]` を使用した双方向のデータ バインディングと、[テンプレート駆動型](https://angular.io/guide/forms)および[リアクティブ フォーム](https://angular.io/guide/reactive-forms)での使用を完全にサポートします。Simple ComboBox の選択には、双方向バインディングまたは[選択 API](#selection-api) を介してアクセスできます。(`valueKey` に基づいて) Simple ComboBox の選択にあるものと同じタイプの項目を渡すことができ、一方が変更されるたびに、もう一方もそれに応じて更新されます。
+Simple ComboBox コンポーネントは、`[(ngModel)]` を使用した双方向のデータ バインディングと、[テンプレート駆動型](https://angular.io/guide/forms)および[リアクティブ フォーム](https://angular.io/guide/reactive-forms)での使用を完全にサポートします。Simple ComboBox の選択には、双方向バインディングまたは[選択 API](#選択-api) を介してアクセスできます。(`valueKey` に基づいて) Simple ComboBox の選択にあるものと同じタイプの項目を渡すことができ、一方が変更されるたびに、もう一方もそれに応じて更新されます。
 
 次の例では、最初に Sofia 市が選択されます。Simple ComboBox の選択をさらに変更すると、`selectedCities` に反映されます。
 
