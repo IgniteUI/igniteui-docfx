@@ -41,6 +41,92 @@ Unfortunately not all changes can be automatically updated. Changes below are sp
 
 For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from the "From 6.x .." section apply those changes and work your way up:
 
+## From 12.2.x to 13.0.x
+### Theming
+* Sass Modules:
+The theming engine has switched to [Sass modules](https://sass-lang.com/documentation/at-rules/use). This change means all theming library functions(comopnent themes, etc.), mixins(component mixins, etc.), and variables are now being `forwarded` from a single file. To correctly use the Sass theming library, your project should utilize Dart Sass version 1.33.0 or later and change all imports of the theming library from:
+
+```scss
+@import '~igniteui-angular/lib/core/styles/themes/index';
+```
+
+to:
+
+```scss
+@use 'igniteui-angular/theming' as *;
+```
+
+If you want to import the entire theming library only once and then use it in other Sass files in your app, make sure to do forward it. Imported Sass files are not going to be automatically forwarded.
+
+Before:
+
+```scss
+// _variables.scss
+@import '~igniteui-angular/lib/core/styles/themes/index';
+
+// _other-file.scss
+@import 'variables';
+```
+
+After:
+
+```scss
+// _variables.scss
+@use 'igniteui-angular/theming' as *;
+@forward 'igniteui-angular/theming';
+
+
+// _other-file.scss
+@use 'variables' as *;
+```
+
+* Palettes and Schemas:
+Please ensure the correct palette and component schema are passed to your custom-made component and global themes. If you want to create a global dark theme, make sure to select a lighter color shade for your gray color, for instance:
+
+```scss
+$my-dark-palette: igx-palette(
+    $primary: olive, 
+    $secondary: yellow, 
+    $grays: #fff
+);
+
+@include igx-dark-theme($palette: $my-dark-palette);
+```
+
+Likewise, light themes require a darker shade of gray and a light color schema.
+
+If you've not excluded any component themes from the global theme but you still want to create your own custom replacement themes using the `igx-css-vars` mixin, make sure the theme is passed the correct palette and correspoding schema:
+
+```scss
+$my-custom-grid: igx-grid-theme(
+    $palette: $my-dark-palette,
+    $schema: $dark-schema
+);
+
+@include igx-css-vars($my-custom-grid);
+```
+ 
+* Excluded Component Themes:
+
+In case you've excluded some component themes from the global theme and you've created custom replacement themes, you should ensure that the component mixin is included and is passed the correct component theme:
+
+```scss
+$my-dark-palette: igx-palette(
+    ...
+    $exclude: ('igx-grid')
+);
+
+$my-custom-grid: igx-grid-theme(
+    $palette: $my-dark-palette,
+    $schema: $dark-schema
+);
+
+// Ensure igx-grid is included:
+@include igx-grid($my-custom-grid);
+```
+
+To get a better grasp on the Sass Moule System, you can read [this great article](https://css-tricks.com/introducing-sass-modules/) by [Miriam Suzanne](https://css-tricks.com/author/miriam/);
+
 ## From 12.0.x to 12.1.x
 ### Grids
 * Breaking Changes:
