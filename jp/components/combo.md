@@ -70,7 +70,7 @@ export class ComboDemo implements OnInit {
 
 ### データ値と表示プロパティ
 
-コンボボックスは複雑なデータ (オブジェクト) の配列にバインドされているため、選択したアイテムを処理するためにコントロールが使用するプロパティを指定する必要があります。コントロールは、[valueKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#valuekey) と [displayKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#displaykey) の 2 つの `@Input` プロパティを公開します。
+コンボボックスは複雑なデータ (オブジェクト) の配列にバインドされているため、選択したアイテムを処理するためにコントロールが使用するプロパティを指定する必要があります。コントロールは、[valueKey]({environment:angularApiUrl}/classes/IgxComboComponent.html#valueKey) と [displayKey]({environment:angularApiUrl}/classes/IgxComboComponent.html#displayKey) の 2 つの `@Input` プロパティを公開します。
 
  - `valueKey` - **オプション、オブジェクト配列に推奨。** - コンボボックスの選択のために保存されるデータ エントリのプロパティを指定します。`valueKey` が省略された場合、コンボボックス値はデータ エントリへの参照を使用します (選択は `igxCombo.data` からのエントリの配列になります)。
  - `displayKey` - **オブジェクト配列に必須。** - アイテムのテキストに使用するプロパティを指定します。`displayKey` に値が指定されていない場合、コンボボックスは指定された `valueKey` (存在する場合) を使用します。
@@ -161,7 +161,7 @@ export class MyExampleCombo {
 }
 ```
 
-また、コンボボックスは、選択が変更されるたびにイベントを発生させます - [selectionChanging()]({environment:angularApiUrl}/classes/igxcombocomponent.html#selectionchanging)。発行されたイベント引数 [IComboSelectionChangingEventArgs]({environment:angularApiUrl}/interfaces/icomboselectionchangingeventargs.html) には、変更前の選択、現在の選択、追加または削除された項目に関する情報が含まれています。また、イベントをキャンセルして、新しいアイテムの配列で選択を更新できないようにすることもできます。
+また、コンボボックスは、選択が変更されるたびにイベントを発生させます - [selectionChanging()]({environment:angularApiUrl}/classes/IgxComboComponent.html#selectionChanging)。発行されたイベント引数 [IComboSelectionChangingEventArgs]({environment:angularApiUrl}/interfaces/icomboselectionchangingeventargs.html) には、変更前の選択、現在の選択、追加または削除された項目に関する情報が含まれています。また、イベントをキャンセルして、新しいアイテムの配列で選択を更新できないようにすることもできます。
 
 イベントへのバインドは、`igx-combo` タグの適切な `@Output` プロパティを介して実行できます。
 

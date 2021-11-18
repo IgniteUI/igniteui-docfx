@@ -61,7 +61,7 @@ export class AppModule {}
 ```
 
 ### コンポーネント定義
-グループ化は、[groupKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#groupkey) プロパティを対応するデータソース エンティティに設定、または空文字列に設定して有効または無効にできます。
+グループ化は、[groupKey]({environment:angularApiUrl}/classes/IgxComboComponent.html#groupKey) プロパティを対応するデータソース エンティティに設定、または空文字列に設定して有効または無効にできます。
 
 ```typescript
     @ViewChild('combo', { read: IgxComboComponent }) public combo: IgxComboComponent;
@@ -79,7 +79,7 @@ export class AppModule {}
 ## 機能
 
 ### データ バインディング
-以下のコード スニペットは、ローカル データ ソースにバインドされた [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) の基本的な使用方法を示しています。[valueKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#valuekey) は、コンボボックスの選択に保存されるデータ エントリのプロパティを指定し、[displayKey]({environment:angularApiUrl}/classes/igxcombocomponent.html#displaykey) は、コンボボックス テキストに使用されるプロパティを指定します。
+以下のコード スニペットは、ローカル データ ソースにバインドされた [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) の基本的な使用方法を示しています。[valueKey]({environment:angularApiUrl}/classes/IgxComboComponent.html#valueKey) は、コンボボックスの選択に保存されるデータ エントリのプロパティを指定し、[displayKey]({environment:angularApiUrl}/classes/IgxComboComponent.html#displayKey) は、コンボボックス テキストに使用されるプロパティを指定します。
 
 ```html
 <igx-combo [data]="lData" valueKey="ProductID" displayKey="ProductName"></igx-combo>
@@ -103,7 +103,7 @@ export class ComboDemo implements OnInit {
 コンボボックス コンポーネントをリモート データにバインドする方法の詳細は、[コンボボックス リモート バインディング](combo-remote.md)を参照してください。
 
 ### カスタム オーバーレイ設定
-コンボボックス コンポーネントでは、ユーザーが項目リストの表示方法を変更できます。これを行うには、カスタム [OverlaySettings]({environment:angularApiUrl}/interfaces/overlaysettings.html) を定義し、それらを ComboBox の [overlaySettings]({environment:angularApiUrl}/classes/igxcombocomponent.html#overlaysettings) 入力に渡します。
+コンボボックス コンポーネントでは、ユーザーが項目リストの表示方法を変更できます。これを行うには、カスタム [OverlaySettings]({environment:angularApiUrl}/interfaces/overlaysettings.html) を定義し、それらを ComboBox の [overlaySettings]({environment:angularApiUrl}/classes/IgxComboComponent.html#overlaySettings) 入力に渡します。
 
 ```typescript
 export class CustomOverlayCombo {
@@ -141,7 +141,7 @@ export class CustomOverlayCombo {
 ### フィルタリング
 コンボボックスのフィルタリングがデフォルトで有効になります。無効にするには、[filterable]({environment:angularApiUrl}/classes/igxcombocomponent.html#filterable) プロパティを false に設定します。
 
-フィルタリング オプションは、検索の大文字と小文字の区別を有効にすることでさらに拡張できます。大文字と小文字を区別するアイコンを検索入力に表示するには、[showSearchCaseIcon]({environment:angularApiUrl}/classes/igxcombocomponent.html#showsearchcaseicon) プロパティを true に設定します。
+フィルタリング オプションは、検索の大文字と小文字の区別を有効にすることでさらに拡張できます。大文字と小文字を区別するアイコンを検索入力に表示するには、[showSearchCaseIcon]({environment:angularApiUrl}/classes/IgxComboComponent.html#showSearchCaseIcon) プロパティを true に設定します。
 
 ```html
 <igx-combo [filterable]="false" [showSearchCaseIcon]="true"></igx-combo>
@@ -150,7 +150,7 @@ export class CustomOverlayCombo {
 <div class="divider--half"></div>
 
 ### カスタム値
-[allowCustomValues]({environment:angularApiUrl}/classes/igxcombocomponent.html#allowcustomvalues) プロパティは、カスタム値をコレクションに追加できるかどうかを制御します。有効な場合、コンボボックス UI で項目を追加できます。
+[allowCustomValues]({environment:angularApiUrl}/classes/IgxComboComponent.html#allowCustomValues) プロパティは、カスタム値をコレクションに追加できるかどうかを制御します。有効な場合、コンボボックス UI で項目を追加できます。
 
 ```html
 <igx-combo [allowCustomValues]="true"></igx-combo>
@@ -159,7 +159,7 @@ export class CustomOverlayCombo {
 <div class="divider--half"></div>
 
 ### 検索入力のフォーカス
-コンボボックスの [autoFocusSearch]({environment:angularApiUrl}/classes/igxcombocomponent.html#autofocussearch) プロパティは、コンボボックスのドロップダウン リストが開いたときに検索入力がフォーカスを受け取るかどうかを制御します。デフォルトで、このプロパティは `true` に設定されます。`false` に設定すると、フォーカスはコンボボックスの項目コンテナーに移動します。モバイル デバイスでは、コンボボックスのドロップダウン リストを開くときにソフトウェア キーボードがポップアップしないようにするために使用できます。
+コンボボックスの [autoFocusSearch]({environment:angularApiUrl}/classes/IgxComboComponent.html#autoFocusSearch) プロパティは、コンボボックスのドロップダウン リストが開いたときに検索入力がフォーカスを受け取るかどうかを制御します。デフォルトで、このプロパティは `true` に設定されます。`false` に設定すると、フォーカスはコンボボックスの項目コンテナーに移動します。モバイル デバイスでは、コンボボックスのドロップダウン リストを開くときにソフトウェア キーボードがポップアップしないようにするために使用できます。
 
 ```html
 <igx-combo [autoFocusSearch]="false"></igx-combo>

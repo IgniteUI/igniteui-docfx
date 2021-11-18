@@ -70,7 +70,7 @@ export class MySimpleComboComponent implements OnInit {
 
 ### データ値と表示プロパティ
 
-Simple ComboBox は複雑なデータ (つまりオブジェクト) の配列にバインドされているため、選択した項目を処理するためにコントロールが使用するプロパティを指定する必要があります。このコントロールは、[valueKey]({environment:angularApiUrl}/classes/igxsimplecombocomponent.html#valuekey) と [displayKey]({environment:angularApiUrl}/classes/igxsimplecombocomponent.html#displaykey) の 2 つの `@Input` プロパティを公開します:
+Simple ComboBox は複雑なデータ (つまりオブジェクト) の配列にバインドされているため、選択した項目を処理するためにコントロールが使用するプロパティを指定する必要があります。このコントロールは、[valueKey]({environment:angularApiUrl}/classes/IgxSimpleComboComponent.html#valueKey) と [displayKey]({environment:angularApiUrl}/classes/IgxSimpleComboComponent.html#displayKey) の 2 つの `@Input` プロパティを公開します:
 
  - `valueKey` - *オプション、オブジェクト配列に推奨* - Simple ComboBox の選択のためにデータ エントリのどのプロパティを保存するかを指定します。`valueKey` を省略すると、Simple ComboBox 値はデータ エントリへの参照を使用します (つまり、選択は `igxSimpleCombo.data` からのエントリの配列になります)。
  - `displayKey` - *オブジェクト配列に必要* - 項目のテキストに使用されるプロパティを指定します。`displayKey` に値が指定されていない場合、Simple ComboBox は指定された `valueKey` (存在する場合) を使用します。
@@ -155,7 +155,7 @@ export class MySimpleComboComponent {
 }
 ```
 
-Simple ComboBox は、選択が変更されるたびに [selectionChanging()]({environment:angularApiUrl}/classes/igxsimplecombocomponent.html#selectionchanging) イベントを発生させます。発行されたイベント引数 [ISimpleComboSelectionChangingEventArgs]({environment:angularApiUrl}/interfaces/isimplecomboselectionchangingeventargs.html) には、変更前の選択、現在の選択、および表示された項目に関する情報が含まれています。イベントをキャンセルして、新しい項目による選択の更新を防ぐこともできます。
+Simple ComboBox は、選択が変更されるたびに [selectionChanging]({environment:angularApiUrl}/classes/IgxSimpleComboComponent.html#selectionChanging) イベントを発生させます。発行されたイベント引数 [ISimpleComboSelectionChangingEventArgs]({environment:angularApiUrl}/interfaces/isimplecomboselectionchangingeventargs.html) には、変更前の選択、現在の選択、および表示された項目に関する情報が含まれています。イベントをキャンセルして、新しい項目による選択の更新を防ぐこともできます。
 
 イベントへのバインドは、`igx-simple-combo` タグの適切な `@Output` プロパティを介して行うことができます。
 

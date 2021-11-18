@@ -11,7 +11,7 @@ Ignite UI for Angular ComboBox コンポーネントは、コンボボックス�
 </p>
 
 ## Angular コンボボックス リモート バインディングの例
-以下のサンプルは、[dataPreLoad]({environment:angularApiUrl}/classes/igxcombocomponent.html#datapreload) プロパティを使用してリモート データの新しい部分をロードするリモート バインディングを示しています。
+以下のサンプルは、[dataPreLoad]({environment:angularApiUrl}/classes/IgxComboComponent.html#dataPreLoad) プロパティを使用してリモート データの新しい部分をロードするリモート バインディングを示しています。
 
 
 <code-view style="height: 400px;"
@@ -39,7 +39,7 @@ export class AppModule {}
 ```
 
 ### リモート サービスの定義
-コンボボックスをリモートデータへバインドする際にサーバーからデータをオンデマンドで読み込むための有効なサービスが必要です。コンボボックス コンポーネントは [virtualizationState]({environment:angularApiUrl}/classes/igxcombocomponent.html#virtualizationstate) プロパティを公開し、コンボボックスの状態 (最初のインデックスと読み込む必要のある項目数) を提供します。スクロール サイズを正しく表示するには、[totalItemCount]({environment:angularApiUrl}/classes/igxcombocomponent.html#totalitemcount) プロパティにサーバー上の全項目に対応する値が必要です。
+コンボボックスをリモートデータへバインドする際にサーバーからデータをオンデマンドで読み込むための有効なサービスが必要です。コンボボックス コンポーネントは [virtualizationState]{environment:angularApiUrl}/classes/IgxComboComponent.html#virtualizationState) プロパティを公開し、コンボボックスの状態 (最初のインデックスと読み込む必要のある項目数) を提供します。スクロール サイズを正しく表示するには、[totalItemCount]({environment:angularApiUrl}/classes/IgxComboComponent.html#totalItemCount) プロパティにサーバー上の全項目に対応する値が必要です。
 
 以下のコードは、`getData()` メソッドでシンプルなサービスを定義し、コンボボックスの状態を受け取り、observable としてデータを返します。
 
