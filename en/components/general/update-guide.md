@@ -42,6 +42,38 @@ Unfortunately not all changes can be automatically updated. Changes below are sp
 For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from the "From 6.x .." section apply those changes and work your way up:
 
 ## From 12.2.x to 13.0.x
+
+### General
+- `IE discontinued support`
+- `IgxDialog`
+    - **Breaking Change** - The default positionSettings open/close animation has been changed to `fadeIn`/`fadeOut`.
+- `igxGrid`, `igxHierarchicalGrid`, `igxTreeGrid`
+    - **Breaking Change** - The following deprecated inputs have been removed - `showToolbar`, `toolbarTitle`, `columnHiding`, `columnHidingTitle`, `hiddenColumnsText`, `columnPinning`, `columnPinningTitle`, `pinnedColumnsText`. Use `IgxGridToolbarComponent`, `IgxGridToolbarHidingComponent`, `IgxGridToolbarPinningComponent` instead.
+    - **Breaking Change** - Upon adding of `igx-toolbar` component, now you should manually specify which features you want to enable - Column Hiding, Pinning or Excel Exporting.
+    - **Breaking Change** - The `rowSelected` event is renamed to `rowSelectionChanging` to better reflect its function.
+    - **Breaking Change** - The `columnSelected` event is renamed to `columnSelectionChanging` to better reflect its function.
+    - **Breaking Change** - `rowData` and `rowID` properties are removed. Use `data` and `key` instead. Use `ng update` for automatic migration.
+    - **Breaking Change** - `columnsCollection` is removed. Use `columns` instead.
+    - **Behavioral change** - `columns` getter may now return an empty array [] in certain occasions, when grid is not yet renderd, but code is calling `grid.columns`. If this introduces behavioral changes or bugs, use `grid,columnList`. To get a column at specific index, use `grid.columnList.get(0)`
+- `igxGrid`
+    - Exposed a `groupStrategy` input that functions similarly to `sortStrategy`, allowing customization of the grouping behavior of the grid. 
+- `IgxCsvExporterService`, `IgxExcelExporterService`
+    - Exporter services are no longer required to be provided in the application since they are now injected on a root level.
+- `IgxGridToolbarPinningComponent`, `IgxGridToolbarHidingComponent`
+    - Exposed new input `buttonText` which sets the text that is displayed inside the dropdown button in the toolbar.
+- `IgxCombo`
+    - Added `groupSortingDirection` input, which allows you to set groups sorting order.
+- `IgxGrid`, `IgxTreeGrid`, `IgxHierarchicalGrid`
+    - Added new directives for re-templating header sorting indicators - `IgxSortHeaderIconDirective`, `IgxSortAscendingHeaderIconDirective` and `IgxSortDescendingHeaderIconDirective`.
+- `IgxDialog`
+    - Added `focusTrap` input to set whether the Tab key focus is trapped within the dialog when opened. Defaults to `true`.
+- `IgxColumnActionsComponent`
+    - **Breaking Change** - The following input has been removed
+        - Input `columns`. Use `igxGrid` `columns` input instead.
+- `IgxCarousel`
+    - **Breaking Changes** -The carousel animation type `CarouselAnimationType` is renamed to `HorizontalAnimationType`.
+- `IgxGridStateDirective` - now supports `disableHiding` column prop and column groups
+
 ### Theming
 * Sass Modules:
 The theming engine has switched to [Sass modules](https://sass-lang.com/documentation/at-rules/use). This change means all theming library functions(comopnent themes, etc.), mixins(component mixins, etc.), and variables are now being `forwarded` from a single file. To correctly use the Sass theming library, your project should utilize Dart Sass version 1.33.0 or later and change all imports of the theming library from:
