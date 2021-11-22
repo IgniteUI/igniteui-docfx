@@ -321,7 +321,10 @@ public maxDate = new Date(2020, 11, 1);
 `igxDateRangePicker` のスタイル設定は、すべてのテーマ関数とコンポーネントミックスインが存在する `index` ファイルをインポートする必要があります。
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
 Date Range Picker コンポーネントは `igx-date-range-picker-theme` を公開し、`igxInputGroupComponent`、`igxCalendar`、`igxOverlay` などの複数のコンポーネントおよびディレクティブを使用します。前述のコンポーネントおよびディレクティブのグローバル スタイル設定は `igxDateRangeComponent` に影響します。Date Range Picker コンポーネントは入力グループおよびカレンダーテーマを使用するため、[`igx-calendar-theme`]({environment:sassApiUrl}/index.html#function-igx-calendar-theme) および [`igx-input-group-theme`]({environment:sassApiUrl}/index.html#function-igx-input-group-theme) を拡張する新しいテーマを作成し、それらのパラメーターの一部と日付範囲の選択テーマを使用して日付範囲ピッカーをスタイル設定する必要があります。単一のカスタム カラー パレットを使用して、すべてのテーマで使用する色を定義します。

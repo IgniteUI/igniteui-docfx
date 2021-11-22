@@ -14,12 +14,12 @@ _language: ja
 
 Ignite UI for Angular の開発は、Internet Explorer 11 がまだ関連していた 2016 年に始まりました。一部のユーザーはまだ IE11 に依存しています。私たちのテーマ エンジンは、同じ API を使用して、エバーグリーンのブラウザと古いブラウザのスタイルを同じように作成できるように構築されています。単一のグローバル変数 `$igx-legacy-support` に基づいて、エンジンの動作を構成できます。デフォルトでは `false` に設定されていますが、宣言をシャドウすることができます。この変数の値は、`igx-theme` ミックスインで `$legacy-support` パラメーターを指定するときにも暗黙的に設定されます。
 
+> [!WARNING]
+> The `$legacy-support` option was removed in igniteui-angular 13.0.x. Support for IE11 and legacy browsers was removed in version 13 and this option is no longer valid.
+
 例:
 
 ```scss
-// styles.scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
-
 // Sets the global $igx-legacy-support variable to true
 @include igx-theme(
   $legacy-support: true
@@ -30,8 +30,6 @@ Ignite UI for Angular の開発は、Internet Explorer 11 がまだ関連して�
 
 ```scss
 // app.component.scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
-
 $igx-legacy-support: true;
 
 $color: igx-color($default-palette, 'primary', 900);
@@ -41,16 +39,13 @@ $color: igx-color($default-palette, 'primary', 900);
 
 ## デフォルト パレット
 
-もう 1 つのグローバル変数は `$default-palette` です。`$igx-legacy-support` と同様に、パレットを `igx-theme` ミックスインに渡すと暗黙的に設定されます。この変数は、パレットが明示的に提供されていない場合に、テーマ関数とミックスインによってデフォルトで使用されるパレットを設定します。
+もう 1 つのグローバル変数は `$default-palette` です。パレットを `igx-theme` ミックスインに渡すと暗黙的に設定されます。この変数は、パレットが明示的に提供されていない場合に、テーマ関数とミックスインによってデフォルトで使用されるパレットを設定します。
 
 たとえば、`igx-color` 関数は特定のパレットで呼び出されない場合があります。その場合、`$default-palette` に割り当てられた値がカラーを取得するために使用されます。
 
 デフォルトのパレットは、その宣言をシャドウイングすることでいつでも変更できます。
 
 ```scss
-// styles.scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
-
 $my-palette: igx-palette(
   $primary: red, 
   $secondary: blue
@@ -68,7 +63,7 @@ $my-palette: igx-palette(
 ```scss
 // _variables.scss
 
-$legacy-support: true;
+$legacy-support: true; /* not supported in Ignite UI for Angular 13 */
 
 $my-palette: igx-palette(
   $primary: red, 
@@ -80,9 +75,7 @@ $igx-legacy-support: $legacy-support;
 ```
 
 ```scss
-// styles.scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
-@import './variables';
+@use 'variables' as *;
 
 @include igx-theme(
   $palette: $my-palette,
@@ -92,7 +85,7 @@ $igx-legacy-support: $legacy-support;
 
 ## 方向
 
-`$igx-legacy-support` や `$default-palette` と同様に、生成されたスタイルの方向 (left-to-right と right-to-left) を変更できます。グローバル `$direction` 変数を設定することにより、デフォルトの方向を LTR から RTL に変更できます。
+`$default-palette` と同様に、生成されたスタイルの方向 (left-to-right と right-to-left) を変更できます。グローバル `$direction` 変数を設定することにより、デフォルトの方向を LTR から RTL に変更できます。
 
 
 ```scss
@@ -106,8 +99,7 @@ $direction: rtl;
 
 ```scss
 // styles.scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
-@import './variables';
+@use './variables' as *;
 
 @include igx-core(
   $direction: $direction
@@ -116,15 +108,12 @@ $direction: rtl;
 
 ## グローバル変数
 
-Angular が `node-sass` のサポートを終了するとすぐに、Sass モジュールに切り替えます。それまでの間、依存しているグローバル変数がいくつかあります。Sass ファイルでそれらを上書きしないように注意してください。
-
-これらの変数のリストは次のとおりです。
+Here's a list of global Sass variables forwarded in the main theming module:
 
 | 変数名 | 説明                                                                 |
 |:-------------:|:---------------------------------------------------------------------------:|
 | `$components` | すべてのコンポーネント テーマのレジスタを格納します。tree-shaking に使用されます。            |
 | `$keyframes`  | すべてのキーフレーム アニメーション ミックスインのレジスタを格納します。tree-shaking に使用されます。  |
-
 
 ## スクロールバーのスタイル設定
 

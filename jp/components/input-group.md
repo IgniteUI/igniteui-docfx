@@ -129,7 +129,10 @@ Ignite UI for Angular は、`type="file"` の入力スタイルも提供し、�
 入力グループのスタイル設定を開始するには、`index` ファイルをスタイルファイルに含めます。
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
 次に、[`igx-input-group-theme`]({environment:sassApiUrl}/index.html#function-igx-input-group-theme) を拡張する新しいテーマを作成し、変更するパラメーターを渡します。

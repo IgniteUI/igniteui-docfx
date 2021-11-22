@@ -261,8 +261,11 @@ _language: ja
 ソート動作のスタイル設定は、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+```
 
 最も単純なアプローチに従って、[`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme)  を拡張する新しいテーマを作成し、`$header-background`, `$header-text-color`, `$header-border-width`, `$header-border-style` and `$header-border-color` パラメーターを受け取ります。
 

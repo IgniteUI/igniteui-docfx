@@ -236,7 +236,7 @@ Angular Material Accordion のキーボード ナビゲーションは、さま�
 
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+```
 
 [igx-expansion-panel-theme]({environment:sassApiUrl}/index.html#function-igx-expansion-panel-theme) を拡張する新しいテーマを作成し、`$expanded-margin` パラメーターを受け取ります。 
 ```scss

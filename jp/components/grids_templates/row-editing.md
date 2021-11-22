@@ -319,8 +319,10 @@ export class HGridRowEditingSampleComponent implements OnInit {
 はじめに `themes/index` ファイルをインポートすることにより、Ignite UI for Angular Sass フレームワークの強力なツールへアクセスできるようになります。
 
 ```scss
-// in styles.scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
 テーマ ファイルをインポートしたら、カスタム テーマを作成できます。

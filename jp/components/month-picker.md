@@ -155,7 +155,7 @@ Month Picker のスタイル設定を始めるには、すべてのテーマ関�
 
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+```
 Month Picker はカレンダーのテーマを使用するため、[`igx-calendar-theme`]({environment:sassApiUrl}/index.html#function-igx-calendar-theme) を拡張する新しいテーマを作成し、そのパラメーターを使用して Month Picker の項目をスタイル設定します。
 
 ```scss

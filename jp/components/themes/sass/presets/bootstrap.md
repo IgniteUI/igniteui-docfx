@@ -4,14 +4,20 @@
 
 ## Bootstrap Light テーマ
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
 @include igx-core();
 @include igx-bootstrap-light-theme($light-bootstrap-palette);
 ```
 
 ## Bootstrap Dark テーマ
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
 @include igx-core();
 @include igx-bootstrap-dark-theme($dark-bootstrap-palette);
 ```

@@ -435,9 +435,12 @@ export class MyHGridEventsComponent {
 ### スタイル ライブラリのインポート
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
-...
-```
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
+
 以上で Ignite UI for Angular テーマ エンジンによって公開されているすべての機能を使用できます。
 
 ### パレットの定義

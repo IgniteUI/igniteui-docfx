@@ -209,7 +209,7 @@ public decrementProgress() {
 
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+```
 
 最も簡単な方法として、[`igx-progress-linear-theme`]({environment:sassApiUrl}/index.html#function-igx-progress-linear-theme) を拡張し、`$track-color`、`$fill-color-default` および `$text-color パラメーターを受け取る新しいテーマを作成する方法があります。
 
