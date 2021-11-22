@@ -17,6 +17,7 @@ Ignite UI for Angular ポイント チャートは、ポイントのコレクシ
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-point-chart-multiple-sources"
+           github-src="charts/category-chart/point-chart-multiple-sources"
            alt="Angular ポイント チャートの例" >
 </code-view>
 
@@ -29,6 +30,7 @@ Ignite UI for Angular ポイント チャートは、ポイントのコレクシ
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-point-chart-single-source"
+           github-src="charts/category-chart/point-chart-single-source"
            alt="単一シリーズの Angular ポイント チャート" >
 </code-view>
 
@@ -41,6 +43,7 @@ Angular ポイント チャートを使用すると、複数のシリーズを�
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-point-chart-multiple-sources"
+           github-src="charts/category-chart/point-chart-multiple-sources"
            alt="複数シリーズの Angular ポイント チャート" >
 </code-view>
 
@@ -53,6 +56,7 @@ Angular ポイント チャートを設定したら、マーカーとそのア�
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-point-chart-styling"
+           github-src="charts/category-chart/point-chart-styling"
            alt="ポイント チャートのスタイル設定" >
 </code-view>
 

@@ -10,7 +10,7 @@ The Ignite UI for Angular ComboBox Component exposes an API that allows binding 
 </p>
 
 ## Angular ComboBox Remote Binding Example
-The sample below demonstrates remote binding using the [dataPreLoad]({environment:angularApiUrl}/classes/igxcombocomponent.html#datapreload) property to load new chunk of remote data:
+The sample below demonstrates remote binding using the [dataPreLoad]({environment:angularApiUrl}/classes/IgxComboComponent.html#dataPreLoad) property to load new chunk of remote data:
 
 
 <code-view style="height: 400px;"
@@ -38,7 +38,7 @@ export class AppModule {}
 ```
 
 ### Define Remote Service
-When binding a combobox to remote data, we need to have an available service that will load data on demand from a server. The combobox component exposes the [virtualizationState]({environment:angularApiUrl}/classes/igxcombocomponent.html#virtualizationstate) property which gives the current state of a combobox - the first index and the number of items that need to be loaded. In order to show properly the scroll size, the [totalItemCount]({environment:angularApiUrl}/classes/igxcombocomponent.html#totalitemcount) property should have value that corresponds to the total items on the server.
+When binding a combobox to remote data, we need to have an available service that will load data on demand from a server. The combobox component exposes the [virtualizationState]({environment:angularApiUrl}/classes/IgxComboComponent.html#virtualizationState) property which gives the current state of a combobox - the first index and the number of items that need to be loaded. In order to show properly the scroll size, the [totalItemCount]({environment:angularApiUrl}/classes/IgxComboComponent.html#totalItemCount) property should have value that corresponds to the total items on the server.
 
 The code below defines a simple service that has a `getData()` method, which receives combobox's current state information and returns data as an observable:
 

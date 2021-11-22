@@ -43,6 +43,7 @@ Angular 棒チャート (棒グラフ) は、さまざまなカテゴリのデ�
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-bar-chart-multiple-sources"
+           github-src="charts/data-chart/bar-chart-multiple-sources"
            alt="Angular 複数ソースの棒チャート" >
 </code-view>
 
@@ -55,6 +56,7 @@ Angular 円チャート、または円グラフは、一般的な部分から全
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart-overview"
+           github-src="charts/pie-chart/overview"
            alt="凡例付きの Angular 円チャート" >
 </code-view>
 
@@ -67,6 +69,7 @@ Angular 折れ線チャート、または折れ線グラフは、傾向を示し
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-line-chart-multiple-sources"
+           github-src="charts/category-chart/line-chart-multiple-sources"
            alt="Angular 複数ソースの折れ線チャート" >
 </code-view>
 
@@ -79,6 +82,7 @@ Angular ドーナツ チャート、またはドーナツ グラフは、円チ�
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/doughnut-chart-legend"
+           github-src="charts/doughnut-chart/doughnut-chart-legend"
            alt="凡例付きの Angular ドーナツ チャート" >
 </code-view>
 
@@ -91,6 +95,7 @@ Angular エリア チャートは、直線セグメントで接続されたポ�
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-area-chart-multiple-sources"
+           github-src="charts/category-chart/area-chart-multiple-sources"
            alt="Angular 複数ソースのエリア チャート" >
 </code-view>
 
@@ -116,6 +121,7 @@ Angular バブル チャート (バブル グラフ) は、3 つの数値で構�
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-scatter-bubble-chart-multiple-sources"
+           github-src="charts/data-chart/scatter-bubble-chart-multiple-sources"
            alt="Angular バブル チャート" >
 </code-view>
 
@@ -128,6 +134,7 @@ Angular ファイナンシャル/株価チャートは、時系列チャート�
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-multiple-data"
+           github-src="charts/financial-chart/multiple-data"
            alt="Angular 株価チャートの例" >
 </code-view>
 
@@ -140,6 +147,7 @@ Angular 縦棒チャート (縦棒グラフ) は、さまざまなカテゴリ�
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-column-chart-multiple-sources"
+           github-src="charts/category-chart/column-chart-multiple-sources"
            alt="Angular 複数ソースの縦棒チャート" >
 </code-view>
 
@@ -152,6 +160,7 @@ Angular 複合チャートまたはコンボ チャートは、同じプロッ�
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-composite-chart"
+           github-src="charts/data-chart/composite-chart"
            alt="Angular 複合チャートの例" >
 </code-view>
 
@@ -172,6 +181,7 @@ Angular 極座標エリア チャートまたは極座標グラフは、極座�
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-polar-line-chart"
+           github-src="charts/data-chart/polar-line-chart"
            alt="Angular 極座標型折れ線チャート" >
 </code-view>
 
@@ -188,6 +198,7 @@ Angular 散布図は、デカルト (X、Y) 座標系を使用してデータを
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-scatter-point-chart"
+           github-src="charts/data-chart/scatter-point-chart"
            alt="Angular 散布マーカー チャート" >
 </code-view>
 
@@ -200,6 +211,7 @@ Angular シェープ チャートは、形状の配列 (X/Y ポイントの配�
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-scatter-polygon-series"
+           github-src="charts/data-chart/type-scatter-polygon-series"
            alt="Angular 散布ポリゴン チャート" >
 </code-view>
 
@@ -212,6 +224,7 @@ Angular スプライン チャート、またはスプライン グラフは、�
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-spline-multiple-sources"
+           github-src="charts/category-chart/spline-multiple-sources"
            alt="Angular 複数ソースのスプライン チャート" >
 </code-view>
 
@@ -224,6 +237,7 @@ Angular ステップ折れ線チャート、またはステップ折れ線グラ
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-step-line-multiple-sources"
+           github-src="charts/category-chart/step-line-multiple-sources"
            alt="Angular 複数ソースのステップ折れ線チャート" >
 </code-view>
 

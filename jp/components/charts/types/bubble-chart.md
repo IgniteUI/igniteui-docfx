@@ -17,6 +17,7 @@ Ignite UI for Angular バブル チャートは[散布図](scatter-chart.md)の�
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-scatter-bubble-chart-multiple-sources"
+           github-src="charts/data-chart/scatter-bubble-chart-multiple-sources"
            alt="Angular バブル チャートの例" >
 </code-view>
 
@@ -29,6 +30,7 @@ Ignite UI for Angular バブル チャートは[散布図](scatter-chart.md)の�
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-scatter-bubble-chart-single-source"
+           github-src="charts/data-chart/scatter-bubble-chart-single-source"
            alt="単一シリーズの  Angular バブル チャート" >
 </code-view>
 
@@ -41,6 +43,7 @@ Angular バブル チャートでは、次の例に示すように、複数の�
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-scatter-bubble-chart-multiple-sources"
+           github-src="charts/data-chart/scatter-bubble-chart-multiple-sources"
            alt="複数シリーズの Angular バブル チャート" >
 </code-view>
 
@@ -53,6 +56,7 @@ Angular バブル チャートでは、[`markerType`]({environment:dvApiBaseUrl}
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-scatter-bubble-chart-styling"
+           github-src="charts/data-chart/scatter-bubble-chart-styling"
            alt="Angular バブル チャートのスタイル設定" >
 </code-view>
 

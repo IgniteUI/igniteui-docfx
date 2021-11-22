@@ -19,6 +19,7 @@ Ignite UI for Angular 円チャート (円グラフ) は、データセットの
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart-overview"
+           github-src="charts/pie-chart/overview"
            alt="Angular 円チャートの概要" >
 </code-view>
 
@@ -76,6 +77,7 @@ Angular 円チャートは、データを解析するためのビューアー �
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart-legend"
+           github-src="charts/pie-chart/legend"
            alt="凡例付きの Angular 円チャート" >
 </code-view>
 
@@ -92,6 +94,7 @@ Angular 円チャートは、データを解析するためのビューアー �
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart-others"
+           github-src="charts/pie-chart/others"
            alt="Angular 円チャートその他の分類項目" >
 </code-view>
 
@@ -104,6 +107,7 @@ Angular 円チャートは、データを解析するためのビューアー �
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart-explosion"
+           github-src="charts/pie-chart/explosion"
            alt="Angular 円チャートの展開" >
 </code-view>
 
@@ -135,6 +139,7 @@ Angular 円チャートは、データを解析するためのビューアー �
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart-selection"
+           github-src="charts/pie-chart/selection"
            alt="Angular 円チャートの選択" >
 </code-view>
 
@@ -149,6 +154,7 @@ Angular 円チャートは、データを解析するためのビューアー �
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart-animation"
+           github-src="charts/pie-chart/animation"
            alt="Angular 円チャートのアニメーション" >
 </code-view>
 
@@ -194,7 +200,6 @@ Angular 円チャートは、データを解析するためのビューアー �
 -   [`othersCategoryThreshold`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartbasecomponent.html#otherscategorythreshold)
 -   [`othersCategoryType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartbasecomponent.html#otherscategorytype)
 -   [`selectionMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartbasecomponent.html#selectionmode)
--   [`IgxPieChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartcomponent.html)
 
 | チャート タイプ  | コントロール名                                                                                                                                        | API メンバー                                                                                                                                                   |
 | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
