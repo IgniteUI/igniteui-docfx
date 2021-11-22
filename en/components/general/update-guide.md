@@ -49,12 +49,40 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
     - **Breaking Change** - The default positionSettings open/close animation has been changed to `fadeIn`/`fadeOut`.
 - `igxGrid`, `igxHierarchicalGrid`, `igxTreeGrid`
     - **Breaking Change** - The following deprecated inputs have been removed - `showToolbar`, `toolbarTitle`, `columnHiding`, `columnHidingTitle`, `hiddenColumnsText`, `columnPinning`, `columnPinningTitle`, `pinnedColumnsText`. Use `IgxGridToolbarComponent`, `IgxGridToolbarHidingComponent`, `IgxGridToolbarPinningComponent` instead.
-    - **Breaking Change** - Upon adding of `igx-toolbar` component, now you should manually specify which features you want to enable - Column Hiding, Pinning or Excel Exporting.
+    - **Breaking Change** - Upon adding of `igx-toolbar` component, now you should manually specify which features you want to enable - Column Hiding, Pinning, Excel Exporting. Advanced Filtering may be enabled through the `allowAdvancedFiltering` input property on the grid, but it is recommended to enable it declaratively with markup, as with the other features.
     - **Breaking Change** - The `rowSelected` event is renamed to `rowSelectionChanging` to better reflect its function.
     - **Breaking Change** - The `columnSelected` event is renamed to `columnSelectionChanging` to better reflect its function.
-    - **Breaking Change** - `rowData` and `rowID` properties are removed. Use `data` and `key` instead. Use `ng update` for automatic migration.
-    - **Breaking Change** - `columnsCollection` is removed. Use `columns` instead.
-    - **Behavioral change** - `columns` getter may now return an empty array [] in certain occasions, when grid is not yet renderd, but code is calling `grid.columns`. If this introduces behavioral changes or bugs, use `grid,columnList`. To get a column at specific index, use `grid.columnList.get(0)`
+    - **Breaking Change** - `columnsCollection` is removed. Use `columns` instead. If at certain ocasions `columns` return empty array, query the columns using `ViewChildren` and access those in `ngAfterViewInit`:
+        ```html
+        @ViewChildren(IgxColumnComponent, { read: IgxColumnComponent })
+        public columns: QueryList<IgxColumnComponent>;
+        ```
+    - **Breaking change** - when applying a custom directive on the grid, inject the `IGX_GRID_BASE` token in the constructor in order to get reference to the hosting grid:
+        ```html
+        <igx-grid customDirective ...></igx-grid>
+        ```
+
+        ```typescript
+        @Directive({
+            selector: '[customDirective]'
+        })
+        export class customDirective {
+
+        constructor(@Host() @Optional() @Inject(IGX_GRID_BASE) grid: IgxGridBaseDirective) { }
+        ```
+- `RowDirective`, `RowType`
+    - **Breaking Change** - `rowData` and `rowID` properties are removed from `RowDirective` and from classes implementing the `RowType` interface. Use `data` and `key` instead. Use `ng update` for automatic migration. Automatic migration will not be able to pick up some examples from templates, where the template context object is not typed:
+        ```html
+        <ng-template igxCell let-cell="cell">
+            <span>{{ cell.rowID }}</span>
+            <span>{{ cell.row.rowData.ProductID }}</span>
+        </ng-template>
+        ```
+        Update such templates manually to
+        ```html
+        <span>{{ cell.key }}</span>
+        <span>{{ cell.row.data.ProductID }}</span>
+        ```
 - `igxGrid`
     - Exposed a `groupStrategy` input that functions similarly to `sortStrategy`, allowing customization of the grouping behavior of the grid. 
 - `IgxCsvExporterService`, `IgxExcelExporterService`
