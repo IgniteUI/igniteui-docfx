@@ -64,9 +64,9 @@ Let's create a simple drop-down that provides several option items to choose fro
 // dropdown.component.ts
 export class MyDropDownComponent {
     public items: Array<{ field: string }> = [
-        { field: "Option 1" },
-        { field: "Option 2" },
-        { field: "Option 3" }
+        { field: 'Option 1' },
+        { field: 'Option 2' },
+        { field: 'Option 3' }
     ];
 }
 ```
@@ -96,9 +96,9 @@ Let's say we want to have a predefined selected item. One way to do this, is by 
 // dropdown.component.ts
 export class MyDropDownComponent {
     public items: Array<{ field: string }> = [
-        { field: "Option 1" },
-        { field: "Option 2" },
-        { field: "Option 3" }
+        { field: 'Option 1' },
+        { field: 'Option 2' },
+        { field: 'Option 3' }
     ];
 }
 ```
@@ -142,14 +142,14 @@ To provide a more useful visual information, use the [isHeader]({environment:ang
 // dropdown.component.ts
 export class MyDropDownComponent {
     public items: any[] = [
-        { field: "European Union", code: "EU", header: true },
-        { field: "Germany", code: "DE" },
-        { field: "Bulgaria", code: "BG", selected: true },
-        { field: "France", code: "FR", disabled: true },
-        { field: "North America", code: "NA", header: true },
-        { field: "Canada", code: "CA" },
-        { field: "United States", code: "US" },
-        { field: "Mexico", code: "MX" }
+        { field: 'European Union', code: 'EU', header: true },
+        { field: 'Germany', code: 'DE' },
+        { field: 'Bulgaria', code: 'BG', selected: true },
+        { field: 'France', code: 'FR', disabled: true },
+        { field: 'North America', code: 'NA', header: true },
+        { field: 'Canada', code: 'CA' },
+        { field: 'United States', code: 'US' },
+        { field: 'Mexico', code: 'MX' }
     ];
 }
 ```
@@ -179,30 +179,30 @@ export class MyCustomDropDownComponent {
         name: 'Vegetables',
         entries: [{
             name: 'Cucumber',
-            refNo: `00000`
+            refNo: '00000'
         }, {
-        name: 'Lettuce',
-        refNo: `00001`
+            name: 'Lettuce',
+            refNo: '00001'
         },
         ...]
     }, {
         name: 'Fruits',
         entries: [{
             name: 'Banana',
-            refNo: `10000`
+            refNo: '10000'
         }, {
             name: 'Tomato',
-            refNo: `10001`
+            refNo: '10001'
         },
         ...]
     }, {
         name: 'Meats',
         entries: [{
             name: 'Chicken',
-            refNo: `20000`
+            refNo: '20000'
         }, {
             name: 'Beef',
-            refNo: `20001`
+            refNo: '20001'
         },
         ...]
     }];
@@ -274,7 +274,7 @@ You can configure the drop-down to behave as a menu. To do this, set the [ISelec
 // dropdown.component.ts
 export class MyMenuComponent {
     public items: Array<{ text: string }> =
-        [{ text: "Add New Contact" }, { text: "Edit Contact" }, { text: "Refresh" }, { text: "Help" }];
+        [{ text: 'Add New Contact' }, { text: 'Edit Contact' }, { text: 'Refresh' }, { text: 'Help' }];
     public text: string;
     public overlaySettings = {
         positionStrategy: new ConnectedPositioningStrategy({
@@ -331,12 +331,12 @@ The following sample demonstrates an input that opens and closes the `igxDropDow
 // input-dropdown.component.ts
 export class InputDropDownComponent {
     @ViewChild(IgxDropDownComponent) public igxDropDown: IgxDropDownComponent;
-    @ViewChild("inputGroup", { read: IgxInputGroupComponent}) public inputGroup: IgxInputGroupComponent;
+    @ViewChild('inputGroup', { read: IgxInputGroupComponent}) public inputGroup: IgxInputGroupComponent;
 
     public items: Array<{ field: string }> = [
-        { field: "Option 1" },
-        { field: "Option 2" },
-        { field: "Option 3" }
+        { field: 'Option 1' },
+        { field: 'Option 2' },
+        { field: 'Option 3' }
     ];
 
     public openDropDown() {
@@ -389,7 +389,10 @@ When the `allowItemsFocus` property is enabled, the drop down items gain tab ind
 Using the [Ignite UI for Angular Theming](themes/index.md), we can greatly alter the drop-down appearance. First, in order for us to use the functions exposed by the theme engine, we need to import the `index` file in our style file: 
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
 Following the simplest approach, we create a new theme that extends the [`igx-drop-down-theme`]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme) and accepts some of the default theme's parameters.

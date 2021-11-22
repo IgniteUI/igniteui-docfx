@@ -88,29 +88,23 @@ You can also modify the cell value through the @@igxName API but only if primary
 
 @@if (igxName === 'IgxGrid') {
 ```typescript
-...
-    public updateCell() {
-        this.grid1.updateCell(newValue, rowID, 'ReorderLevel');
-    }
-...
+public updateCell() {
+    this.grid1.updateCell(newValue, rowID, 'ReorderLevel');
+}
 ```
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```typescript
-...
-    public updateCell() {
-        this.treeGrid.updateCell(newValue, rowID, 'Age');
-    }
-...
+public updateCell() {
+    this.treeGrid.updateCell(newValue, rowID, 'Age');
+}
 ```
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```typescript
-...
-    public updateCell() {
-        this.hierarchicalGrid.updateCell(newValue, rowID, 'Age');
-    }
-...
+public updateCell() {
+    this.hierarchicalGrid.updateCell(newValue, rowID, 'Age');
+}
 ```
 }
 
@@ -118,38 +112,32 @@ Another way to update cell is directly through [`update`]({environment:angularAp
 
 @@if (igxName === 'IgxGrid') {
 ```typescript
-...
-    public updateCell() {
-        const cell = this.grid1.getCellByColumn(rowIndex, 'ReorderLevel');
-        // You can also get cell by rowID if primary key is defined
-        // cell = this.grid1.getCellByKey(rowID, 'ReorderLevel');
-        cell.update(70);
-    }
-...
+public updateCell() {
+    const cell = this.grid1.getCellByColumn(rowIndex, 'ReorderLevel');
+    // You can also get cell by rowID if primary key is defined
+    // cell = this.grid1.getCellByKey(rowID, 'ReorderLevel');
+    cell.update(70);
+}
 ```
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```typescript
-...
-    public updateCell() {
-        const cell = this.treeGrid.getCellByColumn(rowIndex, 'Age');
-        // You can also get cell by rowID if primary key is defined
-        // const cell = this.treeGrid.getCellByKey(rowID, 'Age');
-        cell.update(9999);
-    }
-...
+public updateCell() {
+    const cell = this.treeGrid.getCellByColumn(rowIndex, 'Age');
+    // You can also get cell by rowID if primary key is defined
+    // const cell = this.treeGrid.getCellByKey(rowID, 'Age');
+    cell.update(9999);
+}
 ```
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```typescript
-...
-    public updateCell() {
-        const cell = this.hierarchicalGrid.getCellByColumn(rowIndex, 'ReorderLevel');
-        // You can also get cell by rowID if primary key is defined
-        // cell = this.hierarchicalGrid.getCellByKey(rowID, 'ReorderLevel');
-        cell.update(70);
-    }
-...
+public updateCell() {
+    const cell = this.hierarchicalGrid.getCellByColumn(rowIndex, 'ReorderLevel');
+    // You can also get cell by rowID if primary key is defined
+    // cell = this.hierarchicalGrid.getCellByKey(rowID, 'ReorderLevel');
+    cell.update(70);
+}
 ```
 }
 
@@ -220,7 +208,7 @@ public addNewChildRow() {
     // And specifying the parentRowID.
     const record = this.getNewRecord();
     this.treeGrid.addRow(record, 1);
-    }
+}
 ```
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -230,7 +218,7 @@ public addRow() {
     // Assuming we have a `getNewRecord` method returning the new row data
     const record = this.getNewRecord();
     this.hierarchicalGrid.addRow(record, 1);
-    }
+}
 ```
 }
 
@@ -343,10 +331,9 @@ The `onCellEdit` emits whenever **any** cell's value is about to be committed. I
 @@if (igxName === 'IgxGrid') {
 ```typescript
 export class MyGridEventsComponent {
-    ...
     public handleCellEdit(event: IGridEditEventArgs): void {
         const column = event.column;
-        if (column.field === "Ordered") {
+        if (column.field === 'Ordered') {
             const rowData = event.rowData;
             if (!rowData) {
                 return;
@@ -364,19 +351,18 @@ If the value entered in a cell under the **Ordered** column is larger than the a
 @@if (igxName === 'IgxTreeGrid') {
 ```typescript
 export class MyTreeGridEventsComponent {
-    ...
     public handleCellEdit(event: IGridEditEventArgs): void {
         const column = event.column;
-        if (column.field === "Age") {
+        if (column.field === 'Age') {
             if (event.newValue < 18) {
                 event.cancel = true;
-                this.toast.message = "Employees must be at least 18 years old!";
+                this.toast.message = 'Employees must be at least 18 years old!';
                 this.toast.open();
             }
-        } else if (column.field === "HireDate") {
+        } else if (column.field === 'HireDate') {
             if (event.newValue > new Date().getTime()) {
                 event.cancel = true;
-                this.toast.message = "The employee hire date must be in the past!";
+                this.toast.message = 'The employee hire date must be in the past!';
                 this.toast.open();
             }
         }
@@ -388,19 +374,18 @@ Here, we are validating two columns. If the user tries to set an invalid value f
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```typescript
 export class MyHGridEventsComponent {
-    ...
     public handleCellEdit(event: IGridEditEventArgs) {
         const today = new Date();
         const column = event.column;
-        if (column.field === "Debut") {
+        if (column.field === 'Debut') {
             if (event.newValue > today.getFullYear()) {
-                this.toast.message = "The debut date must be in the past!";
+                this.toast.message = 'The debut date must be in the past!';
                 this.toast.open();
                 event.cancel = true;
             }
-        } else if (column.field === "LaunchDate") {
+        } else if (column.field === 'LaunchDate') {
             if (event.newValue > new Date()) {
-                this.toast.message = "The launch date must be in the past!";
+                this.toast.message = 'The launch date must be in the past!';
                 this.toast.open();
                 event.cancel = true;
             }
@@ -449,9 +434,11 @@ In order to use the [Ignite UI Theming Library](../themes/sass/component-themes.
 ### Importing style library
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
-...
-```
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
 Now we can make use of all of the functions exposed by the Ignite UI for Angular theme engine.
 
 ### Defining a palette

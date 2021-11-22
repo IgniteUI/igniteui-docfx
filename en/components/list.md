@@ -306,15 +306,15 @@ import { IgxButtonGroupModule } from 'igniteui-angular';
 ```typescript
 // contacts.component.ts
 
-public density = "comfortable";
+public density = 'comfortable';
 public displayDensities;
 
 public ngOnInit() {
-this.displayDensities = [
-    { label: 'comfortable', selected: this.density === 'comfortable', togglable: true },
-    { label: 'cosy', selected: this.density === 'cosy', togglable: true },
-    { label: 'compact', selected: this.density === 'compact', togglable: true }
-];
+    this.displayDensities = [
+        { label: 'comfortable', selected: this.density === 'comfortable', togglable: true },
+        { label: 'cosy', selected: this.density === 'cosy', togglable: true },
+        { label: 'compact', selected: this.density === 'compact', togglable: true }
+    ];
 }
 
 public selectDensity(event) {
@@ -411,19 +411,19 @@ And finally here is the typescript code handling the panning events:
 // contacts.component.ts
 
 ...
-@ViewChild("toast")
+@ViewChild('toast')
 public toast: IgxToastComponent;
 
 public rightPanPerformed(args) {
   args.keepItem = true;
-  this.toast.message = "Dialing " + this.contacts[args.item.index - 1].name;
+  this.toast.message = 'Dialing ' + this.contacts[args.item.index - 1].name;
   this.toast.open();
 }
 
 public leftPanPerformed(args) {
   args.keepItem = false;
   setTimeout((idx = args.item.index - 1) => {
-    this.toast.message = "Contact " + this.contacts[idx].name + " removed.";
+    this.toast.message = 'Contact ' + this.contacts[idx].name + ' removed.';
     this.toast.open();
     this.contacts.splice(idx, 1);
   }, 500);
@@ -469,29 +469,29 @@ Let's add an input field to the top in our Angular component template first and 
 It's time to import the `IgxFilterModule` and the `IgxInputGroupModule` in our app.module.ts file and [`IgxFilterOptions`]({environment:angularApiUrl}/classes/igxfilteroptions.html) in our contacts component:
 
 ```typescript
-    // app.module.ts
+// app.module.ts
+...
+import { IgxFilterModule, IgxInputGroupModule } from 'igniteui-angular';
+
+@NgModule({
+    imports: [..., IgxFilterModule, IgxInputGroupModule]
+})
+
+// contacts.component.ts
+...
+import { IgxFilterOptions } from 'igniteui-angular';
+
+@Component({...})
+export class ContactListComponent {
+    public searchContact: string;
     ...
-    import { IgxFilterModule, IgxInputGroupModule } from 'igniteui-angular';
-
-    @NgModule({
-        imports: [..., IgxFilterModule, IgxInputGroupModule]
-    })
-
-    // contacts.component.ts
-    ...
-    import { IgxFilterOptions } from 'igniteui-angular';
-
-    @Component({...})
-    export class ContactListComponent {
-        public searchContact: string;
-        ...
-        get filterContacts(): IgxFilterOptions {
-            const fo = new IgxFilterOptions();
-            fo.key = 'name';
-            fo.inputValue = this.searchContact;
-            return fo;
-        }
+    get filterContacts(): IgxFilterOptions {
+        const fo = new IgxFilterOptions();
+        fo.key = 'name';
+        fo.inputValue = this.searchContact;
+        return fo;
     }
+}
 ```
 
 After importing the [`IgxFilterOptions`]({environment:angularApiUrl}/classes/igxfilteroptions.html), we need to register a new getter method that will return the filtering options to be used by the pipe each time the `searchContact` property gets updated. For the filter to work we need to register a `key` to filter the contact object by. In our case that would be the `name` of each contact. The second property that has to be registered on the [`IgxFilterOptions`]({environment:angularApiUrl}/classes/igxfilteroptions.html) object is the value that we should check against when comparing our contact name. This would be the `searchContact` property that we bound to the input field above our contacts list.
@@ -511,14 +511,15 @@ Finally, we need to apply the filtering pipe to our contacts data before we can 
 Let's see how we can change the background of our list. First we need to import index.scss in to our component .scss file.
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
-```
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
 
 Then we need to create a theme for our component.
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
-
 :host ::ng-deep {
     $my-list-theme: igx-list-theme(
         $background: #0568ab

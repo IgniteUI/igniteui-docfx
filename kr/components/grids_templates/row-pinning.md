@@ -275,7 +275,7 @@ This can be done by adding an extra column with a cell template containing the c
 On click of the custom icon the pin state of the related row can be changed using the row's API methods.
 
 ```typescript
-public togglePinning(row: IgxGridRowComponent, event) {
+public togglePinning(row: IgxGridRow, event) {
     event.preventDefault();
     if (row.pinned) {
         row.unpin();

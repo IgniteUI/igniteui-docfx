@@ -1,5 +1,5 @@
 ---
-title: Overlay Styling
+title: Angular Overlay Styling
 _description: A detailed walkthrough that explains how to properly apply and scope styles to elements that are displayed using the IgniteUI for Angular Overlay Service.
 _keywords: Ignite UI for Angular, Angular Overlay Service, Angular UI controls, Overlay Service, View Encapsulation Example, Sass scoped styles in Angular, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library
 ---
@@ -25,9 +25,11 @@ In most cases [global](themes/sass/global-themes.md) theme styles are not affect
 ```
 
 ```scss
-// styles.scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
-...
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
 
 $my-drop-down-theme: igx-drop-down-theme(
     $palette: $my-custom-palette
@@ -139,7 +141,10 @@ To make sure the theme **does not** affect other components in our app, use the 
 
 ```scss
 // overlay-styling.component.scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
 ...
 :host {
     @include igx-css-vars($my-overlay-theme);

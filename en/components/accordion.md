@@ -1,5 +1,5 @@
 ---
-title: Angular Accordion – Fully-featured collapsible panels - Infragistics 
+title: Angular Accordion Component – Fully-featured collapsible panels - Infragistics 
 _description: Angular Accordion is used to build vertical expandable panels in accordion menu. Check how to do it with Ignite UI for Angular accordion component. 
 _keywords: angular accordion, angular accordion component, angular accordion example, ignite ui for angular, UI controls, infragistics
 ---
@@ -99,7 +99,7 @@ Angular Accordion supports animations for both expanding and collapsing actions 
 With regards to animation, you have two options. First, you could set the `animationSettings` property on the accordion component:
 
 ```typescript
-import { useAnimation } from "@angular/animations";
+import { useAnimation } from '@angular/animations';
 import { slideInLeft, slideOutRight } from 'igniteui-angular';
 @Component({
     ...
@@ -108,14 +108,14 @@ export class AccordionComponent {
     public animationSettingsCustom = {
         closeAnimation: useAnimation(slideOutRight, {
             params: {
-                duration: "100ms",
-                toPosition: "translateX(25px)"
+                duration: '100ms',
+                toPosition: 'translateX(25px)'
             }
         }),
         openAnimation: useAnimation(slideInLeft, {
             params: {
-                duration: "500ms",
-                fromPosition: "translateX(-15px)",
+                duration: '500ms',
+                fromPosition: 'translateX(-15px)',
                 startOpacity: 0.1
             }
         })
@@ -232,8 +232,11 @@ By design, there is a margin set to the expanded panels, in case that they are p
 In order to take advantage of the functions exposed by the theming engine, we have to import the `index` file in our style file:
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
-```
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
 
 Following the simplest approach, we create a new theme that extends the [igx-expansion-panel-theme]({environment:sassApiUrl}/index.html#function-igx-expansion-panel-theme) and accepts an `$expanded-margin` parameter. 
 ```scss

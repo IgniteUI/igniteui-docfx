@@ -78,7 +78,7 @@ Then define a @@igComponent with bound data source and [`rowEditable`]({environm
 
 @@if (igxName === 'IgxGrid') {
 ```html
-<igx-grid [data]="data" [primaryKey]="'ProductID'" width="100%" height="500px" [rowEditable]="true">
+<igx-grid [data]="data" [primaryKey]="'ProductID'" [autoGenerate]="false" [rowEditable]="true">
     <igx-column field="ProductID" header="Product ID" dataType="number"></igx-column>
     <igx-column field="ReorderLevel" header="ReorderLever" dataType="number"></igx-column>
     <igx-column field="ProductName" header="ProductName" dataType="string"></igx-column>
@@ -94,7 +94,7 @@ Then define a @@igComponent with bound data source and [`rowEditable`]({environm
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```html
-<igx-tree-grid igxPreventDocumentScroll #treeGrid [data]="data"
+<igx-tree-grid igxPreventDocumentScroll [data]="data"
     primaryKey="ID" foreignKey="ParentID" [rowEditable]="true">
     <igx-column [field]="'Name'" dataType="string"></igx-column>
     <igx-column [field]="'Title'" dataType="string"></igx-column>
@@ -114,8 +114,8 @@ Then define a @@igComponent with bound data source and [`rowEditable`]({environm
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid igxPreventDocumentScroll #hierarchicalGrid class="hgrid" [data]="localdata"
-    [autoGenerate]="false" [height]="'500px'" [width]="'100%'" [primaryKey]="'Debut'" [rowEditable]="true">
+<igx-hierarchical-grid igxPreventDocumentScroll [data]="localdata"
+    [autoGenerate]="false" [primaryKey]="'Debut'" [rowEditable]="true">
     <igx-column field="Artist" [dataType]="'string'"></igx-column>
     <igx-column field="HasGrammyAward" header="Has Grammy Award?" [dataType]="'boolean'">
     </igx-column>
@@ -160,11 +160,11 @@ Then define a @@igComponent with bound data source and [`rowEditable`]({environm
 
 @@if (igxName !== 'IgxTreeGrid') {
 > [!NOTE]
-> The IgxGridEditingActions input controlling the visibility of the add row button may use the action strip context (which is of type [`IgxGridRowComponent`]({environment:angularApiUrl}/classes/igxgridrowcomponent.html)) to fine tune which records the button shows for.
+> The IgxGridEditingActions input controlling the visibility of the add row button may use the action strip context (which is of type [`RowType`]({environment:angularApiUrl}/classes/rowtype.html)) to fine tune which records the button shows for.
 }
 @@if (igxName === 'IgxTreeGrid') {
 > [!NOTE]
-> The IgxGridEditingActions inputs controlling the visibility of the add row and add child buttons may use the action strip context (which is of type [`IgxTreeGridRowComponent`]({environment:angularApiUrl}/classes/igxtreegridrowcomponent.html)) to fine tune which records the buttons show for.
+> The IgxGridEditingActions inputs controlling the visibility of the add row and add child buttons may use the action strip context (which is of type [`RowType`]({environment:angularApiUrl}/classes/rowtype.html)) to fine tune which records the buttons show for.
 }
 
 The internal [`IgxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html) is automatically provided for @@igComponent. It holds pending cell changes until the row state is submitted or cancelled.

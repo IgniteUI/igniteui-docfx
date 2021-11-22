@@ -1,5 +1,5 @@
 ---
-title: Overlay Service - Scroll Strategies
+title: Angular Overlay Service - Scroll Strategies
 _description: Explanation and example about the Overlay Service's IScrollStrategy interface and the classes that implement it.
 ---
 

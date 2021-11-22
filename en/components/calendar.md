@@ -1,5 +1,5 @@
 ---
-title: Angular Calendar | Calendar | Infragistics
+title: Angular Calendar Component | Calendar | Infragistics
 _description: Create an intuitive calendar for applications to display date information, and users to input date information with Ignite UI for Angular Calendar component.
 _keywords: angular calendar, angular component, ignite ui for angular
 ---
@@ -27,7 +27,7 @@ Note that the [**IgxCalendar**]({environment:angularApiUrl}/classes/igxcalendarc
 ```typescript
 // app.module.ts
 ...
-import { HammerModule } from "@angular/platform-browser";
+import { HammerModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IgxCalendarModule } from 'igniteui-angular';
 @NgModule({
@@ -120,11 +120,11 @@ All property values should be set in the AppCоmponent file:
 
 public formatOptions: any;
 public formatViews: any;
-public locales = ["EN", "DE", "FR", "AR", "ZH"];
-public locale = "EN";
+public locales = ['EN', 'DE', 'FR', 'AR', 'ZH'];
+public locale = 'EN';
 
 public ngOnInit() {
-    this.formatOptions = { day: "2-digit", month: "long", weekday: "long", year: "numeric" };
+    this.formatOptions = { day: '2-digit', month: 'long', weekday: 'long', year: 'numeric' };
     this.formatViews = { day: true, month: true, year: true };
 }
 ```
@@ -147,7 +147,7 @@ Let's create a sample that is disabling the dates between the 3rd and the 8th of
 
 ```typescript
 export class CalendarSample6Component {
-    @ViewChild("calendar") public calendar: IgxCalendarComponent;
+    @ViewChild('calendar') public calendar: IgxCalendarComponent;
     public today = new Date(Date.now());
     public range = [
         new Date(this.today.getFullYear(), this.today.getMonth(), 3),
@@ -176,9 +176,9 @@ Let's add some `specialDates` to our `igxCalendar`. In order to do this, we have
 
 ```typescript
 export class CalendarSample7Component {
-    @ViewChild("calendar", { static: true })
+    @ViewChild('calendar', { static: true })
     public calendar: IgxCalendarComponent;
-    @ViewChild("alert", { static: true })
+    @ViewChild('alert', { static: true })
     public dialog: IgxDialogComponent;
     public range = [];
 
@@ -375,8 +375,11 @@ Multiview calendar supports all three types of selection. Use the [`monthsViewNu
 To get started with styling the calendar, we need to import the `index` file, where all the theme functions and component mixins live:
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
-```
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
 
 Following the simplest approach, we create a new theme that extends the [`igx-calendar-theme`]({environment:sassApiUrl}/index.html#function-igx-calendar-theme) and accepts some of the default theme's parameters.
 

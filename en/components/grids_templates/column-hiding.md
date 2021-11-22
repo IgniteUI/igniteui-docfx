@@ -102,39 +102,40 @@ Let's start by creating our @@igComponent and binding it to our data. We will al
 ```html
 <igx-hierarchical-grid class="hgrid" [data]="localdata"
         [height]="'560px'" [width]="'100%'" columnWidth="200px" [allowFiltering]="true" #hGrid>
-            <igx-column field="Artist" [sortable]="true" [disableHiding]="true"></igx-column>
-            <igx-column field="Photo">
-                <ng-template igxCell let-cell="cell">
-                    <div class="cell__inner_2">
-                        <img [src]="cell.value" class="photo" />
-                    </div>
-                </ng-template>
-            </igx-column>
-            <igx-column field="Debut" [sortable]="true" [hidden]="true"></igx-column>
-            <igx-column field="Grammy Nominations" [sortable]="true" [hidden]="true"></igx-column>
-            <igx-column field="Grammy Awards" [sortable]="true"></igx-column>
 
-            <igx-row-island [key]="'Albums'" [autoGenerate]="false" #layout1 >
-                <igx-column field="Album" [sortable]="true"></igx-column>
-                <igx-column field="Launch Date" [sortable]="true"></igx-column>
-                <igx-column field="Billboard Review" [sortable]="true"></igx-column>
-                <igx-column field="US Billboard 200" [sortable]="true"></igx-column>
-            <igx-row-island [key]="'Songs'" [autoGenerate]="false">
-                    <igx-column field="No."></igx-column>
-                    <igx-column field="Title"></igx-column>
-                    <igx-column field="Released"></igx-column>
-                    <igx-column field="Genre"></igx-column>
-            </igx-row-island>
+    <igx-column field="Artist" [sortable]="true" [disableHiding]="true"></igx-column>
+    <igx-column field="Photo">
+        <ng-template igxCell let-cell="cell">
+            <div class="cell__inner_2">
+                <img [src]="cell.value" class="photo" />
+            </div>
+        </ng-template>
+    </igx-column>
+    <igx-column field="Debut" [sortable]="true" [hidden]="true"></igx-column>
+    <igx-column field="Grammy Nominations" [sortable]="true" [hidden]="true"></igx-column>
+    <igx-column field="Grammy Awards" [sortable]="true"></igx-column>
+
+    <igx-row-island [key]="'Albums'" [autoGenerate]="false" #layout1 >
+        <igx-column field="Album" [sortable]="true"></igx-column>
+        <igx-column field="Launch Date" [sortable]="true"></igx-column>
+        <igx-column field="Billboard Review" [sortable]="true"></igx-column>
+        <igx-column field="US Billboard 200" [sortable]="true"></igx-column>
+        <igx-row-island [key]="'Songs'" [autoGenerate]="false">
+            <igx-column field="No."></igx-column>
+            <igx-column field="Title"></igx-column>
+            <igx-column field="Released"></igx-column>
+            <igx-column field="Genre"></igx-column>
         </igx-row-island>
+    </igx-row-island>
 
-        <igx-row-island [key]="'Tours'" [autoGenerate]="false">
-            <igx-column field="Tour"></igx-column>
-            <igx-column field="Started on"></igx-column>
-            <igx-column field="Location"></igx-column>
-            <igx-column field="Headliner"></igx-column>
-        </igx-row-island>
+    <igx-row-island [key]="'Tours'" [autoGenerate]="false">
+        <igx-column field="Tour"></igx-column>
+        <igx-column field="Started on"></igx-column>
+        <igx-column field="Location"></igx-column>
+        <igx-column field="Headliner"></igx-column>
+    </igx-row-island>
 
-        </igx-hierarchical-grid>
+</igx-hierarchical-grid>
 ```
 }
 
@@ -462,8 +463,11 @@ If all went well, this is how our column hiding UI component should look like:
 To get started with styling the column actions component, we need to import the index file, where all the theme functions and component mixins live:
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
-```
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
 
 By using the simplest approach, we create a new theme that extends the [`igx-column-actions-theme`]({environment:sassApiUrl}/index.html#function-igx-column-actions-theme) and accepts the `$title-color` and the `$background-color` parameters.
 

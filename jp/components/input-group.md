@@ -27,8 +27,8 @@ Input Group コンポーネントを初期化にするには、まず `IgxInputG
 // app.module.ts
 
 ...
-import { IgxInputGroupModule } from "igniteui-angular";
-import { FormsModule } from "@angular/forms";
+import { IgxInputGroupModule } from 'igniteui-angular';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
     ...
@@ -111,14 +111,10 @@ Ignite UI for Angular は、`type="file"` の入力スタイルも提供し、�
 </igx-input-group>
 ```
 
-
-
 <code-view style="height:695px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/input-group-sample-5" >
 </code-view>
-
-
 
 ### Input Group テーマ
 

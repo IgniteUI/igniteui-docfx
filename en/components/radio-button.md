@@ -1,5 +1,5 @@
 ---
-title: Radio and Radio Group
+title: Angular Radio and Radio Group – Ignite UI for Angular | Infragistics
 _description: With Ignite UI for Angular Radio Button and Radio Group controls, developers can seamlessly present lists of options for users to select for better UI in template-driven and reactive forms.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Radio Button components, Angular Radio Button controls, Angular Radio Group component, Angular Radio Group control
 ---
@@ -65,18 +65,18 @@ Let's enhance the previous sample by adding four radio buttons, each responsible
 // radiogroup.component.ts
 ...
 public colors = [{
-    hex: "#f06a2f",
-    name: "Carrot"
+    hex: '#f06a2f',
+    name: 'Carrot'
 }, {
-    hex: "#ff134a",
-    name: "Watermelon"
+    hex: '#ff134a',
+    name: 'Watermelon'
 }, {
-    hex: "#7bc96f",
-    name: "Grass"
+    hex: '#7bc96f',
+    name: 'Grass'
 },
 {
-    hex: "transparent",
-    name: "No color"
+    hex: 'transparent',
+    name: 'No color'
 }];
 
 public selectedColor: string = this.colors[3].hex;
@@ -112,7 +112,10 @@ The final result would be something like that:
 To get started with styling the radio buttons, we need to import the `index` file, where all the theme functions and component mixins live:
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
 Following the simplest approach, we create a new theme that extends the [`igx-radio-theme`]({environment:sassApiUrl}/index.html#function-igx-radio-theme) and accepts some of the default theme's parameters:

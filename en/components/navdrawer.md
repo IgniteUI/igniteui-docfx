@@ -1,5 +1,5 @@
 ---
-title: Navigation Drawer Component
+title: Angular Navigation Drawer Component – Ignite UI for Angular | Infragistics
 _description: Implement a user-friendly slide in/out navigation container with complete programmatic control with Ignite UI for Angular Navigation Drawer component.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Navigation Drawer component, Angular Navigation Drawer control
 ---
@@ -29,8 +29,7 @@ To start with all necessary dependencies you can use the `IgxNavigationDrawerMod
 ```ts
 @NgModule({
     imports: [
-        IgxNavigationDrawerModule,
-        ...
+        IgxNavigationDrawerModule
     ]
 })
 export class AppModule {
@@ -100,11 +99,11 @@ To add elements to our navigation drawer and be able to select them, our typescr
 /* app.component.ts */
 export class AppComponent {
     public navItems = [
-        { name: "account_circle", text: "Avatar" },
+        { name: 'account_circle', text: 'Avatar' },
         ...
     ];
 
-    public selected = "Avatar";
+    public selected = 'Avatar';
 
     public navigate(item) {
         this.selected = item.text;
@@ -130,8 +129,8 @@ Also, if you want the drawer to close when you select an item from it, you can u
 
 ```ts
 /* app.component.ts */
-import { Component, ViewChild } from "@angular/core";
-import { IgxNavigationDrawerComponent } from "igniteui-angular";
+import { Component, ViewChild } from '@angular/core';
+import { IgxNavigationDrawerComponent } from 'igniteui-angular';
 
 ...
 
@@ -258,16 +257,16 @@ Then we have to define our navigation items using the router for their link valu
 export class AppComponent {
     public componentLinks = [
         {
-            link: "avatar",
-            name: "Avatar"
+            link: 'avatar',
+            name: 'Avatar'
         },
         {
-            link:  "badge",
-            name: "Badge"
+            link:  'badge',
+            name: 'Badge'
         },
         {
-            link:  "button-group",
-            name: "Button Group"
+            link:  'button-group',
+            name: 'Button Group'
         }
     ];
 }
@@ -295,19 +294,16 @@ Finally, import the RouterModule along with the items' routes in your `app.modul
 
 ```ts
 /*app.module.ts*/
-import { RouterModule } from "@angular/router";
+import { RouterModule } from '@angular/router';
 
 @NgModule([
-    ...
     imports: [
-        ...
         RouterModule,
 		RouterModule.forRoot([
-            {path: "avatar", component: NavDrawerRoutingComponent},
-            {path: "badge", component: NavDrawerRoutingComponent},
-            {path: "button-group", component: NavDrawerRoutingComponent}
+            {path: 'avatar', component: NavDrawerRoutingComponent},
+            {path: 'badge', component: NavDrawerRoutingComponent},
+            {path: 'button-group', component: NavDrawerRoutingComponent}
         ])
-        ...
     ]
 ])
 ```
@@ -326,7 +322,10 @@ After all the steps above are completed, your app should look like that:
 To get started with styling the navigation drawer, we need to import the `index` file, where all the theme functions and component mixins live:
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
 Following the simplest approach, we create a new theme that extends the [`igx-navdrawer-theme`]({environment:sassApiUrl}/index.html#function-igx-navdrawer-theme) and accepts a few parameters that style the navdrawer's items:

@@ -1,5 +1,5 @@
 ---
-title: Avatar Component
+title: Angular Avatar Component – Ignite UI for Angular | Infragistics
 _description: Ignite UI for Angular Avatar control enables users to add images, material icons or initials within any application for instances such as a profile button.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Avatar component, Angular Avatar control
 ---
@@ -117,17 +117,18 @@ You should see something like this:
 To get started with styling the avatar, we need to import the `index` file, where all the theme functions and component mixins live:
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`igx-avatar-theme`]({environment:sassApiUrl}/index.html#function-igx-avatar-theme) and accepts the `$initials-background`, `$initials-color`, `$icon-background`, `$icon-color` and the `$border-radius-square` parameters.
+Following the simplest approach, we create a new theme that extends the [`igx-avatar-theme`]({environment:sassApiUrl}/index.html#function-igx-avatar-theme) and accepts the `$background`, `$color`, and the `$border-radius-square` parameters.
 
 ```scss
 $custom-avatar-theme: igx-avatar-theme(
-    $initials-background: #72da67,
-    $initials-color: #000000,
-    $icon-background: #217346,
-    $icon-color: #ffffff,
+    $background: #72da67,
+    $color: #000000,
     $border-radius-square: 16px
 );
 ```
@@ -142,7 +143,7 @@ The last step is to pass the custom avatar theme:
 
 ### Using mixins
 
-In order to style components for Internet Explorer 11, we have to use different approach, since it doesn't support CSS variables. 
+In order to style components for Internet Explorer 11 and older browsers, we have to use different approach, since it doesn't support CSS variables. 
 
 If the component is using an [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`. On the other side, in order to prevent the custom theme to leak to other components, be sure to include the `:host` selector before `::ng-deep`:
 

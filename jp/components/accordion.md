@@ -100,7 +100,7 @@ Angular Accordion は、パネルの展開と縮小の両方のアニメーシ�
 アニメーションに関して、2 つのオプションがあります。最初に、Accordion コンポーネントの `animationSettings` プロパティを設定します。
 
 ```typescript
-import { useAnimation } from "@angular/animations";
+import { useAnimation } from '@angular/animations';
 import { slideInLeft, slideOutRight } from 'igniteui-angular';
 @Component({
     ...
@@ -109,14 +109,14 @@ export class AccordionComponent {
     public animationSettingsCustom = {
         closeAnimation: useAnimation(slideOutRight, {
             params: {
-                duration: "100ms",
-                toPosition: "translateX(25px)"
+                duration: '100ms',
+                toPosition: 'translateX(25px)'
             }
         }),
         openAnimation: useAnimation(slideInLeft, {
             params: {
-                duration: "500ms",
-                fromPosition: "translateX(-15px)",
+                duration: '500ms',
+                fromPosition: 'translateX(-15px)',
                 startOpacity: 0.1
             }
         })
@@ -232,8 +232,11 @@ Angular Material Accordion のキーボード ナビゲーションは、さま�
 テーマ エンジンによって公開される関数を利用するには、スタイル ファイルに `index` ファイルをインポートする必要があります。
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
-```
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
 
 [igx-expansion-panel-theme]({environment:sassApiUrl}/index.html#function-igx-expansion-panel-theme) を拡張する新しいテーマを作成し、`$expanded-margin` パラメーターを受け取ります。 
 ```scss

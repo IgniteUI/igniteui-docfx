@@ -1,5 +1,5 @@
 ---
-title: Date Range Picker Component - Native Angular | Ignite UI for Angular
+title: Angular Date Range Picker Component | Ignite UI for Angular
 _description: The Date Range Picker component allows you to choose a date range by defining its start and end date. You can select a range from a calendar UI.
 _keywords: Angular Date Range Picker, Date Range Picker, Date Picker
 ---
@@ -30,7 +30,7 @@ As `IgxDateRangePicker` uses the [**IgxCalendarComponent**]({environment:angular
 
 ...
 import { IgxDateRangePickerModule } from 'igniteui-angular';
-import { HammerModule } from "@angular/platform-browser";
+import { HammerModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
@@ -329,8 +329,11 @@ When two editors are used, the default separator can be replaced using the [`igx
 To get started with styling the `igxDateRangePicker`, we need to import the `index` file, where all the theme functions and component mixins live:
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
-```
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
 
 The Date Range Picker Component exposes `igx-date-range-picker-theme` and utilizes several components and directives, including `igxInputGroupComponent`, `igxCalendar` and `igxOverlay`. Any global styling for the aforementioned components and directives will affect the `igxDateRangeComponent`. As the Date Range Picker Component uses the input group and calendar themes, we have to create new themes that extend the [`igx-calendar-theme`]({environment:sassApiUrl}/index.html#function-igx-calendar-theme) and [`igx-input-group-theme`]({environment:sassApiUrl}/index.html#function-igx-input-group-theme) and use some of their parameters to style the date range picker in conjunction with the date range picker theme. We will use a single custom color palette to define the colors to use across all themes:
 

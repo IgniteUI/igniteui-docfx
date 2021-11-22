@@ -1,5 +1,5 @@
 ---
-title: Angular Date Picker | Date Picker | Infragistics
+title: Angular Date Picker Component | Date Picker | Infragistics
 _description: Learn how to use a functionality to select a date from a calendar to your web application with Ignite UI for Angular Date Picker control.
 _keywords: angular date picker, angular component, ignite ui for angular
 ---
@@ -24,20 +24,13 @@ To get started with the Date Picker component, first you need to import the `Igx
 > As the picker uses the [**IgxCalendarComponent**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html), it is also dependent on the **BrowserAnimationsModule** and on the **HammerModule** for touch interactions, so they need to be added to the module as well:
 
 ```typescript
-...
-import { HammerModule } from "@angular/platform-browser";
+import { HammerModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IgxDatePickerModule } from 'igniteui-angular';
 
 @NgModule({
     ...
-    imports: [
-        ...,
-        IgxDatePickerModule,
-        BrowserAnimationsModule,
-        HammerModule,
-        ...
-    ],
+    imports: [..., IgxDatePickerModule, BrowserAnimationsModule, HammerModule],
     ...
 })
 export class AppModule {}
@@ -253,8 +246,11 @@ Here is how a date picker with Japanese locale definition would look like:
 To get started with styling the date picker, we need to import the `index` file, where all the theme functions and component mixins live:
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
-```
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
 
 The date picker uses the calendar's theme, so we have to create a new theme that extends the [`igx-calendar-theme`]({environment:sassApiUrl}/index.html#function-igx-calendar-theme) and use some of its parameters to style the date picker's items:
 

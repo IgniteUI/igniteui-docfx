@@ -19,6 +19,7 @@ Ignite UI for Angular カテゴリ棒チャートは、複数のデータ ソー
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-bar-chart-multiple-sources"
+           github-src="charts/data-chart/bar-chart-multiple-sources"
            alt="Angular 複数ソースの棒チャート" >
 </code-view>
 
@@ -81,6 +82,7 @@ Angular 棒チャートには、データまたはデータを使用して正し
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-bar-chart-single-source"
+           github-src="charts/data-chart/bar-chart-single-source"
            alt="Angular 単一シリーズの Angular 棒チャート" >
 </code-view>
 
@@ -93,6 +95,7 @@ Angular 棒チャートには、データまたはデータを使用して正し
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-bar-chart-multiple-sources"
+           github-src="charts/data-chart/bar-chart-multiple-sources"
            alt="Angular 複数シリーズの Angular 棒チャート" >
 </code-view>
 
@@ -105,6 +108,7 @@ Angular 棒チャートには、データまたはデータを使用して正し
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-bar-chart-styling"
+           github-src="charts/data-chart/bar-chart-styling"
            alt="Angular 棒チャートのスタイル設定" >
 </code-view>
 
@@ -121,6 +125,7 @@ Angular 棒チャートには、データまたはデータを使用して正し
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-stacked-bar-chart"
+           github-src="charts/data-chart/stacked-bar-chart"
            alt="Angular 積層型棒チャート" >
 </code-view>
 
@@ -135,6 +140,7 @@ Angular 積層型 100% 棒チャートは、X 軸 (チャートの下のラベ�
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-stacked-100-bar-chart"
+           github-src="charts/data-chart/stacked-100-bar-chart"
            alt="Angular 積層型 100 棒チャート" >
 </code-view>
 

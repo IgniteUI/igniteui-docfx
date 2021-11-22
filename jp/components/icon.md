@@ -106,7 +106,7 @@ constructor(private iconService: IgxIconService) { }
 
 public ngOnInit() {
     // register custom SVG icons
-    this.iconService.addSvgIcon("contains", "/assets/images/svg/contains.svg", "filter-icons");
+    this.iconService.addSvgIcon('contains', '/assets/images/svg/contains.svg', 'filter-icons');
 }
 ```
 

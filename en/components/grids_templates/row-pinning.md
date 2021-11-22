@@ -59,7 +59,7 @@ The built-in row pinning UI is enabled by adding an `igxActionStrip` component w
 @@if (igxName === 'IgxGrid') {
 
 ```html
-<igx-grid #grid [data]="data">
+<igx-grid [data]="data" [autoGenerate]="false">
     <igx-column *ngFor="let c of columns" [field]="c.field" [header]="c.field">
     </igx-column>
 
@@ -73,7 +73,7 @@ The built-in row pinning UI is enabled by adding an `igxActionStrip` component w
 
 @@if (igxName === 'IgxTreeGrid') {
 ```html
-<igx-tree-grid #treeGrid [data]="data">
+<igx-tree-grid [data]="data" [autoGenerate]="false">
     <igx-column *ngFor="let c of columns" [field]="c.field" [header]="c.field">
     </igx-column>
 
@@ -87,7 +87,7 @@ The built-in row pinning UI is enabled by adding an `igxActionStrip` component w
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid #hierarchicalGrid [data]="data">
+<igx-hierarchical-grid [data]="data" [autoGenerate]="false">
     <igx-column *ngFor="let c of columns" [field]="c.field" [header]="c.field">
     </igx-column>
 
@@ -124,20 +124,20 @@ You may also use the @@igComponent's [`pinRow`]({environment:angularApiUrl}/clas
 
 @@if (igxName === 'IgxGrid') {
 ```typescript
-this.grid.pinRow("ALFKI");
-this.grid.unpinRow("ALFKI");
+this.grid.pinRow('ALFKI');
+this.grid.unpinRow('ALFKI');
 ```
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```typescript
-this.treeGrid.pinRow("ALFKI");
-this.treeGrid.unpinRow("ALFKI");
+this.treeGrid.pinRow('ALFKI');
+this.treeGrid.unpinRow('ALFKI');
 ```
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```typescript
-this.hierarchicalGrid.pinRow("ALFKI");
-this.hierarchicalGrid.unpinRow("ALFKI");
+this.hierarchicalGrid.pinRow('ALFKI');
+this.hierarchicalGrid.unpinRow('ALFKI');
 ```
 }
 
@@ -222,7 +222,7 @@ This can be done by adding an extra column with a cell template containing the c
 @@if (igxName === 'IgxGrid') {
 
 ```html
-<igx-grid #grid [data]="data" [primaryKey]="'ID'">
+<igx-grid [data]="data" [primaryKey]="'ID'" [autoGenerate]="false">
     <igx-column width="70px">
         <ng-template igxCell let-cell="cell" let-val>
             <igx-icon class="pin-icon" (mousedown)="togglePinning(cell.row, $event)">
@@ -240,7 +240,7 @@ This can be done by adding an extra column with a cell template containing the c
 @@if (igxName === 'IgxTreeGrid') {
 
 ```html
-<igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID">
+<igx-tree-grid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="false">
     <igx-column width="70px">
         <ng-template igxCell let-cell="cell" let-val>
             <igx-icon class="pin-icon" (mousedown)="togglePinning(cell.row, $event)">
@@ -258,8 +258,8 @@ This can be done by adding an extra column with a cell template containing the c
 @@if (igxName === 'IgxHierarchicalGrid') {
 
 ```html
-<igx-hierarchical-grid [data]="localdata">
-     <igx-column width='70px' [filterable]='false'>
+<igx-hierarchical-grid [data]="localdata" [autoGenerate]="false">
+    <igx-column width='70px' [filterable]='false'>
         <ng-template igxCell let-cell="cell" let-val>
             <igx-icon class="pin-icon" (mousedown)="togglePinning(cell.row, $event)">
                 {{cell.row.pinned ? 'lock' : 'lock_open'}}
@@ -277,7 +277,7 @@ This can be done by adding an extra column with a cell template containing the c
 On click of the custom icon the pin state of the related row can be changed using the row's API methods.
 
 ```typescript
-public togglePinning(row: IgxGridRowComponent, event) {
+public togglePinning(row: IgxGridRow, event) {
     event.preventDefault();
     if (row.pinned) {
         row.unpin();
@@ -401,8 +401,11 @@ Below, we are going through the steps of customizing the @@igComponent's row pin
 To begin the customization of the row pinning feature, you need to import the `index` file, where all styling functions and mixins are located.
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index'
-```
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
 
 ### Defining a Theme
 

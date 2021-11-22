@@ -17,6 +17,7 @@ The Ignite UI for Angular ドーナツ チャートは[円チャート](pie-char
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/doughnut-chart-legend"
+           github-src="charts/doughnut-chart/legend"
            alt="Angular ドーナツ チャートの凡例" >
 </code-view>
 
@@ -68,6 +69,7 @@ Angular ドーナツ チャートには、クリック時にスライスを選�
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/doughnut-chart-selection"
+           github-src="charts/doughnut-chart/selection"
            alt="Angular ドーナツ スライスの選択" >
 </code-view>
 
@@ -80,6 +82,7 @@ Angular ドーナツ チャートに複数の輪を表示して、各輪を異�
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/doughnut-chart-rings"
+           github-src="charts/doughnut-chart/rings"
            alt="Angular ドーナツ チャート複数のリング" >
 </code-view>
 

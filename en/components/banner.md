@@ -1,5 +1,5 @@
 ---
-title: Banner Component
+title: Angular Banner Component – Ignite UI for Angular | Infragistics
 _description: Easily integrate a short, non-intrusive message (along with optional actions) using Ignite UI for Angular Banner component.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Banner component, Angular Banner control
 ---
@@ -228,9 +228,11 @@ Finally, we will add a `toast`, displaying a message about the WiFi state. The r
 First, in order to use the functions exposed by the theme engine, we need to import the index file in our style file: 
 
 ```scss
-// in styles.scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
-```
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
 
 Following the simplest approach, we create a new theme that extends the [`igx-banner-theme`]({environment:sassApiUrl}/index.html#function-igx-banner-theme) and accepts the `$banner-message-color`, `$banner-background` and the `$banner-illustration-color` parameters.
 

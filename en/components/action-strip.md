@@ -1,5 +1,5 @@
 ---
-title: Action Strip
+title: Angular Action Strip Component – Ignite UI for Angular | Infragistics
 _description: The Action Strip represents a template area for one or more actions. The Action Strip requires to be inside a relative container, as it is going to overlay it.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular ActionStrip components, Angular ActionStrip directives, Angular ActionStrip controls
 ---
@@ -99,13 +99,17 @@ This can be utilized via grid action components and we are providing two default
            iframe-src="{environment:demosBaseUrl}/grid/grid-action-strip" >
 </code-view>
 
+>Note: More information about how to use ActionStrip in the grid component could be found [here](/components/grid/action-strip.html).
 
 ## Styling
 
 To customize the Action Strip, you first need to import the `index` file, where all styling functions and mixins are located.
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index'
-```
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
 Next, we have to create a new theme that extends the `igx-action-strip-theme` and pass the parameters which we'd like to change:
 ```scss
 $custom-strip: igx-action-strip-theme(

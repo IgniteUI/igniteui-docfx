@@ -109,10 +109,10 @@ As you can see in the sample, we specify a different format options in order to 
 ```ts
 // Time format with equivalent example
 public timeFormats = [
-    { format: "shortTime", eq: "'h:mm a'" },
-    { format: "mediumTime", eq: "'h:mm:ss a'"},
-    { format: "longTime", eq: "'h:mm:ss a z'"},
-    { format: "fullTime", eq: "'h:mm:ss a zzzz'"},
+    { format: 'shortTime', eq: 'h:mm a' },
+    { format: 'mediumTime', eq: 'h:mm:ss a' },
+    { format: 'longTime', eq: 'h:mm:ss a z' },
+    { format: 'fullTime', eq: 'h:mm:ss a zzzz' },
 ];
 ```
 
@@ -257,12 +257,11 @@ public formatCurrency(value: number) {
 
 init(column: IgxColumnComponent, template) {
 switch (column.field) {
-    ...
-    case "Open Price":
-    column.formatter = this.formatCurrency;
-    break;
+    case 'Open Price':
+        column.formatter = this.formatCurrency;
+        break;
     default:
-    return;
+        return;
 }
 ```
 
