@@ -76,7 +76,7 @@ The predefined `actions` and `title` UI components are added inside the `<igx-gr
 ```html
 <igx-tree-grid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="true">
     <igx-grid-toolbar>
-        <igx-grid-toolbar-title>Grid Toolbar</igx-grid-toolbar-title>
+        <igx-grid-toolbar-title>Tree Grid Toolbar</igx-grid-toolbar-title>
         <igx-grid-toolbar-actions>
             <igx-grid-toolbar-advanced-filtering><igx-grid-toolbar-advanced-filtering>
             <igx-grid-toolbar-hiding></igx-grid-toolbar-hiding>
@@ -91,7 +91,7 @@ The predefined `actions` and `title` UI components are added inside the `<igx-gr
 ```html
 <igx-hierarchical-grid [data]="data">
     <igx-grid-toolbar>
-        <igx-grid-toolbar-title>Grid Toolbar</igx-grid-toolbar-title>
+        <igx-grid-toolbar-title>Hierarchical Grid Toolbar</igx-grid-toolbar-title>
         <igx-grid-toolbar-actions>
             <igx-grid-toolbar-advanced-filtering><igx-grid-toolbar-advanced-filtering>
             <igx-grid-toolbar-hiding></igx-grid-toolbar-hiding>
@@ -409,9 +409,7 @@ configureExport(args: IGridToolbarExportEventArgs) {
 
 デフォルトのツールバー エクスポーター コンポーネントを使用する場合、エクスポート操作が行われると、操作の進行中にツールバーに進行状況インジケーターが表示されます。
 さらに、ユーザーはツールバーの [showProgress]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html#showprogress) プロパティを設定して、自分の長時間実行操作に使用するか、グリッドで実行されている操作を示す別の方法として使用できます。
-
 以下のサンプルでは、progressbar が表示されるようにデータのエクスポートに必要な時間を増やすために、大量のデータを使用しています。さらに、グリッドで長時間実行される操作をシミュレートする別のボタンがあります。
-
 
 @@if (igxName === 'IgxGrid') {
 
@@ -504,8 +502,10 @@ configureExport(args: IGridToolbarExportEventArgs) {
 ツールバーのスタイル設定を始めるには、すべてのテーマ関数とコンポーネント ミックスインが存在する index ファイルをインポートする必要があります。
 
 ```scss
-// custom-grid-paging-style.component.scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
 まず、新しいパレットを作成します。
