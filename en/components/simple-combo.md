@@ -15,7 +15,7 @@ In this Angular Simple ComboBox example, you can see how users can select the ch
 
 <div class="divider--half"></div>
 
-<code-view style="height: 400px;"
+<code-view style="height: 500px;"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/simple-combo-main" alt="Angular Simple ComboBox Example">
 </code-view>
@@ -106,7 +106,7 @@ export class MySimpleComboComponent implements OnInit {
 ```
 
 
-<code-view style="height: 550px;"
+<code-view style="height: 480px;"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/simple-combo-usage" >
 </code-view>
@@ -204,7 +204,7 @@ When the simple combobox is opened and allow custom values are enabled, and add 
 The following sample demonstrates a scenario where the [igx-simple-combo]({environment:angularApiUrl}/classes/igxsimplecombocomponent.html) is used:
 
 
-<code-view style="height: 540px;"
+<code-view style="height: 620px;"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/simple-combo-cascading" alt="Angular Cascading Scenario Example">
 </code-view>
@@ -326,7 +326,7 @@ The last step is to include the component's theme.
 
 ### Demo
 
-<code-view style="height:410px"
+<code-view style="height:500px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/simple-combo-styling" >
 </code-view>
