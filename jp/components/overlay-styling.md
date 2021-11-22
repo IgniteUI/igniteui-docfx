@@ -26,9 +26,11 @@ _language: ja
 ```
 
 ```scss
-// styles.scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
-...
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
 
 $my-drop-down-theme: igx-drop-down-theme(
     $palette: $my-custom-palette

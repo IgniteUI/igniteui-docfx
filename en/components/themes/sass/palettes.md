@@ -16,9 +16,6 @@ To get started with your first color palette, create an _scss_ file that would b
 ```scss
 // _variables.scss
 
-// Import the IgniteUI themes library first
-@import '~igniteui-angular/lib/core/styles/themes/index';
-
 $melon-palette: igx-palette(
     $primary: #2ab759,
     $secondary: #f96a88,
@@ -163,15 +160,14 @@ $default-palette: $my-palette;
 In your main styles file:
 ```scss
 // src/styles/styles.scss
-@import '~igniteui-angular/src/lib/core/styles/themes/index';
-@import 'variables';
+@use 'variables' as *;
 
 @include igx-theme($palette: $my-palette);
 ```
 
 In a component `.scss` file:
 ```scss
-@import '../styles/styles/variables';
+@use '../styles/styles/variables' as *;
 
 :host {
   background: igx-color($variant: 900);
