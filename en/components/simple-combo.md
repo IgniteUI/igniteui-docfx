@@ -15,7 +15,7 @@ In this Angular Simple ComboBox example, you can see how users can select the ch
 
 <div class="divider--half"></div>
 
-<code-view style="height: 400px;"
+<code-view style="height: 500px;"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/simple-combo-main" alt="Angular Simple ComboBox Example">
 </code-view>
@@ -53,10 +53,10 @@ Then, in the template, you should bind the [igx-simple-combo]({environment:angul
 
 ```typescript
 export class MySimpleComboComponent implements OnInit {
-    public cities: { name: string, id: string }[] = [];
+    public cities: City[];
 
     public ngOnInit() {
-        this.cities = [{ name: 'London', id: 'UK01' }, { name: 'New York', id: 'US01' }, ...];
+        this.cities = getCitiesByPopulation(10000000);
     }
 }
 ```
@@ -87,22 +87,26 @@ In our case, we want the simple combobox to display the `name` of each city and 
 
 The simple combobox component fully supports two-way data-binding with `[(ngModel)]` as well as usage in [template driven](https://angular.io/guide/forms) and [reactive](https://angular.io/guide/reactive-forms) forms. The simple combobox selection can be accessed either through two-way binding or through the [selection API](#selection-api). We can pass in an item of the same type as the ones in the simple combobox's selection (based on `valueKey`) and any time one changes, the other is updated accordingly.
 
-In the following example, the Sofia city will initially be selected. Any further changes in the simple combobox's selection will reflect on the `selectedCities`.
+In the following example, the first city in the provided data will initially be selected. Any further changes in the simple combobox's selection will reflect on the `selectedCities`.
 
 ```html
 <igx-simple-combo [data]="cities" [(ngModel)]="selectedCity" [displayKey]="'name'" [valueKey]="'id'"></igx-simple-combo>
 ```
 
 ```typescript
-export class MySimpleComboComponent {
-    public cities: { name: string, id: string }[] = [
-                   { name: 'Sofia', id: 'BG01' }, { name: 'London', id: 'UK01' }, ...];
-    public selectedCity: string = 'BG01';
+export class MySimpleComboComponent implements OnInit {
+    public cities: City[];
+    public selectedCity: number;
+
+    public ngOnInit(): void {
+        this.cities = getCitiesByPopulation(10000000);
+        this.selectedCity = this.cities[0].id;
+    }
 }
 ```
 
 
-<code-view style="height: 550px;"
+<code-view style="height: 480px;"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/simple-combo-usage" >
 </code-view>
@@ -112,9 +116,9 @@ Two-way binding can also be achieved without a specified `valueKey`. For example
 
 ```typescript
 export class MySimpleComboComponent {
-    public cities: { name: string, id: string }[] = [
-                   { name: 'Sofia', id: 'BG01' }, { name: 'London', id: 'UK01' }, ...];
-    public selectedCity: { name: string, id: string } = this.cities[0];
+    public cities: City[] = [
+                   { name: 'Sofia', id: '1' }, { name: 'London', id: '2' }, ...];
+    public selectedCity: City = this.cities[0];
 }
 ```
 
@@ -149,7 +153,7 @@ export class MySimpleComboComponent {
     public simpleCombo: IgxSimpleComboComponent;
     ...
     selectFavorites(): void {
-        this.simpleCombo.select('UK01');
+        this.simpleCombo.select('2');
     }
 }
 ```
@@ -200,7 +204,7 @@ When the simple combobox is opened and allow custom values are enabled, and add 
 The following sample demonstrates a scenario where the [igx-simple-combo]({environment:angularApiUrl}/classes/igxsimplecombocomponent.html) is used:
 
 
-<code-view style="height: 540px;"
+<code-view style="height: 620px;"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/simple-combo-cascading" alt="Angular Cascading Scenario Example">
 </code-view>
@@ -212,29 +216,32 @@ The API of the simple combobox is used to get the selected item from one compone
 
 ```html
 <igx-simple-combo #country
-    (selectionChanging)="countryChanging($event)"
-    [(ngModel)]="selectedCountry"
     [data]="countriesData"
-    [displayKey]="'name'"></igx-simple-combo>
-<igx-simple-combo #province
-    (selectionChanging)="provinceChanging($event)"
-    [disabled]="regionData.length === 0"
-    [(ngModel)]="selectedRegion"
-    [data]="regionData"
+    (selectionChanging)="countryChanging($event)"
+    placeholder="Choose Country..."
+    [(ngModel)]="selectedCountry"
     [displayKey]="'name'">
 </igx-simple-combo>
+<igx-simple-combo #region
+    [data]="regionData"
+    (selectionChanging)="regionChanging($event)"
+    placeholder="Choose Region..."
+    [(ngModel)]="selectedRegion"
+    [displayKey]="'name'"
+    [disabled]="regionData.length === 0">
+</igx-simple-combo>
 <igx-simple-combo #city
-    placeholder="Choose City..."
-    [disabled]="citiesData.length === 0"
-    [(ngModel)]="selectedCity"
     [data]="citiesData"
-    [displayKey]="'name'">
+    placeholder="Choose City..."
+    [(ngModel)]="selectedCity"
+    [displayKey]="'name'"
+    [disabled]="citiesData.length === 0">
 </igx-simple-combo>
 ```
 
 ### Component Definition
 ```typescript
-export class SimpleComboCascadingComponent implements core.OnInit {
+export class SimpleComboCascadingComponent implements OnInit {
     public selectedCountry: Country;
     public selectedRegion: Region;
     public selectedCity: City;
@@ -242,24 +249,23 @@ export class SimpleComboCascadingComponent implements core.OnInit {
     public regionData: Region[] = [];
     public citiesData: City[] = [];
     public ngOnInit(): void {
-        this.countriesData = cities;
+        this.countriesData = getCountries(['United States', 'Japan', 'United Kingdom']);
     }
 
     public countryChanging(e: ISimpleComboSelectionChangingEventArgs) {
         this.selectedCountry = e.newSelection as Country;
-        this.regionData = cities
-            .filter(c => c.country === this.selectedCountry?.name)
+        this.regionData = getCitiesByCountry([this.selectedCountry?.name])
             .map(c => ({name: c.region, country: c.country}))
             .filter((v, i, a) => a.findIndex(r => r.name === v.name) === i);
-            this.selectedRegion = null;
-            this.selectedCity = null;
-            this.citiesData = [];
+        this.selectedRegion = null;
+        this.selectedCity = null;
+        this.citiesData = [];
     }
 
-    public provinceChanging(e: ISimpleComboSelectionChangingEventArgs) {
+    public regionChanging(e: ISimpleComboSelectionChangingEventArgs) {
         this.selectedRegion = e.newSelection as Region;
-        this.citiesData = cities
-            .filter(c => c.country === this.selectedRegion?.country && c.region === this.selectedRegion?.name);
+        this.citiesData = getCitiesByCountry([this.selectedCountry?.name])
+            .filter(c => c.region === this.selectedRegion?.name);
         this.selectedCity = null;
     }
 }
@@ -271,10 +277,10 @@ export class SimpleComboCascadingComponent implements core.OnInit {
 Using the [Ignite UI for Angular Theming](themes/index.md), we can greatly alter the simple combobox appearance. First, in order for us to use the functions exposed by the theme engine, we need to import the `index` file in our style file:
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
+@use 'igniteui-angular/theming' as *;
 ```
 
-Following the simplest approach, we create a new theme that extends the [igx-combo-theme]({environment:sassApiUrl}/index.html#function-igx-combo-theme) and accepts the `$search-separator-border-color` parameter:
+Following the simplest approach, we create a new theme that extends the [igx-combo-theme]({environment:sassApiUrl}/index.html#function-igx-combo-theme) and accepts the `$empty-list-background` parameter:
 ```scss
 $custom-simple-combo-theme: igx-combo-theme(
     $empty-list-background: #1a5214
@@ -306,7 +312,7 @@ $custom-drop-down-theme: igx-drop-down-theme(
 The last step is to include the component's theme.
 
 ```scss
-:host {
+:host ::ng-deep {
     @include igx-css-vars($custom-combo-theme);
     @include igx-css-vars($custom-drop-down-theme);
 }
@@ -320,7 +326,7 @@ The last step is to include the component's theme.
 
 ### Demo
 
-<code-view style="height:410px"
+<code-view style="height:500px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/simple-combo-styling" >
 </code-view>
