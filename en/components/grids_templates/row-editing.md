@@ -316,9 +316,11 @@ The easiest way to style the Row Editing banner is to define styles in our `app`
 The first thing we need to do is import the `themes/index` file - this gives us access to all the powerful tools of the Ignite UI for Angular Sass framework:
 
 ```scss
-// in styles.scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
-```
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
 
 Once we've imported the themes file, we can create custom themes.
 

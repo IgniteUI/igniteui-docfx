@@ -463,8 +463,11 @@ If all went well, this is how our column hiding UI component should look like:
 To get started with styling the column actions component, we need to import the index file, where all the theme functions and component mixins live:
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
-```
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
 
 By using the simplest approach, we create a new theme that extends the [`igx-column-actions-theme`]({environment:sassApiUrl}/index.html#function-igx-column-actions-theme) and accepts the `$title-color` and the `$background-color` parameters.
 

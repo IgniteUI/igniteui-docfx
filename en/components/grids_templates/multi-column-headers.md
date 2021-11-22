@@ -261,7 +261,10 @@ The following sample demonstrates how to implement collapsible column groups usi
 To get started with styling the sorting behavior, we need to import the `index` file, where all the theme functions and component mixins live:
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
 Following the simplest approach, we create a new theme that extends the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) and accepts the `$header-background`, `$header-text-color`, `$header-border-width`, `$header-border-style` and `$header-border-color` parameters.
