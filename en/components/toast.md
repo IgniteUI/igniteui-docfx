@@ -174,8 +174,11 @@ Users can also provide a specific outlet where the toast will be placed in the D
 To get started with styling the toast, we need to import the index file, where all the theme functions and component mixins live:
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
-```
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
 
 Following the simplest approach, we create a new theme that extends the [`igx-toast-theme`]({environment:sassApiUrl}/index.html#function-igx-toast-theme) and accepts the `$shadow`, `$background`, `$text-color` and the `$border-radius` parameters.
 

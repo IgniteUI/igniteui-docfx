@@ -105,8 +105,11 @@ This can be utilized via grid action components and we are providing two default
 
 To customize the Action Strip, you first need to import the `index` file, where all styling functions and mixins are located.
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index'
-```
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
 Next, we have to create a new theme that extends the `igx-action-strip-theme` and pass the parameters which we'd like to change:
 ```scss
 $custom-strip: igx-action-strip-theme(

@@ -174,10 +174,12 @@ public onColumnMovingEnd(event) {
 
 To get started with styling the @@igComponent column moving headers, we need to import the `index` file, where all the theme functions and component mixins live:
 
- ```scss
-// custom-grid-column-moving-style.component.scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
- ``` 
+```scss
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
 
 Following the simplest approach, we create a new theme that extends the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) and accepts the `$ghost-header-background`, `$ghost-header-text-color` and the `$ghost-header-icon-color` parameters.
 

@@ -152,7 +152,10 @@ Keyboard navigation is available by default in the splitter component. When you 
 To get started with styling the **igxSplitter** component, you need to import the `index` file, where all the theme functions and component mixins live:
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
 You can change the default styles of the splitter by creating a new theme that extends the [`igx-splitter-theme`]({environment:sassApiUrl}/index.html#function-igx-splitter-theme).
