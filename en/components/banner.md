@@ -228,9 +228,11 @@ Finally, we will add a `toast`, displaying a message about the WiFi state. The r
 First, in order to use the functions exposed by the theme engine, we need to import the index file in our style file: 
 
 ```scss
-// in styles.scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
-```
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
 
 Following the simplest approach, we create a new theme that extends the [`igx-banner-theme`]({environment:sassApiUrl}/index.html#function-igx-banner-theme) and accepts the `$banner-message-color`, `$banner-background` and the `$banner-illustration-color` parameters.
 

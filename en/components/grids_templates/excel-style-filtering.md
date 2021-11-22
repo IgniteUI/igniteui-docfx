@@ -523,8 +523,11 @@ However, elements that go outside of the grid (e.g. Excel Style filter) will con
 To get started with styling the Excel Style Filtering dialog, we need to import the `index` file, where all the theme functions and component mixins live:
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
-```
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
 
 The excel style filtering dialog takes its background color from the grid's theme, using the `filtering-row-background` parameter. In order to change the background we need to create a custom theme:
 

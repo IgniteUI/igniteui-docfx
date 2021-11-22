@@ -223,8 +223,11 @@ If we want to provide a custom content for a navbar's title, we can achieve this
 To get started with styling the navbar, we need to import the `index` file, where all the theme functions and component mixins live:
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
-```
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
 
 Following the simplest approach, we create a new theme that extends the [`igx-navbar-theme`]({environment:sassApiUrl}/index.html#function-igx-navbar-theme) and accepts the `$text-color`, `$background`, `$idle-icon-color` and the `$hover-icon-color` parameters.
 
