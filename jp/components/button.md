@@ -108,7 +108,7 @@ export class AppModule {}
 ```
 
 >[!NOTE]
->拡張 FAB テキストを適切にスタイルするには、`<span>`、`<div>` または `<p>` タグを使用します。
+>拡張 FAB テキストを適切にスタイルするには、`<span>` または `<div>` タグを使用します。
 
 <div class="sample-container loading" style="height: 100px">
     <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-6">
@@ -220,7 +220,7 @@ public selectDensity(event) {
 
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-```
+``` 
 
 次に、[`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) を拡張し、それぞれのホバーとフォーカス パラメーターと共に `$foreground` と `$background` パラメーターを受け入れる新しいテーマを作成します。
 
