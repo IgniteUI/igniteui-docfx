@@ -401,8 +401,11 @@ Below, we are going through the steps of customizing the @@igComponent's row pin
 To begin the customization of the row pinning feature, you need to import the `index` file, where all styling functions and mixins are located.
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index'
-```
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
 
 ### Defining a Theme
 

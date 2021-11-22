@@ -40,8 +40,11 @@ To generate a global theme we're going to be including two mixins `igx-core` and
 Let's create a custom global theme that will use the primary and secondary colors of our company.
 
 ```scss
-// Import the Ignite UI theming library first
-@import '~igniteui-angular/lib/core/styles/themes/index';
+// Import the theming module
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
 
 $primary-color: #2ab759;
 $secondary-color: #f96a88;
@@ -135,8 +138,11 @@ The table below shows all the built-in themes that you can use right away.
 All theme mixins can be used as a starting point to create your own theme. Let's create a new theme by using the `igx-bootstrap-light-theme` mixin.
 
 ```scss
-// Import the IgniteUI themes library first
-@import '~igniteui-angular/lib/core/styles/themes/index';
+// Import the theming module
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
 
 $primary-color: #b71053;
 $secondary-color: #6c757d; 
@@ -155,9 +161,9 @@ $my-color-palette: igx-palette(
 ## Browser Support
 <div class="divider--half"></div>
 
-The value of `$igx-legacy-support` is quite important as it determines how component themes work. When its value is set to `true`, individual component style rules will have their values set at build time to the hard-coded values defined in their theme. If you set the value of `$igx-legacy-support` to `false`, however, style rules will look for values from CSS variables defined at the `:root` scope, or the nearest block scope.
+Prior to Ignite UI for Angular 13, the value of `$igx-legacy-support` is quite important as it determines how component themes work. When its value is set to `true`, individual component style rules will have their values set at build time to the hard-coded values defined in their theme. If you set the value of `$igx-legacy-support` to `false`, however, style rules will look for values from CSS variables defined at the `:root` scope, or the nearest block scope.
 
-The general rule of thumb regarding what the value of `$legacy-support` should be dictated by whether you will be including support for Internet Explorer 11 or not. If you want to include support for IE11 set the `$legacy-support` value to `true`, otherwise setting its value to `false` (default) will force CSS variables for theming.
+The general rule of thumb regarding what the value of `$legacy-support` should be dictated by whether you will be including support for Internet Explorer 11 or not. If you want to include support for IE11 set the `$legacy-support` value to `true`, otherwise setting its value to `false` (default) will force CSS variables for theming. Support for IE11 and older browsers was removed in Ignite UI for Angular 13.
 
 ## API Overview
 * [Global Theme]({environment:sassApiUrl}/index.html#mixin-igx-theme)

@@ -88,9 +88,12 @@ To get started with styling components using the Ignite UI theming engine, creat
 
 ```scss
 // _variables.scss
+```scss
+@use "igniteui-angular/theming" as *;
+@use "@angular/material/theming" as *;
 
-@import '~igniteui-angular/lib/core/styles/themes/index';
-@import "~@angular/material/theming";
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
 ### Color Palettes
