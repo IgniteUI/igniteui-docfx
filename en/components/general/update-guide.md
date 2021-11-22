@@ -107,13 +107,21 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
 The theming engine has switched to [Sass modules](https://sass-lang.com/documentation/at-rules/use). This change means all theming library functions(comopnent themes, etc.), mixins(component mixins, etc.), and variables are now being `forwarded` from a single file. To correctly use the Sass theming library, your project should utilize Dart Sass version 1.33.0 or later and change all imports of the theming library from:
 
 ```scss
+// free version
 @import '~igniteui-angular/lib/core/styles/themes/index';
+
+// licensed version
+@import '~@infragistics/igniteui-angular/lib/core/styles/themes/index';
 ```
 
 to:
 
 ```scss
+// free version
 @use 'igniteui-angular/theming' as *;
+
+// licensed version:
+@use '@infragistics/igniteui-angular/theming' as *;
 ```
 
 If you want to import the entire theming library only once and then use it in other Sass files in your app, make sure to do forward it. Imported Sass files are not going to be automatically forwarded.
@@ -122,7 +130,11 @@ Before:
 
 ```scss
 // _variables.scss
+// free version
 @import '~igniteui-angular/lib/core/styles/themes/index';
+
+// licensed version
+@import '~@infragistics/igniteui-angular/lib/core/styles/themes/index';
 
 // _other-file.scss
 @import 'variables';
@@ -132,8 +144,13 @@ After:
 
 ```scss
 // _variables.scss
+// free versioin
 @use 'igniteui-angular/theming' as *;
 @forward 'igniteui-angular/theming';
+
+// licensed version
+@use '@infragistics/igniteui-angular/theming' as *;
+@forward '@infragistics/igniteui-angular/theming';
 
 
 // _other-file.scss
