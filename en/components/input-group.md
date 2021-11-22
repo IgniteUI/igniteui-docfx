@@ -127,8 +127,11 @@ The input group component supports several themes - `material`, `fluent`, `boots
 The first thing we need to do, in order to get started with the input group styling, is to include the `index` file in our style file:
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
-```
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
 
 Next, we have to create a new theme that extends the [`igx-input-group-theme`]({environment:sassApiUrl}/index.html#function-igx-input-group-theme) and pass the parameters which we'd like to change:
 

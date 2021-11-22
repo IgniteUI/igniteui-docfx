@@ -86,13 +86,14 @@ For prefixing **grid layouts** however, you need to enable the [Autoprefixer](ht
 To facilitate your work, apply the comment in the `src/styles.scss` file.
 
  ```scss
- // src/styles.scss
-    @import '~igniteui-angular/lib/core/styles/themes/index';
-    @include igx-core();
-    @include igx-theme($default-palette);
+// src/styles.scss
+@use "igniteui-angular/theming" as *;
 
-    /* autoprefixer grid:on */
- ...
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+@include igx-core();
+/* autoprefixer grid:on */
+@include igx-theme($default-palette);
  ```
 
 ## Editable Grid Angular
