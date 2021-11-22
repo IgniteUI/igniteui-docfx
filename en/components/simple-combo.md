@@ -277,7 +277,7 @@ export class SimpleComboCascadingComponent implements OnInit {
 Using the [Ignite UI for Angular Theming](themes/index.md), we can greatly alter the simple combobox appearance. First, in order for us to use the functions exposed by the theme engine, we need to import the `index` file in our style file:
 
 ```scss
-@use '~igniteui-angular/lib/core/styles/themes/index' as *;
+@use 'igniteui-angular/theming' as *;
 ```
 
 Following the simplest approach, we create a new theme that extends the [igx-combo-theme]({environment:sassApiUrl}/index.html#function-igx-combo-theme) and accepts the `$empty-list-background` parameter:
