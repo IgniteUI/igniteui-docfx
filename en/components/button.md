@@ -108,7 +108,7 @@ To create an extended FAB, you can add any element prior to the `igx-icon`:
 ```
 
 >[!NOTE]
->To get the extended FAB text styled properly, use `<span>`, `<div>` or `<p>` tags.
+>To get the extended FAB text styled properly, use `<span>` or `<div>` tags.
 
 <div class="sample-container loading" style="height: 100px">
     <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-6">
