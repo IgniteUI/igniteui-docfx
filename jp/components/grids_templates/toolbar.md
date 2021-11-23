@@ -19,12 +19,12 @@ _canonicalLink: grid/toolbar
 
 # UI 操作のための @@igComponent ツールバー コンテナ
 
-The @@igComponent in Ignite UI for Angular provides an [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) which is essentially a container for **UI** operations. The Angular toolbar is located at the top of the Angular component, i.e the @@igComponent and it matches its horizontal size. The toolbar container can host predefined UI controls for the following @@igComponent's features:
+Ignite UI for Angular の @@igComponent は、UI 操作のコンテナとなる [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) 機能をサポートします。Angular ツールバーは Angular コンポーネントの一番上、つまり @@igComponent にあり、水平方向のサイズと一致します。The toolbar container can host predefined UI controls for the following @@igComponent's features:
 
- - Column Hiding
- - Column Pinning
- - Excel Exporting
- - Advanced Filtering
+ - 列の非表示
+ - 列のピン固定
+ - Excel エクスポート
+ - 高度なフィルタリング
 
 or just any other custom content. The toolbar and the predefined UI components support Angular events and expose API for developers.
 
@@ -161,7 +161,7 @@ IgxHierarchicalGrid の子グリッドの実装方法と DI スコープの動�
 
 ## 機能
 
-ツールバーは、グリッド全体に影響を与えるロジック/インタラクションを分離するのに最適です。As shown above, it can be configured to provide default components for controlling, column hiding, column pinning,。これらの機能は、Ignite UI for Angular スイートのカード コンポーネントと同様のパターンに従うことで、互いに独立して有効にできます。
+ツールバーは、グリッド全体に影響を与えるロジック/インタラクションを分離するのに最適です。上記のように、制御、列の非表示、列のピン固定、高度なフィルタリング、およびグリッドからのデータのエクスポートのためのデフォルトのコンポーネントを提供するように構成できます。これらの機能は、Ignite UI for Angular スイートのカード コンポーネントと同様のパターンに従うことで、互いに独立して有効にできます。
 以下にリストされているのは、ツールバーの主な機能と、それぞれのサンプル コードです。
 
 
@@ -250,7 +250,7 @@ constructor() {
 デフォルトの overlaySettings は、*ConnectedPositionStrategy* と *Absolute* スクロール方法を使用しています。モーダルは false に設定されており、[Esc] キーを押して閉じるインタラクションと外側のクリックで閉じるインタラクションが有効になっています。
 
 ### 列のピン固定
-[このコンポーネント]({environment:angularApiUrl}/classes/igxgridtoolbarpinningcomponent.html)は、グリッド内の列のピン固定を操作するためのデフォルトの UI を提供します。
+[Toolbar Pinning コンポーネント]({environment:angularApiUrl}/classes/igxgridtoolbarpinningcomponent.html)は、グリッド内の列のピン固定を操作するためのデフォルトの UI を提供します。
 コンポーネントは、ツールバーを含む親グリッドと、コンポーネントのタイトル、コンポーネント入力のプレースホルダー、ドロップダウン自体の高さなど、UI をカスタマイズするためのいくつかの入力プロパティを使用して、そのまま動作します。
 
 ```html
@@ -268,7 +268,9 @@ constructor() {
 
 
 ### 列の非表示
-ピン固定操作コンポーネントと同様に、[非表示コンポーネント]({environment:angularApiUrl}/classes/igxgridtoolbarhidingcomponent.html)は、列の非表示と対話するためのデフォルトの UI を提供します。
+[Toolbar Hiding コンポーネント]({environment:angularApiUrl}/classes/igxgridtoolbarhidingcomponent.html) provides the default
+UI for interacting with column hiding. Exposes the same input properties for customizing the UI, such as the component
+title, the placeholder for the component input and the height of the dropdown itself.
 
 ```html
 <igx-grid-toolbar>
@@ -284,8 +286,7 @@ constructor() {
 ```
 
 ### 高度なフィルタリング
-グリッドで高度なフィルタリングが有効になっている場合、ユーザーは高度なフィルタリング機能の[デフォルト コンポーネント]({environment:angularApiUrl}/classes/igxgridtoolbaradvancedfilteringcomponent.html)を提供できます。
-コンポーネントは、ボタンのデフォルトのテキストを変更する方法を公開します。
+[Toolbar Advanced Filtering コンポーネント]({environment:angularApiUrl}/classes/igxgridtoolbaradvancedfilteringcomponent.html) provides the default UI for the Advanced Filtering feature. The component exposes a way to change the default text of the button.
 ```html
 <igx-grid-toolbar>
     <igx-grid-toolbar-actions>
@@ -301,7 +302,7 @@ constructor() {
 > 階層グリッドまたは階層下の子グリッドのいずれかをエクスポートすると、エクスポートされるデータは、それぞれのグリッドに属する行のフラット コレクションになります (子グリッドはエクスポートされたデータに含まれません)。
 }
 
-残りのツールバー操作と同様に、エクスポートは、すぐに使用できるツールバー [コンポーネント]({environment:angularApiUrl}/classes/igxgridtoolbarexportercomponent.html)を介して提供されます。
+残りのツールバー操作と同様に、エクスポートは、すぐに使用できる [Toolbar Exporter コンポーネント]({environment:angularApiUrl}/classes/igxgridtoolbarexportercomponent.html)を介して提供されます。
 エクスポート コンポーネントは、ターゲット データ形式 (Excel CSV) のそれぞれのサービスを使用しています。つまり、それぞれのサービスが依存関係挿入チェーンを通じて提供されない場合、コンポーネントは何もエクスポートできません。
 Angular の DI の復習が必要な場合は、[公式ガイド](https://angular.io/guide/dependency-injection)をご覧ください。これは、アプリケーションのすべてのエクスポート サービスを有効にする方法を示すサンプル スニペットです。
 
@@ -383,6 +384,7 @@ configureExport(args: IGridToolbarExportEventArgs) {
     });
 }
 ```
+}
 
 以下のサンプルは、エクスポート ファイルをカスタマイズする方法を示します。
 
@@ -506,7 +508,7 @@ configureExport(args: IGridToolbarExportEventArgs) {
 
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-```
+``` 
 
 まず、新しいパレットを作成します。
 
