@@ -1,4 +1,4 @@
-![Build Status](https://github.com/IgniteUI/igniteui-docfx/actions/workflows/Node.js%20CI/badge.svg)
+![Build Status](https://github.com/IgniteUI/igniteui-docfx/workflows/Node.js%20CI/badge.svg)
 
 # Ignite UI DocFX Site Builder
 
