@@ -13,13 +13,50 @@ _keywords: Changelog, What's New,  Ignite UI for Angular, Infragistics
 > [!NOTE]
 > This file is specific to igniteui-angular-\* packages only. (eg. igniteui-angular-charts)
 >
-> For additional changes, please see [Ignite UI Angular Changes](https://github.com/igniteui/igniteui-angular/blob/master/changelog.md)
+> For additional changes, please see [Ignite UI Angular Changes](https://github.com/igniteui/igniteui-angular/blob/master/CHANGELOG.md)
 
 <!-- end: Angular -->
 
 <div class="divider--half"></div>
 
+
 All notable changes for each version of this project will be documented in this file.
+
+## **13.0.0**
+
+### Charts & Maps
+
+This release introduces a few improvements and simplifications to visual design and configuration options for the geographic map and all chart components.
+
+* Changed `YAxisLabelLocation` property's type to **YAxisLabelLocation** from **AxisLabelLocation** in `FinancialChart` and `CategoryChart`
+* Changed `XAxisLabelLocation` property's type to **XAxisLabelLocation** from **AxisLabelLocation** in `FinancialChart`
+* Added `XAxisLabelLocation` property to `CategoryChart`
+* Added support for representing geographic series of `XamGeographicMap` in a legend
+* Added crosshair lines by default in `FinancialChart` and `CategoryChart`
+* Added crosshair annotations by default in `FinancialChart` and `CategoryChart`
+* Added final value annotation by default in `FinancialChart`
+* Added new properties in Category Chart and Financial Chart:
+   - `CrosshairsLineThickness` and other properties for customizing crosshairs lines
+   - `CrosshairsAnnotationXAxisBackground` and other properties for customizing crosshairs annotations
+   - `FinalValueAnnotationsBackground` and other properties for customizing final value annotations
+   - `AreaFillOpacity` that allow changing opacity of series fill (e.g. Area chart)
+   - `MarkerThickness` that allows changing thickness of markers
+* Added new properties in Category Chart, Financial Chart, Data Chart, and Geographic Map:
+   - `MarkerAutomaticBehavior` that allows which marker type is assigned to multiple series in the same chart
+   - `LegendItemBadgeShape` for setting badge shape of all series represented in a legend
+   - `LegendItemBadgeMode` for setting badge complexity on all series in a legend
+* Added new properties in Series in Data Chart and Geographic Map:
+   - `LegendItemBadgeShape` for setting badge shape on specific series represented in a legend
+   - `LegendItemBadgeMode` for setting badge complexity on specific series in a legend
+* Changed default vertical crosshair line stroke from <span style="color:#000000">#000000</span> to <span style="color:#BBBBBB">#BBBBBB</span> in category chart and series
+* Changed shape of markers to circle for all series plotted in the same chart. This can be reverted by setting chart's `MarkerAutomaticBehavior` property to `SmartIndexed` enum value
+* Simplified shapes of series in chart's legend to display only circle, line, or square. This can be reverted by setting chart's `LegendItemBadgeMode` property to `MatchSeries` enum value
+* Changed color palette of series and markers displayed in all charts to improve accessibility
+
+Old brushes/outlines | New outline/brushes
+-------------------- | -------------------
+<span style="color:#8BDC5C">#8BDC5C</span> <br><span style="color:#8B5BB1">#8B5BB1</span> <br><span style="color:#6DB1FF">#6DB1FF</span> <br><span style="color:#F8A15F">#F8A15F</span> <br><span style="color:#EE5879">#EE5879</span> <br><span style="color:#735656">#735656</span> <br><span style="color:#F7D262">#F7D262</span> <br><span style="color:#8CE7D9">#8CE7D9</span> <br><span style="color:#E051A9">#E051A9</span> <br><span style="color:#A8A8B7">#A8A8B7</span> | <span style="color:#8BDC5C">#8BDC5C</span> <br><span style="color:#8961A9">#8961A9</span> <br><span style="color:#6DB1FF">#6DB1FF</span> <br><span style="color:#82E9D9">#82E9D9</span> <br><span style="color:#EA3C63">#EA3C63</span> <br><span style="color:#735656">#735656</span> <br><span style="color:#F8CE4F">#F8CE4F</span> <br><span style="color:#A8A8B7">#A8A8B7</span> <br><span style="color:#E051A9">#E051A9</span> <br><span style="color:#FF903B">#FF903B</span> <br>
+
 
 ## **11.2.0**
 
