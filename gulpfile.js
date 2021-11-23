@@ -164,8 +164,5 @@ const build = series(
   parallel(generateGridsTopics, generateTreeGridsTopics, generateHierarchicalGridsTopics), 
   buildSite, removeHTMLExtensionFromSiteMap);
 
-const buildTravis = series(generateGridsTopics);
-
-exports.buildTravis = buildTravis;
 exports.build = build;
 exports.serve = series(build, init, watchFiles);
