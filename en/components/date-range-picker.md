@@ -398,7 +398,7 @@ If the component is using the [`Emulated`](themes/sass/component-themes.md#view-
 ```
 
 ### Scoping Styles
-Regarding style scoping, you should refer to both styling sections [Overlay Scoped Component Styles](overlay-styling.md) and [Input Group Scoping Styles](input-group.md#styling) as they provide more information.
+Regarding style scoping, you should refer to both styling sections [Overlay Scoped Component Styles](overlay-styling.md#Scoped Overlay Styles) and [Input Group Scoping Styles](input-group.md#styling) as they provide more information.
 
 
 <code-view style="height:600px"
