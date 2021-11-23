@@ -8,6 +8,7 @@
     "start:jp": "npm start -- --lang jp",
     "start:kr": "npm start -- --lang kr",
     "build": "gulp build",
+    "build-gh-actions": "gulp buildCI",
     "build-staging": "set NODE_ENV=staging && gulp build",
     "build-production": "set NODE_ENV=production && gulp build",
     "test": "echo \"Error: no test specified\" && exit 1"
