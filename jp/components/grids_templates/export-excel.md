@@ -81,9 +81,7 @@ IgniteUI Excel Exporter を使用するには、[`IgxExcelExporterService`]({env
 
 ```typescript
 // app.module.ts
-
-...
-import { IgxExcelExporterService } from "igniteui-angular/services/index";
+import { IgxExcelExporterService } from 'igniteui-angular/services/index';
 
 @NgModule({
   providers: [ IgxExcelExporterService ]
@@ -108,21 +106,17 @@ export class AppModule {}
 
 ```typescript
 // component.ts
+import { IgxExcelExporterService, IgxExcelExporterOptions } from 'igniteui-angular';
+import { @@igxNameComponent } from 'igniteui-angular';
 
-...
-import { IgxExcelExporterService, IgxExcelExporterOptions } from "igniteui-angular";
-import { @@igxNameComponent } from "igniteui-angular";
-...
-
-@ViewChild("@@igObjectRef") public @@igObjectRef: @@igxNameComponent;
+@ViewChild('@@igObjectRef') public @@igObjectRef: @@igxNameComponent;
 
 constructor(private excelExportService: IgxExcelExporterService) {
 }
 
 public exportButtonHandler() {
-  this.excelExportService.export(this.@@igObjectRef, new IgxExcelExporterOptions("ExportedDataFile"));
+  this.excelExportService.export(this.@@igObjectRef, new IgxExcelExporterOptions('ExportedDataFile'));
 }
-
 ```
 
 上記をすべて行うと、@@igxName コンポーネントとその下にボタンを確認できます。ボタンを押すととエクスポート処理をトリガーし、ブラウザーで ExportedDataFile.xlsx ファイルをダウンロードします。このファイルは MS Excel 形式の @@igComponent のデータを含みます。
@@ -133,7 +127,7 @@ public exportButtonHandler() {
 
 ```ts
 public exportButtonHandler() {
-  this.excelExportService.exportData(this.localData, new IgxExcelExporterOptions("ExportedDataFile"));
+  this.excelExportService.exportData(this.localData, new IgxExcelExporterOptions('ExportedDataFile'));
 }
 ```
 
@@ -188,10 +182,10 @@ public exportButtonHandler() {
 
 ```typescript
 public exportButtonHandler() {
-        const exporterOptions = new IgxExcelExporterOptions('ExportedDataFile');
-        exporterOptions.freezeHeaders = true;
-        this.excelExportService.export(this.grid, exporterOptions);
-    }
+    const exporterOptions = new IgxExcelExporterOptions('ExportedDataFile');
+    exporterOptions.freezeHeaders = true;
+    this.excelExportService.export(this.grid, exporterOptions);
+}
 ```
 
 ## エクスポートするコンテンツのカスタマイズ
@@ -204,11 +198,11 @@ public exportButtonHandler() {
 // component.ts
 
 this.excelExportService.columnExporting.subscribe((args: IColumnExportingEventArgs) => {
-  if (args.header == "Age" && args.columnIndex == 1) {
+  if (args.header == 'Age' && args.columnIndex == 1) {
       args.cancel = true;
   }
 });
-this.excelExportService.export(this.@@igObjectRef, new IgxExcelExporterOptions("ExportedDataFile"));
+this.excelExportService.export(this.@@igObjectRef, new IgxExcelExporterOptions('ExportedDataFile'));
 ```
 
 @@igComponent コンポーネントのデータ エクスポートでは、行フィルタリングおよび列の非表示などの機能に応じて @@igComponent で表示されるデータのみをエクスポートします。[`IgxExcelExporterOptions`]({environment:angularApiUrl}/classes/igxexcelexporteroptions.html) オブジェクトのプロパティを設定し、エクスポーター サービスを構成してフィルターした行または非表示の列を含むことができます。

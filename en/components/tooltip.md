@@ -1,5 +1,5 @@
 ---
-title: Tooltip - Native Angular | Ignite UI for Angular
+title: Angular Tooltip Component | Ignite UI for Angular
 _description: The Ignite UI for Angular Tooltip and Tooltip Target directives feature the ability to create a tooltip and attach it to an element.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Tooltip directives, Angular Tooltip controls, Angular Tooltip, tooltip, tooltip target
 ---
@@ -233,8 +233,11 @@ The [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdir
 To get started with styling the tooltip, we need to import the `index` file, where all the theme functions and component mixins live:
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
-```
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
 
 Following the simplest approach, we create a new theme that extends the [`igx-tooltip-theme`]({environment:sassApiUrl}/index.html#function-igx-tooltip-theme) and accepts the `$text-color`, `$background` and the `$border-radius` parameters.
 

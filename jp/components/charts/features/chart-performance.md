@@ -21,6 +21,7 @@ Angular チャートは、数百万のデータ ポイントを描画し、そ�
 <code-view style="height: 400px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-high-frequency"
+           github-src="charts/category-chart/high-frequency"
            alt="高頻度 Angular チャート" >
 </code-view>
 
@@ -33,6 +34,7 @@ Angular チャートは、数百万のデータ ポイントを描画し、そ�
 <code-view style="height: 400px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-high-volume"
+           github-src="charts/category-chart/high-volume"
            alt="大量のデータの Angular チャート" >
 </code-view>
 

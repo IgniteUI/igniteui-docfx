@@ -19,7 +19,14 @@ _canonicalLink: grid/toolbar
 
 # UI 操作のための @@igComponent ツールバー コンテナ
 
-Ignite UI for Angular の @@igComponent は、UI 操作のコンテナとなる [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) 機能をサポートします。Angular ツールバーは Angular コンポーネントの一番上、つまり @@igComponent にあり、水平方向のサイズと一致します。ツールバーのコンテナは、グリッド機能に関連するさまざまな UI コントロール (列の非表示、列ピン固定、エクセル エクスポート、Angular イベントなど) をホストします。
+The @@igComponent in Ignite UI for Angular provides an [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) which is essentially a container for **UI** operations. The Angular toolbar is located at the top of the Angular component, i.e the @@igComponent and it matches its horizontal size. The toolbar container can host predefined UI controls for the following @@igComponent's features:
+
+ - Column Hiding
+ - Column Pinning
+ - Excel Exporting
+ - Advanced Filtering
+
+or just any other custom content. The toolbar and the predefined UI components support Angular events and expose API for developers.
 
 ## Angular ツールバー グリッドの例
 
@@ -48,16 +55,19 @@ Ignite UI for Angular の @@igComponent は、UI 操作のコンテナとなる 
 
 }
 
-@@igComponent タグの間に `igx-grid-toolbar` コンポーネントを挿入することにより、@@igComponent のツールバーを有効にできます。
-ツールバーの追加機能は、デフォルトのツールバー UI コンポーネントを使用するか、独自のコンポーネントを作成することで有効になります。
-デフォルトの UI コンポーネントとそれらを有効にする方法の全般的な概要については、以下の**機能**セクションを読み進めてください。
-以下のコード スニペットは、ツールバーとタイトルを設定する方法を確認できます。
+The predefined `actions` and `title` UI components are added inside the `<igx-grid-toolbar>` and this is all needed to have a toolbar providing default interactions with the corresponding Grid features:
 
 @@if (igxName === 'IgxGrid') {
 ```html
 <igx-grid [data]="data" [autoGenerate]="true">
     <igx-grid-toolbar>
-        <igx-grid-toolbar-title>Grid Title</igx-grid-toolbar-title>
+        <igx-grid-toolbar-title>Grid Toolbar</igx-grid-toolbar-title>
+        <igx-grid-toolbar-actions>
+            <igx-grid-toolbar-advanced-filtering><igx-grid-toolbar-advanced-filtering>
+            <igx-grid-toolbar-hiding></igx-grid-toolbar-hiding>
+            <igx-grid-toolbar-pinning></igx-grid-toolbar-pinning>
+            <igx-grid-toolbar-exporter></igx-grid-toolbar-exporter>
+        </igx-grid-toolbar-actions>
     </igx-grid-toolbar>
 </igx-grid>
 ```
@@ -66,7 +76,13 @@ Ignite UI for Angular の @@igComponent は、UI 操作のコンテナとなる 
 ```html
 <igx-tree-grid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="true">
     <igx-grid-toolbar>
-        <igx-grid-toolbar-title>Tree Grid Toolbar</igx-grid-toolbar-title>
+        <igx-grid-toolbar-title>Grid Toolbar</igx-grid-toolbar-title>
+        <igx-grid-toolbar-actions>
+            <igx-grid-toolbar-advanced-filtering><igx-grid-toolbar-advanced-filtering>
+            <igx-grid-toolbar-hiding></igx-grid-toolbar-hiding>
+            <igx-grid-toolbar-pinning></igx-grid-toolbar-pinning>
+            <igx-grid-toolbar-exporter></igx-grid-toolbar-exporter>
+        </igx-grid-toolbar-actions>
     </igx-grid-toolbar>
 </igx-tree-grid>
 ```
@@ -75,11 +91,49 @@ Ignite UI for Angular の @@igComponent は、UI 操作のコンテナとなる 
 ```html
 <igx-hierarchical-grid [data]="data">
     <igx-grid-toolbar>
-        <igx-grid-toolbar-title>Hierarchical Grid Toolbar</igx-grid-toolbar-title>
+        <igx-grid-toolbar-title>Grid Toolbar</igx-grid-toolbar-title>
+        <igx-grid-toolbar-actions>
+            <igx-grid-toolbar-advanced-filtering><igx-grid-toolbar-advanced-filtering>
+            <igx-grid-toolbar-hiding></igx-grid-toolbar-hiding>
+            <igx-grid-toolbar-pinning></igx-grid-toolbar-pinning>
+            <igx-grid-toolbar-exporter></igx-grid-toolbar-exporter>
+        </igx-grid-toolbar-actions>
     </igx-grid-toolbar>
 </igx-hierarchical-grid>
 ```
 }
+
+> Note: As seen in the code snippet above, the predefined `actions` UI components are wrapped in the [`<igx-grid-toolbar-actions>` container]({environment:angularApiUrl}/classes/igxgridtoolbaractionsdirective.html). This way, the toolbar title is aligned to the left of the toolbar and the actions are aligned to the right of the toolbar.
+
+Of course, each of these UIs can be added independently of each other, or may not be added at all. This way the toolbar container will be rendered empty:
+
+@@if (igxName === 'IgxGrid') {
+```html
+<igx-grid [data]="data" [autoGenerate]="true">
+    <igx-grid-toolbar>
+    </igx-grid-toolbar>
+</igx-grid>
+```
+}
+@@if (igxName === 'IgxTreeGrid') {
+```html
+<igx-tree-grid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="true">
+    <igx-grid-toolbar>
+    </igx-grid-toolbar>
+</igx-tree-grid>
+```
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+```html
+<igx-hierarchical-grid [data]="data">
+    <igx-grid-toolbar>
+    </igx-grid-toolbar>
+</igx-hierarchical-grid>
+```
+}
+
+For a comprehensive look over each of the default UI components, continue reading the **Features** section
+below.
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 
@@ -107,8 +161,7 @@ IgxHierarchicalGrid の子グリッドの実装方法と DI スコープの動�
 
 ## 機能
 
-ツールバーは、グリッド全体に影響を与えるロジック/インタラクションを分離するのに最適です。
-したがって、制御、列の非表示、列のピン固定、高度なフィルタリング、およびグリッドからのデータのエクスポートのためのデフォルトのコンポーネントを提供するように構成できます。これらの機能は、Ignite UI for Angular スイートのカード コンポーネントと同様のパターンに従うことで、互いに独立して有効にできます。
+ツールバーは、グリッド全体に影響を与えるロジック/インタラクションを分離するのに最適です。As shown above, it can be configured to provide default components for controlling, column hiding, column pinning,。これらの機能は、Ignite UI for Angular スイートのカード コンポーネントと同様のパターンに従うことで、互いに独立して有効にできます。
 以下にリストされているのは、ツールバーの主な機能と、それぞれのサンプル コードです。
 
 
@@ -314,18 +367,18 @@ configureExport(args: IGridToolbarExportEventArgs) {
         options.columnWidth = 10;
     } else {
         options.fileType = CsvFileTypes.TSV;
-        options.valueDelimiter = "\t";
+        options.valueDelimiter = '\t';
     }
 
     args.exporter.columnExporting.subscribe((columnArgs: IColumnExportingEventArgs) => {
         @@if (igxName === 'IgxGrid') {
         // Don't export image fields
-        columnArgs.cancel = columnArgs.header === "Athlete" ||
-                            columnArgs.header === "Country";
+        columnArgs.cancel = columnArgs.header === 'Athlete' ||
+                            columnArgs.header === 'Country';
         }
         @@if (igxName === 'IgxTreeGrid') {
         // Don't export image field
-        columnArgs.cancel = columnArgs.header === "Name";
+        columnArgs.cancel = columnArgs.header === 'Name';
         }
     });
 }

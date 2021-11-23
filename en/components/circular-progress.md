@@ -1,5 +1,5 @@
 ---
-title: Circular Progress Component
+title: Angular Circular Progress Component – Ignite UI for Angular | Infragistics
 _description: Ignite UI for Angular Circular Progress Indicator component allows developers to display progress in a circle with endless customization options.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Circular Progress components, Angular Circular Progress controls
 ---
@@ -204,7 +204,10 @@ After reproducing the steps above, you should get this as a result:
 To get started with styling the circular progress bar, we need to import the `index` file, where all the theme functions and component mixins live:
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
 Following the simplest approach, we create a new theme that extends the [`igx-progress-circular-theme`]({environment:sassApiUrl}/index.html#function-igx-progress-circular-theme) and accepts the `$base-circle-color` and the `$progress-circle-color` parameters.

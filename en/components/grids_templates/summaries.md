@@ -94,22 +94,19 @@ All available column data types could be found in the official [Column types top
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="false"
-        [height]="'600px'" [width]="'100%'" #hierarchicalGrid>
-        <igx-column field="Artist" [hasSummary]='true'></igx-column>
-        <igx-column field="Photo">
-            <ng-template igxCell let-cell="cell">
-                <div class="cell__inner_2">
-                    <img [src]="cell.value" class="photo" />
-                </div>
-            </ng-template>
-        </igx-column>
-        <igx-column field="Debut" [hasSummary]='true'></igx-column>
-        <igx-column field="Grammy Nominations" [hasSummary]='true' [dataType]="'number'" [summaries]="mySummary"></igx-column>
-        <igx-column field="Grammy Awards" [hasSummary]='true' [dataType]="'number'"></igx-column>
-        ...
-    </igx-hierarchical-grid>
-
+<igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="false">
+    <igx-column field="Artist" [hasSummary]='true'></igx-column>
+    <igx-column field="Photo">
+        <ng-template igxCell let-cell="cell">
+            <div class="cell__inner_2">
+                <img [src]="cell.value" class="photo" />
+            </div>
+        </ng-template>
+    </igx-column>
+    <igx-column field="Debut" [hasSummary]='true'></igx-column>
+    <igx-column field="Grammy Nominations" [hasSummary]='true' [dataType]="'number'" [summaries]="mySummary"></igx-column>
+    <igx-column field="Grammy Awards" [hasSummary]='true' [dataType]="'number'"></igx-column>
+</igx-hierarchical-grid>
 ```
 }
 The other way to enable/disable summaries for a specific column or a list of columns is to use the public method [`enableSummaries`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#enablesummaries)/[`disableSummaries`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#disablesummaries) of the **@@igSelector**.
@@ -130,12 +127,12 @@ The other way to enable/disable summaries for a specific column or a list of col
 ```typescript
 public enableSummary() {
     this.grid1.enableSummaries([
-        {fieldName: "ReorderLevel", customSummary: this.mySummary},
-        {fieldName: "ProductID"}
+        {fieldName: 'ReorderLevel', customSummary: this.mySummary},
+        {fieldName: 'ProductID'}
     ]);
 }
 public disableSummary() {
-    this.grid1.disableSummaries("ProductName");
+    this.grid1.disableSummaries('ProductName');
 }
 ```
 }
@@ -160,12 +157,12 @@ public disableSummary() {
 ```typescript
 public enableSummary() {
     this.hierarchicalGrid.enableSummaries([
-        {fieldName: "Grammy Nominations", customSummary: this.mySummary},
-        {fieldName: "Artist"}
+        {fieldName: 'Grammy Nominations', customSummary: this.mySummary},
+        {fieldName: 'Artist'}
     ]);
 }
 public disableSummary() {
-    this.hierarchicalGrid.disableSummaries("Photo");
+    this.hierarchicalGrid.disableSummaries('Photo');
 }
 ```
 }
@@ -178,7 +175,6 @@ If these functions do not fulfill your requirements you can provide a custom sum
 import { IgxSummaryResult, IgxSummaryOperand, IgxNumberSummaryOperand, IgxDateSummaryOperand } from 'igniteui-angular';
 
 class MySummary extends IgxNumberSummaryOperand {
-
     constructor() {
         super();
     }
@@ -197,24 +193,24 @@ class MySummary extends IgxNumberSummaryOperand {
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```typescript
-import { IgxRowIslandComponent, IgxHierarchicalGridComponent, IgxNumberSummaryOperand, IgxSummaryResult } from "igniteui-angular";
+import { IgxRowIslandComponent, IgxHierarchicalGridComponent, IgxNumberSummaryOperand, IgxSummaryResult } from 'igniteui-angular';
 
 class MySummary extends IgxNumberSummaryOperand {
-
     constructor() {
-      super();
+        super();
     }
-    public operate(data?: any[]): IgxSummaryResult[] {
-      const result = super.operate(data);
-      result.push({
-        key: "test",
-        label: "More than 5",
-        summaryResult: data.filter((rec) => rec > 5).length
-      });
 
-      return result;
+    public operate(data?: any[]): IgxSummaryResult[] {
+        const result = super.operate(data);
+        result.push({
+            key: 'test',
+            label: 'More than 5',
+            summaryResult: data.filter((rec) => rec > 5).length
+        });
+
+        return result;
     }
-  }
+}
 ```
 }
 
@@ -259,20 +255,18 @@ export class GridComponent implements OnInit {
 @@if (igxName === 'IgxHierarchicalGrid') {
 And now let's add our custom summary to the column `GramyNominations`. We will achieve that by setting the [`summaries`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#summaries) property to the class we create below.
 ```html
- <igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="false"
-        [height]="'600px'" [width]="'100%'" #hierarchicalGrid>
-        <igx-column field="Artist" [hasSummary]='true'></igx-column>
-        <igx-column field="Photo">
-            <ng-template igxCell let-cell="cell">
-                <div class="cell__inner_2">
-                    <img [src]="cell.value" class="photo" />
-                </div>
-            </ng-template>
-        </igx-column>
-        <igx-column field="Debut" [hasSummary]='true'></igx-column>
-        <igx-column field="Grammy Nominations" [hasSummary]='true' [dataType]="'number'" [summaries]="mySummary"></igx-column>
-        <igx-column field="Grammy Awards" [hasSummary]='true' [dataType]="'number'"></igx-column>
-...
+ <igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="false">
+    <igx-column field="Artist" [hasSummary]='true'></igx-column>
+    <igx-column field="Photo">
+        <ng-template igxCell let-cell="cell">
+            <div class="cell__inner_2">
+                <img [src]="cell.value" class="photo" />
+            </div>
+        </ng-template>
+    </igx-column>
+    <igx-column field="Debut" [hasSummary]='true'></igx-column>
+    <igx-column field="Grammy Nominations" [hasSummary]='true' [dataType]="'number'" [summaries]="mySummary"></igx-column>
+    <igx-column field="Grammy Awards" [hasSummary]='true' [dataType]="'number'"></igx-column>
 </igx-hierarchical-grid>
 ```
 
@@ -444,8 +438,11 @@ The summary rows can be navigated with the following keyboard interactions:
 To get started with styling the sorting behavior, we need to import the `index` file, where all the theme functions and component mixins live:
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
-```
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
 
 Following the simplest approach, we create a new theme that extends the [`igx-grid-summary-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-summary-theme) and accepts the `$background-color`, `$focus-background-color`, `$label-color`, `$result-color`, `$pinned-border-width`, `$pinned-border-style` and `$pinned-border-color` parameters.
 

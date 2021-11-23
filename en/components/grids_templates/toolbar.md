@@ -17,7 +17,14 @@ _canonicalLink: grid/toolbar
 
 # @@igComponent Toolbar container for UI operations
 
-The @@igComponent in Ignite UI for Angular provides an [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) which is essentially a container for **UI** operations. The Angular toolbar is located at the top of the Angular component, i.e the @@igComponent and it matches its horizontal size. The toolbar container hosts different UI controls which are related to some of the @@igComponent's features - column hiding, column pinning, excel exporting, etc and supports Angular events.
+The @@igComponent in Ignite UI for Angular provides an [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) which is essentially a container for **UI** operations. The Angular toolbar is located at the top of the Angular component, i.e the @@igComponent and it matches its horizontal size. The toolbar container can host predefined UI controls for the following @@igComponent's features:
+
+ - Column Hiding
+ - Column Pinning
+ - Excel Exporting
+ - Advanced Filtering
+
+or just any other custom content. The toolbar and the predefined UI components support Angular events and expose API for developers.
 
 ## Angular Toolbar Grid Example
 
@@ -46,17 +53,19 @@ The @@igComponent in Ignite UI for Angular provides an [`IgxGridToolbarComponent
 
 }
 
-You can enable the toolbar for @@igComponent by inserting the `igx-grid-toolbar` component between the @@igComponent tags.
-Additional features for the toolbar are enabled by using the default toolbar UI components or creating your own.
-For a comprehensive look over the default UI components and how to enabled them continue reading the **Features** section
-below.
-The following code snippet demonstrates how to enable a toolbar and set its title:
+The predefined `actions` and `title` UI components are added inside the `<igx-grid-toolbar>` and this is all needed to have a toolbar providing default interactions with the corresponding Grid features:
 
 @@if (igxName === 'IgxGrid') {
 ```html
 <igx-grid [data]="data" [autoGenerate]="true">
     <igx-grid-toolbar>
-        <igx-grid-toolbar-title>Grid Title</igx-grid-toolbar-title>
+        <igx-grid-toolbar-title>Grid Toolbar</igx-grid-toolbar-title>
+        <igx-grid-toolbar-actions>
+            <igx-grid-toolbar-advanced-filtering><igx-grid-toolbar-advanced-filtering>
+            <igx-grid-toolbar-hiding></igx-grid-toolbar-hiding>
+            <igx-grid-toolbar-pinning></igx-grid-toolbar-pinning>
+            <igx-grid-toolbar-exporter></igx-grid-toolbar-exporter>
+        </igx-grid-toolbar-actions>
     </igx-grid-toolbar>
 </igx-grid>
 ```
@@ -66,6 +75,12 @@ The following code snippet demonstrates how to enable a toolbar and set its titl
 <igx-tree-grid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="true">
     <igx-grid-toolbar>
         <igx-grid-toolbar-title>Tree Grid Toolbar</igx-grid-toolbar-title>
+        <igx-grid-toolbar-actions>
+            <igx-grid-toolbar-advanced-filtering><igx-grid-toolbar-advanced-filtering>
+            <igx-grid-toolbar-hiding></igx-grid-toolbar-hiding>
+            <igx-grid-toolbar-pinning></igx-grid-toolbar-pinning>
+            <igx-grid-toolbar-exporter></igx-grid-toolbar-exporter>
+        </igx-grid-toolbar-actions>
     </igx-grid-toolbar>
 </igx-tree-grid>
 ```
@@ -75,10 +90,48 @@ The following code snippet demonstrates how to enable a toolbar and set its titl
 <igx-hierarchical-grid [data]="data">
     <igx-grid-toolbar>
         <igx-grid-toolbar-title>Hierarchical Grid Toolbar</igx-grid-toolbar-title>
+        <igx-grid-toolbar-actions>
+            <igx-grid-toolbar-advanced-filtering><igx-grid-toolbar-advanced-filtering>
+            <igx-grid-toolbar-hiding></igx-grid-toolbar-hiding>
+            <igx-grid-toolbar-pinning></igx-grid-toolbar-pinning>
+            <igx-grid-toolbar-exporter></igx-grid-toolbar-exporter>
+        </igx-grid-toolbar-actions>
     </igx-grid-toolbar>
 </igx-hierarchical-grid>
 ```
 }
+
+> Note: As seen in the code snippet above, the predefined `actions` UI components are wrapped in the [`<igx-grid-toolbar-actions>` container]({environment:angularApiUrl}/classes/igxgridtoolbaractionsdirective.html). This way, the toolbar title is aligned to the left of the toolbar and the actions are aligned to the right of the toolbar.
+
+Of course, each of these UIs can be added independently of each other, or may not be added at all. This way the toolbar container will be rendered empty:
+
+@@if (igxName === 'IgxGrid') {
+```html
+<igx-grid [data]="data" [autoGenerate]="true">
+    <igx-grid-toolbar>
+    </igx-grid-toolbar>
+</igx-grid>
+```
+}
+@@if (igxName === 'IgxTreeGrid') {
+```html
+<igx-tree-grid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="true">
+    <igx-grid-toolbar>
+    </igx-grid-toolbar>
+</igx-tree-grid>
+```
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+```html
+<igx-hierarchical-grid [data]="data">
+    <igx-grid-toolbar>
+    </igx-grid-toolbar>
+</igx-hierarchical-grid>
+```
+}
+
+For a comprehensive look over each of the default UI components, continue reading the **Features** section
+below.
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 
@@ -109,7 +162,7 @@ This will make sure you always have the correct grid instance in the scope of yo
 ## Features
 
 The toolbar is great at separating logic/interactions which affects the grid as a whole.
-Thus, it can be configured to provide default components for controlling, column hiding, column pinning,
+As shown above, it can be configured to provide default components for controlling, column hiding, column pinning,
 advanced filtering and exporting data from the grid.
 These features can be enabled independently from each other by following a pattern similar to the card component of
 the Ignite UI for Angular suite.
@@ -202,7 +255,7 @@ constructor() {
 The default overlaySettings are using *ConnectedPositionStrategy* with *Absolute* scroll strategy, *modal* set to false, with enabled *close on escape* and *close on outside click* interactions.
 
 ### Column pinning
-[This component]({environment:angularApiUrl}/classes/igxgridtoolbarpinningcomponent.html) provides the default UI for interacting with column pinning in the grid.
+[Toolbar Pinning component]({environment:angularApiUrl}/classes/igxgridtoolbarpinningcomponent.html) provides the default UI for interacting with column pinning in the grid.
 The component is setup to work out of the box with the parent grid containing the toolbar as well as several input properties for customizing the UI, such as the component
 title, the placeholder for the component input and the height of the dropdown itself.
 
@@ -221,8 +274,9 @@ title, the placeholder for the component input and the height of the dropdown it
 
 
 ### Column hiding
-Similar to the pinning actions component, the [hiding component]({environment:angularApiUrl}/classes/igxgridtoolbarhidingcomponent.html) provides the default
-UI for interacting with column hiding.
+[Toolbar Hiding component]({environment:angularApiUrl}/classes/igxgridtoolbarhidingcomponent.html) provides the default
+UI for interacting with column hiding. Exposes the same input properties for customizing the UI, such as the component
+title, the placeholder for the component input and the height of the dropdown itself.
 
 ```html
 <igx-grid-toolbar>
@@ -238,8 +292,7 @@ UI for interacting with column hiding.
 ```
 
 ### Advanced filtering
-If advanced filtering is enabled in the grid, users can provide the [default component]({environment:angularApiUrl}/classes/igxgridtoolbaradvancedfilteringcomponent.html) for the
-advanced filtering feature. The component exposes a way to change the default text of the button.
+[Toolbar Advanced Filtering component]({environment:angularApiUrl}/classes/igxgridtoolbaradvancedfilteringcomponent.html) provides the default UI for the Advanced Filtering feature. The component exposes a way to change the default text of the button.
 ```html
 <igx-grid-toolbar>
     <igx-grid-toolbar-actions>
@@ -256,7 +309,7 @@ advanced filtering feature. The component exposes a way to change the default te
 > belonging to their respective grid (the child grids will not be included in the exported data).
 }
 
-As with the rest of the toolbar actions, exporting is provided through a toolbar [component]({environment:angularApiUrl}/classes/igxgridtoolbarexportercomponent.html) out of the box.
+As with the rest of the toolbar actions, exporting is provided through a [Toolbar Exporter component]({environment:angularApiUrl}/classes/igxgridtoolbarexportercomponent.html) out of the box.
 The exporting component is using the respective service for the target data format ([Excel]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) [CSV]({environment:angularApiUrl}/classes/igxcsvexporterservice.html)). That means if the respective service is not provided through the dependency injection chain, the component
 won't be able to export anything.
 If you need a refresher on the DI in Angular, check the [official guide](https://angular.io/guide/dependency-injection). Here is a sample snippet showing how to enable
@@ -324,18 +377,18 @@ configureExport(args: IGridToolbarExportEventArgs) {
         options.columnWidth = 10;
     } else {
         options.fileType = CsvFileTypes.TSV;
-        options.valueDelimiter = "\t";
+        options.valueDelimiter = '\t';
     }
 
     args.exporter.columnExporting.subscribe((columnArgs: IColumnExportingEventArgs) => {
         @@if (igxName === 'IgxGrid') {
         // Don't export image fields
-        columnArgs.cancel = columnArgs.header === "Athlete" ||
-                            columnArgs.header === "Country";
+        columnArgs.cancel = columnArgs.header === 'Athlete' ||
+                            columnArgs.header === 'Country';
         }
         @@if (igxName === 'IgxTreeGrid') {
         // Don't export image field
-        columnArgs.cancel = columnArgs.header === "Name";
+        columnArgs.cancel = columnArgs.header === 'Name';
         }
     });
 }
@@ -463,9 +516,11 @@ The following sample demonstrates how to add an additional button to the toolbar
 To get started with styling the toolbar, we need to import the index file, where all the theme functions and component mixins live:
 
 ```scss
-// custom-grid-paging-style.component.scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
-```
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
 
 First, let's create a new palette.
 

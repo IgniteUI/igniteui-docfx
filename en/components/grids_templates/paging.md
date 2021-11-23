@@ -59,7 +59,7 @@ Adding a `igx-paginator` component will control whether the feature is present, 
 
 Example:
 ```html
-<igx-paginator #paginator [totalRecords]='20'>
+<igx-paginator #paginator [totalRecords]="20">
     <igx-paginator-content>
         <div id="numberPager" style="justify-content: center;">
             <button [disabled]="paginator.isFirstPage" (click)="paginator.previousPage()" igxButton="flat">
@@ -112,7 +112,7 @@ The `igx-paginator` component is used along with the `igx-tree-grid` component i
 The `igx-paginator` component is used along with the `igx-hierarchical-grid` component in the example below, but you can use it with any other component in case paging functionality is needed.
 
 ```html
-<igx-hierarchical-grid #hGrid >
+<igx-hierarchical-grid>
     <igx-column *ngFor="let c of hColumns" [field]="c.field">
     </igx-column>
     <igx-row-island [key]="'childData'" [autoGenerate]="true">
@@ -190,9 +190,11 @@ In some cases you may want to define your own paging behavior and this is when w
 To get started with styling the paginator, we need to import the `index` file, where all the theme functions and component mixins live:
 
 ```scss
-// custom-grid-paging-style.component.scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
-```
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
 
 Following the simplest approach, we create a new theme that extends the [`igx-paginator-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-paginator-theme) and accepts the `$text-color`, `$background-color` and the `$border-color` parameters.
 

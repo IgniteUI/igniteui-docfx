@@ -38,8 +38,10 @@ Our palettes accept arguments for `primary`, `secondary`, `info`, `success`, `wa
 To get started with our first color palette, create an _scss_ file that would be the base file for your global theme. I will call mine _"my-app-theme.scss"_.
 
 ```scss
-// Import the IgniteUI themes library first
-@import "~igniteui-angular/lib/core/styles/themes/index";
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
 
 $company-color: #2ab759; // Some green shade I like
 $secondary-color: #f96a88; // Watermelon pink
@@ -107,7 +109,10 @@ Let's start from our very first example on this page. This time, though, we're g
 
 ```scss
 // Import the IgniteUI themes library first
-@import "~igniteui-angular/lib/core/styles/themes/index";
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
 
 $company-color: #2ab759; // Some green shade I like
 $secondary-color: #f96a88; // Watermelon pink
@@ -138,11 +143,14 @@ To customize the typography use the `igx-typography` mixin. It takes exactly one
 
 ```scss
 // Import the IgniteUI themes library first
-@import "~igniteui-angular/lib/core/styles/themes/index";
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+
 // IMPORTANT: Make sure you always include igx-core first!
 @include igx-core();
-@include igx-theme($default-palette);
-
-//Include after igx-core
+// Include typography before igx-theme
 @include igx-typography($config: (font-family: "Comic Sans MS"));
+@include igx-theme($default-palette);
 ```

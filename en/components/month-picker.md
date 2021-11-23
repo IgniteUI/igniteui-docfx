@@ -1,5 +1,5 @@
 ---
-title: Month Picker Component
+title: Angular Month Picker Component – Ignite UI for Angular | Infragistics
 _description: The Ignite UI for Angular Month Picker component provides an easy and intuitive way to select a specific month and year using a month-year calendar view.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Month Picker components, Angular Month Picker controls
 ---
@@ -24,7 +24,7 @@ The first step is to import the `IgxCalendarModule` inside our **app.module.ts**
 ```typescript
 // app.module.ts
 ...
-import { HammerModule } from "@angular/platform-browser";
+import { HammerModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IgxCalendarModule } from 'igniteui-angular';
 @NgModule({
@@ -38,7 +38,7 @@ export class AppModule {}
 You will usually also import the [`IgxMonthPickerComponent`]({environment:angularApiUrl}/classes/igxmonthpickercomponent.html) in the AppComponent file (or your editor will auto-import them for you) when declaring types that are part of the month picker API:
 
 ```typescript
-import { IgxMonthPickerComponent } from "igniteui-angular";
+import { IgxMonthPickerComponent } from 'igniteui-angular';
 ...
 
 @ViewChild('monthPicker', { read: IgxMonthPickerComponent }) public monthPicker: IgxMonthPickerComponent;
@@ -93,7 +93,7 @@ Change the month picker display format, using the [`formatOptions`]({environment
 
 public date: Date = new Date();
 public numericFormatOptions = {
-        month: "2-digit"
+    month: '2-digit'
 };
 ```
 
@@ -110,9 +110,9 @@ Use the [`locale`]({environment:angularApiUrl}/classes/igxmonthpickercomponent.h
 // month-picker-sample.component.ts
 
 public date: Date = new Date();
-public locale: "fr";
+public locale: 'fr';
 public formatOptions = {
-        month: "long"
+    month: 'long'
 };
 ```
 
@@ -150,7 +150,10 @@ Here is an example of localizing and formatting the month picker component:
 To get started with styling the month picker, we need to import the `index` file, where all the theme functions and component mixins live:
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 The month picker uses the calendar's theme, so we have to create a new theme that extends the [`igx-calendar-theme`]({environment:sassApiUrl}/index.html#function-igx-calendar-theme) and use some of its parameters to style the month picker's items:
 

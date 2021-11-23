@@ -94,12 +94,12 @@ div テキストと IgxTextHighlight ディレクティブを追加します。�
 コンポーネント テンプレートのバインディングに使用する以下のフィールドをコンポーネントの .ts ファイルに追加します。
 
 ``` typescript
-public html = "...";
+public html = '...';
 
 @ViewChild(IgxTextHighlightDirective, {read: IgxTextHighlightDirective})
 public highlight: IgxTextHighlightDirective;
 
-public searchText: string = "";
+public searchText: string = '';
 public matchCount: number = 0;
 public caseSensitive: boolean = false;
 public index: number = 0;
@@ -115,10 +115,10 @@ public get canMoveHighlight() {
 ``` typescript
 public searchKeyDown(ev) {
     if (this.searchText) {
-        if (ev.key === "Enter" || ev.key === "ArrowDown" || ev.key === "ArrowRight") {
+        if (ev.key === 'Enter' || ev.key === 'ArrowDown' || ev.key === 'ArrowRight') {
             ev.preventDefault();
             this.findNext();
-        } else if (ev.key === "ArrowUp" || ev.key === "ArrowLeft") {
+        } else if (ev.key === 'ArrowUp' || ev.key === 'ArrowLeft') {
             ev.preventDefault();
             this.findPrev();
         }
@@ -136,7 +136,7 @@ public updateSearch() {
 }
 
 public clearSearch() {
-    this.searchText = "";
+    this.searchText = '';
     this.find(0);
 }
 
@@ -157,7 +157,7 @@ private find(increment: number) {
         this.index = this.index > this.matchCount - 1 ? 0 : this.index;
 
         if (this.matchCount) {
-            IgxTextHighlightDirective.setActiveHighlight("group1", {
+            IgxTextHighlightDirective.setActiveHighlight('group1', {
                 columnIndex: 0,
                 index: this.index,
                 page: 0,
@@ -243,7 +243,7 @@ private find(increment: number) {
 
             const actualIndex = row === 0 ? this.index : this.index - matchesArray[row - 1];
 
-            IgxTextHighlightDirective.setActiveHighlight("group1", {
+            IgxTextHighlightDirective.setActiveHighlight('group1', {
                 index: actualIndex,
                 rowIndex: row
             });
@@ -271,8 +271,11 @@ private find(increment: number) {
 [`IgxTextHighlight`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html) ディレクティブは、指定された文字列のすべての発生の色と背景を変更してスタイル設定できます。まず、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
-```
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
 
 最も簡単な方法は、[`igx-highlight-theme`]({environment:sassApiUrl}/index.html#function-igx-highlight-theme) を拡張する新しいテーマを作成し、`$resting-background`、`$resting-color`、`$active-background` と `$active-color`パラメーターを受け取る方法です。
 

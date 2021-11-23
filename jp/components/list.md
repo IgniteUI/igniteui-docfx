@@ -146,20 +146,20 @@ export class AppModule {}
 // contacts.component.ts
 ...
 public contacts = [{
-    name: "Terrance Orta",
-    phone: "770-504-2217"
+    name: 'Terrance Orta',
+    phone: '770-504-2217'
 }, {
-    name: "Richard Mahoney",
-    phone: "423-676-2869"
+    name: 'Richard Mahoney',
+    phone: '423-676-2869'
 }, {
-    name: "Donna Price",
-    phone: "859-496-2817"
+    name: 'Donna Price',
+    phone: '859-496-2817'
 }, {
-    name: "Lisa Landers",
-    phone: "901-747-3428"
+    name: 'Lisa Landers',
+    phone: '901-747-3428'
 }, {
-    name: "Dorothy H. Spencer",
-    phone: "573-394-9254"
+    name: 'Dorothy H. Spencer',
+    phone: '573-394-9254'
 }];
 ```
 
@@ -307,7 +307,7 @@ import { IgxButtonGroupModule } from 'igniteui-angular';
 ```typescript
 // contacts.component.ts
 
-public density = "comfortable";
+public density = 'comfortable';
 public displayDensities;
 
 public ngOnInit() {
@@ -412,19 +412,19 @@ igx-icon {
 // contacts.component.ts
 
 ...
-@ViewChild("toast")
+@ViewChild('toast')
 public toast: IgxToastComponent;
 
 public rightPanPerformed(args) {
   args.keepItem = true;
-  this.toast.message = "Dialing " + this.contacts[args.item.index - 1].name;
+  this.toast.message = 'Dialing ' + this.contacts[args.item.index - 1].name;
   this.toast.open();
 }
 
 public leftPanPerformed(args) {
   args.keepItem = false;
   setTimeout((idx = args.item.index - 1) => {
-    this.toast.message = "Contact " + this.contacts[idx].name + " removed.";
+    this.toast.message = 'Contact ' + this.contacts[idx].name + ' removed.';
     this.toast.open();
     this.contacts.splice(idx, 1);
   }, 500);
@@ -469,29 +469,29 @@ Angular コンポーネント テンプレートの上側に入力フィール�
 `IgxFilterModule` および `IgxInputGroupModule` を app.module.ts ファイルにインポートし、[`IgxFilterOptions`]({environment:angularApiUrl}/classes/igxfilteroptions.html) を連絡先コンポーネントにインポートします。
 
 ```typescript
-    // app.module.ts
+// app.module.ts
+...
+import { IgxFilterModule, IgxInputGroupModule } from 'igniteui-angular';
+
+@NgModule({
+    imports: [..., IgxFilterModule, IgxInputGroupModule]
+})
+
+// contacts.component.ts
+...
+import { IgxFilterOptions } from 'igniteui-angular';
+
+@Component({...})
+export class ContactListComponent {
+    public searchContact: string;
     ...
-    import { IgxFilterModule, IgxInputGroupModule } from 'igniteui-angular';
-
-    @NgModule({
-        imports: [..., IgxFilterModule, IgxInputGroupModule]
-    })
-
-    // contacts.component.ts
-    ...
-    import { IgxFilterOptions } from 'igniteui-angular';
-
-    @Component({...})
-    export class ContactListComponent {
-        public searchContact: string;
-        ...
-        get filterContacts(): IgxFilterOptions {
-            const fo = new IgxFilterOptions();
-            fo.key = 'name';
-            fo.inputValue = this.searchContact;
-            return fo;
-        }
+    get filterContacts(): IgxFilterOptions {
+        const fo = new IgxFilterOptions();
+        fo.key = 'name';
+        fo.inputValue = this.searchContact;
+        return fo;
     }
+}
 ```
 
 [`IgxFilterOptions`]({environment:angularApiUrl}/classes/igxfilteroptions.html) をインポートした後、`searchContact` プロパティの更新でパイプによって使用されるフィルタリング オプションを返すゲッター メソッドを登録します。フィルターが機能するために連絡先オブジェクトのフィルター `key` を登録します。この場合、各連絡先の `name` です。[`IgxFilterOptions`]({environment:angularApiUrl}/classes/igxfilteroptions.html) オブジェクトで登録する 2 番目のプロパティは連絡先の名前を比較する値です。連絡先リストの上の入力フィールドにバインドした `searchContact` プロパティです。

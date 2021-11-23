@@ -1,5 +1,5 @@
 ---
-title: Overlay Styling
+title: Angular Overlay Styling
 _description: A detailed walkthrough that explains how to properly apply and scope styles to elements that are displayed using the IgniteUI for Angular Overlay Service.
 _keywords: Ignite UI for Angular, Angular Overlay Service, Angular UI controls, Overlay Service, View Encapsulation Example, Sass scoped styles in Angular, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library
 ---
@@ -7,7 +7,7 @@ _keywords: Ignite UI for Angular, Angular Overlay Service, Angular UI controls, 
 # Overlay Styling
 <p class="highlight">
 [`IgxOverlayService`](overlay.md) is used to display content above the page content. A lot of Ignite UI for Angular components use the overlay - [Drop Down](drop-down.md), [Combo](combo.md), [Date Picker](date-picker.md) and more - so it is important to understand how the overlay displays content.
-To display the content above other elements, the service moves it into a special outlet container (attached at the end of the document's body, by default). This behavior can affect styles [scoped to specific container](#scoped-component-styles).
+To display the content above other elements, the service moves it into a special outlet container (attached at the end of the document's body, by default). This behavior can affect styles [scoped to specific container](#Scoped Overlay Styles).
 </p>
 <div class="divider--half"></div>
 
@@ -25,9 +25,11 @@ In most cases [global](themes/sass/global-themes.md) theme styles are not affect
 ```
 
 ```scss
-// styles.scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
-...
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
 
 $my-drop-down-theme: igx-drop-down-theme(
     $palette: $my-custom-palette
@@ -124,7 +126,7 @@ Now **all** modal overlays will have a purple tint to their background.
 
 ### Scoped Overlay Styles
 
-If we want our overlay to have a specific background **only** under a certain component, we can [scope the theme](#scoped-component-styles).
+If we want our overlay to have a specific background **only** under a certain component, we can [scope the theme](#Scoped Overlay Styles).
 When scoping a modal overlay, you need to move the overlay outlet, which has some [limitations](overlay.md#assumptions-and-limitations). In order to minimize the risks of overflow clipping, z-index and viewport issues, we recommend using outlets for modal overlays only in higher level components:
 
 ```scss
@@ -139,7 +141,10 @@ To make sure the theme **does not** affect other components in our app, use the 
 
 ```scss
 // overlay-styling.component.scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
 ...
 :host {
     @include igx-css-vars($my-overlay-theme);

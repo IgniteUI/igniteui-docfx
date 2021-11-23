@@ -21,8 +21,10 @@ If you are not planning to print, we suggest you turn them off in order to reduc
  
 You can do that in your theme `SCSS` file:
 ```scss
-// Import the IgniteUI themes library first.
-@import '~igniteui-angular/lib/core/styles/themes/index';
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
 
 // Turn the print styles off by setting the $print-layout param to false.
 igx-core($print-layout: false)

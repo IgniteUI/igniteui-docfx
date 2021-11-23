@@ -1,5 +1,5 @@
 ---
-title: TextHighlight Directive - Native Angular | Ignite UI for Angular
+title: Angular Text Highlight Directive | Ignite UI for Angular
 _description: The Ignite UI for Angular TextHighlight directive can be used to highlight parts of text and have an active highlight on one of them.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Components, Native Angular Controls, Native Angular Components Library, Angular TextHighlight Directive, IgxTextHighlight Directive
 ---
@@ -93,12 +93,12 @@ Then, we will add a div with text and the IgxTextHighlight directive. Note that,
 In the .ts file of our component first we need to add the following fields, that are used for bindings in our component's template:
 
 ``` typescript
-public html = "...";
+public html = '...';
 
 @ViewChild(IgxTextHighlightDirective, {read: IgxTextHighlightDirective})
 public highlight: IgxTextHighlightDirective;
 
-public searchText: string = "";
+public searchText: string = '';
 public matchCount: number = 0;
 public caseSensitive: boolean = false;
 public index: number = 0;
@@ -114,10 +114,10 @@ Then we need to add the following methods which will allow the user to apply the
 ``` typescript
 public searchKeyDown(ev) {
     if (this.searchText) {
-        if (ev.key === "Enter" || ev.key === "ArrowDown" || ev.key === "ArrowRight") {
+        if (ev.key === 'Enter' || ev.key === 'ArrowDown' || ev.key === 'ArrowRight') {
             ev.preventDefault();
             this.findNext();
-        } else if (ev.key === "ArrowUp" || ev.key === "ArrowLeft") {
+        } else if (ev.key === 'ArrowUp' || ev.key === 'ArrowLeft') {
             ev.preventDefault();
             this.findPrev();
         }
@@ -135,7 +135,7 @@ public updateSearch() {
 }
 
 public clearSearch() {
-    this.searchText = "";
+    this.searchText = '';
     this.find(0);
 }
 
@@ -156,7 +156,7 @@ private find(increment: number) {
         this.index = this.index > this.matchCount - 1 ? 0 : this.index;
 
         if (this.matchCount) {
-            IgxTextHighlightDirective.setActiveHighlight("group1", {
+            IgxTextHighlightDirective.setActiveHighlight('group1', {
                 columnIndex: 0,
                 index: this.index,
                 page: 0,
@@ -242,7 +242,7 @@ private find(increment: number) {
 
             const actualIndex = row === 0 ? this.index : this.index - matchesArray[row - 1];
 
-            IgxTextHighlightDirective.setActiveHighlight("group1", {
+            IgxTextHighlightDirective.setActiveHighlight('group1', {
                 index: actualIndex,
                 rowIndex: row
             });
@@ -270,8 +270,11 @@ private find(increment: number) {
 The [`IgxTextHighlight`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html) directive can be styled in terms of changing the color and the background of all occurrences of the given string. To get started, we need to import the `index` file, where all the theme functions and component mixins live:
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
-```
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
 
 Following the simplest approach, we create a new theme that extends the [`igx-highlight-theme`]({environment:sassApiUrl}/index.html#function-igx-highlight-theme) and accepts the `$resting-background`, `$resting-color`, `$active-background` and the `$active-color` parameters.
 

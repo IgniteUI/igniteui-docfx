@@ -1,5 +1,5 @@
 ---
-title: Button Group Component
+title: Angular Button Group Component – Ignite UI for Angular | Infragistics
 _description: Provides button group functionality to developers and also allows horizontal/vertical alignment, single/multiple selection with toggling.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Button Group components, Angular Button Group controls, Angular Buttons components, Angular Buttons controls
 ---
@@ -66,7 +66,7 @@ Use the [`alignment`]({environment:angularApiUrl}/classes/igxbuttongroupcomponen
 
 ```typescript
 //sample.component.ts
-import { ButtonGroupAlignment } from "igniteui-angular";
+import { ButtonGroupAlignment } from 'igniteui-angular';
 ...
 public alignment = ButtonGroupAlignment.vertical;
 ...
@@ -124,14 +124,14 @@ The [`displayDensity`]({environment:angularApiUrl}/classes/igxbuttongroupcompone
 ```typescript
 // sample.component.ts
 ...
-public displayDensity = "comfortable";
+public displayDensity = 'comfortable';
 public displayDensities;
 
 public ngOnInit() {
     this.displayDensities = [
-        { label: "compact", selected: this.displayDensity === "compact", togglable: true },
-        { label: "cosy", selected: this.displayDensity === "cosy", togglable: true },
-        { label: "comfortable", selected: this.displayDensity === "comfortable", togglable: true }
+        { label: 'compact', selected: this.displayDensity === 'compact', togglable: true },
+        { label: 'cosy', selected: this.displayDensity === 'cosy', togglable: true },
+        { label: 'comfortable', selected: this.displayDensity === 'comfortable', togglable: true }
     ];
 }
 
@@ -182,7 +182,7 @@ class ToggleButton {
     private icon: string;
 
     constructor(obj?: IButton) {
-        this.ripple = obj.ripple || "gray";
+        this.ripple = obj.ripple || 'gray';
         this.label = obj.label;
         this.selected = obj.selected || false;
         this.togglable = obj.togglable || true;
@@ -197,19 +197,19 @@ public bordersButtons: ToggleButton[];
 public ngOnInit() {
     this.bordersButtons = [
         new ToggleButton({
-            icon: "border_top",
+            icon: 'border_top',
             selected: true
         }),
         new ToggleButton({
-            icon: "border_right",
+            icon: 'border_right',
             selected: false
         }),
         new ToggleButton({
-            icon: "border_bottom",
+            icon: 'border_bottom',
             selected: false
         }),
         new ToggleButton({
-            icon: "border_left",
+            icon: 'border_left',
             selected: false
         })
     ];
@@ -234,7 +234,10 @@ public ngOnInit() {
 To get started with styling the button group, we need to import the `index` file, where all the theme functions and component mixins live:
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
 Following the simplest approach, we create a new theme that extends the [`igx-button-group-theme`]({environment:sassApiUrl}/index.html#function-igx-button-group-theme) and accepts some of the parameters that style the button group's items in their different states.

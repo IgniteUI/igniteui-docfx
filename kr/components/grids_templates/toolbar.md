@@ -24,7 +24,14 @@ _language: kr
 }
 ### @@igComponent 도구 모음
 
-Ignite UI for Angular의 @@igComponent는 기본적으로 **UI** 조작을 위한 컨테이너인 [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html)를 제공합니다. 도구 모음은 @@igComponent 상단에 있으며 @@igComponent의 가로 크기와 일치합니다. 도구 모음 컨테이너는 열 숨기기, 열 핀 고정, Excel 내보내기 등 @@igComponent 기능과 관련된 다양한 UI 컨트롤을 제공합니다.
+The @@igComponent in Ignite UI for Angular provides an [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) which is essentially a container for **UI** operations. The Angular toolbar is located at the top of the Angular component, i.e the @@igComponent and it matches its horizontal size. The toolbar container can host predefined UI controls for the following @@igComponent's features:
+
+ - Column Hiding
+ - Column Pinning
+ - Excel Exporting
+ - Advanced Filtering
+
+or just any other custom content. The toolbar and the predefined UI components support Angular events and expose API for developers.
 
 #### 데모
 
@@ -53,40 +60,93 @@ Ignite UI for Angular의 @@igComponent는 기본적으로 **UI** 조작을 위�
 
 }
 
-@@igComponent의 [`showToolbar`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#showtoolbar) 속성을 사용하여 도구 모음을 표시하려면 **true**로 설정합니다. 도구 모음은 텍스트 제목의 왼쪽 정렬을 지원하며 @@igComponent의 [`toolbarTitle`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#toolbartitle) 속성을 사용하여 내용을 설정합니다. 다음의 코드 조각은 도구 모음을 활성화하고 제목을 설정하는 방법을 보여줍니다:
+The predefined `actions` and `title` UI components are added inside the `<igx-grid-toolbar>` and this is all needed to have a toolbar providing default interactions with the corresponding Grid features:
 
 @@if (igxName === 'IgxGrid') {
 ```html
-<igx-grid [data]="data" [autoGenerate]="true" height="400px" width="600px"
-    [showToolbar]="true"
-    toolbarTitle="Grid Title">
+    <igx-grid-toolbar>
+        <igx-grid-toolbar-title>Grid Toolbar</igx-grid-toolbar-title>
+        <igx-grid-toolbar-actions>
+            <igx-grid-toolbar-advanced-filtering><igx-grid-toolbar-advanced-filtering>
+            <igx-grid-toolbar-hiding></igx-grid-toolbar-hiding>
+            <igx-grid-toolbar-pinning></igx-grid-toolbar-pinning>
+            <igx-grid-toolbar-exporter></igx-grid-toolbar-exporter>
+        </igx-grid-toolbar-actions>
+    </igx-grid-toolbar>
 </igx-grid>
 ```
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```html
-<igx-tree-grid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="true" height="400px" width="900px"
-    [showToolbar]="true"
-    toolbarTitle="Tree Grid Toolbar">
+<igx-tree-grid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="true">
+    <igx-grid-toolbar>
+        <igx-grid-toolbar-title>Tree Grid Toolbar</igx-grid-toolbar-title>
+        <igx-grid-toolbar-actions>
+            <igx-grid-toolbar-advanced-filtering><igx-grid-toolbar-advanced-filtering>
+            <igx-grid-toolbar-hiding></igx-grid-toolbar-hiding>
+            <igx-grid-toolbar-pinning></igx-grid-toolbar-pinning>
+            <igx-grid-toolbar-exporter></igx-grid-toolbar-exporter>
+        </igx-grid-toolbar-actions>
+    </igx-grid-toolbar>
 </igx-tree-grid>
 ```
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid #hierarchicalGrid class="hgrid" [data]="localdata" [showToolbar]="true" toolbarTitle="Singers" 
-     [height]="'500px'" [width]="'800px'">
+<igx-hierarchical-grid [data]="data">
+    <igx-grid-toolbar>
+        <igx-grid-toolbar-title>Hierarchical Grid Toolbar</igx-grid-toolbar-title>
+        <igx-grid-toolbar-actions>
+            <igx-grid-toolbar-advanced-filtering><igx-grid-toolbar-advanced-filtering>
+            <igx-grid-toolbar-hiding></igx-grid-toolbar-hiding>
+            <igx-grid-toolbar-pinning></igx-grid-toolbar-pinning>
+            <igx-grid-toolbar-exporter></igx-grid-toolbar-exporter>
+        </igx-grid-toolbar-actions>
+    </igx-grid-toolbar>
 </igx-hierarchical-grid>
 ```
 }
 
+> Note: As seen in the code snippet above, the predefined `actions` UI components are wrapped in the [`<igx-grid-toolbar-actions>` container]({environment:angularApiUrl}/classes/igxgridtoolbaractionsdirective.html). This way, the toolbar title is aligned to the left of the toolbar and the actions are aligned to the right of the toolbar.
+
+Of course, each of these UIs can be added independently of each other, or may not be added at all. This way the toolbar container will be rendered empty:
+
+@@if (igxName === 'IgxGrid') {
+```html
+<igx-grid [data]="data" [autoGenerate]="true">
+    <igx-grid-toolbar>
+    </igx-grid-toolbar>
+</igx-grid>
+```
+}
+@@if (igxName === 'IgxTreeGrid') {
+```html
+<igx-tree-grid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="true">
+    <igx-grid-toolbar>
+    </igx-grid-toolbar>
+</igx-tree-grid>
+```
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+```html
+<igx-hierarchical-grid [data]="data">
+    <igx-grid-toolbar>
+    </igx-grid-toolbar>
+</igx-hierarchical-grid>
+```
+}
+
+For a comprehensive look over each of the default UI components, continue reading the **Features** section
+below.
+
 #### 기능
 
-도구 모음은 열 숨기기, 열 핀 고정, 데이터를 MS Excel 및 CSV로 내보내기 할 수 있도록 구성할 수 있습니다. 
-대응하는 불 속성을 true로 설정하여 각 기능을 독립적으로 활성화할 수 있습니다:
-- 열 숨기기는 [`columnHiding`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnhiding)을 **true**로 설정
-- 열 핀 고정은 [`columnPinning`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnpinning)을 **true**로 설정
-- MS Excel 내보내기는 @@igComponent의 [`exportExcel`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#exportexcel) 속성을 **true**로 설정
-- CSV 내보내기는 @@igComponent의 [`exportCsv`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#exportcsv) 속성을 **true**로 설정
+The toolbar is great at separating logic/interactions which affects the grid as a whole.
+As shown above, it can be configured to provide default components for controlling, column hiding, column pinning,
+advanced filtering and exporting data from the grid.
+These features can be enabled independently from each other by following a pattern similar to the card component of
+the Ignite UI for Angular suite.
+Listed below are the main features of the toolbar with example code for each of them.
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 > [!NOTE]

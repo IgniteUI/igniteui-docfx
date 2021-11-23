@@ -157,7 +157,7 @@ As you see the demo above the Advanced filtering dialog is hosted in an overlay 
 
 ### Usage
 
-It's super easy to configure the advanced filtering to work outside of the @@igComponent. All you need to do is to create the dialog and set its [`grid`]({environment:angularApiUrl}/classes/igxadvancedfilteringdialogcomponent.html#grid) property:
+It's super easy to configure the advanced filtering to work outside of the @@igComponent. All you need to do is to create the dialog and set its [`grid`]({environment:angularApiUrl}/classes/igxgridtoolbaradvancedfilteringcomponent.html#grid) property:
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -187,7 +187,10 @@ It's super easy to configure the advanced filtering to work outside of the @@igC
 To get started with styling the Advanced Filtering dialog, we need to import the `index` file, where all the theme functions and component mixins live:
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
 The advanced filtering dialog takes its background color from the grid's theme, using the `filtering-row-background` parameter. In order to change the background we need to create a custom theme:

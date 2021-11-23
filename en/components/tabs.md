@@ -1,5 +1,5 @@
 ---
-title: Tabs Component - Native Angular | Ignite UI for Angular
+title: Angular Tabs Component | Ignite UI for Angular
 _description: The Ignite UI for Angular Tabs component places tabs at the top and allows for scrolling when there are multiple tab items on the screen.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Components, Native Angular Controls, Native Angular Components Library, Angular Tabs component, Angular Tabs controls, Angular Tabs
 ---
@@ -211,27 +211,27 @@ When defining tab items you have the ability to apply directives to them. For ex
 To start we need a component to hold our `igx-tabs` component and three view components with some content for demonstration purposes. For simplicity, the view components have very short templates.
 
 ```typescript
-import { Component } from "@angular/core";
+import { Component } from '@angular/core';
 
 @Component({
-    selector: "app-tabs-routing",
-    styleUrls: ["tabs-routing.component.scss"],
-    templateUrl: "tabs-routing.component.html"
+    selector: 'app-tabs-routing',
+    styleUrls: ['tabs-routing.component.scss'],
+    templateUrl: 'tabs-routing.component.html'
 })
 export class TabsRoutingComponent { }
 
 @Component({
-    template: "<p>Tab 1 Content</p>"
+    template: '<p>Tab 1 Content</p>'
 })
 export class TabsRoutingView1Component { }
 
 @Component({
-    template: "<p>Tab 2 Content</p>"
+    template: '<p>Tab 2 Content</p>'
 })
 export class TabsRoutingView2Component { }
 
 @Component({
-    template: "<p>Tab 3 Content</p>"
+    template: '<p>Tab 3 Content</p>'
 })
 export class TabsRoutingView3Component { }
 ```
@@ -239,7 +239,7 @@ export class TabsRoutingView3Component { }
 Next, we create the appropriate navigation mappings in the `app-routing.module.ts` file:
 
 ```typescript
-import { RouterModule, Routes } from "@angular/router";
+import { RouterModule, Routes } from '@angular/router';
 
 import {
     TabsRoutingComponent,
@@ -329,8 +329,11 @@ The above code creates an `igx-tabs` component with three tab items. Each tab it
 To get started with styling the tabs, we need to import the theming module, where all the theme functions and component mixins live:
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
-```
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
 
 Following the simplest approach, we create a new theme that extends the [`igx-tabs-theme`]({environment:sassApiUrl}/index.html#function-igx-tabs-theme) and accepts various properties that allow us to style the tab groups.
 

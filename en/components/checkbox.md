@@ -1,5 +1,5 @@
 ---
-title: Checkbox Component
+title: Angular Checkbox Component – Ignite UI for Angular | Infragistics
 _description: Ignite UI for Angular Checkbox component is a selection control that allows users to make a binary choice for a certain condition.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Checkbox components, Angular Checkbox controls
 ---
@@ -53,9 +53,9 @@ Optionally, you can also bind the [`change`]({environment:angularApiUrl}/classes
 // tasks.component.ts
 ...
 public tasks = [
-  { done: true, description: 'Research' },
-  { done: true, description: 'Implement' },
-  { done: false, description: 'Test' },
+    { done: true, description: 'Research' },
+    { done: true, description: 'Implement' },
+    { done: false, description: 'Test' }
 ];
 
 ...
@@ -161,9 +161,9 @@ And finally, we'll create the logic of our application:
 // app.component.ts
 
 public tasks = [
-    { done: true, description: "Research" },
-    { done: true, description: "Implement" },
-    { done: false, description: "Test" }
+    { done: true, description: 'Research' },
+    { done: true, description: 'Implement' },
+    { done: false, description: 'Test' }
 ];
 
 public get masterCheckbox() {
@@ -209,7 +209,10 @@ After all that is done, our application should look like this:
 To get started with styling the checkbox, we need to import the `index` file, where all the theme functions and component mixins live:
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
 Then, we create a new theme that extends the [`igx-checkbox-theme`]({environment:sassApiUrl}/index.html#function-igx-checkbox-theme) and use some of its parameters to style the checkbox's items:

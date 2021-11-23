@@ -211,27 +211,27 @@ export class AppModule {}
 まず、`igx-tabs` コンポーネントを保持するメイン コンポーネントと、デモ用のコンテンツを含む 3 つのビュー コンポーネントが必要です。簡単にするために、ビュー コンポーネントには短いテンプレートがあります
 
 ```typescript
-import { Component } from "@angular/core";
+import { Component } from '@angular/core';
 
 @Component({
-    selector: "app-tabs-routing",
-    styleUrls: ["tabs-routing.component.scss"],
-    templateUrl: "tabs-routing.component.html"
+    selector: 'app-tabs-routing',
+    styleUrls: ['tabs-routing.component.scss'],
+    templateUrl: 'tabs-routing.component.html'
 })
 export class TabsRoutingComponent { }
 
 @Component({
-    template: "<p>Tab 1 Content</p>"
+    template: '<p>Tab 1 Content</p>'
 })
 export class TabsRoutingView1Component { }
 
 @Component({
-    template: "<p>Tab 2 Content</p>"
+    template: '<p>Tab 2 Content</p>'
 })
 export class TabsRoutingView2Component { }
 
 @Component({
-    template: "<p>Tab 3 Content</p>"
+    template: '<p>Tab 3 Content</p>'
 })
 export class TabsRoutingView3Component { }
 ```
@@ -239,7 +239,7 @@ export class TabsRoutingView3Component { }
 次のステップでは、`app-routing.module.ts` ファイルに適切なナビゲーション マッピングを作成します。
 
 ```typescript
-import { RouterModule, Routes } from "@angular/router";
+import { RouterModule, Routes } from '@angular/router';
 
 import {
     TabsRoutingComponent,

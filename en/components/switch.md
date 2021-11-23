@@ -1,5 +1,5 @@
 ---
-title: Switch Component
+title: Angular Switch Component – Ignite UI for Angular | Infragistics
 _description: Ignite UI for Angular Switch component enables developers to use binary on/off or true/false data input functions within their applications.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Switch components, Angular Switch controls
 ---
@@ -52,12 +52,11 @@ Let's enhance the code above by binding the switch properties to some data. Say,
 ```typescript
 // toggle.component.ts
 ...
-  public settings = [
+public settings = [
     { name: 'WiFi', state: false},
     { name: 'Bluetooth', state: true},
     { name: 'Device visibility', state: false}
-  ];
-
+];
 ```
 Enhance the component template by adding a switch for each setting and then binding the corresponding property:
 
@@ -107,7 +106,10 @@ If the `labelPosition` is not set, the label will be positioned after the switch
 To get started with styling the switch, we need to import the `index` file, where all the theme functions and component mixins live:
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
 Then, we create a new theme that extends the [`igx-switch-theme`]({environment:sassApiUrl}/index.html#function-igx-switch-theme) and use some of its parameters to style the switch's items:

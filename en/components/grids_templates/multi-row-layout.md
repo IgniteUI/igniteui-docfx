@@ -43,8 +43,8 @@ The declaration of Multi-row Layout is achieved through [`igx-column-layout`]({e
 	<igx-column [rowStart]="2" [colStart]="4" [colEnd]="7" field="Address"></igx-column>
 </igx-column-layout>
 <igx-column-layout>
-		<igx-column [rowStart]="1" [colStart]="1" field="Phone"></igx-column>
-		<igx-column [rowStart]="2" [colStart]="1" field="Fax"></igx-column>
+    <igx-column [rowStart]="1" [colStart]="1" field="Phone"></igx-column>
+    <igx-column [rowStart]="2" [colStart]="1" field="Fax"></igx-column>
 </igx-column-layout>
 ```
 
@@ -135,8 +135,11 @@ In the below steps, we are going through the steps of customizing the grid's Mul
 To begin the customization of the Multi-row Layout feature, you need to import the `index` file, where all styling functions and mixins are located.
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index'
-```   
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
 
 ### Defining custom theme
 Next, create a new theme, that extends the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) and accepts the parameters, required to customize the feature layout as desired.   

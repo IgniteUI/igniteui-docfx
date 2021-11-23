@@ -30,8 +30,7 @@ _language: ja
 ```ts
 @NgModule({
     imports: [
-        IgxNavigationDrawerModule,
-        ...
+        IgxNavigationDrawerModule
     ]
 })
 export class AppModule {
@@ -101,11 +100,11 @@ Navigation drawer に要素を追加して選択するためには、typescript 
 /* app.component.ts */
 export class AppComponent {
     public navItems = [
-        { name: "account_circle", text: "Avatar" },
+        { name: 'account_circle', text: 'Avatar' },
         ...
     ];
 
-    public selected = "Avatar";
+    public selected = 'Avatar';
 
     public navigate(item) {
         this.selected = item.text;
@@ -131,8 +130,8 @@ Navigation Drawer は [`igxNavigationService`]({environment:angularApiUrl}/class
 
 ```ts
 /* app.component.ts */
-import { Component, ViewChild } from "@angular/core";
-import { IgxNavigationDrawerComponent } from "igniteui-angular";
+import { Component, ViewChild } from '@angular/core';
+import { IgxNavigationDrawerComponent } from 'igniteui-angular';
 
 ...
 
@@ -258,16 +257,16 @@ Angular Router を使用するには、最初に `@angular/router` から git �
 export class AppComponent {
     public componentLinks = [
         {
-            link: "avatar",
-            name: "Avatar"
+            link: 'avatar',
+            name: 'Avatar'
         },
         {
-            link:  "badge",
-            name: "Badge"
+            link:  'badge',
+            name: 'Badge'
         },
         {
-            link:  "button-group",
-            name: "Button Group"
+            link:  'button-group',
+            name: 'Button Group'
         }
     ];
 }
@@ -295,19 +294,16 @@ export class AppComponent {
 
 ```ts
 /*app.module.ts*/
-import { RouterModule } from "@angular/router";
+import { RouterModule } from '@angular/router';
 
 @NgModule([
-    ...
     imports: [
-        ...
         RouterModule,
 		RouterModule.forRoot([
-            {path: "avatar", component: NavDrawerRoutingComponent},
-            {path: "badge", component: NavDrawerRoutingComponent},
-            {path: "button-group", component: NavDrawerRoutingComponent}
+            {path: 'avatar', component: NavDrawerRoutingComponent},
+            {path: 'badge', component: NavDrawerRoutingComponent},
+            {path: 'button-group', component: NavDrawerRoutingComponent}
         ])
-        ...
     ]
 ])
 ```

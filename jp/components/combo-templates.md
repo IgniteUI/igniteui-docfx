@@ -1,26 +1,26 @@
 ---
-title: コンボ テンプレート
+title: ComboBox テンプレート
 _description: igx-combo コンポーネントの異なる領域 (項目、ヘッダー、フッター、空リスト、ボタンの追加) にカスタム テンプレートを定義できます。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Combo コンポーネント,  Angular テンプレート, Angular Combo テンプレート
 _language: ja
 ---
 
-# コンボ テンプレート
+# ComboBox (コンボボックス) テンプレート
 <p class="highlight">
-Ignite UI for Angular Combo コンポーネントでは、ヘッダー、フッター、項目、空のリスト、追加ボタンなどのさまざまな領域にカスタム テンプレートを定義できます。
+Ignite UI for Angular ComboBox コンポーネントでは、ヘッダー、フッター、項目、空のリスト、追加ボタンなどのさまざまな領域にカスタム テンプレートを定義できます。
 </p>
 
-## Angular コンボ テンプレートの例
+## Angular コンボボックス テンプレートの例
 
 
 <code-view style="height: 450px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/combo-template" alt="Angular コンボ テンプレートの例">
+           iframe-src="{environment:demosBaseUrl}/lists/combo-template" alt="Angular コンボボックス テンプレートの例">
 </code-view>
 
 
 ## 使用方法
-Combo コンポーネントを初期化にするには、まず `IgxComboModule` を **app.module.ts**  ファイルにインポートします。
+ComboBox コンポーネントを初期化にするには、まず `IgxComboModule` を **app.module.ts**  ファイルにインポートします。
 
 ```typescript
 import { IgxComboModule } from 'igniteui-angular';
@@ -36,7 +36,7 @@ export class AppModule {}
 ```
 
 ## テンプレート タイプ
-`igx-combo` のテンプレートを定義する場合、定義済みの参照名を使用して参照してください。
+コンボボックスのテンプレートを定義する場合、定義済みの参照名を使用して参照してください。
 
 ### 項目テンプレート
 セレクター `[igxComboItem]` の使用:
@@ -120,8 +120,8 @@ export class AppModule {}
 </igx-combo>
 ```
 
-## コンボ入力のテンプレート化
-テンプレートで使用した場合、`igxComboClearIcon` および `igxComboToggleIcon` セレクターがコンボ入力での各ボタンの表示方法を変更します。`igx-combo` 内のコンテンツを渡すと、`igx-input-group` をテンプレート化する方法 (`igx-prefix`、`igx-suffix`、`igxLabel` を使用) と同様に、コンボ入力のテンプレート化も可能になります。以下のコード スニペットは、適切なラベルやプレフィックスをコンボに追加する方法を示します。
+## コンボボックス入力のテンプレート化
+テンプレートで使用した場合、`igxComboClearIcon` および `igxComboToggleIcon` セレクターがコンボボックス入力での各ボタンの表示方法を変更します。`igx-combo` 内のコンテンツを渡すと、`igx-input-group` をテンプレート化する方法 (`igx-prefix`、`igx-suffix`、`igxLabel` を使用) と同様に、コンボボックス入力のテンプレート化も可能になります。以下のコード スニペットは、適切なラベルやプレフィックスをコンボボックスに追加する方法を示します。
 
 ```html
     <igx-combo>
@@ -139,12 +139,12 @@ export class AppModule {}
 ## その他のリソース
 <div class="divider--half"></div>
 
-* [コンボ コンポーネント](combo.md)
-* [コンボ機能](combo-features.md)
-* [コンボ リモート バインディング](combo-remote.md)
+* [コンボボックス コンポーネント](combo.md)
+* [コンボボックス機能](combo-features.md)
+* [コンボボックス リモート バインディング](combo-remote.md)
 * [テンプレート駆動フォームの統合](input-group.md)
 * [リアクティブ フォームの統合](angular-reactive-form-validation.md)
-* [カスケーディング](combo-cascading.md)
+* [単一選択コンボボックス](simple-combo.md)
 
 コミュニティに参加して新しいアイデアをご提案ください。
 

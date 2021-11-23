@@ -12,7 +12,10 @@ In order to switch from `Material` to `Indigo`, you can use one of the built-in 
 
 ## Indigo Dark Theme
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
 @include igx-core();
 @include igx-indigo-dark-theme($dark-indigo-palette);
 ```

@@ -133,7 +133,7 @@ import { IgxToastPosition } from 'igniteui-angular';
 ...
 public toastPosition: IgxToastPosition;
 public open(toast) {
-    this.toastPosition = "top";
+    this.toastPosition = IgxToastPosition.Top;
     toast.open();
 }
 ...
@@ -175,8 +175,11 @@ toast.open(customSettings);
 Toast のスタイル設定を始めるには、すべてのテーマ関数とコンポーネント ミックスインが存在する index ファイルをインポートする必要があります。
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
-```
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
 
 最も簡単な方法は、[`igx-toast-theme`]({environment:sassApiUrl}/index.html#function-igx-toast-theme) を拡張する新しいテーマを作成し、`$shadow`、`$background`、`$text-color` と `$border-radius` パラメーターを受け取る方法です。 
 

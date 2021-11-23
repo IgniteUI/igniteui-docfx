@@ -17,6 +17,7 @@ Ignite UI for Angular 複合チャートまたはコンボ チャートは、同
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-composite-chart"
+           github-src="charts/data-chart/composite-chart"
            alt="Angular 複合チャートの例" >
 </code-view>
 

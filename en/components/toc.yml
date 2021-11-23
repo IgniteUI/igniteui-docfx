@@ -76,11 +76,11 @@
     - name: One-Way Binding
       href: general/wpf-to-angular-guide/one-way-binding.md
       new: false
-    - name: Angular Events
-      href: general/wpf-to-angular-guide/angular-events.md
-      new: false
     - name: Two-Way Binding
       href: general/wpf-to-angular-guide/two-way-binding.md
+      new: false
+    - name: Angular Events
+      href: general/wpf-to-angular-guide/angular-events.md
       new: false
     - name: Transforming Data with Angular Pipes
       href: general/wpf-to-angular-guide/angular-pipes.md
@@ -111,6 +111,9 @@
   updated: true
   sortable: true
   items:
+    - name: Row Actions
+      href: grid/row-actions.md
+      new: true
     - name: Live Data / Real-Time
       href: grid/live-data.md
       new: false
@@ -253,6 +256,9 @@
   new: false
   sortable: true
   items:
+    - name: Row Actions
+      href: treegrid/row-actions.md
+      new: true
     - name: Live Data / Real-Time
       href: treegrid/live-data.md
       new: false
@@ -387,6 +393,9 @@
   new: false
   sortable: true
   items:
+    - name: Row Actions
+      href: hierarchicalgrid/row-actions.md
+      new: true
     - name: Virtualization and performance
       href: hierarchicalgrid/virtualization.md
       new: false
@@ -527,9 +536,9 @@
     - name: Templates
       href: combo-templates.md
       new: false
-    - name: Cascading Scenario
-      href: combo-cascading.md
-      new: false
+    - name: Single Select ComboBox
+      href: simple-combo.md
+      new: true
 - name: Spreadsheet
   href: spreadsheet-overview.md
   new: false
@@ -997,6 +1006,9 @@
 - name: Splitter
   href: splitter.md
   new: false
+- name: Stepper
+  href: stepper.md
+  new: true
 - name: Dock Manager
   href: dock-manager.md
   new: false

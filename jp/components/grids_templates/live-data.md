@@ -33,7 +33,7 @@ _language: ja
 ## データ バインディングおよび更新
 サービスは、ページが読み込まれたとき、およびスライダー コントローラーを使用して特定の数のレコードを取得したときに、コンポーネントにデータを提供します。実際のシナリオでは、更新されたデータはサービスから消費されますが、ここではデータはコードで更新されます。これは、デモをシンプルに保ち、その主な目標であるグリッドのパフォーマンスを実証するために行われます。
 ```html
-<igx-grid #grid [data]="data" ...></igx-grid>
+<igx-grid #grid [data]="data"></igx-grid>
 ```
 ```typescript
 public ngOnInit() {
@@ -46,7 +46,7 @@ public ngOnInit() {
 Angular パイプは、グリッド ビューを更新するために内部的に使用されます。データ フィールド値の変更またはデータ オブジェクト/データ コレクション参照の変更により、対応するパイプがトリガーされます。ただし、これは[`複合データ オブジェクト`](grid.md#複雑なデータ-バインディング)にバインドされている列には当てはまりません。これは、Angular の純粋パイプがネストされたプロパティの変更を検出しないためです。この状況を解決するには、プロパティを含むデータ オブジェクトの新しいオブジェクト参照を提供します。例:
 
 ```html
-<igx-grid #grid [data]="data" ...>
+<igx-grid #grid [data]="data">
     <igx-column field="price.usd"></igx-column>
 </igx-grid>
 ```
@@ -90,8 +90,7 @@ this.hubConnection = new signalR.HubConnectionBuilder()
             this.registerSignalEvents();
             this.broadcastParams(interval, volume, live, updateAll);
         })
-        .catch(() => {})
-        ...
+        .catch(() => {});
 ```
 
 指定された頻度に基づいて、合計 30 の新しい更新がサーバーによって受信されます。特定の cellStyle クラスは、変更を処理する 3 つの列に適用されます - Price、Change および Change (%)。

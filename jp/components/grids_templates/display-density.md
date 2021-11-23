@@ -66,12 +66,13 @@ _language: ja
 <@@igSelector #@@igObjectRef [data]="data" [displayDensity]="'cosy'" >
 </@@igSelector>
 ```
+
 または
+
 ```typescript
-...
-this.@@igObjectRef.displayDensity = "cosy";
-...
+this.@@igObjectRef.displayDensity = 'cosy';
 ```
+
 各オプションを @@igComponent に反映する方法を紹介します。表示密度オプション間で切り替える際に各 @@igComponent 要素の高さとそのパディングが変更されます。カスタムの列 [**width**]({environment:angularApiUrl}/classes/igxcolumncomponent.html#width) を適用する場合、左右のパディングより大きくする必要があることに注意してください。
  - **comfortable** - これはデフォルトのグリッド表示密度です。密度が最も低く、行の高さが `50px` です。左と右のパディングが `24px`; 最小列 [`width`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#width) は `80px` です。
  - **cosy** - 中密度で、行の高さは `40px` です。左と右のパディングが `16px` で最小列 [`width`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#width) は `64px` です。
@@ -90,24 +91,24 @@ this.@@igObjectRef.displayDensity = "cosy";
 
 ```typescript
 @ViewChild(IgxButtonGroupComponent) public buttonGroup: IgxButtonGroupComponent;
-public density = "compact";
+public density = 'compact';
 public displayDensities;
 
 public ngOnInit() {
     this.displayDensities = [
         {
-            label: "compact",
-            selected: this.density === "compact",
+            label: 'compact',
+            selected: this.density === 'compact',
             togglable: true
         },
         {
-            label: "cosy",
-            selected: this.density === "cosy",
+            label: 'cosy',
+            selected: this.density === 'cosy',
             togglable: true
         },
         {
-            label: "comfortable",
-            selected: this.density === "comfortable",
+            label: 'comfortable',
+            selected: this.density === 'comfortable',
             togglable: true
         }
     ];
@@ -265,9 +266,9 @@ public ngOnInit() {
 最後に密度を適用するためのロジックを実装します。
 
 ```typescript
-@ViewChild("@@igObjectRef", { read: @@igxNameComponent })
+@ViewChild('@@igObjectRef', { read: @@igxNameComponent })
 public @@igObjectRef: @@igxNameComponent;
-.....
+
 public selectDensity(event) {
     this.density = this.displayDensities[event.index].label;
 }

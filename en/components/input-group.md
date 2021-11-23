@@ -1,5 +1,5 @@
 ---
-title: Input Groups Component - Native Angular | Ignite UI for Angular
+title: Angular Input Groups Component | Ignite UI for Angular
 _description: The Input Groups component in Ignite UI for Angular allows for easy-to-use and aesthetic forms, simplicity with inputting data, and provides mitigation for handling validation and errors.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components, Angular Label components, Angular Label controls, Angular Input components, Angular Input controls, Input component, Input control, Label component, Label control, Angular Input Group components, Angular Input Group controls, Angular Input directive, Angular Label directive, Angular Forms, Angular Reactive Forms, Angular Form Validation
 ---
@@ -26,8 +26,8 @@ Note that the `IgxInputGroup` also depends on the **FormsModule** in order to ha
 // app.module.ts
 
 ...
-import { IgxInputGroupModule } from "igniteui-angular";
-import { FormsModule } from "@angular/forms";
+import { IgxInputGroupModule } from 'igniteui-angular';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
     ...
@@ -109,14 +109,10 @@ Ignite UI for Angular also provides styling for the input of `type="file"` and i
 </igx-input-group>
 ```
 
-
-
 <code-view style="height:695px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/input-group-sample-5" >
 </code-view>
-
-
 
 ### Input Group Theme
 
@@ -131,8 +127,11 @@ The input group component supports several themes - `material`, `fluent`, `boots
 The first thing we need to do, in order to get started with the input group styling, is to include the `index` file in our style file:
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
-```
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
 
 Next, we have to create a new theme that extends the [`igx-input-group-theme`]({environment:sassApiUrl}/index.html#function-igx-input-group-theme) and pass the parameters which we'd like to change:
 
