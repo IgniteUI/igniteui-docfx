@@ -222,6 +222,28 @@ $my-custom-grid: igx-grid-theme(
 @include igx-grid($my-custom-grid);
 ```
 
+カスタム コンポーネント テーマがグローバル `styles.scss` 以外の別のコンポーネント Sass ファイルで宣言されている場合は、`igx-core` ミックスインも含まれていることを確認してください。
+
+```scss
+// free version
+@use 'igniteui-angular/theming' as *;
+
+// licensed version
+@use '@infragistics/igniteui-angular/theming' as *;
+
+// Include the core module mixin.
+@include igx-core();
+
+// Create your theme.
+$my-custom-grid: igx-grid-theme(
+    $palette: $my-dark-palette,
+    $schema: $dark-schema
+);
+
+// Include your custom theme styles.
+@include igx-grid($my-custom-grid);
+```
+
 Sass Moule システムについて理解を深めるために、[Miriam Suzanne](https://css-tricks.com/author/miriam/) の[記事 (英語)](https://css-tricks.com/introducing-sass-modules/) を参照ください。
 
 ## 12.0.x から 12.1.x の場合:
