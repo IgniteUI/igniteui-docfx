@@ -366,7 +366,7 @@ const cells = grid.getColumnByName('ProductID').cells; // returns IgxGridCell[]
 
 ご注意ください:
 
-*ng update* は、*IgxGridRowComponent*、*IgxTreeGridRowComponent*、*IgxHierarchicalRowComponent*、*IgxGridGroupByRowComponen* のインポート、入力、キャストなどの使用方法を移行します。上記のいずれかを使用するコード内の場所が移行されない場合は、入力/キャストを削除するか、[`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html) で変更してください。
+*ng update* は、*IgxGridCellComponent*、*IgxTreeGridCellComponent*、*IgxHierarchicalGridCellComponent*、*IgxGridExpandableCellComponent* のインポート、入力、キャストなどの使用方法を移行します。上記のいずれかを使用するコード内の場所が移行されない場合は、入力/キャストを削除するか、[`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html) で変更してください。
 * *getCellByIndex* およびその他のメソッドは、そのインデックスの行がデータ行ではなく、IgxGroupByRow、IgxSummaryRow、詳細行などである場合、undefined を返します。
 
 

@@ -108,7 +108,7 @@ Ignite UI for Angular Action Strip コンポーネントは、ホバーなどの
 ```scss
 @use "igniteui-angular/theming" as *;
 
-// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 次に、`igx-action-strip-theme` を拡張する新しいテーマを作成し、変更するパラメーターを渡します。

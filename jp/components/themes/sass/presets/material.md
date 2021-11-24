@@ -4,7 +4,7 @@ Material テーマは、Ignite UI for Angular のデフォルトテーマです�
 ```scss
 @use "igniteui-angular/theming" as *;
 
-// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 @include igx-core();
 @include igx-theme($default-palette);
@@ -14,7 +14,7 @@ Material テーマは、Ignite UI for Angular のデフォルトテーマです�
 ```scss
 @use "igniteui-angular/theming" as *;
 
-// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 @include igx-core();
 @include igx-light-theme($default-palette);
@@ -24,7 +24,7 @@ Material テーマは、Ignite UI for Angular のデフォルトテーマです�
 ```scss
 @use "igniteui-angular/theming" as *;
 
-// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 @include igx-core();
 @include igx-dark-theme($default-palette);
@@ -36,7 +36,7 @@ Material テーマは、Ignite UI for Angular のデフォルトテーマです�
 ```scss
 @use "igniteui-angular/theming" as *;
 
-// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 @include igx-core();
 

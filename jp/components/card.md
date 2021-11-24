@@ -268,7 +268,7 @@ Card のスタイル設定を始めるには、すべてのテーマ関数とコ
 ```scss
 @use "igniteui-angular/theming" as *;
 
-// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 最も単純なアプローチに従って、[`igx-card-theme`]({environment:sassApiUrl}/index.html#function-igx-card-theme) を拡張する新しいテーマを作成し、カードのアイテムをスタイル設定するいくつかのパラメーターを受け取ります。

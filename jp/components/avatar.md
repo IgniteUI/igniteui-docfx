@@ -120,11 +120,11 @@ Avatar のスタイル設定を始めるには、すべてのテーマ関数と�
 ```scss
 @use "igniteui-angular/theming" as *;
 
-// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Following the simplest approach, we create a new theme that extends the [`igx-avatar-theme`]({environment:sassApiUrl}/index.html#function-igx-avatar-theme) and accepts the `$background`, `$color`, and the `$border-radius-square` parameters.
+最も簡単な方法は、[`igx-avatar-theme`]({environment:sassApiUrl}/index.html#function-igx-avatar-theme) を拡張する新しいテーマを作成し、`$background`、`$color` と `$border-radius-square` パラメーターを受け取る方法です。
 
 ```scss
 $custom-avatar-theme: igx-avatar-theme(
@@ -144,7 +144,7 @@ $custom-avatar-theme: igx-avatar-theme(
 
 ### ミックスインの使用
 
-In order to style components for Internet Explorer 11 and older browsers, we have to use different approach, since it doesn't support CSS variables. 
+Internet Explorer 11 以前などブラウザーのコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、別のアプローチが必要です。 
 
 コンポーネントが [`Emulated`](./themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。一方、カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
 

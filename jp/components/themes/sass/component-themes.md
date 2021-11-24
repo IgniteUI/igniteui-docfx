@@ -135,10 +135,10 @@ export class AvatarComponent extends Component {
 ```scss
 // app-avatar.component.scss
 
-// Import the theming module
+// テーマ モジュールをインポートします
 @use "igniteui-angular/theming" as *;
 
-// !IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// !重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 
 $avatar-theme: igx-avatar-theme(
@@ -174,10 +174,10 @@ CSS 変数を使用する間は、`:: ng-deep` 擬似セレクターは必要あ
 以下は、ハードコーディングされた値で複数コンポーネントをスタイル設定する方法の例です。
 
 ```scss
-// Import the theming module
+// テーマ モジュールをインポートします
 @use "igniteui-angular/theming" as *;
 
-// !IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// !重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 
 @include igx-core();
@@ -198,14 +198,14 @@ $avatar-theme: igx-avatar-theme(
 以下のサンプルは、[表示のカプセル化](#表示のカプセル化)セクションのサンプルを開始点として使用しています。
 
 ```scss
-// Import the theming module
+// テーマ モジュールをインポートします
 @use "igniteui-angular/theming" as *;
 
-// !IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// !重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 
-// Enable legacy support first.
-// !IMPORTANT: Only applicable for versions older than Ignite UI for Angular 13.
+// 最初にレガシーサポートを有効にしてください
+// !重要: Ignite UI for Angular 13 より古いバージョンにのみ適用されます。
 $igx-legacy-support: true;
 $avatar-theme: igx-avatar-theme(
   $initials-background: royalblue,

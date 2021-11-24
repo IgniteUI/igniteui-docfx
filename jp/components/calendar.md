@@ -378,7 +378,7 @@ Tab キーを使用してページを移動する場合、*igxCalendarComponent*
 ```scss
 @use "igniteui-angular/theming" as *;
 
-// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 

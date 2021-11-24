@@ -15,7 +15,7 @@ _language: ja
 Ignite UI for Angular の開発は、Internet Explorer 11 がまだ関連していた 2016 年に始まりました。一部のユーザーはまだ IE11 に依存しています。私たちのテーマ エンジンは、同じ API を使用して、エバーグリーンのブラウザと古いブラウザのスタイルを同じように作成できるように構築されています。単一のグローバル変数 `$igx-legacy-support` に基づいて、エンジンの動作を構成できます。デフォルトでは `false` に設定されていますが、宣言をシャドウすることができます。この変数の値は、`igx-theme` ミックスインで `$legacy-support` パラメーターを指定するときにも暗黙的に設定されます。
 
 > [!WARNING]
-> The `$legacy-support` option was removed in igniteui-angular 13.0.x. Support for IE11 and legacy browsers was removed in version 13 and this option is no longer valid.
+> `$legacy-support` オプションは igniteui-angular 13.0.x で削除されました。IE11 およびレガシー ブラウザーのサポートはバージョン 13 で削除され、このオプションは無効になりました。
 
 例:
 
@@ -63,7 +63,7 @@ $my-palette: igx-palette(
 ```scss
 // _variables.scss
 
-$legacy-support: true; /* not supported in Ignite UI for Angular 13 */
+$legacy-support: true; /* Ignite UI for Angular 13 ではサポートされていません */
 
 $my-palette: igx-palette(
   $primary: red, 
@@ -108,7 +108,7 @@ $direction: rtl;
 
 ## グローバル変数
 
-Here's a list of global Sass variables forwarded in the main theming module:
+メインのテーマ モジュールで転送されるグローバル Sass 変数のリストは以下のとおりです。
 
 | 変数名 | 説明                                                                 |
 |:-------------:|:---------------------------------------------------------------------------:|

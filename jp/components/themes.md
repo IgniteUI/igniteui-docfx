@@ -41,7 +41,7 @@ Ignite UI for Angular はコンポーネントのデザインを**<a href="https
 ```scss
 @use "igniteui-angular/theming" as *;
 
-// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 
 $company-color: #2ab759; // Some green shade I like
@@ -113,7 +113,7 @@ $my-primary-800-text: igx-contrast-color($my-palette, "primary", 600);
 // Import the IgniteUI themes library first
 @use "igniteui-angular/theming" as *;
 
-// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 
 $company-color: #2ab759; // Some green shade I like
@@ -124,7 +124,7 @@ $my-color-palette: igx-palette(
   $secondary: $secondary-color
 );
 
-// IMPORTANT: Make sure you always include igx-core first!
+// 重要: 必ず最初に igx-core を含めてください。
 @include igx-core();
 // Pass the color palette we generated to the igx-theme mixin
 @include igx-theme($my-color-palette);
@@ -147,12 +147,12 @@ $my-color-palette: igx-palette(
 // Import the IgniteUI themes library first
 @use "igniteui-angular/theming" as *;
 
-// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 
-// IMPORTANT: Make sure you always include igx-core first!
+// 重要: 必ず最初に igx-core を含めてください。
 @include igx-core();
-// Include typography before igx-theme
+// igx-theme の前にタイポグラフィを含めます
 @include igx-typography($config: (font-family: "Comic Sans MS"));
 @include igx-theme($default-palette);
 ```
