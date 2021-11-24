@@ -4,9 +4,52 @@ _description: Create super fast, responsive Angular data grids and tables with I
 _keywords: angular data grid, angular material table, ignite ui for angular
 ---
 
+<style>
+    .sample-content {
+        display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+        }
+
+.sample-column {
+            display: flex;
+            flex-flow: column nowrap;
+            flex: 1 0 25%;
+            align-content: flex-start;
+            min-width: 280px;
+        }
+
+ .tabbar-wrapper {
+            width: inherit;
+            position: relative;
+            height: 100%;
+            margin: 0 auto;
+        }
+</style>
+
 # Angular Data Grid Overview and Configuration
 
-The Ignite UI for Angular Data Grid is used to display and manipulate data with ease. Quickly bind your data with very little code or use a variety of events to customize different behaviors. This component provides a rich set of features like data selection, excel style filtering, sorting, paging, templating and column moving. Displaying tabular data has never been easier and beautiful thanks to the Material Table-based UI Grid.
+<div class="sample-content">
+    <article class="sample-column">
+        <div class="tabbar-wrapper">
+            <p>
+                The Ignite UI for Angular Data Grid is used to display and manipulate data with ease. Quickly bind your data with very little code or use a variety of events to customize different behaviors. This component provides a rich set of features like data selection, excel style filtering, sorting, paging, templating and column moving. Displaying tabular data has never been easier and beautiful thanks to the Material Table-based UI Grid.
+            </p>
+        </div>
+    </article>
+    <article class="sample-column">
+        <div class="tabbar-wrapper">
+            <div class="tab-content">
+                <img class="b-lazy responsive-img"
+                    src="../../images/general/landing-grid-page.png" 
+                    data-src="../../images/general/landing-grid-page.png" 
+                    data-srcset="../../images/general/landing-grid-page.png 480w, ../../images/general/landing-grid-page.png 768w, ../../images/general/landing-grid-page.png 1100w" 
+                    alt="Angular Data Grid"
+                    title="Angular Data Grid">
+                </div>
+        </div>
+    </article>
+</div>
 
 ## Angular Data Grid Example
 
