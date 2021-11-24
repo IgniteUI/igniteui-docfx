@@ -19,14 +19,14 @@ _canonicalLink: grid/toolbar
 
 # UI 操作のための @@igComponent ツールバー コンテナ
 
-Ignite UI for Angular の @@igComponent は、UI 操作のコンテナとなる [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) 機能をサポートします。Angular ツールバーは Angular コンポーネントの一番上、つまり @@igComponent にあり、水平方向のサイズと一致します。The toolbar container can host predefined UI controls for the following @@igComponent's features:
+Ignite UI for Angular の @@igComponent は、UI 操作のコンテナとなる [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) 機能をサポートします。Angular ツールバーは Angular コンポーネントの一番上、つまり @@igComponent にあり、水平方向のサイズと一致します。ツールバー コンテナは、次の @@igComponent の機能、またはその他のカスタム コンテンツ用に事前定義された UI コントロールをホストできます:
 
  - 列の非表示
  - 列のピン固定
  - Excel エクスポート
  - 高度なフィルタリング
 
-or just any other custom content. The toolbar and the predefined UI components support Angular events and expose API for developers.
+ツールバーと事前定義された UI コンポーネントは、Angular イベントをサポートし、開発者向けに API を公開します。
 
 ## Angular ツールバー グリッドの例
 
@@ -55,7 +55,7 @@ or just any other custom content. The toolbar and the predefined UI components s
 
 }
 
-The predefined `actions` and `title` UI components are added inside the `<igx-grid-toolbar>` and this is all needed to have a toolbar providing default interactions with the corresponding Grid features:
+事前定義された `actions` および `title` UI コンポーネントが  `<igx-grid-toolbar>` 内に追加されます。これはすべて、対応するグリッド機能とのデフォルトのインタラクションを提供するツールバーを持つために必要です。
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -103,9 +103,9 @@ The predefined `actions` and `title` UI components are added inside the `<igx-gr
 ```
 }
 
-> Note: As seen in the code snippet above, the predefined `actions` UI components are wrapped in the [`<igx-grid-toolbar-actions>` container]({environment:angularApiUrl}/classes/igxgridtoolbaractionsdirective.html). This way, the toolbar title is aligned to the left of the toolbar and the actions are aligned to the right of the toolbar.
+> 注: 上記のコード スニペットに示されているように、事前定義された  `actions` UI コンポーネントは [`<igx-grid-toolbar-actions>` コンテナ]({environment:angularApiUrl}/classes/igxgridtoolbaractionsdirective.html)にラップされています。このように、ツールバーのタイトルはツールバーの左側に配置され、アクションはツールバーの右側に配置されます。
 
-Of course, each of these UIs can be added independently of each other, or may not be added at all. This way the toolbar container will be rendered empty:
+これらの UI はそれぞれ独立して追加することも、まったく追加しないこともできます。このようにして、ツールバー コンテナは空になります。
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -132,8 +132,7 @@ Of course, each of these UIs can be added independently of each other, or may no
 ```
 }
 
-For a comprehensive look over each of the default UI components, continue reading the **Features** section
-below.
+デフォルトの各 UI コンポーネントの詳細については、以下の**機能**セクションを読み続けてください。
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 
@@ -268,9 +267,7 @@ constructor() {
 
 
 ### 列の非表示
-[Toolbar Hiding コンポーネント]({environment:angularApiUrl}/classes/igxgridtoolbarhidingcomponent.html) provides the default
-UI for interacting with column hiding. Exposes the same input properties for customizing the UI, such as the component
-title, the placeholder for the component input and the height of the dropdown itself.
+[Toolbar Hiding コンポーネント]({environment:angularApiUrl}/classes/igxgridtoolbarhidingcomponent.html)は、列非表示を操作するためのデフォルトの UI を提供します。コンポーネントのタイトル、コンポーネント入力のプレースホルダー、ドロップダウン自体の高さなど、UI をカスタマイズするための同じ入力プロパティを公開します。
 
 ```html
 <igx-grid-toolbar>
@@ -286,7 +283,7 @@ title, the placeholder for the component input and the height of the dropdown it
 ```
 
 ### 高度なフィルタリング
-[Toolbar Advanced Filtering コンポーネント]({environment:angularApiUrl}/classes/igxgridtoolbaradvancedfilteringcomponent.html) provides the default UI for the Advanced Filtering feature. The component exposes a way to change the default text of the button.
+[Toolbar Advanced Filtering コンポーネント]({environment:angularApiUrl}/classes/igxgridtoolbaradvancedfilteringcomponent.html)は、高度なフィルタリング機能のデフォルトの UI を提供します。コンポーネントは、ボタンのデフォルトのテキストを変更する方法を公開します。
 ```html
 <igx-grid-toolbar>
     <igx-grid-toolbar-actions>

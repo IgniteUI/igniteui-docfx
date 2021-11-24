@@ -44,21 +44,21 @@ ng update @angular/cli
 
 ## 12.2.x から 13.0.x の場合:
 
-### General
+### 一般
 - `IE discontinued support`
 - `IgxDialog`
-    - **Breaking Change** - The default positionSettings open/close animation has been changed to `fadeIn`/`fadeOut`.
-- `igxGrid`, `igxHierarchicalGrid`, `igxTreeGrid`
-    - **Breaking Change** - The following deprecated inputs have been removed - `showToolbar`, `toolbarTitle`, `columnHiding`, `columnHidingTitle`, `hiddenColumnsText`, `columnPinning`, `columnPinningTitle`, `pinnedColumnsText`. Use `IgxGridToolbarComponent`, `IgxGridToolbarHidingComponent`, `IgxGridToolbarPinningComponent` instead.
-    - **Breaking Change** - Upon adding of `igx-toolbar` component, now you should manually specify which features you want to enable - Column Hiding, Pinning, Excel Exporting. Advanced Filtering may be enabled through the `allowAdvancedFiltering` input property on the grid, but it is recommended to enable it declaratively with markup, as with the other features.
-    - **Breaking Change** - The `rowSelected` event is renamed to `rowSelectionChanging` to better reflect its function.
-    - **Breaking Change** - The `columnSelected` event is renamed to `columnSelectionChanging` to better reflect its function.
-    - **Breaking Change** - `columnsCollection` is removed. Use `columns` instead. If at certain ocasions `columns` return empty array, query the columns using `ViewChildren` and access those in `ngAfterViewInit`:
+    - **重大な変更** - デフォルトの positionSettingsopenclose アニメーションが `fadeIn`/`fadeOut` に変更されました。
+- `igxGrid`、`igxHierarchicalGrid`、`igxTreeGrid`
+    - **重大な変更** - 次の非推奨の入力が削除されました - `showToolbar`、`toolbarTitle`、`columnHiding`、 `columnHidingTitle`、`hiddenColumnsText`、`columnPinning`、`columnPinningTitle`、`pinnedColumnsText`。代わりに、`IgxGridToolbarComponent`、`IgxGridToolbarHidingComponent`、`IgxGridToolbarPinningComponent` を使用してください。
+    - **重大な変更** - `igx-toolbar` コンポーネントを追加したら、有効にする機能を手動で指定する必要があります - 列の非表示、ピン固定、Excel のエクスポート。高度なフィルタリングは、グリッドの `allowAdvancedFiltering` 入力プロパティを介して有効にすることができますが、他の機能と同様に、マークアップを使用して宣言的に有効にすることをお勧めします。
+    - **重大な変更** - `rowSelected` イベントは、その機能をより適切に反映するために、`rowSelectionChanging` に名前が変更されました。
+    - **重大な変更** - `columnSelected` イベントは、その機能をより適切に反映するために、`columnSelectionChanging` に名前が変更されました。
+    - **重大な変更** - `columnsCollection` が削除されました。代わりに `columns` を使用してください。特定の場合に `columns` が空の配列を返す場合は、`ViewChildren`を使用して列にクエリを実行し、 `ngAfterViewInit` の列にアクセスします。
         ```html
         @ViewChildren(IgxColumnComponent, { read: IgxColumnComponent })
         public columns: QueryList<IgxColumnComponent>;
         ```
-    - **Breaking change** - when applying a custom directive on the grid, inject the `IGX_GRID_BASE` token in the constructor in order to get reference to the hosting grid:
+    - **重大な変更** - グリッドにカスタム ディレクティブを適用する場合、ホスティング グリッドへの参照を取得するために、コンストラクターに `IGX_GRID_BASE` トークンを注入します。
         ```html
         <igx-grid customDirective ...></igx-grid>
         ```
@@ -72,36 +72,35 @@ ng update @angular/cli
         constructor(@Host() @Optional() @Inject(IGX_GRID_BASE) grid: IgxGridBaseDirective) { }
         ```
 - `RowDirective`, `RowType`
-    - **Breaking Change** - `rowData` and `rowID` properties are removed from `RowDirective` and from classes implementing the `RowType` interface. Use `data` and `key` instead. Use `ng update` for automatic migration. Automatic migration will not be able to pick up some examples from templates, where the template context object is not typed:
+    - **重大な変更** - `rowData` および  `rowID` プロパティは、`RowDirective` および `RowType` インターフェイスを実装するクラスから削除されます。代わりに `data` と `key` を使用してください。自動移行には `ng update` を使用します。自動移行では、テンプレート コンテキスト オブジェクトが入力されていないテンプレートからから一部の例を取得できません。
         ```html
         <ng-template igxCell let-cell="cell">
             <span>{{ cell.rowID }}</span>
             <span>{{ cell.row.rowData.ProductID }}</span>
         </ng-template>
         ```
-        Update such templates manually to
+        このようなテンプレートを手動で更新します:
         ```html
         <span>{{ cell.key }}</span>
         <span>{{ cell.row.data.ProductID }}</span>
         ```
 - `igxGrid`
-    - Exposed a `groupStrategy` input that functions similarly to `sortStrategy`, allowing customization of the grouping behavior of the grid. 
+    - `sortStrategy` と同様に機能する `groupStrategy` 入力を公開し、グリッドのグループ化動作をカスタマイズできるようにしました。
 - `IgxCsvExporterService`, `IgxExcelExporterService`
-    - Exporter services are no longer required to be provided in the application since they are now injected on a root level.
+    - エクスポーター サービスはルート レベルで注入されるようになったため、アプリケーションで提供する必要がなくなりました。
 - `IgxGridToolbarPinningComponent`, `IgxGridToolbarHidingComponent`
-    - Exposed new input `buttonText` which sets the text that is displayed inside the dropdown button in the toolbar.
+    - ツールバーのドロップダウン ボタン内に表示されるテキストを設定する新しい入力 `buttonText` を公開しました。
 - `IgxCombo`
-    - Added `groupSortingDirection` input, which allows you to set groups sorting order.
+    - グループのソート順序を設定できる `groupSortingDirection` 入力が追加されました。
 - `IgxGrid`, `IgxTreeGrid`, `IgxHierarchicalGrid`
-    - Added new directives for re-templating header sorting indicators - `IgxSortHeaderIconDirective`, `IgxSortAscendingHeaderIconDirective` and `IgxSortDescendingHeaderIconDirective`.
+    - ヘッダー ソート インジケーターを再テンプレート化するための新しいディレクティブを追加しました - `IgxSortHeaderIconDirective`、`IgxSortAscendingHeaderIconDirective`、および `IgxSortDescendingHeaderIconDirective`。
 - `IgxDialog`
-    - Added `focusTrap` input to set whether the Tab key focus is trapped within the dialog when opened. Defaults to `true`.
-- `IgxColumnActionsComponent`
-    - **Breaking Change** - The following input has been removed
-        - Input `columns`. Use `igxGrid` `columns` input instead.
+    - 開いたときに Tab キーのフォーカスをダイアログ内にトラップするかどうかを設定する `focusTrap`入力を追加しました。デフォルトは `true` です。
+    - **重大な変更** - 次の入力が削除されました:
+        - `columns` 入力。代わりに `igxGrid``columns` 入力を使用してください。
 - `IgxCarousel`
-    - **Breaking Changes** -The carousel animation type `CarouselAnimationType` is renamed to `HorizontalAnimationType`.
-- `IgxGridStateDirective` - now supports `disableHiding` column prop and column groups
+    - **重大な変更** - カルーセル アニメーション タイプ `CarouselAnimationType` は `HorizontalAnimationType` に名前が変更されました。
+- `IgxGridStateDirective` - `disableHiding` 列プロパティと列グループをサポートするようになりました。
 
 ### テーマ
 * Sass モジュール:
