@@ -40,8 +40,13 @@ _keywords: angular data grid, angular material table, ignite ui for angular
     <article class="sample-column">
         <div class="tabbar-wrapper">
             <div class="tab-content">
-                <img src="https://user-images.githubusercontent.com/14248932/141760715-c95a639f-4896-4713-b690-29f87f35380c.png" alt="Angular Data Grid" style="z-index: 9999999; box-shadow: rgb(0, 0, 255) 0px 0px 0px 2px; border: none; width: 420px;">
-            </div>
+                <img class="b-lazy responsive-img"
+                    src="../../images/general/landing-grid-page.png" 
+                    data-src="../../images/general/landing-grid-page.png" 
+                    data-srcset="../../images/general/landing-grid-page.png 480w, ../../images/general/landing-grid-page.png 768w, ../../images/general/landing-grid-page.png 1100w" 
+                    alt="Angular Data Grid"
+                    title="Angular Data Grid">
+                </div>
         </div>
     </article>
 </div>

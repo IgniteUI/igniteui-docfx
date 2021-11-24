@@ -7,6 +7,7 @@
  ### 6. [Code View Configuration](#code-view-configuration)
  ### 7. [Creating shared help topics](#creating-shared-help-topics)
  ### 8. [Updating of Data Visualization related topics](#updating-of-data-visualization-related-topics)
+ ### 9. [Adding of images](#adding-images)
 
 # <a name='#writing-an-article'>Writing an article</a>
 
@@ -197,3 +198,23 @@ Follow the steps below for lazy loading implementation in a topic ([PR example](
 Our cross platform docs are in `internal repo`. 
 
 If you need to update the cross platform docs, please do so from the [`igniteui-xplat-doc`](https://github.com/IgniteUI/igniteui-xplat-docs) repo, queue an Angular build from `AngularDocFX_EN` build definition in the `igniteui-xplat-doc` repository, and then approve the PR that will come into public repo from ESShared.
+
+# <a name='#adding-images'>Adding of images in the topic</a>
+When there is a need to add image (png, jpeg and etc.) to a topic use the following guidance:
+- add `b-lazy` and `responsive-img` classes - these are responsible for the lazy loading and part of the image responsiveness
+- always add the image as part of the `images` folder.
+- define `data-srcset` with 480w, 768w and 1100w 
+- set `alt` and `title` attributes
+
+
+Example:
+
+```html
+<img class="b-lazy responsive-img"
+    src="../../images/general/landing-grid-page.png" 
+    data-src="../../images/general/landing-grid-page.png" 
+    data-srcset="../../images/general/landing-grid-page.png 480w, ../../images/general/landing-grid-page.png 768w, ../../images/general/landing-grid-page.png 1100w" 
+    alt="Angular Data Grid"
+    title="Angular Data Grid">
+</div>
+```
