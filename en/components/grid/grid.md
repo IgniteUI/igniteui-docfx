@@ -4,9 +4,47 @@ _description: Create super fast, responsive Angular data grids and tables with I
 _keywords: angular data grid, angular material table, ignite ui for angular
 ---
 
+<style>
+    .sample-content {
+        display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+        }
+
+.sample-column {
+            display: flex;
+            flex-flow: column nowrap;
+            flex: 1 0 25%;
+            align-content: flex-start;
+            min-width: 280px;
+        }
+
+ .tabbar-wrapper {
+            width: inherit;
+            position: relative;
+            height: 100%;
+            margin: 0 auto;
+        }
+</style>
+
 # Angular Data Grid Overview and Configuration
 
-The Ignite UI for Angular Data Grid is used to display and manipulate data with ease. Quickly bind your data with very little code or use a variety of events to customize different behaviors. This component provides a rich set of features like data selection, excel style filtering, sorting, paging, templating and column moving. Displaying tabular data has never been easier and beautiful thanks to the Material Table-based UI Grid.
+<div class="sample-content">
+    <article class="sample-column">
+        <div class="tabbar-wrapper">
+            <p>
+                The Ignite UI for Angular Data Grid is used to display and manipulate data with ease. Quickly bind your data with very little code or use a variety of events to customize different behaviors. This component provides a rich set of features like data selection, excel style filtering, sorting, paging, templating and column moving. Displaying tabular data has never been easier and beautiful thanks to the Material Table-based UI Grid.
+            </p>
+        </div>
+    </article>
+    <article class="sample-column">
+        <div class="tabbar-wrapper">
+            <div class="tab-content">
+                <img src="https://user-images.githubusercontent.com/14248932/141760715-c95a639f-4896-4713-b690-29f87f35380c.png" alt="Angular Data Grid" style="z-index: 9999999; box-shadow: rgb(0, 0, 255) 0px 0px 0px 2px; border: none; width: 420px;">
+            </div>
+        </div>
+    </article>
+</div>
 
 ## Angular Data Grid Example
 

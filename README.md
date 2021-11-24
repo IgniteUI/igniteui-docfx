@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/IgniteUI/igniteui-docfx.svg?branch=master)](https://travis-ci.org/IgniteUI/igniteui-docfx)
+![Build Status](https://github.com/IgniteUI/igniteui-docfx/workflows/Node.js%20CI/badge.svg)
 
 # Ignite UI DocFX Site Builder
 
