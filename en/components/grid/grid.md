@@ -33,6 +33,9 @@ _keywords: angular data grid, angular material table, ignite ui for angular
     <article class="sample-column">
         <div class="tabbar-wrapper">
             <p>
+                The Angular Data Grid is used as a feature-rich control for displaying data in a tabular format quickly and easily. Modern grids are complex and are usually packed with a set of features like data selection, excel style filtering, sorting, paging, templating, column moving, exporting to Excel, CSV, and pdf formats and more. 
+            </p>
+            <p>
                 The Ignite UI for Angular Data Grid is used to display and manipulate data with ease. Quickly bind your data with very little code or use a variety of events to customize different behaviors. This component provides a rich set of features like data selection, excel style filtering, sorting, paging, templating and column moving. Displaying tabular data has never been easier and beautiful thanks to the Material Table-based UI Grid.
             </p>
         </div>
