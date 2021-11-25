@@ -220,7 +220,7 @@ $my-color-palette: igx-palette(
     $secondary: $secondary-color
 );
 
-// IMPORTANT: Make sure you always include igx-core first!
+// 重要: 必ず最初に igx-core を含めてください。
 @include igx-core();
 // Pass the color palette we generated to the igx-theme mixin
 @include igx-theme($my-color-palette);

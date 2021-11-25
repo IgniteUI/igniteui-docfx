@@ -39,7 +39,7 @@ export class AppModule {}
 
 ### 通知ダイアログ
 
-通知のダイアログを作成するには、メールコンポーネントのテンプレートに以下のコードを追加します。[`title`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#title)、[`message`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#message)、[`leftButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftbuttonlabel) を設定し、[`leftButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftbuttonselect) イベントを処理します。 
+通知のダイアログを作成するには、メールコンポーネントのテンプレートに以下のコードを追加します。[`title`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#title)、[`message`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#message)、[`leftButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftButtonLabel) を設定し、[`leftButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftbuttonselect) イベントを処理します。 
 
 ```html
 <!--email.component.html-->
@@ -59,7 +59,7 @@ export class AppModule {}
 
 ### 標準ダイアログ
 
-標準のダイアログを作成するには、ファイル マネージャー コンポーネントのテンプレートに以下のコードを追加します。[`title`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#title)、[`message`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#message)、[`leftButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftbuttonlabel)、[`rightButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#rightbuttonlabel) を設定し、[`leftButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftbuttonselect) および [`rightButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#rightbuttonselect) イベントを処理します。 
+標準のダイアログを作成するには、ファイル マネージャー コンポーネントのテンプレートに以下のコードを追加します。[`title`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#title)、[`message`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#message)、[`leftButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftButtonLabel)、[`rightButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#rightButtonLabel) を設定し、[`leftButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftButtonSelect) および [`rightButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#rightButtonSelect) イベントを処理します。 
 
 ```html
 <!--file-manager.component.html-->
@@ -196,15 +196,18 @@ params: {
 
 ### ダイアログ内にフォーカスをトラップ
 
-デフォルトでは、ダイアログが開かれると、Tab キーのフォーカスがダイアログ内にトラップされます。つまり、ユーザーがフォーカス可能な要素をタブで移動し続けても、フォーカスは要素から離れません。フォーカスが最後の要素を離れると、最初の要素に移動します。その逆も同様です。Shift + Tab キーを押すと、フォーカスが最初の要素を離れると、最後の要素にフォーカスが移されます。ダイアログにフォーカス可能な要素が含まれていない場合、フォーカスはダイアログ コンテナ自体にトラップされます。この動作は、[`focusTrap`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#focustrap) プロパティを設定することで変更できます。
+デフォルトでは、ダイアログが開かれると、Tab キーのフォーカスがダイアログ内にトラップされます。つまり、ユーザーがフォーカス可能な要素をタブで移動し続けても、フォーカスは要素から離れません。フォーカスが最後の要素を離れると、最初の要素に移動します。その逆も同様です。Shift + Tab キーを押すと、フォーカスが最初の要素を離れると、最後の要素にフォーカスが移されます。ダイアログにフォーカス可能な要素が含まれていない場合、フォーカスはダイアログ コンテナ自体にトラップされます。この動作は、[`focusTrap`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#focusTrap) プロパティを設定することで変更できます。
 
 ## スタイル設定
 
 ダイアログ ウィンドウのスタイル設定は、すべてのテーマ関数とコンポーネントミックスインが存在する `index` ファイルをはじめにインポートする必要があります。
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+@use "igniteui-angular/theming" as *;
+
+// 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+```
 
 [`igx-dialog-theme`]({environment:sassApiUrl}/index.html#function-igx-dialog-theme) を拡張する新しいテーマを作成し、ダイアログのスタイルを設定できるさまざまなパラメーターを受け取ります。
 
