@@ -7,7 +7,7 @@ _language: ja
 
 # Angular Grid と Angular アプリケーション開発の完全ガイド 
 
-Angular Data Grid とその使用方法については、[このセクション](../grids-and-lists.md#Angular-Data-Grid-の概要) (グリッドの概要トピック) をご覧ください。
+Angular Data Grid とその使用方法については、[このセクション](../grids-and-lists.md#angular-data-grid-の概要) (グリッドの概要トピック) をご覧ください。
 
 ### Ignite UI - Angular アプリ開発のフレームワーク 
 
@@ -21,7 +21,7 @@ Ignite UI for Angular の多くの利点のうち、簡単な統合、迅速な�
 
 ### プロジェクトのインストールと作成 
 
-Ignite UI for Angular は、Angular CLI または [Ignite UI CLI](./cli/getting-started-with-cli.md "Ignite UI CLI 概要ページ") でインストールできます。Angular CLI をすばやく開始するには、以下のコマンドを実行します。 
+Ignite UI for Angular は、Angular CLI または [Ignite UI CLI](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/general/cli/getting-started-with-cli.html "Ignite UI CLI 概要ページ") でインストールできます。Angular CLI をすばやく開始するには、以下のコマンドを実行します。 
 
 `ng add igniteui-angular` 
 
@@ -31,7 +31,7 @@ Ignite UI for Angular を[既存の Angular アプリケーション](https://jp
 
 `npm install –g igniteui-cli` 
 
-Ignite UI CLI がインストールされると、cli の [Ignite UI CLI を使用したガイド付きエクスペリエンス](./cli/step-by-step-guide-using-cli.md "Ignite UI CLI を使用したステップ バイ ステップ ガイド")または [Ignite UI for Angular Schematics](./cli/step-by-step-guide-using-angular-schematics.md "Ignite UI for Angular Schematics を使用したステップ バイ ステップ ガイド") に従ってアプリケーションを簡単にブートストラップできます。これにより、エンドユーザーが 1 つのコマンドで実行できる構成済みアプリが構築されます。
+Ignite UI CLI がインストールされると、cli の [Ignite UI CLI を使用したガイド付きエクスペリエンス](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/general/cli/step-by-step-guide-using-cli.html "Ignite UI CLI を使用したステップ バイ ステップ ガイド")または [Ignite UI for Angular Schematics](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/general/cli/step-by-step-guide-using-angular-schematics.html "Ignite UI for Angular Schematics を使用したステップ バイ ステップ ガイド") に従ってアプリケーションを簡単にブートストラップできます。これにより、エンドユーザーが 1 つのコマンドで実行できる構成済みアプリが構築されます。
 
 `ig` 
 
@@ -41,7 +41,7 @@ Ignite UI CLI がインストールされると、cli の [Ignite UI CLI を使�
 
 製品の依存関係のインポートには、Ignite UI CLI の使用をお勧めします。`ng add igniteui-angular` を使用すると、Ignite UI for Angular パッケージとその依存関係、フォントのインポート、スタイル設定などをプロジェクトにインストールできます。 
 
-Ignite UI CLI せずに Ignite UI for Angular コンポーネントを使用するには、必要となるすべての依存関係を構成し、プロジェクトを適切に設定したことを確認してください。手順は、[はじめに](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/general/getting-started.html "Ignite UI for Angular で作業を開始")のトピックをご確認ください。 
+Ignite UI CLI せずに Ignite UI for Angular コンポーネントを使用するには、必要となるすべての依存関係を構成し、プロジェクトを適切に設定したことを確認してください。手順は、[はじめに](https://jp.infragistics.com/products/ignite-ui-angular/getting-started#ignite-ui-for-angular-のインストール "Ignite UI for Angular で作業を開始")のトピックをご確認ください。 
 
 ### コンポーネントをテンプレートに追加 
 
@@ -209,7 +209,7 @@ Ignite UI には、主要な Angular フレームワークの中で最も機能�
 最小限のコードで、コンポーネントのテーマを簡単に変更できます。SASS で開発されている API は簡単で、単一のコンポーネント、複数のコンポーネント、またはすべてのコンポーネントでテーマをカスタマイズできます。 
 
 ```scss
-// Import the IgniteUI themes library first
+// 最初に IgniteUI テーマ ライブラリをインポートします
 @import '~igniteui-angular/lib/core/styles/themes/index';
 
 $primary-color: #2ab759; // Some green shade I like
@@ -222,11 +222,11 @@ $my-color-palette: igx-palette(
 
 // 重要: 必ず最初に igx-core を含めてください。
 @include igx-core();
-// Pass the color palette we generated to the igx-theme mixin
+// 生成したカラー パレットを igx-theme ミックスインに渡します
 @include igx-theme($my-color-palette);
 ```
 
-IgniteUI for Angular はコンポーネントのデザインを[マテリアル デザイン原則](https://material.io/guidelines/material-design/introduction.html "マテリアル デザインの概要")に基づき、Google によって作成されたコンポーネントの色、サイズ、タイポグラフィ、およびルックアンドフィールにできるだけ近づけるようデザインしています。例:
+Ignite UI for Angular はコンポーネントのデザインを[マテリアル デザイン原則](https://material.io/guidelines/material-design/introduction.html "マテリアル デザインの概要")に基づき、Google によって作成されたコンポーネントの色、サイズ、タイポグラフィ、およびルックアンドフィールにできるだけ近づけるようデザインしています。例:
 
 <div class="sample-container loading" style="height: 477px">
     <iframe id="list-sample-4-iframe" src='{environment:crmDemoBaseUrl}/grid-crm' width="100%" height="100%" seamless="" frameborder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -265,7 +265,6 @@ Ignite UI for Angular は [Indigo.Design システム](https://jp.infragistics.c
 Grid コンポーネントは一般に、大量の表データを可視化することを目的としています。パフォーマンスに関しては、Grid は、読み込み時、実行時およびソフト パフォーマンスに優れています。  
 
 読み込み時間および実行時のパフォーマンスに関する Web アプリケーションの要件を満たすために、描画される Document Object Model (DOM) 要素を仮想化し、ユーザーがコンポーネントのコンテナーで垂直方向および水平ス方向にクロールする際に DOM 要素をスワップまたは再利用することが重要です。igxGrid は、見た目を損なうことなく優れたランタイムのスクロール パフォーマンスと、ソフト パフォーマンス (ソフトウェアの一般的なユーザビリティによって定義される) を備えています。以下は、スクロール パフォーマンスを備えた Gif の例です。 
-
 
 <div>
 <img class="b-lazy responsive-img" style="-webkit-box-shadow: 8px 9px 9px 5px #ccc; -moz-box-shadow: 8px 9px 9px 5px #ccc; box-shadow: 8px 9px 9px 5px #ccc;" 

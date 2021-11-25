@@ -258,7 +258,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 ```scss
 :host {
     ::ng-deep {
-        // Pass the custom navbar theme to the `igx-navbar` mixin
+        // Custom navbar theme を `igx-navbar` ミックスインに渡します
         @include igx-navbar($custom-navbar-theme);
     }
 }

@@ -59,7 +59,7 @@ $my-color-palette: igx-palette(
 @include igx-core();
 // Add the typography styles before the main theme.
 @include igx-typography();
-// Pass the color palette we generated to the igx-theme mixin.
+// 生成したカラー パレットを igx-theme ミックスインに渡します.
 @include igx-theme($my-color-palette);
 ```
 

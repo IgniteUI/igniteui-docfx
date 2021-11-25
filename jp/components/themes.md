@@ -110,7 +110,7 @@ $my-primary-800-text: igx-contrast-color($my-palette, "primary", 600);
 > `igx-core` を `igx-theme` の前に含める必要があります。`igx-core` ミックスインは `igx-theme` の基本定義を提供します。
 
 ```scss
-// Import the IgniteUI themes library first
+// 最初に IgniteUI テーマ ライブラリをインポートします
 @use "igniteui-angular/theming" as *;
 
 // 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
@@ -126,7 +126,7 @@ $my-color-palette: igx-palette(
 
 // 重要: 必ず最初に igx-core を含めてください。
 @include igx-core();
-// Pass the color palette we generated to the igx-theme mixin
+// 生成したカラー パレットを igx-theme ミックスインに渡します
 @include igx-theme($my-color-palette);
 ```
 
@@ -144,7 +144,7 @@ $my-color-palette: igx-palette(
 > `igx-core` の後に `igx-typography` を含める必要があります。今後のリリースで条件が変わることがあります。
 
 ```scss
-// Import the IgniteUI themes library first
+// 最初に IgniteUI テーマ ライブラリをインポートします
 @use "igniteui-angular/theming" as *;
 
 // 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。

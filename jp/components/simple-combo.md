@@ -340,7 +340,7 @@ $custom-drop-down-theme: igx-drop-down-theme(
 - Simple ComboBox には、高さのサイズを設定するための入力がありません。将来、[IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) コンポーネントは、カスタムのサイズ変更オプションを公開し、[IgxSimpleCombo]({environment:angularApiUrl}/classes/igxsimplecombocomponent.html) は適切なスタイル設定と外観の統一に同じ機能を使用します。
 
 > [!NOTE]
-> Simple ComboBox は内部で `igxForOf` ディレクティブを使用するため、すべての `igxForOf` 制限は Simple ComboBox に対して有効です。詳細については、[igxForOf Known Issues](for-of.md#既知の制限) の既知の問題のセクションを参照してください。
+> Simple ComboBox は内部で `igxForOf` ディレクティブを使用するため、すべての `igxForOf` 制限は Simple ComboBox に対して有効です。詳細については、[igxForOf 既知の制限](for-of.md#既知の制限) の既知の問題のセクションを参照してください。
 
 ## API まとめ
 <div class="divider--half"></div>

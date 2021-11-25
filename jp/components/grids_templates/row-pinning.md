@@ -440,7 +440,7 @@ Internet Explorer 11 のコンポーネントをスタイル設定するには�
 ```scss
 :host {
     ::ng-deep {
-        // Pass the custom grid theme to the `igx-grid` mixin
+        // Custom grid theme を `igx-grid` ミックスインに渡します
         @include igx-grid($custom-grid-theme);
     }
 }

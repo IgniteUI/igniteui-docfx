@@ -208,7 +208,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 ```scss
 :host {
     ::ng-deep {
-        // Pass the custom toast theme to the `igx-toast` mixin
+        // Custom toast theme を `igx-toast` ミックスインに渡します
         @include igx-toast($custom-toast-theme);
     }
 }

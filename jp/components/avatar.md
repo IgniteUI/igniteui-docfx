@@ -151,7 +151,7 @@ Internet Explorer 11 以前などブラウザーのコンポーネントをス�
 ```scss
 :host {
     ::ng-deep {
-        // Pass the custom avatar theme to the `igx-avatar` mixin
+        // Custom avatar theme を `igx-avatar` ミックスインに渡します
         @include igx-avatar($custom-avatar-theme);
     }
 }
