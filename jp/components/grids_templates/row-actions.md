@@ -24,6 +24,7 @@ Ignite UI for Angular の階層グリッド コンポーネントは、`ActionSt
 }
 
 - [`IgxGridEditingActionsComponent`]({environment:angularApiUrl}/classes/igxgrideditingactionscomponent.html) - グリッド編集専用に設計された機能と UI を含みます。[`rowEditable`]({environment:angularApiUrl}/classes/IgxGridComponent.html#rowEditable) オプションとグリッドの行削除に応じて、セルまたは行の編集モードをすばやく切り替えることができます。
+
 - [`IgxGridPinningActionsComponent`]({environment:angularApiUrl}/classes/igxgridpinningactionscomponent.html) - グリッド行のピン固定のために特別に設計された機能と UI を含みます。行をすばやくピン固定し、ピン固定された行とその無効な行の間を移動できます。
 
 
@@ -69,7 +70,9 @@ Ignite UI for Angular の階層グリッド コンポーネントは、`ActionSt
 
 >注: これらのコンポーネントは [`IgxGridActionsBaseDirective`]({environment:infragisticsBaseUrl}/classes/igxgridactionsbasedirective.html) を継承します。カスタム グリッド アクション コンポーネントを作成する場合、`IgxGridActionsBaseDirective` も継承する必要があります。
 >注: `IgxActionStripComponent` がグリッドの子コンポーネントの場合、行をホバーすると UI が自動的に表示されます。
+
 ## カスタム実装
+
 これらのコンポーネントは、カスタマイズのための柔軟性を提供するテンプレートを公開します。たとえば、`delete`、`edit` などの行アクションがある Gmail シナリオで `ActionStrip` を使用する場合、`igx-icon` でボタン コンポーネントを作成します。そして、クリック イベントを追加し、`igx-action-strip` コンポーネントに挿入します。
 
 ```html
@@ -94,7 +97,7 @@ Ignite UI for Angular の階層グリッド コンポーネントは、`ActionSt
 @@if (igxName === 'IgxTreeGrid') {
 <code-view style="height: 600px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/grid-action-strip" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-action-strip" >
 </code-view>
 }
 

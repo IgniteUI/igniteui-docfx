@@ -25,6 +25,10 @@ _keywords: angular data grid, angular material table, ignite ui for angular
             height: 100%;
             margin: 0 auto;
         }
+
+ .tabbar-wrapper > p {
+            padding-right: 20px
+        }
 </style>
 
 # Angular Data Grid Overview and Configuration
@@ -32,16 +36,19 @@ _keywords: angular data grid, angular material table, ignite ui for angular
 <div class="sample-content">
     <article class="sample-column">
         <div class="tabbar-wrapper">
-            <p>
-                The Ignite UI for Angular Data Grid is used to display and manipulate data with ease. Quickly bind your data with very little code or use a variety of events to customize different behaviors. This component provides a rich set of features like data selection, excel style filtering, sorting, paging, templating and column moving. Displaying tabular data has never been easier and beautiful thanks to the Material Table-based UI Grid.
-            </p>
+            <p> The Angular Data Grid is used as a feature-rich control for displaying data in a tabular format quickly and easily. Modern grids are complex and are usually packed with a set of features like data selection, excel style filtering, sorting, paging, templating, column moving, exporting to Excel, CSV, and pdf formats and more. </p>
         </div>
     </article>
     <article class="sample-column">
         <div class="tabbar-wrapper">
             <div class="tab-content">
-                <img src="https://user-images.githubusercontent.com/14248932/141760715-c95a639f-4896-4713-b690-29f87f35380c.png" alt="Angular Data Grid" style="z-index: 9999999; box-shadow: rgb(0, 0, 255) 0px 0px 0px 2px; border: none; width: 420px;">
-            </div>
+                <img class="b-lazy responsive-img"
+                    src="../../images/general/landing-grid-page.png" 
+                    data-src="../../images/general/landing-grid-page.png" 
+                    data-srcset="../../images/general/landing-grid-page.png 480w, ../../images/general/landing-grid-page.png 768w, ../../images/general/landing-grid-page.png 1100w" 
+                    alt="Angular Data Grid"
+                    title="Angular Data Grid">
+                </div>
         </div>
     </article>
 </div>

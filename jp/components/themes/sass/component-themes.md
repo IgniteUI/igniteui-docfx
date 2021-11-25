@@ -6,13 +6,16 @@ _language: ja
 ---
 
 # コンポーネント テーマ
+
 <div class="highlight">コンポーネント テーマは、テーマをグローバルに定義して特定のコンポーネント インスタンスのスタイルを変更できます。</div>
 <div class="divider"></div>
 
 ## 概要
+
 <div class="divider--half"></div>
 
 Ignite UI for Angular でコンポーネント テーマを設定する方法、次にコンポーネント レベル テーマの作成方法について説明します。IE 11 などの古いブラウザーをサポートするためにコンポーネントのテーマ設定に 2 つの方法があります。
+
 - 1 つ目の方法は、コンポーネント インスタンスを [CSS 変数](https://developer.mozilla.org/ja-JP/docs/Web/CSS/Using_CSS_variables) を使用してスタイル設定する方法です。CSS 変数を使用するとスタイルを繰り返し定義することなくコンポーネント テーマを作成できます。この方法は、CSS 変数の値をランタイムで変更できます。
 - 2 つ目の方法は、特定のコンポーネントで既に宣言されている CSS ルールを上書きする新しいルールを作成することです。この方法は古いブラウザーに適切なテーマをサポートする簡単で唯一の方法ですが、多くの追加 CSS ルールを生成した CSS テーマに追加するため理想的ではありません。
 
@@ -20,13 +23,14 @@ Ignite UI for Angular でコンポーネント テーマを設定する方法、
 <div class="divider"></div>
 
 ## テーマの作成
+
 <div class="divider--half"></div>
 
 コンポーネント テーマは複数のパーツで構成されます。
 
 - **コンポーネント テーマ関数** - Sass 関数は、渡した引数を正規化して コンポーネント ミックスインでテーマを作成します。
-- **CSS 変数 mixin** - コンポーネント テーマを使用し、特定コンポーネントのスタイルに使用される *CSS 変数*を生成する Sass mixin。
-- **コンポーネント mixin** - コンポーネント テーマを使用し、特定コンポーネントのスタイルに使用される *CSS ルール*を生成する Sass mixin。
+- **CSS 変数 mixin** - コンポーネント テーマを使用し、特定コンポーネントのスタイルに使用される **CSS 変数**を生成する Sass mixin。
+- **コンポーネント mixin** - コンポーネント テーマを使用し、特定コンポーネントのスタイルに使用される **CSS ルール**を生成する Sass mixin。
 
 アバターのデフォルトテーマに設定するテーマと異なる背景色を持つ新規のグローバル アバター テーマを作成する場合、[**概要セクション**](#概要)のようにコンポーネント テーマを作成する 2 つの一般的な方法があります。 
 コンポーネントテーマを体系化し、スコープする方法があります。最も簡単な方法は、[**グローバル テーマ**](./global-themes.md)を定義した同じファイルで行う方法です。
@@ -38,7 +42,7 @@ Ignite UI for Angular でコンポーネント テーマを設定する方法、
 
 // Change the background of the avatar to purple.
 $new-avatar-theme: igx-avatar-theme(
-    $background: purple
+  $background: purple,
 );
 
 // Pass the css-vars to the `igx-css-vars` mixin
@@ -56,17 +60,20 @@ $new-avatar-theme: igx-avatar-theme(
 
 // Later
 $another-avatar-theme: igx-avatar-theme(
-    $background: royalblue
+  $background: royalblue,
 );
 
 @include igx-css-vars($another-avatar-theme);
 ```
+
 上記コードでは、以前の `igx-css-vars` ミックスインはすべて上書きされるため、事実上のグローバル テーマは `$another-avatar-theme` なります。
 
 ここで次のポイントに移ります。
+
 <div class="divider"></div>
 
 ## テーマのスコープ
+
 <div class="divider--half"></div>
 
 前の例のように同じコンポーネントをターゲットにした複数のテーマを同じレベルに追加する場合、最後のテーマ ミックスインが優先されます。これは CSS のカスケードの動作に起因します。同じコンポーネントタイプをターゲットにした 2 つ以上のテーマが必要な場合、セレクターにスコープする必要があります。例えば、複数の `igx-avatar` テーマを作成して特定の CSS セレクターにスコープし、後でコンポーネントマークアップに使用できます。
@@ -75,11 +82,11 @@ $another-avatar-theme: igx-avatar-theme(
 // ...
 // CSS class selectors
 .avatar-royalblue {
-    @include igx-css-vars($avatar-royalblue-theme);
+  @include igx-css-vars($avatar-royalblue-theme);
 }
 
 .avatar-purple {
-    @include igx-css-vars($avatar-green-theme);
+  @include igx-css-vars($avatar-green-theme);
 }
 ```
 
@@ -87,13 +94,14 @@ $another-avatar-theme: igx-avatar-theme(
 
 ```html
 <div class="avatar-royalblue">
-    <igx-avatar initials="AZ"></igx-avatar>
+  <igx-avatar initials="AZ"></igx-avatar>
 </div>
 
 <div class="avatar-purple">
-    <igx-avatar icon="home"></igx-avatar>
+  <igx-avatar icon="home"></igx-avatar>
 </div>
 ```
+
 <div class="divider"></div>
 
 ## 表示のカプセル化
@@ -110,15 +118,15 @@ Angular では、表示のカプセル化に 3 つの方法 Emulated (デフォ�
 シンプルなコンポーネントです。
 
 ```typescript
-import { Component, Input } from '@angular/core';
+import { Component, Input } from "@angular/core";
 
 @Component({
-    selector: 'app-avatar',
-    styleUrls: ['./app-avatar.component.scss'],
-    template: `<igx-avatar [initials]="initials"></igx-avatar>`
+  selector: "app-avatar",
+  styleUrls: ["./app-avatar.component.scss"],
+  template: `<igx-avatar [initials]="initials"></igx-avatar>`,
 })
 export class AvatarComponent extends Component {
-    @Input() public initials = 'AZ';
+  @Input() public initials = "AZ";
 }
 ```
 
@@ -127,17 +135,19 @@ export class AvatarComponent extends Component {
 ```scss
 // app-avatar.component.scss
 
-// Import all required functions and mixins
-@import '~igniteui-angular/lib/core/styles/themes/utilities';
-@import '~igniteui-angular/lib/core/styles/components/avatar/avatar-theme';
-@import '~igniteui-angular/lib/core/styles/components/avatar/avatar-component';
+// テーマ モジュールをインポートします
+@use "igniteui-angular/theming" as *;
 
-$avatar-theme: igx-avatar-theme($background: royalblue);
+// !重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+
+$avatar-theme: igx-avatar-theme(
+  $background: royalblue,
+);
 
 :host {
-    @include igx-css-vars($avatar-theme);
+  @include igx-css-vars($avatar-theme);
 }
-
 ```
 
 CSS 変数を使用する間は、`:: ng-deep` 擬似セレクターは必要ありません。上記コードで背景色に常に `royalblue` が含まれる `igx-avatar` の CSS 変数を作成しました。カスタム アバターのテーマは、その他の `igx-avatar` コンポーネントに影響しないため、カスタムの `app-avatar` コンポーネント内でカプセル化されたままです。
@@ -147,13 +157,14 @@ CSS 変数を使用する間は、`:: ng-deep` 擬似セレクターは必要あ
 ```css
 /* app-avatar.component.css */
 :host {
-    --igx-avatar-background: royalblue;
+  --igx-avatar-background: royalblue;
 }
 ```
 
 <div class="divider"></div>
 
 ## 古いブラウザーの場合
+
 <div class="divider--half"></div>
 
 [概要](#概要)セクションの説明にあったように、`$igx-legacy-support` グローバル変数を `true` に設定することにより、ハードコーディングされた値をコンポーネントのスタイル設定に使用できます。`igx-theme` ミックスインを使用して `$legacy-support` に `true` を渡した場合、`$igx-legacy-support` もまた `true` に設定されます。
@@ -163,20 +174,23 @@ CSS 変数を使用する間は、`:: ng-deep` 擬似セレクターは必要あ
 以下は、ハードコーディングされた値で複数コンポーネントをスタイル設定する方法の例です。
 
 ```scss
-// Import the IgniteUI themes library first
-@import '~igniteui-angular/lib/core/styles/themes/index';
+// テーマ モジュールをインポートします
+@use "igniteui-angular/theming" as *;
+
+// !重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
+// @import '~igniteui-angular/lib/core/styles/themes/index';
 
 @include igx-core();
-@include igx-theme(
-    $palette: $default-palette,
-    $legacy-support: true
-);
+@include igx-theme($palette: $default-palette, $legacy-support: true);
 
 // Overwrite the default themes for igx-avatar using hard-coded values:
-$avatar-theme: igx-avatar-theme($background: royalblue);
+$avatar-theme: igx-avatar-theme(
+  $background: royalblue,
+);
 
 @include igx-avatar($avatar-theme);
 ```
+
 <div class="divider"></div>
 
 ### カプセル化した表示の使用 
@@ -184,27 +198,35 @@ $avatar-theme: igx-avatar-theme($background: royalblue);
 以下のサンプルは、[表示のカプセル化](#表示のカプセル化)セクションのサンプルを開始点として使用しています。
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/utilities';
-@import '~igniteui-angular/lib/core/styles/components/avatar/avatar-theme';
-@import '~igniteui-angular/lib/core/styles/components/avatar/avatar-component'; 
+// テーマ モジュールをインポートします
+@use "igniteui-angular/theming" as *;
 
-// Enable legacy support first.
+// !重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+
+// 最初にレガシーサポートを有効にしてください
+// !重要: Ignite UI for Angular 13 より古いバージョンにのみ適用されます。
 $igx-legacy-support: true;
-$avatar-theme: igx-avatar-theme($initials-background: royalblue);
+$avatar-theme: igx-avatar-theme(
+  $initials-background: royalblue,
+);
 
 :host ::ng-deep {
-    @include igx-avatar($avatar-theme);
+  @include igx-avatar($avatar-theme);
 }
 ```
+
 <div class="divider"></div>
 
 ## API の概要
-* [Global テーマ]({environment:sassApiUrl}/index.html#mixin-igx-theme)
-* [Avatar テーマ]({environment:sassApiUrl}/index.html#function-igx-avatar)
 
 <div class="divider--half"></div>
 
+* [Global テーマ]({environment:sassApiUrl}/index.html#mixin-igx-theme)
+* [Avatar テーマ]({environment:sassApiUrl}/index.html#function-igx-avatar)
+
 ## その他のリソース
+
 <div class="divider--half"></div>
 
 グローバル テーマの設定方法:

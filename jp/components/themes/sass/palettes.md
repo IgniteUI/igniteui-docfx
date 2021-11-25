@@ -17,9 +17,6 @@ Ignite UI for Angular のコンテキストでのパレットは [Sass Maps](htt
 ```scss
 // _variables.scss
 
-// Import the IgniteUI themes library first
-@import '~igniteui-angular/lib/core/styles/themes/index';
-
 $melon-palette: igx-palette(
     $primary: #2ab759,
     $secondary: #f96a88,
@@ -164,15 +161,14 @@ $default-palette: $my-palette;
 メインの styles ファイル:
 ```scss
 // src/styles/styles.scss
-@import '~igniteui-angular/src/lib/core/styles/themes/index';
-@import 'variables';
+@use 'variables' as *;
 
 @include igx-theme($palette: $my-palette);
 ```
 
 コンポーネントの `.scss` ファイル:
 ```scss
-@import '../styles/styles/variables';
+@use '../styles/styles/variables' as *;
 
 :host {
   background: igx-color($variant: 900);
@@ -269,7 +265,7 @@ CSS クラスを使用して Web 要素 (テキストや背景など) にカラ�
     $prefix: 'bg'
 );
 ```
-上記のコードは、パレットの各カラー バリアントに CSS クラスを生成します。たとえば、`primary` パレットの `500` カラー バリアントには、`.igx-primary-500-bg` クラスが与えられます。
+上記のコードは、パレットの各カラー バリアントに CSS クラスを生成します。たとえば、`primary` パレットの `500` カラー バリアントには、`.bg-primary-500` クラスが与えられます。
 
 ```html
 <div class="bg-primary-500">...</div>

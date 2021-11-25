@@ -263,7 +263,10 @@ Ignite UI for Angular IgxTree は、サーバーから最小限のデータの�
 [Ignite UI for Angular テーマ](themes/index.md) を使用すると、ツリーの外観を大幅に変更できます。はじめに、テーマ エンジンによって公開されている関数を使用するために、スタイル ファイルに `index` ファイルをインポートする必要があります。 
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
+@use "igniteui-angular/theming" as *;
+
+// 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
+// @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
 最も単純なアプローチに従って、[igx-tree-theme]({environment:sassApiUrl}/index.html#function-igx-tree-theme) を拡張し、変更したいパラメーターを渡す新しいテーマを作成します。
