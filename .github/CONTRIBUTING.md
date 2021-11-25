@@ -7,7 +7,7 @@
  ### 6. [Code View Configuration](#code-view-configuration)
  ### 7. [Creating shared help topics](#creating-shared-help-topics)
  ### 8. [Updating of Data Visualization related topics](#updating-of-data-visualization-related-topics)
- ### 9. [Adding of images](#adding-images)
+ ### 9. [Adding of images](#adding-of-images-in-the-topic)
 
 # <a name='#writing-an-article'>Writing an article</a>
 
