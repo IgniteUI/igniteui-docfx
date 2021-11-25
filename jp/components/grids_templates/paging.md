@@ -208,7 +208,7 @@ $dark-paginator: igx-paginator-theme(
 );
 ```
 
-`igx-paginator-theme` はページング コンテナの色の制御のみですが、ポケットベル UI のボタンには影響しません。これらのボタンにスタイル設定するために、新しいボタン テーマを作成しましょう。
+`igx-paginator-theme` はページング コンテナーの色の制御のみですが、ポケットベル UI のボタンには影響しません。これらのボタンにスタイル設定するために、新しいボタン テーマを作成しましょう。
 
 ```scss
 $dark-button: igx-button-theme(

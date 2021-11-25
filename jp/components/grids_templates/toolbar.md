@@ -17,9 +17,9 @@ _canonicalLink: grid/toolbar
 ---
 }
 
-# UI 操作のための @@igComponent ツールバー コンテナ
+# UI 操作のための @@igComponent ツールバー コンテナー
 
-Ignite UI for Angular の @@igComponent は、UI 操作のコンテナとなる [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) 機能をサポートします。Angular ツールバーは Angular コンポーネントの一番上、つまり @@igComponent にあり、水平方向のサイズと一致します。ツールバー コンテナは、次の @@igComponent の機能、またはその他のカスタム コンテンツ用に事前定義された UI コントロールをホストできます:
+Ignite UI for Angular の @@igComponent は、UI 操作のコンテナーとなる [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) 機能をサポートします。Angular ツールバーは Angular コンポーネントの一番上、つまり @@igComponent にあり、水平方向のサイズと一致します。ツールバー コンテナーは、次の @@igComponent の機能、またはその他のカスタム コンテンツ用に事前定義された UI コントロールをホストできます:
 
  - 列の非表示
  - 列のピン固定
@@ -103,9 +103,9 @@ Ignite UI for Angular の @@igComponent は、UI 操作のコンテナとなる 
 ```
 }
 
-> 注: 上記のコード スニペットに示されているように、事前定義された  `actions` UI コンポーネントは [`<igx-grid-toolbar-actions>` コンテナ]({environment:angularApiUrl}/classes/igxgridtoolbaractionsdirective.html)にラップされています。このように、ツールバーのタイトルはツールバーの左側に配置され、アクションはツールバーの右側に配置されます。
+> 注: 上記のコード スニペットに示されているように、事前定義された  `actions` UI コンポーネントは [`<igx-grid-toolbar-actions>` コンテナー]({environment:angularApiUrl}/classes/igxgridtoolbaractionsdirective.html)にラップされています。このように、ツールバーのタイトルはツールバーの左側に配置され、アクションはツールバーの右側に配置されます。
 
-これらの UI はそれぞれ独立して追加することも、まったく追加しないこともできます。このようにして、ツールバー コンテナは空になります。
+これらの UI はそれぞれ独立して追加することも、まったく追加しないこともできます。このようにして、ツールバー コンテナーは空になります。
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -200,7 +200,7 @@ IgxHierarchicalGrid の子グリッドの実装方法と DI スコープの動�
 ```
 
 ### 操作
-ツールバーは、ユーザーが親グリッドに関連して操作/インタラクションを配置できる[特定のコンテナ]({environment:angularApiUrl}/classes/igxgridtoolbaractionsdirective.html)を公開します。
+ツールバーは、ユーザーが親グリッドに関連して操作/インタラクションを配置できる[特定のコンテナー]({environment:angularApiUrl}/classes/igxgridtoolbaractionsdirective.html)を公開します。
 ツールバーのタイトル部分と同様に、ユーザーは、デフォルトのツールバー インタラクション コンポーネントを含め、そのテンプレート部分内にどんなものでも提供できます。
 ```html
 <igx-grid-toolbar>

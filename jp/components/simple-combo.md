@@ -320,7 +320,7 @@ $custom-drop-down-theme: igx-drop-down-theme(
 ```
 
 > [!NOTE]
-> [IgxSimpleCombo]({environment:angularApiUrl}/classes/igxsimplecombocomponent.html) コンポーネントは、[IgxOverlay](overlay.md) サービスを使用して、Simple ComboBox 項目リスト コンテナを保持および表示します。スタイルを適切にスコープするには、[OverlaySetting.outlet]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet) を使用してください。詳細については、[IgxOverlay スタイル ガイド](overlay-styling.md)を確認してください。
+> [IgxSimpleCombo]({environment:angularApiUrl}/classes/igxsimplecombocomponent.html) コンポーネントは、[IgxOverlay](overlay.md) サービスを使用して、Simple ComboBox 項目リスト コンテナーを保持および表示します。スタイルを適切にスコープするには、[OverlaySetting.outlet]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet) を使用してください。詳細については、[IgxOverlay スタイル ガイド](overlay-styling.md)を確認してください。
 
 > [!Note]
 > `IgxSimpleCombo` のデフォルトの`タイプ`は、`line` である [IgxSelect](select.md) とは異なり `box` です。

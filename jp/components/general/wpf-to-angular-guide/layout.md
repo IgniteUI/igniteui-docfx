@@ -7,7 +7,7 @@ _language: ja
 
 ## ページ レイアウト
 
-WPF では、アプリケーション内で要素をレイアウトするには、要素を [`Panel`](https://docs.microsoft.com/ja-jp/dotnet/api/system.windows.controls.panel?view=netframework-4.8) 内に配置する必要があります。パネルは、子要素の配置を制御するコンテナ要素です。Angular では、ページ レイアウトとその子要素をカスタマイズするには、CSS を使用する必要があります。WPF で最も一般的なパネルを示し、CSS で同様のレイアウトを実現する方法を説明します。
+WPF では、アプリケーション内で要素をレイアウトするには、要素を [`Panel`](https://docs.microsoft.com/ja-jp/dotnet/api/system.windows.controls.panel?view=netframework-4.8) 内に配置する必要があります。パネルは、子要素の配置を制御するコンテナー要素です。Angular では、ページ レイアウトとその子要素をカスタマイズするには、CSS を使用する必要があります。WPF で最も一般的なパネルを示し、CSS で同様のレイアウトを実現する方法を説明します。
 
 ### StackPanel
 
@@ -26,7 +26,7 @@ WPF では、アプリケーション内で要素をレイアウトするには�
 
 <img class="responsive-img" src="../../../images/general/wpf_stackpanel.png" />
 
-Angular で同様のレイアウトを実現する場合は、CSS Flexbox レイアウトを使用できます。フレキシブル ボックス レイアウト モジュールは、柔軟でレスポンシブなレイアウト構造の設計が可能な構造になっています。Flexbox レイアウトを使用するには、[`display`](https://www.w3schools.com/cssref/pr_class_display.asp) プロパティを `flex` に設定したコンテナを定義する必要があります。また、アイテムを垂直に積み重ねるために、[`flex-direction`](https://www.w3schools.com/cssref/css3_pr_flex-direction.asp) プロパティを `column` に設定する必要があります。
+Angular で同様のレイアウトを実現する場合は、CSS Flexbox レイアウトを使用できます。フレキシブル ボックス レイアウト モジュールは、柔軟でレスポンシブなレイアウト構造の設計が可能な構造になっています。Flexbox レイアウトを使用するには、[`display`](https://www.w3schools.com/cssref/pr_class_display.asp) プロパティを `flex` に設定したコンテナーを定義する必要があります。また、アイテムを垂直に積み重ねるために、[`flex-direction`](https://www.w3schools.com/cssref/css3_pr_flex-direction.asp) プロパティを `column` に設定する必要があります。
 
 ```html
 <div class="flex-container">
@@ -139,7 +139,7 @@ Orientation="Vertical" の WrapPane と同様の結果を得るには、[`flex-d
 
 <img class="responsive-img" src="../../../images/general/wpf_grid.png" />
 
-Angular では、CSS グリッド レイアウト モジュールを使用できます。CSS グリッド レイアウト モジュールは、行と列を持つグリッド ベースのレイアウト システムを提供します。グリッド レイアウトを使用するには、`grid` または `inline-grid` に設定された [`display`](https://www.w3schools.com/cssref/pr_class_display.asp) プロパティを持つコンテナを定義します。
+Angular では、CSS グリッド レイアウト モジュールを使用できます。CSS グリッド レイアウト モジュールは、行と列を持つグリッド ベースのレイアウト システムを提供します。グリッド レイアウトを使用するには、`grid` または `inline-grid` に設定された [`display`](https://www.w3schools.com/cssref/pr_class_display.asp) プロパティを持つコンテナーを定義します。
 
 ```html
 <div class="grid-container">
@@ -232,12 +232,12 @@ WPF グリッドと CSS グリッドの重要な違いが 1 つあります。WP
 
 <img class="responsive-img" src="../../../images/general/angular_grid_span.png" />
 
-`grid-row` および `grid-column` プロパティは、[`grid-row-start`](https://www.w3schools.com/cssref/pr_grid-row-start.asp)、[`grid-row-end`](https://www.w3schools.com/cssref/pr_grid-row-end.asp)、[`grid-column-start`](https://www.w3schools.com/cssref/pr_grid-column-start.asp)、[`grid-column-end`](https://www.w3schools.com/cssref/pr_grid-column-end.asp) プロパティの略記プロパティです。CSS グリッド コンテナと項目プロパティの詳細については、**その他のリソース**セクションのチュートリアルをご覧ください。
+`grid-row` および `grid-column` プロパティは、[`grid-row-start`](https://www.w3schools.com/cssref/pr_grid-row-start.asp)、[`grid-row-end`](https://www.w3schools.com/cssref/pr_grid-row-end.asp)、[`grid-column-start`](https://www.w3schools.com/cssref/pr_grid-column-start.asp)、[`grid-column-end`](https://www.w3schools.com/cssref/pr_grid-column-end.asp) プロパティの略記プロパティです。CSS グリッド コンテナーと項目プロパティの詳細については、**その他のリソース**セクションのチュートリアルをご覧ください。
 
 ## その他のリソース
 * [CSS Flexbox](https://www.w3schools.com/css/css3_flexbox.asp)
 * [CSS Grid 概要](https://www.w3schools.com/css/css_grid.asp)
-* [CSS Grid コンテナ](https://www.w3schools.com/css/css_grid_container.asp)
+* [CSS Grid コンテナー](https://www.w3schools.com/css/css_grid_container.asp)
 * [CSS Grid Item](https://www.w3schools.com/css/css_grid_item.asp)
 
 <div class="divider--half"></div>

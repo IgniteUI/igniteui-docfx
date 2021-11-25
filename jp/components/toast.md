@@ -145,7 +145,7 @@ public open(toast) {
 </code-view>
 
 ### オーバーレイ設定
-[`IgxToastComponent`]({environment:angularApiUrl}/classes/igxtoastcomponent.html) は、[オーバーレイ設定]({environment:angularApiUrl}/interfaces/overlaysettings.html)を使用してコンテナの位置を制御します。デフォルト設定は、カスタム オーバーレイ設定を定義し、それらをトーストの `open()` メソッドに渡すことで変更できます。
+[`IgxToastComponent`]({environment:angularApiUrl}/classes/igxtoastcomponent.html) は、[オーバーレイ設定]({environment:angularApiUrl}/interfaces/overlaysettings.html)を使用してコンテナーの位置を制御します。デフォルト設定は、カスタム オーバーレイ設定を定義し、それらをトーストの `open()` メソッドに渡すことで変更できます。
 
 ```typescript
 public customSettings: OverlaySettings = {

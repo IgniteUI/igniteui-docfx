@@ -80,7 +80,7 @@ export class AppModule {}
 ### メディア、サムネイル、アバター
 タイトルや字幕の横のカード ヘッダーに画像やアイコンを表示したい場合は、`igxCardThumbnail` ディレクティブを使用してそれを実行できます。
 
-上記のカードを例にとると、`igx-card-header` の内容を編集して、アイコンを保持する `igxCardThumbnail` コンテナを追加できます。
+上記のカードを例にとると、`igx-card-header` の内容を編集して、アイコンを保持する `igxCardThumbnail` コンテナーを追加できます。
 
 ```html
 <igx-card-header>

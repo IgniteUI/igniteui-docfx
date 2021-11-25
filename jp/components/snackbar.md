@@ -219,7 +219,7 @@ public restore() {
 </code-view>
 
 ### オーバーレイ設定
-[`IgxSnackbarComponent`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html) は、[オーバーレイ設定]({environment:angularApiUrl}/interfaces/overlaysettings.html)を使用してコンテナの位置を制御します。デフォルト設定は、カスタム オーバーレイ設定を定義し、それらをスナックバーの `open()` メソッドに渡すことで変更できます。
+[`IgxSnackbarComponent`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html) は、[オーバーレイ設定]({environment:angularApiUrl}/interfaces/overlaysettings.html)を使用してコンテナーの位置を制御します。デフォルト設定は、カスタム オーバーレイ設定を定義し、それらをスナックバーの `open()` メソッドに渡すことで変更できます。
 
 ```typescript
 public customSettings: OverlaySettings = {

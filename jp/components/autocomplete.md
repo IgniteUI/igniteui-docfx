@@ -192,16 +192,16 @@ export class AutocompleteComponent {
 `igxAutocomplete` ディレクティブを適用すると要素を以下の ARIA 属性で装飾します。
  - role="combobox" - ディレクティブが適用される要素のロール。
  - aria-autocomplete="list" - 入力完了の候補がリストのフォームに適用されたことを示します。
- - aria-haspopup="listbox" `igxAutocomplete` が値を提案するコンテナをポップアップできることを示すための属性です。
+ - aria-haspopup="listbox" `igxAutocomplete` が値を提案するコンテナーをポップアップできることを示すための属性です。
  - aria-expanded="true"/"false" - ドロップダウンの縮小状態に基づいた値。
  - aria-owns="dropDownID" - ドロップダウンの id は候補を表示するために使用される ID。
  - aria-activedescendant="listItemId" - 値が現在のアクティブリスト要素の id に設定されます。
 
 候補に使用される `drop-down` コンポーネントは、以下の ARIA 属性を公開します。
  - role="listbox" - `igx-drop-down` コンポーネント カレンダーに適用されます。
- - role="group" - `igx-drop-down-item-group` コンポーネント コンテナに適用されます。
- - role="option" - `igx-drop-down-item` コンポーネント コンテナに適用されます。
- - aria-disabled="true"/"false" - `igx-drop-down-item` に適用されます。無効な場合の `igx-drop-down-item-group` コンポーネント コンテナに適用されます。
+ - role="group" - `igx-drop-down-item-group` コンポーネント コンテナーに適用されます。
+ - role="option" - `igx-drop-down-item` コンポーネント コンテナーに適用されます。
+ - aria-disabled="true"/"false" - `igx-drop-down-item` に適用されます。無効な場合の `igx-drop-down-item-group` コンポーネント コンテナーに適用されます。
 
 
 ## スタイル設定

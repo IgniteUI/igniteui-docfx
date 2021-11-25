@@ -342,9 +342,9 @@ $my-time-picker-theme: igx-time-picker-theme(
 
 Time Picker ウィンドウは [`IgxOverlayService`](overlay.md) を使用するため、カスタム テーマがスタイルを設定する Time Picker ウィンドウに適用されるように、ダイアログ ウィンドウが表示されたときに DOM に配置される特定のアウトレットを提供します。
 
-Time Picker内の項目は、コンポーネント `ホスト`の子孫**ではありません**。現在、`ドキュメント`本文の最後にあるデフォルトのオーバーレイ アウトレットに表示されています。これを変更するには、`overlaySettings` の [`outlet`]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet) プロパティを使用します。`outlet` は、オーバーレイ コンテナをレンダリングする場所を制御します。
+Time Picker内の項目は、コンポーネント `ホスト`の子孫**ではありません**。現在、`ドキュメント`本文の最後にあるデフォルトのオーバーレイ アウトレットに表示されています。これを変更するには、`overlaySettings` の [`outlet`]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet) プロパティを使用します。`outlet` は、オーバーレイ コンテナーをレンダリングする場所を制御します。
 
-以下でコンテナを配置する要素への参照を渡すことができます。
+以下でコンテナーを配置する要素への参照を渡すことができます。
 
 ```html
 <igx-time-picker #picker [overlaySettings]="{ outlet: element }">
