@@ -37,7 +37,7 @@ _language: ja
 <div class="sample-content">
     <article class="sample-column">
         <div class="tabbar-wrapper">
-            <p> The Angular Data Grid is used as a feature-rich control for displaying data in a tabular format quickly and easily. Modern grids are complex and are usually packed with a set of features like data selection, excel style filtering, sorting, paging, templating, column moving, exporting to Excel, CSV, and pdf formats and more. </p>
+            <p> Angular データ グリッドは、データを表形式ですばやく簡単に表示するための機能豊富なコントロールとして使用されます。最新のグリッドは複雑で、通常、データ選択、Excel スタイルのフィルタリング、ソート、ページング、テンプレート作成、列の移動、Excel へのエクスポート、CSV、PDF 形式などの一連の機能が満載です。 </p>
         </div>
     </article>
     <article class="sample-column">
@@ -47,7 +47,7 @@ _language: ja
                     src="../../images/general/landing-grid-page.png" 
                     data-src="../../images/general/landing-grid-page.png" 
                     data-srcset="../../images/general/landing-grid-page.png 480w, ../../images/general/landing-grid-page.png 768w, ../../images/general/landing-grid-page.png 1100w" 
-                    alt="Angular Data Grid"
+                    alt="Angular データ グリッド"
                     title="Angular Data Grid">
                 </div>
         </div>
@@ -101,7 +101,6 @@ export class AppModule {}
 ```typescript
 import { IgxGridComponent } from 'igniteui-angular';
 ...
-
 @ViewChild('myGrid', { read: IgxGridComponent })
 public grid: IgxGridComponent;
 ```
@@ -165,7 +164,7 @@ public grid: IgxGridComponent;
             <igx-linear-bar [stripped]="false" [value]="value" [max]="100"></igx-linear-bar>
         </ng-template>
     </igx-column>
-    <igx-paginator [perPage]="10">
+    <igx-paginator [perPage]="6">
     </igx-paginator>
 </igx-grid>
 ```
@@ -559,8 +558,8 @@ interface AminoAcid {
 >グリッドは、`primary key`、`foreign key` および `child key` プロパティのこの種のバインディングを**サポートしていません**。
 
 
-<code-view style="height:460px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:460px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-nested-data-binding-2" >
 </code-view>
 
@@ -649,8 +648,8 @@ export const EMPLOYEE_DATA = [
 以下は、この設定の結果です。
 
 
-<code-view style="height:460px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:460px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-nested-data-binding" >
 </code-view>
 
@@ -728,8 +727,8 @@ export const DATA: any[] = [
 以下は結果です。
 
 
-<code-view style="height:550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:550px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-composite-data-binding" >
 </code-view>
 
@@ -745,7 +744,6 @@ Grid のキーボード ナビゲーションは、さまざまなキーボー�
 ## パーシステンス (永続化) 状態
 
 新しい組み込みの [`IgxGridState`](state-persistence.md) ディレクティブを使用することで、状態永続フレームワークの実装が更に簡単になりました。
-
 
 ## サイズ変更
 
