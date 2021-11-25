@@ -5,13 +5,58 @@ _keywords: angular データ グリッド, angular マテリアル テーブル,
 _language: ja
 ---
 
+<style>
+    .sample-content {
+        display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+        }
+
+.sample-column {
+            display: flex;
+            flex-flow: column nowrap;
+            flex: 1 0 25%;
+            align-content: flex-start;
+            min-width: 280px;
+        }
+
+ .tabbar-wrapper {
+            width: inherit;
+            position: relative;
+            height: 100%;
+            margin: 0 auto;
+        }
+
+ .tabbar-wrapper > p {
+            padding-right: 20px
+        }
+</style>
+
 # Angular データ グリッドの概要と構成
 
-Ignite UI for Angular Data Grid は、データの表示や操作が簡単にできます。最小限のコードでデータをすばやくバインドするか、さまざまなイベントを使用してさまざまな動作をカスタマイズします。このコンポーネントは、データ選択、Excel スタイル フィルタリング、ソート、ページング、テンプレート、列移動などの豊富な機能を提供します。Material Table ベースの UI グリッドにより、表形式のデータの表示がさらに簡単できれいになりました。
+<div class="sample-content">
+    <article class="sample-column">
+        <div class="tabbar-wrapper">
+            <p> The Angular Data Grid is used as a feature-rich control for displaying data in a tabular format quickly and easily. Modern grids are complex and are usually packed with a set of features like data selection, excel style filtering, sorting, paging, templating, column moving, exporting to Excel, CSV, and pdf formats and more. </p>
+        </div>
+    </article>
+    <article class="sample-column">
+        <div class="tabbar-wrapper">
+            <div class="tab-content">
+                <img class="b-lazy responsive-img"
+                    src="../../images/general/landing-grid-page.png" 
+                    data-src="../../images/general/landing-grid-page.png" 
+                    data-srcset="../../images/general/landing-grid-page.png 480w, ../../images/general/landing-grid-page.png 768w, ../../images/general/landing-grid-page.png 1100w" 
+                    alt="Angular Data Grid"
+                    title="Angular Data Grid">
+                </div>
+        </div>
+    </article>
+</div>
 
 ## Angular データ グリッドの例
 
-Boston Marathon 2021 – この Angular グリッドの例では、ユーザーが基本スタイルと Excel スタイルの両方のフィルタリング、ライブ データのソート、および[スパークライン](../sparkline.md) コンポーネント、[Circular Progress Indicator](../circular-progress.md) コンポーネントと [Icons](../icon.md) を含むグリッド集計とセル テンプレートの使用を実行する方法を確認できます。デモには、[Angular ページネーション](paging.md)のカスタム ページングとページごとの使用法も含まれています。
+Boston Marathon 2021 – この Angular グリッドの例では、ユーザーが基本スタイルと Excel スタイルの両方のフィルタリング、ライブ データのソート、および[スパークライン](../charts/types/sparkline-chart.md) コンポーネント、[Circular Progress Indicator](../circular-progress.md) コンポーネントと [Icons](../icon.md) を含むグリッド集計とセル テンプレートの使用を実行する方法を確認できます。デモには、[Angular ページネーション](paging.md)のカスタム ページングとページごとの使用法も含まれています。
 
 
 <code-view style="height:700px"
