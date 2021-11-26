@@ -187,7 +187,7 @@ In order to style the border, we have to `penetrate` this encapsulation using `:
 
 * [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
 * [IgxHintDirective]({environment:angularApiUrl}/classes/igxhintdirective.html)
-* [IgxInputGroup Types]({environment:angularApiUrl}/enums/igxinputgrouptype.html)
+* [IgxInputGroup Types]({environment:angularApiUrl}/index.html#IgxInputGroupType)
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 * [IgxInputGroupComponent Styles]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
 

@@ -291,7 +291,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 * [IgxBadgeComponent Styles]({environment:sassApiUrl}/index.html#function-igx-badge-theme)
 * [IgxListComponent]({environment:angularApiUrl}/classes/igxlistcomponent.html)
 * [IgxListItemComponent]({environment:angularApiUrl}/classes/igxlistitemcomponent.html)
-* [IgxBadgeType]({environment:angularApiUrl}/enums/igxbadgetype.html)
+* [IgxBadgeType]({environment:angularApiUrl}/index.html#IgxBadgeType)
 
 ## Theming Dependencies
 * [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
