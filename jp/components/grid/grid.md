@@ -87,13 +87,14 @@ public grid: IgxGridComponent;
 作業を容易にするためにコメントを `src/styles.scss` ファイルに適用します。
 
  ```scss
- // src/styles.scss
-    @import '~igniteui-angular/lib/core/styles/themes/index';
-    @include igx-core();
-    @include igx-theme($default-palette);
+// src/styles.scss
+@use "igniteui-angular/theming" as *;
 
-    /* autoprefixer grid:on */
- ...
+// 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+@include igx-core();
+/* autoprefixer grid:on */
+@include igx-theme($default-palette);
  ```
 
 ## 編集可能な Angular グリッド

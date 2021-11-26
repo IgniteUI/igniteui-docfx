@@ -41,8 +41,11 @@ _language: ja
 企業のプライマリおよびセカンダリの色を使用するカスタム グローバル テーマを作成します。
 
 ```scss
-// Import the Ignite UI theming library first
-@import '~igniteui-angular/lib/core/styles/themes/index';
+// テーマ モジュールをインポートします
+@use "igniteui-angular/theming" as *;
+
+// 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
+// @import '~igniteui-angular/lib/core/styles/themes/index';
 
 $primary-color: #2ab759;
 $secondary-color: #f96a88;
@@ -52,7 +55,7 @@ $my-color-palette: igx-palette(
     $secondary: $secondary-color
 );
 
-// IMPORTANT: Make sure you always include igx-core first!
+// 重要: 必ず最初に igx-core を含めてください。
 @include igx-core();
 // Add the typography styles before the main theme.
 @include igx-typography();
@@ -136,8 +139,11 @@ Ignite UI for Angular には、事前定義されたテーマのセットから�
 すべてのテーマ ミックスインは、独自のテーマを作成するための開始ポイントとして使用できます。`igx-bootstrap-theme` ミックスインを使用して、新しいテーマを作成しましょう。
 
 ```scss
-// Import the IgniteUI themes library first
-@import '~igniteui-angular/lib/core/styles/themes/index';
+// テーマ モジュールをインポートします
+@use "igniteui-angular/theming" as *;
+
+// 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
+// @import '~igniteui-angular/lib/core/styles/themes/index';
 
 $primary-color: #b71053;
 $secondary-color: #6c757d; 
@@ -147,7 +153,7 @@ $my-color-palette: igx-palette(
     $secondary: $secondary-color
 );
 
-// IMPORTANT: Make sure you always include igx-core first!
+// 重要: 必ず最初に igx-core を含めてください。
 @include igx-core();
 // Pass the color palette we generated to the igx-bootstrap-theme mixin
 @include igx-bootstrap-light-theme($my-color-palette);
@@ -156,9 +162,9 @@ $my-color-palette: igx-palette(
 ## ブラウザー サポート
 <div class="divider--half"></div>
 
-`$igx-legacy-support` の値は、コンポーネントのテーマの動作を決定するため大変重要です。値を `true` に設定した場合、各コンポーネントのスタイルのルールの値はビルド時にテーマで定義されたハードコーディングされた値に設定されます。`$igx-legacy-support` の値を `false` に設定した場合も、スタイル ルールは `:root` スコープまたは一番近いブロックのスコープで定義された CSS 変数を検索します。
+Ignite UI for Angular 13 より前のバージョンでは、`$igx-legacy-support` の値が、コンポーネントのテーマの動作を決定するため大変重要です。値を `true` に設定した場合、各コンポーネントのスタイルのルールの値はビルド時にテーマで定義されたハードコーディングされた値に設定されます。`$igx-legacy-support` の値を `false` に設定した場合も、スタイル ルールは `:root` スコープまたは一番近いブロックのスコープで定義された CSS 変数を検索します。
 
-`$legacy-support` の値を設定する一般的なルールは、Internet Explorer 11 をサポートするかどうかによって決定されます。  IE11 をサポートする場合、`$legacy-support` 値を `true` に設定します。それ以外の場合、値を `false` (デフォルト) に設定すると、テーマで CSS 変数が必要です。
+`$legacy-support` の値を設定する一般的なルールは、Internet Explorer 11 をサポートするかどうかによって決定されます。IE11 をサポートする場合、`$legacy-support` 値を `true` に設定します。それ以外の場合、値を `false` (デフォルト) に設定すると、テーマで CSS 変数が必要です。IE11 以前のブラウザーのサポートは、Ignite UI for Angular 13 で削除されました。
 
 ## API の概要
 * [Global テーマ]({environment:sassApiUrl}/index.html#mixin-igx-theme)

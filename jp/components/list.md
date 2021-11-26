@@ -511,14 +511,15 @@ export class ContactListComponent {
 以下は、リストの背景を変更する方法を説明します。まず、index.scss をコンポーネントの .scss ファイルにインポートします。
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
+@use "igniteui-angular/theming" as *;
+
+// 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
+// @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
 次に、コンポーネントのテーマを作成します。
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
-
 :host ::ng-deep {
     $my-list-theme: igx-list-theme(
         $background: #0568ab

@@ -2,21 +2,30 @@
 Material テーマは、Ignite UI for Angular のデフォルトテーマです。これを使用するには、`igx-theme`ミックスインを `igx-core` の後に含めます。
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
+@use "igniteui-angular/theming" as *;
+
+// 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
+// @import '~igniteui-angular/lib/core/styles/themes/index';
 @include igx-core();
 @include igx-theme($default-palette);
 ```
 
 ## Material Light テーマ
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
+@use "igniteui-angular/theming" as *;
+
+// 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
+// @import '~igniteui-angular/lib/core/styles/themes/index';
 @include igx-core();
 @include igx-light-theme($default-palette);
 ```
 
 ## Material Dark テーマ
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
+@use "igniteui-angular/theming" as *;
+
+// 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
+// @import '~igniteui-angular/lib/core/styles/themes/index';
 @include igx-core();
 @include igx-dark-theme($default-palette);
 ```
@@ -25,7 +34,10 @@ Material テーマは、Ignite UI for Angular のデフォルトテーマです�
 これらのミックスイン は作成されますが、Dark パレットと Dark スキーマの `igx-theme` を使用する場合は、以下を手動で実行してください。
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
+@use "igniteui-angular/theming" as *;
+
+// 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
+// @import '~igniteui-angular/lib/core/styles/themes/index';
 @include igx-core();
 
 $primary-color: #2ab759;
