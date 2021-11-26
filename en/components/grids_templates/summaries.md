@@ -324,6 +324,51 @@ class MySummary extends IgxNumberSummaryOperand {
 
 }
 
+### Summary Template
+`igxSummary` targets the column summary providing as a context the column summary results.
+
+```html
+<igx-column ... [hasSummary]="true">
+    <ng-template igxSummary let-summaryResult>
+        <span> My custom summary template</span>
+        <span>{{ summaryResult[0].label }} - {{ summaryResult[0].summaryResult }}</span>
+    </ng-template>
+</igx-column>
+```
+
+When a default summary is defined the height of the summary area is calculated by design depending on the column with the highest number of summaries and the display density of the grid. Overriding this height could be achieved through the exposed [summaryRowHeight]({environment:angularApiUrl}/classes/igxgridcomponent.html#summaryRowHeight) property. As an argument it takes a number and setting it to a falsy value would trigger the default summary row sizing behavior.
+
+> [!NOTE]
+> Column summary template could be defined through API by setting the column [summaryTemplate]({environment:angularApiUrl}/classes/igxcolumncomponent.html#summaryTemplate) property to the required TemplateRef.
+
+
+@@if (igxName === 'IgxGrid') {
+
+<code-view style="height:650px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/grid/grid-summary-template" >
+</code-view>
+
+}
+@@if (igxName === 'IgxTreeGrid') {
+
+<code-view style="height:650px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-summary-template" >
+</code-view>
+
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+
+<code-view style="height:650px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hgrid-summary-template" >
+</code-view>
+
+}
+
+
+
 ## Formatting summaries
 By default, summary results, produced by the built-in summary operands, are localized and formatted according to the grid [`locale`]({environment:angularApiUrl}/classes/igxgridcomponent.html#locale) and column [`pipeArgs`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#pipeArgs). When using custom operands, the `locale` and `pipeArgs` are not applied. If you want to change the default appearance of the summary results, you may format them using the [`summaryFormatter`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#summaryFormatter) property.
 
