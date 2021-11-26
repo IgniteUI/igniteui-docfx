@@ -152,8 +152,11 @@ public typeVertical = SplitterType.Vertical;
 **igxSplitter** コンポーネントのスタイル設定は、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+@use "igniteui-angular/theming" as *;
+
+// 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+```
 
 スプリッターのデフォルトのスタイルを変更するには、[`igx-splitter-theme`]({environment:sassApiUrl}/index.html#function-igx-splitter-theme) を拡張して新しいテーマを作成します。
 
@@ -187,7 +190,7 @@ Internet Explorer 11 のコンポーネントをスタイル設定するには�
 ```scss
 :host {
     ::ng-deep {
-        // Pass the custom splitter theme to the `igx-splitter` mixin
+        // Custom splitter theme を `igx-splitter` ミックスインに渡します
         @include igx-splitter($custom-splitter-theme);
     }
 }

@@ -28,7 +28,7 @@ Ignite UI for Angular Stepper コンポーネントを初期化するには、Ig
 ```cmd
 ng add igniteui-angular
 ```
-Ignite UI for Angular については、[*はじめに*](general/getting-started.md) トピックををご覧ください。
+Ignite UI for Angular については、[*はじめに*](general/getting-started.md)トピックををご覧ください。
 
 次に、app.module ファイルに `IgxStepperModule` をインポートします。 
 
@@ -123,7 +123,7 @@ Angular Material Stepper モジュールをインポート後、`igx-stepper` �
 	</igx-step>
 </igx-stepper>
 ```
-以下のサンプルは、実行時にステッパーの[向き]({environment:angularApiUrl}/classes/igxsteppercomponent.html#orientation)と[タイトルの位置](stepper.md#customizing-the-steps)を変更する方法を示しています。 
+以下のサンプルは、実行時にステッパーの[向き]({environment:angularApiUrl}/classes/igxsteppercomponent.html#orientation)と[タイトルの位置](stepper.md#ステップのカスタマイズ)を変更する方法を示しています。 
 
 <code-view style="height: 528px" 
            data-demos-base-url="{environment:demosBaseUrl}" 

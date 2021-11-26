@@ -5,13 +5,58 @@ _keywords: angular データ グリッド, angular マテリアル テーブル,
 _language: ja
 ---
 
+<style>
+    .sample-content {
+        display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+        }
+
+.sample-column {
+            display: flex;
+            flex-flow: column nowrap;
+            flex: 1 0 25%;
+            align-content: flex-start;
+            min-width: 280px;
+        }
+
+ .tabbar-wrapper {
+            width: inherit;
+            position: relative;
+            height: 100%;
+            margin: 0 auto;
+        }
+
+ .tabbar-wrapper > p {
+            padding-right: 20px
+        }
+</style>
+
 # Angular データ グリッドの概要と構成
 
-Ignite UI for Angular Data Grid は、データの表示や操作が簡単にできます。最小限のコードでデータをすばやくバインドするか、さまざまなイベントを使用してさまざまな動作をカスタマイズします。このコンポーネントは、データ選択、Excel スタイル フィルタリング、ソート、ページング、テンプレート、列移動などの豊富な機能を提供します。Material Table ベースの UI グリッドにより、表形式のデータの表示がさらに簡単できれいになりました。
+<div class="sample-content">
+    <article class="sample-column">
+        <div class="tabbar-wrapper">
+            <p> Angular データ グリッドは、データを表形式ですばやく簡単に表示するための機能豊富なコントロールとして使用されます。最新のグリッドは複雑で、通常、データ選択、Excel スタイルのフィルタリング、ソート、ページング、テンプレート作成、列の移動、Excel へのエクスポート、CSV、PDF 形式などの一連の機能が満載です。 </p>
+        </div>
+    </article>
+    <article class="sample-column">
+        <div class="tabbar-wrapper">
+            <div class="tab-content">
+                <img class="b-lazy responsive-img"
+                    src="../../images/general/landing-grid-page.png" 
+                    data-src="../../images/general/landing-grid-page.png" 
+                    data-srcset="../../images/general/landing-grid-page.png 480w, ../../images/general/landing-grid-page.png 768w, ../../images/general/landing-grid-page.png 1100w" 
+                    alt="Angular データ グリッド"
+                    title="Angular Data Grid">
+                </div>
+        </div>
+    </article>
+</div>
 
 ## Angular データ グリッドの例
 
-Boston Marathon 2021 – この Angular グリッドの例では、ユーザーが基本スタイルと Excel スタイルの両方のフィルタリング、ライブ データのソート、および[スパークライン](../sparkline.md) コンポーネント、[Circular Progress Indicator](../circular-progress.md) コンポーネントと [Icons](../icon.md) を含むグリッド集計とセル テンプレートの使用を実行する方法を確認できます。デモには、[Angular ページネーション](paging.md)のカスタム ページングとページごとの使用法も含まれています。
+Boston Marathon 2021 – この Angular グリッドの例では、ユーザーが基本スタイルと Excel スタイルの両方のフィルタリング、ライブ データのソート、および[スパークライン](../charts/types/sparkline-chart.md) コンポーネント、[Circular Progress Indicator](../circular-progress.md) コンポーネントと [Icons](../icon.md) を含むグリッド集計とセル テンプレートの使用を実行する方法を確認できます。デモには、[Angular ページネーション](paging.md)のカスタム ページングとページごとの使用法も含まれています。
 
 
 <code-view style="height:700px"
@@ -56,7 +101,6 @@ export class AppModule {}
 ```typescript
 import { IgxGridComponent } from 'igniteui-angular';
 ...
-
 @ViewChild('myGrid', { read: IgxGridComponent })
 public grid: IgxGridComponent;
 ```
@@ -87,13 +131,14 @@ public grid: IgxGridComponent;
 作業を容易にするためにコメントを `src/styles.scss` ファイルに適用します。
 
  ```scss
- // src/styles.scss
-    @import '~igniteui-angular/lib/core/styles/themes/index';
-    @include igx-core();
-    @include igx-theme($default-palette);
+// src/styles.scss
+@use "igniteui-angular/theming" as *;
 
-    /* autoprefixer grid:on */
- ...
+// 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+@include igx-core();
+/* autoprefixer grid:on */
+@include igx-theme($default-palette);
  ```
 
 ## 編集可能な Angular グリッド
@@ -119,7 +164,7 @@ public grid: IgxGridComponent;
             <igx-linear-bar [stripped]="false" [value]="value" [max]="100"></igx-linear-bar>
         </ng-template>
     </igx-column>
-    <igx-paginator [perPage]="10">
+    <igx-paginator [perPage]="6">
     </igx-paginator>
 </igx-grid>
 ```
@@ -513,8 +558,8 @@ interface AminoAcid {
 >グリッドは、`primary key`、`foreign key` および `child key` プロパティのこの種のバインディングを**サポートしていません**。
 
 
-<code-view style="height:460px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:460px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-nested-data-binding-2" >
 </code-view>
 
@@ -603,8 +648,8 @@ export const EMPLOYEE_DATA = [
 以下は、この設定の結果です。
 
 
-<code-view style="height:460px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:460px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-nested-data-binding" >
 </code-view>
 
@@ -682,8 +727,8 @@ export const DATA: any[] = [
 以下は結果です。
 
 
-<code-view style="height:550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:550px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-composite-data-binding" >
 </code-view>
 
@@ -699,7 +744,6 @@ Grid のキーボード ナビゲーションは、さまざまなキーボー�
 ## パーシステンス (永続化) 状態
 
 新しい組み込みの [`IgxGridState`](state-persistence.md) ディレクティブを使用することで、状態永続フレームワークの実装が更に簡単になりました。
-
 
 ## サイズ変更
 

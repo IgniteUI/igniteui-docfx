@@ -43,7 +43,7 @@ import { IgxBottomNavModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-次にコンポーネントのテンプレートを Bottom Navigation に追加し、3 つの項目を追加します。各項目は、データのヘッダーとコンテナをそれぞれ表す  `igx-bottom-nav-header` コンポーネントと `igx-bottom-nav-content` コンポーネントをラップします。ヘッダーは通常、アイコンとオプションのテキスト ラベルで構成されます。Bottom Navigation コントロールはマテリアル デザイン[**アイコン**](https://material.io/icons/)と互換性があるため、アプリケーションに採用するには、メイン アプリケーション フォルダーの 'styles.css' ファイルに Material+Icons インポートを追加するだけです。
+次にコンポーネントのテンプレートを Bottom Navigation に追加し、3 つの項目を追加します。各項目は、データのヘッダーとコンテナーをそれぞれ表す  `igx-bottom-nav-header` コンポーネントと `igx-bottom-nav-content` コンポーネントをラップします。ヘッダーは通常、アイコンとオプションのテキスト ラベルで構成されます。Bottom Navigation コントロールはマテリアル デザイン[**アイコン**](https://material.io/icons/)と互換性があるため、アプリケーションに採用するには、メイン アプリケーション フォルダーの 'styles.css' ファイルに Material+Icons インポートを追加するだけです。
 
 > [!NOTE]
 > これまでアプリケーションで `igx-icon` を使用したことがない場合は、続行する前に必ず **app.module.ts** の `IgxIconModule` をインポートしてください。
@@ -210,7 +210,7 @@ Bottom Navigation は以下のようになります。
 
 <div class="divider"></div>
 
-## ルーター アウトレット コンテナとの統合
+## ルーター アウトレット コンテナーとの統合
 
 Bottom Navigation コンポーネントの主な用途はコンテンツを含むタブ項目を定義することですが、ヘッダーのみを使用してタブ項目を定義する必要がある場合があります。おそらく、そのような使用法の主なシナリオは、Angular Router を使用したビュー間のナビゲーションです。次の例は、Bottom Navigation コンポーネントを構成して、単一のルーターアウトレットで 3 つのコンポーネントを切り替える方法を示しています。
 
@@ -333,7 +333,10 @@ export class TabbarRoutingModule { }
 タブのスタイル設定は、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
+@use "igniteui-angular/theming" as *;
+
+// 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
+// @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
 次に、[`igx-bottom-nav-theme`]({environment:sassApiUrl}/index.html#function-igx-bottom-nav-theme) を拡張する新しいテーマを作成し、タブグループのスタイルを設定できるさまざまなパラメーターを受け取ります。

@@ -67,7 +67,7 @@ export class AppModule {}
 以下は、`*igxFor` ディレクティブに渡される追加パラメーターです。
  - `index` - データセット内の現在の項目のインデックスを取得します。
  - `scrollOrientation` - 常に `'vertical'` にする必要があります。
- - `containerSize` - 仮想化コンテナのサイズ (ピクセル単位)。これは、ラッピング <div> にも適用する必要があります。
+ - `containerSize` - 仮想化コンテナーのサイズ (ピクセル単位)。これは、ラッピング <div> にも適用する必要があります。
  - `itemSize` - 表示される項目のサイズ (ピクセル単位)。
 
 項目の一意性を確保するために、[`value`]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#value) input の内の `item` および `igx-drop-down-item` の [`index`]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#index) 内の `index` を渡します。

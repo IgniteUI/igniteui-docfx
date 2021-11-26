@@ -16,7 +16,7 @@ Angular Simple ComboBox コンポーネントは、単一の選択を可能に�
 
 <div class="divider--half"></div>
 
-<code-view style="height: 400px;"
+<code-view style="height: 500px;"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/simple-combo-main" alt="Angular Simple ComboBox の例">
 </code-view>
@@ -54,10 +54,10 @@ export class AppModule {}
 
 ```typescript
 export class MySimpleComboComponent implements OnInit {
-    public cities: { name: string, id: string }[] = [];
+    public cities: City[];
 
     public ngOnInit() {
-        this.cities = [{ name: 'London', id: 'UK01' }, { name: 'New York', id: 'US01' }, ...];
+        this.cities = getCitiesByPopulation(10000000);
     }
 }
 ```
@@ -88,22 +88,26 @@ Simple ComboBox は複雑なデータ (つまりオブジェクト) の配列に
 
 Simple ComboBox コンポーネントは、`[(ngModel)]` を使用した双方向のデータ バインディングと、[テンプレート駆動型](https://angular.io/guide/forms)および[リアクティブ フォーム](https://angular.io/guide/reactive-forms)での使用を完全にサポートします。Simple ComboBox の選択には、双方向バインディングまたは[選択 API](#選択-api) を介してアクセスできます。(`valueKey` に基づいて) Simple ComboBox の選択にあるものと同じタイプの項目を渡すことができ、一方が変更されるたびに、もう一方もそれに応じて更新されます。
 
-次の例では、最初に Sofia 市が選択されます。Simple ComboBox の選択をさらに変更すると、`selectedCities` に反映されます。
+次の例では、提供されたデータの最初の都市が最初に選択されます。Simple ComboBox の選択をさらに変更すると、`selectedCities` に反映されます。
 
 ```html
 <igx-simple-combo [data]="cities" [(ngModel)]="selectedCity" [displayKey]="'name'" [valueKey]="'id'"></igx-simple-combo>
 ```
 
 ```typescript
-export class MySimpleComboComponent {
-    public cities: { name: string, id: string }[] = [
-                   { name: 'Sofia', id: 'BG01' }, { name: 'London', id: 'UK01' }, ...];
-    public selectedCity: string = 'BG01';
+export class MySimpleComboComponent implements OnInit {
+    public cities: City[];
+    public selectedCity: number;
+
+    public ngOnInit(): void {
+        this.cities = getCitiesByPopulation(10000000);
+        this.selectedCity = this.cities[0].id;
+    }
 }
 ```
 
 
-<code-view style="height: 550px;"
+<code-view style="height: 480px;"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/simple-combo-usage" >
 </code-view>
@@ -113,9 +117,9 @@ export class MySimpleComboComponent {
 
 ```typescript
 export class MySimpleComboComponent {
-    public cities: { name: string, id: string }[] = [
-                   { name: 'Sofia', id: 'BG01' }, { name: 'London', id: 'UK01' }, ...];
-    public selectedCity: { name: string, id: string } = this.cities[0];
+    public cities: City[] = [
+                   { name: 'Sofia', id: '1' }, { name: 'London', id: '2' }, ...];
+    public selectedCity: City = this.cities[0];
 }
 ```
 
@@ -150,7 +154,7 @@ export class MySimpleComboComponent {
     public simpleCombo: IgxSimpleComboComponent;
     ...
     selectFavorites(): void {
-        this.simpleCombo.select('UK01');
+        this.simpleCombo.select('2');
     }
 }
 ```
@@ -201,7 +205,7 @@ Simple ComboBox が開かれ、リスト項目がフォーカスされている�
 次のサンプルは、[igx-simple-combo]({environment:angularApiUrl}/classes/igxsimplecombocomponent.html) が使用されるシナリオを示しています。
 
 
-<code-view style="height: 540px;"
+<code-view style="height: 620px;"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/simple-combo-cascading" alt="Angular カスケーディングの例">
 </code-view>
@@ -213,29 +217,32 @@ Simple ComboBox の API を使用して、あるコンポーネントから選�
 
 ```html
 <igx-simple-combo #country
-    (selectionChanging)="countryChanging($event)"
-    [(ngModel)]="selectedCountry"
     [data]="countriesData"
-    [displayKey]="'name'"></igx-simple-combo>
-<igx-simple-combo #province
-    (selectionChanging)="provinceChanging($event)"
-    [disabled]="regionData.length === 0"
-    [(ngModel)]="selectedRegion"
-    [data]="regionData"
+    (selectionChanging)="countryChanging($event)"
+    placeholder="Choose Country..."
+    [(ngModel)]="selectedCountry"
     [displayKey]="'name'">
 </igx-simple-combo>
+<igx-simple-combo #region
+    [data]="regionData"
+    (selectionChanging)="regionChanging($event)"
+    placeholder="Choose Region..."
+    [(ngModel)]="selectedRegion"
+    [displayKey]="'name'"
+    [disabled]="regionData.length === 0">
+</igx-simple-combo>
 <igx-simple-combo #city
-    placeholder="Choose City..."
-    [disabled]="citiesData.length === 0"
-    [(ngModel)]="selectedCity"
     [data]="citiesData"
-    [displayKey]="'name'">
+    placeholder="Choose City..."
+    [(ngModel)]="selectedCity"
+    [displayKey]="'name'"
+    [disabled]="citiesData.length === 0">
 </igx-simple-combo>
 ```
 
 ### コンポーネント定義
 ```typescript
-export class SimpleComboCascadingComponent implements core.OnInit {
+export class SimpleComboCascadingComponent implements OnInit {
     public selectedCountry: Country;
     public selectedRegion: Region;
     public selectedCity: City;
@@ -243,24 +250,23 @@ export class SimpleComboCascadingComponent implements core.OnInit {
     public regionData: Region[] = [];
     public citiesData: City[] = [];
     public ngOnInit(): void {
-        this.countriesData = cities;
+        this.countriesData = getCountries(['United States', 'Japan', 'United Kingdom']);
     }
 
     public countryChanging(e: ISimpleComboSelectionChangingEventArgs) {
         this.selectedCountry = e.newSelection as Country;
-        this.regionData = cities
-            .filter(c => c.country === this.selectedCountry?.name)
+        this.regionData = getCitiesByCountry([this.selectedCountry?.name])
             .map(c => ({name: c.region, country: c.country}))
             .filter((v, i, a) => a.findIndex(r => r.name === v.name) === i);
-            this.selectedRegion = null;
-            this.selectedCity = null;
-            this.citiesData = [];
+        this.selectedRegion = null;
+        this.selectedCity = null;
+        this.citiesData = [];
     }
 
-    public provinceChanging(e: ISimpleComboSelectionChangingEventArgs) {
+    public regionChanging(e: ISimpleComboSelectionChangingEventArgs) {
         this.selectedRegion = e.newSelection as Region;
-        this.citiesData = cities
-            .filter(c => c.country === this.selectedRegion?.country && c.region === this.selectedRegion?.name);
+        this.citiesData = getCitiesByCountry([this.selectedCountry?.name])
+            .filter(c => c.region === this.selectedRegion?.name);
         this.selectedCity = null;
     }
 }
@@ -272,10 +278,10 @@ export class SimpleComboCascadingComponent implements core.OnInit {
 [Ignite UI for Angular Theming](themes/index.md) を使用すると、Simple ComboBox の外観を大幅に変更できます。はじめに、テーマ エンジンによって公開されている関数を使用するために、スタイル ファイルに `index` ファイルをインポートする必要があります。
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
+@use 'igniteui-angular/theming' as *;
 ```
 
-最も単純なアプローチに従って、[igx-combo-theme]({environment:sassApiUrl}/index.html#function-igx-combo-theme) を拡張し、 `$search-separator-border-color` パラメーターを受け入れる新しいテーマを作成します。
+最も単純なアプローチに従って、[igx-combo-theme]({environment:sassApiUrl}/index.html#function-igx-combo-theme) を拡張し、`$empty-list-background` パラメーターを受け入れる新しいテーマを作成します。
 ```scss
 $custom-simple-combo-theme: igx-combo-theme(
     $empty-list-background: #1a5214
@@ -307,21 +313,21 @@ $custom-drop-down-theme: igx-drop-down-theme(
 最後にコンポーネントのテーマを含めます。
 
 ```scss
-:host {
+:host ::ng-deep {
     @include igx-css-vars($custom-combo-theme);
     @include igx-css-vars($custom-drop-down-theme);
 }
 ```
 
 > [!NOTE]
-> [IgxSimpleCombo]({environment:angularApiUrl}/classes/igxsimplecombocomponent.html) コンポーネントは、[IgxOverlay](overlay.md) サービスを使用して、Simple ComboBox 項目リスト コンテナを保持および表示します。スタイルを適切にスコープするには、[OverlaySetting.outlet]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet) を使用してください。詳細については、[IgxOverlay スタイル ガイド](overlay-styling.md)を確認してください。
+> [IgxSimpleCombo]({environment:angularApiUrl}/classes/igxsimplecombocomponent.html) コンポーネントは、[IgxOverlay](overlay.md) サービスを使用して、Simple ComboBox 項目リスト コンテナーを保持および表示します。スタイルを適切にスコープするには、[OverlaySetting.outlet]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet) を使用してください。詳細については、[IgxOverlay スタイル ガイド](overlay-styling.md)を確認してください。
 
 > [!Note]
 > `IgxSimpleCombo` のデフォルトの`タイプ`は、`line` である [IgxSelect](select.md) とは異なり `box` です。
 
 ### サンプル
 
-<code-view style="height:410px"
+<code-view style="height:500px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/simple-combo-styling" >
 </code-view>
@@ -334,7 +340,7 @@ $custom-drop-down-theme: igx-drop-down-theme(
 - Simple ComboBox には、高さのサイズを設定するための入力がありません。将来、[IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) コンポーネントは、カスタムのサイズ変更オプションを公開し、[IgxSimpleCombo]({environment:angularApiUrl}/classes/igxsimplecombocomponent.html) は適切なスタイル設定と外観の統一に同じ機能を使用します。
 
 > [!NOTE]
-> Simple ComboBox は内部で `igxForOf` ディレクティブを使用するため、すべての `igxForOf` 制限は Simple ComboBox に対して有効です。詳細については、[igxForOf Known Issues](for-of.md#既知の制限) の既知の問題のセクションを参照してください。
+> Simple ComboBox は内部で `igxForOf` ディレクティブを使用するため、すべての `igxForOf` 制限は Simple ComboBox に対して有効です。詳細については、[igxForOf 既知の制限](for-of.md#既知の制限) の既知の問題のセクションを参照してください。
 
 ## API まとめ
 <div class="divider--half"></div>

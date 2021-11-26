@@ -17,16 +17,16 @@ _canonicalLink: grid/toolbar
 ---
 }
 
-# UI 操作のための @@igComponent ツールバー コンテナ
+# UI 操作のための @@igComponent ツールバー コンテナー
 
-The @@igComponent in Ignite UI for Angular provides an [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) which is essentially a container for **UI** operations. The Angular toolbar is located at the top of the Angular component, i.e the @@igComponent and it matches its horizontal size. The toolbar container can host predefined UI controls for the following @@igComponent's features:
+Ignite UI for Angular の @@igComponent は、UI 操作のコンテナーとなる [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) 機能をサポートします。Angular ツールバーは Angular コンポーネントの一番上、つまり @@igComponent にあり、水平方向のサイズと一致します。ツールバー コンテナーは、次の @@igComponent の機能、またはその他のカスタム コンテンツ用に事前定義された UI コントロールをホストできます:
 
- - Column Hiding
- - Column Pinning
- - Excel Exporting
- - Advanced Filtering
+ - 列の非表示
+ - 列のピン固定
+ - Excel エクスポート
+ - 高度なフィルタリング
 
-or just any other custom content. The toolbar and the predefined UI components support Angular events and expose API for developers.
+ツールバーと事前定義された UI コンポーネントは、Angular イベントをサポートし、開発者向けに API を公開します。
 
 ## Angular ツールバー グリッドの例
 
@@ -55,7 +55,7 @@ or just any other custom content. The toolbar and the predefined UI components s
 
 }
 
-The predefined `actions` and `title` UI components are added inside the `<igx-grid-toolbar>` and this is all needed to have a toolbar providing default interactions with the corresponding Grid features:
+事前定義された `actions` および `title` UI コンポーネントが  `<igx-grid-toolbar>` 内に追加されます。これはすべて、対応するグリッド機能とのデフォルトのインタラクションを提供するツールバーを持つために必要です。
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -76,7 +76,7 @@ The predefined `actions` and `title` UI components are added inside the `<igx-gr
 ```html
 <igx-tree-grid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="true">
     <igx-grid-toolbar>
-        <igx-grid-toolbar-title>Grid Toolbar</igx-grid-toolbar-title>
+        <igx-grid-toolbar-title>Tree Grid Toolbar</igx-grid-toolbar-title>
         <igx-grid-toolbar-actions>
             <igx-grid-toolbar-advanced-filtering><igx-grid-toolbar-advanced-filtering>
             <igx-grid-toolbar-hiding></igx-grid-toolbar-hiding>
@@ -91,7 +91,7 @@ The predefined `actions` and `title` UI components are added inside the `<igx-gr
 ```html
 <igx-hierarchical-grid [data]="data">
     <igx-grid-toolbar>
-        <igx-grid-toolbar-title>Grid Toolbar</igx-grid-toolbar-title>
+        <igx-grid-toolbar-title>Hierarchical Grid Toolbar</igx-grid-toolbar-title>
         <igx-grid-toolbar-actions>
             <igx-grid-toolbar-advanced-filtering><igx-grid-toolbar-advanced-filtering>
             <igx-grid-toolbar-hiding></igx-grid-toolbar-hiding>
@@ -103,9 +103,9 @@ The predefined `actions` and `title` UI components are added inside the `<igx-gr
 ```
 }
 
-> Note: As seen in the code snippet above, the predefined `actions` UI components are wrapped in the [`<igx-grid-toolbar-actions>` container]({environment:angularApiUrl}/classes/igxgridtoolbaractionsdirective.html). This way, the toolbar title is aligned to the left of the toolbar and the actions are aligned to the right of the toolbar.
+> 注: 上記のコード スニペットに示されているように、事前定義された  `actions` UI コンポーネントは [`<igx-grid-toolbar-actions>` コンテナー]({environment:angularApiUrl}/classes/igxgridtoolbaractionsdirective.html)にラップされています。このように、ツールバーのタイトルはツールバーの左側に配置され、アクションはツールバーの右側に配置されます。
 
-Of course, each of these UIs can be added independently of each other, or may not be added at all. This way the toolbar container will be rendered empty:
+これらの UI はそれぞれ独立して追加することも、まったく追加しないこともできます。このようにして、ツールバー コンテナーは空になります。
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -132,8 +132,7 @@ Of course, each of these UIs can be added independently of each other, or may no
 ```
 }
 
-For a comprehensive look over each of the default UI components, continue reading the **Features** section
-below.
+デフォルトの各 UI コンポーネントの詳細については、以下の**機能**セクションを読み続けてください。
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 
@@ -161,7 +160,7 @@ IgxHierarchicalGrid の子グリッドの実装方法と DI スコープの動�
 
 ## 機能
 
-ツールバーは、グリッド全体に影響を与えるロジック/インタラクションを分離するのに最適です。As shown above, it can be configured to provide default components for controlling, column hiding, column pinning,。これらの機能は、Ignite UI for Angular スイートのカード コンポーネントと同様のパターンに従うことで、互いに独立して有効にできます。
+ツールバーは、グリッド全体に影響を与えるロジック/インタラクションを分離するのに最適です。上記のように、制御、列の非表示、列のピン固定、高度なフィルタリング、およびグリッドからのデータのエクスポートのためのデフォルトのコンポーネントを提供するように構成できます。これらの機能は、Ignite UI for Angular スイートのカード コンポーネントと同様のパターンに従うことで、互いに独立して有効にできます。
 以下にリストされているのは、ツールバーの主な機能と、それぞれのサンプル コードです。
 
 
@@ -201,7 +200,7 @@ IgxHierarchicalGrid の子グリッドの実装方法と DI スコープの動�
 ```
 
 ### 操作
-ツールバーは、ユーザーが親グリッドに関連して操作/インタラクションを配置できる[特定のコンテナ]({environment:angularApiUrl}/classes/igxgridtoolbaractionsdirective.html)を公開します。
+ツールバーは、ユーザーが親グリッドに関連して操作/インタラクションを配置できる[特定のコンテナー]({environment:angularApiUrl}/classes/igxgridtoolbaractionsdirective.html)を公開します。
 ツールバーのタイトル部分と同様に、ユーザーは、デフォルトのツールバー インタラクション コンポーネントを含め、そのテンプレート部分内にどんなものでも提供できます。
 ```html
 <igx-grid-toolbar>
@@ -250,7 +249,7 @@ constructor() {
 デフォルトの overlaySettings は、*ConnectedPositionStrategy* と *Absolute* スクロール方法を使用しています。モーダルは false に設定されており、[Esc] キーを押して閉じるインタラクションと外側のクリックで閉じるインタラクションが有効になっています。
 
 ### 列のピン固定
-[このコンポーネント]({environment:angularApiUrl}/classes/igxgridtoolbarpinningcomponent.html)は、グリッド内の列のピン固定を操作するためのデフォルトの UI を提供します。
+[Toolbar Pinning コンポーネント]({environment:angularApiUrl}/classes/igxgridtoolbarpinningcomponent.html)は、グリッド内の列のピン固定を操作するためのデフォルトの UI を提供します。
 コンポーネントは、ツールバーを含む親グリッドと、コンポーネントのタイトル、コンポーネント入力のプレースホルダー、ドロップダウン自体の高さなど、UI をカスタマイズするためのいくつかの入力プロパティを使用して、そのまま動作します。
 
 ```html
@@ -268,7 +267,7 @@ constructor() {
 
 
 ### 列の非表示
-ピン固定操作コンポーネントと同様に、[非表示コンポーネント]({environment:angularApiUrl}/classes/igxgridtoolbarhidingcomponent.html)は、列の非表示と対話するためのデフォルトの UI を提供します。
+[Toolbar Hiding コンポーネント]({environment:angularApiUrl}/classes/igxgridtoolbarhidingcomponent.html)は、列非表示を操作するためのデフォルトの UI を提供します。コンポーネントのタイトル、コンポーネント入力のプレースホルダー、ドロップダウン自体の高さなど、UI をカスタマイズするための同じ入力プロパティを公開します。
 
 ```html
 <igx-grid-toolbar>
@@ -284,8 +283,7 @@ constructor() {
 ```
 
 ### 高度なフィルタリング
-グリッドで高度なフィルタリングが有効になっている場合、ユーザーは高度なフィルタリング機能の[デフォルト コンポーネント]({environment:angularApiUrl}/classes/igxgridtoolbaradvancedfilteringcomponent.html)を提供できます。
-コンポーネントは、ボタンのデフォルトのテキストを変更する方法を公開します。
+[Toolbar Advanced Filtering コンポーネント]({environment:angularApiUrl}/classes/igxgridtoolbaradvancedfilteringcomponent.html)は、高度なフィルタリング機能のデフォルトの UI を提供します。コンポーネントは、ボタンのデフォルトのテキストを変更する方法を公開します。
 ```html
 <igx-grid-toolbar>
     <igx-grid-toolbar-actions>
@@ -301,7 +299,7 @@ constructor() {
 > 階層グリッドまたは階層下の子グリッドのいずれかをエクスポートすると、エクスポートされるデータは、それぞれのグリッドに属する行のフラット コレクションになります (子グリッドはエクスポートされたデータに含まれません)。
 }
 
-残りのツールバー操作と同様に、エクスポートは、すぐに使用できるツールバー [コンポーネント]({environment:angularApiUrl}/classes/igxgridtoolbarexportercomponent.html)を介して提供されます。
+残りのツールバー操作と同様に、エクスポートは、すぐに使用できる [Toolbar Exporter コンポーネント]({environment:angularApiUrl}/classes/igxgridtoolbarexportercomponent.html)を介して提供されます。
 エクスポート コンポーネントは、ターゲット データ形式 (Excel CSV) のそれぞれのサービスを使用しています。つまり、それぞれのサービスが依存関係挿入チェーンを通じて提供されない場合、コンポーネントは何もエクスポートできません。
 Angular の DI の復習が必要な場合は、[公式ガイド](https://angular.io/guide/dependency-injection)をご覧ください。これは、アプリケーションのすべてのエクスポート サービスを有効にする方法を示すサンプル スニペットです。
 
@@ -383,6 +381,7 @@ configureExport(args: IGridToolbarExportEventArgs) {
     });
 }
 ```
+}
 
 以下のサンプルは、エクスポート ファイルをカスタマイズする方法を示します。
 
@@ -409,9 +408,7 @@ configureExport(args: IGridToolbarExportEventArgs) {
 
 デフォルトのツールバー エクスポーター コンポーネントを使用する場合、エクスポート操作が行われると、操作の進行中にツールバーに進行状況インジケーターが表示されます。
 さらに、ユーザーはツールバーの [showProgress]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html#showprogress) プロパティを設定して、自分の長時間実行操作に使用するか、グリッドで実行されている操作を示す別の方法として使用できます。
-
 以下のサンプルでは、progressbar が表示されるようにデータのエクスポートに必要な時間を増やすために、大量のデータを使用しています。さらに、グリッドで長時間実行される操作をシミュレートする別のボタンがあります。
-
 
 @@if (igxName === 'IgxGrid') {
 
@@ -504,9 +501,11 @@ configureExport(args: IGridToolbarExportEventArgs) {
 ツールバーのスタイル設定を始めるには、すべてのテーマ関数とコンポーネント ミックスインが存在する index ファイルをインポートする必要があります。
 
 ```scss
-// custom-grid-paging-style.component.scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
-```
+@use "igniteui-angular/theming" as *;
+
+// 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
 
 まず、新しいパレットを作成します。
 

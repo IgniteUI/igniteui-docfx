@@ -267,7 +267,7 @@ public contacts = [{
 ```
 
 - `igxListThumbnail` は、リスト項目の開始に何らかのメディアを追加する必要がある場合に使用します。このディレクティブは、ターゲット要素 (この場合は igx-avatar) を、デフォルトの位置と間隔を提供するコンテナーにラップします。
-- `igxListAction` は、スイッチ、ラジオ ボタン、チェックボックスなど、アクションまたはメタデータを持つリスト項目に使用します。この場合、アクションは ` igx-icon` で表示されます。ディレクティブは、正しい位置と間隔のコンテナでターゲット要素をラップします。
+- `igxListAction` は、スイッチ、ラジオ ボタン、チェックボックスなど、アクションまたはメタデータを持つリスト項目に使用します。この場合、アクションは ` igx-icon` で表示されます。ディレクティブは、正しい位置と間隔のコンテナーでターゲット要素をラップします。
 - `igxListLine` は、`igxListThumbnail` と `igxListAction` の間にテキストが必要な場合に使用します。このディレクティブは、テキストの位置、間隔、配置が残りのディレクティブと外観がよくなるようにします。
 
 次に、連絡先オブジェクトの isFavorite プロパティを切り替えるために [**IgxIcon**](icon.md) コンポーネントでクリック イベントをリッスンします。
@@ -511,14 +511,15 @@ export class ContactListComponent {
 以下は、リストの背景を変更する方法を説明します。まず、index.scss をコンポーネントの .scss ファイルにインポートします。
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
+@use "igniteui-angular/theming" as *;
+
+// 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
+// @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
 次に、コンポーネントのテーマを作成します。
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
-
 :host ::ng-deep {
     $my-list-theme: igx-list-theme(
         $background: #0568ab
