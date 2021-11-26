@@ -190,7 +190,7 @@ Internet Explorer 11 のコンポーネントをスタイル設定するには�
 ```scss
 :host {
     ::ng-deep {
-        // Pass the custom splitter theme to the `igx-splitter` mixin
+        // Custom splitter theme を `igx-splitter` ミックスインに渡します
         @include igx-splitter($custom-splitter-theme);
     }
 }

@@ -20,7 +20,7 @@ Ignite UI for Angular の開発は、Internet Explorer 11 がまだ関連して�
 例:
 
 ```scss
-// Sets the global $igx-legacy-support variable to true
+// グローバルな $igx-legacy-support 変数を true に設定します
 @include igx-theme(
   $legacy-support: true
 );
@@ -51,8 +51,8 @@ $my-palette: igx-palette(
   $secondary: blue
 );
 
-// Sets the global $default-palette variable 
-// the value stored in $my-palette
+// グローバルな $default-palette 変数を設定します
+// $my-palette に保存されている値
 @include igx-theme(
   $palette: $my-palette
 );
@@ -139,4 +139,4 @@ Ignite UI for Angular テーマには、アプリケーション内のすべて�
 コミュニティに参加して新しいアイデアをご提案ください。
 
 * [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular) 
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

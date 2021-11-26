@@ -328,7 +328,7 @@ public slides = [
  * Carousel インジケーターの役割は [`tab`](https://www.w3.org/TR/wai-aria-1.1/#tab) です。これは、ユーザーに描画されるタブ コンテンツを選択するためのメカニズムを提供するグループ化ラベルです。
  * タブのセット (カルーセル インジケーター) 役割のコンテナーとして機能する要素は、[`tablist`](https://www.w3.org/TR/wai-aria-1.1/#tab) に設定されます。
  * 各スライド要素には、[`tabpanel`](https://www.w3.org/TR/wai-aria-1.1/#tabpanel) の役割が設定されています。
- * igx-slides のセットのコンテナとして機能する要素は、[aria-live](https://www.w3.org/TR/wai-aria-1.1/#aria-live)="polite" で設定されます。どちらのオプションも
+ * igx-slides のセットのコンテナーとして機能する要素は、[aria-live](https://www.w3.org/TR/wai-aria-1.1/#aria-live)="polite" で設定されます。どちらのオプションも
    - カルーセルが自動的に回転している場合、**off** になります。
    - カルーセルが自動的に回転しない場合、**polite** になります。
 
@@ -347,7 +347,7 @@ public slides = [
 
 #### **Slide コンポーネント**
 ##### **役割**:
- * [attr.role="tabpanel"](https://www.w3.org/TR/wai-aria-1.1/#tabpanel) - タブに関連付けられたリソースのコンテナ。各タブはタブ リストに含まれています。
+ * [attr.role="tabpanel"](https://www.w3.org/TR/wai-aria-1.1/#tabpanel) - タブに関連付けられたリソースのコンテナー。各タブはタブ リストに含まれています。
 
 ##### **属性**:
  * Id - パターン "panel-${this.index}" に従います。

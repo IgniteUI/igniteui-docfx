@@ -45,7 +45,7 @@ ng update @angular/cli
 ## 12.2.x から 13.0.x の場合:
 
 ### 一般
-- `IE discontinued support`
+- `IE のサポート終了`
 - `IgxDialog`
     - **重大な変更** - デフォルトの positionSettingsopenclose アニメーションが `fadeIn`/`fadeOut` に変更されました。
 - `igxGrid`、`igxHierarchicalGrid`、`igxTreeGrid`
@@ -71,7 +71,7 @@ ng update @angular/cli
 
         constructor(@Host() @Optional() @Inject(IGX_GRID_BASE) grid: IgxGridBaseDirective) { }
         ```
-- `RowDirective`, `RowType`
+- `RowDirective`、`RowType`
     - **重大な変更** - `rowData` および  `rowID` プロパティは、`RowDirective` および `RowType` インターフェイスを実装するクラスから削除されます。代わりに `data` と `key` を使用してください。自動移行には `ng update` を使用します。自動移行では、テンプレート コンテキスト オブジェクトが入力されていないテンプレートからから一部の例を取得できません。
         ```html
         <ng-template igxCell let-cell="cell">
@@ -86,13 +86,13 @@ ng update @angular/cli
         ```
 - `igxGrid`
     - `sortStrategy` と同様に機能する `groupStrategy` 入力を公開し、グリッドのグループ化動作をカスタマイズできるようにしました。
-- `IgxCsvExporterService`, `IgxExcelExporterService`
+- `IgxCsvExporterService`、`IgxExcelExporterService`
     - エクスポーター サービスはルート レベルで注入されるようになったため、アプリケーションで提供する必要がなくなりました。
-- `IgxGridToolbarPinningComponent`, `IgxGridToolbarHidingComponent`
+- `IgxGridToolbarPinningComponent`、`IgxGridToolbarHidingComponent`
     - ツールバーのドロップダウン ボタン内に表示されるテキストを設定する新しい入力 `buttonText` を公開しました。
 - `IgxCombo`
     - グループのソート順序を設定できる `groupSortingDirection` 入力が追加されました。
-- `IgxGrid`, `IgxTreeGrid`, `IgxHierarchicalGrid`
+- `IgxGrid`、`IgxTreeGrid`、`IgxHierarchicalGrid`
     - ヘッダー ソート インジケーターを再テンプレート化するための新しいディレクティブを追加しました - `IgxSortHeaderIconDirective`、`IgxSortAscendingHeaderIconDirective`、および `IgxSortDescendingHeaderIconDirective`。
 - `IgxDialog`
     - 開いたときに Tab キーのフォーカスをダイアログ内にトラップするかどうかを設定する `focusTrap`入力を追加しました。デフォルトは `true` です。
@@ -126,7 +126,7 @@ ng update @angular/cli
 
 テーマ ライブラリ全体を一度だけインポートし、アプリ内の他の Sass ファイルで使用する場合は、転送する必要があります。インポートされた Sassフ ァイルは自動的に転送されません。
 
-前:
+次から:
 
 ```scss
 // _variables.scss
@@ -140,7 +140,7 @@ ng update @angular/cli
 @import 'variables';
 ```
 
-後:
+次へ:
 
 ```scss
 // _variables.scss
@@ -160,7 +160,7 @@ ng update @angular/cli
 * パレットとスキーマ:
 - CSS パレット変数は HEX 値を参照しなくなり、代わりに H、S、L の 3 つの値のリストを表します。つまり、`hsl` または `hsla` CSS 関数に渡す必要があります。
 
-前:
+次から:
 
 ```scss
 .some-class {
@@ -168,7 +168,7 @@ ng update @angular/cli
 }
 ```
 
-後:
+次へ:
 
 ```scss
 .some-class {
@@ -812,7 +812,7 @@ import { HammerModule } from "@angular/platform-browser";
 
 ## 8.0.x から 8.1.x の場合:
 * `igx-paginator` コンポーネントはスタンドアロン コンポーネントとして導入され、Grid コンポーネントでも使用されます。
-`paginationTemplate` を設定している場合は、CSS を変更してページネーションを正しく表示する必要がある場合があることに注意してください。これは、コンテンツをセンタリングするための CSS ルールを持つページング固有のコンテナの下にテンプレートが適用されなくなったため、手動で追加する必要がある場合があるためです。
+`paginationTemplate` を設定している場合は、CSS を変更してページネーションを正しく表示する必要がある場合があることに注意してください。これは、コンテンツをセンタリングするための CSS ルールを持つページング固有のコンテナーの下にテンプレートが適用されなくなったため、手動で追加する必要がある場合があるためです。
 以下はスタイルの例です。
 
 ```html

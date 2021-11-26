@@ -262,7 +262,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 ```scss
 :host {
     ::ng-deep {
-        // Pass the custom banner theme to the `igx-banner` mixin
+        // Custom banner theme を `igx-banner` ミックスインに渡します
         @include igx-banner($custom-banner-theme);
     }
 }

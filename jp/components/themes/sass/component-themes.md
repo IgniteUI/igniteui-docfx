@@ -38,14 +38,14 @@ Ignite UI for Angular でコンポーネント テーマを設定する方法、
 アバター テーマの定義:
 
 ```scss
-// Some place after @include igx-theme(...);
+// @include igx-theme(...); の後のどこか
 
-// Change the background of the avatar to purple.
+// アバターの背景を purple に変更します。
 $new-avatar-theme: igx-avatar-theme(
   $background: purple,
 );
 
-// Pass the css-vars to the `igx-css-vars` mixin
+// css-vars を `igx-css-vars` ミックスインに渡します
 @include igx-css-vars($new-avatar-theme);
 ```
 
@@ -105,6 +105,7 @@ $another-avatar-theme: igx-avatar-theme(
 <div class="divider"></div>
 
 ## 表示のカプセル化
+
 <div class="divider--half"></div>
 
 グローバルにスコープし、単一の Sass ファイルに含まれるテーマを作成する方法について説明しました。ただし最適な方法ではないため、Sass ファイルを特定のコンポーネントにバインドした方がよい場合があります。この場合、表示のカプセル化、特に Angular で発生させる方法を考慮する必要があります。
