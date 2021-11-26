@@ -252,7 +252,7 @@ Let's start by creating our card and setting its content to be an element that h
 <igx-card>
     <igx-card-content style="padding: 0px;">
         <div class="location">
-            <igx-icon class="cursorHover" color="blue" fontSet="material" igxTooltipTarget>location_on</igx-icon>
+            <igx-icon class="cursorHover" [style.color]="'blue'" fontSet="material" igxTooltipTarget>location_on</igx-icon>
         </div>
     </igx-card-content>
 </igx-card>
@@ -266,7 +266,7 @@ Now for the tooltip! For its content, we will create a container that will be po
 <igx-card>
     <igx-card-content style="padding: 0px;">
         <div class="location">
-            <igx-icon class="cursorHover" color="blue" fontSet="material" [igxTooltipTarget]="locationTooltip">location_on</igx-icon>
+            <igx-icon class="cursorHover" [style.color]="'blue'" fontSet="material" [igxTooltipTarget]="locationTooltip">location_on</igx-icon>
 
             <div class="locationTooltip" #locationTooltip="tooltip" igxTooltip>
                 <div class="locationTooltipContent">
