@@ -166,7 +166,7 @@ Let’s create a list with contacts that can be deleted. When an item is deleted
                 </div>
             </div>
             <span igxButton="icon" igxRipple igxRippleCentered="true" (click)="delete(item)">
-                <igx-icon color="#ff5252">delete</igx-icon>
+                <igx-icon [style.color]="'#ff5252'">delete</igx-icon>
             </span>
         </div>
 

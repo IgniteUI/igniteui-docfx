@@ -147,7 +147,7 @@ The [`igxRipple`]({environment:angularApiUrl}/classes/igxrippledirective.html) d
 We can also use the `igxButton` directive to turn elements like `span` and `div` into Ignite UI for Angular styled buttons. The default colors can be customized via the `igxButtonColor` and the `igxButtonBackground` properties:
 
 ```html
-<span igxButton="raised" igxButtonColor="white" igxButtonBackground="#72da67" igxRipple="white">
+<span igxButton="raised" igxButton[style.color]="'white'" igxButtonBackground="#72da67" igxRipple="white">
     Span
 </span>
 ```

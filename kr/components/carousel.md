@@ -207,7 +207,7 @@ Our carousel now displays nicely the home page content. What it is missing is de
 ```html
 <!-- app.component.html-->
 <igx-slide *ngFor="let slide of slides;">
-    <span igxButton="raised" igxButtonColor="white" 
+    <span igxButton="raised" igxButton[style.color]="'white'" 
         igxButtonBackground="#e41c77" (click)="goTo(carousel.current)">{{slide.heading}}</span>
     <p>{{slide.description}}</p>
     ...

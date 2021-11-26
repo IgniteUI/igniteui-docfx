@@ -114,7 +114,7 @@ Or use icons as buttons:
 </button>
 ```
 ```html
-<button igxButton="icon" igxRipple igxButtonColor="#E41C77" igxRippleCentered="true">
+<button igxButton="icon" igxRipple igxButton[style.color]="'#e41c77'" igxRippleCentered="true">
   <igx-icon fontSet="material">favorite</igx-icon>
 </button>
 ```

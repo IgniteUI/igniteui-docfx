@@ -180,7 +180,7 @@ export class AppModule {}
 <!--richTooltip.component.html-->
 
 <div class="map">
-    <igx-icon class="location" color="blue" fontSet="material"
+    <igx-icon class="location" [style.color]="'blue'" fontSet="material"
     [igxTooltipTarget]="locationTooltip">location_on</igx-icon>
     ...
 </div>
@@ -193,7 +193,7 @@ export class AppModule {}
 
 <div class="wrapper">
     <div class="map">
-        <igx-icon class="location" color="blue" fontSet="material"
+        <igx-icon class="location" [style.color]="'blue'" fontSet="material"
         [igxTooltipTarget]="locationTooltip">location_on</igx-icon>
 
         <div class="locationTooltip" #locationTooltip="tooltip" igxTooltip>
