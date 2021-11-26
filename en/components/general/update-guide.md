@@ -103,6 +103,17 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
 - `IgxGridStateDirective` - now supports `disableHiding` column prop and column groups
 
 ### Theming
+
+- Icon component `color` property has been deprecated. Use `style.color` CSS property to change its default color. Examples:
+
+```html
+<igx-icon [style.color]="'#e41c77'">home</igx-icon>
+```
+
+```html
+<igx-icon style.color="{{ col.hasSummary ? '#e41c77' : '' }}">functions</igx-icon>
+```
+
 * Sass Modules:
 The theming engine has switched to [Sass modules](https://sass-lang.com/documentation/at-rules/use). This change means all theming library functions(comopnent themes, etc.), mixins(component mixins, etc.), and variables are now being `forwarded` from a single file. To correctly use the Sass theming library, your project should utilize Dart Sass version 1.33.0 or later and change all imports of the theming library from:
 

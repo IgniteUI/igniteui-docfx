@@ -40,10 +40,10 @@ export class AppModule {}
 ```
 ### Usage
 
-Using [`igx-icon`]({environment:angularApiUrl}/classes/igxiconcomponent.html) to set an [`active`]({environment:angularApiUrl}/classes/igxiconcomponent.html#active) home icon with magenta [`color`]({environment:angularApiUrl}/classes/igxiconcomponent.html#iconcolor).
+Using [`igx-icon`]({environment:angularApiUrl}/classes/igxiconcomponent.html) to set an [`active`]({environment:angularApiUrl}/classes/igxiconcomponent.html#active) home icon with magenta `style.color`.
 
 ```html
-<igx-icon color="magenta">home</igx-icon>
+<igx-icon [style.color]="'magenta'">home</igx-icon>
 ```
 
 Setting an inactive icon.
@@ -54,12 +54,12 @@ Setting an inactive icon.
 Setting icon with content projection.
 
 ```html
-<igx-icon color="red">bluetooth</igx-icon>
+<igx-icon [style.color]="'red'">bluetooth</igx-icon>
 ```
 
 You can set the icon's size through CSS. Create a custom CSS class and name it *custom-size*. The icon's size is changed by the **font-size** property. Additionally to center it, set the **width** and the **height** to the same value.
 ```html
-<igx-icon color="#0375be" class="custom-size">phone_iphone</igx-icon>
+<igx-icon [style.color]="'#0375be'" class="custom-size">phone_iphone</igx-icon>
 ```
 
 ```css

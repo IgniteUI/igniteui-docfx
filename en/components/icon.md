@@ -40,17 +40,15 @@ export class AppModule {}
 
 ### Icon Color
 
-Use the [`color`]({environment:angularApiUrl}/classes/igxiconcomponent.html#iconcolor) property of the `igx-icon` component to change its default color:
+Use `style.color` CSS property to change its default color:
 
 ```html
-<igx-icon color="#e41c77">home</igx-icon>
+<igx-icon [style.color]="'#e41c77'">home</igx-icon>
 ```
 <div class="sample-container loading" style="height: 40px">
     <iframe id="icon-sample-3-iframe" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-display/icon-sample-3" class="lazyload">
 </iframe></div>
 
->[!NOTE]
-> The `color` property will be deprecated in the next major version of Ignite UI for Angular. To change the color of an icon, use CSS properties.
 
 ### Inactive Icon
 
