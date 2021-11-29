@@ -179,7 +179,7 @@ Let's start by creating our map. We need a simple div that has for a background 
 <!--richTooltip.component.html-->
 
 <div class="map">
-    <igx-icon class="location" color="blue" fontSet="material"
+    <igx-icon class="location" [style.color]="'blue'" fontSet="material"
     [igxTooltipTarget]="locationTooltip">location_on</igx-icon>
     ...
 </div>
@@ -192,7 +192,7 @@ Now for the tooltip! For its content, we will create a container that will be po
 
 <div class="wrapper">
     <div class="map">
-        <igx-icon class="location" color="blue" fontSet="material"
+        <igx-icon class="location" [style.color]="'blue'" fontSet="material"
         [igxTooltipTarget]="locationTooltip">location_on</igx-icon>
 
         <div class="locationTooltip" #locationTooltip="tooltip" igxTooltip>
