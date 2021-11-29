@@ -11,7 +11,6 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ## Angular Avatar Example
 
-
 <code-view style="height:200px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/layouts/avatar-sample-3" alt="Angular Avatar Example">
@@ -125,6 +124,16 @@ To get started with styling the avatar, we need to import the `index` file, wher
 
 Following the simplest approach, we create a new theme that extends the [`igx-avatar-theme`]({environment:sassApiUrl}/index.html#function-igx-avatar-theme) and accepts the `$background`, `$color`, and the `$border-radius-square` parameters.
 
+Given the following markup:
+
+```html
+<div class="initials-avatar">
+    <igx-avatar>BA</igx-avatar>
+</div>
+```
+
+We need to create a theme:
+
 ```scss
 $custom-avatar-theme: igx-avatar-theme(
     $background: #72da67,
@@ -138,7 +147,9 @@ $custom-avatar-theme: igx-avatar-theme(
 The last step is to pass the custom avatar theme:
 
 ```scss
-@include igx-css-vars($custom-avatar-theme);
+.initials-avatar {
+    @include igx-css-vars($custom-avatar-theme);
+}
 ```
 
 ### Using mixins
@@ -151,7 +162,9 @@ If the component is using an [`Emulated`](themes/sass/component-themes.md#view-e
 :host {
     ::ng-deep {
         // Pass the custom avatar theme to the `igx-avatar` mixin
-        @include igx-avatar($custom-avatar-theme);
+        .initials-avatar {
+            @include igx-avatar($custom-avatar-theme);
+        }
     }
 }
 ```
