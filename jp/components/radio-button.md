@@ -111,8 +111,11 @@ public selectedColor: string = this.colors[3].hex;
 ラジオ ボタンのスタイル設定を始めるには、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+@use "igniteui-angular/theming" as *;
+
+// 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+```
 
 最も簡単な方法は、[`igx-radio-theme`]({environment:sassApiUrl}/index.html#function-igx-radio-theme) を拡張する新しいテーマを作成し、デフォルト テーマのいくつかのパラメーターを受け取る方法です。
 

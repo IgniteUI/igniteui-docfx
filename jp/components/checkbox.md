@@ -212,9 +212,9 @@ public toggleAll() {
 ```scss
 @use "igniteui-angular/theming" as *;
 
-// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+```
 
 チェックボックスはカレンダーのテーマを使用するため、[`igx-checkbox-theme`]({environment:sassApiUrl}/index.html#function-igx-checkbox-theme) を拡張する新しいテーマを作成し、そのパラメーターを使用してチェックボックスの項目をスタイル設定します。
 

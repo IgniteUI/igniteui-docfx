@@ -44,7 +44,7 @@ export class AppModule {}
 デフォルトの色を変更するには、`igx-icon` コンポーネントの [`color`]({environment:angularApiUrl}/classes/igxiconcomponent.html#iconcolor) プロパティを使用します。
 
 ```html
-<igx-icon color="#e41c77">home</igx-icon>
+<igx-icon [style.color]="'#e41c77'">home</igx-icon>
 ```
 <div class="sample-container loading" style="height: 40px">
     <iframe id="icon-sample-3-iframe" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-display/icon-sample-3" class="lazyload">
@@ -146,8 +146,11 @@ npm i xmlhttprequest
 アイコンのスタイル設定を始めるには、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+@use "igniteui-angular/theming" as *;
+
+// 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+```
 
 最も簡単な方法は、[`igx-icon-theme`]({environment:sassApiUrl}/index.html#function-igx-icon-theme) を拡張し、必要に応じてアイコンをカスタマイズするために必要なパラメーターを受け入れる新しいテーマを作成する方法です。
 

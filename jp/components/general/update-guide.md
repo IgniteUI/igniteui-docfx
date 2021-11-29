@@ -42,6 +42,210 @@ ng update @angular/cli
 
 例: 6.2.4 から 7.1.0 にアップデートする場合、[6.x .. から] セクションから始めて変更を適用していきます。
 
+## 12.2.x から 13.0.x の場合:
+
+### 一般
+- `IE のサポート終了`
+- `IgxDialog`
+    - **重大な変更** - デフォルトの positionSettingsopenclose アニメーションが `fadeIn`/`fadeOut` に変更されました。
+- `igxGrid`、`igxHierarchicalGrid`、`igxTreeGrid`
+    - **重大な変更** - 次の非推奨の入力が削除されました - `showToolbar`、`toolbarTitle`、`columnHiding`、 `columnHidingTitle`、`hiddenColumnsText`、`columnPinning`、`columnPinningTitle`、`pinnedColumnsText`。代わりに、`IgxGridToolbarComponent`、`IgxGridToolbarHidingComponent`、`IgxGridToolbarPinningComponent` を使用してください。
+    - **重大な変更** - `igx-toolbar` コンポーネントを追加したら、有効にする機能を手動で指定する必要があります - 列の非表示、ピン固定、Excel のエクスポート。高度なフィルタリングは、グリッドの `allowAdvancedFiltering` 入力プロパティを介して有効にすることができますが、他の機能と同様に、マークアップを使用して宣言的に有効にすることをお勧めします。
+    - **重大な変更** - `rowSelected` イベントは、その機能をより適切に反映するために、`rowSelectionChanging` に名前が変更されました。
+    - **重大な変更** - `columnSelected` イベントは、その機能をより適切に反映するために、`columnSelectionChanging` に名前が変更されました。
+    - **重大な変更** - `columnsCollection` が削除されました。代わりに `columns` を使用してください。特定の場合に `columns` が空の配列を返す場合は、`ViewChildren`を使用して列にクエリを実行し、 `ngAfterViewInit` の列にアクセスします。
+        ```html
+        @ViewChildren(IgxColumnComponent, { read: IgxColumnComponent })
+        public columns: QueryList<IgxColumnComponent>;
+        ```
+    - **重大な変更** - グリッドにカスタム ディレクティブを適用する場合、ホスティング グリッドへの参照を取得するために、コンストラクターに `IGX_GRID_BASE` トークンを注入します。
+        ```html
+        <igx-grid customDirective ...></igx-grid>
+        ```
+
+        ```typescript
+        @Directive({
+            selector: '[customDirective]'
+        })
+        export class customDirective {
+
+        constructor(@Host() @Optional() @Inject(IGX_GRID_BASE) grid: IgxGridBaseDirective) { }
+        ```
+- `RowDirective`、`RowType`
+    - **重大な変更** - `rowData` および  `rowID` プロパティは、`RowDirective` および `RowType` インターフェイスを実装するクラスから削除されます。代わりに `data` と `key` を使用してください。自動移行には `ng update` を使用します。自動移行では、テンプレート コンテキスト オブジェクトが入力されていないテンプレートからから一部の例を取得できません。
+        ```html
+        <ng-template igxCell let-cell="cell">
+            <span>{{ cell.rowID }}</span>
+            <span>{{ cell.row.rowData.ProductID }}</span>
+        </ng-template>
+        ```
+        このようなテンプレートを手動で更新します:
+        ```html
+        <span>{{ cell.key }}</span>
+        <span>{{ cell.row.data.ProductID }}</span>
+        ```
+- `igxGrid`
+    - `sortStrategy` と同様に機能する `groupStrategy` 入力を公開し、グリッドのグループ化動作をカスタマイズできるようにしました。
+- `IgxCsvExporterService`、`IgxExcelExporterService`
+    - エクスポーター サービスはルート レベルで注入されるようになったため、アプリケーションで提供する必要がなくなりました。
+- `IgxGridToolbarPinningComponent`、`IgxGridToolbarHidingComponent`
+    - ツールバーのドロップダウン ボタン内に表示されるテキストを設定する新しい入力 `buttonText` を公開しました。
+- `IgxCombo`
+    - グループのソート順序を設定できる `groupSortingDirection` 入力が追加されました。
+- `IgxGrid`、`IgxTreeGrid`、`IgxHierarchicalGrid`
+    - ヘッダー ソート インジケーターを再テンプレート化するための新しいディレクティブを追加しました - `IgxSortHeaderIconDirective`、`IgxSortAscendingHeaderIconDirective`、および `IgxSortDescendingHeaderIconDirective`。
+- `IgxDialog`
+    - 開いたときに Tab キーのフォーカスをダイアログ内にトラップするかどうかを設定する `focusTrap`入力を追加しました。デフォルトは `true` です。
+    - **重大な変更** - 次の入力が削除されました:
+        - `columns` 入力。代わりに `igxGrid``columns` 入力を使用してください。
+- `IgxCarousel`
+    - **重大な変更** - カルーセル アニメーション タイプ `CarouselAnimationType` は `HorizontalAnimationType` に名前が変更されました。
+- `IgxGridStateDirective` - `disableHiding` 列プロパティと列グループをサポートするようになりました。
+
+### テーマ
+* Sass モジュール:
+テーマ エンジンは [Sass モジュール](https://sass-lang.com/documentation/at-rules/use)に切り替わりました。この変更は、すべてのテーマ ライブラリ関数 (コンポーネント テーマなど)、ミックスイン (コンポーネント ミックスインなど)、および変数が単一ファイルから`転送される`ことを意味します。Sass テーマ ライブラリを正しく使用するには、プロジェクトで Dart Sass バージョン 1.33.0 以降を使用し、テーマ ライブラリのすべてのインポートを以下から変更する必要があります。
+
+```scss
+// free version
+@import '~igniteui-angular/lib/core/styles/themes/index';
+
+// licensed version
+@import '~@infragistics/igniteui-angular/lib/core/styles/themes/index';
+```
+
+結果:
+
+```scss
+// free version
+@use 'igniteui-angular/theming' as *;
+
+// licensed version:
+@use '@infragistics/igniteui-angular/theming' as *;
+```
+
+テーマ ライブラリ全体を一度だけインポートし、アプリ内の他の Sass ファイルで使用する場合は、転送する必要があります。インポートされた Sassフ ァイルは自動的に転送されません。
+
+次から:
+
+```scss
+// _variables.scss
+// free version
+@import '~igniteui-angular/lib/core/styles/themes/index';
+
+// licensed version
+@import '~@infragistics/igniteui-angular/lib/core/styles/themes/index';
+
+// _other-file.scss
+@import 'variables';
+```
+
+次へ:
+
+```scss
+// _variables.scss
+// free versioin
+@use 'igniteui-angular/theming' as *;
+@forward 'igniteui-angular/theming';
+
+// licensed version
+@use '@infragistics/igniteui-angular/theming' as *;
+@forward '@infragistics/igniteui-angular/theming';
+
+
+// _other-file.scss
+@use 'variables' as *;
+```
+
+* パレットとスキーマ:
+- CSS パレット変数は HEX 値を参照しなくなり、代わりに H、S、L の 3 つの値のリストを表します。つまり、`hsl` または `hsla` CSS 関数に渡す必要があります。
+
+次から:
+
+```scss
+.some-class {
+    background: var(--igx-surface-500); // returns HEX color
+}
+```
+
+次へ:
+
+```scss
+.some-class {
+    background: hsl(var(--igx-surface-500)); // returns a list of H, S, L
+}
+```
+
+これは、CSS 変数のみを使用して実行時にパレットを変更できるようにするためです。このようにして、指定したパレット色のアルファ チャネルを実行時に基本色に影響を与えることなく変更できます。
+
+- 正しいパレットとコンポーネント スキーマがカスタム コンポーネントとグローバルテーマに渡されることを確認してください。グローバル暗いテーマを作成する場合、グレー色に明るい色合いを選択してください。例:
+
+```scss
+$my-dark-palette: igx-palette(
+    $primary: olive, 
+    $secondary: yellow, 
+    $grays: #fff
+);
+
+@include igx-dark-theme($palette: $my-dark-palette);
+```
+
+同様に、明るいテーマはより暗い灰色の色調と明るいカラー スキーマを必要とします。
+
+グローバル テーマからコンポーネント テーマを除外していないが、`igx-css-vars` ミックスインを使用してカスタム置換テーマを作成する場合、テーマが正しいパレットと対応するスキーマに渡されることを確認してください。
+
+```scss
+$my-custom-grid: igx-grid-theme(
+    $palette: $my-dark-palette,
+    $schema: $dark-schema
+);
+
+@include igx-css-vars($my-custom-grid);
+```
+ 
+* 除外されたコンポーネント テーマ:
+
+グローバル テーマからコンポーネント テーマを除外し、カスタム置換テーマを作成した場合、コンポーネント ミックスインが含まれ、正しいコンポーネント テーマが渡されることを確認してください。
+
+```scss
+$my-dark-palette: igx-palette(
+    ...
+    $exclude: ('igx-grid')
+);
+
+$my-custom-grid: igx-grid-theme(
+    $palette: $my-dark-palette,
+    $schema: $dark-schema
+);
+
+// Ensure igx-grid is included:
+@include igx-grid($my-custom-grid);
+```
+
+カスタム コンポーネント テーマがグローバル `styles.scss` 以外の別のコンポーネント Sass ファイルで宣言されている場合は、`igx-core` ミックスインも含まれていることを確認してください。
+
+```scss
+// free version
+@use 'igniteui-angular/theming' as *;
+
+// licensed version
+@use '@infragistics/igniteui-angular/theming' as *;
+
+// Include the core module mixin.
+@include igx-core();
+
+// Create your theme.
+$my-custom-grid: igx-grid-theme(
+    $palette: $my-dark-palette,
+    $schema: $dark-schema
+);
+
+// Include your custom theme styles.
+@include igx-grid($my-custom-grid);
+```
+
+Sass Moule システムについて理解を深めるために、[Miriam Suzanne](https://css-tricks.com/author/miriam/) の[記事 (英語)](https://css-tricks.com/introducing-sass-modules/) を参照ください。
+
 ## 12.0.x から 12.1.x の場合:
 ### グリッド
 * 重大な変更:
@@ -162,7 +366,7 @@ const cells = grid.getColumnByName('ProductID').cells; // returns IgxGridCell[]
 
 ご注意ください:
 
-*ng update* は、*IgxGridRowComponent*、*IgxTreeGridRowComponent*、*IgxHierarchicalRowComponent*、*IgxGridGroupByRowComponen* のインポート、入力、キャストなどの使用方法を移行します。上記のいずれかを使用するコード内の場所が移行されない場合は、入力/キャストを削除するか、[`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html) で変更してください。
+*ng update* は、*IgxGridCellComponent*、*IgxTreeGridCellComponent*、*IgxHierarchicalGridCellComponent*、*IgxGridExpandableCellComponent* のインポート、入力、キャストなどの使用方法を移行します。上記のいずれかを使用するコード内の場所が移行されない場合は、入力/キャストを削除するか、[`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html) で変更してください。
 * *getCellByIndex* およびその他のメソッドは、そのインデックスの行がデータ行ではなく、IgxGroupByRow、IgxSummaryRow、詳細行などである場合、undefined を返します。
 
 
@@ -608,7 +812,7 @@ import { HammerModule } from "@angular/platform-browser";
 
 ## 8.0.x から 8.1.x の場合:
 * `igx-paginator` コンポーネントはスタンドアロン コンポーネントとして導入され、Grid コンポーネントでも使用されます。
-`paginationTemplate` を設定している場合は、CSS を変更してページネーションを正しく表示する必要がある場合があることに注意してください。これは、コンテンツをセンタリングするための CSS ルールを持つページング固有のコンテナの下にテンプレートが適用されなくなったため、手動で追加する必要がある場合があるためです。
+`paginationTemplate` を設定している場合は、CSS を変更してページネーションを正しく表示する必要がある場合があることに注意してください。これは、コンテンツをセンタリングするための CSS ルールを持つページング固有のコンテナーの下にテンプレートが適用されなくなったため、手動で追加する必要がある場合があるためです。
 以下はスタイルの例です。
 
 ```html

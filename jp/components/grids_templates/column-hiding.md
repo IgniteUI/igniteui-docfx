@@ -236,7 +236,7 @@ Ignite UI for Angular @@igComponent は、[`IgxColumnHidingDirective`]({environm
 ```
 }
 
-列非表示 UI の [`columnsAreaMaxHeight`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html#columnsareamaxheight) プロパティを使用すると、列を含む領域の最大の高さを設定できます。列が多すぎてコンテナにすべて収まらない場合にスクロールバーが表示されるため、スクロールバーを使用して任意の列に移動できます。検索入力は上にピン固定されて、[すべて表示]/[すべて非表示] ボタンが下にピン固定されます。
+列非表示 UI の [`columnsAreaMaxHeight`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html#columnsareamaxheight) プロパティを使用すると、列を含む領域の最大の高さを設定できます。列が多すぎてコンテナーにすべて収まらない場合にスクロールバーが表示されるため、スクロールバーを使用して任意の列に移動できます。検索入力は上にピン固定されて、[すべて表示]/[すべて非表示] ボタンが下にピン固定されます。
 
 ```typescript
 // columnHiding.component.ts
@@ -463,7 +463,10 @@ export class AppModule {}
 列操作コンポーネントのスタイル設定を開始するには、すべてのテーマ関数とコンポーネント ミックスインが存在するインデックス ファイルをインポートする必要があります。
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
+@use "igniteui-angular/theming" as *;
+
+// 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
+// @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
 最も簡単なアプローチを使用して、[`igx-column-actions-theme`]({environment:sassApiUrl}/index.html#function-igx-column-actions-theme) を拡張し、`$title-color` および `$background-color` パラメーターを受け取る新しいテーマを作成します。

@@ -6,7 +6,7 @@ _language: ja
 ---
 
 # Navbar
-<p class="highlight">Ignite UI for Angular [`IgxNavbarComponent`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html)、アプリケーション内の現在位置を示し、ブラウザーの [戻る] ボタンのように戻る機能を提供します。Navigation Bar の検索またはお気に入りなどのリンクによって、ユーザーはアプリケーションでナビゲーションをスムーズに実行できます。バーは、バーが含まれるコンテナ上に配置されます。</p>
+<p class="highlight">Ignite UI for Angular [`IgxNavbarComponent`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html)、アプリケーション内の現在位置を示し、ブラウザーの [戻る] ボタンのように戻る機能を提供します。Navigation Bar の検索またはお気に入りなどのリンクによって、ユーザーはアプリケーションでナビゲーションをスムーズに実行できます。バーは、バーが含まれるコンテナー上に配置されます。</p>
 
 
 ## Angular Navbar の例
@@ -224,7 +224,10 @@ Navbar のタイトルにカスタム コンテンツを提供する場合は、
 ページネーターのスタイル設定を始めるには、すべてのテーマ関数とコンポーネントミックスインが存在する `index` ファイルをインポートする必要があります。
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
+@use "igniteui-angular/theming" as *;
+
+// 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
+// @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
 最も簡単な方法は、[`igx-navbar-theme`]({environment:sassApiUrl}/index.html#function-igx-navbar-theme) を拡張する新しいテーマを作成し、`$text-color`、`$background`、`$idle-icon-color`、`$hover-icon-color` パラメーターを受け取る方法です。
@@ -255,7 +258,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 ```scss
 :host {
     ::ng-deep {
-        // Pass the custom navbar theme to the `igx-navbar` mixin
+        // Custom navbar theme を `igx-navbar` ミックスインに渡します
         @include igx-navbar($custom-navbar-theme);
     }
 }

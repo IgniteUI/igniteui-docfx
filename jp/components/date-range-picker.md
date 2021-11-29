@@ -119,7 +119,7 @@ Date Range Picker コンポーネントは、開始日と終了日の 2 つの�
 ```
 
 ### カレンダーの切り替え
-単一の読み取り専用入力を使用するデフォルト構成では、デフォルトのカレンダーのアイコンがプレフィックスとして表示されます。カレンダーのアイコンは、[`IgxPickerToggleComponent`]({environment:angularApiUrl}/classes/igxpickertogglecomponent.html) コンポーネントを使用して変更または再定義できます。入力の開始位置または終了位置を定義する [`igxPrefix`](input-group.md#Prefix-および-Suffix) または [`igxSuffix`](input-group.md#Prefix-および-Suffix) で設定できます。デフォルトの位置を変更し、アイコンをサフィックスとして表示するには、以下を実行する必要があります。
+単一の読み取り専用入力を使用するデフォルト構成では、デフォルトのカレンダーのアイコンがプレフィックスとして表示されます。カレンダーのアイコンは、[`IgxPickerToggleComponent`]({environment:angularApiUrl}/classes/igxpickertogglecomponent.html) コンポーネントを使用して変更または再定義できます。入力の開始位置または終了位置を定義する [`igxPrefix`](input-group.md#prefix-および-suffix) または [`igxSuffix`](input-group.md#prefix-および-suffix) で設定できます。デフォルトの位置を変更し、アイコンをサフィックスとして表示するには、以下を実行する必要があります。
 
 ```html
 <igx-date-range-picker>
@@ -146,9 +146,9 @@ Date Range Picker に開始日と終了日の 2 つの入力がある場合、�
 </igx-date-range-picker>
 ```
 
-### ドロップダウン モード
+### ダイアログ モード
 
-[`IgxDateRangePickerComponent`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html) コンポーネントには、ドロップダウン (デフォルト) とダイアログの 2 つのモードがあります。ドロップダウン モードに切り替えるには、以下の手順を実行します。
+[`IgxDateRangePickerComponent`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html) コンポーネントには、ドロップダウン (デフォルト) とダイアログの 2 つのモードがあります `dialog` モードに切り替えるには、以下の手順を実行します。
 
 ```html
 <igx-date-range-picker [mode]="'dialog'"></igx-date-range-picker>
@@ -164,8 +164,17 @@ Date Range Picker に開始日と終了日の 2 つの入力がある場合、�
 
 範囲値はカレンダーから日付が選択されるときに設定されます。ドロップダウン モードでは、`Done` ボタンは使用できません。
 
+### カスタム アクション ボタン
+
+Date Range Picker のアクション ボタンは、[`igxPickerActions`]({environment:angularApiUrl}/classes/igxpickeractionsdirective.html) ディレクティブを使用してテンプレート化できます。一般的なシナリオは、以下のデモのように、ユーザーが事前定義された範囲から選択できるようにすることです。
+
+<code-view style="height:500px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/scheduling/daterangepicker-range-buttons" >
+</code-view>
+
 ### キーボード ナビゲーション
-> 注: [ドロップダウン モード](#ドロップダウン-モード)のデモおよび[個別の編集可能な入力の表示](#個別の編集可能な入力の表示)を使用して、以下で定義するキーボードの組み合わせをお試しください。
+> 注: [ダイアログ モード](#ダイアログ-モード)のデモおよび[個別の編集可能な入力の表示](#個別の編集可能な入力の表示)を使用して、以下で定義するキーボードの組み合わせをお試しください。
 
 [`IgxDateRangePickerComponent`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html) カレンダー UI をキーボードで開く、または閉じる動作は、`ドロップダウン` モードでのみ使用でき、以下のキーの組み合わせでトリガーできます。
 
@@ -209,7 +218,7 @@ Date Range Picker コンポーネントは、コア FormsModule [NgModel](https:
 
 [NgModel](https://angular.io/api/forms/NgModel) とバリデーターは、[`IgxDateRangePickerComponent`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html) で、または個々の開始日と終了日で設定できます。
 
-次のスニペットと例は、テンプレート駆動型フォームで`必要な`バリデーターを使用する方法を示しています。
+次のスニペットと例は、テンプレート駆動型フォームで `required` バリデーターを使用する方法を示しています。
 
 最初に、コンポーネント レベルで実行される単一の読み取り専用範囲コンポーネントのモデルを設定する必要があります。
 
@@ -321,7 +330,10 @@ public maxDate = new Date(2020, 11, 1);
 `igxDateRangePicker` のスタイル設定は、すべてのテーマ関数とコンポーネントミックスインが存在する `index` ファイルをインポートする必要があります。
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
+@use "igniteui-angular/theming" as *;
+
+// 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
+// @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
 Date Range Picker コンポーネントは `igx-date-range-picker-theme` を公開し、`igxInputGroupComponent`、`igxCalendar`、`igxOverlay` などの複数のコンポーネントおよびディレクティブを使用します。前述のコンポーネントおよびディレクティブのグローバル スタイル設定は `igxDateRangeComponent` に影響します。Date Range Picker コンポーネントは入力グループおよびカレンダーテーマを使用するため、[`igx-calendar-theme`]({environment:sassApiUrl}/index.html#function-igx-calendar-theme) および [`igx-input-group-theme`]({environment:sassApiUrl}/index.html#function-igx-input-group-theme) を拡張する新しいテーマを作成し、それらのパラメーターの一部と日付範囲の選択テーマを使用して日付範囲ピッカーをスタイル設定する必要があります。単一のカスタム カラー パレットを使用して、すべてのテーマで使用する色を定義します。

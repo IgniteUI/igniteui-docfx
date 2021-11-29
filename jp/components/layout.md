@@ -23,7 +23,7 @@ _language: ja
 
 ## 使用方法
 
-コンテナ要素で [**igxLayout**]({environment:angularApiUrl}/classes/igxlayoutdirective.html) ディレクティブを使用して、子要素のレイアウト方向を指定します。
+コンテナー要素で [**igxLayout**]({environment:angularApiUrl}/classes/igxlayoutdirective.html) ディレクティブを使用して、子要素のレイアウト方向を指定します。
 
 <div class="divider--half"></div>
 

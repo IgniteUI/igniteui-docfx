@@ -390,7 +390,10 @@ export class InputDropDownComponent {
 [Ignite UI for Angular テーマ](themes/index.md) を使用して、ドロップダウンの外観を変更できます。はじめに、テーマ エンジンによって公開されている関数を使用するために、スタイル ファイルに `index` ファイルをインポートする必要があります。
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
+@use "igniteui-angular/theming" as *;
+
+// 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
+// @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
 最も簡単な方法は、[`igx-drop-down-theme`]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme) を拡張する新しいテーマを作成し、デフォルト テーマのいくつかのパラメーターを受け取る方法です。
@@ -434,7 +437,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 ```
 
 > [!NOTE]
-> [IgxDropDown]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) コンポーネントは、[IgxOverlay](overlay.md) を使用して、`igx-drop-down-items` リスト コンテナを保持および表示します。スタイルを適切にスコープするには、[OverlaySetting.outlet]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet) を使用してください。詳細については、[IgxOverlay スタイリング ガイド](overlay-styling.md)を確認してください。
+> [IgxDropDown]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) コンポーネントは、[IgxOverlay](overlay.md) を使用して、`igx-drop-down-items` リスト コンテナーを保持および表示します。スタイルを適切にスコープするには、[OverlaySetting.outlet]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet) を使用してください。詳細については、[IgxOverlay スタイリング ガイド](overlay-styling.md)を確認してください。
 
 ### デモ
 

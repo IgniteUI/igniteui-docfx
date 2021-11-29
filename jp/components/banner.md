@@ -229,8 +229,10 @@ export class MyBannerComponent {
 はじめに、テーマ エンジンによって公開されている関数を使用するために、スタイル ファイルに index ファイルをインポートする必要があります。
 
 ```scss
-// in styles.scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
+@use "igniteui-angular/theming" as *;
+
+// 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
+// @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
 最も簡単な方法は、[`igx-banner-theme`]({environment:sassApiUrl}/index.html#function-igx-banner-theme) を拡張する新しいテーマを作成し、`$banner-message-color`、`$banner-background` と `$banner-illustration-color` パラメーターを受け取る方法です。
@@ -260,7 +262,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 ```scss
 :host {
     ::ng-deep {
-        // Pass the custom banner theme to the `igx-banner` mixin
+        // Custom banner theme を `igx-banner` ミックスインに渡します
         @include igx-banner($custom-banner-theme);
     }
 }

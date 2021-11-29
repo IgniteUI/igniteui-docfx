@@ -106,7 +106,10 @@ Ignite UI for Angular Action Strip コンポーネントは、ホバーなどの
 
 アクション ストリップをカスタマイズするには、すべてのスタイリング関数とミックスインが置かれている `index` ファイルをインポートする必要があります。
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index'
+@use "igniteui-angular/theming" as *;
+
+// 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
+// @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 次に、`igx-action-strip-theme` を拡張する新しいテーマを作成し、変更するパラメーターを渡します。
 ```scss

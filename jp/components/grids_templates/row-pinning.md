@@ -402,8 +402,11 @@ public onDropAllowed(args) {
 行ピン固定機能をカスタマイズするには、まずすべてのスタイリング機能とミックスインが配置されている `index` ファイルをインポートする必要があります。
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index'
-```
+@use "igniteui-angular/theming" as *;
+
+// 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+``` 
 
 ### テーマの定義
 
@@ -437,7 +440,7 @@ Internet Explorer 11 のコンポーネントをスタイル設定するには�
 ```scss
 :host {
     ::ng-deep {
-        // Pass the custom grid theme to the `igx-grid` mixin
+        // Custom grid theme を `igx-grid` ミックスインに渡します
         @include igx-grid($custom-grid-theme);
     }
 }

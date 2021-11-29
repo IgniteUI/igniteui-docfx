@@ -24,7 +24,7 @@ _language: ja
 }
 
 # Angular @@igComponent フィルタリング
-IgniteUI for Angular @@igComponent コンポーネントは、[クイック フィルタリング、[Excel スタイル フィルタリング](excel-style-filtering.md)、および[高度なフィルタリング](advanced-filtering.md)の 3 つの異なるフィルタリング タイプを提供します。それらのフィルタリング タイプは指定された基準を満たすレコードのみを表示できるようにします。Ignite Ui の Material UI グリッドコンポーネントは、@@igComponent がバインドされているデータコンテナを介して、Angular フィルター機能と広範なフィルター API を提供します。
+IgniteUI for Angular @@igComponent コンポーネントは、[クイック フィルタリング、[Excel スタイル フィルタリング](excel-style-filtering.md)、および[高度なフィルタリング](advanced-filtering.md)の 3 つの異なるフィルタリング タイプを提供します。それらのフィルタリング タイプは指定された基準を満たすレコードのみを表示できるようにします。Ignite Ui の Material UI グリッドコンポーネントは、@@igComponent がバインドされているデータコンテナーを介して、Angular フィルター機能と広範なフィルター API を提供します。
 
 ## Angular @@igComponent フィルタリングの例
 
@@ -421,8 +421,11 @@ public matchingRecordsOnlyStrategy = new TreeGridMatchingRecordsOnlyFilteringStr
 フィルター行のスタイル設定は、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+@use "igniteui-angular/theming" as *;
+
+// 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+```
 
 最も簡単な方法は、[`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) を拡張する新しいテーマを作成し、`$filtering-row-text-color`、`$filtering-row-background`、`$filtering-header-text-color`、`$filtering-header-background` パラメーターを受け取ります。
 

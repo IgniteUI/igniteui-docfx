@@ -106,7 +106,10 @@ export class AppModule {}
 はじめに、テーマ エンジンによって公開されている関数を使用するために、スタイル ファイルにすべてのスタイリング機能とミックスインが配置されている `index` ファイルをインポートする必要があります。
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index'
+@use "igniteui-angular/theming" as *;
+
+// 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
+// @import '~igniteui-angular/lib/core/styles/themes/index';
 ```   
 
 次に、[`igx-ripple-theme`]({environment:sassApiUrl}/index.html#function-igx-ripple-theme) を拡張し、必要に応じてリップルをカスタマイズするために必要なパラメーターを受け入れる新しいテーマを作成します。
@@ -134,7 +137,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 ```scss
 :host {
     ::ng-deep {
-        // Pass the custom ripple theme to the `igx-ripple` mixin
+        // Custom ripple theme を `igx-ripple` ミックスインに渡します
         @include igx-ripple($custom-ripple-theme);
     }
 }

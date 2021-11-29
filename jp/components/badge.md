@@ -82,7 +82,7 @@ igx-badge {
 
 ### リストのバッジ
 
-チャット クライアントのような連絡先リストを作成します。連絡先の名前を表示し、アバターおよび連絡先の現在状態 (オンライン、オフライン、退席中) を表示します。これを達成するには、[`igx-badge`]({environment:angularApiUrl}/classes/igxbadgecomponent.html) および [`igx-avatar`]({environment:angularApiUrl}/classes/igxavatarcomponent.html) コンポーネントを使用します。コンテナの場合、[`igx-list`]({environment:angularApiUrl}/classes/igxlistcomponent.html) が使用されます。
+チャット クライアントのような連絡先リストを作成します。連絡先の名前を表示し、アバターおよび連絡先の現在状態 (オンライン、オフライン、退席中) を表示します。これを達成するには、[`igx-badge`]({environment:angularApiUrl}/classes/igxbadgecomponent.html) および [`igx-avatar`]({environment:angularApiUrl}/classes/igxavatarcomponent.html) コンポーネントを使用します。コンテナーの場合、[`igx-list`]({environment:angularApiUrl}/classes/igxlistcomponent.html) が使用されます。
 
 続行するには、必要なすべてのモジュールを含めて、**app.module.ts** ファイルにインポートします。
 
@@ -216,8 +216,11 @@ class Member {
 Badge のスタイル設定は、すべてのテーマ関数とコンポーネントミックスインが存在する `index` ファイルをインポートする必要があります。
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+@use "igniteui-angular/theming" as *;
+
+// 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+```
 
 最も簡単な方法は、[`igx-badge-theme`]({environment:sassApiUrl}/index.html#function-igx-badge-theme) を拡張する新しいテーマを作成し、バッジの項目をスタイル設定するいくつかのパラメーターを受け取る方法です。
 

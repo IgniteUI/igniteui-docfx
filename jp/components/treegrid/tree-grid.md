@@ -23,13 +23,6 @@ Ignite UI for Angular Tree Grid は、階層データまたはフラットデー
 
 <div class="divider--half"></div>
 
-<code-view style="height:850px"
-           data-demos-base-url="{environment:lobDemosBaseUrl}"
-           iframe-src="{environment:lobDemosBaseUrl}/tree-grid/treegrid-childdatakey" alt="Angular ツリー グリッドの例">
-</code-view>
-
-<div class="divider--half"></div>
-
 ## Ignite UI for Angular Tree Grid で作業を開始
 ツリー グリッドを初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
 
@@ -213,7 +206,7 @@ export class MyComponent implements OnInit {
 }
 ```
 
-上記サンプル データはすべてのレコードに ID (ParentID と Name、JobTitle、Age.などの追加のプロパティ) があります。レコードの ID は一意である必要があります。ParentID は、親ノードの ID を含みます。行にツリーグリッドのいずれの行にも一致しない ParentID がある場合、行がルート行であることを意味します。
+上記サンプル データはすべてのレコードに ID (ParentID と Name、JobTitle、Age などの追加のプロパティ) があります。レコードの ID は一意である必要があります。ParentID は、親ノードの ID を含みます。行にツリーグリッドのいずれの行にも一致しない ParentID がある場合、行がルート行であることを意味します。
 
 親子関係は、ツリーグリッドの  [`primaryKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#primarykey) と [`foreignKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#foreignkey) プロパティを使用して設定されます。
 

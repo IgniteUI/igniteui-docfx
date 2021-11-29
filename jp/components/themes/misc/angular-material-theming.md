@@ -88,10 +88,12 @@ Ignite UI テーマ エンジンを使用してコンポーネントのスタイ
 
 ```scss
 // _variables.scss
+@use "igniteui-angular/theming" as *;
+@use "@angular/material/theming" as *;
 
-@import '~igniteui-angular/lib/core/styles/themes/index';
-@import "~@angular/material/theming";
-``` 
+// 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+```
 
 ### カラー パレット
 

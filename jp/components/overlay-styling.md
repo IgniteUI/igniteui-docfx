@@ -8,7 +8,7 @@ _language: ja
 # オーバーレイ スタイリング
 <p class="highlight">
 [`IgxOverlayService`](overlay.md) は、ページ コンテンツの上にコンテンツを表示するために使用されます。Ignite UI for Angular コンポーネントの多くは、[ドロップダウン](drop-down.md)、[コンボ](combo.md)、[日付ピッカー](date-picker.md)などのオーバーレイを使用しているため、オーバーレイがコンテンツを表示する方法を理解することが重要です。
-他の要素上にコンテンツを表示するために、サービスはコンテンツを特別なアウトレット コンテナに移します (デフォルトではドキュメントの本文の最後にアタッチされています)。この動作は、[特定のコンテナにスコープされた](#スコープ-コンポーネント-スタイル) スタイルに影響を与える可能性があります。
+他の要素上にコンテンツを表示するために、サービスはコンテンツを特別なアウトレット コンテナーに移します (デフォルトではドキュメントの本文の最後にアタッチされています)。この動作は、[特定のコンテナーにスコープされた](#スコープ-コンポーネント-スタイル) スタイルに影響を与える可能性があります。
 </p>
 <div class="divider--half"></div>
 
@@ -28,9 +28,9 @@ _language: ja
 ```scss
 @use "igniteui-angular/theming" as *;
 
-// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+```
 
 $my-drop-down-theme: igx-drop-down-theme(
     $palette: $my-custom-palette
@@ -71,9 +71,9 @@ $my-drop-down-theme: igx-drop-down-theme(
 }
 ```
 
-コンボのリスト内項目は、コンポーネント `ホスト`の子孫ではありません。現在、ドキュメント本文の最後にあるデフォルトのオーバーレイ アウトレットに表示されています。変更するには、`overlaySettings` の [`outlet`]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet) プロパティを使用します。`outlet` は、オーバーレイ コンテナをレンダリングする場所を制御します。
+コンボのリスト内項目は、コンポーネント `ホスト`の子孫ではありません。現在、ドキュメント本文の最後にあるデフォルトのオーバーレイ アウトレットに表示されています。変更するには、`overlaySettings` の [`outlet`]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet) プロパティを使用します。`outlet` は、オーバーレイ コンテナーをレンダリングする場所を制御します。
 
-以下でコンテナを配置する要素への参照を渡すことができます。
+以下でコンテナーを配置する要素への参照を渡すことができます。
 
 ```html
 <igx-combo [data]="items" valueKey="name" displayKey="name" [overlaySettings]="{ outlet: element, modal: true }">
@@ -142,7 +142,10 @@ $my-overlay-theme: igx-overlay-theme(
 
 ```scss
 // overlay-styling.component.scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
+@use "igniteui-angular/theming" as *;
+
+// 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
+// @import '~igniteui-angular/lib/core/styles/themes/index';
 ...
 :host {
     @include igx-css-vars($my-overlay-theme);

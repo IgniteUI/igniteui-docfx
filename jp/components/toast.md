@@ -145,7 +145,7 @@ public open(toast) {
 </code-view>
 
 ### オーバーレイ設定
-[`IgxToastComponent`]({environment:angularApiUrl}/classes/igxtoastcomponent.html) は、[オーバーレイ設定]({environment:angularApiUrl}/interfaces/overlaysettings.html)を使用してコンテナの位置を制御します。デフォルト設定は、カスタム オーバーレイ設定を定義し、それらをトーストの `open()` メソッドに渡すことで変更できます。
+[`IgxToastComponent`]({environment:angularApiUrl}/classes/igxtoastcomponent.html) は、[オーバーレイ設定]({environment:angularApiUrl}/interfaces/overlaysettings.html)を使用してコンテナーの位置を制御します。デフォルト設定は、カスタム オーバーレイ設定を定義し、それらをトーストの `open()` メソッドに渡すことで変更できます。
 
 ```typescript
 public customSettings: OverlaySettings = {
@@ -177,9 +177,9 @@ Toast のスタイル設定を始めるには、すべてのテーマ関数と�
 ```scss
 @use "igniteui-angular/theming" as *;
 
-// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+```
 
 最も簡単な方法は、[`igx-toast-theme`]({environment:sassApiUrl}/index.html#function-igx-toast-theme) を拡張する新しいテーマを作成し、`$shadow`、`$background`、`$text-color` と `$border-radius` パラメーターを受け取る方法です。 
 
@@ -208,7 +208,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 ```scss
 :host {
     ::ng-deep {
-        // Pass the custom toast theme to the `igx-toast` mixin
+        // Custom toast theme を `igx-toast` ミックスインに渡します
         @include igx-toast($custom-toast-theme);
     }
 }

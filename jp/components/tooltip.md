@@ -180,20 +180,20 @@ export class AppModule {}
 <!--richTooltip.component.html-->
 
 <div class="map">
-    <igx-icon class="location" color="blue" fontSet="material"
+    <igx-icon class="location" [style.color]="'blue'" fontSet="material"
     [igxTooltipTarget]="locationTooltip">location_on</igx-icon>
     ...
 </div>
 ```
 
-次にツールチップを作成します。コンテンツは、テキスト情報要素とアバターで構成されるコンテナを作成します。ツールチップをターゲットにアタッチして CSS スタイルを使用します。
+次にツールチップを作成します。コンテンツは、テキスト情報要素とアバターで構成されるコンテナーを作成します。ツールチップをターゲットにアタッチして CSS スタイルを使用します。
 
 ```html
 <!--richTooltip.component.html-->
 
 <div class="wrapper">
     <div class="map">
-        <igx-icon class="location" color="blue" fontSet="material"
+        <igx-icon class="location" [style.color]="'blue'" fontSet="material"
         [igxTooltipTarget]="locationTooltip">location_on</igx-icon>
 
         <div class="locationTooltip" #locationTooltip="tooltip" igxTooltip>
@@ -234,7 +234,10 @@ export class AppModule {}
 ツールチップのスタイル設定は、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
+@use "igniteui-angular/theming" as *;
+
+// 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
+// @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
 最も簡単な方法は、[`igx-tooltip-theme`]({environment:sassApiUrl}/index.html#function-igx-tooltip-theme) を拡張する新しいテーマを作成し、`$text-color`、`$background`、`$border-radius` パラメーターを受け取る方法です。

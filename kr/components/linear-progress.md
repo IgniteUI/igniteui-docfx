@@ -115,7 +115,7 @@ And now let's enhance our example and create different types of loading bars, th
 <div class="button-container">
     <p>Press the button to reset the bars</p>
     <button igxButton="fab" igxButtonBackground="#333" igxRipple="white" (click)="reset()" [disabled]="disable">
-        <igx-icon color="white" isActive="true">replay</igx-icon>
+        <igx-icon [style.color]="'white'" isActive="true">replay</igx-icon>
     </button>
 </div>
 ...
@@ -194,7 +194,7 @@ And now let's see how our code looks:
 <div class="button-container">
     <p>Press the button to reset the bars</p>
     <button igxButton="fab" igxButtonBackground="#333" igxRipple="white" (click)="reset()" [disabled]="disable">
-        <igx-icon color="white" isActive="true">replay</igx-icon>
+        <igx-icon [style.color]="'white'" isActive="true">replay</igx-icon>
     </button>
 </div>
 ...
