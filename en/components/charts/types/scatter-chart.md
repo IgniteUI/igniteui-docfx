@@ -18,6 +18,7 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-scatter-point-chart"
+           github-src="charts/data-chart/scatter-point-chart"
            alt="Angular Scatter Marker Chart" >
 </code-view>
 
@@ -32,6 +33,7 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-scatter-line-chart"
+           github-src="charts/data-chart/scatter-line-chart"
            alt="Angular Scatter Line Chart" >
 </code-view>
 
@@ -46,6 +48,7 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-scatter-spline-chart"
+           github-src="charts/data-chart/scatter-spline-chart"
            alt="Angular Scatter Spline Chart" >
 </code-view>
 
@@ -60,6 +63,7 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-scatter-hd-series"
+           github-src="charts/data-chart/type-scatter-hd-series"
            alt="Angular Scatter HD Chart" >
 </code-view>
 
@@ -74,6 +78,7 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-scatter-area-series"
+           github-src="charts/data-chart/type-scatter-area-series"
            alt="Angular Scatter Area Chart" >
 </code-view>
 
@@ -88,6 +93,7 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-scatter-contour-series"
+           github-src="charts/data-chart/type-scatter-contour-series"
            alt="Angular Scatter Contour Chart" >
 </code-view>
 

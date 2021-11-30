@@ -18,6 +18,7 @@ You can create Angular Category Area Chart in the [`IgxCategoryChartComponent`](
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-area-chart-multiple-sources"
+           github-src="charts/category-chart/area-chart-multiple-sources"
            alt="Angular Area Chart Multiple Sources" >
 </code-view>
 
@@ -62,6 +63,7 @@ Angular Area Chart is often used to show the change of value over time such as t
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-area-chart-single-source"
+           github-src="charts/category-chart/area-chart-single-source"
            alt="Angular Area Chart with Single Series" >
 </code-view>
 
@@ -74,6 +76,7 @@ Similarly to how you can show multiple [Line Chart](line-chart.md) and [Spline C
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-area-chart-multiple-sources"
+           github-src="charts/category-chart/area-chart-multiple-sources"
            alt="Angular Area Chart with Multiple Sources" >
 </code-view>
 
@@ -86,6 +89,7 @@ Area charts often have semi-transparent fill for their areas, thicker li
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-area-chart-styling"
+           github-src="charts/category-chart/area-chart-styling"
            alt="Angular Area Chart Styling" >
 </code-view>
 
@@ -118,6 +122,7 @@ The Angular Range Area Chart allows you show the area as a range between two v
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-range-area-chart"
+           github-src="charts/data-chart/range-area-chart"
            alt="Angular Range Area Chart" >
 </code-view>
 
@@ -130,6 +135,7 @@ The Angular Stacked Area Chars is rendered using a collection of points connecte
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-stacked-area-chart"
+           github-src="charts/data-chart/stacked-area-chart"
            alt="Angular Stacked Area Chart" >
 </code-view>
 
@@ -202,6 +208,7 @@ The Angular Polar Spline Area Chart belongs to a group of [Polar Chart](polar-ch
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-polar-spline-area-chart"
+           github-src="charts/data-chart/polar-spline-area-chart"
            alt="Angular Polar Spline Area Chart" >
 </code-view>
 
