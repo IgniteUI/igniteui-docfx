@@ -292,7 +292,7 @@ $custom-badge-theme: igx-badge-theme(
 * [IgxBadgeComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-badge-theme)
 * [IgxListComponent]({environment:angularApiUrl}/classes/igxlistcomponent.html)
 * [IgxListItemComponent]({environment:angularApiUrl}/classes/igxlistitemcomponent.html)
-* [IgxBadgeType]({environment:angularApiUrl}/enums/igxbadgetype.html)
+* [IgxBadgeType]({environment:angularApiUrl}/index.html#IgxBadgeType)
 
 ## テーマの依存関係
 * [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
