@@ -6,7 +6,7 @@ _keywords: Angular cli, command line interface, Ignite UI for Angular, Infragist
 
 # Ignite UI CLI for Angular
 
-Our CLI tools provide project templates pre-configured for the Ignite UI for Angular toolset that help you get your next application off the ground in record time. The <a href="https://github.com/IgniteUI/igniteui-cli/blob/master/README.md#generate-ignite-ui-for-react-project" target="_blank">Ignite UI CLI</a> is a stand-alone command-line tool for creating and scaffolding your applications for a variety of different frameworks and provides a substantial productivity boost for developers.
+Our CLI tools provide project templates pre-configured for the Ignite UI for Angular toolset that help you get your next application off the ground in record time. The Ignite UI CLI</a> is a stand-alone command-line tool for creating and scaffolding your applications for a variety of different frameworks and provides a substantial productivity boost for developers.
 
 ## Getting Started
 
@@ -21,16 +21,6 @@ The above install command will make the Ignite UI CLI available for creation, sc
 ## Create a New Project
 
 To create an application that is configured to use the Ignite UI for Angular controls using the Ignite UI CLI, you can use the following template in your command line:
-
-<pre style="background:#141414;color:white;display:inline-block;padding:16x;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
-ig new "[name_of_project]" --framework=[target_framework] --type=[project_type]
-</pre>
-
-Using the above template, if you wanted to create a `React` application named "My Project" targeting ES6, you could write the following command:
-
-<pre style="background:#141414;color:white;display:inline-block;padding:16x;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
-ig new "My Project" --framework=react --type=igr-es6
-</pre>
 
 ## Adding Components
 

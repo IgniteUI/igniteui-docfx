@@ -18,6 +18,7 @@ You can create this type of chart in the [`IgxCategoryChartComponent`]({environm
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-line-chart-multiple-sources"
+           github-src="charts/category-chart/line-chart-multiple-sources"
            alt="Angular Line Chart Multiple Sources" >
 </code-view>
 
