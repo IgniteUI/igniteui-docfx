@@ -224,6 +224,16 @@ To get started with styling the button, we need to import the `index` file, wher
 
 Following the simplest approach, we create a new theme that extends the [`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) and accepts the `$foreground` and the `$background` parameters with their respective hover and focus parameters.
 
+Given the following markup:
+
+```html
+<div class="my-raised-btn">
+    <button igxButton="raised">Raised button</button>
+</div>
+```
+
+We need to create a theme:
+
 ```scss
 $custom-button-theme: igx-button-theme(
     $foreground: #fdfdfd,
@@ -243,7 +253,9 @@ Take a look at the [`igx-button-theme`]({environment:sassApiUrl}/index.html#func
 The last step is to pass the custom button theme in our application: 
 
 ```scss
- @include igx-css-vars($custom-button-theme);
+.my-raised-btn {
+    @include igx-css-vars($custom-button-theme);
+}
 ```
 
 ### Using Theme Overrides
@@ -255,7 +267,9 @@ If the component is using the [`Emulated`](themes/sass/component-themes.md#view-
 ```scss
 :host {
      ::ng-deep {
-        @include igx-button($custom-button-theme);
+        .my-raised-btn {
+            @include igx-button($custom-button-theme);
+        }
     }
 }
 ```
