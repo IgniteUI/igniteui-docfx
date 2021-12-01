@@ -25,13 +25,13 @@ _language: ja
 
 ## 構成の概要
 
- マップコントロールの他のタイプの散布シリーズと同様に、[`IgxGeographicProportionalSymbolSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html) シリーズには、オブジェクトの配列にバインドできる `DataSource` プロパティがあります。また、項目ソースの各項目は、地理経度および緯度を表す 2 つのデータ列があります。[`longitudeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html#longitudememberpath) と [`latitudeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html#latitudememberpath) プロパティを使用してこのデータ列をマップします。[`radiusScale`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html#radiusscale) と [`radiusMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html#radiusmemberpath) は、バブルの半径を設定します。
+ マップコントロールの他のタイプの散布シリーズと同様に、[`IgxGeographicProportionalSymbolSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html) シリーズには、オブジェクトの配列にバインドできる `ItemsSource` プロパティがあります。また、項目ソースの各項目は、地理経度および緯度を表す 2 つのデータ列があります。[`longitudeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html#longitudememberpath) と [`latitudeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html#latitudememberpath) プロパティを使用してこのデータ列をマップします。[`radiusScale`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html#radiusscale) と [`radiusMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html#radiusmemberpath) は、バブルの半径を設定します。
 
 以下の表に、データ バインドに使用される GeographicHighDensityScatterSeries シリーズのプロパティをまとめています。
 
 | プロパティ                                                                                                                                                                                     | タイプ                                                                                                                                            | 概要                                              |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
-| `DataSource`                                                                                                                                                                              | any                                                                                                                                            | 項目のソースを取得または設定します                               |
+| `ItemsSource`                                                                                                                                                                             | any                                                                                                                                            | 項目のソースを取得または設定します                               |
 | [`longitudeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html#longitudememberpath) | string                                                                                                                                         | ItemsSource プロパティを使用して、割り当てられた商品の経度の値の場所を特定します。 |
 | [`latitudeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html#latitudememberpath)   | string                                                                                                                                         | ItemsSource プロパティを使用して、割り当てられた商品の緯度値の場所を決定します。  |
 | [`radiusMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html#radiusmemberpath)       | string                                                                                                                                         | シリーズの半径値を取得するために使用するパスを設定します。                   |
@@ -87,37 +87,37 @@ export class MapTypeScatterBubbleSeriesComponent implements AfterViewInit {
     }
 
     public ngAfterViewInit(): void {
-		const sds = new IgxShapeDataSource();
-		sds.shapefileSource = "assets/Shapes/WorldTemperatures.shp";
-		sds.databaseSource  = "assets/Shapes/WorldTemperatures.dbf";
-		sds.dataBind();
-		sds.importCompleted.subscribe(() => this.onDataLoaded(sds, ""));
-	}
+    const sds = new IgxShapeDataSource();
+    sds.shapefileSource = "assets/Shapes/WorldTemperatures.shp";
+    sds.databaseSource  = "assets/Shapes/WorldTemperatures.dbf";
+    sds.dataBind();
+    sds.importCompleted.subscribe(() => this.onDataLoaded(sds, ""));
+}
 
     public onDataLoaded(sds: IgxShapeDataSource, e: any) {
-		const shapeRecords = sds.getPointData();
-		console.log("loaded contour shapes: " + shapeRecords.length + " from /Shapes/WorldTemperatures.shp");
+    const shapeRecords = sds.getPointData();
+    console.log("loaded contour shapes: " + shapeRecords.length + " from /Shapes/WorldTemperatures.shp");
 
-		const contourPoints: any[] = [];
-		for (const record of shapeRecords) {
-			const temp = record.fieldValues.Contour;
-			// using only major contours (every 10th degrees Celsius)
-			if (temp % 10 === 0 && temp >= 0) {
-				for (const shapes of record.points) {
-					 for (let i = 0; i < shapes.length; i++) {
-						if (i % 5 === 0) {
-							const p = shapes[i];
-							const item = { lon: p.x, lat: p.y, value: temp};
-							contourPoints.push(item);
-						}
-					 }
-				}
-			}
-		}
+    const contourPoints: any[] = [];
+    for (const record of shapeRecords) {
+        const temp = record.fieldValues.Contour;
+        // using only major contours (every 10th degrees Celsius)
+        if (temp % 10 === 0 && temp >= 0) {
+            for (const shapes of record.points) {
+                 for (let i = 0; i < shapes.length; i++) {
+                    if (i % 5 === 0) {
+                        const p = shapes[i];
+                        const item = { lon: p.x, lat: p.y, value: temp};
+                        contourPoints.push(item);
+                    }
+                 }
+            }
+        }
+    }
 
-		console.log("loaded contour points: " + contourPoints.length);
-		this.addSeriesWith(WorldLocations.getAll());
-	}
+    console.log("loaded contour points: " + contourPoints.length);
+    this.addSeriesWith(WorldLocations.getAll());
+}
 
     public addSeriesWith(locations: any[]) {
         const sizeScale = new IgxSizeScaleComponent();

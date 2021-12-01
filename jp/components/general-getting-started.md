@@ -1,6 +1,6 @@
 ---
 title: Angular データ可視化ツール | 作業の開始 | インフラジスティックス
-_description: インフラジスティックスの Angular コンポーネントを使用してアプリを作成し、世界最速の仮想化されたリアルタイムの Angular データ グリッドと財務ストリーミングおよびビジネスと財務チャートでデータの可視化を改善します。
+_description: インフラジスティックスの Angular コンポーネントを使用してアプリを作成し、世界最速の仮想化されたリアルタイムの Angular データ グリッドとファイナンシャル ストリーミングおよびビジネスとファイナンシャル チャートでデータの可視化を改善します。
 _keywords: Ignite UI for Angular, Infragistics, Getting Started, インフラジスティックス, 作業の開始
 _language: ja
 ---
@@ -20,7 +20,7 @@ Ignite UI for Angular を実行する前に、Ignite UI for Angular を含むす
       <img src="../images/general/nodejs.svg"
            style="display:flex;max-height:100px;margin:auto auto 20px auto;" />
       <a target="_blank" href="https://nodejs.org/en/download/"
-         style="color:white;background-color:#09f;text-decoration:none;font-weight:700;font-size:16px;padding: 5px 15px 5px 15px;">
+         style="color:white;background-color:#09f;text-decoration:none;font-weight:700;font-size:16px;padding: 5px 25px 5px 15px;">
         DOWNLOAD NODE JS
       </a>
     </div>
@@ -28,13 +28,36 @@ Ignite UI for Angular を実行する前に、Ignite UI for Angular を含むす
       <img src="../images/general/vs-code.svg"
            style="display:flex;max-height:100px;margin:auto auto 20px auto;" />
       <a target="_blank" href="https://code.visualstudio.com/download"
-         style="color:white;background-color:#09f;text-decoration:none;font-weight:700;font-size:16px;padding: 5px 15px 5px 15px;">
+         style="color:white;background-color:#09f;text-decoration:none;font-weight:700;font-size:16px;padding: 5px 25px 5px 15px;">
         DOWNLOAD VS CODE
       </a>
     </div>
 </div>
 
+<!-- using a note because there is no other way to build flag content for specific platform. -->
+
 <!-- end: Angular, React, WebComponents -->
+
+<!-- commented out because this section is present in the "Updating Existing App"
+You need to open Angular app in **VS Code** and install the following packages for Ignite UI for Angular using these commands:
+
+- **npm install --save igniteui-angular-charts igniteui-angular-core**
+- **npm install --save igniteui-angular-excel igniteui-angular-core**
+- **npm install --save igniteui-angular-gauges igniteui-angular-core**
+- **npm install --save igniteui-angular-grids igniteui-angular-core**
+- **npm install --save igniteui-angular-maps igniteui-angular-core**
+- **npm install --save igniteui-angular-spreadsheet igniteui-angular-core**
+
+Or
+
+- **yarn add igniteui-angular-charts igniteui-angular-core**
+- **yarn add igniteui-angular-excel igniteui-angular-core**
+- **yarn add igniteui-angular-gauges igniteui-angular-core**
+- **yarn add igniteui-angular-grids igniteui-angular-core**
+- **yarn add igniteui-angular-maps igniteui-angular-core**
+- **yarn add igniteui-angular-spreadsheet igniteui-angular-core**
+
+Lastly,  -->
 
 <!-- Angular, React -->
 
