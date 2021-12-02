@@ -41,7 +41,7 @@ export class AppModule {}
 
 ### アイコンの色
 
-デフォルトの色を変更するには、`igx-icon` コンポーネントの [`color`]({environment:angularApiUrl}/classes/igxiconcomponent.html#iconcolor) プロパティを使用します。
+`style.color` CSS プロパティを使用して、デフォルトの色を変更します。
 
 ```html
 <igx-icon [style.color]="'#e41c77'">home</igx-icon>
@@ -50,8 +50,6 @@ export class AppModule {}
     <iframe id="icon-sample-3-iframe" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-display/icon-sample-3" class="lazyload">
 </iframe></div>
 
->[!NOTE]
-> `color` プロパティは、Ignite UI for Angular の次のメジャー バージョンで非推奨になります。アイコンの色を変更するには、CSS プロパティを使用します。
 
 ### アイコンの無効化
 
