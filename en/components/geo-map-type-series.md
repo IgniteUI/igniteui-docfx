@@ -5,7 +5,7 @@ _keywords: Angular map, geographic series, Ignite UI for Angular, Infragistics
 mentionedTypes: ['XamGeographicMap']
 ---
 
-# Angular Geographic Series
+# Angular Geographic Series Overview
 
 In the Ignite UI for Angular Map component, geographic series are visual elements of the map that display geo-spatial data as points (e.g. locations of cities), polylines (e.g. road connections), or polygons (shape of countries) in a geographic context.
 The map component's Series property is a collection of geographic series objects. This property is used to support rendering an unlimited number of geographic series in the same plot area. When multiple geographic series objects are added to the Series property, each successive series will be layered on top of the previous series starting from the first to the last series. Therefore, geographic series can be better understood as map layers that can be stacked on top of each other and/or on top of geographic imagery.
