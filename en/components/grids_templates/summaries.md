@@ -336,7 +336,7 @@ class MySummary extends IgxNumberSummaryOperand {
 </igx-column>
 ```
 
-When a default summary is defined the height of the summary area is calculated by design depending on the column with the highest number of summaries and the display density of the grid. Overriding this height could be achieved through the exposed [summaryRowHeight]({environment:angularApiUrl}/classes/igxgridcomponent.html#summaryRowHeight) property. As an argument it takes a number and setting it to a falsy value would trigger the default summary row sizing behavior.
+When a default summary is defined, the height of the summary area is calculated by design depending on the column with the largest number of summaries and the display density of the grid. Use the [summaryRowHeight]({environment:angularApiUrl}/classes/igxgridcomponent.html#summaryRowHeight) input property to override the default value. As an argument it expects a number value, and setting a falsy value will trigger the default sizing behavior of the grid footer.
 
 > [!NOTE]
 > Column summary template could be defined through API by setting the column [summaryTemplate]({environment:angularApiUrl}/classes/igxcolumncomponent.html#summaryTemplate) property to the required TemplateRef.
