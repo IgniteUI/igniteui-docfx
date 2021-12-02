@@ -103,6 +103,17 @@ ng update @angular/cli
 - `IgxGridStateDirective` - `disableHiding` 列プロパティと列グループをサポートするようになりました。
 
 ### テーマ
+
+- Icon コンポーネントの `color` プロパティは非推奨になりました。`style.color` CSS プロパティを使用して、デフォルトの色を変更します。例:
+
+```html
+<igx-icon [style.color]="'#e41c77'">home</igx-icon>
+```
+
+```html
+<igx-icon style.color="{{ col.hasSummary ? '#e41c77' : '' }}">functions</igx-icon>
+```
+
 * Sass モジュール:
 テーマ エンジンは [Sass モジュール](https://sass-lang.com/documentation/at-rules/use)に切り替わりました。この変更は、すべてのテーマ ライブラリ関数 (コンポーネント テーマなど)、ミックスイン (コンポーネント ミックスインなど)、および変数が単一ファイルから`転送される`ことを意味します。Sass テーマ ライブラリを正しく使用するには、プロジェクトで Dart Sass バージョン 1.33.0 以降を使用し、テーマ ライブラリのすべてのインポートを以下から変更する必要があります。
 
