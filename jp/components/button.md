@@ -15,6 +15,7 @@ _language: ja
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-entries/buttons-sample-1" alt="Angular Button の例">
 </code-view>
+
 <div class="divider--half"></div>
 
 ## 使用方法
@@ -224,6 +225,16 @@ public selectDensity(event) {
 
 次に、[`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) を拡張し、それぞれのホバーとフォーカス パラメーターと共に `$foreground` と `$background` パラメーターを受け入れる新しいテーマを作成します。
 
+次のマークアップを前提として:
+
+```html
+<div class="my-raised-btn">
+    <button igxButton="raised">Raised button</button>
+</div>
+```
+
+テーマを作成する必要があります:
+
 ```scss
 $custom-button-theme: igx-button-theme(
     $foreground: #fdfdfd,
@@ -243,7 +254,9 @@ $custom-button-theme: igx-button-theme(
 最後には、カスタム ボタン テーマをアプリケーションに渡します。 
 
 ```scss
- @include igx-css-vars($custom-button-theme);
+.my-raised-btn {
+    @include igx-css-vars($custom-button-theme);
+}
 ```
 
 ### テーマ オーバーライドの使用
@@ -255,17 +268,21 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 ```scss
 :host {
      ::ng-deep {
-        @include igx-button($custom-button-theme);
+        .my-raised-btn {
+            @include igx-button($custom-button-theme);
+        }
     }
 }
 ```
 
 ### デモ
 
+
 <code-view style="height: 100px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-entries/buttons-style" >
 </code-view>
+
 <div class="divider--half"></div>
 
 ## API リファレンス

@@ -12,7 +12,6 @@ _language: ja
 
 ## Angular Avatar の例
 
-
 <code-view style="height:200px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/layouts/avatar-sample-3" alt="Angular Avatar の例">
@@ -126,6 +125,16 @@ Avatar のスタイル設定を始めるには、すべてのテーマ関数と�
 
 最も簡単な方法は、[`igx-avatar-theme`]({environment:sassApiUrl}/index.html#function-igx-avatar-theme) を拡張する新しいテーマを作成し、`$background`、`$color` と `$border-radius-square` パラメーターを受け取る方法です。
 
+次のマークアップを前提として:
+
+```html
+<div class="initials-avatar">
+    <igx-avatar>BA</igx-avatar>
+</div>
+```
+
+テーマを作成する必要があります:
+
 ```scss
 $custom-avatar-theme: igx-avatar-theme(
     $background: #72da67,
@@ -139,7 +148,9 @@ $custom-avatar-theme: igx-avatar-theme(
 最後にアバターのカスタム テーマを渡します。
 
 ```scss
-@include igx-css-vars($custom-avatar-theme);
+.initials-avatar {
+    @include igx-css-vars($custom-avatar-theme);
+}
 ```
 
 ### ミックスインの使用
@@ -152,12 +163,15 @@ Internet Explorer 11 以前などブラウザーのコンポーネントをス�
 :host {
     ::ng-deep {
         // Custom avatar theme を `igx-avatar` ミックスインに渡します
-        @include igx-avatar($custom-avatar-theme);
+        .initials-avatar {
+            @include igx-avatar($custom-avatar-theme);
+        }
     }
 }
 ```
 
 ここまでの内容が正しければ、以下のように表示されます。
+
 
 <code-view style="height:120px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -169,7 +183,7 @@ Internet Explorer 11 以前などブラウザーのコンポーネントをス�
 <div class="divider--half"></div>
 
 * [IgxAvatarComponent]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
-* [IgxAvatarComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
+
 
 ## テーマの依存関係
 * [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
