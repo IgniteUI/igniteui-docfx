@@ -189,7 +189,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 
 * [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
 * [IgxHintDirective]({environment:angularApiUrl}/classes/igxhintdirective.html)
-* [IgxInputGroup タイプ]({environment:angularApiUrl}/enums/igxinputgrouptype.html)
+* [IgxInputGroup タイプ]({environment:angularApiUrl}/index.html#IgxInputGroupType)
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 * [IgxInputGroupComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
 
