@@ -162,7 +162,7 @@ Internet Explorer 11 以前などブラウザーのコンポーネントをス�
 ```scss
 :host {
     ::ng-deep {
-        // Pass the custom avatar theme to the `igx-avatar` mixin
+        // Custom avatar theme を `igx-avatar` ミックスインに渡します
         .initials-avatar {
             @include igx-avatar($custom-avatar-theme);
         }
@@ -171,6 +171,7 @@ Internet Explorer 11 以前などブラウザーのコンポーネントをス�
 ```
 
 ここまでの内容が正しければ、以下のように表示されます。
+
 
 <code-view style="height:120px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -182,7 +183,7 @@ Internet Explorer 11 以前などブラウザーのコンポーネントをス�
 <div class="divider--half"></div>
 
 * [IgxAvatarComponent]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
-* [IgxAvatarComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
+
 
 ## テーマの依存関係
 * [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
