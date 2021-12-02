@@ -331,7 +331,7 @@ class MySummary extends IgxNumberSummaryOperand {
 <igx-column ... [hasSummary]="true">
     <ng-template igxSummary let-summaryResults>
         <span> My custom summary template</span>
-        <span>{{ summaryResult[0].label }} - {{ summaryResult[0].summaryResult }}</span>
+        <span>{{ summaryResults[0].label }} - {{ summaryResults[0].summaryResult }}</span>
     </ng-template>
 </igx-column>
 ```
