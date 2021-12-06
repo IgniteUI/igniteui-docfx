@@ -28,7 +28,7 @@ To start using the IgniteUI CSV Exporter first import the [`IgxCsvExporterServic
 // app.module.ts
 
 ...
-import { IgxCsvExporterService } from 'igniteui-angular/services/index';
+import { IgxCsvExporterService } from 'igniteui-angular';
 
 @NgModule({
   providers: [ IgxCsvExporterService ]
@@ -36,6 +36,9 @@ import { IgxCsvExporterService } from 'igniteui-angular/services/index';
 
 export class AppModule {}
 ```
+
+> [!Note]
+> In v12.2.1 and later, the exporter services are provided in root, which means you no longer need to declare them in the AppModule providers.
 
 To initiate an export process you may use the handler of a button in your component's template.
 
@@ -51,7 +54,7 @@ Here is the code which will execute the export process in the component's typesc
 // component.ts
 
 ...
-import { IgxCsvExporterService, IgxCsvExporterOptions, CsvFileTypes } from 'igniteui-angular/services/index';
+import { IgxCsvExporterService, IgxCsvExporterOptions, CsvFileTypes } from 'igniteui-angular';
 ...
 
 public localData = [
