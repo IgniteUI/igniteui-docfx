@@ -39,6 +39,9 @@ export class AppModule {}
 ```
 
 > [!Note]
+> In v12.2.1 and later, the exporter services are provided in root, which means you no longer need to declare them in the AppModule providers.
+
+> [!Note]
 > The Excel Exporter service has a peer dependency on the JSZip library. The JSZip library should be installed when using the Excel Exporter.
 
 To initiate an export process you may use the handler of a button in your component's template.
