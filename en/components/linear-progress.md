@@ -72,6 +72,15 @@ So if we set up everything correctly, you should see the following in your brows
 ### Indeterminate Progress
 If you want to track a process that is not determined precisely, you can set the [`indeterminate`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#indeterminate) input property to `true`.
 
+### Animation Duration
+The [`animationDuration`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#animationDuration) input property is used to specify how long the animation cycle should take.
+
+The following example specifies the animation duration set to 5 seconds.
+
+```html
+<igx-linear-bar [striped]="false" [value]="100" [animationDuration]="5000"></igx-linear-bar>
+```
+
 ### Text Properties
 
 You can align the text, using the [`textAlign`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#textalign) property. Permitted values are `left`, `center`, and `right`. 
