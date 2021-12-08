@@ -48,7 +48,7 @@ _language: ja
 <div class="divider--half"></div>
 }
 
-`igx-paginator` コンポーネントを追加すると、機能が存在するかどうかが制御されます。トグル プロパティを持つ単純な `*ngIf` を使用して、機能を有効/無効にできます。[`perPage`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#perPage) 入力は、ページごとに表示されるレコードを制御します。以下のように @@igComponent でページングを有効にします。
+[`igx-paginator`](../paginator.md) コンポーネントを追加すると、機能が存在するかどうかが制御されます。トグル プロパティを持つ単純な `*ngIf` を使用して、機能を有効/無効にできます。[`perPage`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#perPage) 入力は、ページごとに表示されるレコードを制御します。以下のように @@igComponent でページングを有効にします。
 
 ```html
 <@@igSelector #@@igObjectRef [data]="data" [height]="'500px'" [width]="'100%'" [displayDensity]="'cosy'">
@@ -397,6 +397,7 @@ $dark-button: igx-button-theme(
 <div class="divider--half"></div>
 
 * [@@igComponent 概要](@@igMainTopic.md)
+* [Paginator](../paginator.md)
 * [仮想化とパフォーマンス](virtualization.md)
 * [フィルタリング](filtering.md)
 * [ソート](sorting.md)
