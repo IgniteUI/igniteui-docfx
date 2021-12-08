@@ -327,6 +327,9 @@ import { IgxExcelExporterService, IgxCsvExporterService } from 'igniteui-angular
 export class AppModule { ... }
 ```
 
+> [!Note]
+> In v12.2.1 and later, the exporter services are provided in root, which means you no longer need to declare them in the AppModule providers.
+
 The toolbar exporter component exposes several input properties for customizing both the UI and the exporting experience.
 These range from changing the display text, to enabling/disabling options in the dropdown to customizing the name of the
 generated file. For full reference, consult the [API documentation]({environment:angularApiUrl}/classes/igxgridtoolbarexportercomponent.html) for the toolbar exporter component.
