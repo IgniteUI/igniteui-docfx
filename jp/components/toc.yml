@@ -934,6 +934,10 @@
 - name: Text Highlight
   href: texthighlight.md
   new: false
+- name: Paginator
+  href: paginator.md
+  new: true
+  updated: false
 - name: インタラクション
   header: true
   sortable: true
@@ -1050,13 +1054,6 @@
   href: time-picker.md
   new: false
   updated: true
-- name: ページネーション
-  header: true
-  sortable: true
-- name: Paginator
-  href: paginator.md
-  new: true
-  updated: false
 - name: サービス
   header: true
   sortable: true
