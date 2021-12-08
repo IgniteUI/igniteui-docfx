@@ -46,7 +46,7 @@ The following example represents @@igComponent pagination and exposes the option
 <div class="divider--half"></div>
 }
 
-Adding a `igx-paginator` component will control whether the feature is present, you can enable/disable it by using a simple `*ngIf` with a toggle property. The [`perPage`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#perPage) input controls the visible records per page. Let’s update our @@igComponent to enable paging:
+Adding a [`igx-paginator`](../paginator.md) component will control whether the feature is present, you can enable/disable it by using a simple `*ngIf` with a toggle property. The [`perPage`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#perPage) input controls the visible records per page. Let’s update our @@igComponent to enable paging:
 
 ```html
 <@@igSelector #@@igObjectRef [data]="data" [height]="'500px'" [width]="'100%'" [displayDensity]="'cosy'">
@@ -395,6 +395,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 <div class="divider--half"></div>
 
 * [@@igComponent overview](@@igMainTopic.md)
+* [Paginator](../paginator.md)
 * [Virtualization and Performance](virtualization.md)
 * [Filtering](filtering.md)
 * [Sorting](sorting.md)
