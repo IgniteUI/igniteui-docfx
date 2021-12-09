@@ -1,5 +1,5 @@
 ---
-title: Angular マップ | ワールド ユーティリティ | データソース | インフラジスティックス
+title: Angular マップ | ワールド ユーティリティ | データ ソース | インフラジスティックス
 _description: インフラジスティックスの Angular JavaScript マップ データ ユーティリティを使用して、地理的データを生成します。Ignite UI for Angular マップのサンプルを是非お試しください!
 _keywords: Angular map, map data, Ignite UI for Angular, Infragistics, Angular マップ, マップ データ, インフラジスティックス
 mentionedTypes: ['XamGeographicMap']
