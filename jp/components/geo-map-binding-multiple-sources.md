@@ -1,6 +1,6 @@
 ---
-title: Angular マップ | データ可視化ツール | 複数のデータソースのバインディング | インフラジスティックス
-_description: インフラジスティックスの Angular JavaScript マップを使用して、複数の地理的シリーズオブジェクトを追加し、カスタム データソースを地理空間データとオーバーレイすることができます。Ignite UI for Angular マップ チュートリアルを是非お試しください!
+title: Angular マップ | データ可視化ツール | 複数のデータ ソースのバインディング | インフラジスティックス
+_description: インフラジスティックスの Angular JavaScript マップを使用して、複数の地理的シリーズオブジェクトを追加し、カスタム データ ソースを地理空間データとオーバーレイすることができます。Ignite UI for Angular マップ チュートリアルを是非お試しください!
 _keywords: Angular map, geographic series, Ignite UI for Angular, Infragistics, data binding, Angular マップ, 地理的シリーズ, データ バインディング, インフラジスティックス
 mentionedTypes: ['XamGeographicMap', 'SeriesViewer']
 _language: ja
@@ -8,7 +8,7 @@ _language: ja
 
 # Angular 複数データ ソースのバインド
 
-Ignite UI for Angular マップでは、カスタム データソースを地理空間データとオーバーレイするために複数の地理的シリーズ オブジェクトを追加できます。たとえば、空港の地理的位置をプロットするための [`IgxGeographicSymbolSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html)、空港間のフライトをプロットするための [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html)、主要な地理座標のグリッド線をプロットするための 2nd [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) などです。
+Ignite UI for Angular マップでは、カスタム データ ソースを地理空間データとオーバーレイするために複数の地理的シリーズ オブジェクトを追加できます。たとえば、空港の地理的位置をプロットするための [`IgxGeographicSymbolSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html)、空港間のフライトをプロットするための [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html)、主要な地理座標のグリッド線をプロットするための 2nd [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) などです。
 
 ## Angular 複数データ ソースのバインドの例
 
