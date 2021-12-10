@@ -315,6 +315,9 @@ import { IgxExcelExporterService, IgxCsvExporterService } from 'igniteui-angular
 export class AppModule { ... }
 ```
 
+> [!Note]
+> In v12.2.1 and later, the exporter services are provided in root, which means you no longer need to declare them in the AppModule providers.
+
 ツールバー エクスポーター コンポーネントは、UI とエクスポート エクスペリエンスの両方をカスタマイズするためのいくつかの入力プロパティを公開します。
 これらは、表示テキストの変更から、ドロップダウンのオプションの有効化/無効化、生成されたファイルの名前のカスタマイズまで多岐にわたります。
 完全なリファレンスについては、ツールバー エクスポータ コンポーネントの [API ヘルプ]({environment:angularApiUrl}/classes/igxgridtoolbarexportercomponent.html)を参照してください。

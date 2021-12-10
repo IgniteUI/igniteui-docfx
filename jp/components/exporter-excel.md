@@ -40,6 +40,9 @@ export class AppModule {}
 ```
 
 > [!Note]
+> In v12.2.1 and later, the exporter services are provided in root, which means you no longer need to declare them in the AppModule providers.
+
+> [!Note]
 > Excel Exporter サービスは JSZip にピア依存関係があります。JSZip ライブラリは Excel Exporter の使用時にインストールしてください。
 
 エクスポート処理の開始は、コンポーネントのテンプレートでボタンのハンドラーを使用します。
