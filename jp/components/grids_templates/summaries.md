@@ -324,8 +324,8 @@ class MySummary extends IgxNumberSummaryOperand {
 
 }
 
-### Summary Template
-`igxSummary` targets the column summary providing as a context the column summary results.
+### 集計テンプレート
+`igxSummary` は、列の集計の結果をコンテキストとして提供する列の集計を対象としています。
 
 ```html
 <igx-column ... [hasSummary]="true">
@@ -336,10 +336,10 @@ class MySummary extends IgxNumberSummaryOperand {
 </igx-column>
 ```
 
-When a default summary is defined, the height of the summary area is calculated by design depending on the column with the largest number of summaries and the display density of the grid. Use the [summaryRowHeight]({environment:angularApiUrl}/classes/igxgridcomponent.html#summaryRowHeight) input property to override the default value. As an argument it expects a number value, and setting a falsy value will trigger the default sizing behavior of the grid footer.
+デフォルトの集計が定義されている場合、集計領域の高さは、集計の数が最も多い列とグリッドの表示密度に応じてデザインにより計算されます。[summaryRowHeight]({environment:angularApiUrl}/classes/igxgridcomponent.html#summaryRowHeight) 入力プロパティを使用して、デフォルト値をオーバーライドします。引数として数値が必要であり、falsy の値を設定すると、グリッド フッターのデフォルトのサイズ設定動作がトリガーされます。
 
 > [!NOTE]
-> Column summary template could be defined through API by setting the column [summaryTemplate]({environment:angularApiUrl}/classes/igxcolumncomponent.html#summaryTemplate) property to the required TemplateRef.
+> 列の集計テンプレートは、列 [summaryTemplate]({environment:angularApiUrl}/classes/igxcolumncomponent.html#summaryTemplate) プロパティを必要な TemplateRef に設定することにより、API を介して定義できます。
 
 
 @@if (igxName === 'IgxGrid') {

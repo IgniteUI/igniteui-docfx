@@ -73,10 +73,10 @@ export class AppModule {}
 ### 不確定のプログレス
 正確に決定していないプロセスをトラックしたい場合、[`indeterminate`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#indeterminate) プロパティを `true` に設定できます。
 
-### Animation Duration
-The [`animationDuration`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#animationDuration) input property is used to specify how long the animation cycle should take.
+### アニメーション期間
+[`animationDuration`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#animationDuration) 入力プロパティは、アニメーション サイクルにかかる時間を指定するために使用されます。
 
-The following example specifies the animation duration set to 5 seconds.
+次の例では、アニメーションの継続時間を 5 秒に設定しています。
 
 ```html
 <igx-linear-bar [striped]="false" [value]="100" [animationDuration]="5000"></igx-linear-bar>
