@@ -3,6 +3,7 @@ title: Angular Donut Chart | Data Visualization | Infragistics
 _description: Infragistics' Angular Donut Chart
 _keywords: Angular Charts, Donut Chart, Donut Chart, Infragistics
 mentionedTypes: ["XamDoughnutChart", "DoughnutChart"]
+namespace: Infragistics.Controls.Charts
 ---
 
 # Angular Donut Chart

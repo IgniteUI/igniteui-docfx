@@ -3,6 +3,7 @@ title: Angular What's New | Ignite UI for Angular | Infragistics
 _description: Learn about new features in the Ignite UI for Angular.
 _keywords: Changelog, What's New,  Ignite UI for Angular, Infragistics
 mentionedTypes: ["SeriesViewer", "XYChart", "DomainChart", "XamGeographicMap"]
+namespace: Infragistics.Controls.Charts
 ---
 
 # Ignite UI for Angular Changelog (Data Visualization)
