@@ -19,7 +19,7 @@ All notable changes for each version of Ignite UI for Angular are documented on 
 
 <div class="divider--half"></div>
 
-## **Angular 11.3.0**
+## **Angular 13.1.0**
 
 <div class="divider--half"></div>
 
@@ -91,7 +91,7 @@ This release introduces several new and improved visual design and configuration
     -   chart.[`computedPlotAreaMarginMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#computedplotareamarginmode)
 -   New Highlighting Properties
     -   chart.[`highlightingMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriesviewercomponent.html#highlightingmode) - Sets whether hovered or non-hovered series to fade, brighten
-    -   chart.[`highlightingBehavior`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriesviewercomponent.html#highlightingbehavior) - Sets whether the series highlights depending on mouse position eg. directly over or nearest item
+    -   chart.[`highlightingBehavior`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriesviewercomponent.html#highlightingbehavior) - Sets whether the series highlights depending on mouse position e.g. directly over or nearest item
     -   Note, in previous releases the highlighting was limited to fade on hover.
 -   Added Highlighting Stacked, Scatter, Polar, Radial, and Shape series:
 -   Added Annotation layers to Stacked, Scatter, Polar, Radial, and Shape series:

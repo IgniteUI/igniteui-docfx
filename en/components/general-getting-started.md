@@ -9,7 +9,7 @@ _keywords: Ignite UI for Angular, Infragistics, Getting Started
 The Ignite UI for Angular is a complete set of Angular components designed to enable developers to build the most modern, high-performance HTML5 & TypeScript apps for modern desktop browsers.
 
 > [!NOTE]
-> You can get an example of Angular project with Ignite UI for Angular from this [GitHub](https://github.com/IgniteUI/igniteui-angular-examples/tree/master/samples) repository or you can follow the following instructions on how to create a new Angular project.
+> You can get an example of Angular projects with Ignite UI for Angular from this [GitHub](https://github.com/IgniteUI/igniteui-angular-examples/tree/master/samples) repository or you can follow the following instructions on how to create a new Angular project.
 
 <!-- Angular, React, WebComponents -->
 
