@@ -23,7 +23,7 @@ Ignite UI for Angular Map コンポーネントを使用すると、さまざま
 
 ## データ例
 
-CSVファイルからのデータの例:
+CSV ファイルからのデータの例:
 
 ```ts
 City,Lat,Lon,State,Code,County,Density,Population

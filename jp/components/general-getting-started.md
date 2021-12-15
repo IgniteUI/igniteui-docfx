@@ -9,6 +9,9 @@ _language: ja
 
 Ignite UI for Angular は、最新のデスクトップ ブラウザー対応の高パフォーマンス HTML 5 および TypeScript アプリケーションを構築するために設計された Angular コンポーネントのコンプリート セットです。
 
+> [!NOTE]
+> この [GitHub](https://github.com/IgniteUI/igniteui-angular-examples/tree/master/samples) リポジトリから Ignite UI for Angular を使用した Angular プロジェクトの例を取得するか、新しい Angular プロジェクトを作成する方法について次の手順に従うことができます。
+
 <!-- Angular, React, WebComponents -->
 
 ## コンピューターのセットアップ
