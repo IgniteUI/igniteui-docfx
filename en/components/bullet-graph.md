@@ -3,17 +3,18 @@ title: Angular Bullet Graph | Data Visualization Tools | Infragistics
 _description: Infragistics' Angular bullet graph control allows you to create dashboards displaying ranges or comparing multiple measurements. View our data visualization tools!
 _keywords: Angular Bullet Graph, animation, labels, needle, scales, ranges, tick marks, Infragistics
 mentionedTypes: ['XamBulletGraph']
+namespace: Infragistics.Controls.Gauges
 ---
 
 # Angular Bullet Graph Overview
 
 The Angular bullet graph component allows for a linear and concise view of measures compared against a scale.
 
-## Angular Bullet Graph Example
-
 The Ignite UI for Angular bullet graph component provides you with the ability to create attractive data presentations, replacing meters and gauges that are used on dashboards with simple yet straightforward and clear bar charts. A bullet graph is one of the most effective and efficient ways to present progress towards goals, good/better/best ranges, or compare multiple measurements in as little horizontal or vertical space as possible.
 
-The following sample demonstrates how setting multiple properties on the same bullet graph can transform it to completely different bullet graph.
+## Angular Bullet Graph Example
+
+The following sample demonstrates how setting multiple properties on the same [`IgxBulletGraphComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbulletgraphcomponent.html) can transform it to completely different bullet graph.
 
 <code-view style="height: 155px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
@@ -336,3 +337,17 @@ For your convenience, all above code snippets are combined into one code block b
     </igx-linear-graph-range>
 </igx-bullet-graph>
 ```
+
+## Additional Resources
+
+You can find more information about other types of gauges in these topics:
+
+-   [Linear Gauge](linear-gauge.md)
+-   [Radial Gauge](radial-gauge.md)
+
+## API Members
+
+The following is a list of API members mentioned in the above sections:
+
+-   [`IgxBulletGraphComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbulletgraphcomponent.html)
+-   [`IgxLinearGraphRangeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineargraphrangecomponent.html)

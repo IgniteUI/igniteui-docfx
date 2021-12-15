@@ -3,6 +3,7 @@ title: Angular Chart Tooltips | Data Visualization | Infragistics
 _description: Infragistics' Angular Chart Tooltips
 _keywords: Angular Charts, Tooltips, Infragistics
 mentionedTypes: ["CategoryChart", "ToolTipType"]
+namespace: Infragistics.Controls.Charts
 ---
 
 # Angular Chart Tooltips
