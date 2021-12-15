@@ -3,6 +3,7 @@ title: Angular Radial Gauge Chart | Data Visualization Tools | Infragistics
 _description: Use Infragistics' Angular radial gauge control to create engaging data visualizations and dashboards and show off KPIs with rich style and interactivity. Learn about the Ignite UI for Angular radial gauge configurable elements!
 _keywords: Radial Gauge, Ignite UI for Angular, Infragistics, animation, labels, needle, scales, ranges, tick marks
 mentionedTypes: ['XamRadialGauge', 'XamRadialGaugeRange']
+namespace: Infragistics.Controls.Gauges
 ---
 
 # Angular Radial Gauge Overview
@@ -13,7 +14,7 @@ The Ignite UI for Angular radial gauge component is a data visualization tool ca
 
 ## Angular Radial Gauge Example
 
-The following sample demonstrates how setting multiple properties on the same radial gauge can transform it to completely different radial gauge.
+The following sample demonstrates how setting multiple properties on the same [`IgxRadialGaugeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialgaugecomponent.html) can transform it to completely different radial gauge.
 
 <code-view style="height: 375px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
@@ -325,3 +326,17 @@ For your convenience, all above code snippets are combined into one code block b
     </igx-radial-gauge-range>
 </igx-radial-gauge>
 ```
+
+## Additional Resources
+
+You can find more information about other types of gauges in these topics:
+
+-   [Bullet Graph](bullet-graph.md)
+-   [Linear Gauge](linear-gauge.md)
+
+## API Members
+
+The following is a list of API members mentioned in the above sections:
+
+-   [`IgxRadialGaugeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialgaugecomponent.html)
+-   [`IgxRadialGaugeRangeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialgaugerangecomponent.html)

@@ -3,6 +3,7 @@ title: Angular Chart Annotations | Data Visualization | Infragistics
 _description: Infragistics' Angular Chart Annotations
 _keywords: Angular Charts, Annotations, Infragistics
 mentionedTypes: ["CategoryChart", "CrosshairLayer", "FinalValueLayer", "CalloutLayer"]
+namespace: Infragistics.Controls.Charts
 ---
 
 # Angular Chart Annotations
