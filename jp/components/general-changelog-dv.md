@@ -4,6 +4,7 @@ _description: Ignite UI for Angular の新機能について学んでくださ�
 _keywords: Changelog, What's New, Ignite UI for Angular, Infragistics, 変更ログ, 新機能, インフラジスティックス
 _language: ja
 mentionedTypes: ["SeriesViewer", "XYChart", "DomainChart", "XamGeographicMap"]
+namespace: Infragistics.Controls.Charts
 ---
 
 # Ignite UI for Angular 変更ログ (データ可視化)
@@ -19,7 +20,7 @@ Ignite UI for Angular の各バージョンのすべての重要な変更は、�
 
 <div class="divider--half"></div>
 
-## **Angular 11.3.0**
+## **Angular 13.1.0**
 
 <div class="divider--half"></div>
 
