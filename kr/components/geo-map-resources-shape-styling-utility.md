@@ -2,6 +2,7 @@
 title: Angular Map | Shape Map Resources | Infragistics
 _description: Use Infragistics' Angular JavaScript map to load geo-spatial data from shape files. View Ignite UI for Angular map demos!
 _keywords: Angular map, shape styling, conditional formatting, Ignite UI for Angular, Infragistics
+_language: kr
 mentionedTypes: ['XamGeographicMap']
 ---
 
