@@ -87,45 +87,45 @@ To apply a filter with different expressions, you can click the **Text filter**,
 
 ## Configure Menu Features
 
-Sorting, moving, pinning and hiding features can be removed from the filter menu using the corresponding inputs: [`sortable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortable), [`movable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#movable), [`selected`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selected), [`disablePinning`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disablepinning), [`disableHiding`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disablehiding).
+Sorting, pinning and hiding features can be removed from the filter menu using the corresponding inputs: [`sortable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortable), [`selected`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selected), [`disablePinning`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disablepinning), [`disableHiding`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disablehiding).
 
 @@if (igxName === 'IgxGrid') {
 ```html
-<igx-grid #grid1 [data]="data" [autoGenerate]="false" height="650px" width="100%" [allowFiltering]="true" [filterMode]="'excelStyleFilter'">
-    <igx-column field="ProductName" header="Product Name" [sortable]="true" [movable]="true" [dataType]="'string'">
+<igx-grid #grid1 [data]="data" [autoGenerate]="false" height="650px" width="100%" [moving]="true" [allowFiltering]="true" [filterMode]="'excelStyleFilter'">
+    <igx-column field="ProductName" header="Product Name" [sortable]="true" [dataType]="'string'">
     </igx-column>
-    <igx-column field="QuantityPerUnit" header="Quantity Per Unit" [sortable]="false" [disablePinning]="true" [disableHiding]="true" [movable]="false" [dataType]="'string'">
+    <igx-column field="QuantityPerUnit" header="Quantity Per Unit" [sortable]="false" [disablePinning]="true" [disableHiding]="true" [dataType]="'string'">
     </igx-column>
-    <igx-column field="UnitPrice" header="Unit Price" [disablePinning]="true" [disableHiding]="true" [sortable]="true" [movable]="true" [dataType]="'number'">
+    <igx-column field="UnitPrice" header="Unit Price" [disablePinning]="true" [disableHiding]="true" [sortable]="true" [dataType]="'number'">
     </igx-column>
-    <igx-column field="OrderDate" header="Order Date" [sortable]="false" [movable]="false" [dataType]="'date'" [formatter]="formatDate">
+    <igx-column field="OrderDate" header="Order Date" [sortable]="false"  [dataType]="'date'" [formatter]="formatDate">
     </igx-column>
-    <igx-column field="Discontinued" header="Discontinued" [sortable]="true" [movable]="true" [dataType]="'boolean'">
+    <igx-column field="Discontinued" header="Discontinued" [sortable]="true" [dataType]="'boolean'">
     </igx-column>
 </igx-grid>
 ```
 
 <div class="divider--half"></div>
 
-In the sample below **Product Name** and **Discontinued** columns have all four features enabled, **Quantity Per Unit** have all four disabled, **Unit Price** has only sorting and moving and **Order Date** has only pinning and hiding and all are [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable).
+In the sample below **Product Name** and **Discontinued** columns have all four features enabled, **Quantity Per Unit** have all three disabled, **Unit Price** has only sorting and **Order Date** has only pinning and hiding and all are [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable).
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```html
-<igx-tree-grid #treegrid1 [data]="data" [autoGenerate]="false" height="480px" width="100%" [allowFiltering]="true"
+<igx-tree-grid #treegrid1 [data]="data" [autoGenerate]="false" height="480px" width="100%" [moving]="true" [allowFiltering]="true"
     primaryKey="ID" foreignKey="ParentID" filterMode="excelStyleFilter">
     <igx-column field="ID" header="Product ID" [dataType]="'string'">
     </igx-column>
-    <igx-column field="Name" header="Product Name" [sortable]="true" [movable]="true" [dataType]="'string'">
+    <igx-column field="Name" header="Product Name" [sortable]="true" [dataType]="'string'">
     </igx-column>
-    <igx-column field="UnitPrice" header="Unit Price" [dataType]="'number'" [sortable]="false" [disablePinning]="true" [disableHiding]="true" [movable]="false">
+    <igx-column field="UnitPrice" header="Unit Price" [dataType]="'number'" [sortable]="false" [disablePinning]="true" [disableHiding]="true">
         <ng-template igxCell let-cell="cell" let-val>
             <span *ngIf="cell.row.data.UnitPrice == 0">-</span>
             <span *ngIf="cell.row.data.UnitPrice != 0">${{val}}</span>
         </ng-template>
     </igx-column>
-    <igx-column field="AddedDate" header="Added Date" [dataType]="'date'" [formatter]="formatDate" [sortable]="false" [movable]="false">
+    <igx-column field="AddedDate" header="Added Date" [dataType]="'date'" [formatter]="formatDate" [sortable]="false">
     </igx-column>
-    <igx-column field="Discontinued" header="Discontinued" [dataType]="'boolean'" [sortable]="true" [movable]="true">
+    <igx-column field="Discontinued" header="Discontinued" [dataType]="'boolean'" [sortable]="true">
         <ng-template igxCell let-cell="cell" let-val>
             <span *ngIf="cell.row.data.UnitPrice == 0">-</span>
             <img *ngIf="cell.row.data.UnitPrice != 0 && val" src="assets/images/grid/active.png" title="Continued" alt="Continued" />
@@ -137,13 +137,13 @@ In the sample below **Product Name** and **Discontinued** columns have all four 
 
 <div class="divider--half"></div>
 
-In the sample below 'Product Name' and 'Discontinued' columns have all four features enabled, 'Unit Price' have all four disabled, 'Added Date' has only pinning and hiding.
+In the sample below 'Product Name' and 'Discontinued' columns have all three features enabled, 'Unit Price' have all three disabled, 'Added Date' has only pinning and hiding.
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="false" [allowFiltering]='true' filterMode="excelStyleFilter"
+<igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="false" [moving]="true" [allowFiltering]='true' filterMode="excelStyleFilter"
     [height]="'650px'" [width]="'100%'" [rowHeight]="'65px'" #hierarchicalGrid>
-    <igx-column field="Artist" [filterable]='true' [sortable]="true" [movable]="true"></igx-column>
+    <igx-column field="Artist" [filterable]='true' [sortable]="true"></igx-column>
     <igx-column field="Photo" [filterable]='false'>
         <ng-template igxCell let-cell="cell">
             <div class="cell__inner_2">
@@ -152,7 +152,7 @@ In the sample below 'Product Name' and 'Discontinued' columns have all four feat
         </ng-template>
     </igx-column>
     <igx-column field="Debut" [filterable]='true' [disablePinning]="true" [disableHiding]="true"></igx-column>
-    <igx-column field="Grammy Nominations" [filterable]='true' [dataType]="'number'" [sortable]="false" [movable]="false"></igx-column>
+    <igx-column field="Grammy Nominations" [filterable]='true' [dataType]="'number'" [sortable]="false"></igx-column>
     <igx-column field="Grammy Awards" [filterable]='true' [dataType]="'number'"></igx-column>
 
     <igx-row-island [key]="'Albums'" [autoGenerate]="false" [allowFiltering]='true' filterMode="excelStyleFilter">
@@ -179,7 +179,7 @@ In the sample below 'Product Name' and 'Discontinued' columns have all four feat
 
 <div class="divider--half"></div>
 
-In the sample below 'Artist' column have all four features enabled, 'Debut' have all four disabled, 'Grammy Nominations' has only pinning and hiding.
+In the sample below 'Artist' column have all three features enabled, 'Debut' have all three disabled, 'Grammy Nominations' has only pinning and hiding.
 }
 
 <div class="divider--half"></div>
@@ -214,7 +214,7 @@ In the sample below 'Artist' column have all four features enabled, 'Debut' have
 ## Templates
 
 If you want to further customize the Excel style filter menu without disabling the column features you could use custom templates. The Excel Style filter menu provides two directives for templating:
-- `IgxExcelStyleColumnOperationsTemplateDirective` - re-templates the area with all column operations like sorting, moving, pinning, etc.
+- `IgxExcelStyleColumnOperationsTemplateDirective` - re-templates the area with all column operations like sorting, pinning, etc.
 - `IgxExcelStyleFilterOperationsTemplateDirective` - re-templates the area with all filter specific operations.
 
 You could either re-template only one of those areas or both of them. You could put any custom content inside those directives or you could use any of our built-in Excel style filtering components.

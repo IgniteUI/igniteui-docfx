@@ -91,13 +91,12 @@ Then define a @@igComponent with bound data source and [`rowEditable`]({environm
 @@if (igxName === 'IgxTreeGrid') {
 ```html
 <igx-tree-grid [data]="data" [primaryKey]="EmployeID" [foreignKey]="PID"
-               [rowEditable]="true" [rowSelectable]="true">
+               [rowEditable]="true" [rowSelectable]="true" [moving]="true">
     <igx-column *ngFor="let c of columns"
         [editable] ="c.editable"
         [field]="c.field"
         [dataType]="c.dataType"
         [header]="c.label"
-        [movable]="c.movable"
         [resizable]="c.resizable"
         [sortable]="c.sortable"
         [filterable]="c.filterable">
@@ -190,10 +189,10 @@ export class TreeGridRowEditSampleComponent implements OnInit {
         this.data = FLAT_DATA;
 
         this.columns = [
-            { field: 'FirstName', label: 'First Name', resizable: true, movable: true, sortable: true, filterable: true, editable: true, dataType: 'string' },
-            { field: 'LastName', label: 'Last Name', resizable: false, movable: false, sortable: false, filterable: false, editable: true, dataType: 'string' },
-            { field: 'Title', label: 'Title', resizable: true, movable: true, sortable: true, filterable: true, editable: true, dataType: 'string' },
-            { field: 'HireDate', label: 'Hire Date', resizable: true, movable: true, sortable: true, filterable: true, editable: true, dataType: 'date' }
+            { field: 'FirstName', label: 'First Name', resizable: true, sortable: true, filterable: true, editable: true, dataType: 'string' },
+            { field: 'LastName', label: 'Last Name', resizable: false, sortable: false, filterable: false, editable: true, dataType: 'string' },
+            { field: 'Title', label: 'Title', resizable: true, sortable: true, filterable: true, editable: true, dataType: 'string' },
+            { field: 'HireDate', label: 'Hire Date', resizable: true, sortable: true, filterable: true, editable: true, dataType: 'date' }
         ];
     }
 }
