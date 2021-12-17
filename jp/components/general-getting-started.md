@@ -37,10 +37,6 @@ Ignite UI for Angular を実行する前に、Ignite UI for Angular を含むす
     </div>
 </div>
 
-<!-- using a note because there is no other way to build flag content for specific platform. -->
-
-<!-- end: Angular, React, WebComponents -->
-
 <!-- commented out because this section is present in the "Updating Existing App"
 You need to open Angular app in **VS Code** and install the following packages for Ignite UI for Angular using these commands:
 
