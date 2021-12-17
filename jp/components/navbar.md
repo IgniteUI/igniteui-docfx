@@ -61,34 +61,41 @@ export class AppModule {}
 > [!NOTE]
 > [`actionButtonIcon`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#actionbuttonicon) は、デザインで Material フォントセットを使用します。
 
-### アイコンの追加
+### アイコン ボタンの追加
 
-アプリケーションのメニューを実装した後、検索、お気に入りなどのオプションを追加できます。要素を追加するには、[**IgxIcon**](icon.md) モジュールを **app.module.ts** ファイルにインポートします。
+検索、お気に入りなどのオプションを追加するには、[**IgxButton**](button.md) と [**IgxIcon**](icon.md) モジュールを **app.module.ts** ファイルにインポートします。
 ```typescript
 // app.module.ts
 
 ...
 import {
     IgxNavbarModule,
+    IgxButtonModule,
     IgxIconModule
 } from 'igniteui-angular';
 
 @NgModule({
     ...
-    imports: [..., IgxIconModule],
+    imports: [..., IgxButtonModule, IgxIconModule],
 })
 export class AppModule {}
 ```
 
-各オプションにアイコンを追加するためにテンプレートを更新します。
+各オプションにアイコン ボタンを追加するためにテンプレートを更新します。
 
 ```html
 <!--navbar.component.html-->
 
- <igx-navbar title="Sample App" actionButtonIcon="menu" [isActionButtonVisible]="true">
-    <igx-icon>search</igx-icon>
-    <igx-icon>favorite</igx-icon>
-    <igx-icon>more_vert</igx-icon>
+ <igx-navbar title="Sample App">
+    <button igxButton="icon">
+        <igx-icon>search</igx-icon>
+    </button>
+    <button igxButton="icon">
+        <igx-icon>favorite</igx-icon>
+    </button>
+    <button igxButton="icon">
+        <igx-icon>more_vert</igx-icon>
+    </button>
 </igx-navbar>
 ```
 
@@ -101,9 +108,9 @@ export class AppModule {}
 
 <div class="divider--half"></div>
 
-### カスタム アクション アイコンの追加
+### カスタム アクション の追加
 
-アプリのナビゲーションでナビゲーション バーの左端にあるデフォルト アイコンではなくカスタム アクション アイコンを使用したい場合、`igx-navbar-action` ディレクティブを使用してデフォルトの操作アイコンをコンテンツで置き換えます。`igx-navbar-action` ディレクティブを使用してデフォルトの操作アイコンをコンテンツで置き換えます。これには Font Awesome ホーム アイコンを使用します。
+アプリのナビゲーションでナビゲーション バーの左端にあるデフォルト アイコンではなくカスタム テンプレートを使用したい場合、`igx-navbar-action` ディレクティブを使用して提供したコンテンツをレンダリングします。これには Font Awesome ホーム アイコンのボタンを使用します。
 
 ```css
 /* navbar.component.css */
@@ -111,30 +118,31 @@ export class AppModule {}
 @import url("https://unpkg.com/@fortawesome/fontawesome-free-webfonts@^1.0.9/css/fontawesome.css");
 @import url("https://unpkg.com/@fortawesome/fontawesome-free-webfonts@^1.0.9/css/fa-regular.css");
 @import url("https://unpkg.com/@fortawesome/fontawesome-free-webfonts@^1.0.9/css/fa-solid.css");
-
-.customIcon {
-    vertical-align: middle;
-}
 ```
 
 ```html
 <!--navbar.component.html-->
 
- <igx-navbar title="Sample App" actionButtonIcon="menu" [isActionButtonVisible]="true">
-    <igx-icon>search</igx-icon>
-    <igx-icon>favorite</igx-icon>
-    <igx-icon>more_vert</igx-icon>
-
+ <igx-navbar title="Sample App">
     <igx-navbar-action>
-        <igx-icon class="customIcon" fontSet="fa" name="fa-home"></igx-icon>
+        <button igxButton="icon">
+            <igx-icon family="fa" name="fa-home"></igx-icon>
+        </button>
     </igx-navbar-action>
+        
+    <button igxButton="icon">
+        <igx-icon>search</igx-icon>
+    </button>
+    <button igxButton="icon">
+        <igx-icon>favorite</igx-icon>
+    </button>
+    <button igxButton="icon">
+        <igx-icon>more_vert</igx-icon>
+    </button>
 </igx-navbar>
 ```
 
-> [!NOTE]
-> [`igx-navbar-action`]({environment:angularApiUrl}/classes/igxnavbaractiondirective.html) または [`igxNavbarAction`]({environment:angularApiUrl}/classes/igxnavbaractiondirective.html) の場合、デフォルト [`actionButtonIcon`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#actionbuttonicon) が使用されません。
-
-以下はカスタム アクション アイコンをした場合の navbar の外観です。
+以下はカスタム アクション ボタン アイコンをした場合の navbar の外観です。
 
 
 <code-view style="height: 300px" 
@@ -183,6 +191,9 @@ export class NavbarSample3Component {
            iframe-src="{environment:demosBaseUrl}/menus/navbar-sample-3" >
 </code-view>
 
+> [!NOTE]
+> [`igx-navbar-action`]({environment:angularApiUrl}/classes/igxnavbaractiondirective.html) または [`igxNavbarAction`]({environment:angularApiUrl}/classes/igxnavbaractiondirective.html) が指定される場合、デフォルトの [`actionButtonIcon`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#actionbuttonicon) は使用されません。
+
 <div class="divider--half"></div>
 
 ### カスタムのタイトルを追加する
@@ -193,7 +204,13 @@ Navbar のタイトルにカスタム コンテンツを提供する場合は、
 <!--navbar.component.html-->
 
 <div class="sample-column">
-    <igx-navbar actionButtonIcon="menu" [isActionButtonVisible]="true">
+    <igx-navbar>
+        <igx-navbar-action>
+            <button igxButton="icon">
+                <igx-icon>menu</igx-icon>
+            </button>
+        </igx-navbar-action>
+
         <div igxNavbarTitle>
             <a href="https://www.infragistics.com/products/ignite-ui-angular" target="_blank">
                 <img src="https://static.infragistics.com/marketing/Website/products/ignite-ui-landing/ignite-ui-logo.svg"
@@ -201,9 +218,15 @@ Navbar のタイトルにカスタム コンテンツを提供する場合は、
             </a>
         </div>
 
-        <igx-icon>search</igx-icon>
-        <igx-icon>favorite</igx-icon>
-        <igx-icon>more_vert</igx-icon>
+        <button igxButton="icon">
+            <igx-icon>search</igx-icon>
+        </button>
+        <button igxButton="icon">
+            <igx-icon>favorite</igx-icon>
+        </button>
+        <button igxButton="icon">
+            <igx-icon>more_vert</igx-icon>
+        </button>
     </igx-navbar>
 </div>
 ```
