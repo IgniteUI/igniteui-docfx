@@ -3,6 +3,7 @@ title: Angular チャート トレンドライン | データ可視化 | イン�
 _description: インフラジスティックスの Angular チャート トレンドライン
 _keywords: Angular Charts, Trendlines, Infragistics, Angular チャート, トレンドライン, インフラジスティックス
 mentionedTypes: ["FinancialChart", "CategoryChart", "XamDataChart", "TrendLineType"]
+namespace: Infragistics.Controls.Charts
 _language: ja
 ---
 
