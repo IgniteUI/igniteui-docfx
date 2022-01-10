@@ -79,17 +79,20 @@ Ignite UI for Angular の @@igComponent のコンポーネントは、標準ド�
 
 @@if (igxName === 'IgxGrid') {
 ```html
-<igx-column [field]="'Category'" [movable]="true"></igx-column>
+<igx-grid [moving]="true"></igx-grid>
 ```
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```html
-<igx-column [field]="'Title'" [movable]="true"></igx-column>
+<igx-tree-grid [moving]="true"></igx-tree-grid>
 ```
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-column #companyname field="CompanyName" [movable]="true" width="150px">
+<igx-hierarchical-grid [moving]="true">
+    ...
+    <igx-row-island [moving]="true"></igx-row-island>
+</igx-hierarchical-grid>
 ```
 }
 
@@ -123,9 +126,9 @@ API を使用する時、操作が成功した場合、[`columnMovingEnd`]({envi
 
 @@if (igxName === 'IgxGrid') {
 ```html
-<igx-grid #dataGrid [data]="data" [autoGenerate]="false" (columnMovingEnd)="onColumnMovingEnd($event)">
-    <igx-column [field]="'Category'" [movable]="true"></igx-column>
-    <igx-column [field]="'Change On Year(%)'" [dataType]="'number'" [movable]="true" ></igx-column>
+<igx-grid #dataGrid [data]="data" [autoGenerate]="false" [moving]="true" (columnMovingEnd)="onColumnMovingEnd($event)">
+    <igx-column [field]="'Category'"></igx-column>
+    <igx-column [field]="'Change On Year(%)'" [dataType]="'number'"></igx-column>
 </igx-grid>
 ```
 
@@ -140,9 +143,9 @@ public onColumnMovingEnd(event) {
 
 @@if (igxName === 'IgxTreeGrid') {
 ```html
-<igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="false" (columnMovingEnd)="onColumnMovingEnd($event)">
-    <igx-column [field]="'Name'" dataType="string" [movable]="true" width="250px"></igx-column>
-    <igx-column [field]="'Title'" dataType="string" [movable]="true" width="250px"></igx-column>
+<igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="false" [moving]="true" (columnMovingEnd)="onColumnMovingEnd($event)">
+    <igx-column [field]="'Name'" dataType="string" width="250px"></igx-column>
+    <igx-column [field]="'Title'" dataType="string" width="250px"></igx-column>
 </igx-tree-grid>
 ```
 
@@ -156,9 +159,9 @@ public onColumnMovingEnd(event) {
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid #hierarchicalGrid [data]="data" [autoGenerate]="false" (columnMovingEnd)="onColumnMovingEnd($event)">
-    <igx-column [field]="'Country'" [movable]="true"></igx-column>
-    <igx-column [field]="'Phone'" [dataType]="'number'" [movable]="true" ></igx-column>
+<igx-hierarchical-grid #hierarchicalGrid [data]="data" [autoGenerate]="false" [moving]="true" (columnMovingEnd)="onColumnMovingEnd($event)">
+    <igx-column [field]="'Country'"></igx-column>
+    <igx-column [field]="'Phone'" [dataType]="'number'"></igx-column>
 </igx-hierarchical-grid>
 ```
 
