@@ -3,6 +3,7 @@ title: Angular 軸オプション | データ可視化 | インフラジステ�
 _description: インフラジスティックスの Angular 軸オプション
 _keywords: Angular Axis, Options, Infragistics, Angular 軸, オプション, インフラジスティックス
 mentionedTypes: ["CategoryChart"]
+namespace: Infragistics.Controls.Charts
 _language: ja
 ---
 
