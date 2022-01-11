@@ -9,6 +9,14 @@ _language: kr
 <p class="highlight">The Ignite UI for Angular Circular Progress Indicator component provides a visual indicator of an application’s process as it changes. The circular indicator updates its appearance as its state changes.<p>
 <div class="divider"></div>
 
+The [`animationDuration`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#animationDuration) input property is used to specify how long the animation cycle should take.
+
+The following example specifies the animation duration set to 5 seconds.
+
+```html
+<igx-circular-bar [striped]="false" [value]="100" [animationDuration]="5000"></igx-circular-bar>
+```
+
 ### Circular Progress Demo
 
 <code-view style="height:400px" 
