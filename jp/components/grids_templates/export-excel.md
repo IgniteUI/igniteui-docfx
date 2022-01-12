@@ -81,7 +81,7 @@ IgniteUI Excel Exporter を使用するには、[`IgxExcelExporterService`]({env
 
 ```typescript
 // app.module.ts
-import { IgxExcelExporterService } from 'igniteui-angular/services/index';
+import { IgxExcelExporterService } from 'igniteui-angular';
 
 @NgModule({
   providers: [ IgxExcelExporterService ]
@@ -89,6 +89,9 @@ import { IgxExcelExporterService } from 'igniteui-angular/services/index';
 
 export class AppModule {}
 ```
+
+> [!Note]
+> v 12.2.1 以降では、エクスポーター サービスは root で提供されます。つまり、AppModule プロバイダーでそれらを宣言する必要はありません。
 
 > [!NOTE]
 > Excel Exporter サービスは JSZip にピア依存関係があります。JSZip ライブラリは Excel Exporter の使用時にインストールしてください。
