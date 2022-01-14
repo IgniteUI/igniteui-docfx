@@ -3,6 +3,7 @@ title: Angular マップ | データ可視化ツール | CSV データのバイ�
 _description: インフラジスティックスの Angular マップを使用して、ビュー モデルの地理的位置や CSV ファイルからロードされた地理的位置を含むデータの表示方法について説明します。Ignite UI for Angular マップのサンプルを是非お試しください!
 _keywords: Angular map, plot data, Ignite UI for Angular, Infragistics, data binding, Angular マップ, プロット データ, データ バインディング, インフラジスティックス
 mentionedTypes: ['XamGeographicMap']
+namespace: Infragistics.Controls.Maps
 _language: ja
 ---
 
@@ -23,7 +24,7 @@ Ignite UI for Angular Map コンポーネントを使用すると、さまざま
 
 ## データ例
 
-CSVファイルからのデータの例:
+CSV ファイルからのデータの例:
 
 ```ts
 City,Lat,Lon,State,Code,County,Density,Population
