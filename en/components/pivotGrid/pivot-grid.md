@@ -215,7 +215,7 @@ Note that some features don't make sense in the context of a pivot table and as 
 - Summaries 
 - Paging
 
-The Pivot Grid has additional features and functionalities related to its dimensions:
+The Pivot Grid has additional features and functionalities related to its dimensions as described below.
 
 ## Filtering Dimensions
 
@@ -300,4 +300,26 @@ In case there are multiple row or column dimensions, which would create groups t
 
 # Remote Operations
 
+In scenarios where the pivot data is already grouped and aggregated from a remote service and there's no need for further processing on the client the pivot can be configured to use a custom empty strategy that will skip data processing on the client and allow to directly display the data as is:
+
+```typescript
+ public pivotConfigHierarchy: IPivotConfiguration = {
+        columnStrategy: NoopPivotDimensionsStrategy.instance(),
+        rowStrategy: NoopPivotDimensionsStrategy.instance(),
+ }
+```
+
+Similarly for other remote data operations like sorting and filtering, data processing can be skipped by setting the related empty strategies:
+
+```html
+<igx-pivot-grid [filterStrategy]="noopFilterStrategy" [sortStrategy]="noopSortStrategy" ...>
+</igx-pivot-grid>
+```
+
 # Known Issues and Limitations
+
+|Limitation|Description|
+|--- |--- |
+| Setting columns declaratively is not supported. | The Pivot grid generated its columns based on the `columns` configuration so setting them declaratively like in the base grid is not supported. Such columns will be disregarded. |
+| Setting duplicate `memberName` or `member` property values for dimensions/values. | `memberName`/`member` should be unique for each dimension/value. Duplication may result in loss of data from the final result. |
+| Row Selection is only supported in `single` mode. | Multiple selection is currently not supported. |
