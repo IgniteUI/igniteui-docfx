@@ -20,7 +20,7 @@ Can be used as a stand-alone component as well as in combination with the Pivot 
 
 The pivot grid can be configured via the `pivotConfiguration` property.
 
-```
+```html
 <igx-pivot-grid #grid1 [data]="data" [pivotConfiguration]="pivotConfigHierarchy">
 </igx-pivot-grid>
 ```
@@ -38,7 +38,7 @@ Multiple sibling dimensions can be defined, which will create a more complex nes
 The dimensions can be reordered or moved from one area to another via their corresponding chips via drag & drop.
 
 A dimension can also describe an expandable hierarchy via the `childLevel` property, for example:
-```
+```typescript
    {
             memberFunction: () => 'All',
             memberName: 'AllProducts',
@@ -67,7 +67,7 @@ As part of the pivot grid some additional predefined dimensions are exposed for 
 
 Can be set for rows or columns, for example:
 
-```
+```typescript
 public pivotConfigHierarchy: IPivotConfiguration = {
     rows: [
         new IgxPivotDateDimension({ memberName: 'Date', enabled: true });
@@ -77,7 +77,7 @@ public pivotConfigHierarchy: IPivotConfiguration = {
 
 Allows further customization via the second option parameter in order to enabled or disable a particular part of the hierarchy, for example:
 
-```
+```typescript
  new IgxPivotDateDimension({ memberName: 'Date', enabled: true }, {
     total: true,
     years: true,
@@ -99,7 +99,7 @@ Similarly a value configuration requires a `member` that matches a field from th
 
 The current aggregation can also be changed runtime using the value chip's drop-down. By default it displays a list of available aggregations based on the field's data type.A custom list of aggregations can also be set via the `aggregateList` property, for example:
 
-```
+```typescript
 public pivotConfigHierarchy: IPivotConfiguration = {
     values: [
             {
@@ -133,7 +133,7 @@ public pivotConfigHierarchy: IPivotConfiguration = {
 
 Let's take a look at a basic pivot configuration:
 
-```
+```typescript
   public pivotConfigHierarchy: IPivotConfiguration = {
         columns: [
             {
@@ -162,7 +162,7 @@ Let's take a look at a basic pivot configuration:
 This configuration defines 1 row, 1 column and 1 aggregation that sums the values of each dimension groups.
 The members match fields available in the provided data source:
 
-```
+```typescript
 public data = [
         {
             ProductCategory: 'Clothing', UnitPrice: 12.81, SellerName: 'Stanley',
@@ -227,7 +227,7 @@ In case the dimension has a hierarchy, the values are displayed in a tree-like s
 Dimension can also be filtered initially via the dimension configuration from `pivotConfiguration` via the dimension's `filter` property.
 It can be set to a new `FilteringExpressionsTree` with the related filter condition, for example:
 
-```
+```typescript
 public filterExpTree = new FilteringExpressionsTree(FilteringLogic.And);
 
     constructor() {
@@ -239,9 +239,7 @@ public filterExpTree = new FilteringExpressionsTree(FilteringLogic.And);
             }
         ];
     }
-...
  public pivotConfigHierarchy: IPivotConfiguration = {
-...
 filters: [
             {
                 memberName: 'SellerName',
@@ -259,9 +257,8 @@ The dimension is sorted on click of the related chip and as a result the dimensi
 
 Sorting can also be applied initially via the `sortDirection` property of the dimension definition.
 
-```
+```typescript
  public pivotConfigHierarchy: IPivotConfiguration = {
-...
 rows: [
             {
                 memberName: 'SellerName',
@@ -280,9 +277,8 @@ They can also be auto-sized via double clicking on the resize indicator or via t
 
 A different size can also be set initially via the `width` property available in the dimension definition:
 
-```
+```typescript
 public pivotConfigHierarchy: IPivotConfiguration = {
-...
 rows: [
 {
             memberName: 'Country',
@@ -295,8 +291,8 @@ rows: [
 
 The Pivot Grid supports single selection, which can be enabled as in the base grid. For example:
 
-```
-<igx-pivot-grid #grid1 [rowSelection]="'single'" ...>
+```html
+<igx-pivot-grid #grid1 [rowSelection]="'single'" [data]="data" [pivotConfiguration]="pivotConfigHierarchy">
 </igx-pivot-grid>
 ```
 
