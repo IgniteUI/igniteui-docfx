@@ -518,6 +518,9 @@
     - name: State Persistence
       href: hierarchicalgrid/state-persistence.md
       new: true
+- name: Pivot Grid
+  href: pivotGrid/pivot-grid.md
+  new: true
 - name: Tree
   href: tree.md
   new: true
