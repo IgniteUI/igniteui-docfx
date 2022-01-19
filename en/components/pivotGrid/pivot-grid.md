@@ -13,7 +13,7 @@ Can be used as a stand-alone component as well as in combination with the Pivot 
 
 <code-view style="height: 530px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/pivot-with-selector-sample" alt="Angular Pivot Grid with Pivot Selector Example">
+           iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-with-selector-sample" alt="Angular Pivot Grid with Pivot Selector Example">
 </code-view>
 
 # Pivot Grid Configuration
@@ -138,29 +138,36 @@ public pivotConfigHierarchy: IPivotConfiguration = {
 Let's take a look at a basic pivot configuration:
 
 ```typescript
-  public pivotConfigHierarchy: IPivotConfiguration = {
+      public pivotConfigHierarchy: IPivotConfiguration = {
         columns: [
             {
-                memberName: 'Country',
+
+                memberName: 'Product',
+                memberFunction: (data) => data.Product.Name,
                 enabled: true
             }
+            
         ],
         rows: [
             {
-                memberName: 'ProductCategory',
-                enabled: true
+                memberName: 'Seller',
+                memberFunction: (data) => data.Seller.Name,
+                enabled: true,
             }
         ],
         values: [
             {
-                member: 'UnitsSold',
+                member: 'NumberOfUnits',
                 aggregate: {
-                    key: 'SUM',
                     aggregator: IgxPivotNumericAggregate.sum,
+                    key: 'sum',
                     label: 'Sum'
-                }
+                },
+                enabled: true
+
             }
         ]
+    };
 ```
 
 This configuration defines 1 row, 1 column and 1 aggregation that sums the values of each dimension groups.
@@ -168,16 +175,22 @@ The members match fields available in the provided data source:
 
 ```typescript
 public data = [
-        {
-            ProductCategory: 'Clothing', UnitPrice: 12.81, SellerName: 'Stanley',
-            Country: 'Bulgaria', City: 'Sofia', Date: '01/01/2021', UnitsSold: 282
+[
+    {
+        Product: {
+            Name: 'Clothing',
+            UnitPrice: '12.814860936633712'
         },
-        {
-            ProductCategory: 'Clothing', UnitPrice: 49.57, SellerName: 'Elisa',
-            Country: 'USA', City: 'New York', Date: '01/05/2019', UnitsSold: 296
+        Seller: {
+            Name: 'Stanley Brooker',
+            City: 'Seattle'
         },
-        //...
-        ];
+        Date: '2007-01-01T00:00:00',
+        Value: '94.2652032683907',
+        NumberOfUnits: '282'
+    },
+    //...
+];
 
 ```
 
@@ -186,7 +199,7 @@ Resulting in the following view, which groups the Product Categories unique rows
 
 <code-view style="height: 530px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/pivot-basic-sample" alt="Angular Pivot Grid Basic Example">
+           iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-basic" alt="Angular Pivot Grid Basic Example">
 </code-view>
 
 
