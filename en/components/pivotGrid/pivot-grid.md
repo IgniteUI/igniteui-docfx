@@ -6,7 +6,7 @@ _keywords: angular pivot grid, angular material pivot table, ignite ui for angul
 
 # Pivot Grid Overview
 
-The Angular Pivot Component allows users to configure and display their data in a multi-dimensional pivot table structure where the rows and columns represent distinct data groups and the data cell values represent aggregations (Sum, Min, Max etc.) to allow complex data analysis based on a simple flat data set.
+The Angular Pivot Component allows users to configure and display their data in a multi-dimensional pivot table structure, where the rows and columns represent distinct data groups and the data cell values represent aggregations. This allows for complex data analysis based on a simple flat data set.
 It is a feature rich pivot table that allows easy configuration of the different dimensions and values as well as additional data operations on them like filtering and sorting.
 
 Can be used as a stand-alone component as well as in combination with the Pivot Data Selector Component for more flexible runtime configuration options.
@@ -195,7 +195,7 @@ public data = [
 ```
 
 
-Resulting in the following view, which groups the Product Categories unique rows, Countries in unique columns and displays the related aggregations for those groups in the related cells:
+Resulting in the following view, which groups the Product Categories unique columns, Sellers Countries in unique rows and displays the related aggregations for the number of units in the related cells:
 
 <code-view style="height: 530px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -293,11 +293,11 @@ The Pivot Grid supports single selection, which can be enabled as in the base gr
 </igx-pivot-grid>
 ```
 
-In case there are multiple row or column dimensions, which would create groups that span multiple rows/columns, selection will be applied to all that belong to the selected group.
+In case there are multiple row or column dimensions, which would create groups that span multiple rows/columns, selection will be applied to all cells that belong to the selected group.
 
 # Remote Operations
 
-In scenarios where the pivot data is already grouped and aggregated from a remote service and there's no need for further processing on the client the pivot can be configured to use a custom empty strategy that will skip data processing on the client and allow to directly display the data as is:
+In scenarios where the pivot data is already grouped and aggregated from a remote service and there's no need for further processing on the client, the pivot can be configured to use a custom empty strategy that will skip data processing on the client and allow to directly display the data as is:
 
 ```typescript
  public pivotConfigHierarchy: IPivotConfiguration = {
