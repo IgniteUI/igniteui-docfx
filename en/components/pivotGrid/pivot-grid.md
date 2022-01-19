@@ -18,7 +18,7 @@ Can be used as a stand-alone component as well as in combination with the Pivot 
 
 # Pivot Grid Configuration
 
-The pivot grid can be configured via the `pivotConfiguration` property.
+The `igxPivotGrid` can be configured via the [`pivotConfiguration`](({environment:angularApiUrl}/classes/igxgridcomponent.html#pivotConfiguration)) property.
 
 ```html
 <igx-pivot-grid #grid1 [data]="data" [pivotConfiguration]="pivotConfigHierarchy">
@@ -90,14 +90,18 @@ Allows further customization via the second option parameter in order to enabled
 
 ## Values configuration
 
-Similarly a value configuration requires a `member` that matches a field from the provided `data` or it can define a custom `aggregator` function for more complex custom scenarios. Out of the box there are 4 aggregations that can be used depending on the data type of the field:
+A value configuration requires a `member` that matches a field from the provided `data` or it can define a custom `aggregator` function for more complex custom scenarios. Out of the box there are 4 predefined aggregations that can be used depending on the data type of the data field:
 
-- `IgxPivotNumericAggregate` - for numeric field. Contains the following aggregation functions: sum, avg, min, max.
-- `IgxPivotDateAggregate` - for date field - Contains the following aggregation functions: latest, earliest.
-- `IgxPivotTimeAggregate` - for time field. - Contains the following aggregation functions: latest, earliest.
-- `IgxPivotAggregate` - for any other data type. Contains the following aggregation functions: count.
+- `IgxPivotNumericAggregate` - for numeric field.
+    Contains the following aggregation functions: `SUM`, `AVG`, `MIN`, `MAX`, `COUNT`.
+- `IgxPivotDateAggregate` - for date field.
+    Contains the following aggregation functions: `LATEST`, `EARLIEST`, `COUNT`.
+- `IgxPivotTimeAggregate` - for time field.
+    Contains the following aggregation functions: `LATEST`, `EARLIEST`, `COUNT`.
+- `IgxPivotAggregate` - for any other data type. This is the base aggregation.
+    Contains the following aggregation functions: `COUNT`.
 
-The current aggregation can also be changed runtime using the value chip's drop-down. By default it displays a list of available aggregations based on the field's data type.A custom list of aggregations can also be set via the `aggregateList` property, for example:
+The current aggregation function can be changed runtime using the value chip's drop-down. By default it displays a list of available aggregations based on the field's data type.A custom list of aggregations can also be set via the `aggregateList` property, for example:
 
 ```typescript
 public pivotConfigHierarchy: IPivotConfiguration = {
@@ -172,26 +176,8 @@ public data = [
             ProductCategory: 'Clothing', UnitPrice: 49.57, SellerName: 'Elisa',
             Country: 'USA', City: 'New York', Date: '01/05/2019', UnitsSold: 296
         },
-        {
-            ProductCategory: 'Bikes', UnitPrice: 3.56, SellerName: 'Lydia',
-            Country: 'Uruguay', City: 'Ciudad de la Costa', Date: '01/06/2020', UnitsSold: 68
-        },
-        {
-            ProductCategory: 'Accessories', UnitPrice: 85.58, SellerName: 'David',
-            Country: 'USA', City: 'New York', Date: '04/07/2021', UnitsSold: 293
-        },
-        {
-            ProductCategory: 'Components', UnitPrice: 18.13, SellerName: 'John',
-            Country: 'USA', City: 'New York', Date: '12/08/2021', UnitsSold: 240
-        },
-        {
-            ProductCategory: 'Clothing', UnitPrice: 68.33, SellerName: 'Larry',
-            Country: 'Uruguay', City: 'Ciudad de la Costa', Date: '05/12/2020', UnitsSold: 456
-        },
-        {
-            ProductCategory: 'Clothing', UnitPrice: 16.05, SellerName: 'Walter',
-            Country: 'Bulgaria', City: 'Plovdiv', Date: '02/19/2020', UnitsSold: 492
-        }];
+        //...
+        ];
 
 ```
 
@@ -268,8 +254,6 @@ rows: [
         ]
 ```
 
-
-
 ## Resizing Dimensions
 
 Row dimensions can be resized similarly to column resizing - via a resizing indicator that can be found on the right edge of the cells.
@@ -309,11 +293,16 @@ In scenarios where the pivot data is already grouped and aggregated from a remot
  }
 ```
 
-Similarly for other remote data operations like sorting and filtering, data processing can be skipped by setting the related empty strategies:
+Similarly for other remote data operations like sorting and filtering, data processing can be skipped by setting the related empty strategies - `filterStrategy`, `sortStrategy`:
 
 ```html
 <igx-pivot-grid [filterStrategy]="noopFilterStrategy" [sortStrategy]="noopSortStrategy" ...>
 </igx-pivot-grid>
+```
+
+```typescript
+    public noopFilterStrategy = NoopFilteringStrategy.instance();
+    public noopSortStrategy = NoopSortingStrategy.instance();
 ```
 
 # Known Issues and Limitations
@@ -323,3 +312,6 @@ Similarly for other remote data operations like sorting and filtering, data proc
 | Setting columns declaratively is not supported. | The Pivot grid generated its columns based on the `columns` configuration so setting them declaratively like in the base grid is not supported. Such columns will be disregarded. |
 | Setting duplicate `memberName` or `member` property values for dimensions/values. | `memberName`/`member` should be unique for each dimension/value. Duplication may result in loss of data from the final result. |
 | Row Selection is only supported in `single` mode. | Multiple selection is currently not supported. |
+
+## API References
+* [IgxPivotGridComponent]({environment:angularApiUrl}/classes/igxpivotgridcomponent.html)
