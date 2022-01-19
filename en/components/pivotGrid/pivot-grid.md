@@ -25,7 +25,7 @@ The `igxPivotGrid` can be configured via the [`pivotConfiguration`](({environmen
 </igx-pivot-grid>
 ```
 
-It is defined by 3 main dimensions: `rows`, `columns` and `values`. The `rows` and `columns` define the grouped structure that will be displayed in the rows and columns of the grid. The `values` define the aggregation fields and the aggregation that will be used to calculate and display the related values of the groups.
+It is defined by three main dimensions: `rows`, `columns` and `values`. The `rows` and `columns` define the grouped structure that will be displayed in the rows and columns of the grid. The `values` define the aggregation fields and the aggregation that will be used to calculate and display the related values of the groups.
 
 A filter can also be defined via the `filters` configurations property. It can be used for fields that you do not want to add as dimension or value but would like to filter their related member's values via the UI.
 
@@ -75,7 +75,7 @@ public pivotConfigHierarchy: IPivotConfiguration = {
 }
 ```
 
-Allows further customization via the second option parameter in order to enabled or disable a particular part of the hierarchy, for example:
+Allows further customization via the second option parameter in order to enable or disable a particular part of the hierarchy, for example:
 
 ```typescript
  new IgxPivotDateDimension({ memberName: 'Date', enabled: true }, {
