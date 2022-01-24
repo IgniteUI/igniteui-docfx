@@ -3,6 +3,7 @@ title: Angular Axis Options | Data Visualization | Infragistics
 _description: Infragistics' Angular Axis Options
 _keywords: Angular Axis, Options, Title, Labels, Range Infragistics
 mentionedTypes: ["CategoryChart"]
+namespace: Infragistics.Controls.Charts
 ---
 
 # Angular Axis Options

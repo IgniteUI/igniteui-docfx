@@ -3,6 +3,7 @@ title: Angular Radial Chart | Data Visualization | Infragistics
 _description: Infragistics' Angular Radial Chart
 _keywords: Angular Charts, Radial Chart, Infragistics
 mentionedTypes: ["XamDataChart", "RadialLineSeries"]
+namespace: Infragistics.Controls.Charts
 ---
 
 # Angular Radial Chart

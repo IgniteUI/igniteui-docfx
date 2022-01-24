@@ -60,34 +60,41 @@ In order to add a menu button, we will show the action button using the `actionB
 > [!NOTE]
 > The [`actionButtonIcon`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#actionbuttonicon) uses the Material fontset by design.
 
-### Add Icons
+### Add Icon Buttons
 
-Now that our app has its menu in place, we can make it a little more functional by adding options for searching, favorites and more. To do that let's grab the [**IgxIcon**](icon.md) module and import it in our **app.module.ts** file.
+We can make our app a little more functional by adding options for searching, favorites and more. To do that let's grab the [**IgxButton**](button.md) and [**IgxIcon**](icon.md) modules and import them in our **app.module.ts** file.
 ```typescript
 // app.module.ts
 
 ...
 import {
     IgxNavbarModule,
+    IgxButtonModule,
     IgxIconModule
 } from 'igniteui-angular';
 
 @NgModule({
     ...
-    imports: [..., IgxIconModule],
+    imports: [..., IgxButtonModule, IgxIconModule],
 })
 export class AppModule {}
 ```
 
-Next, we need to update our template with an icon for each of the options we want our app to provide:
+Next, we need to update our template with an icon button for each of the options we want our app to provide:
 
 ```html
 <!--navbar.component.html-->
 
- <igx-navbar title="Sample App" actionButtonIcon="menu" [isActionButtonVisible]="true">
-    <igx-icon>search</igx-icon>
-    <igx-icon>favorite</igx-icon>
-    <igx-icon>more_vert</igx-icon>
+ <igx-navbar title="Sample App">
+    <button igxButton="icon">
+        <igx-icon>search</igx-icon>
+    </button>
+    <button igxButton="icon">
+        <igx-icon>favorite</igx-icon>
+    </button>
+    <button igxButton="icon">
+        <igx-icon>more_vert</igx-icon>
+    </button>
 </igx-navbar>
 ```
 
@@ -100,9 +107,9 @@ If all went well, you should see the following in your browser:
 
 <div class="divider--half"></div>
 
-### Add Custom Action Icon
+### Add Custom Action
 
-What if we want to use a custom action icon for our app navigation instead of the default one that is on the left-most part of the navbar? We can easily achieve this by using the `igx-navbar-action` directive, which will replace the default action icon with the content we have provided. We will do that by using the Font Awesome home icon in combination with a style for it.
+What if we want to use a custom template for our app navigation on the left-most part of the navbar? We can easily achieve this by using the `igx-navbar-action` directive, which will render the content we have provided. We will do that by using a button with the Font Awesome home icon.
 
 ```css
 /* navbar.component.css */
@@ -110,30 +117,31 @@ What if we want to use a custom action icon for our app navigation instead of th
 @import url("https://unpkg.com/@fortawesome/fontawesome-free-webfonts@^1.0.9/css/fontawesome.css");
 @import url("https://unpkg.com/@fortawesome/fontawesome-free-webfonts@^1.0.9/css/fa-regular.css");
 @import url("https://unpkg.com/@fortawesome/fontawesome-free-webfonts@^1.0.9/css/fa-solid.css");
-
-.customIcon {
-    vertical-align: middle;
-}
 ```
 
 ```html
 <!--navbar.component.html-->
 
- <igx-navbar title="Sample App" actionButtonIcon="menu" [isActionButtonVisible]="true">
-    <igx-icon>search</igx-icon>
-    <igx-icon>favorite</igx-icon>
-    <igx-icon>more_vert</igx-icon>
-
+ <igx-navbar title="Sample App">
     <igx-navbar-action>
-        <igx-icon class="customIcon" fontSet="fa" name="fa-home"></igx-icon>
+        <button igxButton="icon">
+            <igx-icon family="fa" name="fa-home"></igx-icon>
+        </button>
     </igx-navbar-action>
+        
+    <button igxButton="icon">
+        <igx-icon>search</igx-icon>
+    </button>
+    <button igxButton="icon">
+        <igx-icon>favorite</igx-icon>
+    </button>
+    <button igxButton="icon">
+        <igx-icon>more_vert</igx-icon>
+    </button>
 </igx-navbar>
 ```
 
-> [!NOTE]
-> If [`igx-navbar-action`]({environment:angularApiUrl}/classes/igxnavbaractiondirective.html) or [`igxNavbarAction`]({environment:angularApiUrl}/classes/igxnavbaractiondirective.html) is provided, the default [`actionButtonIcon`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#actionbuttonicon) will not be used.
-
-Finally, this is how our navbar should look like with its custom action icon:
+Finally, this is how our navbar should look like with its custom action button icon:
 
 
 <code-view style="height: 300px" 
@@ -182,6 +190,9 @@ If the sample is configured properly, you should see the following in your brows
            iframe-src="{environment:demosBaseUrl}/menus/navbar-sample-3" >
 </code-view>
 
+> [!NOTE]
+> If [`igx-navbar-action`]({environment:angularApiUrl}/classes/igxnavbaractiondirective.html) or [`igxNavbarAction`]({environment:angularApiUrl}/classes/igxnavbaractiondirective.html) is provided, the default [`actionButtonIcon`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#actionbuttonicon) will not be used.
+
 <div class="divider--half"></div>
 
 ### Add Custom Title
@@ -192,7 +203,13 @@ If we want to provide a custom content for a navbar's title, we can achieve this
 <!--navbar.component.html-->
 
 <div class="sample-column">
-    <igx-navbar actionButtonIcon="menu" [isActionButtonVisible]="true">
+    <igx-navbar>
+        <igx-navbar-action>
+            <button igxButton="icon">
+                <igx-icon>menu</igx-icon>
+            </button>
+        </igx-navbar-action>
+
         <div igxNavbarTitle>
             <a href="https://www.infragistics.com/products/ignite-ui-angular" target="_blank">
                 <img src="https://static.infragistics.com/marketing/Website/products/ignite-ui-landing/ignite-ui-logo.svg"
@@ -200,9 +217,15 @@ If we want to provide a custom content for a navbar's title, we can achieve this
             </a>
         </div>
 
-        <igx-icon>search</igx-icon>
-        <igx-icon>favorite</igx-icon>
-        <igx-icon>more_vert</igx-icon>
+        <button igxButton="icon">
+            <igx-icon>search</igx-icon>
+        </button>
+        <button igxButton="icon">
+            <igx-icon>favorite</igx-icon>
+        </button>
+        <button igxButton="icon">
+            <igx-icon>more_vert</igx-icon>
+        </button>
     </igx-navbar>
 </div>
 ```

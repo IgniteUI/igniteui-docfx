@@ -80,14 +80,14 @@ _language: ja
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid [data]="localdata" displayDensity="compact" [allowFiltering]="true">
-    <igx-column field="CustomerID" [movable]="true" sortable="true" resizable="true"></igx-column>
+<igx-hierarchical-grid [data]="localdata" displayDensity="compact" [allowFiltering]="true" [moving]="true">
+    <igx-column field="CustomerID" sortable="true" resizable="true"></igx-column>
     <igx-column-group header="Address Information">
         <igx-column-group header="Location">
-            <igx-column field="Address" [movable]="true" sortable="true" resizable="true"></igx-column>
-            <igx-column field="City" [movable]="true" sortable="true" resizable="true"></igx-column>
-            <igx-column field="PostalCode" [movable]="true" sortable="true" resizable="true"></igx-column>
-            <igx-column field="Country" [movable]="true" sortable="true" resizable="true"></igx-column>
+            <igx-column field="Address" sortable="true" resizable="true"></igx-column>
+            <igx-column field="City" sortable="true" resizable="true"></igx-column>
+            <igx-column field="PostalCode" sortable="true" resizable="true"></igx-column>
+            <igx-column field="Country" sortable="true" resizable="true"></igx-column>
         </igx-column-group>
         <igx-column-group header="Contact Information">
             <igx-column field="Phone" sortable="true" resizable="true"></igx-column>
@@ -102,12 +102,12 @@ _language: ja
 
 @@if (igxName === 'IgxGrid') {
 ```html
-<igx-grid [data]="data" [allowFiltering]="true">
+<igx-grid [data]="data" [allowFiltering]="true" [moving]="true">
     <igx-column-group header="General Information">
-        <igx-column [movable]="true" sortable="true" resizable="true" field="CompanyName"></igx-column>
-        <igx-column-group [movable]="true" header="Person Details">
-            <igx-column [movable]="true" [pinned]="false" sortable="true" resizable="true" field="ContactName"></igx-column>
-            <igx-column [movable]="true" sortable="true" resizable="true" field="ContactTitle"></igx-column>
+        <igx-column sortable="true" resizable="true" field="CompanyName"></igx-column>
+        <igx-column-group header="Person Details">
+            <igx-column [pinned]="false" sortable="true" resizable="true" field="ContactName"></igx-column>
+            <igx-column sortable="true" resizable="true" field="ContactTitle"></igx-column>
         </igx-column-group>
     </igx-column-group>
 </igx-grid>
@@ -115,13 +115,13 @@ _language: ja
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```html
-<igx-tree-grid [data]="data" primaryKey="ID" foreignKey="ParentID">
-    <igx-column-group [movable]="true" [pinned]="false" header="General Information">
-        <igx-column field="HireDate" dataType="date" [movable]="true" [sortable]="true" [resizable]="true"></igx-column>
-        <igx-column-group [movable]="true" header="Person Details">
-            <igx-column field="ID" dataType="number" [movable]="true" [resizable]="true" [filterable]="false"></igx-column>
-            <igx-column field="Title" dataType="string" [movable]="true" [sortable]="true" [resizable]="true"></igx-column>
-            <igx-column field="Age" dataType="number" [movable]="true" [sortable]="true" [resizable]="true"></igx-column>
+<igx-tree-grid [data]="data" primaryKey="ID" foreignKey="ParentID" [moving]="true">
+    <igx-column-group [pinned]="false" header="General Information">
+        <igx-column field="HireDate" dataType="date" [sortable]="true" [resizable]="true"></igx-column>
+        <igx-column-group header="Person Details">
+            <igx-column field="ID" dataType="number" [resizable]="true" [filterable]="false"></igx-column>
+            <igx-column field="Title" dataType="string" [sortable]="true" [resizable]="true"></igx-column>
+            <igx-column field="Age" dataType="number" [sortable]="true" [resizable]="true"></igx-column>
         </igx-column-group>            
     </igx-column-group>
 </igx-tree-grid>
@@ -129,13 +129,13 @@ _language: ja
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid [data]="localdata" displayDensity="compact" [allowFiltering]="true">
-    <igx-column field="CustomerID" [movable]="true" sortable="true" resizable="true"></igx-column>
-    <igx-column-group [movable]="true" [pinned]="false" header="General Information">
-        <igx-column field="CompanyName" [movable]="true" sortable="true" resizable="true"></igx-column>
-        <igx-column-group [movable]="true" header="Person Details">
-            <igx-column field="ContactName" [movable]="true" sortable="true" resizable="true"></igx-column>
-            <igx-column field="ContactTitle" [movable]="true" sortable="true" resizable="true"></igx-column>
+<igx-hierarchical-grid [data]="localdata" displayDensity="compact" [allowFiltering]="true" [moving]="true">
+    <igx-column field="CustomerID" sortable="true" resizable="true"></igx-column>
+    <igx-column-group [pinned]="false" header="General Information">
+        <igx-column field="CompanyName" sortable="true" resizable="true"></igx-column>
+        <igx-column-group header="Person Details">
+            <igx-column field="ContactName" sortable="true" resizable="true"></igx-column>
+            <igx-column field="ContactTitle" sortable="true" resizable="true"></igx-column>
         </igx-column-group>
     </igx-column-group>
 </igx-hierarchical-grid>
@@ -150,9 +150,9 @@ _language: ja
 
 @@if (igxName === 'IgxGrid') {
 ```html
-<igx-grid [data]="data" [allowFiltering]="true">
-    <igx-column-group  [movable]="true" [pinned]="true" header="General Information">
-        <igx-column [movable]="true" sortable="true" resizable="true" field="CompanyName"></igx-column>
+<igx-grid [data]="data" [allowFiltering]="true" [moving]="true">
+    <igx-column-group [pinned]="true" header="General Information">
+        <igx-column sortable="true" resizable="true" field="CompanyName"></igx-column>
     </igx-column-group>
     <igx-column sortable="true" resizable="true" field="Phone"></igx-column>
     <igx-column sortable="true" resizable="true" field="Fax"></igx-column>
@@ -162,25 +162,25 @@ _language: ja
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```html
-<igx-tree-grid [data]="data" primaryKey="ID" foreignKey="ParentID">
+<igx-tree-grid [data]="data" primaryKey="ID" foreignKey="ParentID" [moving]="true">
     <igx-column-group header="Contact Information">
         <igx-column field="Phone" dataType="string" [sortable]="true" [resizable]="true"></igx-column>
     </igx-column-group>
-    <igx-column field="Name" dataType="string" [movable]="true" [sortable]="true" [resizable]="true"></igx-column>
-    <igx-column field="Title" dataType="string" [movable]="true" [sortable]="true" [resizable]="true"></igx-column>
-    <igx-column field="Age" dataType="number" [movable]="true" [sortable]="true" [resizable]="true"></igx-column>
+    <igx-column field="Name" dataType="string" [sortable]="true" [resizable]="true"></igx-column>
+    <igx-column field="Title" dataType="string" [sortable]="true" [resizable]="true"></igx-column>
+    <igx-column field="Age" dataType="number" [sortable]="true" [resizable]="true"></igx-column>
 </igx-tree-grid>
 ```
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid [data]="localdata" displayDensity="compact" [allowFiltering]="true">
-    <igx-column field="CustomerID" [movable]="true" sortable="true" resizable="true"></igx-column>
-    <igx-column-group [movable]="true" [pinned]="false" header="General Information">
-        <igx-column field="CompanyName" [movable]="true" sortable="true" resizable="true"></igx-column>
-        <igx-column-group [movable]="true" header="Person Details">
-            <igx-column field="ContactName" [movable]="true" sortable="true" resizable="true"></igx-column>
-            <igx-column field="ContactTitle" [movable]="true" sortable="true" resizable="true"></igx-column>
+<igx-hierarchical-grid [data]="localdata" displayDensity="compact" [allowFiltering]="true" [moving]="true">
+    <igx-column field="CustomerID" sortable="true" resizable="true"></igx-column>
+    <igx-column-group [pinned]="false" header="General Information">
+        <igx-column field="CompanyName" sortable="true" resizable="true"></igx-column>
+        <igx-column-group header="Person Details">
+            <igx-column field="ContactName" sortable="true" resizable="true"></igx-column>
+            <igx-column field="ContactTitle" sortable="true" resizable="true"></igx-column>
         </igx-column-group>
     </igx-column-group>
 </igx-hierarchical-grid>

@@ -204,7 +204,7 @@ public contextObject = { firstProperty: 'testValue', secondProperty: 'testValue1
 
 ```html
 <igx-column #col field="ProductName" header="Product Name"
-    [groupable]="true" [movable]="true" [hasSummary]="true">
+    [groupable]="true" [hasSummary]="true">
     <ng-template igxHeader let-col>
         <div class="text">{{col.field}}</div>
         <igx-icon (click)="toggleSummary(col)" [attr.draggable]="false">functions

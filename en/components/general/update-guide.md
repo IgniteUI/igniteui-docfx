@@ -16,11 +16,18 @@ First run the [**`ng update`**](https://angular.io/cli/update) command which wil
 ng update
 ```
 
-To update the **Ignite UI for Angular** package run the following command:
+To update the **Ignite UI for Angular** licensed package run the following command:
+
+```cmd
+ng update @infragistics/igniteui-angular
+```
+
+To update the **Ignite UI for Angular** free package run the following command:
+
 ```cmd
 ng update igniteui-angular
 ```
-When you update `igniteui-angular` - it's recommended to update `@angular/core`, `@angular/cli` and `igniteui-cli` packages to their matching versions.
+When you update `@infragistics/igniteui-angular` or `igniteui-angular` - it's recommended to update `@angular/core`, `@angular/cli` and `igniteui-cli` packages to their matching versions.
 To update the **Ignite UI CLI** package run the following command:
 ```cmd
 ng update igniteui-cli
