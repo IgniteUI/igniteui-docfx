@@ -6,7 +6,10 @@ _keywords: angular pivot grid, angular material pivot table, ignite ui for angul
 
 # Pivot Grid Overview
 
-The Angular Pivot Component allows users to configure and display their data in a multi-dimensional pivot table structure, where the rows and columns represent distinct data groups and the data cell values represent aggregations. This allows for complex data analysis based on a simple flat data set.
+The `IgxPivotGridComponent` displays data in a [pivot table](http://en.wikipedia.org/wiki/Pivot_table) and helps performing complex analysis on the supplied data set. 
+
+The Angular PivotGrid Component allows users to configure and display their data in a multi-dimensional pivot table structure.
+ The rows and columns represent distinct data groups and the data cell values represent aggregations. This allows for complex data analysis based on a simple flat data set.
 It is a feature rich pivot table that allows easy configuration of the different dimensions and values as well as additional data operations on them like filtering and sorting.
 
 Can be used as a stand-alone component as well as in combination with the Pivot Data Selector Component for more flexible runtime configuration options.
@@ -202,121 +205,6 @@ Resulting in the following view, which groups the Product Categories unique colu
            iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-basic" alt="Angular Pivot Grid Basic Example">
 </code-view>
 
-
-# Pivot Grid Features
-
-The `igxPivotGrid` inherits the `igxBaseGrid` and as such inherits some of its functionality and features.
-
-Note that some features don't make sense in the context of a pivot table and as such cannot be enabled for the `igxPivotGrid`, such as:
-- CRUD operations
-- Grouping 
-- Row/Column Pinning
-- Summaries 
-- Paging
-
-The Pivot Grid has additional features and functionalities related to its dimensions as described below.
-
-## Filtering Dimensions
-
-All dimensions can be filtered via the chip UI or via the API.
-
-The filtering UI can be opened via the dimension chips filter icon and allows excel-style filtering of the unique dimension values.
-In case the dimension has a hierarchy, the values are displayed in a tree-like structure to retain the parent-child relationship between the values.
-
-Dimension can also be filtered initially via the dimension configuration from `pivotConfiguration` via the dimension's `filter` property.
-It can be set to a new `FilteringExpressionsTree` with the related filter condition, for example:
-
-```typescript
-public filterExpTree = new FilteringExpressionsTree(FilteringLogic.And);
-
-    constructor() {
-        this.filterExpTree.filteringOperands = [
-            {
-                condition: IgxStringFilteringOperand.instance().condition('equals'),
-                fieldName: 'SellerName',
-                searchVal: 'Stanley'
-            }
-        ];
-    }
- public pivotConfigHierarchy: IPivotConfiguration = {
-filters: [
-            {
-                memberName: 'SellerName',
-                enabled: true,
-                filter: this.filterExpTree
-            }
-        ]
-```
-
-## Sorting Dimensions
-
-Dimension values in the `rows` or `column` can be sorted via the related chip or via the API.
-
-The dimension is sorted on click of the related chip and as a result the dimension values will be sorted in ascending/descending order.
-
-Sorting can also be applied initially via the `sortDirection` property of the dimension definition.
-
-```typescript
- public pivotConfigHierarchy: IPivotConfiguration = {
-rows: [
-            {
-                memberName: 'SellerName',
-                enabled: true,
-                sortDirection: SortingDirection.Asc
-            }
-        ]
-```
-
-## Resizing Dimensions
-
-Row dimensions can be resized similarly to column resizing - via a resizing indicator that can be found on the right edge of the cells.
-They can also be auto-sized via double clicking on the resize indicator or via the related API - `autoSizeRowDimension`.
-
-A different size can also be set initially via the `width` property available in the dimension definition:
-
-```typescript
-public pivotConfigHierarchy: IPivotConfiguration = {
-rows: [
-{
-            memberName: 'Country',
-            enabled: true,
-            width: '400px'
-}]
-```
-
-## Selection of Dimensions
-
-The Pivot Grid supports single selection, which can be enabled as in the base grid. For example:
-
-```html
-<igx-pivot-grid #grid1 [rowSelection]="'single'" [data]="data" [pivotConfiguration]="pivotConfigHierarchy">
-</igx-pivot-grid>
-```
-
-In case there are multiple row or column dimensions, which would create groups that span multiple rows/columns, selection will be applied to all cells that belong to the selected group.
-
-# Remote Operations
-
-In scenarios where the pivot data is already grouped and aggregated from a remote service and there's no need for further processing on the client, the pivot can be configured to use a custom empty strategy that will skip data processing on the client and allow to directly display the data as is:
-
-```typescript
- public pivotConfigHierarchy: IPivotConfiguration = {
-        columnStrategy: NoopPivotDimensionsStrategy.instance(),
-        rowStrategy: NoopPivotDimensionsStrategy.instance(),
- }
-```
-
-Similarly for other remote data operations like sorting and filtering, data processing can be skipped by setting the related empty strategies - `filterStrategy`, `sortStrategy`:
-
-```html
-<igx-pivot-grid [filterStrategy]="noopFilterStrategy" [sortStrategy]="noopSortStrategy" ...>
-</igx-pivot-grid>
-```
-
-```typescript
-    public noopFilterStrategy = NoopFilteringStrategy.instance();
-    public noopSortStrategy = NoopSortingStrategy.instance();
-```
 
 # Known Issues and Limitations
 
