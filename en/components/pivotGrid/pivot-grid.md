@@ -134,9 +134,12 @@ public pivotConfigHierarchy: IPivotConfiguration = {
         ]
 }
 ```
+## Enable property
 
+`IPivotConfiguration` is used to describe the current state of the `IgxPivotGridComponent`. There the developer can declare fields of the data as rows, columns, filters or values. All these elements can be enabled or disabled. If they are enabled, they will be included into the current state of the pivot grid. The `IgxPivotDataSelector` utilizes the same configuration and shows a list of all enabled and not enabled elements. And for each of them there will be a checked or unchecked checkbox accordingly. The users can easily tweak the pivot state by toggling the different elements.
+The property `enable` controls if a given `IPivotDimension` or `IPivotValue` is active and takes part of the pivot view rendered by the pivot grid.
 
-## Full configuration example:
+## Full configuration example
 
 Let's take a look at a basic pivot configuration:
 
