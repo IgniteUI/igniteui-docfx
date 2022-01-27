@@ -2,6 +2,7 @@
 title: Angular Map | Data Visualization Tools | Infragistics
 _description: Use Infragistics' Angular JavaScript map to display heat map imagery. Check out Ignite UI for Angular map demos!
 _keywords: Angular map, heat map imagery, Ignite UI for Angular, Infragistics
+_language: kr
 mentionedTypes: ['XamGeographicMap', 'ShapefileConverter']
 ---
 
