@@ -30,7 +30,7 @@ _language: ja
 
 // 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-```
+
 
 $my-drop-down-theme: igx-drop-down-theme(
     $palette: $my-custom-palette
