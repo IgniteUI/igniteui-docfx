@@ -20,15 +20,15 @@ The Pivot Grid has additional features and functionalities related to its dimens
 
 ## Dimensions filtering
 
-All dimensions(filters, rows, columns) can be filtered via the chip UI or via the API. This functionality is embedded and enabled by default.
+All dimensions (filters, rows, columns) can be filtered via the chip UI or via the API. This functionality is embedded and enabled by default.
 
 >[!NOTE]
->Apply filter to filter dimension if you need to filter out values that are in a dimension not part of the pivot view(row or column dimension)
+>You can use the filtering dimension to filter out data values, which are not a part of the pivot view.
 
 The filtering UI can be opened via the dimension chips filter icon and allows excel-style filtering of the unique dimension values.
 In case the dimension has a hierarchy, the values are displayed in a tree-like structure to retain the parent-child relationship between the values.
 
-Dimension can also be filtered initially via the dimension configuration from `pivotConfiguration` via the dimension's `filter` property.
+Dimensions can also be filtered initially via the dimension configuration in `pivotConfiguration`, via the dimension's `filter` property.
 It can be set to a new `FilteringExpressionsTree` with the related filter condition, for example:
 
 ```typescript
@@ -55,7 +55,7 @@ filters: [
 
 ## Dimensions sorting
 
-Dimension values in the `rows` or `column` can be sorted via the related chip or via the API. This functionality is embedded and enabled by default.
+Dimension values in the `rows` or `columns` can be sorted via the related chip or via the API. This functionality is embedded and enabled by default.
 
 The dimension is sorted on click of the related chip and as a result the dimension values will be sorted in ascending/descending order.
 
@@ -75,7 +75,7 @@ rows: [
 ## Dimensions resizing
 
 Row dimensions can be resized similarly to column resizing - via a resizing indicator that can be found on the right edge of the cells.
-They can also be auto-sized via double clicking on the resize indicator or via the related API - `autoSizeRowDimension`.
+They can also be auto-sized by double clicking the resize indicator, or by using the related API - `autoSizeRowDimension`.
 
 A different size can also be set initially via the `width` property available in the dimension definition:
 

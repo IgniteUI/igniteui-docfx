@@ -17,11 +17,18 @@ Ignite UI for Angular パッケージは `ng update` Schematics で自動バー�
 ng update
 ```
 
-**Ignite UI for Angular** パッケージを更新するには、以下のコマンドを実行してください。
+**Ignite UI for Angular** ライセンス版パッケージをアップデートする場合は、以下のコマンドを実行してください。
+
+```cmd
+ng update @infragistics/igniteui-angular
+```
+
+**Ignite UI for Angular** 無料パッケージをアップデートする場合は、以下のコマンドを実行してください。
+
 ```cmd
 ng update igniteui-angular
 ```
-`igniteui-angular` の更新時は、`@angular/core`、`@angular/cli` および `igniteui-cli` パッケージを一致するバージョンにアップデートしてください。 
+`@infragistics/igniteui-angular` または `igniteui-angular` を更新するときは、`@angular/core`、`@angular/cli` および `igniteui-cli` パッケージを一致するバージョンに更新してください。
 **Ignite UI CLI** パッケージをアップデートする場合は、以下のコマンドを実行してください。
 ```cmd
 ng update igniteui-cli
