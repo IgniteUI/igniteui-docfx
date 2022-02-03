@@ -36,7 +36,7 @@ A filter can also be defined via the `filters` configuration property. It can be
 
 Each basic dimension configuration requires a `memberName` that matches a field from the provided `data`, or a `memberFunction` that extracts a value from the record in case of complex objects or other custom scenarios.
 
-Multiple sibling dimensions can be defined, which will create a more complex nested group in the related row or column dimension area.
+Multiple sibling dimensions can be defined, which creates a more complex nested group in the related row or column dimension area.
 
 The dimensions can be reordered or moved from one area to another via their corresponding chips using drag & drop.
 
