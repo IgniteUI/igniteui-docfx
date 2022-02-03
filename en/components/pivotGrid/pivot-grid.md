@@ -12,7 +12,7 @@ The `IgxPivotGridComponent` allows users to configure and display their data in 
  The rows and columns represent distinct data groups, and the data cell values represent aggregations. This allows for complex data analysis based on a simple flat data set.
 The `IgxPivotGridComponent` is a feature-rich pivot table that allows easy configuration of the different dimensions and values as well as additional data operations on them like filtering and sorting.
 
-Can be used as a stand-alone component as well as in combination with the Angular Pivot Data Selector Component for more flexible runtime configuration options.
+It can be used as a stand-alone component as well as in combination with the Angular Pivot Data Selector Component for more flexible runtime configuration options.
 
 <code-view style="height: 530px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
