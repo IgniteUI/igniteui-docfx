@@ -6,7 +6,7 @@ _keywords: angular pivot grid, angular material pivot table, ignite ui for angul
 
 # Angular Pivot Grid Features
 
-The `IgxPivotGridComponent` inherits the `IgxGridBaseDirective` and as such inherits some of its functionality and features.
+The pivot and flat grid component classes inherit from a common base and thus share some functionality and features.
 
 >[!NOTE]
 >Some features don't make sense in the context of a pivot table and as such cannot be enabled for the `IgxPivotGridComponent`, such as:
