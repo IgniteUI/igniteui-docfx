@@ -133,6 +133,17 @@ public pivotConfigHierarchy: IPivotConfiguration = {
             }
         ]
 }
+
+public static totalSale: PivotAggregation = (members, data: any) =>
+    data.reduce((accumulator, value) => accumulator + value.UnitPrice * value.UnitsSold, 0);
+
+public static totalMin: PivotAggregation = (members, data: any) => {
+    return data.map(x => x.UnitPrice * x.UnitsSold).reduce((a, b) => Math.min(a, b));
+};
+
+public static totalMax: PivotAggregation = (members, data: any) => {
+    return data.map(x => x.UnitPrice * x.UnitsSold).reduce((a, b) => Math.max(a,b));
+};
 ```
 The pivot value also provides `displayName` property. It can be used to display custom name of the value instead of member for the column header.
 

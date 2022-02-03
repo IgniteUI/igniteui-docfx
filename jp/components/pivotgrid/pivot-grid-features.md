@@ -6,7 +6,7 @@ _keywords: angular pivot grid, angular material pivot table, ignite ui for angul
 
 # Angular Pivot Grid Features
 
-The `IgxPivotGridComponent` inherits the `IgxGridBaseDirective` and as such inherits some of its functionality and features.
+The pivot and flat grid component classes inherit from a common base and thus share some functionality and features.
 
 >[!NOTE]
 >Some features don't make sense in the context of a pivot table and as such cannot be enabled for the `IgxPivotGridComponent`, such as:
@@ -114,17 +114,18 @@ The `IgxPivotGridComponent` provides a `superCompactMode` `@Input` to enable a s
            iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-with-selector-sample" alt="Angular Pivot Grid with Pivot Selector Example">
 </code-view>
 
-
-## Keyboard navigation
-
-The keyboard navigation of the `IgxPivotGrid` works in a similar manner as in `IgxGrid`, but here, the grid can be split into three areas - `rows`, `columns`, `values`. The areas for `rows` and `columns` are considered as headers of the pivot grid. While the area of the `values` is the body.
-The keyboard arrows allow navigating the active element within the current area only.
-
 ## Additional summary column
 
 When a `column` dimension defines a hierarchy, the pivot grid will render additional summary/total column, which accumulates the aggregations of all of the columns inside the group. When the group is collapsed only the summary column will remain. And when the group is expanded the additional summary column appears at the end of the group.
 
-## Dimensions drag & drop
+## Interactions
+
+### Keyboard navigation
+
+The keyboard navigation of the `IgxPivotGrid` works in a similar manner as in `IgxGrid`, but here, the grid can be split into three areas - `rows`, `columns`, `values`. The areas for `rows` and `columns` are considered as headers of the pivot grid. While the area of the `values` is the body.
+The keyboard arrows allow navigating the active element within the current area only.
+
+### Dimensions drag & drop
 The dimensions are represented by chips, which can be dragged & dropped.
 All chips can change their order within their area by drag & drop.
 The chips from `rows`, `column`, `filter`(dimension chips) can be moved from any of those areas to any of them, at any place.

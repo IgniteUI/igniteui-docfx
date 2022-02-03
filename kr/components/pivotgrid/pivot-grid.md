@@ -12,7 +12,7 @@ The `IgxPivotGridComponent` allows users to configure and display their data in 
  The rows and columns represent distinct data groups, and the data cell values represent aggregations. This allows for complex data analysis based on a simple flat data set.
 The `IgxPivotGridComponent` is a feature-rich pivot table that allows easy configuration of the different dimensions and values as well as additional data operations on them like filtering and sorting.
 
-Can be used as a stand-alone component as well as in combination with the Angular Pivot Data Selector Component for more flexible runtime configuration options.
+It can be used as a stand-alone component as well as in combination with the Angular Pivot Data Selector Component for more flexible runtime configuration options.
 
 <code-view style="height: 530px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -28,7 +28,7 @@ The Angular Pivot Grid Component can be configured via the [`pivotConfiguration`
 </igx-pivot-grid>
 ```
 
-It is defined by three main dimensions: `rows`, `columns` and `values`. The `rows` and `columns` define the grouped structure that will be displayed in the rows and columns of the grid. The `values` define the aggregation fields and the aggregation that will be used to calculate and display the related values of the groups.
+It is defined by three main dimensions: `rows`, `columns` and `values`. The `rows` and `columns` define the grouped structure that is displayed in the rows and columns of the grid. The `values` define the aggregation fields and the aggregation that will be used to calculate and display the related values of the groups.
 
 A filter can also be defined via the `filters` configuration property. It can be used for fields that you do not want to add as a dimension or a value but would like to filter their related member's values via the UI.
 
@@ -36,7 +36,7 @@ A filter can also be defined via the `filters` configuration property. It can be
 
 Each basic dimension configuration requires a `memberName` that matches a field from the provided `data`, or a `memberFunction` that extracts a value from the record in case of complex objects or other custom scenarios.
 
-Multiple sibling dimensions can be defined, which will create a more complex nested group in the related row or column dimension area.
+Multiple sibling dimensions can be defined, which creates a more complex nested group in the related row or column dimension area.
 
 The dimensions can be reordered or moved from one area to another via their corresponding chips using drag & drop.
 
@@ -133,6 +133,17 @@ public pivotConfigHierarchy: IPivotConfiguration = {
             }
         ]
 }
+
+public static totalSale: PivotAggregation = (members, data: any) =>
+    data.reduce((accumulator, value) => accumulator + value.UnitPrice * value.UnitsSold, 0);
+
+public static totalMin: PivotAggregation = (members, data: any) => {
+    return data.map(x => x.UnitPrice * x.UnitsSold).reduce((a, b) => Math.min(a, b));
+};
+
+public static totalMax: PivotAggregation = (members, data: any) => {
+    return data.map(x => x.UnitPrice * x.UnitsSold).reduce((a, b) => Math.max(a,b));
+};
 ```
 The pivot value also provides `displayName` property. It can be used to display custom name of the value instead of member for the column header.
 
