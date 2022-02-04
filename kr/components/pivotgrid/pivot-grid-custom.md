@@ -17,7 +17,23 @@ public pivotConfigHierarchy: IPivotConfiguration = {
 ```
 
 Users have the ability to achieve certain scenarios by feeding the pivot grid with already aggregated data.
-There are some requirements on how the data should look like And some specifics regarding hierarchies in the pivot view:
+There are some requirements on how the data should look like and some specifics regarding hierarchies in the pivot view. For example, to declare hierarchy in `rows` dimension:
+
+```typescript
+rows: [
+    {
+        memberName: 'AllProducts',
+        memberFunction: () => 'All Products',
+        enabled: true,
+        childLevel: {
+            memberName: 'ProductCategory',
+            enabled: true
+        }
+    }
+]
+```
+
+And an example of the aggregated would be:
 
 ```typescript
 public aggregatedData = [
@@ -31,10 +47,17 @@ public aggregatedData = [
     }
 ];
 ```
-The pivot data pipes need some unique fields which do not appear in the actual data fields. They are used to achieve the calculations per record - to store aggregated data, to refer to the child rows, etc.
-If there are data fields with the same name the `pivotKeys` property can be used to change these pivot-specific names.
 
-The defaults are:
+The Pivot grid provides the object keys fields it uses to do its pivot calculations.
+- `children` - Field that stores children for hierarchy building.
+- `records` - Field that stores reference to the original data records.
+- `aggregations` - Field that stores aggregation values.
+- `level` - Field that stores dimension level based on its hierarchy.
+- `columnDimensionSeparator` - Separator used when generating the unique column field values.
+- `rowDimensionSeparator` - Separator used when generating the unique row field values.
+
+All of these are stored in the `pivotKeys` property which is part of the `PivotConfiguration` and can be used to change the default pivot keys.
+These defaults are:
 
 ```typescript
 export const DEFAULT_PIVOT_KEYS = {
@@ -43,9 +66,7 @@ export const DEFAULT_PIVOT_KEYS = {
 };
 ```
 
-Note that the generation of the columns is not achieved through `igx-column` templates inside the `igx-pivot-grid` template as with `igx-grid`. Columns of the pivot grid should be defined in the `PivotConfiguration`. In addition, there is no auto-generation so in order for a column to be included into the pivot view, it should be declared and enabled in `PivotConfiguration`.
-
-Setting `NoopPivotDimensionsStrategy` for the `columnStrategy` and `rowStrategy` will skip the data grouping and aggregation done by the data pipes, but the pivot grid still needs declarations for the rows, columns, values and filters in order to render the pivot view as expected:
+Setting `NoopPivotDimensionsStrategy` for the `columnStrategy` and `rowStrategy` skips the data grouping and aggregation done by the data pipes, but the pivot grid still needs declarations for the rows, columns, values and filters in order to render the pivot view as expected:
 
 ```typescript
 public pivotConfig: IPivotConfiguration = {
