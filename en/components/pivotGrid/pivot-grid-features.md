@@ -134,3 +134,18 @@ Chips from those areas can not be moved to `values` area and chips from `values`
 >[!NOTE]
 >The chips from the Pivot Grid can not be moved to Pivot Data Selector and items from the Pivot Data Selector can not be moved to the Pivot Grid.
 
+## Performance (Experimental)
+
+The `IgxPivotGridComponent`'s design allows it to take advantage of the Event Coalescing feature that has Angular introduced. This feature allows for improved performance with roughly around **`20%`** in terms of interactions and responsiveness. This feature can be enabled on application level by simply setting the `ngZoneEventCoalescing ` and `ngZoneRunCoalescing` properties to `true` in the `bootstrapModule` method:
+
+```typescript
+platformBrowserDynamic()
+  .bootstrapModule(AppModule, { ngZoneEventCoalescing: true, ngZoneRunCoalescing: true })
+  .catch(err => console.error(err));
+```
+
+>[!NOTE]
+> This is still in experimental feature for the `IgxPivotGridComponent`. This means that there might be some unexpected behaviors in the Pivot Grid. In case of encountering any such behavior, please contact us on our [Github](https://github.com/IgniteUI/igniteui-angular/discussions) page.
+
+>[!NOTE]
+> Enabling it can affects other parts of an Angular application that the `IgxPivotGridComponent` is not related to.
