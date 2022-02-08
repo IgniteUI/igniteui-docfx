@@ -753,6 +753,22 @@ Achieving a state persistence framework is easier than ever by using the new bui
 
 See the [Grid Sizing](sizing.md) topic.
 
+## Performance (Experimental)
+
+The `IgxGridComponent`'s design allows it to take advantage of the Event Coalescing feature that has Angular introduced. This feature allows for improved performance with roughly around **`20%`** in terms of interactions and responsiveness. This feature can be enabled on application level by simply setting the `ngZoneEventCoalescing ` and `ngZoneRunCoalescing` properties to `true` in the `bootstrapModule` method:
+
+```typescript
+platformBrowserDynamic()
+  .bootstrapModule(AppModule, { ngZoneEventCoalescing: true, ngZoneRunCoalescing: true })
+  .catch(err => console.error(err));
+```
+
+>[!NOTE]
+> This is still in experimental feature for the `IgxGridComponent`. This means that there might be some unexpected behaviors in the Grid. In case of encountering any such behavior, please contact us on our [Github](https://github.com/IgniteUI/igniteui-angular/discussions) page.
+
+>[!NOTE]
+> Enabling it can affects other parts of an Angular application that the `IgxGridComponent` is not related to.
+
 ## Known Limitations
 
 |Limitation|Description|

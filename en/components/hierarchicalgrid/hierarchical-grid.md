@@ -400,6 +400,21 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 >[!NOTE]
 >The sample will not be affected by the selected global theme from `Change Theme`.
 
+## Performance (Experimental)
+
+The `igxHierarchicalGrid`'s design allows it to take advantage of the Event Coalescing feature that has Angular introduced. This feature allows for improved performance with roughly around **`20%`** in terms of interactions and responsiveness. This feature can be enabled on application level by simply setting the `ngZoneEventCoalescing ` and `ngZoneRunCoalescing` properties to `true` in the `bootstrapModule` method:
+
+```typescript
+platformBrowserDynamic()
+  .bootstrapModule(AppModule, { ngZoneEventCoalescing: true, ngZoneRunCoalescing: true })
+  .catch(err => console.error(err));
+```
+
+>[!NOTE]
+> This is still in experimental feature for the `igxHierarchicalGrid`. This means that there might be some unexpected behaviors in the Hierarchical Grid. In case of encountering any such behavior, please contact us on our [Github](https://github.com/IgniteUI/igniteui-angular/discussions) page.
+
+>[!NOTE]
+> Enabling it can affects other parts of an Angular application that the `igxHierarchicalGrid` is not related to.
 
 ## Known Limitations
 
