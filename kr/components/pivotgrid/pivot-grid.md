@@ -6,16 +6,16 @@ _keywords: angular pivot grid, angular material pivot table, ignite ui for angul
 
 # Angular Pivot Grid Overview
 
-The Angular Pivot Grid Component displays data in a [pivot table](http://en.wikipedia.org/wiki/Pivot_table) and helps performing complex analysis on the supplied data set. 
+The Angular Pivot Grid Component displays data in a [pivot table](http://en.wikipedia.org/wiki/Pivot_table) and helps performing complex analysis on the supplied data set.
 
 The `IgxPivotGridComponent` allows users to configure and display their data in a multi-dimensional pivot table structure.
- The rows and columns represent distinct data groups, and the data cell values represent aggregations. This allows for complex data analysis based on a simple flat data set.
+The rows and columns represent distinct data groups, and the data cell values represent aggregations. This allows for complex data analysis based on a simple flat data set.
 The `IgxPivotGridComponent` is a feature-rich pivot table that allows easy configuration of the different dimensions and values as well as additional data operations on them like filtering and sorting.
 
 It can be used as a stand-alone component as well as in combination with the Angular Pivot Data Selector Component for more flexible runtime configuration options.
 
-<code-view style="height: 530px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 530px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-with-selector-sample" alt="Angular Pivot Grid with Pivot Selector Example">
 </code-view>
 
@@ -54,13 +54,12 @@ A dimension can also describe an expandable hierarchy via the `childLevel` prope
     }
 
 ```
-In this case the dimension will render an expander in the related section of the grid (row or column) and will allow the children to be expanded or collapsed as part of the hierarchy. By default the row dimensions are initially expanded, but this can be controlled with `defaultExpandState` `@Input` of the pivot grid.
-
+In this case the dimension renders an expander in the related section of the grid (row or column) and allows the children to be expanded or collapsed as part of the hierarchy. By default the row dimensions are initially expanded. This behavior can be controlled with the `defaultExpandState` `@Input` of the pivot grid.
 
 ## Predefined dimensions
 
 As part of the pivot grid some additional predefined dimensions are exposed for easier configuration:
-- `IgxPivotDateDimension` 
+- `IgxPivotDateDimension`
     Can be used for date fields. Describes the following hierarchy by default:
     - All Periods
     - Years
@@ -68,7 +67,7 @@ As part of the pivot grid some additional predefined dimensions are exposed for 
     - Months
     - Full Date
 
-Can be set for rows or columns, for example:
+It can be set for rows or columns, for example:
 
 ```typescript
 public pivotConfigHierarchy: IPivotConfiguration = {
@@ -78,7 +77,7 @@ public pivotConfigHierarchy: IPivotConfiguration = {
 }
 ```
 
-Allows further customization via the second option parameter in order to enable or disable a particular part of the hierarchy, for example:
+It also allows for further customization via the second option parameter in order to enable or disable a particular part of the hierarchy, for example:
 
 ```typescript
  new IgxPivotDateDimension({ memberName: 'Date', enabled: true }, {
@@ -104,34 +103,34 @@ A value configuration requires a `member` that matches a field from the provided
 - `IgxPivotAggregate` - for any other data types. This is the base aggregation.
     Contains the following aggregation functions: `COUNT`.
 
-The current aggregation function can be changed runtime using the value chip's drop-down. By default, it displays a list of available aggregations based on the field's data type. A custom list of aggregations can also be set via the `aggregateList` property, for example:
+The current aggregation function can be changed at runtime using the value chip's drop-down. By default, it displays a list of available aggregations based on the field's data type. A custom list of aggregations can also be set via the `aggregateList` property, for example:
 
 ```typescript
 public pivotConfigHierarchy: IPivotConfiguration = {
     values: [
-            {
-                member: 'AmountOfSale',
-                displayName: 'Amount of Sale',
-                aggregate: {
-                    key: 'SUM',
-                    aggregator: IgxTotalSaleAggregate.totalSale,
-                    label: 'Sum of Sale'
-                },
-                aggregateList: [{
-                    key: 'SUM',
-                    aggregator: IgxTotalSaleAggregate.totalSale,
-                    label: 'Sum of Sale'
-                }, {
-                    key: 'MIN',
-                    aggregator: IgxTotalSaleAggregate.totalMin,
-                    label: 'Minimum of Sale'
-                }, {
-                    key: 'MAX',
-                    aggregator: IgxTotalSaleAggregate.totalMax,
-                    label: 'Maximum of Sale'
-                }]
-            }
-        ]
+        {
+            member: 'AmountOfSale',
+            displayName: 'Amount of Sale',
+            aggregate: {
+                key: 'SUM',
+                aggregator: IgxTotalSaleAggregate.totalSale,
+                label: 'Sum of Sale'
+            },
+            aggregateList: [{
+                key: 'SUM',
+                aggregator: IgxTotalSaleAggregate.totalSale,
+                label: 'Sum of Sale'
+            }, {
+                key: 'MIN',
+                aggregator: IgxTotalSaleAggregate.totalMin,
+                label: 'Minimum of Sale'
+            }, {
+                key: 'MAX',
+                aggregator: IgxTotalSaleAggregate.totalMax,
+                label: 'Maximum of Sale'
+            }]
+        }
+    ]
 }
 
 public static totalSale: PivotAggregation = (members, data: any) =>
@@ -145,12 +144,12 @@ public static totalMax: PivotAggregation = (members, data: any) => {
     return data.map(x => x.UnitPrice * x.UnitsSold).reduce((a, b) => Math.max(a,b));
 };
 ```
-The pivot value also provides `displayName` property. It can be used to display custom name of the value instead of member for the column header.
+The pivot value also provides a `displayName` property. It can be used to display a custom name for this value in the column header.
 
 ## Enable property
 
-`IPivotConfiguration` is used to describe the current state of the `IgxPivotGridComponent`. There the developer can declare fields of the `data` as `rows`, `columns`, `filters` or `values`. The configuration allows to enable or disable all these elements. If they are enabled, they will be included into the current state of the pivot grid. The `IgxPivotDataSelector` utilizes the same configuration and shows a list of all elements - enabled and disabled. For each of them there will be a checked or unchecked checkbox accordingly. The users can easily tweak the pivot state by toggling the different elements using their checkboxes.
-The property `enable` controls if a given `IPivotDimension` or `IPivotValue` is active and takes part of the pivot view rendered by the pivot grid.
+`IPivotConfiguration` is the interface that describes the current state of the `IgxPivotGrid` component. With it the developer can declare fields of the data as `rows`, `columns`, `filters` or `values`. The configuration allows enabling or disabling each of these elements separately. Only enabled elements are included in the current state of the pivot grid. The `IgxPivotDataSelector` component utilizes the same configuration and shows a list of all elements - enabled and disabled. For each of them there is a checkbox in the appropriate state. End-users can easily tweak the pivot state by toggling the different elements using these checkboxes.
+The `enable` property controls if a given `IPivotDimension` or `IPivotValue` is active and takes part in the pivot view rendered by the pivot grid.
 
 ## Full configuration example
 
@@ -165,7 +164,7 @@ Let's take a look at a basic pivot configuration:
                 memberFunction: (data) => data.Product.Name,
                 enabled: true
             }
-            
+
         ],
         rows: [
             {
@@ -216,8 +215,8 @@ public data = [
 
 Resulting in the following view, which groups the Product Categories unique columns, Sellers Countries in unique rows and displays the related aggregations for the number of units in the related cells:
 
-<code-view style="height: 530px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 530px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-basic" alt="Angular Pivot Grid Basic Example">
 </code-view>
 
@@ -226,10 +225,10 @@ Resulting in the following view, which groups the Product Categories unique colu
 
 |Limitation|Description|
 |--- |--- |
-| Setting columns declaratively is not supported. | The Pivot grid generates its columns based on the `columns` configuration, so setting them declaratively, like in the base grid, is not supported. Such columns will be disregarded. |
+| Setting columns declaratively is not supported. | The Pivot grid generates its columns based on the `columns` configuration, so setting them declaratively, like in the base grid, is not supported. Such columns are disregarded. |
 | Setting duplicate `memberName` or `member` property values for dimensions/values. | `memberName`/`member` should be unique for each dimension/value. Duplication may result in loss of data from the final result. |
 | Row Selection is only supported in `single` mode. | Multiple selection is currently not supported. |
-| Merging the dimension members is case sensitive| The pivot grid creates groups and merges the same (case sensitive) values. But the dimensions provide `memberFunction` and this can be changed there, the result of the `memberFunction` will be compared and used as display value.|
+| Merging the dimension members is case sensitive| The pivot grid creates groups and merges the same (case sensitive) values. But the dimensions provide `memberFunction` and this can be changed there, the result of the `memberFunction` are compared and used as display value.|
 
 ## API References
 * [IgxPivotGridComponent]({environment:angularApiUrl}/classes/igxpivotgridcomponent.html)
