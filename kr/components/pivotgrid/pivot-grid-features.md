@@ -18,6 +18,11 @@ The pivot and flat grid component classes inherit from a common base and thus sh
 
 The Pivot Grid has additional features and functionalities related to its dimensions as described below.
 
+<code-view style="height: 530px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-features" alt="Angular Pivot Grid with Pivot Selector Example">
+</code-view>
+
 ## Dimensions filtering
 
 All dimensions (filters, rows, columns) can be filtered via the chip UI or via the API. This functionality is embedded and enabled by default.
@@ -108,11 +113,6 @@ The `IgxPivotGridComponent` provides a `superCompactMode` `@Input` to enable a s
 ```html
 <igx-pivot-grid [superCompactMode]="true"></igx-pivot-grid>
 ```
-
-<code-view style="height: 530px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-with-selector-sample" alt="Angular Pivot Grid with Pivot Selector Example">
-</code-view>
 
 ## Additional summary column
 
