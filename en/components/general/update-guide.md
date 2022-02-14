@@ -52,7 +52,7 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
 
 ### General
 - `igxGrid`, `igxHierarchicalGrid`, `igxTreeGrid`
-    - **Breaking Change** = The columns' `movable` property has been deprecated. Use the exposed grid `moving` property instead:
+    - **Breaking Change** - The columns' `movable` property has been deprecated. Use the exposed grid `moving` property instead:
     ```html
     <igx-grid [moving]="true">      
     </igx-grid>
