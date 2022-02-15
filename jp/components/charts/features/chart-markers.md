@@ -3,6 +3,7 @@ title: Angular チャート マーカー | データ可視化 | インフラジ�
 _description: インフラジスティックスの Angular チャート マーカー
 _keywords: Angular Charts, Markers, Infragistics, Angular チャート, マーカー, インフラジスティックス
 mentionedTypes: ["CategoryChart"]
+namespace: Infragistics.Controls.Charts
 _language: ja
 ---
 
