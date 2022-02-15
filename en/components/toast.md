@@ -116,23 +116,22 @@ If the sample is configured properly, the toast auto hides faster.
 </div>
 
 ### Positioning
-Use [`position`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#position) to configure where the toast appears. By default, it is displayed at the bottom of the page. In the sample below, we set notification to appear at the top position.
+Use [`positionSettings`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#positionSettings) property to configure where the toast appears. By default, it is displayed at the bottom of the page. In the sample below, we set notification to appear at the top position.
 
 ```html
 <!--sample.component.html-->
 <div>
     <button igxButton="raised" (click)="open(toast)">Show notification on top</button>
-    <igx-toast #toast [position]="toastPosition">Notification displayed</igx-toast>
+    <igx-toast #toast>Notification displayed</igx-toast>
 </div>
 ```
 
 ```typescript
 // sample.component.ts
-import { IgxToastPosition } from 'igniteui-angular';
+import { VerticalAlignment } from 'igniteui-angular';
 ...
-public toastPosition: IgxToastPosition;
 public open(toast) {
-    this.toastPosition = IgxToastPosition.Top;
+    toast.positionSettings.verticalDirection = VerticalAlignment.Top;
     toast.open();
 }
 ...
