@@ -57,6 +57,15 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
     <igx-grid [moving]="true">      
     </igx-grid>
     ```
+- `IgxToast`
+    - **Breaking Change** - The `igx-toast` deprecated `position` property has been removed. We suggest using `positionSettings` property as follows:
+    ```typescript
+    @ViewChild('toast', { static: true }) public toast: IgxToastComponent;
+
+    public ngOnInit(): void {
+        this.toast.positionSettings.verticalDirection = VerticalAlignment.Middle;
+    }
+    ```
 ## From 12.2.x to 13.0.x
 
 ### General
