@@ -55,12 +55,12 @@ public aggregatedData = [
 ```
 
 The Pivot grid provides the object keys fields it uses to do its pivot calculations.
-- `children` - Field that stores children for hierarchy building.
-- `records` - Field that stores reference to the original data records.
-- `aggregations` - Field that stores aggregation values.
-- `level` - Field that stores dimension level based on its hierarchy.
-- `columnDimensionSeparator` - Separator used when generating the unique column field values.
-- `rowDimensionSeparator` - Separator used when generating the unique row field values.
+- `children` - Field that stores children for hierarchy building. It represents a map from grouped values and all the pivotGridRecords that are based on that value. It can be utilized in very specific scenarios, where there is a need to do something while creating the hierarchies. No need to change this for common usage.
+- `records` - Field that stores reference to the original data records. Can be seen in the example from above - `AllProducts_records`. Avoid setting fields in the data with the same name as this property. If your data records has `records` property, you can specify different and unique value for it using the `pivotKeys`.
+- `aggregations` - Field that stores aggregation values. It's applied while creating the hierarchies and also it should not be changed for common scenarios.
+- `level` - Field that stores dimension level based on its hierarchy. Avoid setting fields in the data with the same name as this property. If your data records has `level` property, you can specify different and unique value for it using the `pivotKeys`. 
+- `columnDimensionSeparator` - Separator used when generating the unique column field values. It is the dash(`-`) from the example from above - `All-Bulgaria`.
+- `rowDimensionSeparator` - Separator used when generating the unique row field values. It is the underscore(`_`) from the example from above - `AllProducts_records`. It's used when creating the `records` and `level` field.
 
 All of these are stored in the `pivotKeys` property which is part of the `PivotConfiguration` and can be used to change the default pivot keys.
 These defaults are:
