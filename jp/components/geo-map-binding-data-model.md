@@ -2,7 +2,7 @@
 title: Angular マップ | データ可視化ツール | 地理的データ モデルのバインディング | インフラジスティックス
 _description: インフラジスティックスの Angular JavaScript マップを使用して、シェイプ ファイルからの地理空間データやデータ モデルからの地理的位置を地理的画像マップに表示します。Ignite UI for Angular マップのサンプルを是非お試しください!
 _keywords: Angular map, binding data models, Ignite UI for Angular, Infragistics, data binding, Angular マップ, データ モデルのバインディング, データ バインディング, インフラジスティックス
-mentionedTypes: ['XamGeographicMap', 'GeographicScatterAreaSeries', 'GeographicHighDensityScatterSeries', 'GeographicProportionalSymbolSeries', GeographicScatterAreaSeries', GeographicContourLineSeries', 'GeographicShapeSeries', 'GeographicPolylineSeries' ]
+mentionedTypes: ['XamGeographicMap', 'GeographicScatterAreaSeries', 'GeographicHighDensityScatterSeries', 'GeographicProportionalSymbolSeries', GeographicScatterAreaSeries', GeographicContourLineSeries', 'GeographicShapeSeries', 'GeographicPolylineSeries']
 namespace: Infragistics.Controls.Maps
 _language: ja
 ---
