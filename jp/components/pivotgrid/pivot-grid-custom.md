@@ -5,7 +5,7 @@ _keywords: angular pivot grid, angular material pivot table, ignite ui for angul
 ---
 
 
-# Remote Operations
+# Angular Pivot Grid Custom Aggregations
 
 In scenarios where the pivot data is already grouped and aggregated from a remote service and there's no need for further processing on the client, the pivot grid can be configured to use a custom empty strategy that will skip data processing on the client and allow it to directly display the data as is:
 
@@ -124,3 +124,19 @@ Similarly for other remote data operations like sorting and filtering, data proc
 public noopFilterStrategy = NoopFilteringStrategy.instance();
 public noopSortStrategy = NoopSortingStrategy.instance();
 ```
+
+## API References
+* [IgxPivotGridComponent]({environment:angularApiUrl}/classes/igxpivotgridcomponent.html)
+* [IgxPivotDataSelector]({environment:angularApiUrl}/classes/igxpivotdataselector.html)
+
+
+## Additional Resources
+<div class="divider--half"></div>
+* [Angular Pivot Grid Features](pivot-grid-features.md)
+* [Angular Pivot Grid Custom](pivot-grid-custom.md)
+
+<div class="divider--half"></div>
+Our community is active and always welcoming to new ideas.
+
+* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

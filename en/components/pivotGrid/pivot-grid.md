@@ -232,6 +232,7 @@ Resulting in the following view, which groups the Product Categories unique colu
 
 ## API References
 * [IgxPivotGridComponent]({environment:angularApiUrl}/classes/igxpivotgridcomponent.html)
+* [IgxPivotDataSelector]({environment:angularApiUrl}/classes/igxpivotdataselector.html)
 
 
 ## Additional Resources
