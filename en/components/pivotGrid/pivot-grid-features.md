@@ -18,7 +18,7 @@ The pivot and flat grid component classes inherit from a common base and thus sh
 
 The Pivot Grid component has additional features and functionalities related to its dimensions as described below.
 
-<code-view style="height: 530px" 
+<code-view style="height: 870px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-features" alt="Angular Pivot Grid with Pivot Selector Example">
 </code-view>
