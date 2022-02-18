@@ -232,12 +232,13 @@ Resulting in the following view, which groups the Product Categories unique colu
 
 ## API References
 * [IgxPivotGridComponent]({environment:angularApiUrl}/classes/igxpivotgridcomponent.html)
+* [IgxPivotDataSelector]({environment:angularApiUrl}/classes/igxpivotdataselector.html)
 
 
 ## Additional Resources
 <div class="divider--half"></div>
 * [Angular Pivot Grid Features](pivot-grid-features.md)
-* [Angular Pivot Grid Custom](pivot-grid-custom.md)
+* [Angular Pivot Grid Custom Aggregations](pivot-grid-custom.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

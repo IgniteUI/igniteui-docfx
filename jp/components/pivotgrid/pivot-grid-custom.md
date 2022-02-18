@@ -133,7 +133,7 @@ public noopSortStrategy = NoopSortingStrategy.instance();
 ## Additional Resources
 <div class="divider--half"></div>
 * [Angular Pivot Grid Features](pivot-grid-features.md)
-* [Angular Pivot Grid Custom](pivot-grid-custom.md)
+* [Angular Pivot Grid Overview](pivot-grid.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

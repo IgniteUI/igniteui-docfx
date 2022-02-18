@@ -147,8 +147,8 @@ Chips from these areas can not be moved to the `values` area and chips from the 
 
 ## Additional Resources
 <div class="divider--half"></div>
-* [Angular Pivot Grid Features](pivot-grid-features.md)
-* [Angular Pivot Grid Custom](pivot-grid-custom.md)
+* [Angular Pivot Grid Overview](pivot-grid.md)
+* [Angular Pivot Grid Custom Aggregations](pivot-grid-custom.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
