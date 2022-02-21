@@ -31,7 +31,6 @@ All dimensions (filters, rows, columns) can be filtered via the chip UI or the A
 >You can use the filtering dimension to filter out data values which are not a part of the pivot view.
 
 The filtering UI can be opened via the dimension chips filter icon and allows excel-style filtering of the unique dimension values.
-In case the dimension has a hierarchy, the values are displayed in a tree-like structure to retain the parent-child relationship between them.
 
 >[!NOTE]
 >If there is not enough space for all of the filtering chips, the pivot grid will show the ones that were cut off into a dropdown. End-users can access and manipulate them there.
