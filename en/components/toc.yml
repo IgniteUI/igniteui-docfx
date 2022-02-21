@@ -525,7 +525,7 @@
     - name: Pivot Grid Features
       href: pivotgrid/pivot-grid-features.md
       new: true
-    - name: Pivot Grid Remote Handling and Customization
+    - name: Pivot Grid Remote Operations
       href: pivotgrid/pivot-grid-custom.md
       new: true
 - name: Tree
