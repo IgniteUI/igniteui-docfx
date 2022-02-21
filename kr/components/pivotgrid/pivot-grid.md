@@ -8,13 +8,13 @@ _keywords: angular pivot grid, angular material pivot table, ignite ui for angul
 
 The Angular Pivot Grid Component displays data in a [pivot table](http://en.wikipedia.org/wiki/Pivot_table) and helps performing complex analysis on the supplied data set.
 
-The `IgxPivotGridComponent` allows users to configure and display their data in a multi-dimensional pivot table structure.
-The rows and columns represent distinct data groups, and the data cell values represent aggregations. This allows for complex data analysis based on a simple flat data set.
-The `IgxPivotGridComponent` is a feature-rich pivot table that allows easy configuration of the different dimensions and values as well as additional data operations on them like filtering and sorting.
+The `IgxPivotGridComponent` gives the ability to users to configure and display their data in a multi-dimensional pivot table structure.
+The rows and columns represent distinct data groups, and the data cell values represent aggregations. This allows complex data analysis based on a simple flat data set.
+The `IgxPivotGridComponent` is a feature-rich pivot table that provides easy configuration of the different dimensions and values as well as additional data operations on them like filtering and sorting.
 
 It can be used as a stand-alone component as well as in combination with the Angular Pivot Data Selector Component for more flexible runtime configuration options.
 
-<code-view style="height: 530px"
+<code-view style="height: 870px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-datasource" alt="Angular Pivot Grid with Pivot Selector Example">
 </code-view>
@@ -30,7 +30,7 @@ The Angular Pivot Grid Component can be configured via the [`pivotConfiguration`
 
 It is defined by three main dimensions: `rows`, `columns` and `values`. The `rows` and `columns` define the grouped structure that is displayed in the rows and columns of the grid. The `values` define the aggregation fields and the aggregation that will be used to calculate and display the related values of the groups.
 
-A filter can also be defined via the `filters` configuration property. It can be used for fields that you do not want to add as a dimension or a value but would like to filter their related member's values via the UI.
+A filter can also be defined via the `filters` configuration property. It can be used for fields that you do not want to add as a dimension or a value but would like to filter their related member values via the UI.
 
 ## Dimensions configuration
 
