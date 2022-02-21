@@ -5,7 +5,7 @@ _keywords: angular pivot grid, angular material pivot table, ignite ui for angul
 ---
 
 
-# Angular Pivot Grid Custom Aggregations
+# Angular Pivot Grid Remote Operations
 
 In scenarios where the pivot data is already grouped and aggregated from a remote service and there's no need for further processing on the client, the pivot grid can be configured to use a custom empty strategy that will skip data processing on the client and allow it to directly display the data as is:
 
