@@ -519,6 +519,16 @@
     - name: 状態保持
       href: hierarchicalgrid/state-persistence.md
       new: true
+- name: Pivot Grid
+  href: pivotgrid/pivot-grid.md
+  new: true
+  items:
+    - name: Pivot Grid Features
+      href: pivotgrid/pivot-grid-features.md
+      new: true
+    - name: Pivot Grid Remote Handling and Customization
+      href: pivotgrid/pivot-grid-custom.md
+      new: true
 - name: Tree
   href: tree.md
   new: true
