@@ -49,6 +49,24 @@ ng update @angular/cli
 
 例: 6.2.4 から 7.1.0 にアップデートする場合、[6.x .. から] セクションから始めて変更を適用していきます。
 
+## 13.0.x から 13.1.x の場合:
+
+### 一般
+- `igxGrid`, `igxHierarchicalGrid`, `igxTreeGrid`
+    - **重大な変更** - The columns' `movable` property has been deprecated. Use the exposed grid `moving` property instead:
+    ```html
+    <igx-grid [moving]="true">      
+    </igx-grid>
+    ```
+- `IgxToast`
+    - **重大な変更** - The `igx-toast` deprecated `position` property has been removed. We suggest using `positionSettings` property as follows:
+    ```typescript
+    @ViewChild('toast', { static: true }) public toast: IgxToastComponent;
+
+    public ngOnInit(): void {
+        this.toast.positionSettings.verticalDirection = VerticalAlignment.Middle;
+    }
+    ```
 ## 12.2.x から 13.0.x の場合:
 
 ### 一般
