@@ -48,6 +48,24 @@ Unfortunately not all changes can be automatically updated. Changes below are sp
 
 For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from the "From 6.x .." section apply those changes and work your way up:
 
+## From 13.0.x to 13.1.x
+
+### General
+- `igxGrid`, `igxHierarchicalGrid`, `igxTreeGrid`
+    - **Breaking Change** - The columns' `movable` property has been deprecated. Use the exposed grid `moving` property instead:
+    ```html
+    <igx-grid [moving]="true">      
+    </igx-grid>
+    ```
+- `IgxToast`
+    - **Breaking Change** - The `igx-toast` deprecated `position` property has been removed. We suggest using `positionSettings` property as follows:
+    ```typescript
+    @ViewChild('toast', { static: true }) public toast: IgxToastComponent;
+
+    public ngOnInit(): void {
+        this.toast.positionSettings.verticalDirection = VerticalAlignment.Middle;
+    }
+    ```
 ## From 12.2.x to 13.0.x
 
 ### General

@@ -6,8 +6,9 @@ _keywords: Ignite UI for Angular, Angular Overlay Service, Angular UI controls, 
 
 # Overlay Styling
 <p class="highlight">
+
 [`IgxOverlayService`](overlay.md) is used to display content above the page content. A lot of Ignite UI for Angular components use the overlay - [Drop Down](drop-down.md), [Combo](combo.md), [Date Picker](date-picker.md) and more - so it is important to understand how the overlay displays content.
-To display the content above other elements, the service moves it into a special outlet container (attached at the end of the document's body, by default). This behavior can affect styles [scoped to specific container](#Scoped Overlay Styles).
+To display the content above other elements, the service moves it into a special outlet container (attached at the end of the document's body, by default). This behavior can affect styles [scoped to specific container](#scoped-overlay-styles).
 </p>
 <div class="divider--half"></div>
 
@@ -29,7 +30,7 @@ In most cases [global](themes/sass/global-themes.md) theme styles are not affect
 
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+
 
 $my-drop-down-theme: igx-drop-down-theme(
     $palette: $my-custom-palette
@@ -126,7 +127,7 @@ Now **all** modal overlays will have a purple tint to their background.
 
 ### Scoped Overlay Styles
 
-If we want our overlay to have a specific background **only** under a certain component, we can [scope the theme](#Scoped Overlay Styles).
+If we want our overlay to have a specific background **only** under a certain component, we can [scope the theme](#scoped-overlay-styles).
 When scoping a modal overlay, you need to move the overlay outlet, which has some [limitations](overlay.md#assumptions-and-limitations). In order to minimize the risks of overflow clipping, z-index and viewport issues, we recommend using outlets for modal overlays only in higher level components:
 
 ```scss
