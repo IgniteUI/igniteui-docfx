@@ -53,13 +53,13 @@ ng update @angular/cli
 
 ### 一般
 - `igxGrid`, `igxHierarchicalGrid`, `igxTreeGrid`
-    - **重大な変更** - The columns' `movable` property has been deprecated. Use the exposed grid `moving` property instead:
+    - **重大な変更** - 列の `movable` プロパティは非推奨になりました。代わりに、公開されたグリッドの `moving` プロパティを使用してください:
     ```html
     <igx-grid [moving]="true">      
     </igx-grid>
     ```
 - `IgxToast`
-    - **重大な変更** - The `igx-toast` deprecated `position` property has been removed. We suggest using `positionSettings` property as follows:
+    - **重大な変更** - `igx-toast` で非推奨になった `position` プロパティは削除されました。次のように `positionSettings` プロパティを使用することをお勧めします:
     ```typescript
     @ViewChild('toast', { static: true }) public toast: IgxToastComponent;
 
