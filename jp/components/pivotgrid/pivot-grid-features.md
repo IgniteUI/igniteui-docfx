@@ -12,7 +12,7 @@ _keywords: angular ピボット グリッド, angular material ピボット テ�
 >一部の機能は、ピボット テーブルのコンテキストで意味のある動作をしないため、`IgxPivotGrid` で有効にできません。以下が含まれます。
 > - CRUD 操作
 > - グループ化
-> - 行/列のピン固定
+> - 行 / 列のピン固定
 > - 集計
 > - ページング
 
@@ -35,8 +35,7 @@ _keywords: angular ピボット グリッド, angular material ピボット テ�
 >[!NOTE]
 >すべてのフィルタリング チップに十分なスペースがない場合、ピボット グリッドには、ドロップダウンに切り取られたものが表示されます。エンドユーザーはそこでアクセスして操作できます。
 
-ディメンションは、ディメンションの `filter` プロパティを使用して `pivotConfiguration` のディメンション構成を介して最初にフィルター処理することもできます。
-これは、関連するフィルター条件を使用して新しい `FilteringExpressionsTree` に設定できます。例えば:
+ディメンションは、ディメンションの `filter` プロパティを使用して `pivotConfiguration` のディメンション構成を介して最初にフィルター処理することもできます。これは、関連するフィルター条件を使用して新しい `FilteringExpressionsTree` に設定できます。例えば:
 
 ```typescript
 public filterExpTree = new FilteringExpressionsTree(FilteringLogic.And);

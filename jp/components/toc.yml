@@ -519,7 +519,7 @@
     - name: 状態保持
       href: hierarchicalgrid/state-persistence.md
       new: true
-- name: ピボット グリッド
+- name: Pivot Grid
   href: pivotgrid/pivot-grid.md
   new: true
   items:

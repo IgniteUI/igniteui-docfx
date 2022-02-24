@@ -22,8 +22,7 @@ public pivotConfigHierarchy: IPivotConfiguration = {
            iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-noop" alt="Angular ピボット グリッドのカスタム定義済み集計の例">
 </code-view>
 
-ユーザーは、ピボット グリッドに既に集計されたデータをフィードすることで、特定のシナリオを実現できます。
-データがどのように表示されるかについていくつかの要件があり、ピボット ビューの階層に関するいくつかの詳細があります。たとえば、`rows` (行) ディメンションで階層を宣言するには、次のようにします:
+ユーザーは、ピボット グリッドに既に集計されたデータをフィードすることで、特定のシナリオを実現できます。データがどのように表示されるかについていくつかの要件があり、ピボット ビューの階層に関するいくつかの詳細があります。たとえば、`rows` ディメンションで階層を宣言するには、次のようにします:
 
 ```typescript
 rows: [
@@ -62,8 +61,7 @@ public aggregatedData = [
 - `columnDimensionSeparator` - 一意の列フィールド値を生成するときに使用されるセパレーター。上からの例のダッシュ (`-`) - `All-Bulgaria` です。
 - `rowDimensionSeparator` - 一意の行フィールド値を生成するときに使用されるセパレーター。上記の例のアンダースコア (`_`) - `AllProducts_records` です。`records` (レコード) と `level` (レベル フィールド) を作成するときに使用されます。
 
-これらはすべて、`Pivo​​tConfiguration` の一部である `pivotKeys` プロパティに格納され、デフォルトのピボット キーを変更するために使用できます。
-これらのデフォルトは次のとおりです:
+これらはすべて、`Pivo​​tConfiguration` の一部である `pivotKeys` プロパティに格納され、デフォルトのピボット キーを変更するために使用できます。これらのデフォルトは次のとおりです:
 
 ```typescript
 export const DEFAULT_PIVOT_KEYS = {

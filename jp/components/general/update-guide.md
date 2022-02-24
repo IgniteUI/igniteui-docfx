@@ -52,7 +52,7 @@ ng update @angular/cli
 ## 13.0.x から 13.1.x の場合:
 
 ### 一般
-- `igxGrid`, `igxHierarchicalGrid`, `igxTreeGrid`
+- `igxGrid`、`igxHierarchicalGrid`、`igxTreeGrid`
     - **重大な変更** - 列の `movable` プロパティは非推奨になりました。代わりに、公開されたグリッドの `moving` プロパティを使用してください:
     ```html
     <igx-grid [moving]="true">      
