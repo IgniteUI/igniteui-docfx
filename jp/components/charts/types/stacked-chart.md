@@ -3,6 +3,7 @@ title: Angular 積層型チャート | データ可視化 | インフラジス�
 _description: インフラジスティックスの Angular 積層型チャート
 _keywords: Angular Charts, Stacked Chart, Stacked 100% Chart, Infragistics, Angular チャート, 積層型チャート, 積層型 100% チャート, インフラジスティックス
 mentionedTypes: ["XamDataChart", "StackedAreaSeries", "Stacked100AreaSeries", "StackedBarSeries", "Stacked100BarSeries", "StackedColumnSeries", "Stacked100ColumnSeries", "StackedLineSeries", "Stacked100LineSeries", "StackedSplineSeries", "Stacked100SplineSeries", "StackedSplineAreaSeries", "Stacked100SplineAreaSeries"]
+namespace: Infragistics.Controls.Charts
 _language: ja
 ---
 
