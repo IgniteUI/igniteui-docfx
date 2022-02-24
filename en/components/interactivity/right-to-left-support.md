@@ -23,7 +23,6 @@ Example:
 Currently the following components have only partial RTL support:
 
 * Grid (igx-grid)
-* Tabs (igx-tabs)
 
 ## RTL Example
 This section shows the accessibility (ARIA) support of the framework as well as how easily manageable the `directionality` of the components is.

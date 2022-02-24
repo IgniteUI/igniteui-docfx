@@ -23,7 +23,6 @@ _keywords: aria support, aria サポート, a11y, ignite ui for angular, infragi
 現在、以下コンポーネントは RTL 機能の一部をサポートしています。
 
 * Grid (igx-grid)
-* Tabs (igx-tabs)
 
 ## RTL の例
 このセクションでは、フレームワークのアクセシビリティ (ARIA) サポートと、コンポーネントの`文字表記の方向`の簡単な管理を示します。
