@@ -2,6 +2,7 @@
 title: Angular Licensing | Dock Manager | Ignite UI for Angular | Infragistics
 _description: Learn how to use Infragistics' Ignite UI for Angular licensed npm feed.
 _keywords: npm package license, Ignite UI for Angular license feed,  licensing
+_language: kr
 ---
 
 # License Agreements in Ignite UI for Angular
