@@ -136,7 +136,7 @@ Avatar のスタイル設定を始めるには、すべてのテーマ関数と�
 テーマを作成する必要があります:
 
 ```scss
-$custom-avatar-theme: igx-avatar-theme(
+$custom-avatar-theme:avatar-theme(
     $background: #72da67,
     $color: #000000,
     $border-radius-square: 16px
@@ -149,7 +149,7 @@ $custom-avatar-theme: igx-avatar-theme(
 
 ```scss
 .initials-avatar {
-    @include igx-css-vars($custom-avatar-theme);
+    @include css-vars($custom-avatar-theme);
 }
 ```
 
@@ -164,7 +164,7 @@ Internet Explorer 11 以前などブラウザーのコンポーネントをス�
     ::ng-deep {
         // Custom avatar theme を `igx-avatar` ミックスインに渡します
         .initials-avatar {
-            @include igx-avatar($custom-avatar-theme);
+            @include avatar($custom-avatar-theme);
         }
     }
 }

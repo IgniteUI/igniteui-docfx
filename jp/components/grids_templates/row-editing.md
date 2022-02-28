@@ -334,9 +334,9 @@ export class HGridRowEditingSampleComponent implements OnInit {
     $my-light-gray: #e3e3e3;
     $my-banner-palette: $purple-palette;
 
-    $banner-theme: igx-banner-theme( 
+    $banner-theme:banner-theme( 
         $banner-background: $my-light-gray,
-        $banner-message-color: igx-color($my-banner-palette, "secondary", 600)
+        $banner-message-color:color($my-banner-palette, "secondary", 600)
     );
 ```
 
@@ -347,7 +347,7 @@ export class HGridRowEditingSampleComponent implements OnInit {
 次に Sass `@include` ステートメントを使用してテーマを適用します。新しく定義された `$banner-theme` を [`igx-banner mixin`]({environment:sassApiUrl}/index.html#mixin-igx-banner) で渡します。
 
 ```scss
-@include igx-banner($banner-theme); 
+@include banner($banner-theme); 
 ```
 
 これにより、カスタム バナー テーマが行編集オーバーレイに適用されます。ただし、グローバル スタイル ファイルで定義したため、これらのスタイルはアプリケーションの**すべて**のバナーにも適用されます。
@@ -365,7 +365,7 @@ export class HGridRowEditingSampleComponent implements OnInit {
 
 :host {
     ::ng-deep {
-        @include igx-banner($banner-theme);
+        @include banner($banner-theme);
     }
 }
 ```
@@ -398,13 +398,13 @@ export class HGridRowEditingSampleComponent implements OnInit {
 // custom.component.scss
 ...
 
-$button-theme: igx-button-theme(
+$button-theme:button-theme(
   $palette: $purple-palette
 );
 
 ...
 .custom-buttons {
-    @include igx-button($button-theme);
+    @include button($button-theme);
   }
 ```
 

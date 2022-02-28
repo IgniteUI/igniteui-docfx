@@ -283,7 +283,7 @@ export class SimpleComboCascadingComponent implements OnInit {
 
 最も単純なアプローチに従って、[igx-combo-theme]({environment:sassApiUrl}/index.html#function-igx-combo-theme) を拡張し、`$empty-list-background` パラメーターを受け入れる新しいテーマを作成します。
 ```scss
-$custom-simple-combo-theme: igx-combo-theme(
+$custom-simple-combo-theme:combo-theme(
     $empty-list-background: #1a5214
 );
 ```
@@ -291,7 +291,7 @@ $custom-simple-combo-theme: igx-combo-theme(
 [IgxSimpleComboComponent]({environment:angularApiUrl}/classes/igxsimplecombocomponent.html) は、[IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) を項目コンテナーとして内部的に使用します。[IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) コンポーネントも含まれています。これらのコンポーネントのテーマを拡張する新しいテーマを作成し、それぞれのクラスの下でそれらをスコープすると、Simple ComboBox のスタイルを変更できます。
 
 ```scss
-$custom-drop-down-theme: igx-drop-down-theme(
+$custom-drop-down-theme:drop-down-theme(
     $background-color: #d9f5d6,
     $header-text-color: #1a5214,
     $item-text-color: #1a5214,
@@ -314,8 +314,8 @@ $custom-drop-down-theme: igx-drop-down-theme(
 
 ```scss
 :host ::ng-deep {
-    @include igx-css-vars($custom-combo-theme);
-    @include igx-css-vars($custom-drop-down-theme);
+    @include css-vars($custom-combo-theme);
+    @include css-vars($custom-drop-down-theme);
 }
 ```
 

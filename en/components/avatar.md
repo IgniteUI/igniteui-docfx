@@ -67,7 +67,7 @@ We can also change the background through the `background` property or set a col
 ```scss
 // avatar.component.scss
 
-.igx-avatar {
+igx-avatar {
     background: #e41c77;
     color: #000000;
 }
@@ -135,7 +135,7 @@ Given the following markup:
 We need to create a theme:
 
 ```scss
-$custom-avatar-theme: igx-avatar-theme(
+$custom-avatar-theme:avatar-theme(
     $background: #72da67,
     $color: #000000,
     $border-radius-square: 16px
@@ -148,7 +148,7 @@ The last step is to pass the custom avatar theme:
 
 ```scss
 .initials-avatar {
-    @include igx-css-vars($custom-avatar-theme);
+    @include css-vars($custom-avatar-theme);
 }
 ```
 
@@ -163,7 +163,7 @@ If the component is using an [`Emulated`](themes/sass/component-themes.md#view-e
     ::ng-deep {
         // Pass the custom avatar theme to the `igx-avatar` mixin
         .initials-avatar {
-            @include igx-avatar($custom-avatar-theme);
+            @include avatar($custom-avatar-theme);
         }
     }
 }

@@ -270,7 +270,7 @@ _language: ja
 最も単純なアプローチに従って、[`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme)  を拡張する新しいテーマを作成し、`$header-background`, `$header-text-color`, `$header-border-width`, `$header-border-style` and `$header-border-color` パラメーターを受け取ります。
 
 ```scss
-$custom-theme: igx-grid-theme(
+$custom-theme:grid-theme(
     $header-background: #e0f3ff,
     $header-text-color: #e41c77,
     $header-border-width: 1px,
@@ -281,7 +281,7 @@ $custom-theme: igx-grid-theme(
 最後の手順は、それぞれのテーマを持つコンポーネント ミックスインを**含める**ことです。 
 
 ```scss
-@include igx-grid($custom-theme);
+@include grid($custom-theme);
 ```
 
 >[!NOTE]
@@ -290,7 +290,7 @@ $custom-theme: igx-grid-theme(
  ```scss
 :host {
     ::ng-deep {
-        @include igx-grid($custom-theme);
+        @include grid($custom-theme);
     }
 }
 ```
@@ -305,18 +305,18 @@ $custom-theme: igx-grid-theme(
 $light-blue-color: #e0f3ff;
 $deep-pink-color: #e41c77;
 
-$custom-palette: igx-palette($primary: $light-blue-color, $deep-pink-color);
+$custom-palette:palette($primary: $light-blue-color, $deep-pink-color);
 ```
 
 次に [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取得できます。
 
 ```scss
-$custom-theme: igx-grid-theme(
-    $header-background: igx-color($custom-palette, "primary", 500),
-    $header-text-color: igx-color($custom-palette, "secondary", 500),
+$custom-theme:grid-theme(
+    $header-background:color($custom-palette, "primary", 500),
+    $header-text-color:color($custom-palette, "secondary", 500),
     $header-border-width: 1px,
     $header-border-style: solid,
-    $header-border-color: igx-color($custom-palette, "grays", 200)
+    $header-border-color:color($custom-palette, "grays", 200)
 );
 ```
 
@@ -353,7 +353,7 @@ $my-custom-schema: extend($light-schema,
 );
 
 // Defining our custom theme with the custom schema
-$custom-theme: igx-grid-theme(
+$custom-theme:grid-theme(
   $palette: $custom-palette,
   $schema: $my-custom-schema
 );

@@ -201,7 +201,7 @@ IgxHierarchicalGrid の子グリッドの実装方法および DI スコープ�
 最も簡単な方法で [`igx-paginator-theme`]({environment:sassApiUrl}/index.html#function-igx-paginator-theme) を拡張し `$text-color`、`$background-color` および `$border-color` パラメータを受け入れる新しいテーマを作成します。
 
 ```scss
-$dark-paginator: igx-paginator-theme(
+$dark-paginator:paginator-theme(
     $text-color: #F4D45C,
     $background-color: #575757,
     $border-color: #292826
@@ -211,7 +211,7 @@ $dark-paginator: igx-paginator-theme(
 `igx-paginator-theme` はページング コンテナーの色の制御のみですが、ポケットベル UI のボタンには影響しません。これらのボタンにスタイル設定するために、新しいボタン テーマを作成しましょう。
 
 ```scss
-$dark-button: igx-button-theme(
+$dark-button:button-theme(
     $icon-color: #FFCD0F,
     $icon-hover-color: #292826,
     $icon-hover-background: #FFCD0F,
@@ -226,9 +226,9 @@ $dark-button: igx-button-theme(
 最後にそれぞれのテーマを持つコンポーネント ミックスインを**含める**ことです。
 
 ```scss
-@include igx-grid-paginator($dark-grid-paginator);
+@include grid-paginator($dark-grid-paginator);
 .igx-grid-paginator__pager {
-    @include igx-button($dark-button);
+    @include button($dark-button);
 }
 ```
 
@@ -241,9 +241,9 @@ $dark-button: igx-button-theme(
 ```scss
 :host {
     ::ng-deep {
-        @include igx-paginator($dark-paginator);
+        @include paginator($dark-paginator);
         .igx-paginator__pager {
-            @include igx-button($dark-button);
+            @include button($dark-button);
         }
     }
 }
@@ -259,27 +259,27 @@ $dark-button: igx-button-theme(
 $yellow-color: #F9D342;
 $black-color: #292826;
 
-$dark-palette: igx-palette($primary: $black-color, $secondary: $yellow-color);
+$dark-palette:palette($primary: $black-color, $secondary: $yellow-color);
 ```
 
 [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取り出すことができます。
 
 ```scss
-$dark-paginator: igx-paginator-theme(
+$dark-paginator:paginator-theme(
     $palette: $dark-palette,
-    $text-color: igx-color($dark-palette, "secondary", 400),
-    $background-color: igx-color($dark-palette, "primary", 200),
-    $border-color:  igx-color($dark-palette, "primary", 500)
+    $text-color:color($dark-palette, "secondary", 400),
+    $background-color:color($dark-palette, "primary", 200),
+    $border-color: color($dark-palette, "primary", 500)
 );
 
-$dark-button: igx-button-theme(
+$dark-button:button-theme(
     $palette: $dark-palette,
-    $icon-color: igx-color($dark-palette, "secondary", 700),
-    $icon-hover-color: igx-color($dark-palette, "primary", 500),
-    $icon-hover-background: igx-color($dark-palette, "secondary", 500),
-    $icon-focus-color: igx-color($dark-palette, "primary", 500),
-    $icon-focus-background: igx-color($dark-palette, "secondary", 500),
-    $disabled-color: igx-color($dark-palette, "primary", 700)
+    $icon-color:color($dark-palette, "secondary", 700),
+    $icon-hover-color:color($dark-palette, "primary", 500),
+    $icon-hover-background:color($dark-palette, "secondary", 500),
+    $icon-focus-color:color($dark-palette, "primary", 500),
+    $icon-focus-background:color($dark-palette, "secondary", 500),
+    $disabled-color:color($dark-palette, "primary", 700)
 );
 ```
 
@@ -297,13 +297,13 @@ $dark-button: igx-button-theme(
 $dark-paginator-schema: extend($_dark-pagination,
         (
             text-color:(
-                igx-color: ("secondary", 400)
+               color: ("secondary", 400)
             ),
             background-color:(
-                igx-color: ("primary", 200)
+               color: ("primary", 200)
             ),
             border-color:(
-                igx-color:( "primary", 500)
+               color:( "primary", 500)
             )
         )
 );
@@ -311,22 +311,22 @@ $dark-paginator-schema: extend($_dark-pagination,
 $dark-button-schema: extend($_dark-button,
         (
             icon-color:(
-                igx-color:("secondary", 700)
+               color:("secondary", 700)
             ),
             icon-hover-color:(
-                igx-color:("primary", 500)
+               color:("primary", 500)
             ),
             icon-hover-background:(
-                igx-color:("secondary", 500)
+               color:("secondary", 500)
             ),
             icon-focus-color:(
-                igx-color:("primary", 500)
+               color:("primary", 500)
             ),
             icon-focus-background:(
-                igx-color:("secondary", 500)
+               color:("secondary", 500)
             ),
             disabled-color:(
-                igx-color:("primary", 700)
+               color:("primary", 700)
             )
         )
 );
@@ -341,14 +341,14 @@ $custom-dark-schema: extend($dark-schema,(
     igx-button: $dark-button-schema
 ));
 
-// Defining igx-paginator-theme with the global dark schema
-$dark-paginator: igx-paginator-theme(
+// Definingpaginator-theme with the global dark schema
+$dark-paginator:paginator-theme(
   $palette: $dark-palette,
   $schema: $custom-dark-schema
 );
 
 // Defining button-theme with the global dark schema
-$dark-button: igx-button-theme(
+$dark-button:button-theme(
   $palette: $dark-palette,
   $schema: $custom-dark-schema
 );

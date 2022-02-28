@@ -110,7 +110,7 @@ API 操作の詳細については、[`API リファレンス`](#api-references)
 
 @@if (igxName === 'IgxTreeGrid') {
 ```scss
-$custom-grid-theme: igx-grid-theme(
+$custom-grid-theme:grid-theme(
     $row-selected-background: #011627,
     $row-selected-text-color: #ECAA53,
     $row-selected-hover-background: #011627,
@@ -123,7 +123,7 @@ $custom-grid-theme: igx-grid-theme(
 }
 @@if (igxName !== 'IgxTreeGrid') {
 ```scss
-$custom-grid-theme: igx-grid-theme(
+$custom-grid-theme:grid-theme(
     $row-selected-background: #011627,
     $row-selected-text-color: #ECAA53,
     $row-selected-hover-background: #011627,
@@ -144,7 +144,7 @@ $custom-grid-theme: igx-grid-theme(
 最後にカスタム `igx-grid` テーマを含めます。
 
 ```scss
-@include igx-css-vars($custom-grid-theme)
+@include css-vars($custom-grid-theme)
 ```
 
 ### 基本テーマのオーバーライド
@@ -156,7 +156,7 @@ Internet Explorer 11 のコンポーネントをスタイル設定するには�
 ```scss
 :host {
     ::ng-deep {
-        @include igx-grid($custom-column-selection-theme);
+        @include grid($custom-column-selection-theme);
     }
 }
 ```

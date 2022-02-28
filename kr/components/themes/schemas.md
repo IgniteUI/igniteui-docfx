@@ -18,19 +18,19 @@ To make it easier to understand, lets take a look at the default schema the avat
 ```scss
 $_light-avatar: (
     icon-background: (
-        igx-color: ('grays', 400)
+       color: ('grays', 400)
     ),
 
     icon-color: (
-        igx-color: ('grays', 800)
+       color: ('grays', 800)
     ),
 
     initials-background: (
-        igx-color: ('grays', 400)
+       color: ('grays', 400)
     ),
 
     initials-color: (
-        igx-color: ('grays', 800)
+       color: ('grays', 800)
     ),
 
     image-background: transparent
@@ -50,13 +50,13 @@ Let's see how the schema will change when we make this addition:
 ```scss
 $_light-avatar: (
     icon-background: (
-        igx-color: ('grays', 400),
+       color: ('grays', 400),
         hexrgba: #fff
     ),
     ...
 );
 ```
-The result of the igx-color function call will be automatically passed as the first argument to the `hexrgba` function. Since the `hexrgba` accepts a second argument for the background color, we provide it as the value of the `hexrgba` key in the example above.
+The result of thecolor function call will be automatically passed as the first argument to the `hexrgba` function. Since the `hexrgba` accepts a second argument for the background color, we provide it as the value of the `hexrgba` key in the example above.
 
 <div class="divider"></div>
 
@@ -95,7 +95,7 @@ $my-light-schema: extend($light-schema, (
 Now we can pass all that to a global theme:
 
 ```scss
-@include igx-theme(
+@include theme(
     $schema: $my-light-schema,
     $palette: $default-palette
 );
@@ -108,7 +108,7 @@ Some component schemas, like the button schema, have property definitions for ro
 Finally, let's see how a component theme can use the schema we created above.
 
 ```scss
-$my-avatar-theme: igx-avatar-theme(
+$my-avatar-theme:avatar-theme(
     $schema: $my-light-schema
 );
 ```

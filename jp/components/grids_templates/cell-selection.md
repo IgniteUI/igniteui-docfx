@@ -245,8 +245,8 @@ expectedData = [
 
 完了後、[`igx-contrast-color`]({environment:sassApiUrl}/index.html#function-igx-contrast-color) と [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用できます。これらの関数を使用して、選択範囲に使用する色を定義します。
 ```scss
-    $text-color: igx-contrast-color($default-palette, 'primary', 900);
-    $background-color: igx-color($default-palette, "primary", 900);
+    $text-color:contrast-color($default-palette, 'primary', 900);
+    $background-color:color($default-palette, "primary", 900);
     $border-yellow: #f2c43c;
 ```
 
@@ -255,7 +255,7 @@ expectedData = [
 次に、`text-color`、`background-color`、`border-yellow` 変数をそれぞれ `$cell-selected-text-color`、`$cell-selected-background`、`$cell-active-border-color` として渡して、[`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) を拡張する新しいテーマを作成します。
 
 ```scss
-$custom-grid-theme: igx-grid-theme(
+$custom-grid-theme:grid-theme(
     $cell-selected-text-color: $text-color,
     $cell-active-border-color: $border-yellow,
     $cell-selected-background: $background-color
@@ -267,7 +267,7 @@ $custom-grid-theme: igx-grid-theme(
 次にコンポーネントのスタイルにミックスインを含め (アプリ スタイルにすることも可能)、@@igSelector がデフォルトのテーマの代わりに新しく作成されたテーマを使用するようになります。
 
 ```scss
-    @include igx-grid($custom-grid-theme);
+    @include grid($custom-grid-theme);
 ```
 
  >[!NOTE]
@@ -277,7 +277,7 @@ $custom-grid-theme: igx-grid-theme(
  ```scss
     :host {
         ::ng-deep {
-            @include igx-grid($custom-grid-theme);
+            @include grid($custom-grid-theme);
         }
     }
 ```

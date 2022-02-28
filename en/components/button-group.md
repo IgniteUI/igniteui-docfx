@@ -243,7 +243,7 @@ To get started with styling the button group, we need to import the `index` file
 Following the simplest approach, we create a new theme that extends the [`igx-button-group-theme`]({environment:sassApiUrl}/index.html#function-igx-button-group-theme) and accepts some of the parameters that style the button group's items in their different states.
 
 ```scss
-$custom-button-group: igx-button-group-theme(
+$custom-button-group:button-group-theme(
     $item-text-color: #fdfdfd,
     $item-background: #2f4d6a,
     $item-hover-text-color: #fdfdfd,
@@ -263,7 +263,7 @@ As seen, the `igx-button-group-theme` exposes some useful parameters for basic s
 The last step is to include the component's theme.
 
 ```scss
-@include igx-css-vars($custom-button-group);
+@include css-vars($custom-button-group);
 ```
 
 ### Using Theme Overrides
@@ -275,7 +275,7 @@ If the component is using the [`Emulated`](themes/sass/component-themes.md#view-
 ```scss
 :host {
     ::ng-deep {
-        @include igx-button-group($custom-button-group);
+        @include button-group($custom-button-group);
     }
 }
 ```

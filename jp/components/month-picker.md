@@ -159,7 +159,7 @@ Month Picker のスタイル設定を始めるには、すべてのテーマ関�
 Month Picker はカレンダーのテーマを使用するため、[`igx-calendar-theme`]({environment:sassApiUrl}/index.html#function-igx-calendar-theme) を拡張する新しいテーマを作成し、そのパラメーターを使用して Month Picker の項目をスタイル設定します。
 
 ```scss
-$my-calendar-theme: igx-calendar-theme(
+$my-calendar-theme:calendar-theme(
   $border-radius: 15px,
   $content-background: #011627,
   $picker-background-color: #011627,
@@ -183,7 +183,7 @@ $my-calendar-theme: igx-calendar-theme(
 `$legacy-support` が `true` に設定されている場合、**コンポーネントのテーマ**を以下のように含めます。
 
 ```scss
- @include igx-calendar($my-calendar-theme);
+ @include calendar($my-calendar-theme);
 ```
 >[!NOTE]
 >コンポーネントが [`Emulated`](./themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
@@ -191,7 +191,7 @@ $my-calendar-theme: igx-calendar-theme(
 ```scss
 :host {
      ::ng-deep {
-        @include igx-calendar($my-calendar-theme);
+        @include calendar($my-calendar-theme);
     }
 }
 ```
@@ -201,7 +201,7 @@ $my-calendar-theme: igx-calendar-theme(
 `$legacy-support` が `false` (デフォルト) に設定されている場合、**css 変数** を以下のように含めます。
 
 ```scss
-@include igx-css-vars($my-calendar-theme);
+@include css-vars($my-calendar-theme);
 ```
 
 >[!NOTE]
@@ -209,7 +209,7 @@ $my-calendar-theme: igx-calendar-theme(
 
 ```scss
 :host {
-    @include igx-css-vars($my-calendar-theme);
+    @include css-vars($my-calendar-theme);
 }
 ```
 

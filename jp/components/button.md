@@ -236,7 +236,7 @@ public selectDensity(event) {
 テーマを作成する必要があります:
 
 ```scss
-$custom-button-theme: igx-button-theme(
+$custom-button-theme:button-theme(
     $foreground: #fdfdfd,
     $hover-foreground: #fdfdfd,
     $focus-foreground: #fdfdfd,
@@ -255,7 +255,7 @@ $custom-button-theme: igx-button-theme(
 
 ```scss
 .my-raised-btn {
-    @include igx-css-vars($custom-button-theme);
+    @include css-vars($custom-button-theme);
 }
 ```
 
@@ -269,7 +269,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 :host {
      ::ng-deep {
         .my-raised-btn {
-            @include igx-button($custom-button-theme);
+            @include button($custom-button-theme);
         }
     }
 }

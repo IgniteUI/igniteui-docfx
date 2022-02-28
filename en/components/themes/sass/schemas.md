@@ -21,11 +21,11 @@ $_light-avatar: extend(
     $_square-shape-avatar,
     (
         background: (
-            igx-color: ('grays', 400)
+           color: ('grays', 400)
         ),
 
         color: (
-            igx-color: ('grays', 800)
+           color: ('grays', 800)
         ),
     )
 );
@@ -44,7 +44,7 @@ Let's see how the schema will change when we make this addition:
 ```scss
 $_light-avatar: (
     icon-background: (
-        igx-color: ('grays', 400),
+       color: ('grays', 400),
         to-opaque: #fff
     ),
     ...
@@ -91,7 +91,7 @@ Now we can pass all that to the global theme mixin:
 
 ```scss
 // styles.scss
-@include igx-theme(
+@include theme(
     $schema: $my-light-schema,
     $palette: $default-palette
 );
@@ -104,7 +104,7 @@ Some component schemas, like the button schema, have property definitions for ro
 Finally, let's see how individual component themes can use the schema we created above.
 
 ```scss
-$my-avatar-theme: igx-avatar-theme(
+$my-avatar-theme:avatar-theme(
     $schema: $my-avatar-schema
 );
 ```

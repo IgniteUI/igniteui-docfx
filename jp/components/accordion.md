@@ -240,7 +240,7 @@ Angular Material Accordion のキーボード ナビゲーションは、さま�
 
 [igx-expansion-panel-theme]({environment:sassApiUrl}/index.html#function-igx-expansion-panel-theme) を拡張する新しいテーマを作成し、`$expanded-margin` パラメーターを受け取ります。 
 ```scss
-$custom-panel-theme: igx-expansion-panel-theme(
+$custom-panel-theme:expansion-panel-theme(
     $expanded-margin: 0px
 );
 ```
@@ -249,7 +249,7 @@ $custom-panel-theme: igx-expansion-panel-theme(
 最後にコンポーネントのテーマを含めます。
 ```scss
 :host {
-    @include igx-css-vars($custom-panel-theme);
+    @include css-vars($custom-panel-theme);
 }
 ```
 
@@ -261,7 +261,7 @@ Internet Explorer 11 のコンポーネントをスタイル設定するには�
 ```scss
 :host {
     ::ng-deep {
-        @include igx-expansion-panel($custom-panel-theme);    
+        @include expansion-panel($custom-panel-theme);    
     }
 }
 ```

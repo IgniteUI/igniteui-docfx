@@ -451,7 +451,7 @@ export class MyHGridEventsComponent {
 $white: #fff;
 $blue: #4567bb;
 
-$color-palette: igx-palette($primary: $white, $secondary: $blue);
+$color-palette:palette($primary: $white, $secondary: $blue);
 ```
 
 ### テーマの定義
@@ -459,11 +459,11 @@ $color-palette: igx-palette($primary: $white, $secondary: $blue);
 これで、パレットを使用してテーマを定義できます。セルは [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) によってスタイル設定されているため、それを使用して @@igxName のテーマを生成できます。
 
 ```scss
-$custom-grid-theme: igx-grid-theme(
+$custom-grid-theme:grid-theme(
     $cell-editing-background: $blue,
     $cell-edited-value-color: $white,
     $cell-active-border-color: $white,
-    $edit-mode-color: igx-color($color-palette, "secondary", 200)
+    $edit-mode-color:color($color-palette, "secondary", 200)
 );
 ```
 
@@ -472,7 +472,7 @@ $custom-grid-theme: igx-grid-theme(
 テーマを適用する最も簡単な方法は、グローバル スタイル ファイルに `sass` `@include` ステートメントを使用することです。
 
 ```scss
-@include igx-grid($custom-grid-theme);
+@include grid($custom-grid-theme);
 ```
 
 これにより、テーマはアプリケーションの**すべて**のグリッドに適用されます。このカスタム スタイルを特定のコンポーネントにのみ適用する場合は、テーマのスコープを設定する必要があります。
@@ -491,7 +491,7 @@ $custom-grid-theme: igx-grid-theme(
 ```scss
 :host {
     ::ng-deep {
-            @include igx-grid($custom-grid-theme);
+            @include grid($custom-grid-theme);
         }
     }
 }

@@ -331,7 +331,7 @@ Navigation drawer のスタイル設定を始めるには、すべてのテー�
 最も簡単な方法は、[`igx-navdrawer-theme`]({environment:sassApiUrl}/index.html#function-igx-navdrawer-theme) を拡張する新しいテーマを作成し、navdrawer の項目をスタイル設定するいくつかのパラメーターを受け取る方法です。
 
 ```scss
-$custom-theme: igx-navdrawer-theme(
+$custom-theme:navdrawer-theme(
     $background: #2d313a,
     $item-active-background: #ecc256,
     $item-header-text-color: #ecc256
@@ -348,7 +348,7 @@ $custom-theme: igx-navdrawer-theme(
 `$legacy-support` が `true` に設定されている場合、**コンポーネントのテーマ**を以下のように含めます。
 
 ```scss
- @include igx-navdrawer($custom-theme);
+ @include navdrawer($custom-theme);
 ```
 >[!NOTE]
 >コンポーネントが [`Emulated`](./themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
@@ -356,7 +356,7 @@ $custom-theme: igx-navdrawer-theme(
 ```scss
 :host {
      ::ng-deep {
-        @include igx-navdrawer($custom-theme);
+        @include navdrawer($custom-theme);
     }
 }
 ```
@@ -366,7 +366,7 @@ $custom-theme: igx-navdrawer-theme(
 `$legacy-support` が `false` (デフォルト) に設定されている場合、**css 変数** を以下のように含めます。
 
 ```scss
-@include igx-css-vars($custom-theme);
+@include css-vars($custom-theme);
 ```
 
 >[!NOTE]
@@ -374,7 +374,7 @@ $custom-theme: igx-navdrawer-theme(
 
 ```scss
 :host {
-    @include igx-css-vars($custom-theme);
+    @include css-vars($custom-theme);
 }
 ```
 

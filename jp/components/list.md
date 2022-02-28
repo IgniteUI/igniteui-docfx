@@ -521,11 +521,11 @@ export class ContactListComponent {
 
 ```scss
 :host ::ng-deep {
-    $my-list-theme: igx-list-theme(
+    $my-list-theme:list-theme(
         $background: #0568ab
     );
 
-    @include igx-list($my-list-theme);
+    @include list($my-list-theme);
 }
 ```
 以下は上記コードの結果です。

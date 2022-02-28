@@ -6,8 +6,8 @@ The Material theme is the default theme in Ignite UI for Angular. To use it incl
 
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-@include igx-core();
-@include igx-theme($default-palette);
+@include core();
+@include theme($default-palette);
 ```
 
 ## Material Light Theme
@@ -16,8 +16,8 @@ The Material theme is the default theme in Ignite UI for Angular. To use it incl
 
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-@include igx-core();
-@include igx-light-theme($default-palette);
+@include core();
+@include light-theme($default-palette);
 ```
 
 ## Material Dark Theme
@@ -26,8 +26,8 @@ The Material theme is the default theme in Ignite UI for Angular. To use it incl
 
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-@include igx-core();
-@include igx-dark-theme($default-palette);
+@include core();
+@include dark-theme($default-palette);
 ```
 
 Both `igx-light-theme` and `igx-dark-theme` mixins includes the `igx-theme` mixin.
@@ -38,12 +38,12 @@ We create those mixins just for your convenience, otherwise, if you want to use 
 
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-@include igx-core();
+@include core();
 
 $primary-color: #2ab759;
 $secondary-color: #f96a88;
 
-$my-color-palette: igx-palette(
+$my-color-palette:palette(
     // IMPORTANT, the primary and secondary colors are required
     $primary: $primary-color,
     $secondary: $secondary-color,
@@ -53,7 +53,7 @@ $my-color-palette: igx-palette(
     // Since all individual components use the $default-palette by default, if you don't specify the rest of the colors like $info and $error they will use their default values from the $default-palette
 );
 
-@include igx-theme($my-color-palette, $schema: $dark-schema);
+@include theme($my-color-palette, $schema: $dark-schema);
 ```
 
 ## API Overview

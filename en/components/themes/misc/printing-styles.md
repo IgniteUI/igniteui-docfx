@@ -30,7 +30,7 @@ You can do that in your theme `SCSS` file:
 igx-core($print-layout: false)
 
 // Add the theme and the palette.
-@include igx-theme($default-palette);
+@include theme($default-palette);
 ```
 
 Note that even if you have a colorful grid it will appear black and white in order to be as clean and simple as possible and to reduce the use of ink. All the clickable elements in the grid will be omitted since they don't make sense on a paper

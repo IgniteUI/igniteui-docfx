@@ -432,7 +432,7 @@ public type = SliderType.RANGE;
 // In app-slider-styling.component.scss
 
 // Create slider theme.
-$custom-slider-theme: igx-slider-theme(
+$custom-slider-theme:slider-theme(
     $track-color: #ff7400,
     $track-hover-color: #ff7400,
 
@@ -457,7 +457,7 @@ $custom-slider-theme: igx-slider-theme(
 // Pass our custom-slider-theme to `igx-css-vars` mixin.
 // The `:host` here makes sure that all the theming will affect only this slider component.
 :host {
-  @include igx-css-vars($custom-slider-theme);
+  @include css-vars($custom-slider-theme);
 }
 ```
 

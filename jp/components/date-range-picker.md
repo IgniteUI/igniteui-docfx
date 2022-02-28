@@ -343,19 +343,19 @@ Date Range Picker コンポーネントは `igx-date-range-picker-theme` を公�
 $purple: #9E379F;
 $blue: #61AEDB;
 
-$custom-palette: igx-palette($primary: $blue, $secondary: $purple);
+$custom-palette:palette($primary: $blue, $secondary: $purple);
 
-$today-text: igx-color($custom-palette, "primary", 500);
-$text-color: igx-color($custom-palette, "secondary", 200);
-$color-focused: igx-color($custom-palette, "secondary", 500);
+$today-text:color($custom-palette, "primary", 500);
+$text-color:color($custom-palette, "secondary", 200);
+$color-focused:color($custom-palette, "secondary", 500);
 
 // DATE-RANGE
-$custom-date-range-theme: igx-date-range-picker-theme(
+$custom-date-range-theme:date-range-picker-theme(
     $label-color: $color-focused
 );
 
 // INPUT GROUP
-$custom-input-group-theme: igx-input-group-theme(
+$custom-input-group-theme:input-group-theme(
   $palette: $custom-palette,
   $filled-text-color: $text-color,
   $idle-text-color: $text-color,
@@ -365,7 +365,7 @@ $custom-input-group-theme: igx-input-group-theme(
 );
 
 // CALENDAR
-$custom-calendar-theme: igx-calendar-theme(
+$custom-calendar-theme:calendar-theme(
     $palette: $custom-palette,
     $date-current-text-color: $today-text,
     $border-radius: 0.5,
@@ -377,9 +377,9 @@ $custom-calendar-theme: igx-calendar-theme(
 最後にカスタム テーマを渡します。
 
 ```scss
-@include igx-css-vars($custom-date-range-theme);
-@include igx-css-vars($custom-input-group-theme);
-@include igx-css-vars($custom-calendar-theme);
+@include css-vars($custom-date-range-theme);
+@include css-vars($custom-input-group-theme);
+@include css-vars($custom-calendar-theme);
 ```
 
 ### テーマ オーバーライドの使用
@@ -391,9 +391,9 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
  ```scss
 :host {
     ::ng-deep {
-        @include igx-date-range-picker($custom-date-range-theme);
-        @include igx-input-group($custom-input-group-theme);
-        @include igx-calendar($custom-calendar-theme);
+        @include date-range-picker($custom-date-range-theme);
+        @include input-group($custom-input-group-theme);
+        @include calendar($custom-calendar-theme);
     }
 }
 ```

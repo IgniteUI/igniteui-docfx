@@ -32,11 +32,11 @@ Let's see how we can change the default values for the buttons from the example 
 
 Using the theme mixin:
 ```scss
-$my-button-theme: igx-button-theme(
+$my-button-theme:button-theme(
     $border-radius: .5 .2 .5 .2, // resolves to 10px 4px 10px 4px
 );
 
-@include igx-button($my-button-theme);
+@include button($my-button-theme);
 ```
 
 Using a component schema:
@@ -55,7 +55,7 @@ $my-light-schema: extend(
     )
 );
 
-@include igx-theme(
+@include theme(
     $palette: $light-material-palette,
     $schema: $my-light-schema
 );

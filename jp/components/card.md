@@ -274,7 +274,7 @@ Card のスタイル設定を始めるには、すべてのテーマ関数とコ
 最も単純なアプローチに従って、[`igx-card-theme`]({environment:sassApiUrl}/index.html#function-igx-card-theme) を拡張する新しいテーマを作成し、カードのアイテムをスタイル設定するいくつかのパラメーターを受け取ります。
 
 ```scss
-$colorful-card: igx-card-theme(
+$colorful-card:card-theme(
     $background: #011627,
     $header-text-color: #FEFEFE,
     $subtitle-text-color: #ECAA53,
@@ -292,7 +292,7 @@ $colorful-card: igx-card-theme(
 `$legacy-support` が `true` に設定されている場合、**コンポーネントのテーマ**を以下のように含めます。
 
 ```scss
- @include igx-card($colorful-card);
+ @include card($colorful-card);
 ```
 >[!NOTE]
 >コンポーネントが [`Emulated`](./themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
@@ -300,7 +300,7 @@ $colorful-card: igx-card-theme(
 ```scss
 :host {
      ::ng-deep {
-        @include igx-card($colorful-card);
+        @include card($colorful-card);
     }
 }
 ```
@@ -310,7 +310,7 @@ $colorful-card: igx-card-theme(
 `$legacy-support` が `false` (デフォルト) に設定されている場合、**css 変数** を以下のように含めます。
 
 ```scss
-@include igx-css-vars($colorful-card);
+@include css-vars($colorful-card);
 ```
 
 >[!NOTE]
@@ -318,7 +318,7 @@ $colorful-card: igx-card-theme(
 
 ```scss
 :host {
-    @include igx-css-vars($colorful-card);
+    @include css-vars($colorful-card);
 }
 ```
 

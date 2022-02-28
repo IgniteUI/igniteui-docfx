@@ -280,7 +280,7 @@ private find(increment: number) {
 最も簡単な方法は、[`igx-highlight-theme`]({environment:sassApiUrl}/index.html#function-igx-highlight-theme) を拡張する新しいテーマを作成し、`$resting-background`、`$resting-color`、`$active-background` と `$active-color`パラメーターを受け取る方法です。
 
 ```scss
-$dark-highlight: igx-highlight-theme(
+$dark-highlight:highlight-theme(
     $resting-background: #FFCD0F,
     $resting-color: #292826,
     $active-background: #292826,
@@ -294,7 +294,7 @@ $dark-highlight: igx-highlight-theme(
 
 `$legacy-support` が `true` に設定されている場合、コンポーネントのテーマを以下のように含めます。
 ```scss
-@include igx-highlight($dark-highlight);
+@include highlight($dark-highlight);
 ```
 
 >[!NOTE]
@@ -303,7 +303,7 @@ $dark-highlight: igx-highlight-theme(
 ```scss
 :host {
     ::ng-deep {
-        @include igx-highlight($dark-highlight);
+        @include highlight($dark-highlight);
     }
 }
 ```
@@ -311,7 +311,7 @@ $dark-highlight: igx-highlight-theme(
 `$legacy-support` が `false` (デフォルト) に設定されている場合、**css 変数** を以下のように含めます。
 
 ```scss
-@include igx-css-vars($dark-highlight);
+@include css-vars($dark-highlight);
 ```
 
 >[!NOTE]
@@ -347,7 +347,7 @@ $dark-highlight: igx-highlight-theme(
 ```scss
 :host {
     ::ng-deep {
-       @include igx-highlight($dark-highlight);
+       @include highlight($dark-highlight);
         
        // cssClass
        .custom-highlight {

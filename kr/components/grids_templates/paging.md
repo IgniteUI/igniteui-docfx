@@ -464,14 +464,14 @@ public changeTemplate() {
 ```css
 @import '~igniteui-angular/lib/core/styles/themes/index';
 
-@include igx-core();
-@include igx-theme($default-palette, $legacy-support: true);
+@include core();
+@include theme($default-palette, $legacy-support: true);
 
 
-$custom-paginator-theme: igx-grid-paginator-theme(
+$custom-paginator-theme:grid-paginator-theme(
     $text-color: #09f
 );
-$custom-button-theme: igx-button-theme(
+$custom-button-theme:button-theme(
     $icon-color: #09f,
     $icon-hover-color: #dadada,
     $icon-focus-color:rgb(0, 119, 255),
@@ -479,8 +479,8 @@ $custom-button-theme: igx-button-theme(
 );
 
 .customPager {
-    @include igx-grid-paginator($custom-paginator-theme);
-    @include igx-button($custom-button-theme);
+    @include grid-paginator($custom-paginator-theme);
+    @include button($custom-button-theme);
 }
 ```
 

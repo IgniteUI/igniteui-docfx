@@ -407,7 +407,7 @@ To begin the customization of the row pinning feature, you need to import the `i
 Next, create a new theme, that extends the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) and accepts the parameters, required to customize the row pinning feature as desired.
 
 ```scss
-$custom-grid-theme: igx-grid-theme(
+$custom-grid-theme:grid-theme(
     /* Pinning properties that affect styling */
     $pinned-border-width: 5px,
     $pinned-border-style: double,
@@ -422,7 +422,7 @@ $custom-grid-theme: igx-grid-theme(
 The last step is to pass the custom grid theme:
 
 ```scss
-@include igx-css-vars($custom-grid-theme);
+@include css-vars($custom-grid-theme);
 ```
 
 #### Using mixins
@@ -435,7 +435,7 @@ If the component is using an [`Emulated`](themes/sass/component-themes.md#view-e
 :host {
     ::ng-deep {
         // Pass the custom grid theme to the `igx-grid` mixin
-        @include igx-grid($custom-grid-theme);
+        @include grid($custom-grid-theme);
     }
 }
 ```

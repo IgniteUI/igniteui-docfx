@@ -112,7 +112,7 @@ To customize the Action Strip, you first need to import the `index` file, where 
 ``` 
 Next, we have to create a new theme that extends the `igx-action-strip-theme` and pass the parameters which we'd like to change:
 ```scss
-$custom-strip: igx-action-strip-theme(
+$custom-strip:action-strip-theme(
     $background: rgba(150, 133, 143, 0.4),
     $actions-background: rgba(109, 121, 147, 0.6),
     $icon-color: null,
@@ -125,12 +125,12 @@ The last step is to include the newly created component theme in our application
 
 When `$legacy-support` is set to `false`(default), include the component css variables like this:
 ```scss
-@include igx-css-vars($custom-strip);
+@include css-vars($custom-strip);
 ```
 
 When `$legacy-support` is set to `true`, include the component theme like this:
 ```scss
-@include igx-action-strip($custom-strip);
+@include action-strip($custom-strip);
 ```
 
 <code-view style="height: 400px;" 

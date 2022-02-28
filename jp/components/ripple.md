@@ -115,7 +115,7 @@ export class AppModule {}
 次に、[`igx-ripple-theme`]({environment:sassApiUrl}/index.html#function-igx-ripple-theme) を拡張し、必要に応じてリップルをカスタマイズするために必要なパラメーターを受け入れる新しいテーマを作成します。
 
 ```scss
-$custom-ripple-theme: igx-ripple-theme(
+$custom-ripple-theme:ripple-theme(
   $color: #217346
 );
 ```  
@@ -125,7 +125,7 @@ $custom-ripple-theme: igx-ripple-theme(
 次に Ripple のカスタム テーマを渡します。
 
 ```scss
-@include igx-css-vars($custom-ripple-theme);
+@include css-vars($custom-ripple-theme);
 ```
 
 ### コンポーネント テーマ オーバーライドの使用
@@ -138,7 +138,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 :host {
     ::ng-deep {
         // Custom ripple theme を `igx-ripple` ミックスインに渡します
-        @include igx-ripple($custom-ripple-theme);
+        @include ripple($custom-ripple-theme);
     }
 }
 ```

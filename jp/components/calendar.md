@@ -385,7 +385,7 @@ Tab キーを使用してページを移動する場合、*igxCalendarComponent*
 最も簡単な方法は、[`igx-calendar-theme`]({environment:sassApiUrl}/index.html#function-igx-calendar-theme) を拡張する新しいテーマを作成し、デフォルト テーマのいくつかのパラメーターを受け取る方法です。
 
 ```scss
-$custom-calendar-theme: igx-calendar-theme(
+$custom-calendar-theme:calendar-theme(
   $header-background: #345779,
   $content-background: #fdfdfd,
   $header-text-color: #ffffff,
@@ -408,7 +408,7 @@ $custom-calendar-theme: igx-calendar-theme(
 最後に Calendar のカスタム テーマを設定します。
 
 ```scss
- @include igx-css-vars($custom-calendar-theme);
+ @include css-vars($custom-calendar-theme);
 ```
 
 ### テーマ オーバーライドの使用
@@ -420,7 +420,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
  ```scss
 :host {
   ::ng-deep {
-    @include igx-calendar($custom-calendar-theme);
+    @include calendar($custom-calendar-theme);
   }
 }
 ```

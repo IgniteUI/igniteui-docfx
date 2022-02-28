@@ -22,7 +22,7 @@ $color-1: rgb(153, 191, 170); // Umbra
 $color-2: rgb(92, 134, 141); // Penumbra
 $color-3: rgb(92, 61, 70); // Ambient
 
-$my-elevations: igx-elevations(
+$my-elevations:elevations(
     $color-1,
     $color-2,
     $color-3
@@ -37,10 +37,10 @@ If you want to retrieve the elevation from the default `$igx-elevations` map, yo
 
 ```scss
 // Returns elevation 1 shadows from $igx-elevations
-$elevation-1: igx-elevation($elevation: '1');
+$elevation-1:elevation($elevation: '1');
 
 // Returns elevation 1 shadows from $my-elevations
-$my-elevation-1: igx-elevation(
+$my-elevation-1:elevation(
     $elevations: $my-elevations, 
     $elevation: 1
 );
@@ -53,7 +53,7 @@ Several theme mixins allow you to pass an elevations map. Most notably, the `igx
 Force all component themes to use your custom elevations:
 
 ```scss
-@include igx-theme(
+@include theme(
     //...
     $elevations: $my-elevations
 );
@@ -62,7 +62,7 @@ Force all component themes to use your custom elevations:
 In addition to this, you can tell the theme to ignore/not use elevations completely:
 
 ```scss
-@include igx-theme(
+@include theme(
     //...
     $elevations: $my-elevations,
     $elevation: false // disables all elevations
@@ -74,7 +74,7 @@ Some component themes also accept the `$elevations` parameter to allow you to pa
 For instance, the card component does support passing custom elevations. To find out which components accept a custom elevations map, take a look at their Sass documentation. Each component uses only specific levels from the elevations map, those too are listed in the component's Sass docs.
 
 ```scss
-@include igx-card(igx-card-theme(
+@include card(igx-card-theme(
     //...
     $elevations: $my-elevations,
 ));
@@ -83,11 +83,11 @@ For instance, the card component does support passing custom elevations. To find
 Since the `igx-elevation` function returns a list of box shadows, you can use the return value of that function to modify only certain elevations in your component themes. 
 
 ```scss
-$card-theme: igx-card-theme(
-    $resting-shadow: igx-elevation($igx-elevations, 10)
+$card-theme:card-theme(
+    $resting-shadow:elevation($igx-elevations, 10)
 );
 
-@include igx-card($card-theme);
+@include card($card-theme);
 ```
 
 This compiles to:
@@ -103,12 +103,12 @@ This compiles to:
 
 You can also pass simple box shadows without taking advantage of the `igx-elevation` function:
 ```scss
-$card-theme: igx-card-theme(
+$card-theme:card-theme(
     $resting-shadow: 0 10px 10px 10px #666
 );
 
 .my-card {
-  @include igx-card($card-theme);
+  @include card($card-theme);
 }
 ```
 

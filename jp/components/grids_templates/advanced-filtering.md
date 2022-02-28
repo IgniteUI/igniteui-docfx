@@ -197,7 +197,7 @@ ngAfterViewInit(): void {
 Excel スタイルのフィルタリング ダイアログは、`filtering-row-background` パラメーターを使用して、グリッドのテーマから背景色を取得します。背景を変更するには、カスタム テーマを作成する必要があります。
 
 ```scss
-$custom-grid: igx-grid-theme(
+$custom-grid:grid-theme(
     $filtering-row-background: #FFCD0F
 );
 ```
@@ -205,27 +205,27 @@ $custom-grid: igx-grid-theme(
 ボタン、チップ、ドロップダウン、入力など、高度なフィルタリング ダイアログ内に他のコンポーネントがあるため、それぞれに個別のテーマを作成する必要があります。
 
 ```scss
-$custom-button: igx-button-theme(
+$custom-button:button-theme(
     $disabled-color: gray,
     ...
 );
 
-$custom-button-group: igx-button-group-theme(
+$custom-button-group:button-group-theme(
     $item-background:  #292826,
     ...
 );
 
-$custom-input-group: igx-input-group-theme(
+$custom-input-group:input-group-theme(
     $box-background: #4a4a4a,
     ...
 );
 
-$custom-chip: igx-chip-theme(
+$custom-chip:chip-theme(
     $background: #FFCD0F,
     ...
 );
 
-$custom-drop-down: igx-drop-down-theme(
+$custom-drop-down:drop-down-theme(
     $background-color: #292826,
     ...
 );
@@ -236,13 +236,13 @@ $custom-drop-down: igx-drop-down-theme(
 最後の手順は、それぞれのテーマを持つコンポーネント ミックスインを**含める**ことです。また、高度なフィルタリング ダイアログ内の他の要素のスタイルを追加します。
 
 ```scss
-@include igx-grid($custom-grid);
+@include grid($custom-grid);
 igx-advanced-filtering-dialog {
-    @include igx-button($custom-button);
-    @include igx-button-group($custom-button-group);
-    @include igx-input-group($custom-input-group);
-    @include igx-chip($custom-chip);
-    @include igx-drop-down($custom-drop-down);
+    @include button($custom-button);
+    @include button-group($custom-button-group);
+    @include input-group($custom-input-group);
+    @include chip($custom-chip);
+    @include drop-down($custom-drop-down);
     .igx-filter-empty__title {
         color: #FFCD0F
     }
@@ -281,13 +281,13 @@ igx-advanced-filtering-dialog {
 ```scss
 :host {
     ::ng-deep {
-        @include igx-drop-down($custom-drop-down);
-        @include igx-grid($custom-grid);
+        @include drop-down($custom-drop-down);
+        @include grid($custom-grid);
         igx-advanced-filtering-dialog {
-            @include igx-button($custom-button);
-            @include igx-button-group($custom-button-group);
-            @include igx-input-group($custom-input-group);
-            @include igx-chip($custom-chip);
+            @include button($custom-button);
+            @include button-group($custom-button-group);
+            @include input-group($custom-input-group);
+            @include chip($custom-chip);
             .igx-input-group__input::placeholder {
                 color: gray;
             }
@@ -328,37 +328,37 @@ igx-advanced-filtering-dialog {
 ```scss
 $yellow-color: #FFCD0F;
 $black-color: #292826;
-$dark-palette: igx-palette($primary: $yellow-color, $secondary: $black-color);
+$dark-palette:palette($primary: $yellow-color, $secondary: $black-color);
 ```
 次に [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取得できます。 
 
 ```scss
-$custom-grid: igx-grid-theme(
-    $filtering-row-background: igx-color($dark-palette, "secondary", 400)
+$custom-grid:grid-theme(
+    $filtering-row-background:color($dark-palette, "secondary", 400)
 );
 
-$custom-button: igx-button-theme(
-    $disabled-color: igx-color($dark-palette, "secondary", 100),
+$custom-button:button-theme(
+    $disabled-color:color($dark-palette, "secondary", 100),
     ...
 );
 
-$custom-button-group: igx-button-group-theme(
-    $item-background:  igx-color($dark-palette, "secondary", 400),
+$custom-button-group:button-group-theme(
+    $item-background: color($dark-palette, "secondary", 400),
     ...
 );
 
-$custom-input-group: igx-input-group-theme(
-    $box-background: igx-color($dark-palette, "secondary", 200),
+$custom-input-group:input-group-theme(
+    $box-background:color($dark-palette, "secondary", 200),
     ...
 );
 
-$custom-chip: igx-chip-theme(
-    $background: igx-color($dark-palette, "primary", 400),
+$custom-chip:chip-theme(
+    $background:color($dark-palette, "primary", 400),
     ...
 );
 
-$custom-drop-down: igx-drop-down-theme(
-    $background-color: igx-color($dark-palette, "secondary", 400),
+$custom-drop-down:drop-down-theme(
+    $background-color:color($dark-palette, "secondary", 400),
     ...
 );
 ```
@@ -373,12 +373,12 @@ $custom-drop-down: igx-drop-down-theme(
 すべてのコンポーネントに提供される 2 つの定義済みスキーマのいずれかを拡張します。この場合、[`light-grid`]({environment:sassApiUrl}/index.html#variable-_light-grid)、[`light-button`]({environment:sassApiUrl}/index.html#variable-_light-button)、[`light-button-group`]({environment:sassApiUrl}/index.html#variable-_light-button-group)、[`light-chip`]({environment:sassApiUrl}/index.html#variable-_light-chip)、[`light-input-group`]({environment:sassApiUrl}/index.html#variable-_light-input-group)、[`light-drop-down`]({environment:sassApiUrl}/index.html#variable-_light-drop-down) です。
 
 ```scss
-$grid-dark-palette: igx-palette($primary: #11bd7b, $secondary: #e32057, $info: $black-color);
+$grid-dark-palette:palette($primary: #11bd7b, $secondary: #e32057, $info: $black-color);
 
 $custom-grid-schema: extend($_light-grid,
     (
         filtering-row-background:(
-            igx-color: ("info")
+           color: ("info")
         )
     )
 );
@@ -386,7 +386,7 @@ $custom-grid-schema: extend($_light-grid,
 $custom-button-schema: extend($_light-button,
     (
         disabled-color:(
-            igx-color: ("secondary", 100)
+           color: ("secondary", 100)
         ),
         ...
     )
@@ -395,7 +395,7 @@ $custom-button-schema: extend($_light-button,
 $custom-button-group-schema: extend($_light-button-group,
     (
         item-background:(
-            igx-color: ("secondary", 400)
+           color: ("secondary", 400)
         ),
         ...
     )
@@ -404,7 +404,7 @@ $custom-button-group-schema: extend($_light-button-group,
 $custom-input-group-schema: extend($_light-input-group,
     (
         box-background:(
-            igx-color: ("secondary", 200)
+           color: ("secondary", 200)
         ),
         ...
     )
@@ -413,7 +413,7 @@ $custom-input-group-schema: extend($_light-input-group,
 $custom-chip-schema: extend($_light-chip,
     (
         background:(
-            igx-color: ("primary", 400)
+           color: ("primary", 400)
         ),
         ...
     )
@@ -422,7 +422,7 @@ $custom-chip-schema: extend($_light-chip,
 $custom-drop-down-schema: extend($_light-drop-down,
     (
         background-color:(
-            igx-color: ("secondary", 400)
+           color: ("secondary", 400)
         ),
         ...
     )
@@ -441,32 +441,32 @@ $custom-light-schema: extend($light-schema,(
     igx-drop-down: $custom-drop-down-schema
 ));
 
-$custom-grid: igx-grid-theme(
+$custom-grid:grid-theme(
     $palette: $grid-dark-palette,
     $schema: $custom-light-schema
 );
 
-$custom-button: igx-button-theme(
+$custom-button:button-theme(
     $palette: $dark-palette,
     $schema: $custom-light-schema
 );
 
-$custom-button-group: igx-button-group-theme(
+$custom-button-group:button-group-theme(
     $palette: $dark-palette,
     $schema: $custom-light-schema
 );
 
-$custom-input-group: igx-input-group-theme(
+$custom-input-group:input-group-theme(
     $palette: $dark-palette,
     $schema: $custom-light-schema
 );
 
-$custom-chip: igx-chip-theme(
+$custom-chip:chip-theme(
     $palette: $dark-palette,
     $schema: $custom-light-schema
 );
 
-$custom-drop-down: igx-drop-down-theme(
+$custom-drop-down:drop-down-theme(
     $palette: $dark-palette,
     $schema: $custom-light-schema
 );

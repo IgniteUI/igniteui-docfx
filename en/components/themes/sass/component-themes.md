@@ -37,15 +37,15 @@ There are even more ways you can organize and scope your component themes. The m
 Defining an avatar theme:
 
 ```scss
-// Some place after @include igx-theme(...);
+// Some place after @include theme(...);
 
 // Change the background of the avatar to purple.
-$new-avatar-theme: igx-avatar-theme(
+$new-avatar-theme:avatar-theme(
   $background: purple,
 );
 
 // Pass the css-vars to the `igx-css-vars` mixin
-@include igx-css-vars($new-avatar-theme);
+@include css-vars($new-avatar-theme);
 ```
 
 The above code produces CSS variables for the `igx-avatar` component. These new CSS variables overwrite the default avatar rules.
@@ -55,14 +55,14 @@ For instance:
 
 ```scss
 // ...
-@include igx-css-vars($new-avatar-theme);
+@include css-vars($new-avatar-theme);
 
 // Later
-$another-avatar-theme: igx-avatar-theme(
+$another-avatar-theme:avatar-theme(
   $background: royalblue,
 );
 
-@include igx-css-vars($another-avatar-theme);
+@include css-vars($another-avatar-theme);
 ```
 
 In the above code, the de facto global theme is now the `$another-avatar-theme` as it overwrites any previously included `igx-css-vars` mixins.
@@ -81,11 +81,11 @@ As we saw in the previous example, when adding multiple themes targeting the sam
 // ...
 // CSS class selectors
 .avatar-royalblue {
-  @include igx-css-vars($avatar-royalblue-theme);
+  @include css-vars($avatar-royalblue-theme);
 }
 
 .avatar-purple {
-  @include igx-css-vars($avatar-green-theme);
+  @include css-vars($avatar-green-theme);
 }
 ```
 
@@ -141,12 +141,12 @@ And this is what our Sass stylesheet looks like:
 // !IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 
-$avatar-theme: igx-avatar-theme(
+$avatar-theme:avatar-theme(
   $background: royalblue,
 );
 
 :host {
-  @include igx-css-vars($avatar-theme);
+  @include css-vars($avatar-theme);
 }
 ```
 
@@ -180,15 +180,15 @@ The below example shows how you can style components using hard-coded values.
 // !IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 
-@include igx-core();
-@include igx-theme($palette: $default-palette, $legacy-support: true);
+@include core();
+@include theme($palette: $default-palette, $legacy-support: true);
 
 // Overwrite the default themes for igx-avatar using hard-coded values:
-$avatar-theme: igx-avatar-theme(
+$avatar-theme:avatar-theme(
   $background: royalblue,
 );
 
-@include igx-avatar($avatar-theme);
+@include avatar($avatar-theme);
 ```
 
 <div class="divider"></div>
@@ -207,12 +207,12 @@ The below sample uses the sample from the [View Encapsulation](#view-encapsulati
 // Enable legacy support first.
 // !IMPORTANT: Only applicable for versions older than Ignite UI for Angular 13.
 $igx-legacy-support: true;
-$avatar-theme: igx-avatar-theme(
+$avatar-theme:avatar-theme(
   $initials-background: royalblue,
 );
 
 :host ::ng-deep {
-  @include igx-avatar($avatar-theme);
+  @include avatar($avatar-theme);
 }
 ```
 

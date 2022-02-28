@@ -199,13 +199,13 @@ ng update @angular/cli
 - 正しいパレットとコンポーネント スキーマがカスタム コンポーネントとグローバルテーマに渡されることを確認してください。グローバル暗いテーマを作成する場合、グレー色に明るい色合いを選択してください。例:
 
 ```scss
-$my-dark-palette: igx-palette(
+$my-dark-palette:palette(
     $primary: olive, 
     $secondary: yellow, 
     $grays: #fff
 );
 
-@include igx-dark-theme($palette: $my-dark-palette);
+@include dark-theme($palette: $my-dark-palette);
 ```
 
 同様に、明るいテーマはより暗い灰色の色調と明るいカラー スキーマを必要とします。
@@ -213,12 +213,12 @@ $my-dark-palette: igx-palette(
 グローバル テーマからコンポーネント テーマを除外していないが、`igx-css-vars` ミックスインを使用してカスタム置換テーマを作成する場合、テーマが正しいパレットと対応するスキーマに渡されることを確認してください。
 
 ```scss
-$my-custom-grid: igx-grid-theme(
+$my-custom-grid:grid-theme(
     $palette: $my-dark-palette,
     $schema: $dark-schema
 );
 
-@include igx-css-vars($my-custom-grid);
+@include css-vars($my-custom-grid);
 ```
  
 * 除外されたコンポーネント テーマ:
@@ -226,18 +226,18 @@ $my-custom-grid: igx-grid-theme(
 グローバル テーマからコンポーネント テーマを除外し、カスタム置換テーマを作成した場合、コンポーネント ミックスインが含まれ、正しいコンポーネント テーマが渡されることを確認してください。
 
 ```scss
-$my-dark-palette: igx-palette(
+$my-dark-palette:palette(
     ...
     $exclude: ('igx-grid')
 );
 
-$my-custom-grid: igx-grid-theme(
+$my-custom-grid:grid-theme(
     $palette: $my-dark-palette,
     $schema: $dark-schema
 );
 
-// Ensure igx-grid is included:
-@include igx-grid($my-custom-grid);
+// Ensuregrid is included:
+@include grid($my-custom-grid);
 ```
 
 カスタム コンポーネント テーマがグローバル `styles.scss` 以外の別のコンポーネント Sass ファイルで宣言されている場合は、`igx-core` ミックスインも含まれていることを確認してください。
@@ -250,16 +250,16 @@ $my-custom-grid: igx-grid-theme(
 @use '@infragistics/igniteui-angular/theming' as *;
 
 // Include the core module mixin.
-@include igx-core();
+@include core();
 
 // Create your theme.
-$my-custom-grid: igx-grid-theme(
+$my-custom-grid:grid-theme(
     $palette: $my-dark-palette,
     $schema: $dark-schema
 );
 
 // Include your custom theme styles.
-@include igx-grid($my-custom-grid);
+@include grid($my-custom-grid);
 ```
 
 Sass Moule システムについて理解を深めるために、[Miriam Suzanne](https://css-tricks.com/author/miriam/) の[記事 (英語)](https://css-tricks.com/introducing-sass-modules/) を参照ください。
@@ -423,35 +423,35 @@ $__legacy-libsass: true;
     例えば、次の例は
 
         ```scss
-        $avatar-theme: igx-avatar-theme(
+        $avatar-theme:avatar-theme(
             $initials-background: blue,
             $initials-color: orange,
             $icon-background: blue,
             $icon-color: orange,
         );
 
-        @include igx-avatar($avatar-theme);
+        @include avatar($avatar-theme);
         ```
 
     このとおりに変換する必要があります。
 
         ```scss
-        $initials-avatar: igx-avatar-theme(
+        $initials-avatar:avatar-theme(
             $background: blue,
             $color: orange,
         );
 
-        $icon-avatar: igx-avatar-theme(
+        $icon-avatar:avatar-theme(
             $background: blue,
             $color: orange,
         );
 
         .initials-avatar {
-            @include igx-avatar($initials-avatar);
+            @include avatar($initials-avatar);
         }
 
         .icon-avatar {
-            @include igx-avatar($icon-avatar);
+            @include avatar($icon-avatar);
         }
         ```
 
@@ -464,12 +464,12 @@ $__legacy-libsass: true;
         <button igxButton="outlined">Outlined button</button>
         ```
         ```scss
-        $my-button-theme: igx-button-theme(
+        $my-button-theme:button-theme(
             $raised-background: red,
             $outlined-outline-color: green
         );
 
-        @include igx-css-vars($my-button-theme);
+        @include css-vars($my-button-theme);
         ```
     ボタン タイプごとに個別のテーマを作成し、CSS セレクターにスコープする必要があります。
         ```html
@@ -482,20 +482,20 @@ $__legacy-libsass: true;
         ```
 
         ```scss
-        $my-raised-button: igx-button-theme(
+        $my-raised-button:button-theme(
             $background: red
         );
 
-        $my-outlined-button: igx-button-theme(
+        $my-outlined-button:button-theme(
             $border-color: red
         );
 
         .my-raised-btn {
-            @include igx-css-vars($my-raised-button);
+            @include css-vars($my-raised-button);
          }
 
         .my-outlined-btn {
-            @include igx-css-vars($my-outlined-button);
+            @include css-vars($my-outlined-button);
         }
         ```
 ご覧のとおり、`igx-button-theme` パラメーターはボタン タイプごとに同じ名前になっているため、タイプごとに異なる色を使用するには、ボタン テーマのスコープを CSS セレクターに設定する必要があります。
@@ -507,14 +507,14 @@ $__legacy-libsass: true;
     ```scss
     // in styles.scss
 
-    @include igx-core();
+    @include core();
 
-    @include igx-typography(
+    @include typography(
         $font-family: $material-typeface,
         $type-scale: $material-type-scale
     );
 
-    @include igx-theme();
+    @include theme();
     ```
 
     > [!IMPORTANT]
