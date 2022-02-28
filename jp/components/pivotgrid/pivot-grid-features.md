@@ -2,6 +2,7 @@
 title: Angular ピボット グリッド機能 | ピボット テーブル | インフラジスティックス
 _description: Ignite UI for Angular を使用して、高速で応答性の高い Angular ピボット グリッドとテーブルを作成します。ピボット データを介して複雑なデータ分析を実行します。
 _keywords: angular ピボット グリッド, angular material ピボット テーブル, ignite ui for angular, ピボット グリッド機能, ピボット機能
+_language: ja
 ---
 
 # Angular ピボット グリッド機能
@@ -112,7 +113,7 @@ public pivotConfigHierarchy: IPivotConfiguration = {
 複数の行/列にまたがるグループを作成する複数の行または列のディメンションがある場合、選択は、選択されたグループに属するすべてのセルに適用されます。
 
 ## スーパー コンパクト モード
-`IgxPivotGrid` コンポーネントは、`superCompactMode` `@Input` を提供します。一度にたくさんのセルが画面に表示させる必要がある場合に適しています。有効にすると、このオプションはピボット グリッドの `displayDensity` オプションを無視します。`superCompactMode` を有効にすると、`superCompactMode` オプションがない子コンポーネント (`IgxChip` など) ごとに `displayDensity` 入力がコンパクトに設定されます。
+`IgxPivotGrid` コンポーネントは、`superCompactMode` `@Input` を提供します。一度にたくさんのセルが画面に表示させる必要がある場合に適しています。有効にすると、このオプションはピボット グリッドの `displayDensity` オプションを無視します。`superCompactMode` を有効にすると、`superCompactMode` オプションがない子コンポーネント (`IgxChip` など) ごとに `displayDensity` 入力が `compact` に設定されます。
 
 ```html
 <igx-pivot-grid [superCompactMode]="true"></igx-pivot-grid>
