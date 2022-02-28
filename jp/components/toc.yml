@@ -523,10 +523,10 @@
   href: pivotgrid/pivot-grid.md
   new: true
   items:
-    - name: Pivot Grid Features
+    - name: ピボット グリッド機能
       href: pivotgrid/pivot-grid-features.md
       new: true
-    - name: Pivot Grid Remote Handling and Customization
+    - name: ピボット グリッドのリモート処理とカスタマイズ
       href: pivotgrid/pivot-grid-custom.md
       new: true
 - name: Tree
