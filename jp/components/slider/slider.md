@@ -432,7 +432,7 @@ public type = SliderType.RANGE;
 // In app-slider-styling.component.scss
 
 // Create slider theme.
-$custom-slider-theme:slider-theme(
+$custom-slider-theme: slider-theme(
     $track-color: #ff7400,
     $track-hover-color: #ff7400,
 

@@ -242,7 +242,7 @@ To get started with styling the tooltip, we need to import the `index` file, whe
 Following the simplest approach, we create a new theme that extends the [`tooltip-theme`]({environment:sassApiUrl}/index.html#function-tooltip-theme) and accepts the `$text-color`, `$background` and the `$border-radius` parameters.
 
 ```scss
-$dark-tooltip:tooltip-theme(
+$dark-tooltip: tooltip-theme(
     $text-color: #ECAA53,
     $background: #011627,
     $border-radius: 6px

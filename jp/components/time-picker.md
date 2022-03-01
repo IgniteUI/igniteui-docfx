@@ -326,7 +326,7 @@ Time Picker のスタイル設定は、すべてのテーマ関数とコンポ�
 [`time-picker-theme`]({environment:sassApiUrl}/index.html#function-dialog-theme) を拡張する新しいテーマを作成し、Time Picker のスタイルを設定できるさまざまなパラメーターを受け取ります。
 
 ```scss
-$my-time-picker-theme:time-picker-theme(
+$my-time-picker-theme: time-picker-theme(
   $text-color: #E4C8A5,
   $hover-text-color: #ECAA53,
   $selected-text-color: #ECAA53,

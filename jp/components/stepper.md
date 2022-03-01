@@ -282,7 +282,7 @@ Angular Material Stepper は、さまざまなキーボード操作をエンド�
 
 最も簡単な方法として、[stepper-theme]({environment:sassApiUrl}/index.html#function-stepper-theme) を拡張する新しいテーマを作成し、変更するパラメーターを渡す方法があります。 
 ```scss
-$custom-stepper-theme:stepper-theme(
+$custom-stepper-theme: stepper-theme(
     $current-title-color: #351e65,
     $current-subtitle-color: #5f4691,
     $step-separator-style: "solid"

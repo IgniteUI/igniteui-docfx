@@ -32,7 +32,7 @@ _language: ja
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 
 
-$my-drop-down-theme:drop-down-theme(
+$my-drop-down-theme: drop-down-theme(
     $palette: $my-custom-palette
 );
 
@@ -108,7 +108,7 @@ export class OverlayStylingComponent {
 
 ```scss
 //  styles.scss
-$my-overlay-theme:overlay-theme(
+$my-overlay-theme: overlay-theme(
   $background-color: rgba(0, 153, 255, 0.3)
 );
 

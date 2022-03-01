@@ -334,9 +334,9 @@ export class HGridRowEditingSampleComponent implements OnInit {
     $my-light-gray: #e3e3e3;
     $my-banner-palette: $purple-palette;
 
-    $banner-theme:banner-theme( 
+    $banner-theme: banner-theme( 
         $banner-background: $my-light-gray,
-        $banner-message-color:color($my-banner-palette, "secondary", 600)
+        $banner-message-color: color($my-banner-palette, "secondary", 600)
     );
 ```
 
@@ -398,7 +398,7 @@ export class HGridRowEditingSampleComponent implements OnInit {
 // custom.component.scss
 ...
 
-$button-theme:button-theme(
+$button-theme: button-theme(
   $palette: $purple-palette
 );
 

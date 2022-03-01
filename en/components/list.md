@@ -521,7 +521,7 @@ Then we need to create a theme for our component.
 
 ```scss
 :host ::ng-deep {
-    $my-list-theme:list-theme(
+    $my-list-theme: list-theme(
         $background: #0568ab
     );
 

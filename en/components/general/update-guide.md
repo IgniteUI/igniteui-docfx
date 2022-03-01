@@ -217,7 +217,7 @@ This was done so that palettes can be changed at runtime using CSS variables onl
 - Please ensure the correct palette and component schema are passed to your custom-made component and global themes. If you want to create a global dark theme, make sure to select a lighter color shade for your gray color, for instance:
 
 ```scss
-$my-dark-palette:palette(
+$my-dark-palette: palette(
     $primary: olive, 
     $secondary: yellow, 
     $grays: #fff
@@ -231,7 +231,7 @@ Likewise, light themes require a darker shade of gray and a light color schema.
 If you've not excluded any component themes from the global theme but you still want to create your own custom replacement themes using the `css-vars` mixin, make sure the theme is passed the correct palette and correspoding schema:
 
 ```scss
-$my-custom-grid:grid-theme(
+$my-custom-grid: grid-theme(
     $palette: $my-dark-palette,
     $schema: $dark-schema
 );
@@ -244,12 +244,12 @@ $my-custom-grid:grid-theme(
 In case you've excluded some component themes from the global theme and you've created custom replacement themes, you should ensure that the component mixin is included and is passed the correct component theme:
 
 ```scss
-$my-dark-palette:palette(
+$my-dark-palette: palette(
     ...
     $exclude: ('igx-grid')
 );
 
-$my-custom-grid:grid-theme(
+$my-custom-grid: grid-theme(
     $palette: $my-dark-palette,
     $schema: $dark-schema
 );
@@ -271,7 +271,7 @@ In case your custom component themes are declared in a separate component Sass f
 @include core();
 
 // Create your theme.
-$my-custom-grid:grid-theme(
+$my-custom-grid: grid-theme(
     $palette: $my-dark-palette,
     $schema: $dark-schema
 );
@@ -442,7 +442,7 @@ $__legacy-libsass: true;
     For example, this:
 
         ```scss
-        $avatar-theme:avatar-theme(
+        $avatar-theme: avatar-theme(
             $initials-background: blue,
             $initials-color: orange,
             $icon-background: blue,
@@ -455,12 +455,12 @@ $__legacy-libsass: true;
     Needs to be transformed into this:
 
         ```scss
-        $initials-avatar:avatar-theme(
+        $initials-avatar: avatar-theme(
             $background: blue,
             $color: orange,
         );
 
-        $icon-avatar:avatar-theme(
+        $icon-avatar: avatar-theme(
             $background: blue,
             $color: orange,
         );
@@ -483,7 +483,7 @@ $__legacy-libsass: true;
         <button igxButton="outlined">Outlined button</button>
         ```
         ```scss
-        $my-button-theme:button-theme(
+        $my-button-theme: button-theme(
             $raised-background: red,
             $outlined-outline-color: green
         );
@@ -501,11 +501,11 @@ $__legacy-libsass: true;
         ```
 
         ```scss
-        $my-raised-button:button-theme(
+        $my-raised-button: button-theme(
             $background: red
         );
 
-        $my-outlined-button:button-theme(
+        $my-outlined-button: button-theme(
             $border-color: red
         );
 

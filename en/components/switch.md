@@ -116,7 +116,7 @@ Then, we create a new theme that extends the [`switch-theme`]({environment:sassA
 
 ```scss
 // in styles.scss
-$custom-switch-theme:switch-theme(
+$custom-switch-theme: switch-theme(
     $thumb-on-color: #ECAA53,
     $track-on-color: #F0CB9C
 );

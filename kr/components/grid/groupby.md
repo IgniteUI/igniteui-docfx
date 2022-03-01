@@ -160,7 +160,7 @@ Next, create a new theme, that extends the [`grid-theme`]({environment:sassApiUr
 
 ```scss
 
-$custom-theme:grid-theme(
+$custom-theme: grid-theme(
     /* Group By properties that affect styling */
     $group-row-background: #494949,
     $group-row-selected-background: #383838,
@@ -179,7 +179,7 @@ $custom-theme:grid-theme(
 );
 
 /* Chip theme will style the chips in the Group By area */
-$custom-chips-theme:chip-theme(
+$custom-chips-theme: chip-theme(
     $background: #494949,
     $text-color: #f8f8f8,
     $hover-text-color: #e7e7e7
@@ -195,7 +195,7 @@ In the approach that we described above, the color values were hardcoded. Altern
 $black-color: #292826;
 $yellow-color: #FFCD0F;
 
-$custom-palette:palette(
+$custom-palette: palette(
   $primary: $black-color,
   $secondary: $yellow-color
 );
@@ -203,21 +203,21 @@ $custom-palette:palette(
 After a custom palette has been generated, the `igx-color` function can be used to obtain different varieties of the primary and the secondary colors. 
 
 ```scss
-$custom-theme:grid-theme(
-    $group-row-background:color($custom-palette, "primary", 300),
-    $group-row-selected-background:color($custom-palette, "primary", 400),
+$custom-theme: grid-theme(
+    $group-row-background: color($custom-palette, "primary", 300),
+    $group-row-selected-background: color($custom-palette, "primary", 400),
     $group-label-column-name-text:contrast-color($custom-palette, "primary", 500),
-    $group-label-icon:color($custom-palette, "secondary", 600),
+    $group-label-icon: color($custom-palette, "secondary", 600),
     $group-label-text:contrast-color($custom-palette, "primary", 500),
-    $group-count-background:color($custom-palette, "secondary", 600),
-    $group-count-text-color:color($custom-palette, "primary", 400),
-    $expand-icon-color:color($custom-palette, "secondary", 600),
-    $expand-icon-hover-color:color($custom-palette, "secondary", 300),
-    $cell-active-border-color:color($custom-palette, "secondary", 600)
+    $group-count-background: color($custom-palette, "secondary", 600),
+    $group-count-text-color: color($custom-palette, "primary", 400),
+    $expand-icon-color: color($custom-palette, "secondary", 600),
+    $expand-icon-hover-color: color($custom-palette, "secondary", 300),
+    $cell-active-border-color: color($custom-palette, "secondary", 600)
 );
 
-$custom-chips-theme:chip-theme(
-    $background:color($custom-palette, "primary", 300),
+$custom-chips-theme: chip-theme(
+    $background: color($custom-palette, "primary", 300),
     $text-color:contrast-color($custom-palette, "primary", 500),
     $hover-text-color:contrast-color($custom-palette, "primary", 600)
 );
@@ -244,7 +244,7 @@ $my-custom-schema: extend($light-schema, (
     igx-grid: $custom-grid-schema
 ));
 
-$custom-theme:grid-theme(
+$custom-theme: grid-theme(
     $palette: $custom-palette,
     $schema: $my-custom-schema
 );

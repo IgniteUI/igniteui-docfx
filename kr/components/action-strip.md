@@ -107,7 +107,7 @@ To customize the Action Strip, you first need to import the `index` file, where 
 ```
 Next, we have to create a new theme that extends the `action-strip-theme` and pass the parameters which we'd like to change:
 ```scss
-$custom-strip:action-strip-theme(
+$custom-strip: action-strip-theme(
     $background: rgba(150, 133, 143, 0.4),
     $actions-background: rgba(109, 121, 147, 0.6),
     $color:  null,

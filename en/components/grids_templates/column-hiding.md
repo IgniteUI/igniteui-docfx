@@ -472,7 +472,7 @@ To get started with styling the column actions component, we need to import the 
 By using the simplest approach, we create a new theme that extends the [`column-actions-theme`]({environment:sassApiUrl}/index.html#function-column-actions-theme) and accepts the `$title-color` and the `$background-color` parameters.
 
 ```scss
-$custom-column-actions-theme:column-actions-theme(
+$custom-column-actions-theme: column-actions-theme(
     $background-color: steelblue,
     $title-color: gold
 );
@@ -481,7 +481,7 @@ $custom-column-actions-theme:column-actions-theme(
 As seen, the `column-actions-theme` only controls colors for the column actions container, but does not affect the buttons, checkboxes and the input-group inside of it. Let's say we want to style the buttons as well, so we will create a new button theme:
 
 ```scss
-$custom-button:button-theme($flat-text-color: gold, $disabled-color: black);
+$custom-button: button-theme($flat-text-color: gold, $disabled-color: black);
 ```
 
 In this example we only changed the text-color of the flat buttons and the button disabled color, but the [`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme) provides way more parameters to control the button style.
@@ -522,21 +522,21 @@ Instead of hardcoding the color values like we just did, we can achieve greater 
 $yellow-color: gold;
 $blue-color: steelblue;
 
-$custom-palette:palette($primary: $blue-color, $secondary: $yellow-color);
+$custom-palette: palette($primary: $blue-color, $secondary: $yellow-color);
 ```
 
 And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette. 
 
 ```scss
-$custom-column-actions-theme:column-actions-theme(
+$custom-column-actions-theme: column-actions-theme(
     $palette: $custom-palette,
-    $title-color:color($custom-palette, "secondary", 400),
-    $background-color:color($custom-palette, "primary", 200)
+    $title-color: color($custom-palette, "secondary", 400),
+    $background-color: color($custom-palette, "primary", 200)
 );
 
-$custom-button:button-theme(
+$custom-button: button-theme(
     $palette: $custom-palette,
-    $flat-text-color:color($custom-palette, "secondary", 400),
+    $flat-text-color: color($custom-palette, "secondary", 400),
     $disabled-color: black
 );
 ```
@@ -583,13 +583,13 @@ $custom-dark-schema: extend($dark-schema,(
 ));
 
 // Defining column-actions-theme with the global dark schema
-$custom-column-actions-theme:column-actions-theme(
+$custom-column-actions-theme: column-actions-theme(
   $palette: $custom-palette,
   $schema: $custom-dark-schema
 );
 
 // Defining button-theme with the global dark schema
-$custom-button:button-theme(
+$custom-button: button-theme(
   $palette: $custom-palette,
   $schema: $custom-dark-schema
 );

@@ -38,7 +38,7 @@ Defining an avatar theme:
 
 // Change the initials and icon backgrounds 
 // of the avatar to purple.
-$new-avatar-theme:avatar-theme(
+$new-avatar-theme: avatar-theme(
     $initials-background: purple,
     $icon-background: purple
 );
@@ -57,7 +57,7 @@ For instance:
 @include avatar($new-avatar-theme);
 
 // Later
-$another-avatar-theme:avatar-theme(
+$another-avatar-theme: avatar-theme(
     $initials-background: royalblue,
     $icon-background: royalblue
 );
@@ -135,7 +135,7 @@ And this is what our Sass stylesheet looks like:
 @import '~igniteui-angular/lib/core/styles/components/avatar/avatar-theme';
 @import '~igniteui-angular/lib/core/styles/components/avatar/avatar-component';
 
-$avatar-theme:avatar-theme($initials-background: royalblue);
+$avatar-theme: avatar-theme($initials-background: royalblue);
 
 :host ::ng-deep {
     @include avatar($avatar-theme);
@@ -165,8 +165,8 @@ The below example shows how you can style multiple components using just CSS var
 
 // Overwrite the default themes for igx-avatar and igx-badge
 // using only css variables;
-$avatar-theme:avatar-theme($initials-background: royalblue);
-$badge-theme:badge-theme($background-color: white);
+$avatar-theme: avatar-theme($initials-background: royalblue);
+$badge-theme: badge-theme($background-color: white);
 
 @include css-vars($avatar-theme);
 @include css-vars($badge-theme);
@@ -183,7 +183,7 @@ The below sample uses the sample from the [View Encapsulation](#view-encapsulati
 @import '~igniteui-angular/lib/core/styles/components/avatar/avatar-component'; 
 // Disable legacy support first.
 $igx-legacy-support: false;
-$avatar-theme:avatar-theme($initials-background: royalblue);
+$avatar-theme: avatar-theme($initials-background: royalblue);
 
 :host ::ng-deep {
     // We still need to include the base avatar styles just once.

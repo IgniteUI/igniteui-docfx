@@ -32,7 +32,7 @@ Ignite UI for Angular の開発は、Internet Explorer 11 がまだ関連して�
 // app.component.scss
 $igx-legacy-support: true;
 
-$color:color($default-palette, 'primary', 900);
+$color: color($default-palette, 'primary', 900);
 ```
 
 すべてのグローバル構成変数を格納するプロジェクトの `styles` ディレクトリに `_variables.scss` ファイルを作成することをお勧めします。このようにして、すべてのスタイル ファイルに構成をインポートするだけです。
@@ -46,7 +46,7 @@ $color:color($default-palette, 'primary', 900);
 デフォルトのパレットは、その宣言をシャドウイングすることでいつでも変更できます。
 
 ```scss
-$my-palette:palette(
+$my-palette: palette(
   $primary: red, 
   $secondary: blue
 );
@@ -65,7 +65,7 @@ $my-palette:palette(
 
 $legacy-support: true; /* Ignite UI for Angular 13 ではサポートされていません */
 
-$my-palette:palette(
+$my-palette: palette(
   $primary: red, 
   $secondary: blue
 );

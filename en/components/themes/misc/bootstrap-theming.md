@@ -122,7 +122,7 @@ $theme-colors: (
 Ignite UI for Angular's [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) function generates a color palette map including `primary`, `secondary`, `grays`, `info`, `success`, `warn`, and `error` colors and their color variants. Our predefined bootstrap palette in turn consists of seven colors:
 
 ```scss
-$bootstrap-palette:palette(
+$bootstrap-palette: palette(
     $primary: #007bff,
     $secondary: #6c757d,
     $info: #17a2b8,
@@ -139,19 +139,19 @@ First, we are going to define Sass variables that extract values from the [`$lig
 
 ```scss
 // Colors from the Ignite UI light bootstrap color palette
-$light-primary:color($light-bootstrap-palette, "primary");
-$light-secondary:color($light-bootstrap-palette, "secondary");
-$light-success:color($light-bootstrap-palette, "success");
-$light-info:color($light-bootstrap-palette, "info");
-$light-warning:color($light-bootstrap-palette, "warn");
-$light-danger:color($light-bootstrap-palette, "error");
+$light-primary: color($light-bootstrap-palette, "primary");
+$light-secondary: color($light-bootstrap-palette, "secondary");
+$light-success: color($light-bootstrap-palette, "success");
+$light-info: color($light-bootstrap-palette, "info");
+$light-warning: color($light-bootstrap-palette, "warn");
+$light-danger: color($light-bootstrap-palette, "error");
 ```
 
 After that, we will create a new color palette which will be used for the dark mode of the sample:
 
 ```scss
 // Defining custom color palette
-$custom-dark-palette:palette(
+$custom-dark-palette: palette(
     $primary: #ecaa53,
     $secondary: #011627,
     $grays: #fff,
@@ -159,8 +159,8 @@ $custom-dark-palette:palette(
 );
 
 // Creating Sass variables for primary and secondary colors
-$dark-primary:color($custom-dark-palette, "primary");
-$dark-secondary:color($custom-dark-palette, "secondary");
+$dark-primary: color($custom-dark-palette, "primary");
+$dark-secondary: color($custom-dark-palette, "secondary");
 ```
 
 >[!NOTE]
@@ -185,7 +185,7 @@ At this point we have to modify the Bootstrap `$theme-colors` map with the Sass 
 :host {
     &.light {
         // The background color of the application in light mode
-        background:color($light-bootstrap-palette, 'surface');
+        background: color($light-bootstrap-palette, 'surface');
 
         ::ng-deep {
             // Applying the igx predefined light bootstrap palette and theme
@@ -207,8 +207,8 @@ At this point we have to modify the Bootstrap `$theme-colors` map with the Sass 
 The `light` and `dark` colors from the `$theme-colors` map, which don't have corresponding values in the Ignite UI palettes, can also be replaced with values at our discretion. For instance: 
 
 ```scss
-$custom-light:color($light-bootstrap-palette, "grays", 100);
-$custom-dark:color($light-bootstrap-palette, "grays", 800);
+$custom-light: color($light-bootstrap-palette, "grays", 100);
+$custom-dark: color($light-bootstrap-palette, "grays", 800);
 
 :host {
     &.light {
@@ -232,7 +232,7 @@ All components in Ignite UI for Angular use colors from the passed palette, ther
 :host {
     &.dark {
         // The background color of the application in dark mode
-        background:color($custom-dark-palette, 'surface');
+        background: color($custom-dark-palette, 'surface');
 
         ::ng-deep {
             // Applying our custom dark palette 
@@ -244,33 +244,33 @@ All components in Ignite UI for Angular use colors from the passed palette, ther
                 border-color: $dark-primary;
 
                 &:hover {
-                    background-color:color($custom-dark-palette, 'primary', 600);
+                    background-color: color($custom-dark-palette, 'primary', 600);
                 }
             }
 
             // Overriding ngb-accordion colors with colors from the custom dark palette
             .accordion {
                 .card-header {
-                    background-color:color($custom-dark-palette, 'grays', 200);
-                    color:color($custom-dark-palette, 'grays', 900);
+                    background-color: color($custom-dark-palette, 'grays', 200);
+                    color: color($custom-dark-palette, 'grays', 900);
                 }
 
                 .card {
-                    background-color:color($custom-dark-palette, 'surface');
-                    border-color:color($custom-dark-palette, 'grays', 300);
+                    background-color: color($custom-dark-palette, 'surface');
+                    border-color: color($custom-dark-palette, 'grays', 300);
                 }
             }
 
             // Overriding bootstrap dropdown colors with colors from the custom dark palette
             .dropdown .dropdown-menu {
-                background-color:color($custom-dark-palette, 'surface');
-                border-color:color($custom-dark-palette, 'grays', 300);
+                background-color: color($custom-dark-palette, 'surface');
+                border-color: color($custom-dark-palette, 'grays', 300);
 
                 .dropdown-item {
-                    color:color($custom-dark-palette, 'grays', 800);
+                    color: color($custom-dark-palette, 'grays', 800);
 
                     &:hover {
-                        background-color:color($custom-dark-palette, 'grays', 200);
+                        background-color: color($custom-dark-palette, 'grays', 200);
                     }
                 }
             }

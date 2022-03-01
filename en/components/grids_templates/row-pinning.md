@@ -412,7 +412,7 @@ To begin the customization of the row pinning feature, you need to import the `i
 Next, create a new theme, that extends the [`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) and accepts the parameters, required to customize the row pinning feature as desired.
 
 ```scss
-$custom-grid-theme:grid-theme(
+$custom-grid-theme: grid-theme(
     /* Pinning properties that affect styling */
     $pinned-border-width: 5px,
     $pinned-border-style: double,

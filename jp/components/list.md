@@ -521,7 +521,7 @@ export class ContactListComponent {
 
 ```scss
 :host ::ng-deep {
-    $my-list-theme:list-theme(
+    $my-list-theme: list-theme(
         $background: #0568ab
     );
 

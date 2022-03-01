@@ -215,7 +215,7 @@ Ignite UI には、主要な Angular フレームワークの中で最も機能�
 $primary-color: #2ab759; // Some green shade I like
 $secondary-color: #f96a88; // Watermelon pink
 
-$my-color-palette:palette(
+$my-color-palette: palette(
     $primary: $primary-color,
     $secondary: $secondary-color
 );

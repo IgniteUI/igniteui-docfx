@@ -189,7 +189,7 @@ public onColumnMovingEnd(event) {
 
 ```scss
 // Define dark theme for the column moving
-$dark-grid-column-moving-theme:grid-theme(
+$dark-grid-column-moving-theme: grid-theme(
     $ghost-header-text-color: #F4D45C,
     $ghost-header-background: #575757,
     $ghost-header-icon-color: #f4bb5c
@@ -223,16 +223,16 @@ $dark-grid-column-moving-theme:grid-theme(
 $yellow-color: #F4D45C;
 $black-color: #575757;
 
-$dark-palette:palette($primary: $yellow-color, $secondary: $black-color);
+$dark-palette: palette($primary: $yellow-color, $secondary: $black-color);
 ```
 
 次に [**igx-color**]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取り出すことができます。
 
 ```scss
-$dark-grid-column-moving-theme:grid-theme(
+$dark-grid-column-moving-theme: grid-theme(
     $palette: $dark-palette,
-    $ghost-header-text-color:color($dark-palette, "primary", 400),
-    $ghost-header-background:color($dark-palette, "secondary", 200),
+    $ghost-header-text-color: color($dark-palette, "primary", 400),
+    $ghost-header-background: color($dark-palette, "secondary", 200),
     $ghost-header-icon-color: color($dark-palette, "primary", 500)
 );
 ```
@@ -273,7 +273,7 @@ $custom-light-schema: extend($light-schema,(
 ));
 
 // Defining dark-grid-theme with the global dark schema
-$dark-grid-column-moving-theme:grid-theme(
+$dark-grid-column-moving-theme: grid-theme(
   $palette: $dark-palette,
   $schema: $custom-light-schema
 );

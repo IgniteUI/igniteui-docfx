@@ -398,7 +398,7 @@ Using the [Ignite UI for Angular Theming](themes/index.md), we can greatly alter
 Following the simplest approach, we create a new theme that extends the [`drop-down-theme`]({environment:sassApiUrl}/index.html#function-drop-down-theme) and accepts some of the default theme's parameters.
 
 ```scss
-$custom-drop-down-theme:drop-down-theme(
+$custom-drop-down-theme: drop-down-theme(
     $background-color: #fdfdfd,
     $header-text-color: #345779,
     $item-text-color: #2dabe8,

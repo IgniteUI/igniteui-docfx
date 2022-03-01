@@ -116,7 +116,7 @@ First, in order to use the functions exposed by the theme engine, we need to imp
 You can easily create a new theme, that extends the [`ripple-theme`]({environment:sassApiUrl}/index.html#function-ripple-theme) and accepts the parameters, required to customize the ripple as desired.
 
 ```scss
-$custom-ripple-theme:ripple-theme(
+$custom-ripple-theme: ripple-theme(
   $color: #217346
 );
 ```  

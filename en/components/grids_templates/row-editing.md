@@ -331,9 +331,9 @@ We can now define a custom [`banner theme`]({environment:sassApiUrl}/index.html#
     $my-light-gray: #e3e3e3;
     $my-banner-palette: $purple-palette;
 
-    $banner-theme:banner-theme( 
+    $banner-theme: banner-theme( 
         $banner-background: $my-light-gray,
-        $banner-message-color:color($my-banner-palette, "secondary", 600)
+        $banner-message-color: color($my-banner-palette, "secondary", 600)
     );
 ```
 
@@ -395,7 +395,7 @@ After we've defined our custom buttons, we can make use of the [`button-theme`](
 // custom.component.scss
 ...
 
-$button-theme:button-theme(
+$button-theme: button-theme(
   $palette: $purple-palette
 );
 

@@ -184,7 +184,7 @@ Toast のスタイル設定を始めるには、すべてのテーマ関数と�
 最も簡単な方法は、[`toast-theme`]({environment:sassApiUrl}/index.html#function-toast-theme) を拡張する新しいテーマを作成し、`$shadow`、`$background`、`$text-color` と `$border-radius` パラメーターを受け取る方法です。 
 
 ```scss
-$custom-toast-theme:toast-theme(
+$custom-toast-theme: toast-theme(
     $background: #dedede,
     $text-color: #151515,
     $border-radius: 12px
@@ -224,15 +224,15 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 $white-color: #dedede;
 $black-color: #151515;
 
-$light-toast-palette:palette($primary: $white-color, $secondary: $black-color);
+$light-toast-palette: palette($primary: $white-color, $secondary: $black-color);
 ```
 
 また [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取り出すことができます。 
 
 ```scss
-$custom-toast-theme:toast-theme(
-    $background:color($light-toast-palette, "primary", 400),
-    $text-color:color($light-toast-palette, "secondary", 400),
+$custom-toast-theme: toast-theme(
+    $background: color($light-toast-palette, "primary", 400),
+    $text-color: color($light-toast-palette, "secondary", 400),
     $border-radius: 12px
 );
 ```
@@ -270,7 +270,7 @@ $custom-light-schema: extend($light-schema,(
 ));
 
 // Defining toast with the global light schema
-$custom-toast-theme:toast-theme(
+$custom-toast-theme: toast-theme(
   $palette: $light-toast-palette,
   $schema: $custom-light-schema
 );

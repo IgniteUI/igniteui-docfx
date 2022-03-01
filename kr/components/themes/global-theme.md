@@ -33,7 +33,7 @@ Let's create a custom global theme that will use the primary and secondary color
 $primary-color: #2ab759; // Some green shade I like
 $secondary-color: #f96a88; // Watermelon pink
 
-$my-color-palette:palette(
+$my-color-palette: palette(
     $primary: $primary-color,
     $secondary: $secondary-color
 );

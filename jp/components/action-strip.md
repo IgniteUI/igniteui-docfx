@@ -113,7 +113,7 @@ Ignite UI for Angular Action Strip コンポーネントは、ホバーなどの
 ```
 次に、`action-strip-theme` を拡張する新しいテーマを作成し、変更するパラメーターを渡します。
 ```scss
-$custom-strip:action-strip-theme(
+$custom-strip: action-strip-theme(
     $background: rgba(150, 133, 143, 0.4),
     $actions-background: rgba(109, 121, 147, 0.6),
     $icon-color: null,

@@ -240,7 +240,7 @@ Angular Material Accordion のキーボード ナビゲーションは、さま�
 
 [expansion-panel-theme]({environment:sassApiUrl}/index.html#function-expansion-panel-theme) を拡張する新しいテーマを作成し、`$expanded-margin` パラメーターを受け取ります。 
 ```scss
-$custom-panel-theme:expansion-panel-theme(
+$custom-panel-theme: expansion-panel-theme(
     $expanded-margin: 0px
 );
 ```

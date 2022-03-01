@@ -256,7 +256,7 @@ Navbar のタイトルにカスタム コンテンツを提供する場合は、
 最も簡単な方法は、[`navbar-theme`]({environment:sassApiUrl}/index.html#function-navbar-theme) を拡張する新しいテーマを作成し、`$text-color`、`$background`、`$idle-icon-color`、`$hover-icon-color` パラメーターを受け取る方法です。
 
 ```scss
-$custom-navbar-theme:navbar-theme(
+$custom-navbar-theme: navbar-theme(
     $text-color: #151515,
     $background: #dedede,
     $idle-icon-color: #151515,
@@ -296,16 +296,16 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 ```scss
 $white-color: #dedede;
 $black-color: #151515;
-$light-navbar-palette:palette($primary: $white-color, $secondary: $black-color);
+$light-navbar-palette: palette($primary: $white-color, $secondary: $black-color);
 ```
 
 `igx-color` を使用して、パレットから簡単に取得することができます。
 
 ```scss
-$custom-navbar-theme:navbar-theme(
-    $text-color:color($light-navbar-palette, "secondary", 400),
-    $background:color($light-navbar-palette, "primary", 400),
-    $idle-icon-color:color($light-navbar-palette, "secondary", 400),
+$custom-navbar-theme: navbar-theme(
+    $text-color: color($light-navbar-palette, "secondary", 400),
+    $background: color($light-navbar-palette, "primary", 400),
+    $idle-icon-color: color($light-navbar-palette, "secondary", 400),
     $hover-icon-color: #8c8c8c
 );
 ```
@@ -346,7 +346,7 @@ $custom-light-schema: extend($light-schema,(
 ));
 
 // Defining navbar with the global light schema
-$cutom-navbar-theme:navbar-theme(
+$cutom-navbar-theme: navbar-theme(
   $palette: $light-navbar-palette,
   $schema: $custom-light-schema
 );

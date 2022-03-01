@@ -276,7 +276,7 @@ IgxDatePicker と [`IgxTimePicker`](time-picker.md) を一緒に使用する場�
 日付ピッカーはカレンダーのテーマを使用するので、[`calendar-theme`]({environment:sassApiUrl}/index.html#function-calendar-theme) を拡張する新しいテーマを作成し、そのパラメーターを使用して日付ピッカーの項目をスタイル設定します。
 
 ```scss
-$custom-datepicker-theme:calendar-theme(
+$custom-datepicker-theme: calendar-theme(
     $header-background: #345779,
     $content-background: #fdfdfd,
     $header-text-color: #ffffff,

@@ -274,7 +274,7 @@ Card のスタイル設定を始めるには、すべてのテーマ関数とコ
 最も単純なアプローチに従って、[`card-theme`]({environment:sassApiUrl}/index.html#function-card-theme) を拡張する新しいテーマを作成し、カードのアイテムをスタイル設定するいくつかのパラメーターを受け取ります。
 
 ```scss
-$colorful-card:card-theme(
+$colorful-card: card-theme(
     $background: #011627,
     $header-text-color: #FEFEFE,
     $subtitle-text-color: #ECAA53,

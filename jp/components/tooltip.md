@@ -243,7 +243,7 @@ export class AppModule {}
 最も簡単な方法は、[`tooltip-theme`]({environment:sassApiUrl}/index.html#function-tooltip-theme) を拡張する新しいテーマを作成し、`$text-color`、`$background`、`$border-radius` パラメーターを受け取る方法です。
 
 ```scss
-$dark-tooltip:tooltip-theme(
+$dark-tooltip: tooltip-theme(
     $text-color: #ECAA53,
     $background: #011627,
     $border-radius: 6px

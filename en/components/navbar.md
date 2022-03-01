@@ -255,7 +255,7 @@ To get started with styling the navbar, we need to import the `index` file, wher
 Following the simplest approach, we create a new theme that extends the [`navbar-theme`]({environment:sassApiUrl}/index.html#function-navbar-theme) and accepts the `$text-color`, `$background`, `$idle-icon-color` and the `$hover-icon-color` parameters.
 
 ```scss
-$custom-navbar-theme:navbar-theme(
+$custom-navbar-theme: navbar-theme(
     $text-color: #151515,
     $background: #dedede,
     $idle-icon-color: #151515,
@@ -295,16 +295,16 @@ Instead of hardcoding the color values, like we just did, we can achieve greater
 ```scss
 $white-color: #dedede;
 $black-color: #151515;
-$light-navbar-palette:palette($primary: $white-color, $secondary: $black-color);
+$light-navbar-palette: palette($primary: $white-color, $secondary: $black-color);
 ```
 
 And then with `igx-color` we can easily retrieve color from the palette.
 
 ```scss
-$custom-navbar-theme:navbar-theme(
-    $text-color:color($light-navbar-palette, "secondary", 400),
-    $background:color($light-navbar-palette, "primary", 400),
-    $idle-icon-color:color($light-navbar-palette, "secondary", 400),
+$custom-navbar-theme: navbar-theme(
+    $text-color: color($light-navbar-palette, "secondary", 400),
+    $background: color($light-navbar-palette, "primary", 400),
+    $idle-icon-color: color($light-navbar-palette, "secondary", 400),
     $hover-icon-color: #8c8c8c
 );
 ```
@@ -345,7 +345,7 @@ $custom-light-schema: extend($light-schema,(
 ));
 
 // Defining navbar with the global light schema
-$cutom-navbar-theme:navbar-theme(
+$cutom-navbar-theme: navbar-theme(
   $palette: $light-navbar-palette,
   $schema: $custom-light-schema
 );

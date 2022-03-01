@@ -293,7 +293,7 @@ igxHierarchicalGrid を使用すると、[Ignite UI for Angular テーマ ライ
 
 
 ```scss
-$custom-theme:grid-theme(
+$custom-theme: grid-theme(
   $cell-active-border-color: #ffcd0f,
   $cell-selected-background: #6f6f6f,
   $row-hover-background: #f8e495,
@@ -315,14 +315,14 @@ $custom-theme:grid-theme(
 $black-color: #494949;
 $yellow-color: #FFCD0F;
  
-$custom-palette:palette(
+$custom-palette: palette(
   $primary: $black-color,
   $secondary: $yellow-color
 );
 ```
 カスタム パレットが生成された後、`igx-color` 関数を使用して、さまざまな種類の原色と二次色を取得できます。   
 ```scss
-$custom-theme:grid-theme(
+$custom-theme: grid-theme(
     $cell-active-border-color: (igx-color($custom-palette, "secondary", 500)),
     $cell-selected-background: (igx-color($custom-palette, "primary", 300)),
     $row-hover-background: (igx-color($custom-palette, "secondary", 100)),
@@ -359,7 +359,7 @@ $my-custom-schema: extend($light-schema, (
     igx-grid: $custom-grid-schema
 ));
 
-$custom-theme:grid-theme(
+$custom-theme: grid-theme(
     $palette: $custom-palette,
     $schema: $my-custom-schema
 );

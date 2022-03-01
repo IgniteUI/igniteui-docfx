@@ -428,7 +428,7 @@ To get started with styling the filtering row, we need to import the `index` fil
 Following the simplest approach, we create a new theme that extends the [`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) and accepts the `$filtering-row-text-color`, `$filtering-row-background`, `$filtering-header-text-color` and the `$filtering-header-background` parameters.
 
 ```scss
-$custom-grid:grid-theme(
+$custom-grid: grid-theme(
     $filtering-row-text-color: #292826,
     $filtering-row-background: #FFCD0F,
     $filtering-header-text-color: #292826,
@@ -439,14 +439,14 @@ $custom-grid:grid-theme(
 As seen, the `grid-theme` only controls colors for the filtering row and the respective column header that is being filtered. We obviously have a lot more components inside the filtering row, such as an input group, chips, buttons and others. In order to style them, we need to create a separate theme for each one, so let's create a new input group theme and a new button theme:
 
 ```scss
-$dark-input-group:input-group-theme(
+$dark-input-group: input-group-theme(
     $box-background: #FFCD0F,
     $idle-text-color: #292826,
     $focused-text-color: #292826,
     $filled-text-color: #292826
 );
 
-$dark-button:button-theme(
+$dark-button: button-theme(
     $flat-background: #FFCD0F,
     $flat-text-color: #292826,
     $flat-hover-background: #292826,
@@ -502,31 +502,31 @@ Instead of hardcoding the color values like we just did, we can achieve greater 
 $yellow-color: #FFCD0F;
 $black-color: #292826;
 
-$dark-palette:palette($primary: $black-color, $secondary: $yellow-color);
+$dark-palette: palette($primary: $black-color, $secondary: $yellow-color);
 ```
 
 And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette. 
 
 ```scss
-$custom-grid:grid-theme(
-    $filtering-row-text-color:color($dark-palette, "primary", 400),
-    $filtering-row-background:color($dark-palette, "secondary", 400),
-    $filtering-header-text-color:color($dark-palette, "primary", 400),
-    $filtering-header-background:color($dark-palette, "secondary", 400)
+$custom-grid: grid-theme(
+    $filtering-row-text-color: color($dark-palette, "primary", 400),
+    $filtering-row-background: color($dark-palette, "secondary", 400),
+    $filtering-header-text-color: color($dark-palette, "primary", 400),
+    $filtering-header-background: color($dark-palette, "secondary", 400)
 );
 
-$dark-input-group:input-group-theme(
-    $box-background:color($dark-palette, "secondary", 400),
-    $idle-text-color:color($dark-palette, "primary", 400),
-    $focused-text-color:color($dark-palette, "primary", 400),
-    $filled-text-color:color($dark-palette, "primary", 400)
+$dark-input-group: input-group-theme(
+    $box-background: color($dark-palette, "secondary", 400),
+    $idle-text-color: color($dark-palette, "primary", 400),
+    $focused-text-color: color($dark-palette, "primary", 400),
+    $filled-text-color: color($dark-palette, "primary", 400)
 );
 
-$dark-button:button-theme(
-    $flat-background:color($dark-palette, "secondary", 400),
-    $flat-text-color:color($dark-palette, "primary", 400),
-    $flat-hover-background:color($dark-palette, "primary", 400),
-    $flat-hover-text-color:color($dark-palette, "secondary", 400)
+$dark-button: button-theme(
+    $flat-background: color($dark-palette, "secondary", 400),
+    $flat-text-color: color($dark-palette, "primary", 400),
+    $flat-hover-background: color($dark-palette, "primary", 400),
+    $flat-hover-text-color: color($dark-palette, "secondary", 400)
 );
 ```
 
@@ -606,19 +606,19 @@ $custom-light-schema: extend($light-schema,(
 ));
 
 // Defining grid-theme with the global light schema
-$custom-grid:grid-theme(
+$custom-grid: grid-theme(
   $palette: $dark-palette,
   $schema: $custom-light-schema
 );
 
 // Defining button-theme with the global light schema
-$custom-button:button-theme(
+$custom-button: button-theme(
   $palette: $dark-palette,
   $schema: $custom-light-schema
 );
 
 // Defining input-group-theme with the global light schema
-$custom-input-group:input-group-theme(
+$custom-input-group: input-group-theme(
   $palette: $dark-palette,
   $schema: $custom-light-schema
 );

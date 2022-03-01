@@ -389,7 +389,7 @@ public chipsOrderChanged(event: IChipsAreaReorderEventArgs) {
 最も簡単な方法は、[`chip-theme`]({environment:sassApiUrl}/index.html#function-chip-theme)を拡張する新しいテーマを作成し、チップの項目をスタイル設定するいくつかのパラメーターを受け取る方法です。
 
 ```scss
-$custom-theme:chip-theme(
+$custom-theme: chip-theme(
     $background: #011627,
     $hover-background:  #011627dc,
     $focus-background: #0116276c,

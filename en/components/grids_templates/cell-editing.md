@@ -449,7 +449,7 @@ After we've properly imported the index file, we create a custom palette that we
 $white: #fff;
 $blue: #4567bb;
 
-$color-palette:palette($primary: $white, $secondary: $blue);
+$color-palette: palette($primary: $white, $secondary: $blue);
 ```
 
 ### Defining themes
@@ -457,11 +457,11 @@ $color-palette:palette($primary: $white, $secondary: $blue);
 We can now define the theme using our palette. The cells are styled by the [`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme), so we can use that to generate a theme for our @@igxName:
 
 ```scss
-$custom-grid-theme:grid-theme(
+$custom-grid-theme: grid-theme(
     $cell-editing-background: $blue,
     $cell-edited-value-color: $white,
     $cell-active-border-color: $white,
-    $edit-mode-color:color($color-palette, "secondary", 200)
+    $edit-mode-color: color($color-palette, "secondary", 200)
 );
 ```
 

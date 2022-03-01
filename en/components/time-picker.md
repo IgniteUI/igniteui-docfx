@@ -325,7 +325,7 @@ To get started with styling the time picker, we need to import the `index` file,
 Following the simplest approach, we create a new theme that extends the [`time-picker-theme`]({environment:sassApiUrl}/index.html#function-dialog-theme) and accepts parameters that style the time picker.
 
 ```scss
-$my-time-picker-theme:time-picker-theme(
+$my-time-picker-theme: time-picker-theme(
   $text-color: #E4C8A5,
   $hover-text-color: #ECAA53,
   $selected-text-color: #ECAA53,

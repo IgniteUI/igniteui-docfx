@@ -207,7 +207,7 @@ Next, create a new theme, that extends the [`chip-theme`]({environment:sassApiUr
    
 
 ```scss
-$custom-theme:chip-theme(
+$custom-theme: chip-theme(
     $background: #494949,
     $text-color: #e2e2e2,
     $remove-icon-color: #e2e2e2,
@@ -229,7 +229,7 @@ In the approach, that was described above, the color values were hardcoded. Alte
 $black-color: #494949;
 $yellow-color: #ffcd0f;
 
-$custom-palette:palette(
+$custom-palette: palette(
     $primary: $black-color,
     $secondary: $yellow-color
 );
@@ -238,16 +238,16 @@ $custom-palette:palette(
 After the custom palette has been generated, the `igx-color` function can be used to obtain different varieties of the primary and the secondary colors.   
 
 ```scss
-$custom-theme:chip-theme(
-    $background:color($custom-palette, "primary", 500),
+$custom-theme: chip-theme(
+    $background: color($custom-palette, "primary", 500),
     $text-color:contrast-color($custom-palette, "primary", 500),
     $remove-icon-color:contrast-color($custom-palette, "primary", 500),
-    $remove-icon-color-focus:color($custom-palette, "secondary", 500),
+    $remove-icon-color-focus: color($custom-palette, "secondary", 500),
     $hover-text-color:contrast-color($custom-palette, "primary", 500),
-    $selected-background:color($custom-palette, "secondary", 500),
-    $selected-border-color:color($custom-palette, "secondary", 500),
-    $hover-selected-background:color($custom-palette, "secondary", 600),
-    $focus-selected-background:color($custom-palette, "secondary", 500),
+    $selected-background: color($custom-palette, "secondary", 500),
+    $selected-border-color: color($custom-palette, "secondary", 500),
+    $hover-selected-background: color($custom-palette, "secondary", 600),
+    $focus-selected-background: color($custom-palette, "secondary", 500),
     $border-radius: 5px
 );
 ```
@@ -277,7 +277,7 @@ $my-custom-schema: extend($light-schema, (
     igx-chip: $custom-chip-schema
 ));
 
-$custom-theme:chip-theme(
+$custom-theme: chip-theme(
     $palette: $custom-palette,
     $schema: $my-custom-schema
 );

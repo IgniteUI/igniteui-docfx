@@ -163,7 +163,7 @@ public typeVertical = SplitterType.Vertical;
 ```scss
 // In splitter-styling-sample.component.scss
 
-$splitter-theme:splitter-theme(
+$splitter-theme: splitter-theme(
     $bar-color: #011627,
     $handle-color: #ECAA53,
     $expander-color: #ECAA53,

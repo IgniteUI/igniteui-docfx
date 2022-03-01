@@ -338,7 +338,7 @@ To get started with styling the tabs, we need to import the theming module, wher
 Following the simplest approach, we create a new theme that extends the [`tabs-theme`]({environment:sassApiUrl}/index.html#function-tabs-theme) and accepts various properties that allow us to style the tab groups.
 
 ```scss
-$dark-tabs:tabs-theme(
+$dark-tabs: tabs-theme(
     $item-text-color: #F4D45C,
     $item-background: #292826,
     $item-hover-background: #F4D45C,
@@ -380,7 +380,7 @@ Instead of hardcoding the color values, like we just did, we can achieve greater
 $yellow-color: #F4D45C;
 $black-color: #292826;
 
-$dark-palette:palette(
+$dark-palette: palette(
   $primary: $black-color,
   $secondary: $yellow-color,
   $grays: #fff
@@ -390,16 +390,16 @@ $dark-palette:palette(
 We can easily retrieve any color from the palette using [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color).
 
 ```scss
-$dark-tabs:tabs-theme(
+$dark-tabs: tabs-theme(
     $palette: $dark-palette,
-    $item-text-color:color($dark-palette, "secondary", 400),
-    $item-background:color($dark-palette, "primary", 400),
-    $item-hover-background:color($dark-palette, "secondary", 400),
-    $item-hover-color:color($dark-palette, "primary", 400),
-    $item-active-color:color($dark-palette, "secondary", 400),
-    $item-active-icon-color:color($dark-palette, "secondary", 400),
-    $indicator-color:color($dark-palette, "secondary", 400),
-    $tab-ripple-color:color($dark-palette, "secondary", 400)
+    $item-text-color: color($dark-palette, "secondary", 400),
+    $item-background: color($dark-palette, "primary", 400),
+    $item-hover-background: color($dark-palette, "secondary", 400),
+    $item-hover-color: color($dark-palette, "primary", 400),
+    $item-active-color: color($dark-palette, "secondary", 400),
+    $item-active-icon-color: color($dark-palette, "secondary", 400),
+    $indicator-color: color($dark-palette, "secondary", 400),
+    $tab-ripple-color: color($dark-palette, "secondary", 400)
 );
 ```
 

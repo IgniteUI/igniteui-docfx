@@ -492,7 +492,7 @@ public dateSummaryFormat(summary: IgxSummaryResult, summaryOperand: IgxSummaryOp
 最も簡単な方法は、[`grid-summary-theme`]({environment:sassApiUrl}/index.html#function-grid-summary-theme) を拡張する新しいテーマを作成し、`$background-color`, `$focus-background-color`、`$label-color`, `$result-color`、`$pinned-border-width`、`$pinned-border-style`、および `$pinned-border-color` パラメーターを受け取る方法です。
 
 ```scss
-$custom-theme:grid-summary-theme(
+$custom-theme: grid-summary-theme(
     $background-color: #e0f3ff,
     $focus-background-color: rgba( #94d1f7, .3 ),
     $label-color: #e41c77,
@@ -529,20 +529,20 @@ $custom-theme:grid-summary-theme(
 $blue-color: #7793b1;
 $green-color: #00ff2d;
 
-$my-custom-palette:palette($primary: $blue-color, $secondary: $green-color);
+$my-custom-palette: palette($primary: $blue-color, $secondary: $green-color);
 ```
 
 また [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取り出すことができます。
 
 ```scss
-$custom-theme:grid-summary-theme(
-    $background-color:color($my-custom-palette, "primary", 700),
-    $focus-background-color:color($my-custom-palette, "primary", 800),
-    $label-color:color($my-custom-palette, "secondary", 500),
-    $result-color:color($my-custom-palette, "grays", 900),
+$custom-theme: grid-summary-theme(
+    $background-color: color($my-custom-palette, "primary", 700),
+    $focus-background-color: color($my-custom-palette, "primary", 800),
+    $label-color: color($my-custom-palette, "secondary", 500),
+    $result-color: color($my-custom-palette, "grays", 900),
     $pinned-border-width: 2px,
     $pinned-border-style: dotted,
-    $pinned-border-color:color($my-custom-palette, "secondary", 500)
+    $pinned-border-color: color($my-custom-palette, "secondary", 500)
 );
 ```
 
@@ -581,7 +581,7 @@ $my-custom-schema: extend($light-schema,
 );
 
 // Defining our custom theme with the custom schema
-$custom-theme:grid-summary-theme(
+$custom-theme: grid-summary-theme(
     $palette: $my-custom-palette,
     $schema: $my-custom-schema
 );

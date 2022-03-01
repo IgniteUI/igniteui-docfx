@@ -197,7 +197,7 @@ $my-primary-color:#353a4b;
 $my-secondary-color: #ffd351;
 
 // Create custom palette.
-$my-color-palette:palette(
+$my-color-palette: palette(
     $primary: $my-primary-color,
     $secondary: $my-secondary-color
 );
@@ -208,17 +208,17 @@ Now let's create our component theme and pass the `$my-color-palette` palette fr
 ```scss
 // In expansion-styling.component.scss
 // Create expansion panel theme.
-$custom-panel-theme:expansion-panel-theme(
+$custom-panel-theme: expansion-panel-theme(
     // pass `$my-color-palette` palette.
     $palette: $my-color-palette,
 
     // Styling parameters.
-    $header-background:color($my-color-palette, "primary", 700),
-    $header-focus-background:color($my-color-palette, "primary", 700),
-    $header-title-color:color($my-color-palette, "secondary"),
-    $header-icon-color:color($my-color-palette, "secondary"),
-    $body-background:color($my-color-palette, "primary", 700),
-    $body-color:color($my-color-palette, "secondary" 100),
+    $header-background: color($my-color-palette, "primary", 700),
+    $header-focus-background: color($my-color-palette, "primary", 700),
+    $header-title-color: color($my-color-palette, "secondary"),
+    $header-icon-color: color($my-color-palette, "secondary"),
+    $body-background: color($my-color-palette, "primary", 700),
+    $body-color: color($my-color-palette, "secondary" 100),
     $border-radius: .5
 );
 ```

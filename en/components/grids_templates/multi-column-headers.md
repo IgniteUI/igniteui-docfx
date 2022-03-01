@@ -270,7 +270,7 @@ To get started with styling the sorting behavior, we need to import the `index` 
 Following the simplest approach, we create a new theme that extends the [`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) and accepts the `$header-background`, `$header-text-color`, `$header-border-width`, `$header-border-style` and `$header-border-color` parameters.
 
 ```scss
-$custom-theme:grid-theme(
+$custom-theme: grid-theme(
     $header-background: #e0f3ff,
     $header-text-color: #e41c77,
     $header-border-width: 1px,
@@ -305,18 +305,18 @@ Instead of hardcoding the color values like we just did, we can achieve greater 
 $light-blue-color: #e0f3ff;
 $deep-pink-color: #e41c77;
 
-$custom-palette:palette($primary: $light-blue-color, $deep-pink-color);
+$custom-palette: palette($primary: $light-blue-color, $deep-pink-color);
 ```
 
 And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette.
 
 ```scss
-$custom-theme:grid-theme(
-    $header-background:color($custom-palette, "primary", 500),
-    $header-text-color:color($custom-palette, "secondary", 500),
+$custom-theme: grid-theme(
+    $header-background: color($custom-palette, "primary", 500),
+    $header-text-color: color($custom-palette, "secondary", 500),
     $header-border-width: 1px,
     $header-border-style: solid,
-    $header-border-color:color($custom-palette, "grays", 200)
+    $header-border-color: color($custom-palette, "grays", 200)
 );
 ```
 
@@ -353,7 +353,7 @@ $my-custom-schema: extend($light-schema,
 );
 
 // Defining our custom theme with the custom schema
-$custom-theme:grid-theme(
+$custom-theme: grid-theme(
   $palette: $custom-palette,
   $schema: $my-custom-schema
 );

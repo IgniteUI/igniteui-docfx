@@ -136,7 +136,7 @@ The first thing we need to do, in order to get started with the input group styl
 Next, we have to create a new theme that extends the [`input-group-theme`]({environment:sassApiUrl}/index.html#function-input-group-theme) and pass the parameters which we'd like to change:
 
 ```scss
-$custom-input-group:input-group-theme(
+$custom-input-group: input-group-theme(
   $filled-text-color: #288a54,
   $focused-text-color: #174f30,
   $idle-text-color: #288a54,

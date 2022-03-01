@@ -237,7 +237,7 @@ export class MyExampleCombo {
 
 [combo-theme]({environment:sassApiUrl}/index.html#function-combo-theme) を拡張する新しいテーマを作成し、`$search-separator-border-color` パラメーターを受け取ります。
 ```scss
-$custom-combo-theme:combo-theme(
+$custom-combo-theme: combo-theme(
     $search-separator-border-color: #1a5214
 );
 ```
@@ -245,7 +245,7 @@ $custom-combo-theme:combo-theme(
 [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html) は、項目コンテナーとして [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) を内部使用します。[IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) および [IgxCheckbox]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html) コンポーネントも含まれます。これらのコンポーネントのテーマを拡張する新しいテーマを作成し、それぞれのクラスの下にスコープすることで、コンボボックスのスタイル設定を変更できます。
 
 ```scss
-$custom-drop-down-theme:drop-down-theme(
+$custom-drop-down-theme: drop-down-theme(
     $background-color: #d9f5d6,
     $header-text-color: #1a5214,
     $item-text-color: #1a5214,
@@ -263,7 +263,7 @@ $custom-drop-down-theme:drop-down-theme(
     $selected-focus-item-text-color: #1a5214,
 );
 
-$custom-checkbox-theme:checkbox-theme(
+$custom-checkbox-theme: checkbox-theme(
     $border-radius: 10px,
     $fill-color: #1a5214,
     $empty-color: #1a5214,

@@ -276,7 +276,7 @@ Using the [Ignite UI for Angular Theming](themes/index.md), we can greatly alter
 
 Following the simplest approach, we create a new theme that extends the [combo-theme]({environment:sassApiUrl}/index.html#function-combo-theme) and accepts the `$search-separator-border-color` parameter:
 ```scss
-$custom-simple-combo-theme:combo-theme(
+$custom-simple-combo-theme: combo-theme(
     $empty-list-background: #1a5214
 );
 ```
@@ -284,7 +284,7 @@ $custom-simple-combo-theme:combo-theme(
 The [IgxSimpleComboComponent]({environment:angularApiUrl}/classes/igxsimplecombocomponent.html) uses the [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) internally as an item container. It also includes the [IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) component. Creating new themes, that extend these components' themes, and scoping them under the respective classes will let's you change the simple combobox styles:
 
 ```scss
-$custom-drop-down-theme:drop-down-theme(
+$custom-drop-down-theme: drop-down-theme(
     $background-color: #d9f5d6,
     $header-text-color: #1a5214,
     $item-text-color: #1a5214,

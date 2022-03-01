@@ -47,7 +47,7 @@ Ignite UI for Angular はコンポーネントのデザインを**<a href="https
 $company-color: #2ab759; // Some green shade I like
 $secondary-color: #f96a88; // Watermelon pink
 
-$my-color-palette:palette(
+$my-color-palette: palette(
   $primary: $company-color,
   $secondary: $secondary-color
 );
@@ -68,9 +68,9 @@ $my-color-palette:palette(
 `igx-color` 関数を提供します。関数は、`palette`、`color`、および `variant` の 3 つの引数を受け取ります。
 
 ```scss
-$my-primary-600:color($my-palette, "primary", 600);
-$my-primary-A700:color($my-palette, "secondary", "A700");
-$my-warning-color:color($my-palette, "warn");
+$my-primary-600: color($my-palette, "primary", 600);
+$my-primary-A700: color($my-palette, "secondary", "A700");
+$my-warning-color: color($my-palette, "warn");
 // sample usage
 
 .my-awesome-class {
@@ -90,7 +90,7 @@ $my-warning-color:color($my-palette, "warn");
 サブパレット色の取得と同じように、サブパレットの色のコントラスト テキスト色を取得できます。
 
 ```scss
-$my-primary-800:color($my-palette, "primary", 600);
+$my-primary-800: color($my-palette, "primary", 600);
 $my-primary-800-text:contrast-color($my-palette, "primary", 600);
 // sample usage
 
@@ -119,7 +119,7 @@ $my-primary-800-text:contrast-color($my-palette, "primary", 600);
 $company-color: #2ab759; // Some green shade I like
 $secondary-color: #f96a88; // Watermelon pink
 
-$my-color-palette:palette(
+$my-color-palette: palette(
   $primary: $company-color,
   $secondary: $secondary-color
 );

@@ -101,7 +101,7 @@ To get started with styling components using the Ignite UI theming engine, creat
 Ignite UI for Angular's [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) function produces a color palette map including three sub-palettes for the `primary`, `secondary` and `grays` shades as well as five additional colors for `info`, `success`, `warn`, `error` and `surface`. For each color variant, our theming engine automatically generates text contrast colors at build-time, that are also included in the palette. Below, you can see the predefined light material palette:
 
 ```scss
-$igx-light-palette:palette(
+$igx-light-palette: palette(
     $primary: #09f,
     $secondary: #e41c77
     $info: #1377d5,
@@ -152,10 +152,10 @@ $saturations: (50, 100, 200, 300, 400, 500, 600, 700, 800, 900, A100, A200, A400
     $result: ();
     @each $saturation in $saturations {
         $shade: map-merge($shade, (
-            $saturation:color($palette, $color, $saturation)
+            $saturation: color($palette, $color, $saturation)
         ));
         $contrast: map-merge($contrast, (
-            $saturation:color($palette, $color, #{$saturation}-contrast)
+            $saturation: color($palette, $color, #{$saturation}-contrast)
         ));
         $result: map-merge($shade, (contrast: $contrast));
     }
@@ -200,7 +200,7 @@ Following the previous approach, we are going to create material palettes for th
 
 ```scss
 // Custompalette
-$custom-dark-palette:palette(
+$custom-dark-palette: palette(
     $primary: #011627,
     $secondary: #72da67,
     $grays: #fff,
@@ -257,16 +257,16 @@ Once we are done configuring color palettes and themes, we can make some additio
 :host {
     &.light {
         // The background color of the application in light mode
-        background:color($igx-light-palette, 'surface');
+        background: color($igx-light-palette, 'surface');
 
         // The application logo fill color
         #Path1 {
-            fill:color($igx-light-palette, 'secondary');
+            fill: color($igx-light-palette, 'secondary');
         }
 
         // The application logo stroke color
         #Path2 {
-            stroke:color($igx-light-palette, 'secondary');
+            stroke: color($igx-light-palette, 'secondary');
             stroke-width: "0.8";
         }
     }
@@ -281,34 +281,34 @@ For our dark variant, we are going to apply the same CSS styles but using the `$
 :host {
     &.dark {
         // The background color of the application in dark mode
-        background:color($custom-dark-palette, 'surface');
+        background: color($custom-dark-palette, 'surface');
 
         // The application logo fill color
         #Path1 {
-            fill:color($custom-dark-palette, 'secondary');
+            fill: color($custom-dark-palette, 'secondary');
         }
 
         // The application logo stroke color
         #Path2 {
-            stroke:color($custom-dark-palette, 'secondary');
+            stroke: color($custom-dark-palette, 'secondary');
             stroke-width: "0.8";
         }
 
         ::ng-deep {
             // The background of the selected step icon inside the material stepper
             .mat-step-header .mat-step-icon-selected {
-                background-color:color($custom-dark-palette, 'secondary');
+                background-color: color($custom-dark-palette, 'secondary');
             }
 
             // The background of the material slider thumb and track
             .mat-accent .mat-slider-thumb,
             .mat-accent .mat-slider-track-fill {
-                background-color:color($custom-dark-palette, 'primary', 100);
+                background-color: color($custom-dark-palette, 'primary', 100);
             }
 
             // The background of the material stepper
             .mat-stepper-horizontal {
-                background:color($custom-dark-palette, 'surface');
+                background: color($custom-dark-palette, 'surface');
             }
         }
     }

@@ -23,7 +23,7 @@ $color-1: rgb(153, 191, 170); // Umbra
 $color-2: rgb(92, 134, 141); // Penumbra
 $color-3: rgb(92, 61, 70); // Ambient
 
-$my-elevations:elevations(
+$my-elevations: elevations(
     $color-1,
     $color-2,
     $color-3
@@ -38,10 +38,10 @@ $my-elevations:elevations(
 
 ```scss
 // Returns elevation 1 shadows from $elevations
-$elevation-1:elevation($elevation: '1');
+$elevation-1: elevation($elevation: '1');
 
 // Returns elevation 1 shadows from $my-elevations
-$my-elevation-1:elevation(
+$my-elevation-1: elevation(
     $elevations: $my-elevations, 
     $elevation: 1
 );
@@ -84,8 +84,8 @@ $my-elevation-1:elevation(
 `elevation` 関数はボックス シャドウのリストを返すため、その関数の戻り値を使用して、コンポーネント テーマの特定のエレベーションのみを変更できます。 
 
 ```scss
-$card-theme:card-theme(
-    $resting-shadow:elevation($elevations, 10)
+$card-theme: card-theme(
+    $resting-shadow: elevation($elevations, 10)
 );
 
 @include card($card-theme);
@@ -104,7 +104,7 @@ $card-theme:card-theme(
 
 `elevation` 関数を利用せずに、単純なボック スシャドウを渡すこともできます。
 ```scss
-$card-theme:card-theme(
+$card-theme: card-theme(
     $resting-shadow: 0 10px 10px 10px #666
 );
 

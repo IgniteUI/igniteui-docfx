@@ -220,7 +220,7 @@ public toggleAll() {
 
 ```scss
 // in styles.scss
-$custom-checkbox-theme:checkbox-theme(
+$custom-checkbox-theme: checkbox-theme(
     $border-radius: 10px,
     $label-color: #011627,
     $empty-color: #ECAA53,

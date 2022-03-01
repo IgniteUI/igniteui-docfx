@@ -108,7 +108,7 @@ Some component schemas, like the button schema, have property definitions for ro
 Finally, let's see how a component theme can use the schema we created above.
 
 ```scss
-$my-avatar-theme:avatar-theme(
+$my-avatar-theme: avatar-theme(
     $schema: $my-light-schema
 );
 ```

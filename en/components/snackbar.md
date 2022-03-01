@@ -253,7 +253,7 @@ To get started with styling the snackbar, we need to import the index file, wher
 Following the simplest approach, we create a new theme that extends the [`snackbar-theme`]({environment:sassApiUrl}/index.html#function-snackbar-theme) and accepts the `$text-color`, `$background`, `$button-color` and the `$border-radius` parameters.
 
 ```scss
-$dark-snackbar:snackbar-theme(
+$dark-snackbar: snackbar-theme(
     $text-color: #FFCD0F,
     $background: #292826,
     $button-color: #FFCD0F,
@@ -310,16 +310,16 @@ Instead of hardcoding the color values like we just did, we can achieve greater 
 $yellow-color: #FFCD0F;
 $black-color: #292826;
 
-$dark-palette:palette($primary: $black-color, $secondary: $yellow-color);
+$dark-palette: palette($primary: $black-color, $secondary: $yellow-color);
 ```
 
 And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette.
 
 ```scss
-$dark-snackbar:snackbar-theme(
-    $text-color:color($dark-palette, "secondary", 400),
-    $background:color($dark-palette, "primary", 400),
-    $button-color:color($dark-palette, "secondary", 400),
+$dark-snackbar: snackbar-theme(
+    $text-color: color($dark-palette, "secondary", 400),
+    $background: color($dark-palette, "primary", 400),
+    $button-color: color($dark-palette, "secondary", 400),
     $border-radius: 12px
 );
 ```
@@ -360,7 +360,7 @@ $custom-dark-schema: extend($dark-schema,(
 ));
 
 // Defining snackbar theme with the global dark schema
-$dark-snackbar:snackbar-theme(
+$dark-snackbar: snackbar-theme(
   $palette: $dark-palette,
   $schema: $custom-dark-schema
 );

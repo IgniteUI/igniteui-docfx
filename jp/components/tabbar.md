@@ -342,7 +342,7 @@ export class TabbarRoutingModule { }
 次に、[`bottom-nav-theme`]({environment:sassApiUrl}/index.html#function-bottom-nav-theme) を拡張する新しいテーマを作成し、タブグループのスタイルを設定できるさまざまなパラメーターを受け取ります。
 
 ```scss
-$dark-bottom-nav:bottom-nav-theme(
+$dark-bottom-nav: bottom-nav-theme(
     $background: #292826,
     $active-item-color: #F4D45C
 );
@@ -401,15 +401,15 @@ $dark-bottom-nav:bottom-nav-theme(
 ```scss
 $yellow-color: #F4D45C;
 $black-color: #292826;
-$dark-palette:palette($primary: $black-color, $secondary: $yellow-color);
+$dark-palette: palette($primary: $black-color, $secondary: $yellow-color);
 ```
 
 また [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取り出すことができます。
 
 ```scss
-$dark-bottom-nav:bottom-nav-theme(
-    $background:color($dark-palette, "primary", 400),
-    $active-item-color:color($dark-palette, "secondary", 400)
+$dark-bottom-nav: bottom-nav-theme(
+    $background: color($dark-palette, "primary", 400),
+    $active-item-color: color($dark-palette, "secondary", 400)
 );
 ```
 

@@ -145,7 +145,7 @@ To begin the customization of the Multi-row Layout feature, you need to import t
 Next, create a new theme, that extends the [`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) and accepts the parameters, required to customize the feature layout as desired.   
 
 ```scss
-$custom-theme:grid-theme(
+$custom-theme: grid-theme(
     $cell-active-border-color: #ffcd0f,
     $cell-selected-background: #6f6f6f,
     $row-hover-background: #fde069,
@@ -165,7 +165,7 @@ In the approach, that was described above, the color values were hardcoded. Alte
 $black-color: #494949;
 $yellow-color: #FFCD0F;
 
-$custom-palette:palette(
+$custom-palette: palette(
   $primary: $black-color,
   $secondary: $yellow-color
 );
@@ -174,15 +174,15 @@ $custom-palette:palette(
 After a custom palette has been generated, the `igx-color` function can be used to obtain different varieties of the primary and the secondary colors.
 
 ```scss
-$custom-theme:grid-theme(
-    $cell-active-border-color:color($custom-palette, "secondary", 500),
-    $cell-selected-background:color($custom-palette, "primary", 300),
-    $row-hover-background:color($custom-palette, "secondary", 300),
-    $row-selected-background:color($custom-palette, "primary", 100),
-    $header-background:color($custom-palette, "primary", 500),
+$custom-theme: grid-theme(
+    $cell-active-border-color: color($custom-palette, "secondary", 500),
+    $cell-selected-background: color($custom-palette, "primary", 300),
+    $row-hover-background: color($custom-palette, "secondary", 300),
+    $row-selected-background: color($custom-palette, "primary", 100),
+    $header-background: color($custom-palette, "primary", 500),
     $header-text-color:contrast-color($custom-palette, "primary", 500),
-    $sorted-header-icon-color:color($custom-palette, "secondary", 500),
-    $sortable-header-icon-hover-color:color($custom-palette, "secondary", 600)
+    $sorted-header-icon-color: color($custom-palette, "secondary", 500),
+    $sortable-header-icon-hover-color: color($custom-palette, "secondary", 600)
 );
 ```
 
@@ -208,7 +208,7 @@ In order for the custom schema to be applied, either `light`, or `dark` globals 
 $my-custom-schema: extend($light-schema, ( 
     igx-grid: $custom-grid-schema
 ));
- $custom-theme:grid-theme(
+ $custom-theme: grid-theme(
     $palette: $custom-palette,
     $schema: $my-custom-schema
 );

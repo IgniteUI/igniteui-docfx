@@ -225,7 +225,7 @@ Badge のスタイル設定は、すべてのテーマ関数とコンポーネ�
 最も簡単な方法は、[`badge-theme`]({environment:sassApiUrl}/index.html#function-badge-theme) を拡張する新しいテーマを作成し、バッジの項目をスタイル設定するいくつかのパラメーターを受け取る方法です。
 
 ```scss
-$custom-badge-theme:badge-theme(
+$custom-badge-theme: badge-theme(
     $border-color: white,
     $border-width: 1px,
     $icon-color: white,

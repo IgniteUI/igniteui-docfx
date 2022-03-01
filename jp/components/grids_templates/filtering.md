@@ -430,7 +430,7 @@ public matchingRecordsOnlyStrategy = new TreeGridMatchingRecordsOnlyFilteringStr
 最も簡単な方法は、[`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) を拡張する新しいテーマを作成し、`$filtering-row-text-color`、`$filtering-row-background`、`$filtering-header-text-color`、`$filtering-header-background` パラメーターを受け取ります。
 
 ```scss
-$custom-grid:grid-theme(
+$custom-grid: grid-theme(
     $filtering-row-text-color: #292826,
     $filtering-row-background: #FFCD0F,
     $filtering-header-text-color: #292826,
@@ -441,14 +441,14 @@ $custom-grid:grid-theme(
 以下のように、`grid-theme` は、フィルタリング行とフィルタリングされているそれぞれの列ヘッダーの色のみを制御します。入力グループ、チップ、ボタンなど、フィルタリング行内には明らかに多くのコンポーネントがあります。スタイルの設定は、それぞれに個別のテーマを作成する必要があるため、新しい入力グループのテーマと新しいボタンのテーマを作成します。
 
 ```scss
-$dark-input-group:input-group-theme(
+$dark-input-group: input-group-theme(
     $box-background: #FFCD0F,
     $idle-text-color: #292826,
     $focused-text-color: #292826,
     $filled-text-color: #292826
 );
 
-$dark-button:button-theme(
+$dark-button: button-theme(
     $flat-background: #FFCD0F,
     $flat-text-color: #292826,
     $flat-hover-background: #292826,
@@ -504,31 +504,31 @@ $dark-button:button-theme(
 $yellow-color: #FFCD0F;
 $black-color: #292826;
 
-$dark-palette:palette($primary: $black-color, $secondary: $yellow-color);
+$dark-palette: palette($primary: $black-color, $secondary: $yellow-color);
 ```
 
 次に [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取得できます。 
 
 ```scss
-$custom-grid:grid-theme(
-    $filtering-row-text-color:color($dark-palette, "primary", 400),
-    $filtering-row-background:color($dark-palette, "secondary", 400),
-    $filtering-header-text-color:color($dark-palette, "primary", 400),
-    $filtering-header-background:color($dark-palette, "secondary", 400)
+$custom-grid: grid-theme(
+    $filtering-row-text-color: color($dark-palette, "primary", 400),
+    $filtering-row-background: color($dark-palette, "secondary", 400),
+    $filtering-header-text-color: color($dark-palette, "primary", 400),
+    $filtering-header-background: color($dark-palette, "secondary", 400)
 );
 
-$dark-input-group:input-group-theme(
-    $box-background:color($dark-palette, "secondary", 400),
-    $idle-text-color:color($dark-palette, "primary", 400),
-    $focused-text-color:color($dark-palette, "primary", 400),
-    $filled-text-color:color($dark-palette, "primary", 400)
+$dark-input-group: input-group-theme(
+    $box-background: color($dark-palette, "secondary", 400),
+    $idle-text-color: color($dark-palette, "primary", 400),
+    $focused-text-color: color($dark-palette, "primary", 400),
+    $filled-text-color: color($dark-palette, "primary", 400)
 );
 
-$dark-button:button-theme(
-    $flat-background:color($dark-palette, "secondary", 400),
-    $flat-text-color:color($dark-palette, "primary", 400),
-    $flat-hover-background:color($dark-palette, "primary", 400),
-    $flat-hover-text-color:color($dark-palette, "secondary", 400)
+$dark-button: button-theme(
+    $flat-background: color($dark-palette, "secondary", 400),
+    $flat-text-color: color($dark-palette, "primary", 400),
+    $flat-hover-background: color($dark-palette, "primary", 400),
+    $flat-hover-text-color: color($dark-palette, "secondary", 400)
 );
 ```
 
@@ -608,19 +608,19 @@ $custom-light-schema: extend($light-schema,(
 ));
 
 // Defining grid-theme with the global light schema
-$custom-grid:grid-theme(
+$custom-grid: grid-theme(
   $palette: $dark-palette,
   $schema: $custom-light-schema
 );
 
 // Defining button-theme with the global light schema
-$custom-button:button-theme(
+$custom-button: button-theme(
   $palette: $dark-palette,
   $schema: $custom-light-schema
 );
 
 // Defining input-group-theme with the global light schema
-$custom-input-group:input-group-theme(
+$custom-input-group: input-group-theme(
   $palette: $dark-palette,
   $schema: $custom-light-schema
 );

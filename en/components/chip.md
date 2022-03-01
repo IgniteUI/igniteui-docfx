@@ -389,7 +389,7 @@ To get started with styling the chip, we need to import the `index` file, where 
 Following the simplest approach, we create a new theme that extends the [`chip-theme`]({environment:sassApiUrl}/index.html#function-chip-theme) and accepts some parameters that style the chip's items:
 
 ```scss
-$custom-theme:chip-theme(
+$custom-theme: chip-theme(
     $background: #011627,
     $hover-background:  #011627dc,
     $focus-background: #0116276c,

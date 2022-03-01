@@ -159,7 +159,7 @@ Month Picker のスタイル設定を始めるには、すべてのテーマ関�
 Month Picker はカレンダーのテーマを使用するため、[`calendar-theme`]({environment:sassApiUrl}/index.html#function-calendar-theme) を拡張する新しいテーマを作成し、そのパラメーターを使用して Month Picker の項目をスタイル設定します。
 
 ```scss
-$my-calendar-theme:calendar-theme(
+$my-calendar-theme: calendar-theme(
   $border-radius: 15px,
   $content-background: #011627,
   $picker-background-color: #011627,

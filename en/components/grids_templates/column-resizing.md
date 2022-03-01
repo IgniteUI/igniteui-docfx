@@ -251,7 +251,7 @@ To get started with the styling of the @@igComponent column resize line, we need
 The simplest approach to achieve this is to create a new theme that extends the [`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) and accepts many parameters as well as the `$resize-line-color` parameter.
 
 ``` scss
-$custom-grid-theme:grid-theme(
+$custom-grid-theme: grid-theme(
     $resize-line-color: #0288D1
 );
 
@@ -276,15 +276,15 @@ Instead of hard-coding the color values, we can achieve greater flexibility in t
 $primary-color: #0288D1;
 $secondary-color: #BDBDBD;
 
-$custom-theme-palette:palette($primary: $primary-color, $secondary: $secondary-color);
+$custom-theme-palette: palette($primary: $primary-color, $secondary: $secondary-color);
 ```
 
 And then, with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color), we can easily retrieve the color from the palette. 
 
 ```scss
-$custom-grid-theme:grid-theme(
+$custom-grid-theme: grid-theme(
     $palette: $custom-theme-palette,
-    $resize-line-color:color($custom-theme-palette, 'secondary', 500)
+    $resize-line-color: color($custom-theme-palette, 'secondary', 500)
 );
 ```
 
@@ -322,7 +322,7 @@ $custom-light-grid-schema: extend($light-schema,(
 ));
 
 // Specifying the palette and schema of the custom grid theme
-$custom-grid-theme:grid-theme(
+$custom-grid-theme: grid-theme(
     $palette: $custom-theme-palette,
     $schema: $custom-light-grid-schema
 );

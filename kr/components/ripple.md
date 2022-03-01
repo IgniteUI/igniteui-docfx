@@ -118,7 +118,7 @@ To begin styling of the predefined ripple color, you need to import the `index` 
 You can easily create a new theme, that extends the [`ripple-theme`]({environment:sassApiUrl}/index.html#function-ripple-theme) and accepts the parameters, required to customize the ripple as desired.
 
 ```scss
-$custom-theme:ripple-theme(
+$custom-theme: ripple-theme(
   $color: #FFCD0F
 );
 ```   
@@ -131,7 +131,7 @@ In the approach, that was described above, the color value was hardcoded. Altern
 $black-color: #494949;
 $yellow-color: #ffcd0f;
 
-$custom-palette:palette(
+$custom-palette: palette(
     $primary: $black-color,
     $secondary: $yellow-color
 );
@@ -140,8 +140,8 @@ $custom-palette:palette(
 After the custom palette has been generated, the `igx-color` function can be used to obtain different varieties of the primary and the secondary colors.   
 
 ```scss
-$custom-theme:ripple-theme(
-    $color:color($custom-palette, "secondary", 500)
+$custom-theme: ripple-theme(
+    $color: color($custom-palette, "secondary", 500)
 );
 ```
 
@@ -161,7 +161,7 @@ $my-custom-schema: extend($dark-schema, (
     igx-ripple: $custom-ripple-schema
 ));
 
-$custom-theme:ripple-theme(
+$custom-theme: ripple-theme(
     $palette: $custom-palette,
     $schema: $my-custom-schema
 );

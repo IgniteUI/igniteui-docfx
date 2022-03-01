@@ -413,7 +413,7 @@ public onDropAllowed(args) {
 次に、[`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) を拡張し、必要に応じて行のピン固定機能のカスタマイズに必要なパラメーターを受け入れる新しいテーマを作成します。
 
 ```scss
-$custom-grid-theme:grid-theme(
+$custom-grid-theme: grid-theme(
     /* Pinning properties that affect styling */
     $pinned-border-width: 5px,
     $pinned-border-style: double,

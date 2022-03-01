@@ -451,7 +451,7 @@ export class MyHGridEventsComponent {
 $white: #fff;
 $blue: #4567bb;
 
-$color-palette:palette($primary: $white, $secondary: $blue);
+$color-palette: palette($primary: $white, $secondary: $blue);
 ```
 
 ### テーマの定義
@@ -459,11 +459,11 @@ $color-palette:palette($primary: $white, $secondary: $blue);
 これで、パレットを使用してテーマを定義できます。セルは [`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) によってスタイル設定されているため、それを使用して @@igxName のテーマを生成できます。
 
 ```scss
-$custom-grid-theme:grid-theme(
+$custom-grid-theme: grid-theme(
     $cell-editing-background: $blue,
     $cell-edited-value-color: $white,
     $cell-active-border-color: $white,
-    $edit-mode-color:color($color-palette, "secondary", 200)
+    $edit-mode-color: color($color-palette, "secondary", 200)
 );
 ```
 

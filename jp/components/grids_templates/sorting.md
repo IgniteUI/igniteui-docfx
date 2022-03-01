@@ -186,7 +186,7 @@ public ngOnInit() {
 最も単純なアプローチに従って、[`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) を拡張し、`$sorted-header-icon-color` and `sortable-header-icon-hover-color` パラメーターを受け取ります。
 
 ```scss
-$custom-theme:grid-theme(
+$custom-theme: grid-theme(
     $sorted-header-icon-color: #ffb06a,
     $sortable-header-icon-hover-color: black
 );
@@ -218,15 +218,15 @@ $custom-theme:grid-theme(
 $black-color: black;
 $orange-color: #ffb06a;
 
-$custom-palette:palette($primary: $black-color, $secondary: $orange-color);
+$custom-palette: palette($primary: $black-color, $secondary: $orange-color);
 ```
 
 次に [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取得できます。
 
 ```scss
-$custom-theme:grid-theme(
-    $sorted-header-icon-color:color($custom-palette, "secondary", 500),
-    $sortable-header-icon-hover-color:color($custom-palette, "primary", 500)
+$custom-theme: grid-theme(
+    $sorted-header-icon-color: color($custom-palette, "secondary", 500),
+    $sortable-header-icon-hover-color: color($custom-palette, "primary", 500)
 );
 ```
 
@@ -260,7 +260,7 @@ $my-custom-schema: extend($light-schema,
 );
 
 // Defining our custom theme with the custom schema
-$custom-theme:grid-theme(
+$custom-theme: grid-theme(
   $palette: $custom-palette,
   $schema: $my-custom-schema
 );

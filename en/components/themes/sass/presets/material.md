@@ -43,7 +43,7 @@ We create those mixins just for your convenience, otherwise, if you want to use 
 $primary-color: #2ab759;
 $secondary-color: #f96a88;
 
-$my-color-palette:palette(
+$my-color-palette: palette(
     // IMPORTANT, the primary and secondary colors are required
     $primary: $primary-color,
     $secondary: $secondary-color,

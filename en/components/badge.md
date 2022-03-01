@@ -224,7 +224,7 @@ To get started with styling the badges, we need to import the `index` file, wher
 Following the simplest approach, we create a new theme that extends the [`badge-theme`]({environment:sassApiUrl}/index.html#function-badge-theme) and accepts some parameters that style the badge's items.
 
 ```scss
-$custom-badge-theme:badge-theme(
+$custom-badge-theme: badge-theme(
     $border-color: white,
     $border-width: 1px,
     $icon-color: white,

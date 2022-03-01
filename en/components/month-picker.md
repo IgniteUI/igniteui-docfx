@@ -158,7 +158,7 @@ To get started with styling the month picker, we need to import the `index` file
 The month picker uses the calendar's theme, so we have to create a new theme that extends the [`calendar-theme`]({environment:sassApiUrl}/index.html#function-calendar-theme) and use some of its parameters to style the month picker's items:
 
 ```scss
-$my-calendar-theme:calendar-theme(
+$my-calendar-theme: calendar-theme(
   $border-radius: 15px,
   $content-background: #011627,
   $picker-background-color: #011627,

@@ -135,7 +135,7 @@ Given the following markup:
 We need to create a theme:
 
 ```scss
-$custom-avatar-theme:avatar-theme(
+$custom-avatar-theme: avatar-theme(
     $background: #72da67,
     $color: #000000,
     $border-radius-square: 16px

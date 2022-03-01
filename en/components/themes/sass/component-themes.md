@@ -40,7 +40,7 @@ Defining an avatar theme:
 // Some place after @include theme(...);
 
 // Change the background of the avatar to purple.
-$new-avatar-theme:avatar-theme(
+$new-avatar-theme: avatar-theme(
   $background: purple,
 );
 
@@ -58,7 +58,7 @@ For instance:
 @include css-vars($new-avatar-theme);
 
 // Later
-$another-avatar-theme:avatar-theme(
+$another-avatar-theme: avatar-theme(
   $background: royalblue,
 );
 
@@ -141,7 +141,7 @@ And this is what our Sass stylesheet looks like:
 // !IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 
-$avatar-theme:avatar-theme(
+$avatar-theme: avatar-theme(
   $background: royalblue,
 );
 
@@ -184,7 +184,7 @@ The below example shows how you can style components using hard-coded values.
 @include theme($palette: $default-palette, $legacy-support: true);
 
 // Overwrite the default themes for igx-avatar using hard-coded values:
-$avatar-theme:avatar-theme(
+$avatar-theme: avatar-theme(
   $background: royalblue,
 );
 
@@ -207,7 +207,7 @@ The below sample uses the sample from the [View Encapsulation](#view-encapsulati
 // Enable legacy support first.
 // !IMPORTANT: Only applicable for versions older than Ignite UI for Angular 13.
 $igx-legacy-support: true;
-$avatar-theme:avatar-theme(
+$avatar-theme: avatar-theme(
   $initials-background: royalblue,
 );
 

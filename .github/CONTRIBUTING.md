@@ -75,7 +75,7 @@ The main purpose of the Styling section is to provide simple examples on how to 
 ### 3.	Provide the simplest styling example, which is to extend the default theme for the corresponding feature/component. For example, when styling the paginator UI, the `igx-grid-paginator-theme` needs to be extended:
 
 ```scss
-$dark-grid-paginator:grid-paginator-theme(
+$dark-grid-paginator: grid-paginator-theme(
     $text-color: #F4D45C,
     $background-color: #575757,
     $border-color: #292826

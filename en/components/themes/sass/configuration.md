@@ -31,7 +31,7 @@ This is the default way to turn off legacy support for the theme you're building
 // app.component.scss
 $igx-legacy-support: true;
 
-$color:color($default-palette, 'primary', 900);
+$color: color($default-palette, 'primary', 900);
 ```
 
 We recommend you create a `_variables.scss` file in the `styles` directory of your project where you store all of your global configuration variables. In this way, you can simply import your configuration in every style file.
@@ -45,7 +45,7 @@ For instance, the `igx-color` function may not be called with a specific palette
 You can change the default palette at any time by shadowing its declaration:
 
 ```scss
-$my-palette:palette(
+$my-palette: palette(
   $primary: red, 
   $secondary: blue
 );
@@ -64,7 +64,7 @@ Now, we can assign `$my-palette` to `$default-palette` and store it in our `_var
 
 $legacy-support: true; /* not supported in Ignite UI for Angular 13 */
 
-$my-palette:palette(
+$my-palette: palette(
   $primary: red, 
   $secondary: blue
 );

@@ -151,7 +151,7 @@ If you want to create a gradient with just two color stops, you can do so by usi
 ```scss
 $colors: #695cf9, #ef017c;
 
-$custom-theme:progress-circular-theme(
+$custom-theme: progress-circular-theme(
     $progress-circle-color: $colors
     
 );
@@ -213,7 +213,7 @@ To get started with styling the circular progress bar, we need to import the `in
 Following the simplest approach, we create a new theme that extends the [`progress-circular-theme`]({environment:sassApiUrl}/index.html#function-progress-circular-theme) and accepts the `$base-circle-color` and the `$progress-circle-color` parameters.
 
 ```scss
-$custom-theme:progress-circular-theme(
+$custom-theme: progress-circular-theme(
     $base-circle-color: lightgray,
     $progress-circle-color: rgb(32, 192, 17)
 );

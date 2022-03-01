@@ -185,7 +185,7 @@ To get started with styling the sorting behavior, we need to import the `index` 
 Following the simplest approach, we create a new theme that extends the [`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) and accepts the `$sorted-header-icon-color` and `sortable-header-icon-hover-color` parameters.
 
 ```scss
-$custom-theme:grid-theme(
+$custom-theme: grid-theme(
     $sorted-header-icon-color: #ffb06a,
     $sortable-header-icon-hover-color: black
 );
@@ -217,15 +217,15 @@ Instead of hardcoding the color values like we just did, we can achieve greater 
 $black-color: black;
 $orange-color: #ffb06a;
 
-$custom-palette:palette($primary: $black-color, $secondary: $orange-color);
+$custom-palette: palette($primary: $black-color, $secondary: $orange-color);
 ```
 
 And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette.
 
 ```scss
-$custom-theme:grid-theme(
-    $sorted-header-icon-color:color($custom-palette, "secondary", 500),
-    $sortable-header-icon-hover-color:color($custom-palette, "primary", 500)
+$custom-theme: grid-theme(
+    $sorted-header-icon-color: color($custom-palette, "secondary", 500),
+    $sortable-header-icon-hover-color: color($custom-palette, "primary", 500)
 );
 ```
 
@@ -259,7 +259,7 @@ $my-custom-schema: extend($light-schema,
 );
 
 // Defining our custom theme with the custom schema
-$custom-theme:grid-theme(
+$custom-theme: grid-theme(
   $palette: $custom-palette,
   $schema: $my-custom-schema
 );

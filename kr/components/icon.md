@@ -121,7 +121,7 @@ You can easily create a new theme, that extends the [`icon-theme`]({environment:
    
 
 ```scss
-$custom-theme:icon-theme(
+$custom-theme: icon-theme(
   $color: #ffcd0f,
   $disabled-color: #494949
 );
@@ -135,7 +135,7 @@ In the approach, that was described above, the color values were hardcoded. Alte
 $black-color: #494949;
 $yellow-color: #ffcd0f;
 
-$custom-palette:palette(
+$custom-palette: palette(
     $primary: $black-color,
     $secondary: $yellow-color
 );
@@ -145,8 +145,8 @@ After the custom palette has been generated, the `igx-color` function can be use
 
 ```scss
 $custom-theme:icon-theme(
-    $color:color($custom-palette, "secondary", 600),
-    $disabled-color:color($custom-palette, "primary", 500)
+    $color: color($custom-palette, "secondary", 600),
+    $disabled-color: color($custom-palette, "primary", 500)
 );
 ```
 
@@ -167,7 +167,7 @@ $my-custom-schema: extend($dark-schema, (
     igx-icon: $custom-icon-schema
 ));
 
-$custom-theme:icon-theme(
+$custom-theme: icon-theme(
     $palette: $custom-palette,
     $schema: $my-custom-schema
 );

@@ -240,7 +240,7 @@ In order to take advantage of the functions exposed by the theming engine, we ha
 
 Following the simplest approach, we create a new theme that extends the [expansion-panel-theme]({environment:sassApiUrl}/index.html#function-expansion-panel-theme) and accepts an `$expanded-margin` parameter. 
 ```scss
-$custom-panel-theme:expansion-panel-theme(
+$custom-panel-theme: expansion-panel-theme(
     $expanded-margin: 0px
 );
 ```

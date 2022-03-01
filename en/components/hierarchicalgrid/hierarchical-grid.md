@@ -292,7 +292,7 @@ Next, create a new theme, that extends the [`grid-theme`]({environment:sassApiUr
 
 
 ```scss
-$custom-theme:grid-theme(
+$custom-theme: grid-theme(
   $cell-active-border-color: #ffcd0f,
   $cell-selected-background: #6f6f6f,
   $row-hover-background: #f8e495,
@@ -314,14 +314,14 @@ In the approach, that was described above, the color values were hardcoded. Alte
 $black-color: #494949;
 $yellow-color: #FFCD0F;
 
-$custom-palette:palette(
+$custom-palette: palette(
   $primary: $black-color,
   $secondary: $yellow-color
 );
 ```
 After a custom palette has been generated, the `igx-color` function can be used to obtain different varieties of the primary and the secondary colors.
 ```scss
-$custom-theme:grid-theme(
+$custom-theme: grid-theme(
     $cell-active-border-color: (igx-color($custom-palette, "secondary", 500)),
     $cell-selected-background: (igx-color($custom-palette, "primary", 300)),
     $row-hover-background: (igx-color($custom-palette, "secondary", 100)),
@@ -358,7 +358,7 @@ $my-custom-schema: extend($light-schema, (
     igx-grid: $custom-grid-schema
 ));
 
-$custom-theme:grid-theme(
+$custom-theme: grid-theme(
     $palette: $custom-palette,
     $schema: $my-custom-schema
 );

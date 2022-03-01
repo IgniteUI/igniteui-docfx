@@ -105,7 +105,7 @@ $my-light-schema: extend($light-material-schema, (
 最後に各コンポーネント テーマで上記で作成したスキーマを使用する方法について説明します。
 
 ```scss
-$my-avatar-theme:avatar-theme(
+$my-avatar-theme: avatar-theme(
     $schema: $my-avatar-schema
 );
 ```

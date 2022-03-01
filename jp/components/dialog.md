@@ -212,7 +212,7 @@ params: {
 [`dialog-theme`]({environment:sassApiUrl}/index.html#function-dialog-theme) を拡張する新しいテーマを作成し、ダイアログのスタイルを設定できるさまざまなパラメーターを受け取ります。
 
 ```scss
-$my-dialog-theme:dialog-theme(
+$my-dialog-theme: dialog-theme(
     $background: #011627,
     $title-color: #ECAA53,
     $message-color: #FEFEFE,

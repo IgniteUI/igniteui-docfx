@@ -201,7 +201,7 @@ IgxHierarchicalGrid の子グリッドの実装方法および DI スコープ�
 最も簡単な方法で [`paginator-theme`]({environment:sassApiUrl}/index.html#function-paginator-theme) を拡張し `$text-color`、`$background-color` および `$border-color` パラメータを受け入れる新しいテーマを作成します。
 
 ```scss
-$dark-paginator:paginator-theme(
+$dark-paginator: paginator-theme(
     $text-color: #F4D45C,
     $background-color: #575757,
     $border-color: #292826
@@ -211,7 +211,7 @@ $dark-paginator:paginator-theme(
 `paginator-theme` はページング コンテナーの色の制御のみですが、ポケットベル UI のボタンには影響しません。これらのボタンにスタイル設定するために、新しいボタン テーマを作成しましょう。
 
 ```scss
-$dark-button:button-theme(
+$dark-button: button-theme(
     $icon-color: #FFCD0F,
     $icon-hover-color: #292826,
     $icon-hover-background: #FFCD0F,
@@ -259,27 +259,27 @@ $dark-button:button-theme(
 $yellow-color: #F9D342;
 $black-color: #292826;
 
-$dark-palette:palette($primary: $black-color, $secondary: $yellow-color);
+$dark-palette: palette($primary: $black-color, $secondary: $yellow-color);
 ```
 
 [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取り出すことができます。
 
 ```scss
-$dark-paginator:paginator-theme(
+$dark-paginator: paginator-theme(
     $palette: $dark-palette,
-    $text-color:color($dark-palette, "secondary", 400),
-    $background-color:color($dark-palette, "primary", 200),
+    $text-color: color($dark-palette, "secondary", 400),
+    $background-color: color($dark-palette, "primary", 200),
     $border-color: color($dark-palette, "primary", 500)
 );
 
-$dark-button:button-theme(
+$dark-button: button-theme(
     $palette: $dark-palette,
-    $icon-color:color($dark-palette, "secondary", 700),
-    $icon-hover-color:color($dark-palette, "primary", 500),
-    $icon-hover-background:color($dark-palette, "secondary", 500),
-    $icon-focus-color:color($dark-palette, "primary", 500),
-    $icon-focus-background:color($dark-palette, "secondary", 500),
-    $disabled-color:color($dark-palette, "primary", 700)
+    $icon-color: color($dark-palette, "secondary", 700),
+    $icon-hover-color: color($dark-palette, "primary", 500),
+    $icon-hover-background: color($dark-palette, "secondary", 500),
+    $icon-focus-color: color($dark-palette, "primary", 500),
+    $icon-focus-background: color($dark-palette, "secondary", 500),
+    $disabled-color: color($dark-palette, "primary", 700)
 );
 ```
 
@@ -342,13 +342,13 @@ $custom-dark-schema: extend($dark-schema,(
 ));
 
 // Definingpaginator-theme with the global dark schema
-$dark-paginator:paginator-theme(
+$dark-paginator: paginator-theme(
   $palette: $dark-palette,
   $schema: $custom-dark-schema
 );
 
 // Defining button-theme with the global dark schema
-$dark-button:button-theme(
+$dark-button: button-theme(
   $palette: $dark-palette,
   $schema: $custom-dark-schema
 );

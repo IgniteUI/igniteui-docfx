@@ -138,7 +138,7 @@ Ignite UI for Angular は、`type="file"` の入力スタイルも提供し、�
 次に、[`input-group-theme`]({environment:sassApiUrl}/index.html#function-input-group-theme) を拡張する新しいテーマを作成し、変更するパラメーターを渡します。
 
 ```scss
-$custom-input-group:input-group-theme(
+$custom-input-group: input-group-theme(
   $filled-text-color: #288a54,
   $focused-text-color: #174f30,
   $idle-text-color: #288a54,

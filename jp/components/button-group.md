@@ -244,7 +244,7 @@ public ngOnInit() {
 最も簡単な方法は、[`button-group-theme`]({environment:sassApiUrl}/index.html#function-button-group-theme) を拡張し、さまざまな状態のボタン グループの項目をスタイルするパラメーターを受け取る新しいテーマを作成する方法です。
 
 ```scss
-$custom-button-group:button-group-theme(
+$custom-button-group: button-group-theme(
     $item-text-color: #fdfdfd,
     $item-background: #2f4d6a,
     $item-hover-text-color: #fdfdfd,

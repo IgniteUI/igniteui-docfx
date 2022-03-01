@@ -121,7 +121,7 @@ public selectedColor: string = this.colors[3].hex;
 
 
 ```scss
-$custom-radio-theme:radio-theme(
+$custom-radio-theme: radio-theme(
     $disabled-color: lightgray,
     $empty-color:  #345779,
     $fill-color: #2dabe8,

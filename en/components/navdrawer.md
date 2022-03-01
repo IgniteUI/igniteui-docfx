@@ -331,7 +331,7 @@ To get started with styling the navigation drawer, we need to import the `index`
 Following the simplest approach, we create a new theme that extends the [`navdrawer-theme`]({environment:sassApiUrl}/index.html#function-navdrawer-theme) and accepts a few parameters that style the navdrawer's items:
 
 ```scss
-$custom-theme:navdrawer-theme(
+$custom-theme: navdrawer-theme(
     $background: #2d313a,
     $item-active-background: #ecc256,
     $item-header-text-color: #ecc256

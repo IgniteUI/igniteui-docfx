@@ -343,19 +343,19 @@ Date Range Picker コンポーネントは `date-range-picker-theme` を公開�
 $purple: #9E379F;
 $blue: #61AEDB;
 
-$custom-palette:palette($primary: $blue, $secondary: $purple);
+$custom-palette: palette($primary: $blue, $secondary: $purple);
 
-$today-text:color($custom-palette, "primary", 500);
-$text-color:color($custom-palette, "secondary", 200);
-$color-focused:color($custom-palette, "secondary", 500);
+$today-text: color($custom-palette, "primary", 500);
+$text-color: color($custom-palette, "secondary", 200);
+$color-focused: color($custom-palette, "secondary", 500);
 
 // DATE-RANGE
-$custom-date-range-theme:date-range-picker-theme(
+$custom-date-range-theme: date-range-picker-theme(
     $label-color: $color-focused
 );
 
 // INPUT GROUP
-$custom-input-group-theme:input-group-theme(
+$custom-input-group-theme: input-group-theme(
   $palette: $custom-palette,
   $filled-text-color: $text-color,
   $idle-text-color: $text-color,
@@ -365,7 +365,7 @@ $custom-input-group-theme:input-group-theme(
 );
 
 // CALENDAR
-$custom-calendar-theme:calendar-theme(
+$custom-calendar-theme: calendar-theme(
     $palette: $custom-palette,
     $date-current-text-color: $today-text,
     $border-radius: 0.5,

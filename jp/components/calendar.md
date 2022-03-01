@@ -385,7 +385,7 @@ Tab キーを使用してページを移動する場合、*igxCalendarComponent*
 最も簡単な方法は、[`calendar-theme`]({environment:sassApiUrl}/index.html#function-calendar-theme) を拡張する新しいテーマを作成し、デフォルト テーマのいくつかのパラメーターを受け取る方法です。
 
 ```scss
-$custom-calendar-theme:calendar-theme(
+$custom-calendar-theme: calendar-theme(
   $header-background: #345779,
   $content-background: #fdfdfd,
   $header-text-color: #ffffff,

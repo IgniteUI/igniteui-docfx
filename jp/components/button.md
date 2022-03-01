@@ -236,7 +236,7 @@ public selectDensity(event) {
 テーマを作成する必要があります:
 
 ```scss
-$custom-button-theme:button-theme(
+$custom-button-theme: button-theme(
     $foreground: #fdfdfd,
     $hover-foreground: #fdfdfd,
     $focus-foreground: #fdfdfd,

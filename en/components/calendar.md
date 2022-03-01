@@ -384,7 +384,7 @@ To get started with styling the calendar, we need to import the `index` file, wh
 Following the simplest approach, we create a new theme that extends the [`calendar-theme`]({environment:sassApiUrl}/index.html#function-calendar-theme) and accepts some of the default theme's parameters.
 
 ```scss
-$custom-calendar-theme:calendar-theme(
+$custom-calendar-theme: calendar-theme(
   $header-background: #345779,
   $content-background: #fdfdfd,
   $header-text-color: #ffffff,

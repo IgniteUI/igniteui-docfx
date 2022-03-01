@@ -223,7 +223,7 @@ public decrementProgress() {
 最も簡単な方法として、[`progress-linear-theme`]({environment:sassApiUrl}/index.html#function-progress-linear-theme) を拡張し、`$track-color`、`$fill-color-default` および `$text-color パラメーターを受け取る新しいテーマを作成する方法があります。
 
 ```scss
-$custom-theme:progress-linear-theme(
+$custom-theme: progress-linear-theme(
     $track-color: #D3D3D3,
     $fill-color-default: #ECAA53,
     $text-color: #ECAA53

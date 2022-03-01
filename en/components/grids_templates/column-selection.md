@@ -109,7 +109,7 @@ Following the simplest approach, let's define our custom **theme**.
 
 @@if (igxName === 'IgxTreeGrid') {
 ```scss
-$custom-grid-theme:grid-theme(
+$custom-grid-theme: grid-theme(
     $row-selected-background: #011627,
     $row-selected-text-color: #ECAA53,
     $row-selected-hover-background: #011627,
@@ -122,7 +122,7 @@ $custom-grid-theme:grid-theme(
 }
 @@if (igxName !== 'IgxTreeGrid') {
 ```scss
-$custom-grid-theme:grid-theme(
+$custom-grid-theme: grid-theme(
     $row-selected-background: #011627,
     $row-selected-text-color: #ECAA53,
     $row-selected-hover-background: #011627,

@@ -532,7 +532,7 @@ Excel スタイル フィルタリング コンポーネントを設定するに
 Excel スタイルのフィルタリング ダイアログは、`filtering-row-background` パラメーターを使用して、グリッドのテーマから背景色を取得します。背景を変更するには、カスタム テーマを作成する必要があります。
 
 ```scss
-$custom-grid:grid-theme(
+$custom-grid: grid-theme(
     $filtering-row-background: #FFCD0F
 );
 ```
@@ -540,32 +540,32 @@ $custom-grid:grid-theme(
 ボタン、チェックボックス、リスト、さらにはドロップダウンなど、フィルタリング ダイアログのような Excel 内には明らかに多くのコンポーネントがあります。スタイルを設定するには、それぞれに個別のテーマを作成する必要があります。
 
 ```scss
-$dark-button:button-theme(
+$dark-button: button-theme(
     $background: #FFCD0F,
     $foreground: #292826,
     $hover-background: #292826,
     $hover-foreground: #FFCD0F
 );
 
-$dark-input-group:input-group-theme(
+$dark-input-group: input-group-theme(
     $box-background: #FFCD0F,
     $idle-text-color: #292826,
     $focused-text-color: #292826,
     $filled-text-color: #292826
 );
 
-$custom-list:list-theme(
+$custom-list: list-theme(
     $background: #FFCD0F
 );
 
-$custom-checkbox:checkbox-theme(
+$custom-checkbox: checkbox-theme(
     $empty-color: #292826,
     $fill-color: #292826,
     $tick-color: #FFCD0F,
     $label-color: #292826
 );
 
-$custom-drop-down:drop-down-theme(
+$custom-drop-down: drop-down-theme(
     $background-color: #FFCD0F,
     $item-text-color: #292826,
     $hover-item-background: #292826,
@@ -625,45 +625,45 @@ $custom-drop-down:drop-down-theme(
 $yellow-color: #FFCD0F;
 $black-color: #292826;
 
-$dark-palette:palette($primary: $black-color, $secondary: $yellow-color);
+$dark-palette: palette($primary: $black-color, $secondary: $yellow-color);
 ```
 また [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取り出すことができます。
 
 ```scss
-$custom-grid:grid-theme(
+$custom-grid: grid-theme(
     $filtering-row-background: #FFCD0F
 );
 
-$dark-button:button-theme(
-    $background:color($dark-palette, "secondary", 400),
-    $foreground:color($dark-palette, "primary", 400),
-    $hover-background:color($dark-palette, "primary", 400),
-    $hover-foreground:color($dark-palette, "secondary", 400)
+$dark-button: button-theme(
+    $background: color($dark-palette, "secondary", 400),
+    $foreground: color($dark-palette, "primary", 400),
+    $hover-background: color($dark-palette, "primary", 400),
+    $hover-foreground: color($dark-palette, "secondary", 400)
 );
 
-$dark-input-group:input-group-theme(
-    $box-background:color($dark-palette, "secondary", 400),
-    $idle-text-color:color($dark-palette, "primary", 400),
-    $focused-text-color:color($dark-palette, "primary", 400),
-    $filled-text-color:color($dark-palette, "primary", 400)
+$dark-input-group: input-group-theme(
+    $box-background: color($dark-palette, "secondary", 400),
+    $idle-text-color: color($dark-palette, "primary", 400),
+    $focused-text-color: color($dark-palette, "primary", 400),
+    $filled-text-color: color($dark-palette, "primary", 400)
 );
 
-$custom-list:list-theme(
-    $background:color($dark-palette, "secondary", 400)
+$custom-list: list-theme(
+    $background: color($dark-palette, "secondary", 400)
 );
 
-$custom-checkbox:checkbox-theme(
-    $empty-color:color($dark-palette, "primary", 400),
-    $fill-color:color($dark-palette, "primary", 400),
-    $tick-color:color($dark-palette, "secondary", 400),
-    $label-color:color($dark-palette, "primary", 400)
+$custom-checkbox: checkbox-theme(
+    $empty-color: color($dark-palette, "primary", 400),
+    $fill-color: color($dark-palette, "primary", 400),
+    $tick-color: color($dark-palette, "secondary", 400),
+    $label-color: color($dark-palette, "primary", 400)
 );
 
-$custom-drop-down:drop-down-theme(
-    $background-color:color($dark-palette, "secondary", 400),
-    $item-text-color:color($dark-palette, "primary", 400),
-    $hover-item-background:color($dark-palette, "primary", 400),
-    $hover-item-text-color:color($dark-palette, "secondary", 400)
+$custom-drop-down: drop-down-theme(
+    $background-color: color($dark-palette, "secondary", 400),
+    $item-text-color: color($dark-palette, "primary", 400),
+    $hover-item-background: color($dark-palette, "primary", 400),
+    $hover-item-text-color: color($dark-palette, "secondary", 400)
 );
 ```
 
@@ -787,32 +787,32 @@ $custom-light-schema: extend($light-schema,(
     igx-drop-down: $custom-drop-down-schema
 ));
 
-$custom-grid:grid-theme(
+$custom-grid: grid-theme(
     $palette: $dark-palette,
     $schema: $custom-light-schema
 );
 
-$custom-button:button-theme(
+$custom-button: button-theme(
     $palette: $dark-palette,
     $schema: $custom-light-schema
 );
 
-$custom-input-group:input-group-theme(
+$custom-input-group: input-group-theme(
     $palette: $dark-palette,
     $schema: $custom-light-schema
 );
 
-$custom-list:list-theme(
+$custom-list: list-theme(
     $palette: $dark-palette,
     $schema: $custom-light-schema
 );
 
-$custom-checkbox:checkbox-theme(
+$custom-checkbox: checkbox-theme(
     $palette: $dark-palette,
     $schema: $custom-light-schema
 );
 
-$custom-drop-down:drop-down-theme(
+$custom-drop-down: drop-down-theme(
     $palette: $dark-palette,
     $schema: $custom-light-schema
 );

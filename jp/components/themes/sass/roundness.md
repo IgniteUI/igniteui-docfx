@@ -33,7 +33,7 @@ $_material-shape-button: (
 
 テーマ ミックスインの使用:
 ```scss
-$my-button-theme:button-theme(
+$my-button-theme: button-theme(
     $border-radius: .5 .2 .5 .2, // resolves to 10px 4px 10px 4px
 );
 

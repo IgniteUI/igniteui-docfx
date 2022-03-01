@@ -199,7 +199,7 @@ ng update @angular/cli
 - 正しいパレットとコンポーネント スキーマがカスタム コンポーネントとグローバルテーマに渡されることを確認してください。グローバル暗いテーマを作成する場合、グレー色に明るい色合いを選択してください。例:
 
 ```scss
-$my-dark-palette:palette(
+$my-dark-palette: palette(
     $primary: olive, 
     $secondary: yellow, 
     $grays: #fff
@@ -213,7 +213,7 @@ $my-dark-palette:palette(
 グローバル テーマからコンポーネント テーマを除外していないが、`css-vars` ミックスインを使用してカスタム置換テーマを作成する場合、テーマが正しいパレットと対応するスキーマに渡されることを確認してください。
 
 ```scss
-$my-custom-grid:grid-theme(
+$my-custom-grid: grid-theme(
     $palette: $my-dark-palette,
     $schema: $dark-schema
 );
@@ -226,12 +226,12 @@ $my-custom-grid:grid-theme(
 グローバル テーマからコンポーネント テーマを除外し、カスタム置換テーマを作成した場合、コンポーネント ミックスインが含まれ、正しいコンポーネント テーマが渡されることを確認してください。
 
 ```scss
-$my-dark-palette:palette(
+$my-dark-palette: palette(
     ...
     $exclude: ('igx-grid')
 );
 
-$my-custom-grid:grid-theme(
+$my-custom-grid: grid-theme(
     $palette: $my-dark-palette,
     $schema: $dark-schema
 );
@@ -253,7 +253,7 @@ $my-custom-grid:grid-theme(
 @include core();
 
 // Create your theme.
-$my-custom-grid:grid-theme(
+$my-custom-grid: grid-theme(
     $palette: $my-dark-palette,
     $schema: $dark-schema
 );
@@ -423,7 +423,7 @@ $__legacy-libsass: true;
     例えば、次の例は
 
         ```scss
-        $avatar-theme:avatar-theme(
+        $avatar-theme: avatar-theme(
             $initials-background: blue,
             $initials-color: orange,
             $icon-background: blue,
@@ -436,12 +436,12 @@ $__legacy-libsass: true;
     このとおりに変換する必要があります。
 
         ```scss
-        $initials-avatar:avatar-theme(
+        $initials-avatar: avatar-theme(
             $background: blue,
             $color: orange,
         );
 
-        $icon-avatar:avatar-theme(
+        $icon-avatar: avatar-theme(
             $background: blue,
             $color: orange,
         );
@@ -464,7 +464,7 @@ $__legacy-libsass: true;
         <button igxButton="outlined">Outlined button</button>
         ```
         ```scss
-        $my-button-theme:button-theme(
+        $my-button-theme: button-theme(
             $raised-background: red,
             $outlined-outline-color: green
         );
@@ -482,11 +482,11 @@ $__legacy-libsass: true;
         ```
 
         ```scss
-        $my-raised-button:button-theme(
+        $my-raised-button: button-theme(
             $background: red
         );
 
-        $my-outlined-button:button-theme(
+        $my-outlined-button: button-theme(
             $border-color: red
         );
 

@@ -331,7 +331,7 @@ Navigation drawer のスタイル設定を始めるには、すべてのテー�
 最も簡単な方法は、[`navdrawer-theme`]({environment:sassApiUrl}/index.html#function-navdrawer-theme) を拡張する新しいテーマを作成し、navdrawer の項目をスタイル設定するいくつかのパラメーターを受け取る方法です。
 
 ```scss
-$custom-theme:navdrawer-theme(
+$custom-theme: navdrawer-theme(
     $background: #2d313a,
     $item-active-background: #ecc256,
     $item-header-text-color: #ecc256

@@ -22,7 +22,7 @@ $color-1: rgb(153, 191, 170); // Umbra
 $color-2: rgb(92, 134, 141); // Penumbra
 $color-3: rgb(92, 61, 70); // Ambient
 
-$my-elevations:elevations(
+$my-elevations: elevations(
     $color-1,
     $color-2,
     $color-3
@@ -37,10 +37,10 @@ If you want to retrieve the elevation from the default `$elevations` map, you ca
 
 ```scss
 // Returns elevation 1 shadows from $elevations
-$elevation-1:elevation($elevation: '1');
+$elevation-1: elevation($elevation: '1');
 
 // Returns elevation 1 shadows from $my-elevations
-$my-elevation-1:elevation(
+$my-elevation-1: elevation(
     $elevations: $my-elevations, 
     $elevation: 1
 );
@@ -83,8 +83,8 @@ For instance, the card component does support passing custom elevations. To find
 Since the `elevation` function returns a list of box shadows, you can use the return value of that function to modify only certain elevations in your component themes. 
 
 ```scss
-$card-theme:card-theme(
-    $resting-shadow:elevation($elevations, 10)
+$card-theme: card-theme(
+    $resting-shadow: elevation($elevations, 10)
 );
 
 @include card($card-theme);
@@ -103,7 +103,7 @@ This compiles to:
 
 You can also pass simple box shadows without taking advantage of the `elevation` function:
 ```scss
-$card-theme:card-theme(
+$card-theme: card-theme(
     $resting-shadow: 0 10px 10px 10px #666
 );
 

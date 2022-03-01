@@ -49,7 +49,7 @@ Let's create a custom global theme that will use the primary and secondary color
 $primary-color: #2ab759;
 $secondary-color: #f96a88;
 
-$my-color-palette:palette(
+$my-color-palette: palette(
     $primary: $primary-color,
     $secondary: $secondary-color
 );
@@ -147,7 +147,7 @@ All theme mixins can be used as a starting point to create your own theme. Let's
 $primary-color: #b71053;
 $secondary-color: #6c757d; 
 
-$my-color-palette:palette(
+$my-color-palette: palette(
     $primary: $primary-color,
     $secondary: $secondary-color
 );

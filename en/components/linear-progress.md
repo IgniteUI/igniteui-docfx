@@ -222,7 +222,7 @@ To get started with styling the linear progress bar, we need to import the `inde
 Following the simplest approach, we create a new theme that extends the [`progress-linear-theme`]({environment:sassApiUrl}/index.html#function-progress-linear-theme) and accepts the `$track-color`, `$fill-color-default` and `$text-color` parameters.
 
 ```scss
-$custom-theme:progress-linear-theme(
+$custom-theme: progress-linear-theme(
     $track-color: #D3D3D3,
     $fill-color-default: #ECAA53,
     $text-color: #ECAA53

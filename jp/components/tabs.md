@@ -338,7 +338,7 @@ export class AppRoutingModule { }
 次に、[`tabs-theme`]({environment:sassApiUrl}/index.html#function-tabs-theme) を拡張する新しいテーマを作成し、タブグループのスタイルを設定できるさまざまなプロパティを受け取ります。
 
 ```scss
-$dark-tabs:tabs-theme(
+$dark-tabs: tabs-theme(
     $item-text-color: #F4D45C,
     $item-background: #292826,
     $item-hover-background: #F4D45C,
@@ -380,7 +380,7 @@ CSS 変数をサポートしないブラウザー (IE 11 など) をターゲッ
 $yellow-color: #F4D45C;
 $black-color: #292826;
 
-$dark-palette:palette(
+$dark-palette: palette(
   $primary: $black-color,
   $secondary: $yellow-color,
   $grays: #fff
@@ -390,16 +390,16 @@ $dark-palette:palette(
 [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用して、パレットから簡単に取得することができます。
 
 ```scss
-$dark-tabs:tabs-theme(
+$dark-tabs: tabs-theme(
     $palette: $dark-palette,
-    $item-text-color:color($dark-palette, "secondary", 400),
-    $item-background:color($dark-palette, "primary", 400),
-    $item-hover-background:color($dark-palette, "secondary", 400),
-    $item-hover-color:color($dark-palette, "primary", 400),
-    $item-active-color:color($dark-palette, "secondary", 400),
-    $item-active-icon-color:color($dark-palette, "secondary", 400),
-    $indicator-color:color($dark-palette, "secondary", 400),
-    $tab-ripple-color:color($dark-palette, "secondary", 400)
+    $item-text-color: color($dark-palette, "secondary", 400),
+    $item-background: color($dark-palette, "primary", 400),
+    $item-hover-background: color($dark-palette, "secondary", 400),
+    $item-hover-color: color($dark-palette, "primary", 400),
+    $item-active-color: color($dark-palette, "secondary", 400),
+    $item-active-icon-color: color($dark-palette, "secondary", 400),
+    $indicator-color: color($dark-palette, "secondary", 400),
+    $tab-ripple-color: color($dark-palette, "secondary", 400)
 );
 ```
 

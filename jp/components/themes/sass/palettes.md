@@ -17,7 +17,7 @@ Ignite UI for Angular のコンテキストでのパレットは [Sass Maps](htt
 ```scss
 // _variables.scss
 
-$melon-palette:palette(
+$melon-palette: palette(
     $primary: #2ab759,
     $secondary: #f96a88,
 );
@@ -150,7 +150,7 @@ $handmade-palette: (
 ```scss
 // src/styles/_variables.scss
 
-$my-palette:palette(
+$my-palette: palette(
   $primary: #2ab759,
   $secondary: #f96a88,
 );
@@ -171,7 +171,7 @@ $default-palette: $my-palette;
 @use '../styles/styles/variables' as *;
 
 :host {
-  background:color($variant: 900);
+  background: color($variant: 900);
 }
 ```
 
@@ -189,7 +189,7 @@ $company-color: #2ab759; /* Some green shade I like */
 $secondary-color: #f96a88; /* Watermelon pink */
 $grayscale-base: #fff; /* Used to generate shades of gray */
 
-$my-color-palette:palette(
+$my-color-palette: palette(
     $primary: $company-color,
     $secondary: $secondary-color,
     $grays: $grayscale-base
@@ -204,16 +204,16 @@ $my-color-palette:palette(
 
 ```scss
 // Get the primary 500 color variant from $default-palette
-$my-primary-500:color();
+$my-primary-500: color();
 
 // Get the primary 600 color variant from $default-palette
-$my-primary-600:color($variant: 600);
+$my-primary-600: color($variant: 600);
 
 // Get the secondary A700 color variant from $my-palette
-$my-primary-A700:color($my-palette, 'secondary', 'A700');
+$my-primary-A700: color($my-palette, 'secondary', 'A700');
 
 // Get the warn color from $my-palette
-$my-warning-color:color($my-palette, 'warn');
+$my-warning-color: color($my-palette, 'warn');
 
 .my-awesome-class {
     background: $my-primary-600;
@@ -234,7 +234,7 @@ $my-warning-color:color($my-palette, 'warn');
 カラー バリアントを取得する方法と同様に、パレットの各カラー バリアントのコントラスト テキスト カラーを取得する方法があります。
 
 ```scss
-$my-primary-800:color($my-palette, 'primary', 600);
+$my-primary-800: color($my-palette, 'primary', 600);
 $my-primary-800-text:contrast-color($my-palette, 'primary', 600);
 
 // sample usage
@@ -282,7 +282,7 @@ CSS クラスを使用して Web 要素 (テキストや背景など) にカラ�
 以下はその例です。
 
 ```scss
-$my-palette:palette(
+$my-palette: palette(
   $primary: #2ab759,
   $secondary: #f96a88,
 );

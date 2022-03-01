@@ -43,7 +43,7 @@ Material テーマは、Ignite UI for Angular のデフォルトテーマです�
 $primary-color: #2ab759;
 $secondary-color: #f96a88;
 
-$my-color-palette:palette(
+$my-color-palette: palette(
     // 注: primary と secondary 色が必要です。
     $primary: $primary-color,
     $secondary: $secondary-color,

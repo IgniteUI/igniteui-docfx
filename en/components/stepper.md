@@ -281,7 +281,7 @@ First, in order to use the functions exposed by the theme engine, we need to imp
 
 Following the simplest approach, we create a new theme that extends the [stepper-theme]({environment:sassApiUrl}/index.html#function-stepper-theme) and pass the parameters, which we would like to change: 
 ```scss
-$custom-stepper-theme:stepper-theme(
+$custom-stepper-theme: stepper-theme(
     $current-title-color: #351e65,
     $current-subtitle-color: #5f4691,
     $step-separator-style: "solid"

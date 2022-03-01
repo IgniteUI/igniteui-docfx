@@ -255,7 +255,7 @@ To get started with styling the date picker, we need to import the `index` file,
 The date picker uses the calendar's theme, so we have to create a new theme that extends the [`calendar-theme`]({environment:sassApiUrl}/index.html#function-calendar-theme) and use some of its parameters to style the date picker's items:
 
 ```scss
-$custom-datepicker-theme:calendar-theme(
+$custom-datepicker-theme: calendar-theme(
     $header-background: #345779,
     $content-background: #fdfdfd,
     $header-text-color: #ffffff,

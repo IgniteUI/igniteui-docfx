@@ -359,7 +359,7 @@ igxGridを使用すると、[Ignite UI for Angular テーマ ライブラリ](..
 次に、[`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) を拡張し、必要に応じて Group By をカスタマイズするために必要なパラメーターを受け入れる新しいテーマを作成します。   
 
 ```scss
-$custom-theme:grid-theme(
+$custom-theme: grid-theme(
     /* Pinning properties that affect styling */
     $pinned-border-width: 5px,
     $pinned-border-style: double,
@@ -377,7 +377,7 @@ $custom-theme:grid-theme(
 $primary-color: #292826;
 $secondary-color: #ffcd0f;
 
-$custom-palette:palette(
+$custom-palette: palette(
   $primary: $primary-color,
   $secondary: $secondary-color
 );
@@ -387,11 +387,11 @@ $custom-palette:palette(
 
 
 ```scss
-$custom-theme:grid-theme(
+$custom-theme: grid-theme(
     $pinned-border-width: 5px,
     $pinned-border-style: double,
-    $pinned-border-color:color($custom-palette, "secondary", 500),
-    $cell-active-border-color:color($custom-palette, "secondary", 500)
+    $pinned-border-color: color($custom-palette, "secondary", 500),
+    $cell-active-border-color: color($custom-palette, "secondary", 500)
 );
 ```   
 
@@ -404,8 +404,8 @@ $custom-theme:grid-theme(
 $custom-grid-schema: extend($_light-grid,(
     pinned-border-width: 5px,
     pinned-border-style: double,
-    pinned-border-color:color:("secondary", 500),
-    cell-active-border-color:color:("secondary", 500)
+    pinned-border-color: color:("secondary", 500),
+    cell-active-border-color: color:("secondary", 500)
 ));
 ```   
 カスタム スキーマを適用するには、`light` グローバルまたは `dark` グローバルを拡張する必要があります。プロセス全体が実際にコンポーネントにカスタム スキーマを提供し、その後、それぞれのコンポーネントテーマに追加します。     
@@ -413,7 +413,7 @@ $custom-grid-schema: extend($_light-grid,(
 $my-custom-schema: extend($light-schema, ( 
     igx-grid: $custom-grid-schema
 ));
-$custom-theme:grid-theme(
+$custom-theme: grid-theme(
     $palette: $custom-palette,
     $schema: $my-custom-schema
 );

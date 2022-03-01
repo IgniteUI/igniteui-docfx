@@ -155,8 +155,8 @@ The following section demonstrates how to set elevation to a component. In the e
 Firs apply the [elevation]({environment:sassApiUrl}/index.html#function-elevation) to the card by doing the following
 
 ```scss
-$myCard:card-theme(
-    $resting-shadow:elevation($elevations, 10)
+$myCard: card-theme(
+    $resting-shadow: elevation($elevations, 10)
 );
 
 @include card($myCard);
@@ -185,11 +185,11 @@ $color-3: rgb(92, 61, 70); // Ambient
 // Useelevations to generate sass maps for all three 
 // box-shadows with the costume colors 
 
-$elevations-color:elevations($color-1, $color-2, $color-3);
+$elevations-color: elevations($color-1, $color-2, $color-3);
 
 // Use theelevation to set the desired elevation level
-$mySpecialCard:card-theme(
-    $resting-shadow:elevation($elevations-color, 10)
+$mySpecialCard: card-theme(
+    $resting-shadow: elevation($elevations-color, 10)
 );
 
 // If you want you can scope your custom elevation to a specific selector
@@ -210,7 +210,7 @@ $mySpecialCard:card-theme(
 
 You can also set box-shadow without taking advantage of theelevation function:
 ```scss
-$myboringCard:card-theme(
+$myboringCard: card-theme(
     $resting-shadow: 0 10px 10px 10px #666
 );
 

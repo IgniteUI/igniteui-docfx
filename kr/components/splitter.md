@@ -160,7 +160,7 @@ You can change the default styles of the splitter by creating a new theme that e
 ```scss
 // In splitter-styling-sample.component.scss
 
-$splitter-theme:splitter-theme(
+$splitter-theme: splitter-theme(
     $bar-color: #011627,
     $handle-color: #ECAA53,
     $expander-color: #ECAA53,

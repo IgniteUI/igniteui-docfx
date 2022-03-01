@@ -472,7 +472,7 @@ export class AppModule {}
 最も簡単なアプローチを使用して、[`column-actions-theme`]({environment:sassApiUrl}/index.html#function-column-actions-theme) を拡張し、`$title-color` および `$background-color` パラメーターを受け取る新しいテーマを作成します。
 
 ```scss
-$custom-column-actions-theme:column-actions-theme(
+$custom-column-actions-theme: column-actions-theme(
     $background-color: steelblue,
     $title-color: gold
 );
@@ -481,7 +481,7 @@ $custom-column-actions-theme:column-actions-theme(
 ご覧のように `column-actions-theme` は列操作コンテナーの色のみを制御しますが、ボタン、チェックボックス、内部の入力グループには影響しません。ボタンのスタイルも設定したい場合、新しいボタン テーマを作成します。
 
 ```scss
-$custom-button:button-theme($flat-text-color: gold, $disabled-color: black);
+$custom-button: button-theme($flat-text-color: gold, $disabled-color: black);
 ```
 
 この例では、フラットボタンのテキストの色とボタンの無効な色のみを変更しましたが、[`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme) の方がより多くの方法を提供します。ボタンのスタイルを制御するパラメーター。
@@ -522,21 +522,21 @@ $custom-button:button-theme($flat-text-color: gold, $disabled-color: black);
 $yellow-color: gold;
 $blue-color: steelblue;
 
-$custom-palette:palette($primary: $blue-color, $secondary: $yellow-color);
+$custom-palette: palette($primary: $blue-color, $secondary: $yellow-color);
 ```
 
 次に [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取得できます。 
 
 ```scss
-$custom-column-actions-theme:column-actions-theme(
+$custom-column-actions-theme: column-actions-theme(
     $palette: $custom-palette,
-    $title-color:color($custom-palette, "secondary", 400),
-    $background-color:color($custom-palette, "primary", 200)
+    $title-color: color($custom-palette, "secondary", 400),
+    $background-color: color($custom-palette, "primary", 200)
 );
 
-$custom-button:button-theme(
+$custom-button: button-theme(
     $palette: $custom-palette,
-    $flat-text-color:color($custom-palette, "secondary", 400),
+    $flat-text-color: color($custom-palette, "secondary", 400),
     $disabled-color: black
 );
 ```
@@ -583,13 +583,13 @@ $custom-dark-schema: extend($dark-schema,(
 ));
 
 // Defining column-actions-theme with the global dark schema
-$custom-column-actions-theme:column-actions-theme(
+$custom-column-actions-theme: column-actions-theme(
   $palette: $custom-palette,
   $schema: $custom-dark-schema
 );
 
 // Defining button-theme with the global dark schema
-$custom-button:button-theme(
+$custom-button: button-theme(
   $palette: $custom-palette,
   $schema: $custom-dark-schema
 );

@@ -152,7 +152,7 @@ public decrementProgress() {
 ```scss
 $colors: #695cf9, #ef017c;
 
-$custom-theme:progress-circular-theme(
+$custom-theme: progress-circular-theme(
     $progress-circle-color: $colors
     
 );
@@ -214,7 +214,7 @@ $custom-theme:progress-circular-theme(
 最も簡単な方法として、[`progress-circular-theme`]({environment:sassApiUrl}/index.html#function-progress-circular-theme) を拡張し、`$base-circle-color` および `$progress-circle-color` パラメーターを受け取る新しいテーマを作成する方法があります。
 
 ```scss
-$custom-theme:progress-circular-theme(
+$custom-theme: progress-circular-theme(
     $base-circle-color: lightgray,
     $progress-circle-color: rgb(32, 192, 17)
 );

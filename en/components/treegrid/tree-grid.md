@@ -272,7 +272,7 @@ Following the simplest approach, we create a new theme that extends the [`grid-t
 >There is no specific `sass` tree grid function.
 
 ```scss
-$custom-theme:grid-theme(
+$custom-theme: grid-theme(
   $cell-active-border-color: #FFCD0F,
   $cell-selected-background: #6F6F6F,
   $row-hover-background: #F8E495,
@@ -312,23 +312,23 @@ Instead of hardcoding the color values like we just did, we can achieve greater 
 ```scss
 $yellow-color: #FFCD0F;
 $black-color: #494949;
-$custom-palette:palette($primary: $black-color, $secondary: $yellow-color);
+$custom-palette: palette($primary: $black-color, $secondary: $yellow-color);
 ```
 
 And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette.
 
 ```scss
-$custom-theme:grid-theme(
-    $cell-active-border-color:color($custom-palette, "secondary", 500),
-    $cell-selected-background:color($custom-palette, "primary", 300),
-    $row-hover-background:color($custom-palette, "secondary", 100),
-    $row-selected-background:color($custom-palette, "primary", 100),
-    $header-background:color($custom-palette, "primary", 500),
+$custom-theme: grid-theme(
+    $cell-active-border-color: color($custom-palette, "secondary", 500),
+    $cell-selected-background: color($custom-palette, "primary", 300),
+    $row-hover-background: color($custom-palette, "secondary", 100),
+    $row-selected-background: color($custom-palette, "primary", 100),
+    $header-background: color($custom-palette, "primary", 500),
     $header-text-color:contrast-color($custom-palette, "primary", 500),
-    $expand-icon-color:color($custom-palette, "secondary", 500),
-    $expand-icon-hover-color:color($custom-palette, "secondary", 600),
-    $resize-line-color:color($custom-palette, "secondary", 500),
-    $row-highlight:color($custom-palette, "secondary", 500)
+    $expand-icon-color: color($custom-palette, "secondary", 500),
+    $expand-icon-hover-color: color($custom-palette, "secondary", 600),
+    $resize-line-color: color($custom-palette, "secondary", 500),
+    $row-highlight: color($custom-palette, "secondary", 500)
 );
 ```
 
@@ -363,7 +363,7 @@ $my-custom-schema: extend($light-schema, (
 ));
 
 // Defining grid-theme with the global light schema
-$custom-theme:grid-theme(
+$custom-theme: grid-theme(
     $palette: $custom-palette,
     $schema: $my-custom-schema
 );

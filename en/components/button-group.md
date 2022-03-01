@@ -243,7 +243,7 @@ To get started with styling the button group, we need to import the `index` file
 Following the simplest approach, we create a new theme that extends the [`button-group-theme`]({environment:sassApiUrl}/index.html#function-button-group-theme) and accepts some of the parameters that style the button group's items in their different states.
 
 ```scss
-$custom-button-group:button-group-theme(
+$custom-button-group: button-group-theme(
     $item-text-color: #fdfdfd,
     $item-background: #2f4d6a,
     $item-hover-text-color: #fdfdfd,

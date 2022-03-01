@@ -279,7 +279,7 @@ The [`IgxTextHighlight`]({environment:angularApiUrl}/classes/igxtexthighlightdir
 Following the simplest approach, we create a new theme that extends the [`highlight-theme`]({environment:sassApiUrl}/index.html#function-highlight-theme) and accepts the `$resting-background`, `$resting-color`, `$active-background` and the `$active-color` parameters.
 
 ```scss
-$dark-highlight:highlight-theme(
+$dark-highlight: highlight-theme(
     $resting-background: #FFCD0F,
     $resting-color: #292826,
     $active-background: #292826,

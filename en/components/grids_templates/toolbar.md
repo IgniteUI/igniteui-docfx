@@ -528,23 +528,23 @@ To get started with styling the toolbar, we need to import the index file, where
 First, let's create a new palette.
 
 ```scss
-$my-dark-palette:palette(
+$my-dark-palette: palette(
     $primary: #2466ff,
     $secondary: #FFCD0F,
     $surface: #2a2b2f,
     $grays: #fff,
 );
 
-$my-dark-color:color($my-dark-palette, 'surface');
+$my-dark-color: color($my-dark-palette, 'surface');
 ```
 
 Now, create a new theme that extends the [`grid-toolbar-theme`]({environment:sassApiUrl}/index.html#function-grid-toolbar-theme) and modify the `$background-color` and the `$title-text-color` parameters.
 
 ```scss
-$dark-grid-toolbar-theme:grid-toolbar-theme(
+$dark-grid-toolbar-theme: grid-toolbar-theme(
     $palette: $my-dark-palette,
     $background-color: $my-dark-color,
-    $title-text-color:color($my-dark-palette, 'secondary'),
+    $title-text-color: color($my-dark-palette, 'secondary'),
     $dropdown-background: $my-dark-color,
 );
 ```
@@ -552,29 +552,29 @@ $dark-grid-toolbar-theme:grid-toolbar-theme(
 To theme the column actions menus of the toolbar, we have to change the theme of the [`column-actions-theme`]({environment:sassApiUrl}/index.html#function-igx-column-actionsr-theme) component.
 
 ```scss
-$dark-column-actions-theme:column-actions-theme(
+$dark-column-actions-theme: column-actions-theme(
     $palette: $my-dark-palette,
-    $title-color:color($my-dark-palette, 'secondary'),
-    $background-color:color($my-dark-palette, 'surface')
+    $title-color: color($my-dark-palette, 'secondary'),
+    $background-color: color($my-dark-palette, 'surface')
 );
 ```
 
 Since the column actions are using other components - igx-button, igx-checkbox, and igx-input-group, we need to change their themes to match our new toolbar theme.
 
 ```scss
-$dark-button-theme:button-theme(
+$dark-button-theme: button-theme(
     $palette: $my-dark-palette,
-    $outlined-background:color($my-dark-palette, 'secondary'),
-    $outlined-hover-background:color($my-dark-palette, 'grays', 100),
-    $outlined-hover-text-color:color($my-dark-palette, 'secondary')
+    $outlined-background: color($my-dark-palette, 'secondary'),
+    $outlined-hover-background: color($my-dark-palette, 'grays', 100),
+    $outlined-hover-text-color: color($my-dark-palette, 'secondary')
 );
 
-$dark-checkbox-theme:checkbox-theme(
+$dark-checkbox-theme: checkbox-theme(
     $palette: $my-dark-palette,
     $tick-color: $my-dark-color,
 );
 
-$dark-input-group-theme:input-group-theme(
+$dark-input-group-theme: input-group-theme(
     $palette: $my-dark-palette
 );
 ```

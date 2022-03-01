@@ -399,7 +399,7 @@ export class InputDropDownComponent {
 最も簡単な方法は、[`drop-down-theme`]({environment:sassApiUrl}/index.html#function-drop-down-theme) を拡張する新しいテーマを作成し、デフォルト テーマのいくつかのパラメーターを受け取る方法です。
 
 ```scss
-$custom-drop-down-theme:drop-down-theme(
+$custom-drop-down-theme: drop-down-theme(
     $background-color: #fdfdfd,
     $header-text-color: #345779,
     $item-text-color: #2dabe8,

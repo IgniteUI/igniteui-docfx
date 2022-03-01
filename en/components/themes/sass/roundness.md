@@ -32,7 +32,7 @@ Let's see how we can change the default values for the buttons from the example 
 
 Using the theme mixin:
 ```scss
-$my-button-theme:button-theme(
+$my-button-theme: button-theme(
     $border-radius: .5 .2 .5 .2, // resolves to 10px 4px 10px 4px
 );
 

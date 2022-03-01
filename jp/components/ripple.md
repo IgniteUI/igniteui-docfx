@@ -115,7 +115,7 @@ export class AppModule {}
 次に、[`ripple-theme`]({environment:sassApiUrl}/index.html#function-ripple-theme) を拡張し、必要に応じてリップルをカスタマイズするために必要なパラメーターを受け入れる新しいテーマを作成します。
 
 ```scss
-$custom-ripple-theme:ripple-theme(
+$custom-ripple-theme: ripple-theme(
   $color: #217346
 );
 ```  

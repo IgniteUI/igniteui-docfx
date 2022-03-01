@@ -32,7 +32,7 @@ In most cases [global](themes/sass/global-themes.md) theme styles are not affect
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 
 
-$my-drop-down-theme:drop-down-theme(
+$my-drop-down-theme: drop-down-theme(
     $palette: $my-custom-palette
 );
 
@@ -108,7 +108,7 @@ The easiest way to style the overlay modal is to include its theme in our app's 
 
 ```scss
 //  styles.scss
-$my-overlay-theme:overlay-theme(
+$my-overlay-theme: overlay-theme(
   $background-color: rgba(0, 153, 255, 0.3)
 );
 

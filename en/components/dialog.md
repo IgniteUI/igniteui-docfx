@@ -212,7 +212,7 @@ To get started with styling the dialog window, we need to import the `index` fil
 Following the simplest approach, we create a new theme that extends the [`dialog-theme`]({environment:sassApiUrl}/index.html#function-dialog-theme) and accepts parameters that style the dialog.
 
 ```scss
-$my-dialog-theme:dialog-theme(
+$my-dialog-theme: dialog-theme(
     $background: #011627,
     $title-color: #ECAA53,
     $message-color: #FEFEFE,

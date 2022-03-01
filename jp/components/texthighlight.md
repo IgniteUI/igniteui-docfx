@@ -280,7 +280,7 @@ private find(increment: number) {
 最も簡単な方法は、[`highlight-theme`]({environment:sassApiUrl}/index.html#function-highlight-theme) を拡張する新しいテーマを作成し、`$resting-background`、`$resting-color`、`$active-background` と `$active-color`パラメーターを受け取る方法です。
 
 ```scss
-$dark-highlight:highlight-theme(
+$dark-highlight: highlight-theme(
     $resting-background: #FFCD0F,
     $resting-color: #292826,
     $active-background: #292826,

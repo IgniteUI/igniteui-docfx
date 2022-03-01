@@ -341,7 +341,7 @@ To get started with styling the tabs, we need to import the `index` file, where 
 Following the simplest approach, we create a new theme that extends the [`bottom-nav-theme`]({environment:sassApiUrl}/index.html#function-bottom-nav-theme) and accepts various parameters that allow us to style the tab groups.
 
 ```scss
-$dark-bottom-nav:bottom-nav-theme(
+$dark-bottom-nav: bottom-nav-theme(
     $background: #292826,
     $active-item-color: #F4D45C
 );
@@ -400,15 +400,15 @@ Instead of hardcoding the color values like we just did, we can achieve greater 
 ```scss
 $yellow-color: #F4D45C;
 $black-color: #292826;
-$dark-palette:palette($primary: $black-color, $secondary: $yellow-color);
+$dark-palette: palette($primary: $black-color, $secondary: $yellow-color);
 ```
 
 And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette.
 
 ```scss
-$dark-bottom-nav:bottom-nav-theme(
-    $background:color($dark-palette, "primary", 400),
-    $active-item-color:color($dark-palette, "secondary", 400)
+$dark-bottom-nav: bottom-nav-theme(
+    $background: color($dark-palette, "primary", 400),
+    $active-item-color: color($dark-palette, "secondary", 400)
 );
 ```
 
@@ -441,7 +441,7 @@ $custom-dark-schema: extend($dark-schema,(
 ));
 
 // Defining bottom-nav-theme with the global dark schema
-$dark-bottom-nav:bottom-nav-theme(
+$dark-bottom-nav: bottom-nav-theme(
   $palette: $dark-palette,
   $schema: $custom-dark-schema
 );

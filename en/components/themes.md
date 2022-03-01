@@ -46,7 +46,7 @@ To get started with our first color palette, create an _scss_ file that would be
 $company-color: #2ab759; // Some green shade I like
 $secondary-color: #f96a88; // Watermelon pink
 
-$my-color-palette:palette(
+$my-color-palette: palette(
   $primary: $company-color,
   $secondary: $secondary-color
 );
@@ -66,9 +66,9 @@ Got it? Good! But how does one access any of the colors in the palette?
 We provide a function that is easy to remember and use `igx-color`. It takes three arguments - `palette`, `color`, and `variant`;
 
 ```scss
-$my-primary-600:color($my-palette, "primary", 600);
-$my-primary-A700:color($my-palette, "secondary", "A700");
-$my-warning-color:color($my-palette, "warn");
+$my-primary-600: color($my-palette, "primary", 600);
+$my-primary-A700: color($my-palette, "secondary", "A700");
+$my-warning-color: color($my-palette, "warn");
 // sample usage
 
 .my-awesome-class {
@@ -88,7 +88,7 @@ $my-warning-color:color($my-palette, "warn");
 Similar to how we get sub-palette colors, there's a way to get the contrast text color for each of the colors in the sub-palettes.
 
 ```scss
-$my-primary-800:color($my-palette, "primary", 600);
+$my-primary-800: color($my-palette, "primary", 600);
 $my-primary-800-text:contrast-color($my-palette, "primary", 600);
 // sample usage
 
@@ -117,7 +117,7 @@ Let's start from our very first example on this page. This time, though, we're g
 $company-color: #2ab759; // Some green shade I like
 $secondary-color: #f96a88; // Watermelon pink
 
-$my-color-palette:palette(
+$my-color-palette: palette(
   $primary: $company-color,
   $secondary: $secondary-color
 );

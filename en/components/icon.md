@@ -154,7 +154,7 @@ To get started with styling the icons, we need to import the `index` file, where
 Following the simplest approach, we create a new theme that extends the [`icon-theme`]({environment:sassApiUrl}/index.html#function-icon-theme) and accepts the parameters, required to customize the icon as desired. 
 
 ```scss
-$custom-icon-theme:icon-theme(
+$custom-icon-theme: icon-theme(
   $color: #1481b8,
   $disabled-color: #494949
 );

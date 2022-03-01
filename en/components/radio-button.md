@@ -122,7 +122,7 @@ Following the simplest approach, we create a new theme that extends the [`radio-
 
 
 ```scss
-$custom-radio-theme:radio-theme(
+$custom-radio-theme: radio-theme(
     $disabled-color: lightgray,
     $empty-color:  #345779,
     $fill-color: #2dabe8,

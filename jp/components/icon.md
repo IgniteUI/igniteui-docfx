@@ -153,7 +153,7 @@ npm i xmlhttprequest
 最も簡単な方法は、[`icon-theme`]({environment:sassApiUrl}/index.html#function-icon-theme) を拡張し、必要に応じてアイコンをカスタマイズするために必要なパラメーターを受け入れる新しいテーマを作成する方法です。
 
 ```scss
-$custom-icon-theme:icon-theme(
+$custom-icon-theme: icon-theme(
   $color: #1481b8,
   $disabled-color: #494949
 );

@@ -197,7 +197,7 @@ ngAfterViewInit(): void {
 Excel スタイルのフィルタリング ダイアログは、`filtering-row-background` パラメーターを使用して、グリッドのテーマから背景色を取得します。背景を変更するには、カスタム テーマを作成する必要があります。
 
 ```scss
-$custom-grid:grid-theme(
+$custom-grid: grid-theme(
     $filtering-row-background: #FFCD0F
 );
 ```
@@ -205,27 +205,27 @@ $custom-grid:grid-theme(
 ボタン、チップ、ドロップダウン、入力など、高度なフィルタリング ダイアログ内に他のコンポーネントがあるため、それぞれに個別のテーマを作成する必要があります。
 
 ```scss
-$custom-button:button-theme(
+$custom-button: button-theme(
     $disabled-color: gray,
     ...
 );
 
-$custom-button-group:button-group-theme(
+$custom-button-group: button-group-theme(
     $item-background:  #292826,
     ...
 );
 
-$custom-input-group:input-group-theme(
+$custom-input-group: input-group-theme(
     $box-background: #4a4a4a,
     ...
 );
 
-$custom-chip:chip-theme(
+$custom-chip: chip-theme(
     $background: #FFCD0F,
     ...
 );
 
-$custom-drop-down:drop-down-theme(
+$custom-drop-down: drop-down-theme(
     $background-color: #292826,
     ...
 );
@@ -328,37 +328,37 @@ igx-advanced-filtering-dialog {
 ```scss
 $yellow-color: #FFCD0F;
 $black-color: #292826;
-$dark-palette:palette($primary: $yellow-color, $secondary: $black-color);
+$dark-palette: palette($primary: $yellow-color, $secondary: $black-color);
 ```
 次に [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取得できます。 
 
 ```scss
-$custom-grid:grid-theme(
-    $filtering-row-background:color($dark-palette, "secondary", 400)
+$custom-grid: grid-theme(
+    $filtering-row-background: color($dark-palette, "secondary", 400)
 );
 
-$custom-button:button-theme(
-    $disabled-color:color($dark-palette, "secondary", 100),
+$custom-button: button-theme(
+    $disabled-color: color($dark-palette, "secondary", 100),
     ...
 );
 
-$custom-button-group:button-group-theme(
+$custom-button-group: button-group-theme(
     $item-background: color($dark-palette, "secondary", 400),
     ...
 );
 
-$custom-input-group:input-group-theme(
-    $box-background:color($dark-palette, "secondary", 200),
+$custom-input-group: input-group-theme(
+    $box-background: color($dark-palette, "secondary", 200),
     ...
 );
 
-$custom-chip:chip-theme(
-    $background:color($dark-palette, "primary", 400),
+$custom-chip: chip-theme(
+    $background: color($dark-palette, "primary", 400),
     ...
 );
 
-$custom-drop-down:drop-down-theme(
-    $background-color:color($dark-palette, "secondary", 400),
+$custom-drop-down: drop-down-theme(
+    $background-color: color($dark-palette, "secondary", 400),
     ...
 );
 ```
@@ -373,7 +373,7 @@ $custom-drop-down:drop-down-theme(
 すべてのコンポーネントに提供される 2 つの定義済みスキーマのいずれかを拡張します。この場合、[`light-grid`]({environment:sassApiUrl}/index.html#variable-_light-grid)、[`light-button`]({environment:sassApiUrl}/index.html#variable-_light-button)、[`light-button-group`]({environment:sassApiUrl}/index.html#variable-_light-button-group)、[`light-chip`]({environment:sassApiUrl}/index.html#variable-_light-chip)、[`light-input-group`]({environment:sassApiUrl}/index.html#variable-_light-input-group)、[`light-drop-down`]({environment:sassApiUrl}/index.html#variable-_light-drop-down) です。
 
 ```scss
-$grid-dark-palette:palette($primary: #11bd7b, $secondary: #e32057, $info: $black-color);
+$grid-dark-palette: palette($primary: #11bd7b, $secondary: #e32057, $info: $black-color);
 
 $custom-grid-schema: extend($_light-grid,
     (
@@ -441,32 +441,32 @@ $custom-light-schema: extend($light-schema,(
     igx-drop-down: $custom-drop-down-schema
 ));
 
-$custom-grid:grid-theme(
+$custom-grid: grid-theme(
     $palette: $grid-dark-palette,
     $schema: $custom-light-schema
 );
 
-$custom-button:button-theme(
+$custom-button: button-theme(
     $palette: $dark-palette,
     $schema: $custom-light-schema
 );
 
-$custom-button-group:button-group-theme(
+$custom-button-group: button-group-theme(
     $palette: $dark-palette,
     $schema: $custom-light-schema
 );
 
-$custom-input-group:input-group-theme(
+$custom-input-group: input-group-theme(
     $palette: $dark-palette,
     $schema: $custom-light-schema
 );
 
-$custom-chip:chip-theme(
+$custom-chip: chip-theme(
     $palette: $dark-palette,
     $schema: $custom-light-schema
 );
 
-$custom-drop-down:drop-down-theme(
+$custom-drop-down: drop-down-theme(
     $palette: $dark-palette,
     $schema: $custom-light-schema
 );

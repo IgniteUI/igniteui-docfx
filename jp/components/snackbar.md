@@ -255,7 +255,7 @@ snackbar.open(customSettings);
 最も簡単な方法は、[`snackbar-theme`]({environment:sassApiUrl}/index.html#function-snackbar-theme) を拡張する新しいテーマを作成し、`$text-color`、`$background`、`$button-color`、`$border-radius` パラメーターを受け取る方法です。
 
 ```scss
-$dark-snackbar:snackbar-theme(
+$dark-snackbar: snackbar-theme(
     $text-color: #FFCD0F,
     $background: #292826,
     $button-color: #FFCD0F,
@@ -312,16 +312,16 @@ $dark-snackbar:snackbar-theme(
 $yellow-color: #FFCD0F;
 $black-color: #292826;
 
-$dark-palette:palette($primary: $black-color, $secondary: $yellow-color);
+$dark-palette: palette($primary: $black-color, $secondary: $yellow-color);
 ```
 
 また [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取り出すことができます。 
 
 ```scss
-$dark-snackbar:snackbar-theme(
-    $text-color:color($dark-palette, "secondary", 400),
-    $background:color($dark-palette, "primary", 400),
-    $button-color:color($dark-palette, "secondary", 400),
+$dark-snackbar: snackbar-theme(
+    $text-color: color($dark-palette, "secondary", 400),
+    $background: color($dark-palette, "primary", 400),
+    $button-color: color($dark-palette, "secondary", 400),
     $border-radius: 12px
 );
 ```
@@ -362,7 +362,7 @@ $custom-dark-schema: extend($dark-schema,(
 ));
 
 // Defining snackbar theme with the global dark schema
-$dark-snackbar:snackbar-theme(
+$dark-snackbar: snackbar-theme(
   $palette: $dark-palette,
   $schema: $custom-dark-schema
 );

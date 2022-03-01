@@ -235,7 +235,7 @@ Given the following markup:
 We need to create a theme:
 
 ```scss
-$custom-button-theme:button-theme(
+$custom-button-theme: button-theme(
     $foreground: #fdfdfd,
     $hover-foreground: #fdfdfd,
     $focus-foreground: #fdfdfd,

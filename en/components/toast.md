@@ -182,7 +182,7 @@ To get started with styling the toast, we need to import the index file, where a
 Following the simplest approach, we create a new theme that extends the [`toast-theme`]({environment:sassApiUrl}/index.html#function-toast-theme) and accepts the `$shadow`, `$background`, `$text-color` and the `$border-radius` parameters.
 
 ```scss
-$custom-toast-theme:toast-theme(
+$custom-toast-theme: toast-theme(
     $background: #dedede,
     $text-color: #151515,
     $border-radius: 12px
@@ -222,15 +222,15 @@ Instead of hardcoding the color values, like we just did, we can achieve greater
 $white-color: #dedede;
 $black-color: #151515;
 
-$light-toast-palette:palette($primary: $white-color, $secondary: $black-color);
+$light-toast-palette: palette($primary: $white-color, $secondary: $black-color);
 ```
 
 And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette.
 
 ```scss
-$custom-toast-theme:toast-theme(
-    $background:color($light-toast-palette, "primary", 400),
-    $text-color:color($light-toast-palette, "secondary", 400),
+$custom-toast-theme: toast-theme(
+    $background: color($light-toast-palette, "primary", 400),
+    $text-color: color($light-toast-palette, "secondary", 400),
     $border-radius: 12px
 );
 ```
@@ -268,7 +268,7 @@ $custom-light-schema: extend($light-schema,(
 ));
 
 // Defining toast with the global light schema
-$custom-toast-theme:toast-theme(
+$custom-toast-theme: toast-theme(
   $palette: $light-toast-palette,
   $schema: $custom-light-schema
 );

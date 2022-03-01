@@ -188,7 +188,7 @@ Following the simplest approach, we create a new theme that extends the [`grid-t
 
 ```scss
 // Define dark theme for the column moving
-$dark-grid-column-moving-theme:grid-theme(
+$dark-grid-column-moving-theme: grid-theme(
     $ghost-header-text-color: #F4D45C,
     $ghost-header-background: #575757,
     $ghost-header-icon-color: #f4bb5c
@@ -222,16 +222,16 @@ Instead of hardcoding the color values like we just did, we can achieve greater 
 $yellow-color: #F4D45C;
 $black-color: #575757;
 
-$dark-palette:palette($primary: $yellow-color, $secondary: $black-color);
+$dark-palette: palette($primary: $yellow-color, $secondary: $black-color);
 ```
 
 And then with [**igx-color**]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the pallete.
 
 ```scss
-$dark-grid-column-moving-theme:grid-theme(
+$dark-grid-column-moving-theme: grid-theme(
     $palette: $dark-palette,
-    $ghost-header-text-color:color($dark-palette, "primary", 400),
-    $ghost-header-background:color($dark-palette, "secondary", 200),
+    $ghost-header-text-color: color($dark-palette, "primary", 400),
+    $ghost-header-background: color($dark-palette, "secondary", 200),
     $ghost-header-icon-color: color($dark-palette, "primary", 500)
 );
 ```
@@ -272,7 +272,7 @@ $custom-light-schema: extend($light-schema,(
 ));
 
 // Defining dark-grid-theme with the global dark schema
-$dark-grid-column-moving-theme:grid-theme(
+$dark-grid-column-moving-theme: grid-theme(
   $palette: $dark-palette,
   $schema: $custom-light-schema
 );

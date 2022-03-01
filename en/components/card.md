@@ -273,7 +273,7 @@ To get started with styling the card, we need to import the `index` file, where 
 Following the simplest approach, we create a new theme that extends the [`card-theme`]({environment:sassApiUrl}/index.html#function-card-theme) and accepts some parameters that style the card's items:
 
 ```scss
-$colorful-card:card-theme(
+$colorful-card: card-theme(
     $background: #011627,
     $header-text-color: #FEFEFE,
     $subtitle-text-color: #ECAA53,

@@ -97,7 +97,7 @@ $dark-color: #282828;
 $orange-color: #FFA500;
 
 // Define the palette:
-$dark-theme-palette:palette($primary: $dark-color, $secondary: $orange-color);
+$dark-theme-palette: palette($primary: $dark-color, $secondary: $orange-color);
 ```
 
 Done! We are ready to set the new styling of our app.
@@ -116,15 +116,15 @@ Now lets define the **component themes** that we are going to apply:
 
 ```scss
 // Define dark theme for the dialog
-$dark-grid-theme:grid-theme(
+$dark-grid-theme: grid-theme(
   $palette: $dark-theme-palette,
-  $content-background:color($dark-theme-palette, "secondary", 100),
-  $header-background:color($dark-theme-palette, "primary", 500),
-  $header-text-color:color($dark-theme-palette, "secondary", 600),
-  $cell-selected-background:color($dark-theme-palette, "secondary", 600),
-  $cell-selected-text-color:color($dark-theme-palette, "primary", 600),
-  $row-hover-background:color($dark-theme-palette, "primary", 100),
-  $header-border-color:color($dark-theme-palette, "primary", 600)
+  $content-background: color($dark-theme-palette, "secondary", 100),
+  $header-background: color($dark-theme-palette, "primary", 500),
+  $header-text-color: color($dark-theme-palette, "secondary", 600),
+  $cell-selected-background: color($dark-theme-palette, "secondary", 600),
+  $cell-selected-text-color: color($dark-theme-palette, "primary", 600),
+  $row-hover-background: color($dark-theme-palette, "primary", 100),
+  $header-border-color: color($dark-theme-palette, "primary", 600)
 );
 ```
 
@@ -133,11 +133,11 @@ $dark-grid-theme:grid-theme(
 ```scss
 
 // Define dark theme for the dialog
-$dark-dialog-theme:dialog-theme(
+$dark-dialog-theme: dialog-theme(
   $palette: $dark-theme-palette,
-  $background:color($dark-theme-palette, "primary", 100),
-  $title-color:color($dark-theme-palette, "secondary", 500),
-  $message-color:color($dark-theme-palette, "secondary", 600)
+  $background: color($dark-theme-palette, "primary", 100),
+  $title-color: color($dark-theme-palette, "secondary", 500),
+  $message-color: color($dark-theme-palette, "secondary", 600)
 );
 
 ```
@@ -146,15 +146,15 @@ $dark-dialog-theme:dialog-theme(
 
 ```scss
 // Define dark theme for the input-group
-$dark-input-group-theme:input-group-theme(
+$dark-input-group-theme: input-group-theme(
   $palette: $dark-theme-palette,
   $box-background: color($dark-theme-palette, "primary", 100),
-  $disabled-border-color:color($dark-theme-palette, "primary", 500),
-  $box-disabled-background:color($dark-theme-palette, "secondary", 100),
-  $hover-bottom-line-color:color($dark-theme-palette, "secondary", 700),
-  $focused-bottom-line-color:color($dark-theme-palette, "secondary", 700),
-  $focused-text-color:color($dark-theme-palette, "secondary", 500),
-  $idle-text-color:color($dark-theme-palette, "secondary", 700)
+  $disabled-border-color: color($dark-theme-palette, "primary", 500),
+  $box-disabled-background: color($dark-theme-palette, "secondary", 100),
+  $hover-bottom-line-color: color($dark-theme-palette, "secondary", 700),
+  $focused-bottom-line-color: color($dark-theme-palette, "secondary", 700),
+  $focused-text-color: color($dark-theme-palette, "secondary", 500),
+  $idle-text-color: color($dark-theme-palette, "secondary", 700)
 );
 ```
 
@@ -180,7 +180,7 @@ After that, in a new SCSS file nest the **themes class**, that includes the comp
 :host {
     display: block;
     margin: 16px;
-    box-shadow:elevation($elevations, 12);
+    box-shadow: elevation($elevations, 12);
 
     &.dark-theme {
       background: $dark-color;
@@ -224,7 +224,7 @@ This can be achieved in a few modifications:
 :host {
     display: block;
     margin: 16px;
-    box-shadow:elevation($elevations, 12);
+    box-shadow: elevation($elevations, 12);
 
     // Set the light themes for the components.
     &.light-theme {

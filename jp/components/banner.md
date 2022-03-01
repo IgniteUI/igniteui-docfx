@@ -238,7 +238,7 @@ export class MyBannerComponent {
 最も簡単な方法は、[`banner-theme`]({environment:sassApiUrl}/index.html#function-banner-theme) を拡張する新しいテーマを作成し、`$banner-message-color`、`$banner-background` と `$banner-illustration-color` パラメーターを受け取る方法です。
 
 ```scss
-$custom-banner-theme:banner-theme(
+$custom-banner-theme: banner-theme(
     $banner-message-color: #151515,
     $banner-background: #dedede,
     $banner-illustration-color: #666666
@@ -278,16 +278,16 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 $white-color: #dedede;
 $black-color: #151515;
 
-$light-banner-palette:palette($primary: $white-color, $secondary: $black-color);
+$light-banner-palette: palette($primary: $white-color, $secondary: $black-color);
 ```
 
 次に [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取得できます。 
 
 ```scss
-$custom-banner-theme:banner-theme(
-    $banner-message-color:color($light-banner-palette, "secondary", 400),
-    $banner-background:color($light-banner-palette, "primary", 400),
-    $banner-illustration-color:color($light-banner-palette, "secondary", 100)
+$custom-banner-theme: banner-theme(
+    $banner-message-color: color($light-banner-palette, "secondary", 400),
+    $banner-background: color($light-banner-palette, "primary", 400),
+    $banner-illustration-color: color($light-banner-palette, "secondary", 100)
 );
 ```
 
@@ -316,7 +316,7 @@ $light-toast-schema: extend($_light-toast,
 );
 
 // Defining banner with the global light schema
-$custom-banner-theme:banner-theme(
+$custom-banner-theme: banner-theme(
   $palette: $light-banner-palette,
   $schema: $light-toast-schema
 );

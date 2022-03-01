@@ -41,7 +41,7 @@ Ignite UI for Angular でコンポーネント テーマを設定する方法、
 // @include theme(...); の後のどこか
 
 // アバターの背景を purple に変更します。
-$new-avatar-theme:avatar-theme(
+$new-avatar-theme: avatar-theme(
   $background: purple,
 );
 
@@ -59,7 +59,7 @@ $new-avatar-theme:avatar-theme(
 @include css-vars($new-avatar-theme);
 
 // Later
-$another-avatar-theme:avatar-theme(
+$another-avatar-theme: avatar-theme(
   $background: royalblue,
 );
 
@@ -142,7 +142,7 @@ export class AvatarComponent extends Component {
 // !重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 
-$avatar-theme:avatar-theme(
+$avatar-theme: avatar-theme(
   $background: royalblue,
 );
 
@@ -185,7 +185,7 @@ CSS 変数を使用する間は、`:: ng-deep` 擬似セレクターは必要あ
 @include theme($palette: $default-palette, $legacy-support: true);
 
 // Overwrite the default themes foravatar using hard-coded values:
-$avatar-theme:avatar-theme(
+$avatar-theme: avatar-theme(
   $background: royalblue,
 );
 
@@ -208,7 +208,7 @@ $avatar-theme:avatar-theme(
 // 最初にレガシーサポートを有効にしてください
 // !重要: Ignite UI for Angular 13 より古いバージョンにのみ適用されます。
 $igx-legacy-support: true;
-$avatar-theme:avatar-theme(
+$avatar-theme: avatar-theme(
   $initials-background: royalblue,
 );
 
