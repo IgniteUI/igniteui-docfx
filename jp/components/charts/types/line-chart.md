@@ -3,6 +3,7 @@ title: Angular 折れ線チャートとグラフ | Ignite UI for Angular
 _description: Angular 折れ線チャートは、数百万のデータポイントに及ぶ大量のデータを処理し、数ミリ秒ごとに更新することができます。無料でお試しください。
 _keywords: Angular Charts, Line Chart, Line Graph, Infragistics, Angular チャート, 折れ線チャート, 折れ線グラフ, インフラジスティックス
 mentionedTypes: ["CategoryChart", "XamDataChart", "Legend", "PolarLineSeries", "RadialLineSeries", "StackedLineSeries", "Stacked100LineSeries"]
+namespace: Infragistics.Controls.Charts
 _language: ja
 ---
 

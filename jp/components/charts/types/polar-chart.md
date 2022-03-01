@@ -3,6 +3,7 @@ title: Angular 極座標チャート | データ可視化 | インフラジス�
 _description: インフラジスティックスの Angular 極座標チャート
 _keywords: Angular Charts, Polar Chart, Infragistics, Angular チャート, 極座標チャート, インフラジスティックス
 mentionedTypes: ["XamDataChart", "PolarAreaSeries"]
+namespace: Infragistics.Controls.Charts
 _language: ja
 ---
 
