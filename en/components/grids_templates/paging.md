@@ -196,20 +196,20 @@ To get started with styling the paginator, we need to import the `index` file, w
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`igx-paginator-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-paginator-theme) and accepts the `$text-color`, `$background-color` and the `$border-color` parameters.
+Following the simplest approach, we create a new theme that extends the [`paginator-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-paginator-theme) and accepts the `$text-color`, `$background-color` and the `$border-color` parameters.
 
 ```scss
-$dark-paginator: igx-paginator-theme(
+$dark-paginator:paginator-theme(
     $text-color: #F4D45C,
     $background-color: #575757,
     $border-color: #292826
 );
 ```
 
-As seen, the `igx-paginator-theme` only controls colors for the paging container, but does not affect the buttons in the pager UI. To style those buttons, let's create a new button theme:
+As seen, the `paginator-theme` only controls colors for the paging container, but does not affect the buttons in the pager UI. To style those buttons, let's create a new button theme:
 
 ```scss
-$dark-button: igx-button-theme(
+$dark-button:button-theme(
     $icon-color: #FFCD0F,
     $icon-hover-color: #292826,
     $icon-hover-background: #FFCD0F,
@@ -219,14 +219,14 @@ $dark-button: igx-button-theme(
 );
 ```
 
-In this example we only changed the icon color and background and the button disabled color, but the the [`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) provides way more parameters to control the button style.
+In this example we only changed the icon color and background and the button disabled color, but the the [`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme) provides way more parameters to control the button style.
 
 The last step is to **include** the component mixins, each with its respective theme:
 
 ```scss
-@include igx-grid-paginator($dark-grid-paginator);
+@include grid-paginator($dark-grid-paginator);
 .igx-grid-paginator__pager {
-    @include igx-button($dark-button);
+    @include button($dark-button);
 }
 ```
 
@@ -239,9 +239,9 @@ The last step is to **include** the component mixins, each with its respective t
 ```scss
 :host {
     ::ng-deep {
-        @include igx-paginator($dark-paginator);
+        @include paginator($dark-paginator);
         .igx-paginator__pager {
-            @include igx-button($dark-button);
+            @include button($dark-button);
         }
     }
 }
@@ -257,27 +257,27 @@ Instead of hardcoding the color values like we just did, we can achieve greater 
 $yellow-color: #F9D342;
 $black-color: #292826;
 
-$dark-palette: igx-palette($primary: $black-color, $secondary: $yellow-color);
+$dark-palette:palette($primary: $black-color, $secondary: $yellow-color);
 ```
 
 And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the pallette.
 
 ```scss
-$dark-paginator: igx-paginator-theme(
+$dark-paginator:paginator-theme(
     $palette: $dark-palette,
-    $text-color: igx-color($dark-palette, "secondary", 400),
-    $background-color: igx-color($dark-palette, "primary", 200),
-    $border-color:  igx-color($dark-palette, "primary", 500)
+    $text-color:color($dark-palette, "secondary", 400),
+    $background-color:color($dark-palette, "primary", 200),
+    $border-color: color($dark-palette, "primary", 500)
 );
 
-$dark-button: igx-button-theme(
+$dark-button:button-theme(
     $palette: $dark-palette,
-    $icon-color: igx-color($dark-palette, "secondary", 700),
-    $icon-hover-color: igx-color($dark-palette, "primary", 500),
-    $icon-hover-background: igx-color($dark-palette, "secondary", 500),
-    $icon-focus-color: igx-color($dark-palette, "primary", 500),
-    $icon-focus-background: igx-color($dark-palette, "secondary", 500),
-    $disabled-color: igx-color($dark-palette, "primary", 700)
+    $icon-color:color($dark-palette, "secondary", 700),
+    $icon-hover-color:color($dark-palette, "primary", 500),
+    $icon-hover-background:color($dark-palette, "secondary", 500),
+    $icon-focus-color:color($dark-palette, "primary", 500),
+    $icon-focus-background:color($dark-palette, "secondary", 500),
+    $disabled-color:color($dark-palette, "primary", 700)
 );
 ```
 
@@ -295,13 +295,13 @@ Extend one of the two predefined schemas, that are provided for every component,
 $dark-paginator-schema: extend($_dark-pagination,
         (
             text-color:(
-                igx-color: ("secondary", 400)
+               color: ("secondary", 400)
             ),
             background-color:(
-                igx-color: ("primary", 200)
+               color: ("primary", 200)
             ),
             border-color:(
-                igx-color:( "primary", 500)
+               color:( "primary", 500)
             )
         )
 );
@@ -309,22 +309,22 @@ $dark-paginator-schema: extend($_dark-pagination,
 $dark-button-schema: extend($_dark-button,
         (
             icon-color:(
-                igx-color:("secondary", 700)
+               color:("secondary", 700)
             ),
             icon-hover-color:(
-                igx-color:("primary", 500)
+               color:("primary", 500)
             ),
             icon-hover-background:(
-                igx-color:("secondary", 500)
+               color:("secondary", 500)
             ),
             icon-focus-color:(
-                igx-color:("primary", 500)
+               color:("primary", 500)
             ),
             icon-focus-background:(
-                igx-color:("secondary", 500)
+               color:("secondary", 500)
             ),
             disabled-color:(
-                igx-color:("primary", 700)
+               color:("primary", 700)
             )
         )
 );
@@ -339,14 +339,14 @@ $custom-dark-schema: extend($dark-schema,(
     igx-button: $dark-button-schema
 ));
 
-// Defining igx-paginator-theme with the global dark schema
-$dark-paginator: igx-paginator-theme(
+// Definingpaginator-theme with the global dark schema
+$dark-paginator:paginator-theme(
   $palette: $dark-palette,
   $schema: $custom-dark-schema
 );
 
 // Defining button-theme with the global dark schema
-$dark-button: igx-button-theme(
+$dark-button:button-theme(
   $palette: $dark-palette,
   $schema: $custom-dark-schema
 );
@@ -388,8 +388,8 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 
 ## API References
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
-* [IgxGridPaginator Styles]({environment:sassApiUrl}/index.html#function-igx-paginator-theme)
+* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-grid-theme)
+* [IgxGridPaginator Styles]({environment:sassApiUrl}/index.html#function-paginator-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>

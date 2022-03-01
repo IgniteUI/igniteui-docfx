@@ -21,5 +21,5 @@ In order to switch from `Material` to `Indigo`, you can use one of the built-in 
 ```
 
 ## API Overview
-* [Light Theme]({environment:sassApiUrl}/index.html#mixin-igx-indigo-light-theme)
-* [Dark Theme]({environment:sassApiUrl}/index.html#mixin-igx-indigo-dark-theme)
+* [Light Theme]({environment:sassApiUrl}/index.html#mixin-indigo-light-theme)
+* [Dark Theme]({environment:sassApiUrl}/index.html#mixin-indigo-dark-theme)

@@ -229,7 +229,7 @@ You can try the `actions below` in order to observe the custom keyboard navigati
 
 ### API References
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-grid-theme)
 
 ### Additional Resources
 <div class="divider--half"></div>

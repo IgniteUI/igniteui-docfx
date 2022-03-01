@@ -112,7 +112,7 @@ export class AppModule {}
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```   
 
-次に、[`igx-ripple-theme`]({environment:sassApiUrl}/index.html#function-igx-ripple-theme) を拡張し、必要に応じてリップルをカスタマイズするために必要なパラメーターを受け入れる新しいテーマを作成します。
+次に、[`ripple-theme`]({environment:sassApiUrl}/index.html#function-ripple-theme) を拡張し、必要に応じてリップルをカスタマイズするために必要なパラメーターを受け入れる新しいテーマを作成します。
 
 ```scss
 $custom-ripple-theme:ripple-theme(
@@ -159,7 +159,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 <div class="divider--half"></div>
 
 * [IgxRippleDirective]({environment:angularApiUrl}/classes/igxrippledirective.html)
-* [IgxRipple スタイル]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
+* [IgxRipple スタイル]({environment:sassApiUrl}/index.html#function-ripple-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

@@ -140,7 +140,7 @@ $handmade-palette: (
 <div class="divider"></div>
 
 ## The Default Palette
-The `igx-theme` mixin takes a palette(see the previous section) as one of its arguments. The passed palette is assigned to the global `$default-palette` variable. This palette stored in this variable is used across the Sass library as fallback palette, whenever a palette is expected, but not explicitly provided by the user.
+The `theme` mixin takes a palette(see the previous section) as one of its arguments. The passed palette is assigned to the global `$default-palette` variable. This palette stored in this variable is used across the Sass library as fallback palette, whenever a palette is expected, but not explicitly provided by the user.
 
 You can use this knowledge to your advantage to allow you to re-use the same palette across multiple Sass documents in your application.
 
@@ -274,7 +274,7 @@ The above code will generate CSS classes for each color variant in the palette. 
 
 ## CSS Variables
 
-When reading about the color palette in the [CSS Variables](../palettes.md) section of the documentation, you would've noticed that all palette colors are included as CSS variables. We do this internally every time we generate a theme using the `igx-theme` mixin. The `igx-theme` calls another mixin in its body - `igx-palette-vars`. It takes a palette and converts the colors in it into CSS variables. 
+When reading about the color palette in the [CSS Variables](../palettes.md) section of the documentation, you would've noticed that all palette colors are included as CSS variables. We do this internally every time we generate a theme using the `theme` mixin. The `theme` calls another mixin in its body - `palette-vars`. It takes a palette and converts the colors in it into CSS variables. 
 
 You use this mixin when you want your custom palette colors to be included as CSS variables.
 
@@ -293,7 +293,7 @@ $my-palette:palette(
 * [Palettes]({environment:sassApiUrl}/index.html#function-igx-palette)
 * [Getting Palette Colors]({environment:sassApiUrl}/index.html#function-igx-color)
 * [Getting Contrast Colors]({environment:sassApiUrl}/index.html#function-igx-contrast-color)
-* [Generating Color Classes]({environment:sassApiUrl}/index.html#mixin-igx-color-classes)
+* [Generating Color Classes]({environment:sassApiUrl}/index.html#mixin-color-classes)
 
 ## Additional Resources
 <div class="divider--half"></div>

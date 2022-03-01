@@ -280,9 +280,9 @@ Using the [Ignite UI for Angular Theming](themes/index.md), we can greatly alter
 @use 'igniteui-angular/theming' as *;
 ```
 
-Following the simplest approach, we create a new theme that extends the [igx-combo-theme]({environment:sassApiUrl}/index.html#function-igx-combo-theme) and accepts the `$empty-list-background` parameter:
+Following the simplest approach, we create a new theme that extends the [combo-theme]({environment:sassApiUrl}/index.html#function-combo-theme) and accepts the `$empty-list-background` parameter:
 ```scss
-$custom-simple-combo-theme: igx-combo-theme(
+$custom-simple-combo-theme:combo-theme(
     $empty-list-background: #1a5214
 );
 ```
@@ -290,7 +290,7 @@ $custom-simple-combo-theme: igx-combo-theme(
 The [IgxSimpleComboComponent]({environment:angularApiUrl}/classes/igxsimplecombocomponent.html) uses the [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) internally as an item container. It also includes the [IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) component. Creating new themes, that extend these components' themes, and scoping them under the respective classes will let's you change the simple combobox styles:
 
 ```scss
-$custom-drop-down-theme: igx-drop-down-theme(
+$custom-drop-down-theme:drop-down-theme(
     $background-color: #d9f5d6,
     $header-text-color: #1a5214,
     $item-text-color: #1a5214,
@@ -313,8 +313,8 @@ The last step is to include the component's theme.
 
 ```scss
 :host ::ng-deep {
-    @include igx-css-vars($custom-combo-theme);
-    @include igx-css-vars($custom-drop-down-theme);
+    @include css-vars($custom-combo-theme);
+    @include css-vars($custom-drop-down-theme);
 }
 ```
 
@@ -345,7 +345,7 @@ The last step is to include the component's theme.
 <div class="divider--half"></div>
 
 * [IgxSimpleComboComponent]({environment:angularApiUrl}/classes/igxsimplecombocomponent.html)
-* [IgxComboComponent Styles]({environment:sassApiUrl}/index.html#function-igx-combo-theme)
+* [IgxComboComponent Styles]({environment:sassApiUrl}/index.html#function-combo-theme)
 
 Additional components and/or directives with relative APIs that were used:
 
@@ -353,9 +353,9 @@ Additional components and/or directives with relative APIs that were used:
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 
 ## Theming Dependencies
-* [IgxDropDown Theme]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme)
-* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
-* [IgxOverlay Theme]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+* [IgxDropDown Theme]({environment:sassApiUrl}/index.html#function-drop-down-theme)
+* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxOverlay Theme]({environment:sassApiUrl}/index.html#function-overlay-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>

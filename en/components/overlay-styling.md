@@ -14,7 +14,7 @@ To display the content above other elements, the service moves it into a special
 
 ## Styling Overlay Components
 
-In most cases [global](themes/sass/global-themes.md) theme styles are not affected by the overlay outlets. For example, let's take a look at a Drop Down, [styled](drop-down.md#styling) by the global [`igx-css-vars`]({environment:sassApiUrl}/index.html#mixin-igx-css-vars) mixin:
+In most cases [global](themes/sass/global-themes.md) theme styles are not affected by the overlay outlets. For example, let's take a look at a Drop Down, [styled](drop-down.md#styling) by the global [`css-vars`]({environment:sassApiUrl}/index.html#mixin-css-vars) mixin:
 
 ```html
 <!-- overlay-styling.component.html -->
@@ -32,11 +32,11 @@ In most cases [global](themes/sass/global-themes.md) theme styles are not affect
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 
 
-$my-drop-down-theme: igx-drop-down-theme(
+$my-drop-down-theme:drop-down-theme(
     $palette: $my-custom-palette
 );
 
-@include igx-css-vars($my-drop-down-theme);
+@include css-vars($my-drop-down-theme);
 ```
 
 The global styles are not generated under a scoped rule and are not affected by any encapsulation, and thus can match any element on the page, including `igx-drop-down-item` the service moved to the overlay outlet.
@@ -53,7 +53,7 @@ For example, let's take the `igx-combo` - its item [styles](combo.md#angular-com
 ```scss
 // overlay-styling.component.scss
 :host {
-    @include igx-css-vars($my-drop-down-theme);
+    @include css-vars($my-drop-down-theme);
 }
 ```
 
@@ -66,7 +66,7 @@ If the `$legacy-support` variable in your theme is set to `true`, you have to st
 // overlay-styling.component.scss
 :host {
    ::ng-deep{ 
-        @include igx-drop-down($my-drop-down-theme);
+        @include drop-down($my-drop-down-theme);
     }
 }
 ```
@@ -100,7 +100,7 @@ Now, the combo's list of items are properly rendered **inside** of our component
 ## Styling The Overlay
 
 Now that we've covered how `ViewEncapsulation` works along with the overlay's `outlet` property, we can take a look at how we can style the overlay's wrapper itself.
-The [`igx-overlay-theme`]({environment:sassApiUrl}/index.html#function-igx-overlay-theme) exposes a single property - `$background-color`, which affects the color of the backdrop when the overlay is set to `modal: true`.
+The [`overlay-theme`]({environment:sassApiUrl}/index.html#function-overlay-theme) exposes a single property - `$background-color`, which affects the color of the backdrop when the overlay is set to `modal: true`.
 
 ### Global Styles
 
@@ -108,11 +108,11 @@ The easiest way to style the overlay modal is to include its theme in our app's 
 
 ```scss
 //  styles.scss
-$my-overlay-theme: igx-overlay-theme(
+$my-overlay-theme:overlay-theme(
   $background-color: rgba(0, 153, 255, 0.3)
 );
 
-@include igx-css-vars($my-overlay-theme);
+@include css-vars($my-overlay-theme);
 ```
 
 If the `$legacy-support` variable in your theme is set to `true`, you have to style your component, using the overlay's theme function.
@@ -120,7 +120,7 @@ If the `$legacy-support` variable in your theme is set to `true`, you have to st
 ```scss
 // styles.scss
 ...
-@include igx-overlay($my-overlay-theme);
+@include overlay($my-overlay-theme);
 ```        
 
 Now **all** modal overlays will have a purple tint to their background.
@@ -134,7 +134,7 @@ When scoping a modal overlay, you need to move the overlay outlet, which has som
 //  styles.scss
 ...
 .purple {
-    @include igx-css-vars($my-overlay-theme);
+    @include css-vars($my-overlay-theme);
 }
 ```
 
@@ -148,7 +148,7 @@ To make sure the theme **does not** affect other components in our app, use the 
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ...
 :host {
-    @include igx-css-vars($my-overlay-theme);
+    @include css-vars($my-overlay-theme);
 }
 ```
 
@@ -157,7 +157,7 @@ To make sure the theme **does not** affect other components in our app, use the 
 
 ## API References
 * [IgniteUI for Angular - Theme Library](themes/index.md)
-* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-overlay-theme)
 
 ## Additional Resources
 * [IgniteUI for Angular - Theme Library](themes/index.md)

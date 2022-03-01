@@ -235,7 +235,7 @@ export class MyExampleCombo {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-[igx-combo-theme]({environment:sassApiUrl}/index.html#function-igx-combo-theme) を拡張する新しいテーマを作成し、`$search-separator-border-color` パラメーターを受け取ります。
+[combo-theme]({environment:sassApiUrl}/index.html#function-combo-theme) を拡張する新しいテーマを作成し、`$search-separator-border-color` パラメーターを受け取ります。
 ```scss
 $custom-combo-theme:combo-theme(
     $search-separator-border-color: #1a5214
@@ -308,7 +308,7 @@ $custom-checkbox-theme:checkbox-theme(
 <div class="divider--half"></div>
 
 * [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html)
-* [IgxComboComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-combo-theme)
+* [IgxComboComponent スタイル]({environment:sassApiUrl}/index.html#function-combo-theme)
 
 その他のコンポーネントおよびディレクティブ (またはそのいずれか) で使用した API:
 
@@ -317,10 +317,10 @@ $custom-checkbox-theme:checkbox-theme(
 * [IgxCheckboxComponent]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html)
 
 ## テーマの依存関係
-* [IgxDropDown テーマ]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme)
-* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
-* [IgxCheckbox テーマ]({environment:sassApiUrl}/index.html#function-igx-checkbox-theme)
-* [IgxOverlay テーマ]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+* [IgxDropDown テーマ]({environment:sassApiUrl}/index.html#function-drop-down-theme)
+* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxCheckbox テーマ]({environment:sassApiUrl}/index.html#function-checkbox-theme)
+* [IgxOverlay テーマ]({environment:sassApiUrl}/index.html#function-overlay-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

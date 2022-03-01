@@ -450,11 +450,11 @@ $custom-slider-theme:slider-theme(
 ```
 
 #### コンポーネント テーマの適用
-コンポーネント テーマを適用するには、`igx-css-vars` ミックスインをインクルードし、`$custom-slider-theme` マップを渡します。
+コンポーネント テーマを適用するには、`css-vars` ミックスインをインクルードし、`$custom-slider-theme` マップを渡します。
 ```scss
 // In app-slider-styling.component.scss
 
-// Pass our custom-slider-theme to `igx-css-vars` mixin.
+// Pass our custom-slider-theme to `css-vars` mixin.
 // The `:host` here makes sure that all the theming will affect only this slider component.
 :host {
   @include css-vars($custom-slider-theme);
@@ -465,7 +465,7 @@ $custom-slider-theme:slider-theme(
 <div class="divider--half"></div>
 
 * [IgxSliderComponent]({environment:angularApiUrl}/classes/igxslidercomponent.html)
-* [IgxSliderComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-slider-theme)
+* [IgxSliderComponent スタイル]({environment:sassApiUrl}/index.html#function-slider-theme)
 * [SliderType]({environment:angularApiUrl}/enums/slidertype.html)
 * [IRangeSliderValue]({environment:angularApiUrl}/interfaces/irangeslidervalue.html)
 * [TicksOrientation]({environment:angularApiUrl}/enums/ticksorientation.html)

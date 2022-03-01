@@ -392,7 +392,7 @@ public toggleColumn(col: IgxColumnComponent) {
 @@if (igxName === 'IgxGrid') {
 ### Styling   
 
-The igxGrid allows styling through the [Ignite UI for Angular Theme Library](../themes/sass/component-themes.md). The grid's [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) exposes a wide variety of properties, which allow the customization of all the features of the grid.      
+The igxGrid allows styling through the [Ignite UI for Angular Theme Library](../themes/sass/component-themes.md). The grid's [theme]({environment:sassApiUrl}/index.html#function-grid-theme) exposes a wide variety of properties, which allow the customization of all the features of the grid.      
 
 In the below steps, we are going through the steps of customizing the grid's Pinning styling.
 
@@ -403,10 +403,10 @@ To begin the customization of the Pinning feature, you need to import the `index
 ```
 
 #### Defining custom theme
-Next, create a new theme, that extends the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) and accepts the parameters, required to customize the Pinning feature as desired.   
+Next, create a new theme, that extends the [`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) and accepts the parameters, required to customize the Pinning feature as desired.   
 
 ```scss
-$custom-theme: igx-grid-theme(
+$custom-theme:grid-theme(
     /* Pinning properties that affect styling */
     $pinned-border-width: 5px,
     $pinned-border-style: double,
@@ -424,7 +424,7 @@ In the approach, that was described above, the color values were hardcoded. Alte
 $primary-color: #292826;
 $secondary-color: #ffcd0f;
 
-$custom-palette: igx-palette(
+$custom-palette:palette(
   $primary: $primary-color,
   $secondary: $secondary-color
 );
@@ -434,11 +434,11 @@ After a custom palette has been generated, the `igx-color` function can be used 
 
 
 ```scss
-$custom-theme: igx-grid-theme(
+$custom-theme:grid-theme(
     $pinned-border-width: 5px,
     $pinned-border-style: double,
-    $pinned-border-color: igx-color($custom-palette, "secondary", 500),
-    $cell-active-border-color: igx-color($custom-palette, "secondary", 500)
+    $pinned-border-color:color($custom-palette, "secondary", 500),
+    $cell-active-border-color:color($custom-palette, "secondary", 500)
 );
 ```   
 
@@ -451,8 +451,8 @@ Extend one of the two predefined schemas, that are provided for every component.
 $custom-grid-schema: extend($_light-grid,(
     pinned-border-width: 5px,
     pinned-border-style: double,
-    pinned-border-color: igx-color:("secondary", 500),
-    cell-active-border-color: igx-color:("secondary", 500)
+    pinned-border-color:color:("secondary", 500),
+    cell-active-border-color:color:("secondary", 500)
 ));
 ```   
 In order for the custom schema to be applied, either `light`, or `dark` globals has to be extended. The whole process is actually supplying a component with a custom schema and adding it to the respective component theme afterwards.     
@@ -460,7 +460,7 @@ In order for the custom schema to be applied, either `light`, or `dark` globals 
 $my-custom-schema: extend($light-schema, ( 
     igx-grid: $custom-grid-schema
 ));
-$custom-theme: igx-grid-theme(
+$custom-theme:grid-theme(
     $palette: $custom-palette,
     $schema: $my-custom-schema
 );
@@ -469,7 +469,7 @@ $custom-theme: igx-grid-theme(
 #### Applying the custom theme
 The easiest way to apply your theme is with a `sass` `@include` statement in the global styles file: 
 ```scss
-@include igx-grid($custom-theme);
+@include grid($custom-theme);
 ```
 
 #### Scoped component theme
@@ -485,7 +485,7 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 ```scss
 :host {
     ::ng-deep {
-        @include igx-grid($custom-theme);
+        @include grid($custom-theme);
     }
 }
 ```

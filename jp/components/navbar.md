@@ -253,10 +253,10 @@ Navbar のタイトルにカスタム コンテンツを提供する場合は、
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単な方法は、[`igx-navbar-theme`]({environment:sassApiUrl}/index.html#function-igx-navbar-theme) を拡張する新しいテーマを作成し、`$text-color`、`$background`、`$idle-icon-color`、`$hover-icon-color` パラメーターを受け取る方法です。
+最も簡単な方法は、[`navbar-theme`]({environment:sassApiUrl}/index.html#function-navbar-theme) を拡張する新しいテーマを作成し、`$text-color`、`$background`、`$idle-icon-color`、`$hover-icon-color` パラメーターを受け取る方法です。
 
 ```scss
-$custom-navbar-theme: igx-navbar-theme(
+$custom-navbar-theme:navbar-theme(
     $text-color: #151515,
     $background: #dedede,
     $idle-icon-color: #151515,
@@ -269,7 +269,7 @@ $custom-navbar-theme: igx-navbar-theme(
 最後にコンポーネントのテーマを渡します。
 
 ```scss
-@include igx-css-vars($custom-navbar-theme);
+@include css-vars($custom-navbar-theme);
 ```
 
 ### ミックスインの使用 
@@ -282,7 +282,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 :host {
     ::ng-deep {
         // Custom navbar theme を `igx-navbar` ミックスインに渡します
-        @include igx-navbar($custom-navbar-theme);
+        @include navbar($custom-navbar-theme);
     }
 }
 ```
@@ -296,16 +296,16 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 ```scss
 $white-color: #dedede;
 $black-color: #151515;
-$light-navbar-palette: igx-palette($primary: $white-color, $secondary: $black-color);
+$light-navbar-palette:palette($primary: $white-color, $secondary: $black-color);
 ```
 
 `igx-color` を使用して、パレットから簡単に取得することができます。
 
 ```scss
-$custom-navbar-theme: igx-navbar-theme(
-    $text-color: igx-color($light-navbar-palette, "secondary", 400),
-    $background: igx-color($light-navbar-palette, "primary", 400),
-    $idle-icon-color: igx-color($light-navbar-palette, "secondary", 400),
+$custom-navbar-theme:navbar-theme(
+    $text-color:color($light-navbar-palette, "secondary", 400),
+    $background:color($light-navbar-palette, "primary", 400),
+    $idle-icon-color:color($light-navbar-palette, "secondary", 400),
     $hover-icon-color: #8c8c8c
 );
 ```
@@ -324,13 +324,13 @@ $custom-navbar-theme: igx-navbar-theme(
  $light-navbar-schema: extend($_light-navbar,
     (
         text-color: (
-            igx-color: ("secondary", 400)
+           color: ("secondary", 400)
         ),
         background: (
-            igx-color: ("primary", 400)
+           color: ("primary", 400)
         ),
         idle-icon-color:(
-            igx-color: ("secondary", 400)
+           color: ("secondary", 400)
         ),
         $hover-icon-color: #8c8c8c
     )
@@ -346,7 +346,7 @@ $custom-light-schema: extend($light-schema,(
 ));
 
 // Defining navbar with the global light schema
-$cutom-navbar-theme: igx-navbar-theme(
+$cutom-navbar-theme:navbar-theme(
   $palette: $light-navbar-palette,
   $schema: $custom-light-schema
 );
@@ -370,16 +370,16 @@ $cutom-navbar-theme: igx-navbar-theme(
 * [IgxNavbarComponent]({environment:angularApiUrl}/classes/igxnavbarcomponent.html)
 * [IgxNavbarActionDirective]({environment:angularApiUrl}/classes/igxnavbaractiondirective.html)
 * [IgxNavbarTitleDirective]({environment:angularApiUrl}/classes/igxnavbartitledirective.html)
-* [IgxNavbarComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-navbar-theme)
+* [IgxNavbarComponent スタイル]({environment:sassApiUrl}/index.html#function-navbar-theme)
 
 その他のコンポーネントおよびディレクティブ (またはそのいずれか) で使用した API:
 
 * [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
-* [IgxIconComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxIconComponent スタイル]({environment:sassApiUrl}/index.html#function-icon-theme)
 
 ## テーマの依存関係
-* [IgxIconComponent テーマ]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
-* [IgxButtonComponent テーマ]({environment:sassApiUrl}/index.html#function-igx-button-theme)
+* [IgxIconComponent テーマ]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxButtonComponent テーマ]({environment:sassApiUrl}/index.html#function-button-theme)
 
 ### その他のリソース
 

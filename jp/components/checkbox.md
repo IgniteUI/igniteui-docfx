@@ -216,7 +216,7 @@ public toggleAll() {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-チェックボックスはカレンダーのテーマを使用するため、[`igx-checkbox-theme`]({environment:sassApiUrl}/index.html#function-igx-checkbox-theme) を拡張する新しいテーマを作成し、そのパラメーターを使用してチェックボックスの項目をスタイル設定します。
+チェックボックスはカレンダーのテーマを使用するため、[`checkbox-theme`]({environment:sassApiUrl}/index.html#function-checkbox-theme) を拡張する新しいテーマを作成し、そのパラメーターを使用してチェックボックスの項目をスタイル設定します。
 
 ```scss
 // in styles.scss
@@ -282,7 +282,7 @@ $custom-checkbox-theme:checkbox-theme(
 <div class="divider--half"></div>
 
 * [IgxCheckboxComponent]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html)
-* [IgxCheckboxComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-checkbox-theme)
+* [IgxCheckboxComponent スタイル]({environment:sassApiUrl}/index.html#function-checkbox-theme)
 * [LabelPosition]({environment:angularApiUrl}/enums/labelposition.html)
 
 ## テーマの依存関係

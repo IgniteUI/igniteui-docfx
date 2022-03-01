@@ -235,7 +235,7 @@ export class MyBannerComponent {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単な方法は、[`igx-banner-theme`]({environment:sassApiUrl}/index.html#function-igx-banner-theme) を拡張する新しいテーマを作成し、`$banner-message-color`、`$banner-background` と `$banner-illustration-color` パラメーターを受け取る方法です。
+最も簡単な方法は、[`banner-theme`]({environment:sassApiUrl}/index.html#function-banner-theme) を拡張する新しいテーマを作成し、`$banner-message-color`、`$banner-background` と `$banner-illustration-color` パラメーターを受け取る方法です。
 
 ```scss
 $custom-banner-theme:banner-theme(
@@ -338,7 +338,7 @@ $custom-banner-theme:banner-theme(
 
 * [IgxBannerComponent]({environment:angularApiUrl}/classes/igxbannercomponent.html)
 * [IgxBannerActionsDirective]({environment:angularApiUrl}/classes/igxbanneractionsdirective.html)
-* [IgxBannerComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-banner-theme)
+* [IgxBannerComponent スタイル]({environment:sassApiUrl}/index.html#function-banner-theme)
 
 その他のコンポーネントおよびディレクティブ (またはそのいずれか) で使用した API:
 
@@ -348,10 +348,10 @@ $custom-banner-theme:banner-theme(
 * [IgxToastComponent]({environment:angularApiUrl}/classes/igxtoastcomponent.html)
 
 ## テーマの依存関係
-* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
-* [IgxButton テーマ]({environment:sassApiUrl}/index.html#function-igx-button-theme)
-* [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
-* [IgxExpansionPanel テーマ]({environment:sassApiUrl}/index.html#function-igx-expansion-panel-theme)
+* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxButton テーマ]({environment:sassApiUrl}/index.html#function-button-theme)
+* [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-ripple-theme)
+* [IgxExpansionPanel テーマ]({environment:sassApiUrl}/index.html#function-expansion-panel-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

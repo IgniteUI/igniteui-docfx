@@ -211,7 +211,7 @@ $custom-theme:progress-circular-theme(
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単な方法として、[`igx-progress-circular-theme`]({environment:sassApiUrl}/index.html#function-igx-progress-circular-theme) を拡張し、`$base-circle-color` および `$progress-circle-color` パラメーターを受け取る新しいテーマを作成する方法があります。
+最も簡単な方法として、[`progress-circular-theme`]({environment:sassApiUrl}/index.html#function-progress-circular-theme) を拡張し、`$base-circle-color` および `$progress-circle-color` パラメーターを受け取る新しいテーマを作成する方法があります。
 
 ```scss
 $custom-theme:progress-circular-theme(
@@ -272,4 +272,4 @@ $custom-theme:progress-circular-theme(
 <div class="divider--half"></div>
 
 * [IgxCircularProgressBarComponent]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html)
-* [IgxCircularProgressBarComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-progress-circular-theme)
+* [IgxCircularProgressBarComponent スタイル]({environment:sassApiUrl}/index.html#function-progress-circular-theme)

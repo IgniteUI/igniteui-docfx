@@ -154,8 +154,8 @@ Additional components and/or directives with relative APIs that were used:
 
 Styles:
 
-* [`IgxNavbarComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-navbar-theme)
-* [`IgxIconComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [`IgxNavbarComponent Styles`]({environment:sassApiUrl}/index.html#function-navbar-theme)
+* [`IgxIconComponent Styles`]({environment:sassApiUrl}/index.html#function-icon-theme)
 
 ### Additional Resources
 

@@ -44,12 +44,12 @@ $new-avatar-theme:avatar-theme(
   $background: purple,
 );
 
-// Pass the css-vars to the `igx-css-vars` mixin
+// Pass the css-vars to the `css-vars` mixin
 @include css-vars($new-avatar-theme);
 ```
 
 The above code produces CSS variables for the `igx-avatar` component. These new CSS variables overwrite the default avatar rules.
-Similarly, if you were to include `igx-css-vars` mixin later down in the global `scss` file, the mixin will again overwrite any previously defined themes.
+Similarly, if you were to include `css-vars` mixin later down in the global `scss` file, the mixin will again overwrite any previously defined themes.
 
 For instance:
 
@@ -65,7 +65,7 @@ $another-avatar-theme:avatar-theme(
 @include css-vars($another-avatar-theme);
 ```
 
-In the above code, the de facto global theme is now the `$another-avatar-theme` as it overwrites any previously included `igx-css-vars` mixins.
+In the above code, the de facto global theme is now the `$another-avatar-theme` as it overwrites any previously included `css-vars` mixins.
 
 This brings us to our next point.
 
@@ -167,7 +167,7 @@ Any Ignite UI for Angular theme built with the `$igx-legacy-support` set to `fal
 
 <div class="divider--half"></div>
 
-In the [overview](#overview) section I mentioned you could use hard-coded values to style your components by setting the `$igx-legacy-support` global variable to `true`. If you use the `igx-theme` mixin and pass it `$legacy-support` with value of `true` it will set the `$igx-legacy-support` to `true`, too.
+In the [overview](#overview) section I mentioned you could use hard-coded values to style your components by setting the `$igx-legacy-support` global variable to `true`. If you use the `theme` mixin and pass it `$legacy-support` with value of `true` it will set the `$igx-legacy-support` to `true`, too.
 
 ### Usage in global themes
 
@@ -222,8 +222,8 @@ $avatar-theme:avatar-theme(
 
 <div class="divider--half"></div>
 
-- [Global Theme]({environment:sassApiUrl}/index.html#mixin-igx-theme)
-- [Avatar Theme]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
+- [Global Theme]({environment:sassApiUrl}/index.html#mixin-theme)
+- [Avatar Theme]({environment:sassApiUrl}/index.html#function-avatar-theme)
 
 ## Additional Resources
 

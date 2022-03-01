@@ -1,13 +1,13 @@
 # デフォルトのテーマ
-Material テーマは、Ignite UI for Angular のデフォルトテーマです。これを使用するには、`igx-theme`ミックスインを `igx-core` の後に含めます。
+Material テーマは、Ignite UI for Angular のデフォルトテーマです。これを使用するには、`theme`ミックスインを `core` の後に含めます。
 
 ```scss
 @use "igniteui-angular/theming" as *;
 
 // 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-@include igx-core();
-@include igx-theme($default-palette);
+@include core();
+@include theme($default-palette);
 ```
 
 ## Material Light テーマ
@@ -16,8 +16,8 @@ Material テーマは、Ignite UI for Angular のデフォルトテーマです�
 
 // 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-@include igx-core();
-@include igx-light-theme($default-palette);
+@include core();
+@include light-theme($default-palette);
 ```
 
 ## Material Dark テーマ
@@ -26,24 +26,24 @@ Material テーマは、Ignite UI for Angular のデフォルトテーマです�
 
 // 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-@include igx-core();
-@include igx-dark-theme($default-palette);
+@include core();
+@include dark-theme($default-palette);
 ```
 
-`igx-light-theme` と `igx-dark-theme` の両方のミックスインには、`igx-theme` ミックスインが含まれています。
-これらのミックスイン は作成されますが、Dark パレットと Dark スキーマの `igx-theme` を使用する場合は、以下を手動で実行してください。
+`igx-light-theme` と `dark-theme` の両方のミックスインには、`theme` ミックスインが含まれています。
+これらのミックスイン は作成されますが、Dark パレットと Dark スキーマの `theme` を使用する場合は、以下を手動で実行してください。
 
 ```scss
 @use "igniteui-angular/theming" as *;
 
 // 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-@include igx-core();
+@include core();
 
 $primary-color: #2ab759;
 $secondary-color: #f96a88;
 
-$my-color-palette: igx-palette(
+$my-color-palette:palette(
     // 注: primary と secondary 色が必要です。
     $primary: $primary-color,
     $secondary: $secondary-color,
@@ -52,10 +52,10 @@ $my-color-palette: igx-palette(
     // デフォルトで各コンポーネントすべてが $default-palette を使用するため、他の色 ($info や $error など) を指定しない場合、$default-palette のデフォルト値を使用します。
 );
 
-@include igx-theme($my-color-palette, $schema: $dark-schema);
+@include theme($my-color-palette, $schema: $dark-schema);
 ```
 
 ## API の概要
-* [グローバル テーマ]({environment:sassApiUrl}/index.html#mixin-igx-theme)
+* [グローバル テーマ]({environment:sassApiUrl}/index.html#mixin-theme)
 * [Light テーマ]({environment:sassApiUrl}/index.html#mixin-igx-light-theme)
-* [Dark テーマ]({environment:sassApiUrl}/index.html#mixin-igx-dark-theme)
+* [Dark テーマ]({environment:sassApiUrl}/index.html#mixin-dark-theme)

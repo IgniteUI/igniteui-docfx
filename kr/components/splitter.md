@@ -155,12 +155,12 @@ To get started with styling the **igxSplitter** component, you need to import th
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-You can change the default styles of the splitter by creating a new theme that extends the [`igx-splitter-theme`]({environment:sassApiUrl}/index.html#function-igx-splitter-theme).
+You can change the default styles of the splitter by creating a new theme that extends the [`splitter-theme`]({environment:sassApiUrl}/index.html#function-splitter-theme).
 
 ```scss
 // In splitter-styling-sample.component.scss
 
-$splitter-theme: igx-splitter-theme(
+$splitter-theme:splitter-theme(
     $bar-color: #011627,
     $handle-color: #ECAA53,
     $expander-color: #ECAA53,
@@ -175,7 +175,7 @@ $splitter-theme: igx-splitter-theme(
 The next step is to pass the custom splitter theme:
 
 ```scss
-@include igx-css-vars($custom-splitter-theme);
+@include css-vars($custom-splitter-theme);
 ```
 
 #### Using Theme Overrides
@@ -188,7 +188,7 @@ If the component is using an [`Emulated`](themes/sass/component-themes.md#view-e
 :host {
     ::ng-deep {
         // Pass the custom splitter theme to the `igx-splitter` mixin
-        @include igx-splitter($custom-splitter-theme);
+        @include splitter($custom-splitter-theme);
     }
 }
 ```
@@ -209,7 +209,7 @@ This is the final result from applying your new theme.
 * [IgxSplitterComponent]({environment:angularApiUrl}/classes/igxsplittercomponent.html)
 * [IgxSplitterPaneComponent]({environment:angularApiUrl}/classes/igxsplitterpanecomponent.html)
 * [SplitterType]({environment:angularApiUrl}/enums/splittertype.html)
-* [IgxSplitterComponent Styles]({environment:sassApiUrl}/index.html#function-igx-splitter-theme)
+* [IgxSplitterComponent Styles]({environment:sassApiUrl}/index.html#function-splitter-theme)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

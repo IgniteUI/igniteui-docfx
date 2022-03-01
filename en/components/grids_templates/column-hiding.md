@@ -469,29 +469,29 @@ To get started with styling the column actions component, we need to import the 
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-By using the simplest approach, we create a new theme that extends the [`igx-column-actions-theme`]({environment:sassApiUrl}/index.html#function-igx-column-actions-theme) and accepts the `$title-color` and the `$background-color` parameters.
+By using the simplest approach, we create a new theme that extends the [`column-actions-theme`]({environment:sassApiUrl}/index.html#function-column-actions-theme) and accepts the `$title-color` and the `$background-color` parameters.
 
 ```scss
-$custom-column-actions-theme: igx-column-actions-theme(
+$custom-column-actions-theme:column-actions-theme(
     $background-color: steelblue,
     $title-color: gold
 );
 ```
 
-As seen, the `igx-column-actions-theme` only controls colors for the column actions container, but does not affect the buttons, checkboxes and the input-group inside of it. Let's say we want to style the buttons as well, so we will create a new button theme:
+As seen, the `column-actions-theme` only controls colors for the column actions container, but does not affect the buttons, checkboxes and the input-group inside of it. Let's say we want to style the buttons as well, so we will create a new button theme:
 
 ```scss
-$custom-button: igx-button-theme($flat-text-color: gold, $disabled-color: black);
+$custom-button:button-theme($flat-text-color: gold, $disabled-color: black);
 ```
 
-In this example we only changed the text-color of the flat buttons and the button disabled color, but the [`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) provides way more parameters to control the button style.
+In this example we only changed the text-color of the flat buttons and the button disabled color, but the [`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme) provides way more parameters to control the button style.
 
 The last step is to **include** the component mixins, each with its respective theme: 
 
 ```scss
-@include igx-column-actions($custom-column-actions-theme);
+@include column-actions($custom-column-actions-theme);
 .igx-column-actions {
-    @include igx-button($custom-button);
+    @include button($custom-button);
 }
 ```
 
@@ -504,9 +504,9 @@ The last step is to **include** the component mixins, each with its respective t
 ```scss
 :host {
     ::ng-deep {
-        @include igx-column-actions($custom-column-actions-theme);
+        @include column-actions($custom-column-actions-theme);
         .igx-column-actions {
-            @include igx-button($custom-button);
+            @include button($custom-button);
         }
     }
 }
@@ -522,21 +522,21 @@ Instead of hardcoding the color values like we just did, we can achieve greater 
 $yellow-color: gold;
 $blue-color: steelblue;
 
-$custom-palette: igx-palette($primary: $blue-color, $secondary: $yellow-color);
+$custom-palette:palette($primary: $blue-color, $secondary: $yellow-color);
 ```
 
 And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette. 
 
 ```scss
-$custom-column-actions-theme: igx-column-actions-theme(
+$custom-column-actions-theme:column-actions-theme(
     $palette: $custom-palette,
-    $title-color: igx-color($custom-palette, "secondary", 400),
-    $background-color: igx-color($custom-palette, "primary", 200)
+    $title-color:color($custom-palette, "secondary", 400),
+    $background-color:color($custom-palette, "primary", 200)
 );
 
-$custom-button: igx-button-theme(
+$custom-button:button-theme(
     $palette: $custom-palette,
-    $flat-text-color: igx-color($custom-palette, "secondary", 400),
+    $flat-text-color:color($custom-palette, "secondary", 400),
     $disabled-color: black
 );
 ```
@@ -553,10 +553,10 @@ Going further with the theming engine, you can build a robust and flexible struc
 $custom-column-actions-schema: extend($_dark-column-actions,
     (
         title-color:(
-            igx-color: ("secondary", 400)
+           color: ("secondary", 400)
         ),
         background-color:(
-            igx-color: ("primary", 200)
+           color: ("primary", 200)
         )
     )
 );
@@ -564,10 +564,10 @@ $custom-column-actions-schema: extend($_dark-column-actions,
 $custom-button-schema: extend($_dark-button,
     (           
         flat-text-color:(
-            igx-color:("secondary", 500)
+           color:("secondary", 500)
         ),
         disabled-color:(
-            igx-color:("primary", 700)
+           color:("primary", 700)
         )
     )
 );
@@ -583,13 +583,13 @@ $custom-dark-schema: extend($dark-schema,(
 ));
 
 // Defining column-actions-theme with the global dark schema
-$custom-column-actions-theme: igx-column-actions-theme(
+$custom-column-actions-theme:column-actions-theme(
   $palette: $custom-palette,
   $schema: $custom-dark-schema
 );
 
 // Defining button-theme with the global dark schema
-$custom-button: igx-button-theme(
+$custom-button:button-theme(
   $palette: $custom-palette,
   $schema: $custom-dark-schema
 );
@@ -639,7 +639,7 @@ In this article we learned how to use the built-in column hiding UI in the @@igC
 The column hiding UI has a few more APIs to explore, which are listed below.
 
 * [IgxColumnActionsComponent]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html)
-* [IgxColumnActionsComponent Styles]({environment:sassApiUrl}/index.html#function-igx-column-actions-theme)
+* [IgxColumnActionsComponent Styles]({environment:sassApiUrl}/index.html#function-column-actions-theme)
 
 Additional components and/or directives with relative APIs that were used:
 
@@ -669,8 +669,8 @@ Additional components and/or directives with relative APIs that were used:
 
 Styles:
 
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
-* [IgxRadioComponent Styles]({environment:sassApiUrl}/index.html#function-igx-radio-theme)
+* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-grid-theme)
+* [IgxRadioComponent Styles]({environment:sassApiUrl}/index.html#function-radio-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>

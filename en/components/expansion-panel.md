@@ -197,7 +197,7 @@ $my-primary-color:#353a4b;
 $my-secondary-color: #ffd351;
 
 // Create custom palette.
-$my-color-palette: igx-palette(
+$my-color-palette:palette(
     $primary: $my-primary-color,
     $secondary: $my-secondary-color
 );
@@ -208,36 +208,36 @@ Now let's create our component theme and pass the `$my-color-palette` palette fr
 ```scss
 // In expansion-styling.component.scss
 // Create expansion panel theme.
-$custom-panel-theme: igx-expansion-panel-theme(
+$custom-panel-theme:expansion-panel-theme(
     // pass `$my-color-palette` palette.
     $palette: $my-color-palette,
 
     // Styling parameters.
-    $header-background: igx-color($my-color-palette, "primary", 700),
-    $header-focus-background: igx-color($my-color-palette, "primary", 700),
-    $header-title-color: igx-color($my-color-palette, "secondary"),
-    $header-icon-color: igx-color($my-color-palette, "secondary"),
-    $body-background: igx-color($my-color-palette, "primary", 700),
-    $body-color: igx-color($my-color-palette, "secondary" 100),
+    $header-background:color($my-color-palette, "primary", 700),
+    $header-focus-background:color($my-color-palette, "primary", 700),
+    $header-title-color:color($my-color-palette, "secondary"),
+    $header-icon-color:color($my-color-palette, "secondary"),
+    $body-background:color($my-color-palette, "primary", 700),
+    $body-color:color($my-color-palette, "secondary" 100),
     $border-radius: .5
 );
 ```
 >[!NOTE]
-> To see all the available parameters for styling trough the [`theming`](themes/sass/component-themes.md) engine check the [`API documentation`]({environment:sassApiUrl}/index.html#function-igx-expansion-panel-theme)
+> To see all the available parameters for styling trough the [`theming`](themes/sass/component-themes.md) engine check the [`API documentation`]({environment:sassApiUrl}/index.html#function-expansion-panel-theme)
 
 ### Applying the Component Theme
-Now to apply the component theme all that's left is to include `igx-css-vars` mixin and pass the `$custom-panel-theme` map.
+Now to apply the component theme all that's left is to include `css-vars` mixin and pass the `$custom-panel-theme` map.
 ```scss
 // In expansion-styling.component.scss
 // Pass our custom-panel-theme to `igx-expansion-panel` mixin.
 // The `:host` here makes sure that all the theming will affect only this component.
 :host {
-  @include igx-css-vars($custom-panel-theme);
+  @include css-vars($custom-panel-theme);
 }
 ```
 
  >[!NOTE]
- > If you need to support Internet explorer 11 you have to use the component mixin `igx-expansion-panel` instead of `igx-css-vars` and because our component have [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation we have to penetrate it by using `::ng-deep`.
+ > If you need to support Internet explorer 11 you have to use the component mixin `igx-expansion-panel` instead of `css-vars` and because our component have [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation we have to penetrate it by using `::ng-deep`.
  > Also in order to prevent our custom theme from leaking into other components, we have to include the `:host` selector before `::ng-deep`:
 
 ```scss
@@ -246,7 +246,7 @@ Now to apply the component theme all that's left is to include `igx-css-vars` mi
 :host {
     // Penetrate the ViewEncapsulation.
     ::ng-deep {
-        @include igx-expansion-panel($custom-panel-theme);
+        @include expansion-panel($custom-panel-theme);
     }
 }
 ```
@@ -328,4 +328,4 @@ See the [igxAccordion topic](accordion.md)
 * [IgxExpansionPanel Styles]({environment:sassApiUrl}/index.html#mixin-igx-expansion-panel)
 
 ## Theming Dependencies
-* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-icon-theme)

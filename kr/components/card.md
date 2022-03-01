@@ -189,7 +189,7 @@ For more detailed information regarding the card's API, refer to the following l
 
 The following built-in CSS styles helped us achieve this card layout:
 
-* [`IgxCardComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-card-theme)
+* [`IgxCardComponent Styles`]({environment:sassApiUrl}/index.html#function-card-theme)
 
 Additional components and/or directives that were used:
 
@@ -199,9 +199,9 @@ Additional components and/or directives that were used:
 
 Styles:
 
-* [`IgxAvatarComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
-* [`IgxIconComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
-* [`IgxButtonDirective Styles`]({environment:sassApiUrl}/index.html#function-igx-button-theme)
+* [`IgxAvatarComponent Styles`]({environment:sassApiUrl}/index.html#function-avatar-theme)
+* [`IgxIconComponent Styles`]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [`IgxButtonDirective Styles`]({environment:sassApiUrl}/index.html#function-button-theme)
 
 <div class="divider"></div>
 

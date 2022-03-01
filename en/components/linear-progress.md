@@ -219,10 +219,10 @@ To get started with styling the linear progress bar, we need to import the `inde
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`igx-progress-linear-theme`]({environment:sassApiUrl}/index.html#function-igx-progress-linear-theme) and accepts the `$track-color`, `$fill-color-default` and `$text-color` parameters.
+Following the simplest approach, we create a new theme that extends the [`progress-linear-theme`]({environment:sassApiUrl}/index.html#function-progress-linear-theme) and accepts the `$track-color`, `$fill-color-default` and `$text-color` parameters.
 
 ```scss
-$custom-theme: igx-progress-linear-theme(
+$custom-theme:progress-linear-theme(
     $track-color: #D3D3D3,
     $fill-color-default: #ECAA53,
     $text-color: #ECAA53
@@ -238,7 +238,7 @@ The last step is to **include** the component theme in our application.
 If `$legacy-support` is set to `true`, include the **component theme** like that:
 
 ```scss
- @include igx-progress-linear($custom-theme);
+ @include progress-linear($custom-theme);
 ```
 
 >[!NOTE]
@@ -247,7 +247,7 @@ If `$legacy-support` is set to `true`, include the **component theme** like that
 ```scss
 :host {
      ::ng-deep {
-        @include igx-progress-linear($custom-theme);
+        @include progress-linear($custom-theme);
     }
 }
 ```
@@ -257,7 +257,7 @@ If `$legacy-support` is set to `true`, include the **component theme** like that
 If `$legacy-support` is set to `false`(default), include the component **css variables** like that:
 
 ```scss
-@include igx-css-vars($custom-theme);
+@include css-vars($custom-theme);
 ```
 
 >[!NOTE]
@@ -265,7 +265,7 @@ If `$legacy-support` is set to `false`(default), include the component **css var
 
 ```scss
 :host {
-    @include igx-css-vars($custom-theme);
+    @include css-vars($custom-theme);
 }
 ```
 
@@ -282,5 +282,5 @@ If `$legacy-support` is set to `false`(default), include the component **css var
 <div class="divider--half"></div>
 
 * [IgxLinearProgressBarComponent]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html)
-* [IgxLinearProgressBarComponent Styles]({environment:sassApiUrl}/index.html#function-igx-progress-linear-theme)
+* [IgxLinearProgressBarComponent Styles]({environment:sassApiUrl}/index.html#function-progress-linear-theme)
 * [IgxTextAlign]({environment:angularApiUrl}/enums/igxtextalign.html)

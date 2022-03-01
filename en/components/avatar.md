@@ -122,7 +122,7 @@ To get started with styling the avatar, we need to import the `index` file, wher
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`igx-avatar-theme`]({environment:sassApiUrl}/index.html#function-igx-avatar-theme) and accepts the `$background`, `$color`, and the `$border-radius-square` parameters.
+Following the simplest approach, we create a new theme that extends the [`avatar-theme`]({environment:sassApiUrl}/index.html#function-avatar-theme) and accepts the `$background`, `$color`, and the `$border-radius-square` parameters.
 
 Given the following markup:
 
@@ -186,7 +186,7 @@ If all went well, you should see something like the following in the browser:
 
 
 ## Theming Dependencies
-* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-icon-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>

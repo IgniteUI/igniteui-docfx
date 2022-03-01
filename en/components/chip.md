@@ -386,7 +386,7 @@ To get started with styling the chip, we need to import the `index` file, where 
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
-Following the simplest approach, we create a new theme that extends the [`igx-chip-theme`]({environment:sassApiUrl}/index.html#function-igx-chip-theme) and accepts some parameters that style the chip's items:
+Following the simplest approach, we create a new theme that extends the [`chip-theme`]({environment:sassApiUrl}/index.html#function-chip-theme) and accepts some parameters that style the chip's items:
 
 ```scss
 $custom-theme:chip-theme(
@@ -461,11 +461,11 @@ If `$legacy-support` is set to `false`(default), include the component **css var
 ## API
 
 * [IgxChipComponent]({environment:angularApiUrl}/classes/igxchipcomponent.html)
-* [IgxChipComponent Styles]({environment:sassApiUrl}/index.html#function-igx-chip-theme)
+* [IgxChipComponent Styles]({environment:sassApiUrl}/index.html#function-chip-theme)
 * [IgxChipsAreaComponent]({environment:angularApiUrl}/classes/igxchipsareacomponent.html)
 
 ## Theming Dependencies
-* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-icon-theme)
 
 ## References
 

@@ -106,7 +106,7 @@ Structured statements like for `x =1 to 10` loop <a href="#"><code>structures</c
 :host {
     ::ng-deep {
         // comment
-        @include igx-splitter($custom-splitter-theme);
+        @include splitter($custom-splitter-theme);
     }
 }
 ```

@@ -273,10 +273,10 @@ IgxDatePicker と [`IgxTimePicker`](time-picker.md) を一緒に使用する場�
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-日付ピッカーはカレンダーのテーマを使用するので、[`igx-calendar-theme`]({environment:sassApiUrl}/index.html#function-igx-calendar-theme) を拡張する新しいテーマを作成し、そのパラメーターを使用して日付ピッカーの項目をスタイル設定します。
+日付ピッカーはカレンダーのテーマを使用するので、[`calendar-theme`]({environment:sassApiUrl}/index.html#function-calendar-theme) を拡張する新しいテーマを作成し、そのパラメーターを使用して日付ピッカーの項目をスタイル設定します。
 
 ```scss
-$custom-datepicker-theme: igx-calendar-theme(
+$custom-datepicker-theme:calendar-theme(
     $header-background: #345779,
     $content-background: #fdfdfd,
     $header-text-color: #ffffff,
@@ -299,7 +299,7 @@ $custom-datepicker-theme: igx-calendar-theme(
 最後に日付ピッカーのカスタム テーマを設定します。
 
 ```scss
-@include igx-css-vars($custom-datepicker-theme);
+@include css-vars($custom-datepicker-theme);
 ```
 
 ### テーマ オーバーライドの使用
@@ -311,7 +311,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
  ```scss
 :host {
     ::ng-deep {
-        @include igx-calendar($custom-datepicker-theme);
+        @include calendar($custom-datepicker-theme);
     }
 }
 ```
@@ -327,19 +327,19 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 * [IgxDatePickerComponent]({environment:angularApiUrl}/classes/igxdatepickercomponent.html)
 * [IgxDateTimeEditorDirective]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html)
 * [IgxCalendarComponent]({environment:angularApiUrl}/classes/igxcalendarcomponent.html)
-* [IgxCalendarComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-calendar-theme)
-* [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+* [IgxCalendarComponent スタイル]({environment:sassApiUrl}/index.html#function-calendar-theme)
+* [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-overlay-theme)
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 
 ## テーマの依存関係
 <div class="divider--half"></div>
 
-* [IgxCalendar テーマ]({environment:sassApiUrl}/index.html#function-igx-calendar-theme)
-* [IgxOverlay テーマ]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
-* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
-* [IgxButton テーマ]({environment:sassApiUrl}/index.html#function-igx-button-theme)
-* [IgxInputGroup テーマ]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
-* [IgxDropDown テーマ]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme)
+* [IgxCalendar テーマ]({environment:sassApiUrl}/index.html#function-calendar-theme)
+* [IgxOverlay テーマ]({environment:sassApiUrl}/index.html#function-overlay-theme)
+* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxButton テーマ]({environment:sassApiUrl}/index.html#function-button-theme)
+* [IgxInputGroup テーマ]({environment:sassApiUrl}/index.html#function-input-group-theme)
+* [IgxDropDown テーマ]({environment:sassApiUrl}/index.html#function-drop-down-theme)
 
 ## その他のリソース
 * [Time Picker](time-picker.md)

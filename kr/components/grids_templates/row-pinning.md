@@ -390,7 +390,7 @@ This would allow reordering the rows and moving them between the pinned and unpi
 
 ### Styling
 
-The @@igxName allows styling through the [Ignite UI for Angular Theme Library](../themes/sass/component-themes.md). The @@igComponent's [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) exposes a wide variety of properties, which allow the customization of all the features of the @@igComponent.
+The @@igxName allows styling through the [Ignite UI for Angular Theme Library](../themes/sass/component-themes.md). The @@igComponent's [theme]({environment:sassApiUrl}/index.html#function-grid-theme) exposes a wide variety of properties, which allow the customization of all the features of the @@igComponent.
 
 Below, we are going through the steps of customizing the @@igComponent's row pinning styling.
 
@@ -404,7 +404,7 @@ To begin the customization of the row pinning feature, you need to import the `i
 
 #### Defining a Theme
 
-Next, create a new theme, that extends the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) and accepts the parameters, required to customize the row pinning feature as desired.
+Next, create a new theme, that extends the [`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) and accepts the parameters, required to customize the row pinning feature as desired.
 
 ```scss
 $custom-grid-theme:grid-theme(
@@ -473,7 +473,7 @@ If the component is using an [`Emulated`](themes/sass/component-themes.md#view-e
 * [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)
 * [IgxHierarchicalGridRow]({environment:angularApiUrl}/classes/igxhierarchicalgridrow.html)
 * [RowType]({environment:angularApiUrl}/interfaces/RowType.html)
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-grid-theme)
 
 ### Additional Resources
 <div class="divider--half"></div>

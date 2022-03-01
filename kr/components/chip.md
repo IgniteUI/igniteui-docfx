@@ -194,7 +194,7 @@ The chip can be focused using the `Tab` key or by clicking on it. When in chip a
   - <kbd>SPACE</kbd> or <kbd>ENTER</kbd> Fires the [`remove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#remove) output so the chip deletion can be handled manually.
 
 ### Styling
-The igxChip allows styling through the [Ignite UI for Angular Theme Library](../themes/sass/component-themes.md). The chip's [theme]({environment:sassApiUrl}/index.html#function-igx-chip-theme) exposes a wide variety of properties, which allow the customization of many of the aspects of the chip.        
+The igxChip allows styling through the [Ignite UI for Angular Theme Library](../themes/sass/component-themes.md). The chip's [theme]({environment:sassApiUrl}/index.html#function-chip-theme) exposes a wide variety of properties, which allow the customization of many of the aspects of the chip.        
 
  #### Importing global theme
 To begin styling of the predefined chip layout, you need to import the `index` file, where all styling functions and mixins are located.  
@@ -203,11 +203,11 @@ To begin styling of the predefined chip layout, you need to import the `index` f
 ```   
 
 #### Defining custom theme
-Next, create a new theme, that extends the [`igx-chip-theme`]({environment:sassApiUrl}/index.html#function-igx-chip-theme) and accepts the parameters, required to customize the chip as desired.
+Next, create a new theme, that extends the [`chip-theme`]({environment:sassApiUrl}/index.html#function-chip-theme) and accepts the parameters, required to customize the chip as desired.
    
 
 ```scss
-$custom-theme: igx-chip-theme(
+$custom-theme:chip-theme(
     $background: #494949,
     $text-color: #e2e2e2,
     $remove-icon-color: #e2e2e2,
@@ -229,7 +229,7 @@ In the approach, that was described above, the color values were hardcoded. Alte
 $black-color: #494949;
 $yellow-color: #ffcd0f;
 
-$custom-palette: igx-palette(
+$custom-palette:palette(
     $primary: $black-color,
     $secondary: $yellow-color
 );
@@ -238,16 +238,16 @@ $custom-palette: igx-palette(
 After the custom palette has been generated, the `igx-color` function can be used to obtain different varieties of the primary and the secondary colors.   
 
 ```scss
-$custom-theme: igx-chip-theme(
-    $background: igx-color($custom-palette, "primary", 500),
-    $text-color: igx-contrast-color($custom-palette, "primary", 500),
-    $remove-icon-color: igx-contrast-color($custom-palette, "primary", 500),
-    $remove-icon-color-focus: igx-color($custom-palette, "secondary", 500),
-    $hover-text-color: igx-contrast-color($custom-palette, "primary", 500),
-    $selected-background: igx-color($custom-palette, "secondary", 500),
-    $selected-border-color: igx-color($custom-palette, "secondary", 500),
-    $hover-selected-background: igx-color($custom-palette, "secondary", 600),
-    $focus-selected-background: igx-color($custom-palette, "secondary", 500),
+$custom-theme:chip-theme(
+    $background:color($custom-palette, "primary", 500),
+    $text-color:contrast-color($custom-palette, "primary", 500),
+    $remove-icon-color:contrast-color($custom-palette, "primary", 500),
+    $remove-icon-color-focus:color($custom-palette, "secondary", 500),
+    $hover-text-color:contrast-color($custom-palette, "primary", 500),
+    $selected-background:color($custom-palette, "secondary", 500),
+    $selected-border-color:color($custom-palette, "secondary", 500),
+    $hover-selected-background:color($custom-palette, "secondary", 600),
+    $focus-selected-background:color($custom-palette, "secondary", 500),
     $border-radius: 5px
 );
 ```
@@ -277,7 +277,7 @@ $my-custom-schema: extend($light-schema, (
     igx-chip: $custom-chip-schema
 ));
 
-$custom-theme: igx-chip-theme(
+$custom-theme:chip-theme(
     $palette: $custom-palette,
     $schema: $my-custom-schema
 );
@@ -286,7 +286,7 @@ $custom-theme: igx-chip-theme(
 #### Applying the custom theme
 The easiest way to apply your theme is with a `sass` `@include` statement in the global styles file: 
 ```scss
-@include igx-chip($custom-theme);
+@include chip($custom-theme);
 ```
 
 #### Scoped component theme
@@ -303,7 +303,7 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 ```scss
 :host {
     ::ng-deep {
-        @include igx-chip($custom-theme);
+        @include chip($custom-theme);
     }
 }
 ```   
@@ -319,7 +319,7 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 ### API
 
 * [IgxChipComponent]({environment:angularApiUrl}/classes/igxchipcomponent.html)
-* [IgxChipComponent Styles]({environment:sassApiUrl}/index.html#function-igx-chip-theme)
+* [IgxChipComponent Styles]({environment:sassApiUrl}/index.html#function-chip-theme)
 * [IgxChipsAreaComponent]({environment:angularApiUrl}/classes/igxchipsareacomponent.html)
 
 ### References

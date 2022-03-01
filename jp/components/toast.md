@@ -181,7 +181,7 @@ Toast のスタイル設定を始めるには、すべてのテーマ関数と�
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単な方法は、[`igx-toast-theme`]({environment:sassApiUrl}/index.html#function-igx-toast-theme) を拡張する新しいテーマを作成し、`$shadow`、`$background`、`$text-color` と `$border-radius` パラメーターを受け取る方法です。 
+最も簡単な方法は、[`toast-theme`]({environment:sassApiUrl}/index.html#function-toast-theme) を拡張する新しいテーマを作成し、`$shadow`、`$background`、`$text-color` と `$border-radius` パラメーターを受け取る方法です。 
 
 ```scss
 $custom-toast-theme:toast-theme(
@@ -289,7 +289,7 @@ $custom-toast-theme:toast-theme(
 <div class="divider--half"></div>
 
 * [IgxToastComponent]({environment:angularApiUrl}/classes/igxtoastcomponent.html)
-* [IgxToastComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-toast-theme)
+* [IgxToastComponent スタイル]({environment:sassApiUrl}/index.html#function-toast-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

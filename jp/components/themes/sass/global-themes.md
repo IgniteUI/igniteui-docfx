@@ -13,9 +13,9 @@ _language: ja
 アプリケーション プロジェクトに `igniteui-angular.css` ファイルを追加した場合、削除してください。`my-app-theme.scss` ファイルを使用してアプリケーションのすべてのコンポーネント用にグローバル テーマを生成します。
 
 **Ignite UI for Angular** は、コンポーネント全体のテーマにグローバル テーマをデフォルトで使用します。アプリでユース ケースに合わせてコンポーネントにスコープしたテーマを作成できます。ここでは 1 ファイルにすべてのテーマを含みます。
-グローバル テーマの生成には 2 つのミックスイン `igx-core` と `igx-theme` を含みます。両方のミックスインは数個の引数を受け取ります。 
+グローバル テーマの生成には 2 つのミックスイン `core` と `theme` を含みます。両方のミックスインは数個の引数を受け取ります。 
 
-### igx-core  
+###core  
 <div class="divider--half"></div>
 
 | 名前                      | タイプ    | デフォルト設定 | 説明                                                               |
@@ -25,7 +25,7 @@ _language: ja
 | `$enhanced-accessibility` | boolean | false   | コンポーネントの色およびその他のプロパティをアクセスしやすい値に切り替えます。 |
 
 
-### igx-theme  
+###theme  
 <div class="divider--half"></div>
 
 | 名前              | タイプ    | デフォルト設定       | 説明                                                                                                  |
@@ -50,34 +50,34 @@ _language: ja
 $primary-color: #2ab759;
 $secondary-color: #f96a88;
 
-$my-color-palette: igx-palette(
+$my-color-palette:palette(
     $primary: $primary-color,
     $secondary: $secondary-color
 );
 
-// 重要: 必ず最初に igx-core を含めてください。
-@include igx-core();
+// 重要: 必ず最初にcore を含めてください。
+@include core();
 // Add the typography styles before the main theme.
-@include igx-typography();
-// 生成したカラー パレットを igx-theme ミックスインに渡します.
-@include igx-theme($my-color-palette);
+@include typography();
+// 生成したカラー パレットをtheme ミックスインに渡します.
+@include theme($my-color-palette);
 ```
 
-`igx-core` および `igx-theme` ミックスインの機能を説明します。`igx-core` ミックスインは、方向、アクセシビリティ、可変コンポーネントの印刷スタイルの追加など、グローバル テーマ構成を処理します。`igx-theme` は、`$default-palette` グローバル変数を渡すパレットに設定します。また、グローバル変数 `$igx-legacy-support` を `$legacy-support` の値に設定します。`igx-theme` ミックスインは、コンポーネントの `$exclude` リストに載っていない各コンポーネント スタイルも含みます。 
+`core` および `theme` ミックスインの機能を説明します。`core` ミックスインは、方向、アクセシビリティ、可変コンポーネントの印刷スタイルの追加など、グローバル テーマ構成を処理します。`theme` は、`$default-palette` グローバル変数を渡すパレットに設定します。また、グローバル変数 `$igx-legacy-support` を `$legacy-support` の値に設定します。`theme` ミックスインは、コンポーネントの `$exclude` リストに載っていない各コンポーネント スタイルも含みます。 
 
 > [!IMPORTANT]
-> `igx-theme` の前に `igx-core` と `igx-typography` を含める必要があります。`igx-core` ミックスインは `igx-theme` の基本定義を提供します。
+> `theme` の前に `core` と `typography` を含める必要があります。`core` ミックスインは `theme` の基本定義を提供します。
 
 ## コンポーネントの除外
 <div class="divider--half"></div>
 
-`igx-theme` ミックスインは、グローバル テーマ スタイルから除外されるコンポーネント名のリストを提供します。たとえば、`igx-avatar` および `igx-badge` に含まれるすべてのスタイルを完全に削除したい場合は (生成される CSS の量を減らすか、独自のカスタム スタイルを提供する場合)、以下のようなコンポーネントのリストを渡すことで可能です。
+`theme` ミックスインは、グローバル テーマ スタイルから除外されるコンポーネント名のリストを提供します。たとえば、`igx-avatar` および `igx-badge` に含まれるすべてのスタイルを完全に削除したい場合は (生成される CSS の量を減らすか、独自のカスタム スタイルを提供する場合)、以下のようなコンポーネントのリストを渡すことで可能です。
 
 ```scss
 // ...
 $unnecessary: (igx-avatar, igx-badge);
 
-@include igx-theme($my-color-palette, $exclude: $unnecessary);
+@include theme($my-color-palette, $exclude: $unnecessary);
 ```
 
 アプリが一部のコンポーネントを使用しない場合は、`$exclude` リストに追加することをお勧めします。
@@ -91,27 +91,27 @@ $unnecessary: (igx-avatar, igx-badge);
 
 $allowed: (igx-avatar, igx-badge);
 
-@include igx-theme(
+@include theme(
     $exclude: include($allowed, $components)
 );
 ```
 
 ## 明暗テーマ (Light/Dark)
 
-`igx-theme` ミックスインに加えグローバル テーマ ミックスインを追加しました。**明暗**テーマのブート ストラップにグローバル テーマ ミックスインが含まれます。これらのミックスイン は `igx-light-theme` と `igx-dark-theme` です。
+`theme` ミックスインに加えグローバル テーマ ミックスインを追加しました。**明暗**テーマのブート ストラップにグローバル テーマ ミックスインが含まれます。これらのミックスイン は `igx-light-theme` と `dark-theme` です。
 
 明暗テーマを作成する方法を示すショーケースです。
 
 ```scss
 .light-theme {
-    @include igx-light-theme($light-material-palette);
+    @include light-theme($light-material-palette);
 }
 
 .dark-theme {
     background: #333;
     color: #fff;
 
-    @include igx-dark-theme($light-material-palette);
+    @include dark-theme($light-material-palette);
 }
 ```
 
@@ -123,18 +123,18 @@ Ignite UI for Angular には、事前定義されたテーマのセットから�
 
 | テーマ                                                                        | ミックスイン                                                                                             |  スキーマ                   |  カラー パレット                                            | 利用可能バージョン |
 |------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|---------------------------|-----------------------------------------------------------|----------------------|
-| [**Material (base)**](presets/material.md)                           |  [igx-theme()]({environment:sassApiUrl}/index.html#mixin-igx-theme)                               | `$light-schema          ` | $default-palette                                          |      **すべて**         |
+| [**Material (base)**](presets/material.md)                           |  [theme()]({environment:sassApiUrl}/index.html#mixin-theme)                               | `$light-schema          ` | $default-palette                                          |      **すべて**         |
 | [**Material (light)**](presets/material.md#material-light-theme)     |  [igx-light-theme()]({environment:sassApiUrl}/index.html#mixin-igx-light-theme)                   | `$light-material-schema          ` | $light-material-palette                                          |      **6.2 +**       |
-| [**Material (dark)**](presets/material.md#material-dark-theme)       |  [igx-dark-theme()]({environment:sassApiUrl}/index.html#mixin-igx-dark-theme)                     | `$dark-material-schema           ` | $dark-material-palette                                             |      **6.2 +**       |
-| [**Fluent**](presets/fluent.md)                                      |  [igx-fluent-light-theme()]({environment:sassApiUrl}/index.html#mixin-igx-fluent-light-theme)                 | `$light-fluent-schema   ` | $light-fluent-excel-palette <br> $light-fluent-word-palette           |      **8.2 +**       |
-| [**Fluent (dark)**](presets/fluent.md#fluent-dark-theme)             |  [igx-fluent-dark-theme()]({environment:sassApiUrl}/index.html#mixin-igx-fluent-dark-theme)       | `$dark-fluent-schema    ` | $dark-fluent-excel-palette <br> $dark-fluent-word-palette |      **8.2 +**       |
-| [**Bootstrap**](presets/bootstrap.md)                                |  [igx-bootstrap-light-theme()]({environment:sassApiUrl}/index.html#mixin-igx-bootstrap-light-theme)            | `$light-bootstrap-schema` | $light-bootstrap-palette                                        |      **9.0 +**       |
-| [**Bootstrap (dark)**](presets/bootstrap.md#bootstrap-dark-theme)    |  [igx-bootstrap-dark-theme()]({environment:sassApiUrl}/index.html#mixin-igx-bootstrap-dark-theme)  | `$dark-bootstrap-schema ` | $dark-bootstrap-palette                                   |      **9.0 +**       |
-| [**Indigo**](presets/indigo.md)                                      |  [igx-indigo-light-theme()]({environment:sassApiUrl}/index.html#mixin-igx-indigo-light-theme)            | `$light-indigo-schema` | $light-indigo-palette                                        |      **10.1 +**       |
-| [**Indigo (dark)**](presets/indigo.md#indigo-dark-theme)             |  [igx-indigo-dark-theme()]({environment:sassApiUrl}/index.html#mixin-igx-indigo-dark-theme)  | `$dark-indigo-schema ` | $dark-indigo-palette                                   |      **10.1 +**       |
+| [**Material (dark)**](presets/material.md#material-dark-theme)       |  [dark-theme()]({environment:sassApiUrl}/index.html#mixin-dark-theme)                     | `$dark-material-schema           ` | $dark-material-palette                                             |      **6.2 +**       |
+| [**Fluent**](presets/fluent.md)                                      |  [fluent-light-theme()]({environment:sassApiUrl}/index.html#mixin-fluent-light-theme)                 | `$light-fluent-schema   ` | $light-fluent-excel-palette <br> $light-fluent-word-palette           |      **8.2 +**       |
+| [**Fluent (dark)**](presets/fluent.md#fluent-dark-theme)             |  [fluent-dark-theme()]({environment:sassApiUrl}/index.html#mixin-fluent-dark-theme)       | `$dark-fluent-schema    ` | $dark-fluent-excel-palette <br> $dark-fluent-word-palette |      **8.2 +**       |
+| [**Bootstrap**](presets/bootstrap.md)                                |  [bootstrap-light-theme()]({environment:sassApiUrl}/index.html#mixin-bootstrap-light-theme)            | `$light-bootstrap-schema` | $light-bootstrap-palette                                        |      **9.0 +**       |
+| [**Bootstrap (dark)**](presets/bootstrap.md#bootstrap-dark-theme)    |  [bootstrap-dark-theme()]({environment:sassApiUrl}/index.html#mixin-bootstrap-dark-theme)  | `$dark-bootstrap-schema ` | $dark-bootstrap-palette                                   |      **9.0 +**       |
+| [**Indigo**](presets/indigo.md)                                      |  [indigo-light-theme()]({environment:sassApiUrl}/index.html#mixin-indigo-light-theme)            | `$light-indigo-schema` | $light-indigo-palette                                        |      **10.1 +**       |
+| [**Indigo (dark)**](presets/indigo.md#indigo-dark-theme)             |  [indigo-dark-theme()]({environment:sassApiUrl}/index.html#mixin-indigo-dark-theme)  | `$dark-indigo-schema ` | $dark-indigo-palette                                   |      **10.1 +**       |
 
 > [!NOTE]
-> すべてのハイレベルなテーマ ミックスインは、基本の `igx-theme` ミックスインをラップすることに注意してください。
+> すべてのハイレベルなテーマ ミックスインは、基本の `theme` ミックスインをラップすることに注意してください。
 
 すべてのテーマ ミックスインは、独自のテーマを作成するための開始ポイントとして使用できます。`igx-bootstrap-theme` ミックスインを使用して、新しいテーマを作成しましょう。
 
@@ -148,15 +148,15 @@ Ignite UI for Angular には、事前定義されたテーマのセットから�
 $primary-color: #b71053;
 $secondary-color: #6c757d; 
 
-$my-color-palette: igx-palette(
+$my-color-palette:palette(
     $primary: $primary-color,
     $secondary: $secondary-color
 );
 
-// 重要: 必ず最初に igx-core を含めてください。
-@include igx-core();
-// Pass the color palette we generated to the igx-bootstrap-theme mixin
-@include igx-bootstrap-light-theme($my-color-palette);
+// 重要: 必ず最初にcore を含めてください。
+@include core();
+// Pass the color palette we generated to thebootstrap-theme mixin
+@include bootstrap-light-theme($my-color-palette);
 ```
 
 ## ブラウザー サポート
@@ -167,9 +167,9 @@ Ignite UI for Angular 13 より前のバージョンでは、`$igx-legacy-suppor
 `$legacy-support` の値を設定する一般的なルールは、Internet Explorer 11 をサポートするかどうかによって決定されます。IE11 をサポートする場合、`$legacy-support` 値を `true` に設定します。それ以外の場合、値を `false` (デフォルト) に設定すると、テーマで CSS 変数が必要です。IE11 以前のブラウザーのサポートは、Ignite UI for Angular 13 で削除されました。
 
 ## API の概要
-* [Global テーマ]({environment:sassApiUrl}/index.html#mixin-igx-theme)
+* [Global テーマ]({environment:sassApiUrl}/index.html#mixin-theme)
 * [Light テーマ]({environment:sassApiUrl}/index.html#mixin-igx-light-theme)
-* [Dark テーマ]({environment:sassApiUrl}/index.html#mixin-igx-dark-theme)
+* [Dark テーマ]({environment:sassApiUrl}/index.html#mixin-dark-theme)
 * [パレット]({environment:sassApiUrl}/index.html#function-igx-palette)
 
 <div class="divider--half"></div>

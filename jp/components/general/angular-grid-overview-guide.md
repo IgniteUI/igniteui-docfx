@@ -215,15 +215,15 @@ Ignite UI には、主要な Angular フレームワークの中で最も機能�
 $primary-color: #2ab759; // Some green shade I like
 $secondary-color: #f96a88; // Watermelon pink
 
-$my-color-palette: igx-palette(
+$my-color-palette:palette(
     $primary: $primary-color,
     $secondary: $secondary-color
 );
 
-// 重要: 必ず最初に igx-core を含めてください。
-@include igx-core();
-// 生成したカラー パレットを igx-theme ミックスインに渡します
-@include igx-theme($my-color-palette);
+// 重要: 必ず最初にcore を含めてください。
+@include core();
+// 生成したカラー パレットをtheme ミックスインに渡します
+@include theme($my-color-palette);
 ```
 
 Ignite UI for Angular はコンポーネントのデザインを[マテリアル デザイン原則](https://material.io/guidelines/material-design/introduction.html "マテリアル デザインの概要")に基づき、Google によって作成されたコンポーネントの色、サイズ、タイポグラフィ、およびルックアンドフィールにできるだけ近づけるようデザインしています。例:

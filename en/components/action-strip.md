@@ -110,7 +110,7 @@ To customize the Action Strip, you first need to import the `index` file, where 
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
-Next, we have to create a new theme that extends the `igx-action-strip-theme` and pass the parameters which we'd like to change:
+Next, we have to create a new theme that extends the `action-strip-theme` and pass the parameters which we'd like to change:
 ```scss
 $custom-strip:action-strip-theme(
     $background: rgba(150, 133, 143, 0.4),
@@ -153,7 +153,7 @@ For more detailed information regarding the Action Strip API, refer to the follo
 
 The following built-in CSS styles helped us achieve this Action Strip layout:
 
-* [`IgxActionStripComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-action-strip-theme)
+* [`IgxActionStripComponent Styles`]({environment:sassApiUrl}/index.html#function-action-strip-theme)
 
 Additional components and/or directives that can be used within the Action Strip:
 
@@ -166,10 +166,10 @@ Additional components and/or directives that can be used within the Action Strip
 <div class="divider"></div>
 
 ## Theming Dependencies
-* [IgxButton Theme]({environment:sassApiUrl}/index.html#function-igx-button-theme)
-* [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
-* [IgxDropDown Theme]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme)
-* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxButton Theme]({environment:sassApiUrl}/index.html#function-button-theme)
+* [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-ripple-theme)
+* [IgxDropDown Theme]({environment:sassApiUrl}/index.html#function-drop-down-theme)
+* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-icon-theme)
 
 ## Additional Resources
 

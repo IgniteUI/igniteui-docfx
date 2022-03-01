@@ -152,14 +152,14 @@ Shadows are used to establish and maintain functional boundaries between Documen
 
 The following section demonstrates how to set elevation to a component. In the example, we are using the card component.
 
-Firs apply the [igx-elevation]({environment:sassApiUrl}/index.html#function-igx-elevation) to the card by doing the following
+Firs apply the [elevation]({environment:sassApiUrl}/index.html#function-elevation) to the card by doing the following
 
 ```scss
-$myCard: igx-card-theme(
-    $resting-shadow: igx-elevation($elevations, 10)
+$myCard:card-theme(
+    $resting-shadow:elevation($elevations, 10)
 );
 
-@include igx-card($myCard);
+@include card($myCard);
 
 // This compiles to
 
@@ -173,7 +173,7 @@ $myCard: igx-card-theme(
 
 As you can see the shadow is produced according to the material guidelines.
 
-To change the shadows colors use the igx-elevations function to override the defaults:
+To change the shadows colors use theelevations function to override the defaults:
  ```scss
 ...
 // Define the 3 elevation colors
@@ -182,19 +182,19 @@ $color-1: rgb(153, 191, 170); // Umbra
 $color-2: rgb(92, 134, 141); // Penumbra
 $color-3: rgb(92, 61, 70); // Ambient
 
-// Use igx-elevations to generate sass maps for all three 
+// Useelevations to generate sass maps for all three 
 // box-shadows with the costume colors 
 
-$elevations-color: igx-elevations($color-1, $color-2, $color-3);
+$elevations-color:elevations($color-1, $color-2, $color-3);
 
-// Use the igx-elevation to set the desired elevation level
-$mySpecialCard: igx-card-theme(
-    $resting-shadow: igx-elevation($elevations-color, 10)
+// Use theelevation to set the desired elevation level
+$mySpecialCard:card-theme(
+    $resting-shadow:elevation($elevations-color, 10)
 );
 
 // If you want you can scope your custom elevation to a specific selector
 .special-card {
-  @include igx-card($mySpecialCard);
+  @include card($mySpecialCard);
 }
 
 // This compiles compiled to
@@ -208,14 +208,14 @@ $mySpecialCard: igx-card-theme(
 
 ```
 
-You can also set box-shadow without taking advantage of the igx-elevation function:
+You can also set box-shadow without taking advantage of theelevation function:
 ```scss
-$myboringCard: igx-card-theme(
+$myboringCard:card-theme(
     $resting-shadow: 0 10px 10px 10px #666
 );
 
 .boring-card{
-  @include igx-card($myboringCard);
+  @include card($myboringCard);
 }
 
 // This compiles to
@@ -242,7 +242,7 @@ Here is The result from the above code snippets:
 
 ### API 참조
 
-* [IGX-ELEVATION]({environment:sassApiUrl}/index.html#function-igx-elevation)
-* [IGX-ELEVATIONS]({environment:sassApiUrl}/index.html#function-igx-elevations)
+* [ELEVATION]({environment:sassApiUrl}/index.html#function-elevation)
+* [ELEVATIONS]({environment:sassApiUrl}/index.html#function-elevations)
 
 

@@ -117,11 +117,11 @@ public selectedColor: string = this.colors[3].hex;
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単な方法は、[`igx-radio-theme`]({environment:sassApiUrl}/index.html#function-igx-radio-theme) を拡張する新しいテーマを作成し、デフォルト テーマのいくつかのパラメーターを受け取る方法です。
+最も簡単な方法は、[`radio-theme`]({environment:sassApiUrl}/index.html#function-radio-theme) を拡張する新しいテーマを作成し、デフォルト テーマのいくつかのパラメーターを受け取る方法です。
 
 
 ```scss
-$custom-radio-theme: igx-radio-theme(
+$custom-radio-theme:radio-theme(
     $disabled-color: lightgray,
     $empty-color:  #345779,
     $fill-color: #2dabe8,
@@ -135,7 +135,7 @@ $custom-radio-theme: igx-radio-theme(
 最後には、カスタム ラジオ テーマをアプリケーションに渡します。
 
 ```scss
-@include igx-css-vars($custom-radio-theme);
+@include css-vars($custom-radio-theme);
 ```
 
 ### テーマ オーバーライドの使用
@@ -147,7 +147,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 ```scss
 :host {
      ::ng-deep {
-        @include igx-radio($custom-radio-theme);
+        @include radio($custom-radio-theme);
     }
 }
 ```
@@ -241,10 +241,10 @@ public alignment = RadioGroupAlignment.vertical;
 
 * [IgxRadioGroupDirective]({environment:angularApiUrl}/classes/igxradiogroupdirective.html)
 * [IgxRadioComponent]({environment:angularApiUrl}/classes/igxradiocomponent.html)
-* [IgxRadioComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-radio-theme)
+* [IgxRadioComponent スタイル]({environment:sassApiUrl}/index.html#function-radio-theme)
 
 ## テーマの依存関係
-* [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
+* [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-ripple-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

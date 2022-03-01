@@ -172,7 +172,7 @@ In order to switch between `light` and `dark` mode, we are adding a custom class
 
 #### Light mode
 
-Ignite UI for Angular comes with predefined themes inspired by the [Bootstrap 4](https://getbootstrap.com/) library. To use them, first, you have to include our `igx-core` mixin and then our built-in theme mixin - [igx-bootstrap-light-theme]({environment:sassApiUrl}/index.html#mixin-igx-bootstrap-light-theme). We will also make use of our predefined bootstrap palette - [$light-bootstrap-palette]({environment:sassApiUrl}/index.html#variable-light-bootstrap-palette).
+Ignite UI for Angular comes with predefined themes inspired by the [Bootstrap 4](https://getbootstrap.com/) library. To use them, first, you have to include our `core` mixin and then our built-in theme mixin - [bootstrap-light-theme]({environment:sassApiUrl}/index.html#mixin-bootstrap-light-theme). We will also make use of our predefined bootstrap palette - [$light-bootstrap-palette]({environment:sassApiUrl}/index.html#variable-light-bootstrap-palette).
 
 The background color for our application needs to be set explicitly on the host element. In our sample, we want to use the `surface` color of the passed palette.
 
@@ -305,7 +305,7 @@ Once we are done with modifying the `$theme-colors` map, the bootstrap component
 
 ### Generate class
 
-The bootstrap `navbar` uses CSS classes for its background color. In our sample, we want that color to change according to the selected theme, hence we are going to use the `igx-color-classes` mixin. It will generate CSS class names for all colors for a given property and color palette, with optional prefix and suffix attached to the class name. For the demo, we will include the mixin twice - once for the light mode with the respective `$light-bootstrap-palette` as a first value and second time for the dark mode with the `$custom-dark-palette`:
+The bootstrap `navbar` uses CSS classes for its background color. In our sample, we want that color to change according to the selected theme, hence we are going to use the `color-classes` mixin. It will generate CSS class names for all colors for a given property and color palette, with optional prefix and suffix attached to the class name. For the demo, we will include the mixin twice - once for the light mode with the respective `$light-bootstrap-palette` as a first value and second time for the dark mode with the `$custom-dark-palette`:
 
 ```scss
 :host {
@@ -331,7 +331,7 @@ Then, add a CSS class to your navbar component following the pattern "bg - color
 
 ### Typography
 
-Ignite UI for Angular exposes four default type scales for each of its themes, which can be used inside the [`igx-typography`]({environment:sassApiUrl}/index.html#mixin-igx-typography) mixin to define the global typography styles of an application. In our example, we are going to apply the bootstrap predifined `typeface` and `type-scale` but you can create custom ones if you wish. 
+Ignite UI for Angular exposes four default type scales for each of its themes, which can be used inside the [`typography`]({environment:sassApiUrl}/index.html#mixin-typography) mixin to define the global typography styles of an application. In our example, we are going to apply the bootstrap predifined `typeface` and `type-scale` but you can create custom ones if you wish. 
 
 ```scss
 :host {
@@ -344,10 +344,10 @@ Ignite UI for Angular exposes four default type scales for each of its themes, w
 
 * [Light Bootstrap Palette]({environment:sassApiUrl}/index.html#variable-light-bootstrap-palette)
 * [Dark Bootstrap Palette]({environment:sassApiUrl}/index.html#variable-dark-bootstrap-palette)
-* [Light Bootstrap Theme]({environment:sassApiUrl}/index.html#mixin-igx-bootstrap-light-theme)
-* [Dark Bootstrap Theme]({environment:sassApiUrl}/index.html#mixin-igx-bootstrap-dark-theme)
+* [Light Bootstrap Theme]({environment:sassApiUrl}/index.html#mixin-bootstrap-light-theme)
+* [Dark Bootstrap Theme]({environment:sassApiUrl}/index.html#mixin-bootstrap-dark-theme)
 * [Palette Function]({environment:sassApiUrl}/index.html#function-igx-palette)
-* [Typography Mixin]({environment:sassApiUrl}/index.html#mixin-igx-typography)
+* [Typography Mixin]({environment:sassApiUrl}/index.html#mixin-typography)
 
 Related topics: 
 

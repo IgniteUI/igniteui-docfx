@@ -45,7 +45,7 @@ To get started with our first color palette, create an _scss_ file that would be
 $company-color: #2ab759; // Some green shade I like
 $secondary-color: #f96a88; // Watermelon pink
 
-$my-color-palette: igx-palette(
+$my-color-palette:palette(
   $primary: $company-color,
   $secondary: $secondary-color
 );
@@ -65,9 +65,9 @@ Got it? Good! But how does one access any of the colors in the palette?
 We provide a function that is easy to remember and use `igx-color`. It takes three arguments - `palette`, `color`, and `variant`;
 
 ```scss
-$my-primary-600: igx-color($my-palette, "primary", 600);
-$my-primary-A700: igx-color($my-palette, "secondary", "A700");
-$my-warning-color: igx-color($my-palette, "warn");
+$my-primary-600:color($my-palette, "primary", 600);
+$my-primary-A700:color($my-palette, "secondary", "A700");
+$my-warning-color:color($my-palette, "warn");
 // sample usage
 
 .my-awesome-class {
@@ -87,8 +87,8 @@ $my-warning-color: igx-color($my-palette, "warn");
 Similar to how we get sub-palette colors, there's a way to get the contrast text color for each of the colors in the sub-palettes.
 
 ```scss
-$my-primary-800: igx-color($my-palette, "primary", 600);
-$my-primary-800-text: igx-contrast-color($my-palette, "primary", 600);
+$my-primary-800:color($my-palette, "primary", 600);
+$my-primary-800-text:contrast-color($my-palette, "primary", 600);
 // sample usage
 
 .my-awesome-article {
@@ -101,10 +101,10 @@ $my-primary-800-text: igx-contrast-color($my-palette, "primary", 600);
 
 If you've included the _"igniteui-angular.css"_ file in your application project, now is a good time to remove it. We are going to use our own _"my-app-theme.scss"_ file to generate our own theme.
 
-Let's start from our very first example on this page. This time, though, we're going to be including two mixins `igx-core` and `igx-theme`; For now `igx-core` doesn't accept any arguments. `igx-theme`, however, does accept 2 - `$palette` and `$exclude`. For now, we'll only talk about the `$palette` argument. We'll take a deeper look at what `$exclude` does later on when we talk about individual component themes.
+Let's start from our very first example on this page. This time, though, we're going to be including two mixins `core` and `theme`; For now `core` doesn't accept any arguments. `theme`, however, does accept 2 - `$palette` and `$exclude`. For now, we'll only talk about the `$palette` argument. We'll take a deeper look at what `$exclude` does later on when we talk about individual component themes.
 
 > [!IMPORTANT]
-> Including `igx-core` before `igx-theme` is essential. The `igx-core` mixin provides all base definitions needed for `igx-theme` to work.
+> Including `core` before `theme` is essential. The `core` mixin provides all base definitions needed for `theme` to work.
 
 ```scss
 // Import the IgniteUI themes library first
@@ -113,15 +113,15 @@ Let's start from our very first example on this page. This time, though, we're g
 $company-color: #2ab759; // Some green shade I like
 $secondary-color: #f96a88; // Watermelon pink
 
-$my-color-palette: igx-palette(
+$my-color-palette:palette(
   $primary: $company-color,
   $secondary: $secondary-color
 );
 
-// IMPORTANT: Make sure you always include igx-core first!
-@include igx-core();
-// Pass the color palette we generated to the igx-theme mixin
-@include igx-theme($my-color-palette);
+// IMPORTANT: Make sure you always includecore first!
+@include core();
+// Pass the color palette we generated to thetheme mixin
+@include theme($my-color-palette);
 ```
 
 That's it. Your application will now use the colors from your newly generated palette.
@@ -132,18 +132,18 @@ That's it. Your application will now use the colors from your newly generated pa
 
 In its current state, the defining custom typography is limited to changing the `font family` of the application. We'll be updating this functionality with subsequent releases. Our intent is to provide a robust way to customize the typography in your application.
 
-To customize the typography use the `igx-typography` mixin. It takes exactly one argument - `config`.
+To customize the typography use the `typography` mixin. It takes exactly one argument - `config`.
 
 > [!IMPORTANT]
-> Including `igx-typography` after `igx-core` is essential. This is subject to change in future releases.
+> Including `typography` after `core` is essential. This is subject to change in future releases.
 
 ```scss
 // Import the IgniteUI themes library first
 @import "~igniteui-angular/lib/core/styles/themes/index";
-// IMPORTANT: Make sure you always include igx-core first!
-@include igx-core();
-@include igx-theme($default-palette);
+// IMPORTANT: Make sure you always includecore first!
+@include core();
+@include theme($default-palette);
 
-//Include after igx-core
-@include igx-typography($config: (font-family: "Comic Sans MS"));
+//Include aftercore
+@include typography($config: (font-family: "Comic Sans MS"));
 ```

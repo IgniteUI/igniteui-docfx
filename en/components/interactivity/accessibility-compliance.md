@@ -216,10 +216,10 @@ The precedence takes the inner tag which in the above case is the attribute at t
 
 #### Step - 2 - Notifying the [theming engine](../themes/index.md) for the respective direction.
 
-Setting the `$direction` parameter of [igx-core]({environment:sassApiUrl}/index.html#mixin-igx-core) mixin does the magic.
+Setting the `$direction` parameter of [core]({environment:sassApiUrl}/index.html#mixin-core) mixin does the magic.
 
 ```scss 
-@include igx-core($direction: rtl);
+@include core($direction: rtl);
 ```
 
 These are all the steps needed to adjust your content.
@@ -230,13 +230,13 @@ Most of the components in the framework now have full **right-to-left (RTL)** su
 
 For **CSS-based** projects add `node_modules/igniteui-angular/styles/igniteui-angular-rtl.css` to your `angular.json` styles collection.
 
-For **Sass-based** projects pass `$direction` to the `igx-core` mixin in your root stylesheet.
+For **Sass-based** projects pass `$direction` to the `core` mixin in your root stylesheet.
 
 Example:
 
 ```scss
 // $direction defaults to ltr if it's omitted.
-@include igx-core($direction: rtl);
+@include core($direction: rtl);
 ```
 
 Currently the following components have only partial RTL support:

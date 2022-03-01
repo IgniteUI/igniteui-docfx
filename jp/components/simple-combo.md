@@ -281,7 +281,7 @@ export class SimpleComboCascadingComponent implements OnInit {
 @use 'igniteui-angular/theming' as *;
 ```
 
-最も単純なアプローチに従って、[igx-combo-theme]({environment:sassApiUrl}/index.html#function-igx-combo-theme) を拡張し、`$empty-list-background` パラメーターを受け入れる新しいテーマを作成します。
+最も単純なアプローチに従って、[combo-theme]({environment:sassApiUrl}/index.html#function-combo-theme) を拡張し、`$empty-list-background` パラメーターを受け入れる新しいテーマを作成します。
 ```scss
 $custom-simple-combo-theme:combo-theme(
     $empty-list-background: #1a5214
@@ -346,7 +346,7 @@ $custom-drop-down-theme:drop-down-theme(
 <div class="divider--half"></div>
 
 * [IgxSimpleComboComponent]({environment:angularApiUrl}/classes/igxsimplecombocomponent.html)
-* [IgxComboComponent Styles]({environment:sassApiUrl}/index.html#function-igx-combo-theme)
+* [IgxComboComponent Styles]({environment:sassApiUrl}/index.html#function-combo-theme)
 
 その他のコンポーネントおよびディレクティブ (またはそのいずれか) で使用した API:
 
@@ -354,9 +354,9 @@ $custom-drop-down-theme:drop-down-theme(
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 
 ## テーマの依存関係
-* [IgxDropDown Theme]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme)
-* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
-* [IgxOverlay Theme]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+* [IgxDropDown Theme]({environment:sassApiUrl}/index.html#function-drop-down-theme)
+* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxOverlay Theme]({environment:sassApiUrl}/index.html#function-overlay-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

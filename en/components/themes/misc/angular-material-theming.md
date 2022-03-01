@@ -226,7 +226,7 @@ $custom-mat-dark-theme: mat-dark-theme(
 
 In order to switch between `light` and `dark` mode, we are adding a custom `dark` class which will be changed on button click. In our stylesheet file, we are going to include different color palettes scoped to each class.
 
-Ignite UI for Angular comes with predefined themes inspired by the [Material Design](https://material.io/design). To use them, first, you have to include our `igx-core` mixin and then our built-in theme mixin - [igx-theme]({environment:sassApiUrl}/index.html#mixin-igx-theme). We will also make use of our predefined material palettes - [$light-material-palette]({environment:sassApiUrl}/index.html#variable-light-material-palette) and [$dark-material-palette]({environment:sassApiUrl}/index.html#variable-dark-material-palette).
+Ignite UI for Angular comes with predefined themes inspired by the [Material Design](https://material.io/design). To use them, first, you have to include our `core` mixin and then our built-in theme mixin - [theme]({environment:sassApiUrl}/index.html#mixin-theme). We will also make use of our predefined material palettes - [$light-material-palette]({environment:sassApiUrl}/index.html#variable-light-material-palette) and [$dark-material-palette]({environment:sassApiUrl}/index.html#variable-dark-material-palette).
 
 For the Angular Material components, we need to include their `mat-core` mixin and then the `angular-material-theme` mixin with the aforementioned custom material themes. 
 
@@ -317,7 +317,7 @@ For our dark variant, we are going to apply the same CSS styles but using the `$
 
 ### Generate class
 
-The Angular Material `toolbar` uses CSS classes for its background color. In our sample, we want that color to change according to the selected theme, hence we are going to use the `igx-color-classes` mixin. It will generate CSS class names for all colors for a given property and color palette, with optional prefix and suffix attached to the class name. For the demo, we will include the mixin twice - once for the light mode with the respective `$igx-light-palette` as a first value and second time for the dark mode with the `$custom-dark-palette`:
+The Angular Material `toolbar` uses CSS classes for its background color. In our sample, we want that color to change according to the selected theme, hence we are going to use the `color-classes` mixin. It will generate CSS class names for all colors for a given property and color palette, with optional prefix and suffix attached to the class name. For the demo, we will include the mixin twice - once for the light mode with the respective `$igx-light-palette` as a first value and second time for the dark mode with the `$custom-dark-palette`:
 
 ```scss
 :host {
@@ -343,7 +343,7 @@ Then, add a CSS class to your navbar component following the pattern "bg - color
 
 ### Angular Components Typography
 
-Ignite UI for Angular exposes four default type scales for each of its themes, which can be used inside the [`igx-typography`]({environment:sassApiUrl}/index.html#mixin-igx-typography) mixin to define the global typography styles of an application. In our example, we are going to apply the material predifined `typeface` and `type-scale` but you can create custom ones if you wish. 
+Ignite UI for Angular exposes four default type scales for each of its themes, which can be used inside the [`typography`]({environment:sassApiUrl}/index.html#mixin-typography) mixin to define the global typography styles of an application. In our example, we are going to apply the material predifined `typeface` and `type-scale` but you can create custom ones if you wish. 
 
 ```scss
 :host {
@@ -384,9 +384,9 @@ Check Angular Material [`Typography documentation`](https://material.angular.io/
 * [Light Material Palette]({environment:sassApiUrl}/index.html#variable-light-material-palette)
 * [Dark Material Palette]({environment:sassApiUrl}/index.html#variable-dark-material-palette)
 * [Light Material Theme]({environment:sassApiUrl}/index.html#mixin-igx-light-theme)
-* [Dark Material Theme]({environment:sassApiUrl}/index.html#mixin-igx-dark-theme)
+* [Dark Material Theme]({environment:sassApiUrl}/index.html#mixin-dark-theme)
 * [Palette Function]({environment:sassApiUrl}/index.html#function-igx-palette)
-* [Typography Mixin]({environment:sassApiUrl}/index.html#mixin-igx-typography)
+* [Typography Mixin]({environment:sassApiUrl}/index.html#mixin-typography)
 
 Related topics: 
 

@@ -112,7 +112,7 @@ Now lets define the **component themes** that we are going to apply:
 #### Defining Component Themes
 <div class="divider--half"></div>
 
-[**Igx-Grid-Theme**]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+[**grid-theme**]({environment:sassApiUrl}/index.html#function-grid-theme)
 
 ```scss
 // Define dark theme for the dialog
@@ -128,7 +128,7 @@ $dark-grid-theme:grid-theme(
 );
 ```
 
-- [**Igx-Dialog-Theme**]({environment:sassApiUrl}/index.html#function-igx-dialog-theme)
+- [**dialog-theme**]({environment:sassApiUrl}/index.html#function-dialog-theme)
 
 ```scss
 
@@ -142,7 +142,7 @@ $dark-dialog-theme:dialog-theme(
 
 ```
 
-- [**Igx-Input-Group-Theme**]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
+- [**input-group-theme**]({environment:sassApiUrl}/index.html#function-input-group-theme)
 
 ```scss
 // Define dark theme for the input-group
@@ -314,12 +314,12 @@ Now we can easily change our defined themes with only a `click` event:
 
 ### API
 
-* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-grid-theme)
 * [IgxGrid Filtering Styles]({environment:sassApiUrl}/index.html#function-igx-grid-filtering-theme)
 * [IgxGrid Paginator Styles]({environment:sassApiUrl}/index.html#function-igx-grid-paginator-theme)
-* [IgxDialogComponent Styles]({environment:sassApiUrl}/index.html#function-igx-dialog-theme)
-* [IgxInputGroupComponent Styles]({environment:sassApiUrl}/index.html#function-igx-input-group-theme) 
-* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+* [IgxDialogComponent Styles]({environment:sassApiUrl}/index.html#function-dialog-theme)
+* [IgxInputGroupComponent Styles]({environment:sassApiUrl}/index.html#function-input-group-theme) 
+* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-overlay-theme)
 
 ### Additional Resources
 <div class="divider--half"></div>

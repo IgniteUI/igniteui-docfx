@@ -395,10 +395,10 @@ Using the [Ignite UI for Angular Theming](themes/index.md), we can greatly alter
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Following the simplest approach, we create a new theme that extends the [`igx-drop-down-theme`]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme) and accepts some of the default theme's parameters.
+Following the simplest approach, we create a new theme that extends the [`drop-down-theme`]({environment:sassApiUrl}/index.html#function-drop-down-theme) and accepts some of the default theme's parameters.
 
 ```scss
-$custom-drop-down-theme: igx-drop-down-theme(
+$custom-drop-down-theme:drop-down-theme(
     $background-color: #fdfdfd,
     $header-text-color: #345779,
     $item-text-color: #2dabe8,
@@ -418,7 +418,7 @@ $custom-drop-down-theme: igx-drop-down-theme(
 The last step is to pass the custom drop-down theme: 
 
 ```scss
- @include igx-css-vars($custom-drop-down-theme);
+ @include css-vars($custom-drop-down-theme);
 ```
 
 ### Using Theme Overrides
@@ -430,7 +430,7 @@ If the component is using the [`Emulated`](themes/sass/component-themes.md#view-
  ```scss
 :host {
   ::ng-deep {
-    @include igx-drop-down($custom-drop-down-theme);
+    @include drop-down($custom-drop-down-theme);
   }
 }
 ```
@@ -450,15 +450,15 @@ If the component is using the [`Emulated`](themes/sass/component-themes.md#view-
 
 ## API Summary
 * [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) 
-* [IgxDropDownComponent Styles]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme)
+* [IgxDropDownComponent Styles]({environment:sassApiUrl}/index.html#function-drop-down-theme)
 * [IgxDropDownItemComponent]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html).
 * [IgxOverlay]({environment:angularApiUrl}/interfaces/overlaysettings.html)
-* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-overlay-theme)
 * [IgxDividerDirective]({environment:angularApiUrl}/classes/igxdividerdirective.html)
-* [IgxDividerDirective Styles]({environment:sassApiUrl}/index.html#function-igx-divider-theme)
+* [IgxDividerDirective Styles]({environment:sassApiUrl}/index.html#function-divider-theme)
 
 ## Theming Dependencies
-* [IgxOverlay Theme]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+* [IgxOverlay Theme]({environment:sassApiUrl}/index.html#function-overlay-theme)
 
 ## Additional Resources
 

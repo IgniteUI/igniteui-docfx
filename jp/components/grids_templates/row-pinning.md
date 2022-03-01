@@ -393,7 +393,7 @@ public onDropAllowed(args) {
 
 ## スタイル設定
 
-@@igxName は、[Ignite UI for Angular テーマ ライブラリ](../themes/sass/component-themes.md)でスタイルを設定できます。@@igComponent の [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) は、@@igComponent のすべての機能をカスタマイズできるさまざまなプロパティを公開します。
+@@igxName は、[Ignite UI for Angular テーマ ライブラリ](../themes/sass/component-themes.md)でスタイルを設定できます。@@igComponent の [theme]({environment:sassApiUrl}/index.html#function-grid-theme) は、@@igComponent のすべての機能をカスタマイズできるさまざまなプロパティを公開します。
 
 以下では、@@igComponent の行ピン固定スタイルをカスタマイズする手順を示します。
 
@@ -410,7 +410,7 @@ public onDropAllowed(args) {
 
 ### テーマの定義
 
-次に、[`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) を拡張し、必要に応じて行のピン固定機能のカスタマイズに必要なパラメーターを受け入れる新しいテーマを作成します。
+次に、[`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) を拡張し、必要に応じて行のピン固定機能のカスタマイズに必要なパラメーターを受け入れる新しいテーマを作成します。
 
 ```scss
 $custom-grid-theme:grid-theme(
@@ -482,7 +482,7 @@ Internet Explorer 11 のコンポーネントをスタイル設定するには�
 * [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)
 * [IgxHierarchicalGridRow]({environment:angularApiUrl}/classes/igxhierarchicalgridrow.html)
 * [RowType]({environment:angularApiUrl}/interfaces/RowType.html)
-* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-grid-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

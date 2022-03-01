@@ -469,7 +469,7 @@ export class AppModule {}
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単なアプローチを使用して、[`igx-column-actions-theme`]({environment:sassApiUrl}/index.html#function-igx-column-actions-theme) を拡張し、`$title-color` および `$background-color` パラメーターを受け取る新しいテーマを作成します。
+最も簡単なアプローチを使用して、[`column-actions-theme`]({environment:sassApiUrl}/index.html#function-column-actions-theme) を拡張し、`$title-color` および `$background-color` パラメーターを受け取る新しいテーマを作成します。
 
 ```scss
 $custom-column-actions-theme:column-actions-theme(
@@ -478,13 +478,13 @@ $custom-column-actions-theme:column-actions-theme(
 );
 ```
 
-ご覧のように `igx-column-actions-theme` は列操作コンテナーの色のみを制御しますが、ボタン、チェックボックス、内部の入力グループには影響しません。ボタンのスタイルも設定したい場合、新しいボタン テーマを作成します。
+ご覧のように `column-actions-theme` は列操作コンテナーの色のみを制御しますが、ボタン、チェックボックス、内部の入力グループには影響しません。ボタンのスタイルも設定したい場合、新しいボタン テーマを作成します。
 
 ```scss
 $custom-button:button-theme($flat-text-color: gold, $disabled-color: black);
 ```
 
-この例では、フラットボタンのテキストの色とボタンの無効な色のみを変更しましたが、[`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) の方がより多くの方法を提供します。ボタンのスタイルを制御するパラメーター。
+この例では、フラットボタンのテキストの色とボタンの無効な色のみを変更しましたが、[`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme) の方がより多くの方法を提供します。ボタンのスタイルを制御するパラメーター。
 
 最後にそれぞれのテーマを持つコンポーネント ミックスインを**含める**ことです。 
 
@@ -639,7 +639,7 @@ $custom-button:button-theme(
 以下は、列非表示 UI のその他の API です。
 
 * [IgxColumnActionsComponent]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html)
-* [IgxColumnActionsComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-column-actions-theme)
+* [IgxColumnActionsComponent スタイル]({environment:sassApiUrl}/index.html#function-column-actions-theme)
 
 その他のコンポーネントおよびディレクティブ (またはそのいずれか) で使用した API:
 
@@ -669,8 +669,8 @@ $custom-button:button-theme(
 
 スタイル:
 
-* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
-* [IgxRadioComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-radio-theme)
+* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-grid-theme)
+* [IgxRadioComponent スタイル]({environment:sassApiUrl}/index.html#function-radio-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

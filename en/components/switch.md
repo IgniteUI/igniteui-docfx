@@ -112,11 +112,11 @@ To get started with styling the switch, we need to import the `index` file, wher
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Then, we create a new theme that extends the [`igx-switch-theme`]({environment:sassApiUrl}/index.html#function-igx-switch-theme) and use some of its parameters to style the switch's items:
+Then, we create a new theme that extends the [`switch-theme`]({environment:sassApiUrl}/index.html#function-switch-theme) and use some of its parameters to style the switch's items:
 
 ```scss
 // in styles.scss
-$custom-switch-theme: igx-switch-theme(
+$custom-switch-theme:switch-theme(
     $thumb-on-color: #ECAA53,
     $track-on-color: #F0CB9C
 );
@@ -131,7 +131,7 @@ The last step is to **include** the component theme in our application.
 If `$legacy-support` is set to `true`, include the **component theme** like that:
 
 ```scss
- @include igx-switch($custom-switch-theme);
+ @include switch($custom-switch-theme);
 ```
 >[!NOTE]
 >If the component is using an [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`
@@ -139,7 +139,7 @@ If `$legacy-support` is set to `true`, include the **component theme** like that
 ```scss
 :host {
     ::ng-deep {
-        @include igx-switch($custom-switch-theme);
+        @include switch($custom-switch-theme);
     }
 }
 ```
@@ -149,7 +149,7 @@ If `$legacy-support` is set to `true`, include the **component theme** like that
 If `$legacy-support` is set to `false`(default), include the component **css variables** like that:
 
 ```scss
-@include igx-css-vars($custom-switch-theme);
+@include css-vars($custom-switch-theme);
 ```
 
 >[!NOTE]
@@ -157,7 +157,7 @@ If `$legacy-support` is set to `false`(default), include the component **css var
 
 ```scss
 :host {
-    @include igx-css-vars($custom-switch-theme);
+    @include css-vars($custom-switch-theme);
 }
 ```
 ### Demo
@@ -175,10 +175,10 @@ If `$legacy-support` is set to `false`(default), include the component **css var
 <div class="divider--half"></div>
 
 * [IgxSwitchComponent]({environment:angularApiUrl}/classes/igxswitchcomponent.html)
-* [IgxSwitchComponent Styles]({environment:sassApiUrl}/index.html#function-igx-switch-theme)
+* [IgxSwitchComponent Styles]({environment:sassApiUrl}/index.html#function-switch-theme)
 
 ## Theming Dependencies
-* [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
+* [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-ripple-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>

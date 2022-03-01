@@ -528,53 +528,53 @@ To get started with styling the toolbar, we need to import the index file, where
 First, let's create a new palette.
 
 ```scss
-$my-dark-palette: igx-palette(
+$my-dark-palette:palette(
     $primary: #2466ff,
     $secondary: #FFCD0F,
     $surface: #2a2b2f,
     $grays: #fff,
 );
 
-$my-dark-color: igx-color($my-dark-palette, 'surface');
+$my-dark-color:color($my-dark-palette, 'surface');
 ```
 
-Now, create a new theme that extends the [`igx-grid-toolbar-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-toolbar-theme) and modify the `$background-color` and the `$title-text-color` parameters.
+Now, create a new theme that extends the [`grid-toolbar-theme`]({environment:sassApiUrl}/index.html#function-grid-toolbar-theme) and modify the `$background-color` and the `$title-text-color` parameters.
 
 ```scss
-$dark-grid-toolbar-theme: igx-grid-toolbar-theme(
+$dark-grid-toolbar-theme:grid-toolbar-theme(
     $palette: $my-dark-palette,
     $background-color: $my-dark-color,
-    $title-text-color: igx-color($my-dark-palette, 'secondary'),
+    $title-text-color:color($my-dark-palette, 'secondary'),
     $dropdown-background: $my-dark-color,
 );
 ```
 
-To theme the column actions menus of the toolbar, we have to change the theme of the [`igx-column-actions-theme`]({environment:sassApiUrl}/index.html#function-igx-column-actionsr-theme) component.
+To theme the column actions menus of the toolbar, we have to change the theme of the [`column-actions-theme`]({environment:sassApiUrl}/index.html#function-igx-column-actionsr-theme) component.
 
 ```scss
-$dark-column-actions-theme: igx-column-actions-theme(
+$dark-column-actions-theme:column-actions-theme(
     $palette: $my-dark-palette,
-    $title-color: igx-color($my-dark-palette, 'secondary'),
-    $background-color: igx-color($my-dark-palette, 'surface')
+    $title-color:color($my-dark-palette, 'secondary'),
+    $background-color:color($my-dark-palette, 'surface')
 );
 ```
 
 Since the column actions are using other components - igx-button, igx-checkbox, and igx-input-group, we need to change their themes to match our new toolbar theme.
 
 ```scss
-$dark-button-theme: igx-button-theme(
+$dark-button-theme:button-theme(
     $palette: $my-dark-palette,
-    $outlined-background: igx-color($my-dark-palette, 'secondary'),
-    $outlined-hover-background: igx-color($my-dark-palette, 'grays', 100),
-    $outlined-hover-text-color: igx-color($my-dark-palette, 'secondary')
+    $outlined-background:color($my-dark-palette, 'secondary'),
+    $outlined-hover-background:color($my-dark-palette, 'grays', 100),
+    $outlined-hover-text-color:color($my-dark-palette, 'secondary')
 );
 
-$dark-checkbox-theme: igx-checkbox-theme(
+$dark-checkbox-theme:checkbox-theme(
     $palette: $my-dark-palette,
     $tick-color: $my-dark-color,
 );
 
-$dark-input-group-theme: igx-input-group-theme(
+$dark-input-group-theme:input-group-theme(
     $palette: $my-dark-palette
 );
 ```
@@ -583,11 +583,11 @@ The last step is to **include** the newly created themes.
 
 ```scss
 :host {
-    @include igx-grid-toolbar($dark-grid-toolbar-theme);
-    @include igx-column-actions($dark-column-actions-theme);
-    @include igx-checkbox($dark-checkbox-theme);
-    @include igx-input-group($dark-input-group-theme);
-    @include igx-button($dark-button-theme);
+    @include grid-toolbar($dark-grid-toolbar-theme);
+    @include column-actions($dark-column-actions-theme);
+    @include checkbox($dark-checkbox-theme);
+    @include input-group($dark-input-group-theme);
+    @include button($dark-button-theme);
 }
 ```
 
@@ -596,11 +596,11 @@ The last step is to **include** the newly created themes.
 
 ```scss
 :host {
-    @include igx-css-vars($dark-grid-toolbar-theme);
-    @include igx-css-vars($dark-column-actions-theme);
-    @include igx-css-vars($dark-checkbox-theme);
-    @include igx-css-vars($dark-input-group-theme);
-    @include igx-css-vars($dark-button-theme);
+    @include css-vars($dark-grid-toolbar-theme);
+    @include css-vars($dark-column-actions-theme);
+    @include css-vars($dark-checkbox-theme);
+    @include css-vars($dark-input-group-theme);
+    @include css-vars($dark-button-theme);
 }
 ```
 
@@ -610,11 +610,11 @@ The last step is to **include** the newly created themes.
 ```scss
 :host {
     ::ng-deep {
-        @include igx-grid-toolbar($dark-grid-toolbar-theme);
-        @include igx-column-actions($dark-column-actions-theme);
-        @include igx-checkbox($dark-checkbox-theme);
-        @include igx-input-group($dark-input-group-theme);
-        @include igx-button($dark-button-theme);
+        @include grid-toolbar($dark-grid-toolbar-theme);
+        @include column-actions($dark-column-actions-theme);
+        @include checkbox($dark-checkbox-theme);
+        @include input-group($dark-input-group-theme);
+        @include button($dark-button-theme);
     }
 }
 ```
@@ -667,7 +667,7 @@ The Grid Toolbar service has a few more APIs to explore, which are listed below.
 
 Styles:
 
-* [`@@igxNameComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [`@@igxNameComponent Styles`]({environment:sassApiUrl}/index.html#function-grid-theme)
 
 ## Additional Resources
 

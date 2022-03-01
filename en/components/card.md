@@ -270,17 +270,17 @@ To get started with styling the card, we need to import the `index` file, where 
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
-Following the simplest approach, we create a new theme that extends the [`igx-card-theme`]({environment:sassApiUrl}/index.html#function-igx-card-theme) and accepts some parameters that style the card's items:
+Following the simplest approach, we create a new theme that extends the [`card-theme`]({environment:sassApiUrl}/index.html#function-card-theme) and accepts some parameters that style the card's items:
 
 ```scss
-$colorful-card: igx-card-theme(
+$colorful-card:card-theme(
     $background: #011627,
     $header-text-color: #FEFEFE,
     $subtitle-text-color: #ECAA53,
     $content-text-color: #FEFEFE
 );
 ```
-As seen, the `igx-card-theme` exposes some useful parameters for basic styling of its items. 
+As seen, the `card-theme` exposes some useful parameters for basic styling of its items. 
 
 ### Including themes
 
@@ -291,7 +291,7 @@ The last step is to **include** the component theme in our application.
 If `$legacy-support` is set to `true`, include the **component theme** like that:
 
 ```scss
- @include igx-card($colorful-card);
+ @include card($colorful-card);
 ```
 >[!NOTE]
 >If the component is using an [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`
@@ -299,7 +299,7 @@ If `$legacy-support` is set to `true`, include the **component theme** like that
 ```scss
 :host {
      ::ng-deep {
-        @include igx-card($colorful-card);
+        @include card($colorful-card);
     }
 }
 ```
@@ -309,7 +309,7 @@ If `$legacy-support` is set to `true`, include the **component theme** like that
 If `$legacy-support` is set to `false`(default), include the component **css variables** like that:
 
 ```scss
-@include igx-css-vars($colorful-card);
+@include css-vars($colorful-card);
 ```
 
 >[!NOTE]
@@ -317,7 +317,7 @@ If `$legacy-support` is set to `false`(default), include the component **css var
 
 ```scss
 :host {
-    @include igx-css-vars($colorful-card);
+    @include css-vars($colorful-card);
 }
 ```
 
@@ -341,7 +341,7 @@ For more detailed information regarding the card's API, refer to the following l
 
 The following built-in CSS styles helped us achieve this card layout:
 
-* [`IgxCardComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-card-theme)
+* [`IgxCardComponent Styles`]({environment:sassApiUrl}/index.html#function-card-theme)
 
 Additional components and/or directives that were used:
 
@@ -352,16 +352,16 @@ Additional components and/or directives that were used:
 
 Styles:
 
-* [`IgxAvatarComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
-* [`IgxIconComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
-* [`IgxButtonDirective Styles`]({environment:sassApiUrl}/index.html#function-igx-button-theme)
+* [`IgxAvatarComponent Styles`]({environment:sassApiUrl}/index.html#function-avatar-theme)
+* [`IgxIconComponent Styles`]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [`IgxButtonDirective Styles`]({environment:sassApiUrl}/index.html#function-button-theme)
 
 <div class="divider"></div>
 
 ## Theming Dependencies
-* [IgxButton Theme]({environment:sassApiUrl}/index.html#function-igx-button-theme)
-* [IgxAvatar Theme]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
-* [IgxIconTheme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxButton Theme]({environment:sassApiUrl}/index.html#function-button-theme)
+* [IgxAvatar Theme]({environment:sassApiUrl}/index.html#function-avatar-theme)
+* [IgxIconTheme]({environment:sassApiUrl}/index.html#function-icon-theme)
 
 ## Additional Resources
 

@@ -328,7 +328,7 @@ export class HGridRowEditingSampleComponent implements OnInit {
 
 #### テーマの定義
 
-行編集の背景にカスタムの [`banner テーマ`]({environment:sassApiUrl}/index.html#function-igx-banner-theme)を定義して、定義済みのパレットの 1 つである `$purple-palette` を使用することができます。
+行編集の背景にカスタムの [`banner テーマ`]({environment:sassApiUrl}/index.html#function-banner-theme)を定義して、定義済みのパレットの 1 つである `$purple-palette` を使用することができます。
 
 ```scss
     $my-light-gray: #e3e3e3;
@@ -392,7 +392,7 @@ export class HGridRowEditingSampleComponent implements OnInit {
 </@@igSelector>
 ```
 
-カスタム ボタンを定義した後は、[`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) を使用してスタイルを設定できます。[こちら](../button.md#スタイル設定)で `igx-button` のスタイリングについてさらに学ぶことができます。`完了`と`キャンセル`のカスタム テーマを作成できます。
+カスタム ボタンを定義した後は、[`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme) を使用してスタイルを設定できます。[こちら](../button.md#スタイル設定)で `igx-button` のスタイリングについてさらに学ぶことができます。`完了`と`キャンセル`のカスタム テーマを作成できます。
 
 ```scss
 // custom.component.scss

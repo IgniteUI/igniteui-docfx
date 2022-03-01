@@ -386,10 +386,10 @@ public chipsOrderChanged(event: IChipsAreaReorderEventArgs) {
 // 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
-最も簡単な方法は、[`igx-chip-theme`]({environment:sassApiUrl}/index.html#function-igx-chip-theme)を拡張する新しいテーマを作成し、チップの項目をスタイル設定するいくつかのパラメーターを受け取る方法です。
+最も簡単な方法は、[`chip-theme`]({environment:sassApiUrl}/index.html#function-chip-theme)を拡張する新しいテーマを作成し、チップの項目をスタイル設定するいくつかのパラメーターを受け取る方法です。
 
 ```scss
-$custom-theme: igx-chip-theme(
+$custom-theme:chip-theme(
     $background: #011627,
     $hover-background:  #011627dc,
     $focus-background: #0116276c,
@@ -412,7 +412,7 @@ $custom-theme: igx-chip-theme(
 `$legacy-support` が `true` に設定されている場合、**コンポーネントのテーマ**を以下のように含めます。
 
 ```scss
- @include igx-chip($custom-theme);
+ @include chip($custom-theme);
 ```
 >[!NOTE]
 >コンポーネントが [`Emulated`](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
@@ -420,7 +420,7 @@ $custom-theme: igx-chip-theme(
 ```scss
 :host {
      ::ng-deep {
-        @include igx-chip($custom-theme);
+        @include chip($custom-theme);
     }
 }
 ```
@@ -430,7 +430,7 @@ $custom-theme: igx-chip-theme(
 `$legacy-support` が `false` (デフォルト) に設定されている場合、**css 変数** を以下のように含めます。
 
 ```scss
-@include igx-css-vars($custom-theme);
+@include css-vars($custom-theme);
 ```
 
 >[!NOTE]
@@ -438,7 +438,7 @@ $custom-theme: igx-chip-theme(
 
 ```scss
 :host {
-    @include igx-css-vars($custom-theme);
+    @include css-vars($custom-theme);
 }
 ```
 
@@ -461,11 +461,11 @@ $custom-theme: igx-chip-theme(
 ## API
 
 * [IgxChipComponent]({environment:angularApiUrl}/classes/igxchipcomponent.html)
-* [IgxChipComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-chip-theme)
+* [IgxChipComponent スタイル]({environment:sassApiUrl}/index.html#function-chip-theme)
 * [IgxChipsAreaComponent]({environment:angularApiUrl}/classes/igxchipsareacomponent.html)
 
 ## テーマの依存関係
-* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-icon-theme)
 
 ## 参照
 

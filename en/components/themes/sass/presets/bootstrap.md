@@ -23,5 +23,5 @@ In order to switch from `Material` to `Bootstrap`, you can use one of the built-
 ```
 
 ## API Overview
-* [Light Theme]({environment:sassApiUrl}/index.html#mixin-igx-bootstrap-light-theme)
-* [Dark Theme]({environment:sassApiUrl}/index.html#mixin-igx-bootstrap-dark-theme)
+* [Light Theme]({environment:sassApiUrl}/index.html#mixin-bootstrap-light-theme)
+* [Dark Theme]({environment:sassApiUrl}/index.html#mixin-bootstrap-dark-theme)

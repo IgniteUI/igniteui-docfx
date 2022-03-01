@@ -241,10 +241,10 @@ public ngOnInit() {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単な方法は、[`igx-button-group-theme`]({environment:sassApiUrl}/index.html#function-igx-button-group-theme) を拡張し、さまざまな状態のボタン グループの項目をスタイルするパラメーターを受け取る新しいテーマを作成する方法です。
+最も簡単な方法は、[`button-group-theme`]({environment:sassApiUrl}/index.html#function-button-group-theme) を拡張し、さまざまな状態のボタン グループの項目をスタイルするパラメーターを受け取る新しいテーマを作成する方法です。
 
 ```scss
-$custom-button-group: igx-button-group-theme(
+$custom-button-group:button-group-theme(
     $item-text-color: #fdfdfd,
     $item-background: #2f4d6a,
     $item-hover-text-color: #fdfdfd,
@@ -257,14 +257,14 @@ $custom-button-group: igx-button-group-theme(
 );
 ```
 
-ご覧のとおり、`igx-button-group-theme` は、項目の基本的なスタイル設定に役立ついくつかのパラメーターを公開しています。ボタン固有のパラメーターを変更する場合は、`igx-button-theme` を拡張する新しいテーマを作成し、それぞれのボタン グループのクラスの下でスコープできます。
+ご覧のとおり、`button-group-theme` は、項目の基本的なスタイル設定に役立ついくつかのパラメーターを公開しています。ボタン固有のパラメーターを変更する場合は、`button-theme` を拡張する新しいテーマを作成し、それぞれのボタン グループのクラスの下でスコープできます。
 
 ### CSS 変数の使用
 
 最後にコンポーネントのテーマを含めます。
 
 ```scss
-@include igx-css-vars($custom-button-group);
+@include css-vars($custom-button-group);
 ```
 
 ### テーマ オーバーライドの使用
@@ -276,7 +276,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 ```scss
 :host {
     ::ng-deep {
-        @include igx-button-group($custom-button-group);
+        @include button-group($custom-button-group);
     }
 }
 ```
@@ -294,14 +294,14 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 <div class="divider--half"></div>
 
 * [IgxButtonGroupComponent]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html)
-* [IgxButtonGroup スタイル]({environment:sassApiUrl}/index.html#function-igx-button-group-theme)
+* [IgxButtonGroup スタイル]({environment:sassApiUrl}/index.html#function-button-group-theme)
 * [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
-* [IgxButton スタイル]({environment:sassApiUrl}/index.html#function-igx-button-theme)
+* [IgxButton スタイル]({environment:sassApiUrl}/index.html#function-button-theme)
 
 ## テーマの依存関係
-* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
-* [IgxButton テーマ]({environment:sassApiUrl}/index.html#function-igx-button-theme)
-* [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
+* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxButton テーマ]({environment:sassApiUrl}/index.html#function-button-theme)
+* [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-ripple-theme)
 
 
 ## その他のリソース

@@ -328,7 +328,7 @@ Navigation drawer のスタイル設定を始めるには、すべてのテー�
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単な方法は、[`igx-navdrawer-theme`]({environment:sassApiUrl}/index.html#function-igx-navdrawer-theme) を拡張する新しいテーマを作成し、navdrawer の項目をスタイル設定するいくつかのパラメーターを受け取る方法です。
+最も簡単な方法は、[`navdrawer-theme`]({environment:sassApiUrl}/index.html#function-navdrawer-theme) を拡張する新しいテーマを作成し、navdrawer の項目をスタイル設定するいくつかのパラメーターを受け取る方法です。
 
 ```scss
 $custom-theme:navdrawer-theme(
@@ -337,7 +337,7 @@ $custom-theme:navdrawer-theme(
     $item-header-text-color: #ecc256
 );
 ```
-ご覧のとおり、`igx-navdrawer-theme` は、アイテムの基本的なスタイル設定に役立ついくつかのパラメーターを公開しています。
+ご覧のとおり、`navdrawer-theme` は、アイテムの基本的なスタイル設定に役立ついくつかのパラメーターを公開しています。
 
 ### テーマを含む
 
@@ -390,4 +390,4 @@ $custom-theme:navdrawer-theme(
 ## API とスタイル リファレンス
 
 * [IgxNavigationDrawerComponent API]({environment:angularApiUrl}/classes/igxnavigationdrawercomponent.html)
-* [IgxNavigationDrawerComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-navdrawer-theme)
+* [IgxNavigationDrawerComponent スタイル]({environment:sassApiUrl}/index.html#function-navdrawer-theme)

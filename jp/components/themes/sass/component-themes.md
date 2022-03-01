@@ -38,35 +38,35 @@ Ignite UI for Angular でコンポーネント テーマを設定する方法、
 アバター テーマの定義:
 
 ```scss
-// @include igx-theme(...); の後のどこか
+// @include theme(...); の後のどこか
 
 // アバターの背景を purple に変更します。
-$new-avatar-theme: igx-avatar-theme(
+$new-avatar-theme:avatar-theme(
   $background: purple,
 );
 
-// css-vars を `igx-css-vars` ミックスインに渡します
-@include igx-css-vars($new-avatar-theme);
+// css-vars を `css-vars` ミックスインに渡します
+@include css-vars($new-avatar-theme);
 ```
 
 上記のコードは、`igx-avatar` コンポーネントに対して新しい CSS 変数を生成します。これらの新しい CSS 変数は、デフォルトのアバター ルールを上書きします。
-同様に、グローバルな `scss` ファイルに `igx-css-vars` ミックスインを追加した場合、ミックスイン は定義済みのテーマを再び上書きします。
+同様に、グローバルな `scss` ファイルに `css-vars` ミックスインを追加した場合、ミックスイン は定義済みのテーマを再び上書きします。
 
 次に例を示します。 
 
 ```scss
 // ...
-@include igx-css-vars($new-avatar-theme);
+@include css-vars($new-avatar-theme);
 
 // Later
-$another-avatar-theme: igx-avatar-theme(
+$another-avatar-theme:avatar-theme(
   $background: royalblue,
 );
 
-@include igx-css-vars($another-avatar-theme);
+@include css-vars($another-avatar-theme);
 ```
 
-上記コードでは、以前の `igx-css-vars` ミックスインはすべて上書きされるため、事実上のグローバル テーマは `$another-avatar-theme` なります。
+上記コードでは、以前の `css-vars` ミックスインはすべて上書きされるため、事実上のグローバル テーマは `$another-avatar-theme` なります。
 
 ここで次のポイントに移ります。
 
@@ -82,11 +82,11 @@ $another-avatar-theme: igx-avatar-theme(
 // ...
 // CSS class selectors
 .avatar-royalblue {
-  @include igx-css-vars($avatar-royalblue-theme);
+  @include css-vars($avatar-royalblue-theme);
 }
 
 .avatar-purple {
-  @include igx-css-vars($avatar-green-theme);
+  @include css-vars($avatar-green-theme);
 }
 ```
 
@@ -142,12 +142,12 @@ export class AvatarComponent extends Component {
 // !重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 
-$avatar-theme: igx-avatar-theme(
+$avatar-theme:avatar-theme(
   $background: royalblue,
 );
 
 :host {
-  @include igx-css-vars($avatar-theme);
+  @include css-vars($avatar-theme);
 }
 ```
 
@@ -168,7 +168,7 @@ CSS 変数を使用する間は、`:: ng-deep` 擬似セレクターは必要あ
 
 <div class="divider--half"></div>
 
-[概要](#概要)セクションの説明にあったように、`$igx-legacy-support` グローバル変数を `true` に設定することにより、ハードコーディングされた値をコンポーネントのスタイル設定に使用できます。`igx-theme` ミックスインを使用して `$legacy-support` に `true` を渡した場合、`$igx-legacy-support` もまた `true` に設定されます。
+[概要](#概要)セクションの説明にあったように、`$igx-legacy-support` グローバル変数を `true` に設定することにより、ハードコーディングされた値をコンポーネントのスタイル設定に使用できます。`theme` ミックスインを使用して `$legacy-support` に `true` を渡した場合、`$igx-legacy-support` もまた `true` に設定されます。
 
 ### グローバル テーマの使用
 
@@ -181,15 +181,15 @@ CSS 変数を使用する間は、`:: ng-deep` 擬似セレクターは必要あ
 // !重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 
-@include igx-core();
-@include igx-theme($palette: $default-palette, $legacy-support: true);
+@include core();
+@include theme($palette: $default-palette, $legacy-support: true);
 
-// Overwrite the default themes for igx-avatar using hard-coded values:
-$avatar-theme: igx-avatar-theme(
+// Overwrite the default themes foravatar using hard-coded values:
+$avatar-theme:avatar-theme(
   $background: royalblue,
 );
 
-@include igx-avatar($avatar-theme);
+@include avatar($avatar-theme);
 ```
 
 <div class="divider"></div>
@@ -208,12 +208,12 @@ $avatar-theme: igx-avatar-theme(
 // 最初にレガシーサポートを有効にしてください
 // !重要: Ignite UI for Angular 13 より古いバージョンにのみ適用されます。
 $igx-legacy-support: true;
-$avatar-theme: igx-avatar-theme(
+$avatar-theme:avatar-theme(
   $initials-background: royalblue,
 );
 
 :host ::ng-deep {
-  @include igx-avatar($avatar-theme);
+  @include avatar($avatar-theme);
 }
 ```
 
@@ -223,7 +223,7 @@ $avatar-theme: igx-avatar-theme(
 
 <div class="divider--half"></div>
 
-* [Global テーマ]({environment:sassApiUrl}/index.html#mixin-igx-theme)
+* [Global テーマ]({environment:sassApiUrl}/index.html#mixin-theme)
 * [Avatar テーマ]({environment:sassApiUrl}/index.html#function-igx-avatar)
 
 ## その他のリソース

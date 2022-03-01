@@ -137,7 +137,7 @@ Angular Material Stepper モジュールをインポート後、`igx-stepper` �
 - [**active**]({environment:angularApiUrl}/classes/igxstepcomponent.html#active) - ステップが現在表示されているかどうかを決定します。設計上、ユーザーが明示的にステップの active 属性を `true` に設定しない場合、最初の有効なステップがアクティブになります。
 - [**disabled**]({environment:angularApiUrl}/classes/igxstepcomponent.html#disabled) - ステップが操作可能かどうかを決定します。デフォルトでは、ステップの disabled 属性は `false` に設定されています。
 - [**optional**]({environment:angularApiUrl}/classes/igxstepcomponent.html#optional) - デフォルトで、ステップの optional 属性は `false` に設定されます。リニア ステッパーのステップの有効性が必要ない場合、オプションの属性を有効にして、ステップの有効性とは関係なく前進できます。
-- [**completed**]({environment:angularApiUrl}/classes/igxstepcomponent.html#completed) - デフォルトでは、ステップの completed 属性は `false` を返します。ユーザーは、completed 属性を必要に応じて設定することにより、このデフォルトの completed 動作をオーバーライドできます。ステップが完了済みとしてマークされると、ステップ ヘッダーのスタイルがデフォルトで変更されるだけでなく、完了したステップと次のステップの間の進捗線のスタイルも変更されます。両方のスタイルは、公開された [CSS 変数]({environment:sassApiUrl}/index.html#function-igx-stepper-theme)を使用して変更できます。
+- [**completed**]({environment:angularApiUrl}/classes/igxstepcomponent.html#completed) - デフォルトでは、ステップの completed 属性は `false` を返します。ユーザーは、completed 属性を必要に応じて設定することにより、このデフォルトの completed 動作をオーバーライドできます。ステップが完了済みとしてマークされると、ステップ ヘッダーのスタイルがデフォルトで変更されるだけでなく、完了したステップと次のステップの間の進捗線のスタイルも変更されます。両方のスタイルは、公開された [CSS 変数]({environment:sassApiUrl}/index.html#function-stepper-theme)を使用して変更できます。
 
 [IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponent.html) は、双方向バインド可能な [**isValid**]({environment:angularApiUrl}/classes/igxstepcomponent.html#isValid) プロパティで各ステップの検証ロジックを設定できます。その値に基づいて、ユーザーがリニア ステッパー モードで前に進むことができるかどうかが決定されます。
 デフォルトで、ステップの [isValid]({environment:angularApiUrl}/classes/igxstepcomponent.html#isValid) プロパティは `true` に設定されます。
@@ -280,9 +280,9 @@ Angular Material Stepper は、さまざまなキーボード操作をエンド�
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単な方法として、[igx-stepper-theme]({environment:sassApiUrl}/index.html#function-igx-stepper-theme) を拡張する新しいテーマを作成し、変更するパラメーターを渡す方法があります。 
+最も簡単な方法として、[stepper-theme]({environment:sassApiUrl}/index.html#function-stepper-theme) を拡張する新しいテーマを作成し、変更するパラメーターを渡す方法があります。 
 ```scss
-$custom-stepper-theme: igx-stepper-theme(
+$custom-stepper-theme:stepper-theme(
     $current-title-color: #351e65,
     $current-subtitle-color: #5f4691,
     $step-separator-style: "solid"
@@ -295,7 +295,7 @@ $custom-stepper-theme: igx-stepper-theme(
 最後にコンポーネントのテーマを含めます。
 ```scss
 :host {
-    @include igx-css-vars($custom-stepper-theme);
+    @include css-vars($custom-stepper-theme);
 }
 ```
 
@@ -307,7 +307,7 @@ IE11 のような古いブラウザー用にコンポーネントのスタイル
 ```scss
 :host {
     ::ng-deep {
-        @include igx-stepper($custom-stepper-theme);    
+        @include stepper($custom-stepper-theme);    
     }
 }
 ```

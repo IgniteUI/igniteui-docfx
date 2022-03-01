@@ -378,7 +378,7 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
 
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent 스타일]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [@@igxNameComponent 스타일]({environment:sassApiUrl}/index.html#function-grid-theme)
 
 ### 추가 리소스
 <div class="divider--half"></div>

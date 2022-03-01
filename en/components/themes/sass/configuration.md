@@ -11,7 +11,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ## Legacy Support
 
-The development of Ignite UI for Angular started back in 2016 when Internet Explorer 11 was still relevant. Some of our users depend on IE11 to this day. Our theming engine was built in a way that allows you to produce styles for ever-green and old browsers alike, using the same API. We allow you to configure how the engine behaves based on a single global variable - `$igx-legacy-support`. By default, it is set to `false`, but you can shadow its declaration. The value of this variable is also implicitly set when you specify the `$legacy-support` parameter on the `igx-theme` mixin.
+The development of Ignite UI for Angular started back in 2016 when Internet Explorer 11 was still relevant. Some of our users depend on IE11 to this day. Our theming engine was built in a way that allows you to produce styles for ever-green and old browsers alike, using the same API. We allow you to configure how the engine behaves based on a single global variable - `$igx-legacy-support`. By default, it is set to `false`, but you can shadow its declaration. The value of this variable is also implicitly set when you specify the `$legacy-support` parameter on the `theme` mixin.
 
 > [!WARNING]
 > The `$legacy-support` option was removed in igniteui-angular 13.0.x. Support for IE11 and legacy browsers was removed in version 13 and this option is no longer valid.
@@ -38,7 +38,7 @@ We recommend you create a `_variables.scss` file in the `styles` directory of yo
 
 ## Default Palette
 
-Another global variable is `$default-palette`. It is implicitly set when you pass a palette to the `igx-theme` mixin. This variable sets the palette to be used by default by theming functions and mixin when a palette is not explicitly provided.
+Another global variable is `$default-palette`. It is implicitly set when you pass a palette to the `theme` mixin. This variable sets the palette to be used by default by theming functions and mixin when a palette is not explicitly provided.
 
 For instance, the `igx-color` function may not be called with a specific palette in which case the value assigned to `$default-palette` will be used to retreive the color.
 
@@ -94,7 +94,7 @@ Like `$default-palette`, we allow you to modify the direction (left-to-right vs.
 $direction: rtl;
 ```
 
-You can set the direction for the global theme by specifying it in the `igx-core` mixin.
+You can set the direction for the global theme by specifying it in the `core` mixin.
 
 ```scss
 // styles.scss

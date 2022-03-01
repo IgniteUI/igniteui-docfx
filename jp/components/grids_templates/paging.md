@@ -198,7 +198,7 @@ IgxHierarchicalGrid の子グリッドの実装方法および DI スコープ�
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-最も簡単な方法で [`igx-paginator-theme`]({environment:sassApiUrl}/index.html#function-igx-paginator-theme) を拡張し `$text-color`、`$background-color` および `$border-color` パラメータを受け入れる新しいテーマを作成します。
+最も簡単な方法で [`paginator-theme`]({environment:sassApiUrl}/index.html#function-paginator-theme) を拡張し `$text-color`、`$background-color` および `$border-color` パラメータを受け入れる新しいテーマを作成します。
 
 ```scss
 $dark-paginator:paginator-theme(
@@ -208,7 +208,7 @@ $dark-paginator:paginator-theme(
 );
 ```
 
-`igx-paginator-theme` はページング コンテナーの色の制御のみですが、ポケットベル UI のボタンには影響しません。これらのボタンにスタイル設定するために、新しいボタン テーマを作成しましょう。
+`paginator-theme` はページング コンテナーの色の制御のみですが、ポケットベル UI のボタンには影響しません。これらのボタンにスタイル設定するために、新しいボタン テーマを作成しましょう。
 
 ```scss
 $dark-button:button-theme(
@@ -221,7 +221,7 @@ $dark-button:button-theme(
 );
 ```
 
-この例では、アイコンの色と背景、ボタンの無効な色のみを変更しましたが、[`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) ではボタン スタイルを制御するためのパラメータを増やすことができます。
+この例では、アイコンの色と背景、ボタンの無効な色のみを変更しましたが、[`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme) ではボタン スタイルを制御するためのパラメータを増やすことができます。
 
 最後にそれぞれのテーマを持つコンポーネント ミックスインを**含める**ことです。
 
@@ -390,8 +390,8 @@ $dark-button:button-theme(
 
 ## API リファレンス
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
-* [IgxGridPaginator スタイル]({environment:sassApiUrl}/index.html#function-igx-paginator-theme)
+* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-grid-theme)
+* [IgxGridPaginator スタイル]({environment:sassApiUrl}/index.html#function-paginator-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

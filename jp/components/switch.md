@@ -113,7 +113,7 @@ igx-switch {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-次に、[`igx-switch-theme`]({environment:sassApiUrl}/index.html#function-igx-switch-theme) を拡張する新しいテーマを作成し、そのパラメーターを使用してスイッチの項目をスタイル設定します。
+次に、[`switch-theme`]({environment:sassApiUrl}/index.html#function-switch-theme) を拡張する新しいテーマを作成し、そのパラメーターを使用してスイッチの項目をスタイル設定します。
 
 ```scss
 // in styles.scss
@@ -176,10 +176,10 @@ $custom-switch-theme:switch-theme(
 <div class="divider--half"></div>
 
 * [IgxSwitchComponent]({environment:angularApiUrl}/classes/igxswitchcomponent.html)
-* [IgxSwitchComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-switch-theme)
+* [IgxSwitchComponent スタイル]({environment:sassApiUrl}/index.html#function-switch-theme)
 
 ## テーマの依存関係
-* [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
+* [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-ripple-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

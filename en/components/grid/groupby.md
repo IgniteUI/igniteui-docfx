@@ -299,7 +299,7 @@ A [`groupingComparer`]({environment:angularApiUrl}/interfaces/igroupingexpressio
 
 ## Styling
 
-The igxGrid allows styling through the [Ignite UI for Angular Theme Library](../themes/sass/component-themes.md). The grid's [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) exposes a wide variety of properties, which allow the customization of all the features of the grid. 
+The igxGrid allows styling through the [Ignite UI for Angular Theme Library](../themes/sass/component-themes.md). The grid's [theme]({environment:sassApiUrl}/index.html#function-grid-theme) exposes a wide variety of properties, which allow the customization of all the features of the grid. 
 
 In the below steps, we are going through the steps of customizing the grid's Group By styling.
 
@@ -316,7 +316,7 @@ To begin the customization of the Group By feature, you need to import the `inde
 
 ### Defining custom theme
 
-Next, create a new theme, that extends the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) and accepts the parameters, required to customize the Group By as desired. You also need to extend the [`igx-chip-theme`]({environment:sassApiUrl}/index.html#function-igx-chip-theme), because it's used in the Group By feature.
+Next, create a new theme, that extends the [`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) and accepts the parameters, required to customize the Group By as desired. You also need to extend the [`chip-theme`]({environment:sassApiUrl}/index.html#function-chip-theme), because it's used in the Group By feature.
 
 ```scss
 
@@ -460,12 +460,12 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 * [IgxGroupByRow]({environment:angularApiUrl}/classes/igxgroupbyrow.html)
-* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-grid-theme)
 * [ISortingExpression]({environment:angularApiUrl}/interfaces/isortingexpression.html)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [IGroupByExpandState]({environment:angularApiUrl}/interfaces/igroupbyexpandstate.html)
 * [IgxChipComponent]({environment:angularApiUrl}/classes/igxchipcomponent.html)
-* [IgxChipComponent Styles]({environment:sassApiUrl}/index.html#function-igx-chip-theme)
+* [IgxChipComponent Styles]({environment:sassApiUrl}/index.html#function-chip-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>

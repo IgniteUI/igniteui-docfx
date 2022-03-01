@@ -210,7 +210,7 @@ $my-dark-palette:palette(
 
 同様に、明るいテーマはより暗い灰色の色調と明るいカラー スキーマを必要とします。
 
-グローバル テーマからコンポーネント テーマを除外していないが、`igx-css-vars` ミックスインを使用してカスタム置換テーマを作成する場合、テーマが正しいパレットと対応するスキーマに渡されることを確認してください。
+グローバル テーマからコンポーネント テーマを除外していないが、`css-vars` ミックスインを使用してカスタム置換テーマを作成する場合、テーマが正しいパレットと対応するスキーマに渡されることを確認してください。
 
 ```scss
 $my-custom-grid:grid-theme(
@@ -240,7 +240,7 @@ $my-custom-grid:grid-theme(
 @include grid($my-custom-grid);
 ```
 
-カスタム コンポーネント テーマがグローバル `styles.scss` 以外の別のコンポーネント Sass ファイルで宣言されている場合は、`igx-core` ミックスインも含まれていることを確認してください。
+カスタム コンポーネント テーマがグローバル `styles.scss` 以外の別のコンポーネント Sass ファイルで宣言されている場合は、`core` ミックスインも含まれていることを確認してください。
 
 ```scss
 // free version
@@ -416,7 +416,7 @@ $__legacy-libsass: true;
 ## 11.1.x から 12.0.x の場合:
 ### テーマ:
 * 重大な変更:
-    * `IgxAvatar` テーマが簡略化されました。テーマ パラメーター (`igx-avatar-theme`) の数が大幅に削減され、接頭辞付きのパラメーター (`icon-*`, `initials-*`, `image-*`) と接尾辞付きのパラメーター (`border-radius-*`) が含まれなくなりました。`ng update` で実行された更新は、既存のボタン テーマを移行しますが、接頭辞付きと接尾辞付きのパラメーターがないことを考慮して、いくつかの追加の調整が必要になる場合があります。
+    * `IgxAvatar` テーマが簡略化されました。テーマ パラメーター (`avatar-theme`) の数が大幅に削減され、接頭辞付きのパラメーター (`icon-*`, `initials-*`, `image-*`) と接尾辞付きのパラメーター (`border-radius-*`) が含まれなくなりました。`ng update` で実行された更新は、既存のボタン テーマを移行しますが、接頭辞付きと接尾辞付きのパラメーターがないことを考慮して、いくつかの追加の調整が必要になる場合があります。
 
     既存のタイプ固有のアバター テーマを以下のように変更する必要があります。
 
@@ -455,7 +455,7 @@ $__legacy-libsass: true;
         }
         ```
 
-    * `IgxButton` テーマが簡略化されました。テーマ パラメーター (`igx-button-theme`) 数が大幅に削減され、接頭辞付きのパラメーター (`flat-*`、`raised-*` など) が含まれなくなりました。`ng update` で実行された更新は、既存のボタン テーマを移行しますが、接頭辞付きのパラメーターがないことを考慮して、いくつかの追加の調整が必要になる場合があります。 
+    * `IgxButton` テーマが簡略化されました。テーマ パラメーター (`button-theme`) 数が大幅に削減され、接頭辞付きのパラメーター (`flat-*`、`raised-*` など) が含まれなくなりました。`ng update` で実行された更新は、既存のボタン テーマを移行しますが、接頭辞付きのパラメーターがないことを考慮して、いくつかの追加の調整が必要になる場合があります。 
 
     以下のコード スニペットと同じ結果を得るには: 
 
@@ -498,11 +498,11 @@ $__legacy-libsass: true;
             @include css-vars($my-outlined-button);
         }
         ```
-ご覧のとおり、`igx-button-theme` パラメーターはボタン タイプごとに同じ名前になっているため、タイプごとに異なる色を使用するには、ボタン テーマのスコープを CSS セレクターに設定する必要があります。
+ご覧のとおり、`button-theme` パラメーターはボタン タイプごとに同じ名前になっているため、タイプごとに異なる色を使用するには、ボタン テーマのスコープを CSS セレクターに設定する必要があります。
 
-ここでは、`igx-button-theme` のすべての[利用可能なプロパティ](https://jp.infragistics.com/products/ignite-ui-angular/docs/sass/latest/index.html#function-igx-button-theme)を確認できます。
+ここでは、`button-theme` のすべての[利用可能なプロパティ](https://jp.infragistics.com/products/ignite-ui-angular/docs/sass/latest/index.html#function-button-theme)を確認できます。
 
-* `igx-typography` ミックスインは `igx-core` に暗黙的に含まれなくなりました。タイポグラフィ スタイルを使用するには、`igx-core` の後と `igx-theme` の前に ミックスインを明示的に含める必要があります。
+* `typography` ミックスインは `core` に暗黙的に含まれなくなりました。タイポグラフィ スタイルを使用するには、`core` の後と `theme` の前に ミックスインを明示的に含める必要があります。
 
     ```scss
     // in styles.scss
@@ -518,7 +518,7 @@ $__legacy-libsass: true;
     ```
 
     > [!IMPORTANT]
-    > `igx-core` ミックスインは常に最初に含める必要があります。
+    > `core` ミックスインは常に最初に含める必要があります。
 
     Ignite UI for Angular に含まれるテーマごとに、使用できる特定の `font-family` 変数と `type-scale` 変数を提供します。
 
@@ -859,7 +859,7 @@ import { HammerModule } from "@angular/platform-browser";
 ## 7.1.x から 7.2.x の場合:
 * `combo.value` と一緒に IgxCombo を使う場合、`combo.value` が唯一のゲッターであることに注意してください。
 * `IgxTextHighlightDirective` を使用している場合、`page` 入力プロパティは推奨されません。`IActiveHighlightInfo` インターフェイスの `rowIndex`、`columnIndex`、`page` プロパティも非推奨です。代わりに、`行`と`列`のオプション プロパティが追加されています。
-* `igx-button-theme` を使用する場合は、ボタンの種類ごとに `$button-roundness` が `$flat-border-radius`、`$raised-border-radius`、`$outline-border-radius`、`$fab-border-radius`、`$icon-border-radius` で置き換えられることに注意してください。
+* `button-theme` を使用する場合は、ボタンの種類ごとに `$button-roundness` が `$flat-border-radius`、`$raised-border-radius`、`$outline-border-radius`、`$fab-border-radius`、`$icon-border-radius` で置き換えられることに注意してください。
 
 ## 7.0.x から 7.1.x
  * アプリケーションで IgxGrid の集計を使用する場合、`IgxSummaryOperand.operate()` メソッドがからデータとともに順番に呼び出されて集計行に必要な高さを計算します。カスタム集計オペランドは、メソッドが常に適切な長さの IgxSummaryResult の配列を返します。

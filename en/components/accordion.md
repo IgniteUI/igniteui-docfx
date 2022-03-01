@@ -238,9 +238,9 @@ In order to take advantage of the functions exposed by the theming engine, we ha
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [igx-expansion-panel-theme]({environment:sassApiUrl}/index.html#function-igx-expansion-panel-theme) and accepts an `$expanded-margin` parameter. 
+Following the simplest approach, we create a new theme that extends the [expansion-panel-theme]({environment:sassApiUrl}/index.html#function-expansion-panel-theme) and accepts an `$expanded-margin` parameter. 
 ```scss
-$custom-panel-theme: igx-expansion-panel-theme(
+$custom-panel-theme:expansion-panel-theme(
     $expanded-margin: 0px
 );
 ```
@@ -249,7 +249,7 @@ $custom-panel-theme: igx-expansion-panel-theme(
 The last step is to include the component's theme.
 ```scss
 :host {
-    @include igx-css-vars($custom-panel-theme);
+    @include css-vars($custom-panel-theme);
 }
 ```
 
@@ -261,7 +261,7 @@ If the component is using the [Emulated](themes/sass/component-themes.md#view-en
 ```scss
 :host {
     ::ng-deep {
-        @include igx-expansion-panel($custom-panel-theme);    
+        @include expansion-panel($custom-panel-theme);    
     }
 }
 ```

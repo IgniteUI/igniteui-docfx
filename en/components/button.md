@@ -222,7 +222,7 @@ To get started with styling the button, we need to import the `index` file, wher
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) and accepts the `$foreground` and the `$background` parameters with their respective hover and focus parameters.
+Following the simplest approach, we create a new theme that extends the [`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme) and accepts the `$foreground` and the `$background` parameters with their respective hover and focus parameters.
 
 Given the following markup:
 
@@ -235,7 +235,7 @@ Given the following markup:
 We need to create a theme:
 
 ```scss
-$custom-button-theme: igx-button-theme(
+$custom-button-theme:button-theme(
     $foreground: #fdfdfd,
     $hover-foreground: #fdfdfd,
     $focus-foreground: #fdfdfd,
@@ -246,7 +246,7 @@ $custom-button-theme: igx-button-theme(
 );
 ```
 
-Take a look at the [`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) section for a complete list of available parameters for styling any type of button.
+Take a look at the [`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme) section for a complete list of available parameters for styling any type of button.
 
 ### Using CSS variables 
 
@@ -254,7 +254,7 @@ The last step is to pass the custom button theme in our application:
 
 ```scss
 .my-raised-btn {
-    @include igx-css-vars($custom-button-theme);
+    @include css-vars($custom-button-theme);
 }
 ```
 
@@ -268,7 +268,7 @@ If the component is using the [`Emulated`](themes/sass/component-themes.md#view-
 :host {
      ::ng-deep {
         .my-raised-btn {
-            @include igx-button($custom-button-theme);
+            @include button($custom-button-theme);
         }
     }
 }
@@ -288,7 +288,7 @@ If the component is using the [`Emulated`](themes/sass/component-themes.md#view-
 <div class="divider--half"></div>
 
 * [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
-* [IgxButton Styles]({environment:sassApiUrl}/index.html#function-igx-button-theme)
+* [IgxButton Styles]({environment:sassApiUrl}/index.html#function-button-theme)
 * [IgxRippleDirective]({environment:angularApiUrl}/classes/igxrippledirective.html)
 * [IgxButtonGroupComponent]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html)
 

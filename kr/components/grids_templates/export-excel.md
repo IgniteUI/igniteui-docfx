@@ -131,7 +131,7 @@ Excel 내보내기 서비스에는 아래의 몇 가지 API가 추가로 포함�
 사용된 추가 컴포넌트:
 
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent 스타일]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [@@igxNameComponent 스타일]({environment:sassApiUrl}/index.html#function-grid-theme)
 
 <div class="divider"></div>
 

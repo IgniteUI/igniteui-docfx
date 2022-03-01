@@ -521,11 +521,11 @@ Then we need to create a theme for our component.
 
 ```scss
 :host ::ng-deep {
-    $my-list-theme: igx-list-theme(
+    $my-list-theme:list-theme(
         $background: #0568ab
     );
 
-    @include igx-list($my-list-theme);
+    @include list($my-list-theme);
 }
 ```
 The result from the above code is
@@ -541,28 +541,28 @@ The result from the above code is
 > [!NOTE]
 > Please note that if we create our component theme in the component .scss file we need to use `::ng-deep` in order to pass the view encapsulation otherwise our new theme will not work! for more info please refer to:  [Component Themes](https://www.infragistics.com/products/ignite-ui-angular/angular/components/themes/sass/component-themes.html).
 
-For full list of parameters that you can change for the list component please refer to: [IgxListComponent Styles]({environment:sassApiUrl}/index.html#function-igx-list-theme)
+For full list of parameters that you can change for the list component please refer to: [IgxListComponent Styles]({environment:sassApiUrl}/index.html#function-list-theme)
 
 ## API References
 
 In this article we covered a lot of ground with the Angular list component. We created a list of contact items. Used some additional Ignite UI for Angular components inside our list items, like avatars and icons. Created some custom item layout and styled it. Finally, we added list filtering. The list component has a few more APIs to explore, which are listed below.
 
 * [IgxListComponent API]({environment:angularApiUrl}/classes/igxlistcomponent.html)
-* [IgxListComponent Styles]({environment:sassApiUrl}/index.html#function-igx-list-theme)
+* [IgxListComponent Styles]({environment:sassApiUrl}/index.html#function-list-theme)
 * [IgxListItemComponent API]({environment:angularApiUrl}/classes/igxlistitemcomponent.html)
 
 Additional Angular components that were used:
 
 * [IgxAvatarComponent API]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
-* [IgxAvatarComponent Styles]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
+* [IgxAvatarComponent Styles]({environment:sassApiUrl}/index.html#function-avatar-theme)
 * [IgxIconComponent API]({environment:angularApiUrl}/classes/igxiconcomponent.html)
-* [IgxIconComponent Styles]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxIconComponent Styles]({environment:sassApiUrl}/index.html#function-icon-theme)
 
 <div class="divider"></div>
 
 ## Theming Dependencies
-* [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
-* [IgxAvatar Theme]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
+* [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-ripple-theme)
+* [IgxAvatar Theme]({environment:sassApiUrl}/index.html#function-avatar-theme)
 
 ## Additional Resources
 

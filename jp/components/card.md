@@ -271,7 +271,7 @@ Card のスタイル設定を始めるには、すべてのテーマ関数とコ
 // 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
-最も単純なアプローチに従って、[`igx-card-theme`]({environment:sassApiUrl}/index.html#function-igx-card-theme) を拡張する新しいテーマを作成し、カードのアイテムをスタイル設定するいくつかのパラメーターを受け取ります。
+最も単純なアプローチに従って、[`card-theme`]({environment:sassApiUrl}/index.html#function-card-theme) を拡張する新しいテーマを作成し、カードのアイテムをスタイル設定するいくつかのパラメーターを受け取ります。
 
 ```scss
 $colorful-card:card-theme(
@@ -281,7 +281,7 @@ $colorful-card:card-theme(
     $content-text-color: #FEFEFE
 );
 ```
-ご覧のとおり、`igx-card-theme` は、アイテムの基本的なスタイル設定に役立ついくつかのパラメーターを公開しています。 
+ご覧のとおり、`card-theme` は、アイテムの基本的なスタイル設定に役立ついくつかのパラメーターを公開しています。 
 
 ### テーマを含む
 
@@ -342,7 +342,7 @@ $colorful-card:card-theme(
 
 以下の定義済み CSS スタイルを使用してカード レイアウトを構成しました。
 
-* [`IgxCardComponent スタイル`]({environment:sassApiUrl}/index.html#function-igx-card-theme)
+* [`IgxCardComponent スタイル`]({environment:sassApiUrl}/index.html#function-card-theme)
 
 使用したその他のコンポーネントとディレクティブ
 
@@ -353,16 +353,16 @@ $colorful-card:card-theme(
 
 スタイル:
 
-* [`IgxAvatarComponent スタイル`]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
-* [`IgxIconComponent スタイル`]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
-* [`IgxButtonDirective スタイル`]({environment:sassApiUrl}/index.html#function-igx-button-theme)
+* [`IgxAvatarComponent スタイル`]({environment:sassApiUrl}/index.html#function-avatar-theme)
+* [`IgxIconComponent スタイル`]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [`IgxButtonDirective スタイル`]({environment:sassApiUrl}/index.html#function-button-theme)
 
 <div class="divider"></div>
 
 ## テーマの依存関係
-* [IgxButton テーマ]({environment:sassApiUrl}/index.html#function-igx-button-theme)
-* [IgxAvatar テーマ]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
-* [IgxIconTheme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxButton テーマ]({environment:sassApiUrl}/index.html#function-button-theme)
+* [IgxAvatar テーマ]({environment:sassApiUrl}/index.html#function-avatar-theme)
+* [IgxIconTheme]({environment:sassApiUrl}/index.html#function-icon-theme)
 
 ## その他のリソース
 

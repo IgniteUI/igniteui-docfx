@@ -300,7 +300,7 @@ class WeekSortingStrategy extends BaseSortingStrategy {
 
 ## スタイル設定
 
-igxGridを使用すると、[Ignite UI for Angular テーマ ライブラリ](../themes/sass/component-themes.md)でスタイルを設定できます。グリッドの [テーマ]({environment:sassApiUrl}/index.html#function-igx-grid-theme) は、グリッドのすべての機能をカスタマイズできるさまざまなプロパティを公開します。 
+igxGridを使用すると、[Ignite UI for Angular テーマ ライブラリ](../themes/sass/component-themes.md)でスタイルを設定できます。グリッドの [テーマ]({environment:sassApiUrl}/index.html#function-grid-theme) は、グリッドのすべての機能をカスタマイズできるさまざまなプロパティを公開します。 
 
 以下の手順では、グリッドの Group By スタイルをカスタマイズする手順を実行しています。
 
@@ -317,11 +317,11 @@ igxGridを使用すると、[Ignite UI for Angular テーマ ライブラリ](..
 
 ### カスタム テーマの定義
 
-次に、[`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) を拡張し、必要に応じて Group By をカスタマイズするために必要なパラメーターを受け入れる新しいテーマを作成します。Group By 機能で使用されるため、[`igx-chip-theme`]({environment:sassApiUrl}/index.html#function-igx-chip-theme) を拡張する必要もあります。
+次に、[`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) を拡張し、必要に応じて Group By をカスタマイズするために必要なパラメーターを受け入れる新しいテーマを作成します。Group By 機能で使用されるため、[`chip-theme`]({environment:sassApiUrl}/index.html#function-chip-theme) を拡張する必要もあります。
 
 ```scss
 
-$custom-theme: igx-grid-theme(
+$custom-theme:grid-theme(
     /* Group By properties that affect styling */
     $group-row-background: #494949,
     $group-row-selected-background: #383838,
@@ -340,7 +340,7 @@ $custom-theme: igx-grid-theme(
 );
 
 /* Chip theme will style the chips in the Group By area */
-$custom-chips-theme: igx-chip-theme(
+$custom-chips-theme:chip-theme(
     $background: #494949,
     $text-color: #f8f8f8,
     $hover-text-color: #e7e7e7
@@ -356,7 +356,7 @@ $custom-chips-theme: igx-chip-theme(
 $black-color: #292826;
 $yellow-color: #FFCD0F;
 
-$custom-palette: igx-palette(
+$custom-palette:palette(
   $primary: $black-color,
   $secondary: $yellow-color
 );
@@ -364,23 +364,23 @@ $custom-palette: igx-palette(
 カスタム パレットが生成された後、`igx-color` 関数を使用して、さまざまな種類の原色と二次色を取得できます。 
 
 ```scss
-$custom-theme: igx-grid-theme(
-    $group-row-background: igx-color($custom-palette, "primary", 300),
-    $group-row-selected-background: igx-color($custom-palette, "primary", 400),
-    $group-label-column-name-text: igx-contrast-color($custom-palette, "primary", 500),
-    $group-label-icon: igx-color($custom-palette, "secondary", 600),
-    $group-label-text: igx-contrast-color($custom-palette, "primary", 500),
-    $group-count-background: igx-color($custom-palette, "secondary", 600),
-    $group-count-text-color: igx-color($custom-palette, "primary", 400),
-    $expand-icon-color: igx-color($custom-palette, "secondary", 600),
-    $expand-icon-hover-color: igx-color($custom-palette, "secondary", 300),
-    $cell-active-border-color: igx-color($custom-palette, "secondary", 600)
+$custom-theme:grid-theme(
+    $group-row-background:color($custom-palette, "primary", 300),
+    $group-row-selected-background:color($custom-palette, "primary", 400),
+    $group-label-column-name-text:contrast-color($custom-palette, "primary", 500),
+    $group-label-icon:color($custom-palette, "secondary", 600),
+    $group-label-text:contrast-color($custom-palette, "primary", 500),
+    $group-count-background:color($custom-palette, "secondary", 600),
+    $group-count-text-color:color($custom-palette, "primary", 400),
+    $expand-icon-color:color($custom-palette, "secondary", 600),
+    $expand-icon-hover-color:color($custom-palette, "secondary", 300),
+    $cell-active-border-color:color($custom-palette, "secondary", 600)
 );
 
-$custom-chips-theme: igx-chip-theme(
-    $background: igx-color($custom-palette, "primary", 300),
-    $text-color: igx-contrast-color($custom-palette, "primary", 500),
-    $hover-text-color: igx-contrast-color($custom-palette, "primary", 600)
+$custom-chips-theme:chip-theme(
+    $background:color($custom-palette, "primary", 300),
+    $text-color:contrast-color($custom-palette, "primary", 500),
+    $hover-text-color:contrast-color($custom-palette, "primary", 600)
 );
 ```
 ### カスタム スキーマの定義
@@ -405,7 +405,7 @@ $my-custom-schema: extend($light-schema, (
     igx-grid: $custom-grid-schema
 ));
 
-$custom-theme: igx-grid-theme(
+$custom-theme:grid-theme(
     $palette: $custom-palette,
     $schema: $my-custom-schema
 );
@@ -415,8 +415,8 @@ $custom-theme: igx-grid-theme(
 
 テーマを適用する最も簡単な方法は、グローバル スタイル ファイルに `sass` `@include` ステートメントを使用することです。
 ```scss
-@include igx-grid($custom-theme);
-@include igx-chip($custom-chips-theme);
+@include grid($custom-theme);
+@include chip($custom-chips-theme);
 ```
 
 ### スコープ コンポーネント テーマ
@@ -433,8 +433,8 @@ $custom-theme: igx-grid-theme(
 ```scss
 :host {
     ::ng-deep {
-        @include igx-grid($custom-theme);
-        @include igx-chip($custom-chips-theme);
+        @include grid($custom-theme);
+        @include chip($custom-chips-theme);
     }
 }
 ```
@@ -461,12 +461,12 @@ $custom-theme: igx-grid-theme(
 
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 * [IgxGroupByRow]({environment:angularApiUrl}/classes/igxgroupbyrow.html)
-* [IgxGridComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [IgxGridComponent スタイル]({environment:sassApiUrl}/index.html#function-grid-theme)
 * [ISortingExpression]({environment:angularApiUrl}/interfaces/isortingexpression.html)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [IGroupByExpandState]({environment:angularApiUrl}/interfaces/igroupbyexpandstate.html)
 * [IgxChipComponent]({environment:angularApiUrl}/classes/igxchipcomponent.html)
-* [IgxChipComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-chip-theme)
+* [IgxChipComponent スタイル]({environment:sassApiUrl}/index.html#function-chip-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

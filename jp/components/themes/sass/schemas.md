@@ -22,17 +22,17 @@ $_light-avatar: extend(
     $_square-shape-avatar,
     (
         background: (
-            igx-color: ('grays', 400)
+           color: ('grays', 400)
         ),
 
         color: (
-            igx-color: ('grays', 800)
+           color: ('grays', 800)
         ),
     )
 );
 ```
 
-上記の例では、コンポーネント スキーマが [Avatar テーマ]({environment:sassApiUrl}/index.html#function-igx-avatar-theme) で使用するプロパティを定義します。具体的なカラー パレット マップを参照せずに、アバターが使用するカラーを指定します。
+上記の例では、コンポーネント スキーマが [Avatar テーマ]({environment:sassApiUrl}/index.html#function-avatar-theme) で使用するプロパティを定義します。具体的なカラー パレット マップを参照せずに、アバターが使用するカラーを指定します。
 
 以下は、`background` プロパティの例です。アバターのテーマにデフォルトの背景を指示します。 
 
@@ -45,7 +45,7 @@ $_light-avatar: extend(
 ```scss
 $_light-avatar: (
     icon-background: (
-        igx-color: ('grays', 400),
+       color: ('grays', 400),
         to-opaque: #fff
     ),
     ...
@@ -80,7 +80,7 @@ $light-material-schema: (
 );
 ```
 
-`$light-material-schema` 全体を `igx-theme` ミックスインに渡すことができます。たとえば、デフォルト コンポーネント スキーマを置き換えて `$light-material-schema` を変更したい場合、Avatar コンポーネントは以下を使用します。
+`$light-material-schema` 全体を `theme` ミックスインに渡すことができます。たとえば、デフォルト コンポーネント スキーマを置き換えて `$light-material-schema` を変更したい場合、Avatar コンポーネントは以下を使用します。
 
 ```scss
 $my-light-schema: extend($light-material-schema, (
@@ -92,7 +92,7 @@ $my-light-schema: extend($light-material-schema, (
 
 ```scss
 // styles.scss
-@include igx-theme(
+@include theme(
     $schema: $my-light-schema,
     $palette: $default-palette
 );
@@ -105,7 +105,7 @@ $my-light-schema: extend($light-material-schema, (
 最後に各コンポーネント テーマで上記で作成したスキーマを使用する方法について説明します。
 
 ```scss
-$my-avatar-theme: igx-avatar-theme(
+$my-avatar-theme:avatar-theme(
     $schema: $my-avatar-schema
 );
 ```
@@ -120,8 +120,8 @@ $my-avatar-theme: igx-avatar-theme(
 * [Avatar スキーマ]({environment:sassApiUrl}/index.html#variable-_light-avatar)
 * [Light コンポーネント スキーマ]({environment:sassApiUrl}/index.html#variable-light-schema)
 * [Dark コンポーネント スキーマ]({environment:sassApiUrl}/index.html#variable-dark-schema)
-* [Global テーマ]({environment:sassApiUrl}/index.html#mixin-igx-theme)
-* [Avatar テーマ]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
+* [Global テーマ]({environment:sassApiUrl}/index.html#mixin-theme)
+* [Avatar テーマ]({environment:sassApiUrl}/index.html#function-avatar-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

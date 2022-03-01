@@ -240,10 +240,10 @@ export class AppModule {}
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単な方法は、[`igx-tooltip-theme`]({environment:sassApiUrl}/index.html#function-igx-tooltip-theme) を拡張する新しいテーマを作成し、`$text-color`、`$background`、`$border-radius` パラメーターを受け取る方法です。
+最も簡単な方法は、[`tooltip-theme`]({environment:sassApiUrl}/index.html#function-tooltip-theme) を拡張する新しいテーマを作成し、`$text-color`、`$background`、`$border-radius` パラメーターを受け取る方法です。
 
 ```scss
-$dark-tooltip: igx-tooltip-theme(
+$dark-tooltip:tooltip-theme(
     $text-color: #ECAA53,
     $background: #011627,
     $border-radius: 6px
@@ -279,7 +279,7 @@ $dark-tooltip: igx-tooltip-theme(
 `$legacy-support` が `true` に設定されている場合、**コンポーネントのテーマ**を以下のように含めます。
 
 ```scss
- @include igx-tooltip($dark-tooltip);
+ @include tooltip($dark-tooltip);
 ```
 >[!NOTE]
 >コンポーネントが [`Emulated`](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
@@ -287,7 +287,7 @@ $dark-tooltip: igx-tooltip-theme(
 ```scss
 :host {
      ::ng-deep {
-        @include igx-tooltip($dark-tooltip);
+        @include tooltip($dark-tooltip);
     }
 }
 ```
@@ -297,7 +297,7 @@ $dark-tooltip: igx-tooltip-theme(
 `$legacy-support` が `false` (デフォルト) に設定されている場合、**css 変数** を以下のように含めます。
 
 ```scss
-@include igx-css-vars($dark-tooltip);
+@include css-vars($dark-tooltip);
 ```
 
 >[!NOTE]
@@ -305,7 +305,7 @@ $dark-tooltip: igx-tooltip-theme(
 
 ```scss
 :host {
-    @include igx-css-vars($dark-tooltip);
+    @include css-vars($dark-tooltip);
 }
 ```
 
@@ -346,9 +346,9 @@ $dark-tooltip: igx-tooltip-theme(
 
 スタイル:
 
-* [IgxTooltipDirective スタイル]({environment:sassApiUrl}/index.html#function-igx-tooltip-theme)
-* [IgxAvatarComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
-* [IgxIconComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxTooltipDirective スタイル]({environment:sassApiUrl}/index.html#function-tooltip-theme)
+* [IgxAvatarComponent スタイル]({environment:sassApiUrl}/index.html#function-avatar-theme)
+* [IgxIconComponent スタイル]({environment:sassApiUrl}/index.html#function-icon-theme)
 
 <div class="divider"></div>
 

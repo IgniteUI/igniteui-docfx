@@ -26,11 +26,11 @@ There is a **default theme** that styles all the components in the **Ignite UI f
 // import first the IgniteUI themes library
 @import "~igniteui-angular/lib/core/styles/themes/index";
 
-// Don't forget to include the igx-core first
-@include igx-core();
+// Don't forget to include thecore first
+@include core();
 
 // the default color palette is passed to the global theme
-@include igx-theme($default-palette);
+@include theme($default-palette);
 ```
 
 The result from the above code snippet looks like this:
@@ -97,7 +97,7 @@ $dark-color: #282828;
 $orange-color: #FFA500;
 
 // Define the palette:
-$dark-theme-palette: igx-palette($primary: $dark-color, $secondary: $orange-color);
+$dark-theme-palette:palette($primary: $dark-color, $secondary: $orange-color);
 ```
 
 Done! We are ready to set the new styling of our app.
@@ -112,49 +112,49 @@ Now lets define the **component themes** that we are going to apply:
 #### Defining Component Themes
 <div class="divider--half"></div>
 
-- [**Igx-Grid-Theme**]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+- [**grid-theme**]({environment:sassApiUrl}/index.html#function-grid-theme)
 
 ```scss
 // Define dark theme for the dialog
-$dark-grid-theme: igx-grid-theme(
+$dark-grid-theme:grid-theme(
   $palette: $dark-theme-palette,
-  $content-background: igx-color($dark-theme-palette, "secondary", 100),
-  $header-background: igx-color($dark-theme-palette, "primary", 500),
-  $header-text-color: igx-color($dark-theme-palette, "secondary", 600),
-  $cell-selected-background: igx-color($dark-theme-palette, "secondary", 600),
-  $cell-selected-text-color: igx-color($dark-theme-palette, "primary", 600),
-  $row-hover-background: igx-color($dark-theme-palette, "primary", 100),
-  $header-border-color: igx-color($dark-theme-palette, "primary", 600)
+  $content-background:color($dark-theme-palette, "secondary", 100),
+  $header-background:color($dark-theme-palette, "primary", 500),
+  $header-text-color:color($dark-theme-palette, "secondary", 600),
+  $cell-selected-background:color($dark-theme-palette, "secondary", 600),
+  $cell-selected-text-color:color($dark-theme-palette, "primary", 600),
+  $row-hover-background:color($dark-theme-palette, "primary", 100),
+  $header-border-color:color($dark-theme-palette, "primary", 600)
 );
 ```
 
-- [**Igx-Dialog-Theme**]({environment:sassApiUrl}/index.html#function-igx-dialog-theme)
+- [**dialog-theme**]({environment:sassApiUrl}/index.html#function-dialog-theme)
 
 ```scss
 
 // Define dark theme for the dialog
-$dark-dialog-theme: igx-dialog-theme(
+$dark-dialog-theme:dialog-theme(
   $palette: $dark-theme-palette,
-  $background: igx-color($dark-theme-palette, "primary", 100),
-  $title-color: igx-color($dark-theme-palette, "secondary", 500),
-  $message-color: igx-color($dark-theme-palette, "secondary", 600)
+  $background:color($dark-theme-palette, "primary", 100),
+  $title-color:color($dark-theme-palette, "secondary", 500),
+  $message-color:color($dark-theme-palette, "secondary", 600)
 );
 
 ```
 
-- [**Igx-Input-Group-Theme**]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
+- [**input-group-theme**]({environment:sassApiUrl}/index.html#function-input-group-theme)
 
 ```scss
 // Define dark theme for the input-group
-$dark-input-group-theme: igx-input-group-theme(
+$dark-input-group-theme:input-group-theme(
   $palette: $dark-theme-palette,
-  $box-background:  igx-color($dark-theme-palette, "primary", 100),
-  $disabled-border-color: igx-color($dark-theme-palette, "primary", 500),
-  $box-disabled-background: igx-color($dark-theme-palette, "secondary", 100),
-  $hover-bottom-line-color: igx-color($dark-theme-palette, "secondary", 700),
-  $focused-bottom-line-color: igx-color($dark-theme-palette, "secondary", 700),
-  $focused-text-color: igx-color($dark-theme-palette, "secondary", 500),
-  $idle-text-color: igx-color($dark-theme-palette, "secondary", 700)
+  $box-background: color($dark-theme-palette, "primary", 100),
+  $disabled-border-color:color($dark-theme-palette, "primary", 500),
+  $box-disabled-background:color($dark-theme-palette, "secondary", 100),
+  $hover-bottom-line-color:color($dark-theme-palette, "secondary", 700),
+  $focused-bottom-line-color:color($dark-theme-palette, "secondary", 700),
+  $focused-text-color:color($dark-theme-palette, "secondary", 500),
+  $idle-text-color:color($dark-theme-palette, "secondary", 700)
 );
 ```
 
@@ -180,19 +180,19 @@ After that, in a new SCSS file nest the **themes class**, that includes the comp
 :host {
     display: block;
     margin: 16px;
-    box-shadow: igx-elevation($elevations, 12);
+    box-shadow:elevation($elevations, 12);
 
     &.dark-theme {
       background: $dark-color;
         ::ng-deep {
-          @include igx-grid($dark-grid-theme);
-          @include igx-snackbar($dark-snackbar-theme);
-          @include igx-input-group($dark-input-group-theme);
-          @include igx-grid-paginator($dark-grid-paginator-theme);
-          @include igx-button($dark-button-theme);
-          @include igx-dialog($dark-dialog-theme);
-          @include igx-grid-filtering($dark-grid-filtering-theme);
-          @include igx-button-group($dark-button-group-theme);
+          @include grid($dark-grid-theme);
+          @include snackbar($dark-snackbar-theme);
+          @include input-group($dark-input-group-theme);
+          @include grid-paginator($dark-grid-paginator-theme);
+          @include button($dark-button-theme);
+          @include dialog($dark-dialog-theme);
+          @include grid-filtering($dark-grid-filtering-theme);
+          @include button-group($dark-button-group-theme);
       }
     }
 }
@@ -224,20 +224,20 @@ This can be achieved in a few modifications:
 :host {
     display: block;
     margin: 16px;
-    box-shadow: igx-elevation($elevations, 12);
+    box-shadow:elevation($elevations, 12);
 
     // Set the light themes for the components.
     &.light-theme {
       background: $light-color;
       ::ng-deep {
-        @include igx-grid($light-grid);
-        @include igx-snackbar($light-snackbar);
-        @include igx-input-group($light-input-group);
-        @include igx-grid-paginator($light-grid-paginator);
-        @include igx-button($light-button);
-        @include igx-dialog($light-dialog);
-        @include igx-grid-filtering($light-grid-filtering);
-        @include igx-button-group($light-button-group);
+        @include grid($light-grid);
+        @include snackbar($light-snackbar);
+        @include input-group($light-input-group);
+        @include grid-paginator($light-grid-paginator);
+        @include button($light-button);
+        @include dialog($light-dialog);
+        @include grid-filtering($light-grid-filtering);
+        @include button-group($light-button-group);
       }
     }
     ...
@@ -314,12 +314,12 @@ Now we can easily change our defined themes with only a `click` event:
 
 ### API
 
-* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-grid-theme)
 * [IgxGrid Filtering Styles]({environment:sassApiUrl}/index.html#function-igx-grid-filtering-theme)
 * [IgxGrid Paginator Styles]({environment:sassApiUrl}/index.html#function-igx-grid-paginator-theme)
-* [IgxDialogComponent Styles]({environment:sassApiUrl}/index.html#function-igx-dialog-theme)
-* [IgxInputGroupComponent Styles]({environment:sassApiUrl}/index.html#function-igx-input-group-theme) 
-* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+* [IgxDialogComponent Styles]({environment:sassApiUrl}/index.html#function-dialog-theme)
+* [IgxInputGroupComponent Styles]({environment:sassApiUrl}/index.html#function-input-group-theme) 
+* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-overlay-theme)
 
 ### Additional Resources
 <div class="divider--half"></div>

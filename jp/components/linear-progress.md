@@ -220,7 +220,7 @@ public decrementProgress() {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単な方法として、[`igx-progress-linear-theme`]({environment:sassApiUrl}/index.html#function-igx-progress-linear-theme) を拡張し、`$track-color`、`$fill-color-default` および `$text-color パラメーターを受け取る新しいテーマを作成する方法があります。
+最も簡単な方法として、[`progress-linear-theme`]({environment:sassApiUrl}/index.html#function-progress-linear-theme) を拡張し、`$track-color`、`$fill-color-default` および `$text-color パラメーターを受け取る新しいテーマを作成する方法があります。
 
 ```scss
 $custom-theme:progress-linear-theme(
@@ -283,5 +283,5 @@ $custom-theme:progress-linear-theme(
 <div class="divider--half"></div>
 
 * [IgxLinearProgressBarComponent]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html)
-* [IgxLinearProgressBarComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-progress-linear-theme)
+* [IgxLinearProgressBarComponent スタイル]({environment:sassApiUrl}/index.html#function-progress-linear-theme)
 * [IgxTextAlign]({environment:angularApiUrl}/enums/igxtextalign.html)
