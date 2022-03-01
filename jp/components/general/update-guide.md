@@ -236,7 +236,7 @@ $my-custom-grid: grid-theme(
     $schema: $dark-schema
 );
 
-// Ensuregrid is included:
+// Ensure grid is included:
 @include grid($my-custom-grid);
 ```
 

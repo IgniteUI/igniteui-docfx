@@ -124,9 +124,9 @@ $my-color-palette: palette(
   $secondary: $secondary-color
 );
 
-// 重要: 必ず最初にcore を含めてください。
+// 重要: 必ず最初に core を含めてください。
 @include core();
-// 生成したカラー パレットをtheme ミックスインに渡します
+// 生成したカラー パレットを theme ミックスインに渡します
 @include theme($my-color-palette);
 ```
 
@@ -150,7 +150,7 @@ $my-color-palette: palette(
 // 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 
-// 重要: 必ず最初にcore を含めてください。
+// 重要: 必ず最初に core を含めてください。
 @include core();
 //theme の前にタイポグラフィを含めます
 @include typography($config: (font-family: "Comic Sans MS"));

@@ -184,8 +184,13 @@ CSS 変数を使用する間は、`:: ng-deep` 擬似セレクターは必要あ
 @include core();
 @include theme($palette: $default-palette, $legacy-support: true);
 
+<<<<<<< HEAD
 // Overwrite the default themes foravatar using hard-coded values:
 $avatar-theme: avatar-theme(
+=======
+// Overwrite the default themes for avatar using hard-coded values:
+$avatar-theme:avatar-theme(
+>>>>>>> 5bf5d3a313a94d7c53f89e96f276d9ce21c18c37
   $background: royalblue,
 );
 

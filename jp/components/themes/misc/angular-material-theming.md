@@ -198,8 +198,13 @@ $custom-mat-light-theme: mat-light-theme(
 前のアプローチに従って、ダーク モードのマテリアル パレットを作成します。今回は、カスタムの `igx-palette` も定義します。
 
 ```scss
+<<<<<<< HEAD
 // Custompalette
 $custom-dark-palette: palette(
+=======
+// Custom palette
+$custom-dark-palette:palette(
+>>>>>>> 5bf5d3a313a94d7c53f89e96f276d9ce21c18c37
     $primary: #011627,
     $secondary: #72da67,
     $grays: #fff,
@@ -230,7 +235,7 @@ Ignite UI for Angular には、[マテリアル デザイン](https://material.i
 Angular Material コンポーネントの場合、前述のカスタム マテリアル テーマに `mat-core` ミックスインを含めてから、`angular-material-theme` ミックスインを含める必要があります。 
 
 ```scss
-// Make sure you always include thecore mixin first
+// Make sure you always include the core mixin first
 @include core();
 
 ::ng-deep {
