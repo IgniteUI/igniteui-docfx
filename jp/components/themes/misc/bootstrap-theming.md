@@ -180,7 +180,7 @@ Ignite UI for Angular には、[Bootstrap 4](https://getbootstrap.com/) ライ�
 この時点で、Bootstrap の `$theme-colors` マップを前に作成した Sass 変数で変更する必要があります。
 
 ```scss
-// Make sure you always include thecore mixin first
+// Make sure you always include the core mixin first
 @include core();
 
 :host {

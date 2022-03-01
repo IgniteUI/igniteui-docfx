@@ -239,7 +239,7 @@ $dark-grid-column-moving-theme:grid-theme(
 
 
 > [!NOTE]
->color およびpalette は、色を生成および取得するための重要な機能です。使い方の詳細については[パレット](../themes/palettes.md)のトピックを参照してください。
+>color および palette は、色を生成および取得するための重要な機能です。使い方の詳細については[パレット](../themes/palettes.md)のトピックを参照してください。
 
 ### スキーマの使用
 

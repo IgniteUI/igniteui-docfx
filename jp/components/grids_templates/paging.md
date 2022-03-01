@@ -341,7 +341,7 @@ $custom-dark-schema: extend($dark-schema,(
     igx-button: $dark-button-schema
 ));
 
-// Definingpaginator-theme with the global dark schema
+// Defining paginator-theme with the global dark schema
 $dark-paginator:paginator-theme(
   $palette: $dark-palette,
   $schema: $custom-dark-schema

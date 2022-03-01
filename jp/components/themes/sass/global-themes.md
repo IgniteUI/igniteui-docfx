@@ -55,11 +55,11 @@ $my-color-palette:palette(
     $secondary: $secondary-color
 );
 
-// 重要: 必ず最初にcore を含めてください。
+// 重要: 必ず最初に core を含めてください。
 @include core();
 // Add the typography styles before the main theme.
 @include typography();
-// 生成したカラー パレットをtheme ミックスインに渡します.
+// 生成したカラー パレットを theme ミックスインに渡します.
 @include theme($my-color-palette);
 ```
 
@@ -153,9 +153,9 @@ $my-color-palette:palette(
     $secondary: $secondary-color
 );
 
-// 重要: 必ず最初にcore を含めてください。
+// 重要: 必ず最初に core を含めてください。
 @include core();
-// Pass the color palette we generated to thebootstrap-theme mixin
+// Pass the color palette we generated to the bootstrap-theme mixin
 @include bootstrap-light-theme($my-color-palette);
 ```
 
