@@ -2,6 +2,7 @@
 title: Angular What's New | Ignite UI for Angular | Infragistics
 _description: Learn about new features in the Ignite UI for Angular.
 _keywords: Changelog, What's New,  Ignite UI for Angular, Infragistics
+_language: kr
 mentionedTypes: ["SeriesViewer", "XYChart", "DomainChart", "XamGeographicMap"]
 ---
 
@@ -18,7 +19,7 @@ All notable changes for each version of Ignite UI for Angular are documented on 
 
 <div class="divider--half"></div>
 
-## **Angular 11.3.0**
+## **Angular 13.1.0**
 
 <div class="divider--half"></div>
 
@@ -67,7 +68,7 @@ This release introduces a few improvements and simplifications to visual design 
 
 ### Charts & Maps
 
-This release introduces several new and improved visual design and configuration options for all of the chart components. e.g. `DataChart`, [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html), and [`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html).
+This release introduces several new and improved visual design and configuration options for all of the chart components, e.g. `DataChart`, [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html), and [`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html).
 
 -   Changed Bar/Column/Waterfall series to have square corners instead of rounded corners
 -   Changed Scatter High Density series’ colors for heat min property from <span style="color:#8a5bb1">#8a5bb1</span> to <span style="color:#000000">#000000</span>
@@ -90,7 +91,7 @@ This release introduces several new and improved visual design and configuration
     -   chart.[`computedPlotAreaMarginMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#computedplotareamarginmode)
 -   New Highlighting Properties
     -   chart.[`highlightingMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriesviewercomponent.html#highlightingmode) - Sets whether hovered or non-hovered series to fade, brighten
-    -   chart.[`highlightingBehavior`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriesviewercomponent.html#highlightingbehavior) - Sets whether the series highlights depending on mouse position eg. directly over or nearest item
+    -   chart.[`highlightingBehavior`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriesviewercomponent.html#highlightingbehavior) - Sets whether the series highlights depending on mouse position e.g. directly over or nearest item
     -   Note, in previous releases the highlighting was limited to fade on hover.
 -   Added Highlighting Stacked, Scatter, Polar, Radial, and Shape series:
 -   Added Annotation layers to Stacked, Scatter, Polar, Radial, and Shape series:
