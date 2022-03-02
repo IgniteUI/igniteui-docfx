@@ -54,9 +54,11 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
 - `igxGrid`, `igxHierarchicalGrid`, `igxTreeGrid`
     - **Breaking Change** - The columns' `movable` property has been deprecated. Use the exposed grid `moving` property instead:
     ```html
-    <igx-grid [moving]="true">      
+    <igx-grid [moving]="true">
     </igx-grid>
     ```
+- `IgxHierarchicalGrid`
+    - **Breaking Change** - The public API service for igxHierarchicalGrid and igxRowIsland components `hgridAPI` is renamed to `gridAPI`.
 - `IgxToast`
     - **Breaking Change** - The `igx-toast` deprecated `position` property has been removed. We suggest using `positionSettings` property as follows:
     ```typescript
@@ -78,7 +80,7 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
     - **Breaking Change** - The `rowSelected` event is renamed to `rowSelectionChanging` to better reflect its function.
     - **Breaking Change** - The `columnSelected` event is renamed to `columnSelectionChanging` to better reflect its function.
     - **Breaking Change** - `columnsCollection` is removed. Use `columns` instead. If at certain ocasions `columns` return empty array, query the columns using `ViewChildren` and access those in `ngAfterViewInit`:
-        ```html
+        ```typescript
         @ViewChildren(IgxColumnComponent, { read: IgxColumnComponent })
         public columns: QueryList<IgxColumnComponent>;
         ```
@@ -109,7 +111,7 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
         <span>{{ cell.row.data.ProductID }}</span>
         ```
 - `igxGrid`
-    - Exposed a `groupStrategy` input that functions similarly to `sortStrategy`, allowing customization of the grouping behavior of the grid. 
+    - Exposed a `groupStrategy` input that functions similarly to `sortStrategy`, allowing customization of the grouping behavior of the grid.
 - `IgxCsvExporterService`, `IgxExcelExporterService`
     - Exporter services are no longer required to be provided in the application since they are now injected on a root level.
 - `IgxGridToolbarPinningComponent`, `IgxGridToolbarHidingComponent`
@@ -218,8 +220,8 @@ This was done so that palettes can be changed at runtime using CSS variables onl
 
 ```scss
 $my-dark-palette: igx-palette(
-    $primary: olive, 
-    $secondary: yellow, 
+    $primary: olive,
+    $secondary: yellow,
     $grays: #fff
 );
 
@@ -238,7 +240,7 @@ $my-custom-grid: igx-grid-theme(
 
 @include igx-css-vars($my-custom-grid);
 ```
- 
+
 * Excluded Component Themes:
 
 In case you've excluded some component themes from the global theme and you've created custom replacement themes, you should ensure that the component mixin is included and is passed the correct component theme:
@@ -331,7 +333,7 @@ To get a better grasp on the Sass Moule System, you can read [this great article
 
     _From:_
     ```html
-    <igx-paginator #paginator 
+    <igx-paginator #paginator
         [pagerEnabled]="!isPagerDisabled" [pagerHidden]="isPagerHidden"
         [dropdownHidden]="isDropdownHidden">
     </igx-paginator>

@@ -1,13 +1,14 @@
 ---
-title: Angular Pivot Grid Custom Remote | Pivot Tables | Infragistics
-_description: Create fast, responsive Angular pivot grids and tables with Ignite UI for Angular. Perform complex data analysis via pivot data.
-_keywords: angular pivot grid, angular material pivot table, ignite ui for angular, pivot grid customization, pivot grid remote, pivot remote
+title: Angular ピボット グリッド カスタム リモート | ピボット テーブル | インフラジスティックス
+_description: Ignite UI for Angular を使用して、高速で応答性の高い Angular ピボット グリッドとテーブルを作成します。ピボット データを介して複雑なデータ分析を実行します。
+_keywords: angular ピボット グリッド, angular material ピボット テーブル, ignite ui for angular, ピボット グリッドのカスタマイズ, ピボット グリッド リモート, ピボット リモート
+_language: ja
 ---
 
 
-# Angular Pivot Grid Remote Operations
+# Angular ピボット グリッドのリモート操作
 
-In scenarios where the pivot data is already grouped and aggregated from a remote service and there's no need for further processing on the client, the pivot grid can be configured to use a custom empty strategy that will skip data processing on the client and allow it to directly display the data as is:
+ピボット データがすでにリモート サービスからグループ化および集約されており、クライアントでさらに処理する必要がないシナリオでは、クライアントでのデータ処理をスキップし、データをそのまま直接表示できるようにするカスタムの空のストラテジを使用するように構成できます。
 
 ```typescript
 public pivotConfigHierarchy: IPivotConfiguration = {
@@ -16,14 +17,13 @@ public pivotConfigHierarchy: IPivotConfiguration = {
 }
 ```
 
-The following example show how to handle scenarios, where the data is already aggregated and how its structure should look like:
+次の例は、データがすでに集約されているシナリオの処理方法と、その構造がどのように見えるかを示しています:
 <code-view style="height: 530px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-noop" alt="Angular Pivot Grid Custom Predefined Aggregations Example">
+           iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-noop" alt="Angular ピボット グリッドのカスタム定義済み集計の例">
 </code-view>
 
-Users have the ability to achieve certain scenarios by feeding the pivot grid with already aggregated data.
-There are some requirements on how the data should look like and some specifics regarding hierarchies in the pivot view. For example, to declare hierarchy in `rows` dimension:
+ユーザーは、ピボット グリッドに既に集計されたデータをフィードすることで、特定のシナリオを実現できます。データがどのように表示されるかについていくつかの要件があり、ピボット ビューの階層に関するいくつかの詳細があります。たとえば、`rows` ディメンションで階層を宣言するには、次のようにします:
 
 ```typescript
 rows: [
@@ -39,7 +39,7 @@ rows: [
 ]
 ```
 
-And an example of the aggregated would be:
+そして、集約された例は次のようになります:
 
 ```typescript
 public aggregatedData = [
@@ -54,16 +54,15 @@ public aggregatedData = [
 ];
 ```
 
-The Pivot grid provides the object keys fields it uses to do its pivot calculations.
-- `children` - Field that stores children for hierarchy building. It represents a map from grouped values and all the pivotGridRecords that are based on that value. It can be utilized in very specific scenarios, where there is a need to do something while creating the hierarchies. No need to change this for common usage.
-- `records` - Field that stores reference to the original data records. Can be seen in the example from above - `AllProducts_records`. Avoid setting fields in the data with the same name as this property. If your data records has `records` property, you can specify different and unique value for it using the `pivotKeys`.
-- `aggregations` - Field that stores aggregation values. It's applied while creating the hierarchies and also it should not be changed for common scenarios.
-- `level` - Field that stores dimension level based on its hierarchy. Avoid setting fields in the data with the same name as this property. If your data records has `level` property, you can specify different and unique value for it using the `pivotKeys`. 
-- `columnDimensionSeparator` - Separator used when generating the unique column field values. It is the dash(`-`) from the example from above - `All-Bulgaria`.
-- `rowDimensionSeparator` - Separator used when generating the unique row field values. It is the underscore(`_`) from the example from above - `AllProducts_records`. It's used when creating the `records` and `level` field.
+ピボット グリッドは、ピボット計算を行うために使用するオブジェクト キー フィールドを提供します。
+- `children` - 階層構築のために子を格納するフィールド。これは、グループ化された値と、その値に基づくすべての pivotGridRecords からのマップを表します。これは、階層の作成中に何かを行う必要がある非常に特殊なシナリオで利用できます。一般的な使用法のためにこれを変更する必要はありません。
+- `records` - 元のデータ レコードへの参照を格納するフィールド。上記の例で見ることができます - `AllProducts_records`。このプロパティと同じ名前でデータにフィールドを設定することは避けてください。データ レコードに `records` プロパティがある場合は、`pivotKeys` を使用して異なる一意の値を指定できます。
+- `aggregations` - 集計値を格納するフィールド。階層の作成中に適用され 、一般的なシナリオでは変更する必要はありません。
+- `level` - 階層に基づいてディメンション レベルを格納するフィールド。このプロパティと同じ名前でデータにフィールドを設定することは避けてください。データ レコードに `level` プロパティがある場合は、`pivotKeys` を使用して異なる一意の値を指定できます。 
+- `columnDimensionSeparator` - 一意の列フィールド値を生成するときに使用されるセパレーター。上からの例のダッシュ (`-`) - `All-Bulgaria` です。
+- `rowDimensionSeparator` - 一意の行フィールド値を生成するときに使用されるセパレーター。上記の例のアンダースコア (`_`) - `AllProducts_records` です。`records` (レコード) と `level` (レベル フィールド) を作成するときに使用されます。
 
-All of these are stored in the `pivotKeys` property which is part of the `PivotConfiguration` and can be used to change the default pivot keys.
-These defaults are:
+これらはすべて、`Pivo​​tConfiguration` の一部である `pivotKeys` プロパティに格納され、デフォルトのピボット キーを変更するために使用できます。これらのデフォルトは次のとおりです:
 
 ```typescript
 export const DEFAULT_PIVOT_KEYS = {
@@ -72,7 +71,7 @@ export const DEFAULT_PIVOT_KEYS = {
 };
 ```
 
-Setting `NoopPivotDimensionsStrategy` for the `columnStrategy` and `rowStrategy` skips the data grouping and aggregation done by the data pipes, but the pivot grid still needs declarations for the rows, columns, values and filters in order to render the pivot view as expected:
+`columnStrategy` と `rowStrategy` に `NoopPivotDimensionsStrategy` を設定すると、データ パイプによって行われるデータのグループ化と集計がスキップされますが、ピボット ビューを期待どおりに描画するには、ピボット グリッドで行、列、値、フィルターの宣言が必要です:
 
 ```typescript
 public pivotConfig: IPivotConfiguration = {
@@ -111,9 +110,9 @@ public pivotConfig: IPivotConfiguration = {
 }
 ```
 
-It is important for the data to match the configuration. For the best results no additional fields should be included into the aggregated data and no fields from the provided data should be left undeclared as rows or columns. The `IgxPivotGrid` component builds its data based on the `PivotConfiguration` and it is expected for the configuration and aggregated data to match accordingly.
+データが構成と一致することが重要です。最良の結果を得るには、集計データに追加のフィールドを含めたり、提供されたデータのフィールドを行または列として宣言せずに残したりしないでください。`IgxPivotGrid` コンポーネントは、`PivotConfiguration` に基づいてデータを構築し、それに応じて構成と集約データが一致することが期待されます。
 
-Similarly for other remote data operations like sorting and filtering, data processing can be skipped by setting the related empty strategies - `filterStrategy`, `sortStrategy`:
+同様に、並べ替えやフィルタリングなどの他のリモート データ操作の場合、関連する空のストラテジ (`filterStrategy`、`sortStrategy`) を設定することで、データ処理をスキップできます。
 
 ```html
 <igx-pivot-grid [filterStrategy]="noopFilterStrategy" [sortStrategy]="noopSortStrategy" ...>
@@ -125,18 +124,18 @@ public noopFilterStrategy = NoopFilteringStrategy.instance();
 public noopSortStrategy = NoopSortingStrategy.instance();
 ```
 
-## API References
+## API リファレンス
 * [IgxPivotGridComponent]({environment:angularApiUrl}/classes/igxpivotgridcomponent.html)
 * [IgxPivotDataSelector]({environment:angularApiUrl}/classes/igxpivotdataselector.html)
 
 
-## Additional Resources
+## その他のリソース
 <div class="divider--half"></div>
-* [Angular Pivot Grid Features](pivot-grid-features.md)
-* [Angular Pivot Grid Overview](pivot-grid.md)
+* [Angular ピボット グリッド機能](pivot-grid-features.md)
+* [Angular ピボット グリッドの概要](pivot-grid.md)
 
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.
+コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

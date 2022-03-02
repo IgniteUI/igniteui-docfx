@@ -1,46 +1,47 @@
 ---
-title: Angular Pivot Grid | Pivot Tables | Infragistics
-_description: Create fast, responsive Angular pivot grids and tables with Ignite UI for Angular. Perform complex data analysis via pivot data.
-_keywords: angular pivot grid, angular material pivot table, ignite ui for angular
+title: Angular ピボット グリッド | ピボット テーブル | インフラジスティックス
+_description: Ignite UI for Angular を使用して、高速で応答性の高い Angular ピボット グリッドとテーブルを作成します。ピボット データを介して複雑なデータ分析を実行します。
+_keywords: angular ピボット グリッド, angular material ピボット テーブル, ignite ui for angular
+_language: ja
 ---
 
-# Angular Pivot Grid Overview
+# Angular Pivot Grid (ピボット グリッド) の概要
 
-The Angular Pivot Grid Component displays data in a [pivot table](http://en.wikipedia.org/wiki/Pivot_table) and helps performing complex analysis on the supplied data set.
+Angular ピボット グリッド コンポーネントは、[ピボット テーブル](http://ja.wikipedia.org/wiki/ピボットテーブル)にデータを表示し、提供されたデータセットに対して複雑な分析を実行するのに役立ちます。
 
-The `IgxPivotGridComponent` gives the ability to users to configure and display their data in a multi-dimensional pivot table structure.
-The rows and columns represent distinct data groups, and the data cell values represent aggregations. This allows complex data analysis based on a simple flat data set.
-The `IgxPivotGridComponent` is a feature-rich pivot table that provides easy configuration of the different dimensions and values as well as additional data operations on them like filtering and sorting.
+`IgxPivotGridComponent` は、ユーザーが多次元ピボット テーブル構造でデータを構成および表示する機能を提供します。
+行と列は個別のデータ グループを表し、データ セルの値は集計を表します。これにより、単純なフラット データセットに基づく複雑なデータ分析が可能になります。
+`IgxPivotGridComponent` は、機能が豊富なピボット テーブルであり、さまざまなディメンションと値の簡単な構成と、フィルタリングや並べ替えなどの追加のデータ操作を提供します。
 
-It can be used as a stand-alone component as well as in combination with the Angular Pivot Data Selector Component for more flexible runtime configuration options.
+スタンドアロン コンポーネントとして使用することも、Angular Pivot Data Selector (ピボット データ セレクター) コンポーネントと組み合わせて使用して、より柔軟なランタイム構成オプションを提供することもできます。
 
 <code-view style="height: 870px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-datasource" alt="Angular Pivot Grid with Pivot Selector Example">
+           iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-datasource" alt="Angular ピボット セレクターを備えたピボット グリッドの例">
 </code-view>
 
-# Angular Pivot Grid Configuration
+# Angular ピボット グリッド構成
 
-The Angular Pivot Grid Component can be configured via the [`pivotConfiguration`](({environment:angularApiUrl}/classes/igxgridcomponent.html#pivotConfiguration)) property.
+Angular ピボット グリッド コンポーネントは、[`pivotConfiguration`](({environment:angularApiUrl}/classes/igxgridcomponent.html#pivotConfiguration)) プロパティを介して構成できます。
 
 ```html
 <igx-pivot-grid #grid1 [data]="data" [pivotConfiguration]="pivotConfigHierarchy">
 </igx-pivot-grid>
 ```
 
-It is defined by three main dimensions: `rows`, `columns` and `values`. The `rows` and `columns` define the grouped structure that is displayed in the rows and columns of the grid. The `values` define the aggregation fields and the aggregation that will be used to calculate and display the related values of the groups.
+これは、`rows` (行)、`columns` (列)、`values` (値) の 3 つの主要なディメンションによって定義されます。`rows`と `columns` は、グリッドの行と列に表示されるグループ化された構造を定義します。`values` は、グループの関連する値を計算および表示するために使用される集計フィールドと集計を定義します。
 
-A filter can also be defined via the `filters` configuration property. It can be used for fields that you do not want to add as a dimension or a value but would like to filter their related member values via the UI.
+フィルターは、`filters` 構成プロパティを介して定義することもできます。ディメンションまたは値として追加したくないが、UI を介して関連するメンバー値をフィルタリングしたいフィールドに使用できます。
 
-## Dimensions configuration
+## ディメンション構成
 
-Each basic dimension configuration requires a `memberName` that matches a field from the provided `data`, or a `memberFunction` that extracts a value from the record in case of complex objects or other custom scenarios.
+各基本ディメンション構成には、提供された `data` のフィールドに一致する `memberName`、または複雑なオブジェクトやその他のカスタム シナリオの場合にレコードから値を抽出する `memberFunction` が必要です。
 
-Multiple sibling dimensions can be defined, which creates a more complex nested group in the related row or column dimension area.
+複数の兄弟ディメンションを定義できます。これにより、関連する行または列のディメンション領域に、より複雑なネストされたグループが作成されます。
 
-The dimensions can be reordered or moved from one area to another via their corresponding chips using drag & drop.
+ディメンションは、ドラッグアンドドロップを使用して、対応するチップを介して、ある領域から別の領域に並べ替えたり移動したりできます。
 
-A dimension can also describe an expandable hierarchy via the `childLevel` property, for example:
+ディメンションは、`childLevel` プロパティを介して拡張可能な階層を記述することもできます。例えば:
 ```typescript
    {
             memberFunction: () => 'All',
@@ -54,20 +55,20 @@ A dimension can also describe an expandable hierarchy via the `childLevel` prope
     }
 
 ```
-In this case the dimension renders an expander in the related section of the grid (row or column) and allows the children to be expanded or collapsed as part of the hierarchy. By default the row dimensions are initially expanded. This behavior can be controlled with the `defaultExpandState` `@Input` of the pivot grid.
+この場合、ディメンションはグリッドの関連セクション (行または列) にエキスパンダーを描画し、階層の一部として子を展開または縮小ことができます。デフォルトでは、行のディメンションは最初に展開されます。この動作は、ピボット グリッドの `defaultExpandState` `@Input` を使用して制御できます。
 
-## Predefined dimensions
+## 事前定義されたディメンション
 
-As part of the pivot grid some additional predefined dimensions are exposed for easier configuration:
+ピボット グリッドの一部として、構成を容易にするために、いくつかの追加の事前定義されたディメンションが公開されています:
 - `IgxPivotDateDimension`
-    Can be used for date fields. Describes the following hierarchy by default:
-    - All Periods
-    - Years
-    - Quarters
-    - Months
-    - Full Date
+    日付フィールドに使用できます。デフォルトで次の階層を記述します:
+    - すべての期間
+    - 年
+    - 四半期
+    - 月
+    - 完全な日付
 
-It can be set for rows or columns, for example:
+次のように、行または列に設定できます:
 
 ```typescript
 public pivotConfigHierarchy: IPivotConfiguration = {
@@ -77,7 +78,7 @@ public pivotConfigHierarchy: IPivotConfiguration = {
 }
 ```
 
-It also allows for further customization via the second option parameter in order to enable or disable a particular part of the hierarchy, for example:
+また、階層の特定の部分を有効または無効にするために、2 番目のオプション パラメーターを介してさらにカスタマイズすることもできます。例えば:
 
 ```typescript
  new IgxPivotDateDimension({ memberName: 'Date', enabled: true }, {
@@ -90,20 +91,20 @@ It also allows for further customization via the second option parameter in orde
 ```
 
 
-## Values configuration
+## 値の構成
 
-A value configuration requires a `member` that matches a field from the provided `data`, or it can define a custom `aggregator` function for more complex custom scenarios. Out of the box, there are 4 predefined aggregations that can be used depending on the data type of the data field:
+値の構成には、提供された `data` のフィールドに一致する `member` が必要です。または、より複雑なカスタム シナリオのカスタム `aggregator`関数を定義できます。データ フィールドのデータ型に応じて使用できる 4 つの事前定義された集計があります:
 
-- `IgxPivotNumericAggregate` - for numeric fields.
-    Contains the following aggregation functions: `SUM`, `AVG`, `MIN`, `MAX`, `COUNT`.
-- `IgxPivotDateAggregate` - for date fields.
-    Contains the following aggregation functions: `LATEST`, `EARLIEST`, `COUNT`.
-- `IgxPivotTimeAggregate` - for time fields.
-    Contains the following aggregation functions: `LATEST`, `EARLIEST`, `COUNT`.
-- `IgxPivotAggregate` - for any other data types. This is the base aggregation.
-    Contains the following aggregation functions: `COUNT`.
+- `IgxPivotNumericAggregate` - 数値フィールド用。
+    次の集計関数が含まれています: `SUM`、`AVG`、`MIN`、`MAX`、`COUNT`。
+- `IgxPivotDateAggregate` - 日付フィールド用。
+    次の集計関数が含まれています: `LATEST`、`EARLIEST`、`COUNT`。
+- `IgxPivotTimeAggregate` - 時間フィールド用。
+    次の集計関数が含まれています: `LATEST`、`EARLIEST`、`COUNT`。
+- `IgxPivotAggregate` - その他のデータ型の場合。これが基本集計です。
+    次の集計関数が含まれています: `COUNT`。
 
-The current aggregation function can be changed at runtime using the value chip's drop-down. By default, it displays a list of available aggregations based on the field's data type. A custom list of aggregations can also be set via the `aggregateList` property, for example:
+現在の集計関数は、値のーチップのドロップダウンを使用して実行時に変更できます。デフォルトでは、フィールドのデータ型に基づいて使用可能な集計のリストが表示されます。集計のカスタム リストは、`aggregateList` プロパティを介して設定することもできます。例えば:
 
 ```typescript
 public pivotConfigHierarchy: IPivotConfiguration = {
@@ -144,16 +145,16 @@ public static totalMax: PivotAggregation = (members, data: any) => {
     return data.map(x => x.UnitPrice * x.UnitsSold).reduce((a, b) => Math.max(a,b));
 };
 ```
-The pivot value also provides a `displayName` property. It can be used to display a custom name for this value in the column header.
+ピボット値は、`displayName` プロパティも提供します。この値のカスタム名を列ヘッダーに表示するために使用できます。
 
-## Enable property
+## プロパティを有効にする
 
-`IPivotConfiguration` is the interface that describes the current state of the `IgxPivotGrid` component. With it the developer can declare fields of the data as `rows`, `columns`, `filters` or `values`. The configuration allows enabling or disabling each of these elements separately. Only enabled elements are included in the current state of the pivot grid. The `IgxPivotDataSelector` component utilizes the same configuration and shows a list of all elements - enabled and disabled. For each of them there is a checkbox in the appropriate state. End-users can easily tweak the pivot state by toggling the different elements using these checkboxes.
-The `enable` property controls if a given `IPivotDimension` or `IPivotValue` is active and takes part in the pivot view rendered by the pivot grid.
+`IPivotConfiguration` は、`IgxPivotGrid` コンポーネントの現在の状態を記述するインターフェースです。これを使用すると、開発者はデータのフィールドを `rows`、`columns`、`filters`、または `values` として宣言できます。この構成では、これらの各要素を個別に有効または無効にすることができます。ピボット グリッドの現在の状態には、有効な要素のみが含まれます。`IgxPivotDataSelector` コンポーネントは同じ構成を利用し、すべての有効と無効の要素のリストを表示します。それぞれについて、適切な状態のチェックボックスがあります。エンドユーザーは、これらのチェックボックスを使用してさまざまな要素を切り替えることにより、ピボット状態を簡単に調整できます。
+`enable` プロパティは、特定の `IPivotDimension` または `IPivotValue` がアクティブであり、ピボット グリッドによって描画されるピボット ビューに参加するかどうかを制御します。
 
-## Full configuration example
+## 完全な構成例
 
-Let's take a look at a basic pivot configuration:
+基本的なピボット構成を見てみましょう:
 
 ```typescript
       public pivotConfigHierarchy: IPivotConfiguration = {
@@ -188,8 +189,7 @@ Let's take a look at a basic pivot configuration:
     };
 ```
 
-This configuration defines 1 row, 1 column and 1 aggregation that sums the values of each dimension groups.
-The members match fields available in the provided data source:
+この構成では、各ディメンション グループの値を合計する 1 行、 1 列、および 1 つの集計が定義されます。メンバーは、提供されたデータ ソースで使用可能なフィールドと一致します。
 
 ```typescript
 public data = [
@@ -213,35 +213,35 @@ public data = [
 ```
 
 
-Resulting in the following view, which groups the Product Categories unique columns, Sellers Countries in unique rows and displays the related aggregations for the number of units in the related cells:
+次のビューは、Product (製品) カテゴリの一意の列をグループ化し、Sellers Countries (売り手の国) を一意の行にグループ化し、関連するセルのユニット数の関連する集計を表示します。
 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-basic" alt="Angular Pivot Grid Basic Example">
+           iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-basic" alt="Angular ピボット グリッドの基本例">
 </code-view>
 
 
-# Known Issues and Limitations
+# 既知の問題と制限
 
-|Limitation|Description|
+|制限|説明|
 |--- |--- |
-| Setting columns declaratively is not supported. | The Pivot grid generates its columns based on the `columns` configuration, so setting them declaratively, like in the base grid, is not supported. Such columns are disregarded. |
-| Setting duplicate `memberName` or `member` property values for dimensions/values. | `memberName`/`member` should be unique for each dimension/value. Duplication may result in loss of data from the final result. |
-| Row Selection is only supported in `single` mode. | Multiple selection is currently not supported. |
-| Merging the dimension members is case sensitive| The pivot grid creates groups and merges the same (case sensitive) values. But the dimensions provide `memberFunction` and this can be changed there, the result of the `memberFunction` are compared and used as display value.|
+| 列を宣言的に設定することはサポートされていません。 | ピボット グリッドは `columns` (列) の構成に基づいて列を生成するため、ベース グリッドのように宣言的に設定することはサポートされていません。このような列は無視されます。|
+| ディメンション / 値に重複する `memberName` または `member` プロパティ値を設定します。 | `memberName`/`member` は、ディメンション / 値ごとに一意である必要があります。複製すると、最終結果からデータが失われる可能性があります。 |
+| 行選択は、`single` モードでのみサポートされます。| 現在、複数選択はサポートされていません。|
+| ディメンション メンバーのマージでは大文字と小文字が区別されます。| ピボット グリッドはグループを作成し、同じ (大文字と小文字を区別する) 値をマージします。ただし、ディメンションは `memberFunction` を提供し、これはそこで変更できます。`memberFunction` の結果が比較され、表示値として使用されます。|
 
-## API References
+## API リファレンス
 * [IgxPivotGridComponent]({environment:angularApiUrl}/classes/igxpivotgridcomponent.html)
 * [IgxPivotDataSelector]({environment:angularApiUrl}/classes/igxpivotdataselector.html)
 
 
-## Additional Resources
+## その他のリソース
 <div class="divider--half"></div>
-* [Angular Pivot Grid Features](pivot-grid-features.md)
-* [Angular Pivot Grid Custom Aggregations](pivot-grid-custom.md)
+* [Angular ピボット グリッド機能](pivot-grid-features.md)
+* [Angular ピボット グリッド カスタム集計](pivot-grid-custom.md)
 
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.
+コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
