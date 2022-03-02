@@ -3,6 +3,7 @@ title: Angular ラジアル チャート | データ可視化 | インフラジ�
 _description: インフラジスティックスの Angular ラジアル チャート
 _keywords: Angular Charts, Radial Chart, Infragistics, Angular チャート, ラジアル チャート, インフラジスティックス
 mentionedTypes: ["XamDataChart", "RadialLineSeries"]
+namespace: Infragistics.Controls.Charts
 _language: ja
 ---
 
