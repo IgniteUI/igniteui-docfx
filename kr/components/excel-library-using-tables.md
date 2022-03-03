@@ -2,6 +2,7 @@
 title: Angular Excel Library Using Tables
 _description: The Ignite UI for Excel Library component Using Tables.
 _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Excel Library, Angular Excel Library Example, Angular Excel Library Component, Angular Excel Engine, Tables, Sorting, Filtering
+_language: kr
 ---
 
 # Angular Using Tables
