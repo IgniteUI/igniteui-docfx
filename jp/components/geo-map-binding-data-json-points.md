@@ -3,6 +3,7 @@ title: Angular マップ | データ可視化ツール | JSON ファイルのバ
 _description: インフラジスティックスの Angular マップを使用して、ビュー モデルの地理的位置や JSON ファイルからロードされた地理的位置を含むデータの表示方法について説明します。Ignite UI for Angular マップのサンプルを是非お試しください!
 _keywords: Angular map, JSON files, Ignite UI for Angular, Infragistics, data binding, Angular マップ, JSON ファイル, データ バインディング, インフラジスティックス
 mentionedTypes: ['XamGeographicMap']
+namespace: Infragistics.Controls.Maps
 _language: ja
 ---
 
