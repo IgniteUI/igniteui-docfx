@@ -134,7 +134,7 @@ export class AppModule {}
 <div class="divider--half"></div>
 
 * [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html)
-* [IgxComboComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-combo-theme)
+* [IgxComboComponent スタイル]({environment:sassApiUrl}/index.html#function-combo-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

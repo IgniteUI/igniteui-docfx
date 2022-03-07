@@ -11,13 +11,13 @@ _keywords: aria support, aria サポート, a11y, ignite ui for angular, infragi
 
 **CSS ベース**のプロジェクトの場合、`node_modules/igniteui-angular/styles/igniteui-angular-rtl.css` を `angular.json` スタイル コレクションに追加します。
 
-**Sass ベース**のプロジェクトの場合、ルート スタイルシートの `igx-core` ミックスインに `$direction` を渡します。
+**Sass ベース**のプロジェクトの場合、ルート スタイルシートの `core` ミックスインに `$direction` を渡します。
 
 例:
 
 ```scss
 // $direction defaults to ltr if it's omitted.
-@include igx-core($direction: rtl);
+@include core($direction: rtl);
 ```
 
 現在、以下コンポーネントは RTL 機能の一部をサポートしています。
@@ -55,10 +55,10 @@ _keywords: aria support, aria サポート, a11y, ignite ui for angular, infragi
 
 ### 手順 2 - それぞれの方向の[テーマ エンジン](../themes/index.md)に通知します。
 
-そのためには、[igx-core]({environment:sassApiUrl}/index.html#mixin-igx-core) ミックスインの `$direction` パラメーターを設定します。
+そのためには、[core]({environment:sassApiUrl}/index.html#mixin-core) ミックスインの `$direction` パラメーターを設定します。
 
 ```scss 
-@include igx-core($direction: rtl);
+@include core($direction: rtl);
 ```
 
 コンテンツを調整する手順はこれですべてになります。

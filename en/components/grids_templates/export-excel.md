@@ -252,7 +252,7 @@ The Excel Exporter service has a few more APIs to explore, which are listed belo
 Additional components that were used:
 
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-grid-theme)
 
 <div class="divider"></div>
 

@@ -101,7 +101,7 @@ To get started with styling components using the Ignite UI theming engine, creat
 Ignite UI for Angular's [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) function produces a color palette map including three sub-palettes for the `primary`, `secondary` and `grays` shades as well as five additional colors for `info`, `success`, `warn`, `error` and `surface`. For each color variant, our theming engine automatically generates text contrast colors at build-time, that are also included in the palette. Below, you can see the predefined light material palette:
 
 ```scss
-$igx-light-palette: igx-palette(
+$igx-light-palette: palette(
     $primary: #09f,
     $secondary: #e41c77
     $info: #1377d5,
@@ -152,10 +152,10 @@ $saturations: (50, 100, 200, 300, 400, 500, 600, 700, 800, 900, A100, A200, A400
     $result: ();
     @each $saturation in $saturations {
         $shade: map-merge($shade, (
-            $saturation: igx-color($palette, $color, $saturation)
+            $saturation: color($palette, $color, $saturation)
         ));
         $contrast: map-merge($contrast, (
-            $saturation: igx-color($palette, $color, #{$saturation}-contrast)
+            $saturation: color($palette, $color, #{$saturation}-contrast)
         ));
         $result: map-merge($shade, (contrast: $contrast));
     }
@@ -199,8 +199,8 @@ $custom-mat-light-theme: mat-light-theme(
 Following the previous approach, we are going to create material palettes for the dark mode. This time, we are also going to define a custom `igx-palette`: 
 
 ```scss
-// Custom igx-palette
-$custom-dark-palette: igx-palette(
+// Custompalette
+$custom-dark-palette: palette(
     $primary: #011627,
     $secondary: #72da67,
     $grays: #fff,
@@ -226,21 +226,21 @@ $custom-mat-dark-theme: mat-dark-theme(
 
 In order to switch between `light` and `dark` mode, we are adding a custom `dark` class which will be changed on button click. In our stylesheet file, we are going to include different color palettes scoped to each class.
 
-Ignite UI for Angular comes with predefined themes inspired by the [Material Design](https://material.io/design). To use them, first, you have to include our `igx-core` mixin and then our built-in theme mixin - [igx-theme]({environment:sassApiUrl}/index.html#mixin-igx-theme). We will also make use of our predefined material palettes - [$light-material-palette]({environment:sassApiUrl}/index.html#variable-light-material-palette) and [$dark-material-palette]({environment:sassApiUrl}/index.html#variable-dark-material-palette).
+Ignite UI for Angular comes with predefined themes inspired by the [Material Design](https://material.io/design). To use them, first, you have to include our `core` mixin and then our built-in theme mixin - [theme]({environment:sassApiUrl}/index.html#mixin-theme). We will also make use of our predefined material palettes - [$light-material-palette]({environment:sassApiUrl}/index.html#variable-light-material-palette) and [$dark-material-palette]({environment:sassApiUrl}/index.html#variable-dark-material-palette).
 
 For the Angular Material components, we need to include their `mat-core` mixin and then the `angular-material-theme` mixin with the aforementioned custom material themes. 
 
 ```scss
-// Make sure you always include the igx-core mixin first
-@include igx-core();
+// Make sure you always include thecore mixin first
+@include core();
 
 ::ng-deep {
     @include mat-core();
-    @include igx-theme($igx-light-palette, $legacy-support: true);
+    @include theme($igx-light-palette, $legacy-support: true);
     @include angular-material-theme($custom-mat-light-theme);
 
     .dark {
-        @include igx-dark-theme($custom-dark-palette, $legacy-support: true);
+        @include dark-theme($custom-dark-palette, $legacy-support: true);
         @include angular-material-theme($custom-mat-dark-theme);
     }
 }
@@ -257,16 +257,16 @@ Once we are done configuring color palettes and themes, we can make some additio
 :host {
     &.light {
         // The background color of the application in light mode
-        background: igx-color($igx-light-palette, 'surface');
+        background: color($igx-light-palette, 'surface');
 
         // The application logo fill color
         #Path1 {
-            fill: igx-color($igx-light-palette, 'secondary');
+            fill: color($igx-light-palette, 'secondary');
         }
 
         // The application logo stroke color
         #Path2 {
-            stroke: igx-color($igx-light-palette, 'secondary');
+            stroke: color($igx-light-palette, 'secondary');
             stroke-width: "0.8";
         }
     }
@@ -281,34 +281,34 @@ For our dark variant, we are going to apply the same CSS styles but using the `$
 :host {
     &.dark {
         // The background color of the application in dark mode
-        background: igx-color($custom-dark-palette, 'surface');
+        background: color($custom-dark-palette, 'surface');
 
         // The application logo fill color
         #Path1 {
-            fill: igx-color($custom-dark-palette, 'secondary');
+            fill: color($custom-dark-palette, 'secondary');
         }
 
         // The application logo stroke color
         #Path2 {
-            stroke: igx-color($custom-dark-palette, 'secondary');
+            stroke: color($custom-dark-palette, 'secondary');
             stroke-width: "0.8";
         }
 
         ::ng-deep {
             // The background of the selected step icon inside the material stepper
             .mat-step-header .mat-step-icon-selected {
-                background-color: igx-color($custom-dark-palette, 'secondary');
+                background-color: color($custom-dark-palette, 'secondary');
             }
 
             // The background of the material slider thumb and track
             .mat-accent .mat-slider-thumb,
             .mat-accent .mat-slider-track-fill {
-                background-color: igx-color($custom-dark-palette, 'primary', 100);
+                background-color: color($custom-dark-palette, 'primary', 100);
             }
 
             // The background of the material stepper
             .mat-stepper-horizontal {
-                background: igx-color($custom-dark-palette, 'surface');
+                background: color($custom-dark-palette, 'surface');
             }
         }
     }
@@ -317,12 +317,12 @@ For our dark variant, we are going to apply the same CSS styles but using the `$
 
 ### Generate class
 
-The Angular Material `toolbar` uses CSS classes for its background color. In our sample, we want that color to change according to the selected theme, hence we are going to use the `igx-color-classes` mixin. It will generate CSS class names for all colors for a given property and color palette, with optional prefix and suffix attached to the class name. For the demo, we will include the mixin twice - once for the light mode with the respective `$igx-light-palette` as a first value and second time for the dark mode with the `$custom-dark-palette`:
+The Angular Material `toolbar` uses CSS classes for its background color. In our sample, we want that color to change according to the selected theme, hence we are going to use the `color-classes` mixin. It will generate CSS class names for all colors for a given property and color palette, with optional prefix and suffix attached to the class name. For the demo, we will include the mixin twice - once for the light mode with the respective `$igx-light-palette` as a first value and second time for the dark mode with the `$custom-dark-palette`:
 
 ```scss
 :host {
     &.light {
-        @include igx-color-classes(
+        @include color-classes(
             $palette: $igx-light-palette,
             $prop: 'background',
             $prefix: 'bg'
@@ -330,7 +330,7 @@ The Angular Material `toolbar` uses CSS classes for its background color. In our
     }
 
     &.dark {
-        @include igx-color-classes(
+        @include color-classes(
             $palette: $custom-dark-palette,
             $prop: "background",
             $prefix: "bg"
@@ -343,11 +343,11 @@ Then, add a CSS class to your navbar component following the pattern "bg - color
 
 ### Angular Components Typography
 
-Ignite UI for Angular exposes four default type scales for each of its themes, which can be used inside the [`igx-typography`]({environment:sassApiUrl}/index.html#mixin-igx-typography) mixin to define the global typography styles of an application. In our example, we are going to apply the material predifined `typeface` and `type-scale` but you can create custom ones if you wish. 
+Ignite UI for Angular exposes four default type scales for each of its themes, which can be used inside the [`typography`]({environment:sassApiUrl}/index.html#mixin-typography) mixin to define the global typography styles of an application. In our example, we are going to apply the material predifined `typeface` and `type-scale` but you can create custom ones if you wish. 
 
 ```scss
 :host {
-    @include igx-typography($font-family: $material-typeface, $type-scale: $material-type-scale);
+    @include typography($font-family: $material-typeface, $type-scale: $material-type-scale);
 }
 ```
 
@@ -384,9 +384,9 @@ Check Angular Material [`Typography documentation`](https://material.angular.io/
 * [Light Material Palette]({environment:sassApiUrl}/index.html#variable-light-material-palette)
 * [Dark Material Palette]({environment:sassApiUrl}/index.html#variable-dark-material-palette)
 * [Light Material Theme]({environment:sassApiUrl}/index.html#mixin-igx-light-theme)
-* [Dark Material Theme]({environment:sassApiUrl}/index.html#mixin-igx-dark-theme)
+* [Dark Material Theme]({environment:sassApiUrl}/index.html#mixin-dark-theme)
 * [Palette Function]({environment:sassApiUrl}/index.html#function-igx-palette)
-* [Typography Mixin]({environment:sassApiUrl}/index.html#mixin-igx-typography)
+* [Typography Mixin]({environment:sassApiUrl}/index.html#mixin-typography)
 
 Related topics: 
 

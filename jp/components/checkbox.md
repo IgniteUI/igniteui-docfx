@@ -216,11 +216,11 @@ public toggleAll() {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-チェックボックスはカレンダーのテーマを使用するため、[`igx-checkbox-theme`]({environment:sassApiUrl}/index.html#function-igx-checkbox-theme) を拡張する新しいテーマを作成し、そのパラメーターを使用してチェックボックスの項目をスタイル設定します。
+チェックボックスはカレンダーのテーマを使用するため、[`checkbox-theme`]({environment:sassApiUrl}/index.html#function-checkbox-theme) を拡張する新しいテーマを作成し、そのパラメーターを使用してチェックボックスの項目をスタイル設定します。
 
 ```scss
 // in styles.scss
-$custom-checkbox-theme: igx-checkbox-theme(
+$custom-checkbox-theme: checkbox-theme(
     $border-radius: 10px,
     $label-color: #011627,
     $empty-color: #ECAA53,
@@ -238,7 +238,7 @@ $custom-checkbox-theme: igx-checkbox-theme(
 `$legacy-support` が `true` に設定されている場合、**コンポーネントのテーマ**を以下のように含めます。
 
 ```scss
- @include igx-checkbox($custom-checkbox-theme);
+ @include checkbox($custom-checkbox-theme);
 ```
 >[!NOTE]
 >コンポーネントが [`Emulated`](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
@@ -246,7 +246,7 @@ $custom-checkbox-theme: igx-checkbox-theme(
 ```scss
 :host {
      ::ng-deep {
-        @include igx-checkbox($custom-checkbox-theme);
+        @include checkbox($custom-checkbox-theme);
     }
 }
 ```
@@ -256,7 +256,7 @@ $custom-checkbox-theme: igx-checkbox-theme(
 `$legacy-support` が `false` (デフォルト) に設定されている場合、**css 変数** を以下のように含めます。
 
 ```scss
-@include igx-css-vars($custom-checkbox-theme);
+@include css-vars($custom-checkbox-theme);
 ```
 
 >[!NOTE]
@@ -264,7 +264,7 @@ $custom-checkbox-theme: igx-checkbox-theme(
 
 ```scss
 :host {
-    @include igx-css-vars($custom-checkbox-theme);
+    @include css-vars($custom-checkbox-theme);
 }
 ```
 ### Demo
@@ -282,7 +282,7 @@ $custom-checkbox-theme: igx-checkbox-theme(
 <div class="divider--half"></div>
 
 * [IgxCheckboxComponent]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html)
-* [IgxCheckboxComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-checkbox-theme)
+* [IgxCheckboxComponent スタイル]({environment:sassApiUrl}/index.html#function-checkbox-theme)
 * [LabelPosition]({environment:angularApiUrl}/enums/labelposition.html)
 
 ## テーマの依存関係

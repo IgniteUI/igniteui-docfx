@@ -330,7 +330,7 @@ If you show the overlay in an outlet, and if the outlet is a child of an element
 
 ## API References
 * [IgxOverlayService]({environment:angularApiUrl}/classes/igxoverlayservice.html)
-* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-overlay-theme)
 
 ## Additional Resources
 * [Position Strategies](overlay-position.md)

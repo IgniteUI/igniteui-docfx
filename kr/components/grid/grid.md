@@ -73,8 +73,8 @@ public grid: IgxGridComponent;
  ```scss
  // src/styles.scss
     @import '~igniteui-angular/lib/core/styles/themes/index';
-    @include igx-core();
-    @include igx-theme($default-palette);
+    @include core();
+    @include theme($default-palette);
 
     /* autoprefixer grid:on */
  ...
@@ -439,7 +439,7 @@ See the [Grid Sizing](sizing.md) topic.
 
 ## API 참조
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent 스타일]({environment:sassApiUrl}/#function-igx-grid-theme)
+* [IgxGridComponent 스타일]({environment:sassApiUrl}/#function-grid-theme)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html)
 * [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)

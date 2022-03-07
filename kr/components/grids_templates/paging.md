@@ -464,14 +464,14 @@ public changeTemplate() {
 ```css
 @import '~igniteui-angular/lib/core/styles/themes/index';
 
-@include igx-core();
-@include igx-theme($default-palette, $legacy-support: true);
+@include core();
+@include theme($default-palette, $legacy-support: true);
 
 
-$custom-paginator-theme: igx-grid-paginator-theme(
+$custom-paginator-theme:grid-paginator-theme(
     $text-color: #09f
 );
-$custom-button-theme: igx-button-theme(
+$custom-button-theme:button-theme(
     $icon-color: #09f,
     $icon-hover-color: #dadada,
     $icon-focus-color:rgb(0, 119, 255),
@@ -479,8 +479,8 @@ $custom-button-theme: igx-button-theme(
 );
 
 .customPager {
-    @include igx-grid-paginator($custom-paginator-theme);
-    @include igx-button($custom-button-theme);
+    @include grid-paginator($custom-paginator-theme);
+    @include button($custom-button-theme);
 }
 ```
 
@@ -494,8 +494,8 @@ Integration between Paging and Group By is described in the [Group By](groupby.h
 
 ### API 참조
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent 스타일]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
-* [IgxGridPaginator 스타일]({environment:sassApiUrl}/index.html#function-igx-paginator-theme)
+* [@@igxNameComponent 스타일]({environment:sassApiUrl}/index.html#function-grid-theme)
+* [IgxGridPaginator 스타일]({environment:sassApiUrl}/index.html#function-paginator-theme)
 
 ### 추가 리소스
 <div class="divider--half"></div>

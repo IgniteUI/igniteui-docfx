@@ -381,10 +381,10 @@ To get started with styling the calendar, we need to import the `index` file, wh
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`igx-calendar-theme`]({environment:sassApiUrl}/index.html#function-igx-calendar-theme) and accepts some of the default theme's parameters.
+Following the simplest approach, we create a new theme that extends the [`calendar-theme`]({environment:sassApiUrl}/index.html#function-calendar-theme) and accepts some of the default theme's parameters.
 
 ```scss
-$custom-calendar-theme: igx-calendar-theme(
+$custom-calendar-theme: calendar-theme(
   $header-background: #345779,
   $content-background: #fdfdfd,
   $header-text-color: #ffffff,
@@ -407,7 +407,7 @@ $custom-calendar-theme: igx-calendar-theme(
 The last step is to pass the custom calendar theme:
 
 ```scss
- @include igx-css-vars($custom-calendar-theme);
+ @include css-vars($custom-calendar-theme);
 ```
 
 ### Using Theme Overrides
@@ -419,7 +419,7 @@ If the component is using the [`Emulated`](themes/sass/component-themes.md#view-
  ```scss
 :host {
   ::ng-deep {
-    @include igx-calendar($custom-calendar-theme);
+    @include calendar($custom-calendar-theme);
   }
 }
 ```
@@ -435,7 +435,7 @@ If the component is using the [`Emulated`](themes/sass/component-themes.md#view-
 <div class="divider--half"></div>
 
 * [IgxCalendarComponent]({environment:angularApiUrl}/classes/igxcalendarcomponent.html)
-* [IgxCalendarComponent Styles]({environment:sassApiUrl}/index.html#function-igx-calendar-theme)
+* [IgxCalendarComponent Styles]({environment:sassApiUrl}/index.html#function-calendar-theme)
 * [DateRangeType]({environment:angularApiUrl}/enums/daterangetype.html)
 * [DateRangeDescriptor]({environment:angularApiUrl}/interfaces/daterangedescriptor.html)
 

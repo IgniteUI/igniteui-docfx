@@ -234,9 +234,9 @@ Using the [Ignite UI for Angular Theming](themes/index.md), we can greatly alter
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [igx-combo-theme]({environment:sassApiUrl}/index.html#function-igx-combo-theme) and accepts the `$search-separator-border-color` parameter:
+Following the simplest approach, we create a new theme that extends the [combo-theme]({environment:sassApiUrl}/index.html#function-combo-theme) and accepts the `$search-separator-border-color` parameter:
 ```scss
-$custom-combo-theme: igx-combo-theme(
+$custom-combo-theme: combo-theme(
     $search-separator-border-color: #1a5214
 );
 ```
@@ -244,7 +244,7 @@ $custom-combo-theme: igx-combo-theme(
 The [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html) uses the [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) internally as an item container. It also includes the [IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) and the [IgxCheckbox]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html) components. Creating new themes, that extend these components' themes, and scoping them under the respective classes will let you change the combobox styles:
 
 ```scss
-$custom-drop-down-theme: igx-drop-down-theme(
+$custom-drop-down-theme: drop-down-theme(
     $background-color: #d9f5d6,
     $header-text-color: #1a5214,
     $item-text-color: #1a5214,
@@ -262,7 +262,7 @@ $custom-drop-down-theme: igx-drop-down-theme(
     $selected-focus-item-text-color: #1a5214,
 );
 
-$custom-checkbox-theme: igx-checkbox-theme(
+$custom-checkbox-theme: checkbox-theme(
     $border-radius: 10px,
     $fill-color: #1a5214,
     $empty-color: #1a5214,
@@ -273,9 +273,9 @@ The last step is to include the component's theme.
 
 ```scss
 :host {
-    @include igx-css-vars($custom-combo-theme);
-    @include igx-css-vars($custom-drop-down-theme);
-    @include igx-css-vars($custom-checkbox-theme);
+    @include css-vars($custom-combo-theme);
+    @include css-vars($custom-drop-down-theme);
+    @include css-vars($custom-checkbox-theme);
 }
 ```
 
@@ -307,7 +307,7 @@ The last step is to include the component's theme.
 <div class="divider--half"></div>
 
 * [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html)
-* [IgxComboComponent Styles]({environment:sassApiUrl}/index.html#function-igx-combo-theme)
+* [IgxComboComponent Styles]({environment:sassApiUrl}/index.html#function-combo-theme)
 
 Additional components and/or directives with relative APIs that were used:
 
@@ -316,10 +316,10 @@ Additional components and/or directives with relative APIs that were used:
 * [IgxCheckboxComponent]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html)
 
 ## Theming Dependencies
-* [IgxDropDown Theme]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme)
-* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
-* [IgxCheckbox Theme]({environment:sassApiUrl}/index.html#function-igx-checkbox-theme)
-* [IgxOverlay Theme]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+* [IgxDropDown Theme]({environment:sassApiUrl}/index.html#function-drop-down-theme)
+* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxCheckbox Theme]({environment:sassApiUrl}/index.html#function-checkbox-theme)
+* [IgxOverlay Theme]({environment:sassApiUrl}/index.html#function-overlay-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>

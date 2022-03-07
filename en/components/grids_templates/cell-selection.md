@@ -244,17 +244,17 @@ To get started with styling the selection, we need to import the `index` file, w
 
 Once done, we can make use of the [`igx-contrast-color`]({environment:sassApiUrl}/index.html#function-igx-contrast-color) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions. With them, we define the colors we would like to use for our selection range:
 ```scss
-    $text-color: igx-contrast-color($default-palette, 'primary', 900);
-    $background-color: igx-color($default-palette, "primary", 900);
+    $text-color:contrast-color($default-palette, 'primary', 900);
+    $background-color: color($default-palette, "primary", 900);
     $border-yellow: #f2c43c;
 ```
 
 ### Create custom theme
 
-Next we create a new theme that extends the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) passing our `text-color`, `background-color` and `border-yellow` variables as `$cell-selected-text-color`, `$cell-selected-background` and `$cell-active-border-color`, respectively:
+Next we create a new theme that extends the [`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) passing our `text-color`, `background-color` and `border-yellow` variables as `$cell-selected-text-color`, `$cell-selected-background` and `$cell-active-border-color`, respectively:
 
 ```scss
-$custom-grid-theme: igx-grid-theme(
+$custom-grid-theme: grid-theme(
     $cell-selected-text-color: $text-color,
     $cell-active-border-color: $border-yellow,
     $cell-selected-background: $background-color
@@ -266,7 +266,7 @@ $custom-grid-theme: igx-grid-theme(
 Afterwards, all we need to do is include the mixin in our component's style (could also be in the app styles), so that our @@igSelector uses the newly created theme instead of the default one:
 
 ```scss
-    @include igx-grid($custom-grid-theme);
+    @include grid($custom-grid-theme);
 ```
 
  >[!NOTE]
@@ -276,7 +276,7 @@ Afterwards, all we need to do is include the mixin in our component's style (cou
  ```scss
     :host {
         ::ng-deep {
-            @include igx-grid($custom-grid-theme);
+            @include grid($custom-grid-theme);
         }
     }
 ```
@@ -324,7 +324,7 @@ With the custom theme applied, the selected grid cells are highlighted with our 
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 @@if (igxName !== 'IgxTreeGrid') {* [IgxGridRow API]({environment:angularApiUrl}/classes/igxgridrow.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRow API]({environment:angularApiUrl}/classes/igxtreegridrow.html)}
 * [IgxGridCell API]({environment:angularApiUrl}/classes/igxgridcell.html)
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-grid-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>

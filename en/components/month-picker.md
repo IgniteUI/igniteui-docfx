@@ -155,10 +155,10 @@ To get started with styling the month picker, we need to import the `index` file
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
-The month picker uses the calendar's theme, so we have to create a new theme that extends the [`igx-calendar-theme`]({environment:sassApiUrl}/index.html#function-igx-calendar-theme) and use some of its parameters to style the month picker's items:
+The month picker uses the calendar's theme, so we have to create a new theme that extends the [`calendar-theme`]({environment:sassApiUrl}/index.html#function-calendar-theme) and use some of its parameters to style the month picker's items:
 
 ```scss
-$my-calendar-theme: igx-calendar-theme(
+$my-calendar-theme: calendar-theme(
   $border-radius: 15px,
   $content-background: #011627,
   $picker-background-color: #011627,
@@ -182,7 +182,7 @@ The next step is to **include** the component theme in our application.
 If `$legacy-support` is set to `true`, include the **component theme** like that:
 
 ```scss
- @include igx-calendar($my-calendar-theme);
+ @include calendar($my-calendar-theme);
 ```
 >[!NOTE]
 >If the component is using an [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`
@@ -190,7 +190,7 @@ If `$legacy-support` is set to `true`, include the **component theme** like that
 ```scss
 :host {
      ::ng-deep {
-        @include igx-calendar($my-calendar-theme);
+        @include calendar($my-calendar-theme);
     }
 }
 ```
@@ -200,7 +200,7 @@ If `$legacy-support` is set to `true`, include the **component theme** like that
 If `$legacy-support` is set to `false`(default), include the component **css variables** like that:
 
 ```scss
-@include igx-css-vars($my-calendar-theme);
+@include css-vars($my-calendar-theme);
 ```
 
 >[!NOTE]
@@ -208,7 +208,7 @@ If `$legacy-support` is set to `false`(default), include the component **css var
 
 ```scss
 :host {
-    @include igx-css-vars($my-calendar-theme);
+    @include css-vars($my-calendar-theme);
 }
 ```
 
@@ -228,15 +228,15 @@ After everything's done, your component should look like this:
 
 * [IgxMonthPickerComponent]({environment:angularApiUrl}/classes/igxmonthpickercomponent.html)
 * [IgxCalendarComponent]({environment:angularApiUrl}/classes/igxcalendarcomponent.html)
-* [IgxCalendarComponent Styles]({environment:sassApiUrl}/index.html#function-igx-calendar-theme)
+* [IgxCalendarComponent Styles]({environment:sassApiUrl}/index.html#function-calendar-theme)
 
 <div class="divider--half"></div>
 
 ## Theming Dependencies
 <div class="divider--half"></div>
 
-* [IgxCalendar Theme]({environment:sassApiUrl}/index.html#function-igx-calendar-theme)
-* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxCalendar Theme]({environment:sassApiUrl}/index.html#function-calendar-theme)
+* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-icon-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>

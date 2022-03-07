@@ -209,10 +209,10 @@ params: {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-[`igx-dialog-theme`]({environment:sassApiUrl}/index.html#function-igx-dialog-theme) を拡張する新しいテーマを作成し、ダイアログのスタイルを設定できるさまざまなパラメーターを受け取ります。
+[`dialog-theme`]({environment:sassApiUrl}/index.html#function-dialog-theme) を拡張する新しいテーマを作成し、ダイアログのスタイルを設定できるさまざまなパラメーターを受け取ります。
 
 ```scss
-$my-dialog-theme: igx-dialog-theme(
+$my-dialog-theme: dialog-theme(
     $background: #011627,
     $title-color: #ECAA53,
     $message-color: #FEFEFE,
@@ -245,7 +245,7 @@ $my-dialog-theme: igx-dialog-theme(
 `$legacy-support` が `true` に設定されている場合、**テーマ**を以下のように含めます。
 
 ```scss
- @include igx-dialog($my-dialog-theme);
+ @include dialog($my-dialog-theme);
 ```
 >[!NOTE]
 >コンポーネントが [`Emulated`](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`解除する`必要があります。
@@ -253,7 +253,7 @@ $my-dialog-theme: igx-dialog-theme(
 ```scss
 :host {
      ::ng-deep {
-        @include igx-dialog($my-dialog-theme);
+        @include dialog($my-dialog-theme);
     }
 }
 ```
@@ -263,7 +263,7 @@ $my-dialog-theme: igx-dialog-theme(
 `$legacy-support` が `false` (デフォルト) に設定されている場合、**css 変数** を以下のように含めます。
 
 ```scss
-@include igx-css-vars($my-dialog-theme);
+@include css-vars($my-dialog-theme);
 ```
 
 >[!NOTE]
@@ -271,7 +271,7 @@ $my-dialog-theme: igx-dialog-theme(
 
 ```scss
 :host {
-    @include igx-css-vars($my-dialog-theme);
+    @include css-vars($my-dialog-theme);
 }
 ```
 
@@ -288,15 +288,15 @@ $my-dialog-theme: igx-dialog-theme(
 <div class="divider--half"></div>
 
 * [IgxDialogComponent]({environment:angularApiUrl}/classes/igxdialogcomponent.html)
-* [IgxDialogComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-dialog-theme)
+* [IgxDialogComponent スタイル]({environment:sassApiUrl}/index.html#function-dialog-theme)
 * [IgxOverlay]({environment:angularApiUrl}/interfaces/overlaysettings.html)
-* [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+* [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-overlay-theme)
 
 ## テーマの依存関係
 
-* [IgxButton テーマ]({environment:sassApiUrl}/index.html#function-igx-button-theme)
-* [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
-* [IgxOverlay テーマ]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+* [IgxButton テーマ]({environment:sassApiUrl}/index.html#function-button-theme)
+* [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-ripple-theme)
+* [IgxOverlay テーマ]({environment:sassApiUrl}/index.html#function-overlay-theme)
 
 ## その他のリソース
 

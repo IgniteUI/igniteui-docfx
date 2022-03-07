@@ -928,7 +928,7 @@ As you can see in the **paginate** method, custom pagination logic is performed,
 
 * [IgxPaginatorComponent API]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html)
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-grid-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>

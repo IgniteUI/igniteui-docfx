@@ -239,10 +239,10 @@ To get started with styling the tooltip, we need to import the `index` file, whe
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`igx-tooltip-theme`]({environment:sassApiUrl}/index.html#function-igx-tooltip-theme) and accepts the `$text-color`, `$background` and the `$border-radius` parameters.
+Following the simplest approach, we create a new theme that extends the [`tooltip-theme`]({environment:sassApiUrl}/index.html#function-tooltip-theme) and accepts the `$text-color`, `$background` and the `$border-radius` parameters.
 
 ```scss
-$dark-tooltip: igx-tooltip-theme(
+$dark-tooltip: tooltip-theme(
     $text-color: #ECAA53,
     $background: #011627,
     $border-radius: 6px
@@ -278,7 +278,7 @@ The last step is to **include** the component theme in our application.
 If `$legacy-support` is set to `true`, include the **component theme** like that:
 
 ```scss
- @include igx-tooltip($dark-tooltip);
+ @include tooltip($dark-tooltip);
 ```
 >[!NOTE]
 >If the component is using an [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`
@@ -286,7 +286,7 @@ If `$legacy-support` is set to `true`, include the **component theme** like that
 ```scss
 :host {
      ::ng-deep {
-        @include igx-tooltip($dark-tooltip);
+        @include tooltip($dark-tooltip);
     }
 }
 ```
@@ -296,7 +296,7 @@ If `$legacy-support` is set to `true`, include the **component theme** like that
 If `$legacy-support` is set to `false`(default), include the component **css variables** like that:
 
 ```scss
-@include igx-css-vars($dark-tooltip);
+@include css-vars($dark-tooltip);
 ```
 
 >[!NOTE]
@@ -304,7 +304,7 @@ If `$legacy-support` is set to `false`(default), include the component **css var
 
 ```scss
 :host {
-    @include igx-css-vars($dark-tooltip);
+    @include css-vars($dark-tooltip);
 }
 ```
 
@@ -345,9 +345,9 @@ Additional components and/or directives that were used:
 
 Styles:
 
-* [IgxTooltipDirective Styles]({environment:sassApiUrl}/index.html#function-igx-tooltip-theme)
-* [IgxAvatarComponent Styles]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
-* [IgxIconComponent Styles]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxTooltipDirective Styles]({environment:sassApiUrl}/index.html#function-tooltip-theme)
+* [IgxAvatarComponent Styles]({environment:sassApiUrl}/index.html#function-avatar-theme)
+* [IgxIconComponent Styles]({environment:sassApiUrl}/index.html#function-icon-theme)
 
 <div class="divider"></div>
 

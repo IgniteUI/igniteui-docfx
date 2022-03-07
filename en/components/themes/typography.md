@@ -36,7 +36,7 @@ Each theme defines its own type scale. This means each one of the themes we ship
 
 ## Usage
 > [!IMPORTANT]
-> By default we don't apply any typography styles. To use our typography in your application you have to set the `igx-typography` CSS class on a top-level element. All of its children will then use our typography styles.
+> By default we don't apply any typography styles. To use our typography in your application you have to set the `typography` CSS class on a top-level element. All of its children will then use our typography styles.
 
 We have selected [Titillium Web](https://fonts.google.com/selection?selection.family=Titillium+Web:300,400,600,700) to be the default font for the Material Theme in Ignite UI for Angular. To use it you have to host it yourself, or include it from Google Fonts:
 
@@ -47,7 +47,7 @@ We have selected [Titillium Web](https://fonts.google.com/selection?selection.fa
 />
 ```
 
-Enable the typography styles by setting `igx-typography` class on the body element.
+Enable the typography styles by setting `typography` class on the body element.
 
 ```html
 <!-- index.html -->
@@ -58,7 +58,7 @@ Enable the typography styles by setting `igx-typography` class on the body eleme
 
 ### Changing the Font Family
 
-To change the font family in all components, all you have to do is overwrite the `igx-typography` class with the your desired font-family value;
+To change the font family in all components, all you have to do is overwrite the `typography` class with the your desired font-family value;
 
 ```css
 /* styles.css */

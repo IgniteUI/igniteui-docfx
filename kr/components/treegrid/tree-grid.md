@@ -293,7 +293,7 @@ See the [Grid Sizing](sizing.md) topic.
 * [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
 * [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent 스타일]({environment:sassApiUrl}/#function-igx-grid-theme)
+* [IgxGridComponent 스타일]({environment:sassApiUrl}/#function-grid-theme)
 * [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
 * [IgxBaseTransactionService]({environment:angularApiUrl}/classes/igxbasetransactionservice.html)
 

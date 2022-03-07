@@ -204,7 +204,7 @@ export class ComboDemo {
 <div class="divider--half"></div>
 
 * [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html)
-* [IgxComboComponent Styles]({environment:sassApiUrl}/index.html#function-igx-combo-theme)
+* [IgxComboComponent Styles]({environment:sassApiUrl}/index.html#function-combo-theme)
 
 Additional components and/or directives with relative APIs that were used:
 * [IgxSwitchComponent]({environment:angularApiUrl}/classes/igxswitchcomponent.html)

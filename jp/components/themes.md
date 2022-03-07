@@ -47,7 +47,7 @@ Ignite UI for Angular はコンポーネントのデザインを**<a href="https
 $company-color: #2ab759; // Some green shade I like
 $secondary-color: #f96a88; // Watermelon pink
 
-$my-color-palette: igx-palette(
+$my-color-palette: palette(
   $primary: $company-color,
   $secondary: $secondary-color
 );
@@ -68,9 +68,9 @@ $my-color-palette: igx-palette(
 `igx-color` 関数を提供します。関数は、`palette`、`color`、および `variant` の 3 つの引数を受け取ります。
 
 ```scss
-$my-primary-600: igx-color($my-palette, "primary", 600);
-$my-primary-A700: igx-color($my-palette, "secondary", "A700");
-$my-warning-color: igx-color($my-palette, "warn");
+$my-primary-600: color($my-palette, "primary", 600);
+$my-primary-A700: color($my-palette, "secondary", "A700");
+$my-warning-color: color($my-palette, "warn");
 // sample usage
 
 .my-awesome-class {
@@ -90,8 +90,8 @@ $my-warning-color: igx-color($my-palette, "warn");
 サブパレット色の取得と同じように、サブパレットの色のコントラスト テキスト色を取得できます。
 
 ```scss
-$my-primary-800: igx-color($my-palette, "primary", 600);
-$my-primary-800-text: igx-contrast-color($my-palette, "primary", 600);
+$my-primary-800: color($my-palette, "primary", 600);
+$my-primary-800-text:contrast-color($my-palette, "primary", 600);
 // sample usage
 
 .my-awesome-article {
@@ -104,10 +104,10 @@ $my-primary-800-text: igx-contrast-color($my-palette, "primary", 600);
 
 アプリケーション プロジェクトに _"igniteui-angular.css"_ ファイルを追加した場合、削除してください。カスタム テーマを生成するために _"my-app-theme.scss"_ ファイルを使用します。
 
-このトピックの最初の例から始めます。ここでは、`igx-core` および `igx-theme` の 2 つのミックスインを追加します。`igx-core` は引数を受け取りません。ただし、`igx-theme` は `$palette` および `$exclude` の 2 つの引数を受け取ります。ここでは `$palette` 引数について説明します。
+このトピックの最初の例から始めます。ここでは、`core` および `theme` の 2 つのミックスインを追加します。`core` は引数を受け取りません。ただし、`theme` は `$palette` および `$exclude` の 2 つの引数を受け取ります。ここでは `$palette` 引数について説明します。
 
 > [!IMPORTANT]
-> `igx-core` を `igx-theme` の前に含める必要があります。`igx-core` ミックスインは `igx-theme` の基本定義を提供します。
+> `core` を `theme` の前に含める必要があります。`core` ミックスインは `theme` の基本定義を提供します。
 
 ```scss
 // 最初に IgniteUI テーマ ライブラリをインポートします
@@ -119,15 +119,15 @@ $my-primary-800-text: igx-contrast-color($my-palette, "primary", 600);
 $company-color: #2ab759; // Some green shade I like
 $secondary-color: #f96a88; // Watermelon pink
 
-$my-color-palette: igx-palette(
+$my-color-palette: palette(
   $primary: $company-color,
   $secondary: $secondary-color
 );
 
-// 重要: 必ず最初に igx-core を含めてください。
-@include igx-core();
-// 生成したカラー パレットを igx-theme ミックスインに渡します
-@include igx-theme($my-color-palette);
+// 重要: 必ず最初に core を含めてください。
+@include core();
+// 生成したカラー パレットを theme ミックスインに渡します
+@include theme($my-color-palette);
 ```
 
 これで完了です。アプリケーションは新しく生成されたパレットからの色を使用します。
@@ -138,10 +138,10 @@ $my-color-palette: igx-palette(
 
 今回のリリースで、カスタム タイポグラフィの定義はアプリケーションのフォント ファミリの更新に限られています。機能は今後追加される予定ですが、これはアプリケーションでタイポグラフィをカスタマイズする堅牢性を提供することが目的です。
 
-タイポグラフィをカスタマイズするには、`igx-typography` ミックスインを使用します。単一の `config` 引数を取得します。
+タイポグラフィをカスタマイズするには、`typography` ミックスインを使用します。単一の `config` 引数を取得します。
 
 > [!IMPORTANT]
-> `igx-core` の後に `igx-typography` を含める必要があります。今後のリリースで条件が変わることがあります。
+> `core` の後に `typography` を含める必要があります。今後のリリースで条件が変わることがあります。
 
 ```scss
 // 最初に IgniteUI テーマ ライブラリをインポートします
@@ -150,9 +150,9 @@ $my-color-palette: igx-palette(
 // 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 
-// 重要: 必ず最初に igx-core を含めてください。
-@include igx-core();
-// igx-theme の前にタイポグラフィを含めます
-@include igx-typography($config: (font-family: "Comic Sans MS"));
-@include igx-theme($default-palette);
+// 重要: 必ず最初に core を含めてください。
+@include core();
+//theme の前にタイポグラフィを含めます
+@include typography($config: (font-family: "Comic Sans MS"));
+@include theme($default-palette);
 ```

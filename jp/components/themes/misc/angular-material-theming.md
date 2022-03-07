@@ -100,7 +100,7 @@ Ignite UI テーマ エンジンを使用してコンポーネントのスタイ
 Ignite UI for Angular の [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) 関数は、`primary`、`secondary`、`grays` 影の 3 つのサブパレットと、`info`、`success`、`warn`、`error` および `surface` の 5 つの追加カラーを含むカラー パレット マップを生成します。テーマ エンジンは、カラー バリエーションごとに、ビルド時にテキストのコントラスト カラーを自動的に生成します。これもパレットに含まれています。以下に、事前定義されたライト マテリアル パレットを示します:
 
 ```scss
-$igx-light-palette: igx-palette(
+$igx-light-palette: palette(
     $primary: #09f,
     $secondary: #e41c77
     $info: #1377d5,
@@ -151,10 +151,10 @@ $saturations: (50, 100, 200, 300, 400, 500, 600, 700, 800, 900, A100, A200, A400
     $result: ();
     @each $saturation in $saturations {
         $shade: map-merge($shade, (
-            $saturation: igx-color($palette, $color, $saturation)
+            $saturation: color($palette, $color, $saturation)
         ));
         $contrast: map-merge($contrast, (
-            $saturation: igx-color($palette, $color, #{$saturation}-contrast)
+            $saturation: color($palette, $color, #{$saturation}-contrast)
         ));
         $result: map-merge($shade, (contrast: $contrast));
     }
@@ -198,8 +198,13 @@ $custom-mat-light-theme: mat-light-theme(
 前のアプローチに従って、ダーク モードのマテリアル パレットを作成します。今回は、カスタムの `igx-palette` も定義します。
 
 ```scss
-// Custom igx-palette
-$custom-dark-palette: igx-palette(
+<<<<<<< HEAD
+// Custompalette
+$custom-dark-palette: palette(
+=======
+// Custom palette
+$custom-dark-palette:palette(
+>>>>>>> 5bf5d3a313a94d7c53f89e96f276d9ce21c18c37
     $primary: #011627,
     $secondary: #72da67,
     $grays: #fff,
@@ -225,21 +230,21 @@ $custom-mat-dark-theme: mat-dark-theme(
 
 `light` モードと `dark` モードを切り替えるために、ボタン クリックで変更されるカスタム `dark` クラスを追加します。スタイルシート ファイルに、各クラスにスコープされた異なるカラー パレットを含めます。
 
-Ignite UI for Angular には、[マテリアル デザイン](https://material.io/design)に基づいて事前定義されたテーマが付属しています。それらを使用するには、最初に `igx-core` ミックスインを含め、次に組み込みのテーマ ミックスイン - [igx-theme]({environment:sassApiUrl}/index.html#mixin-igx-theme) を含める必要があります。また、事前定義されたマテリアル パレット - [$light-material-palette]({environment:sassApiUrl}/index.html#variable-light-material-palette) および [$dark-material-palette]({environment:sassApiUrl}/index.html#variable-dark-material-palette) も使用します。 
+Ignite UI for Angular には、[マテリアル デザイン](https://material.io/design)に基づいて事前定義されたテーマが付属しています。それらを使用するには、最初に `core` ミックスインを含め、次に組み込みのテーマ ミックスイン - [theme]({environment:sassApiUrl}/index.html#mixin-theme) を含める必要があります。また、事前定義されたマテリアル パレット - [$light-material-palette]({environment:sassApiUrl}/index.html#variable-light-material-palette) および [$dark-material-palette]({environment:sassApiUrl}/index.html#variable-dark-material-palette) も使用します。 
 
 Angular Material コンポーネントの場合、前述のカスタム マテリアル テーマに `mat-core` ミックスインを含めてから、`angular-material-theme` ミックスインを含める必要があります。 
 
 ```scss
-// Make sure you always include the igx-core mixin first
-@include igx-core();
+// Make sure you always include the core mixin first
+@include core();
 
 ::ng-deep {
     @include mat-core();
-    @include igx-theme($igx-light-palette, $legacy-support: true);
+    @include theme($igx-light-palette, $legacy-support: true);
     @include angular-material-theme($custom-mat-light-theme);
 
     .dark {
-        @include igx-dark-theme($custom-dark-palette, $legacy-support: true);
+        @include dark-theme($custom-dark-palette, $legacy-support: true);
         @include angular-material-theme($custom-mat-dark-theme);
     }
 }
@@ -256,16 +261,16 @@ Angular Material コンポーネントの場合、前述のカスタム マテ�
 :host {
     &.light {
         // The background color of the application in light mode
-        background: igx-color($igx-light-palette, 'surface');
+        background: color($igx-light-palette, 'surface');
 
         // The application logo fill color
         #Path1 {
-            fill: igx-color($igx-light-palette, 'secondary');
+            fill: color($igx-light-palette, 'secondary');
         }
 
         // The application logo stroke color
         #Path2 {
-            stroke: igx-color($igx-light-palette, 'secondary');
+            stroke: color($igx-light-palette, 'secondary');
             stroke-width: "0.8";
         }
     }
@@ -280,34 +285,34 @@ Angular Material コンポーネントの場合、前述のカスタム マテ�
 :host {
     &.dark {
         // The background color of the application in dark mode
-        background: igx-color($custom-dark-palette, 'surface');
+        background: color($custom-dark-palette, 'surface');
 
         // The application logo fill color
         #Path1 {
-            fill: igx-color($custom-dark-palette, 'secondary');
+            fill: color($custom-dark-palette, 'secondary');
         }
 
         // The application logo stroke color
         #Path2 {
-            stroke: igx-color($custom-dark-palette, 'secondary');
+            stroke: color($custom-dark-palette, 'secondary');
             stroke-width: "0.8";
         }
 
         ::ng-deep {
             // The background of the selected step icon inside the material stepper
             .mat-step-header .mat-step-icon-selected {
-                background-color: igx-color($custom-dark-palette, 'secondary');
+                background-color: color($custom-dark-palette, 'secondary');
             }
 
             // The background of the material slider thumb and track
             .mat-accent .mat-slider-thumb,
             .mat-accent .mat-slider-track-fill {
-                background-color: igx-color($custom-dark-palette, 'primary', 100);
+                background-color: color($custom-dark-palette, 'primary', 100);
             }
 
             // The background of the material stepper
             .mat-stepper-horizontal {
-                background: igx-color($custom-dark-palette, 'surface');
+                background: color($custom-dark-palette, 'surface');
             }
         }
     }
@@ -316,12 +321,12 @@ Angular Material コンポーネントの場合、前述のカスタム マテ�
 
 ### クラスの生成
 
-Angular Material `toolbar` は背景色に CSS クラスを使用します。サンプルでは、選択したテーマに応じてカラーを変更するため、`igx-color-classes` ミックスインを使用します。指定したプロパティおよびカラー パレットのすべてのカラーの CSS クラス名を生成し、オプションでプレフィックスとサフィックスをクラス名に添付します。デモでは、ミックスインを 2 回使用します。1 回目はそれぞれの `$igx-light-palette` を最初の値として使用する light モード、2 回目は `$custom-dark-palette` を使用する dark モードです。
+Angular Material `toolbar` は背景色に CSS クラスを使用します。サンプルでは、選択したテーマに応じてカラーを変更するため、`color-classes` ミックスインを使用します。指定したプロパティおよびカラー パレットのすべてのカラーの CSS クラス名を生成し、オプションでプレフィックスとサフィックスをクラス名に添付します。デモでは、ミックスインを 2 回使用します。1 回目はそれぞれの `$igx-light-palette` を最初の値として使用する light モード、2 回目は `$custom-dark-palette` を使用する dark モードです。
 
 ```scss
 :host {
     &.light {
-        @include igx-color-classes(
+        @include color-classes(
             $palette: $igx-light-palette,
             $prop: 'background',
             $prefix: 'bg'
@@ -329,7 +334,7 @@ Angular Material `toolbar` は背景色に CSS クラスを使用します。サ
     }
 
     &.dark {
-        @include igx-color-classes(
+        @include color-classes(
             $palette: $custom-dark-palette,
             $prop: "background",
             $prefix: "bg"
@@ -342,11 +347,11 @@ Angular Material `toolbar` は背景色に CSS クラスを使用します。サ
 
 ### Angular コンポーネントのタイポグラフィ
 
-Ignite UI for Angular は、テーマごとに 4 つのデフォルト タイプ スケールを公開します。これは、[`igx-typography`]({environment:sassApiUrl}/index.html#mixin-igx-typography) ミックスイン内でアプリケーションのグローバル タイポグラフィ スタイルを定義するために使用できます。この例では、material で定義済みの `typeface` および `type-scale` を適用しますが、必要に応じてカスタムの書体を作成できます。 
+Ignite UI for Angular は、テーマごとに 4 つのデフォルト タイプ スケールを公開します。これは、[`typography`]({environment:sassApiUrl}/index.html#mixin-typography) ミックスイン内でアプリケーションのグローバル タイポグラフィ スタイルを定義するために使用できます。この例では、material で定義済みの `typeface` および `type-scale` を適用しますが、必要に応じてカスタムの書体を作成できます。 
 
 ```scss
 :host {
-    @include igx-typography($font-family: $material-typeface, $type-scale: $material-type-scale);
+    @include typography($font-family: $material-typeface, $type-scale: $material-type-scale);
 }
 ```
 
@@ -383,9 +388,9 @@ $custom-typography: mat-typography-config(
 * [Light Material パレット]({environment:sassApiUrl}/index.html#variable-light-material-palette)
 * [Dark Material パレット]({environment:sassApiUrl}/index.html#variable-dark-material-palette)
 * [Light Material テーマ]({environment:sassApiUrl}/index.html#mixin-igx-light-theme)
-* [Dark Material テーマ]({environment:sassApiUrl}/index.html#mixin-igx-dark-theme)
+* [Dark Material テーマ]({environment:sassApiUrl}/index.html#mixin-dark-theme)
 * [Palette Function]({environment:sassApiUrl}/index.html#function-igx-palette)
-* [Typography Mixin]({environment:sassApiUrl}/index.html#mixin-igx-typography)
+* [Typography Mixin]({environment:sassApiUrl}/index.html#mixin-typography)
 
 関連トピック: 
 

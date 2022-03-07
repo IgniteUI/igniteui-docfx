@@ -521,11 +521,11 @@ export class ContactListComponent {
 
 ```scss
 :host ::ng-deep {
-    $my-list-theme: igx-list-theme(
+    $my-list-theme: list-theme(
         $background: #0568ab
     );
 
-    @include igx-list($my-list-theme);
+    @include list($my-list-theme);
 }
 ```
 以下は上記コードの結果です。
@@ -541,28 +541,28 @@ export class ContactListComponent {
 > [!NOTE]
 > 注: コンポーネントの .scss ファイルにコンポーネントテーマを作成する場合、表示のカプセル化を渡すために `::ng-deep` を使用する必要があります。そうでない場合、新しいテーマが動作しません。詳細は、[コンポーネント テーマ](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/themes/sass/component-themes.html)トピックを参照してください。
 
-リスト コンポーネントに変更できるパラメーターの完全なリストについては、[IgxListComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-list-theme)を参照してください。
+リスト コンポーネントに変更できるパラメーターの完全なリストについては、[IgxListComponent スタイル]({environment:sassApiUrl}/index.html#function-list-theme)を参照してください。
 
 ## API リファレンス
 
 この記事では Angular List コンポーネントについて説明しました。アバターおよびアイコンの Ignite UI for Angular コンポーネントを使用して連絡先項目のリストを作成し、カスタム項目レイアウトを作成してスタイル設定、更にリスト フィルタリングを追加しました。以下は、List コンポーネントのその他の API です。
 
 * [IgxListComponent API]({environment:angularApiUrl}/classes/igxlistcomponent.html)
-* [IgxListComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-list-theme)
+* [IgxListComponent スタイル]({environment:sassApiUrl}/index.html#function-list-theme)
 * [IgxListItemComponent API]({environment:angularApiUrl}/classes/igxlistitemcomponent.html)
 
 使用したその他の Angular コンポーネント:
 
 * [IgxAvatarComponent API]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
-* [IgxAvatarComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
+* [IgxAvatarComponent スタイル]({environment:sassApiUrl}/index.html#function-avatar-theme)
 * [IgxIconComponent API]({environment:angularApiUrl}/classes/igxiconcomponent.html)
-* [IgxIconComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxIconComponent スタイル]({environment:sassApiUrl}/index.html#function-icon-theme)
 
 <div class="divider"></div>
 
 ## テーマの依存関係
-* [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
-* [IgxAvatar テーマ]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
+* [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-ripple-theme)
+* [IgxAvatar テーマ]({environment:sassApiUrl}/index.html#function-avatar-theme)
 
 ## その他のリソース
 

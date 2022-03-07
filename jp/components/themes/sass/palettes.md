@@ -17,7 +17,7 @@ Ignite UI for Angular のコンテキストでのパレットは [Sass Maps](htt
 ```scss
 // _variables.scss
 
-$melon-palette: igx-palette(
+$melon-palette: palette(
     $primary: #2ab759,
     $secondary: #f96a88,
 );
@@ -141,7 +141,7 @@ $handmade-palette: (
 <div class="divider"></div>
 
 ## デフォルトのパレット
-`igx-theme` ミックスインは、引数の 1 つとしてパレット (前のセクションを参照) を使用します。渡されたパレットはグローバルな `$default-palette` 変数に割り当てられます。この変数に保存されたパレットは、パレットが必要であるがユーザーによって明示的に提供されない場合、Sass ライブラリ全体で代替パレットとして使用されます。
+`theme` ミックスインは、引数の 1 つとしてパレット (前のセクションを参照) を使用します。渡されたパレットはグローバルな `$default-palette` 変数に割り当てられます。この変数に保存されたパレットは、パレットが必要であるがユーザーによって明示的に提供されない場合、Sass ライブラリ全体で代替パレットとして使用されます。
 
 この知識を活用して、アプリケーション内の複数の Sass ドキュメントで同じパレットを再利用できます。
 
@@ -150,7 +150,7 @@ $handmade-palette: (
 ```scss
 // src/styles/_variables.scss
 
-$my-palette: igx-palette(
+$my-palette: palette(
   $primary: #2ab759,
   $secondary: #f96a88,
 );
@@ -163,7 +163,7 @@ $default-palette: $my-palette;
 // src/styles/styles.scss
 @use 'variables' as *;
 
-@include igx-theme($palette: $my-palette);
+@include theme($palette: $my-palette);
 ```
 
 コンポーネントの `.scss` ファイル:
@@ -171,7 +171,7 @@ $default-palette: $my-palette;
 @use '../styles/styles/variables' as *;
 
 :host {
-  background: igx-color($variant: 900);
+  background: color($variant: 900);
 }
 ```
 
@@ -189,7 +189,7 @@ $company-color: #2ab759; /* Some green shade I like */
 $secondary-color: #f96a88; /* Watermelon pink */
 $grayscale-base: #fff; /* Used to generate shades of gray */
 
-$my-color-palette: igx-palette(
+$my-color-palette: palette(
     $primary: $company-color,
     $secondary: $secondary-color,
     $grays: $grayscale-base
@@ -204,16 +204,16 @@ $my-color-palette: igx-palette(
 
 ```scss
 // Get the primary 500 color variant from $default-palette
-$my-primary-500: igx-color();
+$my-primary-500: color();
 
 // Get the primary 600 color variant from $default-palette
-$my-primary-600: igx-color($variant: 600);
+$my-primary-600: color($variant: 600);
 
 // Get the secondary A700 color variant from $my-palette
-$my-primary-A700: igx-color($my-palette, 'secondary', 'A700');
+$my-primary-A700: color($my-palette, 'secondary', 'A700');
 
 // Get the warn color from $my-palette
-$my-warning-color: igx-color($my-palette, 'warn');
+$my-warning-color: color($my-palette, 'warn');
 
 .my-awesome-class {
     background: $my-primary-600;
@@ -234,8 +234,8 @@ $my-warning-color: igx-color($my-palette, 'warn');
 カラー バリアントを取得する方法と同様に、パレットの各カラー バリアントのコントラスト テキスト カラーを取得する方法があります。
 
 ```scss
-$my-primary-800: igx-color($my-palette, 'primary', 600);
-$my-primary-800-text: igx-contrast-color($my-palette, 'primary', 600);
+$my-primary-800: color($my-palette, 'primary', 600);
+$my-primary-800-text:contrast-color($my-palette, 'primary', 600);
 
 // sample usage
 .my-awesome-article {
@@ -260,7 +260,7 @@ CSS クラスを使用して Web 要素 (テキストや背景など) にカラ�
 たとえば、要素に背景色を適用する CSS クラスを生成する場合、以下を実行できます:
 
 ```scss
-@include igx-color-classes(
+@include color-classes(
     $prop: 'background-color',
     $prefix: 'bg'
 );
@@ -275,26 +275,26 @@ CSS クラスを使用して Web 要素 (テキストや背景など) にカラ�
 
 ## CSS 変数
 
-ドキュメントの [CSS 変数](../palettes.md)セクションでカラー パレットについて読むと、すべてのパレット カラーが CSS 変数として含まれています。`igx-theme` ミックスインを使用してテーマを生成するたびに内部で行います。`igx-theme` は本体で `igx-palette-vars` ミックスインを呼び出します。パレットを取得し、パレット内のカラーを CSS 変数に変換します。 
+ドキュメントの [CSS 変数](../palettes.md)セクションでカラー パレットについて読むと、すべてのパレット カラーが CSS 変数として含まれています。`theme` ミックスインを使用してテーマを生成するたびに内部で行います。`theme` は本体で `palette-vars` ミックスインを呼び出します。パレットを取得し、パレット内のカラーを CSS 変数に変換します。 
 
 このパレットは、カスタム パレット カラーを CSS 変数として含める場合に使用します。
 
 以下はその例です。
 
 ```scss
-$my-palette: igx-palette(
+$my-palette: palette(
   $primary: #2ab759,
   $secondary: #f96a88,
 );
 
-@include igx-palette-vars($my-palette);
+@include palette-vars($my-palette);
 ```
 
 ## API リファレンス
 * [パレット]({environment:sassApiUrl}/index.html#function-igx-palette)
 * [パレット カラーの取得]({environment:sassApiUrl}/index.html#function-igx-color)
 * [コントラスト カラーの取得]({environment:sassApiUrl}/index.html#function-igx-contrast-color)
-* [カラー クラスの生成]({environment:sassApiUrl}/index.html#mixin-igx-color-classes)
+* [カラー クラスの生成]({environment:sassApiUrl}/index.html#mixin-color-classes)
 
 ## その他のリソース
 <div class="divider--half"></div>

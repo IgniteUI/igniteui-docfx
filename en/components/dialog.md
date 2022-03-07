@@ -209,10 +209,10 @@ To get started with styling the dialog window, we need to import the `index` fil
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`igx-dialog-theme`]({environment:sassApiUrl}/index.html#function-igx-dialog-theme) and accepts parameters that style the dialog.
+Following the simplest approach, we create a new theme that extends the [`dialog-theme`]({environment:sassApiUrl}/index.html#function-dialog-theme) and accepts parameters that style the dialog.
 
 ```scss
-$my-dialog-theme: igx-dialog-theme(
+$my-dialog-theme: dialog-theme(
     $background: #011627,
     $title-color: #ECAA53,
     $message-color: #FEFEFE,
@@ -245,7 +245,7 @@ The last step is to **include** the component theme in our application.
 If `$legacy-support` is set to `true`, include the **theme** like that:
 
 ```scss
- @include igx-dialog($my-dialog-theme);
+ @include dialog($my-dialog-theme);
 ```
 >[!NOTE]
 >If the component is using an [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`
@@ -253,7 +253,7 @@ If `$legacy-support` is set to `true`, include the **theme** like that:
 ```scss
 :host {
      ::ng-deep {
-        @include igx-dialog($my-dialog-theme);
+        @include dialog($my-dialog-theme);
     }
 }
 ```
@@ -263,7 +263,7 @@ If `$legacy-support` is set to `true`, include the **theme** like that:
 If `$legacy-support` is set to `false`(default), include the component **css variables** like that:
 
 ```scss
-@include igx-css-vars($my-dialog-theme);
+@include css-vars($my-dialog-theme);
 ```
 
 >[!NOTE]
@@ -271,7 +271,7 @@ If `$legacy-support` is set to `false`(default), include the component **css var
 
 ```scss
 :host {
-    @include igx-css-vars($my-dialog-theme);
+    @include css-vars($my-dialog-theme);
 }
 ```
 
@@ -288,15 +288,15 @@ If `$legacy-support` is set to `false`(default), include the component **css var
 <div class="divider--half"></div>
 
 * [IgxDialogComponent]({environment:angularApiUrl}/classes/igxdialogcomponent.html)
-* [IgxDialogComponent Styles]({environment:sassApiUrl}/index.html#function-igx-dialog-theme)
+* [IgxDialogComponent Styles]({environment:sassApiUrl}/index.html#function-dialog-theme)
 * [IgxOverlay]({environment:angularApiUrl}/interfaces/overlaysettings.html)
-* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-overlay-theme)
 
 ## Theming Dependencies
 
-* [IgxButton Theme]({environment:sassApiUrl}/index.html#function-igx-button-theme)
-* [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
-* [IgxOverlay Theme]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+* [IgxButton Theme]({environment:sassApiUrl}/index.html#function-button-theme)
+* [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-ripple-theme)
+* [IgxOverlay Theme]({environment:sassApiUrl}/index.html#function-overlay-theme)
 
 ## Additional Resources
 

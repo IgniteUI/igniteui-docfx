@@ -136,9 +136,9 @@ public grid: IgxGridComponent;
 
 // 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-@include igx-core();
+@include core();
 /* autoprefixer grid:on */
-@include igx-theme($default-palette);
+@include theme($default-palette);
  ```
 
 ## 編集可能な Angular グリッド
@@ -768,22 +768,22 @@ Grid のキーボード ナビゲーションは、さまざまなキーボー�
 
 ## API リファレンス
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent スタイル]({environment:sassApiUrl}/#function-igx-grid-theme)
+* [IgxGridComponent スタイル]({environment:sassApiUrl}/#function-grid-theme)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html)
 * [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
 
 ## テーマの依存関係
-* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
-* [IgxInputGroup テーマ]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
-* [IgxChip テーマ]({environment:sassApiUrl}/index.html#function-igx-chip-theme)
-* [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
-* [IgxButton テーマ]({environment:sassApiUrl}/index.html#function-igx-button-theme)
-* [IgxOverlay テーマ]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
-* [IgxDropDown テーマ]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme)
-* [IgxCalendar テーマ]({environment:sassApiUrl}/index.html#function-igx-calendar-theme)
-* [IgxSnackBar テーマ]({environment:sassApiUrl}/index.html#function-igx-snackbar-theme)
-* [IgxBadge テーマ]({environment:sassApiUrl}/index.html#function-igx-badge-theme)
+* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxInputGroup テーマ]({environment:sassApiUrl}/index.html#function-input-group-theme)
+* [IgxChip テーマ]({environment:sassApiUrl}/index.html#function-chip-theme)
+* [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-ripple-theme)
+* [IgxButton テーマ]({environment:sassApiUrl}/index.html#function-button-theme)
+* [IgxOverlay テーマ]({environment:sassApiUrl}/index.html#function-overlay-theme)
+* [IgxDropDown テーマ]({environment:sassApiUrl}/index.html#function-drop-down-theme)
+* [IgxCalendar テーマ]({environment:sassApiUrl}/index.html#function-calendar-theme)
+* [IgxSnackBar テーマ]({environment:sassApiUrl}/index.html#function-snackbar-theme)
+* [IgxBadge テーマ]({environment:sassApiUrl}/index.html#function-badge-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

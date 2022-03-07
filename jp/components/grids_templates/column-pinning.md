@@ -342,7 +342,7 @@ public toggleColumn(col: IgxColumnComponent) {
 @@if (igxName === 'IgxGrid') {
 ## スタイル設定   
 
-igxGridを使用すると、[Ignite UI for Angular テーマ ライブラリ](../themes/sass/component-themes.md) でスタイルを設定できます。[テーマ]({environment:sassApiUrl}/index.html#function-igx-grid-theme) は、グリッドのすべての機能をカスタマイズできるさまざまなプロパティを公開します。      
+igxGridを使用すると、[Ignite UI for Angular テーマ ライブラリ](../themes/sass/component-themes.md) でスタイルを設定できます。[テーマ]({environment:sassApiUrl}/index.html#function-grid-theme) は、グリッドのすべての機能をカスタマイズできるさまざまなプロパティを公開します。      
 
 以下の手順では、グリッドのピン固定スタイルをカスタマイズする手順を実行しています。
 
@@ -356,10 +356,10 @@ igxGridを使用すると、[Ignite UI for Angular テーマ ライブラリ](..
 ```
 
 ### カスタム テーマの定義
-次に、[`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) を拡張し、必要に応じて Group By をカスタマイズするために必要なパラメーターを受け入れる新しいテーマを作成します。   
+次に、[`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) を拡張し、必要に応じて Group By をカスタマイズするために必要なパラメーターを受け入れる新しいテーマを作成します。   
 
 ```scss
-$custom-theme: igx-grid-theme(
+$custom-theme: grid-theme(
     /* Pinning properties that affect styling */
     $pinned-border-width: 5px,
     $pinned-border-style: double,
@@ -377,7 +377,7 @@ $custom-theme: igx-grid-theme(
 $primary-color: #292826;
 $secondary-color: #ffcd0f;
 
-$custom-palette: igx-palette(
+$custom-palette: palette(
   $primary: $primary-color,
   $secondary: $secondary-color
 );
@@ -387,11 +387,11 @@ $custom-palette: igx-palette(
 
 
 ```scss
-$custom-theme: igx-grid-theme(
+$custom-theme: grid-theme(
     $pinned-border-width: 5px,
     $pinned-border-style: double,
-    $pinned-border-color: igx-color($custom-palette, "secondary", 500),
-    $cell-active-border-color: igx-color($custom-palette, "secondary", 500)
+    $pinned-border-color: color($custom-palette, "secondary", 500),
+    $cell-active-border-color: color($custom-palette, "secondary", 500)
 );
 ```   
 
@@ -404,8 +404,8 @@ $custom-theme: igx-grid-theme(
 $custom-grid-schema: extend($_light-grid,(
     pinned-border-width: 5px,
     pinned-border-style: double,
-    pinned-border-color: igx-color:("secondary", 500),
-    cell-active-border-color: igx-color:("secondary", 500)
+    pinned-border-color: color:("secondary", 500),
+    cell-active-border-color: color:("secondary", 500)
 ));
 ```   
 カスタム スキーマを適用するには、`light` グローバルまたは `dark` グローバルを拡張する必要があります。プロセス全体が実際にコンポーネントにカスタム スキーマを提供し、その後、それぞれのコンポーネントテーマに追加します。     
@@ -413,7 +413,7 @@ $custom-grid-schema: extend($_light-grid,(
 $my-custom-schema: extend($light-schema, ( 
     igx-grid: $custom-grid-schema
 ));
-$custom-theme: igx-grid-theme(
+$custom-theme: grid-theme(
     $palette: $custom-palette,
     $schema: $my-custom-schema
 );
@@ -422,7 +422,7 @@ $custom-theme: igx-grid-theme(
 ### カスタム テーマの適用
 テーマを適用する最も簡単な方法は、グローバル スタイル ファイルに `sass` `@include` ステートメントを使用することです。 
 ```scss
-@include igx-grid($custom-theme);
+@include grid($custom-theme);
 ```
 
 ### スコープ コンポーネント テーマ
@@ -438,7 +438,7 @@ $custom-theme: igx-grid-theme(
 ```scss
 :host {
     ::ng-deep {
-        @include igx-grid($custom-theme);
+        @include grid($custom-theme);
     }
 }
 ```

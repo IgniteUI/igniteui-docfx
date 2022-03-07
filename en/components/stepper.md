@@ -136,7 +136,7 @@ The sample below demonstrates how stepper [orientation]({environment:angularApiU
 - [**active**]({environment:angularApiUrl}/classes/igxstepcomponent.html#active) - Determines whether the step is the currently displayed. By design, if the user does not explicitly set some step’s active attribute to `true`, the initial active step would be the first non-disabled step.
 - [**disabled**]({environment:angularApiUrl}/classes/igxstepcomponent.html#disabled) - Determines whether the step is interactable. By default, the disabled attribute of a step is set to `false`.
 - [**optional**]({environment:angularApiUrl}/classes/igxstepcomponent.html#optional) - By default, the optional attribute of a step is set to `false`. If validity of a step in linear stepper is not required, then the optional attribute can be enabled in order to be able to move forward independently from the step validity.
-- [**completed**]({environment:angularApiUrl}/classes/igxstepcomponent.html#completed) - By default, the completed attribute of a step returns `false`. The user, however, can override this default completed behavior by setting the completed attribute as needed. When step is marked as completed not only that the style of the step header is changed by default, but also the style of the progress line between the completed step and the next one. Both styles could be modified using the exposed [CSS variables]({environment:sassApiUrl}/index.html#function-igx-stepper-theme).
+- [**completed**]({environment:angularApiUrl}/classes/igxstepcomponent.html#completed) - By default, the completed attribute of a step returns `false`. The user, however, can override this default completed behavior by setting the completed attribute as needed. When step is marked as completed not only that the style of the step header is changed by default, but also the style of the progress line between the completed step and the next one. Both styles could be modified using the exposed [CSS variables]({environment:sassApiUrl}/index.html#function-stepper-theme).
 
 The [IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponent.html) gives you the opportunity to set validation logic for each step through the two-way bindable [**isValid**]({environment:angularApiUrl}/classes/igxstepcomponent.html#isValid) property. Based on its value it is decided whether the user will have the ability to move forward in linear stepper mode.
 By default, the [isValid]({environment:angularApiUrl}/classes/igxstepcomponent.html#isValid) property of a step is set to `true`.
@@ -279,9 +279,9 @@ First, in order to use the functions exposed by the theme engine, we need to imp
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Following the simplest approach, we create a new theme that extends the [igx-stepper-theme]({environment:sassApiUrl}/index.html#function-igx-stepper-theme) and pass the parameters, which we would like to change: 
+Following the simplest approach, we create a new theme that extends the [stepper-theme]({environment:sassApiUrl}/index.html#function-stepper-theme) and pass the parameters, which we would like to change: 
 ```scss
-$custom-stepper-theme: igx-stepper-theme(
+$custom-stepper-theme: stepper-theme(
     $current-title-color: #351e65,
     $current-subtitle-color: #5f4691,
     $step-separator-style: "solid"
@@ -294,7 +294,7 @@ $custom-stepper-theme: igx-stepper-theme(
 The last step is to include the component's theme.
 ```scss
 :host {
-    @include igx-css-vars($custom-stepper-theme);
+    @include css-vars($custom-stepper-theme);
 }
 ```
 
@@ -306,7 +306,7 @@ If the component is using the [Emulated](themes/sass/component-themes.md#view-en
 ```scss
 :host {
     ::ng-deep {
-        @include igx-stepper($custom-stepper-theme);    
+        @include stepper($custom-stepper-theme);    
     }
 }
 ```

@@ -392,7 +392,7 @@ This would allow reordering the rows and moving them between the pinned and unpi
 
 ## Styling
 
-The @@igxName allows styling through the [Ignite UI for Angular Theme Library](../themes/sass/component-themes.md). The @@igComponent's [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) exposes a wide variety of properties, which allow the customization of all the features of the @@igComponent.
+The @@igxName allows styling through the [Ignite UI for Angular Theme Library](../themes/sass/component-themes.md). The @@igComponent's [theme]({environment:sassApiUrl}/index.html#function-grid-theme) exposes a wide variety of properties, which allow the customization of all the features of the @@igComponent.
 
 Below, we are going through the steps of customizing the @@igComponent's row pinning styling.
 
@@ -409,10 +409,10 @@ To begin the customization of the row pinning feature, you need to import the `i
 
 ### Defining a Theme
 
-Next, create a new theme, that extends the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) and accepts the parameters, required to customize the row pinning feature as desired.
+Next, create a new theme, that extends the [`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) and accepts the parameters, required to customize the row pinning feature as desired.
 
 ```scss
-$custom-grid-theme: igx-grid-theme(
+$custom-grid-theme: grid-theme(
     /* Pinning properties that affect styling */
     $pinned-border-width: 5px,
     $pinned-border-style: double,
@@ -427,7 +427,7 @@ $custom-grid-theme: igx-grid-theme(
 The last step is to pass the custom grid theme:
 
 ```scss
-@include igx-css-vars($custom-grid-theme);
+@include css-vars($custom-grid-theme);
 ```
 
 ### Using mixins
@@ -440,7 +440,7 @@ If the component is using an [`Emulated`](../themes/sass/component-themes.md#vie
 :host {
     ::ng-deep {
         // Pass the custom grid theme to the `igx-grid` mixin
-        @include igx-grid($custom-grid-theme);
+        @include grid($custom-grid-theme);
     }
 }
 ```
@@ -481,7 +481,7 @@ If the component is using an [`Emulated`](../themes/sass/component-themes.md#vie
 * [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)
 * [IgxHierarchicalGridRow]({environment:angularApiUrl}/classes/igxhierarchicalgridrow.html)
 * [RowType]({environment:angularApiUrl}/interfaces/RowType.html)
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-grid-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>

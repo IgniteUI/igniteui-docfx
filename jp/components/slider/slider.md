@@ -432,7 +432,7 @@ public type = SliderType.RANGE;
 // In app-slider-styling.component.scss
 
 // Create slider theme.
-$custom-slider-theme: igx-slider-theme(
+$custom-slider-theme: slider-theme(
     $track-color: #ff7400,
     $track-hover-color: #ff7400,
 
@@ -450,14 +450,14 @@ $custom-slider-theme: igx-slider-theme(
 ```
 
 #### コンポーネント テーマの適用
-コンポーネント テーマを適用するには、`igx-css-vars` ミックスインをインクルードし、`$custom-slider-theme` マップを渡します。
+コンポーネント テーマを適用するには、`css-vars` ミックスインをインクルードし、`$custom-slider-theme` マップを渡します。
 ```scss
 // In app-slider-styling.component.scss
 
-// Pass our custom-slider-theme to `igx-css-vars` mixin.
+// Pass our custom-slider-theme to `css-vars` mixin.
 // The `:host` here makes sure that all the theming will affect only this slider component.
 :host {
-  @include igx-css-vars($custom-slider-theme);
+  @include css-vars($custom-slider-theme);
 }
 ```
 
@@ -465,7 +465,7 @@ $custom-slider-theme: igx-slider-theme(
 <div class="divider--half"></div>
 
 * [IgxSliderComponent]({environment:angularApiUrl}/classes/igxslidercomponent.html)
-* [IgxSliderComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-slider-theme)
+* [IgxSliderComponent スタイル]({environment:sassApiUrl}/index.html#function-slider-theme)
 * [SliderType]({environment:angularApiUrl}/enums/slidertype.html)
 * [IRangeSliderValue]({environment:angularApiUrl}/interfaces/irangeslidervalue.html)
 * [TicksOrientation]({environment:angularApiUrl}/enums/ticksorientation.html)
