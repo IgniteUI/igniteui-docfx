@@ -123,10 +123,10 @@ Ignite UI for Angular's [`igx-palette`]({environment:sassApiUrl}/index.html#func
 
 ```scss
 $bootstrap-palette: palette(
-    $primary: #007bff,
+    $primary: #0d6efd,
     $secondary: #6c757d,
-    $info: #17a2b8,
-    $success: #28a745,
+    $info: #0dcaf0,
+    $success: #198754,
     $warn: #ffc107,
     $error: #dc3545,
     $surface: #f8f9fa

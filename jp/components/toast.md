@@ -117,23 +117,22 @@ public showMessage() {
 </div>
 
 ### 配置
-[`position`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#position) を使用すると、Toast の表示位置を構成します。デフォルトで、ページの下に表示されます。以下のサンプルで、通知が上位置に表示されます。
+[`positionSettings`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#positionSettings) を使用すると、Toast の表示位置を構成します。デフォルトで、ページの下に表示されます。以下のサンプルで、通知が上位置に表示されます。
 
 ```html
 <!--sample.component.html-->
 <div>
     <button igxButton="raised" (click)="open(toast)">Show notification on top</button>
-    <igx-toast #toast [position]="toastPosition">Notification displayed</igx-toast>
+    <igx-toast #toast>Notification displayed</igx-toast>
 </div>
 ```
 
 ```typescript
 // sample.component.ts
-import { IgxToastPosition } from 'igniteui-angular';
+import { VerticalAlignment } from 'igniteui-angular';
 ...
-public toastPosition: IgxToastPosition;
 public open(toast) {
-    this.toastPosition = IgxToastPosition.Top;
+    toast.positionSettings.verticalDirection = VerticalAlignment.Top;
     toast.open();
 }
 ...
