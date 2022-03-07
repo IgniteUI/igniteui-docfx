@@ -405,6 +405,17 @@ Excel スタイル フィルタリング ダイアログ内のリスト項目は
 >[!NOTE]
 >データの同じフィールドに複数の列がバインドされていて、1 つの列にフォーマッタがある場合、書式設定された値のフィルタリング ストラテジは正しく動作しません。
 
+@@if (igxName === 'IgxTreeGrid') {
+## Tree Filter View
+
+By default, the Excel Style Filtering dialog displays the items in a list view. In order to display them in a tree view you can use the [`TreeGridFilteringStrategy`]({environment:angularApiUrl}/classes/treegridfilteringstrategy.html) and specify an array of column field names. Filter items will be displayed in a tree view for the speicified columns and in a list view for all other columns. The following sample demonstrates how to show filter items in a tree view for the first column:
+
+<code-view style="height:650px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-tree-filter-view" >
+</code-view>
+}
+
 ## 外部の Excel スタイル フィルタリング
 
 上記デモで示されるように、Excel スタイル フィルタリング ダイアログのデフォルトの外観は @@igComponent 内にあります。このダイアログは、フィルターを構成するときにのみ表示されます。ダイアログはグリッドの外部でスタンドアロン コンポーネントとして使用すると、常に表示になります。以下のデモでは、Excel スタイル フィルタリングが @@igComponent とは別に宣言されます。

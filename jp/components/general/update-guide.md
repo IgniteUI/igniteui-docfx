@@ -55,9 +55,11 @@ ng update @angular/cli
 - `igxGrid`、`igxHierarchicalGrid`、`igxTreeGrid`
     - **重大な変更** - 列の `movable` プロパティは非推奨になりました。代わりに、公開されたグリッドの `moving` プロパティを使用してください:
     ```html
-    <igx-grid [moving]="true">      
+    <igx-grid [moving]="true">
     </igx-grid>
     ```
+- `IgxHierarchicalGrid`
+    - **重大な変更** - The public API service for igxHierarchicalGrid and igxRowIsland components `hgridAPI` is renamed to `gridAPI`.
 - `IgxToast`
     - **重大な変更** - `igx-toast` で非推奨になった `position` プロパティは削除されました。次のように `positionSettings` プロパティを使用することをお勧めします:
     ```typescript
@@ -79,7 +81,7 @@ ng update @angular/cli
     - **重大な変更** - `rowSelected` イベントは、その機能をより適切に反映するために、`rowSelectionChanging` に名前が変更されました。
     - **重大な変更** - `columnSelected` イベントは、その機能をより適切に反映するために、`columnSelectionChanging` に名前が変更されました。
     - **重大な変更** - `columnsCollection` が削除されました。代わりに `columns` を使用してください。特定の場合に `columns` が空の配列を返す場合は、`ViewChildren`を使用して列にクエリを実行し、 `ngAfterViewInit` の列にアクセスします。
-        ```html
+        ```typescript
         @ViewChildren(IgxColumnComponent, { read: IgxColumnComponent })
         public columns: QueryList<IgxColumnComponent>;
         ```
@@ -218,8 +220,8 @@ ng update @angular/cli
 
 ```scss
 $my-dark-palette: igx-palette(
-    $primary: olive, 
-    $secondary: yellow, 
+    $primary: olive,
+    $secondary: yellow,
     $grays: #fff
 );
 
@@ -238,7 +240,7 @@ $my-custom-grid: igx-grid-theme(
 
 @include igx-css-vars($my-custom-grid);
 ```
- 
+
 * 除外されたコンポーネント テーマ:
 
 グローバル テーマからコンポーネント テーマを除外し、カスタム置換テーマを作成した場合、コンポーネント ミックスインが含まれ、正しいコンポーネント テーマが渡されることを確認してください。
@@ -330,7 +332,7 @@ Sass Moule システムについて理解を深めるために、[Miriam Suzanne
 
     次から:
     ```html
-    <igx-paginator #paginator 
+    <igx-paginator #paginator
         [pagerEnabled]="!isPagerDisabled" [pagerHidden]="isPagerHidden"
         [dropdownHidden]="isDropdownHidden">
     </igx-paginator>
