@@ -59,7 +59,7 @@ ng update @angular/cli
     </igx-grid>
     ```
 - `IgxHierarchicalGrid`
-    - **重大な変更** - The public API service for igxHierarchicalGrid and igxRowIsland components `hgridAPI` is renamed to `gridAPI`.
+    - **重大な変更** - igxHierarchicalGrid および igxRowIsland コンポーネントのパブリック API サービス `hgridAPI` は `gridAPI` に名前が変更されました。
 - `IgxToast`
     - **重大な変更** - `igx-toast` で非推奨になった `position` プロパティは削除されました。次のように `positionSettings` プロパティを使用することをお勧めします:
     ```typescript
