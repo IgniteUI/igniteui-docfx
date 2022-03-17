@@ -68,6 +68,7 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
         this.toast.positionSettings.verticalDirection = VerticalAlignment.Middle;
     }
     ```
+
 ## From 12.2.x to 13.0.x
 
 ### General
