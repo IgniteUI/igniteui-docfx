@@ -123,11 +123,11 @@ $theme-colors: (
 Ignite UI for Angular の [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) 関数は、`primary`、`secondary`、`grays`、`info`、`success`、`warn`、`error` の各カラーとそのカラー バリアントを含むカラー パレット マップを生成します。定義済みの bootstrap パレットは 7 カラーで構成されます。
 
 ```scss
-$bootstrap-palette: igx-palette(
-    $primary: #007bff,
+$bootstrap-palette: palette(
+    $primary: #0d6efd,
     $secondary: #6c757d,
-    $info: #17a2b8,
-    $success: #28a745,
+    $info: #0dcaf0,
+    $success: #198754,
     $warn: #ffc107,
     $error: #dc3545,
     $surface: #f8f9fa
@@ -140,19 +140,19 @@ $bootstrap-palette: igx-palette(
 
 ```scss
 // Colors from the Ignite UI light bootstrap color palette
-$light-primary: igx-color($light-bootstrap-palette, "primary");
-$light-secondary: igx-color($light-bootstrap-palette, "secondary");
-$light-success: igx-color($light-bootstrap-palette, "success");
-$light-info: igx-color($light-bootstrap-palette, "info");
-$light-warning: igx-color($light-bootstrap-palette, "warn");
-$light-danger: igx-color($light-bootstrap-palette, "error");
+$light-primary: color($light-bootstrap-palette, "primary");
+$light-secondary: color($light-bootstrap-palette, "secondary");
+$light-success: color($light-bootstrap-palette, "success");
+$light-info: color($light-bootstrap-palette, "info");
+$light-warning: color($light-bootstrap-palette, "warn");
+$light-danger: color($light-bootstrap-palette, "error");
 ```
 
 その後、サンプルの dark モードに使用する新しいカラー パレットを作成します。
 
 ```scss
 // Defining custom color palette
-$custom-dark-palette: igx-palette(
+$custom-dark-palette: palette(
     $primary: #ecaa53,
     $secondary: #011627,
     $grays: #fff,
@@ -160,8 +160,8 @@ $custom-dark-palette: igx-palette(
 );
 
 // Creating Sass variables for primary and secondary colors
-$dark-primary: igx-color($custom-dark-palette, "primary");
-$dark-secondary: igx-color($custom-dark-palette, "secondary");
+$dark-primary: color($custom-dark-palette, "primary");
+$dark-secondary: color($custom-dark-palette, "secondary");
 ```
 
 >[!NOTE]
@@ -173,24 +173,24 @@ $dark-secondary: igx-color($custom-dark-palette, "secondary");
 
 #### Light モード
 
-Ignite UI for Angular には、[Bootstrap 4](https://getbootstrap.com/) ライブラリに基づいて構築された定義済みのテーマがあります。これらを使用するには、まず `igx-core` ミックスインを含めて、次に定義済みテーマ ミックスイン ([igx-bootstrap-light-theme]({environment:sassApiUrl}/index.html#mixin-igx-bootstrap-light-theme)) を含める必要があります。定義済みの bootstrap パレット ([$light-bootstrap-palette]({environment:sassApiUrl}/index.html#variable-light-bootstrap-palette)) も使用します。
+Ignite UI for Angular には、[Bootstrap 4](https://getbootstrap.com/) ライブラリに基づいて構築された定義済みのテーマがあります。これらを使用するには、まず `core` ミックスインを含めて、次に定義済みテーマ ミックスイン ([bootstrap-light-theme]({environment:sassApiUrl}/index.html#mixin-bootstrap-light-theme)) を含める必要があります。定義済みの bootstrap パレット ([$light-bootstrap-palette]({environment:sassApiUrl}/index.html#variable-light-bootstrap-palette)) も使用します。
 
 アプリケーションの背景色は、host 要素で明示的に設定する必要があります。サンプルでは、渡されたパレットの `surface` カラーを使用します。
 
 この時点で、Bootstrap の `$theme-colors` マップを前に作成した Sass 変数で変更する必要があります。
 
 ```scss
-// Make sure you always include the igx-core mixin first
-@include igx-core();
+// Make sure you always include the core mixin first
+@include core();
 
 :host {
     &.light {
         // The background color of the application in light mode
-        background: igx-color($light-bootstrap-palette, 'surface');
+        background: color($light-bootstrap-palette, 'surface');
 
         ::ng-deep {
             // Applying the igx predefined light bootstrap palette and theme
-            @include igx-bootstrap-light-theme($light-bootstrap-palette);
+            @include bootstrap-light-theme($light-bootstrap-palette);
 
             $theme-colors: (
                 "primary": $light-primary,
@@ -208,8 +208,8 @@ Ignite UI for Angular には、[Bootstrap 4](https://getbootstrap.com/) ライ�
 Ignite UI パレットに対応する値がない `$theme-colors` マップの `light` カラーと `dark` カラーは、当社の任意により、他の値に置き換えることができます。次に例を示します。 
 
 ```scss
-$custom-light: igx-color($light-bootstrap-palette, "grays", 100);
-$custom-dark: igx-color($light-bootstrap-palette, "grays", 800);
+$custom-light: color($light-bootstrap-palette, "grays", 100);
+$custom-dark: color($light-bootstrap-palette, "grays", 800);
 
 :host {
     &.light {
@@ -233,11 +233,11 @@ Ignite UI for Angular のすべてのコンポーネントは渡されたパレ�
 :host {
     &.dark {
         // The background color of the application in dark mode
-        background: igx-color($custom-dark-palette, 'surface');
+        background: color($custom-dark-palette, 'surface');
 
         ::ng-deep {
             // Applying our custom dark palette 
-            @include igx-bootstrap-dark-theme($custom-dark-palette);
+            @include bootstrap-dark-theme($custom-dark-palette);
 
             // Overriding bootstrap button colors with colors from the custom dark palette
             .igx-card-actions .btn-primary {
@@ -245,33 +245,33 @@ Ignite UI for Angular のすべてのコンポーネントは渡されたパレ�
                 border-color: $dark-primary;
 
                 &:hover {
-                    background-color: igx-color($custom-dark-palette, 'primary', 600);
+                    background-color: color($custom-dark-palette, 'primary', 600);
                 }
             }
 
             // Overriding ngb-accordion colors with colors from the custom dark palette
             .accordion {
                 .card-header {
-                    background-color: igx-color($custom-dark-palette, 'grays', 200);
-                    color: igx-color($custom-dark-palette, 'grays', 900);
+                    background-color: color($custom-dark-palette, 'grays', 200);
+                    color: color($custom-dark-palette, 'grays', 900);
                 }
 
                 .card {
-                    background-color: igx-color($custom-dark-palette, 'surface');
-                    border-color: igx-color($custom-dark-palette, 'grays', 300);
+                    background-color: color($custom-dark-palette, 'surface');
+                    border-color: color($custom-dark-palette, 'grays', 300);
                 }
             }
 
             // Overriding bootstrap dropdown colors with colors from the custom dark palette
             .dropdown .dropdown-menu {
-                background-color: igx-color($custom-dark-palette, 'surface');
-                border-color: igx-color($custom-dark-palette, 'grays', 300);
+                background-color: color($custom-dark-palette, 'surface');
+                border-color: color($custom-dark-palette, 'grays', 300);
 
                 .dropdown-item {
-                    color: igx-color($custom-dark-palette, 'grays', 800);
+                    color: color($custom-dark-palette, 'grays', 800);
 
                     &:hover {
-                        background-color: igx-color($custom-dark-palette, 'grays', 200);
+                        background-color: color($custom-dark-palette, 'grays', 200);
                     }
                 }
             }
@@ -306,12 +306,12 @@ Ignite UI for Angular のすべてのコンポーネントは渡されたパレ�
 
 ### クラスの生成
 
-Bootstrap `navbar` は背景色に CSS クラスを使用します。サンプルでは、選択したテーマに応じてカラーを変更するため、`igx-color-classes` ミックスインを使用します。指定したプロパティおよびカラー パレットのすべてのカラーの CSS クラス名を生成し、オプションでプレフィックスとサフィックスをクラス名に添付します。デモでは、ミックスインを 2 回使用します。1 回目はそれぞれの `$light-bootstrap-palette` を最初の値として使用する light モード、2 回目は `$custom-dark-palette` を使用する dark モードです。
+Bootstrap `navbar` は背景色に CSS クラスを使用します。サンプルでは、選択したテーマに応じてカラーを変更するため、`color-classes` ミックスインを使用します。指定したプロパティおよびカラー パレットのすべてのカラーの CSS クラス名を生成し、オプションでプレフィックスとサフィックスをクラス名に添付します。デモでは、ミックスインを 2 回使用します。1 回目はそれぞれの `$light-bootstrap-palette` を最初の値として使用する light モード、2 回目は `$custom-dark-palette` を使用する dark モードです。
 
 ```scss
 :host {
     &.light {
-        @include igx-color-classes(
+        @include color-classes(
             $palette: $light-bootstrap-palette,
             $prop: 'background',
             $prefix: 'bg'
@@ -319,7 +319,7 @@ Bootstrap `navbar` は背景色に CSS クラスを使用します。サンプ�
     }
 
     &.dark {
-        @include igx-color-classes(
+        @include color-classes(
             $palette: $custom-dark-palette,
             $prop: 'background',
             $prefix: 'bg'
@@ -332,11 +332,11 @@ Bootstrap `navbar` は背景色に CSS クラスを使用します。サンプ�
 
 ### タイポグラフィ
 
-Ignite UI for Angular は、テーマごとに 4 つのデフォルト タイプ スケールを公開します。これは、[`igx-typography`]({environment:sassApiUrl}/index.html#mixin-igx-typography) ミックスイン内でアプリケーションのグローバル タイポグラフィ スタイルを定義するために使用できます。この例では、bootstrap で定義済みの `typeface` および `type-scale` を適用しますが、必要に応じてカスタムの書体を作成できます。 
+Ignite UI for Angular は、テーマごとに 4 つのデフォルト タイプ スケールを公開します。これは、[`typography`]({environment:sassApiUrl}/index.html#mixin-typography) ミックスイン内でアプリケーションのグローバル タイポグラフィ スタイルを定義するために使用できます。この例では、bootstrap で定義済みの `typeface` および `type-scale` を適用しますが、必要に応じてカスタムの書体を作成できます。 
 
 ```scss
 :host {
-    @include igx-typography($font-family: $bootstrap-typeface, $type-scale: $bootstrap-type-scale);
+    @include typography($font-family: $bootstrap-typeface, $type-scale: $bootstrap-type-scale);
 }
 ```
 
@@ -345,10 +345,10 @@ Ignite UI for Angular は、テーマごとに 4 つのデフォルト タイプ
 
 * [Light Bootstrap パレット]({environment:sassApiUrl}/index.html#variable-light-bootstrap-palette)
 * [Dark Bootstrap パレット]({environment:sassApiUrl}/index.html#variable-dark-bootstrap-palette)
-* [Light Bootstrap テーマ]({environment:sassApiUrl}/index.html#mixin-igx-bootstrap-light-theme)
-* [Dark Bootstrap テーマ]({environment:sassApiUrl}/index.html#mixin-igx-bootstrap-dark-theme)
+* [Light Bootstrap テーマ]({environment:sassApiUrl}/index.html#mixin-bootstrap-light-theme)
+* [Dark Bootstrap テーマ]({environment:sassApiUrl}/index.html#mixin-bootstrap-dark-theme)
 * [Palette Function]({environment:sassApiUrl}/index.html#function-igx-palette)
-* [Typography Mixin]({environment:sassApiUrl}/index.html#mixin-igx-typography)
+* [Typography Mixin]({environment:sassApiUrl}/index.html#mixin-typography)
 
 関連トピック: 
 

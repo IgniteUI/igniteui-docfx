@@ -118,11 +118,11 @@ To get started with styling the radio buttons, we need to import the `index` fil
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`igx-radio-theme`]({environment:sassApiUrl}/index.html#function-igx-radio-theme) and accepts some of the default theme's parameters:
+Following the simplest approach, we create a new theme that extends the [`radio-theme`]({environment:sassApiUrl}/index.html#function-radio-theme) and accepts some of the default theme's parameters:
 
 
 ```scss
-$custom-radio-theme: igx-radio-theme(
+$custom-radio-theme: radio-theme(
     $disabled-color: lightgray,
     $empty-color:  #345779,
     $fill-color: #2dabe8,
@@ -136,7 +136,7 @@ $custom-radio-theme: igx-radio-theme(
 The last step is to pass the custom radio theme in our application: 
 
 ```scss
-@include igx-css-vars($custom-radio-theme);
+@include css-vars($custom-radio-theme);
 ```
 
 ### Using Theme Overrides
@@ -148,7 +148,7 @@ If the component is using the [`Emulated`](themes/sass/component-themes.md#view-
 ```scss
 :host {
      ::ng-deep {
-        @include igx-radio($custom-radio-theme);
+        @include radio($custom-radio-theme);
     }
 }
 ```
@@ -242,10 +242,10 @@ public alignment = RadioGroupAlignment.vertical;
 
 * [IgxRadioGroupDirective]({environment:angularApiUrl}/classes/igxradiogroupdirective.html)
 * [IgxRadioComponent]({environment:angularApiUrl}/classes/igxradiocomponent.html)
-* [IgxRadioComponent Styles]({environment:sassApiUrl}/index.html#function-igx-radio-theme)
+* [IgxRadioComponent Styles]({environment:sassApiUrl}/index.html#function-radio-theme)
 
 ## Theming Dependencies
-* [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
+* [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-ripple-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>

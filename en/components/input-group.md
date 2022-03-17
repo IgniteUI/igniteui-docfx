@@ -133,10 +133,10 @@ The first thing we need to do, in order to get started with the input group styl
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Next, we have to create a new theme that extends the [`igx-input-group-theme`]({environment:sassApiUrl}/index.html#function-igx-input-group-theme) and pass the parameters which we'd like to change:
+Next, we have to create a new theme that extends the [`input-group-theme`]({environment:sassApiUrl}/index.html#function-input-group-theme) and pass the parameters which we'd like to change:
 
 ```scss
-$custom-input-group: igx-input-group-theme(
+$custom-input-group: input-group-theme(
   $filled-text-color: #288a54,
   $focused-text-color: #174f30,
   $idle-text-color: #288a54,
@@ -153,7 +153,7 @@ $custom-input-group: igx-input-group-theme(
 The last step is to include the newly created theme:
 
 ```scss
-@include igx-css-vars($custom-input-group);
+@include css-vars($custom-input-group);
 ```
 
 ### Using Theme Overrides
@@ -167,7 +167,7 @@ In order to style the border, we have to `penetrate` this encapsulation using `:
 ```scss
 :host {
     ::ng-deep {
-        @include igx-input-group($custom-input-group);
+        @include input-group($custom-input-group);
     }
 }
 ```
@@ -189,11 +189,11 @@ In order to style the border, we have to `penetrate` this encapsulation using `:
 * [IgxHintDirective]({environment:angularApiUrl}/classes/igxhintdirective.html)
 * [IgxInputGroup Types]({environment:angularApiUrl}/index.html#IgxInputGroupType)
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
-* [IgxInputGroupComponent Styles]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
+* [IgxInputGroupComponent Styles]({environment:sassApiUrl}/index.html#function-input-group-theme)
 
 ## Theming Dependencies
-* [IgxButton Theme]({environment:sassApiUrl}/index.html#function-igx-button-theme)
-* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxButton Theme]({environment:sassApiUrl}/index.html#function-button-theme)
+* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-icon-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>

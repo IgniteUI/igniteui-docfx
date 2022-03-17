@@ -8,8 +8,8 @@ In order to switch from `Material` to `Bootstrap`, you can use one of the built-
 
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-@include igx-core();
-@include igx-bootstrap-light-theme($light-bootstrap-palette);
+@include core();
+@include bootstrap-light-theme($light-bootstrap-palette);
 ```
 
 ## Bootstrap Dark Theme
@@ -18,10 +18,10 @@ In order to switch from `Material` to `Bootstrap`, you can use one of the built-
 
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-@include igx-core();
-@include igx-bootstrap-dark-theme($dark-bootstrap-palette);
+@include core();
+@include bootstrap-dark-theme($dark-bootstrap-palette);
 ```
 
 ## API Overview
-* [Light Theme]({environment:sassApiUrl}/index.html#mixin-igx-bootstrap-light-theme)
-* [Dark Theme]({environment:sassApiUrl}/index.html#mixin-igx-bootstrap-dark-theme)
+* [Light Theme]({environment:sassApiUrl}/index.html#mixin-bootstrap-light-theme)
+* [Dark Theme]({environment:sassApiUrl}/index.html#mixin-bootstrap-dark-theme)

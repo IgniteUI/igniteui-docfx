@@ -3,6 +3,7 @@ title: Angular Chart Highlighting | Data Visualization | Infragistics
 _description: Infragistics' Angular Chart Highlighting
 _keywords: Angular Charts, Highlighting, Infragistics
 mentionedTypes: ["CategoryChart"]
+namespace: Infragistics.Controls.Charts
 ---
 
 # Angular Chart Highlighting

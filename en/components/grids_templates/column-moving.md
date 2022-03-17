@@ -30,7 +30,7 @@ The @@igComponent component in Ignite UI for Angular provides the **Column Movin
 > Reordering between columns and column groups is allowed only when they are at the same level in the hierarchy and both are in the same group. Moving is allowed between columns/column-groups, if they are top level columns.
 
 > [!NOTE]
-> If a column header is templated and the corresponding column is movable (or groupable), then the templated elements need to have the **draggable** attribute set to **false**! This allows to attach handlers for any event emitted by the element, otherwise the event is consumed by the `igxDrag` directive.
+> If a column header is templated and the Column Moving is enabled or the corresponding column is groupable, then the templated elements need to have the **draggable** attribute set to **false**! This allows to attach handlers for any event emitted by the element, otherwise the event is consumed by the `igxDrag` directive.
 
 > [!NOTE]
 > If the pinned area exceeds its maximum allowed width (80% of the total @@igComponent width), a visual clue notifies the end user that the drop operation is forbidden and pinning is not possible. This means you won't be allowed to drop a column in the pinned area.
@@ -73,22 +73,25 @@ The @@igComponent component in Ignite UI for Angular provides the **Column Movin
 
 ## Overview
 
-**Column moving** feature is enabled on a per-column level, meaning that the [**@@igSelector**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) can have a mix of movable and immovable columns. This is done via the [`movable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#movable) input of the [`igx-column`]({environment:angularApiUrl}/classes/igxcolumncomponent.html).
+**Column moving** feature is enabled on a per-grid level, meaning that the [**@@igSelector**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) could have either movable or immovable columns. This is done via the [`moving`]({environment:angularApiUrl}/classes/igxgridcomponent.html#moving) input of the [`igx-grid`]({environment:angularApiUrl}/classes/igxgridncomponent.html).
 
 
 @@if (igxName === 'IgxGrid') {
 ```html
-<igx-column [field]="'Category'" [movable]="true"></igx-column>
+<igx-grid [moving]="true"></igx-grid>
 ```
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```html
-<igx-column [field]="'Title'" [movable]="true"></igx-column>
+<igx-tree-grid [moving]="true"></igx-tree-grid>
 ```
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-column #companyname field="CompanyName" [movable]="true" width="150px">
+<igx-hierarchical-grid [moving]="true">
+    ...
+    <igx-row-island [moving]="true"></igx-row-island>
+</igx-hierarchical-grid>
 ```
 }
 
@@ -113,7 +116,7 @@ const idColumn = grid.getColumnByName("ID");
 idColumn.move(3);
 ```
 
-Note that when using the API, only the [`columnMovingEnd`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnMovingEnd) event will be emitted, if the operation was successful. Also note that in comparison to the drag and drop functionality, using the API does not require setting the `movable` property to true. 
+Note that when using the API, only the [`columnMovingEnd`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnMovingEnd) event will be emitted, if the operation was successful. Also note that in comparison to the drag and drop functionality, using the API does not require setting the `moving` property to true. 
 
 ## Events
 
@@ -122,9 +125,9 @@ You can subscribe to the [`columnMovingEnd`]({environment:angularApiUrl}/classes
 
 @@if (igxName === 'IgxGrid') {
 ```html
-<igx-grid #dataGrid [data]="data" [autoGenerate]="false" (columnMovingEnd)="onColumnMovingEnd($event)">
-    <igx-column [field]="'Category'" [movable]="true"></igx-column>
-    <igx-column [field]="'Change On Year(%)'" [dataType]="'number'" [movable]="true" ></igx-column>
+<igx-grid #dataGrid [data]="data" [autoGenerate]="false" [moving]="true" (columnMovingEnd)="onColumnMovingEnd($event)">
+    <igx-column [field]="'Category'"></igx-column>
+    <igx-column [field]="'Change On Year(%)'" [dataType]="'number'" ></igx-column>
 </igx-grid>
 ```
 
@@ -139,9 +142,9 @@ public onColumnMovingEnd(event) {
 
 @@if (igxName === 'IgxTreeGrid') {
 ```html
-<igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="false" (columnMovingEnd)="onColumnMovingEnd($event)">
-    <igx-column [field]="'Name'" dataType="string" [movable]="true" width="250px"></igx-column>
-    <igx-column [field]="'Title'" dataType="string" [movable]="true" width="250px"></igx-column>
+<igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="false" [moving]="true" (columnMovingEnd)="onColumnMovingEnd($event)">
+    <igx-column [field]="'Name'" dataType="string" width="250px"></igx-column>
+    <igx-column [field]="'Title'" dataType="string" width="250px"></igx-column>
 </igx-tree-grid>
 ```
 
@@ -155,9 +158,9 @@ public onColumnMovingEnd(event) {
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid #hierarchicalGrid [data]="data" [autoGenerate]="false" (columnMovingEnd)="onColumnMovingEnd($event)">
-    <igx-column [field]="'Country'" [movable]="true"></igx-column>
-    <igx-column [field]="'Phone'" [dataType]="'number'" [movable]="true" ></igx-column>
+<igx-hierarchical-grid #hierarchicalGrid [data]="data" [autoGenerate]="false" [moving]="true" (columnMovingEnd)="onColumnMovingEnd($event)">
+    <igx-column [field]="'Country'"></igx-column>
+    <igx-column [field]="'Phone'" [dataType]="'number'"></igx-column>
 </igx-hierarchical-grid>
 ```
 
@@ -181,11 +184,11 @@ To get started with styling the @@igComponent column moving headers, we need to 
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) and accepts the `$ghost-header-background`, `$ghost-header-text-color` and the `$ghost-header-icon-color` parameters.
+Following the simplest approach, we create a new theme that extends the [`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) and accepts the `$ghost-header-background`, `$ghost-header-text-color` and the `$ghost-header-icon-color` parameters.
 
 ```scss
 // Define dark theme for the column moving
-$dark-grid-column-moving-theme: igx-grid-theme(
+$dark-grid-column-moving-theme: grid-theme(
     $ghost-header-text-color: #F4D45C,
     $ghost-header-background: #575757,
     $ghost-header-icon-color: #f4bb5c
@@ -195,7 +198,7 @@ $dark-grid-column-moving-theme: igx-grid-theme(
 The last step is to **include** the component mixins with its respective theme:
 
 ```scss
-@include igx-grid($dark-grid-column-moving-theme);
+@include grid($dark-grid-column-moving-theme);
 ```
 
 > [!NOTE]
@@ -204,7 +207,7 @@ The last step is to **include** the component mixins with its respective theme:
 ```scss
 :host {
     ::ng-deep {
-        @include igx-grid($dark-grid-column-moving-theme);
+        @include grid($dark-grid-column-moving-theme);
     }
 }
 ```
@@ -219,23 +222,23 @@ Instead of hardcoding the color values like we just did, we can achieve greater 
 $yellow-color: #F4D45C;
 $black-color: #575757;
 
-$dark-palette: igx-palette($primary: $yellow-color, $secondary: $black-color);
+$dark-palette: palette($primary: $yellow-color, $secondary: $black-color);
 ```
 
 And then with [**igx-color**]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the pallete.
 
 ```scss
-$dark-grid-column-moving-theme: igx-grid-theme(
+$dark-grid-column-moving-theme: grid-theme(
     $palette: $dark-palette,
-    $ghost-header-text-color: igx-color($dark-palette, "primary", 400),
-    $ghost-header-background: igx-color($dark-palette, "secondary", 200),
-    $ghost-header-icon-color:  igx-color($dark-palette, "primary", 500)
+    $ghost-header-text-color: color($dark-palette, "primary", 400),
+    $ghost-header-background: color($dark-palette, "secondary", 200),
+    $ghost-header-icon-color: color($dark-palette, "primary", 500)
 );
 ```
 
 
 > [!NOTE]
-> The igx-color and igx-palette are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](/components/themes/palettes.html) topic for detailed guidance on how to use them.
+> Thecolor andpalette are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](/components/themes/palettes.html) topic for detailed guidance on how to use them.
 
 ### Using Schemas
 
@@ -248,13 +251,13 @@ Extend one of the two predefined schemas, that are provided for every component,
 $dark-grid-column-moving-schema: extend($_light-grid,
         (
             ghost-header-text-color:(
-                igx-color: ("primary", 400)
+               color: ("primary", 400)
             ),
             ghost-header-background:(
-                igx-color: ("secondary", 200)
+               color: ("secondary", 200)
             ),
             ghost-header-icon-color:(
-                igx-color:( "primary", 500)
+               color:( "primary", 500)
             )
         )
 );
@@ -269,7 +272,7 @@ $custom-light-schema: extend($light-schema,(
 ));
 
 // Defining dark-grid-theme with the global dark schema
-$dark-grid-column-moving-theme: igx-grid-theme(
+$dark-grid-column-moving-theme: grid-theme(
   $palette: $dark-palette,
   $schema: $custom-light-schema
 );

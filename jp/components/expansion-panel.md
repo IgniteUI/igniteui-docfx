@@ -196,7 +196,7 @@ $my-primary-color:#353a4b;
 $my-secondary-color: #ffd351;
 
 // Create custom palette.
-$my-color-palette: igx-palette(
+$my-color-palette: palette(
     $primary: $my-primary-color,
     $secondary: $my-secondary-color
 );
@@ -207,31 +207,31 @@ $my-color-palette: igx-palette(
 ```scss
 // In expansion-styling.component.scss
 // Create expansion panel theme.
-$custom-panel-theme: igx-expansion-panel-theme(
+$custom-panel-theme: expansion-panel-theme(
     // pass `$my-color-palette` palette.
     $palette: $my-color-palette,
 
     // Styling parameters.
-    $header-background: igx-color($my-color-palette, "primary", 700),
-    $header-focus-background: igx-color($my-color-palette, "primary", 700),
-    $header-title-color: igx-color($my-color-palette, "secondary"),
-    $header-icon-color: igx-color($my-color-palette, "secondary"),
-    $body-background: igx-color($my-color-palette, "primary", 700),
-    $body-color: igx-color($my-color-palette, "secondary" 100),
+    $header-background: color($my-color-palette, "primary", 700),
+    $header-focus-background: color($my-color-palette, "primary", 700),
+    $header-title-color: color($my-color-palette, "secondary"),
+    $header-icon-color: color($my-color-palette, "secondary"),
+    $body-background: color($my-color-palette, "primary", 700),
+    $body-color: color($my-color-palette, "secondary" 100),
     $border-radius: .5
 );
 ```
 >[!NOTE]
-> [`テーマ`](themes/sass/component-themes.md)エンジンを介したスタイル設定に使用可能なすべてのパラメーターを確認するには、[`API ヘルプ`]({environment:sassApiUrl}/index.html#function-igx-expansion-panel-theme) を参照してください。
+> [`テーマ`](themes/sass/component-themes.md)エンジンを介したスタイル設定に使用可能なすべてのパラメーターを確認するには、[`API ヘルプ`]({environment:sassApiUrl}/index.html#function-expansion-panel-theme) を参照してください。
 
 ### コンポーネント テーマの適用
-コンポーネント テーマを適用するには、`igx-css-vars` ミックスインをインクルードし、`$custom-panel-theme` マップを渡します。 
+コンポーネント テーマを適用するには、`css-vars` ミックスインをインクルードし、`$custom-panel-theme` マップを渡します。 
 ```scss
 // In expansion-styling.component.scss
 // Pass our custom-panel-theme to `igx-expansion-panel` mixin.
 // The `:host` here makes sure that all the theming will affect only this component.
 :host {
-  @include igx-css-vars($custom-panel-theme);
+  @include css-vars($custom-panel-theme);
 }
 ```
 
@@ -245,7 +245,7 @@ $custom-panel-theme: igx-expansion-panel-theme(
 :host {
     // Penetrate the ViewEncapsulation.
     ::ng-deep {
-        @include igx-expansion-panel($custom-panel-theme);
+        @include expansion-panel($custom-panel-theme);
     }
 }
 ```
@@ -327,4 +327,4 @@ export class ExpansionPanelComponent {
 * [IgxExpansionPanel スタイル]({environment:sassApiUrl}/index.html#mixin-igx-expansion-panel)
 
 ## テーマの依存関係
-* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-icon-theme)

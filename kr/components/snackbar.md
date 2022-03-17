@@ -245,7 +245,7 @@ In this article we learned how to use and configure the [`IgxSnackbarComponent`]
 
 Styles:
 
-* [`IgxSnackbarComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-snackbar-theme)
+* [`IgxSnackbarComponent Styles`]({environment:sassApiUrl}/index.html#function-snackbar-theme)
 
 ###Additional Resources
 

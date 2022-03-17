@@ -51,7 +51,7 @@ const dates = data.filter(rec => isDate(rec));
 
 * [IgxGridComponent API]({environment:angularApiUrl}/classes/igxgridcomponent.html)    
 * [IgxGridCell API]({environment:angularApiUrl}/classes/igxgridcell.html)    
-* [IgxGridComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)     
+* [IgxGridComponent スタイル]({environment:sassApiUrl}/index.html#function-grid-theme)     
 
 ## その他のリソース
 <div class="divider--half"></div>    

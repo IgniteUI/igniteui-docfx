@@ -127,7 +127,7 @@ By default we have set the same columns as our previous sample, but it can be cl
 </div>
 
 ## Styling
-The igxGrid allows styling through the [Ignite UI for Angular Theme Library](../themes/sass/component-themes.md). The grid's [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) exposes a wide variety of properties, which allow the customization of all the features of the grid. 
+The igxGrid allows styling through the [Ignite UI for Angular Theme Library](../themes/sass/component-themes.md). The grid's [theme]({environment:sassApiUrl}/index.html#function-grid-theme) exposes a wide variety of properties, which allow the customization of all the features of the grid. 
 
 In the below steps, we are going through the steps of customizing the grid's Multi-row Layout styling.     
 
@@ -142,10 +142,10 @@ To begin the customization of the Multi-row Layout feature, you need to import t
 ``` 
 
 ### Defining custom theme
-Next, create a new theme, that extends the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) and accepts the parameters, required to customize the feature layout as desired.   
+Next, create a new theme, that extends the [`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) and accepts the parameters, required to customize the feature layout as desired.   
 
 ```scss
-$custom-theme: igx-grid-theme(
+$custom-theme: grid-theme(
     $cell-active-border-color: #ffcd0f,
     $cell-selected-background: #6f6f6f,
     $row-hover-background: #fde069,
@@ -165,7 +165,7 @@ In the approach, that was described above, the color values were hardcoded. Alte
 $black-color: #494949;
 $yellow-color: #FFCD0F;
 
-$custom-palette: igx-palette(
+$custom-palette: palette(
   $primary: $black-color,
   $secondary: $yellow-color
 );
@@ -174,15 +174,15 @@ $custom-palette: igx-palette(
 After a custom palette has been generated, the `igx-color` function can be used to obtain different varieties of the primary and the secondary colors.
 
 ```scss
-$custom-theme: igx-grid-theme(
-    $cell-active-border-color: igx-color($custom-palette, "secondary", 500),
-    $cell-selected-background: igx-color($custom-palette, "primary", 300),
-    $row-hover-background: igx-color($custom-palette, "secondary", 300),
-    $row-selected-background: igx-color($custom-palette, "primary", 100),
-    $header-background: igx-color($custom-palette, "primary", 500),
-    $header-text-color: igx-contrast-color($custom-palette, "primary", 500),
-    $sorted-header-icon-color: igx-color($custom-palette, "secondary", 500),
-    $sortable-header-icon-hover-color: igx-color($custom-palette, "secondary", 600)
+$custom-theme: grid-theme(
+    $cell-active-border-color: color($custom-palette, "secondary", 500),
+    $cell-selected-background: color($custom-palette, "primary", 300),
+    $row-hover-background: color($custom-palette, "secondary", 300),
+    $row-selected-background: color($custom-palette, "primary", 100),
+    $header-background: color($custom-palette, "primary", 500),
+    $header-text-color:contrast-color($custom-palette, "primary", 500),
+    $sorted-header-icon-color: color($custom-palette, "secondary", 500),
+    $sortable-header-icon-hover-color: color($custom-palette, "secondary", 600)
 );
 ```
 
@@ -208,7 +208,7 @@ In order for the custom schema to be applied, either `light`, or `dark` globals 
 $my-custom-schema: extend($light-schema, ( 
     igx-grid: $custom-grid-schema
 ));
- $custom-theme: igx-grid-theme(
+ $custom-theme: grid-theme(
     $palette: $custom-palette,
     $schema: $my-custom-schema
 );
@@ -217,7 +217,7 @@ $my-custom-schema: extend($light-schema, (
 ### Applying the custom theme
 The easiest way to apply your theme is with a `sass` `@include` statement in the global styles file:  
 ```scss
-@include igx-grid($custom-theme);
+@include grid($custom-theme);
 ```
 
 ### Scoped component theme
@@ -234,7 +234,7 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 ```scss
 :host {
     ::ng-deep {
-        @include igx-grid($custom-theme);
+        @include grid($custom-theme);
     }
 }
 ```
@@ -255,7 +255,7 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 <div class="divider--half"></div>
 
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-grid-theme)
 * [IgxColumnLayoutComponent]({environment:angularApiUrl}/classes/igxcolumnlayoutcomponent.html)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 <div class="divider--half"></div>

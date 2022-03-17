@@ -240,10 +240,10 @@ To get started with styling the button group, we need to import the `index` file
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`igx-button-group-theme`]({environment:sassApiUrl}/index.html#function-igx-button-group-theme) and accepts some of the parameters that style the button group's items in their different states.
+Following the simplest approach, we create a new theme that extends the [`button-group-theme`]({environment:sassApiUrl}/index.html#function-button-group-theme) and accepts some of the parameters that style the button group's items in their different states.
 
 ```scss
-$custom-button-group: igx-button-group-theme(
+$custom-button-group: button-group-theme(
     $item-text-color: #fdfdfd,
     $item-background: #2f4d6a,
     $item-hover-text-color: #fdfdfd,
@@ -256,14 +256,14 @@ $custom-button-group: igx-button-group-theme(
 );
 ```
 
-As seen, the `igx-button-group-theme` exposes some useful parameters for basic styling of its items. If you want to drill deeper and change some button specific parameters, you can create a new theme that extends the `igx-button-theme` and scope it under the respective button group class.
+As seen, the `button-group-theme` exposes some useful parameters for basic styling of its items. If you want to drill deeper and change some button specific parameters, you can create a new theme that extends the `button-theme` and scope it under the respective button group class.
 
 ### Using CSS variables 
 
 The last step is to include the component's theme.
 
 ```scss
-@include igx-css-vars($custom-button-group);
+@include css-vars($custom-button-group);
 ```
 
 ### Using Theme Overrides
@@ -275,7 +275,7 @@ If the component is using the [`Emulated`](themes/sass/component-themes.md#view-
 ```scss
 :host {
     ::ng-deep {
-        @include igx-button-group($custom-button-group);
+        @include button-group($custom-button-group);
     }
 }
 ```
@@ -293,14 +293,14 @@ If the component is using the [`Emulated`](themes/sass/component-themes.md#view-
 <div class="divider--half"></div>
 
 * [IgxButtonGroupComponent]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html)
-* [IgxButtonGroup Styles]({environment:sassApiUrl}/index.html#function-igx-button-group-theme)
+* [IgxButtonGroup Styles]({environment:sassApiUrl}/index.html#function-button-group-theme)
 * [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
-* [IgxButton Styles]({environment:sassApiUrl}/index.html#function-igx-button-theme)
+* [IgxButton Styles]({environment:sassApiUrl}/index.html#function-button-theme)
 
 ## Theming Dependencies
-* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
-* [IgxButton Theme]({environment:sassApiUrl}/index.html#function-igx-button-theme)
-* [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
+* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxButton Theme]({environment:sassApiUrl}/index.html#function-button-theme)
+* [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-ripple-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>

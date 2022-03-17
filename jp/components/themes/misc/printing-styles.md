@@ -28,10 +28,10 @@ _language: ja
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 
 // Turn the print styles off by setting the $print-layout param to false.
-igx-core($print-layout: false)
+core($print-layout: false)
 
 // Add the theme and the palette.
-@include igx-theme($default-palette);
+@include theme($default-palette);
 ```
 
 注: カラフルなグリッドを使用する場合でも、できる限りきれいでシンプルにするため、またインクの使用を減らすために、白黒のグリッドが表示されます。グリッド上のすべてのクリック可能な要素は、紙では意味をなさないため、省略されます。

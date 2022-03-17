@@ -3,6 +3,7 @@ title: Angular Scatter Chart | Data Visualization | Infragistics
 _description: Infragistics' Angular Scatter Chart
 _keywords: Angular Charts, Scatter Chart, Infragistics
 mentionedTypes: ["XamDataChart", "ScatterSeries", "ScatterLineSeries", "ScatterSplineSeries", "HighDensityScatterSeries", "ScatterAreaSeries", "ScatterContourSeries"]
+namespace: Infragistics.Controls.Charts
 ---
 
 # Angular Scatter Charts

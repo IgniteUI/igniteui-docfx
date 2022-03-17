@@ -221,10 +221,10 @@ To get started with styling the badges, we need to import the `index` file, wher
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`igx-badge-theme`]({environment:sassApiUrl}/index.html#function-igx-badge-theme) and accepts some parameters that style the badge's items.
+Following the simplest approach, we create a new theme that extends the [`badge-theme`]({environment:sassApiUrl}/index.html#function-badge-theme) and accepts some parameters that style the badge's items.
 
 ```scss
-$custom-badge-theme: igx-badge-theme(
+$custom-badge-theme: badge-theme(
     $border-color: white,
     $border-width: 1px,
     $icon-color: white,
@@ -242,7 +242,7 @@ The last step is to **include** the component theme in our application.
 If `$legacy-support` is set to `true`, include the **component theme** like that:
 
 ```scss
- @include igx-badge($custom-badge-theme);
+ @include badge($custom-badge-theme);
 ```
 >[!NOTE]
 >If the component is using an [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`
@@ -250,7 +250,7 @@ If `$legacy-support` is set to `true`, include the **component theme** like that
 ```scss
 :host {
      ::ng-deep {
-        @include igx-badge($custom-badge-theme);
+        @include badge($custom-badge-theme);
     }
 }
 ```
@@ -260,7 +260,7 @@ If `$legacy-support` is set to `true`, include the **component theme** like that
 If `$legacy-support` is set to `false`(default), include the component **css variables** like that:
 
 ```scss
-@include igx-css-vars($custom-badge-theme);
+@include css-vars($custom-badge-theme);
 ```
 
 >[!NOTE]
@@ -268,7 +268,7 @@ If `$legacy-support` is set to `false`(default), include the component **css var
 
 ```scss
 :host {
-    @include igx-css-vars($custom-badge-theme);
+    @include css-vars($custom-badge-theme);
 }
 ```
 
@@ -288,13 +288,13 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 
 * [IgxAvatarComponent]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
 * [IgxBadgeComponent]({environment:angularApiUrl}/classes/igxbadgecomponent.html)
-* [IgxBadgeComponent Styles]({environment:sassApiUrl}/index.html#function-igx-badge-theme)
+* [IgxBadgeComponent Styles]({environment:sassApiUrl}/index.html#function-badge-theme)
 * [IgxListComponent]({environment:angularApiUrl}/classes/igxlistcomponent.html)
 * [IgxListItemComponent]({environment:angularApiUrl}/classes/igxlistitemcomponent.html)
 * [IgxBadgeType]({environment:angularApiUrl}/index.html#IgxBadgeType)
 
 ## Theming Dependencies
-* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-icon-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>

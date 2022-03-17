@@ -60,34 +60,41 @@ In order to add a menu button, we will show the action button using the `actionB
 > [!NOTE]
 > The [`actionButtonIcon`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#actionbuttonicon) uses the Material fontset by design.
 
-### Add Icons
+### Add Icon Buttons
 
-Now that our app has its menu in place, we can make it a little more functional by adding options for searching, favorites and more. To do that let's grab the [**IgxIcon**](icon.md) module and import it in our **app.module.ts** file.
+We can make our app a little more functional by adding options for searching, favorites and more. To do that let's grab the [**IgxButton**](button.md) and [**IgxIcon**](icon.md) modules and import them in our **app.module.ts** file.
 ```typescript
 // app.module.ts
 
 ...
 import {
     IgxNavbarModule,
+    IgxButtonModule,
     IgxIconModule
 } from 'igniteui-angular';
 
 @NgModule({
     ...
-    imports: [..., IgxIconModule],
+    imports: [..., IgxButtonModule, IgxIconModule],
 })
 export class AppModule {}
 ```
 
-Next, we need to update our template with an icon for each of the options we want our app to provide:
+Next, we need to update our template with an icon button for each of the options we want our app to provide:
 
 ```html
 <!--navbar.component.html-->
 
- <igx-navbar title="Sample App" actionButtonIcon="menu" [isActionButtonVisible]="true">
-    <igx-icon>search</igx-icon>
-    <igx-icon>favorite</igx-icon>
-    <igx-icon>more_vert</igx-icon>
+ <igx-navbar title="Sample App">
+    <button igxButton="icon">
+        <igx-icon>search</igx-icon>
+    </button>
+    <button igxButton="icon">
+        <igx-icon>favorite</igx-icon>
+    </button>
+    <button igxButton="icon">
+        <igx-icon>more_vert</igx-icon>
+    </button>
 </igx-navbar>
 ```
 
@@ -100,9 +107,9 @@ If all went well, you should see the following in your browser:
 
 <div class="divider--half"></div>
 
-### Add Custom Action Icon
+### Add Custom Action
 
-What if we want to use a custom action icon for our app navigation instead of the default one that is on the left-most part of the navbar? We can easily achieve this by using the `igx-navbar-action` directive, which will replace the default action icon with the content we have provided. We will do that by using the Font Awesome home icon in combination with a style for it.
+What if we want to use a custom template for our app navigation on the left-most part of the navbar? We can easily achieve this by using the `igx-navbar-action` directive, which will render the content we have provided. We will do that by using a button with the Font Awesome home icon.
 
 ```css
 /* navbar.component.css */
@@ -110,30 +117,31 @@ What if we want to use a custom action icon for our app navigation instead of th
 @import url("https://unpkg.com/@fortawesome/fontawesome-free-webfonts@^1.0.9/css/fontawesome.css");
 @import url("https://unpkg.com/@fortawesome/fontawesome-free-webfonts@^1.0.9/css/fa-regular.css");
 @import url("https://unpkg.com/@fortawesome/fontawesome-free-webfonts@^1.0.9/css/fa-solid.css");
-
-.customIcon {
-    vertical-align: middle;
-}
 ```
 
 ```html
 <!--navbar.component.html-->
 
- <igx-navbar title="Sample App" actionButtonIcon="menu" [isActionButtonVisible]="true">
-    <igx-icon>search</igx-icon>
-    <igx-icon>favorite</igx-icon>
-    <igx-icon>more_vert</igx-icon>
-
+ <igx-navbar title="Sample App">
     <igx-navbar-action>
-        <igx-icon class="customIcon" fontSet="fa" name="fa-home"></igx-icon>
+        <button igxButton="icon">
+            <igx-icon family="fa" name="fa-home"></igx-icon>
+        </button>
     </igx-navbar-action>
+        
+    <button igxButton="icon">
+        <igx-icon>search</igx-icon>
+    </button>
+    <button igxButton="icon">
+        <igx-icon>favorite</igx-icon>
+    </button>
+    <button igxButton="icon">
+        <igx-icon>more_vert</igx-icon>
+    </button>
 </igx-navbar>
 ```
 
-> [!NOTE]
-> If [`igx-navbar-action`]({environment:angularApiUrl}/classes/igxnavbaractiondirective.html) or [`igxNavbarAction`]({environment:angularApiUrl}/classes/igxnavbaractiondirective.html) is provided, the default [`actionButtonIcon`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#actionbuttonicon) will not be used.
-
-Finally, this is how our navbar should look like with its custom action icon:
+Finally, this is how our navbar should look like with its custom action button icon:
 
 
 <code-view style="height: 300px" 
@@ -182,6 +190,9 @@ If the sample is configured properly, you should see the following in your brows
            iframe-src="{environment:demosBaseUrl}/menus/navbar-sample-3" >
 </code-view>
 
+> [!NOTE]
+> If [`igx-navbar-action`]({environment:angularApiUrl}/classes/igxnavbaractiondirective.html) or [`igxNavbarAction`]({environment:angularApiUrl}/classes/igxnavbaractiondirective.html) is provided, the default [`actionButtonIcon`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#actionbuttonicon) will not be used.
+
 <div class="divider--half"></div>
 
 ### Add Custom Title
@@ -192,7 +203,13 @@ If we want to provide a custom content for a navbar's title, we can achieve this
 <!--navbar.component.html-->
 
 <div class="sample-column">
-    <igx-navbar actionButtonIcon="menu" [isActionButtonVisible]="true">
+    <igx-navbar>
+        <igx-navbar-action>
+            <button igxButton="icon">
+                <igx-icon>menu</igx-icon>
+            </button>
+        </igx-navbar-action>
+
         <div igxNavbarTitle>
             <a href="https://www.infragistics.com/products/ignite-ui-angular" target="_blank">
                 <img src="https://static.infragistics.com/marketing/Website/products/ignite-ui-landing/ignite-ui-logo.svg"
@@ -200,9 +217,15 @@ If we want to provide a custom content for a navbar's title, we can achieve this
             </a>
         </div>
 
-        <igx-icon>search</igx-icon>
-        <igx-icon>favorite</igx-icon>
-        <igx-icon>more_vert</igx-icon>
+        <button igxButton="icon">
+            <igx-icon>search</igx-icon>
+        </button>
+        <button igxButton="icon">
+            <igx-icon>favorite</igx-icon>
+        </button>
+        <button igxButton="icon">
+            <igx-icon>more_vert</igx-icon>
+        </button>
     </igx-navbar>
 </div>
 ```
@@ -229,10 +252,10 @@ To get started with styling the navbar, we need to import the `index` file, wher
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`igx-navbar-theme`]({environment:sassApiUrl}/index.html#function-igx-navbar-theme) and accepts the `$text-color`, `$background`, `$idle-icon-color` and the `$hover-icon-color` parameters.
+Following the simplest approach, we create a new theme that extends the [`navbar-theme`]({environment:sassApiUrl}/index.html#function-navbar-theme) and accepts the `$text-color`, `$background`, `$idle-icon-color` and the `$hover-icon-color` parameters.
 
 ```scss
-$custom-navbar-theme: igx-navbar-theme(
+$custom-navbar-theme: navbar-theme(
     $text-color: #151515,
     $background: #dedede,
     $idle-icon-color: #151515,
@@ -245,7 +268,7 @@ $custom-navbar-theme: igx-navbar-theme(
 The last step is to pass the newly created theme:
 
 ```scss
-@include igx-css-vars($custom-navbar-theme);
+@include css-vars($custom-navbar-theme);
 ```
 
 ### Using mixins
@@ -258,7 +281,7 @@ If the component is using the [`Emulated`](themes/sass/component-themes.md#view-
 :host {
     ::ng-deep {
         // Pass the custom navbar theme to the `igx-navbar` mixin
-        @include igx-navbar($custom-navbar-theme);
+        @include navbar($custom-navbar-theme);
     }
 }
 ```
@@ -272,16 +295,16 @@ Instead of hardcoding the color values, like we just did, we can achieve greater
 ```scss
 $white-color: #dedede;
 $black-color: #151515;
-$light-navbar-palette: igx-palette($primary: $white-color, $secondary: $black-color);
+$light-navbar-palette: palette($primary: $white-color, $secondary: $black-color);
 ```
 
 And then with `igx-color` we can easily retrieve color from the palette.
 
 ```scss
-$custom-navbar-theme: igx-navbar-theme(
-    $text-color: igx-color($light-navbar-palette, "secondary", 400),
-    $background: igx-color($light-navbar-palette, "primary", 400),
-    $idle-icon-color: igx-color($light-navbar-palette, "secondary", 400),
+$custom-navbar-theme: navbar-theme(
+    $text-color: color($light-navbar-palette, "secondary", 400),
+    $background: color($light-navbar-palette, "primary", 400),
+    $idle-icon-color: color($light-navbar-palette, "secondary", 400),
     $hover-icon-color: #8c8c8c
 );
 ```
@@ -300,13 +323,13 @@ Extend one of the two predefined schemas, that are provided for every component,
  $light-navbar-schema: extend($_light-navbar,
     (
         text-color: (
-            igx-color: ("secondary", 400)
+           color: ("secondary", 400)
         ),
         background: (
-            igx-color: ("primary", 400)
+           color: ("primary", 400)
         ),
         idle-icon-color:(
-            igx-color: ("secondary", 400)
+           color: ("secondary", 400)
         ),
         $hover-icon-color: #8c8c8c
     )
@@ -318,11 +341,11 @@ In order to apply our custom schemas we have to **extend** one of the globals ([
 ```scss
 // Extending the global light-schema
 $custom-light-schema: extend($light-schema,(
-    igx-navbar: $light-navbar-schema
+   navbar: $light-navbar-schema
 ));
 
 // Defining navbar with the global light schema
-$cutom-navbar-theme: igx-navbar-theme(
+$cutom-navbar-theme: navbar-theme(
   $palette: $light-navbar-palette,
   $schema: $custom-light-schema
 );
@@ -346,16 +369,16 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 * [IgxNavbarComponent]({environment:angularApiUrl}/classes/igxnavbarcomponent.html)
 * [IgxNavbarActionDirective]({environment:angularApiUrl}/classes/igxnavbaractiondirective.html)
 * [IgxNavbarTitleDirective]({environment:angularApiUrl}/classes/igxnavbartitledirective.html)
-* [IgxNavbarComponent Styles]({environment:sassApiUrl}/index.html#function-igx-navbar-theme)
+* [IgxNavbarComponent Styles]({environment:sassApiUrl}/index.html#function-navbar-theme)
 
 Additional components and/or directives with relative APIs that were used:
 
 * [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
-* [IgxIconComponent Styles]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxIconComponent Styles]({environment:sassApiUrl}/index.html#function-icon-theme)
 
 ## Theming Dependencies
-* [IgxIconComponent Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
-* [IgxButtonComponent Theme]({environment:sassApiUrl}/index.html#function-igx-button-theme)
+* [IgxIconComponent Theme]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxButtonComponent Theme]({environment:sassApiUrl}/index.html#function-button-theme)
 
 ## Additional Resources
 

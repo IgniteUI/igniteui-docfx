@@ -131,7 +131,7 @@ In this article we learned how to use and configure the [`IgxToastComponent`]({e
 
 Styles:
 
-* [`IgxToastComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-toast-theme)
+* [`IgxToastComponent Styles`]({environment:sassApiUrl}/index.html#function-toast-theme)
 
 ###Additional Resources
 

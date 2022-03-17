@@ -152,7 +152,7 @@ When the combobox is bound to remote data, setting value/selected items through 
 <div class="divider--half"></div>
 
 * [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html)
-* [IgxComboComponent Styles]({environment:sassApiUrl}/index.html#function-igx-combo-theme)
+* [IgxComboComponent Styles]({environment:sassApiUrl}/index.html#function-combo-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>

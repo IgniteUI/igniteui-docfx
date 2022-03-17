@@ -112,10 +112,10 @@ export class AppModule {}
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```   
 
-次に、[`igx-ripple-theme`]({environment:sassApiUrl}/index.html#function-igx-ripple-theme) を拡張し、必要に応じてリップルをカスタマイズするために必要なパラメーターを受け入れる新しいテーマを作成します。
+次に、[`ripple-theme`]({environment:sassApiUrl}/index.html#function-ripple-theme) を拡張し、必要に応じてリップルをカスタマイズするために必要なパラメーターを受け入れる新しいテーマを作成します。
 
 ```scss
-$custom-ripple-theme: igx-ripple-theme(
+$custom-ripple-theme: ripple-theme(
   $color: #217346
 );
 ```  
@@ -125,7 +125,7 @@ $custom-ripple-theme: igx-ripple-theme(
 次に Ripple のカスタム テーマを渡します。
 
 ```scss
-@include igx-css-vars($custom-ripple-theme);
+@include css-vars($custom-ripple-theme);
 ```
 
 ### コンポーネント テーマ オーバーライドの使用
@@ -138,7 +138,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 :host {
     ::ng-deep {
         // Custom ripple theme を `igx-ripple` ミックスインに渡します
-        @include igx-ripple($custom-ripple-theme);
+        @include ripple($custom-ripple-theme);
     }
 }
 ```
@@ -159,7 +159,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 <div class="divider--half"></div>
 
 * [IgxRippleDirective]({environment:angularApiUrl}/classes/igxrippledirective.html)
-* [IgxRipple スタイル]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
+* [IgxRipple スタイル]({environment:sassApiUrl}/index.html#function-ripple-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

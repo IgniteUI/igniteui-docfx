@@ -108,7 +108,6 @@ Ignite UI for Angular の Angular UI グリッドには、グループ フッタ
     <igx-column field="Grammy Nominations" [hasSummary]='true' [dataType]="'number'" [summaries]="mySummary"></igx-column>
     <igx-column field="Grammy Awards" [hasSummary]='true' [dataType]="'number'"></igx-column>
 </igx-hierarchical-grid>
-
 ```
 }
 特定の列や列のリストを有効または無効にする他の方法として **@@igSelector** のパブリック メソッド [`enableSummaries`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#enablesummaries)/[`disableSummaries`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#disablesummaries) を使用する方法があります。
@@ -201,6 +200,7 @@ class MySummary extends IgxNumberSummaryOperand {
     constructor() {
         super();
     }
+
     public operate(data?: any[]): IgxSummaryResult[] {
         const result = super.operate(data);
         result.push({
@@ -224,7 +224,6 @@ interface IgxSummaryResult {
     summaryResult: any;
 }
 ```
-
 以下の[「すべてのデータにアクセスするカスタム集計」](#すべての-@@igComponent-データにアクセスするカスタム集計)セクションを参照してください。
 
 > [!NOTE]
@@ -325,7 +324,52 @@ class MySummary extends IgxNumberSummaryOperand {
 
 }
 
-### 集計のフォーマット
+### 集計テンプレート
+`igxSummary` は、列の集計の結果をコンテキストとして提供する列の集計を対象としています。
+
+```html
+<igx-column ... [hasSummary]="true">
+    <ng-template igxSummary let-summaryResults>
+        <span> My custom summary template</span>
+        <span>{{ summaryResults[0].label }} - {{ summaryResults[0].summaryResult }}</span>
+    </ng-template>
+</igx-column>
+```
+
+デフォルトの集計が定義されている場合、集計領域の高さは、集計の数が最も多い列とグリッドの表示密度に応じてデザインにより計算されます。[summaryRowHeight]({environment:angularApiUrl}/classes/igxgridcomponent.html#summaryRowHeight) 入力プロパティを使用して、デフォルト値をオーバーライドします。引数として数値が必要であり、falsy の値を設定すると、グリッド フッターのデフォルトのサイズ設定動作がトリガーされます。
+
+> [!NOTE]
+> 列の集計テンプレートは、列 [summaryTemplate]({environment:angularApiUrl}/classes/igxcolumncomponent.html#summaryTemplate) プロパティを必要な TemplateRef に設定することにより、API を介して定義できます。
+
+
+@@if (igxName === 'IgxGrid') {
+
+<code-view style="height:650px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/grid/grid-summary-template" >
+</code-view>
+
+}
+@@if (igxName === 'IgxTreeGrid') {
+
+<code-view style="height:650px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-summary-template" >
+</code-view>
+
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+
+<code-view style="height:650px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hgrid-summary-template" >
+</code-view>
+
+}
+
+
+
+## 集計のフォーマット
 デフォルトでは、組み込みの集計オペランドによって生成される集計結果は、グリッド [`locale`]({environment:angularApiUrl}/classes/igxgridcomponent.html#locale) および列 [`pipeArgs`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#pipeArgs) に従ってローカライズおよびフォーマットされます。カスタム オペランドを使用する場合、`locale` と `pipeArgs` は適用されません。集計結果のデフォルトの外観を変更する場合は、[`summaryFormatter`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#summaryFormatter) プロパティを使用してフォーマットできます。
 
 ```typescript
@@ -445,10 +489,10 @@ public dateSummaryFormat(summary: IgxSummaryResult, summaryOperand: IgxSummaryOp
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単な方法は、[`igx-grid-summary-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-summary-theme) を拡張する新しいテーマを作成し、`$background-color`, `$focus-background-color`、`$label-color`, `$result-color`、`$pinned-border-width`、`$pinned-border-style`、および `$pinned-border-color` パラメーターを受け取る方法です。
+最も簡単な方法は、[`grid-summary-theme`]({environment:sassApiUrl}/index.html#function-grid-summary-theme) を拡張する新しいテーマを作成し、`$background-color`, `$focus-background-color`、`$label-color`, `$result-color`、`$pinned-border-width`、`$pinned-border-style`、および `$pinned-border-color` パラメーターを受け取る方法です。
 
 ```scss
-$custom-theme: igx-grid-summary-theme(
+$custom-theme: grid-summary-theme(
     $background-color: #e0f3ff,
     $focus-background-color: rgba( #94d1f7, .3 ),
     $label-color: #e41c77,
@@ -461,7 +505,7 @@ $custom-theme: igx-grid-summary-theme(
 最後にそれぞれのテーマを持つコンポーネント ミックスインを**含めます**。
 
 ```scss
-@include igx-grid-summary($custom-theme);
+@include grid-summary($custom-theme);
 ```
 
 >[!NOTE]
@@ -470,7 +514,7 @@ $custom-theme: igx-grid-summary-theme(
  ```scss
 :host {
     ::ng-deep {
-        @include igx-grid-summary($custom-theme);
+        @include grid-summary($custom-theme);
     }
 }
 ```
@@ -485,20 +529,20 @@ $custom-theme: igx-grid-summary-theme(
 $blue-color: #7793b1;
 $green-color: #00ff2d;
 
-$my-custom-palette: igx-palette($primary: $blue-color, $secondary: $green-color);
+$my-custom-palette: palette($primary: $blue-color, $secondary: $green-color);
 ```
 
 また [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取り出すことができます。
 
 ```scss
-$custom-theme: igx-grid-summary-theme(
-    $background-color: igx-color($my-custom-palette, "primary", 700),
-    $focus-background-color: igx-color($my-custom-palette, "primary", 800),
-    $label-color: igx-color($my-custom-palette, "secondary", 500),
-    $result-color: igx-color($my-custom-palette, "grays", 900),
+$custom-theme: grid-summary-theme(
+    $background-color: color($my-custom-palette, "primary", 700),
+    $focus-background-color: color($my-custom-palette, "primary", 800),
+    $label-color: color($my-custom-palette, "secondary", 500),
+    $result-color: color($my-custom-palette, "grays", 900),
     $pinned-border-width: 2px,
     $pinned-border-style: dotted,
-    $pinned-border-color: igx-color($my-custom-palette, "secondary", 500)
+    $pinned-border-color: color($my-custom-palette, "secondary", 500)
 );
 ```
 
@@ -537,7 +581,7 @@ $my-custom-schema: extend($light-schema,
 );
 
 // Defining our custom theme with the custom schema
-$custom-theme: igx-grid-summary-theme(
+$custom-theme: grid-summary-theme(
     $palette: $my-custom-palette,
     $schema: $my-custom-schema
 );
@@ -579,8 +623,8 @@ $custom-theme: igx-grid-summary-theme(
 ## API リファレンス
 
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
-* [@@igxNameSummaries スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-summary-theme)
+* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-grid-theme)
+* [@@igxNameSummaries スタイル]({environment:sassApiUrl}/index.html#function-grid-summary-theme)
 * [IgxSummaryOperand]({environment:angularApiUrl}/classes/igxsummaryoperand.html)
 * [IgxNumberSummaryOperand]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html)
 * [IgxDateSummaryOperand]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html)
@@ -605,5 +649,5 @@ $custom-theme: igx-grid-summary-theme(
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語) ](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語) ](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

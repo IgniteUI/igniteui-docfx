@@ -222,10 +222,10 @@ Badge のスタイル設定は、すべてのテーマ関数とコンポーネ�
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単な方法は、[`igx-badge-theme`]({environment:sassApiUrl}/index.html#function-igx-badge-theme) を拡張する新しいテーマを作成し、バッジの項目をスタイル設定するいくつかのパラメーターを受け取る方法です。
+最も簡単な方法は、[`badge-theme`]({environment:sassApiUrl}/index.html#function-badge-theme) を拡張する新しいテーマを作成し、バッジの項目をスタイル設定するいくつかのパラメーターを受け取る方法です。
 
 ```scss
-$custom-badge-theme: igx-badge-theme(
+$custom-badge-theme: badge-theme(
     $border-color: white,
     $border-width: 1px,
     $icon-color: white,
@@ -243,7 +243,7 @@ $custom-badge-theme: igx-badge-theme(
 `$legacy-support` が `true` に設定されている場合、**コンポーネントのテーマ**を以下のように含めます。
 
 ```scss
- @include igx-badge($custom-badge-theme);
+ @include badge($custom-badge-theme);
 ```
 >[!NOTE]
 >コンポーネントが [`Emulated`](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
@@ -251,7 +251,7 @@ $custom-badge-theme: igx-badge-theme(
 ```scss
 :host {
      ::ng-deep {
-        @include igx-badge($custom-badge-theme);
+        @include badge($custom-badge-theme);
     }
 }
 ```
@@ -261,7 +261,7 @@ $custom-badge-theme: igx-badge-theme(
 `$legacy-support` が `false` (デフォルト) に設定されている場合、**css 変数** を以下のように含めます。
 
 ```scss
-@include igx-css-vars($custom-badge-theme);
+@include css-vars($custom-badge-theme);
 ```
 
 >[!NOTE]
@@ -269,7 +269,7 @@ $custom-badge-theme: igx-badge-theme(
 
 ```scss
 :host {
-    @include igx-css-vars($custom-badge-theme);
+    @include css-vars($custom-badge-theme);
 }
 ```
 
@@ -289,13 +289,13 @@ $custom-badge-theme: igx-badge-theme(
 
 * [IgxAvatarComponent]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
 * [IgxBadgeComponent]({environment:angularApiUrl}/classes/igxbadgecomponent.html)
-* [IgxBadgeComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-badge-theme)
+* [IgxBadgeComponent スタイル]({environment:sassApiUrl}/index.html#function-badge-theme)
 * [IgxListComponent]({environment:angularApiUrl}/classes/igxlistcomponent.html)
 * [IgxListItemComponent]({environment:angularApiUrl}/classes/igxlistitemcomponent.html)
 * [IgxBadgeType]({environment:angularApiUrl}/index.html#IgxBadgeType)
 
 ## テーマの依存関係
-* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-icon-theme)
 
 
 ## その他のリソース

@@ -72,7 +72,7 @@ public loadChildren = (parentID: any, done: (children: any[]) => void) => {
 <div class="divider--half"></div>
 
 * [IgxTreeGridComponent]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)
-* [IgxGridComponent 스타일]({environment:sassApiUrl}/#function-igx-grid-theme)
+* [IgxGridComponent 스타일]({environment:sassApiUrl}/#function-grid-theme)
 
 ### 추가 리소스
 

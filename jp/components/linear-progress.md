@@ -73,6 +73,15 @@ export class AppModule {}
 ### 不確定のプログレス
 正確に決定していないプロセスをトラックしたい場合、[`indeterminate`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#indeterminate) プロパティを `true` に設定できます。
 
+### アニメーション期間
+[`animationDuration`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#animationDuration) 入力プロパティは、アニメーション サイクルにかかる時間を指定するために使用されます。
+
+次の例では、アニメーションの継続時間を 5 秒に設定しています。
+
+```html
+<igx-linear-bar [striped]="false" [value]="100" [animationDuration]="5000"></igx-linear-bar>
+```
+
 ### Text プロパティ
 
 [`textAlign`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#textalign) プロパティを使用してテキストを配置できます。指定できる値は `left`、`center`、`right` です。
@@ -211,10 +220,10 @@ public decrementProgress() {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単な方法として、[`igx-progress-linear-theme`]({environment:sassApiUrl}/index.html#function-igx-progress-linear-theme) を拡張し、`$track-color`、`$fill-color-default` および `$text-color パラメーターを受け取る新しいテーマを作成する方法があります。
+最も簡単な方法として、[`progress-linear-theme`]({environment:sassApiUrl}/index.html#function-progress-linear-theme) を拡張し、`$track-color`、`$fill-color-default` および `$text-color パラメーターを受け取る新しいテーマを作成する方法があります。
 
 ```scss
-$custom-theme: igx-progress-linear-theme(
+$custom-theme: progress-linear-theme(
     $track-color: #D3D3D3,
     $fill-color-default: #ECAA53,
     $text-color: #ECAA53
@@ -230,7 +239,7 @@ $custom-theme: igx-progress-linear-theme(
 `$legacy-support` が `true` に設定されている場合、**コンポーネントのテーマ**を以下のように含めます。
 
 ```scss
- @include igx-progress-linear($custom-theme);
+ @include progress-linear($custom-theme);
 ```
 
 >[!NOTE]
@@ -239,7 +248,7 @@ $custom-theme: igx-progress-linear-theme(
 ```scss
 :host {
      ::ng-deep {
-        @include igx-progress-linear($custom-theme);
+        @include progress-linear($custom-theme);
     }
 }
 ```
@@ -249,7 +258,7 @@ $custom-theme: igx-progress-linear-theme(
 `$legacy-support` が `false` (デフォルト) に設定されている場合、**css 変数** を以下のように含めます。
 
 ```scss
-@include igx-css-vars($custom-theme);
+@include css-vars($custom-theme);
 ```
 
 >[!NOTE]
@@ -257,7 +266,7 @@ $custom-theme: igx-progress-linear-theme(
 
 ```scss
 :host {
-    @include igx-css-vars($custom-theme);
+    @include css-vars($custom-theme);
 }
 ```
 
@@ -274,5 +283,5 @@ $custom-theme: igx-progress-linear-theme(
 <div class="divider--half"></div>
 
 * [IgxLinearProgressBarComponent]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html)
-* [IgxLinearProgressBarComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-progress-linear-theme)
+* [IgxLinearProgressBarComponent スタイル]({environment:sassApiUrl}/index.html#function-progress-linear-theme)
 * [IgxTextAlign]({environment:angularApiUrl}/enums/igxtextalign.html)

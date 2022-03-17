@@ -79,17 +79,20 @@ Ignite UI for Angular の @@igComponent のコンポーネントは、標準ド�
 
 @@if (igxName === 'IgxGrid') {
 ```html
-<igx-column [field]="'Category'" [movable]="true"></igx-column>
+<igx-grid [moving]="true"></igx-grid>
 ```
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```html
-<igx-column [field]="'Title'" [movable]="true"></igx-column>
+<igx-tree-grid [moving]="true"></igx-tree-grid>
 ```
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-column #companyname field="CompanyName" [movable]="true" width="150px">
+<igx-hierarchical-grid [moving]="true">
+    ...
+    <igx-row-island [moving]="true"></igx-row-island>
+</igx-hierarchical-grid>
 ```
 }
 
@@ -123,9 +126,9 @@ API を使用する時、操作が成功した場合、[`columnMovingEnd`]({envi
 
 @@if (igxName === 'IgxGrid') {
 ```html
-<igx-grid #dataGrid [data]="data" [autoGenerate]="false" (columnMovingEnd)="onColumnMovingEnd($event)">
-    <igx-column [field]="'Category'" [movable]="true"></igx-column>
-    <igx-column [field]="'Change On Year(%)'" [dataType]="'number'" [movable]="true" ></igx-column>
+<igx-grid #dataGrid [data]="data" [autoGenerate]="false" [moving]="true" (columnMovingEnd)="onColumnMovingEnd($event)">
+    <igx-column [field]="'Category'"></igx-column>
+    <igx-column [field]="'Change On Year(%)'" [dataType]="'number'"></igx-column>
 </igx-grid>
 ```
 
@@ -140,9 +143,9 @@ public onColumnMovingEnd(event) {
 
 @@if (igxName === 'IgxTreeGrid') {
 ```html
-<igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="false" (columnMovingEnd)="onColumnMovingEnd($event)">
-    <igx-column [field]="'Name'" dataType="string" [movable]="true" width="250px"></igx-column>
-    <igx-column [field]="'Title'" dataType="string" [movable]="true" width="250px"></igx-column>
+<igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="false" [moving]="true" (columnMovingEnd)="onColumnMovingEnd($event)">
+    <igx-column [field]="'Name'" dataType="string" width="250px"></igx-column>
+    <igx-column [field]="'Title'" dataType="string" width="250px"></igx-column>
 </igx-tree-grid>
 ```
 
@@ -156,9 +159,9 @@ public onColumnMovingEnd(event) {
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid #hierarchicalGrid [data]="data" [autoGenerate]="false" (columnMovingEnd)="onColumnMovingEnd($event)">
-    <igx-column [field]="'Country'" [movable]="true"></igx-column>
-    <igx-column [field]="'Phone'" [dataType]="'number'" [movable]="true" ></igx-column>
+<igx-hierarchical-grid #hierarchicalGrid [data]="data" [autoGenerate]="false" [moving]="true" (columnMovingEnd)="onColumnMovingEnd($event)">
+    <igx-column [field]="'Country'"></igx-column>
+    <igx-column [field]="'Phone'" [dataType]="'number'"></igx-column>
 </igx-hierarchical-grid>
 ```
 
@@ -182,11 +185,11 @@ public onColumnMovingEnd(event) {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-最も簡単な方法は、[`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) を拡張して `$ghost-header-background`、`$ghost-header-text-color`、`$ghost-header-icon-color` パラメーターを受け入れる新しいテーマを作成します。
+最も簡単な方法は、[`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) を拡張して `$ghost-header-background`、`$ghost-header-text-color`、`$ghost-header-icon-color` パラメーターを受け入れる新しいテーマを作成します。
 
 ```scss
 // Define dark theme for the column moving
-$dark-grid-column-moving-theme: igx-grid-theme(
+$dark-grid-column-moving-theme: grid-theme(
     $ghost-header-text-color: #F4D45C,
     $ghost-header-background: #575757,
     $ghost-header-icon-color: #f4bb5c
@@ -196,7 +199,7 @@ $dark-grid-column-moving-theme: igx-grid-theme(
 最後の手順は、それぞれのテーマを持つコンポーネント ミックスインを**含める**ことです。
 
 ```scss
-@include igx-grid($dark-grid-column-moving-theme);
+@include grid($dark-grid-column-moving-theme);
 ```
 
 > [!NOTE]
@@ -205,7 +208,7 @@ $dark-grid-column-moving-theme: igx-grid-theme(
 ```scss
 :host {
     ::ng-deep {
-        @include igx-grid($dark-grid-column-moving-theme);
+        @include grid($dark-grid-column-moving-theme);
     }
 }
 ```
@@ -220,23 +223,23 @@ $dark-grid-column-moving-theme: igx-grid-theme(
 $yellow-color: #F4D45C;
 $black-color: #575757;
 
-$dark-palette: igx-palette($primary: $yellow-color, $secondary: $black-color);
+$dark-palette: palette($primary: $yellow-color, $secondary: $black-color);
 ```
 
 次に [**igx-color**]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取り出すことができます。
 
 ```scss
-$dark-grid-column-moving-theme: igx-grid-theme(
+$dark-grid-column-moving-theme: grid-theme(
     $palette: $dark-palette,
-    $ghost-header-text-color: igx-color($dark-palette, "primary", 400),
-    $ghost-header-background: igx-color($dark-palette, "secondary", 200),
-    $ghost-header-icon-color:  igx-color($dark-palette, "primary", 500)
+    $ghost-header-text-color: color($dark-palette, "primary", 400),
+    $ghost-header-background: color($dark-palette, "secondary", 200),
+    $ghost-header-icon-color: color($dark-palette, "primary", 500)
 );
 ```
 
 
 > [!NOTE]
-> igx-color および igx-palette は、色を生成および取得するための重要な機能です。使い方の詳細については[パレット](../themes/palettes.md)のトピックを参照してください。
+>color および palette は、色を生成および取得するための重要な機能です。使い方の詳細については[パレット](../themes/palettes.md)のトピックを参照してください。
 
 ### スキーマの使用
 
@@ -249,13 +252,13 @@ $dark-grid-column-moving-theme: igx-grid-theme(
 $dark-grid-column-moving-schema: extend($_light-grid,
         (
             ghost-header-text-color:(
-                igx-color: ("primary", 400)
+               color: ("primary", 400)
             ),
             ghost-header-background:(
-                igx-color: ("secondary", 200)
+               color: ("secondary", 200)
             ),
             ghost-header-icon-color:(
-                igx-color:( "primary", 500)
+               color:( "primary", 500)
             )
         )
 );
@@ -266,11 +269,11 @@ $dark-grid-column-moving-schema: extend($_light-grid,
 ```scss
 // Extending the global dark-schema
 $custom-light-schema: extend($light-schema,(
-    igx-grid: $dark-grid-column-moving-schema,
+   grid: $dark-grid-column-moving-schema,
 ));
 
 // Defining dark-grid-theme with the global dark schema
-$dark-grid-column-moving-theme: igx-grid-theme(
+$dark-grid-column-moving-theme: grid-theme(
   $palette: $dark-palette,
   $schema: $custom-light-schema
 );

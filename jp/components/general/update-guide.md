@@ -17,11 +17,18 @@ Ignite UI for Angular パッケージは `ng update` Schematics で自動バー�
 ng update
 ```
 
-**Ignite UI for Angular** パッケージを更新するには、以下のコマンドを実行してください。
+**Ignite UI for Angular** ライセンス版パッケージをアップデートする場合は、以下のコマンドを実行してください。
+
+```cmd
+ng update @infragistics/igniteui-angular
+```
+
+**Ignite UI for Angular** 無料パッケージをアップデートする場合は、以下のコマンドを実行してください。
+
 ```cmd
 ng update igniteui-angular
 ```
-`igniteui-angular` の更新時は、`@angular/core`、`@angular/cli` および `igniteui-cli` パッケージを一致するバージョンにアップデートしてください。 
+`@infragistics/igniteui-angular` または `igniteui-angular` を更新するときは、`@angular/core`、`@angular/cli` および `igniteui-cli` パッケージを一致するバージョンに更新してください。
 **Ignite UI CLI** パッケージをアップデートする場合は、以下のコマンドを実行してください。
 ```cmd
 ng update igniteui-cli
@@ -42,6 +49,26 @@ ng update @angular/cli
 
 例: 6.2.4 から 7.1.0 にアップデートする場合、[6.x .. から] セクションから始めて変更を適用していきます。
 
+## 13.0.x から 13.1.x の場合:
+
+### 一般
+- `igxGrid`、`igxHierarchicalGrid`、`igxTreeGrid`
+    - **重大な変更** - 列の `movable` プロパティは非推奨になりました。代わりに、公開されたグリッドの `moving` プロパティを使用してください:
+    ```typescript
+    <igx-grid [moving]="true">
+    </igx-grid>
+    ```
+- `IgxHierarchicalGrid`
+    - **重大な変更** - igxHierarchicalGrid および igxRowIsland コンポーネントのパブリック API サービス `hgridAPI` は `gridAPI` に名前が変更されました。
+- `IgxToast`
+    - **重大な変更** - `igx-toast` で非推奨になった `position` プロパティは削除されました。次のように `positionSettings` プロパティを使用することをお勧めします:
+    ```typescript
+    @ViewChild('toast', { static: true }) public toast: IgxToastComponent;
+
+    public ngOnInit(): void {
+        this.toast.positionSettings.verticalDirection = VerticalAlignment.Middle;
+    }
+    ```
 ## 12.2.x から 13.0.x の場合:
 
 ### 一般
@@ -54,7 +81,7 @@ ng update @angular/cli
     - **重大な変更** - `rowSelected` イベントは、その機能をより適切に反映するために、`rowSelectionChanging` に名前が変更されました。
     - **重大な変更** - `columnSelected` イベントは、その機能をより適切に反映するために、`columnSelectionChanging` に名前が変更されました。
     - **重大な変更** - `columnsCollection` が削除されました。代わりに `columns` を使用してください。特定の場合に `columns` が空の配列を返す場合は、`ViewChildren`を使用して列にクエリを実行し、 `ngAfterViewInit` の列にアクセスします。
-        ```html
+        ```typescript
         @ViewChildren(IgxColumnComponent, { read: IgxColumnComponent })
         public columns: QueryList<IgxColumnComponent>;
         ```
@@ -192,48 +219,48 @@ ng update @angular/cli
 - 正しいパレットとコンポーネント スキーマがカスタム コンポーネントとグローバルテーマに渡されることを確認してください。グローバル暗いテーマを作成する場合、グレー色に明るい色合いを選択してください。例:
 
 ```scss
-$my-dark-palette: igx-palette(
-    $primary: olive, 
-    $secondary: yellow, 
+$my-dark-palette: palette(
+    $primary: olive,
+    $secondary: yellow,
     $grays: #fff
 );
 
-@include igx-dark-theme($palette: $my-dark-palette);
+@include dark-theme($palette: $my-dark-palette);
 ```
 
 同様に、明るいテーマはより暗い灰色の色調と明るいカラー スキーマを必要とします。
 
-グローバル テーマからコンポーネント テーマを除外していないが、`igx-css-vars` ミックスインを使用してカスタム置換テーマを作成する場合、テーマが正しいパレットと対応するスキーマに渡されることを確認してください。
+グローバル テーマからコンポーネント テーマを除外していないが、`css-vars` ミックスインを使用してカスタム置換テーマを作成する場合、テーマが正しいパレットと対応するスキーマに渡されることを確認してください。
 
 ```scss
-$my-custom-grid: igx-grid-theme(
+$my-custom-grid: grid-theme(
     $palette: $my-dark-palette,
     $schema: $dark-schema
 );
 
-@include igx-css-vars($my-custom-grid);
+@include css-vars($my-custom-grid);
 ```
- 
+
 * 除外されたコンポーネント テーマ:
 
 グローバル テーマからコンポーネント テーマを除外し、カスタム置換テーマを作成した場合、コンポーネント ミックスインが含まれ、正しいコンポーネント テーマが渡されることを確認してください。
 
 ```scss
-$my-dark-palette: igx-palette(
+$my-dark-palette: palette(
     ...
     $exclude: ('igx-grid')
 );
 
-$my-custom-grid: igx-grid-theme(
+$my-custom-grid: grid-theme(
     $palette: $my-dark-palette,
     $schema: $dark-schema
 );
 
-// Ensure igx-grid is included:
-@include igx-grid($my-custom-grid);
+// Ensure grid is included:
+@include grid($my-custom-grid);
 ```
 
-カスタム コンポーネント テーマがグローバル `styles.scss` 以外の別のコンポーネント Sass ファイルで宣言されている場合は、`igx-core` ミックスインも含まれていることを確認してください。
+カスタム コンポーネント テーマがグローバル `styles.scss` 以外の別のコンポーネント Sass ファイルで宣言されている場合は、`core` ミックスインも含まれていることを確認してください。
 
 ```scss
 // free version
@@ -243,16 +270,16 @@ $my-custom-grid: igx-grid-theme(
 @use '@infragistics/igniteui-angular/theming' as *;
 
 // Include the core module mixin.
-@include igx-core();
+@include core();
 
 // Create your theme.
-$my-custom-grid: igx-grid-theme(
+$my-custom-grid: grid-theme(
     $palette: $my-dark-palette,
     $schema: $dark-schema
 );
 
 // Include your custom theme styles.
-@include igx-grid($my-custom-grid);
+@include grid($my-custom-grid);
 ```
 
 Sass Moule システムについて理解を深めるために、[Miriam Suzanne](https://css-tricks.com/author/miriam/) の[記事 (英語)](https://css-tricks.com/introducing-sass-modules/) を参照ください。
@@ -305,7 +332,7 @@ Sass Moule システムについて理解を深めるために、[Miriam Suzanne
 
     次から:
     ```html
-    <igx-paginator #paginator 
+    <igx-paginator #paginator
         [pagerEnabled]="!isPagerDisabled" [pagerHidden]="isPagerHidden"
         [dropdownHidden]="isDropdownHidden">
     </igx-paginator>
@@ -409,46 +436,46 @@ $__legacy-libsass: true;
 ## 11.1.x から 12.0.x の場合:
 ### テーマ:
 * 重大な変更:
-    * `IgxAvatar` テーマが簡略化されました。テーマ パラメーター (`igx-avatar-theme`) の数が大幅に削減され、接頭辞付きのパラメーター (`icon-*`, `initials-*`, `image-*`) と接尾辞付きのパラメーター (`border-radius-*`) が含まれなくなりました。`ng update` で実行された更新は、既存のボタン テーマを移行しますが、接頭辞付きと接尾辞付きのパラメーターがないことを考慮して、いくつかの追加の調整が必要になる場合があります。
+    * `IgxAvatar` テーマが簡略化されました。テーマ パラメーター (`avatar-theme`) の数が大幅に削減され、接頭辞付きのパラメーター (`icon-*`, `initials-*`, `image-*`) と接尾辞付きのパラメーター (`border-radius-*`) が含まれなくなりました。`ng update` で実行された更新は、既存のボタン テーマを移行しますが、接頭辞付きと接尾辞付きのパラメーターがないことを考慮して、いくつかの追加の調整が必要になる場合があります。
 
     既存のタイプ固有のアバター テーマを以下のように変更する必要があります。
 
     例えば、次の例は
 
         ```scss
-        $avatar-theme: igx-avatar-theme(
+        $avatar-theme: avatar-theme(
             $initials-background: blue,
             $initials-color: orange,
             $icon-background: blue,
             $icon-color: orange,
         );
 
-        @include igx-avatar($avatar-theme);
+        @include avatar($avatar-theme);
         ```
 
     このとおりに変換する必要があります。
 
         ```scss
-        $initials-avatar: igx-avatar-theme(
+        $initials-avatar: avatar-theme(
             $background: blue,
             $color: orange,
         );
 
-        $icon-avatar: igx-avatar-theme(
+        $icon-avatar: avatar-theme(
             $background: blue,
             $color: orange,
         );
 
         .initials-avatar {
-            @include igx-avatar($initials-avatar);
+            @include avatar($initials-avatar);
         }
 
         .icon-avatar {
-            @include igx-avatar($icon-avatar);
+            @include avatar($icon-avatar);
         }
         ```
 
-    * `IgxButton` テーマが簡略化されました。テーマ パラメーター (`igx-button-theme`) 数が大幅に削減され、接頭辞付きのパラメーター (`flat-*`、`raised-*` など) が含まれなくなりました。`ng update` で実行された更新は、既存のボタン テーマを移行しますが、接頭辞付きのパラメーターがないことを考慮して、いくつかの追加の調整が必要になる場合があります。 
+    * `IgxButton` テーマが簡略化されました。テーマ パラメーター (`button-theme`) 数が大幅に削減され、接頭辞付きのパラメーター (`flat-*`、`raised-*` など) が含まれなくなりました。`ng update` で実行された更新は、既存のボタン テーマを移行しますが、接頭辞付きのパラメーターがないことを考慮して、いくつかの追加の調整が必要になる場合があります。 
 
     以下のコード スニペットと同じ結果を得るには: 
 
@@ -457,12 +484,12 @@ $__legacy-libsass: true;
         <button igxButton="outlined">Outlined button</button>
         ```
         ```scss
-        $my-button-theme: igx-button-theme(
+        $my-button-theme: button-theme(
             $raised-background: red,
             $outlined-outline-color: green
         );
 
-        @include igx-css-vars($my-button-theme);
+        @include css-vars($my-button-theme);
         ```
     ボタン タイプごとに個別のテーマを作成し、CSS セレクターにスコープする必要があります。
         ```html
@@ -475,43 +502,43 @@ $__legacy-libsass: true;
         ```
 
         ```scss
-        $my-raised-button: igx-button-theme(
+        $my-raised-button: button-theme(
             $background: red
         );
 
-        $my-outlined-button: igx-button-theme(
+        $my-outlined-button: button-theme(
             $border-color: red
         );
 
         .my-raised-btn {
-            @include igx-css-vars($my-raised-button);
+            @include css-vars($my-raised-button);
          }
 
         .my-outlined-btn {
-            @include igx-css-vars($my-outlined-button);
+            @include css-vars($my-outlined-button);
         }
         ```
-ご覧のとおり、`igx-button-theme` パラメーターはボタン タイプごとに同じ名前になっているため、タイプごとに異なる色を使用するには、ボタン テーマのスコープを CSS セレクターに設定する必要があります。
+ご覧のとおり、`button-theme` パラメーターはボタン タイプごとに同じ名前になっているため、タイプごとに異なる色を使用するには、ボタン テーマのスコープを CSS セレクターに設定する必要があります。
 
-ここでは、`igx-button-theme` のすべての[利用可能なプロパティ](https://jp.infragistics.com/products/ignite-ui-angular/docs/sass/latest/index.html#function-igx-button-theme)を確認できます。
+ここでは、`button-theme` のすべての[利用可能なプロパティ](https://jp.infragistics.com/products/ignite-ui-angular/docs/sass/latest/index.html#function-button-theme)を確認できます。
 
-* `igx-typography` ミックスインは `igx-core` に暗黙的に含まれなくなりました。タイポグラフィ スタイルを使用するには、`igx-core` の後と `igx-theme` の前に ミックスインを明示的に含める必要があります。
+* `typography` ミックスインは `core` に暗黙的に含まれなくなりました。タイポグラフィ スタイルを使用するには、`core` の後と `theme` の前に ミックスインを明示的に含める必要があります。
 
     ```scss
     // in styles.scss
 
-    @include igx-core();
+    @include core();
 
-    @include igx-typography(
+    @include typography(
         $font-family: $material-typeface,
         $type-scale: $material-type-scale
     );
 
-    @include igx-theme();
+    @include theme();
     ```
 
     > [!IMPORTANT]
-    > `igx-core` ミックスインは常に最初に含める必要があります。
+    > `core` ミックスインは常に最初に含める必要があります。
 
     Ignite UI for Angular に含まれるテーマごとに、使用できる特定の `font-family` 変数と `type-scale` 変数を提供します。
 
@@ -609,7 +636,6 @@ grid.getRowByIndex(0).expanded = false;
 * *onRowPinning* によって発行されたイベント引数の *row* プロパティ、および *onRowDragStart* によって発行されたイベント引数の *dragData* プロパティ、*onRowDragEnd* は [`RowType`]({environment:angularApiUrl}/interfaces/rowtype.html) を実装しています。 
 * *ng update* は、*IgxGridRowComponent*、*IgxTreeGridRowComponent*、*IgxHierarchicalRowComponent*、*IgxGridGroupByRowComponent* のインポート、入力、キャストなどの使用方法のほとんどが移行されます上記のいずれかを使用するコード内の場所が移行されない場合は、入力/キャストを削除するか、[`RowType`]({environment:angularApiUrl}/interfaces/rowtype.html) で変更してください。
 * *getRowByIndex* は、そのインデックスの行が集計行である場合、[`RowType`]({environment:angularApiUrl}/interfaces/rowtype.html) オブジェクトを返すようになりました (以前は *undefined* を返していました)。*row.isSummaryRow* および *row.isGroupByRow* は、インデックスの行が集計行またはグループ行の場合に true を返します。
-
 ### IgxInputGroupComponent
 * `disabled` プロパティは削除されました。入力グループの状態は常に基になる `igxInput` によって管理されていたため、このプロパティは誤解を招く可能性がありました。
     * `ng update` を実行すると、テンプレートで `[disabled]` が `@Input` として使用されたすべてのインスタンスが処理されます。
@@ -852,7 +878,7 @@ import { HammerModule } from "@angular/platform-browser";
 ## 7.1.x から 7.2.x の場合:
 * `combo.value` と一緒に IgxCombo を使う場合、`combo.value` が唯一のゲッターであることに注意してください。
 * `IgxTextHighlightDirective` を使用している場合、`page` 入力プロパティは推奨されません。`IActiveHighlightInfo` インターフェイスの `rowIndex`、`columnIndex`、`page` プロパティも非推奨です。代わりに、`行`と`列`のオプション プロパティが追加されています。
-* `igx-button-theme` を使用する場合は、ボタンの種類ごとに `$button-roundness` が `$flat-border-radius`、`$raised-border-radius`、`$outline-border-radius`、`$fab-border-radius`、`$icon-border-radius` で置き換えられることに注意してください。
+* `button-theme` を使用する場合は、ボタンの種類ごとに `$button-roundness` が `$flat-border-radius`、`$raised-border-radius`、`$outline-border-radius`、`$fab-border-radius`、`$icon-border-radius` で置き換えられることに注意してください。
 
 ## 7.0.x から 7.1.x
  * アプリケーションで IgxGrid の集計を使用する場合、`IgxSummaryOperand.operate()` メソッドがからデータとともに順番に呼び出されて集計行に必要な高さを計算します。カスタム集計オペランドは、メソッドが常に適切な長さの IgxSummaryResult の配列を返します。

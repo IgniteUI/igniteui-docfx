@@ -121,7 +121,7 @@ Grid Excel エクスポーター:
 
 その他の使用されたコンポーネント:
 * [IgxGridComponent API]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [IgxGridComponent スタイル]({environment:sassApiUrl}/index.html#function-grid-theme)
 
 <div class="divider"></div>
 

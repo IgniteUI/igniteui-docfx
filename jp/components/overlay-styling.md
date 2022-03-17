@@ -14,7 +14,7 @@ _language: ja
 
 ## オーバーレイ コンポーネントのスタイル設定
 
-ほとんどの場合、[グローバル](themes/sass/global-themes.md) テーマのスタイルはオーバーレイ アウトレットの影響を受けません。例として、グローバル [`igx-css-vars`]({environment:sassApiUrl}/index.html#mixin-igx-css-vars) mixin で[スタイル設定された](drop-down.md#スタイル設定)ドロップダウンを見てみましょう。
+ほとんどの場合、[グローバル](themes/sass/global-themes.md) テーマのスタイルはオーバーレイ アウトレットの影響を受けません。例として、グローバル [`css-vars`]({environment:sassApiUrl}/index.html#mixin-css-vars) mixin で[スタイル設定された](drop-down.md#スタイル設定)ドロップダウンを見てみましょう。
 
 ```html
 <!-- overlay-styling.component.html -->
@@ -30,13 +30,13 @@ _language: ja
 
 // 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-```
 
-$my-drop-down-theme: igx-drop-down-theme(
+
+$my-drop-down-theme: drop-down-theme(
     $palette: $my-custom-palette
 );
 
-@include igx-css-vars($my-drop-down-theme);
+@include css-vars($my-drop-down-theme);
 ```
 
 グローバル スタイルはスコープされたルール下では生成されず、カプセル化の影響も受けないため、サービスがオーバーレイ アウトレットに移動した `igx-drop-down-item` など、ページ上の任意の要素と一致できます。
@@ -53,7 +53,7 @@ $my-drop-down-theme: igx-drop-down-theme(
 ```scss
 // overlay-styling.component.scss
 :host {
-    @include igx-css-vars($my-drop-down-theme);
+    @include css-vars($my-drop-down-theme);
 }
 ```
 
@@ -66,7 +66,7 @@ $my-drop-down-theme: igx-drop-down-theme(
 // overlay-styling.component.scss
 :host {
    ::ng-deep{ 
-        @include igx-drop-down($my-drop-down-theme);
+        @include drop-down($my-drop-down-theme);
     }
 }
 ```
@@ -100,7 +100,7 @@ export class OverlayStylingComponent {
 ## オーバーレイのスタイル設定
 
 `ViewEncapsulation` がオーバーレイの `outlet` プロパティとどのように連携するかを説明しました。次にオーバーレイ ラッパー自体のスタイルを設定する方法を示します。
-[`igx-overlay-theme`]({environment:sassApiUrl}/index.html#function-igx-overlay-theme) は、単一のプロパティ - `$background-color` を公開します。これは、オーバーレイが `modal: true` に設定されている場合、背景の色に影響します。
+[`overlay-theme`]({environment:sassApiUrl}/index.html#function-overlay-theme) は、単一のプロパティ - `$background-color` を公開します。これは、オーバーレイが `modal: true` に設定されている場合、背景の色に影響します。
 
 ### グローバル スタイル
 
@@ -108,11 +108,11 @@ export class OverlayStylingComponent {
 
 ```scss
 //  styles.scss
-$my-overlay-theme: igx-overlay-theme(
+$my-overlay-theme: overlay-theme(
   $background-color: rgba(0, 153, 255, 0.3)
 );
 
-@include igx-css-vars($my-overlay-theme);
+@include css-vars($my-overlay-theme);
 ```
 
 テーマの `$legacy-support` 変数が `true` に設定されている場合、オーバーレイのテーマ関数を使用してコンポーネントをスタイル設定します。
@@ -120,7 +120,7 @@ $my-overlay-theme: igx-overlay-theme(
 ```scss
 // styles.scss
 ...
-@include igx-overlay($my-overlay-theme);
+@include overlay($my-overlay-theme);
 ```        
 
 これで、**すべて**のモーダル オーバーレイの背景が紫色になります。
@@ -134,7 +134,7 @@ $my-overlay-theme: igx-overlay-theme(
 //  styles.scss
 ...
 .purple {
-    @include igx-css-vars($my-overlay-theme);
+    @include css-vars($my-overlay-theme);
 }
 ```
 
@@ -148,7 +148,7 @@ $my-overlay-theme: igx-overlay-theme(
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ...
 :host {
-    @include igx-css-vars($my-overlay-theme);
+    @include css-vars($my-overlay-theme);
 }
 ```
 
@@ -157,7 +157,7 @@ $my-overlay-theme: igx-overlay-theme(
 
 ## API リファレンス
 * [IgniteUI for Angular - テーマ ライブラリ](themes/index.md)
-* [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+* [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-overlay-theme)
 
 ## その他のリソース
 * [IgniteUI for Angular - テーマ ライブラリ](themes/index.md)

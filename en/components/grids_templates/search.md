@@ -378,12 +378,12 @@ Additional components and/or directives with relative APIs that were used:
 
 Styles:
 
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
-* [IgxInputGroupComponent Styles]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
-* [IgxIconComponent Styles]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
-* [IgxRippleDirective Styles]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
-* [IgxButtonDirective Styles]({environment:sassApiUrl}/index.html#function-igx-button-theme)
-* [IgxChipComponent Styles]({environment:sassApiUrl}/index.html#function-igx-chip-theme)
+* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-grid-theme)
+* [IgxInputGroupComponent Styles]({environment:sassApiUrl}/index.html#function-input-group-theme)
+* [IgxIconComponent Styles]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxRippleDirective Styles]({environment:sassApiUrl}/index.html#function-ripple-theme)
+* [IgxButtonDirective Styles]({environment:sassApiUrl}/index.html#function-button-theme)
+* [IgxChipComponent Styles]({environment:sassApiUrl}/index.html#function-chip-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>

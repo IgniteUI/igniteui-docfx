@@ -87,45 +87,45 @@ To apply a filter with different expressions, you can click the **Text filter**,
 
 ## Configure Menu Features
 
-Sorting, moving, pinning and hiding features can be removed from the filter menu using the corresponding inputs: [`sortable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortable), [`movable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#movable), [`selected`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selected), [`disablePinning`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disablepinning), [`disableHiding`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disablehiding).
+Sorting, pinning and hiding features can be removed from the filter menu using the corresponding inputs: [`sortable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortable), [`selected`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selected), [`disablePinning`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disablepinning), [`disableHiding`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disablehiding).
 
 @@if (igxName === 'IgxGrid') {
 ```html
-<igx-grid #grid1 [data]="data" [autoGenerate]="false" height="650px" width="100%" [allowFiltering]="true" [filterMode]="'excelStyleFilter'">
-    <igx-column field="ProductName" header="Product Name" [sortable]="true" [movable]="true" [dataType]="'string'">
+<igx-grid #grid1 [data]="data" [autoGenerate]="false" height="650px" width="100%" [moving]="true" [allowFiltering]="true" [filterMode]="'excelStyleFilter'">
+    <igx-column field="ProductName" header="Product Name" [sortable]="true" [dataType]="'string'">
     </igx-column>
-    <igx-column field="QuantityPerUnit" header="Quantity Per Unit" [sortable]="false" [disablePinning]="true" [disableHiding]="true" [movable]="false" [dataType]="'string'">
+    <igx-column field="QuantityPerUnit" header="Quantity Per Unit" [sortable]="false" [disablePinning]="true" [disableHiding]="true" [dataType]="'string'">
     </igx-column>
-    <igx-column field="UnitPrice" header="Unit Price" [disablePinning]="true" [disableHiding]="true" [sortable]="true" [movable]="true" [dataType]="'number'">
+    <igx-column field="UnitPrice" header="Unit Price" [disablePinning]="true" [disableHiding]="true" [sortable]="true" [dataType]="'number'">
     </igx-column>
-    <igx-column field="OrderDate" header="Order Date" [sortable]="false" [movable]="false" [dataType]="'date'" [formatter]="formatDate">
+    <igx-column field="OrderDate" header="Order Date" [sortable]="false"  [dataType]="'date'" [formatter]="formatDate">
     </igx-column>
-    <igx-column field="Discontinued" header="Discontinued" [sortable]="true" [movable]="true" [dataType]="'boolean'">
+    <igx-column field="Discontinued" header="Discontinued" [sortable]="true" [dataType]="'boolean'">
     </igx-column>
 </igx-grid>
 ```
 
 <div class="divider--half"></div>
 
-In the sample below **Product Name** and **Discontinued** columns have all four features enabled, **Quantity Per Unit** have all four disabled, **Unit Price** has only sorting and moving and **Order Date** has only pinning and hiding and all are [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable).
+In the sample below **Product Name** and **Discontinued** columns have all four features enabled, **Quantity Per Unit** have all three disabled, **Unit Price** has only sorting and **Order Date** has only pinning and hiding and all are [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable).
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```html
-<igx-tree-grid #treegrid1 [data]="data" [autoGenerate]="false" height="480px" width="100%" [allowFiltering]="true"
+<igx-tree-grid #treegrid1 [data]="data" [autoGenerate]="false" height="480px" width="100%" [moving]="true" [allowFiltering]="true"
     primaryKey="ID" foreignKey="ParentID" filterMode="excelStyleFilter">
     <igx-column field="ID" header="Product ID" [dataType]="'string'">
     </igx-column>
-    <igx-column field="Name" header="Product Name" [sortable]="true" [movable]="true" [dataType]="'string'">
+    <igx-column field="Name" header="Product Name" [sortable]="true" [dataType]="'string'">
     </igx-column>
-    <igx-column field="UnitPrice" header="Unit Price" [dataType]="'number'" [sortable]="false" [disablePinning]="true" [disableHiding]="true" [movable]="false">
+    <igx-column field="UnitPrice" header="Unit Price" [dataType]="'number'" [sortable]="false" [disablePinning]="true" [disableHiding]="true">
         <ng-template igxCell let-cell="cell" let-val>
             <span *ngIf="cell.row.data.UnitPrice == 0">-</span>
             <span *ngIf="cell.row.data.UnitPrice != 0">${{val}}</span>
         </ng-template>
     </igx-column>
-    <igx-column field="AddedDate" header="Added Date" [dataType]="'date'" [formatter]="formatDate" [sortable]="false" [movable]="false">
+    <igx-column field="AddedDate" header="Added Date" [dataType]="'date'" [formatter]="formatDate" [sortable]="false">
     </igx-column>
-    <igx-column field="Discontinued" header="Discontinued" [dataType]="'boolean'" [sortable]="true" [movable]="true">
+    <igx-column field="Discontinued" header="Discontinued" [dataType]="'boolean'" [sortable]="true">
         <ng-template igxCell let-cell="cell" let-val>
             <span *ngIf="cell.row.data.UnitPrice == 0">-</span>
             <img *ngIf="cell.row.data.UnitPrice != 0 && val" src="assets/images/grid/active.png" title="Continued" alt="Continued" />
@@ -137,13 +137,13 @@ In the sample below **Product Name** and **Discontinued** columns have all four 
 
 <div class="divider--half"></div>
 
-In the sample below 'Product Name' and 'Discontinued' columns have all four features enabled, 'Unit Price' have all four disabled, 'Added Date' has only pinning and hiding.
+In the sample below 'Product Name' and 'Discontinued' columns have all three features enabled, 'Unit Price' have all three disabled, 'Added Date' has only pinning and hiding.
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="false" [allowFiltering]='true' filterMode="excelStyleFilter"
+<igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="false" [moving]="true" [allowFiltering]='true' filterMode="excelStyleFilter"
     [height]="'650px'" [width]="'100%'" [rowHeight]="'65px'" #hierarchicalGrid>
-    <igx-column field="Artist" [filterable]='true' [sortable]="true" [movable]="true"></igx-column>
+    <igx-column field="Artist" [filterable]='true' [sortable]="true"></igx-column>
     <igx-column field="Photo" [filterable]='false'>
         <ng-template igxCell let-cell="cell">
             <div class="cell__inner_2">
@@ -152,7 +152,7 @@ In the sample below 'Product Name' and 'Discontinued' columns have all four feat
         </ng-template>
     </igx-column>
     <igx-column field="Debut" [filterable]='true' [disablePinning]="true" [disableHiding]="true"></igx-column>
-    <igx-column field="Grammy Nominations" [filterable]='true' [dataType]="'number'" [sortable]="false" [movable]="false"></igx-column>
+    <igx-column field="Grammy Nominations" [filterable]='true' [dataType]="'number'" [sortable]="false"></igx-column>
     <igx-column field="Grammy Awards" [filterable]='true' [dataType]="'number'"></igx-column>
 
     <igx-row-island [key]="'Albums'" [autoGenerate]="false" [allowFiltering]='true' filterMode="excelStyleFilter">
@@ -179,7 +179,7 @@ In the sample below 'Product Name' and 'Discontinued' columns have all four feat
 
 <div class="divider--half"></div>
 
-In the sample below 'Artist' column have all four features enabled, 'Debut' have all four disabled, 'Grammy Nominations' has only pinning and hiding.
+In the sample below 'Artist' column have all three features enabled, 'Debut' have all three disabled, 'Grammy Nominations' has only pinning and hiding.
 }
 
 <div class="divider--half"></div>
@@ -214,7 +214,7 @@ In the sample below 'Artist' column have all four features enabled, 'Debut' have
 ## Templates
 
 If you want to further customize the Excel style filter menu without disabling the column features you could use custom templates. The Excel Style filter menu provides two directives for templating:
-- `IgxExcelStyleColumnOperationsTemplateDirective` - re-templates the area with all column operations like sorting, moving, pinning, etc.
+- `IgxExcelStyleColumnOperationsTemplateDirective` - re-templates the area with all column operations like sorting, pinning, etc.
 - `IgxExcelStyleFilterOperationsTemplateDirective` - re-templates the area with all filter specific operations.
 
 You could either re-template only one of those areas or both of them. You could put any custom content inside those directives or you could use any of our built-in Excel style filtering components.
@@ -405,6 +405,18 @@ By default, the @@igComponent component filters the data based on the original c
 >[!NOTE]
 >The formatted values filtering strategy won't work correctly if you have more than one column bound to the same field from your data and one of the columns has a formatter.
 
+
+@@if (igxName === 'IgxTreeGrid') {
+## Tree Filter View
+
+By default, the Excel Style Filtering dialog displays the items in a list view. In order to display them in a tree view you can use the [`TreeGridFilteringStrategy`]({environment:angularApiUrl}/classes/treegridfilteringstrategy.html) and specify an array of column field names. Filter items will be displayed in a tree view for the speicified columns and in a list view for all other columns. The following sample demonstrates how to show filter items in a tree view for the first column:
+
+<code-view style="height:650px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-tree-filter-view" >
+</code-view>
+}
+
 ## External Excel Style filtering
 
 As you see at the demos above the default appearance of the Excel Style filtering dialog is inside the @@igComponent. So this dialog is only visible when configuring the filters. There is a way to make that dialog stay always visible - it can be used outside of the grid as a standalone component. In the demo below, the Excel style filtering is declared separately of the @@igComponent.
@@ -532,7 +544,7 @@ To get started with styling the Excel Style Filtering dialog, we need to import 
 The excel style filtering dialog takes its background color from the grid's theme, using the `filtering-row-background` parameter. In order to change the background we need to create a custom theme:
 
 ```scss
-$custom-grid: igx-grid-theme(
+$custom-grid: grid-theme(
     $filtering-row-background: #FFCD0F
 );
 ```
@@ -540,32 +552,32 @@ $custom-grid: igx-grid-theme(
 We obviously have a lot more components inside the excel like filtering dialog, such as buttons, checkboxes, a list and even a drop-down. In order to style them, we need to create a separate theme for each one:
 
 ```scss
-$dark-button: igx-button-theme(
+$dark-button: button-theme(
     $background: #FFCD0F,
     $foreground: #292826,
     $hover-background: #292826,
     $hover-foreground: #FFCD0F
 );
 
-$dark-input-group: igx-input-group-theme(
+$dark-input-group: input-group-theme(
     $box-background: #FFCD0F,
     $idle-text-color: #292826,
     $focused-text-color: #292826,
     $filled-text-color: #292826
 );
 
-$custom-list: igx-list-theme(
+$custom-list: list-theme(
     $background: #FFCD0F
 );
 
-$custom-checkbox: igx-checkbox-theme(
+$custom-checkbox: checkbox-theme(
     $empty-color: #292826,
     $fill-color: #292826,
     $tick-color: #FFCD0F,
     $label-color: #292826
 );
 
-$custom-drop-down: igx-drop-down-theme(
+$custom-drop-down: drop-down-theme(
     $background-color: #FFCD0F,
     $item-text-color: #292826,
     $hover-item-background: #292826,
@@ -573,18 +585,18 @@ $custom-drop-down: igx-drop-down-theme(
 );
 ```
 
-In this example we only changed some of the parameters for the listed components, but the [`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme), [`igx-checkbox-theme`]({environment:sassApiUrl}/index.html#function-igx-checkbox-theme), [`igx-drop-down-theme`]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme), [`igx-input-group-theme`]({environment:sassApiUrl}/index.html#function-igx-input-group-theme), [`igx-list-theme`]({environment:sassApiUrl}/index.html#function-igx-list-theme) themes provide way more parameters to control their respective styling.
+In this example we only changed some of the parameters for the listed components, but the [`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme), [`checkbox-theme`]({environment:sassApiUrl}/index.html#function-checkbox-theme), [`drop-down-theme`]({environment:sassApiUrl}/index.html#function-drop-down-theme), [`input-group-theme`]({environment:sassApiUrl}/index.html#function-input-group-theme), [`list-theme`]({environment:sassApiUrl}/index.html#function-list-theme) themes provide way more parameters to control their respective styling.
 
 The last step is to **include** the component mixins, each with its respective theme. We will also set the color property for the input's placeholder.
 
 ```scss
-@include igx-drop-down($custom-drop-down);
-@include igx-grid($custom-grid);
+@include drop-down($custom-drop-down);
+@include grid($custom-grid);
 .igx-excel-filter, .igx-excel-filter__secondary {
-    @include igx-button($dark-button);
-    @include igx-input-group($dark-input-group);
-    @include igx-list($custom-list);
-    @include igx-checkbox($custom-checkbox);
+    @include button($dark-button);
+    @include input-group($dark-input-group);
+    @include list($custom-list);
+    @include checkbox($custom-checkbox);
     .igx-input-group__input::placeholder {
         color: #FFCD0F;
     }
@@ -600,13 +612,13 @@ The last step is to **include** the component mixins, each with its respective t
 ```scss
 :host {
     ::ng-deep {
-        @include igx-drop-down($custom-drop-down);
-        @include igx-grid($custom-grid);
+        @include drop-down($custom-drop-down);
+        @include grid($custom-grid);
         .igx-excel-filter, .igx-excel-filter__secondary {
-            @include igx-button($dark-button);
-            @include igx-input-group($dark-input-group);
-            @include igx-list($custom-list);
-            @include igx-checkbox($custom-checkbox);
+            @include button($dark-button);
+            @include input-group($dark-input-group);
+            @include list($custom-list);
+            @include checkbox($custom-checkbox);
             .igx-input-group__input::placeholder {
                 color: #FFCD0F;
             }
@@ -625,45 +637,45 @@ Instead of hardcoding the color values like we just did, we can achieve greater 
 $yellow-color: #FFCD0F;
 $black-color: #292826;
 
-$dark-palette: igx-palette($primary: $black-color, $secondary: $yellow-color);
+$dark-palette: palette($primary: $black-color, $secondary: $yellow-color);
 ```
 And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette.
 
 ```scss
-$custom-grid: igx-grid-theme(
+$custom-grid: grid-theme(
     $filtering-row-background: #FFCD0F
 );
 
-$dark-button: igx-button-theme(
-    $background: igx-color($dark-palette, "secondary", 400),
-    $foreground: igx-color($dark-palette, "primary", 400),
-    $hover-background: igx-color($dark-palette, "primary", 400),
-    $hover-foreground: igx-color($dark-palette, "secondary", 400)
+$dark-button: button-theme(
+    $background: color($dark-palette, "secondary", 400),
+    $foreground: color($dark-palette, "primary", 400),
+    $hover-background: color($dark-palette, "primary", 400),
+    $hover-foreground: color($dark-palette, "secondary", 400)
 );
 
-$dark-input-group: igx-input-group-theme(
-    $box-background: igx-color($dark-palette, "secondary", 400),
-    $idle-text-color: igx-color($dark-palette, "primary", 400),
-    $focused-text-color: igx-color($dark-palette, "primary", 400),
-    $filled-text-color: igx-color($dark-palette, "primary", 400)
+$dark-input-group: input-group-theme(
+    $box-background: color($dark-palette, "secondary", 400),
+    $idle-text-color: color($dark-palette, "primary", 400),
+    $focused-text-color: color($dark-palette, "primary", 400),
+    $filled-text-color: color($dark-palette, "primary", 400)
 );
 
-$custom-list: igx-list-theme(
-    $background: igx-color($dark-palette, "secondary", 400)
+$custom-list: list-theme(
+    $background: color($dark-palette, "secondary", 400)
 );
 
-$custom-checkbox: igx-checkbox-theme(
-    $empty-color: igx-color($dark-palette, "primary", 400),
-    $fill-color: igx-color($dark-palette, "primary", 400),
-    $tick-color: igx-color($dark-palette, "secondary", 400),
-    $label-color: igx-color($dark-palette, "primary", 400)
+$custom-checkbox: checkbox-theme(
+    $empty-color: color($dark-palette, "primary", 400),
+    $fill-color: color($dark-palette, "primary", 400),
+    $tick-color: color($dark-palette, "secondary", 400),
+    $label-color: color($dark-palette, "primary", 400)
 );
 
-$custom-drop-down: igx-drop-down-theme(
-    $background-color: igx-color($dark-palette, "secondary", 400),
-    $item-text-color: igx-color($dark-palette, "primary", 400),
-    $hover-item-background: igx-color($dark-palette, "primary", 400),
-    $hover-item-text-color: igx-color($dark-palette, "secondary", 400)
+$custom-drop-down:drop-down-theme(
+    $background-color: color($dark-palette, "secondary", 400),
+    $item-text-color: color($dark-palette, "primary", 400),
+    $hover-item-background: color($dark-palette, "primary", 400),
+    $hover-item-text-color: color($dark-palette, "secondary", 400)
 );
 ```
 
@@ -680,7 +692,7 @@ Extend one of the two predefined schemas, that are provided for every component,
 $custom-grid-schema: extend($_light-grid,
     (
         filtering-row-background:(
-            igx-color: ("secondary", 400)
+           color: ("secondary", 400)
         )
     )
 );
@@ -688,29 +700,29 @@ $custom-grid-schema: extend($_light-grid,
 $custom-button-schema: extend($_light-button,
     (
         flat-background:(
-            igx-color: ("secondary", 400)
+           color: ("secondary", 400)
         ),
         flat-text-color:(
-            igx-color: ("primary", 400)
+           color: ("primary", 400)
         ),
         flat-hover-background:(
-            igx-color: ("primary", 400)
+           color: ("primary", 400)
         ),
         flat-hover-text-color:(
-            igx-color: ("secondary", 400)
+           color: ("secondary", 400)
         ),
 
         raised-background:(
-            igx-color: ("secondary", 400)
+           color: ("secondary", 400)
         ),
         raised-text-color:(
-            igx-color: ("primary", 400)
+           color: ("primary", 400)
         ),
         raised-hover-background:(
-            igx-color: ("primary", 400)
+           color: ("primary", 400)
         ),
         raised-hover-text-color:(
-            igx-color: ("secondary", 400)
+           color: ("secondary", 400)
         )
     )
 );
@@ -718,16 +730,16 @@ $custom-button-schema: extend($_light-button,
 $custom-input-group-schema: extend($_light-input-group,
     (
         box-background:(
-            igx-color: ("secondary", 400)
+           color: ("secondary", 400)
         ),
         idle-text-color:(
-            igx-color: ("primary", 400)
+           color: ("primary", 400)
         ),
         focused-text-color:(
-            igx-color: ("primary", 400)
+           color: ("primary", 400)
         ),
         filled-text-color:(
-            igx-color: ("primary", 400)
+           color: ("primary", 400)
         )
     )
 );
@@ -735,7 +747,7 @@ $custom-input-group-schema: extend($_light-input-group,
 $custom-list-schema: extend($_light-list,
     (
         background:(
-            igx-color: ("secondary", 400)
+           color: ("secondary", 400)
         )
     )
 );
@@ -743,16 +755,16 @@ $custom-list-schema: extend($_light-list,
 $custom-checkbox-schema: extend($_light-checkbox,
     (
         empty-color:(
-            igx-color: ("primary", 400)
+           color: ("primary", 400)
         ),
         fill-color:(
-            igx-color: ("primary", 400)
+           color: ("primary", 400)
         ),
         tick-color:(
-            igx-color: ("secondary", 400)
+           color: ("secondary", 400)
         ),
         label-color:(
-            igx-color: ("primary", 400)
+           color: ("primary", 400)
         )
     )
 );
@@ -760,16 +772,16 @@ $custom-checkbox-schema: extend($_light-checkbox,
 $custom-drop-down-schema: extend($_light-drop-down,
     (
         background-color:(
-            igx-color: ("secondary", 400)
+           color: ("secondary", 400)
         ),
         item-text-color:(
-            igx-color: ("primary", 400)
+           color: ("primary", 400)
         ),
         hover-item-background:(
-            igx-color: ("primary", 400)
+           color: ("primary", 400)
         ),
         hover-item-text-color:(
-            igx-color: ("secondary", 400)
+           color: ("secondary", 400)
         )
     )
 );
@@ -779,40 +791,40 @@ In order to apply our custom schemas we have to **extend** one of the globals ([
 
 ```scss
 $custom-light-schema: extend($light-schema,(
-    igx-grid: $custom-grid-schema,
-    igx-button: $custom-button-schema,
-    igx-input-group: $custom-input-group-schema,
-    igx-list: $custom-list-schema,
-    igx-checkbox: $custom-checkbox-schema,
-    igx-drop-down: $custom-drop-down-schema
+   grid: $custom-grid-schema,
+   button: $custom-button-schema,
+   input-group: $custom-input-group-schema,
+   list: $custom-list-schema,
+   checkbox: $custom-checkbox-schema,
+   drop-down: $custom-drop-down-schema
 ));
 
-$custom-grid: igx-grid-theme(
+$custom-grid: grid-theme(
     $palette: $dark-palette,
     $schema: $custom-light-schema
 );
 
-$custom-button: igx-button-theme(
+$custom-button: button-theme(
     $palette: $dark-palette,
     $schema: $custom-light-schema
 );
 
-$custom-input-group: igx-input-group-theme(
+$custom-input-group: input-group-theme(
     $palette: $dark-palette,
     $schema: $custom-light-schema
 );
 
-$custom-list: igx-list-theme(
+$custom-list: list-theme(
     $palette: $dark-palette,
     $schema: $custom-light-schema
 );
 
-$custom-checkbox: igx-checkbox-theme(
+$custom-checkbox: checkbox-theme(
     $palette: $dark-palette,
     $schema: $custom-light-schema
 );
 
-$custom-drop-down: igx-drop-down-theme(
+$custom-drop-down: drop-down-theme(
     $palette: $dark-palette,
     $schema: $custom-light-schema
 );
@@ -856,7 +868,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-grid-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>

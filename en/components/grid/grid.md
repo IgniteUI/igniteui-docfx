@@ -136,9 +136,9 @@ To facilitate your work, apply the comment in the `src/styles.scss` file.
 
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-@include igx-core();
+@include core();
 /* autoprefixer grid:on */
-@include igx-theme($default-palette);
+@include theme($default-palette);
  ```
 
 ## Editable Grid Angular
@@ -204,7 +204,7 @@ public contextObject = { firstProperty: 'testValue', secondProperty: 'testValue1
 
 ```html
 <igx-column #col field="ProductName" header="Product Name"
-    [groupable]="true" [movable]="true" [hasSummary]="true">
+    [groupable]="true" [hasSummary]="true">
     <ng-template igxHeader let-col>
         <div class="text">{{col.field}}</div>
         <igx-icon (click)="toggleSummary(col)" [attr.draggable]="false">functions
@@ -772,22 +772,22 @@ See the [Grid Sizing](sizing.md) topic.
 
 ## API References
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent Styles]({environment:sassApiUrl}/#function-igx-grid-theme)
+* [IgxGridComponent Styles]({environment:sassApiUrl}/#function-grid-theme)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html)
 * [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
 
 ## Theming Dependencies
-* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
-* [IgxInputGroup Theme]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
-* [IgxChip Theme]({environment:sassApiUrl}/index.html#function-igx-chip-theme)
-* [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
-* [IgxButton Theme]({environment:sassApiUrl}/index.html#function-igx-button-theme)
-* [IgxOverlay Theme]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
-* [IgxDropDown Theme]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme)
-* [IgxCalendar Theme]({environment:sassApiUrl}/index.html#function-igx-calendar-theme)
-* [IgxSnackBar Theme]({environment:sassApiUrl}/index.html#function-igx-snackbar-theme)
-* [IgxBadge Theme]({environment:sassApiUrl}/index.html#function-igx-badge-theme)
+* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxInputGroup Theme]({environment:sassApiUrl}/index.html#function-input-group-theme)
+* [IgxChip Theme]({environment:sassApiUrl}/index.html#function-chip-theme)
+* [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-ripple-theme)
+* [IgxButton Theme]({environment:sassApiUrl}/index.html#function-button-theme)
+* [IgxOverlay Theme]({environment:sassApiUrl}/index.html#function-overlay-theme)
+* [IgxDropDown Theme]({environment:sassApiUrl}/index.html#function-drop-down-theme)
+* [IgxCalendar Theme]({environment:sassApiUrl}/index.html#function-calendar-theme)
+* [IgxSnackBar Theme]({environment:sassApiUrl}/index.html#function-snackbar-theme)
+* [IgxBadge Theme]({environment:sassApiUrl}/index.html#function-badge-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>

@@ -117,23 +117,22 @@ public showMessage() {
 </div>
 
 ### 配置
-[`position`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#position) を使用すると、Toast の表示位置を構成します。デフォルトで、ページの下に表示されます。以下のサンプルで、通知が上位置に表示されます。
+[`positionSettings`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#positionSettings) を使用すると、Toast の表示位置を構成します。デフォルトで、ページの下に表示されます。以下のサンプルで、通知が上位置に表示されます。
 
 ```html
 <!--sample.component.html-->
 <div>
     <button igxButton="raised" (click)="open(toast)">Show notification on top</button>
-    <igx-toast #toast [position]="toastPosition">Notification displayed</igx-toast>
+    <igx-toast #toast>Notification displayed</igx-toast>
 </div>
 ```
 
 ```typescript
 // sample.component.ts
-import { IgxToastPosition } from 'igniteui-angular';
+import { VerticalAlignment } from 'igniteui-angular';
 ...
-public toastPosition: IgxToastPosition;
 public open(toast) {
-    this.toastPosition = IgxToastPosition.Top;
+    toast.positionSettings.verticalDirection = VerticalAlignment.Top;
     toast.open();
 }
 ...
@@ -181,10 +180,10 @@ Toast のスタイル設定を始めるには、すべてのテーマ関数と�
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単な方法は、[`igx-toast-theme`]({environment:sassApiUrl}/index.html#function-igx-toast-theme) を拡張する新しいテーマを作成し、`$shadow`、`$background`、`$text-color` と `$border-radius` パラメーターを受け取る方法です。 
+最も簡単な方法は、[`toast-theme`]({environment:sassApiUrl}/index.html#function-toast-theme) を拡張する新しいテーマを作成し、`$shadow`、`$background`、`$text-color` と `$border-radius` パラメーターを受け取る方法です。 
 
 ```scss
-$custom-toast-theme: igx-toast-theme(
+$custom-toast-theme: toast-theme(
     $background: #dedede,
     $text-color: #151515,
     $border-radius: 12px
@@ -196,7 +195,7 @@ $custom-toast-theme: igx-toast-theme(
 最後に Toast のカスタム テーマを設定します。
 
 ```scss
-@include igx-css-vars($custom-toast-theme);
+@include css-vars($custom-toast-theme);
 ```
 
 ### ミックスインの使用
@@ -209,7 +208,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 :host {
     ::ng-deep {
         // Custom toast theme を `igx-toast` ミックスインに渡します
-        @include igx-toast($custom-toast-theme);
+        @include toast($custom-toast-theme);
     }
 }
 ```
@@ -224,15 +223,15 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 $white-color: #dedede;
 $black-color: #151515;
 
-$light-toast-palette: igx-palette($primary: $white-color, $secondary: $black-color);
+$light-toast-palette: palette($primary: $white-color, $secondary: $black-color);
 ```
 
 また [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取り出すことができます。 
 
 ```scss
-$custom-toast-theme: igx-toast-theme(
-    $background: igx-color($light-toast-palette, "primary", 400),
-    $text-color: igx-color($light-toast-palette, "secondary", 400),
+$custom-toast-theme: toast-theme(
+    $background: color($light-toast-palette, "primary", 400),
+    $text-color: color($light-toast-palette, "secondary", 400),
     $border-radius: 12px
 );
 ```
@@ -251,10 +250,10 @@ $custom-toast-theme: igx-toast-theme(
 $light-toast-schema: extend($_light-toast,
     (
         background: (
-            igx-color: ("primary", 400)
+           color: ("primary", 400)
         ),
         text-color: (
-            igx-color: ("secondary", 400)
+           color: ("secondary", 400)
         ),
         border-radius: 12px
     )
@@ -270,7 +269,7 @@ $custom-light-schema: extend($light-schema,(
 ));
 
 // Defining toast with the global light schema
-$custom-toast-theme: igx-toast-theme(
+$custom-toast-theme: toast-theme(
   $palette: $light-toast-palette,
   $schema: $custom-light-schema
 );
@@ -289,7 +288,7 @@ $custom-toast-theme: igx-toast-theme(
 <div class="divider--half"></div>
 
 * [IgxToastComponent]({environment:angularApiUrl}/classes/igxtoastcomponent.html)
-* [IgxToastComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-toast-theme)
+* [IgxToastComponent スタイル]({environment:sassApiUrl}/index.html#function-toast-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

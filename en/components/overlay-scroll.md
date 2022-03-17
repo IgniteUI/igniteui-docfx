@@ -92,4 +92,4 @@ The [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.h
 * [Position strategies](overlay-position.md)
 * [Styling Topic](overlay-styling.md)
 * [IgxOverlayService]({environment:angularApiUrl}/classes/igxoverlayservice.html)
-* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-overlay-theme)
