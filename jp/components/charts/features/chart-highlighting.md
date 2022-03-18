@@ -3,6 +3,7 @@ title: Angular チャート強調表示 | データ可視化 | インフラジ�
 _description: インフラジスティックスの Angular チャート強調表示
 _keywords: Angular Charts, Highlighting, Infragistics, Angular チャート, 強調表示, インフラジスティックス
 mentionedTypes: ["CategoryChart"]
+namespace: Infragistics.Controls.Charts
 _language: ja
 ---
 

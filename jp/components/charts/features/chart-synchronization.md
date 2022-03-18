@@ -3,6 +3,7 @@ title: Angular  Angular データ チャート | データ可視化ツール | �
 _description: ズーム操作、パン操作および十字線イベントを含む複数のインフラジスティックスの Angular チャート コントロール間で同期します。Ignite UI for Angular のグラフ同期機能について説明します。
 _keywords: Angular charts, data chart, synchronization, Ignite UI for Angular, Infragistics, Angular チャート, データ チャート, 同期化, インフラジスティックス
 mentionedTypes: ["XamDataChart"]
+namespace: Infragistics.Controls.Charts
 _language: ja
 ---
 

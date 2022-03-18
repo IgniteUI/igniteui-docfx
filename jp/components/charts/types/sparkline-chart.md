@@ -3,6 +3,7 @@ title: Angular スパークライン | データ可視化ツール | インフ�
 _description: インフラジスティックスの Angular スパークライン チャート コントロールを使用して、グリッド セルやスタンドアロンなどのコンパクトなレイアウトで描画します。Ignite UI for Angular スパークライン チャートの設定可能な要素について説明します。
 _keywords: Sparkline, Ignite UI for Angular, Infragistics, WinLoss, Area, Column, スパークライン, インフラジスティックス, エリア, 列
 mentionedTypes: ["XamSparkline", "SparklineDisplayType", "TrendLineType"]
+namespace: Infragistics.Controls.Charts
 _language: ja
 ---
 
@@ -18,7 +19,7 @@ Ignite UI for Angular スパークラインは、軽量なチャート コント
 
 <code-view style="height: 450px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/sparkline-display-types" 
+           iframe-src="{environment:dvDemosBaseUrl}/charts/sparkline-display-types"
            github-src="charts/sparkline/display-types"
            alt="Angular スパークラインの例" >
 </code-view>
@@ -68,7 +69,7 @@ Angular スパークライン コンポーネントは、それに応じて  [`d
 
 <code-view style="height: 450px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/sparkline-display-types" 
+           iframe-src="{environment:dvDemosBaseUrl}/charts/sparkline-display-types"
            github-src="charts/sparkline/display-types"
            alt="Angular スパークラインの例" >
 </code-view>
