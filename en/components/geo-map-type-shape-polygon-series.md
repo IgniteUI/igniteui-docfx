@@ -2,7 +2,7 @@
 title: Angular Map | Data Visualization Tools | Shape Polygon Series | Infragistics
 _description: Use Infragistics Angular map's shape polygon series to render shapes of countries or regions defined by geographic locations. Learn more about Ignite UI for Angular map's series!
 _keywords: Angular map, shape polygon series, Ignite UI for Angular, Infragistics
-mentionedTypes: ['XamGeographicMap']
+mentionedTypes: ['XamGeographicMap', 'ShapefileConverter']
 ---
 
 # Angular Using Shape Polygon Series
@@ -28,7 +28,7 @@ Similar to other types of geographic series in the map control, the [`IgxGeograp
 
 ## Code Snippet
 
-The following code demonstrates how to bind the [`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html) to shapes of countries in the world loaded from a shape file using the `ShapeDataSource`.
+The following code demonstrates how to bind the [`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html) to shapes of countries in the world loaded from a shape file using the [`IgxShapeDataSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapedatasource.html).
 
 <!-- Angular -->
 

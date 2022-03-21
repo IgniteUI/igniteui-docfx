@@ -2,7 +2,7 @@
 title: Angular Map | Data Visualization Tools | Shape Polyline Series | Infragistics
 _description: Use Infragistics Angular map's shape polyline series to render roads or connections between geographic locations such as cities or airports. Learn more about Ignite UI for Angular map's series!
 _keywords: Angular map, Ignite UI for Angular, shape polyline series, Infragistics
-mentionedTypes: ['XamGeographicMap']
+mentionedTypes: ['XamGeographicMap', 'ShapefileConverter']
 ---
 
 # Angular Using Shape Polyline Series
@@ -28,7 +28,7 @@ Similarly to other types of geographic series in the control, the [`IgxGeographi
 
 ## Code Snippet
 
-The following code shows how to bind the [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) to locations of cities loaded from a shape file using the `ShapeDataSource`.
+The following code shows how to bind the [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) to locations of cities loaded from a shape file using the [`IgxShapeDataSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapedatasource.html).
 
 <!-- Angular -->
 
