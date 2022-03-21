@@ -1,26 +1,31 @@
 ---
-title: Angular ピボット グリッド | ピボット テーブル | インフラジスティックス
-_description: Ignite UI for Angular を使用して、高速で応答性の高い Angular ピボット グリッドとテーブルを作成します。ピボット データを介して複雑なデータ分析を実行します。
+title: Angular ピボット グリッドおよびテーブル - Ignite UI for Angular
+_description: Ignite UI for Angular を使用して、高速で応答性の高い Angular ピボット グリッドとテーブルを作成します。Perform complex analysis and apply data sorting, grouping, or filtering.
 _keywords: angular ピボット グリッド, angular material ピボット テーブル, ignite ui for angular
 _language: ja
 ---
 
 # Angular Pivot Grid (ピボット グリッド) の概要
 
-Angular ピボット グリッド コンポーネントは、[ピボット テーブル](http://ja.wikipedia.org/wiki/ピボットテーブル)にデータを表示し、提供されたデータセットに対して複雑な分析を実行するのに役立ちます。
+Pivot Grids are used for summing up and representing voluminous multidimensional data in a cross-tabular format. The data summery can be easily and quickly sorted, grouped, or filtered. Such data can include sums, averages, and other statistics. End-users are enabled to modify the pivot table layout through drag-and-drop operations, according to their needs.
+
+## What is Angular Pivot Grid? 
+
+The Angular Pivot Grid component presents data in a pivot table and helps performing complex analysis on the supplied data set. This sophisticated Pivot Grid control is used for organizing, summarizing, and filtering large volumes of data which is later displayed in a cross-table format. Key features of an Angular Pivot Grid are row dimensions, column dimensions, aggregations, and filters.
 
 `IgxPivotGridComponent` は、ユーザーが多次元ピボット テーブル構造でデータを構成および表示する機能を提供します。
-行と列は個別のデータ グループを表し、データ セルの値は集計を表します。これにより、単純なフラット データセットに基づく複雑なデータ分析が可能になります。
-`IgxPivotGridComponent` は、機能が豊富なピボット テーブルであり、さまざまなディメンションと値の簡単な構成と、フィルタリングや並べ替えなどの追加のデータ操作を提供します。
+The rows and columns represent distinct data groups, and the data cell values represent aggregations. This allows complex data analysis based on a simple flat data set. The `IgxPivotGridComponent` is a feature-rich pivot table that provides easy configuration of the different dimensions and values as well as additional data operations on them like filtering and sorting.
 
-スタンドアロン コンポーネントとして使用することも、Angular Pivot Data Selector (ピボット データ セレクター) コンポーネントと組み合わせて使用して、より柔軟なランタイム構成オプションを提供することもできます。
+## Angular Pivot Grid example
+
+The following is an Angular Pivot Grid example in combination with the Angular Pivot Data Selector Component. This way you can have more flexible runtime configuration options.
 
 <code-view style="height: 870px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-datasource" alt="Angular ピボット セレクターを備えたピボット グリッドの例">
 </code-view>
 
-# Angular ピボット グリッド構成
+## Getting started with Angular Pivot Grid
 
 Angular ピボット グリッド コンポーネントは、[`pivotConfiguration`](({environment:angularApiUrl}/classes/igxgridcomponent.html#pivotConfiguration)) プロパティを介して構成できます。
 
@@ -33,7 +38,7 @@ Angular ピボット グリッド コンポーネントは、[`pivotConfiguratio
 
 フィルターは、`filters` 構成プロパティを介して定義することもできます。ディメンションまたは値として追加したくないが、UI を介して関連するメンバー値をフィルタリングしたいフィールドに使用できます。
 
-## ディメンション構成
+### ディメンション構成
 
 各基本ディメンション構成には、提供された `data` のフィールドに一致する `memberName`、または複雑なオブジェクトやその他のカスタム シナリオの場合にレコードから値を抽出する `memberFunction` が必要です。
 
@@ -57,7 +62,7 @@ Angular ピボット グリッド コンポーネントは、[`pivotConfiguratio
 ```
 この場合、ディメンションはグリッドの関連セクション (行または列) にエキスパンダーを描画し、階層の一部として子を展開または縮小ことができます。デフォルトでは、行のディメンションは最初に展開されます。この動作は、ピボット グリッドの `defaultExpandState` `@Input` を使用して制御できます。
 
-## 事前定義されたディメンション
+### 事前定義されたディメンション
 
 ピボット グリッドの一部として、構成を容易にするために、いくつかの追加の事前定義されたディメンションが公開されています:
 - `IgxPivotDateDimension`
@@ -91,7 +96,7 @@ public pivotConfigHierarchy: IPivotConfiguration = {
 ```
 
 
-## 値の構成
+### 値の構成
 
 値の構成には、提供された `data` のフィールドに一致する `member` が必要です。または、より複雑なカスタム シナリオのカスタム `aggregator`関数を定義できます。データ フィールドのデータ型に応じて使用できる 4 つの事前定義された集計があります:
 
@@ -147,12 +152,12 @@ public static totalMax: PivotAggregation = (members, data: any) => {
 ```
 ピボット値は、`displayName` プロパティも提供します。この値のカスタム名を列ヘッダーに表示するために使用できます。
 
-## プロパティを有効にする
+### プロパティを有効にする
 
 `IPivotConfiguration` は、`IgxPivotGrid` コンポーネントの現在の状態を記述するインターフェースです。これを使用すると、開発者はデータのフィールドを `rows`、`columns`、`filters`、または `values` として宣言できます。この構成では、これらの各要素を個別に有効または無効にすることができます。ピボット グリッドの現在の状態には、有効な要素のみが含まれます。`IgxPivotDataSelector` コンポーネントは同じ構成を利用し、すべての有効と無効の要素のリストを表示します。それぞれについて、適切な状態のチェックボックスがあります。エンドユーザーは、これらのチェックボックスを使用してさまざまな要素を切り替えることにより、ピボット状態を簡単に調整できます。
 `enable` プロパティは、特定の `IPivotDimension` または `IPivotValue` がアクティブであり、ピボット グリッドによって描画されるピボット ビューに参加するかどうかを制御します。
 
-## 完全な構成例
+### 完全な構成例
 
 基本的なピボット構成を見てみましょう:
 
@@ -221,7 +226,7 @@ public data = [
 </code-view>
 
 
-# 既知の問題と制限
+## 既知の問題と制限
 
 |制限|説明|
 |--- |--- |
