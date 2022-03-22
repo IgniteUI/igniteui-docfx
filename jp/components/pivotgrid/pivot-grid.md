@@ -1,31 +1,31 @@
 ---
 title: Angular ピボット グリッドおよびテーブル - Ignite UI for Angular
-_description: Ignite UI for Angular を使用して、高速で応答性の高い Angular ピボット グリッドとテーブルを作成します。Perform complex analysis and apply data sorting, grouping, or filtering.
+_description: Ignite UI for Angular を使用して、高速で応答性の高い Angular ピボット グリッドとテーブルを作成します。複雑な分析を実行し、データの並べ替え、グループ化、またはフィルタリングを適用します。
 _keywords: angular ピボット グリッド, angular material ピボット テーブル, ignite ui for angular
 _language: ja
 ---
 
 # Angular Pivot Grid (ピボット グリッド) の概要
 
-Pivot Grids are used for summing up and representing voluminous multidimensional data in a cross-tabular format. The data summery can be easily and quickly sorted, grouped, or filtered. Such data can include sums, averages, and other statistics. End-users are enabled to modify the pivot table layout through drag-and-drop operations, according to their needs.
+ピボット グリッドは、クロス集計形式で大量の多次元データを合計して表すために使用されます。データの概要は、簡単かつ迅速に並べ替え、グループ化、またはフィルタリングできます。このようなデータには、合計、平均、およびその他の統計が含まれる場合があります。エンドユーザーは、必要に応じて、ドラッグアンドドロップ操作でピボット テーブルのレイアウトを変更できます。
 
-## What is Angular Pivot Grid? 
+## Angular ピボット グリッドの概要 
 
-The Angular Pivot Grid component presents data in a pivot table and helps performing complex analysis on the supplied data set. This sophisticated Pivot Grid control is used for organizing, summarizing, and filtering large volumes of data which is later displayed in a cross-table format. Key features of an Angular Pivot Grid are row dimensions, column dimensions, aggregations, and filters.
+Angular ピボット グリッド コンポーネントは、ピボット テーブルにデータを表示し、提供されたデータセットに対して複雑な分析を実行するのに役立ちます。この洗練されたピボット グリッド コントロールは、後でクロス集計形式で表示される大量のデータを整理、集計、およびフィルタリングするために使用されます。Angular ピボット グリッドの主な機能は、行のディメンション、列のディメンション、集計、およびフィルターです。
 
 `IgxPivotGridComponent` は、ユーザーが多次元ピボット テーブル構造でデータを構成および表示する機能を提供します。
-The rows and columns represent distinct data groups, and the data cell values represent aggregations. This allows complex data analysis based on a simple flat data set. The `IgxPivotGridComponent` is a feature-rich pivot table that provides easy configuration of the different dimensions and values as well as additional data operations on them like filtering and sorting.
+行と列は個別のデータ グループを表し、データ セルの値は集計を表します。これにより、単純なフラット データセットに基づく複雑なデータ分析が可能になります。`IgxPivotGridComponent` は、機能が豊富なピボット テーブルであり、さまざまなディメンションと値の簡単な構成と、フィルタリングや並べ替えなどの追加のデータ操作を提供します。
 
-## Angular Pivot Grid example
+## Angular ピボット グリッドの例
 
-The following is an Angular Pivot Grid example in combination with the Angular Pivot Data Selector Component. This way you can have more flexible runtime configuration options.
+以下は、Angular ピボット データ セレクター コンポーネントと組み合わせた Angular ピボット グリッドの例です。このようにして、より柔軟なランタイム構成オプションを使用できます。
 
 <code-view style="height: 870px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-datasource" alt="Angular ピボット セレクターを備えたピボット グリッドの例">
 </code-view>
 
-## Getting started with Angular Pivot Grid
+## Angular ピボット グリッドの使用を開始
 
 Angular ピボット グリッド コンポーネントは、[`pivotConfiguration`](({environment:angularApiUrl}/classes/igxgridcomponent.html#pivotConfiguration)) プロパティを介して構成できます。
 
