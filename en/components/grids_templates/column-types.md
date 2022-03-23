@@ -240,7 +240,7 @@ Custom template and column formatter definition will always take precedence over
 ```html
 <igx-grid #grid1 [data]="data | async" [autoGenerate]="true" [dataType]="'currency'">
     <igx-column [field]="'OrderDate'" [dataType]="'currency'" [pipeArgs]="formatDateOptions" [editable]="true">
-        <ng-template let-value>
+        <ng-template igxCellEditor let-value>
             {{ value | currency:'USD':'symbol':'1.0-0'}}
         </ng-template>
     </igx-column>
