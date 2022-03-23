@@ -6,16 +6,19 @@ mentionedTypes: ["SeriesViewer", "XYChart", "DomainChart", "XamGeographicMap"]
 namespace: Infragistics.Controls.Charts
 ---
 
-# Ignite UI for Angular Changelog (Data Visualization)
+# Ignite UI for Angular Changelog
 
 All notable changes for each version of Ignite UI for Angular are documented on this page.
 
 <!-- Angular -->
 
 > [!NOTE]
+> This topic discusses changes only for DV related controls eg. (charts, excel, spreadsheet, maps)
 > For changes specific to Angular LOB components, please see [Ignite UI Angular Changes](https://github.com/igniteui/igniteui-angular/blob/master/changelog.md)
 
 <!-- end: Angular -->
+
+<div class="divider--half"></div>
 
 <div class="divider--half"></div>
 
