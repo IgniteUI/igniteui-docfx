@@ -9,6 +9,9 @@ _language: ja
 
 Ignite UI for Angular は、最新のデスクトップ ブラウザー対応の高パフォーマンス HTML 5 および TypeScript アプリケーションを構築するために設計された Angular コンポーネントのコンプリート セットです。
 
+> [!NOTE]
+> この [GitHub](https://github.com/IgniteUI/igniteui-angular-examples/tree/master/samples) リポジトリから Ignite UI for Angular を使用した Angular プロジェクトの例を取得するか、新しい Angular プロジェクトを作成する方法について次の手順に従うことができます。
+
 <!-- Angular, React, WebComponents -->
 
 ## コンピューターのセットアップ
@@ -33,10 +36,6 @@ Ignite UI for Angular を実行する前に、Ignite UI for Angular を含むす
       </a>
     </div>
 </div>
-
-<!-- using a note because there is no other way to build flag content for specific platform. -->
-
-<!-- end: Angular, React, WebComponents -->
 
 <!-- commented out because this section is present in the "Updating Existing App"
 You need to open Angular app in **VS Code** and install the following packages for Ignite UI for Angular using these commands:
