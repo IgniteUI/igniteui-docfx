@@ -3,6 +3,7 @@ title: Angular チャート ツールチップ | データ可視化 | インフ�
 _description: インフラジスティックスの Angular チャート ツールチップ
 _keywords: Angular Charts, Tooltips, Infragistics, Angular チャート, ツールチップ, インフラジスティックス
 mentionedTypes: ["CategoryChart", "ToolTipType"]
+namespace: Infragistics.Controls.Charts
 _language: ja
 ---
 
