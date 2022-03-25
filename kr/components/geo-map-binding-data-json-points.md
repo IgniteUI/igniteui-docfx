@@ -3,6 +3,7 @@ title: Angular Map | Data Visualization Tools | Geographic JSON Data | Infragist
 _description: The Map allows you to display data that contains geographic locations from view models or geographic locations loaded from JSON files. View the demo, dependencies, usage and toolbar for more information.
 _keywords: map, Ignite UI for Angular, Infragistics
 _language: kr
+mentionedTypes: ['XamGeographicMap', 'ShapefileConverter']
 ---
 
 # Angular Binding JSON Files with Geographic Locations
