@@ -789,6 +789,11 @@ See the [Grid Sizing](sizing.md) topic.
 * [IgxSnackBar Theme]({environment:sassApiUrl}/index.html#function-snackbar-theme)
 * [IgxBadge Theme]({environment:sassApiUrl}/index.html#function-badge-theme)
 
+## Tutorial video
+Learn more about creating an Angular data grid in our short tutorial video:
+
+> [!Video https://www.youtube.com/embed/Xv_fQVQ8fmM]
+
 ## Additional Resources
 <div class="divider--half"></div>
 
