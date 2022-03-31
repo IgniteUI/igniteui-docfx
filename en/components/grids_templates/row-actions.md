@@ -6,26 +6,42 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 @@if (igxName === 'IgxGrid') {
 # Grid Row Actions
 
-The grid component in Ignite UI for Angular provides the ability to use `ActionStrip` and utilize CRUD for row/cell components and row pinning.
-Two grid actions are provided by default:
+The grid component in Ignite UI for Angular provides the ability to use [ActionStrip](../action-strip.md) and utilize CRUD for row/cell components and row pinning. The Action Strip component can host predefined UI controls for these operations.
 }
 @@if (igxName === 'IgxTreeGrid') {
 # Tree Grid Row Actions
 
-The tree grid component in Ignite UI for Angular provides the ability to use `ActionStrip` and utilize CRUD for row/cell components and row pinning.
-Two grid actions are provided by default:
+The tree grid component in Ignite UI for Angular provides the ability to use [ActionStrip](../action-strip.md) and utilize CRUD for row/cell components and row pinning. The Action Strip component can host predefined UI controls for these operations.
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 # Hierarchical Grid Row Actions
 
-The hierarchical grid component in Ignite UI for Angular provides the ability to use `ActionStrip` and utilize CRUD for row/cell components and row pinning.
-Two grid actions are provided by default:
+The hierarchical grid component in Ignite UI for Angular provides the ability to use [ActionStrip](../action-strip.md) and utilize CRUD for row/cell components and row pinning. The Action Strip component can host predefined UI controls for these operations.
 }
 
+## Usage
+
+The first step is to import the **IgxActionStripModule** in our **app.module.ts** file:
+
+```typescript
+// app.module.ts
+
+...
+import { IgxActionStripModule } from 'igniteui-angular';
+
+@NgModule({
+    ...
+    imports: [..., IgxActionStripModule],
+    ...
+})
+```
+
+The predefined `actions` UI components are:
 - [`IgxGridEditingActionsComponent`]({environment:angularApiUrl}/classes/igxgrideditingactionscomponent.html) - includes functionality and UI specifically designed for the grid editing. It allows you to quickly toggle edit mode for cells or rows, depending on the [`rowEditable`]({environment:angularApiUrl}/classes/IgxGridComponent.html#rowEditable) option and row deletion of the grid.
 
 - [`IgxGridPinningActionsComponent`]({environment:angularApiUrl}/classes/igxgridpinningactionscomponent.html) - includes functionality and UI specifically designed for the grid row pinning. It allows you to quickly pin rows and navigate between pinned rows and their disabled counterparts.
 
+They are added inside the `<igx-action-strip>` and this is all needed to have an Action Strip providing default interactions.
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -67,7 +83,6 @@ Two grid actions are provided by default:
 ```
 }
 
->Note: These components inherit [`IgxGridActionsBaseDirective`]({environment:infragisticsBaseUrl}/classes/igxgridactionsbasedirective.html) and when creating a custom grid action component, it should also inherit `IgxGridActionsBaseDirective`.
 >Note: When `IgxActionStripComponent` is a child component of the grid, hovering a row will automatically show the UI.
 
 ## Custom implementation
@@ -106,6 +121,8 @@ These components expose templates giving flexibility for customization. For inst
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hGrid-action-strip" >
 </code-view>
 }
+
+>Note: The predefined actions inherit [`IgxGridActionsBaseDirective`]({environment:infragisticsBaseUrl}/classes/igxgridactionsbasedirective.html) and when creating a custom grid action component, it should also inherit `IgxGridActionsBaseDirective`.
 
 ## API References
 
