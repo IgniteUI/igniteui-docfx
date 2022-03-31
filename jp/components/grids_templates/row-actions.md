@@ -23,7 +23,7 @@ Ignite UI for Angular の階層グリッド コンポーネントは、[ActionSt
 デフォルトで 2 つのグリッド アクションが提供されます。The Action Strip component can host predefined UI controls for these operations.
 }
 
-## Usage
+## 使用方法
 
 The first step is to import the **IgxActionStripModule** in our **app.module.ts** file:
 
