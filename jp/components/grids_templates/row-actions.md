@@ -8,24 +8,24 @@ _language: ja
 # Grid Row Actions
 
 Ignite UI for Angular のグリッド コンポーネントは、[ActionStrip](../action-strip.md) を使用し、行/セルコンポーネントおよび行のピン固定に CRUD を使用する機能を提供します。
-デフォルトで 2 つのグリッド アクションが提供されます。The Action Strip component can host predefined UI controls for these operations.
+デフォルトで 2 つのグリッド アクションが提供されます。アクション ストリップ コンポーネントは、これらの操作用に事前定義された UI コントロールをホストできます。
 }
 @@if (igxName === 'IgxTreeGrid') {
 # Tree Grid Row Actions
 
 Ignite UI for Angular のツリー グリッド コンポーネントは、[ActionStrip](../action-strip.md) を使用し、行/セルコンポーネントおよび行のピン固定に CRUD を使用する機能を提供します。
-デフォルトで 2 つのグリッド アクションが提供されます。The Action Strip component can host predefined UI controls for these operations.
+デフォルトで 2 つのグリッド アクションが提供されます。アクション ストリップ コンポーネントは、これらの操作用に事前定義された UI コントロールをホストできます。
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 # Hierarchical Grid Row Actions
 
 Ignite UI for Angular の階層グリッド コンポーネントは、[ActionStrip](../action-strip.md) を使用し、行/セルコンポーネントおよび行のピン固定に CRUD を使用する機能を提供します。
-デフォルトで 2 つのグリッド アクションが提供されます。The Action Strip component can host predefined UI controls for these operations.
+デフォルトで 2 つのグリッド アクションが提供されます。アクション ストリップ コンポーネントは、これらの操作用に事前定義された UI コントロールをホストできます。
 }
 
-## Usage
+## 使用方法
 
-The first step is to import the **IgxActionStripModule** in our **app.module.ts** file:
+最初の手順は、**app.module.ts** ファイルに **IgxActionStripModule** をインポートすることです。
 
 ```typescript
 // app.module.ts
@@ -40,12 +40,12 @@ import { IgxActionStripModule } from 'igniteui-angular';
 })
 ```
 
-The predefined `actions` UI components are:
+事前定義された `actions` UI コンポーネントは次のとおりです:
 - [`IgxGridEditingActionsComponent`]({environment:angularApiUrl}/classes/igxgrideditingactionscomponent.html) - グリッド編集専用に設計された機能と UI を含みます。[`rowEditable`]({environment:angularApiUrl}/classes/IgxGridComponent.html#rowEditable) オプションとグリッドの行削除に応じて、セルまたは行の編集モードをすばやく切り替えることができます。
 
 - [`IgxGridPinningActionsComponent`]({environment:angularApiUrl}/classes/igxgridpinningactionscomponent.html) - グリッド行のピン固定のために特別に設計された機能と UI を含みます。行をすばやくピン固定し、ピン固定された行とその無効な行の間を移動できます。
 
-They are added inside the `<igx-action-strip>` and this is all needed to have an Action Strip providing default interactions.
+これらは `<igx-action-strip>` 内に追加され、デフォルトのインタラクションを提供するアクション ストリップを持つために必要です。
 
 @@if (igxName === 'IgxGrid') {
 ```html
