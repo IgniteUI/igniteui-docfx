@@ -786,7 +786,7 @@ Grid のキーボード ナビゲーションは、さまざまなキーボー�
 * [IgxBadge テーマ]({environment:sassApiUrl}/index.html#function-igx-badge-theme)
 
 ## ビデオ チュートリアル
-Learn more about creating an Angular data grid in our short tutorial video:
+Angular データ グリッドの作成について詳しくは、このビデオ チュートリアルをご覧ください:
 
 > [!Video https://www.youtube.com/embed/Xv_fQVQ8fmM]
 
