@@ -25,7 +25,7 @@ Angular Spreadsheet コンポネントは、セルの編集、グリッド線と
 
 ユーザーがセルの値を編集して新しい入力を確認すると、スプレッドシートの構成に応じて、[`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) コントロールに `Enter` キーを押すと現在アクティブなセルに隣接するセルに移動できます。
 
-この `Enter` キーナビゲーションを有効にするために、[`isEnterKeyNavigationEnabled`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#isenterkeynavigationenabled) プロパティを `true` に設定できます。false に設定すると、`Enter` キーを押してもアクティブ セルは変わりません。
+この `Enter` キーナビゲーションを有効にするために、[`isEnterKeyNavigationEnabled`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#isenterkeynavigationenabled) プロパティを **true** に設定できます。false に設定すると、`Enter` キーを押してもアクティブ セルは変わりません。
 
 Enter キーを押したときに移動する隣接セルの方向は、[`enterKeyNavigationDirection`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#enterkeynavigationdirection) プロパティを `Down`、`Up`、`Left`、`Right` に設定して構成することもできます。
 

@@ -3,6 +3,7 @@ title: Angular  Angular データ チャート | データ可視化ツール | �
 _description: ズーム操作、パン操作および十字線イベントを含む複数のインフラジスティックスの Angular チャート コントロール間で同期します。Ignite UI for Angular のグラフ同期機能について説明します。
 _keywords: Angular charts, data chart, synchronization, Ignite UI for Angular, Infragistics, Angular チャート, データ チャート, 同期化, インフラジスティックス
 mentionedTypes: ["XamDataChart"]
+namespace: Infragistics.Controls.Charts
 _language: ja
 ---
 
@@ -29,7 +30,7 @@ $ ProductName$ データ チャートを使用すると、複数のチャート�
 
 チャートのセットを同期する場合は、それらに `SyncChannel` プロパティに同じ名前を割り当ててから、`SynchronizeHorizontally` と `SynchronizeVertically` プロパティを対応するブール値に設定して、チャートを水平または垂直に同期するかどうかを指定できます。
 
-垂直または水平に同期するには、[`isHorizontalZoomEnabled`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html#ishorizontalzoomenabled) または [`isVerticalZoomEnabled`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html#isverticalzoomenabled) プロパティをそれぞれ `true` に設定する必要があります。他のチャートに依存している同期チャートは、このプロパティ設定に関係なく、ズームできます。
+垂直または水平に同期するには、[`isHorizontalZoomEnabled`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html#ishorizontalzoomenabled) または [`isVerticalZoomEnabled`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html#isverticalzoomenabled) プロパティをそれぞれ **true** に設定する必要があります。他のチャートに依存している同期チャートは、このプロパティ設定に関係なく、ズームできます。
 
 ## API メンバー
 
