@@ -444,6 +444,11 @@ See the [Grid Sizing](sizing.md) topic.
 * [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html)
 * [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
 
+## Tutorial video
+Learn more about creating an Angular data grid in our short tutorial video:
+
+> [!Video https://www.youtube.com/embed/Xv_fQVQ8fmM]
+
 ## 추가 리소스
 <div class="divider--half"></div>
 
