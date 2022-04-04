@@ -2,6 +2,7 @@
 title: Angular Step Chart | Data Visualization | Infragistics
 _description: Infragistics' Angular Step Chart
 _keywords: Angular Charts, Step Chart, Step Area Chart, Step Line Chart, Infragistics
+_language: kr
 mentionedTypes: ["CategoryChart", "ChartType"]
 ---
 

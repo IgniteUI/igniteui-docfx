@@ -2,6 +2,7 @@
 title: Angular Axis Gridlines | Data Visualization | Infragistics
 _description: Infragistics' Angular Axis Gridlines
 _keywords: Angular Axis, Gridlines, Infragistics
+_language: kr
 mentionedTypes: ["CategoryChart"]
 ---
 
