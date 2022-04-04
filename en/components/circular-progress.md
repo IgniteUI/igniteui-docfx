@@ -38,9 +38,9 @@ To have a better understanding how everything works, let's create a simple examp
 
 ```html
 <igx-circular-bar
-[value]="100"
-[animate]="true"
-class="custom-size"
+    [value]="100"
+    [animate]="true"
+    class="custom-size"
 ></igx-circular-bar>
 ```
 
@@ -59,9 +59,9 @@ If you want to track a process that is not determined precisely, you can set the
 
 ```html
 <igx-circular-bar
-[animate]="false"
-[indeterminate]="true"
-[textVisibility]="false"
+    [animate]="false"
+    [indeterminate]="true"
+    [textVisibility]="false"
 ></igx-circular-bar>
 ```
 
@@ -85,11 +85,11 @@ You can dynamically change the value of the progress by using external controls 
 ```html
 <div class="sample-content">
     <igx-circular-bar
-    [value]="currentValue"
-    [max]="100"
-    [animate]="true"
-    class="custom-size"
-    >
+        [value]="currentValue"
+        [max]="100"
+        [animate]="true"
+        class="custom-size">
+    </igx-circular-bar>
     <div class="button-container">
         <button igxButton="icon" (click)="decrementProgress()">
             <igx-icon fontSet="material">remove</igx-icon>
@@ -164,11 +164,10 @@ To provide a gradient that has more than 2 color stops, we have to use the direc
 ```html
 <div class="sample-content">
   <igx-circular-bar
-  [value]="currentValue"
-  [max]="100"
-  [animate]="true"
-  class="custom-size"
-  >
+    [value]="currentValue"
+    [max]="100"
+    [animate]="true"
+    class="custom-size">
       <ng-template igxProgressBarGradient let-id>
           <svg:linearGradient [id]="id" gradientTransform="rotate(90)">
               <stop offset="0%"   stop-color="#ff9a40"/>
