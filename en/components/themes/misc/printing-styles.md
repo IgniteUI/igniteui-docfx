@@ -29,7 +29,7 @@ core($print-layout: false)
 @include theme($default-palette);
 ```
 
-Since version **13.2** we decide not to hide any component by default since we don't know what parts you want to be visible on paper, we leave that for you to decide.   
+Since **v13.2** we decide not to hide any component by default since we don't know what parts you want to be visible on paper, we leave that for you to decide.   
 
 In order to remove a piece or a whole component from the printed page, you can eather add the class .igx-no-print to the element/component you don't want to print, or if you don't have access to the DOM you can directly target that element tag or class and set its display: none.
 
@@ -47,4 +47,4 @@ Here @media print is used in order to make sure that the styles you write inside
 
 If you want to print in black and white you can use `.igx-bw-print` class on any element and that element and everything inside it will turn black & white when printed.
 
-To print the igx-grid we recommend using the [`export to excel`](../../grid/export-excel.md) feature or making a screenshot of the grid and printing it.
+To print the [`igx-grid`](../../grid/grid.md) we recommend using the [`export to excel`](../../grid/export-excel.md) feature or making a screenshot of the grid and printing it.
