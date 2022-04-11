@@ -785,6 +785,11 @@ Grid のキーボード ナビゲーションは、さまざまなキーボー�
 * [IgxSnackBar テーマ]({environment:sassApiUrl}/index.html#function-snackbar-theme)
 * [IgxBadge テーマ]({environment:sassApiUrl}/index.html#function-badge-theme)
 
+## ビデオ チュートリアル
+Angular データ グリッドの作成について詳しくは、このビデオ チュートリアルをご覧ください:
+
+> [!Video https://www.youtube.com/embed/Xv_fQVQ8fmM]
+
 ## その他のリソース
 <div class="divider--half"></div>
 
