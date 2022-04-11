@@ -29,7 +29,7 @@ core($print-layout: false)
 @include theme($default-palette);
 ```
 
-Since **v13.2** we decide not to hide any component by default since we don't know what parts you want to be visible on paper, we leave that for you to decide.   
+Since **v13.2** we decided not to hide any component by default since we don't know what parts you want to be visible on paper, we leave that for you to decide.   
 
 In order to remove a piece or a whole component from the printed page, you can eather add the class .igx-no-print to the element/component you don't want to print, or if you don't have access to the DOM you can directly target that element tag or class and set its display: none.
 
