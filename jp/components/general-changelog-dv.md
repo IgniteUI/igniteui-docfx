@@ -3,23 +3,33 @@ title: Angular 新機能 | Ignite UI for Angular | インフラジスティッ�
 _description: Ignite UI for Angular の新機能について学んでください。
 _keywords: Changelog, What's New, Ignite UI for Angular, Infragistics, 変更ログ, 新機能, インフラジスティックス
 _language: ja
-mentionedTypes: ["SeriesViewer", "XYChart", "DomainChart", "XamGeographicMap"]
+mentionedTypes: ["SeriesViewer", "XYChart", "DomainChart", "XamGeographicMap", "DatePicker", "MultiColumnComboBox"]
+namespace: Infragistics.Controls.Charts
 ---
 
-# Ignite UI for Angular 変更ログ (データ可視化)
+# Ignite UI for Angular 変更ログ
 
 Ignite UI for Angular の各バージョンのすべての重要な変更は、このページに記載されています。
 
 <!-- Angular -->
 
 > [!NOTE]
+> このトピックでは、DV 関連のコントロール (チャート、Excel、スプレッドシート、マップ) の変更についてのみ説明します。
 > Angular LOB コンポーネントに固有の変更については、[Ignite UI Angular 変更](https://github.com/igniteui/igniteui-angular/blob/master/changelog.md)を参照してください。
 
 <!-- end: Angular -->
 
 <div class="divider--half"></div>
 
-## **Angular 11.3.0**
+## **Angular {PackageVerChanges-21-2.1}**
+
+<div class="divider--half"></div>
+
+<div class="divider--half"></div>
+
+<div class="divider--half"></div>
+
+## **Angular 13.1.0**
 
 <div class="divider--half"></div>
 
@@ -138,7 +148,7 @@ Ignite UI for Angular の各バージョンのすべての重要な変更は、�
 
 ## **Angular 8.2.12**
 
--   import ステートメントの変更
+-   Import ステートメントの変更
 
 Import ステートメントは、API クラスと列挙型へのフル パスではなくパッケージ名のみを使用するように簡素化されました。
 
