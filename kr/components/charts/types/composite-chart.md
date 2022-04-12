@@ -2,6 +2,7 @@
 title: Angular Composite Chart | Combo Chart| Data Visualization | Infragistics
 _description: Infragistics' Angular Composite Chart
 _keywords: Angular Charts, Composite Chart, Combo Chart, Infragistics
+_language: kr
 mentionedTypes: ["XamDataChart"]
 ---
 

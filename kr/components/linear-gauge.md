@@ -3,6 +3,7 @@ title: Angular Linear Gauge Component - Native Angular | Ignite UI for Angular
 _description: Use the Linear Gauge component to see a simple display of a value compared against a scale and one or more ranges.
 _keywords: Angular, Ignite UI for Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Data Grid, Angular Chart Control, Angular Grid Component, Angular linear graph Component, Angular linear graph
 _language: kr
+mentionedTypes: ['XamLinearGauge']
 ---
 
 # Angular Linear Gauge

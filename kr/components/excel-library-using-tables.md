@@ -2,6 +2,8 @@
 title: Angular Excel Library Using Tables
 _description: The Ignite UI for Excel Library component Using Tables.
 _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Excel Library, Angular Excel Library Example, Angular Excel Library Component, Angular Excel Engine, Tables, Sorting, Filtering
+_language: kr
+mentionedTypes: ['Workbook', 'WorksheetTable', 'Worksheet', 'SortSettings']
 ---
 
 # Angular Using Tables
@@ -24,7 +26,7 @@ The Infragistics Excel Engine's [`WorksheetTable`]({environment:dvApiBaseUrl}/pr
 
 Worksheet tables in the Infragistics Excel Engine are represented by the [`WorksheetTable`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html) object and are added in the worksheet's `tables` collection. In order to add a table, you need to invoke the `Add` method on this collection. In this method, you can specify the region in which you would like to add a table, whether or not the table should contain headers, and optionally, specify the table's style as a [`WorksheetTableStyle`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettablestyle.html) object.
 
-The following code demonstrates how you can add a table with headers to a [`Worksheet`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html) spanning a region of A1 to G10, where A1 to G1 will be the column headers:
+The following code demonstrates how you can add a table with headers to a [`worksheet`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html#worksheet) spanning a region of A1 to G10, where A1 to G1 will be the column headers:
 
 ```ts
 var workbook = new Workbook(WorkbookFormat.Excel2007);
