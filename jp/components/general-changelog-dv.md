@@ -14,7 +14,7 @@ Ignite UI for Angular の各バージョンのすべての重要な変更は、�
 <!-- Angular -->
 
 > [!NOTE]
-> このトピックでは、DV 関連のコントロール (チャート、Excel、スプレッドシート、マップ) の変更についてのみ説明します。
+> このトピックでは、Angular データ可視化関連のコントロール (チャート、Excel、スプレッドシート、マップ) の変更についてのみ説明します。
 > Angular LOB コンポーネントに固有の変更については、[Ignite UI Angular 変更](https://github.com/igniteui/igniteui-angular/blob/master/changelog.md)を参照してください。
 
 <!-- end: Angular -->
@@ -26,10 +26,6 @@ Ignite UI for Angular の各バージョンのすべての重要な変更は、�
 <div class="divider--half"></div>
 
 <div class="divider--half"></div>
-
-<div class="divider--half"></div>
-
-## **Angular 13.1.0**
 
 <div class="divider--half"></div>
 
