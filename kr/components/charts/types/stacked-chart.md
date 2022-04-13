@@ -2,6 +2,7 @@
 title: Angular Stacked Chart | Data Visualization | Infragistics
 _description: Infragistics' Angular Stacked Chart
 _keywords: Angular Charts, Stacked Chart, Stacked 100% Chart, Infragistics
+_language: kr
 mentionedTypes: ["XamDataChart", "StackedAreaSeries", "Stacked100AreaSeries", "StackedBarSeries", "Stacked100BarSeries", "StackedColumnSeries", "Stacked100ColumnSeries", "StackedLineSeries", "Stacked100LineSeries", "StackedSplineSeries", "Stacked100SplineSeries", "StackedSplineAreaSeries", "Stacked100SplineAreaSeries"]
 ---
 
@@ -110,7 +111,7 @@ The example below shows a study made for online shopping traffic by departments 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-stacked-100-column-chart"
-           github-src="charts/data-chart/stacked-100-column-chart" 
+           github-src="charts/data-chart/stacked-100-column-chart"
            alt="Angular Stacked 100 Column Chart" >
 </code-view>
 
@@ -181,7 +182,7 @@ The Stacked Spline Chart is often used to show the change of value over time suc
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-stacked-spline-chart"
-           github-src="charts/data-chart/stacked-spline-chart" 
+           github-src="charts/data-chart/stacked-spline-chart"
            alt="Angular Stacked Spline Chart" >
 </code-view>
 

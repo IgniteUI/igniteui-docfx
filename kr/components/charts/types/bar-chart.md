@@ -2,6 +2,7 @@
 title: Angular Bar Chart and Graph | Ignite UI for Angular
 _description: Angular Bar Chart is among the most common category chart types used to quickly compare frequency, count, total, or average of data in different categories. Try for FREE.
 _keywords: Angular Charts, Bar Chart, Bar Graph, Horizontal Chart, Infragistics
+_language: kr
 mentionedTypes: ["XamDataChart", "BarSeries", "StackedBarSeries", "Stacked100BarSeries"]
 ---
 

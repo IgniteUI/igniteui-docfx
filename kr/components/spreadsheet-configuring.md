@@ -2,6 +2,7 @@
 title: Angular Spreadsheet | Grid Controls | Configuration | Infragistics |
 _description: Use the Spreadsheet control to embed Excel document creation and editing experiences right into your application.
 _keywords: Spreadsheet, Ignite UI for Angular, Infragistics
+_language: kr
 mentionedTypes: ['Spreadsheet']
 ---
 
@@ -23,7 +24,7 @@ The [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-an
 
 When a user edits a cell value and confirms the new input, the [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) control has the ability to navigate to cells adjacent to the currently active cell on press of the `Enter` key, depending on the configuration of the spreadsheet.
 
-In order to enable this `Enter` key navigation, you can set the [`isEnterKeyNavigationEnabled`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#isenterkeynavigationenabled) property to `true`. If set to false, the active cell will stay the same when pressing the `Enter` key.
+In order to enable this `Enter` key navigation, you can set the [`isEnterKeyNavigationEnabled`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#isenterkeynavigationenabled) property to **true**. If set to false, the active cell will stay the same when pressing the `Enter` key.
 
 You can also configure the direction of the adjacent cell navigated to on press of the `Enter` key by setting the [`enterKeyNavigationDirection`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#enterkeynavigationdirection) property to `Down`, `Up`, `Left` or `Right`.
 
