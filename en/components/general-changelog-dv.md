@@ -10,35 +10,22 @@ namespace: Infragistics.Controls.Charts
 
 All notable changes for each version of Ignite UI for Angular are documented on this page.
 
-<!-- Angular -->
-
-> [!NOTE]
-> This topic discusses changes only for DV related controls eg. (charts, excel, spreadsheet, maps)
-> For changes specific to Angular LOB components, please see [Ignite UI Angular Changes](https://github.com/igniteui/igniteui-angular/blob/master/changelog.md)
-
-<!-- end: Angular -->
-
-<div class="divider--half"></div>
-
-## **Angular {PackageVerChanges-21-2.1}**
-
 <div class="divider--half"></div>
 
 <div class="divider--half"></div>
 
-<div class="divider--half"></div>
+<!-- Angular, WebComponents, React -->
 
-## **Angular 13.1.0**
+## **13.1.0**
 
-<div class="divider--half"></div>
+> [!Note]
+> Please ensure package "lit-html": "^2.0.0" or newer is added to your project for optimal compatibility.
+>
+> <!-- end:Angular, WebComponents, React -->
 
-<div class="divider--half"></div>
+### igniteui-angular-charts
 
-<div class="divider--half"></div>
-
-<div class="divider--half"></div>
-
-### Charts & Maps
+### igniteui-angular-maps
 
 This release introduces a few improvements and simplifications to visual design and configuration options for the geographic map and all chart components.
 
@@ -73,9 +60,13 @@ This release introduces a few improvements and simplifications to visual design 
 
 <div class="divider--half"></div>
 
-## **Angular 11.2.0**
+## **11.2.0**
 
-### Charts & Maps
+### igniteui-angular-charts
+
+### igniteui-angular-maps
+
+#### Charts & Maps
 
 This release introduces several new and improved visual design and configuration options for all of the chart components, e.g. `DataChart`, [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html), and [`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html).
 
@@ -121,12 +112,12 @@ for example:
 | <img class="responsive-img" src="../images/chartDefaults1.png" /> | <img class="responsive-img" src="../images/chartDefaults2.png" /> |
 | <img class="responsive-img" src="../images/chartDefaults3.png" /> | <img class="responsive-img" src="../images/chartDefaults4.png" /> |
 
-### Chart Legend
+#### Chart Legend
 
 -   Added horizontal [`Orientation`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/orientation.html) property to ItemLegend that can be used with Bubble, Donut, and Pie Chart
 -   Added [`legendHighlightingMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriesviewercomponent.html#legendhighlightingmode) property - Enables series highlighting when hovering over legend items
 
-### Geographic Map
+#### Geographic Map
 
 > [!NOTE]
 > These features are CTP
@@ -144,7 +135,7 @@ for example:
 
 <!-- Angular, React, WebComponents -->
 
-## **Angular 8.2.12**
+## **8.2.12**
 
 -   Changed Import Statements
 
