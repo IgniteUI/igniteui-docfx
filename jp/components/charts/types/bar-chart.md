@@ -3,6 +3,7 @@ title: Angular 棒チャートとグラフ | Ignite UI for Angular
 _description: Angular 棒チャートは、さまざまなカテゴリのデータの頻度、カウント、合計、または平均をすばやく比較するために使用される最も一般的なカテゴリ チャート タイプの 1 つです。無料でお試しください。
 _keywords: Angular Charts, Bar Chart, Bar Graph, Horizontal Chart, Infragistics, Angular チャート, 棒チャート, 棒グラフ, 水平チャート, インフラジスティックス
 mentionedTypes: ["XamDataChart", "BarSeries", "StackedBarSeries", "Stacked100BarSeries"]
+namespace: Infragistics.Controls.Charts
 _language: ja
 ---
 

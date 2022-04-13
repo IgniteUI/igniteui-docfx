@@ -3,6 +3,7 @@ title: Angular ラジアル ゲージ チャート | データ可視化ツール
 _description: インフラジスティックスの Angular ラジアル ゲージコ ントロールを使用して、魅力的なデータ可視化とダッシュボードを作成し、豊富なスタイルと対話機能を KPI で実現できます。Ignite UI for Angular ラジアル ゲージの設定可能な要素について説明します。
 _keywords: Radial Gauge, Ignite UI for Angular, Infragistics, animation, labels, needle, scales, ranges, tick marks, ラジアル ゲージ, インフラジスティックス, アニメーション, ラベル, 針, スケール, 範囲, 目盛
 mentionedTypes: ['XamRadialGauge', 'XamRadialGaugeRange']
+namespace: Infragistics.Controls.Gauges
 _language: ja
 ---
 
@@ -14,7 +15,7 @@ Ignite UI for Angular Radial Gauge コンポーネントは、ゲージを表示
 
 ## Angular ラジアル ゲージの例
 
-以下のサンプルは、同じゲージでいくつかのプロパティを設定して全く異なるゲージにする方法を示します。
+以下のサンプルは、同じ [`IgxRadialGaugeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialgaugecomponent.html) でいくつかのプロパティを設定して全く異なるゲージにする方法を示します。
 
 <code-view style="height: 375px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
@@ -326,3 +327,17 @@ export class AppModule {}
     </igx-radial-gauge-range>
 </igx-radial-gauge>
 ```
+
+## その他のリソース
+
+その他のゲージ タイプの詳細については、以下のトピックを参照してください。
+
+-   [ブレット グラフ](bullet-graph.md)
+-   [リニア ゲージ](linear-gauge.md)
+
+## API メンバー
+
+以下は上記のセクションで説明した API メンバーのリストです。
+
+-   [`IgxRadialGaugeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialgaugecomponent.html)
+-   [`IgxRadialGaugeRangeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialgaugerangecomponent.html)

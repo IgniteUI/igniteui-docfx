@@ -3,6 +3,7 @@ title: Angular チャート アニメーション | データ可視化 | イン�
 _description: インフラジスティックスの Angular チャート アニメーション
 _keywords: Angular Charts, Animations, Infragistics, Angular チャート, アニメーション, インフラジスティックス
 mentionedTypes: ["CategoryChart"]
+namespace: Infragistics.Controls.Charts
 _language: ja
 ---
 
