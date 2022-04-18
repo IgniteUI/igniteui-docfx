@@ -70,14 +70,12 @@ Now the value of `$my-avatar-schema` will contain all properties of `$_light-ava
 We provide predefined light and dark schemas that we use with our main palettes:
 
 - Light Schemas
-    - $light-schema
-    - $light-material-schema (an alias of $light-schema)
+    - $light-material-schema
     - $light-fluent-schema
     - $light-bootstrap-schema
     - $light-indigo-schema
 - Dark Schemas
-    - $dark-schema
-    - $dark-material-schema (an alias of $dark-schema)
+    - $dark-material-schema
     - $dark-fluent-schema
     - $dark-bootstrap-schema
     - $dark-indigo-schema
