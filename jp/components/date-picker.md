@@ -31,7 +31,7 @@ import { IgxDatePickerModule } from 'igniteui-angular';
 
 @NgModule({
     ...
-    imports: [..., IgxDateRangePickerModule, BrowserAnimationsModule, HammerModule],
+    imports: [..., IgxDatePickerModule, BrowserAnimationsModule, HammerModule],
     ...
 })
 export class AppModule {}
@@ -218,27 +218,6 @@ IgxDatePicker と [`IgxTimePicker`](time-picker.md) を一緒に使用する場�
 
 <code-view style="height: 540px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/reactive-form" >
-</code-view>
-
-<div class="divider--half"></div>
-
-#### 日付ピッカーとタイム ピッカーを併用する
-IgxDatePicker と [`IgxTimePicker`](time-picker.md) を一緒に使用する場合、それらを 1 つの同じ Date オブジェクト値にバインドする必要がある場合があります。
-
-テンプレート駆動フォームでこれを実現するには、`ngModel` を使用して両方のコンポーネントを同じ Date オブジェクトにバインドします。
-
-<code-view style="height: 540px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/template-driven-form" >
-</code-view>
-
-<div class="divider--half"></div>
-
-リアクティブ フォームでは、各コンポーネントの [`valueChange`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#valuechange) イベントを処理し、他のコンポーネントの値を更新できます。
-
-<code-view style="height: 540px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/scheduling/reactive-form" >
 </code-view>
 
