@@ -2,20 +2,29 @@
 title: Angular What's New | Ignite UI for Angular | Infragistics
 _description: Learn about new features in the Ignite UI for Angular.
 _keywords: Changelog, What's New,  Ignite UI for Angular, Infragistics
-mentionedTypes: ["SeriesViewer", "XYChart", "DomainChart", "XamGeographicMap"]
+mentionedTypes: ["SeriesViewer", "XYChart", "DomainChart", "XamGeographicMap", "DatePicker", "MultiColumnComboBox"]
 namespace: Infragistics.Controls.Charts
 ---
 
-# Ignite UI for Angular Changelog (Data Visualization)
+# Ignite UI for Angular Changelog
 
 All notable changes for each version of Ignite UI for Angular are documented on this page.
 
 <!-- Angular -->
 
 > [!NOTE]
+> This topic discusses changes only for DV related controls eg. (charts, excel, spreadsheet, maps)
 > For changes specific to Angular LOB components, please see [Ignite UI Angular Changes](https://github.com/igniteui/igniteui-angular/blob/master/changelog.md)
 
 <!-- end: Angular -->
+
+<div class="divider--half"></div>
+
+## **Angular {PackageVerChanges-21-2.1}**
+
+<div class="divider--half"></div>
+
+<div class="divider--half"></div>
 
 <div class="divider--half"></div>
 
@@ -68,7 +77,7 @@ This release introduces a few improvements and simplifications to visual design 
 
 ### Charts & Maps
 
-This release introduces several new and improved visual design and configuration options for all of the chart components. e.g. `DataChart`, [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html), and [`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html).
+This release introduces several new and improved visual design and configuration options for all of the chart components, e.g. `DataChart`, [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html), and [`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html).
 
 -   Changed Bar/Column/Waterfall series to have square corners instead of rounded corners
 -   Changed Scatter High Density series’ colors for heat min property from <span style="color:#8a5bb1">#8a5bb1</span> to <span style="color:#000000">#000000</span>
