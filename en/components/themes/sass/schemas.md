@@ -67,7 +67,7 @@ $my-avatar-schema: extend($_light-avatar, (
 Now the value of `$my-avatar-schema` will contain all properties of `$_light-avatar`, but the value for `background` will have be `limegreen`.
 
 ## Predefined Schemas
-We provide predefined light and dark schemas that we use with our main palettes:
+We provide predefined light and dark schemas that we use in our theme presets:
 
 - Light Schemas
     - $light-schema
