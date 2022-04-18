@@ -84,27 +84,17 @@ $igx-legacy-support: $legacy-support;
 
 ## Direction
 
-Like `$default-palette`, we allow you to modify the direction (left-to-right vs. right-to-left) of the produced styles; By setting the global `$direction` variable, you can change the default direction from LTR to RTL.
+Like `$default-palette`, we allow you to modify the direction (left-to-right vs. right-to-left) of the produced styles. To switch to RTL direction just set the `dir` attribute on either `html` or `body` tag:
 
-
-```scss
-// _variables.scss
-//...
-
-$direction: rtl;
+```html
+<html dir="rtl">
+...
+  <body>
+  </body>
+</html>
 ```
 
-You can set the direction for the global theme by specifying it in the `core` mixin.
-
-```scss
-// styles.scss
-@use './variables' as *;
-
-@include core(
-  $direction: $direction
-);
-```
-
+Ignite UI themes provide full RTL support by default.
 ## Global Variables
 
 Here's a list of global Sass variables forwarded in the main theming module:
