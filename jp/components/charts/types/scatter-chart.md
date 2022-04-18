@@ -3,6 +3,7 @@ title: Angular 散布図 | データ可視化 | インフラジスティック�
 _description: インフラジスティックスの Angular 散布図
 _keywords: Angular Charts, Scatter Chart, Infragistics, Angular チャート, 散布図, インフラジスティックス
 mentionedTypes: ["XamDataChart", "ScatterSeries", "ScatterLineSeries", "ScatterSplineSeries", "HighDensityScatterSeries", "ScatterAreaSeries", "ScatterContourSeries"]
+namespace: Infragistics.Controls.Charts
 _language: ja
 ---
 
