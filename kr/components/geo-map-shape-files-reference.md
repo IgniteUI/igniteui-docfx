@@ -3,6 +3,7 @@ title: Angular Map | Data Visualization Tools | Shape Files Reference | Shape Fi
 _description: Learn about shape files format to use with Infragistics' Angular map. Check out Ignite UI for Angular map tutorials!
 _keywords: Angular map, shape files, Ignite UI for Angular, Infragistics, shape editing
 mentionedTypes: ['XamGeographicMap']
+_language: kr
 ---
 
 # Angular Shape Files Reference

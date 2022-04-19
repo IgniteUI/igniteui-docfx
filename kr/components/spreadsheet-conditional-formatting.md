@@ -2,6 +2,7 @@
 title: Angular Spreadsheet | Grid Controls | Conditional Formatting | Infragistics |
 _description: Use the Spreadsheet control to embed Excel document creation and editing experiences right into your application.
 _keywords: Spreadsheet, Ignite UI for Angular, Infragistics
+_language: kr
 mentionedTypes: ['Spreadsheet']
 ---
 
