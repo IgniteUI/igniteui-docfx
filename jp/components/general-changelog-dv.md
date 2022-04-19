@@ -11,31 +11,22 @@ namespace: Infragistics.Controls.Charts
 
 Ignite UI for Angular の各バージョンのすべての重要な変更は、このページに記載されています。
 
-<!-- Angular -->
-
-> [!NOTE]
-> このトピックでは、Angular データ可視化関連のコントロール (チャート、Excel、スプレッドシート、マップ) の変更についてのみ説明します。
-> Angular LOB コンポーネントに固有の変更については、[Ignite UI Angular 変更](https://github.com/igniteui/igniteui-angular/blob/master/changelog.md)を参照してください。
-
-<!-- end: Angular -->
-
-<div class="divider--half"></div>
-
-## **Angular {PackageVerChanges-21-2.1}**
-
 <div class="divider--half"></div>
 
 <div class="divider--half"></div>
 
-<div class="divider--half"></div>
+<!-- Angular, WebComponents, React -->
 
-<div class="divider--half"></div>
+## **13.1.0**
 
-<div class="divider--half"></div>
+> [!Note]
+> パッケージ「lit-html」を確認してください。最適な互換性のために、「^2.0.0」以降がプロジェクトに追加されます。
+>
+> <!-- end:Angular, WebComponents, React -->
 
-<div class="divider--half"></div>
+### igniteui-angular-charts
 
-### チャートとマップ
+### igniteui-angular-maps
 
 このリリースでは、地理マップとすべてのチャート コンポーネントのビジュアル デザインと構成オプションにいくつかの改善と簡素化が導入されています。
 
@@ -70,9 +61,13 @@ Ignite UI for Angular の各バージョンのすべての重要な変更は、�
 
 <div class="divider--half"></div>
 
-## **Angular 11.2.0**
+## **11.2.0**
 
-### チャートとマップ
+### igniteui-angular-charts
+
+### igniteui-angular-maps
+
+#### チャートとマップ
 
 このリリースでは、すべてのチャート コンポーネントに、いくつかの新しく改善されたビジュアル デザインと構成オプションが導入されています。例えば、`DataChart`、[`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html)、および [`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html)。
 
@@ -118,13 +113,13 @@ Ignite UI for Angular の各バージョンのすべての重要な変更は、�
 | <img class="responsive-img" src="../images/chartDefaults1.png" /> | <img class="responsive-img" src="../images/chartDefaults2.png" /> |
 | <img class="responsive-img" src="../images/chartDefaults3.png" /> | <img class="responsive-img" src="../images/chartDefaults4.png" /> |
 
-### チャート凡例
+#### チャート凡例
 
 \*バブル、ドーナツ、および円チャートで使用できる水平方向の [`Orientation`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/orientation.html) プロパティを ItemLegend に追加しました。
 
 -   [`legendHighlightingMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriesviewercomponent.html#legendhighlightingmode) プロパティを追加 - 凡例項目にカーソルを合わせたときにシリーズの強調表示を有効にします。
 
-### 地理マップ
+#### 地理マップ
 
 > [!NOTE]
 > これらの機能は CTP です。
@@ -142,7 +137,7 @@ Ignite UI for Angular の各バージョンのすべての重要な変更は、�
 
 <!-- Angular, React, WebComponents -->
 
-## **Angular 8.2.12**
+## **8.2.12**
 
 -   Import ステートメントの変更
 
