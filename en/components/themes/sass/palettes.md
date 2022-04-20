@@ -139,6 +139,35 @@ $handmade-palette: (
 ```
 <div class="divider"></div>
 
+## Predefined Palettes
+We provide predefined light and dark palettes, which you can use along with our schemas to create themes for your components:
+
+- Light Palettes
+  - $light-material-palette
+  - $light-fluent-excel-palette
+  - $light-fluent-word-palette
+  - $light-fluent-palette
+  - $light-bootstrap-palette
+  - $light-indigo-palette
+- Dark Palettes
+  - $dark-material-palette
+  - $dark-fluent-excel-palette
+  - $dark-fluent-word-palette
+  - $dark-fluent-palette
+  - $dark-bootstrap-palette
+  - $dark-indigo-palette
+
+We also provide a few additional palettes that you can use:
+
+- Light Additional Palettes
+  - $light-green-palette
+  - $light-purple-palette
+- Dark Additional Palettes
+  - $dark-green-palette
+  - $dark-purple-palette
+
+You can mix and match all of the light palettes with a light schema of your choice and vice versa - all of the dark palettes with a dark schema that you think will best match your needs and vision.
+
 ## The Default Palette
 The `theme` mixin takes a palette(see the previous section) as one of its arguments. The passed palette is assigned to the global `$default-palette` variable. This palette stored in this variable is used across the Sass library as fallback palette, whenever a palette is expected, but not explicitly provided by the user.
 
@@ -294,6 +323,7 @@ $my-palette: palette(
 * [Getting Palette Colors]({environment:sassApiUrl}/index.html#function-igx-color)
 * [Getting Contrast Colors]({environment:sassApiUrl}/index.html#function-igx-contrast-color)
 * [Generating Color Classes]({environment:sassApiUrl}/index.html#mixin-color-classes)
+* [Schemas](./schemas.md)
 
 ## Additional Resources
 <div class="divider--half"></div>
