@@ -198,7 +198,7 @@ This section shows the accessibility (ARIA) support of the framework as well as 
 
 ### Enabling right-to-left direction (RTL)
 
-`Ignite UI for Angular` library is susceptible to `directionality` manipulation only when setting `dir` attribute on either `html` or `body` tags. Also, keep in mind that runtime changes are not detected.
+`Ignite UI for Angular` library is susceptible to `directionality` manipulation only when setting `dir` attribute on either `html` or `body` tags.
 
 With that being said, let's move to the following example:
 
