@@ -3,6 +3,7 @@ title: Angular 複合チャート | コンボ チャート | データ可視化 
 _description: インフラジスティックスの Angular 複合チャート
 _keywords: Angular Charts, Composite Chart, Combo Chart, Infragistics, Angular チャート, 複合チャート, コンボ チャート, インフラジスティックス
 mentionedTypes: ["XamDataChart"]
+namespace: Infragistics.Controls.Charts
 _language: ja
 ---
 

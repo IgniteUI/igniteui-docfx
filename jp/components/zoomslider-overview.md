@@ -12,6 +12,8 @@ Angular ZoomSlider コントロールは、範囲対応コントロールにズ�
 
 ## Angular ズーム スライダーの例
 
+以下のサンプルは、[`IgxZoomSliderComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxzoomslidercomponent.html) を使用して [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) のコンテンツをナビゲートする方法を示しています。
+
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/zoomslider-overview"
@@ -75,3 +77,14 @@ export class AppModule {}
 ```
 
 <div class="divider--half"></div>
+
+## その他のリソース
+
+チャートの詳細については、[グラフの機能](charts/chart-features.md)トピックを参照してください。
+
+## API メンバー
+
+以下は上記のセクションで説明した API メンバーのリストです。
+
+-   [`IgxZoomSliderComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxzoomslidercomponent.html)
+-   [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html)
