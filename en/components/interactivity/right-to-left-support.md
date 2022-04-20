@@ -28,9 +28,9 @@ or
 </html>
 ```
 
->[!NOTE]
->Currently the `Igx-Grid` component have only partial RTL support.
+> [!NOTE]
+> Currently the `Igx-Grid` component only has partial(visual) RTL support.
 
->[!NOTE]
+> [!NOTE]
 > ### Breaking Changes in version 13.2.0
 > All RTL specific stylesheets have been removed, therefore, users who have previously used *-rtl.css specific themes must switch to the regular theme files.
