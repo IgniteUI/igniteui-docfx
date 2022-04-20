@@ -7,60 +7,30 @@ _keywords: aria support, aria サポート, a11y, ignite ui for angular, infragi
 # 右から左 (RTL) サポート
 
 ## RTL サポート
-フレームワークのほとんどのコンポーネントで、新しい RTL テーマを介した**右から左 (RTL)** がサポートされます。
 
-**CSS ベース**のプロジェクトの場合、`node_modules/igniteui-angular/styles/igniteui-angular-rtl.css` を `angular.json` スタイル コレクションに追加します。
-
-**Sass ベース**のプロジェクトの場合、ルート スタイルシートの `core` ミックスインに `$direction` を渡します。
+フレームワークのほとんどのコンポーネントで、新しい RTL テーマを介した**右から左 (RTL)** がサポートされます。To switch to RTL direction you have to just set the `dir` attribute of the html or the body tag to `rtl`.
 
 例:
-
-```scss
-// $direction defaults to ltr if it's omitted.
-@include core($direction: rtl);
-```
-
-現在、以下コンポーネントは RTL 機能の一部をサポートしています。
-
-* Grid (igx-grid)
-* Tabs (igx-tabs)
-
-## RTL の例
-このセクションでは、フレームワークのアクセシビリティ (ARIA) サポートと、コンポーネントの`文字表記の方向`の簡単な管理を示します。
-
-<code-view style="height: 600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-rtl-sample" alt="Angular RTL Support Example">
-</code-view>
-
-
-
-## 右から左方向 (RTL) の有効化
-
-`Ignite UI for Angular` ライブラリは、`html` または `body` タグの `dir` 属性を設定した場合のみ `文字表記の方向`操作の影響を受けます。また、ランタイムの変更は検出されないことに注意してください。
-
-次の例に移動します。
-
-### 手順 1 - 両方のタグで 'dir' 属性を設定します。
 
 ```html
 <html dir="rtl">
 ...
+</html>
+```
+
+または
+
+```html
+<html>
   <body dir="ltr">
+  ...
   </body>
 </html>
 ```
 
-上記の場合、`body` タグの内部属性タグが優先されます。
+> [!NOTE]
+> Currently the `Igx-Grid` component only has partial(visual) RTL support.
 
-### 手順 2 - それぞれの方向の[テーマ エンジン](../themes/index.md)に通知します。
-
-そのためには、[core]({environment:sassApiUrl}/index.html#mixin-core) ミックスインの `$direction` パラメーターを設定します。
-
-```scss 
-@include core($direction: rtl);
-```
-
-コンテンツを調整する手順はこれですべてになります。
-
-
+> [!NOTE]
+> ### Breaking Changes in version 13.2.0
+> All RTL specific stylesheets have been removed, therefore, users who have previously used *-rtl.css specific themes must switch to the regular theme files.

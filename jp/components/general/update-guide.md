@@ -49,6 +49,11 @@ ng update @angular/cli
 
 例: 6.2.4 から 7.1.0 にアップデートする場合、[6.x .. から] セクションから始めて変更を適用していきます。
 
+## 13.1.x から 13.2.x の場合:
+
+### テーマ
+- **重大な変更** - All RTL specific stylesheets have been removed. Ignite UI themes now support RTL directon by default. Users who have previously used `*-rtl.css` specific themes must switch to the regular theme files.
+
 ## 13.0.x から 13.1.x の場合:
 
 ### 一般

@@ -140,6 +140,35 @@ $handmade-palette: (
 ```
 <div class="divider"></div>
 
+## Predefined Palettes
+We provide predefined light and dark palettes, which you can use along with our schemas to create themes for your components:
+
+- Light Palettes
+  - $light-material-palette
+  - $light-fluent-excel-palette
+  - $light-fluent-word-palette
+  - $light-fluent-palette
+  - $light-bootstrap-palette
+  - $light-indigo-palette
+- Dark Palettes
+  - $dark-material-palette
+  - $dark-fluent-excel-palette
+  - $dark-fluent-word-palette
+  - $dark-fluent-palette
+  - $dark-bootstrap-palette
+  - $dark-indigo-palette
+
+We also provide a few additional palettes that you can use:
+
+- Light Additional Palettes
+  - $light-green-palette
+  - $light-purple-palette
+- Dark Additional Palettes
+  - $dark-green-palette
+  - $dark-purple-palette
+
+You can mix and match all of the light palettes with a light schema of your choice and vice versa - all of the dark palettes with a dark schema that you think will best match your needs and vision.
+
 ## デフォルトのパレット
 `theme` ミックスインは、引数の 1 つとしてパレット (前のセクションを参照) を使用します。渡されたパレットはグローバルな `$default-palette` 変数に割り当てられます。この変数に保存されたパレットは、パレットが必要であるがユーザーによって明示的に提供されない場合、Sass ライブラリ全体で代替パレットとして使用されます。
 
@@ -295,6 +324,7 @@ $my-palette: palette(
 * [パレット カラーの取得]({environment:sassApiUrl}/index.html#function-igx-color)
 * [コントラスト カラーの取得]({environment:sassApiUrl}/index.html#function-igx-contrast-color)
 * [カラー クラスの生成]({environment:sassApiUrl}/index.html#mixin-color-classes)
+* [スキーマ](./schemas.md)
 
 ## その他のリソース
 <div class="divider--half"></div>

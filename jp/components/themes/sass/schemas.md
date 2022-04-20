@@ -67,6 +67,22 @@ $my-avatar-schema: extend($_light-avatar, (
 
 これで `$my-avatar-schema` の値には `$_light-avatar` のすべてのプロパティが含まれますが、`background` の値は `limegreen` になります。
 
+## Predefined Schemas
+We provide predefined light and dark schemas that we use in our theme presets:
+
+- Light Schemas
+    - $light-material-schema
+    - $light-fluent-schema
+    - $light-bootstrap-schema
+    - $light-indigo-schema
+- Dark Schemas
+    - $dark-material-schema
+    - $dark-fluent-schema
+    - $dark-bootstrap-schema
+    - $dark-indigo-schema
+
+We use the light and dark schemas accordingly with the light and dark palettes to create the component themes. For example, using the `$light-material-schema` along with the `$light-material-palette` will help us create all of the light material component themes. And vice versa - using the `$dark-material-schema` along with the `$dark-material-palette` will give us the dark material component themes.
+
 ## スキーマの使用
 以上がコンポーネント スキーマの概要と作成方法です。次に Sass プロジェクトのスキーマの使用方法について説明します。 
 

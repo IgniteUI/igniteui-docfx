@@ -198,11 +198,9 @@ _keywords: アクセシビリティ準拠, angular, ignite ui for angular, イ�
 
 ### 右から左方向 (RTL) の有効化
 
-`Ignite UI for Angular` ライブラリは、`html` または `body` タグの `dir` 属性を設定した場合のみ `文字表記の方向`操作の影響を受けます。また、ランタイムの変更は検出されないことに注意してください。
+`Ignite UI for Angular` ライブラリは、`html` または `body` タグの `dir` 属性を設定した場合のみ `文字表記の方向`操作の影響を受けます。
 
 次の例に移動します。
-
-#### 手順 1 - 両方のタグで ‘dir’ 属性を設定します。
 
 ```html
 <html dir="rtl">
@@ -212,36 +210,12 @@ _keywords: アクセシビリティ準拠, angular, ignite ui for angular, イ�
 </html>
 ```
 
-上記の場合、`body` タグの内部属性タグが優先されます。
+>[!NOTE]
+> The precedence takes the inner tag which in the above case is the attribute at the `body` tag.
 
-#### 手順 2 - それぞれの方向の[テーマ エンジン](../themes/index.md)に通知します。
+### RTL Support 
 
-そのためには、[core]({environment:sassApiUrl}/index.html#mixin-core) ミックスインの `$direction` パラメーターを設定します。
+**Right-to-left (RTL)** direction is fully supported in all Ignite UI themes by default.
 
-```scss 
-@include core($direction: rtl);
-```
-
-コンテンツを調整する手順はこれですべてになります。
-
-
-### RTL サポート 
-フレームワークのほとんどのコンポーネントで、新しい RTL テーマを介した**右から左 (RTL)** がサポートされます。
-
-**CSS ベース**のプロジェクトの場合、`node_modules/igniteui-angular/styles/igniteui-angular-rtl.css` を `angular.json` スタイル コレクションに追加します。
-
-**Sass ベース**のプロジェクトの場合、ルート スタイルシートの `core` ミックスインに `$direction` を渡します。
-
-例:
-
-```scss
-// $direction defaults to ltr if it's omitted.
-@include core($direction: rtl);
-```
-
-現在、以下コンポーネントは RTL 機能の一部をサポートしています。
-
-* Grid (igx-grid)
-* Tabs (igx-tabs)
-
-
+>[!NOTE]
+>Currently the `Igx-Grid` component have only partial RTL support.
