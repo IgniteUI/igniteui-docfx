@@ -60,7 +60,9 @@ During runtime the expressions are gettable and settable from the [`groupingExpr
 grid.groupBy({ fieldName: 'ProductName', dir: SortingDirection.Desc, ignoreCase: true });
 ```
 
-Grouping works in conjunction with sorting and grouping expressions are applied as sorting ones even though columns may be sorted without being grouped. You will always find the grouping expressions in the [`sortingExpressions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#sortingexpressions) property, sorted in a way that grouped columns' expressions are always first. The sorting API will affect grouping if it changes the expression for a column that is grouped. Removing a grouping expression (ungrouping a column) also unsorts it.
+Up until now, grouping/sorting worked in conjuction with each other. In 13.2 version, a new behavior which decouples gropuing from sorting is introduced. For example - you can still have ne ore more grouped columns and no sorted columns in the grid.
+
+Another case is clearing the sorting or modifying the sorting thrugh the UI will not affect the grouping.
 
 ### Expand/Collapse API
 

@@ -28,6 +28,10 @@ In Ignite UI for Angular @@igComponent, data sorting is enabled on a per-column 
 
 ## Angular @@igComponent Sorting Overview Example
 
+Up until now, grouping/sorting worked in conjuction with each other. In 13.2 version, a new behavior which decouples gropuing from sorting is introduced. For example - you can still have ne ore more grouped columns and no sorted columns in the grid.
+
+Another case is clearing the sorting or modifying the sorting thrugh the UI will not affect the grouping.
+
 @@if (igxName === 'IgxGrid') {
 
 <code-view style="height:550px" 
