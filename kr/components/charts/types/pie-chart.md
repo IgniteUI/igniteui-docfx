@@ -2,6 +2,7 @@
 title: Angular Pie Charts and Graphs | Ignite UI for Angular
 _description: The Ignite UI for Angular pie chart is a specialized UI control that renders a pie chart, consisting of a circular area divided into sections.  Try for FREE.
 _keywords: Angular charts, pie chart, Ignite UI for Angular, Infragistics, data binding, slice selection, slice explosion, animation
+_language: kr
 mentionedTypes: ["XamPieChart", "XamDataChart"]
 ---
 

@@ -3,6 +3,7 @@ title: Angular Radial Gauge Component - Native Angular | Ignite UI for Angular
 _description: The Radial Gauge component in Ignite UI for Angular provides a number of visual elements, like a needle, tick marks, ranges, and labels, in order to create a predefined shape and scale.
 _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Data Grid, Angular Chart Control, Angular Grid Component, Angular radial gauge component, Angular radial gauge
 _language: kr
+mentionedTypes: ['XamRadialGauge']
 ---
 
 # Angular Radial Gauge
