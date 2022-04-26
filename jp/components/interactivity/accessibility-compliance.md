@@ -211,11 +211,11 @@ _keywords: アクセシビリティ準拠, angular, ignite ui for angular, イ�
 ```
 
 >[!NOTE]
-> The precedence takes the inner tag which in the above case is the attribute at the `body` tag.
+> 上記の場合、`body` タグの内部属性タグが優先されます。
 
-### RTL Support 
+### RTL サポート 
 
-**Right-to-left (RTL)** direction is fully supported in all Ignite UI themes by default.
+右から左 (RTL) 方向は、デフォルトですべての Ignite UI テーマで完全にサポートされています。
 
 >[!NOTE]
->Currently the `Igx-Grid` component have only partial RTL support.
+>現在、`Igx-Grid` コンポーネントは部分的な RTL サポートしかありません。

@@ -8,7 +8,7 @@ _keywords: aria support, aria サポート, a11y, ignite ui for angular, infragi
 
 ## RTL サポート
 
-フレームワークのほとんどのコンポーネントで、新しい RTL テーマを介した**右から左 (RTL)** がサポートされます。To switch to RTL direction you have to just set the `dir` attribute of the html or the body tag to `rtl`.
+フレームワークのほとんどのコンポーネントで、新しい RTL テーマを介した**右から左 (RTL)** がサポートされます。RTL 方向に切り替えるには、html の `dir` 属性または body タグを `rtl` に設定する必要があります。
 
 例:
 
@@ -29,8 +29,8 @@ _keywords: aria support, aria サポート, a11y, ignite ui for angular, infragi
 ```
 
 > [!NOTE]
-> Currently the `Igx-Grid` component only has partial(visual) RTL support.
+> 現在、`Igx-Grid` コンポーネントは部分的 (視覚的) RTL のみをサポートしています。
 
 > [!NOTE]
-> ### Breaking Changes in version 13.2.0
-> All RTL specific stylesheets have been removed, therefore, users who have previously used *-rtl.css specific themes must switch to the regular theme files.
+> ### バージョン 13.2.0 での重大な変更
+> RTL 固有のスタイル シートはすべて削除されているため、以前に *-rtl.css 固有のテーマを使用したことがあるユーザーは、通常のテーマ ファイルに切り替える必要があります。

@@ -52,7 +52,7 @@ ng update @angular/cli
 ## 13.1.x から 13.2.x の場合:
 
 ### テーマ
-- **重大な変更** - All RTL specific stylesheets have been removed. Ignite UI themes now support RTL directon by default. Users who have previously used `*-rtl.css` specific themes must switch to the regular theme files.
+- **重大な変更** - RTL 固有のスタイル シートはすべて削除されました。Ignite UI テーマは、デフォルトで RTL 方向をサポートするようになりました。以前に `*-rtl.css` 固有のテーマを使用したことがあるユーザーは、通常のテーマ ファイルに切り替える必要があります。
 
 ## 13.0.x から 13.1.x の場合:
 

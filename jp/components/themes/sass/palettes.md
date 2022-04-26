@@ -140,17 +140,17 @@ $handmade-palette: (
 ```
 <div class="divider"></div>
 
-## Predefined Palettes
-We provide predefined light and dark palettes, which you can use along with our schemas to create themes for your components:
+## 事前定義されたパレット
+事前定義されたライト パレットとダーク パレットを提供します。これをスキーマと一緒に使用して、コンポーネントのテーマを作成できます。
 
-- Light Palettes
+- ライト パレット
   - $light-material-palette
   - $light-fluent-excel-palette
   - $light-fluent-word-palette
   - $light-fluent-palette
   - $light-bootstrap-palette
   - $light-indigo-palette
-- Dark Palettes
+- ダーク パレット
   - $dark-material-palette
   - $dark-fluent-excel-palette
   - $dark-fluent-word-palette
@@ -158,16 +158,16 @@ We provide predefined light and dark palettes, which you can use along with our 
   - $dark-bootstrap-palette
   - $dark-indigo-palette
 
-We also provide a few additional palettes that you can use:
+また、使用できるいくつかの追加パレットも提供しています。
 
-- Light Additional Palettes
+- 追加のライト パレット
   - $light-green-palette
   - $light-purple-palette
-- Dark Additional Palettes
+- 追加のダーク パレット
   - $dark-green-palette
   - $dark-purple-palette
 
-You can mix and match all of the light palettes with a light schema of your choice and vice versa - all of the dark palettes with a dark schema that you think will best match your needs and vision.
+すべてのライト パレットを選択したライト スキーマと組み合わせたり、またはその逆にすべてのダーク パレットをニーズとビジョンに最も一致すると思われるダーク スキーマと組み合わせたりできます。
 
 ## デフォルトのパレット
 `theme` ミックスインは、引数の 1 つとしてパレット (前のセクションを参照) を使用します。渡されたパレットはグローバルな `$default-palette` 変数に割り当てられます。この変数に保存されたパレットは、パレットが必要であるがユーザーによって明示的に提供されない場合、Sass ライブラリ全体で代替パレットとして使用されます。
