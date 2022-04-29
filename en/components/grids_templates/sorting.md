@@ -26,11 +26,10 @@ _canonicalLink: grid/sorting
 
 In Ignite UI for Angular @@igComponent, data sorting is enabled on a per-column level, meaning that the **@@igSelector** can have a mix of sortable and non-sortable columns. Performing angular sort actions enables you to change the display order of the records based on specified criteria.
 
+
+> Note: Up until now, grouping/sorting worked in conjuction with each other. In 13.2 version, a new behavior which decouples gropuing from sorting is introduced. For example - clearing the grouping will not clear sorting expressions in the grid or vice versa. Still, if a column is both sorted and grouped, grouped expressions take precedence.
+
 ## Angular @@igComponent Sorting Overview Example
-
-Up until now, grouping/sorting worked in conjuction with each other. In 13.2 version, a new behavior which decouples gropuing from sorting is introduced. For example - you can still have ne ore more grouped columns and no sorted columns in the grid.
-
-Another case is clearing the sorting or modifying the sorting thrugh the UI will not affect the grouping.
 
 @@if (igxName === 'IgxGrid') {
 

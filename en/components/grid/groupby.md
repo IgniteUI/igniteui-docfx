@@ -60,9 +60,7 @@ During runtime the expressions are gettable and settable from the [`groupingExpr
 grid.groupBy({ fieldName: 'ProductName', dir: SortingDirection.Desc, ignoreCase: true });
 ```
 
-Up until now, grouping/sorting worked in conjuction with each other. In 13.2 version, a new behavior which decouples gropuing from sorting is introduced. For example - you can still have ne ore more grouped columns and no sorted columns in the grid.
-
-Another case is clearing the sorting or modifying the sorting thrugh the UI will not affect the grouping.
+> Note: Up until now, grouping/sorting worked in conjuction with each other. In 13.2 version, a new behavior which decouples gropuing from sorting is introduced. For example - clearing the grouping will not clear sorting expressions in the grid or vice versa. Still, if a column is both sorted and grouped, grouped expressions take precedence.
 
 ### Expand/Collapse API
 
