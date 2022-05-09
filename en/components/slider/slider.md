@@ -5,7 +5,7 @@ _keywords: angular slider, igniteui for angular, infragistics
 ---
 
 # Slider Overview and Configuration
-<p class="highlight">The Ignite UI for Angular Slider component allows selection in a given range by moving the thumb along the track. The track can be defined as continuous or stepped and you can choose between single and range slider types.</p>
+<p class="highlight">The Ignite UI for Angular Slider is a form component which allows selection in a given range by moving a thumb along a track. The track can be defined as continuous or stepped and the slider can be configured so users can choose between single value and range (lower and upper value) slider types.</p>
 <div class="divider"></div>
 
 ## Angular Slider Example
@@ -40,41 +40,38 @@ export class AppModule {}
 
 ### Discrete Slider
 By default, the Slider Component is set to discrete type. A discrete slider provides a visualization of the current value with a numeric label (bubble). The bubble can be shown upon hovering on the slider thumb.  
-You can also use the slider with predefined steps, for example, to track only meaningful values for the user.  
+You can also use the slider with predefined steps to track only meaningful values for the user.  
 
-In the following example, we define a discrete slider that displays values from 0% to 100% and the [`step`]({environment:angularApiUrl}/classes/igxslidercomponent.html#step) is set to 10.  
-We also bind the slider [`value`]({environment:angularApiUrl}/classes/igxslidercomponent.html#value) to a property in our component called "completion" to allow two way binding with an input component.
+In the following example, we define a discrete slider that displays values from 0% to 100% and the [`step`]({environment:angularApiUrl}/classes/igxslidercomponent.html#step) is set to 10% per increment/decrement.  
+We also bind the slider [`value`]({environment:angularApiUrl}/classes/igxslidercomponent.html#value) to a property in our component called "completion", using Angular [`ngModel`](https://angular.io/guide/built-in-directives#ngModel), to allow two way binding with an input component. Same effect can be achieved, if `[(ngModel)]` is replaced with `[(value)]` as the slider `value` input also exposes a `valueChange` event.
 
 ```html
 <!--sample.component.html-->
 
 <igx-slider [minValue]="0" [maxValue]="100" [step]="10" [(ngModel)]="task.completion"></igx-slider>
-<div class="igx-form-group">
-    <input igxInput id="percentInput" type="text" [value]="task.completion" (blur)="updateTask($event.target)" />
+<igx-input-group type="border">
+    <input igxInput id="percentInput" type="number" [(ngModel)]="task.completion" />
     <label igxLabel for="percentInput">Task Completion</label>
-</div>
+    <igx-suffix>%</igx-suffix>
+</igx-input-group>
 ```
 
 ```typescript
 // sample.component.ts 
+import { Component, ViewChild } from '@angular/core';
+import { IgxInputDirective, IgxSliderComponent } from 'igniteui-angular';
 
-public task: Task = new Task(10);
+@Component({
+    selector: 'app-sample',
+    styleUrls: ['./sample.component.scss'],
+    templateUrl: './sample.component.html'
+})
+export class SampleComponent {
+    public task = {
+        completion: 10
+    };
 
-updateTask(event) {
-    if (!isNaN(parseInt(event.value, 10))) {
-        this.task.completion = event.value;
-    } else {
-        event.value = this.task.completion;
-    }
-}
-
-...
-
-class Task {
-  constructor (
-      public completion: number
-  ) {
-  }
+    constructor() { }
 }
 ```
 
@@ -125,8 +122,7 @@ If the sample is configured properly, dragging the slider thumb should update th
 
 
 ### Range Slider
-First, set the slider [`type`]({environment:angularApiUrl}/classes/igxslidercomponent.html#type) to [`RANGE`]({environment:angularApiUrl}/enums/slidertype.html#range). Next, we bind the slider value to an object of type PriceRange. 
-That object has two properties for lower and upper range values.
+First, set the slider [`type`]({environment:angularApiUrl}/classes/igxslidercomponent.html#type) to [`RANGE`]({environment:angularApiUrl}/enums/slidertype.html#range). Next, we bind the slider value to an object with properties for `lower` and `upper` values. 
 
 ```html
 <!--sample.component.html-->
@@ -135,26 +131,42 @@ That object has two properties for lower and upper range values.
     [type]="sliderType.RANGE" 
     [minValue]="0" 
     [maxValue]="1000" 
-    [(ngModel)]="priceRange">
-    </igx-slider>
+    [(lowerValue)]="priceRange.lower"
+    [(upperValue)]="priceRange.upper">
+</igx-slider>
+
+<igx-input-group type="border">
+    <label igxLabel for="lowerRange">From</label>
+    <igx-prefix>$</igx-prefix>
+    <input igxInput id="lowerRange" type="number" [(ngModel)]="priceRange.lower" />
+</igx-input-group>
+
+<igx-input-group type="border">
+    <label igxLabel for="upperRange">To</label>
+    <igx-prefix>$</igx-prefix>
+    <input igxInput id="upperRange" type="number" [(ngModel)]="priceRange.upper" />
+</igx-input-group>
 ```
 
 ```typescript
 // sample.component.ts
+import { Component } from '@angular/core';
+import { IgxSliderType } from 'igniteui-angular';
 
-public sliderType = SliderType;
-public priceRange: PriceRange = new PriceRange(200, 800);
+@Component({
+  selector: 'app-sample',
+  styleUrls: ['./sample.component.scss'],
+  templateUrl: './sample.component.html'
+})
+export class SampleComponent {
+  public sliderType = IgxSliderType;
+  public priceRange = {
+      lower: 200,
+      upper: 800
+  };
 
-...
-
-class PriceRange {
-  constructor(
-    public lower: number,
-    public upper: number,
-  ) {
-  }
+  constructor() { }
 }
-
 ```
 
 
@@ -163,6 +175,8 @@ class PriceRange {
            iframe-src="{environment:demosBaseUrl}/interactions/slider-sample-4" >
 </code-view>
 
+>[!NOTE]
+> When using a slider of type RANGE, binding to `ngModel` will work only in the direction of updating the model from the slider. In order to use two-way binding for both values, you can take advantage of the `lowerValue` and `upperValue` bindings.
 
 In some cases, values near to the minimum and maximum are not appropriate. You can further provide a useful range to limit the user choice along with setting [`minValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#minvalue) and [`maxValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#maxvalue). 
 This can be done by setting [`lowerBound`]({environment:angularApiUrl}/classes/igxslidercomponent.html#lowerbound) and [`upperBound`]({environment:angularApiUrl}/classes/igxslidercomponent.html#upperbound). Now, the user will not be able to move the thumb in the range of 0 to 100 and in the range of 900 to 1000.
@@ -173,11 +187,12 @@ This can be done by setting [`lowerBound`]({environment:angularApiUrl}/classes/i
 <igx-slider 
     [type]="sliderType.RANGE" 
     [minValue]="0" 
-    [maxValue]="1000" 
-    [(ngModel)]="priceRange" 
+    [maxValue]="1000"
+    [(lowerValue)]="priceRange.lower"
+    [(upperValue)]="priceRange.upper"
     [lowerBound]="100" 
     [upperBound]="900">
-    </igx-slider>
+</igx-slider>
 ```
 
 
@@ -258,7 +273,7 @@ Use [`SecondaryTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.ht
     [showTicks]="true" 
     [primaryTicks]="3" 
     [secondaryTicks]="4">
-    </igx-slider>
+</igx-slider>
 ```
 
 ```typescript
@@ -290,7 +305,7 @@ In the following sample we disable all **secondary labels** by setting [`seconda
     [secondaryTicks]="4"
     [secondaryTickLabels]="false"
     [tickLabelsOrientation]="labelsOrientation">
-    </igx-slider>
+</igx-slider>
 ```
 We also rotate all viable labels by setting the [`TickLabelsOrientation`]({environment:angularApiUrl}/enums/ticklabelsorientation.html#range) to [`BottomToTop`]({environment:angularApiUrl}/enums/ticklabelsorientation.html)
 ```
@@ -321,7 +336,7 @@ Let’s move on and see how to change the position of the **ticks**.
         [secondaryTicks]="21"
         [primaryTickLabels]="false"
         [ticksOrientation]="ticksOrientation">
-        </igx-slider>
+    </igx-slider>
 </div>
 ```
 
@@ -372,14 +387,14 @@ Here, the [`primaryTicks`]({environment:angularApiUrl}/classes/igxslidercomponen
 Lastly, we will see how we can provide a custom template for the **tick labels** and what the [`template context`]({environment:angularApiUrl}/classes/igxtickscomponent.html#context) provides.
 
 ```html
-    <igx-slider
+<igx-slider
     [showTicks]="true"
     [primaryTicks]="3"
     [secondaryTicks]="3">
-        <ng-template igxSliderTickLabel let-value let-primary="isPrimary" let-idx="index">
-            {{ tickLabel(value, primary, idx) }}
-        </ng-template>
-    </igx-slider>
+    <ng-template igxSliderTickLabel let-value let-primary="isPrimary" let-idx="index">
+        {{ tickLabel(value, primary, idx) }}
+    </ng-template>
+</igx-slider>
 ```
 Applying [`IgxTickLabelTemplateDirective`]({environment:angularApiUrl}/classes/igxticklabeltemplatedirective.html) to the `ng-template` assigns the template over all **tick labels**. 
 
