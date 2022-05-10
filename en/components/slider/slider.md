@@ -43,7 +43,7 @@ By default, the Slider Component is set to discrete type. A discrete slider prov
 You can also use the slider with predefined steps to track only meaningful values for the user.  
 
 In the following example, we define a discrete slider that displays values from 0% to 100% and the [`step`]({environment:angularApiUrl}/classes/igxslidercomponent.html#step) is set to 10% per increment/decrement.  
-We also bind the slider [`value`]({environment:angularApiUrl}/classes/igxslidercomponent.html#value) to a property in our component called "completion", using Angular [`ngModel`](https://angular.io/guide/built-in-directives#ngModel), to allow two way binding with an input component. Same effect can be achieved, if `[(ngModel)]` is replaced with `[(value)]` as the slider `value` input also exposes a `valueChange` event.
+We also bind the slider [`value`]({environment:angularApiUrl}/classes/igxslidercomponent.html#value) to a property in our component called "completion", using Angular [`ngModel`](https://angular.io/guide/built-in-directives#ngModel), to allow two way binding with an input component.
 
 ```html
 <!--sample.component.html-->
