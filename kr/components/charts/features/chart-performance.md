@@ -2,6 +2,7 @@
 title: Angular Chart Performance | Data Visualization | Infragistics
 _description: Infragistics' Angular Chart Performance
 _keywords: Angular Charts, Performance, Infragistics
+_language: kr
 mentionedTypes: ["CategoryChart", "FinancialChart", "XamDataChart"]
 ---
 
