@@ -83,29 +83,6 @@ $igx-legacy-support: $legacy-support;
 );
 ```
 
-## 方向
-
-`$default-palette` と同様に、生成されたスタイルの方向 (left-to-right と right-to-left) を変更できます。グローバル `$direction` 変数を設定することにより、デフォルトの方向を LTR から RTL に変更できます。
-
-
-```scss
-// _variables.scss
-//...
-
-$direction: rtl;
-```
-
-`core` ミックスインで指定することにより、グローバル テーマの方向を設定できます。
-
-```scss
-// styles.scss
-@use './variables' as *;
-
-@include core(
-  $direction: $direction
-);
-```
-
 ## グローバル変数
 
 メインのテーマ モジュールで転送されるグローバル Sass 変数のリストは以下のとおりです。
