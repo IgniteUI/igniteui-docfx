@@ -39,9 +39,9 @@ export class AppModule {}
 
 ```html
 <igx-circular-bar
-[value]="100"
-[animate]="true"
-class="custom-size"
+    [value]="100"
+    [animate]="true"
+    class="custom-size"
 ></igx-circular-bar>
 ```
 
@@ -60,9 +60,9 @@ class="custom-size"
 
 ```html
 <igx-circular-bar
-[animate]="false"
-[indeterminate]="true"
-[textVisibility]="false"
+    [animate]="false"
+    [indeterminate]="true"
+    [textVisibility]="false"
 ></igx-circular-bar>
 ```
 
@@ -86,11 +86,11 @@ class="custom-size"
 ```html
 <div class="sample-content">
     <igx-circular-bar
-    [value]="currentValue"
-    [max]="100"
-    [animate]="true"
-    class="custom-size"
-    >
+        [value]="currentValue"
+        [max]="100"
+        [animate]="true"
+        class="custom-size">
+    </igx-circular-bar>
     <div class="button-container">
         <button igxButton="icon" (click)="decrementProgress()">
             <igx-icon fontSet="material">remove</igx-icon>
@@ -165,11 +165,10 @@ $custom-theme: igx-progress-circular-theme(
 ```html
 <div class="sample-content">
   <igx-circular-bar
-  [value]="currentValue"
-  [max]="100"
-  [animate]="true"
-  class="custom-size"
-  >
+    [value]="currentValue"
+    [max]="100"
+    [animate]="true"
+    class="custom-size">
       <ng-template igxProgressBarGradient let-id>
           <svg:linearGradient [id]="id" gradientTransform="rotate(90)">
               <stop offset="0%"   stop-color="#ff9a40"/>
