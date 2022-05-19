@@ -150,7 +150,7 @@ $handmade-palette: (
 ```
 <div class="divider"></div>
 
-We created a new `to-hsl()` function that takes a color, no matter the format, and gets its hue, saturation and lightness values, which we later use to generate the palette colors in `hsla` format. The `alpha` values must be initialized in the `:root` selector additionally.
+The `to-hsl()` function takes a color, no matter the color space, and returns its hue, saturation, and lightness values in a comma-separated list, which will be used when declaring the CSS variables for each shade in the palette. The `alpha` value for each palette color(primary, secondary, grays, etc.) must be initialized separately.
 
 ## Predefined Palettes
 We provide predefined light and dark palettes, which you can use along with our schemas to create themes for your components:
