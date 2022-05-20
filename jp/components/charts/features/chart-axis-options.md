@@ -37,6 +37,16 @@ Angular チャートは、チャートで表示されるラベルの構成、書
 
 <div class="divider--half"></div>
 
+## 軸ラベルの管理
+
+チャートの軸には、所有する軸のラベルに使用可能なスペースの量に関する拡張計算を実行する機能があります。この拡張された計算により、軸は、指定された軸に対してより多くのラベルを表示するために、指定されたスペースの量を最適化できます。
+
+この拡張された計算は、オプトインする必要があるものです。これは、[`useEnhancedIntervalManagement`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxaxiscomponent.html#useenhancedintervalmanagement) プロパティを true に設定することで実行できます。次に、軸の [`interval`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericaxisbasecomponent.html#interval) プロパティを手動で設定せずに、軸のディメンションに収まるだけの数のラベルを表示したい場合は、軸の [`enhancedIntervalPreferMoreCategoryLabels`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxaxiscomponent.html#enhancedintervalprefermorecategorylabels) プロパティを true に設定できます。
+
+チャートには、ラベルが割り当てられたスペースに収まらない場合にラベルの自動回転を考慮する機能と、ラベルが収まるようにプロット領域に自動マージンを適用する機能もあります。これは、最初にチャートの `AutoMarginAndAngleUpdateMode` プロパティを `SizeChanging` または `SizeChangingAndZoom` に設定することで最初にオプトインできるものです。これにより、必要に応じて、ラベルに適用された自動マージンと角度をいつ再評価するかがチャートに通知されます。
+
+`AutoMarginAndAngleUpdateMode` を設定した後、[`shouldAutoExpandMarginForInitialLabels`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#shouldautoexpandmarginforinitiallabels) プロパティを true に設定して自動マージンをオプトインするか `ShouldConsiderAutoRotationForInitialLabels` プロパティを true に設定して自動回転を行うことができます。[`autoExpandMarginExtraPadding`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#autoexpandmarginextrapadding) と [`autoExpandMarginMaximumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#autoexpandmarginmaximumvalue) を設して、それぞれ追加のスペースまたは可能な最大マージンを提供することにより、適用される自動マージンをさらにカスタマイズすることもできます。
+
 ## 軸範囲の例
 
 チャートでは数値軸または時間軸の範囲の最小値と最大値を定義できます。範囲の最小値は軸の最小値で、範囲の最大値は軸の最大値です。これらは、[`yAxisMinimumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#yaxisminimumvalue) および [`yAxisMaximumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#yaxismaximumvalue) オプションを設定することによって設定されます。
