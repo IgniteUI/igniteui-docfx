@@ -2,7 +2,7 @@
 title: Angular What's New | Ignite UI for Angular | Infragistics
 _description: Learn about new features in the Ignite UI for Angular.
 _keywords: Changelog, What's New,  Ignite UI for Angular, Infragistics
-mentionedTypes: ["SeriesViewer", "XYChart", "DomainChart", "XamGeographicMap", "DatePicker", "MultiColumnComboBox"]
+mentionedTypes: ["SeriesViewer", "XYChart", "DomainChart", "XamDataChart", "XamGeographicMap", "DatePicker", "MultiColumnComboBox"]
 namespace: Infragistics.Controls.Charts
 ---
 
@@ -10,35 +10,30 @@ namespace: Infragistics.Controls.Charts
 
 All notable changes for each version of Ignite UI for Angular are documented on this page.
 
+<div class="divider--half"></div>
+
 <!-- Angular -->
 
 > [!NOTE]
-> This topic discusses changes only for DV related controls eg. (charts, excel, spreadsheet, maps)
-> For changes specific to Angular LOB components, please see [Ignite UI Angular Changes](https://github.com/igniteui/igniteui-angular/blob/master/changelog.md)
+> This topic discusses changes only for components that are not included in the igniteui-angular package.
+> For changes specific to igniteui-angular components, please see [Ignite UI Angular Changes](https://github.com/igniteui/igniteui-angular/blob/master/changelog.md)
 
 <!-- end: Angular -->
 
 <div class="divider--half"></div>
 
-## **Angular {PackageVerChanges-21-2.1}**
-
 <div class="divider--half"></div>
 
 <div class="divider--half"></div>
 
-<div class="divider--half"></div>
+<!-- Angular, WebComponents, React -->
 
-## **Angular 13.1.0**
+## **13.1.0**
 
-<div class="divider--half"></div>
+> [!Note]
+> Please ensure package "lit-html": "^2.0.0" or newer is added to your project for optimal compatibility.
 
-<div class="divider--half"></div>
-
-<div class="divider--half"></div>
-
-<div class="divider--half"></div>
-
-### Charts & Maps
+### igniteui-angular-charts
 
 This release introduces a few improvements and simplifications to visual design and configuration options for the geographic map and all chart components.
 
@@ -71,11 +66,17 @@ This release introduces a few improvements and simplifications to visual design 
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | <span style="color:#8BDC5C">#8BDC5C</span> <br><span style="color:#8B5BB1">#8B5BB1</span> <br><span style="color:#6DB1FF">#6DB1FF</span> <br><span style="color:#F8A15F">#F8A15F</span> <br><span style="color:#EE5879">#EE5879</span> <br><span style="color:#735656">#735656</span> <br><span style="color:#F7D262">#F7D262</span> <br><span style="color:#8CE7D9">#8CE7D9</span> <br><span style="color:#E051A9">#E051A9</span> <br><span style="color:#A8A8B7">#A8A8B7</span> | <span style="color:#8BDC5C">#8BDC5C</span> <br><span style="color:#8961A9">#8961A9</span> <br><span style="color:#6DB1FF">#6DB1FF</span> <br><span style="color:#82E9D9">#82E9D9</span> <br><span style="color:#EA3C63">#EA3C63</span> <br><span style="color:#735656">#735656</span> <br><span style="color:#F8CE4F">#F8CE4F</span> <br><span style="color:#A8A8B7">#A8A8B7</span> <br><span style="color:#E051A9">#E051A9</span> <br><span style="color:#FF903B">#FF903B</span> <br> |
 
+<!-- end: Angular, WebComponents, React -->
+
 <div class="divider--half"></div>
 
-## **Angular 11.2.0**
+<div class="divider--half"></div>
 
-### Charts & Maps
+<!-- Angular, WebComponents, React -->
+
+## **11.2.0**
+
+### igniteui-angular-charts
 
 This release introduces several new and improved visual design and configuration options for all of the chart components, e.g. `DataChart`, [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html), and [`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html).
 
@@ -121,12 +122,12 @@ for example:
 | <img class="responsive-img" src="../images/chartDefaults1.png" /> | <img class="responsive-img" src="../images/chartDefaults2.png" /> |
 | <img class="responsive-img" src="../images/chartDefaults3.png" /> | <img class="responsive-img" src="../images/chartDefaults4.png" /> |
 
-### Chart Legend
+#### Chart Legend
 
 -   Added horizontal [`Orientation`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/orientation.html) property to ItemLegend that can be used with Bubble, Donut, and Pie Chart
 -   Added [`legendHighlightingMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriesviewercomponent.html#legendhighlightingmode) property - Enables series highlighting when hovering over legend items
 
-### Geographic Map
+### igniteui-angular-maps
 
 > [!NOTE]
 > These features are CTP
@@ -136,6 +137,8 @@ for example:
 -   Added support for highlighting of the shape series
 -   Added support for some annotation layers for the shape series
 
+<!-- end: Angular, WebComponents, React -->
+
 <div class="divider--half"></div>
 
 <div class="divider--half"></div>
@@ -144,7 +147,7 @@ for example:
 
 <!-- Angular, React, WebComponents -->
 
-## **Angular 8.2.12**
+## **8.2.12**
 
 -   Changed Import Statements
 
