@@ -2,7 +2,7 @@
 title: Angular 軸レイアウト | データ可視化 | インフラジスティックス
 _description: インフラジスティックスの Angular 軸レイアウト
 _keywords: Angular Axis, Layouts, Location, Position, Share, Multiple, Crossing, Infragistics, Angular 軸, レイアウト, 位置, 配置, 共有, 複数, 交差, インフラジスティックス
-mentionedTypes: [ "CategoryChart", "XYChart", "DomainChart", "XamDataChart", "Axis", "AxisLabelSettings", "ScatterSplineSeries" ]
+mentionedTypes: [ "CategoryChart", "XYChart", "DomainChart", "XamDataChart", "Axis", "AxisLabelSettings", "ScatterSplineSeries", "TimeXAxis" ]
 _language: ja
 ---
 
