@@ -953,6 +953,7 @@
 - name: Slider
   href: slider/slider.md
   new: false
+  updated: true
 - name: Ripple
   href: ripple.md
 - name: Toggle
