@@ -20,14 +20,6 @@ All notable changes for each version of Ignite UI for Angular are documented on 
 
 <div class="divider--half"></div>
 
-## **Angular {PackageVerChanges-21-2.1}**
-
-<div class="divider--half"></div>
-
-<div class="divider--half"></div>
-
-<div class="divider--half"></div>
-
 ## **Angular 13.1.0**
 
 <div class="divider--half"></div>

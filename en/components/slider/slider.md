@@ -170,7 +170,7 @@ export class SampleComponent {
 ```
 
 
-<code-view style="height: 120px" 
+<code-view style="height: 200px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/interactions/slider-sample-4" >
 </code-view>
@@ -196,7 +196,7 @@ This can be done by setting [`lowerBound`]({environment:angularApiUrl}/classes/i
 ```
 
 
-<code-view style="height: 120px" 
+<code-view style="height: 160px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/interactions/slider-sample-5" >
 </code-view>
@@ -234,7 +234,7 @@ public labels = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturd
 ```
 
 
-<code-view style="height: 250px" 
+<code-view style="height: 160px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/interactions/slider-sample-6" >
 </code-view>
@@ -284,7 +284,7 @@ public type = SliderType.RANGE;
 ```
 
 
-<code-view style="height: 140px" 
+<code-view style="height: 180px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/interactions/discrete-slider-ticks-bottom" >
 </code-view>
@@ -319,7 +319,7 @@ We also rotate all viable labels by setting the [`TickLabelsOrientation`]({envir
 ```
 
 
-<code-view style="height: 240px" 
+<code-view style="height: 200px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/interactions/slider-ticks-bottomtotop-labels" >
 </code-view>
@@ -350,7 +350,7 @@ This mirrors the visualization of the **ticks** and displays them above and belo
 ```
 
 
-<code-view style="height: 140px" 
+<code-view style="height: 160px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/interactions/slider-secondary-ticks-mirror" >
 </code-view>
@@ -375,7 +375,7 @@ This example show how the tick labels and the thumb label works together.
 ```
 
 
-<code-view style="height: 140px" 
+<code-view style="height: 160px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/interactions/slider-timeframe" >
 </code-view>
@@ -420,7 +420,7 @@ Which means that it provides a reference to:
 In the **tickLabel** callback above, we are rounding the **value** of every **primary** tick. 
 
 
-<code-view style="height: 140px" 
+<code-view style="height: 180px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/interactions/slider-tick-labels-template" >
 </code-view>
