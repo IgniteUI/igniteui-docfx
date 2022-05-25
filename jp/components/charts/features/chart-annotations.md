@@ -98,6 +98,8 @@ Angular チャートのホバー操作と注釈は、シリーズ コレクシ�
 -   [`calloutBackground`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcalloutlayercomponent.html#calloutbackground): このプロパティは注釈の背景色を選択するために使用されます。デフォルトはシリーズのブラシを使用します。
 -   [`calloutTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcalloutlayercomponent.html#callouttextcolor): このプロパティは注釈のテキストの色のブラシを選択するために使用されます。
 -   [`calloutStrokeThickness`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcalloutlayercomponent.html#calloutstrokethickness): このプロパティは、コールアウト バッキングの厚さを選択するために使用されます。
+-   `CalloutCornerRadius`: このプロパティは、コールアウトのコーナーをカーブさせるために使用されます。
+-   [`allowedPositions`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcalloutlayercomponent.html#allowedpositions): このプロパティは、コールアウト レイヤーが使用できる位置を選択するために使用されます。例: 上、下
 
 次の例は、上記のプロパティを設定して、コールアウト レイヤーの注釈のスタイルを設定する方法を示しています。
 
