@@ -7,60 +7,30 @@ _keywords: aria support, a11y, ignite ui for angular, infragistics
 # Right to Left (RTL) Support
 
 ## RTL Support 
-Most of the components in the framework now have full **right-to-left (RTL)** support via the newly included RTL themes.
 
-For **CSS-based** projects add `node_modules/igniteui-angular/styles/igniteui-angular-rtl.css` to your `angular.json` styles collection.
-
-For **Sass-based** projects pass `$direction` to the `core` mixin in your root stylesheet.
+Most of the components in the framework have full **right-to-left (RTL)** support by default. To switch to RTL direction you have to just set the `dir` attribute of the html or the body tag to `rtl`.
 
 Example:
-
-```scss
-// $direction defaults to ltr if it's omitted.
-@include core($direction: rtl);
-```
-
-Currently the following components have only partial RTL support:
-
-* Grid (igx-grid)
-* Tabs (igx-tabs)
-
-## RTL Example
-This section shows the accessibility (ARIA) support of the framework as well as how easily manageable the `directionality` of the components is.
-
-<code-view style="height: 600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-rtl-sample" alt="Angular RTL Support Example">
-</code-view>
-
-
-
-## Enabling right-to-left direction (RTL).
-
-`Ignite UI for Angular` library is susceptible to `directionality` manipulation only when setting `dir` attribute on either `html` or `body` tags. Also, keep in mind that runtime changes are not detected.
-
-With that being said, let's move to the following example:
-
-### Step 1 - Setting the 'dir' attribute on both tags.
 
 ```html
 <html dir="rtl">
 ...
+</html>
+```
+
+or 
+
+```html
+<html>
   <body dir="ltr">
+  ...
   </body>
 </html>
 ```
 
-The precedence takes the inner tag which in the above case is the attribute at the `body` tag.
+> [!NOTE]
+> Currently the `Igx-Grid` component only has partial(visual) RTL support.
 
-### Step 2 - Notifying the [theming engine](../themes/index.md) for the respective direction.
-
-Setting the `$direction` parameter of [core]({environment:sassApiUrl}/index.html#mixin-core) mixin does the magic.
-
-```scss 
-@include core($direction: rtl);
-```
-
-These are all the steps needed to adjust your content.
-
-
+> [!NOTE]
+> ### Breaking Changes in version 13.2.0
+> All RTL specific stylesheets have been removed, therefore, users who have previously used *-rtl.css specific themes must switch to the regular theme files.

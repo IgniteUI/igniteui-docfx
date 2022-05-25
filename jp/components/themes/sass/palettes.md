@@ -140,6 +140,35 @@ $handmade-palette: (
 ```
 <div class="divider"></div>
 
+## 事前定義されたパレット
+事前定義されたライト パレットとダーク パレットを提供します。これをスキーマと一緒に使用して、コンポーネントのテーマを作成できます。
+
+- ライト パレット
+  - $light-material-palette
+  - $light-fluent-excel-palette
+  - $light-fluent-word-palette
+  - $light-fluent-palette
+  - $light-bootstrap-palette
+  - $light-indigo-palette
+- ダーク パレット
+  - $dark-material-palette
+  - $dark-fluent-excel-palette
+  - $dark-fluent-word-palette
+  - $dark-fluent-palette
+  - $dark-bootstrap-palette
+  - $dark-indigo-palette
+
+また、使用できるいくつかの追加パレットも提供しています。
+
+- 追加のライト パレット
+  - $light-green-palette
+  - $light-purple-palette
+- 追加のダーク パレット
+  - $dark-green-palette
+  - $dark-purple-palette
+
+すべてのライト パレットを選択したライト スキーマと組み合わせたり、またはその逆にすべてのダーク パレットをニーズとビジョンに最も一致すると思われるダーク スキーマと組み合わせたりできます。
+
 ## デフォルトのパレット
 `theme` ミックスインは、引数の 1 つとしてパレット (前のセクションを参照) を使用します。渡されたパレットはグローバルな `$default-palette` 変数に割り当てられます。この変数に保存されたパレットは、パレットが必要であるがユーザーによって明示的に提供されない場合、Sass ライブラリ全体で代替パレットとして使用されます。
 
@@ -295,6 +324,7 @@ $my-palette: palette(
 * [パレット カラーの取得]({environment:sassApiUrl}/index.html#function-igx-color)
 * [コントラスト カラーの取得]({environment:sassApiUrl}/index.html#function-igx-contrast-color)
 * [カラー クラスの生成]({environment:sassApiUrl}/index.html#mixin-color-classes)
+* [スキーマ](./schemas.md)
 
 ## その他のリソース
 <div class="divider--half"></div>

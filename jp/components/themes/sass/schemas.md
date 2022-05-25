@@ -67,6 +67,22 @@ $my-avatar-schema: extend($_light-avatar, (
 
 これで `$my-avatar-schema` の値には `$_light-avatar` のすべてのプロパティが含まれますが、`background` の値は `limegreen` になります。
 
+## 事前定義されたスキーマ
+テーマ プリセットで使用する事前定義されたライト スキーマとダーク スキーマを提供します。
+
+- ライト スキーマ
+    - $light-material-schema
+    - $light-fluent-schema
+    - $light-bootstrap-schema
+    - $light-indigo-schema
+- ダーク スキーマ
+    - $dark-material-schema
+    - $dark-fluent-schema
+    - $dark-bootstrap-schema
+    - $dark-indigo-schema
+
+コンポーネントのテーマを作成するために、ライト パレットとダーク パレットに応じてライト スキーマとダーク スキーマを使用します。たとえば、`$light-material-schema` を `$light-material-palette` と一緒に使用すると、すべてのライト マテリアル コンポーネントのテーマを作成するのに役立ちます。逆もまた同様です。`$dark-material-schema` を `$dark-material-palette` と一緒に使用すると、ダーク マテリアル コンポーネントのテーマが得られます。
+
 ## スキーマの使用
 以上がコンポーネント スキーマの概要と作成方法です。次に Sass プロジェクトのスキーマの使用方法について説明します。 
 
