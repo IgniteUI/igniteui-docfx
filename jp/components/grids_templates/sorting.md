@@ -186,10 +186,10 @@ public ngOnInit() {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も単純なアプローチに従って、[`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) を拡張し、`$sorted-header-icon-color` and `sortable-header-icon-hover-color` パラメーターを受け取ります。
+最も単純なアプローチに従って、[`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) を拡張し、`$sorted-header-icon-color` and `sortable-header-icon-hover-color` パラメーターを受け取ります。
 
 ```scss
-$custom-theme: igx-grid-theme(
+$custom-theme: grid-theme(
     $sorted-header-icon-color: #ffb06a,
     $sortable-header-icon-hover-color: black
 );
@@ -197,7 +197,7 @@ $custom-theme: igx-grid-theme(
 最後の手順は、それぞれのテーマを持つコンポーネント ミックスインを**含める**ことです。 
 
 ```scss
- @include igx-grid($custom-theme);
+ @include grid($custom-theme);
 ```
 
 >[!NOTE]
@@ -206,7 +206,7 @@ $custom-theme: igx-grid-theme(
  ```scss
 :host {
     ::ng-deep {
-        @include igx-grid($custom-theme);
+        @include grid($custom-theme);
     }
 }
 ```
@@ -221,15 +221,15 @@ $custom-theme: igx-grid-theme(
 $black-color: black;
 $orange-color: #ffb06a;
 
-$custom-palette: igx-palette($primary: $black-color, $secondary: $orange-color);
+$custom-palette: palette($primary: $black-color, $secondary: $orange-color);
 ```
 
 次に [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取得できます。
 
 ```scss
-$custom-theme: igx-grid-theme(
-    $sorted-header-icon-color: igx-color($custom-palette, "secondary", 500),
-    $sortable-header-icon-hover-color: igx-color($custom-palette, "primary", 500)
+$custom-theme: grid-theme(
+    $sorted-header-icon-color: color($custom-palette, "secondary", 500),
+    $sortable-header-icon-hover-color: color($custom-palette, "primary", 500)
 );
 ```
 
@@ -263,7 +263,7 @@ $my-custom-schema: extend($light-schema,
 );
 
 // Defining our custom theme with the custom schema
-$custom-theme: igx-grid-theme(
+$custom-theme: grid-theme(
   $palette: $custom-palette,
   $schema: $my-custom-schema
 );
@@ -307,7 +307,7 @@ $custom-theme: igx-grid-theme(
 
 ## API リファレンス
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-grid-theme)
 * [ISortingExpression]({environment:angularApiUrl}/interfaces/isortingexpression.html)
 
 ## その他のリソース

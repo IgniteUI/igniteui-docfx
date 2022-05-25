@@ -386,7 +386,7 @@ public toolbarExportingHandler(args) {
 
 스타일:
 
-* [`@@igxNameComponent 스타일`]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [`@@igxNameComponent 스타일`]({environment:sassApiUrl}/index.html#function-grid-theme)
 
 ### 추가 리소스
 

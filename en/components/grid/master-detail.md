@@ -92,7 +92,7 @@ Additional API methods for controlling the expansion states are also exposed:
 
 ## API References
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent Styles]({environment:sassApiUrl}/#function-igx-grid-theme)
+* [IgxGridComponent Styles]({environment:sassApiUrl}/#function-grid-theme)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html)
 * [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)

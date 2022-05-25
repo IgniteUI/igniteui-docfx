@@ -80,7 +80,7 @@ Ignite UI for Angular の [@@igxName]({environment:angularApiUrl}/classes/@@igTy
 
 ## API リファレンス
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-grid-theme)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [IgxForOfDirective]({environment:angularApiUrl}/classes/igxforofdirective.html)
 * [IForOfState]({environment:angularApiUrl}/interfaces/iforofstate.html)

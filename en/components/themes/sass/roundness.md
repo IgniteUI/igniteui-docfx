@@ -17,7 +17,7 @@ $_material-shape-button: (
 );
 ```
 
-As you can see from the example above, the component schema for the [Button Theme]({environment:sassApiUrl}/index.html#function-igx-button-theme) defines the default border-radius for all types of buttons.
+As you can see from the example above, the component schema for the [Button Theme]({environment:sassApiUrl}/index.html#function-button-theme) defines the default border-radius for all types of buttons.
 
 Let's look at how this works. 
 
@@ -32,11 +32,11 @@ Let's see how we can change the default values for the buttons from the example 
 
 Using the theme mixin:
 ```scss
-$my-button-theme: igx-button-theme(
+$my-button-theme: button-theme(
     $border-radius: .5 .2 .5 .2, // resolves to 10px 4px 10px 4px
 );
 
-@include igx-button($my-button-theme);
+@include button($my-button-theme);
 ```
 
 Using a component schema:
@@ -55,7 +55,7 @@ $my-light-schema: extend(
     )
 );
 
-@include igx-theme(
+@include theme(
     $palette: $light-material-palette,
     $schema: $my-light-schema
 );

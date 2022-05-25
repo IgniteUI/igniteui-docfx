@@ -12,7 +12,7 @@ _language: ja
 <div class="divider--half"></div>
 
 * [IgxSliderComponent]({environment:angularApiUrl}/classes/igxslidercomponent.html)
-* [IgxSliderComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-slider-theme)
+* [IgxSliderComponent スタイル]({environment:sassApiUrl}/index.html#function-slider-theme)
 * [IRangeSliderValue]({environment:angularApiUrl}/interfaces/irangeslidervalue.html)
 * [SliderType]({environment:angularApiUrl}/enums/slidertype.html)
 

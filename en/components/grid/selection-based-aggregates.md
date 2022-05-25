@@ -51,7 +51,7 @@ Change the selection to see summaries of the currently selected range.
 
 * [IgxGridComponent API]({environment:angularApiUrl}/classes/igxgridcomponent.html)    
 * [IgxGridCell API]({environment:angularApiUrl}/classes/igxgridcell.html)    
-* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)     
+* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-grid-theme)     
 
 ## Additional Resources
 <div class="divider--half"></div>    

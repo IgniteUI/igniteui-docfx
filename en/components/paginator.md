@@ -125,7 +125,7 @@ public ngOnInit(): void {
 
 ## API References
 * [IgxPaginator API]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html)
-* [IgxPaginator Styles]({environment:sassApiUrl}/index.html#function-igx-paginator-theme)
+* [IgxPaginator Styles]({environment:sassApiUrl}/index.html#function-paginator-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>

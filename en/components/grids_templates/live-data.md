@@ -117,7 +117,7 @@ Take leverage of the [Dock Manager](../dock-manager.md) WebComponent and build y
 
 ## API References
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent Styles]({environment:sassApiUrl}/#function-igx-grid-theme)
+* [IgxGridComponent Styles]({environment:sassApiUrl}/#function-grid-theme)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html)
 * [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)
@@ -160,7 +160,7 @@ Our community is active and always welcoming to new ideas.
 * [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
 * [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent Styles]({environment:sassApiUrl}/#function-igx-grid-theme)
+* [IgxGridComponent Styles]({environment:sassApiUrl}/#function-grid-theme)
 * [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
 * [IgxBaseTransactionService]({environment:angularApiUrl}/classes/igxbasetransactionservice.html)
 

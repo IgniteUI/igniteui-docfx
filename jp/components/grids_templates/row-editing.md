@@ -328,15 +328,15 @@ export class HGridRowEditingSampleComponent implements OnInit {
 
 #### テーマの定義
 
-行編集の背景にカスタムの [`banner テーマ`]({environment:sassApiUrl}/index.html#function-igx-banner-theme)を定義して、定義済みのパレットの 1 つである `$purple-palette` を使用することができます。
+行編集の背景にカスタムの [`banner テーマ`]({environment:sassApiUrl}/index.html#function-banner-theme)を定義して、定義済みのパレットの 1 つである `$purple-palette` を使用することができます。
 
 ```scss
     $my-light-gray: #e3e3e3;
     $my-banner-palette: $purple-palette;
 
-    $banner-theme: igx-banner-theme( 
+    $banner-theme: banner-theme( 
         $banner-background: $my-light-gray,
-        $banner-message-color: igx-color($my-banner-palette, "secondary", 600)
+        $banner-message-color: color($my-banner-palette, "secondary", 600)
     );
 ```
 
@@ -347,7 +347,7 @@ export class HGridRowEditingSampleComponent implements OnInit {
 次に Sass `@include` ステートメントを使用してテーマを適用します。新しく定義された `$banner-theme` を [`igx-banner mixin`]({environment:sassApiUrl}/index.html#mixin-igx-banner) で渡します。
 
 ```scss
-@include igx-banner($banner-theme); 
+@include banner($banner-theme); 
 ```
 
 これにより、カスタム バナー テーマが行編集オーバーレイに適用されます。ただし、グローバル スタイル ファイルで定義したため、これらのスタイルはアプリケーションの**すべて**のバナーにも適用されます。
@@ -365,7 +365,7 @@ export class HGridRowEditingSampleComponent implements OnInit {
 
 :host {
     ::ng-deep {
-        @include igx-banner($banner-theme);
+        @include banner($banner-theme);
     }
 }
 ```
@@ -392,19 +392,19 @@ export class HGridRowEditingSampleComponent implements OnInit {
 </@@igSelector>
 ```
 
-カスタム ボタンを定義した後は、[`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) を使用してスタイルを設定できます。[こちら](../button.md#スタイル設定)で `igx-button` のスタイリングについてさらに学ぶことができます。`完了`と`キャンセル`のカスタム テーマを作成できます。
+カスタム ボタンを定義した後は、[`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme) を使用してスタイルを設定できます。[こちら](../button.md#スタイル設定)で `igx-button` のスタイリングについてさらに学ぶことができます。`完了`と`キャンセル`のカスタム テーマを作成できます。
 
 ```scss
 // custom.component.scss
 ...
 
-$button-theme: igx-button-theme(
+$button-theme: button-theme(
   $palette: $purple-palette
 );
 
 ...
 .custom-buttons {
-    @include igx-button($button-theme);
+    @include button($button-theme);
   }
 ```
 

@@ -22,7 +22,7 @@ $_light-button: (
 );
 ```
 
-As you can see from the example above, the component schema for [Button theme]({environment:sassApiUrl}/index.html#function-igx-button-theme) defines the default border-radius for all types of buttons.
+As you can see from the example above, the component schema for [Button theme]({environment:sassApiUrl}/index.html#function-button-theme) defines the default border-radius for all types of buttons.
 
 Let's look at how things work. 
 The default value for "flat-border-radius" is set to 0.2 which in the end will be resolved to 4px, it is actually a fraction between 0 and 20px where 0 is the minimum border-radius and 20px is the maximum. 
@@ -45,7 +45,7 @@ $myButtons-theme: (
     $icon-border-radius: .5 .2 .5 .2, // Will resolve to 10px 4px 10px 4px
 );
 
-@include igx-button($myButtons-theme);
+@include button($myButtons-theme);
 ```
 
 The result from the above code snippets is:

@@ -185,7 +185,7 @@ public processData() {
 
 ### API 참조
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent 스타일]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [@@igxNameComponent 스타일]({environment:sassApiUrl}/index.html#function-grid-theme)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [IgxForOfDirective]({environment:angularApiUrl}/classes/igxforofdirective.html)
 * [IForOfState]({environment:angularApiUrl}/interfaces/iforofstate.html)

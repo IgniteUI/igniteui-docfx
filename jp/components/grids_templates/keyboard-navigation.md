@@ -294,7 +294,7 @@ public customKeydown(args: IGridKeydownEventArgs) {
 
 ## API リファレンス
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-grid-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

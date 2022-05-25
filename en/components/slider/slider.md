@@ -446,7 +446,7 @@ Now let's create our component theme and pass that custom palette to it.
 // In app-slider-styling.component.scss
 
 // Create slider theme.
-$custom-slider-theme: igx-slider-theme(
+$custom-slider-theme: slider-theme(
     $track-color: #ff7400,
     $track-hover-color: #ff7400,
 
@@ -464,14 +464,14 @@ $custom-slider-theme: igx-slider-theme(
 ```
 
 #### Applying the component theme
-Now to apply the component theme all that's left is to include `igx-css-vars` mixin and pass the `$custom-slider-theme` map.
+Now to apply the component theme all that's left is to include `css-vars` mixin and pass the `$custom-slider-theme` map.
 ```scss
 // In app-slider-styling.component.scss
 
-// Pass our custom-slider-theme to `igx-css-vars` mixin.
+// Pass our custom-slider-theme to `css-vars` mixin.
 // The `:host` here makes sure that all the theming will affect only this slider component.
 :host {
-  @include igx-css-vars($custom-slider-theme);
+  @include css-vars($custom-slider-theme);
 }
 ```
 
@@ -479,7 +479,7 @@ Now to apply the component theme all that's left is to include `igx-css-vars` mi
 <div class="divider--half"></div>
 
 * [IgxSliderComponent]({environment:angularApiUrl}/classes/igxslidercomponent.html)
-* [IgxSliderComponent Styles]({environment:sassApiUrl}/index.html#function-igx-slider-theme)
+* [IgxSliderComponent Styles]({environment:sassApiUrl}/index.html#function-slider-theme)
 * [SliderType]({environment:angularApiUrl}/enums/slidertype.html)
 * [IRangeSliderValue]({environment:angularApiUrl}/interfaces/irangeslidervalue.html)
 * [TicksOrientation]({environment:angularApiUrl}/enums/ticksorientation.html)

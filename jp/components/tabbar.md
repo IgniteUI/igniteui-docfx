@@ -339,16 +339,16 @@ export class TabbarRoutingModule { }
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-次に、[`igx-bottom-nav-theme`]({environment:sassApiUrl}/index.html#function-igx-bottom-nav-theme) を拡張する新しいテーマを作成し、タブグループのスタイルを設定できるさまざまなパラメーターを受け取ります。
+次に、[`bottom-nav-theme`]({environment:sassApiUrl}/index.html#function-bottom-nav-theme) を拡張する新しいテーマを作成し、タブグループのスタイルを設定できるさまざまなパラメーターを受け取ります。
 
 ```scss
-$dark-bottom-nav: igx-bottom-nav-theme(
+$dark-bottom-nav: bottom-nav-theme(
     $background: #292826,
     $active-item-color: #F4D45C
 );
 ```
 
-[`igx-bottom-nav-theme`]({environment:sassApiUrl}/index.html#function-igx-bottom-nav-theme) は、tabs コンポーネントのスタイル設定で多くのパラメーターが利用できます。
+[`bottom-nav-theme`]({environment:sassApiUrl}/index.html#function-bottom-nav-theme) は、tabs コンポーネントのスタイル設定で多くのパラメーターが利用できます。
 
 > [!NOTE]
 > 項目のコンテンツの一部として使用される追加コンポーネントをスタイルするには、それぞれのコンポーネントに固有の追加テーマを作成する必要があります。
@@ -362,7 +362,7 @@ $dark-bottom-nav: igx-bottom-nav-theme(
 `$legacy-support` が `true` に設定されている場合、**コンポーネントのテーマ**を以下のように含めます。
 
 ```scss
-@include igx-bottom-nav($dark-bottom-nav);
+@include bottom-nav($dark-bottom-nav);
 ```
 
 >[!NOTE]
@@ -371,7 +371,7 @@ $dark-bottom-nav: igx-bottom-nav-theme(
 ```scss
 :host {
      ::ng-deep {
-        @include igx-bottom-nav($dark-bottom-nav);
+        @include bottom-nav($dark-bottom-nav);
     }
 }
 ```
@@ -381,7 +381,7 @@ $dark-bottom-nav: igx-bottom-nav-theme(
 `$legacy-support` が `false` (デフォルト) に設定されている場合、**css 変数** を以下のように含めます。
 
 ```scss
-@include igx-css-vars($dark-bottom-nav);
+@include css-vars($dark-bottom-nav);
 ```
 
 >[!NOTE]
@@ -389,7 +389,7 @@ $dark-bottom-nav: igx-bottom-nav-theme(
 
 ```scss
 :host {
-    @include igx-css-vars($dark-bottom-nav);
+    @include css-vars($dark-bottom-nav);
 }
 ```
 ### カラーパレットの定義
@@ -401,15 +401,15 @@ $dark-bottom-nav: igx-bottom-nav-theme(
 ```scss
 $yellow-color: #F4D45C;
 $black-color: #292826;
-$dark-palette: igx-palette($primary: $black-color, $secondary: $yellow-color);
+$dark-palette: palette($primary: $black-color, $secondary: $yellow-color);
 ```
 
 また [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取り出すことができます。
 
 ```scss
-$dark-bottom-nav: igx-bottom-nav-theme(
-    $background: igx-color($dark-palette, "primary", 400),
-    $active-item-color: igx-color($dark-palette, "secondary", 400)
+$dark-bottom-nav: bottom-nav-theme(
+    $background: color($dark-palette, "primary", 400),
+    $active-item-color: color($dark-palette, "secondary", 400)
 );
 ```
 
@@ -424,10 +424,10 @@ $dark-bottom-nav: igx-bottom-nav-theme(
 $dark-bottom-nav-schema: extend($_dark-bottom-nav,
     (
         background: (
-            igx-color: ("primary", 400)
+           color: ("primary", 400)
         ),
         active-item-color: (
-            igx-color: ("secondary", 400)
+           color: ("secondary", 400)
         )
     )
 );
@@ -442,7 +442,7 @@ $custom-dark-schema: extend($dark-schema,(
 ));
 
 // Defining bottom-nav-theme with the global dark schema
-$dark-bottom-nav: igx-bottom-nav-theme(
+$dark-bottom-nav:bottom-nav-theme(
   $palette: $dark-palette,
   $schema: $custom-dark-schema
 );
@@ -464,12 +464,12 @@ $dark-bottom-nav: igx-bottom-nav-theme(
 <div class="divider--half"></div>
 
 * [IgxBottomNavComponent]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html)
-* [IgxBottomNavComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-bottom-nav-theme)
+* [IgxBottomNavComponent スタイル]({environment:sassApiUrl}/index.html#function-bottom-nav-theme)
 * [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
 
 ## テーマの依存関係
-* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
-* [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
+* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-ripple-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

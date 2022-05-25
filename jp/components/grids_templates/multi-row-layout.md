@@ -128,7 +128,7 @@ _language: ja
 </div>
 
 ## スタイル設定
-igxGrid を使用すると、[Ignite UI for Angular テーマ ライブラリ](../themes/sass/component-themes.md)でスタイルを設定できます。[テーマ]({environment:sassApiUrl}/index.html#function-igx-grid-theme) は、グリッドのすべての機能をカスタマイズできるさまざまなプロパティを公開します。 
+igxGrid を使用すると、[Ignite UI for Angular テーマ ライブラリ](../themes/sass/component-themes.md)でスタイルを設定できます。[テーマ]({environment:sassApiUrl}/index.html#function-grid-theme) は、グリッドのすべての機能をカスタマイズできるさまざまなプロパティを公開します。 
 
 以下は、グリッドの複数行レイアウト スタイルをカスタマイズする手順です。     
 
@@ -143,10 +143,10 @@ igxGrid を使用すると、[Ignite UI for Angular テーマ ライブラリ](.
 ```   
 
 ### カスタム テーマの定義
-次に、[`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) を拡張し、必要に応じて機能レイアウトをカスタマイズするために必要なパラメーターを受け取る新しいテーマを作成します。   
+次に、[`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) を拡張し、必要に応じて機能レイアウトをカスタマイズするために必要なパラメーターを受け取る新しいテーマを作成します。   
 
 ```scss
-$custom-theme: igx-grid-theme(
+$custom-theme: grid-theme(
     $cell-active-border-color: #ffcd0f,
     $cell-selected-background: #6f6f6f,
     $row-hover-background: #fde069,
@@ -166,7 +166,7 @@ $custom-theme: igx-grid-theme(
 $black-color: #494949;
 $yellow-color: #FFCD0F;
 
-$custom-palette: igx-palette(
+$custom-palette: palette(
   $primary: $black-color,
   $secondary: $yellow-color
 );
@@ -175,15 +175,15 @@ $custom-palette: igx-palette(
 カスタム パレットが生成された後、`igx-color` 関数を使用して、さまざまな種類の原色と二次色を取得できます。
 
 ```scss
-$custom-theme: igx-grid-theme(
-    $cell-active-border-color: igx-color($custom-palette, "secondary", 500),
-    $cell-selected-background: igx-color($custom-palette, "primary", 300),
-    $row-hover-background: igx-color($custom-palette, "secondary", 300),
-    $row-selected-background: igx-color($custom-palette, "primary", 100),
-    $header-background: igx-color($custom-palette, "primary", 500),
-    $header-text-color: igx-contrast-color($custom-palette, "primary", 500),
-    $sorted-header-icon-color: igx-color($custom-palette, "secondary", 500),
-    $sortable-header-icon-hover-color: igx-color($custom-palette, "secondary", 600)
+$custom-theme: grid-theme(
+    $cell-active-border-color: color($custom-palette, "secondary", 500),
+    $cell-selected-background: color($custom-palette, "primary", 300),
+    $row-hover-background: color($custom-palette, "secondary", 300),
+    $row-selected-background: color($custom-palette, "primary", 100),
+    $header-background: color($custom-palette, "primary", 500),
+    $header-text-color:contrast-color($custom-palette, "primary", 500),
+    $sorted-header-icon-color: color($custom-palette, "secondary", 500),
+    $sortable-header-icon-hover-color: color($custom-palette, "secondary", 600)
 );
 ```
 
@@ -209,7 +209,7 @@ $custom-grid-schema: extend($_light-grid,(
 $my-custom-schema: extend($light-schema, ( 
     igx-grid: $custom-grid-schema
 ));
- $custom-theme: igx-grid-theme(
+ $custom-theme: grid-theme(
     $palette: $custom-palette,
     $schema: $my-custom-schema
 );
@@ -218,7 +218,7 @@ $my-custom-schema: extend($light-schema, (
 ### カスタム テーマの適用
 テーマを適用する最も簡単な方法は、グローバル スタイル ファイルに `sass` `@include` ステートメントを使用することです。  
 ```scss
-@include igx-grid($custom-theme);
+@include grid($custom-theme);
 ```
 
 ### スコープ コンポーネント テーマ
@@ -235,7 +235,7 @@ $my-custom-schema: extend($light-schema, (
 ```scss
 :host {
     ::ng-deep {
-        @include igx-grid($custom-theme);
+        @include grid($custom-theme);
     }
 }
 ```
@@ -255,7 +255,7 @@ $my-custom-schema: extend($light-schema, (
 <div class="divider--half"></div>
 
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-grid-theme)
 * [IgxColumnLayoutComponent]({environment:angularApiUrl}/classes/igxcolumnlayoutcomponent.html)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 <div class="divider--half"></div>

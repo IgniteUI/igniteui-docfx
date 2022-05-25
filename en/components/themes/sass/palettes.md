@@ -16,7 +16,7 @@ To get started with your first color palette, create an _scss_ file that would b
 ```scss
 // _variables.scss
 
-$melon-palette: igx-palette(
+$melon-palette: palette(
     $primary: #2ab759,
     $secondary: #f96a88,
 );
@@ -139,8 +139,37 @@ $handmade-palette: (
 ```
 <div class="divider"></div>
 
+## Predefined Palettes
+We provide predefined light and dark palettes, which you can use along with our schemas to create themes for your components:
+
+- Light Palettes
+  - $light-material-palette
+  - $light-fluent-excel-palette
+  - $light-fluent-word-palette
+  - $light-fluent-palette
+  - $light-bootstrap-palette
+  - $light-indigo-palette
+- Dark Palettes
+  - $dark-material-palette
+  - $dark-fluent-excel-palette
+  - $dark-fluent-word-palette
+  - $dark-fluent-palette
+  - $dark-bootstrap-palette
+  - $dark-indigo-palette
+
+We also provide a few additional palettes that you can use:
+
+- Light Additional Palettes
+  - $light-green-palette
+  - $light-purple-palette
+- Dark Additional Palettes
+  - $dark-green-palette
+  - $dark-purple-palette
+
+You can mix and match all of the light palettes with a light schema of your choice and vice versa - all of the dark palettes with a dark schema that you think will best match your needs and vision.
+
 ## The Default Palette
-The `igx-theme` mixin takes a palette(see the previous section) as one of its arguments. The passed palette is assigned to the global `$default-palette` variable. This palette stored in this variable is used across the Sass library as fallback palette, whenever a palette is expected, but not explicitly provided by the user.
+The `theme` mixin takes a palette(see the previous section) as one of its arguments. The passed palette is assigned to the global `$default-palette` variable. This palette stored in this variable is used across the Sass library as fallback palette, whenever a palette is expected, but not explicitly provided by the user.
 
 You can use this knowledge to your advantage to allow you to re-use the same palette across multiple Sass documents in your application.
 
@@ -149,7 +178,7 @@ For example, you could have the following Sass files in your app.
 ```scss
 // src/styles/_variables.scss
 
-$my-palette: igx-palette(
+$my-palette: palette(
   $primary: #2ab759,
   $secondary: #f96a88,
 );
@@ -162,7 +191,7 @@ In your main styles file:
 // src/styles/styles.scss
 @use 'variables' as *;
 
-@include igx-theme($palette: $my-palette);
+@include theme($palette: $my-palette);
 ```
 
 In a component `.scss` file:
@@ -170,7 +199,7 @@ In a component `.scss` file:
 @use '../styles/styles/variables' as *;
 
 :host {
-  background: igx-color($variant: 900);
+  background: color($variant: 900);
 }
 ```
 
@@ -188,7 +217,7 @@ $company-color: #2ab759; /* Some green shade I like */
 $secondary-color: #f96a88; /* Watermelon pink */
 $grayscale-base: #fff; /* Used to generate shades of gray */
 
-$my-color-palette: igx-palette(
+$my-color-palette: palette(
     $primary: $company-color,
     $secondary: $secondary-color,
     $grays: $grayscale-base
@@ -203,16 +232,16 @@ We provide a function that is easy to remember and use - `igx-color`. It can tak
 
 ```scss
 // Get the primary 500 color variant from $default-palette
-$my-primary-500: igx-color();
+$my-primary-500: color();
 
 // Get the primary 600 color variant from $default-palette
-$my-primary-600: igx-color($variant: 600);
+$my-primary-600: color($variant: 600);
 
 // Get the secondary A700 color variant from $my-palette
-$my-primary-A700: igx-color($my-palette, 'secondary', 'A700');
+$my-primary-A700: color($my-palette, 'secondary', 'A700');
 
 // Get the warn color from $my-palette
-$my-warning-color: igx-color($my-palette, 'warn');
+$my-warning-color: color($my-palette, 'warn');
 
 .my-awesome-class {
     background: $my-primary-600;
@@ -233,8 +262,8 @@ If you omit the `$palette` argument, the value stored in `$default-palette` is u
 Similar to how we retrieve color variants, there's a way to get the contrast text color for each of the color variants in the palette.
 
 ```scss
-$my-primary-800: igx-color($my-palette, 'primary', 600);
-$my-primary-800-text: igx-contrast-color($my-palette, 'primary', 600);
+$my-primary-800: color($my-palette, 'primary', 600);
+$my-primary-800-text:contrast-color($my-palette, 'primary', 600);
 
 // sample usage
 .my-awesome-article {
@@ -259,7 +288,7 @@ The mixin takes a few arguments that allow you control the CSS class name as wel
 For instance, if you want to generate CSS classes that apply background color to elements, you can do the following:
 
 ```scss
-@include igx-color-classes(
+@include color-classes(
     $prop: 'background-color',
     $prefix: 'bg'
 );
@@ -274,26 +303,27 @@ The above code will generate CSS classes for each color variant in the palette. 
 
 ## CSS Variables
 
-When reading about the color palette in the [CSS Variables](../palettes.md) section of the documentation, you would've noticed that all palette colors are included as CSS variables. We do this internally every time we generate a theme using the `igx-theme` mixin. The `igx-theme` calls another mixin in its body - `igx-palette-vars`. It takes a palette and converts the colors in it into CSS variables. 
+When reading about the color palette in the [CSS Variables](../palettes.md) section of the documentation, you would've noticed that all palette colors are included as CSS variables. We do this internally every time we generate a theme using the `theme` mixin. The `theme` calls another mixin in its body - `palette-vars`. It takes a palette and converts the colors in it into CSS variables. 
 
 You use this mixin when you want your custom palette colors to be included as CSS variables.
 
 Here's an example:
 
 ```scss
-$my-palette: igx-palette(
+$my-palette: palette(
   $primary: #2ab759,
   $secondary: #f96a88,
 );
 
-@include igx-palette-vars($my-palette);
+@include palette-vars($my-palette);
 ```
 
 ## API Reference
 * [Palettes]({environment:sassApiUrl}/index.html#function-igx-palette)
 * [Getting Palette Colors]({environment:sassApiUrl}/index.html#function-igx-color)
 * [Getting Contrast Colors]({environment:sassApiUrl}/index.html#function-igx-contrast-color)
-* [Generating Color Classes]({environment:sassApiUrl}/index.html#mixin-igx-color-classes)
+* [Generating Color Classes]({environment:sassApiUrl}/index.html#mixin-color-classes)
+* [Schemas](./schemas.md)
 
 ## Additional Resources
 <div class="divider--half"></div>

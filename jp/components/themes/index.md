@@ -20,7 +20,7 @@ Ignite UI for Angular には、パッケージの一部として次のテーマ�
     - Fluent
     - Indigo
 
-すべてのテーマには、ライト バリエーションとダーク バリエーションがあり、左から右 (LTR) および右から左 (RTL) のコンテンツがサポートされています。アプリケーションでバンドルされているテーマの使用を開始する最も簡単な方法は、`angular.json` 構成で CSS テーマ ファイルへのパスを指定することです。たとえば、ダーク マテリアル テーマを使用する場合は、次のようにテーマ ファイルへのパスを含めます:
+すべてのテーマには、ライト バリエーションとダーク バリエーションがあり、デフォルトで左から右 (LTR) および右から左 (RTL) のコンテンツがサポートされています。アプリケーションでバンドルされているテーマの使用を開始する最も簡単な方法は、`angular.json` 構成で CSS テーマ ファイルへのパスを指定することです。たとえば、ダーク マテリアル テーマを使用する場合は、次のようにテーマ ファイルへのパスを含めます:
 
 ```json
 "styles": [
@@ -36,28 +36,19 @@ styles フォルダーに含まれるテーマの完全なリストは次のと�
 
 | テーマ名                  | パス                                                                       |
 |-----------------------------|----------------------------------------------------------------------------|
-| **Material Light LTR**      | `node_modules/igniteui-angular/styles/igniteui-angular.css`                |
-| **Material Light RTL**      | `node_modules/igniteui-angular/styles/igniteui-angular-rtl.css`            |
-| **Material Dark LTR**       | `node_modules/igniteui-angular/styles/igniteui-angular-dark.css`           |
-| **Material Dark RTL**       | `node_modules/igniteui-angular/styles/igniteui-angular-dark-rtl.css`       |
-| **Bootstrap Light LTR**     | `node_modules/igniteui-angular/styles/igniteui-bootstrap-light.css`        |
-| **Bootstrap Light RTL**     | `node_modules/igniteui-angular/styles/igniteui-bootstrap-light-rtl.css`    |
-| **Bootstrap Dark LTR**      | `node_modules/igniteui-angular/styles/igniteui-bootstrap-dark.css`         |
-| **Bootstrap Dark RTL**      | `node_modules/igniteui-angular/styles/igniteui-bootstrap-dark-rtl.css`     |
-| **Material Dark Green LTR** | `node_modules/igniteui-angular/styles/igniteui-dark-green.css`             |
-| **Material Dark Green RTL** | `node_modules/igniteui-angular/styles/igniteui-dark-green-rtl.css`         |
-| **Fluent Light Excel LTR**  | `node_modules/igniteui-angular/styles/igniteui-fluent-light-excel.css`     |
-| **Fluent Light Excel RTL**  | `node_modules/igniteui-angular/styles/igniteui-fluent-light-excel-rtl.css` |
-| **Fluent Dark Excel LTR**   | `node_modules/igniteui-angular/styles/igniteui-fluent-dark-excel.css`      |
-| **Fluent Dark Excel RTL**   | `node_modules/igniteui-angular/styles/igniteui-fluent-dark-excel-rtl.css`  |
-| **Fluent Light Word LTR**   | `node_modules/igniteui-angular/styles/igniteui-fluent-light-word.css`      |
-| **Fluent Light Word RTL**   | `node_modules/igniteui-angular/styles/igniteui-fluent-light-word-rtl.css`  |
-| **Fluent Dark Word LTR**    | `node_modules/igniteui-angular/styles/igniteui-fluent-dark-word.css`       |
-| **Fluent Dark Word RTL**    | `node_modules/igniteui-angular/styles/igniteui-fluent-dark-word-rtl.css`   |
-| **Indigo Light LTR**        | `node_modules/igniteui-angular/styles/igniteui-indigo-light.css`           |
-| **Indigo Light RTL**        | `node_modules/igniteui-angular/styles/igniteui-indigo-light-rtl.css`       |
-| **Indigo Dark LTR**         | `node_modules/igniteui-angular/styles/igniteui-indigo-dark.css`            |
-| **Indigo Dark RTL**         | `node_modules/igniteui-angular/styles/igniteui-indigo-dark-rtl.css`        |
+| **Material Light**          | `node_modules/igniteui-angular/styles/igniteui-angular.css`                |
+| **Material Dark**           | `node_modules/igniteui-angular/styles/igniteui-angular-dark.css`           |
+| **Bootstrap Light**         | `node_modules/igniteui-angular/styles/igniteui-bootstrap-light.css`        |
+| **Bootstrap Dark**          | `node_modules/igniteui-angular/styles/igniteui-bootstrap-dark.css`         |
+| **Material Dark Green**     | `node_modules/igniteui-angular/styles/igniteui-dark-green.css`             |
+| **Fluent Light**            | `node_modules/igniteui-angular/styles/igniteui-fluent-light.css`           |
+| **Fluent Dark**             | `node_modules/igniteui-angular/styles/igniteui-fluent-dark.css`            |
+| **Fluent Light Excel**      | `node_modules/igniteui-angular/styles/igniteui-fluent-light-excel.css`     |
+| **Fluent Dark Excel**       | `node_modules/igniteui-angular/styles/igniteui-fluent-dark-excel.css`      |
+| **Fluent Light Word**       | `node_modules/igniteui-angular/styles/igniteui-fluent-light-word.css`      |
+| **Fluent Dark Word**        | `node_modules/igniteui-angular/styles/igniteui-fluent-dark-word.css`       |
+| **Indigo Light**            | `node_modules/igniteui-angular/styles/igniteui-indigo-light.css`           |
+| **Indigo Dark**             | `node_modules/igniteui-angular/styles/igniteui-indigo-dark.css`            |
 
 ご覧のとおり、かなりの量のテーマを備えた Ignite UI for Angular を提供しています。
 
