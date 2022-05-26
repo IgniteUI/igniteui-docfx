@@ -171,7 +171,7 @@ export class SampleComponent {
 ```
 
 
-<code-view style="height: 120px" 
+<code-view style="height: 200px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/interactions/slider-sample-4" >
 </code-view>
@@ -198,7 +198,7 @@ export class SampleComponent {
 ```
 
 
-<code-view style="height: 120px" 
+<code-view style="height: 160px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/interactions/slider-sample-5" >
 </code-view>
@@ -236,7 +236,7 @@ public labels = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturd
 ```
 
 
-<code-view style="height: 250px" 
+<code-view style="height: 160px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/interactions/slider-sample-6" >
 </code-view>
@@ -286,7 +286,7 @@ public type = SliderType.RANGE;
 ```
 
 
-<code-view style="height: 140px" 
+<code-view style="height: 180px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/interactions/discrete-slider-ticks-bottom" >
 </code-view>
@@ -321,7 +321,7 @@ public type = SliderType.RANGE;
 ```
 
 
-<code-view style="height: 240px" 
+<code-view style="height: 200px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/interactions/slider-ticks-bottomtotop-labels" >
 </code-view>
@@ -352,7 +352,7 @@ public type = SliderType.RANGE;
 ```
 
 
-<code-view style="height: 140px" 
+<code-view style="height: 160px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/interactions/slider-secondary-ticks-mirror" >
 </code-view>
@@ -377,7 +377,7 @@ public type = SliderType.RANGE;
 ```
 
 
-<code-view style="height: 140px" 
+<code-view style="height: 160px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/interactions/slider-timeframe" >
 </code-view>
@@ -422,7 +422,7 @@ public type = SliderType.RANGE;
 上記の **tickLabel** コールバックから、各**プライマリ**目盛りの**値**を丸めていることがわかります。 
 
 
-<code-view style="height: 140px" 
+<code-view style="height: 180px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/interactions/slider-tick-labels-template" >
 </code-view>
