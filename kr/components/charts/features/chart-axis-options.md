@@ -2,6 +2,7 @@
 title: Angular Axis Options | Data Visualization | Infragistics
 _description: Infragistics' Angular Axis Options
 _keywords: Angular Axis, Options, Title, Labels, Range Infragistics
+_language: kr
 mentionedTypes: ["CategoryChart"]
 ---
 
