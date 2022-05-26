@@ -59,7 +59,7 @@ ng update @angular/cli
 ### 一般
 - `igxGrid`、`igxHierarchicalGrid`、`igxTreeGrid`
     - **重大な変更** - 列の `movable` プロパティは非推奨になりました。代わりに、公開されたグリッドの `moving` プロパティを使用してください:
-    ```typescript
+    ```html
     <igx-grid [moving]="true">
     </igx-grid>
     ```

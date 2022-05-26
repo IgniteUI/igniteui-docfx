@@ -10,7 +10,7 @@
 - name: Localization (i18n)
   href: general/localization.md
   new: false
-  updated: true
+  updated: false
 - name: Getting started
   href: general/getting-started.md
   new: false
@@ -28,19 +28,19 @@
 - name: Data Analysis
   href: general/data-analysis.md
   new: false
-  updated: true
+  updated: false
 - name: How to
   new: true
   items:
     - name: Build Real-time SignalR App with .NET Core
       href: general/how-to/signal-r-service-live-data.md
-      new: true
+      new: false
     - name: Angular Reactive Forms
       href: angular-reactive-form-validation.md
-      new: true
+      new: false
     - name: Build CRUD operations with IgxGrid
       href: general/how-to/how-to-perform-crud.md
-      new: true
+      new: false
 - name: Angular Schematics & Ignite UI CLI
   href: general/cli-overview.md
   sortable: false
@@ -113,7 +113,7 @@
   items:
     - name: Row Actions
       href: grid/row-actions.md
-      new: true
+      new: false
     - name: Live Data / Real-Time
       href: grid/live-data.md
       new: false
@@ -125,10 +125,10 @@
       new: false
     - name: Column Data types
       href: grid/column-types.md
-      new: true
+      new: false
     - name: Editing
       href: grid/editing.md
-      new: true
+      new: false
       items:
         - name: Cell Editing
           href: grid/cell-editing.md
@@ -138,7 +138,7 @@
           new: false
         - name: Row Adding
           href: grid/row-adding.md
-          new: true
+          new: false
         - name: Batch Editing
           href: grid/batch-editing.md
           updated: true
@@ -150,7 +150,7 @@
     - name: Paging
       href: grid/paging.md
       new: false
-      updated: true
+      updated: false
     - name: Filtering
       href: grid/filtering.md
       new: false
@@ -178,7 +178,7 @@
     - name: Column Pinning
       href: grid/column-pinning.md
       new: false
-      updated: true
+      updated: false
     - name: Row Pinning
       href: grid/row-pinning.md
       new: false
@@ -231,7 +231,7 @@
     - name: Conditional Styling
       href: grid/conditional-cell-styling.md
       new: false
-      updated: true
+      updated: false
     - name: Keyboard navigation
       href: grid/keyboard-navigation.md
       new: false
@@ -258,7 +258,7 @@
   items:
     - name: Row Actions
       href: treegrid/row-actions.md
-      new: true
+      new: false
     - name: Live Data / Real-Time
       href: treegrid/live-data.md
       new: false
@@ -270,13 +270,13 @@
       new: false
     - name: Column Data types
       href: treegrid/column-types.md
-      new: true
+      new: false
     - name: Load On Demand
       href: treegrid/load-on-demand.md
       new: false
     - name: Editing
       href: treegrid/editing.md
-      new: true
+      new: false
       items:
         - name: Cell Editing
           href: treegrid/cell-editing.md
@@ -286,7 +286,7 @@
           new: false
         - name: Row Adding
           href: treegrid/row-adding.md
-          new: true
+          new: false
         - name: Batch Editing
           href: treegrid/batch-editing.md
           updated: true
@@ -297,7 +297,7 @@
     - name: Paging
       href: treegrid/paging.md
       new: false
-      updated: true
+      updated: false
     - name: Filtering
       href: treegrid/filtering.md
       new: false
@@ -322,7 +322,7 @@
     - name: Column Pinning
       href: treegrid/column-pinning.md
       new: false
-      updated: true
+      updated: false
     - name: Row Pinning
       href: treegrid/row-pinning.md
       new: false
@@ -370,7 +370,7 @@
     - name: Conditional Styling
       href: treegrid/conditional-cell-styling.md
       new: false
-      updated: true
+      updated: false
     - name: Group By
       href: treegrid/groupby.md
       updated: true
@@ -395,7 +395,7 @@
   items:
     - name: Row Actions
       href: hierarchicalgrid/row-actions.md
-      new: true
+      new: false
     - name: Virtualization and performance
       href: hierarchicalgrid/virtualization.md
       new: false
@@ -404,13 +404,13 @@
       new: false
     - name: Column Data types
       href: hierarchicalgrid/column-types.md
-      new: true
+      new: false
     - name: Load on Demand
       href: hierarchicalgrid/load-on-demand.md
       new: false
     - name: Editing
       href: hierarchicalgrid/editing.md
-      new: true
+      new: false
       items:
         - name: Cell Editing
           href: hierarchicalgrid/cell-editing.md
@@ -420,7 +420,7 @@
           new: false
         - name: Row Adding
           href: hierarchicalgrid/row-adding.md
-          new: true
+          new: false
         - name: Batch Editing
           href: hierarchicalgrid/batch-editing.md
           updated: true
@@ -435,7 +435,7 @@
     - name: Paging
       href: hierarchicalgrid/paging.md
       new: false
-      updated: true
+      updated: false
     - name: Filtering
       href: hierarchicalgrid/filtering.md
       new: false
@@ -460,7 +460,7 @@
     - name: Column Pinning
       href: hierarchicalgrid/column-pinning.md
       new: false
-      updated: true
+      updated: false
     - name: Row Pinning
       href: hierarchicalgrid/row-pinning.md
       new: false
@@ -501,7 +501,7 @@
     - name: Conditional Styling
       href: hierarchicalgrid/conditional-cell-styling.md
       new: false
-      updated: true
+      updated: false
     - name: Display Density
       href: hierarchicalgrid/display-density.md
       new: false
@@ -530,7 +530,7 @@
       new: true
 - name: Tree
   href: tree.md
-  new: true
+  new: false
 - name: List View
   href: list.md
 - name: Combo
@@ -953,6 +953,7 @@
 - name: Slider
   href: slider/slider.md
   new: false
+  updated: true
 - name: Ripple
   href: ripple.md
 - name: Toggle
@@ -963,12 +964,12 @@
 - name: Overlay
   href: overlay.md
   new: false
-  updated: true
+  updated: false
   items:
   - name: Positioning Strategies
     href: overlay-position.md
     new: false
-    updated: true
+    updated: false
   - name: Scrolling Strategies
     href: overlay-scroll.md
     new: false
@@ -990,7 +991,7 @@
   sortable: true
 - name: Navigation Drawer
   href: navdrawer.md
-  updated: true
+  updated: false
 - name: Navbar
   href: navbar.md
 - name: Layouts
@@ -1003,7 +1004,7 @@
   new: false
 - name: Bottom Navigation
   href: tabbar.md
-  updated: true
+  updated: false
 - name: Tabs
   href: tabs.md
   new: false
@@ -1011,7 +1012,7 @@
   href: card.md
 - name: Accordion
   href: accordion.md
-  new: true
+  new: false
 - name: Avatar
   href: avatar.md
 - name: Expansion Panel
@@ -1022,7 +1023,7 @@
   new: false
 - name: Stepper
   href: stepper.md
-  new: true
+  new: false
 - name: Dock Manager
   href: dock-manager.md
   new: false
@@ -1043,24 +1044,24 @@
 - name: Date Time Editor
   href: date-time-editor.md
   new: false
-  updated: true
+  updated: false
 - name: Calendar
   href: calendar.md
-  updated: true
+  updated: false
 - name: Date Picker
   href: date-picker.md
-  updated: true
+  updated: false
 - name: Date Range Picker
   href: date-range-picker.md
   new: false
-  updated: true
+  updated: false
 - name: Month Picker
   href: month-picker.md
   new: false
 - name: Time Picker
   href: time-picker.md
   new: false
-  updated: true
+  updated: false
 - name: Services
   header: true
   sortable: true

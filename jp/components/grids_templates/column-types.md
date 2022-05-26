@@ -239,9 +239,9 @@ public formatPercentOptions = this.options;
 ### カスタム テンプレート
 
 ```html
-<igx-grid #grid1 [data]="data | async" [autoGenerate]="true" [dataType]="'currency'">
-    <igx-column [field]="'OrderDate'" [dataType]="'currency'" [pipeArgs]="formatDateOptions" [editable]="true">
-        <ng-template let-value>
+<igx-grid #grid1 [data]="data | async" [autoGenerate]="false">
+    <igx-column [field]="'UnitsInStock'" [dataType]="'currency'" [pipeArgs]="formatOptions" [editable]="true">
+        <ng-template igxCellEditor let-value>
             {{ value | currency:'USD':'symbol':'1.0-0'}}
         </ng-template>
     </igx-column>
@@ -253,16 +253,16 @@ public formatPercentOptions = this.options;
 ```ts
  // Through column formatter property
 public formatCurrency(value: number) {
-    return `Dollar sign {value.toFixed(0)}`;
+    return `Dollar sign ${value.toFixed(0)}`;
 }
 
-init(column: IgxColumnComponent, template) {
-switch (column.field) {
-    case 'Open Price':
-        column.formatter = this.formatCurrency;
-        break;
-    default:
-        return;
+public init(column: IgxColumnComponent) {
+    switch (column.field) {
+        case 'UnitsInStock':
+            column.formatter = this.formatCurrency;
+            break;
+        default:
+            return;
 }
 ```
 

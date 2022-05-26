@@ -41,6 +41,9 @@ To update the **Angular CLI** package use the following command:
 ng update @angular/cli
 ```
 
+>[!NOTE]
+> If the `ng update` command fails because of package dependency mismatches, then revert the update, delete the `node_modules` folder and rerun the update with `--force` flag.
+
 ## Additional manual changes
 
 
