@@ -42,6 +42,9 @@ ng update @angular/core
 ng update @angular/cli
 ```
 
+>[!NOTE]
+> パッケージの依存関係の不一致が原因で `ng update` コマンドが失敗した場合は、アップデートを元に戻し、`node_modules` フォルダを削除してから、`--force` フラグを指定してアップデートを再実行します。
+
 ## その他の手動の変更
 
 
