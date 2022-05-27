@@ -2,6 +2,7 @@
 title: Angular Chart Animations | Data Visualization | Infragistics
 _description: Infragistics' Angular Chart Animations
 _keywords: Angular Charts, Animations, Infragistics
+_language: kr
 mentionedTypes: ["CategoryChart"]
 ---
 

@@ -2,6 +2,7 @@
 title: Angular Treemap | Data Visualization Tools | Orientation | Layout | Data Binding | Infragistics
 _description: Use Infragistics' Angular Treemap control show relative weighting of data points at more than one level supporting strip, squarified, and slice-and-dice algorithms. Learn about Ignite UI for Angular treemap!
 _keywords: Angular Tree Map, Treemap, layout, orientation, Ignite UI for Angular, Infragistics
+_language: kr
 mentionedTypes: ["Treemap", "TreemapOrientation", "TreemapLayoutType"]
 ---
 
