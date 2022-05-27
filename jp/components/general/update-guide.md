@@ -42,6 +42,9 @@ ng update @angular/core
 ng update @angular/cli
 ```
 
+>[!NOTE]
+> パッケージの依存関係の不一致が原因で `ng update` コマンドが失敗した場合は、アップデートを元に戻し、`node_modules` フォルダを削除してから、`--force` フラグを指定してアップデートを再実行します。
+
 ## その他の手動の変更
 
 
@@ -59,7 +62,7 @@ ng update @angular/cli
 ### 一般
 - `igxGrid`、`igxHierarchicalGrid`、`igxTreeGrid`
     - **重大な変更** - 列の `movable` プロパティは非推奨になりました。代わりに、公開されたグリッドの `moving` プロパティを使用してください:
-    ```typescript
+    ```html
     <igx-grid [moving]="true">
     </igx-grid>
     ```

@@ -2,7 +2,7 @@
 title: Angular マップ | データ可視化ツール | シェイプ ポリゴン シリーズ | インフラジスティックス
 _description: インフラジスティックスの Angular マップのシェイプ ポリゴン シリーズを使用して、地理的位置によって定義される国または地域の図形を描画します。Ignite UI for Angular マップ シーリズについての詳細を表示します。
 _keywords: Angular map, shape polygon series, Ignite UI for Angular, Infragistics, Angular マップ, シェイプ ポリゴン シリーズ, インフラジスティックス
-mentionedTypes: ['XamGeographicMap']
+mentionedTypes: ['XamGeographicMap', 'ShapefileConverter']
 _language: ja
 ---
 
@@ -29,7 +29,7 @@ _language: ja
 
 ## コード スニペット
 
-以下のコードは、`ShapeDataSource` を使用してシェイプ ファイルからロードした世界の国々の図形に [`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html) をバインドする方法を示します。
+以下のコードは、[`IgxShapeDataSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapedatasource.html) を使用してシェイプ ファイルからロードした世界の国々の図形に [`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html) をバインドする方法を示します。
 
 <!-- Angular -->
 

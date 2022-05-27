@@ -115,7 +115,7 @@ _language: ja
 }
 @@if (igxName === "IgxHierarchicalGrid") {
 
-<code-view style="height:470px" 
+<code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hgrid-keyboard-guide" >
 </code-view>
