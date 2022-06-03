@@ -19,9 +19,13 @@ All notable changes for each version of Ignite UI for Angular are documented on 
 > For changes specific to igniteui-angular components, please see [Ignite UI Angular Changes](https://github.com/igniteui/igniteui-angular/blob/master/changelog.md)
 
 <!-- end: Angular -->
+
 <div class="divider--half"></div>
+
 <div class="divider--half"></div>
+
 <!-- Angular, WebComponents, React -->
+
 ## **13.1.0**
 
 > [!Note]
