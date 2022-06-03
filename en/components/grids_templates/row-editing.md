@@ -91,7 +91,7 @@ Then define a @@igComponent with bound data source and [`rowEditable`]({environm
 @@if (igxName === 'IgxTreeGrid') {
 ```html
 <igx-tree-grid [data]="data" [primaryKey]="EmployeID" [foreignKey]="PID"
-               [rowEditable]="true" [rowSelectable]="true" [moving]="true">
+               [rowEditable]="true" [rowSelection]="'multiple'" [moving]="true">
     <igx-column *ngFor="let c of columns"
         [editable] ="c.editable"
         [field]="c.field"
