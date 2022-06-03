@@ -23,9 +23,7 @@ Ignite UI for Angular の各バージョンのすべての重要な変更は、�
 
 <div class="divider--half"></div>
 
-<div class="divider--half"></div>
-
-<div class="divider--half"></div>
+## **Angular 13.1.0**
 
 <!-- Angular, WebComponents, React -->
 
@@ -125,8 +123,7 @@ Ignite UI for Angular の各バージョンのすべての重要な変更は、�
 
 #### チャート凡例
 
-\*バブル、ドーナツ、および円チャートで使用できる水平方向の [`Orientation`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/orientation.html) プロパティを ItemLegend に追加しました。
-
+-   バブル、ドーナツ、および円チャートで使用できる水平方向の [`Orientation`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/orientation.html) プロパティを ItemLegend に追加しました。
 -   [`legendHighlightingMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriesviewercomponent.html#legendhighlightingmode) プロパティを追加 - 凡例項目にカーソルを合わせたときにシリーズの強調表示を有効にします。
 
 ### igniteui-angular-maps
