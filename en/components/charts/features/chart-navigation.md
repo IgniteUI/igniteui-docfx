@@ -51,6 +51,28 @@ The zoom and pan operations can also be enabled by using modifier keys by settin
 | `Apple`        | <kbd>Apple</kbd>  |
 | `None`         | no keys           |
 
+## Chart Navigation with Scrollbars
+
+The chart can be scrolled by enabling the `VerticalViewScrollbarMode` and `HorizontalViewScrollbarMode` properties. 
+
+These can be configured to the following options
+
+-   `Persistent` - The scrollbars always stay visible, as long as the chart is zoomed in, and fade away when fully zoomed out. 
+-   `Fading` - The scrollbars disappear after use and reappear when the mouse is near their location.
+-   `FadeToLine` - The scrollbars are reduced to a thinner line when zooming is not in use.
+-   `None` - Default, no scrollbars are shown.
+
+The following example demonstrates enabling scrollbars.
+
+<code-view style="height: 600px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-scrollbars"
+           alt="Angular Navigation Example"
+           github-src="charts/financial-chart/scrollbars">
+</code-view>
+
+<div class="divider--half"></div>
+
 ## Chart Navigation through Code
 
 > NOTE: Code navigation of the chart can only be used for the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) control.
