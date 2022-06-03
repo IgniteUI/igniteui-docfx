@@ -215,11 +215,11 @@ To get started with styling the checkbox, we need to import the `index` file, wh
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Then, we create a new theme that extends the [`igx-checkbox-theme`]({environment:sassApiUrl}/index.html#function-igx-checkbox-theme) and use some of its parameters to style the checkbox's items:
+Then, we create a new theme that extends the [`checkbox-theme`]({environment:sassApiUrl}/index.html#function-checkbox-theme) and use some of its parameters to style the checkbox's items:
 
 ```scss
 // in styles.scss
-$custom-checkbox-theme: igx-checkbox-theme(
+$custom-checkbox-theme: checkbox-theme(
     $border-radius: 10px,
     $label-color: #011627,
     $empty-color: #ECAA53,
@@ -237,7 +237,7 @@ The last step is to **include** the component theme in our application.
 If `$legacy-support` is set to `true`, include the **component theme** like that:
 
 ```scss
- @include igx-checkbox($custom-checkbox-theme);
+ @include checkbox($custom-checkbox-theme);
 ```
 >[!NOTE]
 >If the component is using an [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`
@@ -245,7 +245,7 @@ If `$legacy-support` is set to `true`, include the **component theme** like that
 ```scss
 :host {
      ::ng-deep {
-        @include igx-checkbox($custom-checkbox-theme);
+        @include checkbox($custom-checkbox-theme);
     }
 }
 ```
@@ -255,7 +255,7 @@ If `$legacy-support` is set to `true`, include the **component theme** like that
 If `$legacy-support` is set to `false`(default), include the component **css variables** like that:
 
 ```scss
-@include igx-css-vars($custom-checkbox-theme);
+@include css-vars($custom-checkbox-theme);
 ```
 
 >[!NOTE]
@@ -263,7 +263,7 @@ If `$legacy-support` is set to `false`(default), include the component **css var
 
 ```scss
 :host {
-    @include igx-css-vars($custom-checkbox-theme);
+    @include css-vars($custom-checkbox-theme);
 }
 ```
 ### Demo
@@ -281,7 +281,7 @@ If `$legacy-support` is set to `false`(default), include the component **css var
 <div class="divider--half"></div>
 
 * [IgxCheckboxComponent]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html)
-* [IgxCheckboxComponent Styles]({environment:sassApiUrl}/index.html#function-igx-checkbox-theme)
+* [IgxCheckboxComponent Styles]({environment:sassApiUrl}/index.html#function-checkbox-theme)
 * [LabelPosition]({environment:angularApiUrl}/enums/labelposition.html)
 
 ## Theming Dependencies

@@ -71,7 +71,7 @@ If you want to provide your own custom loading indicator, you may create an ng-t
 <div class="divider--half"></div>
 
 * [IgxTreeGridComponent]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)
-* [IgxGridComponent Styles]({environment:sassApiUrl}/#function-igx-grid-theme)
+* [IgxGridComponent Styles]({environment:sassApiUrl}/#function-grid-theme)
 
 ### Additional Resources
 

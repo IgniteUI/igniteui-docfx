@@ -147,15 +147,15 @@ public onSorting(event: ISortingEventArgs) {
 ## API リファレンス
 
 * [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
-* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-grid-theme)
 @@if (igxName !== 'IgxTreeGrid') {* [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)}
 * [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
 * [IgxDatePickerComponent]({environment:angularApiUrl}/classes/igxdatepickercomponent.html)
 * [IgxDatePickerComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-date-picker-theme)
 * [IgxCheckboxComponent]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html)
-* [IgxCheckboxComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-checkbox-theme)
+* [IgxCheckboxComponent スタイル]({environment:sassApiUrl}/index.html#function-checkbox-theme)
 * [IgxOverlay]({environment:angularApiUrl}/interfaces/overlaysettings.html)
-* [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+* [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-overlay-theme)
 
 
 ## その他のリソース

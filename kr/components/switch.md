@@ -84,7 +84,7 @@ The final result would be something like that:
 <div class="divider--half"></div>
 
 * [IgxSwitchComponent]({environment:angularApiUrl}/classes/igxswitchcomponent.html)
-* [IgxSwitchComponent Styles]({environment:sassApiUrl}/index.html#function-igx-switch-theme)
+* [IgxSwitchComponent Styles]({environment:sassApiUrl}/index.html#function-switch-theme)
 
 ###Additional Resources
 <div class="divider--half"></div>

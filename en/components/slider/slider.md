@@ -170,7 +170,7 @@ export class SampleComponent {
 ```
 
 
-<code-view style="height: 120px" 
+<code-view style="height: 200px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/interactions/slider-sample-4" >
 </code-view>
@@ -196,7 +196,7 @@ This can be done by setting [`lowerBound`]({environment:angularApiUrl}/classes/i
 ```
 
 
-<code-view style="height: 120px" 
+<code-view style="height: 160px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/interactions/slider-sample-5" >
 </code-view>
@@ -234,7 +234,7 @@ public labels = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturd
 ```
 
 
-<code-view style="height: 250px" 
+<code-view style="height: 160px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/interactions/slider-sample-6" >
 </code-view>
@@ -284,7 +284,7 @@ public type = SliderType.RANGE;
 ```
 
 
-<code-view style="height: 140px" 
+<code-view style="height: 180px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/interactions/discrete-slider-ticks-bottom" >
 </code-view>
@@ -319,7 +319,7 @@ We also rotate all viable labels by setting the [`TickLabelsOrientation`]({envir
 ```
 
 
-<code-view style="height: 240px" 
+<code-view style="height: 200px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/interactions/slider-ticks-bottomtotop-labels" >
 </code-view>
@@ -350,7 +350,7 @@ This mirrors the visualization of the **ticks** and displays them above and belo
 ```
 
 
-<code-view style="height: 140px" 
+<code-view style="height: 160px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/interactions/slider-secondary-ticks-mirror" >
 </code-view>
@@ -375,7 +375,7 @@ This example show how the tick labels and the thumb label works together.
 ```
 
 
-<code-view style="height: 140px" 
+<code-view style="height: 160px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/interactions/slider-timeframe" >
 </code-view>
@@ -420,7 +420,7 @@ Which means that it provides a reference to:
 In the **tickLabel** callback above, we are rounding the **value** of every **primary** tick. 
 
 
-<code-view style="height: 140px" 
+<code-view style="height: 180px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/interactions/slider-tick-labels-template" >
 </code-view>
@@ -446,7 +446,7 @@ Now let's create our component theme and pass that custom palette to it.
 // In app-slider-styling.component.scss
 
 // Create slider theme.
-$custom-slider-theme: igx-slider-theme(
+$custom-slider-theme: slider-theme(
     $track-color: #ff7400,
     $track-hover-color: #ff7400,
 
@@ -464,14 +464,14 @@ $custom-slider-theme: igx-slider-theme(
 ```
 
 #### Applying the component theme
-Now to apply the component theme all that's left is to include `igx-css-vars` mixin and pass the `$custom-slider-theme` map.
+Now to apply the component theme all that's left is to include `css-vars` mixin and pass the `$custom-slider-theme` map.
 ```scss
 // In app-slider-styling.component.scss
 
-// Pass our custom-slider-theme to `igx-css-vars` mixin.
+// Pass our custom-slider-theme to `css-vars` mixin.
 // The `:host` here makes sure that all the theming will affect only this slider component.
 :host {
-  @include igx-css-vars($custom-slider-theme);
+  @include css-vars($custom-slider-theme);
 }
 ```
 
@@ -479,7 +479,7 @@ Now to apply the component theme all that's left is to include `igx-css-vars` mi
 <div class="divider--half"></div>
 
 * [IgxSliderComponent]({environment:angularApiUrl}/classes/igxslidercomponent.html)
-* [IgxSliderComponent Styles]({environment:sassApiUrl}/index.html#function-igx-slider-theme)
+* [IgxSliderComponent Styles]({environment:sassApiUrl}/index.html#function-slider-theme)
 * [SliderType]({environment:angularApiUrl}/enums/slidertype.html)
 * [IRangeSliderValue]({environment:angularApiUrl}/interfaces/irangeslidervalue.html)
 * [TicksOrientation]({environment:angularApiUrl}/enums/ticksorientation.html)

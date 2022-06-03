@@ -1,31 +1,31 @@
 @@if (igxName === 'IgxGrid') {
 ---
 title:  Grid の表示密度 - ネイティブ Angular | Ignite UI for Angular
-_description: Ignite UI for Angular Data Grid コントロールは、列のデータ型に基づいて編集可能な列のデフォルト セル テンプレートを提供します。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular Grid, Angular Table, Angular Data Grid コンポーネント, Angular Data Table コンポーネント, Angular Data Grid コントロール, Angular Data Table コントロール, Angular Grid コンポーネント, Angular Table コンポーネント, Angular Grid コントロール, Angular Table コントロール, Angular 高パフォーマンス Grid, Angular 高パフォーマンス Data Table, Grid 表示密度, Data Table 表示密度
+_description: Ignite UI for Angular Grid コンポーネントの一連のコンパクト ビュー オプションを使用して、マテリアル密度テーブル機能にマテリアル密度機能を適用する方法を学びます。
+_keywords: material density, igniteui for angular, infragistics, マテリアル密度
 _language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
 title: Tree Grid の表示密度 - ネイティブ Angular | Ignite UI for Angular
-_description: Ignite UI for AngularTree Grid コントロールは、列のデータ型に基づいて編集可能な列のデフォルト セル テンプレートを提供します。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular Tree Grid, Angular Tree Table, Angular Tree Grid コンポーネント, Angular Tree Table コンポーネント, Angular Tree Grid コントロール, Angular Tree Table コントロール, Angular Tree Grid コンポーネント, Angular Tree Table コンポーネント, Angular Tree Grid コントロール, Angular Tree Table コントロール, Angular 高パフォーマンス Tree Grid, Angular 高パフォーマンス Tree Table, Tree Grid 表示密度, Tree Table 表示密度
+_description: Ignite UI for Angular Tree Grid コンポーネントの一連のコンパクト ビュー オプションを使用して、マテリアル密度テーブル機能にマテリアル密度機能を適用する方法を学びます。
+_keywords: material density, igniteui for angular, infragistics, マテリアル密度
 _language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
 title: Hierarchical Grid の表示密度 - ネイティブ Angular | Ignite UI for Angular
-_description: Ignite UI for Angular Hierarchical Data Grid コントロールは、列のデータ型に基づいて編集可能な列のデフォルト セル テンプレートを提供します。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント,  Angular Hierarchical Grid, Angular Hierarchical  Table, Angular Hierarchical  Grid コンポーネント, Angular Hierarchical Table コントロール, Angular Hierarchical  Grid コンポーネント, Angular Table コンポーネント, Angular Grid コントロール, Angular Hierarchical Table コントロール, Angular 高パフォーマンス Hierarchical  Grid, Angular 高パフォーマンス Hierarchical Table, Hierarchical Grid Hierarchical , Hierarchical Table Hierarchical
+_description: Ignite UI for Angular Hierarchical Grid コンポーネントの一連のコンパクト ビュー オプションを使用して、マテリアル密度テーブル機能にマテリアル密度機能を適用する方法を学びます。
+_keywords: material density, igniteui for angular, infragistics, マテリアル密度
 _language: ja
 ---
 }
 
 # @@igComponent の表示密度
 
-**@@igxName** デザインは[マテリアル デザイン ガイドライン](https://material.io/guidelines/material-design/introduction.html)に基づきます。表示[密度](https://material.io/design/layout/density.html#usage)オプションの定義済みセットから選択するオプションを提供します。正しい密度を選択すると、コンテンツの大量との相互作用でユーザー エクスペリエンスを向上できます。
+**@@igxName** デザインは[マテリアル デザイン ガイドライン](https://material.io/design)に基づきます。表示[密度](https://material.io/design/layout/applying-density.html)オプションの定義済みセットから選択するオプションを提供します。正しい密度を選択すると、コンテンツの大量との相互作用でユーザー エクスペリエンスを向上できます。
 
 
 ## Angular @@igComponent 表示密度の例
@@ -60,7 +60,7 @@ _language: ja
 
 ## 使用方法
 
-上記デモで示されるように、[**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) は 3 つの密度オプション (**compact**、**cosy**、**comfortable**) を提供します。以下のコード スニペットは、[`displayDensity`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#displaydensity) を設定する方法を示します。
+上記デモで示されるように、[**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) は 3 つの密度オプション (**compact**、**cosy**、**comfortable**) を提供します。以下のコード スニペットは、[`displayDensity`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#displayDensity) を設定する方法を示します。
 
 ```html
 <@@igSelector #@@igObjectRef [data]="data" [displayDensity]="'cosy'" >
@@ -81,7 +81,7 @@ this.@@igObjectRef.displayDensity = 'cosy';
 > [!NOTE]
 > 現在サイズはオーバーライド**できません**。
 
-引き続きサンプルを使用して [`displayDensity`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#displaydensity) の適用方法について説明します。最初に各密度を切り替えるボタンを追加します。
+引き続きサンプルを使用して [`displayDensity`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#displayDensity) の適用方法について説明します。最初に各密度を切り替えるボタンを追加します。
 
 ```html
 <div class="density-chooser">
@@ -274,11 +274,11 @@ public selectDensity(event) {
 }
 ```
 
-[**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) のグリッド行の高さを変更するその他のオプションに [`rowHeight`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowheight) プロパティがあります。このプロパティと  [`displayDensity`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#displaydensity) オプションがグリッドレイアウトにどのように動作に影響するかを以下で確認できます。
+[**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) のグリッド行の高さを変更するその他のオプションに [`rowHeight`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowheight) プロパティがあります。このプロパティと  [`displayDensity`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#displayDensity) オプションがグリッドレイアウトにどのように動作に影響するかを以下で確認できます。
 
 以下を確認してください。
- - **rowHeight を指定した場合**、[`displayDensity`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#displaydensity) オプションは行の高さに影響**しません**。
- - [`displayDensity`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#displaydensity) は、上記の理由により**残りすべてのグリッド要素に影響します**。
+ - **rowHeight を指定した場合**、[`displayDensity`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#displayDensity) オプションは行の高さに影響**しません**。
+ - [`displayDensity`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#displayDensity) は、上記の理由により**残りすべてのグリッド要素に影響します**。
 
 サンプル機能を拡張して [`rowHeight`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowheight) プロパティを @@igComponent に追加します。
 
@@ -295,7 +295,7 @@ public selectDensity(event) {
 <div class="divider--half"></div>
 
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-grid-theme)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 
 <div class="divider--half"></div>

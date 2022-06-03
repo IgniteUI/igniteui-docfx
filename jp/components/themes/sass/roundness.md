@@ -18,7 +18,7 @@ $_material-shape-button: (
 );
 ```
 
-上記の例のように [Button テーマ]({environment:sassApiUrl}/index.html#function-igx-button-theme)のコンポーネント スキーマはすべてのボタン タイプのデフォルトの border-radius を定義します。
+上記の例のように [Button テーマ]({environment:sassApiUrl}/index.html#function-button-theme)のコンポーネント スキーマはすべてのボタン タイプのデフォルトの border-radius を定義します。
 
 次の例を見てみましょう。 
 
@@ -33,11 +33,11 @@ $_material-shape-button: (
 
 テーマ ミックスインの使用:
 ```scss
-$my-button-theme: igx-button-theme(
+$my-button-theme: button-theme(
     $border-radius: .5 .2 .5 .2, // resolves to 10px 4px 10px 4px
 );
 
-@include igx-button($my-button-theme);
+@include button($my-button-theme);
 ```
 
 コンポーネント スキーマの使用:
@@ -56,7 +56,7 @@ $my-light-schema: extend(
     )
 );
 
-@include igx-theme(
+@include theme(
     $palette: $light-material-palette,
     $schema: $my-light-schema
 );

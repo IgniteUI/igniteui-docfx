@@ -249,10 +249,10 @@ column.autosize();
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-最も簡単な方法は、[`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) を拡張し、`$resize-line-color` パラメーター以外にも多くのパラメータを受け入れます。
+最も簡単な方法は、[`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) を拡張し、`$resize-line-color` パラメーター以外にも多くのパラメータを受け入れます。
 
 ``` scss
-$custom-grid-theme: igx-grid-theme(
+$custom-grid-theme: grid-theme(
     $resize-line-color: #0288D1
 );
 
@@ -263,7 +263,7 @@ $custom-grid-theme: igx-grid-theme(
 ```scss
 :host {
     ::ng-deep {
-        @include igx-grid($custom-grid-theme);
+        @include grid($custom-grid-theme);
     }
 }
 ```
@@ -277,15 +277,15 @@ $custom-grid-theme: igx-grid-theme(
 $primary-color: #0288D1;
 $secondary-color: #BDBDBD;
 
-$custom-theme-palette: igx-palette($primary: $primary-color, $secondary: $secondary-color);
+$custom-theme-palette: palette($primary: $primary-color, $secondary: $secondary-color);
 ```
 
 次に [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取り出すことができます。 
 
 ```scss
-$custom-grid-theme: igx-grid-theme(
+$custom-grid-theme: grid-theme(
     $palette: $custom-theme-palette,
-    $resize-line-color: igx-color($custom-theme-palette, 'secondary', 500)
+    $resize-line-color: color($custom-theme-palette, 'secondary', 500)
 );
 ```
 
@@ -302,13 +302,13 @@ $custom-grid-theme: igx-grid-theme(
 $light-grid-schema: extend($_light-grid,
     (
         resize-line-color: (
-            igx-color: ('secondary', 500)
+           color: ('secondary', 500)
             ),
         header-background: (
-            igx-color: ("primary", 100)
+           color: ("primary", 100)
             ),
         header-text-color: (
-            igx-color: ("primary", 600)
+           color: ("primary", 600)
             )
     )
 );
@@ -319,11 +319,11 @@ $light-grid-schema: extend($_light-grid,
 ```scss
 // Extending the global light-schema
 $custom-light-grid-schema: extend($light-schema,(
-    igx-grid: $light-grid-schema
+   grid: $light-grid-schema
 ));
 
 // Specifying the palette and schema of the custom grid theme
-$custom-grid-theme: igx-grid-theme(
+$custom-grid-theme: grid-theme(
     $palette: $custom-theme-palette,
     $schema: $custom-light-grid-schema
 );

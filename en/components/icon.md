@@ -151,10 +151,10 @@ To get started with styling the icons, we need to import the `index` file, where
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`igx-icon-theme`]({environment:sassApiUrl}/index.html#function-igx-icon-theme) and accepts the parameters, required to customize the icon as desired. 
+Following the simplest approach, we create a new theme that extends the [`icon-theme`]({environment:sassApiUrl}/index.html#function-icon-theme) and accepts the parameters, required to customize the icon as desired. 
 
 ```scss
-$custom-icon-theme: igx-icon-theme(
+$custom-icon-theme: icon-theme(
   $color: #1481b8,
   $disabled-color: #494949
 );
@@ -165,7 +165,7 @@ $custom-icon-theme: igx-icon-theme(
 The last step is to pass the custom icon theme in our application: 
 
 ```scss
- @include igx-css-vars($custom-icon-theme);
+ @include css-vars($custom-icon-theme);
 ```
 
 ### Using Theme Overrides
@@ -177,7 +177,7 @@ If the component is using the [`Emulated`](themes/sass/component-themes.md#view-
 ```scss
 :host {
      ::ng-deep {
-        @include igx-icon($custom-icon-theme);
+        @include icon($custom-icon-theme);
     }
 }
 ```
@@ -195,7 +195,7 @@ If the component is using the [`Emulated`](themes/sass/component-themes.md#view-
 <div class="divider--half"></div>
 
 * [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
-* [IgxIconComponent Styles]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxIconComponent Styles]({environment:sassApiUrl}/index.html#function-icon-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>

@@ -79,7 +79,7 @@ Without information about the sizes of the container and the items before render
 
 ## API References
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-grid-theme)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [IgxForOfDirective]({environment:angularApiUrl}/classes/igxforofdirective.html)
 * [IForOfState]({environment:angularApiUrl}/interfaces/iforofstate.html)

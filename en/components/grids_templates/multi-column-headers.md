@@ -268,10 +268,10 @@ To get started with styling the sorting behavior, we need to import the `index` 
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) and accepts the `$header-background`, `$header-text-color`, `$header-border-width`, `$header-border-style` and `$header-border-color` parameters.
+Following the simplest approach, we create a new theme that extends the [`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) and accepts the `$header-background`, `$header-text-color`, `$header-border-width`, `$header-border-style` and `$header-border-color` parameters.
 
 ```scss
-$custom-theme: igx-grid-theme(
+$custom-theme: grid-theme(
     $header-background: #e0f3ff,
     $header-text-color: #e41c77,
     $header-border-width: 1px,
@@ -282,7 +282,7 @@ $custom-theme: igx-grid-theme(
 The last step is to **include** the component mixins: 
 
 ```scss
-@include igx-grid($custom-theme);
+@include grid($custom-theme);
 ```
 
 >[!NOTE]
@@ -291,7 +291,7 @@ The last step is to **include** the component mixins:
  ```scss
 :host {
     ::ng-deep {
-        @include igx-grid($custom-theme);
+        @include grid($custom-theme);
     }
 }
 ```
@@ -306,18 +306,18 @@ Instead of hardcoding the color values like we just did, we can achieve greater 
 $light-blue-color: #e0f3ff;
 $deep-pink-color: #e41c77;
 
-$custom-palette: igx-palette($primary: $light-blue-color, $deep-pink-color);
+$custom-palette: palette($primary: $light-blue-color, $deep-pink-color);
 ```
 
 And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette.
 
 ```scss
-$custom-theme: igx-grid-theme(
-    $header-background: igx-color($custom-palette, "primary", 500),
-    $header-text-color: igx-color($custom-palette, "secondary", 500),
+$custom-theme: grid-theme(
+    $header-background: color($custom-palette, "primary", 500),
+    $header-text-color: color($custom-palette, "secondary", 500),
     $header-border-width: 1px,
     $header-border-style: solid,
-    $header-border-color: igx-color($custom-palette, "grays", 200)
+    $header-border-color: color($custom-palette, "grays", 200)
 );
 ```
 
@@ -354,7 +354,7 @@ $my-custom-schema: extend($light-schema,
 );
 
 // Defining our custom theme with the custom schema
-$custom-theme: igx-grid-theme(
+$custom-theme: grid-theme(
   $palette: $custom-palette,
   $schema: $my-custom-schema
 );
@@ -408,7 +408,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 <div class="divider--half"></div>
 
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-grid-theme)
 * [IgxColumnGroupComponent]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html)
 <div class="divider--half"></div>
 

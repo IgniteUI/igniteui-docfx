@@ -261,7 +261,7 @@ export class MyComponent implements OnInit {
 
 ## Angular ツリー グリッド スタイル設定
 
-[Ignite UI for Angular テーマ ライブラリ](../themes/sass/component-themes.md)でスタイルを設定できます。ツリー グリッドの [テーマ]({environment:sassApiUrl}/index.html#function-igx-grid-theme)  は、さまざまなプロパティを公開します。これにより、ツリーグリッドのすべての機能をカスタマイズできます。
+[Ignite UI for Angular テーマ ライブラリ](../themes/sass/component-themes.md)でスタイルを設定できます。ツリー グリッドの [テーマ]({environment:sassApiUrl}/index.html#function-grid-theme)  は、さまざまなプロパティを公開します。これにより、ツリーグリッドのすべての機能をカスタマイズできます。
 
 Tree Grid (ツリー グリッドのスタイル設定は、すべてのテーマ関数とコンポーネント ミックスインが含まれる `index` ファイルをインポートする必要があります。
 
@@ -269,13 +269,13 @@ Tree Grid (ツリー グリッドのスタイル設定は、すべてのテー�
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-次に、[`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) を拡張し、必要に応じてツリー グリッドをカスタマイズするために必要なパラメーターを受け取る新しいテーマを作成します。
+次に、[`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) を拡張し、必要に応じてツリー グリッドをカスタマイズするために必要なパラメーターを受け取る新しいテーマを作成します。
 
 >[!NOTE]
 >`sass` 階層グリッド固有の機能はありません。
 
 ```scss
-$custom-theme: igx-grid-theme(
+$custom-theme: grid-theme(
   $cell-active-border-color: #FFCD0F,
   $cell-selected-background: #6F6F6F,
   $row-hover-background: #F8E495,
@@ -292,7 +292,7 @@ $custom-theme: igx-grid-theme(
 最後にコンポーネントのテーマを**含めます**。
 
 ```scss
-@include igx-grid($custom-theme);
+@include grid($custom-theme);
 ```
 
 >[!NOTE]
@@ -301,7 +301,7 @@ $custom-theme: igx-grid-theme(
 ```scss
 :host {
     ::ng-deep {
-        @include igx-grid($custom-theme);
+        @include grid($custom-theme);
     }
 }
 ```
@@ -315,23 +315,23 @@ $custom-theme: igx-grid-theme(
 ```scss
 $yellow-color: #FFCD0F;
 $black-color: #494949;
-$custom-palette: igx-palette($primary: $black-color, $secondary: $yellow-color);
+$custom-palette: palette($primary: $black-color, $secondary: $yellow-color);
 ```
 
 次に [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取得できます。 
 
 ```scss
-$custom-theme: igx-grid-theme(
-    $cell-active-border-color: igx-color($custom-palette, "secondary", 500),
-    $cell-selected-background: igx-color($custom-palette, "primary", 300),
-    $row-hover-background: igx-color($custom-palette, "secondary", 100),
-    $row-selected-background: igx-color($custom-palette, "primary", 100),
-    $header-background: igx-color($custom-palette, "primary", 500),
-    $header-text-color: igx-contrast-color($custom-palette, "primary", 500),
-    $expand-icon-color: igx-color($custom-palette, "secondary", 500),
-    $expand-icon-hover-color: igx-color($custom-palette, "secondary", 600),
-    $resize-line-color: igx-color($custom-palette, "secondary", 500),
-    $row-highlight: igx-color($custom-palette, "secondary", 500)
+$custom-theme: grid-theme(
+    $cell-active-border-color: color($custom-palette, "secondary", 500),
+    $cell-selected-background: color($custom-palette, "primary", 300),
+    $row-hover-background: color($custom-palette, "secondary", 100),
+    $row-selected-background: color($custom-palette, "primary", 100),
+    $header-background: color($custom-palette, "primary", 500),
+    $header-text-color:contrast-color($custom-palette, "primary", 500),
+    $expand-icon-color: color($custom-palette, "secondary", 500),
+    $expand-icon-hover-color: color($custom-palette, "secondary", 600),
+    $resize-line-color: color($custom-palette, "secondary", 500),
+    $row-highlight: color($custom-palette, "secondary", 500)
 );
 ```
 
@@ -366,7 +366,7 @@ $my-custom-schema: extend($light-schema, (
 ));
 
 // Defining grid-theme with the global light schema
-$custom-theme: igx-grid-theme(
+$custom-theme: grid-theme(
     $palette: $custom-palette,
     $schema: $my-custom-schema
 );
@@ -416,20 +416,20 @@ $custom-theme: igx-grid-theme(
 * [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
 * [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent スタイル]({environment:sassApiUrl}/#function-igx-grid-theme)
+* [IgxGridComponent スタイル]({environment:sassApiUrl}/#function-grid-theme)
 * [IgxBaseTransactionService]({environment:angularApiUrl}/classes/igxbasetransactionservice.html)
 
 ## テーマの依存関係
-* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
-* [IgxInputGroup テーマ]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
-* [IgxChip テーマ]({environment:sassApiUrl}/index.html#function-igx-chip-theme)
-* [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
-* [IgxButton テーマ]({environment:sassApiUrl}/index.html#function-igx-button-theme)
-* [IgxOverlay テーマ]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
-* [IgxDropDown テーマ]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme)
-* [IgxCalendar テーマ]({environment:sassApiUrl}/index.html#function-igx-calendar-theme)
-* [IgxSnackBar テーマ]({environment:sassApiUrl}/index.html#function-igx-snackbar-theme)
-* [IgxBadge テーマ]({environment:sassApiUrl}/index.html#function-igx-badge-theme)
+* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxInputGroup テーマ]({environment:sassApiUrl}/index.html#function-input-group-theme)
+* [IgxChip テーマ]({environment:sassApiUrl}/index.html#function-chip-theme)
+* [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-ripple-theme)
+* [IgxButton テーマ]({environment:sassApiUrl}/index.html#function-button-theme)
+* [IgxOverlay テーマ]({environment:sassApiUrl}/index.html#function-overlay-theme)
+* [IgxDropDown テーマ]({environment:sassApiUrl}/index.html#function-drop-down-theme)
+* [IgxCalendar テーマ]({environment:sassApiUrl}/index.html#function-calendar-theme)
+* [IgxSnackBar テーマ]({environment:sassApiUrl}/index.html#function-snackbar-theme)
+* [IgxBadge テーマ]({environment:sassApiUrl}/index.html#function-badge-theme)
 
 
 ## その他のリソース

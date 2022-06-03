@@ -113,10 +113,10 @@ First, in order to use the functions exposed by the theme engine, we need to imp
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-You can easily create a new theme, that extends the [`igx-ripple-theme`]({environment:sassApiUrl}/index.html#function-igx-ripple-theme) and accepts the parameters, required to customize the ripple as desired.
+You can easily create a new theme, that extends the [`ripple-theme`]({environment:sassApiUrl}/index.html#function-ripple-theme) and accepts the parameters, required to customize the ripple as desired.
 
 ```scss
-$custom-ripple-theme: igx-ripple-theme(
+$custom-ripple-theme: ripple-theme(
   $color: #217346
 );
 ```  
@@ -126,7 +126,7 @@ $custom-ripple-theme: igx-ripple-theme(
 The next step is to pass the custom ripple theme:
 
 ```scss
-@include igx-css-vars($custom-ripple-theme);
+@include css-vars($custom-ripple-theme);
 ```
 
 ### Using Component Theme Overrides
@@ -139,7 +139,7 @@ If the component is using the [`Emulated`](themes/sass/component-themes.md#view-
 :host {
     ::ng-deep {
         // Pass the custom ripple theme to the `igx-ripple` mixin
-        @include igx-ripple($custom-ripple-theme);
+        @include ripple($custom-ripple-theme);
     }
 }
 ```
@@ -160,7 +160,7 @@ If the component is using the [`Emulated`](themes/sass/component-themes.md#view-
 <div class="divider--half"></div>
 
 * [IgxRippleDirective]({environment:angularApiUrl}/classes/igxrippledirective.html)
-* [IgxRipple Styles]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
+* [IgxRipple Styles]({environment:sassApiUrl}/index.html#function-ripple-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>

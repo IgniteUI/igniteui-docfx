@@ -235,10 +235,10 @@ export class MyBannerComponent {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単な方法は、[`igx-banner-theme`]({environment:sassApiUrl}/index.html#function-igx-banner-theme) を拡張する新しいテーマを作成し、`$banner-message-color`、`$banner-background` と `$banner-illustration-color` パラメーターを受け取る方法です。
+最も簡単な方法は、[`banner-theme`]({environment:sassApiUrl}/index.html#function-banner-theme) を拡張する新しいテーマを作成し、`$banner-message-color`、`$banner-background` と `$banner-illustration-color` パラメーターを受け取る方法です。
 
 ```scss
-$custom-banner-theme: igx-banner-theme(
+$custom-banner-theme: banner-theme(
     $banner-message-color: #151515,
     $banner-background: #dedede,
     $banner-illustration-color: #666666
@@ -250,7 +250,7 @@ $custom-banner-theme: igx-banner-theme(
 最後にバナーのカスタム テーマを渡します。
 
 ```scss
-@include igx-css-vars($custom-banner-theme);
+@include css-vars($custom-banner-theme);
 ```
 
 ### ミックスインの使用
@@ -263,7 +263,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 :host {
     ::ng-deep {
         // Custom banner theme を `igx-banner` ミックスインに渡します
-        @include igx-banner($custom-banner-theme);
+        @include banner($custom-banner-theme);
     }
 }
 ```
@@ -278,16 +278,16 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 $white-color: #dedede;
 $black-color: #151515;
 
-$light-banner-palette: igx-palette($primary: $white-color, $secondary: $black-color);
+$light-banner-palette: palette($primary: $white-color, $secondary: $black-color);
 ```
 
 次に [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取得できます。 
 
 ```scss
-$custom-banner-theme: igx-banner-theme(
-    $banner-message-color: igx-color($light-banner-palette, "secondary", 400),
-    $banner-background: igx-color($light-banner-palette, "primary", 400),
-    $banner-illustration-color: igx-color($light-banner-palette, "secondary", 100)
+$custom-banner-theme: banner-theme(
+    $banner-message-color: color($light-banner-palette, "secondary", 400),
+    $banner-background: color($light-banner-palette, "primary", 400),
+    $banner-illustration-color: color($light-banner-palette, "secondary", 100)
 );
 ```
 
@@ -304,19 +304,19 @@ $custom-banner-theme: igx-banner-theme(
 $light-toast-schema: extend($_light-toast,
     (
         banner-message-color: (
-            igx-color: ("secondary", 400)
+           color: ("secondary", 400)
         ),
         banner-background: (
-            igx-color: ("primary", 400)
+           color: ("primary", 400)
         ),
         banner-illustration-color: (
-            igx-color: ("secondary", 100)
+           color: ("secondary", 100)
         )
     )
 );
 
 // Defining banner with the global light schema
-$custom-banner-theme: igx-banner-theme(
+$custom-banner-theme: banner-theme(
   $palette: $light-banner-palette,
   $schema: $light-toast-schema
 );
@@ -338,7 +338,7 @@ $custom-banner-theme: igx-banner-theme(
 
 * [IgxBannerComponent]({environment:angularApiUrl}/classes/igxbannercomponent.html)
 * [IgxBannerActionsDirective]({environment:angularApiUrl}/classes/igxbanneractionsdirective.html)
-* [IgxBannerComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-banner-theme)
+* [IgxBannerComponent スタイル]({environment:sassApiUrl}/index.html#function-banner-theme)
 
 その他のコンポーネントおよびディレクティブ (またはそのいずれか) で使用した API:
 
@@ -348,10 +348,10 @@ $custom-banner-theme: igx-banner-theme(
 * [IgxToastComponent]({environment:angularApiUrl}/classes/igxtoastcomponent.html)
 
 ## テーマの依存関係
-* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
-* [IgxButton テーマ]({environment:sassApiUrl}/index.html#function-igx-button-theme)
-* [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
-* [IgxExpansionPanel テーマ]({environment:sassApiUrl}/index.html#function-igx-expansion-panel-theme)
+* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxButton テーマ]({environment:sassApiUrl}/index.html#function-button-theme)
+* [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-ripple-theme)
+* [IgxExpansionPanel テーマ]({environment:sassApiUrl}/index.html#function-expansion-panel-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

@@ -8,8 +8,8 @@
 
 // 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-@include igx-core();
-@include igx-bootstrap-light-theme($light-bootstrap-palette);
+@include core();
+@include bootstrap-light-theme($light-bootstrap-palette);
 ```
 
 ## Bootstrap Dark テーマ
@@ -18,10 +18,10 @@
 
 // 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-@include igx-core();
-@include igx-bootstrap-dark-theme($dark-bootstrap-palette);
+@include core();
+@include bootstrap-dark-theme($dark-bootstrap-palette);
 ```
 
 ## API の概要
-* [Light テーマ]({environment:sassApiUrl}/index.html#mixin-igx-bootstrap-light-theme)
-* [Dark テーマ]({environment:sassApiUrl}/index.html#mixin-igx-bootstrap-dark-theme)
+* [Light テーマ]({environment:sassApiUrl}/index.html#mixin-bootstrap-light-theme)
+* [Dark テーマ]({environment:sassApiUrl}/index.html#mixin-bootstrap-dark-theme)
