@@ -53,7 +53,7 @@ The zoom and pan operations can also be enabled by using modifier keys by settin
 
 ## Chart Navigation with Scrollbars
 
-The chart can be scrolled by enabling the `VerticalViewScrollbarMode` and `HorizontalViewScrollbarMode` properties. 
+The chart can be scrolled by enabling the [`verticalViewScrollbarMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriesviewercomponent.html#verticalviewscrollbarmode) and [`horizontalViewScrollbarMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriesviewercomponent.html#horizontalviewscrollbarmode) properties. 
 
 These can be configured to the following options
 
