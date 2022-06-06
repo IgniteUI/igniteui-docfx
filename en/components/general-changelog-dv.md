@@ -10,9 +10,15 @@ namespace: Infragistics.Controls.Charts
 
 All notable changes for each version of Ignite UI for Angular are documented on this page.
 
+<!-- Angular -->
+
 > [!NOTE]
 > This topic discusses changes only for components that are not included in the igniteui-angular package.
 > For changes specific to igniteui-angular components, please see [Ignite UI Angular Changes](https://github.com/igniteui/igniteui-angular/blob/master/changelog.md)
+
+<!-- end: Angular -->
+
+<!-- Angular, WebComponents, React -->
 
 ## Latest
 
@@ -30,6 +36,14 @@ All notable changes for each version of Ignite UI for Angular are documented on 
 -   New [`isSplineShapePartOfRange`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#issplineshapepartofrange) determines whether to include the spline shape in the axis range requested of the axis.
 -   New [`xAxisMaximumGap`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#xaxismaximumgap), determines the maximum allowed value for the plotted series when using [`xAxisGap`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#xaxisgap). The gap determines the amount of space between columns or bars of plotted series.
 -   New [`xAxisMinimumGapSize`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#xaxisminimumgapsize), determines the minimum allowed pixel-based value for the plotted series when using [`xAxisGap`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#xaxisgap) to ensure there is always some spacing between each category. 
+
+<!-- end: Angular, WebComponents, React -->
+
+<div class="divider--half"></div>
+
+<div class="divider--half"></div>
+
+<!-- Angular, WebComponents, React -->
 
 ## **13.1.0**
 
@@ -68,6 +82,14 @@ This release introduces a few improvements and simplifications to visual design 
 | Old brushes/outlines                                                                                                                                                                                                                                                                                                                                                                                                                                                              | New outline/brushes                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | <span style="color:#8BDC5C">#8BDC5C</span> <br><span style="color:#8B5BB1">#8B5BB1</span> <br><span style="color:#6DB1FF">#6DB1FF</span> <br><span style="color:#F8A15F">#F8A15F</span> <br><span style="color:#EE5879">#EE5879</span> <br><span style="color:#735656">#735656</span> <br><span style="color:#F7D262">#F7D262</span> <br><span style="color:#8CE7D9">#8CE7D9</span> <br><span style="color:#E051A9">#E051A9</span> <br><span style="color:#A8A8B7">#A8A8B7</span> | <span style="color:#8BDC5C">#8BDC5C</span> <br><span style="color:#8961A9">#8961A9</span> <br><span style="color:#6DB1FF">#6DB1FF</span> <br><span style="color:#82E9D9">#82E9D9</span> <br><span style="color:#EA3C63">#EA3C63</span> <br><span style="color:#735656">#735656</span> <br><span style="color:#F8CE4F">#F8CE4F</span> <br><span style="color:#A8A8B7">#A8A8B7</span> <br><span style="color:#E051A9">#E051A9</span> <br><span style="color:#FF903B">#FF903B</span> <br> |
+
+<!-- end: Angular, WebComponents, React -->
+
+<div class="divider--half"></div>
+
+<div class="divider--half"></div>
+
+<!-- Angular, WebComponents, React -->
 
 ## **11.2.0**
 
@@ -131,6 +153,16 @@ for example:
 -   Added support for shifting display of some map series while wrapping around the coordinate origin
 -   Added support for highlighting of the shape series
 -   Added support for some annotation layers for the shape series
+
+<!-- end: Angular, WebComponents, React -->
+
+<div class="divider--half"></div>
+
+<div class="divider--half"></div>
+
+<div class="divider--half"></div>
+
+<!-- Angular, React, WebComponents -->
 
 ## **8.2.12**
 
@@ -201,3 +233,5 @@ import { IgxDataChartCoreModule } from "igniteui-webcomponents-charts/ES5/igx-da
 import { IgxGeographicMapComponent } from "igniteui-webcomponents-maps/ES5/igx-geographic-map-component";
 import { IgxGeographicMapModule } from "igniteui-webcomponents-maps/ES5/igx-geographic-map-module";
 ```
+
+<!-- end: Angular, React, WebComponents -->
