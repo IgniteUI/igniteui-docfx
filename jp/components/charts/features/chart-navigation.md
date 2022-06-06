@@ -53,7 +53,7 @@ Angular データ チャートのナビゲーションは、タッチ、マウ�
 
 ## スクロールバーを使用したチャート ナビゲーション
 
-チャートは、`VerticalViewScrollbarMode` プロパティと `HorizontalViewScrollbarMode` プロパティを有効にすることでスクロールできます。 
+チャートは、[`verticalViewScrollbarMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriesviewercomponent.html#verticalviewscrollbarmode) プロパティと [`horizontalViewScrollbarMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriesviewercomponent.html#horizontalviewscrollbarmode) プロパティを有効にすることでスクロールできます。 
 
 これらは、次のオプションに構成できます:
 
