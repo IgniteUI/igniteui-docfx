@@ -2,6 +2,7 @@
 title: Angular Chart Trendlines | Data Visualization | Infragistics
 _description: Infragistics' Angular Chart Trendlines
 _keywords: Angular Charts, Trendlines, Infragistics
+_language: kr
 mentionedTypes: ["FinancialChart", "CategoryChart", "XamDataChart", "TrendLineType"]
 ---
 
