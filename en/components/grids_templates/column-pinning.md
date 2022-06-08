@@ -1,28 +1,28 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid Column Pinning | Lock Column | Ignite UI for Angular | Infragistics
-_description: Start to use the Pinning feature of the Ignite UI for Angular Material table in order to lock column or change column order with rich and easy to use API
+title: Angular Grid Column Pinning - Ignite UI for Angular
+_description: Want to use the Pinning feature of the Ignite UI for Angular when you develop your next app? Easily lock column or change column order with rich API.
 _keywords: lock column, ignite ui for angular, infragistics 
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid Column Pinning | Lock Column | Ignite UI for Angular | Infragistics
-_description: Start to use the Pinning feature of the Ignite UI for Angular Material table in order to lock column or change column order with rich and easy to use API
+title: Angular Tree Grid Column Pinning - Ignite UI for Angulars
+_description: Want to use the Pinning feature of the Ignite UI for Angular when you develop your next app? Easily lock column or change column order with rich API.
 _keywords: lock column, ignite ui for angular, infragistics 
 _canonicalLink: grid/column-pinning
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchical Grid Column Pinning | Lock Column | Ignite UI for Angular | Infragistics
-_description: Start to use the Pinning feature of the Ignite UI for Angular Material table in order to lock column or change column order with rich and easy to use API
+title: Angular Hierarchical Grid Column Pinning - Ignite UI for Angular
+_description: Want to use the Pinning feature of the Ignite UI for Angular when you develop your next app? Easily lock column or change column order with rich API.
 _keywords: lock column, ignite ui for angular, infragistics 
 _canonicalLink: grid/column-pinning
 ---
 }
 
-# @@igComponent Column Pinning 
+# Angular @@igComponent Column Pinning 
 A column or multiple columns can be pinned to the left or right side of the Angular UI Grid. **Column Pinning** in Ignite UI for Angular allows the end users to lock column in a particular column order, this will allow them to see it while horizontally scrolling the @@igComponent. The Material UI Grid has a built-in column pinning UI, which can be used through the @@igComponent's toolbar to change the pin state of the columns. In addition, you can define a custom UI and change the pin state of the columns via the Column Pinning API.
 
 ## Angular @@igComponent Column Pinning  Example

@@ -1,29 +1,29 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid 行のピン固定 | 行のロック | Ignite UI for Angular | インフラジスティックス
-_description: Ignite UI for Angular Material テーブルのピン留め機能を使用して豊富で使いやすい API で行をロックできます。
+title: Row Pinning in Angular Data Grid - Ignite UI for Angular
+_description: Use the Angular Row pinning feature to lock rows with a rich and easy to use API. Let users pin rows in a particular order or duplicate them in a special area.
 _keywords: lock row, ignite ui for angular, infragistics, 行のロック, インフラジスティックス
 _language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid 行のピン固定 | 行のロック | Ignite UI for Angular | インフラジスティックス
-_description: Ignite UI for Angular Material テーブルのピン留め機能を使用して豊富で使いやすい API で行をロックできます。
+title: Row Pinning in Angular Tree Grid - Ignite UI for Angular
+_description: Use the Angular Row pinning feature to lock rows with a rich and easy to use API. Let users pin rows in a particular order or duplicate them in a special area.
 _keywords: lock row, ignite ui for angular, infragistics, 行のロック, インフラジスティックス
 _language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchical Grid 行のピン固定 | 行のロック | Ignite UI for Angular | インフラジスティックス
-_description: Ignite UI for Angular Material テーブルのピン留め機能を使用して豊富で使いやすい API で行をロックできます。
+title: Row Pinning in Angular Hierarchical Grid - Ignite UI for Angular
+_description: Use the Angular Row pinning feature to lock rows with a rich and easy to use API. Let users pin rows in a particular order or duplicate them in a special area.
 _keywords: lock row, ignite ui for angular, infragistics, 行のロック, インフラジスティックス
 _language: ja
 ---
 }
 
-## @@igComponent 行ピン固定
+# Angular @@igComponent 行ピン固定
 単一または複数の行を Angular UI グリッドの上側または下側にピン固定できます。Ignite UI for Angular の**行ピン固定**を使用すると、エンドユーザーは特定の順序で行をピン固定し、@@igComponent を垂直にスクロールしても常に表示される特別な領域に行を複製できます。Material UI Grid には組み込みの行ピン固定 UI が含まれており、@@igComponent のコンテキストで `igxActionStrip` コンポーネントを初期化することで有効になります。その他、カスタム UI を定義し、行のピン固定 API を介して行のピン固定状態を変更できます。
 
 ## Angular @@igComponent 行ピン固定の例

@@ -1,21 +1,21 @@
 @@if(igxName==='IgxGrid') {
 ---
-title: Angular Grid Toolbar | Material Table | Ignite UI for Angular | infragistics 
-_description: Understand how to use the Ignite UI for Angular Toolbar for essential UI operations. The Material UI table toolbar hosts different UI controls related to different features.
+title: Angular Grid Toolbar - Ignite UI for Angular 
+_description: Use Angular Data Grid Toolbar for essential UI operations. Hosts different UI controls for the Grid’s features - column hiding, pinning, excel exporting, etc.
 _keywords: angular toolbar, igniteui for angular, infragistics
 ---
 }
 
 @@if(igxName!=='IgxGrid') {
 ---
-title: Angular Grid Toolbar | Material Table | Ignite UI for Angular | infragistics 
-_description: Understand how to use the Ignite UI for Angular Toolbar for essential UI operations. The Material UI table toolbar hosts different UI controls related to different features.
+title: Angular Grid Toolbar - Ignite UI for Angular 
+_description: Use Angular @@igComponent Toolbar for essential UI operations. Hosts different UI controls for the Grid’s features - column hiding, pinning, excel exporting, etc.
 _keywords: angular toolbar, igniteui for angular, infragistics
 _canonicalLink: grid/toolbar
 ---
 }
 
-# @@igComponent Toolbar container for UI operations
+# Angular @@igComponent Toolbar
 
 The @@igComponent in Ignite UI for Angular provides an [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) which is essentially a container for **UI** operations. The Angular toolbar is located at the top of the Angular component, i.e the @@igComponent and it matches its horizontal size. The toolbar container can host predefined UI controls for the following @@igComponent's features:
 

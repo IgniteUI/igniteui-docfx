@@ -1,29 +1,29 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid 複数セル選択 | Ignite UI for Angular | インフラジスティックス
-_description: さまざまなイベント、豊富な API や簡単なマウス操作を使用して、Ignite UI Angular マテリアル テーブルのセルデータの複数選択を実装する方法を紹介します。
+title: Angular Grid Cell Selection - Ignite UI for Angular
+_description: Check how easy it is to use cell data selection using variety of events, rich API or mouse interactions. The Grid supports 3 modes for cell selection. Try it now!
 _keywords: データ選択, igniteui for angular, インフラジスティックス
 _language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid 複数セル選択 | Ignite UI for Angular | インフラジスティックス 
-_description: さまざまなイベント、豊富な API や簡単なマウス操作を使用して、Ignite UI Angular マテリアル テーブルのセルデータの複数選択を実装する方法を紹介します。
+title: Angular Tree Grid Cell Selection - Ignite UI for Angular
+_description: Check how easy it is to use cell data selection using variety of events, rich API or mouse interactions. The Grid supports 3 modes for cell selection. Try it now!
 _keywords: データ選択, igniteui for angular, infragistics
 _language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchical Grid 複数セル選択 | Ignite UI for Angular | インフラジスティックス 
-_description: さまざまなイベント、豊富な API や簡単なマウス操作を使用して、Ignite UI Angular マテリアル テーブルのセルデータの複数選択を実装する方法を紹介します。
+title: Angular Hierarchical Grid Cell Selection - Ignite UI for Angular 
+_description: Check how easy it is to use cell data selection using variety of events, rich API or mouse interactions. The Grid supports 3 modes for cell selection. Try it now!
 _keywords: データ選択, igniteui for angular, infragistics
 _language: ja
 ---
 }
 
-# Angular @@igComponent 選択
+# Angular Cell Selection
 選択機能により、@@igComponent ベースのマテリアル UI で豊富なデータ選択機能が有効になります。強力な API と使いやすいメソッドのおかげで、さまざまなイベントと単一の選択アクションを利用できます。@@igComponent は、セル選択の 3 つのモードをサポートしています。[`cellSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellselection) プロパティを変更することで、それらを簡単に切り替えることができます。セルの選択を無効にするか、*グリッド内の 1 つのセルのみを選択する*か、*グリッド内の複数のセルを選択する*ことができます。これはデフォルトのオプションとして提供されています。
 @@if (igxName === 'IgxHierarchicalGrid') { 階層グリッドでは、グリッド レベルでセル選択モードを指定できます。たとえば、親グリッドではマルチセル選択を有効にできますが、子グリッドではセル選択モードを単一または無効にすることができます。}これらの各オプションについて詳しく説明します。
 

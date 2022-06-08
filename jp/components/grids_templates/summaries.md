@@ -1,6 +1,6 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid 集計 | グループ フッター | Ignite UI for Angular | インフラジスティックス
+title: Angular Grid Summaries - Ignite UI for Angular
 _description: 列のグループ フッターに Angular のグリッド集計を設定し、Angular マテリアル UI の Ignite UI でカスタム Angular テンプレートを設定するオプションがあります。
 _keywords: Angular Grid 集計, igniteui for angular, infragistics
 _language: ja
@@ -8,7 +8,7 @@ _language: ja
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid 集計 | グループ フッター | Ignite UI for Angular | インフラジスティックス
+title: Angular Grid Summaries - Ignite UI for Angular
 _description: 列のグループ フッターに Angular のグリッド集計を設定し、Angular マテリアル UI の Ignite UI でカスタム Angular テンプレートを設定するオプションがあります。
 _keywords: gngular grid 集計, igniteui for angular, infragistics
 _language: ja
@@ -16,14 +16,14 @@ _language: ja
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchical Grid 集計 | グループ フッター | Ignite UI for Angular | インフラジスティックス
+title: Angular Grid Summaries - Ignite UI for Angular
 _description: 列のグループ フッターに Angular のグリッド集計を設定し、Angular マテリアル UI の Ignite UI でカスタム Angular テンプレートを設定するオプションがあります。
 _keywords: gngular grid 集計, igniteui for angular, infragistics
 _language: ja
 ---
 }
 
-# @@igComponent の集計概要
+# Angular @@igComponent Summaries
 
 Ignite UI for Angular の Angular UI グリッドには、グループ フッターとして列レベルで集計できる機能があります。Angular グリッド集計は、列内のデータ タイプに応じて、あるいは @@igComponent にカスタム Angular テンプレートを実装することによって、定義済みのデフォルト集計項目を使用して別のコンテナーの列情報を表示できます。
 

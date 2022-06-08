@@ -1,26 +1,26 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid Column Types | Data Types | Ignite UI for Angular | Infragistics
-_description: Start using the predefined column types of Angular UI Grid, set any of the number, currency, percent, boolean and date types for default handling of both cell and editing templates
+title: Column Data Types in Angular - Ignite UI for Angular
+_description: Handle cell and editing templates in Angular by choosing from several predefined column data types: number, string, date, boolean, currency and percent column.
 _keywords: column data type, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid Column Types | Data Types | Ignite UI for Angular | Infragistics
-_description: Start using the predefined column types of Angular UI Tree Grid, set any of the number, currency, percent, boolean and date types for default handling of both cell and editing templates
+title: Column Data Types in Angular - Ignite UI for Angular
+_description: Handle cell and editing templates in Angular by choosing from several predefined column data types: number, string, date, boolean, currency and percent column.
 _keywords: column data type, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchical Grid Column Types | Data Types | Ignite UI for Angular | Infragistics
-_description: Start using the predefined column types of Angular UI Hierarchical Grid, set any of the number, currency, percent, boolean and date types for default handling of both cell and editing templates
+title: Column Data Types in Angular - Ignite UI for Angular
+_description: SHandle cell and editing templates in Angular by choosing from several predefined column data types: number, string, date, boolean, currency and percent column.
 _keywords: column data type, ignite ui for angular, infragistics
 ---
 }
 
-# @@igComponent Column Types
+# Angular @@igComponent Column Types
 
 Ignite UI for Angular @@igComponent provides a default handling of *number*, *string*, *date*, *boolean*, *currency* and *percent* column data types, based on which the appearance of the default and editing templates will be present.
 

@@ -1,11 +1,11 @@
 ---
-title: Grid - 複数行レイアウト - ネイティブ Angular | Ignite UI for Angular | Infragistics
-_description: 複数行レイアウトでは、列をより柔軟な方法で配置およびサイズ変更できます。各列のレイアウトは、列フィールドで構成されるすべてのグリッド レイアウトを表しています。	
+title: Angular Grid Multi-row Layout - Ignite UI for Angular
+_description: Position and size columns in a more powerful way, using the multi-row layout functionality in the Ignite UI for Angular Data Grid. Check out examples and demos!	
 _keywords: angular 複数行レイアウト, マテリアル行レイアウト, ignite ui for angular
 _language: ja	
 ---
 
-# 複数行レイアウト
+# Angular 複数行レイアウト
 
 複数行レイアウトは、`igxGridComponent` のレンダリング機能を拡張します。この機能により、単一のデータレコードを複数の表示行に分割することができます。	
 

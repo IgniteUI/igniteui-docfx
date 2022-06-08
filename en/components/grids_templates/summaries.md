@@ -1,13 +1,13 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid Summaries| Group Footer | Ignite UI for Angular | Infragistics
+title: Angular Grid Summaries - Ignite UI for Angular
 _description: Configure Angular grid summaries in the group footer of the column and use the option to set custom angular template in the Ignite UI for Angular Material table
 _keywords: angular grid summaries, igniteui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid Summaries| Group Footer | Ignite UI for Angular | Infragistics
+title: Angular Grid Summaries - Ignite UI for Angular
 _description: Configure Аngular grid summaries in the group footer of the column and use the option to set custom angular template in the Ignite UI for Angular Material table
 _keywords: angular grid summaries, ignite ui for angular, infragistics
 _canonicalLink: grid/summaries
@@ -15,14 +15,14 @@ _canonicalLink: grid/summaries
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchical Grid Summaries| Group Footer | Ignite UI for Angular | Infragistics
+title: Angular Grid Summaries - Ignite UI for Angular
 _description: Configure Аngular grid summaries in the group footer of the column and use the option to set custom angular template in the Ignite UI for Angular Material table
 _keywords: angular grid summaries, ignite ui for angular, infragistics
 _canonicalLink: grid/summaries
 ---
 }
 
-# @@igComponent Summaries Overview
+# Angular @@igComponent Summaries
 
 The Angular UI grid in Ignite UI for Angular has a **summaries** feature that functions on a per-column level as group footer. Angular grid summaries is powerful feature which enables the user to see column information in a separate container with a predefined set of default summary items, depending on the type of data within the column or by implementing a custom angular template in the @@igComponent.
 

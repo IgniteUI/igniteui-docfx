@@ -1,6 +1,6 @@
 ---
 title: Angular Data Grid | 高速な Angular テーブルを構築する | インフラジスティックス
-_description: Ignite UI for Angular を使用して、超高速でレスポンシブな Angular データ グリッドとテーブルを作成します。 編集、フィルタリング、データ バインディングなどをサポートします。 30 日間の無料トライアル。
+_description: Create super fast, responsive Angular data grids and tables with Ignite UI for Angular. Supports  editing, filtering, data binding and many more. Try it now!
 _keywords: angular データ グリッド, angular マテリアル テーブル, ignite ui for angular
 _language: ja
 ---

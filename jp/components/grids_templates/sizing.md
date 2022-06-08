@@ -1,6 +1,6 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid サイズ変更 | Ignite UI for Angular | インフラジスティックス 
+title: Angular Grid Sizing - Ignite UI for Angular
 _description: Angular グリッドのサイズ設定がどのように機能するかを理解し、ユーザーが遭遇するさまざまな状況に対応するために幅と高さを使用する方法を学びます。
 _keywords: angular grid sizing, igniteui for angular, infragistics, グリッド, サイズ変更,
 _language: ja
@@ -8,7 +8,7 @@ _language: ja
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid サイズ変更 | Ignite UI for Angular | インフラジスティックス 
+title: Angular Tree Grid Sizing - Ignite UI for Angular 
 _description: Angular グリッドのサイズ設定がどのように機能するかを理解し、ユーザーが遭遇するさまざまな状況に対応するために幅と高さを使用する方法を学びます。
 _keywords: angular grid sizing, igniteui for angular, infragistics, グリッド, サイズ変更,
 _language: ja
@@ -16,14 +16,14 @@ _language: ja
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchical Grid サイズ変更 | Ignite UI for Angular | インフラジスティックス 
+title: Angular Hierarchical Grid Sizing - Ignite UI for Angular 
 _description: Angular グリッドのサイズ設定がどのように機能するかを理解し、ユーザーが遭遇するさまざまな状況に対応するために幅と高さを使用する方法を学びます。
 _keywords: angular grid sizing, igniteui for angular, infragistics, グリッド, サイズ変更,
 _language: ja
 ---
 }
 
-# グリッド サイズ変更の概要
+# Angular Grid Sizing
 
 [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) はサイズ変更する方法が多数あり、ユーザーのさまざまな状況に対応できます。方法は簡単なものから複雑なものまでさまざまです。それぞれを取り上げて、より詳しく説明します。パーセンテージを使用する場合など、いくつかの違いがあるため、`width` と `height` は別々に設定します。
 
