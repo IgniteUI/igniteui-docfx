@@ -1,10 +1,10 @@
 ---
-title: Angular 選択に基づいたデータ集計 | 選択 | Ignite UI for Angular | インフラジスティックス
-_description: 機能豊かな API を使用して Ignite Angular Material テーブルでグリッド内の選択したデータを集計する方法。また、グリッドの仮想化データでコンテンツの即時集計も可能。
+title: Angular Grid Selection-Based Data Aggregation- Ignite UI for Angular
+_description: Learn how to aggregate selected data in a grid with Ignite UI. Get instant content aggregations in the virtualized data and rich API for your next project.
 _keywords: データ集計, 選択, ignite ui for angular, インフラジスティックス
 ---
 
-# 選択に基づいた集計
+# Angular Grid Selection-Based Data Aggregation
 
 以下のサンプルでは、グリッドのフッターで選択した値に基づいて、カスタム集計関数と共に集計を表示する際の複数選択の動作を確認できます。
 

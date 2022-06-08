@@ -1,22 +1,22 @@
 @@if(igxName==='IgxGrid'){
 ---
-title: Angular Grid 行編集 | UI Grid | Ignite UI for Angular | インフラジスティックス
-_description: Ignite UI for Angular を使用して行内データ操作を構成する方法を学びます。直感的なグリッド行編集と CRUD 機能は、UI グリッドで利用できます。
+title: Editing Rows in Angular Data Grid - Ignite UI for Angular
+_description: Want to enable row editing in Angular Data Grid? Need a powerful API for CRUD operations? Try our Ignite UI for Angular Data Grid rows editing component!
 _keywords: row editing, igniteui for angular, インフラジスティックス・ジャパン株式会社
 _language: ja
 ---
 }
 @@if(igxName!=='IgxGrid'){
 ---
-title: Angular Grid 行編集 | UI Grid | Ignite UI for Angular | インフラジスティックス
-_description: Ignite UI for Angular を使用して行内データ操作を構成する方法を学びます。直感的なグリッド行編集と CRUD 機能は、UI グリッドで利用できます。
+title: Editing Rows in Angular @@igComponent - Ignite UI for Angular
+_description: Want to enable row editing in Angular @@igComponent? Need a powerful API for CRUD operations? Try our Ignite UI for Angular Data Grid rows editing component!
 _keywords: row editing, igniteui for angular, インフラジスティックス・ジャパン株式会社
 _language: ja
 _canonicalLink: grid/row-editing
 ---
 }
 
-# @@igComponent 行編集
+# Angular @@igComponent 行編集
 
 @@igComponent コンポーネントは、Angular CRUD 操作のためのデータ操作と強力な API を提供します。行をクリックして **Enter キー**を押すか、変更する行をダブルクリックします。 
 

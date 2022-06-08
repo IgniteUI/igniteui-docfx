@@ -1,11 +1,11 @@
 ---
-title: Excel からの貼り付け | 選択したデータのエクスポート| Ignite UI for Angular | インフラジスティックス 
+title: Angular Excel Like Grid - Paste Form Excel - Infragistics 
 _description: API を使用して最小限のコードで Excel からのデータ貼り付けや選択したグリッド データを簡単にエクスポートできます。
 _keywords: export selected, igniteui for angular, infragistics
 _language: ja
 ---
 
-# Excel からのグリッドの貼り付け
+# Angular Grid Paste from Excel
 
 Ignite UI for Angular [`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) は、クリップボードにコピーした Excel データを読み込むことができます。このトピックでは、カスタムコードを使用して実装する方法について説明します。
 

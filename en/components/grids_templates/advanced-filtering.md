@@ -1,13 +1,13 @@
 @@if(igxName === 'IgxGrid'){
 ---
-title: Angular Grid | Advanced Filtering | Infragistics
+title: Advanced Filtering in Angular Data Grid - Ignite UI for Angular
 _description: Learn how to configure advanced filter of data with the Angular Material table. The grid advanced filtering is more convenient and engaging than ever.
 _keywords: advanced filter, igniteui for angular, infragistics
 ---
 }
 @@if(igxName !== 'IgxGrid'){
 ---
-title: Angular Grid | Advanced Filtering | Infragistics
+title: Advanced Filtering in Angular Data Grid - Ignite UI for Angular
 _description: Learn how to configure advanced filter of data with the Angular Material table. The grid advanced filtering is more convenient and engaging than ever.
 _keywords: advanced filter, igniteui for angular, infragistics
 _canonicalLink: grid/advanced-filtering
@@ -15,7 +15,7 @@ _canonicalLink: grid/advanced-filtering
 }
 
 
-# @@igComponent Advanced Filtering
+# Angular @@igComponent Advanced Filtering
 
 The Advanced filtering provides a dialog which allows the creation of groups with filtering conditions across all columns for any Angular Material table like the @@igComponent.
 

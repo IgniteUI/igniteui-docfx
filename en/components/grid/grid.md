@@ -1,6 +1,6 @@
 ---
 title: Angular Data Grid | Build Fast Angular Tables | Infragistics
-_description: Create super fast, responsive Angular data grids and tables with Ignite UI for Angular. Supports  editing, filtering, data binding and many more. 30 days free trial
+_description: Create super fast, responsive Angular data grids and tables with Ignite UI for Angular. Supports  editing, filtering, data binding and many more. Try it now!
 _keywords: angular data grid, angular material table, ignite ui for angular
 ---
 

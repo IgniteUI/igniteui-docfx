@@ -1,23 +1,23 @@
 ---
-title: Angular Grid Row Actions | Ignite UI for Angular | インフラジスティックス
-_description: 行コンポーネントを実現するために Grid コンポーネントで Row Actions を使用する方法を紹介します。
+title:  Row actions in Angular Data Grid - Ignite UI for Angular 
+_description: The grid component in Ignite UI for Angular provides the ability to use ActionStrip and utilize CRUD for row/cell components and row pinning.
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular ActionStrip コンポーネント, Angular ActionStrip ディレクティブ, Angular ActionStrip コントロール
 _language: ja
 ---
 @@if (igxName === 'IgxGrid') {
-# Grid Row Actions
+# Row Actions in Angular Data Grid
 
 Ignite UI for Angular のグリッド コンポーネントは、[ActionStrip](../action-strip.md) を使用し、行/セルコンポーネントおよび行のピン固定に CRUD を使用する機能を提供します。
 デフォルトで 2 つのグリッド アクションが提供されます。アクション ストリップ コンポーネントは、これらの操作用に事前定義された UI コントロールをホストできます。
 }
 @@if (igxName === 'IgxTreeGrid') {
-# Tree Grid Row Actions
+# Row Actions in Angular Tree Grid
 
 Ignite UI for Angular のツリー グリッド コンポーネントは、[ActionStrip](../action-strip.md) を使用し、行/セルコンポーネントおよび行のピン固定に CRUD を使用する機能を提供します。
 デフォルトで 2 つのグリッド アクションが提供されます。アクション ストリップ コンポーネントは、これらの操作用に事前定義された UI コントロールをホストできます。
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-# Hierarchical Grid Row Actions
+# Row Actions in Angular Hierarchical Grid
 
 Ignite UI for Angular の階層グリッド コンポーネントは、[ActionStrip](../action-strip.md) を使用し、行/セルコンポーネントおよび行のピン固定に CRUD を使用する機能を提供します。
 デフォルトで 2 つのグリッド アクションが提供されます。アクション ストリップ コンポーネントは、これらの操作用に事前定義された UI コントロールをホストできます。

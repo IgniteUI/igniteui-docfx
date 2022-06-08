@@ -1,29 +1,29 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid 列サイズ変更 | Ignite UI for Angular | インフラジスティックス
-_description: Angular Grid グリッド列のサイズ変更は Angular ドラッグ サイズ変更に基づいて、グリッド列の幅を簡単に変更できます。Angular ドラッグ サイズ変更が大変使いやすくなりました。
+title: Angular Grid Column Resizing - Ignite UI for Angular
+_description: Start using Angular Grid Column Resizing in order to change the grid column width in an instant. Angular drag resizing has never been so easy. Try for free!
 _keywords: grid column resizing, igniteui for angular, infragistics
 _language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid 列サイズ変更 | Ignite UI for Angular | インフラジスティックス
-_description: Angular Tree Grid グリッド列のサイズ変更は Angular ドラッグ サイズ変更に基づいて、グリッド列の幅を簡単に変更できます。Angular ドラッグ サイズ変更が大変使いやすくなりました。
+title: Angular Tree Grid Column Resizing - Ignite UI for Angular
+_description: Start using Angular Tree Grid Column Resizing in order to change the grid column width in an instant. Angular drag resizing has never been so easy. Try for free!
 _keywords: grid column resizing, igniteui for angular, infragistics
 _language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchical Grid 列サイズ変更 | Ignite UI for Angular | インフラジスティックス
-_description: Angular Hierarchical Grid グリッド列のサイズ変更は Angular ドラッグ サイズ変更に基づいて、グリッド列の幅を簡単に変更できます。Angular ドラッグ サイズ変更が大変使いやすくなりました。
+title: Angular Hierarchical Grid Column Resizing - Ignite UI for Angular
+_description: Start using Angular Hierarchical Grid Column Resizing in order to change the grid column width in an instant. Angular drag resizing has never been so easy. Try for free!
 _keywords: grid column resizing, igniteui for angular, infragistics
 _language: ja
 ---
 }
 
-# @@igComponent 列サイズ変更
+# Angular @@igComponent 列サイズ変更
 
 グリッド列のサイズ変更遅延では、Angular ドラッグ操作の実行中にサイズ変更インジケーターが一時的に表示されます。ドラッグ操作が完了すると、新しいグリッド列幅が適用されます。
 

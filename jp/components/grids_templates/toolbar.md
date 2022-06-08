@@ -1,7 +1,7 @@
 @@if(igxName==='IgxGrid') {
 ---
-title: Angular Grid ツール バー | マテリアル テーブル | Ignite UI for Angular | インフラジスティックス 
-_description: 重要な UI 操作のための Angular Toolbar 用の Ignite UI を使用方法をご紹介します。マテリアル UI テーブル ツールバーは、さまざまな機能に関連するさまざまな UI コントロールをホストします。
+title: Angular Grid Toolbar - Ignite UI for Angular 
+_description: Use Angular Data Grid Toolbar for essential UI operations. Hosts different UI controls for the Grid’s features - column hiding, pinning, excel exporting, etc.
 _keywords: Angular ツール バー, igniteui for angular, インフラジスティックス
 _language: ja
 ---
@@ -9,15 +9,15 @@ _language: ja
 
 @@if(igxName!=='IgxGrid') {
 ---
-title: Angular Grid ツール バー | マテリアル テーブル | Ignite UI for Angular | インフラジスティックス 
-_description: 重要な UI 操作のための Angular Toolbar 用の Ignite UI を使用方法をご紹介します。マテリアル UI テーブル ツールバーは、さまざまな機能に関連するさまざまな UI コントロールをホストします。
+title: Angular Grid Toolbar - Ignite UI for Angular 
+_description: Use Angular @@igComponent Toolbar for essential UI operations. Hosts different UI controls for the Grid’s features - column hiding, pinning, excel exporting, etc.
 _keywords: Angular ツール バー, igniteui for angular, インフラジスティックス
 _language: ja
 _canonicalLink: grid/toolbar
 ---
 }
 
-# UI 操作のための @@igComponent ツールバー コンテナー
+# Angular @@igComponent Toolbar
 
 Ignite UI for Angular の @@igComponent は、UI 操作のコンテナーとなる [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) 機能をサポートします。Angular ツールバーは Angular コンポーネントの一番上、つまり @@igComponent にあり、水平方向のサイズと一致します。ツールバー コンテナーは、次の @@igComponent の機能、またはその他のカスタム コンテンツ用に事前定義された UI コントロールをホストできます:
 

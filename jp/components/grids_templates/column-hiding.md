@@ -1,29 +1,29 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid 列非表示 | Ignite UI for Angular | インフラジスティックス
-_description: ユーザーが Ignite Material UI テーブルの UI で列の表示状態を変更できるようにする列非表示機能の使用方法。
+title: Column Hiding in Angular Data Grid - Ignite UI for Angular
+_description: Learn how to use the Column Hiding feature that allows users to change the visible state of the columns directly through the UI of the Ignite Material UI table.
 _keywords: column hiding, ignite ui for angular, infragistics, 列非表示
 _language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid 列非表示 | Ignite UI for Angular | インフラジスティックス
-_description: ユーザーが Ignite Material UI テーブルの UI で列の表示状態を変更できるようにする列非表示機能の使用方法。
+title: Column Hiding in Angular Tree Grid - Ignite UI for Angular
+_description: Learn how to use the Column Hiding feature that allows users to change the visible state of the columns directly through the UI of the Ignite Material UI table.
 _keywords: column hiding, ignite ui for angular, infragistics, 列非表示
 _language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchical Grid 列非表示 | Ignite UI for Angular | インフラジスティックス
-_description: ユーザーが Ignite Material UI テーブルの UI で列の表示状態を変更できるようにする列非表示機能の使用方法。
+title: Column Hiding in Angular Hierarchical Grid - Ignite UI for Angular
+_description: Learn how to use the Column Hiding feature that allows users to change the visible state of the columns directly through the UI of the Ignite Material UI table.
 _keywords: column hiding, ignite ui for angular, infragistics, 列非表示
 _language: ja
 ---
 }
 
-# @@igComponent の列非表示
+# Angular @@igComponent の列非表示
 
 Ignite UI for Angular @@igComponent は、[`IgxColumnHidingDirective`]({environment:angularApiUrl}/classes/igxcolumnhidingdirective.html) のある [`IgxColumnActionsComponent`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html) を提供し、ユーザーがユーザー インターフェイスを介して、または Angular コンポーネントを使用して列の非表示を実行できるようにします。Material UI Grid には組み込み列非表示 UI があり、これを @@igComponent のツールバーから使用して列の表示状態を変更できます。更に別のコンポーネントとして列非表示 UI を定義してページの必要な場所に配置できます。
 
