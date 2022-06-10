@@ -1,29 +1,29 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular 条件付きスタイル設定 | Ignite UI for Angular | インフラジスティックス 
-_description: 豊富な API でさまざまなマテリアル スタイリング ガイドラインを使用して、Material UI グリッドの条件付きスタイリング機能を使用してさまざまなスタイルの定義。
+title: Conditional Cell Styling in Angular Data Grid - Ignite UI for Angular
+_description: Let users identify different cells quickly. Define a variety of cell styles. Use the conditional cell styling in Angular Data grid to make cells stand out.
 _keywords: conditional styling, ignite ui for angular, infragistics
 _language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular 条件付きスタイル設定 | Ignite UI for Angular | インフラジスティックス 
-_description: 豊富な API でさまざまなマテリアル スタイリング ガイドラインを使用して、Material UI グリッドの条件付きスタイリング機能を使用してさまざまなスタイルの定義。
+title: Conditional Cell Styling in Angular Tree Grid - Ignite UI for Angular
+_description: Let users identify different cells quickly. Define a variety of cell styles. Use the conditional cell styling in Angular Data grid to make cells stand out.
 _keywords: conditional styling, ignite ui for angular, infragistics
 _language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular 条件付きスタイル設定 | Ignite UI for Angular | インフラジスティックス 
-_description: 豊富な API でさまざまなマテリアル スタイリング ガイドラインを使用して、Material UI グリッドの条件付きスタイリング機能を使用してさまざまなスタイルの定義。
+title: Conditional Cell Styling in Angular Hierarchical Grid - Ignite UI for Angular 
+_description: Let users identify different cells quickly. Define a variety of cell styles. Use the conditional cell styling in Angular Data grid to make cells stand out.
 _keywords: conditional styling, ignite ui for angular, infragistics
 _language: ja
 ---
 }
 
-# @@igComponent 条件付きスタイル設定
+# Angular @@igComponent 条件付きスタイル設定
 @@igxName コンポーネントでカスタム スタイルを提供する必要がある場合は、行レベルまたはセル レベルで行うことができます。
 
 ## @@igComponent 条件付き行のスタイル設定

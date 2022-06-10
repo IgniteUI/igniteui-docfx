@@ -1,23 +1,23 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid 行選択 | Ignite UI for Angular | インフラジスティックス 
-_description: Angular イベント、API、あるいはマウス操作によって、Angular Material の Ignite UI テーブル の行および複数セル データの選択が簡単に実行できます。
+title: Angular Grid Select Row - Ignite UI for Angular 
+_description: Enable row selection to improve UX and let users manage single or multiple rows. See how easy it is to configure Row data select with Ignite UI.
 _keywords: データ選択, igniteui for angular, インフラジスティックス
 _language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid 行選択| Ignite UI for Angular | インフラジスティックス 
-_description: Angular イベント、API、あるいはマウス操作によって、Angular Material の Ignite UI テーブル の行および複数セル データの選択が簡単に実行できます。
+title: Angular Grid Select Row - Ignite UI for Angular 
+_description: Enable row selection to improve UX and let users manage single or multiple rows. See how easy it is to configure Row data select with Ignite UI.
 _keywords: データ選択, igniteui for angular, インフラジスティックス
 _language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchical Grid 行選択 | Ignite UI for Angular | インフラジスティックス 
-_description: Angular イベント、API、あるいはマウス操作によって、Angular Material の Ignite UI テーブル の行および複数セル データの選択が簡単に実行できます。
+title: Angular Grid Select Row - Ignite UI for Angular 
+_description: Enable row selection to improve UX and let users manage single or multiple rows. See how easy it is to configure Row data select with Ignite UI.
 _keywords: データ選択, igniteui for angular, インフラジスティックス
 _language: ja
 ---

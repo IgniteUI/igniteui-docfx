@@ -1,13 +1,13 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Filter | Angular Filterable Data Grid | Infragistics
+title: Angular Grid Filter - Ignite UI for Angular
 _description: Start using angular filter to return specific data with Ignite UI for Angular. Check the advanced filtering options, including data-type Excel-style filtering.
 _keywords: angular filter, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Filter | Angular Filterable Data Tree Grid | Infragistics
+title: Angular Tree Grid Filter - Ignite UI for Angular
 _description: Start using angular filter to return specific data with Ignite UI for Angular. Check the advanced filtering options, including data-type Excel-style filtering.
 _keywords: angular filter, ignite ui for angular, infragistics
 _canonicalLink: grid/filtering
@@ -15,7 +15,7 @@ _canonicalLink: grid/filtering
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Filter | Angular Filterable Data Hierarchical Grid | Infragistics
+title: Angular Hierarchical Grid Filter - Ignite UI for Angular
 _description: Start using angular filter to return specific data with Ignite UI for Angular. Check the advanced filtering options, including data-type Excel-style filtering.
 _keywords: angular filter, ignite ui for angular, infragistics
 _canonicalLink: grid/filtering

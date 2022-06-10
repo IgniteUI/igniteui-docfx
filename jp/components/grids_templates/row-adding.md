@@ -1,7 +1,7 @@
 @@if(igxName==='IgxGrid') {
 ---
-title: Angular グリッド行追加 | UI グリッド | Ignite UI for Angular | インフラジスティックス
-_description: Ignite UI for Angular を使用して、定義済みの行追加機能の使用およびカスタマイズする方法を学びます。UI グリッドで、直感的なグリッド行の追加と CRUD 機能を利用できます。
+title: Adding Rows in Angular Data Grid - Ignite UI for Angular
+_description: Learn how to use and customize the built-in row adding functionality with Ignite UI for Angular. CRUD capabilities and Intuitive grid row adding. See examples!
 _keywords: row adding, 行追加, igniteui for angular, infragistics, インフラジスティックス
 _language: ja
 ---
@@ -9,15 +9,15 @@ _language: ja
 
 @@if(igxName!=='IgxGrid') {
 ---
-title: Angular グリッド行追加 | UI グリッド | Ignite UI for Angular | インフラジスティックス
-_description: Ignite UI for Angular を使用して、定義済みの行追加機能の使用およびカスタマイズする方法を学びます。UI グリッドで、直感的なグリッド行の追加と CRUD 機能を利用できます。
+title: Adding Rows in Angular @@igComponent - Ignite UI for Angular
+_description: Learn how to use and customize the built-in row adding functionality with Ignite UI for Angular. CRUD capabilities and Intuitive grid row adding. See examples!
 _keywords: row adding, 行追加, igniteui for angular, infragistics, インフラジスティックス
 _language: ja
 _canonicalLink: grid/row-adding
 ---
 }
 
-# @@igComponent 行追加
+# Adding Rows in Angular @@igComponent
 
 @@if (igxName !== 'IgxTreeGrid') {
 @@igComponent コンポーネントはインライン行追加や Angular CRUD 操作のための強力な API を通して便利なデータ操作方法を提供します。グリッドのテンプレートで編集アクションが有効になっている[アクション ストリップ](../action-strip.md)コンポーネントを追加し、行にホバーして提供されたボタンを使用するか、<kbd>ALT</kbd> + <kbd>+</kbd> を押して、行追加 UI を生成します。

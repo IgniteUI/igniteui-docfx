@@ -1,21 +1,21 @@
 @@if(igxName === 'IgxGrid'){
 ---
-title: Angular Grid | Excel スタイル フィルタリング | インフラジスティックス
-_description: Angular マテリアル テーブルを使用してデータの Excel のような Angular フィルターを構成する方法を学びます。グリッドの Excel フィルタリングは、これまで以上に便利で魅力的です。
+title: Excel Style Filtering in Angular Data Grid- Ignite UI for Angular
+_description: Learn how to configure Excel filtering in Angular Data Grid. You can enable/disable various options and customize the Excel style filter menu the way you want.
 _keywords: Excel のようなフィルター, igniteui for angular, インフラジスティックス
 _language: ja
 ---
 }
 @@if(igxName !== 'IgxGrid'){
 ---
-title: Angular Grid | Excel スタイル フィルタリング | インフラジスティックス
-_description: Angular マテリアル テーブルを使用してデータの Excel のような Angular フィルターを構成する方法を学びます。グリッドの Excel フィルタリングは、これまで以上に便利で魅力的です。
+title: Excel Style Filtering in Angular @@igComponent - Ignite UI for Angular
+_description: Learn how to configure Excel filtering in Angular @@igComponent. You can enable/disable various options and customize the Excel style filter menu the way you want.
 _keywords: Excel のようなフィルター, igniteui for angular, インフラジスティックス
 _language: ja
 ---
 }
 
-# @@igComponent Excel スタイル フィルタリング
+# Excel Filtering in Angular @@igComponent
 
 グリッド Excel フィルタリングは、@@igComponent などの Angular Material テーブルに対して Excel のようなフィルタリング UI を提供します。
 

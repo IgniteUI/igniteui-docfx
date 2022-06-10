@@ -1,29 +1,29 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: グリッド行のドラッグ | Angular グリッド & 図コンポーネント | インフラジスティックス
-_description: The Ignite UI for Angular Data Grid コントロールは、階層ビューやリストビューなどの需要の高い機能を備えた、最速でタッチレスポンス、データリッチな階層グリッドが実現できます。
+title: Row Dragging in Angular Data Grid - Ignite UI for Angular
+_description: Row dragging in Angular Data Grid is used to quickly rearrange rows by dragging them with the mouse. See how to configure row dragging in your project.
 _keywords: angular ドラッグ コンポーネント, マテリアル コンポーネント, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: ツリー グリッド行ドラッグ | Angular グリッド & 図コンポーネント | インフラジスティックス
-_description: Ignite UI for Angular Tree Grid コントロールは、タッチ レスポンシブ、データリッチなツリー データ グリッドで階層およびリスト ビューなどの機能があります。
+title: Row Dragging in Angular Tree Grid - Ignite UI for Angular
+_description: Row dragging in Angular Tree Grid is used to quickly rearrange rows by dragging them with the mouse. See how to configure row dragging in your project.
 _keywords: angular ドラッグ コンポーネント, マテリアル コンポーネント, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: 階層グリッドの行ドラッグ | Angular グリッド & 図コンポーネント | インフラジスティックス
-_description: Ignite UI for Angular Hierarchical Grid コントロールは、高速でタッチ レスポンシブが有効なデータ リッチなツリーグリッドです。
+title: Row Dragging in Angular Hierarchical Grid - Ignite UI for Angular
+_description: Row dragging in Angular Hierarchical Grid is used to quickly rearrange rows by dragging them with the mouse. See how to configure row dragging in your project.
 _keywords: angular ドラッグ コンポーネント, マテリアル コンポーネント, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
 }
 
-# @@igComponent 行ドラッグ
+# Row Dragging in Angular @@igComponent
 
 Ignite UI for Angular @@igComponent では、**RowDrag** がルート `@@igSelector` コンポーネントで初期化されて、[`rowDraggable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowdraggable) 入力で設定できます。行ドラッグを有効にすると、ユーザーは行ドラッグ ハンドルを使用して行のドラッグを開始できます。
 

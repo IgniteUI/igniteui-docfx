@@ -1,28 +1,28 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid Column Moving | Column Order | Ignite UI for Angular | infragistics
-_description: Set custom column order of the Ignite UI for Angular Material table by using the column drag feature of the Angular UI grid with the usage of mouse/touch gestures, or by using the Column Moving API.
+title: Column Reordering & Moving in Angular Data Grid - Infragistics
+_description: Set custom column order & enable columns reordering via drag/drop mouse or touch gestures, or by using the Angular Column Moving API. Try Ignite UI for Angular!
 _keywords: column order, igniteui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Grid Column Moving | Column Order | Ignite UI for Angular | infragistics
-_description: Set custom column order of the Ignite UI for Angular Material table by using the column drag feature of the Angular UI grid with the usage of mouse/touch gestures, or by using the Column Moving API.
+title: Column Reordering & Moving in Angular Tree Grid - Infragistics
+_description: Set custom column order & enable columns reordering via drag/drop mouse or touch gestures, or by using the Angular Column Moving API. Try Ignite UI for Angular!
 _keywords: column order, igniteui for angular, infragistics
 _canonicalLink: grid/column-moving
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Grid Column Moving | Column Order | Ignite UI for Angular | infragistics
-_description: Set custom column order of the Ignite UI for Angular Material table by using the column drag feature of the Angular UI grid with the usage of mouse/touch gestures, or by using the Column Moving API.
+title: Column Reordering & Moving in Angular Hierarchical Grid - Infragistics
+_description: Set custom column order & enable columns reordering via drag/drop mouse or touch gestures, or by using the Angular Column Moving API. Try Ignite UI for Angular!
 _keywords: column order, igniteui for angular, infragistics
 _canonicalLink: grid/column-moving
 ---
 }
 
-# @@igComponent Column Moving Overview
+# @@igComponent Column Reordering & Moving
 
 The @@igComponent component in Ignite UI for Angular provides the **Column Moving** feature to allow columns reordering via standard drag/drop mouse or touch gestures, or by using the Column Moving API. Column moving works both with pinned and unpinned columns and with Multi-column Headers. Moving a column into the pinned area pins the column and vice versa, moving a column outside of the pinned area unpins the column.
 

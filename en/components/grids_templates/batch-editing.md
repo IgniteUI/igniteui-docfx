@@ -1,10 +1,10 @@
 ---
-title: Angular @@igComponent Batch Editing | Angular CRUD | Ignite UI for Angular | Infragistics
-_description: Perform data manipulation without affecting the underlying data with @@igComponent Batch Editing and with Angular CRUD using Material UI table by Ignite UI for Angular
+title: Batch Editing and Transactions in Angular @@igComponent Grid - Infragistics
+_description: Perform data manipulation without affecting the underlying data with @@igComponent Batch Editing and Angular CRUD, using Angular Data Grid. See demos & examples!
 _keywords: angular crud, ignite ui for angular, infragistics
 ---
 
-# @@igComponent Batch Editing and Transactions
+# Angular @@igComponent Batch Editing and Transactions
 
 @@if (igxName === 'IgxGrid' || igxName === 'IgxHierarchicalGrid') {
 The Batch Editing feature of the @@igxName is based on the [`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html). Follow the [`Transaction Service class hierarchy`](../transaction-classes.md) topic to see an overview of the `igxTransactionService` and details how it is implemented.
