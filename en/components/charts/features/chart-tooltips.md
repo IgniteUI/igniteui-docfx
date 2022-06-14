@@ -28,6 +28,7 @@ The [`toolTipType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/do
 | Property Value                                                                                                                         | Description                                                                                        |
 | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
 | [`Default`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/tooltiptype.html#default)  Tooltip  | Display a tooltip for a single item when the pointer is positioned over it.                        |
+| [`Data`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/tooltiptype.html#data) Tooltip         | Display the data tooltips for all series in the chart.                                             |
 | [`Item`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/tooltiptype.html#item)  Tooltip        | Display a tooltip for each data item in the category that the pointer is positioned over.          |
 | [`Category`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/tooltiptype.html#category) Tooltip | Display a grouped tooltip for all data points in the category that the pointer is positioned over. |
 
