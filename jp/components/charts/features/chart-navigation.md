@@ -36,19 +36,42 @@ Ignite UI for Angular チャートを使用すると、マウス、キーボー�
 Angular データ チャートのナビゲーションは、タッチ、マウスまたはキーボードのいずれかを使用して発生します。以下の操作は、デフォルトで以下のタッチ、マウスまたはキーボード操作を使用して呼び出すことができます。
 
 -   **パン**: キーボードの矢印キーを使用するか、Shift キーを押したまま、マウスでクリックしてドラッグするか、タッチで指を押して移動します。
-    \-**ズームイン**: キーボードの PageUp キーを使用するか、マウスホイールを上に回転させるか、ピンチしてタッチでズームインします。
-    \-**ズームアウト**: キーボードの PageDown キーを使用するか、マウスホイールを下に回転させるか、ピンチしてタッチでズームアウトします。
+-   **ズームイン**: キーボードの PageUp キーを使用するか、マウスホイールを上に回転させるか、ピンチしてタッチでズームインします。
+-   **ズームアウト**: キーボードの PageDown キーを使用するか、マウスホイールを下に回転させるか、ピンチしてタッチでズームアウトします。
 -   **チャート プロット領域に合わせる**: キーボードのホームキーを使用します。これに対するマウスまたはタッチ操作はありません。
 -   **領域ズーム**: [`defaultInteraction`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriesviewercomponent.html#defaultinteraction) プロパティをデフォルトの `DragZoom` に設定して、プロット領域内でマウスをクリックしてドラッグします。
 
 ズーム操作とパン操作は、それぞれ [`dragModifier`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriesviewercomponent.html#dragmodifier) プロパティと [`panModifier`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriesviewercomponent.html#panmodifier) プロパティを設定し、修飾キーを使用して有効にすることもできます。これらのプロパティは以下の修飾キーに設定することができ、押すと対応する操作が実行されます。
 
--   Shift
--   Alt
--   Control
--   Windows キー
--   Apple キー
--   None
+| 修飾値       | 対応するキー           |
+| --------- | ---------------- |
+| `Shift`   | <kbd>Shift</kbd> |
+| `Control` | <kbd>Ctrl</kbd>  |
+| `Windows` | <kbd>Win</kbd>   |
+| `Apple`   | <kbd>Apple</kbd> |
+| `None`    | なし               |
+
+## スクロールバーを使用したチャート ナビゲーション
+
+チャートは、[`verticalViewScrollbarMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriesviewercomponent.html#verticalviewscrollbarmode) プロパティと [`horizontalViewScrollbarMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriesviewercomponent.html#horizontalviewscrollbarmode) プロパティを有効にすることでスクロールできます。 
+
+これらは、次のオプションに構成できます:
+
+-   `Persistent` - チャートがズームインされている限り、スクロールバーは常に表示されたままになり、完全にズームアウトされるとフェードアウトします。 
+-   `Fading` - スクロールバーは使用後に消え、マウスがその位置に近づくと再び表示されます。
+-   `FadeToLine` - ズームを使用していないときは、スクロールバーが細い線に縮小されます。
+-   `None` - 既定値で、スクロールバーは表示されません。
+
+次の例は、スクロールバーを有効にする方法を示しています。
+
+<code-view style="height: 600px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-scrollbars"
+           alt="Angular ナビゲーションの例"
+           github-src="charts/financial-chart/scrollbars">
+</code-view>
+
+<div class="divider--half"></div>
 
 ## コードによるチャート ナビゲーション
 
