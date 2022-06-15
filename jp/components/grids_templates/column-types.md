@@ -18,7 +18,7 @@ _language: ja
 ---
 title: Angular Hierarchical Grid 列タイプ | データ型 | Ignite UI for Angular | インフラジスティックス
 title: Angular の列データ型 - Ignite UI for Angular
-_description: Sいくつかの定義済みの列データ型 (number、string、date、boolean、currency、percent 列) から選択して Angular のセルおよび編集テンプレートを処理します。
+_description: いくつかの定義済みの列データ型 (number、string、date、boolean、currency、percent 列) から選択して Angular のセルおよび編集テンプレートを処理します。
 _keywords: 列データ型, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
