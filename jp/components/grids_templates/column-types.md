@@ -1,15 +1,15 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Column Data Types in Angular - Ignite UI for Angular
-_description: Handle cell and editing templates in Angular by choosing from several predefined column data types: number, string, date, boolean, currency and percent column.
+title: Angular の列データ型 - Ignite UI for Angular
+_description: いくつかの定義済みの列データ型 (number、string、date、boolean、currency、percent 列) から選択して Angular のセルおよび編集テンプレートを処理します。
 _keywords: 列データ型, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Column Data Types in Angular - Ignite UI for Angular
-_description: Handle cell and editing templates in Angular by choosing from several predefined column data types: number, string, date, boolean, currency and percent column.
+title: Angular の列データ型 - Ignite UI for Angular
+_description: いくつかの定義済みの列データ型 (number、string、date、boolean、currency、percent 列) から選択して Angular のセルおよび編集テンプレートを処理します。
 _keywords: 列データ型, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
@@ -17,8 +17,8 @@ _language: ja
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
 title: Angular Hierarchical Grid 列タイプ | データ型 | Ignite UI for Angular | インフラジスティックス
-title: Column Data Types in Angular - Ignite UI for Angular
-_description: SHandle cell and editing templates in Angular by choosing from several predefined column data types: number, string, date, boolean, currency and percent column.
+title: Angular の列データ型 - Ignite UI for Angular
+_description: Sいくつかの定義済みの列データ型 (number、string、date、boolean、currency、percent 列) から選択して Angular のセルおよび編集テンプレートを処理します。
 _keywords: 列データ型, ignite ui for angular, インフラジスティックス
 _language: ja
 ---

@@ -1,23 +1,23 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid Column Resizing - Ignite UI for Angular
-_description: Start using Angular Grid Column Resizing in order to change the grid column width in an instant. Angular drag resizing has never been so easy. Try for free!
+title: Angular Grid の列サイズ変更 - Ignite UI for Angular
+_description: Angular Grid の列サイズ変更を使用して、グリッド列の幅を瞬時に変更できます。Angular ドラッグ サイズ変更が大変使いやすくなりました。無料でお試しください。
 _keywords: grid column resizing, igniteui for angular, infragistics
 _language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid Column Resizing - Ignite UI for Angular
-_description: Start using Angular Tree Grid Column Resizing in order to change the grid column width in an instant. Angular drag resizing has never been so easy. Try for free!
+title: Angular Tree Grid の列サイズ変更 - Ignite UI for Angular
+_description: Angular Tree Grid の列サイズ変更を使用して、グリッド列の幅を瞬時に変更できます。Angular ドラッグ サイズ変更が大変使いやすくなりました。無料でお試しください。
 _keywords: grid column resizing, igniteui for angular, infragistics
 _language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchical Grid Column Resizing - Ignite UI for Angular
-_description: Start using Angular Hierarchical Grid Column Resizing in order to change the grid column width in an instant. Angular drag resizing has never been so easy. Try for free!
+title: Angular Hierarchical Grid の列サイズ変更 - Ignite UI for Angular
+_description: Angular Hierarchical Grid の列サイズ変更を使用して、グリッド列の幅を瞬時に変更できます。Angular ドラッグ サイズ変更が大変使いやすくなりました。無料でお試しください。
 _keywords: grid column resizing, igniteui for angular, infragistics
 _language: ja
 ---
@@ -122,7 +122,7 @@ public onResize(event) {
 
 ## ピクセル/パーセンテージで列のサイズを変更する
 
-ユーザーのシナリオに応じて、列の幅はピクセル、パーセンテージ、または両方の組み合わせで定義できます。 これらのシナリオはすべて、列のサイズ変更機能でサポートされています。デフォルトでは、列に幅が設定されていない場合、ピクセルで設定された幅の使用可能なスペースに収まります。
+ユーザーのシナリオに応じて、列の幅はピクセル、パーセンテージ、または両方の組み合わせで定義できます。これらのシナリオはすべて、列のサイズ変更機能でサポートされています。デフォルトでは、列に幅が設定されていない場合、ピクセルで設定された幅の使用可能なスペースに収まります。
 
 つまり、次の構成が可能です。
 
@@ -165,7 +165,7 @@ public onResize(event) {
 
 **パーセンテージ**
 
-幅がパーセンテージで設定された列のサイズを変更する場合、ピクセル単位のマウスの水平移動量は、ほぼグリッド幅に対するパーセンテージの量に変換されます。 列はレスポンシブな状態のまま、その後のグリッドのサイズ変更は列にも反映されます。
+幅がパーセンテージで設定された列のサイズを変更する場合、ピクセル単位のマウスの水平移動量は、ほぼグリッド幅に対するパーセンテージの量に変換されます。列はレスポンシブな状態のまま、その後のグリッドのサイズ変更は列にも反映されます。
 
 ## 列のサイズ変更の制限
 
@@ -184,7 +184,7 @@ public onResize(event) {
 ```
 }
 
-列幅の最小値と最大値のタイプ (ピクセルまたはパーセンテージ) を混在させることができます。 最小値と最大値がパーセンテージに設定されている場合、それぞれの列サイズはピクセルと同様の正確なサイズに制限されます。
+列幅の最小値と最大値のタイプ (ピクセルまたはパーセンテージ) を混在させることができます。最小値と最大値がパーセンテージに設定されている場合、それぞれの列サイズはピクセルと同様の正確なサイズに制限されます。
 
 つまり、次の構成が可能です。
 

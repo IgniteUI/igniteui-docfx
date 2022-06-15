@@ -1,23 +1,23 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid Column Pinning - Ignite UI for Angular
-_description: Want to use the Pinning feature of the Ignite UI for Angular when you develop your next app? Easily lock column or change column order with rich API.
+title: Angular Grid の列ピン固定 - Ignite UI for Angular
+_description: アプリの開発時に Ignite UI for Angular のピン固定機能を使用して、豊富な API で簡単に列をロックまたは列の順序を変更できます。
 _keywords: lock column, ignite ui for angular, infragistics
 _language: ja 
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid Column Pinning - Ignite UI for Angulars
-_description: Want to use the Pinning feature of the Ignite UI for Angular when you develop your next app? Easily lock column or change column order with rich API.
+title: Angular Tree Grid の列ピン固定 - Ignite UI for Angular
+_description: アプリの開発時に Ignite UI for Angular のピン固定機能を使用して、豊富な API で簡単に列をロックまたは列の順序を変更できます。
 _keywords: lock column, ignite ui for angular, infragistics 
 _language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchical Grid Column Pinning - Ignite UI for Angular
-_description: Want to use the Pinning feature of the Ignite UI for Angular when you develop your next app? Easily lock column or change column order with rich API.
+title: Angular Hierarchical Grid の列ピン固定 - Ignite UI for Angular
+_description: アプリの開発時に Ignite UI for Angular のピン固定機能を使用して、豊富な API で簡単に列をロックまたは列の順序を変更できます。
 _keywords: lock column, ignite ui for angular, infragistics 
 _language: ja
 ---

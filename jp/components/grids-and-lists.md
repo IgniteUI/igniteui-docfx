@@ -474,7 +474,7 @@ Infragistics の Angular 製品の受賞歴のあるサポートにアクセス�
     <div class="faqs-accordion h4">Infragistics Ignite UI for Angular Data Grid の価格について教えてください。</div>
     <div class="divider--half"></div>
     <div class="faqs-accordion-panel">
-    Our Angular components are included as a part of our Ignite UI bundle. A single developer license starts at $1,295 USD for a one-year subscription, including one year of standard support and updates. We also offer discounts for multi-year licenses. Please refer to our <a class="no-external-icon" href="{environment:infragisticsBaseUrl}/how-to-buy/product-pricing">Pricing page</a> for more information on pricing. 
+    Angular コンポーネントは、Ignite UI バンドルの一部として含まれています。価格の詳細については、<a class="no-external-icon" href="{environment:infragisticsBaseUrl}/how-to-buy/product-pricing">価格ページ</a>を参照してください。 
     <div class="divider--half"></div>
     複数のプラットフォームでアプリケーションを開発する場合、WPF や Windows Forms などのデスクトップ プラットフォーム、Angular、Web コンポーネント、ASP.NET MVC、ASP.NET Core のすべての最新 Web ツールセットを含む完全なアプリ開発パッケージ Infragistics Ultimate を検討してください。
     <div class="divider--half"></div>

@@ -1,29 +1,29 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid State Persistence - Ignite UI for Angular
-_description: Easily save and restore the grid state, using our comprehensive Ignite UI toolset for Angular. Learn how to restore columns, explore usage, and see demos!
+title: Angular Grid の状態保持 - Ignite UI for Angular
+_description: 包括的な Ignite UI for Angular のツールセットを使用して、グリッドの状態を簡単に保存および復元できます。列の復元、使用方法、デモをご覧ください。
 _keywords: 状態保持, ignite ui for angular, infragistics, インフラジスティックス 
 _language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid State Persistence - Ignite UI for Angular
-_description: Easily save and restore the grid state, using our comprehensive Ignite UI toolset for Angular. Learn how to restore columns, explore usage, and see demos!
+title: Angular Tree Grid の状態保持 - Ignite UI for Angular
+_description: 包括的な Ignite UI for Angular のツールセットを使用して、グリッドの状態を簡単に保存および復元できます。列の復元、使用方法、デモをご覧ください。
 _keywords: 状態保持, ignite ui for angular, infragistics, インフラジスティックス 
 _language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchical Grid State Persistence - Ignite UI for Angular
-_description: Easily save and restore the grid state, using our comprehensive Ignite UI toolset for Angular. Learn how to restore columns, explore usage, and see demos!
+title: Angular Hierarchical Grid の状態保持 - Ignite UI for Angular
+_description: 包括的な Ignite UI for Angular のツールセットを使用して、グリッドの状態を簡単に保存および復元できます。列の復元、使用方法、デモをご覧ください。
 _keywords: 状態保持, ignite ui for angular, infragistics, インフラジスティックス 
 _language: ja
 ---
 }
 
-# Angular @@igComponent State Persistence
+# @@igComponent の状態保持
 
 igxGridState ディレクティブによって開発者がグリッドの状態を簡単に保存および復元できます。[`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) ディレクティブがグリッドに適用されると、[`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getstate) および [`setState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#setstate) メソッドが公開され、開発者はこれを使用して、あらゆるシナリオで状態の永続化を実現できます。
 

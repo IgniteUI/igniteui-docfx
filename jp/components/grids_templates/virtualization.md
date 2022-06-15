@@ -1,23 +1,23 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid Virtualization and Performance - Ignite UI for Angular
-_description: The Ignite UI for Angular Virtualization directive is the core mechanic behind the speed & performance of the grid when handling large data sets. Try for free!  
+title: Angular Grid の仮想化とパフォーマンス - Ignite UI for Angular
+_description: Ignite UI for Angular の仮想化ディレクティブは、大規模なデータセットを処理する際のグリッドのスピードとパフォーマンスの背後にあるコア メカニズムです。無料でお試しください。 
 _keywords: angular データ グリッド, グリッド パフォーマンス, テータ テーブル仮想化, ignite ui for angular
 _language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Grid Virtualization and Performance - Ignite UI for Angular
-_description: The Ignite UI for Angular Virtualization directive is the core mechanic behind the speed & performance of the grid when handling large data sets. Try for free!  
+title: Angular Grid の仮想化とパフォーマンス - Ignite UI for Angular
+_description: Ignite UI for Angular の仮想化ディレクティブは、大規模なデータセットを処理する際のグリッドのスピードとパフォーマンスの背後にあるコア メカニズムです。無料でお試しください。 
 _keywords: angular データ グリッド, グリッド パフォーマンス, テータ テーブル仮想化, ignite ui for angular
 _language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Grid Virtualization and Performance - Ignite UI for Angular
-_description: The Ignite UI for Angular Virtualization directive is the core mechanic behind the speed & performance of the grid when handling large data sets. Try for free!
+title: Angular Grid の仮想化とパフォーマンス - Ignite UI for Angular
+_description: Ignite UI for Angular の仮想化ディレクティブは、大規模なデータセットを処理する際のグリッドのスピードとパフォーマンスの背後にあるコア メカニズムです。無料でお試しください。
 _keywords: angular データ グリッド, グリッド パフォーマンス, テータ テーブル仮想化, ignite ui for angular
 _language: ja
 ---

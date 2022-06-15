@@ -1,23 +1,23 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Column Hiding in Angular Data Grid - Ignite UI for Angular
-_description: Learn how to use the Column Hiding feature that allows users to change the visible state of the columns directly through the UI of the Ignite Material UI table.
+title: Angular Data Grid の列非表示 - Ignite UI for Angular
+_description: ユーザーが Ignite Material UI テーブルの UI で列の表示状態を変更できるようにする列非表示機能の使用方法。
 _keywords: column hiding, ignite ui for angular, infragistics, 列非表示
 _language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Column Hiding in Angular Tree Grid - Ignite UI for Angular
-_description: Learn how to use the Column Hiding feature that allows users to change the visible state of the columns directly through the UI of the Ignite Material UI table.
+title: Angular Tree Grid の列非表示 - Ignite UI for Angular
+_description: ユーザーが Ignite Material UI テーブルの UI で列の表示状態を変更できるようにする列非表示機能の使用方法。
 _keywords: column hiding, ignite ui for angular, infragistics, 列非表示
 _language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Column Hiding in Angular Hierarchical Grid - Ignite UI for Angular
-_description: Learn how to use the Column Hiding feature that allows users to change the visible state of the columns directly through the UI of the Ignite Material UI table.
+title: Angular Hierarchical Grid の列非表示 - Ignite UI for Angular
+_description: ユーザーが Ignite Material UI テーブルの UI で列の表示状態を変更できるようにする列非表示機能の使用方法。
 _keywords: column hiding, ignite ui for angular, infragistics, 列非表示
 _language: ja
 ---
