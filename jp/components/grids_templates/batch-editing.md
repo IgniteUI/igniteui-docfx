@@ -1,6 +1,6 @@
 ---
-title: Batch Editing and Transactions in Angular @@igComponent Grid - Infragistics
-_description: Perform data manipulation without affecting the underlying data with Grid Batch Editing and Angular CRUD, using Angular @@igComponent Grid. See demos & examples!
+title: Angular @@igComponent Grid での一括編集とトランザクション - インフラジスティックス
+_description: Angular @@igComponent Grid を使用した Angular CRUD を使用して、基のデータに影響を与えずにデータを操作できます。デモと例をお試しください。
 _keywords: angular crud, ignite ui for angular, infragistics
 _language: ja
 ---

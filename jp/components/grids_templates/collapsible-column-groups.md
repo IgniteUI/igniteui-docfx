@@ -1,21 +1,21 @@
 @@if(igxName==='IgxGrid') {
 ---
-title: Collapsible Column Groups in Angular Data Grid - Infragistics
-_description: Take advantage of the capability to show\hide smaller and concise set of data with the use of collapsible column groups in our Angular Data Grid. Try it now!
+title: Angular Data Grid の縮小可能な列グループ - インフラジスティックス
+_description: Angular Data Grid の縮小可能な列グループを使用して、より小さく簡潔なデータのセットを表示/非表示にする機能を利用します。今すぐお試しください。
 _keywords: 列ヘッダーの縮小, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
 }
 @@if(igxName!=='IgxGrid') {
 ---
-title: Collapsible Column Groups in Angular @@igComponent - Infragistics
-_description: Take advantage of the capability to show\hide smaller and concise set of data with the use of collapsible column groups in our Angular @@igComponent. Try it now!
+title: Angular @@igComponent の縮小可能な列グループ - インフラジスティックス
+_description: Angular @@igComponent の縮小可能な列グループを使用して、より小さく簡潔なデータのセットを表示/非表示にする機能を利用します。今すぐお試しください。
 _keywords: 列ヘッダーの縮小, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
 }
 
-# Collapsible Column Groups in Angular Data Grid
+# Angular Data Grid の縮小可能な列グループ
 
 複数列ヘッダーを使用すると、複数レベルのネストされた列と列グループを使用できるため、各列グループを**縮小可能**としてマークできます。**縮小可能な複数列ヘッダー**では、縮小/展開が可能です。現在のヘッダーの下にネストされたヘッダーを表示および非表示にします。これにより、たとえば短縮/要約された情報を示すことができます。
 

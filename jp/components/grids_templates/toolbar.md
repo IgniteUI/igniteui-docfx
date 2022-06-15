@@ -1,7 +1,7 @@
 @@if(igxName==='IgxGrid') {
 ---
 title: Angular Grid Toolbar - Ignite UI for Angular 
-_description: Use Angular Data Grid Toolbar for essential UI operations. Hosts different UI controls for the Grid’s features - column hiding, pinning, excel exporting, etc.
+_description: 重要な UI 操作には Angular Data Grid Toolbar を使用します。列の非表示、ピン固定、Excel エクスポートなど、グリッドの機能にさまざまな UI コントロールをホストします。
 _keywords: Angular ツール バー, igniteui for angular, インフラジスティックス
 _language: ja
 ---
@@ -10,7 +10,7 @@ _language: ja
 @@if(igxName!=='IgxGrid') {
 ---
 title: Angular Grid Toolbar - Ignite UI for Angular 
-_description: Use Angular @@igComponent Toolbar for essential UI operations. Hosts different UI controls for the Grid’s features - column hiding, pinning, excel exporting, etc.
+_description: 重要な UI 操作には Angular @@igComponent Toolbar を使用します。列の非表示、ピン固定、Excel エクスポートなど、グリッドの機能にさまざまな UI コントロールをホストします。
 _keywords: Angular ツール バー, igniteui for angular, インフラジスティックス
 _language: ja
 _canonicalLink: grid/toolbar

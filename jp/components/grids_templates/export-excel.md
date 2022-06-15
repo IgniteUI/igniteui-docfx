@@ -1,23 +1,23 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid Export to Excel - Ignite UI for Angular
-_description: With Ignite UI Excel Exporter you can make client Excel functionality more convenient & simpler. This format allows features like filtering, sorting, etc.
+title: Angular Grid の Excel へのエクスポート - Ignite UI for Angular
+_description: Ignite UI Excel Exporter を使用すると、クライアント Excel の機能をより便利でシンプルにできます。この形式では、フィルタリングやソートなどの機能が使用できます。
 _keywords: データ エクスポート, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid Export to Excel - Ignite UI for Angular
-_description: With Ignite UI Excel Exporter you can make client Excel functionality more convenient & simpler. This format allows features like filtering, sorting, etc.
+title: Angular Tree Grid の Excel へのエクスポート - Ignite UI for Angular
+_description: Ignite UI Excel Exporter を使用すると、クライアント Excel の機能をより便利でシンプルにできます。この形式では、フィルタリングやソートなどの機能が使用できます。
 _keywords: データ エクスポート, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchical Grid Export to Excel - Ignite UI for Angular
-_description: With Ignite UI Excel Exporter you can make client Excel functionality more convenient & simpler. This format allows features like filtering, sorting, etc.
+title: Angular Hierarchical Grid の Excel へのエクスポート - Ignite UI for Angular
+_description: Ignite UI Excel Exporter を使用すると、クライアント Excel の機能をより便利でシンプルにできます。この形式では、フィルタリングやソートなどの機能が使用できます。
 _keywords: データ エクスポート, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
