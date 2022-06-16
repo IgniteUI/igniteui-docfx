@@ -1,15 +1,15 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid Clipboard Interactions - Ignite UI for Angular 
-_description: The Angular Data Grid Clipboard functionality provides fast, easy and customizable way to copy, paste and export data to Excel or other programs. Try it now!
+title: Angular Grid のクリップボードの操作 - Ignite UI for Angular 
+_description: Angular Data Grid のクリップボード機能は、データを Excel、その他のプログラムにコピー、貼り付け、エクスポートするための高速で簡単、カスタマイズ可能な方法を提供します。今すぐお試しください。
 _keywords: copy data, igniteui for angular, infragistics, データのコピー
 _language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular TreeGrid Clipboard Interactions - Ignite UI for Angular 
-_description: The Angular TreeGrid Clipboard functionality provides fast, easy and customizable way to copy, paste and export data to Excel or other programs. Try it now!。
+title: Angular Tree Grid クリップボードの操作 - Ignite UI for Angular 
+_description: Angular Tree Grid のクリップボード機能は、データを Excel、その他のプログラムにコピー、貼り付け、エクスポートするための高速で簡単、カスタマイズ可能な方法を提供します。今すぐお試しください。
 _keywords: copy data, igniteui for angular, infragistics, データのコピー
 _language: ja
 ---

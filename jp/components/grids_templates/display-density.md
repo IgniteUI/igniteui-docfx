@@ -1,23 +1,23 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title:  Angular Grid Display Density - Ignite UI for Angular
-_description: Learn how to apply display density capabilities to the Data grid component. You can use a set of compact view options in the Ignite UI for Angular.
+title:  Angular Grid の表示密度 - Ignite UI for Angular
+_description: Data Grid コンポーネントに表示密度機能を適用する方法を説明します。Ignite UI for Angular のコンパクト ビュー オプションのセットを使用できます。
 _keywords: material density, igniteui for angular, infragistics, マテリアル密度
 _language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title:  Angular Grid Display Density - Ignite UI for Angular
-_description: Learn how to apply display density capabilities to the Tree grid component. You can use a set of compact view options in the Ignite UI for Angular.。
+title:  Angular Grid の表示密度 - Ignite UI for Angular
+_description: Tree Grid コンポーネントに表示密度機能を適用する方法を説明します。You can use a set of compact view options in the Ignite UI for Angular。
 _keywords: material density, igniteui for angular, infragistics, マテリアル密度
 _language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title:  Angular Grid Display Density - Ignite UI for Angular
-_description: Learn how to apply display density capabilities to the Hierarchical grid component. You can use a set of compact view options in the Ignite UI for Angular.
+title:  Angular Grid の表示密度 - Ignite UI for Angular
+_description: Hierarchical Grid コンポーネントに表示密度機能を適用する方法を説明します。Ignite UI for Angular のコンパクト ビュー オプションのセットを使用できます。
 _keywords: material density, igniteui for angular, infragistics, マテリアル密度
 _language: ja
 ---

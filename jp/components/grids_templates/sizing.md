@@ -1,6 +1,6 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid Sizing - Ignite UI for Angular
+title: Angular Grid のサイズ変更 - Ignite UI for Angular
 _description: Angular グリッドのサイズ設定がどのように機能するかを理解し、ユーザーが遭遇するさまざまな状況に対応するために幅と高さを使用する方法を学びます。
 _keywords: angular grid sizing, igniteui for angular, infragistics, グリッド, サイズ変更,
 _language: ja
@@ -8,7 +8,7 @@ _language: ja
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid Sizing - Ignite UI for Angular 
+title: Angular Tree Grid のサイズ変更 - Ignite UI for Angular 
 _description: Angular グリッドのサイズ設定がどのように機能するかを理解し、ユーザーが遭遇するさまざまな状況に対応するために幅と高さを使用する方法を学びます。
 _keywords: angular grid sizing, igniteui for angular, infragistics, グリッド, サイズ変更,
 _language: ja
@@ -16,7 +16,7 @@ _language: ja
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchical Grid Sizing - Ignite UI for Angular 
+title: Angular Hierarchical Grid のサイズ変更 - Ignite UI for Angular 
 _description: Angular グリッドのサイズ設定がどのように機能するかを理解し、ユーザーが遭遇するさまざまな状況に対応するために幅と高さを使用する方法を学びます。
 _keywords: angular grid sizing, igniteui for angular, infragistics, グリッド, サイズ変更,
 _language: ja
@@ -173,7 +173,7 @@ _language: ja
 
 ## 列幅の変更
 
-グリッドのサイズに応じてグリッド内の列サイズも変わるため、グリッドはサイズに基づいて水平スクロールバーをレンダリングするかどうかを決定します。  列の幅は、ピクセル、パーセンテージ、または何も設定されていない場合は自動サイズに設定できます。このセクションでは、これらの状況について詳しく見ていきます。
+グリッドのサイズに応じてグリッド内の列サイズも変わるため、グリッドはサイズに基づいて水平スクロールバーをレンダリングするかどうかを決定します。 列の幅は、ピクセル、パーセンテージ、または何も設定されていない場合は自動サイズに設定できます。このセクションでは、これらの状況について詳しく見ていきます。
 
 ### 既定
 

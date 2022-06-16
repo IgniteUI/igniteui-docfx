@@ -1,6 +1,6 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Live Data Updates in Angular Data Grid - Ignite UI for Angular
+title: Angular Data Grid のライブ データ更新 - Ignite UI for Angular
 _description: Ignite UI for Angular Data Grid が、ユーザーの操作に応答し続けている間、1 秒あたり数千の更新を処理する方法を確認します。
 _keywords: angular データ グリッド, angular グリッド更新, angular ライブ データ
 _language: ja
@@ -9,14 +9,14 @@ _language: ja
 
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Live Data Updates in Angular Tree Grid - Ignite UI for Angular
+title: Angular Tree Grid のライブ データ更新 - Ignite UI for Angular
 _description: Ignite UI for Angular Tree Grid が、ユーザーの操作に応答し続けている間、1 秒あたり数千の更新を処理する方法を確認します。
 _keywords: angular データ グリッド, angular グリッド更新, angular ライブ データ
 _language: ja
 ---
 }
 
-# Angular @@igComponent Live Data Updates
+# Angular @@igComponent のライブ データ更新
 @@igComponent コンポーネントは、ユーザーの操作に応答し続けている間、1 秒あたり数千の更新を処理できます。
 
 ## Angular ライブ データ更新の例

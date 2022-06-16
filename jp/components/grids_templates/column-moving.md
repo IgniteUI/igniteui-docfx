@@ -1,29 +1,29 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Column Reordering & Moving in Angular Data Grid - Infragistics
-_description: Set custom column order & enable columns reordering via drag/drop mouse or touch gestures, or by using the Angular Column Moving API. Try Ignite UI for Angular!
+title: Angular Data Grid での列の並べ替えと移動 - インフラジスティックス
+_description: カスタム列順序を設定し、マウスのドラッグ/ドロップまたはタッチジェスチャ、または Angular Column Moving API を使用して列の並べ替えを有効にします。Ignite UI for Angular をお試しください。
 _keywords: column order, igniteui for angular, infragistics, 列順序
 _language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Column Reordering & Moving in Angular Tree Grid - Infragistics
-_description: Set custom column order & enable columns reordering via drag/drop mouse or touch gestures, or by using the Angular Column Moving API. Try Ignite UI for Angular!
+title: Angular Tree Grid での列の並べ替えと移動 - インフラジスティックス
+_description: カスタム列順序を設定し、マウスのドラッグ/ドロップまたはタッチジェスチャ、または Angular Column Moving API を使用して列の並べ替えを有効にします。Ignite UI for Angular をお試しください。
 _keywords: column order, igniteui for angular, infragistics, 列順序, インフラジスティックス
 _language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Column Reordering & Moving in Angular Hierarchical Grid - Infragistics
-_description: Set custom column order & enable columns reordering via drag/drop mouse or touch gestures, or by using the Angular Column Moving API. Try Ignite UI for Angular!
+title: Angular Hierarchical Grid での列の並べ替えと移動 - インフラジスティックス
+_description: カスタム列順序を設定し、マウスのドラッグ/ドロップまたはタッチジェスチャ、または Angular Column Moving API を使用して列の並べ替えを有効にします。Ignite UI for Angular をお試しください。
 _keywords: column order, igniteui for angular, infragistics, 列順序, インフラジスティックス
 _language: ja
 ---
 }
 
-# @@igComponent Column Reordering & Moving
+# @@igComponent の列の並べ替えと移動
 
 Ignite UI for Angular の @@igComponent のコンポーネントは、標準ドラッグ/ドロップのマウス/タッチによるジェスチャ、または列移動 API を使用した順序変更のための**列移動**機能を提供します。列の移動は、固定列と固定されていない列、および複数列ヘッダーの両方で機能します。列を固定領域に移動すると列が固定され、または逆に固定領域の外に列を移動すると、列の固定が解除されます。
 
