@@ -1,28 +1,28 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title:  Angular Grid Display Density | Ignite UI for Angular | infragistics 
-_description: Learn how to apply material density capabilities to the Material UI table component by using a set of compact view options in the Ignite UI Grid angular component.
+title:  Angular Grid Display Density - Ignite UI for Angular
+_description: Learn how to apply display density capabilities to the Data grid component. You can use a set of compact view options in the Ignite UI for Angular.
 _keywords: material density, igniteui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title:  Angular Tree Grid Display Density | Ignite UI for Angular | infragistics 
-_description: Learn how to apply material density capabilities to the Material UI table component by using a set of compact view options in the Ignite UI Grid angular component.
+title:  Angular Grid Display Density - Ignite UI for Angular
+_description: Learn how to apply display density capabilities to the Tree grid component. You can use a set of compact view options in the Ignite UI for Angular.
 _keywords: material density, igniteui for angular, infragistics
 _canonicalLink: grid/display-density
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title:  Angular Hierarchical Grid Display Density | Ignite UI for Angular | infragistics 
-_description: Learn how to apply material density capabilities to the Material UI table component by using a set of compact view options in the Ignite UI Grid angular component.
+title:  Angular Grid Display Density - Ignite UI for Angular
+_description: Learn how to apply display density capabilities to the Hierarchical grid component. You can use a set of compact view options in the Ignite UI for Angular.
 _keywords: material density, igniteui for angular, infragistics
 _canonicalLink: grid/display-density
 ---
 }
 
-# @@igComponent Display Density
+# Angular @@igComponent Display Density
 
 **@@igxName** design is based on [Material Design Guidelines](https://material.io/design). We currently provide an option to choose between predefined set of display [density](https://material.io/design/layout/applying-density.html) options that will bring a cosy, comfortable or compact view respectively. By selecting the right density for your Material UI table / Material UI grid you can significantly improve the user experience when interacting with large amounts of content.
 

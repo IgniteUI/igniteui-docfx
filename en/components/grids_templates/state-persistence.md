@@ -1,28 +1,28 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid State Persistence | Ignite UI for Angular | Infragistics
-_description: Easily achieve state persistence for the IgxGrid by using the API exposed by the IgxGridState directive.
+title: Angular Grid State Persistence - Ignite UI for Angular
+_description: Easily save and restore the grid state, using our comprehensive Ignite UI toolset for Angular. Learn how to restore columns, explore usage, and see demos!
 _keywords: state persistence, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid State Persistence | Ignite UI for Angular | Infragistics
-_description: Easily achieve state persistence for the IgxTreeGrid by using the API exposed by the IgxGridState directive.
+title: Angular Tree Grid State Persistence - Ignite UI for Angular
+_description: Easily save and restore the grid state, using our comprehensive Ignite UI toolset for Angular. Learn how to restore columns, explore usage, and see demos!
 _keywords: state persistence, ignite ui for angular, infragistics
 _canonicalLink: grid/state-persistence
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchical Grid State Persistence | Ignite UI for Angular | Infragistics
-_description: Easily achieve state persistence for the IgxHierarchicalGrid by using the API exposed by the IgxGridState directive.
+title: Angular Hierarchical Grid State Persistence - Ignite UI for Angular
+_description: Easily save and restore the grid state, using our comprehensive Ignite UI toolset for Angular. Learn how to restore columns, explore usage, and see demos!
 _keywords: state persistence, ignite ui for angular, infragistics
 _canonicalLink: grid/state-persistence
 ---
 }
 
-# @@igComponent State Persistence
+# Angular @@igComponent State Persistence
 
 Тhe igxGridState directive allows developers to easily save and restore the grid state. When the [`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) directive is applied on the grid, it exposes the [`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getstate) and [`setState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#setstate) methods that developers can use to achieve state persistence in any scenario.
 

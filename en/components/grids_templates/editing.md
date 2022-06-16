@@ -7,29 +7,29 @@
 
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid Editing | Data Manipulation | Ignite UI for Angular | Infragistics
-_description: Configure in cell data manipulation with feature rich Angular UI grid, try the update data features and Angular CRUD by using the Ignite UI for Angular grid editing
+title: Angular Grid Editing - Ignite UI for Angular
+_description: Get a powerful public API and an easy way to perform data manipulations like creating, updating, or deleting records. See the Angular data grid editing options!
 _keywords: data manipulation, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular TreeGrid Editing | Data Manipulation | Ignite UI for Angular
-_description: Configure in cell data manipulation with feature rich Angular UI grid, try the update data features and Angular CRUD by using the Ignite UI for Angular tree grid editing
+title: Angular Tree Grid Editing - Ignite UI for Angular
+_description: Get a powerful public API and an easy way to perform data manipulations like creating, updating, or deleting records. See the Angular data grid editing options!
 _keywords: data manipulation, ignite ui for angular, infragistics
 _canonicalLink: grid/editing
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular HierarchicalGrid Editing | Data Manipulation | Ignite UI for Angular
-_description: Configure in cell data manipulation with feature rich Angular UI grid, try the update data features and Angular CRUD by using the Ignite UI for Angular hierarchical grid editing
+title: Angular Hierarchical Grid Editing - Ignite UI for Angular
+_description: Get a powerful public API and an easy way to perform data manipulations like creating, updating, or deleting records. See the Angular data grid editing options!
 _keywords: data manipulation, ignite ui for angular, infragistics
 _canonicalLink: grid/editing
 ---
 }
 
-# @@igComponent Editing
+# Angular @@igComponent Editing
 
 Ignite UI for Angular @@igComponent component provides an easy way to perform data manipulation operations like creating, updating, and deleting records. The data manipulation phases are: [Cell Editing](cell-editing.md), [Row Editing](row-editing.md), and [Batch Editing](batch-editing.md). The @@igComponent gives you a powerful public API which allows you to customize the way these operations are performed. Additionally, **Cell editing** exposes several default editors based on the column data type, that could be easily customized via [igxCellEditor directive](cell-editing.md#cell-editing-templates) or [igxRow directives](row-editing.md#customizing-row-editing-overlay).
 

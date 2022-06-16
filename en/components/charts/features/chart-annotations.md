@@ -97,6 +97,8 @@ You can also customize this annotation by setting the following properties:
 -   [`calloutBackground`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcalloutlayercomponent.html#calloutbackground): This property is used to choose the brush for the annotation's background color. The default is to use the series brush.
 -   [`calloutTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcalloutlayercomponent.html#callouttextcolor): This property is used to choose the brush for the annotation's text color.
 -   [`calloutStrokeThickness`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcalloutlayercomponent.html#calloutstrokethickness): This property is used to choose the thickness for the callout backing.
+-   [`calloutCornerRadius`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcalloutlayercomponent.html#calloutcornerradius): This property is used to curve the corners of the callouts.
+-   [`allowedPositions`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcalloutlayercomponent.html#allowedpositions): This property is used to choose which positions that the callout layer is allowed to use. eg. top, bottom
 
 The following example demonstrates how to style the callout layer annotations by setting the properties listed above:
 

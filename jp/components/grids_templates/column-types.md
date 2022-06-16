@@ -1,15 +1,15 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid 列タイプ | データ型 | Ignite UI for Angular | インフラジスティックス
-_description: Angular UI Grid の定義済みの列タイプの使用を開始し、セルと編集テンプレートの両方のデフォルト処理のために数値、通貨、パーセント、ブール値、日付タイプを設定します
+title: Angular の列データ型 - Ignite UI for Angular
+_description: いくつかの定義済みの列データ型 (number、string、date、boolean、currency、percent 列) から選択して Angular のセルおよび編集テンプレートを処理します。
 _keywords: 列データ型, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid 列タイプ | データ型 | Ignite UI for Angular | インフラジスティックス
-_description: Angular UI Tree Grid の定義済みの列タイプの使用を開始し、セルと編集テンプレートの両方のデフォルト処理のために数値、通貨、パーセント、ブール値、日付タイプを設定します
+title: Angular の列データ型 - Ignite UI for Angular
+_description: いくつかの定義済みの列データ型 (number、string、date、boolean、currency、percent 列) から選択して Angular のセルおよび編集テンプレートを処理します。
 _keywords: 列データ型, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
@@ -17,13 +17,14 @@ _language: ja
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
 title: Angular Hierarchical Grid 列タイプ | データ型 | Ignite UI for Angular | インフラジスティックス
-_description: Angular UI Hierarchical Grid の定義済みの列タイプの使用を開始し、セルと編集テンプレートの両方のデフォルト処理のために数値、通貨、パーセント、ブール値、日付タイプを設定します
+title: Angular の列データ型 - Ignite UI for Angular
+_description: いくつかの定義済みの列データ型 (number、string、date、boolean、currency、percent 列) から選択して Angular のセルおよび編集テンプレートを処理します。
 _keywords: 列データ型, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
 }
 
-# @@igComponent 列タイプ
+# Angular @@igComponent 列タイプ
 
 Ignite UI for Angular @@igComponent は、デフォルトおよび編集テンプレートの外観に基づいて、*number* (数値)、*string* (文字列)、*date* (日付)、*boolean* (ブール値)、*currency* (通貨) および *percent* (パーセント) 列のデータ型のデフォルト処理を提供します。
 

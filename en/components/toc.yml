@@ -662,6 +662,12 @@
     - name: Chart Annotations
       href: charts/features/chart-annotations.md
       new: false
+    - name: Chart Data Legend
+      href: charts/features/chart-data-legend.md
+      new: true
+    - name: Chart Data Tooltip
+      href: charts/features/chart-data-tooltip.md
+      new: true
     - name: Chart Highlighting
       href: charts/features/chart-highlighting.md
       updated: true
