@@ -29,6 +29,7 @@ Angular チャートでは、ツールチップはバインドされたデータ
 | プロパティの値                                                                                                                               | 説明                                                            |
 | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
 | [`Default`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/tooltiptype.html#default) ツールチップ   | ツールチップは、ポインタがその上に位置されると、単一の項目のツールチップを表示します。                   |
+| [`Data`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/tooltiptype.html#data) ツールチップ         | チャートのすべてのシリーズのデータ ツールチップを表示します。                               |
 | [`Item`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/tooltiptype.html#item) ツールチップ         | ツールチップは、ポインタが位置されているカテゴリの各データ項目のツールチップを表示します。                 |
 | [`Category`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/tooltiptype.html#category) ツールチップ | ツールチップはポインターがデータ ポイント上に配置されたときにすべてのデータ ポイントに対してツールチップを表示できます。 |
 
