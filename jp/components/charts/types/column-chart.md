@@ -115,7 +115,7 @@ Ignite UI for Angular カテゴリ縦棒チャートは、複数のデータ ソ
 
 ## Angular 縦棒チャートのスタイル設定
 
-Angular 縦棒チャートには、外観のスタイル設定と変更のための多くのオプションがあります。たとえば、以下のサンプルは、縦棒の外観を変更し、[マーカー テンプレート](../features/chart-markers.md)を使用して、対応する列の上 (または下) に項目の値を表示する方法を示しています。
+Angular 縦棒チャートには、外観のスタイル設定と変更のための多くのオプションがあります。
 
 [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) コントロールでこのチャート タイプを作成するには、以下の例のように、データを [`IgxColumnSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcolumnseriescomponent.html) にバインドします:
 
