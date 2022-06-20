@@ -2,6 +2,7 @@
 title: Angular Chart Highlighting | Data Visualization | Infragistics
 _description: Infragistics' Angular Chart Highlighting
 _keywords: Angular Charts, Highlighting, Infragistics
+_language: kr
 mentionedTypes: ["CategoryChart"]
 ---
 
