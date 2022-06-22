@@ -6,7 +6,7 @@ _language: ja
 ---
 
 # Slider 概要と構成
-<p class="highlight">Ignite UI for Angular Slider コンポーネントを使用すると、つまみをトラックで移動して指定した範囲内で値選択を許可します。トラックを連続またはステップに定義でき、単一または範囲によってスライダーのタイプを選択できます。</p>
+<p class="highlight">Ignite UI for Angular Slider は、つまみをトラックで移動して指定した範囲内で値を選択できるフォーム コンポーネントです。トラックは連続またはステップとして定義でき、スライダーは単一値または範囲 (下限値と上限値) スライダーのタイプを選択できるように構成できます。</p>
 <div class="divider"></div>
 
 ## Angular Slider の例
@@ -39,43 +39,40 @@ import { IgxSliderModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-### 範囲スライダー
+### 不連続スライダー
 デフォルトで Slider コンポーネントは不連続タイプに設定されています。不連続スライダーで現在値は数値ラベル (バブル) で可視化されます。バブルはスライダーのつまみにカーソルを合わせると表示されます。
 定義済みステップを持つ不連続スライダーを使用すると、有意な値のみを選択可能にすることができます。
 
-以下の例では、0% から 100% までの値を表示する不連続スライダーを定義し、[`step`]({environment:angularApiUrl}/classes/igxslidercomponent.html#step) を 10 に設定します。
-スライダーの [`value`]({environment:angularApiUrl}/classes/igxslidercomponent.html#value) をコンポーネントの 「completion」 プロパティにバインドすると、入力コンポーネントと双方向バインディングを設定します。
+以下の例では、0% から 100% までの値を表示する不連続スライダーを定義し、[`step`]({environment:angularApiUrl}/classes/igxslidercomponent.html#step) を増減ごとに 10% に設定します。
+Angular [`ngModel`](https://angular.io/guide/built-in-directives#ngModel) を使用して、スライダーの [`value`]({environment:angularApiUrl}/classes/igxslidercomponent.html#value) をコンポーネントの 「completion」 プロパティにバインドすると、入力コンポーネントと双方向バインディングを設定します。
 
 ```html
 <!--sample.component.html-->
 
 <igx-slider [minValue]="0" [maxValue]="100" [step]="10" [(ngModel)]="task.completion"></igx-slider>
-<div class="igx-form-group">
-    <input igxInput id="percentInput" type="text" [value]="task.completion" (blur)="updateTask($event.target)" />
+<igx-input-group type="border">
+    <input igxInput id="percentInput" type="number" [(ngModel)]="task.completion" />
     <label igxLabel for="percentInput">Task Completion</label>
-</div>
+    <igx-suffix>%</igx-suffix>
+</igx-input-group>
 ```
 
 ```typescript
 // sample.component.ts 
+import { Component, ViewChild } from '@angular/core';
+import { IgxInputDirective, IgxSliderComponent } from 'igniteui-angular';
 
-public task: Task = new Task(10);
+@Component({
+    selector: 'app-sample',
+    styleUrls: ['./sample.component.scss'],
+    templateUrl: './sample.component.html'
+})
+export class SampleComponent {
+    public task = {
+        completion: 10
+    };
 
-updateTask(event) {
-    if (!isNaN(parseInt(event.value, 10))) {
-        this.task.completion = event.value;
-    } else {
-        event.value = this.task.completion;
-    }
-}
-
-...
-
-class Task {
-  constructor (
-      public completion: number
-  ) {
-  }
+    constructor() { }
 }
 ```
 
@@ -126,8 +123,7 @@ public volume = 20;
 
 
 ### 範囲スライダー
-最初に、スライダーの [`type`]({environment:angularApiUrl}/classes/igxslidercomponent.html#type) を [`RANGE`]({environment:angularApiUrl}/enums/slidertype.html#range) に設定します。次にスライダー値を PriceRange 型のオブジェクトにバインドします。
-そのオブジェクトに上限および下限のプロパティがあります。
+最初に、スライダーの [`type`]({environment:angularApiUrl}/classes/igxslidercomponent.html#type) を [`RANGE`]({environment:angularApiUrl}/enums/slidertype.html#range) に設定します。次に、スライダー値を `lower` と `upper` 値のプロパティを持つオブジェクトにバインドします。
 
 ```html
 <!--sample.component.html-->
@@ -136,33 +132,52 @@ public volume = 20;
     [type]="sliderType.RANGE" 
     [minValue]="0" 
     [maxValue]="1000" 
-    [(ngModel)]="priceRange">
-    </igx-slider>
+    [(lowerValue)]="priceRange.lower"
+    [(upperValue)]="priceRange.upper">
+</igx-slider>
+
+<igx-input-group type="border">
+    <label igxLabel for="lowerRange">From</label>
+    <igx-prefix>$</igx-prefix>
+    <input igxInput id="lowerRange" type="number" [(ngModel)]="priceRange.lower" />
+</igx-input-group>
+
+<igx-input-group type="border">
+    <label igxLabel for="upperRange">To</label>
+    <igx-prefix>$</igx-prefix>
+    <input igxInput id="upperRange" type="number" [(ngModel)]="priceRange.upper" />
+</igx-input-group>
 ```
 
 ```typescript
 // sample.component.ts
+import { Component } from '@angular/core';
+import { IgxSliderType } from 'igniteui-angular';
 
-public sliderType = SliderType;
-public priceRange: PriceRange = new PriceRange(200, 800);
+@Component({
+  selector: 'app-sample',
+  styleUrls: ['./sample.component.scss'],
+  templateUrl: './sample.component.html'
+})
+export class SampleComponent {
+  public sliderType = IgxSliderType;
+  public priceRange = {
+      lower: 200,
+      upper: 800
+  };
 
-...
-
-class PriceRange {
-  constructor(
-    public lower: number,
-    public upper: number,
-  ) {
-  }
+  constructor() { }
 }
-
 ```
 
 
-<code-view style="height: 120px" 
+<code-view style="height: 200px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/interactions/slider-sample-4" >
 </code-view>
+
+>[!NOTE]
+> RANGE タイプのスライダーを使用する場合、`ngModel` へのバインディングはスライダーからモデルを更新する方向でのみ動作します。両方の値に双方向バインディングを使用するには、`lowerValue` と `upperValue` バインディングを利用できます。
 
 
 最大値および最小値に近い値が適切でない場合があります。[`minValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#minvalue) と [`maxValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#maxvalue) の設定以外に、ユーザー選択を更に制限するための範囲も設定できます。 
@@ -174,15 +189,16 @@ class PriceRange {
 <igx-slider 
     [type]="sliderType.RANGE" 
     [minValue]="0" 
-    [maxValue]="1000" 
-    [(ngModel)]="priceRange" 
+    [maxValue]="1000"
+    [(lowerValue)]="priceRange.lower"
+    [(upperValue)]="priceRange.upper"
     [lowerBound]="100" 
     [upperBound]="900">
-    </igx-slider>
+</igx-slider>
 ```
 
 
-<code-view style="height: 120px" 
+<code-view style="height: 160px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/interactions/slider-sample-5" >
 </code-view>
@@ -220,7 +236,7 @@ public labels = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturd
 ```
 
 
-<code-view style="height: 250px" 
+<code-view style="height: 160px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/interactions/slider-sample-6" >
 </code-view>
@@ -259,7 +275,7 @@ public labels = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturd
     [showTicks]="true" 
     [primaryTicks]="3" 
     [secondaryTicks]="4">
-    </igx-slider>
+</igx-slider>
 ```
 
 ```typescript
@@ -270,7 +286,7 @@ public type = SliderType.RANGE;
 ```
 
 
-<code-view style="height: 140px" 
+<code-view style="height: 180px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/interactions/discrete-slider-ticks-bottom" >
 </code-view>
@@ -291,7 +307,7 @@ public type = SliderType.RANGE;
     [secondaryTicks]="4"
     [secondaryTickLabels]="false"
     [tickLabelsOrientation]="labelsOrientation">
-    </igx-slider>
+</igx-slider>
 ```
 [`TickLabelsOrientation`]({environment:angularApiUrl}/enums/ticklabelsorientation.html#range) を [`BottomToTop`]({environment:angularApiUrl}/enums/ticklabelsorientation.html) に設定してすべての表示ラベルを回転します。
 ```
@@ -305,7 +321,7 @@ public type = SliderType.RANGE;
 ```
 
 
-<code-view style="height: 240px" 
+<code-view style="height: 200px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/interactions/slider-ticks-bottomtotop-labels" >
 </code-view>
@@ -322,7 +338,7 @@ public type = SliderType.RANGE;
         [secondaryTicks]="21"
         [primaryTickLabels]="false"
         [ticksOrientation]="ticksOrientation">
-        </igx-slider>
+    </igx-slider>
 </div>
 ```
 
@@ -336,7 +352,7 @@ public type = SliderType.RANGE;
 ```
 
 
-<code-view style="height: 140px" 
+<code-view style="height: 160px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/interactions/slider-secondary-ticks-mirror" >
 </code-view>
@@ -361,7 +377,7 @@ public type = SliderType.RANGE;
 ```
 
 
-<code-view style="height: 140px" 
+<code-view style="height: 160px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/interactions/slider-timeframe" >
 </code-view>
@@ -373,14 +389,14 @@ public type = SliderType.RANGE;
 最後に、**目盛りラベル**にカスタム テンプレートを提供する方法と、[`テンプレート コンテキスト`]({environment:angularApiUrl}/classes/igxtickscomponent.html#context) が提供するものを確認します。
 
 ```html
-    <igx-slider
+<igx-slider
     [showTicks]="true"
     [primaryTicks]="3"
     [secondaryTicks]="3">
-        <ng-template igxSliderTickLabel let-value let-primary="isPrimary" let-idx="index">
-            {{ tickLabel(value, primary, idx) }}
-        </ng-template>
-    </igx-slider>
+    <ng-template igxSliderTickLabel let-value let-primary="isPrimary" let-idx="index">
+        {{ tickLabel(value, primary, idx) }}
+    </ng-template>
+</igx-slider>
 ```
 [`IgxTickLabelTemplateDirective`]({environment:angularApiUrl}/classes/igxticklabeltemplatedirective.html) を `ng-template` に適用すると、テンプレートがすべての**目盛りラベル**に割り当てられます。 
 
@@ -406,7 +422,7 @@ public type = SliderType.RANGE;
 上記の **tickLabel** コールバックから、各**プライマリ**目盛りの**値**を丸めていることがわかります。 
 
 
-<code-view style="height: 140px" 
+<code-view style="height: 180px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/interactions/slider-tick-labels-template" >
 </code-view>
