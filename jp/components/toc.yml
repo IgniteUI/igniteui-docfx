@@ -663,6 +663,12 @@
     - name: チャートの注釈
       href: charts/features/chart-annotations.md
       new: false
+    - name: チャート データ凡例
+      href: charts/features/chart-data-legend.md
+      new: true
+    - name: チャート データ ツールチップ
+      href: charts/features/chart-data-tooltip.md
+      new: true
     - name: チャート強調表示
       href: charts/features/chart-highlighting.md
       updated: true
