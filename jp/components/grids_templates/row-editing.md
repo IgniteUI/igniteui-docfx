@@ -1,22 +1,22 @@
 @@if(igxName==='IgxGrid'){
 ---
-title: Angular Grid 行編集 | UI Grid | Ignite UI for Angular | インフラジスティックス
-_description: Ignite UI for Angular を使用して行内データ操作を構成する方法を学びます。直感的なグリッド行編集と CRUD 機能は、UI グリッドで利用できます。
+title: Angular Data Grid での行編集 - Ignite UI for Angular
+_description: Angular Data Grid で行編集を有効にし、CRUD 操作のための強力な API が必要な場合、Ignite UI for Angular Data Grid 行編集コンポーネントをお試しください。
 _keywords: row editing, igniteui for angular, インフラジスティックス・ジャパン株式会社
 _language: ja
 ---
 }
 @@if(igxName!=='IgxGrid'){
 ---
-title: Angular Grid 行編集 | UI Grid | Ignite UI for Angular | インフラジスティックス
-_description: Ignite UI for Angular を使用して行内データ操作を構成する方法を学びます。直感的なグリッド行編集と CRUD 機能は、UI グリッドで利用できます。
+title: Angular @@igComponent での行編集 - Ignite UI for Angular
+_description: Angular @@igComponent で行編集を有効にし、CRUD 操作のための強力な API が必要な場合、Ignite UI for Angular Data Grid 行編集コンポーネントをお試しください。
 _keywords: row editing, igniteui for angular, インフラジスティックス・ジャパン株式会社
 _language: ja
 _canonicalLink: grid/row-editing
 ---
 }
 
-# @@igComponent 行編集
+# Angular @@igComponent 行編集
 
 @@igComponent コンポーネントは、Angular CRUD 操作のためのデータ操作と強力な API を提供します。行をクリックして **Enter キー**を押すか、変更する行をダブルクリックします。 
 
@@ -93,7 +93,7 @@ export class AppModule {}
 @@if (igxName === 'IgxTreeGrid') {
 ```html
 <igx-tree-grid #treeGrid [data]="data" [primaryKey]="EmployeID" [foreignKey]="PID" width ="100%"
-               height ="500px" [moving]="true" [rowEditable]="true" [rowSelectable]="true">
+               height ="500px" [moving]="true" [rowEditable]="true" [rowSelection]="'multiple'">
     <igx-column *ngFor="let c of columns"
         [editable] ="c.editable"
         [field]="c.field"
@@ -328,15 +328,15 @@ export class HGridRowEditingSampleComponent implements OnInit {
 
 #### テーマの定義
 
-行編集の背景にカスタムの [`banner テーマ`]({environment:sassApiUrl}/index.html#function-igx-banner-theme)を定義して、定義済みのパレットの 1 つである `$purple-palette` を使用することができます。
+行編集の背景にカスタムの [`banner テーマ`]({environment:sassApiUrl}/index.html#function-banner-theme)を定義して、定義済みのパレットの 1 つである `$purple-palette` を使用することができます。
 
 ```scss
     $my-light-gray: #e3e3e3;
     $my-banner-palette: $purple-palette;
 
-    $banner-theme: igx-banner-theme( 
+    $banner-theme: banner-theme( 
         $banner-background: $my-light-gray,
-        $banner-message-color: igx-color($my-banner-palette, "secondary", 600)
+        $banner-message-color: color($my-banner-palette, "secondary", 600)
     );
 ```
 
@@ -347,7 +347,7 @@ export class HGridRowEditingSampleComponent implements OnInit {
 次に Sass `@include` ステートメントを使用してテーマを適用します。新しく定義された `$banner-theme` を [`igx-banner mixin`]({environment:sassApiUrl}/index.html#mixin-igx-banner) で渡します。
 
 ```scss
-@include igx-banner($banner-theme); 
+@include banner($banner-theme); 
 ```
 
 これにより、カスタム バナー テーマが行編集オーバーレイに適用されます。ただし、グローバル スタイル ファイルで定義したため、これらのスタイルはアプリケーションの**すべて**のバナーにも適用されます。
@@ -365,7 +365,7 @@ export class HGridRowEditingSampleComponent implements OnInit {
 
 :host {
     ::ng-deep {
-        @include igx-banner($banner-theme);
+        @include banner($banner-theme);
     }
 }
 ```
@@ -392,19 +392,19 @@ export class HGridRowEditingSampleComponent implements OnInit {
 </@@igSelector>
 ```
 
-カスタム ボタンを定義した後は、[`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) を使用してスタイルを設定できます。[こちら](../button.md#スタイル設定)で `igx-button` のスタイリングについてさらに学ぶことができます。`完了`と`キャンセル`のカスタム テーマを作成できます。
+カスタム ボタンを定義した後は、[`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme) を使用してスタイルを設定できます。[こちら](../button.md#スタイル設定)で `igx-button` のスタイリングについてさらに学ぶことができます。`完了`と`キャンセル`のカスタム テーマを作成できます。
 
 ```scss
 // custom.component.scss
 ...
 
-$button-theme: igx-button-theme(
+$button-theme: button-theme(
   $palette: $purple-palette
 );
 
 ...
 .custom-buttons {
-    @include igx-button($button-theme);
+    @include button($button-theme);
   }
 ```
 

@@ -11,7 +11,7 @@ _language: ja
 
 ## 印刷スタイルを使用する方法
 
-印刷スタイルを使用するには、コンポーネントが印刷用に選択したドキュメントと同じサイズであることを確認する必要があります。サイズが合わない場合は見切れが発生します。 
+印刷スタイルを使用するには、コンポーネントが印刷用に選択したドキュメントと同じサイズであることを確認する必要があります。サイズが合わない場合は見切れが発生します。
 
 たとえば、A4 形式をで`グリッド`を `印刷`する場合は、`グリッド`のサイズが印刷用のドキュメントと同じであることを確認してください。`幅と高さ`は、印刷する形式のサイズと一致する必要があります。また、スクロールバーを表示せずに、データがそのビューに合わせてください。
 
@@ -24,14 +24,14 @@ _language: ja
 ```scss
 @use "igniteui-angular/theming" as *;
 
-// 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 
 // Turn the print styles off by setting the $print-layout param to false.
-igx-core($print-layout: false)
+core($print-layout: false)
 
 // Add the theme and the palette.
-@include igx-theme($default-palette);
+@include theme($default-palette);
 ```
 
 注: カラフルなグリッドを使用する場合でも、できる限りきれいでシンプルにするため、またインクの使用を減らすために、白黒のグリッドが表示されます。グリッド上のすべてのクリック可能な要素は、紙では意味をなさないため、省略されます。

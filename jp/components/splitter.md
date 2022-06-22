@@ -158,12 +158,12 @@ public typeVertical = SplitterType.Vertical;
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-スプリッターのデフォルトのスタイルを変更するには、[`igx-splitter-theme`]({environment:sassApiUrl}/index.html#function-igx-splitter-theme) を拡張して新しいテーマを作成します。
+スプリッターのデフォルトのスタイルを変更するには、[`splitter-theme`]({environment:sassApiUrl}/index.html#function-splitter-theme) を拡張して新しいテーマを作成します。
 
 ```scss
 // In splitter-styling-sample.component.scss
 
-$splitter-theme: igx-splitter-theme(
+$splitter-theme: splitter-theme(
     $bar-color: #011627,
     $handle-color: #ECAA53,
     $expander-color: #ECAA53,
@@ -178,7 +178,7 @@ $splitter-theme: igx-splitter-theme(
 次に Splitter のカスタム テーマを渡します。
 
 ```scss
-@include igx-css-vars($custom-splitter-theme);
+@include css-vars($custom-splitter-theme);
 ```
 
 ### テーマ オーバーライドの使用
@@ -191,7 +191,7 @@ Internet Explorer 11 のコンポーネントをスタイル設定するには�
 :host {
     ::ng-deep {
         // Custom splitter theme を `igx-splitter` ミックスインに渡します
-        @include igx-splitter($custom-splitter-theme);
+        @include splitter($custom-splitter-theme);
     }
 }
 ```
@@ -212,13 +212,13 @@ Internet Explorer 11 のコンポーネントをスタイル設定するには�
 * [IgxSplitterComponent]({environment:angularApiUrl}/classes/igxsplittercomponent.html)
 * [IgxSplitterPaneComponent]({environment:angularApiUrl}/classes/igxsplitterpanecomponent.html)
 * [SplitterType]({environment:angularApiUrl}/enums/splittertype.html)
-* [IgxSplitterComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-splitter-theme)
+* [IgxSplitterComponent スタイル]({environment:sassApiUrl}/index.html#function-splitter-theme)
 
 <div class="divider--half"></div>
 
 ## テーマの依存関係
-* [IgxDropDown テーマ]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme)
-* [IgxIcon スタイル]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxDropDown テーマ]({environment:sassApiUrl}/index.html#function-drop-down-theme)
+* [IgxIcon スタイル]({environment:sassApiUrl}/index.html#function-icon-theme)
 
 コミュニティに参加して新しいアイデアをご提案ください。
 

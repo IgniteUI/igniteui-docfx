@@ -299,7 +299,7 @@ A [`groupingComparer`]({environment:angularApiUrl}/interfaces/igroupingexpressio
 
 ## Styling
 
-The igxGrid allows styling through the [Ignite UI for Angular Theme Library](../themes/sass/component-themes.md). The grid's [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) exposes a wide variety of properties, which allow the customization of all the features of the grid. 
+The igxGrid allows styling through the [Ignite UI for Angular Theme Library](../themes/sass/component-themes.md). The grid's [theme]({environment:sassApiUrl}/index.html#function-grid-theme) exposes a wide variety of properties, which allow the customization of all the features of the grid. 
 
 In the below steps, we are going through the steps of customizing the grid's Group By styling.
 
@@ -316,11 +316,11 @@ To begin the customization of the Group By feature, you need to import the `inde
 
 ### Defining custom theme
 
-Next, create a new theme, that extends the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) and accepts the parameters, required to customize the Group By as desired. You also need to extend the [`igx-chip-theme`]({environment:sassApiUrl}/index.html#function-igx-chip-theme), because it's used in the Group By feature.
+Next, create a new theme, that extends the [`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) and accepts the parameters, required to customize the Group By as desired. You also need to extend the [`chip-theme`]({environment:sassApiUrl}/index.html#function-chip-theme), because it's used in the Group By feature.
 
 ```scss
 
-$custom-theme: igx-grid-theme(
+$custom-theme: grid-theme(
     /* Group By properties that affect styling */
     $group-row-background: #494949,
     $group-row-selected-background: #383838,
@@ -339,7 +339,7 @@ $custom-theme: igx-grid-theme(
 );
 
 /* Chip theme will style the chips in the Group By area */
-$custom-chips-theme: igx-chip-theme(
+$custom-chips-theme: chip-theme(
     $background: #494949,
     $text-color: #f8f8f8,
     $hover-text-color: #e7e7e7
@@ -355,7 +355,7 @@ In the approach that we described above, the color values were hardcoded. Altern
 $black-color: #292826;
 $yellow-color: #FFCD0F;
 
-$custom-palette: igx-palette(
+$custom-palette: palette(
   $primary: $black-color,
   $secondary: $yellow-color
 );
@@ -363,23 +363,23 @@ $custom-palette: igx-palette(
 After a custom palette has been generated, the `igx-color` function can be used to obtain different varieties of the primary and the secondary colors. 
   
 ```scss
-$custom-theme: igx-grid-theme(
-    $group-row-background: igx-color($custom-palette, "primary", 300),
-    $group-row-selected-background: igx-color($custom-palette, "primary", 400),
-    $group-label-column-name-text: igx-contrast-color($custom-palette, "primary", 500),
-    $group-label-icon: igx-color($custom-palette, "secondary", 600),
-    $group-label-text: igx-contrast-color($custom-palette, "primary", 500),
-    $group-count-background: igx-color($custom-palette, "secondary", 600),
-    $group-count-text-color: igx-color($custom-palette, "primary", 400),
-    $expand-icon-color: igx-color($custom-palette, "secondary", 600),
-    $expand-icon-hover-color: igx-color($custom-palette, "secondary", 300),
-    $cell-active-border-color: igx-color($custom-palette, "secondary", 600)
+$custom-theme: grid-theme(
+    $group-row-background: color($custom-palette, "primary", 300),
+    $group-row-selected-background: color($custom-palette, "primary", 400),
+    $group-label-column-name-text:contrast-color($custom-palette, "primary", 500),
+    $group-label-icon: color($custom-palette, "secondary", 600),
+    $group-label-text:contrast-color($custom-palette, "primary", 500),
+    $group-count-background: color($custom-palette, "secondary", 600),
+    $group-count-text-color: color($custom-palette, "primary", 400),
+    $expand-icon-color: color($custom-palette, "secondary", 600),
+    $expand-icon-hover-color: color($custom-palette, "secondary", 300),
+    $cell-active-border-color: color($custom-palette, "secondary", 600)
 );
 
-$custom-chips-theme: igx-chip-theme(
-    $background: igx-color($custom-palette, "primary", 300),
-    $text-color: igx-contrast-color($custom-palette, "primary", 500),
-    $hover-text-color: igx-contrast-color($custom-palette, "primary", 600)
+$custom-chips-theme: chip-theme(
+    $background: color($custom-palette, "primary", 300),
+    $text-color:contrast-color($custom-palette, "primary", 500),
+    $hover-text-color:contrast-color($custom-palette, "primary", 600)
 );
 ```
 ### Defining custom schemas
@@ -404,7 +404,7 @@ $my-custom-schema: extend($light-schema, (
     igx-grid: $custom-grid-schema
 ));
 
-$custom-theme: igx-grid-theme(
+$custom-theme: grid-theme(
     $palette: $custom-palette,
     $schema: $my-custom-schema
 );
@@ -414,8 +414,8 @@ $custom-theme: igx-grid-theme(
 
 The easiest way to apply your theme is with a `sass` `@include` statement in the global styles file:
 ```scss
-@include igx-grid($custom-theme);
-@include igx-chip($custom-chips-theme);
+@include grid($custom-theme);
+@include chip($custom-chips-theme);
 ```
 
 ### Scoped component theme
@@ -432,8 +432,8 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 ```scss
 :host {
     ::ng-deep {
-        @include igx-grid($custom-theme);
-        @include igx-chip($custom-chips-theme);
+        @include grid($custom-theme);
+        @include chip($custom-chips-theme);
     }
 }
 ```
@@ -460,12 +460,12 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 * [IgxGroupByRow]({environment:angularApiUrl}/classes/igxgroupbyrow.html)
-* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-grid-theme)
 * [ISortingExpression]({environment:angularApiUrl}/interfaces/isortingexpression.html)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [IGroupByExpandState]({environment:angularApiUrl}/interfaces/igroupbyexpandstate.html)
 * [IgxChipComponent]({environment:angularApiUrl}/classes/igxchipcomponent.html)
-* [IgxChipComponent Styles]({environment:sassApiUrl}/index.html#function-igx-chip-theme)
+* [IgxChipComponent Styles]({environment:sassApiUrl}/index.html#function-chip-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>

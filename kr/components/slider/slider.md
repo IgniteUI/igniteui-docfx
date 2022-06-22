@@ -275,7 +275,7 @@ The [context]({environment:angularApiUrl}/classes/igxslidercomponent.html#contex
 <div class="divider--half"></div>
 
 * [IgxSliderComponent]({environment:angularApiUrl}/classes/igxslidercomponent.html)
-* [IgxSliderComponent Styles]({environment:sassApiUrl}/index.html#function-igx-slider-theme)
+* [IgxSliderComponent Styles]({environment:sassApiUrl}/index.html#function-slider-theme)
 * [SliderType]({environment:angularApiUrl}/enums/slidertype.html)
 * [IRangeSliderValue]({environment:angularApiUrl}/interfaces/irangeslidervalue.html)
 

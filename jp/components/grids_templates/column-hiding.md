@@ -1,6 +1,6 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid 列非表示 | Ignite UI for Angular | インフラジスティックス
+title: Angular Data Grid の列非表示 - Ignite UI for Angular
 _description: ユーザーが Ignite Material UI テーブルの UI で列の表示状態を変更できるようにする列非表示機能の使用方法。
 _keywords: column hiding, ignite ui for angular, infragistics, 列非表示
 _language: ja
@@ -8,7 +8,7 @@ _language: ja
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid 列非表示 | Ignite UI for Angular | インフラジスティックス
+title: Angular Tree Grid の列非表示 - Ignite UI for Angular
 _description: ユーザーが Ignite Material UI テーブルの UI で列の表示状態を変更できるようにする列非表示機能の使用方法。
 _keywords: column hiding, ignite ui for angular, infragistics, 列非表示
 _language: ja
@@ -16,14 +16,14 @@ _language: ja
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchical Grid 列非表示 | Ignite UI for Angular | インフラジスティックス
+title: Angular Hierarchical Grid の列非表示 - Ignite UI for Angular
 _description: ユーザーが Ignite Material UI テーブルの UI で列の表示状態を変更できるようにする列非表示機能の使用方法。
 _keywords: column hiding, ignite ui for angular, infragistics, 列非表示
 _language: ja
 ---
 }
 
-# @@igComponent の列非表示
+# Angular @@igComponent の列非表示
 
 Ignite UI for Angular @@igComponent は、[`IgxColumnHidingDirective`]({environment:angularApiUrl}/classes/igxcolumnhidingdirective.html) のある [`IgxColumnActionsComponent`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html) を提供し、ユーザーがユーザー インターフェイスを介して、または Angular コンポーネントを使用して列の非表示を実行できるようにします。Material UI Grid には組み込み列非表示 UI があり、これを @@igComponent のツールバーから使用して列の表示状態を変更できます。更に別のコンポーネントとして列非表示 UI を定義してページの必要な場所に配置できます。
 
@@ -469,29 +469,29 @@ export class AppModule {}
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単なアプローチを使用して、[`igx-column-actions-theme`]({environment:sassApiUrl}/index.html#function-igx-column-actions-theme) を拡張し、`$title-color` および `$background-color` パラメーターを受け取る新しいテーマを作成します。
+最も簡単なアプローチを使用して、[`column-actions-theme`]({environment:sassApiUrl}/index.html#function-column-actions-theme) を拡張し、`$title-color` および `$background-color` パラメーターを受け取る新しいテーマを作成します。
 
 ```scss
-$custom-column-actions-theme: igx-column-actions-theme(
+$custom-column-actions-theme: column-actions-theme(
     $background-color: steelblue,
     $title-color: gold
 );
 ```
 
-ご覧のように `igx-column-actions-theme` は列操作コンテナーの色のみを制御しますが、ボタン、チェックボックス、内部の入力グループには影響しません。ボタンのスタイルも設定したい場合、新しいボタン テーマを作成します。
+ご覧のように `column-actions-theme` は列操作コンテナーの色のみを制御しますが、ボタン、チェックボックス、内部の入力グループには影響しません。ボタンのスタイルも設定したい場合、新しいボタン テーマを作成します。
 
 ```scss
-$custom-button: igx-button-theme($flat-text-color: gold, $disabled-color: black);
+$custom-button: button-theme($flat-text-color: gold, $disabled-color: black);
 ```
 
-この例では、フラットボタンのテキストの色とボタンの無効な色のみを変更しましたが、[`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) の方がより多くの方法を提供します。ボタンのスタイルを制御するパラメーター。
+この例では、フラットボタンのテキストの色とボタンの無効な色のみを変更しましたが、[`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme) の方がより多くの方法を提供します。ボタンのスタイルを制御するパラメーター。
 
 最後にそれぞれのテーマを持つコンポーネント ミックスインを**含める**ことです。 
 
 ```scss
-@include igx-column-actions($custom-column-actions-theme);
+@include column-actions($custom-column-actions-theme);
 .igx-column-actions {
-    @include igx-button($custom-button);
+    @include button($custom-button);
 }
 ```
 
@@ -504,9 +504,9 @@ $custom-button: igx-button-theme($flat-text-color: gold, $disabled-color: black)
 ```scss
 :host {
     ::ng-deep {
-        @include igx-column-actions($custom-column-actions-theme);
+        @include column-actions($custom-column-actions-theme);
         .igx-column-actions {
-            @include igx-button($custom-button);
+            @include button($custom-button);
         }
     }
 }
@@ -522,21 +522,21 @@ $custom-button: igx-button-theme($flat-text-color: gold, $disabled-color: black)
 $yellow-color: gold;
 $blue-color: steelblue;
 
-$custom-palette: igx-palette($primary: $blue-color, $secondary: $yellow-color);
+$custom-palette: palette($primary: $blue-color, $secondary: $yellow-color);
 ```
 
 次に [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取得できます。 
 
 ```scss
-$custom-column-actions-theme: igx-column-actions-theme(
+$custom-column-actions-theme: column-actions-theme(
     $palette: $custom-palette,
-    $title-color: igx-color($custom-palette, "secondary", 400),
-    $background-color: igx-color($custom-palette, "primary", 200)
+    $title-color: color($custom-palette, "secondary", 400),
+    $background-color: color($custom-palette, "primary", 200)
 );
 
-$custom-button: igx-button-theme(
+$custom-button: button-theme(
     $palette: $custom-palette,
-    $flat-text-color: igx-color($custom-palette, "secondary", 400),
+    $flat-text-color: color($custom-palette, "secondary", 400),
     $disabled-color: black
 );
 ```
@@ -553,10 +553,10 @@ $custom-button: igx-button-theme(
 $custom-column-actions-schema: extend($_dark-column-actions,
     (
         title-color:(
-            igx-color: ("secondary", 400)
+           color: ("secondary", 400)
         ),
         background-color:(
-            igx-color: ("primary", 200)
+           color: ("primary", 200)
         )
     )
 );
@@ -564,10 +564,10 @@ $custom-column-actions-schema: extend($_dark-column-actions,
 $custom-button-schema: extend($_dark-button,
     (           
         flat-text-color:(
-            igx-color:("secondary", 500)
+           color:("secondary", 500)
         ),
         disabled-color:(
-            igx-color:("primary", 700)
+           color:("primary", 700)
         )
     )
 );
@@ -578,18 +578,18 @@ $custom-button-schema: extend($_dark-button,
 ```scss
 // Extending the global dark-schema
 $custom-dark-schema: extend($dark-schema,(
-    igx-column-actions: $custom-column-actions-schema,
-    igx-button: $custom-button-schema
+   column-actions: $custom-column-actions-schema,
+   button: $custom-button-schema
 ));
 
 // Defining column-actions-theme with the global dark schema
-$custom-column-actions-theme: igx-column-actions-theme(
+$custom-column-actions-theme: column-actions-theme(
   $palette: $custom-palette,
   $schema: $custom-dark-schema
 );
 
 // Defining button-theme with the global dark schema
-$custom-button: igx-button-theme(
+$custom-button: button-theme(
   $palette: $custom-palette,
   $schema: $custom-dark-schema
 );
@@ -639,7 +639,7 @@ $custom-button: igx-button-theme(
 以下は、列非表示 UI のその他の API です。
 
 * [IgxColumnActionsComponent]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html)
-* [IgxColumnActionsComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-column-actions-theme)
+* [IgxColumnActionsComponent スタイル]({environment:sassApiUrl}/index.html#function-column-actions-theme)
 
 その他のコンポーネントおよびディレクティブ (またはそのいずれか) で使用した API:
 
@@ -669,8 +669,8 @@ $custom-button: igx-button-theme(
 
 スタイル:
 
-* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
-* [IgxRadioComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-radio-theme)
+* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-grid-theme)
+* [IgxRadioComponent スタイル]({environment:sassApiUrl}/index.html#function-radio-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

@@ -1,11 +1,11 @@
 ---
-title: Angular @@igComponent 一括編集 | Angular CRUD | Ignite UI for Angular | インフラジスティックス
-_description: Ignite UI for Angular @@igComponent 一括編集および Material UI テーブルを使用した Angular CRUD を使用して、基のデータに影響を与えずにデータを操作できます。
+title: Angular @@igComponent Grid での一括編集とトランザクション - インフラジスティックス
+_description: Angular @@igComponent Grid を使用した Angular CRUD を使用して、基のデータに影響を与えずにデータを操作できます。デモと例をお試しください。
 _keywords: angular crud, ignite ui for angular, infragistics
 _language: ja
 ---
 
-# @@igComponent 一括編集とトランザクション
+# Angular @@igComponent 一括編集とトランザクション
 
 @@if (igxName === 'IgxGrid' || igxName === 'IgxHierarchicalGrid') {
 @@igxName の一括編集機能は、[`TransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) に基づいています。[`トランザクション サービス クラス階層`](../transaction-classes.md)トピックに従って、`igxTransactionService` の概要と、その実装方法の詳細を確認してください。

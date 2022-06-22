@@ -1,28 +1,28 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid Multi-Cell Selection | Ignite UI for Angular | infragistics 
-_description: Check how easy it is to use Multi-cell data select of the Ignite ui angular material table by using variety of events, rich API or with simple mouse interactions
+title: Angular Grid Cell Selection - Ignite UI for Angular
+_description: Check how easy it is to use cell data selection using variety of events, rich API or mouse interactions. The Grid supports 3 modes for cell selection. Try it now!
 _keywords: data select, igniteui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid Multi-Cell Selection | Ignite UI for Angular | infragistics 
-_description: Check how easy it is to use Multi-cell data select of the Ignite ui angular material table by using variety of events, rich API or with simple mouse interactions
+title: Angular Tree Grid Cell Selection - Ignite UI for Angular
+_description: Check how easy it is to use cell data selection using variety of events, rich API or mouse interactions. The Grid supports 3 modes for cell selection. Try it now!
 _keywords: data select, igniteui for angular, infragistics
 _canonicalLink: grid/cell-selection
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchical Grid Multi-Cell Selection | Ignite UI for Angular | infragistics 
-_description: Check how easy it is to use Multi-cell data select of the Ignite ui angular material table by using variety of events, rich API or with simple mouse interactions
+title: Angular Hierarchical Grid Cell Selection - Ignite UI for Angular 
+_description: Check how easy it is to use cell data selection using variety of events, rich API or mouse interactions. The Grid supports 3 modes for cell selection. Try it now!
 _keywords: data select, igniteui for angular, infragistics
 _canonicalLink: grid/cell-selection
 ---
 }
 
-# Angular @@igComponent Cell Selection
+# Angular Cell Selection
 The selection feature enables rich data select capabilities in the Material UI based @@igComponent. Variety of events and single select actions are available thanks to the powerful API and easy to use methods. The @@igComponent now supports three modes for cell selection, and you can easily switch between them by changing [`cellSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellselection) property. You can disable cell selection, you can *select only one cell within the grid* or to *select multiple cells in the grid*, which is provided as default option.
 @@if (igxName === 'IgxHierarchicalGrid') { In the Hierarchical Grid you can specify the cell selection mode on grid level. So for example in the parent grid multi-cell selection can be enabled, but in child grids cell selection mode can be single or disabled. }But let's dive deeper in each of these options.
 
@@ -244,17 +244,17 @@ To get started with styling the selection, we need to import the `index` file, w
 
 Once done, we can make use of the [`igx-contrast-color`]({environment:sassApiUrl}/index.html#function-igx-contrast-color) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions. With them, we define the colors we would like to use for our selection range:
 ```scss
-    $text-color: igx-contrast-color($default-palette, 'primary', 900);
-    $background-color: igx-color($default-palette, "primary", 900);
+    $text-color:contrast-color($default-palette, 'primary', 900);
+    $background-color: color($default-palette, "primary", 900);
     $border-yellow: #f2c43c;
 ```
 
 ### Create custom theme
 
-Next we create a new theme that extends the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) passing our `text-color`, `background-color` and `border-yellow` variables as `$cell-selected-text-color`, `$cell-selected-background` and `$cell-active-border-color`, respectively:
+Next we create a new theme that extends the [`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) passing our `text-color`, `background-color` and `border-yellow` variables as `$cell-selected-text-color`, `$cell-selected-background` and `$cell-active-border-color`, respectively:
 
 ```scss
-$custom-grid-theme: igx-grid-theme(
+$custom-grid-theme: grid-theme(
     $cell-selected-text-color: $text-color,
     $cell-active-border-color: $border-yellow,
     $cell-selected-background: $background-color
@@ -266,7 +266,7 @@ $custom-grid-theme: igx-grid-theme(
 Afterwards, all we need to do is include the mixin in our component's style (could also be in the app styles), so that our @@igSelector uses the newly created theme instead of the default one:
 
 ```scss
-    @include igx-grid($custom-grid-theme);
+    @include grid($custom-grid-theme);
 ```
 
  >[!NOTE]
@@ -276,7 +276,7 @@ Afterwards, all we need to do is include the mixin in our component's style (cou
  ```scss
     :host {
         ::ng-deep {
-            @include igx-grid($custom-grid-theme);
+            @include grid($custom-grid-theme);
         }
     }
 ```
@@ -324,7 +324,7 @@ With the custom theme applied, the selected grid cells are highlighted with our 
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 @@if (igxName !== 'IgxTreeGrid') {* [IgxGridRow API]({environment:angularApiUrl}/classes/igxgridrow.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRow API]({environment:angularApiUrl}/classes/igxtreegridrow.html)}
 * [IgxGridCell API]({environment:angularApiUrl}/classes/igxgridcell.html)
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-grid-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>

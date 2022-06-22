@@ -335,26 +335,26 @@ To get started with styling the `igxDateRangePicker`, we need to import the `ind
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-The Date Range Picker Component exposes `igx-date-range-picker-theme` and utilizes several components and directives, including `igxInputGroupComponent`, `igxCalendar` and `igxOverlay`. Any global styling for the aforementioned components and directives will affect the `igxDateRangeComponent`. As the Date Range Picker Component uses the input group and calendar themes, we have to create new themes that extend the [`igx-calendar-theme`]({environment:sassApiUrl}/index.html#function-igx-calendar-theme) and [`igx-input-group-theme`]({environment:sassApiUrl}/index.html#function-igx-input-group-theme) and use some of their parameters to style the date range picker in conjunction with the date range picker theme. We will use a single custom color palette to define the colors to use across all themes:
+The Date Range Picker Component exposes `date-range-picker-theme` and utilizes several components and directives, including `igxInputGroupComponent`, `igxCalendar` and `igxOverlay`. Any global styling for the aforementioned components and directives will affect the `igxDateRangeComponent`. As the Date Range Picker Component uses the input group and calendar themes, we have to create new themes that extend the [`calendar-theme`]({environment:sassApiUrl}/index.html#function-calendar-theme) and [`input-group-theme`]({environment:sassApiUrl}/index.html#function-input-group-theme) and use some of their parameters to style the date range picker in conjunction with the date range picker theme. We will use a single custom color palette to define the colors to use across all themes:
 
 ```scss
 // COMMON
 $purple: #9E379F;
 $blue: #61AEDB;
 
-$custom-palette: igx-palette($primary: $blue, $secondary: $purple);
+$custom-palette: palette($primary: $blue, $secondary: $purple);
 
-$today-text: igx-color($custom-palette, "primary", 500);
-$text-color: igx-color($custom-palette, "secondary", 200);
-$color-focused: igx-color($custom-palette, "secondary", 500);
+$today-text: color($custom-palette, "primary", 500);
+$text-color: color($custom-palette, "secondary", 200);
+$color-focused: color($custom-palette, "secondary", 500);
 
 // DATE-RANGE
-$custom-date-range-theme: igx-date-range-picker-theme(
+$custom-date-range-theme:date-range-picker-theme(
     $label-color: $color-focused
 );
 
 // INPUT GROUP
-$custom-input-group-theme: igx-input-group-theme(
+$custom-input-group-theme: input-group-theme(
   $palette: $custom-palette,
   $filled-text-color: $text-color,
   $idle-text-color: $text-color,
@@ -364,7 +364,7 @@ $custom-input-group-theme: igx-input-group-theme(
 );
 
 // CALENDAR
-$custom-calendar-theme: igx-calendar-theme(
+$custom-calendar-theme: calendar-theme(
     $palette: $custom-palette,
     $date-current-text-color: $today-text,
     $border-radius: 0.5,
@@ -376,9 +376,9 @@ $custom-calendar-theme: igx-calendar-theme(
 The last step is to pass the custom themes:
 
 ```scss
-@include igx-css-vars($custom-date-range-theme);
-@include igx-css-vars($custom-input-group-theme);
-@include igx-css-vars($custom-calendar-theme);
+@include css-vars($custom-date-range-theme);
+@include css-vars($custom-input-group-theme);
+@include css-vars($custom-calendar-theme);
 ```
 
 ### Using Theme Overrides
@@ -390,9 +390,9 @@ If the component is using the [`Emulated`](themes/sass/component-themes.md#view-
  ```scss
 :host {
     ::ng-deep {
-        @include igx-date-range-picker($custom-date-range-theme);
-        @include igx-input-group($custom-input-group-theme);
-        @include igx-calendar($custom-calendar-theme);
+        @include date-range-picker($custom-date-range-theme);
+        @include input-group($custom-input-group-theme);
+        @include calendar($custom-calendar-theme);
     }
 }
 ```
@@ -423,18 +423,18 @@ The demo below defines a form for flight tickets that uses the [`IgxDateRangePic
 
 * [IgxDateRangePickerComponent]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html)
 * [IgxCalendarComponent]({environment:angularApiUrl}/classes/igxcalendarcomponent.html)
-* [IgxCalendarComponent Styles]({environment:sassApiUrl}/index.html#function-igx-calendar-theme)
-* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+* [IgxCalendarComponent Styles]({environment:sassApiUrl}/index.html#function-calendar-theme)
+* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-overlay-theme)
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 
 ## Theming Dependencies
 
-* [IgxCalendar Theme]({environment:sassApiUrl}/index.html#function-igx-calendar-theme)
-* [IgxOverlay Theme]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
-* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
-* [IgxButton Theme]({environment:sassApiUrl}/index.html#function-igx-button-theme)
-* [IgxInputGroup Theme]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
-* [IgxDropDown Theme]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme)
+* [IgxCalendar Theme]({environment:sassApiUrl}/index.html#function-calendar-theme)
+* [IgxOverlay Theme]({environment:sassApiUrl}/index.html#function-overlay-theme)
+* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxButton Theme]({environment:sassApiUrl}/index.html#function-button-theme)
+* [IgxInputGroup Theme]({environment:sassApiUrl}/index.html#function-input-group-theme)
+* [IgxDropDown Theme]({environment:sassApiUrl}/index.html#function-drop-down-theme)
 
 ## Additional Resources
 Related topics:

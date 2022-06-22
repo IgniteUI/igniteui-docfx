@@ -1,29 +1,29 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular 複数列ヘッダー | Ignite UI for Angular | インフラジスティックス
-_description: Ignite UI Material UI グリッドを使用して列ヘッダーを共通の階層ヘッダーの下に配置し、それらを複数のヘッダーに結合することで、列ヘッダーのグループ化を開始します。
+title: Angular の複数列ヘッダー - Ignite UI for Angular
+_description: Ignite UI for Angular グリッドを使用して列ヘッダーを共通の階層ヘッダーの下に配置し、それらを複数のヘッダーに結合することで、列ヘッダーのグループ化を開始します。
 _keywords: column headers, ignite ui for angular, infragistics
 _language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular 複数列ヘッダー | Ignite UI for Angular の | インフラジスティックス
-_description: Ignite UI Material UI グリッドを使用して列ヘッダーを共通の階層ヘッダーの下に配置し、それらを複数のヘッダーに結合することで、列ヘッダーのグループ化を開始します。
+title: Angular の複数列ヘッダー - Ignite UI for Angular
+_description: SIgnite UI for Angular グリッドを使用して列ヘッダーを共通の階層ヘッダーの下に配置し、それらを複数のヘッダーに結合することで、列ヘッダーのグループ化を開始します。
 _keywords: column headers, ignite ui for angular, infragistics
 _language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular 複数列ヘッダー | Ignite UI for Angular | インフラジスティックス
-_description: Ignite UI Material UI グリッドを使用して列ヘッダーを共通の階層ヘッダーの下に配置し、それらを複数のヘッダーに結合することで、列ヘッダーのグループ化を開始します。
+title: Angular の複数列ヘッダー - Ignite UI for Angular
+_description: Ignite UI for Angular グリッドを使用して列ヘッダーを共通の階層ヘッダーの下に配置し、それらを複数のヘッダーに結合することで、列ヘッダーのグループ化を開始します。
 _keywords: 列ヘッダー, ignite ui for angular, infragistics
 _language: ja
 ---
 }
 
-# @@igComponent 複数列ヘッダーの概要
+# Angular @@igComponent 複数列ヘッダーの概要
 
 [`@@igxName`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) は、共通の列ヘッダー下で行のグループ化が可能な`複数列ヘッダー`をサポートします。各複数列ヘッダーグループは、マテリアル UI グリッド内でその他複数のグループや列を組み合わせることができます。
 
@@ -145,7 +145,7 @@ _language: ja
 各 [`igx-column-group`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html) は、[`移動`](column-moving.md)、[`ピン固定`](column-pinning.md) と [`非表示`](column-hiding.md) をサポートします。
 > [!NOTE]
 > 列セットと列グループがある場合、ピン固定は列の一番上の親レベルでのみ可能です。ネストした `column groups` や `columns` のピン固定はできません。<br />
-> 複数列ヘッダーでのピン固定を使用すると、グループ全体がピン固定されることに注意してください。 <br />
+> 複数列ヘッダーでのピン固定を使用すると、グループ全体がピン固定されることに注意してください。<br />
 > `columns` と `column groups` 間の移動は、階層の同じレベルで同じ `group` の場合のみです。<br />
 > `columns/column-groups` が現在の `group` でラップされない場合 (**一番上のレベル** `columns` の場合)、表示列全体の移動はできません。
 
@@ -269,10 +269,10 @@ _language: ja
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も単純なアプローチに従って、[`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme)  を拡張する新しいテーマを作成し、`$header-background`, `$header-text-color`, `$header-border-width`, `$header-border-style` and `$header-border-color` パラメーターを受け取ります。
+最も単純なアプローチに従って、[`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme)  を拡張する新しいテーマを作成し、`$header-background`, `$header-text-color`, `$header-border-width`, `$header-border-style` and `$header-border-color` パラメーターを受け取ります。
 
 ```scss
-$custom-theme: igx-grid-theme(
+$custom-theme: grid-theme(
     $header-background: #e0f3ff,
     $header-text-color: #e41c77,
     $header-border-width: 1px,
@@ -283,7 +283,7 @@ $custom-theme: igx-grid-theme(
 最後の手順は、それぞれのテーマを持つコンポーネント ミックスインを**含める**ことです。 
 
 ```scss
-@include igx-grid($custom-theme);
+@include grid($custom-theme);
 ```
 
 >[!NOTE]
@@ -292,7 +292,7 @@ $custom-theme: igx-grid-theme(
  ```scss
 :host {
     ::ng-deep {
-        @include igx-grid($custom-theme);
+        @include grid($custom-theme);
     }
 }
 ```
@@ -307,18 +307,18 @@ $custom-theme: igx-grid-theme(
 $light-blue-color: #e0f3ff;
 $deep-pink-color: #e41c77;
 
-$custom-palette: igx-palette($primary: $light-blue-color, $deep-pink-color);
+$custom-palette: palette($primary: $light-blue-color, $deep-pink-color);
 ```
 
 次に [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取得できます。
 
 ```scss
-$custom-theme: igx-grid-theme(
-    $header-background: igx-color($custom-palette, "primary", 500),
-    $header-text-color: igx-color($custom-palette, "secondary", 500),
+$custom-theme: grid-theme(
+    $header-background: color($custom-palette, "primary", 500),
+    $header-text-color: color($custom-palette, "secondary", 500),
     $header-border-width: 1px,
     $header-border-style: solid,
-    $header-border-color: igx-color($custom-palette, "grays", 200)
+    $header-border-color: color($custom-palette, "grays", 200)
 );
 ```
 
@@ -355,7 +355,7 @@ $my-custom-schema: extend($light-schema,
 );
 
 // Defining our custom theme with the custom schema
-$custom-theme: igx-grid-theme(
+$custom-theme: grid-theme(
   $palette: $custom-palette,
   $schema: $my-custom-schema
 );
@@ -409,7 +409,7 @@ $custom-theme: igx-grid-theme(
 <div class="divider--half"></div>
 
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-grid-theme)
 * [IgxColumnGroupComponent]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html)
 <div class="divider--half"></div>
 

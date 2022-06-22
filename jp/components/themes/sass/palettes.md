@@ -17,7 +17,7 @@ Ignite UI for Angular のコンテキストでのパレットは [Sass Maps](htt
 ```scss
 // _variables.scss
 
-$melon-palette: igx-palette(
+$melon-palette: palette(
     $primary: #2ab759,
     $secondary: #f96a88,
 );
@@ -35,113 +35,155 @@ $melon-palette: igx-palette(
 ```scss
 $handmade-palette: (
     primary: (
-        50: #c0c0ff,
+        50: to-hsl(#e6eff8),
         '50-contrast': black,
-        100: #a7a7fa,
+        100: to-hsl(#bfd7f2),
         '100-contrast': black,
-        200: #6d6df1,
+        200: to-hsl(#98bfec),
         '200-contrast': black,
-        300: #3c3cf2,
+        300: to-hsl(#85b5e9),
         '300-contrast': white,
-        400: #1d1df7,
+        400: to-hsl(#73a6e4),
         '400-contrast': white,
-        500: blue,
+        500: to-hsl(#6797de),
         '500-contrast': white,
-        600: #0000e5,
+        600: to-hsl(#3681dd),
         '600-contrast': white,
-        700: #0000d2,
+        700: to-hsl(#357fda),
         '700-contrast': white,
-        800: #0000be,
+        800: to-hsl(#306dc8),
         '800-contrast': white,
-        900: #0000a8,
+        900: to-hsl(#284ea8),
         '900-contrast': white,
-        'A100': #55f,
+        'A100': to-hsl(#98bfec),
         'A100-contrast': white,
-        'A200': #2727ff,
+        'A200': to-hsl(#73a6e4),
         'A200-contrast': white,
-        'A400': #0000eb,
+        'A400': to-hsl(#3681dd),
         'A400-contrast': white,
-        'A700': #00a,
+        'A700': to-hsl(#284ea8),
         'A700-contrast': white
     ),
     secondary: (
-        50: #ffc0c0,
+        50: to-hsl(#fef7e2),
         '50-contrast': black,
-        100: #faa7a7,
+        100: to-hsl(#fdeab7),
         '100-contrast': black,
-        200: #f16d6d,
+        200: to-hsl(#fbdd89),
         '200-contrast': black,
-        300: #f23c3c,
+        300: to-hsl(#fad15c),
         '300-contrast': black,
-        400: #f71d1d,
+        400: to-hsl(#f9c63f),
         '400-contrast': black,
-        500: var(--some-dynamic-color),
-        '500-contrast': black,
-        600: #e50000,
+        500: to-hsl(#f7bd32),
+        '500-contrast': white,
+        600: to-hsl(#f6b02d),
         '600-contrast': white,
-        700: #d20000,
+        700: to-hsl(#f49e2a),
         '700-contrast': white,
-        800: #be0000,
+        800: to-hsl(#f38e28),
         '800-contrast': white,
-        900: #a80000,
+        900: to-hsl(#f38e28),
         '900-contrast': white,
-        'A100': #f55,
+        'A100': to-hsl(#fbdd89),
         'A100-contrast': black,
-        'A200': #ff2727,
+        'A200': to-hsl(#f9c63f),
         'A200-contrast': black,
-        'A400': #eb0000,
+        'A400': to-hsl(#f6b02d),
         'A400-contrast': white,
-        'A700': #a00,
+        'A700': to-hsl(#f38e28),
         'A700-contrast': white
     ),
     grays: (
-        50: rgba(0, 0, 0, .02),
+        50: to-hsl(#fff),
         '50-contrast': black,
-        100: rgba(0, 0, 0, .04),
+        100: to-hsl(#fafafa),
         '100-contrast': black,
-        200: rgba(0, 0, 0, .08),
+        200: to-hsl(#f5f5f5),
         '200-contrast': black,
-        300: rgba(0, 0, 0, .12),
+        300: to-hsl(#f0f0f0),
         '300-contrast': black,
-        400: rgba(0, 0, 0, .26),
+        400: to-hsl(#dedede),
         '400-contrast': black,
-        500: rgba(0, 0, 0, .38),
+        500: to-hsl(#b3b2b2),
         '500-contrast': black,
-        600: rgba(0, 0, 0, .54),
+        600: to-hsl(#979696),
         '600-contrast': white,
-        700: rgba(0, 0, 0, .62),
+        700: to-hsl(#7b7a7a),
         '700-contrast': white,
-        800: rgba(0, 0, 0, .74),
+        800: to-hsl(#404040),
         '800-contrast': white,
-        900: rgba(0, 0, 0, .87),
+        900: to-hsl(#1a1a1a),
         '900-contrast': white
     ),
     info: (
-        500: #1377d5,
+        500: to-hsl(rgb(18, 118, 211)),
         '500-contrast': black
     ),
     success: (
-        500: #4eb862,
+        500: to-hsl(rgb(76, 184, 96)),
         '500-contrast': black
     ),
     warn: (
-        500: #fbb13c,
+        500: to-hsl(rgb(251, 178, 60)),
         '500-contrast': black
     ),
     error: (
-        500: #ff134a,
+        500: to-hsl(rgb(255, 20, 75)),
         '500-contrast': black
     ),
     surface: (
-        500: #fff,
+        500: to-hsl(rgb(255, 255, 255)),
         '500-contrast': black
     )
 );
+
+:root {
+    --igx-primary-a: 1;
+    --igx-secondary-a: 1;
+    --igx-info-a: 1;
+    --igx-success-a: 1;
+    --igx-warn-a: 1;
+    --igx-error-a: 1;
+    --igx-grays-a: 1;
+    --igx-surface-a: 1;
+}
 ```
 <div class="divider"></div>
 
+`to-hsl()` 関数は、色空間に関係なく色を受け取り、その色相、彩度、明度をカンマ区切りのリストで返します。このリストは、パレット内の各シェードの CSS 変数を宣言するときに使用されます。各パレット カラー (primary、secondary、grays など) の `alpha` 値は個別に初期化する必要があります。
+
+## 事前定義されたパレット
+事前定義されたライト パレットとダーク パレットを提供します。これをスキーマと一緒に使用して、コンポーネントのテーマを作成できます。
+
+- ライト パレット
+  - $light-material-palette
+  - $light-fluent-excel-palette
+  - $light-fluent-word-palette
+  - $light-fluent-palette
+  - $light-bootstrap-palette
+  - $light-indigo-palette
+- ダーク パレット
+  - $dark-material-palette
+  - $dark-fluent-excel-palette
+  - $dark-fluent-word-palette
+  - $dark-fluent-palette
+  - $dark-bootstrap-palette
+  - $dark-indigo-palette
+
+また、使用できるいくつかの追加パレットも提供しています。
+
+- 追加のライト パレット
+  - $light-green-palette
+  - $light-purple-palette
+- 追加のダーク パレット
+  - $dark-green-palette
+  - $dark-purple-palette
+
+すべてのライト パレットを選択したライト スキーマと組み合わせたり、またはその逆にすべてのダーク パレットをニーズとビジョンに最も一致すると思われるダーク スキーマと組み合わせたりできます。
+
 ## デフォルトのパレット
-`igx-theme` ミックスインは、引数の 1 つとしてパレット (前のセクションを参照) を使用します。渡されたパレットはグローバルな `$default-palette` 変数に割り当てられます。この変数に保存されたパレットは、パレットが必要であるがユーザーによって明示的に提供されない場合、Sass ライブラリ全体で代替パレットとして使用されます。
+`theme` ミックスインは、引数の 1 つとしてパレット (前のセクションを参照) を使用します。渡されたパレットはグローバルな `$default-palette` 変数に割り当てられます。この変数に保存されたパレットは、パレットが必要であるがユーザーによって明示的に提供されない場合、Sass ライブラリ全体で代替パレットとして使用されます。
 
 この知識を活用して、アプリケーション内の複数の Sass ドキュメントで同じパレットを再利用できます。
 
@@ -150,7 +192,7 @@ $handmade-palette: (
 ```scss
 // src/styles/_variables.scss
 
-$my-palette: igx-palette(
+$my-palette: palette(
   $primary: #2ab759,
   $secondary: #f96a88,
 );
@@ -163,7 +205,7 @@ $default-palette: $my-palette;
 // src/styles/styles.scss
 @use 'variables' as *;
 
-@include igx-theme($palette: $my-palette);
+@include theme($palette: $my-palette);
 ```
 
 コンポーネントの `.scss` ファイル:
@@ -171,7 +213,7 @@ $default-palette: $my-palette;
 @use '../styles/styles/variables' as *;
 
 :host {
-  background: igx-color($variant: 900);
+  background: color($variant: 900);
 }
 ```
 
@@ -189,7 +231,7 @@ $company-color: #2ab759; /* Some green shade I like */
 $secondary-color: #f96a88; /* Watermelon pink */
 $grayscale-base: #fff; /* Used to generate shades of gray */
 
-$my-color-palette: igx-palette(
+$my-color-palette: palette(
     $primary: $company-color,
     $secondary: $secondary-color,
     $grays: $grayscale-base
@@ -204,16 +246,16 @@ $my-color-palette: igx-palette(
 
 ```scss
 // Get the primary 500 color variant from $default-palette
-$my-primary-500: igx-color();
+$my-primary-500: color();
 
 // Get the primary 600 color variant from $default-palette
-$my-primary-600: igx-color($variant: 600);
+$my-primary-600: color($variant: 600);
 
 // Get the secondary A700 color variant from $my-palette
-$my-primary-A700: igx-color($my-palette, 'secondary', 'A700');
+$my-primary-A700: color($my-palette, 'secondary', 'A700');
 
 // Get the warn color from $my-palette
-$my-warning-color: igx-color($my-palette, 'warn');
+$my-warning-color: color($my-palette, 'warn');
 
 .my-awesome-class {
     background: $my-primary-600;
@@ -234,8 +276,8 @@ $my-warning-color: igx-color($my-palette, 'warn');
 カラー バリアントを取得する方法と同様に、パレットの各カラー バリアントのコントラスト テキスト カラーを取得する方法があります。
 
 ```scss
-$my-primary-800: igx-color($my-palette, 'primary', 600);
-$my-primary-800-text: igx-contrast-color($my-palette, 'primary', 600);
+$my-primary-800: color($my-palette, 'primary', 600);
+$my-primary-800-text:contrast-color($my-palette, 'primary', 600);
 
 // sample usage
 .my-awesome-article {
@@ -260,7 +302,7 @@ CSS クラスを使用して Web 要素 (テキストや背景など) にカラ�
 たとえば、要素に背景色を適用する CSS クラスを生成する場合、以下を実行できます:
 
 ```scss
-@include igx-color-classes(
+@include color-classes(
     $prop: 'background-color',
     $prefix: 'bg'
 );
@@ -275,26 +317,27 @@ CSS クラスを使用して Web 要素 (テキストや背景など) にカラ�
 
 ## CSS 変数
 
-ドキュメントの [CSS 変数](../palettes.md)セクションでカラー パレットについて読むと、すべてのパレット カラーが CSS 変数として含まれています。`igx-theme` ミックスインを使用してテーマを生成するたびに内部で行います。`igx-theme` は本体で `igx-palette-vars` ミックスインを呼び出します。パレットを取得し、パレット内のカラーを CSS 変数に変換します。 
+ドキュメントの [CSS 変数](../palettes.md)セクションでカラー パレットについて読むと、すべてのパレット カラーが CSS 変数として含まれています。`theme` ミックスインを使用してテーマを生成するたびに内部で行います。`theme` は本体で `palette-vars` ミックスインを呼び出します。パレットを取得し、パレット内のカラーを CSS 変数に変換します。 
 
 このパレットは、カスタム パレット カラーを CSS 変数として含める場合に使用します。
 
 以下はその例です。
 
 ```scss
-$my-palette: igx-palette(
+$my-palette: palette(
   $primary: #2ab759,
   $secondary: #f96a88,
 );
 
-@include igx-palette-vars($my-palette);
+@include palette-vars($my-palette);
 ```
 
 ## API リファレンス
 * [パレット]({environment:sassApiUrl}/index.html#function-igx-palette)
 * [パレット カラーの取得]({environment:sassApiUrl}/index.html#function-igx-color)
 * [コントラスト カラーの取得]({environment:sassApiUrl}/index.html#function-igx-contrast-color)
-* [カラー クラスの生成]({environment:sassApiUrl}/index.html#mixin-igx-color-classes)
+* [カラー クラスの生成]({environment:sassApiUrl}/index.html#mixin-color-classes)
+* [スキーマ](./schemas.md)
 
 ## その他のリソース
 <div class="divider--half"></div>

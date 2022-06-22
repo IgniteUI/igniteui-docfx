@@ -1,29 +1,29 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid 複数セル選択 | Ignite UI for Angular | インフラジスティックス
-_description: さまざまなイベント、豊富な API や簡単なマウス操作を使用して、Ignite UI Angular マテリアル テーブルのセルデータの複数選択を実装する方法を紹介します。
+title: Angular Grid のセル選択 - Ignite UI for Angular
+_description: さまざまなイベント、豊富な API、またはマウス操作を使用してセル データ選択を簡単に実行できます。Grid はセル選択で 3 つのモードをサポートします。今すぐお試しください。
 _keywords: データ選択, igniteui for angular, インフラジスティックス
 _language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid 複数セル選択 | Ignite UI for Angular | インフラジスティックス 
-_description: さまざまなイベント、豊富な API や簡単なマウス操作を使用して、Ignite UI Angular マテリアル テーブルのセルデータの複数選択を実装する方法を紹介します。
+title: Angular Tree Grid のセル選択 - Ignite UI for Angular
+_description: さまざまなイベント、豊富な API、またはマウス操作を使用してセル データ選択を簡単に実行できます。Grid はセル選択で 3 つのモードをサポートします。今すぐお試しください。
 _keywords: データ選択, igniteui for angular, infragistics
 _language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchical Grid 複数セル選択 | Ignite UI for Angular | インフラジスティックス 
-_description: さまざまなイベント、豊富な API や簡単なマウス操作を使用して、Ignite UI Angular マテリアル テーブルのセルデータの複数選択を実装する方法を紹介します。
+title: Angular Hierarchical Grid のセル選択 - Ignite UI for Angular 
+_description: さまざまなイベント、豊富な API、またはマウス操作を使用してセル データ選択を簡単に実行できます。Grid はセル選択で 3 つのモードをサポートします。今すぐお試しください。
 _keywords: データ選択, igniteui for angular, infragistics
 _language: ja
 ---
 }
 
-# Angular @@igComponent 選択
+# Angular セル選択
 選択機能により、@@igComponent ベースのマテリアル UI で豊富なデータ選択機能が有効になります。強力な API と使いやすいメソッドのおかげで、さまざまなイベントと単一の選択アクションを利用できます。@@igComponent は、セル選択の 3 つのモードをサポートしています。[`cellSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellselection) プロパティを変更することで、それらを簡単に切り替えることができます。セルの選択を無効にするか、*グリッド内の 1 つのセルのみを選択する*か、*グリッド内の複数のセルを選択する*ことができます。これはデフォルトのオプションとして提供されています。
 @@if (igxName === 'IgxHierarchicalGrid') { 階層グリッドでは、グリッド レベルでセル選択モードを指定できます。たとえば、親グリッドではマルチセル選択を有効にできますが、子グリッドではセル選択モードを単一または無効にすることができます。}これらの各オプションについて詳しく説明します。
 
@@ -245,17 +245,17 @@ expectedData = [
 
 完了後、[`igx-contrast-color`]({environment:sassApiUrl}/index.html#function-igx-contrast-color) と [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用できます。これらの関数を使用して、選択範囲に使用する色を定義します。
 ```scss
-    $text-color: igx-contrast-color($default-palette, 'primary', 900);
-    $background-color: igx-color($default-palette, "primary", 900);
+    $text-color:contrast-color($default-palette, 'primary', 900);
+    $background-color: color($default-palette, "primary", 900);
     $border-yellow: #f2c43c;
 ```
 
 ### カスタム テーマの作成
 
-次に、`text-color`、`background-color`、`border-yellow` 変数をそれぞれ `$cell-selected-text-color`、`$cell-selected-background`、`$cell-active-border-color` として渡して、[`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) を拡張する新しいテーマを作成します。
+次に、`text-color`、`background-color`、`border-yellow` 変数をそれぞれ `$cell-selected-text-color`、`$cell-selected-background`、`$cell-active-border-color` として渡して、[`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) を拡張する新しいテーマを作成します。
 
 ```scss
-$custom-grid-theme: igx-grid-theme(
+$custom-grid-theme: grid-theme(
     $cell-selected-text-color: $text-color,
     $cell-active-border-color: $border-yellow,
     $cell-selected-background: $background-color
@@ -267,7 +267,7 @@ $custom-grid-theme: igx-grid-theme(
 次にコンポーネントのスタイルにミックスインを含め (アプリ スタイルにすることも可能)、@@igSelector がデフォルトのテーマの代わりに新しく作成されたテーマを使用するようになります。
 
 ```scss
-    @include igx-grid($custom-grid-theme);
+    @include grid($custom-grid-theme);
 ```
 
  >[!NOTE]
@@ -277,7 +277,7 @@ $custom-grid-theme: igx-grid-theme(
  ```scss
     :host {
         ::ng-deep {
-            @include igx-grid($custom-grid-theme);
+            @include grid($custom-grid-theme);
         }
     }
 ```
@@ -325,7 +325,7 @@ $custom-grid-theme: igx-grid-theme(
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 @@if (igxName !== 'IgxTreeGrid') {* [IgxGridRow API]({environment:angularApiUrl}/classes/igxgridrow.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRow API]({environment:angularApiUrl}/classes/igxtreegridrow.html)}
 * [IgxGridCell API]({environment:angularApiUrl}/classes/igxgridcell.html)
-* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-grid-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

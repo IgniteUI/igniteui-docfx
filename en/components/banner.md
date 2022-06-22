@@ -234,10 +234,10 @@ First, in order to use the functions exposed by the theme engine, we need to imp
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`igx-banner-theme`]({environment:sassApiUrl}/index.html#function-igx-banner-theme) and accepts the `$banner-message-color`, `$banner-background` and the `$banner-illustration-color` parameters.
+Following the simplest approach, we create a new theme that extends the [`banner-theme`]({environment:sassApiUrl}/index.html#function-banner-theme) and accepts the `$banner-message-color`, `$banner-background` and the `$banner-illustration-color` parameters.
 
 ```scss
-$custom-banner-theme: igx-banner-theme(
+$custom-banner-theme: banner-theme(
     $banner-message-color: #151515,
     $banner-background: #dedede,
     $banner-illustration-color: #666666
@@ -249,7 +249,7 @@ $custom-banner-theme: igx-banner-theme(
 The last step is to pass the custom banner theme:
 
 ```scss
-@include igx-css-vars($custom-banner-theme);
+@include css-vars($custom-banner-theme);
 ```
 
 ### Using mixins
@@ -262,7 +262,7 @@ If the component is using the [`Emulated`](themes/sass/component-themes.md#view-
 :host {
     ::ng-deep {
         // Pass the custom banner theme to the `igx-banner` mixin
-        @include igx-banner($custom-banner-theme);
+        @include banner($custom-banner-theme);
     }
 }
 ```
@@ -277,16 +277,16 @@ The `igx-palette` function generates a color palette based on the primary and se
 $white-color: #dedede;
 $black-color: #151515;
 
-$light-banner-palette: igx-palette($primary: $white-color, $secondary: $black-color);
+$light-banner-palette: palette($primary: $white-color, $secondary: $black-color);
 ```
 
 And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette. 
 
 ```scss
-$custom-banner-theme: igx-banner-theme(
-    $banner-message-color: igx-color($light-banner-palette, "secondary", 400),
-    $banner-background: igx-color($light-banner-palette, "primary", 400),
-    $banner-illustration-color: igx-color($light-banner-palette, "secondary", 100)
+$custom-banner-theme: banner-theme(
+    $banner-message-color: color($light-banner-palette, "secondary", 400),
+    $banner-background: color($light-banner-palette, "primary", 400),
+    $banner-illustration-color: color($light-banner-palette, "secondary", 100)
 );
 ```
 
@@ -303,19 +303,19 @@ Extend one of the two predefined schemas, that are provided for every component,
 $light-toast-schema: extend($_light-toast,
     (
         banner-message-color: (
-            igx-color: ("secondary", 400)
+           color: ("secondary", 400)
         ),
         banner-background: (
-            igx-color: ("primary", 400)
+           color: ("primary", 400)
         ),
         banner-illustration-color: (
-            igx-color: ("secondary", 100)
+           color: ("secondary", 100)
         )
     )
 );
 
 // Defining banner with the global light schema
-$custom-banner-theme: igx-banner-theme(
+$custom-banner-theme: banner-theme(
   $palette: $light-banner-palette,
   $schema: $light-toast-schema
 );
@@ -337,7 +337,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 
 * [IgxBannerComponent]({environment:angularApiUrl}/classes/igxbannercomponent.html)
 * [IgxBannerActionsDirective]({environment:angularApiUrl}/classes/igxbanneractionsdirective.html)
-* [IgxBannerComponent Styles]({environment:sassApiUrl}/index.html#function-igx-banner-theme)
+* [IgxBannerComponent Styles]({environment:sassApiUrl}/index.html#function-banner-theme)
 
 Additional components and/or directives with relative APIs that were used:
 
@@ -347,10 +347,10 @@ Additional components and/or directives with relative APIs that were used:
 * [IgxToastComponent]({environment:angularApiUrl}/classes/igxtoastcomponent.html)
 
 ## Theming Dependencies
-* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
-* [IgxButton Theme]({environment:sassApiUrl}/index.html#function-igx-button-theme)
-* [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
-* [IgxExpansionPanel Theme]({environment:sassApiUrl}/index.html#function-igx-expansion-panel-theme)
+* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxButton Theme]({environment:sassApiUrl}/index.html#function-button-theme)
+* [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-ripple-theme)
+* [IgxExpansionPanel Theme]({environment:sassApiUrl}/index.html#function-expansion-panel-theme)
 
 
 ## Additional Resources

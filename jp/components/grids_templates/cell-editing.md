@@ -1,29 +1,29 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid セル編集 | データの変更 | Ignite UI for Angular | Infragistics
-_description: 機能豊富な Angular UI グリッドのセルデータ操作機能や Ignite UI for Angular グリッド編集機能を使用した CRUD (クラッド) をお試しください。
+title: Angular Data Grid セル編集 - Ignite UI for Angular
+_description: Grid はセル内編集を使用しています。デフォルトのセル編集テンプレートがありますが、データ更新操作のカスタム テンプレートを定義することもできます。今すぐお試しください。
 _keywords: データ操作, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular TreeGrid セル編集 | データの変更 | Ignite UI for Angular
-_description: 機能豊富な Angular UI グリッドのセルデータ操作機能や Ignite UI for Angular ツリー グリッド編集機能を使用した CRUD (クラッド) をお試しください。
+title: Angular Tree Grid のセル編集 - Ignite UI for Angular
+_description: Grid はセル内編集を使用しています。デフォルトのセル編集テンプレートがありますが、データ更新操作のカスタム テンプレートを定義することもできます。今すぐお試しください。
 _keywords: データ操作, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular HierarchicalGrid セル編集 | データの変更 | Ignite UI for Angular
-_description: 機能豊富な Angular UI グリッドのセルデータ操作機能や Ignite UI for Angular 階層グリッド編集機能を使用した CRUD (クラッド) をお試しください。
+title: Angular Hierarchical Grid のセル編集 - Ignite UI for Angular
+_description: Grid はセル内編集を使用しています。デフォルトのセル編集テンプレートがありますが、データ更新操作のカスタム テンプレートを定義することもできます。今すぐお試しください。
 _keywords: データ操作, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
 }
 
-# @@igComponent セル編集とセル テンプレート
+# Angular @@igComponent のセル編集
 
 Ignite UI for Angular @@igComponent コンポーネントは、Angular CRUD 操作のための優れたデータ操作機能と強力な API を提供します。デフォルトで @@igComponent は**セル編集**を使用し、**デフォルトのセル編集テンプレート**によって、列のデータ型に基づいてさまざまなエディターが表示されます。さらに、データ更新アクション用の独自のカスタム テンプレートを定義したり、変更をコミット/破棄したりするためのデフォルトの動作をオーバーライドすることもできます。
 
@@ -426,7 +426,7 @@ export class MyHGridEventsComponent {
 
 ## スタイル設定
 
-@@ igxName で [Ignite UI for Angular テーマ ライブラリ](../themes/sass/component-themes.md) を使用してセルのスタイルを設定できます。グリッドの [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) は、ユーザーがグリッドのさまざまな側面をスタイル設定できる広範なプロパティを公開します。
+@@ igxName で [Ignite UI for Angular テーマ ライブラリ](../themes/sass/component-themes.md) を使用してセルのスタイルを設定できます。グリッドの [theme]({environment:sassApiUrl}/index.html#function-grid-theme) は、ユーザーがグリッドのさまざまな側面をスタイル設定できる広範なプロパティを公開します。
 
 以下の手順では、編集モードでグリッドのセルのスタイルを設定する方法と、それらのスタイルの範囲を設定する方法について説明します。
 
@@ -451,19 +451,19 @@ export class MyHGridEventsComponent {
 $white: #fff;
 $blue: #4567bb;
 
-$color-palette: igx-palette($primary: $white, $secondary: $blue);
+$color-palette: palette($primary: $white, $secondary: $blue);
 ```
 
 ### テーマの定義
 
-これで、パレットを使用してテーマを定義できます。セルは [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) によってスタイル設定されているため、それを使用して @@igxName のテーマを生成できます。
+これで、パレットを使用してテーマを定義できます。セルは [`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) によってスタイル設定されているため、それを使用して @@igxName のテーマを生成できます。
 
 ```scss
-$custom-grid-theme: igx-grid-theme(
+$custom-grid-theme: grid-theme(
     $cell-editing-background: $blue,
     $cell-edited-value-color: $white,
     $cell-active-border-color: $white,
-    $edit-mode-color: igx-color($color-palette, "secondary", 200)
+    $edit-mode-color: color($color-palette, "secondary", 200)
 );
 ```
 
@@ -472,7 +472,7 @@ $custom-grid-theme: igx-grid-theme(
 テーマを適用する最も簡単な方法は、グローバル スタイル ファイルに `sass` `@include` ステートメントを使用することです。
 
 ```scss
-@include igx-grid($custom-grid-theme);
+@include grid($custom-grid-theme);
 ```
 
 これにより、テーマはアプリケーションの**すべて**のグリッドに適用されます。このカスタム スタイルを特定のコンポーネントにのみ適用する場合は、テーマのスコープを設定する必要があります。
@@ -491,7 +491,7 @@ $custom-grid-theme: igx-grid-theme(
 ```scss
 :host {
     ::ng-deep {
-            @include igx-grid($custom-grid-theme);
+            @include grid($custom-grid-theme);
         }
     }
 }
@@ -533,15 +533,15 @@ $custom-grid-theme: igx-grid-theme(
 ## API リファレンス
 
 * [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
-* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-grid-theme)
 @@if (igxName !== 'IgxTreeGrid') {* [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)}
 * [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
 * [IgxDatePickerComponent]({environment:angularApiUrl}/classes/igxdatepickercomponent.html)
 * [IgxDatePickerComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-date-picker-theme)
 * [IgxCheckboxComponent]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html)
-* [IgxCheckboxComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-checkbox-theme)
+* [IgxCheckboxComponent スタイル]({environment:sassApiUrl}/index.html#function-checkbox-theme)
 * [IgxOverlay]({environment:angularApiUrl}/interfaces/overlaysettings.html)
-* [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+* [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-overlay-theme)
 
 
 ## その他のリソース

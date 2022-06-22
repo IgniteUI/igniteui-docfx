@@ -1,13 +1,13 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid Summaries| Group Footer | Ignite UI for Angular | Infragistics
+title: Angular Grid Summaries - Ignite UI for Angular
 _description: Configure Angular grid summaries in the group footer of the column and use the option to set custom angular template in the Ignite UI for Angular Material table
 _keywords: angular grid summaries, igniteui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid Summaries| Group Footer | Ignite UI for Angular | Infragistics
+title: Angular Grid Summaries - Ignite UI for Angular
 _description: Configure Аngular grid summaries in the group footer of the column and use the option to set custom angular template in the Ignite UI for Angular Material table
 _keywords: angular grid summaries, ignite ui for angular, infragistics
 _canonicalLink: grid/summaries
@@ -15,14 +15,14 @@ _canonicalLink: grid/summaries
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchical Grid Summaries| Group Footer | Ignite UI for Angular | Infragistics
+title: Angular Grid Summaries - Ignite UI for Angular
 _description: Configure Аngular grid summaries in the group footer of the column and use the option to set custom angular template in the Ignite UI for Angular Material table
 _keywords: angular grid summaries, ignite ui for angular, infragistics
 _canonicalLink: grid/summaries
 ---
 }
 
-# @@igComponent Summaries Overview
+# Angular @@igComponent Summaries
 
 The Angular UI grid in Ignite UI for Angular has a **summaries** feature that functions on a per-column level as group footer. Angular grid summaries is powerful feature which enables the user to see column information in a separate container with a predefined set of default summary items, depending on the type of data within the column or by implementing a custom angular template in the @@igComponent.
 
@@ -489,10 +489,10 @@ To get started with styling the sorting behavior, we need to import the `index` 
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`igx-grid-summary-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-summary-theme) and accepts the `$background-color`, `$focus-background-color`, `$label-color`, `$result-color`, `$pinned-border-width`, `$pinned-border-style` and `$pinned-border-color` parameters.
+Following the simplest approach, we create a new theme that extends the [`grid-summary-theme`]({environment:sassApiUrl}/index.html#function-grid-summary-theme) and accepts the `$background-color`, `$focus-background-color`, `$label-color`, `$result-color`, `$pinned-border-width`, `$pinned-border-style` and `$pinned-border-color` parameters.
 
 ```scss
-$custom-theme: igx-grid-summary-theme(
+$custom-theme: grid-summary-theme(
     $background-color: #e0f3ff,
     $focus-background-color: rgba( #94d1f7, .3 ),
     $label-color: #e41c77,
@@ -505,7 +505,7 @@ $custom-theme: igx-grid-summary-theme(
 The last step is to **include** the component mixins:
 
 ```scss
-@include igx-grid-summary($custom-theme);
+@include grid-summary($custom-theme);
 ```
 
 >[!NOTE]
@@ -514,7 +514,7 @@ The last step is to **include** the component mixins:
  ```scss
 :host {
     ::ng-deep {
-        @include igx-grid-summary($custom-theme);
+        @include grid-summary($custom-theme);
     }
 }
 ```
@@ -529,20 +529,20 @@ Instead of hardcoding the color values like we just did, we can achieve greater 
 $blue-color: #7793b1;
 $green-color: #00ff2d;
 
-$my-custom-palette: igx-palette($primary: $blue-color, $secondary: $green-color);
+$my-custom-palette: palette($primary: $blue-color, $secondary: $green-color);
 ```
 
 And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette.
 
 ```scss
-$custom-theme: igx-grid-summary-theme(
-    $background-color: igx-color($my-custom-palette, "primary", 700),
-    $focus-background-color: igx-color($my-custom-palette, "primary", 800),
-    $label-color: igx-color($my-custom-palette, "secondary", 500),
-    $result-color: igx-color($my-custom-palette, "grays", 900),
+$custom-theme: grid-summary-theme(
+    $background-color: color($my-custom-palette, "primary", 700),
+    $focus-background-color: color($my-custom-palette, "primary", 800),
+    $label-color: color($my-custom-palette, "secondary", 500),
+    $result-color: color($my-custom-palette, "grays", 900),
     $pinned-border-width: 2px,
     $pinned-border-style: dotted,
-    $pinned-border-color: igx-color($my-custom-palette, "secondary", 500)
+    $pinned-border-color: color($my-custom-palette, "secondary", 500)
 );
 ```
 
@@ -581,7 +581,7 @@ $my-custom-schema: extend($light-schema,
 );
 
 // Defining our custom theme with the custom schema
-$custom-theme: igx-grid-summary-theme(
+$custom-theme: grid-summary-theme(
     $palette: $my-custom-palette,
     $schema: $my-custom-schema
 );
@@ -623,8 +623,8 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 ## API References
 
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
-* [@@igxNameSummaries Styles]({environment:sassApiUrl}/index.html#function-igx-grid-summary-theme)
+* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-grid-theme)
+* [@@igxNameSummaries Styles]({environment:sassApiUrl}/index.html#function-grid-summary-theme)
 * [IgxSummaryOperand]({environment:angularApiUrl}/classes/igxsummaryoperand.html)
 * [IgxNumberSummaryOperand]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html)
 * [IgxDateSummaryOperand]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html)

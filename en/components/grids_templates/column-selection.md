@@ -1,22 +1,22 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid Column Selection | Ignite UI for Angular | infragistics
-_description: Learn how to configure column selection with the Angular Material table. The column selection makes grid interactions more appealing than ever.
+title: Angular Grid Column Selection - Ignite UI for Angular
+_description: Learn how to configure column selection with Ignite UI for Angular Data grid. This makes grid interactions much easier and faster than ever.
 _keywords: column selection, igniteui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid Column Selection | Ignite UI for Angular | infragistics
-_description: Learn how to configure column selection with the Angular Material table. The column selection makes Tree Grid interactions more appealing than ever.
+title: Angular Tree Grid Column Selection - Ignite UI for Angular
+_description: Learn how to configure column selection with Ignite UI for Angular Tree grid. This makes grid interactions much easier and faster than ever.
 _keywords: column selection, igniteui for angular, infragistics
 _canonicalLink: grid/column-selection
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchical Grid Column Selection | Ignite UI for Angular | infragistics
-_description: Learn how to configure column selection with the Angular Material table. The column selection makes Hierarchical Grid interaction more appealing than ever.
+title: Angular Hierarchical Grid Column Selection - Ignite UI for Angular
+_description: Learn how to configure column selection with Ignite UI for Angular Hierarchical grid. This makes grid interactions much easier and faster than ever.
 _keywords: column selection, igniteui for angular, infragistics
 _canonicalLink: grid/column-selection
 ---
@@ -109,7 +109,7 @@ Following the simplest approach, let's define our custom **theme**.
 
 @@if (igxName === 'IgxTreeGrid') {
 ```scss
-$custom-grid-theme: igx-grid-theme(
+$custom-grid-theme: grid-theme(
     $row-selected-background: #011627,
     $row-selected-text-color: #ECAA53,
     $row-selected-hover-background: #011627,
@@ -122,7 +122,7 @@ $custom-grid-theme: igx-grid-theme(
 }
 @@if (igxName !== 'IgxTreeGrid') {
 ```scss
-$custom-grid-theme: igx-grid-theme(
+$custom-grid-theme: grid-theme(
     $row-selected-background: #011627,
     $row-selected-text-color: #ECAA53,
     $row-selected-hover-background: #011627,
@@ -131,7 +131,7 @@ $custom-grid-theme: igx-grid-theme(
 );
 ```
 }
-[`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) accepts several parameters but those are the five responsible for changing the appearance of all selected columns:
+[`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) accepts several parameters but those are the five responsible for changing the appearance of all selected columns:
 - **$row-selected-background** - sets the background of the selected fraction.
 - **$row-selected-text-color** - sets the text color of the selected fraction
 - **$row-selected-hover-background** - sets the color of the hovered cell or bunch of cells.
@@ -143,7 +143,7 @@ $custom-grid-theme: igx-grid-theme(
 The last step is to include the custom `igx-grid` theme.
 
 ```scss
-@include igx-css-vars($custom-grid-theme)
+@include css-vars($custom-grid-theme)
 ```
 
 ### Overriding the Base Theme
@@ -155,7 +155,7 @@ In order to style components for Internet Explorer 11, we have to use a differen
 ```scss
 :host {
     ::ng-deep {
-        @include igx-grid($custom-column-selection-theme);
+        @include grid($custom-column-selection-theme);
     }
 }
 ```
@@ -178,7 +178,7 @@ The column selection UI has a few more APIs to explore, which are listed below.
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [IgxColumnGrpupComponent]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html)
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-grid-theme)
 
 [`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) properties:
 * [columnSelection]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnselection)

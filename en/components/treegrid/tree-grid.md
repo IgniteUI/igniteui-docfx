@@ -126,14 +126,14 @@ In addition, we will disable the automatic column generation and define them man
 </igx-tree-grid>
 ```
 
-We will now enable the row selection and paging features of the tree grid by using the [`rowSelectable`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#rowselectable) and the [`paging`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#paging) properties.
+We will now enable the row selection and paging features of the tree grid by using the [`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection) and the [`paging`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#paging) properties.
 We will also enable the summaries feature on the first column and the filtering, sorting, editing, moving and resizing features for each of our columns.
 
 ```html
 <!--treeGridSample.component.html-->
 
 <igx-tree-grid #treeGrid [data]="localData" childDataKey="Employees"
-               [autoGenerate]="false" [rowSelectable]="true" [allowFiltering]="true" [moving]="true">
+               [autoGenerate]="false" [rowSelection]="'multiple'" [allowFiltering]="true" [moving]="true">
     <igx-column field="Name" dataType="string" [sortable]="true" [editable]="true" [resizable]="true"
                 [hasSummary]="true"></igx-column>
     <igx-column field="HireDate" dataType="date" [sortable]="true" [editable]="true" [resizable]="true"></igx-column>
@@ -149,7 +149,7 @@ Finally, we will enable the toolbar of our tree grid, along with the column hidi
 <!--treeGridSample.component.html-->
 
 <igx-tree-grid #treeGrid [data]="localData" childDataKey="Employees"
-               [autoGenerate]="false" [rowSelectable]="true" [allowFiltering]="true" [moving]="true">
+               [autoGenerate]="false" [rowSelection]="'multiple'" [allowFiltering]="true" [moving]="true">
     <igx-grid-toolbar>
             <igx-grid-toolbar-title>Employees</igx-grid-toolbar-title>
             <igx-grid-toolbar-actions>
@@ -220,13 +220,13 @@ Here is the template of the component which demonstrates how to configure the tr
 </igx-tree-grid>
 ```
 
-In addition we will enable the row selection feature of the tree grid by using the [`rowSelectable`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#rowselectable) property and also the filtering, sorting, editing, moving and resizing features for each of our columns.
+In addition we will enable the row selection feature of the tree grid by using the [`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection) property and also the filtering, sorting, editing, moving and resizing features for each of our columns.
 
 ```html
 <!--treeGridSample.component.html-->
 
 <igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID"
-    [autoGenerate]="false" [rowSelectable]="true" [allowFiltering]="true" [moving]="true">
+    [autoGenerate]="false" [rowSelection]="'multiple'" [allowFiltering]="true" [moving]="true">
     <igx-column field="Name" dataType="string" [sortable]="true" [editable]="true" [resizable]="true"></igx-column>
     <igx-column field="JobTitle" dataType="string" [sortable]="true" [editable]="true" [resizable]="true"></igx-column>
     <igx-column field="Age" dataType="number" [sortable]="true" [editable]="true" [resizable]="true"></igx-column>
@@ -258,7 +258,7 @@ See the [Grid Sizing](sizing.md) topic.
 
 ## Angular Tree Grid Styling
 
-The Tree Grid allows styling through the [Ignite UI for Angular Theme Library](../themes/sass/component-themes.md). The tree grid's [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) exposes a wide variety of properties, which allows the customization of all the tree grid's features.
+The Tree Grid allows styling through the [Ignite UI for Angular Theme Library](../themes/sass/component-themes.md). The tree grid's [theme]({environment:sassApiUrl}/index.html#function-grid-theme) exposes a wide variety of properties, which allows the customization of all the tree grid's features.
 
 To get started with styling the Tree Grid, we need to import the `index` file, where all the theme functions and component mixins live:
 
@@ -266,13 +266,13 @@ To get started with styling the Tree Grid, we need to import the `index` file, w
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Following the simplest approach, we create a new theme that extends the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) and accepts the parameters, required to customize the tree grid as desired.
+Following the simplest approach, we create a new theme that extends the [`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) and accepts the parameters, required to customize the tree grid as desired.
 
 >[!NOTE]
 >There is no specific `sass` tree grid function.
 
 ```scss
-$custom-theme: igx-grid-theme(
+$custom-theme: grid-theme(
   $cell-active-border-color: #FFCD0F,
   $cell-selected-background: #6F6F6F,
   $row-hover-background: #F8E495,
@@ -289,7 +289,7 @@ $custom-theme: igx-grid-theme(
 The last step is to **include** the component theme in our application.
 
 ```scss
-@include igx-grid($custom-theme);
+@include grid($custom-theme);
 ```
 
 >[!NOTE]
@@ -298,7 +298,7 @@ The last step is to **include** the component theme in our application.
 ```scss
 :host {
     ::ng-deep {
-        @include igx-grid($custom-theme);
+        @include grid($custom-theme);
     }
 }
 ```
@@ -312,23 +312,23 @@ Instead of hardcoding the color values like we just did, we can achieve greater 
 ```scss
 $yellow-color: #FFCD0F;
 $black-color: #494949;
-$custom-palette: igx-palette($primary: $black-color, $secondary: $yellow-color);
+$custom-palette: palette($primary: $black-color, $secondary: $yellow-color);
 ```
 
 And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette.
 
 ```scss
-$custom-theme: igx-grid-theme(
-    $cell-active-border-color: igx-color($custom-palette, "secondary", 500),
-    $cell-selected-background: igx-color($custom-palette, "primary", 300),
-    $row-hover-background: igx-color($custom-palette, "secondary", 100),
-    $row-selected-background: igx-color($custom-palette, "primary", 100),
-    $header-background: igx-color($custom-palette, "primary", 500),
-    $header-text-color: igx-contrast-color($custom-palette, "primary", 500),
-    $expand-icon-color: igx-color($custom-palette, "secondary", 500),
-    $expand-icon-hover-color: igx-color($custom-palette, "secondary", 600),
-    $resize-line-color: igx-color($custom-palette, "secondary", 500),
-    $row-highlight: igx-color($custom-palette, "secondary", 500)
+$custom-theme: grid-theme(
+    $cell-active-border-color: color($custom-palette, "secondary", 500),
+    $cell-selected-background: color($custom-palette, "primary", 300),
+    $row-hover-background: color($custom-palette, "secondary", 100),
+    $row-selected-background: color($custom-palette, "primary", 100),
+    $header-background: color($custom-palette, "primary", 500),
+    $header-text-color:contrast-color($custom-palette, "primary", 500),
+    $expand-icon-color: color($custom-palette, "secondary", 500),
+    $expand-icon-hover-color: color($custom-palette, "secondary", 600),
+    $resize-line-color: color($custom-palette, "secondary", 500),
+    $row-highlight: color($custom-palette, "secondary", 500)
 );
 ```
 
@@ -363,7 +363,7 @@ $my-custom-schema: extend($light-schema, (
 ));
 
 // Defining grid-theme with the global light schema
-$custom-theme: igx-grid-theme(
+$custom-theme: grid-theme(
     $palette: $custom-palette,
     $schema: $my-custom-schema
 );
@@ -429,20 +429,20 @@ platformBrowserDynamic()
 * [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
 * [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent Styles]({environment:sassApiUrl}/#function-igx-grid-theme)
+* [IgxGridComponent Styles]({environment:sassApiUrl}/#function-grid-theme)
 * [IgxBaseTransactionService]({environment:angularApiUrl}/classes/igxbasetransactionservice.html)
 
 ## Theming Dependencies
-* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
-* [IgxInputGroup Theme]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
-* [IgxChip Theme]({environment:sassApiUrl}/index.html#function-igx-chip-theme)
-* [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
-* [IgxButton Theme]({environment:sassApiUrl}/index.html#function-igx-button-theme)
-* [IgxOverlay Theme]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
-* [IgxDropDown Theme]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme)
-* [IgxCalendar Theme]({environment:sassApiUrl}/index.html#function-igx-calendar-theme)
-* [IgxSnackBar Theme]({environment:sassApiUrl}/index.html#function-igx-snackbar-theme)
-* [IgxBadge Theme]({environment:sassApiUrl}/index.html#function-igx-badge-theme)
+* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxInputGroup Theme]({environment:sassApiUrl}/index.html#function-input-group-theme)
+* [IgxChip Theme]({environment:sassApiUrl}/index.html#function-chip-theme)
+* [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-ripple-theme)
+* [IgxButton Theme]({environment:sassApiUrl}/index.html#function-button-theme)
+* [IgxOverlay Theme]({environment:sassApiUrl}/index.html#function-overlay-theme)
+* [IgxDropDown Theme]({environment:sassApiUrl}/index.html#function-drop-down-theme)
+* [IgxCalendar Theme]({environment:sassApiUrl}/index.html#function-calendar-theme)
+* [IgxSnackBar Theme]({environment:sassApiUrl}/index.html#function-snackbar-theme)
+* [IgxBadge Theme]({environment:sassApiUrl}/index.html#function-badge-theme)
 
 
 ## Additional Resources

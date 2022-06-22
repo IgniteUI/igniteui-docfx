@@ -1,6 +1,6 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid サイズ変更 | Ignite UI for Angular | インフラジスティックス 
+title: Angular Grid のサイズ変更 - Ignite UI for Angular
 _description: Angular グリッドのサイズ設定がどのように機能するかを理解し、ユーザーが遭遇するさまざまな状況に対応するために幅と高さを使用する方法を学びます。
 _keywords: angular grid sizing, igniteui for angular, infragistics, グリッド, サイズ変更,
 _language: ja
@@ -8,7 +8,7 @@ _language: ja
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid サイズ変更 | Ignite UI for Angular | インフラジスティックス 
+title: Angular Tree Grid のサイズ変更 - Ignite UI for Angular 
 _description: Angular グリッドのサイズ設定がどのように機能するかを理解し、ユーザーが遭遇するさまざまな状況に対応するために幅と高さを使用する方法を学びます。
 _keywords: angular grid sizing, igniteui for angular, infragistics, グリッド, サイズ変更,
 _language: ja
@@ -16,14 +16,14 @@ _language: ja
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchical Grid サイズ変更 | Ignite UI for Angular | インフラジスティックス 
+title: Angular Hierarchical Grid のサイズ変更 - Ignite UI for Angular 
 _description: Angular グリッドのサイズ設定がどのように機能するかを理解し、ユーザーが遭遇するさまざまな状況に対応するために幅と高さを使用する方法を学びます。
 _keywords: angular grid sizing, igniteui for angular, infragistics, グリッド, サイズ変更,
 _language: ja
 ---
 }
 
-# グリッド サイズ変更の概要
+# Angular Grid Sizing
 
 [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) はサイズ変更する方法が多数あり、ユーザーのさまざまな状況に対応できます。方法は簡単なものから複雑なものまでさまざまです。それぞれを取り上げて、より詳しく説明します。パーセンテージを使用する場合など、いくつかの違いがあるため、`width` と `height` は別々に設定します。
 
@@ -173,7 +173,7 @@ _language: ja
 
 ## 列幅の変更
 
-グリッドのサイズに応じてグリッド内の列サイズも変わるため、グリッドはサイズに基づいて水平スクロールバーをレンダリングするかどうかを決定します。  列の幅は、ピクセル、パーセンテージ、または何も設定されていない場合は自動サイズに設定できます。このセクションでは、これらの状況について詳しく見ていきます。
+グリッドのサイズに応じてグリッド内の列サイズも変わるため、グリッドはサイズに基づいて水平スクロールバーをレンダリングするかどうかを決定します。 列の幅は、ピクセル、パーセンテージ、または何も設定されていない場合は自動サイズに設定できます。このセクションでは、これらの状況について詳しく見ていきます。
 
 ### 既定
 
@@ -266,7 +266,7 @@ _language: ja
 
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 @@if (igxName !== 'IgxTreeGrid') {* [IgxGridRow API]({environment:angularApiUrl}/classes/igxgridrow.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRow API]({environment:angularApiUrl}/classes/igxtreegridrow.html)}
-* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-grid-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

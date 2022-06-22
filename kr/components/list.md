@@ -587,15 +587,15 @@ Finally, we need to apply the filtering pipe to our contacts data before we can 
 In this article we covered a lot of ground with the list component. We created a list of contact items. Used some additional Ignite UI for Angular components inside our list items, like avatars and icons. Created some custom item layout and styled it. Finally, we added list filtering. The list component has a few more APIs to explore, which are listed below.
 
 * [IgxListComponent API]({environment:angularApiUrl}/classes/igxlistcomponent.html)
-* [IgxListComponent Styles]({environment:sassApiUrl}/index.html#function-igx-list-theme)
+* [IgxListComponent Styles]({environment:sassApiUrl}/index.html#function-list-theme)
 * [IgxListItemComponent API]({environment:angularApiUrl}/classes/igxlistitemcomponent.html)
 
 Additional components that were used:
 
 * [IgxAvatarComponent API]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
-* [IgxAvatarComponent Styles]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
+* [IgxAvatarComponent Styles]({environment:sassApiUrl}/index.html#function-avatar-theme)
 * [IgxIconComponent API]({environment:angularApiUrl}/classes/igxiconcomponent.html)
-* [IgxIconComponent Styles]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxIconComponent Styles]({environment:sassApiUrl}/index.html#function-icon-theme)
 
 <div class="divider"></div>
 

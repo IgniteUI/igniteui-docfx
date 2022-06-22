@@ -278,7 +278,7 @@ For more detailed information regarding the TextHighlight directive's API, refer
 Additional components that were used:
 
 * [`IgxInputGroupComponent`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
-* [`IgxInputGroupComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
+* [`IgxInputGroupComponent Styles`]({environment:sassApiUrl}/index.html#function-input-group-theme)
 <div class="divider"></div>
 
 ### Additional Resources

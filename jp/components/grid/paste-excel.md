@@ -1,11 +1,11 @@
 ---
-title: Excel からの貼り付け | 選択したデータのエクスポート| Ignite UI for Angular | インフラジスティックス 
+title: Angular Excel スタイルのような Grid - Excel から貼り付け  - インフラジスティックス 
 _description: API を使用して最小限のコードで Excel からのデータ貼り付けや選択したグリッド データを簡単にエクスポートできます。
 _keywords: export selected, igniteui for angular, infragistics
 _language: ja
 ---
 
-# Excel からのグリッドの貼り付け
+# Angular Grid - Excel から貼り付け
 
 Ignite UI for Angular [`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) は、クリップボードにコピーした Excel データを読み込むことができます。このトピックでは、カスタムコードを使用して実装する方法について説明します。
 
@@ -137,7 +137,7 @@ Ignite UI for Angular [`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcom
 
 ## 貼り付けハンドラー ディレクディブ
 
-`paste-handler` 実装です。 クリップボードから張り付けたデータを受け取るために使用される DOM `textarea` 要素をコードで作成します。データを `textarea` に張り付ける際にディレクティブはそれを配列へ解析し、解析データを渡すカスタム イベント `onDataProcessed` を発生します。
+`paste-handler` 実装です。クリップボードから張り付けたデータを受け取るために使用される DOM `textarea` 要素をコードで作成します。データを `textarea` に張り付ける際にディレクティブはそれを配列へ解析し、解析データを渡すカスタム イベント `onDataProcessed` を発生します。
 
 ```typescript
 import { Directive, EventEmitter, HostListener, Output} from "@angular/core";

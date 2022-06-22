@@ -7,57 +7,6 @@ _language: ja
 
 # Ignite UI for Angular を使用した作業の開始
 
-Ignite UI for Angular は、最新のデスクトップ ブラウザー対応の高パフォーマンス HTML 5 および TypeScript アプリケーションを構築するために設計された Angular コンポーネントのコンプリート セットです。
-
-> [!NOTE]
-> この [GitHub](https://github.com/IgniteUI/igniteui-angular-examples/tree/master/samples) リポジトリから Ignite UI for Angular を使用した Angular プロジェクトの例を取得するか、新しい Angular プロジェクトを作成する方法について次の手順に従うことができます。
-
-<!-- Angular, React, WebComponents -->
-
-## コンピューターのセットアップ
-
-Ignite UI for Angular を実行する前に、Ignite UI for Angular を含むすべての Angular アプリケーションを実行するためにシステムでセットアップする必要のあるステップが 2 つあります。最初にシステムに NodeJS と Visual Studio Code をインストールします。Angular を使用した最新の Web 開発には NodeJS が必要で、これはブラウザーで実行されている ASP.NET アプリケーションのようなもので、サーバーに ASP.NET ランタイムを配備する必要があります。また Angular アプリケーションを構築するための開発環境は、Visual Studio Code が最も適しているため、作業を開始する前に Node.js と Visual Studio Code をインストールします。
-
-<div style="display:block;width:100%;margin:50px;">
-    <div style="display:inline-block;width:45%;text-align:center;">
-      <img src="../images/general/nodejs.svg"
-           style="display:flex;max-height:100px;margin:auto auto 20px auto;" />
-      <a target="_blank" href="https://nodejs.org/en/download/"
-         style="color:white;background-color:#09f;text-decoration:none;font-weight:700;font-size:16px;padding: 5px 25px 5px 15px;">
-        DOWNLOAD NODE JS
-      </a>
-    </div>
-    <div style="display:inline-block;width:45%;text-align:center;">
-      <img src="../images/general/vs-code.svg"
-           style="display:flex;max-height:100px;margin:auto auto 20px auto;" />
-      <a target="_blank" href="https://code.visualstudio.com/download"
-         style="color:white;background-color:#09f;text-decoration:none;font-weight:700;font-size:16px;padding: 5px 25px 5px 15px;">
-        DOWNLOAD VS CODE
-      </a>
-    </div>
-</div>
-
-<!-- commented out because this section is present in the "Updating Existing App"
-You need to open Angular app in **VS Code** and install the following packages for Ignite UI for Angular using these commands:
-
-- **npm install --save igniteui-angular-charts igniteui-angular-core**
-- **npm install --save igniteui-angular-excel igniteui-angular-core**
-- **npm install --save igniteui-angular-gauges igniteui-angular-core**
-- **npm install --save igniteui-angular-grids igniteui-angular-core**
-- **npm install --save igniteui-angular-maps igniteui-angular-core**
-- **npm install --save igniteui-angular-spreadsheet igniteui-angular-core**
-
-Or
-
-- **yarn add igniteui-angular-charts igniteui-angular-core**
-- **yarn add igniteui-angular-excel igniteui-angular-core**
-- **yarn add igniteui-angular-gauges igniteui-angular-core**
-- **yarn add igniteui-angular-grids igniteui-angular-core**
-- **yarn add igniteui-angular-maps igniteui-angular-core**
-- **yarn add igniteui-angular-spreadsheet igniteui-angular-core**
-
-Lastly,  -->
-
 <!-- Angular, React -->
 
 ## 既存アプリの更新

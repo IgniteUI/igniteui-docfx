@@ -273,9 +273,9 @@ Using the [Ignite UI for Angular Theming](themes/index.md), we can greatly alter
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [igx-tree-theme]({environment:sassApiUrl}/index.html#function-igx-tree-theme) and pass the parameters, which we would like to change: 
+Following the simplest approach, we create a new theme that extends the [tree-theme]({environment:sassApiUrl}/index.html#function-tree-theme) and pass the parameters, which we would like to change: 
 ```scss
-$custom-tree-theme: igx-tree-theme(
+$custom-tree-theme:tree-theme(
     $background-selected: #ffe6cc,
     $background-active: #ecaa53,
     $background-active-selected: #ff8c1a
@@ -287,7 +287,7 @@ $custom-tree-theme: igx-tree-theme(
 The last step is to include the component's theme.
 ```scss
 :host {
-    @include igx-css-vars($custom-tree-theme);
+    @include css-vars($custom-tree-theme);
 }
 ```
 
@@ -299,7 +299,7 @@ If the component is using the [Emulated](themes/sass/component-themes.md#view-en
 ```scss
 :host {
     ::ng-deep {
-        @include igx-tree($custom-tree-theme);    
+        @include tree($custom-tree-theme);    
     }
 }
 ```

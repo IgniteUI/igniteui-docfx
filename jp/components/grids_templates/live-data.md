@@ -1,6 +1,6 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Grid ライブ データ - ネイティブ Angular | Ignite UI for Angular | インフラジスティックス
+title: Angular Data Grid のライブ データ更新 - Ignite UI for Angular
 _description: Ignite UI for Angular Data Grid が、ユーザーの操作に応答し続けている間、1 秒あたり数千の更新を処理する方法を確認します。
 _keywords: angular データ グリッド, angular グリッド更新, angular ライブ データ
 _language: ja
@@ -9,14 +9,14 @@ _language: ja
 
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Tree Grid ライブ データ - ネイティブ Angular | Ignite UI for Angular | インフラジスティックス
+title: Angular Tree Grid のライブ データ更新 - Ignite UI for Angular
 _description: Ignite UI for Angular Tree Grid が、ユーザーの操作に応答し続けている間、1 秒あたり数千の更新を処理する方法を確認します。
 _keywords: angular データ グリッド, angular グリッド更新, angular ライブ データ
 _language: ja
 ---
 }
 
-# Data @@igComponent ライブ更新
+# Angular @@igComponent のライブ データ更新
 @@igComponent コンポーネントは、ユーザーの操作に応答し続けている間、1 秒あたり数千の更新を処理できます。
 
 ## Angular ライブ データ更新の例
@@ -120,7 +120,7 @@ this.hubConnection.invoke('updateparameters', frequency, volume, live, updateAll
 
 ## API リファレンス
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent スタイル]({environment:sassApiUrl}/#function-igx-grid-theme)
+* [IgxGridComponent スタイル]({environment:sassApiUrl}/#function-grid-theme)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html)
 * [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)
@@ -163,7 +163,7 @@ this.hubConnection.invoke('updateparameters', frequency, volume, live, updateAll
 * [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
 * [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent スタイル]({environment:sassApiUrl}/#function-igx-grid-theme)
+* [IgxGridComponent スタイル]({environment:sassApiUrl}/#function-grid-theme)
 * [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
 * [IgxBaseTransactionService]({environment:angularApiUrl}/classes/igxbasetransactionservice.html)
 

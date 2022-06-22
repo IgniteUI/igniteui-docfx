@@ -1,28 +1,28 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid Column Moving | Column Order | Ignite UI for Angular | infragistics
-_description: Set custom column order of the Ignite UI for Angular Material table by using the column drag feature of the Angular UI grid with the usage of mouse/touch gestures, or by using the Column Moving API.
+title: Column Reordering & Moving in Angular Data Grid - Infragistics
+_description: Set custom column order & enable columns reordering via drag/drop mouse or touch gestures, or by using the Angular Column Moving API. Try Ignite UI for Angular!
 _keywords: column order, igniteui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Grid Column Moving | Column Order | Ignite UI for Angular | infragistics
-_description: Set custom column order of the Ignite UI for Angular Material table by using the column drag feature of the Angular UI grid with the usage of mouse/touch gestures, or by using the Column Moving API.
+title: Column Reordering & Moving in Angular Tree Grid - Infragistics
+_description: Set custom column order & enable columns reordering via drag/drop mouse or touch gestures, or by using the Angular Column Moving API. Try Ignite UI for Angular!
 _keywords: column order, igniteui for angular, infragistics
 _canonicalLink: grid/column-moving
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Grid Column Moving | Column Order | Ignite UI for Angular | infragistics
-_description: Set custom column order of the Ignite UI for Angular Material table by using the column drag feature of the Angular UI grid with the usage of mouse/touch gestures, or by using the Column Moving API.
+title: Column Reordering & Moving in Angular Hierarchical Grid - Infragistics
+_description: Set custom column order & enable columns reordering via drag/drop mouse or touch gestures, or by using the Angular Column Moving API. Try Ignite UI for Angular!
 _keywords: column order, igniteui for angular, infragistics
 _canonicalLink: grid/column-moving
 ---
 }
 
-# @@igComponent Column Moving Overview
+# @@igComponent Column Reordering & Moving
 
 The @@igComponent component in Ignite UI for Angular provides the **Column Moving** feature to allow columns reordering via standard drag/drop mouse or touch gestures, or by using the Column Moving API. Column moving works both with pinned and unpinned columns and with Multi-column Headers. Moving a column into the pinned area pins the column and vice versa, moving a column outside of the pinned area unpins the column.
 
@@ -184,11 +184,11 @@ To get started with styling the @@igComponent column moving headers, we need to 
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) and accepts the `$ghost-header-background`, `$ghost-header-text-color` and the `$ghost-header-icon-color` parameters.
+Following the simplest approach, we create a new theme that extends the [`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) and accepts the `$ghost-header-background`, `$ghost-header-text-color` and the `$ghost-header-icon-color` parameters.
 
 ```scss
 // Define dark theme for the column moving
-$dark-grid-column-moving-theme: igx-grid-theme(
+$dark-grid-column-moving-theme: grid-theme(
     $ghost-header-text-color: #F4D45C,
     $ghost-header-background: #575757,
     $ghost-header-icon-color: #f4bb5c
@@ -198,7 +198,7 @@ $dark-grid-column-moving-theme: igx-grid-theme(
 The last step is to **include** the component mixins with its respective theme:
 
 ```scss
-@include igx-grid($dark-grid-column-moving-theme);
+@include grid($dark-grid-column-moving-theme);
 ```
 
 > [!NOTE]
@@ -207,7 +207,7 @@ The last step is to **include** the component mixins with its respective theme:
 ```scss
 :host {
     ::ng-deep {
-        @include igx-grid($dark-grid-column-moving-theme);
+        @include grid($dark-grid-column-moving-theme);
     }
 }
 ```
@@ -222,23 +222,23 @@ Instead of hardcoding the color values like we just did, we can achieve greater 
 $yellow-color: #F4D45C;
 $black-color: #575757;
 
-$dark-palette: igx-palette($primary: $yellow-color, $secondary: $black-color);
+$dark-palette: palette($primary: $yellow-color, $secondary: $black-color);
 ```
 
 And then with [**igx-color**]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the pallete.
 
 ```scss
-$dark-grid-column-moving-theme: igx-grid-theme(
+$dark-grid-column-moving-theme: grid-theme(
     $palette: $dark-palette,
-    $ghost-header-text-color: igx-color($dark-palette, "primary", 400),
-    $ghost-header-background: igx-color($dark-palette, "secondary", 200),
-    $ghost-header-icon-color:  igx-color($dark-palette, "primary", 500)
+    $ghost-header-text-color: color($dark-palette, "primary", 400),
+    $ghost-header-background: color($dark-palette, "secondary", 200),
+    $ghost-header-icon-color: color($dark-palette, "primary", 500)
 );
 ```
 
 
 > [!NOTE]
-> The igx-color and igx-palette are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](/components/themes/palettes.html) topic for detailed guidance on how to use them.
+> Thecolor andpalette are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](/components/themes/palettes.html) topic for detailed guidance on how to use them.
 
 ### Using Schemas
 
@@ -251,13 +251,13 @@ Extend one of the two predefined schemas, that are provided for every component,
 $dark-grid-column-moving-schema: extend($_light-grid,
         (
             ghost-header-text-color:(
-                igx-color: ("primary", 400)
+               color: ("primary", 400)
             ),
             ghost-header-background:(
-                igx-color: ("secondary", 200)
+               color: ("secondary", 200)
             ),
             ghost-header-icon-color:(
-                igx-color:( "primary", 500)
+               color:( "primary", 500)
             )
         )
 );
@@ -272,7 +272,7 @@ $custom-light-schema: extend($light-schema,(
 ));
 
 // Defining dark-grid-theme with the global dark schema
-$dark-grid-column-moving-theme: igx-grid-theme(
+$dark-grid-column-moving-theme: grid-theme(
   $palette: $dark-palette,
   $schema: $custom-light-schema
 );
