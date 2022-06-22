@@ -93,7 +93,7 @@ export class AppModule {}
 @@if (igxName === 'IgxTreeGrid') {
 ```html
 <igx-tree-grid #treeGrid [data]="data" [primaryKey]="EmployeID" [foreignKey]="PID" width ="100%"
-               height ="500px" [moving]="true" [rowEditable]="true" [rowSelectable]="true">
+               height ="500px" [moving]="true" [rowEditable]="true" [rowSelection]="'multiple'">
     <igx-column *ngFor="let c of columns"
         [editable] ="c.editable"
         [field]="c.field"
