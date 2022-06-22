@@ -2,7 +2,7 @@
 title: Angular Map | Data Visualization Tools | Scatter Area Series | Data Binding | Infragistics
 _description: Use Infragistics Angular map's scatter area series to draw a colored area surface based on a triangulation of longitude and latitude data with a numeric value assigned to each point. Learn more about Ignite UI for Angular map's series!
 _keywords: Angular map, scatter area series, Ignite UI for Angular, Infragistics
-mentionedTypes: ['XamGeographicMap','GeographicScatterAreaSeries','CustomPaletteColorScale']
+mentionedTypes: ['XamGeographicMap','GeographicScatterAreaSeries','CustomPaletteColorScale', 'Series']
 ---
 
 # Angular Using Scatter Area Series
@@ -175,3 +175,16 @@ export class MapTypeScatterAreaSeriesComponent implements AfterViewInit {
 }
 }
 ```
+
+## API Members
+
+-   [`colorMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicscatterareaseriescomponent.html#colormemberpath)
+-   [`colorScale`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicscatterareaseriescomponent.html#colorscale)
+-   [`IgxCustomPaletteColorScaleComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcustompalettecolorscalecomponent.html)
+-   [`IgxGeographicContourLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographiccontourlineseriescomponent.html)
+-   [`IgxGeographicScatterAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicscatterareaseriescomponent.html)
+-   `ItemsSource`
+-   [`latitudeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicxytriangulatingseriescomponent.html#latitudememberpath)
+-   [`longitudeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicxytriangulatingseriescomponent.html#longitudememberpath)
+-   [`trianglesSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicxytriangulatingseriescomponent.html#trianglessource)
+-   `TriangulationSource`

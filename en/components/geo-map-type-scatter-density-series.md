@@ -2,7 +2,7 @@
 title: Angular Map | Data Visualization Tools | Scatter High Density Series | Data Binding | Infragistics
 _description: Use Infragistics Angular map's scatter high density series to bind and show scatter data ranging from hundreds to millions of data points requiring exceedingly little loading time. Learn more about Ignite UI for Angular map's series!
 _keywords: Angular map, scatter high density series, Ignite UI for Angular, Infragistics
-mentionedTypes: ['XamGeographicMap']
+mentionedTypes: ['XamGeographicMap', 'Series']
 ---
 
 # Angular Using Scatter High Density Series
@@ -141,3 +141,13 @@ export class MapTypeScatterDensitySeriesComponent implements AfterViewInit {
     }
 }
 ```
+
+## API Members
+
+-   [`IgxGeographicHighDensityScatterSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html)
+-   [`IgxGeographicHighDensityScatterSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html)
+-   [`heatMaximumColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html#heatmaximumcolor)
+-   [`heatMinimumColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html#heatminimumcolor)
+-   `ItemsSource`
+-   [`latitudeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html#latitudememberpath)
+-   [`longitudeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html#longitudememberpath)

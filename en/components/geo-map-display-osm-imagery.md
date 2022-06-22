@@ -53,3 +53,8 @@ public map: IgxGeographicMapComponent;
 const tileSource = new IgxOpenStreetMapImagery();
 this.map.backgroundContent = tileSource;
 ```
+
+## API Members
+
+-   `BackgroundContent`
+-   [`IgxOpenStreetMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxopenstreetmapimagery.html)

@@ -2,7 +2,7 @@
 title: Angular Line Chart and Graph | Ignite UI for Angular
 _description: The Angular Line chart is capable of handling high volumes of data, ranging into millions of data points, and updating them every few milliseconds. Try for FREE.
 _keywords: Angular Charts, Line Chart, Line Graph, Infragistics
-mentionedTypes: ["CategoryChart", "XamDataChart", "Legend", "PolarLineSeries", "RadialLineSeries", "StackedLineSeries", "Stacked100LineSeries"]
+mentionedTypes: ["DomainChart", "CategoryChart", "XamDataChart", "Legend", "PolarLineSeries", "RadialLineSeries", "StackedLineSeries", "Stacked100LineSeries", 'Series']
 namespace: Infragistics.Controls.Charts
 ---
 

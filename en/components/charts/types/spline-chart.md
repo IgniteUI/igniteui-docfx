@@ -2,7 +2,7 @@
 title: Angular Spline Chart | Data Visualization | Infragistics
 _description: Infragistics' Angular Spline Chart
 _keywords: Angular Charts, Spline Chart, Infragistics
-mentionedTypes: ["CategoryChart", "XamDataChart", "SplineSeries", "StackedSplineSeries", "Stacked100SplineSeries"]
+mentionedTypes: ["DomainChart", "CategoryChart", "XamDataChart", "SplineSeries", "StackedSplineSeries", "Stacked100SplineSeries", 'Series']
 ---
 
 # Angular Spline Chart

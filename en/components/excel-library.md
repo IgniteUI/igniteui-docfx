@@ -153,3 +153,9 @@ Modify `angular.json` by setting the `vendorSourceMap` option under architect =>
 ```
 
 <!-- -->
+
+## API Members
+
+-   `Load`
+-   `WorkbookInProcessRuntime`
+-   [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html)
