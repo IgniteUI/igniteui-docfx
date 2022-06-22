@@ -129,14 +129,14 @@ IgxTreeGridComponent を階層にバインドするには、[`childDataKey`]({en
 </igx-tree-grid>
 ```
 
-[`rowSelectable`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#rowselectable) と [`paging`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#paging) を使用してツリー グリッドの行選択とページング機能を有効にします。
+[`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection) を使用してツリー グリッドの行選択とページング機能を有効にします。
 最初の列に集計機能、各列にはフィルタリング、ソート、編集、サイズ変更機能を有効にします。
 
 ```html
 <!--treeGridSample.component.html-->
 
 <igx-tree-grid #treeGrid [data]="localData" childDataKey="Employees"
-               [autoGenerate]="false" [rowSelectable]="true" [allowFiltering]="true" [moving]="true">
+               [autoGenerate]="false" [rowSelection]="'multiple'" [allowFiltering]="true" [moving]="true">
     <igx-column field="Name" dataType="string" [sortable]="true" [editable]="true" [resizable]="true"
                 [hasSummary]="true"></igx-column>
     <igx-column field="HireDate" dataType="date" [sortable]="true" [editable]="true" [resizable]="true"></igx-column>
@@ -152,7 +152,7 @@ IgxTreeGridComponent を階層にバインドするには、[`childDataKey`]({en
 <!--treeGridSample.component.html-->
 
 <igx-tree-grid #treeGrid [data]="localData" childDataKey="Employees"
-               [autoGenerate]="false" [rowSelectable]="true" [allowFiltering]="true" [moving]="true">
+               [autoGenerate]="false" [rowSelection]="'multiple'" [allowFiltering]="true" [moving]="true">
     <igx-grid-toolbar>
             <igx-grid-toolbar-title>Employees</igx-grid-toolbar-title>
             <igx-grid-toolbar-actions>
@@ -223,13 +223,13 @@ export class MyComponent implements OnInit {
 </igx-tree-grid>
 ```
 
-更に [`rowSelectable`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#rowselectable) プロパティを使用してツリーグリッドの行選択機能、および各列でフィルタリング、ソート、編集、移動、サイズ変更機能を有効にします。
+更に [`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection) プロパティを使用してツリーグリッドの行選択機能、および各列でフィルタリング、ソート、編集、移動、サイズ変更機能を有効にします。
 
 ```html
 <!--treeGridSample.component.html-->
 
 <igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID"
-    [autoGenerate]="false" [rowSelectable]="true" [allowFiltering]="true" [moving]="true">
+    [autoGenerate]="false" [rowSelection]="'multiple'" [allowFiltering]="true" [moving]="true">
     <igx-column field="Name" dataType="string" [sortable]="true" [editable]="true" [resizable]="true"></igx-column>
     <igx-column field="JobTitle" dataType="string" [sortable]="true" [editable]="true" [resizable]="true"></igx-column>
     <igx-column field="Age" dataType="number" [sortable]="true" [editable]="true" [resizable]="true"></igx-column>
