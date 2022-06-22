@@ -1,29 +1,29 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular 複数列ヘッダー | Ignite UI for Angular | インフラジスティックス
-_description: Ignite UI Material UI グリッドを使用して列ヘッダーを共通の階層ヘッダーの下に配置し、それらを複数のヘッダーに結合することで、列ヘッダーのグループ化を開始します。
+title: Angular の複数列ヘッダー - Ignite UI for Angular
+_description: Ignite UI for Angular グリッドを使用して列ヘッダーを共通の階層ヘッダーの下に配置し、それらを複数のヘッダーに結合することで、列ヘッダーのグループ化を開始します。
 _keywords: column headers, ignite ui for angular, infragistics
 _language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular 複数列ヘッダー | Ignite UI for Angular の | インフラジスティックス
-_description: Ignite UI Material UI グリッドを使用して列ヘッダーを共通の階層ヘッダーの下に配置し、それらを複数のヘッダーに結合することで、列ヘッダーのグループ化を開始します。
+title: Angular の複数列ヘッダー - Ignite UI for Angular
+_description: SIgnite UI for Angular グリッドを使用して列ヘッダーを共通の階層ヘッダーの下に配置し、それらを複数のヘッダーに結合することで、列ヘッダーのグループ化を開始します。
 _keywords: column headers, ignite ui for angular, infragistics
 _language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular 複数列ヘッダー | Ignite UI for Angular | インフラジスティックス
-_description: Ignite UI Material UI グリッドを使用して列ヘッダーを共通の階層ヘッダーの下に配置し、それらを複数のヘッダーに結合することで、列ヘッダーのグループ化を開始します。
+title: Angular の複数列ヘッダー - Ignite UI for Angular
+_description: Ignite UI for Angular グリッドを使用して列ヘッダーを共通の階層ヘッダーの下に配置し、それらを複数のヘッダーに結合することで、列ヘッダーのグループ化を開始します。
 _keywords: 列ヘッダー, ignite ui for angular, infragistics
 _language: ja
 ---
 }
 
-# @@igComponent 複数列ヘッダーの概要
+# Angular @@igComponent 複数列ヘッダーの概要
 
 [`@@igxName`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) は、共通の列ヘッダー下で行のグループ化が可能な`複数列ヘッダー`をサポートします。各複数列ヘッダーグループは、マテリアル UI グリッド内でその他複数のグループや列を組み合わせることができます。
 
@@ -145,6 +145,7 @@ _language: ja
 各 [`igx-column-group`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html) は、[`移動`](column-moving.md)、[`ピン固定`](column-pinning.md) と [`非表示`](column-hiding.md) をサポートします。
 > [!NOTE]
 > 列セットと列グループがある場合、ピン固定は列の一番上の親レベルでのみ可能です。ネストした `column groups` や `columns` のピン固定はできません。<br />
+> 複数列ヘッダーでのピン固定を使用すると、グループ全体がピン固定されることに注意してください。<br />
 > `columns` と `column groups` 間の移動は、階層の同じレベルで同じ `group` の場合のみです。<br />
 > `columns/column-groups` が現在の `group` でラップされない場合 (**一番上のレベル** `columns` の場合)、表示列全体の移動はできません。
 
@@ -183,6 +184,7 @@ _language: ja
             <igx-column field="ContactTitle" sortable="true" resizable="true"></igx-column>
         </igx-column-group>
     </igx-column-group>
+    ...
 </igx-hierarchical-grid>
 ```
 }

@@ -41,12 +41,20 @@ To update the **Angular CLI** package use the following command:
 ng update @angular/cli
 ```
 
+>[!NOTE]
+> If the `ng update` command fails because of package dependency mismatches, then revert the update, delete the `node_modules` folder and rerun the update with `--force` flag.
+
 ## Additional manual changes
 
 
 Unfortunately not all changes can be automatically updated. Changes below are split into sections as they occur in the versions, so if any updates are required you should start from your current version and apply further updates from bottom to top.
 
 For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from the "From 6.x .." section apply those changes and work your way up:
+
+## From 13.1.x to 13.2.x
+
+### Themes
+- **Breaking Change** - All RTL specific stylesheets have been removed. Ignite UI themes now support RTL directon by default. Users who have previously used `*-rtl.css` specific themes must switch to the regular theme files.
 
 ## From 13.0.x to 13.1.x
 

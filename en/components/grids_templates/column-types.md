@@ -1,26 +1,26 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid Column Types | Data Types | Ignite UI for Angular | Infragistics
-_description: Start using the predefined column types of Angular UI Grid, set any of the number, currency, percent, boolean and date types for default handling of both cell and editing templates
+title: Column Data Types in Angular - Ignite UI for Angular
+_description: Handle cell and editing templates in Angular by choosing from several predefined column data types: number, string, date, boolean, currency and percent column.
 _keywords: column data type, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid Column Types | Data Types | Ignite UI for Angular | Infragistics
-_description: Start using the predefined column types of Angular UI Tree Grid, set any of the number, currency, percent, boolean and date types for default handling of both cell and editing templates
+title: Column Data Types in Angular - Ignite UI for Angular
+_description: Handle cell and editing templates in Angular by choosing from several predefined column data types: number, string, date, boolean, currency and percent column.
 _keywords: column data type, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchical Grid Column Types | Data Types | Ignite UI for Angular | Infragistics
-_description: Start using the predefined column types of Angular UI Hierarchical Grid, set any of the number, currency, percent, boolean and date types for default handling of both cell and editing templates
+title: Column Data Types in Angular - Ignite UI for Angular
+_description: SHandle cell and editing templates in Angular by choosing from several predefined column data types: number, string, date, boolean, currency and percent column.
 _keywords: column data type, ignite ui for angular, infragistics
 ---
 }
 
-# @@igComponent Column Types
+# Angular @@igComponent Column Types
 
 Ignite UI for Angular @@igComponent provides a default handling of *number*, *string*, *date*, *boolean*, *currency* and *percent* column data types, based on which the appearance of the default and editing templates will be present.
 
@@ -238,9 +238,9 @@ Custom template and column formatter definition will always take precedence over
 ### Custom template
 
 ```html
-<igx-grid #grid1 [data]="data | async" [autoGenerate]="true" [dataType]="'currency'">
-    <igx-column [field]="'OrderDate'" [dataType]="'currency'" [pipeArgs]="formatDateOptions" [editable]="true">
-        <ng-template let-value>
+<igx-grid #grid1 [data]="data | async" [autoGenerate]="false">
+    <igx-column [field]="'UnitsInStock'" [dataType]="'currency'" [pipeArgs]="formatOptions" [editable]="true">
+        <ng-template igxCellEditor let-value>
             {{ value | currency:'USD':'symbol':'1.0-0'}}
         </ng-template>
     </igx-column>
@@ -252,16 +252,16 @@ Custom template and column formatter definition will always take precedence over
 ```ts
  // Through column formatter property
 public formatCurrency(value: number) {
-    return `Dollar sign {value.toFixed(0)}`;
+    return `Dollar sign ${value.toFixed(0)}`;
 }
 
-init(column: IgxColumnComponent, template) {
-switch (column.field) {
-    case 'Open Price':
-        column.formatter = this.formatCurrency;
-        break;
-    default:
-        return;
+public init(column: IgxColumnComponent) {
+    switch (column.field) {
+        case 'UnitsInStock':
+            column.formatter = this.formatCurrency;
+            break;
+        default:
+            return;
 }
 ```
 

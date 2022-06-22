@@ -187,6 +187,24 @@ export class MyExampleCombo {
 }
 ```
 
+## 単一選択
+
+デフォルトでは、Combo コントロールは複数選択を提供します。以下のスニペットは、ハンドラーを `selectionChanging` イベントにアタッチすることで、コンポーネントで単一選択を可能にする方法を示します。
+
+```html
+<igx-combo [data]="lData" (selectionChanging)="singleSelection($event)"></igx-combo>
+```
+
+```typescript
+public singleSelection(event: IComboSelectionChangeEventArgs) {
+    if (event.added.length) {
+        event.newSelection = event.added;
+    }
+}
+```
+
+> 注: igxCombo を変更する代わりに、[igxSimpleCombo](simple-combo.md) を使用することをお勧めします (上記を参照)。
+
 <div class="divider--half"></div>
 
 ## キーボード ナビゲーション

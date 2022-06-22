@@ -20,7 +20,6 @@ To generate a global theme we're going to be including two mixins `core` and `th
 | Name                      | Type    | Default | Description                                                               |
 |:-------------------------:|:-------:|:-------:|:-------------------------------------------------------------------------:|
 | `$print-layout`           | boolean | true    | include/exclude the styles for printing.                                  |
-| `$direction`              | Keyword | ltr     | Specifies the content direction for all components can be `ltr` or `rtl`. |
 | `$enhanced-accessibility` | boolean | false   | Switches component colors and other properties to more accessible values. |
 
 

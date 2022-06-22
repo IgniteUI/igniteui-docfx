@@ -2,7 +2,8 @@
 title: Angular マップ | データ可視化ツール | 地理的データ モデルのバインディング | インフラジスティックス
 _description: インフラジスティックスの Angular JavaScript マップを使用して、シェイプ ファイルからの地理空間データやデータ モデルからの地理的位置を地理的画像マップに表示します。Ignite UI for Angular マップのサンプルを是非お試しください!
 _keywords: Angular map, binding data models, Ignite UI for Angular, Infragistics, data binding, Angular マップ, データ モデルのバインディング, データ バインディング, インフラジスティックス
-mentionedTypes: ['XamGeographicMap', GeographicScatterAreaSeries, GeographicHighDensityScatterSeries, GeographicProportionalSymbolSeries, GeographicScatterAreaSeries, GeographicContourLineSeries, GeographicShapeSeries, GeographicPolylineSeries  ]
+mentionedTypes: ['XamGeographicMap', 'GeographicScatterAreaSeries', 'GeographicHighDensityScatterSeries', 'GeographicProportionalSymbolSeries', GeographicScatterAreaSeries', GeographicContourLineSeries', 'GeographicShapeSeries', 'GeographicPolylineSeries']
+namespace: Infragistics.Controls.Maps
 _language: ja
 ---
 
@@ -18,6 +19,17 @@ Ignite UI for Angular マップ コンポーネントは、シェイプ ファ�
            alt="Angular 地理的データ モデルのバインディングの例"
            github-src="maps/geo-map/binding-data-model">
 </code-view>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <body>
+      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/maps/geo-map/binding-data-model?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
+            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
+        </a>
+        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/maps/geo-map/binding-data-model?file=src%2Fapp.component.html" rel="noopener noreferrer">
+            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
+        </a>
+    </body>
+</html>
 
 <div class="divider--half"></div>
 

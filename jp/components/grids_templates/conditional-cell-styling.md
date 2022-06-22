@@ -1,29 +1,29 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular 条件付きスタイル設定 | Ignite UI for Angular | インフラジスティックス 
-_description: 豊富な API でさまざまなマテリアル スタイリング ガイドラインを使用して、Material UI グリッドの条件付きスタイリング機能を使用してさまざまなスタイルの定義。
+title: Angular Data Grid の条件付きセルのスタイル設定 - Ignite UI for Angular
+_description: ユーザーが異なるセルをすばやく識別できるようにします。さまざまなセルのスタイル設定を定義します。Angular Data Grid の条件付きセル スタイル設定を使用してセルを目立たせます。
 _keywords: conditional styling, ignite ui for angular, infragistics
 _language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular 条件付きスタイル設定 | Ignite UI for Angular | インフラジスティックス 
-_description: 豊富な API でさまざまなマテリアル スタイリング ガイドラインを使用して、Material UI グリッドの条件付きスタイリング機能を使用してさまざまなスタイルの定義。
+title: Angular Tree Grid の条件付きセルのスタイル設定 - Ignite UI for Angular
+_description: ユーザーが異なるセルをすばやく識別できるようにします。さまざまなセルのスタイル設定を定義します。Angular Data Grid の条件付きセル スタイル設定を使用してセルを目立たせます。
 _keywords: conditional styling, ignite ui for angular, infragistics
 _language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular 条件付きスタイル設定 | Ignite UI for Angular | インフラジスティックス 
-_description: 豊富な API でさまざまなマテリアル スタイリング ガイドラインを使用して、Material UI グリッドの条件付きスタイリング機能を使用してさまざまなスタイルの定義。
+title: Angular Hierarchical Grid の条件付きセルのスタイル設定 - Ignite UI for Angular 
+_description: ユーザーが異なるセルをすばやく識別できるようにします。さまざまなセルのスタイル設定を定義します。Angular Data Grid の条件付きセル スタイル設定を使用してセルを目立たせます。
 _keywords: conditional styling, ignite ui for angular, infragistics
 _language: ja
 ---
 }
 
-# @@igComponent 条件付きスタイル設定
+# Angular @@igComponent 条件付きスタイル設定
 @@igxName コンポーネントでカスタム スタイルを提供する必要がある場合は、行レベルまたはセル レベルで行うことができます。
 
 ## @@igComponent 条件付き行のスタイル設定
@@ -128,36 +128,73 @@ public activeRowCondition = (row: RowType) => this.grid?.navigation.activeNode?.
 
 次にスタイルを定義します。
 
+@@if (igxName === 'IgxGrid') {
 ```typescript
 // component.ts
-public customRowStyles = {
+public rowStyles = {
     background: (row: RowType) => (+row.data['Change'] < 0  && +row.data['Change On Year(%)'] < 0) ? '#FF000088' : '#00000000',
     border: (row: RowType) => (+row.data['Change'] < 0  && +row.data['Change On Year(%)'] < 0) ? '2px solid' : '1px solid',
     'border-color': (row: RowType) => (+row.data['Change'] < 0  && +row.data['Change On Year(%)'] < 0) ? '#FF000099' : '#E9E9E9'
 };
-
-
 ```
 
-@@if (igxName === 'IgxGrid') {
 ```html
 <!-- sample.component.html -->
-<igx-grid #grid [data]="data" [height]="'600px'" [width]="'100%'" [rowStyles]="customRowStyles">
+<igx-grid #grid1 [data]="data | async" [height]="'500px'" width="100%"
+        [autoGenerate]="false" [allowFiltering]="true" [rowStyles]="rowStyles">
     ...
 </igx-grid>
 ```
 }
+
 @@if (igxName === 'IgxTreeGrid'){
+
+```typescript
+// component.ts
+public background = (row: RowType) => row.data.data['Title'] === 'CEO' ? '#6c757d' :
+    row.data.data['Title'].includes('President') ? '#adb5bd' : row.data.data['Title'].includes('Director') ?  '#ced4da' :
+    row.data.data['Title'].includes('Manager') ? '#dee2e6' :
+    row.data.data['Title'].includes('Lead') ? '#e9ecef' :
+    row.data.data['Title'].includes('Senior') ? '#f8f9fa' : null;
+
+public rowStyles = {
+    background: this.background,
+    'border-left': (row: RowType) => row.data.data['Title'] === 'CEO' || row.data.data['Title'].includes('President') ?
+        '2px solid' : null,
+    'border-color': (row: RowType) => row.data.data['Title'] === 'CEO' ? '#495057' : null,
+    color: (row: RowType) => row.data.data['Title'] === 'CEO' ? '#fff' : null
+};
+```
+
 ```html
 <!-- sample.component.html -->
-<igx-tree-grid #treeGrid [data]="data" [height]="'600px'" [width]="'100%'" [rowStyles]="customRowStyles">
+<igx-tree-grid #treeGrid [data]="data" [moving]="true" primaryKey="ID" foreignKey="ParentID"
+        width="100%" height="550px" [rowStyles]="rowStyles">
     ...
 </igx-tree-grid>
 ```
 }
+
 @@if (igxName === 'IgxHierarchicalGrid') {
+
+```typescript
+// component.ts
+public rowStyles = {
+    background:(row: RowType) => row.data['HasGrammyAward'] ? '#eeddd3' : '#f0efeb',
+    'border-left': (row: RowType) => row.data['HasGrammyAward'] ? '2px solid #dda15e' : null
+};
+
+public childRowStyles = {
+    'border-left': (row: RowType) => row.data['BillboardReview'] > 70 ? '3.5px solid #dda15e' : null
+};
+```
+
 ```html
-<igx-hierarchical-grid  #hierarchicalGrid class="hgrid" [data]="localData" [height]="'580px'" [width]="'100%'" [rowStyles]="customRowStyles">
+<igx-hierarchical-grid  #hierarchicalGrid [data]="localdata" [autoGenerate]="false"
+        [height]="'580px'" [width]="'100%'" [rowStyles]="rowStyles">
+        <igx-row-island [key]="'Albums'" [autoGenerate]="false" [rowStyles]="childRowStyles">
+             ...
+        </igx-row-island>  
     ...
 </igx-hierarchical-grid>
 ```

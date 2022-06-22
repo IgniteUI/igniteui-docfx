@@ -2,7 +2,7 @@
 title: Angular マップ | データ可視化ツール | シェイプ ポリライン シリーズ | インフラジスティックス
 _description: インフラジスティックスの Angular マップのシェイプ ポリライン シリーズを使用して、都市または空港などの地理的位置間の道路または接続を描画します。Ignite UI for Angular マップ シーリズについての詳細を表示します。
 _keywords: Angular map, Ignite UI for Angular, shape polyline series, Infragistics, Angular マップ, シェイプ ポリライン シリーズ, インフラジスティックス
-mentionedTypes: ['XamGeographicMap']
+mentionedTypes: ['XamGeographicMap', 'ShapefileConverter']
 _language: ja
 ---
 
@@ -19,6 +19,17 @@ _language: ja
            github-src="maps/geo-map/type-shape-polyline-series">
 </code-view>
 
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <body>
+      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/maps/geo-map/type-shape-polyline-series?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
+            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
+        </a>
+        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/maps/geo-map/type-shape-polyline-series?file=src%2Fapp.component.html" rel="noopener noreferrer">
+            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
+        </a>
+    </body>
+</html>
+
 <div class="divider--half"></div>
 
 [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) は、[`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html) とよく似ていますが、地理空間データがポリゴンではなくポリラインでレンダリングされる点が異なります。
@@ -29,7 +40,7 @@ _language: ja
 
 ## コード スニペット
 
-以下のコードは、`ShapeDataSource` を使用してシェイプ ファイルからロードした都市の場所に [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) をバインドする方法を示します。
+以下のコードは、[`IgxShapeDataSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapedatasource.html) を使用してシェイプ ファイルからロードした都市の場所に [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) をバインドする方法を示します。
 
 <!-- Angular -->
 

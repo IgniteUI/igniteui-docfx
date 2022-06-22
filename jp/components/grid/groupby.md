@@ -61,7 +61,7 @@ public ngOnInit() {
 grid.groupBy({ fieldName: 'ProductName', dir: SortingDirection.Desc, ignoreCase: true });
 ```
 
-グループ化は、ソートおよびグループ式が列がグループ化されずにソートされた場合もソートされた列として適用される場合に可能です。グループ式は [`sortingExpressions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#sortingexpressions) プロパティにあり、グループ列の式が常に最初になるようソートします。ソート API は、グループ化された列の式を変更した場合にグルーピングに影響があります。グループ式 (列グループ解除) を削除してソートを解除します。
+> 注: これまで、グループ化 / ソートは互いに連携して機能していました。13.2 バージョンでは、グループ化をソートから切り離す新しい動作が導入されています。たとえば、グループ化をクリアしても、グリッド内のソート式はクリアされません。その逆も同様です。それでも、列がソートおよびグループ化されている場合は、グループ化された式が優先されます。
 
 ### API の展開/縮小
 

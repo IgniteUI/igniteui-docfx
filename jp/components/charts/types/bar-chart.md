@@ -3,6 +3,7 @@ title: Angular 棒チャートとグラフ | Ignite UI for Angular
 _description: Angular 棒チャートは、さまざまなカテゴリのデータの頻度、カウント、合計、または平均をすばやく比較するために使用される最も一般的なカテゴリ チャート タイプの 1 つです。無料でお試しください。
 _keywords: Angular Charts, Bar Chart, Bar Graph, Horizontal Chart, Infragistics, Angular チャート, 棒チャート, 棒グラフ, 水平チャート, インフラジスティックス
 mentionedTypes: ["XamDataChart", "BarSeries", "StackedBarSeries", "Stacked100BarSeries"]
+namespace: Infragistics.Controls.Charts
 _language: ja
 ---
 
@@ -22,6 +23,17 @@ Ignite UI for Angular カテゴリ棒チャートは、複数のデータ ソー
            github-src="charts/data-chart/bar-chart-multiple-sources"
            alt="Angular 複数ソースの棒チャート" >
 </code-view>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <body>
+      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/data-chart/bar-chart-multiple-sources?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
+            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
+        </a>
+        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/data-chart/bar-chart-multiple-sources?file=src%2Fapp.component.html" rel="noopener noreferrer">
+            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
+        </a>
+    </body>
+</html>
 
 <div class="divider--half"></div>
 
@@ -86,6 +98,17 @@ Angular 棒チャートには、データまたはデータを使用して正し
            alt="Angular 単一シリーズの Angular 棒チャート" >
 </code-view>
 
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <body>
+      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/data-chart/bar-chart-single-source?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
+            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
+        </a>
+        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/data-chart/bar-chart-single-source?file=src%2Fapp.component.html" rel="noopener noreferrer">
+            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
+        </a>
+    </body>
+</html>
+
 <div class="divider--half"></div>
 
 ## 複数シリーズの Angular 棒チャート
@@ -99,6 +122,17 @@ Angular 棒チャートには、データまたはデータを使用して正し
            alt="Angular 複数シリーズの Angular 棒チャート" >
 </code-view>
 
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <body>
+      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/data-chart/bar-chart-multiple-sources?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
+            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
+        </a>
+        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/data-chart/bar-chart-multiple-sources?file=src%2Fapp.component.html" rel="noopener noreferrer">
+            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
+        </a>
+    </body>
+</html>
+
 <div class="divider--half"></div>
 
 ## Angular 棒チャートのスタイル設定
@@ -111,6 +145,17 @@ Angular 棒チャートには、データまたはデータを使用して正し
            github-src="charts/data-chart/bar-chart-styling"
            alt="Angular 棒チャートのスタイル設定" >
 </code-view>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <body>
+      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/data-chart/bar-chart-styling?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
+            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
+        </a>
+        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/data-chart/bar-chart-styling?file=src%2Fapp.component.html" rel="noopener noreferrer">
+            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
+        </a>
+    </body>
+</html>
 
 <div class="divider--half"></div>
 
@@ -129,6 +174,17 @@ Angular 棒チャートには、データまたはデータを使用して正し
            alt="Angular 積層型棒チャート" >
 </code-view>
 
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <body>
+      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/data-chart/stacked-bar-chart?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
+            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
+        </a>
+        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/data-chart/stacked-bar-chart?file=src%2Fapp.component.html" rel="noopener noreferrer">
+            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
+        </a>
+    </body>
+</html>
+
 <div class="divider--half"></div>
 
 ## Angular 積層型 100% 棒チャート
@@ -143,6 +199,17 @@ Angular 積層型 100% 棒チャートは、X 軸 (チャートの下のラベ�
            github-src="charts/data-chart/stacked-100-bar-chart"
            alt="Angular 積層型 100 棒チャート" >
 </code-view>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <body>
+      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/data-chart/stacked-100-bar-chart?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
+            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
+        </a>
+        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/data-chart/stacked-100-bar-chart?file=src%2Fapp.component.html" rel="noopener noreferrer">
+            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
+        </a>
+    </body>
+</html>
 
 <div class="divider--half"></div>
 

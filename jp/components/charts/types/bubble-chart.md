@@ -3,6 +3,7 @@ title: Angular バブル チャート | データ可視化 | インフラジス�
 _description: インフラジスティックス の Angular バブル チャート
 _keywords: Angular Charts, Bubble Chart, Infragistics, Angular チャート, バブル チャート, インフラジスティックス
 mentionedTypes: ["Series", "BubbleSeries", "ScatterSeries"]
+namespace: Infragistics.Controls.Charts
 _language: ja
 ---
 
@@ -21,6 +22,17 @@ Ignite UI for Angular バブル チャートは[散布図](scatter-chart.md)の�
            alt="Angular バブル チャートの例" >
 </code-view>
 
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <body>
+      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/data-chart/scatter-bubble-chart-multiple-sources?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
+            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
+        </a>
+        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/data-chart/scatter-bubble-chart-multiple-sources?file=src%2Fapp.component.html" rel="noopener noreferrer">
+            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
+        </a>
+    </body>
+</html>
+
 <div class="divider--half"></div>
 
 ## 単一シリーズの Angular バブル チャート
@@ -33,6 +45,17 @@ Ignite UI for Angular バブル チャートは[散布図](scatter-chart.md)の�
            github-src="charts/data-chart/scatter-bubble-chart-single-source"
            alt="単一シリーズの  Angular バブル チャート" >
 </code-view>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <body>
+      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/data-chart/scatter-bubble-chart-single-source?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
+            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
+        </a>
+        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/data-chart/scatter-bubble-chart-single-source?file=src%2Fapp.component.html" rel="noopener noreferrer">
+            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
+        </a>
+    </body>
+</html>
 
 <div class="divider--half"></div>
 
@@ -47,6 +70,17 @@ Angular バブル チャートでは、次の例に示すように、複数の�
            alt="複数シリーズの Angular バブル チャート" >
 </code-view>
 
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <body>
+      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/data-chart/scatter-bubble-chart-multiple-sources?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
+            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
+        </a>
+        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/data-chart/scatter-bubble-chart-multiple-sources?file=src%2Fapp.component.html" rel="noopener noreferrer">
+            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
+        </a>
+    </body>
+</html>
+
 <div class="divider--half"></div>
 
 ## Angular バブル チャートのスタイル設定
@@ -59,6 +93,17 @@ Angular バブル チャートでは、[`markerType`]({environment:dvApiBaseUrl}
            github-src="charts/data-chart/scatter-bubble-chart-styling"
            alt="Angular バブル チャートのスタイル設定" >
 </code-view>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <body>
+      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/data-chart/scatter-bubble-chart-styling?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
+            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
+        </a>
+        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/data-chart/scatter-bubble-chart-styling?file=src%2Fapp.component.html" rel="noopener noreferrer">
+            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
+        </a>
+    </body>
+</html>
 
 <div class="divider--half"></div>
 

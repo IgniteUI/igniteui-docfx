@@ -3,6 +3,7 @@ title: Angular チャート強調表示 | データ可視化 | インフラジ�
 _description: インフラジスティックスの Angular チャート強調表示
 _keywords: Angular Charts, Highlighting, Infragistics, Angular チャート, 強調表示, インフラジスティックス
 mentionedTypes: ["CategoryChart"]
+namespace: Infragistics.Controls.Charts
 _language: ja
 ---
 
@@ -18,8 +19,19 @@ _language: ja
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-column-chart-with-highlighting"
            alt="Angular チャート強調表示の例"
-           github-src="charts/category-chart/category-chart-column-chart-with-highlighting">
+           github-src="charts/category-chart/column-chart-with-highlighting">
 </code-view>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <body>
+      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/category-chart/column-chart-with-highlighting?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
+            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
+        </a>
+        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/category-chart/column-chart-with-highlighting?file=src%2Fapp.component.html" rel="noopener noreferrer">
+            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
+        </a>
+    </body>
+</html>
 
 <div class="divider--half"></div>
 

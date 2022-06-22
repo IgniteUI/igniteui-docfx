@@ -1,10 +1,10 @@
 ---
-title: Grid Multi-row Layout | Ignite UI for Angular | Infragistics
-_description: Start using Multi-row layout for positioning and sizing the columns in a more powerful and flexible way. Every single column layout is a representation of a complete grid layout which consists of column fields.
+title: Angular Grid Multi-row Layout - Ignite UI for Angular
+_description: Position and size columns in a more powerful way, using the multi-row layout functionality in the Ignite UI for Angular Data Grid. Check out examples and demos!
 _keywords: angular multi-row layout, material row layout, ignite ui for angular
 ---
 
-# Multi-row Layout
+# Angular Multi-row Layout
 
 Multi-row Layout extends the rendering capabilities of the `igxGridComponent`. The feature allows splitting a single data record into multiple visible rows.
 

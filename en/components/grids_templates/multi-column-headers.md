@@ -1,28 +1,28 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Multi-column Headers | Ignite UI for Angular | Infragistics
-_description: Start to group column headers by placing them under a common hierarchical header with the help of Ignite UI Material UI grid and combine them into multi headers
+title: Angular Multi-column Headers - Ignite UI for Angular
+_description: Start grouping column headers by placing them under a common hierarchical header with the help of Ignite UI for Angular grid and combine them into multi headers.
 _keywords: column headers, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Multi-column Headers | Ignite UI for Angular | Infragistics
-_description: Start to group column headers by placing them under a common hierarchical header with the help of Ignite UI Material UI grid and combine them into multi headers
+title: Angular Multi-column Headers - Ignite UI for Angular
+_description: SStart grouping column headers by placing them under a common hierarchical header with the help of Ignite UI for Angular grid and combine them into multi headers.
 _keywords: column headers, ignite ui for angular, infragistics
 _canonicalLink: grid/multi-column-headers
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Multi-column Headers | Ignite UI for Angular | Infragistics
-_description: Start to group column headers by placing them under a common hierarchical header with the help of Ignite UI Material UI grid and combine them into multi headers
+title: Angular Multi-column Headers - Ignite UI for Angular
+_description: Start grouping column headers by placing them under a common hierarchical header with the help of Ignite UI for Angular grid and combine them into multi headers.
 _keywords: column headers, ignite ui for angular, infragistics
 _canonicalLink: grid/multi-column-headers
 ---
 }
 
-# @@igComponent Multi-column Headers Overview
+# Angular @@igComponent Multi-column Headers Overview
 
 [`@@igxName`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) supports `multi-column headers` which allows you to group columns by placing them under a common multi headers. Each multi-column headers group could be a representation of combinations between other groups or columns within the Material UI grid.
 
@@ -144,6 +144,7 @@ For achieving `n-th` level of nested headers, the declaration above should be fo
 Every [`igx-column-group`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html) supports [`moving`](column-moving.md), [`pinning`](column-pinning.md) and [`hiding`](column-hiding.md).
 > [!NOTE]
 > When there is a set of columns and column groups, pinning works only for top level column parents. More specifically pinning per nested `column groups` or `columns` is not allowed. <br />
+> Please note that when using Pinning with Multi-Column Headers, the entire Group gets pinned. <br />
 > Moving between `columns` and `column groups` is allowed only when they are at the same level in the hierarchy and both are in the same `group`. <br />
 > When `columns/column-groups` are not wrapped by current `group` which means they are **top level** `columns`, moving is allowed between whole visible columns.
 

@@ -474,12 +474,10 @@ Infragistics の Angular 製品の受賞歴のあるサポートにアクセス�
     <div class="faqs-accordion h4">Infragistics Ignite UI for Angular Data Grid の価格について教えてください。</div>
     <div class="divider--half"></div>
     <div class="faqs-accordion-panel">
-Ignite UI for Angular は、サブスクリプション モデルで利用可能な商用ライセンス製品である Ignite UI に含まれています。
-<div class="divider--half"></div>
-価格の詳細については、<a class="no-external-icon" href="{environment:infragisticsBaseUrl}/how-to-buy/product-pricing">価格ページを参照してください。</a> 
-<div class="divider--half"></div>
-複数のプラットフォームでアプリケーションを開発する場合、WPF や Windows Forms などのデスクトップ プラットフォーム、Angular、Web コンポーネント、ASP.NET MVC、ASP.NET Core のすべての最新 Web ツールセットを含む完全なアプリ開発パッケージ Infragistics Ultimate を検討してください。
-<div class="divider--half"></div>
+    Angular コンポーネントは、Ignite UI バンドルの一部として含まれています。価格の詳細については、<a class="no-external-icon" href="{environment:infragisticsBaseUrl}/how-to-buy/product-pricing">価格ページ</a>を参照してください。 
+    <div class="divider--half"></div>
+    複数のプラットフォームでアプリケーションを開発する場合、WPF や Windows Forms などのデスクトップ プラットフォーム、Angular、Web コンポーネント、ASP.NET MVC、ASP.NET Core のすべての最新 Web ツールセットを含む完全なアプリ開発パッケージ Infragistics Ultimate を検討してください。
+    <div class="divider--half"></div>
     </div>
     </div>
     <div class="faqs-accordion-content">
