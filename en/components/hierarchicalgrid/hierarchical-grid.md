@@ -220,7 +220,7 @@ The grid features could be enabled and configured through the **igx-row-island**
         <igx-column field="ChildLevels"></igx-column>
         <igx-column field="ProductName" hasSummary='true'></igx-column>
     </igx-column-group>
-    <igx-row-island [key]="'childData'" [autoGenerate]="false" [rowSelectable]='true' #layout1>
+    <igx-row-island [key]="'childData'" [autoGenerate]="false" [rowSelection]="'multiple'" #layout1>
         <igx-column field="ID" [hasSummary]='true' [dataType]="'number'"></igx-column>
         <igx-column-group header="Information2">
             <igx-column field="ChildLevels"></igx-column>
