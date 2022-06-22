@@ -22,7 +22,7 @@ To get started with your first color palette, create an _scss_ file that would b
 $company-color: #2ab759; /* Some green shade I like */
 $secondary-color: #f96a88; /* Watermelon pink */
 
-$my-color-palette: igx-palette(
+$my-color-palette: palette(
     $primary: $company-color,
     $secondary: $secondary-color
 );
@@ -49,7 +49,7 @@ $company-color: #2ab759; /* Some green shade I like */
 $secondary-color: #f96a88; /* Watermelon pink */
 $grayscale-base: #fff; /* Used to generate shades of gray */
 
-$my-color-palette: igx-palette(
+$my-color-palette: palette(
     $primary: $company-color,
     $secondary: $secondary-color,
     $grays: $grayscale-base
@@ -63,9 +63,9 @@ $my-color-palette: igx-palette(
 We provide a function that is easy to remember and use `igx-color`. It takes three arguments - `palette`, `color`, and `variant`;
 
 ```scss
-$my-primary-600: igx-color($my-palette, 'primary', 600);
-$my-primary-A700: igx-color($my-palette, 'secondary', 'A700');
-$my-warning-color: igx-color($my-palette, 'warn');
+$my-primary-600: color($my-palette, 'primary', 600);
+$my-primary-A700: color($my-palette, 'secondary', 'A700');
+$my-warning-color: color($my-palette, 'warn');
 // sample usage
 
 .my-awesome-class {
@@ -85,8 +85,8 @@ $my-warning-color: igx-color($my-palette, 'warn');
 Similar to how we get sub-palette colors, there's a way to get the contrast text color for each of the colors in the sub-palettes.
 
 ```scss
-$my-primary-800: igx-color($my-palette, 'primary', 600);
-$my-primary-800-text: igx-contrast-color($my-palette, 'primary', 600);
+$my-primary-800: color($my-palette, 'primary', 600);
+$my-primary-800-text:contrast-color($my-palette, 'primary', 600);
 // sample usage
 
 .my-awesome-article {
@@ -110,7 +110,7 @@ The mixin takes a few arguments that allow you control the css class name as wel
 For instance, if you want to generate CSS classes that apply background color to elements, you can do the following:
 
 ```scss
-@include igx-color-classes(
+@include color-classes(
     $prop: 'background-color',
     $suffix: 'bg'
 );
@@ -123,7 +123,7 @@ The above code will generate CSS classes for each color variant in the palette. 
 * [Palettes]({environment:sassApiUrl}/index.html#function-igx-palette)
 * [Getting Palette Colors]({environment:sassApiUrl}/index.html#function-igx-color)
 * [Getting Contrast Colors]({environment:sassApiUrl}/index.html#function-igx-contrast-color)
-* [Generating Color Classes]({environment:sassApiUrl}/index.html#mixin-igx-color-classes)
+* [Generating Color Classes]({environment:sassApiUrl}/index.html#mixin-color-classes)
 
 ### Additional Resources
 <div class="divider--half"></div>

@@ -9,7 +9,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div class="divider"></div>
 
 ## Overview
-Elevations in Ignite UI for Angular are declared as a map of 25 elements. Each element is a key-value pair where the key is the elevation level name (0..24) and the value is a list of 3 `box-shadow` declarations. We allow you to generate new sets of elevations where you can define the color for the shadows. Additionally, we expose functions for retrieving a specific elevation level from the elevations map. We expose a global variable `$igx-elevations` that is used across components by default. If you've not read the CSS variables [documentation](../elevations.md) related to Elevations, we suggest you do that first before reading on. 
+Elevations in Ignite UI for Angular are declared as a map of 25 elements. Each element is a key-value pair where the key is the elevation level name (0..24) and the value is a list of 3 `box-shadow` declarations. We allow you to generate new sets of elevations where you can define the color for the shadows. Additionally, we expose functions for retrieving a specific elevation level from the elevations map. We expose a global variable `$elevations` that is used across components by default. If you've not read the CSS variables [documentation](../elevations.md) related to Elevations, we suggest you do that first before reading on. 
 
 ## Usage
 The following section demonstrates how to create and retrieve custom elevations.
@@ -22,7 +22,7 @@ $color-1: rgb(153, 191, 170); // Umbra
 $color-2: rgb(92, 134, 141); // Penumbra
 $color-3: rgb(92, 61, 70); // Ambient
 
-$my-elevations: igx-elevations(
+$my-elevations: elevations(
     $color-1,
     $color-2,
     $color-3
@@ -31,16 +31,16 @@ $my-elevations: igx-elevations(
 
 ### Retrieving Elevations
 
-To retrieve a set of box-shadows from the elevations map you can pass up to two arguments to the `igx-elevation` function - an elevation map and the wanted elevation level. It returns a list of 3 box shadows for the given level.
+To retrieve a set of box-shadows from the elevations map you can pass up to two arguments to the `elevation` function - an elevation map and the wanted elevation level. It returns a list of 3 box shadows for the given level.
 
-If you want to retrieve the elevation from the default `$igx-elevations` map, you can omit the first argument.
+If you want to retrieve the elevation from the default `$elevations` map, you can omit the first argument.
 
 ```scss
-// Returns elevation 1 shadows from $igx-elevations
-$elevation-1: igx-elevation($elevation: '1');
+// Returns elevation 1 shadows from $elevations
+$elevation-1: elevation($elevation: '1');
 
 // Returns elevation 1 shadows from $my-elevations
-$my-elevation-1: igx-elevation(
+$my-elevation-1: elevation(
     $elevations: $my-elevations, 
     $elevation: 1
 );
@@ -48,12 +48,12 @@ $my-elevation-1: igx-elevation(
 
 ### Passing Elevations to Themes
 
-Several theme mixins allow you to pass an elevations map. Most notably, the `igx-theme` has a parameter named `$elevations` which allows you to update the elevations for all component themes.
+Several theme mixins allow you to pass an elevations map. Most notably, the `theme` has a parameter named `$elevations` which allows you to update the elevations for all component themes.
 
 Force all component themes to use your custom elevations:
 
 ```scss
-@include igx-theme(
+@include theme(
     //...
     $elevations: $my-elevations
 );
@@ -62,7 +62,7 @@ Force all component themes to use your custom elevations:
 In addition to this, you can tell the theme to ignore/not use elevations completely:
 
 ```scss
-@include igx-theme(
+@include theme(
     //...
     $elevations: $my-elevations,
     $elevation: false // disables all elevations
@@ -74,20 +74,20 @@ Some component themes also accept the `$elevations` parameter to allow you to pa
 For instance, the card component does support passing custom elevations. To find out which components accept a custom elevations map, take a look at their Sass documentation. Each component uses only specific levels from the elevations map, those too are listed in the component's Sass docs.
 
 ```scss
-@include igx-card(igx-card-theme(
+@include card(card-theme(
     //...
     $elevations: $my-elevations,
 ));
 ```
 
-Since the `igx-elevation` function returns a list of box shadows, you can use the return value of that function to modify only certain elevations in your component themes. 
+Since the `elevation` function returns a list of box shadows, you can use the return value of that function to modify only certain elevations in your component themes. 
 
 ```scss
-$card-theme: igx-card-theme(
-    $resting-shadow: igx-elevation($igx-elevations, 10)
+$card-theme: card-theme(
+    $resting-shadow: elevation($elevations, 10)
 );
 
-@include igx-card($card-theme);
+@include card($card-theme);
 ```
 
 This compiles to:
@@ -101,14 +101,14 @@ This compiles to:
 }
 ```
 
-You can also pass simple box shadows without taking advantage of the `igx-elevation` function:
+You can also pass simple box shadows without taking advantage of the `elevation` function:
 ```scss
-$card-theme: igx-card-theme(
+$card-theme: card-theme(
     $resting-shadow: 0 10px 10px 10px #666
 );
 
 .my-card {
-  @include igx-card($card-theme);
+  @include card($card-theme);
 }
 ```
 
@@ -123,7 +123,7 @@ Here is the result from the above snippet:
 <div class="divider--half"></div>
 
 ## Custom Elevations
-It is possible to create an elevations map that doesn't adhere to the [Material Design Guidelines](https://material.io/design/environment/elevation.html) as generated by the `igx-elevations` function. Make sure your custom elevation maps contain at least 25 elevation levels. Here's the elevations map signature our themes expect to build correctly:
+It is possible to create an elevations map that doesn't adhere to the [Material Design Guidelines](https://material.io/design/environment/elevation.html) as generated by the `elevations` function. Make sure your custom elevation maps contain at least 25 elevation levels. Here's the elevations map signature our themes expect to build correctly:
 
 ```scss
 // Omitted levels 2 through 23 for brevity
@@ -141,8 +141,8 @@ The elevation levels are also used in theme schema declarations. More on that in
 
 ## API References
 
-* [Creating Elevations]({environment:sassApiUrl}/index.html#function-igx-elevations)
-* [Retrieving Elevations]({environment:sassApiUrl}/index.html#function-igx-elevation)
+* [Creating Elevations]({environment:sassApiUrl}/index.html#function-elevations)
+* [Retrieving Elevations]({environment:sassApiUrl}/index.html#function-elevation)
 
 
 ## Additional Resources

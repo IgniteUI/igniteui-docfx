@@ -1,13 +1,13 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Filter | Angular Filterable Data Grid | Infragistics
+title: Angular Grid Filter - Ignite UI for Angular
 _description: Start using angular filter to return specific data with Ignite UI for Angular. Check the advanced filtering options, including data-type Excel-style filtering.
 _keywords: angular filter, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Filter | Angular Filterable Data Tree Grid | Infragistics
+title: Angular Tree Grid Filter - Ignite UI for Angular
 _description: Start using angular filter to return specific data with Ignite UI for Angular. Check the advanced filtering options, including data-type Excel-style filtering.
 _keywords: angular filter, ignite ui for angular, infragistics
 _canonicalLink: grid/filtering
@@ -15,7 +15,7 @@ _canonicalLink: grid/filtering
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Filter | Angular Filterable Data Hierarchical Grid | Infragistics
+title: Angular Hierarchical Grid Filter - Ignite UI for Angular
 _description: Start using angular filter to return specific data with Ignite UI for Angular. Check the advanced filtering options, including data-type Excel-style filtering.
 _keywords: angular filter, ignite ui for angular, infragistics
 _canonicalLink: grid/filtering
@@ -425,10 +425,10 @@ To get started with styling the filtering row, we need to import the `index` fil
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) and accepts the `$filtering-row-text-color`, `$filtering-row-background`, `$filtering-header-text-color` and the `$filtering-header-background` parameters.
+Following the simplest approach, we create a new theme that extends the [`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) and accepts the `$filtering-row-text-color`, `$filtering-row-background`, `$filtering-header-text-color` and the `$filtering-header-background` parameters.
 
 ```scss
-$custom-grid: igx-grid-theme(
+$custom-grid: grid-theme(
     $filtering-row-text-color: #292826,
     $filtering-row-background: #FFCD0F,
     $filtering-header-text-color: #292826,
@@ -436,17 +436,17 @@ $custom-grid: igx-grid-theme(
 );
 ```
 
-As seen, the `igx-grid-theme` only controls colors for the filtering row and the respective column header that is being filtered. We obviously have a lot more components inside the filtering row, such as an input group, chips, buttons and others. In order to style them, we need to create a separate theme for each one, so let's create a new input group theme and a new button theme:
+As seen, the `grid-theme` only controls colors for the filtering row and the respective column header that is being filtered. We obviously have a lot more components inside the filtering row, such as an input group, chips, buttons and others. In order to style them, we need to create a separate theme for each one, so let's create a new input group theme and a new button theme:
 
 ```scss
-$dark-input-group: igx-input-group-theme(
+$dark-input-group: input-group-theme(
     $box-background: #FFCD0F,
     $idle-text-color: #292826,
     $focused-text-color: #292826,
     $filled-text-color: #292826
 );
 
-$dark-button: igx-button-theme(
+$dark-button: button-theme(
     $flat-background: #FFCD0F,
     $flat-text-color: #292826,
     $flat-hover-background: #292826,
@@ -454,15 +454,15 @@ $dark-button: igx-button-theme(
 );
 ```
 
-In this example we only changed some of the parameters for the input group and the button, but the [`igx-input-group-theme`]({environment:sassApiUrl}/index.html#function-igx-input-group-theme) and the [`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) provide way more parameters to control their respective styling.
+In this example we only changed some of the parameters for the input group and the button, but the [`input-group-theme`]({environment:sassApiUrl}/index.html#function-input-group-theme) and the [`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme) provide way more parameters to control their respective styling.
 
 The last step is to **include** the component mixins, each with its respective theme. We will also set the color property for the input's placeholder.
 
 ```scss
-@include igx-grid($custom-grid);
+@include grid($custom-grid);
 .igx-grid__filtering-row {
-    @include igx-button($dark-button);
-    @include igx-input-group($dark-input-group);
+    @include button($dark-button);
+    @include input-group($dark-input-group);
 
     .igx-input-group__input::placeholder {
         color: #FFCD0F;
@@ -479,10 +479,10 @@ The last step is to **include** the component mixins, each with its respective t
 ```scss
 :host {
      ::ng-deep {
-        @include igx-grid($custom-grid);
+        @include grid($custom-grid);
         .igx-grid__filtering-row {
-            @include igx-button($dark-button);
-            @include igx-input-group($dark-input-group);
+            @include button($dark-button);
+            @include input-group($dark-input-group);
 
             .igx-input-group__input::placeholder {
                 color: #FFCD0F;
@@ -502,31 +502,31 @@ Instead of hardcoding the color values like we just did, we can achieve greater 
 $yellow-color: #FFCD0F;
 $black-color: #292826;
 
-$dark-palette: igx-palette($primary: $black-color, $secondary: $yellow-color);
+$dark-palette: palette($primary: $black-color, $secondary: $yellow-color);
 ```
 
 And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette. 
 
 ```scss
-$custom-grid: igx-grid-theme(
-    $filtering-row-text-color: igx-color($dark-palette, "primary", 400),
-    $filtering-row-background: igx-color($dark-palette, "secondary", 400),
-    $filtering-header-text-color: igx-color($dark-palette, "primary", 400),
-    $filtering-header-background: igx-color($dark-palette, "secondary", 400)
+$custom-grid: grid-theme(
+    $filtering-row-text-color: color($dark-palette, "primary", 400),
+    $filtering-row-background: color($dark-palette, "secondary", 400),
+    $filtering-header-text-color: color($dark-palette, "primary", 400),
+    $filtering-header-background: color($dark-palette, "secondary", 400)
 );
 
-$dark-input-group: igx-input-group-theme(
-    $box-background: igx-color($dark-palette, "secondary", 400),
-    $idle-text-color: igx-color($dark-palette, "primary", 400),
-    $focused-text-color: igx-color($dark-palette, "primary", 400),
-    $filled-text-color: igx-color($dark-palette, "primary", 400)
+$dark-input-group: input-group-theme(
+    $box-background: color($dark-palette, "secondary", 400),
+    $idle-text-color: color($dark-palette, "primary", 400),
+    $focused-text-color: color($dark-palette, "primary", 400),
+    $filled-text-color: color($dark-palette, "primary", 400)
 );
 
-$dark-button: igx-button-theme(
-    $flat-background: igx-color($dark-palette, "secondary", 400),
-    $flat-text-color: igx-color($dark-palette, "primary", 400),
-    $flat-hover-background: igx-color($dark-palette, "primary", 400),
-    $flat-hover-text-color: igx-color($dark-palette, "secondary", 400)
+$dark-button: button-theme(
+    $flat-background: color($dark-palette, "secondary", 400),
+    $flat-text-color: color($dark-palette, "primary", 400),
+    $flat-hover-background: color($dark-palette, "primary", 400),
+    $flat-hover-text-color: color($dark-palette, "secondary", 400)
 );
 ```
 
@@ -544,16 +544,16 @@ Extend one of the two predefined schemas, that are provided for every component,
 $custom-grid-schema: extend($_light-grid,
     (
         filtering-row-text-color:(
-            igx-color: ("primary", 400)
+           color: ("primary", 400)
         ),
         filtering-row-background:(
-            igx-color: ("secondary", 400)
+           color: ("secondary", 400)
         ),
         filtering-header-text-color:(
-            igx-color: ("primary", 400)
+           color: ("primary", 400)
         ),
         filtering-header-background:(
-            igx-color: ("secondary", 400)
+           color: ("secondary", 400)
         )
     )
 );
@@ -562,16 +562,16 @@ $custom-grid-schema: extend($_light-grid,
 $custom-input-group-schema: extend($_light-input-group,
     (
         box-background:(
-            igx-color: ("secondary", 400)
+           color: ("secondary", 400)
         ),
         idle-text-color:(
-            igx-color: ("primary", 400)
+           color: ("primary", 400)
         ),
         focused-text-color:(
-            igx-color: ("primary", 400)
+           color: ("primary", 400)
         ),
         filled-text-color:(
-            igx-color: ("primary", 400)
+           color: ("primary", 400)
         )
     )
 );
@@ -580,16 +580,16 @@ $custom-input-group-schema: extend($_light-input-group,
 $custom-button-schema: extend($_light-button,
     (
         flat-background:(
-            igx-color: ("secondary", 400)
+           color: ("secondary", 400)
         ),
         flat-text-color:(
-            igx-color: ("primary", 400)
+           color: ("primary", 400)
         ),
         flat-hover-background:(
-            igx-color: ("primary", 400)
+           color: ("primary", 400)
         ),
         flat-hover-text-color:(
-            igx-color: ("secondary", 400)
+           color: ("secondary", 400)
         )
     )
 );
@@ -606,19 +606,19 @@ $custom-light-schema: extend($light-schema,(
 ));
 
 // Defining grid-theme with the global light schema
-$custom-grid: igx-grid-theme(
+$custom-grid: grid-theme(
   $palette: $dark-palette,
   $schema: $custom-light-schema
 );
 
 // Defining button-theme with the global light schema
-$custom-button: igx-button-theme(
+$custom-button: button-theme(
   $palette: $dark-palette,
   $schema: $custom-light-schema
 );
 
 // Defining input-group-theme with the global light schema
-$custom-input-group: igx-input-group-theme(
+$custom-input-group: input-group-theme(
   $palette: $dark-palette,
   $schema: $custom-light-schema
 );
@@ -680,7 +680,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-grid-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>

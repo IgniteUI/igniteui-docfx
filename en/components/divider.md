@@ -80,7 +80,7 @@ If the value of the `middle` attribute is set to a falsy value, or if the attrib
 <div class="divider--half"></div>
 
 * [IgxDividerDirective]({environment:angularApiUrl}/classes/igxdividerdirective.html)
-* [IgxDividerDirective Styles]({environment:sassApiUrl}/index.html#function-igx-divider-theme)
+* [IgxDividerDirective Styles]({environment:sassApiUrl}/index.html#function-divider-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>

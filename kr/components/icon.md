@@ -108,7 +108,7 @@ public ngOnInit() {
 </code-view>
 
 ### Styling
-The igxIcon allows styling through the [Ignite UI for Angular Theme Library](../themes/sass/component-themes.md). The icon's [theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme) exposes a property that allows customization of the color of the component.
+The igxIcon allows styling through the [Ignite UI for Angular Theme Library](../themes/sass/component-themes.md). The icon's [theme]({environment:sassApiUrl}/index.html#function-icon-theme) exposes a property that allows customization of the color of the component.
 
 #### Importing global theme
 To begin styling of the predefined icon layout, you need to import the `index` file, where all styling functions and mixins are located.  
@@ -117,11 +117,11 @@ To begin styling of the predefined icon layout, you need to import the `index` f
 ```   
 
 #### Defining custom theme
-You can easily create a new theme, that extends the [`igx-icon-theme`]({environment:sassApiUrl}/index.html#function-igx-icon-theme) and accepts the parameters, required to customize the icon as desired.   
+You can easily create a new theme, that extends the [`icon-theme`]({environment:sassApiUrl}/index.html#function-icon-theme) and accepts the parameters, required to customize the icon as desired.   
    
 
 ```scss
-$custom-theme: igx-icon-theme(
+$custom-theme: icon-theme(
   $color: #ffcd0f,
   $disabled-color: #494949
 );
@@ -135,7 +135,7 @@ In the approach, that was described above, the color values were hardcoded. Alte
 $black-color: #494949;
 $yellow-color: #ffcd0f;
 
-$custom-palette: igx-palette(
+$custom-palette: palette(
     $primary: $black-color,
     $secondary: $yellow-color
 );
@@ -144,9 +144,9 @@ $custom-palette: igx-palette(
 After the custom palette has been generated, the `igx-color` function can be used to obtain different varieties of the primary and the secondary colors.   
 
 ```scss
-$custom-theme: igx-icon-theme(
-    $color: igx-color($custom-palette, "secondary", 600),
-    $disabled-color: igx-color($custom-palette, "primary", 500)
+$custom-theme:icon-theme(
+    $color: color($custom-palette, "secondary", 600),
+    $disabled-color: color($custom-palette, "primary", 500)
 );
 ```
 
@@ -167,7 +167,7 @@ $my-custom-schema: extend($dark-schema, (
     igx-icon: $custom-icon-schema
 ));
 
-$custom-theme: igx-icon-theme(
+$custom-theme: icon-theme(
     $palette: $custom-palette,
     $schema: $my-custom-schema
 );
@@ -176,7 +176,7 @@ $custom-theme: igx-icon-theme(
 #### Applying the custom theme
 The easiest way to apply your theme is with a `sass` `@include` statement in the global styles file:
 ```scss
-@include igx-icon($custom-theme);
+@include icon($custom-theme);
 ```
 
 #### Scoped component theme
@@ -193,7 +193,7 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 ```scss
 :host {
     ::ng-deep {
-        @include igx-icon($custom-theme);
+        @include icon($custom-theme);
     }
 }
 ```    
@@ -214,7 +214,7 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 <div class="divider--half"></div>
 
 * [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
-* [IgxIconComponent Styles]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxIconComponent Styles]({environment:sassApiUrl}/index.html#function-icon-theme)
 
 ### Additional Resources
 <div class="divider--half"></div>

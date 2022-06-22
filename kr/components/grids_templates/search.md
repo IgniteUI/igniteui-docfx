@@ -374,12 +374,12 @@ public clearSearch() {
 
 스타일:
 
-* [@@igxNameComponent 스타일]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
-* [IgxInputGroupComponent 스타일]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
-* [IgxIconComponent 스타일]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
-* [IgxRippleDirective 스타일]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
-* [IgxButtonDirective 스타일]({environment:sassApiUrl}/index.html#function-igx-button-theme)
-* [IgxChipComponent 스타일]({environment:sassApiUrl}/index.html#function-igx-chip-theme)
+* [@@igxNameComponent 스타일]({environment:sassApiUrl}/index.html#function-grid-theme)
+* [IgxInputGroupComponent 스타일]({environment:sassApiUrl}/index.html#function-input-group-theme)
+* [IgxIconComponent 스타일]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxRippleDirective 스타일]({environment:sassApiUrl}/index.html#function-ripple-theme)
+* [IgxButtonDirective 스타일]({environment:sassApiUrl}/index.html#function-button-theme)
+* [IgxChipComponent 스타일]({environment:sassApiUrl}/index.html#function-chip-theme)
 
 ### 추가 리소스
 <div class="divider--half"></div>

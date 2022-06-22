@@ -18,26 +18,26 @@ To make it easier to understand, lets take a look at the default schema the avat
 ```scss
 $_light-avatar: (
     icon-background: (
-        igx-color: ('grays', 400)
+       color: ('grays', 400)
     ),
 
     icon-color: (
-        igx-color: ('grays', 800)
+       color: ('grays', 800)
     ),
 
     initials-background: (
-        igx-color: ('grays', 400)
+       color: ('grays', 400)
     ),
 
     initials-color: (
-        igx-color: ('grays', 800)
+       color: ('grays', 800)
     ),
 
     image-background: transparent
 );
 ```
 
-As you can see from the example above, the component schema defines the properties the [Avatar Theme]({environment:sassApiUrl}/index.html#function-igx-avatar-theme) consumes. It just prescribes the colors the avatar should use, without having to resolve them beforehand.
+As you can see from the example above, the component schema defines the properties the [Avatar Theme]({environment:sassApiUrl}/index.html#function-avatar-theme) consumes. It just prescribes the colors the avatar should use, without having to resolve them beforehand.
 
 Let's take the `icon-background` property for example. It tells the avatar theme what the default background should be for each new __igx-avatar__ of type __icon__. 
 
@@ -50,13 +50,13 @@ Let's see how the schema will change when we make this addition:
 ```scss
 $_light-avatar: (
     icon-background: (
-        igx-color: ('grays', 400),
+       color: ('grays', 400),
         hexrgba: #fff
     ),
     ...
 );
 ```
-The result of the igx-color function call will be automatically passed as the first argument to the `hexrgba` function. Since the `hexrgba` accepts a second argument for the background color, we provide it as the value of the `hexrgba` key in the example above.
+The result of thecolor function call will be automatically passed as the first argument to the `hexrgba` function. Since the `hexrgba` accepts a second argument for the background color, we provide it as the value of the `hexrgba` key in the example above.
 
 <div class="divider"></div>
 
@@ -84,7 +84,7 @@ $light-schema: (
 );
 ```
 
-We do this so we can pass the entire `$light-schema` to the `igx-theme` mixin. So for instance if we wanted to modify the `$light-schema` by replacing the default component schema the avatar component uses we might do:
+We do this so we can pass the entire `$light-schema` to the `theme` mixin. So for instance if we wanted to modify the `$light-schema` by replacing the default component schema the avatar component uses we might do:
 
 ```scss
 $my-light-schema: extend($light-schema, (
@@ -95,7 +95,7 @@ $my-light-schema: extend($light-schema, (
 Now we can pass all that to a global theme:
 
 ```scss
-@include igx-theme(
+@include theme(
     $schema: $my-light-schema,
     $palette: $default-palette
 );
@@ -108,7 +108,7 @@ Some component schemas, like the button schema, have property definitions for ro
 Finally, let's see how a component theme can use the schema we created above.
 
 ```scss
-$my-avatar-theme: igx-avatar-theme(
+$my-avatar-theme: avatar-theme(
     $schema: $my-light-schema
 );
 ```
@@ -124,8 +124,8 @@ Another great feature of theme schemas is that you can have as many as you want 
 * [Light Avatar Schema]({environment:sassApiUrl}/index.html#variable-_light-avatar)
 * [Light Components Schema]({environment:sassApiUrl}/index.html#variable-light-schema)
 * [Dark Components Schema]({environment:sassApiUrl}/index.html#variable-dark-schema)
-* [Global Theme]({environment:sassApiUrl}/index.html#mixin-igx-theme)
-* [Avatar Theme]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
+* [Global Theme]({environment:sassApiUrl}/index.html#mixin-theme)
+* [Avatar Theme]({environment:sassApiUrl}/index.html#function-avatar-theme)
 
 ### Additional Resources
 <div class="divider--half"></div>

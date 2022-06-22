@@ -150,10 +150,10 @@ npm i xmlhttprequest
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単な方法は、[`igx-icon-theme`]({environment:sassApiUrl}/index.html#function-igx-icon-theme) を拡張し、必要に応じてアイコンをカスタマイズするために必要なパラメーターを受け入れる新しいテーマを作成する方法です。
+最も簡単な方法は、[`icon-theme`]({environment:sassApiUrl}/index.html#function-icon-theme) を拡張し、必要に応じてアイコンをカスタマイズするために必要なパラメーターを受け入れる新しいテーマを作成する方法です。
 
 ```scss
-$custom-icon-theme: igx-icon-theme(
+$custom-icon-theme: icon-theme(
   $color: #1481b8,
   $disabled-color: #494949
 );
@@ -164,7 +164,7 @@ $custom-icon-theme: igx-icon-theme(
 最後には、カスタム アイコン テーマをアプリケーションに渡します。
 
 ```scss
- @include igx-css-vars($custom-icon-theme);
+ @include css-vars($custom-icon-theme);
 ```
 
 ### テーマ オーバーライドの使用
@@ -176,7 +176,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 ```scss
 :host {
      ::ng-deep {
-        @include igx-icon($custom-icon-theme);
+        @include icon($custom-icon-theme);
     }
 }
 ```
@@ -194,7 +194,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 <div class="divider--half"></div>
 
 * [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
-* [IgxIconComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxIconComponent スタイル]({environment:sassApiUrl}/index.html#function-icon-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

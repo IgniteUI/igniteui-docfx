@@ -1,29 +1,29 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid 列サイズ変更 | Ignite UI for Angular | インフラジスティックス
-_description: Angular Grid グリッド列のサイズ変更は Angular ドラッグ サイズ変更に基づいて、グリッド列の幅を簡単に変更できます。Angular ドラッグ サイズ変更が大変使いやすくなりました。
+title: Angular Grid の列サイズ変更 - Ignite UI for Angular
+_description: Angular Grid の列サイズ変更を使用して、グリッド列の幅を瞬時に変更できます。Angular ドラッグ サイズ変更が大変使いやすくなりました。無料でお試しください。
 _keywords: grid column resizing, igniteui for angular, infragistics
 _language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid 列サイズ変更 | Ignite UI for Angular | インフラジスティックス
-_description: Angular Tree Grid グリッド列のサイズ変更は Angular ドラッグ サイズ変更に基づいて、グリッド列の幅を簡単に変更できます。Angular ドラッグ サイズ変更が大変使いやすくなりました。
+title: Angular Tree Grid の列サイズ変更 - Ignite UI for Angular
+_description: Angular Tree Grid の列サイズ変更を使用して、グリッド列の幅を瞬時に変更できます。Angular ドラッグ サイズ変更が大変使いやすくなりました。無料でお試しください。
 _keywords: grid column resizing, igniteui for angular, infragistics
 _language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchical Grid 列サイズ変更 | Ignite UI for Angular | インフラジスティックス
-_description: Angular Hierarchical Grid グリッド列のサイズ変更は Angular ドラッグ サイズ変更に基づいて、グリッド列の幅を簡単に変更できます。Angular ドラッグ サイズ変更が大変使いやすくなりました。
+title: Angular Hierarchical Grid の列サイズ変更 - Ignite UI for Angular
+_description: Angular Hierarchical Grid の列サイズ変更を使用して、グリッド列の幅を瞬時に変更できます。Angular ドラッグ サイズ変更が大変使いやすくなりました。無料でお試しください。
 _keywords: grid column resizing, igniteui for angular, infragistics
 _language: ja
 ---
 }
 
-# @@igComponent 列サイズ変更
+# Angular @@igComponent 列サイズ変更
 
 グリッド列のサイズ変更遅延では、Angular ドラッグ操作の実行中にサイズ変更インジケーターが一時的に表示されます。ドラッグ操作が完了すると、新しいグリッド列幅が適用されます。
 
@@ -122,7 +122,7 @@ public onResize(event) {
 
 ## ピクセル/パーセンテージで列のサイズを変更する
 
-ユーザーのシナリオに応じて、列の幅はピクセル、パーセンテージ、または両方の組み合わせで定義できます。 これらのシナリオはすべて、列のサイズ変更機能でサポートされています。デフォルトでは、列に幅が設定されていない場合、ピクセルで設定された幅の使用可能なスペースに収まります。
+ユーザーのシナリオに応じて、列の幅はピクセル、パーセンテージ、または両方の組み合わせで定義できます。これらのシナリオはすべて、列のサイズ変更機能でサポートされています。デフォルトでは、列に幅が設定されていない場合、ピクセルで設定された幅の使用可能なスペースに収まります。
 
 つまり、次の構成が可能です。
 
@@ -165,7 +165,7 @@ public onResize(event) {
 
 **パーセンテージ**
 
-幅がパーセンテージで設定された列のサイズを変更する場合、ピクセル単位のマウスの水平移動量は、ほぼグリッド幅に対するパーセンテージの量に変換されます。 列はレスポンシブな状態のまま、その後のグリッドのサイズ変更は列にも反映されます。
+幅がパーセンテージで設定された列のサイズを変更する場合、ピクセル単位のマウスの水平移動量は、ほぼグリッド幅に対するパーセンテージの量に変換されます。列はレスポンシブな状態のまま、その後のグリッドのサイズ変更は列にも反映されます。
 
 ## 列のサイズ変更の制限
 
@@ -184,7 +184,7 @@ public onResize(event) {
 ```
 }
 
-列幅の最小値と最大値のタイプ (ピクセルまたはパーセンテージ) を混在させることができます。 最小値と最大値がパーセンテージに設定されている場合、それぞれの列サイズはピクセルと同様の正確なサイズに制限されます。
+列幅の最小値と最大値のタイプ (ピクセルまたはパーセンテージ) を混在させることができます。最小値と最大値がパーセンテージに設定されている場合、それぞれの列サイズはピクセルと同様の正確なサイズに制限されます。
 
 つまり、次の構成が可能です。
 
@@ -249,10 +249,10 @@ column.autosize();
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-最も簡単な方法は、[`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) を拡張し、`$resize-line-color` パラメーター以外にも多くのパラメータを受け入れます。
+最も簡単な方法は、[`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) を拡張し、`$resize-line-color` パラメーター以外にも多くのパラメータを受け入れます。
 
 ``` scss
-$custom-grid-theme: igx-grid-theme(
+$custom-grid-theme: grid-theme(
     $resize-line-color: #0288D1
 );
 
@@ -263,7 +263,7 @@ $custom-grid-theme: igx-grid-theme(
 ```scss
 :host {
     ::ng-deep {
-        @include igx-grid($custom-grid-theme);
+        @include grid($custom-grid-theme);
     }
 }
 ```
@@ -277,15 +277,15 @@ $custom-grid-theme: igx-grid-theme(
 $primary-color: #0288D1;
 $secondary-color: #BDBDBD;
 
-$custom-theme-palette: igx-palette($primary: $primary-color, $secondary: $secondary-color);
+$custom-theme-palette: palette($primary: $primary-color, $secondary: $secondary-color);
 ```
 
 次に [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取り出すことができます。 
 
 ```scss
-$custom-grid-theme: igx-grid-theme(
+$custom-grid-theme: grid-theme(
     $palette: $custom-theme-palette,
-    $resize-line-color: igx-color($custom-theme-palette, 'secondary', 500)
+    $resize-line-color: color($custom-theme-palette, 'secondary', 500)
 );
 ```
 
@@ -302,13 +302,13 @@ $custom-grid-theme: igx-grid-theme(
 $light-grid-schema: extend($_light-grid,
     (
         resize-line-color: (
-            igx-color: ('secondary', 500)
+           color: ('secondary', 500)
             ),
         header-background: (
-            igx-color: ("primary", 100)
+           color: ("primary", 100)
             ),
         header-text-color: (
-            igx-color: ("primary", 600)
+           color: ("primary", 600)
             )
     )
 );
@@ -319,11 +319,11 @@ $light-grid-schema: extend($_light-grid,
 ```scss
 // Extending the global light-schema
 $custom-light-grid-schema: extend($light-schema,(
-    igx-grid: $light-grid-schema
+   grid: $light-grid-schema
 ));
 
 // Specifying the palette and schema of the custom grid theme
-$custom-grid-theme: igx-grid-theme(
+$custom-grid-theme: grid-theme(
     $palette: $custom-theme-palette,
     $schema: $custom-light-grid-schema
 );

@@ -1,23 +1,23 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid 列選択 | Ignite UI for Angular | インフラジスティックス
-_description: Angular Material テーブルで列選択を構成する方法を説明します。列選択により、グリッドの操作がより魅力的になります。
+title: Angular Grid の列選択 - Ignite UI for Angular
+_description: Ignite UI for Angular Data Grid で列選択を構成する方法を説明します。これにより、グリッドのインタラクションがより簡単かつ高速になります。
 _keywords: column selection, igniteui for angular, 列選択, infragistics, インフラジスティックス
 _language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid 列選択 | Ignite UI for Angular | インフラジスティックス
-_description: Angular Material テーブルで列選択を構成する方法を説明します。列選択により、ツリー グリッドの操作がより魅力的になります。
+title: Angular Tree Grid の列選択 - Ignite UI for Angular
+_description: Ignite UI for Angular Tree Grid で列選択を構成する方法を説明します。これにより、グリッドのインタラクションがより簡単かつ高速になります。。
 _keywords: column selection, igniteui for angular, 列選択, infragistics, インフラジスティックス
 _language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchical Grid 列選択 | Ignite UI for Angular | インフラジスティックス
-_description: Angular Material テーブルで列選択を構成する方法を説明します。列選択により、階層型グリッドの操作がより魅力的になります。
+title: Angular Hierarchical Grid の列選択 - Ignite UI for Angular
+_description: Ignite UI for Angular Hierarchical Grid で列選択を構成する方法を説明します。これにより、グリッドのインタラクションがより簡単かつ高速になります。
 _keywords: column selection, igniteui for angular, 列選択, infragistics, インフラジスティックス
 _language: ja
 ---
@@ -110,7 +110,7 @@ API 操作の詳細については、[`API リファレンス`](#api-references)
 
 @@if (igxName === 'IgxTreeGrid') {
 ```scss
-$custom-grid-theme: igx-grid-theme(
+$custom-grid-theme: grid-theme(
     $row-selected-background: #011627,
     $row-selected-text-color: #ECAA53,
     $row-selected-hover-background: #011627,
@@ -123,7 +123,7 @@ $custom-grid-theme: igx-grid-theme(
 }
 @@if (igxName !== 'IgxTreeGrid') {
 ```scss
-$custom-grid-theme: igx-grid-theme(
+$custom-grid-theme: grid-theme(
     $row-selected-background: #011627,
     $row-selected-text-color: #ECAA53,
     $row-selected-hover-background: #011627,
@@ -132,7 +132,7 @@ $custom-grid-theme: igx-grid-theme(
 );
 ```
 }
-[`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) はいくつかのパラメーターを受け入れますが、選択したすべての列の外観を変更するのは以下の 5 つです。
+[`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) はいくつかのパラメーターを受け入れますが、選択したすべての列の外観を変更するのは以下の 5 つです。
 - **$row-selected-background**- 選択した部分の背景を設定します。
 - **$row-selected-text-color** - 選択した部分のテキスト色を設定します。
 - **$row-selected-hover-background** - ホバーされたセルまたは複数のセルの色を設定します。
@@ -144,7 +144,7 @@ $custom-grid-theme: igx-grid-theme(
 最後にカスタム `igx-grid` テーマを含めます。
 
 ```scss
-@include igx-css-vars($custom-grid-theme)
+@include css-vars($custom-grid-theme)
 ```
 
 ### 基本テーマのオーバーライド
@@ -156,7 +156,7 @@ Internet Explorer 11 のコンポーネントをスタイル設定するには�
 ```scss
 :host {
     ::ng-deep {
-        @include igx-grid($custom-column-selection-theme);
+        @include grid($custom-column-selection-theme);
     }
 }
 ```
@@ -179,7 +179,7 @@ Internet Explorer 11 のコンポーネントをスタイル設定するには�
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumnomponent.html)
 * [IgxColumnGrpupComponent]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html)
-* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-grid-theme)
 
 [`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) プロパティ:
 * [columnSelection]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnselection)

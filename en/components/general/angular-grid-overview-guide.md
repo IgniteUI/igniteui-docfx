@@ -214,15 +214,15 @@ With just a few lines of code, you can easily change the theme of your component
 $primary-color: #2ab759; // Some green shade I like
 $secondary-color: #f96a88; // Watermelon pink
 
-$my-color-palette: igx-palette(
+$my-color-palette: palette(
     $primary: $primary-color,
     $secondary: $secondary-color
 );
 
-// IMPORTANT: Make sure you always include igx-core first!
-@include igx-core();
-// Pass the color palette we generated to the igx-theme mixin
-@include igx-theme($my-color-palette);
+// IMPORTANT: Make sure you always includecore first!
+@include core();
+// Pass the color palette we generated to thetheme mixin
+@include theme($my-color-palette);
 ```
 
 Since Ignite UI for Angular bases its component designs on the [Material Design Principles](https://material.io/guidelines/material-design/introduction.html "Introduction to Material Design"), we try to get as close as possible to colors, sizes, typography, and the overall look and feel of our components to those created by Google. Example:

@@ -198,11 +198,9 @@ This section shows the accessibility (ARIA) support of the framework as well as 
 
 ### Enabling right-to-left direction (RTL)
 
-`Ignite UI for Angular` library is susceptible to `directionality` manipulation only when setting `dir` attribute on either `html` or `body` tags. Also, keep in mind that runtime changes are not detected.
+`Ignite UI for Angular` library is susceptible to `directionality` manipulation only when setting `dir` attribute on either `html` or `body` tags.
 
 With that being said, let's move to the following example:
-
-#### Step - 1 - Setting the 'dir' attribute on both tags.
 
 ```html
 <html dir="rtl">
@@ -212,36 +210,12 @@ With that being said, let's move to the following example:
 </html>
 ```
 
-The precedence takes the inner tag which in the above case is the attribute at the `body` tag.
-
-#### Step - 2 - Notifying the [theming engine](../themes/index.md) for the respective direction.
-
-Setting the `$direction` parameter of [igx-core]({environment:sassApiUrl}/index.html#mixin-igx-core) mixin does the magic.
-
-```scss 
-@include igx-core($direction: rtl);
-```
-
-These are all the steps needed to adjust your content.
-
+>[!NOTE]
+> The precedence takes the inner tag which in the above case is the attribute at the `body` tag.
 
 ### RTL Support 
-Most of the components in the framework now have full **right-to-left (RTL)** support via the newly included RTL themes.
 
-For **CSS-based** projects add `node_modules/igniteui-angular/styles/igniteui-angular-rtl.css` to your `angular.json` styles collection.
+**Right-to-left (RTL)** direction is fully supported in all Ignite UI themes by default.
 
-For **Sass-based** projects pass `$direction` to the `igx-core` mixin in your root stylesheet.
-
-Example:
-
-```scss
-// $direction defaults to ltr if it's omitted.
-@include igx-core($direction: rtl);
-```
-
-Currently the following components have only partial RTL support:
-
-* Grid (igx-grid)
-* Tabs (igx-tabs)
-
-
+>[!NOTE]
+>Currently the `Igx-Grid` component have only partial RTL support.

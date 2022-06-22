@@ -11,7 +11,7 @@ _keywords: tick marks, igniteui for angular, infragistics
 <div class="divider--half"></div>
 
 * [IgxSliderComponent]({environment:angularApiUrl}/classes/igxslidercomponent.html)
-* [IgxSliderComponent Styles]({environment:sassApiUrl}/index.html#function-igx-slider-theme)
+* [IgxSliderComponent Styles]({environment:sassApiUrl}/index.html#function-slider-theme)
 * [IRangeSliderValue]({environment:angularApiUrl}/interfaces/irangeslidervalue.html)
 * [SliderType]({environment:angularApiUrl}/enums/slidertype.html)
 

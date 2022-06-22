@@ -112,7 +112,7 @@ public pivotConfig: IPivotConfiguration = {
 
 データが構成と一致することが重要です。最良の結果を得るには、集計データに追加のフィールドを含めたり、提供されたデータのフィールドを行または列として宣言せずに残したりしないでください。`IgxPivotGrid` コンポーネントは、`PivotConfiguration` に基づいてデータを構築し、それに応じて構成と集約データが一致することが期待されます。
 
-同様に、並べ替えやフィルタリングなどの他のリモート データ操作の場合、関連する空のストラテジ (`filterStrategy`、`sortStrategy`) を設定することで、データ処理をスキップできます。
+同様に、ソートやフィルタリングなどの他のリモート データ操作の場合、関連する空のストラテジ (`filterStrategy`、`sortStrategy`) を設定することで、データ処理をスキップできます。
 
 ```html
 <igx-pivot-grid [filterStrategy]="noopFilterStrategy" [sortStrategy]="noopSortStrategy" ...>

@@ -12,13 +12,13 @@ _extraFont: https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,70
 ## Overview
 An application can define multiple typography `scales` that may share scale categories between one another. A `scale category` is a set of `type styles`, containing information about `font-family`, `font-size`, `font-weight`, `line-height`, `letter-spacing`, and `text-transform`.
 
-Ignite UI for Angular exposes four default type scales for each of its themes - `$material-type-scale`, `$fluent-type-scale`, `$bootstrap-type-scale`, and `$indigo-type-scale`, which are in turn used by the `igx-typography` mixin to set the typography styles. You can, however, create additional type scales.
+Ignite UI for Angular exposes four default type scales for each of its themes - `$material-type-scale`, `$fluent-type-scale`, `$bootstrap-type-scale`, and `$indigo-type-scale`, which are in turn used by the `typography` mixin to set the typography styles. You can, however, create additional type scales.
 
 In many cases you would only need to make slight modifications to the typography, thus it's recommended that you read the [Typography](../typography.md) section of the CSS Variables documentation first, if you haven't already. Using Sass to modify the typography is only required if you want to make deeper changes pertaining to the entire typographic scale.
 
 ## Usage
 > [!IMPORTANT]
-> By default we don't apply any typography styles. To use our typography in your application you have to set the `igx-typography` CSS class on a top-level element and include the `igx-typography` mixin in your base `.scss` file.
+> By default we don't apply any typography styles. To use our typography in your application you have to set the `typography` CSS class on a top-level element and include the `typography` mixin in your base `.scss` file.
 
 We have selected [Titillium Web](https://fonts.google.com/selection?selection.family=Titillium+Web:300,400,600,700) to be the default font in the Material theme for Ignite UI for Angular. To use it you have to host it yourself, or include it from Google Fonts:
 
@@ -28,20 +28,20 @@ We have selected [Titillium Web](https://fonts.google.com/selection?selection.fa
 
 There are a several mixins and functions that are used to set and retrieve category styles to/from a type scale. Those are:
 
-- `igx-type-style` [function] - Returns a set of style rules to be used by a type scale category.
-- `igx-type-scale` [function] - Returns a set of 13 style categories.
-- `igx-type-scale-category` [function] - Returns a map of style rules from a type scale and category.
-- `igx-type-style` [mixin] - Adds style rules to a selector from a specific type scale and category.
-- `igx-typography` [mixin] - Defines the global application typography styles.
+- `type-style` [function] - Returns a set of style rules to be used by a type scale category.
+- `type-scale` [function] - Returns a set of 13 style categories.
+- `type-scale-category` [function] - Returns a map of style rules from a type scale and category.
+- `type-style` [mixin] - Adds style rules to a selector from a specific type scale and category.
+- `typography` [mixin] - Defines the global application typography styles.
 
 
 Let's take a closer look at what each one of the aforementioned mixins and functions do.
 
 ### The Type Style
-The `igx-type-style` function is an interface-like function that simply ensures that certain arguments are passed as part of the style set for a scale category. Say, for instance, that we want to define a new set of style rules for the `h1` scale category. To do so, we would simply write:
+The `type-style` function is an interface-like function that simply ensures that certain arguments are passed as part of the style set for a scale category. Say, for instance, that we want to define a new set of style rules for the `h1` scale category. To do so, we would simply write:
 
 ```scss
-$h1-style: igx-type-style(
+$h1-style:type-style(
     $font-size: 112px,
     $font-weight: 600,
     $line-height: 96px
@@ -56,15 +56,15 @@ The type scale is a map of type styles that include 13 scale categories.
 To generate a new type map, type the following:
 
 ```scss
-$my-type-scale: igx-type-scale();
+$my-type-scale:type-scale();
 ```
 
-This will produce a map, which is exactly the same as the `$material-type-scale` that the `igx-typography` mixin uses by default.
+This will produce a map, which is exactly the same as the `$material-type-scale` that the `typography` mixin uses by default.
 
 You can use the `$h1-style` we defined in our previous example to produce a slightly modified type scale.
 
 ```scss
-$my-type-scale: igx-type-scale($h1: $h1-style);
+$my-type-scale:type-scale($h1: $h1-style);
 ```
 
 Now `$my-type-scale` will store a modified type scale containing the modifications we specified for the `h1` category scale. 
@@ -75,7 +75,7 @@ Now `$my-type-scale` will store a modified type scale containing the modificatio
 In addition to modifying existing type categories, you can also add new categories:
 
 ```scss
-$my-type-category: igx-type-style(
+$my-type-category:type-style(
     $font-weight: 600,
     $font-size: 42px,
     $text-transform: uppercase
@@ -94,22 +94,22 @@ It currently accepts 3 arguments:
 - `$font-family` - The global font family to be used by the application.
 - `$type-scale` - The default type scale to be used by the application.
 
-To use the typography styles, include the `igx-typography` mixin anywhere after the `igx-core` mixin and before the `igx-theme` mixin. Let's take advantage of the type scale `$my-type-scale` we defined above and make it the default type scale.
+To use the typography styles, include the `typography` mixin anywhere after the `core` mixin and before the `theme` mixin. Let's take advantage of the type scale `$my-type-scale` we defined above and make it the default type scale.
 
 ```scss
-@include igx-typography(
+@include typography(
     $font-family: $material-typeface,
     $type-scale: $my-type-scale,
 );
 ```
-We expose four variables for typeface, similar to type-scale - `$material-typeface`, `$fluent-typeface`, `$bootstrap-typeface`, and `$indigo-typeface`. You can use any of them in combination with any type-scale when including the `igx-typography` mixin.
+We expose four variables for typeface, similar to type-scale - `$material-typeface`, `$fluent-typeface`, `$bootstrap-typeface`, and `$indigo-typeface`. You can use any of them in combination with any type-scale when including the `typography` mixin.
 
 ## Custom Type Styles
-The `igx-type-style` mixin can be used to retrieve the style rules for a scale category from a specific type scale. Furthermore, it allows you to add additional style rules.
+The `type-style` mixin can be used to retrieve the style rules for a scale category from a specific type scale. Furthermore, it allows you to add additional style rules.
 
 ```scss
 .my-fancy-h1 {
-    @include igx-type-style($my-type-scale, 'h1') {
+    @include type-style($my-type-scale, 'h1') {
         color: royalblue;
     }
 }
@@ -128,13 +128,13 @@ There are two ways to change the text styles of a card. The first is by modifyin
 
 ```scss
 // Create a custom h5 scale category style
-$my-h5: igx-type-style($font-size: 18px);
+$my-h5:type-style($font-size: 18px);
 
 // Create a custom type scale with the modified h5
-$my-type-scale: igx-type-scale($h5: $my-h5);
+$my-type-scale:type-scale($h5: $my-h5);
 
 // Pass the custom scale to the global typography mixin
-@include igx-typography($type-scale: $my-type-scale);
+@include typography($type-scale: $my-type-scale);
 ```
 
 > [!WARNING] 
@@ -142,30 +142,30 @@ $my-type-scale: igx-type-scale($h5: $my-h5);
 
 ```scss
 // Create a custom h5 scale category style
-$my-h5: igx-type-style($font-size: 18px);
+$my-h5:type-style($font-size: 18px);
 
 // Create a custom type scale with the modified h5
-$my-type-scale: igx-type-scale($h5: $my-h5);
+$my-type-scale:type-scale($h5: $my-h5);
 
 // Pass the custom scale to the card typography mixin only
-@include igx-card-typography($type-scale: $my-type-scale);
+@include card-typography($type-scale: $my-type-scale);
 ```
 
-We no longer include the `igx-typography` mixin by passing it the `$my-type-scale` scale with our modification to the `h5` category. Now all we do is pass the custom scale we created to the `igx-card-typography` mixin. The only component that uses our `$my-type-scale` scale is the card now.
+We no longer include the `typography` mixin by passing it the `$my-type-scale` scale with our modification to the `h5` category. Now all we do is pass the custom scale we created to the `card-typography` mixin. The only component that uses our `$my-type-scale` scale is the card now.
 
 Typography style mixins can be scoped to specific selectors. Say we wanted our custom card typography styles to be applied for all `igx-card` components with class name of `my-cool-card`. 
 
 ```scss
 //...
 .my-cool-card {
-    @include igx-card-typography($type-scale: $my-type-scale);
+    @include card-typography($type-scale: $my-type-scale);
 }
 ```
 
 The typography component mixins take a second argument - `$categories`. It is used to configure which parts of the component use what typography scale category. For instance, if we wanted our custom card to use a different scale category for the title than `h5`, we could change it.
 
 ```scss
-@include igx-card-typography(
+@include card-typography(
     $type-scale: $my-type-scale,
     $categories: (
         title: 'h6'
@@ -177,7 +177,7 @@ Now the card component will use the `overline` scale category to style the title
 
 ## CSS Classes
 
-In addition to adding text styles for all components based on type scale categories, we also style the default h1-h6 and p elements. This allows us to separate semantics from styling. So for instance, even though the `h1` tag has some default styling that we provide when using `igx-typography`, you can modify it to look like an `h3` by giving it a class of `igx-typography__h3`.
+In addition to adding text styles for all components based on type scale categories, we also style the default h1-h6 and p elements. This allows us to separate semantics from styling. So for instance, even though the `h1` tag has some default styling that we provide when using `typography`, you can modify it to look like an `h3` by giving it a class of `igx-typography__h3`.
 
 ```html
 <h1 class="igx-typography__h3">Some text</h1>

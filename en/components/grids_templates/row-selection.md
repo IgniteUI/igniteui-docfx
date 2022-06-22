@@ -1,22 +1,22 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid Row Selection | Ignite UI for Angular | infragistics 
-_description: Check how easy it is to use Row and Multi-cell data select of the Ignite UI for Angular Material table by using angular events, API or with mouse interactions.
+title: Angular Grid Select Row - Ignite UI for Angular 
+_description: Enable row selection to improve UX and let users manage single or multiple rows. See how easy it is to configure Row data select with Ignite UI.
 _keywords: data select, igniteui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid Row Selection | Ignite UI for Angular | infragistics 
-_description: Check how easy it is to use Row and Multi-cell data select of the Ignite UI for Angular Material table by using angular events, API or with mouse interactions.
+title: Angular Grid Select Row - Ignite UI for Angular 
+_description: Enable row selection to improve UX and let users manage single or multiple rows. See how easy it is to configure Row data select with Ignite UI.
 _keywords: data select, igniteui for angular, infragistics
 _canonicalLink: grid/row-selection
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchical Grid Row Selection | Ignite UI for Angular | infragistics 
-_description: Check how easy it is to use Row and Multi-cell data select of the Ignite UI for Angular Material table by using angular events, API or with mouse interactions.
+title: Angular Grid Select Row - Ignite UI for Angular 
+_description: Enable row selection to improve UX and let users manage single or multiple rows. See how easy it is to configure Row data select with Ignite UI.
 _keywords: data select, igniteui for angular, infragistics
 _canonicalLink: grid/row-selection
 ---
@@ -492,7 +492,7 @@ This demo prevents some rows from being selected using the `rowSelectionChanging
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 @@if (igxName !== 'IgxTreeGrid') {* [IgxGridRow API]({environment:angularApiUrl}/classes/igxgridrow.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRow API]({environment:angularApiUrl}/classes/igxtreegridrow.html)}
 * [IgxGridCell API]({environment:angularApiUrl}/classes/igxgridcell.html)
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-grid-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>

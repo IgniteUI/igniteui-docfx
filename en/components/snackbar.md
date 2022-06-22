@@ -250,10 +250,10 @@ To get started with styling the snackbar, we need to import the index file, wher
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`igx-snackbar-theme`]({environment:sassApiUrl}/index.html#function-igx-snackbar-theme) and accepts the `$text-color`, `$background`, `$button-color` and the `$border-radius` parameters.
+Following the simplest approach, we create a new theme that extends the [`snackbar-theme`]({environment:sassApiUrl}/index.html#function-snackbar-theme) and accepts the `$text-color`, `$background`, `$button-color` and the `$border-radius` parameters.
 
 ```scss
-$dark-snackbar: igx-snackbar-theme(
+$dark-snackbar: snackbar-theme(
     $text-color: #FFCD0F,
     $background: #292826,
     $button-color: #FFCD0F,
@@ -270,7 +270,7 @@ The last step is to **include** the component theme in our application.
 If `$legacy-support` is set to `true`, include the **component theme** like that:
 
 ```scss
- @include igx-snackbar($igx-snackbar-theme);
+ @include snackbar($igx-snackbar-theme);
 ```
 >[!NOTE]
 >If the component is using an [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`
@@ -278,7 +278,7 @@ If `$legacy-support` is set to `true`, include the **component theme** like that
 ```scss
 :host {
      ::ng-deep {
-        @include igx-snackbar($igx-snackbar-theme);
+        @include snackbar($igx-snackbar-theme);
     }
 }
 ```
@@ -288,7 +288,7 @@ If `$legacy-support` is set to `true`, include the **component theme** like that
 If `$legacy-support` is set to `false`(default), include the component **css variables** like that:
 
 ```scss
-@include igx-css-vars($igx-snackbar-theme);
+@include css-vars($igx-snackbar-theme);
 ```
 
 >[!NOTE]
@@ -296,7 +296,7 @@ If `$legacy-support` is set to `false`(default), include the component **css var
 
 ```scss
 :host {
-    @include igx-css-vars($igx-snackbar-theme);
+    @include css-vars($igx-snackbar-theme);
 }
 ```
 
@@ -310,16 +310,16 @@ Instead of hardcoding the color values like we just did, we can achieve greater 
 $yellow-color: #FFCD0F;
 $black-color: #292826;
 
-$dark-palette: igx-palette($primary: $black-color, $secondary: $yellow-color);
+$dark-palette: palette($primary: $black-color, $secondary: $yellow-color);
 ```
 
 And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette.
 
 ```scss
-$dark-snackbar: igx-snackbar-theme(
-    $text-color: igx-color($dark-palette, "secondary", 400),
-    $background: igx-color($dark-palette, "primary", 400),
-    $button-color: igx-color($dark-palette, "secondary", 400),
+$dark-snackbar: snackbar-theme(
+    $text-color: color($dark-palette, "secondary", 400),
+    $background: color($dark-palette, "primary", 400),
+    $button-color: color($dark-palette, "secondary", 400),
     $border-radius: 12px
 );
 ```
@@ -338,13 +338,13 @@ Extend one of the two predefined schemas, that are provided for every component,
 $dark-snackbar-schema: extend($_dark-snackbar,
     (
         text-color:(
-            igx-color: ("secondary", 400)
+           color: ("secondary", 400)
         ),
         background: (
-            igx-color: ("primary", 400)
+           color: ("primary", 400)
         ),
         button-color: (
-            igx-color: ("secondary", 400)
+           color: ("secondary", 400)
         ),
         border-radius: 12px
     )
@@ -360,7 +360,7 @@ $custom-dark-schema: extend($dark-schema,(
 ));
 
 // Defining snackbar theme with the global dark schema
-$dark-snackbar: igx-snackbar-theme(
+$dark-snackbar: snackbar-theme(
   $palette: $dark-palette,
   $schema: $custom-dark-schema
 );
@@ -386,7 +386,7 @@ In this article we learned how to use and configure the [`IgxSnackbarComponent`]
 
 Styles:
 
-* [`IgxSnackbarComponent Styles`]({environment:sassApiUrl}/index.html#function-igx-snackbar-theme)
+* [`IgxSnackbarComponent Styles`]({environment:sassApiUrl}/index.html#function-snackbar-theme)
 
 ## Additional Resources
 

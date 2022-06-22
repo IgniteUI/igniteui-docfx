@@ -11,8 +11,8 @@ We support Word and Excel palettes. To use them just pass one of the two maps `$
 
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-@include igx-core();
-@include igx-fluent-light-theme($light-fluent-excel-palette);
+@include core();
+@include fluent-light-theme($light-fluent-excel-palette);
 ```
 
 ## Fluent Dark Theme
@@ -21,10 +21,10 @@ We support Word and Excel palettes. To use them just pass one of the two maps `$
 
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-@include igx-core();
-@include igx-fluent-dark-theme($dark-fluent-excel-palette);
+@include core();
+@include fluent-dark-theme($dark-fluent-excel-palette);
 ```
 
 ## API Overview
-* [Light Theme]({environment:sassApiUrl}/index.html#mixin-igx-fluent-light-theme)
-* [Dark Theme]({environment:sassApiUrl}/index.html#mixin-igx-fluent-dark-theme)
+* [Light Theme]({environment:sassApiUrl}/index.html#mixin-fluent-light-theme)
+* [Dark Theme]({environment:sassApiUrl}/index.html#mixin-fluent-dark-theme)

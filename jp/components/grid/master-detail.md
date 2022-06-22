@@ -1,11 +1,11 @@
 ---
-title: Angular Grid マスターと詳細 | Ignite UI for Angular | インフラジスティックス
-_description: Ignite UI Angular Grid の行の展開可能な詳細ビュー テンプレートを定義する方法について説明します。
+title: Angular マスター - 詳細 Grid - Ignite UI for Angular
+_description: Ignite UI Angular Grid を使用して行データの展開可能な詳細ビュー テンプレートを定義します。マスター - 詳細スタイル データを階層構造で表示する場合に便利です。
 _keywords: マスターと詳細, igniteui for angular, インフラジスティックス
 _language: ja
 ---
 
-# Grid Master-Detail
+# Angular Master-Detail Grid
 
 `igxGrid` コンポーネントは、コンテンツを展開/縮小することで特定の行の追加の詳細を表示する detail テンプレートの指定をサポートします。指定した場合、各レコードは master として機能し、展開すると、現在のレコードのコンテキスト データを含むカスタマイズ可能な詳細テンプレートが表示されます。
 
@@ -93,7 +93,7 @@ Master-detail モードで表示するように `igxGrid` を設定するには�
 
 ## API リファレンス
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent スタイル]({environment:sassApiUrl}/#function-igx-grid-theme)
+* [IgxGridComponent スタイル]({environment:sassApiUrl}/#function-grid-theme)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html)
 * [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)

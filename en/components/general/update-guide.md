@@ -41,12 +41,20 @@ To update the **Angular CLI** package use the following command:
 ng update @angular/cli
 ```
 
+>[!NOTE]
+> If the `ng update` command fails because of package dependency mismatches, then revert the update, delete the `node_modules` folder and rerun the update with `--force` flag.
+
 ## Additional manual changes
 
 
 Unfortunately not all changes can be automatically updated. Changes below are split into sections as they occur in the versions, so if any updates are required you should start from your current version and apply further updates from bottom to top.
 
 For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from the "From 6.x .." section apply those changes and work your way up:
+
+## From 13.1.x to 13.2.x
+
+### Themes
+- **Breaking Change** - All RTL specific stylesheets have been removed. Ignite UI themes now support RTL directon by default. Users who have previously used `*-rtl.css` specific themes must switch to the regular theme files.
 
 ## From 13.0.x to 13.1.x
 
@@ -220,26 +228,26 @@ This was done so that palettes can be changed at runtime using CSS variables onl
 - Please ensure the correct palette and component schema are passed to your custom-made component and global themes. If you want to create a global dark theme, make sure to select a lighter color shade for your gray color, for instance:
 
 ```scss
-$my-dark-palette: igx-palette(
+$my-dark-palette: palette(
     $primary: olive,
     $secondary: yellow,
     $grays: #fff
 );
 
-@include igx-dark-theme($palette: $my-dark-palette);
+@include dark-theme($palette: $my-dark-palette);
 ```
 
 Likewise, light themes require a darker shade of gray and a light color schema.
 
-If you've not excluded any component themes from the global theme but you still want to create your own custom replacement themes using the `igx-css-vars` mixin, make sure the theme is passed the correct palette and correspoding schema:
+If you've not excluded any component themes from the global theme but you still want to create your own custom replacement themes using the `css-vars` mixin, make sure the theme is passed the correct palette and correspoding schema:
 
 ```scss
-$my-custom-grid: igx-grid-theme(
+$my-custom-grid: grid-theme(
     $palette: $my-dark-palette,
     $schema: $dark-schema
 );
 
-@include igx-css-vars($my-custom-grid);
+@include css-vars($my-custom-grid);
 ```
 
 * Excluded Component Themes:
@@ -247,21 +255,21 @@ $my-custom-grid: igx-grid-theme(
 In case you've excluded some component themes from the global theme and you've created custom replacement themes, you should ensure that the component mixin is included and is passed the correct component theme:
 
 ```scss
-$my-dark-palette: igx-palette(
+$my-dark-palette: palette(
     ...
     $exclude: ('igx-grid')
 );
 
-$my-custom-grid: igx-grid-theme(
+$my-custom-grid: grid-theme(
     $palette: $my-dark-palette,
     $schema: $dark-schema
 );
 
-// Ensure igx-grid is included:
-@include igx-grid($my-custom-grid);
+// Ensuregrid is included:
+@include grid($my-custom-grid);
 ```
 
-In case your custom component themes are declared in a separate component Sass file, other than the global `styles.scss`, ensure the `igx-core` mixin is also included.
+In case your custom component themes are declared in a separate component Sass file, other than the global `styles.scss`, ensure the `core` mixin is also included.
 
 ```scss
 // free version
@@ -271,16 +279,16 @@ In case your custom component themes are declared in a separate component Sass f
 @use '@infragistics/igniteui-angular/theming' as *;
 
 // Include the core module mixin.
-@include igx-core();
+@include core();
 
 // Create your theme.
-$my-custom-grid: igx-grid-theme(
+$my-custom-grid: grid-theme(
     $palette: $my-dark-palette,
     $schema: $dark-schema
 );
 
 // Include your custom theme styles.
-@include igx-grid($my-custom-grid);
+@include grid($my-custom-grid);
 ```
 
 To get a better grasp on the Sass Moule System, you can read [this great article](https://css-tricks.com/introducing-sass-modules/) by [Miriam Suzanne](https://css-tricks.com/author/miriam/);
@@ -438,46 +446,46 @@ $__legacy-libsass: true;
 ## From 11.1.x to 12.0.x
 ### Themes
 * Breaking Changes:
-    * `IgxAvatar` theme has been simplified. The number of theme params (`igx-avatar-theme`) has been reduced significantly and no longer includes prefixed parameters(`icon-*`, `initials-*`, `image-*`) and suffixed parameters(`border-radius-*`). Updates performed with `ng update` will migrate existing avatar themes, but some additional tweaking may be required to account for the absence of prefixed and suffixed params.
+    * `IgxAvatar` theme has been simplified. The number of theme params (`avatar-theme`) has been reduced significantly and no longer includes prefixed parameters(`icon-*`, `initials-*`, `image-*`) and suffixed parameters(`border-radius-*`). Updates performed with `ng update` will migrate existing avatar themes, but some additional tweaking may be required to account for the absence of prefixed and suffixed params.
 
     You will need to modify existing type specific avatar themes in the following way:
 
     For example, this:
 
         ```scss
-        $avatar-theme: igx-avatar-theme(
+        $avatar-theme: avatar-theme(
             $initials-background: blue,
             $initials-color: orange,
             $icon-background: blue,
             $icon-color: orange,
         );
 
-        @include igx-avatar($avatar-theme);
+        @include avatar($avatar-theme);
         ```
 
     Needs to be transformed into this:
 
         ```scss
-        $initials-avatar: igx-avatar-theme(
+        $initials-avatar: avatar-theme(
             $background: blue,
             $color: orange,
         );
 
-        $icon-avatar: igx-avatar-theme(
+        $icon-avatar: avatar-theme(
             $background: blue,
             $color: orange,
         );
 
         .initials-avatar {
-            @include igx-avatar($initials-avatar);
+            @include avatar($initials-avatar);
         }
 
         .icon-avatar {
-            @include igx-avatar($icon-avatar);
+            @include avatar($icon-avatar);
         }
         ```
 
-    * `IgxButton` theme has been simplified. The number of theme params (`igx-button-theme`) has been reduced significantly and no longer includes prefixed parameters (`flat-*`, `raised-*`, etc.). Updates performed with `ng update` will migrate existing button themes, but some additional tweaking may be required to account for the absence of prefixed params.
+    * `IgxButton` theme has been simplified. The number of theme params (`button-theme`) has been reduced significantly and no longer includes prefixed parameters (`flat-*`, `raised-*`, etc.). Updates performed with `ng update` will migrate existing button themes, but some additional tweaking may be required to account for the absence of prefixed params.
 
     In order to achieve the same result as from the code snippet below.
 
@@ -486,12 +494,12 @@ $__legacy-libsass: true;
         <button igxButton="outlined">Outlined button</button>
         ```
         ```scss
-        $my-button-theme: igx-button-theme(
+        $my-button-theme: button-theme(
             $raised-background: red,
             $outlined-outline-color: green
         );
 
-        @include igx-css-vars($my-button-theme);
+        @include css-vars($my-button-theme);
         ```
     You have to create a separate theme for each button type and scope it to a CSS selector.
         ```html
@@ -504,43 +512,43 @@ $__legacy-libsass: true;
         ```
 
         ```scss
-        $my-raised-button: igx-button-theme(
+        $my-raised-button: button-theme(
             $background: red
         );
 
-        $my-outlined-button: igx-button-theme(
+        $my-outlined-button: button-theme(
             $border-color: red
         );
 
         .my-raised-btn {
-            @include igx-css-vars($my-raised-button);
+            @include css-vars($my-raised-button);
          }
 
         .my-outlined-btn {
-            @include igx-css-vars($my-outlined-button);
+            @include css-vars($my-outlined-button);
         }
         ```
-    As you can see, since the `igx-button-theme` params now have the same names for each button type, we have to scope our button themes to a CSS selector in order to have different colors for different types.
+    As you can see, since the `button-theme` params now have the same names for each button type, we have to scope our button themes to a CSS selector in order to have different colors for different types.
 
-    Here you can see all the [available properties](https://www.infragistics.com/products/ignite-ui-angular/docs/sass/latest/index.html#function-igx-button-theme) of the `igx-button-theme`
+    Here you can see all the [available properties](https://www.infragistics.com/products/ignite-ui-angular/docs/sass/latest/index.html#function-button-theme) of the `button-theme`
 
-    * The `igx-typography` mixin is no longer implicitly included with `igx-core`. To use our typography styles you have to include the mixin explicitly after `igx-core` and before `igx-theme`:
+    * The `typography` mixin is no longer implicitly included with `core`. To use our typography styles you have to include the mixin explicitly after `core` and before `theme`:
 
     ```scss
     // in styles.scss
 
-    @include igx-core();
+    @include core();
 
-    @include igx-typography(
+    @include typography(
         $font-family: $material-typeface,
         $type-scale: $material-type-scale
     );
 
-    @include igx-theme();
+    @include theme();
     ```
 
     > [!IMPORTANT]
-    > The `igx-core` mixin should always be included first.
+    > The `core` mixin should always be included first.
 
     For each theme included in Ignite UI for Angular we provide specific `font-family` and `type-scale` variables which you can use:
 
@@ -884,7 +892,7 @@ The style should be something similar to:
 ## From 7.1.x to 7.2.x
 * If you use an IgxCombo with `combo.value`, you should know that now `combo.value` is only a getter.
 * If you use `IgxTextHighlightDirective`, you should know that the `page` input property is deprecated. `rowIndex`, `columnIndex` and `page` properties of the `IActiveHighlightInfo` interface are also deprecated. Instead, `row` and `column` optional properties are added.
-* If you use the `igx-button-theme`, you should know that the `$button-roundness` has been replaced for each button type with: `$flat-border-radius`, `$raised-border-radius`, `$outline-border-radius`, `$fab-border-radius`,  `$icon-border-radius`.
+* If you use the `button-theme`, you should know that the `$button-roundness` has been replaced for each button type with: `$flat-border-radius`, `$raised-border-radius`, `$outline-border-radius`, `$fab-border-radius`,  `$icon-border-radius`.
 
 ## From 7.0.x to 7.1.x
  * If you use an IgxGrid with summaries in your application, you should know that now the `IgxSummaryOperand.operate()` method is called with empty data in order to calculate the necessary height for the summary row. For custom summary operands, the method should always return an array of IgxSummaryResult with proper length.

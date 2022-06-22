@@ -277,10 +277,10 @@ private find(increment: number) {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単な方法は、[`igx-highlight-theme`]({environment:sassApiUrl}/index.html#function-igx-highlight-theme) を拡張する新しいテーマを作成し、`$resting-background`、`$resting-color`、`$active-background` と `$active-color`パラメーターを受け取る方法です。
+最も簡単な方法は、[`highlight-theme`]({environment:sassApiUrl}/index.html#function-highlight-theme) を拡張する新しいテーマを作成し、`$resting-background`、`$resting-color`、`$active-background` と `$active-color`パラメーターを受け取る方法です。
 
 ```scss
-$dark-highlight: igx-highlight-theme(
+$dark-highlight: highlight-theme(
     $resting-background: #FFCD0F,
     $resting-color: #292826,
     $active-background: #292826,
@@ -294,7 +294,7 @@ $dark-highlight: igx-highlight-theme(
 
 `$legacy-support` が `true` に設定されている場合、コンポーネントのテーマを以下のように含めます。
 ```scss
-@include igx-highlight($dark-highlight);
+@include highlight($dark-highlight);
 ```
 
 >[!NOTE]
@@ -303,7 +303,7 @@ $dark-highlight: igx-highlight-theme(
 ```scss
 :host {
     ::ng-deep {
-        @include igx-highlight($dark-highlight);
+        @include highlight($dark-highlight);
     }
 }
 ```
@@ -311,7 +311,7 @@ $dark-highlight: igx-highlight-theme(
 `$legacy-support` が `false` (デフォルト) に設定されている場合、**css 変数** を以下のように含めます。
 
 ```scss
-@include igx-css-vars($dark-highlight);
+@include css-vars($dark-highlight);
 ```
 
 >[!NOTE]
@@ -319,7 +319,7 @@ $dark-highlight: igx-highlight-theme(
 
 ### カスタム スタイル
 
-[`IgxTextHighlight`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html) ディレクティブの [`cssClass`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html#cssclass) と [`activeCssClass`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html#activecssclass) 入力を利用できます。これらのクラスを [`igx-highlight-theme`]({environment:sassApiUrl}/index.html#function-igx-highlight-theme) のスタイルと組み合わせて、優れたユーザー エクスペリエンスを提供できます。
+[`IgxTextHighlight`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html) ディレクティブの [`cssClass`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html#cssclass) と [`activeCssClass`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html#activecssclass) 入力を利用できます。これらのクラスを [`highlight-theme`]({environment:sassApiUrl}/index.html#function-highlight-theme) のスタイルと組み合わせて、優れたユーザー エクスペリエンスを提供できます。
 
 プロパティを持ついくつかの CSS クラスを作成し、上記の入力を使用してそれらを添付します。
 
@@ -347,7 +347,7 @@ $dark-highlight: igx-highlight-theme(
 ```scss
 :host {
     ::ng-deep {
-       @include igx-highlight($dark-highlight);
+       @include highlight($dark-highlight);
         
        // cssClass
        .custom-highlight {
@@ -380,7 +380,7 @@ TextHighlight ディレクティブの API に関する詳細な情報は、以�
 使用したその他のコンポーネント:
 
 * [`IgxInputGroupComponent`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
-* [`IgxInputGroupComponent スタイル`]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
+* [`IgxInputGroupComponent スタイル`]({environment:sassApiUrl}/index.html#function-input-group-theme)
 <div class="divider"></div>
 
 ## その他のリソース

@@ -252,10 +252,10 @@ snackbar.open(customSettings);
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単な方法は、[`igx-snackbar-theme`]({environment:sassApiUrl}/index.html#function-igx-snackbar-theme) を拡張する新しいテーマを作成し、`$text-color`、`$background`、`$button-color`、`$border-radius` パラメーターを受け取る方法です。
+最も簡単な方法は、[`snackbar-theme`]({environment:sassApiUrl}/index.html#function-snackbar-theme) を拡張する新しいテーマを作成し、`$text-color`、`$background`、`$button-color`、`$border-radius` パラメーターを受け取る方法です。
 
 ```scss
-$dark-snackbar: igx-snackbar-theme(
+$dark-snackbar: snackbar-theme(
     $text-color: #FFCD0F,
     $background: #292826,
     $button-color: #FFCD0F,
@@ -272,7 +272,7 @@ $dark-snackbar: igx-snackbar-theme(
 `$legacy-support` が `true` に設定されている場合、**コンポーネントのテーマ**を以下のように含めます。
 
 ```scss
- @include igx-snackbar($igx-snackbar-theme);
+ @include snackbar($igx-snackbar-theme);
 ```
 >[!NOTE]
 >コンポーネントが [`Emulated`](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
@@ -280,7 +280,7 @@ $dark-snackbar: igx-snackbar-theme(
 ```scss
 :host {
      ::ng-deep {
-        @include igx-snackbar($igx-snackbar-theme);
+        @include snackbar($igx-snackbar-theme);
     }
 }
 ```
@@ -290,7 +290,7 @@ $dark-snackbar: igx-snackbar-theme(
 `$legacy-support` が `false` (デフォルト) に設定されている場合、**css 変数** を以下のように含めます。
 
 ```scss
-@include igx-css-vars($igx-snackbar-theme);
+@include css-vars($igx-snackbar-theme);
 ```
 
 >[!NOTE]
@@ -298,7 +298,7 @@ $dark-snackbar: igx-snackbar-theme(
 
 ```scss
 :host {
-    @include igx-css-vars($igx-snackbar-theme);
+    @include css-vars($igx-snackbar-theme);
 }
 ```
 
@@ -312,16 +312,16 @@ $dark-snackbar: igx-snackbar-theme(
 $yellow-color: #FFCD0F;
 $black-color: #292826;
 
-$dark-palette: igx-palette($primary: $black-color, $secondary: $yellow-color);
+$dark-palette: palette($primary: $black-color, $secondary: $yellow-color);
 ```
 
 また [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取り出すことができます。 
 
 ```scss
-$dark-snackbar: igx-snackbar-theme(
-    $text-color: igx-color($dark-palette, "secondary", 400),
-    $background: igx-color($dark-palette, "primary", 400),
-    $button-color: igx-color($dark-palette, "secondary", 400),
+$dark-snackbar: snackbar-theme(
+    $text-color: color($dark-palette, "secondary", 400),
+    $background: color($dark-palette, "primary", 400),
+    $button-color: color($dark-palette, "secondary", 400),
     $border-radius: 12px
 );
 ```
@@ -340,13 +340,13 @@ $dark-snackbar: igx-snackbar-theme(
 $dark-snackbar-schema: extend($_dark-snackbar,
     (
         text-color:(
-            igx-color: ("secondary", 400)
+           color: ("secondary", 400)
         ),
         background: (
-            igx-color: ("primary", 400)
+           color: ("primary", 400)
         ),
         button-color: (
-            igx-color: ("secondary", 400)
+           color: ("secondary", 400)
         ),
         border-radius: 12px
     )
@@ -358,11 +358,11 @@ $dark-snackbar-schema: extend($_dark-snackbar,
 ```scss
 // Extending the global dark-schema
 $custom-dark-schema: extend($dark-schema,(
-    igx-snackbar: $dark-snackbar-schema
+   snackbar: $dark-snackbar-schema
 ));
 
 // Defining snackbar theme with the global dark schema
-$dark-snackbar: igx-snackbar-theme(
+$dark-snackbar: snackbar-theme(
   $palette: $dark-palette,
   $schema: $custom-dark-schema
 );
@@ -388,7 +388,7 @@ $dark-snackbar: igx-snackbar-theme(
 
 スタイル:
 
-* [`IgxSnackbarComponent スタイル`]({environment:sassApiUrl}/index.html#function-igx-snackbar-theme)
+* [`IgxSnackbarComponent スタイル`]({environment:sassApiUrl}/index.html#function-snackbar-theme)
 
 ## その他のリソース
 

@@ -22,17 +22,17 @@ $_light-avatar: extend(
     $_square-shape-avatar,
     (
         background: (
-            igx-color: ('grays', 400)
+           color: ('grays', 400)
         ),
 
         color: (
-            igx-color: ('grays', 800)
+           color: ('grays', 800)
         ),
     )
 );
 ```
 
-上記の例では、コンポーネント スキーマが [Avatar テーマ]({environment:sassApiUrl}/index.html#function-igx-avatar-theme) で使用するプロパティを定義します。具体的なカラー パレット マップを参照せずに、アバターが使用するカラーを指定します。
+上記の例では、コンポーネント スキーマが [Avatar テーマ]({environment:sassApiUrl}/index.html#function-avatar-theme) で使用するプロパティを定義します。具体的なカラー パレット マップを参照せずに、アバターが使用するカラーを指定します。
 
 以下は、`background` プロパティの例です。アバターのテーマにデフォルトの背景を指示します。 
 
@@ -45,7 +45,7 @@ $_light-avatar: extend(
 ```scss
 $_light-avatar: (
     icon-background: (
-        igx-color: ('grays', 400),
+       color: ('grays', 400),
         to-opaque: #fff
     ),
     ...
@@ -67,6 +67,22 @@ $my-avatar-schema: extend($_light-avatar, (
 
 これで `$my-avatar-schema` の値には `$_light-avatar` のすべてのプロパティが含まれますが、`background` の値は `limegreen` になります。
 
+## 事前定義されたスキーマ
+テーマ プリセットで使用する事前定義されたライト スキーマとダーク スキーマを提供します。
+
+- ライト スキーマ
+    - $light-material-schema
+    - $light-fluent-schema
+    - $light-bootstrap-schema
+    - $light-indigo-schema
+- ダーク スキーマ
+    - $dark-material-schema
+    - $dark-fluent-schema
+    - $dark-bootstrap-schema
+    - $dark-indigo-schema
+
+コンポーネントのテーマを作成するために、ライト パレットとダーク パレットに応じてライト スキーマとダーク スキーマを使用します。たとえば、`$light-material-schema` を `$light-material-palette` と一緒に使用すると、すべてのライト マテリアル コンポーネントのテーマを作成するのに役立ちます。逆もまた同様です。`$dark-material-schema` を `$dark-material-palette` と一緒に使用すると、ダーク マテリアル コンポーネントのテーマが得られます。
+
 ## スキーマの使用
 以上がコンポーネント スキーマの概要と作成方法です。次に Sass プロジェクトのスキーマの使用方法について説明します。 
 
@@ -80,7 +96,7 @@ $light-material-schema: (
 );
 ```
 
-`$light-material-schema` 全体を `igx-theme` ミックスインに渡すことができます。たとえば、デフォルト コンポーネント スキーマを置き換えて `$light-material-schema` を変更したい場合、Avatar コンポーネントは以下を使用します。
+`$light-material-schema` 全体を `theme` ミックスインに渡すことができます。たとえば、デフォルト コンポーネント スキーマを置き換えて `$light-material-schema` を変更したい場合、Avatar コンポーネントは以下を使用します。
 
 ```scss
 $my-light-schema: extend($light-material-schema, (
@@ -92,7 +108,7 @@ $my-light-schema: extend($light-material-schema, (
 
 ```scss
 // styles.scss
-@include igx-theme(
+@include theme(
     $schema: $my-light-schema,
     $palette: $default-palette
 );
@@ -105,7 +121,7 @@ $my-light-schema: extend($light-material-schema, (
 最後に各コンポーネント テーマで上記で作成したスキーマを使用する方法について説明します。
 
 ```scss
-$my-avatar-theme: igx-avatar-theme(
+$my-avatar-theme: avatar-theme(
     $schema: $my-avatar-schema
 );
 ```
@@ -120,8 +136,8 @@ $my-avatar-theme: igx-avatar-theme(
 * [Avatar スキーマ]({environment:sassApiUrl}/index.html#variable-_light-avatar)
 * [Light コンポーネント スキーマ]({environment:sassApiUrl}/index.html#variable-light-schema)
 * [Dark コンポーネント スキーマ]({environment:sassApiUrl}/index.html#variable-dark-schema)
-* [Global テーマ]({environment:sassApiUrl}/index.html#mixin-igx-theme)
-* [Avatar テーマ]({environment:sassApiUrl}/index.html#function-igx-avatar-theme)
+* [Global テーマ]({environment:sassApiUrl}/index.html#mixin-theme)
+* [Avatar テーマ]({environment:sassApiUrl}/index.html#function-avatar-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

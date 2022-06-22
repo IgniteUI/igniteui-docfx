@@ -1,7 +1,7 @@
 @@if(igxName==='IgxGrid') {
 ---
-title: Angular グリッド行追加 | UI グリッド | Ignite UI for Angular | インフラジスティックス
-_description: Ignite UI for Angular を使用して、定義済みの行追加機能の使用およびカスタマイズする方法を学びます。UI グリッドで、直感的なグリッド行の追加と CRUD 機能を利用できます。
+title: Angular Data Grid での行追加 - Ignite UI for Angular
+_description: Ignite UI for Angular の組み込み行追加機能の使用方法とカスタマイズ方法を説明します。CRUD 機能と直感的なグリッド行追加。例を参照してください。
 _keywords: row adding, 行追加, igniteui for angular, infragistics, インフラジスティックス
 _language: ja
 ---
@@ -9,15 +9,15 @@ _language: ja
 
 @@if(igxName!=='IgxGrid') {
 ---
-title: Angular グリッド行追加 | UI グリッド | Ignite UI for Angular | インフラジスティックス
-_description: Ignite UI for Angular を使用して、定義済みの行追加機能の使用およびカスタマイズする方法を学びます。UI グリッドで、直感的なグリッド行の追加と CRUD 機能を利用できます。
+title: Angular @@igComponent での行追加 - Ignite UI for Angular
+_description: Ignite UI for Angular の組み込み行追加機能の使用方法とカスタマイズ方法を説明します。CRUD 機能と直感的なグリッド行追加。例を参照してください。
 _keywords: row adding, 行追加, igniteui for angular, infragistics, インフラジスティックス
 _language: ja
 _canonicalLink: grid/row-adding
 ---
 }
 
-# @@igComponent 行追加
+# Angular @@igComponent での行追加
 
 @@if (igxName !== 'IgxTreeGrid') {
 @@igComponent コンポーネントはインライン行追加や Angular CRUD 操作のための強力な API を通して便利なデータ操作方法を提供します。グリッドのテンプレートで編集アクションが有効になっている[アクション ストリップ](../action-strip.md)コンポーネントを追加し、行にホバーして提供されたボタンを使用するか、<kbd>ALT</kbd> + <kbd>+</kbd> を押して、行追加 UI を生成します。
@@ -278,7 +278,7 @@ this.treeGrid.beginAddRowByIndex(null);       // spawns the add row UI as the fi
 
 - @@igComponent がトランザクションを使用する場合
 
-    作成要求または一括更新要求が正常に完了し、追加されたレコード インスタンス (db で生成された ID) を返すと、[clear]({environment:angularApiUrl}/interfaces/transactionservice.html#clear) API メソッド を使用して関連する ADD トランザクションをトランザクション ログからクリアする必要があります。  ローカル トランザクションに生成された id フィールドがあり、データベースで作成された id フィールドと異なる場合があるため、クリアする必要があります。返却されたレコードをローカル データ インスタンスに追加できます。
+    作成要求または一括更新要求が正常に完了し、追加されたレコード インスタンス (db で生成された ID) を返すと、[clear]({environment:angularApiUrl}/interfaces/transactionservice.html#clear) API メソッド を使用して関連する ADD トランザクションをトランザクション ログからクリアする必要があります。ローカル トランザクションに生成された id フィールドがあり、データベースで作成された id フィールドと異なる場合があるため、クリアする必要があります。返却されたレコードをローカル データ インスタンスに追加できます。
 
 これにより、リモートで生成された ID がローカル データに常に反映され、以降の更新/削除操作で正しいレコード ID がターゲットになります。
 

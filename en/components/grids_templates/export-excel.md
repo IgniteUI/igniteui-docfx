@@ -1,28 +1,28 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid Export to Excel | Ignite UI for Angular | Infragistics
-_description: Learn how to use the Excel Exporter service in order to export Grid data to MS Excel file. Grid Angular Material table has a rich set of helpful angular events
+title: Angular Grid Export to Excel - Ignite UI for Angular
+_description: With Ignite UI Excel Exporter you can make client Excel functionality more convenient & simpler. This format allows features like filtering, sorting, etc.
 _keywords: data export, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid Export to Excel | Ignite UI for Angular | Infragistics
-_description: Learn how to use the Excel Exporter service in order to export Grid data to MS Excel file. Grid Angular Material table has a rich set of helpful angular events
+title: Angular Tree Grid Export to Excel - Ignite UI for Angular
+_description: With Ignite UI Excel Exporter you can make client Excel functionality more convenient & simpler. This format allows features like filtering, sorting, etc.
 _keywords: data export, ignite ui for angular, infragistics
 _canonicalLink: grid/export-excel
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchical Grid Export to Excel | Ignite UI for Angular | Infragistics
-_description: Learn how to use the Excel Exporter service in order to export Grid data to MS Excel file. Grid Angular Material table has a rich set of helpful angular events
+title: Angular Hierarchical Grid Export to Excel - Ignite UI for Angular
+_description: With Ignite UI Excel Exporter you can make client Excel functionality more convenient & simpler. This format allows features like filtering, sorting, etc.
 _keywords: data export, ignite ui for angular, infragistics
 _canonicalLink: grid/export-excel
 ---
 }
 
-# @@igComponent Export to Excel Service
+# Angular @@igComponent Export to Excel Service
 
 @@if (igxName === 'IgxGrid' || igxName === 'IgxTreeGrid') {
 
@@ -252,7 +252,7 @@ The Excel Exporter service has a few more APIs to explore, which are listed belo
 Additional components that were used:
 
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-grid-theme)
 
 <div class="divider"></div>
 

@@ -471,8 +471,8 @@ export class AppModule {}
 
 스타일:
 
-* [@@igxNameComponent 스타일]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
-* [IgxRadioComponent 스타일]({environment:sassApiUrl}/index.html#function-igx-radio-theme)
+* [@@igxNameComponent 스타일]({environment:sassApiUrl}/index.html#function-grid-theme)
+* [IgxRadioComponent 스타일]({environment:sassApiUrl}/index.html#function-radio-theme)
 
 ### 추가 리소스
 <div class="divider--half"></div>

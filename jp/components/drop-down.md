@@ -396,10 +396,10 @@ export class InputDropDownComponent {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単な方法は、[`igx-drop-down-theme`]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme) を拡張する新しいテーマを作成し、デフォルト テーマのいくつかのパラメーターを受け取る方法です。
+最も簡単な方法は、[`drop-down-theme`]({environment:sassApiUrl}/index.html#function-drop-down-theme) を拡張する新しいテーマを作成し、デフォルト テーマのいくつかのパラメーターを受け取る方法です。
 
 ```scss
-$custom-drop-down-theme: igx-drop-down-theme(
+$custom-drop-down-theme: drop-down-theme(
     $background-color: #fdfdfd,
     $header-text-color: #345779,
     $item-text-color: #2dabe8,
@@ -419,7 +419,7 @@ $custom-drop-down-theme: igx-drop-down-theme(
 最後にカスタム ドロップダウン テーマを設定します。
 
 ```scss
- @include igx-css-vars($custom-drop-down-theme);
+ @include css-vars($custom-drop-down-theme);
 ```
 
 ### テーマ オーバーライドの使用
@@ -431,7 +431,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
  ```scss
 :host {
   ::ng-deep {
-    @include igx-drop-down($custom-drop-down-theme);
+    @include drop-down($custom-drop-down-theme);
   }
 }
 ```
@@ -454,12 +454,12 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 * [IgxDropDownComponent スタイル]({environment:sassApiUrl}/index.html#mixin-igx-drop-down)
 * [IgxDropDownItemComponent]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html)
 * [IgxOverlay]({environment:angularApiUrl}/interfaces/overlaysettings.html)
-* [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+* [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-overlay-theme)
 * [IgxDividerDirective]({environment:angularApiUrl}/classes/igxdividerdirective.html)
-* [IgxDividerDirective スタイル]({environment:sassApiUrl}/index.html#function-igx-divider-theme)
+* [IgxDividerDirective スタイル]({environment:sassApiUrl}/index.html#function-divider-theme)
 
 ## テーマの依存関係
-* [IgxOverlay テーマ]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+* [IgxOverlay テーマ]({environment:sassApiUrl}/index.html#function-overlay-theme)
 
 ## その他のリソース
 
