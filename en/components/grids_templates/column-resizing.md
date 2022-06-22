@@ -1,28 +1,28 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid Column Resizing | Ignite UI for Angular | Infragistics
-_description: Start using Angular Grid Column Resizing based on angular drag resizing in order to change grid column width easily. Angular drag resizing has never been so easy.
+title: Angular Grid Column Resizing - Ignite UI for Angular
+_description: Start using Angular Grid Column Resizing in order to change the grid column width in an instant. Angular drag resizing has never been so easy. Try for free!
 _keywords: grid column resizing, igniteui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid Column Resizing | Ignite UI for Angular | Infragistics
-_description: Start using Angular Tree Grid Column Resizing based on angular drag resizing in order to change grid column width easily. Angular drag resizing has never been so easy.
+title: Angular Tree Grid Column Resizing - Ignite UI for Angular
+_description: Start using Angular Tree Grid Column Resizing in order to change the grid column width in an instant. Angular drag resizing has never been so easy. Try for free!
 _keywords: grid column resizing, igniteui for angular, infragistics
 _canonicalLink: grid/column-resizing
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchical Grid Column Resizing | Ignite UI for Angular | Infragistics
-_description: Start using Angular Hierarchical Grid Column Resizing based on angular drag resizing in order to change grid column width easily. Angular drag resizing has never been so easy.
+title: Angular Hierarchical Grid Column Resizing - Ignite UI for Angular
+_description: Start using Angular Hierarchical Grid Column Resizing in order to change the grid column width in an instant. Angular drag resizing has never been so easy. Try for free!
 _keywords: grid column resizing, igniteui for angular, infragistics
 _canonicalLink: grid/column-resizing
 ---
 }
 
-# @@igComponent Column Resizing
+# Angular @@igComponent Column Resizing
 
 With deferred grid column resizing, the user will see a temporary resize indicator while the Angular drag resizing operation is in effect. The new grid column width is applied once the drag operation has ended.
 

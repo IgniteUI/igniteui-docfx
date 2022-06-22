@@ -1,28 +1,28 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid Cell Editing | Data Manipulation | Ignite UI for Angular | Infragistics
-_description: Configure in cell data manipulation with feature rich Angular UI grid, try the update data features and Angular CRUD by using the Ignite UI for Angular grid cell editing
+title: Cell Editing in Angular Data Grid - Ignite UI for Angular
+_description: The Grid is using in-cell editing. It has a default cell editing template, but it also lets you define your own custom templates for update-data action. Try it now!
 _keywords: data manipulation, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular TreeGrid Cell Editing | Data Manipulation | Ignite UI for Angular
-_description: Configure in cell data manipulation with feature rich Angular UI grid, try the update data features and Angular CRUD by using the Ignite UI for Angular tree grid cell editing
+title: Cell Editing in Angular TreeGrid - Ignite UI for Angular
+_description: The Grid is using in-cell editing. It has a default cell editing template, but it also lets you define your own custom templates for update-data action. Try it now!
 _keywords: data manipulation, ignite ui for angular, infragistics
 _canonicalLink: grid/cell-editing
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular HierarchicalGrid Cell Editing | Data Manipulation | Ignite UI for Angular
-_description: Configure in cell data manipulation with feature rich Angular UI grid, try the update data features and Angular CRUD by using the Ignite UI for Angular hierarchical grid cell editing
+title: Cell Editing in Angular HierarchicalGrid - Ignite UI for Angular
+_description: The Grid is using in-cell editing. It has a default cell editing template, but it also lets you define your own custom templates for update-data action. Try it now!
 _keywords: data manipulation, ignite ui for angular, infragistics
 _canonicalLink: grid/cell-editing
 ---
 }
 
-# @@igComponent cell editing and edit templates
+# Angular @@igComponent Cell Editing
 
 Ignite UI for Angular @@igComponent component provides a great data manipulation capabilities and powerful API for Angular CRUD operations. By default the @@igComponent is using **in cell** editing and different editors will be shown based on the column data type, thanks to the **default cell editing template**. In addition, you can define your own custom templates for update-data actions and to override the default behavior for committing and discarding any changes.
 

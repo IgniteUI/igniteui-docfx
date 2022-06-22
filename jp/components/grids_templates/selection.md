@@ -1,29 +1,29 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid データ選択 | Ignite UI for Angular | インフラジスティックス
-_description: Ignite UI Angular Material Table のデータを選択は、さまざまなイベント、豊富な API、単一選択のような単純なマウス操作を使用して簡単に行うことができます。
+title: Angular Grid の選択 - Ignite UI for Angular
+_description: Ignite UI for Angular グリッドでデータを選択は、さまざまなイベント、豊富な API、単一選択のような単純なマウス操作を使用して簡単に行うことができます。
 _keywords: data select, igniteui for angular, インフラジスティックス
 _language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid データ選択 | Ignite UI for Angular | インフラジスティックス
-_description: Ignite UI Angular Material Table のデータを選択は、さまざまなイベント、豊富な API、単一選択のような単純なマウス操作を使用して簡単に行うことができます。
+title: Angular Tree Grid の選択 - Ignite UI for Angular 
+_description: Ignite UI for Angular グリッドでデータを選択は、さまざまなイベント、豊富な API、単一選択のような単純なマウス操作を使用して簡単に行うことができます。
 _keywords: data select, igniteui for angular, インフラジスティックス
 _language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchical Grid データ選択 | Ignite UI for Angular | インフラジスティックス
-_description: Ignite UI Angular Material Table のデータを選択は、さまざまなイベント、豊富な API、単一選択のような単純なマウス操作を使用して簡単に行うことができます。
+title: Angular Hierarchical Grid の選択 - Ignite UI for Angular
+_description: Ignite UI for Angular グリッドでデータを選択は、さまざまなイベント、豊富な API、単一選択のような単純なマウス操作を使用して簡単に行うことができます。
 _keywords: data select, igniteui for angular, インフラジスティックス
 
 ---
 }
 
-# Angular @@igComponent 選択の概要
+# Angular @@igComponent の選択
 Ignite UI for Angular @@igComponent を使用して、さまざまなイベント、豊富な API、または単一選択などのシンプルなマウス操作でデータを簡単に選択できます。
 
 ## Angular Grid 選択の例

@@ -1,20 +1,20 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid Copy Data | Ignite UI for Angular | Infragistics 
-_description: Use the data select behavior in order to copy data and export selected from the Grid into Excel file. The angular data grid has a rich set of helpful angular events
+title: Angular Grid Clipboard Interactions - Ignite UI for Angular 
+_description: The Angular Data Grid Clipboard functionality provides fast, easy and customizable way to copy, paste and export data to Excel or other programs. Try it now!
 _keywords: copy data, igniteui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Grid Copy Data | Ignite UI for Angular | Infragistics 
-_description: Use the data select behavior in order to copy data and export selected from the Grid into Excel file. The angular data grid has a rich set of helpful angular events
+title: Angular TreeGrid Clipboard Interactions - Ignite UI for Angular 
+_description: The Angular TreeGrid Clipboard functionality provides fast, easy and customizable way to copy, paste and export data to Excel or other programs. Try it now!
 _keywords: copy data, igniteui for angular, infragistics
 _canonicalLink: grid/clipboard-interactions
 ---
 }
 
-# @@igComponent Clipboard Interactions
+# Angular @@igComponent Clipboard Interactions
 Copy to clipboard operations are now available in the @@igComponent. This functionality provides a fast, easy and customizable way to copy data of the Angular Data Grid through the current multi cell data select. System Clipboard behavior gives the user ability to copy data from the @@igComponent into Excel or other external programs.
 
 ## Angular @@igComponent Clipboard Interactions Example

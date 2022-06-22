@@ -1,10 +1,10 @@
 ---
-title: Angular Selection-based Data Aggregation | selection | Ignite UI for Angular | Infragistics 
-_description: Learn how to aggregate selected data in a grid with the Ignite Angular Material table using rich API. It also allows instant content aggregations in the virtualized data of the Grid
+title: Angular Grid Selection-Based Data Aggregation- Ignite UI for Angular
+_description: Learn how to aggregate selected data in a grid with Ignite UI. Get instant content aggregations in the virtualized data and rich API for your next project.
 _keywords: Data aggregation, selection, ignite ui for angular, infragistics
 ---
 
-# Selection-based Aggregates
+# Angular Grid Selection-Based Data Aggregation
 
 With the sample, illustrated beyond, you may see how multiple selection is being used, alongside with custom summary functions, to display aggregates based on the selected values in the grid footer.
 
