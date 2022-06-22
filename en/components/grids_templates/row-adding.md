@@ -1,21 +1,21 @@
 @@if(igxName==='IgxGrid') {
 ---
-title: Angular Grid Row Adding | UI Grid | Ignite UI for Angular | Infragistics
-_description: Learn how to use and customize the built-in row adding functionality with Ignite UI for Angular. Intuitive grid row adding and CRUD capabilities are available with the UI grid.
+title: Adding Rows in Angular Data Grid - Ignite UI for Angular
+_description: Learn how to use and customize the built-in row adding functionality with Ignite UI for Angular. CRUD capabilities and Intuitive grid row adding. See examples!
 _keywords: row adding, igniteui for angular, infragistics
 ---
 }
 
 @@if(igxName!=='IgxGrid') {
 ---
-title: Angular Grid Row Adding | UI Grid | Ignite UI for Angular | Infragistics
-_description: Learn how to use and customize the built-in row adding functionality with Ignite UI for Angular. Intuitive grid row adding and CRUD capabilities are available with the UI grid.
+title: Adding Rows in Angular @@igComponent - Ignite UI for Angular
+_description: Learn how to use and customize the built-in row adding functionality with Ignite UI for Angular. CRUD capabilities and Intuitive grid row adding. See examples!
 _keywords: row adding, igniteui for angular, infragistics
 _canonicalLink: grid/row-adding
 ---
 }
 
-# @@igComponent Row Adding
+# Adding Rows in Angular @@igComponent
 
 @@if (igxName !== 'IgxTreeGrid') {
 The @@igComponent provides a convenient way to perform data manipulations through inline row adding and a powerful API for Angular CRUD operations. Add an [Action Strip](../action-strip.md) component with editing actions enabled in the grid's template, hover a row and use the provided button or press <kbd>ALT</kbd> + <kbd>+</kbd> to spawn the row adding UI.

@@ -1,20 +1,20 @@
 @@if(igxName === 'IgxGrid'){
 ---
-title: Angular Grid | Excel Style Filtering | Infragistics
-_description: Learn how to configure Excel like angular filter of data with the Angular Material table. The grid excel filtering is more convenient and engaging than ever.
+title: Excel Style Filtering in Angular Data Grid- Ignite UI for Angular
+_description: Learn how to configure Excel filtering in Angular Data Grid. You can enable/disable various options and customize the Excel style filter menu the way you want.
 _keywords: excel like filter, igniteui for angular, infragistics
 ---
 }
 @@if(igxName !== 'IgxGrid'){
 ---
-title: Angular Grid | Excel Style Filtering | Infragistics
-_description: Learn how to configure Excel like angular filter of data with the Angular Material table. The grid excel filtering is more convenient and engaging than ever.
+title: Excel Style Filtering in Angular @@igComponent - Ignite UI for Angular
+_description: Learn how to configure Excel filtering in Angular @@igComponent. You can enable/disable various options and customize the Excel style filter menu the way you want.
 _keywords: excel like filter, igniteui for angular, infragistics
 _canonicalLink: grid/excel-style-filtering
 ---
 }
 
-# @@igComponent Excel Style Filtering
+# Excel Filtering in Angular @@igComponent
 
 The grid Excel filtering provides an Excel like filtering UI for any Angular Material table like the @@igComponent.
 

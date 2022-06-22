@@ -1,20 +1,20 @@
 ---
-title: Angular Grid Row Actions | Ignite UI for Angular | infragistics 
-_description: Check how easy it is to use ActionStrip in Grid component to achieve row actions
+title:  Row actions in Angular Data Grid - Ignite UI for Angular 
+_description: The grid component in Ignite UI for Angular provides the ability to use ActionStrip and utilize CRUD for row/cell components and row pinning.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular ActionStrip components, Angular ActionStrip directives, Angular ActionStrip controls
 ---
 @@if (igxName === 'IgxGrid') {
-# Grid Row Actions
+# Row Actions in Angular Data Grid
 
 The grid component in Ignite UI for Angular provides the ability to use [ActionStrip](../action-strip.md) and utilize CRUD for row/cell components and row pinning. The Action Strip component can host predefined UI controls for these operations.
 }
 @@if (igxName === 'IgxTreeGrid') {
-# Tree Grid Row Actions
+# Row Actions in Angular Tree Grid
 
 The tree grid component in Ignite UI for Angular provides the ability to use [ActionStrip](../action-strip.md) and utilize CRUD for row/cell components and row pinning. The Action Strip component can host predefined UI controls for these operations.
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-# Hierarchical Grid Row Actions
+# Row Actions in Angular Hierarchical Grid
 
 The hierarchical grid component in Ignite UI for Angular provides the ability to use [ActionStrip](../action-strip.md) and utilize CRUD for row/cell components and row pinning. The Action Strip component can host predefined UI controls for these operations.
 }

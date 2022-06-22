@@ -1,21 +1,21 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid データ コピー | Ignite UI for Angular | インフラジスティックス
-_description: グリッドから選択されたデータをエクスポートして Excel ファイルにエクスポートするためにデータ選択動作を使用します。Angular データ グリッドには、高機能な Angular のイベントがあります。
+title: Angular Grid のクリップボードの操作 - Ignite UI for Angular 
+_description: Angular Data Grid のクリップボード機能は、データを Excel、その他のプログラムにコピー、貼り付け、エクスポートするための高速で簡単、カスタマイズ可能な方法を提供します。今すぐお試しください。
 _keywords: copy data, igniteui for angular, infragistics, データのコピー
 _language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Grid データ コピー| Ignite UI for Angular | インフラジスティックス
-_description: グリッドから選択されたデータをエクスポートして Excel ファイルにエクスポートするためにデータ選択動作を使用します。Angular データ グリッドには、高機能な Angular のイベントがあります。
+title: Angular Tree Grid クリップボードの操作 - Ignite UI for Angular 
+_description: Angular Tree Grid のクリップボード機能は、データを Excel、その他のプログラムにコピー、貼り付け、エクスポートするための高速で簡単、カスタマイズ可能な方法を提供します。今すぐお試しください。
 _keywords: copy data, igniteui for angular, infragistics, データのコピー
 _language: ja
 ---
 }
 
-# @@igComponent クリップボードの操作
+# Angular @@igComponent クリップボードの操作
 クリップボードへのコピー操作が @@igComponent で可能になりました。この機能は、現在の複数セル データ選択を通して Angular Data Grid のデータをすばやくコピーするための簡単でカスタマイズ可能な方法を提供します。システム クリップボードの動作により、ユーザーは @@igComponent から Excel または他の外部プログラムにデータをコピーできます。
 
 ## Angular @@igComponent クリップボード操作の例

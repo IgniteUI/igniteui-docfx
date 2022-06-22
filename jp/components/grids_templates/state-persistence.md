@@ -1,29 +1,29 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid 状態保持 | Ignite UI for Angular | インフラジスティックス 
-_description: IgxGridState ディレクティブによって公開されるAPIを使用して、IgxGrid の状態の永続性を簡単に実現します。
+title: Angular Grid の状態保持 - Ignite UI for Angular
+_description: 包括的な Ignite UI for Angular のツールセットを使用して、グリッドの状態を簡単に保存および復元できます。列の復元、使用方法、デモをご覧ください。
 _keywords: 状態保持, ignite ui for angular, infragistics, インフラジスティックス 
 _language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid 状態保持 | Ignite UI for Angular | インフラジスティックス 
-_description: IgxGridState ディレクティブによって公開されるAPIを使用して、IgxTreeGrid の状態の永続性を簡単に実現します。
+title: Angular Tree Grid の状態保持 - Ignite UI for Angular
+_description: 包括的な Ignite UI for Angular のツールセットを使用して、グリッドの状態を簡単に保存および復元できます。列の復元、使用方法、デモをご覧ください。
 _keywords: 状態保持, ignite ui for angular, infragistics, インフラジスティックス 
 _language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchical Grid 状態保持 | Ignite UI for Angular | インフラジスティックス 
-_description: IgxGridState ディレクティブによって公開されるAPIを使用して、IgxHierarchicalGrid の状態の永続性を簡単に実現します。
+title: Angular Hierarchical Grid の状態保持 - Ignite UI for Angular
+_description: 包括的な Ignite UI for Angular のツールセットを使用して、グリッドの状態を簡単に保存および復元できます。列の復元、使用方法、デモをご覧ください。
 _keywords: 状態保持, ignite ui for angular, infragistics, インフラジスティックス 
 _language: ja
 ---
 }
 
-# @@igComponent 状態の保持
+# @@igComponent の状態保持
 
 igxGridState ディレクティブによって開発者がグリッドの状態を簡単に保存および復元できます。[`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) ディレクティブがグリッドに適用されると、[`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getstate) および [`setState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#setstate) メソッドが公開され、開発者はこれを使用して、あらゆるシナリオで状態の永続化を実現できます。
 
