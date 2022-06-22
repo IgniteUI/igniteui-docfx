@@ -1,29 +1,29 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid 検索 | Angular 検索例 | インフラジスティックス
-_description: 機能豊かな API を使用して Ignite Angular Material テーブルでグリッド検索を実行する方法。また、グリッドの仮想化データでコンテンツの即時検索が可能。
+title: Angular Grid の検索フィルター - Ignite UI for Angular
+_description: Ignite UI for Angular Data Grid で高速グリッド検索を実行します。優れた UX を提供しながら、グリッドの仮想化データでコンテンツの即時検索が可能です。
 _keywords: コンテンツ検索, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid 検索 | Angular 検索例 | インフラジスティックス
-_description: 機能豊かな API を使用して Ignite Angular Material テーブルでグリッド検索を実行する方法。また、グリッドの仮想化データでコンテンツの即時検索が可能。
+title: Angular Tree Grid の検索フィルター - Ignite UI for Angular
+_description: Ignite UI for Angular Tree Grid で高速グリッド検索を実行します。優れた UX を提供しながら、グリッドの仮想化データでコンテンツの即時検索が可能です。
 _keywords: コンテンツ検索, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchical Grid 検索 | Angular 検索例 | インフラジスティックス
-_description: 機能豊かな API を使用して Ignite Angular Material テーブルでグリッド検索を実行する方法。また、グリッドの仮想化データでコンテンツの即時検索が可能。
+title: Angular Hierarchical Grid の検索フィルター - Ignite UI for Angular
+_description: Ignite UI for Angular Hierarchical Grid で高速グリッド検索を実行します。優れた UX を提供しながら、グリッドの仮想化データでコンテンツの即時検索が可能です。
 _keywords: コンテンツ検索, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
 }
 
-# Angular @@igComponent の仮想コンテンツ検索機能
+# Angular @@igComponent の検索フィルター
 
 Angular @@igComponent 検索により、データのコレクション内の値を見つけるプロセスが可能になります。この機能のセットアップが簡単になり、検索入力ボックス、ボタン、キーボード ナビゲーション、その他の便利な機能を使用して実装できるため、ユーザー エクスペリエンスがさらに向上します。ブラウザーにはネイティブなコンテンツ検索機能がありますが、ほとんどの場合で @@igComponent は表示範囲外の行列を仮想化します。そのため、ネイティブ グリッド検索は DOM の一部でないため仮想化セルでデータを検索できません。@@igComponent では、Ignite UI for Angular Material テーブル ベースのグリッドの拡張により、**検索 API** を使用した**仮想コンテンツ**の検索が可能です。
 

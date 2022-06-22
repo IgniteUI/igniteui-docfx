@@ -473,12 +473,10 @@ There are multiple options to get access to our award-winning support at Infragi
     <div class="faqs-accordion h4">What is the Pricing for the Infragistics Ignite UI for Angular Data Grid?</div>
     <div class="divider--half"></div>
     <div class="faqs-accordion-panel">
-Ignite UI for Angular is a commercially licensed product available via a subscription model. A single developer license starts at $749 USD for a one-year subscription, which includes one year of standard support and product updates. This subscription includes the Angular Grid, plus Angular Charts and dozens on other Angular UI Controls.
-<div class="divider--half"></div>
-We also offer discounts for multi-year licenses. Please <a class="no-external-icon" href="{environment:infragisticsBaseUrl}/how-to-buy/product-pricing">refer to our Pricing page</a> for more information on pricing.
-<div class="divider--half"></div>
-If you are developing applications on multiple platforms, consider our complete app development package, Infragistics Ultimate, which include desktop platforms like WPF and Windows Forms, plus all modern web toolsets for Angular, Web Components, ASP.NET MVC and ASP.NET Core.
-<div class="divider--half"></div>
+    Our Angular components are included as a part of our Ignite UI bundle. A single developer license starts at $1,295 USD for a one-year subscription, including one year of standard support and updates. We also offer discounts for multi-year licenses. Please refer to our <a class="no-external-icon" href="{environment:infragisticsBaseUrl}/how-to-buy/product-pricing">Pricing page</a> for more information on pricing.
+    <div class="divider--half"></div>
+    If you are developing applications on multiple platforms, consider our complete app development package, Infragistics Ultimate, which include desktop platforms like WPF and Windows Forms, plus all modern web toolsets for Angular, Web Components, ASP.NET MVC and ASP.NET Core.
+    <div class="divider--half"></div>
     </div>
     </div>
     <div class="faqs-accordion-content">

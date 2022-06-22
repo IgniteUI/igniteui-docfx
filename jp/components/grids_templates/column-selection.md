@@ -1,23 +1,23 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid 列選択 | Ignite UI for Angular | インフラジスティックス
-_description: Angular Material テーブルで列選択を構成する方法を説明します。列選択により、グリッドの操作がより魅力的になります。
+title: Angular Grid の列選択 - Ignite UI for Angular
+_description: Ignite UI for Angular Data Grid で列選択を構成する方法を説明します。これにより、グリッドのインタラクションがより簡単かつ高速になります。
 _keywords: column selection, igniteui for angular, 列選択, infragistics, インフラジスティックス
 _language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid 列選択 | Ignite UI for Angular | インフラジスティックス
-_description: Angular Material テーブルで列選択を構成する方法を説明します。列選択により、ツリー グリッドの操作がより魅力的になります。
+title: Angular Tree Grid の列選択 - Ignite UI for Angular
+_description: Ignite UI for Angular Tree Grid で列選択を構成する方法を説明します。これにより、グリッドのインタラクションがより簡単かつ高速になります。。
 _keywords: column selection, igniteui for angular, 列選択, infragistics, インフラジスティックス
 _language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchical Grid 列選択 | Ignite UI for Angular | インフラジスティックス
-_description: Angular Material テーブルで列選択を構成する方法を説明します。列選択により、階層型グリッドの操作がより魅力的になります。
+title: Angular Hierarchical Grid の列選択 - Ignite UI for Angular
+_description: Ignite UI for Angular Hierarchical Grid で列選択を構成する方法を説明します。これにより、グリッドのインタラクションがより簡単かつ高速になります。
 _keywords: column selection, igniteui for angular, 列選択, infragistics, インフラジスティックス
 _language: ja
 ---

@@ -1,28 +1,28 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Conditional Styling | Ignite UI for Angular | Infragistics 
-_description: Define a variety of styles with the help of the conditional styling feature of the Material UI grid, by using different material styling guidelines with a rich API
+title: Conditional Cell Styling in Angular Data Grid - Ignite UI for Angular
+_description: Let users identify different cells quickly. Define a variety of cell styles. Use the conditional cell styling in Angular Data grid to make cells stand out.
 _keywords: conditional styling, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Conditional Styling | Ignite UI for Angular | Infragistics 
-_description: Define a variety of styles with the help of the conditional styling feature of the Material UI grid, by using different material styling guidelines with a rich API
+title: Conditional Cell Styling in Angular Tree Grid - Ignite UI for Angular
+_description: Let users identify different cells quickly. Define a variety of cell styles. Use the conditional cell styling in Angular Data grid to make cells stand out.
 _keywords: conditional styling, ignite ui for angular, infragistics
 _canonicalLink: grid/conditional-cell-styling
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Conditional  Styling | Ignite UI for Angular | Infragistics 
-_description: Define a variety of styles with the help of the conditional styling feature of the Material UI grid, by using different material styling guidelines with a rich API
+title: Conditional Cell Styling in Angular Hierarchical Grid - Ignite UI for Angular 
+_description: Let users identify different cells quickly. Define a variety of cell styles. Use the conditional cell styling in Angular Data grid to make cells stand out.
 _keywords: conditional styling, ignite ui for angular, infragistics
 _canonicalLink: grid/conditional-cell-styling
 ---
 }
 
-# @@igComponent Conditional Styling
+# Angular @@igComponent Conditional Styling
 If you need to provide any custom styling in the @@igxName component, you can do it on either row or cell level.
 
 ## @@igComponent Conditional Row Styling

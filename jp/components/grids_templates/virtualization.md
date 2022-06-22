@@ -1,28 +1,28 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: 仮想化ディレクティブ - ネイティブ Angular | Ignite UI for Angular | インフラジスティックス 
-_description: Ignite UI for Angular Virtualization ディレクティブは大量データ セットの処理でスピードおよびパフォーマンスのための主な機能です。仮想描画機能はメモリでの DOM オブジェクトの数を固定すると、スムーズなスクロールを実現できます。 
+title: Angular Grid の仮想化とパフォーマンス - Ignite UI for Angular
+_description: Ignite UI for Angular の仮想化ディレクティブは、大規模なデータセットを処理する際のグリッドのスピードとパフォーマンスの背後にあるコア メカニズムです。無料でお試しください。 
 _keywords: angular データ グリッド, グリッド パフォーマンス, テータ テーブル仮想化, ignite ui for angular
 _language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: 仮想化ディレクティブ - ネイティブ Angular | Ignite UI for Angular | インフラジスティックス 
-_description: Ignite UI for Angular Virtualization ディレクティブは大規模なデータ セットの処理でスピードおよびパフォーマンス向上のための主要な機能です。仮想描画機能はメモリでの DOM オブジェクトの数を固定すると、スムーズなスクロールを実現できます。 
+title: Angular Grid の仮想化とパフォーマンス - Ignite UI for Angular
+_description: Ignite UI for Angular の仮想化ディレクティブは、大規模なデータセットを処理する際のグリッドのスピードとパフォーマンスの背後にあるコア メカニズムです。無料でお試しください。 
 _keywords: angular データ グリッド, グリッド パフォーマンス, テータ テーブル仮想化, ignite ui for angular
 _language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: 仮想化ディレクティブ - ネイティブ Angular | Ignite UI for Angular | インフラジスティックス 
-_description: Ignite UI for Angular Virtualization ディレクティブは大規模なデータ セットの処理でスピードおよびパフォーマンス向上のための主要な機能です。仮想描画機能はメモリでの DOM オブジェクトの数を固定すると、スムーズなスクロールを実現できます。
+title: Angular Grid の仮想化とパフォーマンス - Ignite UI for Angular
+_description: Ignite UI for Angular の仮想化ディレクティブは、大規模なデータセットを処理する際のグリッドのスピードとパフォーマンスの背後にあるコア メカニズムです。無料でお試しください。
 _keywords: angular データ グリッド, グリッド パフォーマンス, テータ テーブル仮想化, ignite ui for angular
 _language: ja
 ---
 }
-# @@igComponent 仮想化とパフォーマンス
+# Angular @@igComponent 仮想化とパフォーマンス
 
 Ignite UI for Angular の [@@igxName]({environment:angularApiUrl}/classes/@@igTypeDoc.html) コントロールは、[`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html) ディレクティブを使用し、水平および垂直方向にコンテンツを仮想化します。
 
