@@ -2,7 +2,7 @@
 title: Angular Polar Chart | Data Visualization | Infragistics
 _description: Infragistics' Angular Polar Chart
 _keywords: Angular Charts, Polar Chart, Infragistics
-mentionedTypes: ["XamDataChart", "PolarAreaSeries"]
+mentionedTypes: ["XamDataChart", "PolarAreaSeries", 'Series']
 namespace: Infragistics.Controls.Charts
 ---
 
@@ -190,7 +190,7 @@ The following table lists API members mentioned in the above sections:
 -   [`IgxPolarSplineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarsplineseriescomponent.html)
 -   [`IgxPolarSplineAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarsplineareaseriescomponent.html)
 -   [`IgxPolarScatterSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarscatterseriescomponent.html)
--   `DataSource`
+-   `ItemsSource`
 -   `AngleAxisName`
 -   [`angleMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarbasecomponent.html#anglememberpath)
 -   `RadiusAxisName`

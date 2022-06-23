@@ -2,7 +2,7 @@
 title: Angular Step Chart | Data Visualization | Infragistics
 _description: Infragistics' Angular Step Chart
 _keywords: Angular Charts, Step Chart, Step Area Chart, Step Line Chart, Infragistics
-mentionedTypes: ["CategoryChart", "CategoryChartType"]
+mentionedTypes: ["DomainChart", "CategoryChart", "CategoryChartType", 'Series']
 namespace: Infragistics.Controls.Charts
 ---
 

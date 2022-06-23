@@ -2,7 +2,7 @@
 title: Angular Radial Chart | Data Visualization | Infragistics
 _description: Infragistics' Angular Radial Chart
 _keywords: Angular Charts, Radial Chart, Infragistics
-mentionedTypes: ["XamDataChart", "RadialLineSeries"]
+mentionedTypes: ["XamDataChart", "RadialLineSeries", 'Series']
 namespace: Infragistics.Controls.Charts
 ---
 
@@ -159,7 +159,7 @@ The following table lists API members mentioned in the above sections:
 -   [`IgxRadialColumnSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialcolumnseriescomponent.html)
 -   [`IgxRadialLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradiallineseriescomponent.html)
 -   [`IgxRadialPieSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialpieseriescomponent.html)
--   `DataSource`
+-   `ItemsSource`
 -   `AngleAxisName`
 -   `ValueAxisName`
 -   [`valueMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxanchoredradialseriescomponent.html#valuememberpath)
