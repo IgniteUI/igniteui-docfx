@@ -5,11 +5,11 @@ _keywords: Angular map, scatter proportional series, Ignite UI for Angular, Infr
 mentionedTypes: ['XamGeographicMap', 'Series']
 ---
 
-# Angular Using Scatter Proportional Series
+# Angular Geographic Bubble Map
 
-Use the Angular map component's [`IgxGeographicProportionalSymbolSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html) to plot markers for the geographic points specified by the data in your application. This map series can be useful for highlighting points of interest in your particular business case like department stores, warehouses, or offices. Also you can use this map series in a fleet management system or a GPS system for dynamic vehicle tracking.
+In Angular map component, you can use the [`IgxGeographicProportionalSymbolSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html) to plot bubbles or proportional markers at the geographic locations specified by the data in your application. This map series can be useful for highlighting points of interest in your particular business case like department stores, warehouses, or offices. Also you can use this map series in a fleet management system or a GPS system for dynamic vehicle tracking.
 
-## Angular Using Scatter Proportional Series Example
+## Angular Geographic Bubble Map Example
 
 <code-view style="height: 500px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"

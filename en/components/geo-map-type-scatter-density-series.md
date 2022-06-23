@@ -5,11 +5,11 @@ _keywords: Angular map, scatter high density series, Ignite UI for Angular, Infr
 mentionedTypes: ['XamGeographicMap', 'Series']
 ---
 
-# Angular Using Scatter High Density Series
+# Angular Geographic High Density Map
 
-Use the Angular map component's [`IgxGeographicHighDensityScatterSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html) to bind and show scatter data ranging from hundreds to millions of data points requiring exceedingly little loading time.
+In Angular map component, you can use the [`IgxGeographicHighDensityScatterSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html) to bind and show scatter data ranging from hundreds to millions of data points requiring exceedingly little loading time.
 
-## Angular Using Scatter High Density Series Example
+## Angular Geographic High Density Map Example
 
 <code-view style="height: 400px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"

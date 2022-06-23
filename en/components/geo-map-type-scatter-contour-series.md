@@ -5,11 +5,11 @@ _keywords: Angular map, scatter contour series, Ignite UI for Angular, Infragist
 mentionedTypes: ['XamGeographicMap','GeographicContourLineSeries','CustomPaletteColorScale', 'Series']
 ---
 
-# Angular Using Scatter Contour Series
+# Angular Geographic Contour Map
 
-Use the Angular map component's [`IgxGeographicContourLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographiccontourlineseriescomponent.html) to draw colored contour lines, in a geographic context, based on a triangulation of longitude and latitude data with a numeric value assigned to each point. This type of geographic series is useful for rendering scattered data defined by geographic locations such as weather temperature, atmospheric pressure, precipitation, population distribution, topographic data, etc.
+In Angular map component, you can use the [`IgxGeographicContourLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographiccontourlineseriescomponent.html) to draw colored contour lines, in a geographic context, based on a triangulation of longitude and latitude data with a numeric value assigned to each point. This type of geographic series is useful for rendering scattered data defined by geographic locations such as weather temperature, atmospheric pressure, precipitation, population distribution, topographic data, etc.
 
-## Angular Using Scatter Contour Series Example
+## Angular Geographic Contour Map Example
 
 <code-view style="height: 500px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"

@@ -5,11 +5,11 @@ _keywords: Angular map, Ignite UI for Angular, shape polyline series, Infragisti
 mentionedTypes: ['XamGeographicMap', 'ShapefileConverter', 'Series']
 ---
 
-# Angular Using Shape Polyline Series
+# Angular Geographic Polyline Map
 
-Use the Angular map component's [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) to display geo-spatial data using polylines in a geographic context. This type of geographic series is often used to render roads or connections between geographic locations such as cities or airports.
+In Angular map component, you can use the [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) to display geo-spatial data using polylines in a geographic context. This type of geographic series is often used to render roads or connections between geographic locations such as cities or airports.
 
-## Angular Using Shape Polyline Series Example
+## Angular Geographic Polyline Map Example
 
 <code-view style="height: 500px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"

@@ -5,11 +5,11 @@ _keywords: Angular map, scatter area series, Ignite UI for Angular, Infragistics
 mentionedTypes: ['XamGeographicMap','GeographicScatterAreaSeries','CustomPaletteColorScale', 'Series']
 ---
 
-# Angular Using Scatter Area Series
+# Angular Geographic Area Map
 
-Use the Angular map component's [`IgxGeographicScatterAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicscatterareaseriescomponent.html) to draw a colored surface, in a geographic context, based on a triangulation of longitude and latitude data with a numeric value assigned to each point. This type of geographic series is useful for rendering scattered data, defined by geographic locations such as weather temperature, precipitation, population distribution, air pollution, etc.
+In Angular map component, you can use the [`IgxGeographicScatterAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicscatterareaseriescomponent.html) to draw a colored surface, in a geographic context, based on a triangulation of longitude and latitude data with a numeric value assigned to each point. This type of geographic series is useful for rendering scattered data, defined by geographic locations such as weather temperature, precipitation, population distribution, air pollution, etc.
 
-## Angular Using Scatter Area Series Example
+## Angular Geographic Area Map Example
 
 <code-view style="height: 500px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"

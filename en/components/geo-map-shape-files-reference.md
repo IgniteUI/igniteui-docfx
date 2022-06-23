@@ -100,7 +100,6 @@ The following list provides resources for obtaining shape files. Also, samples f
 The following topics provide additional information related to this topic.
 
 -   [Binding Shape Files](geo-map-binding-shp-file.md)
--   [Geographic Series](geo-map-type-series.md)
 
 ## API Members
 
