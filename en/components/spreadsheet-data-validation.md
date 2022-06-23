@@ -125,3 +125,7 @@ this.spreadsheet.workbook.worksheets(0).rows(7).cells(1).dataValidationRule = va
 this.spreadsheet.workbook.worksheets(0).rows(7).cells(1).value = checkOutDate.toLocaleDateString();
 this.spreadsheet.workbook.worksheets(0).rows(7).cells(0).value = "Check Out Date";
 ```
+
+## API Members
+
+-   [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html)
