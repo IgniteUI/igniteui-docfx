@@ -181,6 +181,22 @@ This code is used in the sample below which implements an [`IgxSelectComponent`]
 
 For more information on how to configure columns and their templates, you can see the documentation for [Grid Columns configuration](../grid/grid.md#angular-grid-column-configuration).
 
+### Excel Style Editing
+
+## Angular Grid cell editing and edit templates Example
+
+<code-view style="height:650px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/grid/grid-editing-excel-style" alt="Angular Grid Excel Style Editing Example">
+</code-view>
+
+Using Excel Style Editing allows the user to navigate trough the cells just as he would using the Excel, and ever so quickly edit them:
+
+- Constant edit mode: typing while a cell is selected will immediately enter it in edit mode with the value typed, replacing the existing one
+- Enter navigation: pressing enter will not only confirm the value in any cell in edit mode, but navigate to the bottom cell instead, rather than the next one in the record as tab would
+- Should grouping be enabled, enter will navigate you to the next cell skipping all group headers. Cycling quickly trough the values has neever been easier
+
+
 ## CRUD operations
 
 > [!NOTE]
