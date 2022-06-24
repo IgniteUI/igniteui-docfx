@@ -2,7 +2,7 @@
 title: Angular Shape Chart | Data Visualization | Infragistics
 _description: Infragistics' Angular Shape Chart
 _keywords: Angular Charts, Shape Chart, Infragistics
-mentionedTypes: ["XamDataChart", "ScatterPolygonSeries", "ScatterPolylineSeries"]
+mentionedTypes: ["XamDataChart", "ScatterPolygonSeries", "ScatterPolylineSeries", 'Series']
 namespace: Infragistics.Controls.Charts
 ---
 

@@ -95,9 +95,17 @@ The following list provides resources for obtaining shape files. Also, samples f
 
 -   [MapCruzin – Shape Files](http://www.mapcruzin.com/download-free-arcgis-shapefiles.htm)
 
-#### Additional Resources
+## Additional Resources
 
 The following topics provide additional information related to this topic.
 
 -   [Binding Shape Files](geo-map-binding-shp-file.md)
--   [Geographic Series](geo-map-type-series.md)
+
+## API Members
+
+-   [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html)
+-   [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html)
+-   [`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html)
+-   `ItemsSource`
+-   `ShapeMemberPath`
+-   [`IgxShapeDataSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapedatasource.html)

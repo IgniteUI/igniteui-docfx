@@ -212,8 +212,9 @@ Based on the [IGridKeydownEventArgs]({environment:angularApiUrl}/interfaces/igri
         return;
     }
     // 2. CUSTOM NAVIGATION ON ENTER KEY PRESS
-    grid.navigateTo(target.rowIndex + 1, target.visibleColumnIndex,
-        (obj) => { obj.target.nativeElement.focus(); });
+    this.grid1.navigateTo(target.row.index + 1, target.column.visibleIndex, (obj) => {
+            obj.target.activate();
+        });
 ```
 > Note: Please refer to the sample code for full implementation details.
 
