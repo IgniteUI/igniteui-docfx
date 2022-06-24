@@ -2,6 +2,7 @@
 title: Angular Spreadsheet | Grid Controls | Configuration | Infragistics |
 _description: Use the Spreadsheet control to embed Excel document creation and editing experiences right into your application.
 _keywords: Spreadsheet, Ignite UI for Angular, Infragistics
+_language: kr
 mentionedTypes: ['Spreadsheet']
 ---
 
@@ -17,13 +18,24 @@ The [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-an
            github-src="excel/spreadsheet/config-options">
 </code-view>
 
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <body>
+      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/excel/spreadsheet/config-options?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
+            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
+        </a>
+        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/excel/spreadsheet/config-options?file=src%2Fapp.component.html" rel="noopener noreferrer">
+            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
+        </a>
+    </body>
+</html>
+
 <div class="divider--half"></div>
 
 ## Configuring Cell Editing
 
 When a user edits a cell value and confirms the new input, the [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) control has the ability to navigate to cells adjacent to the currently active cell on press of the `Enter` key, depending on the configuration of the spreadsheet.
 
-In order to enable this `Enter` key navigation, you can set the [`isEnterKeyNavigationEnabled`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#isenterkeynavigationenabled) property to `true`. If set to false, the active cell will stay the same when pressing the `Enter` key.
+In order to enable this `Enter` key navigation, you can set the [`isEnterKeyNavigationEnabled`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#isenterkeynavigationenabled) property to **true**. If set to false, the active cell will stay the same when pressing the `Enter` key.
 
 You can also configure the direction of the adjacent cell navigated to on press of the `Enter` key by setting the [`enterKeyNavigationDirection`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#enterkeynavigationdirection) property to `Down`, `Up`, `Left` or `Right`.
 
