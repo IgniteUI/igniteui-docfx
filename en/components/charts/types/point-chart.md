@@ -2,7 +2,7 @@
 title: Angular Point Chart | Data Visualization | Infragistics
 _description: Infragistics' Angular Point Chart
 _keywords: Angular Charts, Point Chart, Infragistics
-mentionedTypes: ["CategoryChart", "CategoryChartType", "Legend"]
+mentionedTypes: ["DomainChart", "CategoryChart", "CategoryChartType", "Legend", 'Series']
 namespace: Infragistics.Controls.Charts
 ---
 
@@ -12,7 +12,7 @@ The Ignite UI for Angular Point Chart renders a collection of points. Values are
 
 ## Angular Point Chart Example
 
-You can create the Angular Point Chart in the [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html) control by binding your data to `ItemsSource` property and setting [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#charttype) property to [`Point`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#point) value, as shown in the example below.
+You can create the Angular Point Chart in the [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html) control by binding your data to `ItemsSource` property and setting [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#charttype) property to **Point** enum, as shown in the example below.
 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
@@ -36,7 +36,7 @@ You can create the Angular Point Chart in the [`IgxCategoryChartComponent`]({env
 
 ## Angular Point Chart with Single Series
 
-In the following example, the Angular Point Chart is comparing the generation of renewable electricity for the countries Europe, China, and USA over the years of 2009 to 2019. The Y-Axis, or labels on the left of the chart, are displaying the terawatt hour (TWh) values of renewed electricity and the X-Axis, or labels on the bottom of the chart, are displaying the year.
+In the following example, the Angular Point Chart plots a single data source by automatically selecting numeric data column for y-axis and non-numeric data column for x-axis.
 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"

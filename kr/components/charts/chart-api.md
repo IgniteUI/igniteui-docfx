@@ -2,6 +2,7 @@
 title: Angular Chart API | Data Visualization Tools | Infragistics
 _description: Use Infragistics Ignite UI for Angular chart provides useful API to configure and styles chart visuals
 _keywords: Angular charts, chart API, API, Ignite UI for Angular, Infragistics
+_language: kr
 mentionedTypes: ["XamDataChart", "CategoryChart", "FinancialChart"]
 namespace: Infragistics.Controls.Charts
 ---
