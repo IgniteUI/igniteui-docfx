@@ -2,7 +2,7 @@
 title: Angular マップ | データ可視化ツール | マップ概要 | インフラジスティックス
 _description: インフラジスティックスの Angular JavaScript マップ コンポーネントを使用して、ビュー モデルからの地理的位置を含むデータ、またはシェープ ファイルからロードされた地理空間データを地理的画像マップに表示します。Ignite UI for Angular マップのサンプルを是非お試しください!
 _keywords: Angular map, geographic map, imagery tiles, Ignite UI for Angular, Infragistics, Angular マップ, 地理マップ, 画像タイル, インフラジスティックス
-mentionedTypes: ['XamGeographicMap']
+mentionedTypes: ['XamGeographicMap', 'Series']
 _language: ja
 ---
 

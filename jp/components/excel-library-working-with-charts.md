@@ -49,3 +49,12 @@ var chart = ws.shapes().addChart(ChartType.ColumnClustered,
 
 chart.setSourceData("A2:M6", true);
 ```
+
+## API メンバー
+
+-   `AddChart`
+-   `Area`
+-   [`IgxColumnComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcolumncomponent.html)
+-   `Line`
+-   `Pie`
+-   [`WorksheetChart`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetchart.html)
