@@ -2,7 +2,7 @@
 title: Angular バブル チャート | データ可視化 | インフラジスティックス
 _description: インフラジスティックス の Angular バブル チャート
 _keywords: Angular Charts, Bubble Chart, Infragistics, Angular チャート, バブル チャート, インフラジスティックス
-mentionedTypes: ["Series", "BubbleSeries", "ScatterSeries"]
+mentionedTypes: ["Series", "BubbleSeries", "ScatterSeries", 'Series']
 namespace: Infragistics.Controls.Charts
 _language: ja
 ---
@@ -13,7 +13,7 @@ Ignite UI for Angular バブル チャートは[散布図](scatter-chart.md)の�
 
 ## Angular バブル チャートの例
 
-次の例に示すように、[`IgxBubbleSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbubbleseriescomponent.html) と 2 つの数値軸を使用して、[`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) コントロールでバブル チャートを作成できます。
+次の例に示すように、[`IgxBubbleSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbubbleseriescomponent.html) と 2 つの数値軸を使用して、[`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) コントロールで Ignite UI for Angular バブル チャートを作成できます。
 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
@@ -37,7 +37,7 @@ Ignite UI for Angular バブル チャートは[散布図](scatter-chart.md)の�
 
 ## 単一シリーズの Angular バブル チャート
 
-以下の例に示すように、データを [`IgxBubbleSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbubbleseriescomponent.html) の `DataSource` プロパティにバインドし、その [`xMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterbasecomponent.html#xmemberpath)、[`yMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterbasecomponent.html#ymemberpath)、[`radiusMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbubbleseriescomponent.html#radiusmemberpath) プロパティを使用してデータ列をマップできます。
+以下の例に示すように、データを [`IgxBubbleSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbubbleseriescomponent.html) の `ItemsSource` プロパティにバインドし、その [`xMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterbasecomponent.html#xmemberpath)、[`yMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterbasecomponent.html#ymemberpath)、[`radiusMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbubbleseriescomponent.html#radiusmemberpath) プロパティを使用してデータ列をマップできます。
 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
@@ -61,7 +61,7 @@ Ignite UI for Angular バブル チャートは[散布図](scatter-chart.md)の�
 
 ## 複数シリーズの Angular バブル チャート
 
-Angular バブル チャートでは、次の例に示すように、複数のデータ ソースのバインドは、新しい各データ ソースを追加の  [`IgxBubbleSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbubbleseriescomponent.html) の `DataSource` プロパティに設定することで機能します。
+Angular バブル チャートでは、次の例に示すように、複数のデータ ソースのバインドは、新しい各データ ソースを追加の [`IgxBubbleSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbubbleseriescomponent.html) の `ItemsSource` プロパティに設定することで機能します。
 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
@@ -119,7 +119,7 @@ Angular バブル チャートでは、[`markerType`]({environment:dvApiBaseUrl}
 -   [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html)
 -   [`IgxBubbleSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbubbleseriescomponent.html)
 -   [`IgxScatterSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterseriescomponent.html)
--   `DataSource`
+-   `ItemsSource`
 -   [`fillMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbubbleseriescomponent.html#fillmemberpath)
 -   [`fillScale`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbubbleseriescomponent.html#fillscale)
 -   [`markerType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxmarkerseriescomponent.html#markertype)

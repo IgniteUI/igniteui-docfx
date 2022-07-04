@@ -2,7 +2,7 @@
 title: Angular シェープ チャート | データ可視化 | インフラジスティックス
 _description: インフラジスティックスの Angular シェープ チャート
 _keywords: Angular Charts, Shape Chart, Infragistics, Angular チャート, シェープ チャート, インフラジスティックス
-mentionedTypes: ["XamDataChart", "ScatterPolygonSeries", "ScatterPolylineSeries"]
+mentionedTypes: ["XamDataChart", "ScatterPolygonSeries", "ScatterPolylineSeries", 'Series']
 namespace: Infragistics.Controls.Charts
 _language: ja
 ---
@@ -78,7 +78,7 @@ Angular 散布ポリライン チャートは、[`IgxDataChartComponent`]({envir
 -   [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html)
 -   [`IgxScatterPolygonSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolygonseriescomponent.html)
 -   [`IgxScatterPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolylineseriescomponent.html)
--   `DataSource`
+-   `ItemsSource`
 -   [`shapeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapeseriesbasecomponent.html#shapememberpath)
 -   [`IgxNumericXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericxaxiscomponent.html)
 -   [`IgxNumericYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericyaxiscomponent.html)

@@ -112,3 +112,9 @@ export class ExcelUtility {
     }
 }
 ```
+
+## API メンバー
+
+-   [`WorkbookFormat`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/workbookformat.html)
+-   [`WorkbookSaveOptions`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbooksaveoptions.html)
+-   [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html)

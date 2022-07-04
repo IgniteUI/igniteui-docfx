@@ -2,7 +2,7 @@
 title: Angular 縦棒チャート | データ可視化 | インフラジスティックス
 _description: インフラジスティックスの Angular 縦棒チャート
 _keywords: Angular Charts, Column Chart, Column Graph, Vertical Bar Chart, Infragistics, Angular チャート, 縦棒チャート, 縦棒グラフ, 垂直棒チャート, インフラジスティックス
-mentionedTypes: ["CategoryChart", "XamDataChart", "ColumnSeries", "WaterfallSeries", "StackedColumnSeries", "Stacked100ColumnSeries", "RangeColumnSeries", "RadialColumnSeries", "CategoryChartType"]
+mentionedTypes: ["DomainChart", "CategoryChart", "XamDataChart", "ColumnSeries", "WaterfallSeries", "StackedColumnSeries", "Stacked100ColumnSeries", "RangeColumnSeries", "RadialColumnSeries", "CategoryChartType", 'Series']
 namespace: Infragistics.Controls.Charts
 _language: ja
 ---
@@ -13,9 +13,7 @@ Ignite UI for Angular 縦棒チャート、縦棒グラフ、または垂直棒�
 
 ## Angular 縦棒チャートの例
 
-Ignite UI for Angular カテゴリ縦棒チャートは、複数のデータ ソースのデータ項目をカテゴリにグループ化し、それらを縦棒または長方形として描画します。値は Y 軸に表示され、カテゴリは X 軸に表示されます。
-
-次の例に示すように、データをバインドし、[`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#charttype) を **Column** 値に設定することで、[`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html) コントロールでこのタイプのチャートを作成できます。
+次の例に示すように、データをバインドし、[`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#charttype) を **Column** 列挙型に設定することで、[`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html) コントロールに Angular 縦棒チャートを作成できます。
 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"

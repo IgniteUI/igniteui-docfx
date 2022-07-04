@@ -34,7 +34,7 @@ _language: ja
 
 ## 依存関係
 
-クリップボードを利用する前に、`SpreadsheetAction` 列挙体をインポートします。
+クリップボードを利用する前に、`SpreadsheetAction` 列挙型をインポートします。
 
 <!-- Angular -->
 
@@ -62,3 +62,8 @@ public paste(): void {
     this.spreadsheet.executeAction(SpreadsheetAction.Paste);
 }
 ```
+
+## API メンバー
+
+-   `SpreadsheetAction`
+-   [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html)
