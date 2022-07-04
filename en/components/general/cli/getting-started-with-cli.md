@@ -14,6 +14,12 @@ To get started install [Ignite UI CLI](https://github.com/IgniteUI/igniteui-cli)
 npm install -g igniteui-cli 
 ```
 
+If you are using `yarn` package manager:
+
+```cmd
+yarn global add  igniteui-cli
+```
+
 ### Using guided experience
 The shortest and easiest way to bootstrap an application is to use the [step by step guide using Ignite UI CLI](step-by-step-guide-using-cli.md). 
 
