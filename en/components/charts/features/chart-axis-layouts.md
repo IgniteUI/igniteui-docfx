@@ -2,7 +2,7 @@
 title: Angular Axis Layouts | Data Visualization | Infragistics
 _description: Infragistics' Angular Axis Layouts
 _keywords: Angular Axis, Layouts, Location, Position, Share, Multiple, Crossing, Infragistics
-mentionedTypes: [ "CategoryChart", "XYChart", "DomainChart", "XamDataChart", "Axis", "AxisLabelSettings", "ScatterSplineSeries", "TimeXAxis" ]
+mentionedTypes: [ "DomainChart", "CategoryChart", "XYChart", "DomainChart", "XamDataChart", "Axis", "AxisLabelSettings", "ScatterSplineSeries", "TimeXAxis" ]
 ---
 
 # Angular Axis Layouts

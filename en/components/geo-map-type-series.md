@@ -2,7 +2,7 @@
 title: Angular Map | Data Visualization Tools | Geographic Series Types | Infragistics
 _description: Use Infragistics Angular map's series to display geo-spatial data as points such as locations of cities, polylines such as road connections, or polygons such as shape of countries in a geographic context. Learn more about Ignite UI for Angular map's series!
 _keywords: Angular map, geographic series, Ignite UI for Angular, Infragistics
-mentionedTypes: ['XamGeographicMap']
+mentionedTypes: ['XamGeographicMap', 'Series']
 ---
 
 # Angular Geographic Series Overview
@@ -23,3 +23,7 @@ The Angular Geographic Map component supports the following types of geographic 
 -   [Using Scatter Area Series](geo-map-type-scatter-area-series.md)
 -   [Using Shape Polygon Series](geo-map-type-shape-polygon-series.md)
 -   [Using Shape Polyline Series](geo-map-type-shape-polyline-series.md)
+
+    ## API Members
+
+-   [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html)

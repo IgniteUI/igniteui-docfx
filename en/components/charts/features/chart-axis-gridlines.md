@@ -2,7 +2,7 @@
 title: Angular Axis Gridlines | Data Visualization | Infragistics
 _description: Infragistics' Angular Axis Gridlines
 _keywords: Angular Axis, Gridlines, Infragistics
-mentionedTypes: ["CategoryChart", "XYChart", "DomainChart", "XamDataChart", "NumericXAxis", "NumericYAxis", "NumericAxisBase" ]
+mentionedTypes: ["DomainChart", "CategoryChart", "XYChart", "DomainChart", "XamDataChart", "NumericXAxis", "NumericYAxis", "NumericAxisBase" ]
 namespace: Infragistics.Controls.Charts
 ---
 

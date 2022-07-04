@@ -61,3 +61,8 @@ public paste(): void {
     this.spreadsheet.executeAction(SpreadsheetAction.Paste);
 }
 ```
+
+## API Members
+
+-   `SpreadsheetAction`
+-   [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html)
