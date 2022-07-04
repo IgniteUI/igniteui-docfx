@@ -15,6 +15,12 @@ _language: ja
 npm install -g igniteui-cli 
 ```
 
+`yarn` パッケージ マネージャーを使用している場合:
+
+```cmd
+yarn global add igniteui-cli
+```
+
 ### ガイドの使用
 アプリケーションを最短でブートストラップする最も簡単な方法は、[Ignite UI CLI を使用したステップ バイ ステップ ガイド](step-by-step-guide-using-cli.md)を使用する方法です。 
 
