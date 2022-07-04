@@ -96,9 +96,17 @@ Angular [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite
 
 -   [MapCruzin – シェープ ファイル](http://www.mapcruzin.com/download-free-arcgis-shapefiles.htm)
 
-#### その他リソース
+## その他リソース
 
 このトピックに関連する追加情報については、以下のトピックを参照してください。
 
 -   [シェープファイルのバインディング](geo-map-binding-shp-file.md)
--   [地理的シリーズ](geo-map-type-series.md)
+
+## API メンバー
+
+-   [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html)
+-   [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html)
+-   [`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html)
+-   `ItemsSource`
+-   `ShapeMemberPath`
+-   [`IgxShapeDataSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapedatasource.html)
