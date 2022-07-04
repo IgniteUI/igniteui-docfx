@@ -155,3 +155,18 @@ constructor() {
     con.dataBind();
 }
 ```
+
+## API Members
+
+-   [`IgxHeatTileGenerator`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxheattilegenerator.html)
+-   [`IgxHeatTileGenerator`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxheattilegenerator.html)
+-   [`maximumColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxheattilegenerator.html#maximumcolor)
+-   [`minimumColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxheattilegenerator.html#minimumcolor)
+-   `ShapeFileRecord`
+-   `ShapeFileRecords`
+-   [`IgxShapeDataSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapedatasource.html)
+-   [`IgxTileGeneratorMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtilegeneratormapimagery.html)
+-   [`tileGenerator`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtilegeneratormapimagery.html#tilegenerator)
+-   `TileImagery`
+-   `UseBlurRadiusAdjustedForZoom`
+-   `UseLogarithmicScale`

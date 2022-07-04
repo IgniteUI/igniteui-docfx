@@ -696,8 +696,33 @@
       href: zoomslider-overview.md
       new: false
 - name: Maps
+  href: geo-map.md
   header: true
-- name: Map
+- name: Geographic Area Map
+  href: geo-map-type-scatter-area-series.md
+  new: false
+- name: Geographic Contour Map
+  href: geo-map-type-scatter-contour-series.md
+  new: false
+- name: Geographic High Density Map
+  href: geo-map-type-scatter-density-series.md
+  new: false
+- name: Geographic Bubble Map
+  href: geo-map-type-scatter-bubble-series.md
+  new: false
+- name: Geographic Symbol Map
+  href: geo-map-type-scatter-symbol-series.md
+  new: false
+- name: Geographic Polygon Map
+  href: geo-map-type-shape-polygon-series.md
+  new: false
+- name: Geographic Polyline Map
+  href: geo-map-type-shape-polyline-series.md
+  new: false
+- name: Geographic Map API
+  href: maps/map-api.md
+  new: false
+- name: Geographic Map Features
   href: geo-map.md
   new: false
   items:
@@ -733,27 +758,6 @@
       new: false
     - name: Navigating Map Content
       href: geo-map-navigation.md
-      new: false
-    - name: Scatter Area Series
-      href: geo-map-type-scatter-area-series.md
-      new: false
-    - name: Scatter Contour Series
-      href: geo-map-type-scatter-contour-series.md
-      new: false
-    - name: Scatter Density Series
-      href: geo-map-type-scatter-density-series.md
-      new: false
-    - name: Scatter Proportional Series
-      href: geo-map-type-scatter-bubble-series.md
-      new: false
-    - name: Scatter Symbol Series
-      href: geo-map-type-scatter-symbol-series.md
-      new: false
-    - name: Shape Polygon Series
-      href: geo-map-type-shape-polygon-series.md
-      new: false
-    - name: Shape Polyline Series
-      href: geo-map-type-shape-polyline-series.md
       new: false
     - name: Shape Files Reference
       href: geo-map-shape-files-reference.md
