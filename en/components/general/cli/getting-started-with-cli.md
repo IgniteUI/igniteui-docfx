@@ -17,7 +17,7 @@ npm install -g igniteui-cli
 If you are using `yarn` package manager:
 
 ```cmd
-yarn global add  igniteui-cli
+yarn global add igniteui-cli
 ```
 
 ### Using guided experience
