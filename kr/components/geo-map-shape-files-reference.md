@@ -96,7 +96,7 @@ The following list provides resources for obtaining shape files. Also, samples f
 
 -   [MapCruzin – Shape Files](http://www.mapcruzin.com/download-free-arcgis-shapefiles.htm)
 
-#### Additional Resources
+## Additional Resources
 
 The following topics provide additional information related to this topic.
 
