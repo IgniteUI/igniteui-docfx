@@ -184,31 +184,57 @@ For more information on how to configure columns and their templates, you can se
 
 Using Excel Style Editing allows the user to navigate trough the cells just as he would using the Excel, and ever so quickly edit them.
 
-Reaching this custom functionality can be done by utilizing the events of the grid. First we hook up to the grid's keydown events:
+Implementing this custom functionality can be done by utilizing the events of the grid. First we hook up to the grid's keydown events, and from here we can implement two functionalities:
 
-```html
-(keydown)="keydownHandler($event)"
-```
-
-then we enter edit mode trough the API:
+- Constant edit mode
 
 ```typescript
-//a quick check to see if the key holds value:
-if (
-      (key >= 48 && key <= 57) ||
-      (key >= 65 && key <= 90) ||
-      (key >= 97 && key <= 122)
-    )
-// and we enter edit mode
+    public keydownHandler(event) {
+      const key = event.keyCode;
+      const grid = this.grid;
+      const activeElem = grid.navigation.activeNode;
+
+      if (
+        (key >= 48 && key <= 57) ||
+        (key >= 65 && key <= 90) ||
+        (key >= 97 && key <= 122)
+      ) {
+        // Number or Alphabet upper case or Alphabet lower case
+
+        const columnName = grid.getColumnByVisibleIndex(activeElem.column).field;
+        const cell = grid.getCellByColumn(activeElem.row, columnName);
+        if (cell && !grid.crudService.cellInEditMode) {
+          grid.crudService.enterEditMode(cell);
+          cell.editValue = event.key;
+        }
+      }
+```
+
+- `Enter`/ `Shift+Enter` navigation
+
+```typescript
+
 grid.crudService.enterEditMode(cell);
 
 // should we hit enter, we use the grid's navigation tools to get to the bottom cell instead
 if (key == 13)
-this.grid.navigateTo(nextRow, column);
-        this.grid.navigation.setActiveNode({
-          row: nextRow,
-          column: column,
+this.grid.navigateTo(nextRow, column, (obj) => {
+        obj.target.activate();
         });
+
+// to find the next eiligible cell, we will use a custom method that will check the next suitable index
+  public getNextEditableRowIndex(currentRowIndex, dataView, previous){
+    //first we check if the currently selected cell is the first or the last
+    if (currentRowIndex < 0 || (currentRowIndex === 0 && previous) || (currentRowIndex >= dataView.length - 1 && !previous)) {
+        return currentRowIndex;
+    }
+    // in case using shift + enter combination, we look for the first suitable cell going up the field
+    if(previous){
+      return  dataView.findLastIndex((rec, index) => index < currentRowIndex && this.isEditableDataRecordAtIndex(index, dataView));
+    }
+    // or for the next one down the field
+    return dataView.findIndex((rec, index) => index > currentRowIndex && this.isEditableDataRecordAtIndex(index, dataView));
+  }
 ```
 
 Please check the full sample bellow:
@@ -224,8 +250,8 @@ Please check the full sample bellow:
 Main benefits of the above approach include:
 
 - Constant edit mode: typing while a cell is selected will immediately enter it in edit mode with the value typed, replacing the existing one
-- Enter navigation: pressing enter will not only confirm the value in any cell in edit mode, but navigate to the bottom cell instead, rather than the next one in the record as tab would
-- Should grouping be enabled, enter will navigate you to the next cell skipping all group headers. Cycling quickly trough the values has neever been easier
+- Any non-data rows are skipped when navigating with `Enter`/`Shift+Enter`
+- Should grouping, master detail or any other feature adding headers as records is enabled, enter will navigate you to the next editable cell skipping all headers. Cycling quickly trough the values has neever been easier
 
 ## CRUD operations
 
