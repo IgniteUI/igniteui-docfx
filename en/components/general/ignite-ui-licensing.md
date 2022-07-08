@@ -127,11 +127,11 @@ If you are upgrading from trial to licensed package and you are not using the au
 - remove the `~` sign from your project `sass` imports for `igniteui-angular/lib` source:
 
 ```scss
-@import "~igniteui-angular/lib/core/styles/themes/index";
+@use "~igniteui-angular/lib/core/styles/themes/index" as *;
 
 // Should be changed to
 
-@import "igniteui-angular/lib/core/styles/themes/index";
+@use "igniteui-angular/lib/core/styles/themes/index" as *;
 ```
 
 So, if you've already adopted npm and you have an Ignite UI for Angular license, don't hesitate setting up the Infragistics private feed and boost your productivity, using the full potential of Ignite UI for Angular.
