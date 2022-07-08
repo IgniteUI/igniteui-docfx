@@ -184,7 +184,7 @@ For more information on how to configure columns and their templates, you can se
 
 Using Excel Style Editing allows the user to navigate trough the cells just as he would using the Excel, and ever so quickly edit them.
 
-Implementing this custom functionality can be done by utilizing the events of the grid. First we hook up to the grid's keydown events, and from here we can implement two functionalities:
+Implementing this custom functionality can be done by utilizing the events of the grid. First we hook up to the grid's keydown events, and from there we can implement two functionalities:
 
 - Constant edit mode
 
@@ -214,10 +214,11 @@ Implementing this custom functionality can be done by utilizing the events of th
 
 ```typescript
 
-grid.crudService.enterEditMode(cell);
-
 // should we hit enter, we use the grid's navigation tools to get to the bottom cell instead
-if (key == 13)
+if (key == 13) {
+let thisRow = activeElem.row;
+const column = activeElem.column;
+const rowInfo = grid.dataView;
 this.grid.navigateTo(nextRow, column, (obj) => {
         obj.target.activate();
         });
@@ -237,9 +238,7 @@ this.grid.navigateTo(nextRow, column, (obj) => {
   }
 ```
 
-Please check the full sample bellow:
-
-## Angular Grid cell editing and edit templates Example
+## Angular Grid Excel Style Editing Sample
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -250,8 +249,7 @@ Please check the full sample bellow:
 Main benefits of the above approach include:
 
 - Constant edit mode: typing while a cell is selected will immediately enter it in edit mode with the value typed, replacing the existing one
-- Any non-data rows are skipped when navigating with `Enter`/`Shift+Enter`
-- Should grouping, master detail or any other feature adding headers as records is enabled, enter will navigate you to the next editable cell skipping all headers. Cycling quickly trough the values has neever been easier
+- Any non-data rows are skipped when navigating with `Enter`/`Shift+Enter`. Cycling quickly trough the values has neever been easier
 
 ## CRUD operations
 
