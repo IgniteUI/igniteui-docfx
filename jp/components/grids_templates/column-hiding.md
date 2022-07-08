@@ -213,7 +213,7 @@ By using the `igx-grid-toolbar-hiding` [`title`]({environment:angularApiUrl}/cla
         <igx-grid-toolbar>
             <igx-grid-toolbar-title>Employees</igx-grid-toolbar-title>
             <igx-grid-toolbar-actions>
-                <igx-grid-toolbar-hiding title="Column Hiding"></igx-grid-toolbar-hiding>
+                <igx-grid-toolbar-hiding #hidingActionRef title="Column Hiding"></igx-grid-toolbar-hiding>
             </igx-grid-toolbar-actions>
         </igx-grid-toolbar>
     </@@igSelector>
