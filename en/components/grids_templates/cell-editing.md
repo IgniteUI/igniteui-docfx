@@ -241,7 +241,7 @@ Please check the full sample bellow:
 
 ## Angular Grid cell editing and edit templates Example
 
-<code-view style="height:650px" 
+<code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/grid/grid-editing-excel-style" alt="Angular Grid Excel Style Editing Example">
 </code-view>
