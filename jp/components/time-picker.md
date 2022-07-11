@@ -159,8 +159,8 @@ public selectNow(timePicker: IgxTimePickerComponent) {
 
 <div class="divider--half"></div>
 
-## Customizing the toggle and clear icons
-The [`IgxTimePickerComponent`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html) can be configured with [`IgxPickerToggleComponent`]({environment:angularApiUrl}/classes/igxpickertogglecomponent.html) and [`IgxPickerClearComponent`]({environment:angularApiUrl}/classes/igxpickerclearcomponent.html), these can be used to change the toggle and clear icons without having to add your own click handlers.
+## トグル アイコンとクリア アイコンのカスタマイズ
+[`IgxTimePickerComponent`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html) は [`IgxPickerToggleComponent`]({environment:angularApiUrl}/classes/igxpickertogglecomponent.html) と [`IgxPickerClearComponent`]({environment:angularApiUrl}/classes/igxpickerclearcomponent.html) で構成できます。これらを使用すると、独自のクリック ハンドラーを追加しなくても、トグル アイコンとクリア アイコンを変更できます。
 
 ```html
  <igx-time-picker>
