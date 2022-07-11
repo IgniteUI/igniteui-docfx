@@ -2,15 +2,15 @@
 title: Angular マップ | データ可視化ツール | シェイプ ポリゴン シリーズ | インフラジスティックス
 _description: インフラジスティックスの Angular マップのシェイプ ポリゴン シリーズを使用して、地理的位置によって定義される国または地域の図形を描画します。Ignite UI for Angular マップ シーリズについての詳細を表示します。
 _keywords: Angular map, shape polygon series, Ignite UI for Angular, Infragistics, Angular マップ, シェイプ ポリゴン シリーズ, インフラジスティックス
-mentionedTypes: ['XamGeographicMap', 'ShapefileConverter']
+mentionedTypes: ['XamGeographicMap', 'ShapefileConverter', 'Series']
 _language: ja
 ---
 
-# Angular シェイプ ポリゴン シリーズの使用
+# Angular 地理ポリゴン マップ
 
-地理的コンテキストで形状ポリゴンを使用して地理空間データを表示するには、Angular マップ コンポーネントの [`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html) を使用します。地理的シリーズのこのタイプは、地理的位置で定義される国々または領域の図形を描画するためにしばしば使用されます。
+Angular マップ コンポーネントでは、[`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html) を使用して、地理的コンテキストで形状ポリゴンを使用して地理空間データを表示できます。地理的シリーズのこのタイプは、地理的位置で定義される国々または領域の図形を描画するためにしばしば使用されます。
 
-## Angular シェイプ ポリゴン シリーズの使用の例
+## Angular 地理ポリゴン マップの例
 
 <code-view style="height: 500px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
@@ -159,3 +159,11 @@ export class MapTypeShapePolygonSeriesComponent implements AfterViewInit {
   }
 }
 ```
+
+## API メンバー
+
+-   [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html)
+-   [`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html)
+-   `ItemsSource`
+-   `ShapeMemberPath`
+-   [`IgxShapeDataSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapedatasource.html)

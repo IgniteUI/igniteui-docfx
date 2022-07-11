@@ -13,9 +13,7 @@ Ignite UI for Angular 円チャート (円グラフ) は、データセットの
 
 ## Angular 円チャートの例
 
-[`IgxPieChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartcomponent.html) コントロールでこのチャート タイプを作成するには、以下の例のように、データをバインドします。
-
-この Angular 円チャートの例には、6 つの値を持つ単純なデータ セットが含まれています。各キー/ペア値には文字列値と文字列値データ値があり、データ値の合計は 100% です。ここでは、部門ごとの予算支出の内訳を示しています。
+データ項目を文字列と数値データでバインドすることで、[`IgxPieChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartcomponent.html) の円チャートが作成できます。これらのデータ値を足すと可視化率 100% になります。この例では部門ごとの予算支出の全体的な内訳を示しています。
 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
@@ -160,7 +158,7 @@ Angular 円チャートは、データを解析するためのビューアー �
 
 ## Angular 円チャートの選択
 
-デフォルトで、円チャートはマウス クリックによるスライス選択をサポートします。選択されたスライスは、[`selectedItems`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartbasecomponent.html#selecteditems)  プロパティで取得します。選択したスライスがハイライトされます。
+デフォルトで、円チャートはマウス クリックによるスライス選択をサポートします。選択されたスライスは、[`selectedItems`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartbasecomponent.html#selecteditems) プロパティで取得します。選択したスライスがハイライトされます。
 
 円チャートのモードは [`selectionMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartbasecomponent.html#selectionmode) プロパティで設定します。デフォルト値は `Single` です。選択機能を無効化するためにはプロパティを `Manual` に設定します。
 
