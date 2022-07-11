@@ -159,6 +159,21 @@ public selectNow(timePicker: IgxTimePickerComponent) {
 
 <div class="divider--half"></div>
 
+## Customizing the toggle and clear icons
+The [`IgxTimePickerComponent`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html) can be configured with [`IgxPickerToggleComponent`]({environment:angularApiUrl}/classes/igxpickertogglecomponent.html) and [`IgxPickerClearComponent`]({environment:angularApiUrl}/classes/igxpickerclearcomponent.html), these can be used to change the toggle and clear icons without having to add your own click handlers.
+
+```html
+ <igx-time-picker>
+    <label igxLabel>Select time</label>
+    <igx-picker-toggle igxPrefix>
+        <igx-icon>snooze</igx-icon>
+    </igx-picker-toggle>
+    <igx-picker-clear igxSuffix>
+        <igx-icon>delete</igx-icon>
+    </igx-picker-clear>
+</igx-time-picker>
+```
+
 ### キーボード ナビゲーション
 * ユーザーは、キーボードの <kbd>Up</kbd> および <kbd>Down</kbd> 矢印キーを使用するか、入力フィールドとドロップダウン/ダイアログをスクロールして、コンポーネントの時間部分をナビゲートできます。[`minValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#minvalue) または [`maxValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#maxvalue) に関係なく、入力でのナビゲーションが可能ですが、ドロップダウン/ダイアログでのナビゲーションは [`minValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#minvalue) および [`maxValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#maxvalue) の範囲内に制限されます。
 * Time Picker のドロップダウンは、トグル アイコンをクリックするか、<kbd>Space</kbd> キーを押すか、<kbd>Alt</kbd> + <kbd>Down</kbd> キーを押すことで開くことができます。ダイアログ モードでは、これは入力クリックで実行できます。
