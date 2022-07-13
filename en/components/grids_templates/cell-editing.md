@@ -249,7 +249,7 @@ this.grid.navigateTo(nextRow, column, (obj) => {
 Main benefits of the above approach include:
 
 - Constant edit mode: typing while a cell is selected will immediately enter it in edit mode with the value typed, replacing the existing one
-- Any non-data rows are skipped when navigating with `Enter`/`Shift+Enter`. Cycling quickly trough the values has neever been easier
+- Any non-data rows are skipped when navigating with `Enter`/`Shift+Enter`. This allows users to quickly cycle through their values.
 
 ## CRUD operations
 
