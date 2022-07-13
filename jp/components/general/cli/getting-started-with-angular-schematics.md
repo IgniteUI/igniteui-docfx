@@ -13,6 +13,12 @@ npm i -g @igniteui/angular-schematics
 ```
 上記のインストールにより、schematics が `ng new` コマンドのコレクション パラメーターを使用できるようになります。
 
+`yarn` パッケージ マネージャーを使用している場合:
+
+```cmd
+yarn global add @igniteui/angular-schematics
+```
+
 ### ガイドの使用
 
 アプリケーションを最短でブートストラップする最も簡単な方法は、[Ignite UI for Angular Schematics を使用したステップ バイ ステップ ガイド](step-by-step-guide-using-angular-schematics.md)を使用する方法です。 

@@ -174,9 +174,9 @@ export class MyTreeViewComponent {
 ```html
 <igx-tree>
     <igx-tree-node *ngFor="let node of data" [data]="node">
-        <ng-template *ngTemplateOutlet="#nodeTemplate; context: { $implicit: node }"></ng-template>
+        <ng-container *ngTemplateOutlet="#nodeTemplate; context: { $implicit: node }"></ng-container>
         <igx-tree-node *ngFor="let child of node.ChildCompanies" [data]="child">
-            <ng-template *ngTemplateOutlet="#nodeTemplate; context: { $implicit: child}"></ng-template>
+            <ng-container *ngTemplateOutlet="#nodeTemplate; context: { $implicit: child}"></ng-container>
         </igx-tree-node>
     </igx-tree-node>
     <ng-template #nodeTemplate let-data>
