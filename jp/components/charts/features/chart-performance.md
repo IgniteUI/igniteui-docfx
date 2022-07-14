@@ -2,7 +2,7 @@
 title: Angular チャート パフォーマンス | データ可視化 | インフラジスティックス
 _description: インフラジスティックスの Angular チャート パフォーマンス
 _keywords: Angular Charts, Performance, Infragistics, Angular チャート, パフォーマンス, インフラジスティックス
-mentionedTypes: ["CategoryChart", "FinancialChart", "XamDataChart"]
+mentionedTypes: ["DomainChart", "CategoryChart", "FinancialChart", "XamDataChart"]
 namespace: Infragistics.Controls.Charts
 _language: ja
 ---

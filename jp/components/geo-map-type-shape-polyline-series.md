@@ -2,15 +2,15 @@
 title: Angular マップ | データ可視化ツール | シェイプ ポリライン シリーズ | インフラジスティックス
 _description: インフラジスティックスの Angular マップのシェイプ ポリライン シリーズを使用して、都市または空港などの地理的位置間の道路または接続を描画します。Ignite UI for Angular マップ シーリズについての詳細を表示します。
 _keywords: Angular map, Ignite UI for Angular, shape polyline series, Infragistics, Angular マップ, シェイプ ポリライン シリーズ, インフラジスティックス
-mentionedTypes: ['XamGeographicMap', 'ShapefileConverter']
+mentionedTypes: ['XamGeographicMap', 'ShapefileConverter', 'Series']
 _language: ja
 ---
 
-# Angular シェイプ ポリライン シリーズの使用
+# Angular 地理ポリライン マップ
 
-地理的コンテキストでポリラインを使用して地理空間データを表示するには、Angular マップ コンポーネントの [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) を使用します。地理的シリーズのこのタイプは、都市または空港などの地理的位置間の道路または接続を描画するためにしばしば使用されます。
+Angular マップ コンポーネントでは、[`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) を使用して、地理的コンテキストでポリラインを使用して地理空間データを表示できます。地理的シリーズのこのタイプは、都市または空港などの地理的位置間の道路または接続を描画するためにしばしば使用されます。
 
-## Angular シェイプ ポリライン シリーズの使用の例
+## Angular 地理ポリライン マップの例
 
 <code-view style="height: 500px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
@@ -148,3 +148,10 @@ export class MapTypeShapePolylineSeriesComponent implements AfterViewInit {
     }
 }
 ```
+
+## API メンバー
+
+-   [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html)
+-   [`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html)
+-   `ItemsSource`
+-   [`IgxShapeDataSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapedatasource.html)
