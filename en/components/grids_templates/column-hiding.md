@@ -202,19 +202,18 @@ For this purpose all we have to do is set both the [`IgxGridToolbarActionsDirect
 
 
 The @@igComponent provides us with some useful properties when it comes to using the toolbar's column hiding UI.
-By using the `igx-grid-toolbar-hiding` [`title`]({environment:angularApiUrl}/classes/igxgridtoolbarhidingcomponent.html#title) and the [`hiddenColumnsText`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#hiddencolumnstext) properties, we will set the title and the text that is displayed inside the dropdown button in the toolbar. More specifically, the [`hiddenColumnsText`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#hiddencolumnstext) is displayed right next to the columns count number, which is included by default in the button.
-The [`hiddenColumnsText`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#hiddencolumnstext) property is quite handy since it can be used for localization purposes as well.
+By using the `igx-grid-toolbar-hiding` [`title`]({environment:angularApiUrl}/classes/igxgridtoolbarhidingcomponent.html#title) property, we will set the title that is displayed inside the dropdown button in the toolbar.
 
 @@if (igxName === 'IgxGrid' || igxName === 'IgxTreeGrid') {
 ```html
 <!--columnHiding.component.html-->
 
 <div class="grid__wrapper">
-    <@@igSelector hiddenColumnsText="Hidden">
+    <@@igSelector>
         <igx-grid-toolbar>
             <igx-grid-toolbar-title>Employees</igx-grid-toolbar-title>
             <igx-grid-toolbar-actions>
-                <igx-grid-toolbar-hiding title="Column Hiding"></igx-grid-toolbar-hiding>
+                <igx-grid-toolbar-hiding #hidingActionRef title="Column Hiding"></igx-grid-toolbar-hiding>
             </igx-grid-toolbar-actions>
         </igx-grid-toolbar>
     </@@igSelector>
@@ -224,11 +223,11 @@ The [`hiddenColumnsText`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#h
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
 <div class="hgrid-sample">
-    <igx-hierarchical-grid class="hgrid" [data]="localdata" hiddenColumnsText="Hidden">
+    <igx-hierarchical-grid class="hgrid" [data]="localdata">
     <igx-grid-toolbar>
             <igx-grid-toolbar-title>Singers</igx-grid-toolbar-title>
             <igx-grid-toolbar-actions>
-                <igx-grid-toolbar-hiding title="Column Hiding"></igx-grid-toolbar-hiding>
+                <igx-grid-toolbar-hiding #hidingActionRef title="Column Hiding"></igx-grid-toolbar-hiding>
             </igx-grid-toolbar-actions>
     </igx-grid-toolbar>
  </igx-hierarchical-grid>
@@ -236,17 +235,17 @@ The [`hiddenColumnsText`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#h
 ```
 }
 
-By using the [`columnsAreaMaxHeight`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html#columnsareamaxheight) property of the column hiding UI, we can set the maximum height of the area that contains the columns. This way if we have a lot of columns and not all of them can fit in the container, a scrollbar will appear, which will allow us to navigate to any column we want by keeping the search input pinned at the top and the show/hide all buttons at the bottom.
+By using the [`columnsAreaMaxHeight`]({environment:angularApiUrl}/classes/igxgridtoolbarhidingcomponent.html#columnsAreaMaxHeight) property of the IgxGridToolbarHidingComponent, we can set the maximum height of the area that contains the column actions. This way if we have a lot of actions and not all of them can fit in the container, a scrollbar will appear, which will allow us to scroll to any action we want.
 
 ```typescript
 // columnHiding.component.ts
 
 public ngAfterViewInit() {        
-    this.@@igObjectRef.toolbar.columnHidingUI.columnsAreaMaxHeight = "200px";
+    this.hidingActionRef.columnsAreaMaxHeight = "200px";
 }
 ```
 
-In order to use the expanded set of functionalities for the column hiding UI, we can use the toolbar's [`columnHidingUI`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html#columnhidingui) property, which returns a reference to the column hiding UI component itself. This way we can access its respective API and use it according to our application's requirements.
+In order to use the expanded set of functionalities for the column hiding UI, we can use the IgxColumnActionsComponent's [`columnsAreaMaxHeight `]({environment:angularApiUrl}/classes/IgxColumnActionsComponent.html#columnsAreaMaxHeight) property. This way we can use it according to our application's requirements.
 
 You can see the result of the code from above at the beginning of this article in the Angular Column Hiding Example section.
 
@@ -645,22 +644,18 @@ Additional components and/or directives with relative APIs that were used:
 
 [`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) properties:
 * [hiddenColumnsCount]({environment:angularApiUrl}/classes/@@igTypeDoc.html#hiddencolumnscount)
-* [hiddenColumnsText]({environment:angularApiUrl}/classes/@@igTypeDoc.html#hiddencolumnstext)
 
 [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) properties:
 * [disableHiding]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disablehiding)
 
 [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) properties:
-* [columnHidingUI]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html#columnhidingui)
-* [columnHidingDropdown]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html#columnhidingdropdown)
-* [toolbarHiding]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html#igxgridtoolbarhidingcomponent.html)
+* [showProgress]({environment:angularApiUrl}/classes/IgxGridToolbarComponent.html#showProgress)
 
 [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) directives:
 * [titleDirective]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html#igxgridtoolbartitledirective.html)
 * [actionsDirective]({environment:angularApiUrl}/classes/igxgridtoolbaractionsdirective.html)
 
 [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) methods:
-* [toggleColumnHidingUI]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html#togglecolumnhidingui)
 
 [`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) events:
 * [columnVisibilityChanged]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnVisibilityChanged)

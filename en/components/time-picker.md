@@ -158,6 +158,21 @@ And there we have it, a re-templated time picker with dropdown, custom actions a
 
 <div class="divider--half"></div>
 
+## Customizing the toggle and clear icons
+The [`IgxTimePickerComponent`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html) can be configured with [`IgxPickerToggleComponent`]({environment:angularApiUrl}/classes/igxpickertogglecomponent.html) and [`IgxPickerClearComponent`]({environment:angularApiUrl}/classes/igxpickerclearcomponent.html), these can be used to change the toggle and clear icons without having to add your own click handlers.
+
+```html
+ <igx-time-picker>
+    <label igxLabel>Select time</label>
+    <igx-picker-toggle igxPrefix>
+        <igx-icon>snooze</igx-icon>
+    </igx-picker-toggle>
+    <igx-picker-clear igxSuffix>
+        <igx-icon>delete</igx-icon>
+    </igx-picker-clear>
+</igx-time-picker>
+```
+
 ### Keyboard Navigation
 * Users can navigate the component's time portions via the keyboard <kbd>Up</kbd> and <kbd>Down</kbd> arrow keys or by scrolling in the input field and in the dropdown/dialog. Navigation in the input is possible regardless of the [`minValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#minvalue) or [`maxValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#maxvalue), while navigation in the dropdown/dialog will be restricted within the [`minValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#minvalue) and [`maxValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#maxvalue) range.
 * The time picker dropdown can be opened either by toggle icon click, <kbd>Space</kbd> key or <kbd>Alt</kbd> + <kbd>Down</kbd> keys press. In dialog mode this can be done by input click.
