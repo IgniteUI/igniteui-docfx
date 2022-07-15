@@ -238,8 +238,6 @@ this.grid.navigateTo(nextRow, column, (obj) => {
   }
 ```
 
-## Angular Grid Excel Style Editing Sample
-
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/grid/grid-editing-excel-style" alt="Angular Grid Excel Style Editing Example">
