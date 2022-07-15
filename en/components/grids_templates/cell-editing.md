@@ -2,7 +2,7 @@
 ---
 title: Cell Editing in Angular Data Grid - Ignite UI for Angular
 _description: The Grid is using in-cell editing. It has a default cell editing template, but it also lets you define your own custom templates for update-data action. Try it now!
-_keywords: data manipulation, ignite ui for angular, infragistics
+_keywords: data manipulation, ignite ui for angular, infragistics, excel editing
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
@@ -180,13 +180,18 @@ This code is used in the sample below which implements an [`IgxSelectComponent`]
 
 
 For more information on how to configure columns and their templates, you can see the documentation for [Grid Columns configuration](../grid/grid.md#angular-grid-column-configuration).
-### Excel Style Editing
+
+@@if (igxName === 'IgxGrid') {
+
+### @@igComponent Excel Style Editing
+
 
 Using Excel Style Editing allows the user to navigate trough the cells just as he would using the Excel, and ever so quickly edit them.
 
 Implementing this custom functionality can be done by utilizing the events of the grid. First we hook up to the grid's keydown events, and from there we can implement two functionalities:
 
-- Constant edit mode
+* Constant edit mode
+
 
 ```typescript
     public keydownHandler(event) {
@@ -208,9 +213,10 @@ Implementing this custom functionality can be done by utilizing the events of th
           cell.editValue = event.key;
         }
       }
+    }
 ```
 
-- `Enter`/ `Shift+Enter` navigation
+* `Enter`/ `Shift+Enter` navigation
 
 ```typescript
 
@@ -236,7 +242,10 @@ this.grid.navigateTo(nextRow, column, (obj) => {
     // or for the next one down the field
     return dataView.findIndex((rec, index) => index > currentRowIndex && this.isEditableDataRecordAtIndex(index, dataView));
   }
+}
 ```
+
+#####Angular Grid Excel Style Editing Sample
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -248,6 +257,8 @@ Main benefits of the above approach include:
 
 - Constant edit mode: typing while a cell is selected will immediately enter it in edit mode with the value typed, replacing the existing one
 - Any non-data rows are skipped when navigating with `Enter`/`Shift+Enter`. This allows users to quickly cycle through their values.
+
+}
 
 ## CRUD operations
 
