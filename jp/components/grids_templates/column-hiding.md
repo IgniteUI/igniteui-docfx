@@ -202,7 +202,7 @@ Ignite UI for Angular @@igComponent は、[`IgxColumnHidingDirective`]({environm
 
 
 @@igComponent にはツールバーの列非表示 UI に便利なプロパティがあります。
-By using the `igx-grid-toolbar-hiding` [`title`]({environment:angularApiUrl}/classes/igxgridtoolbarhidingcomponent.html#title) property, we will set the title that is displayed inside the dropdown button in the toolbar.
+`igx-grid-toolbar-hiding` の [`title`]({environment:angularApiUrl}/classes/igxgridtoolbarhidingcomponent.html#title) プロパティを使用して、ツールバーのドロップダウン ボタン内に表示されるタイトルを設定します。
 
 @@if (igxName === 'IgxGrid' || igxName === 'IgxTreeGrid') {
 ```html
@@ -235,7 +235,7 @@ By using the `igx-grid-toolbar-hiding` [`title`]({environment:angularApiUrl}/cla
 ```
 }
 
-By using the [`columnsAreaMaxHeight`]({environment:angularApiUrl}/classes/igxgridtoolbarhidingcomponent.html#columnsAreaMaxHeight) property of the IgxGridToolbarHidingComponent, we can set the maximum height of the area that contains the column actions. This way if we have a lot of actions and not all of them can fit in the container, a scrollbar will appear, which will allow us to scroll to any action we want.
+IgxGridToolbarHidingComponent の [`columnsAreaMaxHeight`]({environment:angularApiUrl}/classes/igxgridtoolbarhidingcomponent.html#columnsAreaMaxHeight) プロパティを使用して、列操作を含む領域の最大高さを設定できます。このように、多くの操作があり、それらのすべてがコンテナーに収まらない場合は、スクロールバーが表示され、必要な操作にスクロールできます。
 
 ```typescript
 // columnHiding.component.ts
