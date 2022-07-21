@@ -12,6 +12,12 @@ npm i -g @igniteui/angular-schematics
 ```
 The above install will make the schematics available to use a collection parameter for the `ng  new` command.
 
+If you are using `yarn` package manager:
+
+```cmd
+yarn global add @igniteui/angular-schematics
+```
+
 ### Using guided experience
 
 The shortest and easiest way to bootstrap an application is to use the [step by step guide using Ignite UI for Angular Schematics](step-by-step-guide-using-angular-schematics.md). 

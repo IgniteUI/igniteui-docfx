@@ -181,46 +181,6 @@ Listed below are the main features of the toolbar with example code for each of 
 
 }
 
-다음 코드 조각은 도구 모음의 모든 기능을 활성화하는 방법을 보여줍니다:
-
-@@if (igxName === 'IgxGrid') {
-```html
-<igx-grid [data]="data" [autoGenerate]="true" height="400px" width="600px"
-    [showToolbar]="true"
-    toolbarTitle="Grid Title"
-    [columnHiding]="true"
-    [columnPinning]="true"
-    [exportExcel]="true"
-    [exportCsv]="true"
-    exportText="Export"
-    exportExcelText="Export to Excel"
-    exportCsvText="Export to CSV">
-</igx-grid>
-```
-}
-@@if (igxName === 'IgxTreeGrid') {
-```html
-<igx-tree-grid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="true" height="400px" width="900px"
-    [showToolbar]="true"
-    toolbarTitle="Tree Grid Toolbar"
-    [columnHiding]="true"
-    [columnPinning]="true"
-    [exportExcel]="true"
-    [exportCsv]="true"
-    exportText="Export"
-    exportExcelText="Export to Excel"
-    exportCsvText="Export to CSV">
-</igx-tree-grid>
-```
-}
-@@if (igxName === 'IgxHierarchicalGrid') {
-```html
- <igx-hierarchical-grid #hierarchicalGrid class="hgrid" [data]="localdata" [showToolbar]="true" toolbarTitle="Singers" 
-    [columnHiding]="true" [columnPinning]="true" [height]="'500px'" [width]="'100%'">
-...
-</igx-hierarchical-grid>
-```
-}
 
 MS Excel로 내보내기 및 CSV로 내보내기 기능은 공급자로 각각 [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) 및 [`IgxCsvExporterService`]({environment:angularApiUrl}/classes/igxcsvexporterservice.html)를 사용합니다. 이들 중 하나를 사용해야 하는 경우에는 **app.module.ts** 파일의 **공급자** 배열에서 지정해야 합니다. 예를 들면, 다음의 코드 조각은 모든 내보내기 서비스를 포함하는 방법을 보여줍니다:
 
@@ -367,14 +327,7 @@ public toolbarExportingHandler(args) {
 
 [`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) 속성:
 * [`toolbar`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#toolbar)
-* [`showToolbar`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#showtoolbar)
-* [`toolbarTitle`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#toolbartitle)
-* [`columnHiding`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnhiding)
-* [`columnHidingTitle`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnhidingtitle)
-* [`hiddenColumnsText`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#hiddencolumnstext)
-* [`columnPinning`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnpinning)
-* [`columnPinningTitle`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnpinningtitle)
-* [`pinnedColumnsText`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#pinnedcolumnstext)
+* [`showProgress`]({environment:angularApiUrl}/classes/IgxGridToolbarComponent.html#showProgress)
 * [`exportExcel`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#exportexcel)
 * [`exportCsv`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#exportcsv)
 * [`exportText`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#exporttext)
