@@ -570,9 +570,23 @@ configuration. Same goes for grouping and editing operations with or without tra
 
 An alternative way to bind complex data, or to visualize composite data (from more than one column) in the **IgxGrid** is to use a custom body template for the column. Generally, one can:
     - use the `value` of the cell, that contains the nested data
-    - use the `cell` object in the template, from which to access the `data`, therefore retrieve any value from it, i.e `cell.data[field]`
+    - use the `cell` object in the template, from which to access the `row.data`, therefore retrieve any value from it, i.e `cell.row.data[field]` and `cell.row.data[field][nestedField]` 
 
 and interpolate it those in the template.
+
+```html
+<igx-column field="abbreviation.long" header="Long">
+    <ng-template igxCell let-cell="cell">
+        <div>
+            <div>
+                {{ cell.value }}
+                {{ cell.row.data['name'] }}  
+                {{ cell.row.data['weight']['molecular'] }}
+            </div>
+        </div>
+    </ng-template>
+</igx-column>
+```
 
 Below is the data that we are going to use:
 
