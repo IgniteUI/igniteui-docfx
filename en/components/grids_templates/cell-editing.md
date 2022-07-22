@@ -192,52 +192,47 @@ Implementing this custom functionality can be done by utilizing the events of th
 
 * Constant edit mode
 
-
 ```typescript
-    public keydownHandler(event) {
-      const key = event.keyCode;
-      const grid = this.grid;
-      const activeElem = grid.navigation.activeNode;
+public keydownHandler(event) {
+  const key = event.keyCode;
+  const grid = this.grid;
+  const activeElem = grid.navigation.activeNode;
 
-      if (
-        (key >= 48 && key <= 57) ||
-        (key >= 65 && key <= 90) ||
-        (key >= 97 && key <= 122)
-      ) {
-        // Number or Alphabet upper case or Alphabet lower case
-
-        const columnName = grid.getColumnByVisibleIndex(activeElem.column).field;
-        const cell = grid.getCellByColumn(activeElem.row, columnName);
-        if (cell && !grid.crudService.cellInEditMode) {
-          grid.crudService.enterEditMode(cell);
-          cell.editValue = event.key;
-        }
+  if(
+    (key >= 48 && key <= 57) ||
+    (key >= 65 && key <= 90) ||
+    (key >= 97 && key <= 122)){
+    // Number or Alphabet upper case or Alphabet lower case
+      const columnName = grid.getColumnByVisibleIndex(activeElem.column).field;
+      const cell = grid.getCellByColumn(activeElem.row, columnName);
+      if (cell && !grid.crudService.cellInEditMode) {
+        grid.crudService.enterEditMode(cell);
+        cell.editValue = event.key;
       }
+     }
     }
 ```
 
-* `Enter`/ `Shift+Enter` navigation
+  * `Enter`/ `Shift+Enter` navigation
 
 ```typescript
-
-// should we hit enter, we use the grid's navigation tools to get to the bottom cell instead
-if (key == 13) {
-let thisRow = activeElem.row;
-const column = activeElem.column;
-const rowInfo = grid.dataView;
-this.grid.navigateTo(nextRow, column, (obj) => {
-        obj.target.activate();
-        });
-
-// to find the next eiligible cell, we will use a custom method that will check the next suitable index
+  if (key == 13) {
+      let thisRow = activeElem.row;
+      const column = activeElem.column;
+      const rowInfo = grid.dataView;
+      this.grid.navigateTo(nextRow, column, (obj) => {
+      obj.target.activate();
+  });
+  let nextRow = this.getNextEditableRowIndex(thisRow, rowInfo, event.shiftKey);
+  // to find the next eiligible cell, we will use a custom method that will check the next suitable index
   public getNextEditableRowIndex(currentRowIndex, dataView, previous){
     //first we check if the currently selected cell is the first or the last
     if (currentRowIndex < 0 || (currentRowIndex === 0 && previous) || (currentRowIndex >= dataView.length - 1 && !previous)) {
-        return currentRowIndex;
+    return currentRowIndex;
     }
     // in case using shift + enter combination, we look for the first suitable cell going up the field
     if(previous){
-      return  dataView.findLastIndex((rec, index) => index < currentRowIndex && this.isEditableDataRecordAtIndex(index, dataView));
+    return  dataView.findLastIndex((rec, index) => index < currentRowIndex && this.isEditableDataRecordAtIndex(index, dataView));
     }
     // or for the next one down the field
     return dataView.findIndex((rec, index) => index > currentRowIndex && this.isEditableDataRecordAtIndex(index, dataView));
@@ -255,7 +250,7 @@ this.grid.navigateTo(nextRow, column, (obj) => {
 
 Main benefits of the above approach include:
 
-- Constant edit mode: typing while a cell is selected will immediately enter it in edit mode with the value typed, replacing the existing one
+- Constant edit mode: typing while a cell is selected will immediately enter edit mode with the value typed, replacing the existing one
 - Any non-data rows are skipped when navigating with `Enter`/`Shift+Enter`. This allows users to quickly cycle through their values.
 
 }
