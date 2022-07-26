@@ -202,43 +202,52 @@ public keydownHandler(event) {
     (key >= 48 && key <= 57) ||
     (key >= 65 && key <= 90) ||
     (key >= 97 && key <= 122)){
-    // Number or Alphabet upper case or Alphabet lower case
-      const columnName = grid.getColumnByVisibleIndex(activeElem.column).field;
-      const cell = grid.getCellByColumn(activeElem.row, columnName);
-      if (cell && !grid.crudService.cellInEditMode) {
-        grid.crudService.enterEditMode(cell);
-        cell.editValue = event.key;
-      }
-     }
+        // Number or Alphabet upper case or Alphabet lower case
+        const columnName = grid.getColumnByVisibleIndex(activeElem.column).field;
+        const cell = grid.getCellByColumn(activeElem.row, columnName);
+        if (cell && !grid.crudService.cellInEditMode) {
+            grid.crudService.enterEditMode(cell);
+            cell.editValue = event.key;
+        }
     }
+}
 ```
 
   * `Enter`/ `Shift+Enter` navigation
 
 ```typescript
-  if (key == 13) {
-      let thisRow = activeElem.row;
-      const column = activeElem.column;
-      const rowInfo = grid.dataView;
-      this.grid.navigateTo(nextRow, column, (obj) => {
-      obj.target.activate();
-  });
-  let nextRow = this.getNextEditableRowIndex(thisRow, rowInfo, event.shiftKey);
-  // to find the next eiligible cell, we will use a custom method that will check the next suitable index
-  public getNextEditableRowIndex(currentRowIndex, dataView, previous){
-    //first we check if the currently selected cell is the first or the last
-    if (currentRowIndex < 0 || (currentRowIndex === 0 && previous) || (currentRowIndex >= dataView.length - 1 && !previous)) {
-    return currentRowIndex;
-    }
-    // in case using shift + enter combination, we look for the first suitable cell going up the field
-    if(previous){
-    return  dataView.findLastIndex((rec, index) => index < currentRowIndex && this.isEditableDataRecordAtIndex(index, dataView));
-    }
-    // or for the next one down the field
-    return dataView.findIndex((rec, index) => index > currentRowIndex && this.isEditableDataRecordAtIndex(index, dataView));
-  }
+if (key == 13) {
+    let thisRow = activeElem.row;
+    const column = activeElem.column;
+    const rowInfo = grid.dataView;
+
+    // to find the next eiligible cell, we will use a custom method that will check the next suitable index
+    let nextRow = this.getNextEditableRowIndex(thisRow, rowInfo, event.shiftKey);
+
+    // and then we will navigate to it using the grid's built in method navigateTo
+    this.grid.navigateTo(nextRow, column, (obj) => {
+        obj.target.activate();
+        this.grid.clearCellSelection();
+        this.cdr.detectChanges();
+    });
 }
 ```
+Key parts of finding the next eligible index would be:
+
+```typescript
+//first we check if the currently selected cell is the first or the last
+if (currentRowIndex < 0 || (currentRowIndex === 0 && previous) || (currentRowIndex >= dataView.length - 1 && !previous)) {
+return currentRowIndex;
+}
+// in case using shift + enter combination, we look for the first suitable cell going up the field
+if(previous){
+return  dataView.findLastIndex((rec, index) => index < currentRowIndex && this.isEditableDataRecordAtIndex(index, dataView));
+}
+// or for the next one down the field
+return dataView.findIndex((rec, index) => index > currentRowIndex && this.isEditableDataRecordAtIndex(index, dataView));
+```
+
+Please check the full sample for further reference:
 
 #####Angular Grid Excel Style Editing Sample
 
