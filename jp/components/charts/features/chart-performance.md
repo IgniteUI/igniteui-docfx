@@ -218,7 +218,7 @@ this.LineSeries.Resolution = 10;
 
 ### 軸の間隔
 
-デフォルトでは、Angular チャートは、データの範囲に基づいて [`yAxisInterval`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#yaxisinterval) を自動的に計算します。したがって、軸のグリッド線と軸のラベルが多すぎないように、軸の間隔を特に小さい値に設定することは避けてください。  また、多くの軸グリッド線または軸ラベルが必要ない場合は、[`yAxisInterval`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#yaxisinterval) プロパティを自動的に計算された軸間隔よりも大きい値に増やすことを検討することをお勧めします。
+デフォルトでは、Angular チャートは、データの範囲に基づいて [`yAxisInterval`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#yaxisinterval) を自動的に計算します。したがって、軸のグリッド線と軸のラベルが多すぎないように、軸の間隔を特に小さい値に設定することは避けてください。また、多くの軸グリッド線または軸ラベルが必要ない場合は、[`yAxisInterval`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#yaxisinterval) プロパティを自動的に計算された軸間隔よりも大きい値に増やすことを検討することをお勧めします。
 
 > チャートのパフォーマンスが低下するため、軸の副間隔を設定することはお勧めしません。
 
