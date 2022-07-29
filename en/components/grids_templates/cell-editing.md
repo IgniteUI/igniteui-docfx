@@ -2,7 +2,7 @@
 ---
 title: Cell Editing in Angular Data Grid - Ignite UI for Angular
 _description: The Grid is using in-cell editing. It has a default cell editing template, but it also lets you define your own custom templates for update-data action. Try it now!
-_keywords: data manipulation, ignite ui for angular, infragistics
+_keywords: data manipulation, ignite ui for angular, infragistics, excel editing
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
@@ -181,6 +181,89 @@ This code is used in the sample below which implements an [`IgxSelectComponent`]
 
 For more information on how to configure columns and their templates, you can see the documentation for [Grid Columns configuration](../grid/grid.md#angular-grid-column-configuration).
 
+@@if (igxName === 'IgxGrid') {
+
+### @@igComponent Excel Style Editing
+
+
+Using Excel Style Editing allows the user to navigate trough the cells just as he would using the Excel, and ever so quickly edit them.
+
+Implementing this custom functionality can be done by utilizing the events of the grid. First we hook up to the grid's keydown events, and from there we can implement two functionalities:
+
+* Constant edit mode
+
+```typescript
+public keydownHandler(event) {
+  const key = event.keyCode;
+  const grid = this.grid;
+  const activeElem = grid.navigation.activeNode;
+
+  if(
+    (key >= 48 && key <= 57) ||
+    (key >= 65 && key <= 90) ||
+    (key >= 97 && key <= 122)){
+        // Number or Alphabet upper case or Alphabet lower case
+        const columnName = grid.getColumnByVisibleIndex(activeElem.column).field;
+        const cell = grid.getCellByColumn(activeElem.row, columnName);
+        if (cell && !grid.crudService.cellInEditMode) {
+            grid.crudService.enterEditMode(cell);
+            cell.editValue = event.key;
+        }
+    }
+}
+```
+
+  * `Enter`/ `Shift+Enter` navigation
+
+```typescript
+if (key == 13) {
+    let thisRow = activeElem.row;
+    const column = activeElem.column;
+    const rowInfo = grid.dataView;
+
+    // to find the next eiligible cell, we will use a custom method that will check the next suitable index
+    let nextRow = this.getNextEditableRowIndex(thisRow, rowInfo, event.shiftKey);
+
+    // and then we will navigate to it using the grid's built in method navigateTo
+    this.grid.navigateTo(nextRow, column, (obj) => {
+        obj.target.activate();
+        this.grid.clearCellSelection();
+        this.cdr.detectChanges();
+    });
+}
+```
+Key parts of finding the next eligible index would be:
+
+```typescript
+//first we check if the currently selected cell is the first or the last
+if (currentRowIndex < 0 || (currentRowIndex === 0 && previous) || (currentRowIndex >= dataView.length - 1 && !previous)) {
+return currentRowIndex;
+}
+// in case using shift + enter combination, we look for the first suitable cell going up the field
+if(previous){
+return  dataView.findLastIndex((rec, index) => index < currentRowIndex && this.isEditableDataRecordAtIndex(index, dataView));
+}
+// or for the next one down the field
+return dataView.findIndex((rec, index) => index > currentRowIndex && this.isEditableDataRecordAtIndex(index, dataView));
+```
+
+Please check the full sample for further reference:
+
+#####Angular Grid Excel Style Editing Sample
+
+<code-view style="height:550px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/grid/grid-editing-excel-style" alt="Angular Grid Excel Style Editing Example">
+</code-view>
+
+
+Main benefits of the above approach include:
+
+- Constant edit mode: typing while a cell is selected will immediately enter edit mode with the value typed, replacing the existing one
+- Any non-data rows are skipped when navigating with `Enter`/`Shift+Enter`. This allows users to quickly cycle through their values.
+
+}
+
 ## CRUD operations
 
 > [!NOTE]
@@ -315,18 +398,18 @@ These can be wired to user interactions, not necessarily related to the **@@igSe
 
 ### Cell validation on edit event
 Using the grid's editing events we can alter how the user interacts with the grid.
-In this example, we'll validate a cell based on the data entered in it by binding to the [`onCellEdit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncelledit) event. If the new value of the cell does not meet our predefined criteria, we'll prevent it from reaching the data source by cancelling the event (`event.cancel = true`). We'll also display a custom error message using [`IgxToast`](../toast.md).
+In this example, we'll validate a cell based on the data entered in it by binding to the [`cellEdit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#cellEdit) event. If the new value of the cell does not meet our predefined criteria, we'll prevent it from reaching the data source by cancelling the event (`event.cancel = true`). We'll also display a custom error message using [`IgxToast`](../toast.md).
 
 The first thing we need to is bind to the grid's event:
 
 ```html
-<@@igSelector (onCellEdit)="handleCellEdit($event)"
+<@@igSelector (cellEdit)="handleCellEdit($event)"
 ...>
 ...
 </@@igSelector>
 ```
 
-The `onCellEdit` emits whenever **any** cell's value is about to be committed. In our `handleCellEdit` definition, we need to make sure that we check for our specific column before taking any action:
+The `cellEdit` emits whenever **any** cell's value is about to be committed. In our `handleCellEdit` definition, we need to make sure that we check for our specific column before taking any action:
 
 @@if (igxName === 'IgxGrid') {
 ```typescript
