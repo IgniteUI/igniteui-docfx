@@ -13,7 +13,7 @@ Ignite UI for Angular 極座標チャートは、デカルト (x、y) 座標系�
 
 ## Angular 極座標エリア チャート
 
-極座標型エリア チャートは、データ ポイントを接続するポリゴンのコレクションを使用してレ描画され、[カテゴリ エリア チャート](area-chart.md#angular-エリア-チャートの例)と同じデータ プロットの概念を使用しますが、視覚化によってデータ ポイントが水平線に沿って配置されるのではなく、円の周りに配置される点が異なります。[`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) コントロールでこのチャート タイプを作成するには、以下の例のように、データを [`IgxPolarAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarareaseriescomponent.html) にバインドします:
+極座標型エリア チャートは、データ ポイントを接続するポリゴンのコレクションを使用して描画され、[カテゴリ エリア チャート](area-chart.md#angular-エリア-チャートの例)と同じデータ プロットの概念を使用しますが、視覚化によってデータ ポイントが水平線に沿って配置されるのではなく、円の周りに配置される点が異なります。[`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) コントロールでこのチャート タイプを作成するには、以下の例のように、データを [`IgxPolarAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarareaseriescomponent.html) にバインドします:
 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
