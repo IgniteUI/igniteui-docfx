@@ -2,7 +2,7 @@
 ---
 title: Angular Data Grid セル編集 - Ignite UI for Angular
 _description: Grid はセル内編集を使用しています。デフォルトのセル編集テンプレートがありますが、データ更新操作のカスタム テンプレートを定義することもできます。今すぐお試しください。
-_keywords: データ操作, ignite ui for angular, インフラジスティックス
+_keywords: データ操作, ignite ui for angular, excel editing, excel 編集, インフラジスティックス
 _language: ja
 ---
 }
@@ -181,6 +181,89 @@ public updateCell() {
 
 
 列とそのテンプレートの構成方法の詳細については、[グリッド列構成](../grid/grid.md#angular-grid-列の構成)のドキュメントを参照してください。
+
+@@if (igxName === 'IgxGrid') {
+
+### @@igComponent Excel スタイル編集
+
+
+Excel スタイル編集を使用すると、Excel を使用する場合と同じようにセルをナビゲートし、すばやく編集できます。
+
+このカスタム機能を実装するには、グリッドのイベントを使用します。最初にグリッドの keydown イベントにフックし、そこから 2 つの機能を実装できます。
+
+* 常時編集モード
+
+```typescript
+public keydownHandler(event) {
+  const key = event.keyCode;
+  const grid = this.grid;
+  const activeElem = grid.navigation.activeNode;
+
+  if(
+    (key >= 48 && key <= 57) ||
+    (key >= 65 && key <= 90) ||
+    (key >= 97 && key <= 122)){
+        // Number or Alphabet upper case or Alphabet lower case
+        const columnName = grid.getColumnByVisibleIndex(activeElem.column).field;
+        const cell = grid.getCellByColumn(activeElem.row, columnName);
+        if (cell && !grid.crudService.cellInEditMode) {
+            grid.crudService.enterEditMode(cell);
+            cell.editValue = event.key;
+        }
+    }
+}
+```
+
+  * `Enter` / `Shift + Enter` ナビゲーション
+
+```typescript
+if (key == 13) {
+    let thisRow = activeElem.row;
+    const column = activeElem.column;
+    const rowInfo = grid.dataView;
+
+    // to find the next eiligible cell, we will use a custom method that will check the next suitable index
+    let nextRow = this.getNextEditableRowIndex(thisRow, rowInfo, event.shiftKey);
+
+    // and then we will navigate to it using the grid's built in method navigateTo
+    this.grid.navigateTo(nextRow, column, (obj) => {
+        obj.target.activate();
+        this.grid.clearCellSelection();
+        this.cdr.detectChanges();
+    });
+}
+```
+次の適格なインデックスを見つけるための重要な部分は以下のようになります。
+
+```typescript
+//first we check if the currently selected cell is the first or the last
+if (currentRowIndex < 0 || (currentRowIndex === 0 && previous) || (currentRowIndex >= dataView.length - 1 && !previous)) {
+return currentRowIndex;
+}
+// in case using shift + enter combination, we look for the first suitable cell going up the field
+if(previous){
+return  dataView.findLastIndex((rec, index) => index < currentRowIndex && this.isEditableDataRecordAtIndex(index, dataView));
+}
+// or for the next one down the field
+return dataView.findIndex((rec, index) => index > currentRowIndex && this.isEditableDataRecordAtIndex(index, dataView));
+```
+
+詳細については、サンプルを参照してください。
+
+##### Angular Grid Excel スタイル編集のサンプル
+
+<code-view style="height:550px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/grid/grid-editing-excel-style" alt="Angular Grid Excel スタイル編集の例">
+</code-view>
+
+
+上記のアプローチの主な利点は次のとおりです:
+
+- 常時編集モード: セルが選択されているときに入力すると、編集モードに入り、入力された値が既存の値を置き換えます。
+- `Enter` / `Shift + Enter` で移動する場合、データ以外の行はスキップされます。これにより、ユーザーは値をすばやく切り替えることができます。
+
+}
 
 ## CRUD 操作
 
