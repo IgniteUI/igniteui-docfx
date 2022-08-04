@@ -567,9 +567,23 @@ interface AminoAcid {
 
 **IgxGrid** で複雑なデータをバインドまたは複合データ (複数の列から) を可視化する別の方法は、列にカスタム ボディ テンプレートを使用することです。通常、以下のことができます。
     - ネストされたデータを含むセルの値を使用します。
-    - `data` にアクセスするためにテンプレートの `cell` オブジェクトを使用します。それから、セルから任意の値 (`cell.data[field]` など) を取得します。
+    - `row.data` にアクセスするためにテンプレートの `cell` オブジェクトを使用します。それから、セルから任意の値 (`cell.row.data[field]` や `cell.row.data[field][nestedField]` など) を取得します。
 
 それをテンプレートに挿入します。
+
+```html
+<igx-column field="abbreviation.long" header="Long">
+    <ng-template igxCell let-cell="cell">
+        <div>
+            <div>
+                {{ cell.value }}
+                {{ cell.row.data['name'] }}  
+                {{ cell.row.data['weight']['molecular'] }}
+            </div>
+        </div>
+    </ng-template>
+</igx-column>
+```
 
 以下は使用するデータです。
 
