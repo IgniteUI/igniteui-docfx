@@ -320,7 +320,7 @@ After all the steps above are completed, your app should look like that:
 
 ## Hierarchical Navigation
 
-To create a multi-level hierarchical navigation using the `IgxNavigationDrawerComponent`, you can use the `IgxTreeComponent` in the `igxDrawer` template. The tree can be constructed directly from your application `Routes` object. Here's how this can be acieved:
+To create a multi-level hierarchical navigation using the `IgxNavigationDrawerComponent`, you can use the `[IgxTreeComponent](tree.md)` in the `igxDrawer` template. The tree can be constructed directly from your application `Routes` object. Here's how this can be acieved:
 
 ```html
 <igx-nav-drawer [isOpen]="true" [enableGestures]="true" width="280px">
