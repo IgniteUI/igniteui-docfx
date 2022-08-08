@@ -242,12 +242,12 @@ column.autosize();
 
 Each column can be set to auto-size on initialization by setting `width` to 'auto':
 
-```
+```html
 <igx-column width='auto'>...
 ```
 
-When the column is first initialized in the view it resolves its size to the size of the longest visible cell or header. This approach is more performance optimized than auto-sizing post initialization and is recommended especially in cases where you need to auto-size a large number of columns.
-
+When the column is first initialized in the view it resolves its width to the size of the longest visible cell or header. Note that cells that are outside of the visible rows are not included.
+This approach is more performance optimized than auto-sizing post initialization and is recommended especially in cases where you need to auto-size a large number of columns.
 
 ## Styling
 To get started with the styling of the @@igComponent column resize line, we need to import the index file, where all the theme functions and component mixins live:
