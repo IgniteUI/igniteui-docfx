@@ -318,6 +318,65 @@ After all the steps above are completed, your app should look like that:
 
 <div class="divider--half"></div>
 
+## Hierarchical Navigation
+
+To create a multi-level hierarchical navigation using the `IgxNavigationDrawerComponent`, you can use the `IgxTreeComponent` in the `igxDrawer` template. The tree can be constructed directly from your application `Routes` object. Here's how this can be acieved:
+
+```html
+<igx-nav-drawer [isOpen]="true" [enableGestures]="true" width="280px">
+    <ng-template igxDrawer>
+        <igx-tree>
+            <igx-tree-node *ngFor="let route of routes">
+                <a igxTreeNodeLink [routerLink]="route.path">{{ route.data?.displayName }}</a>
+                <igx-tree-node *ngFor="let child of route.children">
+                    <a igxTreeNodeLink [routerLink]="[route.path, child.path]">{{ child.data?.displayName }}</a>
+                </igx-tree-node>
+            </igx-tree-node>
+        </igx-tree>
+    </ng-template>
+</igx-nav-drawer>
+```
+
+> [!NOTE]
+> In this example, we're not using the `igxDrawerItem`, instead we're populating directly with custom `igxDrawer` content, in this case using an `igx-tree`.
+
+```typescript
+import { menusRoutes } from '../../menus-routing.module';
+
+@Component({
+  selector: 'app-nav-drawer-hierarchical',
+  templateUrl: './nav-drawer-hierarchical.component.html',
+  styleUrls: ['./nav-drawer-hierarchical.component.scss']
+})
+export class NavDrawerHierarchicalComponent {
+    public routes = menusRoutes;
+}
+```
+
+In this example, we're populating the routes with custom routing `data`, which contains a `displayName` property, used to visualize the link text in the `igx-tree` nodes. A sample `Route` looks like this:
+
+```typescript
+export const menusRoutes: Routes = [
+    {
+        component: NavDrawerHierarchicalComponent,
+        path: 'navigation-drawer-hierarchical',
+        data: { displayName: 'Hierachical Drawer Menu' }
+    }
+];
+```
+
+There's also child routing extracted from the `children` property of the routes. The sample shows two levels of hierachy, but if your routing has more, then all you need to do is define the levels below in the tree node templates.
+
+> [!NOTE]
+> Keep in mind that some routes, like empty route redirect, error route, page not found, etc., might not be suitable for visualization directly. Before binding the tree to the routing object, you can strip those routes out of your object in your component logic.
+
+<code-view style="height: 800px; border: 1px solid #D4D4D4;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/menus/navigation-drawer-hierarchical" >
+</code-view>
+
+<div class="divider--half"></div>
+
 ## Styling
 To get started with styling the navigation drawer, we need to import the `index` file, where all the theme functions and component mixins live:
 
