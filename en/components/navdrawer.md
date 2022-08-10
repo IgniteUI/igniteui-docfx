@@ -327,9 +327,9 @@ To create a multi-level hierarchical navigation using the `IgxNavigationDrawerCo
     <ng-template igxDrawer>
         <igx-tree>
             <igx-tree-node *ngFor="let route of routes">
-                <a igxTreeNodeLink [routerLink]="route.path">{{ route.data?.displayName }}</a>
+                <a igxTreeNodeLink [routerLink]="route.path" routerLinkActive="route-selected-class">{{ route.data?.displayName }}</a>
                 <igx-tree-node *ngFor="let child of route.children">
-                    <a igxTreeNodeLink [routerLink]="[route.path, child.path]">{{ child.data?.displayName }}</a>
+                    <a igxTreeNodeLink [routerLink]="[route.path, child.path]" routerLinkActive="route-selected-class">{{ child.data?.displayName }}</a>
                 </igx-tree-node>
             </igx-tree-node>
         </igx-tree>
@@ -365,7 +365,7 @@ export const menusRoutes: Routes = [
 ];
 ```
 
-There's also child routing extracted from the `children` property of the routes. The sample shows two levels of hierarchy, but if your routing has more, then all you need to do is define the levels below in the tree node templates.
+There's also child routing extracted from the `children` property of the routes. The sample shows two levels of hierarchy, but if your routing has more, then all you need to do is define the levels below the second one in the tree node templates.
 
 > [!NOTE]
 > Keep in mind that some routes, like empty route redirect, error route, page not found, etc., might not be suitable for visualization directly. Before binding the tree to the routing object, you can strip those routes out of your object in your component logic.
