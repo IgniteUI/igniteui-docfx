@@ -320,7 +320,7 @@ After all the steps above are completed, your app should look like that:
 
 ## Hierarchical Navigation
 
-To create a multi-level hierarchical navigation using the `IgxNavigationDrawerComponent`, you can use the `[IgxTreeComponent](tree.md)` in the `igxDrawer` template. The tree can be constructed directly from your application `Routes` object. Here's how this can be acieved:
+To create a multi-level hierarchical navigation using the `IgxNavigationDrawerComponent`, you can use the [IgxTreeComponent](tree.md) in the `igxDrawer` template. The tree can be constructed directly from your application `Routes` object. Here's how this can be achieved:
 
 ```html
 <igx-nav-drawer [isOpen]="true" [enableGestures]="true" width="280px">
@@ -360,7 +360,7 @@ export const menusRoutes: Routes = [
     {
         component: NavDrawerHierarchicalComponent,
         path: 'navigation-drawer-hierarchical',
-        data: { displayName: 'Hierachical Drawer Menu' }
+        data: { displayName: 'Hierarchical Drawer Menu' }
     }
 ];
 ```
@@ -370,7 +370,9 @@ There's also child routing extracted from the `children` property of the routes.
 > [!NOTE]
 > Keep in mind that some routes, like empty route redirect, error route, page not found, etc., might not be suitable for visualization directly. Before binding the tree to the routing object, you can strip those routes out of your object in your component logic.
 
-<code-view style="height: 800px; border: 1px solid #D4D4D4;" 
+The example below presents the capabilities of a hierarchical structure by using predefined data with topic names and links. The structure allows users to easily generate functional and detailed navigations and to have the ability to define each element whether to be displayed as a link or as an indicator.
+
+<code-view style="height: 400px; border: 1px solid #D4D4D4;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/menus/navigation-drawer-hierarchical" >
 </code-view>
