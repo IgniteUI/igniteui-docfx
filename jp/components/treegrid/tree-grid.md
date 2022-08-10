@@ -31,7 +31,7 @@ ng add igniteui-angular
 ```
 Ignite UI for Angular については、[はじめに](../general/getting-started.md)トピックををご覧ください。
 
-ツリー グリッドが NgModule としてエクスポートされるため、アプリケーションで `AppModule` に `IgxTreeGridModule` をインポートする必要があります。
+ツリー グリッドが `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に `IgxTreeGridModule` をインポートする必要があります。
 
 ```typescript
 // app.module.ts
@@ -386,6 +386,22 @@ $custom-theme: grid-theme(
 >このサンプルは、「テーマの変更」から選択したグローバル テーマに影響を受けません。
 
 <div class="divider--half"></div>
+
+## パフォーマンス (試験中)
+
+`igxTreeGrid` のデザインでは、Angular で導入されたイベント結合機能を利用できます。この機能は、インタラクションとレスポンシブの点で **`20%`** のパフォーマンスを向上します。この機能は、`bootstrapModule` メソッドで `ngZoneEventCoalescing` と `ngZoneRunCoalescing` プロパティを `true` に設定するだけでアプリケーション レベルで有効にできます。
+
+```typescript
+platformBrowserDynamic()
+  .bootstrapModule(AppModule, { ngZoneEventCoalescing: true, ngZoneRunCoalescing: true })
+  .catch(err => console.error(err));
+```
+
+>[!NOTE]
+> これは `igxTreeGrid` の試験中の機能です。これは、ツリー グリッドで予期しない動作が発生する可能性があることを意味します。このような動作が発生した場合は、[Github](https://github.com/IgniteUI/igniteui-angular/discussions) ページでお問い合わせください。
+
+>[!NOTE]
+> 有効にすると、`igxTreeGrid` に関連しない Angular アプリケーションの他の部分に影響します。
 
 ## 既知の制限
 
