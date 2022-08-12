@@ -2,14 +2,14 @@
 title: Angular Map | Data Visualization Tools | Scatter Symbol Series | Data Binding | Infragistics
 _description: Use Infragistics Angular map's scatter symbol series to display geo-spatial data using points or markers in a geographic context.. Learn more about Ignite UI for Angular map's series!
 _keywords: Angular map, scatter symbol series, Ignite UI for Angular, Infragistics
-mentionedTypes: ['XamGeographicMap', 'ShapefileConverter']
+mentionedTypes: ['XamGeographicMap', 'ShapefileConverter', 'Series']
 ---
 
-# Angular Using Scatter Symbol Series
+# Angular Geographic Symbol Map
 
-Use the Angular map component's [`IgxGeographicSymbolSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html) to display geo-spatial data using points or markers in a geographic context. This type of geographic series is often used to render a collection of geographic locations such as cities, airports, earthquakes, or points of interests.
+In Angular map component, you can use the [`IgxGeographicSymbolSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html) to display geo-spatial data using points or markers in a geographic context. This type of geographic series is often used to render a collection of geographic locations such as cities, airports, earthquakes, or points of interests.
 
-## Angular Using Scatter Symbol Series Example
+## Angular Geographic Symbol Map Example
 
 <code-view style="height: 500px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
@@ -17,6 +17,17 @@ Use the Angular map component's [`IgxGeographicSymbolSeriesComponent`]({environm
            alt="Angular Using Scatter Symbol Series Example"
            github-src="maps/geo-map/type-scatter-symbol-series">
 </code-view>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <body>
+      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/maps/geo-map/type-scatter-symbol-series?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
+            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
+        </a>
+        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/maps/geo-map/type-scatter-symbol-series?file=src%2Fapp.component.html" rel="noopener noreferrer">
+            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
+        </a>
+    </body>
+</html>
 
 <div class="divider--half"></div>
 
@@ -104,3 +115,11 @@ export class MapTypeScatterSymbolSeriesComponent implements AfterViewInit {
     }
 }
 ```
+
+## API Members
+
+-   [`IgxGeographicSymbolSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html)
+-   `ItemsSource`
+-   [`latitudeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html#latitudememberpath)
+-   [`longitudeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html#longitudememberpath)
+-   [`IgxShapeDataSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapedatasource.html)

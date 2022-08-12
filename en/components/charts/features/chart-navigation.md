@@ -21,6 +21,17 @@ The following example shows all of the available panning and zooming options tha
            github-src="charts/data-chart/chart-navigation">
 </code-view>
 
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <body>
+      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/data-chart/chart-navigation?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
+            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
+        </a>
+        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/data-chart/chart-navigation?file=src%2Fapp.component.html" rel="noopener noreferrer">
+            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
+        </a>
+    </body>
+</html>
+
 <div class="divider--half"></div>
 
 Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a href="{environment:infragisticsBaseUrl}/products/ignite-ui-angular/download">Download it for free.</a>
@@ -50,6 +61,39 @@ The zoom and pan operations can also be enabled by using modifier keys by settin
 | `Windows`      | <kbd>Win</kbd>    |
 | `Apple`        | <kbd>Apple</kbd>  |
 | `None`         | no keys           |
+
+## Chart Navigation with Scrollbars
+
+The chart can be scrolled by enabling the [`verticalViewScrollbarMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriesviewercomponent.html#verticalviewscrollbarmode) and [`horizontalViewScrollbarMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriesviewercomponent.html#horizontalviewscrollbarmode) properties. 
+
+These can be configured to the following options
+
+-   `Persistent` - The scrollbars always stay visible, as long as the chart is zoomed in, and fade away when fully zoomed out. 
+-   `Fading` - The scrollbars disappear after use and reappear when the mouse is near their location.
+-   `FadeToLine` - The scrollbars are reduced to a thinner line when zooming is not in use.
+-   `None` - Default, no scrollbars are shown.
+
+The following example demonstrates enabling scrollbars.
+
+<code-view style="height: 600px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-scrollbars"
+           alt="Angular Navigation Example"
+           github-src="charts/financial-chart/scrollbars">
+</code-view>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <body>
+      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/financial-chart/scrollbars?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
+            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
+        </a>
+        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/financial-chart/scrollbars?file=src%2Fapp.component.html" rel="noopener noreferrer">
+            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
+        </a>
+    </body>
+</html>
+
+<div class="divider--half"></div>
 
 ## Chart Navigation through Code
 

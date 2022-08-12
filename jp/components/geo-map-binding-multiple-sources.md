@@ -2,7 +2,7 @@
 title: Angular マップ | データ可視化ツール | 複数のデータ ソースのバインディング | インフラジスティックス
 _description: インフラジスティックスの Angular JavaScript マップを使用して、複数の地理的シリーズオブジェクトを追加し、カスタム データ ソースを地理空間データとオーバーレイすることができます。Ignite UI for Angular マップ チュートリアルを是非お試しください!
 _keywords: Angular map, geographic series, Ignite UI for Angular, Infragistics, data binding, Angular マップ, 地理的シリーズ, データ バインディング, インフラジスティックス
-mentionedTypes: ['XamGeographicMap', 'SeriesViewer']
+mentionedTypes: ['XamGeographicMap', 'SeriesViewer', 'Series']
 _language: ja
 ---
 
@@ -18,6 +18,17 @@ Ignite UI for Angular マップでは、カスタム データ ソースを地�
            alt="Angular 複数データ ソースのバインドの例"
            github-src="maps/geo-map/binding-multiple-sources">
 </code-view>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <body>
+      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/maps/geo-map/binding-multiple-sources?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
+            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
+        </a>
+        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/maps/geo-map/binding-multiple-sources?file=src%2Fapp.component.html" rel="noopener noreferrer">
+            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
+        </a>
+    </body>
+</html>
 
 <div class="divider--half"></div>
 
@@ -201,3 +212,8 @@ export class MapBindingMultipleSourcesComponent implements AfterViewInit {
     }
 }
 ```
+
+## API メンバー
+
+-   [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html)
+-   [`IgxGeographicSymbolSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html)

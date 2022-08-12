@@ -1,7 +1,7 @@
 @@if(igxName==='IgxGrid') {
 ---
-title: Angular Grid ツール バー | マテリアル テーブル | Ignite UI for Angular | インフラジスティックス 
-_description: 重要な UI 操作のための Angular Toolbar 用の Ignite UI を使用方法をご紹介します。マテリアル UI テーブル ツールバーは、さまざまな機能に関連するさまざまな UI コントロールをホストします。
+title: Angular Grid Toolbar - Ignite UI for Angular 
+_description: 重要な UI 操作には Angular Data Grid Toolbar を使用します。列の非表示、ピン固定、Excel エクスポートなど、グリッドの機能にさまざまな UI コントロールをホストします。
 _keywords: Angular ツール バー, igniteui for angular, インフラジスティックス
 _language: ja
 ---
@@ -9,15 +9,15 @@ _language: ja
 
 @@if(igxName!=='IgxGrid') {
 ---
-title: Angular Grid ツール バー | マテリアル テーブル | Ignite UI for Angular | インフラジスティックス 
-_description: 重要な UI 操作のための Angular Toolbar 用の Ignite UI を使用方法をご紹介します。マテリアル UI テーブル ツールバーは、さまざまな機能に関連するさまざまな UI コントロールをホストします。
+title: Angular Grid Toolbar - Ignite UI for Angular 
+_description: 重要な UI 操作には Angular @@igComponent Toolbar を使用します。列の非表示、ピン固定、Excel エクスポートなど、グリッドの機能にさまざまな UI コントロールをホストします。
 _keywords: Angular ツール バー, igniteui for angular, インフラジスティックス
 _language: ja
 _canonicalLink: grid/toolbar
 ---
 }
 
-# UI 操作のための @@igComponent ツールバー コンテナー
+# Angular @@igComponent Toolbar
 
 Ignite UI for Angular の @@igComponent は、UI 操作のコンテナーとなる [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) 機能をサポートします。Angular ツールバーは Angular コンポーネントの一番上、つまり @@igComponent にあり、水平方向のサイズと一致します。ツールバー コンテナーは、次の @@igComponent の機能、またはその他のカスタム コンテンツ用に事前定義された UI コントロールをホストできます:
 
@@ -513,53 +513,53 @@ configureExport(args: IGridToolbarExportEventArgs) {
 まず、新しいパレットを作成します。
 
 ```scss
-$my-dark-palette: igx-palette(
+$my-dark-palette: palette(
     $primary: #2466ff,
     $secondary: #FFCD0F,
     $surface: #2a2b2f,
     $grays: #fff,
 );
 
-$my-dark-color: igx-color($my-dark-palette, 'surface');
+$my-dark-color: color($my-dark-palette, 'surface');
 ```
 
-[`igx-grid-toolbar-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-toolbar-theme) を拡張する新しいテーマを作成し、`$background-color` と `$title-text-color` パラメーターを変更します。
+[`grid-toolbar-theme`]({environment:sassApiUrl}/index.html#function-grid-toolbar-theme) を拡張する新しいテーマを作成し、`$background-color` と `$title-text-color` パラメーターを変更します。
 
 ```scss
-$dark-grid-toolbar-theme: igx-grid-toolbar-theme(
+$dark-grid-toolbar-theme: grid-toolbar-theme(
     $palette: $my-dark-palette,
     $background-color: $my-dark-color,
-    $title-text-color: igx-color($my-dark-palette, 'secondary'),
+    $title-text-color: color($my-dark-palette, 'secondary'),
     $dropdown-background: $my-dark-color,
 );
 ```
 
-ツールバーの列操作メニューにテーマを設定するには、[`igx-column-actions-theme`]({environment:sassApiUrl}/index.html#function-igx-column-actions-theme) コンポーネントのテーマを変更する必要があります。
+ツールバーの列操作メニューにテーマを設定するには、[`column-actions-theme`]({environment:sassApiUrl}/index.html#function-column-actions-theme) コンポーネントのテーマを変更する必要があります。
 
 ```scss
-$dark-column-actions-theme: igx-column-actions-theme(
+$dark-column-actions-theme: column-actions-theme(
     $palette: $my-dark-palette,
-    $title-color: igx-color($my-dark-palette, 'secondary'),
-    $background-color: igx-color($my-dark-palette, 'surface')
+    $title-color: color($my-dark-palette, 'secondary'),
+    $background-color: color($my-dark-palette, 'surface')
 );
 ```
 
 列操作は他のコンポーネント (igx-button、igx-checkbox、および igx-input-group) を使用しているため、新しいツールバー テーマに一致するようにテーマを変更する必要があります。
 
 ```scss
-$dark-button-theme: igx-button-theme(
+$dark-button-theme: button-theme(
     $palette: $my-dark-palette,
-    $outlined-background: igx-color($my-dark-palette, 'secondary'),
-    $outlined-hover-background: igx-color($my-dark-palette, 'grays', 100),
-    $outlined-hover-text-color: igx-color($my-dark-palette, 'secondary')
+    $outlined-background: color($my-dark-palette, 'secondary'),
+    $outlined-hover-background: color($my-dark-palette, 'grays', 100),
+    $outlined-hover-text-color: color($my-dark-palette, 'secondary')
 );
 
-$dark-checkbox-theme: igx-checkbox-theme(
+$dark-checkbox-theme: checkbox-theme(
     $palette: $my-dark-palette,
     $tick-color: $my-dark-color,
 );
 
-$dark-input-group-theme: igx-input-group-theme(
+$dark-input-group-theme: input-group-theme(
     $palette: $my-dark-palette
 );
 ```
@@ -568,11 +568,11 @@ $dark-input-group-theme: igx-input-group-theme(
 
 ```scss
 :host {
-    @include igx-grid-toolbar($dark-grid-toolbar-theme);
-    @include igx-column-actions($dark-column-actions-theme);
-    @include igx-checkbox($dark-checkbox-theme);
-    @include igx-input-group($dark-input-group-theme);
-    @include igx-button($dark-button-theme);
+    @include grid-toolbar($dark-grid-toolbar-theme);
+    @include column-actions($dark-column-actions-theme);
+    @include checkbox($dark-checkbox-theme);
+    @include input-group($dark-input-group-theme);
+    @include button($dark-button-theme);
 }
 ```
 
@@ -581,11 +581,11 @@ $dark-input-group-theme: igx-input-group-theme(
 
 ```scss
 :host {
-    @include igx-css-vars($dark-grid-toolbar-theme);
-    @include igx-css-vars($dark-column-actions-theme);
-    @include igx-css-vars($dark-checkbox-theme);
-    @include igx-css-vars($dark-input-group-theme);
-    @include igx-css-vars($dark-button-theme);
+    @include css-vars($dark-grid-toolbar-theme);
+    @include css-vars($dark-column-actions-theme);
+    @include css-vars($dark-checkbox-theme);
+    @include css-vars($dark-input-group-theme);
+    @include css-vars($dark-button-theme);
 }
 ```
 
@@ -595,11 +595,11 @@ $dark-input-group-theme: igx-input-group-theme(
 ```scss
 :host {
     ::ng-deep {
-        @include igx-grid-toolbar($dark-grid-toolbar-theme);
-        @include igx-column-actions($dark-column-actions-theme);
-        @include igx-checkbox($dark-checkbox-theme);
-        @include igx-input-group($dark-input-group-theme);
-        @include igx-button($dark-button-theme);
+        @include grid-toolbar($dark-grid-toolbar-theme);
+        @include column-actions($dark-column-actions-theme);
+        @include checkbox($dark-checkbox-theme);
+        @include input-group($dark-input-group-theme);
+        @include button($dark-button-theme);
     }
 }
 ```
@@ -652,7 +652,7 @@ $dark-input-group-theme: igx-input-group-theme(
 
 スタイル:
 
-* [`@@igxNameComponent スタイル`]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [`@@igxNameComponent スタイル`]({environment:sassApiUrl}/index.html#function-grid-theme)
 
 ## その他のリソース
 

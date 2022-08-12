@@ -124,6 +124,14 @@ Ignite UI for Angular は、`type="file"` の入力スタイルも提供し、�
 <igx-input-group theme="fluent">...</igx-input-group>
 ```
 
+### 型指定されたフォーム
+Ignite UI for Angular Input Group コンポーネントは、Angular 14 のデフォルトの厳密に型指定されたリアクティブ フォーム内で使用できます。型指定されたフォームの詳細については、[Angular 公式ドキュメント](https://angular.io/guide/typed-forms)をご覧ください。
+
+<code-view style="height:770px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/data-entries/typed-form" >
+</code-view>
+
 ## スタイル設定
 
 入力グループのスタイル設定を開始するには、`index` ファイルをスタイルファイルに含めます。
@@ -135,10 +143,10 @@ Ignite UI for Angular は、`type="file"` の入力スタイルも提供し、�
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-次に、[`igx-input-group-theme`]({environment:sassApiUrl}/index.html#function-igx-input-group-theme) を拡張する新しいテーマを作成し、変更するパラメーターを渡します。
+次に、[`input-group-theme`]({environment:sassApiUrl}/index.html#function-input-group-theme) を拡張する新しいテーマを作成し、変更するパラメーターを渡します。
 
 ```scss
-$custom-input-group: igx-input-group-theme(
+$custom-input-group: input-group-theme(
   $filled-text-color: #288a54,
   $focused-text-color: #174f30,
   $idle-text-color: #288a54,
@@ -155,7 +163,7 @@ $custom-input-group: igx-input-group-theme(
 最後に、新しく作成したテーマを含めます。
 
 ```scss
-@include igx-css-vars($custom-input-group);
+@include css-vars($custom-input-group);
 ```
 
 ### テーマ オーバーライドの使用
@@ -169,7 +177,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 ```scss
 :host {
     ::ng-deep {
-        @include igx-input-group($custom-input-group);
+        @include input-group($custom-input-group);
     }
 }
 ```
@@ -191,11 +199,11 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 * [IgxHintDirective]({environment:angularApiUrl}/classes/igxhintdirective.html)
 * [IgxInputGroup タイプ]({environment:angularApiUrl}/index.html#IgxInputGroupType)
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
-* [IgxInputGroupComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
+* [IgxInputGroupComponent スタイル]({environment:sassApiUrl}/index.html#function-input-group-theme)
 
 ## テーマの依存関係
-* [IgxButton テーマ]({environment:sassApiUrl}/index.html#function-igx-button-theme)
-* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxButton テーマ]({environment:sassApiUrl}/index.html#function-button-theme)
+* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-icon-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

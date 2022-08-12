@@ -2,7 +2,8 @@
 title: Angular チャート パフォーマンス | データ可視化 | インフラジスティックス
 _description: インフラジスティックスの Angular チャート パフォーマンス
 _keywords: Angular Charts, Performance, Infragistics, Angular チャート, パフォーマンス, インフラジスティックス
-mentionedTypes: ["CategoryChart", "FinancialChart", "XamDataChart"]
+mentionedTypes: ["DomainChart", "CategoryChart", "FinancialChart", "XamDataChart"]
+namespace: Infragistics.Controls.Charts
 _language: ja
 ---
 
@@ -25,6 +26,17 @@ Angular チャートは、数百万のデータ ポイントを描画し、そ�
            alt="高頻度 Angular チャート" >
 </code-view>
 
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <body>
+      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/category-chart/high-frequency?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
+            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
+        </a>
+        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/category-chart/high-frequency?file=src%2Fapp.component.html" rel="noopener noreferrer">
+            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
+        </a>
+    </body>
+</html>
+
 <div class="divider--half"></div>
 
 ## 大量のデータの Angular チャート
@@ -37,6 +49,17 @@ Angular チャートは、数百万のデータ ポイントを描画し、そ�
            github-src="charts/category-chart/high-volume"
            alt="大量のデータの Angular チャート" >
 </code-view>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <body>
+      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/category-chart/high-volume?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
+            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
+        </a>
+        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/category-chart/high-volume?file=src%2Fapp.component.html" rel="noopener noreferrer">
+            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
+        </a>
+    </body>
+</html>
 
 <div class="divider--half"></div>
 
@@ -54,7 +77,7 @@ Angular チャートは、数百万のデータ ポイントを描画し、そ�
 
 ### データ構造
 
-Angular チャートは、データ ポイントの配列の配列を `ItemsSource` プロパティにバインドすることにより、複数のデータ ソースの描画をサポートします。複数のデータ ソースが単一のデータ ソースにフラット化され、各データ項目に 1 つのデータ列だけでなく複数のデータ列が含まれる場合、チャートははるかに高速になります。例えば:
+Angular チャートは、データ ポイントの配列の配列を `DataSource` プロパティにバインドすることにより、複数のデータ ソースの描画をサポートします。複数のデータ ソースが単一のデータ ソースにフラット化され、各データ項目に 1 つのデータ列だけでなく複数のデータ列が含まれる場合、チャートははるかに高速になります。例えば:
 
 ```ts
 this.CategoryChart.dataSource = FlattenDataSource.create();
@@ -195,7 +218,7 @@ this.LineSeries.Resolution = 10;
 
 ### 軸の間隔
 
-デフォルトでは、Angular チャートは、データの範囲に基づいて [`yAxisInterval`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#yaxisinterval) を自動的に計算します。したがって、軸のグリッド線と軸のラベルが多すぎないように、軸の間隔を特に小さい値に設定することは避けてください。  また、多くの軸グリッド線または軸ラベルが必要ない場合は、[`yAxisInterval`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#yaxisinterval) プロパティを自動的に計算された軸間隔よりも大きい値に増やすことを検討することをお勧めします。
+デフォルトでは、Angular チャートは、データの範囲に基づいて [`yAxisInterval`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#yaxisinterval) を自動的に計算します。したがって、軸のグリッド線と軸のラベルが多すぎないように、軸の間隔を特に小さい値に設定することは避けてください。また、多くの軸グリッド線または軸ラベルが必要ない場合は、[`yAxisInterval`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#yaxisinterval) プロパティを自動的に計算された軸間隔よりも大きい値に増やすことを検討することをお勧めします。
 
 > チャートのパフォーマンスが低下するため、軸の副間隔を設定することはお勧めしません。
 

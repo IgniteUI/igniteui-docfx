@@ -179,10 +179,10 @@ To get started with styling the toast, we need to import the index file, where a
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`igx-toast-theme`]({environment:sassApiUrl}/index.html#function-igx-toast-theme) and accepts the `$shadow`, `$background`, `$text-color` and the `$border-radius` parameters.
+Following the simplest approach, we create a new theme that extends the [`toast-theme`]({environment:sassApiUrl}/index.html#function-toast-theme) and accepts the `$shadow`, `$background`, `$text-color` and the `$border-radius` parameters.
 
 ```scss
-$custom-toast-theme: igx-toast-theme(
+$custom-toast-theme: toast-theme(
     $background: #dedede,
     $text-color: #151515,
     $border-radius: 12px
@@ -194,7 +194,7 @@ $custom-toast-theme: igx-toast-theme(
 The last step is to pass the custom toast theme:
 
 ```scss
-@include igx-css-vars($custom-toast-theme);
+@include css-vars($custom-toast-theme);
 ```
 
 ### Using mixins
@@ -207,7 +207,7 @@ If the component is using the [`Emulated`](themes/sass/component-themes.md#view-
 :host {
     ::ng-deep {
         // Pass the custom toast theme to the `igx-toast` mixin
-        @include igx-toast($custom-toast-theme);
+        @include toast($custom-toast-theme);
     }
 }
 ```
@@ -222,15 +222,15 @@ Instead of hardcoding the color values, like we just did, we can achieve greater
 $white-color: #dedede;
 $black-color: #151515;
 
-$light-toast-palette: igx-palette($primary: $white-color, $secondary: $black-color);
+$light-toast-palette: palette($primary: $white-color, $secondary: $black-color);
 ```
 
 And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette.
 
 ```scss
-$custom-toast-theme: igx-toast-theme(
-    $background: igx-color($light-toast-palette, "primary", 400),
-    $text-color: igx-color($light-toast-palette, "secondary", 400),
+$custom-toast-theme: toast-theme(
+    $background: color($light-toast-palette, "primary", 400),
+    $text-color: color($light-toast-palette, "secondary", 400),
     $border-radius: 12px
 );
 ```
@@ -249,10 +249,10 @@ Extend one of the two predefined schemas, that are provided for every component,
 $light-toast-schema: extend($_light-toast,
     (
         background: (
-            igx-color: ("primary", 400)
+           color: ("primary", 400)
         ),
         text-color: (
-            igx-color: ("secondary", 400)
+           color: ("secondary", 400)
         ),
         border-radius: 12px
     )
@@ -268,7 +268,7 @@ $custom-light-schema: extend($light-schema,(
 ));
 
 // Defining toast with the global light schema
-$custom-toast-theme: igx-toast-theme(
+$custom-toast-theme: toast-theme(
   $palette: $light-toast-palette,
   $schema: $custom-light-schema
 );
@@ -287,7 +287,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 <div class="divider--half"></div>
 
 * [IgxToastComponent]({environment:angularApiUrl}/classes/igxtoastcomponent.html)
-* [IgxToastComponent Styles]({environment:sassApiUrl}/index.html#function-igx-toast-theme)
+* [IgxToastComponent Styles]({environment:sassApiUrl}/index.html#function-toast-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>

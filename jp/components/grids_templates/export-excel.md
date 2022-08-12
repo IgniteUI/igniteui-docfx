@@ -1,29 +1,29 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid の Excel エクスポート | Ignite UI for Angular | インフラジスティックス
-_description: Excel Exporter サービスを使用してグリッド データを MS Excel ファイルにエクスポートする方法を説明します。Grid Angular Material テーブルには、役立つ Angular イベントの豊富なセットがあります。
+title: Angular Grid の Excel へのエクスポート - Ignite UI for Angular
+_description: Ignite UI Excel Exporter を使用すると、クライアント Excel の機能をより便利でシンプルにできます。この形式では、フィルタリングやソートなどの機能が使用できます。
 _keywords: データ エクスポート, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid を Excel へエクスポート | Ignite UI for Angular | インフラジスティックス
-_description: Excel Exporter サービスを使用してグリッド データを MS Excel ファイルにエクスポートする方法を説明します。Grid Angular Material テーブルには、役立つ Angular イベントの豊富なセットがあります。
+title: Angular Tree Grid の Excel へのエクスポート - Ignite UI for Angular
+_description: Ignite UI Excel Exporter を使用すると、クライアント Excel の機能をより便利でシンプルにできます。この形式では、フィルタリングやソートなどの機能が使用できます。
 _keywords: データ エクスポート, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchica Grid を Excel へエクスポート | Ignite UI for Angular | インフラジスティックス
-_description: Excel Exporter サービスを使用してグリッド データを MS Excel ファイルにエクスポートする方法を説明します。Grid Angular Material テーブルには、役立つ Angular イベントの豊富なセットがあります。
+title: Angular Hierarchical Grid の Excel へのエクスポート - Ignite UI for Angular
+_description: Ignite UI Excel Exporter を使用すると、クライアント Excel の機能をより便利でシンプルにできます。この形式では、フィルタリングやソートなどの機能が使用できます。
 _keywords: データ エクスポート, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
 }
 
-# @@igComponent Excel を Excel サービスへエクスポート
+# Angular @@igComponent Excel を Excel サービスへエクスポート
 
 @@if (igxName === 'IgxGrid' || igxName === 'IgxTreeGrid') {
 
@@ -253,7 +253,7 @@ import 'setimmediate';
 使用したその他のコンポーネント:
 
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-grid-theme)
 
 <div class="divider"></div>
 

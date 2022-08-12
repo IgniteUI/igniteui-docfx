@@ -73,8 +73,8 @@ public grid: IgxGridComponent;
  ```scss
  // src/styles.scss
     @import '~igniteui-angular/lib/core/styles/themes/index';
-    @include igx-core();
-    @include igx-theme($default-palette);
+    @include core();
+    @include theme($default-palette);
 
     /* autoprefixer grid:on */
  ...
@@ -439,10 +439,15 @@ See the [Grid Sizing](sizing.md) topic.
 
 ## API 참조
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent 스타일]({environment:sassApiUrl}/#function-igx-grid-theme)
+* [IgxGridComponent 스타일]({environment:sassApiUrl}/#function-grid-theme)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html)
 * [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
+
+## Tutorial video
+Learn more about creating an Angular data grid in our short tutorial video:
+
+> [!Video https://www.youtube.com/embed/Xv_fQVQ8fmM]
 
 ## 추가 리소스
 <div class="divider--half"></div>

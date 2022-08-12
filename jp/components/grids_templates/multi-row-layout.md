@@ -1,11 +1,11 @@
 ---
-title: Grid - 複数行レイアウト - ネイティブ Angular | Ignite UI for Angular | Infragistics
-_description: 複数行レイアウトでは、列をより柔軟な方法で配置およびサイズ変更できます。各列のレイアウトは、列フィールドで構成されるすべてのグリッド レイアウトを表しています。	
+title: Angular Grid の複数行レイアウト - Ignite UI for Angular
+_description: Ignite UI for Angular Data Grid の複数行レイアウト機能を使用して、列をより強力な方法で配置およびサイズ設定します。デモと例をお試しください。	
 _keywords: angular 複数行レイアウト, マテリアル行レイアウト, ignite ui for angular
 _language: ja	
 ---
 
-# 複数行レイアウト
+# Angular 複数行レイアウト
 
 複数行レイアウトは、`igxGridComponent` のレンダリング機能を拡張します。この機能により、単一のデータレコードを複数の表示行に分割することができます。	
 
@@ -55,10 +55,10 @@ _language: ja
 
 
 > [!Note]
-> [`rowStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#rowstart) プロパティと [`colStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#colstart) プロパティは、それぞれの `igx-column` に対して`igx-column-layout` に設定する必要があります。`igxColumnLayout` コンポーネントはレイアウトが正しいかどうかを検証しておらず、それについてエラーや警告を投げていません。 開発者は、レイアウトの宣言が正しく完全であることを確認する必要があります。誤った配置、オーバーラップ、ブラウザの不整合などが発生し、レイアウトが壊れる可能性があります。	
+> [`rowStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#rowstart) プロパティと [`colStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#colstart) プロパティは、それぞれの `igx-column` に対して`igx-column-layout` に設定する必要があります。`igxColumnLayout` コンポーネントはレイアウトが正しいかどうかを検証しておらず、それについてエラーや警告を投げていません。開発者は、レイアウトの宣言が正しく完全であることを確認する必要があります。誤った配置、オーバーラップ、ブラウザの不整合などが発生し、レイアウトが壊れる可能性があります。	
 
 ## 機能の統合	
-複数行レイアウトのレンダリング方法は全く異なるため、列固定や列非表示など一部の列機能は `igx-column-layout` コンポーネントでのみ機能します。  その他の機能ソートとグループ化などは、`igx-column` コンポーネントで同じように機能します。	
+複数行レイアウトのレンダリング方法は全く異なるため、列固定や列非表示など一部の列機能は `igx-column-layout` コンポーネントでのみ機能します。その他の機能ソートとグループ化などは、`igx-column` コンポーネントで同じように機能します。	
 - フィルタリング - Excel スタイルのフィルタリングのみがサポートされています。`filterMode` を `FilterMode.quickFilter` に明示的に設定しても効果はありません。	
 - ページング - 表示行ではなくレコードで機能します。	
 - グループ化 - `hideGroupedColumns` オプションは、複数行レイアウトでは効果がありません。グループ化された列は常に表示されます。	
@@ -111,7 +111,7 @@ _language: ja
 
 ### レイアウトの構成
 
-列レイアウトを構成するときに、適切な [`colStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#colstart)  および [`colEnd`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#colend)、または [`rowStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#rowstart) および [`rowEnd`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#rowend) を計算して設定するのが難しい場合があります。  特に 1 つのレイアウトに多数の列がある場合などですが、適用時のプレビューを簡単に確認するためにコンフィギュレーターを使用できます。以下の操作が可能です。
+列レイアウトを構成するときに、適切な [`colStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#colstart)  および [`colEnd`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#colend)、または [`rowStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#rowstart) および [`rowEnd`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#rowend) を計算して設定するのが難しい場合があります。特に 1 つのレイアウトに多数の列がある場合などですが、適用時のプレビューを簡単に確認するためにコンフィギュレーターを使用できます。以下の操作が可能です。
 
 * 設定全体の行数を設定します。すべてのレイアウトは同じ行数である必要があります。
 * `レイアウトの追加` チップをクリックするか、レイアウトチップを左右にドラッグしてソートします。
@@ -128,7 +128,7 @@ _language: ja
 </div>
 
 ## スタイル設定
-igxGrid を使用すると、[Ignite UI for Angular テーマ ライブラリ](../themes/sass/component-themes.md)でスタイルを設定できます。[テーマ]({environment:sassApiUrl}/index.html#function-igx-grid-theme) は、グリッドのすべての機能をカスタマイズできるさまざまなプロパティを公開します。 
+igxGrid を使用すると、[Ignite UI for Angular テーマ ライブラリ](../themes/sass/component-themes.md)でスタイルを設定できます。[テーマ]({environment:sassApiUrl}/index.html#function-grid-theme) は、グリッドのすべての機能をカスタマイズできるさまざまなプロパティを公開します。 
 
 以下は、グリッドの複数行レイアウト スタイルをカスタマイズする手順です。     
 
@@ -143,10 +143,10 @@ igxGrid を使用すると、[Ignite UI for Angular テーマ ライブラリ](.
 ```   
 
 ### カスタム テーマの定義
-次に、[`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) を拡張し、必要に応じて機能レイアウトをカスタマイズするために必要なパラメーターを受け取る新しいテーマを作成します。   
+次に、[`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) を拡張し、必要に応じて機能レイアウトをカスタマイズするために必要なパラメーターを受け取る新しいテーマを作成します。   
 
 ```scss
-$custom-theme: igx-grid-theme(
+$custom-theme: grid-theme(
     $cell-active-border-color: #ffcd0f,
     $cell-selected-background: #6f6f6f,
     $row-hover-background: #fde069,
@@ -166,7 +166,7 @@ $custom-theme: igx-grid-theme(
 $black-color: #494949;
 $yellow-color: #FFCD0F;
 
-$custom-palette: igx-palette(
+$custom-palette: palette(
   $primary: $black-color,
   $secondary: $yellow-color
 );
@@ -175,15 +175,15 @@ $custom-palette: igx-palette(
 カスタム パレットが生成された後、`igx-color` 関数を使用して、さまざまな種類の原色と二次色を取得できます。
 
 ```scss
-$custom-theme: igx-grid-theme(
-    $cell-active-border-color: igx-color($custom-palette, "secondary", 500),
-    $cell-selected-background: igx-color($custom-palette, "primary", 300),
-    $row-hover-background: igx-color($custom-palette, "secondary", 300),
-    $row-selected-background: igx-color($custom-palette, "primary", 100),
-    $header-background: igx-color($custom-palette, "primary", 500),
-    $header-text-color: igx-contrast-color($custom-palette, "primary", 500),
-    $sorted-header-icon-color: igx-color($custom-palette, "secondary", 500),
-    $sortable-header-icon-hover-color: igx-color($custom-palette, "secondary", 600)
+$custom-theme: grid-theme(
+    $cell-active-border-color: color($custom-palette, "secondary", 500),
+    $cell-selected-background: color($custom-palette, "primary", 300),
+    $row-hover-background: color($custom-palette, "secondary", 300),
+    $row-selected-background: color($custom-palette, "primary", 100),
+    $header-background: color($custom-palette, "primary", 500),
+    $header-text-color:contrast-color($custom-palette, "primary", 500),
+    $sorted-header-icon-color: color($custom-palette, "secondary", 500),
+    $sortable-header-icon-hover-color: color($custom-palette, "secondary", 600)
 );
 ```
 
@@ -209,7 +209,7 @@ $custom-grid-schema: extend($_light-grid,(
 $my-custom-schema: extend($light-schema, ( 
     igx-grid: $custom-grid-schema
 ));
- $custom-theme: igx-grid-theme(
+ $custom-theme: grid-theme(
     $palette: $custom-palette,
     $schema: $my-custom-schema
 );
@@ -218,7 +218,7 @@ $my-custom-schema: extend($light-schema, (
 ### カスタム テーマの適用
 テーマを適用する最も簡単な方法は、グローバル スタイル ファイルに `sass` `@include` ステートメントを使用することです。  
 ```scss
-@include igx-grid($custom-theme);
+@include grid($custom-theme);
 ```
 
 ### スコープ コンポーネント テーマ
@@ -235,7 +235,7 @@ $my-custom-schema: extend($light-schema, (
 ```scss
 :host {
     ::ng-deep {
-        @include igx-grid($custom-theme);
+        @include grid($custom-theme);
     }
 }
 ```
@@ -255,7 +255,7 @@ $my-custom-schema: extend($light-schema, (
 <div class="divider--half"></div>
 
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-grid-theme)
 * [IgxColumnLayoutComponent]({environment:angularApiUrl}/classes/igxcolumnlayoutcomponent.html)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 <div class="divider--half"></div>

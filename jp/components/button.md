@@ -223,7 +223,7 @@ public selectDensity(event) {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-次に、[`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) を拡張し、それぞれのホバーとフォーカス パラメーターと共に `$foreground` と `$background` パラメーターを受け入れる新しいテーマを作成します。
+次に、[`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme) を拡張し、それぞれのホバーとフォーカス パラメーターと共に `$foreground` と `$background` パラメーターを受け入れる新しいテーマを作成します。
 
 次のマークアップを前提として:
 
@@ -236,7 +236,7 @@ public selectDensity(event) {
 テーマを作成する必要があります:
 
 ```scss
-$custom-button-theme: igx-button-theme(
+$custom-button-theme: button-theme(
     $foreground: #fdfdfd,
     $hover-foreground: #fdfdfd,
     $focus-foreground: #fdfdfd,
@@ -247,7 +247,7 @@ $custom-button-theme: igx-button-theme(
 );
 ```
 
-ボタンのスタイル設定に使用できるパラメーターの完全なリストについては、[`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) セクションを参照してください。
+ボタンのスタイル設定に使用できるパラメーターの完全なリストについては、[`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme) セクションを参照してください。
 
 ### CSS 変数の使用 
 
@@ -255,7 +255,7 @@ $custom-button-theme: igx-button-theme(
 
 ```scss
 .my-raised-btn {
-    @include igx-css-vars($custom-button-theme);
+    @include css-vars($custom-button-theme);
 }
 ```
 
@@ -269,7 +269,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 :host {
      ::ng-deep {
         .my-raised-btn {
-            @include igx-button($custom-button-theme);
+            @include button($custom-button-theme);
         }
     }
 }
@@ -289,7 +289,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 <div class="divider--half"></div>
 
 * [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
-* [IgxButton スタイル]({environment:sassApiUrl}/index.html#function-igx-button-theme)
+* [IgxButton スタイル]({environment:sassApiUrl}/index.html#function-button-theme)
 * [IgxRippleDirective]({environment:angularApiUrl}/classes/igxrippledirective.html)
 * [IgxButtonGroupComponent]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html)
 

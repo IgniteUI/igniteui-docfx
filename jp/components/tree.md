@@ -174,9 +174,9 @@ export class MyTreeViewComponent {
 ```html
 <igx-tree>
     <igx-tree-node *ngFor="let node of data" [data]="node">
-        <ng-template *ngTemplateOutlet="#nodeTemplate; context: { $implicit: node }"></ng-template>
+        <ng-container *ngTemplateOutlet="#nodeTemplate; context: { $implicit: node }"></ng-container>
         <igx-tree-node *ngFor="let child of node.ChildCompanies" [data]="child">
-            <ng-template *ngTemplateOutlet="#nodeTemplate; context: { $implicit: child}"></ng-template>
+            <ng-container *ngTemplateOutlet="#nodeTemplate; context: { $implicit: child}"></ng-container>
         </igx-tree-node>
     </igx-tree-node>
     <ng-template #nodeTemplate let-data>
@@ -269,9 +269,9 @@ Ignite UI for Angular IgxTree は、サーバーから最小限のデータの�
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も単純なアプローチに従って、[igx-tree-theme]({environment:sassApiUrl}/index.html#function-igx-tree-theme) を拡張し、変更したいパラメーターを渡す新しいテーマを作成します。
+最も単純なアプローチに従って、[tree-theme]({environment:sassApiUrl}/index.html#function-tree-theme) を拡張し、変更したいパラメーターを渡す新しいテーマを作成します。
 ```scss
-$custom-tree-theme: igx-tree-theme(
+$custom-tree-theme: tree-theme(
     $background-selected: #ffe6cc,
     $background-active: #ecaa53,
     $background-active-selected: #ff8c1a
@@ -283,7 +283,7 @@ $custom-tree-theme: igx-tree-theme(
 最後にコンポーネントのテーマを含めます。
 ```scss
 :host {
-    @include igx-css-vars($custom-tree-theme);
+    @include css-vars($custom-tree-theme);
 }
 ```
 
@@ -295,7 +295,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントの�
 ```scss
 :host {
     ::ng-deep {
-        @include igx-tree($custom-tree-theme);    
+        @include tree($custom-tree-theme);    
     }
 }
 ```

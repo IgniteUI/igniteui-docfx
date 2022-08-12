@@ -2,7 +2,7 @@
 title: Angular マップ | データ可視化ツール | シェイプ スタイリング | 条件付き書式 | インフラジスティックス
 _description: インフラジスティックスの Angular マップのシェイプ シリーズにカスタム スタイルを適用する方法について説明します。Ignite UI for Angular マップ チュートリアルを是非お試しください!
 _keywords: Angular map, custom styling, Ignite UI for Angular, Infragistics, conditional formatting, shape styling, Angular マップ, カスタム スタイル設定, インフラジスティックス, 条件付き書式, シェイプ スタイリング
-mentionedTypes: ['XamGeographicMap', 'GeographicShapeSeries']
+mentionedTypes: ['XamGeographicMap', 'GeographicShapeSeries', 'Series']
 _language: ja
 ---
 
@@ -18,6 +18,17 @@ _language: ja
            alt="Angular 地理シェイプ シリーズのスタイル設定の例"
            github-src="maps/geo-map/map-shape-styling">
 </code-view>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <body>
+      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/maps/geo-map/map-shape-styling?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
+            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
+        </a>
+        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/maps/geo-map/map-shape-styling?file=src%2Fapp.component.html" rel="noopener noreferrer">
+            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
+        </a>
+    </body>
+</html>
 
 <div class="divider--half"></div>
 
@@ -167,3 +178,8 @@ public onStylingShape(s: IgxGeographicShapeSeries, args: IgxStyleShapeEventArgs)
     args.shapeStrokeThickness = shapeStyle.strokeThickness;
 }
 ```
+
+## API メンバー
+
+-   [`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html)
+-   [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html)

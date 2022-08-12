@@ -159,6 +159,21 @@ public selectNow(timePicker: IgxTimePickerComponent) {
 
 <div class="divider--half"></div>
 
+## トグル アイコンとクリア アイコンのカスタマイズ
+[`IgxTimePickerComponent`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html) は [`IgxPickerToggleComponent`]({environment:angularApiUrl}/classes/igxpickertogglecomponent.html) と [`IgxPickerClearComponent`]({environment:angularApiUrl}/classes/igxpickerclearcomponent.html) で構成できます。これらを使用すると、独自のクリック ハンドラーを追加しなくても、トグル アイコンとクリア アイコンを変更できます。
+
+```html
+ <igx-time-picker>
+    <label igxLabel>Select time</label>
+    <igx-picker-toggle igxPrefix>
+        <igx-icon>snooze</igx-icon>
+    </igx-picker-toggle>
+    <igx-picker-clear igxSuffix>
+        <igx-icon>delete</igx-icon>
+    </igx-picker-clear>
+</igx-time-picker>
+```
+
 ### キーボード ナビゲーション
 * ユーザーは、キーボードの <kbd>Up</kbd> および <kbd>Down</kbd> 矢印キーを使用するか、入力フィールドとドロップダウン/ダイアログをスクロールして、コンポーネントの時間部分をナビゲートできます。[`minValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#minvalue) または [`maxValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#maxvalue) に関係なく、入力でのナビゲーションが可能ですが、ドロップダウン/ダイアログでのナビゲーションは [`minValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#minvalue) および [`maxValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#maxvalue) の範囲内に制限されます。
 * Time Picker のドロップダウンは、トグル アイコンをクリックするか、<kbd>Space</kbd> キーを押すか、<kbd>Alt</kbd> + <kbd>Down</kbd> キーを押すことで開くことができます。ダイアログ モードでは、これは入力クリックで実行できます。
@@ -323,10 +338,10 @@ Time Picker のスタイル設定は、すべてのテーマ関数とコンポ�
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-[`igx-time-picker-theme`]({environment:sassApiUrl}/index.html#function-igx-dialog-theme) を拡張する新しいテーマを作成し、Time Picker のスタイルを設定できるさまざまなパラメーターを受け取ります。
+[`time-picker-theme`]({environment:sassApiUrl}/index.html#function-dialog-theme) を拡張する新しいテーマを作成し、Time Picker のスタイルを設定できるさまざまなパラメーターを受け取ります。
 
 ```scss
-$my-time-picker-theme: igx-time-picker-theme(
+$my-time-picker-theme: time-picker-theme(
   $text-color: #E4C8A5,
   $hover-text-color: #ECAA53,
   $selected-text-color: #ECAA53,
@@ -372,7 +387,7 @@ Time Picker の項目がコンポーネントのホスト**内**に適切にレ�
 `$legacy-support` が `true` に設定されている場合、**テーマ**を以下のように含めます。
 
 ```scss
- @include igx-time-picker($my-time-picker-theme);
+ @include time-picker($my-time-picker-theme);
 ```
 >[!NOTE]
 >コンポーネントが [`Emulated`](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
@@ -380,7 +395,7 @@ Time Picker の項目がコンポーネントのホスト**内**に適切にレ�
 ```scss
 :host {
      ::ng-deep {
-        @include igx-time-picker($my-time-picker-theme);
+        @include time-picker($my-time-picker-theme);
     }
 }
 ```
@@ -390,7 +405,7 @@ Time Picker の項目がコンポーネントのホスト**内**に適切にレ�
 `$legacy-support` が `false` (デフォルト) に設定されている場合、**css 変数** を以下のように含めます。
 
 ```scss
-@include igx-css-vars($my-time-picker-theme);
+@include css-vars($my-time-picker-theme);
 ```
 
 >[!NOTE]
@@ -398,7 +413,7 @@ Time Picker の項目がコンポーネントのホスト**内**に適切にレ�
 
 ```scss
 :host {
-    @include igx-css-vars($my-time-picker-theme);
+    @include css-vars($my-time-picker-theme);
 }
 ```
 
@@ -418,15 +433,15 @@ Time Picker の項目がコンポーネントのホスト**内**に適切にレ�
 * [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 * [IgxTimePickerComponent]({environment:angularApiUrl}/classes/igxtimepickercomponent.html)
-* [IgxTimePickerComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-time-picker-theme)
+* [IgxTimePickerComponent スタイル]({environment:sassApiUrl}/index.html#function-time-picker-theme)
 * [IgxOverlayService]({environment:angularApiUrl}/classes/igxoverlayservice.html)
-* [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+* [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-overlay-theme)
 
 ## テーマの依存関係
-* [IgxInputGroup テーマ]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
-* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
-* [IgxButton テーマ]({environment:sassApiUrl}/index.html#function-igx-button-theme)
-* [IgxOverlay テーマ]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+* [IgxInputGroup テーマ]({environment:sassApiUrl}/index.html#function-input-group-theme)
+* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxButton テーマ]({environment:sassApiUrl}/index.html#function-button-theme)
+* [IgxOverlay テーマ]({environment:sassApiUrl}/index.html#function-overlay-theme)
 
 ## その他のリソース
 * [Date Time Editor](date-time-editor.md)

@@ -2,7 +2,7 @@
 title: Angular Map | Data Visualization Tools | Binding Multiple Data Source | Infragistics
 _description: Use Infragistics' Angular JavaScript map to add multiple geographic series objects to overlay custom data sources with geo-spacial data. View Ignite UI for Angular map tutorials!
 _keywords: Angular map, geographic series, Ignite UI for Angular, Infragistics, data binding
-mentionedTypes: ['XamGeographicMap', 'SeriesViewer']
+mentionedTypes: ['XamGeographicMap', 'SeriesViewer', 'Series']
 ---
 
 # Angular Binding Multiple Data Sources
@@ -17,6 +17,17 @@ In the Ignite UI for Angular map, you can add multiple geographic series objects
            alt="Angular Binding Multiple Data Sources Example"
            github-src="maps/geo-map/binding-multiple-sources">
 </code-view>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <body>
+      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/maps/geo-map/binding-multiple-sources?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
+            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
+        </a>
+        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/maps/geo-map/binding-multiple-sources?file=src%2Fapp.component.html" rel="noopener noreferrer">
+            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
+        </a>
+    </body>
+</html>
 
 <div class="divider--half"></div>
 
@@ -200,3 +211,8 @@ export class MapBindingMultipleSourcesComponent implements AfterViewInit {
     }
 }
 ```
+
+## API Members
+
+-   [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html)
+-   [`IgxGeographicSymbolSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html)

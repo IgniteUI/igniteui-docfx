@@ -328,16 +328,16 @@ To get started with styling the navigation drawer, we need to import the `index`
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`igx-navdrawer-theme`]({environment:sassApiUrl}/index.html#function-igx-navdrawer-theme) and accepts a few parameters that style the navdrawer's items:
+Following the simplest approach, we create a new theme that extends the [`navdrawer-theme`]({environment:sassApiUrl}/index.html#function-navdrawer-theme) and accepts a few parameters that style the navdrawer's items:
 
 ```scss
-$custom-theme: igx-navdrawer-theme(
+$custom-theme: navdrawer-theme(
     $background: #2d313a,
     $item-active-background: #ecc256,
     $item-header-text-color: #ecc256
 );
 ```
-As seen, the `igx-navdrawer-theme` exposes some useful parameters for basic styling of its items. 
+As seen, the `navdrawer-theme` exposes some useful parameters for basic styling of its items. 
 
 ### Including themes
 
@@ -348,7 +348,7 @@ The last step is to **include** the component theme in our application.
 If `$legacy-support` is set to `true`, include the **component theme** like that:
 
 ```scss
- @include igx-navdrawer($custom-theme);
+ @include navdrawer($custom-theme);
 ```
 >[!NOTE]
 >If the component is using an [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`
@@ -356,7 +356,7 @@ If `$legacy-support` is set to `true`, include the **component theme** like that
 ```scss
 :host {
      ::ng-deep {
-        @include igx-navdrawer($custom-theme);
+        @include navdrawer($custom-theme);
     }
 }
 ```
@@ -366,7 +366,7 @@ If `$legacy-support` is set to `true`, include the **component theme** like that
 If `$legacy-support` is set to `false`(default), include the component **css variables** like that:
 
 ```scss
-@include igx-css-vars($custom-theme);
+@include css-vars($custom-theme);
 ```
 
 >[!NOTE]
@@ -374,7 +374,7 @@ If `$legacy-support` is set to `false`(default), include the component **css var
 
 ```scss
 :host {
-    @include igx-css-vars($custom-theme);
+    @include css-vars($custom-theme);
 }
 ```
 
@@ -389,4 +389,4 @@ If `$legacy-support` is set to `false`(default), include the component **css var
 
 ## API and Style References
 * [IgxNavigationDrawerComponent API]({environment:angularApiUrl}/classes/igxnavigationdrawercomponent.html)
-* [IgxNavigationDrawerComponent Styles]({environment:sassApiUrl}/index.html#function-igx-navdrawer-theme)
+* [IgxNavigationDrawerComponent Styles]({environment:sassApiUrl}/index.html#function-navdrawer-theme)

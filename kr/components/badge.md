@@ -218,7 +218,7 @@ If the sample is configured properly, a list of members should be displayed and 
 
 * [IgxAvatarComponent]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
 * [IgxBadgeComponent]({environment:angularApiUrl}/classes/igxbadgecomponent.html)
-* [IgxBadgeComponent Styles]({environment:sassApiUrl}/index.html#function-igx-badge-theme)
+* [IgxBadgeComponent Styles]({environment:sassApiUrl}/index.html#function-badge-theme)
 * [IgxListComponent]({environment:angularApiUrl}/classes/igxlistcomponent.html)
 * [IgxListItemComponent]({environment:angularApiUrl}/classes/igxlistitemcomponent.html)
 * [Type]({environment:angularApiUrl}/enums/type.html)

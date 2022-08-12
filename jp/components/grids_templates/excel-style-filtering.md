@@ -1,21 +1,21 @@
 @@if(igxName === 'IgxGrid'){
 ---
-title: Angular Grid | Excel スタイル フィルタリング | インフラジスティックス
-_description: Angular マテリアル テーブルを使用してデータの Excel のような Angular フィルターを構成する方法を学びます。グリッドの Excel フィルタリングは、これまで以上に便利で魅力的です。
+title: Angular Data Grid の Excel スタイル フィルタリング - Ignite UI for Angular
+_description: Angular Data Grid で Excel フィルタリングを構成する方法を説明します。さまざまなオプションを有効/無効にし、Excel スタイル フィルター メニューを自由にカスタマイズできます。
 _keywords: Excel のようなフィルター, igniteui for angular, インフラジスティックス
 _language: ja
 ---
 }
 @@if(igxName !== 'IgxGrid'){
 ---
-title: Angular Grid | Excel スタイル フィルタリング | インフラジスティックス
-_description: Angular マテリアル テーブルを使用してデータの Excel のような Angular フィルターを構成する方法を学びます。グリッドの Excel フィルタリングは、これまで以上に便利で魅力的です。
+title: Angular @@igComponent の Excel スタイル フィルタリング - Ignite UI for Angular
+_description: Angular @@igComponent で Excel フィルタリングを構成する方法を説明します。さまざまなオプションを有効/無効にし、Excel スタイル フィルター メニューを自由にカスタマイズできます。
 _keywords: Excel のようなフィルター, igniteui for angular, インフラジスティックス
 _language: ja
 ---
 }
 
-# @@igComponent Excel スタイル フィルタリング
+# Angular @@igComponent の Excel スタイル フィルタリング
 
 グリッド Excel フィルタリングは、@@igComponent などの Angular Material テーブルに対して Excel のようなフィルタリング UI を提供します。
 
@@ -50,7 +50,7 @@ _language: ja
 
 ## 使用方法
 
-Excel スタイル フィルタリングをオンにするには、2 つの入力を設定します。  [`allowFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowfiltering) を `true` に設定し、[`filterMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filtermode) を  `excelStyleFilter` に設定してください。
+Excel スタイル フィルタリングをオンにするには、2 つの入力を設定します。[`allowFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowfiltering) を `true` に設定し、[`filterMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filtermode) を  `excelStyleFilter` に設定してください。
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -138,7 +138,7 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
 
 <div class="divider--half"></div>
 
-以下のサンプル 'Product Name’ と 'Discontinued’ の列には 4 つの機能すべてが有効です。 'Unit Price’ で 4 機能すべてが無効で、'Added Date’ はピン固定と非表示のみ有効です。
+以下のサンプル 'Product Name’ と 'Discontinued’ の列には 4 つの機能すべてが有効です。'Unit Price’ で 4 機能すべてが無効で、'Added Date’ はピン固定と非表示のみ有効です。
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
@@ -543,7 +543,7 @@ Excel スタイル フィルタリング コンポーネントを設定するに
 Excel スタイルのフィルタリング ダイアログは、`filtering-row-background` パラメーターを使用して、グリッドのテーマから背景色を取得します。背景を変更するには、カスタム テーマを作成する必要があります。
 
 ```scss
-$custom-grid: igx-grid-theme(
+$custom-grid: grid-theme(
     $filtering-row-background: #FFCD0F
 );
 ```
@@ -551,32 +551,32 @@ $custom-grid: igx-grid-theme(
 ボタン、チェックボックス、リスト、さらにはドロップダウンなど、フィルタリング ダイアログのような Excel 内には明らかに多くのコンポーネントがあります。スタイルを設定するには、それぞれに個別のテーマを作成する必要があります。
 
 ```scss
-$dark-button: igx-button-theme(
+$dark-button: button-theme(
     $background: #FFCD0F,
     $foreground: #292826,
     $hover-background: #292826,
     $hover-foreground: #FFCD0F
 );
 
-$dark-input-group: igx-input-group-theme(
+$dark-input-group: input-group-theme(
     $box-background: #FFCD0F,
     $idle-text-color: #292826,
     $focused-text-color: #292826,
     $filled-text-color: #292826
 );
 
-$custom-list: igx-list-theme(
+$custom-list: list-theme(
     $background: #FFCD0F
 );
 
-$custom-checkbox: igx-checkbox-theme(
+$custom-checkbox: checkbox-theme(
     $empty-color: #292826,
     $fill-color: #292826,
     $tick-color: #FFCD0F,
     $label-color: #292826
 );
 
-$custom-drop-down: igx-drop-down-theme(
+$custom-drop-down: drop-down-theme(
     $background-color: #FFCD0F,
     $item-text-color: #292826,
     $hover-item-background: #292826,
@@ -584,18 +584,18 @@ $custom-drop-down: igx-drop-down-theme(
 );
 ```
 
-この例では、リストされたコンポーネントのパラメーターの一部のみを変更しましたが、[`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme)、[`igx-checkbox-theme`]({environment:sassApiUrl}/index.html#function-igx-checkbox-theme)、[`igx-drop-down-theme`]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme)、[`igx-input-group-theme`]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)、[`igx-list-theme`]({environment:sassApiUrl}/index.html#function-igx-list-theme) テーマは、それぞれのスタイルを制御するためのより多くのパラメーターを提供します。
+この例では、リストされたコンポーネントのパラメーターの一部のみを変更しましたが、[`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme)、[`checkbox-theme`]({environment:sassApiUrl}/index.html#function-checkbox-theme)、[`drop-down-theme`]({environment:sassApiUrl}/index.html#function-drop-down-theme)、[`input-group-theme`]({environment:sassApiUrl}/index.html#function-input-group-theme)、[`list-theme`]({environment:sassApiUrl}/index.html#function-list-theme) テーマは、それぞれのスタイルを制御するためのより多くのパラメーターを提供します。
 
 最後の手順は、それぞれのテーマを持つコンポーネント ミックスインを**含める**ことです。また、入力のプレース ホルダーの色プロパティを設定します。
 
 ```scss
-@include igx-drop-down($custom-drop-down);
-@include igx-grid($custom-grid);
+@include drop-down($custom-drop-down);
+@include grid($custom-grid);
 .igx-excel-filter, .igx-excel-filter__secondary {
-    @include igx-button($dark-button);
-    @include igx-input-group($dark-input-group);
-    @include igx-list($custom-list);
-    @include igx-checkbox($custom-checkbox);
+    @include button($dark-button);
+    @include input-group($dark-input-group);
+    @include list($custom-list);
+    @include checkbox($custom-checkbox);
     .igx-input-group__input::placeholder {
         color: #FFCD0F;
     }
@@ -611,13 +611,13 @@ $custom-drop-down: igx-drop-down-theme(
 ```scss
 :host {
     ::ng-deep {
-        @include igx-drop-down($custom-drop-down);
-        @include igx-grid($custom-grid);
+        @include drop-down($custom-drop-down);
+        @include grid($custom-grid);
         .igx-excel-filter, .igx-excel-filter__secondary {
-            @include igx-button($dark-button);
-            @include igx-input-group($dark-input-group);
-            @include igx-list($custom-list);
-            @include igx-checkbox($custom-checkbox);
+            @include button($dark-button);
+            @include input-group($dark-input-group);
+            @include list($custom-list);
+            @include checkbox($custom-checkbox);
             .igx-input-group__input::placeholder {
                 color: #FFCD0F;
             }
@@ -636,45 +636,45 @@ $custom-drop-down: igx-drop-down-theme(
 $yellow-color: #FFCD0F;
 $black-color: #292826;
 
-$dark-palette: igx-palette($primary: $black-color, $secondary: $yellow-color);
+$dark-palette: palette($primary: $black-color, $secondary: $yellow-color);
 ```
 また [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取り出すことができます。
 
 ```scss
-$custom-grid: igx-grid-theme(
+$custom-grid: grid-theme(
     $filtering-row-background: #FFCD0F
 );
 
-$dark-button: igx-button-theme(
-    $background: igx-color($dark-palette, "secondary", 400),
-    $foreground: igx-color($dark-palette, "primary", 400),
-    $hover-background: igx-color($dark-palette, "primary", 400),
-    $hover-foreground: igx-color($dark-palette, "secondary", 400)
+$dark-button: button-theme(
+    $background: color($dark-palette, "secondary", 400),
+    $foreground: color($dark-palette, "primary", 400),
+    $hover-background: color($dark-palette, "primary", 400),
+    $hover-foreground: color($dark-palette, "secondary", 400)
 );
 
-$dark-input-group: igx-input-group-theme(
-    $box-background: igx-color($dark-palette, "secondary", 400),
-    $idle-text-color: igx-color($dark-palette, "primary", 400),
-    $focused-text-color: igx-color($dark-palette, "primary", 400),
-    $filled-text-color: igx-color($dark-palette, "primary", 400)
+$dark-input-group: input-group-theme(
+    $box-background: color($dark-palette, "secondary", 400),
+    $idle-text-color: color($dark-palette, "primary", 400),
+    $focused-text-color: color($dark-palette, "primary", 400),
+    $filled-text-color: color($dark-palette, "primary", 400)
 );
 
-$custom-list: igx-list-theme(
-    $background: igx-color($dark-palette, "secondary", 400)
+$custom-list: list-theme(
+    $background: color($dark-palette, "secondary", 400)
 );
 
-$custom-checkbox: igx-checkbox-theme(
-    $empty-color: igx-color($dark-palette, "primary", 400),
-    $fill-color: igx-color($dark-palette, "primary", 400),
-    $tick-color: igx-color($dark-palette, "secondary", 400),
-    $label-color: igx-color($dark-palette, "primary", 400)
+$custom-checkbox: checkbox-theme(
+    $empty-color: color($dark-palette, "primary", 400),
+    $fill-color: color($dark-palette, "primary", 400),
+    $tick-color: color($dark-palette, "secondary", 400),
+    $label-color: color($dark-palette, "primary", 400)
 );
 
-$custom-drop-down: igx-drop-down-theme(
-    $background-color: igx-color($dark-palette, "secondary", 400),
-    $item-text-color: igx-color($dark-palette, "primary", 400),
-    $hover-item-background: igx-color($dark-palette, "primary", 400),
-    $hover-item-text-color: igx-color($dark-palette, "secondary", 400)
+$custom-drop-down: drop-down-theme(
+    $background-color: color($dark-palette, "secondary", 400),
+    $item-text-color: color($dark-palette, "primary", 400),
+    $hover-item-background: color($dark-palette, "primary", 400),
+    $hover-item-text-color: color($dark-palette, "secondary", 400)
 );
 ```
 
@@ -691,7 +691,7 @@ $custom-drop-down: igx-drop-down-theme(
 $custom-grid-schema: extend($_light-grid,
     (
         filtering-row-background:(
-            igx-color: ("secondary", 400)
+           color: ("secondary", 400)
         )
     )
 );
@@ -699,29 +699,29 @@ $custom-grid-schema: extend($_light-grid,
 $custom-button-schema: extend($_light-button,
     (
         flat-background:(
-            igx-color: ("secondary", 400)
+           color: ("secondary", 400)
         ),
         flat-text-color:(
-            igx-color: ("primary", 400)
+           color: ("primary", 400)
         ),
         flat-hover-background:(
-            igx-color: ("primary", 400)
+           color: ("primary", 400)
         ),
         flat-hover-text-color:(
-            igx-color: ("secondary", 400)
+           color: ("secondary", 400)
         ),
 
         raised-background:(
-            igx-color: ("secondary", 400)
+           color: ("secondary", 400)
         ),
         raised-text-color:(
-            igx-color: ("primary", 400)
+           color: ("primary", 400)
         ),
         raised-hover-background:(
-            igx-color: ("primary", 400)
+           color: ("primary", 400)
         ),
         raised-hover-text-color:(
-            igx-color: ("secondary", 400)
+           color: ("secondary", 400)
         )
     )
 );
@@ -729,16 +729,16 @@ $custom-button-schema: extend($_light-button,
 $custom-input-group-schema: extend($_light-input-group,
     (
         box-background:(
-            igx-color: ("secondary", 400)
+           color: ("secondary", 400)
         ),
         idle-text-color:(
-            igx-color: ("primary", 400)
+           color: ("primary", 400)
         ),
         focused-text-color:(
-            igx-color: ("primary", 400)
+           color: ("primary", 400)
         ),
         filled-text-color:(
-            igx-color: ("primary", 400)
+           color: ("primary", 400)
         )
     )
 );
@@ -746,7 +746,7 @@ $custom-input-group-schema: extend($_light-input-group,
 $custom-list-schema: extend($_light-list,
     (
         background:(
-            igx-color: ("secondary", 400)
+           color: ("secondary", 400)
         )
     )
 );
@@ -754,16 +754,16 @@ $custom-list-schema: extend($_light-list,
 $custom-checkbox-schema: extend($_light-checkbox,
     (
         empty-color:(
-            igx-color: ("primary", 400)
+           color: ("primary", 400)
         ),
         fill-color:(
-            igx-color: ("primary", 400)
+           color: ("primary", 400)
         ),
         tick-color:(
-            igx-color: ("secondary", 400)
+           color: ("secondary", 400)
         ),
         label-color:(
-            igx-color: ("primary", 400)
+           color: ("primary", 400)
         )
     )
 );
@@ -771,16 +771,16 @@ $custom-checkbox-schema: extend($_light-checkbox,
 $custom-drop-down-schema: extend($_light-drop-down,
     (
         background-color:(
-            igx-color: ("secondary", 400)
+           color: ("secondary", 400)
         ),
         item-text-color:(
-            igx-color: ("primary", 400)
+           color: ("primary", 400)
         ),
         hover-item-background:(
-            igx-color: ("primary", 400)
+           color: ("primary", 400)
         ),
         hover-item-text-color:(
-            igx-color: ("secondary", 400)
+           color: ("secondary", 400)
         )
     )
 );
@@ -798,32 +798,32 @@ $custom-light-schema: extend($light-schema,(
     igx-drop-down: $custom-drop-down-schema
 ));
 
-$custom-grid: igx-grid-theme(
+$custom-grid: grid-theme(
     $palette: $dark-palette,
     $schema: $custom-light-schema
 );
 
-$custom-button: igx-button-theme(
+$custom-button: button-theme(
     $palette: $dark-palette,
     $schema: $custom-light-schema
 );
 
-$custom-input-group: igx-input-group-theme(
+$custom-input-group: input-group-theme(
     $palette: $dark-palette,
     $schema: $custom-light-schema
 );
 
-$custom-list: igx-list-theme(
+$custom-list: list-theme(
     $palette: $dark-palette,
     $schema: $custom-light-schema
 );
 
-$custom-checkbox: igx-checkbox-theme(
+$custom-checkbox: checkbox-theme(
     $palette: $dark-palette,
     $schema: $custom-light-schema
 );
 
-$custom-drop-down: igx-drop-down-theme(
+$custom-drop-down: drop-down-theme(
     $palette: $dark-palette,
     $schema: $custom-light-schema
 );
@@ -867,7 +867,7 @@ $custom-drop-down: igx-drop-down-theme(
 
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-grid-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

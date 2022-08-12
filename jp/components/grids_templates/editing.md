@@ -7,30 +7,30 @@
 
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid 編集| データの変更 | Ignite UI for Angular| インフラジスティックス
-_description: 機能豊富な Angular UI グリッドのセルデータ操作機能や Ignite UI for Angular グリッド編集機能を使用した CRUD (クラッド) をお試しください。 
+title: Angular Grid の編集 - Ignite UI for Angular
+_description: 強力なパブリック API を使用し、レコードの作成、更新、削除などのデータ操作を簡単に実行できます。Angular データ グリッド編集オプションをお試しください。
 _keywords: データ操作, ignite ui for angular, インフラジスティックス・ジャパン株式会社
 _language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular TreeGrid 編集 | データの変更 | Ignite UI for Angular
-_description: 機能豊富な Angular UI グリッドのセルデータ操作機能や Ignite UI for Angular ツリー グリッド編集機能を使用した CRUD (クラッド) をお試しください。
+title: Angular Tree Grid の編集 - Ignite UI for Angular
+_description: 強力なパブリック API を使用し、レコードの作成、更新、削除などのデータ操作を簡単に実行できます。Angular データ グリッド編集オプションをお試しください。
 _keywords: データ操作, ignite ui for angular, インフラジスティックス・ジャパン株式会社
 _language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular HierarchicalGrid 編集 | データの変更 | Ignite UI for Angular
-_description: 機能豊富な Angular UI グリッドのセルデータ操作機能や Ignite UI for Angular 階層グリッド編集機能を使用した CRUD (クラッド) をお試しください。
+title: Angular Hierarchical Grid の編集 - Ignite UI for Angular
+_description: 強力なパブリック API を使用し、レコードの作成、更新、削除などのデータ操作を簡単に実行できます。Angular データ グリッド編集オプションをお試しください。
 _keywords: データ操作, ignite ui for angular, インフラジスティックス・ジャパン株式会社
 _language: ja
 ---
 }
 
-# @@igComponent 編集
+# Angular @@igComponent 編集
 
 Ignite UI for Angular @@igComponent コンポーネントは、レコードの作成、更新、削除などのデータ操作を簡単に実行できます。データの変更のフェーズは次のとおりです: [セル編集](cell-editing.md)、[行編集](row-editing.md)、および[一括編集](batch-editing.md)。@@igComponent は、これらの操作をカスタマイズできる強力なパブリック API を提供します。さらに、**セル編集**は、列のデータ型に基づいていくつかのデフォルト エディターを公開します。これらは、[igxCellEditor ディレクティブ](cell-editing.md#セル編集テンプレート)または [igxRow ディレクティブ](row-editing.md#行編集オーバーレイのカスタマイズ)を介して簡単にカスタマイズできます。 
 
@@ -147,15 +147,15 @@ public onSorting(event: ISortingEventArgs) {
 ## API リファレンス
 
 * [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
-* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-grid-theme)
 @@if (igxName !== 'IgxTreeGrid') {* [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)}
 * [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
 * [IgxDatePickerComponent]({environment:angularApiUrl}/classes/igxdatepickercomponent.html)
 * [IgxDatePickerComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-date-picker-theme)
 * [IgxCheckboxComponent]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html)
-* [IgxCheckboxComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-checkbox-theme)
+* [IgxCheckboxComponent スタイル]({environment:sassApiUrl}/index.html#function-checkbox-theme)
 * [IgxOverlay]({environment:angularApiUrl}/interfaces/overlaysettings.html)
-* [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+* [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-overlay-theme)
 
 
 ## その他のリソース

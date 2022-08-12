@@ -338,16 +338,16 @@ To get started with styling the tabs, we need to import the `index` file, where 
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`igx-bottom-nav-theme`]({environment:sassApiUrl}/index.html#function-igx-bottom-nav-theme) and accepts various parameters that allow us to style the tab groups.
+Following the simplest approach, we create a new theme that extends the [`bottom-nav-theme`]({environment:sassApiUrl}/index.html#function-bottom-nav-theme) and accepts various parameters that allow us to style the tab groups.
 
 ```scss
-$dark-bottom-nav: igx-bottom-nav-theme(
+$dark-bottom-nav: bottom-nav-theme(
     $background: #292826,
     $active-item-color: #F4D45C
 );
 ```
 
-If we take a look at the [`igx-bottom-nav-theme`]({environment:sassApiUrl}/index.html#function-igx-bottom-nav-theme), we will notice that there are even more parameters available to us in order to style our bottom navigation component!
+If we take a look at the [`bottom-nav-theme`]({environment:sassApiUrl}/index.html#function-bottom-nav-theme), we will notice that there are even more parameters available to us in order to style our bottom navigation component!
 
 > [!NOTE]
 > In order to style any additional components that are used as part of an item's content, an additional theme should be created that is specific to the respective component.
@@ -361,7 +361,7 @@ The last step is to **include** the component theme in our application.
 If `$legacy-support` is set to `true`, include the **component theme** like that:
 
 ```scss
-@include igx-bottom-nav($dark-bottom-nav);
+@include bottom-nav($dark-bottom-nav);
 ```
 
 >[!NOTE]
@@ -370,7 +370,7 @@ If `$legacy-support` is set to `true`, include the **component theme** like that
 ```scss
 :host {
      ::ng-deep {
-        @include igx-bottom-nav($dark-bottom-nav);
+        @include bottom-nav($dark-bottom-nav);
     }
 }
 ```
@@ -380,7 +380,7 @@ If `$legacy-support` is set to `true`, include the **component theme** like that
 If `$legacy-support` is set to `false`(default), include the component **css variables** like that:
 
 ```scss
-@include igx-css-vars($dark-bottom-nav);
+@include css-vars($dark-bottom-nav);
 ```
 
 >[!NOTE]
@@ -388,7 +388,7 @@ If `$legacy-support` is set to `false`(default), include the component **css var
 
 ```scss
 :host {
-    @include igx-css-vars($dark-bottom-nav);
+    @include css-vars($dark-bottom-nav);
 }
 ```
 ### Defining a color palette
@@ -400,15 +400,15 @@ Instead of hardcoding the color values like we just did, we can achieve greater 
 ```scss
 $yellow-color: #F4D45C;
 $black-color: #292826;
-$dark-palette: igx-palette($primary: $black-color, $secondary: $yellow-color);
+$dark-palette: palette($primary: $black-color, $secondary: $yellow-color);
 ```
 
 And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette.
 
 ```scss
-$dark-bottom-nav: igx-bottom-nav-theme(
-    $background: igx-color($dark-palette, "primary", 400),
-    $active-item-color: igx-color($dark-palette, "secondary", 400)
+$dark-bottom-nav: bottom-nav-theme(
+    $background: color($dark-palette, "primary", 400),
+    $active-item-color: color($dark-palette, "secondary", 400)
 );
 ```
 
@@ -423,10 +423,10 @@ Extend one of the two predefined schemas, that are provided for every component,
 $dark-bottom-nav-schema: extend($_dark-bottom-nav,
     (
         background: (
-            igx-color: ("primary", 400)
+           color: ("primary", 400)
         ),
         active-item-color: (
-            igx-color: ("secondary", 400)
+           color: ("secondary", 400)
         )
     )
 );
@@ -441,7 +441,7 @@ $custom-dark-schema: extend($dark-schema,(
 ));
 
 // Defining bottom-nav-theme with the global dark schema
-$dark-bottom-nav: igx-bottom-nav-theme(
+$dark-bottom-nav: bottom-nav-theme(
   $palette: $dark-palette,
   $schema: $custom-dark-schema
 );
@@ -463,12 +463,12 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 <div class="divider--half"></div>
 
 * [IgxBottomNavComponent]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html)
-* [IgxBottomNavComponent Styles]({environment:sassApiUrl}/index.html#function-igx-bottom-nav-theme)
+* [IgxBottomNavComponent Styles]({environment:sassApiUrl}/index.html#function-bottom-nav-theme)
 * [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
 
 ## Theming Dependencies
-* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
-* [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
+* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-ripple-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>

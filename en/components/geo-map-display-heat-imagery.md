@@ -26,6 +26,17 @@ It is highly recommended that you review the [Binding Shape Files with Geo-Spati
            github-src="maps/geo-map/display-heat-imagery">
 </code-view>
 
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <body>
+      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/maps/geo-map/display-heat-imagery?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
+            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
+        </a>
+        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/maps/geo-map/display-heat-imagery?file=src%2Fapp.component.html" rel="noopener noreferrer">
+            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
+        </a>
+    </body>
+</html>
+
 <div class="divider--half"></div>
 
 <!-- end: Angular, React -->
@@ -36,11 +47,11 @@ The [`IgxHeatTileGenerator`]({environment:dvApiBaseUrl}/products/ignite-ui-angul
 
 The display of the geographic tile series when using the heat-map functionality can be customized by setting the [`minimumColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxheattilegenerator.html#minimumcolor) and [`maximumColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxheattilegenerator.html#maximumcolor) properties to "rgba" strings that describe colors that you wish to correspond to the minimum and maximum values of the collection that you assign to the [`values`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxheattilegenerator.html#values) property of the `HeatTileGenerator.` You can further customize this by setting the `ScaleColors` property of the generator to contain a collection of strings that describe colors, as this will tell the [`IgxHeatTileGenerator`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxheattilegenerator.html) what colors to use for the displayed values in the map. It is also possible to customize how colors in your `ScaleColors` collection blur together by using the [`blurRadius`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxheattilegenerator.html#blurradius), [`maxBlurRadius`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxheattilegenerator.html#maxblurradius), and [`useBlurRadiusAdjustedForZoom`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxheattilegenerator.html#useblurradiusadjustedforzoom) properties.
 
-The [`IgxHeatTileGenerator`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxheattilegenerator.html) can also use a logarithmic scale. If you want to use this, you can set the [`useLogarithmicScale`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxheattilegenerator.html#uselogarithmicscale) property to `true`.
+The [`IgxHeatTileGenerator`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxheattilegenerator.html) can also use a logarithmic scale. If you want to use this, you can set the [`useLogarithmicScale`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxheattilegenerator.html#uselogarithmicscale) property to **true**.
 
 ## Web Worker
 
-The [`IgxHeatTileGenerator`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxheattilegenerator.html) also has support for web workers to do the heavy lifting of the loading of the tile imagery from your shape file on a separate thread. This can greatly improve the performance of your geographic map when using the heat-map functionality. In order to use a web worker with the generator, you can set the [`useWebWorkers`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxheattilegenerator.html#usewebworkers) property to `true` and then set the [`webWorkerInstance`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxheattilegenerator.html#webworkerinstance) property to an instance of your web worker.
+The [`IgxHeatTileGenerator`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxheattilegenerator.html) also has support for web workers to do the heavy lifting of the loading of the tile imagery from your shape file on a separate thread. This can greatly improve the performance of your geographic map when using the heat-map functionality. In order to use a web worker with the generator, you can set the [`useWebWorkers`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxheattilegenerator.html#usewebworkers) property to **true** and then set the [`webWorkerInstance`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxheattilegenerator.html#webworkerinstance) property to an instance of your web worker.
 
 <!-- Angular -->
 
@@ -144,3 +155,18 @@ constructor() {
     con.dataBind();
 }
 ```
+
+## API Members
+
+-   [`IgxHeatTileGenerator`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxheattilegenerator.html)
+-   [`IgxHeatTileGenerator`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxheattilegenerator.html)
+-   [`maximumColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxheattilegenerator.html#maximumcolor)
+-   [`minimumColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxheattilegenerator.html#minimumcolor)
+-   `ShapeFileRecord`
+-   `ShapeFileRecords`
+-   [`IgxShapeDataSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapedatasource.html)
+-   [`IgxTileGeneratorMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtilegeneratormapimagery.html)
+-   [`tileGenerator`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtilegeneratormapimagery.html#tilegenerator)
+-   `TileImagery`
+-   `UseBlurRadiusAdjustedForZoom`
+-   `UseLogarithmicScale`

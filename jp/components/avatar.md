@@ -123,7 +123,7 @@ Avatar のスタイル設定を始めるには、すべてのテーマ関数と�
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単な方法は、[`igx-avatar-theme`]({environment:sassApiUrl}/index.html#function-igx-avatar-theme) を拡張する新しいテーマを作成し、`$background`、`$color` と `$border-radius-square` パラメーターを受け取る方法です。
+最も簡単な方法は、[`avatar-theme`]({environment:sassApiUrl}/index.html#function-avatar-theme) を拡張する新しいテーマを作成し、`$background`、`$color` と `$border-radius-square` パラメーターを受け取る方法です。
 
 次のマークアップを前提として:
 
@@ -136,7 +136,7 @@ Avatar のスタイル設定を始めるには、すべてのテーマ関数と�
 テーマを作成する必要があります:
 
 ```scss
-$custom-avatar-theme: igx-avatar-theme(
+$custom-avatar-theme: avatar-theme(
     $background: #72da67,
     $color: #000000,
     $border-radius-square: 16px
@@ -149,7 +149,7 @@ $custom-avatar-theme: igx-avatar-theme(
 
 ```scss
 .initials-avatar {
-    @include igx-css-vars($custom-avatar-theme);
+    @include css-vars($custom-avatar-theme);
 }
 ```
 
@@ -164,7 +164,7 @@ Internet Explorer 11 以前などブラウザーのコンポーネントをス�
     ::ng-deep {
         // Custom avatar theme を `igx-avatar` ミックスインに渡します
         .initials-avatar {
-            @include igx-avatar($custom-avatar-theme);
+            @include avatar($custom-avatar-theme);
         }
     }
 }
@@ -186,7 +186,7 @@ Internet Explorer 11 以前などブラウザーのコンポーネントをス�
 
 
 ## テーマの依存関係
-* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-icon-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

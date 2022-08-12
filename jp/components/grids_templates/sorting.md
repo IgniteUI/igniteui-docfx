@@ -1,31 +1,34 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid ソート | データ ソート | Ignite UI for Angular| インフラジスティックス
-_description: Ignite UI Material UI グリッドの Angular Sort 機能を使用し、機能豊かなな API と Angular イベントを使ってソート可能な列の組み合わせを構成する方法。
+title: Angular Grid のソート - Ignite UI for Angular
+_description: Ignite for Angular UI グリッドの Angular ソート機能を使用して、ソート可能な列の組み合わせを構成し、データ レコードの表示順序を変更します。
 _keywords: angular sort, ignite ui for angular, infragistics
 _language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid ソート | データ ソート | Ignite UI for Angular| インフラジスティックス
-_description: Ignite UI Material UI グリッドの Angular Sort 機能を使用し、機能豊かなな API と Angular イベントを使ってソート可能な列の組み合わせを構成する方法。
+title: Angular Tree Grid のソート - Ignite UI for Angular
+_description: Ignite for Angular UI グリッドの Angular ソート機能を使用して、ソート可能な列の組み合わせを構成し、データ レコードの表示順序を変更します。
 _keywords: angular sort, ignite ui for angular, infragistics
 _language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchical Grid ソート | データ ソート | Ignite UI for Angular|“infragistics”
-_description: Ignite UI Material UI グリッドの Angular Sort 機能を使用し、機能豊かなな API と Angular イベントを使ってソート可能な列の組み合わせを構成する方法。
+title: Angular Hierarchical Grid のソート - Ignite UI for Angular
+_description: Ignite for Angular UI グリッドの Angular ソート機能を使用して、ソート可能な列の組み合わせを構成し、データ レコードの表示順序を変更します。
 _keywords: angular sort, ignite ui for angular, infragistics
 _language: ja
 ---
 }
 
-# @@igComponent ソートの概要
+# Angular @@igComponent のソート
 
 Ignite UI for Angular @@igComponent では、列レベルでのデータ ソートが可能です。つまり、**@@igSelector** にソート可能な列とソート不可の列の両方を持つことができます。Angular でソートを実行すると、指定した条件に基づいてレコードの表示順序を変更できます。
+
+
+> 注: これまで、グループ化 / ソートは互いに連携して機能していました。13.2 バージョンでは、グループ化をソートから切り離す新しい動作が導入されています。たとえば、グループ化をクリアしても、グリッド内のソート式はクリアされません。その逆も同様です。それでも、列がソートおよびグループ化されている場合は、グループ化された式が優先されます。
 
 ## Angular @@igComponent ソートの例
 
@@ -183,10 +186,10 @@ public ngOnInit() {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も単純なアプローチに従って、[`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) を拡張し、`$sorted-header-icon-color` and `sortable-header-icon-hover-color` パラメーターを受け取ります。
+最も単純なアプローチに従って、[`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) を拡張し、`$sorted-header-icon-color` and `sortable-header-icon-hover-color` パラメーターを受け取ります。
 
 ```scss
-$custom-theme: igx-grid-theme(
+$custom-theme: grid-theme(
     $sorted-header-icon-color: #ffb06a,
     $sortable-header-icon-hover-color: black
 );
@@ -194,7 +197,7 @@ $custom-theme: igx-grid-theme(
 最後の手順は、それぞれのテーマを持つコンポーネント ミックスインを**含める**ことです。 
 
 ```scss
- @include igx-grid($custom-theme);
+ @include grid($custom-theme);
 ```
 
 >[!NOTE]
@@ -203,7 +206,7 @@ $custom-theme: igx-grid-theme(
  ```scss
 :host {
     ::ng-deep {
-        @include igx-grid($custom-theme);
+        @include grid($custom-theme);
     }
 }
 ```
@@ -218,15 +221,15 @@ $custom-theme: igx-grid-theme(
 $black-color: black;
 $orange-color: #ffb06a;
 
-$custom-palette: igx-palette($primary: $black-color, $secondary: $orange-color);
+$custom-palette: palette($primary: $black-color, $secondary: $orange-color);
 ```
 
 次に [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取得できます。
 
 ```scss
-$custom-theme: igx-grid-theme(
-    $sorted-header-icon-color: igx-color($custom-palette, "secondary", 500),
-    $sortable-header-icon-hover-color: igx-color($custom-palette, "primary", 500)
+$custom-theme: grid-theme(
+    $sorted-header-icon-color: color($custom-palette, "secondary", 500),
+    $sortable-header-icon-hover-color: color($custom-palette, "primary", 500)
 );
 ```
 
@@ -260,7 +263,7 @@ $my-custom-schema: extend($light-schema,
 );
 
 // Defining our custom theme with the custom schema
-$custom-theme: igx-grid-theme(
+$custom-theme: grid-theme(
   $palette: $custom-palette,
   $schema: $my-custom-schema
 );
@@ -304,7 +307,7 @@ $custom-theme: igx-grid-theme(
 
 ## API リファレンス
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-grid-theme)
 * [ISortingExpression]({environment:angularApiUrl}/interfaces/isortingexpression.html)
 
 ## その他のリソース

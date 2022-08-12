@@ -221,7 +221,7 @@ export class RemoteLoDService {
         <igx-column field="ChildLevels"></igx-column>
         <igx-column field="ProductName" hasSummary='true'></igx-column>
     </igx-column-group>
-    <igx-row-island [key]="'childData'" [autoGenerate]="false" [rowSelectable]='true' #layout1>
+    <igx-row-island [key]="'childData'" [autoGenerate]="false" [rowSelection]="'multiple'" #layout1>
         <igx-column field="ID" [hasSummary]='true' [dataType]="'number'"></igx-column>
         <igx-column-group header="Information2">
             <igx-column field="ChildLevels"></igx-column>
@@ -274,7 +274,7 @@ igxGrid を使用して [CRUD 操作を構築する方法](../general/how-to/how
 
 ## スタイル設定
 
-igxHierarchicalGrid を使用すると、[Ignite UI for Angular テーマ ライブラリ](../themes/sass/component-themes.md) でスタイルを設定できます。[テーマ]({environment:sassApiUrl}/index.html#function-igx-grid-theme) は、グリッドのすべての機能をカスタマイズできるさまざまなプロパティを公開します。 
+igxHierarchicalGrid を使用すると、[Ignite UI for Angular テーマ ライブラリ](../themes/sass/component-themes.md) でスタイルを設定できます。[テーマ]({environment:sassApiUrl}/index.html#function-grid-theme) は、グリッドのすべての機能をカスタマイズできるさまざまなプロパティを公開します。 
 
 以下の手順では、igxHierarchicalGrid スタイルをカスタマイズする手順を実行しています。     
 
@@ -286,14 +286,14 @@ igxHierarchicalGrid を使用すると、[Ignite UI for Angular テーマ ライ
 ```
 
 ### カスタム テーマの定義
-次に、[`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) を拡張し、必要に応じて階層グリッドをカスタマイズするために必要なパラメーターを受け取る新しいテーマを作成します。
+次に、[`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) を拡張し、必要に応じて階層グリッドをカスタマイズするために必要なパラメーターを受け取る新しいテーマを作成します。
 
  >[!NOTE]
  >特定の `sass` 階層グリッド機能はありません。
 
 
 ```scss
-$custom-theme: igx-grid-theme(
+$custom-theme: grid-theme(
   $cell-active-border-color: #ffcd0f,
   $cell-selected-background: #6f6f6f,
   $row-hover-background: #f8e495,
@@ -305,7 +305,7 @@ $custom-theme: igx-grid-theme(
   $resize-line-color: #ffcd0f,
   $row-highlight: #ffcd0f
 );
-```   
+```
 
 ### カスタム カラー パレットの定義
 上記で説明したアプローチでは、色の値がハード コーディングされていました。または、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) および [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用して、柔軟性を高めることができます。   
@@ -314,15 +314,15 @@ $custom-theme: igx-grid-theme(
  ```scss
 $black-color: #494949;
 $yellow-color: #FFCD0F;
- 
-$custom-palette: igx-palette(
+
+$custom-palette: palette(
   $primary: $black-color,
   $secondary: $yellow-color
 );
 ```
-カスタム パレットが生成された後、`igx-color` 関数を使用して、さまざまな種類の原色と二次色を取得できます。   
+カスタム パレットが生成された後、`igx-color` 関数を使用して、さまざまな種類の原色と二次色を取得できます。
 ```scss
-$custom-theme: igx-grid-theme(
+$custom-theme: grid-theme(
     $cell-active-border-color: (igx-color($custom-palette, "secondary", 500)),
     $cell-selected-background: (igx-color($custom-palette, "primary", 300)),
     $row-hover-background: (igx-color($custom-palette, "secondary", 100)),
@@ -334,7 +334,7 @@ $custom-theme: igx-grid-theme(
     $resize-line-color: (igx-color($custom-palette, "secondary", 500)),
     $row-highlight: (igx-color($custom-palette, "secondary", 500))
 );
-```   
+```
 
 ### カスタム スキーマの定義
 さらに進んで、[**スキーマ**](../themes/sass/schemas.md) のすべての利点を備えた柔軟な構造を構築できます。**スキーマ**はテーマを作成させるための方法です。   
@@ -359,17 +359,17 @@ $my-custom-schema: extend($light-schema, (
     igx-grid: $custom-grid-schema
 ));
 
-$custom-theme: igx-grid-theme(
+$custom-theme: grid-theme(
     $palette: $custom-palette,
     $schema: $my-custom-schema
 );
-```   
+```
 
 ### カスタム テーマの適用
 テーマを適用する最も簡単な方法は、グローバル スタイル ファイルに `sass` `@include` ステートメントを使用することです。 
 
 ```scss
-@include igx-grid($custom-theme);
+@include grid($custom-theme);
 ```
 
 ### スコープ コンポーネント テーマ
@@ -386,21 +386,35 @@ $custom-theme: igx-grid-theme(
 ```scss
 :host {
     ::ng-deep {
-        @include igx-grid($custom-theme);
+        @include grid($custom-theme);
     }
 }
-```   
+```
 
 ### デモ
 
-<code-view style="height:505px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:505px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-styling" >
 </code-view>
 
 >[!NOTE]
 >このサンプルは、「テーマの変更」から選択したグローバル テーマに影響を受けません。
 
+## パフォーマンス (試験中)
+
+`igxHierarchicalGrid` のデザインでは、Angular で導入されたイベント結合機能を利用できます。この機能は、インタラクションとレスポンシブの点で **`20%`** のパフォーマンスを向上します。この機能は、`bootstrapModule` メソッドで `ngZoneEventCoalescing` と `ngZoneRunCoalescing` プロパティを `true` に設定するだけでアプリケーション レベルで有効にできます。
+
+```typescript
+platformBrowserDynamic()
+  .bootstrapModule(AppModule, { ngZoneEventCoalescing: true, ngZoneRunCoalescing: true })
+  .catch(err => console.error(err));
+```
+
+>[!NOTE]> これは `igxHierarchicalGrid` の試験中の機能です。これは、階層グリッドで予期しない動作が発生する可能性があることを意味します。このような動作が発生した場合は、[Github](https://github.com/IgniteUI/igniteui-angular/discussions) ページでお問い合わせください。
+
+>[!NOTE]
+> 有効にすると、`igxHierarchicalGrid` に関連しない Angular アプリケーションの他の部分に影響します。
 
 ## 既知の問題と制限
 
@@ -416,23 +430,23 @@ $custom-theme: igx-grid-theme(
 * [IgxHierarchicalGridComponent]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html)
 * [IgxRowIslandComponent]({environment:angularApiUrl}/classes/igxrowislandcomponent.html)
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent スタイル]({environment:sassApiUrl}/#function-igx-grid-theme)
+* [IgxGridComponent スタイル]({environment:sassApiUrl}/#function-grid-theme)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [IgxHierarchicalGridRow]({environment:angularApiUrl}/classes/igxhierarchicalgridrow.html)
 * [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
 
 ## テーマの依存関係
-* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
-* [IgxInputGroup テーマ]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
-* [IgxChip テーマ]({environment:sassApiUrl}/index.html#function-igx-chip-theme)
-* [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
-* [IgxButton テーマ]({environment:sassApiUrl}/index.html#function-igx-button-theme)
-* [IgxOverlay テーマ]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
-* [IgxDropDown テーマ]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme)
-* [IgxCalendar テーマ]({environment:sassApiUrl}/index.html#function-igx-calendar-theme)
-* [IgxActionStrip テーマ]({environment:sassApiUrl}/index.html#function-igx-action-strip-theme)
-* [IgxSnackBar テーマ]({environment:sassApiUrl}/index.html#function-igx-snackbar-theme)
-* [IgxBadge テーマ]({environment:sassApiUrl}/index.html#function-igx-badge-theme)
+* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxInputGroup テーマ]({environment:sassApiUrl}/index.html#function-input-group-theme)
+* [IgxChip テーマ]({environment:sassApiUrl}/index.html#function-chip-theme)
+* [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-ripple-theme)
+* [IgxButton テーマ]({environment:sassApiUrl}/index.html#function-button-theme)
+* [IgxOverlay テーマ]({environment:sassApiUrl}/index.html#function-overlay-theme)
+* [IgxDropDown テーマ]({environment:sassApiUrl}/index.html#function-drop-down-theme)
+* [IgxCalendar テーマ]({environment:sassApiUrl}/index.html#function-calendar-theme)
+* [IgxActionStrip テーマ]({environment:sassApiUrl}/index.html#function-action-strip-theme)
+* [IgxSnackBar テーマ]({environment:sassApiUrl}/index.html#function-snackbar-theme)
+* [IgxBadge テーマ]({environment:sassApiUrl}/index.html#function-badge-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

@@ -184,4 +184,4 @@ overlay.setOffset(this._overlayId, deltaX, deltaY);
 * [スクロール ストラテジ](overlay-scroll.md)
 * [スタイル設定](overlay-styling.md)
 * [IgxOverlayService]({environment:angularApiUrl}/classes/igxoverlayservice.html)
-* [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+* [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-overlay-theme)

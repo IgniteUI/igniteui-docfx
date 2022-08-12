@@ -335,10 +335,10 @@ To get started with styling the tabs, we need to import the theming module, wher
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`igx-tabs-theme`]({environment:sassApiUrl}/index.html#function-igx-tabs-theme) and accepts various properties that allow us to style the tab groups.
+Following the simplest approach, we create a new theme that extends the [`tabs-theme`]({environment:sassApiUrl}/index.html#function-tabs-theme) and accepts various properties that allow us to style the tab groups.
 
 ```scss
-$dark-tabs: igx-tabs-theme(
+$dark-tabs: tabs-theme(
     $item-text-color: #F4D45C,
     $item-background: #292826,
     $item-hover-background: #F4D45C,
@@ -350,7 +350,7 @@ $dark-tabs: igx-tabs-theme(
 );
 ```
 
-If we take a look at the [`igx-tabs-theme`]({environment:sassApiUrl}/index.html#function-igx-tabs-theme), we will notice that there are even more properties available to us in order to style our tabs.
+If we take a look at the [`tabs-theme`]({environment:sassApiUrl}/index.html#function-tabs-theme), we will notice that there are even more properties available to us in order to style our tabs.
 
 > [!NOTE]
 > In order to style any component used as part of a tab content, additional themes should be created specific to the respective component.
@@ -358,7 +358,7 @@ If we take a look at the [`igx-tabs-theme`]({environment:sassApiUrl}/index.html#
 The last step is to **include** the component theme in our application.
 
 ```scss
-@include igx-css-vars($dark-tabs);
+@include css-vars($dark-tabs);
 ```
 
 If you are targeting browsers that don't support CSS variables, like IE 11, you can use the theme component mixin to overwrite its default theme:
@@ -366,7 +366,7 @@ If you are targeting browsers that don't support CSS variables, like IE 11, you 
 ```scss
 :host {
   ::ng-deep {
-    @include igx-tabs($dark-tabs);
+    @include tabs($dark-tabs);
   }
 }
 ```
@@ -380,7 +380,7 @@ Instead of hardcoding the color values, like we just did, we can achieve greater
 $yellow-color: #F4D45C;
 $black-color: #292826;
 
-$dark-palette: igx-palette(
+$dark-palette: palette(
   $primary: $black-color,
   $secondary: $yellow-color,
   $grays: #fff
@@ -390,16 +390,16 @@ $dark-palette: igx-palette(
 We can easily retrieve any color from the palette using [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color).
 
 ```scss
-$dark-tabs: igx-tabs-theme(
+$dark-tabs: tabs-theme(
     $palette: $dark-palette,
-    $item-text-color: igx-color($dark-palette, "secondary", 400),
-    $item-background: igx-color($dark-palette, "primary", 400),
-    $item-hover-background: igx-color($dark-palette, "secondary", 400),
-    $item-hover-color: igx-color($dark-palette, "primary", 400),
-    $item-active-color: igx-color($dark-palette, "secondary", 400),
-    $item-active-icon-color: igx-color($dark-palette, "secondary", 400),
-    $indicator-color: igx-color($dark-palette, "secondary", 400),
-    $tab-ripple-color: igx-color($dark-palette, "secondary", 400)
+    $item-text-color: color($dark-palette, "secondary", 400),
+    $item-background: color($dark-palette, "primary", 400),
+    $item-hover-background: color($dark-palette, "secondary", 400),
+    $item-hover-color: color($dark-palette, "primary", 400),
+    $item-active-color: color($dark-palette, "secondary", 400),
+    $item-active-icon-color: color($dark-palette, "secondary", 400),
+    $indicator-color: color($dark-palette, "secondary", 400),
+    $tab-ripple-color: color($dark-palette, "secondary", 400)
 );
 ```
 
@@ -418,15 +418,15 @@ $dark-tabs: igx-tabs-theme(
 * [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
 * [IgxNavbarComponent]({environment:angularApiUrl}/classes/igxnavbarcomponent.html)
 * [IgxTabsComponent]({environment:angularApiUrl}/classes/igxtabscomponent.html)
-* [IgxTabsComponent Styles]({environment:sassApiUrl}/index.html#function-igx-tabs-theme)
+* [IgxTabsComponent Styles]({environment:sassApiUrl}/index.html#function-tabs-theme)
 * [IgxTabItemComponent]({environment:angularApiUrl}/classes/igxtabitemcomponent.html)
 * [IgxTabHeaderComponent]({environment:angularApiUrl}/classes/igxtabheadercomponent.html)
 * [IgxTabContentComponent]({environment:angularApiUrl}/classes/igxtabcontentcomponent.html)
 
 ## Theming Dependencies
-* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
-* [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
-* [IgxButton Theme]({environment:sassApiUrl}/index.html#function-igx-button-theme)
+* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-ripple-theme)
+* [IgxButton Theme]({environment:sassApiUrl}/index.html#function-button-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>

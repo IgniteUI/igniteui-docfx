@@ -1,23 +1,23 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid 行選択 | Ignite UI for Angular | インフラジスティックス 
-_description: Angular イベント、API、あるいはマウス操作によって、Angular Material の Ignite UI テーブル の行および複数セル データの選択が簡単に実行できます。
+title: Angular Grid の行選択 - Ignite UI for Angular 
+_description: 行選択を有効にして UX を改善し、ユーザーが単一または複数の行を管理できるようにします。Ignite UI で行データ選択を簡単に構成できます。
 _keywords: データ選択, igniteui for angular, インフラジスティックス
 _language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid 行選択| Ignite UI for Angular | インフラジスティックス 
-_description: Angular イベント、API、あるいはマウス操作によって、Angular Material の Ignite UI テーブル の行および複数セル データの選択が簡単に実行できます。
+title: Angular Grid の行選択 - Ignite UI for Angular 
+_description: 行選択を有効にして UX を改善し、ユーザーが単一または複数の行を管理できるようにします。Ignite UI で行データ選択を簡単に構成できます。
 _keywords: データ選択, igniteui for angular, インフラジスティックス
 _language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchical Grid 行選択 | Ignite UI for Angular | インフラジスティックス 
-_description: Angular イベント、API、あるいはマウス操作によって、Angular Material の Ignite UI テーブル の行および複数セル データの選択が簡単に実行できます。
+title: Angular Grid の行選択 - Ignite UI for Angular 
+_description: 行選択を有効にして UX を改善し、ユーザーが単一または複数の行を管理できるようにします。Ignite UI で行データ選択を簡単に構成できます。
 _keywords: データ選択, igniteui for angular, インフラジスティックス
 _language: ja
 ---
@@ -227,7 +227,7 @@ public handleRowSelection(event) {
 ```
 
 ### 行選択イベント
-行選択に何らかの変更があると、**`rowSelectionChanging`** イベントが発生します。 **`rowSelectionChanging`** は次の引数を公開します。
+行選択に何らかの変更があると、**`rowSelectionChanging`** イベントが発生します。**`rowSelectionChanging`** は次の引数を公開します。
 - `oldSelection` - 行選択の前の状態を含む行 ID の配列。
 - `newSelection` - 行選択の新しい状態に一致する行 ID の列。
 - `added` - 現在選択に追加されている行 ID の配列。
@@ -492,7 +492,7 @@ public childSelectedRows = ['Initiation', 'Emergency'];
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 @@if (igxName !== 'IgxTreeGrid') {* [IgxGridRow API]({environment:angularApiUrl}/classes/igxgridrow.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRow API]({environment:angularApiUrl}/classes/igxtreegridrow.html)}
 * [IgxGridCell API]({environment:angularApiUrl}/classes/igxgridcell.html)
-* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-grid-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

@@ -335,10 +335,10 @@ export class AppRoutingModule { }
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-次に、[`igx-tabs-theme`]({environment:sassApiUrl}/index.html#function-igx-tabs-theme) を拡張する新しいテーマを作成し、タブグループのスタイルを設定できるさまざまなプロパティを受け取ります。
+次に、[`tabs-theme`]({environment:sassApiUrl}/index.html#function-tabs-theme) を拡張する新しいテーマを作成し、タブグループのスタイルを設定できるさまざまなプロパティを受け取ります。
 
 ```scss
-$dark-tabs: igx-tabs-theme(
+$dark-tabs: tabs-theme(
     $item-text-color: #F4D45C,
     $item-background: #292826,
     $item-hover-background: #F4D45C,
@@ -350,7 +350,7 @@ $dark-tabs: igx-tabs-theme(
 );
 ```
 
-次に、[`igx-tabs-theme`]({environment:sassApiUrl}/index.html#function-igx-tabs-theme) を拡張する新しいテーマを作成し、タブグループのスタイルを設定できるさまざまなプロパティを受け取ります。
+次に、[`tabs-theme`]({environment:sassApiUrl}/index.html#function-tabs-theme) を拡張する新しいテーマを作成し、タブグループのスタイルを設定できるさまざまなプロパティを受け取ります。
 
 > [!NOTE]
 > タブのコンテンツの一部として使用されるコンポーネントをスタイルするには、それぞれのコンポーネントに固有の追加テーマを作成する必要があります。
@@ -358,7 +358,7 @@ $dark-tabs: igx-tabs-theme(
 最後にコンポーネントのテーマを**含めます**。
 
 ```scss
-@include igx-css-vars($dark-tabs);
+@include css-vars($dark-tabs);
 ```
 
 CSS 変数をサポートしないブラウザー (IE 11 など) をターゲットにしている場合、テーマ コンポーネント ミックスインを使用してデフォルト テーマを上書きできます。
@@ -366,7 +366,7 @@ CSS 変数をサポートしないブラウザー (IE 11 など) をターゲッ
 ```scss
 :host {
   ::ng-deep {
-    @include igx-tabs($dark-tabs);
+    @include tabs($dark-tabs);
   }
 }
 ```
@@ -380,7 +380,7 @@ CSS 変数をサポートしないブラウザー (IE 11 など) をターゲッ
 $yellow-color: #F4D45C;
 $black-color: #292826;
 
-$dark-palette: igx-palette(
+$dark-palette: palette(
   $primary: $black-color,
   $secondary: $yellow-color,
   $grays: #fff
@@ -390,16 +390,16 @@ $dark-palette: igx-palette(
 [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用して、パレットから簡単に取得することができます。
 
 ```scss
-$dark-tabs: igx-tabs-theme(
+$dark-tabs: tabs-theme(
     $palette: $dark-palette,
-    $item-text-color: igx-color($dark-palette, "secondary", 400),
-    $item-background: igx-color($dark-palette, "primary", 400),
-    $item-hover-background: igx-color($dark-palette, "secondary", 400),
-    $item-hover-color: igx-color($dark-palette, "primary", 400),
-    $item-active-color: igx-color($dark-palette, "secondary", 400),
-    $item-active-icon-color: igx-color($dark-palette, "secondary", 400),
-    $indicator-color: igx-color($dark-palette, "secondary", 400),
-    $tab-ripple-color: igx-color($dark-palette, "secondary", 400)
+    $item-text-color: color($dark-palette, "secondary", 400),
+    $item-background: color($dark-palette, "primary", 400),
+    $item-hover-background: color($dark-palette, "secondary", 400),
+    $item-hover-color: color($dark-palette, "primary", 400),
+    $item-active-color: color($dark-palette, "secondary", 400),
+    $item-active-icon-color: color($dark-palette, "secondary", 400),
+    $indicator-color: color($dark-palette, "secondary", 400),
+    $tab-ripple-color: color($dark-palette, "secondary", 400)
 );
 ```
 
@@ -418,15 +418,15 @@ $dark-tabs: igx-tabs-theme(
 * [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
 * [IgxNavbarComponent]({environment:angularApiUrl}/classes/igxnavbarcomponent.html)
 * [IgxTabsComponent]({environment:angularApiUrl}/classes/igxtabscomponent.html)
-* [IgxTabsComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-tabs-theme)
+* [IgxTabsComponent スタイル]({environment:sassApiUrl}/index.html#function-tabs-theme)
 * [IgxTabItemComponent]({environment:angularApiUrl}/classes/igxtabitemcomponent.html)
 * [IgxTabHeaderComponent]({environment:angularApiUrl}/classes/igxtabheadercomponent.html)
 * [IgxTabContentComponent]({environment:angularApiUrl}/classes/igxtabcontentcomponent.html)
 
 ## テーマの依存関係
-* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
-* [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
-* [IgxButton テーマ]({environment:sassApiUrl}/index.html#function-igx-button-theme)
+* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-ripple-theme)
+* [IgxButton テーマ]({environment:sassApiUrl}/index.html#function-button-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

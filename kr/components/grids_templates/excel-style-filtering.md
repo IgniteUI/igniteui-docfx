@@ -352,7 +352,7 @@ Excel 스타일 필터링을 켜려면 2개의 입력을 설정해야 합니다.
 
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent 스타일]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [@@igxNameComponent 스타일]({environment:sassApiUrl}/index.html#function-grid-theme)
 
 ### 추가 리소스
 <div class="divider--half"></div>

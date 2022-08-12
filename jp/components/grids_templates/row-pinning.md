@@ -1,29 +1,29 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid 行のピン固定 | 行のロック | Ignite UI for Angular | インフラジスティックス
-_description: Ignite UI for Angular Material テーブルのピン留め機能を使用して豊富で使いやすい API で行をロックできます。
+title: Angular Data Grid の行ピン固定 - Ignite UI for Angular
+_description: Angular の行ピン固定機能を使用して、豊富で使いやすい API で行をロックします。ユーザーが特定の順序で行をピン固定または特別な領域に複製することを許可します。
 _keywords: lock row, ignite ui for angular, infragistics, 行のロック, インフラジスティックス
 _language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid 行のピン固定 | 行のロック | Ignite UI for Angular | インフラジスティックス
-_description: Ignite UI for Angular Material テーブルのピン留め機能を使用して豊富で使いやすい API で行をロックできます。
+title: Angular Tree Grid の行ピン固定 - Ignite UI for Angular
+_description: Angular の行ピン固定機能を使用して、豊富で使いやすい API で行をロックします。ユーザーが特定の順序で行をピン固定または特別な領域に複製することを許可します。
 _keywords: lock row, ignite ui for angular, infragistics, 行のロック, インフラジスティックス
 _language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchical Grid 行のピン固定 | 行のロック | Ignite UI for Angular | インフラジスティックス
-_description: Ignite UI for Angular Material テーブルのピン留め機能を使用して豊富で使いやすい API で行をロックできます。
+title: Angular Hierarchical Grid の行ピン固定 - Ignite UI for Angular
+_description: Angular の行ピン固定機能を使用して、豊富で使いやすい API で行をロックします。ユーザーが特定の順序で行をピン固定または特別な領域に複製することを許可します。
 _keywords: lock row, ignite ui for angular, infragistics, 行のロック, インフラジスティックス
 _language: ja
 ---
 }
 
-## @@igComponent 行ピン固定
+# Angular @@igComponent 行ピン固定
 単一または複数の行を Angular UI グリッドの上側または下側にピン固定できます。Ignite UI for Angular の**行ピン固定**を使用すると、エンドユーザーは特定の順序で行をピン固定し、@@igComponent を垂直にスクロールしても常に表示される特別な領域に行を複製できます。Material UI Grid には組み込みの行ピン固定 UI が含まれており、@@igComponent のコンテキストで `igxActionStrip` コンポーネントを初期化することで有効になります。その他、カスタム UI を定義し、行のピン固定 API を介して行のピン固定状態を変更できます。
 
 ## Angular @@igComponent 行ピン固定の例
@@ -393,7 +393,7 @@ public onDropAllowed(args) {
 
 ## スタイル設定
 
-@@igxName は、[Ignite UI for Angular テーマ ライブラリ](../themes/sass/component-themes.md)でスタイルを設定できます。@@igComponent の [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) は、@@igComponent のすべての機能をカスタマイズできるさまざまなプロパティを公開します。
+@@igxName は、[Ignite UI for Angular テーマ ライブラリ](../themes/sass/component-themes.md)でスタイルを設定できます。@@igComponent の [theme]({environment:sassApiUrl}/index.html#function-grid-theme) は、@@igComponent のすべての機能をカスタマイズできるさまざまなプロパティを公開します。
 
 以下では、@@igComponent の行ピン固定スタイルをカスタマイズする手順を示します。
 
@@ -410,10 +410,10 @@ public onDropAllowed(args) {
 
 ### テーマの定義
 
-次に、[`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) を拡張し、必要に応じて行のピン固定機能のカスタマイズに必要なパラメーターを受け入れる新しいテーマを作成します。
+次に、[`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) を拡張し、必要に応じて行のピン固定機能のカスタマイズに必要なパラメーターを受け入れる新しいテーマを作成します。
 
 ```scss
-$custom-grid-theme: igx-grid-theme(
+$custom-grid-theme: grid-theme(
     /* Pinning properties that affect styling */
     $pinned-border-width: 5px,
     $pinned-border-style: double,
@@ -428,7 +428,7 @@ $custom-grid-theme: igx-grid-theme(
 最後にカスタム グリッド テーマを設定します。
 
 ```scss
-@include igx-css-vars($custom-grid-theme);
+@include css-vars($custom-grid-theme);
 ```
 
 ### ミックスインの使用
@@ -441,7 +441,7 @@ Internet Explorer 11 のコンポーネントをスタイル設定するには�
 :host {
     ::ng-deep {
         // Custom grid theme を `igx-grid` ミックスインに渡します
-        @include igx-grid($custom-grid-theme);
+        @include grid($custom-grid-theme);
     }
 }
 ```
@@ -482,7 +482,7 @@ Internet Explorer 11 のコンポーネントをスタイル設定するには�
 * [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)
 * [IgxHierarchicalGridRow]({environment:angularApiUrl}/classes/igxhierarchicalgridrow.html)
 * [RowType]({environment:angularApiUrl}/interfaces/RowType.html)
-* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-grid-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

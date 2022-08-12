@@ -1,6 +1,6 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid 列非表示 | Ignite UI for Angular | インフラジスティックス
+title: Angular Data Grid の列非表示 - Ignite UI for Angular
 _description: ユーザーが Ignite Material UI テーブルの UI で列の表示状態を変更できるようにする列非表示機能の使用方法。
 _keywords: column hiding, ignite ui for angular, infragistics, 列非表示
 _language: ja
@@ -8,7 +8,7 @@ _language: ja
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid 列非表示 | Ignite UI for Angular | インフラジスティックス
+title: Angular Tree Grid の列非表示 - Ignite UI for Angular
 _description: ユーザーが Ignite Material UI テーブルの UI で列の表示状態を変更できるようにする列非表示機能の使用方法。
 _keywords: column hiding, ignite ui for angular, infragistics, 列非表示
 _language: ja
@@ -16,14 +16,14 @@ _language: ja
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchical Grid 列非表示 | Ignite UI for Angular | インフラジスティックス
+title: Angular Hierarchical Grid の列非表示 - Ignite UI for Angular
 _description: ユーザーが Ignite Material UI テーブルの UI で列の表示状態を変更できるようにする列非表示機能の使用方法。
 _keywords: column hiding, ignite ui for angular, infragistics, 列非表示
 _language: ja
 ---
 }
 
-# @@igComponent の列非表示
+# Angular @@igComponent の列非表示
 
 Ignite UI for Angular @@igComponent は、[`IgxColumnHidingDirective`]({environment:angularApiUrl}/classes/igxcolumnhidingdirective.html) のある [`IgxColumnActionsComponent`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html) を提供し、ユーザーがユーザー インターフェイスを介して、または Angular コンポーネントを使用して列の非表示を実行できるようにします。Material UI Grid には組み込み列非表示 UI があり、これを @@igComponent のツールバーから使用して列の表示状態を変更できます。更に別のコンポーネントとして列非表示 UI を定義してページの必要な場所に配置できます。
 
@@ -202,19 +202,18 @@ Ignite UI for Angular @@igComponent は、[`IgxColumnHidingDirective`]({environm
 
 
 @@igComponent にはツールバーの列非表示 UI に便利なプロパティがあります。
-`igx-grid-toolbar-hiding` [`title`]({environment:angularApiUrl}/classes/igxgridtoolbarhidingcomponent.html#title) および [`hiddenColumnsText`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#hiddencolumnstext) プロパティを使用して、ツールバーのドロップダウン ボタンに表示されるタイトルおよびテキストを設定します。[`hiddenColumnsText`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#hiddencolumnstext) は列のカウント数の右に表示されます。カウントはデフォルトでボタンに含まれます。
-[`hiddenColumnsText`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#hiddencolumnstext) プロパティはローカライズにも使用できます。
+`igx-grid-toolbar-hiding` の [`title`]({environment:angularApiUrl}/classes/igxgridtoolbarhidingcomponent.html#title) プロパティを使用して、ツールバーのドロップダウン ボタン内に表示されるタイトルを設定します。
 
 @@if (igxName === 'IgxGrid' || igxName === 'IgxTreeGrid') {
 ```html
 <!--columnHiding.component.html-->
 
 <div class="grid__wrapper">
-    <@@igSelector hiddenColumnsText="Hidden">
+    <@@igSelector>
         <igx-grid-toolbar>
             <igx-grid-toolbar-title>Employees</igx-grid-toolbar-title>
             <igx-grid-toolbar-actions>
-                <igx-grid-toolbar-hiding title="Column Hiding"></igx-grid-toolbar-hiding>
+                <igx-grid-toolbar-hiding #hidingActionRef title="Column Hiding"></igx-grid-toolbar-hiding>
             </igx-grid-toolbar-actions>
         </igx-grid-toolbar>
     </@@igSelector>
@@ -224,11 +223,11 @@ Ignite UI for Angular @@igComponent は、[`IgxColumnHidingDirective`]({environm
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
 <div class="hgrid-sample">
-    <igx-hierarchical-grid class="hgrid" [data]="localdata" hiddenColumnsText="Hidden">
+    <igx-hierarchical-grid class="hgrid" [data]="localdata">
     <igx-grid-toolbar>
             <igx-grid-toolbar-title>Singers</igx-grid-toolbar-title>
             <igx-grid-toolbar-actions>
-                <igx-grid-toolbar-hiding title="Column Hiding"></igx-grid-toolbar-hiding>
+                <igx-grid-toolbar-hiding #hidingActionRef title="Column Hiding"></igx-grid-toolbar-hiding>
             </igx-grid-toolbar-actions>
     </igx-grid-toolbar>
  </igx-hierarchical-grid>
@@ -236,13 +235,13 @@ Ignite UI for Angular @@igComponent は、[`IgxColumnHidingDirective`]({environm
 ```
 }
 
-列非表示 UI の [`columnsAreaMaxHeight`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html#columnsareamaxheight) プロパティを使用すると、列を含む領域の最大の高さを設定できます。列が多すぎてコンテナーにすべて収まらない場合にスクロールバーが表示されるため、スクロールバーを使用して任意の列に移動できます。検索入力は上にピン固定されて、[すべて表示]/[すべて非表示] ボタンが下にピン固定されます。
+IgxGridToolbarHidingComponent の [`columnsAreaMaxHeight`]({environment:angularApiUrl}/classes/igxgridtoolbarhidingcomponent.html#columnsAreaMaxHeight) プロパティを使用して、列操作を含む領域の最大高さを設定できます。このように、多くの操作があり、それらのすべてがコンテナーに収まらない場合は、スクロールバーが表示され、必要な操作にスクロールできます。
 
 ```typescript
 // columnHiding.component.ts
 
-public ngAfterViewInit() {        
-    this.@@igObjectRef.toolbar.columnHidingUI.columnsAreaMaxHeight = "200px";
+public ngAfterViewInit() {
+    this.hidingActionRef.columnsAreaMaxHeight = "200px";
 }
 ```
 
@@ -469,29 +468,29 @@ export class AppModule {}
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単なアプローチを使用して、[`igx-column-actions-theme`]({environment:sassApiUrl}/index.html#function-igx-column-actions-theme) を拡張し、`$title-color` および `$background-color` パラメーターを受け取る新しいテーマを作成します。
+最も簡単なアプローチを使用して、[`column-actions-theme`]({environment:sassApiUrl}/index.html#function-column-actions-theme) を拡張し、`$title-color` および `$background-color` パラメーターを受け取る新しいテーマを作成します。
 
 ```scss
-$custom-column-actions-theme: igx-column-actions-theme(
+$custom-column-actions-theme: column-actions-theme(
     $background-color: steelblue,
     $title-color: gold
 );
 ```
 
-ご覧のように `igx-column-actions-theme` は列操作コンテナーの色のみを制御しますが、ボタン、チェックボックス、内部の入力グループには影響しません。ボタンのスタイルも設定したい場合、新しいボタン テーマを作成します。
+ご覧のように `column-actions-theme` は列操作コンテナーの色のみを制御しますが、ボタン、チェックボックス、内部の入力グループには影響しません。ボタンのスタイルも設定したい場合、新しいボタン テーマを作成します。
 
 ```scss
-$custom-button: igx-button-theme($flat-text-color: gold, $disabled-color: black);
+$custom-button: button-theme($flat-text-color: gold, $disabled-color: black);
 ```
 
-この例では、フラットボタンのテキストの色とボタンの無効な色のみを変更しましたが、[`igx-button-theme`]({environment:sassApiUrl}/index.html#function-igx-button-theme) の方がより多くの方法を提供します。ボタンのスタイルを制御するパラメーター。
+この例では、フラットボタンのテキストの色とボタンの無効な色のみを変更しましたが、[`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme) の方がより多くの方法を提供します。ボタンのスタイルを制御するパラメーター。
 
 最後にそれぞれのテーマを持つコンポーネント ミックスインを**含める**ことです。 
 
 ```scss
-@include igx-column-actions($custom-column-actions-theme);
+@include column-actions($custom-column-actions-theme);
 .igx-column-actions {
-    @include igx-button($custom-button);
+    @include button($custom-button);
 }
 ```
 
@@ -504,9 +503,9 @@ $custom-button: igx-button-theme($flat-text-color: gold, $disabled-color: black)
 ```scss
 :host {
     ::ng-deep {
-        @include igx-column-actions($custom-column-actions-theme);
+        @include column-actions($custom-column-actions-theme);
         .igx-column-actions {
-            @include igx-button($custom-button);
+            @include button($custom-button);
         }
     }
 }
@@ -522,21 +521,21 @@ $custom-button: igx-button-theme($flat-text-color: gold, $disabled-color: black)
 $yellow-color: gold;
 $blue-color: steelblue;
 
-$custom-palette: igx-palette($primary: $blue-color, $secondary: $yellow-color);
+$custom-palette: palette($primary: $blue-color, $secondary: $yellow-color);
 ```
 
 次に [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取得できます。 
 
 ```scss
-$custom-column-actions-theme: igx-column-actions-theme(
+$custom-column-actions-theme: column-actions-theme(
     $palette: $custom-palette,
-    $title-color: igx-color($custom-palette, "secondary", 400),
-    $background-color: igx-color($custom-palette, "primary", 200)
+    $title-color: color($custom-palette, "secondary", 400),
+    $background-color: color($custom-palette, "primary", 200)
 );
 
-$custom-button: igx-button-theme(
+$custom-button: button-theme(
     $palette: $custom-palette,
-    $flat-text-color: igx-color($custom-palette, "secondary", 400),
+    $flat-text-color: color($custom-palette, "secondary", 400),
     $disabled-color: black
 );
 ```
@@ -553,10 +552,10 @@ $custom-button: igx-button-theme(
 $custom-column-actions-schema: extend($_dark-column-actions,
     (
         title-color:(
-            igx-color: ("secondary", 400)
+           color: ("secondary", 400)
         ),
         background-color:(
-            igx-color: ("primary", 200)
+           color: ("primary", 200)
         )
     )
 );
@@ -564,10 +563,10 @@ $custom-column-actions-schema: extend($_dark-column-actions,
 $custom-button-schema: extend($_dark-button,
     (           
         flat-text-color:(
-            igx-color:("secondary", 500)
+           color:("secondary", 500)
         ),
         disabled-color:(
-            igx-color:("primary", 700)
+           color:("primary", 700)
         )
     )
 );
@@ -578,18 +577,18 @@ $custom-button-schema: extend($_dark-button,
 ```scss
 // Extending the global dark-schema
 $custom-dark-schema: extend($dark-schema,(
-    igx-column-actions: $custom-column-actions-schema,
-    igx-button: $custom-button-schema
+   column-actions: $custom-column-actions-schema,
+   button: $custom-button-schema
 ));
 
 // Defining column-actions-theme with the global dark schema
-$custom-column-actions-theme: igx-column-actions-theme(
+$custom-column-actions-theme: column-actions-theme(
   $palette: $custom-palette,
   $schema: $custom-dark-schema
 );
 
 // Defining button-theme with the global dark schema
-$custom-button: igx-button-theme(
+$custom-button: button-theme(
   $palette: $custom-palette,
   $schema: $custom-dark-schema
 );
@@ -639,28 +638,24 @@ $custom-button: igx-button-theme(
 以下は、列非表示 UI のその他の API です。
 
 * [IgxColumnActionsComponent]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html)
-* [IgxColumnActionsComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-column-actions-theme)
+* [IgxColumnActionsComponent スタイル]({environment:sassApiUrl}/index.html#function-column-actions-theme)
 
 その他のコンポーネントおよびディレクティブ (またはそのいずれか) で使用した API:
 
 [`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) プロパティ:
 * [hiddenColumnsCount]({environment:angularApiUrl}/classes/@@igTypeDoc.html#hiddencolumnscount)
-* [hiddenColumnsText]({environment:angularApiUrl}/classes/@@igTypeDoc.html#hiddencolumnstext)
 
 [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) プロパティ:
 * [disableHiding]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disablehiding)
 
 [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) プロパティ:
-* [columnHidingUI]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html#columnhidingui)
-* [columnHidingDropdown]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html#columnhidingdropdown)
-* [toolbarHiding]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html#igxgridtoolbarhidingcomponent.html)
+* [showProgress]({environment:angularApiUrl}/classes/IgxGridToolbarComponent.html#showProgress)
 
 [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) ディレクティブ:
 * [titleDirective]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html#igxgridtoolbartitledirective.html)
 * [actionsDirective]({environment:angularApiUrl}/classes/igxgridtoolbaractionsdirective.html)
 
 [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) メソッド:
-* [toggleColumnHidingUI]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html#togglecolumnhidingui)
 
 [`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) イベント:
 * [columnVisibilityChanged]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnVisibilityChanged)
@@ -669,8 +664,8 @@ $custom-button: igx-button-theme(
 
 スタイル:
 
-* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
-* [IgxRadioComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-radio-theme)
+* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-grid-theme)
+* [IgxRadioComponent スタイル]({environment:sassApiUrl}/index.html#function-radio-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

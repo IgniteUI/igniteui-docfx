@@ -39,9 +39,9 @@ export class AppModule {}
 
 ```html
 <igx-circular-bar
-[value]="100"
-[animate]="true"
-class="custom-size"
+    [value]="100"
+    [animate]="true"
+    class="custom-size"
 ></igx-circular-bar>
 ```
 
@@ -60,9 +60,9 @@ class="custom-size"
 
 ```html
 <igx-circular-bar
-[animate]="false"
-[indeterminate]="true"
-[textVisibility]="false"
+    [animate]="false"
+    [indeterminate]="true"
+    [textVisibility]="false"
 ></igx-circular-bar>
 ```
 
@@ -86,11 +86,11 @@ class="custom-size"
 ```html
 <div class="sample-content">
     <igx-circular-bar
-    [value]="currentValue"
-    [max]="100"
-    [animate]="true"
-    class="custom-size"
-    >
+        [value]="currentValue"
+        [max]="100"
+        [animate]="true"
+        class="custom-size">
+    </igx-circular-bar>
     <div class="button-container">
         <button igxButton="icon" (click)="decrementProgress()">
             <igx-icon fontSet="material">remove</igx-icon>
@@ -152,7 +152,7 @@ public decrementProgress() {
 ```scss
 $colors: #695cf9, #ef017c;
 
-$custom-theme: igx-progress-circular-theme(
+$custom-theme: progress-circular-theme(
     $progress-circle-color: $colors
     
 );
@@ -165,11 +165,10 @@ $custom-theme: igx-progress-circular-theme(
 ```html
 <div class="sample-content">
   <igx-circular-bar
-  [value]="currentValue"
-  [max]="100"
-  [animate]="true"
-  class="custom-size"
-  >
+    [value]="currentValue"
+    [max]="100"
+    [animate]="true"
+    class="custom-size">
       <ng-template igxProgressBarGradient let-id>
           <svg:linearGradient [id]="id" gradientTransform="rotate(90)">
               <stop offset="0%"   stop-color="#ff9a40"/>
@@ -211,10 +210,10 @@ $custom-theme: igx-progress-circular-theme(
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単な方法として、[`igx-progress-circular-theme`]({environment:sassApiUrl}/index.html#function-igx-progress-circular-theme) を拡張し、`$base-circle-color` および `$progress-circle-color` パラメーターを受け取る新しいテーマを作成する方法があります。
+最も簡単な方法として、[`progress-circular-theme`]({environment:sassApiUrl}/index.html#function-progress-circular-theme) を拡張し、`$base-circle-color` および `$progress-circle-color` パラメーターを受け取る新しいテーマを作成する方法があります。
 
 ```scss
-$custom-theme: igx-progress-circular-theme(
+$custom-theme: progress-circular-theme(
     $base-circle-color: lightgray,
     $progress-circle-color: rgb(32, 192, 17)
 );
@@ -229,7 +228,7 @@ $custom-theme: igx-progress-circular-theme(
 `$legacy-support` が `true` に設定されている場合、**コンポーネントのテーマ**を以下のように含めます。
 
 ```scss
- @include igx-progress-circular($custom-theme);
+ @include progress-circular($custom-theme);
 ```
 >[!NOTE]
 >コンポーネントが [`Emulated`](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
@@ -237,7 +236,7 @@ $custom-theme: igx-progress-circular-theme(
 ```scss
 :host {
      ::ng-deep {
-        @include igx-progress-circular($custom-theme);
+        @include progress-circular($custom-theme);
     }
 }
 ```
@@ -247,7 +246,7 @@ $custom-theme: igx-progress-circular-theme(
 `$legacy-support` が `false` (デフォルト) に設定されている場合、**css 変数** を以下のように含めます。
 
 ```scss
-@include igx-css-vars($custom-theme);
+@include css-vars($custom-theme);
 ```
 
 >[!NOTE]
@@ -255,7 +254,7 @@ $custom-theme: igx-progress-circular-theme(
 
 ```scss
 :host {
-    @include igx-css-vars($custom-theme);
+    @include css-vars($custom-theme);
 }
 ```
 
@@ -272,4 +271,4 @@ $custom-theme: igx-progress-circular-theme(
 <div class="divider--half"></div>
 
 * [IgxCircularProgressBarComponent]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html)
-* [IgxCircularProgressBarComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-progress-circular-theme)
+* [IgxCircularProgressBarComponent スタイル]({environment:sassApiUrl}/index.html#function-progress-circular-theme)

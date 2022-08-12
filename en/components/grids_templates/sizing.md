@@ -1,13 +1,13 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title:  Angular Grid Sizing | Ignite UI for Angular | infragistics 
+title: Angular Grid Sizing - Ignite UI for Angular 
 _description: Understand how the Angular grid sizing works and learn how to use the width and height in order to accommodate the different scenarios that users can have.
 _keywords: angular grid sizing, igniteui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title:  Angular Tree Grid Sizing | Ignite UI for Angular | infragistics 
+title: Angular Tree Grid Sizing - Ignite UI for Angular 
 _description: Understand how the Angular grid sizing works and learn how to use the width and height in order to accommodate the different scenarios that users can have.
 _keywords: angular grid sizing, igniteui for angular, infragistics
 _canonicalLink: grid/sizing
@@ -15,14 +15,14 @@ _canonicalLink: grid/sizing
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title:  Angular Hierarchical Grid Sizing | Ignite UI for Angular | infragistics 
+title: Angular Hierarchical Grid Sizing - Ignite UI for Angular 
 _description: Understand how the Angular grid sizing works and learn how to use the width and height in order to accommodate the different scenarios that users can have.
 _keywords:  angular grid sizing, igniteui for angular, infragistics
 _canonicalLink: grid/sizing
 ---
 }
 
-# Grid Sizing Overview
+# Angular Grid Sizing
 
 There are many different ways to size the [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) in order to accommodate a lot of scenarios that the users can have. While some are straight forward, others might be more complex and that is why we will take each one and look into them in more depth. We will go through setting `width` and `height` separately since there are some differences e.g. when using percentages for each.
 
@@ -265,7 +265,7 @@ The difference is that for the child grid, when `height` is set to percentages, 
 
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html
 @@if (igxName !== 'IgxTreeGrid') {* [IgxGridRow API]({environment:angularApiUrl}/classes/igxgridrow.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRow API]({environment:angularApiUrl}/classes/igxtreegridrow.html)}
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-grid-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>

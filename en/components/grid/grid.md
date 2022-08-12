@@ -1,6 +1,6 @@
 ---
 title: Angular Data Grid | Build Fast Angular Tables | Infragistics
-_description: Create super fast, responsive Angular data grids and tables with Ignite UI for Angular. Supports  editing, filtering, data binding and many more. 30 days free trial
+_description: Create super fast, responsive Angular data grids and tables with Ignite UI for Angular. Supports  editing, filtering, data binding and many more. Try it now!
 _keywords: angular data grid, angular material table, ignite ui for angular
 ---
 
@@ -136,9 +136,9 @@ To facilitate your work, apply the comment in the `src/styles.scss` file.
 
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-@include igx-core();
+@include core();
 /* autoprefixer grid:on */
-@include igx-theme($default-palette);
+@include theme($default-palette);
  ```
 
 ## Editable Grid Angular
@@ -570,9 +570,23 @@ configuration. Same goes for grouping and editing operations with or without tra
 
 An alternative way to bind complex data, or to visualize composite data (from more than one column) in the **IgxGrid** is to use a custom body template for the column. Generally, one can:
     - use the `value` of the cell, that contains the nested data
-    - use the `cell` object in the template, from which to access the `data`, therefore retrieve any value from it, i.e `cell.data[field]`
+    - use the `cell` object in the template, from which to access the `row.data`, therefore retrieve any value from it, i.e `cell.row.data[field]` and `cell.row.data[field][nestedField]` 
 
 and interpolate it those in the template.
+
+```html
+<igx-column field="abbreviation.long" header="Long">
+    <ng-template igxCell let-cell="cell">
+        <div>
+            <div>
+                {{ cell.value }}
+                {{ cell.row.data['name'] }}  
+                {{ cell.row.data['weight']['molecular'] }}
+            </div>
+        </div>
+    </ng-template>
+</igx-column>
+```
 
 Below is the data that we are going to use:
 
@@ -753,6 +767,22 @@ Achieving a state persistence framework is easier than ever by using the new bui
 
 See the [Grid Sizing](sizing.md) topic.
 
+## Performance (Experimental)
+
+The `IgxGridComponent`'s design allows it to take advantage of the Event Coalescing feature that has Angular introduced. This feature allows for improved performance with roughly around **`20%`** in terms of interactions and responsiveness. This feature can be enabled on application level by simply setting the `ngZoneEventCoalescing ` and `ngZoneRunCoalescing` properties to `true` in the `bootstrapModule` method:
+
+```typescript
+platformBrowserDynamic()
+  .bootstrapModule(AppModule, { ngZoneEventCoalescing: true, ngZoneRunCoalescing: true })
+  .catch(err => console.error(err));
+```
+
+>[!NOTE]
+> This is still in experimental feature for the `IgxGridComponent`. This means that there might be some unexpected behaviors in the Grid. In case of encountering any such behavior, please contact us on our [Github](https://github.com/IgniteUI/igniteui-angular/discussions) page.
+
+>[!NOTE]
+> Enabling it can affects other parts of an Angular application that the `IgxGridComponent` is not related to.
+
 ## Known Limitations
 
 |Limitation|Description|
@@ -772,22 +802,32 @@ See the [Grid Sizing](sizing.md) topic.
 
 ## API References
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent Styles]({environment:sassApiUrl}/#function-igx-grid-theme)
+* [IgxGridComponent Styles]({environment:sassApiUrl}/#function-grid-theme)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html)
 * [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
 
 ## Theming Dependencies
-* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
-* [IgxInputGroup Theme]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
-* [IgxChip Theme]({environment:sassApiUrl}/index.html#function-igx-chip-theme)
-* [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
-* [IgxButton Theme]({environment:sassApiUrl}/index.html#function-igx-button-theme)
-* [IgxOverlay Theme]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
-* [IgxDropDown Theme]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme)
-* [IgxCalendar Theme]({environment:sassApiUrl}/index.html#function-igx-calendar-theme)
-* [IgxSnackBar Theme]({environment:sassApiUrl}/index.html#function-igx-snackbar-theme)
-* [IgxBadge Theme]({environment:sassApiUrl}/index.html#function-igx-badge-theme)
+* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxInputGroup Theme]({environment:sassApiUrl}/index.html#function-input-group-theme)
+* [IgxChip Theme]({environment:sassApiUrl}/index.html#function-chip-theme)
+* [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-ripple-theme)
+* [IgxButton Theme]({environment:sassApiUrl}/index.html#function-button-theme)
+* [IgxOverlay Theme]({environment:sassApiUrl}/index.html#function-overlay-theme)
+* [IgxDropDown Theme]({environment:sassApiUrl}/index.html#function-drop-down-theme)
+* [IgxCalendar Theme]({environment:sassApiUrl}/index.html#function-calendar-theme)
+* [IgxSnackBar Theme]({environment:sassApiUrl}/index.html#function-snackbar-theme)
+* [IgxBadge Theme]({environment:sassApiUrl}/index.html#function-badge-theme)
+
+## Tutorial video
+Learn more about creating an Angular data grid in our short tutorial video:
+
+> [!Video https://www.youtube.com/embed/Xv_fQVQ8fmM]
+
+## Tutorial video
+Learn more about creating an Angular data grid in our short tutorial video:
+
+> [!Video https://www.youtube.com/embed/Xv_fQVQ8fmM]
 
 ## Additional Resources
 <div class="divider--half"></div>

@@ -161,7 +161,7 @@ Here is an example of localizing the month picker component:
 
 * [IgxMonthPickerComponent]({environment:angularApiUrl}/classes/igxmonthpickercomponent.html)
 * [IgxCalendarComponent]({environment:angularApiUrl}/classes/igxcalendarcomponent.html)
-* [IgxCalendarComponent Styles]({environment:sassApiUrl}/index.html#function-igx-calendar-theme)
+* [IgxCalendarComponent Styles]({environment:sassApiUrl}/index.html#function-calendar-theme)
 
 <div class="divider--half"></div>
 

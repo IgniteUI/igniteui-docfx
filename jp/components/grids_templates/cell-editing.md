@@ -1,29 +1,29 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid セル編集 | データの変更 | Ignite UI for Angular | Infragistics
-_description: 機能豊富な Angular UI グリッドのセルデータ操作機能や Ignite UI for Angular グリッド編集機能を使用した CRUD (クラッド) をお試しください。
-_keywords: データ操作, ignite ui for angular, インフラジスティックス
+title: Angular Data Grid セル編集 - Ignite UI for Angular
+_description: Grid はセル内編集を使用しています。デフォルトのセル編集テンプレートがありますが、データ更新操作のカスタム テンプレートを定義することもできます。今すぐお試しください。
+_keywords: データ操作, ignite ui for angular, excel editing, excel 編集, インフラジスティックス
 _language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular TreeGrid セル編集 | データの変更 | Ignite UI for Angular
-_description: 機能豊富な Angular UI グリッドのセルデータ操作機能や Ignite UI for Angular ツリー グリッド編集機能を使用した CRUD (クラッド) をお試しください。
+title: Angular Tree Grid のセル編集 - Ignite UI for Angular
+_description: Grid はセル内編集を使用しています。デフォルトのセル編集テンプレートがありますが、データ更新操作のカスタム テンプレートを定義することもできます。今すぐお試しください。
 _keywords: データ操作, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular HierarchicalGrid セル編集 | データの変更 | Ignite UI for Angular
-_description: 機能豊富な Angular UI グリッドのセルデータ操作機能や Ignite UI for Angular 階層グリッド編集機能を使用した CRUD (クラッド) をお試しください。
+title: Angular Hierarchical Grid のセル編集 - Ignite UI for Angular
+_description: Grid はセル内編集を使用しています。デフォルトのセル編集テンプレートがありますが、データ更新操作のカスタム テンプレートを定義することもできます。今すぐお試しください。
 _keywords: データ操作, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
 }
 
-# @@igComponent セル編集とセル テンプレート
+# Angular @@igComponent のセル編集
 
 Ignite UI for Angular @@igComponent コンポーネントは、Angular CRUD 操作のための優れたデータ操作機能と強力な API を提供します。デフォルトで @@igComponent は**セル編集**を使用し、**デフォルトのセル編集テンプレート**によって、列のデータ型に基づいてさまざまなエディターが表示されます。さらに、データ更新アクション用の独自のカスタム テンプレートを定義したり、変更をコミット/破棄したりするためのデフォルトの動作をオーバーライドすることもできます。
 
@@ -182,6 +182,89 @@ public updateCell() {
 
 列とそのテンプレートの構成方法の詳細については、[グリッド列構成](../grid/grid.md#angular-grid-列の構成)のドキュメントを参照してください。
 
+@@if (igxName === 'IgxGrid') {
+
+### @@igComponent Excel スタイル編集
+
+
+Excel スタイル編集を使用すると、Excel を使用する場合と同じようにセルをナビゲートし、すばやく編集できます。
+
+このカスタム機能を実装するには、グリッドのイベントを使用します。最初にグリッドの keydown イベントにフックし、そこから 2 つの機能を実装できます。
+
+* 常時編集モード
+
+```typescript
+public keydownHandler(event) {
+  const key = event.keyCode;
+  const grid = this.grid;
+  const activeElem = grid.navigation.activeNode;
+
+  if(
+    (key >= 48 && key <= 57) ||
+    (key >= 65 && key <= 90) ||
+    (key >= 97 && key <= 122)){
+        // Number or Alphabet upper case or Alphabet lower case
+        const columnName = grid.getColumnByVisibleIndex(activeElem.column).field;
+        const cell = grid.getCellByColumn(activeElem.row, columnName);
+        if (cell && !grid.crudService.cellInEditMode) {
+            grid.crudService.enterEditMode(cell);
+            cell.editValue = event.key;
+        }
+    }
+}
+```
+
+  * `Enter` / `Shift + Enter` ナビゲーション
+
+```typescript
+if (key == 13) {
+    let thisRow = activeElem.row;
+    const column = activeElem.column;
+    const rowInfo = grid.dataView;
+
+    // to find the next eiligible cell, we will use a custom method that will check the next suitable index
+    let nextRow = this.getNextEditableRowIndex(thisRow, rowInfo, event.shiftKey);
+
+    // and then we will navigate to it using the grid's built in method navigateTo
+    this.grid.navigateTo(nextRow, column, (obj) => {
+        obj.target.activate();
+        this.grid.clearCellSelection();
+        this.cdr.detectChanges();
+    });
+}
+```
+次の適格なインデックスを見つけるための重要な部分は以下のようになります。
+
+```typescript
+//first we check if the currently selected cell is the first or the last
+if (currentRowIndex < 0 || (currentRowIndex === 0 && previous) || (currentRowIndex >= dataView.length - 1 && !previous)) {
+return currentRowIndex;
+}
+// in case using shift + enter combination, we look for the first suitable cell going up the field
+if(previous){
+return  dataView.findLastIndex((rec, index) => index < currentRowIndex && this.isEditableDataRecordAtIndex(index, dataView));
+}
+// or for the next one down the field
+return dataView.findIndex((rec, index) => index > currentRowIndex && this.isEditableDataRecordAtIndex(index, dataView));
+```
+
+詳細については、サンプルを参照してください。
+
+##### Angular Grid Excel スタイル編集のサンプル
+
+<code-view style="height:550px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/grid/grid-editing-excel-style" alt="Angular Grid Excel スタイル編集の例">
+</code-view>
+
+
+上記のアプローチの主な利点は次のとおりです:
+
+- 常時編集モード: セルが選択されているときに入力すると、編集モードに入り、入力された値が既存の値を置き換えます。
+- `Enter` / `Shift + Enter` で移動する場合、データ以外の行はスキップされます。これにより、ユーザーは値をすばやく切り替えることができます。
+
+}
+
 ## CRUD 操作
 
 > [!NOTE]
@@ -316,18 +399,18 @@ row.delete();
 
 ### 編集イベントでのセル検証
 グリッドの編集イベントを使用して、ユーザーがグリッドを操作する方法を変更できます。
-この例では、[`onCellEdit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#oncelledit) イベントにバインドすることにより、入力されたデータに基づいてセルを検証します。セルの新しい値が事前定義された基準を満たしていない場合、イベントをキャンセルすることでデータソースに到達しないようにします (`event.cancel = true`)。また、[`IgxToast`](../toast.md) を使用してカスタム エラーメッセージを表示します。
+この例では、[`cellEdit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#cellEdit) イベントにバインドすることにより、入力されたデータに基づいてセルを検証します。セルの新しい値が事前定義された基準を満たしていない場合、イベントをキャンセルすることでデータソースに到達しないようにします (`event.cancel = true`)。また、[`IgxToast`](../toast.md) を使用してカスタム エラーメッセージを表示します。
 
 最初に必要なことは、グリッドのイベントにバインドすることです。
 
 ```html
-<@@igSelector (onCellEdit)="handleCellEdit($event)"
+<@@igSelector (cellEdit)="handleCellEdit($event)"
 ...>
 ...
 </@@igSelector>
 ```
 
-`onCellEdit` は、セルの値がコミットされる直前に発生します。`handleCellEdit` の定義では、アクションを実行する前に特定の列を確認する必要があります。
+`cellEdit` は、セルの値がコミットされる直前に発生します。`handleCellEdit` の定義では、アクションを実行する前に特定の列を確認する必要があります。
 
 @@if (igxName === 'IgxGrid') {
 ```typescript
@@ -426,7 +509,7 @@ export class MyHGridEventsComponent {
 
 ## スタイル設定
 
-@@ igxName で [Ignite UI for Angular テーマ ライブラリ](../themes/sass/component-themes.md) を使用してセルのスタイルを設定できます。グリッドの [theme]({environment:sassApiUrl}/index.html#function-igx-grid-theme) は、ユーザーがグリッドのさまざまな側面をスタイル設定できる広範なプロパティを公開します。
+@@ igxName で [Ignite UI for Angular テーマ ライブラリ](../themes/sass/component-themes.md) を使用してセルのスタイルを設定できます。グリッドの [theme]({environment:sassApiUrl}/index.html#function-grid-theme) は、ユーザーがグリッドのさまざまな側面をスタイル設定できる広範なプロパティを公開します。
 
 以下の手順では、編集モードでグリッドのセルのスタイルを設定する方法と、それらのスタイルの範囲を設定する方法について説明します。
 
@@ -451,19 +534,19 @@ export class MyHGridEventsComponent {
 $white: #fff;
 $blue: #4567bb;
 
-$color-palette: igx-palette($primary: $white, $secondary: $blue);
+$color-palette: palette($primary: $white, $secondary: $blue);
 ```
 
 ### テーマの定義
 
-これで、パレットを使用してテーマを定義できます。セルは [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) によってスタイル設定されているため、それを使用して @@igxName のテーマを生成できます。
+これで、パレットを使用してテーマを定義できます。セルは [`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) によってスタイル設定されているため、それを使用して @@igxName のテーマを生成できます。
 
 ```scss
-$custom-grid-theme: igx-grid-theme(
+$custom-grid-theme: grid-theme(
     $cell-editing-background: $blue,
     $cell-edited-value-color: $white,
     $cell-active-border-color: $white,
-    $edit-mode-color: igx-color($color-palette, "secondary", 200)
+    $edit-mode-color: color($color-palette, "secondary", 200)
 );
 ```
 
@@ -472,7 +555,7 @@ $custom-grid-theme: igx-grid-theme(
 テーマを適用する最も簡単な方法は、グローバル スタイル ファイルに `sass` `@include` ステートメントを使用することです。
 
 ```scss
-@include igx-grid($custom-grid-theme);
+@include grid($custom-grid-theme);
 ```
 
 これにより、テーマはアプリケーションの**すべて**のグリッドに適用されます。このカスタム スタイルを特定のコンポーネントにのみ適用する場合は、テーマのスコープを設定する必要があります。
@@ -491,7 +574,7 @@ $custom-grid-theme: igx-grid-theme(
 ```scss
 :host {
     ::ng-deep {
-            @include igx-grid($custom-grid-theme);
+            @include grid($custom-grid-theme);
         }
     }
 }
@@ -533,15 +616,15 @@ $custom-grid-theme: igx-grid-theme(
 ## API リファレンス
 
 * [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
-* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-grid-theme)
 @@if (igxName !== 'IgxTreeGrid') {* [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)}
 * [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
 * [IgxDatePickerComponent]({environment:angularApiUrl}/classes/igxdatepickercomponent.html)
 * [IgxDatePickerComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-date-picker-theme)
 * [IgxCheckboxComponent]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html)
-* [IgxCheckboxComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-checkbox-theme)
+* [IgxCheckboxComponent スタイル]({environment:sassApiUrl}/index.html#function-checkbox-theme)
 * [IgxOverlay]({environment:angularApiUrl}/interfaces/overlaysettings.html)
-* [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+* [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-overlay-theme)
 
 
 ## その他のリソース

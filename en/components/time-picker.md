@@ -158,6 +158,21 @@ And there we have it, a re-templated time picker with dropdown, custom actions a
 
 <div class="divider--half"></div>
 
+## Customizing the toggle and clear icons
+The [`IgxTimePickerComponent`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html) can be configured with [`IgxPickerToggleComponent`]({environment:angularApiUrl}/classes/igxpickertogglecomponent.html) and [`IgxPickerClearComponent`]({environment:angularApiUrl}/classes/igxpickerclearcomponent.html), these can be used to change the toggle and clear icons without having to add your own click handlers.
+
+```html
+ <igx-time-picker>
+    <label igxLabel>Select time</label>
+    <igx-picker-toggle igxPrefix>
+        <igx-icon>snooze</igx-icon>
+    </igx-picker-toggle>
+    <igx-picker-clear igxSuffix>
+        <igx-icon>delete</igx-icon>
+    </igx-picker-clear>
+</igx-time-picker>
+```
+
 ### Keyboard Navigation
 * Users can navigate the component's time portions via the keyboard <kbd>Up</kbd> and <kbd>Down</kbd> arrow keys or by scrolling in the input field and in the dropdown/dialog. Navigation in the input is possible regardless of the [`minValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#minvalue) or [`maxValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#maxvalue), while navigation in the dropdown/dialog will be restricted within the [`minValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#minvalue) and [`maxValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#maxvalue) range.
 * The time picker dropdown can be opened either by toggle icon click, <kbd>Space</kbd> key or <kbd>Alt</kbd> + <kbd>Down</kbd> keys press. In dialog mode this can be done by input click.
@@ -322,10 +337,10 @@ To get started with styling the time picker, we need to import the `index` file,
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`igx-time-picker-theme`]({environment:sassApiUrl}/index.html#function-igx-dialog-theme) and accepts parameters that style the time picker.
+Following the simplest approach, we create a new theme that extends the [`time-picker-theme`]({environment:sassApiUrl}/index.html#function-dialog-theme) and accepts parameters that style the time picker.
 
 ```scss
-$my-time-picker-theme: igx-time-picker-theme(
+$my-time-picker-theme: time-picker-theme(
   $text-color: #E4C8A5,
   $hover-text-color: #ECAA53,
   $selected-text-color: #ECAA53,
@@ -371,7 +386,7 @@ The last step is to **include** the component theme in our application.
 If `$legacy-support` is set to `true`, include the **theme** like that:
 
 ```scss
- @include igx-time-picker($my-time-picker-theme);
+ @include time-picker($my-time-picker-theme);
 ```
 >[!NOTE]
 >If the component is using an [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`
@@ -379,7 +394,7 @@ If `$legacy-support` is set to `true`, include the **theme** like that:
 ```scss
 :host {
      ::ng-deep {
-        @include igx-time-picker($my-time-picker-theme);
+        @include time-picker($my-time-picker-theme);
     }
 }
 ```
@@ -389,7 +404,7 @@ If `$legacy-support` is set to `true`, include the **theme** like that:
 If `$legacy-support` is set to `false`(default), include the component **css variables** like that:
 
 ```scss
-@include igx-css-vars($my-time-picker-theme);
+@include css-vars($my-time-picker-theme);
 ```
 
 >[!NOTE]
@@ -397,7 +412,7 @@ If `$legacy-support` is set to `false`(default), include the component **css var
 
 ```scss
 :host {
-    @include igx-css-vars($my-time-picker-theme);
+    @include css-vars($my-time-picker-theme);
 }
 ```
 
@@ -417,15 +432,15 @@ If `$legacy-support` is set to `false`(default), include the component **css var
 * [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 * [IgxTimePickerComponent]({environment:angularApiUrl}/classes/igxtimepickercomponent.html)
-* [IgxTimePickerComponent Styles]({environment:sassApiUrl}/index.html#function-igx-time-picker-theme)
+* [IgxTimePickerComponent Styles]({environment:sassApiUrl}/index.html#function-time-picker-theme)
 * [IgxOverlayService]({environment:angularApiUrl}/classes/igxoverlayservice.html)
-* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-overlay-theme)
 
 ## Theming Dependencies
-* [IgxInputGroup Theme]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
-* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
-* [IgxButton Theme]({environment:sassApiUrl}/index.html#function-igx-button-theme)
-* [IgxOverlay Theme]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+* [IgxInputGroup Theme]({environment:sassApiUrl}/index.html#function-input-group-theme)
+* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxButton Theme]({environment:sassApiUrl}/index.html#function-button-theme)
+* [IgxOverlay Theme]({environment:sassApiUrl}/index.html#function-overlay-theme)
 
 ## Additional Resources
 * [Date Time Editor](date-time-editor.md)

@@ -2,13 +2,13 @@
 title: Angular マップ | データ可視化ツール | 地理的シェープ ファイルのバインディング | インフラジスティックス
 _description: インフラジスティックスの Angular JavaScript マップを使用して、シェイプ ファイルから地理空間データを読み込みます。Ignite UI for Angular マップのサンプルを是非お試しください!
 _keywords: Angular map, shapefiles, Ignite UI for Angular, Infragistics, data binding, Angular マップ, シェープファイル, データ バインディング, インフラジスティックス
-mentionedTypes: ['XamGeographicMap', 'ShapefileConverter']
+mentionedTypes: ['XamGeographicMap', 'ShapefileConverter', 'Series']
 _language: ja
 ---
 
 # Angular シェープ ファイルを地理的データにバインディング
 
-Ignite UI for Angular Map コンポーネントの `ShapeDataSource` クラスは、形状ファイルから地理空間データ (ポイント/位置、ポリライン、ポリゴン) を読み込み、それを [`IgxShapefileRecord`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapefilerecord.html) オブジェクトのコレクションに変換します。
+Ignite UI for Angular Map コンポーネントの [`IgxShapeDataSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapedatasource.html) クラスは、形状ファイルから地理空間データ (ポイント/位置、ポリライン、ポリゴン) を読み込み、それを [`IgxShapefileRecord`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapefilerecord.html) オブジェクトのコレクションに変換します。
 
 ## Angular シェープ ファイルを地理的データにバインディングの例
 
@@ -19,9 +19,20 @@ Ignite UI for Angular Map コンポーネントの `ShapeDataSource` クラス�
            github-src="maps/geo-map/binding-shp-polylines">
 </code-view>
 
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <body>
+      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/maps/geo-map/binding-shp-polylines?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
+            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
+        </a>
+        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/maps/geo-map/binding-shp-polylines?file=src%2Fapp.component.html" rel="noopener noreferrer">
+            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
+        </a>
+    </body>
+</html>
+
 <div class="divider--half"></div>
 
-以下の表は、シェイプ ファイルを読み込むための `ShapeDataSource` クラスのプロパティを説明します。
+以下の表は、シェイプ ファイルを読み込むための [`IgxShapeDataSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapedatasource.html) クラスのプロパティを説明します。
 
 | プロパティ                                                                                                                                                 | 型      | 概要                                                    |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------ | ----------------------------------------------------- |
@@ -32,15 +43,15 @@ Ignite UI for Angular Map コンポーネントの `ShapeDataSource` クラス�
 
 <!-- Both of the source properties for shape files are of Uri type. This means that shape files can be embedded resources in the application assembly and on the internet (via http). Refer to the previous section for more information on this process. The rules for resolving Uri objects are equivalent to any standard Uri property, for example the BitmapImage.UriSource property. -->
 
-両方のソース プロパティが null 以外の値に設定されると、`ShapeDataSource` オブジェクトの ImportAsync メソッドが起動し、シェイプ ファイルを取得して読み込み、最終的に変換を実行します。この操作が完了すると、`ShapeDataSource` は [`IgxShapefileRecord`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapefilerecord.html) オブジェクトで生成され、シェイプ ファイルから地理空間データを読み込んで変換するプロセスが完了したことを通知するために、`ImportCompleted` イベントが起動されます。
+両方のソース プロパティが null 以外の値に設定されると、[`IgxShapeDataSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapedatasource.html) オブジェクトの ImportAsync メソッドが起動し、シェイプ ファイルを取得して読み込み、最終的に変換を実行します。この操作が完了すると、[`IgxShapeDataSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapedatasource.html) は [`IgxShapefileRecord`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapefilerecord.html) オブジェクトで生成され、シェイプ ファイルから地理空間データを読み込んで変換するプロセスが完了したことを通知するために、`ImportCompleted` イベントが起動されます。
 
 ## シェープファイルの読み込み
 
-以下のコードは、世界の主要都市の場所を含むシェイプ ファイルを読み込むための `ShapeDataSource` オブジェクトのインスタンスを作成します。また、xamGeographicMap コントロールにデータをバインドするための前提条件として `ImportCompleted` イベントを処理する方法も示します。
+以下のコードは、世界の主要都市の場所を含むシェイプ ファイルを読み込むための [`IgxShapeDataSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapedatasource.html) オブジェクトのインスタンスを作成します。また、xamGeographicMap コントロールにデータをバインドするための前提条件として `ImportCompleted` イベントを処理する方法も示します。
 
 ## シェープファイルをバインド
 
-Map コンポーネントでは、Geographic Series は、シェイプ ファイルから読み込まれる地理的データを表示するために使用されます。すべてのタイプの地理的シリーズには、オブジェクトの配列にバインドできる `ItemsSource` プロパティがあります。`ShapeDataSource` は [`IgxShapefileRecord`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapefilerecord.html) オブジェクトのリストを含むため、このような配列の例です。
+Map コンポーネントでは、Geographic Series は、シェイプ ファイルから読み込まれる地理的データを表示するために使用されます。すべてのタイプの地理的シリーズには、オブジェクトの配列にバインドできる `ItemsSource` プロパティがあります。[`IgxShapeDataSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapedatasource.html) は [`IgxShapefileRecord`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapefilerecord.html) オブジェクトのリストを含むため、このような配列の例です。
 
 [`IgxShapefileRecord`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapefilerecord.html) クラスは、以下の表にリストする地理的データを保存するためのプロパティを提供します。
 
@@ -54,8 +65,8 @@ Map コンポーネントでは、Geographic Series は、シェイプ ファイ
 
 ## コード スニペット
 
-このコード例は、シェープ ファイルが `ShapeDataSource` を使用して読み込まれたことを前提としています。
-以下のコードは、マップ コンポーネント内の [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) を `ShapeDataSource` にバインドし、すべての [`IgxShapefileRecord`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapefilerecord.html) オブジェクトの `Points` プロパティをマップします。
+このコード例は、シェープ ファイルが [`IgxShapeDataSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapedatasource.html) を使用して読み込まれたことを前提としています。
+以下のコードは、マップ コンポーネント内の [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) を [`IgxShapeDataSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapedatasource.html) にバインドし、すべての [`IgxShapefileRecord`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapefilerecord.html) オブジェクトの `Points` プロパティをマップします。
 
 ```html
 <div className="sampleRoot" >
@@ -137,3 +148,12 @@ export class MapBindingShapefilePolylinesComponent implements AfterViewInit {
         }
 }
 ```
+
+## API メンバー
+
+-   `Fields`
+-   [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html)
+-   `ImportCompleted`
+-   `ItemsSource`
+-   `Points`
+-   [`IgxShapeDataSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapedatasource.html)

@@ -113,11 +113,11 @@ igx-switch {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-次に、[`igx-switch-theme`]({environment:sassApiUrl}/index.html#function-igx-switch-theme) を拡張する新しいテーマを作成し、そのパラメーターを使用してスイッチの項目をスタイル設定します。
+次に、[`switch-theme`]({environment:sassApiUrl}/index.html#function-switch-theme) を拡張する新しいテーマを作成し、そのパラメーターを使用してスイッチの項目をスタイル設定します。
 
 ```scss
 // in styles.scss
-$custom-switch-theme: igx-switch-theme(
+$custom-switch-theme: switch-theme(
     $thumb-on-color: #ECAA53,
     $track-on-color: #F0CB9C
 );
@@ -132,7 +132,7 @@ $custom-switch-theme: igx-switch-theme(
 `$legacy-support` が `true` に設定されている場合、**コンポーネントのテーマ**を以下のように含めます。
 
 ```scss
- @include igx-switch($custom-switch-theme);
+ @include switch($custom-switch-theme);
 ```
 >[!NOTE]
 >コンポーネントが [`Emulated`](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
@@ -140,7 +140,7 @@ $custom-switch-theme: igx-switch-theme(
 ```scss
 :host {
     ::ng-deep {
-        @include igx-switch($custom-switch-theme);
+        @include switch($custom-switch-theme);
     }
 }
 ```
@@ -150,7 +150,7 @@ $custom-switch-theme: igx-switch-theme(
 `$legacy-support` が `false` (デフォルト) に設定されている場合、**css 変数** を以下のように含めます。
 
 ```scss
-@include igx-css-vars($custom-switch-theme);
+@include css-vars($custom-switch-theme);
 ```
 
 >[!NOTE]
@@ -158,7 +158,7 @@ $custom-switch-theme: igx-switch-theme(
 
 ```scss
 :host {
-    @include igx-css-vars($custom-switch-theme);
+    @include css-vars($custom-switch-theme);
 }
 ```
 ### デモ
@@ -176,10 +176,10 @@ $custom-switch-theme: igx-switch-theme(
 <div class="divider--half"></div>
 
 * [IgxSwitchComponent]({environment:angularApiUrl}/classes/igxswitchcomponent.html)
-* [IgxSwitchComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-switch-theme)
+* [IgxSwitchComponent スタイル]({environment:sassApiUrl}/index.html#function-switch-theme)
 
 ## テーマの依存関係
-* [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
+* [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-ripple-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

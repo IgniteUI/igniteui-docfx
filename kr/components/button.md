@@ -187,7 +187,7 @@ And the final result:
 <div class="divider--half"></div>
 
 * [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
-* [IgxButton Styles]({environment:sassApiUrl}/index.html#function-igx-button-theme)
+* [IgxButton Styles]({environment:sassApiUrl}/index.html#function-button-theme)
 * [IgxRippleDirective]({environment:angularApiUrl}/classes/igxrippledirective.html)
 
 ### Additional Resources

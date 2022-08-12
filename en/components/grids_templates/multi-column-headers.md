@@ -1,28 +1,28 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Multi-column Headers | Ignite UI for Angular | Infragistics
-_description: Start to group column headers by placing them under a common hierarchical header with the help of Ignite UI Material UI grid and combine them into multi headers
+title: Angular Multi-column Headers - Ignite UI for Angular
+_description: Start grouping column headers by placing them under a common hierarchical header with the help of Ignite UI for Angular grid and combine them into multi headers.
 _keywords: column headers, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Multi-column Headers | Ignite UI for Angular | Infragistics
-_description: Start to group column headers by placing them under a common hierarchical header with the help of Ignite UI Material UI grid and combine them into multi headers
+title: Angular Multi-column Headers - Ignite UI for Angular
+_description: SStart grouping column headers by placing them under a common hierarchical header with the help of Ignite UI for Angular grid and combine them into multi headers.
 _keywords: column headers, ignite ui for angular, infragistics
 _canonicalLink: grid/multi-column-headers
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Multi-column Headers | Ignite UI for Angular | Infragistics
-_description: Start to group column headers by placing them under a common hierarchical header with the help of Ignite UI Material UI grid and combine them into multi headers
+title: Angular Multi-column Headers - Ignite UI for Angular
+_description: Start grouping column headers by placing them under a common hierarchical header with the help of Ignite UI for Angular grid and combine them into multi headers.
 _keywords: column headers, ignite ui for angular, infragistics
 _canonicalLink: grid/multi-column-headers
 ---
 }
 
-# @@igComponent Multi-column Headers Overview
+# Angular @@igComponent Multi-column Headers Overview
 
 [`@@igxName`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) supports `multi-column headers` which allows you to group columns by placing them under a common multi headers. Each multi-column headers group could be a representation of combinations between other groups or columns within the Material UI grid.
 
@@ -144,6 +144,7 @@ For achieving `n-th` level of nested headers, the declaration above should be fo
 Every [`igx-column-group`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html) supports [`moving`](column-moving.md), [`pinning`](column-pinning.md) and [`hiding`](column-hiding.md).
 > [!NOTE]
 > When there is a set of columns and column groups, pinning works only for top level column parents. More specifically pinning per nested `column groups` or `columns` is not allowed. <br />
+> Please note that when using Pinning with Multi-Column Headers, the entire Group gets pinned. <br />
 > Moving between `columns` and `column groups` is allowed only when they are at the same level in the hierarchy and both are in the same `group`. <br />
 > When `columns/column-groups` are not wrapped by current `group` which means they are **top level** `columns`, moving is allowed between whole visible columns.
 
@@ -267,10 +268,10 @@ To get started with styling the sorting behavior, we need to import the `index` 
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) and accepts the `$header-background`, `$header-text-color`, `$header-border-width`, `$header-border-style` and `$header-border-color` parameters.
+Following the simplest approach, we create a new theme that extends the [`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) and accepts the `$header-background`, `$header-text-color`, `$header-border-width`, `$header-border-style` and `$header-border-color` parameters.
 
 ```scss
-$custom-theme: igx-grid-theme(
+$custom-theme: grid-theme(
     $header-background: #e0f3ff,
     $header-text-color: #e41c77,
     $header-border-width: 1px,
@@ -281,7 +282,7 @@ $custom-theme: igx-grid-theme(
 The last step is to **include** the component mixins: 
 
 ```scss
-@include igx-grid($custom-theme);
+@include grid($custom-theme);
 ```
 
 >[!NOTE]
@@ -290,7 +291,7 @@ The last step is to **include** the component mixins:
  ```scss
 :host {
     ::ng-deep {
-        @include igx-grid($custom-theme);
+        @include grid($custom-theme);
     }
 }
 ```
@@ -305,18 +306,18 @@ Instead of hardcoding the color values like we just did, we can achieve greater 
 $light-blue-color: #e0f3ff;
 $deep-pink-color: #e41c77;
 
-$custom-palette: igx-palette($primary: $light-blue-color, $deep-pink-color);
+$custom-palette: palette($primary: $light-blue-color, $deep-pink-color);
 ```
 
 And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette.
 
 ```scss
-$custom-theme: igx-grid-theme(
-    $header-background: igx-color($custom-palette, "primary", 500),
-    $header-text-color: igx-color($custom-palette, "secondary", 500),
+$custom-theme: grid-theme(
+    $header-background: color($custom-palette, "primary", 500),
+    $header-text-color: color($custom-palette, "secondary", 500),
     $header-border-width: 1px,
     $header-border-style: solid,
-    $header-border-color: igx-color($custom-palette, "grays", 200)
+    $header-border-color: color($custom-palette, "grays", 200)
 );
 ```
 
@@ -353,7 +354,7 @@ $my-custom-schema: extend($light-schema,
 );
 
 // Defining our custom theme with the custom schema
-$custom-theme: igx-grid-theme(
+$custom-theme: grid-theme(
   $palette: $custom-palette,
   $schema: $my-custom-schema
 );
@@ -407,7 +408,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 <div class="divider--half"></div>
 
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-grid-theme)
 * [IgxColumnGroupComponent]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html)
 <div class="divider--half"></div>
 

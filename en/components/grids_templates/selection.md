@@ -1,28 +1,28 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid Data Selection | Ignite UI for Angular | infragistics 
-_description: Check how easy it is to select data in the Ignite UI Angular Material Table by using variety of events, rich API or with simple mouse interactions like single select
+title: Angular Grid Selection - Ignite UI for Angular
+_description: See how easy it is to select data in Ignite UI for Angular grid using variety of events, rich API or with simple mouse interactions like single select.
 _keywords: data select, igniteui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid Data Selection | Ignite UI for Angular | infragistics 
-_description: Check how easy it is to select data in the Ignite UI Angular Material Table by using variety of events, rich API or with simple mouse interactions like single select
+title: Angular Tree Grid Selection - Ignite UI for Angular 
+_description: See how easy it is to select data in Ignite UI for Angular grid using variety of events, rich API or with simple mouse interactions like single select.
 _keywords: data select, igniteui for angular, infragistics
 _canonicalLink: grid/selection
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchical Grid Data Selection | Ignite UI for Angular | infragistics 
-_description: Check how easy it is to select data in the Ignite UI Angular Material Table by using variety of events, rich API or with simple mouse interactions like single select
+title: Angular Hierarchical Grid Selection - Ignite UI for Angular
+_description: See how easy it is to select data in Ignite UI for Angular grid using variety of events, rich API or with simple mouse interactions like single select.
 _keywords: data select, igniteui for angular, infragistics
 _canonicalLink: grid/selection
 ---
 }
 
-# Angular @@igComponent Selection Overview
+# Angular @@igComponent Selection
 With Ignite UI for Angular @@igComponent you can easily select data by using variety of events, rich API or with simple mouse interactions like single select.
 
 ## Angular Grid Selection Example
@@ -215,7 +215,7 @@ The template we are going to use to combine the grid with the context menu:
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 @@if (igxName !== 'IgxTreeGrid') {* [IgxGridRow API]({environment:angularApiUrl}/classes/igxgridrow.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRow API]({environment:angularApiUrl}/classes/igxtreegridrow.html)}
 * [IgxGridCell API]({environment:angularApiUrl}/classes/igxgridcell.html)
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-grid-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>

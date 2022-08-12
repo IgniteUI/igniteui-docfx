@@ -1,28 +1,28 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Grid Row Drag | Angular Grid & Diagram Component | Infragistics
-_description: The Ignite UI for Angular Data Grid control features the fastest, touch-responsive data-rich grid with popular features, including hierarchical and list views.
+title: Row Dragging in Angular Data Grid - Ignite UI for Angular
+_description: Row dragging in Angular Data Grid is used to quickly rearrange rows by dragging them with the mouse. See how to configure row dragging in your project.
 _keywords: angular drag component, material component, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Tree Grid Row Drag | Angular Grid & Diagram Component | Infragistics
-_description: The Ignite UI for Angular Tree Grid control features the fastest, touch-responsive data-rich tree grid with popular features, including hierarchical and list views.
+title: Row Dragging in Angular Tree Grid - Ignite UI for Angular
+_description: Row dragging in Angular Tree Grid is used to quickly rearrange rows by dragging them with the mouse. See how to configure row dragging in your project.
 _keywords: angular drag component, material component, ignite ui for angular, infragistics
 _canonicalLink: grid/row-drag
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Hierarchical Grid Row Drag | Angular Grid & Diagram Component | Infragistics
-_description: The Ignite UI for Angular Hierarchical Grid control features the fastest, touch-responsive data-rich hierarchical grid with popular features.
+title: Row Dragging in Angular Hierarchical Grid - Ignite UI for Angular
+_description: Row dragging in Angular Hierarchical Grid is used to quickly rearrange rows by dragging them with the mouse. See how to configure row dragging in your project.
 _keywords: angular drag component, material component, ignite ui for angular, infragistics
 _canonicalLink: grid/row-drag
 ---
 }
 
-# @@igComponent Row Drag
+# Row Dragging in Angular @@igComponent
 
 In Ignite UI for Angular @@igComponent, **RowDrag** is initialized on the root `@@igSelector` component and is configurable via the [`rowDraggable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowdraggable) input. Enabling row dragging provides users with a row drag-handle with which they can initiate dragging of a row.
 

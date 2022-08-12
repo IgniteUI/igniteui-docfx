@@ -1,29 +1,29 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Grid キーボード ナビゲーション | Ignite UI for Angular | インフラジスティックス
-_description: Ignite UI for Angular で Grid キーボード ナビゲーションを使用する方法を説明します。キーボード インタラクションでは、キーを使用してセル、行、列を移動できます。
+title: Angular Grid のキーボード ナビゲーション - Ignite UI for Angular
+_description: Ignite UI for Angular で Grid キーボード ナビゲーションを使用する方法を説明します。キーボード インタラクションでは、セル、行、列を簡単に移動できます。
 _keywords: keyboard navigation, ignite ui for angular, infragistics, キーボード ナビゲーション, インフラジスティックス
 _language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: TreeGrid キーボード ナビゲーション | Ignite UI for Angular | インフラジスティックス
-_description: Ignite UI for Angular で TreeGrid キーボードナ ビゲーションを使用する方法を説明します。キーボード インタラクションでは、キーを使用してセル、行、列を移動できます。
+title: Angular Tree Grid のキーボード ナビゲーション - Ignite UI for Angular
+_description: Ignite UI for Angular で Tree Grid キーボード ナビゲーションを使用する方法を説明します。キーボード インタラクションでは、セル、行、列を簡単に移動できます。
 _keywords: keyboard navigation, ignite ui for angular, infragistics, キーボード ナビゲーション, インフラジスティックス
 _language: ja
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: HierarchicalGrid キーボード ナビゲーション | Ignite UI for Angular | インフラジスティックス
-_description: Ignite UI for Angular で HierarchicalGrid キーボード ナビゲーションを使用する方法を説明します。キーボード インタラクションでは、キーを使用してセル、行、列を移動できます。
+title: Angular Hierarchical Grid のキーボード ナビゲーション - Ignite UI for Angular
+_description: Ignite UI for Angular で Hierarchical Grid キーボード ナビゲーションを使用する方法を説明します。キーボード インタラクションでは、セル、行、列を簡単に移動できます。
 _keywords: keyboard navigation, ignite ui for angular, infragistics, キーボード ナビゲーション, インフラジスティックス
 _language: ja
 ---
 }
 
-# @@igComponent キーボード ナビゲーション
+# Angular @@igComponent キーボード ナビゲーション
 
 **@@igxName** のキーボード ナビゲーションは、さまざまなキーボード操作をユーザーに提供します。これにより **@@igxName** のアクセシビリティが向上し、内部の要素 (セル、行、列ヘッダー、ツールバー、フッターなど) をナビゲートできるようになります。この機能はデフォルトで有効になっています。デフォルトの動作を簡単にオーバーライドするオプションがあります。
 
@@ -115,7 +115,7 @@ _language: ja
 }
 @@if (igxName === "IgxHierarchicalGrid") {
 
-<code-view style="height:470px" 
+<code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hgrid-keyboard-guide" >
 </code-view>
@@ -294,7 +294,7 @@ public customKeydown(args: IGridKeydownEventArgs) {
 
 ## API リファレンス
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-grid-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

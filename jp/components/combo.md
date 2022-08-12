@@ -187,6 +187,24 @@ export class MyExampleCombo {
 }
 ```
 
+## 単一選択
+
+デフォルトでは、Combo コントロールは複数選択を提供します。以下のスニペットは、ハンドラーを `selectionChanging` イベントにアタッチすることで、コンポーネントで単一選択を可能にする方法を示します。
+
+```html
+<igx-combo [data]="lData" (selectionChanging)="singleSelection($event)"></igx-combo>
+```
+
+```typescript
+public singleSelection(event: IComboSelectionChangeEventArgs) {
+    if (event.added.length) {
+        event.newSelection = event.added;
+    }
+}
+```
+
+> 注: igxCombo を変更する代わりに、[igxSimpleCombo](simple-combo.md) を使用することをお勧めします (上記を参照)。
+
 <div class="divider--half"></div>
 
 ## キーボード ナビゲーション
@@ -235,9 +253,9 @@ export class MyExampleCombo {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-[igx-combo-theme]({environment:sassApiUrl}/index.html#function-igx-combo-theme) を拡張する新しいテーマを作成し、`$search-separator-border-color` パラメーターを受け取ります。
+[combo-theme]({environment:sassApiUrl}/index.html#function-combo-theme) を拡張する新しいテーマを作成し、`$search-separator-border-color` パラメーターを受け取ります。
 ```scss
-$custom-combo-theme: igx-combo-theme(
+$custom-combo-theme: combo-theme(
     $search-separator-border-color: #1a5214
 );
 ```
@@ -245,7 +263,7 @@ $custom-combo-theme: igx-combo-theme(
 [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html) は、項目コンテナーとして [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) を内部使用します。[IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) および [IgxCheckbox]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html) コンポーネントも含まれます。これらのコンポーネントのテーマを拡張する新しいテーマを作成し、それぞれのクラスの下にスコープすることで、コンボボックスのスタイル設定を変更できます。
 
 ```scss
-$custom-drop-down-theme: igx-drop-down-theme(
+$custom-drop-down-theme: drop-down-theme(
     $background-color: #d9f5d6,
     $header-text-color: #1a5214,
     $item-text-color: #1a5214,
@@ -263,7 +281,7 @@ $custom-drop-down-theme: igx-drop-down-theme(
     $selected-focus-item-text-color: #1a5214,
 );
 
-$custom-checkbox-theme: igx-checkbox-theme(
+$custom-checkbox-theme: checkbox-theme(
     $border-radius: 10px,
     $fill-color: #1a5214,
     $empty-color: #1a5214,
@@ -274,9 +292,9 @@ $custom-checkbox-theme: igx-checkbox-theme(
 
 ```scss
 :host {
-    @include igx-css-vars($custom-combo-theme);
-    @include igx-css-vars($custom-drop-down-theme);
-    @include igx-css-vars($custom-checkbox-theme);
+    @include css-vars($custom-combo-theme);
+    @include css-vars($custom-drop-down-theme);
+    @include css-vars($custom-checkbox-theme);
 }
 ```
 
@@ -308,7 +326,7 @@ $custom-checkbox-theme: igx-checkbox-theme(
 <div class="divider--half"></div>
 
 * [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html)
-* [IgxComboComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-combo-theme)
+* [IgxComboComponent スタイル]({environment:sassApiUrl}/index.html#function-combo-theme)
 
 その他のコンポーネントおよびディレクティブ (またはそのいずれか) で使用した API:
 
@@ -317,10 +335,10 @@ $custom-checkbox-theme: igx-checkbox-theme(
 * [IgxCheckboxComponent]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html)
 
 ## テーマの依存関係
-* [IgxDropDown テーマ]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme)
-* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
-* [IgxCheckbox テーマ]({environment:sassApiUrl}/index.html#function-igx-checkbox-theme)
-* [IgxOverlay テーマ]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+* [IgxDropDown テーマ]({environment:sassApiUrl}/index.html#function-drop-down-theme)
+* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxCheckbox テーマ]({environment:sassApiUrl}/index.html#function-checkbox-theme)
+* [IgxOverlay テーマ]({environment:sassApiUrl}/index.html#function-overlay-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

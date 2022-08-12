@@ -148,7 +148,7 @@ Opening and closing the [`IgxDatePickerComponent`]({environment:angularApiUrl}/c
 | <kbd>Enter</kbd> | Closes the calendar pop-up, selecting the focused date and moves the focus to the input field |
 | <kbd>Alt</kbd> + <kbd>&uarr;</kbd> | Closes the calendar pop-up and focuses the input field |
 
-Since the [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html)` uses the [`IgxDateTimeEditorDirective`](date-time-editor.md) it inherits its keyboard navigation.
+Since the [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) uses the [`IgxDateTimeEditorDirective`](date-time-editor.md) it inherits its keyboard navigation.
 
 ## Examples
 
@@ -250,12 +250,12 @@ To get started with styling the date picker, we need to import the `index` file,
 
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+```
 
-The date picker uses the calendar's theme, so we have to create a new theme that extends the [`igx-calendar-theme`]({environment:sassApiUrl}/index.html#function-igx-calendar-theme) and use some of its parameters to style the date picker's items:
+The date picker uses the calendar's theme, so we have to create a new theme that extends the [`calendar-theme`]({environment:sassApiUrl}/index.html#function-calendar-theme) and use some of its parameters to style the date picker's items:
 
 ```scss
-$custom-datepicker-theme: igx-calendar-theme(
+$custom-datepicker-theme: calendar-theme(
     $header-background: #345779,
     $content-background: #fdfdfd,
     $header-text-color: #ffffff,
@@ -278,7 +278,7 @@ $custom-datepicker-theme: igx-calendar-theme(
 The last step is to pass the custom date picker theme:
 
 ```scss
-@include igx-css-vars($custom-datepicker-theme);
+@include css-vars($custom-datepicker-theme);
 ```
 
 ### Using Theme Overrides
@@ -290,7 +290,7 @@ If the component is using the [`Emulated`](themes/sass/component-themes.md#view-
  ```scss
 :host {
     ::ng-deep {
-        @include igx-calendar($custom-datepicker-theme);
+        @include calendar($custom-datepicker-theme);
     }
 }
 ```
@@ -306,19 +306,19 @@ If the component is using the [`Emulated`](themes/sass/component-themes.md#view-
 * [IgxDatePickerComponent]({environment:angularApiUrl}/classes/igxdatepickercomponent.html)
 * [IgxDateTimeEditorDirective]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html)
 * [IgxCalendarComponent]({environment:angularApiUrl}/classes/igxcalendarcomponent.html)
-* [IgxCalendarComponent Styles]({environment:sassApiUrl}/index.html#function-igx-calendar-theme)
-* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+* [IgxCalendarComponent Styles]({environment:sassApiUrl}/index.html#function-calendar-theme)
+* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-overlay-theme)
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 
 ## Theming Dependencies
 <div class="divider--half"></div>
 
-* [IgxCalendar Theme]({environment:sassApiUrl}/index.html#function-igx-calendar-theme)
-* [IgxOverlay Theme]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
-* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
-* [IgxButton Theme]({environment:sassApiUrl}/index.html#function-igx-button-theme)
-* [IgxInputGroup Theme]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
-* [IgxDropDown Theme]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme)
+* [IgxCalendar Theme]({environment:sassApiUrl}/index.html#function-calendar-theme)
+* [IgxOverlay Theme]({environment:sassApiUrl}/index.html#function-overlay-theme)
+* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxButton Theme]({environment:sassApiUrl}/index.html#function-button-theme)
+* [IgxInputGroup Theme]({environment:sassApiUrl}/index.html#function-input-group-theme)
+* [IgxDropDown Theme]({environment:sassApiUrl}/index.html#function-drop-down-theme)
 
 
 ## Additional Resources

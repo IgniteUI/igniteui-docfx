@@ -31,7 +31,7 @@ import { IgxDatePickerModule } from 'igniteui-angular';
 
 @NgModule({
     ...
-    imports: [..., IgxDateRangePickerModule, BrowserAnimationsModule, HammerModule],
+    imports: [..., IgxDatePickerModule, BrowserAnimationsModule, HammerModule],
     ...
 })
 export class AppModule {}
@@ -223,27 +223,6 @@ IgxDatePicker と [`IgxTimePicker`](time-picker.md) を一緒に使用する場�
 
 <div class="divider--half"></div>
 
-#### 日付ピッカーとタイム ピッカーを併用する
-IgxDatePicker と [`IgxTimePicker`](time-picker.md) を一緒に使用する場合、それらを 1 つの同じ Date オブジェクト値にバインドする必要がある場合があります。
-
-テンプレート駆動フォームでこれを実現するには、`ngModel` を使用して両方のコンポーネントを同じ Date オブジェクトにバインドします。
-
-<code-view style="height: 540px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/template-driven-form" >
-</code-view>
-
-<div class="divider--half"></div>
-
-リアクティブ フォームでは、各コンポーネントの [`valueChange`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#valuechange) イベントを処理し、他のコンポーネントの値を更新できます。
-
-<code-view style="height: 540px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/reactive-form" >
-</code-view>
-
-<div class="divider--half"></div>
-
 ### カレンダー固有の設定
 [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) は [`IgxCalendarComponent`](calendar.md) を使用し、日付ピッカーが公開するプロパティを介してその設定の一部を変更できます。これらの一部には、ピッカーが展開されたときに複数のカレンダーを表示できる [`displayMonthsCount`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#displaymonthscount)、週の開始日を決定する [`weekStart`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#weekstart)、年の各週の番号を表示する [`showWeekNumbers`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#showweeknumbers) などが含まれます。
 
@@ -273,10 +252,10 @@ IgxDatePicker と [`IgxTimePicker`](time-picker.md) を一緒に使用する場�
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-日付ピッカーはカレンダーのテーマを使用するので、[`igx-calendar-theme`]({environment:sassApiUrl}/index.html#function-igx-calendar-theme) を拡張する新しいテーマを作成し、そのパラメーターを使用して日付ピッカーの項目をスタイル設定します。
+日付ピッカーはカレンダーのテーマを使用するので、[`calendar-theme`]({environment:sassApiUrl}/index.html#function-calendar-theme) を拡張する新しいテーマを作成し、そのパラメーターを使用して日付ピッカーの項目をスタイル設定します。
 
 ```scss
-$custom-datepicker-theme: igx-calendar-theme(
+$custom-datepicker-theme: calendar-theme(
     $header-background: #345779,
     $content-background: #fdfdfd,
     $header-text-color: #ffffff,
@@ -299,7 +278,7 @@ $custom-datepicker-theme: igx-calendar-theme(
 最後に日付ピッカーのカスタム テーマを設定します。
 
 ```scss
-@include igx-css-vars($custom-datepicker-theme);
+@include css-vars($custom-datepicker-theme);
 ```
 
 ### テーマ オーバーライドの使用
@@ -311,7 +290,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
  ```scss
 :host {
     ::ng-deep {
-        @include igx-calendar($custom-datepicker-theme);
+        @include calendar($custom-datepicker-theme);
     }
 }
 ```
@@ -327,19 +306,19 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 * [IgxDatePickerComponent]({environment:angularApiUrl}/classes/igxdatepickercomponent.html)
 * [IgxDateTimeEditorDirective]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html)
 * [IgxCalendarComponent]({environment:angularApiUrl}/classes/igxcalendarcomponent.html)
-* [IgxCalendarComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-calendar-theme)
-* [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+* [IgxCalendarComponent スタイル]({environment:sassApiUrl}/index.html#function-calendar-theme)
+* [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-overlay-theme)
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 
 ## テーマの依存関係
 <div class="divider--half"></div>
 
-* [IgxCalendar テーマ]({environment:sassApiUrl}/index.html#function-igx-calendar-theme)
-* [IgxOverlay テーマ]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
-* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
-* [IgxButton テーマ]({environment:sassApiUrl}/index.html#function-igx-button-theme)
-* [IgxInputGroup テーマ]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
-* [IgxDropDown テーマ]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme)
+* [IgxCalendar テーマ]({environment:sassApiUrl}/index.html#function-calendar-theme)
+* [IgxOverlay テーマ]({environment:sassApiUrl}/index.html#function-overlay-theme)
+* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxButton テーマ]({environment:sassApiUrl}/index.html#function-button-theme)
+* [IgxInputGroup テーマ]({environment:sassApiUrl}/index.html#function-input-group-theme)
+* [IgxDropDown テーマ]({environment:sassApiUrl}/index.html#function-drop-down-theme)
 
 ## その他のリソース
 * [Time Picker](time-picker.md)

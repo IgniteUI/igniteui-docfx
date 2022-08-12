@@ -75,7 +75,7 @@ The main purpose of the Styling section is to provide simple examples on how to 
 ### 3.	Provide the simplest styling example, which is to extend the default theme for the corresponding feature/component. For example, when styling the paginator UI, the `igx-grid-paginator-theme` needs to be extended:
 
 ```scss
-$dark-grid-paginator: igx-grid-paginator-theme(
+$dark-grid-paginator: grid-paginator-theme(
     $text-color: #F4D45C,
     $background-color: #575757,
     $border-color: #292826
@@ -141,12 +141,33 @@ Example status workflows:
 Open both repositories and perform `npm start`. This will start both projects and you will see the embed sample in your topic under `localhost`.
 
 ## Localization - applicable to issues and pull requests
+Ensure that whenever a change is made to the text content the appropriate status is set:
 1. `status: pending-localization` this status tells that there are changes in the localization strings that need to be translated. When you make such changes, put this status badge without removing the other applicable ones and assign a person to do the translations.
 
 > Note: This status should be set only when the PR is approved. This will indicate that no further changes will be applied.
 2. `status: localized` this status is for issues that were with a pending translation status and have already been localized. Place this status label once these translation changes have been included in the current pull request, or the changes are already pulled with a different pull request.
 
 > Note: Keep in mind that when you submit a change in the EN .md files, you will need to make the same change in the JP versions as well. This will help our Localization team to translate the change. As for the KR version of the topic, these changes will be handled by the Localization team.
+
+
+## Fixing a bug  
+When fixing a bug you need to follow these guidelines:
+
+1.  Checkout a development branches from both `vNext`a and `master` as this is the version that is going to be used upon release (next version). `master` is the branch with the current state (current version). If the change/fix is applicable only to the ongoing release branch (vNext) there is no need to cherry-pick to master as the change/fix/feature will be pushed to master upon release.
+2. Run lint
+4. Pull request your changes and reference the issue. Use the enforced commit message format with applicable type, scope, etc.
+5. Don't forget to make the necessary status updates, as described in the workflow section.
+
+### Example workflow
+When bug fixes are applicable to both `vNext` and `master` branches the process will look like this:
+
+1.	Checkout new branch from `vNext`. For code example purposes let's say the new branch is called `fixing-bug-5423-vNext`.
+2.	Commit your changes to your `fixing-bug-5423-vNext` branch.
+3.	Push and PR to the `vNext` branch.
+4.	Switch to the `master` branch.
+5.  Create a new branch from `master`.  For code example purposes let's say the new branch is called `fixing-bug-5423-master`.
+6.  Cherry pick your commit from the `fixing-bug-5423-vNext` branch: `git cherry-pick fixing-bug-5423-master`
+7.  Push to your `fixing-bug-5423-master` branch and PR to the `master` branch.
 
 # <a name='#environment-variables'>Environment variables</a>
 The environment variables are a syntactic sugar for pointing out the location of the resources used in a topic.

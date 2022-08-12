@@ -1,30 +1,30 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title:  Angular Grid Display Density | Ignite UI for Angular | infragistics 
-_description: Learn how to apply material density capabilities to the Material UI table component by using a set of compact view options in the Ignite UI Grid angular component.
+title:  Angular Grid Display Density - Ignite UI for Angular
+_description: Learn how to apply display density capabilities to the Data grid component. You can use a set of compact view options in the Ignite UI for Angular.
 _keywords: material density, igniteui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title:  Angular Tree Grid Display Density | Ignite UI for Angular | infragistics 
-_description: Learn how to apply material density capabilities to the Material UI table component by using a set of compact view options in the Ignite UI Grid angular component.
+title:  Angular Grid Display Density - Ignite UI for Angular
+_description: Learn how to apply display density capabilities to the Tree grid component. You can use a set of compact view options in the Ignite UI for Angular.
 _keywords: material density, igniteui for angular, infragistics
 _canonicalLink: grid/display-density
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title:  Angular Hierarchical Grid Display Density | Ignite UI for Angular | infragistics 
-_description: Learn how to apply material density capabilities to the Material UI table component by using a set of compact view options in the Ignite UI Grid angular component.
+title:  Angular Grid Display Density - Ignite UI for Angular
+_description: Learn how to apply display density capabilities to the Hierarchical grid component. You can use a set of compact view options in the Ignite UI for Angular.
 _keywords: material density, igniteui for angular, infragistics
 _canonicalLink: grid/display-density
 ---
 }
 
-# @@igComponent Display Density
+# Angular @@igComponent Display Density
 
-**@@igxName** design is based on [Material Design Guidelines](https://material.io/guidelines/material-design/introduction.html). We currently provide an option to choose between predefined set of display [density](https://material.io/design/layout/density.html#usage) options that will bring a cosy, comfortable or compact view respectively. By selecting the right density for your Material UI table / Material UI grid you can significantly improve the user experience when interacting with large amounts of content.
+**@@igxName** design is based on [Material Design Guidelines](https://material.io/design). We currently provide an option to choose between predefined set of display [density](https://material.io/design/layout/applying-density.html) options that will bring a cosy, comfortable or compact view respectively. By selecting the right density for your Material UI table / Material UI grid you can significantly improve the user experience when interacting with large amounts of content.
 
 
 ## Angular @@igComponent Display Density Example
@@ -59,7 +59,7 @@ _canonicalLink: grid/display-density
 
 ## Usage
 
-As you can see in the demo above, the [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) provides three density options: **compact**, **cosy** and **comfortable**. The code snippet below shows how to set [`displayDensity`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#displaydensity):
+As you can see in the demo above, the [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) provides three density options: **compact**, **cosy** and **comfortable**. The code snippet below shows how to set [`displayDensity`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#displayDensity):
 
 ```html
 <@@igSelector #@@igObjectRef [data]="data" [displayDensity]="'cosy'" >
@@ -80,7 +80,7 @@ And now let's see in details how each option reflects on the @@igComponent compo
 > [!NOTE]
 > Please keep in mind that currently you **can not** override any of the sizes.
 
-Let's now continue with our sample and see in action how the [`displayDensity`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#displaydensity) is applied. Let's first add a button which will help us to switch between each density:
+Let's now continue with our sample and see in action how the [`displayDensity`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#displayDensity) is applied. Let's first add a button which will help us to switch between each density:
 
 ```html
 <div class="density-chooser">
@@ -273,11 +273,11 @@ public selectDensity(event) {
 }
 ```
 
-Another option that [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) provides for you, in order to be able to change the height of the rows in the @@igComponent, is the property [`rowHeight`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowheight). So let's see in action how this property affects the @@igComponent layout along with the [`displayDensity`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#displaydensity) option.
+Another option that [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) provides for you, in order to be able to change the height of the rows in the @@igComponent, is the property [`rowHeight`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowheight). So let's see in action how this property affects the @@igComponent layout along with the [`displayDensity`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#displayDensity) option.
 
 Please keep in mind the following:
- - [`displayDensity`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#displaydensity) options will have **NO** impact on row height **if there is [rowHeight]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowheight) specified**;
- - [`displayDensity`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#displaydensity) will **affect all of the rest elements in the @@igComponent**, as it has been described above;
+ - [`displayDensity`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#displayDensity) options will have **NO** impact on row height **if there is [rowHeight]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowheight) specified**;
+ - [`displayDensity`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#displayDensity) will **affect all of the rest elements in the @@igComponent**, as it has been described above;
 
 And now we can extend our sample and add [`rowHeight`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowheight) property to the @@igComponent:
 
@@ -294,7 +294,7 @@ And now we can extend our sample and add [`rowHeight`]({environment:angularApiUr
 <div class="divider--half"></div>
 
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
+* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-grid-theme)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 
 <div class="divider--half"></div>

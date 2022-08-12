@@ -1,28 +1,28 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Conditional Styling | Ignite UI for Angular | Infragistics 
-_description: Define a variety of styles with the help of the conditional styling feature of the Material UI grid, by using different material styling guidelines with a rich API
+title: Conditional Cell Styling in Angular Data Grid - Ignite UI for Angular
+_description: Let users identify different cells quickly. Define a variety of cell styles. Use the conditional cell styling in Angular Data grid to make cells stand out.
 _keywords: conditional styling, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Conditional Styling | Ignite UI for Angular | Infragistics 
-_description: Define a variety of styles with the help of the conditional styling feature of the Material UI grid, by using different material styling guidelines with a rich API
+title: Conditional Cell Styling in Angular Tree Grid - Ignite UI for Angular
+_description: Let users identify different cells quickly. Define a variety of cell styles. Use the conditional cell styling in Angular Data grid to make cells stand out.
 _keywords: conditional styling, ignite ui for angular, infragistics
 _canonicalLink: grid/conditional-cell-styling
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Conditional  Styling | Ignite UI for Angular | Infragistics 
-_description: Define a variety of styles with the help of the conditional styling feature of the Material UI grid, by using different material styling guidelines with a rich API
+title: Conditional Cell Styling in Angular Hierarchical Grid - Ignite UI for Angular 
+_description: Let users identify different cells quickly. Define a variety of cell styles. Use the conditional cell styling in Angular Data grid to make cells stand out.
 _keywords: conditional styling, ignite ui for angular, infragistics
 _canonicalLink: grid/conditional-cell-styling
 ---
 }
 
-# @@igComponent Conditional Styling
+# Angular @@igComponent Conditional Styling
 If you need to provide any custom styling in the @@igxName component, you can do it on either row or cell level.
 
 ## @@igComponent Conditional Row Styling
@@ -127,36 +127,73 @@ Columns now expose the `rowStyles` property which allows conditional styling of 
 
 Let's define our styles:
 
+@@if (igxName === 'IgxGrid') {
 ```typescript
 // component.ts
-public customRowStyles = {
+public rowStyles = {
     background: (row: RowType) => (+row.data['Change'] < 0  && +row.data['Change On Year(%)'] < 0) ? '#FF000088' : '#00000000',
     border: (row: RowType) => (+row.data['Change'] < 0  && +row.data['Change On Year(%)'] < 0) ? '2px solid' : '1px solid',
     'border-color': (row: RowType) => (+row.data['Change'] < 0  && +row.data['Change On Year(%)'] < 0) ? '#FF000099' : '#E9E9E9'
 };
-
-
 ```
 
-@@if (igxName === 'IgxGrid') {
 ```html
 <!-- sample.component.html -->
-<igx-grid #grid [data]="data" [height]="'600px'" [width]="'100%'" [rowStyles]="customRowStyles">
+<igx-grid #grid1 [data]="data | async" [height]="'500px'" width="100%"
+        [autoGenerate]="false" [allowFiltering]="true" [rowStyles]="rowStyles">
     ...
 </igx-grid>
 ```
 }
+
 @@if (igxName === 'IgxTreeGrid'){
+
+```typescript
+// component.ts
+public background = (row: RowType) => row.data.data['Title'] === 'CEO' ? '#6c757d' :
+    row.data.data['Title'].includes('President') ? '#adb5bd' : row.data.data['Title'].includes('Director') ?  '#ced4da' :
+    row.data.data['Title'].includes('Manager') ? '#dee2e6' :
+    row.data.data['Title'].includes('Lead') ? '#e9ecef' :
+    row.data.data['Title'].includes('Senior') ? '#f8f9fa' : null;
+
+public rowStyles = {
+    background: this.background,
+    'border-left': (row: RowType) => row.data.data['Title'] === 'CEO' || row.data.data['Title'].includes('President') ?
+        '2px solid' : null,
+    'border-color': (row: RowType) => row.data.data['Title'] === 'CEO' ? '#495057' : null,
+    color: (row: RowType) => row.data.data['Title'] === 'CEO' ? '#fff' : null
+};
+```
+
 ```html
 <!-- sample.component.html -->
-<igx-tree-grid #treeGrid [data]="data" [height]="'600px'" [width]="'100%'" [rowStyles]="customRowStyles">
+<igx-tree-grid #treeGrid [data]="data" [moving]="true" primaryKey="ID" foreignKey="ParentID"
+        width="100%" height="550px" [rowStyles]="rowStyles">
     ...
 </igx-tree-grid>
 ```
 }
+
 @@if (igxName === 'IgxHierarchicalGrid') {
+
+```typescript
+// component.ts
+public rowStyles = {
+    background:(row: RowType) => row.data['HasGrammyAward'] ? '#eeddd3' : '#f0efeb',
+    'border-left': (row: RowType) => row.data['HasGrammyAward'] ? '2px solid #dda15e' : null
+};
+
+public childRowStyles = {
+    'border-left': (row: RowType) => row.data['BillboardReview'] > 70 ? '3.5px solid #dda15e' : null
+};
+```
+
 ```html
-<igx-hierarchical-grid  #hierarchicalGrid class="hgrid" [data]="localData" [height]="'580px'" [width]="'100%'" [rowStyles]="customRowStyles">
+<igx-hierarchical-grid  #hierarchicalGrid [data]="localdata" [autoGenerate]="false"
+        [height]="'580px'" [width]="'100%'" [rowStyles]="rowStyles">
+        <igx-row-island [key]="'Albums'" [autoGenerate]="false" [rowStyles]="childRowStyles">
+             ...
+        </igx-row-island>  
     ...
 </igx-hierarchical-grid>
 ```

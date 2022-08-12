@@ -223,7 +223,7 @@ public ngOnInit() {
 
 * [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
 * [IgxButtonGroupComponent]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html)
-* [IgxButtonGroup Styles]({environment:sassApiUrl}/index.html#function-igx-button-group-theme)
+* [IgxButtonGroup Styles]({environment:sassApiUrl}/index.html#function-button-group-theme)
 
 ### Additional Resources
 <div class="divider--half"></div>

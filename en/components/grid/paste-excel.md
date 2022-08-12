@@ -1,10 +1,10 @@
 ---
-title: Paste from Excel | Export Selected Data | Ignite UI for Angular | infragistics 
+title: Angular Excel Like Grid - Paste Form Excel - Infragistics 
 _description: Configure the Angular Grid to paste data from excel, by using rich and performant API with less code, and use the rich API do export selected grid data easily.
 _keywords: export selected, igniteui for angular, infragistics
 ---
 
-# Grid Paste from Excel demonstration
+# Angular Grid Paste from Excel
 
 The Ignite UI for Angular [`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) can read Excel data that is copied to the clipboard. In this section we will show you how to do this with some custom code.
 

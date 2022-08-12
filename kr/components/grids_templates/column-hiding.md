@@ -22,7 +22,7 @@ _keywords: column hiding, ignite ui for angular, infragistics
 
 ### @@igComponent 열 숨기기
 
-The Ignite UI for Angular @@igComponent provides an [`IgxColumnHidingComponent`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html), which allows users to perform column hiding directly through the **UI** or by using the angular component. The Material UI Grid has a built-in column hiding UI, which can be used through the @@igComponent's toolbar to change the visible state of the columns. In addition, developers can always define the column hiding UI as a separate component and place it anywhere they want on the page.
+The Material UI Grid has a built-in column hiding UI, which can be used through the @@igComponent's toolbar to change the visible state of the columns. In addition, developers can always define the column hiding UI as a separate component and place it anywhere they want on the page.
 
 #### 데모
 
@@ -138,17 +138,22 @@ The Ignite UI for Angular @@igComponent provides an [`IgxColumnHidingComponent`]
 
 ### 도구 모음의 열 숨기기 UI
 
-내장된 열 숨기기 UI는 @@igComponent 도구 모음의 [`IgxDropDownComponent`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html)안에 배치됩니다. 이 정밀한 드롭 다운을 사용하여 열 숨기기 UI를 표시/비표시할 수 있습니다.
-이를 위해 @@igComponent의 [`showToolbar`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#showtoolbar) 및 [`columnhiding`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnhiding) 속성을 true로 설정해야 합니다. 도구 모음이 활성화되어 있지 않으면 [`columnhiding`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnhiding) 속성을 활성화해도 아무 효과가 없습니다.
-[`toolbarTitle`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#toolbartitle) 속성과 @@igComponent' 래퍼에 사용자 스타일을 설정하여 도구 모음에 제목을 추가합니다.
+The built-in Column Hiding UI is placed inside an [`IgxDropDownComponent`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) in the @@igComponent's toolbar. We can show/hide the Column Hiding UI by using this exact dropdown.
+For this purpose all we have to do is set both the [`IgxGridToolbarActionsDirective`]({environment:angularApiUrl}/classes/igxgridtoolbaractionsdirective.html) and the [`IgxGridToolbarHidingComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarhidingcomponent.html) inside of the @@igComponent. We will also add a title to our toolbar by using the [`IgxGridToolbarTitleDirective`]({environment:angularApiUrl}/classes/igxgridtoolbartitledirective.html) and a custom style for our @@igComponent's wrapper.
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
 <!--columnHiding.component.html-->
 <div class="hgrid-sample">
-    <igx-hierarchical-grid class="hgrid" [data]="localdata" [showToolbar]="true"[columnHiding]="true" toolbarTitle="Singers">
-    ...
- </igx-hierarchical-grid>
+    <igx-hierarchical-grid class="hgrid" [data]="localdata">
+        <igx-grid-toolbar>
+            <igx-grid-toolbar-title>Singers</igx-grid-toolbar-title>
+            <igx-grid-toolbar-actions>
+                <igx-grid-toolbar-hiding></igx-grid-toolbar-hiding>
+            </igx-grid-toolbar-actions>
+        </igx-grid-toolbar>
+        ...
+    </igx-hierarchical-grid>
 </div>
 ```
 ```css
@@ -168,9 +173,15 @@ The Ignite UI for Angular @@igComponent provides an [`IgxColumnHidingComponent`]
 <!--columnHiding.component.html-->
 
 <div class="grid__wrapper">
-    <@@igSelector ... [showToolbar]="true" [columnHiding]="true" toolbarTitle="Employees">
-        ...
-    </@@igSelector>
+    <@@igSelector ...>
+    <igx-grid-toolbar>
+        <igx-grid-toolbar-title>Employees</igx-grid-toolbar-title>
+        <igx-grid-toolbar-actions>
+            <igx-grid-toolbar-hiding></igx-grid-toolbar-hiding>
+        </igx-grid-toolbar-actions>
+    </igx-grid-toolbar>
+    ...
+</@@igSelector>
 </div>
 ```
 
@@ -186,39 +197,13 @@ The Ignite UI for Angular @@igComponent provides an [`IgxColumnHidingComponent`]
 
 }
 
-
-@@igComponent는 도구 모음의 열 숨기기 UI를 사용할 때 유용한 속성을 제공합니다.
-[`columnHidingTitle`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnhidingtitle) 및 [`hiddenColumnsText`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#hiddencolumnstext) 속성을 사용하여 도구 모음의 드롭다운 버튼에 표시되는 제목과 텍스트를 설정합니다. 더 구체적으로 [`hiddenColumnsText`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#hiddencolumnstext)는 버튼에 기본적으로 포함된 열 카운트 수의 오른쪽에 표시됩니다.
-[`hiddenColumnsText`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#hiddencolumnstext) 속성은 로컬리제이션 목적으로도 사용할 수 있어 매우 편리합니다.
-
-@@if (igxName === 'IgxGrid' || igxName === 'IgxTreeGrid') {
-```html
-<!--columnHiding.component.html-->
-
-<div class="grid__wrapper">
-    <@@igSelector ... [showToolbar]="true" [columnHiding]="true" toolbarTitle="Employees" columnHidingTitle="Column Hiding" hiddenColumnsText="Hidden">
-        ...
-    </@@igSelector>
-</div>
-```
-}
-@@if (igxName === 'IgxHierarchicalGrid') {
-```html
-<div class="hgrid-sample">
-    <igx-hierarchical-grid class="hgrid" [data]="localdata" [showToolbar]="true"[columnHiding]="true" toolbarTitle="Singers" 
-    columnHidingTitle="Column Hiding" hiddenColumnsText="Hidden">
- </igx-hierarchical-grid>
-</div>
-```
-}
-
-열 숨기기 UI의 [`columnsAreaMaxHeight`]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html#columnsareamaxheight) 속성을 사용하여 열이 포함된 영역의 최대 높이를 설정할 수 있습니다. 이 방법으로 열이 너무 많아 컨테이너에 모두 들어가지 않을 경우, 스크롤바가 표시되어 임의의 열로 이동할 수 있으며, 검색 입력은 상단에 핀 고정되고 표시/숨기기 버튼은 하단에 핀 고정됩니다.
+By using the [`columnsAreaMaxHeight`]({environment:angularApiUrl}/classes/igxgridtoolbarhidingcomponent.html#columnsAreaMaxHeight) property of the IgxGridToolbarHidingComponent, we can set the maximum height of the area that contains the column actions. This way if we have a lot of actions and not all of them can fit in the container, a scrollbar will appear, which will allow us to scroll to any action we want.
 
 ```typescript
 // columnHiding.component.ts
 
-public ngAfterViewInit() {        
-    this.@@igObjectRef.toolbar.columnHidingUI.columnsAreaMaxHeight = "200px";
+public ngAfterViewInit() {
+    this.hidingActionRef.columnsAreaMaxHeight = "200px";
 }
 ```
 
@@ -448,21 +433,13 @@ export class AppModule {}
 
 사용된 상대 API가 있는 추가 컴포넌트 및/또는 지시문:
 
-[`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) 속성:
-* [columnHiding]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnhiding)
-* [columnHidingTitle]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnhidingtitle)
-* [hiddenColumnsCount]({environment:angularApiUrl}/classes/@@igTypeDoc.html#hiddencolumnscount)
-* [hiddenColumnsText]({environment:angularApiUrl}/classes/@@igTypeDoc.html#hiddencolumnstext)
-
 [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) 속성:
 * [disableHiding]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disablehiding)
 
 [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) 속성:
-* [columnHidingUI]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html#columnhidingui)
-* [columnHidingDropdown]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html#columnhidingdropdown)
+* [showProgress]({environment:angularApiUrl}/classes/IgxGridToolbarComponent.html#showProgress)
 
 [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) 메소드:
-* [toggleColumnHidingUI]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html#togglecolumnhidingui)
 
 [`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) 이벤트:
 * [columnVisibilityChanged]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnVisibilityChanged)
@@ -471,8 +448,8 @@ export class AppModule {}
 
 스타일:
 
-* [@@igxNameComponent 스타일]({environment:sassApiUrl}/index.html#function-igx-grid-theme)
-* [IgxRadioComponent 스타일]({environment:sassApiUrl}/index.html#function-igx-radio-theme)
+* [@@igxNameComponent 스타일]({environment:sassApiUrl}/index.html#function-grid-theme)
+* [IgxRadioComponent 스타일]({environment:sassApiUrl}/index.html#function-radio-theme)
 
 ### 추가 리소스
 <div class="divider--half"></div>

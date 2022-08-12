@@ -100,7 +100,7 @@ Ignite UI for Angular Action Strip コンポーネントは、ホバーなどの
            iframe-src="{environment:demosBaseUrl}/grid/grid-action-strip" >
 </code-view>
 
->注：グリッド コンポーネントで ActionStrip を使用する方法の詳細については、[こちら](/components/grid/action-strip.html)を参照してください。
+>注：グリッド コンポーネントで ActionStrip を使用する方法の詳細については、[こちら](/components/grid/row-actions.html)を参照してください。
 
 ## スタイル設定
 
@@ -111,9 +111,9 @@ Ignite UI for Angular Action Strip コンポーネントは、ホバーなどの
 // 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
-次に、`igx-action-strip-theme` を拡張する新しいテーマを作成し、変更するパラメーターを渡します。
+次に、`action-strip-theme` を拡張する新しいテーマを作成し、変更するパラメーターを渡します。
 ```scss
-$custom-strip: igx-action-strip-theme(
+$custom-strip: action-strip-theme(
     $background: rgba(150, 133, 143, 0.4),
     $actions-background: rgba(109, 121, 147, 0.6),
     $icon-color: null,
@@ -126,12 +126,12 @@ $custom-strip: igx-action-strip-theme(
 
 `$legacy-support` が `false` (デフォルト) に設定されている場合、css 変数を以下のように含めます。
 ```scss
-@include igx-css-vars($custom-strip);
+@include css-vars($custom-strip);
 ```
 
 `$legacy-support` が `true` に設定されている場合、コンポーネントのテーマを以下のように含めます。
 ```scss
-@include igx-action-strip($custom-strip);
+@include action-strip($custom-strip);
 ```
 
 <code-view style="height: 400px;" 
@@ -154,7 +154,7 @@ $custom-strip: igx-action-strip-theme(
 
 以下の定義済み CSS スタイルを使用してアクション ストリップ レイアウトを構成しました。
 
-* [`IgxActionStripComponent スタイル`]({environment:sassApiUrl}/index.html#function-igx-action-strip-theme)
+* [`IgxActionStripComponent スタイル`]({environment:sassApiUrl}/index.html#function-action-strip-theme)
 
 アクション ストリップで使用できるその他のコンポーネントとディレクティブ。
 
@@ -167,10 +167,10 @@ $custom-strip: igx-action-strip-theme(
 <div class="divider"></div>
 
 ## テーマの依存関係
-* [IgxButton テーマ]({environment:sassApiUrl}/index.html#function-igx-button-theme)
-* [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-igx-ripple-theme)
-* [IgxDropDown テーマ]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme)
-* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
+* [IgxButton テーマ]({environment:sassApiUrl}/index.html#function-button-theme)
+* [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-ripple-theme)
+* [IgxDropDown テーマ]({environment:sassApiUrl}/index.html#function-drop-down-theme)
+* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-icon-theme)
 
 ## その他のリソース
 

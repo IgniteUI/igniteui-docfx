@@ -2,7 +2,7 @@
 title: Angular Map | Data Visualization Tools | Shape Styling | Conditional Formatting | Infragistics
 _description: Learn how to apply custom styling to Infragistics' Angular map's shape series. Check out Ignite UI for Angular map tutorials!
 _keywords: Angular map, custom styling, Ignite UI for Angular, Infragistics, conditional formatting, shape styling
-mentionedTypes: ['XamGeographicMap', 'GeographicShapeSeries']
+mentionedTypes: ['XamGeographicMap', 'GeographicShapeSeries', 'Series']
 ---
 
 # Angular Shape Styling on Geographic Shape Series
@@ -17,6 +17,17 @@ This topic explains how to apply custom styling to the [`IgxGeographicShapeSerie
            alt="Angular Shape Styling on Geographic Shape Series Example"
            github-src="maps/geo-map/map-shape-styling">
 </code-view>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <body>
+      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/maps/geo-map/map-shape-styling?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
+            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
+        </a>
+        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/maps/geo-map/map-shape-styling?file=src%2Fapp.component.html" rel="noopener noreferrer">
+            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
+        </a>
+    </body>
+</html>
 
 <div class="divider--half"></div>
 
@@ -166,3 +177,8 @@ public onStylingShape(s: IgxGeographicShapeSeries, args: IgxStyleShapeEventArgs)
     args.shapeStrokeThickness = shapeStyle.strokeThickness;
 }
 ```
+
+## API Members
+
+-   [`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html)
+-   [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html)

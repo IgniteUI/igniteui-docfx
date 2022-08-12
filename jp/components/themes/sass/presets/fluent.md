@@ -11,8 +11,8 @@ Word および Excel パレットをサポートしています。使用する�
 
 // 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-@include igx-core();
-@include igx-fluent-light-theme($light-fluent-excel-palette);
+@include core();
+@include fluent-light-theme($light-fluent-excel-palette);
 ```
 
 ## Fluent Dark テーマ
@@ -21,10 +21,10 @@ Word および Excel パレットをサポートしています。使用する�
 
 // 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-@include igx-core();
-@include igx-fluent-dark-theme($dark-fluent-excel-palette);
+@include core();
+@include fluent-dark-theme($dark-fluent-excel-palette);
 ```
 
 ## API の概要
-* [Light テーマ]({environment:sassApiUrl}/index.html#mixin-igx-fluent-light-theme)
-* [Dark テーマ]({environment:sassApiUrl}/index.html#mixin-igx-fluent-dark-theme)
+* [Light テーマ]({environment:sassApiUrl}/index.html#mixin-fluent-light-theme)
+* [Dark テーマ]({environment:sassApiUrl}/index.html#mixin-fluent-dark-theme)

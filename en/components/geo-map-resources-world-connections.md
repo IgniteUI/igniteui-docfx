@@ -137,3 +137,7 @@ export default class WorldConnections {
     }
 }
 ```
+
+## API Members
+
+-   [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html)

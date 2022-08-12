@@ -11,7 +11,7 @@
 - name: ローカライズ
   href: general/localization.md
   new: false
-  updated: true
+  updated: false
 - name: 作業の開始
   href: general/getting-started.md
   new: false
@@ -29,19 +29,19 @@
 - name: データ分析
   href: general/data-analysis.md
   new: false
-  updated: true
+  updated: false
 - name: 操作方法
   new: true
   items:
     - name: .NET Core を使用してリアルタイム SignalR アプリの構築
       href: general/how-to/signal-r-service-live-data.md
-      new: true
+      new: false
     - name: Angular リアクティブ フォーム
       href: angular-reactive-form-validation.md
-      new: true
+      new: false
     - name: IgxGrid を使用して CRUD 操作の構築
       href: general/how-to/how-to-perform-crud.md
-      new: true
+      new: false
 - name: Angular Schematics & Ignite UI CLI
   href: general/cli-overview.md
   sortable: false
@@ -114,7 +114,7 @@
   items:
     - name: 行のアクション
       href: grid/row-actions.md
-      new: true
+      new: false
     - name: ライブ データ/リアルタイム更新
       href: grid/live-data.md
       new: false
@@ -126,10 +126,10 @@
       new: false
     - name: 列のデータ型
       href: grid/column-types.md
-      new: true
+      new: false
     - name: 編集
       href: grid/editing.md
-      new: true
+      new: false
       items:
         - name: セル編集
           href: grid/cell-editing.md
@@ -139,7 +139,7 @@
           new: false
         - name: 行追加
           href: grid/row-adding.md
-          new: true
+          new: false
         - name: 一括編集
           href: grid/batch-editing.md
           updated: true
@@ -151,7 +151,7 @@
     - name: ページング
       href: grid/paging.md
       new: false
-      updated: true
+      updated: false
     - name: フィルタリング
       href: grid/filtering.md
       new: false
@@ -179,7 +179,7 @@
     - name: 列のピン固定
       href: grid/column-pinning.md
       new: false
-      updated: true
+      updated: false
     - name: 行のピン固定
       href: grid/row-pinning.md
       new: false
@@ -232,7 +232,7 @@
     - name: 条件付きスタイル設定
       href: grid/conditional-cell-styling.md
       new: false
-      updated: true
+      updated: false
     - name: キーボード ナビゲーション
       href: grid/keyboard-navigation.md
       new: false
@@ -259,7 +259,7 @@
   items:
     - name: 行のアクション
       href: treegrid/row-actions.md
-      new: true
+      new: false
     - name: ライブデータ/リアルタイム更新
       href: treegrid/live-data.md
       new: false
@@ -271,13 +271,13 @@
       new: false
     - name: 列のデータ型
       href: treegrid/column-types.md
-      new: true
+      new: false
     - name: ロードオンデマンド
       href: treegrid/load-on-demand.md
       new: false
     - name: 編集
       href: treegrid/editing.md
-      new: true
+      new: false
       items:
         - name: セル編集
           href: treegrid/cell-editing.md
@@ -287,7 +287,7 @@
           new: false
         - name: 行追加
           href: treegrid/row-adding.md
-          new: true
+          new: false
         - name: 一括編集
           href: treegrid/batch-editing.md
           updated: true
@@ -298,7 +298,7 @@
     - name: ページング
       href: treegrid/paging.md
       new: false
-      updated: true
+      updated: false
     - name: フィルタリング
       href: treegrid/filtering.md
       new: false
@@ -323,7 +323,7 @@
     - name: 列のピン固定
       href: treegrid/column-pinning.md
       new: false
-      updated: true
+      updated: false
     - name: 行のピン固定
       href: treegrid/row-pinning.md
       new: false
@@ -371,7 +371,7 @@
     - name: 条件付きスタイル設定
       href: treegrid/conditional-cell-styling.md
       new: false
-      updated: true
+      updated: false
     - name: グループ化
       href: treegrid/groupby.md
       updated: true
@@ -396,7 +396,7 @@
   items:
     - name: 行のアクション
       href: hierarchicalgrid/row-actions.md
-      new: true
+      new: false
     - name: 仮想化とパフォーマンス
       href: hierarchicalgrid/virtualization.md
       new: false
@@ -405,13 +405,13 @@
       new: false
     - name: 列のデータ型
       href: hierarchicalgrid/column-types.md
-      new: true
+      new: false
     - name: ロードオンデマンド
       href: hierarchicalgrid/load-on-demand.md
       new: false
     - name: 編集
       href: hierarchicalgrid/editing.md
-      new: true
+      new: false
       items:
         - name: セル編集
           href: hierarchicalgrid/cell-editing.md
@@ -421,7 +421,7 @@
           new: false
         - name: 行追加
           href: hierarchicalgrid/row-adding.md
-          new: true
+          new: false
         - name: 一括編集
           href: hierarchicalgrid/batch-editing.md
           updated: true
@@ -436,7 +436,7 @@
     - name: ページング
       href: hierarchicalgrid/paging.md
       new: false
-      updated: true
+      updated: false
     - name: フィルタリング
       href: hierarchicalgrid/filtering.md
       new: false
@@ -461,7 +461,7 @@
     - name: 列のピン固定
       href: hierarchicalgrid/column-pinning.md
       new: false
-      updated: true
+      updated: false
     - name: 行のピン固定
       href: hierarchicalgrid/row-pinning.md
       new: false
@@ -502,7 +502,7 @@
     - name: 条件付きスタイル設定
       href: hierarchicalgrid/conditional-cell-styling.md
       new: false
-      updated: true
+      updated: false
     - name: 表示密度
       href: hierarchicalgrid/display-density.md
       new: false
@@ -531,7 +531,7 @@
       new: true
 - name: Tree
   href: tree.md
-  new: true
+  new: false
 - name: List View
   href: list.md
 - name: Combo
@@ -663,6 +663,12 @@
     - name: チャートの注釈
       href: charts/features/chart-annotations.md
       new: false
+    - name: チャート データ凡例
+      href: charts/features/chart-data-legend.md
+      new: true
+    - name: チャート データ ツールチップ
+      href: charts/features/chart-data-tooltip.md
+      new: true
     - name: チャート強調表示
       href: charts/features/chart-highlighting.md
       updated: true
@@ -956,6 +962,7 @@
 - name: Slider
   href: slider/slider.md
   new: false
+  updated: true
 - name: Ripple
   href: ripple.md
 - name: Toggle
@@ -966,12 +973,12 @@
 - name: Overlay
   href: overlay.md
   new: false
-  updated: true
+  updated: false
   items:
   - name: 配置ストラテジ
     href: overlay-position.md
     new: false
-    updated: true
+    updated: false
   - name: スクロール ストラテジ
     href: overlay-scroll.md
     new: false
@@ -993,7 +1000,7 @@
   sortable: true
 - name: Navigation Drawer
   href: navdrawer.md
-  updated: true
+  updated: false
 - name: Navbar
   href: navbar.md
 - name: レイアウト
@@ -1006,7 +1013,7 @@
   new: false
 - name: Bottom Navigation
   href: tabbar.md
-  updated: true
+  updated: false
 - name: Tabs
   href: tabs.md
   new: false
@@ -1014,7 +1021,7 @@
   href: card.md
 - name: Accordion
   href: accordion.md
-  new: true
+  new: false
 - name: Avatar
   href: avatar.md
 - name: Expansion Panel
@@ -1025,7 +1032,7 @@
   new: false
 - name: Stepper
   href: stepper.md
-  new: true
+  new: false
 - name: Dock Manager
   href: dock-manager.md
   new: false
@@ -1046,24 +1053,24 @@
 - name: Date Time Editor
   href: date-time-editor.md
   new: false
-  updated: true
+  updated: false
 - name: Calendar
   href: calendar.md
-  updated: true
+  updated: false
 - name: Date Picker
   href: date-picker.md
-  updated: true
+  updated: false
 - name: Date Range Picker
   href: date-range-picker.md
   new: false
-  updated: true
+  updated: false
 - name: Month Picker
   href: month-picker.md
   new: false
 - name: Time Picker
   href: time-picker.md
   new: false
-  updated: true
+  updated: false
 - name: サービス
   header: true
   sortable: true
