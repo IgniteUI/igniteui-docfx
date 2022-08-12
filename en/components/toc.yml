@@ -920,6 +920,9 @@
 - name: Radio & Radio Group
   href: radio-button.md
   new: false
+- name: Rating
+  href: rating.md
+  new: true
 - name: Label & Input
   href: label-input.md
 - name: Input Group
