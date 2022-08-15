@@ -365,7 +365,7 @@ export const menusRoutes: Routes = [
 ];
 ```
 
-There's also child routing extracted from the `children` property of the routes. The sample shows two levels of hierarchy, but if your routing has more, then all you need to do is define the levels below the second one in the tree node templates.
+There's also child routing extracted from the `children` property of the routes. The sample shows two levels of hierarchy, but if your routing has more, then all you need to do is define the levels below the second one in the [tree node templates](tree.md#templating).
 
 > [!NOTE]
 > Keep in mind that some routes, like empty route redirect, error route, page not found, etc., might not be suitable for visualization directly. Before binding the tree to the routing object, you can strip those routes out of your object in your component logic.
