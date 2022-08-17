@@ -5,11 +5,39 @@ _keywords: angular validation, ignite ui for angular, infragistics
 ---
 
 # Angular @@igComponent Editing and Validation
-The validation service of @@igComponent allows validating user input when editing cells/rows. It also extends [Angular's reactive forms](https://angular.io/guide/reactive-forms) validation functionality to allow easier extensibility and maintainability. Visual indicators are applied with accordance to state of the editor.
+The @@igComponent's editing exposes a flexible validation service, that allows validation of user input when editing cells/rows. It extends [Angular's reactive forms](https://angular.io/guide/reactive-forms) validation functionality to allow easier interaction with a well known functionality. When the state of the editor changes, visual indicators are applied to the edited cell.
 
-## Angular @@igComponent Validation Example
+## Declarative Validator Functions
 
-The following sample demonstrates a scenario, where the [built-in Angular validator functions](https://angular.io/guide/form-validation#built-in-validator-functions) are used. The following build-in validators can be applied directly to igx-column:
+You can decide to write your own validator function, or use one of the [built-in Angular validator functions](https://angular.io/guide/form-validation#built-in-validator-functions).
+
+The following sample demonstrates how to use the prebuilt `required`, `email` and `min` validator functions in a @@igComponent.
+@@if (igxName === 'IgxGrid') {
+<code-view style="height:530px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/grid/grid-validator-service" alt="Angular @@igComponent Validation Basic Example">
+</code-view>
+
+<div class="divider--half"></div>
+}
+@@if (igxName === 'IgxTreeGrid') {
+<code-view style="height:600px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/tree-grid/grid-validator-service" alt="Angular @@igComponent Validation Basic Example">
+</code-view>
+
+<div class="divider--half"></div>
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+<code-view style="height:680px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/grid-validator-service" alt="Angular @@igComponent Validation Basic Example">
+</code-view>
+
+<div class="divider--half"></div>
+}
+
+We extend some of the Angular Forms validators to directly work with the `IgxColumn`. The same validators are available as attributes to be set declaratively in `igx-column`. The following validators are supported out-of-the-box:
 - required
 - min
 - max
@@ -18,31 +46,10 @@ The following sample demonstrates a scenario, where the [built-in Angular valida
 - maxlength
 - pattern
 
-@@if (igxName === 'IgxGrid') {
-<code-view style="height:650px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-basic-validation" alt="Angular @@igComponent Validation Basic Example">
-</code-view>
-
-<div class="divider--half"></div>
-}
-@@if (igxName === 'IgxTreeGrid') {
-<code-view style="height:600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-basic-validation" alt="Angular @@igComponent Validation Basic Example">
-</code-view>
-
-<div class="divider--half"></div>
-}
-@@if (igxName === 'IgxHierarchicalGrid') {
-<code-view style="height:680px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-basic-validation" alt="Angular @@igComponent Validation Basic Example">
-</code-view>
-
-<div class="divider--half"></div>
-}
-
+To validate that a column input would be set and the value is going to be formatted as an email, you can use something like that:
+```html
+<igx-column [field]="email" [header]="User E-mail" required email></igx-column>
+``` 
 
 ## Angular @@igComponent Custom Validation Example
 
