@@ -207,7 +207,7 @@ Date Range Picker コンポーネントはさまざまな表示および入力�
 
 ```html
 <igx-date-range-picker [(ngModel)]="range" required
-    inputFormat="dd/MM/yyyy" displayFormat="`shortDate`">
+    inputFormat="dd/MM/yyyy" displayFormat="shortDate">
 </igx-date-range-picker>
 ```
 
@@ -250,12 +250,12 @@ Date Range Picker コンポーネントは、コア FormsModule [NgModel](https:
 
 ```html
 <igx-date-range-picker>
-    <igx-date-start>
+    <igx-date-range-start>
         <input igxInput igxDateTimeEditor [(ngModel)]="range.start" type="text" required>
-    </igx-date-start>
-    <igx-date-end>
+    </igx-date-range-start>
+    <igx-date-range-end>
         <input igxInput igxDateTimeEditor [(ngModel)]="range.end" type="text" required>
-    </igx-date-end>
+    </igx-date-range-end>
 </igx-date-range-picker>
 ```
 
@@ -282,12 +282,12 @@ public maxDate = new Date(2020, 11, 1);
 
 ```html
 <igx-date-range-picker [minValue]="minDate" [maxValue]="maxDate">
-    <igx-date-start>
+    <igx-date-range-start>
         <input igxInput igxDateTimeEditor [(ngModel)]="range.start" type="text" required>
-    </igx-date-start>
-    <igx-date-end>
+    </igx-date-range-start>
+    <igx-date-range-end>
         <input igxInput igxDateTimeEditor [(ngModel)]="range.end" type="text" required>
-    </igx-date-end>
+    </igx-date-range-end>
 </igx-date-range-picker>
 ```
 
@@ -295,12 +295,12 @@ public maxDate = new Date(2020, 11, 1);
 ```html
 <igx-date-range-picker #dateRangePicker="ngModel" [(ngModel)]="range" required
     [minValue]="minDate" [maxValue]="maxDate">
-    <igx-date-start>
+    <igx-date-range-start>
         <input igxInput igxDateTimeEditor type="text">
-    </igx-date-start>
-    <igx-date-end>
+    </igx-date-range-start>
+    <igx-date-range-end>
         <input igxInput igxDateTimeEditor type="text">
-    </igx-date-end>
+    </igx-date-range-end>
 </igx-date-range-picker>
 
 <!-- minValue & maxValue will be true if the current range does not satisfy them -->
@@ -315,13 +315,13 @@ public maxDate = new Date(2020, 11, 1);
 
 ```html
 <igx-date-range-picker>
-    <igx-date-start>
+    <igx-date-range-start>
         <input igxInput igxDateTimeEditor [(ngModel)]="range.start" type="text" required>
-    </igx-date-start>
+    </igx-date-range-start>
     <ng-template igxDateRangeSeparator>-</ng-template>
-    <igx-date-end>
+    <igx-date-range-end>
         <input igxInput igxDateTimeEditor [(ngModel)]="range.end" type="text" required>
-    </igx-date-end>
+    </igx-date-range-end>
 </igx-date-range-picker>
 ```
 
