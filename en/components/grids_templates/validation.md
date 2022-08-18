@@ -5,13 +5,27 @@ _keywords: angular validation, ignite ui for angular, infragistics
 ---
 
 # Angular @@igComponent Editing and Validation
-The @@igComponent's editing exposes a flexible validation service, that allows validation of user input when editing cells/rows. It extends [Angular's reactive forms](https://angular.io/guide/reactive-forms) validation functionality to allow easier interaction with a well known functionality. When the state of the editor changes, visual indicators are applied to the edited cell.
+The @@igComponent's editing exposes a reactive forms style validation of user input when editing cells/rows. It extends [Angular's reactive forms](https://angular.io/guide/reactive-forms) validation functionality to allow easier integration with a well known functionality. When the state of the editor changes, visual indicators are applied to the edited cell.
 
-## Declarative Validator Functions
+## Configuration
 
-You can decide to write your own validator function, or use one of the [built-in Angular validator functions](https://angular.io/guide/form-validation#built-in-validator-functions).
+### Configure via template-driven configuration
 
-The following sample demonstrates how to use the prebuilt `required`, `email` and `min` validator functions in a @@igComponent.
+We extend some of the Angular Forms validator directives to directly work with the `IgxColumn`. The same validators are available as attributes to be set declaratively in `igx-column`. The following validators are supported out-of-the-box:
+- required
+- min
+- max
+- email
+- minlength
+- maxlength
+- pattern
+
+To validate that a column input would be set and the value is going to be formatted as an email, you can use the related directives:
+```html
+<igx-column [field]="email" [header]="User E-mail" required email></igx-column>
+```
+
+The following sample demonstrates how to use the prebuilt `required`, `email` and `min` validator directives in a @@igComponent.
 @@if (igxName === 'IgxGrid') {
 <code-view style="height:530px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -37,23 +51,89 @@ The following sample demonstrates how to use the prebuilt `required`, `email` an
 <div class="divider--half"></div>
 }
 
-We extend some of the Angular Forms validators to directly work with the `IgxColumn`. The same validators are available as attributes to be set declaratively in `igx-column`. The following validators are supported out-of-the-box:
-- required
-- min
-- max
-- email
-- minlength
-- maxlength
-- pattern
+### Configure via reactive forms
 
-To validate that a column input would be set and the value is going to be formatted as an email, you can use something like that:
+We expose the `FormGroup` that will be used for validation when editing starts on a row/cell via a `onFormGroupCreate` event. You can modify it by adding your own validators for the related fields:
+
 ```html
-<igx-column [field]="email" [header]="User E-mail" required email></igx-column>
-``` 
+<igx-grid (onFormGroupCreate)='formCreateHandler($event)' ...>
+```
 
-## Angular @@igComponent Custom Validation Example
+```ts
+public formCreateHandler(formGr: FormGroup) {
+  // add a validator
+  const prodName = formGr.get('UserName');
+  prodName.addValidators(...)
+}
+```
+You can decide to write your own validator function, or use one of the [built-in Angular validator functions](https://angular.io/guide/form-validation#built-in-validator-functions).
 
-The Validation in Angular @@igComponent provides a way to write your own custom validator, to change the default error template and to stop users from leaving edit mode is the state is invalid.
+
+## Angular @@igComponent Validation Customization Options
+
+### Set a custom validator
+
+You can define your own validation directive to use on a `<igx-column>` in the template.
+Note that it needs to extend the `IgxColumnValidator` class.
+
+```ts
+ @Directive({
+    selector: '[appForbiddenName]',
+    providers: [{provide: NG_VALIDATORS, useExisting: ForbiddenValidatorDirective, multi: true}]
+  })
+  export class ForbiddenValidatorDirective extends IgxColumnValidator {
+    @Input('appForbiddenName') 
+    public forbiddenName = '';
+  
+    validate(control: AbstractControl): ValidationErrors | null {
+      return this.forbiddenName ? forbiddenNameValidator(new RegExp(this.forbiddenName, 'i'))(control)
+                                : null;
+    }
+  }
+```
+
+Once it is defined and added in your app module you can set it declaratively to a given column in the grid:
+
+```html
+<igx-column appForbiddenName='bob' ...>
+```
+
+### Change default error template
+
+You can define your own custom error template that will be displayed in the error tooltip when the cell enters invalid state.
+This is useful in scenarios where you want to add your own custom error message or otherwise change the look or content of the message.
+
+```html
+<igx-column ... >
+  <ng-template igxCellValidationError let-cell='cell'>
+    <div *ngIf="cell.formGroup?.get(cell.column?.field).errors?.['forbiddenName']">
+      This name is forbidden.
+    </div>
+  </ng-template>
+</igx-column>
+```
+
+### Prevent exiting edit mode on invalid state
+
+In some cases you may want to disallow submiting an invalid value in the data.
+In that scenarios you can use the `cellEdit` or `rowEdit` events and cancel the event in case the new value is invalid.
+Both events' arguments have a `isValid` property and can be canceled accordingly.
+
+```
+<igx-grid (cellEdit)='cellEdit($event)' ...>
+```
+
+```
+public cellEdit(evt) {
+  if (!evt.isValid) {
+    evt.cancel = true;
+  }
+}
+```
+
+### Example
+
+The below example demonstrates the above-mentioned customization options.
 
 @@if (igxName === 'IgxGrid') {
 <code-view style="height:650px" 
