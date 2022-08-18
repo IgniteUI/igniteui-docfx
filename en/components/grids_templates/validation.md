@@ -160,6 +160,21 @@ The below example demonstrates the above-mentioned customization options.
 <div class="divider--half"></div>
 }
 
+## Integration with Transaction service
+
+Validation states are stored as part of the transaction service.
+When `batchEditing` is enabled all methods that affect the state such as `commit`, `clear`, `undo`, `redo` will also update the validity state of cells in the grid.
+When `batchEditing` is disabled, validation states will still be persisted until `clear` is called.
+
+The following public apis are exposed in the base transaction to get/set validation related transactions and states:
+
+- [getInvalidTransactionLog]({environment:angularApiUrl}/interfaces/igxbasetransactionservice.html#getInvalidTransactionLog) - Returns invalid transactions.
+- [addValidation]({environment:angularApiUrl}/interfaces/igxbasetransactionservice.html#addValidation) - Adds provided transaction with validation status.
+- [getAggregatedValidationState]({environment:angularApiUrl}/interfaces/igxbasetransactionservice.html#getAggregatedValidationState) - Returns the validation state of the record with provided id.
+- [getAggregatedValidationChanges]({environment:angularApiUrl}/interfaces/igxbasetransactionservice.html#getAggregatedValidationChanges)- Returns aggregated validation changes from all transactions
+
+We do not disallow submitting invalid values in the data out of the box. It's up to you to decide how to handle invalid transactions.
+
 ## API References
 
 * [IgxBaseTransactionService]({environment:angularApiUrl}/classes/igxbasetransactionservice.html)
