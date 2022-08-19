@@ -60,10 +60,10 @@ We expose the `FormGroup` that will be used for validation when editing starts o
 ```
 
 ```ts
-public formCreateHandler(formGr: FormGroup) {
+public formCreateHandler(formGroup: FormGroup) {
   // add a validator
-  const prodName = formGr.get('UserName');
-  prodName.addValidators(...)
+  const faxRecord = formGroup.get('fax');
+  faxRecord.addValidators(...);
 }
 ```
 You can decide to write your own validator function, or use one of the [built-in Angular validator functions](https://angular.io/guide/form-validation#built-in-validator-functions).
@@ -78,24 +78,24 @@ Note that it needs to extend the `IgxColumnValidator` class.
 
 ```ts
  @Directive({
-    selector: '[appForbiddenName]',
-    providers: [{provide: NG_VALIDATORS, useExisting: ForbiddenValidatorDirective, multi: true}]
-  })
-  export class ForbiddenValidatorDirective extends IgxColumnValidator {
-    @Input('appForbiddenName') 
-    public forbiddenName = '';
-  
+    selector: '[forbiddenName]',
+    providers: [{ provide: NG_VALIDATORS, useExisting: ForbiddenValidatorDirective, multi: true }]
+})
+export class ForbiddenValidatorDirective extends IgxColumnValidator {
+    @Input('forbiddenName')
+    public forbiddenNameString = '';
+
     validate(control: AbstractControl): ValidationErrors | null {
-      return this.forbiddenName ? forbiddenNameValidator(new RegExp(this.forbiddenName, 'i'))(control)
-                                : null;
+        return this.forbiddenNameString ? forbiddenNameValidator(new RegExp(this.forbiddenNameString, 'i'))(control)
+            : null;
     }
-  }
+}
 ```
 
 Once it is defined and added in your app module you can set it declaratively to a given column in the grid:
 
 ```html
-<igx-column appForbiddenName='bob' ...>
+<igx-column forbiddenName='josh' ...>
 ```
 
 ### Change default error template
@@ -136,9 +136,9 @@ public cellEdit(evt) {
 The below example demonstrates the above-mentioned customization options.
 
 @@if (igxName === 'IgxGrid') {
-<code-view style="height:650px" 
+<code-view style="height:530px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-custom-validation" alt="Angular @@igComponent Custom Validation Example">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-validator-service-extended" alt="Angular @@igComponent Custom Validation Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -146,7 +146,7 @@ The below example demonstrates the above-mentioned customization options.
 @@if (igxName === 'IgxTreeGrid') {
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-custom-validation" alt="Angular @@igComponent Custom Validation Example">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/grid-validator-service-extended" alt="Angular @@igComponent Custom Validation Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -154,7 +154,7 @@ The below example demonstrates the above-mentioned customization options.
 @@if (igxName === 'IgxHierarchicalGrid') {
 <code-view style="height:680px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-custom-validation" alt="Angular @@igComponent Custom Validation Example">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/grid-validator-service-extended" alt="Angular @@igComponent Custom Validation Example">
 </code-view>
 
 <div class="divider--half"></div>
