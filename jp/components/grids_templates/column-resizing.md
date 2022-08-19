@@ -239,16 +239,16 @@ column.autosize();
 ```
 }
 
-## Auto-size columns on initialization
+## 初期化時に列を自動サイズ設定する
 
-Each column can be set to auto-size on initialization by setting `width` to 'auto':
+`width` を「auto」に設定することで、初期化時に各列を自動サイズに設定できます。
 
 ```html
 <igx-column width='auto'>...
 ```
 
-When the column is first initialized in the view it resolves its width to the size of the longest visible cell or header. Note that cells that are outside of the visible rows are not included.
-This approach is more performance optimized than auto-sizing post initialization and is recommended especially in cases where you need to auto-size a large number of columns.
+列がビューで最初に初期化されるとき、その幅は、表示されている最も長いセルまたはヘッダーのサイズに調整されます。表示されている行の外側にあるセルは含まれないことに注意してください。
+このアプローチは、初期化後の自動サイズ変更よりもパフォーマンスが最適化されており、特に多数の列のサイズを自動サイズ設定する必要がある場合に推奨されます。
 
 ## スタイル設定
 @@igComponent 列のサイズ変更行のスタイル設定は、すべてのテーマ関数とコンポーネント ミックスインが存在するインデックス ファイルをインポートする必要があります。
