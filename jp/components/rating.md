@@ -1,10 +1,10 @@
 ---
-title: Angular Rating | レーティング | Ignite UI | インフラジスティックス
+title: Angular Rating | 評価 | Ignite UI | インフラジスティックス
 _description: Ignite UI Angular Rating を使用すると、ユーザーは Unicode シンボル、SVG、またはアイコンを使用してフィードバックを表示および提供できます。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, Native Angular コンポーネント スイート, Native Angular コントロール, Native Angular コンポーネント Library, Angular Rating コンポーネント, Angular Rating コントロール
 _language: ja
 ---
-# Rating (レーティング)
+# Rating (評価)
 
 Ignite UI Rating コンポーネントを使用すると、ユーザーのフィードバックを表示および入力できます。
 
@@ -74,7 +74,7 @@ export class AppModule { }
 >[!NOTE]
 >`IgcFormsModule` をインポートして `ngModel` または `formControl` を使用する場合、Angular はカスタム `ControlValueAccessor` ディレクティブによって `igc-rating` タグを認識するため、`CUSTOM_ELEMENTS_SCHEMA` を含める必要はありません。
 
-たとえば、値に ngModel を使用してレーティングを追加すると、問題なくモデルと双方向にバインドされます。
+たとえば、値に ngModel を使用して評価を追加すると、問題なくモデルと双方向にバインドされます。
 
 ```html
 <igc-rating name="modelRating" [(ngModel)]="model.Rating" max="10" label="Model Rating"></igc-rating>
