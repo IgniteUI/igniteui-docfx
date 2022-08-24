@@ -37,7 +37,7 @@ The following sample demonstrates how to use the prebuilt `required`, `email` an
 @@if (igxName === 'IgxTreeGrid') {
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/grid-validator-service" alt="Angular @@igComponent Validation Basic Example">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-validator-service" alt="Angular @@igComponent Validation Basic Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -45,7 +45,7 @@ The following sample demonstrates how to use the prebuilt `required`, `email` an
 @@if (igxName === 'IgxHierarchicalGrid') {
 <code-view style="height:680px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/grid-validator-service" alt="Angular @@igComponent Validation Basic Example">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-validator-service" alt="Angular @@igComponent Validation Basic Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -144,17 +144,17 @@ The below example demonstrates the above-mentioned customization options.
 <div class="divider--half"></div>
 }
 @@if (igxName === 'IgxTreeGrid') {
-<code-view style="height:600px" 
+<code-view style="height:530px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/grid-validator-service-extended" alt="Angular @@igComponent Custom Validation Example">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-validator-service-extended" alt="Angular @@igComponent Custom Validation Example">
 </code-view>
 
 <div class="divider--half"></div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<code-view style="height:680px" 
+<code-view style="height:610px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/grid-validator-service-extended" alt="Angular @@igComponent Custom Validation Example">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-validator-service-extended" alt="Angular @@igComponent Custom Validation Example">
 </code-view>
 
 <div class="divider--half"></div>
