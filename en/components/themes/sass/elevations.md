@@ -22,11 +22,12 @@ $color-1: rgb(153, 191, 170); // Umbra
 $color-2: rgb(92, 134, 141); // Penumbra
 $color-3: rgb(92, 61, 70); // Ambient
 
-$my-elevations: elevations(
-    $color-1,
-    $color-2,
-    $color-3
-);
+$my-elevations: (
+    1: box-shadow((0 1px 3px 0 $color-1, 0 1px 1px 0 $color-2, 0 2px 1px -1px $color-3)),
+    2: box-shadow((0 1px 5px 0 $color-1, 0 2px 2px 0 $color-2, 0 3px 1px -2px $color-3)),
+    3: box-shadow((0 1px 8px 0 $color-1, 0 3px 4px 0 $color-2, 0 3px 3px -2px $color-3)),
+    ...
+)
 ```
 
 ### Retrieving Elevations
@@ -36,14 +37,11 @@ To retrieve a set of box-shadows from the elevations map you can pass up to two 
 If you want to retrieve the elevation from the default `$elevations` map, you can omit the first argument.
 
 ```scss
-// Returns elevation 1 shadows from $elevations
-$elevation-1: elevation($elevation: '1');
+// Returns elevation 1 shadows
+$elevation-1: elevation(1);
 
-// Returns elevation 1 shadows from $my-elevations
-$my-elevation-1: elevation(
-    $elevations: $my-elevations, 
-    $elevation: 1
-);
+// Returns elevation 1 shadows
+$my-elevation-1: elevation($name: 1);
 ```
 
 ### Passing Elevations to Themes
@@ -84,7 +82,7 @@ Since the `elevation` function returns a list of box shadows, you can use the re
 
 ```scss
 $card-theme: card-theme(
-    $resting-shadow: elevation($elevations, 10)
+    $resting-shadow: elevation(10)
 );
 
 @include card($card-theme);

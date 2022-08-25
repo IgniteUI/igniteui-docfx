@@ -17,16 +17,16 @@ Here's a list of resting elevations as used in various components in Ignite UI f
 
 | Component                                       | Default Elevation Level | CSS Variable       |
 | ----------------------------------------------- | ----------------------- | ------------------ |
-| banner, button, toast                           | 0                       | --igx-elevation-0  |
-| badge, carousel buttons, search input           | 1                       | --igx-elevation-1  |
-| button group, raised button, card, grid, switch | 2                       | --igx-elevation-2  |
-| navbar, snackbar                                | 4                       | --igx-elevation-4  |
-| floating action button,                         | 6                       | --igx-elevation-6  |
-| bottom navigation, ghost chip, dropdown         | 8                       | --igx-elevation-8  |
-| navdrawer                                       | 16                      | --igx-elevation-16 |
-| dialog                                          | 24                      | --igx-elevation-24 |
+| banner, button, toast                           | 0                       | --ig-elevation-0  |
+| badge, carousel buttons, search input           | 1                       | --ig-elevation-1  |
+| button group, raised button, card, grid, switch | 2                       | --ig-elevation-2  |
+| navbar, snackbar                                | 4                       | --ig-elevation-4  |
+| floating action button,                         | 6                       | --ig-elevation-6  |
+| bottom navigation, ghost chip, dropdown         | 8                       | --ig-elevation-8  |
+| navdrawer                                       | 16                      | --ig-elevation-16 |
+| dialog                                          | 24                      | --ig-elevation-24 |
 
-As you can see from the `CSS Variable` column, all elevations are defined in the following format `--igx-elevation-[level]`. As mentioned, the elevation level number go from 0 through 24(inclusive).
+As you can see from the `CSS Variable` column, all elevations are defined in the following format `--ig-elevation-[level]`. As mentioned, the elevation level number go from 0 through 24(inclusive).
 
 ## Usage
 
@@ -34,7 +34,7 @@ To begin using elevations in your own components all you need is to reference th
 
 ```css
 .floaty-element {
-  box-shadow: var(--igx-elevation-6);
+  box-shadow: var(--ig-elevation-6);
 }
 ```
 
@@ -42,9 +42,9 @@ Changing the elevation in an existing component theme works in a similar way.
 
 ```css
 [igxButton="raised"] {
-  --resting-shadow: var(--igx-elevation-4);
-  --hover-shadow: var(--igx-elevation-12);
-  --focus-shadow: var(--igx-elevation-12);
+  --resting-shadow: var(--ig-elevation-4);
+  --hover-shadow: var(--ig-elevation-12);
+  --focus-shadow: var(--ig-elevation-12);
 }
 ```
 
@@ -59,8 +59,8 @@ Example:
 ```css
 /* styles.css */
 :root {
-    --igx-elevation-1: 0 2px 6px 0 rgba(0, 0, 0, .18);
-    --igx-elevation-2: 0 3px 9px 0 rgba(0, 0, 0, .24);
+    --ig-elevation-1: 0 2px 6px 0 rgba(0, 0, 0, .18);
+    --ig-elevation-2: 0 3px 9px 0 rgba(0, 0, 0, .24);
 }
 ```
 
@@ -73,10 +73,10 @@ You can shadow the globally set elevations for a specific scope only. We already
 [igxButton="raised"],
 igx-grid,
 igx-card {
-    --igx-elevation-2: 0 3px 9px 0 rgba(0, 0, 0, .24);
+    --ig-elevation-2: 0 3px 9px 0 rgba(0, 0, 0, .24);
 }
 ```
-This will set the `--resting-shadow` in the raised button and card, and the `--grid-shadow` in the grid, to the value assigned to `--igx-elevation-2`;
+This will set the `--resting-shadow` in the raised button and card, and the `--grid-shadow` in the grid, to the value assigned to `--ig-elevation-2`;
 
 Elevations can be created and consumed in a more powerful way using Sass as well. Check out the related topics below to learn more.
 

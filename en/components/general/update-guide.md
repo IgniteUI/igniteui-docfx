@@ -51,6 +51,31 @@ Unfortunately not all changes can be automatically updated. Changes below are sp
 
 For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from the "From 6.x .." section apply those changes and work your way up:
 
+## From 14.1.x to 14.2.x
+- **Breaking Change** - All `$grays` variable names are switched with `$gray`. <br />
+If you're using the **color function** to get a gray shade, use it like this: `color($green-palette, 'gray', 800);`
+
+- **Breaking Change** - All **igx** prefixes are replaced with **ig** prefixes. For example, **igx-**typography is now **ig-**typography.
+
+- **Breaking Change** - The **type-style** mixin now doesn't accept type-scale as a parameter, only the categories names.
+
+- **Breaking Change** - **Generating css variables** for the palette is now done by the **palette mixin**, not by the **palette-vars mixin**.
+
+- **Breaking Change** - The **palette function** now **requires the surface color** and the **grays parameter** is renamed to **gray**. The gray color can be generated automatically based on the surface color, or you can set one yourself. When you're generating a palette, you have to keep in mind that there are no longer default values for **info, success, error and warn** colors. You have to set the explicitly if you want to use them.
+
+- **Breaking Change** - The **elevation function** now accepts only one argument - **$name - the elevation level**.
+
+- **Breaking Change** - The **elevations function** has been removed.
+
+- **Breaking Change** - **The palette parameter is now removed from all component themes.** You can **use the palette mixin** to include your custom palette in your component. When making a custom theme for a component it's good to know that using the css-vars mixin is generating css variables only for those properties you've changed. Including the component mixin generates css variables for all properties in the component's theme.
+
+- Add this line in your `angular.json` file, in order to access the `igniteui-theming package`, without writing the full path. You should have the igniteui-theming package installed in your `node_modules` folder first.
+```
+"stylePreprocessorOptions": {
+    "includePaths": ["node_modules"]
+}
+```
+
 ## From 13.1.x to 13.2.x
 
 ### Themes
