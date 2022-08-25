@@ -249,6 +249,35 @@ Each column can be set to auto-size on initialization by setting `width` to 'aut
 When the column is first initialized in the view it resolves its width to the size of the longest visible cell or header. Note that cells that are outside of the visible rows are not included.
 This approach is more performance optimized than auto-sizing post initialization and is recommended especially in cases where you need to auto-size a large number of columns.
 
+@@if (igxName === 'IgxGrid') {
+
+<code-view style="height:550px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/grid/grid-columnAutoResizing-sample" alt="Angular @@igComponent Column Resizing Example">
+</code-view>
+
+<div class="divider--half"></div>
+}
+@@if (igxName === 'IgxTreeGrid') {
+
+<code-view style="height:550px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-columnAutoSizing-sample" alt="Angular @@igComponent Column Resizing Example">
+</code-view>
+
+<div class="divider--half"></div>
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+
+<code-view style="height:510px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hGrid-columnAutosizing-sample" alt="Angular @@igComponent Column Resizing Example">
+</code-view>
+
+<div class="divider--half"></div>
+}
+
+
 ## Styling
 To get started with the styling of the @@igComponent column resize line, we need to import the index file, where all the theme functions and component mixins live:
 
