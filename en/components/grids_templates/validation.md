@@ -55,9 +55,22 @@ The following sample demonstrates how to use the prebuilt `required`, `email` an
 
 We expose the `FormGroup` that will be used for validation when editing starts on a row/cell via a `onFormGroupCreate` event. You can modify it by adding your own validators for the related fields:
 
+@@if (igxName === 'IgxGrid') {
 ```html
 <igx-grid (onFormGroupCreate)='formCreateHandler($event)' ...>
 ```
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+```html
+<igx-hierarchical-grid (onFormGroupCreate)='formCreateHandler($event)' ...>
+```
+}
+
+@@if (igxName === 'IgxTreeGrid') {
+```html
+<igx-tree-grid (onFormGroupCreate)='formCreateHandler($event)' ...>
+```
+}
 
 ```ts
 public formCreateHandler(formGroup: FormGroup) {
@@ -119,11 +132,24 @@ In some cases you may want to disallow submiting an invalid value in the data.
 In that scenarios you can use the `cellEdit` or `rowEdit` events and cancel the event in case the new value is invalid.
 Both events' arguments have a `isValid` property and can be canceled accordingly.
 
-```
+@@if (igxName === 'IgxGrid') {
+```html
 <igx-grid (cellEdit)='cellEdit($event)' ...>
 ```
-
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+```html
+<igx-hierarchical-grid (cellEdit)='cellEdit($event)' ...>
 ```
+}
+
+@@if (igxName === 'IgxTreeGrid') {
+```html
+<igx-tree-grid (cellEdit)='cellEdit($event)' ...>
+```
+}
+
+```ts
 public cellEdit(evt) {
   if (!evt.isValid) {
     evt.cancel = true;
