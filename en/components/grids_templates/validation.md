@@ -57,18 +57,18 @@ We expose the `FormGroup` that will be used for validation when editing starts o
 
 @@if (igxName === 'IgxGrid') {
 ```html
-<igx-grid (onFormGroupCreate)='formCreateHandler($event)' ...>
+<igx-grid (formGroupCreated)='formCreateHandler($event)' ...>
 ```
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid (onFormGroupCreate)='formCreateHandler($event)' ...>
+<igx-hierarchical-grid (formGroupCreated)='formCreateHandler($event)' ...>
 ```
 }
 
 @@if (igxName === 'IgxTreeGrid') {
 ```html
-<igx-tree-grid (onFormGroupCreate)='formCreateHandler($event)' ...>
+<igx-tree-grid (formGroupCreated)='formCreateHandler($event)' ...>
 ```
 }
 
@@ -82,12 +82,31 @@ public formCreateHandler(formGroup: FormGroup) {
 You can decide to write your own validator function, or use one of the [built-in Angular validator functions](https://angular.io/guide/form-validation#built-in-validator-functions).
 
 
+## Validation service API
+
+The grid exposes a validation service via the `validation` property.
+That service has the following public APIs:
+- `validity` - returns if the grid validation state is valid.
+- `getInvalid` - returns records with invalid states.
+- `clear` - clears state for record by id or clears all state if no id is provided.
+
+Invalid states will persis until the validation errors in them are fixed according to the validation rule or they are cleared.
+
+## Validation triggers
+
+Validation will be triggered in the following scenarios:
+
+- While editing via the cell editor based on the grid's `validationTrigger`. Either on `change` while typing in the editor, or on `blur` when the editor loses focus or closes.
+- When updating cells/rows via the API - `updateRow`, `updateCell` etc..
+- When using batch editing and the `undo`/`redo` API of the transaction service.
+
+> Note: Validation will not trigger for records that have not been edited via user input or via the editing API.
+
 ## Angular @@igComponent Validation Customization Options
 
 ### Set a custom validator
 
 You can define your own validation directive to use on a `<igx-column>` in the template.
-Note that it needs to extend the `IgxColumnValidator` class.
 
 ```ts
  @Directive({
@@ -119,7 +138,7 @@ This is useful in scenarios where you want to add your own custom error message 
 ```html
 <igx-column ... >
   <ng-template igxCellValidationError let-cell='cell'>
-    <div *ngIf="cell.formGroup?.get(cell.column?.field).errors?.['forbiddenName']">
+    <div *ngIf="cell.errors?.['forbiddenName']">
       This name is forbidden.
     </div>
   </ng-template>
@@ -151,11 +170,28 @@ Both events' arguments have a `isValid` property and can be canceled accordingly
 
 ```ts
 public cellEdit(evt) {
-  if (!evt.isValid) {
+  if (!evt.valid) {
     evt.cancel = true;
   }
 }
 ```
+
+### Cross-field validation
+
+In some scenarios validation of one field may depend on the value of another field in the record.
+In that case a custom validator can be used to compare the two values via their shared `FormGroup`.
+
+```ts
+export const lastActiveDateValidator: ValidatorFn = (control: AbstractControl): ValidationErrors | null => {
+  const formGroup = control.parent;
+  const createdOn = formGroup.get('createdOnRecord');
+  const lastActive = formGroup.get('lastActive');
+
+  return createdOn && lastActive && createdOn > lastActive ? { beyondThreshold: true } : null;
+};
+
+```
+
 
 ### Example
 
@@ -185,21 +221,6 @@ The below example demonstrates the above-mentioned customization options.
 
 <div class="divider--half"></div>
 }
-
-## Integration with Transaction service
-
-Validation states are stored as part of the transaction service.
-When `batchEditing` is enabled all methods that affect the state such as `commit`, `clear`, `undo`, `redo` will also update the validity state of cells in the grid.
-When `batchEditing` is disabled, validation states will still be persisted until `clear` is called.
-
-The following public apis are exposed in the base transaction to get/set validation related transactions and states:
-
-- [getInvalidTransactionLog]({environment:angularApiUrl}/interfaces/igxbasetransactionservice.html#getInvalidTransactionLog) - Returns invalid transactions.
-- [addValidation]({environment:angularApiUrl}/interfaces/igxbasetransactionservice.html#addValidation) - Adds provided transaction with validation status.
-- [getAggregatedValidationState]({environment:angularApiUrl}/interfaces/igxbasetransactionservice.html#getAggregatedValidationState) - Returns the validation state of the record with provided id.
-- [getAggregatedValidationChanges]({environment:angularApiUrl}/interfaces/igxbasetransactionservice.html#getAggregatedValidationChanges)- Returns aggregated validation changes from all transactions
-
-We do not disallow submitting invalid values in the data out of the box. It's up to you to decide how to handle invalid transactions.
 
 ## API References
 
