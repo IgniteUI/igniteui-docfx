@@ -1,36 +1,37 @@
 ---
-title: Angular Rating | Rating | Ignite UI | Infragistics
-_description: With Ignite UI Angular Rating, allows users to view and provide feedback using unicode symbols, svg, or icons.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Rating component, Angular Rating control
+title: Angular Rating | 評価 | Ignite UI | インフラジスティックス
+_description: Ignite UI Angular Rating を使用すると、ユーザーは Unicode シンボル、SVG、またはアイコンを使用してフィードバックを表示および提供できます。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, Native Angular コンポーネント スイート, Native Angular コントロール, Native Angular コンポーネント Library, Angular Rating コンポーネント, Angular Rating コントロール
+_language: ja
 ---
-# Rating
+# Rating (評価)
 
-The Ignite UI Rating component allows users to view and provide feedback.
+Ignite UI Rating コンポーネントを使用すると、ユーザーのフィードバックを表示および入力できます。
 
-## Angular Rating Example
+## Angular Rating の例
 
 <code-view style="height: 550px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-with-rating" alt="Angular Rating Example">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-with-rating" alt="Angular Rating の例">
 </code-view>
 
 
 <div class="divider--half"></div>
 
 
-## Basic Usage
+## 基本的な使用方法
 
-Ignite UI Rating is a standard [web component](https://developer.mozilla.org/en-US/docs/Web/Web_Components) and as such can be used in an Angular application.
+Ignite UI Rating は標準の[ウェブ コンポーネント](https://developer.mozilla.org/ja/docs/Web/Web_Components)であるため、Angular アプリケーションで使用できます。
 
-Follow the steps below to add the Ignite UI Web Components package to your Angular project and set it up in order to use the component.
+以下の手順に従って、Ignite UI Web Components のパッケージを Angular プロジェクトに追加し、コンポーネントを使用するためにセットアップします。
 
-First, install the `igniteui-webcomponents` package
+最初に、`igniteui-webcomponents` パッケージをインストールします。
 
 ```cmd
 npm install igniteui-webcomponents --save
 ```
 
-Next, you should call the `defineCustomElements()` function with `IgcRatingComponent` argument either in your `main.ts` file or in the component `.ts` file that is using `IgcRating`.
+次に、`main.ts` ファイルまたは `IgcRating` を使用しているコンポーネントの `.ts` ファイルで `IgcRatingComponent` 引数を指定して `defineCustomElements()` 関数を呼び出す必要があります。
 
 ```typescript
 import { defineComponents, IgcRatingComponent } from 'igniteui-webcomponents';
@@ -38,7 +39,7 @@ import { defineComponents, IgcRatingComponent } from 'igniteui-webcomponents';
 defineComponents(IgcRatingComponent);
 ```
 
-You also need to include the `CUSTOM_ELEMENTS_SCHEMA` schema in the `AppModule`:
+また、`AppModule` に `CUSTOM_ELEMENTS_SCHEMA` スキーマを含める必要があります。
 
 ```typescript
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
@@ -49,15 +50,15 @@ import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 export class AppModule {}
 ```
 
-With these you can now add the Rating component in an Angular component template and use its inputs and outputs:
+これらを使用して、Angular コンポーネント テンプレートに Rating コンポーネントを追加し、その入力と表示を使用できるようになります:
 
 ```html
 <igc-rating value="ratingVal" min="1" max="5" (igcChange)="ratingChanged($event);"></igc-rating>
 ```
 
-## Using Rating in Angular Forms
+## Angular フォームで Rating を使用する
 
-In Angular forms, components often need to be able to bind their values with `ngModel` or use `formControl` which requires an implementation of Angular's `ControlValueAccessor` interface. Ignite UI for Angular package provides such implementation in the form of a directive that uses an element selector to attach to supported web components. Currently `IgcRating` is the only component that it supports. To use the directive you just need to import `IgcFormsModule` from the library.
+Angular フォームでは、多くの場合、コンポーネントはその値を `ngModel` にバインドしたり、Angular の `ControlValueAccessor` インターフェイスの実装を必要とする `formControl` を使用したりできる必要があります。Ignite UI for Angular パッケージは、要素セレクターを使用してサポートされているウェブ コンポーネントにアタッチするディレクティブの形式で、このような実装を提供します。現在、サポートされているコンポーネントは `IgcRating` のみです。ディレクティブを使用するには、ライブラリから `IgcFormsModule` をインポートするだけです。
 
 ```typescript
 import { IgcFormsModule } from 'igniteui-angular';
@@ -71,20 +72,20 @@ export class AppModule { }
 ```
 
 >[!NOTE]
->If you are importing `IgcFormsModule` and using either `ngModel` or `formControl`, you no longer need to include `CUSTOM_ELEMENTS_SCHEMA` as Angular will recognize the `igc-rating` tag by the custom `ControlValueAccessor` directive.
+>`IgcFormsModule` をインポートして `ngModel` または `formControl` を使用する場合、Angular はカスタム `ControlValueAccessor` ディレクティブによって `igc-rating` タグを認識するため、`CUSTOM_ELEMENTS_SCHEMA` を含める必要はありません。
 
-Add a rating with e.g. ngModel for value and it will two-way bind with your model without issues.
+たとえば、値に ngModel を使用して評価を追加すると、問題なくモデルと双方向にバインドされます。
 
 ```html
 <igc-rating name="modelRating" [(ngModel)]="model.Rating" max="10" label="Model Rating"></igc-rating>
 ```
 
-The following application shows one example of how this integration works in a real use-case with forms.
+次のアプリケーションは、フォームを使用した実際のユースケースでこの統合がどのように機能するかを示す一例です。
 
 <code-view style="height: 550px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/rating-form" alt="Angular Rating Example">
+           iframe-src="{environment:demosBaseUrl}/data-entries/rating-form" alt="Angular Rating の例">
 </code-view>
 
-For further information on the usage of the Rating component, you can check out [this topic]({environment:infragisticsBaseUrl}/products/ignite-ui-web-components/web-components/components/inputs/rating.html).
+Rating コンポーネントの使用方法の詳細については、[このトピック]({environment:infragisticsBaseUrl}/products/ignite-ui-web-components/web-components/components/inputs/rating.html)を参照してください。
 
