@@ -14,7 +14,7 @@ Elevations in Ignite UI for Angular are declared as a map of 25 elements. Each e
 ## Usage
 The following section demonstrates how to create and retrieve custom elevations.
 
-### Creating Elevations
+### Configuring Elevations
 
 ```scss
 // Define the 3 elevation colors
@@ -22,12 +22,7 @@ $color-1: rgb(153, 191, 170); // Umbra
 $color-2: rgb(92, 134, 141); // Penumbra
 $color-3: rgb(92, 61, 70); // Ambient
 
-$my-elevations: (
-    1: box-shadow((0 1px 3px 0 $color-1, 0 1px 1px 0 $color-2, 0 2px 1px -1px $color-3)),
-    2: box-shadow((0 1px 5px 0 $color-1, 0 2px 2px 0 $color-2, 0 3px 1px -2px $color-3)),
-    3: box-shadow((0 1px 8px 0 $color-1, 0 3px 4px 0 $color-2, 0 3px 3px -2px $color-3)),
-    ...
-)
+@include configure-elevations($color-1, $color-2, $color-3);
 ```
 
 ### Retrieving Elevations
