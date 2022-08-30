@@ -73,11 +73,11 @@ We expose the `FormGroup` that will be used for validation when editing starts o
 }
 
 ```ts
-public formCreateHandler(formGroup: FormGroup) {
-  // add a validator
-  const faxRecord = formGroup.get('fax');
-  faxRecord.addValidators(...);
-}
+    public formCreateHandler(formGroup: FormGroup) {
+        const lastActiveRecord = formGroup.get('last_activity');
+        lastActiveRecord.addValidators(this.datesThresholdValidator());
+        ...
+    }
 ```
 You can decide to write your own validator function, or use one of the [built-in Angular validator functions](https://angular.io/guide/form-validation#built-in-validator-functions).
 
@@ -109,16 +109,16 @@ Validation will be triggered in the following scenarios:
 You can define your own validation directive to use on a `<igx-column>` in the template.
 
 ```ts
- @Directive({
-    selector: '[forbiddenName]',
-    providers: [{ provide: NG_VALIDATORS, useExisting: ForbiddenValidatorDirective, multi: true }]
+@Directive({
+    selector: '[phoneFormat]',
+    providers: [{ provide: NG_VALIDATORS, useExisting: PhoneFormatDirective, multi: true }]
 })
-export class ForbiddenValidatorDirective extends IgxColumnValidator {
-    @Input('forbiddenName')
-    public forbiddenNameString = '';
+export class PhoneFormatDirective extends Validators {
+    @Input('phoneFormat')
+    public phoneFormatString = '';
 
-    validate(control: AbstractControl): ValidationErrors | null {
-        return this.forbiddenNameString ? forbiddenNameValidator(new RegExp(this.forbiddenNameString, 'i'))(control)
+    public validate(control: AbstractControl): ValidationErrors | null {
+        return this.phoneFormatString ? phoneFormatValidator(new RegExp(this.phoneFormatString, 'i'))(control)
             : null;
     }
 }
@@ -127,7 +127,7 @@ export class ForbiddenValidatorDirective extends IgxColumnValidator {
 Once it is defined and added in your app module you can set it declaratively to a given column in the grid:
 
 ```html
-<igx-column forbiddenName='josh' ...>
+<igx-column phoneFormat="\+\d{1}\-(?!0)(\d{3})\-(\d{3})\-(\d{4})\b" ...>
 ```
 
 ### Change default error template
@@ -182,7 +182,7 @@ In some scenarios validation of one field may depend on the value of another fie
 In that case a custom validator can be used to compare the two values via their shared `FormGroup`.
 
 ```ts
-export const lastActiveDateValidator: ValidatorFn = (control: AbstractControl): ValidationErrors | null => {
+export const datesThresholdValidator: ValidatorFn = (control: AbstractControl): ValidationErrors | null => {
   const formGroup = control.parent;
   const createdOn = formGroup.get('createdOnRecord');
   const lastActive = formGroup.get('lastActive');
