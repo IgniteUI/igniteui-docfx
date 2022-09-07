@@ -230,6 +230,7 @@ The below example demonstrates the above-mentioned customization options.
 In some scenarios validation of one field may depend on the value of another field in the record.
 In that case a custom validator can be used to compare the values in the record via their shared `FormGroup`.
 
+@@if (igxName === 'IgxGrid') {
 
 ```ts
 export function employeeValidator(minDealsRatio: number, formGroup: AbstractControl): ValidatorFn {
@@ -317,6 +318,115 @@ The below sample demonstrates a cross-field validation between different field o
 </code-view>
 
 <div class="divider--half"></div>
+
+}
+
+@@if (igxName === 'IgxHierarchicalGrid') {
+
+  Cross-field validators can be added to the formGroup on the `formGroupCreated` event. In them multiple fields can be compared for validity.
+
+  ```ts
+  public formCreateCustomerHandler(event: IGridFormGroupCreatedEventArgs) {
+        const formGroup = event.formGroup;
+        formGroup.addValidators(this.addressValidator());
+    }
+
+    public formCreateOrderHandler(event: IGridFormGroupCreatedEventArgs) {
+        const formGroup = event.formGroup;
+        formGroup.addValidators(this.dateValidator());
+    }
+
+    public addressValidator(): ValidatorFn {
+        return (control: AbstractControl): ValidationErrors | null => {
+            const formGroup = control;
+            let returnObject = {};
+            const city = formGroup.get('City');
+            const country = formGroup.get('Country');
+            const validCities = this.countryData.get(country.value);
+            if (!validCities || !validCities[city.value]) {
+                returnObject['invalidAddress'] = true;
+            }
+            return returnObject;
+        }
+    }
+
+    public dateValidator(): ValidatorFn {
+        return (control: AbstractControl): ValidationErrors | null => {
+            const formGroup = control;
+            let returnObject = {};
+            const orderDate = formGroup.get('OrderDate').value;
+            const shippedDate = formGroup.get('ShippedDate').value;
+            if (new Date(shippedDate) < new Date(orderDate)) {
+                returnObject['invalidRange'] = true;
+            }
+            return returnObject;
+        }
+    }
+  ```
+
+The multi-field errors can then be displayed in a separate pinned column.
+
+```html
+<igx-column field="row_valid" header=" " [editable]="false" [dataType]="'number'" [pinned]="true" [width]="'50px'">
+        <ng-template igxCell let-cell="cell">
+            <div *ngIf="isRowValid(cell)" [igxTooltipTarget]="tooltipRef"
+            >
+                <img width="18" src="assets/images/grid/active.png"/>
+            </div>
+            <div *ngIf="!isRowValid(cell)" [igxTooltipTarget]="tooltipRef"
+            >
+                <img width="18" src="assets/images/grid/expired.png"/>
+            </div>
+            <div #tooltipRef="tooltip" igxTooltip [style.width]="'max-content'">
+               <div *ngFor="let message of stateMessage(cell)">
+                   {{message}}
+               </div>
+            </div>
+        </ng-template>
+    </igx-column>
+```
+
+Errors and the detailed messages can be determined based on the row and cell's validity.
+
+```ts
+    public isRowValid(cell: IgxGridCell) {
+        const hasErrors = !!cell.row.errors || cell.row.cells.some(x => !!x.errors);
+        return !hasErrors;
+    }
+
+    public stateMessage(cell: IgxGridCell) {
+        const messages = [];
+        const row = cell.row;
+        if  (row.errors?.invalidAddress) {
+            messages.push('The address information is invalid. City does not match the Country.');
+        }
+        if  (row.errors?.invalidRange) {
+            messages.push('The ShippedDate cannot be before the OrderDate.');
+        }
+        const cellValidationErrors = row.cells.filter(x => !!x.errors);
+        if (cellValidationErrors && cellValidationErrors.length > 0) {
+            const fields = cellValidationErrors.map(x => x.column.field).join(',');
+            messages.push('The following fields are required: ' + fields);
+        }
+
+        if (messages.length === 0) {
+            // no errors
+            return ['Valid'];
+        }
+        return messages;
+    }
+```
+
+The below sample demonstrates cross-field validation in a Hierarchical Grid for both the root and child data.
+
+<code-view style="height:530px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-cross-field-validation" alt="Angular @@igComponent Cross-field Validation Example">
+</code-view>
+
+<div class="divider--half"></div>
+}
+
 
 
 ## API References
