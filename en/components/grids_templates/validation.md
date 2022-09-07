@@ -316,6 +316,71 @@ The below sample demonstrates a cross-field validation between different field o
            iframe-src="{environment:demosBaseUrl}/grid/grid-validator-service-cross-cell" alt="Angular @@igComponent Cross-field Validation Example">
 </code-view>
 
+## Styling
+
+Using the [Ignite UI for Angular Theme Library](../themes/index.md), we can alter the default validation styles while editing. 
+
+In the below example, we will make use of the exposed template for validation message, which pops out in a tooltip and overriding the error color to modify the default looks of the validation.
+We will also style the background of the invalid rows to make them more distinct.
+
+### Import theme
+
+The easiest way to style and access css variables is to define styles in our `app`'s global style file (typically `styles.scss`).
+The first thing we need to do is import the `themes/index` file - this gives us access to all the powerful tools of the Ignite UI for Angular Sass framework:
+
+```scss
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+```
+
+### Include the styles
+In order to change the error color you can use the css `--igx-error-500`:
+```scss
+--igx-error-500: 34, 80%, 63%;
+```
+
+### Custom Templates
+Changing the default error template allows setting custom classes and styles:
+```html
+<ng-template igxCellValidationError let-cell='cell' let-defaultErr='defaultErrorTemplate'>
+    <div class="validator-container">
+        <ng-container *ngTemplateOutlet="defaultErr">
+        </ng-container>
+    </div>
+</ng-template>
+```
+
+### Demo
+
+@@if (igxName === 'IgxGrid'){
+
+<code-view style="height:560px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/grid/grid-validation-style" >
+</code-view>
+}
+
+@@if (igxName === 'IgxHierarchicalGrid'){
+
+<code-view style="height:560px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-validation-style" >
+</code-view>
+
+}
+
+
+@@if (igxName === 'IgxTreeGrid'){
+
+<code-view style="height:560px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-grid-validation-style" >
+</code-view>
+
+}
+
 <div class="divider--half"></div>
 
 
