@@ -72,13 +72,31 @@ We expose the `FormGroup` that will be used for validation when editing starts o
 ```
 }
 
+@@if (igxName === 'IgxGrid' || igxName === 'IgxHierarchicalGrid') {
 ```ts
-    public formCreateHandler(formGroup: FormGroup) {
-        const lastActiveRecord = formGroup.get('last_activity');
-        lastActiveRecord.addValidators(this.datesThresholdValidator());
-        ...
+    public formCreateHandler(args: IGridFormGroupCreatedEventArgs) {
+        const formGroup = args.formGroup;
+        const orderDateRecord = formGroup.get('OrderDate');
+        const requiredDateRecord = formGroup.get('RequiredDate');
+        const shippedDateRecord = formGroup.get('ShippedDate');
+
+        orderDateRecord.addValidators(this.futureDateValidator());
+        requiredDateRecord.addValidators(this.pastDateValidator());
+        shippedDateRecord.addValidators(this.pastDateValidator());
     }
 ```
+}
+
+@@if (igxName === 'IgxTreeGrid') {
+```ts
+   public formCreateHandler(args: IGridFormGroupCreatedEventArgs) {
+        const formGroup = args.formGroup;
+        const hireDateRecord = formGroup.get('HireDate');
+        hireDateRecord.addValidators([this.futureDateValidator(), this.pastDateValidator()]);
+    }
+```
+}
+
 You can decide to write your own validator function, or use one of the [built-in Angular validator functions](https://angular.io/guide/form-validation#built-in-validator-functions).
 
 
@@ -137,10 +155,12 @@ This is useful in scenarios where you want to add your own custom error message 
 
 ```html
 <igx-column ... >
-  <ng-template igxCellValidationError let-cell='cell'>
-    <div *ngIf="cell.errors?.['forbiddenName']">
-      This name is forbidden.
-    </div>
+  <ng-template igxCellValidationError let-cell='cell' let-defaultErr="defaultErrorTemplate">
+      <ng-container *ngTemplateOutlet="defaultErr">
+      </ng-container>
+      <div *ngIf="cell.errors?.['phoneFormat']">
+        Please enter correct phone format
+      </div>
   </ng-template>
 </igx-column>
 ```
@@ -176,23 +196,6 @@ public cellEdit(evt) {
 }
 ```
 
-### Cross-field validation
-
-In some scenarios validation of one field may depend on the value of another field in the record.
-In that case a custom validator can be used to compare the two values via their shared `FormGroup`.
-
-```ts
-export const datesThresholdValidator: ValidatorFn = (control: AbstractControl): ValidationErrors | null => {
-  const formGroup = control.parent;
-  const createdOn = formGroup.get('createdOnRecord');
-  const lastActive = formGroup.get('lastActive');
-
-  return createdOn && lastActive && createdOn > lastActive ? { beyondThreshold: true } : null;
-};
-
-```
-
-
 ### Example
 
 The below example demonstrates the above-mentioned customization options.
@@ -221,6 +224,100 @@ The below example demonstrates the above-mentioned customization options.
 
 <div class="divider--half"></div>
 }
+
+### Cross-field validation
+
+In some scenarios validation of one field may depend on the value of another field in the record.
+In that case a custom validator can be used to compare the values in the record via their shared `FormGroup`.
+
+
+```ts
+export function employeeValidator(minDealsRatio: number, formGroup: AbstractControl): ValidatorFn {
+    return (control: AbstractControl): ValidationErrors | null => {
+        let returnObject = {};
+        const createdOnRecord = formGroup.get('created_on');
+        const lastActiveRecord = formGroup.get('last_activity');
+        const winControl = formGroup.get('deals_won');
+        const loseControl = formGroup.get('deals_lost');
+        const actualSalesControl = formGroup.get('actual_sales');
+
+        // Validate dates
+        const curDate = new Date();
+        if (createdOnRecord.value > curDate) {
+            // The created on date shouldn't be greater than current date.
+            returnObject = { ...returnObject, ...{ createdInvalid: { value: createdOnRecord.value } }};
+        }
+        if (lastActiveRecord.value > curDate) {
+            // The last active date shouldn't be greater than current date.
+            returnObject = { ...returnObject, ...{ lastActiveInvalid: { value: lastActiveRecord.value } }};
+        }
+        if (createdOnRecord.value > lastActiveRecord.value) {
+            // The created on date shouldn't be greater than last active date.
+            returnObject = { ...returnObject, ...{ createdLastActiveInvalid: { value: createdOnRecord.value } }};
+        }
+
+        // Validate deals
+        const dealsRatio = calculateDealsRatio(winControl.value, loseControl.value);
+        if (actualSalesControl.value === 0 && dealsRatio > 0) {
+            returnObject = { ...returnObject, ...{ salesZero: { value: actualSalesControl.value } }};
+        }
+        if (actualSalesControl.value > 0 && dealsRatio == 0 ) {
+            returnObject = { ...returnObject, ...{ salesNotZero: { value: actualSalesControl.value } }};
+        }
+        if (dealsRatio < minDealsRatio) {
+            returnObject = { ...returnObject, ...{ dealsRatio: { value: dealsRatio } }};
+        }
+
+        return Object.entries(returnObject).length == 0 ? null : returnObject;
+    };
+}
+
+export function calculateDealsRatio(dealsWon, dealsLost) {
+    if (dealsLost === 0) return dealsWon + 1;
+    return Math.round(dealsWon / dealsLost * 100) / 100;
+}
+
+```
+
+The below sample demonstrates a cross-field validation between different field of the same record. It checks the dates validity compared to the current date and between the active and created on date of the record as well as the deals won/lost ration for each employee. All errors are collected in a separate pinned column that shows that the record is invalid and displays the related errors.
+
+```html
+<igx-column field="row_valid" header=" " [editable]="false" [dataType]="'number'" [employeeValid]="minDealsRatio" [pinned]="true" [width]="'50px'">
+            <ng-template igxCell let-cell="cell" class="validatorCell">
+                <div *ngIf="getValidRow(cell)" style="margin-right: '-10px';">
+                    <img width="18" src="assets/images/grid/active.png" title="Ok" />
+                </div>
+            </ng-template>
+            <ng-template igxCellValidationError let-cell='cell'>
+                <div *ngIf="cell.errors?.['createdInvalid']">
+                    The registration date cannot be in the future.
+                </div>
+                <div *ngIf="cell.errors?.['lastActiveInvalid']">
+                    The last active date cannot be in the future.
+                </div>
+                <div *ngIf="cell.errors?.['createdLastActiveInvalid']">
+                    The registration date cannot be greater than the last active date.
+                </div>
+                <div *ngIf="cell.errors?.['salesZero']">
+                    The actual sales cannot be 0 when the deals ratio is greater than 0.
+                </div>
+                <div *ngIf="cell.errors?.['salesNotZero']">
+                    The actual sales cannot be greater than 0 when the deals ratio is 0.
+                </div>
+                <div *ngIf="cell.errors?.['dealsRatio']">
+                    The deals ratio cannot be {{ minDealsRatio }} or less.
+                </div>
+            </ng-template>
+  </igx-column>
+```
+
+<code-view style="height:530px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/grid/grid-validator-service-cross-cell" alt="Angular @@igComponent Cross-field Validation Example">
+</code-view>
+
+<div class="divider--half"></div>
+
 
 ## API References
 
