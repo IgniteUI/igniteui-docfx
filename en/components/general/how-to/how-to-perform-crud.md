@@ -157,7 +157,7 @@ See the demo that was built following the guidance. Play around with it and try 
 # Customizations
 The rich Grid API allows you to customize the editing process in almost any way in order to fit your needs. This includes, but is not limited to:
  - [**Batch Editing**](how-to-perform-crud.md#batch-editing): Enable Batch Editing to batch all updates, and commit everything with single request.
- - [**Templating**](how-to-perform-crud.md#templates): Add tenplates for cell editing, or use your own external UI for row/cell editing, row adding and row deleting.
+ - [**Templating**](how-to-perform-crud.md#templates): Add templates for cell editing, or use your own external UI for row/cell editing, row adding and row deleting.
  - [**Events**](how-to-perform-crud.md#events): Monitor the editing flow and react accordingly. Attach event handlers for all events emitted during editing, will allow you to do:
     - data validation per cell
     - data validation per row
