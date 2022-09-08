@@ -232,9 +232,13 @@ In that case a custom validator can be used to compare the values in the record 
 
 @@if (igxName === 'IgxGrid') {
 
+The below sample demonstrates a cross-field validation between different field of the same record. It checks the dates validity compared to the current date and between the active and created on date of the record as well as the deals won/lost ration for each employee. All errors are collected in a separate pinned column that shows that the record is invalid and displays the related errors.
+
+The next lines of code show the cross-field validator function, which contains the comparisons and sets the related errors relative to them.
+
 ```ts
-export function employeeValidator(minDealsRatio: number, formGroup: AbstractControl): ValidatorFn {
-    return (control: AbstractControl): ValidationErrors | null => {
+private rowValidator(): ValidatorFn {
+    return (formGroup: FormGroup): ValidationErrors | null => {
         let returnObject = {};
         const createdOnRecord = formGroup.get('created_on');
         const lastActiveRecord = formGroup.get('last_activity');
@@ -244,78 +248,112 @@ export function employeeValidator(minDealsRatio: number, formGroup: AbstractCont
 
         // Validate dates
         const curDate = new Date();
-        if (createdOnRecord.value > curDate) {
+        if (new Date(createdOnRecord.value) > curDate) {
             // The created on date shouldn't be greater than current date.
-            returnObject = { ...returnObject, ...{ createdInvalid: { value: createdOnRecord.value } }};
+            returnObject['createdInvalid'] =  true;
         }
-        if (lastActiveRecord.value > curDate) {
+        if (new Date(lastActiveRecord.value) > curDate) {
             // The last active date shouldn't be greater than current date.
-            returnObject = { ...returnObject, ...{ lastActiveInvalid: { value: lastActiveRecord.value } }};
+            returnObject['lastActiveInvalid'] = true;
         }
-        if (createdOnRecord.value > lastActiveRecord.value) {
+        if (new Date(createdOnRecord.value) > new Date(lastActiveRecord.value)) {
             // The created on date shouldn't be greater than last active date.
-            returnObject = { ...returnObject, ...{ createdLastActiveInvalid: { value: createdOnRecord.value } }};
+            returnObject['createdLastActiveInvalid'] = true;
         }
-
+        
         // Validate deals
-        const dealsRatio = calculateDealsRatio(winControl.value, loseControl.value);
+        const dealsRatio = this.calculateDealsRatio(winControl.value, loseControl.value);
         if (actualSalesControl.value === 0 && dealsRatio > 0) {
-            returnObject = { ...returnObject, ...{ salesZero: { value: actualSalesControl.value } }};
+            // If the actual sales value is 0 but there are deals made.
+            returnObject['salesZero'] = true;
         }
-        if (actualSalesControl.value > 0 && dealsRatio == 0 ) {
-            returnObject = { ...returnObject, ...{ salesNotZero: { value: actualSalesControl.value } }};
+        if (actualSalesControl.value > 0 && dealsRatio === 0) {
+            // If the deals ratio based on deals won is 0 but the actual sales is bigger than 0.
+            returnObject['salesNotZero'] = true;
         }
-        if (dealsRatio < minDealsRatio) {
-            returnObject = { ...returnObject, ...{ dealsRatio: { value: dealsRatio } }};
-        }
-
-        return Object.entries(returnObject).length == 0 ? null : returnObject;
+        
+        return returnObject;
     };
 }
 
-export function calculateDealsRatio(dealsWon, dealsLost) {
+public calculateDealsRatio(dealsWon, dealsLost) {
     if (dealsLost === 0) return dealsWon + 1;
     return Math.round(dealsWon / dealsLost * 100) / 100;
+}
+```
+
+The cross-field validator can be added to the `formGroup` of the row from [`formGroupCreated`]({environment:angularApiUrl}/classes/IgxGridComponent.html#formGroupCreated) event, which returns the new `formGroup` for each row when entering edit mode:
+
+```html
+<igx-grid #grid1 [data]="transactionData" [width]="'100%'" [height]="'480px'" [autoGenerate]="false" 
+        [batchEditing]="true" [rowEditable]="true" [primaryKey]="'id'"
+        (formGroupCreated)='formCreateHandler($event)'>
+    <!-- ... -->
+</igx-grid>
+
+```
+
+```typescript
+public formCreateHandler(evt: IGridFormGroupCreatedEventArgs) {
+    evt.formGroup.addValidators(this.rowValidator());
+}
+```
+
+The different errors are displayed in a templated cell that combines all errors in a single tooltip. Depending on the row valid state different icon is displayed:
+
+```html
+<igx-column field="row_valid" header=" " [editable]="false" [pinned]="true" [width]="'50px'">
+    <ng-template igxCell let-cell="cell">
+        <div *ngIf="isRowValid(cell)" [igxTooltipTarget]="tooltipRef"  style="margin-right: '-10px';">
+            <img width="18" src="assets/images/grid/active.png"/>
+        </div>
+        <div *ngIf="!isRowValid(cell)" [igxTooltipTarget]="tooltipRef" style="margin-right: '-10px';">
+            <img width="18" src="assets/images/grid/expired.png"/>
+        </div>
+        <div #tooltipRef="tooltip" igxTooltip [style.width]="'max-content'">
+            <div *ngFor="let message of stateMessage(cell)">
+                {{message}}
+            </div>
+        </div>
+    </ng-template>
+</igx-column>
+```
+
+The error messages are gathered in the `stateMessage` function, which gathers the errors for each cell, because each column could have templated form validations and then checks the errors for the row itself, which come from the custom `rowValidator`.
+
+```typescript
+public stateMessage(cell: IgxGridCell) {
+    const messages = [];
+    const row = cell.row;
+    const cellValidationErrors = row.cells.filter(x => !!x.errors);
+    cellValidationErrors.forEach(cell => {
+        if (cell.errors) {
+            if (cell.errors.required) {
+                messages.push(`The \`${cell.column.header}\` column is required.`);
+            }
+            // Other cell errors ...
+        }
+    });
+
+    if (row.errors?.createdInvalid) {
+        messages.push(`The \`Date of Registration\` date cannot be in the future.`);
+    }
+    // Other cross-field errors...
+
+    return messages;
 }
 
 ```
 
-The below sample demonstrates a cross-field validation between different field of the same record. It checks the dates validity compared to the current date and between the active and created on date of the record as well as the deals won/lost ration for each employee. All errors are collected in a separate pinned column that shows that the record is invalid and displays the related errors.
-
-```html
-<igx-column field="row_valid" header=" " [editable]="false" [dataType]="'number'" [employeeValid]="minDealsRatio" [pinned]="true" [width]="'50px'">
-            <ng-template igxCell let-cell="cell" class="validatorCell">
-                <div *ngIf="getValidRow(cell)" style="margin-right: '-10px';">
-                    <img width="18" src="assets/images/grid/active.png" title="Ok" />
-                </div>
-            </ng-template>
-            <ng-template igxCellValidationError let-cell='cell'>
-                <div *ngIf="cell.errors?.['createdInvalid']">
-                    The registration date cannot be in the future.
-                </div>
-                <div *ngIf="cell.errors?.['lastActiveInvalid']">
-                    The last active date cannot be in the future.
-                </div>
-                <div *ngIf="cell.errors?.['createdLastActiveInvalid']">
-                    The registration date cannot be greater than the last active date.
-                </div>
-                <div *ngIf="cell.errors?.['salesZero']">
-                    The actual sales cannot be 0 when the deals ratio is greater than 0.
-                </div>
-                <div *ngIf="cell.errors?.['salesNotZero']">
-                    The actual sales cannot be greater than 0 when the deals ratio is 0.
-                </div>
-                <div *ngIf="cell.errors?.['dealsRatio']">
-                    The deals ratio cannot be {{ minDealsRatio }} or less.
-                </div>
-            </ng-template>
-  </igx-column>
-```
+The below sample demonstrates the cross-field validation in action.
 
 <code-view style="height:530px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-validator-service-cross-cell" alt="Angular @@igComponent Cross-field Validation Example">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-cross-field-validator-service" alt="Angular @@igComponent Cross-field Validation Example">
 </code-view>
+
+
+<div class="divider--half"></div>
 
 ## Styling
 
@@ -487,6 +525,114 @@ The below sample demonstrates cross-field validation in a Hierarchical Grid for 
 <code-view style="height:530px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-cross-field-validation" alt="Angular @@igComponent Cross-field Validation Example">
+</code-view>
+
+<div class="divider--half"></div>
+}
+
+
+@@if (igxName === 'IgxTreeGrid') {
+
+The below sample demonstrates a cross-field validation between different field of the same record. It checks that a specified City for a person is in the Country currently set and vice versa. Also check if the age for a person was 18 already when it was hired.
+
+The next lines of code show the cross-field validator function, which contains comparisons described above and sets the related errors.
+
+```ts
+private rowValidator(): ValidatorFn {
+    return (formGroup: FormGroup): ValidationErrors | null => {
+        let returnObject = {};
+        
+        const age = formGroup.get('Age');
+        const hireDate = formGroup.get('HireDate');
+        if((new Date().getFullYear() - new Date(hireDate.value).getFullYear()) + 18 >= age.value) {
+            returnObject['ageLessHireDate'] = true;
+        }
+
+        const city = formGroup.get('City');
+        const country = formGroup.get('Country');
+        const validCities = this.countryData.get(country.value);
+        if (!validCities || !validCities[city.value]) {
+            returnObject['invalidAddress'] = true;
+        }
+
+        return returnObject;
+    };
+}
+```
+
+The cross-field validator can be added to the `formGroup` of the row from [`formGroupCreated`]({environment:angularApiUrl}/classes/IgxGridComponent.html#formGroupCreated) event, which returns the new `formGroup` for each row when entering edit mode:
+
+```html
+<igx-tree-grid igxPreventDocumentScroll #treeGrid [batchEditing]="true" [data]="data" primaryKey="ID"
+    foreignKey="ParentID" [width]="'100%'" [height]="'500px'" [rowEditable]="true" [pinning]="pinningConfig"
+    (formGroupCreated)="formCreateHandler($event)">
+    <!-- ... -->
+</igx-tree-grid>
+
+```
+
+```typescript
+public formCreateHandler(evt: IGridFormGroupCreatedEventArgs) {
+    evt.formGroup.addValidators(this.rowValidator());
+}
+```
+
+The different errors are displayed in a templated cell that combines all errors in a single tooltip. Depending on the row valid state different icon is displayed:
+
+```html
+<igx-column field="row_valid" header=" " [editable]="false" [dataType]="'number'" [pinned]="true" [width]="'150px'">
+    <ng-template igxCell let-cell="cell">
+        <div *ngIf="isRowValid(cell)" [igxTooltipTarget]="tooltipRef"  style="margin: 'auto';">
+            <img width="18" src="assets/images/grid/active.png"/>
+        </div>
+        <div *ngIf="!isRowValid(cell)" [igxTooltipTarget]="tooltipRef" style="margin: 'auto';">
+            <img width="18" src="assets/images/grid/expired.png"/>
+        </div>
+        <div #tooltipRef="tooltip" igxTooltip [style.width]="'max-content'">
+            <div *ngFor="let message of stateMessage(cell)">
+                {{message}}
+            </div>
+        </div>
+    </ng-template>
+</igx-column>
+```
+
+The error messages are gathered in the `stateMessage` function, which gathers the errors for each cell, because each column could have templated form validations and then checks the errors for the row itself, which come from the custom `rowValidator`.
+
+```typescript
+public stateMessage(cell: IgxGridCell) {
+    const messages = [];
+    const row = cell.row;
+    const cellValidationErrors = row.cells.filter(x => !!x.errors);
+    cellValidationErrors.forEach(cell => {
+        if (cell.errors) {
+            if (cell.errors.required) {
+                messages.push(`The \`${cell.column.header}\` column is required.`);
+            }
+            // Other cell errors...
+        }
+    });
+
+    if (row.errors?.ageLessHireDate) {
+        messages.push(`\`Age\` cannot be less than 18 when the person was hired.`);
+    }
+    if (row.errors?.invalidAddress) {
+        messages.push(`Selected \`City\` does not match the \`Country\`.`);
+    }
+
+    if (messages.length === 0 && this.isRowValid(cell)) {
+        messages.push('OK');
+    }
+
+    return messages;
+}
+```
+
+The below sample demonstrates the cross-field validation in action.
+
+<code-view style="height:530px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-cross-field-validator-service" alt="Angular @@igComponent Cross-field Validation Example">
 </code-view>
 
 <div class="divider--half"></div>
