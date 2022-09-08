@@ -102,11 +102,11 @@ You can decide to write your own validator function, or use one of the [built-in
 
 ## Validation service API
 
-The grid exposes a validation service via the `validation` property.
+The grid exposes a validation service via the [`validation`]({environment:angularApiUrl}/classes/IgxGridComponent.html#validation) property.
 That service has the following public APIs:
-- `validity` - returns if the grid validation state is valid.
-- `getInvalid` - returns records with invalid states.
-- `clear` - clears state for record by id or clears all state if no id is provided.
+- [`valid`]({environment:angularApiUrl}/classes/IgxGridValidationService.html#valid) - returns if the grid validation state is valid.
+- [`getInvalid`]({environment:angularApiUrl}/classes/IgxGridValidationService.html#getInvalid) - returns records with invalid states.
+- [`clear`]({environment:angularApiUrl}/classes/IgxGridValidationService.html#clear) - clears state for record by id or clears all state if no id is provided.
 
 Invalid states will persis until the validation errors in them are fixed according to the validation rule or they are cleared.
 
@@ -114,9 +114,9 @@ Invalid states will persis until the validation errors in them are fixed accordi
 
 Validation will be triggered in the following scenarios:
 
-- While editing via the cell editor based on the grid's `validationTrigger`. Either on `change` while typing in the editor, or on `blur` when the editor loses focus or closes.
-- When updating cells/rows via the API - `updateRow`, `updateCell` etc..
-- When using batch editing and the `undo`/`redo` API of the transaction service.
+- While editing via the cell editor based on the grid's [`validationTrigger`]({environment:angularApiUrl}/classes/IgxGridComponent.html#validationTrigger). Either on `change` while typing in the editor, or on `blur` when the editor loses focus or closes.
+- When updating cells/rows via the API - [`updateRow`]({environment:angularApiUrl}/classes/IgxGridComponent.html#updateRow), [`updateCell`]({environment:angularApiUrl}/classes/IgxGridComponent.html#updateCell) etc..
+- When using batch editing and the [`undo`]({environment:angularApiUrl}/classes/IgxTransactionService.html#undo)/[`redo`]({environment:angularApiUrl}/classes/IgxTransactionService.html#redo) API of the transaction service.
 
 > Note: Validation will not trigger for records that have not been edited via user input or via the editing API.
 
@@ -168,8 +168,8 @@ This is useful in scenarios where you want to add your own custom error message 
 ### Prevent exiting edit mode on invalid state
 
 In some cases you may want to disallow submiting an invalid value in the data.
-In that scenarios you can use the `cellEdit` or `rowEdit` events and cancel the event in case the new value is invalid.
-Both events' arguments have a `isValid` property and can be canceled accordingly.
+In that scenarios you can use the [`cellEdit`]({environment:angularApiUrl}/classes/IgxGridComponent.html#cellEdit) or [`rowEdit`]({environment:angularApiUrl}/classes/IgxGridComponent.html#rowEdit) events and cancel the event in case the new value is invalid.
+Both events' arguments have a [`valid`]({environment:angularApiUrl}/interfaces/IGridEditEventArgs.html#valid) property and can be canceled accordingly.
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -426,7 +426,7 @@ Changing the default error template allows setting custom classes and styles:
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-  Cross-field validators can be added to the formGroup on the `formGroupCreated` event. In them multiple fields can be compared for validity.
+  Cross-field validators can be added to the formGroup on the [`formGroupCreated`]({environment:angularApiUrl}/classes/IgxGridComponent.html#formGroupCreated) event. In them multiple fields can be compared for validity.
 
   ```ts
   public formCreateCustomerHandler(event: IGridFormGroupCreatedEventArgs) {
