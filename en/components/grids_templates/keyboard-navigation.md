@@ -1,28 +1,28 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Grid Keyboard Navigation | Ignite UI for Angular | Infragistics
-_description: Learn how to use Grid Keyboard Navigation with Ignite UI for Angular. With Keyboard interaction users can use keys to navigate between cells, rows and columns
+title: Angular Grid Keyboard Navigation - Ignite UI for Angular
+_description: Learn how to use Grid Keyboard Navigation with Ignite UI for Angular. With Keyboard interaction, users can quickly navigate between cells, rows, and columns.
 _keywords: keyboard navigation, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: TreeGrid Keyboard Navigation | Ignite UI for Angular | Infragistics
-_description: Learn how to use TreeGrid Keyboard Navigation with Ignite UI for Angular. With Keyboard interaction users can use keys to navigate between cells, rows and columns
+title: Angular Tree Grid Keyboard Navigation - Ignite UI for Angular
+_description: Learn how to use Tree Grid Keyboard Navigation with Ignite UI for Angular. With Keyboard interaction, users can quickly navigate between cells, rows, and columns.
 _keywords: keyboard navigation, ignite ui for angular, infragistics
 _canonicalLink: grid/keyboard-navigation
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: HierarchicalGrid Keyboard Navigation | Ignite UI for Angular | Infragistics
-_description: Learn how to use HierarchicalGrid Keyboard Navigation with Ignite UI for Angular. With Keyboard interaction users can use keys to navigate between cells, rows and columns
+title: Angular Hierarchical Grid Keyboard Navigation - Ignite UI for Angular
+_description: Learn how to use Hierarchical Grid Keyboard Navigation with Ignite UI for Angular. With Keyboard interaction, users can quickly navigate between cells, rows, and columns.
 _keywords: keyboard navigation, ignite ui for angular, infragistics
 _canonicalLink: grid/keyboard-navigation
 ---
 }
 
-# @@igComponent Keyboard Navigation
+# Angular @@igComponent Keyboard Navigation
 
  Keyboard navigation in the **@@igxName** provides a rich variety of keyboard interactions for the user. It enhances the accessibility of the **@@igxName** and allows to navigate through any type of elements inside (cell, row, column header, toolbar, footer, etc.). This functionality is enabled by default, and the developer has the option to override any of the default behaviors in an easy way.
 
@@ -114,7 +114,7 @@ Practice all of the above mentioned actions in the demo sample below. Focus any 
 }
 @@if (igxName === "IgxHierarchicalGrid") {
 
-<code-view style="height:470px" 
+<code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hgrid-keyboard-guide" >
 </code-view>
@@ -212,8 +212,9 @@ Based on the [IGridKeydownEventArgs]({environment:angularApiUrl}/interfaces/igri
         return;
     }
     // 2. CUSTOM NAVIGATION ON ENTER KEY PRESS
-    grid.navigateTo(target.rowIndex + 1, target.visibleColumnIndex,
-        (obj) => { obj.target.nativeElement.focus(); });
+    this.grid1.navigateTo(target.row.index + 1, target.column.visibleIndex, (obj) => {
+            obj.target.activate();
+        });
 ```
 > Note: Please refer to the sample code for full implementation details.
 

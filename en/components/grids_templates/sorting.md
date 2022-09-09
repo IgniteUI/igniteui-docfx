@@ -1,30 +1,33 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid Sorting | Data Sorting | Ignite UI for Angular | infragistics
-_description: Get started with the Angular Sort feature of Ignite UI Material UI grid and learn how to configure a mix of sortable columns with rich API and angular events
+title: Angular Grid Sorting - Ignite UI for Angular
+_description: Get started with the Angular sorting feature of Ignite for Angular UI grid! Configure a mix of sortable columns & change the display order of data records.
 _keywords: angular sort, ignite ui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid Sorting | Data Sorting | Ignite UI for Angular | infragistics
-_description: Get started with the Angular Sort feature of Ignite UI Material UI grid and learn how to configure a mix of sortable columns with rich API and angular events
+title: Angular Tree Grid Sorting - Ignite UI for Angular
+_description: Get started with the Angular sorting feature of Ignite for Angular UI grid! Configure a mix of sortable columns & change the display order of data records.
 _keywords: angular sort, ignite ui for angular, infragistics
 _canonicalLink: grid/sorting
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchical Grid Sorting | Data Sorting | Ignite UI for Angular | infragistics
-_description: Get started with the Angular Sort feature of Ignite UI Material UI grid and learn how to configure a mix of sortable columns with rich API and angular events
+title: Angular Hierarchical Grid Sorting - Ignite UI for Angular
+_description: Get started with the Angular sorting feature of Ignite for Angular UI grid! Configure a mix of sortable columns & change the display order of data records.
 _keywords: angular sort, ignite ui for angular, infragistics
 _canonicalLink: grid/sorting
 ---
 }
 
-# @@igComponent Sorting Overview
+# Angular @@igComponent Sorting
 
 In Ignite UI for Angular @@igComponent, data sorting is enabled on a per-column level, meaning that the **@@igSelector** can have a mix of sortable and non-sortable columns. Performing angular sort actions enables you to change the display order of the records based on specified criteria.
+
+
+> Note: Up until now, grouping/sorting worked in conjuction with each other. In 13.2 version, a new behavior which decouples gropuing from sorting is introduced. For example - clearing the grouping will not clear sorting expressions in the grid or vice versa. Still, if a column is both sorted and grouped, grouped expressions take precedence.
 
 ## Angular @@igComponent Sorting Overview Example
 

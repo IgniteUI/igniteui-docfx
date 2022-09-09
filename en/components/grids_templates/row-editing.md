@@ -1,20 +1,20 @@
 @@if(igxName==='IgxGrid'){
 ---
-title: Angular Grid Row Editing | UI Grid | Ignite UI for Angular | Infragistics
-_description: Learn how to configure in row data manipulations with Ignite UI for Angular. Intuitive grid row editing and CRUD capabilities are available with the UI grid.
+title: Editing Rows in Angular Data Grid - Ignite UI for Angular
+_description: Want to enable row editing in Angular Data Grid? Need a powerful API for CRUD operations? Try our Ignite UI for Angular Data Grid rows editing component!
 _keywords: row editing, igniteui for angular, infragistics
 ---
 }
 @@if(igxName!=='IgxGrid'){
 ---
-title: Angular Grid Row Editing | UI Grid | Ignite UI for Angular | Infragistics
-_description: Learn how to configure in row data manipulations with Ignite UI for Angular. Intuitive grid row editing and CRUD capabilities are available with the UI grid.
+title: Editing Rows in Angular @@igComponent - Ignite UI for Angular
+_description: Want to enable row editing in Angular @@igComponent? Need a powerful API for CRUD operations? Try our Ignite UI for Angular Data Grid rows editing component!
 _keywords: row editing, igniteui for angular, infragistics
 _canonicalLink: grid/row-editing
 ---
 }
 
-# @@igComponent Row Editing
+# Angular @@igComponent Row Editing
 
 The @@igComponent provides a convenient way to perform data manipulations through inline editing and a powerful API for Angular CRUD operations. Click on a row and press **Enter key** or simply double click with the mouse on the row that needs to be modified. 
 
@@ -91,7 +91,7 @@ Then define a @@igComponent with bound data source and [`rowEditable`]({environm
 @@if (igxName === 'IgxTreeGrid') {
 ```html
 <igx-tree-grid [data]="data" [primaryKey]="EmployeID" [foreignKey]="PID"
-               [rowEditable]="true" [rowSelectable]="true" [moving]="true">
+               [rowEditable]="true" [rowSelection]="'multiple'" [moving]="true">
     <igx-column *ngFor="let c of columns"
         [editable] ="c.editable"
         [field]="c.field"

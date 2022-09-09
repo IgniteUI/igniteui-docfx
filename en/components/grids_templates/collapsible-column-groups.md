@@ -1,20 +1,20 @@
 @@if(igxName==='IgxGrid') {
 ---
-title: Angular Collapsible Column Groups | Ignite UI for Angular | Infragistics
-_description: Collapsible multi-column headers make it possible to collapse some subset of the nested columns under the current one and to show some nested headers, which will give you a shorten information for example.
+title: Collapsible Column Groups in Angular Data Grid - Infragistics
+_description: Take advantage of the capability to show\hide smaller and concise set of data with the use of collapsible column groups in our Angular Data Grid. Try it now!
 _keywords: collapsible column headers, ignite ui for angular, infragistics
 ---
 }
 @@if(igxName!=='IgxGrid') {
 ---
-title: Angular Collapsible Column Groups | Ignite UI for Angular | Infragistics
-_description: Collapsible multi-column headers make it possible to collapse some subset of the nested columns under the current one and to show some nested headers, which will give you a shorten information for example.
+title: Collapsible Column Groups in Angular @@igComponent - Infragistics
+_description: Take advantage of the capability to show\hide smaller and concise set of data with the use of collapsible column groups in our Angular @@igComponent. Try it now!
 _keywords: collapsible column headers, ignite ui for angular, infragistics
 _canonicalLink: grid/collapsible-column-groups
 ---
 }
 
-# Grid Collapsible Column Groups Overview
+# Collapsible Column Groups in Angular Data Grid
 
 Multi-column headers allow you to have multiple levels of nested columns and column groups. They also provide the ability to mark each column group as **collapsible**. **Collapsible multi-column headers** make it possible to collapse/expand, i.e. to show and hide the nested headers under the current one, which will give you a shortened/summarized information for example.
 

@@ -128,11 +128,11 @@ Ignite UI for Angular パッケージをスコープに設定したため、プ�
 - `igniteui-angular/lib` ソースのプロジェクト `sass` インポートから `~` 記号を削除します。
 
 ```scss
-@import "~igniteui-angular/lib/core/styles/themes/index";
+@use "~igniteui-angular/lib/core/styles/themes/index" as *;
 
 // Should be changed to
 
-@import "igniteui-angular/lib/core/styles/themes/index";
+@use "igniteui-angular/lib/core/styles/themes/index" as *;
 ```
 
 npm を既に使用していて、Ignite UI for Angular ライセンスがある場合、Infragistics プライベート フィードを構成してください。

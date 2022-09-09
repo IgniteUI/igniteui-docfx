@@ -1,21 +1,21 @@
 @@if(igxName === 'IgxGrid'){
 ---
-title: Angular Grid | Excel スタイル フィルタリング | インフラジスティックス
-_description: Angular マテリアル テーブルを使用してデータの Excel のような Angular フィルターを構成する方法を学びます。グリッドの Excel フィルタリングは、これまで以上に便利で魅力的です。
+title: Angular Data Grid の Excel スタイル フィルタリング - Ignite UI for Angular
+_description: Angular Data Grid で Excel フィルタリングを構成する方法を説明します。さまざまなオプションを有効/無効にし、Excel スタイル フィルター メニューを自由にカスタマイズできます。
 _keywords: Excel のようなフィルター, igniteui for angular, インフラジスティックス
 _language: ja
 ---
 }
 @@if(igxName !== 'IgxGrid'){
 ---
-title: Angular Grid | Excel スタイル フィルタリング | インフラジスティックス
-_description: Angular マテリアル テーブルを使用してデータの Excel のような Angular フィルターを構成する方法を学びます。グリッドの Excel フィルタリングは、これまで以上に便利で魅力的です。
+title: Angular @@igComponent の Excel スタイル フィルタリング - Ignite UI for Angular
+_description: Angular @@igComponent で Excel フィルタリングを構成する方法を説明します。さまざまなオプションを有効/無効にし、Excel スタイル フィルター メニューを自由にカスタマイズできます。
 _keywords: Excel のようなフィルター, igniteui for angular, インフラジスティックス
 _language: ja
 ---
 }
 
-# @@igComponent Excel スタイル フィルタリング
+# Angular @@igComponent の Excel スタイル フィルタリング
 
 グリッド Excel フィルタリングは、@@igComponent などの Angular Material テーブルに対して Excel のようなフィルタリング UI を提供します。
 
@@ -50,7 +50,7 @@ _language: ja
 
 ## 使用方法
 
-Excel スタイル フィルタリングをオンにするには、2 つの入力を設定します。  [`allowFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowfiltering) を `true` に設定し、[`filterMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filtermode) を  `excelStyleFilter` に設定してください。
+Excel スタイル フィルタリングをオンにするには、2 つの入力を設定します。[`allowFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowfiltering) を `true` に設定し、[`filterMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filtermode) を  `excelStyleFilter` に設定してください。
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -138,7 +138,7 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
 
 <div class="divider--half"></div>
 
-以下のサンプル 'Product Name’ と 'Discontinued’ の列には 4 つの機能すべてが有効です。 'Unit Price’ で 4 機能すべてが無効で、'Added Date’ はピン固定と非表示のみ有効です。
+以下のサンプル 'Product Name’ と 'Discontinued’ の列には 4 つの機能すべてが有効です。'Unit Price’ で 4 機能すべてが無効で、'Added Date’ はピン固定と非表示のみ有効です。
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html

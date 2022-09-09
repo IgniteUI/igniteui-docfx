@@ -1,22 +1,22 @@
 @@if(igxName==='IgxGrid'){
 ---
-title: Angular Grid 行編集 | UI Grid | Ignite UI for Angular | インフラジスティックス
-_description: Ignite UI for Angular を使用して行内データ操作を構成する方法を学びます。直感的なグリッド行編集と CRUD 機能は、UI グリッドで利用できます。
+title: Angular Data Grid での行編集 - Ignite UI for Angular
+_description: Angular Data Grid で行編集を有効にし、CRUD 操作のための強力な API が必要な場合、Ignite UI for Angular Data Grid 行編集コンポーネントをお試しください。
 _keywords: row editing, igniteui for angular, インフラジスティックス・ジャパン株式会社
 _language: ja
 ---
 }
 @@if(igxName!=='IgxGrid'){
 ---
-title: Angular Grid 行編集 | UI Grid | Ignite UI for Angular | インフラジスティックス
-_description: Ignite UI for Angular を使用して行内データ操作を構成する方法を学びます。直感的なグリッド行編集と CRUD 機能は、UI グリッドで利用できます。
+title: Angular @@igComponent での行編集 - Ignite UI for Angular
+_description: Angular @@igComponent で行編集を有効にし、CRUD 操作のための強力な API が必要な場合、Ignite UI for Angular Data Grid 行編集コンポーネントをお試しください。
 _keywords: row editing, igniteui for angular, インフラジスティックス・ジャパン株式会社
 _language: ja
 _canonicalLink: grid/row-editing
 ---
 }
 
-# @@igComponent 行編集
+# Angular @@igComponent 行編集
 
 @@igComponent コンポーネントは、Angular CRUD 操作のためのデータ操作と強力な API を提供します。行をクリックして **Enter キー**を押すか、変更する行をダブルクリックします。 
 
@@ -93,7 +93,7 @@ export class AppModule {}
 @@if (igxName === 'IgxTreeGrid') {
 ```html
 <igx-tree-grid #treeGrid [data]="data" [primaryKey]="EmployeID" [foreignKey]="PID" width ="100%"
-               height ="500px" [moving]="true" [rowEditable]="true" [rowSelectable]="true">
+               height ="500px" [moving]="true" [rowEditable]="true" [rowSelection]="'multiple'">
     <igx-column *ngFor="let c of columns"
         [editable] ="c.editable"
         [field]="c.field"

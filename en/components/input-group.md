@@ -122,6 +122,14 @@ The input group component supports several themes - `material`, `fluent`, `boots
 <igx-input-group theme="fluent">...</igx-input-group>
 ```
 
+### Typed Forms
+The Ignite UI for Angular Input Group component can be used inside strictly typed reactive forms which are the default ones as of Angular 14. To find out more about the typed forms, you can check [Angular official documentation](https://angular.io/guide/typed-forms).
+
+<code-view style="height:770px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/data-entries/typed-form" >
+</code-view>
+
 ## Styling
 
 The first thing we need to do, in order to get started with the input group styling, is to include the `index` file in our style file:

@@ -1,28 +1,28 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid Multi-Cell Selection | Ignite UI for Angular | infragistics 
-_description: Check how easy it is to use Multi-cell data select of the Ignite ui angular material table by using variety of events, rich API or with simple mouse interactions
+title: Angular Grid Cell Selection - Ignite UI for Angular
+_description: Check how easy it is to use cell data selection using variety of events, rich API or mouse interactions. The Grid supports 3 modes for cell selection. Try it now!
 _keywords: data select, igniteui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid Multi-Cell Selection | Ignite UI for Angular | infragistics 
-_description: Check how easy it is to use Multi-cell data select of the Ignite ui angular material table by using variety of events, rich API or with simple mouse interactions
+title: Angular Tree Grid Cell Selection - Ignite UI for Angular
+_description: Check how easy it is to use cell data selection using variety of events, rich API or mouse interactions. The Grid supports 3 modes for cell selection. Try it now!
 _keywords: data select, igniteui for angular, infragistics
 _canonicalLink: grid/cell-selection
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchical Grid Multi-Cell Selection | Ignite UI for Angular | infragistics 
-_description: Check how easy it is to use Multi-cell data select of the Ignite ui angular material table by using variety of events, rich API or with simple mouse interactions
+title: Angular Hierarchical Grid Cell Selection - Ignite UI for Angular 
+_description: Check how easy it is to use cell data selection using variety of events, rich API or mouse interactions. The Grid supports 3 modes for cell selection. Try it now!
 _keywords: data select, igniteui for angular, infragistics
 _canonicalLink: grid/cell-selection
 ---
 }
 
-# Angular @@igComponent Cell Selection
+# Angular Cell Selection
 The selection feature enables rich data select capabilities in the Material UI based @@igComponent. Variety of events and single select actions are available thanks to the powerful API and easy to use methods. The @@igComponent now supports three modes for cell selection, and you can easily switch between them by changing [`cellSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellselection) property. You can disable cell selection, you can *select only one cell within the grid* or to *select multiple cells in the grid*, which is provided as default option.
 @@if (igxName === 'IgxHierarchicalGrid') { In the Hierarchical Grid you can specify the cell selection mode on grid level. So for example in the parent grid multi-cell selection can be enabled, but in child grids cell selection mode can be single or disabled. }But let's dive deeper in each of these options.
 
