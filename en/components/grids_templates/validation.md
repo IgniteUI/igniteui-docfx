@@ -592,7 +592,7 @@ The first thing we need to do is import the `themes/index` file - this gives us 
 ```
 
 ### Include the styles
-In order to change the error color you can use the css `--igx-error-500`:
+In order to change the error color you can use the css variable `--igx-error-500`:
 ```scss
 --igx-error-500: 34, 80%, 63%;
 ```
@@ -607,6 +607,76 @@ Changing the default error template allows setting custom classes and styles:
     </div>
 </ng-template>
 ```
+
+### Invalid row and cell styles
+Rows and cells provide API for the developers to know if a row or cell is invalid and what kind of errors are active.
+@@if (igxName === 'IgxGrid'){
+```ts
+public rowStyles = {
+    background: (row: RowType) => row.validation.status === 'INVALID' ? '#FF000033' : '#00000000'
+};
+public cellStyles = {
+    'invalid-cell': (rowData, columnKey) => {
+        const pKey = this.grid.primaryKey;
+        const cell = this.grid.getCellByKey(rowData[pKey], columnKey);
+        return cell && cell.validation.status === 'INVALID';
+    }
+}
+```
+```html
+<igx-grid [rowStyles]="rowStyles">
+    <igx-column field="ReorderLevel" header="ReorderLever" required [cellClasses]="cellStyles">
+```
+}
+
+@@if (igxName === 'IgxHierarchicalGrid'){
+```ts
+public rowStyles = {
+    background: (row: RowType) => row.validation.status === 'INVALID' ? '#FF000033' : '#00000000'
+};
+public cellStyles = {
+    'invalid-cell': (rowData, columnKey) => {
+        let cell = this.hierarchicalGrid.getCellByKey(rowData, columnKey);
+        // search in child grids
+        if (!cell) {
+            for (let grid of this.childGrid.gridAPI.getChildGrids()) {
+                cell = grid.getCellByKey(rowData, columnKey);
+                if (cell) break;
+            }
+        }
+        return cell && cell.validation.status === 'INVALID';
+    }
+}
+```
+```html
+<igx-hierarchical-grid [rowStyles]="rowStyles">
+    <igx-column field="Artist" [editable]="true" [dataType]="'string'" required [cellClasses]="cellStyles">
+    ...
+    <igx-row-island [key]="'Albums'" [rowStyles]="rowStyles">
+        <igx-column field="Album" [editable]="true" [dataType]="'string'" required [cellClasses]="cellStyles">
+```
+}
+
+
+@@if (igxName === 'IgxTreeGrid'){
+```ts
+public rowStyles = {
+    background: (row: RowType) => row.cells.find(c => c.validation.errors !== null && c.validation.errors !== undefined) ? '#FF000033' : '#00000000'
+};
+public cellStyles = {
+    'invalid-cell': (rowData, columnKey) => {
+        const pKey = this.treeGrid.primaryKey;
+        const cell = this.treeGrid.getCellByKey(rowData[pKey], columnKey);
+        return cell && cell.validation.status === 'INVALID';
+    }
+}
+```
+```html
+<igx-tree-grid [rowStyles]="rowStyles">
+        <igx-column *ngFor="let c of columns" [field]="c.field" [dataType]="c.dataType" [header]="c.label" [required]="c.required" [cellClasses]="cellStyles">
+```
+}
+
 
 ### Demo
 
