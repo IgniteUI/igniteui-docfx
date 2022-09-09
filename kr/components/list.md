@@ -582,6 +582,50 @@ Finally, we need to apply the filtering pipe to our contacts data before we can 
 
 <div class="divider"></div>
 
+## List Item Selection
+
+As you probably have already noticed, list items do not provide selection states. However, if your application requires your list to keep track of which item is selected, we give you an example of how this can be achieved. All you need to do is keep track of the state somewhere in your component, or in the data the list is bound to. 
+
+Here's an example, in which we apply a background color to the list according to the theme's secondary 500 color, based on state tracking coming from the data the list is bound to:
+
+<code-view style="height: 500px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/lists/list-item-selection" >
+</code-view>
+
+What we are doing is we are adding an additional `selected` property to each data member, which defaults to `false`. Upon list item click, we're resetting all the `selected` properties in the data collection and setting the one corresponding to the clicked item to `true`. Based on the selected property, we're applying a css class to the list item which gives it the selected background.
+
+```html
+<igx-list>
+    <igx-list-item isHeader="true">Contacts</igx-list-item>
+    <igx-list-item [ngClass]="contact.selected ? 'selected' : ''"
+                    (click)="selectItem(contact)"
+                    *ngFor="let contact of contacts | igxFilter: filterContacts;">
+        <igx-avatar igxListThumbnail [src]="contact.photo" roundShape="true"></igx-avatar>
+        <span igxListLineTitle>{{ contact.name }}</span>
+        <span igxListLineSubTitle>{{ contact.phone }}</span>
+        <igx-icon igxListAction [style.color]="contact.isFavorite ? 'orange' : 'lightgray'" (click)="toggleFavorite(contact, $event)">star</igx-icon>
+    </igx-list-item>
+</igx-list>
+```
+
+```typescript
+public selectItem(item) {
+    if (!item.selected) {
+        this.contacts.forEach(c => c.selected = false);
+        item.selected = true;
+    }
+}
+```
+
+```scss
+.selected {
+    background-color: hsla(var(--igx-secondary-500))
+}
+```
+
+<div class="divider--half"></div>
+
 ### API References
 
 In this article we covered a lot of ground with the list component. We created a list of contact items. Used some additional Ignite UI for Angular components inside our list items, like avatars and icons. Created some custom item layout and styled it. Finally, we added list filtering. The list component has a few more APIs to explore, which are listed below.
