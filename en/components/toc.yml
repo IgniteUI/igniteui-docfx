@@ -143,6 +143,9 @@
           href: grid/batch-editing.md
           updated: true
           new: false
+        - name: Validation
+          href: grid/validation.md
+          new: true
     - name: Row Drag
       href: grid/row-drag.md
       updated: true
@@ -291,6 +294,9 @@
           href: treegrid/batch-editing.md
           updated: true
           new: false
+        - name: Validation
+          href: treegrid/validation.md
+          new: true
     - name: Row Drag
       href: treegrid/row-drag.md
       new: false
@@ -425,6 +431,9 @@
           href: hierarchicalgrid/batch-editing.md
           updated: true
           new: false
+        - name: Validation
+          href: hierarchicalgrid/validation.md
+          new: true
     - name: Export to Excel
       href: hierarchicalGrid/export-excel.md
       new: false
