@@ -1,5 +1,5 @@
 ---
-title: Angular Data Visualization Tools | Angular Data Visualization Tools | Getting Started | Infragistics
+title: Getting Started | Ignite UI for Angular | Infragistics
 _description: Use Infragistics' Angular components to create apps and improve data visualization with the world’s fastest, virtualized, real-time Angular data grid and streaming financial and business and financial charts.
 _keywords: Ignite UI for Angular, Infragistics, Getting Started
 ---
