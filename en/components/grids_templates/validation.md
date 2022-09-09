@@ -168,7 +168,7 @@ This is useful in scenarios where you want to add your own custom error message 
 
 ### Prevent exiting edit mode on invalid state
 
-In some cases you may want to disallow submiting an invalid value in the data.
+In some cases you may want to disallow submitting an invalid value in the data.
 In that scenarios you can use the [`cellEdit`]({environment:angularApiUrl}/classes/IgxGridComponent.html#cellEdit) or [`rowEdit`]({environment:angularApiUrl}/classes/IgxGridComponent.html#rowEdit) events and cancel the event in case the new value is invalid.
 Both events' arguments have a [`valid`]({environment:angularApiUrl}/interfaces/IGridEditEventArgs.html#valid) property and can be canceled accordingly.
 
@@ -576,7 +576,7 @@ The below sample demonstrates the cross-field validation in action.
 
 Using the [Ignite UI for Angular Theme Library](../themes/index.md), we can alter the default validation styles while editing. 
 
-In the below example, we will make use of the exposed template for validation message, which pops out in a tooltip and overriding the error color to modify the default looks of the validation.
+In the example below, we will make use of the exposed template for validation message, which pops out in a tooltip and overriding the error color to modify the default looks of the validation.
 We will also style the background of the invalid rows to make them more distinct.
 
 ### Import theme
