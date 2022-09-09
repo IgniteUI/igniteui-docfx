@@ -5,7 +5,7 @@ _keywords: angular validation, ignite ui for angular, infragistics
 ---
 
 # Angular @@igComponent Editing and Validation
-The @@igComponent's editing exposes a reactive forms style validation of user input when editing cells/rows. It extends [Angular's reactive forms](https://angular.io/guide/reactive-forms) validation functionality to allow easier integration with a well known functionality. When the state of the editor changes, visual indicators are applied to the edited cell.
+The @@igComponent's editing exposes a built-in validation mechanism of user input when editing cells/rows. It extends the [Angular Form validation](https://angular.io/guide/form-validation) functionality to allow easier integration with a well known functionality. When the state of the editor changes, visual indicators are applied to the edited cell.
 
 ## Configuration
 
@@ -53,7 +53,7 @@ The following sample demonstrates how to use the prebuilt `required`, `email` an
 
 ### Configure via reactive forms
 
-We expose the `FormGroup` that will be used for validation when editing starts on a row/cell via a `onFormGroupCreate` event. You can modify it by adding your own validators for the related fields:
+We expose the `FormGroup` that will be used for validation when editing starts on a row/cell via a `formGroupCreated` event. You can modify it by adding your own validators for the related fields:
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -107,6 +107,7 @@ That service has the following public APIs:
 - [`valid`]({environment:angularApiUrl}/classes/IgxGridValidationService.html#valid) - returns if the grid validation state is valid.
 - [`getInvalid`]({environment:angularApiUrl}/classes/IgxGridValidationService.html#getInvalid) - returns records with invalid states.
 - [`clear`]({environment:angularApiUrl}/classes/IgxGridValidationService.html#clear) - clears state for record by id or clears all state if no id is provided.
+- [`markAsTouched`]({environment:angularApiUrl}/classes/IgxGridValidationService.html#markAsTouched) - marks the related record/field as touched.
 
 Invalid states will persis until the validation errors in them are fixed according to the validation rule or they are cleared.
 
@@ -118,7 +119,7 @@ Validation will be triggered in the following scenarios:
 - When updating cells/rows via the API - [`updateRow`]({environment:angularApiUrl}/classes/IgxGridComponent.html#updateRow), [`updateCell`]({environment:angularApiUrl}/classes/IgxGridComponent.html#updateCell) etc..
 - When using batch editing and the [`undo`]({environment:angularApiUrl}/classes/IgxTransactionService.html#undo)/[`redo`]({environment:angularApiUrl}/classes/IgxTransactionService.html#redo) API of the transaction service.
 
-> Note: Validation will not trigger for records that have not been edited via user input or via the editing API.
+> Note: Validation will not trigger for records that have not been edited via user input or via the editing API. Visual indicators on the cell will only shown if the related input is considered touched - either via user interaction or via the `markAsTouched` API of the validation service.
 
 ## Angular @@igComponent Validation Customization Options
 
@@ -158,7 +159,7 @@ This is useful in scenarios where you want to add your own custom error message 
   <ng-template igxCellValidationError let-cell='cell' let-defaultErr="defaultErrorTemplate">
       <ng-container *ngTemplateOutlet="defaultErr">
       </ng-container>
-      <div *ngIf="cell.errors?.['phoneFormat']">
+      <div *ngIf="cell.validation.errors?.['phoneFormat']">
         Please enter correct phone format
       </div>
   </ng-template>
@@ -327,15 +328,15 @@ public stateMessage(cell: IgxGridCell) {
     const row = cell.row;
     const cellValidationErrors = row.cells.filter(x => !!x.errors);
     cellValidationErrors.forEach(cell => {
-        if (cell.errors) {
-            if (cell.errors.required) {
+        if (cell.validation.errors) {
+            if (cell.validation.errors.required) {
                 messages.push(`The \`${cell.column.header}\` column is required.`);
             }
             // Other cell errors ...
         }
     });
 
-    if (row.errors?.createdInvalid) {
+    if (row.validation.errors?.createdInvalid) {
         messages.push(`The \`Date of Registration\` date cannot be in the future.`);
     }
     // Other cross-field errors...
@@ -426,17 +427,17 @@ Errors and the detailed messages can be determined based on the row and cell's v
 
 ```ts
     public isRowValid(cell: IgxGridCell) {
-        const hasErrors = !!cell.row.errors || cell.row.cells.some(x => !!x.errors);
+        const hasErrors = !!cell.row.validation.errors || cell.row.cells.some(x => !!x.errors);
         return !hasErrors;
     }
 
     public stateMessage(cell: IgxGridCell) {
         const messages = [];
         const row = cell.row;
-        if  (row.errors?.invalidAddress) {
+        if  (row.validation.errors?.invalidAddress) {
             messages.push('The address information is invalid. City does not match the Country.');
         }
-        if  (row.errors?.invalidRange) {
+        if  (row.validation.errors?.invalidRange) {
             messages.push('The ShippedDate cannot be before the OrderDate.');
         }
         const cellValidationErrors = row.cells.filter(x => !!x.errors);
@@ -538,18 +539,18 @@ public stateMessage(cell: IgxGridCell) {
     const row = cell.row;
     const cellValidationErrors = row.cells.filter(x => !!x.errors);
     cellValidationErrors.forEach(cell => {
-        if (cell.errors) {
-            if (cell.errors.required) {
+        if (cell.validation.errors) {
+            if (cell.validation.errors.required) {
                 messages.push(`The \`${cell.column.header}\` column is required.`);
             }
             // Other cell errors...
         }
     });
 
-    if (row.errors?.ageLessHireDate) {
+    if (row.validation.errors?.ageLessHireDate) {
         messages.push(`\`Age\` cannot be less than 18 when the person was hired.`);
     }
-    if (row.errors?.invalidAddress) {
+    if (row.validation.errors?.invalidAddress) {
         messages.push(`Selected \`City\` does not match the \`Country\`.`);
     }
 
