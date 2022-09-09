@@ -9,9 +9,7 @@ _language: ja
 
 # Angular リニア ゲージの概要
 
-Angular Linear Gauge コンポーネントは、値とスケールまたは複数の範囲に対する比較を表示します。
-
-Ignite UI for Angular Linear Gauge コンポーネントは、データをリニア ゲージ形式で可視化するコントロールです。スケールおよび 1 つ以上の範囲と比較した値をシンプルで簡潔に表示することが可能で、スケール、針、目盛 (1 組)、ラベル (1 組) がサポートされます。このコンポーネントには、アニメーション化されたトランジションのサポートも組み込まれており、アニメーションでは、[`transitionDuration`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineargaugecomponent.html#transitionduration) プロパティの設定で簡単にカスタマイズできます。また構成可能な向きや方向、視覚要素やツールチップなどがサポートされます。
+Ignite UI for Angular リニア ゲージ コンポーネントを使用すると、リニア ゲージの形式でデータを視覚化できます。[`IgxLinearGaugeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineargaugecomponent.html) は、スケールおよび 1 つ以上の範囲と比較した値のシンプルで簡潔なビューを提供します。1 つのスケール、1 セットの目盛り、および 1 セットのラベルをサポートします。このコンポーネントには、アニメーション化されたトランジションのサポートも組み込まれており、アニメーションでは、[`transitionDuration`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineargaugecomponent.html#transitionduration) プロパティの設定で簡単にカスタマイズできます。また構成可能な向きや方向、視覚要素やツールチップなどがサポートされます。
 
 ## Angular リニア ゲージの例
 

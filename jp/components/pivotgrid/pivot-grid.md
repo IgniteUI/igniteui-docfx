@@ -27,7 +27,7 @@ Angular ピボット グリッド コンポーネントは、ピボット テー
 
 ## Angular ピボット グリッドの使用を開始
 
-Angular ピボット グリッド コンポーネントは、[`pivotConfiguration`](({environment:angularApiUrl}/classes/igxgridcomponent.html#pivotConfiguration)) プロパティを介して構成できます。
+Angular ピボット グリッド コンポーネントは、[`pivotConfiguration`](({environment:angularApiUrl}/classes/igxpivotgridcomponent.html#pivotConfiguration)) プロパティを介して構成できます。
 
 ```html
 <igx-pivot-grid #grid1 [data]="data" [pivotConfiguration]="pivotConfigHierarchy">

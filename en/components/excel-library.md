@@ -7,7 +7,7 @@ mentionedTypes: ['Workbook']
 
 # Angular Excel Library Overview
 
-The Infragistics Angular Excel Library allows you to work with spreadsheet data using familiar Microsoft® Excel® spreadsheet objects like Workbooks, Worksheets, Cells, Formulas and many more. The Infragistics Angular Excel Library makes it easy for you to represent the data of your application in an Excel spreadsheet as well as transfer data from Excel into your application.
+The Infragistics Angular Excel Library allows you to work with spreadsheet data using familiar Microsoft® Excel® spreadsheet objects like [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html), [`Worksheet`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html), `Cell`, [`Formula`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/formula.html) and many more. The Infragistics Angular Excel Library makes it easy for you to represent the data of your application in an Excel spreadsheet as well as transfer data from Excel into your application.
 
 ## Angular Excel Library Example
 
@@ -153,3 +153,9 @@ Modify `angular.json` by setting the `vendorSourceMap` option under architect =>
 ```
 
 <!-- -->
+
+## API Members
+
+-   `Load`
+-   `WorkbookInProcessRuntime`
+-   [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html)

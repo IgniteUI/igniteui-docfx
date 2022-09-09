@@ -9,13 +9,11 @@ _language: ja
 
 # Angular スパークライン
 
-Ignite UI for Angular スパークラインは、軽量なチャート コントロールです。グリッド セル内などのコンパクトなレイアウト内でのレンダリングを目的としていますが、単独でレンダリングすることもできます。
-
-スパークライン コントロールには、チャートの種類、マーカー、範囲、トレンドライン、不明な値のプロット、ツールチップなど、構成およびカスタマイズが可能ないくつかの視覚的要素とそれに対応する機能があります。
+Ignite UI for Angular スパークラインは、軽量なチャート コントロールです。グリッド セル内などのコンパクトなレイアウト内でのレンダリングを目的としていますが、単独でレンダリングすることもできます。[`Sparkline`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/sparkline.html) には、チャートの種類、マーカー、範囲、トレンドライン、不明な値のプロット、ツールチップなど、構成およびカスタマイズが可能ないくつかの視覚的要素とそれに対応する機能があります。
 
 ## Angular スパークラインの例
 
-次の例は、使用可能なすべての異なるスパークライン タイプを示しています。タイプは [`displayType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#displaytype) プロパティの設定により定義されます。[`displayType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#displaytype) プロパティが指定されていない場合は、既定では [`Line`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/sparklinedisplaytype.html#line) 型が表示されます。
+次の例は、使用可能なすべての異なる [`Sparkline`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/sparkline.html) のタイプを示しています。タイプは [`displayType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#displaytype) プロパティの設定により定義されます。[`displayType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#displaytype) プロパティが指定されていない場合は、既定では [`Line`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/sparklinedisplaytype.html#line) 型が表示されます。
 
 <code-view style="height: 450px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
@@ -71,7 +69,7 @@ Angular スパークライン コンポーネントには、最高、最低、�
 
 ## スパークラインのタイプ
 
-Angular スパークライン コンポーネントは、それに応じて  [`displayType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#displaytype) プロパティを設定することにより、以下のスパークライン タイプをサポートしています。
+Angular スパークライン コンポーネントは、それに応じて [`displayType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#displaytype) プロパティを設定することにより、以下のスパークライン タイプをサポートしています。
 
 -   [`Line`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/sparklinedisplaytype.html#line): スパークラインの折れ線チャート タイプを数値データで表示し、データ ポイントを線分で接続します。スパークラインでデータを視覚化するには、少なくとも 2 つのデータ ポイントを指定する必要があります。
 -   [`Area`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/sparklinedisplaytype.html#area): スパークラインのエリア チャート タイプを数値データで表示します。これは折れ線タイプに似ており、各線が描画された後に領域を閉じる追加の手順があります。スパークラインでデータを視覚化するには、少なくとも 2 つのデータ ポイントを指定する必要があります。

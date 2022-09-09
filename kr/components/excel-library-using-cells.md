@@ -2,6 +2,8 @@
 title: Angular Excel Library Component - Native Angular | Ignite UI for Angular
 _description: The Ignite UI for Excel Library component.
 _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Excel Library, Angular Excel Library Example, Angular Excel Library Component, Angular Excel Library
+_language: kr
+mentionedTypes: ['Workbook', 'WorksheetTable', 'Worksheet', 'SortSettings']
 ---
 
 # Angular Using Cells
@@ -15,6 +17,17 @@ The [`WorksheetCell`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/
            iframe-src="{environment:dvDemosBaseUrl}/excel/excel-library-working-with-cells"
            github-src="excel/excel-library/working-with-cells">
 </code-view>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <body>
+      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/excel/excel-library/working-with-cells?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
+            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
+        </a>
+        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/excel/excel-library/working-with-cells?file=src%2Fapp.component.html" rel="noopener noreferrer">
+            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
+        </a>
+    </body>
+</html>
 
 <div class="divider--half"></div>
 
@@ -227,7 +240,7 @@ When the older formats are opened in Microsoft Excel 2003 and earlier versions, 
 
 You can set a host of different formats on a [`WorksheetCell`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html) by using the [`cellFormat`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#cellformat) object returned by the `cellFormat` property of that cell. This [`cellFormat`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#cellformat) object enables you to style many different aspects of the cell such as borders, font, fill, alignments, and whether or not the cell should shrink to fit or be locked.
 
-You can also access the built-in styles to Microsoft Excel 2007 using the `styles` collection of the [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) object. The full list of styles in Excel can be found in the Cell Styles gallery of the Home tab of Microsoft Excel 2007.
+You can also access the built-in styles to Microsoft Excel 2007 using the `styles` collection of the [`workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/sheet.html#workbook) object. The full list of styles in Excel can be found in the Cell Styles gallery of the Home tab of Microsoft Excel 2007.
 
 There is a special type of style on the workbook's `styles` collection known as the "normal" style, which can be accessed using that collection's `normalStyle` property, or by indexing into the collection with the name "Normal".
 
@@ -235,7 +248,7 @@ The `normalStyle` contains the default properties for all cells in the workbook,
 
 You can clear the `styles` collection or reset it to its predefined state by using the `clear` and `reset` methods, respectively. Both of these will remove all user-defined styles, but `clear` will clear the `styles` collection entirely.
 
-With this feature, a `style` property has been added to the `CellFormat` object. This is a reference to a [`WorkbookStyle`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbookstyle.html) instance, representing the parent style of the format. For formats of a style, this property will always be null, because styles cannot have a parent style. For row, column, and cell formats, the `style` property always returns the `normalStyle` by default.
+With this feature, a `style` property has been added to the [`cellFormat`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#cellformat) object. This is a reference to a [`WorkbookStyle`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbookstyle.html) instance, representing the parent style of the format. For formats of a style, this property will always be null, because styles cannot have a parent style. For row, column, and cell formats, the `style` property always returns the `normalStyle` by default.
 
 If the `style` property is set to null, it will revert back to the `normalStyle`. If it is set to another style in the styles collection, that style will now hold the defaults for all unset properties on the cell format.
 
@@ -255,7 +268,7 @@ When you merge cells, each cell in the region will have the same value and cell 
 
 Setting the value (or cell format) of the region or any cell in the region will change the value of all cells and the region. If you un-merge cells, all of the previously merged cells will retain the shared cell format they had before they were unmerged. However, only the top-left cell of the region will retain the shared value.
 
-In order to create a merged cell region, you must add a range of cells to the [`Worksheet`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html) object’s `mergedCellsRegions` collection. This collection exposes an `Add` method that takes four integer parameters. The four parameters determine the index of the starting row and column (top-left most cell) and the index of the ending row and column (bottom-right most cell).
+In order to create a merged cell region, you must add a range of cells to the [`worksheet`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html#worksheet) object’s `mergedCellsRegions` collection. This collection exposes an `Add` method that takes four integer parameters. The four parameters determine the index of the starting row and column (top-left most cell) and the index of the ending row and column (bottom-right most cell).
 
 ```ts
 var workbook = new Workbook();

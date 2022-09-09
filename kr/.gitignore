@@ -12,6 +12,7 @@ _site
 components/grid/*.md
 components/treegrid/*.md
 components/hierarchicalgrid/*.md
+components/pivotGrid/*.md
 
 # All grid specific files that should NOT be ignored:
 !components/grid/grid.md
@@ -27,3 +28,8 @@ components/hierarchicalgrid/*.md
 # All hierarchical grid specific files that should NOT be ignored:
 !components/hierarchicalgrid/hierarchical-grid.md
 !components/hierarchicalgrid/load-on-demand.md
+
+# All pivot grid specific files that should NOT be ignored:
+!components/pivotGrid/pivot-grid.md
+!components/pivotGrid/pivot-grid-features.md
+!components/pivotGrid/pivot-grid-custom.md

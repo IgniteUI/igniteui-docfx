@@ -71,3 +71,8 @@ tileSource.mapServerUri = EsriUtility.getUri(EsriStyle.WorldOceansMap);
 
 this.geoMap.backgroundContent = tileSource;
 ```
+
+## API Members
+
+-   [`IgxArcGISOnlineMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxarcgisonlinemapimagery.html)
+-   [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html)

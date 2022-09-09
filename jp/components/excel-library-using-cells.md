@@ -309,7 +309,7 @@ worksheet.rows(0).cells(2).cellFormat.alignment = HorizontalCellAlignment.Center
 
 -   **Normal Value** - スペースに制限がない場合と同じように数字が表示されます。
 
--   **10 進数の削除** - 10 進数は、一致する書式が見つかるまで 1 つづつ削除されます。たとえば、値 12345.6789 値は以下の書式に一致するまで減らされます。 12345.679、12345.68、12345.7、12346。最初の有効数字が 1 つだけ残るとこれは停止します。したがって、たとえば 0.0001234567890 のような値は 0.0001 に短縮されます。
+-   **10 進数の削除** - 10 進数は、一致する書式が見つかるまで 1 つづつ削除されます。たとえば、値 12345.6789 値は以下の書式に一致するまで減らされます。12345.679、12345.68、12345.7、12346。最初の有効数字が 1 つだけ残るとこれは停止します。したがって、たとえば 0.0001234567890 のような値は 0.0001 に短縮されます。
 
 -   **指数、5 decimal digits** - 数字は 1.23457E+09 または 1.23457E-04 などの 0.00000E+00 の形式で表示されます。
 
@@ -347,3 +347,23 @@ var worksheet = this.workbook.worksheets().add("Sheet1");
 
 var cellText = worksheet.rows(0).cells(0).getText();
 ```
+
+## API メンバー
+
+-   `Add`
+-   [`CellFillLinearGradient`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/cellfilllineargradient.html)
+-   [`CellFillPattern`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/cellfillpattern.html)
+-   [`CellFillRectangularGradient`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/cellfillrectangulargradient.html)
+-   [`CellFill`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/cellfill.html)
+-   [`cellFormat`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#cellformat)
+-   [`displayOptions`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html#displayoptions)'
+-   [`formula`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#formula)
+-   [`mergedCellsRegions`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html#mergedcellsregions)
+-   [`WorkbookColorInfo`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbookcolorinfo.html)
+-   [`WorkbookStyle`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbookstyle.html)
+-   [`workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/sheet.html#workbook)
+-   [`WorksheetCell`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html)
+-   [`WorksheetColumn`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcolumn.html)
+-   [`WorksheetRegion`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetregion.html)
+-   [`WorksheetRow`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetrow.html)
+-   [`worksheet`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#worksheet)
