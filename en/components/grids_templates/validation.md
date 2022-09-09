@@ -326,7 +326,7 @@ The error messages are gathered in the `stateMessage` function, which gathers th
 public stateMessage(cell: IgxGridCell) {
     const messages = [];
     const row = cell.row;
-    const cellValidationErrors = row.cells.filter(x => !!x.errors);
+    const cellValidationErrors = row.cells.filter(x => !!x.validation.errors);
     cellValidationErrors.forEach(cell => {
         if (cell.validation.errors) {
             if (cell.validation.errors.required) {
@@ -427,7 +427,7 @@ Errors and the detailed messages can be determined based on the row and cell's v
 
 ```ts
     public isRowValid(cell: IgxGridCell) {
-        const hasErrors = !!cell.row.validation.errors || cell.row.cells.some(x => !!x.errors);
+        const hasErrors = !!cell.row.validation.errors || cell.row.cells.some(x => !!x.validation.errors);
         return !hasErrors;
     }
 
@@ -440,7 +440,7 @@ Errors and the detailed messages can be determined based on the row and cell's v
         if  (row.validation.errors?.invalidRange) {
             messages.push('The ShippedDate cannot be before the OrderDate.');
         }
-        const cellValidationErrors = row.cells.filter(x => !!x.errors);
+        const cellValidationErrors = row.cells.filter(x => !!x.validation.errors);
         if (cellValidationErrors && cellValidationErrors.length > 0) {
             const fields = cellValidationErrors.map(x => x.column.field).join(',');
             messages.push('The following fields are required: ' + fields);
@@ -537,7 +537,7 @@ The error messages are gathered in the `stateMessage` function, which gathers th
 public stateMessage(cell: IgxGridCell) {
     const messages = [];
     const row = cell.row;
-    const cellValidationErrors = row.cells.filter(x => !!x.errors);
+    const cellValidationErrors = row.cells.filter(x => !!x.validation.errors);
     cellValidationErrors.forEach(cell => {
         if (cell.validation.errors) {
             if (cell.validation.errors.required) {
