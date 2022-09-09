@@ -21,7 +21,7 @@ It can be used as a stand-alone component as well as in combination with the Ang
 
 # Angular Pivot Grid Configuration
 
-The Angular Pivot Grid Component can be configured via the [`pivotConfiguration`](({environment:angularApiUrl}/classes/igxgridcomponent.html#pivotConfiguration)) property.
+The Angular Pivot Grid Component can be configured via the [`pivotConfiguration`](({environment:angularApiUrl}/classes/igxpivotgridcomponent.html#pivotConfiguration)) property.
 
 ```html
 <igx-pivot-grid #grid1 [data]="data" [pivotConfiguration]="pivotConfigHierarchy">
