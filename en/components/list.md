@@ -12,8 +12,8 @@ The Ignite UI for Angular List component displays rows of items and supports one
 ## Angular List Example
 The following example represents a list populated with contacts with a _name_ and a _phone number_ properties. The [`IgxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) component uses [**IgxAvatar**](avatar.md) and [**IgxIcon**](icon.md) to enrich the user experience and expose the capabilities of setting avatar picture and different icon for _favorite a contact_. In addition, the List View expose sorting capabilities achieved by using our filtering pipe.
 
-<code-view style="height: 513px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 513px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/list-sample-4" alt="Angular List Example">
 </code-view>
 
@@ -79,8 +79,8 @@ And our style for the empty template:
 If all went great, this is how our empty list should look like:
 
 
-<code-view style="height: 100px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 100px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/list-sample-5" >
 </code-view>
 
@@ -108,8 +108,8 @@ Sometimes there may be a delay in your data loading. In this case you can set th
 ```
 
 
-<code-view style="height: 300px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 300px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/list-sample-6" >
 </code-view>
 
@@ -132,8 +132,8 @@ It's nice having a template for when the list is empty, but now let's add some i
 If all went well, you should see the following in your browser:
 
 
-<code-view style="height: 200px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 200px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/list-sample-2" >
 </code-view>
 
@@ -186,8 +186,8 @@ Both directives `igxListLineTitle` and `igxListLineSubTitle` gives our list item
 After all that our Angular list should now look like that:
 
 
-<code-view style="height: 400px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 400px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/list-sample-3" >
 </code-view>
 
@@ -325,8 +325,8 @@ public selectDensity(event) {
 And here's the result of all that work:
 
 
-<code-view style="height: 513px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 513px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/list-sample-4" >
 </code-view>
 
@@ -438,8 +438,8 @@ public leftPanPerformed(args) {
 Now try panning the list items for yourself:
 
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/list-sample-7" >
 </code-view>
 
@@ -510,12 +510,12 @@ Finally, we need to apply the filtering pipe to our contacts data before we can 
 
 ## List Item Selection
 
-As you probably have already noticed, list items do not provide selection states. However, if your application requires your list to keep track of which item is selected, we give you an example of how this can be achieved. All you need to do is keep track of the state somewhere in your component, or in the data the list is bound to. 
+As you probably have already noticed, list items do not provide selection states. However, if your application requires your list to keep track of which item is selected, we give you an example of how this can be achieved. All you need to do is keep track of the state somewhere in your component, or in the data the list is bound to.
 
 Here's an example, in which we apply a background color to the list according to the theme's secondary 500 color, based on state tracking coming from the data the list is bound to:
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 420px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/list-item-selection" >
 </code-view>
 
@@ -561,7 +561,7 @@ Let's see how we can change the background of our list. First we need to import 
 
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+```
 
 Then we need to create a theme for our component.
 
@@ -577,8 +577,8 @@ Then we need to create a theme for our component.
 The result from the above code is
 
 
-<code-view style="height: 365px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 365px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/list-sample-8" >
 </code-view>
 

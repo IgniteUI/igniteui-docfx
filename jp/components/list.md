@@ -14,8 +14,8 @@ Ignite UI for Angular List コンポーネントは項目の行を表示し、�
 次の例は、_name_ プロパティと _phone number_ プロパティを持つ連絡先が入力されたリストを表しています。[`IgxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) コンポーネントは、[**IgxAvatar**](avatar.md) と [**IgxIcon**](icon.md) を使用して、ユーザー エクスペリエンスを向上させ、**連絡先をお気に入りに追加**にアバター写真とさまざまなアイコンを設定する機能を公開します。さらに、リスト ビューは、フィルタリング パイプを使用して実現されたソート機能を公開します。
 
 
-<code-view style="height: 513px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 513px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/list-sample-4" alt="Angular List の例">
 </code-view>
 
@@ -81,8 +81,8 @@ export class AppModule {}
 空のリストは以下のようになります:
 
 
-<code-view style="height: 100px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 100px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/list-sample-5" >
 </code-view>
 
@@ -110,8 +110,8 @@ export class AppModule {}
 ```
 
 
-<code-view style="height: 300px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 300px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/list-sample-6" >
 </code-view>
 
@@ -134,8 +134,8 @@ export class AppModule {}
 以下は結果です:
 
 
-<code-view style="height: 200px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 200px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/list-sample-2" >
 </code-view>
 
@@ -187,8 +187,8 @@ public contacts = [{
 結果は以下のようになります。
 
 
-<code-view style="height: 400px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 400px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/list-sample-3" >
 </code-view>
 
@@ -326,8 +326,8 @@ public selectDensity(event) {
 結果は以下のようになります。
 
 
-<code-view style="height: 513px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 513px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/list-sample-4" >
 </code-view>
 
@@ -439,8 +439,8 @@ public leftPanPerformed(args) {
 次にリスト項目をパンニングします。
 
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/list-sample-7" >
 </code-view>
 
@@ -510,12 +510,12 @@ export class ContactListComponent {
 
 ## List Item Selection
 
-As you probably have already noticed, list items do not provide selection states. However, if your application requires your list to keep track of which item is selected, we give you an example of how this can be achieved. All you need to do is keep track of the state somewhere in your component, or in the data the list is bound to. 
+As you probably have already noticed, list items do not provide selection states. However, if your application requires your list to keep track of which item is selected, we give you an example of how this can be achieved. All you need to do is keep track of the state somewhere in your component, or in the data the list is bound to.
 
 Here's an example, in which we apply a background color to the list according to the theme's secondary 500 color, based on state tracking coming from the data the list is bound to:
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 420px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/list-item-selection" >
 </code-view>
 
@@ -577,8 +577,8 @@ public selectItem(item) {
 以下は上記コードの結果です。
 
 
-<code-view style="height: 365px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 365px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/list-sample-8" >
 </code-view>
 
