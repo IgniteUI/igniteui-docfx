@@ -27,7 +27,7 @@ To validate that a column input would be set and the value is going to be format
 
 The following sample demonstrates how to use the prebuilt `required`, `email` and `min` validator directives in a @@igComponent.
 @@if (igxName === 'IgxGrid') {
-<code-view style="height:530px" 
+<code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/grid/grid-validator-service" alt="Angular @@igComponent Validation Basic Example">
 </code-view>
@@ -690,7 +690,7 @@ public cellStyles = {
 
 @@if (igxName === 'IgxHierarchicalGrid'){
 
-<code-view style="height:560px" 
+<code-view style="height:630px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-validation-style" >
 </code-view>
@@ -702,7 +702,7 @@ public cellStyles = {
 
 <code-view style="height:560px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-grid-validation-style" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-validation-style" >
 </code-view>
 
 }
