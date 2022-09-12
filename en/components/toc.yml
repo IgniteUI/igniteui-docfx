@@ -188,6 +188,7 @@
       updated: false
     - name: Column Resizing
       href: grid/column-resizing.md
+      updated: true
       new: false
     - name: Column Hiding
       href: grid/column-hiding.md
@@ -335,6 +336,7 @@
       updated: false
     - name: Column Resizing
       href: treegrid/column-resizing.md
+      updated: true
       new: false
     - name: Column Hiding
       href: treegrid/column-hiding.md
@@ -475,6 +477,7 @@
       new: false
     - name: Column Resizing
       href: hierarchicalgrid/column-resizing.md
+      updated: true
       new: false
     - name: Column Hiding
       href: hierarchicalgrid/column-hiding.md
