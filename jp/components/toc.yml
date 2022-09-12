@@ -529,7 +529,7 @@
     - name: ピボット グリッドのリモート処理とカスタマイズ
       href: pivotgrid/pivot-grid-custom.md
       new: true
-    - name: State Persistence
+    - name: 状態保持
       href: pivotGrid/state-persistence.md
       new: true
 - name: Tree
