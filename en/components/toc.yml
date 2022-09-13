@@ -143,6 +143,9 @@
           href: grid/batch-editing.md
           updated: true
           new: false
+        - name: Validation
+          href: grid/validation.md
+          new: true
     - name: Row Drag
       href: grid/row-drag.md
       updated: true
@@ -185,6 +188,7 @@
       updated: false
     - name: Column Resizing
       href: grid/column-resizing.md
+      updated: true
       new: false
     - name: Column Hiding
       href: grid/column-hiding.md
@@ -291,6 +295,9 @@
           href: treegrid/batch-editing.md
           updated: true
           new: false
+        - name: Validation
+          href: treegrid/validation.md
+          new: true
     - name: Row Drag
       href: treegrid/row-drag.md
       new: false
@@ -329,6 +336,7 @@
       updated: false
     - name: Column Resizing
       href: treegrid/column-resizing.md
+      updated: true
       new: false
     - name: Column Hiding
       href: treegrid/column-hiding.md
@@ -425,6 +433,9 @@
           href: hierarchicalgrid/batch-editing.md
           updated: true
           new: false
+        - name: Validation
+          href: hierarchicalgrid/validation.md
+          new: true
     - name: Export to Excel
       href: hierarchicalGrid/export-excel.md
       new: false
@@ -466,6 +477,7 @@
       new: false
     - name: Column Resizing
       href: hierarchicalgrid/column-resizing.md
+      updated: true
       new: false
     - name: Column Hiding
       href: hierarchicalgrid/column-hiding.md
@@ -527,6 +539,9 @@
       new: true
     - name: Pivot Grid Remote Operations
       href: pivotgrid/pivot-grid-custom.md
+      new: true
+    - name: State Persistence
+      href: pivotgrid/state-persistence.md
       new: true
 - name: Tree
   href: tree.md
@@ -696,8 +711,33 @@
       href: zoomslider-overview.md
       new: false
 - name: Maps
+  href: geo-map.md
   header: true
-- name: Map
+- name: Geographic Area Map
+  href: geo-map-type-scatter-area-series.md
+  new: false
+- name: Geographic Contour Map
+  href: geo-map-type-scatter-contour-series.md
+  new: false
+- name: Geographic High Density Map
+  href: geo-map-type-scatter-density-series.md
+  new: false
+- name: Geographic Bubble Map
+  href: geo-map-type-scatter-bubble-series.md
+  new: false
+- name: Geographic Symbol Map
+  href: geo-map-type-scatter-symbol-series.md
+  new: false
+- name: Geographic Polygon Map
+  href: geo-map-type-shape-polygon-series.md
+  new: false
+- name: Geographic Polyline Map
+  href: geo-map-type-shape-polyline-series.md
+  new: false
+- name: Geographic Map API
+  href: maps/map-api.md
+  new: false
+- name: Geographic Map Features
   href: geo-map.md
   new: false
   items:
@@ -733,27 +773,6 @@
       new: false
     - name: Navigating Map Content
       href: geo-map-navigation.md
-      new: false
-    - name: Scatter Area Series
-      href: geo-map-type-scatter-area-series.md
-      new: false
-    - name: Scatter Contour Series
-      href: geo-map-type-scatter-contour-series.md
-      new: false
-    - name: Scatter Density Series
-      href: geo-map-type-scatter-density-series.md
-      new: false
-    - name: Scatter Proportional Series
-      href: geo-map-type-scatter-bubble-series.md
-      new: false
-    - name: Scatter Symbol Series
-      href: geo-map-type-scatter-symbol-series.md
-      new: false
-    - name: Shape Polygon Series
-      href: geo-map-type-shape-polygon-series.md
-      new: false
-    - name: Shape Polyline Series
-      href: geo-map-type-shape-polyline-series.md
       new: false
     - name: Shape Files Reference
       href: geo-map-shape-files-reference.md
@@ -916,6 +935,9 @@
 - name: Radio & Radio Group
   href: radio-button.md
   new: false
+- name: Rating
+  href: rating.md
+  new: true
 - name: Label & Input
   href: label-input.md
 - name: Input Group

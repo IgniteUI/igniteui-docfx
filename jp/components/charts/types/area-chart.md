@@ -2,20 +2,18 @@
 title: Angular エリア チャート | データ可視化 | インフラジスティックス
 _description: インフラジスティックスの Angular エリア チャート
 _keywords: Angular Charts, Area Chart, Infragistics, Angular チャート, エリア チャート, インフラジスティックス
-mentionedTypes: ["CategoryChart", "XamDataChart", "CategoryChartType"]
+mentionedTypes: ["DomainChart", "CategoryChart", "XamDataChart", "CategoryChartType", 'Series']
 namespace: Infragistics.Controls.Charts
 _language: ja
 ---
 
 # Angular エリア チャート
 
-Ignite UI for Angular エリア チャートは、線の下の領域が塗りつぶされた直線セグメントで接続されたポイントのコレクションを使用して描画されます。値は y 軸 (左側のラベル) に表示され、カテゴリは x 軸 (下部のラベル) に表示されます。これらのチャートは、プロットされた値の合計を表示することにより、一定期間の変化量を強調したり、複数の項目や全体の一部の関係を比較したりします。
-
-エリア チャートは、[折れ線チャート](line-chart.md)または[スプライン チャート](spline-chart.md)に基づいています。そのため、時系列で量の変化を示します。たとえば、商品の経時的な蓄積などです。
+Ignite UI for Angular エリア チャートは、線の下の領域が塗りつぶされた直線セグメントで接続されたポイントのコレクションを使用して描画されます。値は y 軸 (左側のラベル) に表示され、カテゴリは x 軸 (下部のラベル) に表示されます。これらのチャートは、プロットされた値の合計を表示することにより、一定期間の変化量を強調したり、複数の項目や全体の一部の関係を比較したりします。そのため、時系列で量の変化を示します。たとえば、商品の経時的な蓄積などです。
 
 ## Angular エリア チャートの例
 
-[`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html) コントロールでエリア チャートを作成するには、以下の例のように、データを `ItemsSource` プロパティにバインドし、[`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#charttype) プロパティを [`Area`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#area) 値に設定します。
+[`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html) コントロールでエリア チャートを作成するには、以下の例のように、データを `ItemsSource` プロパティにバインドし、[`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#charttype) プロパティを **Area** 列挙型に設定します。
 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"

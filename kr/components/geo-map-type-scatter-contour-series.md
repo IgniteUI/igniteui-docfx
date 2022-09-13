@@ -2,6 +2,8 @@
 title: Angular Map | Data Visualization Tools | Contour Line Series | Infragistics
 _description: The Map allows you to display data that contains geographic locations from view models or geo-spatial data loaded from shape files on geographic imagery maps.View the demo, dependencies, usage and toolbar for more information.
 _keywords: map, Ignite UI for Angular, Infragistics
+_language: kr
+mentionedTypes: ['XamGeographicMap', 'ShapefileConverter']
 ---
 
 # Angular Using Scatter Contour Series
@@ -45,11 +47,11 @@ Use the [`fillScale`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/
 The provided \`ValueBrushScale class should satisfy most of your coloring needs, but the application for custom coloring logic can inherit the ValueBrushScale class.
 The following table list properties of the CustomPaletteColorScale affecting the surface coloring of the GeographicContourLineSeries.
 
-| Property Name  | Property Type   | Description                                                                                                                                                                                                                                           |
-| -------------- | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Brushes`      | BrushCollection | Gets or sets the collection of brushes for filling contours of the [`IgxGeographicContourLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographiccontourlineseriescomponent.html) |
-| `MaximumValue` | double          | The highest value to assign a brush in a fill scale.                                                                                                                                                                                                  |
-| `MinimumValue` | double          | The lowest value to assign a brush in a fill scale.                                                                                                                                                                                                   |
+| Property Name                                                                                                                               | Property Type   | Description                                                                                                                                                                                                                                           |
+| ------------------------------------------------------------------------------------------------------------------------------------------- | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`brushes`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriesviewercomponent.html#brushes) | BrushCollection | Gets or sets the collection of brushes for filling contours of the [`IgxGeographicContourLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographiccontourlineseriescomponent.html) |
+| `MaximumValue`                                                                                                                              | double          | The highest value to assign a brush in a fill scale.                                                                                                                                                                                                  |
+| `MinimumValue`                                                                                                                              | double          | The lowest value to assign a brush in a fill scale.                                                                                                                                                                                                   |
 
 ## Code Snippet
 
