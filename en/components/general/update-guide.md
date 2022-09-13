@@ -53,6 +53,22 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
 
 ## From 14.1.x to 14.2.x
 ### General
+- Ignite UI for Angular now has a peer dependency on [igniteui-theming](https://github.com/IgniteUI/igniteui-theming). Install the theming package and add the following preprocessor configuration in your `angular.json` file.
+
+    ```sh
+    npm install igniteui-theming
+    ```
+
+    ```json
+        "build": {
+          "options": {
+            "stylePreprocessorOptions": {
+                "includePaths": ["node_modules"]
+            }
+          }
+        }
+    ```
+
 - **Breaking Change** - All global CSS variables for theme configuration, colors, elevations, and typography have changed the prefix from `--igx` to `--ig`. This change doesn't affect global component variables;
     
     **Example**:
@@ -73,21 +89,6 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
     }
     ```
 
-- Ignite UI for Angular now has a peer dependency on [igniteui-theming](https://github.com/IgniteUI/igniteui-theming). Install the theming package and add the following preprocessor configuration in your `angular.json` file.
-
-    ```sh
-    npm install igniteui-theming
-    ```
-
-    ```json
-        "build": {
-          "options": {
-            "stylePreprocessorOptions": {
-                "includePaths": ["node_modules"]
-            }
-          }
-        }
-    ```
 ### Themes
 - **Breaking Change** - The `grays` input argument has been renamed to `gray`.<br />
 Here's how that will affect existing code:
@@ -100,8 +101,7 @@ Here's how that will affect existing code:
         $secondary: #e41c77,
         $grays: #000
     );
-    
-    
+
     .my-class {
         background: color($color: 'grays', $variant: 300);
         color: contrast-color($color: 'grays', $variant: 300);
@@ -117,7 +117,6 @@ Here's how that will affect existing code:
         $secondary: #e41c77,
         $gray: #000
     );
-    
     
     .my-class {
         background: color($color: 'gray', $variant: 300);
@@ -176,7 +175,7 @@ Here's how that will affect existing code:
     ```
 
 ### Typography
-- **Breaking Change** - The **type-style** mixin now doesn't accept type-scale as a parameter, only the categories names.
+- **Breaking Change** - The **type-style** mixin now doesn't accept type-scale as a parameter, only the category name.
 
     In 14.1.x and prior:
 
