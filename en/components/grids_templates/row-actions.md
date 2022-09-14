@@ -90,8 +90,9 @@ They are added inside the `<igx-action-strip>` and this is all needed to have an
 These components expose templates giving flexibility for customization. For instance, if we would like to use the `ActionStrip` for a Gmail scenario with row actions such as `delete`, `edit` and etc. You can simply create button component with `igx-icon`, add click event to it and insert it into the `igx-action-strip` component.
 
 ```html
- <igx-action-strip #actionstrip>
-    <igx-grid-pinning-actions></igx-grid-pinning-actions>
+<igx-grid>
+    <igx-action-strip #actionstrip>
+        <igx-grid-pinning-actions></igx-grid-pinning-actions>
         <button title="Edit" igxButton="icon" igxRipple (click)='startEdit(actionstrip.context)'>
             <igx-icon>edit</igx-icon>
         </button>
