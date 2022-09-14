@@ -1,18 +1,18 @@
 ---
-title: Editing and Validation in Angular @@igComponent - Infragistics
-_description: Validate the input of the users in grid and notify them if it's valid or not while using Angular @@igComponent. See demos & examples!
-_keywords: angular validation, ignite ui for angular, infragistics
+title: Angular @@igComponent での編集と検証 - インフラジスティックス
+_description: グリッドでユーザーの入力を検証し、Angular @@igComponent の使用中に有効かどうかを通知します。デモと例をお試しください。
+_keywords: angular 検証, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
 
-# Angular @@igComponent Editing and Validation
-The @@igComponent's editing exposes a built-in validation mechanism of user input when editing cells/rows. It extends the [Angular Form validation](https://angular.io/guide/form-validation) functionality to allow easier integration with a well known functionality. When the state of the editor changes, visual indicators are applied to the edited cell.
+# Angular @@igComponent の編集と検証
+@@igComponent の編集は、セル/行の編集時のユーザー入力の組み込み検証メカニズムを公開します。これは [Angular Form 検証](https://angular.io/guide/form-validation)機能を拡張し、既知の機能と簡単に統合できるようにします。エディターの状態が変更されると、視覚的なインジケーターが編集されたセルに適用されます。
 
 ## 構成
 
-### Configure via template-driven configuration
+### テンプレート駆動で構成する
 
-We extend some of the Angular Forms validator directives to directly work with the `IgxColumn`. The same validators are available as attributes to be set declaratively in `igx-column`. The following validators are supported out-of-the-box:
+Angular Forms 検証ディレクティブは、`IgxColumn` で直接動作するよう拡張されています。同じ検証が `igx-column` で宣言的に設定される属性として利用できます。以下の検証は追加設定なしでサポートされます。
 - required
 - min
 - max
@@ -21,16 +21,16 @@ We extend some of the Angular Forms validator directives to directly work with t
 - maxlength
 - pattern
 
-To validate that a column input would be set and the value is going to be formatted as an email, you can use the related directives:
+列入力が設定され、値がメールとして書式設定されることを検証するには、関連するディレクティブを使用できます。
 ```html
 <igx-column [field]="email" [header]="User E-mail" required email></igx-column>
 ```
 
-The following sample demonstrates how to use the prebuilt `required`, `email` and `min` validator directives in a @@igComponent.
+以下のサンプルは、@@igComponent に組み込み済みの `required`、`email` および `min` 検証ディレクティブを使用する方法を示しています。
 @@if (igxName === 'IgxGrid') {
-<code-view style="height:530px" 
+<code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-validator-service" alt="Angular @@igComponent Validation Basic Example">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-validator-service" alt="Angular @@igComponent 検証の基本例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -38,7 +38,7 @@ The following sample demonstrates how to use the prebuilt `required`, `email` an
 @@if (igxName === 'IgxTreeGrid') {
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-validator-service" alt="Angular @@igComponent Validation Basic Example">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-validator-service" alt="Angular @@igComponent 検証の基本例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -46,15 +46,15 @@ The following sample demonstrates how to use the prebuilt `required`, `email` an
 @@if (igxName === 'IgxHierarchicalGrid') {
 <code-view style="height:680px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-validator-service" alt="Angular @@igComponent Validation Basic Example">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-validator-service" alt="Angular @@igComponent 検証の基本例">
 </code-view>
 
 <div class="divider--half"></div>
 }
 
-### Configure via reactive forms
+### リアクティブ フォームで構成する
 
-We expose the `FormGroup` that will be used for validation when editing starts on a row/cell via a `formGroupCreated` event. You can modify it by adding your own validators for the related fields:
+`formGroupCreated` イベントを介して行/セルで編集を開始するときに検証に使用する `FormGroup` を公開します。関連するフィールドに独自の検証を追加して変更できます。
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -98,35 +98,35 @@ We expose the `FormGroup` that will be used for validation when editing starts o
 ```
 }
 
-You can decide to write your own validator function, or use one of the [built-in Angular validator functions](https://angular.io/guide/form-validation#built-in-validator-functions).
+独自の検証関数を作成するか、[組み込みの Angular 検証関数](https://angular.io/guide/form-validation#built-in-validator-functions)を使用できます。
 
 
-## Validation service API
+## 検証サービス API
 
-The grid exposes a validation service via the [`validation`]({environment:angularApiUrl}/classes/IgxGridComponent.html#validation) property.
-That service has the following public APIs:
-- [`valid`]({environment:angularApiUrl}/classes/IgxGridValidationService.html#valid) - returns if the grid validation state is valid.
-- [`getInvalid`]({environment:angularApiUrl}/classes/IgxGridValidationService.html#getInvalid) - returns records with invalid states.
-- [`clear`]({environment:angularApiUrl}/classes/IgxGridValidationService.html#clear) - clears state for record by id or clears all state if no id is provided.
-- [`markAsTouched`]({environment:angularApiUrl}/classes/IgxGridValidationService.html#markAsTouched) - marks the related record/field as touched.
+グリッドは、[`validation`]({environment:angularApiUrl}/classes/IgxGridComponent.html#validation) プロパティを介して検証サービスを公開します。
+このサービスには以下のパブリック API があります。
+- [`valid`]({environment:angularApiUrl}/classes/IgxGridValidationService.html#valid) - グリッドの検証状態が有効であるかどうかを返します。
+- [`getInvalid`]({environment:angularApiUrl}/classes/IgxGridValidationService.html#getInvalid) - 無効な状態のレコードを返します。
+- [`clear`]({environment:angularApiUrl}/classes/IgxGridValidationService.html#clear) - レコードの状態を ID でクリアします。ID が提供されない場合はすべてのレコードの状態をクリアします。
+- [`markAsTouched`]({environment:angularApiUrl}/classes/IgxGridValidationService.html#markAsTouched) - 関連するレコード/フィールドをタッチ済みとしてマークします。
 
-Invalid states will persis until the validation errors in them are fixed according to the validation rule or they are cleared.
+無効な状態は、検証ルールに従って検証エラーが修正されるか、クリアされるまで保持されます。
 
 ## 検証トリガー
 
-Validation will be triggered in the following scenarios:
+検証は以下のシナリオでトリガーされます。
 
-- While editing via the cell editor based on the grid's [`validationTrigger`]({environment:angularApiUrl}/classes/IgxGridComponent.html#validationTrigger). Either on `change` while typing in the editor, or on `blur` when the editor loses focus or closes.
-- When updating cells/rows via the API - [`updateRow`]({environment:angularApiUrl}/classes/IgxGridComponent.html#updateRow), [`updateCell`]({environment:angularApiUrl}/classes/IgxGridComponent.html#updateCell) etc..
-- When using batch editing and the [`undo`]({environment:angularApiUrl}/classes/IgxTransactionService.html#undo)/[`redo`]({environment:angularApiUrl}/classes/IgxTransactionService.html#redo) API of the transaction service.
+- グリッドの [`validationTrigger`]({environment:angularApiUrl}/classes/IgxGridComponent.html#validationTrigger) に基づくセルエディターでの編集中。エディター入力中の変更時 (`change`)、またはエディターがフォーカスを失うか (`blur`) 閉じた場合。
+- [`updateRow`]({environment:angularApiUrl}/classes/IgxGridComponent.html#updateRow)、[`updateCell`]({environment:angularApiUrl}/classes/IgxGridComponent.html#updateCell) などの API を使用してセル/行を更新する場合 。
+- トランザクション サービスの一括編集および [`undo`]({environment:angularApiUrl}/classes/IgxTransactionService.html#undo)/[`redo`]({environment:angularApiUrl}/classes/IgxTransactionService.html#redo) API を使用する場合。
 
-> 注: Validation will not trigger for records that have not been edited via user input or via the editing API. Visual indicators on the cell will only shown if the related input is considered touched - either via user interaction or via the `markAsTouched` API of the validation service.
+> 注: ユーザー入力または編集 API で編集されていないレコードに対しては、検証はトリガーされません。セルの視覚的なインジケーターは、ユーザー操作または検証サービスの `markAsTouched` API を介して入力がタッチ済みと見なされる場合のみ表示されます。
 
-## Angular @@igComponent Validation Customization Options
+## Angular @@igComponent 検証のカスタマイズ オプション
 
-### Set a custom validator
+### カスタム検証を設定する
 
-You can define your own validation directive to use on a `<igx-column>` in the template.
+テンプレート内の `<igx-column>` で使用する独自の検証ディレクティブを定義することができます。
 
 ```ts
 @Directive({
@@ -144,16 +144,16 @@ export class PhoneFormatDirective extends Validators {
 }
 ```
 
-Once it is defined and added in your app module you can set it declaratively to a given column in the grid:
+定義して app モジュールに追加した以降、宣言的にグリッドの指定の列に設定できます。
 
 ```html
 <igx-column phoneFormat="\+\d{1}\-(?!0)(\d{3})\-(\d{3})\-(\d{4})\b" ...>
 ```
 
-### Change default error template
+### デフォルトのエラー テンプレートを変更する
 
-You can define your own custom error template that will be displayed in the error tooltip when the cell enters invalid state.
-This is useful in scenarios where you want to add your own custom error message or otherwise change the look or content of the message.
+セルが無効な状態になったときにエラー ツールチップに表示されるカスタム エラー テンプレートを定義できます。
+これは、カスタム エラー メッセージを追加したり、メッセージの外観やコンテンツを変更したりする場合に便利です。
 
 ```html
 <igx-column ... >
@@ -167,11 +167,11 @@ This is useful in scenarios where you want to add your own custom error message 
 </igx-column>
 ```
 
-### Prevent exiting edit mode on invalid state
+### 無効な状態での編集モードの終了を防止する
 
-In some cases you may want to disallow submitting an invalid value in the data.
-In that scenarios you can use the [`cellEdit`]({environment:angularApiUrl}/classes/IgxGridComponent.html#cellEdit) or [`rowEdit`]({environment:angularApiUrl}/classes/IgxGridComponent.html#rowEdit) events and cancel the event in case the new value is invalid.
-Both events' arguments have a [`valid`]({environment:angularApiUrl}/interfaces/IGridEditEventArgs.html#valid) property and can be canceled accordingly.
+場合によっては、データ中の無効な値を送信しないようにしたいことがあります。
+その場合は、[`cellEdit`]({environment:angularApiUrl}/classes/IgxGridComponent.html#cellEdit) または [`rowEdit`]({environment:angularApiUrl}/classes/IgxGridComponent.html#rowEdit) イベントを使用し、新しい値が無効な場合にイベントをキャンセルできます。
+いずれのイベントも引数には [`valid`]({environment:angularApiUrl}/interfaces/IGridEditEventArgs.html#valid) プロパティがあり、これによってキャンセルできます。
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -200,43 +200,43 @@ public cellEdit(evt) {
 
 ### 例
 
-The below example demonstrates the above-mentioned customization options.
+以下の例は、上記のカスタマイズ オプションを示しています。
 
 @@if (igxName === 'IgxGrid') {
-<code-view style="height:530px" 
+<code-view style="height:570px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-validator-service-extended" alt="Angular @@igComponent Custom Validation Example">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-validator-service-extended" alt="Angular @@igComponent カスタム検証の例">
 </code-view>
 
 <div class="divider--half"></div>
 }
 @@if (igxName === 'IgxTreeGrid') {
-<code-view style="height:530px" 
+<code-view style="height:570px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-validator-service-extended" alt="Angular @@igComponent Custom Validation Example">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-validator-service-extended" alt="Angular @@igComponent カスタム検証の例">
 </code-view>
 
 <div class="divider--half"></div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<code-view style="height:610px" 
+<code-view style="height:640px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-validator-service-extended" alt="Angular @@igComponent Custom Validation Example">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-validator-service-extended" alt="Angular @@igComponent カスタム検証の例">
 </code-view>
 
 <div class="divider--half"></div>
 }
 
-### Cross-field validation
+### クロス フィールド検証
 
-In some scenarios validation of one field may depend on the value of another field in the record.
-In that case a custom validator can be used to compare the values in the record via their shared `FormGroup`.
+場合によっては、1 つのフィールドの検証がレコード内の別のフィールドの値に依存することがあります。
+その場合、カスタム検証を使用して共有 `FormGroup` を介してレコード内の値を比較できます。
 
 @@if (igxName === 'IgxGrid') {
 
-The below sample demonstrates a cross-field validation between different field of the same record. It checks the dates validity compared to the current date and between the active and created on date of the record as well as the deals won/lost ration for each employee. All errors are collected in a separate pinned column that shows that the record is invalid and displays the related errors.
+以下のサンプルは、同じレコードの異なるフィールド間のクロスフィールド検証を示しています。レコードのアクティブな日付と作成日付とを現在の日付と比較した有効性、および各従業員の商談成立/失効を確認します。すべてのエラーは別のピン固定列に収集され、レコードが無効であることを示し、関連するエラーを表示します。
 
-The next lines of code show the cross-field validator function, which contains the comparisons and sets the related errors relative to them.
+次のコード行は、比較を含み、それらに関連する関連エラーを設定するクロス フィールド検証関数を示しています。
 
 ```ts
 private rowValidator(): ValidatorFn {
@@ -284,7 +284,7 @@ public calculateDealsRatio(dealsWon, dealsLost) {
 }
 ```
 
-The cross-field validator can be added to the `formGroup` of the row from [`formGroupCreated`]({environment:angularApiUrl}/classes/IgxGridComponent.html#formGroupCreated) event, which returns the new `formGroup` for each row when entering edit mode:
+クロス フィールド検証は、編集モードに入ったときに各行の新しい `formGroup` を返す [`formGroupCreated`]({environment:angularApiUrl}/classes/IgxGridComponent.html#formGroupCreated) イベントから、その行の `formGroup` に追加することができます。
 
 ```html
 <igx-grid #grid1 [data]="transactionData" [width]="'100%'" [height]="'480px'" [autoGenerate]="false" 
@@ -301,7 +301,7 @@ public formCreateHandler(evt: IGridFormGroupCreatedEventArgs) {
 }
 ```
 
-The different errors are displayed in a templated cell that combines all errors in a single tooltip. Depending on the row valid state different icon is displayed:
+異なるエラーはテンプレート セルに表示され、すべてのエラーは一つのツールチップに結合されます。行の有効状態に応じて、異なるアイコンが表示されます。
 
 ```html
 <igx-column field="row_valid" header=" " [editable]="false" [pinned]="true" [width]="'50px'">
@@ -321,7 +321,7 @@ The different errors are displayed in a templated cell that combines all errors 
 </igx-column>
 ```
 
-The error messages are gathered in the `stateMessage` function, which gathers the errors for each cell, because each column could have templated form validations and then checks the errors for the row itself, which come from the custom `rowValidator`.
+各列にはテンプレート化されたフォーム検証があり、カスタム `rowValidator` によって行ごとのエラーを確認するため、エラー メッセージ は各セルのエラーを収集する `stateMessage` 関数で収集されます。
 
 ```typescript
 public stateMessage(cell: IgxGridCell) {
@@ -347,11 +347,11 @@ public stateMessage(cell: IgxGridCell) {
 
 ```
 
-The below sample demonstrates the cross-field validation in action.
+以下のサンプルは、クロス フィールド検証の動作を示しています。
 
-<code-view style="height:530px" 
+<code-view style="height:560px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-cross-field-validator-service" alt="Angular @@igComponent Cross-field Validation Example">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-cross-field-validator-service" alt="Angular @@igComponent クロス フィールド検証の例">
 </code-view>
 
 
@@ -361,7 +361,7 @@ The below sample demonstrates the cross-field validation in action.
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-  Cross-field validators can be added to the formGroup on the [`formGroupCreated`]({environment:angularApiUrl}/classes/IgxGridComponent.html#formGroupCreated) event. In them multiple fields can be compared for validity.
+  クロス フィールド検証は、[`formGroupCreated`]({environment:angularApiUrl}/classes/IgxGridComponent.html#formGroupCreated) イベントで formGroup に追加できます。その中で複数のフィールドの有効状態を比較できます。
 
   ```ts
   public formCreateCustomerHandler(event: IGridFormGroupCreatedEventArgs) {
@@ -402,7 +402,7 @@ The below sample demonstrates the cross-field validation in action.
     }
   ```
 
-The multi-field errors can then be displayed in a separate pinned column.
+複数フィールド エラーは別の固定列に表示できます。
 
 ```html
 <igx-column field="row_valid" header=" " [editable]="false" [dataType]="'number'" [pinned]="true" [width]="'50px'">
@@ -424,7 +424,7 @@ The multi-field errors can then be displayed in a separate pinned column.
     </igx-column>
 ```
 
-Errors and the detailed messages can be determined based on the row and cell's validity.
+エラーと詳細メッセージは、行とセルの有効性に基づいて決定できます。
 
 ```ts
     public isRowValid(cell: IgxGridCell) {
@@ -455,11 +455,11 @@ Errors and the detailed messages can be determined based on the row and cell's v
     }
 ```
 
-The below sample demonstrates cross-field validation in a Hierarchical Grid for both the root and child data.
+以下のサンプルは、ルート データと子データの両方について、階層グリッドでのクロス フィールド検証を示しています。
 
 <code-view style="height:530px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-cross-field-validation" alt="Angular @@igComponent Cross-field Validation Example">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-cross-field-validation" alt="Angular @@igComponent クロス フィールド検証の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -468,9 +468,9 @@ The below sample demonstrates cross-field validation in a Hierarchical Grid for 
 
 @@if (igxName === 'IgxTreeGrid') {
 
-The below sample demonstrates a cross-field validation between different field of the same record. It checks that a specified City for a person is in the Country currently set and vice versa. Also check if the age for a person was 18 already when it was hired.
+以下のサンプルは、同じレコードの異なるフィールド間のクロスフィールド検証を示しています。ある人に指定された City が現在設定されている Country にあるかどうか、およびその逆を確認します。また、ある人が雇用されたときにその人が 18 歳かどうかも確認します。
 
-The next lines of code show the cross-field validator function, which contains comparisons described above and sets the related errors.
+次のコード行はクロス フィールド検証関数を示しています。この関数は上記の比較を含み、関連するエラーを設定します。
 
 ```ts
 private rowValidator(): ValidatorFn {
@@ -495,7 +495,7 @@ private rowValidator(): ValidatorFn {
 }
 ```
 
-The cross-field validator can be added to the `formGroup` of the row from [`formGroupCreated`]({environment:angularApiUrl}/classes/IgxGridComponent.html#formGroupCreated) event, which returns the new `formGroup` for each row when entering edit mode:
+クロス フィールド検証は、編集モードに入ったときに各行の新しい `formGroup` を返す [`formGroupCreated`]({environment:angularApiUrl}/classes/IgxGridComponent.html#formGroupCreated) イベントから、その行の `formGroup` に追加することができます。
 
 ```html
 <igx-tree-grid igxPreventDocumentScroll #treeGrid [batchEditing]="true" [data]="data" primaryKey="ID"
@@ -512,7 +512,7 @@ public formCreateHandler(evt: IGridFormGroupCreatedEventArgs) {
 }
 ```
 
-The different errors are displayed in a templated cell that combines all errors in a single tooltip. Depending on the row valid state different icon is displayed:
+異なるエラーはテンプレート セルに表示され、すべてのエラーは一つのツールチップに結合されます。行の有効状態に応じて、異なるアイコンが表示されます。
 
 ```html
 <igx-column field="row_valid" header=" " [editable]="false" [dataType]="'number'" [pinned]="true" [width]="'150px'">
@@ -532,7 +532,7 @@ The different errors are displayed in a templated cell that combines all errors 
 </igx-column>
 ```
 
-The error messages are gathered in the `stateMessage` function, which gathers the errors for each cell, because each column could have templated form validations and then checks the errors for the row itself, which come from the custom `rowValidator`.
+各列にはテンプレート化されたフォーム検証があり、カスタム `rowValidator` によって行ごとのエラーを確認するため、エラー メッセージ は各セルのエラーを収集する `stateMessage` 関数で収集されます。
 
 ```typescript
 public stateMessage(cell: IgxGridCell) {
@@ -563,11 +563,11 @@ public stateMessage(cell: IgxGridCell) {
 }
 ```
 
-The below sample demonstrates the cross-field validation in action.
+以下のサンプルは、クロス フィールド検証の動作を示しています。
 
-<code-view style="height:530px" 
+<code-view style="height:570px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-cross-field-validator-service" alt="Angular @@igComponent Cross-field Validation Example">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-cross-field-validator-service" alt="Angular @@igComponent クロス フィールド検証の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -575,14 +575,14 @@ The below sample demonstrates the cross-field validation in action.
 
 ## スタイル設定
 
-Using the [Ignite UI for Angular Theme Library](../themes/index.md), we can alter the default validation styles while editing. 
+[Ignite UI for Angular テーマ ライブラリ](../themes/index.md)を使用して、編集時のデフォルトの検証スタイルを変更できます。 
 
-In the example below, we will make use of the exposed template for validation message, which pops out in a tooltip and overriding the error color to modify the default looks of the validation.
-We will also style the background of the invalid rows to make them more distinct.
+以下の例では、検証メッセージの公開されたテンプレートを使用します。ツールチップをポップアウトし、および、検証のデフォルトの外観を変更するためにエラー時の色をオーバーライドします。
+また、無効な行をより明確にするために背景のスタイルを設定します。
 
 ### テーマのインポート
 
-The easiest way to style and access css variables is to define styles in our `app`'s global style file (typically `styles.scss`).
+スタイルを設定し、css 変数にアクセスする最も簡単な方法は、`app` のグローバル スタイル ファイル (通常 は `styles.scss` です) でスタイルを定義することです。
 はじめに `themes/index` ファイルをインポートすることにより、Ignite UI for Angular Sass フレームワークの強力なツールへアクセスできるようになります。
 
 ```scss
@@ -592,14 +592,14 @@ The easiest way to style and access css variables is to define styles in our `ap
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-### Include the styles
-In order to change the error color you can use the css variable `--igx-error-500`:
+### スタイルを含める
+エラーの色を変更するには、css 変数 `--igx-error-500` を使用します。
 ```scss
 --igx-error-500: 34, 80%, 63%;
 ```
 
 ### カスタム テンプレート
-Changing the default error template allows setting custom classes and styles:
+デフォルトのエラー テンプレートを変更することで、カスタム クラスとスタイルを設定できます。
 ```html
 <ng-template igxCellValidationError let-cell='cell' let-defaultErr='defaultErrorTemplate'>
     <div class="validator-container">
@@ -609,8 +609,8 @@ Changing the default error template allows setting custom classes and styles:
 </ng-template>
 ```
 
-### Invalid row and cell styles
-Rows and cells provide API for the developers to know if a row or cell is invalid and what kind of errors are active.
+### 無効な行とセルのスタイル
+行とセルは、開発者が行またはセルが無効かどうか、およびアクティブなエラーの種類を知るための API を提供します。
 @@if (igxName === 'IgxGrid'){
 ```ts
 public rowStyles = {
@@ -691,7 +691,7 @@ public cellStyles = {
 
 @@if (igxName === 'IgxHierarchicalGrid'){
 
-<code-view style="height:560px" 
+<code-view style="height:630px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-validation-style" >
 </code-view>
@@ -703,7 +703,7 @@ public cellStyles = {
 
 <code-view style="height:560px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-grid-validation-style" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-validation-style" >
 </code-view>
 
 }
@@ -715,13 +715,12 @@ public cellStyles = {
 
 * [IgxBaseTransactionService]({environment:angularApiUrl}/classes/igxbasetransactionservice.html)
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxColumnComponent](({environment:angularApiUrl}/classes/igxcolumncomponent.html))
-* [ValidatorsDirective](({environment:angularApiUrl}/classes/validatorsdirective.html))
+* [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 
 
 ## その他のリソース
 
-* [Build CRUD operations with igxGrid](../general/how-to/how-to-perform-crud.md)
+* [igxGrid で CRUD 操作を構築する](../general/how-to/how-to-perform-crud.md)
 * [@@igComponent 概要](@@igMainTopic.md)
 * [@@igComponent 編集](editing.md)
 * [@@igComponent 行編集](row-editing.md)

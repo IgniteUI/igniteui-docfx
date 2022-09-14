@@ -144,7 +144,7 @@
           href: grid/batch-editing.md
           updated: true
           new: false
-        - name: Validation
+        - name: 検証
           href: grid/validation.md
           new: true
     - name: 行ドラッグ
@@ -296,7 +296,7 @@
           href: treegrid/batch-editing.md
           updated: true
           new: false
-        - name: Validation
+        - name: 検証
           href: treegrid/validation.md
           new: true
     - name: 行ドラッグ
@@ -434,7 +434,7 @@
           href: hierarchicalgrid/batch-editing.md
           updated: true
           new: false
-        - name: Validation
+        - name: 検証
           href: hierarchicalgrid/validation.md
           new: true
     - name: Excel へエクスポート
