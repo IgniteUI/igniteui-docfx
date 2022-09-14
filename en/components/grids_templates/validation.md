@@ -27,7 +27,7 @@ To validate that a column input would be set and the value is going to be format
 
 The following sample demonstrates how to use the prebuilt `required`, `email` and `min` validator directives in a @@igComponent.
 @@if (igxName === 'IgxGrid') {
-<code-view style="height:530px" 
+<code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/grid/grid-validator-service" alt="Angular @@igComponent Validation Basic Example">
 </code-view>
@@ -202,7 +202,7 @@ public cellEdit(evt) {
 The below example demonstrates the above-mentioned customization options.
 
 @@if (igxName === 'IgxGrid') {
-<code-view style="height:530px" 
+<code-view style="height:570px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/grid/grid-validator-service-extended" alt="Angular @@igComponent Custom Validation Example">
 </code-view>
@@ -210,7 +210,7 @@ The below example demonstrates the above-mentioned customization options.
 <div class="divider--half"></div>
 }
 @@if (igxName === 'IgxTreeGrid') {
-<code-view style="height:530px" 
+<code-view style="height:570px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-validator-service-extended" alt="Angular @@igComponent Custom Validation Example">
 </code-view>
@@ -218,7 +218,7 @@ The below example demonstrates the above-mentioned customization options.
 <div class="divider--half"></div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<code-view style="height:610px" 
+<code-view style="height:640px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-validator-service-extended" alt="Angular @@igComponent Custom Validation Example">
 </code-view>
@@ -348,7 +348,7 @@ public stateMessage(cell: IgxGridCell) {
 
 The below sample demonstrates the cross-field validation in action.
 
-<code-view style="height:530px" 
+<code-view style="height:560px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/grid/grid-cross-field-validator-service" alt="Angular @@igComponent Cross-field Validation Example">
 </code-view>
@@ -564,7 +564,7 @@ public stateMessage(cell: IgxGridCell) {
 
 The below sample demonstrates the cross-field validation in action.
 
-<code-view style="height:530px" 
+<code-view style="height:570px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-cross-field-validator-service" alt="Angular @@igComponent Cross-field Validation Example">
 </code-view>
@@ -690,7 +690,7 @@ public cellStyles = {
 
 @@if (igxName === 'IgxHierarchicalGrid'){
 
-<code-view style="height:560px" 
+<code-view style="height:630px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-validation-style" >
 </code-view>
@@ -702,7 +702,7 @@ public cellStyles = {
 
 <code-view style="height:560px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-grid-validation-style" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-validation-style" >
 </code-view>
 
 }
@@ -714,8 +714,7 @@ public cellStyles = {
 
 * [IgxBaseTransactionService]({environment:angularApiUrl}/classes/igxbasetransactionservice.html)
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxColumnComponent](({environment:angularApiUrl}/classes/igxcolumncomponent.html))
-* [ValidatorsDirective](({environment:angularApiUrl}/classes/validatorsdirective.html))
+* [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 
 
 ## Additional Resources

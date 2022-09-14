@@ -13,8 +13,8 @@ _language: kr
 ### List Demo
 
 
-<code-view style="height: 477px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 477px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/list-sample-4" >
 </code-view>
 
@@ -68,8 +68,8 @@ And our style for the empty template:
 If all went great, this is how our empty list should look like:
 
 
-<code-view style="height: 100px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 100px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/list-sample-5" >
 </code-view>
 
@@ -97,8 +97,8 @@ Sometimes there may be a delay in your data loading. In this case you can set th
 ```
 
 
-<code-view style="height: 300px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 300px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/list-sample-6" >
 </code-view>
 
@@ -121,8 +121,8 @@ It's nice having a template for when the list is empty, but now let's add some i
 If all went well, you should see the following in your browser:
 
 
-<code-view style="height: 200px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 200px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/list-sample-2" >
 </code-view>
 
@@ -189,8 +189,8 @@ You may have noticed that despite the fact that we used span elements to display
 After all that our list should now look like that:
 
 
-<code-view style="height: 400px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 400px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/list-sample-3" >
 </code-view>
 
@@ -366,8 +366,8 @@ public selectDensity(event) {
 And here's the result of all that work:
 
 
-<code-view style="height: 477px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 477px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/list-sample-4" >
 </code-view>
 
@@ -512,8 +512,8 @@ public leftPanPerformed(args) {
 Now try panning the list items for yourself:
 
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/list-sample-7" >
 </code-view>
 
@@ -581,6 +581,50 @@ Finally, we need to apply the filtering pipe to our contacts data before we can 
 ```
 
 <div class="divider"></div>
+
+## List Item Selection
+
+As you probably have already noticed, list items do not provide selection states. However, if your application requires your list to keep track of which item is selected, we give you an example of how this can be achieved. All you need to do is keep track of the state somewhere in your component, or in the data the list is bound to.
+
+Here's an example, in which we apply a background color to the list according to the theme's secondary 500 color, based on state tracking coming from the data the list is bound to:
+
+<code-view style="height: 420px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/lists/list-item-selection" >
+</code-view>
+
+What we are doing is we are adding an additional `selected` property to each data member, which defaults to `false`. Upon list item click, we're resetting all the `selected` properties in the data collection and setting the one corresponding to the clicked item to `true`. Based on the selected property, we're applying a css class to the list item which gives it the selected background.
+
+```html
+<igx-list>
+    <igx-list-item isHeader="true">Contacts</igx-list-item>
+    <igx-list-item [ngClass]="contact.selected ? 'selected' : ''"
+                    (click)="selectItem(contact)"
+                    *ngFor="let contact of contacts | igxFilter: filterContacts;">
+        <igx-avatar igxListThumbnail [src]="contact.photo" roundShape="true"></igx-avatar>
+        <span igxListLineTitle>{{ contact.name }}</span>
+        <span igxListLineSubTitle>{{ contact.phone }}</span>
+        <igx-icon igxListAction [style.color]="contact.isFavorite ? 'orange' : 'lightgray'" (click)="toggleFavorite(contact, $event)">star</igx-icon>
+    </igx-list-item>
+</igx-list>
+```
+
+```typescript
+public selectItem(item) {
+    if (!item.selected) {
+        this.contacts.forEach(c => c.selected = false);
+        item.selected = true;
+    }
+}
+```
+
+```scss
+.selected {
+    background-color: hsla(var(--igx-secondary-500))
+}
+```
+
+<div class="divider--half"></div>
 
 ### API References
 
