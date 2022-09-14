@@ -2,7 +2,7 @@
 title: Angular 軸オプション | データ可視化 | インフラジスティックス
 _description: インフラジスティックスの Angular 軸オプション
 _keywords: Angular Axis, Options, Title, Labels, Gap, Overlap, Range, Scale, Mode, Infragistics, Angular 軸, オプション, タイトル, ラベル, 間隔, 重複, 範囲, スケール, モード, インフラジスティックス
-mentionedTypes: ["CategoryChart", "FinancialChart", "FinancialChartYAxisMode", "FinancialChartXAxisMode", "NumericYAxis", "CategoryXAxis"]
+mentionedTypes: ["DomainChart", "CategoryChart", "FinancialChart", "FinancialChartYAxisMode", "FinancialChartXAxisMode", "NumericYAxis", "CategoryXAxis"]
 namespace: Infragistics.Controls.Charts
 _language: ja
 ---

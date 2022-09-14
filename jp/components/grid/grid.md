@@ -763,6 +763,22 @@ Grid のキーボード ナビゲーションは、さまざまなキーボー�
 
 [グリッドのサイズ変更](sizing.md) トピックをご覧ください。
 
+## パフォーマンス (試験中)
+
+`IgxGridComponent` のデザインでは、Angular で導入されたイベント結合機能を利用できます。この機能は、インタラクションとレスポンシブの点で **`20%`** のパフォーマンスを向上します。この機能は、`bootstrapModule` メソッドで `ngZoneEventCoalescing` と `ngZoneRunCoalescing` プロパティを `true` に設定するだけでアプリケーション レベルで有効にできます。
+
+```typescript
+platformBrowserDynamic()
+  .bootstrapModule(AppModule, { ngZoneEventCoalescing: true, ngZoneRunCoalescing: true })
+  .catch(err => console.error(err));
+```
+
+>[!NOTE]
+> これは `IgxGridComponent` の試験中の機能です。これは、グリッドで予期しない動作が発生する可能性があることを意味します。このような動作が発生した場合は、[Github](https://github.com/IgniteUI/igniteui-angular/discussions) ページでお問い合わせください。
+
+>[!NOTE]
+> 有効にすると、`IgxGridComponent` に関連しない Angular アプリケーションの他の部分に影響します。
+
 ## 既知の制限
 
 |制限|説明|

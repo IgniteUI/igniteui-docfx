@@ -305,7 +305,7 @@ $custom-theme: grid-theme(
   $resize-line-color: #ffcd0f,
   $row-highlight: #ffcd0f
 );
-```   
+```
 
 ### カスタム カラー パレットの定義
 上記で説明したアプローチでは、色の値がハード コーディングされていました。または、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) および [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用して、柔軟性を高めることができます。   
@@ -314,13 +314,13 @@ $custom-theme: grid-theme(
  ```scss
 $black-color: #494949;
 $yellow-color: #FFCD0F;
- 
+
 $custom-palette: palette(
   $primary: $black-color,
   $secondary: $yellow-color
 );
 ```
-カスタム パレットが生成された後、`igx-color` 関数を使用して、さまざまな種類の原色と二次色を取得できます。   
+カスタム パレットが生成された後、`igx-color` 関数を使用して、さまざまな種類の原色と二次色を取得できます。
 ```scss
 $custom-theme: grid-theme(
     $cell-active-border-color: (igx-color($custom-palette, "secondary", 500)),
@@ -334,7 +334,7 @@ $custom-theme: grid-theme(
     $resize-line-color: (igx-color($custom-palette, "secondary", 500)),
     $row-highlight: (igx-color($custom-palette, "secondary", 500))
 );
-```   
+```
 
 ### カスタム スキーマの定義
 さらに進んで、[**スキーマ**](../themes/sass/schemas.md) のすべての利点を備えた柔軟な構造を構築できます。**スキーマ**はテーマを作成させるための方法です。   
@@ -363,7 +363,7 @@ $custom-theme: grid-theme(
     $palette: $custom-palette,
     $schema: $my-custom-schema
 );
-```   
+```
 
 ### カスタム テーマの適用
 テーマを適用する最も簡単な方法は、グローバル スタイル ファイルに `sass` `@include` ステートメントを使用することです。 
@@ -389,18 +389,32 @@ $custom-theme: grid-theme(
         @include grid($custom-theme);
     }
 }
-```   
+```
 
 ### デモ
 
-<code-view style="height:505px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:505px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-styling" >
 </code-view>
 
 >[!NOTE]
 >このサンプルは、「テーマの変更」から選択したグローバル テーマに影響を受けません。
 
+## パフォーマンス (試験中)
+
+`igxHierarchicalGrid` のデザインでは、Angular で導入されたイベント結合機能を利用できます。この機能は、インタラクションとレスポンシブの点で **`20%`** のパフォーマンスを向上します。この機能は、`bootstrapModule` メソッドで `ngZoneEventCoalescing` と `ngZoneRunCoalescing` プロパティを `true` に設定するだけでアプリケーション レベルで有効にできます。
+
+```typescript
+platformBrowserDynamic()
+  .bootstrapModule(AppModule, { ngZoneEventCoalescing: true, ngZoneRunCoalescing: true })
+  .catch(err => console.error(err));
+```
+
+>[!NOTE]> これは `igxHierarchicalGrid` の試験中の機能です。これは、階層グリッドで予期しない動作が発生する可能性があることを意味します。このような動作が発生した場合は、[Github](https://github.com/IgniteUI/igniteui-angular/discussions) ページでお問い合わせください。
+
+>[!NOTE]
+> 有効にすると、`igxHierarchicalGrid` に関連しない Angular アプリケーションの他の部分に影響します。
 
 ## 既知の問題と制限
 

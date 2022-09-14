@@ -93,7 +93,7 @@ Use **::ng-deep** or **`ViewEncapsulation.None`** to force the custom styles dow
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:530px"
+<code-view style="height:620px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-rowClasses-sample" >
 </code-view>

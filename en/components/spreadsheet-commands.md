@@ -60,3 +60,8 @@ public zoomOut(): void {
     this.spreadsheet.executeAction(SpreadsheetAction.ZoomOut);
 }
 ```
+
+## API Members
+
+-   `ExecuteAction`
+-   `SpreadsheetAction`
