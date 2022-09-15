@@ -2,7 +2,7 @@
 ---
 title: Angular Data Grid の条件付きセルのスタイル設定 - Ignite UI for Angular
 _description: ユーザーが異なるセルをすばやく識別できるようにします。さまざまなセルのスタイル設定を定義します。Angular Data Grid の条件付きセル スタイル設定を使用してセルを目立たせます。
-_keywords: conditional styling, ignite ui for angular, infragistics
+_keywords: 条件付きのスタイル設定, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
 }
@@ -10,7 +10,8 @@ _language: ja
 ---
 title: Angular Tree Grid の条件付きセルのスタイル設定 - Ignite UI for Angular
 _description: ユーザーが異なるセルをすばやく識別できるようにします。さまざまなセルのスタイル設定を定義します。Angular Data Grid の条件付きセル スタイル設定を使用してセルを目立たせます。
-_keywords: conditional styling, ignite ui for angular, infragistics
+_keywords: 条件付きのスタイル設定, ignite ui for angular, インフラジスティックス
+_canonicalLink: grid/conditional-cell-styling
 _language: ja
 ---
 }
@@ -18,7 +19,8 @@ _language: ja
 ---
 title: Angular Hierarchical Grid の条件付きセルのスタイル設定 - Ignite UI for Angular 
 _description: ユーザーが異なるセルをすばやく識別できるようにします。さまざまなセルのスタイル設定を定義します。Angular Data Grid の条件付きセル スタイル設定を使用してセルを目立たせます。
-_keywords: conditional styling, ignite ui for angular, infragistics
+_keywords: 条件付きのスタイル設定, ignite ui for angular, インフラジスティックス
+_canonicalLink: grid/conditional-cell-styling
 _language: ja
 ---
 }
@@ -94,7 +96,7 @@ public activeRowCondition = (row: RowType) => this.grid?.navigation.activeNode?.
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:530px"
+<code-view style="height:620px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-rowClasses-sample" >
 </code-view>
@@ -560,7 +562,7 @@ editDone(evt) {
 * [フィルタリング](filtering.md)
 * [ソート](sorting.md)
 * [集計](summaries.md)
-* [列移動](column-moving.md)
+* [列の移動](column-moving.md)
 * [列のピン固定](column-pinning.md)
 * [列のサイズ変更](column-resizing.md)
 * [列の非表示](column-hiding.md)

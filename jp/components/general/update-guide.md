@@ -84,11 +84,11 @@ ng update @angular/cli
 - `IgxDialog`
     - **重大な変更** - デフォルトの positionSettingsopenclose アニメーションが `fadeIn`/`fadeOut` に変更されました。
 - `igxGrid`、`igxHierarchicalGrid`、`igxTreeGrid`
-    - **重大な変更** - 次の非推奨の入力が削除されました - `showToolbar`、`toolbarTitle`、`columnHiding`、 `columnHidingTitle`、`hiddenColumnsText`、`columnPinning`、`columnPinningTitle`、`pinnedColumnsText`。代わりに、`IgxGridToolbarComponent`、`IgxGridToolbarHidingComponent`、`IgxGridToolbarPinningComponent` を使用してください。
+    - **重大な変更** - 次の非推奨の入力が削除されました - `showToolbar`、`toolbarTitle`、`columnHiding`、`columnHidingTitle`、`hiddenColumnsText`、`columnPinning`、`columnPinningTitle`、`pinnedColumnsText`。代わりに、`IgxGridToolbarComponent`、`IgxGridToolbarHidingComponent`、`IgxGridToolbarPinningComponent` を使用してください。
     - **重大な変更** - `igx-toolbar` コンポーネントを追加したら、有効にする機能を手動で指定する必要があります - 列の非表示、ピン固定、Excel のエクスポート。高度なフィルタリングは、グリッドの `allowAdvancedFiltering` 入力プロパティを介して有効にすることができますが、他の機能と同様に、マークアップを使用して宣言的に有効にすることをお勧めします。
     - **重大な変更** - `rowSelected` イベントは、その機能をより適切に反映するために、`rowSelectionChanging` に名前が変更されました。
     - **重大な変更** - `columnSelected` イベントは、その機能をより適切に反映するために、`columnSelectionChanging` に名前が変更されました。
-    - **重大な変更** - `columnsCollection` が削除されました。代わりに `columns` を使用してください。特定の場合に `columns` が空の配列を返す場合は、`ViewChildren`を使用して列にクエリを実行し、 `ngAfterViewInit` の列にアクセスします。
+    - **重大な変更** - `columnsCollection` が削除されました。代わりに `columns` を使用してください。特定の場合に `columns` が空の配列を返す場合は、`ViewChildren`を使用して列にクエリを実行し、`ngAfterViewInit` の列にアクセスします。
         ```typescript
         @ViewChildren(IgxColumnComponent, { read: IgxColumnComponent })
         public columns: QueryList<IgxColumnComponent>;
