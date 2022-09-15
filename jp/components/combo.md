@@ -141,7 +141,7 @@ export class MyCombo {
 }
 ```
 
-選択 API を使用すると、コントロールのユーザー操作なしで、コンボボックスの選択された項目を変更できます - ボタン クリックを介して、Observable 変更への応答としてなどです。 たとえば、[select()]({environment:angularApiUrl}/classes/igxcombocomponent.html#select) メソッドを使用して複数の都市を選択するボタンを実装できます。
+選択 API を使用すると、コントロールのユーザー操作なしで、コンボボックスの選択された項目を変更できます - ボタン クリックを介して、Observable 変更への応答としてなどです。たとえば、[select()]({environment:angularApiUrl}/classes/igxcombocomponent.html#select) メソッドを使用して複数の都市を選択するボタンを実装できます。
 
 ```html
 <igx-combo [data]="cities" displayKey="name" valueKey="id"></igx-combo>

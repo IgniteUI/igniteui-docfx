@@ -346,7 +346,7 @@ this.state.setState(state, ['filtering', 'rowIslands']);
 
 @@if (igxName === 'IgxPivotGrid') {
 ## ピボット ストラテジの復元
-[`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) は、デフォルトで は ([`制限`](state-persistence.md#制限)を参照) リモート ピボット操作もカスタム ディメンション ストラテジも保持しません (詳細については、[Pivot Grid リモート操作](pivot-grid-custom.md)のサンプルを参照してください)。これらの復元は、アプリケーション レベルのコードで実現できます。`IgxGridState` は、 [`stateParsed`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#stateParsed) と呼ばれるイベントを公開します。このイベントはグリッド状態が適用される前に追加で変更するために使用できます。以下はその方法です。
+[`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) は、デフォルトで は ([`制限`](state-persistence.md#制限)を参照) リモート ピボット操作もカスタム ディメンション ストラテジも保持しません (詳細については、[Pivot Grid リモート操作](pivot-grid-custom.md)のサンプルを参照してください)。これらの復元は、アプリケーション レベルのコードで実現できます。`IgxGridState` は、[`stateParsed`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#stateParsed) と呼ばれるイベントを公開します。このイベントはグリッド状態が適用される前に追加で変更するために使用できます。以下はその方法です。
 
 > [`stateParsed`]({environment:angularApiUrl}/classes/igxgridstatedirective) は、文字列引数で [`setState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#setstate) を使用している場合にのみ発行します。
 
