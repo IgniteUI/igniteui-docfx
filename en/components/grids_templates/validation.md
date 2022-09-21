@@ -548,7 +548,7 @@ public stateMessage(cell: IgxGridCell) {
 
 The below sample demonstrates the cross-field validation in action.
 
-<code-view style="height:560px" 
+<code-view style="height:620px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/grid/grid-cross-field-validator-service" alt="Angular @@igComponent Cross-field Validation Example">
 </code-view>
@@ -558,7 +558,7 @@ The below sample demonstrates the cross-field validation in action.
 
 The below sample demonstrates cross-field validation in a Hierarchical Grid for both the root and child data.
 
-<code-view style="height:530px" 
+<code-view style="height:620px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-cross-field-validation" alt="Angular @@igComponent Cross-field Validation Example">
 </code-view>
@@ -567,7 +567,7 @@ The below sample demonstrates cross-field validation in a Hierarchical Grid for 
 @@if (igxName === 'IgxTreeGrid') {
 The below sample demonstrates the cross-field validation in action.
 
-<code-view style="height:570px" 
+<code-view style="height:620px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-cross-field-validator-service" alt="Angular @@igComponent Cross-field Validation Example">
 </code-view>
