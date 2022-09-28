@@ -124,6 +124,14 @@ Ignite UI for Angular は、`type="file"` の入力スタイルも提供し、�
 <igx-input-group theme="fluent">...</igx-input-group>
 ```
 
+### 型指定されたフォーム
+Ignite UI for Angular Input Group コンポーネントは、Angular 14 のデフォルトの厳密に型指定されたリアクティブ フォーム内で使用できます。型指定されたフォームの詳細については、[Angular 公式ドキュメント](https://angular.io/guide/typed-forms)をご覧ください。
+
+<code-view style="height:770px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/data-entries/typed-form" >
+</code-view>
+
 ## スタイル設定
 
 入力グループのスタイル設定を開始するには、`index` ファイルをスタイルファイルに含めます。

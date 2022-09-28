@@ -27,7 +27,7 @@ Angular ピボット グリッド コンポーネントは、ピボット テー
 
 ## Angular ピボット グリッドの使用を開始
 
-Angular ピボット グリッド コンポーネントは、[`pivotConfiguration`](({environment:angularApiUrl}/classes/igxgridcomponent.html#pivotConfiguration)) プロパティを介して構成できます。
+Angular ピボット グリッド コンポーネントは、[`pivotConfiguration`](({environment:angularApiUrl}/classes/igxpivotgridcomponent.html#pivotConfiguration)) プロパティを介して構成できます。
 
 ```html
 <igx-pivot-grid #grid1 [data]="data" [pivotConfiguration]="pivotConfigHierarchy">
@@ -194,7 +194,7 @@ public static totalMax: PivotAggregation = (members, data: any) => {
     };
 ```
 
-この構成では、各ディメンション グループの値を合計する 1 行、 1 列、および 1 つの集計が定義されます。メンバーは、提供されたデータ ソースで使用可能なフィールドと一致します。
+この構成では、各ディメンション グループの値を合計する 1 行、1 列、および 1 つの集計が定義されます。メンバーは、提供されたデータ ソースで使用可能なフィールドと一致します。
 
 ```typescript
 public data = [

@@ -144,6 +144,9 @@
           href: grid/batch-editing.md
           updated: true
           new: false
+        - name: 検証
+          href: grid/validation.md
+          new: true
     - name: 行ドラッグ
       href: grid/row-drag.md
       updated: true
@@ -186,6 +189,7 @@
       updated: false
     - name: 列のサイズ変更
       href: grid/column-resizing.md
+      updated: true
       new: false
     - name: 列の非表示
       href: grid/column-hiding.md
@@ -292,6 +296,9 @@
           href: treegrid/batch-editing.md
           updated: true
           new: false
+        - name: 検証
+          href: treegrid/validation.md
+          new: true
     - name: 行ドラッグ
       href: treegrid/row-drag.md
       new: false
@@ -330,6 +337,7 @@
       updated: false
     - name: 列のサイズ変更
       href: treegrid/column-resizing.md
+      updated: true
       new: false
     - name: 列の非表示
       href: treegrid/column-hiding.md
@@ -426,6 +434,9 @@
           href: hierarchicalgrid/batch-editing.md
           updated: true
           new: false
+        - name: 検証
+          href: hierarchicalgrid/validation.md
+          new: true
     - name: Excel へエクスポート
       href: hierarchicalgrid/export-excel.md
       new: false
@@ -467,6 +478,7 @@
       new: false
     - name: 列のサイズ変更
       href: hierarchicalgrid/column-resizing.md
+      updated: true
       new: false
     - name: 列の非表示
       href: hierarchicalgrid/column-hiding.md
@@ -528,6 +540,9 @@
       new: true
     - name: ピボット グリッドのリモート処理とカスタマイズ
       href: pivotgrid/pivot-grid-custom.md
+      new: true
+    - name: 状態保持
+      href: pivotGrid/state-persistence.md
       new: true
 - name: Tree
   href: tree.md
@@ -919,6 +934,9 @@
 - name: Radio & Radio Group
   href: radio-button.md
   new: false
+- name: Rating
+  href: rating.md
+  new: true
 - name: Label & Input
   href: label-input.md
 - name: Input Group
