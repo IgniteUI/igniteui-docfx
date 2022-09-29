@@ -8,7 +8,7 @@ _language: ja
 
 # Angular コマンドの使用
 
-Angular Spreadsheet コンポーネントは、スプレッドシートのさまざまな機能をアクティブにするためのコマンドを実行できます。このトピックでは、コマンドによりコントロールを使用してさまざまな操作を実行する方法を説明します。多くのコマンドは、アクティブセル、行、またはワークシートに基づいてアクションを実行します。例えば、ZoomIn と ZoomOut の 2 つのコマンドです。完全なリストは SpreadsheetAction 列挙体を見てください。
+Angular Spreadsheet コンポーネントは、スプレッドシートのさまざまな機能をアクティブにするためのコマンドを実行できます。このトピックでは、コマンドによりコントロールを使用してさまざまな操作を実行する方法を説明します。多くのコマンドは、アクティブセル、行、またはワークシートに基づいてアクションを実行します。例えば、ZoomIn と ZoomOut の 2 つのコマンドです。完全なリストは SpreadsheetAction 列挙型を見てください。
 
 ## Angular コマンドの使用の例
 
@@ -61,3 +61,8 @@ public zoomOut(): void {
     this.spreadsheet.executeAction(SpreadsheetAction.ZoomOut);
 }
 ```
+
+## API メンバー
+
+-   `ExecuteAction`
+-   `SpreadsheetAction`

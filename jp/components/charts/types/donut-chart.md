@@ -13,7 +13,7 @@ The Ignite UI for Angular ドーナツ チャートは[円チャート](pie-char
 
 ## Angular ドーナツ チャートの例
 
-[`IgxDoughnutChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdoughnutchartcomponent.html) コントロールでこのチャート タイプを作成するには、以下の例のように、データをバインドします。
+[`IgxDoughnutChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdoughnutchartcomponent.html) コントロールでドーナツ チャートを作成するには、以下の例のように、データをバインドします。
 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"

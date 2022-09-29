@@ -2,7 +2,7 @@
 title: Angular バブル チャート | データ可視化 | インフラジスティックス
 _description: インフラジスティックス の Angular バブル チャート
 _keywords: Angular Charts, Bubble Chart, Infragistics, Angular チャート, バブル チャート, インフラジスティックス
-mentionedTypes: ["Series", "BubbleSeries", "ScatterSeries"]
+mentionedTypes: ["Series", "BubbleSeries", "ScatterSeries", 'Series']
 namespace: Infragistics.Controls.Charts
 _language: ja
 ---
@@ -13,7 +13,7 @@ Ignite UI for Angular バブル チャートは[散布図](scatter-chart.md)の�
 
 ## Angular バブル チャートの例
 
-次の例に示すように、[`IgxBubbleSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbubbleseriescomponent.html) と 2 つの数値軸を使用して、[`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) コントロールでバブル チャートを作成できます。
+次の例に示すように、[`IgxBubbleSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbubbleseriescomponent.html) と 2 つの数値軸を使用して、[`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) コントロールで Ignite UI for Angular バブル チャートを作成できます。
 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
@@ -61,7 +61,7 @@ Ignite UI for Angular バブル チャートは[散布図](scatter-chart.md)の�
 
 ## 複数シリーズの Angular バブル チャート
 
-Angular バブル チャートでは、次の例に示すように、複数のデータ ソースのバインドは、新しい各データ ソースを追加の  [`IgxBubbleSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbubbleseriescomponent.html) の `ItemsSource` プロパティに設定することで機能します。
+Angular バブル チャートでは、次の例に示すように、複数のデータ ソースのバインドは、新しい各データ ソースを追加の [`IgxBubbleSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbubbleseriescomponent.html) の `ItemsSource` プロパティに設定することで機能します。
 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"

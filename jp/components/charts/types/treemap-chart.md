@@ -13,7 +13,7 @@ Ignite UI for Angular ツリーマップ チャートは、ネストされた一
 
 ## Angular ツリーマップの例
 
-次の例では、ツリーマップは世界の最大総面積の上位 30 の国を示しています。
+次の例では、[`IgxTreemapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtreemapcomponent.html) は世界の最大総面積の上位 30 の国を示しています。
 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"

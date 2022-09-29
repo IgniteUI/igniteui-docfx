@@ -26,7 +26,7 @@ The following is an Angular Pivot Grid example in combination with the Angular P
 
 ## Getting started with Angular Pivot Grid
 
-The Angular Pivot Grid Component can be configured via the [`pivotConfiguration`](({environment:angularApiUrl}/classes/igxgridcomponent.html#pivotConfiguration)) property.
+The Angular Pivot Grid Component can be configured via the [`pivotConfiguration`]({environment:angularApiUrl}/classes/igxpivotgridcomponent.html#pivotConfiguration) property.
 
 ```html
 <igx-pivot-grid #grid1 [data]="data" [pivotConfiguration]="pivotConfigHierarchy">

@@ -251,3 +251,7 @@ Angular チャートは、数百万のデータ ポイントを描画し、そ�
 </html>
 
 <div class="divider--half"></div>
+
+## API メンバー
+
+-   [`IgxDataGridComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatagridcomponent.html)

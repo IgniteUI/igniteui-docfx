@@ -144,6 +144,9 @@
           href: grid/batch-editing.md
           updated: true
           new: false
+        - name: 検証
+          href: grid/validation.md
+          new: true
     - name: 行ドラッグ
       href: grid/row-drag.md
       updated: true
@@ -186,6 +189,7 @@
       updated: false
     - name: 列のサイズ変更
       href: grid/column-resizing.md
+      updated: true
       new: false
     - name: 列の非表示
       href: grid/column-hiding.md
@@ -292,6 +296,9 @@
           href: treegrid/batch-editing.md
           updated: true
           new: false
+        - name: 検証
+          href: treegrid/validation.md
+          new: true
     - name: 行ドラッグ
       href: treegrid/row-drag.md
       new: false
@@ -330,6 +337,7 @@
       updated: false
     - name: 列のサイズ変更
       href: treegrid/column-resizing.md
+      updated: true
       new: false
     - name: 列の非表示
       href: treegrid/column-hiding.md
@@ -426,6 +434,9 @@
           href: hierarchicalgrid/batch-editing.md
           updated: true
           new: false
+        - name: 検証
+          href: hierarchicalgrid/validation.md
+          new: true
     - name: Excel へエクスポート
       href: hierarchicalgrid/export-excel.md
       new: false
@@ -467,6 +478,7 @@
       new: false
     - name: 列のサイズ変更
       href: hierarchicalgrid/column-resizing.md
+      updated: true
       new: false
     - name: 列の非表示
       href: hierarchicalgrid/column-hiding.md
@@ -528,6 +540,9 @@
       new: true
     - name: ピボット グリッドのリモート処理とカスタマイズ
       href: pivotgrid/pivot-grid-custom.md
+      new: true
+    - name: 状態保持
+      href: pivotGrid/state-persistence.md
       new: true
 - name: Tree
   href: tree.md
@@ -698,6 +713,30 @@
       new: false
 - name: マップ
   header: true
+- name: 地理エリア マップ
+  href: geo-map-type-scatter-area-series.md
+  new: false
+- name: 地理等高線マップ
+  href: geo-map-type-scatter-contour-series.md
+  new: false
+- name: 地理高密度マップ
+  href: geo-map-type-scatter-density-series.md
+  new: false
+- name: 地理バブル マップ
+  href: geo-map-type-scatter-bubble-series.md
+  new: false
+- name: 地理記号マップ
+  href: geo-map-type-scatter-symbol-series.md
+  new: false
+- name: 地理ポリゴン マップ
+  href: geo-map-type-shape-polygon-series.md
+  new: false
+- name: 地理ポリライン マップ
+  href: geo-map-type-shape-polyline-series.md
+  new: false
+- name: 地理マップ API
+  href: maps/map-api.md
+  new: false
 - name: マップ
   href: geo-map.md
   new: false
@@ -735,27 +774,6 @@
       new: false
     - name: マップコンテンツのナビゲーション
       href: geo-map-navigation.md
-      new: false
-    - name: 散布エリアシリーズ
-      href: geo-map-type-scatter-area-series.md
-      new: false
-    - name: 散布等高線シリーズ
-      href: geo-map-type-scatter-contour-series.md
-      new: false
-    - name: 散布密度シリーズ
-      href: geo-map-type-scatter-density-series.md
-      new: false
-    - name: 散布図比例シリーズ
-      href: geo-map-type-scatter-bubble-series.md
-      new: false
-    - name: 散布図記号シリーズ
-      href: geo-map-type-scatter-symbol-series.md
-      new: false
-    - name: シェイプ ポリゴンシ リーズ
-      href: geo-map-type-shape-polygon-series.md
-      new: false
-    - name: シェイプ ポリライン シリーズ
-      href: geo-map-type-shape-polyline-series.md
       new: false
     - name: シェープ ファイルの参照
       href: geo-map-shape-files-reference.md
@@ -919,6 +937,9 @@
 - name: Radio & Radio Group
   href: radio-button.md
   new: false
+- name: Rating
+  href: rating.md
+  new: true
 - name: Label & Input
   href: label-input.md
 - name: Input Group

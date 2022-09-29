@@ -2,7 +2,7 @@
 title: Angular シェープ チャート | データ可視化 | インフラジスティックス
 _description: インフラジスティックスの Angular シェープ チャート
 _keywords: Angular Charts, Shape Chart, Infragistics, Angular チャート, シェープ チャート, インフラジスティックス
-mentionedTypes: ["XamDataChart", "ScatterPolygonSeries", "ScatterPolylineSeries"]
+mentionedTypes: ["XamDataChart", "ScatterPolygonSeries", "ScatterPolylineSeries", 'Series']
 namespace: Infragistics.Controls.Charts
 _language: ja
 ---

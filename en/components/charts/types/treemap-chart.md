@@ -12,7 +12,7 @@ The Ignite UI for Angular Treemap chart displays hierarchical (tree-structured) 
 
 ## Angular Treemap Example
 
-In the following example, the treemap demonstrates the 30 largest countries in the world by total area.
+In the following example, the [`IgxTreemapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtreemapcomponent.html) demonstrates the 30 largest countries in the world by total area.
 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
