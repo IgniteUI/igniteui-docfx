@@ -226,9 +226,9 @@ before_install:
 `npm i(ci)` 手順の前に以下のスクリプトを [CI ワークフロー構成](https://help.github.com/en/actions/language-and-framework-guides/using-nodejs-with-github-actions) に追加します: 
 
 ```cmd
-- run: echo "@infragistics:registry=$(npmRegistry)" >> ~/.npmrc
-- run: echo "$(igScope):always-auth=true" >> ~/.npmrc
-- run: echo "$(igScope):_auth=${{ secrets.NPM_TOKEN }}" >> ~/.npmrc
+- run: echo "@infragistics:registry=https://packages.infragistics.com/npm/js-licensed/" >> ~/.npmrc
+- run: echo "//packages.infragistics.com/npm/js-licensed/:_auth=${{ secrets.NPM_TOKEN }}" >> ~/.npmrc
+- run: echo "//packages.infragistics.com/npm/js-licensed/:always-auth=true" >> ~/.npmrc
 ```
 
 [*シークレット* (暗号化された環境変数)](https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets) を定義してアクセス トークンなどの機密情報に対して GitHub Actions ワークフローでそれらを使用します。
