@@ -13,7 +13,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 <code-view style="height:530px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/query-builder/query-builder-main" alt="Angular Query Builder Example">
+           iframe-src="{environment:demosBaseUrl}/interactions/query-builder-sample-1" alt="Angular Query Builder Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -111,7 +111,7 @@ $custom-drop-down: drop-down-theme(
 
 In this example we only changed some of the parameters for the listed components, but the [`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme), [`button-group-theme`]({environment:sassApiUrl}/index.html#function-button-group-theme), [`chip-theme`]({environment:sassApiUrl}/index.html#function-chip-theme), [`drop-down-theme`]({environment:sassApiUrl}/index.html#function-drop-down-theme), [`input-group-theme`]({environment:sassApiUrl}/index.html#function-input-group-theme) themes provide way more parameters to control their respective styling.
 
-The last step is to **include** the component mixins, each with its respective theme. We will also add some styles for other elements inside the advanced filtering dialog.
+The last step is to **include** the component mixins, each with its respective theme. We will also add some styles for other elements inside the query builder.
 
 ```scss
 @include query-builder($custom-query-builder);
@@ -124,7 +124,7 @@ igx-query-builder {
     .igx-filter-empty__title {
         color: #FFCD0F
     }
-    .igx-advanced-filter__header {
+    .igx-query-builder__header {
         color: #FFCD0F
     }
     .igx-filter-tree__expression-actions igx-icon {
@@ -172,7 +172,7 @@ igx-query-builder {
             .igx-filter-empty__title {
                 color: #FFCD0F
             }
-            .igx-advanced-filter__header {
+            .igx-query-builder__header {
                 color: #FFCD0F
             }
             .igx-filter-tree__expression-actions igx-icon {
@@ -356,7 +356,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 
 <code-view style="height:530px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/query-builder/query-builder-style" >
+           iframe-src="{environment:demosBaseUrl}/interactions/query-builder-style" >
 </code-view>
 
 >[!NOTE]
