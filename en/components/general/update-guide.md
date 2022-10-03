@@ -51,7 +51,7 @@ Unfortunately not all changes can be automatically updated. Changes below are sp
 
 For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from the "From 6.x .." section apply those changes and work your way up:
 
-## From 14.1.x to 14.2.x
+## From 14.2.x to 15.0.x
 ### General
 - Ignite UI for Angular now has a peer dependency on [igniteui-theming](https://github.com/IgniteUI/igniteui-theming). Install the theming package and add the following preprocessor configuration in your `angular.json` file.
 
@@ -73,7 +73,7 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
     
     **Example**:
 
-    In 14.1.x:
+    In 14.2.x:
 
     ```css
     :root {
@@ -81,7 +81,7 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
     }
     ```
 
-    In 14.2.x this becomes:
+    In 15.0.x this becomes:
 
     ```css
     :root {
@@ -93,7 +93,7 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
 - **Breaking Change** - The `grays` input argument has been renamed to `gray`.<br />
 Here's how that will affect existing code:
 
-    In 14.1.x:
+    In 14.2.x:
 
     ```scss
     $my-palette: palette(
@@ -109,7 +109,7 @@ Here's how that will affect existing code:
     }
     ```
 
-    In 14.2.x and going forward:
+    In 15.0.x and going forward:
 
     ```scss
     $my-palette: palette(
@@ -177,7 +177,7 @@ Here's how that will affect existing code:
 ### Typography
 - **Breaking Change** - The **type-style** mixin now doesn't accept type-scale as a parameter, only the category name.
 
-    In 14.1.x and prior:
+    In 14.2.x and prior:
 
     ```scss
     .my-class {
@@ -185,7 +185,7 @@ Here's how that will affect existing code:
     }
     ```
 
-    In 14.2.x and forward:
+    In 15.0.x and forward:
 
     ```scss
     .my-class {
@@ -197,7 +197,7 @@ Here's how that will affect existing code:
 - **Breaking Change** - The **elevation function** now has only one named argument - **$name (the elevation name)**.
 - **Breaking Change** - The **elevations function** has been removed, you can now configure the elevation colors, using the `configure-elevations` mixin.
 
-    In 14.1.x and prior:
+    In 14.2.x and prior:
     
     ```scss
     .my-class {
@@ -205,7 +205,7 @@ Here's how that will affect existing code:
     }
     ```
 
-    In 14.2.x and forward:
+    In 15.0.x and forward:
     
     ```scss
     .my-class {

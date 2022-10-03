@@ -276,7 +276,7 @@ Similar to how we retrieve color variants, there's a way to get the contrast tex
 
 ```scss
 $my-primary-800: color($my-palette, 'primary', 600);
-$my-primary-800-text:contrast-color($my-palette, 'primary', 600);
+$my-primary-800-text: contrast-color($my-palette, 'primary', 600);
 
 // sample usage
 .my-awesome-article {
