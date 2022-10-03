@@ -317,9 +317,7 @@ The last step is to include the component's theme.
 
 - The combobox input that displays the selected items is not editable. However, due to browser specifics in FireFox, the cursor is visible.
 - The combobox does not have input for sizing its height. In the future, the [IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) component will expose an option that allows custom sizing, and then the [IgxCombo]({environment:angularApiUrl}/classes/igxcombocomponent.html) will use the same functionality for proper styling and better consistency.
-- The combobox allows selecting falsy values. However, the supported values are `false, 0, '', null, NaN`.
-    * When having primitive data, e.g. `data = [ false, 0, '', null, NaN, undefined]`, `undefined` is not displayed in the dropdown and is not present in the combo data.
-    * When having an array of objects, if the value used for `valueKey` is `undefined`, the item will be displayed in the dropdown, but cannot be selected.
+- When the combobox is bound to an array of primitive data which contains `undefined` (i.e. `[ undefined, ...]`), `undefined` is not displayed in the dropdown. When it is bound to an array of complex data (i.e. objects), if the value used for `valueKey` is `undefined`, the item will be displayed in the dropdown, but cannot be selected.
 
 > [!NOTE]
 > The combobox uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for the combobox. For more details see [igxForOf Known Issues](for-of.md#known-limitations) section.
