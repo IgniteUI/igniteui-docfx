@@ -31,7 +31,7 @@ In order to select a group, you can also click on its vertical line, which is co
 ## Usage
 
 You can start using the component by setting the [`fields`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html#fields) property to an array describing the field name and its data type. It will automatically assign the corresponding operands based on the data type.
-The Query Builder has the [`expressionTree`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html#expressiontree) input property. You could use it to set an initial state of the control.
+The Query Builder has the [`expressionTree`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html#expressiontree) input property. You could use it to set an initial state of the control and access the user-specified filtering logic.
 
 ```typescript
 ngAfterViewInit(): void {
@@ -59,6 +59,16 @@ ngAfterViewInit(): void {
     
     this.queryBuilder.expressionTree = tree;
 }
+```
+
+The expressionTree is a two-way bindable property that could be used to listen to changes and update the tree. There is also the expressionTreeChange event emitted when the user changes the UI by creating, editing or removing conditions.
+
+```html
+<igx-query-builder #queryBuilder
+    [fields]="fields"
+    [(expressionTree)]="expressionTree"
+    (expressionTreeChange)="onExpressionTreeChange()">
+</igx-query-builder>
 ```
 
 ## Styling
