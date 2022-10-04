@@ -61,7 +61,7 @@ ngAfterViewInit(): void {
 }
 ```
 
-The expressionTree is a two-way bindable property that could be used to listen to changes and update the tree. There is also the expressionTreeChange event emitted when the user changes the UI by creating, editing or removing conditions.
+The `expressionTree` is a two-way bindable property which means a corresponding `expressionTreeChange` output is implemented that emits when the end-user changes the UI by creating, editing or removing conditions. It can also be subscribed to separately to receive notifications and react to such changes.
 
 ```html
 <igx-query-builder #queryBuilder
