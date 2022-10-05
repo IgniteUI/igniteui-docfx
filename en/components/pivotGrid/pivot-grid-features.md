@@ -139,6 +139,18 @@ Chips from these areas can not be moved to the `values` area and chips from the 
 >[!NOTE]
 >The chips from the Pivot Grid can not be moved to the Pivot Data Selector and items from the Pivot Data Selector can not be moved to the Pivot Grid.
 
+## Excel Exporting
+
+The [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) supports export for `IgxPivotGrid`. The following example demonstrates this feature:
+
+<code-view style="height: 870px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-export" alt="Angular Pivot Grid Export To Excel">
+</code-view>
+
+> [!NOTE]
+> Expand/collapse indicators in Excel are shown based on the hierarchy of the last dimension of the Pivot Grid.
+
 ## API References
 * [IgxPivotGridComponent]({environment:angularApiUrl}/classes/igxpivotgridcomponent.html)
 * [IgxPivotDataSelector]({environment:angularApiUrl}/classes/igxpivotdataselector.html)
