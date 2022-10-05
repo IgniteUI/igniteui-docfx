@@ -338,6 +338,7 @@ The last step is to include the component's theme.
 
 - The simple combobox does not have input for sizing its height. In the future, the [IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) component will expose an option that allows custom sizing, and then the [IgxSimpleCombo]({environment:angularApiUrl}/classes/igxsimplecombocomponent.html) will use the same functionality for proper styling and better consistency.
 - When the simple combobox is bound to an array of primitive data which contains `undefined` (i.e. `[ undefined, ...]`), `undefined` is not displayed in the dropdown. When it is bound to an array of complex data (i.e. objects) and the value used for `valueKey` is `undefined`, the item will be displayed in the dropdown, but cannot be selected.
+- When the simple combobox is bound via `ngModel` and is marked as `required`, `null`, `undefined` and `''` values cannot be selected.
 
 > [!NOTE]
 > The simple combobox uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for the simple combobox. For more details see [igxForOf Known Issues](for-of.md#known-limitations) section.
