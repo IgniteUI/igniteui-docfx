@@ -143,7 +143,7 @@ Chips from these areas can not be moved to the `values` area and chips from the 
 
 The [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) supports export for `IgxPivotGrid`. The following example demonstrates this feature:
 
-<code-view style="height: 870px" 
+<code-view style="height: 875px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-export" alt="Angular Pivot Grid Export To Excel">
 </code-view>
