@@ -14,7 +14,7 @@ _language: ja
 
 <code-view style="height:530px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/query-builder/query-builder-main" alt="Angular Query Builder の例">
+           iframe-src="{environment:demosBaseUrl}/interactions/query-builder-sample-1" alt="Angular Query Builder の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -60,6 +60,16 @@ ngAfterViewInit(): void {
     
     this.queryBuilder.expressionTree = tree;
 }
+```
+
+`expressionTree` は、双方向のバインド可能なプロパティです。 これは、エンド ユーザーが条件を作成、編集、または削除して UI を変更したときに発行される、対応する `expressionTreeChange` 出力が実装されていることを意味します。通知を受信して変更に反応するために個別にサブスクライブすることもできます。
+
+```html
+<igx-query-builder #queryBuilder
+    [fields]="fields"
+    [(expressionTree)]="expressionTree"
+    (expressionTreeChange)="onExpressionTreeChange()">
+</igx-query-builder>
 ```
 
 ## スタイル設定
@@ -125,7 +135,7 @@ igx-query-builder {
     .igx-filter-empty__title {
         color: #FFCD0F
     }
-    .igx-advanced-filter__header {
+    .igx-query-builder__header {
         color: #FFCD0F
     }
     .igx-filter-tree__expression-actions igx-icon {
@@ -173,7 +183,7 @@ igx-query-builder {
             .igx-filter-empty__title {
                 color: #FFCD0F
             }
-            .igx-advanced-filter__header {
+            .igx-query-builder__header {
                 color: #FFCD0F
             }
             .igx-filter-tree__expression-actions igx-icon {
@@ -357,7 +367,7 @@ $custom-drop-down: drop-down-theme(
 
 <code-view style="height:530px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/query-builder/query-builder-style" >
+           iframe-src="{environment:demosBaseUrl}/interactions/query-builder-style" >
 </code-view>
 
 >[!NOTE]
