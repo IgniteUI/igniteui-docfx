@@ -164,7 +164,7 @@ igx-query-builder {
 >We scope most of the components' mixins within `igx-query-builder`, so that these custom themes will affect only components nested in the Query Builder. Otherwise, other buttons, chips, inputs and dropdowns in the application would be affected too.
 
 >[!NOTE]
->If the component is using an [`Emulated`](/themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
+>If the component is using an [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
 
 ```scss
 :host {
@@ -252,11 +252,11 @@ $custom-drop-down: drop-down-theme(
 ```
 
 >[!NOTE]
->The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](/themes/sass/palettes.md) topic for detailed guidance on how to use them.
+>The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](themes/sass/palettes.md) topic for detailed guidance on how to use them.
 
 ### Using Schemas
 
-Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](/themes/sass/schemas.md). A **schema** is a recipe of a theme.
+Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](themes/sass/schemas.md). A **schema** is a recipe of a theme.
 
 Extend one of the two predefined schemas, that are provided for every component, in this case - [`light-query-builder`]({environment:sassApiUrl}/index.html#variable-_light-query-builder), [`light-button`]({environment:sassApiUrl}/index.html#variable-_light-button), [`light-button-group`]({environment:sassApiUrl}/index.html#variable-_light-button-group), [`light-chip`]({environment:sassApiUrl}/index.html#variable-_light-chip), [`light-input-group`]({environment:sassApiUrl}/index.html#variable-_light-input-group) and [`light-drop-down`]({environment:sassApiUrl}/index.html#variable-_light-drop-down) schemas:
 
@@ -376,7 +376,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 ## API References
 <div class="divider--half"></div>
 
-* [IgxQueryBuilderComponent API]({environment:angularApiUrl}/classes/igxquerybuilder.html)
+* [IgxQueryBuilderComponent API]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html)
 * [IgxQueryBuilderComponent Styles]({environment:sassApiUrl}/index.html#function-query-builder-theme)
 
 ## Additional Resources
