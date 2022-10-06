@@ -139,6 +139,18 @@ public pivotConfigHierarchy: IPivotConfiguration = {
 >[!NOTE]
 >ピボット グリッドのチップをピボット データ セレクターに移動したり、ピボット データ セレクターの項目をピボット グリッドに移動したりすることはできません。
 
+## Excel へのエクスポート
+
+[`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) は、`IgxPivotGrid` のエクスポートをサポートします。次の例は、この機能を示しています。
+
+<code-view style="height: 875px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-export" alt="Angular Pivot Grid Excel へのエクスポート">
+</code-view>
+
+> [!NOTE]
+> Excel の展開/縮小インジケーターは、ピボット グリッドの最後のディメンションの階層に基づいて表示されます。
+
 ## API リファレンス
 * [IgxPivotGridComponent]({environment:angularApiUrl}/classes/igxpivotgridcomponent.html)
 * [IgxPivotDataSelector]({environment:angularApiUrl}/classes/igxpivotdataselector.html)

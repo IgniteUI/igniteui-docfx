@@ -92,9 +92,6 @@ export class AppModule {}
 > [!Note]
 > In v12.2.1 and later, the exporter services are provided in root, which means you no longer need to declare them in the AppModule providers.
 
-> [!NOTE]
-> The Excel Exporter service has a peer dependency on the JSZip library. The JSZip library should be installed when using the Excel Exporter.
-
 To initiate an export process you may use the handler of a button in your component's template.
 
 ```html
@@ -230,17 +227,6 @@ When you are exporting data from the @@igComponent component, the export process
 |Max worksheet size|The maximum worksheet size supported by Excel is 1,048,576 rows by 16,384 columns.|
 |Exporting pinned columns|In the exported Excel file, the pinned columns will not be frozen but will be displayed in the same order as they appear in the grid.|
 }
-
-> [!NOTE]
-> Exporting large Excel files may be slow because of an [issue](https://github.com/Stuk/jszip/issues/617) in the [JSZip](https://www.npmjs.com/package/jszip) library. Until the issue is resolved, in order to speed up the Excel Exporter you could import a [`setImmediate`](https://developer.mozilla.org/en-US/docs/Web/API/Window/setImmediate) [polyfill](https://www.npmjs.com/package/setimmediate) in your application.
-
-```cmd
-npm install --save setimmediate
-```
-
-```ts
-import 'setimmediate';
-```
 
 ## API References
 
