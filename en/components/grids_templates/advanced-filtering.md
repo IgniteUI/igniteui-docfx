@@ -17,7 +17,7 @@ _canonicalLink: grid/advanced-filtering
 
 # Angular @@igComponent Advanced Filtering
 
-The Advanced filtering provides a dialog which allows the creation of groups with filtering conditions across all columns for any Angular Material table like the @@igComponent.
+The Advanced filtering provides a dialog which allows the creation of groups with filtering conditions across all columns for any Angular Material table like the @@igComponent. 
 
 ## Angular @@igComponent Advanced Filtering Example
 
@@ -50,13 +50,7 @@ The Advanced filtering provides a dialog which allows the creation of groups wit
 
 ## Interaction
 
-In order to open the advanced filtering dialog, the **Advanced Filtering** button in the grid toolbar should be clicked. If no advanced filter is applied, you should start with creating a group of filtering conditions linked with [`AND`]({environment:angularApiUrl}/enums/filteringlogic.html#and) or [`OR`]({environment:angularApiUrl}/enums/filteringlogic.html#or). After that, you can add filtering conditions or sub-groups. 
-
-In order to add a filtering condition, you have to select any of the [`filterable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#filterable) columns, an operand based on the column [`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype) and a value if the operand is not unary. Once the condition is committed, a chip with the condition information appears. By hovering or clicking the chip, you have the options to modify it or add another condition or group right after it.
-
-If you select more than one filtering condition chip, a context menu appears with options to create a group or delete the filters. If you choose to create a group with the selected conditions, the newly created group will appear where the topmost selected condition was placed.
-
-In order to select a group, you can also click on its vertical line, which is colored based on the the linking condition ([`AND`]({environment:angularApiUrl}/enums/filteringlogic.html#and) or [`OR`]({environment:angularApiUrl}/enums/filteringlogic.html#or)). If a single group is selected, you get a context menu with options to change its filtering logic, ungroup or delete it.
+In order to open the advanced filtering dialog, the **Advanced Filtering** button in the grid toolbar should be clicked. The dialog is using the [`IgxQueryBuilder`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html) component to generate,display and edit the filtering logic. You can have a look at the [`Query Builder topic`](../query-builder.md#interaction) for details on the interaction process.
 
 In order to filter the data once you are ready with creating the filtering conditions and groups, you should click the **Apply** button. If you have modified the advanced filter, but you don't want to preserve the changes, you should click the **Cancel** button. You could also clear the advanced filter by clicking the **Clear Filter** button.
 
