@@ -27,9 +27,9 @@ _language: ja
 
 次のように、`igniteui-angular-i18n` パッケージで利用可能な言語の 1 つでアプリケーションをローカライズできます。
 
-`npm install igniteui-angular-i18n--save-dev` を実行してパッケージをインストールします。
+`npm install igniteui-angular-i18n --save-dev` を実行してパッケージをインストールします。
 
-次に、目的の言語のリソース文字列をインポートし、対応するリソース オブジェクトを渡して `changei18n` 関数を呼び出します。
+次に、目的の言語のリソース文字列をインポートし、対応するリソース オブジェクトを渡して `changei18n()` 関数を呼び出します。
 
 ```typescript
 // app.component.ts
