@@ -351,7 +351,6 @@ Additional components and/or directives with relative APIs that were used:
 * [IgxButton Theme]({environment:sassApiUrl}/index.html#function-button-theme)
 * [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-ripple-theme)
 * [IgxExpansionPanel Theme]({environment:sassApiUrl}/index.html#function-expansion-panel-theme)
-* [IgxBanner Theme]({environment:sassApiUrl}/index.html#function-banner-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>

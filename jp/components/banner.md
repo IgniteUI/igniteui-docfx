@@ -352,7 +352,6 @@ $custom-banner-theme: banner-theme(
 * [IgxButton テーマ]({environment:sassApiUrl}/index.html#function-button-theme)
 * [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-ripple-theme)
 * [IgxExpansionPanel テーマ]({environment:sassApiUrl}/index.html#function-expansion-panel-theme)
-* [IgxBanner テーマ]({environment:sassApiUrl}/index.html#function-banner-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

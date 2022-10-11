@@ -164,12 +164,12 @@ Additional components and/or directives that can be used within the Action Strip
 
 <div class="divider"></div>
 
+
 ## Theming Dependencies
 * [IgxButton Theme]({environment:sassApiUrl}/index.html#function-button-theme)
 * [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-ripple-theme)
 * [IgxDropDown Theme]({environment:sassApiUrl}/index.html#function-drop-down-theme)
 * [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-icon-theme)
-* [IgxActionStrip Theme]({environment:sassApiUrl}/index.html#function-action-strip-theme)
 
 ## Additional Resources
 

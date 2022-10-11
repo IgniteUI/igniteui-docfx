@@ -171,7 +171,7 @@ $custom-strip: action-strip-theme(
 * [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-ripple-theme)
 * [IgxDropDown テーマ]({environment:sassApiUrl}/index.html#function-drop-down-theme)
 * [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-icon-theme)
-* [IgxActionStrip テーマ]({environment:sassApiUrl}/index.html#function-action-strip-theme)
+
 ## その他のリソース
 
 <div class="divider--half"></div>
