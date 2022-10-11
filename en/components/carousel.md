@@ -353,7 +353,6 @@ These configurions will have the following result:
  * [aria-labelledby](https://www.w3.org/TR/wai-aria/#aria-labelledby) follows the pattern "tab-${this.index}-${this.total}"
  * [aria-selected](https://www.w3.org/TR/wai-aria-1.1/#aria-selected) set **active** slide. Indicates the current **selected** state of a particular slide element.
 
-
 ## API References
 <div class="divider--half"></div>
 

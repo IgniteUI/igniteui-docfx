@@ -364,7 +364,7 @@ public slides = [
 * [IgxListItemComponent]({environment:angularApiUrl}/classes/igxlistitemcomponent.html)
 
 ## テーマの依存関係
-* [IgxCarousel テーマ]({environment:sassApiUrl}/index.html#function-carousel-theme)
+* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-icon-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>
