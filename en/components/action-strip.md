@@ -162,8 +162,8 @@ Additional components and/or directives that can be used within the Action Strip
 * [`IgxGridEditingActionsComponent`]({environment:angularApiUrl}/classes/igxeditingactionscomponent.html)
 * [`IgxDividerDirective`]({environment:angularApiUrl}/classes/igxdividerdirective.html)
 
-<div class="divider"></div>
 
+<div class="divider"></div>
 
 ## Theming Dependencies
 * [IgxButton Theme]({environment:sassApiUrl}/index.html#function-button-theme)
