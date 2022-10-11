@@ -162,7 +162,6 @@ Additional components and/or directives that can be used within the Action Strip
 * [`IgxGridEditingActionsComponent`]({environment:angularApiUrl}/classes/igxeditingactionscomponent.html)
 * [`IgxDividerDirective`]({environment:angularApiUrl}/classes/igxdividerdirective.html)
 
-
 <div class="divider"></div>
 
 ## Theming Dependencies
@@ -170,6 +169,7 @@ Additional components and/or directives that can be used within the Action Strip
 * [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-ripple-theme)
 * [IgxDropDown Theme]({environment:sassApiUrl}/index.html#function-drop-down-theme)
 * [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxActionStrip Theme]({environment:sassApiUrl}/index.html#function-action-strip-theme)
 
 ## Additional Resources
 

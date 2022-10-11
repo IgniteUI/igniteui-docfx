@@ -363,7 +363,7 @@ These configurions will have the following result:
 * [IgxListItemComponent]({environment:angularApiUrl}/classes/igxlistitemcomponent.html)
 
 ## Theming Dependencies
-* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxCarousel Theme]({environment:sassApiUrl}/index.html#function-carousel-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>
