@@ -187,6 +187,7 @@ If all went well, you should see something like the following in the browser:
 
 ## Theming Dependencies
 * [IgxAvatar Theme]({environment:sassApiUrl}/index.html#function-avatar-theme)
+* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-icon-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>
