@@ -329,3 +329,4 @@ See the [igxAccordion topic](accordion.md)
 
 ## Theming Dependencies
 * [IgxExpansionPanel Theme]({environment:sassApiUrl}/index.html#function-expansion-panel-theme)
+* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-icon-theme)
