@@ -187,6 +187,7 @@ Internet Explorer 11 以前などブラウザーのコンポーネントをス�
 
 ## テーマの依存関係
 * [IgxAvatar テーマ]({environment:sassApiUrl}/index.html#function-avatar-theme)
+* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-icon-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>
