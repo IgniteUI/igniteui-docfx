@@ -328,3 +328,4 @@ export class ExpansionPanelComponent {
 
 ## テーマの依存関係
 * [IgxExpansionPanel テーマ]({environment:sassApiUrl}/index.html#function-expansion-panel-theme)
+* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-icon-theme)
