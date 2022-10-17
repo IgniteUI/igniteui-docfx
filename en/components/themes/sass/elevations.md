@@ -16,13 +16,17 @@ The following section demonstrates how to create and retrieve custom elevations.
 
 ### Configuring Elevations
 
+To change the colors used by the default elevation presets, you need to configure the elevations preset module.
+
 ```scss
 // Define the 3 elevation colors
-$color-1: rgb(153, 191, 170); // Umbra
-$color-2: rgb(92, 134, 141); // Penumbra
-$color-3: rgb(92, 61, 70); // Ambient
+@use 'igniteui-theming/sass/elevations/presets' as * with(
+    $color-1: rgb(153, 191, 170), // Umbra
+    $color-2: rgb(92, 134, 141), // Penumbra
+    $color-3: rgb(92, 61, 70) // Ambient
+);
 
-@include configure-elevations($color-1, $color-2, $color-3);
+@include elevations($material-elevations);
 ```
 
 ### Retrieving Elevations

@@ -52,7 +52,7 @@ The documentation for each component theme lists the default elevation used in e
 
 ## Defining Elevations
 
-Updating the default elevations works in a similar way to updating the palette colors. You simply need to reassign the variable to a different value. With elevations, make sure the value is `box-shadow`.
+Updating the default elevations works in a way similar to how palette colors are updated. You simply need to reassign the variable to a different value. With elevations, make sure the value is `box-shadow`.
 
 Example:
 
