@@ -328,4 +328,5 @@ See the [igxAccordion topic](accordion.md)
 * [IgxExpansionPanel Styles]({environment:sassApiUrl}/index.html#mixin-igx-expansion-panel)
 
 ## Theming Dependencies
+* [IgxExpansionPanel Theme]({environment:sassApiUrl}/index.html#function-expansion-panel-theme)
 * [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-icon-theme)
