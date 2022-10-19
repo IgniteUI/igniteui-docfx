@@ -57,7 +57,7 @@ If Sass isn't your thing that's completely fine, we've made it easy to modify th
 
 ## Global Variables
 
-If you inspect any of the CSS themes above, you will notice that there are quite a few CSS variables included in the `:root` scope; We include variables for `colors`, `shadows`, and `typography`. Modifying any of these allows you to customize the overall look and feel of the theme and conversely the components.
+If you inspect any of the CSS themes above, you will notice that there are quite a few CSS variables included in the `:root` scope; We include variables for `colors`, `shadows`, `typography`, and `configuration`. Modifying any of these variables will allow you to customize the overall look and feel of the theme and conversely the components.
 
 What most people look for when modifying a theme is changing the default colors used by the components.
 
@@ -102,6 +102,36 @@ Here's a simplified version of what those variables look like:
 ```
 
 These are essentially stacked CSS [`box-shadow`](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) declarations. You can replace them with any other valid `box-shadow` value. The higher the elevation level number is, the bigger the shadow is. Again, different components use different elevation levels, to find out which elevation levels are used by which component, take look at the [Components Documentation]({environment:sassApiUrl}/index.html#variable-_light-avatar). We will take a deeper look at elevations in the [Elevations](./elevations.md) of the documentation.
+
+## Configuration
+
+There are several variables that allow you to configure the global behavior of the theme:
+
+#### Roundness
+
+To configure the radius factor of all components you can change the value of the `--ig-radius-factor` variable. The default value is 1, meaning the default radius factor is used across component themes.
+
+Example:
+
+```css
+/* Makes all components appear blocky in shape */
+:root {
+  --ig-radius-factor: 0;
+}
+```
+
+#### Elevation Factor
+
+To configure the elevation factor of all components you can change the value of the `--ig-elevation-factor` variable. The default value is 1, meaning the default elevations are used across component themes.
+
+Example:
+
+```css
+/* Makes all components appear flat (no-shadows) */
+:root {
+  --ig-elevation-factor: 0;
+}
+```
 
 ## Component Variables
 
