@@ -38,7 +38,7 @@ To begin using elevations in your own components all you need is to reference th
 }
 ```
 
-Changing the elevation in an existing component theme works in a similar way.
+Changing the elevation in an existing component theme works similarly.
 
 ```css
 [igxButton="raised"] {
@@ -52,7 +52,7 @@ The documentation for each component theme lists the default elevation used in e
 
 ## Defining Elevations
 
-Updating the default elevations works in a way similar to how palette colors are updated. You simply need to reassign the variable to a different value. With elevations, make sure the value is `box-shadow`.
+Updating the default elevations works in a way similar to how palette colors are updated. You simply need to reassign the variable to a different value. With elevations, make sure the value is a `box-shadow`.
 
 Example:
 

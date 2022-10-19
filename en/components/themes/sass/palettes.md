@@ -179,7 +179,7 @@ We also provide a few additional palettes that you can use:
   - $dark-green-palette
   - $dark-purple-palette
 
-You can mix and match all of the light palettes with a light schema of your choice and vice versa - all of the dark palettes with a dark schema that you think will best match your needs and vision.
+You can mix and match all light palettes with a light schema of your choice and vice versa - all dark palettes with a dark schema that you think will best match your needs and vision.
 
 ## The Default Palette
 The `theme` mixin takes a palette(see the previous section) as one of its arguments. The passed palette is assigned to the global `$default-palette` variable. This palette stored in this variable is used across the Sass library as fallback palette, whenever a palette is expected, but not explicitly provided by the user.
@@ -244,16 +244,16 @@ $my-color-palette: palette(
 We provide a function that is easy to remember and use - `color`. It can take up to three arguments - `palette`, `color`, and `variant`;
 
 ```scss
-// Get the primary 500 color variant from $default-palette
+// Get the primary CSS variable reference of the 500 color variant
 $my-primary-500: color();
 
-// Get the primary 600 color variant from $default-palette
+// Get the primary CSS variable reference of the 600 color variant
 $my-primary-600: color($variant: 600);
 
-// Get the secondary A700 color variant from $my-palette
+// Get the secondary A700 color variant as a HEX value from $my-palette
 $my-primary-A700: color($my-palette, 'secondary', 'A700');
 
-// Get the warn color from $my-palette
+// Get the warn 500 color variant as HEX value from $my-palette
 $my-warning-color: color($my-palette, 'warn');
 
 .my-awesome-class {
@@ -266,7 +266,7 @@ $my-warning-color: color($my-palette, 'warn');
 }
 ```
 
-If you omit the `$palette` argument, the value stored in `$default-palette` is used. If you do not provide `$color` and/or `$variant`, they will be assigned to `primary` and `500` respectively.
+If you omit the `$palette` argument, you will get a string referencing the corresponding CSS variable variant. If you do not provide `$color` and/or `$variant`, they will be assigned to `primary` and `500` respectively.
 
 <div class="divider"></div>
 
