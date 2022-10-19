@@ -534,6 +534,9 @@
   href: pivotgrid/pivot-grid.md
   new: true
   items:
+    - name: Export to Excel
+      href: pivotgrid/export-excel.md
+      new: true
     - name: Pivot Grid Features
       href: pivotgrid/pivot-grid-features.md
       new: true
@@ -932,6 +935,9 @@
   href: checkbox.md
 - name: Switch
   href: switch.md
+- name: Query Builder
+  href: query-builder.md
+  new: true
 - name: Radio & Radio Group
   href: radio-button.md
   new: false

@@ -21,6 +21,14 @@ _keywords: data export, ignite ui for angular, infragistics
 _canonicalLink: grid/export-excel
 ---
 }
+@@if (igxName === 'IgxPivotGrid') {
+---
+title: Angular Pivot Grid Export to Excel - Ignite UI for Angular
+_description: With Ignite UI Excel Exporter you can make client Excel functionality more convenient & simpler. This format allows features like filtering, sorting, etc.
+_keywords: data export, ignite ui for angular, infragistics
+_canonicalLink: grid/export-excel
+---
+}
 
 # Angular @@igComponent Export to Excel Service
 
@@ -32,7 +40,7 @@ _canonicalLink: grid/export-excel
 
 }
 
-@@if (igxName === 'IgxHierarchicalGrid') {
+@@if (igxName === 'IgxHierarchicalGrid' || igxName === 'IgxPivotGrid') {
 
 <p class="highlight">
   The Excel Exporter service can export data to excel from the @@igxName. The data export functionality is encapsulated in the [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) class. To trigger the process, you need to invoke the [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html)'s [`export`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#export) method and pass the @@igxName component as the first argument.
@@ -71,6 +79,15 @@ _canonicalLink: grid/export-excel
 </code-view>
 
 }
+@@if (igxName === 'IgxPivotGrid') {
+
+<code-view style="height: 600px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           explicit-editor="stackblitz"
+           iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-export" alt="Angular Excel Exporter Example">
+</code-view>
+
+}
 
 <div class="divider--half"></div>
 
@@ -91,9 +108,6 @@ export class AppModule {}
 
 > [!Note]
 > In v12.2.1 and later, the exporter services are provided in root, which means you no longer need to declare them in the AppModule providers.
-
-> [!NOTE]
-> The Excel Exporter service has a peer dependency on the JSZip library. The JSZip library should be installed when using the Excel Exporter.
 
 To initiate an export process you may use the handler of a button in your component's template.
 
@@ -123,6 +137,17 @@ public exportButtonHandler() {
 
 If all went well, you should see the @@igxName component and a button under it. When pressing the button, it will trigger the export process and the browser will download a file named "ExportedDataFile.xlsx" which contains the data from the @@igComponent component in MS Excel format.
 
+@@if (igxName === 'IgxPivotGrid') {
+
+> [!NOTE]
+> Expand/collapse indicators in Excel are shown based on the hierarchy of the last dimension of the Pivot Grid.
+
+> [!NOTE]
+> The exported @@igComponent will not be formatted as a table, since Excel tables do not support multiple row headers.
+
+}
+
+@@if (igxName !== 'IgxPivotGrid') {
 ## Export All Data
 
 There are some cases when you might be using remote operations like *Paging* and the Grid won't have access to all of its data. In these cases, we recommend using the [Excel Export Service](../exporter-excel.md) and pass the whole data collection, if available. Example:
@@ -190,9 +215,13 @@ public exportButtonHandler() {
 }
 ```
 
+}
+
 ## Customizing the Exported Content
 
 In the above examples the Excel Exporter service was exporting all available data. There are situations in which you may want to skip exporting a row or even an entire column. To achieve this you may hook to the [`columnExporting`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#columnexporting) and/or [`rowExporting`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#rowexporting) events which are fired respectively for each column and/or each row and cancel the respective event by setting the event argument object's [`cancel`]({environment:angularApiUrl}/interfaces/irowexportingeventargs.html#cancel) property to `true`.
+
+@@if (igxName !== 'IgxPivotGrid') {
 
 The following example will exclude a column from the export if its header is "Age" and if its index is 1:
 
@@ -206,6 +235,25 @@ this.excelExportService.columnExporting.subscribe((args: IColumnExportingEventAr
 });
 this.excelExportService.export(this.@@igObjectRef, new IgxExcelExporterOptions('ExportedDataFile'));
 ```
+
+}
+
+@@if (igxName === 'IgxPivotGrid') {
+
+The following example will exclude all columns from the export if their header is "Amount of Sale":
+
+```typescript
+// component.ts
+
+this.excelExportService.columnExporting.subscribe((args: IColumnExportingEventArgs) => {
+    if (args.header == 'Amount of Sale') {
+        args.cancel = true;
+    }
+});
+this.excelExportService.export(this.@@igObjectRef, new IgxExcelExporterOptions('ExportedDataFile'));
+```
+
+}
 
 When you are exporting data from the @@igComponent component, the export process takes in account features like row filtering and column hiding and exports only the data visible in the @@igComponent. You can configure the exporter service to include filtered rows or hidden columns by setting properties on the [`IgxExcelExporterOptions`]({environment:angularApiUrl}/classes/igxexcelexporteroptions.html) object.
 ## Known Limitations
@@ -231,16 +279,11 @@ When you are exporting data from the @@igComponent component, the export process
 |Exporting pinned columns|In the exported Excel file, the pinned columns will not be frozen but will be displayed in the same order as they appear in the grid.|
 }
 
-> [!NOTE]
-> Exporting large Excel files may be slow because of an [issue](https://github.com/Stuk/jszip/issues/617) in the [JSZip](https://www.npmjs.com/package/jszip) library. Until the issue is resolved, in order to speed up the Excel Exporter you could import a [`setImmediate`](https://developer.mozilla.org/en-US/docs/Web/API/Window/setImmediate) [polyfill](https://www.npmjs.com/package/setimmediate) in your application.
-
-```cmd
-npm install --save setimmediate
-```
-
-```ts
-import 'setimmediate';
-```
+@@if (igxName === 'IgxPivotGrid') {
+|Limitation|Description|
+|--- |--- |
+|Max worksheet size|The maximum worksheet size supported by Excel is 1,048,576 rows by 16,384 columns.|
+}
 
 ## API References
 
