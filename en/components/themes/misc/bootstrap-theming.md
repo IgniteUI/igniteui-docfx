@@ -119,7 +119,7 @@ $theme-colors: (
 );
 ```
 
-Ignite UI for Angular's [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) function generates a color palette map including `primary`, `secondary`, `grays`, `info`, `success`, `warn`, and `error` colors and their color variants. Our predefined bootstrap palette in turn consists of seven colors:
+Ignite UI for Angular's [`palette`]({environment:sassApiUrl}/index.html#function-palette) function generates a color palette map including `primary`, `secondary`, `gray`, `info`, `success`, `warn`, and `error` colors and their color variants. Our predefined bootstrap palette in turn consists of seven colors:
 
 ```scss
 $bootstrap-palette: palette(
@@ -154,7 +154,7 @@ After that, we will create a new color palette which will be used for the dark m
 $custom-dark-palette: palette(
     $primary: #ecaa53,
     $secondary: #011627,
-    $grays: #fff,
+    $gray: #fff,
     $surface: #222
 );
 
@@ -207,8 +207,8 @@ At this point we have to modify the Bootstrap `$theme-colors` map with the Sass 
 The `light` and `dark` colors from the `$theme-colors` map, which don't have corresponding values in the Ignite UI palettes, can also be replaced with values at our discretion. For instance: 
 
 ```scss
-$custom-light: color($light-bootstrap-palette, "grays", 100);
-$custom-dark: color($light-bootstrap-palette, "grays", 800);
+$custom-light: color($light-bootstrap-palette, "gray", 100);
+$custom-dark: color($light-bootstrap-palette, "gray", 800);
 
 :host {
     &.light {
@@ -251,26 +251,26 @@ All components in Ignite UI for Angular use colors from the passed palette, ther
             // Overriding ngb-accordion colors with colors from the custom dark palette
             .accordion {
                 .card-header {
-                    background-color: color($custom-dark-palette, 'grays', 200);
-                    color: color($custom-dark-palette, 'grays', 900);
+                    background-color: color($custom-dark-palette, 'gray', 200);
+                    color: color($custom-dark-palette, 'gray', 900);
                 }
 
                 .card {
                     background-color: color($custom-dark-palette, 'surface');
-                    border-color: color($custom-dark-palette, 'grays', 300);
+                    border-color: color($custom-dark-palette, 'gray', 300);
                 }
             }
 
             // Overriding bootstrap dropdown colors with colors from the custom dark palette
             .dropdown .dropdown-menu {
                 background-color: color($custom-dark-palette, 'surface');
-                border-color: color($custom-dark-palette, 'grays', 300);
+                border-color: color($custom-dark-palette, 'gray', 300);
 
                 .dropdown-item {
-                    color: color($custom-dark-palette, 'grays', 800);
+                    color: color($custom-dark-palette, 'gray', 800);
 
                     &:hover {
-                        background-color: color($custom-dark-palette, 'grays', 200);
+                        background-color: color($custom-dark-palette, 'gray', 200);
                     }
                 }
             }
@@ -327,7 +327,7 @@ The bootstrap `navbar` uses CSS classes for its background color. In our sample,
 }
 ```
 
-Then, add a CSS class to your navbar component following the pattern "bg - color from the palette - color variant". In our sample app, we are using `bg-grays-200`.
+Then, add a CSS class to your navbar component following the pattern "bg - color from the palette - color variant". In our sample app, we are using `bg-gray-200`.
 
 ### Typography
 
@@ -346,7 +346,7 @@ Ignite UI for Angular exposes four default type scales for each of its themes, w
 * [Dark Bootstrap Palette]({environment:sassApiUrl}/index.html#variable-dark-bootstrap-palette)
 * [Light Bootstrap Theme]({environment:sassApiUrl}/index.html#mixin-bootstrap-light-theme)
 * [Dark Bootstrap Theme]({environment:sassApiUrl}/index.html#mixin-bootstrap-dark-theme)
-* [Palette Function]({environment:sassApiUrl}/index.html#function-igx-palette)
+* [Palette Function]({environment:sassApiUrl}/index.html#function-palette)
 * [Typography Mixin]({environment:sassApiUrl}/index.html#mixin-typography)
 
 Related topics: 

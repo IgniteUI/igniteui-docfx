@@ -66,12 +66,12 @@ If you wanted to change the primary and secondary colors, all you have to do is 
 ```css
 /* styles.css */
 :root {
-  --igx-primary-500: #7eaf6e;
-  --igx-secondary-500: #301764;
+  --ig-primary-500: #7eaf6e;
+  --ig-secondary-500: #301764;
 }
 ```
 
-Let's break down the names of these color variables. The `igx` prefix is there as a unique identifier to indicate that this variable is part of an Ignite UI for Angular theme, `primary` is the name of the `color` palette, and `500` is the color `variant`. We will take a deeper look at palettes in the [Palettes](./palettes.md) section of the documentation. For now all you need to know is that we have several colors (primary, secondary, success, info, etc.) that include different shades or _variants_ that are all generated from the `500` color variant, i.e. the `500` variant is considered to be the main color variant. Some color variants are lighter while others are darker.
+Let's break down the names of these color variables. The `ig` prefix is there as a unique identifier to indicate that this variable is part of an Ignite UI for Angular theme, `primary` is the name of the `color` palette, and `500` is the color `variant`. We will take a deeper look at palettes in the [Palettes](./palettes.md) section of the documentation. For now all you need to know is that we have several colors (primary, secondary, success, info, etc.) that include different shades or _variants_ that are all generated from the `500` color variant, i.e. the `500` variant is considered to be the main color variant. Some color variants are lighter while others are darker.
 
 Following this approach, you can completely overhaul the entire palette.
 
@@ -84,12 +84,12 @@ Likewise, changing the `elevations`(shadows) is just as easy. We include 25 elev
 ```css
 /* styles.css */
 :root {
-  --igx-elevation-0: none;
-  --igx-elevation-1: 0 1px 3px 0 rgba(0, 0, 0, 0.26),
+  --ig-elevation-0: none;
+  --ig-elevation-1: 0 1px 3px 0 rgba(0, 0, 0, 0.26),
                     0 1px 1px 0 rgba(0, 0, 0, 0.12),
                     0 2px 1px -1px rgba(0, 0, 0, 0.08);
   /* ... */
-  --igx-elevation-24: 0 11px 15px -7px rgba(0, 0, 0, 0.26),
+  --ig-elevation-24: 0 11px 15px -7px rgba(0, 0, 0, 0.26),
                   0 24px 38px 3px rgba(0, 0, 0, 0.12),
                   0 9px 46px 8px rgba(0, 0, 0, 0.08);
 }
@@ -123,7 +123,7 @@ For the curious, here's how this is implemented internally in the avatar:
 
 ```css
 igx-avatar {
-  --background: var(--igx-avatar-background, var(--igx-grays-400));
+  --background: var(--igx-avatar-background, var(--ig-gray-400));
   background: var(--background);
 }
 ```

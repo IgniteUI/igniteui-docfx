@@ -96,7 +96,7 @@ $allowed: (igx-avatar, igx-badge);
 
 ## Light and Dark Themes
 
-In addition to the more powerful `theme` mixin, we include two additional global theme mixins for fast bootstrapping *__light__* and *__dark__* themes. Those mixins are `igx-light-theme` and `dark-theme`.
+In addition to the more powerful `theme` mixin, we include two additional global theme mixins for fast bootstrapping *__light__* and *__dark__* themes. Those mixins are `light-theme` and `dark-theme`.
 
 Here's a quick showcase of how you can create a light and dark theme for your application:
 
@@ -122,7 +122,7 @@ The table below shows all the built-in themes that you can use right away.
 | Theme                                                                        | Mixin                                                                                             |  Schema                   |  color palette                                            | Available in version |
 |------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|---------------------------|-----------------------------------------------------------|----------------------|
 | [**Material (base)**](presets/material.md)                           |  [theme()]({environment:sassApiUrl}/index.html#mixin-theme)                               | `$light-schema          ` | $default-palette                                          |      **all**         |
-| [**Material (light)**](presets/material.md#material-light-theme)     |  [igx-light-theme()]({environment:sassApiUrl}/index.html#mixin-igx-light-theme)                   | `$light-material-schema          ` | $light-material-palette                                          |      **6.2 +**       |
+| [**Material (light)**](presets/material.md#material-light-theme)     |  [light-theme()]({environment:sassApiUrl}/index.html#mixin-light-theme)                   | `$light-material-schema          ` | $light-material-palette                                          |      **6.2 +**       |
 | [**Material (dark)**](presets/material.md#material-dark-theme)       |  [dark-theme()]({environment:sassApiUrl}/index.html#mixin-dark-theme)                     | `$dark-material-schema           ` | $dark-material-palette                                             |      **6.2 +**       |
 | [**Fluent**](presets/fluent.md)                                      |  [fluent-light-theme()]({environment:sassApiUrl}/index.html#mixin-fluent-light-theme)                 | `$light-fluent-schema   ` | $light-fluent-excel-palette <br> $light-fluent-word-palette           |      **8.2 +**       |
 | [**Fluent (dark)**](presets/fluent.md#fluent-dark-theme)             |  [fluent-dark-theme()]({environment:sassApiUrl}/index.html#mixin-fluent-dark-theme)       | `$dark-fluent-schema    ` | $dark-fluent-excel-palette <br> $dark-fluent-word-palette |      **8.2 +**       |
@@ -166,7 +166,7 @@ The general rule of thumb regarding what the value of `$legacy-support` should b
 
 ## API Overview
 * [Global Theme]({environment:sassApiUrl}/index.html#mixin-theme)
-* [Light Theme]({environment:sassApiUrl}/index.html#mixin-igx-light-theme)
+* [Light Theme]({environment:sassApiUrl}/index.html#mixin-light-theme)
 * [Dark Theme]({environment:sassApiUrl}/index.html#mixin-dark-theme)
 * [Palette]({environment:sassApiUrl}/index.html#function-igx-palette)
 
