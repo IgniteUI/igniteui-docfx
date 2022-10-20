@@ -12,9 +12,9 @@ _language: ja
 
 ## 概要
 
-Ignite UI for Angular は、`primary`、`secondary`、`grays`、`info`、`success`、`warn`、`error`、および `surface` の 8 つの基本カラーの CSS 変数として 80 カラー以上のバリアントを公開します。
+Ignite UI for Angular は、`primary`、`secondary`、`gray`、`info`、`success`、`warn`、`error`、および `surface` の 8 つの基本カラーの CSS 変数として 80 カラー以上のバリアントを公開します。
 
-`primary`、`secondary`、および `grays` カラーは [2014 Material Design カラー パレット](https://material.io/design/color/the-color-system.html#tools-for-picking-colors)に従います。これらのカラーが以下のバリアントを含みます:
+`primary`、`secondary`、および `gray` カラーは [2014 Material Design カラー パレット](https://material.io/design/color/the-color-system.html#tools-for-picking-colors)に従います。これらのカラーが以下のバリアントを含みます:
 
 <table>
     <tr>
@@ -40,7 +40,7 @@ Ignite UI for Angular は、`primary`、`secondary`、`grays`、`info`、`succes
 </table>
 
 <div class="divider--half"></div>
-上記の表に示すように、`grays` カラーには `A100`、`A200`、`A400`、および `A700` バリアントは含まれませんが、`primary` および `secondary` カラーには 14 カラー バリアントすべてが含まれます。2014 Material Design カラー パレットに含まれない `info`、`success`、`warn`、`error`、`surface` の 5つのカラーを追加しました。これらのカラーには 1 つのカラー バリアント (`500`) のみがあります。
+上記の表に示すように、`gray` カラーには `A100`、`A200`、`A400`、および `A700` バリアントは含まれませんが、`primary` および `secondary` カラーには 14 カラー バリアントすべてが含まれます。2014 Material Design カラー パレットに含まれない `info`、`success`、`warn`、`error`、`surface` の 5つのカラーを追加しました。
 
 上記のカラーに加えて、各カラー バリアントに **Level AAA** [WCAG](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html) 準拠の `contrast` カラーも含まれています。つまり、対応する `contrast` カラー バリアントをベースカラー バリアントの前景カラーとして安全に使用できます。
 
@@ -51,37 +51,37 @@ Ignite UI for Angular は、`primary`、`secondary`、`grays`、`info`、`succes
 
 ```css
 :root {
-  --igx-primary-h: 204deg;
-  --igx-primary-s: 100%;
-  --igx-primary-l: 50%;
-  --igx-primary-a: 1;
-  --igx-primary-50: hsla(
-                      var(--igx-primary-h), 
-                      calc(var(--igx-primary-s) * 1.23),
-                      calc(var(--igx-primary-l) * 1.78), 
-                      var(--igx-primary-a)
+  --ig-primary-h: 204deg;
+  --ig-primary-s: 100%;
+  --ig-primary-l: 50%;
+  --ig-primary-a: 1;
+  --ig-primary-50: hsla(
+                      var(--ig-primary-h), 
+                      calc(var(--ig-primary-s) * 1.23),
+                      calc(var(--ig-primary-l) * 1.78), 
+                      var(--ig-primary-a)
                     );
-  --igx-primary-100: hsla(
-                      var(--igx-primary-h), 
-                      calc(var(--igx-primary-s) / 1.25),
-                      calc(var(--igx-primary-l) * 1.66),
-                      var(--igx-primary-a)
+  --ig-primary-100: hsla(
+                      var(--ig-primary-h), 
+                      calc(var(--ig-primary-s) / 1.25),
+                      calc(var(--ig-primary-l) * 1.66),
+                      var(--ig-primary-a)
                     );
-  --igx-primary-200: hsla(
-                      var(--igx-primary-h),
-                      calc(var(--igx-primary-s) * .64),
-                      calc(var(--igx-primary-l) * 1.43),
-                      var(--igx-primary-a)
+  --ig-primary-200: hsla(
+                      var(--ig-primary-h),
+                      calc(var(--ig-primary-s) * .64),
+                      calc(var(--ig-primary-l) * 1.43),
+                      var(--ig-primary-a)
                     );
   // ...
-  --igx-primary-50-contrast: black;
-  --igx-primary-100-contrast: black;
-  --igx-primary-200-contrast: black;
+  --ig-primary-50-contrast: black;
+  --ig-primary-100-contrast: black;
+  --ig-primary-200-contrast: black;
   // ...
 }
 ```
 
-すべてのカラー バリアントは、`-i-gx-primary-h`、`-i-gx-primary-s`、`--igx-primary-l`、および `--igx-primary-a` の 4 つのベース変数から派生しています。これらの変数はそれぞれ、単カラーの [HSLA](https://drafts.csswg.org/css-color/#the-hsl-notation) 部分を保持します。HSLA は、`hue` (色相)、`saturation` (彩度)、`lightness` (明度)、および `alpha` (アルファ) を表します。カラーを説明するために使用されるもう 1 つのカラー スキームです。`primary`、`secondary`、その他のカラーのすべてのバリアントを実行時に変更できるため、この方法を使用することにしました。
+すべてのカラー バリアントは、`-ig-primary-h`、`-ig-primary-s`、`--ig-primary-l`、および `--ig-primary-a` の 4 つのベース変数から派生しています。これらの変数はそれぞれ、単カラーの [HSLA](https://drafts.csswg.org/css-color/#the-hsl-notation) 部分を保持します。HSLA は、`hue` (色相)、`saturation` (彩度)、`lightness` (明度)、および `alpha` (アルファ) を表します。カラーを説明するために使用されるもう 1 つのカラー スキームです。`primary`、`secondary`、その他のカラーのすべてのバリアントを実行時に変更できるため、この方法を使用することにしました。
 
 ## パレットの定義
 
@@ -91,10 +91,10 @@ Ignite UI for Angular は、`primary`、`secondary`、`grays`、`info`、`succes
 /* The HSLA representation of orange (#ffa500) */
 /* hsla(38.8,100%,50%, 1); */
 :root {
-  --igx-primary-h: 38.8deg; 
-  --igx-primary-s: 100%; 
-  --igx-primary-l: 50%; 
-  --igx-primary-a: 1; 
+  --ig-primary-h: 38.8deg; 
+  --ig-primary-s: 100%; 
+  --ig-primary-l: 50%; 
+  --ig-primary-a: 1; 
 }
 ```
 
@@ -104,7 +104,7 @@ Ignite UI for Angular は、`primary`、`secondary`、`grays`、`info`、`succes
 
 ```css
 :root {
-  --igx-primary-600: darkorange;
+  --ig-primary-600: darkorange;
 }
 ```
 
@@ -112,8 +112,8 @@ Ignite UI for Angular は、`primary`、`secondary`、`grays`、`info`、`succes
 
 ```css
 :root {
-  --igx-primary-500: orange;
-  --igx-primary-600: blue;
+  --ig-primary-500: orange;
+  --ig-primary-600: blue;
 }
 ```
 
@@ -127,16 +127,16 @@ Ignite UI for Angular は、`primary`、`secondary`、`grays`、`info`、`succes
 
 ```css
 :root {
-  --igx-primary-50: #f3e6f2;
-  --igx-primary-100: #e2c0e0;
-  --igx-primary-200: #d096cd;
-  --igx-primary-300: #d096cd;
-  --igx-primary-400: #bd6db9;
-  --igx-primary-500: #9f349c;
-  --igx-primary-600: #923095;
-  --igx-primary-700: #81298d;
-  --igx-primary-800: #722584;
-  --igx-primary-900: #561d74;
+  --ig-primary-50: #f3e6f2;
+  --ig-primary-100: #e2c0e0;
+  --ig-primary-200: #d096cd;
+  --ig-primary-300: #d096cd;
+  --ig-primary-400: #bd6db9;
+  --ig-primary-500: #9f349c;
+  --ig-primary-600: #923095;
+  --ig-primary-700: #81298d;
+  --ig-primary-800: #722584;
+  --ig-primary-900: #561d74;
 }
 ```
 このアプローチは、実行時に HSLA スキームからカラー バリアントを作成するために使用する `calc` 関数を無視しますが、選択したパレットを指定できます。
@@ -150,18 +150,18 @@ Ignite UI for Angular は、`primary`、`secondary`、`grays`、`info`、`succes
 
 /* cornflowerblue hsl(218.5,79.2%,66.1%) */
 .blue-theme {
-  --igx-primary-h: 218.5deg; 
-  --igx-primary-s: 79.2%; 
-  --igx-primary-l: 66.1%; 
-  --igx-primary-a: 1; 
+  --ig-primary-h: 218.5deg; 
+  --ig-primary-s: 79.2%; 
+  --ig-primary-l: 66.1%; 
+  --ig-primary-a: 1; 
 }
 
 /* brick red hsl(351.7,57%,52.5%) */
 .red-theme {
-  --igx-primary-h: 351.7deg; 
-  --igx-primary-s: 57%; 
-  --igx-primary-l: 52.5%; 
-  --igx-primary-a: 1; 
+  --ig-primary-h: 351.7deg; 
+  --ig-primary-s: 57%; 
+  --ig-primary-l: 52.5%; 
+  --ig-primary-a: 1; 
 }
 ```
 
@@ -173,42 +173,42 @@ class 属性の値を `blue-theme` から `red-theme` に変更することで�
 
 この方法は、個々のコンポーネントのパレット カラーをオーバーライドする場合にも機能します。複数のパレットを作成したくないが、コンポーネントで使用されるパレットのカラーを変更したい場合があります。
 
-ボタン、カレンダー、および入力グループコンポーネントのテーマを見てみましょう。それらはすべて、無効な背景として _grays_ カラーの _100_ バリアントを使用します。無効な背景を設定する個々のプロパティをオーバーライドすることによって各コンポーネントのテーマをカスタマイズできます。または 3 つすべての _grays 100_ パレットのカラーをオーバーライドすることで、3 つのすべての無効な背景色を変更できます。
+ボタン、カレンダー、および入力グループコンポーネントのテーマを見てみましょう。それらはすべて、無効な背景として _gray_ カラーの _100_ バリアントを使用します。無効な背景を設定する個々のプロパティをオーバーライドすることによって各コンポーネントのテーマをカスタマイズできます。または 3 つすべての _gray 100_ パレットのカラーをオーバーライドすることで、3 つのすべての無効な背景色を変更できます。
 
 ```css
 igx-avatar,
 igx-button,
 igx-calendar {
-  --igx-grays-100: lightgray;
+  --ig-gray-100: lightgray;
 }
 ```
 
 ## 明暗 (Dark/Light)
 
 >[!WARNING]
-> 前景色と背景色に最も大きな影響を与える色は、`grays` と `surface` です。ほとんどの場合、これら 2 つの色は互いに対比して表示されます。そのため、`surface` の色は常に `grays` と対照的である必要があります。`text-contrast` 関数を使用して、コントラスト色を自動的に取得できます。
+> 前景色と背景色に最も大きな影響を与える色は、`gray` と `surface` です。ほとんどの場合、これら 2 つの色は互いに対比して表示されます。そのため、`surface` の色は常に `gray` と対照的である必要があります。`text-contrast` 関数を使用して、コントラスト色を自動的に取得できます。
 
-Ignite UI for Angular のパレットは、テーマが明るいまたは暗いかを示します。最も影響を与える 2 つのカラーは、`grays` と `surface` です。すべてのテーマの `grays` カラー バリアントは、`#fff` などの非常に明るい色合いまたは `#222` などの非常に暗い色合いに基づいています。明るいテーマには暗い色合いの `grays` に基づいたグレー カラーのバリアントがあり、暗いテーマは反対です。すべての `grays` カラーのバリアントは白い色合いです。これらの `grays` カラーは、他のカラー (通常は `surface` カラー) に対して表示されます。テーマを適切に表示するために、`surface` のカラーは常にグレースケールの `grays` の反対側に設定します。
+Ignite UI for Angular のパレットは、テーマが明るいまたは暗いかを示します。最も影響を与える 2 つのカラーは、`gray` と `surface` です。すべてのテーマの `gray` カラー バリアントは、`#fff` などの非常に明るい色合いまたは `#222` などの非常に暗い色合いに基づいています。明るいテーマには暗い色合いの `gray` に基づいたグレー カラーのバリアントがあり、暗いテーマは反対です。すべての `gray` カラーのバリアントは白い色合いです。これらの `gray` カラーは、他のカラー (通常は `surface` カラー) に対して表示されます。テーマを適切に表示するために、`surface` のカラーは常にグレースケールの `gray` の反対側に設定します。
 
-以下は、RGBA カラー スペースで表される light および dark テーマのすべての `grays` と `surface` カラー バリアントのリストです。
+以下は、RGBA カラー スペースで表される light および dark テーマのすべての `gray` と `surface` カラー バリアントのリストです。
 
 *Material Light:*
 ```css
 :root {
   /* surface is set to white */
-  --igx-surface-500: #fff;
+  --ig-surface-500: #fff;
 
   /* grays are based on black to contrast the surface color */
-  --igx-grays-50: rgba(0, 0, 0, 0.02);
-  --igx-grays-100: rgba(0, 0, 0, 0.04);
-  --igx-grays-200: rgba(0, 0, 0, 0.08);
-  --igx-grays-300: rgba(0, 0, 0, 0.12);
-  --igx-grays-400: rgba(0, 0, 0, 0.26);
-  --igx-grays-500: rgba(0, 0, 0, 0.38);
-  --igx-grays-600: rgba(0, 0, 0, 0.54);
-  --igx-grays-700: rgba(0, 0, 0, 0.62);
-  --igx-grays-800: rgba(0, 0, 0, 0.74);
-  --igx-grays-900: rgba(0, 0, 0, 0.87);
+  --ig-gray-50: rgba(0, 0, 0, 0.02);
+  --ig-gray-100: rgba(0, 0, 0, 0.04);
+  --ig-gray-200: rgba(0, 0, 0, 0.08);
+  --ig-gray-300: rgba(0, 0, 0, 0.12);
+  --ig-gray-400: rgba(0, 0, 0, 0.26);
+  --ig-gray-500: rgba(0, 0, 0, 0.38);
+  --ig-gray-600: rgba(0, 0, 0, 0.54);
+  --ig-gray-700: rgba(0, 0, 0, 0.62);
+  --ig-gray-800: rgba(0, 0, 0, 0.74);
+  --ig-gray-900: rgba(0, 0, 0, 0.87);
 }
 ```
 
@@ -216,34 +216,34 @@ Ignite UI for Angular のパレットは、テーマが明るいまたは暗い�
 ```css
 :root {
   /* surface is a dark shade of gray */
-  --igx-surface-500: #222;
+  --ig-surface-500: #222;
 
   /* grays are based on white to contrast the surface color */
-  --igx-grays-50: rgba(255, 255, 255, 0.02);
-  --igx-grays-100: rgba(255, 255, 255, 0.04);
-  --igx-grays-200: rgba(255, 255, 255, 0.08);
-  --igx-grays-300: rgba(255, 255, 255, 0.12);
-  --igx-grays-400: rgba(255, 255, 255, 0.26);
-  --igx-grays-500: rgba(255, 255, 255, 0.38);
-  --igx-grays-600: rgba(255, 255, 255, 0.54);
-  --igx-grays-700: rgba(255, 255, 255, 0.62);
-  --igx-grays-800: rgba(255, 255, 255, 0.74);
-  --igx-grays-900: rgba(255, 255, 255, 0.87);
+  --ig-gray-50: rgba(255, 255, 255, 0.02);
+  --ig-gray-100: rgba(255, 255, 255, 0.04);
+  --ig-gray-200: rgba(255, 255, 255, 0.08);
+  --ig-gray-300: rgba(255, 255, 255, 0.12);
+  --ig-gray-400: rgba(255, 255, 255, 0.26);
+  --ig-gray-500: rgba(255, 255, 255, 0.38);
+  --ig-gray-600: rgba(255, 255, 255, 0.54);
+  --ig-gray-700: rgba(255, 255, 255, 0.62);
+  --ig-gray-800: rgba(255, 255, 255, 0.74);
+  --ig-gray-900: rgba(255, 255, 255, 0.87);
 }
 ```
 
-`grays` と `surface` カラー バリアントはほとんどのコンポーネントで使用されているため、外観全体に大きな影響を与えます。 
+`gray` と `surface` カラー バリアントはほとんどのコンポーネントで使用されているため、外観全体に大きな影響を与えます。 
 
 ## その他のカラー
 
-ここまでで、`primary`、`secondary`、`greys`、`surface` のカラー バリアントと、それらをオーバーライドする方法を説明しました。さらに 4 つのカラーがあります - `info`、`success`、`warn`、`error`。通常、異なる状態のカラーを設定するために使用されます。たとえば、`igx-input-group` コンポーネントは、入力検証状態でこれらのカラーを使用します。
+ここまでで、`primary`、`secondary`、`gray`、`surface` のカラー バリアントと、それらをオーバーライドする方法を説明しました。さらに 4 つのカラーがあります - `info`、`success`、`warn`、`error`。通常、異なる状態のカラーを設定するために使用されます。たとえば、`igx-input-group` コンポーネントは、入力検証状態でこれらのカラーを使用します。
 
 ```css
 :root {
-  --igx-info-500: blue;
-  --igx-success-500: green;
-  --igx-warn-500: orange;
-  --igx-error-500: red;
+  --ig-info-500: blue;
+  --ig-success-500: green;
+  --ig-warn-500: orange;
+  --ig-error-500: red;
 }
 ```
 

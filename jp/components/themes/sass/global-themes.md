@@ -97,7 +97,7 @@ $allowed: (igx-avatar, igx-badge);
 
 ## 明暗テーマ (Light/Dark)
 
-`theme` ミックスインに加えグローバル テーマ ミックスインを追加しました。**明暗**テーマのブート ストラップにグローバル テーマ ミックスインが含まれます。これらのミックスイン は `igx-light-theme` と `dark-theme` です。
+`theme` ミックスインに加えグローバル テーマ ミックスインを追加しました。**明暗**テーマのブート ストラップにグローバル テーマ ミックスインが含まれます。これらのミックスイン は `light-theme` と `dark-theme` です。
 
 明暗テーマを作成する方法を示すショーケースです。
 
@@ -123,7 +123,7 @@ Ignite UI for Angular には、事前定義されたテーマのセットから�
 | テーマ                                                                        | ミックスイン                                                                                             |  スキーマ                   |  カラー パレット                                            | 利用可能バージョン |
 |------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|---------------------------|-----------------------------------------------------------|----------------------|
 | [**Material (base)**](presets/material.md)                           |  [theme()]({environment:sassApiUrl}/index.html#mixin-theme)                               | `$light-schema          ` | $default-palette                                          |      **すべて**         |
-| [**Material (light)**](presets/material.md#material-light-theme)     |  [igx-light-theme()]({environment:sassApiUrl}/index.html#mixin-igx-light-theme)                   | `$light-material-schema          ` | $light-material-palette                                          |      **6.2 +**       |
+| [**Material (light)**](presets/material.md#material-light-theme)     |  [light-theme()]({environment:sassApiUrl}/index.html#mixin-light-theme)                   | `$light-material-schema          ` | $light-material-palette                                          |      **6.2 +**       |
 | [**Material (dark)**](presets/material.md#material-dark-theme)       |  [dark-theme()]({environment:sassApiUrl}/index.html#mixin-dark-theme)                     | `$dark-material-schema           ` | $dark-material-palette                                             |      **6.2 +**       |
 | [**Fluent**](presets/fluent.md)                                      |  [fluent-light-theme()]({environment:sassApiUrl}/index.html#mixin-fluent-light-theme)                 | `$light-fluent-schema   ` | $light-fluent-excel-palette <br> $light-fluent-word-palette           |      **8.2 +**       |
 | [**Fluent (dark)**](presets/fluent.md#fluent-dark-theme)             |  [fluent-dark-theme()]({environment:sassApiUrl}/index.html#mixin-fluent-dark-theme)       | `$dark-fluent-schema    ` | $dark-fluent-excel-palette <br> $dark-fluent-word-palette |      **8.2 +**       |
@@ -167,7 +167,7 @@ Ignite UI for Angular 13 より前のバージョンでは、`$igx-legacy-suppor
 
 ## API の概要
 * [Global テーマ]({environment:sassApiUrl}/index.html#mixin-theme)
-* [Light テーマ]({environment:sassApiUrl}/index.html#mixin-igx-light-theme)
+* [Light テーマ]({environment:sassApiUrl}/index.html#mixin-light-theme)
 * [Dark テーマ]({environment:sassApiUrl}/index.html#mixin-dark-theme)
 * [パレット]({environment:sassApiUrl}/index.html#function-igx-palette)
 

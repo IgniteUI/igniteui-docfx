@@ -72,7 +72,7 @@ Sass が適切でない場合は、[カスタム CSS プロパティ](https://de
 }
 ```
 
-これらのカラー変数の名前を分解してみましょう。`igx` プレフィックスは、この変数が Ignite UI for Angular テーマの一部であることを示す一意の識別子で、`primary` が`カラー` パレットの名前であり、`500` がカラー `バリアント`です。ドキュメントの [パレット](./palettes.md) セクションでパレットについて詳しく見ていきます。今のところ、知っておく必要があるのは、`500` カラー バリエーションから生成されたさまざまな色合い/バリエーションを含むいくつかのカラー (primary、secondary、success、info など) があることです。`500` バリアントはメイン カラー バリエーションと見なされます。一部のカラー バリエーションはライトですが、他のカラー バリエーションはダークです。
+これらのカラー変数の名前を分解してみましょう。`ig` プレフィックスは、この変数が Ignite UI for Angular テーマの一部であることを示す一意の識別子で、`primary` が `color` パレットの名前であり、`500` がカラー `variant` です。ドキュメントの [パレット](./palettes.md) セクションでパレットについて詳しく見ていきます。今のところ、知っておく必要があるのは、`500` カラー バリエーションから生成されたさまざまな色合い/バリエーションを含むいくつかのカラー (primary、secondary、success、info など) があることです。`500` バリアントはメイン カラー バリエーションと見なされます。一部のカラー バリエーションはライトですが、他のカラー バリエーションはダークです。
 
 このアプローチに従うと、パレット全体を完全に見直すことができます。
 
@@ -85,12 +85,12 @@ Sass が適切でない場合は、[カスタム CSS プロパティ](https://de
 ```css
 /* styles.css */
 :root {
-  --igx-elevation-0: none;
-  --igx-elevation-1: 0 1px 3px 0 rgba(0, 0, 0, 0.26),
+  --ig-elevation-0: none;
+  --ig-elevation-1: 0 1px 3px 0 rgba(0, 0, 0, 0.26),
                     0 1px 1px 0 rgba(0, 0, 0, 0.12),
                     0 2px 1px -1px rgba(0, 0, 0, 0.08);
   /* ... */
-  --igx-elevation-24: 0 11px 15px -7px rgba(0, 0, 0, 0.26),
+  --ig-elevation-24: 0 11px 15px -7px rgba(0, 0, 0, 0.26),
                   0 24px 38px 3px rgba(0, 0, 0, 0.12),
                   0 9px 46px 8px rgba(0, 0, 0, 0.08);
 }
@@ -124,8 +124,7 @@ igx-avatar {
 
 ```css
 igx-avatar {
-  --background: var(--igx-avatar-background, var(--igx-grays-400));
-  background: var(--background);
+  --background: var(--igx-avatar-background, var(--ig-gray-400));
 }
 ```
 

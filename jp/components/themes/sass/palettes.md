@@ -10,7 +10,7 @@ _language: ja
 <div class="divider"></div>
 
 ## 概要
-Ignite UI for Angular のコンテキストでのパレットは [Sass Maps](https://sass-lang.com/documentation/values/maps) として宣言され、マップのキーはパレットのカラー (`primary`、`secondary`、`grays` など) になります。各カラーはマップ自体であり、すべてのカラー バリアントがキーとしてリストされます。これらのカラー バリアントに割り当てられる値は、すべてのコンポーネント テーマで使用される実際のカラーです。すべてのパレット マップは、パレット関数によってプログラムで生成されます。この関数は、`primary`、`secondary`、`grays`、`surface`、`info`、`success`、`warn`、および `error` カラーの引数を受け取ります。`primary` カラーは通常、ブランド カラーです。`igx-navbar` など、主に静的要素をスタイル設定するために使用されます。secondary カラーは、ボタン、スイッチ、スライダーなどの操作可能な要素で使用される secondary カラーです。必須の引数は、`primary` と `secondary` カラーの引数です。surface カラーは、カード、メニュー、日付/タイムピッカー、バナーシートなどのようないくつかのコンポーネントの '表面' にカラーを付けるために使われます。デフォルトでは、`surface`、`grays`、`info`、`success`、`warn`、`error` は、定義済みのカラーのセットです。
+Ignite UI for Angular のコンテキストでのパレットは [Sass Maps](https://sass-lang.com/documentation/values/maps) として宣言され、マップのキーはパレットのカラー (`primary`、`secondary`、`gray` など) になります。各カラーはマップ自体であり、すべてのカラー バリアントがキーとしてリストされます。これらのカラー バリアントに割り当てられる値は、すべてのコンポーネント テーマで使用される実際のカラーです。すべてのパレット マップは、パレット関数によってプログラムで生成されます。この関数は、`primary`、`secondary`、`gray`、`surface`、`info`、`success`、`warn`、および `error` カラーの引数を受け取ります。`primary` カラーは通常、ブランド カラーです。`igx-navbar` など、主に静的要素をスタイル設定するために使用されます。secondary カラーは、ボタン、スイッチ、スライダーなどの操作可能な要素で使用される secondary カラーです。必須の引数は、`primary` と `secondary` カラーの引数です。surface カラーは、カード、メニュー、日付/タイムピッカー、バナーシートなどのようないくつかのコンポーネントの '表面' にカラーを付けるために使われます。デフォルトでは、`surface`、`gray`、`info`、`success`、`warn`、`error` は、定義済みのカラーのセットです。
 
 カラー パレットを作成するには、グローバル テーマの基本ファイルとなる _scss_ ファイルを作成します。_"_variables.scss"_ と呼びます。
 
@@ -28,7 +28,7 @@ $melon-palette: palette(
 
 すべてのカラー バリアントを含むパレットを作成しました。各バリアントには自動的に作成されたテキストのコントラスト カラーが含まれます。CSS 変数を使用したパレットに関するドキュメントをまだ読んでいない場合は、[こちら](../palettes.md)を参照してください。パレットのすべてのカラー バリアントに関する情報が含まれています。
 
-`igx-palette` 関数は、ビルド時に `.scss` ドキュメントで再利用できるカラーを作成するために内部的に多くの機能を果たします。この関数は豊かなカラー マップを作成するという点で優れていますが、カラー バリアントを生成するためのアルゴリズムは厳密であり、ニーズに完全に一致しない場合があります。コンポーネント テーマは、パレットの生成方法に関係なく、マップの形状のみに関係します。
+`palette` 関数は、ビルド時に `.scss` ドキュメントで再利用できるカラーを作成するために内部的に多くの機能を果たします。この関数は豊かなカラー マップを作成するという点で優れていますが、カラー バリアントを生成するためのアルゴリズムは厳密であり、ニーズに完全に一致しない場合があります。コンポーネント テーマは、パレットの生成方法に関係なく、マップの形状のみに関係します。
 
 パレットを手動で作成する場合、または関数を生成するパレットを作成する場合は、パレット マップを取得します。
 
@@ -94,7 +94,7 @@ $handmade-palette: (
         'A700': to-hsl(#f38e28),
         'A700-contrast': white
     ),
-    grays: (
+    gray: (
         50: to-hsl(#fff),
         '50-contrast': black,
         100: to-hsl(#fafafa),
@@ -139,19 +139,19 @@ $handmade-palette: (
 );
 
 :root {
-    --igx-primary-a: 1;
-    --igx-secondary-a: 1;
-    --igx-info-a: 1;
-    --igx-success-a: 1;
-    --igx-warn-a: 1;
-    --igx-error-a: 1;
-    --igx-grays-a: 1;
-    --igx-surface-a: 1;
+    --ig-primary-a: 1;
+    --ig-secondary-a: 1;
+    --ig-info-a: 1;
+    --ig-success-a: 1;
+    --ig-warn-a: 1;
+    --ig-error-a: 1;
+    --ig-gray-a: 1;
+    --ig-surface-a: 1;
 }
 ```
 <div class="divider"></div>
 
-`to-hsl()` 関数は、色空間に関係なく色を受け取り、その色相、彩度、明度をカンマ区切りのリストで返します。このリストは、パレット内の各シェードの CSS 変数を宣言するときに使用されます。各パレット カラー (primary、secondary、grays など) の `alpha` 値は個別に初期化する必要があります。
+`to-hsl()` 関数は、色空間に関係なく色を受け取り、その色相、彩度、明度をカンマ区切りのリストで返します。このリストは、パレット内の各シェードの CSS 変数を宣言するときに使用されます。各パレット カラー (primary、secondary、gray など) の `alpha` 値は個別に初期化する必要があります。
 
 ## 事前定義されたパレット
 事前定義されたライト パレットとダーク パレットを提供します。これをスキーマと一緒に使用して、コンポーネントのテーマを作成できます。
@@ -221,7 +221,7 @@ $default-palette: $my-palette;
 
 ## グレースケール カラー
 
-`primary` と `secondary` パレットのように、グレーの色合いを生成するために使用される `igx-palette` 関数のカラーを提供できます。`grays` パレットの生成に使用されるデフォルトのカラーは `#000` (`black`)。`grays` のカラー バリアントは、コンポーネント全体のテキストのカラーを設定するために使用されます。値の変更は、アプリケーションの背景または表面のカラーを変更する場合に役立ちます。たとえば、アプリケーションで暗い背景を使用する場合、`grays` カラーを `white` に設定すると、すべてのテキストのカラーは `white` の色合いに基づいて強制されます。
+`primary` と `secondary` パレットのように、グレーの色合いを生成するために使用される `palette` 関数のカラーを提供できます。`gray` パレットの生成に使用されるデフォルトのカラーは `#000` (`black`)。`gray` のカラー バリアントは、コンポーネント全体のテキストのカラーを設定するために使用されます。値の変更は、アプリケーションの背景または表面のカラーを変更する場合に役立ちます。たとえば、アプリケーションで暗い背景を使用する場合、`gray` カラーを `white` に設定すると、すべてのテキストのカラーは `white` の色合いに基づいて強制されます。
 
 グレーのの色合いに `white` を使用するパレットを生成するには:
 
@@ -234,7 +234,7 @@ $grayscale-base: #fff; /* Used to generate shades of gray */
 $my-color-palette: palette(
     $primary: $company-color,
     $secondary: $secondary-color,
-    $grays: $grayscale-base
+    $gray: $grayscale-base
 );
 ```
 
@@ -242,7 +242,7 @@ $my-color-palette: palette(
 
 ## カラー バリアント
 
-`igx-color` 関数を提供します。関数は、`palette`、`color`、および `variant` の 3 つの引数を受け取ります。
+`color` 関数を提供します。関数は、`palette`、`color`、および `variant` の 3 つの引数を受け取ります。
 
 ```scss
 // Get the primary 500 color variant from $default-palette
@@ -277,7 +277,7 @@ $my-warning-color: color($my-palette, 'warn');
 
 ```scss
 $my-primary-800: color($my-palette, 'primary', 600);
-$my-primary-800-text:contrast-color($my-palette, 'primary', 600);
+$my-primary-800-text: contrast-color($my-palette, 'primary', 600);
 
 // sample usage
 .my-awesome-article {
@@ -317,7 +317,7 @@ CSS クラスを使用して Web 要素 (テキストや背景など) にカラ�
 
 ## CSS 変数
 
-ドキュメントの [CSS 変数](../palettes.md)セクションでカラー パレットについて読むと、すべてのパレット カラーが CSS 変数として含まれています。`theme` ミックスインを使用してテーマを生成するたびに内部で行います。`theme` は本体で `palette-vars` ミックスインを呼び出します。パレットを取得し、パレット内のカラーを CSS 変数に変換します。 
+ドキュメントの [CSS 変数](../palettes.md)セクションでカラー パレットについて読むと、すべてのパレット カラーが CSS 変数として含まれています。`theme` ミックスインを使用してテーマを生成するたびに内部で行います。`theme` は本体で `palette` ミックスインを呼び出します。パレットを取得し、パレット内のカラーを CSS 変数に変換します。 
 
 このパレットは、カスタム パレット カラーを CSS 変数として含める場合に使用します。
 
@@ -329,13 +329,13 @@ $my-palette: palette(
   $secondary: #f96a88,
 );
 
-@include palette-vars($my-palette);
+@include palette($my-palette);
 ```
 
 ## API リファレンス
-* [パレット]({environment:sassApiUrl}/index.html#function-igx-palette)
-* [パレット カラーの取得]({environment:sassApiUrl}/index.html#function-igx-color)
-* [コントラスト カラーの取得]({environment:sassApiUrl}/index.html#function-igx-contrast-color)
+* [パレット]({environment:sassApiUrl}/index.html#function-palette)
+* [パレット カラーの取得]({environment:sassApiUrl}/index.html#function-color)
+* [コントラスト カラーの取得]({environment:sassApiUrl}/index.html#function-contrast-color)
 * [カラー クラスの生成]({environment:sassApiUrl}/index.html#mixin-color-classes)
 * [スキーマ](./schemas.md)
 
