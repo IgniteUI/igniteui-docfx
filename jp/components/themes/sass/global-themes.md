@@ -40,10 +40,10 @@ _language: ja
 企業のプライマリおよびセカンダリの色を使用するカスタム グローバル テーマを作成します。
 
 ```scss
-// テーマ モジュールをインポートします
+// Import the theming module
 @use "igniteui-angular/theming" as *;
 
-// 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 
 $primary-color: #2ab759;
@@ -54,11 +54,11 @@ $my-color-palette: palette(
     $secondary: $secondary-color
 );
 
-// 重要: 必ず最初に core を含めてください。
+// IMPORTANT: Make sure you always includecore first!
 @include core();
 // Add the typography styles before the main theme.
 @include typography();
-// 生成したカラー パレットを theme ミックスインに渡します.
+// Pass the color palette we generated to thetheme mixin.
 @include theme($my-color-palette);
 ```
 
@@ -135,13 +135,13 @@ Ignite UI for Angular には、事前定義されたテーマのセットから�
 > [!NOTE]
 > すべてのハイレベルなテーマ ミックスインは、基本の `theme` ミックスインをラップすることに注意してください。
 
-すべてのテーマ ミックスインは、独自のテーマを作成するための開始ポイントとして使用できます。`igx-bootstrap-theme` ミックスインを使用して、新しいテーマを作成しましょう。
+すべてのテーマ ミックスインは、独自のテーマを作成するための開始ポイントとして使用できます。`bootstrap-light-theme` ミックスインを使用して、新しいテーマを作成しましょう。
 
 ```scss
-// テーマ モジュールをインポートします
+// Import the theming module
 @use "igniteui-angular/theming" as *;
 
-// 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 
 $primary-color: #b71053;
@@ -152,9 +152,9 @@ $my-color-palette: palette(
     $secondary: $secondary-color
 );
 
-// 重要: 必ず最初に core を含めてください。
+// IMPORTANT: Make sure you always includecore first!
 @include core();
-// Pass the color palette we generated to the bootstrap-theme mixin
+// Pass the color palette we generated to thebootstrap-theme mixin
 @include bootstrap-light-theme($my-color-palette);
 ```
 

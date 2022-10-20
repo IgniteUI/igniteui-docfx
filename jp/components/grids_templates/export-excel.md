@@ -120,7 +120,7 @@ export class AppModule {}
 <button (click)="exportButtonHandler()">Export @@igxName to Excel</button>
 ```
 
-エクスポーター サービスへのアクセスは、コンポーネントのコンストラクターで [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) 型の引数を定義し、Angular フレームワークはサービスのインスタンスを提供します。データを MS Excel 形式でエクスポートするには、エクスポーター サービスの [`export`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#export) メソッドを呼び出して@@igxNameコンポーネントを最初の引数として渡します。
+エクスポーター サービスへのアクセスは、コンポーネントのコンストラクターで [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) 型の引数を定義し、Angular フレームワークはサービスのインスタンスを提供します。データを MS Excel 形式でエクスポートするには、エクスポーター サービスの [`export`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#export) メソッドを呼び出して @@igxName コンポーネントを最初の引数として渡します。
 
 以下のコードはコンポーネントの typescript ファイルでエクスポート処理を実行します。
 
@@ -165,7 +165,7 @@ public exportButtonHandler() {
 @@if (igxName === 'IgxGrid') {
 ## グループ化されたデータのエクスポート
 
-グループ化されたデータをエクスポートするには、@@igComponent を 1 つ以上の列でグループ化する必要があります。ブラウザーは、選択した列でグループ化された MSExcel 形式の @@igComponent コンポーネントからのデータを含む 「ExportedDataFile.xlsx」 という名前のファイルをダウンロードします。例:
+グループ化されたデータをエクスポートするには、@@igComponent を 1 つ以上の列でグループ化する必要があります。ブラウザーは、選択した列でグループ化された MSExcel 形式の @@igComponent コンポーネントからのデータを含む「ExportedDataFile.xlsx」という名前のファイルをダウンロードします。例:
 
 
 <code-view style="height: 800px;" 

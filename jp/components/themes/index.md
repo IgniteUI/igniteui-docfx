@@ -54,7 +54,7 @@ styles フォルダーに含まれるテーマの完全なリストは次のと�
 
 ただし、これでテーマの話は終わりではありません。すべてのテーマは Sass ソースからコンパイルされ、強力なテーマ エンジンを使用して構築されています。このエンジンは Sass `mixins` と `functions` で構成されており、その多くは公開されているため、アプリケーションのすべてのコンポーネントを完全に再設計できます。
 
-Sass が適切でない場合は、[カスタム CSS プロパティ](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)、または CSS 変数として知られているものを使用してコンパイルされたテーマを簡単に変更できるようにしました。Sass が適切で、コンポーネントのテーマを微調整したい場合は、心配しないでください。CSS としてもう一方の端に来るものを完全に制御できるように、テーマ エンジンのすべての部分のドキュメントを提供しています。
+Sass が適切でない場合は、[カスタム CSS プロパティ](https://developer.mozilla.org/ja/docs/Web/CSS/Using_CSS_custom_properties)、または CSS 変数として知られているものを使用してコンパイルされたテーマを簡単に変更できるようにしました。Sass が適切で、コンポーネントのテーマを微調整したい場合は、心配しないでください。CSS としてもう一方の端に来るものを完全に制御できるように、テーマ エンジンのすべての部分のドキュメントを提供しています。
 
 ## グローバル変数
 
@@ -96,7 +96,7 @@ Sass が適切でない場合は、[カスタム CSS プロパティ](https://de
 }
 ```
 
-これらは基本的に積層された CSS [`box-shadow`](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) 宣言です。それらを他の有効な `box-shadow` 値に置き換えることができます。エレベーション レベルの数値が高いほど、シャドウが大きくなります。この場合も、コンポーネントごとに異なるエレベーション レベルが使用されます。コンポーネントが使用するエレベーション レベルを確認するには、[コンポーネントのドキュメント]({environment:sassApiUrl}/index.html#variable-_light-avatar)を参照してください。ドキュメントの[エレベーション](./elevations.md)でエレベーションを詳しく見ていきます。
+これらは基本的に積層された CSS [`box-shadow`](https://developer.mozilla.org/ja/docs/Web/CSS/box-shadow) 宣言です。それらを他の有効な `box-shadow` 値に置き換えることができます。エレベーション レベルの数値が高いほど、シャドウが大きくなります。この場合も、コンポーネントごとに異なるエレベーション レベルが使用されます。コンポーネントが使用するエレベーション レベルを確認するには、[コンポーネントのドキュメント]({environment:sassApiUrl}/index.html#variable-_light-avatar)を参照してください。ドキュメントの[エレベーション](./elevations.md)でエレベーションを詳しく見ていきます。
 
 ## コンポーネント変数
 
@@ -125,6 +125,7 @@ igx-avatar {
 ```css
 igx-avatar {
   --background: var(--igx-avatar-background, var(--ig-gray-400));
+  background: var(--background);
 }
 ```
 

@@ -2,6 +2,7 @@
 title: Angular Material のテーマ
 _description: Ignite UI for Angular テーマ エンジンを使用すると、Angular Material ライブラリなどの他のテーマ ライブラリからインポートされた外部コンポーネントと一緒に簡単に使用できます。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, テーマ, Angular Material, Material コンポーネント
+_language: ja
 ---
 
 # Angular Material のテーマ
@@ -88,12 +89,13 @@ Ignite UI テーマ エンジンを使用してコンポーネントのスタイ
 
 ```scss
 // _variables.scss
+```scss
 @use "igniteui-angular/theming" as *;
 @use "@angular/material/theming" as *;
 
-// 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-```
+``` 
 
 ### カラー パレット
 
@@ -198,13 +200,8 @@ $custom-mat-light-theme: mat-light-theme(
 前のアプローチに従って、ダーク モードのマテリアル パレットを作成します。今回は、カスタムの `igx-palette` も定義します。
 
 ```scss
-<<<<<<< HEAD
 // Custompalette
 $custom-dark-palette: palette(
-=======
-// Custom palette
-$custom-dark-palette:palette(
->>>>>>> 5bf5d3a313a94d7c53f89e96f276d9ce21c18c37
     $primary: #011627,
     $secondary: #72da67,
     $gray: #fff,

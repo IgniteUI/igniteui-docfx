@@ -81,7 +81,7 @@ Ignite UI for Angular は、`primary`、`secondary`、`gray`、`info`、`success
 }
 ```
 
-すべてのカラー バリアントは、`-ig-primary-h`、`-ig-primary-s`、`--ig-primary-l`、および `--ig-primary-a` の 4 つのベース変数から派生しています。これらの変数はそれぞれ、単カラーの [HSLA](https://drafts.csswg.org/css-color/#the-hsl-notation) 部分を保持します。HSLA は、`hue` (色相)、`saturation` (彩度)、`lightness` (明度)、および `alpha` (アルファ) を表します。カラーを説明するために使用されるもう 1 つのカラー スキームです。`primary`、`secondary`、その他のカラーのすべてのバリアントを実行時に変更できるため、この方法を使用することにしました。
+すべてのカラー バリアントは、`--ig-primary-h`、`--ig-primary-s`、`--ig-primary-l`、および `--ig-primary-a` の 4 つのベース変数から派生しています。これらの変数はそれぞれ、単カラーの [HSLA](https://drafts.csswg.org/css-color/#the-hsl-notation) 部分を保持します。HSLA は、`hue` (色相)、`saturation` (彩度)、`lightness` (明度)、および `alpha` (アルファ) を表します。カラーを説明するために使用されるもう 1 つのカラー スキームです。`primary`、`secondary`、その他のカラーのすべてのバリアントを実行時に変更できるため、この方法を使用することにしました。
 
 ## パレットの定義
 
