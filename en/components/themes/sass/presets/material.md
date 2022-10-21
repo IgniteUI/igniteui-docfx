@@ -7,7 +7,7 @@ The Material theme is the default theme in Ignite UI for Angular. To use it incl
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 @include core();
-@include theme($default-palette);
+@include theme($light-material-palette);
 ```
 
 ## Material Light Theme
@@ -17,7 +17,7 @@ The Material theme is the default theme in Ignite UI for Angular. To use it incl
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 @include core();
-@include light-theme($default-palette);
+@include light-theme($light-material-palette);
 ```
 
 ## Material Dark Theme
@@ -27,7 +27,7 @@ The Material theme is the default theme in Ignite UI for Angular. To use it incl
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 @include core();
-@include dark-theme($default-palette);
+@include dark-theme($dark-material-palette);
 ```
 
 Both `light-theme` and `dark-theme` mixins includes the `theme` mixin.

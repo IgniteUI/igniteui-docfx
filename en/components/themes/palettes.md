@@ -62,13 +62,13 @@ Here's an excerpt of the `primary` color as declared in the Light Material Palet
                     );
   --ig-primary-100: hsla(
                       var(--ig-primary-h), 
-                      calc(var(--ig-primary-s) / 1.25),
+                      calc(var(--ig-primary-s) * 0.8),
                       calc(var(--ig-primary-l) * 1.66),
                       var(--ig-primary-a)
                     );
   --ig-primary-200: hsla(
                       var(--ig-primary-h),
-                      calc(var(--ig-primary-s) * .64),
+                      calc(var(--ig-primary-s) * 0.64),
                       calc(var(--ig-primary-l) * 1.43),
                       var(--ig-primary-a)
                     );
@@ -80,7 +80,7 @@ Here's an excerpt of the `primary` color as declared in the Light Material Palet
 }
 ```
 
-All colors variants are derived from 4 base variables - `--ig-primary-h`, `--ig-primary-s`, `--ig-primary-l`, and `--ig-primary-a`. Each one of these variables holds the [HSLA](https://drafts.csswg.org/css-color/#the-hsl-notation) parts for a single color. HSLA stands for `hue`, `saturation`, `lightness`, and `alpha`. It's another color scheme used to describe colors. We decided to use this approach as it allows us to modify all variants of the `primary`, `secondary` and other colors at runtime.
+All primary colors variants are derived from 4 base variables - `--ig-primary-h`, `--ig-primary-s`, `--ig-primary-l`, and `--ig-primary-a`. Each one of these variables holds the [HSLA](https://drafts.csswg.org/css-color/#the-hsl-notation) parts for a single color. HSLA stands for `hue`, `saturation`, `lightness`, and `alpha`. It's another color scheme used to describe colors. We decided to use this approach as it allows us to modify all variants of the `primary`, `secondary` and other colors at runtime.
 
 ## Defining Palettes
 
@@ -99,48 +99,24 @@ If you wanted to change the color variants for a color from the palette, you can
 
 This will automatically update all the other primary variants.
 
-You will notice that color variants for each color are monochromatic. This is because all color variants are generated from the HSLA variables. You can override individual colors only using any color scheme:
-
-```css
-:root {
-  --ig-primary-600: darkorange;
-}
-```
-
-Be cautious when doing this:
-
-```css
-:root {
-  --ig-primary-500: orange;
-  --ig-primary-600: blue;
-}
-```
-
-It may result in unexpected results, as some component themes use more than one color variant. We designed all component themes around monochromatic palettes.
+You will notice that color variants for each color are monochromatic. This is because all color variants are generated from the HSLA variables.
 
 ## Scoping
 
 We've seen that overriding colors in the palette is relatively easy. We can update the _global_ palette by scoping color variants to the `:root` selector in the `styles.css` file of our application:
 
-Let's say your corporate primary color is `#9f349c` and you want to create primary variants for it. One option would be to use the [Material Color Tool](https://material.io/design/color/the-color-system.html#tools-for-picking-colors) to generate all color variants for you. Here's how we will declare the produced colors by the tool:
+Let's say your corporate primary color is `#9f349c` and you want to create primary variants for it. Here's how you would go about doing this.
+First get the HEX representation of the color in the HSLA color space. In this case it's 302deg for hue, 51% for saturation, 41% for lightness and 1 for alpha. Having derived the HSLA values, all you need to do to update the primary palette to this color is replace the global h, s, and l values for the primary palette:
 
 ```css
 :root {
-  --ig-primary-50: #f3e6f2;
-  --ig-primary-100: #e2c0e0;
-  --ig-primary-200: #d096cd;
-  --ig-primary-300: #d096cd;
-  --ig-primary-400: #bd6db9;
-  --ig-primary-500: #9f349c;
-  --ig-primary-600: #923095;
-  --ig-primary-700: #81298d;
-  --ig-primary-800: #722584;
-  --ig-primary-900: #561d74;
+  --ig-primary-h: 302deg;
+  --ig-primary-s: 51%;
+  --ig-primary-l: 41%;
 }
 ```
-This approach disregards the `calc` function we use for coming up with color variants from HSLA scheme at runtime, however, it allows you to specify a hand-picked palette.
 
-The Material Color Tool doesn't give you the contrast color for each color variant. There are many tools out there that will help you determine if a specific color has enough contrast when used in combination with another color. You can use the built-in contrast checker in Chrome when determining the contrast color you want to pick for each color variant. We provide a Sass function for generating color palettes at build-time. If you prefer that we generate all color variants and their contrast colors for you from your own colors, check out the [Palettes with Sass](./sass/palettes.md) section of the documentation.
+This will not automatically calculate the contrast color for each primary color variant. There are many tools out there that will help you determine if a specific color has enough contrast when used in combination with another color. You can use the built-in contrast checker in Chrome when determining the contrast color you want to pick for each color variant. We provide a Sass function for generating color palettes at build-time. If you prefer that we generate all color variants and their contrast colors for you from your own colors, check out the [Palettes with Sass](./sass/palettes.md) section of the documentation.
 
 Apart from having a single global palette, you can also create several palettes scoped to other CSS selectors. For example, we can have a blue and red palette scoped to class selectors:
 
@@ -172,62 +148,53 @@ Then you can simply overhaul the colors in your application by changing the valu
 
 This approach works for overriding palette colors for individual components as well. In some instances, you don't want to create multiple palettes, but you would want to change a palette color used in component.
 
-Let's look at the button, calendar, and the input group component themes. They all use the _100_ variant of the _gray_ color as their disabled background. Now, we can customize the theme for each component by overriding the individual properties responsible for setting the disabled background or we could change the disabled background color for all three in one fell swoop by overriding the _gray 100_ palette color for all three:
+Let's look at the material avatar component theme. It uses the _400_ variant of the _gray_ color for its background. Now, we can customize the theme by overriding the property responsible for setting the background, or we could change the disabled background color for it by overriding the _gray 400_ palette color:
 
 ```css
-igx-avatar,
-igx-button,
-igx-calendar {
-  --ig-gray-100: lightgray;
+igx-avatar {
+  --ig-gray-400: 146deg, 36%, 64%;
 }
 ```
 
 ## Dark vs. Light
 
 >[!WARNING]
-> The colors that have the biggest impact on foreground and background colors are `gray` and `surface`. These two colors will be displayed against one another in most cases. For that reason the `surface` color should always contrast the `gray`. You can use the `text-contrast` function to automatically retreive contrast colors.
+> The colors that have the biggest impact on foreground and background colors are `gray` and `surface`. These two colors will be displayed against one another in most cases. For that reason the `surface` color should always contrast the `gray`.
 
 Palettes in Ignite UI for Angular dictate whether a theme is going to be light or dark. The two colors that have the biggest impact on that are `gray` and `surface`. See, the `gray` color variants in all themes are based on either a very light color shade, like `#fff`, or a very dark one like `#222`. Light themes have `gray` variants based on dark shades of gray, while dark themes are the opposite - all `gray` variants are a shade of white. These `gray` colors will be displayed against another color, usually the `surface` color. The `surface` color should always be on the opposite end of the `gray` in the gray scale to ensure themes look good.
 
-To make this a bit clearer, below is the complete list of all `gray` and `surface` color variants in both a light and a dark theme as represented in the RGBA color space.
+To make this a bit clearer, below is a list of some `gray` and `surface` color variants in both a light and a dark theme;
 
 *Material Light:*
 ```css
 :root {
-  /* surface is set to white */
-  --ig-surface-500: #fff;
+  /* surface is set to white, i.e. ligthness 100% */
+  --ig-surface-h: 0deg;
+  --ig-surface-s: 0%;
+  --ig-surface-l: 100%;
+  --ig-surface-a: 1;
+  --ig-gray-h: 0deg;
 
   /* grays are based on black to contrast the surface color */
-  --ig-gray-50: rgba(0, 0, 0, 0.02);
-  --ig-gray-100: rgba(0, 0, 0, 0.04);
-  --ig-gray-200: rgba(0, 0, 0, 0.08);
-  --ig-gray-300: rgba(0, 0, 0, 0.12);
-  --ig-gray-400: rgba(0, 0, 0, 0.26);
-  --ig-gray-500: rgba(0, 0, 0, 0.38);
-  --ig-gray-600: rgba(0, 0, 0, 0.54);
-  --ig-gray-700: rgba(0, 0, 0, 0.62);
-  --ig-gray-800: rgba(0, 0, 0, 0.74);
-  --ig-gray-900: rgba(0, 0, 0, 0.87);
+  --ig-gray-h: 0%;
+  --ig-gray-s: 0%;
+  --ig-gray-900: var(--ig-gray-h), var(--ig-gray-s), 13%;
 }
 ```
 
 *Material Dark:*
 ```css
 :root {
-  /* surface is a dark shade of gray */
-  --ig-surface-500: #222;
+  /* surface is a dark shade of gray, i.e. lightness only at 13% */
+  --ig-surface-h: 0deg;
+  --ig-surface-s: 0%;
+  --ig-surface-l: 13%;
+  --ig-surface-a: 1;
 
   /* grays are based on white to contrast the surface color */
-  --ig-gray-50: rgba(255, 255, 255, 0.02);
-  --ig-gray-100: rgba(255, 255, 255, 0.04);
-  --ig-gray-200: rgba(255, 255, 255, 0.08);
-  --ig-gray-300: rgba(255, 255, 255, 0.12);
-  --ig-gray-400: rgba(255, 255, 255, 0.26);
-  --ig-gray-500: rgba(255, 255, 255, 0.38);
-  --ig-gray-600: rgba(255, 255, 255, 0.54);
-  --ig-gray-700: rgba(255, 255, 255, 0.62);
-  --ig-gray-800: rgba(255, 255, 255, 0.74);
-  --ig-gray-900: rgba(255, 255, 255, 0.87);
+  --ig-gray-h: 0deg;
+  --ig-gray-s: 0%;
+  --ig-gray-900: var(--ig-gray-h), var(--ig-gray-s), 98%;
 }
 ```
 
@@ -236,15 +203,7 @@ Be mindful when changing the `gray` and `surface` color variants as they are use
 ## Other Colors
 
 So far we've covered the `primary`, `secondary`, `gray`, and `surface` color variants and how you can override them. There are four more colors - `info`, `success`, `warn`, and `error`. They are usually used to set the colors in different states. For example, the `igx-input-group` component uses these colors in its input validation states.
-
-```css
-:root {
-  --ig-info-500: blue;
-  --ig-success-500: green;
-  --ig-warn-500: orange;
-  --ig-error-500: red;
-}
-```
+They can be changed as the first three variants. Just update their `h`, `s`, and `l` variables. 
 
 ## Additional Resources
 
