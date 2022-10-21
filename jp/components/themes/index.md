@@ -54,7 +54,7 @@ styles フォルダーに含まれるテーマの完全なリストは次のと�
 
 ただし、これでテーマの話は終わりではありません。すべてのテーマは Sass ソースからコンパイルされ、強力なテーマ エンジンを使用して構築されています。このエンジンは Sass `mixins` と `functions` で構成されており、その多くは公開されているため、アプリケーションのすべてのコンポーネントを完全に再設計できます。
 
-Sass が適切でない場合は、[カスタム CSS プロパティ](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)、または CSS 変数として知られているものを使用してコンパイルされたテーマを簡単に変更できるようにしました。Sass が適切で、コンポーネントのテーマを微調整したい場合は、心配しないでください。CSS としてもう一方の端に来るものを完全に制御できるように、テーマ エンジンのすべての部分のドキュメントを提供しています。
+Sass が適切でない場合は、[カスタム CSS プロパティ](https://developer.mozilla.org/ja/docs/Web/CSS/Using_CSS_custom_properties)、または CSS 変数として知られているものを使用してコンパイルされたテーマを簡単に変更できるようにしました。Sass が適切で、コンポーネントのテーマを微調整したい場合は、心配しないでください。CSS としてもう一方の端に来るものを完全に制御できるように、テーマ エンジンのすべての部分のドキュメントを提供しています。
 
 ## グローバル変数
 
@@ -72,7 +72,7 @@ Sass が適切でない場合は、[カスタム CSS プロパティ](https://de
 }
 ```
 
-これらのカラー変数の名前を分解してみましょう。`igx` プレフィックスは、この変数が Ignite UI for Angular テーマの一部であることを示す一意の識別子で、`primary` が`カラー` パレットの名前であり、`500` がカラー `バリアント`です。ドキュメントの [パレット](./palettes.md) セクションでパレットについて詳しく見ていきます。今のところ、知っておく必要があるのは、`500` カラー バリエーションから生成されたさまざまな色合い/バリエーションを含むいくつかのカラー (primary、secondary、success、info など) があることです。`500` バリアントはメイン カラー バリエーションと見なされます。一部のカラー バリエーションはライトですが、他のカラー バリエーションはダークです。
+これらのカラー変数の名前を分解してみましょう。`ig` プレフィックスは、この変数が Ignite UI for Angular テーマの一部であることを示す一意の識別子で、`primary` が `color` パレットの名前であり、`500` がカラー `variant` です。ドキュメントの [パレット](./palettes.md) セクションでパレットについて詳しく見ていきます。今のところ、知っておく必要があるのは、`500` カラー バリエーションから生成されたさまざまな色合い/バリエーションを含むいくつかのカラー (primary、secondary、success、info など) があることです。`500` バリアントはメイン カラー バリエーションと見なされます。一部のカラー バリエーションはライトですが、他のカラー バリエーションはダークです。
 
 このアプローチに従うと、パレット全体を完全に見直すことができます。
 
@@ -85,18 +85,18 @@ Sass が適切でない場合は、[カスタム CSS プロパティ](https://de
 ```css
 /* styles.css */
 :root {
-  --igx-elevation-0: none;
-  --igx-elevation-1: 0 1px 3px 0 rgba(0, 0, 0, 0.26),
+  --ig-elevation-0: none;
+  --ig-elevation-1: 0 1px 3px 0 rgba(0, 0, 0, 0.26),
                     0 1px 1px 0 rgba(0, 0, 0, 0.12),
                     0 2px 1px -1px rgba(0, 0, 0, 0.08);
   /* ... */
-  --igx-elevation-24: 0 11px 15px -7px rgba(0, 0, 0, 0.26),
+  --ig-elevation-24: 0 11px 15px -7px rgba(0, 0, 0, 0.26),
                   0 24px 38px 3px rgba(0, 0, 0, 0.12),
                   0 9px 46px 8px rgba(0, 0, 0, 0.08);
 }
 ```
 
-これらは基本的に積層された CSS [`box-shadow`](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) 宣言です。それらを他の有効な `box-shadow` 値に置き換えることができます。エレベーション レベルの数値が高いほど、シャドウが大きくなります。この場合も、コンポーネントごとに異なるエレベーション レベルが使用されます。コンポーネントが使用するエレベーション レベルを確認するには、[コンポーネントのドキュメント]({environment:sassApiUrl}/index.html#variable-_light-avatar)を参照してください。ドキュメントの[エレベーション](./elevations.md)でエレベーションを詳しく見ていきます。
+これらは基本的に積層された CSS [`box-shadow`](https://developer.mozilla.org/ja/docs/Web/CSS/box-shadow) 宣言です。それらを他の有効な `box-shadow` 値に置き換えることができます。エレベーション レベルの数値が高いほど、シャドウが大きくなります。この場合も、コンポーネントごとに異なるエレベーション レベルが使用されます。コンポーネントが使用するエレベーション レベルを確認するには、[コンポーネントのドキュメント]({environment:sassApiUrl}/index.html#variable-_light-avatar)を参照してください。ドキュメントの[エレベーション](./elevations.md)でエレベーションを詳しく見ていきます。
 
 ## コンポーネント変数
 
@@ -124,7 +124,7 @@ igx-avatar {
 
 ```css
 igx-avatar {
-  --background: var(--igx-avatar-background, var(--igx-grays-400));
+  --background: var(--igx-avatar-background, var(--ig-gray-400));
   background: var(--background);
 }
 ```

@@ -40,10 +40,10 @@ _language: ja
 企業のプライマリおよびセカンダリの色を使用するカスタム グローバル テーマを作成します。
 
 ```scss
-// テーマ モジュールをインポートします
+// Import the theming module
 @use "igniteui-angular/theming" as *;
 
-// 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 
 $primary-color: #2ab759;
@@ -54,11 +54,11 @@ $my-color-palette: palette(
     $secondary: $secondary-color
 );
 
-// 重要: 必ず最初に core を含めてください。
+// IMPORTANT: Make sure you always includecore first!
 @include core();
 // Add the typography styles before the main theme.
 @include typography();
-// 生成したカラー パレットを theme ミックスインに渡します.
+// Pass the color palette we generated to thetheme mixin.
 @include theme($my-color-palette);
 ```
 
@@ -97,7 +97,7 @@ $allowed: (igx-avatar, igx-badge);
 
 ## 明暗テーマ (Light/Dark)
 
-`theme` ミックスインに加えグローバル テーマ ミックスインを追加しました。**明暗**テーマのブート ストラップにグローバル テーマ ミックスインが含まれます。これらのミックスイン は `igx-light-theme` と `dark-theme` です。
+`theme` ミックスインに加えグローバル テーマ ミックスインを追加しました。**明暗**テーマのブート ストラップにグローバル テーマ ミックスインが含まれます。これらのミックスイン は `light-theme` と `dark-theme` です。
 
 明暗テーマを作成する方法を示すショーケースです。
 
@@ -123,7 +123,7 @@ Ignite UI for Angular には、事前定義されたテーマのセットから�
 | テーマ                                                                        | ミックスイン                                                                                             |  スキーマ                   |  カラー パレット                                            | 利用可能バージョン |
 |------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|---------------------------|-----------------------------------------------------------|----------------------|
 | [**Material (base)**](presets/material.md)                           |  [theme()]({environment:sassApiUrl}/index.html#mixin-theme)                               | `$light-schema          ` | $default-palette                                          |      **すべて**         |
-| [**Material (light)**](presets/material.md#material-light-theme)     |  [igx-light-theme()]({environment:sassApiUrl}/index.html#mixin-igx-light-theme)                   | `$light-material-schema          ` | $light-material-palette                                          |      **6.2 +**       |
+| [**Material (light)**](presets/material.md#material-light-theme)     |  [light-theme()]({environment:sassApiUrl}/index.html#mixin-light-theme)                   | `$light-material-schema          ` | $light-material-palette                                          |      **6.2 +**       |
 | [**Material (dark)**](presets/material.md#material-dark-theme)       |  [dark-theme()]({environment:sassApiUrl}/index.html#mixin-dark-theme)                     | `$dark-material-schema           ` | $dark-material-palette                                             |      **6.2 +**       |
 | [**Fluent**](presets/fluent.md)                                      |  [fluent-light-theme()]({environment:sassApiUrl}/index.html#mixin-fluent-light-theme)                 | `$light-fluent-schema   ` | $light-fluent-excel-palette <br> $light-fluent-word-palette           |      **8.2 +**       |
 | [**Fluent (dark)**](presets/fluent.md#fluent-dark-theme)             |  [fluent-dark-theme()]({environment:sassApiUrl}/index.html#mixin-fluent-dark-theme)       | `$dark-fluent-schema    ` | $dark-fluent-excel-palette <br> $dark-fluent-word-palette |      **8.2 +**       |
@@ -135,13 +135,13 @@ Ignite UI for Angular には、事前定義されたテーマのセットから�
 > [!NOTE]
 > すべてのハイレベルなテーマ ミックスインは、基本の `theme` ミックスインをラップすることに注意してください。
 
-すべてのテーマ ミックスインは、独自のテーマを作成するための開始ポイントとして使用できます。`igx-bootstrap-theme` ミックスインを使用して、新しいテーマを作成しましょう。
+すべてのテーマ ミックスインは、独自のテーマを作成するための開始ポイントとして使用できます。`bootstrap-light-theme` ミックスインを使用して、新しいテーマを作成しましょう。
 
 ```scss
-// テーマ モジュールをインポートします
+// Import the theming module
 @use "igniteui-angular/theming" as *;
 
-// 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 
 $primary-color: #b71053;
@@ -152,9 +152,9 @@ $my-color-palette: palette(
     $secondary: $secondary-color
 );
 
-// 重要: 必ず最初に core を含めてください。
+// IMPORTANT: Make sure you always includecore first!
 @include core();
-// Pass the color palette we generated to the bootstrap-theme mixin
+// Pass the color palette we generated to thebootstrap-theme mixin
 @include bootstrap-light-theme($my-color-palette);
 ```
 
@@ -167,7 +167,7 @@ Ignite UI for Angular 13 より前のバージョンでは、`$igx-legacy-suppor
 
 ## API の概要
 * [Global テーマ]({environment:sassApiUrl}/index.html#mixin-theme)
-* [Light テーマ]({environment:sassApiUrl}/index.html#mixin-igx-light-theme)
+* [Light テーマ]({environment:sassApiUrl}/index.html#mixin-light-theme)
 * [Dark テーマ]({environment:sassApiUrl}/index.html#mixin-dark-theme)
 * [パレット]({environment:sassApiUrl}/index.html#function-igx-palette)
 
