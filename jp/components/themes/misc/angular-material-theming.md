@@ -2,6 +2,7 @@
 title: Angular Material のテーマ
 _description: Ignite UI for Angular テーマ エンジンを使用すると、Angular Material ライブラリなどの他のテーマ ライブラリからインポートされた外部コンポーネントと一緒に簡単に使用できます。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, テーマ, Angular Material, Material コンポーネント
+_language: ja
 ---
 
 # Angular Material のテーマ
@@ -88,16 +89,17 @@ Ignite UI テーマ エンジンを使用してコンポーネントのスタイ
 
 ```scss
 // _variables.scss
+```scss
 @use "igniteui-angular/theming" as *;
 @use "@angular/material/theming" as *;
 
-// 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-```
+``` 
 
 ### カラー パレット
 
-Ignite UI for Angular の [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) 関数は、`primary`、`secondary`、`grays` 影の 3 つのサブパレットと、`info`、`success`、`warn`、`error` および `surface` の 5 つの追加カラーを含むカラー パレット マップを生成します。テーマ エンジンは、カラー バリエーションごとに、ビルド時にテキストのコントラスト カラーを自動的に生成します。これもパレットに含まれています。以下に、事前定義されたライト マテリアル パレットを示します:
+Ignite UI for Angular の [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) 関数は、`primary`、`secondary`、`gray` 影の 3 つのサブパレットと、`info`、`success`、`warn`、`error` および `surface` の 5 つの追加カラーを含むカラー パレット マップを生成します。テーマ エンジンは、カラー バリエーションごとに、ビルド時にテキストのコントラスト カラーを自動的に生成します。これもパレットに含まれています。以下に、事前定義されたライト マテリアル パレットを示します:
 
 ```scss
 $igx-light-palette: palette(
@@ -107,7 +109,7 @@ $igx-light-palette: palette(
     $success: #4eb862,
     $warn: #fbb13c,
     $error: #ff134a,
-    $grays: #000,
+    $gray: #000,
     $surface: #fff
 );
 ```
@@ -198,16 +200,11 @@ $custom-mat-light-theme: mat-light-theme(
 前のアプローチに従って、ダーク モードのマテリアル パレットを作成します。今回は、カスタムの `igx-palette` も定義します。
 
 ```scss
-<<<<<<< HEAD
 // Custompalette
 $custom-dark-palette: palette(
-=======
-// Custom palette
-$custom-dark-palette:palette(
->>>>>>> 5bf5d3a313a94d7c53f89e96f276d9ce21c18c37
     $primary: #011627,
     $secondary: #72da67,
-    $grays: #fff,
+    $gray: #fff,
     $surface: #222,
 );
 
@@ -343,7 +340,7 @@ Angular Material `toolbar` は背景色に CSS クラスを使用します。サ
 }
 ```
 
-次に、「bg-パレットのカラー-カラー バリアント」パターンに従って CSS クラスを navbar コンポーネントに追加します。サンプル アプリでは `bg-grays-100` を使用しています。
+次に、「bg-パレットのカラー-カラー バリアント」パターンに従って CSS クラスを navbar コンポーネントに追加します。サンプル アプリでは `bg-gray-100` を使用しています。
 
 ### Angular コンポーネントのタイポグラフィ
 
@@ -387,7 +384,7 @@ $custom-typography: mat-typography-config(
 
 * [Light Material パレット]({environment:sassApiUrl}/index.html#variable-light-material-palette)
 * [Dark Material パレット]({environment:sassApiUrl}/index.html#variable-dark-material-palette)
-* [Light Material テーマ]({environment:sassApiUrl}/index.html#mixin-igx-light-theme)
+* [Light Material テーマ]({environment:sassApiUrl}/index.html#mixin-light-theme)
 * [Dark Material テーマ]({environment:sassApiUrl}/index.html#mixin-dark-theme)
 * [Palette Function]({environment:sassApiUrl}/index.html#function-igx-palette)
 * [Typography Mixin]({environment:sassApiUrl}/index.html#mixin-typography)

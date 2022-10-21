@@ -535,6 +535,9 @@
   href: pivotgrid/pivot-grid.md
   new: true
   items:
+    - name: Excel へのエクスポート
+      href: pivotgrid/export-excel.md
+      new: true
     - name: ピボット グリッド機能
       href: pivotgrid/pivot-grid-features.md
       new: true
