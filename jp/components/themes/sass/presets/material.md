@@ -7,7 +7,7 @@ Material テーマは、Ignite UI for Angular のデフォルトテーマです�
 // 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 @include core();
-@include theme($default-palette);
+@include theme($light-material-palette);
 ```
 
 ## Material Light テーマ
@@ -17,7 +17,7 @@ Material テーマは、Ignite UI for Angular のデフォルトテーマです�
 // 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 @include core();
-@include light-theme($default-palette);
+@include light-theme($light-material-palette);
 ```
 
 ## Material Dark テーマ
@@ -27,7 +27,7 @@ Material テーマは、Ignite UI for Angular のデフォルトテーマです�
 // 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 @include core();
-@include dark-theme($default-palette);
+@include dark-theme($dark-material-palette);
 ```
 
 `light-theme` と `dark-theme` の両方のミックスインには、`theme` ミックスインが含まれています。

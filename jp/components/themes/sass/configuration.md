@@ -7,7 +7,7 @@ _language: ja
 
 # 構成
 
-<div class="highlight">Ignite UI for Angular テーマ ライブラリは、テーマ エンジンの動作を構成できるいくつかのグローバル変数を提供します。</div>
+<div class="highlight">The Ignite UI for Angular theming library exposes several input arguments variables that let you configure how the theming engine works.</div>
 <div class="divider"></div>
 
 ## レガシーのサポート
@@ -32,56 +32,10 @@ Ignite UI for Angular の開発は、Internet Explorer 11 がまだ関連して�
 // app.component.scss
 $igx-legacy-support: true;
 
-$color: color($default-palette, 'primary', 900);
+$color: color($light-material-palette, 'primary', 900);
 ```
 
 すべてのグローバル構成変数を格納するプロジェクトの `styles` ディレクトリに `_variables.scss` ファイルを作成することをお勧めします。このようにして、すべてのスタイル ファイルに構成をインポートするだけです。
-
-## デフォルト パレット
-
-もう 1 つのグローバル変数は `$default-palette` です。パレットを `theme` ミックスインに渡すと暗黙的に設定されます。この変数は、パレットが明示的に提供されていない場合に、テーマ関数とミックスインによってデフォルトで使用されるパレットを設定します。
-
-たとえば、`igx-color` 関数は特定のパレットで呼び出されない場合があります。その場合、`$default-palette` に割り当てられた値がカラーを取得するために使用されます。
-
-デフォルトのパレットは、その宣言をシャドウイングすることでいつでも変更できます。
-
-```scss
-$my-palette: palette(
-  $primary: red, 
-  $secondary: blue
-);
-
-// グローバルな $default-palette 変数を設定します
-// $my-palette に保存されている値
-@include theme(
-  $palette: $my-palette
-);
-```
-
-これで、`$my-palette` を `$default-palette` に割り当てて、`_variables.scss` ファイルに保存できます。次に、`$default-palette` または `$my-palette` のいずれかをテーマ ミックスインに渡します。
-
-```scss
-// _variables.scss
-
-$legacy-support: true; /* Ignite UI for Angular 13 ではサポートされていません */
-
-$my-palette: palette(
-  $primary: red, 
-  $secondary: blue
-);
-
-$default-palette: $my-palette;
-$igx-legacy-support: $legacy-support;
-```
-
-```scss
-@use 'variables' as *;
-
-@include theme(
-  $palette: $my-palette,
-  $legacy-support: $legacy-support
-);
-```
 
 ## グローバル変数
 
@@ -90,11 +44,11 @@ $igx-legacy-support: $legacy-support;
 | 変数名 | 説明                                                                 |
 |:-------------:|:---------------------------------------------------------------------------:|
 | `$components` | すべてのコンポーネント テーマのレジスタを格納します。tree-shaking に使用されます。            |
-| `$keyframes`  | すべてのキーフレーム アニメーション ミックスインのレジスタを格納します。tree-shaking に使用されます。  |
+| ``$dropped-themes`  | Stores a register of dropped themes. tree-shaking に使用されます。  |
 
 ## スクロールバーのスタイル設定
 
-Ignite UI for Angular テーマには、アプリケーション内のすべてのスクロールバーの幅や色を変更できるカスタム スクロールバー スタイルが付属しています。含まれているスタイルを適用するには、ルート アプリ コンポーネントを含む要素に `igx-scrollbar` クラスを設定してください。
+Ignite UI for Angular テーマには、アプリケーション内のすべてのスクロールバーの幅や色を変更できるカスタム スクロールバー スタイルが付属しています。含まれているスタイルを適用するには、ルート アプリ コンポーネントを含む要素に `ig-scrollbar` クラスを設定してください。
 
 <div class="divider"></div>
 

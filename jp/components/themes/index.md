@@ -6,11 +6,11 @@
 <!-- --- -->
 
 # テーマ
-Ignite UI for Angular を使用すると、CSS 変数を使用してすべてのコンポーネント テーマのスタイルを変更できます。本当に深く掘り下げたい場合は、強力な Sass テーマ エンジンを提供します。これにより、特定のデザイン言語に合わせた、最新のブラウザーと古いブラウザーの両方で機能するグローバル コンポーネント テーマを作成できます。
+Ignite UI for Angular を使用すると、CSS 変数を使用してすべてのコンポーネント テーマのスタイルを変更できます。本当に深く掘り下げたい場合は、強力な Sass テーマ エンジンを提供します。これにより、特定のデザイン言語に合わせた、最新のすべてのブラウザーで機能するグローバル コンポーネント テーマを作成できます。
 
 >[!NOTE] 
-> このドキュメントでは、バージョン 12 以降の Ignite UI for Angular のテーマ システムについて説明します。バージョン 12 以降、CSS 変数のサポートが拡張され、テーマを変更するための推奨される方法になりました。
-> **Sass テーマ ライブラリはそのままです。バージョン 12 より前に使用していたすべてのミックスインと関数を引き続き使用できます。**
+> このドキュメントでは、バージョン 12 以降の Ignite UI for Angular のテーマ システムについて説明します。Starting with version 12 **CSS variables are the recommended way to modify the global and component themes**.
+> You can still use the Sass theming library as you would've prior to version 12.
 
 ## 基本的な使用方法
 
@@ -52,13 +52,13 @@ styles フォルダーに含まれるテーマの完全なリストは次のと�
 
 ご覧のとおり、かなりの量のテーマを備えた Ignite UI for Angular を提供しています。
 
-ただし、これでテーマの話は終わりではありません。すべてのテーマは Sass ソースからコンパイルされ、強力なテーマ エンジンを使用して構築されています。このエンジンは Sass `mixins` と `functions` で構成されており、その多くは公開されているため、アプリケーションのすべてのコンポーネントを完全に再設計できます。
+ただし、これでテーマの話は終わりではありません。すべてのテーマは Sass ソースからコンパイルされ、強力なテーマ エンジンを使用して構築されています。This engine contains Sass `mixins` and `functions` many of which are publicly exposed, which allows you to completely redesign all components in your application.
 
-Sass が適切でない場合は、[カスタム CSS プロパティ](https://developer.mozilla.org/ja/docs/Web/CSS/Using_CSS_custom_properties)、または CSS 変数として知られているものを使用してコンパイルされたテーマを簡単に変更できるようにしました。Sass が適切で、コンポーネントのテーマを微調整したい場合は、心配しないでください。CSS としてもう一方の端に来るものを完全に制御できるように、テーマ エンジンのすべての部分のドキュメントを提供しています。
+Sass が適切でない場合は、[カスタム CSS プロパティ](https://developer.mozilla.org/ja/docs/Web/CSS/Using_CSS_custom_properties)、または CSS 変数として知られているものを使用してコンパイルされたテーマを簡単に変更できるようにしました。You can still use Sass in combination with CSS variables.
 
 ## グローバル変数
 
-上記の CSS テーマのいずれかを調べると、`:root` ルール スコープにかなりの数の CSS 変数が含まれていることがわかります。 `colors`、`shadows`、および `typography` の変数が含まれています。これらのいずれかを変更すると、テーマの全体的なルック アンド フィールをカスタマイズでき、逆にコンポーネントをカスタマイズできます。
+上記の CSS テーマのいずれかを調べると、`:root` ルール スコープにかなりの数の CSS 変数が含まれていることがわかります。 `colors`、`shadows`、`typography` 、および `configuration` の変数が含まれています。これらの変数のいずれかを変更すると、テーマの全体的なルック アンド フィールをカスタマイズでき、逆にコンポーネントをカスタマイズできます。
 
 テーマを変更するときにほとんどの人が探しているのは、コンポーネントで使用されるデフォルト カラーを変更することです。
 
@@ -67,12 +67,17 @@ Sass が適切でない場合は、[カスタム CSS プロパティ](https://de
 ```css
 /* styles.css */
 :root {
-  --igx-primary-500: #7eaf6e;
-  --igx-secondary-500: #301764;
+  --ig-primary-h: 105deg;
+  --ig-primary-s: 29%;
+  --ig-primary-l: 56%;
+
+  --ig-secondary-h: 259deg;
+  --ig-secondary-s: 63%;
+  --ig-secondary-l: 24%;
 }
 ```
 
-これらのカラー変数の名前を分解してみましょう。`ig` プレフィックスは、この変数が Ignite UI for Angular テーマの一部であることを示す一意の識別子で、`primary` が `color` パレットの名前であり、`500` がカラー `variant` です。ドキュメントの [パレット](./palettes.md) セクションでパレットについて詳しく見ていきます。今のところ、知っておく必要があるのは、`500` カラー バリエーションから生成されたさまざまな色合い/バリエーションを含むいくつかのカラー (primary、secondary、success、info など) があることです。`500` バリアントはメイン カラー バリエーションと見なされます。一部のカラー バリエーションはライトですが、他のカラー バリエーションはダークです。
+これらのカラー変数の名前を分解してみましょう。The `ig` prefix is there as a unique identifier to indicate that this variable is part of an Ignite UI for Angular theme, `primary` is the name of the `color` palette, and `h`, `s`, and `l` stand for hue, saturation, and lightness. ドキュメントの [パレット](./palettes.md) セクションでパレットについて詳しく見ていきます。For now all you need to know is that we have several base colors (primary, secondary, success, info, etc.) that include different shades or _variants_ that are all generated from the hue, saturation, and lightness CSS variables, The `500` color variants are considered the main representation values for hue, saturation, and lightness. For instance, the primary 500 color variant is declared as `--ig-primary-500: hsla(var(--ig-primary-h), var(--ig-primary-s), var(--ig-primary-l), var(--ig-primary-a))`.
 
 このアプローチに従うと、パレット全体を完全に見直すことができます。
 
@@ -80,7 +85,8 @@ Sass が適切でない場合は、[カスタム CSS プロパティ](https://de
 > 一部のコンポーネントは、パレットのカラーを使用しません。そのような場合、カラーを変更するには、コンポーネントの CSS 変数を直接ターゲットにする必要があります。
 > どのパレットのカラーがどのコンポーネントで使用されているかを確認するには、コンポーネントの[ドキュメント]({environment:sassApiUrl}/index.html#variable-_light-avatar)を参照してください。
 
-同様に、`エレベーション` (シャドウ) の変更も同様に簡単です。25 のエレベーション レベル (0〜24) が含まれ、次のように CSS 変数として宣言されます。
+同様に、`エレベーション` (シャドウ) の変更も同様に簡単です。25 のエレベーション レベル (0〜24) が含まれています。
+Here's a simplified version of what those variables look like:
 
 ```css
 /* styles.css */
@@ -97,6 +103,36 @@ Sass が適切でない場合は、[カスタム CSS プロパティ](https://de
 ```
 
 これらは基本的に積層された CSS [`box-shadow`](https://developer.mozilla.org/ja/docs/Web/CSS/box-shadow) 宣言です。それらを他の有効な `box-shadow` 値に置き換えることができます。エレベーション レベルの数値が高いほど、シャドウが大きくなります。この場合も、コンポーネントごとに異なるエレベーション レベルが使用されます。コンポーネントが使用するエレベーション レベルを確認するには、[コンポーネントのドキュメント]({environment:sassApiUrl}/index.html#variable-_light-avatar)を参照してください。ドキュメントの[エレベーション](./elevations.md)でエレベーションを詳しく見ていきます。
+
+## Configuration
+
+There are several variables that allow you to configure the global behavior of the theme:
+
+#### Roundness
+
+To configure the radius factor of all components you can change the value of the `--ig-radius-factor` variable. The default value is 1, meaning the default radius factor is used across component themes.
+
+Example:
+
+```css
+/* Makes all components appear blocky in shape */
+:root {
+  --ig-radius-factor: 0;
+}
+```
+
+#### Elevation Factor
+
+To configure the elevation factor of all components you can change the value of the `--ig-elevation-factor` variable. The default value is 1, meaning the default elevations are used across component themes.
+
+Example:
+
+```css
+/* Makes all components appear flat (no-shadows) */
+:root {
+  --ig-elevation-factor: 0;
+}
+```
 
 ## コンポーネント変数
 
@@ -118,7 +154,7 @@ igx-avatar {
 上記のスニペットは、すべてのアバターの背景を orange カラーに設定します。
 
 アバター コンポーネントは、最初に `--background` 変数を探します。明示的に設定されている場合は、その値を取ります。つまり、`local` 変数の優先度は高く、タグ セレクターまたは `igx-avatar` をターゲットとするその他のセレクターを使用して、`igx-avatar` に直接適用された場合に**のみ**機能します。
-グローバル `--igx-avatar-background` はフォールバック変数と考えることができ、ローカル `--background` が明示的にオーバーライドされていない場合にのみ使用されます。
+グローバル `--igx-avatar-background` はフォールバック変数と考えることができます。ローカルの `--background` が明示的にオーバーライドされていない場合にのみ使用されます。
 
 好奇心旺盛な方のために、これがアバターの内部でどのように実装されているかを次に示します:
 
