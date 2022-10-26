@@ -307,6 +307,7 @@ Angular の DI の復習が必要な場合は、[公式ガイド](https://angula
 // app.module.ts
 
 import { IgxExcelExporterService, IgxCsvExporterService } from 'igniteui-angular';
+// import { IgxExcelExporterService, IgxCsvExporterService } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...

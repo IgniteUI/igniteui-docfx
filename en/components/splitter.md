@@ -25,6 +25,7 @@ To start using the **igxSplitter** component, you first need to import the **Igx
 // app.module.ts
 ...
 import { IgxSplitterModule } from 'igniteui-angular';
+// import { IgxSplitterModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...

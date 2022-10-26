@@ -29,6 +29,7 @@ import {
     IgxDropDownModule, 
     IgxInputGroupModule 
 } from 'igniteui-angular';
+// import { IgxAutocompleteModule, IgxDropDownModule, IgxInputGroupModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...

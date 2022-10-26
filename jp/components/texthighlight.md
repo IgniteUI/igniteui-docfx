@@ -28,6 +28,8 @@ Ignite UI for Angular TextHighlight ディレクティブを使用するには�
 ...
 import { IgxButtonModule, IgxInputGroupModule,
         IgxIconModule, IgxRippleModule, IgxTextHighlightModule } from 'igniteui-angular';
+// import { IgxButtonModule, IgxInputGroupModule,
+//        IgxIconModule, IgxRippleModule, IgxTextHighlightModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...

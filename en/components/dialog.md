@@ -26,6 +26,7 @@ The first step is to import the **IgxDialogModule** in our **app.module.ts** fil
 
 ...
 import { IgxDialogModule } from 'igniteui-angular';
+// import { IgxDialogModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...

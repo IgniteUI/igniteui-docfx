@@ -22,6 +22,7 @@ First, we need to import the **IgxExpansionPanelModule** in our **app.module**:
 // app.module.ts
 ...
 import { IgxExpansionPanelModule } from 'igniteui-angular';
+// import { IgxExpansionPanelModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -70,6 +71,8 @@ We can do this by binding the description to the control [`collapsed`]({environm
 ```typescript
 // in expansion-panel.component.ts
 import { IgxExpansionPanelComponent } from 'igniteui-angular';
+// import { IgxExpansionPanelComponent } from '@infragistics/igniteui-angular'; for licensed package
+
 @Component({
     ...
 })
@@ -262,6 +265,8 @@ Assuming the igxExpansionPanel is already imported in `app.module.ts` as previou
 // in expansion-panel.component.ts
 import { useAnimation } from '@angular/animations';
 import { IgxExpansionPanelComponent, slideInLeft, slideOutRight } from 'igniteui-angular';
+// import { IgxExpansionPanelComponent, slideInLeft, slideOutRight } from '@infragistics/igniteui-angular'; for licensed package
+
 @Component({
     ...
 })

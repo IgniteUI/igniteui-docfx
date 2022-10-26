@@ -27,6 +27,7 @@ To get started with the combobox component, first you need to import the `IgxCom
 
 ```typescript
 import { IgxComboModule, IgxSwitchModule } from 'igniteui-angular';
+// import { IgxComboModule, IgxSwitchModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     imports: [
@@ -191,6 +192,7 @@ You can set whether groups should be sorted in ascending or descending order. By
 ```typescript
 ...
 import { SortingDirection } from 'igniteui-angular'
+// import { SortingDirection } from '@infragistics/igniteui-angular'; for licensed package
 
 export class ComboDemo {
     ...

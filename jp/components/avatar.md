@@ -35,6 +35,7 @@ Ignite UI for Angular については、[はじめに](general/getting-started.m
 
 ...
 import { IgxAvatarModule } from 'igniteui-angular';
+// import { IgxAvatarModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -188,7 +189,6 @@ Internet Explorer 11 以前などブラウザーのコンポーネントをス�
 ## テーマの依存関係
 * [IgxAvatar テーマ]({environment:sassApiUrl}/index.html#function-avatar-theme)
 * [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-icon-theme)
-
 ## その他のリソース
 <div class="divider--half"></div>
 

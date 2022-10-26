@@ -132,7 +132,7 @@ Navigation Drawer は [`igxNavigationService`]({environment:angularApiUrl}/class
 /* app.component.ts */
 import { Component, ViewChild } from '@angular/core';
 import { IgxNavigationDrawerComponent } from 'igniteui-angular';
-
+// import { IgxNavigationDrawerComponent } from '@infragistics/igniteui-angular'; for licensed package
 ...
 
 export class AppComponent  {

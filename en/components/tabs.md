@@ -29,6 +29,7 @@ First, we need to import the `IgxTabsModule` in the **app.module.ts** file.
 
 ...
 import { IgxTabsModule } from 'igniteui-angular';
+// import { IgxTabsModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...

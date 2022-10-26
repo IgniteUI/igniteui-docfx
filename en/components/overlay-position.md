@@ -73,6 +73,12 @@ import {
     ElasticPositionStrategy,
     GlobalPositionStrategy
 } from 'igniteui-angular';
+// import { AutoPositionStrategy, 
+//    ConnectedPositioningStrategy, 
+//    ContainerPositionStrategy,
+//    ElasticPositionStrategy,
+//    GlobalPositionStrategy } from '@infragistics/igniteui-angular'; for licensed package
+
 ```
 
 Then specify the positioning strategy to be used by the overlay. The position strategy is passed in as a property in the [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) parameter when the [`overlay.attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) method is called. In the example below we are changing the default `GlobalPositionStrategy` with `ConnectedPositionStrategy`:

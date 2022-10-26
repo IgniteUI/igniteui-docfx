@@ -41,6 +41,7 @@ The next step is to import the `IgxAccordionModule` in your app.module file.
 
 ...
 import { IgxAccordionModule } from 'igniteui-angular';
+// import { IgxAccordionModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -101,6 +102,8 @@ With regards to animation, you have two options. First, you could set the `anima
 ```typescript
 import { useAnimation } from '@angular/animations';
 import { slideInLeft, slideOutRight } from 'igniteui-angular';
+// import { slideInLeft, slideOutRight } from '@infragistics/igniteui-angular'; for licensed package
+
 @Component({
     ...
 })

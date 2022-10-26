@@ -7,6 +7,7 @@
     "start": "gulp serve",
     "start:jp": "npm start -- --lang jp",
     "start:kr": "npm start -- --lang kr",
+    "start:en": "npm start -- --lang en",
     "build": "gulp build",
     "build-gh-actions": "gulp buildCI",
     "build-staging": "set NODE_ENV=staging && gulp build",

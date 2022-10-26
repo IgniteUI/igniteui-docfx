@@ -131,7 +131,7 @@ Also, if you want the drawer to close when you select an item from it, you can u
 /* app.component.ts */
 import { Component, ViewChild } from '@angular/core';
 import { IgxNavigationDrawerComponent } from 'igniteui-angular';
-
+// import { IgxNavigationDrawerComponent } from '@infragistics/igniteui-angular'; for licensed package
 ...
 
 export class AppComponent  {

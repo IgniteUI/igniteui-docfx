@@ -29,6 +29,7 @@ _language: ja
 
 ...
 import { IgxSwitchModule } from 'igniteui-angular';
+// import { IgxSwitchModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...

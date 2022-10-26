@@ -28,6 +28,7 @@ Radio Button コンポーネントを初期化にするには、まず `IgxRadio
 
 ...
 import { IgxRadioModule } from 'igniteui-angular';
+// import { IgxRadioModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -181,6 +182,7 @@ Radio Group ディレクティブが `NgModule` としてエクスポートさ�
 // app.module.ts
 ...
 import { IgxRadioModule } from 'igniteui-angular';
+// import { IgxRadioModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...

@@ -24,6 +24,7 @@ _language: ja
 
 ...
 import { IgxSelectModule } from 'igniteui-angular';
+// import { IgxSelectModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...

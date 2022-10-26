@@ -24,6 +24,8 @@ To get started with the ComboBox component, first you need to import the `IgxCom
 
 ```typescript
 import { IgxComboModule } from 'igniteui-angular';
+// import { IgxComboModule } from '@infragistics/igniteui-angular'; for licensed package
+
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -46,6 +48,7 @@ The code below defines a simple service that has a `getData()` method, which rec
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { IForOfState } from 'igniteui-angular';
+// import { IForOfState } from '@infragistics/igniteui-angular'; for licensed package
 import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable()
@@ -87,6 +90,8 @@ Below are listed the handlers that listen to the already defined actions and exe
 ```typescript
 import { ChangeDetectorRef, Component, OnInit, ViewChild } from '@angular/core';
 import { IgxComboComponent } from 'igniteui-angular';
+// import { IgxComboComponent } from '@infragistics/igniteui-angular'; for licensed package
+
 import { RemoteService } from '../../grid/services/remote.service';
 
 @Component({

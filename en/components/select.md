@@ -23,6 +23,7 @@ To get started with the [Select Component]({environment:angularApiUrl}/classes/i
 
 ...
 import { IgxSelectModule } from 'igniteui-angular';
+// import { IgxSelectModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
