@@ -57,6 +57,7 @@ export class TransactionBaseComponent { }
 
 ```typescript
 import { IgxTransactionService, State, Transaction, TransactionType } from 'igniteui-angular';
+// import { IgxTransactionService, State, Transaction, TransactionType } from '@infragistics/igniteui-angular'; for licensed package
 ```
 
 次にトランザクション サービスをコンストラクターにインポートします。

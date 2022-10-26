@@ -78,6 +78,7 @@ In the below example, you can see how you can instantiate different transaction 
 
 ```typescript
 import { IgxFlatTransactionFactory, TRANSACTION_TYPE } from 'igniteui-angular';
+// import { IgxFlatTransactionFactory, TRANSACTION_TYPE } from '@infragistics/igniteui-angular'; for licensed package
 
 export class MyCustomComponent {
     ...
@@ -104,6 +105,8 @@ First, define a custom factory class
 ```typescript
 import { IgxFlatTransactionFactory, TRANSACTION_TYPE, IgxBaseTransactionService,
 TransactionService, Transaction, State } from 'igniteui-angular';
+// import { IgxFlatTransactionFactory, TRANSACTION_TYPE, IgxBaseTransactionService,
+// TransactionService, Transaction, State } from '@infragistics/igniteui-angular'; for licensed package
 
 class CustomTransactionService extends IgxBaseTransactionService {
     ...
@@ -125,6 +128,7 @@ Then, in your component's `providers` array, override the `IgxFlatTransactionFac
 
 ```typescript
 import { IgxFlatTransactionFactory } from 'igniteui-angular';
+// import { IgxFlatTransactionFactory } from '@infragistics/igniteui-angular'; for licensed package
 import { CustomTransactionFactory } from '../custom-factory.ts';
 
 @Component({

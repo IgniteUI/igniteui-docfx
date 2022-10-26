@@ -27,6 +27,7 @@ To get started with the Input and Label directives, first you need to import the
 
 ...
 import { IgxInputGroupModule } from 'igniteui-angular';
+// import { IgxInputGroupModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...

@@ -24,6 +24,7 @@ ComboBox コンポーネントを初期化にするには、まず `IgxComboModu
 
 ```typescript
 import { IgxComboModule } from 'igniteui-angular';
+// import { IgxComboModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     imports: [

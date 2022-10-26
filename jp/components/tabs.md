@@ -30,6 +30,7 @@ Ignite UI for Angular [`igx-tabs`]({environment:angularApiUrl}/classes/igxtabsco
 
 ...
 import { IgxTabsModule } from 'igniteui-angular';
+// import { IgxTabsModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...

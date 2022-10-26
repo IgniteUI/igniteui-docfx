@@ -80,6 +80,7 @@ Ignite UI for Angular グリッド内のトランザクションの具体的な�
 
 ```typescript
 import { IgxFlatTransactionFactory, TRANSACTION_TYPE } from 'igniteui-angular';
+// import { IgxFlatTransactionFactory, TRANSACTION_TYPE } from '@infragistics/igniteui-angular'; for licensed package
 
 export class MyCustomComponent {
     ...
@@ -106,6 +107,8 @@ export class MyCustomComponent {
 ```typescript
 import { IgxFlatTransactionFactory, TRANSACTION_TYPE, IgxBaseTransactionService,
 TransactionService, Transaction, State } from 'igniteui-angular';
+// import { IgxFlatTransactionFactory, TRANSACTION_TYPE, IgxBaseTransactionService,
+// TransactionService, Transaction, State } from '@infragistics/igniteui-angular'; for licensed package
 
 class CustomTransactionService extends IgxBaseTransactionService {
     ...
@@ -127,6 +130,7 @@ export class CustomTransactionFactory extends IgxFlatTransactionFactory {
 
 ```typescript
 import { IgxFlatTransactionFactory } from 'igniteui-angular';
+// import { IgxFlatTransactionFactory } from '@infragistics/igniteui-angular'; for licensed package
 import { CustomTransactionFactory } from '../custom-factory.ts';
 
 @Component({

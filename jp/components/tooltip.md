@@ -28,9 +28,8 @@ _language: ja
 // app.module.ts
 
 ...
-import {
-    IgxTooltipModule
-} from 'igniteui-angular';
+import { IgxTooltipModule } from 'igniteui-angular';
+// import { IgxTooltipModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -51,6 +50,10 @@ import {
     IgxTooltipModule,
     IgxAvatarModule
 } from 'igniteui-angular';
+// import { 
+//    IgxTooltipModule,
+//    IgxAvatarModule
+// } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -125,6 +128,11 @@ import {
     IgxAvatarModule,
     IgxIconModule,
 } from 'igniteui-angular';
+// import { 
+//    IgxTooltipModule,
+//    IgxAvatarModule,
+//    IgxIconModule
+// } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...

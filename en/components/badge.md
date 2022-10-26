@@ -25,6 +25,7 @@ To get started with the Badge, the first step is to import the `IgxBadgeModule` 
 
 ...
 import { IgxBadgeModule } from 'igniteui-angular';
+// import { IgxBadgeModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -39,10 +40,8 @@ Let's see how the demo sample is done. It's a simple success badge on an avatar.
 ```typescript
 // app.module.ts
 ...
-import {
-  IgxBadgeModule,
-  IgxAvatarModule
-} from 'igniteui-angular';
+import { IgxBadgeModule, IgxAvatarModule } from 'igniteui-angular';
+// import {  IgxBadgeModule, IgxAvatarModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
   ...
@@ -94,6 +93,7 @@ import {
     IgxAvatarModule,
     IgxBadgeModule
 } from 'igniteui-angular';
+// import { IgxListModule, IgxAvatarModule, IgxBadgeModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...

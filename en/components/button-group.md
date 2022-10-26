@@ -26,6 +26,7 @@ The Button Group is exported as an `NgModule`, thus you will need to import the 
 // app.module.ts
 
 import { IgxButtonGroupModule } from 'igniteui-angular';
+// import { IgxButtonGroupModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     imports: [
@@ -67,6 +68,8 @@ Use the [`alignment`]({environment:angularApiUrl}/classes/igxbuttongroupcomponen
 ```typescript
 //sample.component.ts
 import { ButtonGroupAlignment } from 'igniteui-angular';
+// import { ButtonGroupAlignment } from '@infragistics/igniteui-angular'; for licensed package
+
 ...
 public alignment = ButtonGroupAlignment.vertical;
 ...
