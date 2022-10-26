@@ -37,6 +37,7 @@ Ignite UI for Angular については、[はじめに](../general/getting-starte
 // app.module.ts
 
 import { IgxHierarchicalGridModule } from 'igniteui-angular';
+// import { IgxHierarchicalGridModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     imports: [

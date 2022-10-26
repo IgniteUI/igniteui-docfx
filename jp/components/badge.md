@@ -26,6 +26,7 @@ Badge コンポーネントを初期化する前に、`IgxBadgeModule` を **app
 
 ...
 import { IgxBadgeModule } from 'igniteui-angular';
+// import { IgxBadgeModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -44,6 +45,9 @@ import {
   IgxBadgeModule,
   IgxAvatarModule
 } from 'igniteui-angular';
+// import { 
+//   IgxBadgeModule,
+//   IgxAvatarModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
   ...
@@ -95,6 +99,11 @@ import {
     IgxAvatarModule,
     IgxBadgeModule
 } from 'igniteui-angular';
+// import { 
+//    IgxListModule,
+//    IgxAvatarModule,
+//    IgxBadgeModule
+// } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...

@@ -61,6 +61,7 @@ In Angular forms, components often need to be able to bind their values with `ng
 
 ```typescript
 import { IgcFormsModule } from 'igniteui-angular';
+// import { IgcFormsModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     imports: [

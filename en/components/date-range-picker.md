@@ -30,6 +30,8 @@ As `IgxDateRangePicker` uses the [**IgxCalendarComponent**]({environment:angular
 
 ...
 import { IgxDateRangePickerModule } from 'igniteui-angular';
+// import { IgxDateRangePickerModule } from '@infragistics/igniteui-angular'; for licensed package
+
 import { HammerModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 

@@ -34,6 +34,7 @@ _language: ja
 
 ...
 import { IgxBottomNavModule } from 'igniteui-angular';
+// import { IgxBottomNavModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...

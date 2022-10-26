@@ -26,6 +26,7 @@ Ripple ディレクティブが `NgModule` としてエクスポートされる�
 // app.module.ts
 
 import { IgxRippleModule } from 'igniteui-angular';
+// import { IgxRippleModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     imports: [

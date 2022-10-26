@@ -173,6 +173,7 @@ If these functions do not fulfill your requirements you can provide a custom sum
 @@if (igxName !== 'IgxHierarchicalGrid') {
 ```typescript
 import { IgxSummaryResult, IgxSummaryOperand, IgxNumberSummaryOperand, IgxDateSummaryOperand } from 'igniteui-angular';
+// import { IgxSummaryResult, IgxSummaryOperand, IgxNumberSummaryOperand, IgxDateSummaryOperand } from '@infragistics/igniteui-angular'; for licensed package
 
 class MySummary extends IgxNumberSummaryOperand {
     constructor() {
@@ -194,6 +195,7 @@ class MySummary extends IgxNumberSummaryOperand {
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```typescript
 import { IgxRowIslandComponent, IgxHierarchicalGridComponent, IgxNumberSummaryOperand, IgxSummaryResult } from 'igniteui-angular';
+// import { IgxRowIslandComponent, IgxHierarchicalGridComponent, IgxNumberSummaryOperand, IgxSummaryResult } from '@infragistics/igniteui-angular'; for licensed package
 
 class MySummary extends IgxNumberSummaryOperand {
     constructor() {

@@ -32,6 +32,7 @@ To get started with the drop-down component, first you need to import the `IgxDr
 
 ...
 import { IgxDropDownModule } from 'igniteui-angular';
+// import { IgxDropDownModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...

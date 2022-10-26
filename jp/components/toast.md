@@ -31,6 +31,7 @@ Toast コンポーネントを初期化する前に、`IgxToastModule` を **app
 
 ...
 import { IgxToastModule } from 'igniteui-angular';
+// import { IgxToastModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -130,6 +131,7 @@ public showMessage() {
 ```typescript
 // sample.component.ts
 import { VerticalAlignment } from 'igniteui-angular';
+// import { VerticalAlignment } from '@infragistics/igniteui-angular'; for licensed package
 ...
 public open(toast) {
     toast.positionSettings.verticalDirection = VerticalAlignment.Top;

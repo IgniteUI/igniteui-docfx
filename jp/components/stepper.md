@@ -37,6 +37,7 @@ Ignite UI for Angular については、[*はじめに*](general/getting-started
 
 ...
 import { IgxStepperModule } from 'igniteui-angular';
+// import { IgxStepperModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...

@@ -25,6 +25,7 @@ The Button Directive is exported as an `NgModule`, thus all you need to do in yo
 // app.module.ts
 
 import { IgxButtonModule } from 'igniteui-angular';
+// import { IgxButtonModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     imports: [
@@ -167,6 +168,7 @@ We can allow the user to choose the display density of the `igxButton` by using 
 // app.module.ts
 ...
 import { IgxButtonGroupModule } from 'igniteui-angular';
+// import { IgxButtonGroupModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     imports: [
