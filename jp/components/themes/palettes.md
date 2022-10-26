@@ -106,8 +106,8 @@ Ignite UI for Angular は、`primary`、`secondary`、`gray`、`info`、`success
 
 パレットでカラーをオーバーライドする方法は比較的簡単です。_global_ パレットを更新するには、アプリケーションの `styles.css` ファイルの `:root` セレクターにカラー バリアントをスコープします。
 
-たとえば、企業のプライマリ カラーが `#9f349c` で、そのプライマリ カラー バリアントを作成するとします。Here's how you would go about doing this.
-First get the HEX representation of the color in the HSLA color space. In this case it's 302deg for hue, 51% for saturation, 41% for lightness and 1 for alpha. Having derived the HSLA values, all you need to do to update the primary palette to this color is replace the global h, s, and l values for the primary palette:
+たとえば、企業のプライマリ カラーが `#9f349c` で、そのプライマリ カラー バリアントを作成するとします。これを行う方法は次のとおりです。
+まず、HSLA 色空間で色の HEX 表現を取得します。この場合、色相は 302deg、彩度は 51%、明度は 41%、アルファは 1 です。HSLA 値を導出したら、プライマリ パレットをこの色に更新するために必要なことは、プライマリ パレットのグローバル h、s、および l 値を置き換えることだけです:
 
 ```css
 :root {
@@ -117,7 +117,7 @@ First get the HEX representation of the color in the HSLA color space. In this c
 }
 ```
 
-This will not automatically calculate the contrast color for each primary color variant. 特定のカラーを他のカラーと組み合わせて使用した場合に十分なコントラストがあるかどうかを判断するのに役立つツールが多数あります。各カラー バリアントのコントラストカラーを決定する際に、Chrome の組み込みのコントラスト チェッカーを使用できます。ビルド時にカラー パレットを生成する Sass 関数を提供します。選択したカラーからすべてのカラー バリアントとそのコントラスト カラーを自動で生成する場合は、ドキュメントの「[Sass を使用したパレット](./sass/palettes.md)」セクションを参照してください。
+これは、各プライマリ カラー バリアントのコントラスト カラーを自動的に計算しません。特定のカラーを他のカラーと組み合わせて使用した場合に十分なコントラストがあるかどうかを判断するのに役立つツールが多数あります。各カラー バリアントのコントラストカラーを決定する際に、Chrome の組み込みのコントラスト チェッカーを使用できます。ビルド時にカラー パレットを生成する Sass 関数を提供します。選択したカラーからすべてのカラー バリアントとそのコントラスト カラーを自動で生成する場合は、ドキュメントの「[Sass を使用したパレット](./sass/palettes.md)」セクションを参照してください。
 
 単一のグローバル パレット以外に、他の CSS セレクターにスコープされる複数のパレットを作成することもできます。たとえば、青と赤のパレットをクラス セレクターにスコープできます。
 
@@ -149,7 +149,7 @@ class 属性の値を `blue-theme` から `red-theme` に変更することで�
 
 この方法は、個々のコンポーネントのパレット カラーをオーバーライドする場合にも機能します。複数のパレットを作成したくないが、コンポーネントで使用されるパレットのカラーを変更したい場合があります。
 
-Let's look at the material avatar component theme. It uses the _400_ variant of the _gray_ color for its background. Now, we can customize the theme by overriding the property responsible for setting the background, or we could change the disabled background color for it by overriding the _gray 400_ palette color:
+マテリアル アバター コンポーネント テーマを見てみましょう。背景に _gray_ 色の _400_ バリアントを使用します。これで、背景の設定を担当するプロパティをオーバーライドしてテーマをカスタマイズできます。または、_gray 400_ パレット カラーをオーバーライドして、無効な背景色を変更できます。
 
 ```css
 igx-avatar {
@@ -164,7 +164,7 @@ igx-avatar {
 
 Ignite UI for Angular のパレットは、テーマが明るいまたは暗いかを示します。最も影響を与える 2 つのカラーは、`gray` と `surface` です。すべてのテーマの `gray` カラー バリアントは、`#fff` などの非常に明るい色合いまたは `#222` などの非常に暗い色合いに基づいています。明るいテーマには暗い色合いの `gray` に基づいたグレー カラーのバリアントがあり、暗いテーマは反対です。すべての `gray` カラーのバリアントは白い色合いです。これらの `gray` カラーは、他のカラー (通常は `surface` カラー) に対して表示されます。テーマを適切に表示するために、`surface` のカラーは常にグレースケールの `gray` の反対側に設定します。
 
-To make this a bit clearer, below is a list of some `gray` and `surface` color variants in both a light and a dark theme:
+これをもう少し明確にするために、明るいテーマと暗いテーマの両方での `gray` と `surface` のカラー バリエーションのリストを以下に示します:
 
 *Material Light:*
 ```css
@@ -204,7 +204,7 @@ To make this a bit clearer, below is a list of some `gray` and `surface` color v
 ## その他のカラー
 
 ここまでで、`primary`、`secondary`、`gray`、`surface` のカラー バリアントと、それらをオーバーライドする方法を説明しました。さらに 4 つのカラーがあります - `info`、`success`、`warn`、`error`。通常、異なる状態のカラーを設定するために使用されます。たとえば、`igx-input-group` コンポーネントは、入力検証状態でこれらのカラーを使用します。
-They can be changed as the first three variants. Just update their `h`, `s`, and `l` variables. 
+これらは、最初の 3 つのバリアントとして変更できます。`h`、`s`、および `l` 変数を更新するだけです。
 
 ## その他のリソース
 

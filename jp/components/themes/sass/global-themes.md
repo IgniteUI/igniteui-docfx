@@ -61,10 +61,10 @@ $my-color-palette: palette(
 @include theme($my-color-palette);
 ```
 
-Let's explain what the `core` and `theme` mixins do. The `core` mixin takes care of some configurations, like adding enhanced accessibility(e.g. colors suitable for color blind users) and printing styles for all components. The `theme` mixin includes each individual component style (bar the ones listed as excluded) and configures the palette, schema, elevations, and roundness that is not listed in the `$exclude` list of components. 
+`core` と `theme` ミックスインが何をするか説明しましょう。`core` ミックスインは、強化されたアクセシビリティ (色弱ユーザーに適した色など) やすべてのコンポーネントの印刷スタイルの追加など、いくつかの構成を処理します。`theme` ミックスインには、個々のコンポーネント スタイル (除外リストにあるものを除く) が含まれ、コンポーネントの `$exclude` リストにリストされていないパレット、スキーマ、エレベーション、および丸みを構成します。
 
 > [!IMPORTANT]
-> Including `core` and `typography` before `theme` is essential. The `core` and `typography` mixins provide all base definitions needed for the `theme` mixin to work correctly.
+> `theme` の前に `core` と `typography` を含めることが不可欠です。`core` および `typography` ミックスインは、`theme` ミックスインが正しく機能するために必要なすべての基本定義を提供します。
 
 ## コンポーネントの除外
 <div class="divider--half"></div>

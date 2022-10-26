@@ -59,7 +59,7 @@ body 要素で `ig-typography` クラスを設定してタイポグラフィ ス
 
 ### フォント ファミリの変更
 
-To change the font family in all components, all you have to do is overwrite the `--ig-typography` CSS variable with another font-family value:
+すべてのコンポーネントのフォント ファミリを変更するには、`--ig-typography` CSS 変数を別の font-family 値で上書きするだけです。
 
 ```css
 /* styles.css */
@@ -70,7 +70,7 @@ To change the font family in all components, all you have to do is overwrite the
 
 ## タイプ スタイル
 
-タイプ スタイルは、Ignite UI for Angular のほとんどのコンポーネントで内部的に使用されます。たとえば、ボタン コンポーネントはボタン タイプのスタイルを使用するとドキュメントに記載されています。This means that we can modify the typography of the button component by ovewriting the included `--ig-button-*` CSS variables.
+タイプ スタイルは、Ignite UI for Angular のほとんどのコンポーネントで内部的に使用されます。たとえば、ボタン コンポーネントはボタン タイプのスタイルを使用するとドキュメントに記載されています。これは、含まれている `--ig-button-*` CSS 変数を上書きすることで、ボタン コンポーネントのタイポグラフィを変更できることを意味します。
 
 マテリアル テーマのボタンのテキストを常に小文字に変更するとします。
 

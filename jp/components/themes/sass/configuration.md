@@ -7,7 +7,7 @@ _language: ja
 
 # 構成
 
-<div class="highlight">The Ignite UI for Angular theming library exposes several input arguments variables that let you configure how the theming engine works.</div>
+<div class="highlight">Ignite UI for Angular テーマ ライブラリは、テーマ エンジンの動作を構成できるいくつかの入力引数変数を公開します。</div>
 <div class="divider"></div>
 
 ## レガシーのサポート
@@ -44,7 +44,7 @@ $color: color($light-material-palette, 'primary', 900);
 | 変数名 | 説明                                                                 |
 |:-------------:|:---------------------------------------------------------------------------:|
 | `$components` | すべてのコンポーネント テーマのレジスタを格納します。tree-shaking に使用されます。            |
-| ``$dropped-themes`  | Stores a register of dropped themes. tree-shaking に使用されます。  |
+| ``$dropped-themes`  | ドロップされたテーマのレジスタを格納します。tree-shaking に使用されます。  |
 
 ## スクロールバーのスタイル設定
 

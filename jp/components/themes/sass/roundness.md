@@ -10,7 +10,7 @@ _language: ja
 <div class="divider"></div>
 
 ## 概要
-Roundness, as any other property, is set in the global and component themes, or schema like it's shown in the examples below.
+丸みは、他のプロパティと同様に、グローバル テーマとコンポーネント テーマ、または以下の例に示すようなスキーマで設定されます。
 ```scss
 // Make all components sharp by setting the roundness factor to 0.
 @include theme(
@@ -19,7 +19,7 @@ Roundness, as any other property, is set in the global and component themes, or 
 );
 ```
 
-Alternatively, you can modify the schema for each individual component to default to some value; Note that the global configuration will always take presedence.
+または、個々のコンポーネントごとにスキーマを変更して、デフォルトで値を設定することもできます。グローバル構成が常に優先されることに注意してください。
 
 ```scss
 $_material-shape-button: (

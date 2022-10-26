@@ -9,8 +9,8 @@
 Ignite UI for Angular を使用すると、CSS 変数を使用してすべてのコンポーネント テーマのスタイルを変更できます。本当に深く掘り下げたい場合は、強力な Sass テーマ エンジンを提供します。これにより、特定のデザイン言語に合わせた、最新のすべてのブラウザーで機能するグローバル コンポーネント テーマを作成できます。
 
 >[!NOTE] 
-> このドキュメントでは、バージョン 12 以降の Ignite UI for Angular のテーマ システムについて説明します。Starting with version 12 **CSS variables are the recommended way to modify the global and component themes**.
-> You can still use the Sass theming library as you would've prior to version 12.
+> このドキュメントでは、バージョン 12 以降の Ignite UI for Angular のテーマ システムについて説明します。バージョン 12 以降、**CSS 変数は、グローバルおよびコンポーネント テーマを変更するための推奨される方法です**。
+> バージョン 12 より前のバージョンと同様に、Sass テーマ ライブラリを引き続き使用できます。
 
 ## 基本的な使用方法
 
@@ -52,9 +52,9 @@ styles フォルダーに含まれるテーマの完全なリストは次のと�
 
 ご覧のとおり、かなりの量のテーマを備えた Ignite UI for Angular を提供しています。
 
-ただし、これでテーマの話は終わりではありません。すべてのテーマは Sass ソースからコンパイルされ、強力なテーマ エンジンを使用して構築されています。This engine contains Sass `mixins` and `functions` many of which are publicly exposed, which allows you to completely redesign all components in your application.
+ただし、これでテーマの話は終わりではありません。すべてのテーマは Sass ソースからコンパイルされ、強力なテーマ エンジンを使用して構築されています。このエンジンには Sass の `mixins` と `functions` が含まれており、その多くは公開されているため、アプリケーションのすべてのコンポーネントを完全に再設計できます。
 
-Sass が適切でない場合は、[カスタム CSS プロパティ](https://developer.mozilla.org/ja/docs/Web/CSS/Using_CSS_custom_properties)、または CSS 変数として知られているものを使用してコンパイルされたテーマを簡単に変更できるようにしました。You can still use Sass in combination with CSS variables.
+Sass が適切でない場合は、[カスタム CSS プロパティ](https://developer.mozilla.org/ja/docs/Web/CSS/Using_CSS_custom_properties)、または CSS 変数として知られているものを使用してコンパイルされたテーマを簡単に変更できるようにしました。Sass を CSS 変数と組み合わせて使用することもできます。
 
 ## グローバル変数
 
@@ -77,7 +77,7 @@ Sass が適切でない場合は、[カスタム CSS プロパティ](https://de
 }
 ```
 
-これらのカラー変数の名前を分解してみましょう。The `ig` prefix is there as a unique identifier to indicate that this variable is part of an Ignite UI for Angular theme, `primary` is the name of the `color` palette, and `h`, `s`, and `l` stand for hue, saturation, and lightness. ドキュメントの [パレット](./palettes.md) セクションでパレットについて詳しく見ていきます。For now all you need to know is that we have several base colors (primary, secondary, success, info, etc.) that include different shades or _variants_ that are all generated from the hue, saturation, and lightness CSS variables, The `500` color variants are considered the main representation values for hue, saturation, and lightness. For instance, the primary 500 color variant is declared as `--ig-primary-500: hsla(var(--ig-primary-h), var(--ig-primary-s), var(--ig-primary-l), var(--ig-primary-a))`.
+これらのカラー変数の名前を分解してみましょう。`ig` プレフィックスは、この変数が Ignite UI for Angular テーマの一部であることを示す一意の識別子としてあり、`primary` は `color` パレットの名前であり、`h`、`s`、および ` l` 色相、彩度、明度です。ドキュメントの [パレット](./palettes.md) セクションでパレットについて詳しく見ていきます。今のところ知っておく必要があるのは、色相、彩度、および明度の CSS 変数からすべて生(成されるさまざまな色合いまたは _variants_ を含むいくつかの基本色 (primary、secondary、success、info など) があることだけです。`500` のカラー バリエーションは、色相、彩度、および明度の主要な表現値と見なされます。たとえば、プライマリ 500 カラー バリアントは `--ig-primary-500: hsla(var(--ig-primary-h), var(--ig-primary-s), var(--ig-primary-l), var(--ig-primary-a))` として宣言されます。
 
 このアプローチに従うと、パレット全体を完全に見直すことができます。
 
@@ -86,7 +86,7 @@ Sass が適切でない場合は、[カスタム CSS プロパティ](https://de
 > どのパレットのカラーがどのコンポーネントで使用されているかを確認するには、コンポーネントの[ドキュメント]({environment:sassApiUrl}/index.html#variable-_light-avatar)を参照してください。
 
 同様に、`エレベーション` (シャドウ) の変更も同様に簡単です。25 のエレベーション レベル (0〜24) が含まれています。
-Here's a simplified version of what those variables look like:
+これらの変数がどのように見えるかを簡略化したバージョンを次に示します。
 
 ```css
 /* styles.css */
@@ -104,15 +104,15 @@ Here's a simplified version of what those variables look like:
 
 これらは基本的に積層された CSS [`box-shadow`](https://developer.mozilla.org/ja/docs/Web/CSS/box-shadow) 宣言です。それらを他の有効な `box-shadow` 値に置き換えることができます。エレベーション レベルの数値が高いほど、シャドウが大きくなります。この場合も、コンポーネントごとに異なるエレベーション レベルが使用されます。コンポーネントが使用するエレベーション レベルを確認するには、[コンポーネントのドキュメント]({environment:sassApiUrl}/index.html#variable-_light-avatar)を参照してください。ドキュメントの[エレベーション](./elevations.md)でエレベーションを詳しく見ていきます。
 
-## Configuration
+## 構成
 
-There are several variables that allow you to configure the global behavior of the theme:
+テーマのグローバルな動作を構成できる変数がいくつかあります:
 
-#### Roundness
+#### 丸み
 
-To configure the radius factor of all components you can change the value of the `--ig-radius-factor` variable. The default value is 1, meaning the default radius factor is used across component themes.
+すべてのコンポーネントの半径係数を構成するには、`--ig-radius-factor` 変数の値を変更できます。デフォルト値は 1 です。これは、コンポーネント テーマ全体でデフォルトの半径係数が使用されることを意味します。
 
-Example:
+例:
 
 ```css
 /* Makes all components appear blocky in shape */
@@ -121,11 +121,11 @@ Example:
 }
 ```
 
-#### Elevation Factor
+#### エレベーション係数
 
-To configure the elevation factor of all components you can change the value of the `--ig-elevation-factor` variable. The default value is 1, meaning the default elevations are used across component themes.
+すべてのコンポーネントのエレベーション係数を構成するには、`--ig-elevation-factor` 変数の値を変更できます。デフォルト値は 1 です。これは、コンポーネント テーマ全体でデフォルトのエレベーションが使用されることを意味します。
 
-Example:
+例:
 
 ```css
 /* Makes all components appear flat (no-shadows) */

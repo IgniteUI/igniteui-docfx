@@ -267,7 +267,7 @@ $my-warning-color: color($my-palette, 'warn');
 }
 ```
 
-If you omit the `$palette` argument, you will get a string referencing the corresponding CSS variable variant. `$color` および/または `$variant` を指定しない場合、それぞれ `primary` および `500` に割り当てられます。
+`$palette` 引数を省略すると、対応する CSS 変数バリアントを参照する文字列が取得されます。`$color` および/または `$variant` を指定しない場合、それぞれ `primary` および `500` に割り当てられます。
 
 <div class="divider"></div>
 
