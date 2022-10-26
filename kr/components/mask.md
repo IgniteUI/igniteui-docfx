@@ -30,7 +30,6 @@ To get started with the Ignite UI for Angular Mask directive, let's first import
 
 ...
 import { IgxMaskModule, IgxInputGroupModule } from 'igniteui-angular';
-// import { IgxMaskModule, IgxInputGroupModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
