@@ -245,16 +245,16 @@ $my-color-palette: palette(
 `color` 関数を提供します。関数は、`palette`、`color`、および `variant` の 3 つの引数を受け取ります。
 
 ```scss
-// Get the primary 500 color variant from $default-palette
+// Get the primary CSS variable reference of the 500 color variant
 $my-primary-500: color();
 
-// Get the primary 600 color variant from $default-palette
+// Get the primary CSS variable reference of the 600 color variant
 $my-primary-600: color($variant: 600);
 
-// Get the secondary A700 color variant from $my-palette
+// Get the secondary A700 color variant as a HEX value from $my-palette
 $my-primary-A700: color($my-palette, 'secondary', 'A700');
 
-// Get the warn color from $my-palette
+// Get the warn 500 color variant as HEX value from $my-palette
 $my-warning-color: color($my-palette, 'warn');
 
 .my-awesome-class {
@@ -267,7 +267,7 @@ $my-warning-color: color($my-palette, 'warn');
 }
 ```
 
-`$palette` 引数を省略すると、`$default-palette` に保存されている値が使用されます。`$color` および/または `$variant` を指定しない場合、それぞれ `primary` および `500` に割り当てられます。
+`$palette` 引数を省略すると、対応する CSS 変数バリアントを参照する文字列が取得されます。`$color` および/または `$variant` を指定しない場合、それぞれ `primary` および `500` に割り当てられます。
 
 <div class="divider"></div>
 
