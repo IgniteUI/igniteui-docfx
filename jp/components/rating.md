@@ -1,19 +1,19 @@
 ---
-title: Angular Star Rating Component – Ignite UI for Angular
-_description: With Angular Star Rating Component, users can view and provide feedback quickly. You can use the rating component in any angular app and angular forms. Try it Now
+title: Angular 星評価コンポーネント – Ignite UI for Angular
+_description: Angular 星評価コンポーネントを使用すると、ユーザーはフィードバックをすばやく表示して提供できます。任意の Angular アプリおよび Angular フォームで評価コンポーネントを使用できます。今すぐお試しください。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, Native Angular コンポーネント スイート, Native Angular コントロール, Native Angular コンポーネント Library, Angular Rating コンポーネント, Angular Rating コントロール
 _language: ja
 ---
-# Angular Star Rating Overview
+# Angular Star Rating (星評価) の概要
 
-Rating in Angular represents a widget enabling users to quickly provide feedback and evaluate a product or a service on a web page by using a star rating system. Simple to use, the component lets developers configure the size and the number of the displayed star rating items.
+Angular の評価は、星評価システムを使用して、ユーザーが Web ページ上でフィードバックを迅速に提供し、製品またはサービスを評価できるようにするウィジェットを表します。使いやすいこのコンポーネントにより、開発者は表示される星評価項目のサイズと数を構成できます。
 
-The Ignite UI Angular Star Rating component can be easily installed from the igniteui-webcomponents package. It provides an intuitive rating experience for end-users, allowing them to view products/services and rate them (usually having the option to choose from 0 to 5 stars in the most common scenarios).
+Ignite UI Angular Star Rating コンポーネントは、igniteui-webcomponents パッケージから簡単にインストールできます。エンドユーザーに直感的な評価エクスペリエンスを提供し、製品 / サービスを表示して評価できるようにします (通常、最も一般的なシナリオでは、0 から 5 までの星から選択するオプションがあります)。
 
 
 ## Angular Rating の例
 
-This Angular Star Rating example demonstrates how you can use Ignite UI Angular to build simple five-star rating widget, comparing and displaying the score of different products.
+この Angular Star Rating の例では、Ignite UI Angular を使用して単純な 5 つ星評価ウィジェットを作成し、さまざまな製品のスコアを比較および表示する方法を示します。
 
 <code-view style="height: 550px"
            data-demos-base-url="{environment:demosBaseUrl}"
@@ -24,7 +24,7 @@ This Angular Star Rating example demonstrates how you can use Ignite UI Angular 
 <div class="divider--half"></div>
 
 
-## Getting Started with Ignite UI for Angular Star Rating Component
+## Ignite UI for Angular Star Rating コンポーネントの概要
 
 Ignite UI Rating は標準の[ウェブ コンポーネント](https://developer.mozilla.org/ja/docs/Web/Web_Components)であるため、Angular アプリケーションで使用できます。
 
@@ -61,7 +61,7 @@ export class AppModule {}
 <igc-rating value="ratingVal" min="1" max="5" (igcChange)="ratingChanged($event);"></igc-rating>
 ```
 
-## Using Angular Star Rating in Forms
+## フォームで Angular Star Rating を使用する
 
 Angular フォームでは、多くの場合、コンポーネントはその値を `ngModel` にバインドしたり、Angular の `ControlValueAccessor` インターフェイスの実装を必要とする `formControl` を使用したりできる必要があります。Ignite UI for Angular パッケージは、要素セレクターを使用してサポートされているウェブ コンポーネントにアタッチするディレクティブの形式で、このような実装を提供します。現在、サポートされているコンポーネントは `IgcRating` のみです。ディレクティブを使用するには、ライブラリから `IgcFormsModule` をインポートするだけです。
 
