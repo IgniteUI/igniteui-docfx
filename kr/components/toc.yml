@@ -793,6 +793,9 @@
   href: checkbox.md
 - name: Switch
   href: switch.md
+- name: Query Builder
+  href: query-builder.md
+  new: true
 - name: Radio & Radio Group
   href: radio-button.md
   new: false

@@ -21,11 +21,11 @@ $_light-avatar: extend(
     $_square-shape-avatar,
     (
         background: (
-           color: ('grays', 400)
+           color: ('gray', 400)
         ),
 
         color: (
-           color: ('grays', 800)
+           color: ('gray', 800)
         ),
     )
 );
@@ -35,23 +35,23 @@ As you can see from the example above, the component schema defines the properti
 
 Let's take the `background` property for example. It tells the avatar theme what the default background should be. 
 
-*The `background` can be assigned any value, that is, a value that can be assigned to the CSS `background-color` property.* You can also assign a map to `background`, like in the sample above. When you assign a map to the `background` property, the map should contain functions as the key names (e.g. `igx-color`), and arguments for the functions as values for said keys. We do this to be able to resolve the values later on, when the avatar theme is being built. See, because we don't know the palette a user might pass to the avatar theme, we should be able to resolve it later on, only when the palette is known.
+*The `background` can be assigned any value, that is, a value that can be assigned to the CSS `background-color` property.* You can also assign a map to `background`, like in the sample above. When you assign a map to the `background` property, the map should contain functions as the key names (e.g. `color`), and arguments for the functions as values for said keys. We do this to be able to resolve the values later on, when the avatar theme is being built. See, because we don't know the palette a user might pass to the avatar theme, we should be able to resolve it later on, only when the palette is known.
 
-We can also add other functions and arguments to the `background` map as key value pairs. For instance we may want to run the resolved result from `igx-color: ('grays', 400)` through the `to-opaque` function we have, to resolve the HEX value for the `400` color variant of the `grays` palette, which is usually represented in rgba. 
+We can also add other functions and arguments to the `background` map as key value pairs. For instance we may want to run the resolved result from `color: ('gray', 400)` through the `to-opaque` function we have, to resolve the HEX value for the `400` color variant of the `gray` palette, which is usually represented in rgba. 
 
 Let's see how the schema will change when we make this addition:
 
 ```scss
 $_light-avatar: (
     icon-background: (
-       color: ('grays', 400),
+       color: ('gray', 400),
         to-opaque: #fff
     ),
     ...
 );
 ```
 
-The result of the `igx-color` function call will automatically be passed as the first argument to the `to-opaque` function. Since `to-opaque` accepts a second argument for the background color, we provide it as the value. If the function doesn't accept any additional arguments, you should assign an empty list `()` as its value.
+The result of the `color` function call will automatically be passed as the first argument to the `to-opaque` function. Since `to-opaque` accepts a second argument for the background color, we provide it as the value. If the function doesn't accept any additional arguments, you should assign an empty list `()` as its value.
 
 <div class="divider--half"></div>
 

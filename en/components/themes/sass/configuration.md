@@ -6,7 +6,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 # Configuration
 
-<div class="highlight">The Ignite UI for Angular theming library provides several global variables that let you configure how the theming engine works.</div>
+<div class="highlight">The Ignite UI for Angular theming library exposes several input arguments variables that let you configure how the theming engine works.</div>
 <div class="divider"></div>
 
 ## Legacy Support
@@ -31,56 +31,10 @@ This is the default way to turn off legacy support for the theme you're building
 // app.component.scss
 $igx-legacy-support: true;
 
-$color: color($default-palette, 'primary', 900);
+$color: color($light-material-palette, 'primary', 900);
 ```
 
 We recommend you create a `_variables.scss` file in the `styles` directory of your project where you store all of your global configuration variables. In this way, you can simply import your configuration in every style file.
-
-## Default Palette
-
-Another global variable is `$default-palette`. It is implicitly set when you pass a palette to the `theme` mixin. This variable sets the palette to be used by default by theming functions and mixin when a palette is not explicitly provided.
-
-For instance, the `igx-color` function may not be called with a specific palette in which case the value assigned to `$default-palette` will be used to retreive the color.
-
-You can change the default palette at any time by shadowing its declaration:
-
-```scss
-$my-palette: palette(
-  $primary: red, 
-  $secondary: blue
-);
-
-// Sets the global $default-palette variable 
-// the value stored in $my-palette
-@include theme(
-  $palette: $my-palette
-);
-```
-
-Now, we can assign `$my-palette` to `$default-palette` and store it in our `_variables.scss` file. Then pass either `$default-palette` or `$my-palette` to the theme mixin:
-
-```scss
-// _variables.scss
-
-$legacy-support: true; /* not supported in Ignite UI for Angular 13 */
-
-$my-palette: palette(
-  $primary: red, 
-  $secondary: blue
-);
-
-$default-palette: $my-palette;
-$igx-legacy-support: $legacy-support;
-```
-
-```scss
-@use 'variables' as *;
-
-@include theme(
-  $palette: $my-palette,
-  $legacy-support: $legacy-support
-);
-```
 
 ## Global Variables
 
@@ -89,11 +43,11 @@ Here's a list of global Sass variables forwarded in the main theming module:
 | Variable Name | Description                                                                 |
 |:-------------:|:---------------------------------------------------------------------------:|
 | `$components` | Stores a register of all component themes. Used for tree-shaking.           |
-| `$keyframes`  | Stores a register of all keyframe animation mixins. Used for tree-shaking. |
+| `$dropped-themes`  | Stores a register of dropped themes. Used for tree-shaking. |
 
 ## Scrollbar Styling
 
-The Ignite UI for Angular themes ship with custom scrollbar styles that allow you to change the width and/or the colors of all scrollbars in your application. To apply the included styles, make sure to set the `igx-scrollbar` class to an element that contains your root app component.
+The Ignite UI for Angular themes ship with custom scrollbar styles that allow you to change the width and/or the colors of all scrollbars in your application. To apply the included styles, make sure to set the `ig-scrollbar` class to an element that contains your root app component.
 
 <div class="divider"></div>
 

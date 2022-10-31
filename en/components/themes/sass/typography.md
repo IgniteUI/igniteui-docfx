@@ -109,7 +109,7 @@ The `type-style` mixin can be used to retrieve the style rules for a scale categ
 
 ```scss
 .my-fancy-h1 {
-    @include type-style($my-type-scale, 'h1') {
+    @include type-style('h1') {
         color: royalblue;
     }
 }
@@ -177,27 +177,27 @@ Now the card component will use the `overline` scale category to style the title
 
 ## CSS Classes
 
-In addition to adding text styles for all components based on type scale categories, we also style the default h1-h6 and p elements. This allows us to separate semantics from styling. So for instance, even though the `h1` tag has some default styling that we provide when using `typography`, you can modify it to look like an `h3` by giving it a class of `igx-typography__h3`.
+In addition to adding text styles for all components based on type scale categories, we also style the default h1-h6 and p elements. This allows us to separate semantics from styling. So for instance, even though the `h1` tag has some default styling that we provide when using `typography`, you can modify it to look like an `h3` by giving it a class of `ig-typography__h3`.
 
 ```html
-<h1 class="igx-typography__h3">Some text</h1>
+<h1 class="ig-typography__h3">Some text</h1>
 ```
 
 Here's a list of all CSS classes we provide by default:
 
-- `igx-typography__h1`
-- `igx-typography__h2`
-- `igx-typography__h3`
-- `igx-typography__h4`
-- `igx-typography__h5`
-- `igx-typography__h6`
-- `igx-typography__subtitle-1`
-- `igx-typography__subtitle-2`
-- `igx-typography__body-1`
-- `igx-typography__body-2`
-- `igx-typography__button`
-- `igx-typography__caption`
-- `igx-typography__overline`
+- `ig-typography__h1`
+- `ig-typography__h2`
+- `ig-typography__h3`
+- `ig-typography__h4`
+- `ig-typography__h5`
+- `ig-typography__h6`
+- `ig-typography__subtitle-1`
+- `ig-typography__subtitle-2`
+- `ig-typography__body-1`
+- `ig-typography__body-2`
+- `ig-typography__button`
+- `ig-typography__caption`
+- `ig-typography__overline`
 
 <div class="divider"></div>
 

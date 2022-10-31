@@ -86,6 +86,7 @@ First we need to import the `IgxDragDropModule` in our app module:
 
 ```typescript
 import { ..., IgxDragDropModule } from 'igniteui-angular';
+// import { ..., IgxDragDropModule } from '@infragistics/igniteui-angular'; for licensed package
 ...
 @NgModule({
     imports: [..., IgxDragDropModule]

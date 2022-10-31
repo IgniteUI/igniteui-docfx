@@ -27,6 +27,7 @@ Note that the `IgxInputGroup` also depends on the **FormsModule** in order to ha
 
 ...
 import { IgxInputGroupModule } from 'igniteui-angular';
+// import { IgxInputGroupModule } from '@infragistics/igniteui-angular'; for licensed package
 import { FormsModule } from '@angular/forms';
 
 @NgModule({

@@ -33,6 +33,7 @@ Drop Down コンポーネントを使用するには、まず `IgxDropDownModule
 
 ...
 import { IgxDropDownModule } from 'igniteui-angular';
+// import { IgxDropDownModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...

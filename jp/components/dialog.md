@@ -27,6 +27,7 @@ _language: ja
 
 ...
 import { IgxDialogModule } from 'igniteui-angular';
+// import { IgxDialogModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...

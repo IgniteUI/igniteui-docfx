@@ -28,6 +28,7 @@ To get started with the Toggle directive, first you need to import the `IgxToggl
 
 ...
 import { IgxToggleModule } from 'igniteui-angular';
+// import { IgxToggleModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -43,7 +44,7 @@ In order to show and hide the toggle content, use its [open]({environment:angula
 
 ```typescript
 import { IgxToggleDirective } from 'igniteui-angular'
-
+// import { IgxToggleDirective } from '@infragistics/igniteui-angular'; for licensed package
 ...
 
 export class Class {

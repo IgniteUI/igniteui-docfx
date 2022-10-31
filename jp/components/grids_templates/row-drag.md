@@ -87,6 +87,7 @@ Ignite UI for Angular @@igComponent では、**RowDrag** がルート `@@igSelec
 
 ```typescript
 import { ..., IgxDragDropModule } from 'igniteui-angular';
+// import { ..., IgxDragDropModule } from '@infragistics/igniteui-angular'; for licensed package
 ...
 @NgModule({
     imports: [..., IgxDragDropModule]

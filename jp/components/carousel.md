@@ -33,6 +33,7 @@ Carousel を全画面要素またはコンポーネントの子に設定でき�
 
 ...
 import { IgxCarouselModule } from 'igniteui-angular';
+// import { IgxCarouselModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...

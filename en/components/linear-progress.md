@@ -24,6 +24,7 @@ To get started with the Linear Progress Bar Indicator component, you need to imp
 
 ...
 import { IgxProgressBarModule } from 'igniteui-angular';
+// import { IgxProgressBarModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -130,6 +131,7 @@ And do not forget to import the [`IgxTextAlign`]({environment:angularApiUrl}/enu
 
 ```typescript
 import { ..., IgxTextAlign } from 'igniteui-angular';
+// import { ..., IgxTextAlign } from '@infragistics/igniteui-angular'; for licensed package
 ...
 
 public positionCenter: IgxTextAlign = IgxTextAlign.CENTER;
