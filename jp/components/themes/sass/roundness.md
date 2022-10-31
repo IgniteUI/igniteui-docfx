@@ -10,7 +10,16 @@ _language: ja
 <div class="divider"></div>
 
 ## 概要
-丸みは、他のプロパティと同様に、以下の例に示すようにコンポーネントのテーマまたはスキーマで設定されます。
+丸みは、他のプロパティと同様に、グローバル テーマとコンポーネント テーマ、または以下の例に示すようなスキーマで設定されます。
+```scss
+// Make all components sharp by setting the roundness factor to 0.
+@include theme(
+    ...,
+    $roundness: 0
+);
+```
+
+または、個々のコンポーネントごとにスキーマを変更して、デフォルトで値を設定することもできます。グローバル構成が常に優先されることに注意してください。
 
 ```scss
 $_material-shape-button: (

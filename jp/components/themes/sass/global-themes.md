@@ -18,24 +18,23 @@ _language: ja
 ###core  
 <div class="divider--half"></div>
 
-| 名前                      | タイプ    | デフォルト設定 | 説明                                                               |
-|:-------------------------:|:-------:|:-------:|:-------------------------------------------------------------------------:|
-| `$print-layout`           | boolean | true    | 印刷にスタイルを含めるか除外します。                                  |
-| `$enhanced-accessibility` | boolean | false   | コンポーネントの色およびその他のプロパティをアクセスしやすい値に切り替えます。 |
+|           名前            |  タイプ   | デフォルト設定 |                                説明                                |
+| :-----------------------: | :-----: | :-----: | :-----------------------------------------------------------------------: |
+|      `$print-layout`      | boolean |  true   |                 印刷にスタイルを含めるか除外します。                  |
+| `$enhanced-accessibility` | boolean |  false  | コンポーネントの色およびその他のプロパティをアクセスしやすい値に切り替えます。 |
 
 
 ###theme  
 <div class="divider--half"></div>
 
-| 名前              | タイプ    | デフォルト設定       | 説明                                                                                                  |
-|:-----------------:|:-------:|:-------------:|:------------------------------------------------------------------------------------------------------------:|
-| `$palette`        | map     | null          | パレット マップは、すべてのコンポーネントのデフォルト テーマで使用されます。                                       |
-| `$schema`         | map     | $light-schema | コンポーネントのスタイル設定に基づいて使用されるスキーマ。                                                         |
-| `$exclude`        | list    | ( )           | グローバル テーマから除外されるコンポーネント テーマのリスト。                                             |
-| `$legacy-support` | boolean | `false`       | テーマ設定の方法を決定 - true に設定し、テーマはハード値で設定します。                           |
-| `$roundness`      | Number  | null          | すべてのコンポーネントのグローバルな丸み係数 (値は 0〜1 の任意の小数にすることができます) を設定します。 |
-| `$elevation`      | boolean | `true`        | テーマのすべてのコンポーネントのエレベーションのオン/オフを切り替えます。                                                     |
-| `$elevations`     | Map | `true`        | すべてのコンポーネント テーマで使用されるエレベーション マップ。                                                        |
+|     名前      |  タイプ   |         デフォルト設定          |                                                 説明                                                  |
+| :-----------: | :-----: | :----------------------: | :----------------------------------------------------------------------------------------------------------: |
+|  `$palette`   |   map   |           null           |                    パレット マップは、すべてのコンポーネントのデフォルト テーマで使用されます。                    |
+|   `$schema`   |   map   | `$light-material-schema` |                             コンポーネントのスタイル設定に基づいて使用されるスキーマ。                             |
+|  `$exclude`   |  list   |            ()            |                       グローバル テーマから除外されるコンポーネント テーマのリスト。                       |
+| `$roundness`  | Number  |            1             | すべてのコンポーネントのグローバルな丸み係数 (値は 0〜1 の任意の小数にすることができます) を設定します。 |
+| `$elevation`  | boolean |          `true`          |                           テーマのすべてのコンポーネントのエレベーションのオン/オフを切り替えます。                           |
+| `$elevations` |   Map   |  `$material-elevations`  |                            すべてのコンポーネント テーマで使用されるエレベーション マップ。                             |
 
 企業のプライマリおよびセカンダリの色を使用するカスタム グローバル テーマを作成します。
 
@@ -62,10 +61,10 @@ $my-color-palette: palette(
 @include theme($my-color-palette);
 ```
 
-`core` および `theme` ミックスインの機能を説明します。`core` ミックスインは、方向、アクセシビリティ、可変コンポーネントの印刷スタイルの追加など、グローバル テーマ構成を処理します。`theme` は、`$default-palette` グローバル変数を渡すパレットに設定します。また、グローバル変数 `$igx-legacy-support` を `$legacy-support` の値に設定します。`theme` ミックスインは、コンポーネントの `$exclude` リストに載っていない各コンポーネント スタイルも含みます。 
+`core` と `theme` ミックスインが何をするか説明しましょう。`core` ミックスインは、強化されたアクセシビリティ (色弱ユーザーに適した色など) やすべてのコンポーネントの印刷スタイルの追加など、いくつかの構成を処理します。`theme` ミックスインには、個々のコンポーネント スタイル (除外リストにあるものを除く) が含まれ、コンポーネントの `$exclude` リストにリストされていないパレット、スキーマ、エレベーション、および丸みを構成します。
 
 > [!IMPORTANT]
-> `theme` の前に `core` と `typography` を含める必要があります。`core` ミックスインは `theme` の基本定義を提供します。
+> `theme` の前に `core` と `typography` を含めることが不可欠です。`core` および `typography` ミックスインは、`theme` ミックスインが正しく機能するために必要なすべての基本定義を提供します。
 
 ## コンポーネントの除外
 <div class="divider--half"></div>
@@ -84,8 +83,10 @@ $unnecessary: (igx-avatar, igx-badge);
 逆を行うことができます - 以下の方法を使用して、必要なコンポーネント スタイルのみを含めます。
 
 ```scss
+@use 'sass:map';
+
 @function include($items, $register) {
-    @return map-keys(map-remove($register, $items...));
+    @return map.keys(map.remove($register, $items...));
 }
 
 $allowed: (igx-avatar, igx-badge);
@@ -120,17 +121,17 @@ $allowed: (igx-avatar, igx-badge);
 Ignite UI for Angular には、事前定義されたテーマのセットから選択するオプションがあります。
 以下の表では、すぐに使用できるすべての定義済みテーマを示します。
 
-| テーマ                                                                        | ミックスイン                                                                                             |  スキーマ                   |  カラー パレット                                            | 利用可能バージョン |
-|------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|---------------------------|-----------------------------------------------------------|----------------------|
-| [**Material (base)**](presets/material.md)                           |  [theme()]({environment:sassApiUrl}/index.html#mixin-theme)                               | `$light-schema          ` | $default-palette                                          |      **すべて**         |
-| [**Material (light)**](presets/material.md#material-light-theme)     |  [light-theme()]({environment:sassApiUrl}/index.html#mixin-light-theme)                   | `$light-material-schema          ` | $light-material-palette                                          |      **6.2 +**       |
-| [**Material (dark)**](presets/material.md#material-dark-theme)       |  [dark-theme()]({environment:sassApiUrl}/index.html#mixin-dark-theme)                     | `$dark-material-schema           ` | $dark-material-palette                                             |      **6.2 +**       |
-| [**Fluent**](presets/fluent.md)                                      |  [fluent-light-theme()]({environment:sassApiUrl}/index.html#mixin-fluent-light-theme)                 | `$light-fluent-schema   ` | $light-fluent-excel-palette <br> $light-fluent-word-palette           |      **8.2 +**       |
-| [**Fluent (dark)**](presets/fluent.md#fluent-dark-theme)             |  [fluent-dark-theme()]({environment:sassApiUrl}/index.html#mixin-fluent-dark-theme)       | `$dark-fluent-schema    ` | $dark-fluent-excel-palette <br> $dark-fluent-word-palette |      **8.2 +**       |
-| [**Bootstrap**](presets/bootstrap.md)                                |  [bootstrap-light-theme()]({environment:sassApiUrl}/index.html#mixin-bootstrap-light-theme)            | `$light-bootstrap-schema` | $light-bootstrap-palette                                        |      **9.0 +**       |
-| [**Bootstrap (dark)**](presets/bootstrap.md#bootstrap-dark-theme)    |  [bootstrap-dark-theme()]({environment:sassApiUrl}/index.html#mixin-bootstrap-dark-theme)  | `$dark-bootstrap-schema ` | $dark-bootstrap-palette                                   |      **9.0 +**       |
-| [**Indigo**](presets/indigo.md)                                      |  [indigo-light-theme()]({environment:sassApiUrl}/index.html#mixin-indigo-light-theme)            | `$light-indigo-schema` | $light-indigo-palette                                        |      **10.1 +**       |
-| [**Indigo (dark)**](presets/indigo.md#indigo-dark-theme)             |  [indigo-dark-theme()]({environment:sassApiUrl}/index.html#mixin-indigo-dark-theme)  | `$dark-indigo-schema ` | $dark-indigo-palette                                   |      **10.1 +**       |
+| テーマ                                                             | ミックスイン                                                                                      | スキーマ                             | カラー パレット                                                                          | 利用可能バージョン |
+| ----------------------------------------------------------------- | ------------------------------------------------------------------------------------------ | ---------------------------------- | -------------------------------------------------------------------------------------- | -------------------- |
+| [**Material (base)**](presets/material.md)                        | [theme()]({environment:sassApiUrl}/index.html#mixin-theme)                                 | `$light-material-schema          ` | null                                                                                   | **すべて**              |
+| [**Material (light)**](presets/material.md#material-light-theme)  | [light-theme()]({environment:sassApiUrl}/index.html#mixin-light-theme)                     | `$light-material-schema          ` | $light-material-palette                                                                | **6.2 +**            |
+| [**Material (dark)**](presets/material.md#material-dark-theme)    | [dark-theme()]({environment:sassApiUrl}/index.html#mixin-dark-theme)                       | `$dark-material-schema           ` | $dark-material-palette                                                                 | **6.2 +**            |
+| [**Fluent**](presets/fluent.md)                                   | [fluent-light-theme()]({environment:sassApiUrl}/index.html#mixin-fluent-light-theme)       | `$light-fluent-schema   `          | $light-fluent-palette <br> $light-fluent-excel-palette <br> $light-fluent-word-palette | **8.2 +**            |
+| [**Fluent (dark)**](presets/fluent.md#fluent-dark-theme)          | [fluent-dark-theme()]({environment:sassApiUrl}/index.html#mixin-fluent-dark-theme)         | `$dark-fluent-schema    `          | $dark-fluent-palette <br> $dark-fluent-excel-palette <br> $dark-fluent-word-palette    | **8.2 +**            |
+| [**Bootstrap**](presets/bootstrap.md)                             | [bootstrap-light-theme()]({environment:sassApiUrl}/index.html#mixin-bootstrap-light-theme) | `$light-bootstrap-schema`          | $light-bootstrap-palette                                                               | **9.0 +**            |
+| [**Bootstrap (dark)**](presets/bootstrap.md#bootstrap-dark-theme) | [bootstrap-dark-theme()]({environment:sassApiUrl}/index.html#mixin-bootstrap-dark-theme)   | `$dark-bootstrap-schema `          | $dark-bootstrap-palette                                                                | **9.0 +**            |
+| [**Indigo**](presets/indigo.md)                                   | [indigo-light-theme()]({environment:sassApiUrl}/index.html#mixin-indigo-light-theme)       | `$light-indigo-schema`             | $light-indigo-palette                                                                  | **10.1 +**           |
+| [**Indigo (dark)**](presets/indigo.md#indigo-dark-theme)          | [indigo-dark-theme()]({environment:sassApiUrl}/index.html#mixin-indigo-dark-theme)         | `$dark-indigo-schema `             | $dark-indigo-palette                                                                   | **10.1 +**           |
 
 > [!NOTE]
 > すべてのハイレベルなテーマ ミックスインは、基本の `theme` ミックスインをラップすることに注意してください。
