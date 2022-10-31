@@ -28,6 +28,7 @@ The first step is to import the **IgxActionStripModule** in our **app.module.ts*
 
 ...
 import { IgxActionStripModule } from 'igniteui-angular';
+// import { IgxActionStripModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...

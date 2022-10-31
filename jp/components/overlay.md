@@ -146,6 +146,7 @@ Overlay サービスの [`attach()`]({environment:angularApiUrl}/classes/igxover
 // my-overlay-component.component.ts
 // import the ConnectedPositioningStategy class
 import { ConnectedPositioningStrategy } from 'igniteui-angular';
+// import { ConnectedPositioningStrategy } from '@infragistics/igniteui-angular'; for licensed package
 ...
 export class MyOverlayComponent {
 
@@ -215,6 +216,7 @@ const connectedOverlaySettings = IgxOverlayService.createRelativeOverlaySettings
 // my-overlay-component.component.ts
 // add an import for the definion of ConnectedPositioningStategy class
 import { ConnectedPositioningStrategy } from 'igniteui-angular';
+// import { ConnectedPositioningStrategy } from '@infragistics/igniteui-angular'; for licensed package
 ...
 export class MyOverlayComponent implements OnDestroy {
     private _overlayId = ''; // The unique identifier assigned to the component by the Overlay service

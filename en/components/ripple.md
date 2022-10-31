@@ -25,6 +25,7 @@ The Ripple Directive is exported as an `NgModule`, thus all you need to do in yo
 // app.module.ts
 
 import { IgxRippleModule } from 'igniteui-angular';
+// import { IgxRippleModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     imports: [

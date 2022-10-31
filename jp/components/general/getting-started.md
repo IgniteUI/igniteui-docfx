@@ -166,6 +166,7 @@ import { AppComponent } from './app.component';
 
 // Here we import the IgxGridModule, so we can use the igxGrid!
 import { IgxGridModule } from 'igniteui-angular';
+// import { IgxGridModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
   declarations: [

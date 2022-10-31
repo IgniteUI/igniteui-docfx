@@ -29,6 +29,7 @@ To start using the IgniteUI CSV Exporter first import the [`IgxCsvExporterServic
 
 ...
 import { IgxCsvExporterService } from 'igniteui-angular';
+// import { IgxCsvExporterService } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
   providers: [ IgxCsvExporterService ]
@@ -55,6 +56,7 @@ Here is the code which will execute the export process in the component's typesc
 
 ...
 import { IgxCsvExporterService, IgxCsvExporterOptions, CsvFileTypes } from 'igniteui-angular';
+// import { IgxCsvExporterService, IgxCsvExporterOptions, CsvFileTypes } from '@infragistics/igniteui-angular'; for licensed package
 ...
 
 public localData = [
@@ -92,6 +94,7 @@ Here is an example:
 
 ...
 import { IgxCsvExporterService, IgxCsvExporterOptions, CsvFileTypes, IgxGridComponent } from 'igniteui-angular';
+// import { IgxCsvExporterService, IgxCsvExporterOptions, CsvFileTypes, IgxGridComponen } from '@infragistics/igniteui-angular'; for licensed package
 ...
 
 @ViewChild('igxGrid1') public igxGrid1: IgxGridComponent;

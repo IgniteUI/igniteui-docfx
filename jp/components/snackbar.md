@@ -29,6 +29,7 @@ _language: ja
 
 ...
 import { IgxSnackbarModule } from 'igniteui-angular';
+// import { IgxSnackbarModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -182,7 +183,7 @@ Snackbar の主な機能を説明しました。次の例はより複雑なサ�
 
 import { Component, OnInit, ViewChild } from "@angular/core";
 import { IgxSnackbarComponent } from 'igniteui-angular';
-
+// import { IgxSnackbarComponent } from '@infragistics/igniteui-angular'; for licensed package
 ...
 @ViewChild(IgxSnackbarComponent)
 public snackbar: IgxSnackbarComponent;

@@ -25,6 +25,7 @@ Ignite UI for Angular Splitter コンポーネントはレイアウトを作成�
 // app.module.ts
 ...
 import { IgxSplitterModule } from 'igniteui-angular';
+// import { IgxSplitterModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...

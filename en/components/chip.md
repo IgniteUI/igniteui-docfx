@@ -25,6 +25,7 @@ The first step is to import the **IgxChipsModule** in the **app.module.ts** file
 
 ...
 import { IgxChipsModule } from 'igniteui-angular';
+// import { IgxChipsModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -114,6 +115,7 @@ Then, we need to add the `chipList` and the function, that handles the [`remove`
 
 ```ts
 import { IBaseChipEventArgs } from 'igniteui-angular';
+// import { IBaseChipEventArgs } from '@infragistics/igniteui-angular'; for licensed package
 ...
 public chipList = [
     {
@@ -326,6 +328,8 @@ Add the `chipList` and the functions that handle the events:
 
 ```ts
 import { IBaseChipEventArgs, IChipsAreaReorderEventArgs } from 'igniteui-angular';
+// import { IBaseChipEventArgs, IChipsAreaReorderEventArgs } from '@infragistics/igniteui-angular'; for licensed package
+
 ...
 public chipList = [
     {

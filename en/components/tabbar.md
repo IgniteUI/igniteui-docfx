@@ -33,6 +33,7 @@ The first step is to import the `IgxBottomNavModule` in the **app.module.ts** fi
 
 ...
 import { IgxBottomNavModule } from 'igniteui-angular';
+// import { IgxBottomNavModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...

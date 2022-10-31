@@ -85,6 +85,7 @@ Angular グリッドが `NgModule` としてエクスポートされるため、
 // app.module.ts
 
 import { IgxGridModule } from 'igniteui-angular';
+// import { IgxGridModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     imports: [
@@ -100,6 +101,7 @@ export class AppModule {}
 
 ```typescript
 import { IgxGridComponent } from 'igniteui-angular';
+// import { IgxGridComponent } from '@infragistics/igniteui-angular'; for licensed package
 ...
 @ViewChild('myGrid', { read: IgxGridComponent })
 public grid: IgxGridComponent;

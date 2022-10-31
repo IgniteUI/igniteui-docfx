@@ -102,6 +102,7 @@ IgniteUI Excel Exporter を使用するには、[`IgxExcelExporterService`]({env
 ```typescript
 // app.module.ts
 import { IgxExcelExporterService } from 'igniteui-angular';
+// import { IgxExcelExporterService } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
   providers: [ IgxExcelExporterService ]
@@ -127,6 +128,7 @@ export class AppModule {}
 ```typescript
 // component.ts
 import { IgxExcelExporterService, IgxExcelExporterOptions } from 'igniteui-angular';
+// import { IgxExcelExporterService, IgxExcelExporterOptions } from '@infragistics/igniteui-angular'; for licensed package
 import { @@igxNameComponent } from 'igniteui-angular';
 
 @ViewChild('@@igObjectRef') public @@igObjectRef: @@igxNameComponent;

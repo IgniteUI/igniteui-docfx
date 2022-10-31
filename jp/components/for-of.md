@@ -29,6 +29,7 @@ _language: ja
 // app.module.ts
 
 import { IgxForOfModule } from 'igniteui-angular';
+// import { IgxForOfModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     imports: [

@@ -27,6 +27,7 @@ To get started with the Radio Button component, first you have to import the `Ig
 
 ...
 import { IgxRadioModule } from 'igniteui-angular';
+// import { IgxRadioModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -182,6 +183,7 @@ The Radio Group Directive is exported as an `NgModule`, thus all you need to do 
 // app.module.ts
 ...
 import { IgxRadioModule } from 'igniteui-angular';
+// import { IgxRadioModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...

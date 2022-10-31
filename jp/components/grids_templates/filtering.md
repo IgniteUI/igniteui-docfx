@@ -224,6 +224,7 @@ public ngAfterViewInit() {
 
 ```typescript
 import { FilteringLogic } from 'igniteui-angular';
+// import { FilteringLogic } from '@infragistics/igniteui-angular'; for licensed package
 ...
 
 this.@@igObjectRef.filteringLogic = FilteringLogic.OR;
@@ -409,6 +410,7 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
 
 ```typescript
 import { TreeGridMatchingRecordsOnlyFilteringStrategy } from 'igniteui-angular';
+// import { TreeGridMatchingRecordsOnlyFilteringStrategy } from '@infragistics/igniteui-angular'; for licensed package
 ...
 public matchingRecordsOnlyStrategy = new TreeGridMatchingRecordsOnlyFilteringStrategy();
 ```

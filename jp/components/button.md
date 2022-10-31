@@ -26,6 +26,7 @@ Button ディレクティブは `NgModule` としてエクスポートされる�
 // app.module.ts
 
 import { IgxButtonModule } from 'igniteui-angular';
+// import { IgxButtonModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     imports: [
@@ -168,6 +169,7 @@ export class AppModule {}
 // app.module.ts
 ...
 import { IgxButtonGroupModule } from 'igniteui-angular';
+// import { IgxButtonGroupModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     imports: [

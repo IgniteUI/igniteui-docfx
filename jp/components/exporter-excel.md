@@ -31,6 +31,7 @@ IgniteUI Excel Exporter を使用するには、[`IgxExcelExporterService`]({env
 
 ...
 import { IgxExcelExporterService } from 'igniteui-angular';
+// import { IgxExcelExporterService } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
   providers: [ IgxExcelExporterService ]
@@ -57,6 +58,7 @@ export class AppModule {}
 
 ...
 import { IgxExcelExporterService, IgxExcelExporterOptions } from 'igniteui-angular';
+// import { IgxExcelExporterService, IgxExcelExporterOptions } from '@infragistics/igniteui-angular'; for licensed package
 ...
 
 public localData = [
