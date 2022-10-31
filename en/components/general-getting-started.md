@@ -34,9 +34,11 @@ yarn add igniteui-angular-spreadsheet igniteui-angular-core
 
 This will automatically install packages for Ignite UI for Angular, along with all of their dependencies, font imports and styles references to the existing project.
 
-## Importing Modules
+## Importing Component Modules
 
 First we have to import the required modules of the components we want to use. We will go ahead and do this for the [**GeographicMap**](geo-map.md) component.
+
+Open the Program.cs
 
 ## Using Components
 
