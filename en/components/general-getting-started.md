@@ -38,8 +38,6 @@ This will automatically install packages for Ignite UI for Angular, along with a
 
 First we have to import the required modules of the components we want to use. We will go ahead and do this for the [**GeographicMap**](geo-map.md) component.
 
-Open the Program.cs
-
 ## Using Components
 
 We are now ready to use the Ignite UI for Angular map component in our markup! Let's go ahead and define it:
