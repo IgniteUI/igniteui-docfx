@@ -467,6 +467,50 @@ The [`showSummaryOnCollapse`]({environment:angularApiUrl}/classes/@@igTypeDoc.ht
 }
 <div class="divider--half"></div>
 
+## Exporting Summaries
+
+There is an `exportSummaries` option in `IgxExcelExporterOptions` that specifies whether the exported data should include the grid's summaries. Default `exportSummaries` value is **false**.
+
+The `IgxExcelExporterService` will export the default summaries for all column types as their equivalent excel functions so they will continue working properly when the sheet is modified. Try it for yourself in the example below:
+
+@@if (igxName === 'IgxGrid') {
+<code-view style="height:720px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/grid/grid-summary-export" >
+</code-view>
+}
+
+@@if (igxName === 'IgxTreeGrid') {
+<code-view style="height:720px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-summary-export" >
+</code-view>
+}
+
+
+@@if (igxName === 'IgxHierarchicalGrid') {
+<code-view style="height:720px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-summary-export" >
+</code-view>
+}
+
+The exported file includes a hidden column that holds the level of each `DataRecord` in the sheet. This level is used in the summaries to filter out the cells that need to be included in the summary function.
+
+In the table below, you can find the corresponding Excel formula for each of the default summaries.
+
+Data Type | Function | Excel Function |
+|:--------|:--------:|:---------------|
+`string`, `boolean`, <br /> `number`, `currency`, `percent` | count | ="Count: "&COUNTIF(start:end, recordLevel) |
+|| min| ="Min: "&MIN(IF(start:end=recordLevel, rangeStart:rangeEnd)) |
+|| max | ="Max: "&MAX(IF(start:end=recordLevel, rangeStart:rangeEnd)) |
+|| average | ="Avg: "&AVERAGEIF(start:end, recordLevel, rangeStart:rangeEnd) |
+|| sum | ="Sum: "&SUMIF(start:end, recordLevel, rangeStart:rangeEnd) |
+`date` | count | ="Count: "&COUNTIF(start:end, recordLevel) |
+|| earliest | ="Earliest: "& TEXT(MIN(IF(start:end=recordLevel, rangeStart:rangeEnd)), format) |
+|| latest | ="Latest: "&TEXT(MAX(IF(start:end=recordLevel, rangeStart:rangeEnd)), format) |
+
+
 ## Keyboard Navigation
 
 The summary rows can be navigated with the following keyboard interactions:
