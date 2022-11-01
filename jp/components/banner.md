@@ -29,6 +29,7 @@ Banner コンポーネントを初期化にするには、まず `IgxBannerModul
 
 ...
 import { IgxBannerModule } from 'igniteui-angular';
+// import { IgxBannerModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -141,6 +142,7 @@ Banner コンポーネントには、アニメーションのオープンとク�
 ```typescript
 // banner.component.ts
 import { IgxBannerComponent, slideInLeft, slideOutRight } from 'igniteui-angular'
+// import { IgxBannerComponent, slideInLeft, slideOutRight } from '@infragistics/igniteui-angular'; for licensed package
 ...
 export class MyBannerComponent {
     ...

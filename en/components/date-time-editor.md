@@ -26,6 +26,7 @@ To get started with the Ignite UI for Angular Date Time Directive, let's first i
 
 ...
 import { IgxDateTimeEditorModule } from 'igniteui-angular';
+// import { IgxDateTimeEditorModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...

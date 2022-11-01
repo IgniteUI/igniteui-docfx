@@ -42,6 +42,7 @@ Ignite UI for Angular については、[*はじめに*](general/getting-started
 
 ...
 import { IgxAccordionModule } from 'igniteui-angular';
+// import { IgxAccordionModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -102,6 +103,8 @@ Angular Accordion は、パネルの展開と縮小の両方のアニメーシ�
 ```typescript
 import { useAnimation } from '@angular/animations';
 import { slideInLeft, slideOutRight } from 'igniteui-angular';
+// import { slideInLeft, slideOutRight } from '@infragistics/igniteui-angular'; for licensed package
+
 @Component({
     ...
 })

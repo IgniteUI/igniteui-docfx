@@ -60,6 +60,7 @@ Then, you can use the Ignite UI components by importing their respective modules
 ```ts
 // manually addition of the Igx Avatar component 
 import { IgxAvatarModule } from 'igniteui-angular';
+// import { IgxAvatarModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     imports: [

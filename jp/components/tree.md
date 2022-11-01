@@ -35,6 +35,7 @@ Ignite UI for Angular については、[**はじめに**](general/getting-start
 
 ...
 import { IgxTreeModule } from 'igniteui-angular';
+// import { IgxTreeModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...

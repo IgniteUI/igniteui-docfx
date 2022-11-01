@@ -23,6 +23,7 @@ _language: ja
 // app.module.ts
 ...
 import { IgxExpansionPanelModule } from 'igniteui-angular';
+// import { IgxExpansionPanelModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -71,6 +72,8 @@ Golden retrievers have an instinctive love of water, and are easy to train to ba
 ```typescript
 // in expansion-panel.component.ts
 import { IgxExpansionPanelComponent } from 'igniteui-angular';
+// import { IgxExpansionPanelComponent } from '@infragistics/igniteui-angular'; for licensed package
+
 @Component({
     ...
 })
@@ -261,6 +264,8 @@ Ignite UI テーマ エンジンの使用方法の詳細については、[`こ�
 // expansion-panel.component.ts 内
 import { useAnimation } from '@angular/animations';
 import { IgxExpansionPanelComponent, slideInLeft, slideOutRight } from 'igniteui-angular';
+// import { IgxExpansionPanelComponent, slideInLeft, slideOutRight } from '@infragistics/igniteui-angular'; for licensed package
+
 @Component({
     ...
 })

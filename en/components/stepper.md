@@ -36,6 +36,7 @@ The next step is to import the `IgxStepperModule` in your app.module file.
 
 ...
 import { IgxStepperModule } from 'igniteui-angular';
+// import { IgxStepperModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...

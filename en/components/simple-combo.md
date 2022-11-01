@@ -38,6 +38,7 @@ To get started with the Simple ComboBox component, first you need to import the 
 
 ```typescript
 import { IgxSimpleComboModule } from 'igniteui-angular';
+// import { IgxSimpleComboModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     imports: [

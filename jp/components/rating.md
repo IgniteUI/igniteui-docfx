@@ -67,6 +67,7 @@ Angular フォームでは、多くの場合、コンポーネントはその値
 
 ```typescript
 import { IgcFormsModule } from 'igniteui-angular';
+// import { IgcFormsModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     imports: [

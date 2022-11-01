@@ -39,6 +39,7 @@ Simple ComboBox コンポーネントの使用を開始するには、最初に 
 
 ```typescript
 import { IgxSimpleComboModule } from 'igniteui-angular';
+// import { IgxSimpleComboModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     imports: [
