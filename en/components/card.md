@@ -28,6 +28,7 @@ Import the `IgxCardModule` inside our **app.module.ts** file:
 // app.module.ts
 ...
 import { IgxCardModule } from 'igniteui-angular';
+// import { IgxCardModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...

@@ -30,6 +30,7 @@ The first step is to import the `IgxTimePickerModule` in the **app.module.ts** f
 import { HammerModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IgxTimePickerModule } from 'igniteui-angular';
+// import { IgxTimePickerModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -188,6 +189,7 @@ The default time picker mode is editable dropdown mode. To change the time picke
 // timePickerDropdown.component.ts
 
 import { PickerInteractionMode } from 'igniteui-angular';
+// import { PickerInteractionMode } from '@infragistics/igniteui-angular'; for licensed package
 ...
 public mode = PickerInteractionMode.Dialog;
 ```
@@ -253,6 +255,7 @@ You can specify [`minValue`]({environment:angularApiUrl}/classes/igxtimepickerco
 ...
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IgxTimePickerModule, IgxToastModule } from 'igniteui-angular';
+// import { IgxTimePickerModule, IgxToastModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...

@@ -27,6 +27,7 @@ Icon コンポーネントが `NgModule` としてエクスポートされるた
 // app.module.ts
 
 import { IgxIconModule } from 'igniteui-angular';
+// import { IgxIconModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     imports: [

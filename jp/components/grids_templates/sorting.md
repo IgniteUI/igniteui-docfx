@@ -89,6 +89,7 @@ Ignite UI for Angular @@igComponent では、列レベルでのデータ ソー�
 
 ```typescript
 import { SortingDirection } from 'igniteui-angular';
+// import { SortingDirection } from '@infragistics/igniteui-angular'; for licensed package
 
 // Perform a case insensitive ascending sort on the ProductName column.
 this.@@igObjectRef.sort({ fieldName: 'ProductName', dir: SortingDirection.Asc, ignoreCase: true });

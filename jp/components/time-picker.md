@@ -31,6 +31,7 @@ _language: ja
 import { HammerModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IgxTimePickerModule } from 'igniteui-angular';
+// import { IgxTimePickerModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -189,6 +190,7 @@ public selectNow(timePicker: IgxTimePickerComponent) {
 // timePickerDropdown.component.ts
 
 import { PickerInteractionMode } from 'igniteui-angular';
+// import { PickerInteractionMode } from '@infragistics/igniteui-angular'; for licensed package
 ...
 public mode = PickerInteractionMode.Dialog;
 ```
@@ -254,6 +256,7 @@ Time Picker コンポーネントは、コア FormsModule [NgModel](https://angu
 ...
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IgxTimePickerModule, IgxToastModule } from 'igniteui-angular';
+// import { IgxTimePickerModule, IgxToastModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...

@@ -263,6 +263,7 @@ import {
     ...
     IgxColumnActionsModule 
 } from 'igniteui-angular';
+// import { ..., IgxColumnActionsModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -375,6 +376,7 @@ import {
     ...
     IgxRadioModule    
 } from 'igniteui-angular';
+// import { ..., IgxRadioModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...

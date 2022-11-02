@@ -801,6 +801,7 @@ The `ng update` process will update all enumeration names, like `AvatarType`, `T
         ```
         ```typescript
         import { IgxAppendDropStrategy } from 'igniteui-angular';
+        // import { IgxAppendDropStrategy } from '@infragistics/igniteui-angular'; for licensed package
 
         public appendStrategy = IgxAppendDropStrategy;
         ```

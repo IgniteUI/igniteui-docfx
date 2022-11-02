@@ -30,6 +30,7 @@ Slider コンポーネントを初期化するには、**IgxSliderModule** を *
 
 ...
 import { IgxSliderModule } from 'igniteui-angular';
+// import { IgxSliderModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -61,6 +62,7 @@ Angular [`ngModel`](https://angular.io/guide/built-in-directives#ngModel) を使
 // sample.component.ts 
 import { Component, ViewChild } from '@angular/core';
 import { IgxInputDirective, IgxSliderComponent } from 'igniteui-angular';
+// import { IgxInputDirective, IgxSliderComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
     selector: 'app-sample',
@@ -153,6 +155,7 @@ public volume = 20;
 // sample.component.ts
 import { Component } from '@angular/core';
 import { IgxSliderType } from 'igniteui-angular';
+// import { IgxSliderType } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
   selector: 'app-sample',

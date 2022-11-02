@@ -85,6 +85,7 @@ The Angular grid is exported as an `NgModule`, thus all you need to do in your a
 // app.module.ts
 
 import { IgxGridModule } from 'igniteui-angular';
+// import { IgxGridModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     imports: [
@@ -100,6 +101,7 @@ Each of the components, directives and helper classes in the `IgxGridModule` can
 
 ```typescript
 import { IgxGridComponent } from 'igniteui-angular';
+// import { IgxGridComponent } from '@infragistics/igniteui-angular'; for licensed package
 ...
 @ViewChild('myGrid', { read: IgxGridComponent })
 public grid: IgxGridComponent;

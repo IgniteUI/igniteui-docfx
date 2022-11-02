@@ -31,6 +31,8 @@ Calendar コンポーネントを初期化する前に、`IgxCalendarModule` を
 import { HammerModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IgxCalendarModule } from 'igniteui-angular';
+// import { IgxCalendarModule } from '@infragistics/igniteui-angular'; for licensed package
+
 @NgModule({
     ...
     imports: [..., BrowserAnimationsModule, HammerModule, IgxCalendarModule],

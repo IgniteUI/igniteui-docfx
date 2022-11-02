@@ -27,6 +27,7 @@ Ignite UI for Angular Date Time ディレクティブを使用するにはまず
 
 ...
 import { IgxDateTimeEditorModule } from 'igniteui-angular';
+// import { IgxDateTimeEditorModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...

@@ -28,6 +28,7 @@ The first step is to import the **IgxActionStripModule** in our **app.module.ts*
 
 ...
 import { IgxActionStripModule } from 'igniteui-angular';
+// import { IgxActionStripModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -90,7 +91,7 @@ They are added inside the `<igx-action-strip>` and this is all needed to have an
 These components expose templates giving flexibility for customization. For instance, if we would like to use the `ActionStrip` for a Gmail scenario with row actions such as `delete`, `edit` and etc. You can simply create button component with `igx-icon`, add click event to it and insert it into the `igx-action-strip` component.
 
 ```html
- <igx-grid>
+<igx-grid>
     <igx-action-strip #actionstrip>
         <igx-grid-pinning-actions></igx-grid-pinning-actions>
         <button title="Edit" igxButton="icon" igxRipple (click)='startEdit(actionstrip.context)'>

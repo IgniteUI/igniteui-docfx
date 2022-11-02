@@ -52,6 +52,7 @@ ng add igniteui-angular
 ```ts
 // manually addition of the Igx Avatar component 
 import { IgxAvatarModule } from 'igniteui-angular';
+// import { IgxAvatarModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     imports: [

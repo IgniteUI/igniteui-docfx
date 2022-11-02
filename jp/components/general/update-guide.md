@@ -795,6 +795,7 @@ import { HammerModule } from "@angular/platform-browser";
         ```
         ```typescript
         import { IgxAppendDropStrategy } from 'igniteui-angular';
+        // import { IgxAppendDropStrategy } from '@infragistics/igniteui-angular'; for licensed package
 
         public appendStrategy = IgxAppendDropStrategy;
         ```
