@@ -25,6 +25,7 @@ ComboBox コンポーネントを初期化にするには、まず `IgxComboModu
 
 ```typescript
 import { IgxComboModule } from 'igniteui-angular';
+// import { IgxComboModule } from '@infragistics/igniteui-angular'; for licensed package
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -47,6 +48,7 @@ export class AppModule {}
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { IForOfState } from 'igniteui-angular';
+// import { IForOfState } from '@infragistics/igniteui-angular'; for licensed package
 import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable()
@@ -88,6 +90,7 @@ export class RemoteService {
 ```typescript
 import { ChangeDetectorRef, Component, OnInit, ViewChild } from '@angular/core';
 import { IgxComboComponent } from 'igniteui-angular';
+// import { IgxComboComponent } from '@infragistics/igniteui-angular'; for licensed package
 import { RemoteService } from '../../grid/services/remote.service';
 
 @Component({

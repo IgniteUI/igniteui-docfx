@@ -13,12 +13,6 @@ It is highly recommended that you review the [Binding Shape Files with Geo-Spati
 
 ## Angular Displaying Heat Imagery Example
 
-<!-- Angular, React -->
-
-```ts
-//WebComponents sample not working in CodeSandbox. Remove build flag once this is fixed.
-```
-
 <code-view style="height: 500px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-display-heat-imagery"
@@ -38,8 +32,6 @@ It is highly recommended that you review the [Binding Shape Files with Geo-Spati
 </html>
 
 <div class="divider--half"></div>
-
-<!-- end: Angular, React -->
 
 When a [`IgxShapeDataSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapedatasource.html) loads its shape files, it converts that data into `ShapeFileRecord` objects. These objects can be retrieved from the `GetPointData()` method of the [`IgxShapeDataSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapedatasource.html) and can then be used to create a heat-map through usage of a [`IgxTileGeneratorMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtilegeneratormapimagery.html) object with a [`IgxHeatTileGenerator`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxheattilegenerator.html) assigned to its `TileGenerator` property. This [`IgxTileGeneratorMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtilegeneratormapimagery.html) can then be used in a geographic tile series as its `TileImagery` source.
 

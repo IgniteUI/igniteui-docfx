@@ -29,6 +29,7 @@ Toggle コンポーネントを初期化にするには、まず `IgxToggleModul
 
 ...
 import { IgxToggleModule } from 'igniteui-angular';
+// import { IgxToggleModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -44,7 +45,7 @@ export class AppModule {}
 
 ```typescript
 import { IgxToggleDirective } from 'igniteui-angular'
-
+// import { IgxToggleDirective } from '@infragistics/igniteui-angular'; for licensed package
 ...
 
 export class Class {

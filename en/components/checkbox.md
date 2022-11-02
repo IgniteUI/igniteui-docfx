@@ -27,6 +27,7 @@ First you need to import the `IgxCheckboxModule` in the **app.module.ts** file:
 
 ...
 import { IgxCheckboxModule } from 'igniteui-angular';
+// import { IgxCheckboxModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...

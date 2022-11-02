@@ -28,6 +28,7 @@ _language: ja
 ```typescript
 // app.module.ts
 import { IgxForOfModule } from 'igniteui-angular';
+// import { IgxForOfModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     imports: [
@@ -159,6 +160,7 @@ export class DropDownVirtualComponent {
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { IForOfState } from 'igniteui-angular';
+// import { IForOfState } from '@infragistics/igniteui-angular'; for licensed package
 import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable()

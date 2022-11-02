@@ -319,6 +319,7 @@ all export services for your application.
 // app.module.ts
 
 import { IgxExcelExporterService, IgxCsvExporterService } from 'igniteui-angular';
+// import { IgxExcelExporterService, IgxCsvExporterService } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...

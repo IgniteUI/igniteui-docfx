@@ -27,6 +27,8 @@ The first step is to import the `IgxCalendarModule` inside our **app.module.ts**
 import { HammerModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IgxCalendarModule } from 'igniteui-angular';
+// import { IgxCalendarModule } from '@infragistics/igniteui-angular'; for licensed package
+
 @NgModule({
     ...
     imports: [..., BrowserAnimationsModule, HammerModule, IgxCalendarModule],
@@ -39,6 +41,7 @@ You will usually also import the [`IgxMonthPickerComponent`]({environment:angula
 
 ```typescript
 import { IgxMonthPickerComponent } from 'igniteui-angular';
+// import { IgxMonthPickerComponent } from '@infragistics/igniteui-angular'; for licensed package
 ...
 
 @ViewChild('monthPicker', { read: IgxMonthPickerComponent }) public monthPicker: IgxMonthPickerComponent;

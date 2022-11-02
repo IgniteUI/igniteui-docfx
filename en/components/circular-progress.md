@@ -25,6 +25,7 @@ To get started with the Circular Progress Indicator component, first you need to
 
 ...
 import { IgxProgressBarModule } from 'igniteui-angular';
+// import { IgxProgressBarModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...

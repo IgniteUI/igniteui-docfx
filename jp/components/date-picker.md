@@ -28,6 +28,7 @@ Date Picker コンポーネントの使用を開始するには、まず、使�
 import { HammerModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IgxDatePickerModule } from 'igniteui-angular';
+// import { IgxDatePickerModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...

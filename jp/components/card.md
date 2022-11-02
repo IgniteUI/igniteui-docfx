@@ -29,6 +29,7 @@ Card コンポーネントは、様々なオブジェクト タイプ、サイ�
 // app.module.ts
 ...
 import { IgxCardModule } from 'igniteui-angular';
+// import { IgxCardModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...

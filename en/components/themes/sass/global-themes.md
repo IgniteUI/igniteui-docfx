@@ -17,24 +17,23 @@ To generate a global theme we're going to be including two mixins `core` and `th
 ###core  
 <div class="divider--half"></div>
 
-| Name                      | Type    | Default | Description                                                               |
-|:-------------------------:|:-------:|:-------:|:-------------------------------------------------------------------------:|
-| `$print-layout`           | boolean | true    | include/exclude the styles for printing.                                  |
-| `$enhanced-accessibility` | boolean | false   | Switches component colors and other properties to more accessible values. |
+|           Name            |  Type   | Default |                                Description                                |
+| :-----------------------: | :-----: | :-----: | :-----------------------------------------------------------------------: |
+|      `$print-layout`      | boolean |  true   |                 Include/exclude the styles for printing.                  |
+| `$enhanced-accessibility` | boolean |  false  | Switches component colors and other properties to more accessible values. |
 
 
 ###theme  
 <div class="divider--half"></div>
 
-| Name              | Type    | Default       | Description                                                                                                  |
-|:-----------------:|:-------:|:-------------:|:------------------------------------------------------------------------------------------------------------:|
-| `$palette`        | map     | null          | The palette map to be used to by the default themes of all components.                                       |
-| `$schema`         | map     | $light-schema | The schema used as basis for styling the components.                                                         |
-| `$exclude`        | list    | ( )           | A list of component themes to be excluded from the global theme.                                             |
-| `$legacy-support` | boolean | `false`       | Determines the theming strategy - if set to true, theming is done via hard values.                           |
-| `$roundness`      | Number  | null          | Sets the global roundness factor for all components (the value can be any decimal fraction between 0 and 1). |
-| `$elevation`      | boolean | `true`        | Turns on/off elevations for all components in the theme.                                                     |
-| `$elevations`     | Map | `true`        | The elevation map to be used by all component themes.                                                        |
+|     Name      |  Type   |         Default          |                                                 Description                                                  |
+| :-----------: | :-----: | :----------------------: | :----------------------------------------------------------------------------------------------------------: |
+|  `$palette`   |   map   |           null           |                    The palette map to be used to by the default themes of all components.                    |
+|   `$schema`   |   map   | `$light-material-schema` |                             The schema used as basis for styling the components.                             |
+|  `$exclude`   |  list   |            ()            |                       A list of component themes to be excluded from the global theme.                       |
+| `$roundness`  | Number  |            1             | Sets the global roundness factor for all components (the value can be any decimal fraction between 0 and 1). |
+| `$elevation`  | boolean |          `true`          |                           Turns on/off elevations for all components in the theme.                           |
+| `$elevations` |   Map   |  `$material-elevations`  |                            The elevation map to be used by all component themes.                             |
 
 Let's create a custom global theme that will use the primary and secondary colors of our company.
 
@@ -61,10 +60,10 @@ $my-color-palette: palette(
 @include theme($my-color-palette);
 ```
 
-Let's explain what the `core` and `theme` mixins do. The `core` mixin takes care of the global theme configuration, like direction, accessibility, and adding printing styles for variable components. The `theme` will set the global variable `$default-palette` to the palette you pass; it will also set the global variable `$igx-legacy-support` to the value of `$legacy-support`. The `theme` mixin also includes each individual component style that is not listed in the `$exclude` list of components. 
+Let's explain what the `core` and `theme` mixins do. The `core` mixin takes care of some configurations, like adding enhanced accessibility(e.g. colors suitable for color blind users) and printing styles for all components. The `theme` mixin includes each individual component style (bar the ones listed as excluded) and configures the palette, schema, elevations, and roundness that is not listed in the `$exclude` list of components. 
 
 > [!IMPORTANT]
-> Including `core` and `typography` before `theme` is essential. The `core` mixin provides all base definitions needed for `theme` to work.
+> Including `core` and `typography` before `theme` is essential. The `core` and `typography` mixins provide all base definitions needed for the `theme` mixin to work correctly.
 
 ## Excluding Components
 <div class="divider--half"></div>
@@ -83,8 +82,10 @@ If you know your app will not be using some of our components, we recommend you 
 You can do the inverse, i.e. include only the component styles you want using the method below:
 
 ```scss
+@use 'sass:map';
+
 @function include($items, $register) {
-    @return map-keys(map-remove($register, $items...));
+    @return map.keys(map.remove($register, $items...));
 }
 
 $allowed: (igx-avatar, igx-badge);
@@ -96,7 +97,7 @@ $allowed: (igx-avatar, igx-badge);
 
 ## Light and Dark Themes
 
-In addition to the more powerful `theme` mixin, we include two additional global theme mixins for fast bootstrapping *__light__* and *__dark__* themes. Those mixins are `igx-light-theme` and `dark-theme`.
+In addition to the more powerful `theme` mixin, we include two additional global theme mixins for fast bootstrapping *__light__* and *__dark__* themes. Those mixins are `light-theme` and `dark-theme`.
 
 Here's a quick showcase of how you can create a light and dark theme for your application:
 
@@ -119,17 +120,17 @@ Ideally, you set `.light-theme` or `.dark-theme` classes on an element high in y
 Ignite UI for Angular gives you the option to pick from a set of predefined themes.
 The table below shows all the built-in themes that you can use right away.
 
-| Theme                                                                        | Mixin                                                                                             |  Schema                   |  color palette                                            | Available in version |
-|------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|---------------------------|-----------------------------------------------------------|----------------------|
-| [**Material (base)**](presets/material.md)                           |  [theme()]({environment:sassApiUrl}/index.html#mixin-theme)                               | `$light-schema          ` | $default-palette                                          |      **all**         |
-| [**Material (light)**](presets/material.md#material-light-theme)     |  [igx-light-theme()]({environment:sassApiUrl}/index.html#mixin-igx-light-theme)                   | `$light-material-schema          ` | $light-material-palette                                          |      **6.2 +**       |
-| [**Material (dark)**](presets/material.md#material-dark-theme)       |  [dark-theme()]({environment:sassApiUrl}/index.html#mixin-dark-theme)                     | `$dark-material-schema           ` | $dark-material-palette                                             |      **6.2 +**       |
-| [**Fluent**](presets/fluent.md)                                      |  [fluent-light-theme()]({environment:sassApiUrl}/index.html#mixin-fluent-light-theme)                 | `$light-fluent-schema   ` | $light-fluent-excel-palette <br> $light-fluent-word-palette           |      **8.2 +**       |
-| [**Fluent (dark)**](presets/fluent.md#fluent-dark-theme)             |  [fluent-dark-theme()]({environment:sassApiUrl}/index.html#mixin-fluent-dark-theme)       | `$dark-fluent-schema    ` | $dark-fluent-excel-palette <br> $dark-fluent-word-palette |      **8.2 +**       |
-| [**Bootstrap**](presets/bootstrap.md)                                |  [bootstrap-light-theme()]({environment:sassApiUrl}/index.html#mixin-bootstrap-light-theme)            | `$light-bootstrap-schema` | $light-bootstrap-palette                                        |      **9.0 +**       |
-| [**Bootstrap (dark)**](presets/bootstrap.md#bootstrap-dark-theme)    |  [bootstrap-dark-theme()]({environment:sassApiUrl}/index.html#mixin-bootstrap-dark-theme)  | `$dark-bootstrap-schema ` | $dark-bootstrap-palette                                   |      **9.0 +**       |
-| [**Indigo**](presets/indigo.md)                                      |  [indigo-light-theme()]({environment:sassApiUrl}/index.html#mixin-indigo-light-theme)            | `$light-indigo-schema` | $light-indigo-palette                                        |      **10.1 +**       |
-| [**Indigo (dark)**](presets/indigo.md#indigo-dark-theme)             |  [indigo-dark-theme()]({environment:sassApiUrl}/index.html#mixin-indigo-dark-theme)  | `$dark-indigo-schema ` | $dark-indigo-palette                                   |      **10.1 +**       |
+| Theme                                                             | Mixin                                                                                      | Schema                             | Color Palette                                                                          | Available in version |
+| ----------------------------------------------------------------- | ------------------------------------------------------------------------------------------ | ---------------------------------- | -------------------------------------------------------------------------------------- | -------------------- |
+| [**Material (base)**](presets/material.md)                        | [theme()]({environment:sassApiUrl}/index.html#mixin-theme)                                 | `$light-material-schema          ` | null                                                                                   | **all**              |
+| [**Material (light)**](presets/material.md#material-light-theme)  | [light-theme()]({environment:sassApiUrl}/index.html#mixin-light-theme)                     | `$light-material-schema          ` | $light-material-palette                                                                | **6.2 +**            |
+| [**Material (dark)**](presets/material.md#material-dark-theme)    | [dark-theme()]({environment:sassApiUrl}/index.html#mixin-dark-theme)                       | `$dark-material-schema           ` | $dark-material-palette                                                                 | **6.2 +**            |
+| [**Fluent**](presets/fluent.md)                                   | [fluent-light-theme()]({environment:sassApiUrl}/index.html#mixin-fluent-light-theme)       | `$light-fluent-schema   `          | $light-fluent-palette <br> $light-fluent-excel-palette <br> $light-fluent-word-palette | **8.2 +**            |
+| [**Fluent (dark)**](presets/fluent.md#fluent-dark-theme)          | [fluent-dark-theme()]({environment:sassApiUrl}/index.html#mixin-fluent-dark-theme)         | `$dark-fluent-schema    `          | $dark-fluent-palette <br> $dark-fluent-excel-palette <br> $dark-fluent-word-palette    | **8.2 +**            |
+| [**Bootstrap**](presets/bootstrap.md)                             | [bootstrap-light-theme()]({environment:sassApiUrl}/index.html#mixin-bootstrap-light-theme) | `$light-bootstrap-schema`          | $light-bootstrap-palette                                                               | **9.0 +**            |
+| [**Bootstrap (dark)**](presets/bootstrap.md#bootstrap-dark-theme) | [bootstrap-dark-theme()]({environment:sassApiUrl}/index.html#mixin-bootstrap-dark-theme)   | `$dark-bootstrap-schema `          | $dark-bootstrap-palette                                                                | **9.0 +**            |
+| [**Indigo**](presets/indigo.md)                                   | [indigo-light-theme()]({environment:sassApiUrl}/index.html#mixin-indigo-light-theme)       | `$light-indigo-schema`             | $light-indigo-palette                                                                  | **10.1 +**           |
+| [**Indigo (dark)**](presets/indigo.md#indigo-dark-theme)          | [indigo-dark-theme()]({environment:sassApiUrl}/index.html#mixin-indigo-dark-theme)         | `$dark-indigo-schema `             | $dark-indigo-palette                                                                   | **10.1 +**           |
 
 > [!NOTE]
 > Note that all high-level theme mixins wrap the base `theme` mixin.
@@ -166,7 +167,7 @@ The general rule of thumb regarding what the value of `$legacy-support` should b
 
 ## API Overview
 * [Global Theme]({environment:sassApiUrl}/index.html#mixin-theme)
-* [Light Theme]({environment:sassApiUrl}/index.html#mixin-igx-light-theme)
+* [Light Theme]({environment:sassApiUrl}/index.html#mixin-light-theme)
 * [Dark Theme]({environment:sassApiUrl}/index.html#mixin-dark-theme)
 * [Palette]({environment:sassApiUrl}/index.html#function-igx-palette)
 

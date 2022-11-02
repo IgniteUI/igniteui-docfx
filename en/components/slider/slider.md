@@ -29,6 +29,7 @@ To get started with the Slider component, you need to import the **IgxSliderModu
 
 ...
 import { IgxSliderModule } from 'igniteui-angular';
+// import { IgxSliderModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -60,6 +61,7 @@ We also bind the slider [`value`]({environment:angularApiUrl}/classes/igxsliderc
 // sample.component.ts 
 import { Component, ViewChild } from '@angular/core';
 import { IgxInputDirective, IgxSliderComponent } from 'igniteui-angular';
+// import { IgxInputDirective, IgxSliderComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
     selector: 'app-sample',
@@ -152,6 +154,7 @@ First, set the slider [`type`]({environment:angularApiUrl}/classes/igxslidercomp
 // sample.component.ts
 import { Component } from '@angular/core';
 import { IgxSliderType } from 'igniteui-angular';
+// import { IgxSliderType } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
   selector: 'app-sample',
