@@ -1,9 +1,9 @@
 {
     "development": {
-        "demosBaseUrl": "http://localhost:63845",
-        "dvDemosBaseUrl": "http://localhost:63845",
-        "lobDemosBaseUrl":"http://localhost:63845",
-        "crmDemoBaseUrl": "http://localhost:63845",
+        "demosBaseUrl": "http://localhost:4200",
+        "dvDemosBaseUrl": "http://localhost:4200",
+        "lobDemosBaseUrl":"http://localhost:4200",
+        "crmDemoBaseUrl": "http://localhost:4200",
         "infragisticsBaseUrl": "https://staging.infragistics.com",
         "angularApiUrl": "https://staging.infragistics.com/products/ignite-ui-angular/docs/typescript/latest",
         "sassApiUrl": "https://staging.infragistics.com/products/ignite-ui-angular/docs/sass/latest",
