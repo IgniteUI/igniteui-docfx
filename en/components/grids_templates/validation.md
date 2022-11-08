@@ -323,7 +323,7 @@ The different errors are displayed in a templated cell that combines all errors 
 The error messages are gathered in the `stateMessage` function, which gathers the errors for each cell, because each column could have templated form validations and then checks the errors for the row itself, which come from the custom `rowValidator`.
 
 ```typescript
-public stateMessage(cell: IgxGridCell) {
+public stateMessage(cell: CellType) {
     const messages = [];
     const row = cell.row;
     const cellValidationErrors = row.cells.filter(x => !!x.validation.errors);
@@ -426,12 +426,12 @@ The multi-field errors can then be displayed in a separate pinned column.
 Errors and the detailed messages can be determined based on the row and cell's validity.
 
 ```ts
-    public isRowValid(cell: IgxGridCell) {
+    public isRowValid(cell: CellType) {
         const hasErrors = !!cell.row.validation.errors || cell.row.cells.some(x => !!x.validation.errors);
         return !hasErrors;
     }
 
-    public stateMessage(cell: IgxGridCell) {
+    public stateMessage(cell: CellType) {
         const messages = [];
         const row = cell.row;
         if  (row.validation.errors?.invalidAddress) {
@@ -534,7 +534,7 @@ The different errors are displayed in a templated cell that combines all errors 
 The error messages are gathered in the `stateMessage` function, which gathers the errors for each cell, because each column could have templated form validations and then checks the errors for the row itself, which come from the custom `rowValidator`.
 
 ```typescript
-public stateMessage(cell: IgxGridCell) {
+public stateMessage(cell: CellType) {
     const messages = [];
     const row = cell.row;
     const cellValidationErrors = row.cells.filter(x => !!x.validation.errors);
