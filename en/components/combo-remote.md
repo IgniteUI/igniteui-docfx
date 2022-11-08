@@ -75,7 +75,9 @@ When data is returned from a service as an observable, we can set it to the comb
            [displayKey]="'ProductName'"
            (dataPreLoad)="dataLoading($event)"
            (searchInputUpdate)="searchInput($event)"
-           (opening)="searchInput('')">
+           (selectionChanging)="handleSelectionChanging($event)"
+           (closing)="onClosing()"
+           (opening)="onOpening()">
 </igx-combo>
 ```
 
@@ -100,11 +102,13 @@ import { RemoteService } from '../../grid/services/remote.service';
     styleUrls: ['./combo-remote.component.scss'],
     templateUrl: './combo-remote.component.html'
 })
-export class ComboRemoteComponent implements OnInit {
+export class ComboRemoteComponent implements OnInit {    
+    @ViewChild('remoteCombo', { read: IgxComboComponent }) public remoteCombo: IgxComboComponent;
 
     public prevRequest: any;
     public rData: any;
-    @ViewChild('remoteCombo', { read: IgxComboComponent }) public remoteCombo: IgxComboComponent;
+
+    private searchText: string = null;
 
     constructor(private remoteService: RemoteService, public cdr: ChangeDetectorRef) { }
 
@@ -113,9 +117,14 @@ export class ComboRemoteComponent implements OnInit {
     }
 
     public ngAfterViewInit() {
-        this.remoteService.getData(this.remoteCombo.virtualizationState, null, (data) => {
+        const initSize = {
+            startIndex: 0,
+            chunkSize: Math.ceil(250 / this.remoteCombo.itemHeight)
+        };
+        this.remoteService.getData(initSize, null, (data) => {
             this.remoteCombo.totalItemCount = data['@odata.count'];
-        });
+            this.itemCount = this.remoteCombo.totalItemCount;
+        });  
     }
 
     public dataLoading(evt) {
@@ -124,7 +133,7 @@ export class ComboRemoteComponent implements OnInit {
         }
         this.prevRequest = this.remoteService.getData(
             this.remoteCombo.virtualizationState,
-            null,
+            this.searchText,
             (data) => {
               this.remoteCombo.totalItemCount = data['@odata.count'];
               this.cdr.detectChanges();
@@ -132,9 +141,44 @@ export class ComboRemoteComponent implements OnInit {
     }
 
     public searchInput(searchText) {
-        this.remoteService.getData(this.remoteCombo.virtualizationState, searchText, (data) => {
-            this.remoteCombo.totalItemCount = data['@odata.count'];
-        });
+        this.searchText = searchData?.searchText || '';
+        this.remoteService.getData(
+            this.searchText ? this.remoteCombo.virtualizationState : this.defaultVirtState,
+            this.searchText,
+            (data) => {
+                this.remoteCombo.totalItemCount = data['@odata.count'];
+            }
+        );
+    }
+
+    public onOpening() {        
+        this.remoteService.getData(           
+           this.hasSelection ? this.currentVirtState : this.defaultVirtState,
+            this.searchText,
+            (data) => {
+                this.remoteCombo.totalItemCount = data['@odata.count'];
+                const scroll = this.remoteCombo.virtualScrollContainer.getScrollForIndex(this.itemID -1);
+                this.remoteCombo.virtualScrollContainer.scrollPosition = scroll;
+            }
+        );
+    }
+
+    public onClosing() {
+        this.searchText = '';
+    }
+
+    public handleSelectionChanging(evt: IComboSelectionChangingEventArgs) {
+        this.hasSelection = !!evt?.newSelection.length;                   
+        this.currentVirtState.chunkSize = Math.ceil(this.remoteCombo.itemsMaxHeight / this.remoteCombo.itemHeight);
+        
+        if(this.searchText === null || this.searchText ===''){
+            this.currentVirtState.startIndex = this.remoteCombo.virtualizationState.startIndex;
+            this.itemID = evt.newSelection[evt.newSelection.length-1];
+        } else {
+            this.itemCount -  evt.newSelection[evt.newSelection.length-1] >= this.currentVirtState.chunkSize -1?
+            this.itemID = this.currentVirtState.startIndex = evt.newSelection[evt.newSelection.length-1] - 1:
+            this.itemID = this.currentVirtState.startIndex = this.itemCount - (this.currentVirtState.chunkSize-1);
+        }
     }
 }
 ```
