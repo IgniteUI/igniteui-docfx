@@ -481,7 +481,7 @@ The [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/IgxExcelExpo
 }
 
 @@if (igxName === 'IgxTreeGrid') {
-<code-view style="height:720px"
+<code-view style="height:760px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-summary-export" >
 </code-view>
@@ -489,7 +489,7 @@ The [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/IgxExcelExpo
 
 
 @@if (igxName === 'IgxHierarchicalGrid') {
-<code-view style="height:720px"
+<code-view style="height:760px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-summary-export" >
 </code-view>
@@ -510,6 +510,8 @@ Data Type | Function | Excel Function |
 || earliest | ="Earliest: "& TEXT(MIN(IF(start:end=recordLevel, rangeStart:rangeEnd)), format) |
 || latest | ="Latest: "&TEXT(MAX(IF(start:end=recordLevel, rangeStart:rangeEnd)), format) |
 
+>[!NOTE]
+>Custom summaries will be exported as strings instead of Excel functions.
 
 ## Keyboard Navigation
 
