@@ -73,7 +73,7 @@ npm install --save igniteui-angular-excel
 npm install --save igniteui-angular-spreadsheet
 </pre>
 
-## Required Modules
+## Component Modules
 
 The [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) requires the following modules:
 

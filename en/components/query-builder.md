@@ -1,15 +1,19 @@
 ---
-title: Angular Query Builder Component - Ignite UI for Angular | Infragistics
-_description: Ignite UI for Angular Query Builder control provides a great UI experience to allow users to build custom queries.
+title: Angular Query Builder Component - Ignite UI for Angular
+_description: Angular Query Builder allows users to build complex custom queries in angular apps with a great UI experience. Try it Now.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Query Builder component, Angular Query Builder control
 ---
 
 
-# Query Builder
+# Angular Query Builder Overview
+
+Angular Query Builder provides a feature rich UI that allows developers to build complex data filtering queries for a specified data set. With this component they can build a tree of expressions and set AND/OR conditions between them with editors and condition lists determined by each field's data type. The expression tree can then be easily transformed to a query in the format the backend supports.
 
 <p class="highlight">The [`IgxQueryBuilderComponent`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html) component provides a way to build complex queries through the UI. By specifying AND/OR operators, conditions and values the user creates an expression tree which describes the query. 
 
 ## Angular Query Builder Example
+
+We’ve created this Angular Query Builder example to show you the default functionalities of the Angular Query Builder component. Click the plus button to add conditions, “and” group as well as “or” group. Navigate the side bars to ungroup or delete.
 
 <code-view style="height:530px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -28,7 +32,7 @@ If you select more than one condition chip, a context menu appears with options 
 
 In order to select a group, you can also click on its vertical line, which is colored based on the linking condition ([`AND`]({environment:angularApiUrl}/enums/filteringlogic.html#and) or [`OR`]({environment:angularApiUrl}/enums/filteringlogic.html#or)). If a single group is selected, you get a context menu with options to change its logic, ungroup or delete it.
 
-## Usage
+## Getting Started with Ignite UI for Angular Query Builder Component
 
 You can start using the component by setting the [`fields`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html#fields) property to an array describing the field name and its data type. It will automatically assign the corresponding operands based on the data type.
 The Query Builder has the [`expressionTree`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html#expressiontree) input property. You could use it to set an initial state of the control and access the user-specified filtering logic.
