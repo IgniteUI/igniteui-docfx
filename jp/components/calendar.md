@@ -1,15 +1,15 @@
 ---
 title: Angular Calendar Component – Ignite UI for Angular
-_description: With Angular Calendar Component, users can create intuitive calendars for applications to display date information using three different selection modes. Try it Now 
+_description: With Angular Calendar Component, users can create intuitive calendars for applications to display date information using three different selection modes. Try it Now
 _keywords: angular calendar, angular カレンダー, angular コンポーネント, ignite ui for angular
 _language: ja
 ---
 
 # Angular Calendar Component Overview
 
-Angular Calendar is a UI component used for displaying dates and days in an app. Supporting different features, it enables users to easily manage calendar functionalities, drag and create events in a calendar, navigate to a preferred date in it, and show events in an Angular calendar month view, week view, or day view in a single click. 
+Angular Calendar is a UI component used for displaying dates and days in an app. Supporting different features, it enables users to easily manage calendar functionalities, drag and create events in a calendar, navigate to a preferred date in it, and show events in an Angular calendar month view, week view, or day view in a single click.
 
-<p class="highlight">Ignite UI for Angular Calendar component, developed as a native Angular component, provides an easy and intuitive ways to display date information, enable dates or apply Angular calendar disable dates mode. Users can choose from three different selection modes – Angular calendar multiselect, single selection, or range selection.</p>
+<p class="highlight">Ignite UI for Angular Calendar コンポーネントは、ネイティブ [Angular コンポーネント](https://angular.io/guide/architecture#components)であり、日付情報を簡単に表示できます。ユーザーは、単一選択、複数選択、または範囲選択の 3 つの選択モードから選択できます。</p>
 
 ## Angular Calendar の例
 
@@ -210,11 +210,11 @@ export class CalendarSample7Component {
 
 ```html
 <igx-calendar #calendar weekStart="1"
-    selection="multi" 
+    selection="multi"
     (selected)="selectPTOdays($event)">
 </igx-calendar>
-<igx-dialog #alert title="Request Time Off" 
-    leftButtonLabel="OK" 
+<igx-dialog #alert title="Request Time Off"
+    leftButtonLabel="OK"
     (leftButtonSelect)="alert.close()">
 </igx-dialog>
 <button igxButton="raised" (click)="submitPTOdays($event)">Submit Request</button>
@@ -293,7 +293,7 @@ public activeViewChanged(event: CalendarView) {
 
 ## Angular Calendar Views 
 `IgxCalendarModule` によって提供される個別のビューがあり、別々に使用できます。
-- 日ビュー - [`igx-days-view`]({environment:angularApiUrl}/classes/igxdaysviewcomponent.html)
+- Angular Calendar 日ビュー - [`igx-days-view`]({environment:angularApiUrl}/classes/igxdaysviewcomponent.html)
 
 
 <code-view style="height: 420px" 
@@ -454,4 +454,4 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 コミュニティに参加して新しいアイデアをご提案ください。
 
 * [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular) 
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular) 
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

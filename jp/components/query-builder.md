@@ -1,16 +1,20 @@
 ---
-title: Angular Query Builder コンポーネント - Ignite UI for Angular | インフラジスティックス
-_description: Ignite UI for Angular Query Builder コントロールは、ユーザーがカスタム クエリを作成できる優れた UI エクスペリエンスを提供します。
+title: Angular Query Builder コンポーネント - Ignite UI for Angular
+_description: Angular Query Builder allows users to build complex custom queries in angular apps with a great UI experience. Try it Now.
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, Native Angular コンポーネント スイート, Native Angular コントロール, Native Angular コンポーネント Library, Angular Query Builder コンポーネント, Angular Query Builder コントロール
 _language: ja
 ---
 
 
-# Query Builder (クエリ ビルダー)
+# Angular Query Builder Overview
+
+Angular Query Builder provides a feature rich UI that allows developers to build complex data filtering queries for a specified data set. With this component they can build a tree of expressions and set AND/OR conditions between them with editors and condition lists determined by each field's data type. The expression tree can then be easily transformed to a query in the format the backend supports.
 
 <p class="highlight">[`IgxQueryBuilderComponent`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html) コンポーネントは UI を使用して複雑なクエリを作成する方法を提供します。AND/OR 演算子、条件、および値を指定すると、クエリを記述する式ツリーが作成されます。 
 
 ## Angular Query Builder の例
+
+We’ve created this Angular Query Builder example to show you the default functionalities of the Angular Query Builder component. Click the plus button to add conditions, “and” group as well as “or” group. Navigate the side bars to ungroup or delete.
 
 <code-view style="height:530px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -29,7 +33,7 @@ _language: ja
 
 グループを選択するために、リンク条件 ([`AND`]({environment:angularApiUrl}/enums/filteringlogic.html#and) または [`OR`]({environment:angularApiUrl}/enums/filteringlogic.html#or)) に基づいて色付けされた垂直線をクリックすることもできます。単一のグループが選択されている場合、ロジックを変更、グループ解除、または削除するオプションを含むコンテキスト メニューが表示されます。
 
-## 使用方法
+## Getting Started with Ignite UI for Angular Query Builder Component
 
 コンポーネントの使用を開始するには、[`fields`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html#fields) プロパティに、フィールド名とそのデータ型を説明する配列を追加します。データ型に基づいて対応するオペランドを自動的に割り当てます。
 クエリ ビルダーには [`expressionTree`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html#expressiontree) 入力プロパティがあります。コントロールの初期状態を設定するために使用できます。
