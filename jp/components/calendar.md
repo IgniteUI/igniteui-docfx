@@ -9,7 +9,7 @@ _language: ja
 
 Angular Calendar は、アプリで日付と曜日を表示するために使用される UI コンポーネントです。さまざまな機能をサポートしているため、ユーザーは簡単にカレンダー機能を管理したり、カレンダーにイベントをドラッグして作成したり、希望の日付に移動したり、Angular カレンダーの月表示、週表示、または日表示でイベントをシングル クリックで表示したりできます。
 
-<p class="highlight">Ignite UI for Angular Calendar コンポーネントは、ネイティブ [Angular コンポーネント](https://angular.io/guide/architecture#components)であり、日付情報を簡単に表示できます。ユーザーは、単一選択、複数選択、または範囲選択の 3 つの選択モードから選択できます。</p>
+<p class="highlight">Ignite UI for Angular Calendar コンポーネントは、ネイティブ [Angular コンポーネント (英語)](https://angular.io/guide/architecture#components)であり、日付情報の表示、日付の有効化、または Angular カレンダー無効日付モードの適用を簡単かつ直感的に行う方法を提供します。ユーザーは、単一選択、複数選択、または範囲選択の 3 つの選択モードから選択できます。</p>
 
 ## Angular Calendar の例
 
@@ -302,7 +302,7 @@ public activeViewChanged(event: CalendarView) {
 </code-view>
 
 
-- Angular Calendar の月ビュー - [`igx-months-view`]({environment:angularApiUrl}/classes/igxmonthsviewcomponent.html)
+- Angular Calendar 月ビュー - [`igx-months-view`]({environment:angularApiUrl}/classes/igxmonthsviewcomponent.html)
 
 
 <code-view style="height: 520px" 
@@ -311,7 +311,7 @@ public activeViewChanged(event: CalendarView) {
 </code-view>
 
 
-- Angular Calendar の年ビュー - [`igx-years-view`]({environment:angularApiUrl}/classes/igxyearsviewcomponent.html)
+- Angular Calendar 年ビュー - [`igx-years-view`]({environment:angularApiUrl}/classes/igxyearsviewcomponent.html)
 
 
 <code-view style="height: 500px" 
@@ -453,5 +453,5 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular) 
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
