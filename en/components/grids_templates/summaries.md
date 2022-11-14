@@ -510,8 +510,12 @@ Data Type | Function | Excel Function |
 || earliest | ="Earliest: "& TEXT(MIN(IF(start:end=recordLevel, rangeStart:rangeEnd)), format) |
 || latest | ="Latest: "&TEXT(MAX(IF(start:end=recordLevel, rangeStart:rangeEnd)), format) |
 
->[!NOTE]
->Custom summaries will be exported as strings instead of Excel functions.
+### Known Limitations
+
+|Limitation|Description|
+|--- |--- |
+| Exporting custom summaries | Custom summaries will be exported as strings instead of Excel functions. |
+| Exporting templated summaries | Templated summaries are not supported and will be exported as the default ones. |
 
 ## Keyboard Navigation
 
