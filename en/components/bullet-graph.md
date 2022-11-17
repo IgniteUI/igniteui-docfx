@@ -56,8 +56,6 @@ npm install --save igniteui-angular-gauges
 
 The [`IgxBulletGraphComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbulletgraphcomponent.html) requires the following modules:
 
-<!-- Angular, React, WebComponents -->
-
 ```ts
 // app.module.ts
 import { IgxBulletGraphModule } from 'igniteui-angular-gauges';
