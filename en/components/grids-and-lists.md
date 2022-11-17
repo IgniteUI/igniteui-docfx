@@ -206,12 +206,10 @@ Ignite UI for Angular provides a complete library of Angular-native, Material-ba
 In this angular grid example, you can see how users can customize their _data view_ by leveraging the various features built into the grid, like data search and filtering, columns sorting, resizing, pinning and hiding, row selection, export to excel and csv, horizontal and vertical scrolling. We have provided examples for cell templating that includes components like linear progress bar indicator and sparkline. View more features [here](#list-features).
 <div class="divider--half"></div>
 
-<code-view 
-        style="height: 435px"
-        data-demos-base-url="{environment:crmDemoBaseUrl}"
-        iframe-src="{environment:crmDemoBaseUrl}" alt="Angular CRM grid example">
-</code-view>
-
+<div class="sample-container loading" style="height: 435px">
+    <iframe id="icon-sample-1-iframe" seamless="" width="100%" height="100%" frameborder="0" src="{environment:crmDemoBaseUrl}/" onload="onSampleIframeContentLoaded(this);" alt="Angular grid example">
+    </iframe>
+</div>
 <p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 
 <div class="divider--half"></div>
