@@ -195,13 +195,13 @@ The following code demonstrates the usage of the [`transactions`]({environment:a
 ```typescript
 ...
 export class HierarchicalGridBatchEditingSampleComponent {
-    public undo(grid: GridType) {
+    public undo(grid: any) {
         /* exit edit mode and commit changes */
         grid.endEdit(true);
         grid.transactions.undo();
     }
 
-    public redo(grid: GridType) {
+    public redo(grid: any) {
         /* exit edit mode and commit changes */
         grid.endEdit(true);
         grid.transactions.redo();
