@@ -716,6 +716,12 @@ public cellStyles = {
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 
+## Known Issues and Limitations
+
+|Limitation|Description|
+|--- |--- |
+| When `validationTrigger` is blur, `editValue` and validation will trigger only after editor is blurred. | 
+Reason is that this utilizes the formControl's [`updateOn`](https://angular.io/api/forms/AbstractControl#updateOn) property. This determines the event on which the formControl will update and trigger related validators.
 
 ## Additional Resources
 
