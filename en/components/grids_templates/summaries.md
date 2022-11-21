@@ -474,14 +474,14 @@ There is an [`exportSummaries`]({environment:angularApiUrl}/classes/IgxExcelExpo
 The [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/IgxExcelExporterService.html) will export the default summaries for all column types as their equivalent excel functions so they will continue working properly when the sheet is modified. Try it for yourself in the example below:
 
 @@if (igxName === 'IgxGrid') {
-<code-view style="height:720px"
+<code-view style="height:770px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-summary-export" >
 </code-view>
 }
 
 @@if (igxName === 'IgxTreeGrid') {
-<code-view style="height:760px"
+<code-view style="height:780px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-summary-export" >
 </code-view>
