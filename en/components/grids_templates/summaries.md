@@ -501,7 +501,8 @@ In the table below, you can find the corresponding Excel formula for each of the
 
 Data Type | Function | Excel Function |
 |:--------|:--------:|:---------------|
-`string`, `boolean`, <br /> `number`, `currency`, `percent` | count | ="Count: "&COUNTIF(start:end, recordLevel) |
+`string`, `boolean` | count | ="Count: "&COUNTIF(start:end, recordLevel) |
+`number`, `currency`, `percent` | count | ="Count: "&COUNTIF(start:end, recordLevel) |
 || min| ="Min: "&MIN(IF(start:end=recordLevel, rangeStart:rangeEnd)) |
 || max | ="Max: "&MAX(IF(start:end=recordLevel, rangeStart:rangeEnd)) |
 || average | ="Avg: "&AVERAGEIF(start:end, recordLevel, rangeStart:rangeEnd) |
