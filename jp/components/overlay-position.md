@@ -77,6 +77,13 @@ import {
     ElasticPositionStrategy,
     GlobalPositionStrategy
 } from 'igniteui-angular';
+// import { 
+//    AutoPositionStrategy,
+//    ConnectedPositioningStrategy,
+//    ContainerPositionStrategy,
+//    ElasticPositionStrategy,
+//    GlobalPositionStrategy
+// } from '@infragistics/igniteui-angular'; for licensed package
 ```
 
 次に、オーバーレイで使用される配置ストラテジを指定します。[`overlay.attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) メソッドが呼び出されると、配置ストラテジは [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) パラメーターのプロパティとして渡されます。以下の例では、デフォルトの `GlobalPositionStrategy` を `ConnectedPositionStrategy` で変更しています。
@@ -150,7 +157,7 @@ overlay.attach(element, { positionStrategy: myPositionStrategy });
 
 ### 設定の変更
 
-既存ストラテジのポジション設定の変更は、そのストラテジの設定のいずれかをオーバーライドします。ストラテジーがすでにアタッチされている場合は、以前に生成された ID をデタッチする必要があります:
+既存ストラテジのポジション設定の変更は、そのストラテジの設定のいずれかをオーバーライドします。ストラテジがすでにアタッチされている場合は、以前に生成された ID をデタッチする必要があります:
 ```typescript
 // overlaySettings is an existing object of type OverlaySettings
 // overlaySettings.positionStrategy is an existing PositionStrategy with settings of type PositionSettings

@@ -28,6 +28,7 @@ The first step is to import the `IgxSwitchModule` in the **app.module.ts** file:
 
 ...
 import { IgxSwitchModule } from 'igniteui-angular';
+// import { IgxSwitchModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...

@@ -85,6 +85,7 @@ The Angular grid is exported as an `NgModule`, thus all you need to do in your a
 // app.module.ts
 
 import { IgxGridModule } from 'igniteui-angular';
+// import { IgxGridModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     imports: [
@@ -100,6 +101,7 @@ Each of the components, directives and helper classes in the `IgxGridModule` can
 
 ```typescript
 import { IgxGridComponent } from 'igniteui-angular';
+// import { IgxGridComponent } from '@infragistics/igniteui-angular'; for licensed package
 ...
 @ViewChild('myGrid', { read: IgxGridComponent })
 public grid: IgxGridComponent;
@@ -228,7 +230,7 @@ As you can see, we are adding **draggable** attribute set to *false*.
 ...
 ```
 
-In the snippet above we "take" a reference to the implicitly provided cell value. This is sufficient if you just want to present some data and maybe apply some custom styling or pipe transforms over the value of the cell. However even more useful is to take the [`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html) instance itself as shown below:
+In the snippet above we "take" a reference to the implicitly provided cell value. This is sufficient if you just want to present some data and maybe apply some custom styling or pipe transforms over the value of the cell. However even more useful is to take the [`CellType`]({environment:angularApiUrl}/interfaces/celltype.html) instance itself as shown below:
 
 ```html
 <igx-grid #grid [data]="data">
@@ -272,7 +274,7 @@ to set the [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.h
 </igx-column>
 ```
 
-Make sure to check the API for the [`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html) in order to get accustomed with the provided properties you can use in your templates.
+Make sure to check the API for the [`CellType`]({environment:angularApiUrl}/interfaces/celltype.html) in order to get accustomed with the provided properties you can use in your templates.
 
 ### Column Template API
 

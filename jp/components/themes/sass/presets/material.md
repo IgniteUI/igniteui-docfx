@@ -7,7 +7,7 @@ Material テーマは、Ignite UI for Angular のデフォルトテーマです�
 // 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 @include core();
-@include theme($default-palette);
+@include theme($light-material-palette);
 ```
 
 ## Material Light テーマ
@@ -17,7 +17,7 @@ Material テーマは、Ignite UI for Angular のデフォルトテーマです�
 // 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 @include core();
-@include light-theme($default-palette);
+@include light-theme($light-material-palette);
 ```
 
 ## Material Dark テーマ
@@ -27,10 +27,10 @@ Material テーマは、Ignite UI for Angular のデフォルトテーマです�
 // 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 @include core();
-@include dark-theme($default-palette);
+@include dark-theme($dark-material-palette);
 ```
 
-`igx-light-theme` と `dark-theme` の両方のミックスインには、`theme` ミックスインが含まれています。
+`light-theme` と `dark-theme` の両方のミックスインには、`theme` ミックスインが含まれています。
 これらのミックスイン は作成されますが、Dark パレットと Dark スキーマの `theme` を使用する場合は、以下を手動で実行してください。
 
 ```scss
@@ -47,8 +47,8 @@ $my-color-palette: palette(
     // 注: primary と secondary 色が必要です。
     $primary: $primary-color,
     $secondary: $secondary-color,
-    // $grays は、暗い背景で目立つようにすべての黒色のテキストや境界線などが白い影になります。
-    $grays: #fff 
+    // $gray は、暗い背景で目立つようにすべての黒色のテキストや境界線などが白い影になります。
+    $gray: #fff 
     // デフォルトで各コンポーネントすべてが $default-palette を使用するため、他の色 ($info や $error など) を指定しない場合、$default-palette のデフォルト値を使用します。
 );
 
@@ -57,5 +57,5 @@ $my-color-palette: palette(
 
 ## API の概要
 * [グローバル テーマ]({environment:sassApiUrl}/index.html#mixin-theme)
-* [Light テーマ]({environment:sassApiUrl}/index.html#mixin-igx-light-theme)
+* [Light テーマ]({environment:sassApiUrl}/index.html#mixin-light-theme)
 * [Dark テーマ]({environment:sassApiUrl}/index.html#mixin-dark-theme)

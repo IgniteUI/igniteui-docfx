@@ -145,6 +145,7 @@ For example, if we want the content to be positioned relative to an element, we 
 // my-overlay-component.component.ts
 // import the ConnectedPositioningStategy class
 import { ConnectedPositioningStrategy } from 'igniteui-angular';
+// import { ConnectedPositioningStrategy } from '@infragistics/igniteui-angular'; for licensed package
 ...
 export class MyOverlayComponent {
 
@@ -214,6 +215,8 @@ We can modify the previously defined overlay method to not only show but also hi
 // my-overlay-component.component.ts
 // add an import for the definion of ConnectedPositioningStategy class
 import { ConnectedPositioningStrategy } from 'igniteui-angular';
+// import { ConnectedPositioningStrategy } from '@infragistics/igniteui-angular'; for licensed package
+
 ...
 export class MyOverlayComponent implements OnDestroy {
     private _overlayId = ''; // The unique identifier assigned to the component by the Overlay service

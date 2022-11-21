@@ -42,6 +42,7 @@ Ignite UI for Angular については、[はじめに](general/getting-started.m
 
 ...
 import { IgxListModule } from 'igniteui-angular';
+// import { IgxListModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -206,6 +207,11 @@ import {
     IgxAvatarModule,
     IgxIconModule
 } from 'igniteui-angular';
+// import { 
+//    IgxListModule,
+//    IgxAvatarModule,
+//    IgxIconModule
+// } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -288,6 +294,7 @@ toggleFavorite(item: IgxListItem) {
 // app.module.ts
 ...
 import { IgxButtonGroupModule } from 'igniteui-angular';
+// import { IgxButtonGroupModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     imports: [..., IgxButtonGroupModule]
@@ -472,6 +479,7 @@ Angular コンポーネント テンプレートの上側に入力フィール�
 // app.module.ts
 ...
 import { IgxFilterModule, IgxInputGroupModule } from 'igniteui-angular';
+// import { IgxFilterModule, IgxInputGroupModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     imports: [..., IgxFilterModule, IgxInputGroupModule]
@@ -480,6 +488,7 @@ import { IgxFilterModule, IgxInputGroupModule } from 'igniteui-angular';
 // contacts.component.ts
 ...
 import { IgxFilterOptions } from 'igniteui-angular';
+// import { IgxFilterOptions } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({...})
 export class ContactListComponent {
@@ -508,18 +517,18 @@ export class ContactListComponent {
 
 <div class="divider--half"></div>
 
-## List Item Selection
+## リスト項目の選択
 
-As you probably have already noticed, list items do not provide selection states. However, if your application requires your list to keep track of which item is selected, we give you an example of how this can be achieved. All you need to do is keep track of the state somewhere in your component, or in the data the list is bound to.
+リスト項目は選択状態を提供しません。しかし、アプリケーションで選択された項目を追跡する必要がある場合、どのようにしてそれを実現できるかの例を示します。必要なのは、コンポーネントのどこか、またはリストがバインドされているデータの中で、状態を追跡することです。
 
-Here's an example, in which we apply a background color to the list according to the theme's secondary 500 color, based on state tracking coming from the data the list is bound to:
+以下は、リストにバインドされているデータの状態追跡に基づいて、テーマのセカンダリ 500 カラーをリストの背景色に適用する例です。
 
 <code-view style="height: 420px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/list-item-selection" >
 </code-view>
 
-What we are doing is we are adding an additional `selected` property to each data member, which defaults to `false`. Upon list item click, we're resetting all the `selected` properties in the data collection and setting the one corresponding to the clicked item to `true`. Based on the selected property, we're applying a css class to the list item which gives it the selected background.
+`selected` プロパティを各データ メンバーに追加します。デフォルトは `false` です。リスト項目がクリックされたら、データ コレクション内のすべての `selected` プロパティをリセットしたあと、クリックされた項目に対応するデータの `selected` プロパティを `true` に設定します。`selected` プロパティに基づいて、選択されたときの背景を定義している css クラスをリスト項目に適用します。
 
 ```html
 <igx-list>

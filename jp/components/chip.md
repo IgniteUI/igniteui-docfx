@@ -26,6 +26,7 @@ _language: ja
 
 ...
 import { IgxChipsModule } from 'igniteui-angular';
+// import { IgxChipsModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -115,6 +116,7 @@ public chipRemoved(event: IBaseChipEventArgs) {
 
 ```ts
 import { IBaseChipEventArgs } from 'igniteui-angular';
+// import { IBaseChipEventArgs } from '@infragistics/igniteui-angular'; for licensed package
 ...
 public chipList = [
     {
@@ -326,6 +328,7 @@ public chipsOrderChanged(event: IChipsAreaReorderEventArgs) {
 
 ```ts
 import { IBaseChipEventArgs, IChipsAreaReorderEventArgs } from 'igniteui-angular';
+// import { IBaseChipEventArgs, IChipsAreaReorderEventArgs } from '@infragistics/igniteui-angular'; for licensed package
 ...
 public chipList = [
     {

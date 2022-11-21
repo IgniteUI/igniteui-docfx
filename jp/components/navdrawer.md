@@ -132,7 +132,7 @@ Navigation Drawer は [`igxNavigationService`]({environment:angularApiUrl}/class
 /* app.component.ts */
 import { Component, ViewChild } from '@angular/core';
 import { IgxNavigationDrawerComponent } from 'igniteui-angular';
-
+// import { IgxNavigationDrawerComponent } from '@infragistics/igniteui-angular'; for licensed package
 ...
 
 export class AppComponent  {
@@ -315,6 +315,67 @@ import { RouterModule } from '@angular/router';
            iframe-src="{environment:demosBaseUrl}/menus/navigation-drawer-routing" >
 </code-view>
 
+
+<div class="divider--half"></div>
+
+## 階層ナビゲーション
+
+`IgxNavigationDrawerComponent` を使用してマルチレベル階層ナビゲーションを作成するには、`igxDrawer` テンプレートの [IgxTreeComponent](tree.md) を使用できます。ツリーはアプリケーションの `Routes` オブジェクトから直接作成できます。以下はその方法です。
+
+```html
+<igx-nav-drawer [isOpen]="true" [enableGestures]="true" width="280px">
+    <ng-template igxDrawer>
+        <igx-tree>
+            <igx-tree-node *ngFor="let route of routes">
+                <a igxTreeNodeLink [routerLink]="route.path" routerLinkActive="route-selected-class">{{ route.data?.displayName }}</a>
+                <igx-tree-node *ngFor="let child of route.children">
+                    <a igxTreeNodeLink [routerLink]="[route.path, child.path]" routerLinkActive="route-selected-class">{{ child.data?.displayName }}</a>
+                </igx-tree-node>
+            </igx-tree-node>
+        </igx-tree>
+    </ng-template>
+</igx-nav-drawer>
+```
+
+> [!NOTE]
+> この例では、`igxDrawerItem` を使用せずに、カスタム `igxDrawer` コンテンツ (この場合は `igx-tree`) を直接使用します。
+
+```typescript
+import { menusRoutes } from '../../menus-routing.module';
+
+@Component({
+  selector: 'app-nav-drawer-hierarchical',
+  templateUrl: './nav-drawer-hierarchical.component.html',
+  styleUrls: ['./nav-drawer-hierarchical.component.scss']
+})
+export class NavDrawerHierarchicalComponent {
+    public routes = menusRoutes;
+}
+```
+
+この例では、`igx-tree` ノードでリンク テキストを可視化するために使用される `displayName` プロパティを含むカスタム ルーティング `data` でルートを生成します。以下は `Route` の例です。
+
+```typescript
+export const menusRoutes: Routes = [
+    {
+        component: NavDrawerHierarchicalComponent,
+        path: 'navigation-drawer-hierarchical',
+        data: { displayName: 'Hierarchical Drawer Menu' }
+    }
+];
+```
+
+ルートの `children` プロパティから抽出された子ルーティングもあります。このサンプルは 2 つの階層レベルを示していますが、ルーティングに複数の階層がある場合は、[ツリー ノード テンプレート](tree.md#テンプレート化)で 2 番目の下のレベルを定義するだけです。
+
+> [!NOTE]
+> 空のルート リダイレクト、エラー ルート、ページが見つからないなどの一部のルートは、可視化に直接適さない場合があることに注意してください。ツリーをルーティング オブジェクトにバインドする前に、コンポーネント ロジックでオブジェクトからそれらのルートを削除できます。
+
+以下の例は、トピック名とリンクを含む定義済みデータを使用して、階層構造の機能を示しています。この構造により、ユーザーは機能的で詳細なナビゲーションを簡単に生成し、各要素をリンクとして表示するかインジケーターとして表示するかを定義することができます。
+
+<code-view style="height: 400px; border: 1px solid #D4D4D4;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/menus/navigation-drawer-hierarchical" >
+</code-view>
 
 <div class="divider--half"></div>
 

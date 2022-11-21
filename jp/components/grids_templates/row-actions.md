@@ -32,6 +32,7 @@ Ignite UI for Angular の階層グリッド コンポーネントは、[ActionSt
 
 ...
 import { IgxActionStripModule } from 'igniteui-angular';
+// import { IgxActionStripModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -94,8 +95,9 @@ import { IgxActionStripModule } from 'igniteui-angular';
 これらのコンポーネントは、カスタマイズのための柔軟性を提供するテンプレートを公開します。たとえば、`delete`、`edit` などの行アクションがある Gmail シナリオで `ActionStrip` を使用する場合、`igx-icon` でボタン コンポーネントを作成します。そして、クリック イベントを追加し、`igx-action-strip` コンポーネントに挿入します。
 
 ```html
- <igx-action-strip #actionstrip>
-    <igx-grid-pinning-actions></igx-grid-pinning-actions>
+<igx-grid>
+    <igx-action-strip #actionstrip>
+        <igx-grid-pinning-actions></igx-grid-pinning-actions>
         <button title="Edit" igxButton="icon" igxRipple (click)='startEdit(actionstrip.context)'>
             <igx-icon>edit</igx-icon>
         </button>
@@ -136,6 +138,6 @@ import { IgxActionStripModule } from 'igniteui-angular';
 アクション ストリップで使用できるその他のコンポーネントとディレクティブ:
 
 * [`IgxGridActionsBaseDirective `]({environment:angularApiUrl}/classes/igxgridactionsbasedirective.html)
-* [`IgxGridPinningActionsComponent`]({environment:angularApiUrl}/classes/igxpinningactionscomponent.html)
-* [`IgxGridEditingActionsComponent`]({environment:angularApiUrl}/classes/igxeditingactionscomponent.html)
+* [`IgxGridPinningActionsComponent`]({environment:angularApiUrl}/classes/igxgridpinningactionscomponent.html)
+* [`IgxGridEditingActionsComponent`]({environment:angularApiUrl}/classes/igxgrideditingactionscomponent.html)
 * [`IgxDividerDirective`]({environment:angularApiUrl}/classes/igxdividerdirective.html)

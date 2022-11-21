@@ -202,7 +202,7 @@ public cellEdit(evt) {
 The below example demonstrates the above-mentioned customization options.
 
 @@if (igxName === 'IgxGrid') {
-<code-view style="height:530px" 
+<code-view style="height:570px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/grid/grid-validator-service-extended" alt="Angular @@igComponent Custom Validation Example">
 </code-view>
@@ -210,7 +210,7 @@ The below example demonstrates the above-mentioned customization options.
 <div class="divider--half"></div>
 }
 @@if (igxName === 'IgxTreeGrid') {
-<code-view style="height:530px" 
+<code-view style="height:570px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-validator-service-extended" alt="Angular @@igComponent Custom Validation Example">
 </code-view>
@@ -218,7 +218,7 @@ The below example demonstrates the above-mentioned customization options.
 <div class="divider--half"></div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<code-view style="height:610px" 
+<code-view style="height:640px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-validator-service-extended" alt="Angular @@igComponent Custom Validation Example">
 </code-view>
@@ -323,7 +323,7 @@ The different errors are displayed in a templated cell that combines all errors 
 The error messages are gathered in the `stateMessage` function, which gathers the errors for each cell, because each column could have templated form validations and then checks the errors for the row itself, which come from the custom `rowValidator`.
 
 ```typescript
-public stateMessage(cell: IgxGridCell) {
+public stateMessage(cell: CellType) {
     const messages = [];
     const row = cell.row;
     const cellValidationErrors = row.cells.filter(x => !!x.validation.errors);
@@ -348,7 +348,7 @@ public stateMessage(cell: IgxGridCell) {
 
 The below sample demonstrates the cross-field validation in action.
 
-<code-view style="height:530px" 
+<code-view style="height:560px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/grid/grid-cross-field-validator-service" alt="Angular @@igComponent Cross-field Validation Example">
 </code-view>
@@ -426,12 +426,12 @@ The multi-field errors can then be displayed in a separate pinned column.
 Errors and the detailed messages can be determined based on the row and cell's validity.
 
 ```ts
-    public isRowValid(cell: IgxGridCell) {
+    public isRowValid(cell: CellType) {
         const hasErrors = !!cell.row.validation.errors || cell.row.cells.some(x => !!x.validation.errors);
         return !hasErrors;
     }
 
-    public stateMessage(cell: IgxGridCell) {
+    public stateMessage(cell: CellType) {
         const messages = [];
         const row = cell.row;
         if  (row.validation.errors?.invalidAddress) {
@@ -534,7 +534,7 @@ The different errors are displayed in a templated cell that combines all errors 
 The error messages are gathered in the `stateMessage` function, which gathers the errors for each cell, because each column could have templated form validations and then checks the errors for the row itself, which come from the custom `rowValidator`.
 
 ```typescript
-public stateMessage(cell: IgxGridCell) {
+public stateMessage(cell: CellType) {
     const messages = [];
     const row = cell.row;
     const cellValidationErrors = row.cells.filter(x => !!x.validation.errors);
@@ -564,7 +564,7 @@ public stateMessage(cell: IgxGridCell) {
 
 The below sample demonstrates the cross-field validation in action.
 
-<code-view style="height:530px" 
+<code-view style="height:570px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-cross-field-validator-service" alt="Angular @@igComponent Cross-field Validation Example">
 </code-view>
@@ -714,8 +714,7 @@ public cellStyles = {
 
 * [IgxBaseTransactionService]({environment:angularApiUrl}/classes/igxbasetransactionservice.html)
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxColumnComponent](({environment:angularApiUrl}/classes/igxcolumncomponent.html))
-* [ValidatorsDirective](({environment:angularApiUrl}/classes/validatorsdirective.html))
+* [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 
 ## Known Issues and Limitations
 

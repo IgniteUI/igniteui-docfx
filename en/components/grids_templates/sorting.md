@@ -88,6 +88,7 @@ You can sort any column or a combination of columns through the @@igComponent AP
 
 ```typescript
 import { SortingDirection } from 'igniteui-angular';
+// import { SortingDirection } from '@infragistics/igniteui-angular'; for licensed package
 
 // Perform a case insensitive ascending sort on the ProductName column.
 this.@@igObjectRef.sort({ fieldName: 'ProductName', dir: SortingDirection.Asc, ignoreCase: true });

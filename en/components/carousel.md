@@ -32,6 +32,7 @@ The next step is to import the **IgxCarouselModule** in our **app.module.ts** fi
 
 ...
 import { IgxCarouselModule } from 'igniteui-angular';
+// import { IgxCarouselModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...

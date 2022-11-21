@@ -51,6 +51,195 @@ Unfortunately not all changes can be automatically updated. Changes below are sp
 
 For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from the "From 6.x .." section apply those changes and work your way up:
 
+## From 14.2.x to 15.0.x
+### General
+- `igxGrid`, `igxHierarchicalGrid`, `igxTreeGrid`
+    - Parameters in grid templates now have types for their context. This can also cause issues if the app is in strict template mode and uses the wrong type. References to the template that may require conversion:
+         - `IgxColumnComponent` - [`ColumnType`]({environment:angularApiUrl}/interfaces/columntype.html) (for example the column parameter in `igxFilterCellTemplate`)
+         - `IgxGridCell` - [`CellType`]({environment:angularApiUrl}/interfaces/celltype.html) (for example the cell parameter in `igxCell` template)
+- Ignite UI for Angular now has a peer dependency on [igniteui-theming](https://github.com/IgniteUI/igniteui-theming). Install the theming package and add the following preprocessor configuration in your `angular.json` file.
+
+    ```sh
+    npm install igniteui-theming
+    ```
+
+    ```json
+        "build": {
+          "options": {
+            "stylePreprocessorOptions": {
+                "includePaths": ["node_modules"]
+            }
+          }
+        }
+    ```
+
+- **Breaking Change** - All global CSS variables for theme configuration, colors, elevations, and typography have changed the prefix from `--igx` to `--ig`. This change doesn't affect global component variables;
+    
+    **Example**:
+
+    In 14.2.x:
+
+    ```css
+    :root {
+        --igx-typography: 'Titillium Web', sans-serif; 
+    }
+    ```
+
+    In 15.0.x this becomes:
+
+    ```css
+    :root {
+        --ig-typography: 'Titillium Web', sans-serif; 
+    }
+    ```
+
+### Themes
+- **Breaking Change** - The `grays` input argument has been renamed to `gray`.<br />
+Here's how that will affect existing code:
+
+    In 14.2.x:
+
+    ```scss
+    $my-palette: palette(
+        $primary: #09f,
+        $secondary: #e41c77,
+        $grays: #000
+    );
+
+    .my-class {
+        background: color($color: 'grays', $variant: 300);
+        color: contrast-color($color: 'grays', $variant: 300);
+        border-color: hsl(var(--ig-grays-500));
+    }
+    ```
+
+    In 15.0.x and going forward:
+
+    ```scss
+    $my-palette: palette(
+        $primary: #09f,
+        $secondary: #e41c77,
+        $gray: #000
+    );
+    
+    .my-class {
+        background: color($color: 'gray', $variant: 300);
+        color: contrast-color($color: 'gray', $variant: 300);
+        border-color: hsl(var(--ig-gray-500));
+    }
+    ```
+
+
+- **Breaking Change** - **Generating CSS variables** for a palette is now done by the **palette mixin**, instead of the **palette-vars mixin**.
+
+- **Breaking Change** - The **palette function** now **requires a surface color to be passed**, while passing a value for the `gray` color is optional. If a value for the gray base color is not provided, it will be generated automatically based on the lightness of the surface color - light surface color results in a black(#000) gray base color, whereas a dark surface color generates a white(#fff) base gray color. When you're generating a palette, you have to keep in mind that there are no longer default values for **info, success, error and warn** colors. You have to set them explicitly if you want to use them. You can also grab those colors from an existing palette if you don't want to come up with the values yourself.
+    
+    #### Example:
+    ```scss
+    $my-palette: palette(
+        $primary: #09f,
+        $secondary: #e41c77,
+        $surface: #fff,
+        $info: color($light-material-palette, 'info'),
+        $success: color($light-material-palette, 'success'),
+        $error: color($light-material-palette, 'error'),
+        $warn: color($light-material-palette, 'warn'),
+    );
+
+    @include palette($my-palette);
+    ```
+
+- **Breaking Change** - **The palette parameter is now removed from all component themes.** You can **use the palette mixin** to scope a custom palette in for a custom component component theme. Since we dropped support for IE11 all component themes refer to the global CSS variables for colors, elevations, typography, etc., therefore passing a custom palette to a component theme is no longer necessary.
+
+    Generating a custom theme with a custom palette:
+
+    ```scss
+    // app.component.scss
+
+    $my-palette: palette(
+        $primary: royalblue,
+        $secondary: orange,
+        $surface: white
+    );
+
+    $avatar: avatar-theme(
+        $background: color($color: 'primary'), 
+        $color: contrast-color($color: 'primary')
+    );
+
+    :host ::ng-deep {
+        // Include the custom palette in the scope of the app component.
+        // It will have a higher specificity than the global palette.
+        @include palette($my-palette):
+        
+        .my-avatar {
+            @include avatar($avatar);
+        }
+    }
+    ```
+
+### Typography
+- **Breaking Change** - The **type-style** mixin now doesn't accept type-scale as a parameter, only the category name.
+
+    In 14.2.x and prior:
+
+    ```scss
+    .my-class {
+        @include type-style($type-scale: $my-type-scale, $category: h1);
+    }
+    ```
+
+    In 15.0.x and forward:
+
+    ```scss
+    .my-class {
+        @include type-style(h1);
+    }
+    ```
+
+### Elevations
+- **Breaking Change** - The **elevation function** now has only one named argument - **$name (the elevation name)**.
+- **Breaking Change** - The **elevations function** has been removed, you can now configure the elevation colors, using the `configure-elevations` mixin.
+
+    In 14.2.x and prior:
+    
+    ```scss
+    .my-class {
+        box-shadow: elevation($elevations, $elevation: 8);
+    }
+    ```
+
+    In 15.0.x and forward:
+    
+    ```scss
+    .my-class {
+        box-shadow: elevation(8);
+    }
+    ```
+
+### Grid Toolbar
+- **Breaking Change** - The `IgxGridToolbarTitleDirective` and `IgxGridToolbarActionsDirective` have been converted to components, keeping only the element selector. For apps using the preferred element markup of `<igx-grid-toolbar-title>` and `<igx-grid-toolbar-actions>` there should be no functional change. Apps using the `igxGridToolbarTitle` and `igxGridToolbarActions` directives on other elements will need to convert those to the mentioned elements instead:
+
+    _From:_
+    ```html
+    <igx-grid-toolbar>
+        <span igxGridToolbarTitle>Title</span >
+        <div igxGridToolbarActions>
+            ...
+        </div>
+    </igx-grid-toolbar>
+    ```
+
+    _To:_
+    ```html
+    <igx-grid-toolbar>
+        <igx-grid-toolbar-title>Title</igx-grid-toolbar-title>
+        <igx-grid-toolbar-actions>
+            ...
+        </igx-grid-toolbar-actions>
+    </igx-grid-toolbar>
+    ```
+
 ## From 13.1.x to 13.2.x
 
 ### Themes
@@ -552,12 +741,12 @@ $__legacy-libsass: true;
 
     For each theme included in Ignite UI for Angular we provide specific `font-family` and `type-scale` variables which you can use:
 
-    | **Theme** | **Font Family** | **Type Scale** |
-    |----------------|-----------------|-----------------|
-    | Material | $material-typeface | $material-type-scale |
-    | Fluent | $fluent-typeface | $fluent-type-scale |
+    | **Theme** | **Font Family**     | **Type Scale**        |
+    | --------- | ------------------- | --------------------- |
+    | Material  | $material-typeface  | $material-type-scale  |
+    | Fluent    | $fluent-typeface    | $fluent-type-scale    |
     | Bootstrap | $bootstrap-typeface | $bootstrap-type-scale |
-    | Indigo | $indigo-typeface | $indigo-type-scale |
+    | Indigo    | $indigo-typeface    | $indigo-type-scale    |
 
 ### IgxBottomNav component
 
@@ -801,6 +990,7 @@ The `ng update` process will update all enumeration names, like `AvatarType`, `T
         ```
         ```typescript
         import { IgxAppendDropStrategy } from 'igniteui-angular';
+        // import { IgxAppendDropStrategy } from '@infragistics/igniteui-angular'; for licensed package
 
         public appendStrategy = IgxAppendDropStrategy;
         ```

@@ -26,6 +26,7 @@ The Icon component is exported as an `NgModule`, thus all you need to do in your
 // app.module.ts
 
 import { IgxIconModule } from 'igniteui-angular';
+// import { IgxIconModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     imports: [

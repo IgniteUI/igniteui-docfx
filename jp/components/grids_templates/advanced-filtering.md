@@ -51,13 +51,7 @@ _language: ja
 
 ## インタラクション
 
-高度なフィルタリングダイアログを開くには、グリッドツールバーの**高度なフィルタリング**ボタンをクリックする必要があります。高度なフィルターが適用されていない場合、[`AND`]({environment:angularApiUrl}/enums/filteringlogic.html#and) または [`OR`]({environment:angularApiUrl}/enums/filteringlogic.html#or) でリンクされたフィルター条件のグループの作成から開始する必要があります。その後、フィルタリング条件またはサブグループを追加できます。 
-
-フィルター条件を追加するには、[`filterable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#filterable) 列のいずれか、列 [`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype) に基づくオペランド、およびオペランドが単項でない場合の値を選択する必要があります。条件が確定すると、条件情報を含むチップが表示されます。チップをホバーまたはクリックすると、チップを変更したり、その直後に別の条件やグループを追加したりできます。
-
-複数のフィルター条件チップを選択すると、グループを作成したりフィルターを削除したりするためのオプションを含むコンテキストメニューが表示されます。選択した条件でグループを作成することを選択した場合、一番上に選択した条件が配置された場所に新しく作成されたグループが表示されます。
-
-グループを選択するために、リンク条件 ([`AND`]({environment:angularApiUrl}/enums/filteringlogic.html#and) または [`OR`]({environment:angularApiUrl}/enums/filteringlogic.html#or)) に基づいて色付けされた垂直線をクリックすることもできます。単一のグループが選択されている場合、フィルタリング ロジックを変更、グループ解除、または削除するオプションを含むコンテキスト メニューが表示されます。
+**高度なフィルタリング** ダイアログを開くには、グリッドツールバーの高度なフィルタリングボタンをクリックする必要があります。ダイアログはフィルタリング ロジックを生成、表示、編集するために [`IgxQueryBuilder`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html) コンポーネントを使用しています。インタラクション プロセスの詳細については、[`Query Builder トピック`](../query-builder.md#インタラクション)を参照してください。
 
 フィルタリング条件とグループを作成する準備後にデータをフィルタリングするには、**[適用]** ボタンをクリックします。拡張フィルターを変更後、変更を保存したくない場合は、**[キャンセル]** ボタンをクリックします。**[フィルターのクリア]** ボタンをクリックして、高度なフィルターをクリアすることもできます。
 
@@ -520,7 +514,7 @@ $custom-drop-down: drop-down-theme(
 * [Excel スタイル フィルタリング](excel-style-filtering.md)
 * [仮想化とパフォーマンス](virtualization.md)
 * [ページング](paging.md)
-* [並び替え](sorting.md)
+* [ソート](sorting.md)
 * [集計](summaries.md)
 * [列移動](column-moving.md)
 * [列固定](column-pinning.md)

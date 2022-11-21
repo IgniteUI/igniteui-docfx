@@ -28,6 +28,7 @@ The first step is to import the `IgxSnackbarModule` in our **app.module.ts** fil
 
 ...
 import { IgxSnackbarModule } from 'igniteui-angular';
+// import { IgxSnackbarModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -181,7 +182,7 @@ Let’s create a list with contacts that can be deleted. When an item is deleted
 
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { IgxSnackbarComponent } from 'igniteui-angular';
-
+// import { IgxSnackbarComponent } from '@infragistics/igniteui-angular'; for licensed package
 ...
 @ViewChild(IgxSnackbarComponent)
 public snackbar: IgxSnackbarComponent;
