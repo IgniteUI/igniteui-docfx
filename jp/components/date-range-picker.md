@@ -32,6 +32,7 @@ Ignite UI for Date Range Picker コンポーネントを使用するには、ま
 ...
 import { IgxDateRangePickerModule } from 'igniteui-angular';
 // import { IgxDateRangePickerModule } from '@infragistics/igniteui-angular'; for licensed package
+
 import { HammerModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -65,7 +66,7 @@ public range: DateRange = { start: new Date(2020, 4, 20), end: new Date(2020, 4,
 
 デフォルトの Date Range Picker UX の機能向上のため、コンポーネントは子コンポーネントの投影を許可します - [`IgxInputGroupComponent`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) 、[`igxLabel`](label-input.md)、[`IgxHint`](input-group.md#hint)、[`igxPrefix`](input-group.md#Prefix-および-Suffix)、[`igxSuffix`](input-group.md#Prefix-および-Suffix) ([`IgxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) を除く) と同じです。詳細については、[Label および Input](label-input.md) トピックを参照してください。
 
-さらに、Date Range Picker は [`IgxPickerToggleComponent`]({environment:angularApiUrl}/classes/igxpickertogglecomponent.html) を投影するように構成できます。[`IgxPickerToggleComponent`]({environment:angularApiUrl}/classes/igxpickertogglecomponent.html) は、カレンダーの切り替えを制御し、[カレンダーの切り替え](#カレンダーの切り替え) セクションに示すように変更できます。
+さらに、Date Range Picker は [`IgxPickerToggleComponent`]({environment:angularApiUrl}/classes/igxpickertogglecomponent.html) を投影するように構成できます。[`IgxPickerToggleComponent`]({environment:angularApiUrl}/classes/igxpickertogglecomponent.html) は、カレンダーの切り替えを制御し、[カレンダーの切り替え](#カレンダーの切り替え)セクションに示すように変更できます。
 
 ```html
 <igx-date-range-picker [(ngModel)]="range">
