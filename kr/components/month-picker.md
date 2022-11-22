@@ -1,14 +1,16 @@
 ---
-title: Month Picker Component
-_description: The Ignite UI for Angular Month Picker component provides an easy and intuitive way to select a specific month and year using a month-year calendar view.
+title: Angular Month Picker Component – Ignite UI for Angular
+_description:  The Ignite UI for Angular Month Picker component provides an easy and intuitive way to select a specific month and year using a month-year calendar view. Try it now.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Month Picker components, Angular Month Picker controls
 _language: kr
 ---
 
-## Month Picker
+## Angular Month Picker Overview
 <p class="highlight">The Ignite UI for Angular Month Picker component provides an easy and intuitive way to select a specific month and year using a month-year calendar view. The component allows single selection, customizable display format and supports localization.</p>
+In general, the Angular Material Month Picker offers two basic ways for choosing a date - from a calendar pop-up or by entering a date through text input. One of the key features of the Angular Month Picker are: validation, custom date formats, range restriction, and disable dates, and more.
 
-### Month Picker Demo
+### Angular Month Picker Example
+What you see here is a basic Angular Month Picker example with a the component's default view, enabling users to select the year and the month.  
 
 <code-view style="height: 620px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -19,7 +21,7 @@ _language: kr
 > [!NOTE]
 > To start using Ignite UI for Angular components in your own projects, make sure you have configured all necessary dependencies and have performed the proper setup of your project. You can learn how to do this in the [**installation**](https://www.infragistics.com/products/ignite-ui-angular/getting-started#installation) topic.
 
-### Usage
+### How To Use Angular Month Picker Component With Ignite UI
 To get started with the **Ignite UI for Angular Month Picker**, let's first import the `IgxCalendarModule` in the application's AppModule, typically this is the **app.module.ts** file. Note that the [**IgxCalendar**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) is also dependent on the **BrowserAnimationsModule**, so it needs to be added to the AppModule as well:
 
 ```typescript
@@ -48,7 +50,7 @@ import { IgxMonthPickerComponent } from "igniteui-angular";
 > Note that the [`IgxMonthPickerComponent`]({environment:angularApiUrl}/classes/igxmonthpickercomponent.html) uses the [Intl](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat) WebAPI for localization and formatting of dates.
 > Consider using the [appropriate polyfills](https://github.com/andyearnshaw/Intl.js/) if your target platform does not support them.
 
-To add a month picker in a template, use the following code:
+To add the Angular Month Picker in a template, use the following code:
 
 ```html
 <!-- month-picker-sample.component.html -->
@@ -107,7 +109,7 @@ Here is an example of modifying the default format options of the month picker:
 
 
 #### Localization
-Use the [`locale`]({environment:angularApiUrl}/classes/igxmonthpickercomponent.html#locale) input, to customize the month picker localization.
+Use the [`locale`]({environment:angularApiUrl}/classes/igxmonthpickercomponent.html#locale) input, to customize the Ignite UI for Angular Month Picker localization.
 
 ```html
 <!-- month-picker-sample.component.html -->
