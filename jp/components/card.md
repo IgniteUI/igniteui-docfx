@@ -1,14 +1,19 @@
 ---
-title: Angular Card コンポーネント
-_description: Ignite UI for Angular Card コンポーネントを使用して、詳細情報のエントリ ポイントとして、ダッシュボード、テキスト、画像、アイコン、ボタンなどを表示します。
+title: Angular Card Component – Ignite UI for Angular
+_description: With Angular Card component you can present users with dashboards and engaging text, images, icons or buttons as an entry point for detailed information. Try it now.
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Card コンポーネント, Angular Card コントロール
 _language: ja
 ---
 
-# Card
-<p class="highlight">Ignite UI for Angular [`IgxCardComponent`]({environment:angularApiUrl}/classes/igxcardcomponent.html) は、テキスト、画像、アイコン、およびボタンを表示します。この要素は詳細情報のエントリ ポイントになります。Card を使用してマルチメディア ダッシュボードを作成できます。Card コンポーネントは、Ignite UI for Angular Grid と同じコンポーネントを使用してページングをサポートします。ただし、カスタム コードが必要です。</p>
+# Angular Card Overview
+<p class="highlight">
+Angular Material Card represents a flexible container that has different elements like title text, descriptions, image styles, call to action buttons, links and others. In order to represent a given scenario/content in the best possible way, it offers various display options, headers, footers, as well as background colors, animations, and more.  
+
+This lightweight Angular Card component is used for creating all sorts of cards, some of them can be – business cards, material flipping cards, stacked cards.
+</p>
 
 ## Angular Card の例
+Below you can see a basic sample of a well-crafted Angular Material Card with main card sections like imge, title, subtitle, primary card content, container for a button.
 
 <code-view style="height: 500px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -17,7 +22,7 @@ _language: ja
 
 <div class="divider--half"></div>
 
-## 使用方法
+## How to Use Angular Card with Ignite UI
 
 Card コンポーネントは、様々なオブジェクト タイプ、サイズやサポートされるアクションが異なる同様のオブジェクトから成るコンテンツを表示できます。
 
@@ -125,7 +130,7 @@ export class AppModule {}
 ### カードのアウトライン
 カードには `type` 属性があり、`default` (省略した場合は自動的に設定) または `outlined` に設定できます。`outlined` タイプは、細い境界線と置き換えてカードと背景を区別してカードからすべてのシャドウを削除します。
 
-### 水平レイアウト
+### Angular Card Horizontal Layout
 
 デフォルトでは、カードのすべてのセクション (ヘッダー、コンテンツ、メディア、アクション) は縦にレイアウトされています。垂直方向のスペースが多くある場合に便利です。カードのすべてのセクションを水平に配置する場合、カードの `horizontal` 属性を使用してレイアウトを設定できます。
 
@@ -233,9 +238,9 @@ export class AppModule {}
 </code-view>
 
 
-### カード アクション
+### Angular Card Actions
 
-カードのアクション領域では、すでに説明したコンテンツに追加の設定を加えることができます。
+The Angular Material Card actions area allows additional configuration to what we have already mentioned.
 
 `reverse` 属性を使用して、フラットボタンとボタンアイコンの順序を逆にすることができます。
 
@@ -323,7 +328,7 @@ $colorful-card: card-theme(
 }
 ```
 
-### デモ
+### Angular Card Demo
 
 
 <code-view style="height: 486px" 
@@ -333,7 +338,7 @@ $colorful-card: card-theme(
 
 
 ### まとめ
-このトピックでは Card コンポーネントの詳細について説明しました。最初にテキスト コンテンツのみを含むベーシックなカードを作成しました。次に画像を追加しました。他の Ignite UI for Angular コンポーネントをカードで使用してアバター、ボタン、およびアイコンを追加して機能性を向上しました。最後に公開されたテーマの色を設定してカスタムパレットを作成、スキーマを拡張してカードのテーマを変更しました。 
+In this article we covered a lot of ground with the card component. First, we created a very simple card with text content only. Then added some images to make the card a bit more appealing. We used some additional Ignite UI for Angular components inside our card, like Avatar Angular Material, buttons and icons, to enrich the experience and add some functionality. And finally, we changed the card's theme by setting some exposed theme colors, creating custom palettes and extending schemas. 
 カード コンポーネントはその他のレイアウトも表示できます。詳細については、このトピックの最初の部分の Card デモを参照してください。
 
 ## API と スタイル リファレンス
