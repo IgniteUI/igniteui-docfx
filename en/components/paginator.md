@@ -1,14 +1,20 @@
 ---
-title: Angular Paging | Paginator | Table Pagination | Infragistics
-_description: Configure Angular pagination and create custom pages in the Angular Material table by Ignite UI, get data for the requested pages with variety of angular events.
+title: Angular Paginator Example – Ignite UI for Angular
+_description: Learn how to configure Angular paginator and create custom pages with Ignite UI. Get data for the requested pages with variety of Angular events. Try it now.
 _keywords: paginator, igniteui for angular, infragistics
 ---
 
-# Paginator
-Pagination allows us to divide a set of data into a number of similar pages. This method of pagination is particularly well-suited for large data-sets and "infinite" scrolling user interfaces, that is why the paginator is typically used with a list of items or data table. The Pagination component enables the user to select a specific page from a range of pages and to determine how many records should see on each page.
+# Angular Paginator Overview
+
+Pagination in Angular is one of the most useful features that the platform offers to developers when working with huge data sets. The purpose of Angular Paginator is to split and distribute a high volume of data collection into several pages, thus, delivering better UX whilst displaying paged information and items in an easier to compare and understand way.  
+
+Usually, the Angular Paginator component shows page-number or total-records. 
+
+Ignite UI for Angular Pagination allows us to divide a set of data into a number of similar pages. This method of pagination is particularly well-suited for large data-sets and "infinite" scrolling user interfaces, that is why the paginator is typically used with a list of items or data table. The Pagination in Angular enables the user to select a specific page from a range of pages and to determine how many records should see on each page.  
 
 ## Angular Paginator Example
 
+The following Angular Pagination example shows a Paginator template demonstrating how users can navigate through 4 pages with different items and select the number of items to be displayed from a drop-down menu. 
 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:demosBaseUrl}"
@@ -17,14 +23,14 @@ Pagination allows us to divide a set of data into a number of similar pages. Thi
 
 <div class="divider--half"></div>
 
-## Usage
+## How To Use Angular Paginator With Ignite UI
 
 Each paginator instance requires:
 
 - The number of items per page (default set to 15)
 - The total number of items being paged
 
-Also by default the current page is set to 0 when the paginator component is initialized but this can be changed through **page** property.
+Also by default the current page is set to 0 when the he Angular Paginator component is initialized but this can be changed through **page** property.
 
 ```html
 <igx-paginator #paginator [totalRecords]="120" [perPage]="25">
@@ -78,7 +84,7 @@ Paging can also be done programmatically through the Paging API /which is descri
 | pagingDone      | Emitted after paging is performed. |
 
 
-## Localization
+## Angular Paginator Localization
 With only a few lines of code you can easily localize all strings part of the Paging component. In order to localize a given Paging instance use the input property [resourceStrings]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#resourceStrings). You can use this
 
 **Step 1** - Import `IPaginatorResourceStrings` interface and [changei18n]({environment:angularApiUrl}/#changei18n) function:
