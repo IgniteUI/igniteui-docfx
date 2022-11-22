@@ -299,7 +299,7 @@ This can be done by creating a header template for the column with a custom icon
 On click of the custom icon the pin state of the related column can be changed using the column's API methods.
 
 ```typescript
-public toggleColumn(col: IgxColumnComponent) {
+public toggleColumn(col: ColumnType) {
     col.pinned ? col.unpin() : col.pin();
 }
 ```
