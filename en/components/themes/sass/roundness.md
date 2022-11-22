@@ -9,7 +9,16 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div class="divider"></div>
 
 ## Overview
-Roundness, as any other property, is set in the component theme or schema like it's shown in the examples below.
+Roundness, as any other property, is set in the global and component themes, or schema like it's shown in the examples below.
+```scss
+// Make all components sharp by setting the roundness factor to 0.
+@include theme(
+    ...,
+    $roundness: 0
+);
+```
+
+Alternatively, you can modify the schema for each individual component to default to some value; Note that the global configuration will always take presedence.
 
 ```scss
 $_material-shape-button: (

@@ -230,7 +230,7 @@ As you can see, we are adding **draggable** attribute set to *false*.
 ...
 ```
 
-In the snippet above we "take" a reference to the implicitly provided cell value. This is sufficient if you just want to present some data and maybe apply some custom styling or pipe transforms over the value of the cell. However even more useful is to take the [`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html) instance itself as shown below:
+In the snippet above we "take" a reference to the implicitly provided cell value. This is sufficient if you just want to present some data and maybe apply some custom styling or pipe transforms over the value of the cell. However even more useful is to take the [`CellType`]({environment:angularApiUrl}/interfaces/celltype.html) instance itself as shown below:
 
 ```html
 <igx-grid #grid [data]="data">
@@ -274,7 +274,7 @@ to set the [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.h
 </igx-column>
 ```
 
-Make sure to check the API for the [`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html) in order to get accustomed with the provided properties you can use in your templates.
+Make sure to check the API for the [`CellType`]({environment:angularApiUrl}/interfaces/celltype.html) in order to get accustomed with the provided properties you can use in your templates.
 
 ### Column Template API
 
