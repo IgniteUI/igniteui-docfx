@@ -326,6 +326,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 * [IgxInputGroup テーマ]({environment:sassApiUrl}/index.html#function-input-group-theme)
 * [IgxDropDown テーマ]({environment:sassApiUrl}/index.html#function-drop-down-theme)
 
+
 ## その他のリソース
 * [Time Picker](time-picker.md)
 * [Date Time Editor](date-time-editor.md)

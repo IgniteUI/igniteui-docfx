@@ -324,7 +324,7 @@ public formCreateHandler(evt: IGridFormGroupCreatedEventArgs) {
 各列にはテンプレート化されたフォーム検証があり、カスタム `rowValidator` によって行ごとのエラーを確認するため、エラー メッセージ は各セルのエラーを収集する `stateMessage` 関数で収集されます。
 
 ```typescript
-public stateMessage(cell: IgxGridCell) {
+public stateMessage(cell: CellType) {
     const messages = [];
     const row = cell.row;
     const cellValidationErrors = row.cells.filter(x => !!x.validation.errors);
@@ -427,12 +427,12 @@ public stateMessage(cell: IgxGridCell) {
 エラーと詳細メッセージは、行とセルの有効性に基づいて決定できます。
 
 ```ts
-    public isRowValid(cell: IgxGridCell) {
+    public isRowValid(cell: CellType) {
         const hasErrors = !!cell.row.validation.errors || cell.row.cells.some(x => !!x.validation.errors);
         return !hasErrors;
     }
 
-    public stateMessage(cell: IgxGridCell) {
+    public stateMessage(cell: CellType) {
         const messages = [];
         const row = cell.row;
         if  (row.validation.errors?.invalidAddress) {
@@ -535,7 +535,7 @@ public formCreateHandler(evt: IGridFormGroupCreatedEventArgs) {
 各列にはテンプレート化されたフォーム検証があり、カスタム `rowValidator` によって行ごとのエラーを確認するため、エラー メッセージ は各セルのエラーを収集する `stateMessage` 関数で収集されます。
 
 ```typescript
-public stateMessage(cell: IgxGridCell) {
+public stateMessage(cell: CellType) {
     const messages = [];
     const row = cell.row;
     const cellValidationErrors = row.cells.filter(x => !!x.validation.errors);
@@ -717,6 +717,12 @@ public cellStyles = {
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 
+## 既知の問題と制限
+
+|制限|説明|
+|--- |--- |
+| `validationTrigger` が blur の場合、`editValue` と検証は、エディターからフォーカスが外れた後にのみトリガーされます。 | 
+理由は、これが formControl の [`updateOn`](https://angular.io/api/forms/AbstractControl#updateOn) プロパティを利用しているためです。これにより、formControl が更新され、関連する検証をトリガーするイベントが決定されます。
 
 ## その他のリソース
 
