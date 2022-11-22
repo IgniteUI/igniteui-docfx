@@ -1,14 +1,17 @@
 ---
 title: Time Picker Component - Native Angular | Ignite UI for Angular 
-_description: The Ignite UI for Angular Time Picker component allows the user to select time from a dialog with spinners which is then mirrored in the input field. 
+_description: The Ignite UI for Angular Time Picker component allows the user to select time from a dialog with spinners which is then mirrored in the input field. Try it now
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components, Angular Time Picker component, Angular Time Picker control, Time Picker, Angular Time Picker
 _language: kr---
 
-## Time Picker
+## Angular Time Picker Overview
 <p class="highlight">In following the design and functionality of the Date Picker, Ignite UI for Angular Time Picker component allows the user to select time from a dialog with spinners, which is then mirrored in the input field. In addition, the user can edit the time value, using an editable masked input with a dropdown.</p>
 <div class="divider"></div>
 
-### Time Picker Demo
+<p>As one of the most commonly used UI components for today’s web applications, the Angular Time Picker, also known as Angular Material Time Picker, provides developers with a variety of features that provide with the ability to customize the component to create the best UX and UI experience for the users to interact with the component. There are different built-in templates for displaying a clock button, as well as features like validation, custom time formatting, and more. </p>
+
+### Time Picker Example
+In general, users can enter a preferred time either through text input or by choosing a time value from an Angular Time Picker dropdown. The basic Angular Time Picker example below shows how users can easily enter the value with the help of the dropdown or by using the keyboard. 
 
 <code-view style="height: 600px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -17,7 +20,7 @@ _language: kr---
 
 <div class="divider--half"></div>
 
-### Usage
+### How To Use Angular Time Picker Component With Ignite UI
 
 To get started with the Ignite UI for Angular Time Picker, let's first import the `IgxTimePickerModule` in the **app.module.ts** file. Note that the IgxTimePicker is also dependent on the **BrowserAnimationsModule**, so it needs to be added to the AppModule as well:
 
@@ -246,7 +249,7 @@ In the following example we modify the default label "Time" and add a second ico
 public date: Date = new Date(Date.now());
 ```
 
-And there we have it:
+And here's our templated Ignite UI for Angular Time Picker:
 
 <code-view style="height: 600px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -293,7 +296,7 @@ public onBlur(inputValue: string, value: Date, picker: IgxTimePickerComponent) {
 }
 ```
 
-And there we have it, a re-templated time picker with dropdown and two-way binding support:
+And there we have it, a re-templated Ignite UI for Angular Time Picker with dropdown and two-way binding support:
 
 <code-view style="height: 600px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 

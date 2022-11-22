@@ -1,15 +1,18 @@
 ---
 title: Time Picker コンポーネント - ネイティブ Angular | Ignite UI for Angular
-_description: Ignite UI for Angular Time Picker コンポーネントを使用すると、スピン ボタンがあるダイアログから時間を選択し、入力フィールドに値が設定されます。
+_description: The Ignite UI for Angular Time Picker component allows the user to select time from a dialog with spinners which is then mirrored in the input field. Try it now
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular Time Picker コンポーネント, Angular Time Picker コントロール、Time Picker, Angular Time Picker
 _language: ja
 ---
 
-# Time Picker
+# Angular Time Picker Overview
 <p class="highlight">Time Picker コンポーネントを使用すると、スピン ボタンがあるドロップダウン/ダイアログから時間を選択し、入力フィールドに値が設定されます。デフォルトのドロップダウン モードでは、入力フィールドは編集可能であり、ユーザーは選択した時間を編集することもできます。</p>
 <div class="divider--half"></div>
 
+<p>As one of the most commonly used UI components for today’s web applications, the Angular Time Picker, also known as Angular Material Time Picker, provides developers with a variety of features that provide with the ability to customize the component to create the best UX and UI experience for the users to interact with the component. There are different built-in templates for displaying a clock button, as well as features like validation, custom time formatting, and more. </p>
+
 ## Angular Time Picker の例
+In general, users can enter a preferred time either through text input or by choosing a time value from an Angular Time Picker dropdown. The basic Angular Time Picker example below shows how users can easily enter the value with the help of the dropdown or by using the keyboard. 
 
 <code-view style="height:540px"
            data-demos-base-url="{environment:demosBaseUrl}"
@@ -18,7 +21,7 @@ _language: ja
 
 <div class="divider--half"></div>
 
-## 使用方法
+## How To Use Angular Time Picker Component With Ignite UI
 はじめに、**app.module.ts** ファイルに `IgxTimePickerModule` をインポートします。
 
 >[!NOTE]
@@ -56,7 +59,7 @@ Time Picker の追加は、以下のコードを使用してください。
 <div class="divider--half"></div>
 
 ### バインディング
-Time Picker は、[`value`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#value) プロパティまたは `ngModel` を設定することにより、Date オブジェクトまたは `ISO8601` 形式の時刻のみの文字列値のいずれかにバインドできます。
+The Time Picker in Angular は、[`value`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#value) プロパティまたは `ngModel` を設定することにより、Date オブジェクトまたは `ISO8601` 形式の時刻のみの文字列値のいずれかにバインドできます。
 
 まず、`ISO8601` 形式で時刻文字列を作成します。
 
@@ -115,7 +118,7 @@ Time Picker コンポーネントを使用すると、子コンポーネント�
 public date: Date = new Date();
 ```
 
-以下はテンプレート化された Time Picker です。
+And here's our templated Ignite UI for Angular Time Picker:
 
 <code-view style="height: 600px;"
            data-demos-base-url="{environment:demosBaseUrl}"
