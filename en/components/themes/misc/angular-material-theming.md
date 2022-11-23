@@ -99,7 +99,7 @@ To get started with styling components using the Ignite UI theming engine, creat
 
 ### Color Palettes
 
-Ignite UI for Angular's [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) function produces a color palette map including three sub-palettes for the `primary`, `secondary` and `grays` shades as well as five additional colors for `info`, `success`, `warn`, `error` and `surface`. For each color variant, our theming engine automatically generates text contrast colors at build-time, that are also included in the palette. Below, you can see the predefined light material palette:
+Ignite UI for Angular's [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) function produces a color palette map including three sub-palettes for the `primary`, `secondary` and `gray` shades as well as five additional colors for `info`, `success`, `warn`, `error` and `surface`. For each color variant, our theming engine automatically generates text contrast colors at build-time, that are also included in the palette. Below, you can see the predefined light material palette:
 
 ```scss
 $igx-light-palette: palette(
@@ -109,7 +109,7 @@ $igx-light-palette: palette(
     $success: #4eb862,
     $warn: #fbb13c,
     $error: #ff134a,
-    $grays: #000,
+    $gray: #000,
     $surface: #fff
 );
 ```
@@ -204,7 +204,7 @@ Following the previous approach, we are going to create material palettes for th
 $custom-dark-palette: palette(
     $primary: #011627,
     $secondary: #72da67,
-    $grays: #fff,
+    $gray: #fff,
     $surface: #222,
 );
 
@@ -340,7 +340,7 @@ The Angular Material `toolbar` uses CSS classes for its background color. In our
 }
 ```
 
-Then, add a CSS class to your navbar component following the pattern "bg - color from the palette - color variant". In our sample app, we are using `bg-grays-100`.
+Then, add a CSS class to your navbar component following the pattern "bg - color from the palette - color variant". In our sample app, we are using `bg-gray-100`.
 
 ### Angular Components Typography
 
@@ -384,7 +384,7 @@ Check Angular Material [`Typography documentation`](https://material.angular.io/
 
 * [Light Material Palette]({environment:sassApiUrl}/index.html#variable-light-material-palette)
 * [Dark Material Palette]({environment:sassApiUrl}/index.html#variable-dark-material-palette)
-* [Light Material Theme]({environment:sassApiUrl}/index.html#mixin-igx-light-theme)
+* [Light Material Theme]({environment:sassApiUrl}/index.html#mixin-light-theme)
 * [Dark Material Theme]({environment:sassApiUrl}/index.html#mixin-dark-theme)
 * [Palette Function]({environment:sassApiUrl}/index.html#function-igx-palette)
 * [Typography Mixin]({environment:sassApiUrl}/index.html#mixin-typography)

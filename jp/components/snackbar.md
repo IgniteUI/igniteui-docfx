@@ -181,7 +181,7 @@ Snackbar の主な機能を説明しました。次の例はより複雑なサ�
 ```typescript
 //sample.component.ts
 
-import { Component, OnInit, ViewChild } from "@angular/core";
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { IgxSnackbarComponent } from 'igniteui-angular';
 // import { IgxSnackbarComponent } from '@infragistics/igniteui-angular'; for licensed package
 ...
@@ -194,7 +194,7 @@ constructor() { }
 
 public ngOnInit() {
     this.navItems = [
-        { avatar: 'assets/images/avatar/2.jpg', text: 'Richard Mahoney' },
+        { avatar: 'assets/images/avatar/2.jpg', text: 'Richard Mahoney'},
         { avatar: 'assets/images/avatar/4.jpg', text: 'Lisa Landers' },
         { avatar: 'assets/images/avatar/14.jpg', text: 'Marianne Taylor' },
         { avatar: 'assets/images/avatar/17.jpg', text: 'Ward Riley' }

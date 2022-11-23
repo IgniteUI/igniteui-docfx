@@ -76,7 +76,7 @@ import { IgxAvatarModule } from 'igniteui-angular';
 
 ## コンポーネント
 
-デモ サンプルの実行方法を見てみましょう。Ignite UI コンポーネントと NG Bootstrap コンポーネントを組み合わせたもので、1 つのアプリケーションにうまく収まります。この例のナビゲーションは、[`igx-buttons`]({environment:angularApiUrl}/classes/igxbuttondirective.html) および [`igx-avatar`]({environment:angularApiUrl}/classes/igxavatarcomponent.html) とともに bootstrap [`navbar`](https://getbootstrap.com/docs/4.0/components/navbar/) を使用して作成されます。[Campaigns] ボタンの下の [`Dropdown`](https://ng-bootstrap.github.io/#/components/dropdown/examples) も bootstrap ライブラリから取得されます。ナビゲーションの下で、[`igx-card`]({environment:angularApiUrl}/classes/igxcardcomponent.html) コンポーネントを使用して統計を表示します。カード内に複数の項目を配置しました - [`igx-avatars`]({environment:angularApiUrl}/classes/igxavatarcomponent.html)、[`igx-icons`]({environment:angularApiUrl}/classes/igxiconcomponent.html)、[`buttons`](https://getbootstrap.com/docs/4.0/components/buttons/) および [`ngb-ratings`](https://ng-bootstrap.github.io/#/components/rating/examples)。 
+デモ サンプルの実行方法を見てみましょう。Ignite UI コンポーネントと NG Bootstrap コンポーネントを組み合わせたもので、1 つのアプリケーションにうまく収まります。この例のナビゲーションは、[`igx-buttons`]({environment:angularApiUrl}/classes/igxbuttondirective.html) および [`igx-avatar`]({environment:angularApiUrl}/classes/igxavatarcomponent.html) とともに bootstrap [`navbar`](https://getbootstrap.com/docs/4.0/components/navbar/) を使用して作成されます。[Campaigns] ボタンの下の [`dropdown`](https://ng-bootstrap.github.io/#/components/dropdown/examples) も bootstrap ライブラリから取得されます。ナビゲーションの下で、[`igx-card`]({environment:angularApiUrl}/classes/igxcardcomponent.html) コンポーネントを使用して統計を表示します。カード内に複数の項目を配置しました - [`igx-avatars`]({environment:angularApiUrl}/classes/igxavatarcomponent.html)、[`igx-icons`]({environment:angularApiUrl}/classes/igxiconcomponent.html)、[`buttons`](https://getbootstrap.com/docs/4.0/components/buttons/) および [`ngb-ratings`](https://ng-bootstrap.github.io/#/components/rating/examples)。 
 
 <img src="../../../images/igx-cards.png" width="100%">
 
@@ -100,7 +100,7 @@ Ignite UI テーマ エンジンを使用してコンポーネントのスタイ
 // _variables.scss
 @use "igniteui-angular/theming" as *;
 
-// 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
@@ -121,7 +121,7 @@ $theme-colors: (
 );
 ```
 
-Ignite UI for Angular の [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) 関数は、`primary`、`secondary`、`grays`、`info`、`success`、`warn`、`error` の各カラーとそのカラー バリアントを含むカラー パレット マップを生成します。定義済みの bootstrap パレットは 7 カラーで構成されます。
+Ignite UI for Angular の [`palette`]({environment:sassApiUrl}/index.html#function-palette) 関数は、`primary`、`secondary`、`gray`、`info`、`success`、`warn`、`error` の各カラーとそのカラー バリアントを含むカラー パレット マップを生成します。定義済みの bootstrap パレットは 7 カラーで構成されます。
 
 ```scss
 $bootstrap-palette: palette(
@@ -156,7 +156,7 @@ $light-danger: color($light-bootstrap-palette, "error");
 $custom-dark-palette: palette(
     $primary: #ecaa53,
     $secondary: #011627,
-    $grays: #fff,
+    $gray: #fff,
     $surface: #222
 );
 
@@ -209,8 +209,8 @@ Ignite UI for Angular には、[Bootstrap 4](https://getbootstrap.com/) ライ�
 Ignite UI パレットに対応する値がない `$theme-colors` マップの `light` カラーと `dark` カラーは、当社の任意により、他の値に置き換えることができます。次に例を示します。 
 
 ```scss
-$custom-light: color($light-bootstrap-palette, "grays", 100);
-$custom-dark: color($light-bootstrap-palette, "grays", 800);
+$custom-light: color($light-bootstrap-palette, "gray", 100);
+$custom-dark: color($light-bootstrap-palette, "gray", 800);
 
 :host {
     &.light {
@@ -253,26 +253,26 @@ Ignite UI for Angular のすべてのコンポーネントは渡されたパレ�
             // Overriding ngb-accordion colors with colors from the custom dark palette
             .accordion {
                 .card-header {
-                    background-color: color($custom-dark-palette, 'grays', 200);
-                    color: color($custom-dark-palette, 'grays', 900);
+                    background-color: color($custom-dark-palette, 'gray', 200);
+                    color: color($custom-dark-palette, 'gray', 900);
                 }
 
                 .card {
                     background-color: color($custom-dark-palette, 'surface');
-                    border-color: color($custom-dark-palette, 'grays', 300);
+                    border-color: color($custom-dark-palette, 'gray', 300);
                 }
             }
 
             // Overriding bootstrap dropdown colors with colors from the custom dark palette
             .dropdown .dropdown-menu {
                 background-color: color($custom-dark-palette, 'surface');
-                border-color: color($custom-dark-palette, 'grays', 300);
+                border-color: color($custom-dark-palette, 'gray', 300);
 
                 .dropdown-item {
-                    color: color($custom-dark-palette, 'grays', 800);
+                    color: color($custom-dark-palette, 'gray', 800);
 
                     &:hover {
-                        background-color: color($custom-dark-palette, 'grays', 200);
+                        background-color: color($custom-dark-palette, 'gray', 200);
                     }
                 }
             }
@@ -329,7 +329,7 @@ Bootstrap `navbar` は背景色に CSS クラスを使用します。サンプ�
 }
 ```
 
-次に、「bg-パレットのカラー-カラー バリアント」パターンに従って CSS クラスを navbar コンポーネントに追加します。サンプル アプリでは `bg-grays-200` を使用しています。
+次に、「bg-パレットのカラー-カラー バリアント」パターンに従って CSS クラスを navbar コンポーネントに追加します。サンプル アプリでは `bg-gray-200` を使用しています。
 
 ### タイポグラフィ
 
@@ -348,7 +348,7 @@ Ignite UI for Angular は、テーマごとに 4 つのデフォルト タイプ
 * [Dark Bootstrap パレット]({environment:sassApiUrl}/index.html#variable-dark-bootstrap-palette)
 * [Light Bootstrap テーマ]({environment:sassApiUrl}/index.html#mixin-bootstrap-light-theme)
 * [Dark Bootstrap テーマ]({environment:sassApiUrl}/index.html#mixin-bootstrap-dark-theme)
-* [Palette Function]({environment:sassApiUrl}/index.html#function-igx-palette)
+* [Palette Function]({environment:sassApiUrl}/index.html#function-palette)
 * [Typography Mixin]({environment:sassApiUrl}/index.html#mixin-typography)
 
 関連トピック: 

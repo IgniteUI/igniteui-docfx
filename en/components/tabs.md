@@ -1,11 +1,10 @@
 ---
 title: Angular Tabs Component | Ignite UI for Angular
-_description: he Ignite UI for Angular Tabs component places tabs at the top and allows for scrolling when there are multiple tab items on the screen. Try it now.
+_description: The Ignite UI for Angular Tabs component places tabs at the top and allows for scrolling when there are multiple tab items on the screen. Try it now.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Components, Native Angular Controls, Native Angular Components Library, Angular Tabs component, Angular Tabs controls, Angular Tabs
 ---
 
 # Angular Tabs Overview
-
 Angular Material Tabs is a full-featured user interface component that has the primary purpose to organize and group related content in a single view, thus saving space and making content more comprehensible. It packs different features like animations, templating, customization options, and others. 
 
 Tabs in Angular are extremely useful when you’re building a web page with plenty of content that must be fitted into categories and displayed in a concise and space-efficient way. 
