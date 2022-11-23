@@ -141,7 +141,7 @@ public pivotConfigHierarchy: IPivotConfiguration = {
 
 ## API リファレンス
 * [IgxPivotGridComponent]({environment:angularApiUrl}/classes/igxpivotgridcomponent.html)
-* [IgxPivotDataSelector]({environment:angularApiUrl}/classes/igxpivotdataselector.html)
+* [IgxPivotDataSelectorComponent]({environment:angularApiUrl}/classes/igxpivotdataselectorcomponent.html)
 
 
 ## その他のリソース
