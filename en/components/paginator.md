@@ -1,15 +1,27 @@
 ---
 title: Angular Paginator Example – Ignite UI for Angular
+<<<<<<< HEAD
 _description: Configure Angular pagination and create custom pages in the Angular Material table by Ignite UI, get data for the requested pages with variety of angular events.
+=======
+_description: Learn how to configure Angular paginator and create custom pages with Ignite UI. Get data for the requested pages with variety of Angular events. Try it now.
+>>>>>>> master
 _keywords: paginator, igniteui for angular, infragistics
 ---
 
 # Angular Paginator Overview
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
 Pagination in Angular is one of the most useful features that the platform offers to developers when working with huge data sets. The purpose of Angular Paginator is to split and distribute a high volume of data collection into several pages, thus, delivering better UX whilst displaying paged information and items in an easier to compare and understand way.  
 
 Usually, the Angular Paginator component shows page-number or total-records. 
 
+<<<<<<< HEAD
 Ignite UI for Angular Pagination allows us to divide a set of data into a number of similar pages. This method of pagination is particularly well-suited for large data-sets and "infinite" scrolling user interfaces, that is why the paginator is typically used with a list of items or data table. The Pagination in Angular enables the user to select a specific page from a range of pages and to determine how many records should see on each page.
+=======
+Ignite UI for Angular Pagination allows us to divide a set of data into a number of similar pages. This method of pagination is particularly well-suited for large data-sets and "infinite" scrolling user interfaces, that is why the paginator is typically used with a list of items or data table. The Pagination in Angular enables the user to select a specific page from a range of pages and to determine how many records should see on each page.  
+>>>>>>> master
 
 ## Angular Paginator Example
 
@@ -29,7 +41,11 @@ Each paginator instance requires:
 - The number of items per page (default set to 15)
 - The total number of items being paged
 
+<<<<<<< HEAD
 Also by default the current page is set to 0 when the Angular paginator component is initialized but this can be changed through **page** property.
+=======
+Also by default the current page is set to 0 when the he Angular Paginator component is initialized but this can be changed through **page** property.
+>>>>>>> master
 
 ```html
 <igx-paginator #paginator [totalRecords]="120" [perPage]="25">
