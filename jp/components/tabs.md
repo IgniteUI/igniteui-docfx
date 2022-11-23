@@ -1,18 +1,22 @@
 ---
 title: Tabs コンポーネント - ネイティブ Angular | Ignite UI for Angular
-_description: Ignite UI for Angular Tabs コンポーネントはタブを上側に配置し、複数のタブ項目がある場合にスクロールを許可します。
+_description: The Ignite UI for Angular Tabs component places tabs at the top and allows for scrolling when there are multiple tab items on the screen. Try it now.
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コンポーネント, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Tabs コンポーネント, Angular Tabs コントロール, Angular Tabs
 _language: ja
 ---
 
-# Tabs
+# Angular Tabs Overview
+Angular Material Tabs is a full-featured user interface component that has the primary purpose to organize and group related content in a single view, thus saving space and making content more comprehensible. It packs different features like animations, templating, customization options, and others. 
+
+Tabs in Angular are extremely useful when you’re building a web page with plenty of content that must be fitted into categories and displayed in a concise and space-efficient way. 
 
 <p class="highlight">
-Ignite UI for Angular [`igx-tabs`]({environment:angularApiUrl}/classes/igxtabscomponent.html) コンポーネントは、同様なデータ セットの体系化や切り替えに使用します。[`igx-tab-item`]({environment:angularApiUrl}/classes/igxtabitemcomponent.html) のラッパーとして機能し、それぞれデータのコンテナーおよびタブ ヘッダーを表します。Tabs コンポーネントは、タブを上側に配置して複数のタブ項目がある場合にスクロールを許可します。
+Ignite UI for Angular [`igx-tabs`]({environment:angularApiUrl}/classes/igxtabscomponent.html) コンポーネントは、同様なデータ セットの体系化や切り替えに使用します。[`igx-tab-item`]({environment:angularApiUrl}/classes/igxtabitemcomponent.html) のラッパーとして機能し、それぞれデータのコンテナーおよびタブ ヘッダーを表します。The Angular Tabs Component コンポーネントは、タブを上側に配置して複数のタブ項目がある場合にスクロールを許可します。
 </p>
 
 ## Angular Tabs の例
 
+This is a basic example of Angular Nested Tabs where we have one tab within another where only one view can be seen at the time. Using nested tabs in Angular, we can display information in a better, structured way. 
 
 <code-view style="height: 250px; border: 1px solid #ededed;"
            data-demos-base-url="{environment:demosBaseUrl}"
@@ -21,7 +25,7 @@ Ignite UI for Angular [`igx-tabs`]({environment:angularApiUrl}/classes/igxtabsco
 
 <div class="divider--half"></div>
 
-## 使用方法
+## How To Use Angular Tabs With Ignite UI
 
 はじめに、**app.module.ts** ファイルに  `IgxTabsModule` をインポートします。
 
@@ -40,7 +44,7 @@ import { IgxTabsModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-`igx-tab-header` にコンテンツを提供することにより、タブ ヘッダーを設定します。タブの名前を設定するには、`igxTabHeaderLabel` ディレクティブを使用してスパンを追加するだけです。タブ項目のコンテンツとして表示されるコンテンツは、`igx-tab-content` タグの間に追加する必要があります。
+We set the Angular Tabs header by providing content to `igx-tab-header`. To set the tab's name we simply add a span with `igxTabHeaderLabel` directive. Any content that will appear as a tab item's content should be added between `igx-tab-content` tags.
 
 ```html
 <igx-tabs>
@@ -98,7 +102,7 @@ export class AppModule {}
 
 <div class="divider"></div>
 
-## タブの配置
+## Angular Tabs Alignment
 `IgxTabs` [`tabAlignment`]({environment:angularApiUrl}/classes/igxtabscomponent.html#tabalignment) 入力プロパティは、タブの配置と配置の方法を制御します。start、center、end、justify の 4 つの異なる値を受け入れます。
 - **Start** (デフォルト): タブ ヘッダーの幅はコンテンツ (ラベル、アイコン、両方) によって異なり、すべてのタブに同じパディングがあります。最初のタブは、タブ コンテナーの左側に配置されます。
 - **Center**: タブ ヘッダーの幅はコンテンツによって異なり、タブ コンテナーの中央を占めます。スペースが足りない場合、スクロール ボタンが表示されます。
@@ -116,7 +120,7 @@ export class AppModule {}
 
 <div class="divider"></div>
 
-## タブのカスタマイズ
+## Customizing Angular Tabs
 
 タブに `igxTabHeaderIcon` ディレクティブを追加します。`igx-tabs` コントロールはマテリアル デザイン [**アイコン**](https://material.io/icons/)と互換性があるため、アプリケーションにアイコンを簡単に追加できます。
 > [!NOTE]

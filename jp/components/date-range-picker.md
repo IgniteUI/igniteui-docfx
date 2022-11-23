@@ -33,6 +33,7 @@ Ignite UI for Date Range Picker コンポーネントを使用するには、ま
 ...
 import { IgxDateRangePickerModule } from 'igniteui-angular';
 // import { IgxDateRangePickerModule } from '@infragistics/igniteui-angular'; for licensed package
+
 import { HammerModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 

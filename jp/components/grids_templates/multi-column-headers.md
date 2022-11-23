@@ -269,7 +269,7 @@ _language: ja
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も単純なアプローチに従って、[`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme)  を拡張する新しいテーマを作成し、`$header-background`, `$header-text-color`, `$header-border-width`, `$header-border-style` and `$header-border-color` パラメーターを受け取ります。
+最も単純なアプローチに従って、[`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme)  を拡張する新しいテーマを作成し、`$header-background`、`$header-text-color`、`$header-border-width`、`$header-border-style` および `$header-border-color` パラメーターを受け取ります。
 
 ```scss
 $custom-theme: grid-theme(

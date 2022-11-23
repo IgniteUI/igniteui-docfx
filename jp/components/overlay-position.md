@@ -77,14 +77,14 @@ import {
     ElasticPositionStrategy,
     GlobalPositionStrategy
 } from 'igniteui-angular';
-// import { 
-//    AutoPositionStrategy,
-//    ConnectedPositioningStrategy,
+// import { AutoPositionStrategy, 
+//    ConnectedPositioningStrategy, 
 //    ContainerPositionStrategy,
 //    ElasticPositionStrategy,
-//    GlobalPositionStrategy
-// } from '@infragistics/igniteui-angular'; for licensed package
+//    GlobalPositionStrategy } from '@infragistics/igniteui-angular'; for licensed package
+
 ```
+
 
 次に、オーバーレイで使用される配置ストラテジを指定します。[`overlay.attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) メソッドが呼び出されると、配置ストラテジは [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) パラメーターのプロパティとして渡されます。以下の例では、デフォルトの `GlobalPositionStrategy` を `ConnectedPositionStrategy` で変更しています。
 
@@ -110,7 +110,7 @@ const overlayId = overlay.attach(dummyElement, overlaySettings);
 
 ## 配置設定
 
-各配置ストラテジには、固有の配置設定があります。この設定により、コンテンツの表示方法が決まります。以下の例では、新しい `PositionSettings` オブジェクトを作成しています。これを使用して、オーバーレイに、指定された `target` (`buttonElement`) の右上の点から始まるコンテンツを強制的に表示します。コンテンツが表示される方向は左上に設定されます。次に、新しい `ConnectedPositionStrategy` を作成し、`PositionSettings` を渡します。
+各配置ストラテジには、固有の配置設定があります。この設定により、コンテンツの表示方法が決まります。以下の例では、新しい `PositionSettings` オブジェクトを作成しています。これを使用して、オーバーレイに、指定された `target` (`buttonElement`) の右上の点から始まるコンテンツを強制的に表示します。コンテンツが表示される方向は左上に設定されます。次に、新しい `ConnectedPositionStrategy` を作成し、`positionSettings` を渡します。
 
 ```typescript
 const positionSettings: PositionSettings = {
