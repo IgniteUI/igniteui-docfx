@@ -356,7 +356,7 @@ $custom-grid-schema: extend($_light-grid,(
 ```
 カスタム スキーマを適用するには、`light` グローバルまたは `dark` グローバルを拡張する必要があります。プロセス全体が実際にコンポーネントにカスタム スキーマを提供し、その後、それぞれのコンポーネントテーマに追加します。   
 ```scss
-$my-custom-schema: extend($light-schema, ( 
+$my-custom-schema: extend($light-schema, (
     igx-grid: $custom-grid-schema
 ));
 
@@ -367,7 +367,7 @@ $custom-theme: grid-theme(
 ```
 
 ### カスタム テーマの適用
-テーマを適用する最も簡単な方法は、グローバル スタイル ファイルに `sass` `@include` ステートメントを使用することです。 
+テーマを適用する最も簡単な方法は、グローバル スタイル ファイルに `sass` `@include` ステートメントを使用することです。
 
 ```scss
 @include grid($custom-theme);
@@ -424,7 +424,7 @@ platformBrowserDynamic()
 |グループ化|グループ化機能は、階層グリッドでサポートされません。|
 
 > [!NOTE]
-> `igxHierarchicalGrid` は内部で `igxForOf` ディレクティブを使用するため、すべての `igxForOf` の制限が `igxForOf` で有効です。詳細については、[igxForOf 既知の問題](../for-of.md#既知の問題と制限) のセクションを参照してください。
+> `igxHierarchicalGrid` は内部で `igxForOf` ディレクティブを使用するため、すべての `igxForOf` の制限が `igxForOf` で有効です。詳細については、[igxForOf 既知の問題](../for-of.md#既知の問題と制限)のセクションを参照してください。
 
 ## API リファレンス
 

@@ -341,6 +341,7 @@ $custom-drop-down-theme: drop-down-theme(
 - Simple ComboBox には、高さのサイズを設定するための入力がありません。将来、[IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) コンポーネントは、カスタムのサイズ変更オプションを公開し、[IgxSimpleCombo]({environment:angularApiUrl}/classes/igxsimplecombocomponent.html) は適切なスタイル設定と外観の統一に同じ機能を使用します。
 - シンプルなコンボボックスが `undefined` (例: `[ undefined, ...]`) を含むプリミティブ データの配列にバインドされる場合、`undefined` はドロップダウンに表示されません。複合データ (オブジェクトなど) の配列にバインドされ、`valueKey` に使用される値が `undefined` の場合、項目はドロップダウンに表示されますが、選択はできません。
 - シンプルなコンボボックスが `ngModel` でバインドされ、`required` とマークされている場合、`null`、`undefined`、`''` の値は選択できません。
+- シンプルなコンボボックスがリモート サービスにバインドされ、定義済みの選択がある場合、要求されたデータが読み込まれるまでその入力は空白のままになります。
 
 > [!NOTE]
 > Simple ComboBox は内部で `igxForOf` ディレクティブを使用するため、すべての `igxForOf` 制限は Simple ComboBox に対して有効です。詳細については、[igxForOf 既知の制限](for-of.md#既知の制限) の既知の問題のセクションを参照してください。

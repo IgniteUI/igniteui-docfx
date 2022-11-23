@@ -339,7 +339,6 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
             <img *ngIf="!val" src="https://www.infragistics.com/angular-demos/assets/images/grid/expired.png" title="False" alt="False" />
         </ng-template>
     </igx-column>
-
 </igx-hierarchical-grid>
 ```
 }

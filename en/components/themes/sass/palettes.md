@@ -9,7 +9,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div class="divider"></div>
 
 ## Overview
-Palettes in the context of Ignite UI for Angular are declared as [Sass Maps](https://sass-lang.com/documentation/values/maps) with the keys of those map being the palette colors (`primary`, `secondary`, `grays`, etc.). Each color is in turn a map itself and has all color variants listed as keys. The values assigned to those color variants are the actual colors used throughout all component themes. All palette maps are generated programatically by the palette function. The function accepts arguments for `primary`, `secondary`, `grays`, `surface`, `info`, `success`, `warn`, and `error` colors. The `primary` color is usually your brand color. It is mostly used to style static elements, such as the `igx-navbar` component. The secondary color is the one used on elements that are actionable, such as buttons, switches, sliders, etc. The only required arguments are the ones for `primary` and `secondary` colors. The surface color is used to color the 'surface' of some components, such as cards, menus, date/time pickers, banners sheets, etc. We default the colors for `surface`, `grays`, `info`, `success`, `warn`, and `error` to a predefined set of our choosing.
+Palettes in the context of Ignite UI for Angular are declared as [Sass Maps](https://sass-lang.com/documentation/values/maps) with the keys of those map being the palette colors (`primary`, `secondary`, `gray`, etc.). Each color is in turn a map itself and has all color variants listed as keys. The values assigned to those color variants are the actual colors used throughout all component themes. All palette maps are generated programatically by the palette function. The function accepts arguments for `primary`, `secondary`, `gray`, `surface`, `info`, `success`, `warn`, and `error` colors. The `primary` color is usually your brand color. It is mostly used to style static elements, such as the `igx-navbar` component. The secondary color is the one used on elements that are actionable, such as buttons, switches, sliders, etc. The only required arguments are the ones for `primary` and `secondary` colors. The surface color is used to color the 'surface' of some components, such as cards, menus, date/time pickers, banners sheets, etc. We default the colors for `surface`, `gray`, `info`, `success`, `warn`, and `error` to a predefined set of our choosing.
 
 To get started with your first color palette, create an _scss_ file that would be the base file for your global theme. I will call mine _"_variables.scss"_.
 
@@ -27,7 +27,7 @@ $melon-palette: palette(
 
 We created a palette that contains variants for all colors in it, including automatically created text contrast colors for each variant. If you haven't checked [the documentation](../palettes.md) regarding palettes with CSS variables, go check it out now. It contains information about all the color variants of a palette.
 
-The `igx-palette` function does a lot internally to help you create colors at build-time that you can reuse throughout your `.scss` documents. The function is nice in that it will create a huge map of colors for you, but the algorithm for generating the color variants is very opinionated and may not match your exact needs. Our component themes don't care how the palette is generated, it only cares about the shape of the map.
+The `palette` function does a lot internally to help you create colors at build-time that you can reuse throughout your `.scss` documents. The function is nice in that it will create a huge map of colors for you, but the algorithm for generating the color variants is very opinionated and may not match your exact needs. Our component themes don't care how the palette is generated, it only cares about the shape of the map.
 
 In case you want to manually create your palette, or create the palette generating function yourself here's what we expect to get as a palette map.
 
@@ -93,7 +93,7 @@ $handmade-palette: (
         'A700': to-hsl(#f38e28),
         'A700-contrast': white
     ),
-    grays: (
+    gray: (
         50: to-hsl(#fff),
         '50-contrast': black,
         100: to-hsl(#fafafa),
@@ -138,19 +138,19 @@ $handmade-palette: (
 );
 
 :root {
-    --igx-primary-a: 1;
-    --igx-secondary-a: 1;
-    --igx-info-a: 1;
-    --igx-success-a: 1;
-    --igx-warn-a: 1;
-    --igx-error-a: 1;
-    --igx-grays-a: 1;
-    --igx-surface-a: 1;
+    --ig-primary-a: 1;
+    --ig-secondary-a: 1;
+    --ig-info-a: 1;
+    --ig-success-a: 1;
+    --ig-warn-a: 1;
+    --ig-error-a: 1;
+    --ig-gray-a: 1;
+    --ig-surface-a: 1;
 }
 ```
 <div class="divider"></div>
 
-The `to-hsl()` function takes a color, no matter the color space, and returns its hue, saturation, and lightness values in a comma-separated list, which will be used when declaring the CSS variables for each shade in the palette. The `alpha` value for each palette color(primary, secondary, grays, etc.) must be initialized separately.
+The `to-hsl()` function takes a color, no matter the color space, and returns its hue, saturation, and lightness values in a comma-separated list, which will be used when declaring the CSS variables for each shade in the palette. The `alpha` value for each palette color(primary, secondary, gray, etc.) must be initialized separately.
 
 ## Predefined Palettes
 We provide predefined light and dark palettes, which you can use along with our schemas to create themes for your components:
@@ -179,7 +179,7 @@ We also provide a few additional palettes that you can use:
   - $dark-green-palette
   - $dark-purple-palette
 
-You can mix and match all of the light palettes with a light schema of your choice and vice versa - all of the dark palettes with a dark schema that you think will best match your needs and vision.
+You can mix and match all light palettes with a light schema of your choice and vice versa - all dark palettes with a dark schema that you think will best match your needs and vision.
 
 ## The Default Palette
 The `theme` mixin takes a palette(see the previous section) as one of its arguments. The passed palette is assigned to the global `$default-palette` variable. This palette stored in this variable is used across the Sass library as fallback palette, whenever a palette is expected, but not explicitly provided by the user.
@@ -220,7 +220,7 @@ This ensures that the same palette, declared in our `_variables.scss` file is us
 
 ## Grayscale Colors
 
-Similar to the `primary` and `secondary` colors, you can provide another color to the `igx-palette` function that will be used to generate shades of gray. The default color used to generate the `grays` palette in all light themes is `#000`, or better known as `black`. The `grays` color variants are mainly used for setting text colors across components. Modifying the value is useful when changing the background or surface colors in your application. For instance, if your application uses a darker surface background, setting the `grays` color to `white` is sensible, and will force all text colors to be based on shades of `white`.
+Similar to the `primary` and `secondary` colors, you can provide another color to the `palette` function that will be used to generate shades of gray. The default color used to generate the `gray` palette in all light themes is `#000`, or better known as `black`. The `gray` color variants are mainly used for setting text colors across components. Modifying the value is useful when changing the background or surface colors in your application. For instance, if your application uses a darker surface background, setting the `gray` color to `white` is sensible, and will force all text colors to be based on shades of `white`.
 
 To generate a palette that uses `white` for its gray shades:
 
@@ -233,7 +233,7 @@ $grayscale-base: #fff; /* Used to generate shades of gray */
 $my-color-palette: palette(
     $primary: $company-color,
     $secondary: $secondary-color,
-    $grays: $grayscale-base
+    $gray: $grayscale-base
 );
 ```
 
@@ -241,19 +241,19 @@ $my-color-palette: palette(
 
 ## Colors Variants
 
-We provide a function that is easy to remember and use - `igx-color`. It can take up to three arguments - `palette`, `color`, and `variant`;
+We provide a function that is easy to remember and use - `color`. It can take up to three arguments - `palette`, `color`, and `variant`;
 
 ```scss
-// Get the primary 500 color variant from $default-palette
+// Get the primary CSS variable reference of the 500 color variant
 $my-primary-500: color();
 
-// Get the primary 600 color variant from $default-palette
+// Get the primary CSS variable reference of the 600 color variant
 $my-primary-600: color($variant: 600);
 
-// Get the secondary A700 color variant from $my-palette
+// Get the secondary A700 color variant as a HEX value from $my-palette
 $my-primary-A700: color($my-palette, 'secondary', 'A700');
 
-// Get the warn color from $my-palette
+// Get the warn 500 color variant as HEX value from $my-palette
 $my-warning-color: color($my-palette, 'warn');
 
 .my-awesome-class {
@@ -266,7 +266,7 @@ $my-warning-color: color($my-palette, 'warn');
 }
 ```
 
-If you omit the `$palette` argument, the value stored in `$default-palette` is used. If you do not provide `$color` and/or `$variant`, they will be assigned to `primary` and `500` respectively.
+If you omit the `$palette` argument, you will get a string referencing the corresponding CSS variable variant. If you do not provide `$color` and/or `$variant`, they will be assigned to `primary` and `500` respectively.
 
 <div class="divider"></div>
 
@@ -276,7 +276,7 @@ Similar to how we retrieve color variants, there's a way to get the contrast tex
 
 ```scss
 $my-primary-800: color($my-palette, 'primary', 600);
-$my-primary-800-text:contrast-color($my-palette, 'primary', 600);
+$my-primary-800-text: contrast-color($my-palette, 'primary', 600);
 
 // sample usage
 .my-awesome-article {
@@ -316,7 +316,7 @@ The above code will generate CSS classes for each color variant in the palette. 
 
 ## CSS Variables
 
-When reading about the color palette in the [CSS Variables](../palettes.md) section of the documentation, you would've noticed that all palette colors are included as CSS variables. We do this internally every time we generate a theme using the `theme` mixin. The `theme` calls another mixin in its body - `palette-vars`. It takes a palette and converts the colors in it into CSS variables. 
+When reading about the color palette in the [CSS Variables](../palettes.md) section of the documentation, you would've noticed that all palette colors are included as CSS variables. We do this internally every time we generate a theme using the `theme` mixin. The `theme` calls another mixin in its body - `palette`. It takes a palette and converts the colors in it into CSS variables. 
 
 You use this mixin when you want your custom palette colors to be included as CSS variables.
 
@@ -328,13 +328,13 @@ $my-palette: palette(
   $secondary: #f96a88,
 );
 
-@include palette-vars($my-palette);
+@include palette($my-palette);
 ```
 
 ## API Reference
-* [Palettes]({environment:sassApiUrl}/index.html#function-igx-palette)
-* [Getting Palette Colors]({environment:sassApiUrl}/index.html#function-igx-color)
-* [Getting Contrast Colors]({environment:sassApiUrl}/index.html#function-igx-contrast-color)
+* [Palettes]({environment:sassApiUrl}/index.html#function-palette)
+* [Getting Palette Colors]({environment:sassApiUrl}/index.html#function-color)
+* [Getting Contrast Colors]({environment:sassApiUrl}/index.html#function-contrast-color)
 * [Generating Color Classes]({environment:sassApiUrl}/index.html#mixin-color-classes)
 * [Schemas](./schemas.md)
 
