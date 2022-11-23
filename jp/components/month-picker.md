@@ -1,16 +1,18 @@
 ---
-title: Month Picker コンポーネント
-_description: Angular Month Picker コンポーネントは、カレンダー ビューで年や月を簡単で直感的な選択できます。
+title: Angular Month Picker Component – Ignite UI for Angular
+_description:  The Ignite UI for Angular Month Picker component provides an easy and intuitive way to select a specific month and year using a month-year calendar view. Try it now.
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Month Picker コンポーネント, Angular Month Picker コントロール
 _language: ja
 ---
 
-# Month Picker
+# Angular Month Picker Overview
 <p class="highlight">
     Angular Month Picker コンポーネントは、カレンダー ビューで年や月を簡単で直感的な選択できます。コンポーネントは、単一選択、表示形式のカスタマイズ、ローカライゼーションをサポートします。
 </p>
+In general, the Angular Material Month Picker offers two basic ways for choosing a date - from a calendar pop-up or by entering a date through text input. One of the key features of the Angular Month Picker are: validation, custom date formats, range restriction, and disable dates, and more.
 
 ## Angular Month Picker の例
+What you see here is a basic Angular Month Picker example with a the component's default view, enabling users to select the year and the month.  
 
 <code-view style="height: 620px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -18,7 +20,7 @@ _language: ja
 </code-view>
 
 
-## 使用方法
+## How To Use Angular Month Picker Component With Ignite UI
 
 はじめに、**app.module.ts** ファイルに  `IgxCalendarModule` をインポートします。注: タッチ操作のために、[`IgxCalendar`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) は **BrowserAnimationsModule** と **HammerModule** に依存関係があり、これらも AppModule に追加する必要があります。
 
@@ -51,7 +53,7 @@ import { IgxMonthPickerComponent } from "igniteui-angular";
 > [`IgxMonthPickerComponent`]({environment:angularApiUrl}/classes/igxmonthpickercomponent.html) が日付のローカライズおよび書式設定のために [Intl](https://developer.mozilla.org/ja-jp/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat) を使用します。
 > 対象プラットフォームがその API をサポートしない場合、[適切なポリフィル](https://github.com/andyearnshaw/Intl.js/)を使用してください。
 
-マンスピッカーの追加は、以下のコードを使用してください。
+To add the Angular Month Picker in a template, use the following code:
 
 ```html
 <!-- month-picker-sample.component.html -->
@@ -101,7 +103,7 @@ public numericFormatOptions = {
 ```
 
 ### ローカライズ
-[`locale`]({environment:angularApiUrl}/classes/igxmonthpickercomponent.html#locale) 入力を使用してマンスピッカーのローカライズをカスタマイズします。
+Use the [`locale`]({environment:angularApiUrl}/classes/igxmonthpickercomponent.html#locale) input, to customize the Ignite UI for Angular Month Picker localization.
 
 ```html
 <!-- month-picker-sample.component.html -->
