@@ -664,7 +664,7 @@
   new: false
 - name: チャート機能
   href: charts/chart-features.md
-  new: false
+  updated: true
   items:
     - name: 軸グリッド線
       href: charts/features/chart-axis-gridlines.md
@@ -681,15 +681,18 @@
     - name: チャートの注釈
       href: charts/features/chart-annotations.md
       new: false
+    - name: チャートのデータ集計
+      href: charts/features/chart-data-aggregations.md
+      new: true
     - name: チャート データ凡例
       href: charts/features/chart-data-legend.md
-      new: true
+      new: false
     - name: チャート データ ツールチップ
       href: charts/features/chart-data-tooltip.md
-      new: true
+      new: false
     - name: チャート強調表示
       href: charts/features/chart-highlighting.md
-      updated: true
+      new: false
     - name: チャート マーカー
       href: charts/features/chart-markers.md
       new: false
@@ -715,6 +718,7 @@
       href: zoomslider-overview.md
       new: false
 - name: マップ
+  href: geo-map.md
   header: true
 - name: 地理エリア マップ
   href: geo-map-type-scatter-area-series.md

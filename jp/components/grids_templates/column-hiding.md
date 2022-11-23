@@ -103,6 +103,7 @@ Ignite UI for Angular @@igComponent は、[`IgxColumnHidingDirective`]({environm
 ```html
 <igx-hierarchical-grid class="hgrid" [data]="localdata"
         [height]="'560px'" [width]="'100%'" columnWidth="200px" [allowFiltering]="true" #hGrid>
+
     <igx-column field="Artist" [sortable]="true" [disableHiding]="true"></igx-column>
     <igx-column field="Photo">
         <ng-template igxCell let-cell="cell">
@@ -121,10 +122,10 @@ Ignite UI for Angular @@igComponent は、[`IgxColumnHidingDirective`]({environm
         <igx-column field="Billboard Review" [sortable]="true"></igx-column>
         <igx-column field="US Billboard 200" [sortable]="true"></igx-column>
         <igx-row-island [key]="'Songs'" [autoGenerate]="false">
-                <igx-column field="No."></igx-column>
-                <igx-column field="Title"></igx-column>
-                <igx-column field="Released"></igx-column>
-                <igx-column field="Genre"></igx-column>
+            <igx-column field="No."></igx-column>
+            <igx-column field="Title"></igx-column>
+            <igx-column field="Released"></igx-column>
+            <igx-column field="Genre"></igx-column>
         </igx-row-island>
     </igx-row-island>
 
@@ -260,13 +261,10 @@ public ngAfterViewInit() {
 
 ...
 import {
-    ...,
+    ...
     IgxColumnActionsModule 
 } from 'igniteui-angular';
-// import { 
-//    ...,
-//    IgxColumnActionsModule  
-//} from '@infragistics/igniteui-angular'; for licensed package
+// import { ..., IgxColumnActionsModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -376,13 +374,10 @@ export class AppModule {}
 
 ...
 import {
-    ...,
+    ...
     IgxRadioModule    
 } from 'igniteui-angular';
-// import { 
-//    ...,
-//    IgxRadioModule
-// } from '@infragistics/igniteui-angular'; for licensed package
+// import { ..., IgxRadioModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...

@@ -300,7 +300,7 @@ public pinningConfig: IPinningConfig = { columns: ColumnPinningPosition.End };
 カスタムアイコンをクリックすると、関連する列のピン状態は、列の API メソッドを使用して変更できます。
 
 ```typescript
-public toggleColumn(col: IgxColumnComponent) {
+public toggleColumn(col: ColumnType) {
     col.pinned ? col.unpin() : col.pin();
 }
 ```
