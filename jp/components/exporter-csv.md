@@ -57,7 +57,7 @@ Exporter サービスにアクセスするには、コンポーネントのコ�
 
 ...
 import { IgxCsvExporterService, IgxCsvExporterOptions, CsvFileTypes } from 'igniteui-angular';
-// import { IgxCsvExporterService, IgxCsvExporterOptions, CsvFileTypes } from '@infragistics/igniteui-angular'; for licensed package
+// import { IgxCsvExporterService, IgxCsvExporterOptions, CsvFileType } from '@infragistics/igniteui-angular'; for licensed package
 ...
 
 public localData = [

@@ -103,7 +103,6 @@ Ignite UI for Angular @@igComponent は、[`IgxColumnHidingDirective`]({environm
 ```html
 <igx-hierarchical-grid class="hgrid" [data]="localdata"
         [height]="'560px'" [width]="'100%'" columnWidth="200px" [allowFiltering]="true" #hGrid>
-
     <igx-column field="Artist" [sortable]="true" [disableHiding]="true"></igx-column>
     <igx-column field="Photo">
         <ng-template igxCell let-cell="cell">
@@ -122,10 +121,10 @@ Ignite UI for Angular @@igComponent は、[`IgxColumnHidingDirective`]({environm
         <igx-column field="Billboard Review" [sortable]="true"></igx-column>
         <igx-column field="US Billboard 200" [sortable]="true"></igx-column>
         <igx-row-island [key]="'Songs'" [autoGenerate]="false">
-            <igx-column field="No."></igx-column>
-            <igx-column field="Title"></igx-column>
-            <igx-column field="Released"></igx-column>
-            <igx-column field="Genre"></igx-column>
+                <igx-column field="No."></igx-column>
+                <igx-column field="Title"></igx-column>
+                <igx-column field="Released"></igx-column>
+                <igx-column field="Genre"></igx-column>
         </igx-row-island>
     </igx-row-island>
 
@@ -143,7 +142,7 @@ Ignite UI for Angular @@igComponent は、[`IgxColumnHidingDirective`]({environm
 ## ツールバーの列非表示 UI
 
 定義済みの列非表示 UI は、@@igComponent のツールバーの [`IgxDropDownComponent`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) 内に配置されます。列非表示の UI をこのドロップダウンを使用して表示/非表示にできます。
-これには、@@igComponent の [`IgxGridToolbarActionsComponent`]({environment:angularApiUrl}/classes/igxgridtoolbaractionscomponent.html) および [`IgxGridToolbarHidingComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarhidingcomponent.html) の両方を設定することだけです。ツールバーにタイトルを追加するには、[`IgxGridToolbarTitleComponent`]({environment:angularApiUrl}/classes/igxgridtoolbartitlecomponent.html) を設定し、@@igComponent のラッパーにカスタム スタイルを設定します。
+これには、@@igComponent の [`IgxGridToolbarActionsDirective`]({environment:angularApiUrl}/classes/igxgridtoolbaractionsdirective.html) および [`IgxGridToolbarHidingComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarhidingcomponent.html) の両方を設定することだけです。ツールバーにタイトルを追加するには、[`IgxGridToolbarTitleDirective`]({environment:angularApiUrl}/classes/igxgridtoolbartitledirective.html) を設定し、@@igComponent のラッパーにカスタム スタイルを設定します。
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
@@ -261,10 +260,13 @@ public ngAfterViewInit() {
 
 ...
 import {
-    ...
+    ...,
     IgxColumnActionsModule 
 } from 'igniteui-angular';
-// import { ..., IgxColumnActionsModule } from '@infragistics/igniteui-angular'; for licensed package
+// import { 
+//    ...,
+//    IgxColumnActionsModule  
+//} from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -374,10 +376,13 @@ export class AppModule {}
 
 ...
 import {
-    ...
+    ...,
     IgxRadioModule    
 } from 'igniteui-angular';
-// import { ..., IgxRadioModule } from '@infragistics/igniteui-angular'; for licensed package
+// import { 
+//    ...,
+//    IgxRadioModule
+// } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -654,9 +659,9 @@ $custom-button: button-theme(
 [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) プロパティ:
 * [showProgress]({environment:angularApiUrl}/classes/IgxGridToolbarComponent.html#showProgress)
 
-[`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) コンポーネント:
-* [IgxGridToolbarTitleComponent]({environment:angularApiUrl}/classes/igxgridtoolbartitlecomponent.html)
-* [IgxGridToolbarActionsComponent]({environment:angularApiUrl}/classes/igxgridtoolbaractionscomponent.html)
+[`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) ディレクティブ:
+* [titleDirective]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html#igxgridtoolbartitledirective.html)
+* [actionsDirective]({environment:angularApiUrl}/classes/igxgridtoolbaractionsdirective.html)
 
 [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) メソッド:
 

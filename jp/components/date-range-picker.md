@@ -1,16 +1,15 @@
 ---
 title: Date Range Picker コンポーネント - ネイティブ Angular | Ignite UI for Angular
-_description: The Angular Date Range Picker component allows you to choose a date range by defining its start and end date. You can select a range from a calendar UI. Try it now. 
+_description: Date Range Picker コンポーネントを使用すると、開始日と終了日を定義することで日付の範囲を選択できます。 カレンダー UI から範囲を選択できます。
 _keywords: Angular Date Range Picker, Date Range Picker, Date Picker, Angular 日付範囲ピッカー, 日付範囲ピッカー, 日付ピッカー
 _language: ja
 ---
 
-# Angular Date Range Picker Overview
+# Date Range Picker コンポーネント (日付範囲ピッカー)
 
-Angular Date Range Picker is a lightweight component that includes text input and a calendar pop-up to allow users to easily select start and end date values. It can be customized to match app requirements with features like range restrictions, formats, data range selection, grouping the start and end values together and many more. The Date Range Picker in Angular also allows developers to change the default view property and set it to month, year or multi-year. 
+Ignite UI for Angular Date Range Picker コンポーネントは開始日と終了日を定義して日付範囲を選択できる月表示カレンダーを表示します。カレンダーの UI は、ドロップダウン (デフォルトの設定) または入力フィールドにあるカレンダー アイコンへのユーザー操作によってダイアログとして表示されます。さらに、このコンポーネントには高度なセットアップ オプションがあり、2 つの異なる編集可能な入力フィールドを公開します。コンポーネントはロケールおよびカスタム日付書式設定をサポートします。
 
 ## Angular Date Range Picker の例
-We have created this basic Angular Date Range Picker example to show you the component in action. In this case, you see a calendar pop-up, letting users select start and end date values. 
 
 <code-view style="height:600px"
            data-demos-base-url="{environment:demosBaseUrl}"
@@ -20,7 +19,7 @@ We have created this basic Angular Date Range Picker example to show you the com
 <div class="divider--half"></div>
 
 
-## How To Add Angular Date Range Picker Component With Ignite UI
+## 使用方法
 
 ### はじめに
 Ignite UI for Date Range Picker コンポーネントを使用するには、まず `IgxDateRangePickerModule` を **app.module.ts** ファイルにインポートします。
@@ -33,7 +32,6 @@ Ignite UI for Date Range Picker コンポーネントを使用するには、ま
 ...
 import { IgxDateRangePickerModule } from 'igniteui-angular';
 // import { IgxDateRangePickerModule } from '@infragistics/igniteui-angular'; for licensed package
-
 import { HammerModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -67,7 +65,7 @@ public range: DateRange = { start: new Date(2020, 4, 20), end: new Date(2020, 4,
 
 デフォルトの Date Range Picker UX の機能向上のため、コンポーネントは子コンポーネントの投影を許可します - [`IgxInputGroupComponent`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) 、[`igxLabel`](label-input.md)、[`IgxHint`](input-group.md#hint)、[`igxPrefix`](input-group.md#Prefix-および-Suffix)、[`igxSuffix`](input-group.md#Prefix-および-Suffix) ([`IgxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) を除く) と同じです。詳細については、[Label および Input](label-input.md) トピックを参照してください。
 
-In addition, the Ignite UI for Angular Date Range Picker can be configured to project [`IgxPickerToggleComponent`]({environment:angularApiUrl}/classes/igxpickertogglecomponent.html) - a component that controls the calendar toggle and can be modified as shown in the [Calendar toggle](#calendar-toggle) section.
+さらに、Date Range Picker は [`IgxPickerToggleComponent`]({environment:angularApiUrl}/classes/igxpickertogglecomponent.html) を投影するように構成できます。[`IgxPickerToggleComponent`]({environment:angularApiUrl}/classes/igxpickertogglecomponent.html) は、カレンダーの切り替えを制御し、[カレンダーの切り替え](#カレンダーの切り替え) セクションに示すように変更できます。
 
 ```html
 <igx-date-range-picker [(ngModel)]="range">
@@ -79,7 +77,7 @@ In addition, the Ignite UI for Angular Date Range Picker can be configured to pr
 ```
 
 ### 個別の編集可能な入力の表示
-The Angular Date Range Picker component コンポーネントは、開始日と終了日の 2 つの入力を構成できます。これは、以下のデモに示すように、[`IgxDateRangeStartComponent`]({environment:angularApiUrl}/classes/igxdaterangestartcomponent.html) および [`IgxDateRangeEndComponent`]({environment:angularApiUrl}/classes/igxdaterangeendcomponent.html) を日付範囲ピッカーの子として使用して実現できます。
+Date Range Picker コンポーネントは、開始日と終了日の 2 つの入力を構成できます。これは、以下のデモに示すように、[`IgxDateRangeStartComponent`]({environment:angularApiUrl}/classes/igxdaterangestartcomponent.html) および [`IgxDateRangeEndComponent`]({environment:angularApiUrl}/classes/igxdaterangeendcomponent.html) を日付範囲ピッカーの子として使用して実現できます。
 
 ```html
 <igx-date-range-picker [(ngModel)]="range">
