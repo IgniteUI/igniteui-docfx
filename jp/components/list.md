@@ -42,6 +42,7 @@ Ignite UI for Angular については、[はじめに](general/getting-started.m
 
 ...
 import { IgxListModule } from 'igniteui-angular';
+// import { IgxListModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -206,6 +207,11 @@ import {
     IgxAvatarModule,
     IgxIconModule
 } from 'igniteui-angular';
+// import { 
+//    IgxListModule,
+//    IgxAvatarModule,
+//    IgxIconModule
+// } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -288,6 +294,7 @@ toggleFavorite(item: IgxListItem) {
 // app.module.ts
 ...
 import { IgxButtonGroupModule } from 'igniteui-angular';
+// import { IgxButtonGroupModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     imports: [..., IgxButtonGroupModule]
@@ -472,6 +479,7 @@ Angular コンポーネント テンプレートの上側に入力フィール�
 // app.module.ts
 ...
 import { IgxFilterModule, IgxInputGroupModule } from 'igniteui-angular';
+// import { IgxFilterModule, IgxInputGroupModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     imports: [..., IgxFilterModule, IgxInputGroupModule]
@@ -480,6 +488,7 @@ import { IgxFilterModule, IgxInputGroupModule } from 'igniteui-angular';
 // contacts.component.ts
 ...
 import { IgxFilterOptions } from 'igniteui-angular';
+// import { IgxFilterOptions } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({...})
 export class ContactListComponent {

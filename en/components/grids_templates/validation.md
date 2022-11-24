@@ -323,7 +323,7 @@ The different errors are displayed in a templated cell that combines all errors 
 The error messages are gathered in the `stateMessage` function, which gathers the errors for each cell, because each column could have templated form validations and then checks the errors for the row itself, which come from the custom `rowValidator`.
 
 ```typescript
-public stateMessage(cell: IgxGridCell) {
+public stateMessage(cell: CellType) {
     const messages = [];
     const row = cell.row;
     const cellValidationErrors = row.cells.filter(x => !!x.validation.errors);
@@ -415,12 +415,12 @@ The multi-field errors can then be displayed in a separate pinned column.
 Errors and the detailed messages can be determined based on the row and cell's validity.
 
 ```ts
-    public isRowValid(cell: IgxGridCell) {
+    public isRowValid(cell: CellType) {
         const hasErrors = !!cell.row.validation.errors || cell.row.cells.some(x => !!x.validation.errors);
         return !hasErrors;
     }
 
-    public stateMessage(cell: IgxGridCell) {
+    public stateMessage(cell: CellType) {
         const messages = [];
         const row = cell.row;
         if  (row.validation.errors?.invalidAddress) {
@@ -514,7 +514,7 @@ The different errors are displayed in a templated cell that combines all errors 
 The error messages are gathered in the `stateMessage` function, which gathers the errors for each cell, because each column could have templated form validations and then checks the errors for the row itself, which come from the custom `rowValidator`.
 
 ```typescript
-public stateMessage(cell: IgxGridCell) {
+public stateMessage(cell: CellType) {
     const messages = [];
     const row = cell.row;
     const cellValidationErrors = row.cells.filter(x => !!x.validation.errors);
@@ -719,6 +719,12 @@ public cellStyles = {
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 
+## Known Issues and Limitations
+
+|Limitation|Description|
+|--- |--- |
+| When `validationTrigger` is blur, `editValue` and validation will trigger only after editor is blurred. | 
+Reason is that this utilizes the formControl's [`updateOn`](https://angular.io/api/forms/AbstractControl#updateOn) property. This determines the event on which the formControl will update and trigger related validators.
 
 ## Additional Resources
 

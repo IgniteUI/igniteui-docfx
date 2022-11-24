@@ -534,6 +534,9 @@
   href: pivotgrid/pivot-grid.md
   new: true
   items:
+    - name: Export to Excel
+      href: pivotgrid/export-excel.md
+      new: true
     - name: Pivot Grid Features
       href: pivotgrid/pivot-grid-features.md
       new: true
@@ -660,7 +663,7 @@
   new: false
 - name: Chart Features
   href: charts/chart-features.md
-  new: false
+  updated: true
   items:
     - name: Axis Gridlines
       href: charts/features/chart-axis-gridlines.md
@@ -677,15 +680,18 @@
     - name: Chart Annotations
       href: charts/features/chart-annotations.md
       new: false
+    - name: Chart Data Aggregations
+      href: charts/features/chart-data-aggregations.md
+      new: true
     - name: Chart Data Legend
       href: charts/features/chart-data-legend.md
-      new: true
+      new: false
     - name: Chart Data Tooltip
       href: charts/features/chart-data-tooltip.md
-      new: true
+      new: false
     - name: Chart Highlighting
       href: charts/features/chart-highlighting.md
-      updated: true
+      new: false
     - name: Chart Markers
       href: charts/features/chart-markers.md
       new: false
@@ -932,6 +938,9 @@
   href: checkbox.md
 - name: Switch
   href: switch.md
+- name: Query Builder
+  href: query-builder.md
+  new: true
 - name: Radio & Radio Group
   href: radio-button.md
   new: false

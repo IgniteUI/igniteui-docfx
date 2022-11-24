@@ -28,6 +28,7 @@ _language: ja
 
 ...
 import { IgxMaskModule, IgxInputGroupModule } from 'igniteui-angular';
+// import { IgxMaskModule, IgxInputGroupModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -169,6 +170,7 @@ private notify(snackbar, message, input) {
 ```typescript
 ...
 import { ..., IgxTextSelectionModule } from 'igniteui-angular';
+// import { ..., IgxTextSelectionModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...

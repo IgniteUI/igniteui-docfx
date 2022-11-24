@@ -28,6 +28,7 @@ _language: ja
 
 ...
 import { IgxCheckboxModule } from 'igniteui-angular';
+// import { IgxCheckboxModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...

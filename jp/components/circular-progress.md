@@ -26,6 +26,7 @@ Circular Progress Indicator コンポーネントを使用するには、まず 
 
 ...
 import { IgxProgressBarModule } from 'igniteui-angular';
+// import { IgxProgressBarModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...

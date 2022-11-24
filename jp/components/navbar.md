@@ -27,6 +27,7 @@ Navbar コンポーネントを初期化する前に、`IgxNavbarModule` を **a
 
 ...
 import { IgxNavbarModule } from 'igniteui-angular';
+// import { IgxNavbarModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -73,6 +74,11 @@ import {
     IgxButtonModule,
     IgxIconModule
 } from 'igniteui-angular';
+// import { 
+//    IgxNavbarModule,
+//    IgxButtonModule,
+//    IgxIconModule
+// } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...

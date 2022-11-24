@@ -535,6 +535,9 @@
   href: pivotgrid/pivot-grid.md
   new: true
   items:
+    - name: Excel へのエクスポート
+      href: pivotgrid/export-excel.md
+      new: true
     - name: ピボット グリッド機能
       href: pivotgrid/pivot-grid-features.md
       new: true
@@ -661,7 +664,7 @@
   new: false
 - name: チャート機能
   href: charts/chart-features.md
-  new: false
+  updated: true
   items:
     - name: 軸グリッド線
       href: charts/features/chart-axis-gridlines.md
@@ -678,15 +681,18 @@
     - name: チャートの注釈
       href: charts/features/chart-annotations.md
       new: false
+    - name: チャートのデータ集計
+      href: charts/features/chart-data-aggregations.md
+      new: true
     - name: チャート データ凡例
       href: charts/features/chart-data-legend.md
-      new: true
+      new: false
     - name: チャート データ ツールチップ
       href: charts/features/chart-data-tooltip.md
-      new: true
+      new: false
     - name: チャート強調表示
       href: charts/features/chart-highlighting.md
-      updated: true
+      new: false
     - name: チャート マーカー
       href: charts/features/chart-markers.md
       new: false
@@ -712,7 +718,32 @@
       href: zoomslider-overview.md
       new: false
 - name: マップ
+  href: geo-map.md
   header: true
+- name: 地理エリア マップ
+  href: geo-map-type-scatter-area-series.md
+  new: false
+- name: 地理等高線マップ
+  href: geo-map-type-scatter-contour-series.md
+  new: false
+- name: 地理高密度マップ
+  href: geo-map-type-scatter-density-series.md
+  new: false
+- name: 地理バブル マップ
+  href: geo-map-type-scatter-bubble-series.md
+  new: false
+- name: 地理記号マップ
+  href: geo-map-type-scatter-symbol-series.md
+  new: false
+- name: 地理ポリゴン マップ
+  href: geo-map-type-shape-polygon-series.md
+  new: false
+- name: 地理ポリライン マップ
+  href: geo-map-type-shape-polyline-series.md
+  new: false
+- name: 地理マップ API
+  href: maps/map-api.md
+  new: false
 - name: マップ
   href: geo-map.md
   new: false
@@ -750,27 +781,6 @@
       new: false
     - name: マップコンテンツのナビゲーション
       href: geo-map-navigation.md
-      new: false
-    - name: 散布エリアシリーズ
-      href: geo-map-type-scatter-area-series.md
-      new: false
-    - name: 散布等高線シリーズ
-      href: geo-map-type-scatter-contour-series.md
-      new: false
-    - name: 散布密度シリーズ
-      href: geo-map-type-scatter-density-series.md
-      new: false
-    - name: 散布図比例シリーズ
-      href: geo-map-type-scatter-bubble-series.md
-      new: false
-    - name: 散布図記号シリーズ
-      href: geo-map-type-scatter-symbol-series.md
-      new: false
-    - name: シェイプ ポリゴンシ リーズ
-      href: geo-map-type-shape-polygon-series.md
-      new: false
-    - name: シェイプ ポリライン シリーズ
-      href: geo-map-type-shape-polyline-series.md
       new: false
     - name: シェープ ファイルの参照
       href: geo-map-shape-files-reference.md
@@ -931,6 +941,9 @@
   href: checkbox.md
 - name: Switch
   href: switch.md
+- name: Query Builder
+  href: query-builder.md
+  new: true
 - name: Radio & Radio Group
   href: radio-button.md
   new: false

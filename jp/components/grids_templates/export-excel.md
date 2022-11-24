@@ -11,6 +11,7 @@ _language: ja
 title: Angular Tree Grid の Excel へのエクスポート - Ignite UI for Angular
 _description: Ignite UI Excel Exporter を使用すると、クライアント Excel の機能をより便利でシンプルにできます。この形式では、フィルタリングやソートなどの機能が使用できます。
 _keywords: データ エクスポート, ignite ui for angular, インフラジスティックス
+_canonicalLink: grid/export-excel
 _language: ja
 ---
 }
@@ -19,6 +20,16 @@ _language: ja
 title: Angular Hierarchical Grid の Excel へのエクスポート - Ignite UI for Angular
 _description: Ignite UI Excel Exporter を使用すると、クライアント Excel の機能をより便利でシンプルにできます。この形式では、フィルタリングやソートなどの機能が使用できます。
 _keywords: データ エクスポート, ignite ui for angular, インフラジスティックス
+_canonicalLink: grid/export-excel
+_language: ja
+---
+}
+@@if (igxName === 'IgxPivotGrid') {
+---
+title: Angular Pivot Grid の Excel へのエクスポート - Ignite UI for Angular
+_description: Ignite UI Excel Exporter を使用すると、クライアント Excel の機能をより便利でシンプルにできます。この形式では、フィルタリングやソートなどの機能が使用できます。
+_keywords: データ エクスポート, ignite ui for angular, インフラジスティックス
+_canonicalLink: grid/export-excel
 _language: ja
 ---
 }
@@ -72,6 +83,15 @@ Excel Exporter サービスは @@igxName のデータを MS Excel へエクス�
 </code-view>
 
 }
+@@if (igxName === 'IgxPivotGrid') {
+
+<code-view style="height: 600px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           explicit-editor="stackblitz"
+           iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-export" alt="Angular Excel Exporter の例">
+</code-view>
+
+}
 
 <div class="divider--half"></div>
 
@@ -82,6 +102,7 @@ IgniteUI Excel Exporter を使用するには、[`IgxExcelExporterService`]({env
 ```typescript
 // app.module.ts
 import { IgxExcelExporterService } from 'igniteui-angular';
+// import { IgxExcelExporterService } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
   providers: [ IgxExcelExporterService ]
@@ -91,10 +112,7 @@ export class AppModule {}
 ```
 
 > [!Note]
-> v 12.2.1 以降では、エクスポーター サービスは root で提供されます。つまり、AppModule プロバイダーでそれらを宣言する必要はありません。
-
-> [!NOTE]
-> Excel Exporter サービスは JSZip にピア依存関係があります。JSZip ライブラリは Excel Exporter の使用時にインストールしてください。
+> v12.2.1 以降では、エクスポーター サービスは root で提供されます。つまり、AppModule プロバイダーでそれらを宣言する必要はありません。
 
 エクスポート処理の開始は、コンポーネントのテンプレートでボタンのハンドラーを使用します。
 
@@ -103,13 +121,14 @@ export class AppModule {}
 <button (click)="exportButtonHandler()">Export @@igxName to Excel</button>
 ```
 
-エクスポーター サービスへのアクセスは、コンポーネントのコンストラクターで [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) 型の引数を定義し、Angular フレームワークはサービスのインスタンスを提供します。データを MS Excel 形式でエクスポートするには、エクスポーター サービスの [`export`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#export) メソッドを呼び出して@@igxNameコンポーネントを最初の引数として渡します。
+エクスポーター サービスへのアクセスは、コンポーネントのコンストラクターで [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) 型の引数を定義し、Angular フレームワークはサービスのインスタンスを提供します。データを MS Excel 形式でエクスポートするには、エクスポーター サービスの [`export`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#export) メソッドを呼び出して @@igxName コンポーネントを最初の引数として渡します。
 
 以下のコードはコンポーネントの typescript ファイルでエクスポート処理を実行します。
 
 ```typescript
 // component.ts
 import { IgxExcelExporterService, IgxExcelExporterOptions } from 'igniteui-angular';
+// import { IgxExcelExporterService, IgxExcelExporterOptions } from '@infragistics/igniteui-angular'; for licensed package
 import { @@igxNameComponent } from 'igniteui-angular';
 
 @ViewChild('@@igObjectRef') public @@igObjectRef: @@igxNameComponent;
@@ -124,6 +143,17 @@ public exportButtonHandler() {
 
 上記をすべて行うと、@@igxName コンポーネントとその下にボタンを確認できます。ボタンを押すととエクスポート処理をトリガーし、ブラウザーで ExportedDataFile.xlsx ファイルをダウンロードします。このファイルは MS Excel 形式の @@igComponent のデータを含みます。
 
+@@if (igxName === 'IgxPivotGrid') {
+
+> [!NOTE]
+> Excel の展開/縮小インジケーターは、ピボット グリッドの最後のディメンションの階層に基づいて表示されます。
+
+> [!NOTE]
+> Excel テーブルは複数の行ヘッダーをサポートしていないため、エクスポートされた @@igComponent はテーブルとしてフォーマットされません。
+
+}
+
+@@if (igxName !== 'IgxPivotGrid') {
 ## すべてのデータのエクスポート
 
 ページングなどのリモート操作を使用している場合に、Grid がすべてのデータにアクセスできない場合があります。このような場合、[Excel Export サービス](../exporter-excel.md)を使用してデータ コレクション全体を渡すことをお勧めします。例:
@@ -137,7 +167,7 @@ public exportButtonHandler() {
 @@if (igxName === 'IgxGrid') {
 ## グループ化されたデータのエクスポート
 
-グループ化されたデータをエクスポートするには、@@igComponent を 1 つ以上の列でグループ化する必要があります。ブラウザーは、選択した列でグループ化された MSExcel 形式の @@igComponent コンポーネントからのデータを含む 「ExportedDataFile.xlsx」 という名前のファイルをダウンロードします。例:
+グループ化されたデータをエクスポートするには、@@igComponent を 1 つ以上の列でグループ化する必要があります。ブラウザーは、選択した列でグループ化された MSExcel 形式の @@igComponent コンポーネントからのデータを含む「ExportedDataFile.xlsx」という名前のファイルをダウンロードします。例:
 
 
 <code-view style="height: 800px;" 
@@ -191,9 +221,13 @@ public exportButtonHandler() {
 }
 ```
 
+}
+
 ## エクスポートするコンテンツのカスタマイズ
 
 上記の例では、Excel Exporter サービスで利用可能なデータをすべてエクスポートしました。行または列全体のエクスポートをしない方が良い場合があります。実装は、各列で発生される [`columnExporting`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#columnexporting) または各行で発生される [`rowExporting`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#rowexporting) イベントを処理し、イベント引数オブジェクトの [`cancel`]({environment:angularApiUrl}/interfaces/irowexportingeventargs.html#cancel) プロパティを `true` に設定して各イベントをキャンセルします。
+
+@@if (igxName !== 'IgxPivotGrid') {
 
 以下の例では、ヘッダーが "Age" で、インデックスが 1 の場合、エクスポートから列を除外します。
 
@@ -207,6 +241,25 @@ this.excelExportService.columnExporting.subscribe((args: IColumnExportingEventAr
 });
 this.excelExportService.export(this.@@igObjectRef, new IgxExcelExporterOptions('ExportedDataFile'));
 ```
+
+}
+
+@@if (igxName === 'IgxPivotGrid') {
+
+以下の例は、ヘッダーが「Amount of Sale」の場合、エクスポートからすべての列を除外します。
+
+```typescript
+// component.ts
+
+this.excelExportService.columnExporting.subscribe((args: IColumnExportingEventArgs) => {
+    if (args.header == 'Amount of Sale') {
+        args.cancel = true;
+    }
+});
+this.excelExportService.export(this.@@igObjectRef, new IgxExcelExporterOptions('ExportedDataFile'));
+```
+
+}
 
 @@igComponent コンポーネントのデータ エクスポートでは、行フィルタリングおよび列の非表示などの機能に応じて @@igComponent で表示されるデータのみをエクスポートします。[`IgxExcelExporterOptions`]({environment:angularApiUrl}/classes/igxexcelexporteroptions.html) オブジェクトのプロパティを設定し、エクスポーター サービスを構成してフィルターした行または非表示の列を含むことができます。
 ## 既知の制限
@@ -232,16 +285,11 @@ this.excelExportService.export(this.@@igObjectRef, new IgxExcelExporterOptions('
 |ピン固定列された列のエクスポート|エクスポートされた Excel ファイルでは、ピン固定列は固定されませんが、グリッドに表示されるのと同じ順序で表示されます。|
 }
 
-> [!NOTE]
-> [JSZip](https://www.npmjs.com/package/jszip) のライブラリがの [問題](https://github.com/Stuk/jszip/issues/617) が原因で、大きな Excel ファイルのエクスポートが遅延する場合があります。問題が解決するまで、Excel エクスポーターの速度を上げるために、アプリケーションに [`setImmediate`](https://developer.mozilla.org/en-US/docs/Web/API/Window/setImmediate) [polyfill](https://www.npmjs.com/package/setimmediate) をインポートできます。
-
-```cmd
-npm install --save setimmediate
-```
-
-```ts
-import 'setimmediate';
-```
+@@if (igxName === 'IgxPivotGrid') {
+|制限|説明|
+|--- |--- |
+|ワークシートの最大サイズ|Excel でサポートされているワークシートの最大サイズは、1,048,576 行 x 16,384 列です。|
+}
 
 ## API リファレンス
 

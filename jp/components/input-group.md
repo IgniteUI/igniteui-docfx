@@ -28,6 +28,7 @@ Input Group コンポーネントを初期化にするには、まず `IgxInputG
 
 ...
 import { IgxInputGroupModule } from 'igniteui-angular';
+// import { IgxInputGroupModule } from '@infragistics/igniteui-angular'; for licensed package
 import { FormsModule } from '@angular/forms';
 
 @NgModule({

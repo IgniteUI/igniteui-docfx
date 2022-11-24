@@ -223,6 +223,7 @@ The [`filteringLogic`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filt
 
 ```typescript
 import { FilteringLogic } from 'igniteui-angular';
+// import { FilteringLogic } from '@infragistics/igniteui-angular'; for licensed package
 ...
 
 this.@@igObjectRef.filteringLogic = FilteringLogic.OR;

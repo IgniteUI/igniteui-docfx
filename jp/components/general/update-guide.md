@@ -7,7 +7,7 @@ _language: ja
 
 # アップデート ガイド
 
-Ignite UI for Angular [バージョニング](https://github.com/IgniteUI/igniteui-angular/wiki/Ignite-UI-for-Angular-versioning) は、最初の数字がコードでサポートされる Angular のメジャー バージョンで、2 番目の数字はメジャー バージョン リリースの数字です。また重大な変更がメジャー リリース間でリリースされる場合があります。
+Ignite UI for Angular [バージョニング](https://github.com/IgniteUI/igniteui-angular/wiki/Ignite-UI-for-Angular-versioning)は、最初の数字がコードでサポートされる Angular のメジャー バージョンで、2 番目の数字はメジャー バージョン リリースの数字です。また重大な変更がメジャー リリース間でリリースされる場合があります。
 **Ignite UI for Angular** 各リリースのすべての変更の一覧は、製品 [CHANGELOG](https://github.com/IgniteUI/igniteui-angular/blob/master/CHANGELOG.md) (英語) をご覧ください。
 
 Ignite UI for Angular パッケージは `ng update` Schematics で自動バージョン マイグレーションをサポートします。これにより、すべての可能性のある重大な変更 (セレクターの名前、クラス、@Input/Output プロパティの変更) をマイグレーションを試みます。ただし、マイグレーションできない変更がある場合もあります。通常これらの変更はタイプ スクリプト アプリケーション ロジックに関連しており、[詳細](#その他の手動の変更)は以下をご確認ください。
@@ -51,6 +51,195 @@ ng update @angular/cli
 自動的にアップデートできない変更もあります。以下の変更はバージョンごとにセクションが分かれています。アッププデートが必要な場合は、現在のバージョンから開始してそれ以降のアップデートを適用しjます。
 
 例: 6.2.4 から 7.1.0 にアップデートする場合、[6.x .. から] セクションから始めて変更を適用していきます。
+
+## 14.2.x から 15.0.x の場合:
+### 一般
+- `igxGrid`、`igxHierarchicalGrid`、`igxTreeGrid`
+    - グリッド テンプレートのパラメーターに、コンテキストの型が追加されました。これは、アプリが厳密なテンプレート モードであり、間違った型を使用している場合にも問題を引き起こす可能性があります。変換が必要なテンプレートへの参照:
+         - `IgxColumnComponent` - [`ColumnType`]({environment:angularApiUrl}/interfaces/columntype.html) (たとえば、`igxFilterCellTemplate` の列パラメーター)
+         - `IgxGridCell` - [`CellType`]({environment:angularApiUrl}/interfaces/celltype.html) (たとえば、`igxCell` テンプレートの cell パラメーター)
+- Ignite UI for Angular に [igniteui-theming](https://github.com/IgniteUI/igniteui-theming) のピア依存関係があります。テーマ パッケージをインストールし、`angular.json` ファイルに以下のプリプロセッサー設定を追加します。
+
+    ```sh
+    npm install igniteui-theming
+    ```
+
+    ```json
+        "build": {
+          "options": {
+            "stylePreprocessorOptions": {
+                "includePaths": ["node_modules"]
+            }
+          }
+        }
+    ```
+
+- **重大な変更** - テーマの構成、カラー、エレベーション、およびタイポグラフィのすべてのグローバル CSS 変数のプレフィックスが `--igx` から `--ig` に変更されました。この変更はグローバル コンポーネント変数には影響しません。
+    
+    **例**:
+
+    14.2.x の場合:
+
+    ```css
+    :root {
+        --igx-typography: 'Titillium Web', sans-serif; 
+    }
+    ```
+
+    15.0.x の場合は以下のようになります:
+
+    ```css
+    :root {
+        --ig-typography: 'Titillium Web', sans-serif; 
+    }
+    ```
+
+### テーマ
+- **重大な変更** - `grays` 入力引数の名前が `gray` に変更されました。<br />
+既存のコードに与える影響は以下のとおりです。
+
+    14.2.x の場合:
+
+    ```scss
+    $my-palette: palette(
+        $primary: #09f,
+        $secondary: #e41c77,
+        $grays: #000
+    );
+
+    .my-class {
+        background: color($color: 'grays', $variant: 300);
+        color: contrast-color($color: 'grays', $variant: 300);
+        border-color: hsl(var(--ig-grays-500));
+    }
+    ```
+
+    15.0.x 以降:
+
+    ```scss
+    $my-palette: palette(
+        $primary: #09f,
+        $secondary: #e41c77,
+        $gray: #000
+    );
+    
+    .my-class {
+        background: color($color: 'gray', $variant: 300);
+        color: contrast-color($color: 'gray', $variant: 300);
+        border-color: hsl(var(--ig-gray-500));
+    }
+    ```
+
+
+- **重大な変更** - **パレットの CSS 変数の生成**は **palette-vars mixin** の代わりに **palette mixin** によって実行されます。
+
+- **重大な変更** - **palette 関数**は**サーフェイス カラーを渡す必要があります**が、`gray` カラーの値を渡すのはオプションです。グレー基本カラーの値が提供されない場合、サーフェイス カラーの明度に基づいて自動的に生成されます。明るいサーフェイス カラーは black (#000) グレー基本カラーになり、暗いサーフェス カラーは white (#fff) 基本グレー色。パレットを生成する場合、**info、success、error、および warn** カラーのデフォルト値がないことに注意してください。使用する場合は明示的に設定する必要があります。値を自分で考えたくない場合は、既存のパレットからこれらのカラーを取得することもできます。
+    
+    #### 例:
+    ```scss
+    $my-palette: palette(
+        $primary: #09f,
+        $secondary: #e41c77,
+        $surface: #fff,
+        $info: color($light-material-palette, 'info'),
+        $success: color($light-material-palette, 'success'),
+        $error: color($light-material-palette, 'error'),
+        $warn: color($light-material-palette, 'warn'),
+    );
+
+    @include palette($my-palette);
+    ```
+
+- **重大な変更** - **パレット パラメーターはすべてのコンポーネント テーマから削除されました。****palette mixin** を使用して、カスタム コンポーネントのコンポーネント テーマのカスタム パレットをスコープできます。IE11 のサポートを終了したため、すべてのコンポーネントテーマはカラー、高さ、タイポグラフィなどのグローバル CSS 変数を参照するため、カスタム パレットをコンポーネント テーマに渡す必要はなくなりました。
+
+    カスタム パレットでカスタムテーマを生成する場合:
+
+    ```scss
+    // app.component.scss
+
+    $my-palette: palette(
+        $primary: royalblue,
+        $secondary: orange,
+        $surface: white
+    );
+
+    $avatar: avatar-theme(
+        $background: color($color: 'primary'), 
+        $color: contrast-color($color: 'primary')
+    );
+
+    :host ::ng-deep {
+        // Include the custom palette in the scope of the app component.
+        // It will have a higher specificity than the global palette.
+        @include palette($my-palette):
+        
+        .my-avatar {
+            @include avatar($avatar);
+        }
+    }
+    ```
+
+### タイポグラフィ
+- **重大な変更** - **type-style** mixin はパラメーターとして type-scale を受け付けず、カテゴリ名のみを受け付けます。
+
+    14.2.x 以前:
+
+    ```scss
+    .my-class {
+        @include type-style($type-scale: $my-type-scale, $category: h1);
+    }
+    ```
+
+    15.0.x 以降:
+
+    ```scss
+    .my-class {
+        @include type-style(h1);
+    }
+    ```
+
+### エレベーション
+- **重大な変更** - **elevation 関数**には名前付き引数が 1 つのみあります- **$name (エレベーション名)**。
+- **重大な変更**- **elevations 機能**が削除されました。`configure-elevations` mixin を使用してエレベーションの色を設定できます。
+
+    14.2.x 以前:
+    
+    ```scss
+    .my-class {
+        box-shadow: elevation($elevations, $elevation: 8);
+    }
+    ```
+
+    15.0.x 以降:
+    
+    ```scss
+    .my-class {
+        box-shadow: elevation(8);
+    }
+    ```
+
+### グリッド ツールバー
+- **重大な変更** - `IgxGridToolbarTitleDirective` と `IgxGridToolbarActionsDirective` はコンポーネントに変換され、要素セレクターのみが保持されます。`<igx-grid-toolbar-title>` および `<igx-grid-toolbar-actions>` の優先要素マークアップを使用するアプリの場合、機能的な変更はありません。他の要素で `igxGridToolbarTitle` および `igxGridToolbarActions` ディレクティブを使用するアプリは、代わりにそれらを前述の要素に変換する必要があります。
+
+    _From:_
+    ```html
+    <igx-grid-toolbar>
+        <span igxGridToolbarTitle>Title</span >
+        <div igxGridToolbarActions>
+            ...
+        </div>
+    </igx-grid-toolbar>
+    ```
+
+    _To:_
+    ```html
+    <igx-grid-toolbar>
+        <igx-grid-toolbar-title>Title</igx-grid-toolbar-title>
+        <igx-grid-toolbar-actions>
+            ...
+        </igx-grid-toolbar-actions>
+    </igx-grid-toolbar>
+    ```
 
 ## 13.1.x から 13.2.x の場合:
 
@@ -444,7 +633,7 @@ $__legacy-libsass: true;
 ## 11.1.x から 12.0.x の場合:
 ### テーマ:
 * 重大な変更:
-    * `IgxAvatar` テーマが簡略化されました。テーマ パラメーター (`avatar-theme`) の数が大幅に削減され、接頭辞付きのパラメーター (`icon-*`, `initials-*`, `image-*`) と接尾辞付きのパラメーター (`border-radius-*`) が含まれなくなりました。`ng update` で実行された更新は、既存のボタン テーマを移行しますが、接頭辞付きと接尾辞付きのパラメーターがないことを考慮して、いくつかの追加の調整が必要になる場合があります。
+    * `IgxAvatar` テーマが簡略化されました。テーマ パラメーター (`avatar-theme`) の数が大幅に削減され、接頭辞付きのパラメーター (`icon-*`、`initials-*`、`image-*`) と接尾辞付きのパラメーター (`border-radius-*`) が含まれなくなりました。`ng update` で実行された更新は、既存のボタン テーマを移行しますが、接頭辞付きと接尾辞付きのパラメーターがないことを考慮して、いくつかの追加の調整が必要になる場合があります。
 
     既存のタイプ固有のアバター テーマを以下のように変更する必要があります。
 
@@ -550,12 +739,12 @@ $__legacy-libsass: true;
 
     Ignite UI for Angular に含まれるテーマごとに、使用できる特定の `font-family` 変数と `type-scale` 変数を提供します。
 
-    | **テーマ** | **フォント ファミリ** | **タイプ スケール** |
-    |----------------|-----------------|-----------------|
-    | Material | $material-typeface | $material-type-scale |
-    | Fluent | $fluent-typeface | $fluent-type-scale |
+    | **テーマ** | **フォント ファミリ** | **タイプ スケール**   |
+    | --------- | ------------------- | --------------------- |
+    | Material  | $material-typeface  | $material-type-scale  |
+    | Fluent    | $fluent-typeface    | $fluent-type-scale    |
     | Bootstrap | $bootstrap-typeface | $bootstrap-type-scale |
-    | Indigo | $indigo-typeface | $indigo-type-scale |
+    | Indigo    | $indigo-typeface    | $indigo-type-scale    |
 
 ### IgxBottomNav コンポーネント
 
@@ -795,6 +984,7 @@ import { HammerModule } from "@angular/platform-browser";
         ```
         ```typescript
         import { IgxAppendDropStrategy } from 'igniteui-angular';
+        // import { IgxAppendDropStrategy } from '@infragistics/igniteui-angular'; for licensed package
 
         public appendStrategy = IgxAppendDropStrategy;
         ```

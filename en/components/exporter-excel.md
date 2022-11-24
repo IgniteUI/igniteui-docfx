@@ -30,6 +30,7 @@ To start using the IgniteUI Excel Exporter first import the [`IgxExcelExporterSe
 
 ...
 import { IgxExcelExporterService } from 'igniteui-angular';
+// import { IgxExcelExporterService } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
   providers: [ IgxExcelExporterService ]
@@ -40,9 +41,6 @@ export class AppModule {}
 
 > [!Note]
 > In v12.2.1 and later, the exporter services are provided in root, which means you no longer need to declare them in the AppModule providers.
-
-> [!Note]
-> The Excel Exporter service has a peer dependency on the JSZip library. The JSZip library should be installed when using the Excel Exporter.
 
 To initiate an export process you may use the handler of a button in your component's template.
 
@@ -59,6 +57,7 @@ Here is the code which will execute the export process in the component's typesc
 
 ...
 import { IgxExcelExporterService, IgxExcelExporterOptions } from 'igniteui-angular';
+// import { IgxExcelExporterService, IgxExcelExporterOptions } from '@infragistics/igniteui-angular'; for licensed package
 ...
 
 public localData = [
@@ -93,18 +92,6 @@ this.excelExportService.columnExporting.subscribe((args: IColumnExportingEventAr
   }
 });
 this.excelExportService.export(this.igxGrid1, new IgxExcelExporterOptions('ExportedDataFile'));
-```
-
-## Known Limitations
-> [!NOTE]
-> Exporting large Excel files may be slow because of an [issue](https://github.com/Stuk/jszip/issues/617) in the [JSZip](https://www.npmjs.com/package/jszip) library. Until the issue is resolved, in order to speed up the Excel Exporter you could import a [`setImmediate`](https://developer.mozilla.org/en-US/docs/Web/API/Window/setImmediate) [polyfill](https://www.npmjs.com/package/setimmediate) in your application.
-
-```cmd
-npm install --save setimmediate
-```
-
-```ts
-import 'setimmediate';
 ```
 
 ## API References

@@ -89,6 +89,7 @@ Ignite UI for Angular @@igComponent では、列レベルでのデータ ソー�
 
 ```typescript
 import { SortingDirection } from 'igniteui-angular';
+// import { SortingDirection } from '@infragistics/igniteui-angular'; for licensed package
 
 // Perform a case insensitive ascending sort on the ProductName column.
 this.@@igObjectRef.sort({ fieldName: 'ProductName', dir: SortingDirection.Asc, ignoreCase: true });
@@ -186,7 +187,7 @@ public ngOnInit() {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も単純なアプローチに従って、[`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) を拡張し、`$sorted-header-icon-color` and `sortable-header-icon-hover-color` パラメーターを受け取ります。
+最も単純なアプローチに従って、[`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) を拡張し、`$sorted-header-icon-color` および `sortable-header-icon-hover-color` パラメーターを受け取ります。
 
 ```scss
 $custom-theme: grid-theme(

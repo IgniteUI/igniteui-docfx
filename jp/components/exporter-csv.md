@@ -30,6 +30,7 @@ Ignite UI CSV Exporter をインスタンス化するには、[`IgxCsvExporterSe
 
 ...
 import { IgxCsvExporterService } from 'igniteui-angular';
+// import { IgxCsvExporterService } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
   providers: [ IgxCsvExporterService ]
@@ -56,6 +57,7 @@ Exporter サービスにアクセスするには、コンポーネントのコ�
 
 ...
 import { IgxCsvExporterService, IgxCsvExporterOptions, CsvFileTypes } from 'igniteui-angular';
+// import { IgxCsvExporterService, IgxCsvExporterOptions, CsvFileType } from '@infragistics/igniteui-angular'; for licensed package
 ...
 
 public localData = [
@@ -92,6 +94,7 @@ CSV Exporter サービスも [**IgxGrid**](grid/grid.md) からのデータを C
 
 ...
 import { IgxCsvExporterService, IgxCsvExporterOptions, CsvFileTypes, IgxGridComponent } from 'igniteui-angular';
+// import { IgxCsvExporterService, IgxCsvExporterOptions, CsvFileTypes, IgxGridComponent } from '@infragistics/igniteui-angular'; for licensed package
 ...
 
 @ViewChild('igxGrid1') public igxGrid1: IgxGridComponent;

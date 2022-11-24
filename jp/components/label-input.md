@@ -28,6 +28,7 @@ Input および Label ディレクティブを初期化にするには、まず 
 
 ...
 import { IgxInputGroupModule } from 'igniteui-angular';
+// import { IgxInputGroupModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
