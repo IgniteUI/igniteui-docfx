@@ -1,21 +1,16 @@
 ---
-title: Angular Expansion Panel – Ignite UI for Angular
-_description: Use our Angular expansion panel which provides an easily configurable expandable component with two states - collapsed and expanded. Try it now.
+title: Angular Panel | Expandable | Ignite UI for Angular | インフラジスティックス
+_description: Angular アコーディオン/マテリアル展開パネルは、折りたたみと展開の 2 つの状態を持つ、簡単に設定できる拡張可能なコンポーネントを提供します。
 _keywords: angular accordion, igniteui for angular, インフラジスティックス
 _language: ja
 ---
-# Angular Expansion Panel Overview
-
-Angular Material provides developers with one of the most useful and easy-to-use layout components - Angular Expansion Panel. This feature-rich component is used to create an expandable/collapsible detailed summary view. The content can include Angular Expansion Panel animation, text, icons, header, action bar, and other elements. 
-
+# 展開パネル
 <p class="highlight">
-    Ignite UI Expansion Panel [igx-expansion-panel]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) is a lightweight Angular accordion component which can be rendered in two states - collapsed or expanded. The Expansion Panel in Angular can be toggled using mouse click, or keyboard interactions. You can also combine multiple Angular Expansion Panels into Angular accordion.
+    [igx-expansion-panel]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) は、軽量な Angular アコーディオン コンポーネントで、縮小または展開のどちらかの状態でレンダリングできます。展開パネルは、マウス クリックまたはキーボード操作によって切り替えることができます。
 </p>
 <div class="divider--half"></div>
 
-## Angular Expansion Panel Example
-
-We've created this simple Angular Expansion Panel Example using Ignite UI Angular. See how the sample works. 
+## 使用方法
 
 <code-view style="height: 320px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -59,7 +54,7 @@ Golden retrievers have an instinctive love of water, and are easy to train to ba
 </igx-expansion-panel>
 ```
 
-The table below shows all the available markup parts for the Angular Expansion Panel.
+以下の表は、展開パネルで使用可能なすべてのマークアップ要素を示します。
 | タグ名                          | 説明                                                                                                          |
 | :-------------------------------: | :--------------------------------------------------------------------------------------------------------------------: |
 | `igx-expansion-panel`             | コンポーネント ホスト - ヘッダーとボディを格納します。                                                                           |
@@ -153,7 +148,7 @@ export class ExpansionPanelComponent {
         </igx-expansion-panel-header>
     </igx-expansion-panel>
 ```
-Our Angular Expansion Panel will now render "Show More" when the panel is collapsed and "Show Less" once it's fully expanded.
+このコンポーネントは、パネルの縮小時に「更に表示」を描画し、完全に展開した後に「簡易表示」を描画します。
 
 `IgxExpansionPanel` コントロールを使用すると、あらゆる種類のコンテンツを `igx-expansion-panel-body` 内に追加できます。[`IgxGrid`](grid/grid.md)、[`IgxCombo`](combo.md)、チャート、その他の展開パネルもレンダリングできます。
 
@@ -182,7 +177,7 @@ Our Angular Expansion Panel will now render "Show More" when the panel is collap
 
 ## スタイル設定  
 
-### Angular Expansion Panel Demo
+### デモ
 
 <code-view style="height: 440px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -262,10 +257,10 @@ $custom-panel-theme: expansion-panel-theme(
 
 Ignite UI テーマ エンジンの使用方法の詳細については、[`こちらをクリックしてください`](themes/sass/component-themes.md)
 
-## Angular Expansion Panel Animations 
+## アニメーションの使用
 ### 特定のアニメーションの使用
-It is possible to use other than default animation when expanding and collapsing the component.
-Assuming the igxExpansionPanel is already imported in `app.module.ts` as previously described, you can create a custom animation setting object and set it to be used in the Ignite UI for Agular Expansion Panel. The approach requires the [`useAnimation`](https://angular.io/api/animations/useAnimation) method and the specific animations to be used so we start importing these and defining the animation settings like:
+コンポーネントの展開や縮小時にデフォルトのアニメーション以外を使用することも可能です。
+上記のように igxExpansionPanel がすでに `app.module.ts` にインポートされていると仮定した場合、カスタム アニメーション設定オブジェクトを作成して igxExpansionPanel で使用するために設定します。[`useAnimation`](https://angular.io/api/animations/useAnimation) メソッドと特定のアニメーションが必要でアニメーションの設定をインポートして次のようなアニメーションの設定を定義します。
 
 ```typescript
 // expansion-panel.component.ts 内
