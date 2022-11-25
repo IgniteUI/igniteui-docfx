@@ -70,6 +70,7 @@ export class AppModule {}
 //sample.component.ts
 import { ButtonGroupAlignment } from 'igniteui-angular';
 // import { ButtonGroupAlignment } from '@infragistics/igniteui-angular'; for licensed package
+
 ...
 public alignment = ButtonGroupAlignment.vertical;
 ...
@@ -305,7 +306,6 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 * [IgxButton テーマ]({environment:sassApiUrl}/index.html#function-button-theme)
 * [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-ripple-theme)
 
-
 ## その他のリソース
 <div class="divider--half"></div>
 
@@ -313,3 +313,4 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 
 * [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+

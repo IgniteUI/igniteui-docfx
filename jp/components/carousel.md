@@ -1,19 +1,19 @@
 ---
-title: Angular Carousel Component – Ignite UI for Angular
-_description: Use Ignite UI for Angular Carousel component to navigate through a collection of slides, cards or page-based interfaces with endless programmatic features. Try it now
+title: Angular Carousel コンポーネント – Ignite UI for Angular
+_description: Ignite UI for Angular Carousel コンポーネントを使用すると、スライド、カード、またはページに基づいたインターフェイスのコレクション間を移動できます。今すぐお試しください。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Carousel コンポーネント, Angular Carousel コントロール
 _language: ja
 ---
 
-# Angular Carousel Overview
-<p class="highlight">Angular Carousel (or Angular Material Carousel) is a responsive, lightweight component that provides the most flexible way to create slideshow-like web experience for users who navigate back and forth through a collection of images with text slides, links, and other html elements. 
+# Angular Carousel (カルーセル) の概要
+<p class="highlight">Angular Carousel (または Angular Material Carousel) は、レスポンシブで軽量なコンポーネントであり、テキスト スライド、リンク、およびその他の html 要素を含む画像のコレクションを前後に移動するユーザーに、スライドショーのような Web エクスペリエンスを作成する最も柔軟な方法を提供します。 
 
-The Angular Carousel component allows you to use animations, slide transitions, and customization so you can easily tweak the interface and build Angular custom carousel.
+Angular Carousel コンポーネントを使用すると、アニメーション、スライド トランジション、およびカスタマイズを使用できるため、インターフェイスを簡単に微調整して Angular カスタム カルーセルを構築できます。
 </p>
 <div class="divider"></div>
 
 ## Angular Carousel の例
-The Angular Carousel demo you see below shows slides containing only images. We’ve enabled navigation buttons allowing users to easily move from one slide to another – going back and forth.
+以下に示す Angular Carousel のデモは、画像のみを含むスライドを示しています。ナビゲーション ボタンを有効にして、ユーザーがスライド間を簡単に移動できるようにしました。
 
 <code-view style="height: 550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -22,8 +22,8 @@ The Angular Carousel demo you see below shows slides containing only images. We�
 
 
 
-## How To Use Angular Carousel With Ignite UI 
-The Ignite UI Angular Carousel component can be used as a full-screen element or situated inside another component. Also, the slides may feature any valid html content inside, including other Angular components.
+## Ignite UI で Angular Carousel を使用する方法
+Ignite UI Angular Carousel コンポーネントを全画面要素またはコンポーネントの子に設定できます。また、スライドに有効な HTML コンテンツ、その他の Angular コンポーネントなども含めることができます。
 
 ### はじめに
 <div class="divider--half"></div>
@@ -79,14 +79,14 @@ public slides = [
 </div>
 ...
 ```
-## Angular Carousel Custom Examples
+## Angular Carousel のカスタム例
 
 ### IgxCarousel の定義
 <div class="divider--half"></div>
 
-By default, the Carousel in Angular has its **[`loop`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#loop)** input property set to `true` ( *looping occurs when the first slide comes after the last by navigating using the Next action, or when the last slide comes after the first by using the Previous action* ). The looping behavior can be disabled by setting the value of the `loop` input to `false`.
+デフォルトでは、Angular のカルーセルの **[`loop`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#loop)** 入力プロパティは `true` に設定されています (ループは、Next 動作でナビゲートするときに最初のスライドが最後のスライドの後に来るか、Previous 動作を使用して最後のスライドが最初のスライドの後に来るときに起こります)。ループ動作を無効にするには、`loop` 入力の値を `false` に設定します。
 
-各スライド インデックスを追跡するために、カルーセルには、デフォルトでカルーセルの `下部` に配置されるインジケーターがあります。この動作を変更するには、[indicatorsOrientation]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#indicatorsorientation) プロパティを使用して、`top` に割り当てる必要があります。空のテンプレートを追加すると、インジケーターを無効にできます。
+各スライド インデックスを追跡するために、カルーセルには、デフォルトでカルーセルの `bottom` に配置されるインジケーターがあります。この動作を変更するには、[indicatorsOrientation]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#indicatorsorientation) プロパティを使用して、`top` に割り当てる必要があります。空のテンプレートを追加すると、インジケーターを無効にできます。
 
 カルーセル テンプレートは以下のようになります。
 
@@ -103,7 +103,7 @@ By default, the Carousel in Angular has its **[`loop`]({environment:angularApiUr
 ### カスタム インジケーター
 <div class="divider--half"></div>
 
-To add Angular custom carousel indicators we will have to use the [IgxCarouselIndicatorDirective]({environment:angularApiUrl}/classes/igxcarouselindicatordirective.html), like this:
+Angular カスタム カルーセル インジケーターを追加するには、以下のように [IgxCarouselIndicatorDirective]({environment:angularApiUrl}/classes/igxcarouselindicatordirective.html) を使用する必要があります。
 
 ```html
 ...
@@ -198,7 +198,7 @@ To add Angular custom carousel indicators we will have to use the [IgxCarouselIn
 
 
 
-## Angular Carousel Animations
+## Angular Carousel のアニメーション
 
 アニメーション化されたスライド遷移により、エンドユーザーはカルーセルを操作しているときに高いエクスペリエンスを得ることができます。
 
@@ -239,7 +239,7 @@ To add Angular custom carousel indicators we will have to use the [IgxCarouselIn
 
 デフォルトでカルーセルはあらゆるタッチ対応デバイスに使用できます。これはオプションであり、[gesturesSupport]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#gesturessupport) プロパティを `false` に設定して変更できます。
 
-The carousel [animations](carousel.md#angular-carousel-animations) are fully supported on touch devices, which makes the carousel consistent with any platform and great when used in progressive web applications ([PWA](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps)).
+Carousel [アニメーション](carousel.md#angular-carousel-のアニメーション)はタッチ デバイスで完全にサポートされているため、プラットホームに合わせてプログレッシブ Web アプリケーション ([PWA](https://developer.mozilla.org/ja/docs/Web/Progressive_web_apps)) を構築するための完璧なツールです。
 
 ### キーボード ナビゲーション
 <div class="divider--half"></div>
@@ -267,10 +267,10 @@ The carousel [animations](carousel.md#angular-carousel-animations) are fully sup
 
 これを実現するには、カルーセルを以下のように構成する必要があります。
  - `gesturesSupport` を無効にします。
- - `ナビゲーション` ボタンを無効にします。
- - カルーセルの`インジケーター`を無効にします。
+ - `navigation` ボタンを無効にします。
+ - カルーセル `indicator` を無効にします。
  - ユーザーがスライドを操作すると `pause` を無効にします。
- - トランジション`間隔`を追加します。
+ - トランジション `interval` を追加します。
 
 カルーセル テンプレートは以下のようになります。
 

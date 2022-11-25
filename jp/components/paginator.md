@@ -1,21 +1,20 @@
 ---
-title: Angular Paginator Example – Ignite UI for Angular 
-_description: Learn how to configure Angular paginator and create custom pages with Ignite UI. Get data for the requested pages with variety of Angular events. Try it now.
+title: Angular Paginator の例 – Ignite UI for Angular
+_description: Angular ページネーションを設定し、Ignite UI を使用して Angular Material テーブルにカスタム ページを作成し、要求されたページのデータをさまざまな Angular イベントで取得。
 _keywords: ページネーター, igniteui for angular, インフラジスティックス
 _language: ja
 ---
 
-# Angular Paginator Overview
+# Angular Paginator (ページネーター) の概要
+Angular のページネーションは、プラットフォームが巨大なデータ セットを扱うときに開発者に提供する最適な機能の 1 つです。Angular Paginator の目的は、大量のデータ コレクションを複数のページに分割して配布することです。これにより、優れた UX を提供しながら、ページ化された情報と項目を比較しやすく理解しやすい方法で表示します。 
 
-Pagination in Angular is one of the most useful features that the platform offers to developers when working with huge data sets. The purpose of Angular Paginator is to split and distribute a high volume of data collection into several pages, thus, delivering better UX whilst displaying paged information and items in an easier to compare and understand way.  
+通常、Angular Paginator コンポーネントはページ番号または合計レコードを表示します。
 
-Usually, the Angular Paginator component shows page-number or total-records. 
-
-Ignite UI for Angular Pagination allows us to divide a set of data into a number of similar pages. This method of pagination is particularly well-suited for large data-sets and "infinite" scrolling user interfaces, that is why the paginator is typically used with a list of items or data table. The Pagination in Angular enables the user to select a specific page from a range of pages and to determine how many records should see on each page.  
+Ignite UI for Angular Pagination を使用すると、データセットを複数の同様のページに分割できます。このページネーション方法は、特に大きなデータセットや無限スクロール ユーザー インターフェイスに適しています。Angular の Pagination コンポーネントを使用すると、ページの範囲から特定のページを選択し、各ページに表示するレコード数を決定できます。
 
 ## Angular Paginator の例
 
-The following Angular Pagination example shows a Paginator template demonstrating how users can navigate through 4 pages with different items and select the number of items to be displayed from a drop-down menu. 
+以下の Angular Pagination の例は、ユーザーがさまざまな項目を含む 4 つのページをナビゲートし、ドロップダウン メニューから表示する項目の数を選択する方法を示す Paginator テンプレートを示しています。
 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:demosBaseUrl}"
@@ -24,14 +23,14 @@ The following Angular Pagination example shows a Paginator template demonstratin
 
 <div class="divider--half"></div>
 
-## How To Use Angular Paginator With Ignite UI
+## Ignite UI で Angular Paginator を使用する方法
 
 各ページネーター インスタンスには以下が必要です。
 
 - ページごとの項目数 (デフォルト値は 15 です)。
 - ページングされている項目の合計数
 
-Also by default the current page is set to 0 when the he Angular Paginator component is initialized but this can be changed through **page** property.
+また、デフォルトでは、Angular Paginator コンポーネントが初期化されると現在のページは 0 に設定されますが、**page** プロパティで変更できます。
 
 ```html
 <igx-paginator #paginator [totalRecords]="120" [perPage]="25">
@@ -78,14 +77,14 @@ Also by default the current page is set to 0 when the he Angular Paginator compo
 | overlaySettings | カスタム OverlaySettings を取得/設定します。 |
 
 | 出力          |      説明                           |
-|-----------------|:------------------------------------------:|
+|----------------|:------------------------------------------:|
 | perPageChange   | ページネーターの `perPage` プロパティ値が変更されたときに発生します。 |
 | pageChange      | 現在のページが変更されたときに発生されます。 |
 | paging          | ページングが実行さる前に発生されます。キャンセル可能。|
 | pagingDone      | ページングが実行された後に発生されます。 |
 
 
-## Angular Paginator Localization
+## Angular Paginator のローカリゼーション
 最小限のコードで、ページング コンポーネントのすべての文字列を簡単にローカライズできます。特定のページング インスタンスをローカライズするには、[resourceStrings]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#resourceStrings) 入力プロパティを使用します。
 
 **手順 1** - `IPaginatorResourceStrings` インターフェースと [changei18n]({environment:angularApiUrl}/#changei18n) 関数をインポートします:
