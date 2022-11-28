@@ -123,7 +123,7 @@
     - name: Remote Data Operations
       href: grid/remote-data-operations.md
       new: false
-    - name: Column Data types
+    - name: Column Data Types
       href: grid/column-types.md
       new: false
     - name: Editing
