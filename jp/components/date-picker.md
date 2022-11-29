@@ -1,28 +1,33 @@
 ---
-title: Angular Date Picker | 日付のピッカー | インフラジスティックス
-_description: Ignite UI for Angular Date Picker コントロールのを使用して、カレンダーから Web アプリケーションに日付を選択する機能を使用する方法を学びます。
-_keywords: angular date picker, angular 日付のピッカー, angular コンポーネント, ignite ui for angular
+title: Angular Datepicker コンポーネント – Ignite UI for Angular
+_description: Ignite UI の Angular Datepicker コントロールのを使用して、カレンダーから Web アプリケーションに日付を選択する機能を使用する方法について説明します。今すぐお試しください。 
+_keywords: angular datepicker, angular component, ignite ui for angular, angular 日付ピッカー, angular コンポーネント
 _language: ja
 ---
 
-# Angular Date Picker
-Ignite UI for Angular Date Picker コンポーネントを使用すると、ユーザーは月表示のカレンダード ロップダウンまたは編集可能な入力フィールドから単一の日付を選択できます。ピッカーは、カレンダーからのみ選択するための `dialog` モード、ロケール対応でカスタマイズ可能な日付の書式設定と検証の統合もサポートしています。
+# Angular Datepicker (日付ピッカー) の概要
+Angular DatePicker は、手動でテキストを入力して日付を入力するか、ポップアップするカレンダー ダイアログから日付値を選択するために使用される機能豊富なコンポーネントです。軽量で使いやすい Angular の DatePicker を使用すると、ユーザーは、月、年、10 年の複数の表示オプションを使用して目的の日付に移動できます。検証を追加するための通常の min、max、および required プロパティがあります。
 
-## Angular Date Picker の例
+Ignite UI for Angular DatePicker コンポーネントを使用すると、ユーザーは月表示のカレンダード ロップダウンまたは編集可能な入力フィールドから単一の日付を選択できます。Angular DatePicker は、カレンダーからのみ選択するための dialog モード、ロケール対応でカスタマイズ可能な日付の書式設定と検証の統合もサポートしています。
+
+## Angular Datepicker の例
+
+以下は、ユーザーが手動のテキスト入力で日付を選択し、左側のカレンダー アイコンをクリックしてナビゲートできるようになったときに、Angular DatePicker がどのように機能するかを示すサンプルです。描画する方法は以下のとおりです。
+
 <!-- TODO: datepicker sample with several options enabled -->
 <code-view style="height: 550px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-1" alt="Angular Date Picker の例">
+           iframe-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-1" alt="Angular Datepicker の例">
 </code-view>
 <div class="divider--half"></div>
 
-## 使用方法
+## Ignite UI を使用して Angular で Datepicker を追加する方法
 
 ### はじめに
-Date Picker コンポーネントの使用を開始するには、まず、使用するモジュールに `IgxDatePickerModule` をインポートする必要があります。この例では、**app.module.ts** ファイルを使用します。
+Datepicker コンポーネントの使用を開始するには、まず、使用するモジュールに `IgxDatePickerModule` をインポートする必要があります。この例では、**app.module.ts** ファイルを使用します。
 
 >[!NOTE]
-> Date Picker が [**IgxCalendarComponent**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) を使用し、タッチ操作のために **BrowserAnimationsModule** と**HammerModule** に依存関係があり、これらもモジュールに追加する必要があります。
+> ピッカーが [**IgxCalendarComponent**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) を使用し、タッチ操作のために **BrowserAnimationsModule** と**HammerModule** に依存関係があり、これらもモジュールに追加する必要があります。
 
 ```typescript
 import { HammerModule } from '@angular/platform-browser';
@@ -38,8 +43,8 @@ import { IgxDatePickerModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-### Date Picker の表示
-デフォルトの`ドロップダウン`状態の Date Picker をインスタンス化するには、以下のコードを使用してください。
+### Datepicker の表示
+デフォルトの `dropdown` 状態の Datepicker をインスタンス化するには、以下のコードを使用してください。
 
 ```html
 <igx-date-picker>
@@ -58,7 +63,7 @@ export class AppModule {}
 public date = new Date(2000, 0, 1);
 ```
 
-文字列がピッカーにバインドされている場合は、`ISO8601` 形式の日付のみの文字列である必要があります。
+文字列がピッカーにバインドされている場合は、`ISO 8601` 形式の日付のみの文字列である必要があります。
 ```html
 <igx-date-picker [value]="'2000-01-01'"></igx-date-picker>
 ```
@@ -97,7 +102,7 @@ export class SampleFormComponent {
 > ピッカーは常に `Date` 値を返します。これは、モデルにバインドされている場合、または文字列変数への双方向バインドの場合、新しい日付が選択された後、タイプが `Date` になることを意味します。
 
 ### コンポーネントの投影
-[`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) は、[`IgxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) を除く [`IgxInputGroupComponent`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) がサポートする子コンポーネントの投影を許可します。それは、[`igxLabel`](label-input.md)、[`IgxHint`](input-group.md#hint)、[`igxPrefix`](input-group.md#prefix--suffix)、[`igxSuffix`](input-group.md#prefix--suffix) です。詳細については、[Label および Input](label-input.md) トピックを参照してください。
+[`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) は、[`IgxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) を除く [`IgxInputGroupComponent`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) がサポートする子コンポーネントの投影を許可します。それは、[`igxLabel`](label-input.md)、[`IgxHint`](input-group.md#hint)、[`igxPrefix`](input-group.md#prefix-および-suffix)、[`igxSuffix`](input-group.md#prefix-および-suffix) です。詳細については、[Label および Input](label-input.md) トピックを参照してください。
 
 ```html
 <igx-date-picker #datePicker>
@@ -121,7 +126,7 @@ export class SampleFormComponent {
 </igx-date-picker>
 ```
 
-#### カスタム アクション ボタン
+#### カスタム動作ボタン
 ピッカーのアクション ボタンは、次の 2 つの方法で変更できます:
 - ボタンのテキストは、[`todayButtonLabel`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#todaybuttonlabel) と [`cancelButtonLabel`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#cancelbuttonlabel) 入力プロパティを使用して変更できます:
 ```html
@@ -168,7 +173,7 @@ export class SampleFormComponent {
 ### 表示および入力形式
 [`inputFormat`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#inputformat) および [`displayFormat`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#displayFormat) は、ピッカーのエディターが指定された形式に従うように設定できるプロパティです。[`inputFormat`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#inputformat) プロパティは、ピッカーが `dropdown` モードのときに使用され、入力の編集可能なマスクとそのプレースホルダー (何も設定されていない場合) を管理します。さらに、[`inputFormat`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#inputformat) はロケール ベースであるため、何も指定されていない場合、ピッカーはデフォルトでブラウザーで使用されるものになります。
 
-注意すべき点は、ピッカーが `date` と `month` の部分がない形式で提供された場合、それらの部分に常に先行ゼロを追加することです。例えば、`d/M/yy` は `dd/MM/yy` になります。これは編集中にのみ適用されます。
+注意すべき点は、Ignite UI の Angular DatePicker Component が `date` と `month` の部分がない形式で提供された場合、それらの部分に常に先行ゼロを追加することです。 例えば、`d/M/yy` は `dd/MM/yy` になります。これは編集中にのみ適用されます。
 
 一方、[`displayFormat`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#displayformat) は Angular の [`DatePipe`](https://angular.io/api/common/DatePipe) を使用し、フォーカスされていないときにピッカーの入力を書式設定するために使用されます。[`displayFormat`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#displayformat) が指定されていない場合、ピッカーは [`inputFormat`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#inputformat) を [`displayFormat`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#displayformat) として使用します。
 
@@ -230,7 +235,7 @@ IgxDatePicker と [`IgxTimePicker`](time-picker.md) を一緒に使用する場�
 ## インターナショナリゼーション
 [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) のローカライズは、[`locale`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#locale) 入力で制御できます。さらに、[`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) によって提供される `igxCalendarHeader` と `igxCalendarSubheader` テンプレートを使用して、ヘッダーとサブヘッダーの外観を指定できます。このテンプレートを使用する方法の詳細については、[**IgxCalendarComponent**](calendar.md) トピックを参照してください。
 
-以下は日本ロケール定義を持つ日付ピッカーです。
+以下は日本ロケール定義を持つ Angular DatePicker です。
 ```html
 <igx-date-picker locale="ja-JP" [value]="date">
   <ng-template igxCalendarHeader let-format>
@@ -253,7 +258,7 @@ IgxDatePicker と [`IgxTimePicker`](time-picker.md) を一緒に使用する場�
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-日付ピッカーはカレンダーのテーマを使用するので、[`calendar-theme`]({environment:sassApiUrl}/index.html#function-calendar-theme) を拡張する新しいテーマを作成し、そのパラメーターを使用して日付ピッカーの項目をスタイル設定します。
+Angular DatePicker はカレンダーのテーマを使用するため、[`calendar-theme`]({environment:sassApiUrl}/index.html#function-calendar-theme) を拡張する新しいテーマを作成し、そのパラメーターを使用して日付ピッカーの項目をスタイル設定します。
 
 ```scss
 $custom-datepicker-theme: calendar-theme(
@@ -276,7 +281,7 @@ $custom-datepicker-theme: calendar-theme(
 
 ### CSS 変数の使用
 
-最後に日付ピッカーのカスタム テーマを設定します。
+最後に Angular DatePicker のカスタム テーマを設定します。
 
 ```scss
 @include css-vars($custom-datepicker-theme);
@@ -286,7 +291,7 @@ $custom-datepicker-theme: calendar-theme(
 
 Internet Explorer 11 などの古いブラウザーのコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、別のアプローチを用いる必要があります。
 
-コンポーネントが [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化に`ペネトレーション`する必要があります。カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
+コンポーネントが [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化に解除する必要があります。カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
 
  ```scss
 :host {
@@ -320,6 +325,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 * [IgxButton テーマ]({environment:sassApiUrl}/index.html#function-button-theme)
 * [IgxInputGroup テーマ]({environment:sassApiUrl}/index.html#function-input-group-theme)
 * [IgxDropDown テーマ]({environment:sassApiUrl}/index.html#function-drop-down-theme)
+
 
 ## その他のリソース
 * [Time Picker](time-picker.md)

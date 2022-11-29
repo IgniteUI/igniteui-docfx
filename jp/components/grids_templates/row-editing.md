@@ -76,7 +76,7 @@ export class AppModule {}
 次に @@igComponent をバインドしたデータソースで定義し、[`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable) を true に設定してバインドします。
 @@if (igxName ==='IgxGrid') {
 ```html
-<igx-grid [data]="data" [primaryKey]="'ProductID'" [rowEditable]="true">
+<igx-grid [data]="data" [primaryKey]="'ProductID'" width="100%" height="500px" [rowEditable]="true">
     <igx-column field="ProductID" header="Product ID" editable="false"></igx-column>
     <igx-column field="ReorderLevel" header="ReorderLever" [dataType]="'number'"></igx-column>
     <igx-column field="ProductName" header="ProductName" [dataType]="'string'"></igx-column>
@@ -92,8 +92,8 @@ export class AppModule {}
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```html
-<igx-tree-grid #treeGrid [data]="data" [primaryKey]="EmployeID" [foreignKey]="PID" width ="100%"
-               height ="500px" [moving]="true" [rowEditable]="true" [rowSelection]="'multiple'">
+<igx-tree-grid [data]="data" [primaryKey]="EmployeID" [foreignKey]="PID"
+               [rowEditable]="true" [rowSelection]="'multiple'" [moving]="true">
     <igx-column *ngFor="let c of columns"
         [editable] ="c.editable"
         [field]="c.field"
@@ -108,8 +108,7 @@ export class AppModule {}
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid #hierarchicalGrid class="hgrid" [data]="localdata" [autoGenerate]="false"
-    [height]="'600px'" [width]="'100%'">
+<igx-hierarchical-grid [data]="localdata" [autoGenerate]="false" [rowEditable]="true">
     <igx-column field="Artist" [editable]="true" [dataType]="'string'"></igx-column>
     <igx-column field="HasGrammyAward" [editable]="true" [dataType]="'boolean'">
     </igx-column>
@@ -195,7 +194,7 @@ export class TreeGridRowEditSampleComponent implements OnInit {
 
         this.columns = [
             { field: 'FirstName', label: 'First Name', resizable: true, sortable: true, filterable: true, editable: true, dataType: 'string' },
-            { field: 'LastName', label: 'Last Name', resizable: false,  sortable: false, filterable: false, editable: true, dataType: 'string' },
+            { field: 'LastName', label: 'Last Name', resizable: false, sortable: false, filterable: false, editable: true, dataType: 'string' },
             { field: 'Title', label: 'Title', resizable: true, sortable: true, filterable: true, editable: true, dataType: 'string' },
             { field: 'HireDate', label: 'Hire Date', resizable: true, sortable: true, filterable: true, editable: true, dataType: 'date' }
         ];

@@ -1,16 +1,21 @@
 ---
-title: Angular Panel | Expandable | Ignite UI for Angular | インフラジスティックス
-_description: Angular アコーディオン/マテリアル展開パネルは、折りたたみと展開の 2 つの状態を持つ、簡単に設定できる拡張可能なコンポーネントを提供します。
+title: Angular Expansion Panel – Ignite UI for Angular
+_description: Angular 展開パネルは、縮小と展開の 2 つの状態を持つ、簡単に設定できる拡張可能なコンポーネントを提供します。今すぐお試しください。
 _keywords: angular accordion, igniteui for angular, インフラジスティックス
 _language: ja
 ---
-# 展開パネル
+# Angular Expansion Panel の概要
+
+Angular Material は、最も便利で使いやすいレイアウト コンポーネントの 1 つである Angular Expansion Panel を提供します。この機能豊富なコンポーネントは、展開/縮小可能な詳細な概要ビューを作成するために使用されます。コンテンツには、Angular Expansion Panel のアニメーション、テキスト、アイコン、ヘッダー、操作バー、およびその他の要素を含めることができます。
+
 <p class="highlight">
-    [igx-expansion-panel]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) は、軽量な Angular アコーディオン コンポーネントで、縮小または展開のどちらかの状態でレンダリングできます。展開パネルは、マウス クリックまたはキーボード操作によって切り替えることができます。
+    Ignite UI Expansion Panel [igx-expansion-panel]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) は、軽量な Angular アコーディオン コンポーネントで、縮小または展開のどちらかの状態でレンダリングできます。Angular の Expansion Panel は、マウス クリックまたはキーボード操作によって切り替えることができます。複数の Angular 展開パネルを組み合わせて Angular アコーディオンにすることもできます。
 </p>
 <div class="divider--half"></div>
 
-## 使用方法
+## Angular Expansion Panel の例
+
+Ignite UI Angular を使用して、この単純な Angular Expansion Panel の例を作成しました。以下にサンプルの動作を確認できます。
 
 <code-view style="height: 320px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -54,7 +59,7 @@ Golden retrievers have an instinctive love of water, and are easy to train to ba
 </igx-expansion-panel>
 ```
 
-以下の表は、展開パネルで使用可能なすべてのマークアップ要素を示します。
+以下の表は、Angular Expansion Panel で使用可能なすべてのマークアップ要素を示します。
 | タグ名                          | 説明                                                                                                          |
 | :-------------------------------: | :--------------------------------------------------------------------------------------------------------------------: |
 | `igx-expansion-panel`             | コンポーネント ホスト - ヘッダーとボディを格納します。                                                                           |
@@ -148,7 +153,7 @@ export class ExpansionPanelComponent {
         </igx-expansion-panel-header>
     </igx-expansion-panel>
 ```
-このコンポーネントは、パネルの縮小時に「更に表示」を描画し、完全に展開した後に「簡易表示」を描画します。
+Angular Expansion Panel は、パネルの縮小時に「更に表示」を描画し、完全に展開した後に「簡易表示」を描画します。
 
 `IgxExpansionPanel` コントロールを使用すると、あらゆる種類のコンテンツを `igx-expansion-panel-body` 内に追加できます。[`IgxGrid`](grid/grid.md)、[`IgxCombo`](combo.md)、チャート、その他の展開パネルもレンダリングできます。
 
@@ -177,7 +182,7 @@ export class ExpansionPanelComponent {
 
 ## スタイル設定  
 
-### デモ
+### Angular Expansion Panel のデモ
 
 <code-view style="height: 440px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -191,8 +196,10 @@ export class ExpansionPanelComponent {
 // In real life, this should be in our main sass file so we can share the palette between all components. 
 // In our case, it's in the component SCSS file "expansion-styling.component.scss".
 
-// Import theming engine functionality.
-@import '~igniteui-angular/lib/core/styles/themes/index';
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
 
 // Add your brand colors.
 $my-primary-color:#353a4b;
@@ -239,7 +246,7 @@ $custom-panel-theme: expansion-panel-theme(
 ```
 
  >[!NOTE]
- > Internet Explorer 11 をサポートする場合は、`igm-css-vars` の代わりにコンポーネント mixin の `igx-expansion-panel` を使用する必要があります。コンポーネントの ViewEncapsulation が [`Emulated`](themes/sass/component-themes.md#表示のカプセル化)であるため、`:: ng-deep` を使用してカプセル化を解除する必要があります。
+ > Internet Explorer 11 をサポートする場合は、`css-vars` の代わりにコンポーネント mixin の `igx-expansion-panel` を使用する必要があります。コンポーネントの ViewEncapsulation が [`Emulated`](themes/sass/component-themes.md#表示のカプセル化)であるため、`::ng-deep` を使用してカプセル化を解除する必要があります。
  > カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含める必要があります。
 
 ```scss
@@ -255,10 +262,10 @@ $custom-panel-theme: expansion-panel-theme(
 
 Ignite UI テーマ エンジンの使用方法の詳細については、[`こちらをクリックしてください`](themes/sass/component-themes.md)
 
-## アニメーションの使用
+## Angular Expansion Panel のアニメーション
 ### 特定のアニメーションの使用
 コンポーネントの展開や縮小時にデフォルトのアニメーション以外を使用することも可能です。
-上記のように igxExpansionPanel がすでに `app.module.ts` にインポートされていると仮定した場合、カスタム アニメーション設定オブジェクトを作成して igxExpansionPanel で使用するために設定します。[`useAnimation`](https://angular.io/api/animations/useAnimation) メソッドと特定のアニメーションが必要でアニメーションの設定をインポートして次のようなアニメーションの設定を定義します。
+上記のように igxExpansionPanel がすでに `app.module.ts` にインポートされていると仮定した場合、カスタム アニメーション設定オブジェクトを作成して Ignite UI for Angular Expansion Panel で使用するために設定します。[`useAnimation`](https://angular.io/api/animations/useAnimation) メソッドと特定のアニメーションが必要でアニメーションの設定をインポートして次のようなアニメーションの設定を定義します。
 
 ```typescript
 // expansion-panel.component.ts 内
@@ -296,7 +303,7 @@ export class ExpansionPanelComponent {
 ```
 [**ビルトイン アニメーション スイート**]({environment:sassApiUrl}/index.html#animations) の [`slideInLeft`]({environment:sassApiUrl}/index.html#mixin-slide-in-left) アニメーションと [`slideOutRight`]({environment:sassApiUrl}/index.html#mixin-slide-out-right) アニメーションを使用して、コンテンツを折りたたむとコンポーネントのコンテンツが左側からより動的に表示され、右側から消えるようにします。既存のパラメーターを使用したい特定のパラメーターでオーバーライドします。
 
-サンプルは、ユーザー情報とキー ポイントをここに表示してアニメーション設定をコンポーネントに渡します。
+サンプルは、ユーザー情報とキー ポイントをここに表示してアニメーション設定をコンポーネントに渡します:
 `[animationSettings] = "animationSettingsCustom"`
 
 ```html

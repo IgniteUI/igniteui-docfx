@@ -217,7 +217,7 @@ export class SampleComponent {
 >[!NOTE]
 > [`labelsView`]({environment:angularApiUrl}/classes/igxslidercomponent.html#labelsviewenabled) が有効になっているときは、[`maxValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#maxvalue)、[`minValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#minvalue)、[`step`]({environment:angularApiUrl}/classes/igxslidercomponent.html#step) の入力が制御されることに注意してください。 
 
-もう 1 つの重要な要素は、`labelsView` が有効になっているときに`スライダー`が更新プロセスを処理する方法です。
+もう 1 つの重要な要素は、`labelsView` が有効になっているときに `slider` が更新プロセスを処理する方法です。
 これは単にコレクションの`インデックス`で動作します。それぞれ、`value`、`lowerBound` および `upperBound` プロパティがフォロー/設定することでトラックを制御することを意味します (`インデックス`)。
 
 ```html

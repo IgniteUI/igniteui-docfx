@@ -212,6 +212,7 @@ public chipRemoved(event: IBaseChipEventArgs) {
 
 <img class="responsive-img"  src="../images/chip/remove_icons.jpg" />
 
+
 ```html
 <igx-chip *ngFor="let chip of chipList" [removable]="true" [removeIcon]="myRemoveIcon">
     <igx-icon igxPrefix>{{chip.icon}}</igx-icon>
@@ -329,6 +330,7 @@ public chipsOrderChanged(event: IChipsAreaReorderEventArgs) {
 ```ts
 import { IBaseChipEventArgs, IChipsAreaReorderEventArgs } from 'igniteui-angular';
 // import { IBaseChipEventArgs, IChipsAreaReorderEventArgs } from '@infragistics/igniteui-angular'; for licensed package
+
 ...
 public chipList = [
     {
