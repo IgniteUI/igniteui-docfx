@@ -272,6 +272,17 @@ export class SimpleComboCascadingComponent implements OnInit {
 }
 ```
 
+## Angular Simple ComboBox Remote Binding
+
+The Ignite UI for Angular Simple ComboBox Component exposes an API that allows binding a combobox to a remote service and retrieving data on demand.
+
+### Demo
+The sample below demonstrates remote binding using the [dataPreLoad]({environment:angularApiUrl}/classes/IgxSimpleComboComponent.html#dataPreLoad) property to load new chunk of remote data and following the steps described in [ComboBox Remote Binding](combo-remote.md):
+
+<code-view style="height: 400px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/lists/simple-combo-remote" alt="Angular Simple Combo Remote Binding Example">
+</code-view>
 
 ## Angular Simple ComboBox Styling
 

@@ -6,7 +6,7 @@ _language: ja
 ---
 # Banner
 <p class="highlight">
-Ignite UI for Angular Banner コンポーネントは、スナックバーより長い時間の表示でダイアログより控えめのメッセージを簡単に表示できます。Banner にカスタム アクション ボタンやアイコンの表示を設定できます。</p>
+Ignite UI for Angular Banner コンポーネントは、スナックバーより長い時間の表示でダイアログより控えめのメッセージを簡単に表示できます。Banner にカスタム動作ボタンやアイコンの表示を設定できます。</p>
 
 ## Angular Banner の例
 
@@ -187,7 +187,7 @@ export class MyBannerComponent {
 
 ## 高度な例
 
-2 つのカスタムボタンのバナーを作成しましょう。1 つは通知を閉じるためのボタンで、もう 1 つは接続をオンにするためのボタンです。`igx-banner-actions` セレクターを使用してカスタム アクション ハンドラーを渡すことができます。
+2 つのカスタムボタンのバナーを作成しましょう。1 つは通知を閉じるためのボタンで、もう 1 つは接続をオンにするためのボタンです。`igx-banner-actions` セレクターを使用してカスタム動作ハンドラーを渡すことができます。
 
 ```html
 <!--banner.component.html-->
