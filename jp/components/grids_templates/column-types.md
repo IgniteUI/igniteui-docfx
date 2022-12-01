@@ -45,13 +45,13 @@ Ignite UI for Angular @@igComponent は、デフォルトおよび編集テン�
 }
 
 ## デフォルトのテンプレート
-データ型固有のテンプレートを有効にする場合、列の [`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype) 入力を設定する必要があります。設定しない場合、列は文字列の列として処理されます (これは列 dataType のデフォルト値であるためです)。次に各型のデフォルト テンプレートについて説明します。
+データ型固有のテンプレートを有効にする場合、列の [`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#dataType) 入力を設定する必要があります。設定しない場合、列は文字列の列として処理されます (これは列 dataType のデフォルト値であるためです)。次に各型のデフォルト テンプレートについて説明します。
 
 ### String (文字列)
-この列 [`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype) はセル値の外観または書式を変更しません。
+この列 [`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#dataType) はセル値の外観または書式を変更しません。
 
 ### Number (数値)
-[`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype) が *number* に設定されている場合、セル値はアプリケーションまたはグリッドの [`locale`]({environment:angularApiUrl}/classes/igxgridcomponent.html#locale) 設定に基づいて書式設定され、[`pipeArgs`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#pipeArgs) プロパティが指定されている場合にも同じように設定されます。数値書式はそれらに基づいて変更されます。たとえば、以下を変更します:
+[`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#dataType) が *number* に設定されている場合、セル値はアプリケーションまたはグリッドの [`locale`]({environment:angularApiUrl}/classes/igxgridcomponent.html#locale) 設定に基づいて書式設定され、[`pipeArgs`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#pipeArgs) プロパティが指定されている場合にも同じように設定されます。数値書式はそれらに基づいて変更されます。たとえば、以下を変更します:
  - 小数点後の桁数。
  - `,` または `.` の少数桁の区切り文字
 
@@ -66,6 +66,7 @@ public formatOptions = this.options;
 <igx-column [pipeArgs]="formatOptions" [dataType]="'number'">
 </igx-column>
 ```
+
 ### DateTime、Date と Time
 日付部分の外観は、[`locale`]({environment:angularApiUrl}/classes/igxgridcomponent.html#locale) の形式または [`pipeArgs`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#pipeArgs) 入力に基づいて設定されます (例: 日、月、年)。Pipe 引数はカスタム[日付書式](https://angular.io/api/common/DatePipe#pre-defined-format-options)または[タイムゾーン](https://angular.io/api/common/DatePipe#parameters)を指定するために使用できます。
  - **format** - 日付の書式設定のデフォルト値は 'mediumDate' です。その他の利用可能なオプションは 'short'、'long'、'shortDate'、'fullDate'、'longTime'、'fullTime' などです。以下は利用可能なすべての[定義済みの書式オプション](https://angular.io/api/common/DatePipe#pre-defined-format-options)の完全なリストです。
@@ -191,7 +192,7 @@ public formatOptions = this.options;
 |---------------------------| -------------------------                                  |
 | digitsInfo                | 通貨値の 10 進数表現を表します        |
 | currencyCode              | ISO 4217 通貨コード                                     |
-| display*                  | 省略記号または記号で値を表示します                |
+| display*                  | 省略記号または記号で値を表示します           |
 
 *display - デフォルトの en-US ロケールの場合、USD コードは省略記号 ($) または記号 (US$) で表すことができます。
 
@@ -228,6 +229,17 @@ public formatPercentOptions = this.options;
 ```
 
 > 注: 上/下矢印キーを使用する場合、値は digitsInfo-minFractionDigits (小数点以下の最小桁数。デフォルトは 0 です。) に基づいてステップで増減します。
+
+### 画像
+
+デフォルトのテンプレートは、デフォルの画像テンプレートへの画像ソースとしてデータからの値を使用しています。デフォルトの画像テンプレートは、画像ファイルの名前を抽出し、アクセシビリティ要件を満たすために画像の `alt` 属性として設定します。表示されるセル サイズは描画される画像のサイズに合わせて調整されるため、大きな画像も描画され、グリッド行は画像列の画像と同じ大きさになることに注意してください。画像タイプの列では、フィルタリング、ソート、およびグループ化はデフォルトでオフになっています。それらを有効にしたい場合は、データ操作を実行するカスタム ストラテジを提供する必要があります。
+
+```html
+<igx-column [dataType]="'image'">
+</igx-column>
+```
+
+列を[自動生成する]({environment:angularApiUrl}/classes/igxgridcomponent.html#autoGenerate)場合、グリッドは最初のデータ レコードの値を分析します。値が文字列型で、画像拡張子 (gif、jpg、jpeg、tiff、png、webp、bmp) で終わる URL のパターンと一致する場合、列は自動的に `dataType === GridColumnDataType.Image` としてマークされ、 デフォルトの画像テンプレートが描画されます。
 
 ## デフォルトの編集テンプレート
 
