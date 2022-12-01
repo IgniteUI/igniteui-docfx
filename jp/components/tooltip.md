@@ -91,7 +91,7 @@ avatar をターゲットにして、[`igxTooltipTarget`]({environment:angularAp
 ```
 
 ### ツールチップをターゲットにアタッチ
-ここまででターゲットとツールチップを定義しました。 ツールチップ参照を [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) セレクターに割り当てます。
+ここまででターゲットとツールチップを定義しました。ツールチップ参照を [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) セレクターに割り当てます。
 
 ```html
 <!--simpleTooltip.component.html-->
