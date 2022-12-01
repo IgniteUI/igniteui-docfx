@@ -11,17 +11,17 @@ _language: ja
 
 トランザクションは、[トランザクション サービス]({environment:angularApiUrl}/classes/igxtransactionservice.html) の主要な構成要素です。トランザクションは、データに対して実行するすべての操作を指します。[`Transaction`]({environment:angularApiUrl}/interfaces/transaction.html) インターフェイスは、3 つのプロパティ ([`id`]({environment:angularApiUrl}/interfaces/transaction.html#id)、[`newValue`]({environment:angularApiUrl}/interfaces/transaction.html#newValue)、および [`type`]({environment:angularApiUrl}/interfaces/transaction.html#type) を定義します。
 
-トランザクションの [`id`]({environment:angularApiUrl}/interfaces/transaction.html#id) はデータレコードごとに一意である必要があり、このトランザクションが影響するレコードを定義します。[`type`]({environment:angularApiUrl}/enums/transactiontype.html#type) は、実行する操作に応じて、`ADD`、`DELETE`、`UPDATE` の 3 つのトランザクションタイプのいずれかになります。[`newValue`]({environment:angularApiUrl}/interfaces/transaction.html#newValue) には、`ADD` トランザクションを追加する場合の新しいレコードの値が含まれます。既存のレコードを更新する場合、[`newValue`]({environment:angularApiUrl}/interfaces/transaction.html#newValue) には変更のみが含まれます。同じ ID の `UPDATE` タイプのトランザクションが複数あるレコードを削除する場合、[`newValue`]({environment:angularApiUrl}/interfaces/transaction.html#newValue) には削除されたレコードの値が含まれます。 
+トランザクションの [`id`]({environment:angularApiUrl}/interfaces/transaction.html#id) はデータレコードごとに一意である必要があり、このトランザクションが影響するレコードを定義します。[`type`]({environment:angularApiUrl}/enums/transactiontype.html#type) は、実行する操作に応じて、`ADD`、`DELETE`、`UPDATE` の 3 つのトランザクションタイプのいずれかになります。[`newValue`]({environment:angularApiUrl}/interfaces/transaction.html#newValue) には、`ADD` トランザクションを追加する場合の新しいレコードの値が含まれます。既存のレコードを更新する場合、[`newValue`]({environment:angularApiUrl}/interfaces/transaction.html#newValue) には変更のみが含まれます。同じ ID の `UPDATE` タイプのトランザクションが複数あるレコードを削除する場合、[`newValue`]({environment:angularApiUrl}/interfaces/transaction.html#newValue) には削除されたレコードの値が含まれます。
 
 各タイプのトランザクションを追加する方法の例は、[トランザクションサービスの使用方法](transaction-how-to-use.md)のトピックで見ることができます。
 
-操作 (トランザクション) を実行するたびに、トランザクション ログと取り消しスタックに追加されます。トランザクション ログ内のすべての変更は、レコードごとに蓄積されます。その時点から、サービスは集約された [`State`]({environment:angularApiUrl}/interfaces/state.html) を維持します。  [`State`]({environment:angularApiUrl}/interfaces/state.html) は一意のレコードで構成され、すべてのレコードは上記のサポートされているトランザクション タイプのいずれかです。
+操作 (トランザクション) を実行するたびに、トランザクション ログと取り消しスタックに追加されます。トランザクション ログ内のすべての変更は、レコードごとに蓄積されます。その時点から、サービスは集約された [`State`]({environment:angularApiUrl}/interfaces/state.html) を維持します。[`State`]({environment:angularApiUrl}/interfaces/state.html) は一意のレコードで構成され、すべてのレコードは上記のサポートされているトランザクション タイプのいずれかです。
 
 トランザクションを追加する際、[`startPending`]({environment:angularApiUrl}/interfaces/transactionservice.html#startpending) を呼び出して、保留中のトランザクションをオンにすることができます。[`endPending`]({environment:angularApiUrl}/interfaces/transactionservice.html#endpending) を呼び出すまで、後続のトランザクションはすべて単一のトランザクションに蓄積されます。`true` を [`endPending`]({environment:angularApiUrl}/interfaces/transactionservice.html#endpending) に渡すと、蓄積されたすべてのトランザクションがトランザクションログと取り消しスタックに単一のトランザクションとして追加されます。
 
 ## igxBaseTransaction の使用
 
-グリッド モジュールは、トランザクション サービス ([`igxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html)) の非常に基本的な実装を提供し、行編集機能を可能にする保留中のセッション機能のみを提供します。[`startPending`]({environment:angularApiUrl}/interfaces/transactionservice.html#startpending) と [`endPending`]({environment:angularApiUrl}/interfaces/transactionservice.html#endpending) は、行編集で複数のセルごとの操作を 1 つの変更にまとめることができます。  つまり、1 つのレコードの複数のセルを編集すると、1 つのトランザクションが作成され、行編集イベントのみを処理できます。
+グリッド モジュールは、トランザクション サービス ([`igxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html)) の非常に基本的な実装を提供し、行編集機能を可能にする保留中のセッション機能のみを提供します。[`startPending`]({environment:angularApiUrl}/interfaces/transactionservice.html#startpending) と [`endPending`]({environment:angularApiUrl}/interfaces/transactionservice.html#endpending) は、行編集で複数のセルごとの操作を 1 つの変更にまとめることができます。つまり、1 つのレコードの複数のセルを編集すると、1 つのトランザクションが作成され、行編集イベントのみを処理できます。
 
 蓄積された状態が部分的なオブジェクトであるため、サービスを使用して、どのセルが編集されたかを確認し、その周りに UI を構築することもできます。
 
