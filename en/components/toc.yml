@@ -926,6 +926,7 @@
       new: false
     - name: Multi-select Hierarchical Drop Down
       href: drop-down-hierarchical-selection.md
+            drop-down-hierarchical-selection
       new: true
 - name: Select
   href: select.md
