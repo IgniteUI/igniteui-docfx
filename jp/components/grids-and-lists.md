@@ -208,6 +208,7 @@ Ignite UI for Angular は、世界最速の仮想化された Angular データ 
 <div class="divider--half"></div>
 
 <code-view style="height:435px"
+           explicit-editor="stackblitz"
            data-demos-base-url="{environment:crmDemoBaseUrl}"
            iframe-src="{environment:crmDemoBaseUrl}/grid-crm" 
            alt="Angular Grid の例">
