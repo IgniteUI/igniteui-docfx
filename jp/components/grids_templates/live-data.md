@@ -26,7 +26,7 @@ _language: ja
 
 <code-view style="height:700px" 
            data-demos-base-url="{environment:lobDemosBaseUrl}" 
-           iframe-src="{environment:lobDemosBaseUrl}/grid-finjs" alt="Angular 更新のライブデ例">
+           iframe-src="{environment:lobDemosBaseUrl}/grid-finjs?theme-switch=false" alt="Angular 更新のライブデ例">
 </code-view>
 
 
