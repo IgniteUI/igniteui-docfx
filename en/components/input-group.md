@@ -131,6 +131,142 @@ The Ignite UI for Angular Input Group component can be used inside strictly type
            iframe-src="{environment:demosBaseUrl}/data-entries/typed-form" >
 </code-view>
 
+## Validation
+The following samples demonstrate how input validation could be achieved when using template-driven or reactive forms.
+
+### Template-Driven Forms
+Template-driven form validation is achieved by adding validation attributes, i.e., `required`, `minLength`, etc., to the `input` element.
+
+```html
+<igx-input-group>
+    <label igxLabel for="username">Username</label>
+    <input igxInput name="username" type="text" required />
+</igx-input-group>
+
+<igx-input-group>
+    <label igxLabel for="email">Email</label>
+    <input igxInput name="email" type="email" required email />
+</igx-input-group>
+
+<igx-input-group>
+    <label igxLabel for="password">Password</label>
+    <input igxInput name="password" type="password" required minlength="8" />
+</igx-input-group>
+```
+
+The `required` attribute adds an asterisk next to the label, indicating that this field must be completed, however, when having additional validation like `email` and `minLength`, the user could be notified via the [`igx-hint`]({environment:angularApiUrl}/classes/igxhintdirective.html) directive.
+
+The following example uses two-way data binding and demonstrates how to inspect the control's state by exporting the `ngModel` to a local variable.
+
+```html
+<igx-input-group>
+    <label igxLabel for="email">Email</label>
+    <input igxInput name="email" type="email" [(ngModel)]="user.email" #email="ngModel" required email />
+    <igx-hint *ngIf="email.errors?.email">Please enter a valid email</igx-hint>
+</igx-input-group>
+
+<igx-input-group>
+    <label igxLabel for="password">Password</label>
+    <input igxInput name="password" type="password" [(ngModel)]="user.password" #password="ngModel" required minlength="8" />
+    <igx-hint *ngIf="password.errors?.minlength">Password should be at least 8 characters</igx-hint>
+</igx-input-group>
+```
+
+The result from the above configurations could be seen in the below sample. Start typing into the Email and Password fields and you will notice that the `<igx-hint>` is shown if the entered values are invalid.
+
+<code-view style="height:480px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/data-entries/template-driven-form-validation" >
+</code-view>
+
+### Reactive Forms
+Reactive form validation is achieved by adding validator functions directly to the form control model in the component class. After creating the control in the component class, it should be associated with a form control element in the template.
+
+```ts
+public registrationForm = new FormGroup<User>({
+    username: new FormControl<string>('', { nonNullable: true, validators: [Validators.required] }),
+    email: new FormControl<string>('', { nonNullable: true, validators: [Validators.required, Validators.email] }),
+    password: new FormControl<string>('', { nonNullable: true, validators: [Validators.required, Validators.minLength(8)] })
+});
+```
+
+```html
+<form [formGroup]="registrationForm">
+    <igx-input-group>
+        <label igxLabel for="username">Username</label>
+        <input igxInput name="username" type="text" formControlName="username" />
+    </igx-input-group>
+
+    <igx-input-group>
+        <label igxLabel for="email">Email</label>
+        <input igxInput name="email" type="email" formControlName="email" />
+    </igx-input-group>
+
+    <igx-input-group>
+        <label igxLabel for="password">Password</label>
+        <input igxInput name="password" type="password" formControlName="password" />
+    </igx-input-group>
+</form>
+```
+
+Similar to the template-driven form sample, when having additional validation like `email` and `minLength`, an [`igx-hint`]({environment:angularApiUrl}/classes/igxhintdirective.html) directive could be used to notify the user if the validaton fails.
+
+The following example demonstrates how to access the control through a `get` method and inspect its state.
+
+```ts
+get email() {
+    return this.registrationForm.get('email');
+}
+get password() {
+    return this.registrationForm.get('password');
+}
+```
+
+```html
+<igx-input-group>
+    <label igxLabel for="email">Email</label>
+    <input igxInput name="email" type="email" formControlName="email" />
+    <igx-hint *ngIf="email.errors?.email">Please enter a valid email</igx-hint>
+</igx-input-group>
+
+<igx-input-group>
+    <label igxLabel for="password">Password</label>
+    <input igxInput name="password" type="password" formControlName="password" />
+    <igx-hint *ngIf="password.errors?.minlength">Password should be at least 8 characters</igx-hint>
+</igx-input-group>
+```
+
+The result from the above configurations could be seen in the below sample.
+
+<code-view style="height:480px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/data-entries/reactive-form-validation" >
+</code-view>
+
+### Custom Validators
+Some input fields may require custom validation and this could be achieved via custom validators. When the value is valid, the validator will return `null` and when the value is invalid, it will generate a set of errors that could be used to display a specific error message on the screen.
+
+Below is an example of a custom reactive form validator that validates if the entered username matches a predefined one.
+```ts
+public registrationForm = new FormGroup<User>({
+    username: new FormControl<string>('', { nonNullable: true, validators: [this.usernameValidator('infragistics')] })
+});
+
+private usernameValidator(val: string): ValidatorFn {
+    return (control: AbstractControl): ValidationErrors | null => {
+        if (control.value?.toLowerCase() === val) {
+            return { username: true };
+        }
+        return null;
+    }
+}
+```
+
+<code-view style="height:100px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/data-entries/reactive-form-custom-validation" >
+</code-view>
+
 ## Styling
 
 The first thing we need to do, in order to get started with the input group styling, is to include the `index` file in our style file:
