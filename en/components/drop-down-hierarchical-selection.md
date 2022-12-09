@@ -10,7 +10,7 @@ The following samples demonstrate how to create a multi-select hierarchical drop
 
 ## Topic Overview
 
-For the drop-down list we will use the [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) as well as the [IgxToggleAction]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html) to open/close the drop-down.
+For the drop-down list we will use the [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) as well as the [IgxToggleActionDirective]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html) to open/close the drop-down.
 
 To visualize the hierarchical data in the drop-down, you can use either the [IgxTreeComponent]({environment:angularApiUrl}/classes/igxtreecomponent.html) or the [IgxTreeGridComponent]({environment:angularApiUrl}/classes/igxtreegridcomponent.html).
 
@@ -18,7 +18,7 @@ The [`IgxChipComponent`]({environment:angularApiUrl}/classes/igxchipcomponent.ht
 
 ## Selection
 
-To display selected nodes/rows from the list use the [`IgxChipComponent`]({environment:angularApiUrl}/classes/igxchipcomponent.html) by handling the events that notify of selection changes and populate the selectedNodes/selectedRows array. This can be done by subscribing to the igxTree nodeSelection event and to the igxTreeGrid[`rowSelectionChanging`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#rowSelectionChanging) event.
+To display selected nodes/rows from the list use the [`IgxChipComponent`]({environment:angularApiUrl}/classes/igxchipcomponent.html) by handling the events that notify of selection changes and populate the `selectedNodes` / `selectedRows` array. This can be done by subscribing to the IgxTreeComponent's [`nodeSelection`]({environment:angularApiUrl}/classes/igxtreecomponent.html#nodeSelection) event and to the IgxTreeGridComponent's [`rowSelectionChanging`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#rowSelectionChanging) event.
 
 To remove the chip from the DOM and deselect the item from the tree/grid, you have to handle the [`remove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#remove) event.
 
@@ -49,7 +49,7 @@ To remove the chip from the DOM and deselect the item from the tree/grid, you ha
 * [Drop Down overview](drop-down.md)
 * [Chip overview](chip.md)
 * [Tree overview](tree.md)
-* [Tree Grid overview](tree-grid.md)
+* [Tree Grid overview](treegrid/tree-grid.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.    
