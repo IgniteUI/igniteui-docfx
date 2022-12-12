@@ -103,7 +103,7 @@ Ignite UI for Angular の @@igComponent は、UI 操作のコンテナーとな�
 ```
 }
 
-> 注: 上記のコード スニペットに示されているように、事前定義された  `actions` UI コンポーネントは [`<igx-grid-toolbar-actions>` コンテナー]({environment:angularApiUrl}/classes/igxgridtoolbaractionscomponent.html)にラップされています。このように、ツールバーのタイトルはツールバーの左側に配置され、アクションはツールバーの右側に配置されます。
+> 注: 上記のコード スニペットに示されているように、事前定義された  `actions` UI コンポーネントは [`<igx-grid-toolbar-actions>` コンテナー](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/latest/classes/igxgridtoolbaractionscomponent.html)にラップされています。このように、ツールバーのタイトルはツールバーの左側に配置され、アクションはツールバーの右側に配置されます。
 
 これらの UI はそれぞれ独立して追加することも、まったく追加しないこともできます。このようにして、ツールバー コンテナーは空になります。
 
@@ -191,7 +191,7 @@ IgxHierarchicalGrid の子グリッドの実装方法と DI スコープの動�
 
 
 ### タイトル
-グリッドのツールバーのタイトルを設定するには、[IgxGridToolbarTitleComponent]({environment:angularApiUrl}/classes/igxgridtoolbartitlecomponent.html) を使用します。
+グリッドのツールバーのタイトルを設定するには、[IgxGridToolbarTitleComponent](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/latest/classes/igxgridtoolbartitlecomponent.html) を使用します。
 ユーザーは、単純なテキストからより複雑なテンプレートまで、どんなものでも提供できます。
 ```html
 <igx-grid-toolbar>
@@ -200,7 +200,7 @@ IgxHierarchicalGrid の子グリッドの実装方法と DI スコープの動�
 ```
 
 ### 操作
-ツールバーは、ユーザーが親グリッドに関連して操作/インタラクションを配置できる[特定のコンテナー]({environment:angularApiUrl}/classes/igxgridtoolbaractionscomponent.html)を公開します。
+ツールバーは、ユーザーが親グリッドに関連して操作/インタラクションを配置できる[特定のコンテナー](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/latest/classes/igxgridtoolbaractionscomponent.html)を公開します。
 ツールバーのタイトル部分と同様に、ユーザーは、デフォルトのツールバー インタラクション コンポーネントを含め、そのテンプレート部分内にどんなものでも提供できます。
 ```html
 <igx-grid-toolbar>
@@ -639,13 +639,13 @@ $dark-input-group-theme: input-group-theme(
 
 以下は、Grid Toolbar サービスのその他の API です。
 
-* [`IgxGridToolbarActionsComponent`]({environment:angularApiUrl}/classes/igxgridtoolbaractionscomponent.html)
+* [`IgxGridToolbarActionsComponent`](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/latest/classes/igxgridtoolbaractionscomponent.html)
 * [`IgxGridToolbarAdvancedFilteringComponent`]({environment:angularApiUrl}/classes/igxgridtoolbaradvancedfilteringcomponent.html)
 * [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html)
 * [`IgxGridToolbarExporterComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarexportercomponent.html)
 * [`IgxGridToolbarHidingComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarhidingcomponent.html)
 * [`IgxGridToolbarPinningComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarpinningcomponent.html)
-* [`IgxGridToolbarTitleComponent`]({environment:angularApiUrl}/classes/igxgridtoolbartitlecomponent.html)
+* [`IgxGridToolbarTitleComponent`](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/latest/classes/igxgridtoolbartitlecomponent.html)
 
 
 [`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) イベント:
