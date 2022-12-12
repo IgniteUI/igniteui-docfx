@@ -469,7 +469,7 @@ public dateSummaryFormat(summary: IgxSummaryResult, summaryOperand: IgxSummaryOp
 
 ## 集計のエクスポート
 
-[`exportSummaries`]({environment:angularApiUrl}/classes/IgxExcelExporterOptions.html#exportSummaries) オプションが `IgxExcelExporterOptions` にあり、エクスポートされたデータにグリッドの集計を含めるかどうかを指定します。デフォルトの  `exportSummaries` 値は **false** です。
+[`exportSummaries`](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/latest/classes/IgxExcelExporterOptions.html#exportSummaries) オプションが `IgxExcelExporterOptions` にあり、エクスポートされたデータにグリッドの集計を含めるかどうかを指定します。デフォルトの  `exportSummaries` 値は **false** です。
 
 [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/IgxExcelExporterService.html) は、すべての列タイプのデフォルトの集計を同等の Excel 関数としてエクスポートするため、シートが変更された場合でも適切に機能し続けます。以下の例をご覧ください:
 

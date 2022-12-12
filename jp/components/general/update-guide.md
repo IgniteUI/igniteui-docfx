@@ -56,7 +56,7 @@ ng update @angular/cli
 ### 一般
 - `igxGrid`、`igxHierarchicalGrid`、`igxTreeGrid`
     - グリッド テンプレートのパラメーターに、コンテキストの型が追加されました。これは、アプリが厳密なテンプレート モードであり、間違った型を使用している場合にも問題を引き起こす可能性があります。変換が必要なテンプレートへの参照:
-         - `IgxColumnComponent` - [`ColumnType`]({environment:angularApiUrl}/interfaces/columntype.html) (たとえば、`igxFilterCellTemplate` の列パラメーター)
+         - `IgxColumnComponent` - [`ColumnType`](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/latest/interfaces/ColumnType.html) (たとえば、`igxFilterCellTemplate` の列パラメーター)
          - `IgxGridCell` - [`CellType`]({environment:angularApiUrl}/interfaces/celltype.html) (たとえば、`igxCell` テンプレートの cell パラメーター)
 - Ignite UI for Angular に [igniteui-theming](https://github.com/IgniteUI/igniteui-theming) のピア依存関係があります。テーマ パッケージをインストールし、`angular.json` ファイルに以下のプリプロセッサー設定を追加します。
 
