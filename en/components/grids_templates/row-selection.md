@@ -170,6 +170,15 @@ To enable cascade row selection in the [`@@igSelector`]({environment:angularApiU
 In this mode a parent's selection state entirely depends on the selection state of its children. When a parent has some selected and some deselected children, its checkbox is in an indeterminate state.
 }
 
+```ts
+<!-- selectionExample.component.ts -->
+
+ public handleRowSelection(event: IRowSelectionEventArgs) {
+    this.selectedRowsCount = event.newSelection.length;
+    this.selectedRowIndex = event.newSelection[0];
+ }
+```
+
 **Notes**
 @@if (igxName !== 'IgxTreeGrid') {
 * In order to have proper row selection and cell selection, while @@igComponent has remote virtualization, a [`primaryKey`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primarykey) should be provided.

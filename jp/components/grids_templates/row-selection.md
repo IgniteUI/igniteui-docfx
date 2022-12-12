@@ -170,6 +170,15 @@ public handleRowSelection(event) {
 このモードでは、親の選択状態はその子の選択状態に完全に依存します。親に選択された子と選択解除された子がある場合、そのチェックボックスは不確定な状態になります。
 }
 
+```ts
+<!-- selectionExample.component.ts -->
+
+ public handleRowSelection(event: IRowSelectionEventArgs) {
+    this.selectedRowsCount = event.newSelection.length;
+    this.selectedRowIndex = event.newSelection[0];
+ }
+```
+
 **注**
 @@if (igxName !== 'IgxTreeGrid') {
 * 行選択およびセル選択を正しく実行するには、@@igComponent にリモート仮想化がある場合、[`primaryKey`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primarykey) を設定します。

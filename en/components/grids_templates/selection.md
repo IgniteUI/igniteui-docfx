@@ -184,6 +184,60 @@ The template we are going to use to combine the grid with the context menu:
     </div>
 </div>
 ```
+
+```ts
+public rightClick(eventArgs: any) {
+    eventArgs.event.preventDefault();
+    this.multiCellArgs = {};
+    if (this.multiCellSelection) {
+        const node = eventArgs.cell.selectionNode;
+        const isCellWithinRange = this.grid1.getSelectedRanges().some((range) => {
+            if (node.column >= range.columnStart &&
+                node.column <= range.columnEnd &&
+                node.row >= range.rowStart &&
+                node.row <= range.rowEnd) {
+                return true;
+            }
+            return false;
+        });
+        if (isCellWithinRange) {
+            this.multiCellArgs = { data: this.multiCellSelection.data };
+        }
+    }
+    this.contextmenuX = eventArgs.event.clientX;
+    this.contextmenuY = eventArgs.event.clientY;
+    this.clickedCell = eventArgs.cell;
+    this.contextmenu = true;
+}
+
+public disableContextMenu() {
+    if (this.contextmenu) {
+        this.multiCellSelection = undefined;
+        this.multiCellArgs = undefined;
+        this.contextmenu = false;
+    }
+}
+
+public getCells(event) {
+    this.multiCellSelection = {
+        data: this.grid1.getSelectedData()
+    };
+}
+
+public copy(event) {
+    this.copiedData = JSON.stringify(event.data, null, 2);
+    if (this.multiCellSelection) {
+        this.multiCellSelection = undefined;
+        this.multiCellArgs = undefined;
+        this.grid1.clearCellSelection();
+    }
+}
+
+public cellSelection(event) {
+    this.contextmenu = false;
+}
+```
+
  Select multiple cells and press the `right mouse` button. The context menu will appear and after selecting `Copy cells data` the selected data will appear in the right empty box.
  The result is:
 
