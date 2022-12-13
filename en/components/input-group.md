@@ -132,26 +132,30 @@ The Ignite UI for Angular Input Group component can be used inside strictly type
 </code-view>
 
 ## Validation
-The following samples demonstrate how input validation could be achieved when using template-driven or reactive forms.
+The following samples demonstrate how to configure input validation when using [template-driven](https://angular.io/guide/forms) or [reactive forms](https://angular.io/guide/reactive-forms).
 
 ### Template-Driven Forms
 Template-driven form validation is achieved by adding validation attributes, i.e., `required`, `minLength`, etc., to the `input` element.
 
 ```html
-<igx-input-group>
-    <label igxLabel for="username">Username</label>
-    <input igxInput name="username" type="text" required />
-</igx-input-group>
+<form>
+    <igx-input-group>
+        <label igxLabel for="username">Username</label>
+        <input igxInput name="username" type="text" required />
+    </igx-input-group>
 
-<igx-input-group>
-    <label igxLabel for="email">Email</label>
-    <input igxInput name="email" type="email" required email />
-</igx-input-group>
+    <igx-input-group>
+        <label igxLabel for="email">Email</label>
+        <input igxInput name="email" type="email" required email />
+    </igx-input-group>
 
-<igx-input-group>
-    <label igxLabel for="password">Password</label>
-    <input igxInput name="password" type="password" required minlength="8" />
-</igx-input-group>
+    <igx-input-group>
+        <label igxLabel for="password">Password</label>
+        <input igxInput name="password" type="password" required minlength="8" />
+    </igx-input-group>
+
+    <button igxButton="raised" igxRipple type="submit">Submit</button>
+</form>
 ```
 
 The `required` attribute adds an asterisk next to the label, indicating that this field must be completed, however, when having additional validation like `email` and `minLength`, the user could be notified via the [`igx-hint`]({environment:angularApiUrl}/classes/igxhintdirective.html) directive.
@@ -159,17 +163,38 @@ The `required` attribute adds an asterisk next to the label, indicating that thi
 The following example uses two-way data binding and demonstrates how to inspect the control's state by exporting the `ngModel` to a local variable.
 
 ```html
-<igx-input-group>
-    <label igxLabel for="email">Email</label>
-    <input igxInput name="email" type="email" [(ngModel)]="user.email" #email="ngModel" required email />
-    <igx-hint *ngIf="email.errors?.email">Please enter a valid email</igx-hint>
-</igx-input-group>
+<form>
+    <igx-input-group>
+        <label igxLabel for="email">Email</label>
+        <input igxInput name="email" type="email" [(ngModel)]="user.email" #email="ngModel" required email />
+        <igx-hint *ngIf="email.errors?.email">Please enter a valid email</igx-hint>
+    </igx-input-group>
 
-<igx-input-group>
-    <label igxLabel for="password">Password</label>
-    <input igxInput name="password" type="password" [(ngModel)]="user.password" #password="ngModel" required minlength="8" />
-    <igx-hint *ngIf="password.errors?.minlength">Password should be at least 8 characters</igx-hint>
-</igx-input-group>
+    <igx-input-group>
+        <label igxLabel for="password">Password</label>
+        <input igxInput name="password" type="password" [(ngModel)]="user.password" #password="ngModel" required minlength="8" />
+        <igx-hint *ngIf="password.errors?.minlength">Password should be at least 8 characters</igx-hint>
+    </igx-input-group>
+
+    <button igxButton="raised" igxRipple type="submit">Submit</button>
+</form>
+```
+
+The user should not be able to submit the form if any of the form controls is invalid. This could be achieved by enabling/disabling the submit button based on the form's state.
+
+The following example demonstrates how to inspect the form's state by exporting the `ngForm` to a local variable.
+
+```html
+<form #registrationForm="ngForm">
+    <igx-input-group>
+        <label igxLabel for="email">Email</label>
+        <input igxInput name="email" type="email" [(ngModel)]="user.email"  #email="ngModel" required email />
+        <igx-hint *ngIf="email.errors?.email">Please enter a valid email</igx-hint>
+    </igx-input-group>
+    ...
+
+    <button igxButton="raised" igxRipple type="submit" [disabled]="!registrationForm.valid">Submit</button>
+</form>
 ```
 
 The result from the above configurations could be seen in the below sample. Start typing into the Email and Password fields and you will notice that the `<igx-hint>` is shown if the entered values are invalid.
@@ -206,12 +231,14 @@ public registrationForm = new FormGroup<User>({
         <label igxLabel for="password">Password</label>
         <input igxInput name="password" type="password" formControlName="password" />
     </igx-input-group>
+
+    <button igxButton="raised" igxRipple type="submit">Submit</button>
 </form>
 ```
 
-Similar to the template-driven form sample, when having additional validation like `email` and `minLength`, an [`igx-hint`]({environment:angularApiUrl}/classes/igxhintdirective.html) directive could be used to notify the user if the validaton fails.
+Similar to the template-driven form sample, when having additional validation like `email` and `minLength`, an [`igx-hint`]({environment:angularApiUrl}/classes/igxhintdirective.html) directive could be used to notify the user if the validation fails.
 
-The following example demonstrates how to access the control through a `get` method and inspect its state.
+The following example demonstrates how to access the control through a `get` method and inspect its state. It also demonstrates how to enable/disable the submit button by inspecting the state of the `formGroup` variable.
 
 ```ts
 get email() {
@@ -223,17 +250,21 @@ get password() {
 ```
 
 ```html
-<igx-input-group>
-    <label igxLabel for="email">Email</label>
-    <input igxInput name="email" type="email" formControlName="email" />
-    <igx-hint *ngIf="email.errors?.email">Please enter a valid email</igx-hint>
-</igx-input-group>
+<form [formGroup]="registrationForm">
+    <igx-input-group>
+        <label igxLabel for="email">Email</label>
+        <input igxInput name="email" type="email" formControlName="email" />
+        <igx-hint *ngIf="email.errors?.email">Please enter a valid email</igx-hint>
+    </igx-input-group>
 
-<igx-input-group>
-    <label igxLabel for="password">Password</label>
-    <input igxInput name="password" type="password" formControlName="password" />
-    <igx-hint *ngIf="password.errors?.minlength">Password should be at least 8 characters</igx-hint>
-</igx-input-group>
+    <igx-input-group>
+        <label igxLabel for="password">Password</label>
+        <input igxInput name="password" type="password" formControlName="password" />
+        <igx-hint *ngIf="password.errors?.minlength">Password should be at least 8 characters</igx-hint>
+    </igx-input-group>
+
+    <button igxButton="raised" igxRipple type="submit" [disabled]="!registrationForm.valid">Submit</button>
+</form>
 ```
 
 The result from the above configurations could be seen in the below sample.
@@ -246,7 +277,7 @@ The result from the above configurations could be seen in the below sample.
 ### Custom Validators
 Some input fields may require custom validation and this could be achieved via custom validators. When the value is valid, the validator will return `null` and when the value is invalid, it will generate a set of errors that could be used to display a specific error message on the screen.
 
-Below is an example of a custom reactive form validator that validates if the entered username matches a predefined one.
+Below is an example of a simple custom reactive form validator that validates if the entered username contains a predefined value. 
 ```ts
 public registrationForm = new FormGroup<User>({
     username: new FormControl<string>('', { nonNullable: true, validators: [this.usernameValidator('infragistics')] })
@@ -254,7 +285,7 @@ public registrationForm = new FormGroup<User>({
 
 private usernameValidator(val: string): ValidatorFn {
     return (control: AbstractControl): ValidationErrors | null => {
-        if (control.value?.toLowerCase() === val) {
+        if (control.value?.toLowerCase().includes(val)) {
             return { username: true };
         }
         return null;
@@ -262,7 +293,82 @@ private usernameValidator(val: string): ValidatorFn {
 }
 ```
 
-<code-view style="height:100px"
+The generated errors could be used to display a message indicating that the validation has failed.
+
+```ts
+get username() {
+    return this.registrationForm.get('username');
+}
+```
+```html
+<form [formGroup]="registrationForm">
+    <igx-input-group>
+        <label igxLabel for="username">Username</label>
+        <input igxInput name="username" type="text" formControlName="username" />
+        <igx-hint *ngIf="username.errors?.username">This username is not allowed</igx-hint>
+    </igx-input-group>
+
+    <button igxButton="raised" igxRipple type="submit" >Submit</button>
+</form>
+```
+
+### Cross-Field Validation
+In some scenarios, the validation of one control may depend on the value of another one. To evaluate both controls in a single custom validator the validation should be performed in a common ancestor control, i.e., the `FormGroup`.
+
+The below example demonstrates a cross-field validation for the Username and Password fields and validates that the password does not contain the username. The validator retrieves the child controls by calling the `FormGroup`'s `get` method and then compares the values. If the validation fails, a set of errors is generated for the `FormGroup`.
+
+This will set only the form's state to invalid. To set the control's state, we could use the [`setErrors`](https://angular.io/api/forms/AbstractControl#seterrors) method and add the generated errors manually to the already existing ones. Then, when the validation is successful, the errors should be removed from the control.
+
+```ts
+private passwordValidator(): ValidatorFn {
+    return (control: AbstractControl): ValidationErrors | null => {
+        const username = control.get('username');
+        const password = control.get('password');
+
+        if (username.value &&
+            password.value &&
+            password.value.toLowerCase().includes(username.value)) {
+
+            const errors = { ...password.errors };
+            errors.password = true;
+            password.setErrors(errors);
+
+            return { password: true };
+        }
+
+        if (password.errors) {
+            if (password.errors.password) {
+                delete password.errors.password;
+            }
+            if (!Object.keys(password.errors).length) {
+                password.setErrors(null);
+            }
+        }
+
+        return null;
+    }
+}
+```
+
+To add the custom validator to the `FormGroup` it should be passed as a second argument when creating the form.
+```ts
+public registrationForm = new FormGroup<User>({
+    username: new FormControl<string>('', { nonNullable: true, validators: [Validators.required] }),
+    password: new FormControl<string>('', { nonNullable: true, validators: [Validators.required] }),
+    repeatPassword: new FormControl<string>('', { nonNullable: true, validators: [Validators.required] })
+},
+{
+    validators: [this.passwordValidator()]
+});
+```
+
+The below sample demonstrates how the built-in validators could be used in combination with custom validators and custom cross-field validators. 
+
+Enter a short username and use the same for a password. You will notice that several error messages are displayed for the Password field. The Password field uses the built-in `minLength` and `pattern` validators that require it to have a minimum length of 8 characters and contain at least one digit and one special character. It also uses the custom cross-field `passwordValidator` from the previous example.
+
+Enter a different value in the Repeat password field. The Repeat password field uses another custom cross-field validator that validates if the entered value matches the one in the Password field.
+
+<code-view style="height:480px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/reactive-form-custom-validation" >
 </code-view>
