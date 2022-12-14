@@ -183,6 +183,59 @@ const build = series(
 
 const buildCI = series(generateGridsTopics, generateTreeGridsTopics, generateHierarchicalGridsTopics,generatePivotGridsTopics, buildSite);
 
+const copyGitHooks = async (cb) => {
+
+  if (process.env.AZURE_PIPELINES || process.env.TRAVIS || process.env.CI || !fs.existsSync('.git')) {
+      return;
+  }
+
+  const gitHooksDir = './.git/hooks/';
+  const defaultCopyHookDir = gitHooksDir + 'scripts/';
+  const dirs = [
+      gitHooksDir,
+      defaultCopyHookDir,
+      defaultCopyHookDir + 'templates',
+      defaultCopyHookDir + 'templateValidators',
+      defaultCopyHookDir + 'utils'
+  ];
+
+  dirs.forEach((dir) => {
+      if (!fs.existsSync(dir)) {
+          fs.mkdir(dir, (err) => {
+              if (err) {
+                  throw err;
+              }
+          });
+      }
+  });
+
+  const defaultHookDir = './.hooks/scripts/';
+
+  fs.copyFileSync(defaultHookDir + 'templates/default.js',
+      defaultCopyHookDir + 'templates/default.js');
+
+  fs.copyFileSync(defaultHookDir + 'templateValidators/default-style-validator.js',
+      defaultCopyHookDir + 'templateValidators/default-style-validator.js');
+
+  fs.copyFileSync(defaultHookDir + 'utils/issue-validator.js',
+      defaultCopyHookDir + 'utils/issue-validator.js');
+
+  fs.copyFileSync(defaultHookDir + 'utils/line-limits.js',
+      defaultCopyHookDir + 'utils/line-limits.js');
+
+  fs.copyFileSync(defaultHookDir + 'common.js',
+      defaultCopyHookDir + 'common.js');
+
+  fs.copyFileSync(defaultHookDir + 'validate.js',
+      defaultCopyHookDir + 'validate.js');
+
+  fs.copyFileSync('./.hooks/prepare-commit-msg',
+      './.git/hooks/prepare-commit-msg');
+
+  return await cb();
+};
+
 exports.buildCI = buildCI;
 exports.build = build;
 exports.serve = series(build, init, watchFiles);
+exports.copyGitHooks = copyGitHooks;
