@@ -22,7 +22,7 @@ To display selected nodes/rows from the list use the [`IgxChipComponent`]({envir
 
 To remove the chip from the DOM and deselect the item from the tree/grid, you have to handle the [`remove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#remove) event.
 
-To prevent the drop-down from closing on chip deletion, you can check the event's composite path and cancel the event in the IgxDropDown [`closing`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#closing) event handler.
+Additionally, a way to prevent the drop-down from closing on chip deletion would be to check the event's composite path for an `igx-chip` node and then cancel the event in the `IgxDropDownComponent`'s [`closing`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#closing) event handler.
 
 ### Demo
 <code-view style="height: 560px;" 
