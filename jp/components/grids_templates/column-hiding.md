@@ -143,7 +143,7 @@ Ignite UI for Angular @@igComponent は、[`IgxColumnHidingDirective`]({environm
 ## ツールバーの列非表示 UI
 
 定義済みの列非表示 UI は、@@igComponent のツールバーの [`IgxDropDownComponent`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) 内に配置されます。列非表示の UI をこのドロップダウンを使用して表示/非表示にできます。
-これには、@@igComponent の [`IgxGridToolbarActionsComponent`]({environment:angularApiUrl}/classes/igxgridtoolbaractionscomponent.html) および [`IgxGridToolbarHidingComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarhidingcomponent.html) の両方を設定することだけです。ツールバーにタイトルを追加するには、[`IgxGridToolbarTitleComponent`]({environment:angularApiUrl}/classes/igxgridtoolbartitlecomponent.html) を設定し、@@igComponent のラッパーにカスタム スタイルを設定します。
+これには、@@igComponent の [`IgxGridToolbarActionsComponent`](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/latest/classes/igxgridtoolbaractionscomponent.html) および [`IgxGridToolbarHidingComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarhidingcomponent.html) の両方を設定することだけです。ツールバーにタイトルを追加するには、[`IgxGridToolbarTitleComponent`](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/latest/classes/igxgridtoolbartitlecomponent.html) を設定し、@@igComponent のラッパーにカスタム スタイルを設定します。
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
@@ -655,8 +655,8 @@ $custom-button: button-theme(
 * [showProgress]({environment:angularApiUrl}/classes/IgxGridToolbarComponent.html#showProgress)
 
 [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) コンポーネント:
-* [IgxGridToolbarTitleComponent]({environment:angularApiUrl}/classes/igxgridtoolbartitlecomponent.html)
-* [IgxGridToolbarActionsComponent]({environment:angularApiUrl}/classes/igxgridtoolbaractionscomponent.html)
+* [IgxGridToolbarTitleComponent](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/latest/classes/igxgridtoolbartitlecomponent.html)
+* [IgxGridToolbarActionsComponent](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/latest/classes/igxgridtoolbaractionscomponent.html)
 
 [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) メソッド:
 
