@@ -393,6 +393,50 @@ public restoreState() {
 </code-view>
 
 }
+@@if (igxName === 'IgxGrid') {
+## Restoring Strategies
+[`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) will not persist neither remote operations nor custom dimension strategies (For further information see [Grid Remote Operations](remote-data-operations.md) sample) by default (see [`limitations`](state-persistence.md#limitations)). Restoring any of these can be achieved with code on application level. The `IgxGridState` exposes an event called [`stateParsed`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#stateParsed) which can be used to additionally modify the grid state before it gets applied. Let's show how to do this:
+
+> [`stateParsed`]({environment:angularApiUrl}/classes/igxgridstatedirective) is only emitted when we are using [`setState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#setstate) with string argument.
+
+* Set custom sorting strategy and custom column and row dimension strategies:
+
+```html
+<igx-grid #grid 
+          [data]="data" 
+          [igxGridState]="options" 
+          [sortStrategy]="customStrategy"
+          [height]="'500px'">
+</igx-grid>
+```
+
+```typescript
+@ViewChild(IgxGridStateDirective, { static: true })
+public state!: IgxGridStateDirective;
+
+public customStrategy = NoopSortingStrategy.instance();
+public options: IGridStateOptions = {...};
+```
+
+* Restoring the state from the `sessionStorage` and applying the custom strategies looks like the following:
+
+```typescript
+public restoreState() {
+    const state = window.sessionStorage.getItem('grid-state');
+    this.state.stateParsed.pipe(take(1)).subscribe(parsedState => {
+        parsedState.sorting.forEach(x => x.strategy = NoopSortingStrategy.instance());
+    });
+    this.state.setState(state as string);
+}
+```
+
+<code-view style="height: 580px" 
+           explicit-editor="stackblitz"
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/grid/grid-state-persistence" alt="Angular Grid State Persistence Example">
+</code-view>
+
+}
 
 ## 制限
 @@if (igxName === 'IgxHierarchicalGrid') {
