@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 # Input Group
-<p class="highlight">The `IgxInputGroup` allows the user to enhance inputs and selects by adding text, icons or buttons on either side of them.</p>
+<p class="highlight">The `IgxInputGroup` allows the user to enhance input elements like input, select, textarea, etc. by adding custom content like text, icons, buttons, custom validation, etc. on each side of them, as a prefix, suffix or hint.</p>
 <div class="divider--half"></div>
 
 ## Angular Input Group Example
