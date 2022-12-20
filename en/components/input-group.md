@@ -164,6 +164,7 @@ The following example uses two-way data binding and demonstrates how to inspect 
 
 ```html
 <form>
+    ...
     <igx-input-group>
         <label igxLabel for="email">Email</label>
         <input igxInput name="email" type="email" [(ngModel)]="user.email" #email="ngModel" required email />
@@ -172,7 +173,8 @@ The following example uses two-way data binding and demonstrates how to inspect 
 
     <igx-input-group>
         <label igxLabel for="password">Password</label>
-        <input igxInput name="password" type="password" [(ngModel)]="user.password" #password="ngModel" required minlength="8" />
+        <input igxInput name="password" type="password"
+            [(ngModel)]="user.password" #password="ngModel" required minlength="8" />
         <igx-hint *ngIf="password.errors?.minlength">Password should be at least 8 characters</igx-hint>
     </igx-input-group>
 
@@ -188,7 +190,7 @@ The following example demonstrates how to inspect the form's state by exporting 
 <form #registrationForm="ngForm">
     <igx-input-group>
         <label igxLabel for="email">Email</label>
-        <input igxInput name="email" type="email" [(ngModel)]="user.email"  #email="ngModel" required email />
+        <input igxInput name="email" type="email" [(ngModel)]="user.email" #email="ngModel" required email />
         <igx-hint *ngIf="email.errors?.email">Please enter a valid email</igx-hint>
     </igx-input-group>
     ...
@@ -197,7 +199,7 @@ The following example demonstrates how to inspect the form's state by exporting 
 </form>
 ```
 
-The result from the above configurations could be seen in the below sample. Start typing into the Email and Password fields and you will notice that the `<igx-hint>` is shown if the entered values are invalid.
+The result from the above configurations could be seen in the below sample. Start typing into the Email and Password fields and you will notice that the `<igx-hint>` is shown if the entered values are invalid. The sample also demonstrates how to toggle the password's visibility by using the [`igx-icon`]({environment:angularApiUrl}/classes/igxiconcomponent.html) and the `igxSuffix` directive.
 
 <code-view style="height:480px"
            data-demos-base-url="{environment:demosBaseUrl}"
@@ -208,13 +210,16 @@ The result from the above configurations could be seen in the below sample. Star
 Reactive form validation is achieved by adding validator functions directly to the form control model in the component class. After creating the control in the component class, it should be associated with a form control element in the template.
 
 ```ts
-public registrationForm = new FormGroup<User>({
-    username: new FormControl<string>('', { nonNullable: true, validators: [Validators.required] }),
-    email: new FormControl<string>('', { nonNullable: true, validators: [Validators.required, Validators.email] }),
-    password: new FormControl<string>('', { nonNullable: true, validators: [Validators.required, Validators.minLength(8)] })
-});
-```
+public registrationForm: FormGroup<User>;
 
+constructor(fb: FormBuilder) {
+    this.registrationForm = fb.group({
+        username: ['', { nonNullable: true, validators: [Validators.required] }],
+        email: ['', { nonNullable: true, validators: [Validators.required, Validators.email] }],
+        password: ['', { nonNullable: true, validators: [Validators.required, Validators.minLength(8)] }]
+    });
+}
+```
 ```html
 <form [formGroup]="registrationForm">
     <igx-input-group>
@@ -238,19 +243,20 @@ public registrationForm = new FormGroup<User>({
 
 Similar to the template-driven form sample, when having additional validation like `email` and `minLength`, an [`igx-hint`]({environment:angularApiUrl}/classes/igxhintdirective.html) directive could be used to notify the user if the validation fails.
 
-The following example demonstrates how to access the control through a `get` method and inspect its state. It also demonstrates how to enable/disable the submit button by inspecting the state of the `formGroup` variable.
+The following example demonstrates how to access the control through a `get` method and inspect its state. It also demonstrates how to enable/disable the submit button by inspecting the state of the `FormGroup`.
 
 ```ts
-get email() {
+public get email() {
     return this.registrationForm.get('email');
 }
-get password() {
+
+public get password() {
     return this.registrationForm.get('password');
 }
 ```
-
 ```html
 <form [formGroup]="registrationForm">
+    ...
     <igx-input-group>
         <label igxLabel for="email">Email</label>
         <input igxInput name="email" type="email" formControlName="email" />
@@ -267,7 +273,7 @@ get password() {
 </form>
 ```
 
-The result from the above configurations could be seen in the below sample.
+The result from the above configurations could be seen in the below sample. Similar to the template-driven form sample, it also demonstrates how to toggle the password's visibility by using the [`igx-icon`]({environment:angularApiUrl}/classes/igxiconcomponent.html) and the `igxSuffix` directive.
 
 <code-view style="height:480px"
            data-demos-base-url="{environment:demosBaseUrl}"
@@ -275,98 +281,112 @@ The result from the above configurations could be seen in the below sample.
 </code-view>
 
 ### Custom Validators
-Some input fields may require custom validation and this could be achieved via custom validators. When the value is valid, the validator will return `null` and when the value is invalid, it will generate a set of errors that could be used to display a specific error message on the screen.
+Some input fields may require custom validation and this could be achieved via custom validators. When the value is invalid, the validator will generate a set of errors that could be used to display a specific error message on the screen.
 
-Below is an example of a simple custom reactive form validator that validates if the entered username contains a predefined value. 
+Below is an example of a simple custom reactive form validator that validates if the entered email address contains a predefined value and generates different errors based on where the value occurs.
+
 ```ts
-public registrationForm = new FormGroup<User>({
-    username: new FormControl<string>('', { nonNullable: true, validators: [this.usernameValidator('infragistics')] })
-});
+public registrationForm: FormGroup<User>;
 
-private usernameValidator(val: string): ValidatorFn {
+constructor(fb: FormBuilder) {
+    this.registrationForm = fb.group({
+        email: ['', {
+            nonNullable: true,
+            validators: [
+                Validators.required,
+                Validators.email,
+                this.emailValidator('infragistics')
+            ]
+        }],
+        ...
+    });
+}
+
+private emailValidator(val: string): ValidatorFn {
     return (control: AbstractControl): ValidationErrors | null => {
-        if (control.value?.toLowerCase().includes(val)) {
-            return { username: true };
+        const value = control.value?.toLowerCase();
+        const localPartRegex = new RegExp(`(?<=(${val})).*[@]`);
+        const domainRegex = new RegExp(`(?<=[@])(?=.*(${val}))`);
+        const returnObj: ValidatorErrors = {};
+
+        if (value && localPartRegex.test(value)) {
+            returnObj.localPart = true;
         }
-        return null;
+        if (value && domainRegex.test(value)) {
+            returnObj.domain = true;
+        }
+
+        return returnObj;
     }
 }
 ```
 
-The generated errors could be used to display a message indicating that the validation has failed.
-
-```ts
-get username() {
-    return this.registrationForm.get('username');
-}
-```
-```html
-<form [formGroup]="registrationForm">
-    <igx-input-group>
-        <label igxLabel for="username">Username</label>
-        <input igxInput name="username" type="text" formControlName="username" />
-        <igx-hint *ngIf="username.errors?.username">This username is not allowed</igx-hint>
-    </igx-input-group>
-
-    <button igxButton="raised" igxRipple type="submit" >Submit</button>
-</form>
-```
-
 ### Cross-Field Validation
-In some scenarios, the validation of one control may depend on the value of another one. To evaluate both controls in a single custom validator the validation should be performed in a common ancestor control, i.e., the `FormGroup`.
+In some scenarios, the validation of one control may depend on the value of another one. To evaluate both controls in a single custom validator the validation should be performed in a common ancestor control, i.e., the `FormGroup`. The validator retrieves the child controls by calling the `FormGroup`'s `get` method, compares the values and if the validation fails, a set of errors is generated for the `FormGroup`.
 
-The below example demonstrates a cross-field validation for the Username and Password fields and validates that the password does not contain the username. The validator retrieves the child controls by calling the `FormGroup`'s `get` method and then compares the values. If the validation fails, a set of errors is generated for the `FormGroup`.
+This will set only the form's state to invalid. To set the control's state, we could use the [`setErrors`](https://angular.io/api/forms/AbstractControl#seterrors) method and add the generated errors manually. Then, when the validation is successful, the errors could be removed by using the [`setValue`](https://angular.io/api/forms/AbstractControl#setvalue) method that will rerun the control's validation for the provided value.
 
-This will set only the form's state to invalid. To set the control's state, we could use the [`setErrors`](https://angular.io/api/forms/AbstractControl#seterrors) method and add the generated errors manually to the already existing ones. Then, when the validation is successful, the errors should be removed from the control.
+The below example demonstrates a cross-field validation where the Password should not contain the Email address and the Repeat password should match the Password.
 
 ```ts
 private passwordValidator(): ValidatorFn {
     return (control: AbstractControl): ValidationErrors | null => {
-        const username = control.get('username');
+        const email = control.get('email');
         const password = control.get('password');
+        const repeatPassword = control.get('repeatPassword');
+        const returnObj: ValidatorErrors = {};
 
-        if (username.value &&
-            password.value &&
-            password.value.toLowerCase().includes(username.value)) {
-
-            const errors = { ...password.errors };
-            errors.password = true;
-            password.setErrors(errors);
-
-            return { password: true };
+        if (email.value
+            && password.value
+            && password.value.toLowerCase().includes(email.value)) {
+            password.setErrors({ ...password.errors, containsEmail: true });
+            returnObj.containsEmail = true;
         }
 
-        if (password.errors) {
-            if (password.errors.password) {
-                delete password.errors.password;
-            }
-            if (!Object.keys(password.errors).length) {
-                password.setErrors(null);
-            }
+        if (password
+            && repeatPassword
+            && password.value !== repeatPassword.value) {
+            repeatPassword.setErrors({ ...repeatPassword.errors, mismatch: true });
+            returnObj.mismatch = true;
         }
 
-        return null;
+        if (!returnObj.containsEmail && password.errors?.containsEmail) {
+            password.setValue(password.value);
+        }
+
+        if (!returnObj.mismatch && repeatPassword.errors?.mismatch) {
+            repeatPassword.setValue(repeatPassword.value);
+        }
+
+        return returnObj;
     }
 }
 ```
 
 To add the custom validator to the `FormGroup` it should be passed as a second argument when creating the form.
+
 ```ts
-public registrationForm = new FormGroup<User>({
-    username: new FormControl<string>('', { nonNullable: true, validators: [Validators.required] }),
-    password: new FormControl<string>('', { nonNullable: true, validators: [Validators.required] }),
-    repeatPassword: new FormControl<string>('', { nonNullable: true, validators: [Validators.required] })
-},
-{
-    validators: [this.passwordValidator()]
-});
+public registrationForm: FormGroup<User>;
+
+constructor(fb: FormBuilder) {
+    this.registrationForm = fb.group({
+        email: ['', {
+            nonNullable: true,
+            validators: [
+                Validators.required,
+                Validators.email,
+                this.emailValidator('infragistics')
+            ]
+        }],
+        ...
+    },
+    {
+        validators: [this.passwordValidator()]
+    });
+}
 ```
 
-The below sample demonstrates how the built-in validators could be used in combination with custom validators and custom cross-field validators. 
-
-Enter a short username and use the same for a password. You will notice that several error messages are displayed for the Password field. The Password field uses the built-in `minLength` and `pattern` validators that require it to have a minimum length of 8 characters and contain at least one digit and one special character. It also uses the custom cross-field `passwordValidator` from the previous example.
-
-Enter a different value in the Repeat password field. The Repeat password field uses another custom cross-field validator that validates if the entered value matches the one in the Password field.
+The below sample demonstrates how the built-in validators could be used in combination with the custom `emailValidator` and cross-field `passwordValidator` from the previous examples.
 
 <code-view style="height:480px"
            data-demos-base-url="{environment:demosBaseUrl}"
