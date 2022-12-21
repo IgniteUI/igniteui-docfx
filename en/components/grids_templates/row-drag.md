@@ -404,11 +404,12 @@ Since all of the actions will be happening _inside_ of the grid's body, that's w
 ```
 }
 @@if (igxName === 'IgxTreeGrid') {
-<igx-tree-grid igxPreventDocumentScroll  #treeGrid [data]="localData" childDataKey="Employees" [rowDraggable]="true" foreignKey="ParentID"
+```html
+<igx-tree-grid igxPreventDocumentScroll  #treeGrid [data]="localData" [rowDraggable]="true" foreignKey="ParentID"
     [primaryKey]="'ID'" (rowDragStart)="rowDragStart($event)" igxDrop (dropped)="dropInGrid($event)">
     ...
 </igx-tree-grid>
-    
+```
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 <igx-hierarchical-grid #grid [data]="localData" [primaryKey]="'id'"
