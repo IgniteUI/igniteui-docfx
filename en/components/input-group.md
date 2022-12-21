@@ -135,7 +135,7 @@ The Ignite UI for Angular Input Group component can be used inside strictly type
 The following samples demonstrate how to configure input validation when using [template-driven](https://angular.io/guide/forms) or [reactive forms](https://angular.io/guide/reactive-forms).
 
 ### Template-Driven Forms
-Template-driven form validation is achieved by adding validation attributes, i.e., `required`, `minLength`, etc., to the `input` element.
+Template-driven form validation is achieved by adding validation attributes, i.e., `required`, `minlength`, etc., to the `input` element.
 
 ```html
 <form>
@@ -158,7 +158,7 @@ Template-driven form validation is achieved by adding validation attributes, i.e
 </form>
 ```
 
-The `required` attribute adds an asterisk next to the label, indicating that this field must be completed, however, when having additional validation like `email` and `minLength`, the user could be notified via the [`igx-hint`]({environment:angularApiUrl}/classes/igxhintdirective.html) directive.
+The `required` attribute adds an asterisk next to the label, indicating that this field must be filled in. Furthermore, when the `input` has additional validation applied to it, such as `email` and `minlength`, this could allow the developer to notify the end user for additional requirements via the [`igx-hint`]({environment:angularApiUrl}/classes/igxhintdirective.html) directive.
 
 The following example uses two-way data binding and demonstrates how to inspect the control's state by exporting the `ngModel` to a local variable.
 
@@ -182,7 +182,7 @@ The following example uses two-way data binding and demonstrates how to inspect 
 </form>
 ```
 
-The user should not be able to submit the form if any of the form controls is invalid. This could be achieved by enabling/disabling the submit button based on the form's state.
+The user should not be able to submit the form if any of the form controls in it are invalid. This could be achieved by enabling/disabling the submit button based on the form's state.
 
 The following example demonstrates how to inspect the form's state by exporting the `ngForm` to a local variable.
 
@@ -199,7 +199,7 @@ The following example demonstrates how to inspect the form's state by exporting 
 </form>
 ```
 
-The result from the above configurations could be seen in the below sample. Start typing into the Email and Password fields and you will notice that the `<igx-hint>` is shown if the entered values are invalid. The sample also demonstrates how to toggle the password's visibility by using the [`igx-icon`]({environment:angularApiUrl}/classes/igxiconcomponent.html) and the `igxSuffix` directive.
+The result from the above configurations could be seen in the below sample. Start typing into the Email and Password fields and you will notice that the [`igx-hint`]({environment:angularApiUrl}/classes/igxhintdirective.html) is shown if the entered values are invalid. The sample also demonstrates how to toggle the password's visibility by using the [`igx-icon`]({environment:angularApiUrl}/classes/igxiconcomponent.html) and the [`igx-suffix`](#prefix--suffix) directive.
 
 <code-view style="height:480px"
            data-demos-base-url="{environment:demosBaseUrl}"
@@ -241,7 +241,7 @@ constructor(fb: FormBuilder) {
 </form>
 ```
 
-Similar to the template-driven form sample, when having additional validation like `email` and `minLength`, an [`igx-hint`]({environment:angularApiUrl}/classes/igxhintdirective.html) directive could be used to notify the user if the validation fails.
+Similar to the template-driven form sample, when having additional validation like `email` and `minlength`, an [`igx-hint`]({environment:angularApiUrl}/classes/igxhintdirective.html) directive could be used to notify the end user if the validation has failed.
 
 The following example demonstrates how to access the control through a `get` method and inspect its state. It also demonstrates how to enable/disable the submit button by inspecting the state of the `FormGroup`.
 
@@ -273,7 +273,7 @@ public get password() {
 </form>
 ```
 
-The result from the above configurations could be seen in the below sample. Similar to the template-driven form sample, it also demonstrates how to toggle the password's visibility by using the [`igx-icon`]({environment:angularApiUrl}/classes/igxiconcomponent.html) and the `igxSuffix` directive.
+The result from the above configurations could be seen in the below sample. Similar to the template-driven form sample, it also demonstrates how to toggle the password's visibility by using the [`igx-icon`]({environment:angularApiUrl}/classes/igxiconcomponent.html) and the [`igx-suffix`](#prefix--suffix) directive.
 
 <code-view style="height:480px"
            data-demos-base-url="{environment:demosBaseUrl}"
@@ -281,7 +281,7 @@ The result from the above configurations could be seen in the below sample. Simi
 </code-view>
 
 ### Custom Validators
-Some input fields may require custom validation and this could be achieved via custom validators. When the value is invalid, the validator will generate a set of errors that could be used to display a specific error message on the screen.
+Some input fields may require custom validation and this could be achieved via custom validators. When the value is invalid, the validator will generate a set of errors that could be used to display a specific error message.
 
 Below is an example of a simple custom reactive form validator that validates if the entered email address contains a predefined value and generates different errors based on where the value occurs.
 
