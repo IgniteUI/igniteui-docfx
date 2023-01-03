@@ -412,10 +412,12 @@ Since all of the actions will be happening _inside_ of the grid's body, that's w
 ```
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+```html
 <igx-hierarchical-grid #grid [data]="localData" [primaryKey]="'id'"
     [rowDraggable]="true" (rowDragStart)="rowDragStart($event)" igxDrop (dropped)="rowDrop($event)">
     ...
 </igx-hierarchical-grid>
+```
 }
 
 
