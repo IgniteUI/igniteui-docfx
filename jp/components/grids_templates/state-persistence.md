@@ -393,13 +393,15 @@ public restoreState() {
 </code-view>
 
 }
+
 @@if (igxName === 'IgxGrid') {
-## Restoring Strategies
-[`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) will not persist neither remote operations nor custom dimension strategies (For further information see [Grid Remote Operations](remote-data-operations.md) sample) by default (see [`limitations`](state-persistence.md#limitations)). Restoring any of these can be achieved with code on application level. The `IgxGridState` exposes an event called [`stateParsed`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#stateParsed) which can be used to additionally modify the grid state before it gets applied. Let's show how to do this:
+## ストラテジの復元
+[`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) はデフォルトでは、リモート操作もカスタム ディメンション ストラテジ (詳細については、[グリッド リモート操作](remote-data-operations.md)サンプルを参照) も保持しません ([`制限`](state-persistence.md#制限) を参照)。これらの復元は、アプリケーション レベルのコードで実現できます。`IgxGridState` は、[`stateParsed`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#stateParsed) と呼ばれるイベントを公開します。このイベントはグリッド状態に追加の変更を、それが適用される前に行なうために使用できます。
+以下はその方法です。
 
-> [`stateParsed`]({environment:angularApiUrl}/classes/igxgridstatedirective) is only emitted when we are using [`setState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#setstate) with string argument.
+> [`stateParsed`]({environment:angularApiUrl}/classes/igxgridstatedirective) は、文字列引数で [`setState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#setstate) を使用している場合にのみ発行されます。
 
-* Set custom sorting strategy and custom column and row dimension strategies:
+* カスタム ソート方法およびカスタム列/行ディメンション ストラテジを設定します。
 
 ```html
 <igx-grid #grid 
@@ -418,7 +420,7 @@ public customStrategy = NoopSortingStrategy.instance();
 public options: IGridStateOptions = {...};
 ```
 
-* Restoring the state from the `sessionStorage` and applying the custom strategies looks like the following:
+* `sessionStorage` から状態を復元し、カスタム ストラテジを適用します。
 
 ```typescript
 public restoreState() {
@@ -433,11 +435,10 @@ public restoreState() {
 <code-view style="height: 580px" 
            explicit-editor="stackblitz"
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-state-persistence" alt="Angular Grid State Persistence Example">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-state-persistence" alt="Angular Grid 状態保持の例">
 </code-view>
 
 }
-
 ## 制限
 @@if (igxName === 'IgxHierarchicalGrid') {
 * パラメーターなしで `setState` API を使用してすべてのグリッド機能を一度に復元する場合、ルート グリッドの列プロパティがデフォルトにリセットされる場合があります。その場合は、後で列または列の選択機能を復元してください。
