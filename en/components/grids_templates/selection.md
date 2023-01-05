@@ -184,9 +184,9 @@ The template we are going to use to combine the grid with the context menu:
     </div>
 </div>
 ```
+
  Select multiple cells and press the `right mouse` button. The context menu will appear and after selecting `Copy cells data` the selected data will appear in the right empty box.
  The result is:
-
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
