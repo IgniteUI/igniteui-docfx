@@ -86,6 +86,7 @@ First we need to import the `IgxDragDropModule` in our app module:
 
 ```typescript
 import { ..., IgxDragDropModule } from 'igniteui-angular';
+// import { ..., IgxDragDropModule } from '@infragistics/igniteui-angular'; for licensed package
 ...
 @NgModule({
     imports: [..., IgxDragDropModule]
@@ -403,17 +404,20 @@ Since all of the actions will be happening _inside_ of the grid's body, that's w
 ```
 }
 @@if (igxName === 'IgxTreeGrid') {
-<igx-tree-grid igxPreventDocumentScroll  #treeGrid [data]="localData" childDataKey="Employees" [rowDraggable]="true" foreignKey="ParentID"
+```html
+<igx-tree-grid igxPreventDocumentScroll  #treeGrid [data]="localData" [rowDraggable]="true" foreignKey="ParentID"
     [primaryKey]="'ID'" (rowDragStart)="rowDragStart($event)" igxDrop (dropped)="dropInGrid($event)">
     ...
 </igx-tree-grid>
-    
+```
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+```html
 <igx-hierarchical-grid #grid [data]="localData" [primaryKey]="'id'"
     [rowDraggable]="true" (rowDragStart)="rowDragStart($event)" igxDrop (dropped)="rowDrop($event)">
     ...
 </igx-hierarchical-grid>
+```
 }
 
 

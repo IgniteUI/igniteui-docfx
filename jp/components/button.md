@@ -26,6 +26,7 @@ Button ディレクティブは `NgModule` としてエクスポートされる�
 // app.module.ts
 
 import { IgxButtonModule } from 'igniteui-angular';
+// import { IgxButtonModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     imports: [
@@ -145,7 +146,7 @@ export class AppModule {}
 
 ### Span
 
-`Span` や `div` などの要素を Ignite UI for Angular スタイルのボタンに変更するために `igxButton` ディレクティブを使用できます。デフォルトの色は `igxButtonColor` と `igxButtonBackground` プロパティでカスタマイズできます。
+`span` や `div` などの要素を Ignite UI for Angular スタイルのボタンに変更するために `igxButton` ディレクティブを使用できます。デフォルトの色は `igxButtonColor` と `igxButtonBackground` プロパティでカスタマイズできます。
 
 ```html
 <span igxButton="raised" igxButtonColor="white" igxButtonBackground="#72da67" igxRipple="white">
@@ -168,6 +169,7 @@ export class AppModule {}
 // app.module.ts
 ...
 import { IgxButtonGroupModule } from 'igniteui-angular';
+// import { IgxButtonGroupModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     imports: [

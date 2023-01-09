@@ -27,6 +27,7 @@ Navbar コンポーネントを初期化する前に、`IgxNavbarModule` を **a
 
 ...
 import { IgxNavbarModule } from 'igniteui-angular';
+// import { IgxNavbarModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -73,6 +74,11 @@ import {
     IgxButtonModule,
     IgxIconModule
 } from 'igniteui-angular';
+// import { 
+//    IgxNavbarModule,
+//    IgxButtonModule,
+//    IgxIconModule
+// } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -108,7 +114,7 @@ export class AppModule {}
 
 <div class="divider--half"></div>
 
-### カスタム アクション の追加
+### カスタム動作の追加
 
 アプリのナビゲーションでナビゲーション バーの左端にあるデフォルト アイコンではなくカスタム テンプレートを使用したい場合、`igx-navbar-action` ディレクティブを使用して提供したコンテンツをレンダリングします。これには Font Awesome ホーム アイコンのボタンを使用します。
 
@@ -142,7 +148,7 @@ export class AppModule {}
 </igx-navbar>
 ```
 
-以下はカスタム アクション ボタン アイコンをした場合の navbar の外観です。
+以下はカスタム動作ボタン アイコンをした場合の navbar の外観です。
 
 
 <code-view style="height: 300px" 

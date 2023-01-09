@@ -15,19 +15,19 @@ Ignite UI for Angular のエレベーションは、25 要素のマップとし�
 ## 使用方法
 次のセクションでは、カスタム エレベーションを作成および取得する方法を示します。
 
-### エレベーションの作成
+### エレベーションの構成
+
+デフォルトのエレベーション プリセットで使用されるカラーを変更するには、エレベーション プリセット モジュールを構成する必要があります。
 
 ```scss
 // Define the 3 elevation colors
-$color-1: rgb(153, 191, 170); // Umbra
-$color-2: rgb(92, 134, 141); // Penumbra
-$color-3: rgb(92, 61, 70); // Ambient
-
-$my-elevations: elevations(
-    $color-1,
-    $color-2,
-    $color-3
+@use 'igniteui-theming/sass/elevations/presets' as * with(
+    $color-1: rgb(153, 191, 170), // Umbra
+    $color-2: rgb(92, 134, 141), // Penumbra
+    $color-3: rgb(92, 61, 70) // Ambient
 );
+
+@include elevations($material-elevations);
 ```
 
 ### エレベーションの取得
@@ -37,14 +37,11 @@ $my-elevations: elevations(
 デフォルトの `$elevations` マップからエレベーションを取得する場合は、最初の引数を省略できます。
 
 ```scss
-// Returns elevation 1 shadows from $elevations
-$elevation-1: elevation($elevation: '1');
+// Returns elevation 1 shadows
+$elevation-1: elevation(1);
 
-// Returns elevation 1 shadows from $my-elevations
-$my-elevation-1: elevation(
-    $elevations: $my-elevations, 
-    $elevation: 1
-);
+// Returns elevation 1 shadows
+$my-elevation-1: elevation($name: 1);
 ```
 
 ### テーマへのエレベーションの渡し
@@ -85,7 +82,7 @@ $my-elevation-1: elevation(
 
 ```scss
 $card-theme: card-theme(
-    $resting-shadow: elevation($elevations, 10)
+    $resting-shadow: elevation(10)
 );
 
 @include card($card-theme);

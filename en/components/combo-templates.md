@@ -23,6 +23,7 @@ To get started with the ComboBox component, first you need to import the `IgxCom
 
 ```typescript
 import { IgxComboModule } from 'igniteui-angular';
+// import { IgxComboModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     imports: [

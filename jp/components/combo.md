@@ -39,6 +39,7 @@ ComboBox コンポーネントを初期化にするには、まず `IgxComboModu
 
 ```typescript
 import { IgxComboModule } from 'igniteui-angular';
+// import { IgxComboModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     imports: [
@@ -141,7 +142,7 @@ export class MyCombo {
 }
 ```
 
-選択 API を使用すると、コントロールのユーザー操作なしで、コンボボックスの選択された項目を変更できます - ボタン クリックを介して、Observable 変更への応答としてなどです。 たとえば、[select()]({environment:angularApiUrl}/classes/igxcombocomponent.html#select) メソッドを使用して複数の都市を選択するボタンを実装できます。
+選択 API を使用すると、コントロールのユーザー操作なしで、コンボボックスの選択された項目を変更できます - ボタン クリックを介して、Observable 変更への応答としてなどです。たとえば、[select()]({environment:angularApiUrl}/classes/igxcombocomponent.html#select) メソッドを使用して複数の都市を選択するボタンを実装できます。
 
 ```html
 <igx-combo [data]="cities" displayKey="name" valueKey="id"></igx-combo>
@@ -318,6 +319,8 @@ $custom-checkbox-theme: checkbox-theme(
 
 - 選択した項目を表示するコンボボックス入力は編集できません。ただし、IE および FireFox のブラウザー仕様により、カーソルは表示されます。
 - コンボボックスの高さを変更するための入力はありません。将来、[IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) コンポーネントは、カスタムのサイズ変更オプションを公開し、[IgxCombo]({environment:angularApiUrl}/classes/igxcombocomponent.html) は適切なスタイル設定と外観の統一に同じ機能を使用します。
+- コンボボックスが `undefined` (例: `[ undefined, ...]`) を含むプリミティブ データの配列にバインドされる場合、`undefined` はドロップダウンに表示されません。複合データ (オブジェクトなど) の配列にバインドされ、`valueKey` に使用される値が `undefined` の場合、項目はドロップダウンに表示されますが、選択はできません。
+- コンボボックスがリモート サービスにバインドされ、定義済みの選択がある場合、要求されたデータが読み込まれるまでその入力は空白のままになります。
 
 > [!NOTE]
 > コンボボックスは内部で `igxForOf` ディレクティブを使用するため、すべての `igxForOf` の制限がコンボボックスで有効です。詳細については、[igxForOf 既知の制限](for-of.md#既知の制限)セクションを参照してください。

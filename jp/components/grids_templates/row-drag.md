@@ -81,12 +81,13 @@ Ignite UI for Angular @@igComponent では、**RowDrag** がルート `@@igSelec
 ### ドロップ エリア
 
 行ドラッグを簡単に有効にできました。次は行ドロップを処理する方法を設定する必要があります。
-[`igxDrop` ディレクティブ](../drag-drop.md) を使用して、行をドロップする場所を定義できます。
+[`igxDrop` ディレクティブ](../drag-drop.md)を使用して、行をドロップする場所を定義できます。
 
 はじめに、アプリ モジュールに `IgxDragDropModule` をインポートする必要があります。
 
 ```typescript
 import { ..., IgxDragDropModule } from 'igniteui-angular';
+// import { ..., IgxDragDropModule } from '@infragistics/igniteui-angular'; for licensed package
 ...
 @NgModule({
     imports: [..., IgxDragDropModule]
@@ -185,7 +186,7 @@ enum DragIcon {
 @@if (igxName === 'IgxTreeGrid' || igxName === 'IgxHierarchicalGrid') {
 ```typescript
 export class @@igxNameRowDragComponent {
-    ...
+
     public onDropAllowed(args: IDropDroppedEventArgs) {
         const draggedRow: RowType = args.dragData;
         draggedRow.delete();
@@ -404,17 +405,20 @@ enum DragIcon {
 ```
 }
 @@if (igxName === 'IgxTreeGrid') {
-<igx-tree-grid igxPreventDocumentScroll  #treeGrid [data]="localData" childDataKey="Employees" [rowDraggable]="true" foreignKey="ParentID"
+```html
+<igx-tree-grid igxPreventDocumentScroll  #treeGrid [data]="localData" [rowDraggable]="true" foreignKey="ParentID"
     [primaryKey]="'ID'" (rowDragStart)="rowDragStart($event)" igxDrop (dropped)="dropInGrid($event)">
     ...
-    </igx-tree-grid>
-    
+</igx-tree-grid>
+```
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+```html
 <igx-hierarchical-grid #grid [data]="localData" [primaryKey]="'id'"
     [rowDraggable]="true" (rowDragStart)="rowDragStart($event)" igxDrop (dropped)="rowDrop($event)">
     ...
 </igx-hierarchical-grid>
+```
 }
 
 

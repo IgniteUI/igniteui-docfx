@@ -39,6 +39,7 @@ Simple ComboBox コンポーネントの使用を開始するには、最初に 
 
 ```typescript
 import { IgxSimpleComboModule } from 'igniteui-angular';
+// import { IgxSimpleComboModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     imports: [
@@ -272,6 +273,17 @@ export class SimpleComboCascadingComponent implements OnInit {
 }
 ```
 
+## Angular Simple ComboBox リモート バインディング
+
+Ignite UI for Angular Simple ComboBox コンポーネントは、コンボボックスをリモート サービスにバインドし、要求に応じてデータを取得できる API を公開します。
+
+### デモ
+以下のサンプルは、[dataPreLoad]({environment:angularApiUrl}/classes/IgxSimpleComboComponent.html#dataPreLoad) プロパティを使用してリモート データの新しいチャンクをロードし、[ComboBox リモート バインディング](combo-remote.md)で説明されている手順に従うリモート バインディングを示しています。
+
+<code-view style="height: 400px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/lists/simple-combo-remote" alt="Angular Simple Combo リモート バインディングの例">
+</code-view>
 
 ## Angular Simple ComboBox のスタイル設定
 
@@ -338,6 +350,9 @@ $custom-drop-down-theme: drop-down-theme(
 ## 既知の問題
 
 - Simple ComboBox には、高さのサイズを設定するための入力がありません。将来、[IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) コンポーネントは、カスタムのサイズ変更オプションを公開し、[IgxSimpleCombo]({environment:angularApiUrl}/classes/igxsimplecombocomponent.html) は適切なスタイル設定と外観の統一に同じ機能を使用します。
+- シンプルなコンボボックスが `undefined` (例: `[ undefined, ...]`) を含むプリミティブ データの配列にバインドされる場合、`undefined` はドロップダウンに表示されません。複合データ (オブジェクトなど) の配列にバインドされ、`valueKey` に使用される値が `undefined` の場合、項目はドロップダウンに表示されますが、選択はできません。
+- シンプルなコンボボックスが `ngModel` でバインドされ、`required` とマークされている場合、`null`、`undefined`、`''` の値は選択できません。
+- シンプルなコンボボックスがリモート サービスにバインドされ、定義済みの選択がある場合、要求されたデータが読み込まれるまでその入力は空白のままになります。
 
 > [!NOTE]
 > Simple ComboBox は内部で `igxForOf` ディレクティブを使用するため、すべての `igxForOf` 制限は Simple ComboBox に対して有効です。詳細については、[igxForOf 既知の制限](for-of.md#既知の制限) の既知の問題のセクションを参照してください。

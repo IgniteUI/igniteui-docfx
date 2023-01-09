@@ -224,6 +224,7 @@ public ngAfterViewInit() {
 
 ```typescript
 import { FilteringLogic } from 'igniteui-angular';
+// import { FilteringLogic } from '@infragistics/igniteui-angular'; for licensed package
 ...
 
 this.@@igObjectRef.filteringLogic = FilteringLogic.OR;
@@ -338,7 +339,6 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
             <img *ngIf="!val" src="https://www.infragistics.com/angular-demos/assets/images/grid/expired.png" title="False" alt="False" />
         </ng-template>
     </igx-column>
-
 </igx-hierarchical-grid>
 ```
 }
@@ -409,6 +409,7 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
 
 ```typescript
 import { TreeGridMatchingRecordsOnlyFilteringStrategy } from 'igniteui-angular';
+// import { TreeGridMatchingRecordsOnlyFilteringStrategy } from '@infragistics/igniteui-angular'; for licensed package
 ...
 public matchingRecordsOnlyStrategy = new TreeGridMatchingRecordsOnlyFilteringStrategy();
 ```

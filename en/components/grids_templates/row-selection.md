@@ -35,6 +35,17 @@ The sample below demonstrates the four types of @@igComponent's **row selection*
 The sample below demonstrates the three types of @@igComponent's **row selection** behavior. Use the buttons below to enable each of the available selection modes. A brief description will be provided on each button interaction through a snackbar message box. Use the switch button to _hide_ or _show_ the row selector checkbox.
 }
 @@if (igxName === 'IgxGrid') {
+To get newly selected elements you can use **event.newSelection**:
+
+```ts
+public handleRowSelection(event: IRowSelectionEventArgs) {
+    this.selectedRowsCount = event.newSelection.length;
+    this.selectedRowIndex = event.newSelection[0];
+    this.snackbarRowCount.open();
+    this.snackbar.close();
+    this.logAnEvent(`=> 'rowSelectionChanging' with value: ` + JSON.stringify(event.newSelection));
+}
+```
 
 <code-view style="height:700px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -169,6 +180,16 @@ To enable cascade row selection in the [`@@igSelector`]({environment:angularApiU
 ```
 In this mode a parent's selection state entirely depends on the selection state of its children. When a parent has some selected and some deselected children, its checkbox is in an indeterminate state.
 }
+
+```ts
+<!-- selectionExample.component.ts -->
+
+ public handleRowSelection(event: IRowSelectionEventArgs) {
+    // use event.newSelection to retrieve primary key/row data of latest selected row
+    this.selectedRowsCount = event.newSelection.length;
+    this.selectedRowIndex = event.newSelection[0]; 
+ }
+```
 
 **Notes**
 @@if (igxName !== 'IgxTreeGrid') {

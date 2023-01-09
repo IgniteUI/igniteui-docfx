@@ -34,6 +34,7 @@ The next step is to import the `IgxAvatarModule` in the **app.module.ts** file:
 
 ...
 import { IgxAvatarModule } from 'igniteui-angular';
+// import { IgxAvatarModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -186,6 +187,7 @@ If all went well, you should see something like the following in the browser:
 
 
 ## Theming Dependencies
+* [IgxAvatar Theme]({environment:sassApiUrl}/index.html#function-avatar-theme)
 * [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-icon-theme)
 
 ## Additional Resources

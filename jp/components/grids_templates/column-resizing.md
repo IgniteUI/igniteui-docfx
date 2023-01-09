@@ -2,7 +2,7 @@
 ---
 title: Angular Grid の列サイズ変更 - Ignite UI for Angular
 _description: Angular Grid の列サイズ変更を使用して、グリッド列の幅を瞬時に変更できます。Angular ドラッグ サイズ変更が大変使いやすくなりました。無料でお試しください。
-_keywords: grid column resizing, igniteui for angular, infragistics
+_keywords: grid 列サイズ変更, igniteui for angular, インフラジスティックス
 _language: ja
 ---
 }
@@ -10,7 +10,8 @@ _language: ja
 ---
 title: Angular Tree Grid の列サイズ変更 - Ignite UI for Angular
 _description: Angular Tree Grid の列サイズ変更を使用して、グリッド列の幅を瞬時に変更できます。Angular ドラッグ サイズ変更が大変使いやすくなりました。無料でお試しください。
-_keywords: grid column resizing, igniteui for angular, infragistics
+_keywords: grid 列サイズ変更, igniteui for angular, インフラジスティックス
+_canonicalLink: grid/column-resizing
 _language: ja
 ---
 }
@@ -18,7 +19,8 @@ _language: ja
 ---
 title: Angular Hierarchical Grid の列サイズ変更 - Ignite UI for Angular
 _description: Angular Hierarchical Grid の列サイズ変更を使用して、グリッド列の幅を瞬時に変更できます。Angular ドラッグ サイズ変更が大変使いやすくなりました。無料でお試しください。
-_keywords: grid column resizing, igniteui for angular, infragistics
+_keywords: grid 列サイズ変更, igniteui for angular, インフラジスティックス
+_canonicalLink: grid/column-resizing
 _language: ja
 ---
 }
@@ -249,6 +251,35 @@ column.autosize();
 
 列がビューで最初に初期化されるとき、その幅は、表示されている最も長いセルまたはヘッダーのサイズに調整されます。表示されている行の外側にあるセルは含まれないことに注意してください。
 このアプローチは、初期化後の自動サイズ変更よりもパフォーマンスが最適化されており、特に多数の列のサイズを自動サイズ設定する必要がある場合に推奨されます。
+
+@@if (igxName === 'IgxGrid') {
+
+<code-view style="height:550px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/grid/grid-columnAutoResizing-sample" alt="Angular @@igComponent 列のサイズ変更の例">
+</code-view>
+
+<div class="divider--half"></div>
+}
+@@if (igxName === 'IgxTreeGrid') {
+
+<code-view style="height:550px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-columnAutoSizing-sample" alt="Angular @@igComponent 列のサイズ変更の例">
+</code-view>
+
+<div class="divider--half"></div>
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+
+<code-view style="height:510px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hGrid-columnAutosizing-sample" alt="Angular @@igComponent 列のサイズ変更の例">
+</code-view>
+
+<div class="divider--half"></div>
+}
+
 
 ## スタイル設定
 @@igComponent 列のサイズ変更行のスタイル設定は、すべてのテーマ関数とコンポーネント ミックスインが存在するインデックス ファイルをインポートする必要があります。

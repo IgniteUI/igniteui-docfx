@@ -14,8 +14,8 @@ Ignite UI for Angular List コンポーネントは項目の行を表示し、�
 次の例は、_name_ プロパティと _phone number_ プロパティを持つ連絡先が入力されたリストを表しています。[`IgxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) コンポーネントは、[**IgxAvatar**](avatar.md) と [**IgxIcon**](icon.md) を使用して、ユーザー エクスペリエンスを向上させ、**連絡先をお気に入りに追加**にアバター写真とさまざまなアイコンを設定する機能を公開します。さらに、リスト ビューは、フィルタリング パイプを使用して実現されたソート機能を公開します。
 
 
-<code-view style="height: 513px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 513px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/list-sample-4" alt="Angular List の例">
 </code-view>
 
@@ -42,6 +42,7 @@ Ignite UI for Angular については、[はじめに](general/getting-started.m
 
 ...
 import { IgxListModule } from 'igniteui-angular';
+// import { IgxListModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -81,8 +82,8 @@ export class AppModule {}
 空のリストは以下のようになります:
 
 
-<code-view style="height: 100px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 100px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/list-sample-5" >
 </code-view>
 
@@ -110,8 +111,8 @@ export class AppModule {}
 ```
 
 
-<code-view style="height: 300px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 300px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/list-sample-6" >
 </code-view>
 
@@ -134,8 +135,8 @@ export class AppModule {}
 以下は結果です:
 
 
-<code-view style="height: 200px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 200px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/list-sample-2" >
 </code-view>
 
@@ -187,8 +188,8 @@ public contacts = [{
 結果は以下のようになります。
 
 
-<code-view style="height: 400px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 400px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/list-sample-3" >
 </code-view>
 
@@ -206,6 +207,11 @@ import {
     IgxAvatarModule,
     IgxIconModule
 } from 'igniteui-angular';
+// import { 
+//    IgxListModule,
+//    IgxAvatarModule,
+//    IgxIconModule
+// } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -288,6 +294,7 @@ toggleFavorite(item: IgxListItem) {
 // app.module.ts
 ...
 import { IgxButtonGroupModule } from 'igniteui-angular';
+// import { IgxButtonGroupModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     imports: [..., IgxButtonGroupModule]
@@ -326,8 +333,8 @@ public selectDensity(event) {
 結果は以下のようになります。
 
 
-<code-view style="height: 513px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 513px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/list-sample-4" >
 </code-view>
 
@@ -439,8 +446,8 @@ public leftPanPerformed(args) {
 次にリスト項目をパンニングします。
 
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/list-sample-7" >
 </code-view>
 
@@ -472,6 +479,7 @@ Angular コンポーネント テンプレートの上側に入力フィール�
 // app.module.ts
 ...
 import { IgxFilterModule, IgxInputGroupModule } from 'igniteui-angular';
+// import { IgxFilterModule, IgxInputGroupModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     imports: [..., IgxFilterModule, IgxInputGroupModule]
@@ -480,6 +488,7 @@ import { IgxFilterModule, IgxInputGroupModule } from 'igniteui-angular';
 // contacts.component.ts
 ...
 import { IgxFilterOptions } from 'igniteui-angular';
+// import { IgxFilterOptions } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({...})
 export class ContactListComponent {
@@ -506,6 +515,52 @@ export class ContactListComponent {
 </igx-list-item>
 ```
 
+<div class="divider--half"></div>
+
+## リスト項目の選択
+
+リスト項目は選択状態を提供しません。しかし、アプリケーションで選択された項目を追跡する必要がある場合、どのようにしてそれを実現できるかの例を示します。必要なのは、コンポーネントのどこか、またはリストがバインドされているデータの中で、状態を追跡することです。
+
+以下は、リストにバインドされているデータの状態追跡に基づいて、テーマのセカンダリ 500 カラーをリストの背景色に適用する例です。
+
+<code-view style="height: 420px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/lists/list-item-selection" >
+</code-view>
+
+`selected` プロパティを各データ メンバーに追加します。デフォルトは `false` です。リスト項目がクリックされたら、データ コレクション内のすべての `selected` プロパティをリセットしたあと、クリックされた項目に対応するデータの `selected` プロパティを `true` に設定します。`selected` プロパティに基づいて、選択されたときの背景を定義している css クラスをリスト項目に適用します。
+
+```html
+<igx-list>
+    <igx-list-item isHeader="true">Contacts</igx-list-item>
+    <igx-list-item [ngClass]="contact.selected ? 'selected' : ''"
+                    (click)="selectItem(contact)"
+                    *ngFor="let contact of contacts | igxFilter: filterContacts;">
+        <igx-avatar igxListThumbnail [src]="contact.photo" roundShape="true"></igx-avatar>
+        <span igxListLineTitle>{{ contact.name }}</span>
+        <span igxListLineSubTitle>{{ contact.phone }}</span>
+        <igx-icon igxListAction [style.color]="contact.isFavorite ? 'orange' : 'lightgray'" (click)="toggleFavorite(contact, $event)">star</igx-icon>
+    </igx-list-item>
+</igx-list>
+```
+
+```typescript
+public selectItem(item) {
+    if (!item.selected) {
+        this.contacts.forEach(c => c.selected = false);
+        item.selected = true;
+    }
+}
+```
+
+```scss
+.selected {
+    background-color: hsla(var(--igx-secondary-500))
+}
+```
+
+<div class="divider--half"></div>
+
 ## List コンポーネントにテーマの適用
 
 以下は、リストの背景を変更する方法を説明します。まず、index.scss をコンポーネントの .scss ファイルにインポートします。
@@ -531,8 +586,8 @@ export class ContactListComponent {
 以下は上記コードの結果です。
 
 
-<code-view style="height: 365px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 365px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/list-sample-8" >
 </code-view>
 

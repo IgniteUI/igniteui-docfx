@@ -26,6 +26,7 @@ Badge コンポーネントを初期化する前に、`IgxBadgeModule` を **app
 
 ...
 import { IgxBadgeModule } from 'igniteui-angular';
+// import { IgxBadgeModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -40,10 +41,8 @@ export class AppModule {}
 ```typescript
 // app.module.ts
 ...
-import {
-  IgxBadgeModule,
-  IgxAvatarModule
-} from 'igniteui-angular';
+import { IgxBadgeModule, IgxAvatarModule } from 'igniteui-angular';
+// import {  IgxBadgeModule, IgxAvatarModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
   ...
@@ -95,6 +94,7 @@ import {
     IgxAvatarModule,
     IgxBadgeModule
 } from 'igniteui-angular';
+// import { IgxListModule, IgxAvatarModule, IgxBadgeModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -137,12 +137,12 @@ export class AppModule {}
 // contacts.component.ts
 
 ...
-public members: Member[] = [
-  new Member('Terrance Orta', 'online'),
-  new Member('Donna Price', 'online'),
-  new Member('Lisa Landers', 'away'),
-  new Member('Dorothy H. Spencer', 'offline'),
-];
+ public members: Member[] = [
+    new Member('Terrance Orta', 'online'),
+    new Member('Donna Price', 'online'),
+    new Member('Lisa Landers', 'away'),
+    new Member('Dorothy H. Spencer', 'offline'),
+  ];
 
 ```
 
@@ -297,11 +297,10 @@ $custom-badge-theme: badge-theme(
 ## テーマの依存関係
 * [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-icon-theme)
 
-
 ## その他のリソース
 <div class="divider--half"></div>
 
 コミュニティに参加して新しいアイデアをご提案ください。
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular) 
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular) 
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
 

@@ -49,8 +49,18 @@ const gridsConfigs = {
       igxName: "IgxHierarchicalGrid",
       igTypeDoc: "igxhierarchicalgridcomponent",
       igSelector: "igx-hierarchical-grid"
-    }
-  };
+  },
+  pivotGrid: {
+    igPath: "/pivotGrid",
+    igMainTopic: "pivot-grid",
+    igObjectRef: "pivotGrid",
+    igDemoBasePath: "pivot-grid",
+    igComponent: "Pivot Grid",
+    igxName: "IgxPivotGrid",
+    igTypeDoc: "igxpivotgridcomponent",
+    igSelector: "igx-pivot-grid"
+  }
+};
     
 const fileInclude = (grid) => {
   return src([DOCFX_ARTICLES + '/grids_templates/*.md'])
@@ -80,6 +90,10 @@ const generateTreeGridsTopics = () => {
 
 const generateHierarchicalGridsTopics = () => {
   return fileInclude(gridsConfigs.hierarchicalGrid);
+};
+
+const generatePivotGridsTopics = () => {
+  return fileInclude(gridsConfigs.pivotGrid);
 };
 
 const buildSite = () => {
@@ -115,7 +129,10 @@ const watchFiles = (done) => {
         `${DOCFX_ARTICLES}/treegrid/groupby.md`,
         `${DOCFX_ARTICLES}/treegrid/load-on-demand.md`,
         `${DOCFX_ARTICLES}/hierarchicalgrid/hierarchical-grid.md`,
-        `${DOCFX_ARTICLES}/hierarchicalgrid/load-on-demand.md`
+        `${DOCFX_ARTICLES}/hierarchicalgrid/load-on-demand.md`,
+        `${DOCFX_ARTICLES}/pivotGrid/pivot-grid.md`,
+        `${DOCFX_ARTICLES}/pivotGrid/pivot-grid-features.md`,
+        `${DOCFX_ARTICLES}/pivotGrid/pivot-grid-custom.md`
     ];
 
     // watch([`${DOCFX_TEMPLATE}/**/*`, `!${DOCFX_TEMPLATE}/styles/css`], series(build));
@@ -161,10 +178,10 @@ const  browserSyncReload = (done) => {
 };
 
 const build = series(
-  parallel(generateGridsTopics, generateTreeGridsTopics, generateHierarchicalGridsTopics), 
+  parallel(generateGridsTopics, generateTreeGridsTopics, generateHierarchicalGridsTopics,generatePivotGridsTopics), 
   buildSite, removeHTMLExtensionFromSiteMap);
 
-const buildCI = series(generateGridsTopics, generateTreeGridsTopics, generateHierarchicalGridsTopics);
+const buildCI = series(generateGridsTopics, generateTreeGridsTopics, generateHierarchicalGridsTopics,generatePivotGridsTopics, buildSite);
 
 exports.buildCI = buildCI;
 exports.build = build;
