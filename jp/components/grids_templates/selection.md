@@ -185,9 +185,9 @@ IgxGrid はコピーされたデータを取得し、コンテナー要素に貼
     </div>
 </div>
 ```
+
  複数のセルを選択し、`マウスの右`ボタンを押します。コンテキストメニューが表示され、`セルデータのコピー`を選択すると、選択したデータが右側の空のボックスに表示されます。
  結果:
-
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 

@@ -178,6 +178,7 @@ Internet Explorer 11 以前などブラウザーのコンポーネントをス�
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/layouts/avatar-styling" >
 </code-view>
+
 <div class="divider--half"></div>
 
 ## API リファレンス

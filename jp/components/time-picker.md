@@ -1,15 +1,18 @@
 ---
 title: Time Picker コンポーネント - ネイティブ Angular | Ignite UI for Angular
-_description: Ignite UI for Angular Time Picker コンポーネントを使用すると、スピン ボタンがあるダイアログから時間を選択し、入力フィールドに値が設定されます。
+_description: Ignite UI for Angular Time Picker コンポーネントを使用すると、スピン ボタンがあるダイアログから時間を選択し、入力フィールドに値が設定されます。今すぐお試しください。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular Time Picker コンポーネント, Angular Time Picker コントロール、Time Picker, Angular Time Picker
 _language: ja
 ---
 
-# Time Picker
+# Angular Time Picker (タイム ピッカー) の概要
 <p class="highlight">Time Picker コンポーネントを使用すると、スピン ボタンがあるドロップダウン/ダイアログから時間を選択し、入力フィールドに値が設定されます。デフォルトのドロップダウン モードでは、入力フィールドは編集可能であり、ユーザーは選択した時間を編集することもできます。</p>
 <div class="divider--half"></div>
 
+<p>今日の Web アプリケーションで最も一般的に使用される UI コンポーネントの 1 つとして、Angular Time Picker (Angular Material Time Picker とも呼ばれます) は開発者にさまざまな機能を提供します。これらの機能により、コンポーネントをカスタマイズして、ユーザーがコンポーネントを操作するための最高の UX および UI エクスペリエンスを作成できます。時計ボタンを表示するためのさまざまな組み込みテンプレートと、検証、カスタム時間形式などの機能があります。 </p>
+
 ## Angular Time Picker の例
+一般に、ユーザーは、テキスト入力を使用するか、Angular Time Picker ドロップダウンから時間値を選択することにより、優先時間を入力できます。以下の基本的な Angular Time Picker の例は、ユーザーがドロップダウンまたはキーボードを使用して値を簡単に入力する方法を示しています。
 
 <code-view style="height:540px"
            data-demos-base-url="{environment:demosBaseUrl}"
@@ -18,7 +21,7 @@ _language: ja
 
 <div class="divider--half"></div>
 
-## 使用方法
+## Ignite UI で Angular Time Picker コンポーネントを使用する方法
 はじめに、**app.module.ts** ファイルに `IgxTimePickerModule` をインポートします。
 
 >[!NOTE]
@@ -44,7 +47,7 @@ export class AppModule {}
 
 ### デフォルト
 
-Time Picker の追加は、以下のコードを使用してください。
+テンプレートにタイム ピッカーを追加するには、以下のコードを使用してください。
 
 ```html
 <!--meeting.component.html-->
@@ -56,9 +59,9 @@ Time Picker の追加は、以下のコードを使用してください。
 <div class="divider--half"></div>
 
 ### バインディング
-Time Picker は、[`value`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#value) プロパティまたは `ngModel` を設定することにより、Date オブジェクトまたは `ISO8601` 形式の時刻のみの文字列値のいずれかにバインドできます。
+The Time Picker in Angular は、[`value`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#value) プロパティまたは `ngModel` を設定することにより、Date オブジェクトまたは `ISO 8601` 形式の時刻のみの文字列値のいずれかにバインドできます。
 
-まず、`ISO8601` 形式で時刻文字列を作成します。
+まず、`ISO 8601` 形式で時刻文字列を作成します。
 
 ```typescript
 public time = '09:15:30';
@@ -96,9 +99,9 @@ export class SampleFormComponent {
 ```
 
 ### コンポーネントの投影
-Time Picker コンポーネントを使用すると、子コンポーネントを投影できます。これは [`IgxInputGroupComponent`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) と同じです: [`IgxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) を除いて、[`igxLabel`](label-input.md)、[`IgxHint`](input-group.md#hints)、[`igxPrefix`](input-group.md#prefix--suffix)、[`igxSuffix`](input-group.md#prefix--suffix)。詳細については、[Label および Input](label-input.md) トピックを参照してください。
+Time Picker コンポーネントを使用すると、子コンポーネントを投影できます。これは [`IgxInputGroupComponent`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) と同じです: [`IgxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) を除いて、[`igxLabel`](label-input.md)、[`IgxHint`](input-group.md#hint)、[`igxPrefix`](input-group.md#prefix-および-suffix)、[`igxSuffix`](input-group.md#prefix-および-suffix)。詳細については、[Label および Input](label-input.md) トピックを参照してください。
 
-デフォルト設定では、ドロップダウン/ダイアログ トグル アイコンがプレフィックスとして表示されます。[`IgxPickerToggleComponent`]({environment:angularApiUrl}/classes/igxpickertogglecomponent.html) コンポーネントを使用して変更または再定義できます。入力の開始位置または終了位置を定義する [`igxPrefix`](input-group.md#prefix--suffix) または [`igxSuffix`](input-group.md#prefix--suffix) で設定できます。
+デフォルト設定では、ドロップダウン/ダイアログ トグル アイコンがプレフィックスとして表示されます。[`IgxPickerToggleComponent`]({environment:angularApiUrl}/classes/igxpickertogglecomponent.html) コンポーネントを使用して変更または再定義できます。入力の開始位置または終了位置を定義する [`igxPrefix`](input-group.md#prefix-および-suffix) または [`igxSuffix`](input-group.md#prefix-および-suffix) で設定できます。
 
 次の例では、カスタム ラベルとヒントを追加し、サフィックスとして表示されるようにデフォルトのトグル アイコンの位置を変更しました。
 
@@ -115,17 +118,17 @@ Time Picker コンポーネントを使用すると、子コンポーネント�
 public date: Date = new Date();
 ```
 
-以下はテンプレート化された Time Picker です。
+テンプレート化された Ignite UI for Angular Time Picker は次のとおりです。
 
 <code-view style="height: 600px;"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-5" >
 </code-view>
 
-## カスタム アクション ボタン
+## カスタム動作ボタン
 [`IgxTimePickerComponent`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html) は、アクション ボタンのカスタマイズをサポートしています。これを実現するには、[`igxPickerActions`]({environment:angularApiUrl}/classes/igxpickeractionsdirective.html) ディレクティブ セレクターでマークされた `ng-template` でボタンをラップします。
 
-以下の例では、'CANCEL'、'DONE'、および 'NOW' アクションにカスタム アクション ボタンが追加されています。
+以下の例では、'CANCEL'、'DONE'、および 'NOW' アクションにカスタム動作ボタンが追加されています。
 
 ```html
 <!-- sample.component.html -->
@@ -151,7 +154,7 @@ public selectNow(timePicker: IgxTimePickerComponent) {
 ...
 ```
 
-ドロップダウン、カスタム アクションと双方向バインディングをサポートする、再テンプレート化されたタイムピッカーです。
+ドロップダウン、カスタム動作と双方向バインディングをサポートする、再テンプレート化されたタイムピッカーです。
 
 <code-view style="height: 600px;"
            data-demos-base-url="{environment:demosBaseUrl}"
@@ -240,7 +243,7 @@ Time Picker は、パブリックの [`increment`]({environment:angularApiUrl}/c
 [Date Time Editor ディレクティブ](date-time-editor.md#増加および減少)で、両方の方法の使用法を示すサンプルを見つけることができます。
 
 ### フォームと検証
-Time Picker コンポーネントは、コア FormsModule [NgModel](https://angular.io/api/forms/NgModel) および [ReactiveFormsModule](https://angular.io/api/forms/ReactiveFormsModule) (FormControl, FormGroup など) からのすべてのディレクティブをサポートします。これには、[フォーム バリデーター](https://angular.io/api/forms/Validators)機能も含まれます。さらに、コンポーネントの[最小値と最大値](#最小値と最大値)はフォーム バリデーターとしても機能します。
+Time Picker コンポーネントは、コア FormsModule [NgModel](https://angular.io/api/forms/NgModel) および [ReactiveFormsModule](https://angular.io/api/forms/ReactiveFormsModule) (FormControl, FormGroup など) からのすべてのディレクティブをサポートします。これには、[フォーム バリデータ](https://angular.io/api/forms/Validators)機能も含まれます。さらに、コンポーネントの[最小値と最大値](#最小値と最大値)はフォーム バリデータとしても機能します。
 
 [リアクティブ フォームの統合](angular-reactive-form-validation.md)サンプルは、ReactiveForms で igxTimePicker を使用する方法を示しています。
 
@@ -248,7 +251,7 @@ Time Picker コンポーネントは、コア FormsModule [NgModel](https://angu
 [`minValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#minvalue) および [`maxValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#maxvalue) を指定して、ユーザー入力を制限できます。その場合、ドロップダウン/ダイアログにはその範囲内の時刻のみが表示されます。ただし、ドロップダウン モードでは、ユーザーが無効な時間を入力する可能性があります。[`validationFailed`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#validationfailed) イベントを処理して、それが発生した場合にユーザーに通知することができます。
 
 >[!NOTE]
->最小/最大値は、Date オブジェクトまたは `ISO8601` 形式の時刻のみの文字列である必要があります。
+>最小/最大値は、Date オブジェクトまたは `ISO 8601` 形式の時刻のみの文字列である必要があります。
 
 ```typescript
 // app.module.ts

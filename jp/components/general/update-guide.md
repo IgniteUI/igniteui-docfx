@@ -54,6 +54,10 @@ ng update @angular/cli
 
 ## 14.2.x から 15.0.x の場合:
 ### 一般
+- `igxGrid`、`igxHierarchicalGrid`、`igxTreeGrid`
+    - グリッド テンプレートのパラメーターに、コンテキストの型が追加されました。これは、アプリが厳密なテンプレート モードであり、間違った型を使用している場合にも問題を引き起こす可能性があります。変換が必要なテンプレートへの参照:
+         - `IgxColumnComponent` - [`ColumnType`](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/latest/interfaces/ColumnType.html) (たとえば、`igxFilterCellTemplate` の列パラメーター)
+         - `IgxGridCell` - [`CellType`]({environment:angularApiUrl}/interfaces/celltype.html) (たとえば、`igxCell` テンプレートの cell パラメーター)
 - Ignite UI for Angular に [igniteui-theming](https://github.com/IgniteUI/igniteui-theming) のピア依存関係があります。テーマ パッケージをインストールし、`angular.json` ファイルに以下のプリプロセッサー設定を追加します。
 
     ```sh
@@ -212,6 +216,29 @@ ng update @angular/cli
     .my-class {
         box-shadow: elevation(8);
     }
+    ```
+
+### グリッド ツールバー
+- **重大な変更** - `IgxGridToolbarTitleDirective` と `IgxGridToolbarActionsDirective` はコンポーネントに変換され、要素セレクターのみが保持されます。`<igx-grid-toolbar-title>` および `<igx-grid-toolbar-actions>` の優先要素マークアップを使用するアプリの場合、機能的な変更はありません。他の要素で `igxGridToolbarTitle` および `igxGridToolbarActions` ディレクティブを使用するアプリは、代わりにそれらを前述の要素に変換する必要があります。
+
+    _From:_
+    ```html
+    <igx-grid-toolbar>
+        <span igxGridToolbarTitle>Title</span >
+        <div igxGridToolbarActions>
+            ...
+        </div>
+    </igx-grid-toolbar>
+    ```
+
+    _To:_
+    ```html
+    <igx-grid-toolbar>
+        <igx-grid-toolbar-title>Title</igx-grid-toolbar-title>
+        <igx-grid-toolbar-actions>
+            ...
+        </igx-grid-toolbar-actions>
+    </igx-grid-toolbar>
     ```
 
 ## 13.1.x から 13.2.x の場合:
@@ -606,7 +633,7 @@ $__legacy-libsass: true;
 ## 11.1.x から 12.0.x の場合:
 ### テーマ:
 * 重大な変更:
-    * `IgxAvatar` テーマが簡略化されました。テーマ パラメーター (`avatar-theme`) の数が大幅に削減され、接頭辞付きのパラメーター (`icon-*`, `initials-*`, `image-*`) と接尾辞付きのパラメーター (`border-radius-*`) が含まれなくなりました。`ng update` で実行された更新は、既存のボタン テーマを移行しますが、接頭辞付きと接尾辞付きのパラメーターがないことを考慮して、いくつかの追加の調整が必要になる場合があります。
+    * `IgxAvatar` テーマが簡略化されました。テーマ パラメーター (`avatar-theme`) の数が大幅に削減され、接頭辞付きのパラメーター (`icon-*`、`initials-*`、`image-*`) と接尾辞付きのパラメーター (`border-radius-*`) が含まれなくなりました。`ng update` で実行された更新は、既存のボタン テーマを移行しますが、接頭辞付きと接尾辞付きのパラメーターがないことを考慮して、いくつかの追加の調整が必要になる場合があります。
 
     既存のタイプ固有のアバター テーマを以下のように変更する必要があります。
 

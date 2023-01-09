@@ -6,11 +6,11 @@ _keywords: angular pivot grid, angular material pivot table, ignite ui for angul
 
 # Angular Pivot Grid Overview
 
-Pivot Grids are used for summing up and representing voluminous multidimensional data in a cross-tabular format. The data summery can be easily and quickly sorted, grouped, or filtered. Such data can include sums, averages, and other statistics. End-users are enabled to modify the pivot table layout through drag-and-drop operations, according to their needs.
+Pivot Grids are used for summing up and representing voluminous multidimensional data in a cross-tabular format. The data summary can be easily and quickly sorted, grouped, or filtered. Such data can include sums, averages, and other statistics. End-users are enabled to modify the pivot table layout through drag-and-drop operations, according to their needs.
 
 ## What is Angular Pivot Grid? 
 
-The Angular Pivot Grid component presents data in a pivot table and helps performing complex analysis on the supplied data set. This sophisticated Pivot Grid control is used for organizing, summarizing, and filtering large volumes of data which is later displayed in a cross-table format. Key features of an Angular Pivot Grid are row dimensions, column dimensions, aggregations, and filters.
+The Angular Pivot Grid component presents data in a pivot table and helps perform complex analysis on the supplied data set. This sophisticated Pivot Grid control is used for organizing, summarizing, and filtering large volumes of data which is later displayed in a cross-table format. Key features of an Angular Pivot Grid are row dimensions, column dimensions, aggregations, and filters.
 
 The `IgxPivotGridComponent` gives the ability to users to configure and display their data in a multi-dimensional pivot table structure.
 The rows and columns represent distinct data groups, and the data cell values represent aggregations. This allows complex data analysis based on a simple flat data set. The `IgxPivotGridComponent` is a feature-rich pivot table that provides easy configuration of the different dimensions and values as well as additional data operations on them like filtering and sorting.
@@ -97,7 +97,7 @@ It also allows for further customization via the second option parameter in orde
 
 ### Values configuration
 
-A value configuration requires a `member` that matches a field from the provided `data`, or it can define a custom `aggregator` function for more complex custom scenarios. Out of the box, there are 4 predefined aggregations that can be used depending on the data type of the data field:
+A value configuration requires a `member` that matches a field from the provided `data`, or it can define either an `aggregatorName` or custom `aggregator` function for more complex scenarios. Out of the box, there are 4 predefined aggregations that can be used depending on the data type of the data field:
 
 - `IgxPivotNumericAggregate` - for numeric fields.
     Contains the following aggregation functions: `SUM`, `AVG`, `MIN`, `MAX`, `COUNT`.
@@ -151,6 +151,8 @@ public static totalMax: PivotAggregation = (members, data: any) => {
 ```
 The pivot value also provides a `displayName` property. It can be used to display a custom name for this value in the column header.
 
+> If you define both `aggregatorName` and `aggregator` function, `aggregatorName` takes precedence. If none is set then an error is thrown.
+
 ### Enable property
 
 `IPivotConfiguration` is the interface that describes the current state of the `IgxPivotGrid` component. With it the developer can declare fields of the data as `rows`, `columns`, `filters` or `values`. The configuration allows enabling or disabling each of these elements separately. Only enabled elements are included in the current state of the pivot grid. The `IgxPivotDataSelector` component utilizes the same configuration and shows a list of all elements - enabled and disabled. For each of them there is a checkbox in the appropriate state. End-users can easily tweak the pivot state by toggling the different elements using these checkboxes.
@@ -187,7 +189,15 @@ Let's take a look at a basic pivot configuration:
                     label: 'Sum'
                 },
                 enabled: true
-
+            },
+            {
+                member: 'AmountOfSale',
+                aggregate: {
+                    aggregatorName: 'SUM',
+                    key: 'sum',
+                    label: 'Sum'
+                },
+                enabled: true
             }
         ]
     };
@@ -237,7 +247,7 @@ Resulting in the following view, which groups the Product Categories unique colu
 
 ## API References
 * [IgxPivotGridComponent]({environment:angularApiUrl}/classes/igxpivotgridcomponent.html)
-* [IgxPivotDataSelector]({environment:angularApiUrl}/classes/igxpivotdataselector.html)
+* [IgxPivotDataSelectorComponent]({environment:angularApiUrl}/classes/igxpivotdataselectorcomponent.html)
 
 
 ## Additional Resources

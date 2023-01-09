@@ -123,7 +123,7 @@
     - name: Remote Data Operations
       href: grid/remote-data-operations.md
       new: false
-    - name: Column Data types
+    - name: Column Data Types
       href: grid/column-types.md
       new: false
     - name: Editing
@@ -924,6 +924,9 @@
     - name: Virtual Drop Down
       href: drop-down-virtual.md
       new: false
+    - name: Multi-select Hierarchical Drop Down
+      href: drop-down-hierarchical-selection.md
+      new: true
 - name: Select
   href: select.md
   new: false
