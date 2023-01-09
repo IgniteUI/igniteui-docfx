@@ -26,6 +26,7 @@ _language: ja
 
 ...
 import { IgxChipsModule } from 'igniteui-angular';
+// import { IgxChipsModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -115,6 +116,7 @@ public chipRemoved(event: IBaseChipEventArgs) {
 
 ```ts
 import { IBaseChipEventArgs } from 'igniteui-angular';
+// import { IBaseChipEventArgs } from '@infragistics/igniteui-angular'; for licensed package
 ...
 public chipList = [
     {
@@ -209,6 +211,7 @@ public chipRemoved(event: IBaseChipEventArgs) {
 `remove icon` をカスタマイズするには、[`removeIcon`]({environment:angularApiUrl}/classes/igxchipcomponent.html#removeicon) 入力を使用します。`TemplateRef` 型の値を取得してデフォルトの削除アイコンの代わりに描画します。
 
 <img class="responsive-img"  src="../images/chip/remove_icons.jpg" />
+
 
 ```html
 <igx-chip *ngFor="let chip of chipList" [removable]="true" [removeIcon]="myRemoveIcon">
@@ -326,6 +329,8 @@ public chipsOrderChanged(event: IChipsAreaReorderEventArgs) {
 
 ```ts
 import { IBaseChipEventArgs, IChipsAreaReorderEventArgs } from 'igniteui-angular';
+// import { IBaseChipEventArgs, IChipsAreaReorderEventArgs } from '@infragistics/igniteui-angular'; for licensed package
+
 ...
 public chipList = [
     {

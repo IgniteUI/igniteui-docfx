@@ -37,6 +37,7 @@ Ignite UI for Angular については、[*はじめに*](general/getting-started
 
 ...
 import { IgxStepperModule } from 'igniteui-angular';
+// import { IgxStepperModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -255,7 +256,7 @@ Angular Stepper のアニメーションにより、エンドユーザーは定�
 ## キーボード ナビゲーション
 
 Angular Material Stepper は、さまざまなキーボード操作をエンドユーザーに提供します。この機能はデフォルトで有効になっており、エンドユーザーは簡単にステップを移動できます。 
-[IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponent.html) ナビゲーションは [W3 アクセシビリティ標準](https://www.w3.org/TR/wai-aria-practices-1.1/#tabpanel)に準拠しており、便利に使用できます。
+[IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponent.html) ナビゲーションは [W3 アクセシビリティ標準](https://www.w3.org/WAI/ARIA/apg/example-index/tabs/tabs-manual.html#accessibilityfeatures)に準拠しており、便利に使用できます。
 
 **キーの組み合わせ**
 

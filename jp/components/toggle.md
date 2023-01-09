@@ -29,6 +29,7 @@ Toggle コンポーネントを初期化にするには、まず `IgxToggleModul
 
 ...
 import { IgxToggleModule } from 'igniteui-angular';
+// import { IgxToggleModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -44,7 +45,7 @@ export class AppModule {}
 
 ```typescript
 import { IgxToggleDirective } from 'igniteui-angular'
-
+// import { IgxToggleDirective } from '@infragistics/igniteui-angular'; for licensed package
 ...
 
 export class Class {
@@ -81,7 +82,7 @@ export class Class {
 `igxToggle` ディレクティブは  [`IgxOverlayService`]({environment:angularApiUrl}/classes/igxoverlayservice.html) プロバイダーを使用します。`open`、`close`、`toggle` メソッドは、コンテンツの表示方法を制御するオプションのオーバーレイ設定を受け取ります。省略した場合は、上のサンプルのようにデフォルトのオーバーレイ設定が使用されます。
 
 >[!NOTE]
-> デフォルトで、[`closeOnOutsideClick`]({environment:angularApiUrl}/interfaces/overlaysettings.html#closeonoutsideclick) プロパティは `true`に設定されています。この機能を無効にするには、プロパティを `false` に設定する必要があります。さらに、[`closeOnEsc`]({environment:angularApiUrl}/interfaces/overlaysettings.html#closeonesc) プロパティのデフォルトの設定は `false` であるため、利用するには、`true` に設定する必要があります。
+> デフォルトで、[`closeOnOutsideClick`]({environment:angularApiUrl}/interfaces/overlaysettings.html#closeonoutsideclick) プロパティは `true`に設定されています。この機能を無効にするには、プロパティを `false` に設定する必要があります。さらに、[`closeOnEscape`]({environment:angularApiUrl}/interfaces/overlaysettings.html#closeonescape) プロパティのデフォルトの設定は `false` であるため、利用するには、`true` に設定する必要があります。
 
 ```typescript
 // template.component.ts
@@ -145,7 +146,7 @@ export class Class {
 
 
 >[!NOTE]
-> デフォルトで、`IgxToggleActionDirective` はホスト要素を [`closeOnOutsideClick`]({environment:angularApiUrl}/interfaces/overlaysettings.html#closeonoutsideclick) プロパティから除外します。したがって、ホスト要素をクリックしてもイベントは発生しません。 さらに、このディレクティブはホスト要素をオーバーレイ設定の [`target`]({environment:angularApiUrl}/interfaces/overlaysettings.html#target) として設定します。
+> デフォルトで、`IgxToggleActionDirective` はホスト要素を [`closeOnOutsideClick`]({environment:angularApiUrl}/interfaces/overlaysettings.html#closeonoutsideclick) プロパティから除外します。したがって、ホスト要素をクリックしてもイベントは発生しません。さらに、このディレクティブはホスト要素をオーバーレイ設定の [`target`]({environment:angularApiUrl}/interfaces/overlaysettings.html#target) として設定します。
 
 ### 自動トグル サービス プロバイダー
 

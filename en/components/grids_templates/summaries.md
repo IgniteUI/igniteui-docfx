@@ -173,6 +173,7 @@ If these functions do not fulfill your requirements you can provide a custom sum
 @@if (igxName !== 'IgxHierarchicalGrid') {
 ```typescript
 import { IgxSummaryResult, IgxSummaryOperand, IgxNumberSummaryOperand, IgxDateSummaryOperand } from 'igniteui-angular';
+// import { IgxSummaryResult, IgxSummaryOperand, IgxNumberSummaryOperand, IgxDateSummaryOperand } from '@infragistics/igniteui-angular'; for licensed package
 
 class MySummary extends IgxNumberSummaryOperand {
     constructor() {
@@ -194,6 +195,7 @@ class MySummary extends IgxNumberSummaryOperand {
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```typescript
 import { IgxRowIslandComponent, IgxHierarchicalGridComponent, IgxNumberSummaryOperand, IgxSummaryResult } from 'igniteui-angular';
+// import { IgxRowIslandComponent, IgxHierarchicalGridComponent, IgxNumberSummaryOperand, IgxSummaryResult } from '@infragistics/igniteui-angular'; for licensed package
 
 class MySummary extends IgxNumberSummaryOperand {
     constructor() {
@@ -465,6 +467,57 @@ The [`showSummaryOnCollapse`]({environment:angularApiUrl}/classes/@@igTypeDoc.ht
 }
 <div class="divider--half"></div>
 
+## Exporting Summaries
+
+There is an [`exportSummaries`]({environment:angularApiUrl}/classes/IgxExcelExporterOptions.html#exportSummaries) option in `IgxExcelExporterOptions` that specifies whether the exported data should include the grid's summaries. Default `exportSummaries` value is **false**.
+
+The [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/IgxExcelExporterService.html) will export the default summaries for all column types as their equivalent excel functions so they will continue working properly when the sheet is modified. Try it for yourself in the example below:
+
+@@if (igxName === 'IgxGrid') {
+<code-view style="height:770px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/grid/grid-summary-export" >
+</code-view>
+}
+
+@@if (igxName === 'IgxTreeGrid') {
+<code-view style="height:780px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-summary-export" >
+</code-view>
+}
+
+
+@@if (igxName === 'IgxHierarchicalGrid') {
+<code-view style="height:760px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-summary-export" >
+</code-view>
+}
+
+The exported file includes a hidden column that holds the level of each `DataRecord` in the sheet. This level is used in the summaries to filter out the cells that need to be included in the summary function.
+
+In the table below, you can find the corresponding Excel formula for each of the default summaries.
+
+Data Type | Function | Excel Function |
+|:--------|:--------:|:---------------|
+`string`, `boolean` | count | ="Count: "&COUNTIF(start:end, recordLevel) |
+`number`, `currency`, `percent` | count | ="Count: "&COUNTIF(start:end, recordLevel) |
+|| min| ="Min: "&MIN(IF(start:end=recordLevel, rangeStart:rangeEnd)) |
+|| max | ="Max: "&MAX(IF(start:end=recordLevel, rangeStart:rangeEnd)) |
+|| average | ="Avg: "&AVERAGEIF(start:end, recordLevel, rangeStart:rangeEnd) |
+|| sum | ="Sum: "&SUMIF(start:end, recordLevel, rangeStart:rangeEnd) |
+`date` | count | ="Count: "&COUNTIF(start:end, recordLevel) |
+|| earliest | ="Earliest: "& TEXT(MIN(IF(start:end=recordLevel, rangeStart:rangeEnd)), format) |
+|| latest | ="Latest: "&TEXT(MAX(IF(start:end=recordLevel, rangeStart:rangeEnd)), format) |
+
+### Known Limitations
+
+|Limitation|Description|
+|--- |--- |
+| Exporting custom summaries | Custom summaries will be exported as strings instead of Excel functions. |
+| Exporting templated summaries | Templated summaries are not supported and will be exported as the default ones. |
+
 ## Keyboard Navigation
 
 The summary rows can be navigated with the following keyboard interactions:
@@ -475,8 +528,6 @@ The summary rows can be navigated with the following keyboard interactions:
 - <kbd>RIGHT</kbd> - navigates one cell right
 - <kbd>CTRL</kbd> + <kbd>LEFT</kbd> or <kbd>HOME</kbd> - navigates to the leftmost cell
 - <kbd>CTRL</kbd> + <kbd>RIGHT</kbd> or <kbd>END</kbd> - navigates to the rightmost cell
-- <kbd>TAB</kbd> - sequentially navigates to the next cell on the row and if the last cell is reached navigates to the next row
-- <kbd>SHIFT</kbd> + <kbd>TAB</kbd> - sequentially navigates to the previous cell on the row and if the first cell is reached navigates to the previous row
 
 ## Styling
 

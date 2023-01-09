@@ -27,6 +27,8 @@ To get started with the Ignite UI for Angular TextHighlight directive you need t
 ...
 import { IgxButtonModule, IgxInputGroupModule,
         IgxIconModule, IgxRippleModule, IgxTextHighlightModule } from 'igniteui-angular';
+// import { IgxButtonModule, IgxInputGroupModule,
+//        IgxIconModule, IgxRippleModule, IgxTextHighlightModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...

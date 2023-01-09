@@ -25,6 +25,7 @@ Linear Progress Bar Indicator コンポーネントを初期化するには、**
 
 ...
 import { IgxProgressBarModule } from 'igniteui-angular';
+// import { IgxProgressBarModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -131,6 +132,7 @@ export class AppModule {}
 
 ```typescript
 import { ..., IgxTextAlign } from 'igniteui-angular';
+// import { ..., IgxTextAlign } from '@infragistics/igniteui-angular'; for licensed package
 ...
 
 public positionCenter: IgxTextAlign = IgxTextAlign.CENTER;

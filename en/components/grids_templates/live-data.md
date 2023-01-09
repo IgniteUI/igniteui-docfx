@@ -25,7 +25,7 @@ Feed the same data into the [Line Chart](../charts/types/line-chart.md) to exper
 
 <code-view style="height:700px"
            data-demos-base-url="{environment:lobDemosBaseUrl}"
-           iframe-src="{environment:lobDemosBaseUrl}/grid-finjs" alt="Angular Live-data Update Example">
+           iframe-src="{environment:lobDemosBaseUrl}/grid-finjs?theme-switch=false" alt="Angular Live-data Update Example">
 </code-view>
 
 

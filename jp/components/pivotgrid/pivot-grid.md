@@ -27,7 +27,7 @@ Angular ピボット グリッド コンポーネントは、ピボット テー
 
 ## Angular ピボット グリッドの使用を開始
 
-Angular ピボット グリッド コンポーネントは、[`pivotConfiguration`](({environment:angularApiUrl}/classes/igxgridcomponent.html#pivotConfiguration)) プロパティを介して構成できます。
+Angular ピボット グリッド コンポーネントは、[`pivotConfiguration`](({environment:angularApiUrl}/classes/igxpivotgridcomponent.html#pivotConfiguration)) プロパティを介して構成できます。
 
 ```html
 <igx-pivot-grid #grid1 [data]="data" [pivotConfiguration]="pivotConfigHierarchy">
@@ -98,7 +98,7 @@ public pivotConfigHierarchy: IPivotConfiguration = {
 
 ### 値の構成
 
-値の構成には、提供された `data` のフィールドに一致する `member` が必要です。または、より複雑なカスタム シナリオのカスタム `aggregator`関数を定義できます。データ フィールドのデータ型に応じて使用できる 4 つの事前定義された集計があります:
+値の構成には、提供された `data` のフィールドに一致する `member` が必要です。または、より複雑なカスタム シナリオでは、`aggregatorName` またはカスタムの `aggregator` 関数のいずれかを定義できます。データ フィールドのデータ型に応じて使用できる 4 つの事前定義された集計があります:
 
 - `IgxPivotNumericAggregate` - 数値フィールド用。
     次の集計関数が含まれています: `SUM`、`AVG`、`MIN`、`MAX`、`COUNT`。
@@ -152,6 +152,8 @@ public static totalMax: PivotAggregation = (members, data: any) => {
 ```
 ピボット値は、`displayName` プロパティも提供します。この値のカスタム名を列ヘッダーに表示するために使用できます。
 
+> `aggregatorName` と `aggregator` 関数の両方を定義すると、`aggregatorName` が優先されます。何も設定されていない場合、エラーがスローされます。
+
 ### プロパティを有効にする
 
 `IPivotConfiguration` は、`IgxPivotGrid` コンポーネントの現在の状態を記述するインターフェースです。これを使用すると、開発者はデータのフィールドを `rows`、`columns`、`filters`、または `values` として宣言できます。この構成では、これらの各要素を個別に有効または無効にすることができます。ピボット グリッドの現在の状態には、有効な要素のみが含まれます。`IgxPivotDataSelector` コンポーネントは同じ構成を利用し、すべての有効と無効の要素のリストを表示します。それぞれについて、適切な状態のチェックボックスがあります。エンドユーザーは、これらのチェックボックスを使用してさまざまな要素を切り替えることにより、ピボット状態を簡単に調整できます。
@@ -188,13 +190,21 @@ public static totalMax: PivotAggregation = (members, data: any) => {
                     label: 'Sum'
                 },
                 enabled: true
-
+            },
+            {
+                member: 'AmountOfSale',
+                aggregate: {
+                    aggregatorName: 'SUM',
+                    key: 'sum',
+                    label: 'Sum'
+                },
+                enabled: true
             }
         ]
     };
 ```
 
-この構成では、各ディメンション グループの値を合計する 1 行、 1 列、および 1 つの集計が定義されます。メンバーは、提供されたデータ ソースで使用可能なフィールドと一致します。
+この構成では、各ディメンション グループの値を合計する 1 行、1 列、および 1 つの集計が定義されます。メンバーは、提供されたデータ ソースで使用可能なフィールドと一致します。
 
 ```typescript
 public data = [
@@ -237,7 +247,7 @@ public data = [
 
 ## API リファレンス
 * [IgxPivotGridComponent]({environment:angularApiUrl}/classes/igxpivotgridcomponent.html)
-* [IgxPivotDataSelector]({environment:angularApiUrl}/classes/igxpivotdataselector.html)
+* [IgxPivotDataSelectorComponent]({environment:angularApiUrl}/classes/igxpivotdataselectorcomponent.html)
 
 
 ## その他のリソース

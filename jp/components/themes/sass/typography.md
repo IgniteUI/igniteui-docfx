@@ -110,10 +110,11 @@ type-scale と同様のタイプ フェイスの 4 つの変数を公開しま�
 
 ```scss
 .my-fancy-h1 {
-    @include type-style($my-type-scale, 'h1') {
+    @include type-style('h1') {
         color: royalblue;
     }
 }
+```
 ```
 
 上記のコードは、`royalblue` カラーに設定した `color` プロパティと `$my-type-scale` の `h1` スケール カテゴリのすべてのスタイル ルールを含むクラス スタイル セクター `.my-fancy-h1` を生成します。任意の要素のクラスを `.my-fancy-h1` に設定した場合、その他の `h1` 要素と同様の外観ですが色は `royalblue` になります。
@@ -178,27 +179,27 @@ $my-type-scale:type-scale($h5: $my-h5);
 
 ## CSS クラス
 
-タイプ スケール カテゴリに基づいてすべてのコンポーネントにテキスト スタイルの追加する他、デフォルトの h1-h6 と p 要素のスタイルも設定します。これにより、スタイル設定からセマンティクスを分離できます。たとえば、`typography` の使用時に `h1` タグにデフォルトのスタイル設定がある場合も `igx-typography__h3` クラスを使用して `h3` に変更できます。
+タイプ スケール カテゴリに基づいてすべてのコンポーネントにテキスト スタイルの追加する他、デフォルトの h1-h6 と p 要素のスタイルも設定します。これにより、スタイル設定からセマンティクスを分離できます。たとえば、`typography` の使用時に `h1` タグにデフォルトのスタイル設定がある場合も `ig-typography__h3` クラスを使用して `h3` に変更できます。
 
 ```html
-<h1 class="igx-typography__h3">Some text</h1>
+<h1 class="ig-typography__h3">Some text</h1>
 ```
 
 以下は、デフォルトで提供される全 CSS クラス一覧です。
 
-- `igx-typography__h1`
-- `igx-typography__h2`
-- `igx-typography__h3`
-- `igx-typography__h4`
-- `igx-typography__h5`
-- `igx-typography__h6`
-- `igx-typography__subtitle-1`
-- `igx-typography__subtitle-2`
-- `igx-typography__body-1`
-- `igx-typography__body-2`
-- `igx-typography__button`
-- `igx-typography__caption`
-- `igx-typography__overline`
+- `ig-typography__h1`
+- `ig-typography__h2`
+- `ig-typography__h3`
+- `ig-typography__h4`
+- `ig-typography__h5`
+- `ig-typography__h6`
+- `ig-typography__subtitle-1`
+- `ig-typography__subtitle-2`
+- `ig-typography__body-1`
+- `ig-typography__body-2`
+- `ig-typography__button`
+- `ig-typography__caption`
+- `ig-typography__overline`
 
 <div class="divider"></div>
 

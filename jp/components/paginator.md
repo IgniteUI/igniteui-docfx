@@ -1,15 +1,20 @@
 ---
-title: Angular ページング | Table Pagination | インフラジスティックス
+title: Angular Paginator の例 – Ignite UI for Angular
 _description: Angular ページネーションを設定し、Ignite UI を使用して Angular Material テーブルにカスタム ページを作成し、要求されたページのデータをさまざまな Angular イベントで取得。
 _keywords: ページネーター, igniteui for angular, インフラジスティックス
 _language: ja
 ---
 
-# ページネーター
-ページネーションを使用すると、データセットを複数の同様のページに分割できます。このページネーション方法は、特に大きなデータセットや無限スクロール ユーザー インターフェイスに適しています。ページネーション コンポーネントを使用すると、ページの範囲から特定のページを選択し、各ページに表示するレコード数を決定できます。
+# Angular Paginator (ページネーター) の概要
+Angular のページネーションは、プラットフォームが巨大なデータ セットを扱うときに開発者に提供する最適な機能の 1 つです。Angular Paginator の目的は、大量のデータ コレクションを複数のページに分割して配布することです。これにより、優れた UX を提供しながら、ページ化された情報と項目を比較しやすく理解しやすい方法で表示します。 
+
+通常、Angular Paginator コンポーネントはページ番号または合計レコードを表示します。
+
+Ignite UI for Angular Pagination を使用すると、データセットを複数の同様のページに分割できます。このページネーション方法は、特に大きなデータセットや無限スクロール ユーザー インターフェイスに適しています。Angular の Pagination コンポーネントを使用すると、ページの範囲から特定のページを選択し、各ページに表示するレコード数を決定できます。
 
 ## Angular Paginator の例
 
+以下の Angular Pagination の例は、ユーザーがさまざまな項目を含む 4 つのページをナビゲートし、ドロップダウン メニューから表示する項目の数を選択する方法を示す Paginator テンプレートを示しています。
 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:demosBaseUrl}"
@@ -18,13 +23,14 @@ _language: ja
 
 <div class="divider--half"></div>
 
-## 使用方法
+## Ignite UI で Angular Paginator を使用する方法
 
 各ページネーター インスタンスには以下が必要です。
 
 - ページごとの項目数 (デフォルト値は 15 です)。
 - ページングされている項目の合計数
-また、デフォルトでは、ページネーター コンポーネントが初期化されると現在のページは 0 に設定されますが、**page** プロパティで変更できます。
+
+また、デフォルトでは、Angular Paginator コンポーネントが初期化されると現在のページは 0 に設定されますが、**page** プロパティで変更できます。
 
 ```html
 <igx-paginator #paginator [totalRecords]="120" [perPage]="25">
@@ -71,14 +77,14 @@ _language: ja
 | overlaySettings | カスタム OverlaySettings を取得/設定します。 |
 
 | 出力          |      説明                           |
-|-----------------|:------------------------------------------:|
+|----------------|:------------------------------------------:|
 | perPageChange   | ページネーターの `perPage` プロパティ値が変更されたときに発生します。 |
 | pageChange      | 現在のページが変更されたときに発生されます。 |
 | paging          | ページングが実行さる前に発生されます。キャンセル可能。|
 | pagingDone      | ページングが実行された後に発生されます。 |
 
 
-## ローカライズ
+## Angular Paginator のローカリゼーション
 最小限のコードで、ページング コンポーネントのすべての文字列を簡単にローカライズできます。特定のページング インスタンスをローカライズするには、[resourceStrings]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#resourceStrings) 入力プロパティを使用します。
 
 **手順 1** - `IPaginatorResourceStrings` インターフェースと [changei18n]({environment:angularApiUrl}/#changei18n) 関数をインポートします:

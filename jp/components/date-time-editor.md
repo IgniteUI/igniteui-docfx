@@ -27,6 +27,7 @@ Ignite UI for Angular Date Time ディレクティブを使用するにはまず
 
 ...
 import { IgxDateTimeEditorModule } from 'igniteui-angular';
+// import { IgxDateTimeEditorModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -149,7 +150,7 @@ public maxDate = new Date(2020, 11, 1);
 さらに、`spinDelta` はタイプ [`DatePartDeltas`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html) の入力プロパティであり、各日時セグメントに異なるデルタを適用するために使用できます。これは、キーボードで回転するとき、および [`increment`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#increment) メソッドと [`decrement`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#decrement) メソッドで回転するときに適用されます。ただし、`spinDelta` よりも優先されるため `delta` パラメーターが指定されていない場合に限ります。
 
 ### Angular フォーム
-Date Time Editor ディレクティブは、コア FormsModule [NgModel](https://angular.io/api/forms/NgModel) と [ReactiveFormsModule](https://angular.io/api/forms/ReactiveFormsModule) (FormControl、FormGroup など) のすべてのフォーム ディレクティブをサポートします。これには、[フォーム バリデーター](https://angular.io/api/forms/Validators)機能も含まれます。次の例は、テンプレート駆動型フォームで `required` バリデーターを使用する方法を示しています。
+Date Time Editor ディレクティブは、コア FormsModule [NgModel](https://angular.io/api/forms/NgModel) と [ReactiveFormsModule](https://angular.io/api/forms/ReactiveFormsModule) (FormControl、FormGroup など) のすべてのフォーム ディレクティブをサポートします。これには、[フォーム バリデータ](https://angular.io/api/forms/Validators)機能も含まれます。次の例は、テンプレート駆動型フォームで `required` バリデータを使用する方法を示しています。
 
 > 注: 必要に応じて、`validationFailed` イベントを処理し、利用可能な引数の `newValue` プロパティを変更して有効な状態に戻すことができます。
 

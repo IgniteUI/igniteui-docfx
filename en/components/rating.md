@@ -1,13 +1,18 @@
 ---
-title: Angular Rating | Rating | Ignite UI | Infragistics
-_description: With Ignite UI Angular Rating, allows users to view and provide feedback using unicode symbols, svg, or icons.
+title: Angular Star Rating Component – Ignite UI for Angular
+_description: With Angular Star Rating Component, users can view and provide feedback quickly. You can use the rating component in any angular app and angular forms. Try it Now
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Rating component, Angular Rating control
 ---
-# Rating
+# Angular Star Rating Overview
 
-The Ignite UI Rating component allows users to view and provide feedback.
+Rating in Angular represents a widget enabling users to quickly provide feedback and evaluate a product or a service on a web page by using a star rating system. Simple to use, the component lets developers configure the size and the number of the displayed star rating items.
+
+The Ignite UI Angular Star Rating component can be easily installed from the igniteui-webcomponents package. It provides an intuitive rating experience for end-users, allowing them to view products/services and rate them (usually having the option to choose from 0 to 5 stars in the most common scenarios).
+
 
 ## Angular Rating Example
+
+This Angular Star Rating example demonstrates how you can use Ignite UI Angular to build simple five-star rating widget, comparing and displaying the score of different products.
 
 <code-view style="height: 550px"
            data-demos-base-url="{environment:demosBaseUrl}"
@@ -18,7 +23,7 @@ The Ignite UI Rating component allows users to view and provide feedback.
 <div class="divider--half"></div>
 
 
-## Basic Usage
+## Getting Started with Ignite UI for Angular Star Rating Component
 
 Ignite UI Rating is a standard [web component](https://developer.mozilla.org/en-US/docs/Web/Web_Components) and as such can be used in an Angular application.
 
@@ -55,12 +60,13 @@ With these you can now add the Rating component in an Angular component template
 <igc-rating value="ratingVal" min="1" max="5" (igcChange)="ratingChanged($event);"></igc-rating>
 ```
 
-## Using Rating in Angular Forms
+## Using Angular Star Rating in Forms
 
 In Angular forms, components often need to be able to bind their values with `ngModel` or use `formControl` which requires an implementation of Angular's `ControlValueAccessor` interface. Ignite UI for Angular package provides such implementation in the form of a directive that uses an element selector to attach to supported web components. Currently `IgcRating` is the only component that it supports. To use the directive you just need to import `IgcFormsModule` from the library.
 
 ```typescript
 import { IgcFormsModule } from 'igniteui-angular';
+// import { IgcFormsModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     imports: [

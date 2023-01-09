@@ -123,7 +123,7 @@
     - name: Remote Data Operations
       href: grid/remote-data-operations.md
       new: false
-    - name: Column Data types
+    - name: Column Data Types
       href: grid/column-types.md
       new: false
     - name: Editing
@@ -143,6 +143,9 @@
           href: grid/batch-editing.md
           updated: true
           new: false
+        - name: Validation
+          href: grid/validation.md
+          new: true
     - name: Row Drag
       href: grid/row-drag.md
       updated: true
@@ -185,6 +188,7 @@
       updated: false
     - name: Column Resizing
       href: grid/column-resizing.md
+      updated: true
       new: false
     - name: Column Hiding
       href: grid/column-hiding.md
@@ -291,6 +295,9 @@
           href: treegrid/batch-editing.md
           updated: true
           new: false
+        - name: Validation
+          href: treegrid/validation.md
+          new: true
     - name: Row Drag
       href: treegrid/row-drag.md
       new: false
@@ -329,6 +336,7 @@
       updated: false
     - name: Column Resizing
       href: treegrid/column-resizing.md
+      updated: true
       new: false
     - name: Column Hiding
       href: treegrid/column-hiding.md
@@ -425,6 +433,9 @@
           href: hierarchicalgrid/batch-editing.md
           updated: true
           new: false
+        - name: Validation
+          href: hierarchicalgrid/validation.md
+          new: true
     - name: Export to Excel
       href: hierarchicalGrid/export-excel.md
       new: false
@@ -466,6 +477,7 @@
       new: false
     - name: Column Resizing
       href: hierarchicalgrid/column-resizing.md
+      updated: true
       new: false
     - name: Column Hiding
       href: hierarchicalgrid/column-hiding.md
@@ -522,11 +534,17 @@
   href: pivotgrid/pivot-grid.md
   new: true
   items:
+    - name: Export to Excel
+      href: pivotgrid/export-excel.md
+      new: true
     - name: Pivot Grid Features
       href: pivotgrid/pivot-grid-features.md
       new: true
     - name: Pivot Grid Remote Operations
       href: pivotgrid/pivot-grid-custom.md
+      new: true
+    - name: State Persistence
+      href: pivotgrid/state-persistence.md
       new: true
 - name: Tree
   href: tree.md
@@ -645,7 +663,7 @@
   new: false
 - name: Chart Features
   href: charts/chart-features.md
-  new: false
+  updated: true
   items:
     - name: Axis Gridlines
       href: charts/features/chart-axis-gridlines.md
@@ -662,15 +680,18 @@
     - name: Chart Annotations
       href: charts/features/chart-annotations.md
       new: false
+    - name: Chart Data Aggregations
+      href: charts/features/chart-data-aggregations.md
+      new: true
     - name: Chart Data Legend
       href: charts/features/chart-data-legend.md
-      new: true
+      new: false
     - name: Chart Data Tooltip
       href: charts/features/chart-data-tooltip.md
-      new: true
+      new: false
     - name: Chart Highlighting
       href: charts/features/chart-highlighting.md
-      updated: true
+      new: false
     - name: Chart Markers
       href: charts/features/chart-markers.md
       new: false
@@ -903,6 +924,9 @@
     - name: Virtual Drop Down
       href: drop-down-virtual.md
       new: false
+    - name: Multi-select Hierarchical Drop Down
+      href: drop-down-hierarchical-selection.md
+      new: true
 - name: Select
   href: select.md
   new: false
@@ -917,6 +941,9 @@
   href: checkbox.md
 - name: Switch
   href: switch.md
+- name: Query Builder
+  href: query-builder.md
+  new: true
 - name: Radio & Radio Group
   href: radio-button.md
   new: false

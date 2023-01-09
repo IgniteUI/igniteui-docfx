@@ -312,7 +312,7 @@ The developer can manually generate the necessary unique column values based on 
 ```
 
 ```typescript
-public columnValuesStrategy = (column: IgxColumnComponent,
+public columnValuesStrategy = (column: ColumnType,
                                columnExprTree: IFilteringExpressionsTree,
                                done: (uniqueValues: any[]) => void) => {
     // Get specific column data.
@@ -337,7 +337,7 @@ public columnValuesStrategy = (column: IgxColumnComponent,
 ```
 
 ```typescript
-public columnValuesStrategy = (column: IgxColumnComponent,
+public columnValuesStrategy = (column: ColumnType,
                                columnExprTree: IFilteringExpressionsTree,
                                done: (uniqueValues: any[]) => void) => {
     // Get specific column data.
@@ -367,7 +367,7 @@ public columnValuesStrategy = (column: IgxColumnComponent,
 ```
 
 ```typescript
-public singersColumnValuesStrategy = (column: IgxColumnComponent,
+public singersColumnValuesStrategy = (column: ColumnType,
                                       columnExprTree: IFilteringExpressionsTree,
                                       done: (uniqueValues: any[]) => void) => {
 // Get specific column data for the singers.
@@ -375,7 +375,7 @@ this.remoteValuesService.getColumnData(
     null, 'Singers', column, columnExprTree, uniqueValues => done(uniqueValues));
 }
 
-public albumsColumnValuesStrategy = (column: IgxColumnComponent,
+public albumsColumnValuesStrategy = (column: ColumnType,
                                      columnExprTree: IFilteringExpressionsTree,
                                      done: (uniqueValues: any[]) => void) => {
 // Get specific column data for the albums of a specific singer.

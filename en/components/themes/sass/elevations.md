@@ -14,19 +14,19 @@ Elevations in Ignite UI for Angular are declared as a map of 25 elements. Each e
 ## Usage
 The following section demonstrates how to create and retrieve custom elevations.
 
-### Creating Elevations
+### Configuring Elevations
+
+To change the colors used by the default elevation presets, you need to configure the elevations preset module.
 
 ```scss
 // Define the 3 elevation colors
-$color-1: rgb(153, 191, 170); // Umbra
-$color-2: rgb(92, 134, 141); // Penumbra
-$color-3: rgb(92, 61, 70); // Ambient
-
-$my-elevations: elevations(
-    $color-1,
-    $color-2,
-    $color-3
+@use 'igniteui-theming/sass/elevations/presets' as * with(
+    $color-1: rgb(153, 191, 170), // Umbra
+    $color-2: rgb(92, 134, 141), // Penumbra
+    $color-3: rgb(92, 61, 70) // Ambient
 );
+
+@include elevations($material-elevations);
 ```
 
 ### Retrieving Elevations
@@ -36,14 +36,11 @@ To retrieve a set of box-shadows from the elevations map you can pass up to two 
 If you want to retrieve the elevation from the default `$elevations` map, you can omit the first argument.
 
 ```scss
-// Returns elevation 1 shadows from $elevations
-$elevation-1: elevation($elevation: '1');
+// Returns elevation 1 shadows
+$elevation-1: elevation(1);
 
-// Returns elevation 1 shadows from $my-elevations
-$my-elevation-1: elevation(
-    $elevations: $my-elevations, 
-    $elevation: 1
-);
+// Returns elevation 1 shadows
+$my-elevation-1: elevation($name: 1);
 ```
 
 ### Passing Elevations to Themes
@@ -84,7 +81,7 @@ Since the `elevation` function returns a list of box shadows, you can use the re
 
 ```scss
 $card-theme: card-theme(
-    $resting-shadow: elevation($elevations, 10)
+    $resting-shadow: elevation(10)
 );
 
 @include card($card-theme);

@@ -34,6 +34,7 @@ The tree grid is exported as an `NgModule`, thus all you need to do in your appl
 // app.module.ts
 
 import { IgxTreeGridModule } from 'igniteui-angular';
+// import { IgxTreeGridModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     imports: [

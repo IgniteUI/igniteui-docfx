@@ -151,15 +151,16 @@ Ensure that whenever a change is made to the text content the appropriate status
 
 
 ## Fixing a bug  
-When fixing a bug you need to follow these guidelines:
 
-1.  Checkout a development branches from both `vNext`a and `master` as this is the version that is going to be used upon release (next version). `master` is the branch with the current state (current version). If the change/fix is applicable only to the ongoing release branch (vNext) there is no need to cherry-pick to master as the change/fix/feature will be pushed to master upon release.
+1.  Depending on where the bug/change/feature was found/is planned `the current version` or the `ongoing release version`, checkout a development branches from `vNext` or/and `master` branch. `vNext` is the version that is going to be used upon release (next version), and `master` is the branch with the current state (current version available on production). If the change/fix is applicable only to the ongoing release branch (`vNext`) there is no need to cherry-pick to `master` branch as the change/fix/feature will be pushed to `master` branch upon release.
 2. Run lint
 4. Pull request your changes and reference the issue. Use the enforced commit message format with applicable type, scope, etc.
 5. Don't forget to make the necessary status updates, as described in the workflow section.
 
-### Example workflow
-When bug fixes are applicable to both `vNext` and `master` branches the process will look like this:
+> Note: Cherry-pick to `master` branch only changes with **high priority**. There is no need to cherry-pick into `master` every bug fix/change from `vNext`> A regular mass merge PRs are going to be made from `vNext` into `master`.
+
+**Example workflow for a bug with high priority**
+The process will look like this:
 
 1.	Checkout new branch from `vNext`. For code example purposes let's say the new branch is called `fixing-bug-5423-vNext`.
 2.	Commit your changes to your `fixing-bug-5423-vNext` branch.
