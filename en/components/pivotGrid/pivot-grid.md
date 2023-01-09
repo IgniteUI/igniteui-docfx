@@ -6,11 +6,11 @@ _keywords: angular pivot grid, angular material pivot table, ignite ui for angul
 
 # Angular Pivot Grid Overview
 
-Pivot Grids are used for summing up and representing voluminous multidimensional data in a cross-tabular format. The data summery can be easily and quickly sorted, grouped, or filtered. Such data can include sums, averages, and other statistics. End-users are enabled to modify the pivot table layout through drag-and-drop operations, according to their needs.
+Pivot Grids are used for summing up and representing voluminous multidimensional data in a cross-tabular format. The data summary can be easily and quickly sorted, grouped, or filtered. Such data can include sums, averages, and other statistics. End-users are enabled to modify the pivot table layout through drag-and-drop operations, according to their needs.
 
 ## What is Angular Pivot Grid? 
 
-The Angular Pivot Grid component presents data in a pivot table and helps performing complex analysis on the supplied data set. This sophisticated Pivot Grid control is used for organizing, summarizing, and filtering large volumes of data which is later displayed in a cross-table format. Key features of an Angular Pivot Grid are row dimensions, column dimensions, aggregations, and filters.
+The Angular Pivot Grid component presents data in a pivot table and helps perform complex analysis on the supplied data set. This sophisticated Pivot Grid control is used for organizing, summarizing, and filtering large volumes of data which is later displayed in a cross-table format. Key features of an Angular Pivot Grid are row dimensions, column dimensions, aggregations, and filters.
 
 The `IgxPivotGridComponent` gives the ability to users to configure and display their data in a multi-dimensional pivot table structure.
 The rows and columns represent distinct data groups, and the data cell values represent aggregations. This allows complex data analysis based on a simple flat data set. The `IgxPivotGridComponent` is a feature-rich pivot table that provides easy configuration of the different dimensions and values as well as additional data operations on them like filtering and sorting.
@@ -151,7 +151,7 @@ public static totalMax: PivotAggregation = (members, data: any) => {
 ```
 The pivot value also provides a `displayName` property. It can be used to display a custom name for this value in the column header.
 
-> If you define both `aggregatorName` and `aggregator` function, `aggregatorName` takes precedent. If none is set then an error is thrown.
+> If you define both `aggregatorName` and `aggregator` function, `aggregatorName` takes precedence. If none is set then an error is thrown.
 
 ### Enable property
 

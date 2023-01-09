@@ -6,7 +6,7 @@ _language: ja
 ---
 
 # Input Group
-<p class="highlight">Ignite UI for Angular コントロールは、フォーム入力を処理するためのモデル駆動型のアプローチを提供するリアクティブ フォームで簡単に使用できます。</p>
+<p class="highlight">`IgxInputGroup` を使用すると、テキスト、アイコン、またはボタンを両側に追加して、入力と選択を拡張できます。</p>
 <div class="divider--half"></div>
 
 ## Angular Input Group の例
@@ -131,6 +131,268 @@ Ignite UI for Angular Input Group コンポーネントは、Angular 14 のデ�
 <code-view style="height:770px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/typed-form" >
+</code-view>
+
+## 検証
+次のサンプルは、[テンプレート駆動フォーム](https://angular.io/guide/forms)または[リアクティブ フォーム](https://angular.io/guide/reactive-forms)を使用する場合に入力検証を構成する方法を示しています。
+
+### テンプレート駆動フォーム
+テンプレート駆動のフォーム検証は、検証属性 (`required`、`minlength` など) を `input` 要素に追加することによって実現されます。
+
+```html
+<form>
+    <igx-input-group>
+        <label igxLabel for="username">Username</label>
+        <input igxInput name="username" type="text" required />
+    </igx-input-group>
+
+    <igx-input-group>
+        <label igxLabel for="email">Email</label>
+        <input igxInput name="email" type="email" required email />
+    </igx-input-group>
+
+    <igx-input-group>
+        <label igxLabel for="password">Password</label>
+        <input igxInput name="password" type="password" required minlength="8" />
+    </igx-input-group>
+
+    <button igxButton="raised" igxRipple type="submit">Submit</button>
+</form>
+```
+
+`required` 属性はラベルの横にアスタリスクを追加し、このフィールドに入力する必要があることを示します。さらに、`input` に `email` や `minlength` などの追加の検証が適用されている場合、これにより、[`igx-hint`]({environment:angularApiUrl}/classes/igxhintdirective.html) ディレクティブを介して追加要件をエンド ユーザーに通知します。
+
+次の例では、双方向データ バインディングを使用し、`ngModel` をローカル変数にエクスポートしてコントロールの状態を検査する方法を示します。
+
+```html
+<form>
+    ...
+    <igx-input-group>
+        <label igxLabel for="email">Email</label>
+        <input igxInput name="email" type="email" [(ngModel)]="user.email" #email="ngModel" required email />
+        <igx-hint *ngIf="email.errors?.email">Please enter a valid email</igx-hint>
+    </igx-input-group>
+
+    <igx-input-group>
+        <label igxLabel for="password">Password</label>
+        <input igxInput name="password" type="password"
+            [(ngModel)]="user.password" #password="ngModel" required minlength="8" />
+        <igx-hint *ngIf="password.errors?.minlength">Password should be at least 8 characters</igx-hint>
+    </igx-input-group>
+
+    <button igxButton="raised" igxRipple type="submit">Submit</button>
+</form>
+```
+
+フォーム コントロールのいずれかが無効な場合、ユーザーはフォームを送信できないようにする必要があります。これは、フォームの状態に基づいて送信ボタンを有効/無効にすることで実現できます。
+
+次の例は、`ngForm` をローカル変数にエクスポートしてフォームの状態を検査する方法を示しています。
+
+```html
+<form #registrationForm="ngForm">
+    <igx-input-group>
+        <label igxLabel for="email">Email</label>
+        <input igxInput name="email" type="email" [(ngModel)]="user.email" #email="ngModel" required email />
+        <igx-hint *ngIf="email.errors?.email">Please enter a valid email</igx-hint>
+    </igx-input-group>
+    ...
+
+    <button igxButton="raised" igxRipple type="submit" [disabled]="!registrationForm.valid">Submit</button>
+</form>
+```
+
+上記の構成の結果は、次のサンプルで確認できます。[Email] および [Password] フィールドに入力を開始すると、入力された値が無効な場合に [`igx-hint`]({environment:angularApiUrl}/classes/igxhintdirective.html) が表示されることがわかります。サンプルは、[`igx-icon`]({environment:angularApiUrl}/classes/igxiconcomponent.html) および [`igx-suffix`](#prefix-および-suffix) ディレクティブを使用してパスワードの可視性を切り替える方法も示します。
+
+<code-view style="height:480px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/data-entries/template-driven-form-validation" >
+</code-view>
+
+### リアクティブ フォーム
+コンポーネント クラスのフォーム コントロール モデルにバリデーター関数を直接追加することにより、リアクティブなフォーム検証が実現されます。コンポーネント クラスでコントロールを作成したら、テンプレートのフォーム コントロール要素に関連付ける必要があります。
+
+```ts
+public registrationForm: FormGroup<User>;
+
+constructor(fb: FormBuilder) {
+    this.registrationForm = fb.group({
+        username: ['', { nonNullable: true, validators: [Validators.required] }],
+        email: ['', { nonNullable: true, validators: [Validators.required, Validators.email] }],
+        password: ['', { nonNullable: true, validators: [Validators.required, Validators.minLength(8)] }]
+    });
+}
+```
+```html
+<form [formGroup]="registrationForm">
+    <igx-input-group>
+        <label igxLabel for="username">Username</label>
+        <input igxInput name="username" type="text" formControlName="username" />
+    </igx-input-group>
+
+    <igx-input-group>
+        <label igxLabel for="email">Email</label>
+        <input igxInput name="email" type="email" formControlName="email" />
+    </igx-input-group>
+
+    <igx-input-group>
+        <label igxLabel for="password">Password</label>
+        <input igxInput name="password" type="password" formControlName="password" />
+    </igx-input-group>
+
+    <button igxButton="raised" igxRipple type="submit">Submit</button>
+</form>
+```
+
+テンプレート駆動のフォーム サンプルと同様に、`email` や `minlength` などの追加の検証がある場合、[`igx-hint`]({environment:angularApiUrl}/classes/igxhintdirective.html) ディレクティブを使用して、検証が失敗した場合にエンド ユーザーに通知できます。
+
+次の例は、`get` メソッドを介してコントロールにアクセスし、その状態を検査する方法を示しています。また、`FormGroup` の状態を調べて、送信ボタンを有効/無効にする方法も示しています。
+
+```ts
+public get email() {
+    return this.registrationForm.get('email');
+}
+
+public get password() {
+    return this.registrationForm.get('password');
+}
+```
+```html
+<form [formGroup]="registrationForm">
+    ...
+    <igx-input-group>
+        <label igxLabel for="email">Email</label>
+        <input igxInput name="email" type="email" formControlName="email" />
+        <igx-hint *ngIf="email.errors?.email">Please enter a valid email</igx-hint>
+    </igx-input-group>
+
+    <igx-input-group>
+        <label igxLabel for="password">Password</label>
+        <input igxInput name="password" type="password" formControlName="password" />
+        <igx-hint *ngIf="password.errors?.minlength">Password should be at least 8 characters</igx-hint>
+    </igx-input-group>
+
+    <button igxButton="raised" igxRipple type="submit" [disabled]="!registrationForm.valid">Submit</button>
+</form>
+```
+
+上記の構成の結果は、次のサンプルで確認できます。テンプレート駆動のフォーム サンプルと同様に、[`igx-icon`]({environment:angularApiUrl}/classes/igxiconcomponent.html) および [`igx-suffix`](#prefix-および-suffix) ディレクティブを使用してパスワードの可視性を切り替える方法も示します。
+
+<code-view style="height:480px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/data-entries/reactive-form-validation" >
+</code-view>
+
+### カスタム バリデータ
+一部の入力フィールドではカスタム検証が必要な場合があり、これはカスタム バリデータを介して実現できます。値が無効な場合、バリデータは特定のエラー メッセージを表示するために使用できる一連のエラーを生成します。
+
+以下は、入力されたメール アドレスに定義済みの値が含まれているかどうかを検証し、値が発生する場所に基づいてさまざまなエラーを生成する、単純なカスタム リアクティブ フォーム バリデータの例です。
+
+```ts
+public registrationForm: FormGroup<User>;
+
+constructor(fb: FormBuilder) {
+    this.registrationForm = fb.group({
+        email: ['', {
+            nonNullable: true,
+            validators: [
+                Validators.required,
+                Validators.email,
+                this.emailValidator('infragistics')
+            ]
+        }],
+        ...
+    });
+}
+
+private emailValidator(val: string): ValidatorFn {
+    return (control: AbstractControl): ValidationErrors | null => {
+        const value = control.value?.toLowerCase();
+        const localPartRegex = new RegExp(`(?<=(${val})).*[@]`);
+        const domainRegex = new RegExp(`(?<=[@])(?=.*(${val}))`);
+        const returnObj: ValidatorErrors = {};
+
+        if (value && localPartRegex.test(value)) {
+            returnObj.localPart = true;
+        }
+        if (value && domainRegex.test(value)) {
+            returnObj.domain = true;
+        }
+
+        return returnObj;
+    }
+}
+```
+
+### クロス フィールド検証
+場合によっては、1 つのコントロールの検証が別のコントロールの値に依存することがあります。単一のカスタム バリデータで両方のコントロールを評価するには、共通の祖先コントロール (`FormGroup` など) で検証を実行する必要があります。バリデータは、`FormGroup` の `get` メソッドを呼び出して子コントロールを取得し、値を比較します。検証に失敗すると、`FormGroup` に対して一連のエラーを生成します。
+
+これにより、フォームの状態のみが無効に設定されます。コントロールの状態を設定するには、[`setErrors`](https://angular.io/api/forms/AbstractControl#seterrors) メソッドを使用して、生成したエラーを手動で追加します。次に、検証が成功すると、[`setValue`](https://angular.io/api/forms/AbstractControl#setvalue) メソッドを使用してエラーを削除できます。このメソッドは、指定された値に対してコントロールの検証を再実行します。
+
+以下の例は、[パスワード] に [メール アドレス] が含まれていてはならず、[パスワードの再入力] が [パスワード] と一致している必要があるクロスフィールドの検証を示しています。
+
+```ts
+private passwordValidator(): ValidatorFn {
+    return (control: AbstractControl): ValidationErrors | null => {
+        const email = control.get('email');
+        const password = control.get('password');
+        const repeatPassword = control.get('repeatPassword');
+        const returnObj: ValidatorErrors = {};
+
+        if (email.value
+            && password.value
+            && password.value.toLowerCase().includes(email.value)) {
+            password.setErrors({ ...password.errors, containsEmail: true });
+            returnObj.containsEmail = true;
+        }
+
+        if (password
+            && repeatPassword
+            && password.value !== repeatPassword.value) {
+            repeatPassword.setErrors({ ...repeatPassword.errors, mismatch: true });
+            returnObj.mismatch = true;
+        }
+
+        if (!returnObj.containsEmail && password.errors?.containsEmail) {
+            password.setValue(password.value);
+        }
+
+        if (!returnObj.mismatch && repeatPassword.errors?.mismatch) {
+            repeatPassword.setValue(repeatPassword.value);
+        }
+
+        return returnObj;
+    }
+}
+```
+
+カスタム バリデータを `FormGroup` に追加するには、フォームの作成時に 2 番目の引数として渡す必要があります。
+
+```ts
+public registrationForm: FormGroup<User>;
+
+constructor(fb: FormBuilder) {
+    this.registrationForm = fb.group({
+        email: ['', {
+            nonNullable: true,
+            validators: [
+                Validators.required,
+                Validators.email,
+                this.emailValidator('infragistics')
+            ]
+        }],
+        ...
+    },
+    {
+        validators: [this.passwordValidator()]
+    });
+}
+```
+
+以下のサンプルは、組み込みのバリデータを、前の例のカスタム `emailValidator` およびクロスフィールド `passwordValidator` と組み合わせて使用する方法を示しています。
+
+<code-view style="height:480px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/data-entries/reactive-form-custom-validation" >
 </code-view>
 
 ## スタイル設定

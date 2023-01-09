@@ -273,6 +273,17 @@ export class SimpleComboCascadingComponent implements OnInit {
 }
 ```
 
+## Angular Simple ComboBox リモート バインディング
+
+Ignite UI for Angular Simple ComboBox コンポーネントは、コンボボックスをリモート サービスにバインドし、要求に応じてデータを取得できる API を公開します。
+
+### デモ
+以下のサンプルは、[dataPreLoad]({environment:angularApiUrl}/classes/IgxSimpleComboComponent.html#dataPreLoad) プロパティを使用してリモート データの新しいチャンクをロードし、[ComboBox リモート バインディング](combo-remote.md)で説明されている手順に従うリモート バインディングを示しています。
+
+<code-view style="height: 400px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/lists/simple-combo-remote" alt="Angular Simple Combo リモート バインディングの例">
+</code-view>
 
 ## Angular Simple ComboBox のスタイル設定
 
