@@ -1,13 +1,17 @@
 ---
-title: Angular Button Component – Ignite UI for Angular | Infragistics
-_description: Enhance standard buttons with built-in text, images and more features through Ignite UI for Angular Buttons control.
+title: Angular Button Component – Ignite UI for Angular
+_description: Enhance standard buttons with built-in text, images and more features using Ignite UI for Angular Button component. Try it now.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Buttons components, Angular Buttons controls
 ---
 
-# Button
-<p class="highlight">The Ignite UI for Angular Button directive is intended to turn any button, span, div, or anchor element into a fully functional button.</p>
+# Angular Button Overview
+<p class="highlight">Angular Material Button directive is used for creating and adding actionable buttons to a web page/application. There are different Angular Button types that are easy to customize and include several built-in features. By default, Angular Material uses native <button> and <a> elements to deliver an accessible experience. 
+
+The Ignite UI for Angular Button directive is intended to turn any button, span, div, or anchor element into a fully functional button. You can use the following Angular Button types - Flat Button, Raised Button, Outlined Button, Icon Button, and Floating Action Button. With customizable colors, options to create themes and change the Angular Button Style, and enabling users to choose the button display density, and more.</p>
 
 ## Angular Button Example
+We have created the Angular Button example below to show you how different button types can appear and look like when they are styled with a border or when a transparent background is applied.
+
 <div class="divider--half"></div>
 
 <code-view style="height: 150px" 
@@ -17,9 +21,9 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 <div class="divider--half"></div>
 
-## Usage
+## How To Use Angular Button With Ignite UI
 
-The Button Directive is exported as an `NgModule`, thus all you need to do in your application is to import the `IgxButtonModule` inside your `AppModule`:
+The Angular Button Directive is exported as an `NgModule`, thus all you need to do in your application is to import the `IgxButtonModule` inside your `AppModule`:
 
 ```typescript
 // app.module.ts
@@ -37,7 +41,7 @@ import { IgxButtonModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-## Button Types
+## Angular Button Types
 
 ### Flat Button
 
@@ -117,7 +121,7 @@ To create an extended FAB, you can add any element prior to the `igx-icon`:
 
 ## Examples
 
-### Disable Button
+### Angular Disable Button
 
 The `disabled` property can be used to make a button unclickable:
 
@@ -159,7 +163,7 @@ We can also use the `igxButton` directive to turn elements like `span` and `div`
 
 ## Display Density
 
-We can allow the user to choose the display density of the `igxButton` by using its [`displayDensity`]({environment:angularApiUrl}/classes/igxbuttondirective.html#displaydensity) input. То do this, first we have to import the `IgxButtonGroupModule`, and then use the [`igxButtonGroup`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html) component to display all density values. This way whenever one gets selected, we will update our own **density** property that is bound to the `displayDensity` of the button.
+We can allow the user to choose the display density of the `igxButton` by using its [`displayDensity`]({environment:angularApiUrl}/classes/igxbuttondirective.html#displaydensity) input. То do this, first we have to import the `IgxButtonGroupModule`, and then use the [`igxButtonGroup`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html) component to display all density values. This way whenever one gets selected, we will update our own **density** property that is bound to the `displayDensity` of the Angular buttonAngular button.
 
 > [!NOTE] 
 > Note that the `icon` type button does not introduce visual changes for different display density values.
@@ -213,7 +217,7 @@ If all went well, you should see something like the following in the browser:
 </code-view>
 <div class="divider--half"></div>
 
-## Styling
+## Angular Button Styling
 
 To get started with styling the button, we need to import the `index` file, where all the theme functions and component mixins live:
 
