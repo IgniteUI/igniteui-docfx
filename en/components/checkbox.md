@@ -1,14 +1,17 @@
 ---
-title: Angular Checkbox Component – Ignite UI for Angular | Infragistics
-_description: Ignite UI for Angular Checkbox component is a selection control that allows users to make a binary choice for a certain condition.
+title: Angular Checkbox Component – Ignite UI for Angular
+_description: Ignite UI for Angular Checkbox component is a selection control that allows users to make a binary choice for a certain condition. Try it Now
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Checkbox components, Angular Checkbox controls
 ---
 
-# Checkbox
-<p class="highlight">The Ignite UI for Angular Checkbox component is a selection control that allows users to make a binary choice for a certain condition. It behaves similarly to the native browser checkbox.</p>
+# Angular Checkbox Overview
+<p class="highlight">Angular Material Checkbox is an extension of the standard HTML5 input, providing similar functionality, only enhanced with things like animations and Material Design styling. It enables users to choose one or several predefined options, mostly in forms and surveys.
+
+The Ignite UI for Angular Checkbox component is a selection control that allows users to make a binary choice for a certain condition. It behaves similarly to the native browser checkbox. Some of the features it offers are styling options, themes, checked, unchecked, and indeterminate states, and others.</p>
 <div class="divider"></div>
 
 ## Angular Checkbox Example
+See the checkbox in action in the following Angular Checkbox example below.
 
 <code-view style="height: 100px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -17,8 +20,8 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 <div class="divider--half"></div>
 
-## Usage
-At its core, the checkbox component allows for a choice between selected/unselected state. The default styling is done according to the selection controls specification in the Material Design guidelines.
+## How To Use Angular Checkbox With Ignite UI
+At its core, the Angular Checkbox component allows for a choice between selected/unselected state. The default styling is done according to the selection controls specification in the Material Design guidelines.
 
 First you need to import the `IgxCheckboxModule` in the **app.module.ts** file:
 
@@ -110,7 +113,7 @@ You can position the label using the checkbox's [`labelPosition`]({environment:a
 
 If the `labelPosition` is not set, the label will be positioned after the checkbox.
 
-### Indeterminate Checkbox
+### Indeterminate Checkbox in Angular
 
 In addition to the checked and unchecked states, there is a third state a checkbox can be in: **indeterminate**. In this state the checkbox is neither checked, nor unchecked. This is set using the checkbox's [`indeterminate`]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html#indeterminate) property:
 
@@ -118,7 +121,7 @@ In addition to the checked and unchecked states, there is a third state a checkb
 <igx-checkbox [indeterminate]="true"></igx-checkbox>
 ```
 
-We can create an app that has a list of tasks that need to be done and one master checkbox that's going to be checked only if all the tasks are completed. Let's update the previous sample. Starting with the template:
+We can create an app that has a list of tasks that need to be done and one master checkbox in Angular that's going to be checked only if all the tasks are completed. Let's update the previous sample. Starting with the template:
 
 ```html
 <!-- app.component.html -->
@@ -205,7 +208,7 @@ After all that is done, our application should look like this:
 </code-view>
 
 
-## Styling
+## Angular Checkbox Styling
 
 To get started with styling the checkbox, we need to import the `index` file, where all the theme functions and component mixins live:
 
