@@ -1,13 +1,16 @@
 ---
-title: Angular Select Component | Material Select | IgniteUI for Angular | Infragistics
-_description: Learn how to configure an Angular select. The Material select provides an input with Angular dropdown list allowing single item selection of the angular combobox.
+title: Angular Select Component - Ignite UI for Angular
+_description: Learn how to configure Angular Select Component. Angular Select provides an input with Angular dropdown list, allowing single item selection of the Angular Combobox. Try it now.
 _keywords:  angular select, igniteui for angular, infragistics
 ---
 
-# Select
-<p class="highlight">The [Select Component]({environment:angularApiUrl}/classes/igxselectcomponent.html) allows a single selection from a list of items, placed in a dropdown. This Material-based form control offers quick items list navigation, including selection, based on a single or multiple characters match. Since the [IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html) extends the [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html), you can handle all of the Drop Down events in the Select instance as well.</p>
+# Angular Select Overview
+Angular Material Select is a form control used for data entry and data display, enabling users to select a given value from a list with several predefined values. The Angular Select Component is very similar to a DropDown list. While Select Component is used inside a form where users can choose from a list of options and submit data, a [DropDown component](drop-down.md) filters or sorts out content on a page.
+
+<p class="highlight">The Ignite UI for Angular Material [Select Component]({environment:angularApiUrl}/classes/igxselectcomponent.html) allows a single selection from a list of items, placed in a dropdown. This Material-based form control offers quick items list navigation, including selection, based on a single or multiple characters match. Since the [IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html) extends the [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html), you can handle all of the Drop Down events in the Select instance as well.</p>
 
 ## Angular Select Example
+Below is a basic Angular Select example. It has a simple contextual menu that displays a list of several choices opening per click.
 
 <code-view style="height: 300px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -16,8 +19,8 @@ _keywords:  angular select, igniteui for angular, infragistics
 
 
 
-## Usage
-To get started with the [Select Component]({environment:angularApiUrl}/classes/igxselectcomponent.html), first you need to import the **IgxSelectModule** in your **app.module**:
+## How To Use Angular Select With Ignite UI
+To get started with the Ignite UI for Angular [Select Component]({environment:angularApiUrl}/classes/igxselectcomponent.html), first you need to import the **IgxSelectModule** in your **app.module**:
 ```typescript
 // app.module.ts
 
@@ -74,7 +77,7 @@ To see the `text` property in action with a bit more sophisticated item template
 
 The Select component supports the following directives applicable to the [Input Group](input-group.md):
 
-- `igxLabel` - No need to set the `for` property, as linking with the Select input is handled automatically via `aria-labelledby`.
+- `igxLabel` - No need to set the `for` property, as linking with the Angular Select input is handled automatically via `aria-labelledby`.
 - `igx-prefix`/`igxPrefix`
 - `igx-suffix`/`igxSuffix` - Note the built-in toggle button suffix will always be displayed last.
 - `igx-hint`/`igxHint`
@@ -214,7 +217,7 @@ In this example, there are both header and footer ng-templates defined. In the h
 </code-view>
 
 
-### Custom Toggle Button
+### Custom Toggle Button in Angular Select
 You can customize the default toggle button, using the `igxSelectToggleIcon` directive or setting a `TemplateRef` to the [`toggleIconTemplate`]({environment:angularApiUrl}/classes/igxselectcomponent.html#toggleicontemplate) property.
 
 ```html
