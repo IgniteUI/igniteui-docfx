@@ -309,7 +309,7 @@ The Row Editing overlay is a composite element - its UI is comprised of a couple
     - [`igx-banner`](../banner.md) in order to render its contents
     - [`igx-button`](../button.md)s are rendered in the default template (for the `Done` and `Cancel` buttons).
 
-In the below example, we will make use of those two components' styling options, ([button styling](../button.md#styling) & [banner-styling](../banner.md#styling)), to customize the experience of our @@igxName's Row Editing.
+In the below example, we will make use of those two components' styling options, ([button styling](../button.md#Angular Button Styling) & [banner-styling](../banner.md#styling)), to customize the experience of our @@igxName's Row Editing.
 We will also style the current cell's editor and background to make it more distinct. You can learn more about cell styling [here](cell-editing.md#styling).
 
 ### Import theme
@@ -392,7 +392,7 @@ To further customize our Row Editing overlay, we can pass a custom template so w
 </@@igSelector>
 ```
 
-After we've defined our custom buttons, we can make use of the [`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme) to style them. You can learn more about `igx-button` styling [here](../button.md#styling). We can create a custom theme for our `Done` and `Cancel`:
+After we've defined our custom buttons, we can make use of the [`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme) to style them. You can learn more about `igx-button` styling [here](../button.md#Angular Button Styling). We can create a custom theme for our `Done` and `Cancel`:
 
 ```scss
 // custom.component.scss
