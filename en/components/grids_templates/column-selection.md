@@ -33,7 +33,7 @@ The sample below demonstrates the three types of @@igComponent's **column select
 *_Contact Title_, _City_ and _Address_ columns are with disabled column selection.
 }
 @@if (igxName === 'IgxTreeGrid') {
-*_Unit Price_ and _Discontinued_ are with disabled column selection.
+*_Units_, _Unit Price_ and _Delivered_ are with disabled column selection.
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 *_Photo_ and _Debut_ are with disabled column selection.

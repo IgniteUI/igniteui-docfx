@@ -317,10 +317,10 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
 
 <@@igSelector [data]="data" [autoGenerate]="false" [allowFiltering]="true">
     <igx-column field="ProductName" header="Product Name" [dataType]="'string'" [filters]="caseSensitiveFilteringOperand"></igx-column>
-    <igx-column field="Discontinued" header="Discontinued" [dataType]="'boolean'" [filters]="booleanFilteringOperand">
+    <igx-column field="Delivered" header="Delivered" [dataType]="'boolean'" [filters]="booleanFilteringOperand">
         <ng-template igxCell let-cell="cell" let-val>
-            <img *ngIf="val" src="assets/images/grid/active.png" title="Continued" alt="Continued" />
-            <img *ngIf="!val" src="assets/images/grid/expired.png" title="Discontinued" alt="Discontinued" />
+            <img *ngIf="val" src="assets/images/grid/active.png" title="Delivered" alt="Delivered" />
+            <img *ngIf="!val" src="assets/images/grid/expired.png" title="Undelivered" alt="Undelivered" />
         </ng-template>
     </igx-column>
 </@@igSelector>
