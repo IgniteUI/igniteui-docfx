@@ -253,4 +253,4 @@ Use trendlines to identify a trend or find patterns in your data. There are many
 
 ## API Members
 
--   [`IgxDataGridComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatagridcomponent.html)
+-   `Grid`
