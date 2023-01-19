@@ -247,7 +247,7 @@ var format = worksheet.conditionalFormats().addAverageCondition("A1:A10", Format
 format.cellFormat.font.colorInfo = new WorkbookColorInfo(color);
 ```
 
-## API Members
+## API References
 
 -   [`cellFormat`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetcell.html#cellformat)
 -   [`ColorScaleConditionalFormat`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/colorscaleconditionalformat.html)

@@ -177,7 +177,7 @@ You can find more information about related chart types in these topics:
 -   [Radial Chart](radial-chart.md)
 -   [Stacked Chart](stacked-chart.md)
 
-## API Members
+## API References
 
 The following table lists API members mentioned in the above sections:
 
