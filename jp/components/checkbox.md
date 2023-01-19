@@ -1,15 +1,18 @@
 ---
 title: Angular Checkbox コンポーネント
-_description: Ignite UI for Angular Checkbox コンポーネントは、特定の条件のバイナリ選択を許可する選択コントロールです。
+_description: Ignite UI for Angular Checkbox コンポーネントは、特定の条件のバイナリ選択を許可する選択コントロールです。今すぐお試しください。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Checkbox コンポーネント, Angular Checkbox コントロール
 _language: ja
 ---
 
-# Checkbox
-<p class="highlight">Ignite UI for Angular Checkbox コンポーネントは、特定の条件のバイナリ選択を可能にする選択コントロールです。ネイティブ ブラウザーのチェックボックスと同様に動作します。</p>
+# Angular Checkbox (チェックボックス) の概要
+<p class="highlight">Angular Material Checkbox is an extension of the standard HTML5 input, providing similar functionality, only enhanced with things like animations and Material Design styling. It enables users to choose one or several predefined options, mostly in forms and surveys.
+
+Ignite UI for Angular Checkbox コンポーネントは、特定の条件のバイナリ選択を可能にする選択コントロールです。ネイティブ ブラウザーのチェックボックスと同様に動作します。Some of the features it offers are styling options, themes, checked, unchecked, and indeterminate states, and others.</p>
 <div class="divider"></div>
 
 ## Angular Checkbox の例
+See the checkbox in action in the following Angular Checkbox example below.
 
 <code-view style="height: 100px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -18,8 +21,8 @@ _language: ja
 
 <div class="divider--half"></div>
 
-## 使用方法
-チェックボックス コンポーネントは、選択/選択解除の状態の選択ができます。デフォルトのスタイル設定はマテリアル デザイン ガイドラインの選択コントロールの仕様に基づきます。
+## Ignite UI で Angular Checkbox を使用する方法
+Angular Checkbox コンポーネントは、選択/選択解除の状態の選択ができます。デフォルトのスタイル設定はマテリアル デザイン ガイドラインの選択コントロールの仕様に基づきます。
 
 はじめに、**app.module.ts** ファイルに `IgxCheckboxModule` をインポートします。
 
@@ -111,7 +114,7 @@ igx-checkbox {
 
 `labelPosition` が設定されていない場合、ラベルはチェックボックスの後に配置されます。
 
-### 未確定状態のチェックボックス
+### Angular の未確定状態のチェックボックス
 
 オンとオフに加えて、チェックボックスの 3 番目の状態があります: **未確定**。この状態では、チェックボックスはオンでもオフでもありません。チェックボックスの [`indeterminate`]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html#indeterminate) プロパティを使用して設定します。
 
@@ -119,7 +122,7 @@ igx-checkbox {
 <igx-checkbox [indeterminate]="true"></igx-checkbox>
 ```
 
-実行する必要があるタスクのリストと、すべてのタスクが完了した場合にのみチェックされるマスター チェックボックスのアプリを作成できます。上記のサンプルを更新しましょう。まず、テンプレート:
+実行する必要があるタスクのリストと、すべてのタスクが完了した場合にのみチェックされる Angular のマスター チェックボックスのアプリを作成できます。上記のサンプルを更新しましょう。まず、テンプレート:
 
 ```html
 <!-- app.component.html -->
@@ -206,7 +209,7 @@ public toggleAll() {
 </code-view>
 
 
-## スタイル設定
+## Angular Checkbox のスタイル設定
 
 チェックボックスのスタイル設定を始めるには、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
 

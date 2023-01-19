@@ -582,7 +582,7 @@ $custom-grid-theme: grid-theme(
 
 ### デモのスタイル設定
 
-上記の手順に加えて、セルの編集テンプレートに使用されるコントロールのスタイルを設定することもできます ([`igx-input-group`](../input-group.md#スタイル設定)、[`igx-datepicker`](../date-picker.md#スタイル設定) および [`igx-checkbox`](../checkbox.md#スタイル設定))。
+上記の手順に加えて、セルの編集テンプレートに使用されるコントロールのスタイルを設定することもできます ([`igx-input-group`](../input-group.md#スタイル設定)、[`igx-datepicker`](../date-picker.md#スタイル設定) および [`igx-checkbox`](../checkbox.md#angular-checkbox-のスタイル設定))。
 
 @@if (igxName === 'IgxGrid') {
 
