@@ -402,16 +402,16 @@ For your convenience, all above code snippets are combined into one code block b
 </igx-radial-gauge>
 ```
 
+## API References
+
+The following is a list of API members mentioned in the above sections:
+
+-   [`IgxRadialGaugeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialgaugecomponent.html)
+-   [`IgxRadialGaugeRangeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialgaugerangecomponent.html)
+
 ## Additional Resources
 
 You can find more information about other types of gauges in these topics:
 
 -   [Bullet Graph](bullet-graph.md)
 -   [Linear Gauge](linear-gauge.md)
-
-## API Members
-
-The following is a list of API members mentioned in the above sections:
-
--   [`IgxRadialGaugeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialgaugecomponent.html)
--   [`IgxRadialGaugeRangeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialgaugerangecomponent.html)
