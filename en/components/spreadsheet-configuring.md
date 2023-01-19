@@ -183,7 +183,7 @@ The following code snippets show how to configure the spreadsheet's zoom level:
 this.spreadsheet.zoomLevel = 200;
 ```
 
-## API Members
+## API References
 
 -   [`activeCell`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#activecell)
 -   [`activeSelection`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#activeselection)

@@ -14,14 +14,18 @@ All notable changes for each version of Ignite UI for Angular are documented on 
 > This topic discusses changes only for components that are not included in the igniteui-angular package.
 > For changes specific to igniteui-angular components, please see [Ignite UI Angular Changes](https://github.com/igniteui/igniteui-angular/blob/master/changelog.md)
 
+## **15.0.0**
+
+-   Angular 15 support.
+
 ## **14.2.0**
 
-Added significant improvements to default behaviors, and refined the Category Chart API to make it easier to use.  
+Added significant improvements to default behaviors, and refined the Category Chart API to make it easier to use.
 
-These new chart improvements include: 
+These new chart improvements include:
 
--   Responsive layouts for horizontal label rotation based on browser / screen size. 
--   Enhanced rendering for rounded labels on all platforms. 
+-   Responsive layouts for horizontal label rotation based on browser / screen size.
+-   Enhanced rendering for rounded labels on all platforms.
 -   Added marker properties to StackedFragmentSeries.
 -   Added [`shouldPanOnMaximumZoom`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriesviewercomponent.html#shouldpanonmaximumzoom) property.
 -   New Category Axis Properties:
@@ -30,7 +34,7 @@ These new chart improvements include:
     -   ZoomToCategoryRange
     -   ZoomToItemSpan
 -   New [Chart Aggregation](charts/features/chart-data-aggregations.md) API for Grouping, Sorting and Summarizing Category string and numeric values, eliminating the need to pre-aggregate or calculate chart data:
-    -   InitialSortDescriptions 
+    -   InitialSortDescriptions
     -   InitialSorts
     -   SortDescriptions
     -   InitialGroups
@@ -43,7 +47,8 @@ These new chart improvements include:
     -   GroupSorts
     -   GroupSortDescriptions
 
-> [!Note][chart aggregation](charts/features/chart-data-aggregations.md) will not work when using [`includedProperties`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#includedproperties) \| [`excludedProperties`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#excludedproperties). These properties on the chart are meant for non-aggregated data. Once you attempt to aggregate data these properties should no longer be used. The reason it does not work is because aggregation replaces the collection that is passed to the chart for render.  The include/exclude properties are designed to filter in/out properties of that data and those properties no longer exist in the new aggregated collection.
+> [!Note]
+> The Chart's [Aggregation](charts/features/chart-data-aggregations.md) will not work when using [`includedProperties`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#includedproperties) \| [`excludedProperties`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#excludedproperties) because these properties are meant for non-aggregated data. Once you attempt to aggregate data these properties should no longer be used. The reason it does not work is because aggregation replaces the collection that is passed to the chart for render.  The include/exclude properties are designed to filter in/out properties of that data and those properties no longer exist in the new aggregated collection.
 
 ## **13.2.0**
 

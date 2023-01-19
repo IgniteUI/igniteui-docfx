@@ -49,7 +49,7 @@ var chart = ws.shapes().addChart(ChartType.ColumnClustered,
 chart.setSourceData("A2:M6", true);
 ```
 
-## API Members
+## API References
 
 -   `AddChart`
 -   `Area`
