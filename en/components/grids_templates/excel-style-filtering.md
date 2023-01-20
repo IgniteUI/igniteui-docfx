@@ -131,7 +131,7 @@ In the sample below **Product Name** and **Discontinued** columns have all four 
 
 <div class="divider--half"></div>
 
-In the sample below 'Product Name', 'Category' and 'Units' columns have all three features enabled, 'Price' have all three disabled, 'Order Date' and 'Delivered' have only pinning and hiding.
+In the sample below 'Order Product', 'Category' and 'Units' columns have all three features enabled, 'Price' have all three disabled, 'Order Date' and 'Delivered' have only pinning and hiding.
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html

@@ -64,9 +64,16 @@ Additionally there is a custom contextmenu added for sorting using **@@igSelecto
 
 This is done via the [`sortable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortable) input. With the @@igComponent sorting, you can also set the [`sortingIgnoreCase`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortingignorecase) property to perform case sensitive sorting:
 
+@@if (igxName === 'IgxTreeGrid') {
+```html
+<igx-column field="Name" header="Order Product" [dataType]="'string'" sortable="true"></igx-column>
+```
+}
+@@if (igxName !== 'IgxTreeGrid') {
 ```html
 <igx-column field="ProductName" header="Product Name" [dataType]="'string'" sortable="true"></igx-column>
 ```
+}
 
 ## Sorting Indicators
 Having a certain amount of sorted columns could be really confusing if there is no indication of the sorted order. 
@@ -86,6 +93,22 @@ The **@@igxName** provides a solution for this problem by indicating the index o
 
 You can sort any column or a combination of columns through the @@igComponent API using the @@igComponent [`sort`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sort) method:
 
+@@if (igxName === 'IgxTreeGrid') {
+```typescript
+import { SortingDirection } from 'igniteui-angular';
+// import { SortingDirection } from '@infragistics/igniteui-angular'; for licensed package
+
+// Perform a case insensitive ascending sort on the ProductName column.
+this.@@igObjectRef.sort({ fieldName: 'Name', dir: SortingDirection.Asc, ignoreCase: true });
+
+// Perform sorting on both the ProductName and Price columns.
+this.@@igObjectRef.sort([
+    { fieldName: 'Name', dir: SortingDirection.Asc, ignoreCase: true },
+    { fieldName: 'UnitPrice', dir: SortingDirection.Desc }
+]);
+```
+}
+@@if (igxName !== 'IgxTreeGrid') {
 ```typescript
 import { SortingDirection } from 'igniteui-angular';
 // import { SortingDirection } from '@infragistics/igniteui-angular'; for licensed package
@@ -99,12 +122,23 @@ this.@@igObjectRef.sort([
     { fieldName: 'Price', dir: SortingDirection.Desc }
 ]);
 ```
+}
 
 > [!NOTE]
 > Sorting is performed using our [`DefaultSortingStrategy`]({environment:angularApiUrl}/classes/defaultsortingstrategy.html) algorithm. Any [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortStrategy) or [`ISortingExpression`]({environment:angularApiUrl}/interfaces/isortingexpression.html#strategy) can use a custom implementation of the [`ISortingStrategy`]({environment:angularApiUrl}/interfaces/isortingstrategy.html) as a substitute algorithm. This is useful when custom sorting needs to be defined for complex template columns, or image columns, for example.
 
 As with the filtering behavior, you can clear the sorting state by using the [`clearSort`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#clearsort) method:
 
+@@if (igxName === 'IgxTreeGrid') {
+```typescript
+// Removes the sorting state from the ProductName column
+this.@@igObjectRef.clearSort('Name');
+
+// Removes the sorting state from every column in the @@igComponent
+this.@@igObjectRef.clearSort();
+```
+}
+@@if (igxName !== 'IgxTreeGrid') {
 ```typescript
 // Removes the sorting state from the ProductName column
 this.@@igObjectRef.clearSort('ProductName');
@@ -112,6 +146,7 @@ this.@@igObjectRef.clearSort('ProductName');
 // Removes the sorting state from every column in the @@igComponent
 this.@@igObjectRef.clearSort();
 ```
+}
 
 > [!NOTE]
 > The [`sortStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sortstrategy) of the **@@igComponent** is of different type compared to the [`sortStrategy`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortstrategy) of the **column**, since they work in different scopes and expose different parameters.
@@ -123,6 +158,17 @@ this.@@igObjectRef.clearSort();
 
 It is possible to set the initial sorting state of the @@igComponent by passing an array of sorting expressions to the [`sortingExpressions`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sortingexpressions) property of the @@igComponent.
 
+@@if (igxName !== 'IgxTreeGrid') {
+```typescript
+public ngOnInit() {
+    this.@@igObjectRef.sortingExpressions = [
+        { fieldName: 'Name', dir: SortingDirection.Asc, ignoreCase: true },
+        { fieldName: 'Price', dir: SortingDirection.Desc }
+    ];
+}
+```
+}
+@@if (igxName !== 'IgxTreeGrid') {
 ```typescript
 public ngOnInit() {
     this.@@igObjectRef.sortingExpressions = [
@@ -131,6 +177,7 @@ public ngOnInit() {
     ];
 }
 ```
+}
 
 > [!NOTE]
 > If values of type `string` are used by a column of [`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype) `Date`, the @@igComponent won't parse them to `Date` objects and using @@igComponent `sorting` won't work as expected. If you want to use `string` objects, additional logic should be implemented on an application level, in order to parse the values to `Date` objects.
