@@ -6,13 +6,13 @@ _language: ja
 ---
 
 # Angular Checkbox (チェックボックス) の概要
-<p class="highlight">Angular Material Checkbox is an extension of the standard HTML5 input, providing similar functionality, only enhanced with things like animations and Material Design styling. It enables users to choose one or several predefined options, mostly in forms and surveys.
+<p class="highlight">Angular Material Checkbox は、標準の HTML5 入力の拡張であり、同様の機能を提供しますが、アニメーションや Material Design のスタイル設定などでのみ強化されています。これにより、ユーザーは主にフォームや調査で、1 つまたは複数の事前定義されたオプションを選択できます。
 
-Ignite UI for Angular Checkbox コンポーネントは、特定の条件のバイナリ選択を可能にする選択コントロールです。ネイティブ ブラウザーのチェックボックスと同様に動作します。Some of the features it offers are styling options, themes, checked, unchecked, and indeterminate states, and others.</p>
+Ignite UI for Angular Checkbox コンポーネントは、特定の条件のバイナリ選択を可能にする選択コントロールです。ネイティブ ブラウザーのチェックボックスと同様に動作します。提供される機能には、スタイル設定オプション、テーマ、チェック状態、チェックなし状態、不確定状態などがあります。</p>
 <div class="divider"></div>
 
 ## Angular Checkbox の例
-See the checkbox in action in the following Angular Checkbox example below.
+以下の Angular Checkbox の例で、実際のチェックボックスを参照してください。
 
 <code-view style="height: 100px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
