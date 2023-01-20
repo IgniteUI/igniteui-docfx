@@ -101,7 +101,7 @@ The following topics provide additional information related to this topic.
 
 -   [Binding Shape Files](geo-map-binding-shp-file.md)
 
-## API Members
+## API References
 
 -   [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html)
 -   [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html)

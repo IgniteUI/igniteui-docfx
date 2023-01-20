@@ -140,7 +140,7 @@ You can find more information about related chart types in these topics:
 -   [Line Chart](line-chart.md)
 -   [Pie Chart](pie-chart.md)
 
-## API Members
+## API References
 
 The following table lists API members mentioned in the above sections:
 

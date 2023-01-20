@@ -116,7 +116,7 @@ export class MapTypeScatterSymbolSeriesComponent implements AfterViewInit {
 }
 ```
 
-## API Members
+## API References
 
 -   [`IgxGeographicSymbolSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html)
 -   `ItemsSource`
