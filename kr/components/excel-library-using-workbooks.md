@@ -33,7 +33,7 @@ The Infragistics Excel Engine enables you to save data to and load data from Mic
 
 ## Change Default Font
 
-First create a new instance of [`IWorkbookFont`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/iworkbookfont.html). Next, add the new font to the `styles` collection of the [`workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/sheet.html#workbook). This style contains the default properties for all cells in the workbook, unless otherwise specified on a row, column, or cell. Changing properties of the style will change the default cell format properties in the workbook.
+First create a new instance of [`IWorkbookFont`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/interfaces/iworkbookfont.html). Next, add the new font to the `styles` collection of the [`workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/sheet.html#workbook). This style contains the default properties for all cells in the workbook, unless otherwise specified on a row, column, or cell. Changing properties of the style will change the default cell format properties in the workbook.
 
 ```ts
 var workbook = new Workbook();
