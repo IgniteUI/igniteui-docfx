@@ -112,7 +112,7 @@ Angular バブル チャートでは、[`markerType`]({environment:dvApiBaseUrl}
 -   [散布図](scatter-chart.md)
 -   [シェープ チャート](shape-chart.md)
 
-## API メンバー
+## API リファレンス
 
 以下は、上記のセクションで説明した API メンバーのリストです。
 

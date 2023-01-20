@@ -51,6 +51,6 @@ sheet1.sparklineGroups().add(SparklineType.Column, "Sparklines!B1:B1", "Data!A2:
 workbook.save(workbook, "Sparklines.xlsx");
 ```
 
-## API メンバー
+## API リファレンス
 
 -   [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html)
