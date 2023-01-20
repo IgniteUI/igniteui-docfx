@@ -147,7 +147,7 @@ let uniqueFormat = sheet.conditionalFormats().addUniqueCondition("O1:O10");
 uniqueFormat.cellFormat.font.colorInfo = new WorkbookColorInfo(blue);
 ```
 
-## API メンバー
+## API リファレンス
 
 -   [`addAverageCondition`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/conditionalformatcollection.html#addaveragecondition)
 -   [`addBlanksCondition`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/conditionalformatcollection.html#addblankscondition)

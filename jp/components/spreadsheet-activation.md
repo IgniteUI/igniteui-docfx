@@ -50,7 +50,7 @@ this.spreadsheet.activeWorksheet = this.spreadsheet.workbook.worksheets(1);
 this.spreadsheet.activeCell = new SpreadsheetCell("C5");
 ```
 
-## API メンバー
+## API リファレンス
 
 -   [`activeCell`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#activecell)
 -   [`activePane`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#activepane)

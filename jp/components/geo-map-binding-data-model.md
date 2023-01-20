@@ -176,7 +176,7 @@ export class MapBindingDataModelComponent implements AfterViewInit {
 }
 ```
 
-## API メンバー
+## API リファレンス
 
 -   [`colorMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicscatterareaseriescomponent.html#colormemberpath)
 -   [`IgxGeographicContourLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographiccontourlineseriescomponent.html)

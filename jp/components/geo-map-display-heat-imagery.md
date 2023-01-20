@@ -149,7 +149,7 @@ constructor() {
 }
 ```
 
-## API メンバー
+## API リファレンス
 
 -   [`IgxHeatTileGenerator`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxheattilegenerator.html)
 -   [`IgxHeatTileGenerator`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxheattilegenerator.html)

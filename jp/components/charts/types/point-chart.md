@@ -123,7 +123,7 @@ Angular ポイント チャートを設定したら、マーカーとそのア�
 -   [チャートのパフォーマンス](../features/chart-performance.md)
 -   [チャート マーカー](../features/chart-markers.md)
 
-## API メンバー
+## API リファレンス
 
 以下は、上記のセクションで説明されている API メンバーのリストです。
 
