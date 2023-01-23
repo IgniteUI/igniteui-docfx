@@ -122,7 +122,7 @@ $my-color-palette: palette(
   $secondary: $secondary-color,
 );
 
-// IMPORTANT: Make sure you always includecore first!
+// IMPORTANT: Make sure you always include core first!
 @include core();
 // Pass the color palette we generated to thetheme mixin
 @include theme($my-color-palette);
