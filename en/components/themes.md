@@ -148,7 +148,7 @@ To customize the typography use the `typography` mixin. It takes exactly one arg
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 
-// IMPORTANT: Make sure you always includecore first!
+// IMPORTANT: Make sure you always include core first!
 @include core();
 // Include typography beforetheme
 @include typography(
