@@ -150,7 +150,7 @@ To customize the typography use the `typography` mixin. It takes exactly one arg
 
 // IMPORTANT: Make sure you always include core first!
 @include core();
-// Include typography beforetheme
+// Include typography before theme
 @include typography(
   $config: (
     font-family: "Comic Sans MS",
