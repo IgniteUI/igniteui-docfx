@@ -124,7 +124,7 @@ $my-color-palette: palette(
 
 // IMPORTANT: Make sure you always include core first!
 @include core();
-// Pass the color palette we generated to thetheme mixin
+// Pass the color palette we generated to the theme mixin
 @include theme($my-color-palette);
 ```
 
