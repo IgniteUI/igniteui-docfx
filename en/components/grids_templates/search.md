@@ -252,6 +252,13 @@ import {
     IgxButtonModule,
     IgxChipsModule
 } from 'igniteui-angular';
+// import { 
+//    IgxInputGroupModule,
+//    IgxIconModule,
+//    IgxRippleModule,
+//    IgxButtonModule,
+//    IgxChipsModule
+// } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...

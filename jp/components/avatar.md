@@ -35,6 +35,7 @@ Ignite UI for Angular については、[はじめに](general/getting-started.m
 
 ...
 import { IgxAvatarModule } from 'igniteui-angular';
+// import { IgxAvatarModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -177,6 +178,7 @@ Internet Explorer 11 以前などブラウザーのコンポーネントをス�
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/layouts/avatar-styling" >
 </code-view>
+
 <div class="divider--half"></div>
 
 ## API リファレンス

@@ -132,14 +132,14 @@ Navigation Drawer は [`igxNavigationService`]({environment:angularApiUrl}/class
 /* app.component.ts */
 import { Component, ViewChild } from '@angular/core';
 import { IgxNavigationDrawerComponent } from 'igniteui-angular';
-
+// import { IgxNavigationDrawerComponent } from '@infragistics/igniteui-angular'; for licensed package
 ...
 
 export class AppComponent  {
     @ViewChild(IgxNavigationDrawerComponent, { static: true })
     public drawer: IgxNavigationDrawerComponent;
 
-    // And of couse add the key line to our navigate function
+    // And of course add the key line to our navigate function
 
     public navigate(item) {
         this.selected = item.text;

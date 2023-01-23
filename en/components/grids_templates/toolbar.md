@@ -101,7 +101,7 @@ The predefined `actions` and `title` UI components are added inside the `<igx-gr
 ```
 }
 
-> Note: As seen in the code snippet above, the predefined `actions` UI components are wrapped in the [`<igx-grid-toolbar-actions>` container]({environment:angularApiUrl}/classes/igxgridtoolbaractionsdirective.html). This way, the toolbar title is aligned to the left of the toolbar and the actions are aligned to the right of the toolbar.
+> Note: As seen in the code snippet above, the predefined `actions` UI components are wrapped in the [`<igx-grid-toolbar-actions>` container]({environment:angularApiUrl}/classes/igxgridtoolbaractionscomponent.html). This way, the toolbar title is aligned to the left of the toolbar and the actions are aligned to the right of the toolbar.
 
 Of course, each of these UIs can be added independently of each other, or may not be added at all. This way the toolbar container will be rendered empty:
 
@@ -196,7 +196,7 @@ Listed below are the main features of the toolbar with example code for each of 
 
 
 ### Title
-Setting a title for the toolbar in your grid is achieved by using the [IgxGridToolbarTitleDirective]({environment:angularApiUrl}/classes/igxgridtoolbartitledirective.html).
+Setting a title for the toolbar in your grid is achieved by using the [IgxGridToolbarTitleComponent]({environment:angularApiUrl}/classes/igxgridtoolbartitlecomponent.html).
 Users can provide anything from simple text to more involved templates.
 ```html
 <igx-grid-toolbar>
@@ -205,7 +205,7 @@ Users can provide anything from simple text to more involved templates.
 ```
 
 ### Actions
-The toolbar exposes a [specific container]({environment:angularApiUrl}/classes/igxgridtoolbaractionsdirective.html) where users can place actions/interactions in relation to the parent grid.
+The toolbar exposes a [specific container]({environment:angularApiUrl}/classes/igxgridtoolbaractionscomponent.html) where users can place actions/interactions in relation to the parent grid.
 As with the title portion of the toolbar, users can provide anything inside that template part, including the default
 toolbar interaction components.
 ```html
@@ -319,6 +319,7 @@ all export services for your application.
 // app.module.ts
 
 import { IgxExcelExporterService, IgxCsvExporterService } from 'igniteui-angular';
+// import { IgxExcelExporterService, IgxCsvExporterService } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -653,13 +654,13 @@ The last step is to **include** the newly created themes.
 
 The Grid Toolbar service has a few more APIs to explore, which are listed below.
 
-* [`IgxGridToolbarActionsDirective`]({environment:angularApiUrl}/classes/igxgridtoolbaractionsdirective.html)
+* [`IgxGridToolbarActionsComponent`]({environment:angularApiUrl}/classes/igxgridtoolbaractionscomponent.html)
 * [`IgxGridToolbarAdvancedFilteringComponent`]({environment:angularApiUrl}/classes/igxgridtoolbaradvancedfilteringcomponent.html)
 * [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html)
 * [`IgxGridToolbarExporterComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarexportercomponent.html)
 * [`IgxGridToolbarHidingComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarhidingcomponent.html)
 * [`IgxGridToolbarPinningComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarpinningcomponent.html)
-* [`IgxGridToolbarTitleDirective`]({environment:angularApiUrl}/classes/igxgridtoolbartitledirective.html)
+* [`IgxGridToolbarTitleComponent`]({environment:angularApiUrl}/classes/igxgridtoolbartitlecomponent.html)
 
 
 [`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) events:

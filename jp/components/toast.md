@@ -31,6 +31,7 @@ Toast コンポーネントを初期化する前に、`IgxToastModule` を **app
 
 ...
 import { IgxToastModule } from 'igniteui-angular';
+// import { IgxToastModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -130,6 +131,7 @@ public showMessage() {
 ```typescript
 // sample.component.ts
 import { VerticalAlignment } from 'igniteui-angular';
+// import { VerticalAlignment } from '@infragistics/igniteui-angular'; for licensed package
 ...
 public open(toast) {
     toast.positionSettings.verticalDirection = VerticalAlignment.Top;
@@ -202,7 +204,7 @@ $custom-toast-theme: toast-theme(
 
 Internet Explorer 11 などの古いブラウザーのコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、別のアプローチを用いる必要があります。
 
-コンポーネントが [`Emulated`](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。 カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。 
+コンポーネントが [`Emulated`](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。 
 
 ```scss
 :host {

@@ -34,6 +34,7 @@ The next step is to import the `IgxAvatarModule` in the **app.module.ts** file:
 
 ...
 import { IgxAvatarModule } from 'igniteui-angular';
+// import { IgxAvatarModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...

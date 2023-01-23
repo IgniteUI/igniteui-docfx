@@ -28,6 +28,7 @@ Ignite UI for Angular ComboBox コントロールは、データと値のバイ�
 
 ```typescript
 import { IgxComboModule, IgxSwitchModule } from 'igniteui-angular';
+// import { IgxComboModule, IgxSwitchModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     imports: [
@@ -192,6 +193,7 @@ export class CustomOverlayCombo {
 ```typescript
 ...
 import { SortingDirection } from 'igniteui-angular'
+// import { SortingDirection } from '@infragistics/igniteui-angular'; for licensed package
 
 export class ComboDemo {
     ...

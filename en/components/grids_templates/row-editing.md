@@ -149,6 +149,7 @@ Then define a @@igComponent with bound data source and [`rowEditable`]({environm
 import { Component, ViewChild } from '@angular/core';
 import { data } from './data';
 import { IgxGridComponent } from 'igniteui-angular';
+// import { IgxGridComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
     selector: 'app-grid-row-edit',
@@ -171,6 +172,7 @@ export class GridRowEditSampleComponent {
 ```typescript
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { IgxTreeGridComponent } from 'igniteui-angular';
+// import { IgxTreeGridComponent } from '@infragistics/igniteui-angular'; for licensed package
 import { FLAT_DATA } from './data';
 
 @Component({
@@ -202,6 +204,7 @@ export class TreeGridRowEditSampleComponent implements OnInit {
 ```typescript
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { IgxRowIslandComponent, IgxHierarchicalGridComponent } from 'igniteui-angular';
+// import { IgxRowIslandComponent, IgxHierarchicalGridComponen } from '@infragistics/igniteui-angular'; for licensed package
 import { SINGERS } from './data';
 
 @Component({

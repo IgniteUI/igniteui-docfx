@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 # Input Group
-<p class="highlight">The Ignite UI for Angular controls can easily be used in Reactive Forms that provide a model-driven approach for handling form inputs.</p>
+<p class="highlight">The `IgxInputGroup` allows the user to enhance inputs and selects by adding text, icons or buttons on either side of them.</p>
 <div class="divider--half"></div>
 
 ## Angular Input Group Example
@@ -27,6 +27,7 @@ Note that the `IgxInputGroup` also depends on the **FormsModule** in order to ha
 
 ...
 import { IgxInputGroupModule } from 'igniteui-angular';
+// import { IgxInputGroupModule } from '@infragistics/igniteui-angular'; for licensed package
 import { FormsModule } from '@angular/forms';
 
 @NgModule({

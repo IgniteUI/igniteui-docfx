@@ -39,6 +39,7 @@ The next step is to import the `IgxTreeModule` in your app.module file.
 
 ...
 import { IgxTreeModule } from 'igniteui-angular';
+// import { IgxTreeModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...

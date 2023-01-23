@@ -123,7 +123,7 @@
     - name: Remote Data Operations
       href: grid/remote-data-operations.md
       new: false
-    - name: Column Data types
+    - name: Column Data Types
       href: grid/column-types.md
       new: false
     - name: Editing
@@ -663,7 +663,7 @@
   new: false
 - name: Chart Features
   href: charts/chart-features.md
-  new: false
+  updated: true
   items:
     - name: Axis Gridlines
       href: charts/features/chart-axis-gridlines.md
@@ -680,15 +680,18 @@
     - name: Chart Annotations
       href: charts/features/chart-annotations.md
       new: false
+    - name: Chart Data Aggregations
+      href: charts/features/chart-data-aggregations.md
+      new: true
     - name: Chart Data Legend
       href: charts/features/chart-data-legend.md
-      new: true
+      new: false
     - name: Chart Data Tooltip
       href: charts/features/chart-data-tooltip.md
-      new: true
+      new: false
     - name: Chart Highlighting
       href: charts/features/chart-highlighting.md
-      updated: true
+      new: false
     - name: Chart Markers
       href: charts/features/chart-markers.md
       new: false

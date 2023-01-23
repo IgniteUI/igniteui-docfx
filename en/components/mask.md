@@ -27,6 +27,7 @@ The first step is to import the `IgxMaskModule` and `IgxInputGroupModule` in our
 
 ...
 import { IgxMaskModule, IgxInputGroupModule } from 'igniteui-angular';
+// import { IgxMaskModule, IgxInputGroupModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -168,6 +169,7 @@ Import the `IgxTextSelectionModule` in your **app.module.ts** file:
 ```typescript
 ...
 import { ..., IgxTextSelectionModule } from 'igniteui-angular';
+// import { ..., IgxTextSelectionModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...

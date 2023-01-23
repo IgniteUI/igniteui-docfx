@@ -144,7 +144,7 @@ export class AppModule {}
 
 ```typescript
 export class GridBatchEditingSampleComponent {
-    @ViewChild('gridRowEditTransaction', { read: IgxGridComponent }) public gridRowEditTransaction: IgxGridComponent;
+    @ViewChild('grid', { read: IgxGridComponent }) public gridRowEditTransaction: IgxGridComponent;
 
     public undo() {
         /* exit edit mode and commit changes */
@@ -196,13 +196,13 @@ export class TreeGridBatchEditingSampleComponent {
 ```typescript
 ...
 export class HierarchicalGridBatchEditingSampleComponent {
-    public undo(grid: IgxHierarchicalGridComponent) {
+    public undo(grid: any) {
         /* exit edit mode and commit changes */
         grid.endEdit(true);
         grid.transactions.undo();
     }
 
-    public redo(grid: IgxHierarchicalGridComponent) {
+    public redo(grid: any) {
         /* exit edit mode and commit changes */
         grid.endEdit(true);
         grid.transactions.redo();

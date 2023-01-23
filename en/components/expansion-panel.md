@@ -1,15 +1,20 @@
 ---
-title: Angular Panel | Expandable | Ignite UI for Angular | Infragistics
-_description: Use an Angular accordion/material expansion panel which provides an easily configurable expandable component with two states - collapsed and expanded.
+title: Angular Expansion Panel – Ignite UI for Angular
+_description: Use our Angular expansion panel which provides an easily configurable expandable component with two states - collapsed and expanded. Try it now.
 _keywords: angular accordion, igniteui for angular, infragistics
 ---
-# Expansion Panel
+# Angular Expansion Panel Overview
+
+Angular Material provides developers with one of the most useful and easy-to-use layout components - Angular Expansion Panel. This feature-rich component is used to create an expandable/collapsible detailed summary view. The content can include Angular Expansion Panel animation, text, icons, header, action bar, and other elements. 
+
 <p class="highlight">
-    The [igx-expansion-panel]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) is a lightweight Angular accordion component which can be rendered in two states - collapsed or expanded. The expansion panel can be toggled using mouse click, or keyboard interactions.
+    Ignite UI Expansion Panel [igx-expansion-panel]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) is a lightweight Angular accordion component which can be rendered in two states - collapsed or expanded. The Expansion Panel in Angular can be toggled using mouse click, or keyboard interactions. You can also combine multiple Angular Expansion Panels into Angular accordion. 
 </p>
 <div class="divider--half"></div>
 
-## Usage
+## Angular Expansion Panel Example
+
+We've created this simple Angular Expansion Panel Example using Ignite UI Angular. See how the sample works. 
 
 <code-view style="height: 320px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -22,6 +27,7 @@ First, we need to import the **IgxExpansionPanelModule** in our **app.module**:
 // app.module.ts
 ...
 import { IgxExpansionPanelModule } from 'igniteui-angular';
+// import { IgxExpansionPanelModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -52,7 +58,7 @@ Golden retrievers have an instinctive love of water, and are easy to train to ba
 </igx-expansion-panel>
 ```
 
-The table below shows all the available markup parts for the expansion panel.
+The table below shows all the available markup parts for the Angular Expansion Panel.
 | Tag Name                          | Description                                                                                                            |
 | :-------------------------------: | :--------------------------------------------------------------------------------------------------------------------: |
 | `igx-expansion-panel`             | The component host - stores header and body.                                                                           |
@@ -70,6 +76,8 @@ We can do this by binding the description to the control [`collapsed`]({environm
 ```typescript
 // in expansion-panel.component.ts
 import { IgxExpansionPanelComponent } from 'igniteui-angular';
+// import { IgxExpansionPanelComponent } from '@infragistics/igniteui-angular'; for licensed package
+
 @Component({
     ...
 })
@@ -144,7 +152,7 @@ We can do that by passing content in an `igx-expansion-panel-icon` tag:
         </igx-expansion-panel-header>
     </igx-expansion-panel>
 ```
-Our component will now render "Show More" when the panel is collapsed and "Show Less" once it's fully expanded.
+Our Angular Expansion Panel will now render "Show More" when the panel is collapsed and "Show Less" once it's fully expanded.
 
 The `IgxExpansionPanel` control allows all sorts of content to be added inside of the `igx-expansion-panel-body`. It can render [`IgxGrid`](grid/grid.md)s, [`IgxCombo`](combo.md), charts and even other expansion panels!
 
@@ -173,7 +181,7 @@ Lets see the result from all the above changes:
 
 ## Styling  
 
-### Demo
+### Angular Expansion Panel Demo
 
 <code-view style="height: 440px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -253,15 +261,17 @@ Now to apply the component theme all that's left is to include `css-vars` mixin 
 
 To find out more on how you can use Ignite UI theming engine [`click here`](themes/sass/component-themes.md)
 
-## Using Animations
+## Angular Expansion Panel Animations 
 ### Using specific animation
 It is possible to use other than default animation when expanding and collapsing the component.
-Assuming the igxExpansionPanel is already imported in `app.module.ts` as previously described, you can create a custom animation setting object and set it to be used in the igxExpansionPanel. The approach requires the [`useAnimation`](https://angular.io/api/animations/useAnimation) method and the specific animations to be used so we start importing these and defining the animation settings like:
+Assuming the igxExpansionPanel is already imported in `app.module.ts` as previously described, you can create a custom animation setting object and set it to be used in the Ignite UI for Agular Expansion Panel. The approach requires the [`useAnimation`](https://angular.io/api/animations/useAnimation) method and the specific animations to be used so we start importing these and defining the animation settings like:
 
 ```typescript
 // in expansion-panel.component.ts
 import { useAnimation } from '@angular/animations';
 import { IgxExpansionPanelComponent, slideInLeft, slideOutRight } from 'igniteui-angular';
+// import { IgxExpansionPanelComponent, slideInLeft, slideOutRight } from '@infragistics/igniteui-angular'; for licensed package
+
 @Component({
     ...
 })

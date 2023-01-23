@@ -30,6 +30,7 @@ To get started with the Toast component, first you need to import the `IgxToastM
 
 ...
 import { IgxToastModule } from 'igniteui-angular';
+// import { IgxToastModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -129,6 +130,7 @@ Use [`positionSettings`]({environment:angularApiUrl}/classes/igxtoastcomponent.h
 ```typescript
 // sample.component.ts
 import { VerticalAlignment } from 'igniteui-angular';
+// import { VerticalAlignment } from '@infragistics/igniteui-angular'; for licensed package
 ...
 public open(toast) {
     toast.positionSettings.verticalDirection = VerticalAlignment.Top;

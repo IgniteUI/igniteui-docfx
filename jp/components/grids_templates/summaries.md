@@ -32,7 +32,7 @@ Ignite UI for Angular の Angular UI グリッドには、グループ フッタ
 @@if (igxName === 'IgxGrid') {
 
 <code-view style="height:650px"
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-summary" alt="Angular @@igComponent 集計の例">
 </code-view>
 
@@ -40,7 +40,7 @@ Ignite UI for Angular の Angular UI グリッドには、グループ フッタ
 @@if (igxName === 'IgxTreeGrid') {
 
 <code-view style="height:750px"
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-summary" alt="Angular @@igComponent 集計の例">
 </code-view>
 
@@ -48,7 +48,7 @@ Ignite UI for Angular の Angular UI グリッドには、グループ フッタ
 @@if (igxName === 'IgxHierarchicalGrid') {
 
 <code-view style="height:650px"
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-summary" alt="Angular @@igComponent 集計の例">
 </code-view>
 
@@ -174,6 +174,7 @@ public disableSummary() {
 @@if (igxName !== 'IgxHierarchicalGrid') {
 ```typescript
 import { IgxSummaryResult, IgxSummaryOperand, IgxNumberSummaryOperand, IgxDateSummaryOperand } from 'igniteui-angular';
+// import { IgxSummaryResult, IgxSummaryOperand, IgxNumberSummaryOperand, IgxDateSummaryOperand } from '@infragistics/igniteui-angular'; for licensed package
 
 class MySummary extends IgxNumberSummaryOperand {
     constructor() {
@@ -195,6 +196,7 @@ class MySummary extends IgxNumberSummaryOperand {
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```typescript
 import { IgxRowIslandComponent, IgxHierarchicalGridComponent, IgxNumberSummaryOperand, IgxSummaryResult } from 'igniteui-angular';
+// import { IgxRowIslandComponent, IgxHierarchicalGridComponent, IgxNumberSummaryOperand, IgxSummaryResult } from '@infragistics/igniteui-angular'; for licensed package
 
 class MySummary extends IgxNumberSummaryOperand {
     constructor() {
@@ -465,7 +467,58 @@ public dateSummaryFormat(summary: IgxSummaryResult, summaryOperand: IgxSummaryOp
 }
 <div class="divider--half"></div>
 
-### キーボード ナビゲーション
+## 集計のエクスポート
+
+[`exportSummaries`](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/latest/classes/IgxExcelExporterOptions.html#exportSummaries) オプションが `IgxExcelExporterOptions` にあり、エクスポートされたデータにグリッドの集計を含めるかどうかを指定します。デフォルトの  `exportSummaries` 値は **false** です。
+
+[`IgxExcelExporterService`]({environment:angularApiUrl}/classes/IgxExcelExporterService.html) は、すべての列タイプのデフォルトの集計を同等の Excel 関数としてエクスポートするため、シートが変更された場合でも適切に機能し続けます。以下の例をご覧ください:
+
+@@if (igxName === 'IgxGrid') {
+<code-view style="height:770px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/grid/grid-summary-export" >
+</code-view>
+}
+
+@@if (igxName === 'IgxTreeGrid') {
+<code-view style="height:780px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-summary-export" >
+</code-view>
+}
+
+
+@@if (igxName === 'IgxHierarchicalGrid') {
+<code-view style="height:760px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-summary-export" >
+</code-view>
+}
+
+エクスポートされたファイルには、シート内の各 `DataRecord` のレベルを保持する非表示の列が含まれています。このレベルは、集計関数に含める必要があるセルを除外するために集計で使用されます。
+
+以下の表では、デフォルトの各集計に対応する Excel 式を見つけることができます。
+
+データ型 | 関数 | Excel 関数 |
+|:--------|:--------:|:---------------|
+`string`、`boolean` | count | ="Count: "&COUNTIF(start:end, recordLevel) |
+`number`、`currency`、`percent` | count | ="Count: "&COUNTIF(start:end, recordLevel) |
+|| min| ="Min: "&MIN(IF(start:end=recordLevel, rangeStart:rangeEnd)) |
+|| max | ="Max: "&MAX(IF(start:end=recordLevel, rangeStart:rangeEnd)) |
+|| average | ="Avg: "&AVERAGEIF(start:end, recordLevel, rangeStart:rangeEnd) |
+|| sum | ="Sum: "&SUMIF(start:end, recordLevel, rangeStart:rangeEnd) |
+`date` | count | ="Count: "&COUNTIF(start:end, recordLevel) |
+|| earliest | ="Earliest: "& TEXT(MIN(IF(start:end=recordLevel, rangeStart:rangeEnd)), format) |
+|| latest | ="Latest: "&TEXT(MAX(IF(start:end=recordLevel, rangeStart:rangeEnd)), format) |
+
+### 既知の問題と制限
+
+|制限|説明|
+|--- |--- |
+| カスタム集計のエクスポート | カスタム集計は、Excel 関数ではなく文字列としてエクスポートされます。 |
+| テンプレート化された集計のエクスポート | テンプレート化された集計はサポートされておらず、デフォルトのものとしてエクスポートされます。 |
+
+## キーボード ナビゲーション
 
 集計行は、以下のキーボード操作でナビゲーションできます。
 
@@ -487,7 +540,7 @@ public dateSummaryFormat(summary: IgxSummaryResult, summaryOperand: IgxSummaryOp
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単な方法は、[`grid-summary-theme`]({environment:sassApiUrl}/index.html#function-grid-summary-theme) を拡張する新しいテーマを作成し、`$background-color`, `$focus-background-color`、`$label-color`, `$result-color`、`$pinned-border-width`、`$pinned-border-style`、および `$pinned-border-color` パラメーターを受け取る方法です。
+最も簡単な方法は、[`grid-summary-theme`]({environment:sassApiUrl}/index.html#function-grid-summary-theme) を拡張する新しいテーマを作成し、`$background-color`、`$focus-background-color`、`$label-color`、`$result-color`、`$pinned-border-width`、`$pinned-border-style`、および `$pinned-border-color` パラメーターを受け取る方法です。
 
 ```scss
 $custom-theme: grid-summary-theme(

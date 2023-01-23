@@ -42,7 +42,7 @@ npm install --save igniteui-angular-core
 npm install --save igniteui-angular-excel
 </pre>
 
-## Required Modules
+## Component Modules
 
 The Angular excel library requires the following modules:
 

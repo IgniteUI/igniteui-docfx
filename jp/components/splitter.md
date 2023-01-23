@@ -25,6 +25,7 @@ Ignite UI for Angular Splitter コンポーネントはレイアウトを作成�
 // app.module.ts
 ...
 import { IgxSplitterModule } from 'igniteui-angular';
+// import { IgxSplitterModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -143,10 +144,10 @@ public typeVertical = SplitterType.Vertical;
 - `下矢印` - 垂直スプリッターでスプリッター バーを下へ移動
 - `左矢印` - 水平スプリッターでスプリッター バーを左へ移動
 - `右矢印` - 水平スプリッターでスプリッター バーを右へ移動
-- `Ctrl +上矢印` - 垂直スプリッターでペインを展開/縮小
-- `Ctrl +下矢印` - 垂直スプリッターでペインを展開/縮小
-- `Ctrl +左矢印` - 水平スプリッターでペインを展開/縮小
-- `Ctrl +右矢印` - 水平スプリッターでペインを展開/縮小
+- `Ctrl + 上矢印` - 垂直スプリッターでペインを展開/縮小
+- `Ctrl + 下矢印` - 垂直スプリッターでペインを展開/縮小
+- `Ctrl + 左矢印` - 水平スプリッターでペインを展開/縮小
+- `Ctrl + 右矢印` - 水平スプリッターでペインを展開/縮小
 
 ## スタイル設定
 **igxSplitter** コンポーネントのスタイル設定は、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。

@@ -26,6 +26,7 @@ First, let's see how we can register a single icon in our component:
 ```typescript
 import { Component, OnInit } from '@angular/core';
 import { IgxIconService } from 'igniteui-angular';
+// import { IgxIconService } from '@infragistics/igniteui-angular'; for licensed package
 import { github } from '@igniteui/material-icons-extended';
 // ...
 export class SampleComponent implements OnInit {

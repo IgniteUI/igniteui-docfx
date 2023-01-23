@@ -28,12 +28,10 @@ Ignite UI for Angular @@igComponent provides a default handling of *number*, *st
 @@if (igxName === 'IgxGrid') {
 ## Angular Column Types Example
 
-
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/grid/grid-column-data-types" >
 </code-view>
-
 }
 @@if (igxName === 'IgxTreeGrid') {
 }
@@ -41,13 +39,13 @@ Ignite UI for Angular @@igComponent provides a default handling of *number*, *st
 }
 
 ## Default template
-If you want to enable a data type-specific template, you should set the column [`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype) input otherwise the column will be treated as a string column since that is the default value for column dataType. Let's see what are the default templates for each type.
+If you want to enable a data type-specific template, you should set the column [`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#dataType) input otherwise the column will be treated as a string column since that is the default value for column dataType. Let's see what are the default templates for each type.
 
 ### String
-This column [`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype) is not changing the appearance or format of the cell value.
+This column [`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#dataType) is not changing the appearance or format of the cell value.
 
 ### Number
-If the [`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype) is set to *number*, the cell value will be formatted based on application or grid's [`locale`]({environment:angularApiUrl}/classes/igxgridcomponent.html#locale) settings, as well as when [`pipeArgs`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#pipeArgs) property is specified. Then the number format will be changed based on them, for example it might change the:
+If the [`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#dataType) is set to *number*, the cell value will be formatted based on application or grid's [`locale`]({environment:angularApiUrl}/classes/igxgridcomponent.html#locale) settings, as well as when [`pipeArgs`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#pipeArgs) property is specified. Then the number format will be changed based on them, for example it might change the:
  - Number of digits after the decimal point
  - Decimal separator with `,` or `.`
 
@@ -62,6 +60,7 @@ public formatOptions = this.options;
 <igx-column [pipeArgs]="formatOptions" [dataType]="'number'">
 </igx-column>
 ```
+
 ### DateTime, Date and Time
 The appearance of the date portions will be set (e.g. day, month, year) based on [`locale`]({environment:angularApiUrl}/classes/igxgridcomponent.html#locale) format or [`pipeArgs`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#pipeArgs) input. The pipe arguments can be used to specify a custom [date format](https://angular.io/api/common/DatePipe#pre-defined-format-options) or [timezone](https://angular.io/api/common/DatePipe#parameters):
  - **format** - The default value for formatting the date is 'mediumDate'. Other available options are 'short', 'long', 'shortDate', 'fullDate', 'longTime', 'fulLTime' and etc. This is a full list of all available [pre-defined format options](https://angular.io/api/common/DatePipe#pre-defined-format-options).
@@ -197,7 +196,6 @@ Upon editing of cell's value the *currency symbol* will be visible as suffix or 
 
 > When using up/down arrow keys the value will increment/decrement with a step based on the digitsInfo - minFractionDigits (The minimum number of digits after the decimal point. Default is 0)
 
-
 ### Percent
 
 Default template is showing the percent equivalent of the underlying numeric value. The displayed cell value is a multiplied result by display factor of '100' - for example, as the default factor is 100 and the "value" passed to the cell is 0.123, then the displayed cell value will be "12.3%".
@@ -226,6 +224,17 @@ public formatPercentOptions = this.options;
 ```
 
 > Note: When using up/down arrow keys the value will increment/decrement with a step based on the digitsInfo - minFractionDigits (The minimum number of digits after the decimal point. Default is 0)
+
+### Image
+
+Default template is using the value coming from the data as an image source to a default image template. The default image template will extract the name of the image file and set it as `alt` attribute of the image to meet the accessibility requirement. The displayed cell size is adjusted to the sizes of the images rendered, so keep in mind that large images will still be rendered and the grid rows will become as large as the images in the image column. Filtering, sorting and grouping will be turned off by default for image type columns. If you want to enable them, you need to provide custom strategies which perform the data operations.
+
+```html
+<igx-column [dataType]="'image'">
+</igx-column>
+```
+
+When [auto-generating]({environment:angularApiUrl}/classes/igxgridcomponent.html#autoGenerate) columns, the grid analyses the values in the first data record. If a value is of type string and matches the pattern of a url ending in an image extension (gif, jpg, jpeg, tiff, png, webp, bmp) then the column will automatically be marked as `dataType === GridColumnDataType.Image` and a default image template will be rendered.
 
 ## Default editing template
 
@@ -270,7 +279,7 @@ public init(column: IgxColumnComponent) {
 * [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
 * Column [pipeArgs]({environment:angularApiUrl}/classes/igxcolumncomponent.html#pipeArgs)
 * @@igComponent [locale]({environment:angularApiUrl}/classes/igxgridcomponent.html#locale)
-* Column [dataType]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype)
+* Column [dataType]({environment:angularApiUrl}/classes/igxcolumncomponent.html#dataType)
 
 ## Additional Resources
 <div class="divider--half"></div>
