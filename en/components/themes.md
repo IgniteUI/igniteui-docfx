@@ -48,7 +48,7 @@ $secondary-color: #f96a88; // Watermelon pink
 
 $my-color-palette: palette(
   $primary: $company-color,
-  $secondary: $secondary-color
+  $secondary: $secondary-color,
 );
 ```
 
@@ -89,7 +89,7 @@ Similar to how we get sub-palette colors, there's a way to get the contrast text
 
 ```scss
 $my-primary-800: color($my-palette, "primary", 600);
-$my-primary-800-text:contrast-color($my-palette, "primary", 600);
+$my-primary-800-text: contrast-color($my-palette, "primary", 600);
 // sample usage
 
 .my-awesome-article {
@@ -119,7 +119,7 @@ $secondary-color: #f96a88; // Watermelon pink
 
 $my-color-palette: palette(
   $primary: $company-color,
-  $secondary: $secondary-color
+  $secondary: $secondary-color,
 );
 
 // IMPORTANT: Make sure you always includecore first!
@@ -151,6 +151,10 @@ To customize the typography use the `typography` mixin. It takes exactly one arg
 // IMPORTANT: Make sure you always includecore first!
 @include core();
 // Include typography beforetheme
-@include typography($config: (font-family: "Comic Sans MS"));
+@include typography(
+  $config: (
+    font-family: "Comic Sans MS",
+  )
+);
 @include theme($default-palette);
 ```
