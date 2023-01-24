@@ -256,7 +256,7 @@ The Radial Pie Chart belongs to a group of Radial Charts and uses belongs to a g
 -   [Polar Chart](polar-chart.md)
 -   [Radial Chart](radial-chart.md)
 
-## API Members
+## API References
 
 The following table lists API members mentioned in the above sections:
 

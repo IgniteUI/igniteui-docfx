@@ -42,7 +42,7 @@ The following example demonstrates how to create Composite Chart using [`IgxColu
 -   [Line Chart](line-chart.md)
 -   [Stacked Chart](stacked-chart.md)
 
-## API Members
+## API References
 
 -   [`IgxCategoryXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryxaxiscomponent.html)
 -   [`IgxColumnSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcolumnseriescomponent.html)

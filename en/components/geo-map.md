@@ -127,7 +127,7 @@ You can find more information about related Angular map features in these topics
 -   [Using Shape Polygon Series](geo-map-type-shape-polygon-series.md)
 -   [Using Shape Polyline Series](geo-map-type-shape-polyline-series.md)
 
-## API Members
+## API References
 
 The following is a list of API members mentioned in the above sections:
 

@@ -164,7 +164,7 @@ export class MapTypeScatterBubbleSeriesComponent implements AfterViewInit {
 }
 ```
 
-## API メンバー
+## API リファレンス
 
 -   [`IgxGeographicProportionalSymbolSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html)
 -   `ItemsSource`

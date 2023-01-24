@@ -311,7 +311,7 @@ export class HGridRowEditingSampleComponent implements OnInit {
     - コンテンツをレンダリングするための [`igx-banner`](../banner.md)
     - [`igx-button`](../button.md) はデフォルトのテンプレートでレンダリングされます (`[完了]` ボタンと `[キャンセル]` ボタンの場合)。
 
-以下の例では、これら 2 つのコンポーネントのスタイル設定オプション ([ボタン スタイル](../button.md#スタイル設定) & [バナー スタイル](../banner.md#スタイル設定)) を使用して、@@igxName の行編集のエクスペリエンスをカスタマイズします。
+以下の例では、これら 2 つのコンポーネントのスタイル設定オプション ([ボタン スタイル](../button.md#angular-ボタンのスタイル設定) & [バナー スタイル](../banner.md#スタイル設定)) を使用して、@@igxName の行編集のエクスペリエンスをカスタマイズします。
 次に、現在のセルのエディターと背景をより明確にするためにスタイルを設定します。セル スタイリングの詳細については、[こちら](cell-editing.md#スタイル設定)をご覧ください。
 
 ### テーマのインポート
@@ -394,7 +394,7 @@ export class HGridRowEditingSampleComponent implements OnInit {
 </@@igSelector>
 ```
 
-カスタム ボタンを定義した後は、[`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme) を使用してスタイルを設定できます。[こちら](../button.md#スタイル設定)で `igx-button` のスタイリングについてさらに学ぶことができます。`完了`と`キャンセル`のカスタム テーマを作成できます。
+カスタム ボタンを定義した後は、[`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme) を使用してスタイルを設定できます。[こちら](../button.md#angular-ボタンのスタイル設定)で `igx-button` のスタイリングについてさらに学ぶことができます。`完了`と`キャンセル`のカスタム テーマを作成できます。
 
 ```scss
 // custom.component.scss

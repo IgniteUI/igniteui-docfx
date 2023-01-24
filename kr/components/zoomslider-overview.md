@@ -3,7 +3,7 @@ title: Angular ZoomSlider | Data Visualization Tools | Data Binding | Infragisti
 _description: Use the ZoomSlider within the data chart to easily display a subset of data. It is displayed with two handles representing minimum and maximum values.
 _language: kr
 _keywords: zoom slider, Ignite UI for Angular, Infragistics, data chart
-mentionedTypes: ['ZoomSlider, XamDataChart']
+mentionedTypes: ['ZoomSlider', 'XamDataChart']
 ---
 
 # Zoom Slider
@@ -40,7 +40,7 @@ When installing the chart package, the core package must also be installed.
 -   **npm install --save igniteui-angular-charts**
     <!-- end: Angular, React, WebComponents -->
 
-## Required Modules
+## Component Modules
 
 The [`IgxZoomSliderComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxzoomslidercomponent.html) requires the following modules:
 

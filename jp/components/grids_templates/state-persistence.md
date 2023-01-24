@@ -394,6 +394,51 @@ public restoreState() {
 
 }
 
+@@if (igxName === 'IgxGrid') {
+## ストラテジの復元
+[`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) はデフォルトでは、リモート操作もカスタム ディメンション ストラテジ (詳細については、[グリッド リモート操作](remote-data-operations.md)サンプルを参照) も保持しません ([`制限`](state-persistence.md#制限) を参照)。これらの復元は、アプリケーション レベルのコードで実現できます。`IgxGridState` は、[`stateParsed`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#stateParsed) と呼ばれるイベントを公開します。このイベントはグリッド状態に追加の変更を、それが適用される前に行なうために使用できます。
+以下はその方法です。
+
+> [`stateParsed`]({environment:angularApiUrl}/classes/igxgridstatedirective) は、文字列引数で [`setState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#setstate) を使用している場合にのみ発行されます。
+
+* カスタム ソート方法およびカスタム列/行ディメンション ストラテジを設定します。
+
+```html
+<igx-grid #grid 
+          [data]="data" 
+          [igxGridState]="options" 
+          [sortStrategy]="customStrategy"
+          [height]="'500px'">
+</igx-grid>
+```
+
+```typescript
+@ViewChild(IgxGridStateDirective, { static: true })
+public state!: IgxGridStateDirective;
+
+public customStrategy = NoopSortingStrategy.instance();
+public options: IGridStateOptions = {...};
+```
+
+* `sessionStorage` から状態を復元し、カスタム ストラテジを適用します。
+
+```typescript
+public restoreState() {
+    const state = window.sessionStorage.getItem('grid-state');
+    this.state.stateParsed.pipe(take(1)).subscribe(parsedState => {
+        parsedState.sorting.forEach(x => x.strategy = NoopSortingStrategy.instance());
+    });
+    this.state.setState(state as string);
+}
+```
+
+<code-view style="height: 580px" 
+           explicit-editor="stackblitz"
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/grid/grid-state-persistence" alt="Angular Grid 状態保持の例">
+</code-view>
+
+}
 ## 制限
 @@if (igxName === 'IgxHierarchicalGrid') {
 * パラメーターなしで `setState` API を使用してすべてのグリッド機能を一度に復元する場合、ルート グリッドの列プロパティがデフォルトにリセットされる場合があります。その場合は、後で列または列の選択機能を復元してください。

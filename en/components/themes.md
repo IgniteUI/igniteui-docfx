@@ -48,7 +48,7 @@ $secondary-color: #f96a88; // Watermelon pink
 
 $my-color-palette: palette(
   $primary: $company-color,
-  $secondary: $secondary-color
+  $secondary: $secondary-color,
 );
 ```
 
@@ -89,7 +89,7 @@ Similar to how we get sub-palette colors, there's a way to get the contrast text
 
 ```scss
 $my-primary-800: color($my-palette, "primary", 600);
-$my-primary-800-text:contrast-color($my-palette, "primary", 600);
+$my-primary-800-text: contrast-color($my-palette, "primary", 600);
 // sample usage
 
 .my-awesome-article {
@@ -119,12 +119,12 @@ $secondary-color: #f96a88; // Watermelon pink
 
 $my-color-palette: palette(
   $primary: $company-color,
-  $secondary: $secondary-color
+  $secondary: $secondary-color,
 );
 
-// IMPORTANT: Make sure you always includecore first!
+// IMPORTANT: Make sure you always include core first!
 @include core();
-// Pass the color palette we generated to thetheme mixin
+// Pass the color palette we generated to the theme mixin
 @include theme($my-color-palette);
 ```
 
@@ -148,9 +148,13 @@ To customize the typography use the `typography` mixin. It takes exactly one arg
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 
-// IMPORTANT: Make sure you always includecore first!
+// IMPORTANT: Make sure you always include core first!
 @include core();
-// Include typography beforetheme
-@include typography($config: (font-family: "Comic Sans MS"));
+// Include typography before theme
+@include typography(
+  $config: (
+    font-family: "Comic Sans MS",
+  )
+);
 @include theme($default-palette);
 ```

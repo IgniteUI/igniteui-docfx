@@ -225,7 +225,7 @@ You can find more information about related chart features in these topics:
 -   [Chart Trendlines](../features/chart-trendlines.md)
 -   [Chart Performance](../features/chart-performance.md)
 
-## API Members
+## API References
 
 The following table lists API members mentioned in the above sections:
 
