@@ -341,7 +341,7 @@ Setting the [`volumeType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular
 -   `None` - is the least expensive since it does not display the volume pane.
 -   `Line` - is more expensive volume type to render and it is recommended when rendering a lot of data points or when plotting a lot of data sources.
 -   `Area` - is more expensive to render than the `Line` volume type.
--   [`IgxColumnComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcolumncomponent.html) - is more expensive to render than the `Area` volume type and it is recommended when rendering volume data of 1-3 stocks.
+-   [`IgxColumn`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcolumn.html) - is more expensive to render than the `Area` volume type and it is recommended when rendering volume data of 1-3 stocks.
 
 ## Performance in Data Chart
 
@@ -392,7 +392,7 @@ You can find more information about related chart types in these topics:
 -   [Chart Overlays](chart-overlays.md)
 -   [Chart Trendlines](chart-trendlines.md)
 
-## API Members
+## API References
 
 The following table lists API members mentioned in above sections:
 

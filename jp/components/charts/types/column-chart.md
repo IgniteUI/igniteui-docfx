@@ -282,7 +282,7 @@ Ignite UI for Angular 範囲縦棒チャートは、範囲チャートのグル�
 -   [ラジアル チャート](radial-chart.md)
 -   [積層型チャート](stacked-chart.md)
 
-## API メンバー
+## API リファレンス
 
 以下のテーブルは、上記のセクションで説明した API メンバーをリストします。
 
