@@ -22,7 +22,7 @@ _language: ja
 
 ## 使用方法
 
-はじめに、app.module.ts ファイルに  `IgxTooltipModule` をインポートします。
+はじめに、app.module.ts ファイルに `IgxTooltipModule` をインポートします。
 
 ```typescript
 // app.module.ts

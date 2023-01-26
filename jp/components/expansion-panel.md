@@ -246,7 +246,7 @@ $custom-panel-theme: expansion-panel-theme(
 ```
 
  >[!NOTE]
- > Internet Explorer 11 をサポートする場合は、`css-vars` の代わりにコンポーネント mixin の `igx-expansion-panel` を使用する必要があります。コンポーネントの ViewEncapsulation が [`Emulated`](themes/sass/component-themes.md#表示のカプセル化)であるため、`::ng-deep` を使用してカプセル化を解除する必要があります。
+ > Internet Explorer 11 をサポートする場合は、`css-vars` の代わりにコンポーネント ミックスインの `igx-expansion-panel` を使用する必要があります。コンポーネントの ViewEncapsulation が [`Emulated`](themes/sass/component-themes.md#表示のカプセル化)であるため、`::ng-deep` を使用してカプセル化を解除する必要があります。
  > カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含める必要があります。
 
 ```scss
