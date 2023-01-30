@@ -225,7 +225,7 @@ Ignite UI for Angular 株価チャート (Angular ファイナンシャル チ�
 -   [チャート トレンドライン](../features/chart-trendlines.md)
 -   [チャートのパフォーマンス](../features/chart-performance.md)
 
-## API メンバー
+## API リファレンス
 
 以下は、上記のセクションで説明した API メンバーのリストです。
 

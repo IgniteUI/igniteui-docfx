@@ -655,6 +655,6 @@ export default class WorldLocations {
 }
 ```
 
-## API メンバー
+## API リファレンス
 
 -   [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html)

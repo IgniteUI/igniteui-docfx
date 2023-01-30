@@ -36,7 +36,7 @@ To use the geographic map component, you need to first install these packages:
 -   **npm install --save igniteui-angular-maps**
     <!-- end: Angular, React, WebComponents -->
 
-## Required Modules
+## Component Modules
 
 The [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html) requires the following modules:
 

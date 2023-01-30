@@ -1,14 +1,17 @@
 ---
-title: Angular Select | Material Select | IgniteUI for Angular | インフラジスティックス
-_description: Angular Select の設定方法。マテリアル選択は、Angular ドロップダウン リストを備えた入力を提供し、Angular コンボボックスの単一項目選択を可能にします。
+title: Angular Select コンポーネント - IgniteUI for Angular
+_description: Angular Select コンポーネントを構成する方法について説明します。Angular Select は、Angular ドロップダウン リストを備えた入力を提供し、Angular Combobox の単一項目選択を可能にします。今すぐお試しください。
 _keywords:  angular select, igniteui for angular, インフラジスティックス
 _language: ja
 ---
 
-# Select
-<p class="highlight">[Select コンポーネント]({environment:angularApiUrl}/classes/igxselectcomponent.html)は、ドロップダウンに配置された項目のリストからの単一選択できます。このマテリアルベースのフォームコントロールは、単一または複数の文字の一致に基づいて、選択などの迅速な項目リスト ナビゲーションを提供します。[IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html) は [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) を拡張するため、Select インスタンスですべての Drop Down イベントを処理できます。</p>
+# Angular Select の概要
+Angular Material Select は、データ入力とデータ表示に使用されるフォーム コントロールであり、ユーザーはいくつかの事前定義された値を含むリストから特定の値を選択できます。Angular Select コンポーネントは、ドロップダウン リストに非常に似ています。Select コンポーネントは、ユーザーがオプションのリストから選択してデータを送信できるフォーム内で使用されますが、[DropDown コンポーネント](drop-down.md) はページのコンテンツをフィルター処理またはソートします。
+
+<p class="highlight">Ignite UI for Angular Material [Select コンポーネント]({environment:angularApiUrl}/classes/igxselectcomponent.html)は、ドロップダウンに配置された項目のリストからの単一選択できます。このマテリアルベースのフォームコントロールは、単一または複数の文字の一致に基づいて、選択などの迅速な項目リスト ナビゲーションを提供します。[IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html) は [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) を拡張するため、Select インスタンスですべての Drop Down イベントを処理できます。</p>
 
 ## Angular Select の例
+以下は基本的な Angular Select の例です。クリックごとに開く、いくつかの選択肢のリストを表示するシンプルなコンテキスト メニューがあります。
 
 <code-view style="height: 300px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -17,8 +20,8 @@ _language: ja
 
 
 
-## 使用方法
-[Select]({environment:angularApiUrl}/classes/igxselectcomponent.html) コンポーネントを初期化にするには、まず **IgxSelectModule** を **app.module** ファイルにインポートします。
+## Ignite UI で Angular Select を使用する方法
+Ignite UI for Angular [Select コンポーネント]({environment:angularApiUrl}/classes/igxselectcomponent.html)を初期化にするには、まず **IgxSelectModule** を **app.module** ファイルにインポートします。
 ```typescript
 // app.module.ts
 
@@ -75,7 +78,7 @@ public items: string[] = ['Orange', 'Apple', 'Banana', 'Mango'];
 
 Select コンポーネントは、[入力グループ](input-group.md)に適用可能な次のディレクティブをサポートしています。
 
-- `igxLabel` - Select 入力とのリンクは `aria-labelledby` を介して自動的に処理されるため、`for` プロパティを設定する必要はありません。
+- `igxLabel` - Angular Select 入力とのリンクは `aria-labelledby` を介して自動的に処理されるため、`for` プロパティを設定する必要はありません。
 - `igx-prefix`/`igxPrefix`
 - `igx-suffix`/`igxSuffix` - 組み込みのトグル ボタンサフィックスが常に最後に表示されることに注意してください。
 - `igx-hint`/`igxHint`
@@ -215,7 +218,7 @@ public greengrocery: Array<{ label: string, items: Array<{ type: string, origin:
 </code-view>
 
 
-### カスタム切り替えボタン
+### Angular Select のカスタム切り替えボタン
 `igxSelectToggleIcon` ディレクティブを使用するか、あるいは [`toggleIconTemplate`]({environment:angularApiUrl}/classes/igxselectcomponent.html#toggleicontemplate) プロパティに `TemplateRef` を設定して、デフォルトの切り替えボタンをカスタマイズできます。
 
 ```html
@@ -230,9 +233,9 @@ public greengrocery: Array<{ label: string, items: Array<{ type: string, origin:
 
 ## キーボード ナビゲーション
 
-- 選択がフォーカスされているときに `Space`、`Enter`、または `ALT + 上矢印/下矢印`キーをクリックして、`igx-select` を開きます。
+- 選択がフォーカスされているときに `Space`、`Enter`、または `ALT + 上矢印/下矢印` キーをクリックして、`igx-select` を開きます。
 - `ALT + 上矢印/下矢印`の組み合わせ、または `Enter`、`Space`、`Esc`、`Tab` キーのいずれかを使用して、`igx-select` を閉じます。
-- `上矢印/下矢印`キーを使用して項目間を移動します。
+- `上矢印/下矢印` キーを使用して項目間を移動します。
 - `Home` または `End` キーを使用して、リストの最初と最後の項目へ移動します。
 - 特定の文字で始まるリスト項目を移動するには、対応するキーを押します。
 - 必要な項目の最初の数文字を入力してすばやく特定の項目に移動できます。

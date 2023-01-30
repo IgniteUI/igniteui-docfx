@@ -149,7 +149,7 @@ export class MapBindingShapefilePolylinesComponent implements AfterViewInit {
 }
 ```
 
-## API メンバー
+## API リファレンス
 
 -   `Fields`
 -   [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html)

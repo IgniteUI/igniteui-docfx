@@ -139,7 +139,7 @@ export class MapBindingDataCsvComponent implements AfterViewInit {
 }
 ```
 
-## API メンバー
+## API リファレンス
 
 -   [`IgxGeographicHighDensityScatterSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html)
 -   `DataSource`

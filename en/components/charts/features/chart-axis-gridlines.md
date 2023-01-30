@@ -135,7 +135,7 @@ You can find more information about related chart features in these topics:
 -   [Axis Layout](chart-axis-layouts.md)
 -   [Axis Options](chart-axis-options.md)
 
-## API Members
+## API References
 
 The following is a list of API members mentioned in the above sections:
 

@@ -43,7 +43,7 @@ $ ProductName$ データ チャートを使用すると、複数のチャート�
 
 垂直または水平に同期するには、[`isHorizontalZoomEnabled`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html#ishorizontalzoomenabled) または [`isVerticalZoomEnabled`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html#isverticalzoomenabled) プロパティをそれぞれ **true** に設定する必要があります。他のチャートに依存している同期チャートは、このプロパティ設定に関係なく、ズームできます。
 
-## API メンバー
+## API リファレンス
 
 以下は、上記のセクションで説明した API メンバーのリストです。
 
