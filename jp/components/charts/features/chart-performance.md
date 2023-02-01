@@ -342,7 +342,7 @@ this.LineSeries.Resolution = 10;
 -   `None` - ボリューム ペインが表示されないため、最も簡易です。
 -   `Line` - 描画するのにより手間がかかるボリューム タイプです。データ ポイントの大量を描画するか、複数のデータ ソースをプロットする場合に使用することをお勧めします。
 -   `Area` - `Line` ボリューム タイプより描画に手間がかかります。
--   [`IgxColumnComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcolumncomponent.html) - `Area` ボリューム タイプより描画に手間がかかります。1 つ ～ 3 つの株のボリューム データを描画する場合にお勧めします。
+-   [`IgxColumn`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcolumn.html) - `Area` ボリューム タイプより描画に手間がかかります。1 つ ～ 3 つの株のボリューム データを描画する場合にお勧めします。
 
 ## データ チャートのパフォーマンス
 
@@ -393,7 +393,7 @@ this.LineSeries.Resolution = 10;
 -   [チャート オーバーレイ](chart-overlays.md)
 -   [チャート トレンドライン](chart-trendlines.md)
 
-## API メンバー
+## API リファレンス
 
 以下は、上記のセクションで説明した API メンバーのリストです。
 

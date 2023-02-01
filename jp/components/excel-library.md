@@ -2,13 +2,13 @@
 title: Angular Excel ライブラリ | データ スプレッドシートとテーブル | インフラジスティックス
 _description: インフラジスティックスの Angular Excel ライブラリは、Microsoft Excel 機能を使用してスプレッドシート データを使用した作業が可能になります。Ignite UI for Angular Excel ライブラリを使用して Excel からアプリケーションにデータを簡単に転送できる方法について説明します。
 _keywords: Excel library, Ignite UI for Angular, Infragistics, workbook, Excel ライブラリ, ワークブック, インフラジスティックス
-mentionedTypes: ['Workbook']
+mentionedTypes: ['Workbook', 'Worksheet', 'Cell', 'Formula']
 _language: ja
 ---
 
 # Angular Excel ライブラリの概要
 
-Infragistics Angular Excel ライブラリは、[`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html)、[`Worksheet`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html)、`Cell`、[`Formula`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/formula.html) などの人気の Microsoft® Excel® スプレッドシート オブジェクトを使用してスプレッドシート データで作業をすることができます。Infragistics Angular Excel ライブラリによって Excel スプレッドシートでアプリケーションのデータを表示するだけでなく、Excel からアプリケーションへのデータの転送も簡単になります。
+Infragistics Angular Excel ライブラリは、[`workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/sheet.html#workbook)、[`Worksheet`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html)、[`IgxCell`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcell.html)、[`Formula`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/formula.html) などの人気の Microsoft® Excel® スプレッドシート オブジェクトを使用してスプレッドシート データで作業をすることができます。Infragistics Angular Excel ライブラリによって Excel スプレッドシートでアプリケーションのデータを表示するだけでなく、Excel からアプリケーションへのデータの転送も簡単になります。
 
 ## Angular Excel ライブラリの例
 
@@ -102,11 +102,11 @@ Excel ライブラリには、アプリのバンドル サイズを制限する�
 
 <!-- Angular, React, WebComponents -->
 
-次のコード スニペットでは、外部の [ExcelUtility](excel-utility.md) クラスを使用して [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) を保存およびロードしています。
+次のコード スニペットでは、外部の [ExcelUtility](excel-utility.md) クラスを使用して [`workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/sheet.html#workbook) を保存およびロードしています。
 
 <!-- end: Angular, React, WebComponents -->
 
-[`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) オブジェクトを読み込んで保存するために、実際の [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) の保存メソッドや static な `Load` メソッドを使用できます。
+[`workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/sheet.html#workbook) オブジェクトを読み込んで保存するために、実際の [`workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/sheet.html#workbook) の保存メソッドや static な `Load` メソッドを使用できます。
 
 ```ts
 import { Workbook } from "igniteui-angular-excel";
@@ -155,8 +155,9 @@ architect => build => options から serve の options で `vendorSourceMap` オ
 
 <!-- -->
 
-## API メンバー
+## API リファレンス
 
 -   `Load`
 -   `WorkbookInProcessRuntime`
--   [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html)
+-   [`Worksheet`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html)
+-   [`workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/sheet.html#workbook)

@@ -207,10 +207,13 @@ Ignite UI for Angular は、世界最速の仮想化された Angular データ 
 この Angular グリッドの例では、データの検索とフィルタリング、列のソート、サイズ変更、ピン固定と非表示、行の選択、Excel と csv へのエクスポート、水平および垂直スクロールなど、グリッドに組み込まれているさまざまな機能を利用してユーザーがデータ ビューをカスタマイズする方法を確認できます。Linear Progress Bar Indicator やスパークラインなどのコンポーネントを含むセル テンプレートの例を提供しました。その他の機能については、[こちら](#list-features)をご覧ください。
 <div class="divider--half"></div>
 
-<div class="sample-container loading" style="height: 435px">
-    <iframe id="icon-sample-1-iframe" seamless="" width="100%" height="100%" frameborder="0" src="{environment:crmDemoBaseUrl}/" onload="onSampleIframeContentLoaded(this);" alt="Angular Grid の例">
-    </iframe>
-</div>
+<code-view style="height:435px"
+           explicit-editor="stackblitz"
+           data-demos-base-url="{environment:crmDemoBaseUrl}"
+           iframe-src="{environment:crmDemoBaseUrl}/grid-crm" 
+           alt="Angular Grid の例">
+</code-view>
+
 <p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 
 <div class="divider--half"></div>

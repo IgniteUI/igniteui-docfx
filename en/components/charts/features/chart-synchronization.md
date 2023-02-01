@@ -42,7 +42,7 @@ If you want to synchronize a set of charts, you can assign them the same name to
 
 Note that in order to synchronize either vertically and/or horizontally, you will need to set the [`isHorizontalZoomEnabled`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html#ishorizontalzoomenabled) and/or [`isVerticalZoomEnabled`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html#isverticalzoomenabled) property to **true**, respectively. A synchronized chart that is dependent on another chart will still zoom regardless of this property setting.
 
-## API Members
+## API References
 
 The following is a list of API members mentioned in the above sections:
 

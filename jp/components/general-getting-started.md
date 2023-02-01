@@ -1,13 +1,14 @@
 ---
-title: Angular データ可視化ツール | 作業の開始 | インフラジスティックス
+title: 作業の開始 | Ignite UI for Angular | インフラジスティックス
 _description: インフラジスティックスの Angular コンポーネントを使用してアプリを作成し、世界最速の仮想化されたリアルタイムの Angular データ グリッドとファイナンシャル ストリーミングおよびビジネスとファイナンシャル チャートでデータの可視化を改善します。
 _keywords: Ignite UI for Angular, Infragistics, Getting Started, インフラジスティックス, 作業の開始
 _language: ja
+mentionedTypes: ['XamBulletGraph']
 ---
 
-# Ignite UI for Angular を使用した作業の開始
-
 <!-- Angular, React -->
+
+# Ignite UI for Angular を使用した作業の開始
 
 ## 既存アプリの更新
 

@@ -2,6 +2,7 @@
 title: Angular チャートとグラフ ライブラリー | Ignite UI for Angular
 _description: Ignite UI for Angular チャートおよびグラフは、データ視覚化の広範なライブラリであり、Web アプリやモバイル アプリの魅力的でインタラクティブなチャートを実現します。無料でお試しください。
 _keywords: Angular Charts, Chart, Infragistics, Angular チャート, チャート, インフラジスティックス
+mentionedTypes: ["DomainChart", "FinancialChart", "CategoryChart", "XamDataChart"]
 _language: ja
 ---
 
@@ -38,7 +39,7 @@ Angular チャートは、軸、マーカー、シリーズ、凡例、および
 
 ### Angular 棒チャート
 
-Angular 棒チャート (棒グラフ) は、さまざまなカテゴリのデータの頻度、カウント、合計、または平均を、同じ幅と異なる長さの水平棒でエンコードされたデータとすばやく比較するために使用される最も一般的なカテゴリ チャート タイプの 1 つです。これらは、時間の経過に伴う項目の価値の変動、データ分布、並べ替えられたデータのランキング (高から低、最悪から最高) を表示するのに理想的です。データは、チャートの左から右にデータ ポイントの値に向かって伸びる長方形のコレクションを使用して表されます。[棒チャート](types/bar-chart.md)の詳細をご覧ください。
+Angular 棒チャート (棒グラフ) は、さまざまなカテゴリのデータの頻度、カウント、合計、または平均を、同じ幅と異なる長さの水平棒でエンコードされたデータとすばやく比較するために使用される最も一般的なカテゴリ チャート タイプの 1 つです。これらは、時間の経過に伴う項目の価値の変動、データ分布、ソートされたデータのランキング (高から低、最悪から最高) を表示するのに理想的です。データは、チャートの左から右にデータ ポイントの値に向かって伸びる長方形のコレクションを使用して表されます。[棒チャート](types/bar-chart.md)の詳細をご覧ください。
 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
@@ -230,7 +231,7 @@ Angular ファイナンシャル/株価チャートは、時系列チャート�
 
 ### Angular 縦棒チャート
 
-Angular 縦棒チャート (縦棒グラフ) は、さまざまなカテゴリのデータの頻度、カウント、合計、または平均を、同じ幅と異なる長さの垂直棒でエンコードされたデータとすばやく比較するために使用される最も一般的なカテゴリ チャート タイプの 1 つです。これらは、時間の経過に伴う項目の価値の変動、データ分布、並べ替えられたデータのランキング (高から低、最悪から最高) を表示するのに理想的です。データは、チャートの上から下にデータ ポイントの値に向かって伸びる長方形のコレクションを使用して表されます。[縦棒チャート](types/column-chart.md)の詳細をご覧ください。
+Angular 縦棒チャート (縦棒グラフ) は、さまざまなカテゴリのデータの頻度、カウント、合計、または平均を、同じ幅と異なる長さの垂直棒でエンコードされたデータとすばやく比較するために使用される最も一般的なカテゴリ チャート タイプの 1 つです。これらは、時間の経過に伴う項目の価値の変動、データ分布、ソートされたデータのランキング (高から低、最悪から最高) を表示するのに理想的です。データは、チャートの上から下にデータ ポイントの値に向かって伸びる長方形のコレクションを使用して表されます。[縦棒チャート](types/column-chart.md)の詳細をご覧ください。
 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
@@ -410,7 +411,7 @@ Angular ステップ折れ線チャート、またはステップ折れ線グラ
 
 <!-- ### Angular タイムライン チャート/時系列チャート
 
-時系列チャート (タイムライン グラフ) は、データをカテゴリ データ項目の連続として扱い、日付順に並べ替えてから描画する視覚化です。この軸のラベルは、日時の値に従って、X 軸 (下の軸) に沿って配置されます。Angular 時系列は、ファイナンシャル シリーズ、範囲シリーズ、およびカテゴリ シリーズ (折れ線、エリア、縦棒、ポイント、スプライン、散布図、ウォーターフォール、およびこれらのチャート タイプに相当する積層型チャート) を表示するために使用されます。時系列は、ブレークのあるデータの間隔を除外する機能もサポートしています。その結果として、ラベルは除外された間隔で表示されません。たとえば、勤務日/休業日、休日、週末などです。 -->
+時系列チャート (タイムライン グラフ) は、データをカテゴリ データ項目の連続として扱い、日付順にソートしてから描画する視覚化です。この軸のラベルは、日時の値に従って、X 軸 (下の軸) に沿って配置されます。Angular 時系列は、ファイナンシャル シリーズ、範囲シリーズ、およびカテゴリ シリーズ (折れ線、エリア、縦棒、ポイント、スプライン、散布図、ウォーターフォール、およびこれらのチャート タイプに相当する積層型チャート) を表示するために使用されます。時系列は、ブレークのあるデータの間隔を除外する機能もサポートしています。その結果として、ラベルは除外された間隔で表示されません。たとえば、勤務日/休業日、休日、週末などです。 -->
 
 ### Angular ツリーマップ
 
@@ -506,3 +507,12 @@ alt="Angular チャート マーカー、ツールチップ、およびテンプ
 -   Ignite UI for Angular は、Angular 開発者向けの Angular 上に構築されており、サードパーティの依存関係はありません。Angular 用に 100% 最適化されています。
 -   Sketch デザインからピクセル パーフェクトな Angular コントロールを生成する、UX デザイナー、ビジュアル デザイナー、開発者向けのコード プラットフォームに、世界初で唯一のエンドツーエンドの包括的なデザインを提供します。Indigo.Design を使用すると、Indigo Design System から Sketch で作成するすべてのものが Ignite UI for Angular コントロールと一致します。
     <!-- end: Angular -->
+
+## API リファレンス
+
+このトピックで言及されているすべてのチャート タイプは、次の API コンポーネントに実装されています:
+
+-   [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html)
+-   [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html)
+-   [`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html)
+-   [`IgxTreemapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtreemapcomponent.html)

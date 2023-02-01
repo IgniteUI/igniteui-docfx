@@ -43,7 +43,7 @@ Ignite UI for Angular 複合チャートまたはコンボ チャートは、同
 -   [折れ線チャート](line-chart.md)
 -   [積層型チャート](stacked-chart.md)
 
-## API メンバー
+## API リファレンス
 
 -   [`IgxCategoryXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategoryxaxiscomponent.html)
 -   [`IgxColumnSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcolumnseriescomponent.html)

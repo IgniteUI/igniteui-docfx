@@ -10,7 +10,8 @@ _language: ja
 
 すべての Ignite UI for Angular チャートには、位置などの多くの軸レイアウト オプションを構成するオプションが含まれているほか、シリーズ間で軸を共有したり、同じチャートに複数の軸を含めることができます。これらの機能は、以下の例で示されています。
 
-> 注: 次の例は、[`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html) および [`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html) コントロールに適用されます。
+> [!NOTE]
+> 次の例は、[`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html) および [`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html) コントロールに適用されます。
 
 ## 軸位置の例
 
@@ -105,7 +106,7 @@ Angular [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-
 -   [軸グリッド線](chart-axis-gridlines.md)
 -   [軸オプション](chart-axis-options.md)
 
-## API メンバー
+## API リファレンス
 
 以下は、上記のセクションで説明した API メンバーのリストです。
 

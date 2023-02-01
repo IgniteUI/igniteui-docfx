@@ -186,7 +186,7 @@ Angular チャートの [`xAxisOverlap`]({environment:dvApiBaseUrl}/products/ign
 -   [軸グリッド線](chart-axis-gridlines.md)
 -   [軸レイアウト](chart-axis-layouts.md)
 
-## API メンバー
+## API リファレンス
 
 以下は、上記のセクションで説明した API メンバーのリストです。
 
