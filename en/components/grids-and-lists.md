@@ -209,7 +209,7 @@ In this angular grid example, you can see how users can customize their _data vi
 <code-view style="height:435px"
            explicit-editor="stackblitz"
            data-demos-base-url="{environment:crmDemoBaseUrl}"
-           iframe-src="{environment:crmDemoBaseUrl}" 
+           iframe-src="{environment:crmDemoBaseUrl}/" 
            alt="Angular data grid example">
 </code-view>
 
