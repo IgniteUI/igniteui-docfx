@@ -249,7 +249,7 @@ IgxDatePicker と [`IgxTimePicker`](time-picker.md) を一緒に使用する場�
 ```
 
 ## スタイル設定
-日付ピッカーのスタイル設定には、すべてのテーマ関数とコンポーネント mixins が存在する `index` ファイルをインポートする必要があります。
+日付ピッカーのスタイル設定には、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
 
 ```scss
 @use "igniteui-angular/theming" as *;
