@@ -55,7 +55,7 @@ Ignite UI for Angular の @@igComponent は、UI 操作のコンテナーとな�
 
 }
 
-事前定義された `actions` および `title` UI コンポーネントが  `<igx-grid-toolbar>` 内に追加されます。これはすべて、対応するグリッド機能とのデフォルトのインタラクションを提供するツールバーを持つために必要です。
+事前定義された `actions` および `title` UI コンポーネントが `<igx-grid-toolbar>` 内に追加されます。これはすべて、対応するグリッド機能とのデフォルトのインタラクションを提供するツールバーを持つために必要です。
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -103,7 +103,7 @@ Ignite UI for Angular の @@igComponent は、UI 操作のコンテナーとな�
 ```
 }
 
-> 注: 上記のコード スニペットに示されているように、事前定義された  `actions` UI コンポーネントは [`<igx-grid-toolbar-actions>` コンテナー](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/latest/classes/igxgridtoolbaractionscomponent.html)にラップされています。このように、ツールバーのタイトルはツールバーの左側に配置され、アクションはツールバーの右側に配置されます。
+> 注: 上記のコード スニペットに示されているように、事前定義された `actions` UI コンポーネントは [`<igx-grid-toolbar-actions>` コンテナー](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/latest/classes/igxgridtoolbaractionscomponent.html)にラップされています。このように、ツールバーのタイトルはツールバーの左側に配置され、アクションはツールバーの右側に配置されます。
 
 これらの UI はそれぞれ独立して追加することも、まったく追加しないこともできます。このようにして、ツールバー コンテナーは空になります。
 

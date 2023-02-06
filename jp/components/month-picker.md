@@ -22,7 +22,7 @@ _language: ja
 
 ## Ignite UI で Angular Month Picker コンポーネントを使用する方法
 
-はじめに、**app.module.ts** ファイルに  `IgxCalendarModule` をインポートします。注: タッチ操作のために、[`IgxCalendar`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) は **BrowserAnimationsModule** と **HammerModule** に依存関係があり、これらも AppModule に追加する必要があります。
+はじめに、**app.module.ts** ファイルに `IgxCalendarModule` をインポートします。注: タッチ操作のために、[`IgxCalendar`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) は **BrowserAnimationsModule** と **HammerModule** に依存関係があり、これらも AppModule に追加する必要があります。
 
 ```typescript
 // app.module.ts
