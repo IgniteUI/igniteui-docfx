@@ -127,7 +127,11 @@ Ignite UI theming abstracts multiple dimensions of theming and provides for very
 
 ## Theme Optimization
 
-After making some customizations, we're going to build the application to see what our application theme looks like in terms of size.
+After making some customizations, we're going to build the application we generated and modified to see what our application theme looks like in terms of size.
+
+<img class="responsive-img"  src="../../../images/general/theming-walkthrough/optimizing-initial-build.png" />
+
+As you can see, the application theme is slightly over 400kb, which comes down to ~40kb when compressed and transferred over. This is not large, but can it be more optimal? The answer is yes, unless every single component from the Ignite UI for Angular suite is used. Calling `@include theme()` brings in all of the component themes, but we have a mechanism for telling the function what to exclude. 
 
 ## Additional Resources
 
