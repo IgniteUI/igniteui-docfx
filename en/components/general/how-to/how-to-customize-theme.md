@@ -74,11 +74,11 @@ $custom-palette: palette(
 @include theme($palette: $custom-palette, $schema: $dark-material-schema);
 ```
 
-As you can see, the code generation changed from the specific `@include light-theme($light-material-palette);`, which is the default theme and palette, to a generic [`theme()`](../../themes/sass/global-themes.md) include, which provides as parameters our custom color palette and a [dark material schema](../../themes/sass/schemas.md) for the theming structure. The running Angular app result looks like this now:
+As you can see, the code generation changed from the specific `@include light-theme($light-material-palette);`, which is the [default theme](../../themes/sass/presets/material.md) and [color palette](../../themes/palettes.md), to a generic [`theme()`](../../themes/sass/global-themes.md) include, which provides as parameters our custom color palette and a [dark material schema](../../themes/sass/schemas.md) for the theming structure. The running Angular app result looks like this now:
 
 <img class="responsive-img"  src="../../../images/general/theming-walkthrough/getting-started-dark-app.png" />
 
-We want to dig deeper and customize a specific [component theme](../../themes/sass/component-themes.md) in our application and we will do this by bringing in the CSS variables for the grid toolbar theme only. 
+We want to dig deeper and customize a specific [component theme](../../themes/sass/component-themes.md) in our application and we will do this by bringing in the CSS variables for an individual component theme, in this case the grid toolbar theme. 
 
 ```scss
 @include core();
@@ -86,6 +86,7 @@ We want to dig deeper and customize a specific [component theme](../../themes/sa
 
 $primary: #1028c7;
 
+/* All of the components will use this custom color palette */
 $custom-palette: palette(
   $primary: $primary,
   $secondary: #e0d94c,
@@ -94,6 +95,7 @@ $custom-palette: palette(
 @include theme($palette: $custom-palette, $schema: $dark-material-schema);
 
 /* Grid Toolbar */
+/* All grid toolbars will have custom background and elevations */
 $toolbar-theme: grid-toolbar-theme(
   $background-color: $primary,
   $elevations: 0px 15px 30px 0px rgba(0,0,0,0.4)
@@ -105,6 +107,27 @@ $toolbar-theme: grid-toolbar-theme(
 And the result in our app now looks like this:
 
 <img class="responsive-img"  src="../../../images/general/theming-walkthrough/customizing-updating-toolbar.png" />
+
+The same process can be applied to override and customize any of the component themes individually.
+
+### What can be customized
+
+Ignite UI theming abstracts multiple dimensions of theming and provides for very robust retheming capabilities. Developers and designers can take advantage of the theming engine APIs to make tailored visual design for their applications, which gives them unique look and feel when using Ignite UI for Angular. The theming engine also exposes variables from each of the dimensions, which can be used to apply theming to the rest of the application structure, which is not directly built with Ignite UI for Angular components as UI. The dimensions exposed for modifications are:
+
+ * [Colors](../../themes/sass/palettes.md) (color palette)
+ * [Shape](../../themes/sass/roundness.md) (borders and radiuses)
+ * [Elevations](../../themes/sass/elevations.md) (shadows)
+ * [Typography](../../themes/sass/typography.md) (fonts and font sizes)
+ * [Display density](../../display-density.md) (the density of information that is fitted on the screen)
+
+>[!NOTE]
+> If you really want a fully custom visual design, you will need to modify all of the supported theming dimensions and you will take full advantage of the SASS APIs. 
+> If you just need to change things like the fonts and а few colors, then you can just take a look at the section for palettes and typography. In most cases, all you will need is to change a few CSS variables and you won't need the full SASS APIs.
+> We've made this as granular as possible, so modifications can be applied without unexpected side results on the visual design of your applications. 
+
+## Theme Optimization
+
+After making some customizations, we're going to build the application to see what our application theme looks like in terms of size.
 
 ## Additional Resources
 
