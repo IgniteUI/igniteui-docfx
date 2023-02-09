@@ -137,7 +137,7 @@ As you can see, the application theme is slightly over 400kb, which comes down t
 @use "@infragistics/igniteui-angular/theming" as *;
 ```
 
-The components array is found at `$components` and you can reduce this list with the components you use and exclude all the rest, like in this example:
+The components array is found at `$components` and you can reduce [this list]({environment:sassApiUrl}/index.html#variable-light-schema) with the components you use and exclude all the rest, like in this example:
 
 ```scss
 $include: (
