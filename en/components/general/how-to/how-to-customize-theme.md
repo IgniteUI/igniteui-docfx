@@ -90,8 +90,10 @@ $primary: #1028c7;
 $custom-palette: palette(
   $primary: $primary,
   $secondary: #e0d94c,
-  $surface: #000000,
-  $gray: #FFFFFF);
+  $surface: #000,
+  $gray: #fff
+);
+
 @include theme($palette: $custom-palette, $schema: $dark-material-schema);
 
 /* Grid Toolbar */
