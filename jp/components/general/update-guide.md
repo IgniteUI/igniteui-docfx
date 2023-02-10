@@ -110,7 +110,7 @@ ng update @angular/cli
     .my-class {
         background: color($color: 'grays', $variant: 300);
         color: contrast-color($color: 'grays', $variant: 300);
-        border-color: hsl(var(--ig-grays-500));
+        border-color: hsl(var(--igx-grays-500));
     }
     ```
 
