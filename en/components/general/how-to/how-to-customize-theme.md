@@ -9,7 +9,7 @@ _keywords: Ignite UI for Angular, Customizing Ignite UI Theming, Optimizing Igni
 This article will walk you through the details of customizing Ignite UI for Angular application theming and optimizing the size of the produced stylesheet. The article shows details of how the Ignite UI for Angular theming engine works and presents advanced usage of it. The article is very useful for both making full customization of the component styles, such that your Angular application is taylored to match your desired look and feel, and for making your application optimal for deployment by reducing the style sizes down to only what is used by the app.
 
 >[!NOTE] 
-> This document describes the theming system in Ignite UI for Angular from version 15 forward. Examples include both using the SASS APIs provided by the theming engine and exposed CSS variables.
+> This document describes the theming system in Ignite UI for Angular from version 15 forward. Examples include both using the Sass APIs provided by the theming engine and exposed CSS variables.
 
 ## Getting Started
 
