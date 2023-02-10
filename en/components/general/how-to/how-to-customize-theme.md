@@ -99,8 +99,7 @@ $custom-palette: palette(
 /* Grid Toolbar */
 /* All grid toolbars will have custom background and elevations */
 $toolbar-theme: grid-toolbar-theme(
-  $background-color: $primary,
-  $elevations: 0px 15px 30px 0px rgba(0,0,0,0.4)
+  $background-color: $primary
 );
 @include css-vars($toolbar-theme);
 /* END Grid Toolbar */
