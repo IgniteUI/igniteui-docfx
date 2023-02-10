@@ -43,8 +43,8 @@ html, body {
   height: 100%;
 }
 
-.igx-typography {
-  h1, h2, h3, h4, h5, h6, p, .igx-typography__body-1 {
+.ig-typography {
+  h1, h2, h3, h4, h5, h6, p, .ig-typography__body-1 {
     margin: 0;
   }
 }
