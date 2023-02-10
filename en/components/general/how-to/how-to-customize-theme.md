@@ -122,8 +122,8 @@ Ignite UI theming abstracts multiple dimensions of theming and provides for very
  * [Display density](../../display-density.md) (the density of information that is fitted on the screen)
 
 >[!NOTE]
-> If you really want a fully custom visual design, you will need to modify all of the supported theming dimensions and you will take full advantage of the SASS APIs.
-> If you just need to change things like the fonts and а few colors, then you can just take a look at the section for palettes and typography. In most cases, all you will need is to change a few CSS variables and you won't need the full SASS APIs.
+> If you really want a fully custom visual design, you will need to modify all of the supported theming dimensions and you will take full advantage of the Sass APIs.
+> If you just need to change things like the fonts and а few colors, then you can just take a look at the section for palettes and typography. In most cases, all you will need is to change a few CSS variables and you won't need the full Sass APIs.
 > We've made this as granular as possible, so modifications can be applied without unexpected side results on the visual design of your applications.
 
 ## Theme Optimization
