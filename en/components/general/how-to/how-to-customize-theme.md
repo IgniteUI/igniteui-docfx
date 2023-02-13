@@ -312,9 +312,6 @@ The result in terms of build is the following:
 
 As you can see, our top-level `styles.css` came down to a little over 70kb, which is a little less than 6kb when compressed. We started at ~428kb, ~40kb compressed and managed to bring this down about 7 times in terms of compressed size. The rest is being delievered only when the view containing the `igx-tree-grid` and `igx-combo` components is being loaded.
 
->[!NOTE]
-> The size of the `main.js` should have also gone down with the extraction of the `IgxTreeGridModule` and the `IgxComboModule` but at the time of writing this article, with Angular v15 being current, the tree-shaking capability of the Angular framework was not working correctly.
-
 ## Additional Resources
 
 Related topics:
