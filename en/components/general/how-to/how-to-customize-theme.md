@@ -69,9 +69,14 @@ The updated `styles.scss` looks like this:
 $custom-palette: palette(
   $primary: #1028c7,
   $secondary: #e0d94c,
-  $surface: #000000,
-  $gray: #FFFFFF);
-@include theme($palette: $custom-palette, $schema: $dark-material-schema);
+  $surface: #000,
+  $gray: #fff
+);
+
+@include theme(
+    $palette: $custom-palette, 
+    $schema: $dark-material-schema
+);
 ```
 
 As you can see, the code generation changed from the specific `@include light-theme($light-material-palette);`, which is the [default theme](../../themes/sass/presets/material.md) and [color palette](../../themes/palettes.md), to a generic [`theme()`]({environment:sassApiUrl}/index.html#mixin-theme) include, which provides as parameters our custom color palette and a [dark material schema](../../themes/sass/schemas.md) for the theming structure. The running Angular app result looks like this now:
@@ -94,13 +99,17 @@ $custom-palette: palette(
   $gray: #fff
 );
 
-@include theme($palette: $custom-palette, $schema: $dark-material-schema);
+@include theme(
+    $palette: $custom-palette, 
+    $schema: $dark-material-schema
+);
 
 /* Grid Toolbar */
 /* All grid toolbars will have custom background and elevations */
 $toolbar-theme: grid-toolbar-theme(
   $background-color: $primary
 );
+
 @include css-vars($toolbar-theme);
 /* END Grid Toolbar */
 ```
@@ -157,7 +166,7 @@ $include: (
   $palette: $custom-palette,
   $schema: $dark-material-schema,
   /* Removing all included components from the full list and excluding the rest  */
-  $exclude: map-keys(map-remove($components, $include...),)
+  $exclude: map.keys(map.remove($components, $include...))
 );
 ```
 
@@ -263,12 +272,16 @@ Then we will proceed by removing the `igx-grid`, `igx-grid-toolbar` and `igx-com
 
   @include combo(combo-theme());
 
-  @include grid-toolbar(grid-toolbar-theme($background-color: $primary, $elevations: 0px 15px 30px 0px rgba(0,0,0,0.4)));
+  @include grid-toolbar(
+    grid-toolbar-theme(
+        $background-color: $primary, 
+    );
 }
 ```
 
 ```scss
 /* Updated styles.scss */
+@use "sass:map";
 @use "minireset.css/minireset";
 @use "@infragistics/igniteui-angular/theming" as *;
 
@@ -280,8 +293,8 @@ $primary: #1028c7;
 $custom-palette: palette(
   $primary: $primary,
   $secondary: #e0d94c,
-  $surface: #000000,
-  $gray: #FFFFFF,
+  $surface: #000,
+  $gray: #fff,
   $info: color($dark-material-palette, 'info'),
   $success: color($dark-material-palette, 'success'),
   $error: color($dark-material-palette, 'error'),
@@ -299,7 +312,7 @@ $include: (
 @include theme(
   $palette: $custom-palette,
   $schema: $dark-material-schema,
-  $exclude: map-keys(map-remove($components, $include...),)
+  $exclude: map.keys(map.remove($components, $include...),)
 );
 ```
 
