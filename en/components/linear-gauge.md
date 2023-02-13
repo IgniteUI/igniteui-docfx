@@ -15,11 +15,10 @@ The Ignite UI for Angular linear gauge component allows for visualizing data in 
 The following sample demonstrates how setting multiple properties on the same [`IgxLinearGaugeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineargaugecomponent.html) can transform it to completely different linear gauge.
 
 <code-view style="height: 155px"
-           data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/gauges/linear-gauge-animation"
-           alt="Angular Linear Gauge Example"
-           github-src="gauges/linear-gauge/animation">
-</code-view>
+        data-demos-base-url="{environment:dvDemosBaseUrl}"
+        iframe-src="{environment:dvDemosBaseUrl}/gauges/linear-gauge-animation"
+        alt="Angular Linear Gauge Example"
+        github-src="gauges/linear-gauge/animation"> </code-view>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
     <body>
@@ -122,10 +121,9 @@ This is the primary measure displayed by the linear gauge component and is visua
 ```
 
 <code-view style="height: 125px"
-           data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/gauges/linear-gauge-needle"
-           github-src="gauges/linear-gauge/needle">
-</code-view>
+        data-demos-base-url="{environment:dvDemosBaseUrl}"
+        iframe-src="{environment:dvDemosBaseUrl}/gauges/linear-gauge-needle"
+        github-src="gauges/linear-gauge/needle"> </code-view>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
     <body>
@@ -163,10 +161,9 @@ The ranges are visual elements that highlight a specified range of values on a s
 ```
 
 <code-view style="height: 125px"
-           data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/gauges/linear-gauge-ranges"
-           github-src="gauges/linear-gauge/ranges">
-</code-view>
+        data-demos-base-url="{environment:dvDemosBaseUrl}"
+        iframe-src="{environment:dvDemosBaseUrl}/gauges/linear-gauge-ranges"
+        github-src="gauges/linear-gauge/ranges"> </code-view>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
     <body>
@@ -208,10 +205,9 @@ Minor tick marks – The minor tick marks represent helper tick marks, which mig
 ```
 
 <code-view style="height: 125px"
-           data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/gauges/linear-gauge-tickmarks"
-           github-src="gauges/linear-gauge/tickmarks">
-</code-view>
+        data-demos-base-url="{environment:dvDemosBaseUrl}"
+        iframe-src="{environment:dvDemosBaseUrl}/gauges/linear-gauge-tickmarks"
+        github-src="gauges/linear-gauge/tickmarks"> </code-view>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
     <body>
@@ -243,10 +239,9 @@ The labels indicate the measures on the scale.
 ```
 
 <code-view style="height: 125px"
-           data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/gauges/linear-gauge-labels"
-           github-src="gauges/linear-gauge/labels">
-</code-view>
+        data-demos-base-url="{environment:dvDemosBaseUrl}"
+        iframe-src="{environment:dvDemosBaseUrl}/gauges/linear-gauge-labels"
+        github-src="gauges/linear-gauge/labels"> </code-view>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
     <body>
@@ -277,10 +272,9 @@ The backing element represents background and border of the linear gauge compone
 ```
 
 <code-view style="height: 125px"
-           data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/gauges/linear-gauge-backing"
-           github-src="gauges/linear-gauge/backing">
-</code-view>
+        data-demos-base-url="{environment:dvDemosBaseUrl}"
+        iframe-src="{environment:dvDemosBaseUrl}/gauges/linear-gauge-backing"
+        github-src="gauges/linear-gauge/backing"> </code-view>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
     <body>
@@ -314,10 +308,9 @@ The scale is a visual element that highlights the full range of values in the li
 ```
 
 <code-view style="height: 125px"
-           data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/gauges/linear-gauge-scale"
-           github-src="gauges/linear-gauge/scale">
-</code-view>
+        data-demos-base-url="{environment:dvDemosBaseUrl}"
+        iframe-src="{environment:dvDemosBaseUrl}/gauges/linear-gauge-scale"
+        github-src="gauges/linear-gauge/scale"> </code-view>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
     <body>
@@ -413,12 +406,12 @@ For your convenience, all above code snippets are combined into one code block b
 
 The following is a list of API members mentioned in the above sections:
 
--   [`IgxLinearGaugeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineargaugecomponent.html)
--   [`IgxLinearGraphRangeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineargraphrangecomponent.html)
+*   [`IgxLinearGaugeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineargaugecomponent.html)
+*   [`IgxLinearGraphRangeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineargraphrangecomponent.html)
 
 ## Additional Resources
 
 You can find more information about other types of gauges in these topics:
 
--   [Bullet Graph](bullet-graph.md)
--   [Radial Gauge](radial-gauge.md)
+*   [Bullet Graph](bullet-graph.md)
+*   [Radial Gauge](radial-gauge.md)

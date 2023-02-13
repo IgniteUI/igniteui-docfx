@@ -15,11 +15,10 @@ The Angular radial gauge component provides a number of visual elements, like a 
 The following sample demonstrates how setting multiple properties on the same [`IgxRadialGaugeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialgaugecomponent.html) can transform it to completely different radial gauge.
 
 <code-view style="height: 375px"
-           data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge-animation"
-           alt="Angular Radial Gauge Example"
-           github-src="gauges/radial-gauge/animation">
-</code-view>
+        data-demos-base-url="{environment:dvDemosBaseUrl}"
+        iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge-animation"
+        alt="Angular Radial Gauge Example"
+        github-src="gauges/radial-gauge/animation"> </code-view>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
     <body>
@@ -120,10 +119,9 @@ The backing can be circular or fitted. A circular shape creates a 360 degree cir
 ```
 
 <code-view style="height: 320px"
-           data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge-backing"
-           github-src="gauges/radial-gauge/backing">
-</code-view>
+        data-demos-base-url="{environment:dvDemosBaseUrl}"
+        iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge-backing"
+        github-src="gauges/radial-gauge/backing"> </code-view>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
     <body>
@@ -157,10 +155,9 @@ The scale is visual element that highlights full range of values in the gauge wh
 ```
 
 <code-view style="height: 320px"
-           data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge-scale"
-           github-src="gauges/radial-gauge/scale">
-</code-view>
+        data-demos-base-url="{environment:dvDemosBaseUrl}"
+        iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge-scale"
+        github-src="gauges/radial-gauge/scale"> </code-view>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
     <body>
@@ -190,10 +187,9 @@ The radial gauge labels are visual elements displaying numeric values at a speci
 ```
 
 <code-view style="height: 320px"
-           data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge-labels"
-           github-src="gauges/radial-gauge/labels">
-</code-view>
+        data-demos-base-url="{environment:dvDemosBaseUrl}"
+        iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge-labels"
+        github-src="gauges/radial-gauge/labels"> </code-view>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
     <body>
@@ -228,10 +224,9 @@ Tick marks are thin lines radiating from the center of the radial gauge. There a
 ```
 
 <code-view style="height: 320px"
-           data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge-tickmarks"
-           github-src="gauges/radial-gauge/tickmarks">
-</code-view>
+        data-demos-base-url="{environment:dvDemosBaseUrl}"
+        iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge-tickmarks"
+        github-src="gauges/radial-gauge/tickmarks"> </code-view>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
     <body>
@@ -268,10 +263,9 @@ A range highlights a set of continuous values bound by a specified [`minimumValu
 ```
 
 <code-view style="height: 320px"
-           data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge-ranges"
-           github-src="gauges/radial-gauge/ranges">
-</code-view>
+        data-demos-base-url="{environment:dvDemosBaseUrl}"
+        iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge-ranges"
+        github-src="gauges/radial-gauge/ranges"> </code-view>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
     <body>
@@ -314,10 +308,9 @@ You can enable an interactive mode of the gauge (using [`isNeedleDraggingEnabled
 ```
 
 <code-view style="height: 320px"
-           data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge-needle"
-           github-src="gauges/radial-gauge/needle">
-</code-view>
+        data-demos-base-url="{environment:dvDemosBaseUrl}"
+        iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge-needle"
+        github-src="gauges/radial-gauge/needle"> </code-view>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
     <body>
@@ -406,12 +399,12 @@ For your convenience, all above code snippets are combined into one code block b
 
 The following is a list of API members mentioned in the above sections:
 
--   [`IgxRadialGaugeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialgaugecomponent.html)
--   [`IgxRadialGaugeRangeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialgaugerangecomponent.html)
+*   [`IgxRadialGaugeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialgaugecomponent.html)
+*   [`IgxRadialGaugeRangeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialgaugerangecomponent.html)
 
 ## Additional Resources
 
 You can find more information about other types of gauges in these topics:
 
--   [Bullet Graph](bullet-graph.md)
--   [Linear Gauge](linear-gauge.md)
+*   [Bullet Graph](bullet-graph.md)
+*   [Linear Gauge](linear-gauge.md)

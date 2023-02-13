@@ -12,11 +12,10 @@ This topic explains how to apply custom styling to the [`IgxGeographicShapeSerie
 ## Angular Shape Styling on Geographic Shape Series Example
 
 <code-view style="height: 500px"
-           data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-shape-styling"
-           alt="Angular Shape Styling on Geographic Shape Series Example"
-           github-src="maps/geo-map/map-shape-styling">
-</code-view>
+        data-demos-base-url="{environment:dvDemosBaseUrl}"
+        iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-shape-styling"
+        alt="Angular Shape Styling on Geographic Shape Series Example"
+        github-src="maps/geo-map/map-shape-styling"> </code-view>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
     <body>
@@ -44,10 +43,10 @@ import { IgxShapefileRecord } from 'igniteui-angular-core';
 
 Note that the following code examples are using the [Shape Styling Utility](geo-map-resources-shape-styling-utility.md) file that provides four different ways of styling shapes:
 
--   [Shape Comparison Styling](#shape-comparison-styling)
--   [Shape Random Styling](#shape-random-styling)
--   [Shape Range Styling](#shape-range-styling)
--   [Shape Scale Styling](#shape-scale-styling)
+*   [Shape Comparison Styling](#shape-comparison-styling)
+*   [Shape Random Styling](#shape-random-styling)
+*   [Shape Range Styling](#shape-range-styling)
+*   [Shape Scale Styling](#shape-scale-styling)
 
 ## Shape Random Styling
 
@@ -180,5 +179,5 @@ public onStylingShape(s: IgxGeographicShapeSeries, args: IgxStyleShapeEventArgs)
 
 ## API References
 
--   [`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html)
--   [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html)
+*   [`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html)
+*   [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html)

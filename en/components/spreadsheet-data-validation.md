@@ -12,11 +12,10 @@ This topic explains how to configure and set the built-in data validation rules.
 ## Angular Data Validation Example
 
 <code-view style="height: 500px"
-           data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/excel/spreadsheet-data-validation"
-           alt="Angular Data Validation Example"
-           github-src="excel/spreadsheet/data-validation">
-</code-view>
+        data-demos-base-url="{environment:dvDemosBaseUrl}"
+        iframe-src="{environment:dvDemosBaseUrl}/excel/spreadsheet-data-validation"
+        alt="Angular Data Validation Example"
+        github-src="excel/spreadsheet/data-validation"> </code-view>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
     <body>
@@ -128,4 +127,4 @@ this.spreadsheet.workbook.worksheets(0).rows(7).cells(0).value = "Check Out Date
 
 ## API References
 
--   [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html)
+*   [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html)

@@ -12,11 +12,10 @@ The Infragistics Angular Excel Library has support for adding sparklines to an E
 ## Angular Working with Sparklines Example
 
 <code-view style="height: 500px"
-           data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/excel/excel-library-working-with-sparklines"
-           alt="Angular Working with Sparklines Example"
-           github-src="excel/excel-library/working-with-sparklines">
-</code-view>
+        data-demos-base-url="{environment:dvDemosBaseUrl}"
+        iframe-src="{environment:dvDemosBaseUrl}/excel/excel-library-working-with-sparklines"
+        alt="Angular Working with Sparklines Example"
+        github-src="excel/excel-library/working-with-sparklines"> </code-view>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
     <body>
@@ -35,9 +34,9 @@ The Infragistics Angular Excel Library has support for adding sparklines to an E
 
 The following is a list of the supported predefined sparkline types.
 
--   Line
--   Column
--   Stacked (Win/Loss)
+*   Line
+*   Column
+*   Stacked (Win/Loss)
 
 The following code demonstrates how to programmatically add Sparklines to a Worksheet via the sparklineGroups collection:
 
@@ -52,4 +51,4 @@ workbook.save(workbook, "Sparklines.xlsx");
 
 ## API References
 
--   [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html)
+*   [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html)

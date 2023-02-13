@@ -15,11 +15,10 @@ The Ignite UI for Angular data chart allows for synchronization with respect to 
 This sample shows synchronization of two Angular data charts:
 
 <code-view style="height: 600px"
-           data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-chart-synchronization"
-           alt="Angular Chart Synchronization Example"
-           github-src="charts/data-chart/chart-synchronization">
-</code-view>
+        data-demos-base-url="{environment:dvDemosBaseUrl}"
+        iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-chart-synchronization"
+        alt="Angular Chart Synchronization Example"
+        github-src="charts/data-chart/chart-synchronization"> </code-view>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
     <body>
@@ -46,9 +45,9 @@ Note that in order to synchronize either vertically and/or horizontally, you wil
 
 The following is a list of API members mentioned in the above sections:
 
--   [`isHorizontalZoomEnabled`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html#ishorizontalzoomenabled)
--   [`isVerticalZoomEnabled`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html#isverticalzoomenabled)
--   `SyncChannel`
--   `SynchronizeHorizontally`
--   `SynchronizeVertically`
--   [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html)
+*   [`isHorizontalZoomEnabled`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html#ishorizontalzoomenabled)
+*   [`isVerticalZoomEnabled`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html#isverticalzoomenabled)
+*   `SyncChannel`
+*   `SynchronizeHorizontally`
+*   `SynchronizeVertically`
+*   [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html)

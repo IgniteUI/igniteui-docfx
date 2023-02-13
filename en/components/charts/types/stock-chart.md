@@ -15,11 +15,10 @@ The Ignite UI for Angular Stock Chart, sometimes referred to as Angular Financia
 You can create Stock Chart using the [`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html) control by binding your data and optionally setting [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#charttype) property to [`Line`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialcharttype.html#line) value, as shown in the example below.
 
 <code-view style="height: 600px"
-           data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-multiple-data"
-           github-src="charts/financial-chart/multiple-data"
-           alt="Angular Stock Chart Example" >
-</code-view>
+        data-demos-base-url="{environment:dvDemosBaseUrl}"
+        iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-multiple-data"
+        github-src="charts/financial-chart/multiple-data"
+        alt="Angular Stock Chart Example" > </code-view>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
     <body>
@@ -40,47 +39,46 @@ You can create Stock Chart using the [`IgxFinancialChartComponent`]({environment
 
 The typical stock chart is represented with ticker data in a candlestick chart which is used for the technical analysis of the price ranges. A candlestick chart compares the high and low prices of a day to the open and close of the ticker symbol.
 
--   The body of the candlestick chart shows the open and close trade values (O/C).
--   The wicks of the candlestick chart show the high and low trade prices (H/L).
--   The distance between the top and bottom of the ticker value is the day range of the ticker price.
--   The candlestick chart ticker value is hollow when the asset closed higher than it opened.
--   The candlestick chart ticker value is filled when the asset closed lower than it opened.
--   A black or red candle represents a price with a lower closing price than the prior candle's close.
--   A white or green candle represents a higher closing price than the prior candle's close.
+*   The body of the candlestick chart shows the open and close trade values (O/C).
+*   The wicks of the candlestick chart show the high and low trade prices (H/L).
+*   The distance between the top and bottom of the ticker value is the day range of the ticker price.
+*   The candlestick chart ticker value is hollow when the asset closed higher than it opened.
+*   The candlestick chart ticker value is filled when the asset closed lower than it opened.
+*   A black or red candle represents a price with a lower closing price than the prior candle's close.
+*   A white or green candle represents a higher closing price than the prior candle's close.
 
 The Stock Chart can be set to display one of the following:
 
--   Candlestick Chart
--   Bar Chart
--   Column Chart
--   Line Chart
+*   Candlestick Chart
+*   Bar Chart
+*   Column Chart
+*   Line Chart
 
 As a Stock Chart is meant to allow the user to perform data analysis functions, it includes interactive elements such as:
 
--   Time-based Filters
--   Prices View
--   Volume View
--   Indicators View
--   Trend Lines
--   Navigation / Zoombar View
+*   Time-based Filters
+*   Prices View
+*   Volume View
+*   Indicators View
+*   Trend Lines
+*   Navigation / Zoombar View
 
 ### Stock Chart Data Structure:
 
--   The data source must be an array or a list of data items.
--   The data source must contain at least one data item.
--   All data items must contain at least one date-time (or string) column that represents the date of the ticker data.
--   All data items must contain 1 numeric column for Bar, Line, and Column chart.
--   All data items must contain 4 numeric columns for Open, High, Low, Close (OHLC) for a Candlestick chart.
--   All data items must contain 5 numeric columns for Open, High, Low, Close and Volume for a Candlestick chart.
+*   The data source must be an array or a list of data items.
+*   The data source must contain at least one data item.
+*   All data items must contain at least one date-time (or string) column that represents the date of the ticker data.
+*   All data items must contain 1 numeric column for Bar, Line, and Column chart.
+*   All data items must contain 4 numeric columns for Open, High, Low, Close (OHLC) for a Candlestick chart.
+*   All data items must contain 5 numeric columns for Open, High, Low, Close and Volume for a Candlestick chart.
 
 ## Angular Stock Chart with Multiple Series
 
 <code-view style="height: 600px"
-           data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-multiple-data"
-           github-src="charts/financial-chart/multiple-data"
-           alt="Angular Stock Index Chart" >
-</code-view>
+        data-demos-base-url="{environment:dvDemosBaseUrl}"
+        iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-multiple-data"
+        github-src="charts/financial-chart/multiple-data"
+        alt="Angular Stock Index Chart" > </code-view>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
     <body>
@@ -97,14 +95,13 @@ As a Stock Chart is meant to allow the user to perform data analysis functions, 
 
 ## Angular Stock Chart
 
-In this example the Stock Chart is representing the S&P 500 over the course of a year; useful for investors and conducting technical analysis and forecasting future pricing/reports.
+In this example the Stock Chart is representing the S\&P 500 over the course of a year; useful for investors and conducting technical analysis and forecasting future pricing/reports.
 
 <code-view style="height: 600px"
-           data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-stock-index-chart"
-           github-src="charts/financial-chart/stock-index-chart"
-           alt="Angular Stock Index Chart" >
-</code-view>
+        data-demos-base-url="{environment:dvDemosBaseUrl}"
+        iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-stock-index-chart"
+        github-src="charts/financial-chart/stock-index-chart"
+        alt="Angular Stock Index Chart" > </code-view>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
     <body>
@@ -124,10 +121,9 @@ In this example the Stock Chart is representing the S&P 500 over the course of a
 If you need a Stock Chart with more features such as composite other series, you can configure the thickness, outlines, brushes, negative outlines, negative brushes as demonstrated below. In this example, the stock chart is comparing revenue between Amazon, Microsoft and Tesla.
 
 <code-view style="height: 600px"
-           data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-styling"
-           alt="Angular Stock Index Chart" >
-</code-view>
+        data-demos-base-url="{environment:dvDemosBaseUrl}"
+        iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-styling"
+        alt="Angular Stock Index Chart" > </code-view>
 
 <div class="divider--half"></div>
 
@@ -142,11 +138,10 @@ The Callout Layer displays a callout at X/Y positions.
 Note: When using the ordinal X axis mode, the CalloutsXMemberPath should point to the numeric index of the item, otherwise CalloutsXMemberPath should point to the time value.
 
 <code-view style="height: 600px"
-           data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-annotations"
-           github-src="charts/financial-chart/annotations"
-           alt="Angular Chart Annotations" >
-</code-view>
+        data-demos-base-url="{environment:dvDemosBaseUrl}"
+        iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-annotations"
+        github-src="charts/financial-chart/annotations"
+        alt="Angular Chart Annotations" > </code-view>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
     <body>
@@ -165,10 +160,10 @@ Note: When using the ordinal X axis mode, the CalloutsXMemberPath should point t
 
 The following panes are available:
 
--   Price Pane - Renders prices using Line, Candlestick, Bar (OHLC), trendlines and financial overlays.
--   Indicator Pane - Renders all the financial indicators in a separate chart while the BollingerBands and PriceChannel overlays are rendered in the Price Pane because they share the same values range on Y-Axis.
--   Volume Pane - Renders stocks volumes using Column, Line, and Area chart types below all above panes.
--   Zoom Pane - Controls the zoom of all the panes and it is always rendered at bottom of the chart.
+*   Price Pane - Renders prices using Line, Candlestick, Bar (OHLC), trendlines and financial overlays.
+*   Indicator Pane - Renders all the financial indicators in a separate chart while the BollingerBands and PriceChannel overlays are rendered in the Price Pane because they share the same values range on Y-Axis.
+*   Volume Pane - Renders stocks volumes using Column, Line, and Area chart types below all above panes.
+*   Zoom Pane - Controls the zoom of all the panes and it is always rendered at bottom of the chart.
 
 ### Indicator Pane
 
@@ -196,11 +191,10 @@ Note that you should set the [`zoomSliderType`]({environment:dvApiBaseUrl}/produ
 In this example, the stock chart is plotting revenue for United States.
 
 <code-view style="height: 600px"
-           data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-panes"
-           github-src="charts/financial-chart/panes"
-           alt="Angular Chart Panes" >
-</code-view>
+        data-demos-base-url="{environment:dvDemosBaseUrl}"
+        iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-panes"
+        github-src="charts/financial-chart/panes"
+        alt="Angular Chart Panes" > </code-view>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
     <body>
@@ -219,19 +213,19 @@ In this example, the stock chart is plotting revenue for United States.
 
 You can find more information about related chart features in these topics:
 
--   [Chart Animations](../features/chart-animations.md)
--   [Chart Annotations](../features/chart-annotations.md)
--   [Chart Navigation](../features/chart-navigation.md)
--   [Chart Trendlines](../features/chart-trendlines.md)
--   [Chart Performance](../features/chart-performance.md)
+*   [Chart Animations](../features/chart-animations.md)
+*   [Chart Annotations](../features/chart-annotations.md)
+*   [Chart Navigation](../features/chart-navigation.md)
+*   [Chart Trendlines](../features/chart-trendlines.md)
+*   [Chart Performance](../features/chart-performance.md)
 
 ## API References
 
 The following table lists API members mentioned in the above sections:
 
--   [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#charttype)
--   [`crosshairsSnapToData`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#crosshairssnaptodata)
--   `ItemsSource`
--   [`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html)
--   [`indicatorTypes`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#indicatortypes)
--   [`zoomSliderType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#zoomslidertype)
+*   [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#charttype)
+*   [`crosshairsSnapToData`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#crosshairssnaptodata)
+*   `ItemsSource`
+*   [`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html)
+*   [`indicatorTypes`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#indicatortypes)
+*   [`zoomSliderType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#zoomslidertype)

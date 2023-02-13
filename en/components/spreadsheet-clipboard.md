@@ -12,11 +12,10 @@ This topic explains how to perform clipboard operations on the Ignite UI for Ang
 ## Angular Working with Clipboard Example
 
 <code-view style="height: 500px"
-           data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/excel/spreadsheet-clipboard"
-           alt="Angular Working with Clipboard Example"
-           github-src="excel/spreadsheet/clipboard">
-</code-view>
+        data-demos-base-url="{environment:dvDemosBaseUrl}"
+        iframe-src="{environment:dvDemosBaseUrl}/excel/spreadsheet-clipboard"
+        alt="Angular Working with Clipboard Example"
+        github-src="excel/spreadsheet/clipboard"> </code-view>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
     <body>
@@ -64,5 +63,5 @@ public paste(): void {
 
 ## API References
 
--   `SpreadsheetAction`
--   [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html)
+*   `SpreadsheetAction`
+*   [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html)

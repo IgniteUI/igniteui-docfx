@@ -13,11 +13,10 @@ By the default, the Ignite UI for Angular map component already displays geograp
 ## Angular Displaying Imagery from Open Street Maps Example
 
 <code-view style="height: 500px"
-           data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-display-osm-imagery"
-           alt="Angular Displaying Imagery from Open Street Maps Example"
-           github-src="maps/geo-map/display-osm-imagery">
-</code-view>
+        data-demos-base-url="{environment:dvDemosBaseUrl}"
+        iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-display-osm-imagery"
+        alt="Angular Displaying Imagery from Open Street Maps Example"
+        github-src="maps/geo-map/display-osm-imagery"> </code-view>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
     <body>
@@ -56,5 +55,5 @@ this.map.backgroundContent = tileSource;
 
 ## API References
 
--   `BackgroundContent`
--   [`IgxOpenStreetMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxopenstreetmapimagery.html)
+*   `BackgroundContent`
+*   [`IgxOpenStreetMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxopenstreetmapimagery.html)

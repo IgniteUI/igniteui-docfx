@@ -12,11 +12,10 @@ The Infragistics Angular Excel Engine's [`WorksheetChart`]({environment:dvApiBas
 ## Angular Working with Charts Example
 
 <code-view style="height: 500px"
-           data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/excel/excel-library-working-with-charts"
-           alt="Angular Working with Charts Example"
-           github-src="excel/excel-library/working-with-charts">
-</code-view>
+        data-demos-base-url="{environment:dvDemosBaseUrl}"
+        iframe-src="{environment:dvDemosBaseUrl}/excel/excel-library-working-with-charts"
+        alt="Angular Working with Charts Example"
+        github-src="excel/excel-library/working-with-charts"> </code-view>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
     <body>
@@ -51,9 +50,9 @@ chart.setSourceData("A2:M6", true);
 
 ## API References
 
--   `AddChart`
--   `Area`
--   [`IgxColumn`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcolumn.html)
--   `Line`
--   `Pie`
--   [`WorksheetChart`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetchart.html)
+*   `AddChart`
+*   `Area`
+*   [`IgxColumn`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcolumn.html)
+*   `Line`
+*   `Pie`
+*   [`WorksheetChart`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetchart.html)

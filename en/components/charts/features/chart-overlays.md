@@ -15,11 +15,10 @@ The Angular [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite
 The following example depicts a [Column Chart](../types/column-chart.md) with a few horizontal value overlays plotted.
 
 <code-view style="height: 600px"
-           data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-series-value-overlay"
-           alt="Angular Value Overlay Example"
-           github-src="charts/data-chart/series-value-overlay">
-</code-view>
+        data-demos-base-url="{environment:dvDemosBaseUrl}"
+        iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-series-value-overlay"
+        alt="Angular Value Overlay Example"
+        github-src="charts/data-chart/series-value-overlay"> </code-view>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
     <body>
@@ -54,20 +53,20 @@ You can also plot built-in financial overlays and indicators in Angular [Stock C
 
 You can find more information about related chart types in these topics:
 
--   [Chart Annotations](chart-annotations.md)
--   [Column Chart](../types/area-chart.md)
--   [Line Chart](../types/line-chart.md)
--   [Stock Chart](../types/stock-chart.md)
+*   [Chart Annotations](chart-annotations.md)
+*   [Column Chart](../types/area-chart.md)
+*   [Line Chart](../types/line-chart.md)
+*   [Stock Chart](../types/stock-chart.md)
 
 ## API References
 
 The following is a list of API members mentioned in the above sections:
 
--   [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html)
--   `ItemsSource`
--   [`IgxValueOverlayComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxvalueoverlaycomponent.html)
--   [`axis`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxvalueoverlaycomponent.html#axis)
--   [`brush`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriescomponent.html#brush)
--   `IsAxisAnnotationsEnabled`
--   [`IgxSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriescomponent.html)
--   [`thickness`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriescomponent.html#thickness)
+*   [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html)
+*   `ItemsSource`
+*   [`IgxValueOverlayComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxvalueoverlaycomponent.html)
+*   [`axis`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxvalueoverlaycomponent.html#axis)
+*   [`brush`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriescomponent.html#brush)
+*   `IsAxisAnnotationsEnabled`
+*   [`IgxSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriescomponent.html)
+*   [`thickness`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriescomponent.html#thickness)

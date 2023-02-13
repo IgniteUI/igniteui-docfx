@@ -12,11 +12,10 @@ The Angular Spreadsheet component allows you to perform commands for activating 
 ## Angular Working with Commands Example
 
 <code-view style="height: 500px"
-           data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/excel/spreadsheet-commands"
-           alt="Angular Working with Commands Example"
-           github-src="excel/spreadsheet/commands">
-</code-view>
+        data-demos-base-url="{environment:dvDemosBaseUrl}"
+        iframe-src="{environment:dvDemosBaseUrl}/excel/spreadsheet-commands"
+        alt="Angular Working with Commands Example"
+        github-src="excel/spreadsheet/commands"> </code-view>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
     <body>
@@ -63,5 +62,5 @@ public zoomOut(): void {
 
 ## API References
 
--   `ExecuteAction`
--   `SpreadsheetAction`
+*   `ExecuteAction`
+*   `SpreadsheetAction`
