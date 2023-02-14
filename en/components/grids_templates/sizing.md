@@ -215,6 +215,11 @@ When columns have set specific `width` in pixels, they stick to that size, unles
 
     <img src="../../images/grid_sizing/columns-150px-extra-area-v2.jpg" style="width: 80%"/>
 
+### Auto
+
+When columns are set to `auto` the behaviour is the same as when using pixels the only difference is the size of the column is not a fixed value like in pixels but rather adjusts to fit the longest word in the column. Empty areas are possible.
+
+<img src="../../images/grid_sizing/columns-150px-empty-area-v2.jpg" style="width: 80%"/>
 
 ### Percentages
 
