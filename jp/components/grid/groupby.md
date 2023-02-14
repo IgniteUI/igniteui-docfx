@@ -222,7 +222,7 @@ igxGrid では、列ごとまたはグループ化式ごとにカスタム グ�
 
 
 このサンプルでは、さまざまな日付条件のカスタム ソート ストラテジを定義しています。
-各カスタム ストラテジ、ベースの [`DefaultSortingStrategy`]({environment:angularApiUrl}/classes/defaultsortingstrategy.html) を拡張し、[`compareValues`]({environment:angularApiUrl}/classes/defaultsortingstrategy.html#comparevalues) メソッドを定義します。 値をソートするときに使用されるカスタム比較関数です。さらに、比較に必要な日付から値を抽出します。
+各カスタム ストラテジ、ベースの [`DefaultSortingStrategy`]({environment:angularApiUrl}/classes/defaultsortingstrategy.html) を拡張し、[`compareValues`]({environment:angularApiUrl}/classes/defaultsortingstrategy.html#comparevalues) メソッドを定義します。値をソートするときに使用されるカスタム比較関数です。さらに、比較に必要な日付から値を抽出します。
 
 ```typescript
 class BaseSortingStrategy extends DefaultSortingStrategy {
@@ -349,7 +349,7 @@ $custom-chips-theme: chip-theme(
 
 ### カスタム カラー パレットの定義
 
-上記で説明したアプローチでは、色の値がハード コーディングされていました。または、柔軟性を高めるために [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette)、[`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することもできます。   
+上記で説明したアプローチでは、色の値がハード コーディングされていました。または、柔軟性を高めるために [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette)、[`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することもできます。
 `Igx-palette` は指定した一次色と二次色に基づいてカラーパレットを生成します。
 
 ```scss
@@ -384,8 +384,8 @@ $custom-chips-theme: chip-theme(
 );
 ```
 ### カスタム スキーマの定義
-さらに進んで、[**スキーマ**](../themes/sass/schemas.md) のすべての利点を備えた柔軟な構造を構築できます。**スキーマ**はテーマを作成させるための方法です。 
-すべてのコンポーネントに提供される 2 つの事前定義されたスキーマの 1 つを拡張します。この場合、`$_light_grid` を使用します。   
+さらに進んで、[**スキーマ**](../themes/sass/schemas.md) のすべての利点を備えた柔軟な構造を構築できます。**スキーマ**はテーマを作成させるための方法です。
+すべてのコンポーネントに提供される 2 つの事前定義されたスキーマの 1 つを拡張します。この場合、`$_light_grid` を使用します。
 ```scss
 $custom-grid-schema: extend($_light-grid,(
     group-row-background: (igx-color:('secondary', 100)),

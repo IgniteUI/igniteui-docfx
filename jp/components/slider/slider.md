@@ -345,7 +345,7 @@ public type = SliderType.RANGE;
 </div>
 ```
 
-位置の変更は [`ticksOrientation`]({environment:angularApiUrl}/classes/igxslidercomponent.html#ticksorientation) 入力から行われ、**Bottom** (デフォルト) から **Mirror** に変更されました。 
+位置の変更は [`ticksOrientation`]({environment:angularApiUrl}/classes/igxslidercomponent.html#ticksorientation) 入力から行われ、**Bottom** (デフォルト) から **Mirror** に変更されました。
 これが**目盛り**の外観に反映され、スライダーの上部または下部に表示します。 
 
 ```typescript

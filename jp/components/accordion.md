@@ -35,7 +35,7 @@ ng add igniteui-angular
 ```
 Ignite UI for Angular については、[*はじめに*](general/getting-started.md)トピックををご覧ください。
 
-次に、app.module ファイルに  `IgxAccordionModule` をインポートします。 
+次に、app.module ファイルに `IgxAccordionModule` をインポートします。 
 
 ```typescript
 // app.module.ts

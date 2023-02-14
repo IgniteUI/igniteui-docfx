@@ -214,8 +214,6 @@ Ignite UI for Angular は、世界最速の仮想化された Angular データ 
            alt="Angular Grid の例">
 </code-view>
 
-<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
-
 <div class="divider--half"></div>
 
 ## Angular Data Grid の概要 

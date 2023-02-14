@@ -28,7 +28,7 @@ Ignite UI for Angular [keyframes]({environment:sassApiUrl}/index.html#mixin-keyf
 @keyframes fade-in { ... }
 ```
 
-アニメーション ステップのキーフレーム セレクターおよびキーフレームの CSS スタイルは、mixin の本体内で定義されます。
+アニメーション ステップのキーフレーム セレクターおよびキーフレームの CSS スタイルは、ミックスインの本体内で定義されます。
 
 これは、`animation` ミックスインで使用できる新しいアニメーション ミックスインを作成する例です。
 
