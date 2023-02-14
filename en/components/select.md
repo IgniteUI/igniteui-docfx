@@ -72,6 +72,7 @@ The Select component supports the following directives applicable to the [Input 
 - `igx-prefix`/`igxPrefix`
 - `igx-suffix`/`igxSuffix` - Note the built-in toggle button suffix will always be displayed last.
 - `igx-hint`/`igxHint`
+
 ```html
 <igx-select [(ngModel)]="selected">
     <label igxLabel>Pick a fruit</label>
@@ -91,8 +92,10 @@ The Select component supports the following directives applicable to the [Input 
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/select-input-directives" >
 </code-view>
+
 > [!NOTE]
 If no [`placeholder`]({environment:angularApiUrl}/classes/igxselectcomponent.html#placeholder) is specified for the Select component and there is no selection made, the `igxLabel` will transition and appear where you would expect the placeholder to be.
+
 ### Group Select Items
 To help visually separate item groups, the select component supports item grouping by wrapping items in an `<igx-select-item-group>`.
 This works best with hierarchical data that can be iterated to declare the components. In the following example, each group has a `label` and a collection of `items`:
@@ -134,6 +137,7 @@ Then in your template file you can iterate over the objects and access their ite
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/select-sample-2" >
 </code-view>
+
 ### Header & Footer
 Currently, there are no default header and footer templates for the Select component. However, you can add a header or a footer template by marking them respectively with `igxSelectHeader` or `igxSelectFooter`. As these are custom templates, you should define their styling as well.
 In this example, there are both header and footer ng-templates defined. In the header there is a basic filtering, implemented via [`igx-buttongroup`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html). The footer includes static summary of all of the items, based on the delivery method.
