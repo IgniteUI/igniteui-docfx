@@ -13,8 +13,8 @@ Angular Material Select は、データ入力とデータ表示に使用され�
 ## Angular Select の例
 以下は基本的な Angular Select の例です。クリックごとに開く、いくつかの選択肢のリストを表示するシンプルなコンテキスト メニューがあります。
 
-<code-view style="height: 300px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 300px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/select-sample-1" alt="Angular Select の例">
 </code-view>
 
@@ -22,13 +22,12 @@ Angular Material Select は、データ入力とデータ表示に使用され�
 
 ## Ignite UI で Angular Select を使用する方法
 Ignite UI for Angular [Select コンポーネント]({environment:angularApiUrl}/classes/igxselectcomponent.html)を初期化にするには、まず **IgxSelectModule** を **app.module** ファイルにインポートします。
+
 ```typescript
 // app.module.ts
-
 ...
 import { IgxSelectModule } from 'igniteui-angular';
 // import { IgxSelectModule } from '@infragistics/igniteui-angular'; for licensed package
-
 @NgModule({
     ...
     imports: [..., IgxSelectModule],
@@ -100,8 +99,8 @@ Select コンポーネントは、[入力グループ](input-group.md)に適用�
 ```
 
 
-<code-view style="height: 350px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 350px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/select-input-directives" >
 </code-view>
 
@@ -130,6 +129,7 @@ public greengrocery: Array<{ label: string, items: Array<{ type: string, origin:
 ```
 
 次にテンプレート ファイルでこれらのオブジェクトを反復して項目へ適切にアクセスします。
+
 ```html
 <igx-select #select>
     <label igxLabel>Select With Groups</label>
@@ -148,12 +148,10 @@ public greengrocery: Array<{ label: string, items: Array<{ type: string, origin:
 </igx-select>
 ```
 
-
-<code-view style="height: 400px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 400px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/select-sample-2" >
 </code-view>
-
 
 ### ヘッダーとフッター
 現在 Select コンポーネントにデフォルトのヘッダーとフッターのテンプレートはありません。ただし、ヘッダーまたはフッター テンプレートを追加するには、`igxSelectHeader` または `igxSelectFooter` でそれぞれマークします。これらはカスタム テンプレートであるため、スタイル設定も定義する必要があります。
@@ -212,8 +210,8 @@ public greengrocery: Array<{ label: string, items: Array<{ type: string, origin:
 ```
 
 
-<code-view style="height: 610px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 610px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/select-header-footer" >
 </code-view>
 
@@ -234,7 +232,7 @@ public greengrocery: Array<{ label: string, items: Array<{ type: string, origin:
 ## キーボード ナビゲーション
 
 - 選択がフォーカスされているときに `Space`、`Enter`、または `ALT + 上矢印/下矢印` キーをクリックして、`igx-select` を開きます。
-- `ALT + 上矢印/下矢印`の組み合わせ、または `Enter`、`Space`、`Esc`、`Tab` キーのいずれかを使用して、`igx-select` を閉じます。
+- `ALT + 上矢印/下矢印` の組み合わせ、または `Enter`、`Space`、`Esc`、`Tab` キーのいずれかを使用して、`igx-select` を閉じます。
 - `上矢印/下矢印` キーを使用して項目間を移動します。
 - `Home` または `End` キーを使用して、リストの最初と最後の項目へ移動します。
 - 特定の文字で始まるリスト項目を移動するには、対応するキーを押します。
@@ -268,7 +266,7 @@ export class MyClass implements OnInit {
             closeAnimation: scaleOutBottom,
             horizontalDirection: HorizontalAlignment.Right,
             horizontalStartPoint: HorizontalAlignment.Left,
-            openAnimation: scaleInTop,            
+            openAnimation: scaleInTop,
             verticalDirection: VerticalAlignment.Bottom,
             verticalStartPoint: VerticalAlignment.Bottom
         };
@@ -287,8 +285,8 @@ export class MyClass implements OnInit {
 - [ngOnInit](https://angular.io/api/core/OnInit) フックの内側にすべて設定できます。コンポーネントの生成時にテンプレートに自動的に反映します。
 
 
-<code-view style="height: 260px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 260px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/select-sample-4" >
 </code-view>
 
@@ -334,14 +332,14 @@ Select のスタイルを設定するには、それに含まれるコンポー�
 <div class="divider--half"></div>
 
 ## API リファレンス
-* [IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html)  
-* [IgxSelectItemComponent]({environment:angularApiUrl}/classes/igxselectitemcomponent.html)  
-* [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html)  
-* [IgxDropDownItemComponent]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html)  
-* [OverlaySettings]({environment:angularApiUrl}/interfaces/overlaysettings.html)  
-* [ConnectedPositioningStrategy]({environment:angularApiUrl}/classes/connectedpositioningstrategy.html)  
-* [GlobalPositionStrategy]({environment:angularApiUrl}/classes/globalpositionstrategy.html#constructor)  
-* [AbsoluteScrollStrategy]({environment:angularApiUrl}/classes/absolutescrollstrategy.html)  
+* [IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html)
+* [IgxSelectItemComponent]({environment:angularApiUrl}/classes/igxselectitemcomponent.html)
+* [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html)
+* [IgxDropDownItemComponent]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html)
+* [OverlaySettings]({environment:angularApiUrl}/interfaces/overlaysettings.html)
+* [ConnectedPositioningStrategy]({environment:angularApiUrl}/classes/connectedpositioningstrategy.html)
+* [GlobalPositionStrategy]({environment:angularApiUrl}/classes/globalpositionstrategy.html#constructor)
+* [AbsoluteScrollStrategy]({environment:angularApiUrl}/classes/absolutescrollstrategy.html)
 * [PositionSettings]({environment:angularApiUrl}/interfaces/positionsettings.html)
 
 ## テーマの依存関係
