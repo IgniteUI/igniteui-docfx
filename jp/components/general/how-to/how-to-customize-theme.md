@@ -80,11 +80,11 @@ $custom-palette: palette(
 );
 ```
 
-ご覧のように、コード生成は特定の `@include light-theme($light-material-palette);` (これは [デフォルトテーマ](../../themes/sass/presets/material.md) と [カラー パレット](../../themes/palettes.md)) から、一般的な [`theme()`]({environment:sassApiUrl}/index.html#mixin-theme) include に変わり、パラメーターとしてカスタム カラー パレットとテーマ構造のための [dark material schema](../../themes/sass/schemas.md) が提供されるようになりました。実行中の Angular アプリの結果は以下のようになります。
+ご覧のように、コード生成は特定の `@include light-theme($light-material-palette);` (これは[デフォルト テーマ](../../themes/sass/presets/material.md)と[カラー パレット](../../themes/palettes.md))から、一般的な [`theme()`]({environment:sassApiUrl}/index.html#mixin-theme) include に変わり、パラメーターとしてカスタム カラー パレットとテーマ構造のための [dark material schema](../../themes/sass/schemas.md) が提供されるようになりました。実行中の Angular アプリの結果は以下のようになります。
 
 <img class="responsive-img"  src="../../../images/general/theming-walkthrough/getting-started-dark-app.png" />
 
-アプリケーションで特定の [コンポーネント テーマ](../../themes/sass/component-themes.md) をさらに掘り下げてカスタマイズしたいので、個々のコンポーネント テーマの CSS 変数を取り込んでこれを行います。この場合、グリッド ツールバーのテーマです。 
+アプリケーションで特定の[コンポーネント テーマ](../../themes/sass/component-themes.md)をさらに掘り下げてカスタマイズしたいので、個々のコンポーネント テーマの CSS 変数を取り込んでこれを行います。この場合、グリッド ツールバーのテーマです。 
 
 ```scss
 @include core();
@@ -128,12 +128,12 @@ Ignite UI テーマは、複数の次元のテーマを抽象化し、非常に�
  * [色](../../themes/sass/palettes.md) (カラー パレット)
  * [形状](../../themes/sass/roundness.md) (境界線と半径)
  * [標高](../../themes/sass/elevations.md) (影)
- * [タイポグラフィ](../../themes/sass/typography.md) (フォントとフォントサイズ)
+ * [タイポグラフィ](../../themes/sass/typography.md) (フォントとフォント サイズ)
  * [表示密度](../../display-density.md) (画面に収まる情報の密度)
 
 >[!NOTE]
-> 完全にカスタマイズされたビジュアル デザインが必要な場合は、サポートされているすべてのテーマ ディメンションを変更する必要があり、Sass API を最大限に活用できます。
-> フォントやいくつかの色などを変更する必要がある場合は、パレットとタイポグラフィのセクションを参照してください。ほとんどの場合、必要な作業はいくつかの CSS 変数を変更することだけであり、完全な Sass API は必要ありません。
+> 完全にカスタマイズされたビジュアル デザインが必要な場合は、サポートされているすべてのテーマ ディメンションを変更する必要があり、Sass API を最大限に活用できます。  
+> フォントやいくつかの色などを変更する必要がある場合は、パレットとタイポグラフィのセクションを参照してください。ほとんどの場合、必要な作業はいくつかの CSS 変数を変更することだけであり、完全な Sass API は必要ありません。  
 > これを可能な限り細かくしたので、アプリケーションのビジュアル デザインに予期しない副次的な結果をもたらすことなく変更を適用できます。
 
 ## テーマの最適化
@@ -148,7 +148,7 @@ Ignite UI テーマは、複数の次元のテーマを抽象化し、非常に�
 @use "@infragistics/igniteui-angular/theming" as *;
 ```
 
-コンポーネント配列は `$components` にあり、この例のように、使用するコンポーネントで [このリスト]({environment:sassApiUrl}/index.html#variable-light-schema) を削減し、残りをすべて除外できます。
+コンポーネント配列は `$components` にあり、この例のように、使用するコンポーネントで[このリスト]({environment:sassApiUrl}/index.html#variable-light-schema)を削減し、残りをすべて除外できます。
 
 ```scss
 $include: (
