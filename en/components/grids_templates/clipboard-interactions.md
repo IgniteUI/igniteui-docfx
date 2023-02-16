@@ -82,7 +82,6 @@ We expose [`clipboardOptions`]({environment:angularApiUrl}/classes/igxgridcompon
 * [Filtering](filtering.md)
 * [Sorting](sorting.md)
 * [Summaries](summaries.md)
-* [Summaries](summaries.md)
 * [Column Pinning](column-pinning.md)
 * [Selection](selection.md)
 * [Virtualization and Performance](virtualization.md)

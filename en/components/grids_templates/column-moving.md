@@ -73,7 +73,7 @@ The @@igComponent component in Ignite UI for Angular provides the **Column Movin
 
 ## Overview
 
-**Column moving** feature is enabled on a per-grid level, meaning that the [**@@igSelector**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) could have either movable or immovable columns. This is done via the [`moving`]({environment:angularApiUrl}/classes/igxgridcomponent.html#moving) input of the [`igx-grid`]({environment:angularApiUrl}/classes/igxgridncomponent.html).
+**Column moving** feature is enabled on a per-grid level, meaning that the [**@@igSelector**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) could have either movable or immovable columns. This is done via the [`moving`]({environment:angularApiUrl}/classes/igxgridcomponent.html#moving) input of the [`igx-grid`]({environment:angularApiUrl}/classes/igxgridcomponent.html).
 
 
 @@if (igxName === 'IgxGrid') {
@@ -202,7 +202,7 @@ The last step is to **include** the component mixins with its respective theme:
 ```
 
 > [!NOTE]
-> Depending on the component [**View Encapsulation**](/components/themes/sass/component-themes.html#view-encapsulation) strategy, it may be necessary to `penetrate` this encapsulation using `::ng-deep`
+> Depending on the component [**View Encapsulation**](/products/ignite-ui-angular/angular/components/themes/sass/component-themes#view-encapsulation) strategy, it may be necessary to `penetrate` this encapsulation using `::ng-deep`
 
 ```scss
 :host {
@@ -238,11 +238,11 @@ $dark-grid-column-moving-theme: grid-theme(
 
 
 > [!NOTE]
-> Thecolor andpalette are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](/components/themes/palettes.html) topic for detailed guidance on how to use them.
+> Thecolor andpalette are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](/products/ignite-ui-angular/angular/components/themes/palettes) topic for detailed guidance on how to use them.
 
 ### Using Schemas
 
-Going further with the theming engine, you can build a robust and flexible structure that benefits from [schemas](/components/themes/sass/schemas.html). A **schema** is a recipe of a theme.
+Going further with the theming engine, you can build a robust and flexible structure that benefits from [schemas](/products/ignite-ui-angular/angular/components/themes/sass/schemas). A **schema** is a recipe of a theme.
 
 Extend one of the two predefined schemas, that are provided for every component, in this case - [light-grid]({environment:sassApiUrl}/index.html#variable-_light-grid).
 
