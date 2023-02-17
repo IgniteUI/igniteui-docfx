@@ -183,7 +183,7 @@ Simple ComboBox を閉じてフォーカスを合わせると、次のように�
 Simple ComboBox が開かれ、リスト項目がフォーカスされている場合:
 - `下矢印` は次のリスト項目に移動します。アクティブな項目がリストの最後の項目で、カスタム値が有効な場合、フォーカスは [項目の追加] ボタンに移動します。
 
-- `上矢印` は前のリスト項目に移動します。アクティブな項目がリストの最初の項目である場合、リストは閉じられます。
+- `上矢印` は前のリスト項目に移動します。アクティブな項目がリストの最初の項目である場合、フォーカスは検索入力に戻り、入力内のすべてのテキストも選択されます。
 
 - `End` は最後のリスト項目に移動します。
 
@@ -199,7 +199,7 @@ Simple ComboBox が開かれ、リスト項目がフォーカスされている�
 
 - `Enter` キーは、検索入力のテキストと等しい `valueKey` と `displayKey` を持つ新しい項目を追加し、その項目を選択します。
 
-- `上矢印` フォーカスは最後のリスト項目に戻るか、リストが空の場合はリストを閉じます。
+- `上矢印` はフォーカスを最後のリスト項目に戻すか、あるいはリストが空の場合はフォーカスを入力に移動します。
 
 ## カスケーディング
 
@@ -273,6 +273,17 @@ export class SimpleComboCascadingComponent implements OnInit {
 }
 ```
 
+## Angular Simple ComboBox リモート バインディング
+
+Ignite UI for Angular Simple ComboBox コンポーネントは、コンボボックスをリモート サービスにバインドし、要求に応じてデータを取得できる API を公開します。
+
+### デモ
+以下のサンプルは、[dataPreLoad]({environment:angularApiUrl}/classes/IgxSimpleComboComponent.html#dataPreLoad) プロパティを使用してリモート データの新しいチャンクをロードし、[ComboBox リモート バインディング](combo-remote.md)で説明されている手順に従うリモート バインディングを示しています。
+
+<code-view style="height: 400px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/lists/simple-combo-remote" alt="Angular Simple Combo リモート バインディングの例">
+</code-view>
 
 ## Angular Simple ComboBox のスタイル設定
 

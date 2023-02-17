@@ -133,7 +133,7 @@ public pivotConfigHierarchy: IPivotConfiguration = {
 ### ディメンションのドラッグアンドドロップ
 ディメンションはチップで表現され、ドラッグアンドドロップが可能です。
 すべてのチップは、ドラッグアンドドロップでエリア内の順序を変更できます。
-`rows`、`column`、`filter`  (ディメンション チップ) のチップは、これらの領域のいずれかから他の任意の場所に移動できます。
+`rows`、`column`、`filter` (ディメンション チップ) のチップは、これらの領域のいずれかから他の任意の場所に移動できます。
 これらの領域のチップは `values` 領域に移動できず、`values` 領域のチップはどのディメンション領域にも移動できません。
 
 >[!NOTE]
@@ -141,7 +141,7 @@ public pivotConfigHierarchy: IPivotConfiguration = {
 
 ## API リファレンス
 * [IgxPivotGridComponent]({environment:angularApiUrl}/classes/igxpivotgridcomponent.html)
-* [IgxPivotDataSelector]({environment:angularApiUrl}/classes/igxpivotdataselector.html)
+* [IgxPivotDataSelectorComponent]({environment:angularApiUrl}/classes/igxpivotdataselectorcomponent.html)
 
 
 ## その他のリソース

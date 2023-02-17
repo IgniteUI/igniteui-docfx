@@ -176,7 +176,7 @@ You can find more information about related chart types in these topics:
 -   [Spline Chart](spline-chart.md)
 -   [Shape Chart](shape-chart.md)
 
-## API Members
+## API References
 
 The following table lists API members mentioned in the above sections:
 

@@ -2,7 +2,7 @@
 title: Angular チャート機能 | データ可視化 | インフラジスティックス
 _description: インフラジスティックスの Angular チャート機能
 _keywords: Angular Charts, Features, Infragistics, Angular チャート, 機能, インフラジスティックス
-mentionedTypes: []
+mentionedTypes: ["FinancialChart", "CategoryChart", "XamDataChart"]
 _language: ja
 ---
 
@@ -12,7 +12,7 @@ Ignite UI for Angular チャートを使用すると、さまざまな機能を�
 
 Angular チャートは、次のチャート機能を提供します。
 
-### 軸
+## 軸
 
 異なる軸プロパティを使用して、X 軸と Y 軸の両方のすべての側面を変更またはカスタマイズします。グリッド線を表示したり、目盛りのスタイルをカスタマイズしたり、軸のタイトルを変更したり、軸の位置や交差値を変更したりすることもできます。Angular チャートのカスタマイズについての詳細には、[軸グリッド線](features/chart-axis-gridlines.md)、[軸レイアウト](features/chart-axis-layouts.md)、および[軸オプション](features/chart-axis-options.md)のトピックをご覧ください。
 
@@ -36,7 +36,7 @@ Angular チャートは、次のチャート機能を提供します。
 
 <div class="divider--half"></div>
 
-### 注釈
+## 注釈
 
 これらの追加のレイヤーは、マウス/タッチに依存するほかのチャートレイヤーの上にあります。個別にまたは組み合わせて使用すると、チャート内の特定の値を強調するのに役立つ強力な操作を提供します。この機能の詳細については、[チャート注釈](features/chart-annotations.md)トピックを参照してください。
 
@@ -60,7 +60,7 @@ Angular チャートは、次のチャート機能を提供します。
 
 <div class="divider--half"></div>
 
-### アニメーション
+## アニメーション
 
 アニメーションを有効にして、新しいデータ ソースを読み込むときにチャートをアニメーション化します。これらは、さまざまなタイプのアニメーションとそれらのアニメーションが実行される速度を設定することでカスタマイズできます。この機能の詳細については、[チャート アニメーション](features/chart-animations.md)トピックを参照してください。
 
@@ -84,7 +84,7 @@ Angular チャートは、次のチャート機能を提供します。
 
 <div class="divider--half"></div>
 
-### 強調表示
+## 強調表示
 
 線、列、マーカーなどのビジュアルに、マウスをデータ項目の上に置いたときに強調表示して、フォーカスを合わせます。この機能は、すべてのチャート タイプで有効になっています。この機能の詳細については、[チャート強調表示](features/chart-highlighting.md)トピックを参照してください。
 
@@ -108,7 +108,7 @@ Angular チャートは、次のチャート機能を提供します。
 
 <div class="divider--half"></div>
 
-### マーカー
+## マーカー
 
 チャート シリーズのマーカーを使用して値が主要なグリッド線の間にある場合でも、データ ポイントをすばやく識別します。これらは、スタイル、カラー、および形状で完全にカスタマイズ可能です。この機能の詳細については、[チャート マーカー](features/chart-markers.md)トピックを参照してください。
 
@@ -132,7 +132,7 @@ Angular チャートは、次のチャート機能を提供します。
 
 <div class="divider--half"></div>
 
-### ナビゲーション
+## ナビゲーション
 
 マウス、キーボード、およびタッチ操作でズームおよびパンすることにより、チャートをナビゲートできます。この機能の詳細については、[チャート ナビゲーション](features/chart-navigation.md)トピックを参照してください。
 
@@ -156,7 +156,7 @@ Angular チャートは、次のチャート機能を提供します。
 
 <div class="divider--half"></div>
 
-### オーバーレイ
+## オーバーレイ
 
 オーバーレイを使用すると、チャートに水平線または垂直線をプロットして、重要な値としきい値に注釈を付けることができます。この機能の詳細については、[チャート オーバーレイ](features/chart-overlays.md)トピックを参照してください。
 
@@ -180,7 +180,7 @@ Angular チャートは、次のチャート機能を提供します。
 
 <div class="divider--half"></div>
 
-### パフォーマンス
+## パフォーマンス
 
 Angular チャートは、数百万のデータ ポイントを描画し、それらを数ミリ秒ごとに更新する高性能のために最適化されています。ただし、チャートのパフォーマンスに影響を与えるいくつかのチャート機能があり、アプリケーションのパフォーマンスを最適化するときにそれらを考慮する必要があります。この機能の詳細については、[チャート パフォーマンス](features/chart-performance.md)トピックを参照してください。
 
@@ -204,7 +204,7 @@ Angular チャートは、数百万のデータ ポイントを描画し、そ�
 
 <div class="divider--half"></div>
 
-### ツールチップ
+## ツールチップ
 
 ツールチップを使用して、特定のシリーズ タイプに関連するすべての情報を表示します。項目レベルやカテゴリ レベルのツールチップなど、有効にできるさまざまなツールチップがあります。この機能の詳細については、[チャート ツールチップ](features/chart-tooltips.md)トピックを参照してください。
 
@@ -228,7 +228,7 @@ Angular チャートは、数百万のデータ ポイントを描画し、そ�
 
 <div class="divider--half"></div>
 
-### トレンドライン
+## トレンドライン
 
 トレンドラインを使用して、トレンドを特定したり、データ内のパターンを見つけたりします。Angular チャートでは、CubicFit や LinearFit など、さまざまなトレンドラインがサポートされています。この機能の詳細については、[チャート トレンドライン](features/chart-trendlines.md)トピックを参照してください。
 
@@ -252,6 +252,8 @@ Angular チャートは、数百万のデータ ポイントを描画し、そ�
 
 <div class="divider--half"></div>
 
-## API メンバー
+## API リファレンス
 
--   [`IgxDataGridComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatagridcomponent.html)
+-   [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html)
+-   [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html)
+-   [`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html)

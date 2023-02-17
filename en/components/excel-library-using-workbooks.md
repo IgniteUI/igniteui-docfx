@@ -106,7 +106,7 @@ var workbook = new Workbook();
 var protection = workbook.protection;
 ```
 
-## API Members
+## API References
 
 -   [`documentProperties`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html#documentproperties)
 -   [`WorkbookProtection`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbookprotection.html)

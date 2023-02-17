@@ -230,7 +230,7 @@ public contextObject = { firstProperty: 'testValue', secondProperty: 'testValue1
 ...
 ```
 
-上記のスニペットで暗示的に提供されたセル値への参照を取得します。データを表示し、セルの値にカスタム スタイル設定およびパイプ変換を適用する場合に使用します。ただし、[`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html) オブジェクトを以下のように使用するとより効果的です。
+上記のスニペットで暗示的に提供されたセル値への参照を取得します。データを表示し、セルの値にカスタム スタイル設定およびパイプ変換を適用する場合に使用します。ただし、[`CellType`]({environment:angularApiUrl}/interfaces/celltype.html) オブジェクトを以下のように使用するとより効果的です。
 
 ```html
 <igx-grid #grid [data]="data">
@@ -273,7 +273,7 @@ public contextObject = { firstProperty: 'testValue', secondProperty: 'testValue1
 </igx-column>
 ```
 
-テンプレートで使用可能なプロパティの詳細については、[`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html) の API を参照してください。
+テンプレートで使用可能なプロパティの詳細については、[`CellType`]({environment:angularApiUrl}/interfaces/celltype.html) の API を参照してください。
 
 ### 列テンプレート API
 
@@ -816,11 +816,6 @@ platformBrowserDynamic()
 * [IgxCalendar テーマ]({environment:sassApiUrl}/index.html#function-calendar-theme)
 * [IgxSnackBar テーマ]({environment:sassApiUrl}/index.html#function-snackbar-theme)
 * [IgxBadge テーマ]({environment:sassApiUrl}/index.html#function-badge-theme)
-
-## ビデオ チュートリアル
-Angular データ グリッドの作成について詳しくは、このビデオ チュートリアルをご覧ください:
-
-> [!Video https://www.youtube.com/embed/Xv_fQVQ8fmM]
 
 ## ビデオ チュートリアル
 Angular データ グリッドの作成について詳しくは、このビデオ チュートリアルをご覧ください:

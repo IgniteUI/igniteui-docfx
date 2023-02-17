@@ -35,7 +35,7 @@ ng add igniteui-angular
 ```
 Ignite UI for Angular については、[*はじめに*](general/getting-started.md)トピックををご覧ください。
 
-次に、app.module ファイルに  `IgxAccordionModule` をインポートします。 
+次に、app.module ファイルに `IgxAccordionModule` をインポートします。 
 
 ```typescript
 // app.module.ts
@@ -229,7 +229,7 @@ Angular Material Accordion のキーボード ナビゲーションは、さま�
  - <kbd>END</kbd> - Accordion の最後の有効なパネルに移動します
 
 ## Angular Accordion のスタイル設定
-[Accordion]({environment:angularApiUrl}/classes/igxaccordioncomponent.html) は、基になる[パネル]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html)のコンテナーとしてのみ機能します。スタイルは、[IgxExpansionPanel トピックのスタイル設定セクション](expansion-panel.html#styling)で説明されているように、パネルのテーマから直接適用できます。
+[Accordion]({environment:angularApiUrl}/classes/igxaccordioncomponent.html) は、基になる[パネル]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html)のコンテナーとしてのみ機能します。スタイルは、[IgxExpansionPanel トピックのスタイル設定セクション](expansion-panel.md#スタイル設定)で説明されているように、パネルのテーマから直接適用できます。
 
 設計上、`igx-accordion` 内に配置される場合、展開されたパネルにマージンが設定されます。変更するために、igx-expansion-panel テーマ内で公開されるプロパティがあります。
 テーマ エンジンによって公開される関数を利用するには、スタイル ファイルに `index` ファイルをインポートする必要があります。

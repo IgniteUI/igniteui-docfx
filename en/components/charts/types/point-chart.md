@@ -122,7 +122,7 @@ You can find more information about related chart features in these topics:
 -   [Chart Performance](../features/chart-performance.md)
 -   [Chart Markers](../features/chart-markers.md)
 
-## API Members
+## API References
 
 The following table lists API members mentioned in the above sections:
 

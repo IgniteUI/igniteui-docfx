@@ -53,6 +53,10 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
 
 ## From 14.2.x to 15.0.x
 ### General
+- `igxGrid`, `igxHierarchicalGrid`, `igxTreeGrid`
+    - Parameters in grid templates now have types for their context. This can also cause issues if the app is in strict template mode and uses the wrong type. References to the template that may require conversion:
+         - `IgxColumnComponent` - [`ColumnType`]({environment:angularApiUrl}/interfaces/columntype.html) (for example the column parameter in `igxFilterCellTemplate`)
+         - `IgxGridCell` - [`CellType`]({environment:angularApiUrl}/interfaces/celltype.html) (for example the cell parameter in `igxCell` template)
 - Ignite UI for Angular now has a peer dependency on [igniteui-theming](https://github.com/IgniteUI/igniteui-theming). Install the theming package and add the following preprocessor configuration in your `angular.json` file.
 
     ```sh
@@ -105,7 +109,7 @@ Here's how that will affect existing code:
     .my-class {
         background: color($color: 'grays', $variant: 300);
         color: contrast-color($color: 'grays', $variant: 300);
-        border-color: hsl(var(--ig-grays-500));
+        border-color: hsl(var(--igx-grays-500));
     }
     ```
 
@@ -211,6 +215,29 @@ Here's how that will affect existing code:
     .my-class {
         box-shadow: elevation(8);
     }
+    ```
+
+### Grid Toolbar
+- **Breaking Change** - The `IgxGridToolbarTitleDirective` and `IgxGridToolbarActionsDirective` have been converted to components, keeping only the element selector. For apps using the preferred element markup of `<igx-grid-toolbar-title>` and `<igx-grid-toolbar-actions>` there should be no functional change. Apps using the `igxGridToolbarTitle` and `igxGridToolbarActions` directives on other elements will need to convert those to the mentioned elements instead:
+
+    _From:_
+    ```html
+    <igx-grid-toolbar>
+        <span igxGridToolbarTitle>Title</span >
+        <div igxGridToolbarActions>
+            ...
+        </div>
+    </igx-grid-toolbar>
+    ```
+
+    _To:_
+    ```html
+    <igx-grid-toolbar>
+        <igx-grid-toolbar-title>Title</igx-grid-toolbar-title>
+        <igx-grid-toolbar-actions>
+            ...
+        </igx-grid-toolbar-actions>
+    </igx-grid-toolbar>
     ```
 
 ## From 13.1.x to 13.2.x

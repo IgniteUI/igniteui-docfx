@@ -166,7 +166,7 @@ The following example demonstrates how to style the callout layer annotations by
 </igx-category-chart>
 ```
 
-## API Members
+## API References
 
 The following is a list of API members mentioned in the above sections:
 

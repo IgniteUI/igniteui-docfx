@@ -39,7 +39,7 @@ When installing the spreadsheet package, the core and excel package must also be
 -   **npm install --save igniteui-angular-excel**
 -   **npm install --save igniteui-angular-spreadsheet**
 
-## Required Modules
+## Component Modules
 
 The [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) requires the following modules:
 

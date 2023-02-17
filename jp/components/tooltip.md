@@ -22,7 +22,7 @@ _language: ja
 
 ## 使用方法
 
-はじめに、app.module.ts ファイルに  `IgxTooltipModule` をインポートします。
+はじめに、app.module.ts ファイルに `IgxTooltipModule` をインポートします。
 
 ```typescript
 // app.module.ts
@@ -91,7 +91,7 @@ avatar をターゲットにして、[`igxTooltipTarget`]({environment:angularAp
 ```
 
 ### ツールチップをターゲットにアタッチ
-ここまででターゲットとツールチップを定義しました。 ツールチップ参照を [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) セレクターに割り当てます。
+ここまででターゲットとツールチップを定義しました。ツールチップ参照を [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) セレクターに割り当てます。
 
 ```html
 <!--simpleTooltip.component.html-->

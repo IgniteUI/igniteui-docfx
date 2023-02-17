@@ -314,7 +314,7 @@ Excel スタイル フィルタリング ダイアログ内のリスト項目は
 ```
 
 ```typescript
-public columnValuesStrategy = (column: IgxColumnComponent,
+public columnValuesStrategy = (column: ColumnType,
                                columnExprTree: IFilteringExpressionsTree,
                                done: (uniqueValues: any[]) => void) => {
     // Get specific column data.
@@ -339,7 +339,7 @@ public columnValuesStrategy = (column: IgxColumnComponent,
 ```
 
 ```typescript
-public columnValuesStrategy = (column: IgxColumnComponent,
+public columnValuesStrategy = (column: ColumnType,
                                columnExprTree: IFilteringExpressionsTree,
                                done: (uniqueValues: any[]) => void) => {
     // Get specific column data.
@@ -369,7 +369,7 @@ public columnValuesStrategy = (column: IgxColumnComponent,
 ```
 
 ```typescript
-public singersColumnValuesStrategy = (column: IgxColumnComponent,
+public singersColumnValuesStrategy = (column: ColumnType,
                                       columnExprTree: IFilteringExpressionsTree,
                                       done: (uniqueValues: any[]) => void) => {
 // Get specific column data for the singers.
@@ -377,7 +377,7 @@ this.remoteValuesService.getColumnData(
     null, 'Singers', column, columnExprTree, uniqueValues => done(uniqueValues));
 }
 
-public albumsColumnValuesStrategy = (column: IgxColumnComponent,
+public albumsColumnValuesStrategy = (column: ColumnType,
                                      columnExprTree: IFilteringExpressionsTree,
                                      done: (uniqueValues: any[]) => void) => {
 // Get specific column data for the albums of a specific singer.
@@ -644,7 +644,7 @@ private _perPage = 15;
 private _dataLengthSubscriber: { unsubscribe: () => void; } | undefined;
 
 constructor(private remoteService: RemotePagingService) { }
-...
+
 public ngAfterViewInit() {
     this.grid1.isLoading = true;
     this.remoteService.getData(0, this.perPage);
@@ -684,7 +684,7 @@ public perPageChange(perPage: number) {
 ```
 ```typescript
 @ViewChild('hierarchicalGrid', { static: true }) public hierarchicalGrid: IgxHierarchicalGridComponent;
-...
+
 public ngOnInit(): void {
     this._dataLengthSubscriber = this.remoteService.getDataLength(
         { parentID: null, rootLevel: true, key: 'Customers' }).subscribe((length) => {
@@ -919,10 +919,10 @@ public paginate(page: number) {
 ## 既知の問題と制限
 
 - グリッドに `primaryKey` が設定されておらず、リモート データ シナリオが有効になっている場合 (ページング、ソート、フィルタリング、スクロール時に、グリッドに表示されるデータを取得するためのリモート サーバーへのリクエストがトリガーされる場合)、データ要求が完了すると、行は次の状態を失います:
-    * Row Selection
-    * Row Expand/collapse
-    * Row Editing
-    * Row Pinning
+    * 行の選択
+    * 行の展開/縮小
+    * 行の編集
+    * 行のピン固定
 
 ## API リファレンス
 <div class="divider--half"></div>

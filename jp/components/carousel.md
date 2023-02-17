@@ -1,15 +1,19 @@
 ---
-title: Angular Carousel コンポーネント
-_description: Ignite UI for Angular Carousel コンポーネントを使用すると、スライド、カード、またはページに基づいたインターフェイスのコレクション間を移動できます。
+title: Angular Carousel コンポーネント – Ignite UI for Angular
+_description: Ignite UI for Angular Carousel コンポーネントを使用すると、スライド、カード、またはページに基づいたインターフェイスのコレクション間を移動できます。今すぐお試しください。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Carousel コンポーネント, Angular Carousel コントロール
 _language: ja
 ---
 
-# Carousel
-<p class="highlight">Ignite UI for Angular Carousel コンポーネントは、ネイティブ [Angular コンポーネント](https://angular.io/guide/architecture#components)です。画像ギャラリー、カード、チュートリアル、またはページごとのインターフェイスでスライド コレクションをブラウズ、移動できます。</p>
+# Angular Carousel (カルーセル) の概要
+<p class="highlight">Angular Carousel (または Angular Material Carousel) は、レスポンシブで軽量なコンポーネントであり、テキスト スライド、リンク、およびその他の html 要素を含む画像のコレクションを前後に移動するユーザーに、スライドショーのような Web エクスペリエンスを作成する最も柔軟な方法を提供します。 
+
+Angular Carousel コンポーネントを使用すると、アニメーション、スライド トランジション、およびカスタマイズを使用できるため、インターフェイスを簡単に微調整して Angular カスタム カルーセルを構築できます。
+</p>
 <div class="divider"></div>
 
 ## Angular Carousel の例
+以下に示す Angular Carousel のデモは、画像のみを含むスライドを示しています。ナビゲーション ボタンを有効にして、ユーザーがスライド間を簡単に移動できるようにしました。
 
 <code-view style="height: 550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -18,8 +22,8 @@ _language: ja
 
 
 
-## 使用方法
-Carousel を全画面要素またはコンポーネントの子に設定できます。また、スライドに有効な HTML コンテンツ、その他の Angular コンポーネントなども含めることができます。
+## Ignite UI で Angular Carousel を使用する方法
+Ignite UI Angular Carousel コンポーネントを全画面要素またはコンポーネントの子に設定できます。また、スライドに有効な HTML コンテンツ、その他の Angular コンポーネントなども含めることができます。
 
 ### はじめに
 <div class="divider--half"></div>
@@ -75,14 +79,14 @@ public slides = [
 </div>
 ...
 ```
-## 例
+## Angular Carousel のカスタム例
 
 ### IgxCarousel の定義
 <div class="divider--half"></div>
 
-デフォルトでは、カルーセルの **[`loop`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#loop)** 入力プロパティは `true` に設定されています (ループは、Next 動作でナビゲートするときに最初のスライドが最後のスライドの後に来るか、Previous 動作を使用して最後のスライドが最初のスライドの後に来るときに起こります)。ループ動作を無効にするには、`loop` 入力の値を `false` に設定します。
+デフォルトでは、Angular のカルーセルの **[`loop`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#loop)** 入力プロパティは `true` に設定されています (ループは、Next 動作でナビゲートするときに最初のスライドが最後のスライドの後に来るか、Previous 動作を使用して最後のスライドが最初のスライドの後に来るときに起こります)。ループ動作を無効にするには、`loop` 入力の値を `false` に設定します。
 
-各スライド インデックスを追跡するために、カルーセルには、デフォルトでカルーセルの `下部` に配置されるインジケーターがあります。この動作を変更するには、[indicatorsOrientation]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#indicatorsorientation) プロパティを使用して、`top` に割り当てる必要があります。空のテンプレートを追加すると、インジケーターを無効にできます。
+各スライド インデックスを追跡するために、カルーセルには、デフォルトでカルーセルの `bottom` に配置されるインジケーターがあります。この動作を変更するには、[indicatorsOrientation]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#indicatorsorientation) プロパティを使用して、`top` に割り当てる必要があります。空のテンプレートを追加すると、インジケーターを無効にできます。
 
 カルーセル テンプレートは以下のようになります。
 
@@ -99,7 +103,7 @@ public slides = [
 ### カスタム インジケーター
 <div class="divider--half"></div>
 
-カスタム カルーセル インジケーターを追加するには、以下のように [IgxCarouselIndicatorDirective]({environment:angularApiUrl}/classes/igxcarouselindicatordirective.html) を使用する必要があります。
+Angular カスタム カルーセル インジケーターを追加するには、以下のように [IgxCarouselIndicatorDirective]({environment:angularApiUrl}/classes/igxcarouselindicatordirective.html) を使用する必要があります。
 
 ```html
 ...
@@ -194,7 +198,7 @@ public slides = [
 
 
 
-## アニメーション
+## Angular Carousel のアニメーション
 
 アニメーション化されたスライド遷移により、エンドユーザーはカルーセルを操作しているときに高いエクスペリエンスを得ることができます。
 
@@ -235,18 +239,18 @@ public slides = [
 
 デフォルトでカルーセルはあらゆるタッチ対応デバイスに使用できます。これはオプションであり、[gesturesSupport]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#gesturessupport) プロパティを `false` に設定して変更できます。
 
-カルーセル [アニメーション](carousel.md#アニメーション)はタッチ デバイスで完全にサポートされているため、プラットホームに合わせてプログレッシブ Web アプリケーション ([PWA](https://developer.mozilla.org/ja/docs/Web/Progressive_web_apps)) を構築するための完璧なツールです。
+Carousel [アニメーション](carousel.md#angular-carousel-のアニメーション)はタッチ デバイスで完全にサポートされているため、プラットホームに合わせてプログレッシブ Web アプリケーション ([PWA](https://developer.mozilla.org/ja/docs/Web/Progressive_web_apps)) を構築するための完璧なツールです。
 
 ### キーボード ナビゲーション
 <div class="divider--half"></div>
 
-*   **次へ**/**前へ**のスライドに移動するには、それぞれ以下を使用する必要があります。
-    * `右矢印`キー - 次のスライド
-    * `左矢印`キー - 前のスライド
-*   **最後**/**最初**のスライドに移動するには、それぞれ以下を使用する必要があります。
+* **次へ**/**前へ**のスライドに移動するには、それぞれ以下を使用する必要があります。
+    * `右矢印` キー - 次のスライド
+    * `左矢印` キー - 前のスライド
+* **最後**/**最初**のスライドに移動するには、それぞれ以下を使用する必要があります。
     * `End` キー - 最後のスライド
     * `Home` キー - 最初のスライド
- 
+
 ### 自動的なトランジション
 <div class="divider--half"></div>
 
@@ -263,10 +267,10 @@ public slides = [
 
 これを実現するには、カルーセルを以下のように構成する必要があります。
  - `gesturesSupport` を無効にします。
- - `ナビゲーション` ボタンを無効にします。
- - カルーセルの`インジケーター`を無効にします。
+ - `navigation` ボタンを無効にします。
+ - カルーセル `indicator` を無効にします。
  - ユーザーがスライドを操作すると `pause` を無効にします。
- - トランジション`間隔`を追加します。
+ - トランジション `interval` を追加します。
 
 カルーセル テンプレートは以下のようになります。
 

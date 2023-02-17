@@ -103,6 +103,7 @@ Ignite UI for Angular @@igComponent は、[`IgxColumnHidingDirective`]({environm
 ```html
 <igx-hierarchical-grid class="hgrid" [data]="localdata"
         [height]="'560px'" [width]="'100%'" columnWidth="200px" [allowFiltering]="true" #hGrid>
+
     <igx-column field="Artist" [sortable]="true" [disableHiding]="true"></igx-column>
     <igx-column field="Photo">
         <ng-template igxCell let-cell="cell">
@@ -121,10 +122,10 @@ Ignite UI for Angular @@igComponent は、[`IgxColumnHidingDirective`]({environm
         <igx-column field="Billboard Review" [sortable]="true"></igx-column>
         <igx-column field="US Billboard 200" [sortable]="true"></igx-column>
         <igx-row-island [key]="'Songs'" [autoGenerate]="false">
-                <igx-column field="No."></igx-column>
-                <igx-column field="Title"></igx-column>
-                <igx-column field="Released"></igx-column>
-                <igx-column field="Genre"></igx-column>
+            <igx-column field="No."></igx-column>
+            <igx-column field="Title"></igx-column>
+            <igx-column field="Released"></igx-column>
+            <igx-column field="Genre"></igx-column>
         </igx-row-island>
     </igx-row-island>
 
@@ -142,7 +143,7 @@ Ignite UI for Angular @@igComponent は、[`IgxColumnHidingDirective`]({environm
 ## ツールバーの列非表示 UI
 
 定義済みの列非表示 UI は、@@igComponent のツールバーの [`IgxDropDownComponent`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) 内に配置されます。列非表示の UI をこのドロップダウンを使用して表示/非表示にできます。
-これには、@@igComponent の [`IgxGridToolbarActionsDirective`]({environment:angularApiUrl}/classes/igxgridtoolbaractionsdirective.html) および [`IgxGridToolbarHidingComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarhidingcomponent.html) の両方を設定することだけです。ツールバーにタイトルを追加するには、[`IgxGridToolbarTitleDirective`]({environment:angularApiUrl}/classes/igxgridtoolbartitledirective.html) を設定し、@@igComponent のラッパーにカスタム スタイルを設定します。
+これには、@@igComponent の [`IgxGridToolbarActionsComponent`](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/latest/classes/igxgridtoolbaractionscomponent.html) および [`IgxGridToolbarHidingComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarhidingcomponent.html) の両方を設定することだけです。ツールバーにタイトルを追加するには、[`IgxGridToolbarTitleComponent`](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/latest/classes/igxgridtoolbartitlecomponent.html) を設定し、@@igComponent のラッパーにカスタム スタイルを設定します。
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
@@ -245,7 +246,7 @@ public ngAfterViewInit() {
 }
 ```
 
-列非表示 UI の機能セットを使用するには、列非表示 UI コンポーネントへの参照を返すツールバーの [`columnHidingUI`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html#columnhidingui) プロパティを使用します。相対する API にアクセスし、アプリケーションの要件に基づいて使用できます。
+列非表示 UI の拡張機能セットを使用するために、IgxColumnActionsComponent の [`columnsAreaMaxHeight `]({environment:angularApiUrl}/classes/IgxColumnActionsComponent.html#columnsAreaMaxHeight) プロパティを使用できます。アプリケーションの要件に基づいて使用できます。
 
 このトピックのはじめにあるコードの結果は、列非表示の例セクションで確認できます。
 
@@ -260,13 +261,10 @@ public ngAfterViewInit() {
 
 ...
 import {
-    ...,
+    ...
     IgxColumnActionsModule 
 } from 'igniteui-angular';
-// import { 
-//    ...,
-//    IgxColumnActionsModule  
-//} from '@infragistics/igniteui-angular'; for licensed package
+// import { ..., IgxColumnActionsModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -376,13 +374,10 @@ export class AppModule {}
 
 ...
 import {
-    ...,
+    ...
     IgxRadioModule    
 } from 'igniteui-angular';
-// import { 
-//    ...,
-//    IgxRadioModule
-// } from '@infragistics/igniteui-angular'; for licensed package
+// import { ..., IgxRadioModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -585,8 +580,8 @@ $custom-button-schema: extend($_dark-button,
 ```scss
 // Extending the global dark-schema
 $custom-dark-schema: extend($dark-schema,(
-   column-actions: $custom-column-actions-schema,
-   button: $custom-button-schema
+    igx-column-actions: $custom-column-actions-schema,
+    igx-button: $custom-button-schema
 ));
 
 // Defining column-actions-theme with the global dark schema
@@ -659,9 +654,9 @@ $custom-button: button-theme(
 [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) プロパティ:
 * [showProgress]({environment:angularApiUrl}/classes/IgxGridToolbarComponent.html#showProgress)
 
-[`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) ディレクティブ:
-* [titleDirective]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html#igxgridtoolbartitledirective.html)
-* [actionsDirective]({environment:angularApiUrl}/classes/igxgridtoolbaractionsdirective.html)
+[`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) コンポーネント:
+* [IgxGridToolbarTitleComponent](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/latest/classes/igxgridtoolbartitlecomponent.html)
+* [IgxGridToolbarActionsComponent](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/latest/classes/igxgridtoolbaractionscomponent.html)
 
 [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) メソッド:
 

@@ -165,7 +165,7 @@ private notify(snackbar, message, input) {
 ### テキスト選択
 [`igxTextSelection`]({environment:angularApiUrl}/classes/igxtextselectiondirective.html) を使用して、フォーカスがあるコンポーネントにすべての入力テキストを選択させることができます。[Label および Input](label-input.md#フォーカスとテキストの選択) で `igxTextSelection` の詳細情報を参照してください。
 
-**app.module.ts** ファイルに  `IgxToastModule` をインポートします:
+**app.module.ts** ファイルに `IgxToastModule` をインポートします:
 
 ```typescript
 ...
