@@ -179,7 +179,7 @@ this._crudService.delete(event.data).subscribe({
 
 デフォルトのセル編集テンプレートの詳細については、[一般的な編集トピック](../../grid/editing.md#テンプレートの編集)を参照してください。
 
-セルが編集モードのときに適用されるカスタム テンプレートを提供する場合は、[`igxCellEditor` ディレクティブ]({environment:angularApiUrl}/classes/igxcelltemplatedirective.html)を使用できます。これを行うには、`igxCellEditor` ディレクティブでマークされた `ng-template` を渡し、カスタム コントロールを [`cell.editValue`]({environment:angularApiUrl}/classes/igxgridcell.html#editvalue) に適切にバインドする必要があります。
+セルが編集モードのときに適用されるカスタム テンプレートを提供する場合は、[`igxCellEditor` ディレクティブ]({environment:angularApiUrl}/classes/igxcelltemplatedirective.html)を使用できます。これを行うには、`igxCellEditor` ディレクティブでマークされた `ng-template` を渡し、カスタム コントロールを [`cell.editValue`]({environment:angularApiUrl}/classes/igxgridcell.html#editValue) に適切にバインドする必要があります。
 
 ```html
 <igx-column field="class" header="Class" [editable]="true">
@@ -203,10 +203,10 @@ this._crudService.delete(event.data).subscribe({
 | [`rowEditEnter`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowEditEnter) | `rowEditing` が有効になっている場合、行が編集モードに入ると発生します。 | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
 | [`cellEditEnter`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellEditEnter) | セルが**編集モード**に入ると発生します (`rowEditEnter` の後)。 | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
 | [`cellEdit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellEdit) | 値が変更された場合、セルの値が**コミットされる**直**前に**発生します (たとえば、`Enter` キーを押すことによって)。 | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
-| [`cellEditDone`]({environment:angularApiUrl}/classes/igxgridcomponent.html#celleditdone) | 値が変更された場合、セルが編集され、セルの値が**コミットされた後に**発生します。 | [IGridEditDoneEventArgs]({environment:angularApiUrl}/interfaces/igrideditdoneeventargs.html) | `false` |
+| [`cellEditDone`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellEditDone) | 値が変更された場合、セルが編集され、セルの値が**コミットされた後に**発生します。 | [IGridEditDoneEventArgs]({environment:angularApiUrl}/interfaces/igrideditdoneeventargs.html) | `false` |
 | [`cellEditExit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellEditExit) | セルが**編集モードを終了する**と発生します。 | [IGridEditDoneEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `false` |
-| [`rowEdit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowedit) | `rowEditing` が有効になっている場合、編集モードの値の行が**コミットされる**直前に発生します (たとえば、行編集オーバーレイの `Done` ボタンをクリックすることにより)。 | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
-| [`rowEditDone`]({environment:angularApiUrl}/classes/igxgridcomponent.html#roweditdone) | `rowEditing` が有効になっている場合、行が編集され、新しい行の値が**コミットされた後に**発生します。 | [IGridEditDoneEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `false` |
+| [`rowEdit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowEdit) | `rowEditing` が有効になっている場合、編集モードの値の行が**コミットされる**直前に発生します (たとえば、行編集オーバーレイの `Done` ボタンをクリックすることにより)。 | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
+| [`rowEditDone`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowEditDone) | `rowEditing` が有効になっている場合、行が編集され、新しい行の値が**コミットされた後に**発生します。 | [IGridEditDoneEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `false` |
 | [`rowEditExit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowEditExit) | `rowEditing` が有効になっている場合、行が**編集モードを終了する**と発生します。 | [IGridEditDoneEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `false` |
 
 詳細とデモ サンプルについては、[イベント](../../grid/editing.md#イベントの引数とシーケンス)にアクセスしてください。

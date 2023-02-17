@@ -218,7 +218,7 @@ toolbar interaction components.
 </igx-grid-toolbar>
 ```
 
-Each action now exposes a way to change the overlay settings of the actions dialog by using the [`overlaySettings`]({environment:angularApiUrl}/classes/igxgridtoolbarhidingcomponent.html#overlaysettings) input, example:
+Each action now exposes a way to change the overlay settings of the actions dialog by using the [`overlaySettings`]({environment:angularApiUrl}/classes/igxgridtoolbarhidingcomponent.html#overlaySettings) input, example:
 
 ```html
 <igx-grid-toolbar-actions>
@@ -423,7 +423,7 @@ The following sample demonstrates how to customize the exported files:
 ## Exporting Indicator
 
 When using the default toolbar exporter component, whenever an export operation takes place the toolbar will show a progress indicator while the operation is in progress.
-Moreover, users can set the toolbar [showProgress]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html#showprogress) property and use for their own long running operations
+Moreover, users can set the toolbar [showProgress]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html#showProgress) property and use for their own long running operations
 or just as another way to signify an action taking place in the grid.
 The sample belows uses has significant amount of data, in order to increase the time needed for data export so the progressbar can be seen. Additionally it has another button
 that simulates a long running operation in the grid:

@@ -85,7 +85,7 @@ The final result would be something like that:
            iframe-src="{environment:demosBaseUrl}/data-entries/checkbox-sample-2" >
 </code-view>
 ### Label Positioning
-You can position the label using the checkbox's [`labelPosition`]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html#labelposition) property:
+You can position the label using the checkbox's [`labelPosition`]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html#labelPosition) property:
 ```html
 <igx-checkbox labelPosition="before"></igx-checkbox>
 ```

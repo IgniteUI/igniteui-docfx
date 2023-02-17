@@ -198,7 +198,7 @@ In this example, there are both header and footer ng-templates defined. In the h
 
 
 ### Custom Toggle Button in Angular Select
-You can customize the default toggle button, using the `igxSelectToggleIcon` directive or setting a `TemplateRef` to the [`toggleIconTemplate`]({environment:angularApiUrl}/classes/igxselectcomponent.html#toggleicontemplate) property.
+You can customize the default toggle button, using the `igxSelectToggleIcon` directive or setting a `TemplateRef` to the [`toggleIconTemplate`]({environment:angularApiUrl}/classes/igxselectcomponent.html#toggleIconTemplate) property.
 
 ```html
 <igx-select #select>

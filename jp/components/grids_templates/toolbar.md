@@ -212,7 +212,7 @@ IgxHierarchicalGrid の子グリッドの実装方法と DI スコープの動�
 </igx-grid-toolbar>
 ```
 
-各アクションは、[`overlaySettings`]({environment:angularApiUrl}/classes/igxgridtoolbarhidingcomponent.html#overlaysettings) 入力を使用して、アクション ダイアログのオーバーレイ設定を変更する方法を公開するようになりました。例:
+各アクションは、[`overlaySettings`]({environment:angularApiUrl}/classes/igxgridtoolbarhidingcomponent.html#overlaySettings) 入力を使用して、アクション ダイアログのオーバーレイ設定を変更する方法を公開するようになりました。例:
 
 ```html
 <igx-grid-toolbar-actions>
@@ -411,7 +411,7 @@ configureExport(args: IGridToolbarExportEventArgs) {
 ## エクスポート インジケーター
 
 デフォルトのツールバー エクスポーター コンポーネントを使用する場合、エクスポート操作が行われると、操作の進行中にツールバーに進行状況インジケーターが表示されます。
-さらに、ユーザーはツールバーの [showProgress]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html#showprogress) プロパティを設定して、自分の長時間実行操作に使用するか、グリッドで実行されている操作を示す別の方法として使用できます。
+さらに、ユーザーはツールバーの [showProgress]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html#showProgress) プロパティを設定して、自分の長時間実行操作に使用するか、グリッドで実行されている操作を示す別の方法として使用できます。
 以下のサンプルでは、progressbar が表示されるようにデータのエクスポートに必要な時間を増やすために、大量のデータを使用しています。さらに、グリッドで長時間実行される操作をシミュレートする別のボタンがあります。
 
 @@if (igxName === 'IgxGrid') {

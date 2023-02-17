@@ -120,7 +120,7 @@ this.hierarchicalGrid.getRowByIndex(0).pinned = true;
 ```
 }
 
-You may also use the @@igComponent's [`pinRow`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#pinrow) or [`unpinRow`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#unpinrow) methods of the [`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) to pin or unpin records by their ID:
+You may also use the @@igComponent's [`pinRow`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#pinRow) or [`unpinRow`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#unpinRow) methods of the [`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) to pin or unpin records by their ID:
 
 @@if (igxName === 'IgxGrid') {
 ```typescript
@@ -141,9 +141,9 @@ this.hierarchicalGrid.unpinRow('ALFKI');
 ```
 }
 
-Note that the row ID is the primary key value, defined by the [`primaryKey`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primarykey) of the grid, or the record instance itself. Both methods return a boolean value indicating whether their respective operation is successful or not. Usually the reason they fail is that the row is already in the desired state.
+Note that the row ID is the primary key value, defined by the [`primaryKey`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primaryKey) of the grid, or the record instance itself. Both methods return a boolean value indicating whether their respective operation is successful or not. Usually the reason they fail is that the row is already in the desired state.
 
-A row is pinned below the last pinned row. Changing the order of the pinned rows can be done by subscribing to the [`rowPinning`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowPinning) event and changing the [`insertAtIndex`]({environment:angularApiUrl}/interfaces/ipinroweventargs.html#insertatindex) property of the event arguments to the desired position index.
+A row is pinned below the last pinned row. Changing the order of the pinned rows can be done by subscribing to the [`rowPinning`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowPinning) event and changing the [`insertAtIndex`]({environment:angularApiUrl}/interfaces/ipinroweventargs.html#insertAtIndex) property of the event arguments to the desired position index.
 
 @@if (igxName === 'IgxGrid') {
 ```html

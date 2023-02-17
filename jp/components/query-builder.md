@@ -36,7 +36,7 @@ Angular Query Builder は、開発者が指定されたデータ セットに対
 ## Ignite UI for Angular Query Builder コンポーネントで作業を開始
 
 コンポーネントの使用を開始するには、[`fields`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html#fields) プロパティに、フィールド名とそのデータ型を説明する配列を追加します。データ型に基づいて対応するオペランドを自動的に割り当てます。
-クエリ ビルダーには [`expressionTree`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html#expressiontree) 入力プロパティがあります。コントロールの初期状態を設定するために使用できます。
+クエリ ビルダーには [`expressionTree`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html#expressionTree) 入力プロパティがあります。コントロールの初期状態を設定するために使用できます。
 
 ```typescript
 ngAfterViewInit(): void {
