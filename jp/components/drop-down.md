@@ -116,7 +116,7 @@ export class MyDropDownComponent {
 
 ### 項目のグループ化
 
-より有益な視覚情報を提供するには、[isHeader]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#isheader) プロパティを使用して項目をセマンティックにグループ化するか、[disabled]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#disabled) プロパティを使用して項目を非インタラクティブとして表示します。[selected]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#selected) プロパティを特定の項目に設定して選択済の項目にできます。`igx-drop-down` 項目は、HTML 要素/他の Web コンポーネントに含める、または設定できる `igxPrefix`、`igxSuffix` および `igx-divider` ディレクティブをサポートしています。
+より有益な視覚情報を提供するには、[isHeader]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#isHeader) プロパティを使用して項目をセマンティックにグループ化するか、[disabled]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#disabled) プロパティを使用して項目を非インタラクティブとして表示します。[selected]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#selected) プロパティを特定の項目に設定して選択済の項目にできます。`igx-drop-down` 項目は、HTML 要素/他の Web コンポーネントに含める、または設定できる `igxPrefix`、`igxSuffix` および `igx-divider` ディレクティブをサポートしています。
 
 ```html
 <!-- dropdown.component.html -->
@@ -242,7 +242,7 @@ export class MyCustomDropDownComponent {
 
 
 ### ドロップダウン メニュー
-ドロップダウンをメニューとして動作するように構成できます。[selecting]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#selecting) イベント ハンドラーで [ISelectionEventArgs]({environment:angularApiUrl}/interfaces/iselectioneventargs.html) インターフェイスの [cancel]({environment:angularApiUrl}/interfaces/iselectioneventargs.html#cancel) メンバーを true に設定します。この方法では、メニューを開いた際に選択した項目が保持されず、前の選択が無効になります。クリックされた項目は、イベントの [newSelection]({environment:angularApiUrl}/interfaces/iselectioneventargs.html#newselection) メンバー値で取得できます。
+ドロップダウンをメニューとして動作するように構成できます。[selecting]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#selecting) イベント ハンドラーで [ISelectionEventArgs]({environment:angularApiUrl}/interfaces/iselectioneventargs.html) インターフェイスの [cancel]({environment:angularApiUrl}/interfaces/iselectioneventargs.html#cancel) メンバーを true に設定します。この方法では、メニューを開いた際に選択した項目が保持されず、前の選択が無効になります。クリックされた項目は、イベントの [newSelection]({environment:angularApiUrl}/interfaces/iselectioneventargs.html#newSelection) メンバー値で取得できます。
 
 ```html
 <!-- dropdown.component.html -->
@@ -304,7 +304,7 @@ export class MyMenuComponent {
 ### Navigation ディレクティブ
 [igxDropDownItemNavigation]({environment:angularApiUrl}/classes/igxdropdownitemnavigationdirective.html) ディレクティブを使用して、`igxDropDown` コンポーネントのキーボード ナビゲーションを有効にします。ディレクティブがトリガーされたすべてのイベントを処理できるようにするには、アクティブな (フォーカスされる) 要素または親コンテナーに適用する必要があります。デフォルトでは、ドロップダウンまたはその項目はフォーカスを取得しないため、ディレクティブはドロップダウンを制御する `button` または `input` に配置できます。ナビゲーション ディレクティブの値は、[IgxDropDownBaseDirective]({environment:angularApiUrl}/classes/igxdropdownbasedirective.html) クラスのインスタンスまたは子孫であるコンポーネントを対象とする必要があります。
 
-以下のサンプルでは、クリックで `igxDropDown` インスタンスを開閉できます。入力自体に [igxDropDownItemNavigation]({environment:angularApiUrl}/classes/igxdropdownitemnavigationdirective.html) ディレクティブを適用すると、上下矢印キーを使用するキーボード ナビゲーションが有効になります。これは、[allowItemsFocus]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#allowitemsfocus) プロパティを `false` に設定し、入力でフォーカスを維持できるデフォルトのドロップダウン動作に依存します。
+以下のサンプルでは、クリックで `igxDropDown` インスタンスを開閉できます。入力自体に [igxDropDownItemNavigation]({environment:angularApiUrl}/classes/igxdropdownitemnavigationdirective.html) ディレクティブを適用すると、上下矢印キーを使用するキーボード ナビゲーションが有効になります。これは、[allowItemsFocus]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#allowItemsFocus) プロパティを `false` に設定し、入力でフォーカスを維持できるデフォルトのドロップダウン動作に依存します。
 
 
 ```html

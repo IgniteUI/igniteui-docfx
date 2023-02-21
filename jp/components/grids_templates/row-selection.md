@@ -207,7 +207,7 @@ public handleRowSelection(event) {
 
 ### コードで行を選択
 
-以下は、単一または複数の行を同時に選択できるコード スニペットです ([`primaryKey`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primarykey) を介して)。さらに、このメソッドの 2 番目のパラメーターは boolean プロパティです。それを使用して、前の行の選択をクリアするかどうかを選択できます。以前の選択はデフォルトで保存されます。
+以下は、単一または複数の行を同時に選択できるコード スニペットです ([`primaryKey`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primaryKey) を介して)。さらに、このメソッドの 2 番目のパラメーターは boolean プロパティです。それを使用して、前の行の選択をクリアするかどうかを選択できます。以前の選択はデフォルトで保存されます。
 
 @@if (igxName === 'IgxGrid' || igxName === 'IgxTreeGrid') {
 ```html

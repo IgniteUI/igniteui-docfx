@@ -85,11 +85,11 @@ export class AppModule {}
 
 ### Text プロパティ
 
-[`textAlign`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#textalign) プロパティを使用してテキストを配置できます。指定できる値は `left`、`center`、`right` です。
+[`textAlign`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#textAlign) プロパティを使用してテキストを配置できます。指定できる値は `left`、`center`、`right` です。
 
-テキストを非表示にするには、[`textVisibility`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#textvisibility)プロパティを使用して値を `false` に設定します。
+テキストを非表示にするには、[`textVisibility`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#textVisibility)プロパティを使用して値を `false` に設定します。
 
-[`textTop`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#texttop)プロパティを `true` に設定してバーの上にテキストを移動します。
+[`textTop`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#textTop)プロパティを `true` に設定してバーの上にテキストを移動します。
 
 [`text`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#text) プロパティを使用してテキスト自体の値をカスタマイズできます。
 

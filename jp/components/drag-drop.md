@@ -26,16 +26,16 @@ Angular アプリケーション内の要素をある場所から他の場所へ
 
 ### ドラッグの基本
 
-ユーザーが 5px いずれかの方向へスワイプするとドラッグ操作を開始します。これはカスタマイズ可能であり、[`dragTolerance`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragtolerance) 入力を使用して変更できます。そうでない場合は、インタラクションがクリックとして見なされ、`dragClick` イベントがトリガーします。
+ユーザーが 5px いずれかの方向へスワイプするとドラッグ操作を開始します。これはカスタマイズ可能であり、[`dragTolerance`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragTolerance) 入力を使用して変更できます。そうでない場合は、インタラクションがクリックとして見なされ、`dragClick` イベントがトリガーします。
 
-ドラッグが開始されると、[`dragStart`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragstart)イベントがトリガーされます。実際の移動が発生しないようにするには、[`cancel`]({environment:angularApiUrl}/interfaces/idragstarteventargs.html#cancel) プロパティを `true` に設定してイベントをキャンセルできます。
+ドラッグが開始されると、[`dragStart`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragStart)イベントがトリガーされます。実際の移動が発生しないようにするには、[`cancel`]({environment:angularApiUrl}/interfaces/idragstarteventargs.html#cancel) プロパティを `true` に設定してイベントをキャンセルできます。
 
-移動が実行される前に、ポインターの最後と次の位置を含む [`dragMove`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragmove) イベントもトリガーされます。要素のドラッグ時に動きが検出されるたびにトリガーされます。 
+移動が実行される前に、ポインターの最後と次の位置を含む [`dragMove`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragMove) イベントもトリガーされます。要素のドラッグ時に動きが検出されるたびにトリガーされます。 
 
-ユーザーがマウス/タッチをリリースした後、ドラッグ ゴースト要素が DOM から削除され、[`dragEnd`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragend) が発生されます。
+ユーザーがマウス/タッチをリリースした後、ドラッグ ゴースト要素が DOM から削除され、[`dragEnd`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragEnd) が発生されます。
 
 > [!Note]
-> [`dragMove`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragmove) イベントの性質上、短い期間で何度もトリガーされる可能性があり、トリガーされたときに実行される複雑な操作のパフォーマンスの問題が発生することがあります。
+> [`dragMove`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragMove) イベントの性質上、短い期間で何度もトリガーされる可能性があり、トリガーされたときに実行される複雑な操作のパフォーマンスの問題が発生することがあります。
 
 ### ゴーストでドラッグします
 
@@ -47,9 +47,9 @@ Angular アプリケーション内の要素をある場所から他の場所へ
 
 `igxDrag` ディレクティブのデフォルト動作では、ベース要素を変更せずに残し、エンドユーザーがドラッグ操作を実行した場合ゴースト要素を作成します。
 
-ページにゴーストがレンダリングされる前に、追加しようとしているゴースト要素の情報を含む [`ghostCreate`]({environment:angularApiUrl}/classes/igxdragdirective.html#ghostcreate) イベントがトリガーされます。このイベントは、[`dragStart`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragstart) イベントの直後にトリガーされます。[`dragStart`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragstart) がキャンセルされた場合、ゴーストは作成されず、それに応じて [`ghostCreate`]({environment:angularApiUrl}/classes/igxdragdirective.html#ghostcreate) イベントはトリガーされません。
+ページにゴーストがレンダリングされる前に、追加しようとしているゴースト要素の情報を含む [`ghostCreate`]({environment:angularApiUrl}/classes/igxdragdirective.html#ghostCreate) イベントがトリガーされます。このイベントは、[`dragStart`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragStart) イベントの直後にトリガーされます。[`dragStart`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragStart) がキャンセルされた場合、ゴーストは作成されず、それに応じて [`ghostCreate`]({environment:angularApiUrl}/classes/igxdragdirective.html#ghostCreate) イベントはトリガーされません。
 
-ゴーストが削除される直前に、ゴーストの [`ghostDestroy`]({environment:angularApiUrl}/classes/igxdragdirective.html#ghostcreate) イベントがトリガーされます。
+ゴーストが削除される直前に、ゴーストの [`ghostDestroy`]({environment:angularApiUrl}/classes/igxdragdirective.html#ghostDestroy) イベントがトリガーされます。
 
 ### ゴーストのカスタマイズ
 
@@ -117,7 +117,7 @@ Angular アプリケーション内の要素をある場所から他の場所へ
 
 要素がドラッグされている場合、デフォルトでニメーションは適用されません。
 
-`igxDrag` にトランジション アニメーションを適用できますが、ドラッグの終了時または要素が現在ドラッグされていないときの使用をお勧めします。これは、[`transitionToOrigin`]({environment:angularApiUrl}/classes/igxdragdirective.html#transitiontoorigin) および [`transitionTo`]({environment:angularApiUrl}/classes/igxdragdirective.html#transitionto) メソッドを使用して実現できます。
+`igxDrag` にトランジション アニメーションを適用できますが、ドラッグの終了時または要素が現在ドラッグされていないときの使用をお勧めします。これは、[`transitionToOrigin`]({environment:angularApiUrl}/classes/igxdragdirective.html#transitionToOrigin) および [`transitionTo`]({environment:angularApiUrl}/classes/igxdragdirective.html#transitionto) メソッドを使用して実現できます。
 
 `transitionToOrigin` メソッドは、その名前が示すように、現在ドラッグされている要素または要素のゴーストを、ドラッグが開始された開始位置へアニメーション化します。`transitionTo` メソッドは、ページ (`pageX` および `pageY` など) に関連する特定の位置に要素をアニメーション化します。または、指定された要素の位置をアニメーション化します。要素が現在ドラッグされていない場合は、アニメーション化するか、ゴーストを作成して目的の位置にアニメーション化します。
 
@@ -156,7 +156,7 @@ Angular アプリケーション内の要素をある場所から他の場所へ
 
 [`igxDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html) ディレクティブは、[`igxDrag`]({environment:angularApiUrl}/classes/igxdragdirective.html) ディレクティブと同じように、任意の DOM 要素に適用できます。
 
-デフォルトで、[`igxDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html) ディレクティブは DOM のドラッグされた要素の位置を変更するためのロジックを適用しません。そのため、[`dropStrategy`]({environment:angularApiUrl}/classes/igxdropdirective.html#dropstrategy) を指定するか、カスタム ロジックを適用する必要があります。ドロップ ストラテジについては、次のセクションで説明します。
+デフォルトで、[`igxDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html) ディレクティブは DOM のドラッグされた要素の位置を変更するためのロジックを適用しません。そのため、[`dropStrategy`]({environment:angularApiUrl}/classes/igxdropdirective.html#dropStrategy) を指定するか、カスタム ロジックを適用する必要があります。ドロップ ストラテジについては、次のセクションで説明します。
 
 ### ドロップ ストラテジ
 
@@ -207,7 +207,7 @@ public onDropped(event) {
 独自のドロップ ロジックを実装する場合は、`dropped` イベントにバインドし、そこでロジックを実行するか、`IgxDefaultDropStrategy` クラスの拡張をお勧めします。
 
 ### ドラッグとドロップ要素のリンク
-それぞれ `igxDrag` および `igxDrop` ディレクティブで [`dragChannel`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragchannel) および [`dropChannel`]({environment:angularApiUrl}/classes/igxdropdirective.html#dropchannel) 入力を使用すると、異なる要素をリンクして相互間にのみ操作できます。たとえば、特定の `igxDrop` 要素にドロップできるように `igxDrag` 要素を制約する必要があり、使用できない場合は、同じチャネルを割り当てることで簡単に実現できます。
+それぞれ `igxDrag` および `igxDrop` ディレクティブで [`dragChannel`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragChannel) および [`dropChannel`]({environment:angularApiUrl}/classes/igxdropdirective.html#dragChannel) 入力を使用すると、異なる要素をリンクして相互間にのみ操作できます。たとえば、特定の `igxDrop` 要素にドロップできるように `igxDrag` 要素を制約する必要があり、使用できない場合は、同じチャネルを割り当てることで簡単に実現できます。
 
 #### 例
 

@@ -74,7 +74,7 @@ export class AppModule {}
 </iframe></div>
 
 ### リップルの期間
-[`igxRippleDuration`]({environment:angularApiUrl}/classes/igxrippledirective.html#rippleduration) プロパティを使用して、リップルアニメーションの期間を変更できます。これは、デフォルトで 600 ミリ秒に設定されています。
+[`igxRippleDuration`]({environment:angularApiUrl}/classes/igxrippledirective.html#rippleDuration) プロパティを使用して、リップルアニメーションの期間を変更できます。これは、デフォルトで 600 ミリ秒に設定されています。
 
 ```html
 <button igxButton="raised" igxRipple [igxRippleDuration]="2000">Click Me</button>
@@ -84,7 +84,7 @@ export class AppModule {}
 </iframe></div>
 
 ### リップルの対象要素
-[`igxRippleTarget`]({environment:angularApiUrl}/classes/igxrippledirective.html#rippletarget) プロパティを使用して親要素内の特定の要素にリップル エフェクトをアタッチします。
+[`igxRippleTarget`]({environment:angularApiUrl}/classes/igxrippledirective.html#rippleTarget) プロパティを使用して親要素内の特定の要素にリップル エフェクトをアタッチします。
 
 ```html
 <div class="parent" igxRipple="white" igxRippleTarget=".child" [igxRippleCentered]="true">

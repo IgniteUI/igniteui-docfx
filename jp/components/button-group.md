@@ -95,7 +95,7 @@ public alignment = ButtonGroupAlignment.vertical;
 <div class="divider--half"></div>
 
 ### 複数選択
-[`multiSelection`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#multiselection) プロパティを使用して、ボタン グループ内のボタンの複数選択を有効/無効化します。
+[`multiSelection`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#multiSelection) プロパティを使用して、ボタン グループ内のボタンの複数選択を有効/無効化します。
 
 ```html
 <!-- sample.component.html -->
@@ -120,7 +120,7 @@ public alignment = ButtonGroupAlignment.vertical;
 
 
 ### 表示密度
-[`displayDensity`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#displaydensity) プロパティを使用して、ボタン グループの表示密度を制御します。これにより、グループ内のボタンのスタイルが、最大、最小、または標準 (デフォルト値) に設定されます。
+[`displayDensity`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#displayDensity) プロパティを使用して、ボタン グループの表示密度を制御します。これにより、グループ内のボタンのスタイルが、最大、最小、または標準 (デフォルト値) に設定されます。
 
 > [!NOTE] 
 > ボタン グループ内のボタンの表示密度は、明示的に指定されている場合は変更されません。

@@ -347,7 +347,7 @@ Now let's create our [`IgxColumnActionsComponent`]({environment:angularApiUrl}/c
 
 ### Add title and filter prompt
 
-A couple more things we can do in order to enrich the user experience of our column hiding component is to set the [`title`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html#title) and the [`filterColumnsPrompt`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html#filtercolumnsprompt) properties. The [`title`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html#title) is displayed on the top and the [`filterColumnsPrompt`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html#filtercolumnsprompt) is the prompt text that is displayed in the filter input of our column hiding UI.
+A couple more things we can do in order to enrich the user experience of our column hiding component is to set the [`title`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html#title) and the [`filterColumnsPrompt`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html#filtercolumnsprompt) properties. The [`title`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html#title) is displayed on the top and the [`filterColumnsPrompt`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html#filterColumnsPrompt) is the prompt text that is displayed in the filter input of our column hiding UI.
 
 ```html
 <!--columnHiding.component.html-->
@@ -361,7 +361,7 @@ A couple more things we can do in order to enrich the user experience of our col
 
 ### Add column display order options
 
-We can also allow the user to choose the display order of the columns in the column hiding UI. For this purpose we will use the [`columnDisplayOrder`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html#columndisplayorder) property, which is an enumeration type property and has the following options:
+We can also allow the user to choose the display order of the columns in the column hiding UI. For this purpose we will use the [`columnDisplayOrder`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html#columnDisplayOrder) property, which is an enumeration type property and has the following options:
 
 - **Alphabetical** (order the columns alphabetically)
 - **DisplayOrder** (order the columns according to the way they are displayed in the @@igComponent)
@@ -406,7 +406,7 @@ Now all we have to do is bind the [`checked`]({environment:angularApiUrl}/classe
 ```
 
 ### Disable hiding of a column
-We can easily prevent the user from being able to hide columns through the column hiding UI by simply setting their [`disableHiding`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disablehiding) property to true.
+We can easily prevent the user from being able to hide columns through the column hiding UI by simply setting their [`disableHiding`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disableHiding) property to true.
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -645,7 +645,7 @@ The column hiding UI has a few more APIs to explore, which are listed below.
 Additional components and/or directives with relative APIs that were used:
 
 [`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) properties:
-* [hiddenColumnsCount]({environment:angularApiUrl}/classes/@@igTypeDoc.html#hiddencolumnscount)
+* [hiddenColumnsCount]({environment:angularApiUrl}/classes/@@igTypeDoc.html#hiddenColumnsCount)
 
 [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) properties:
 * [disableHiding]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disablehiding)

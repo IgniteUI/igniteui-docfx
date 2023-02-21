@@ -22,7 +22,7 @@ Position strategies determine where the content is displayed in the provided `Ig
 There are five positioning strategies:
 
 ### Global
-Positions the content, based on the directions passed in through [`positionSettings`]({environment:angularApiUrl}/interfaces/positionsettings.html). These are Left/Center/Right for [`horizontalDirection`]({environment:angularApiUrl}/interfaces/positionsettings.html#horizontaldirection) and Top/Middle/Bottom for [`verticalDirection`]({environment:angularApiUrl}/interfaces/positionsettings.html#verticaldirection). Defaults are:
+Positions the content, based on the directions passed in through [`positionSettings`]({environment:angularApiUrl}/interfaces/positionsettings.html). These are Left/Center/Right for [`horizontalDirection`]({environment:angularApiUrl}/interfaces/positionsettings.html#horizontalDirection) and Top/Middle/Bottom for [`verticalDirection`]({environment:angularApiUrl}/interfaces/positionsettings.html#verticalDirection). Defaults are:
     | horizontalDirection        | verticalDirection        |
     |:---------------------------|:-------------------------|
     | HorizontalAlignment.Center | VerticalAlignment.Middle |
@@ -50,7 +50,7 @@ Positions the element the same way as the **Connected** positioning strategy. It
 <div class="divider"></div>
 
 ### Elastic
-Positions the element like the **Connected** positioning strategy and re-sizes the element to fit inside the view port (re-calculating width and/or height) in case the element is partially out of view. [`minSize`]({environment:angularApiUrl}/interfaces/positionsettings.html#minsize) can be passed in [`positionSettings`]({environment:angularApiUrl}/interfaces/positionsettings.html) to prevent resizing if it would put the element's dimensions below a certain threshold. Defaults are:
+Positions the element like the **Connected** positioning strategy and re-sizes the element to fit inside the view port (re-calculating width and/or height) in case the element is partially out of view. [`minSize`]({environment:angularApiUrl}/interfaces/positionsettings.html#minSize) can be passed in [`positionSettings`]({environment:angularApiUrl}/interfaces/positionSettings.html) to prevent resizing if it would put the element's dimensions below a certain threshold. Defaults are:
     | target          | horizontalDirection       |  verticalDirection       | horizontalStartPoint     | verticalStartPoint      minSize               |
     |:----------------|:--------------------------|:-------------------------|:-------------------------|:-------------------------|-----------------------|
     | new Point(0, 0) | HorizontalAlignment.Right | VerticalAlignment.Bottom | HorizontalAlignment.Left | VerticalAlignment.Bottom |{ width: 0, height: 0 }|
