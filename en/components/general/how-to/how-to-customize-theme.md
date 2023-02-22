@@ -120,6 +120,94 @@ And the result in our app now looks like this:
 
 The same process can be applied to override and customize any of the component themes individually.
 
+### Switching custom themes at runtime
+
+Now let's dig even deeper and create two custom versions of the theme, which can be switched between at runtime. We can do this with user control/preference and let them switch it at any time. For the example, however, we will use the OS defined user preference (light or dark) in order to apply a theme, which matches the current OS setting. In order to do this, we will need two color palettes:
+
+```scss
+@use "minireset.css/minireset";
+@use "@infragistics/igniteui-angular/theming" as *;
+
+@include core();
+@include typography($font-family: "Poppins");
+
+$primary-dark: #1028c7;
+$primary-light: #3c55f1;
+$secondary-dark: #e0d94c;
+$secondary-light: #b4a904;
+
+$custom-palette-dark: palette(
+  $primary: $primary-dark,
+  $secondary: $secondary-dark,
+  $surface: #000,
+  $gray: #ccc,
+  $info: color($dark-material-palette, 'info'),
+  $success: color($dark-material-palette, 'success'),
+  $error: color($dark-material-palette, 'error'),
+  $warn: color($dark-material-palette, 'warn')
+);
+
+$custom-palette-light: palette(
+  $primary: $primary-light,
+  $secondary: $secondary-light,
+  $surface: #fff,
+  $gray: #222,
+  $info: color($light-material-palette, 'info'),
+  $success: color($light-material-palette, 'success'),
+  $error: color($light-material-palette, 'error'),
+  $warn: color($light-material-palette, 'warn')
+);
+```
+
+Then our theme definition will go in the general scope, which we will use for the light variation and we will create a palette override in a `@media` query when dark color schema OS preference is detected:
+
+```scss
+@include theme(
+  $palette: $custom-palette-light,
+  $schema: $light-material-schema
+);
+
+@media (prefers-color-scheme: light) {
+  /* Grid Toolbar override for light color scheme */
+  igx-grid-toolbar {
+    --background-color: #{$primary-light};
+    --title-text-color: #{text-contrast($primary-light)};
+  }
+  /* END Grid Toolbar */
+}
+
+@media (prefers-color-scheme: dark) {
+  // changes native element schema (scrollbars, select, etc.)
+  :root {
+    color-scheme: dark;
+  }
+
+  @include palette($custom-palette-dark);
+
+  /* Grid Toolbar override for light color scheme */
+  igx-grid-toolbar {
+    --background-color: #{$primary-dark};
+    --title-text-color: #{text-contrast($primary-dark)};
+  }
+  /* END Grid Toolbar */
+}
+```
+
+>[!NOTE]
+> I have switched the `igx-grid-toolbar` theme override to overriding just two of its variables, instead of reincluding all of the theme variables using [`css-vars()`]({environment:sassApiUrl}/index.html#mixin-css-vars). 
+> All theme variables can be found in the [corresponding sass api doc]({environment:sassApiUrl}/index.html#function-grid-toolbar-theme) and are equivalent to the sass variables, but prefixed with `--` instead of `$`.
+
+And the result now looks like this with light OS theme:
+
+<img class="responsive-img"  src="../../../images/general/theming-walkthrough/customizing-color-schema-light.png" />
+
+And this is how it looks with dark OS theme:
+
+<img class="responsive-img"  src="../../../images/general/theming-walkthrough/customizing-color-schema-dark.png" />
+
+>[!NOTE]
+> Full runtime switch, including Ignite UI theme schema preset switch is possible, only if two full themes are built. In the example above, we're switching the color palettes, but the theme schema remains $light-material-schema, so not all of the correct shades from the color palette are used when we switch to the dark color palette.
+
 ### What can be customized
 
 Ignite UI theming abstracts multiple dimensions of theming and provides for very robust retheming capabilities. Developers and designers can take advantage of the theming engine APIs to make tailored visual design for their applications, which gives them unique look and feel when using Ignite UI for Angular. The theming engine also exposes variables from each of the dimensions, which can be used to apply theming to the rest of the application structure, which is not directly built with Ignite UI for Angular components as UI. The dimensions exposed for modifications are:
