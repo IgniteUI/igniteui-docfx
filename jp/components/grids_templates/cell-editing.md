@@ -146,7 +146,7 @@ public updateCell() {
 
 デフォルトのセル編集テンプレートの詳細については、[編集トピック](editing.md#テンプレートの編集)を参照してください。
 
-セルが編集モードのときに適用されるカスタム テンプレートを提供する場合は、[`igxCellEditor` ディレクティブ]({environment:angularApiUrl}/classes/igxcelltemplatedirective.html)を使用できます。これを行うには、`igxCellEditor` ディレクティブでマークされた `ng-template` を渡し、カスタム コントロールを [`cell.editValue`]({environment:angularApiUrl}/classes/igxgridcell.html#editvalue) に適切にバインドする必要があります:
+セルが編集モードのときに適用されるカスタム テンプレートを提供する場合は、[`igxCellEditor` ディレクティブ]({environment:angularApiUrl}/classes/igxcelltemplatedirective.html)を使用できます。これを行うには、`igxCellEditor` ディレクティブでマークされた `ng-template` を渡し、カスタム コントロールを [`cell.editValue`]({environment:angularApiUrl}/classes/igxgridcell.html#editValue) に適切にバインドする必要があります:
 
 ```html
 <igx-column field="class" header="Class" [editable]="true">
@@ -170,7 +170,7 @@ public updateCell() {
 <div class="divider--half"></div>
 
 > [!NOTE]
-> 編集モードでセルの [`editValue`]({environment:angularApiUrl}/classes/igxgridcell.html#editvalue) に加えられた変更は、終了時に適切な[`編集イベント`](editing.md#イベントの引数とシーケンス)をトリガーし、[トランザクション状態](./batch-editing.md)に適用されます (トランザクションが有効な場合)。
+> 編集モードでセルの [`editValue`]({environment:angularApiUrl}/classes/igxgridcell.html#editValue) に加えられた変更は、終了時に適切な[`編集イベント`](editing.md#イベントの引数とシーケンス)をトリガーし、[トランザクション状態](./batch-editing.md)に適用されます (トランザクションが有効な場合)。
 
 > [!NOTE]
 > セルテンプレート [`igxCell`](../grid/grid.md#セル-テンプレート) は、編集モード外での列のセルの表示方法を制御します。
@@ -274,7 +274,7 @@ return dataView.findIndex((rec, index) => index > currentRowIndex && this.isEdit
 
 ### 新しいレコードの追加
 
-@@igComponent コンポーネントは、提供したデータをデータ ソースに追加する [`addRow`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#addrow) メソッドを公開します。
+@@igComponent コンポーネントは、提供したデータをデータ ソースに追加する [`addRow`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#addRow) メソッドを公開します。
 
 @@if (igxName === 'IgxGrid') {
 ```typescript
@@ -308,7 +308,7 @@ public addRow() {
 
 ### データを @@igComponent で更新
 
-@@igComponent のデータ更新は、**グリッドでプライマリキーが定義されている場合のみ** [`updateRow`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#updaterow) と [`updateCell`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#updatecell) メソッドで行うことができます。セルと行の値またはそのいずれかを各 `update` メソッドで直接更新できます。
+@@igComponent のデータ更新は、**グリッドでプライマリキーが定義されている場合のみ** [`updateRow`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#updateRow) と [`updateCell`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#updateCell) メソッドで行うことができます。セルと行の値またはそのいずれかを各 `update` メソッドで直接更新できます。
 
 @@if (igxName === 'IgxGrid') {
 ```typescript

@@ -63,7 +63,7 @@ Snackbar コンポーネントを表示するには、ボタン クリックで 
 ```
 
 ### 非表示/自動的に隠す
-開いた後は、[`displayTime`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#displaytime) 入力によって指定した期間遅延後に非表示になります。デフォルト値は 4000 ミリ秒です。この動作はデフォルトで有効ですが、[`autoHide`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#autohide) を **false** に設定して変更できます。この場合、Snackbar は非表示になりません。Snackbar の [`close()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#close) メソッドを使用して、コードでコンポーネントを閉じることができます。
+開いた後は、[`displayTime`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#displayTime) 入力によって指定した期間遅延後に非表示になります。デフォルト値は 4000 ミリ秒です。この動作はデフォルトで有効ですが、[`autoHide`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#autoHide) を **false** に設定して変更できます。この場合、Snackbar は非表示になりません。Snackbar の [`close()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#close) メソッドを使用して、コードでコンポーネントを閉じることができます。
 
 ```html
 <!--sample.component.html-->
@@ -90,7 +90,7 @@ public close(element) {
 </code-view>
 
 ### 表示時間
-[`displayTime`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#displaytime) でミリ秒間隔に設定し、Snackbar コンポーネントが表示される時間を設定します。デフォルトでは 4000 ミリ秒に設定されています。 
+[`displayTime`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#displayTime) でミリ秒間隔に設定し、Snackbar コンポーネントが表示される時間を設定します。デフォルトでは 4000 ミリ秒に設定されています。 
 
 ### Snackbar のカスタマイズ
 Snackbar の内容をカスタマイズして、メッセージやボタンよりも複雑な要素を表示することもできます。たとえば、ファイルの読み込み中にスナックバーを表示したい場合は、読み込みアニメーションをそのコンテンツに追加することができます。

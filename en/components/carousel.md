@@ -85,7 +85,7 @@ public slides = [
 
 By default, the Carousel in Angular has its **[`loop`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#loop)** input property set to `true` ( *looping occurs when the first slide comes after the last by navigating using the Next action, or when the last slide comes after the first by using the Previous action* ). The looping behavior can be disabled by setting the value of the `loop` input to `false`.
 
-To keep track of each slide index, the carousel has indicators that are positioned at the `bottom` of the carousel by default. In order to change this behavior, we have to use the [indicatorsOrientation]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#indicatorsorientation) property and assign it to `top`. Indicators can be disabled by adding an empty template.
+To keep track of each slide index, the carousel has indicators that are positioned at the `bottom` of the carousel by default. In order to change this behavior, we have to use the [indicatorsOrientation]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#indicatorsOrientation) property and assign it to `top`. Indicators can be disabled by adding an empty template.
 
 The carousel template may look like this:
 
@@ -203,7 +203,7 @@ Animated slide transitions provide the end-users a nice experience when interact
 
 The carousel is configured to use the `slide` animation by default but it also supports `fade` as an alternative animation.
 
-The animations are configured through the [animationType]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#animationtype) input, like this:
+The animations are configured through the [animationType]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#animationType) input, like this:
 
 ```html
 <igx-carousel animationType="fade">
@@ -236,7 +236,7 @@ The navigation in the carousel can be handled by the user through navigation but
 ### Pan gestures
 <div class="divider--half"></div>
 
-By default, the carousel can be used on any touch-enabled device. This is optional and can be changed by setting the [gesturesSupport]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#gesturessupport) property to `false`.
+By default, the carousel can be used on any touch-enabled device. This is optional and can be changed by setting the [gesturesSupport]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#gesturesSupport) property to `false`.
 
 The carousel [animations](carousel.md#angular-carousel-animations) are fully supported on touch devices, which makes the carousel consistent with any platform and great when used in progressive web applications ([PWA](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps)).
 
@@ -303,7 +303,7 @@ adding [IgxList]({environment:angularApiUrl}/classes/igxlistcomponent.html):
 </div>
 ...
 ```
-syncing the components by hooking up on carousel's [`onSlideChanged`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#onslidechanged) and list's [itemClicked]({environment:angularApiUrl}/classes/igxlistcomponent.html#itemclicked) events:
+syncing the components by hooking up on carousel's [`onSlideChanged`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#onSlideChanged) and list's [itemClicked]({environment:angularApiUrl}/classes/igxlistcomponent.html#itemClicked) events:
 
 ```typescript
   public ngOnInit() {

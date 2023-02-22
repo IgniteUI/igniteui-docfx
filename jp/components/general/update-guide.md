@@ -775,8 +775,8 @@ $__legacy-libsass: true;
     * `id`、`itemStyle`、`panels`、`viewTabs`、`contentTabs`、`tabs` プロパティが削除されました。現在、[`items`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html#items) プロパティはタブのコレクションを返します。
     * 次のプロパティが変更されました。
         * タブ項目の `isSelected` プロパティの名前が [` selected`]({environment:angularApiUrl}/classes/igxbottomnavitemcomponent.html#selected) に変更されました。
-        * `selectedTab` プロパティの名前が [`selectedItem`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html#selecteditem) に変更されました。
-    * `onTabSelected` および `onTabDeselected` イベントが削除されました。[`selectedIndexChanging`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html#selectedindexchanging)、[`selectedIndexChange`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html#selectedindexchange)、[`selectedItemChange`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html#selecteditemchange) の 3 つの新しいイベントが導入されました。これらのイベントにより、タブの選択をより柔軟に制御できます。残念ながら、これらのイベント変更に対して適切な移行を行うことはとても複雑であるため、エラーはプロジェクト レベルで処理する必要があります。
+        * `selectedTab` プロパティの名前が [`selectedItem`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html#selectedItem) に変更されました。
+    * `onTabSelected` および `onTabDeselected` イベントが削除されました。[`selectedIndexChanging`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html#selectedIndexChanging)、[`selectedIndexChange`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html#selectedIndexChange)、[`selectedItemChange`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html#selecteditemchange) の 3 つの新しいイベントが導入されました。これらのイベントにより、タブの選択をより柔軟に制御できます。残念ながら、これらのイベント変更に対して適切な移行を行うことはとても複雑であるため、エラーはプロジェクト レベルで処理する必要があります。
 
 ### IgxTabs コンポーネント
 [**IgxTabsComponent**]({environment:angularApiUrl}/classes/igxtabscomponent.html) は、タブ ヘッダーとコンテンツを定義するためのより柔軟で説明的な方法を提供するために、完全にリファクタリングされました。既存の **igx-tabs** 定義を新しい定義に変更するには、**ng update** を介して更新することをお勧めします。
@@ -807,9 +807,9 @@ $__legacy-libsass: true;
     * `id`、`groups`、`viewTabs`、`contentTabs`、および `tabs` プロパティが削除されました。現在、[`items`]({environment:angularApiUrl}/classes/igxtabscomponent.html#items) プロパティはタブのコレクションを返します。
     * 次のプロパティが変更されました。
         * タブ項目の `isSelected` プロパティの名前が [` selected`]({environment:angularApiUrl}/classes/igxtabitemcomponent.html#selected) に変更されました。
-        * `selectedTabItem` プロパティは [`selectedItem`]({environment:angularApiUrl}/classes/igxtabscomponent.html#selecteditem) に変更されました。
-        * contentFit と固定オプションを含む `type` プロパティは使用できなくなりました。ヘッダーのサイズ設定と配置モードは現在、[`tabAlignment`]({environment:angularApiUrl}/classes/igxtabscomponent.html#tabalignment) 入力プロパティによって制御されています。この入力プロパティは、start (デフォルト)、center、end、justify の 4 つのいずれかが設定できます。古い `contentFit` タイプは現在の `start` 配置値に対応し、古い `fixed` タイプは現在の `justify` 値に対応します。
-    * `tabItemSelected` および `tabItemDeselected` イベントが削除されました。[`selectedIndexChanging`]({environment:angularApiUrl}/classes/igxtabscomponent.html#selectedindexchanging)、[`selectedIndexChange`]({environment:angularApiUrl}/classes/igxtabscomponent.html#selectedindexchange)、[`selectedItemChange`]({environment:angularApiUrl}/classes/igxtabscomponent.html#selecteditemchange) の 3 つの新しいイベントが導入されました。これらのイベントにより、タブの選択をより柔軟に制御できます。残念ながら、これらのイベント変更に対して適切な移行を行うことはとても複雑であるため、エラーはプロジェクト レベルで処理する必要があります。
+        * `selectedTabItem` プロパティは [`selectedItem`]({environment:angularApiUrl}/classes/igxtabscomponent.html#selectedItem) に変更されました。
+        * contentFit と固定オプションを含む `type` プロパティは使用できなくなりました。ヘッダーのサイズ設定と配置モードは現在、[`tabAlignment`]({environment:angularApiUrl}/classes/igxtabscomponent.html#tabAlignment) 入力プロパティによって制御されています。この入力プロパティは、start (デフォルト)、center、end、justify の 4 つのいずれかが設定できます。古い `contentFit` タイプは現在の `start` 配置値に対応し、古い `fixed` タイプは現在の `justify` 値に対応します。
+    * `tabItemSelected` および `tabItemDeselected` イベントが削除されました。[`selectedIndexChanging`]({environment:angularApiUrl}/classes/igxtabscomponent.html#selectedIndexChanging)、[`selectedIndexChange`]({environment:angularApiUrl}/classes/igxtabscomponent.html#selectedindexchange)、[`selectedItemChange`]({environment:angularApiUrl}/classes/igxtabscomponent.html#selectedIndexChange) の 3 つの新しいイベントが導入されました。これらのイベントにより、タブの選択をより柔軟に制御できます。残念ながら、これらのイベント変更に対して適切な移行を行うことはとても複雑であるため、エラーはプロジェクト レベルで処理する必要があります。
 
 ### IgxGridComponent、IgxTreeGridComponent、IgxHierarchicalGridComponent
 * *IgxGridRowComponent*、*IgxTreeGridRowComponent*、*IgxHierarchicalRowComponent*、*IgxGridGroupByRowComponent* はパブリック API で公開されなくなりました。

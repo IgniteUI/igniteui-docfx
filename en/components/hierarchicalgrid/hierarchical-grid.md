@@ -196,7 +196,7 @@ export class RemoteLoDService {
 
 ## Hide/Show row expand indicators
 
-If you have a way to provide information whether a row has children prior to its expanding, you could use the [`hasChildrenKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#haschildrenkey) input property. This way you could provide a boolean property from the data objects which indicates whether an expansion indicator should be displayed.
+If you have a way to provide information whether a row has children prior to its expanding, you could use the [`hasChildrenKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#hasChildrenKey) input property. This way you could provide a boolean property from the data objects which indicates whether an expansion indicator should be displayed.
 
 ```html
 <igx-hierarchical-grid #grid [data]="data" primaryKey="ID" hasChildrenKey="hasChildren">

@@ -37,7 +37,7 @@ _language: ja
 
 # @@igComponent の状態保持
 
-igxGridState ディレクティブによって開発者がグリッドの状態を簡単に保存および復元できます。[`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) ディレクティブがグリッドに適用されると、[`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getstate) および [`setState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#setstate) メソッドが公開され、開発者はこれを使用して、あらゆるシナリオで状態の永続化を実現できます。
+igxGridState ディレクティブによって開発者がグリッドの状態を簡単に保存および復元できます。[`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) ディレクティブがグリッドに適用されると、[`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getState) および [`setState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#setState) メソッドが公開され、開発者はこれを使用して、あらゆるシナリオで状態の永続化を実現できます。
 
 ## サポートされている機能
 [`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) ディレクティブは、以下の機能の状態の保存および復元をサポートします。
@@ -99,7 +99,7 @@ igxGridState ディレクティブによって開発者がグリッドの状態�
 
 ## 使用方法
 
-[`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getstate) - このメソッドは、シリアル化された JSON 文字列でグリッド状態を返します。これは、開発者がそれを取得して任意のデータストレージ (データベース、クラウド、ブラウザーの localStorage など) に保存できます。このメソッドは最初のオプションのパラメーター `serialize` を受け取り、[`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getstate) が [`IGridState`]({environment:angularApiUrl}/interfaces/igridstate.html) オブジェクトを返すか、シリアル化された JSON 文字列を返すかを決定します。
+[`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getState) - このメソッドは、シリアル化された JSON 文字列でグリッド状態を返します。これは、開発者がそれを取得して任意のデータストレージ (データベース、クラウド、ブラウザーの localStorage など) に保存できます。このメソッドは最初のオプションのパラメーター `serialize` を受け取り、[`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getState) が [`IGridState`]({environment:angularApiUrl}/interfaces/igridstate.html) オブジェクトを返すか、シリアル化された JSON 文字列を返すかを決定します。
 開発者は、機能名、または機能名を 2 番目の引数として持つ配列を渡すことにより、特定の機能の状態のみを取得することを選択できます。
 ```typescript
 // get all features` state in a serialized JSON string
@@ -112,14 +112,14 @@ const gridState: IGridState = state.getState(false);
 const sortingFilteringStates: IGridState = state.getState(false, ['sorting', 'filtering']);
 ```
 
-[`setState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#setstate) - [`setState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#setstate) メソッドは、シリアル化されたJSON文字列または [`IGridState`]({environment:angularApiUrl}/interfaces/igridstate.html) オブジェクトを引数として受け入れ、オブジェクト/JSON 文字列で見つかった各機能の状態を復元します。
+[`setState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#setState) - [`setState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#setState) メソッドは、シリアル化されたJSON文字列または [`IGridState`]({environment:angularApiUrl}/interfaces/igridstate.html) オブジェクトを引数として受け入れ、オブジェクト/JSON 文字列で見つかった各機能の状態を復元します。
 
 ```typescript
 state.setState(gridState);
 state.setState(sortingFilteringStates)
 ```
 
-`options` - [`options`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#options) オブジェクトは、[`IGridStateOptions`]({environment:angularApiUrl}/interfaces/igridstateoptions.html) インターフェースを実装します。特定の機能の名前であるキーには、この機能の状態を追跡するかどうかを示すブール値があります。[`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getstate) メソッドはこれらの機能の状態を戻り値に入れず、[`setState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getstate) メソッドはその状態を復元しません。
+`options` - [`options`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#options) オブジェクトは、[`IGridStateOptions`]({environment:angularApiUrl}/interfaces/igridstateoptions.html) インターフェースを実装します。特定の機能の名前であるキーには、この機能の状態を追跡するかどうかを示すブール値があります。[`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getState) メソッドはこれらの機能の状態を戻り値に入れず、[`setState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#setState) メソッドはその状態を復元しません。
 
 ```typescript
 public options =  { cellSelection: false; sorting: false; }
@@ -293,7 +293,7 @@ public onDimensionInit(dim: IPivotDimension) {
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 ## 子グリッドの復元
-子グリッドの状態の保存/復元は、[`rowIslands`]({environment:angularApiUrl}/interfaces/igxgridstateoptions.html#rowislands) プロパティによって制御され、デフォルトで有効に設定されています。[`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) は、ルート グリッドと階層のすべての子グリッドの両方の機能を保存/復元するために同じオプションを使用します。たとえば、以下のオプションを渡す場合:
+子グリッドの状態の保存/復元は、[`rowIslands`]({environment:angularApiUrl}/interfaces/igxgridstateoptions.html#rowIslands) プロパティによって制御され、デフォルトで有効に設定されています。[`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) は、ルート グリッドと階層のすべての子グリッドの両方の機能を保存/復元するために同じオプションを使用します。たとえば、以下のオプションを渡す場合:
 
 ``` html
 <!-- public options = {selection: false, sorting: false, rowIslands: true} -->
@@ -348,7 +348,7 @@ this.state.setState(state, ['filtering', 'rowIslands']);
 ## ピボット ストラテジの復元
 [`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) は、デフォルトで は ([`制限`](state-persistence.md#制限)を参照) リモート ピボット操作もカスタム ディメンション ストラテジも保持しません (詳細については、[Pivot Grid リモート操作](pivot-grid-custom.md)のサンプルを参照してください)。これらの復元は、アプリケーション レベルのコードで実現できます。`IgxGridState` は、[`stateParsed`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#stateParsed) と呼ばれるイベントを公開します。このイベントはグリッド状態が適用される前に追加で変更するために使用できます。以下はその方法です。
 
-> [`stateParsed`]({environment:angularApiUrl}/classes/igxgridstatedirective) は、文字列引数で [`setState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#setstate) を使用している場合にのみ発行します。
+> [`stateParsed`]({environment:angularApiUrl}/classes/igxgridstatedirective) は、文字列引数で [`setState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#setState) を使用している場合にのみ発行します。
 
 * カスタム ソート方法およびカスタム ピボット列/行ディメンション ストラテジを設定します。
 
@@ -399,7 +399,7 @@ public restoreState() {
 [`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) はデフォルトでは、リモート操作もカスタム ディメンション ストラテジ (詳細については、[グリッド リモート操作](remote-data-operations.md)サンプルを参照) も保持しません ([`制限`](state-persistence.md#制限) を参照)。これらの復元は、アプリケーション レベルのコードで実現できます。`IgxGridState` は、[`stateParsed`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#stateParsed) と呼ばれるイベントを公開します。このイベントはグリッド状態に追加の変更を、それが適用される前に行なうために使用できます。
 以下はその方法です。
 
-> [`stateParsed`]({environment:angularApiUrl}/classes/igxgridstatedirective) は、文字列引数で [`setState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#setstate) を使用している場合にのみ発行されます。
+> [`stateParsed`]({environment:angularApiUrl}/classes/igxgridstatedirective) は、文字列引数で [`setState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#setState) を使用している場合にのみ発行されます。
 
 * カスタム ソート方法およびカスタム列/行ディメンション ストラテジを設定します。
 
@@ -449,10 +449,10 @@ state.setState(gridState.columnSelection);
 ```
 }
 @@if (igxName !== 'IgxPivotGrid') {
-* [`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getstate) メソッドは、JSON.stringify() メソッドを使用して、元のオブジェクトを JSON 文字列に変換します。JSON.stringify() が関数をサポートしないため、[`IgxGridState`] ディレクティブは、列の [`formatter`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#formatter)、[`filters`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#filters)、[`summaries`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#summaries)、[`sortStrategy`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortstrategy)、[`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellclasses)、[`cellStyles`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellstyles)、[`headerTemplate`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#headertemplate) および [`bodyTemplate`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#bodytemplate) プロパティを無視します。
+* [`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getState) メソッドは、JSON.stringify() メソッドを使用して、元のオブジェクトを JSON 文字列に変換します。JSON.stringify() が関数をサポートしないため、[`IgxGridState`] ディレクティブは、列の [`formatter`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#formatter)、[`filters`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#filters)、[`summaries`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#summaries)、[`sortStrategy`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortStrategy)、[`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellClasses)、[`cellStyles`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellStyles)、[`headerTemplate`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#headerTemplate) および [`bodyTemplate`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#bodyTemplate) プロパティを無視します。
 }
 @@if (igxName === 'IgxPivotGrid') {
-* [`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getstate) メソッドは、JSON.stringify() メソッドを使用して、元のオブジェクトをJSON文字列に変換します。JSON.stringify() は関数をサポートされていないため、[`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) ディレクティブはピボット ディメンション [`memberFunction`]({environment:angularApiUrl}/interfaces/IPivotDimension.html#memberFunction)、ピボット値 [`member`]({environment:angularApiUrl}/interfaces/IPivotValue.html#member)、[`formatter`]({environment:angularApiUrl}/interfaces/IPivotValue.html#formatter)、カスタム [`aggregate`]({environment:angularApiUrl}/interfaces/IPivotValue.html#aggregate) 関数、[`styles`]({environment:angularApiUrl}/interfaces/IPivotValue.html#styles) およびピボット構成ストラテジ ([`columnStrategy`]({environment:angularApiUrl}/interfaces/ipivotconfiguration.html#columnStrategy) と [`rowStrategy`]({environment:angularApiUrl}/interfaces/ipivotconfiguration.html#rowStrategy)) を無視します。
+* [`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getState) メソッドは、JSON.stringify() メソッドを使用して、元のオブジェクトをJSON文字列に変換します。JSON.stringify() は関数をサポートされていないため、[`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) ディレクティブはピボット ディメンション [`memberFunction`]({environment:angularApiUrl}/interfaces/IPivotDimension.html#memberFunction)、ピボット値 [`member`]({environment:angularApiUrl}/interfaces/IPivotValue.html#member)、[`formatter`]({environment:angularApiUrl}/interfaces/IPivotValue.html#formatter)、カスタム [`aggregate`]({environment:angularApiUrl}/interfaces/IPivotValue.html#aggregate) 関数、[`styles`]({environment:angularApiUrl}/interfaces/IPivotValue.html#styles) およびピボット構成ストラテジ ([`columnStrategy`]({environment:angularApiUrl}/interfaces/ipivotconfiguration.html#columnStrategy) と [`rowStrategy`]({environment:angularApiUrl}/interfaces/ipivotconfiguration.html#rowStrategy)) を無視します。
 }
 <div class="divider--half"></div>
 

@@ -50,7 +50,7 @@ _language: ja
 
 ## 使用方法
 
-Excel スタイル フィルタリングをオンにするには、2 つの入力を設定します。[`allowFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowfiltering) を `true` に設定し、[`filterMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filtermode) を `excelStyleFilter` に設定してください。
+Excel スタイル フィルタリングをオンにするには、2 つの入力を設定します。[`allowFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowFiltering) を `true` に設定し、[`filterMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filterMode) を `excelStyleFilter` に設定してください。
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -88,7 +88,7 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
 
 ## メニュー機能の構成
 
-ソート、移動、ピン固定、非表示の機能をフィルター メニューから削除できます。これらを制御する入力は以下のとおりです: [`sortable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortable)、[`movable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#movable)、[`selected`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selected)、[`disablePinning`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disablepinning)、[`disableHiding`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disablehiding)。
+ソート、移動、ピン固定、非表示の機能をフィルター メニューから削除できます。これらを制御する入力は以下のとおりです: [`sortable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortable)、[`movable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#movable)、[`selected`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selected)、[`disablePinning`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disablePinning)、[`disableHiding`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disableHiding)。
 
 @@if (igxName === 'IgxGrid') {
 ```html

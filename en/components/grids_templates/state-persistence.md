@@ -33,7 +33,7 @@ _canonicalLink: grid/state-persistence
 
 # Angular @@igComponent State Persistence
 
-Тhe igxGridState directive allows developers to easily save and restore the grid state. When the [`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) directive is applied on the grid, it exposes the [`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getstate) and [`setState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#setstate) methods that developers can use to achieve state persistence in any scenario.
+Тhe igxGridState directive allows developers to easily save and restore the grid state. When the [`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) directive is applied on the grid, it exposes the [`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getState) and [`setState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#setState) methods that developers can use to achieve state persistence in any scenario.
 
 ## Supported Features
 [`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) directive supports saving and restoring the state of the following features:
@@ -95,7 +95,7 @@ _canonicalLink: grid/state-persistence
 
 ## Usage
 
-[`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getstate) - This method returns the grid state in a serialized JSON string, so developers can just take it and save it on any data storage (database, cloud, browser localStorage, etc). The method accepts first optional parameter `serialize`, which determines whether [`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getstate) will return an [`IGridState`]({environment:angularApiUrl}/interfaces/igridstate.html) object or a serialized JSON string.
+[`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getState) - This method returns the grid state in a serialized JSON string, so developers can just take it and save it on any data storage (database, cloud, browser localStorage, etc). The method accepts first optional parameter `serialize`, which determines whether [`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getState) will return an [`IGridState`]({environment:angularApiUrl}/interfaces/igridstate.html) object or a serialized JSON string.
 The developer may choose to get only the state for a certain feature/features, by passing in the feature name, or an array with feature names as a second argument.
 ```typescript
 // get all features` state in a serialized JSON string
@@ -108,14 +108,14 @@ const gridState: IGridState = state.getState(false);
 const sortingFilteringStates: IGridState = state.getState(false, ['sorting', 'filtering']);
 ```
 
-[`setState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#setstate) - The [`setState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#setstate) method accepts the serialized JSON string or [`IGridState`]({environment:angularApiUrl}/interfaces/igridstate.html) object as argument and will restore the state of each feature found in the object/JSON string.
+[`setState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#setState) - The [`setState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#setState) method accepts the serialized JSON string or [`IGridState`]({environment:angularApiUrl}/interfaces/igridstate.html) object as argument and will restore the state of each feature found in the object/JSON string.
 
 ```typescript
 state.setState(gridState);
 state.setState(sortingFilteringStates)
 ```
 
-`options` - The [`options`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#options) object implements the [`IGridStateOptions`]({environment:angularApiUrl}/interfaces/igridstateoptions.html) interface, i.e. for every key, which is the name of a certain feature, there is the boolean value indicating if this feature state will be tracked. [`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getstate) method will not put the state of these features in the returned value and [`setState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getstate) method will not restore state for it.
+`options` - The [`options`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#options) object implements the [`IGridStateOptions`]({environment:angularApiUrl}/interfaces/igridstateoptions.html) interface, i.e. for every key, which is the name of a certain feature, there is the boolean value indicating if this feature state will be tracked. [`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getState) method will not put the state of these features in the returned value and [`setState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#setState) method will not restore state for it.
 
 ```typescript
 public options =  { cellSelection: false; sorting: false; }
@@ -289,7 +289,7 @@ public onDimensionInit(dim: IPivotDimension) {
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 ## Restoring Child Grids
-Saving / Restoring state for the child grids is controlled by the [`rowIslands`]({environment:angularApiUrl}/interfaces/igxgridstateoptions.html#rowislands) property and is enabled by default. [`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) will use the same options for saving/restoring features both for the root grid and all child grids down the hierarchy. For example, if we pass the following options:
+Saving / Restoring state for the child grids is controlled by the [`rowIslands`]({environment:angularApiUrl}/interfaces/igxgridstateoptions.html#rowIslands) property and is enabled by default. [`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) will use the same options for saving/restoring features both for the root grid and all child grids down the hierarchy. For example, if we pass the following options:
 
 ``` html
 <!-- public options = {selection: false, sorting: false, rowIslands: true} -->
@@ -344,7 +344,7 @@ this.state.setState(state, ['filtering', 'rowIslands']);
 ## Restoring Pivot Strategies
 [`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) will not persist neither remote pivot operations nor custom dimension strategies (For further information see [Pivot Grid Remote Operations](pivot-grid-custom.md) sample) by default (see [`limitations`](state-persistence.md#limitations)). Restoring any of these can be achieved with code on application level. The `IgxGridState` exposes an event called [`stateParsed`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#stateParsed) which can be used to additionally modify the grid state before it gets applied. Let's show how to do this:
 
-> [`stateParsed`]({environment:angularApiUrl}/classes/igxgridstatedirective) is only emitted when we are using [`setState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#setstate) with string argument.
+> [`stateParsed`]({environment:angularApiUrl}/classes/igxgridstatedirective) is only emitted when we are using [`setState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#setState) with string argument.
 
 * Set custom sorting strategy and custom pivot column and row dimension strategies:
 
@@ -394,7 +394,7 @@ public restoreState() {
 ## Restoring Strategies
 [`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) will not persist neither remote operations nor custom dimension strategies (For further information see [Grid Remote Operations](remote-data-operations.md) sample) by default (see [`limitations`](state-persistence.md#limitations)). Restoring any of these can be achieved with code on application level. The `IgxGridState` exposes an event called [`stateParsed`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#stateParsed) which can be used to additionally modify the grid state before it gets applied. Let's show how to do this:
 
-> [`stateParsed`]({environment:angularApiUrl}/classes/igxgridstatedirective) is only emitted when we are using [`setState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#setstate) with string argument.
+> [`stateParsed`]({environment:angularApiUrl}/classes/igxgridstatedirective) is only emitted when we are using [`setState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#setState) with string argument.
 
 * Set custom sorting strategy and custom column and row dimension strategies:
 
@@ -444,10 +444,10 @@ state.setState(gridState.columnSelection);
 ```
 }
 @@if (igxName !== 'IgxPivotGrid') {
-* [`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getstate) method uses JSON.stringify() method to convert the original objects to a JSON string. JSON.stringify() does not support Functions, thats why the [`IgxGridState`] directive will ignore the columns [`formatter`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#formatter), [`filters`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#filters), [`summaries`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#summaries), [`sortStrategy`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortstrategy), [`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellclasses), [`cellStyles`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellstyles), [`headerTemplate`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#headertemplate) and [`bodyTemplate`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#bodytemplate) properties.
+* [`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getstate) method uses JSON.stringify() method to convert the original objects to a JSON string. JSON.stringify() does not support Functions, thats why the [`IgxGridState`] directive will ignore the columns [`formatter`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#formatter), [`filters`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#filters), [`summaries`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#summaries), [`sortStrategy`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortstrategy), [`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellClasses), [`cellStyles`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellstyles), [`headerTemplate`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#headerTemplate) and [`bodyTemplate`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#bodyTemplate) properties.
 }
 @@if (igxName === 'IgxPivotGrid') {
-* [`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getstate) method uses JSON.stringify() method to convert the original objects to a JSON string. JSON.stringify() does not support Functions, thats why the [`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) directive will ignore the pivot dimension [`memberFunction`]({environment:angularApiUrl}/interfaces/IPivotDimension.html#memberFunction), pivot values [`member`]({environment:angularApiUrl}/interfaces/IPivotValue.html#member), [`formatter`]({environment:angularApiUrl}/interfaces/IPivotValue.html#formatter), custom [`aggregate`]({environment:angularApiUrl}/interfaces/IPivotValue.html#aggregate) functions,
+* [`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getState) method uses JSON.stringify() method to convert the original objects to a JSON string. JSON.stringify() does not support Functions, thats why the [`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) directive will ignore the pivot dimension [`memberFunction`]({environment:angularApiUrl}/interfaces/IPivotDimension.html#memberFunction), pivot values [`member`]({environment:angularApiUrl}/interfaces/IPivotValue.html#member), [`formatter`]({environment:angularApiUrl}/interfaces/IPivotValue.html#formatter), custom [`aggregate`]({environment:angularApiUrl}/interfaces/IPivotValue.html#aggregate) functions,
  [`styles`]({environment:angularApiUrl}/interfaces/IPivotValue.html#styles) and pivot configuration strategies: [`columnStrategy`]({environment:angularApiUrl}/interfaces/ipivotconfiguration.html#columnStrategy) and [`rowStrategy`]({environment:angularApiUrl}/interfaces/ipivotconfiguration.html#rowStrategy).
 }
 <div class="divider--half"></div>

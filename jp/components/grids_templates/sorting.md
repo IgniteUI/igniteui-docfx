@@ -63,7 +63,7 @@ Ignite UI for Angular @@igComponent では、列レベルでのデータ ソー�
 
 <div class="divider--half"></div>
 
-[`sortable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortable) 入力で可能です。@@igComponent のソートで、[`sortingIgnoreCase`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortingignorecase) プロパティを設定して大文字と小文字を区別するソートができます。
+[`sortable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortable) 入力で可能です。@@igComponent のソートで、[`sortingIgnoreCase`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortingIgnoreCase) プロパティを設定して大文字と小文字を区別するソートができます。
 
 ```html
 <igx-column field="ProductName" header="Product Name" [dataType]="'string'" sortable="true"></igx-column>
@@ -104,7 +104,7 @@ this.@@igObjectRef.sort([
 > [!NOTE]
 > Sorting は、[`DefaultSortingStrategy`]({environment:angularApiUrl}/classes/defaultsortingstrategy.html) アルゴリズムを使用して実行されます。[`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortStrategy) または [`ISortingExpression`]({environment:angularApiUrl}/interfaces/isortingexpression.html#strategy) は、代替アルゴリズムとして [`ISortingStrategy`]({environment:angularApiUrl}/interfaces/isortingstrategy.html) のカスタム実装を使用できます。たとえば複雑なテンプレート列や画像列にユーザー定義のソートを定義する必要がある場合に便利です。
 
-フィルター動作で、ソート状態をクリアするには [`clearSort`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#clearsort) メソッドを使用します。
+フィルター動作で、ソート状態をクリアするには [`clearSort`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#clearSort) メソッドを使用します。
 
 ```typescript
 // Removes the sorting state from the ProductName column
@@ -115,14 +115,14 @@ this.@@igObjectRef.clearSort();
 ```
 
 > [!NOTE]
-> **@@igComponent** の [`sortStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sortstrategy) は **column** の [`sortStrategy`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortstrategy) と比較して異なるタイプです。異なるスコープで機能し、異なるパラメーターを公開するためです。
+> **@@igComponent** の [`sortStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sortStrategy) は **column** の [`sortStrategy`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortStrategy) と比較して異なるタイプです。異なるスコープで機能し、異なるパラメーターを公開するためです。
 
 > [!NOTE]
 > ソート操作で @@igComponent の基になるデータ ソースは変更**しません**。
 
 ## 初期のソート状態
 
-@@igComponent でソート状態を初期設定するには、ソート式の配列を @@igComponent の [`sortingExpressions`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sortingexpressions) プロパティに渡します。
+@@igComponent でソート状態を初期設定するには、ソート式の配列を @@igComponent の [`sortingExpressions`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sortingExpressions) プロパティに渡します。
 
 ```typescript
 public ngOnInit() {
@@ -134,7 +134,7 @@ public ngOnInit() {
 ```
 
 > [!NOTE]
-> `string` 型の値が [`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype) `Date` の列で使用される場合、@@igComponent が値を `Date` オブジェクトに解析しないため i@@igComponent `sorting` が正しく動作しません。`string` オブジェクトを使用する場合、値を `Date` オブジェクトに解析するためのロジックをアプリケーション レベルで実装する必要があります。
+> `string` 型の値が [`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#dataType) `Date` の列で使用される場合、@@igComponent が値を `Date` オブジェクトに解析しないため i@@igComponent `sorting` が正しく動作しません。`string` オブジェクトを使用する場合、値を `Date` オブジェクトに解析するためのロジックをアプリケーション レベルで実装する必要があります。
 
 <div class="divider--half"></div>
 

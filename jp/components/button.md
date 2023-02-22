@@ -164,7 +164,7 @@ export class AppModule {}
 
 ## 密度の表示
 
-[`displayDensity`]({environment:angularApiUrl}/classes/igxbuttondirective.html#displaydensity) 入力を使用して `igxButton` の表示密度を選択できます。これを行うには、まず `IgxButtonGroupModule` をインポートし、[`igxButtonGroup`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html) コンポーネントによってすべての密度値を表示する必要があります。これにより、選択されるたびに Angular ボタンの `displayDensity` にバインドされた独自の **density** プロパティが更新されます。
+[`displayDensity`]({environment:angularApiUrl}/classes/igxbuttondirective.html#displayDensity) 入力を使用して `igxButton` の表示密度を選択できます。これを行うには、まず `IgxButtonGroupModule` をインポートし、[`igxButtonGroup`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html) コンポーネントによってすべての密度値を表示する必要があります。これにより、選択されるたびに Angular ボタンの `displayDensity` にバインドされた独自の **density** プロパティが更新されます。
 
 > [!NOTE] 
 > `icon` タイプのボタンは、異なる表示密度値を設定しても視覚的に変化しません。

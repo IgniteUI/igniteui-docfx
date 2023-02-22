@@ -24,7 +24,7 @@ _language: ja
 }
 
 # Angular セル選択
-選択機能により、@@igComponent ベースのマテリアル UI で豊富なデータ選択機能が有効になります。強力な API と使いやすいメソッドのおかげで、さまざまなイベントと単一の選択アクションを利用できます。@@igComponent は、セル選択の 3 つのモードをサポートしています。[`cellSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellselection) プロパティを変更することで、それらを簡単に切り替えることができます。セルの選択を無効にするか、*グリッド内の 1 つのセルのみを選択する*か、*グリッド内の複数のセルを選択する*ことができます。これはデフォルトのオプションとして提供されています。
+選択機能により、@@igComponent ベースのマテリアル UI で豊富なデータ選択機能が有効になります。強力な API と使いやすいメソッドのおかげで、さまざまなイベントと単一の選択アクションを利用できます。@@igComponent は、セル選択の 3 つのモードをサポートしています。[`cellSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellSelection) プロパティを変更することで、それらを簡単に切り替えることができます。セルの選択を無効にするか、*グリッド内の 1 つのセルのみを選択する*か、*グリッド内の複数のセルを選択する*ことができます。これはデフォルトのオプションとして提供されています。
 @@if (igxName === 'IgxHierarchicalGrid') { 階層グリッドでは、グリッド レベルでセル選択モードを指定できます。たとえば、親グリッドではマルチセル選択を有効にできますが、子グリッドではセル選択モードを単一または無効にすることができます。}これらの各オプションについて詳しく説明します。
 
 ## Angular セル選択の例
@@ -132,7 +132,7 @@ _language: ja
 
 ### 範囲の選択
 
-[`selectRange(range)`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#selectrange) - API を使用してセル範囲を選択します。`rowStart` と `rowEnd` は行インデックスを使用する必要があり、`columnStart` と `columnEnd` は列インデックスまたは列データフィールド値を使用できます。
+[`selectRange(range)`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#selectRange) - API を使用してセル範囲を選択します。`rowStart` と `rowEnd` は行インデックスを使用する必要があり、`columnStart` と `columnEnd` は列インデックスまたは列データフィールド値を使用できます。
 
 ```typescript
 const range = { rowStart: 2, rowEnd: 2, columnStart: 1, columnEnd: 1 };
@@ -149,11 +149,11 @@ this.grid1.selectRange(range);
 
 ### セル選択のクリア
 
-[`clearCellSelection()`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#clearcellselection) は、現在のセル選択をクリアします。
+[`clearCellSelection()`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#clearCellSelection) は、現在のセル選択をクリアします。
 
 ### 選択したデータの取得
 
-[`getSelectedData()`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#getselecteddata) は、選択内容に応じた形式で選択されたデータの配列を返します。
+[`getSelectedData()`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#getSelectedData) は、選択内容に応じた形式で選択されたデータの配列を返します。
 
 1. 3 つの異なる単一セルが選択されている場合:
 ```
@@ -209,8 +209,8 @@ expectedData = [
 ```
 
 > [!NOTE]
-> [`selectedCells()`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#selectedcells) は、セルがグリッド ビュー ポートに表示されていない場合でも、正しい結果を返します。[`getSelectedData()`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#getselecteddata) も、選択したセル データを返します。
-> [`getSelectedRanges(): GridSelectionRange[]`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#getselectedranges) は、キーボードとポインターの両方の操作からグリッドで現在選択されている範囲を返します。
+> [`selectedCells()`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#selectedCells) は、セルがグリッド ビュー ポートに表示されていない場合でも、正しい結果を返します。[`getSelectedData()`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#getSelectedData) も、選択したセル データを返します。
+> [`getSelectedRanges(): GridSelectionRange[]`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#getSelectedRanges) は、キーボードとポインターの両方の操作からグリッドで現在選択されている範囲を返します。
 
 
 ## 機能の統合

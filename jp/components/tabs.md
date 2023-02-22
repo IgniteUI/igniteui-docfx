@@ -103,7 +103,7 @@ export class AppModule {}
 <div class="divider"></div>
 
 ## Angular Tabs の配置
-`IgxTabs` [`tabAlignment`]({environment:angularApiUrl}/classes/igxtabscomponent.html#tabalignment) 入力プロパティは、タブの配置と配置の方法を制御します。start、center、end、justify の 4 つの異なる値を受け入れます。
+`IgxTabs` [`tabAlignment`]({environment:angularApiUrl}/classes/igxtabscomponent.html#tabAlignment) 入力プロパティは、タブの配置と配置の方法を制御します。start、center、end、justify の 4 つの異なる値を受け入れます。
 - **Start** (デフォルト): タブ ヘッダーの幅はコンテンツ (ラベル、アイコン、両方) によって異なり、すべてのタブに同じパディングがあります。最初のタブは、タブ コンテナーの左側に配置されます。
 - **Center**: タブ ヘッダーの幅はコンテンツによって異なり、タブ コンテナーの中央を占めます。スペースが足りない場合、スクロール ボタンが表示されます。
 - **End** (デフォルト): タブ ヘッダーの幅はコンテンツによって異なり、すべてのタブに同じパディングがあります。最後のタブは、タブ コンテナーの右側に配置されます。
