@@ -99,7 +99,7 @@ Ignite UI for Angular の @@igComponent のコンポーネントは、標準ド�
 ## API
 ドラッグアンドドロップ機能に加えて、列の移動機能には、プログラムで列を移動/並べ替えできる 2 つの API メソッドも用意されています。 
 
-[`moveColumn`]({environment:angularApiUrl}/classes/igxgridcomponent.html#movecolumn) - 列を別の列 (ターゲット) の前または後に移動します。最初のパラメーターは移動する列で、2 番目のパラメーターはターゲット列です。オプションの 3 番目のパラメーター `position` ([`DropPosition`]({environment:angularApiUrl}/enums/dropposition.html) 値を表す) でターゲット列の前または後に列を配置するかどうかを決定します。
+[`moveColumn`]({environment:angularApiUrl}/classes/igxgridcomponent.html#moveColumn) - 列を別の列 (ターゲット) の前または後に移動します。最初のパラメーターは移動する列で、2 番目のパラメーターはターゲット列です。オプションの 3 番目のパラメーター `position` ([`DropPosition`]({environment:angularApiUrl}/enums/dropposition.html) 値を表す) でターゲット列の前または後に列を配置するかどうかを決定します。
 
 ```typescript
 // Move the ID column after the Name column

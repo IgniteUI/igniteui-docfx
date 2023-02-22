@@ -145,7 +145,7 @@ public updateCell() {
 
 You can see and learn more for default cell editing templates in the [general editing topic](editing.md#editing-templates).
 
-If you want to provide a custom template which will be applied when a cell is in edit mode, you can make use of the [`igxCellEditor` directive]({environment:angularApiUrl}/classes/igxcelltemplatedirective.html). To do this, you need to pass an `ng-template` marked with the `igxCellEditor` directive and properly bind your custom control to the [`cell.editValue`]({environment:angularApiUrl}/classes/igxgridcell.html#editvalue):
+If you want to provide a custom template which will be applied when a cell is in edit mode, you can make use of the [`igxCellEditor` directive]({environment:angularApiUrl}/classes/igxcelltemplatedirective.html). To do this, you need to pass an `ng-template` marked with the `igxCellEditor` directive and properly bind your custom control to the [`cell.editValue`]({environment:angularApiUrl}/classes/igxgridcell.html#editValue):
 
 ```html
 <igx-column field="class" header="Class" [editable]="true">
@@ -169,7 +169,7 @@ This code is used in the sample below which implements an [`IgxSelectComponent`]
 <div class="divider--half"></div>
 
 > [!NOTE]
-> Any changes made to the cell's [`editValue`]({environment:angularApiUrl}/classes/igxgridcell.html#editvalue) in edit mode, will trigger the appropriate [editing event](editing.md#event-arguments-and-sequence) on exit and apply to the [transaction state](batch-editing.md) (if transactions are enabled).
+> Any changes made to the cell's [`editValue`]({environment:angularApiUrl}/classes/igxgridcell.html#editValue) in edit mode, will trigger the appropriate [editing event](editing.md#event-arguments-and-sequence) on exit and apply to the [transaction state](batch-editing.md) (if transactions are enabled).
 
 > [!NOTE]
 > The cell template [`igxCell`](../grid/grid.md#cell-template) controls how a column's cells are shown when outside of edit mode.
@@ -273,7 +273,7 @@ The [`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 
 ### Adding a new record
 
-The @@igComponent component exposes the [`addRow`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#addrow) method which will add the provided data to the data source itself.
+The @@igComponent component exposes the [`addRow`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#addRow) method which will add the provided data to the data source itself.
 
 @@if (igxName === 'IgxGrid') {
 ```typescript
@@ -307,7 +307,7 @@ public addRow() {
 
 ### Updating data in the @@igComponent
 
-Updating data in the @@igComponent is achieved through [`updateRow`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#updaterow) and [`updateCell`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#updatecell) methods but **only if primary key for the grid is defined**. You can also directly update a cell and/or a row value through their respective `update` methods.
+Updating data in the @@igComponent is achieved through [`updateRow`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#updateRow) and [`updateCell`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#updateCell) methods but **only if primary key for the grid is defined**. You can also directly update a cell and/or a row value through their respective `update` methods.
 
 @@if (igxName === 'IgxGrid') {
 ```typescript
@@ -360,7 +360,7 @@ row.update(newData);
 
 ### Deleting data from the @@igComponent
 
-Please keep in mind that [`deleteRow()`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#deleterow) method will remove the specified row only if primary key is defined.
+Please keep in mind that [`deleteRow()`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#deleteRow) method will remove the specified row only if primary key is defined.
 
 @@if (igxName === 'IgxGrid') {
 ```typescript

@@ -127,7 +127,7 @@ The [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepicker
 
 #### Custom action buttons
 The picker's action buttons can be modified in two ways:
-- the button's text can be changed using the [`todayButtonLabel`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#todaybuttonlabel)) and the [`cancelButtonLabel`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#cancelbuttonlabel) input properties:
+- the button's text can be changed using the [`todayButtonLabel`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#todayButtonLabel)) and the [`cancelButtonLabel`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#cancelButtonLabel) input properties:
 ```html
 <igx-date-picker [todayButtonLabel]="'今日'" [cancelButtonLabel]="'キャンセル'"></igx-date-picker>
 ```
@@ -171,11 +171,11 @@ The [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepicker
 <div class="divider--half"></div>
 
 ### Display and input format
-[`inputFormat`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#inputformat) and [`displayFormat`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#displayFormat) are properties which can be set to make the picker's editor follow a specified format. The [`inputFormat`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#inputformat) property is used when the picker is in `dropdown` mode and it governs the input's editable mask, as well as its placeholder (if none is set). Additionally, the [`inputFormat`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#inputformat) is locale based, so if none is provided, the picker will default to the one used by the browser.
+[`inputFormat`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#inputFormat) and [`displayFormat`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#displayFormat) are properties which can be set to make the picker's editor follow a specified format. The [`inputFormat`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#inputFormat) property is used when the picker is in `dropdown` mode and it governs the input's editable mask, as well as its placeholder (if none is set). Additionally, the [`inputFormat`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#inputFormat) is locale based, so if none is provided, the picker will default to the one used by the browser.
 
 A good thing to note is that the  the Angular DatePicker Component in Ignite UI will always add a leading zero on the `date` and `month` portions if they were provided in a format that does not have it, e.g. `d/M/yy` becomes `dd/MM/yy`. This applies only during editing.
 
-[`displayFormat`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#displayformat) on the other hand uses Angular's [`DatePipe`](https://angular.io/api/common/DatePipe) and is used to format the picker's input when it is not focused. If no [`displayFormat`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#displayformat) is provided, the picker will use the [`inputFormat`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#inputformat) as its [`displayFormat`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#displayformat).
+[`displayFormat`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#displayFormat) on the other hand uses Angular's [`DatePipe`](https://angular.io/api/common/DatePipe) and is used to format the picker's input when it is not focused. If no [`displayFormat`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#displayFormat) is provided, the picker will use the [`inputFormat`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#inputFormat) as its [`displayFormat`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#displayFormat).
 
 More information about these can be found in the [`IgxDateTimeEditor`](date-time-editor.md#examples) examples section.
 
@@ -198,13 +198,13 @@ The [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepicker
 </igx-date-picker>
 ```
 
-It also has as a [`spinDelta`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#spindelta) input property which can be used to increment or decrement a specific date part of the currently set date.
+It also has as a [`spinDelta`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#spinDelta) input property which can be used to increment or decrement a specific date part of the currently set date.
 ```html
 <igx-date-picker [spinDelta]="{date: 2, month: 3, year: 4}"></igx-date-picker>
 ```
 
 ### In Angular Forms
-The [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) supports all directives from the core [FormsModule](https://angular.io/api/forms/FormsModule), [NgModel](https://angular.io/api/forms/NgModel) and [ReactiveFormsModule](https://angular.io/api/forms/ReactiveFormsModule) ([`FormControl`](https://angular.io/api/forms/FormControl), [`FormGroup`](https://angular.io/api/forms/FormGroup), etc.). This also includes the [Forms Validators](https://angular.io/api/forms/Validators) functions. In addition, the component's [`minValue`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#minvalue) and [`maxValue`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#maxvalue) properties act as form validators.
+The [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) supports all directives from the core [FormsModule](https://angular.io/api/forms/FormsModule), [NgModel](https://angular.io/api/forms/NgModel) and [ReactiveFormsModule](https://angular.io/api/forms/ReactiveFormsModule) ([`FormControl`](https://angular.io/api/forms/FormControl), [`FormGroup`](https://angular.io/api/forms/FormGroup), etc.). This also includes the [Forms Validators](https://angular.io/api/forms/Validators) functions. In addition, the component's [`minValue`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#minValue) and [`maxValue`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#maxValue) properties act as form validators.
 
 You can see the [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) in a reactive form by visiting our [Reactive Forms Integration](angular-reactive-form-validation.md) topic.
 
@@ -220,7 +220,7 @@ To achieve that in template driven forms, use the `ngModel` to bind both compone
 
 <div class="divider--half"></div>
 
-In reactive forms, we can handle the [`valueChange`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#valuechange) event of each component and update the value of the other.
+In reactive forms, we can handle the [`valueChange`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#valueChange) event of each component and update the value of the other.
 
 <code-view style="height: 540px;"
            data-demos-base-url="{environment:demosBaseUrl}"
@@ -230,7 +230,7 @@ In reactive forms, we can handle the [`valueChange`]({environment:angularApiUrl}
 <div class="divider--half"></div>
 
 ### Calendar Specific settings
-The [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) uses the [`IgxCalendarComponent`](calendar.md) and you can modify some of its settings via the properties that the date picker exposes. Some of these include [`displayMonthsCount`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#displaymonthscount) which allows more than one calendar to be displayed when the picker expands, [`weekStart`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#weekstart) which determines the starting day of the week, [`showWeekNumbers`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#showweeknumbers) which shows the number for each week in the year and more.
+The [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) uses the [`IgxCalendarComponent`](calendar.md) and you can modify some of its settings via the properties that the date picker exposes. Some of these include [`displayMonthsCount`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#displayMonthsCount) which allows more than one calendar to be displayed when the picker expands, [`weekStart`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#weekStart) which determines the starting day of the week, [`showWeekNumbers`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#showWeekNumbers) which shows the number for each week in the year and more.
 
 ## Internationalization
 The localization of the [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) can be controlled through its [`locale`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#locale) input. Additionally, using the `igxCalendarHeader` and the `igxCalendarSubheader` templates, provided by the [`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html), you can specify the look of your header and subheader. More information on how to use these templates can be found in the [**IgxCalendarComponent**](calendar.md) topic.

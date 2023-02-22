@@ -73,7 +73,7 @@ import { @@igxNameModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-次に @@igComponent をバインドしたデータソースで定義し、[`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable) を true に設定してバインドします。
+次に @@igComponent をバインドしたデータソースで定義し、[`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditable) を true に設定してバインドします。
 @@if (igxName ==='IgxGrid') {
 ```html
 <igx-grid [data]="data" [primaryKey]="'ProductID'" width="100%" height="500px" [rowEditable]="true">
@@ -144,7 +144,7 @@ export class AppModule {}
 > プライマリキーは行編集操作で必須です。
 
 > [!NOTE]
-> 各列の編集を有効にする必要はありません。@@igComponent で [`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable) プロパティを使用するとプライマリ行以外 `field` プロパティを定義したすべての行が編集可能になります。特定の列の編集を無効にする場合、[`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) 列の入力を false に設定します。
+> 各列の編集を有効にする必要はありません。@@igComponent で [`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditable) プロパティを使用するとプライマリ行以外 `field` プロパティを定義したすべての行が編集可能になります。特定の列の編集を無効にする場合、[`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) 列の入力を false に設定します。
 
 @@if (igxName === 'IgxGrid') {
 ```typescript
@@ -458,15 +458,15 @@ $button-theme: button-theme(
 
 ## API リファレンス
 
-* [rowEditable]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable)
-* [onRowEditEnter]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onroweditenter)
-* [onRowEdit]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowedit)
-* [rowEditDone]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditdone)
-* [onRowEditCancel]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onroweditcancel)
-* [endEdit]({environment:angularApiUrl}/classes/@@igTypeDoc.html#endedit)
+* [rowEditable]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditable)
+* [onRowEditEnter]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onRowEditEnter)
+* [onRowEdit]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onRowEdit)
+* [rowEditDone]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditDone)
+* [onRowEditCancel]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onRowEditCancel)
+* [endEdit]({environment:angularApiUrl}/classes/@@igTypeDoc.html#endEdit)
 * [field]({environment:angularApiUrl}/classes/igxcolumncomponent.html#field)
 * [editable]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable)
-* [primaryKey]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primarykey)
+* [primaryKey]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primaryKey)
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 
 ## その他のリソース

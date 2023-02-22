@@ -83,7 +83,7 @@ public showMessage() {
 ## 例
 
 ### 非表示/自動的に隠す
-開いた後は、[`displayTime`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#displaytime) に指定した時間期間後に非表示になります。デフォルト値は 4000 ミリ秒です。この動作はデフォルトで有効ですが、[`autoHide`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#autohide) を **false** に設定して変更できます。このように、Toast は非表示になりません。Toast の [`close()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#close) メソッドを使用して、コンポーネントを閉じることができます。 
+開いた後は、[`displayTime`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#displayTime) に指定した時間期間後に非表示になります。デフォルト値は 4000 ミリ秒です。この動作はデフォルトで有効ですが、[`autoHide`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#autoHide) を **false** に設定して変更できます。このように、Toast は非表示になりません。Toast の [`close()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#close) メソッドを使用して、コンポーネントを閉じることができます。 
 
 ```html
 <!--sample.component.html-->
@@ -102,7 +102,7 @@ public showMessage() {
 </code-view>
 
 ### 表示期間
-[`displayTime`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#displaytime) でミリ秒間隔に設定し、Toast コンポーネントが表示される期間を構成します。
+[`displayTime`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#displayTime) でミリ秒間隔に設定し、Toast コンポーネントが表示される期間を構成します。
 
 ```html
 <!--sample.component.html-->

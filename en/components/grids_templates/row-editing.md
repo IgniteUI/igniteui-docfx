@@ -71,7 +71,7 @@ import { @@igxNameModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Then define a @@igComponent with bound data source and [`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable) set to true:
+Then define a @@igComponent with bound data source and [`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditable) set to true:
 @@if (igxName ==='IgxGrid') {
 ```html
 <igx-grid [data]="data" [primaryKey]="'ProductID'" width="100%" height="500px" [rowEditable]="true">
@@ -142,7 +142,7 @@ Then define a @@igComponent with bound data source and [`rowEditable`]({environm
 > Setting primary key is mandatory for row editing operations.
 
 > [!NOTE]
-> It's not needed to enable editing for individual columns. Using the [`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable) property in the @@igComponent, will mean that all rows, with defined `field` property, excluding primary one, will be editable. If you want to disable editing for specific column, then you set the [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) column's input to `false`.
+> It's not needed to enable editing for individual columns. Using the [`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditable) property in the @@igComponent, will mean that all rows, with defined `field` property, excluding primary one, will be editable. If you want to disable editing for specific column, then you set the [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) column's input to `false`.
 
 @@if (igxName === 'IgxGrid') {
 ```typescript
@@ -456,15 +456,15 @@ After styling the banner and buttons, we also define a custom style for [the cel
 
 ## API References
 
-* [rowEditable]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable)
-* [onRowEditEnter]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onroweditenter)
-* [onRowEdit]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowedit)
-* [rowEditDone]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditdone)
-* [onRowEditCancel]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onroweditcancel)
-* [endEdit]({environment:angularApiUrl}/classes/@@igTypeDoc.html#endedit)
+* [rowEditable]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditable)
+* [onRowEditEnter]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onRowEditEnter)
+* [onRowEdit]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onRowEdit)
+* [rowEditDone]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditDone)
+* [onRowEditCancel]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onRowEditCancel)
+* [endEdit]({environment:angularApiUrl}/classes/@@igTypeDoc.html#endEdit)
 * [field]({environment:angularApiUrl}/classes/igxcolumncomponent.html#field)
 * [editable]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable)
-* [primaryKey]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primarykey)
+* [primaryKey]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primaryKey)
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 
 ## Additional Resources

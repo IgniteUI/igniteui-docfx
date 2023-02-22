@@ -22,7 +22,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### First Steps
 
-The [`igxFor`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) directive is exported as an `NgModule`, thus all you need to do in your application is to import the `IgxForOfModule` inside your `AppModule`:
+The [`igxFor`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxForOf) directive is exported as an `NgModule`, thus all you need to do in your application is to import the `IgxForOfModule` inside your `AppModule`:
 
 ```typescript
 // app.module.ts
@@ -77,7 +77,7 @@ Virtualization works similarly to Paging by slicing the data into smaller chucks
 </igx-list>
 ```
 
-***Note:*** It is strongly advised that the parent container of the [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) template has the following CSS rules applied: `height` for vertical and `width` for horizontal, `overflow: hidden` and `position: relative`. This is because the smooth scrolling behavior is achieved through content offsets that could visually affect other parts of the page if they remain visible.
+***Note:*** It is strongly advised that the parent container of the [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxForOf) template has the following CSS rules applied: `height` for vertical and `width` for horizontal, `overflow: hidden` and `position: relative`. This is because the smooth scrolling behavior is achieved through content offsets that could visually affect other parts of the page if they remain visible.
 
 ### Horizontal virtualization
 
@@ -137,7 +137,7 @@ The `igxFor` directivе is used to virtualize data in both vertical and horizont
 Follow the [Grid Virtualization](grid/virtualization.md) topic for more detailed information and demos.
 
 ### igxFor bound to remote service
-The [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) directive can be bound to a remote service using the `Observable` property - `remoteData` (in the following case). The `chunkLoading` event should also be utilized to trigger the requests for data.
+The [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxForOf) directive can be bound to a remote service using the `Observable` property - `remoteData` (in the following case). The `chunkLoading` event should also be utilized to trigger the requests for data.
 
 ```html
 <div style='height: 500px; overflow: hidden; position: relative;'>
@@ -153,7 +153,7 @@ The [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxf
 </div>
 ```
 
-***Note:*** There is a requirement to set the [`totalItemCount`]({environment:angularApiUrl}/classes/igxforofdirective.html#totalitemcount) property in the instance of [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof).
+***Note:*** There is a requirement to set the [`totalItemCount`]({environment:angularApiUrl}/classes/igxforofdirective.html#totalItemCount) property in the instance of [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxForOf).
 
 ```typescript
 this.virtDirRemote.totalItemCount = data['@odata.count'];
@@ -166,7 +166,7 @@ In order to access the directive instance from the component, it should be marke
 public virtDirRemote: IgxForOfDirective<any>;
 ```
 
-After the request for loading the first chunk, the [`totalItemCount`]({environment:angularApiUrl}/classes/igxforofdirective.html#totalitemcount) can be set:
+After the request for loading the first chunk, the [`totalItemCount`]({environment:angularApiUrl}/classes/igxforofdirective.html#totalItemCount) can be set:
 
 ```typescript
 public ngAfterViewInit() {
@@ -176,7 +176,7 @@ public ngAfterViewInit() {
 }
 ```
 
-When requesting data you can take advantage of the [`IgxForOfState`]({environment:angularApiUrl}/classes/igxforofdirective.html#state) interface, which provides the [`startIndex`]({environment:angularApiUrl}/classes/igxforofdirective.html#state.startindex) and [`chunkSize`]({environment:angularApiUrl}/classes/igxforofdirective.html#state.chunksize) properties. Note that initialy the chunkSize will be 0, so you have to specify the size of the first loaded chunk (the best value is the initial [`igxForContainerSize`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforcontainersize) divided by the [`igxForItemSize`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforitemsize)).
+When requesting data you can take advantage of the [`IgxForOfState`]({environment:angularApiUrl}/classes/igxforofdirective.html#state) interface, which provides the [`startIndex`]({environment:angularApiUrl}/classes/igxforofdirective.html#state.startindex) and [`chunkSize`]({environment:angularApiUrl}/classes/igxforofdirective.html#state.chunkSize) properties. Note that initialy the chunkSize will be 0, so you have to specify the size of the first loaded chunk (the best value is the initial [`igxForContainerSize`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforcontainersize) divided by the [`igxForItemSize`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxForItemSize)).
 
 ```typescript
 public getData(data?: IForOfState, cb?: (any) => void): any {
