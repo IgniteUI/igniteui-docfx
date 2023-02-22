@@ -184,7 +184,7 @@ Then our theme definition will go in the general scope, which we will use for th
 
   @include palette($custom-palette-dark);
 
-  /* Grid Toolbar override for light color scheme */
+  /* Grid Toolbar override for dark color scheme */
   igx-grid-toolbar {
     --background-color: #{$primary-dark};
     --title-text-color: #{text-contrast($primary-dark)};
