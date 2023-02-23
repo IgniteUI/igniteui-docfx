@@ -152,10 +152,6 @@ $custom-palette-light: palette(
   $secondary: $secondary-light,
   $surface: #fff,
   $gray: #222,
-  $info: color($light-material-palette, 'info'),
-  $success: color($light-material-palette, 'success'),
-  $error: color($light-material-palette, 'error'),
-  $warn: color($light-material-palette, 'warn')
 );
 ```
 
