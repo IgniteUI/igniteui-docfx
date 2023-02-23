@@ -141,10 +141,6 @@ $custom-palette-dark: palette(
   $secondary: $secondary-dark,
   $surface: #000,
   $gray: #ccc,
-  $info: color($dark-material-palette, 'info'),
-  $success: color($dark-material-palette, 'success'),
-  $error: color($dark-material-palette, 'error'),
-  $warn: color($dark-material-palette, 'warn')
 );
 
 $custom-palette-light: palette(
