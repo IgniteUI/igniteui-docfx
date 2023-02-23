@@ -140,14 +140,14 @@ $custom-palette-dark: palette(
   $primary: $primary-dark,
   $secondary: $secondary-dark,
   $surface: #000,
-  $gray: #ccc,
+  $gray: #ccc
 );
 
 $custom-palette-light: palette(
   $primary: $primary-light,
   $secondary: $secondary-light,
   $surface: #fff,
-  $gray: #222,
+  $gray: #222
 );
 ```
 
@@ -374,11 +374,7 @@ $custom-palette: palette(
   $primary: $primary,
   $secondary: #e0d94c,
   $surface: #000,
-  $gray: #fff,
-  $info: color($dark-material-palette, 'info'),
-  $success: color($dark-material-palette, 'success'),
-  $error: color($dark-material-palette, 'error'),
-  $warn: color($dark-material-palette, 'warn')
+  $gray: #fff
 );
 
 $include: (
