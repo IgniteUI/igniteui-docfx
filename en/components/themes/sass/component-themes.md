@@ -65,7 +65,7 @@ $avatar-royalblue-theme: avatar-theme(
 @include css-vars($avatar-royalblue-theme);
 ```
 
-In the above code, the de facto global theme is now the `$another-avatar-theme` as it overwrites any previously included `css-vars` mixins.
+In the above code, the de facto global theme is now the `$avatar-royalblue-theme` as it overwrites any previously included `css-vars` mixins.
 
 This brings us to our next point.
 
