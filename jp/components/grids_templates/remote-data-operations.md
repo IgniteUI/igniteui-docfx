@@ -32,8 +32,8 @@ Ignite UI for Angular @@igComponent は、リモート仮想化、リモート �
 ## Angular @@igComponent リモート データ操作の例
 
 
-<code-view style="height:500px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:500px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-remote-filtering" alt="Angular @@igComponent リモート データ操作の例">
 </code-view>
 
@@ -42,8 +42,8 @@ Ignite UI for Angular @@igComponent は、リモート仮想化、リモート �
 ## Angular @@igComponent リモート データ操作の例
 
 
-<code-view style="height:550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:550px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-remote-filtering" alt="Angular @@igComponent リモート データ操作の例">
 </code-view>
 
@@ -104,8 +104,8 @@ public processData(reset) {
 ### リモート仮想化のデモ
 
 
-<code-view style="height:550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:550px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-sample-4" alt="Angular @@igComponent リモート データ操作の例">
 </code-view>
 
@@ -163,8 +163,8 @@ public handlePreLoad() {
 
 ### 無限スクロールのデモ
 
-<code-view style="height:510px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:510px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-sample-5" >
 </code-view>
 
@@ -325,8 +325,8 @@ public columnValuesStrategy = (column: ColumnType,
 ### 一意の列値ストラテジのデモ
 
 
-<code-view style="height:800px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:800px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-excel-style-filtering-load-on-demand" >
 </code-view>
 
@@ -350,8 +350,8 @@ public columnValuesStrategy = (column: ColumnType,
 ### 一意の列値ストラテジのデモ
 
 
-<code-view style="height:800px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:800px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-excel-style-filtering-load-on-demand" >
 </code-view>
 
@@ -390,8 +390,8 @@ this.remoteValuesService.getColumnData(
 ### 一意の列値ストラテジのデモ
 
 
-<code-view style="height:800px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:800px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-style-filtering-load-on-demand" >
 </code-view>
 
@@ -522,7 +522,7 @@ public maxPerPage = Number.MAX_SAFE_INTEGER;
 <igx-grid #grid1 [data]="data | async" [isLoading]="isLoading" [pagingMode]="mode">
     <igx-column field="ID"></igx-column>
     ...
-    <igx-paginator [(page)]="page" [(perPage)]="perPage"  [totalRecords]="totalCount" 
+    <igx-paginator [(page)]="page" [(perPage)]="perPage"  [totalRecords]="totalCount"
         (pagingDone)="paginate($event.current)">
     </igx-paginator>
 </igx-grid>
@@ -533,7 +533,7 @@ public maxPerPage = Number.MAX_SAFE_INTEGER;
 <igx-tree-grid #treeGrid [data]="data | async" childDataKey="Content" [pagingMode]="mode">
     <igx-column field="Name"></igx-column>
     ...
-    <igx-paginator [(page)]="page" [(perPage)]="perPage" [totalRecords]="totalCount" 
+    <igx-paginator [(page)]="page" [(perPage)]="perPage" [totalRecords]="totalCount"
         (pagingDone)="paginate($event.current)">
     </igx-paginator>
 </igx-tree-grid>
@@ -544,7 +544,7 @@ public maxPerPage = Number.MAX_SAFE_INTEGER;
 <igx-hierarchical-grid #hierarchicalGrid [primaryKey]="'CustomerID'" [pagingMode]="mode">
     <igx-column field="CustomerID"></igx-column>
     ...
-    <igx-paginator [(page)]="page" [(perPage)]="perPage" [totalRecords]="totalCount" 
+    <igx-paginator [(page)]="page" [(perPage)]="perPage" [totalRecords]="totalCount"
         (pagingDone)="paginate($event.current)" (perPageChange)="getFirstPage()">
     </igx-paginator>
 </igx-hierarchical-grid>
@@ -590,16 +590,16 @@ public paginate(page: number) {
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:620px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:620px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/remote-paging-default-template" >
 </code-view>
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:560px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:560px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-remote-paging-default-template" >
 </code-view>
 
@@ -607,8 +607,8 @@ public paginate(page: number) {
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:580px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:580px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/remote-paging-default-template" >
 </code-view>
 
@@ -623,7 +623,7 @@ public paginate(page: number) {
 ```html
 <igx-paginator #paginator
     [totalRecords]="totalCount"
-    [(page)]="page" 
+    [(page)]="page"
     [(perPage)]="perPage"
     [selectOptions]="selectOptions"
     [displayDensity]="grid1.displayDensity"
@@ -712,7 +712,7 @@ public ngAfterViewInit() {
 ```html
 <igx-paginator #paginator
     [totalRecords]="totalCount"
-    [(perPage)]="perPage" 
+    [(perPage)]="perPage"
     [selectOptions]="selectOptions"
     [displayDensity]="treeGrid.displayDensity"
     (pageChange)="paginate($event)">
@@ -736,7 +736,7 @@ public paginate(page: number) {
 }
 
 >[!NOTE]
-> リモート ページングを適切に構成するには、`GridPagingMode.Remote` を設定する必要があります。 
+> リモート ページングを適切に構成するには、`GridPagingMode.Remote` を設定する必要があります。
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -747,7 +747,7 @@ public mode = GridPagingMode.Remote;
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid #hierarchicalGrid [data]="data | async" [primaryKey]="'CustomerID'" 
+<igx-hierarchical-grid #hierarchicalGrid [data]="data | async" [primaryKey]="'CustomerID'"
     [height]="'550px'" [width]="'100%'" [pagingMode]="mode"></igx-hierarchical-grid>
 ...
 public mode = GridPagingMode.Remote;
@@ -755,7 +755,7 @@ public mode = GridPagingMode.Remote;
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```html
-<igx-tree-grid #treeGrid [data]="data | async" childDataKey="Content" 
+<igx-tree-grid #treeGrid [data]="data | async" childDataKey="Content"
         expansionDepth="0" width="100%" height="540px" [pagingMode]="mode"></igx-tree-grid>
 ...
 public mode = GridPagingMode.Remote;
@@ -776,16 +776,16 @@ public mode = GridPagingMode.Remote;
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:620px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:620px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-remote-paging-sample" >
 </code-view>
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:560px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:560px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-remote-paging" >
 </code-view>
 
@@ -793,8 +793,8 @@ public mode = GridPagingMode.Remote;
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:580px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:580px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-remote-paging" >
 </code-view>
 
@@ -807,8 +807,8 @@ public mode = GridPagingMode.Remote;
 独自のページング動作を定義するために、ページング テンプレートを使用してカスタム ロジックを追加できます。上記を実証するために、リモート ページングの例を拡張する方法を説明します。
 
 
-<code-view style="height:620px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:620px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-custom-remote-paging-sample" >
 </code-view>
 
@@ -909,8 +909,8 @@ public paginate(page: number) {
 
 #### 一括編集のリモート ページングのデモ
 
-<code-view style="height:620px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:620px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/remote-paging-batch-editing" >
 </code-view>
 
@@ -923,6 +923,8 @@ public paginate(page: number) {
     * 行の展開/縮小
     * 行の編集
     * 行のピン固定
+- When the grid has a `primaryKey` set in remote data scenarios and rowSelection feature is enabled, you should keep in mind that `rowSelectionChanging` event argument will not be able to retrieve the row data for the rows that are currently out of the current data view. In this case will be emitted only a partial object of row data that consist of the primaryKey and its value.
+
 
 ## API リファレンス
 <div class="divider--half"></div>
