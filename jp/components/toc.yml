@@ -42,6 +42,9 @@
     - name: IgxGrid を使用して CRUD 操作の構築
       href: general/how-to/how-to-perform-crud.md
       new: false
+    - name: テーマのカスタマイズと最適化
+      href: general/how-to/how-to-customize-theme.md
+      new: false
 - name: Angular Schematics & Ignite UI CLI
   href: general/cli-overview.md
   sortable: false

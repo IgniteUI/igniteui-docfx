@@ -131,7 +131,7 @@ We can also use the `igxButton` directive to turn elements like `span` and `div`
 
 ## Display Density
 
-We can allow the user to choose the display density of the `igxButton` by using its [`displayDensity`]({environment:angularApiUrl}/classes/igxbuttondirective.html#displaydensity) input. То do this, first we have to import the `IgxButtonGroupModule`, and then use the [`igxButtonGroup`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html) component to display all density values. This way whenever one gets selected, we will update our own **density** property that is bound to the `displayDensity` of the Angular buttonAngular button.
+We can allow the user to choose the display density of the `igxButton` by using its [`displayDensity`]({environment:angularApiUrl}/classes/igxbuttondirective.html#displayDensity) input. То do this, first we have to import the `IgxButtonGroupModule`, and then use the [`igxButtonGroup`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html) component to display all density values. This way whenever one gets selected, we will update our own **density** property that is bound to the `displayDensity` of the Angular buttonAngular button.
 
 > [!NOTE]
 > Note that the `icon` type button does not introduce visual changes for different display density values.

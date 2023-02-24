@@ -86,7 +86,7 @@ public slides = [
 
 デフォルトでは、Angular のカルーセルの **[`loop`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#loop)** 入力プロパティは `true` に設定されています (ループは、Next 動作でナビゲートするときに最初のスライドが最後のスライドの後に来るか、Previous 動作を使用して最後のスライドが最初のスライドの後に来るときに起こります)。ループ動作を無効にするには、`loop` 入力の値を `false` に設定します。
 
-各スライド インデックスを追跡するために、カルーセルには、デフォルトでカルーセルの `bottom` に配置されるインジケーターがあります。この動作を変更するには、[indicatorsOrientation]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#indicatorsorientation) プロパティを使用して、`top` に割り当てる必要があります。空のテンプレートを追加すると、インジケーターを無効にできます。
+各スライド インデックスを追跡するために、カルーセルには、デフォルトでカルーセルの `bottom` に配置されるインジケーターがあります。この動作を変更するには、[indicatorsOrientation]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#indicatorsOrientation) プロパティを使用して、`top` に割り当てる必要があります。空のテンプレートを追加すると、インジケーターを無効にできます。
 
 カルーセル テンプレートは以下のようになります。
 
@@ -204,7 +204,7 @@ Angular カスタム カルーセル インジケーターを追加するには�
 
 デフォルトでカルーセルは `slide` アニメーションを使用するように設定されていますが、代替アニメーションとして `fade` もサポートしています。
 
-アニメーションは [animationType]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#animationtype)入力を介して構成されます。
+アニメーションは [animationType]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#animationType)入力を介して構成されます。
 
 ```html
 <igx-carousel animationType="fade">
@@ -237,7 +237,7 @@ Angular カスタム カルーセル インジケーターを追加するには�
 ### パン ジェスチャ
 <div class="divider--half"></div>
 
-デフォルトでカルーセルはあらゆるタッチ対応デバイスに使用できます。これはオプションであり、[gesturesSupport]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#gesturessupport) プロパティを `false` に設定して変更できます。
+デフォルトでカルーセルはあらゆるタッチ対応デバイスに使用できます。これはオプションであり、[gesturesSupport]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#gesturesSupport) プロパティを `false` に設定して変更できます。
 
 Carousel [アニメーション](carousel.md#angular-carousel-のアニメーション)はタッチ デバイスで完全にサポートされているため、プラットホームに合わせてプログレッシブ Web アプリケーション ([PWA](https://developer.mozilla.org/ja/docs/Web/Progressive_web_apps)) を構築するための完璧なツールです。
 
@@ -304,7 +304,7 @@ Carousel [アニメーション](carousel.md#angular-carousel-のアニメーシ
 </div>
 ...
 ```
-カルーセルの [`onSlideChanged`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#onslidechanged) およびリストの [itemClicked]({environment:angularApiUrl}/classes/igxlistcomponent.html#itemclicked) イベントを処理し、コンポーネントを同期する方法: 
+カルーセルの [`onSlideChanged`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#onSlideChanged) およびリストの [itemClicked]({environment:angularApiUrl}/classes/igxlistcomponent.html#itemClicked) イベントを処理し、コンポーネントを同期する方法: 
 
 ```typescript
   public ngOnInit() {

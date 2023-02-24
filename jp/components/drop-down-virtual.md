@@ -79,7 +79,7 @@ export class AppModule {}
 > [!NOTE]
 > 各項目に対して `[value]` 入力に渡される一意の値を持たない場合、予想外の結果 (誤った選択) となる場合があります。 
 > [!NOTE]
-> ドロップダウンが仮想化項目を使用する場合、[`dropdown.selectedItem`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#selecteditem) の種類は `{ value: any, index: number }` になります。ここで、`value` はデータ項目への参照です。`[value]` input の内に渡され、`index` はデータセット内の項目のインデックスです。
+> ドロップダウンが仮想化項目を使用する場合、[`dropdown.selectedItem`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#selectedItem) の種類は `{ value: any, index: number }` になります。ここで、`value` はデータ項目への参照です。`[value]` input の内に渡され、`index` はデータセット内の項目のインデックスです。
 
 
 ### コンポーネント定義
@@ -259,7 +259,7 @@ export class DropDownRemoteComponent implements OnInit, OnDestroy {
  - ループされているロップダウン項目は、次の css を持つラッピング要素 (`<div>` など) で渡す必要があります。`overflow: hidden` と `height` が `containerSize` に等しい (`px` で) 。
  - リストが仮想化されている場合、`<igx-drop-down-item-group>` を項目のグループ化に使用することはできません。代わりに `isHeader` プロパティを使用します。
  - `items` アクセサーは、現在仮想化ビューにあるヘッダー以外のロップダウン項目のリストのみを返します。
- - [`dropdown.selectedItem`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#selecteditem) は、タイプ  `{ value: any, index: number }` です。
+ - [`dropdown.selectedItem`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#selectedItem) は、タイプ  `{ value: any, index: number }` です。
  - [`selecting`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#selecting) によって発行されたオブジェクトは、`const emittedEvent: { newSelection: { value: any, index: number }, oldSelection: { value: any, index: number }, cancel: boolean, } ` に変更されます。
  - `dropdown.setSelectedItem` は、**データセット内の項目のインデックス**を使用して呼び出す必要があります。
  - ドロップダウン項目の `[selected]` 入力を設定しても、ドロップダウン選択内の項目はマークされません。

@@ -182,7 +182,7 @@ When the simple combobox is closed and focused:
 When the simple combobox is opened and an item in the list is focused:
 - `ArrowDown` will move to the next list item. If the active item is the last one in the list and custom values are enabled, the focus will be moved to the Add item button.
 
-- `ArrowUp` will move to the previous list item. If the active item is the first one in the list, the list will  be closed.
+- `ArrowUp` will move to the previous list item. If the active item is the first one in the list, the focus will be moved back to the search input while also selecting all of the text in the input. 
 
 - `End` will move to the last list item.
 
@@ -198,7 +198,7 @@ When the simple combobox is opened and allow custom values are enabled, and add 
 
 - `Enter` will add a new item with `valueKey` and `displayKey` equal to the text in the search input and will select the new item.
 
-- `ArrowUp` focus will be moved back to the last list item or if the list is empty, will close the list.
+- `ArrowUp` will move the focus back to the last list item or if the list is empty, will move the focus to the input.
 
 ## Cascading Scenario
 

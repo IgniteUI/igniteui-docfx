@@ -280,7 +280,7 @@ public selectDensity(event) {
  - **rowHeight を指定した場合**、[`displayDensity`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#displayDensity) オプションは行の高さに影響**しません**。
  - [`displayDensity`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#displayDensity) は、上記の理由により**残りすべてのグリッド要素に影響します**。
 
-サンプル機能を拡張して [`rowHeight`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowheight) プロパティを @@igComponent に追加します。
+サンプル機能を拡張して [`rowHeight`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowHeight) プロパティを @@igComponent に追加します。
 
  ```html
  <@@igSelector #@@igObjectRef [data]="data" [displayDensity]="density" [rowHeight]="'80px'" width="100%" 

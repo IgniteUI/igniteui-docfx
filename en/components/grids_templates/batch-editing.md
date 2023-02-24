@@ -80,7 +80,7 @@ Then, all you need to do is enable `batchEditing` from your @@igComponent:
 
 This will ensure a proper instance of `Transaction` service is provided for the @@igSelector. The proper `TransactionService` is provided through a `TransactionFactory`. You can learn more about this internal implementation in the [transactions topic](../transaction-classes.md#transaction-factory).
 
-After batch editing is enabled, define a `@@igxName` with bound data source and [`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable) set to true and bind:
+After batch editing is enabled, define a `@@igxName` with bound data source and [`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditable) set to true and bind:
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -219,14 +219,14 @@ export class HierarchicalGridBatchEditingSampleComponent {
 }
 
 > [!NOTE] 
-> The transactions API won't handle end of edit and you'd need to do it by yourself. Otherwise, `@@igComponent` would stay in edit mode. One way to do that is by calling [`endEdit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#endedit) in the respective method.
+> The transactions API won't handle end of edit and you'd need to do it by yourself. Otherwise, `@@igComponent` would stay in edit mode. One way to do that is by calling [`endEdit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#endEdit) in the respective method.
 
 @@if (igxName === 'IgxTreeGrid') {
-Deleting a parent node in `@@igComponent` has some peculiarities. If you are using a hierarchical data, the children will be deleted when deleting their parent. If you are using a flat data, you may set the desired behavior using the [`cascadeOnDelete`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#cascadeondelete) property of `@@igComponent`. This property indicates whether the child records should be deleted when their parent gets deleted (by default, it is set to `true`).
+Deleting a parent node in `@@igComponent` has some peculiarities. If you are using a hierarchical data, the children will be deleted when deleting their parent. If you are using a flat data, you may set the desired behavior using the [`cascadeOnDelete`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#cascadeOnDelete) property of `@@igComponent`. This property indicates whether the child records should be deleted when their parent gets deleted (by default, it is set to `true`).
 }
 
 > [!NOTE]
-> Disabling [`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable) property will modify `@@igComponent` to create transactions on cell change and will not expose row editing overlay in the UI.
+> Disabling [`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditable) property will modify `@@igComponent` to create transactions on cell change and will not expose row editing overlay in the UI.
 
 @@if (igxName === 'IgxGrid') {
 
@@ -248,7 +248,7 @@ Deleting a parent node in `@@igComponent` has some peculiarities. If you are usi
 }
 @@if (igxName === 'IgxTreeGrid') {
 * [HierarchicalTransactionService]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) 
-* [rowEditable]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable)
+* [rowEditable]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditable)
 * [IgxTreeGridComponent]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 }

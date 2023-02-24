@@ -131,7 +131,7 @@ export class RemoteLoDService {
 
 #### テンプレートの地祇
 
-最初に階層グリッド テンプレートを必要な階層レベルで定義します。customers のルート グリッド [`primaryKey`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#primarykey) は最初のレベルの orders の `CustomerID` です。`OrderID` と各 order 詳細の `ProductID` です。各データベース テーブルとキーで初期テンプレートを定義します。
+最初に階層グリッド テンプレートを必要な階層レベルで定義します。customers のルート グリッド [`primaryKey`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#primaryKey) は最初のレベルの orders の `CustomerID` です。`OrderID` と各 order 詳細の `ProductID` です。各データベース テーブルとキーで初期テンプレートを定義します。
 
 ```html
 <igx-hierarchical-grid #hGrid [primaryKey]="'CustomerID'" [autoGenerate]="false" [height]="'600px'" [width]="'100%'">
@@ -163,7 +163,7 @@ export class RemoteLoDService {
 
 サービスをビルドしているためルートレベルの場合に情報のみが必要なため、すべてのアイランドに 1 メソッドを使用できます。このすべての情報には、イベント引数から直接またはイベントをトリガーする行アイランドからアクセスできます。 
 
-`gridCreated` を使用するメソッドに名前を付けます。イベント [`gridCreated`]({environment:angularApiUrl}/classes/igxrowislandcomponent.html#gridCreated) は [`parentID`]({environment:angularApiUrl}/interfaces/igridcreatedeventargs.html#parentid) プロパティ、[`owner`]({environment:angularApiUrl}/interfaces/igridcreatedeventargs.html#owner) として行アイランドへの参照、新しい子 [`grid`]({environment:angularApiUrl}/interfaces/igridcreatedeventargs.html#grid) プロパティを提供するため、最初の引数として渡されます。
+`gridCreated` を使用するメソッドに名前を付けます。イベント [`gridCreated`]({environment:angularApiUrl}/classes/igxrowislandcomponent.html#gridCreated) は [`parentID`]({environment:angularApiUrl}/interfaces/igridcreatedeventargs.html#parentID) プロパティ、[`owner`]({environment:angularApiUrl}/interfaces/igridcreatedeventargs.html#owner) として行アイランドへの参照、新しい子 [`grid`]({environment:angularApiUrl}/interfaces/igridcreatedeventargs.html#grid) プロパティを提供するため、最初の引数として渡されます。
 親行の `primaryKey` についての情報はありませんが、バインドした行アイランドに基づいて 2 つ目の引数として簡単に渡すことができます。 
 
 変更を加えたテンプレート ファイル `hierarchical-grid-lod.component.html` は以下のようになります。
@@ -245,7 +245,7 @@ public gridCreated(event: IGridCreatedEventArgs, _parentKey: string) {
 
 #### 読み込み通知の設定
 
-[`IgxHierarchicalGrid`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html) は、[`isLoading`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#isloading) プロパティを `true` に設定して読み込みインジケーターを表示できます。データが読み込まれるまでルートグリッドにあらかじめ設定しますが、新しい子グリッドを作成する際にも必要です。テンプレートで常に `true` に設定できますが、`false` に設定してサービスが空配列を返した場合は非表示にしてデータのないグリッドを表示できます。 
+[`IgxHierarchicalGrid`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html) は、[`isLoading`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#isLoading) プロパティを `true` に設定して読み込みインジケーターを表示できます。データが読み込まれるまでルートグリッドにあらかじめ設定しますが、新しい子グリッドを作成する際にも必要です。テンプレートで常に `true` に設定できますが、`false` に設定してサービスが空配列を返した場合は非表示にしてデータのないグリッドを表示できます。 
 
 以下は `hierarchical-grid-lod.component.ts` の最終バージョンです。
 

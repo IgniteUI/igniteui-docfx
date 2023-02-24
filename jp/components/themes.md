@@ -49,7 +49,7 @@ $secondary-color: #f96a88; // Watermelon pink
 
 $my-color-palette: palette(
   $primary: $company-color,
-  $secondary: $secondary-color
+  $secondary: $secondary-color,
 );
 ```
 
@@ -91,7 +91,7 @@ $my-warning-color: color($my-palette, "warn");
 
 ```scss
 $my-primary-800: color($my-palette, "primary", 600);
-$my-primary-800-text:contrast-color($my-palette, "primary", 600);
+$my-primary-800-text: contrast-color($my-palette, "primary", 600);
 // sample usage
 
 .my-awesome-article {
@@ -121,7 +121,7 @@ $secondary-color: #f96a88; // Watermelon pink
 
 $my-color-palette: palette(
   $primary: $company-color,
-  $secondary: $secondary-color
+  $secondary: $secondary-color,
 );
 
 // 重要: 必ず最初に core を含めてください。
@@ -153,6 +153,10 @@ $my-color-palette: palette(
 // 重要: 必ず最初に core を含めてください。
 @include core();
 //theme の前にタイポグラフィを含めます
-@include typography($config: (font-family: "Comic Sans MS"));
+@include typography(
+  $config: (
+    font-family: "Comic Sans MS",
+  )
+);
 @include theme($default-palette);
 ```
