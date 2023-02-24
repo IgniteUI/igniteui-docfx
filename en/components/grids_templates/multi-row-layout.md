@@ -20,10 +20,10 @@ Multi-row Layout extends the rendering capabilities of the `igxGridComponent`. T
 The declaration of Multi-row Layout is achieved through [`igx-column-layout`]({environment:angularApiUrl}/classes/igxcolumnlayoutcomponent.html) component. Each `igx-column-layout` component should be considered as a block, containing one or multiple `igx-column` components. Some of the grid features work on block level (those are listed in the "Feature Integration" section below). For example the virtualization will use the block to determine the virtual chunks, so for better performance split the columns into more `igx-column-layout` blocks if the layout allows it. There should be no columns outside of those blocks and no usage of `IgxColumnGroupComponent` when configuring a multi-row layout. Multi-row Layout is implemented on top of the [grid layout](https://www.w3.org/TR/css-grid-1/) specification and should conform to its requirements.
 
 `IgxColumnComponent` exposes four `@Input` properties to determine the location and span of each cell:
-* [`colStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#colstart) - column index from which the field is starting. This property is **mandatory**.
-* [`rowStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#rowstart) - row index from which the field is starting. This property is **mandatory**.
-* [`colEnd`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#colend) - column index where the current field should end. The amount of columns between colStart and colEnd will determine the amount of spanning columns to that field. This property is **optional**. If not set defaults to `colStart + 1`.
-* [`rowEnd`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#rowend) - row index where the current field should end. The amount of rows between rowStart and rowEnd will determine the amount of spanning rows to that field. This property is **optional**. If not set defaults to `rowStart + 1`.
+* [`colStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#colStart) - column index from which the field is starting. This property is **mandatory**.
+* [`rowStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#rowStart) - row index from which the field is starting. This property is **mandatory**.
+* [`colEnd`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#colEnd) - column index where the current field should end. The amount of columns between colStart and colEnd will determine the amount of spanning columns to that field. This property is **optional**. If not set defaults to `colStart + 1`.
+* [`rowEnd`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#rowEnd) - row index where the current field should end. The amount of rows between rowStart and rowEnd will determine the amount of spanning rows to that field. This property is **optional**. If not set defaults to `rowStart + 1`.
 
 
 ```html
@@ -54,7 +54,7 @@ The result of the above configuration can be seen on the screenshot below:
 
 
 > [!Note]
-> [`rowStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#rowstart) and [`colStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#colstart) properties must be set for each `igx-column` into `igx-column-layout`. The `igxColumnLayout` component is not verifying if the layout is correct and not throwing errors or warnings about that. The developers must make sure that the declaration of their layout is correct and complete, otherwise they may end up in broken layout with misalignments, overlaps and browser inconsistencies.
+> [`rowStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#rowStart) and [`colStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#colStart) properties must be set for each `igx-column` into `igx-column-layout`. The `igxColumnLayout` component is not verifying if the layout is correct and not throwing errors or warnings about that. The developers must make sure that the declaration of their layout is correct and complete, otherwise they may end up in broken layout with misalignments, overlaps and browser inconsistencies.
 
 ## Feature Integration
 Due to the completly different rendering approach of Multi-row Layout, some of the column features will work only on `igx-column-layout` component. Such features are Column Pinning and Column Hiding. Othes like - Sorting and Grouping will work in the same way - on `igx-column` component.
@@ -95,7 +95,7 @@ IgxGridComponent with Multi-Row Layouts provides build-in keyboard navigation.
 The grid allows customizing the default navigation behavior when a certain key is pressed. Actions like `going to the next cell` or `cell below` could be handled easily with the powerful keyboard navigation API:
 
 - [`gridKeydown`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#gridKeydown) is exposed. The event will emit [`IGridKeydownEventArgs`]({environment:angularApiUrl}/interfaces/igridkeydowneventargs.html). This event is available only through the keyboard key combinations mentioned above, for all other key actions you can use `keydown` event `(keydown)="onKeydown($event)"`
-- [`navigateTo`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#navigateto) - this method allows you to navigate to a position based on provided `rowindex` and `visibleColumnIndex`
+- [`navigateTo`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#navigateTo) - this method allows you to navigate to a position based on provided `rowindex` and `visibleColumnIndex`
 
 The demo below adds additional navigation down/up via the <kbd>Enter</kbd> and <kbd>Shift</kbd> + <kbd>Enter</kbd> keys, similar to the behavior observed in Excel.
 
@@ -110,7 +110,7 @@ The demo below adds additional navigation down/up via the <kbd>Enter</kbd> and <
 
 ### Layout Configurator
 
-Sometimes when configuring a column layout it might be a challenge to calculate and set the proper [`colStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#colstart)  and [`colEnd`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#colend)  or [`rowStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#rowstart)  and [`rowEnd`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#rowend). Especially when there are a lot of columns in a single layout. That is why we have created a small configurator, so you can easily do that and have a similar preview of how it would look inside the igxGrid when applied. You can do the following interactions with it:
+Sometimes when configuring a column layout it might be a challenge to calculate and set the proper [`colStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#colStart)  and [`colEnd`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#colEnd)  or [`rowStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#rowStart)  and [`rowEnd`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#rowEnd). Especially when there are a lot of columns in a single layout. That is why we have created a small configurator, so you can easily do that and have a similar preview of how it would look inside the igxGrid when applied. You can do the following interactions with it:
 
 * Set number of rows for the whole configuration. All layouts must have the same amount of rows.
 * Add/Remove column layouts by clicking the `Add Layout` chip or reordering them by dragging a layout chip left/right.

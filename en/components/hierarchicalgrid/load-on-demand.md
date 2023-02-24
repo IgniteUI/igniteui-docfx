@@ -131,7 +131,7 @@ Next we will setup our hierarchical grid and connect it to our remote service pr
 
 #### Template defining
 
-First we will define our hierarchical grid template with the levels of hierarchy that we expect to have. We know that our root grid [`primaryKey`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#primarykey) for the customers is their `CustomerID`, for their orders on the first level -  `OrderID` and respectively for order details - `ProductID`. Knowing each database table and their keys allows us to define our initial template:
+First we will define our hierarchical grid template with the levels of hierarchy that we expect to have. We know that our root grid [`primaryKey`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#primaryKey) for the customers is their `CustomerID`, for their orders on the first level -  `OrderID` and respectively for order details - `ProductID`. Knowing each database table and their keys allows us to define our initial template:
 
 ```html
 <igx-hierarchical-grid #hGrid [primaryKey]="'CustomerID'" [autoGenerate]="false" [height]="'600px'" [width]="'100%'">
@@ -163,7 +163,7 @@ When a row is expanded for the first time, a new child `IgxHierarchicalGrid` is 
 
 We can use one method for all row islands since we built our service so that it needs only information if it is the root level, the key of the row island, the primary key of the parent row, and its unique identifier. All this information can be accessed either directly from the event arguments, or from the row island responsible for triggering the event. 
 
-Let's name the method that we will use `gridCreated`. Since the event [`gridCreated`]({environment:angularApiUrl}/classes/igxrowislandcomponent.html#gridCreated) provides the [`parentID`]({environment:angularApiUrl}/interfaces/igridcreatedeventargs.html#parentid) property, a reference to the row island as [`owner`]({environment:angularApiUrl}/interfaces/igridcreatedeventargs.html#owner) and the new child [`grid`]({environment:angularApiUrl}/interfaces/igridcreatedeventargs.html#grid) property, it will be passed as the first argument. We are only missing information about the parent row's `primaryKey`, but we can easily pass that as a second argument, depending on which row island we bind. 
+Let's name the method that we will use `gridCreated`. Since the event [`gridCreated`]({environment:angularApiUrl}/classes/igxrowislandcomponent.html#gridCreated) provides the [`parentID`]({environment:angularApiUrl}/interfaces/igridcreatedeventargs.html#parentID) property, a reference to the row island as [`owner`]({environment:angularApiUrl}/interfaces/igridcreatedeventargs.html#owner) and the new child [`grid`]({environment:angularApiUrl}/interfaces/igridcreatedeventargs.html#grid) property, it will be passed as the first argument. We are only missing information about the parent row's `primaryKey`, but we can easily pass that as a second argument, depending on which row island we bind. 
 
 The template file `hierarchical-grid-lod.component.html`, with these changes added, would look like this:
 

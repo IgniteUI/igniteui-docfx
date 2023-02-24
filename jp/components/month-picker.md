@@ -86,7 +86,7 @@ public date: Date = new Date();
 ```
 
 ### 書式設定
-[`formatOptions`]({environment:angularApiUrl}/classes/igxmonthpickercomponent.html#formatoptions) 入力を使用してマンスピッカーの表示形式を変更します。
+[`formatOptions`]({environment:angularApiUrl}/classes/igxmonthpickercomponent.html#formatOptions) 入力を使用してマンスピッカーの表示形式を変更します。
 
 ```html
 <!-- month-picker-sample.component.html -->

@@ -59,14 +59,14 @@ In order to achieve this, the [`IgxTreeGridComponent`]({environment:angularApiUr
 Regardless of which option is used for building the tree grid's hierarchy (child collection or primary and foreign keys), the tree grid's rows are constructed of two types of cells:
 
 - [`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html) - Ordinary cell that contains a value.
-- [`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html) - Tree cell that contains a value, an expand/collapse indicator and an indentation div element, which is based on the level of the cell's row. The level of a row component can be accessed through the [`level`]({environment:angularApiUrl}/interfaces/itreegridrecord.html#level) property of its inner [`treeRow`]({environment:angularApiUrl}/classes/igxtreegridrow.html#treerow).
+- [`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html) - Tree cell that contains a value, an expand/collapse indicator and an indentation div element, which is based on the level of the cell's row. The level of a row component can be accessed through the [`level`]({environment:angularApiUrl}/interfaces/itreegridrecord.html#level) property of its inner [`treeRow`]({environment:angularApiUrl}/classes/igxtreegridrow.html#treeRow).
 
 > [!NOTE]
 > Each row can have only one tree cell, but it can have multiple (or none) ordinary cells.
 
 ### Initial Expansion Depth
 
-Initially the tree grid will expand all node levels and show them. This behavior can be configured using the [`expansionDepth`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#expansiondepth) property. By default its value is **Infinity** which means all node levels will be expanded. You may control the initial expansion depth by setting this property to a numeric value. For example **0** will show only root level nodes, **1** will show root level nodes and their child nodes and so on.
+Initially the tree grid will expand all node levels and show them. This behavior can be configured using the [`expansionDepth`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#expansionDepth) property. By default its value is **Infinity** which means all node levels will be expanded. You may control the initial expansion depth by setting this property to a numeric value. For example **0** will show only root level nodes, **1** will show root level nodes and their child nodes and so on.
 
 ### Child Collection
 When we are using the **child collection** option, every data object contains a child collection, that is populated with items of the same type as the parent data object. This way every record in our tree grid will have a direct reference to any of its children. In this case the [`data`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#data) property of our tree grid that contains the original data source will be a hierarchically defined collection.
@@ -127,7 +127,7 @@ In addition, we will disable the automatic column generation and define them man
 </igx-tree-grid>
 ```
 
-We will now enable the row selection and paging features of the tree grid by using the [`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection) and the [`paging`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#paging) properties.
+We will now enable the row selection and paging features of the tree grid by using the [`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowSelection) and the [`paging`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#paging) properties.
 We will also enable the summaries feature on the first column and the filtering, sorting, editing, moving and resizing features for each of our columns.
 
 ```html
@@ -206,7 +206,7 @@ export class MyComponent implements OnInit {
 
 In the sample data above, all records have an ID, a ParentID and some additional properties like Name, JobTitle and Age. As mentioned previously, the ID of the records must be unique. The ParentID contains the ID of the parent node. If a row has a ParentID that does not match any row in the tree grid, then that means this row is a root row.
 
-The parent-child relation is configured using the tree grid's [`primaryKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#primarykey) and [`foreignKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#foreignkey) properties.
+The parent-child relation is configured using the tree grid's [`primaryKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#primaryKey) and [`foreignKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#foreignKey) properties.
 
 Here is the template of the component which demonstrates how to configure the tree grid to display the data defined in the above flat collection:
 
@@ -221,7 +221,7 @@ Here is the template of the component which demonstrates how to configure the tr
 </igx-tree-grid>
 ```
 
-In addition we will enable the row selection feature of the tree grid by using the [`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection) property and also the filtering, sorting, editing, moving and resizing features for each of our columns.
+In addition we will enable the row selection feature of the tree grid by using the [`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowSelection) property and also the filtering, sorting, editing, moving and resizing features for each of our columns.
 
 ```html
 <!--treeGridSample.component.html-->
@@ -246,8 +246,8 @@ And here is the final result:
 The indentation of the **tree cells** persists across other tree grid features like filtering, sorting and paging.
 
 - When **sorting** is applied on a column, the data rows get sorted by levels. This means that the root level rows will be sorted independently from their respective children. Their respective children collections will each be sorted independently as well and so on.
-- The first column (the one that has a [`visibleIndex`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#visibleindex) of 0) is always the tree column.
-- The column that ends up with a [`visibleIndex`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#visibleindex) of 0 after operations like column pinning, column hiding and column moving becomes the tree column.
+- The first column (the one that has a [`visibleIndex`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#visibleIndex) of 0) is always the tree column.
+- The column that ends up with a [`visibleIndex`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#visibleIndex) of 0 after operations like column pinning, column hiding and column moving becomes the tree column.
 - Exported Excel worksheets reflect the hierarchy by grouping the records as they are grouped in the tree grid itself. All records expanded states would also be persisted and reflected.
 - When exporting to CSV, levels and expanded states are ignored and all data is exported as flat.
 

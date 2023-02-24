@@ -207,7 +207,7 @@ In this mode a parent's selection state entirely depends on the selection state 
 
 ### Select rows programmatically
 
-The code snippet below can be used to select one or multiple rows simultaneously (via [`primaryKey`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primarykey)); Additionally, the second parameter of this method is a boolean property through which you may choose whether the previous row selection will be cleared or not. The previous selection is preserved by default.
+The code snippet below can be used to select one or multiple rows simultaneously (via [`primaryKey`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primaryKey)); Additionally, the second parameter of this method is a boolean property through which you may choose whether the previous row selection will be cleared or not. The previous selection is preserved by default.
 
 @@if (igxName === 'IgxGrid' || igxName === 'IgxTreeGrid') {
 ```html

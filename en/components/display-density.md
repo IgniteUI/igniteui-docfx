@@ -38,7 +38,7 @@ Depending on the required scope, you can apply the created provider for the enti
 
 **Setting control display density explicitly**
 
-To set the display density explicitly for a control, use the [`displayDensity`]({environment:angularApiUrl}/classes/displaydensitybase.html#displaydensity) input.
+To set the display density explicitly for a control, use the [`displayDensity`]({environment:angularApiUrl}/classes/displaydensitybase.html#displayDensity) input.
 
 ```html
 <igx-input-group [displayDensity]="'cosy'"> ... </igx-input-group>
@@ -47,7 +47,7 @@ To set the display density explicitly for a control, use the [`displayDensity`](
 ## API References
 <div class="divider"></div>
 
-* [DisplayDensity]({environment:angularApiUrl}/classes/displaydensitybase.html#displaydensity)
+* [DisplayDensity]({environment:angularApiUrl}/classes/displaydensitybase.html#displayDensity)
 * [DisplayDensityBase]({environment:angularApiUrl}/classes/displaydensitybase.html)
 * [IDisplayDensityOptions]({environment:angularApiUrl}/interfaces/idisplaydensityoptions.html)
 * [DisplayDensityToken]({environment:angularApiUrl}/index.html#displaydensitytoken)
