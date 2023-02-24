@@ -1,13 +1,13 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid Clipboard Interactions - Ignite UI for Angular 
+title: Angular Grid Clipboard Interactions - Ignite UI for Angular 
 _description: The Angular Data Grid Clipboard functionality provides fast, easy and customizable way to copy, paste and export data to Excel or other programs. Try it now!
 _keywords: copy data, igniteui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular TreeGrid Clipboard Interactions - Ignite UI for Angular 
+title: Angular TreeGrid Clipboard Interactions - Ignite UI for Angular 
 _description: The Angular TreeGrid Clipboard functionality provides fast, easy and customizable way to copy, paste and export data to Excel or other programs. Try it now!
 _keywords: copy data, igniteui for angular, infragistics
 _canonicalLink: grid/clipboard-interactions
@@ -63,7 +63,7 @@ Copy behavior is working with the default interaction defined by the browser and
 @@if (igxName === 'IgxGrid') { You can use a custom paste handler in order to configure `paste` behavior, have a look at our [Paste from Excel topic](paste-excel.md). }
 
 ## API Usage
-We expose [`clipboardOptions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clipboardoptions) @Input property, which handles the following options:
+We expose [`clipboardOptions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clipboardOptions) @Input property, which handles the following options:
 - [`enabled`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clipboardoptions.enabled) Enables/disables copying of selected cells.
 - [`copyHeaders`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clipboardoptions.copyHeaders) Include the associated headers when copying.
 - [`copyFormatters`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clipboardoptions.copyFormatters) Apply any existing column formatters to the copied data.
@@ -72,7 +72,7 @@ We expose [`clipboardOptions`]({environment:angularApiUrl}/classes/igxgridcompon
 > [!NOTE] 
 > Excel can automatically detect text that is separated by tabs (tab-delimited `/t`) and properly paste the data into separate columns. When the paste format doesn't work, and everything you paste appears in a single column, then Excel's delimiter is set to another character, or your text is using spaces instead of tabs.
 
-- [`gridCopy`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#gridCopy) Emitted when a copy operation is executed. Fired only if copy behavior is enabled through the [`clipboardOptions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clipboardoptions)
+- [`gridCopy`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#gridCopy) Emitted when a copy operation is executed. Fired only if copy behavior is enabled through the [`clipboardOptions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clipboardOptions)
 
 ## Additional Resources
 <div class="divider--half"></div>
