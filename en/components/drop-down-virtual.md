@@ -258,7 +258,7 @@ Using the drop-down with a virtualized list of items enforces some limitations. 
  - The drop-down items that are being looped need to be passed in a wrapping element (e.g. `<div>`) which has the following css: `overflow: hidden` and `height` equal to `containerSize` in `px`
  - `<igx-drop-down-item-group>` cannot be used for grouping items when the list is virtualized. Use the `isHeader` propery instead
  - The `items` accessor will return only the list of non-header drop-down items that are currently in the virtualized view.
- - [`dropdown.selectedItem`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#selecteditem) is of type `{ value: any, index: number }`
+ - [`dropdown.selectedItem`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#selectedItem) is of type `{ value: any, index: number }`
  - The object emitted by [`selection`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#selection) changes to `const emittedEvent: { newSelection: { value: any, index: number }, oldSelection: { value: any, index: number }, cancel: boolean, } `
  - `dropdown.setSelectedItem` should be called with the **item's index in the data set**
  - setting the drop-down item's `[selected]` input will **not** mark the item in the drop-down selection

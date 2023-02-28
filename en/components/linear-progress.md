@@ -84,11 +84,11 @@ The following example specifies the animation duration set to 5 seconds.
 
 ### Text Properties
 
-You can align the text, using the [`textAlign`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#textalign) property. Permitted values are `left`, `center`, and `right`. 
+You can align the text, using the [`textAlign`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#textAlign) property. Permitted values are `left`, `center`, and `right`. 
 
-To hide the text, use the [`textVisibility`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#textvisibility) property and set its value to `false`.
+To hide the text, use the [`textVisibility`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#textVisibility) property and set its value to `false`.
 
-Set the [`textTop`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#texttop) property to `true` to move the text above the bar. 
+Set the [`textTop`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#textTop) property to `true` to move the text above the bar. 
 
 The [`text`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#text) property can be used to customize the value of the text itself.
 

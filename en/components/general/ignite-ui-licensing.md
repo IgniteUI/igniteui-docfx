@@ -68,6 +68,12 @@ This will allow you to seamlessly use a mix of packages from the public npm regi
 ```cmd
 npm adduser --registry=https://packages.infragistics.com/npm/js-licensed/ --scope=@infragistics --always-auth
 ```
+>[!NOTE]
+> If you are using `npm` version 9.0.0 or higher you need to set `--auth-type=legacy`
+
+```cmd
+npm adduser --registry=https://packages.infragistics.com/npm/js-licensed/ --scope=@infragistics --always-auth --auth-type=legacy
+```
 
 > [!IMPORTANT]
 > If your account is not licensed (you are still using a Trial account) the private package feed won't be accessible to you e.g. it will return 404 or 403 error message. **Only licensed accounts can access the packages.infragistics private feed.**

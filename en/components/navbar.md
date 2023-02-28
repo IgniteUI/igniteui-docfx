@@ -59,7 +59,7 @@ In order to add a menu button, we will show the action button using the `actionB
 ```
 
 > [!NOTE]
-> The [`actionButtonIcon`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#actionbuttonicon) uses the Material fontset by design.
+> The [`actionButtonIcon`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#actionButtonIcon) uses the Material fontset by design.
 
 ### Add Icon Buttons
 
@@ -155,7 +155,7 @@ Finally, this is how our navbar should look like with its custom action button i
 
 ### Add Navigation Icon
 
-If we want to create a navbar with an icon navigating back, we should follow a couple of steps. First, we can use the `actionButtonIcon` property to choose a suitable icon from the Material fontset. Then, we can make a simple check if there are any previously visited pages to go back to, and pass the result to the  [`isActionButtonVisible`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#isactionbuttonvisible) property. The last step is to create a method for navigating back and hook it to the [`action`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#action) property.
+If we want to create a navbar with an icon navigating back, we should follow a couple of steps. First, we can use the `actionButtonIcon` property to choose a suitable icon from the Material fontset. Then, we can make a simple check if there are any previously visited pages to go back to, and pass the result to the  [`isActionButtonVisible`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#isActionButtonVisible) property. The last step is to create a method for navigating back and hook it to the [`action`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#action) property.
 
 ```html
 <!--navbar.component.html-->
@@ -193,7 +193,7 @@ If the sample is configured properly, you should see the following in your brows
 </code-view>
 
 > [!NOTE]
-> If [`igx-navbar-action`]({environment:angularApiUrl}/classes/igxnavbaractiondirective.html) or [`igxNavbarAction`]({environment:angularApiUrl}/classes/igxnavbaractiondirective.html) is provided, the default [`actionButtonIcon`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#actionbuttonicon) will not be used.
+> If [`igx-navbar-action`]({environment:angularApiUrl}/classes/igxnavbaractiondirective.html) or [`igxNavbarAction`]({environment:angularApiUrl}/classes/igxnavbaractiondirective.html) is provided, the default [`actionButtonIcon`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#actionButtonIcon) will not be used.
 
 <div class="divider--half"></div>
 

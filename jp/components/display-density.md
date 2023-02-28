@@ -39,7 +39,7 @@ providers: [{ provide: DisplayDensityToken, useValue: { displayDensity: DisplayD
 
 **コントロールの表示密度を明示的に設定**
 
-表示密度を明示的に設定する場合、[`displayDensity`]({environment:angularApiUrl}/classes/displaydensitybase.html#displaydensity) を使用します。
+表示密度を明示的に設定する場合、[`displayDensity`]({environment:angularApiUrl}/classes/displaydensitybase.html#displayDensity) を使用します。
 
 ```html
 <igx-input-group [displayDensity]="'cosy'"> ... </igx-input-group>
@@ -48,7 +48,7 @@ providers: [{ provide: DisplayDensityToken, useValue: { displayDensity: DisplayD
 ## API リファレンス
 <div class="divider"></div>
 
-* [DisplayDensity]({environment:angularApiUrl}/classes/displaydensitybase.html#displaydensity)
+* [DisplayDensity]({environment:angularApiUrl}/classes/displaydensitybase.html#displayDensity)
 * [DisplayDensityBase]({environment:angularApiUrl}/classes/displaydensitybase.html)
 * [IDisplayDensityOptions]({environment:angularApiUrl}/interfaces/idisplaydensityoptions.html)
 * [DisplayDensityToken]({environment:angularApiUrl}/index.html#displaydensitytoken)

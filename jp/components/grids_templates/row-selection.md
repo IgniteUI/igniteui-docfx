@@ -36,6 +36,17 @@ Ignite UI for Angular の行選択では、行内の他のすべての列に先�
 以下のサンプルは、@@igComponent の**行選択**の 3 つのタイプを示します。以下のボタンを使用して、使用可能な各選択モードを有効にします。Snackbar メッセージ ボックスで各ボタンの操作について簡単に説明します。切り替えボタンを使用して、行セレクターのチェックボックスを非表示または表示します。
 }
 @@if (igxName === 'IgxGrid') {
+To get newly selected elements you can use **event.newSelection**:
+
+```ts
+public handleRowSelection(event: IRowSelectionEventArgs) {
+    this.selectedRowsCount = event.newSelection.length;
+    this.selectedRowIndex = event.newSelection[0];
+    this.snackbarRowCount.open();
+    this.snackbar.close();
+    this.logAnEvent(`=> 'rowSelectionChanging' with value: ` + JSON.stringify(event.newSelection));
+}
+```
 
 <code-view style="height:700px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -170,6 +181,16 @@ public handleRowSelection(event) {
 このモードでは、親の選択状態はその子の選択状態に完全に依存します。親に選択された子と選択解除された子がある場合、そのチェックボックスは不確定な状態になります。
 }
 
+```ts
+<!-- selectionExample.component.ts -->
+
+ public handleRowSelection(event: IRowSelectionEventArgs) {
+    // use event.newSelection to retrieve primary key/row data of latest selected row
+    this.selectedRowsCount = event.newSelection.length;
+    this.selectedRowIndex = event.newSelection[0];
+ }
+```
+
 **注**
 @@if (igxName !== 'IgxTreeGrid') {
 * 行選択およびセル選択を正しく実行するには、@@igComponent にリモート仮想化がある場合、[`primaryKey`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primarykey) を設定します。
@@ -186,7 +207,7 @@ public handleRowSelection(event) {
 
 ### コードで行を選択
 
-以下は、単一または複数の行を同時に選択できるコード スニペットです ([`primaryKey`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primarykey) を介して)。さらに、このメソッドの 2 番目のパラメーターは boolean プロパティです。それを使用して、前の行の選択をクリアするかどうかを選択できます。以前の選択はデフォルトで保存されます。
+以下は、単一または複数の行を同時に選択できるコード スニペットです ([`primaryKey`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primaryKey) を介して)。さらに、このメソッドの 2 番目のパラメーターは boolean プロパティです。それを使用して、前の行の選択をクリアするかどうかを選択できます。以前の選択はデフォルトで保存されます。
 
 @@if (igxName === 'IgxGrid' || igxName === 'IgxTreeGrid') {
 ```html

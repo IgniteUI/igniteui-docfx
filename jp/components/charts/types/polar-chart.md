@@ -167,7 +167,7 @@ Ignite UI for Angular 極座標チャートは、デカルト (x、y) 座標系�
 -   [散布図](scatter-chart.md)
 -   [スプライン チャート](spline-chart.md)
 
-## API メンバー
+## API リファレンス
 
 以下は、上記のセクションで説明された API メンバーのリストです。
 

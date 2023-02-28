@@ -209,11 +209,9 @@ In this angular grid example, you can see how users can customize their _data vi
 <code-view style="height:435px"
            explicit-editor="stackblitz"
            data-demos-base-url="{environment:crmDemoBaseUrl}"
-           iframe-src="{environment:crmDemoBaseUrl}/grid-crm" 
+           iframe-src="{environment:crmDemoBaseUrl}/" 
            alt="Angular data grid example">
 </code-view>
-
-<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 
 <div class="divider--half"></div>
 

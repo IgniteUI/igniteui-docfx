@@ -176,7 +176,7 @@ public chipRemoved(event: IBaseChipEventArgs) {
 </igx-chip>
 ```
 
-チップのサイズは、[`displayDensity`]({environment:angularApiUrl}/classes/igxchipcomponent.html#displaydensity) 入力を使用してカスタマイズできます。デフォルトの設定は `comfortable` です。チップ内のすべてが相対位置を保持する際に `cosy` または `compact` にも設定できます。
+チップのサイズは、[`displayDensity`]({environment:angularApiUrl}/classes/igxchipcomponent.html#displayDensity) 入力を使用してカスタマイズできます。デフォルトの設定は `comfortable` です。チップ内のすべてが相対位置を保持する際に `cosy` または `compact` にも設定できます。
 
 <img class="responsive-img"  src="../images/chip/density.jpg" />
 
@@ -193,7 +193,7 @@ public chipRemoved(event: IBaseChipEventArgs) {
 </igx-chip>
 ```
 
-`select icon` をカスタマイズするには、[`selectIcon`]({environment:angularApiUrl}/classes/igxchipcomponent.html#selecticon) 入力を使用します。`TemplateRef` 型の値を受け取り、同じ機能を保持する際にデフォルト アイコンをオーバーライドします。
+`select icon` をカスタマイズするには、[`selectIcon`]({environment:angularApiUrl}/classes/igxchipcomponent.html#selectIcon) 入力を使用します。`TemplateRef` 型の値を受け取り、同じ機能を保持する際にデフォルト アイコンをオーバーライドします。
 
 <img class="responsive-img"  src="../images/chip/selecting_custom.gif" />
 
@@ -208,7 +208,7 @@ public chipRemoved(event: IBaseChipEventArgs) {
 </ng-template>
 ```
 
-`remove icon` をカスタマイズするには、[`removeIcon`]({environment:angularApiUrl}/classes/igxchipcomponent.html#removeicon) 入力を使用します。`TemplateRef` 型の値を取得してデフォルトの削除アイコンの代わりに描画します。
+`remove icon` をカスタマイズするには、[`removeIcon`]({environment:angularApiUrl}/classes/igxchipcomponent.html#removeIcon) 入力を使用します。`TemplateRef` 型の値を取得してデフォルトの削除アイコンの代わりに描画します。
 
 <img class="responsive-img"  src="../images/chip/remove_icons.jpg" />
 

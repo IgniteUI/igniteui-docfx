@@ -217,11 +217,11 @@ Date Range Picker コンポーネントはさまざまな表示および入力�
 > 注: `IgxDateRangePicker` が IME 入力をサポートするようになりました。合成が終了すると、コントロールはワイド文字の数字を ASCII 文字に変換します。
 
 ### フォームと検証
-Date Range Picker コンポーネントは、コア FormsModule [NgModel](https://angular.io/api/forms/NgModel) と [ReactiveFormsModule](https://angular.io/api/forms/ReactiveFormsModule) ([`FormControl`](https://angular.io/api/forms/FormControl)、[`FormGroup`](https://angular.io/api/forms/FormGroup) など) のすべてのフォーム ディレクティブをサポートします。これには、[フォーム バリデーター](https://angular.io/api/forms/Validators)機能も含まれます。さらに、コンポーネントの[最小値と最大値](#最小値と最大値)もフォーム バリデーターとして機能します。
+Date Range Picker コンポーネントは、コア FormsModule [NgModel](https://angular.io/api/forms/NgModel) と [ReactiveFormsModule](https://angular.io/api/forms/ReactiveFormsModule) ([`FormControl`](https://angular.io/api/forms/FormControl)、[`FormGroup`](https://angular.io/api/forms/FormGroup) など) のすべてのフォーム ディレクティブをサポートします。これには、[フォーム バリデータ](https://angular.io/api/forms/Validators)機能も含まれます。さらに、コンポーネントの[最小値と最大値](#最小値と最大値)もフォーム バリデータとして機能します。
 
-[NgModel](https://angular.io/api/forms/NgModel) とバリデーターは、[`IgxDateRangePickerComponent`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html) で、または個々の開始日と終了日で設定できます。
+[NgModel](https://angular.io/api/forms/NgModel) とバリデータは、[`IgxDateRangePickerComponent`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html) で、または個々の開始日と終了日で設定できます。
 
-次のスニペットと例は、テンプレート駆動型フォームで `required` バリデーターを使用する方法を示しています。
+次のスニペットと例は、テンプレート駆動型フォームで `required` バリデータを使用する方法を示しています。
 
 最初に、コンポーネント レベルで実行される単一の読み取り専用範囲コンポーネントのモデルを設定する必要があります。
 
@@ -270,7 +270,7 @@ Date Range Picker コンポーネントは、コア FormsModule [NgModel](https:
 <div class="divider--half"></div>
 
 ### 最小値と最大値
-[`minValue`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html#minvalue) および [`maxValue`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html#maxvalue) プロパティを指定して、これらの値で定義された範囲外のカレンダー日付を無効にすることにより、ユーザー入力を制限できます。
+[`minValue`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html#minValue) および [`maxValue`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html#maxValue) プロパティを指定して、これらの値で定義された範囲外のカレンダー日付を無効にすることにより、ユーザー入力を制限できます。
 
 ```typescript
 public minDate = new Date(2020, 1, 15);
@@ -294,7 +294,7 @@ public maxDate = new Date(2020, 11, 1);
 </igx-date-range-picker>
 ```
 
-`IgxDateRangePickerComponent` はバリデーターです。つまり、`minValue` と `maxValue` を内部で使用して有効性を制御します。`ngModel` で両方にアクセスすることもできます。
+`IgxDateRangePickerComponent` はバリデータです。つまり、`minValue` と `maxValue` を内部で使用して有効性を制御します。`ngModel` で両方にアクセスすることもできます。
 ```html
 <igx-date-range-picker #dateRangePicker="ngModel" [(ngModel)]="range" required
     [minValue]="minDate" [maxValue]="maxDate">
@@ -412,7 +412,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 
 
 ## アプリケーション デモ
-以下のデモは、[`IgxDateRangePickerComponent`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html) を使用する航空券のフォームを定義します。日付が選択されていない場合、検証エラーを表示するために [`IgxHint`]({environment:angularApiUrl}/classes/igxhintdirective.html)  が使用されます。日付の選択は、[`IgxDateRangePickerComponent`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html) の [`minValue`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html#minvalue) および [`maxValue`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html#maxvalue) プロパティによって制限されます。
+以下のデモは、[`IgxDateRangePickerComponent`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html) を使用する航空券のフォームを定義します。日付が選択されていない場合、検証エラーを表示するために [`IgxHint`]({environment:angularApiUrl}/classes/igxhintdirective.html)  が使用されます。日付の選択は、[`IgxDateRangePickerComponent`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html) の [`minValue`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html#minValue) および [`maxValue`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html#maxValue) プロパティによって制限されます。
 
 
 <code-view style="height:600px"

@@ -53,8 +53,8 @@ Ignite UI for Angular の [@@igxName]({environment:angularApiUrl}/classes/@@igTy
 
 データのサイズは以下によって決定されます。
 
-*   垂直 (行) 仮想化の行の高さ。[`rowHeight`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowheight) オプションで決定されますがデフォルトは 50(px) です。
-*   水平 (列) 仮想化の列幅 (ピクセル単位)。各列コンポーネントで明示的に幅を設定、または明示的に幅が設定されないすべての列に適用する @@igComponent の [`columnWidth`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnwidth) オプションを設定できます。
+*   垂直 (行) 仮想化の行の高さ。[`rowHeight`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowHeight) オプションで決定されますがデフォルトは 50(px) です。
+*   水平 (列) 仮想化の列幅 (ピクセル単位)。各列コンポーネントで明示的に幅を設定、または明示的に幅が設定されないすべての列に適用する @@igComponent の [`columnWidth`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnWidth) オプションを設定できます。
 
 ディメンションを設定せずにグリッドでデフォルト動作を適用する場合、ほとんどの場合は望ましいレイアウトになります。列幅は列カウント、幅が設定された列、および @@igComponent コンテナーの計算幅に基づいて決定されます。グリッドは、割り当てる幅が 136px 未満になる以外はすべての列を利用可能なスペースに合わせようとします。その場合、割り当てられない幅を持つ列は 136px の最小幅に設定され、水平方向スクロールバーが表示されます。グリッドは水平方向に仮想化されます。
 

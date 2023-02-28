@@ -61,11 +61,11 @@ The sample below demonstrates the three types of @@igComponent's **cell selectio
 
 ## Angular Grid Selection Options
 
-IgniteUI for Angular @@igComponent component provides three different selection modes - [Row selection](row-selection.md), [Cell selection](cell-selection.md) and [Column selection](column-selection.md). By default only **Multi-cell selection** mode is enabled in the @@igComponent. In order to change/enable selection mode you can use [`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection), [`cellSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellSelection) or [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable) properties.
+IgniteUI for Angular @@igComponent component provides three different selection modes - [Row selection](row-selection.md), [Cell selection](cell-selection.md) and [Column selection](column-selection.md). By default only **Multi-cell selection** mode is enabled in the @@igComponent. In order to change/enable selection mode you can use [`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowSelection), [`cellSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellSelection) or [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable) properties.
 
 ### Angular Row Selection
 
-Property [`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection) enables you to specify the following options:
+Property [`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowSelection) enables you to specify the following options:
 - none - Row selection would be disabled for the @@igComponent
 - single - Selection of only one row within the @@igComponent would be available
 - multiple - Multi-row selection would be available by using the `Row selectors`, with a key combination like <kbd>ctrl</kbd> + <kbd>click</kbd>, or by pressing the <kbd>space key</kbd> once a cell is focused @@if (igxName === 'IgxTreeGrid') {
@@ -184,9 +184,9 @@ The template we are going to use to combine the grid with the context menu:
     </div>
 </div>
 ```
+
  Select multiple cells and press the `right mouse` button. The context menu will appear and after selecting `Copy cells data` the selected data will appear in the right empty box.
  The result is:
-
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 

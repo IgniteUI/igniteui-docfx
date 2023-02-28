@@ -35,7 +35,7 @@ In order to select a group, you can also click on its vertical line, which is co
 ## Getting Started with Ignite UI for Angular Query Builder Component
 
 You can start using the component by setting the [`fields`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html#fields) property to an array describing the field name and its data type. It will automatically assign the corresponding operands based on the data type.
-The Query Builder has the [`expressionTree`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html#expressiontree) input property. You could use it to set an initial state of the control and access the user-specified filtering logic.
+The Query Builder has the [`expressionTree`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html#expressionTree) input property. You could use it to set an initial state of the control and access the user-specified filtering logic.
 
 ```typescript
 ngAfterViewInit(): void {

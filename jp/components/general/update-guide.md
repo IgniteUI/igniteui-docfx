@@ -110,7 +110,7 @@ ng update @angular/cli
     .my-class {
         background: color($color: 'grays', $variant: 300);
         color: contrast-color($color: 'grays', $variant: 300);
-        border-color: hsl(var(--ig-grays-500));
+        border-color: hsl(var(--igx-grays-500));
     }
     ```
 
@@ -131,7 +131,7 @@ ng update @angular/cli
     ```
 
 
-- **重大な変更** - **パレットの CSS 変数の生成**は **palette-vars mixin** の代わりに **palette mixin** によって実行されます。
+- **重大な変更** - **パレットの CSS 変数の生成**は **palette-vars ミックスイン** の代わりに **palette ミックスイン** によって実行されます。
 
 - **重大な変更** - **palette 関数**は**サーフェイス カラーを渡す必要があります**が、`gray` カラーの値を渡すのはオプションです。グレー基本カラーの値が提供されない場合、サーフェイス カラーの明度に基づいて自動的に生成されます。明るいサーフェイス カラーは black (#000) グレー基本カラーになり、暗いサーフェス カラーは white (#fff) 基本グレー色。パレットを生成する場合、**info、success、error、および warn** カラーのデフォルト値がないことに注意してください。使用する場合は明示的に設定する必要があります。値を自分で考えたくない場合は、既存のパレットからこれらのカラーを取得することもできます。
     
@@ -150,7 +150,7 @@ ng update @angular/cli
     @include palette($my-palette);
     ```
 
-- **重大な変更** - **パレット パラメーターはすべてのコンポーネント テーマから削除されました。****palette mixin** を使用して、カスタム コンポーネントのコンポーネント テーマのカスタム パレットをスコープできます。IE11 のサポートを終了したため、すべてのコンポーネントテーマはカラー、高さ、タイポグラフィなどのグローバル CSS 変数を参照するため、カスタム パレットをコンポーネント テーマに渡す必要はなくなりました。
+- **重大な変更** - **パレット パラメーターはすべてのコンポーネント テーマから削除されました。****palette ミックスイン** を使用して、カスタム コンポーネントのコンポーネント テーマのカスタム パレットをスコープできます。IE11 のサポートを終了したため、すべてのコンポーネントテーマはカラー、高さ、タイポグラフィなどのグローバル CSS 変数を参照するため、カスタム パレットをコンポーネント テーマに渡す必要はなくなりました。
 
     カスタム パレットでカスタムテーマを生成する場合:
 
@@ -180,7 +180,7 @@ ng update @angular/cli
     ```
 
 ### タイポグラフィ
-- **重大な変更** - **type-style** mixin はパラメーターとして type-scale を受け付けず、カテゴリ名のみを受け付けます。
+- **重大な変更** - **type-style** ミックスインはパラメーターとして type-scale を受け付けず、カテゴリ名のみを受け付けます。
 
     14.2.x 以前:
 
@@ -200,7 +200,7 @@ ng update @angular/cli
 
 ### エレベーション
 - **重大な変更** - **elevation 関数**には名前付き引数が 1 つのみあります- **$name (エレベーション名)**。
-- **重大な変更**- **elevations 機能**が削除されました。`configure-elevations` mixin を使用してエレベーションの色を設定できます。
+- **重大な変更**- **elevations 機能**が削除されました。`configure-elevations` ミックスインを使用してエレベーションの色を設定できます。
 
     14.2.x 以前:
     
@@ -296,7 +296,7 @@ ng update @angular/cli
         constructor(@Host() @Optional() @Inject(IGX_GRID_BASE) grid: IgxGridBaseDirective) { }
         ```
 - `RowDirective`、`RowType`
-    - **重大な変更** - `rowData` および  `rowID` プロパティは、`RowDirective` および `RowType` インターフェイスを実装するクラスから削除されます。代わりに `data` と `key` を使用してください。自動移行には `ng update` を使用します。自動移行では、テンプレート コンテキスト オブジェクトが入力されていないテンプレートからから一部の例を取得できません。
+    - **重大な変更** - `rowData` および `rowID` プロパティは、`RowDirective` および `RowType` インターフェイスを実装するクラスから削除されます。代わりに `data` と `key` を使用してください。自動移行には `ng update` を使用します。自動移行では、テンプレート コンテキスト オブジェクトが入力されていないテンプレートからから一部の例を取得できません。
         ```html
         <ng-template igxCell let-cell="cell">
             <span>{{ cell.rowID }}</span>
@@ -775,8 +775,8 @@ $__legacy-libsass: true;
     * `id`、`itemStyle`、`panels`、`viewTabs`、`contentTabs`、`tabs` プロパティが削除されました。現在、[`items`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html#items) プロパティはタブのコレクションを返します。
     * 次のプロパティが変更されました。
         * タブ項目の `isSelected` プロパティの名前が [` selected`]({environment:angularApiUrl}/classes/igxbottomnavitemcomponent.html#selected) に変更されました。
-        * `selectedTab` プロパティの名前が [`selectedItem`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html#selecteditem) に変更されました。
-    * `onTabSelected` および `onTabDeselected` イベントが削除されました。[`selectedIndexChanging`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html#selectedindexchanging)、[`selectedIndexChange`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html#selectedindexchange)、[`selectedItemChange`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html#selecteditemchange) の 3 つの新しいイベントが導入されました。これらのイベントにより、タブの選択をより柔軟に制御できます。残念ながら、これらのイベント変更に対して適切な移行を行うことはとても複雑であるため、エラーはプロジェクト レベルで処理する必要があります。
+        * `selectedTab` プロパティの名前が [`selectedItem`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html#selectedItem) に変更されました。
+    * `onTabSelected` および `onTabDeselected` イベントが削除されました。[`selectedIndexChanging`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html#selectedIndexChanging)、[`selectedIndexChange`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html#selectedIndexChange)、[`selectedItemChange`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html#selecteditemchange) の 3 つの新しいイベントが導入されました。これらのイベントにより、タブの選択をより柔軟に制御できます。残念ながら、これらのイベント変更に対して適切な移行を行うことはとても複雑であるため、エラーはプロジェクト レベルで処理する必要があります。
 
 ### IgxTabs コンポーネント
 [**IgxTabsComponent**]({environment:angularApiUrl}/classes/igxtabscomponent.html) は、タブ ヘッダーとコンテンツを定義するためのより柔軟で説明的な方法を提供するために、完全にリファクタリングされました。既存の **igx-tabs** 定義を新しい定義に変更するには、**ng update** を介して更新することをお勧めします。
@@ -807,9 +807,9 @@ $__legacy-libsass: true;
     * `id`、`groups`、`viewTabs`、`contentTabs`、および `tabs` プロパティが削除されました。現在、[`items`]({environment:angularApiUrl}/classes/igxtabscomponent.html#items) プロパティはタブのコレクションを返します。
     * 次のプロパティが変更されました。
         * タブ項目の `isSelected` プロパティの名前が [` selected`]({environment:angularApiUrl}/classes/igxtabitemcomponent.html#selected) に変更されました。
-        * `selectedTabItem` プロパティは [`selectedItem`]({environment:angularApiUrl}/classes/igxtabscomponent.html#selecteditem) に変更されました。
-        * contentFit と固定オプションを含む `type` プロパティは使用できなくなりました。ヘッダーのサイズ設定と配置モードは現在、[`tabAlignment`]({environment:angularApiUrl}/classes/igxtabscomponent.html#tabalignment) 入力プロパティによって制御されています。この入力プロパティは、start (デフォルト)、center、end、justify の 4 つのいずれかが設定できます。古い `contentFit` タイプは現在の `start` 配置値に対応し、古い  `fixed` タイプは現在の `justify` 値に対応します。
-    * `tabItemSelected` および `tabItemDeselected` イベントが削除されました。[`selectedIndexChanging`]({environment:angularApiUrl}/classes/igxtabscomponent.html#selectedindexchanging)、[`selectedIndexChange`]({environment:angularApiUrl}/classes/igxtabscomponent.html#selectedindexchange)、[`selectedItemChange`]({environment:angularApiUrl}/classes/igxtabscomponent.html#selecteditemchange) の 3 つの新しいイベントが導入されました。これらのイベントにより、タブの選択をより柔軟に制御できます。残念ながら、これらのイベント変更に対して適切な移行を行うことはとても複雑であるため、エラーはプロジェクト レベルで処理する必要があります。
+        * `selectedTabItem` プロパティは [`selectedItem`]({environment:angularApiUrl}/classes/igxtabscomponent.html#selectedItem) に変更されました。
+        * contentFit と固定オプションを含む `type` プロパティは使用できなくなりました。ヘッダーのサイズ設定と配置モードは現在、[`tabAlignment`]({environment:angularApiUrl}/classes/igxtabscomponent.html#tabAlignment) 入力プロパティによって制御されています。この入力プロパティは、start (デフォルト)、center、end、justify の 4 つのいずれかが設定できます。古い `contentFit` タイプは現在の `start` 配置値に対応し、古い `fixed` タイプは現在の `justify` 値に対応します。
+    * `tabItemSelected` および `tabItemDeselected` イベントが削除されました。[`selectedIndexChanging`]({environment:angularApiUrl}/classes/igxtabscomponent.html#selectedIndexChanging)、[`selectedIndexChange`]({environment:angularApiUrl}/classes/igxtabscomponent.html#selectedindexchange)、[`selectedItemChange`]({environment:angularApiUrl}/classes/igxtabscomponent.html#selectedIndexChange) の 3 つの新しいイベントが導入されました。これらのイベントにより、タブの選択をより柔軟に制御できます。残念ながら、これらのイベント変更に対して適切な移行を行うことはとても複雑であるため、エラーはプロジェクト レベルで処理する必要があります。
 
 ### IgxGridComponent、IgxTreeGridComponent、IgxHierarchicalGridComponent
 * *IgxGridRowComponent*、*IgxTreeGridRowComponent*、*IgxHierarchicalRowComponent*、*IgxGridGroupByRowComponent* はパブリック API で公開されなくなりました。
@@ -830,7 +830,7 @@ grid.getRowByIndex(0).expanded = false;
 ```
 *row.rowData* および *row.rowID* は非推奨であり、バージョン 13 で完全に削除されます。代わりに *row.data* と *row.key* を使用してください。
 
-* *onRowPinning* によって発行されたイベント引数の *row* プロパティ、および *onRowDragStart* によって発行されたイベント引数の *dragData* プロパティ、*onRowDragEnd* は [`RowType`]({environment:angularApiUrl}/interfaces/rowtype.html) を実装しています。 
+* *onRowPinning* によって発行されたイベント引数の *row* プロパティ、および *onRowDragStart* によって発行されたイベント引数の *dragData* プロパティ、*onRowDragEnd* は [`RowType`]({environment:angularApiUrl}/interfaces/rowtype.html) を実装しています。
 * *ng update* は、*IgxGridRowComponent*、*IgxTreeGridRowComponent*、*IgxHierarchicalRowComponent*、*IgxGridGroupByRowComponent* のインポート、入力、キャストなどの使用方法のほとんどが移行されます上記のいずれかを使用するコード内の場所が移行されない場合は、入力/キャストを削除するか、[`RowType`]({environment:angularApiUrl}/interfaces/rowtype.html) で変更してください。
 * *getRowByIndex* は、そのインデックスの行が集計行である場合、[`RowType`]({environment:angularApiUrl}/interfaces/rowtype.html) オブジェクトを返すようになりました (以前は *undefined* を返していました)。*row.isSummaryRow* および *row.isGroupByRow* は、インデックスの行が集計行またはグループ行の場合に true を返します。
 ### IgxInputGroupComponent
@@ -868,7 +868,7 @@ grid.getRowByIndex(0).expanded = false;
 
 ## 10.0.x から 10.1.x の場合:
 * IgxGrid、IgxTreeGrid、IgxHierarchicalGrid
-    * Excel スタイル フィルター メニューを再テンプレート化するための `IgxExcelStyleSortingTemplateDirective`、`IgxExcelStyleHidingTemplateDirective`、`IgxExcelStyleMovingTemplateDirective`、`IgxExcelStylePinningTemplateDirective`  `IgxExcelStyleSelectingTemplateDirective` ディレクティブは削除されたため、列操作とフィルター操作領域を再テンプレート化するために新しく追加されたディレクティブ - `IgxExcelStyleColumnOperationsTemplateDirective` と `IgxExcelStyleFilterOperationsTemplateDirective` を使用できます。テンプレート内で使用するために、Excel スタイル フィルター メニューのすべての内部コンポーネントも公開しました。新しいテンプレートディレクティブの使用に関する詳細は、この[トピック](../grid/excel-style-filtering.md#テンプレート)をご覧ください。
+    * Excel スタイル フィルター メニューを再テンプレート化するための `IgxExcelStyleSortingTemplateDirective`、`IgxExcelStyleHidingTemplateDirective`、`IgxExcelStyleMovingTemplateDirective`、`IgxExcelStylePinningTemplateDirective`、`IgxExcelStyleSelectingTemplateDirective` ディレクティブは削除されたため、列操作とフィルター操作領域を再テンプレート化するために新しく追加されたディレクティブ - `IgxExcelStyleColumnOperationsTemplateDirective` と `IgxExcelStyleFilterOperationsTemplateDirective` を使用できます。テンプレート内で使用するために、Excel スタイル フィルター メニューのすべての内部コンポーネントも公開しました。新しいテンプレートディレクティブの使用に関する詳細は、この[トピック](../grid/excel-style-filtering.md#テンプレート)をご覧ください。
 * IgxGrid
     * `selectedRows()` メソッドは、`selectedRows`入力プロパティに変更されました。この重大な変更により、ユーザーは実行時にグリッドの選択状態を簡単に変更できます。行の事前選択もサポートされています。`selectedRows()` メソッドが呼び出されるすべてのインスタンスは、括弧なしで書き換える必要があります。
     * `selectedRows` 入力のバインディングは次のようになります:
