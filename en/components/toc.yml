@@ -43,7 +43,7 @@
       new: false
     - name: Customize and Optimize Themes
       href: general/how-to/how-to-customize-theme.md
-      new: false
+      new: true
 - name: Angular Schematics & Ignite UI CLI
   href: general/cli-overview.md
   sortable: false
