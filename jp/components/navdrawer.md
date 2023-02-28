@@ -159,7 +159,7 @@ export class AppComponent  {
 より大きい画面に Drawer をピン固定すると、相対的な位置を使用して通常のコンテンツ フローで配置されます。アプリケーションに Drawer を切り替える方法を提供するかどうかにより、ピン固定モードを使用して、[確定または永続的な動作](https://material.io/guidelines/patterns/navigation-drawer.html#navigation-drawer-behavior)を実装できます。
 
 > [!NOTE]
-> Navigation Drawer はデフォルトでレスポンシブです。画面サイズに基づいて固定解除および固定モード間で切り替わります。この動作は [`pinThreshold`]({environment:angularApiUrl}/classes/igxnavigationdrawercomponent.html#pinthreshold) プロパティによって制御され、falsy 値 (0 など) を設定すると無効になります。
+> Navigation Drawer はデフォルトでレスポンシブです。画面サイズに基づいて固定解除および固定モード間で切り替わります。この動作は [`pinThreshold`]({environment:angularApiUrl}/classes/igxnavigationdrawercomponent.html#pinThreshold) プロパティによって制御され、falsy 値 (0 など) を設定すると無効になります。
 
 
 ### ピン固定 (persistent) モード

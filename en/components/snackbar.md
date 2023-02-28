@@ -62,7 +62,7 @@ As you can see in the code snippet above, one way to set the massage displayed i
 ```
 
 ### Hide/Auto Hide
-Once opened, the snackbar disappears after a period specified by the [`displayTime`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#displaytime) input which is set initially to 4000 milliseconds. This behavior is enabled by default but you can change it by setting [`autoHide`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#autohide) to **false**. In this way, the snackbar will remain visible. Using the snackbar [`close()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#close) method, you can close the component in the code.
+Once opened, the snackbar disappears after a period specified by the [`displayTime`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#displayTime) input which is set initially to 4000 milliseconds. This behavior is enabled by default but you can change it by setting [`autoHide`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#autoHide) to **false**. In this way, the snackbar will remain visible. Using the snackbar [`close()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#close) method, you can close the component in the code.
 
 ```html
 <!--sample.component.html-->
@@ -89,7 +89,7 @@ If the sample is configured properly, the first snackbar appears when the button
 </code-view>
 
 ### Display Time
-Use [`displayTime`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#displaytime) and set it to an interval in milliseconds to configure how long the snackbar component is visible. By default, as we said, it's initially set to 4000 miliseconds.
+Use [`displayTime`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#displayTime) and set it to an interval in milliseconds to configure how long the snackbar component is visible. By default, as we said, it's initially set to 4000 miliseconds.
 
 ### Customize Snackbar
 We can also customize the content of the Snackbar to display more complex elements than a message and a button. If we want to show the snackbar while loading a file, for example, a loading animation could be added to its content.

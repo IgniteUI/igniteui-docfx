@@ -57,17 +57,17 @@ IgniteUI for Angular @@igComponent コンポーネントは、[クイック フ�
 <div class="divider--half"></div>
 
 ## 設定
-フィルタリングが有効かどうか、およびどのフィルタリング モードを使用するかを指定するために、@@igComponent は次のブール プロパティを公開します - [`allowFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowfiltering)、[`allowAdvancedFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowadvancedfiltering)、[`filterMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filtermode) と [`filterable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#filterable)。
+フィルタリングが有効かどうか、およびどのフィルタリング モードを使用するかを指定するために、@@igComponent は次のブール プロパティを公開します - [`allowFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowFiltering)、[`allowAdvancedFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowAdvancedFiltering)、[`filterMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filterMode) と [`filterable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#filterable)。
 
-**[allowFiltering]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowfiltering)** プロパティを使用して、以下のオプションを指定できます:
+**[allowFiltering]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowFiltering)** プロパティを使用して、以下のオプションを指定できます:
 - **false** - 対応する列のフィルタリングが無効になります /デフォルト値/。
 - **true** - 対応する列のフィルタリングが有効になります。
 
-**[allowAdvancedFiltering]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowadvancedfiltering)** プロパティを使用して、以下のオプションを指定できます:
+**[allowAdvancedFiltering]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowAdvancedFiltering)** プロパティを使用して、以下のオプションを指定できます:
 - **false** - 対応するグリッドのフィルタリングが無効になります /デフォルト値/。
 - **true** - 対応するグリッドのフィルタリングが有効になります。
 
-**[filterMode]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filtermode)** プロパティを使用して、以下のオプションを指定できます:
+**[filterMode]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filterMode)** プロパティを使用して、以下のオプションを指定できます:
 - **quickFilter** - 簡易なフィルタリング UI /デフォルト値/。 
 - **excelStyleFilter** - Excel のようなフィルタリング UI。
 
@@ -83,7 +83,7 @@ IgniteUI for Angular @@igComponent コンポーネントは、[クイック フ�
 </@@igSelector>
 ```
 
-ただし、[高度なフィルタリング](advanced-filtering.md)を有効にするには、[`allowAdvancedFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowadvancedfiltering) 入力プロパティを `true` に設定します。
+ただし、[高度なフィルタリング](advanced-filtering.md)を有効にするには、[`allowAdvancedFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowAdvancedFiltering) 入力プロパティを `true` に設定します。
 
 ```html
 <@@igSelector [data]="data" [autoGenerate]="true" [allowAdvancedFiltering]="true">
@@ -101,9 +101,9 @@ IgniteUI for Angular @@igComponent コンポーネントは、[クイック フ�
 
 ## 使用方法
 
-デフォルトの定義済みフィルタリングおよび標準のフィルタリング条件があり、カスタム実装で置き換えることも可能です。また、カスタム フィルタリング条件を追加することもできます。@@igComponent には、簡易なフィルター UI と詳細なフィルター オプションがあります。列で設定された [`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype) に基づいて、適切な[**フィルタリング処理**]({environment:angularApiUrl}/interfaces/ifilteringoperation.html)のセットがフィルター UI ドロップダウンに読み込まれます。また、[`ignoreCase`]({environment:angularApiUrl}/interfaces/ifilteringexpression.html) と最初の [`condition`]({environment:angularApiUrl}/interfaces/ifilteringexpression.html#condition) プロパティを設定できます。
+デフォルトの定義済みフィルタリングおよび標準のフィルタリング条件があり、カスタム実装で置き換えることも可能です。また、カスタム フィルタリング条件を追加することもできます。@@igComponent には、簡易なフィルター UI と詳細なフィルター オプションがあります。列で設定された [`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#dataType) に基づいて、適切な[**フィルタリング処理**]({environment:angularApiUrl}/interfaces/ifilteringoperation.html)のセットがフィルター UI ドロップダウンに読み込まれます。また、[`ignoreCase`]({environment:angularApiUrl}/interfaces/ifilteringexpression.html) と最初の [`condition`]({environment:angularApiUrl}/interfaces/ifilteringexpression.html#condition) プロパティを設定できます。
 
-フィルタリング機能は、[`allowFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowfiltering) 入力を `true` に設定すると @@igComponent コンポーネントで有効になります。デフォルトの [`filterMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filtermode) は `quickFilter` で、実行時には**変更できません**。特定の列に対してこの機能を無効にするには、[`filterable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#filterable) 入力を `false` に設定します。
+フィルタリング機能は、[`allowFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowFiltering) 入力を `true` に設定すると @@igComponent コンポーネントで有効になります。デフォルトの [`filterMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filterMode) は `quickFilter` で、実行時には**変更できません**。特定の列に対してこの機能を無効にするには、[`filterable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#filterable) 入力を `false` に設定します。
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
 ```html
@@ -126,7 +126,7 @@ IgniteUI for Angular @@igComponent コンポーネントは、[クイック フ�
 > [!NOTE]
 > `string` 型の値が dataType `Date` の列で使用される場合、@@igComponent は値を `Date` オブジェクトに解析しないためフィルター条件は使用できません。`string` オブジェクトを使用する場合、値を `Date` オブジェクトに解析するためのロジックをアプリケーション レベルで実装する必要があります。
 
-列または複数の列は @@igComponent API でフィルターできます。@@igComponent は、このタスクに複数のメソッドを公開します ([`filter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filter)、[`filterGlobal`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filterglobal)、[`clearFilter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#clearFilter))。
+列または複数の列は @@igComponent API でフィルターできます。@@igComponent は、このタスクに複数のメソッドを公開します ([`filter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filter)、[`filterGlobal`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filterGlobal)、[`clearFilter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#clearFilter))。
 
 *   [`filter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filter) - 単一の列または複数の列をフィルターします。
 
@@ -176,7 +176,7 @@ gridFilteringExpressionsTree.filteringOperands.push(priceFilteringExpressionsTre
 this.@@igObjectRef.filteringExpressionsTree = gridFilteringExpressionsTree;
 ```
 
-*   [`filterGlobal`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filterglobal) - 既存フィルターをクリアして新しいフィルター条件をすべての @@igComponent 列に適用します。
+*   [`filterGlobal`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filterGlobal) - 既存フィルターをクリアして新しいフィルター条件をすべての @@igComponent 列に適用します。
 
 ```typescript
 // Filter all cells for a value which contains `myproduct`
@@ -196,7 +196,7 @@ this.@@igObjectRef.clearFilter();
 
 ## 初期のフィルター状態
 
-グリッドの初期フィルタリング状態の設定は、[`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) [`filteringExpressionsTree`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringexpressionstree) プロパティを [`IFilteringExpressionsTree`]({environment:angularApiUrl}/interfaces/ifilteringexpressionstree.html) の配列に設定して各列をフィルターします。
+グリッドの初期フィルタリング状態の設定は、[`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) [`filteringExpressionsTree`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringExpressionsTree) プロパティを [`IFilteringExpressionsTree`]({environment:angularApiUrl}/interfaces/ifilteringexpressionstree.html) の配列に設定して各列をフィルターします。
 
 ```typescript
 constructor(private cdr: ChangeDetectorRef) { }
@@ -220,7 +220,7 @@ public ngAfterViewInit() {
 
 ### フィルター ロジック
 
-@@igComponent コントロールの [`filteringLogic`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringlogic) プロパティは @@igComponent で複数の列のフィルターが解決する方法を制御します。@@igComponent API または @@igComponent の入力プロパティによって変更できます。
+@@igComponent コントロールの [`filteringLogic`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringLogic) プロパティは @@igComponent で複数の列のフィルターが解決する方法を制御します。@@igComponent API または @@igComponent の入力プロパティによって変更できます。
 
 ```typescript
 import { FilteringLogic } from 'igniteui-angular';
@@ -665,7 +665,7 @@ $custom-input-group: input-group-theme(
 @@if (igxName !== 'IgxHierarchicalGrid') {
 ### 6.1.0 の重大な変更
 * @@igxName `filteringExpressions` プロパティは削除されます。代わりに [`filteringExpressionsTree`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringexpressionstree) を使用してください。
-* `filter_multiple` メソッドは削除されました。[`filter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filter) メソッドおよび [`filteringExpressionsTree`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringexpressionstree) プロパティを代わりに使用してください。
+* `filter_multiple` メソッドは削除されました。[`filter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filter) メソッドおよび [`filteringExpressionsTree`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringExpressionsTree) プロパティを代わりに使用してください。
 * [`filter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filter) メソッドに新しいシグネチャがあります。以下のパラメーターを受け付けます。
   * `name` - フィルターする列の名前。
   * `value` - フィルタリングに使用する値。

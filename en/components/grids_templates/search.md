@@ -129,9 +129,9 @@ public exactMatch: boolean = false;
 
 ### Angular search box input
 
-Now let's create our search input! By binding our **searchText** as ngModel to our newly created input and subscribe to the ngModelChange event, we can detect every single **searchText** modification by the user. This will allow us to use the @@igComponent's [`findNext`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findnext) and [`findPrev`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findprev) methods to highlight all the occurrences of the **searchText** and scroll to the next/previous one (depending on which method we have invoked).
+Now let's create our search input! By binding our **searchText** as ngModel to our newly created input and subscribe to the ngModelChange event, we can detect every single **searchText** modification by the user. This will allow us to use the @@igComponent's [`findNext`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findNext) and [`findPrev`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findPrev) methods to highlight all the occurrences of the **searchText** and scroll to the next/previous one (depending on which method we have invoked).
 
-Both the [`findNext`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findnext) and the [`findPrev`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findprev) methods have three arguments:
+Both the [`findNext`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findNext) and the [`findPrev`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findPrev) methods have three arguments:
 - `text`: **string** (the text we are searching for)
 - (optional) `caseSensitive`: **boolean** (should the search be case sensitive or not, default value is false)
 - (optional) `exactMatch`: **boolean** (should the search be by an exact match or not, default value is false)
@@ -167,7 +167,7 @@ Let's also display the position of the current occurrence, along with the total 
 
 ### Add search buttons
 
-In order to freely search and navigate among our search results, let's create a couple of buttons by invoking the [`findNext`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findnext) and the [`findPrev`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findprev) methods inside the buttons' respective click event handlers.
+In order to freely search and navigate among our search results, let's create a couple of buttons by invoking the [`findNext`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findNext) and the [`findPrev`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findPrev) methods inside the buttons' respective click event handlers.
 
 ```html
 <!--searchgrid.component.html-->
@@ -180,7 +180,7 @@ In order to freely search and navigate among our search results, let's create a 
 
 ### Add keyboard search
 
-We can also allow the users to navigate the results by using the keyboard's arrow keys and the Enter key. In order to achieve this, we can handle the **keydown** event of our search input by preventing the default caret movement of the input with the preventDefault() method and invoke the [`findNext`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findnext)/[`findPrev`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findprev) methods depending on which key the user has pressed.
+We can also allow the users to navigate the results by using the keyboard's arrow keys and the Enter key. In order to achieve this, we can handle the **keydown** event of our search input by preventing the default caret movement of the input with the preventDefault() method and invoke the [`findNext`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findNext)/[`findPrev`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findPrev) methods depending on which key the user has pressed.
 
 ```html
 <!--searchgrid.component.html-->
@@ -205,7 +205,7 @@ public searchKeyDown(ev) {
 
 ### Case sensitive and Exact match
 
-Now let's allow the user to choose whether the search should be case sensitive and/or by an exact match. For this purpose we can use simple checkbox inputs by binding our **caseSensitive** and **exactMatch** properties to the inputs' **checked** properties respectively and handle their **change** events by toggling our properties and invoking the [`findNext`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findnext) method.
+Now let's allow the user to choose whether the search should be case sensitive and/or by an exact match. For this purpose we can use simple checkbox inputs by binding our **caseSensitive** and **exactMatch** properties to the inputs' **checked** properties respectively and handle their **change** events by toggling our properties and invoking the [`findNext`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findNext) method.
 
 ```html
 <!--searchgrid.component.html-->
@@ -269,7 +269,7 @@ export class AppModule {}
 
 Finally, let's update our template with the new components!
 
-We will wrap all of our components inside an [**IgxInputGroup**](../input-group.md). On the left we will toggle between a search and a delete/clear icon (depending on whether the search input is empty or not). In the center, we will position the input itself. In addition, whenever the delete icon is clicked, we will update our **searchText** and invoke the @@igComponent's [`clearSearch`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#clearsearch) method to clear the highlights.
+We will wrap all of our components inside an [**IgxInputGroup**](../input-group.md). On the left we will toggle between a search and a delete/clear icon (depending on whether the search input is empty or not). In the center, we will position the input itself. In addition, whenever the delete icon is clicked, we will update our **searchText** and invoke the @@igComponent's [`clearSearch`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#clearSearch) method to clear the highlights.
 
 ```html
 <!--searchgrid.component.html-->
@@ -333,7 +333,7 @@ On the right in our input group, let's create three separate containers with the
     </div>
     ...
 ```
-- For the search navigation buttons, we have transformed our inputs into ripple styled buttons with material icons. The handlers for the click events remain the same - invoking the [`findNext`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findnext)/[`findPrev`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findprev) methods.
+- For the search navigation buttons, we have transformed our inputs into ripple styled buttons with material icons. The handlers for the click events remain the same - invoking the [`findNext`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findNext)/[`findPrev`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findPrev) methods.
 
 ```html
 <!--searchgrid.component.html-->
@@ -363,10 +363,10 @@ On the right in our input group, let's create three separate containers with the
 In this article we implemented our own search bar for the @@igComponent with some additional functionality when it comes to navigating between the search results. We also used some additional Ignite UI for Angular components like icons, chips and inputs. The search API is listed below.
 
 [`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) methods:
--   [findNext]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findnext)
--   [findPrev]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findprev)
--   [clearSearch]({environment:angularApiUrl}/classes/@@igTypeDoc.html#clearsearch)
--   [refreshSearch]({environment:angularApiUrl}/classes/@@igTypeDoc.html#refreshsearch)
+-   [findNext]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findNext)
+-   [findPrev]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findPrev)
+-   [clearSearch]({environment:angularApiUrl}/classes/@@igTypeDoc.html#clearSearch)
+-   [refreshSearch]({environment:angularApiUrl}/classes/@@igTypeDoc.html#refreshSearch)
 
 [`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html) methods:
 

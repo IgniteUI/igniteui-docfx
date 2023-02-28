@@ -74,7 +74,7 @@ import { @@igxNameModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Then define a @@igComponent with bound data source and [`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable) set to true and an [Action Strip](../action-strip.md) component with editing actions enabled. The [`addRow`]({environment:angularApiUrl}/classes/igxgrideditingactionscomponent.html#addRow) input controls the visibility of the button that spawns the row adding UI.
+Then define a @@igComponent with bound data source and [`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditable) set to true and an [Action Strip](../action-strip.md) component with editing actions enabled. The [`addRow`]({environment:angularApiUrl}/classes/igxgrideditingactionscomponent.html#addRow) input controls the visibility of the button that spawns the row adding UI.
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -290,13 +290,13 @@ The row adding UI comprises the buttons in the `IgxActionStrip` editing actions,
 
 ## API References
 
-* [rowEditable]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable)
-* [onRowEditEnter]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onroweditenter)
-* [onRowEdit]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowedit)
-* [rowEditDone]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditdone)
-* [onRowEditCancel]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onroweditcancel)
-* [endEdit]({environment:angularApiUrl}/classes/@@igTypeDoc.html#endedit)
-* [primaryKey]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primarykey)
+* [rowEditable]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditable)
+* [onRowEditEnter]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onRowEditEnter)
+* [onRowEdit]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onRowEdit)
+* [rowEditDone]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditDone)
+* [onRowEditCancel]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onRowEditCancel)
+* [endEdit]({environment:angularApiUrl}/classes/@@igTypeDoc.html#endEdit)
+* [primaryKey]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primaryKey)
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 * [IgxActionStripComponent]({environment:angularApiUrl}/classes/igxactionstripcomponent.html)
 * [IgxGridEditingActionsComponent]({environment:angularApiUrl}/classes/igxgrideditingactionscomponent.html)

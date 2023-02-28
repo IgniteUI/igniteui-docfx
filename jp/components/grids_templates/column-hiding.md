@@ -348,7 +348,7 @@ export class AppModule {}
 
 ### タイトルおよびフィルター プロンプトの追加
 
-列非表示コンポーネント機能を拡張するために [`title`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html#title) および [`filterColumnsPrompt`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html#filtercolumnsprompt) プロパティを設定します。[`title`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html#title) は一番上に表示され、[`filterColumnsPrompt`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html#filtercolumnsprompt) は列非表示 UI のフィルター入力に表示されるプロンプト テキストです。
+列非表示コンポーネント機能を拡張するために [`title`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html#title) および [`filterColumnsPrompt`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html#filterColumnsPrompt) プロパティを設定します。[`title`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html#title) は一番上に表示され、[`filterColumnsPrompt`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html#filterColumnsPrompt) は列非表示 UI のフィルター入力に表示されるプロンプト テキストです。
 
 ```html
 <!--columnHiding.component.html-->
@@ -362,7 +362,7 @@ export class AppModule {}
 
 ### 列の表示順序オプションの追加
 
-列非表示 UI で列の表示順序を選択する機能も追加します。このため、[`columnDisplayOrder`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html#columndisplayorder) プロパティを使用します。列挙型のプロパティで、以下のオプションがあります。
+列非表示 UI で列の表示順序を選択する機能も追加します。このため、[`columnDisplayOrder`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html#columnDisplayOrder) プロパティを使用します。列挙型のプロパティで、以下のオプションがあります。
 
 - **Alphabetical** (列をアルファベット順でソート)
 - **DisplayOrder** (列をグリッドで表示される順序によってソート)
@@ -646,10 +646,10 @@ $custom-button: button-theme(
 その他のコンポーネントおよびディレクティブ (またはそのいずれか) で使用した API:
 
 [`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) プロパティ:
-* [hiddenColumnsCount]({environment:angularApiUrl}/classes/@@igTypeDoc.html#hiddencolumnscount)
+* [hiddenColumnsCount]({environment:angularApiUrl}/classes/@@igTypeDoc.html#hiddenColumnsCount)
 
 [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) プロパティ:
-* [disableHiding]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disablehiding)
+* [disableHiding]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disableHiding)
 
 [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) プロパティ:
 * [showProgress]({environment:angularApiUrl}/classes/IgxGridToolbarComponent.html#showProgress)

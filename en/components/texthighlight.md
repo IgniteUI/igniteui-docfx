@@ -183,7 +183,7 @@ If the sample is configured properly, the final result should look like that:
 <div class="divider"></div>
 
 ## Search across multiple elements
-The [`igxTextHighlight`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html) allows you to search across multiple elements which all share one active highlight. This is done by having the same [`groupName`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html#groupname) value across multiple TextHighlight directives. In order to setup the sample we will reuse the search box from the previous sample, but this time we will add two div elements. The [`column`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html#column) and [`row`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html#row) inputs are useful when you have multiple elements and in our case the second div has a different row value.
+The [`igxTextHighlight`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html) allows you to search across multiple elements which all share one active highlight. This is done by having the same [`groupName`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html#groupName) value across multiple TextHighlight directives. In order to setup the sample we will reuse the search box from the previous sample, but this time we will add two div elements. The [`column`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html#column) and [`row`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html#row) inputs are useful when you have multiple elements and in our case the second div has a different row value.
 
 ```html
 <div igxTextHighlight

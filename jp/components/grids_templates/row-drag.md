@@ -25,7 +25,7 @@ _language: ja
 
 # Angular @@igComponent の行ドラッグ
 
-Ignite UI for Angular @@igComponent では、**RowDrag** がルート `@@igSelector` コンポーネントで初期化されて、[`rowDraggable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowdraggable) 入力で設定できます。行ドラッグを有効にすると、ユーザーは行ドラッグ ハンドルを使用して行のドラッグを開始できます。
+Ignite UI for Angular @@igComponent では、**RowDrag** がルート `@@igSelector` コンポーネントで初期化されて、[`rowDraggable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowDraggable) 入力で設定できます。行ドラッグを有効にすると、ユーザーは行ドラッグ ハンドルを使用して行のドラッグを開始できます。
 
 ## Angular @@igComponent 行ドラッグの例
 
@@ -60,7 +60,7 @@ Ignite UI for Angular @@igComponent では、**RowDrag** がルート `@@igSelec
 
 ## 構成
 
-`@@igSelector` の行ドラッグを有効にするには、グリッドの [`rowDraggable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowdraggable) を **`true`** に設定します。これが有効になると、行ドラッグ ハンドルが各行に表示されます。このハンドルは行ドラッグを開始するために使用できます。
+`@@igSelector` の行ドラッグを有効にするには、グリッドの [`rowDraggable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowDraggable) を **`true`** に設定します。これが有効になると、行ドラッグ ハンドルが各行に表示されます。このハンドルは行ドラッグを開始するために使用できます。
 
 ```html
 <@@igSelector [rowDraggable]="true">
@@ -287,7 +287,7 @@ export class @@igxNameRowDragComponent {
 }
 
 ### ドラッグ アイコンのテンプレート化
-ドラッグ ハンドル アイコンは、グリッドの [`dragIndicatorIconTemplate`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#dragindicatoricontemplate) を使用してテンプレート化できます。作成している例で、アイコンをデフォルトのもの (`drag_indicator`) から `drag_handle` に変更します。
+ドラッグ ハンドル アイコンは、グリッドの [`dragIndicatorIconTemplate`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#dragIndicatorIconTemplate) を使用してテンプレート化できます。作成している例で、アイコンをデフォルトのもの (`drag_indicator`) から `drag_handle` に変更します。
 `igxDragIndicatorIcon` を使用して `@@igSelector` の本文内にテンプレートを渡して変更できます。
 ```html
 <@@igSelector>
@@ -654,7 +654,7 @@ class MyRowGhostComponent {
 }
 ```
 
-最後に、[`IgxDragDirective.dragMove`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragmove) イベント (ドラッグされた行に対して発行) を処理するために使用されるメソッドを作成します。このメソッドは、`igxRowDragGhost` テンプレートで使用されているプロパティの値を変更し、強制的に再描画します。ドラッグしている特定の行の `dragMove` イベントのみをサブスクライブし、行がドロップされるたびに (メモリ リークを防ぐために) サブスクライブを解除します。
+最後に、[`IgxDragDirective.dragMove`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragMove) イベント (ドラッグされた行に対して発行) を処理するために使用されるメソッドを作成します。このメソッドは、`igxRowDragGhost` テンプレートで使用されているプロパティの値を変更し、強制的に再描画します。ドラッグしている特定の行の `dragMove` イベントのみをサブスクライブし、行がドロップされるたびに (メモリ リークを防ぐために) サブスクライブを解除します。
 
 ```typescript
 class MyRowGhostComponent {
@@ -705,7 +705,7 @@ class MyRowGhostComponent {
 
 次のセクションのデモでは、ドラッグされた行がドロップされる場所のインジケーターを表示する方法を確認します。このインジケーターは好きなようにカスタマイズできます - ドラッグされた行がドロップされる位置に配置されたプレースホルダー行、ドラッグされた行が現在ホバーされている行の上または下にドロップされるかどうかを示す境界線スタイルなどです。
 
-カーソルの位置を追跡するために、行のドラッグを開始するときに [`IgxDragDirective`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragmove) の `dragMove` イベントにバインドします。
+カーソルの位置を追跡するために、行のドラッグを開始するときに [`IgxDragDirective`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragMove) の `dragMove` イベントにバインドします。
 
 > [!NOTE]
 > グリッドに `primaryKey` が指定されていることを確認してください! ロジックが行を適切に並べ替えられるように、行には一意の識別子が必要です。
@@ -862,7 +862,7 @@ class MyGridScrollComponent {
 
 ## API リファレンス
 
-* [rowDraggable]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowdraggable)
+* [rowDraggable]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowDraggable)
 * [rowDragStart]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowDragStart)
 * [rowDragEnd]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowDragEnd)
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)

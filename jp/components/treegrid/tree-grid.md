@@ -62,14 +62,14 @@ export class AppModule {}
 ツリー グリッド階層の構築に使用するオプション (子コレクションまたは主キーまたは外部キー) にかかわらず、ツリー グリッドの行は 2 タイプのセルで構成されます。
 
 - [`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html) - 値を含む標準セル。
-- [`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html) - セル行のレベルに基づいた値、インジケーターの展開/縮小、インデント div 要素を含むツリー セル。インナー [`treeRow`]({environment:angularApiUrl}/classes/igxtreegridrow.html#treerow) の [`level`]({environment:angularApiUrl}/interfaces/itreegridrecord.html#level) プロパティでアクセスできる行コンポーネント レベル。
+- [`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html) - セル行のレベルに基づいた値、インジケーターの展開/縮小、インデント div 要素を含むツリー セル。インナー [`treeRow`]({environment:angularApiUrl}/classes/igxtreegridrow.html#treeRow) の [`level`]({environment:angularApiUrl}/interfaces/itreegridrecord.html#level) プロパティでアクセスできる行コンポーネント レベル。
 
 > [!NOTE]
 > 各行にはツリー セルを 1 つのみ含むことができますが、標準セルは複数含むことが可能です。
 
 ### 初期展開時の深さ
 
-初期時のツリーグリッドは、すべてのノード レベルを展開して表示します。この動作は、[`expansionDepth`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#expansiondepth) プロパティを使用して設定できます。デフォルトの値は **Infinity** ですべてのノードが展開されます。初期時の展開の深さは、このプロパティを数値に設定して制御できます。たとえば、**0** はルート レベルのノードのみを表示し、**1** はルートレベルと子ノードを表示します。
+初期時のツリーグリッドは、すべてのノード レベルを展開して表示します。この動作は、[`expansionDepth`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#expansionDepth) プロパティを使用して設定できます。デフォルトの値は **Infinity** ですべてのノードが展開されます。初期時の展開の深さは、このプロパティを数値に設定して制御できます。たとえば、**0** はルート レベルのノードのみを表示し、**1** はルートレベルと子ノードを表示します。
 
 ### 子コレクション
 **child collection** オプションを使用して各データ オブジェクトは子コレクションを含み、親データ オブジェクトとして同じタイプの項目で生成します。これによりツリー グリッドの各レコードがその子への直接の参照を持つことができます。元のデータソースを含むツリー グリッドの [`data`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#data) プロパティが階層が定義されたコレクションになります。
@@ -116,7 +116,7 @@ export const EMPLOYEE_DATA = [
 </igx-tree-grid>
 ```
 
-IgxTreeGridComponent を階層にバインドするには、[`childDataKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#childdatakey) プロパティを各データ オブジェクトで使用される子コレクションの名前に設定します。このサンプルでは **Employees** コレクションです。
+IgxTreeGridComponent を階層にバインドするには、[`childDataKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#childDataKey) プロパティを各データ オブジェクトで使用される子コレクションの名前に設定します。このサンプルでは **Employees** コレクションです。
 更に自動列生成を無効にしてデータ オブジェクトの実際のプロパティとの一致を手動で定義します。**Employees** コレクションが階層で自動的に使用されるため、列定義に含める必要はありません。
 
 ```html
@@ -209,7 +209,7 @@ export class MyComponent implements OnInit {
 
 上記サンプル データはすべてのレコードに ID (ParentID と Name、JobTitle、Age などの追加のプロパティ) があります。レコードの ID は一意である必要があります。ParentID は、親ノードの ID を含みます。行にツリーグリッドのいずれの行にも一致しない ParentID がある場合、行がルート行であることを意味します。
 
-親子関係は、ツリーグリッドの  [`primaryKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#primarykey) と [`foreignKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#foreignkey) プロパティを使用して設定されます。
+親子関係は、ツリーグリッドの  [`primaryKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#primaryKey) と [`foreignKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#foreignKey) プロパティを使用して設定されます。
 
 上記フラット コレクションで定義されたデータを表示するツリーグリッドを設定する方法を示すコンポーネントのテンプレートです。
 
@@ -224,7 +224,7 @@ export class MyComponent implements OnInit {
 </igx-tree-grid>
 ```
 
-更に [`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection) プロパティを使用してツリーグリッドの行選択機能、および各列でフィルタリング、ソート、編集、移動、サイズ変更機能を有効にします。
+更に [`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowSelection) プロパティを使用してツリーグリッドの行選択機能、および各列でフィルタリング、ソート、編集、移動、サイズ変更機能を有効にします。
 
 ```html
 <!--treeGridSample.component.html-->
@@ -249,8 +249,8 @@ export class MyComponent implements OnInit {
 **ツリー セル**のインデントは、フィルタリング、ソート、ページングなど他のツリーグリッド全体の機能で永続化されます。
 
 - **sorting** が列に適用された際にデータ行がレベルごとにソートされます。ルートレベルの行はそれぞれの子に関係なく個々にソートされます。各子コレクションは個々にソートされます。
-- 最初の列 ([`visibleIndex`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#visibleindex) 0 を持つ列は、常にツリー列です。
-- 列ピン固定、列の非表示、列移動などの処理後に 0 の [`visibleIndex`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#visibleindex) で終わる列はツリー列になります。
+- 最初の列 ([`visibleIndex`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#visibleIndex) 0 を持つ列は、常にツリー列です。
+- 列ピン固定、列の非表示、列移動などの処理後に 0 の [`visibleIndex`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#visibleIndex) で終わる列はツリー列になります。
 - エクスポートした Excel ワークシートは、ツリーグリッドでグループ化されるときにレコードをグループ化して階層に反映できます。すべてのレコードを展開した状態が保持および反映されます。
 - CSV レベルにエクスポートする際に展開した状態は無視されてすべてのデータがフラットでエクスポートされます。
 

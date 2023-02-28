@@ -81,7 +81,7 @@ export class AppModule {}
 
 これにより、@@igSelector に `Transaction` サービスの適切なインスタンスが提供されます。適切な `TransactionService` は `TransactionFactory` を通じて提供されます。この内部実装の詳細については、[トランザクション トピック](../transaction-classes.md#トランザクション-ファクトリ)を参照してください。
 
-一括編集を有効にした後、バインドされたデータ ソースと [`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable) を true に設定して `@@igxName` を定義し、バインドします。
+一括編集を有効にした後、バインドされたデータ ソースと [`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditable) を true に設定して `@@igxName` を定義し、バインドします。
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -220,14 +220,14 @@ export class HierarchicalGridBatchEditingSampleComponent {
 }
 
 > [!NOTE] 
-> トランザクション API は編集の終了を処理しないので、自分で行う必要があります。そうしないと、`@@igComponent` は編集モードのままになります。これを行う 1 つの方法は、それぞれのメソッドで [`endEdit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#endedit) を呼び出すことです。
+> トランザクション API は編集の終了を処理しないので、自分で行う必要があります。そうしないと、`@@igComponent` は編集モードのままになります。これを行う 1 つの方法は、それぞれのメソッドで [`endEdit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#endEdit) を呼び出すことです。
 
 @@if (igxName === 'IgxTreeGrid') {
-`@@igComponent` 内の親ノードの削除にはいくつかの特徴があります。階層データを使用している場合、親を削除すると子も削除されます。フラットデータを使用している場合、`@@igComponent` の [`cascadeOnDelete`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#cascadeondelete) プロパティを使用して必要な動作を設定できます。このプロパティは、親が削除されたときに子レコードを削除するかどうかを示します (デフォルトでは true に設定されています)。
+`@@igComponent` 内の親ノードの削除にはいくつかの特徴があります。階層データを使用している場合、親を削除すると子も削除されます。フラットデータを使用している場合、`@@igComponent` の [`cascadeOnDelete`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#cascadeOnDelete) プロパティを使用して必要な動作を設定できます。このプロパティは、親が削除されたときに子レコードを削除するかどうかを示します (デフォルトでは true に設定されています)。
 }
 
 > [!NOTE]
-> [`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable) プロパティを無効にすると `@@igComponent` を変更してセル変更でトランザクションを作成し、UI で行編集オーバーレイを公開しません。
+> [`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditable) プロパティを無効にすると `@@igComponent` を変更してセル変更でトランザクションを作成し、UI で行編集オーバーレイを公開しません。
 
 @@if (igxName === 'IgxGrid') {
 
@@ -249,7 +249,7 @@ export class HierarchicalGridBatchEditingSampleComponent {
 }
 @@if (igxName === 'IgxTreeGrid') {
 * [HierarchicalTransactionService]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) 
-* [rowEditable]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable)
+* [rowEditable]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditable)
 * [IgxTreeGridComponent]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 }

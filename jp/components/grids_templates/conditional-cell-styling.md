@@ -234,7 +234,7 @@ public childRowStyles = {
 ## 概要
 Ignite UI for Angular の @@igxName コンポーネントは、カスタム条件に基づいて 2 通りの条件付きセルのスタイル設定をサポートします。
 
-- [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) を設定して、キーと値のペアを含むオブジェクト リテラルに [`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellclasses) を入力します。キーは CSS クラスの名前です。値はブール値を返すコールバック関数またはブール値です。その結果、セルのマテリアル スタイル設定が簡単にできます。
+- [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) を設定して、キーと値のペアを含むオブジェクト リテラルに [`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellClasses) を入力します。キーは CSS クラスの名前です。値はブール値を返すコールバック関数またはブール値です。その結果、セルのマテリアル スタイル設定が簡単にできます。
 
 ```ts
 // component.ts file
@@ -262,7 +262,7 @@ private downFontCondition = (rowData: any, columnKey: any): boolean => {
 
 
 ### cellClasses の使用
-[`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) [`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellclasses) 入力を設定してカスタム条件を定義することにより、@@igxName の条件付きセルのスタイルを設定できます。
+[`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) [`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellClasses) 入力を設定してカスタム条件を定義することにより、@@igxName の条件付きセルのスタイルを設定できます。
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -285,7 +285,7 @@ private downFontCondition = (rowData: any, columnKey: any): boolean => {
 <!-- TODO -->
 }
 
-[`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellclasses) 入力は、キーと値のペアを含むオブジェクト リテラルを受け取ります。キーは CSS クラスの名前です。値はブール値を返すコールバック関数またはブール値です。
+[`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellClasses) 入力は、キーと値のペアを含むオブジェクト リテラルを受け取ります。キーは CSS クラスの名前です。値はブール値を返すコールバック関数またはブール値です。
 
 @@if (igxName === 'IgxGrid') {
 ```typescript
@@ -521,7 +521,7 @@ public updateCSS(css: string) {
 ## 既知の問題と制限
 
 - 他の列に同じ条件でバインドされたセルがある場合、その 1 つのセルが更新された際に条件が満たされて要る場合も他のセルが新しい値に基づいて更新されない問題。
-残りのセルに変更を適用するには、パイプ チェックを実行する必要があります。以下の例は、[`onCellEdit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncelledit) イベントで`スプレッド演算子` ... を使用してチェックを実行する方法を示します。これにより、元のオブジェクトが新しいインスタンスでコピーされ、パイプのみ発生します。
+残りのセルに変更を適用するには、パイプ チェックを実行する必要があります。以下の例は、[`onCellEdit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onCellEdit) イベントで`スプレッド演算子` ... を使用してチェックを実行する方法を示します。これにより、元のオブジェクトが新しいインスタンスでコピーされ、パイプのみ発生します。
 
 ```ts
 public backgroundClasses = {
