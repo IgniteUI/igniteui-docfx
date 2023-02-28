@@ -121,6 +121,86 @@ $toolbar-theme: grid-toolbar-theme(
 
 同じプロセスを適用して、任意のコンポーネント テーマを個別にオーバーライドおよびカスタマイズできます。
 
+### 実行時にカスタム テーマを切り替える
+
+さらに深く掘り下げて、実行時に切り替えることができる 2 つのカスタム バージョンのテーマを作成しましょう。これはユーザー コントロール/設定で行うことができ、いつでも切り替えることができます。ただし、この例では、現在の OS 設定に一致するテーマを適用するために、OS 定義のユーザー設定 (ライトまたはダーク) を使用します。これを行うには、2 つのカラー パレットが必要です。
+
+```scss
+@use "minireset.css/minireset";
+@use "@infragistics/igniteui-angular/theming" as *;
+
+@include core();
+@include typography($font-family: "Poppins");
+
+$primary-dark: #1028c7;
+$primary-light: #3c55f1;
+$secondary-dark: #e0d94c;
+$secondary-light: #b4a904;
+
+$custom-palette-dark: palette(
+  $primary: $primary-dark,
+  $secondary: $secondary-dark,
+  $surface: #000,
+  $gray: #ccc
+);
+
+$custom-palette-light: palette(
+  $primary: $primary-light,
+  $secondary: $secondary-light,
+  $surface: #fff,
+  $gray: #222
+);
+```
+
+次に、テーマの定義を一般的なスコープに入れ、これをライト バリエーションに使用し、ダーク カラー スキーマの OS 設定が検出されたときに `@media` クエリでパレット オーバーライドを作成します。
+
+```scss
+@include theme(
+  $palette: $custom-palette-light,
+  $schema: $light-material-schema
+);
+
+@media (prefers-color-scheme: light) {
+  /* Grid Toolbar override for light color scheme */
+  igx-grid-toolbar {
+    --background-color: #{$primary-light};
+    --title-text-color: #{text-contrast($primary-light)};
+  }
+  /* END Grid Toolbar */
+}
+
+@media (prefers-color-scheme: dark) {
+  // changes native element schema (scrollbars, select, etc.)
+  :root {
+    color-scheme: dark;
+  }
+
+  @include palette($custom-palette-dark);
+
+  /* Grid Toolbar override for dark color scheme */
+  igx-grid-toolbar {
+    --background-color: #{$primary-dark};
+    --title-text-color: #{text-contrast($primary-dark)};
+  }
+  /* END Grid Toolbar */
+}
+```
+
+>[!NOTE]
+> [`css-vars()`]({environment:sassApiUrl}/index.html#mixin-css-vars) を使用してすべてのテーマ変数を再度含める代わりに、`igx-grid-toolbar` テーマ オーバーライドを 2 つの変数のみをオーバーライドするように切り替えました。
+> すべてのテーマ変数は[対応する sass api ドキュメント]({environment:sassApiUrl}/index.html#function-grid-toolbar-theme)で見つけることができ、sass 変数と同等ですが、`$` の代わりに `--` を前に付けます。
+
+結果は、ライト OS テーマで次のようになります。
+
+<img class="responsive-img"  src="../../../images/general/theming-walkthrough/customizing-color-schema-light.png" />
+
+ダーク OS テーマは次のようになります。
+
+<img class="responsive-img"  src="../../../images/general/theming-walkthrough/customizing-color-schema-dark.png" />
+
+>[!NOTE]
+> 完全な実行時の切り替え (Ignite UI テーマ スキーマ プリセットの切り替えを含む) は、2 つの完全なテーマがビルドされている場合にのみ可能です。上記の例では、カラー パレットを切り替えていますが、テーマ スキーマは $light-material-schema のままであるため、ダーク カラー パレットに切り替えたときに、カラー パレットのすべての正しい色合いが使用されるわけではありません。
+
 ### カスタマイズできるもの
 
 Ignite UI テーマは、複数の次元のテーマを抽象化し、非常に堅牢なテーマ変更機能を提供します。開発者とデザイナーは、テーマ エンジン API を利用して、アプリケーションに合わせたビジュアル デザインを作成できます。これにより、Ignite UI for Angular を使用する際に独自のルック アンド フィールが得られます。テーマ エンジンは、各ディメンションからの変数も公開します。これを使用して、Ignite UI for Angular コンポーネントで UI として直接構築されていない残りのアプリケーション構造にテーマを適用できます。変更のために公開されるディメンションは次のとおりです。
@@ -295,11 +375,7 @@ $custom-palette: palette(
   $primary: $primary,
   $secondary: #e0d94c,
   $surface: #000,
-  $gray: #fff,
-  $info: color($dark-material-palette, 'info'),
-  $success: color($dark-material-palette, 'success'),
-  $error: color($dark-material-palette, 'error'),
-  $warn: color($dark-material-palette, 'warn')
+  $gray: #fff
 );
 
 $include: (
