@@ -11,23 +11,12 @@ The Angular Spreadsheet component allows displaying charts in your [`IgxSpreadsh
 
 ## Angular Spreadsheet Chart Adapter Example
 
-<code-view style="height: 500px"
-           data-demos-base-url="{environment:dvDemosBaseUrl}"
+<code-view style="height: 500px" alt="Angular Spreadsheet Chart Adapter Example"
+  data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/excel/spreadsheet-adapter-chart"
-           alt="Angular Spreadsheet Chart Adapter Example"
-           github-src="excel/spreadsheet/adapter-chart">
+                                        github-src="excel/spreadsheet/adapter-chart">
 </code-view>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <body>
-      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/excel/spreadsheet/adapter-chart?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
-        </a>
-        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/excel/spreadsheet/adapter-chart?file=src%2Fapp.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
-        </a>
-    </body>
-</html>
 
 <div class="divider--half"></div>
 
@@ -47,53 +36,53 @@ Here are the steps by step description :
 
 There are over 35 chart types supported by the Spreadsheet ChartAdapters including, Line, Area, Column, and Doughnut. See the full list here:
 
--   Column Charts
-    -   Clustered column
-    -   Stacked column
-    -   100% stacked column
--   Line Charts
-    -   Line
-    -   Line with Markers
-    -   Stacked line
-    -   Stacked line with markers
-    -   100% stacked line
-    -   100% stacked line with markers
--   Pie Charts
--   Donut Charts
--   Bar Charts
-    -   Clustered bar
-    -   Stacked bar
-    -   100% stacked bar
-    -   Area Charts
-    -   Area
-    -   Stacked area
-    -   100% stacked area
--   XY (Scatter) and Bubble Charts
-    -   Scatter (with Marker only)
-    -   Scatter with smooth lines
-    -   Scatter with smooth lines and markers
-    -   Scatter with straight lines
-    -   Scatter with straight lines and markers
-    -   Bubble (without effects)
-    -   Bubble3DEffect
--   Stock Charts
-    -   High-low-close
-    -   Open-high-low-close
-    -   Volume-high-low-close
-    -   Volume-open-high-low-close
--   Radar Charts
-    -   Radar without markers
-    -   Radar with markers
-    -   Filled Radar
--   Combo Charts
-    -   Column and line chart sharing xAxis
-    -   Column and line chart and 2nd xAxis
-    -   Stacked Area and Column
-    -   Custom Combination
+*   Column Charts
+    *   Clustered column
+    *   Stacked column
+    *   100% stacked column
+*   Line Charts
+    *   Line
+    *   Line with Markers
+    *   Stacked line
+    *   Stacked line with markers
+    *   100% stacked line
+    *   100% stacked line with markers
+*   Pie Charts
+*   Donut Charts
+*   Bar Charts
+    *   Clustered bar
+    *   Stacked bar
+    *   100% stacked bar
+    *   Area Charts
+    *   Area
+    *   Stacked area
+    *   100% stacked area
+*   XY (Scatter) and Bubble Charts
+    *   Scatter (with Marker only)
+    *   Scatter with smooth lines
+    *   Scatter with smooth lines and markers
+    *   Scatter with straight lines
+    *   Scatter with straight lines and markers
+    *   Bubble (without effects)
+    *   Bubble3DEffect
+*   Stock Charts
+    *   High-low-close
+    *   Open-high-low-close
+    *   Volume-high-low-close
+    *   Volume-open-high-low-close
+*   Radar Charts
+    *   Radar without markers
+    *   Radar with markers
+    *   Filled Radar
+*   Combo Charts
+    *   Column and line chart sharing xAxis
+    *   Column and line chart and 2nd xAxis
+    *   Stacked Area and Column
+    *   Custom Combination
 
 ## Dependencies
 
-> [!NOTE]
+> \[!Note]
 >
 > In the following code snippet, an external [ExcelUtility](excel-utility.md) class is used to save and load a [`workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#workbook).
 
@@ -167,9 +156,9 @@ ExcelUtility.loadFromUrl(process.env.PUBLIC_URL + "/ExcelFiles/ChartData.xlsx").
 
 ## API References
 
--   [`addChart`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetshapecollection.html#addchart)
--   [`chartAdapter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#chartadapter)
--   [`SpreadsheetChartAdapter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/spreadsheetchartadapter.html)
--   [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html)
--   [`workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#workbook)
--   `XamSpreadsheet`
+*   [`addChart`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetshapecollection.html#addchart)
+*   [`chartAdapter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#chartadapter)
+*   [`SpreadsheetChartAdapter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/spreadsheetchartadapter.html)
+*   [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html)
+*   [`workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#workbook)
+*   `XamSpreadsheet`
