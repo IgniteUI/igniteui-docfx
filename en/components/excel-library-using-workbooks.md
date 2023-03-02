@@ -11,23 +11,12 @@ The Infragistics Angular Excel Engine enables you to save data to and load data 
 
 ## Angular Using Workbooks Example
 
-<code-view style="height: 500px"
-           data-demos-base-url="{environment:dvDemosBaseUrl}"
+<code-view style="height: 500px" alt="Angular Using Workbooks Example"
+  data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/excel/excel-library-operations-on-workbooks"
-           alt="Angular Using Workbooks Example"
-           github-src="excel/excel-library/operations-on-workbooks">
+                                        github-src="excel/excel-library/operations-on-workbooks">
 </code-view>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <body>
-      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/excel/excel-library/operations-on-workbooks?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
-        </a>
-        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/excel/excel-library/operations-on-workbooks?file=src%2Fapp.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
-        </a>
-    </body>
-</html>
 
 <div class="divider--half"></div>
 
@@ -47,23 +36,23 @@ font.height = 16 * 20;
 
 Microsoft Excel® document properties provide information to help organize and keep track of your documents. You can use the Infragistics Angular Excel Library to set these properties using the [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) object’s [`documentProperties`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html#documentproperties) property. The available properties are:
 
--   `Author`
+*   `Author`
 
--   `Title`
+*   `Title`
 
--   `Subject`
+*   `Subject`
 
--   `Keywords`
+*   `Keywords`
 
--   `Category`
+*   `Category`
 
--   `Status`
+*   `Status`
 
--   `Comments`
+*   `Comments`
 
--   `Company`
+*   `Company`
 
--   `Manager`
+*   `Manager`
 
 The following code demonstrates how to create a workbook and set its `title` and `status` document properties.
 
@@ -108,7 +97,7 @@ var protection = workbook.protection;
 
 ## API References
 
--   [`documentProperties`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html#documentproperties)
--   [`WorkbookProtection`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbookprotection.html)
--   [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html)
--   [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html)
+*   [`documentProperties`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html#documentproperties)
+*   [`WorkbookProtection`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbookprotection.html)
+*   [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html)
+*   [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html)
