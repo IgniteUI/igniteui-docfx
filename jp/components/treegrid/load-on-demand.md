@@ -21,7 +21,7 @@ Ignite UI for Angular [`IgxTreeGrid`]({environment:angularApiUrl}/classes/igxtre
 
 ### 使用方法
 
-ロードオンデマンド機能は、ツリーグリッド データソースの両方のタイプ ([`プライマリと外部キー`](tree-grid.md#プライマリと外部キー)、または[`子コレクション`](tree-grid.md#子コレクション)) と互換性があります。ツリー グリッドにルート レベルのデータをロードし、いずれかのデータソース タイプに必要なキーを指定するだけです。ツリーグリッドは、ユーザーが行を展開したときに子行をロードするためのコールバック入力プロパティ [`loadChildrenOnDemand`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#loadchildrenondemand) を提供します。
+ロードオンデマンド機能は、ツリーグリッド データソースの両方のタイプ ([`プライマリと外部キー`](tree-grid.md#プライマリと外部キー)、または[`子コレクション`](tree-grid.md#子コレクション)) と互換性があります。ツリー グリッドにルート レベルのデータをロードし、いずれかのデータソース タイプに必要なキーを指定するだけです。ツリーグリッドは、ユーザーが行を展開したときに子行をロードするためのコールバック入力プロパティ [`loadChildrenOnDemand`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#loadChildrenOnDemand) を提供します。
 
 ```html
 <igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID"
@@ -30,7 +30,7 @@ Ignite UI for Angular [`IgxTreeGrid`]({environment:angularApiUrl}/classes/igxtre
 </igx-tree-grid>
 ```
 
-[`loadChildrenOnDemand`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#loadchildrenondemand) コールバックは、2 つのパラメーターを提供します。
+[`loadChildrenOnDemand`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#loadChildrenOnDemand) コールバックは、2 つのパラメーターを提供します。
 
 - parentID - 展開されている親行の ID。
 - done  - 子がサーバーから取得されたときに子と共に呼び出されるコールバック。 
@@ -43,7 +43,7 @@ public loadChildren = (parentID: any, done: (children: any[]) => void) => {
 
 ユーザーが展開アイコンをクリックすると、ロード アイコンに変わります。`done` コールバックが呼び出されると、ロード インジケーターが消え、子が読み込まれます。ツリーグリッドは子を基になるデータソースに追加し、必要なキーを自動的に設定します。 
 
-行がその展開前に子を持つかどうかについての情報を提供する方法がある場合は、[`hasChildrenKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#haschildrenkey) 入力プロパティを使用できます。このようにして、展開インジケータを表示するかどうかを示すデータオブジェクトからブール値プロパティを提供できます。
+行がその展開前に子を持つかどうかについての情報を提供する方法がある場合は、[`hasChildrenKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#hasChildrenKey) 入力プロパティを使用できます。このようにして、展開インジケータを表示するかどうかを示すデータオブジェクトからブール値プロパティを提供できます。
 
 ```html
 <igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID"
@@ -52,7 +52,7 @@ public loadChildren = (parentID: any, done: (children: any[]) => void) => {
 </igx-tree-grid>
 ```
 
-[`hasChildrenKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#haschildrenkey) プロパティを設定する必要はありません。指定しなかった場合は、各行に展開インジケーターが表示されます。子を持たない行を展開した後も、未定義または空の配列で `done` コールバックを呼び出す必要があります。この場合、ロード インジケーターが消えた後に展開ンジケータは表示されません。
+[`hasChildrenKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#hasChildrenKey) プロパティを設定する必要はありません。指定しなかった場合は、各行に展開インジケーターが表示されます。子を持たない行を展開した後も、未定義または空の配列で `done` コールバックを呼び出す必要があります。この場合、ロード インジケーターが消えた後に展開ンジケータは表示されません。
 
 カスタムの読み込みインジケーターを提供したい場合は、ng-template を作成し、それに `igxRowLoadingIndicator` ディレクティブを使用してマークを付けます。以下のコード スニペットはカスタム テンプレートを定義する方法を示します。
 

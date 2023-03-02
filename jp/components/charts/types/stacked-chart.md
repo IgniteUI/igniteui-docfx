@@ -178,7 +178,7 @@ Angular 積層型 100% 棒チャートは、X 軸 (チャートの下のラベ�
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-stacked-100-column-chart"
-           github-src="charts/data-chart/stacked-100-column-chart" 
+           github-src="charts/data-chart/stacked-100-column-chart"
            alt="Angular 積層型 100 縦棒チャート" >
 </code-view>
 
@@ -304,7 +304,7 @@ Angular 積層型 100% 棒チャートは、X 軸 (チャートの下のラベ�
 <code-view style="height: 600px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-stacked-spline-chart"
-           github-src="charts/data-chart/stacked-spline-chart" 
+           github-src="charts/data-chart/stacked-spline-chart"
            alt="Angular 積層型 スプライン チャート" >
 </code-view>
 
@@ -357,7 +357,7 @@ Angular 積層型 100% 棒チャートは、X 軸 (チャートの下のラベ�
 -   [折れ線チャート](line-chart.md)
 -   [スプライン チャート](spline-chart.md)
 
-## API メンバー
+## API リファレンス
 
 以下のテーブルは、上記のセクションで説明した API メンバーをリストします。
 

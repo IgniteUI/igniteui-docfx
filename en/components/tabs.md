@@ -102,7 +102,7 @@ If the sample is configured properly, the final result should look like that:
 <div class="divider"></div>
 
 ## Angular Tabs Alignment
-`IgxTabs` [`tabAlignment`]({environment:angularApiUrl}/classes/igxtabscomponent.html#tabalignment) input property controls how tabs are positioned and arranged. It accepts four different values - start, center, end and justify.
+`IgxTabs` [`tabAlignment`]({environment:angularApiUrl}/classes/igxtabscomponent.html#tabAlignment) input property controls how tabs are positioned and arranged. It accepts four different values - start, center, end and justify.
 - **Start** (default): the width of the tab header depends on the content (label, icon, both) and all tabs have equal padding. First tab is aligned to the tabs container left side.
 - **Center**: the width of the tab header depends on the content and occupies the tabs container center. If the space is not enough to fit all items, scroll buttons are displayed.
 - **End**: the width of the tab header depends on the content and all tabs have equal padding. Last tab is aligned to the tabs container right side.

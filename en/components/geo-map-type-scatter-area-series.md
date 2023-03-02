@@ -176,7 +176,7 @@ export class MapTypeScatterAreaSeriesComponent implements AfterViewInit {
 }
 ```
 
-## API Members
+## API References
 
 -   [`colorMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicscatterareaseriescomponent.html#colormemberpath)
 -   [`colorScale`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicscatterareaseriescomponent.html#colorscale)

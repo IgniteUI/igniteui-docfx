@@ -55,7 +55,7 @@ Ignite UI for Angular の @@igComponent は、UI 操作のコンテナーとな�
 
 }
 
-事前定義された `actions` および `title` UI コンポーネントが  `<igx-grid-toolbar>` 内に追加されます。これはすべて、対応するグリッド機能とのデフォルトのインタラクションを提供するツールバーを持つために必要です。
+事前定義された `actions` および `title` UI コンポーネントが `<igx-grid-toolbar>` 内に追加されます。これはすべて、対応するグリッド機能とのデフォルトのインタラクションを提供するツールバーを持つために必要です。
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -103,7 +103,7 @@ Ignite UI for Angular の @@igComponent は、UI 操作のコンテナーとな�
 ```
 }
 
-> 注: 上記のコード スニペットに示されているように、事前定義された  `actions` UI コンポーネントは [`<igx-grid-toolbar-actions>` コンテナー](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/latest/classes/igxgridtoolbaractionscomponent.html)にラップされています。このように、ツールバーのタイトルはツールバーの左側に配置され、アクションはツールバーの右側に配置されます。
+> 注: 上記のコード スニペットに示されているように、事前定義された `actions` UI コンポーネントは [`<igx-grid-toolbar-actions>` コンテナー](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/latest/classes/igxgridtoolbaractionscomponent.html)にラップされています。このように、ツールバーのタイトルはツールバーの左側に配置され、アクションはツールバーの右側に配置されます。
 
 これらの UI はそれぞれ独立して追加することも、まったく追加しないこともできます。このようにして、ツールバー コンテナーは空になります。
 
@@ -212,7 +212,7 @@ IgxHierarchicalGrid の子グリッドの実装方法と DI スコープの動�
 </igx-grid-toolbar>
 ```
 
-各アクションは、[`overlaySettings`]({environment:angularApiUrl}/classes/igxgridtoolbarhidingcomponent.html#overlaysettings) 入力を使用して、アクション ダイアログのオーバーレイ設定を変更する方法を公開するようになりました。例:
+各アクションは、[`overlaySettings`]({environment:angularApiUrl}/classes/igxgridtoolbarhidingcomponent.html#overlaySettings) 入力を使用して、アクション ダイアログのオーバーレイ設定を変更する方法を公開するようになりました。例:
 
 ```html
 <igx-grid-toolbar-actions>
@@ -411,7 +411,7 @@ configureExport(args: IGridToolbarExportEventArgs) {
 ## エクスポート インジケーター
 
 デフォルトのツールバー エクスポーター コンポーネントを使用する場合、エクスポート操作が行われると、操作の進行中にツールバーに進行状況インジケーターが表示されます。
-さらに、ユーザーはツールバーの [showProgress]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html#showprogress) プロパティを設定して、自分の長時間実行操作に使用するか、グリッドで実行されている操作を示す別の方法として使用できます。
+さらに、ユーザーはツールバーの [showProgress]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html#showProgress) プロパティを設定して、自分の長時間実行操作に使用するか、グリッドで実行されている操作を示す別の方法として使用できます。
 以下のサンプルでは、progressbar が表示されるようにデータのエクスポートに必要な時間を増やすために、大量のデータを使用しています。さらに、グリッドで長時間実行される操作をシミュレートする別のボタンがあります。
 
 @@if (igxName === 'IgxGrid') {

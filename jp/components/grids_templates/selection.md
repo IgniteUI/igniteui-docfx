@@ -62,11 +62,11 @@ Ignite UI for Angular @@igComponent を使用して、さまざまなイベン�
 
 ## Angular Grid 選択のオプション
 
-Ignite UI for Angular @@igComponent コンポーネントは、[行選択](row-selection.md)、[セル選択](cell-selection.md)、[列選択](column-selection.md)の 3 つの選択モードを提供します。デフォルトでは、@@igComponent で**複数セル選択**モードのみが有効になっています。選択モードを変更/有効化するには、[`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection)、[`cellSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellSelection) 、または [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable) プロパティを使用できます。
+Ignite UI for Angular @@igComponent コンポーネントは、[行選択](row-selection.md)、[セル選択](cell-selection.md)、[列選択](column-selection.md)の 3 つの選択モードを提供します。デフォルトでは、@@igComponent で**複数セル選択**モードのみが有効になっています。選択モードを変更/有効化するには、[`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowSelection)、[`cellSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#cellSelection) 、または [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable) プロパティを使用できます。
 
 ### Angular 行選択
 
-[`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection) プロパティを使用すると、次のオプションを指定できます。
+[`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowSelection) プロパティを使用すると、次のオプションを指定できます。
 - none - @@igComponent の行選択が無効になります。
 - single - @@igComponent 内の 1 行のみの選択が利用可能になります。
 - multiple - 複数行の選択は、<kbd>ctrl</kbd> + <kbd>click</kbd>、<kbd>space キー</kbd>を押して`行セレクター`を使用することにより、複数行の選択が可能になります。@@if (igxName === 'IgxTreeGrid') {

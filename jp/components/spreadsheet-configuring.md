@@ -34,9 +34,9 @@ Angular Spreadsheet コンポネントは、セルの編集、グリッド線と
 
 ## セル編集の構成
 
-ユーザーがセルの値を編集して新しい入力を確認すると、スプレッドシートの構成に応じて、[`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) コントロールに `Enter` キーを押すと現在アクティブなセルに隣接するセルに移動できます。
+ユーザーがセルの値を編集して新しい入力を確認すると、スプレッドシートの構成に応じて、[`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) コントロールに <kbd>Enter</kbd> キーを押すと現在アクティブなセルに隣接するセルに移動できます。
 
-この `Enter` キーナビゲーションを有効にするために、[`isEnterKeyNavigationEnabled`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#isenterkeynavigationenabled) プロパティを **true** に設定できます。false に設定すると、`Enter` キーを押してもアクティブ セルは変わりません。
+この <kbd>Enter</kbd> キーナビゲーションを有効にするために、[`isEnterKeyNavigationEnabled`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#isenterkeynavigationenabled) プロパティを **true** に設定できます。false に設定すると、<kbd>Enter</kbd> キーを押してもアクティブ セルは変わりません。
 
 Enter キーを押したときに移動する隣接セルの方向は、[`enterKeyNavigationDirection`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#enterkeynavigationdirection) プロパティを `Down`、`Up`、`Left`、`Right` に設定して構成することもできます。
 
@@ -101,7 +101,7 @@ this.spreadsheet.areHeadersVisible = false;
 
 たとえば、終了モードになっているときに、100x100 の大きなデータブロックをクリックして`右`矢印キーを押すと、現在の行の右端に移動し、データのある一番右の列に移動します。この操作の後、[`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) は終了モードから飛び出します。
 
-ユーザーが `End` キーを押すと、実行時に終了モードが有効になりますが、スプレッドシート コントロールの [`isInEndMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#isinendmode) プロパティを設定することでプログラムで設定できます。
+ユーザーが <kbd>End</kbd> キーを押すと、実行時に終了モードが有効になりますが、スプレッドシート コントロールの [`isInEndMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#isinendmode) プロパティを設定することでプログラムで設定できます。
 
 以下のコード スニペットは、[`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) を終了モードで開始させる方法を示しています。
 
@@ -184,7 +184,7 @@ Angular Spreadsheet コンポーネントは、[`zoomLevel`]({environment:dvApiB
 this.spreadsheet.zoomLevel = 200;
 ```
 
-## API メンバー
+## API リファレンス
 
 -   [`activeCell`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#activecell)
 -   [`activeSelection`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#activeselection)

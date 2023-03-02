@@ -126,7 +126,7 @@ The `IgxBannerModule` exposes a directive for templating the banner buttons - [`
 
 ### Applying custom animations
 
-The banner component comes with the [`animationSettings`]({environment:angularApiUrl}/classes/igxbannercomponent.html#animationsettings) property that allows applying custom opening and closing animations. Developers can choose between self-defined animations, and those from our [`Animation suite`]({environment:sassApiUrl}/index.html). The default ones, used by the banner, are `growVerIn` for entering and `growVerOut` for exiting.
+The banner component comes with the [`animationSettings`]({environment:angularApiUrl}/classes/igxbannercomponent.html#animationSettings) property that allows applying custom opening and closing animations. Developers can choose between self-defined animations, and those from our [`Animation suite`]({environment:sassApiUrl}/index.html). The default ones, used by the banner, are `growVerIn` for entering and `growVerOut` for exiting.
 
 Let's change the animations that our banner uses, so that it slides in and out:
 

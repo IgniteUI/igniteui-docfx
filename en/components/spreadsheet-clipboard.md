@@ -62,7 +62,7 @@ public paste(): void {
 }
 ```
 
-## API Members
+## API References
 
 -   `SpreadsheetAction`
 -   [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html)

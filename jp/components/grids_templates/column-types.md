@@ -239,7 +239,7 @@ public formatPercentOptions = this.options;
 </igx-column>
 ```
 
-列を[自動生成する]({environment:angularApiUrl}/classes/igxgridcomponent.html#autoGenerate)場合、グリッドは最初のデータ レコードの値を分析します。値が文字列型で、画像拡張子 (gif、jpg、jpeg、tiff、png、webp、bmp) で終わる URL のパターンと一致する場合、列は自動的に `dataType === GridColumnDataType.Image` としてマークされ、 デフォルトの画像テンプレートが描画されます。
+列を[自動生成する]({environment:angularApiUrl}/classes/igxgridcomponent.html#autoGenerate)場合、グリッドは最初のデータ レコードの値を分析します。値が文字列型で、画像拡張子 (gif、jpg、jpeg、tiff、png、webp、bmp) で終わる URL のパターンと一致する場合、列は自動的に `dataType === GridColumnDataType.Image` としてマークされ、デフォルトの画像テンプレートが描画されます。
 
 ## デフォルトの編集テンプレート
 

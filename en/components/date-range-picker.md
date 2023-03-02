@@ -269,7 +269,7 @@ When using two separate inputs, it is possible to set the model and required pro
 <div class="divider--half"></div>
 
 ### Min and max values
-You can specify [`minValue`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html#minvalue) and [`maxValue`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html#maxvalue) properties to restrict the user input by disabling calendar dates that are outside the range defined by those values.
+You can specify [`minValue`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html#minValue) and [`maxValue`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html#maxValue) properties to restrict the user input by disabling calendar dates that are outside the range defined by those values.
 
 ```typescript
 public minDate = new Date(2020, 1, 15);
@@ -411,7 +411,7 @@ Regarding style scoping, you should refer to both styling sections [Overlay Scop
 
 
 ## Application Demo
-The demo below defines a form for flight tickets that uses the [`IgxDateRangePickerComponent`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html). If no dates are selected, an [`IgxHint`]({environment:angularApiUrl}/classes/igxhintdirective.html) is used to display a validation error. The selection of the dates is restricted by the [`minValue`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html#minvalue) and [`maxValue`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html#maxvalue) properties of the [`IgxDateRangePickerComponent`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html)
+The demo below defines a form for flight tickets that uses the [`IgxDateRangePickerComponent`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html). If no dates are selected, an [`IgxHint`]({environment:angularApiUrl}/classes/igxhintdirective.html) is used to display a validation error. The selection of the dates is restricted by the [`minValue`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html#minValue) and [`maxValue`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html#maxValue) properties of the [`IgxDateRangePickerComponent`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html)
 
 
 <code-view style="height:600px"

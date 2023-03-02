@@ -87,7 +87,7 @@ We should now see two-way data binding between our two components.
 
 
 ### Continuous Slider
-First, specify the slider type by setting the [`continuous`]({environment:angularApiUrl}/classes/igxslidercomponent.html#continuous) input to true. Next, define the minimum and maximum values using [`minValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#minvalue) and [`maxValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#maxvalue).  
+First, specify the slider type by setting the [`continuous`]({environment:angularApiUrl}/classes/igxslidercomponent.html#continuous) input to true. Next, define the minimum and maximum values using [`minValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#minValue) and [`maxValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#maxValue).  
 
 > [!NOTE]
 > Continuous slider doesn't have step indicators over the track and visible thumb labels during interaction.
@@ -181,8 +181,8 @@ export class SampleComponent {
 >[!NOTE]
 > When using a slider of type RANGE, binding to `ngModel` will work only in the direction of updating the model from the slider. In order to use two-way binding for both values, you can take advantage of the `lowerValue` and `upperValue` bindings.
 
-In some cases, values near to the minimum and maximum are not appropriate. You can further provide a useful range to limit the user choice along with setting [`minValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#minvalue) and [`maxValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#maxvalue). 
-This can be done by setting [`lowerBound`]({environment:angularApiUrl}/classes/igxslidercomponent.html#lowerbound) and [`upperBound`]({environment:angularApiUrl}/classes/igxslidercomponent.html#upperbound). Now, the user will not be able to move the thumb in the range of 0 to 100 and in the range of 900 to 1000.
+In some cases, values near to the minimum and maximum are not appropriate. You can further provide a useful range to limit the user choice along with setting [`minValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#minValue) and [`maxValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#maxValue). 
+This can be done by setting [`lowerBound`]({environment:angularApiUrl}/classes/igxslidercomponent.html#lowerBound) and [`upperBound`]({environment:angularApiUrl}/classes/igxslidercomponent.html#upperBound). Now, the user will not be able to move the thumb in the range of 0 to 100 and in the range of 900 to 1000.
 
 ```html
 <!--sample.component.html-->
@@ -213,7 +213,7 @@ We've seen only numbers in the thumbs so far, although there is another approach
 Once we have the definition that corresponds to the preceding rule, we are ready to give it to the `labels` **input** property, which would handle our data by spreading it equally over the `track`. Now, label values represent every primitive value we've defined in our collection. They could be accessed at any time through the API by requesting either [lowerLabel]({environment:angularApiUrl}/classes/igxslidercomponent.html#lowerLabel) or [upperLabel]({environment:angularApiUrl}/classes/igxslidercomponent.html#upperLabel).
 
 >[!NOTE]
-> Please take into account the fact that when [`labelsView`]({environment:angularApiUrl}/classes/igxslidercomponent.html#labelsviewenabled) is enabled, your control over the [`maxValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#maxvalue), [`minValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#minvalue) and [`step`]({environment:angularApiUrl}/classes/igxslidercomponent.html#step) inputs will be taken. 
+> Please take into account the fact that when [`labelsView`]({environment:angularApiUrl}/classes/igxslidercomponent.html#labelsView) is enabled, your control over the [`maxValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#maxValue), [`minValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#minValue) and [`step`]({environment:angularApiUrl}/classes/igxslidercomponent.html#step) inputs will be taken. 
 
 Another important factor is the way that the `slider` handles the update process when `labelsView` is enabled.
 It simply operates with the `index(es)` of the colleciton, which respectively means that the `value`, `lowerBound` and `upperBound` **properties** control the `track` by following/setting them (`index(es)`).
@@ -262,9 +262,9 @@ The [context]({environment:angularApiUrl}/classes/igxslidercomponent.html#contex
 **Slider tick marks**, provide a new and more appealing way for data visualization, like a particular timeframe, days of the week and more. With this new functionality, the users are not obliged to interact with the Angular Slider in order to see what data range is being represented. It is extremely flexible, with regards to the control over positioning and orientation of the **tick marks** and **tick labels**. The **ticks** can be turned **on/off**, as well as can be toggled between **primary**, **secondary** or **both**. In addition, this feature provides a way to turn **on/of** **primary**, **secondary** **tick labels** or both. **Tick labels** can change their rotation form **horizontal** to **vertical** (**top to bottom** (90) or **bottom to top** (-90)).
 
 ### Enable ticks
-We can enable the **ticks** of the slider by setting the [`showTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#showticks) to **true**.    
-Use [`primaryTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#primaryticks) to set the number of primary ticks.  
-Use [`SecondaryTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#secondaryticks) to set the number of secondary ticks.
+We can enable the **ticks** of the slider by setting the [`showTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#showTicks) to **true**.    
+Use [`primaryTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#primaryTicks) to set the number of primary ticks.  
+Use [`SecondaryTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#secondaryTicks) to set the number of secondary ticks.
 
 ```html
 <!--sample.component.html-->
@@ -295,7 +295,7 @@ public type = SliderType.RANGE;
 
 
 ### Labels orientation and visibility.
-In the following sample we disable all **secondary labels** by setting [`secondaryTickLabels`]({environment:angularApiUrl}/classes/igxslidercomponent.html#secondaryticklabels) to **false**.  
+In the following sample we disable all **secondary labels** by setting [`secondaryTickLabels`]({environment:angularApiUrl}/classes/igxslidercomponent.html#secondaryTickLabels) to **false**.  
 
 ```html
 <igx-slider
@@ -343,7 +343,7 @@ Let’s move on and see how to change the position of the **ticks**.
 </div>
 ```
 
-The position change has come from the [`ticksOrientation`]({environment:angularApiUrl}/classes/igxslidercomponent.html#ticksorientation) input, which is changed from **Bottom**(default) to **Mirror**. 
+The position change has come from the [`ticksOrientation`]({environment:angularApiUrl}/classes/igxslidercomponent.html#ticksOrientation) input, which is changed from **Bottom**(default) to **Mirror**. 
 This mirrors the visualization of the **ticks** and displays them above and below the slider.
 
 ```typescript
@@ -360,7 +360,7 @@ This mirrors the visualization of the **ticks** and displays them above and belo
 
 
 > [!NOTE]
-> When the [`ticksOrientaion`]({environment:angularApiUrl}/classes/igxslidercomponent.html#ticksorientation) is set to **Top** or **Mirror** and there are visible **tick labels** the **thumb label** is hidden intentionally. This prevents a bad user experience and overlapping between the two labels.
+> When the [`ticksOrientaion`]({environment:angularApiUrl}/classes/igxslidercomponent.html#ticksOrientaion) is set to **Top** or **Mirror** and there are visible **tick labels** the **thumb label** is hidden intentionally. This prevents a bad user experience and overlapping between the two labels.
 
 ### Slider ticks with labels view
 This example show how the tick labels and the thumb label works together.
@@ -384,7 +384,7 @@ This example show how the tick labels and the thumb label works together.
 </code-view>
 
 
-Here, the [`primaryTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#primaryticks) input has not been set, because it won’t be reflected in any way. The **length** of the collection takes precedence over it. This does not mean that [`secondaryTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#secondaryticks) cannot be set. All **secondary ticks** will be empty (without any **labels**).
+Here, the [`primaryTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#primaryTicks) input has not been set, because it won’t be reflected in any way. The **length** of the collection takes precedence over it. This does not mean that [`secondaryTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#secondaryTicks) cannot be set. All **secondary ticks** will be empty (without any **labels**).
 
 ### Template labels
 Lastly, we will see how we can provide a custom template for the **tick labels** and what the [`template context`]({environment:angularApiUrl}/classes/igxtickscomponent.html#context) provides.

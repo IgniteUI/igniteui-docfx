@@ -64,11 +64,11 @@ Angular データ チャートのナビゲーションは、タッチ、マウ�
 
 ## スクロールバーを使用したチャート ナビゲーション
 
-チャートは、[`verticalViewScrollbarMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriesviewercomponent.html#verticalviewscrollbarmode) プロパティと [`horizontalViewScrollbarMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriesviewercomponent.html#horizontalviewscrollbarmode) プロパティを有効にすることでスクロールできます。 
+チャートは、[`verticalViewScrollbarMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriesviewercomponent.html#verticalviewscrollbarmode) プロパティと [`horizontalViewScrollbarMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriesviewercomponent.html#horizontalviewscrollbarmode) プロパティを有効にすることでスクロールできます。
 
 これらは、次のオプションに構成できます:
 
--   `Persistent` - チャートがズームインされている限り、スクロールバーは常に表示されたままになり、完全にズームアウトされるとフェードアウトします。 
+-   `Persistent` - チャートがズームインされている限り、スクロールバーは常に表示されたままになり、完全にズームアウトされるとフェードアウトします。
 -   `Fading` - スクロールバーは使用後に消え、マウスがその位置に近づくと再び表示されます。
 -   `FadeToLine` - ズームを使用していないときは、スクロールバーが細い線に縮小されます。
 -   `None` - 既定値で、スクロールバーは表示されません。
@@ -97,7 +97,8 @@ Angular データ チャートのナビゲーションは、タッチ、マウ�
 
 ## コードによるチャート ナビゲーション
 
-> 注: チャートのコード ナビゲーションは、[`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) コントロールにのみ使用できます。
+> [!NOTE]
+> チャートのコード ナビゲーションは、[`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) コントロールにのみ使用できます。
 
 Angular データ チャートは、チャートでズームまたはパン操作が行われるたびに更新されるいくつかのナビゲーション プロパティを提供します。各プロパティは、チャートでズームやパンニングするためにコードで設定できます。以下は、これらのプロパティの一覧です。
 
@@ -114,7 +115,7 @@ Angular データ チャートは、チャートでズームまたはパン操�
 -   [チャート ツールチップ](chart-tooltips.md)
 -   [チャート トレンドライン](chart-trendlines.md)
 
-## API メンバー
+## API リファレンス
 
 以下は、上記のセクションで説明した API メンバーのリストです。
 

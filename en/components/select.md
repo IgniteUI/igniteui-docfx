@@ -12,8 +12,8 @@ Angular Material Select is a form control used for data entry and data display, 
 ## Angular Select Example
 Below is a basic Angular Select example. It has a simple contextual menu that displays a list of several choices opening per click.
 
-<code-view style="height: 300px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 300px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/select-sample-1" alt="Angular Select Example">
 </code-view>
 
@@ -23,11 +23,9 @@ Below is a basic Angular Select example. It has a simple contextual menu that di
 To get started with the Ignite UI for Angular [Select Component]({environment:angularApiUrl}/classes/igxselectcomponent.html), first you need to import the **IgxSelectModule** in your **app.module**:
 ```typescript
 // app.module.ts
-
 ...
 import { IgxSelectModule } from 'igniteui-angular';
 // import { IgxSelectModule } from '@infragistics/igniteui-angular'; for licensed package
-
 @NgModule({
     ...
     imports: [..., IgxSelectModule],
@@ -35,7 +33,6 @@ import { IgxSelectModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
-
 Then add the `igx-select` along with a list of items to choose from. We use [`igx-select-item`]({environment:angularApiUrl}/classes/igxselectitemcomponent.html) to display the items that the `igx-select` contains.
 ```html
 <igx-select>
@@ -46,13 +43,10 @@ Then add the `igx-select` along with a list of items to choose from. We use [`ig
     <igx-select-item value="Mango">Mango</igx-select-item>
 </igx-select>
 ```
-
 Another way to do it would be to use a collection of items that we want to display using the [*ngFor](https://angular.io/api/common/NgForOf) structural directive:
-
 ```typescript
 public items: string[] = ['Orange', 'Apple', 'Banana', 'Mango'];
 ```
-
 ```html
 <igx-select [(ngModel)]="selected">
     <label igxLabel>Simple Select</label>
@@ -61,9 +55,7 @@ public items: string[] = ['Orange', 'Apple', 'Banana', 'Mango'];
     </igx-select-item>
 </igx-select>
 ```
-
 By default, the Select component will use the `innerText` of the item element in the input field. In cases with more complex item templates, you can explicitly set the `text` property to specify what to display in the input field when this item is selected. For example:
-
 ```html
 <igx-select>
     <igx-select-item *ngFor="let item of items" [value]="item.value" [text]="item.text">
@@ -71,8 +63,7 @@ By default, the Select component will use the `innerText` of the item element in
     </igx-select-item>
 </igx-select>
 ```
-To see the `text` property in action with a bit more sophisticated item templates, check the grouping sample below [Select with Groups](#group-select-items).
-
+To see the `text` property in action with a bit more sophisticated item templates, check the grouping sample below **Select with Groups** section.
 ### Input Properties
 
 The Select component supports the following directives applicable to the [Input Group](input-group.md):
@@ -97,13 +88,10 @@ The Select component supports the following directives applicable to the [Input 
     </igx-select-item>
 </igx-select>
 ```
-
-
-<code-view style="height: 350px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 350px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/select-input-directives" >
 </code-view>
-
 
 > [!NOTE]
 If no [`placeholder`]({environment:angularApiUrl}/classes/igxselectcomponent.html#placeholder) is specified for the Select component and there is no selection made, the `igxLabel` will transition and appear where you would expect the placeholder to be.
@@ -127,7 +115,6 @@ public greengrocery: Array<{ label: string, items: Array<{ type: string, origin:
     }
 ];
 ```
-
 Then in your template file you can iterate over the objects and access their items accordingly:
 ```html
 <igx-select #select>
@@ -146,19 +133,14 @@ Then in your template file you can iterate over the objects and access their ite
     </igx-select-item-group>
 </igx-select>
 ```
-
-
-<code-view style="height: 400px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 400px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/select-sample-2" >
 </code-view>
 
-
 ### Header & Footer
 Currently, there are no default header and footer templates for the Select component. However, you can add a header or a footer template by marking them respectively with `igxSelectHeader` or `igxSelectFooter`. As these are custom templates, you should define their styling as well.
-
 In this example, there are both header and footer ng-templates defined. In the header there is a basic filtering, implemented via [`igx-buttongroup`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html). The footer includes static summary of all of the items, based on the delivery method.
-
 ```html
 <igx-select>
     <label igxLabel>Pick your fruit</label>
@@ -209,16 +191,14 @@ In this example, there are both header and footer ng-templates defined. In the h
     </ng-template>
 </igx-select>
 ```
-
-
-<code-view style="height: 610px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 610px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/select-header-footer" >
 </code-view>
 
 
 ### Custom Toggle Button in Angular Select
-You can customize the default toggle button, using the `igxSelectToggleIcon` directive or setting a `TemplateRef` to the [`toggleIconTemplate`]({environment:angularApiUrl}/classes/igxselectcomponent.html#toggleicontemplate) property.
+You can customize the default toggle button, using the `igxSelectToggleIcon` directive or setting a `TemplateRef` to the [`toggleIconTemplate`]({environment:angularApiUrl}/classes/igxselectcomponent.html#toggleIconTemplate) property.
 
 ```html
 <igx-select #select>
@@ -267,7 +247,7 @@ export class MyClass implements OnInit {
             closeAnimation: scaleOutBottom,
             horizontalDirection: HorizontalAlignment.Right,
             horizontalStartPoint: HorizontalAlignment.Left,
-            openAnimation: scaleInTop,            
+            openAnimation: scaleInTop,
             verticalDirection: VerticalAlignment.Bottom,
             verticalStartPoint: VerticalAlignment.Bottom
         };
@@ -286,8 +266,8 @@ You can see that we create a [*PositionSettings*]({environment:angularApiUrl}/in
 - You can set all settings inside of the [*ngOnInit*](https://angular.io/api/core/OnInit) hook and this will automatically affect your template upon the component's generation.
 
 
-<code-view style="height: 260px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 260px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/select-sample-4" >
 </code-view>
 
@@ -332,15 +312,15 @@ Take a look at the [`Input Group`](input-group.md#styling) and the [`Drop Down`]
 
 <div class="divider--half"></div>
 
-## API Reference 
-* [IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html)  
-* [IgxSelectItemComponent]({environment:angularApiUrl}/classes/igxselectitemcomponent.html)  
-* [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html)  
-* [IgxDropDownItemComponent]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html)  
-* [OverlaySettings]({environment:angularApiUrl}/interfaces/overlaysettings.html)  
-* [ConnectedPositioningStrategy]({environment:angularApiUrl}/classes/connectedpositioningstrategy.html)  
-* [GlobalPositionStrategy]({environment:angularApiUrl}/classes/globalpositionstrategy.html#constructor)  
-* [AbsoluteScrollStrategy]({environment:angularApiUrl}/classes/absolutescrollstrategy.html)  
+## API Reference
+* [IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html)
+* [IgxSelectItemComponent]({environment:angularApiUrl}/classes/igxselectitemcomponent.html)
+* [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html)
+* [IgxDropDownItemComponent]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html)
+* [OverlaySettings]({environment:angularApiUrl}/interfaces/overlaysettings.html)
+* [ConnectedPositioningStrategy]({environment:angularApiUrl}/classes/connectedpositioningstrategy.html)
+* [GlobalPositionStrategy]({environment:angularApiUrl}/classes/globalpositionstrategy.html#constructor)
+* [AbsoluteScrollStrategy]({environment:angularApiUrl}/classes/absolutescrollstrategy.html)
 * [PositionSettings]({environment:angularApiUrl}/interfaces/positionsettings.html)
 
 ## Theming Dependencies

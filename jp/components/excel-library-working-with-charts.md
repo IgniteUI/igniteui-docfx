@@ -38,7 +38,7 @@ Infragistics Angular Excel Engine の [`WorksheetChart`]({environment:dvApiBaseU
 
 `AddChart` メソッドはワークシートに追加されるワークシート チャート要素を返します。次にチャートの [`setSourceData`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetchart.html#setsourcedata) メソッドを使用してデータ ソースとして使用するワークシート セル領域のセルのセル アドレスを設定できます。同様に行列のマッピングを Y と X 軸に切り替えることもできます。
 
-`Line`、`Area`、[`IgxColumnComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcolumncomponent.html)、`Pie` を含む 70 タイプ以上のチャート タイプがサポートされます。
+`Line`、`Area`、[`IgxColumn`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcolumn.html)、`Pie` を含む 70 タイプ以上のチャート タイプがサポートされます。
 
 以下のコードは、Excel チャート機能を有効にする方法を示します。以下のスニペットは、ワークシートの最初の行の最初のセルと 13 番目のセル間に縦棒チャートを追加します。ソースデータは A2:M6 領域のデータに設定します。縦棒チャートの  X と Y 軸の列と行のマッピングを切り替えます。
 
@@ -50,11 +50,11 @@ var chart = ws.shapes().addChart(ChartType.ColumnClustered,
 chart.setSourceData("A2:M6", true);
 ```
 
-## API メンバー
+## API リファレンス
 
 -   `AddChart`
 -   `Area`
--   [`IgxColumnComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcolumncomponent.html)
+-   [`IgxColumn`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcolumn.html)
 -   `Line`
 -   `Pie`
 -   [`WorksheetChart`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetchart.html)

@@ -279,7 +279,7 @@ Please keep in mind the following:
  - [`displayDensity`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#displayDensity) options will have **NO** impact on row height **if there is [rowHeight]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowheight) specified**;
  - [`displayDensity`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#displayDensity) will **affect all of the rest elements in the @@igComponent**, as it has been described above;
 
-And now we can extend our sample and add [`rowHeight`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowheight) property to the @@igComponent:
+And now we can extend our sample and add [`rowHeight`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowHeight) property to the @@igComponent:
 
  ```html
  <@@igSelector #@@igObjectRef [data]="data" [displayDensity]="density" [rowHeight]="'80px'" width="100%" 
