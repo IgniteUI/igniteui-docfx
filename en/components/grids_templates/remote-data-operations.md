@@ -59,7 +59,7 @@ You can perform these tasks remotely and feed the resulting data to the @@igComp
 
 The [@@igxName]({environment:angularApiUrl}/classes/@@igTypeDoc.html) supports the scenario in which the data chunks are requested from a remote service, exposing the behavior implemented in the [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html) directive it uses internally.
 
-To utilize this feature, you need to subscribe to the [`dataPreLoad`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#datapreload) output so that you make the appropriate request based on the arguments received, as well as set the public [@@igxName]({environment:angularApiUrl}/classes/@@igTypeDoc.html) property [`totalItemCount`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalitemcount) with the respective information coming from the service.
+To utilize this feature, you need to subscribe to the [`dataPreLoad`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#dataPreLoad) output so that you make the appropriate request based on the arguments received, as well as set the public [@@igxName]({environment:angularApiUrl}/classes/@@igTypeDoc.html) property [`totalItemCount`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalItemCount) with the respective information coming from the service.
 
 ```html
 <igx-grid #grid [data]="remoteData | async" [autoGenerate]="false"
@@ -94,10 +94,10 @@ public processData(reset) {
 }
 ```
 
-When requesting data, you need to utilize the [`IForOfState`]({environment:angularApiUrl}/interfaces/iforofstate.html) interface, which provides the [`startIndex`]({environment:angularApiUrl}/interfaces/iforofstate.html#startindex) and [`chunkSize`]({environment:angularApiUrl}/interfaces/iforofstate.html#chunksize) properties.
+When requesting data, you need to utilize the [`IForOfState`]({environment:angularApiUrl}/interfaces/iforofstate.html) interface, which provides the [`startIndex`]({environment:angularApiUrl}/interfaces/iforofstate.html#startIndex) and [`chunkSize`]({environment:angularApiUrl}/interfaces/iforofstate.html#chunkSize) properties.
 
 >[!NOTE]
->The first [`chunkSize`]({environment:angularApiUrl}/interfaces/iforofstate.html#chunksize) will always be 0 and should be determined by you based on the specific application scenario.
+>The first [`chunkSize`]({environment:angularApiUrl}/interfaces/iforofstate.html#chunkSize) will always be 0 and should be determined by you based on the specific application scenario.
 
 ### Remote Virtualization Demo
 
@@ -169,7 +169,7 @@ public handlePreLoad() {
 
 ## Remote Sorting/Filtering
 
-To provide remote sorting and filtering, you need to subscribe to the [`dataPreLoad`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#datapreload), [`sortingExpressionsChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sortingexpressionschange) and [`filteringExpressionsTreeChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringexpressionstreechange) outputs, so that you make the appropriate request based on the arguments received, as well as set the public [@@igxName]({environment:angularApiUrl}/classes/@@igTypeDoc.html) property [`totalItemCount`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalitemcount) with the respective information coming from the service.
+To provide remote sorting and filtering, you need to subscribe to the [`dataPreLoad`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#dataPreLoad), [`sortingExpressionsChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sortingExpressionsChange) and [`filteringExpressionsTreeChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringexpressionstreechange) outputs, so that you make the appropriate request based on the arguments received, as well as set the public [@@igxName]({environment:angularApiUrl}/classes/@@igTypeDoc.html) property [`totalItemCount`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalItemCount) with the respective information coming from the service.
 
 We will also take advantage of the **rxjs** `debounceTime` function, which emits a value from the source Observable only after a particular time span has passed without another source emission. This way the remote operation will be triggered only when the specified amount of time has passed without the user interrupting it.
 
@@ -201,7 +201,7 @@ public ngAfterViewInit() {
 }
 ```
 
-When remote sorting and filtering are provided, usually we do not need the built-in sorting and filtering of the grid. We can disable them by setting the [`sortStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sortstrategy) and the [`filterStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filterstrategy) inputs of the grid to the `NoopSortingStrategy` and the `NoopFilteringStrategy` respective instances.
+When remote sorting and filtering are provided, usually we do not need the built-in sorting and filtering of the grid. We can disable them by setting the [`sortStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sortStrategy) and the [`filterStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filterStrategy) inputs of the grid to the `NoopSortingStrategy` and the `NoopFilteringStrategy` respective instances.
 
 ```html
 <igx-grid #grid [data]="remoteData | async" [height]="'500px'" [width]="'100%'" [autoGenerate]='false'
@@ -227,7 +227,7 @@ You can see the result of the code from above at the beginning of this article i
 @@if (igxName === 'IgxTreeGrid') {
 ### Remote Filtering
 
-To provide remote filtering, you need to subscribe to the [`filteringExpressionsTreeChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringexpressionstreechange) output so that you make the appropriate request based on the arguments received. Let's use a flat collection as a data source for our Tree Grid by providing a [`primaryKey`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primarykey) and a [`foreignKey`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#foreignkey).
+To provide remote filtering, you need to subscribe to the [`filteringExpressionsTreeChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringExpressionsTreeChange) output so that you make the appropriate request based on the arguments received. Let's use a flat collection as a data source for our Tree Grid by providing a [`primaryKey`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primaryKey) and a [`foreignKey`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#foreignKey).
 
 We will also take advantage of the **rxjs** `debounceTime` function, which emits a value from the source Observable only after a particular time span has passed without another source emission. This way the remote operation will be triggered only when the specified amount of time has passed without the user interrupting it.
 
@@ -245,7 +245,7 @@ public ngAfterViewInit() {
 }
 ```
 
-When remote filtering is provided, usually we do not need the built-in filtering of the Tree Grid. We can disable it by setting the [`filterStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filterstrategy) input of the Tree Grid to the `NoopFilteringStrategy` instance.
+When remote filtering is provided, usually we do not need the built-in filtering of the Tree Grid. We can disable it by setting the [`filterStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filterStrategy) input of the Tree Grid to the `NoopFilteringStrategy` instance.
 
 ```html
 <!-- tree-grid-remote-filtering-sample.html -->
@@ -294,7 +294,7 @@ You can see the result of the code from above at the beginning of this article i
 ### Unique Column Values Strategy
 }
 
-The list items inside the Excel Style Filtering dialog represent the unique values for the respective column. The @@igComponent generates these values based on its data source by default. In case of remote filtering, the grid data does not contain all the data from the server. In order to provide the unique values manually and load them on demand, we can take advantage of the @@igComponent's [`uniqueColumnValuesStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#uniquecolumnvaluesstrategy) input. This input is actually a method that provides three arguments:
+The list items inside the Excel Style Filtering dialog represent the unique values for the respective column. The @@igComponent generates these values based on its data source by default. In case of remote filtering, the grid data does not contain all the data from the server. In order to provide the unique values manually and load them on demand, we can take advantage of the @@igComponent's [`uniqueColumnValuesStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#uniqueColumnValuesStrategy) input. This input is actually a method that provides three arguments:
 - **column**  - The respective column instance.
 - **filteringExpressionsTree** - The filtering expressions tree, which is reduced based on the respective column.
 - **done** - Callback that should be called with the newly generated column values when they are retrieved from the server.
@@ -302,7 +302,7 @@ The list items inside the Excel Style Filtering dialog represent the unique valu
 The developer can manually generate the necessary unique column values based on the information, that is provided by the **column** and the **filteringExpressionsTree** arguments and then invoke the **done** callback.
 
 > [!NOTE]
-> When the [`uniqueColumnValuesStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#uniquecolumnvaluesstrategy) input is provided, the default unique values generating process in the excel style filtering will not be used.
+> When the [`uniqueColumnValuesStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#uniqueColumnValuesStrategy) input is provided, the default unique values generating process in the excel style filtering will not be used.
 
 @@if (igxName === 'IgxGrid') {
 ```html

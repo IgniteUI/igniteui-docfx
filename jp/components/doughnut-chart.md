@@ -148,7 +148,7 @@ this.data = [
 
 ドーナツ型チャート コンポーネントは、1 つ以上のスライスの状態を 選択された状態に設定する API を公開します。任意で、単一のカスタム ビジュアル スタイルを選択済みスライスに適用できます。
 
-**スライス選択の有効化/無効化** - [`allowSliceSelection`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdoughnutchartcomponent.html#allowsliceselection) プロパティを設定してドーナツ型チャートでスライスの選択を有効または無効にします。
+**スライス選択の有効化/無効化** - [`allowSliceSelection`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdoughnutchartcomponent.html#allowSliceSelection) プロパティを設定してドーナツ型チャートでスライスの選択を有効または無効にします。
 
 **選択されたスライスのスタイル設定** - スライスの `TargetType` で選択されたスライスのスタイルを定義し、ドーナツ型チャートの `SelectedStyle` プロパティに割り当てることでスタイル設定できます。
 
@@ -175,7 +175,7 @@ this.data = [
 ドーナツ チャート コンポーネントのスライスは、コードまたはユーザー インタラクションによって分割できます。
 
 **スライス分割の有効化/無効化**
-[`allowSliceExplosion`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdoughnutchartcomponent.html#allowsliceexplosion) プロパティを設定してスライスを分割する機能を有効または無効にできます。
+[`allowSliceExplosion`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdoughnutchartcomponent.html#allowSliceExplosion) プロパティを設定してスライスを分割する機能を有効または無効にできます。
 
 **スライスのクリック時にスライスの分割状態を変更**
 `SliceClick` イベント用イベント ハンドラーをアタッチする場合、イベント引数でクリックされたスライスへの参照を提供するので、分割状態を修正できます。

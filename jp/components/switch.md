@@ -95,7 +95,7 @@ igx-switch {
 
 ### ラベル位置
 
-スイッチの [`labelPosition`]({environment:angularApiUrl}/classes/igxswitchcomponent.html#labelposition) プロパティを使用してラベルを配置できます。
+スイッチの [`labelPosition`]({environment:angularApiUrl}/classes/igxswitchcomponent.html#labelPosition) プロパティを使用してラベルを配置できます。
 
 ```html
 <igx-switch labelPosition="before"></igx-switch>

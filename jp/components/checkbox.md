@@ -106,7 +106,7 @@ igx-checkbox {
 
 ### ラベル配置
 
-チェックボックスの [`labelPosition`]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html#labelposition) プロパティを使用してラベル位置を指定することができます。
+チェックボックスの [`labelPosition`]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html#labelPosition) プロパティを使用してラベル位置を指定することができます。
 
 ```html
 <igx-checkbox labelPosition="before"></igx-checkbox>

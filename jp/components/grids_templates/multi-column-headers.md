@@ -205,7 +205,7 @@ _language: ja
 ...
 ```
 
-複数の列グループに対して単一のテンプレートを再利用する場合は、以下のように列グループの [`headerTemplate`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html#headertemplate) プロパティを設定できます。
+複数の列グループに対して単一のテンプレートを再利用する場合は、以下のように列グループの [`headerTemplate`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html#headerTemplate) プロパティを設定できます。
 
 ```html
 <ng-template #columnGroupHeaderTemplate let-columnGroup>

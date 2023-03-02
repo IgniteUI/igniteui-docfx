@@ -94,7 +94,7 @@ And the final result should be something like that:
 
 ### Label Positioning
 
-You can position the label using the switch's [`labelPosition`]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html#labelposition) property:
+You can position the label using the switch's [`labelPosition`]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html#labelPosition) property:
 
 ```html
 <igx-switch labelPosition="before"></igx-switch>

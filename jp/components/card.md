@@ -28,7 +28,7 @@ Card コンポーネントは、様々なオブジェクト タイプ、サイ�
 
 ### 作業の開始
 
-**app.module.ts** ファイルに  `IgxCardModule` をインポートします。
+**app.module.ts** ファイルに `IgxCardModule` をインポートします。
 
 ```typescript
 // app.module.ts

@@ -39,7 +39,7 @@ _language: ja
 - grid - グループ化に使用される `IgxTreeGridComponent`。
 - expressions - [`IGroupingExpression`]({environment:angularApiUrl}/interfaces/igroupingexpression.html) オブジェクトの配列。これには、階層の生成に使用されるフィールドと各グループの並べ替えの詳細が含まれます。
 - hideGroupedColumns - グループ化が実行された列を非表示にするかどうかを示すブール値。
-- density - ビューを変更するために使用できる [`displayDensity`]({environment:angularApiUrl}/classes/igxgridcomponent.html#displaydensity)。
+- density - ビューを変更するために使用できる [`displayDensity`]({environment:angularApiUrl}/classes/igxgridcomponent.html#displayDensity)。
 - dropAreaTemplate - デフォルトのドロップ エリア テンプレートを上書きするために使用できるドロッ プエリアのテンプレート。
 - dropAreaMessage - デフォルトのドロップ エリア テンプレートのデフォルト メッセージを上書きするために使用できる文字列。
 
@@ -130,7 +130,7 @@ public sorting = IgxGroupedTreeGridSorting.instance();
         <igx-column [field]="groupColumnKey"></igx-column>
 ```
 
-ユーザーが行を展開するときに子行を読み込むために、ツリーグリッドはコールバック入力プロパティ [`loadChildrenOnDemand`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#loadchildrenondemand) を提供します - 子データはサーバーから取得され、グループ化パラメーターに基づいて要求された親行に割り当てられます。
+ユーザーが行を展開するときに子行を読み込むために、ツリーグリッドはコールバック入力プロパティ [`loadChildrenOnDemand`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#loadChildrenOnDemand) を提供します - 子データはサーバーから取得され、グループ化パラメーターに基づいて要求された親行に割り当てられます。
 
 ```typescript
 public groupingExpressions: IGroupingExpression[] = [

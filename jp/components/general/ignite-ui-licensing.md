@@ -16,8 +16,8 @@ Ignite UI 使用許諾契約と利用規約の詳細については、[ここを
 
 インフラジスティックスは、以下の無料の非営利および再販禁止 (NFR) ライセンスを提供しています。
 
-  - Microsoft MVP、Microsoft Regional Director、Google Developer Expert などの開発者プログラムに参加している場合。  
-  - 小学生、中学生、大学生、または教育機関、または教授である場合。  
+  - Microsoft MVP、Microsoft Regional Director、Google Developer Expert などの開発者プログラムに参加している場合。
+  - 小学生、中学生、大学生、または教育機関、または教授である場合。
 
 無料の非営利および再販禁止 (NFR) ライセンスの資格がある場合、またはライセンスに関する質問がある場合は、[お問い合わせ](https://jp.infragistics.com/about-us/contact-us)ください。
 
