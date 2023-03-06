@@ -71,6 +71,14 @@ Run the `adduser` command and specify a user account and password:
 npm adduser --registry=https://packages.infragistics.com/npm/js-licensed/ --scope=@infragistics
 </pre>
 
+#### Node v9.0.x - 9.3.x
+
+If you are using `npm` version 9.0.x till version 9.3.x you need to set `--auth-type=legacy`
+
+<pre style="background:#141414;color:white;display:inline-block;padding:16x;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
+npm adduser --registry=https://packages.infragistics.com/npm/js-licensed/ --scope=@infragistics --always-auth --auth-type=legacy
+</pre>
+
 #### Node version 9.4+
 <pre style="background:#141414;color:white;display:inline-block;padding:16x;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
 npm config set @infragistics:registry https://packages.infragistics.com/npm/js-licensed/
