@@ -64,7 +64,7 @@ This will allow you to seamlessly use a mix of packages from the public npm regi
 
 ### Now, to log in to our private feed using npm
 
-#### Node version 9.4+
+#### npm version 9.4+
 <pre style="background:#141414;color:white;display:inline-block;padding:16x;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
 npm config set @infragistics:registry https://packages.infragistics.com/npm/js-licensed/
 
@@ -82,7 +82,7 @@ This approach is applicable to all prior versions of `npm`.
 > [!IMPORTANT]
 > If your account is not licensed (you are still using a Trial account) the private package feed won't be accessible to you e.g. it will return 404 or 403 error message. **Only licensed accounts can access the packages.infragistics private feed.**
 
-#### Node v9.0.x - 9.3.x
+#### npm v9.0.x - 9.3.x
 
 If you are using `npm` version 9.0.x till version 9.3.x you need to set `--auth-type=legacy`
 
@@ -90,7 +90,7 @@ If you are using `npm` version 9.0.x till version 9.3.x you need to set `--auth-
 npm adduser --registry=https://packages.infragistics.com/npm/js-licensed/ --scope=@infragistics --always-auth --auth-type=legacy
 </pre>
 
-#### Node version up to v8
+#### npm version up to v8
 Run the `adduser` command and specify a user account and password:
 
 <pre style="background:#141414;color:white;display:inline-block;padding:16x;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
