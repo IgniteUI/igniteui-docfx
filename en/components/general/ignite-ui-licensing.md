@@ -64,21 +64,6 @@ This will allow you to seamlessly use a mix of packages from the public npm regi
 
 ### Now, to log in to our private feed using npm
 
-#### Node version up to v8
-Run the `adduser` command and specify a user account and password:
-
-<pre style="background:#141414;color:white;display:inline-block;padding:16x;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
-npm adduser --registry=https://packages.infragistics.com/npm/js-licensed/ --scope=@infragistics
-</pre>
-
-#### Node v9.0.x - 9.3.x
-
-If you are using `npm` version 9.0.x till version 9.3.x you need to set `--auth-type=legacy`
-
-<pre style="background:#141414;color:white;display:inline-block;padding:16x;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
-npm adduser --registry=https://packages.infragistics.com/npm/js-licensed/ --scope=@infragistics --always-auth --auth-type=legacy
-</pre>
-
 #### Node version 9.4+
 <pre style="background:#141414;color:white;display:inline-block;padding:16x;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
 npm config set @infragistics:registry https://packages.infragistics.com/npm/js-licensed/
@@ -92,8 +77,26 @@ npm config set //packages.infragistics.com/npm/js-licensed/:_auth=${IG_AUTH_TOKE
 
 You can generate [Access Token](#access-token-usage) through your Infragistics profile.
 
+This approach is applicable to all prior versions of `npm`.
+
 > [!IMPORTANT]
 > If your account is not licensed (you are still using a Trial account) the private package feed won't be accessible to you e.g. it will return 404 or 403 error message. **Only licensed accounts can access the packages.infragistics private feed.**
+
+#### Node v9.0.x - 9.3.x
+
+If you are using `npm` version 9.0.x till version 9.3.x you need to set `--auth-type=legacy`
+
+<pre style="background:#141414;color:white;display:inline-block;padding:16x;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
+npm adduser --registry=https://packages.infragistics.com/npm/js-licensed/ --scope=@infragistics --always-auth --auth-type=legacy
+</pre>
+
+#### Node version up to v8
+Run the `adduser` command and specify a user account and password:
+
+<pre style="background:#141414;color:white;display:inline-block;padding:16x;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
+npm adduser --registry=https://packages.infragistics.com/npm/js-licensed/ --scope=@infragistics
+</pre>
+
 
 #### After this is done, you will be logged in and you will be able to install the latest versions of the Ignite UI packages into your project:
 
