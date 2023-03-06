@@ -55,12 +55,12 @@ You'll be asked to login to our npm registry if not already setup.
 
 ### How to setup your environment to use the private npm feed (Step by step guide)
 
-#### First you need to setup the private registry and to associate this registry with the Infragistics scope. 
+#### First you need to setup the private registry and to associate this registry with the Infragistics scope.
 
-This will allow you to seamlessly use a mix of packages from the public npm registry and the Infragistics private registry. You will be asked to provide the username and the password that you use for logging into your Infragistics account. You should also provide the email that is registered to your Infragistics profile. 
+This will allow you to seamlessly use a mix of packages from the public npm registry and the Infragistics private registry.
 
->[!NOTE]
-> `npm` is disallowing the use of the `"@"` symbol inside your username as it is considered as being "not safe for the net". Because your username is actually the email that you use for your Infragistics account it always contains the symbol `"@"`. That's why you must escape this limitation by replacing the `"@"` symbol with `"!!"` (two exclamation marks). For example, if your username is `"username@example.com"` when asked about your username you should provide the following input: `"username!!example.com"`.
+> [!IMPORTANT]
+> If your account is not licensed (you are still using a Trial account) the private package feed won't be accessible to you e.g. it will return 404 or 403 error message. **Only licensed accounts can access the packages.infragistics private feed.**
 
 ### Now, to log in to our private feed using npm
 
@@ -81,15 +81,17 @@ You can generate [Access Token](#access-token-usage) through your Infragistics p
 
 This approach is applicable to all prior versions of `npm`.
 
-> [!IMPORTANT]
-> If your account is not licensed (you are still using a Trial account) the private package feed won't be accessible to you e.g. it will return 404 or 403 error message. **Only licensed accounts can access the packages.infragistics private feed.**
-
 #### npm version up to v8
 Run the `adduser` command and specify a user account and password:
 
 ```cmd
 npm adduser --registry=https://packages.infragistics.com/npm/js-licensed/ --scope=@infragistics
 ```
+
+You will be asked to provide the username and the password that you use for logging into your Infragistics account. You should also provide the email that is registered to your Infragistics profile.
+
+>[!NOTE]
+> `npm` is disallowing the use of the `"@"` symbol inside your username as it is considered as being "not safe for the net". Because your username is actually the email that you use for your Infragistics account it always contains the symbol `"@"`. That's why you must escape this limitation by replacing the `"@"` symbol with `"!!"` (two exclamation marks). For example, if your username is `"username@example.com"` when asked about your username you should provide the following input: `"username!!example.com"`.
 
 #### After this is done, you will be logged in and you will be able to install the latest versions of the Ignite UI packages into your project:
 
