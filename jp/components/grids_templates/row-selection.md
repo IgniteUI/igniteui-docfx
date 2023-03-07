@@ -48,8 +48,8 @@ public handleRowSelection(event: IRowSelectionEventArgs) {
 }
 ```
 
-<code-view style="height:700px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:700px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-selection" alt="Angular 行選択の例">
 </code-view>
 
@@ -57,8 +57,8 @@ public handleRowSelection(event: IRowSelectionEventArgs) {
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:700px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:700px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-selection" alt="Angular 行選択の例">
 </code-view>
 
@@ -66,8 +66,8 @@ public handleRowSelection(event: IRowSelectionEventArgs) {
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:710px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:710px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-selection" alt="Angular 行選択の例">
 </code-view>
 
@@ -247,17 +247,21 @@ public handleRowSelection(event) {
 <button (click)="this.@@igObjectRef.deselectRows([1,2,5])">Deselect 1,2 and 5</button>
 ```
 
-### 行選択イベント
-行選択に何らかの変更があると、**`rowSelectionChanging`** イベントが発生します。**`rowSelectionChanging`** は次の引数を公開します。
-- `oldSelection` - 行選択の前の状態を含む行 ID の配列。
-- `newSelection` - 行選択の新しい状態に一致する行 ID の列。
-- `added` - 現在選択に追加されている行 ID の配列。
-- `removed` - 古い選択状態に従って現在削除されている行 ID の配列。
-- `event` - 行選択の変更をトリガーする元のイベント。
-- `cancel` - 行選択の変更を防ぐことができます。
+### Row selection event
+When there is some change in the row selection **`rowSelectionChanging`** event is emitted. **`rowSelectionChanging`** exposes the following arguments:
+- `oldSelection`  - array of row's data that contains the previous state of the row selection.
+- `newSelection` - array of row's data that match the new state of the row selection.
+- `added` - array of row's data that are currently added to the selection.
+- `removed` - array of row's data that are currently removed according old selection state.
+- `event` - the original event that triggered row selection change.
+- `cancel` -  allows you the prevent the row selection change.
 @@if (igxName === 'IgxHierarchicalGrid') {
-- `owner` - イベントが子グリッドからトリガーされる場合、これにより、イベントの発行元であるコンポーネントへの参照が提供されます。
+- `owner` - if the event is triggered from a child grid, this will give you a reference to the component, from which the event is emitted.
 }
+
+#### Row selection event in remote data scenarios
+
+ In remote data scenarios, when the grid has a `primaryKey` set, `rowSelectionChanging.oldSelection` event argument will not contain the full row data object for the rows that are currently out of the data view. In this case, `rowSelectionChanging.oldSelection` object will contain only one property, which is the `primaryKey` field. For the rest of the rows, currently in the data view, `rowSelectionChanging.oldSelection` will contain the whole row data.
 
 ```html
 <!-- selectionExample.component.html -->
@@ -349,7 +353,7 @@ public childSelectedRows = ['Initiation', 'Emergency'];
 ```html
 <ng-template igxRowSelector let-rowContext>
     {{ rowContext.index }}
-    <igx-checkbox 
+    <igx-checkbox
         [checked]="rowContext.selected"
         [readonly]="true"
     ></igx-checkbox>
@@ -369,7 +373,7 @@ public childSelectedRows = ['Initiation', 'Emergency'];
 `rowContext.select()` および `rowContext.deselect()` メソッドは、`@@igSelector` のテンプレート コンテキストで公開されます。基本機能をオーバーライドするクリック ハンドラーを実装した場合、特に子グリッドで現在の行を簡単に切り替えることができます。
 }
 
-### ヘッダー テンプレート 
+### ヘッダー テンプレート
 @@igComponent 内でカスタムヘッダーセレクターテンプレートを作成するには、`igxHeadSelector` ディレクティブで `<ng-template>` を宣言します。テンプレートから、ヘッダーの状態に関する情報を提供するプロパティを使用して、暗黙的に提供されたコンテキスト変数にアクセスできます。
 
 `selectedCount` プロパティは現在選択されている行数を示し、`totalCount` は @@igComponent に合計の行数を示します。
@@ -440,8 +444,8 @@ public childSelectedRows = ['Initiation', 'Emergency'];
 このデモでは、カスタム ヘッダーと行セレクターの使用方法を示します。後者は、`rowContext.index` を使用して行番号と、`rowContext.selected` にバインドされた `igx-checkbox` を表示します。
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:550px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-selection-template-numbering" >
 </code-view>
 
@@ -449,8 +453,8 @@ public childSelectedRows = ['Initiation', 'Emergency'];
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:550px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-selection-template-numbers" >
 </code-view>
 
@@ -458,8 +462,8 @@ public childSelectedRows = ['Initiation', 'Emergency'];
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:610px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:610px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-selection-template-numbers" >
 </code-view>
 
@@ -470,8 +474,8 @@ public childSelectedRows = ['Initiation', 'Emergency'];
 ### Excel スタイル行セレクターのデモ
 このデモは、カスタム テンプレートを使用して Excel ライクなヘッダーおよび行セレクターを示します。
 
-<code-view style="height:550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:550px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-selection-template-excel" >
 </code-view>
 
@@ -482,8 +486,8 @@ public childSelectedRows = ['Initiation', 'Emergency'];
 このデモでは、`rowSelectionChanging` イベントと、選択できない行のチェックボックスが無効になっているカスタム テンプレートを使用して、一部の行が選択されないようにします。
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:550px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-conditional-row-selectors" >
 </code-view>
 
@@ -491,8 +495,8 @@ public childSelectedRows = ['Initiation', 'Emergency'];
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:550px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-conditional-row-selectors" >
 </code-view>
 
@@ -500,8 +504,8 @@ public childSelectedRows = ['Initiation', 'Emergency'];
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:630px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:630px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-conditional-row-selectors" >
 </code-view>
 

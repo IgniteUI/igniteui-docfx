@@ -30,8 +30,8 @@ The Ignite UI for Angular @@igComponent supports remote data operations such as 
 ## Angular @@igComponent Remote Data Operations Overview Example
 
 
-<code-view style="height:500px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:500px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-remote-filtering" alt="Angular @@igComponent Remote Data Operations Overview Example">
 </code-view>
 
@@ -40,8 +40,8 @@ The Ignite UI for Angular @@igComponent supports remote data operations such as 
 ## Angular @@igComponent Remote Data Operations Overview Example
 
 
-<code-view style="height:550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:550px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-remote-filtering" alt="Angular @@igComponent Remote Data Operations Overview Example">
 </code-view>
 
@@ -102,8 +102,8 @@ When requesting data, you need to utilize the [`IForOfState`]({environment:angul
 ### Remote Virtualization Demo
 
 
-<code-view style="height:550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:550px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-sample-4" alt="Angular @@igComponent Remote Data Operations Overview Example">
 </code-view>
 
@@ -161,8 +161,8 @@ public handlePreLoad() {
 
 ### Infinite Scroll Demo
 
-<code-view style="height:510px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:510px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-sample-5" >
 </code-view>
 
@@ -323,8 +323,8 @@ public columnValuesStrategy = (column: ColumnType,
 ### Unique Column Values Strategy Demo
 
 
-<code-view style="height:800px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:800px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-excel-style-filtering-load-on-demand" >
 </code-view>
 
@@ -348,8 +348,8 @@ public columnValuesStrategy = (column: ColumnType,
 ### Unique Column Values Strategy Demo
 
 
-<code-view style="height:800px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:800px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-excel-style-filtering-load-on-demand" >
 </code-view>
 
@@ -388,8 +388,8 @@ this.remoteValuesService.getColumnData(
 ### Unique Column Values Strategy Demo
 
 
-<code-view style="height:800px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:800px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-style-filtering-load-on-demand" >
 </code-view>
 
@@ -520,7 +520,7 @@ If you want to use the *default paging template* you need to set the Paginator's
 <igx-grid #grid1 [data]="data | async" [isLoading]="isLoading" [pagingMode]="mode">
     <igx-column field="ID"></igx-column>
     ...
-    <igx-paginator [(page)]="page" [(perPage)]="perPage"  [totalRecords]="totalCount" 
+    <igx-paginator [(page)]="page" [(perPage)]="perPage"  [totalRecords]="totalCount"
         (pagingDone)="paginate($event.current)">
     </igx-paginator>
 </igx-grid>
@@ -531,7 +531,7 @@ If you want to use the *default paging template* you need to set the Paginator's
 <igx-tree-grid #treeGrid [data]="data | async" childDataKey="Content" [pagingMode]="mode">
     <igx-column field="Name"></igx-column>
     ...
-    <igx-paginator [(page)]="page" [(perPage)]="perPage" [totalRecords]="totalCount" 
+    <igx-paginator [(page)]="page" [(perPage)]="perPage" [totalRecords]="totalCount"
         (pagingDone)="paginate($event.current)">
     </igx-paginator>
 </igx-tree-grid>
@@ -542,7 +542,7 @@ If you want to use the *default paging template* you need to set the Paginator's
 <igx-hierarchical-grid #hierarchicalGrid [primaryKey]="'CustomerID'" [pagingMode]="mode">
     <igx-column field="CustomerID"></igx-column>
     ...
-    <igx-paginator [(page)]="page" [(perPage)]="perPage" [totalRecords]="totalCount" 
+    <igx-paginator [(page)]="page" [(perPage)]="perPage" [totalRecords]="totalCount"
         (pagingDone)="paginate($event.current)" (perPageChange)="getFirstPage()">
     </igx-paginator>
 </igx-hierarchical-grid>
@@ -588,16 +588,16 @@ public paginate(page: number) {
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:620px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:620px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/remote-paging-default-template" >
 </code-view>
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:560px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:560px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-remote-paging-default-template" >
 </code-view>
 
@@ -605,8 +605,8 @@ public paginate(page: number) {
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:580px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:580px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/remote-paging-default-template" >
 </code-view>
 
@@ -621,7 +621,7 @@ When we define a custom paginator content we need to define the content in a way
 ```html
 <igx-paginator #paginator
     [totalRecords]="totalCount"
-    [(page)]="page" 
+    [(page)]="page"
     [(perPage)]="perPage"
     [selectOptions]="selectOptions"
     [displayDensity]="grid1.displayDensity"
@@ -710,7 +710,7 @@ public ngAfterViewInit() {
 ```html
 <igx-paginator #paginator
     [totalRecords]="totalCount"
-    [(perPage)]="perPage" 
+    [(perPage)]="perPage"
     [selectOptions]="selectOptions"
     [displayDensity]="treeGrid.displayDensity"
     (pageChange)="paginate($event)">
@@ -745,7 +745,7 @@ public mode = GridPagingMode.Remote;
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid #hierarchicalGrid [data]="data | async" [primaryKey]="'CustomerID'" 
+<igx-hierarchical-grid #hierarchicalGrid [data]="data | async" [primaryKey]="'CustomerID'"
     [height]="'550px'" [width]="'100%'" [pagingMode]="mode"></igx-hierarchical-grid>
 ...
 public mode = GridPagingMode.Remote;
@@ -753,7 +753,7 @@ public mode = GridPagingMode.Remote;
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```html
-<igx-tree-grid #treeGrid [data]="data | async" childDataKey="Content" 
+<igx-tree-grid #treeGrid [data]="data | async" childDataKey="Content"
         expansionDepth="0" width="100%" height="540px" [pagingMode]="mode"></igx-tree-grid>
 ...
 public mode = GridPagingMode.Remote;
@@ -774,16 +774,16 @@ After all the changes above, the following result will be achieved.
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:620px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:620px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-remote-paging-sample" >
 </code-view>
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:560px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:560px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-remote-paging" >
 </code-view>
 
@@ -791,8 +791,8 @@ After all the changes above, the following result will be achieved.
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:580px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:580px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-remote-paging" >
 </code-view>
 
@@ -805,8 +805,8 @@ After all the changes above, the following result will be achieved.
 In some cases you may want to define your own paging behavior and this is when we can take advantage of the Paging template and add our custom logic along with it. We are going to extend the Remote Paging example in order to demonstrate this:
 
 
-<code-view style="height:620px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:620px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-custom-remote-paging-sample" >
 </code-view>
 
@@ -908,8 +908,8 @@ As you can see in the **paginate** method, custom pagination logic is performed,
 
 #### Remote Paging with Batch Editing Demo
 
-<code-view style="height:620px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:620px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/remote-paging-batch-editing" >
 </code-view>
 
@@ -922,6 +922,7 @@ As you can see in the **paginate** method, custom pagination logic is performed,
     * Row Expand/collapse
     * Row Editing
     * Row Pinning
+-  In remote data scenarios, when the grid has a `primaryKey` set, `rowSelectionChanging.oldSelection` event argument will not contain the full row data object for the rows that are currently out of the data view. In this case, `rowSelectionChanging.oldSelection` object will contain only one property, which is the `primaryKey` field. For the rest of the rows, currently in the data view, `rowSelectionChanging.oldSelection` will contain the whole row data.
 
 ## API References
 <div class="divider--half"></div>
