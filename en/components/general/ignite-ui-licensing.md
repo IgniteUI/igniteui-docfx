@@ -7,7 +7,9 @@ _keywords: npm package license, ignite ui license feed, licensing
 # License FAQ and Installation
 ## License Agreements
 It is important to know all the [legal terms and conditions](https://www.infragistics.com/legal/license/igultimate-la) regarding the products that you purchase and use.
-PLEASE NOTE: We have updated our license terms and subscription model.
+
+> [!Note]
+> We have updated our license terms and subscription model in second quarter of 2020.
 
 If your trial has ended or your subscription [has expired](http://www.infragistics.com/renewal), each developer on your team using Ignite UI will need to [purchase](https://www.infragistics.com/how-to-buy/product-pricing) a subscription. This will enable you to use our private npm feed hosted on <https://packages.infragistics.com/npm/js-licensed/> for development. There you will find the latest versions of the Ignite UI for Angular packages. If you have a current subscription, you can use this private feed and you will have access to the full version of Ignite UI for Angular.
 
@@ -59,39 +61,29 @@ You'll be asked to login to our npm registry if not already setup.
 
 This will allow you to seamlessly use a mix of packages from the public npm registry and the Infragistics private registry.
 
-> [!IMPORTANT]
+> [!NOTE]
 > If your account is not licensed (you are still using a Trial account) the private package feed won't be accessible to you e.g. it will return 404 or 403 error message. **Only licensed accounts can access the packages.infragistics private feed.**
 
 ### Now, to log in to our private feed using npm
 
-#### npm version 9+
-Our private feed doesn't currently support login/adduser commands with npm v9, so we recommend the following steps instead to add the required auth fields to the config:
+#### Now, to log in to our private feed using npm, run the adduser command and specify a user account and password:
 
 ```cmd
-npm config set @infragistics:registry https://packages.infragistics.com/npm/js-licensed/
+npm adduser --registry=https://packages.infragistics.com/npm/js-licensed/ --scope=@infragistics --always-auth
+```
+>[!NOTE]
+> If you are using `npm` version 9.0.0 or higher you need to set `--auth-type=legacy`
 
-npm config set //packages.infragistics.com/npm/js-licensed/:username=YOUR_USERNAME
-
-npm config set //packages.infragistics.com/npm/js-licensed/:email=YOUR_IG_EMAIL
-
-npm config set //packages.infragistics.com/npm/js-licensed/:_auth=YOUR_IG_AUTH_TOKEN
+```cmd
+npm adduser --registry=https://packages.infragistics.com/npm/js-licensed/ --scope=@infragistics --always-auth --auth-type=legacy
 ```
 
 You can generate [Access Token](#access-token-usage) through your Infragistics profile.
 
 This approach is applicable to all prior versions of `npm`.
 
-#### npm version up to v8
-Run the `adduser` command and specify a user account and password:
-
-```cmd
-npm adduser --registry=https://packages.infragistics.com/npm/js-licensed/ --scope=@infragistics
-```
-
-You will be asked to provide the username and the password that you use for logging into your Infragistics account. You should also provide the email that is registered to your Infragistics profile.
-
->[!NOTE]
-> `npm` is disallowing the use of the `"@"` symbol inside your username as it is considered as being "not safe for the net". Because your username is actually the email that you use for your Infragistics account it always contains the symbol `"@"`. That's why you must escape this limitation by replacing the `"@"` symbol with `"!!"` (two exclamation marks). For example, if your username is `"username@example.com"` when asked about your username you should provide the following input: `"username!!example.com"`.
+> [!IMPORTANT]
+> If your account is not licensed (you are still using a Trial account) the private package feed won't be accessible to you e.g. it will return 404 or 403 error message. **Only licensed accounts can access the packages.infragistics private feed.**
 
 #### After this is done, you will be logged in and you will be able to install the latest versions of the Ignite UI packages into your project:
 
@@ -107,26 +99,26 @@ Have in mind that we have set the Ignite UI for Angular package to be scoped, me
 
 #### Some additional changes might have to be made in your project source
 If you are upgrading from trial to licensed package and you are not using the automated CLI migrations:
-- Add a `paths` mapping in the project `tsconfig.json`.
+- Add a **paths** mapping in the project **tsconfig.json**.
 
-```typescript
+```json
 {
-  ...
+  /* ... */
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
-    ...
+    /* ... */
     "paths": {
-      "igniteui-angular": ["./node_modules/@infragistics/igniteui-angular"],
       "igniteui-dockmanager": ["./node_modules/@infragistics/igniteui-dockmanager"],
       "igniteui-dockmanager/*": ["./node_modules/@infragistics/igniteui-dockmanager/*"],
     }
-	...
+  }
 }
 ```
+
 - Add a `stylePreprocessorOptions` mapping to your project `angular.json`
 
-```typescript
+```json
 {
   "projects": {
     ..
@@ -151,7 +143,6 @@ If you are upgrading from trial to licensed package and you are not using the au
 @use "~igniteui-angular/lib/core/styles/themes/index" as *;
 
 // Should be changed to
-
 @use "igniteui-angular/lib/core/styles/themes/index" as *;
 ```
 
@@ -172,6 +163,7 @@ The following information is on how to setup authentication to our private npm r
   alt="New Token Generated"
   title="Generate new token" />
 
+> [!Note]
 > Each token is with Base64 encoding.
 
 * Add the following into your [.npmrc](https://docs.npmjs.com/configuring-npm/npmrc.html) file
@@ -190,16 +182,14 @@ steps:
 
 - script: npm config set @infragistics:registry $(npmRegistry)
   displayName: 'Npm add registry'
-
-
 - script: npm config set $(igScope):_auth=$(token)
   displayName: 'Npm config auth'
 ```
 
 Now we need to add variables for the *npm registry*, *scope* and *token*. There are two ways to do so:
 
- #### Define Variable Group from the Library page under Pipelines.
- [This article](https://docs.microsoft.com/en-us/azure/devops/pipelines/library/variable-groups?view=azure-devops&tabs=yaml) explains how to use a variable group to store values that you want to control and make available across multiple pipelines.
+#### Define Variable Group from the Library page under Pipelines.
+[This article](https://docs.microsoft.com/en-us/azure/devops/pipelines/library/variable-groups?view=azure-devops&tabs=yaml) explains how to use a variable group to store values that you want to control and make available across multiple pipelines.
 
 <img class="responsive-img" style="-webkit-box-shadow: 8px 9px 9px 5px #ccc; -moz-box-shadow: 8px 9px 9px 5px #ccc; box-shadow: 8px 9px 9px 5px #ccc; min-width: calc(100% - 350px)" 
   src="../../images/general/azure-ci-variable-groups.jpg"
