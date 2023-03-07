@@ -248,7 +248,7 @@ public handleRowSelection(event) {
 ```
 
 ### Row selection event
-When there is some change in the row selection **`rowSelectionChanging`** event is emitted. **`rowSelectionChanging`** exposes the following arguments:
+When there is some change in the row selection **[`rowSelectionChanging`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowSelectionChanging)** event is emitted. **`rowSelectionChanging`** exposes the following arguments:
 - `oldSelection`  - array of row's data that contains the previous state of the row selection.
 - `newSelection` - array of row's data that match the new state of the row selection.
 - `added` - array of row's data that are currently added to the selection.
@@ -261,7 +261,7 @@ When there is some change in the row selection **`rowSelectionChanging`** event 
 
 #### Row selection event in remote data scenarios
 
- In remote data scenarios, when the grid has a `primaryKey` set, `rowSelectionChanging.oldSelection` event argument will not contain the full row data object for the rows that are currently out of the data view. In this case, `rowSelectionChanging.oldSelection` object will contain only one property, which is the `primaryKey` field. For the rest of the rows, currently in the data view, `rowSelectionChanging.oldSelection` will contain the whole row data.
+ In remote data scenarios, when the grid has a `primaryKey` set, [`rowSelectionChanging.oldSelection`]({environment:angularApiUrl}/interfaces/IRowSelectionEventArgs.html#oldSelection) event argument will not contain the full row data object for the rows that are currently out of the data view. In this case, `rowSelectionChanging.oldSelection` object will contain only one property, which is the `primaryKey` field. For the rest of the rows, currently in the data view, `rowSelectionChanging.oldSelection` will contain the whole row data.
 
 ```html
 <!-- selectionExample.component.html -->

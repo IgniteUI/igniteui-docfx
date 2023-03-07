@@ -922,7 +922,7 @@ As you can see in the **paginate** method, custom pagination logic is performed,
     * Row Expand/collapse
     * Row Editing
     * Row Pinning
--  In remote data scenarios, when the grid has a `primaryKey` set, `rowSelectionChanging.oldSelection` event argument will not contain the full row data object for the rows that are currently out of the data view. In this case, `rowSelectionChanging.oldSelection` object will contain only one property, which is the `primaryKey` field. For the rest of the rows, currently in the data view, `rowSelectionChanging.oldSelection` will contain the whole row data.
+-  In remote data scenarios, when the grid has a `primaryKey` set, [`rowSelectionChanging.oldSelection`]({environment:angularApiUrl}/interfaces/IRowSelectionEventArgs.html#oldSelection) event argument will not contain the full row data object for the rows that are currently out of the data view. In this case, `rowSelectionChanging.oldSelection` object will contain only one property, which is the `primaryKey` field. For the rest of the rows, currently in the data view, `rowSelectionChanging.oldSelection` will contain the whole row data.
 
 ## API References
 <div class="divider--half"></div>
