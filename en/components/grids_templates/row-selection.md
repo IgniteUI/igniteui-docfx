@@ -261,7 +261,7 @@ When there is some change in the row selection **`rowSelectionChanging`** event 
 
 #### Row selection event in remote data scenarios
 
-In remote data scenarios when the grid has a `primaryKey` set and rowSelection feature is enabled, you should keep in mind that `rowSelectionChanging` event argument will not be able to retrieve the row data for the rows that are currently out of the current data view. In this case will be emitted a partial object of row data that consist of the primaryKey and its value and for the rest rows that ara currently in the data view the whole row data is going to be emitted.
+In remote data scenarios, when the grid has a `primaryKey` set, `rowSelectionChanging.oldSelection` event argument will not contain the full row data object for the rows that are currently out of the current data view. In this case, `rowSelectionChanging.oldSelection` object will contain only one property, which is the `primaryKey` field. For the rest of the old selected rows, currently in the data view,  `rowSelectionChanging.oldSelection` will contain the whole row data.
 
 ```html
 <!-- selectionExample.component.html -->
