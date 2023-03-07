@@ -12,10 +12,12 @@ Use the map component's [`IgxGeographicSymbolSeriesComponent`]({environment:dvAp
 
 ## Demo
 
-<code-view style="height: 400px"
-           data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-type-scatter-symbol-series"  >
+<code-view style="height: 400px" alt="Angular geo map type scatter symbol series"
+  data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-type-scatter-symbol-series"
+                                        github-src="maps/geo-map/type-scatter-symbol-series">
 </code-view>
+
 
 <div class="divider--half"></div>
 

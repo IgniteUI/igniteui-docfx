@@ -13,10 +13,12 @@ By the default, the Ignite UI for Angular map component displays geographic imag
 
 ## Demo
 
-<code-view style="height: 400px"
-           data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-display-osm-imagery"  >
+<code-view style="height: 400px" alt="Angular geo map display osm imagery"
+  data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-display-osm-imagery"
+                                        github-src="maps/geo-map/display-osm-imagery">
 </code-view>
+
 
 <div class="divider--half"></div>
 

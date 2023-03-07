@@ -12,10 +12,12 @@ With [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui
 
 ## Demo
 
-<code-view style="height: 400px"
-           data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-binding-data-json-points"  >
+<code-view style="height: 400px" alt="Angular geo map binding data json points"
+  data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-binding-data-json-points"
+                                        github-src="maps/geo-map/binding-data-json-points">
 </code-view>
+
 
 <div class="divider--half"></div>
 

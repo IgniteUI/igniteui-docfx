@@ -12,22 +12,12 @@ The Angular Spreadsheet is a Angular component that allows visualizing and editi
 
 ## Demo
 
-<code-view style="height: 500px"
-           data-demos-base-url="{environment:dvDemosBaseUrl}"
+<code-view style="height: 500px" alt="Angular spreadsheet overview"
+  data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/excel/spreadsheet-overview"
-           github-src="excel/spreadsheet/overview">
+                                        github-src="excel/spreadsheet/overview">
 </code-view>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <body>
-      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/excel/spreadsheet/overview?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
-        </a>
-        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/excel/spreadsheet/overview?file=src%2Fapp.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
-        </a>
-    </body>
-</html>
 
 <div class="divider--half"></div>
 
@@ -35,9 +25,9 @@ The Angular Spreadsheet is a Angular component that allows visualizing and editi
 
 When installing the spreadsheet package, the core and excel package must also be installed.
 
--   **npm install --save igniteui-angular-core**
--   **npm install --save igniteui-angular-excel**
--   **npm install --save igniteui-angular-spreadsheet**
+*   **npm install --save igniteui-angular-core**
+*   **npm install --save igniteui-angular-excel**
+*   **npm install --save igniteui-angular-spreadsheet**
 
 ## Component Modules
 
@@ -69,7 +59,7 @@ Now that the spreadsheet module is imported, next is the basic configuration of 
 </igx-spreadsheet>
 ```
 
-> [!NOTE]
+> \[!Note]
 >
 > In the following code snippet, an external [ExcelUtility](excel-utility.md) class is used to save and load a [`workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#workbook).
 
@@ -89,4 +79,5 @@ ngOnInit() {
       this.spreadsheet.workbook = w;
     });
   }
+
 ```

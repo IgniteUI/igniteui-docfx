@@ -12,10 +12,12 @@ With the Ignite UI for Angular map component, you can plot geographic data loade
 
 ## Demo
 
-<code-view style="height: 400px"
-           data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-binding-data-csv"  >
+<code-view style="height: 400px" alt="Angular geo map binding data csv"
+  data-demos-base-url="{environment:dvDemosBaseUrl}"
+           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-binding-data-csv"
+                                        github-src="maps/geo-map/binding-data-csv">
 </code-view>
+
 
 <div class="divider--half"></div>
 
