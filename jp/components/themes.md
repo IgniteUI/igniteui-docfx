@@ -17,7 +17,7 @@ Ignite UI for Angular はコンポーネントのデザインを**<a href="https
 
 #### パレット
 
-最初の概念は色パレットです。ビジュアル ツールでは、アプリケーションを差別化する色があります。マテリアル デザイン ガイドラインは基本色のさまざまな色合いおよび輝度がある定義済みの色パレットを推奨します。色の調和、そして背景色および前景のテキスト色にコントラストをつけます。 一方、これは色を制限することにもなります。具体的に、ブランド化と一致するカスタム パレットを使用することができないことがあります。そのため、ユーザーに提供される基本色からマテリアル デザインのようなパレットを生成するアルゴリズムを作成しました。また、パレットで各色合いにコントラスト テキスト色を生成します。
+最初の概念は色パレットです。ビジュアル ツールでは、アプリケーションを差別化する色があります。マテリアル デザイン ガイドラインは基本色のさまざまな色合いおよび輝度がある定義済みの色パレットを推奨します。色の調和、そして背景色および前景のテキスト色にコントラストをつけます。一方、これは色を制限することにもなります。具体的に、ブランド化と一致するカスタム パレットを使用することができないことがあります。そのため、ユーザーに提供される基本色からマテリアル デザインのようなパレットを生成するアルゴリズムを作成しました。また、パレットで各色合いにコントラスト テキスト色を生成します。
 
 #### テーマ
 
@@ -49,7 +49,7 @@ $secondary-color: #f96a88; // Watermelon pink
 
 $my-color-palette: palette(
   $primary: $company-color,
-  $secondary: $secondary-color
+  $secondary: $secondary-color,
 );
 ```
 
@@ -91,7 +91,7 @@ $my-warning-color: color($my-palette, "warn");
 
 ```scss
 $my-primary-800: color($my-palette, "primary", 600);
-$my-primary-800-text:contrast-color($my-palette, "primary", 600);
+$my-primary-800-text: contrast-color($my-palette, "primary", 600);
 // sample usage
 
 .my-awesome-article {
@@ -121,7 +121,7 @@ $secondary-color: #f96a88; // Watermelon pink
 
 $my-color-palette: palette(
   $primary: $company-color,
-  $secondary: $secondary-color
+  $secondary: $secondary-color,
 );
 
 // 重要: 必ず最初に core を含めてください。
@@ -153,6 +153,10 @@ $my-color-palette: palette(
 // 重要: 必ず最初に core を含めてください。
 @include core();
 //theme の前にタイポグラフィを含めます
-@include typography($config: (font-family: "Comic Sans MS"));
+@include typography(
+  $config: (
+    font-family: "Comic Sans MS",
+  )
+);
 @include theme($default-palette);
 ```

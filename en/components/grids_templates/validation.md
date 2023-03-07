@@ -170,7 +170,7 @@ This is useful in scenarios where you want to add your own custom error message 
 
 In some cases you may want to disallow submitting an invalid value in the data.
 In that scenarios you can use the [`cellEdit`]({environment:angularApiUrl}/classes/IgxGridComponent.html#cellEdit) or [`rowEdit`]({environment:angularApiUrl}/classes/IgxGridComponent.html#rowEdit) events and cancel the event in case the new value is invalid.
-Both events' arguments have a [`valid`]({environment:angularApiUrl}/interfaces/IGridEditEventArgs.html#valid) property and can be canceled accordingly.
+Both events' arguments have a [`valid`]({environment:angularApiUrl}/interfaces/IGridEditEventArgs.html#valid) property and can be canceled accordingly. How it is used can be seen in the [Cross-field Validation example](#cross-field-example)
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -226,7 +226,7 @@ The below example demonstrates the above-mentioned customization options.
 <div class="divider--half"></div>
 }
 
-### Cross-field validation
+## Cross-field validation
 
 In some scenarios validation of one field may depend on the value of another field in the record.
 In that case a custom validator can be used to compare the values in the record via their shared `FormGroup`.
@@ -323,7 +323,7 @@ The different errors are displayed in a templated cell that combines all errors 
 The error messages are gathered in the `stateMessage` function, which gathers the errors for each cell, because each column could have templated form validations and then checks the errors for the row itself, which come from the custom `rowValidator`.
 
 ```typescript
-public stateMessage(cell: IgxGridCell) {
+public stateMessage(cell: CellType) {
     const messages = [];
     const row = cell.row;
     const cellValidationErrors = row.cells.filter(x => !!x.validation.errors);
@@ -345,17 +345,6 @@ public stateMessage(cell: IgxGridCell) {
 }
 
 ```
-
-The below sample demonstrates the cross-field validation in action.
-
-<code-view style="height:560px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-cross-field-validator-service" alt="Angular @@igComponent Cross-field Validation Example">
-</code-view>
-
-
-<div class="divider--half"></div>
-
 }
 
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -426,12 +415,12 @@ The multi-field errors can then be displayed in a separate pinned column.
 Errors and the detailed messages can be determined based on the row and cell's validity.
 
 ```ts
-    public isRowValid(cell: IgxGridCell) {
+    public isRowValid(cell: CellType) {
         const hasErrors = !!cell.row.validation.errors || cell.row.cells.some(x => !!x.validation.errors);
         return !hasErrors;
     }
 
-    public stateMessage(cell: IgxGridCell) {
+    public stateMessage(cell: CellType) {
         const messages = [];
         const row = cell.row;
         if  (row.validation.errors?.invalidAddress) {
@@ -453,15 +442,6 @@ Errors and the detailed messages can be determined based on the row and cell's v
         return messages;
     }
 ```
-
-The below sample demonstrates cross-field validation in a Hierarchical Grid for both the root and child data.
-
-<code-view style="height:530px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-cross-field-validation" alt="Angular @@igComponent Cross-field Validation Example">
-</code-view>
-
-<div class="divider--half"></div>
 }
 
 
@@ -534,7 +514,7 @@ The different errors are displayed in a templated cell that combines all errors 
 The error messages are gathered in the `stateMessage` function, which gathers the errors for each cell, because each column could have templated form validations and then checks the errors for the row itself, which come from the custom `rowValidator`.
 
 ```typescript
-public stateMessage(cell: IgxGridCell) {
+public stateMessage(cell: CellType) {
     const messages = [];
     const row = cell.row;
     const cellValidationErrors = row.cells.filter(x => !!x.validation.errors);
@@ -561,16 +541,39 @@ public stateMessage(cell: IgxGridCell) {
     return messages;
 }
 ```
+}
+### Cross-field example
+
+@@if (igxName === 'IgxGrid') {
 
 The below sample demonstrates the cross-field validation in action.
 
-<code-view style="height:570px" 
+<code-view style="height:620px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/grid/grid-cross-field-validator-service" alt="Angular @@igComponent Cross-field Validation Example">
+</code-view>
+}
+
+@@if (igxName === 'IgxHierarchicalGrid') {
+
+The below sample demonstrates cross-field validation in a Hierarchical Grid for both the root and child data.
+
+<code-view style="height:620px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-cross-field-validation" alt="Angular @@igComponent Cross-field Validation Example">
+</code-view>
+}
+
+@@if (igxName === 'IgxTreeGrid') {
+The below sample demonstrates the cross-field validation in action.
+
+<code-view style="height:620px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-cross-field-validator-service" alt="Angular @@igComponent Cross-field Validation Example">
 </code-view>
+}
 
 <div class="divider--half"></div>
-}
 
 ## Styling
 
@@ -716,6 +719,12 @@ public cellStyles = {
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 
+## Known Issues and Limitations
+
+|Limitation|Description|
+|--- |--- |
+| When `validationTrigger` is blur, `editValue` and validation will trigger only after editor is blurred. | 
+Reason is that this utilizes the formControl's [`updateOn`](https://angular.io/api/forms/AbstractControl#updateOn) property. This determines the event on which the formControl will update and trigger related validators.
 
 ## Additional Resources
 

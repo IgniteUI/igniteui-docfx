@@ -54,7 +54,7 @@ Excel でデータを操作するのと同じように、スプレッドシー�
 
 -   データ操作
 
-科学、ビジネス、エンジニアリング、財務、教育のデータを収集して管理します。分析、高度なグリッド、レポート、データ入力フォーム、予算編成、予測シナリオ、カスタム スプレッドシートを準備および作成します。これらすべてが包括的な API のおかげです。 
+科学、ビジネス、エンジニアリング、財務、教育のデータを収集して管理します。分析、高度なグリッド、レポート、データ入力フォーム、予算編成、予測シナリオ、カスタム スプレッドシートを準備および作成します。これらすべてが包括的な API のおかげです。
 
 -   高速で安全なデータ処理
 
@@ -127,7 +127,7 @@ ngOnInit() {
 }
 ```
 
-## API メンバー
+## API リファレンス
 
 -   [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html)
 -   [`workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#workbook)

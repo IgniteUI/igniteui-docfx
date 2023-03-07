@@ -10,15 +10,45 @@ namespace: Infragistics.Controls.Charts
 
 All notable changes for each version of Ignite UI for Angular are documented on this page.
 
-<!-- Angular -->
-
 > [!NOTE]
 > This topic discusses changes only for components that are not included in the igniteui-angular package.
 > For changes specific to igniteui-angular components, please see [Ignite UI Angular Changes](https://github.com/igniteui/igniteui-angular/blob/master/changelog.md)
 
-<!-- end: Angular -->
+## **15.0.0**
 
-<!-- Angular, WebComponents, React -->
+-   Angular 15 support.
+
+## **14.2.0**
+
+Added significant improvements to default behaviors, and refined the Category Chart API to make it easier to use.
+
+These new chart improvements include:
+
+-   Responsive layouts for horizontal label rotation based on browser / screen size.
+-   Enhanced rendering for rounded labels on all platforms.
+-   Added marker properties to StackedFragmentSeries.
+-   Added [`shouldPanOnMaximumZoom`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriesviewercomponent.html#shouldpanonmaximumzoom) property.
+-   New Category Axis Properties:
+    -   ZoomMaximumCategoryRange
+    -   ZoomMaximumItemSpan
+    -   ZoomToCategoryRange
+    -   ZoomToItemSpan
+-   New [Chart Aggregation](charts/features/chart-data-aggregations.md) API for Grouping, Sorting and Summarizing Category string and numeric values, eliminating the need to pre-aggregate or calculate chart data:
+    -   InitialSortDescriptions
+    -   InitialSorts
+    -   SortDescriptions
+    -   InitialGroups
+    -   InitialGroupDescriptions
+    -   GroupDescriptions
+    -   InitialSummaries
+    -   InitialSummaryDescriptions
+    -   SummaryDescriptions
+    -   InitialGroupSortDescriptions
+    -   GroupSorts
+    -   GroupSortDescriptions
+
+> [!Note]
+> The Chart's [Aggregation](charts/features/chart-data-aggregations.md) will not work when using [`includedProperties`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#includedproperties) \| [`excludedProperties`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#excludedproperties) because these properties are meant for non-aggregated data. Once you attempt to aggregate data these properties should no longer be used. The reason it does not work is because aggregation replaces the collection that is passed to the chart for render.  The include/exclude properties are designed to filter in/out properties of that data and those properties no longer exist in the new aggregated collection.
 
 ## **13.2.0**
 
@@ -27,25 +57,19 @@ All notable changes for each version of Ignite UI for Angular are documented on 
 -   Added the highly-configurable [DataLegend](charts/features/chart-data-legend.md) component, which works much like the [`IgxLegendComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlegendcomponent.html), but it shows values of series and provides many configuration properties for filtering series rows and values columns, styling and formatting values.
 -   Added the highly-configurable [DataToolTip](charts/features/chart-data-tooltip.md) which displays values and titles of series as well as legend badges of series in a tooltip. This is now the default tooltip for all chart types.
 -   Added animation and transition-in support for Stacked Series. Animations can be enabled by setting the [`isTransitionInEnabled`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#istransitioninenabled) property to true. From there, you can set the [`transitionInDuration`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#transitioninduration) property to determine how long your animation should take to complete and the [`transitionInMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#transitioninmode) to determine the type of animation that takes place.
--   Added `AssigningCategoryStyle` event, is now available to all series in [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html). This event is handled when you want to conditionally configure aspects of the series items such as `Fill` background-color and highlighting.
+-   Added `AssigningCategoryStyle` event, is now available to all series in `DataChart`. This event is handled when you want to conditionally configure aspects of the series items such as `Fill` background-color and highlighting.
 -   New [`allowedPositions`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcalloutlayercomponent.html#allowedpositions) enumeration for CalloutLayer. Used to limit where the callouts are to be placed within the chart. By default, the callouts are intelligently placed in the best place but this used to force for example `TopLeft`, `TopRight`, `BottomLeft` or `BottomRight`.
 -   New corner radius properties added for Annotation Layers; used to round-out the corners of each of the callouts. Note, a corner radius has now been added by default.
     -   [`calloutCornerRadius`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcalloutlayercomponent.html#calloutcornerradius) for CalloutLayer
     -   [`axisAnnotationBackgroundCornerRadius`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinalvaluelayercomponent.html#axisannotationbackgroundcornerradius) for FinalValueLayer
     -   [`xAxisAnnotationBackgroundCornerRadius`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcrosshairlayercomponent.html#xaxisannotationbackgroundcornerradius) and [`yAxisAnnotationBackgroundCornerRadius`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcrosshairlayercomponent.html#yaxisannotationbackgroundcornerradius) for CrosshairLayer
--   New [`horizontalViewScrollbarMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriesviewercomponent.html#horizontalviewscrollbarmode) and [`verticalViewScrollbarMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriesviewercomponent.html#verticalviewscrollbarmode) enumeration to enable scrollbars in various ways. When paired with [`isVerticalZoomEnabled`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html#isverticalzoomenabled) or [`isHorizontalZoomEnabled`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html#ishorizontalzoomenabled), you'll be able to persist or fade-in and out the scrollbars along the axes to navigate the chart.
+-   New [`horizontalViewScrollbarMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriesviewercomponent.html#horizontalviewscrollbarmode) and [`verticalViewScrollbarMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxseriesviewercomponent.html#verticalviewscrollbarmode) enumeration to enable scrollbars in various ways. When paired with [`isVerticalZoomEnabled`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#isverticalzoomenabled) or [`isHorizontalZoomEnabled`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#ishorizontalzoomenabled), you'll be able to persist or fade-in and out the scrollbars along the axes to navigate the chart.
 -   New `FavorLabellingScaleEnd`, determines whether the axis should favor emitting a label at the end of the scale. Only compatible with numeric axes (e.g. [`IgxNumericXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericxaxiscomponent.html), [`IgxNumericYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumericyaxiscomponent.html), `PercentChangeAxis`).
 -   New [`isSplineShapePartOfRange`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#issplineshapepartofrange) determines whether to include the spline shape in the axis range requested of the axis.
 -   New [`xAxisMaximumGap`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#xaxismaximumgap), determines the maximum allowed value for the plotted series when using [`xAxisGap`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#xaxisgap). The gap determines the amount of space between columns or bars of plotted series.
 -   New [`xAxisMinimumGapSize`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#xaxisminimumgapsize), determines the minimum allowed pixel-based value for the plotted series when using [`xAxisGap`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#xaxisgap) to ensure there is always some spacing between each category.
 
-<!-- end: Angular, WebComponents, React -->
-
 <div class="divider--half"></div>
-
-<div class="divider--half"></div>
-
-<!-- Angular, WebComponents, React -->
 
 ## **13.1.0**
 
@@ -85,13 +109,7 @@ This release introduces a few improvements and simplifications to visual design 
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | <span style="color:#8BDC5C">#8BDC5C</span> <br><span style="color:#8B5BB1">#8B5BB1</span> <br><span style="color:#6DB1FF">#6DB1FF</span> <br><span style="color:#F8A15F">#F8A15F</span> <br><span style="color:#EE5879">#EE5879</span> <br><span style="color:#735656">#735656</span> <br><span style="color:#F7D262">#F7D262</span> <br><span style="color:#8CE7D9">#8CE7D9</span> <br><span style="color:#E051A9">#E051A9</span> <br><span style="color:#A8A8B7">#A8A8B7</span> | <span style="color:#8BDC5C">#8BDC5C</span> <br><span style="color:#8961A9">#8961A9</span> <br><span style="color:#6DB1FF">#6DB1FF</span> <br><span style="color:#82E9D9">#82E9D9</span> <br><span style="color:#EA3C63">#EA3C63</span> <br><span style="color:#735656">#735656</span> <br><span style="color:#F8CE4F">#F8CE4F</span> <br><span style="color:#A8A8B7">#A8A8B7</span> <br><span style="color:#E051A9">#E051A9</span> <br><span style="color:#FF903B">#FF903B</span> <br> |
 
-<!-- end: Angular, WebComponents, React -->
-
 <div class="divider--half"></div>
-
-<div class="divider--half"></div>
-
-<!-- Angular, WebComponents, React -->
 
 ## **11.2.0**
 
@@ -156,15 +174,7 @@ for example:
 -   Added support for highlighting of the shape series
 -   Added support for some annotation layers for the shape series
 
-<!-- end: Angular, WebComponents, React -->
-
 <div class="divider--half"></div>
-
-<div class="divider--half"></div>
-
-<div class="divider--half"></div>
-
-<!-- Angular, React, WebComponents -->
 
 ## **8.2.12**
 
@@ -183,7 +193,6 @@ Import statements have been simplified to use just package names instead of full
 | <a href="https://www.npmjs.com/package/igniteui-angular-gauges/v/8.2.12" target="_blank">igniteui-angular-gauges</a>           | [Bullet Graph](bullet-graph.md), [Linear Gauge](linear-gauge.md), [Radial Gauge](radial-gauge.md)           |
 | <a href="https://www.npmjs.com/package/igniteui-angular-charts/v/8.2.12" target="_blank">igniteui-angular-charts</a>           | Category Chart, Data Chart, Donut Chart, Financial Chart], Pie Chart, [Zoom Slider](zoomslider-overview.md) |
 | <a href="https://www.npmjs.com/package/igniteui-angular-core/v/8.2.12" target="_blank">igniteui-angular-core</a>               | all classes and enums                                                                                       |
-|                                                                                                                                |                                                                                                             |
 
 -   Code After Changes
 
@@ -216,24 +225,22 @@ Before, you had to import using full paths to API classes and enums:
 
 ```ts
 // gauges:
-import { IgxLinearGaugeComponent } from 'igniteui-webcomponents-gauges/ES5/igx-linear-gauge-component';
-import { IgxLinearGaugeModule } from 'igniteui-webcomponents-gauges/ES5/igx-linear-gauge-module';
-import { IgxLinearGraphRange } from 'igniteui-webcomponents-gauges/ES5/igx-linear-graph-range';
+import { IgxLinearGaugeComponent } from 'igniteui-angular-gauges/ES5/igx-linear-gauge-component';
+import { IgxLinearGaugeModule } from 'igniteui-angular-gauges/ES5/igx-linear-gauge-module';
+import { IgxLinearGraphRange } from 'igniteui-angular-gauges/ES5/igx-linear-graph-range';
 
-import { IgxRadialGaugeComponent } from "igniteui-webcomponents-gauges/ES5/igx-radial-gauge-component";
-import { IgxRadialGaugeModule } from "igniteui-webcomponents-gauges/ES5/igx-radial-gauge-module";
-import { IgxRadialGaugeRange } from "igniteui-webcomponents-gauges/ES5/igx-radial-gauge-range";
-import { SweepDirection } from "igniteui-webcomponents-core/ES5/SweepDirection";
+import { IgxRadialGaugeComponent } from "igniteui-angular-gauges/ES5/igx-radial-gauge-component";
+import { IgxRadialGaugeModule } from "igniteui-angular-gauges/ES5/igx-radial-gauge-module";
+import { IgxRadialGaugeRange } from "igniteui-angular-gauges/ES5/igx-radial-gauge-range";
+import { SweepDirection } from "igniteui-angular-core/ES5/SweepDirection";
 
 // charts:
-import { IgxFinancialChartComponent } from "igniteui-webcomponents-charts/ES5/igx-financial-chart-component";
-import { IgxFinancialChartModule } from "igniteui-webcomponents-charts/ES5/igx-financial-chart-module";
-import { IgxDataChartComponent } from "igniteui-webcomponents-charts/ES5/igx-data-chart-component";
-import { IgxDataChartCoreModule } from "igniteui-webcomponents-charts/ES5/igx-data-chart-core-module";
+import { IgxFinancialChartComponent } from "igniteui-angular-charts/ES5/igx-financial-chart-component";
+import { IgxFinancialChartModule } from "igniteui-angular-charts/ES5/igx-financial-chart-module";
+import { IgxDataChartComponent } from "igniteui-angular-charts/ES5/igx-data-chart-component";
+import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-core-module";
 
 // maps:
-import { IgxGeographicMapComponent } from "igniteui-webcomponents-maps/ES5/igx-geographic-map-component";
-import { IgxGeographicMapModule } from "igniteui-webcomponents-maps/ES5/igx-geographic-map-module";
+import { IgxGeographicMapComponent } from "igniteui-angular-maps/ES5/igx-geographic-map-component";
+import { IgxGeographicMapModule } from "igniteui-angular-maps/ES5/igx-geographic-map-module";
 ```
-
-<!-- end: Angular, React, WebComponents -->

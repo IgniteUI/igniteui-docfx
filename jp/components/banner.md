@@ -6,7 +6,7 @@ _language: ja
 ---
 # Banner
 <p class="highlight">
-Ignite UI for Angular Banner コンポーネントは、スナックバーより長い時間の表示でダイアログより控えめのメッセージを簡単に表示できます。Banner にカスタム アクション ボタンやアイコンの表示を設定できます。</p>
+Ignite UI for Angular Banner コンポーネントは、スナックバーより長い時間の表示でダイアログより控えめのメッセージを簡単に表示できます。Banner にカスタム動作ボタンやアイコンの表示を設定できます。</p>
 
 ## Angular Banner の例
 
@@ -74,7 +74,7 @@ Banner コンポーネントを表示するには、ボタン クリックで [`
 
 ### アイコンの追加
 
-[`Igx-icon`](icon.md) は、バナーのコンテンツに渡すことでバナーに表示できます。Icon は常にバナー メッセージの最初に配置されます。
+[`igx-icon`](icon.md) は、バナーのコンテンツに渡すことでバナーに表示できます。Icon は常にバナー メッセージの最初に配置されます。
 
 > [!NOTE]
 > 複数の `igx-icon` 要素がバナーの直接の子孫として挿入される場合、バナーはそれらすべてを最初に配置しようとします。`igx-icon` は 1 つのみ、直接渡すことに注意してください。
@@ -127,7 +127,7 @@ Banner コンポーネントを表示するには、ボタン クリックで [`
 
 ### カスタム アニメーションの適用
 
-Banner コンポーネントには、アニメーションのオープンとクローズのカスタム設定を適用できる [`animationSettings`]({environment:angularApiUrl}/classes/igxbannercomponent.html#animationsettings) プロパティがあります。開発者は、自分で定義したアニメーションと、[`アニメーションスイート`]({environment:sassApiUrl}/index.html)のアニメーションから選択できます。バナーで使用されるデフォルト アニメーションは、`growVerIn` が開始、`growVerOut` が終了です。 
+Banner コンポーネントには、アニメーションのオープンとクローズのカスタム設定を適用できる [`animationSettings`]({environment:angularApiUrl}/classes/igxbannercomponent.html#animationSettings) プロパティがあります。開発者は、自分で定義したアニメーションと、[`アニメーションスイート`]({environment:sassApiUrl}/index.html)のアニメーションから選択できます。バナーで使用されるデフォルト アニメーションは、`growVerIn` が開始、`growVerOut` が終了です。 
 
 スライドインまたはスライドアウトするためにバナーが使用するアニメーションを変更します。
 
@@ -162,7 +162,7 @@ export class MyBannerComponent {
 
 
 ### イベントにバインド
-Banner コンポーネントは状態の変更時にイベントを発生します。[`opening`]({environment:angularApiUrl}/classes/igxbannercomponent.html#opening) と [`opened`]({environment:angularApiUrl}/classes/igxbannercomponent.html#opened) が Banner が表示される (前と後に) ときに呼び出されます。一方、[`closing`]({environment:angularApiUrl}/classes/igxbannercomponent.html#closing) と [`closed`]({environment:angularApiUrl}/classes/igxbannercomponent.html#closed) は Banner が閉じるときにエミットされます。*Ing* イベント (`opening`, `closing`) はキャンセル可能です。 `ICancelEventArgs` インターフェイスを使用してオブジェクトは `cancel` プロパティを持ちます。`cancel` プロパティを true に設定します。対応するエンド操作とイベントはトリガーされません。たとえば、`opening` をキャンセルした場合、Banner の `open` メソッドは完了せずに Banner が表示されません。
+Banner コンポーネントは状態の変更時にイベントを発生します。[`opening`]({environment:angularApiUrl}/classes/igxbannercomponent.html#opening) と [`opened`]({environment:angularApiUrl}/classes/igxbannercomponent.html#opened) が Banner が表示される (前と後に) ときに呼び出されます。一方、[`closing`]({environment:angularApiUrl}/classes/igxbannercomponent.html#closing) と [`closed`]({environment:angularApiUrl}/classes/igxbannercomponent.html#closed) は Banner が閉じるときにエミットされます。*ing* イベント (`opening`、`closing`) はキャンセル可能です。`ICancelEventArgs` インターフェイスを使用してオブジェクトは `cancel` プロパティを持ちます。`cancel` プロパティを true に設定します。対応するエンド操作とイベントはトリガーされません。たとえば、`opening` をキャンセルした場合、Banner の `open` メソッドは完了せずに Banner が表示されません。
 
 発生したオブジェクトへバインドしたイベントをキャンセルするために `cancel` プロパティに `true` に設定します。
 
@@ -187,7 +187,7 @@ export class MyBannerComponent {
 
 ## 高度な例
 
-2 つのカスタムボタンのバナーを作成しましょう。1 つは通知を閉じるためのボタンで、もう 1 つは接続をオンにするためのボタンです。`igx-banner-actions` セレクターを使用してカスタム アクション ハンドラーを渡すことができます。
+2 つのカスタムボタンのバナーを作成しましょう。1 つは通知を閉じるためのボタンで、もう 1 つは接続をオンにするためのボタンです。`igx-banner-actions` セレクターを使用してカスタム動作ハンドラーを渡すことができます。
 
 ```html
 <!--banner.component.html-->

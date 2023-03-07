@@ -1,12 +1,13 @@
 ---
-title: Angular Data Visualization Tools | Angular Data Visualization Tools | Getting Started | Infragistics
+title: Getting Started | Ignite UI for Angular | Infragistics
 _description: Use Infragistics' Angular components to create apps and improve data visualization with the world’s fastest, virtualized, real-time Angular data grid and streaming financial and business and financial charts.
 _keywords: Ignite UI for Angular, Infragistics, Getting Started
+mentionedTypes: ['XamBulletGraph']
 ---
 
-# Getting Started With Ignite UI for Angular
-
 <!-- Angular, React -->
+
+# Getting Started With Ignite UI for Angular
 
 ## Updating Existing App
 
@@ -34,7 +35,7 @@ yarn add igniteui-angular-spreadsheet igniteui-angular-core
 
 This will automatically install packages for Ignite UI for Angular, along with all of their dependencies, font imports and styles references to the existing project.
 
-## Importing Modules
+## Importing Component Modules
 
 First we have to import the required modules of the components we want to use. We will go ahead and do this for the [**GeographicMap**](geo-map.md) component.
 

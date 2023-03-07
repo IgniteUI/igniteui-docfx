@@ -165,7 +165,7 @@ ExcelUtility.loadFromUrl(process.env.PUBLIC_URL + "/ExcelFiles/ChartData.xlsx").
 });
 ```
 
-## API Members
+## API References
 
 -   [`addChart`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetshapecollection.html#addchart)
 -   [`chartAdapter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#chartadapter)

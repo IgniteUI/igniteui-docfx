@@ -60,7 +60,7 @@ You can find more information about related chart features in these topics:
 -   [Chart Annotations](chart-annotations.md)
 -   [Chart Tooltips](chart-tooltips.md)
 
-## API Members
+## API References
 
 The following is a list of API members mentioned in the above sections:
 

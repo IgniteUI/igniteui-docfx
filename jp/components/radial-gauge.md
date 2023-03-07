@@ -403,16 +403,16 @@ export class AppModule {}
 </igx-radial-gauge>
 ```
 
+## API リファレンス
+
+以下は上記のセクションで説明した API メンバーのリストです。
+
+-   [`IgxRadialGaugeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialgaugecomponent.html)
+-   [`IgxRadialGaugeRangeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialgaugerangecomponent.html)
+
 ## その他のリソース
 
 その他のゲージ タイプの詳細については、以下のトピックを参照してください。
 
 -   [ブレット グラフ](bullet-graph.md)
 -   [リニア ゲージ](linear-gauge.md)
-
-## API メンバー
-
-以下は上記のセクションで説明した API メンバーのリストです。
-
--   [`IgxRadialGaugeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialgaugecomponent.html)
--   [`IgxRadialGaugeRangeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialgaugerangecomponent.html)

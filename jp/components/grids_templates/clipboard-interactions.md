@@ -63,7 +63,7 @@ _language: ja
 @@if (igxName === 'IgxGrid') { カスタムの貼り付けハンドラを使って`貼り付け`の動作を設定することができます。[Excel から貼り付け](paste-excel.md)トピックをご覧ください 。}
 
 ## API の使用
-次のオプションを処理する [`clipboardOptions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clipboardoptions) プロパティを公開します。
+次のオプションを処理する [`clipboardOptions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clipboardOptions) プロパティを公開します。
 - [`enabled`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clipboardoptions.enabled) は選択したセルのコピーを有効または無効にします。
 - [`copyHeaders`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clipboardoptions.copyHeaders) は、コピー時に関連付けられているヘッダーを含めます。
 - [`copyFormatters`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clipboardoptions.copyFormatters) は、既存の列フォーマッタをコピーしたデータに適用します。
@@ -72,7 +72,7 @@ _language: ja
 > [!NOTE] 
 > Excel は、タブで区切られたテキスト (タブ区切り `/t`) を自動的に検出し、データを別々の列に正しく貼り付けることができます。貼り付け形式が機能せず、貼り付けたものがすべて 1 列に表示される場合は、Excel の区切り文字が別の文字に設定されている、またはテキストがタブではなくスペースを使用しています。
 
-- [`gridCopy`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#gridCopy) コピー操作が実行されたときに発生します。[`clipboardOptions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clipboardoptions) を使用してコピー動作が有効になっている場合のみ発生します。
+- [`gridCopy`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#gridCopy) コピー操作が実行されたときに発生します。[`clipboardOptions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clipboardOptions) を使用してコピー動作が有効になっている場合のみ発生します。
 
 ## その他のリソース
 <div class="divider--half"></div>

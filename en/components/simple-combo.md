@@ -182,7 +182,7 @@ When the simple combobox is closed and focused:
 When the simple combobox is opened and an item in the list is focused:
 - `ArrowDown` will move to the next list item. If the active item is the last one in the list and custom values are enabled, the focus will be moved to the Add item button.
 
-- `ArrowUp` will move to the previous list item. If the active item is the first one in the list, the list will  be closed.
+- `ArrowUp` will move to the previous list item. If the active item is the first one in the list, the focus will be moved back to the search input while also selecting all of the text in the input. 
 
 - `End` will move to the last list item.
 
@@ -198,7 +198,7 @@ When the simple combobox is opened and allow custom values are enabled, and add 
 
 - `Enter` will add a new item with `valueKey` and `displayKey` equal to the text in the search input and will select the new item.
 
-- `ArrowUp` focus will be moved back to the last list item or if the list is empty, will close the list.
+- `ArrowUp` will move the focus back to the last list item or if the list is empty, will move the focus to the input.
 
 ## Cascading Scenario
 
@@ -272,6 +272,17 @@ export class SimpleComboCascadingComponent implements OnInit {
 }
 ```
 
+## Angular Simple ComboBox Remote Binding
+
+The Ignite UI for Angular Simple ComboBox Component exposes an API that allows binding a combobox to a remote service and retrieving data on demand.
+
+### Demo
+The sample below demonstrates remote binding using the [dataPreLoad]({environment:angularApiUrl}/classes/IgxSimpleComboComponent.html#dataPreLoad) property to load new chunk of remote data and following the steps described in [ComboBox Remote Binding](combo-remote.md):
+
+<code-view style="height: 400px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/lists/simple-combo-remote" alt="Angular Simple Combo Remote Binding Example">
+</code-view>
 
 ## Angular Simple ComboBox Styling
 
@@ -340,6 +351,7 @@ The last step is to include the component's theme.
 - The simple combobox does not have input for sizing its height. In the future, the [IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) component will expose an option that allows custom sizing, and then the [IgxSimpleCombo]({environment:angularApiUrl}/classes/igxsimplecombocomponent.html) will use the same functionality for proper styling and better consistency.
 - When the simple combobox is bound to an array of primitive data which contains `undefined` (i.e. `[ undefined, ...]`), `undefined` is not displayed in the dropdown. When it is bound to an array of complex data (i.e. objects) and the value used for `valueKey` is `undefined`, the item will be displayed in the dropdown, but cannot be selected.
 - When the simple combobox is bound via `ngModel` and is marked as `required`, `null`, `undefined` and `''` values cannot be selected.
+- When the simple combobox is bound to a remote service and there is a predefined selection, its input will remain blank until the requested data is loaded.
 
 > [!NOTE]
 > The simple combobox uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for the simple combobox. For more details see [igxForOf Known Issues](for-of.md#known-limitations) section.

@@ -7,8 +7,7 @@ _language: ja
 
 # コンポーネント テーマ
 
-<div class="highlight">コンポーネント テーマは、テーマをグローバルに定義して特定のコンポーネント インスタンスのスタイルを変更できます。</div>
-<div class="divider"></div>
+<p class="highlight">コンポーネント テーマは、テーマをグローバルに定義して特定のコンポーネント インスタンスのスタイルを変更できます。</p>
 
 ## 概要
 
@@ -20,6 +19,7 @@ Ignite UI for Angular でコンポーネント テーマを設定する方法、
 - 2 つ目の方法は、特定のコンポーネントで既に宣言されている CSS ルールを上書きする新しいルールを作成することです。この方法は古いブラウザーに適切なテーマをサポートする簡単で唯一の方法ですが、多くの追加 CSS ルールを生成した CSS テーマに追加するため理想的ではありません。
 
 これらの方法を実際に使用する方法やコンポーネント レベルのテーマを作成する場合にどちらか一方を使用する方法について説明します。
+
 <div class="divider"></div>
 
 ## テーマの作成
@@ -38,15 +38,15 @@ Ignite UI for Angular でコンポーネント テーマを設定する方法、
 アバター テーマの定義:
 
 ```scss
-// @include theme(...); の後のどこか
+// Some place after @include theme(...);
 
-// アバターの背景を purple に変更します。
-$new-avatar-theme: avatar-theme(
+// Change the background of the avatar to purple.
+$avatar-purple-theme: avatar-theme(
   $background: purple,
 );
 
-// css-vars を `css-vars` ミックスインに渡します
-@include css-vars($new-avatar-theme);
+// Pass the css-vars to the `css-vars` mixin
+@include css-vars($avatar-purple-theme);
 ```
 
 上記のコードは、`igx-avatar` コンポーネントに対して新しい CSS 変数を生成します。これらの新しい CSS 変数は、デフォルトのアバター ルールを上書きします。
@@ -56,17 +56,17 @@ $new-avatar-theme: avatar-theme(
 
 ```scss
 // ...
-@include css-vars($new-avatar-theme);
+@include css-vars($avatar-purple-theme);
 
 // Later
-$another-avatar-theme: avatar-theme(
+$avatar-royalblue-theme: avatar-theme(
   $background: royalblue,
 );
 
-@include css-vars($another-avatar-theme);
+@include css-vars($avatar-royalblue-theme);
 ```
 
-上記コードでは、以前の `css-vars` ミックスインはすべて上書きされるため、事実上のグローバル テーマは `$another-avatar-theme` なります。
+上記コードでは、以前の `css-vars` ミックスインはすべて上書きされるため、事実上のグローバル テーマは `$avatar-royalblue-theme` なります。
 
 ここで次のポイントに移ります。
 
@@ -86,7 +86,7 @@ $another-avatar-theme: avatar-theme(
 }
 
 .avatar-purple {
-  @include css-vars($avatar-green-theme);
+  @include css-vars($avatar-purple-theme);
 }
 ```
 
@@ -112,7 +112,7 @@ $another-avatar-theme: avatar-theme(
 
 Angular では、表示のカプセル化に 3 つの方法 Emulated (デフォルト)、Shadow DOM、None を採用しています。各方法の詳細については、[Angular ヘルプ](https://angular.io/api/core/ViewEncapsulation) をご覧ください。表示をカプセル化した親コンポーネントの一部である Ignite UI for Angular コンポーネントのテーマを処理する方法について詳しく説明します。
 
-`エミュレートされた`表示のカプセル化とは？このタイプの表示のカプセル化は、Shadow DOM 仕様の利点を享受しませんが、ホスト要素に適用された一意の属性識別子を使用してコンポーネントとその子のスタイルをバインドする方法を利用します。インナー セレクターをターゲットにした表示のカプセル化コンポーネントのスタイルシートに追加したスタイルのルールは、ホスト要素の一意の属性を参照しないため適用されません。このカプセル化をペネトレーションするには、View Encapsulation ペネトレーション ストラテジをいくつか使用する必要があります。現在の Angular でこれを行うのは `::ng-deep` です。ホスト要素でカプセル化された内部のセレクターをターゲットにできます。CSS 変数の代わりに CSS ルールを扱っている場合やコンポーネントの単一のインスタンスをカスタマイズする場合は、`:: ng-deep` の使用をお勧めします。次のセクションで例を示します。
+`エミュレートされた`表示のカプセル化とは？このタイプの表示のカプセル化は、Shadow DOM 仕様の利点を享受しませんが、ホスト要素に適用された一意の属性識別子を使用してコンポーネントとその子のスタイルをバインドする方法を利用します。インナー セレクターをターゲットにした表示のカプセル化コンポーネントのスタイルシートに追加したスタイルのルールは、ホスト要素の一意の属性を参照しないため適用されません。このカプセル化を解除するには、View Encapsulation 解除ストラテジをいくつか使用する必要があります。現在の Angular でこれを行うのは `::ng-deep` です。ホスト要素でカプセル化された内部のセレクターをターゲットにできます。CSS 変数の代わりに CSS ルールを扱っている場合やコンポーネントの単一のインスタンスをカスタマイズする場合は、`::ng-deep` の使用をお勧めします。次のセクションで例を示します。
 
 以下は CSS 変数を使用する例です。特定の親コンポーネントにバインドするアバター テーマを作成します。
 
@@ -136,22 +136,22 @@ export class AvatarComponent extends Component {
 ```scss
 // app-avatar.component.scss
 
-// テーマ モジュールをインポートします
+// Import the theming module
 @use "igniteui-angular/theming" as *;
 
-// !重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
+// !IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 
-$avatar-theme: avatar-theme(
+$avatar-royalblue-theme: avatar-theme(
   $background: royalblue,
 );
 
 :host {
-  @include css-vars($avatar-theme);
+  @include css-vars($avatar-royalblue-theme);
 }
 ```
 
-CSS 変数を使用する間は、`:: ng-deep` 擬似セレクターは必要ありません。上記コードで背景色に常に `royalblue` が含まれる `igx-avatar` の CSS 変数を作成しました。カスタム アバターのテーマは、その他の `igx-avatar` コンポーネントに影響しないため、カスタムの `app-avatar` コンポーネント内でカプセル化されたままです。
+CSS 変数を使用する間は、`::ng-deep` 擬似セレクターは必要ありません。上記コードで背景色に常に `royalblue` が含まれる `igx-avatar` の CSS 変数を作成しました。カスタム アバターのテーマは、その他の `igx-avatar` コンポーネントに影響しないため、カスタムの `app-avatar` コンポーネント内でカプセル化されたままです。
 
 `$igx-legacy-support` を `false` に設定してビルドした Ignite UI for Angular テーマは、プロジェクトで Sass を使用せずにコンポーネントのスタイルを設定できます。たとえば、上記は `--igx-avatar-background` CSS 変数に色の値を設定することにより実現できます。
 
@@ -175,50 +175,45 @@ CSS 変数を使用する間は、`:: ng-deep` 擬似セレクターは必要あ
 以下は、ハードコーディングされた値で複数コンポーネントをスタイル設定する方法の例です。
 
 ```scss
-// テーマ モジュールをインポートします
+// Import the theming module
 @use "igniteui-angular/theming" as *;
 
-// !重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
+// !IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 
 @include core();
 @include theme($palette: $default-palette, $legacy-support: true);
 
-<<<<<<< HEAD
-// Overwrite the default themes foravatar using hard-coded values:
-$avatar-theme: avatar-theme(
-=======
-// Overwrite the default themes for avatar using hard-coded values:
-$avatar-theme:avatar-theme(
->>>>>>> 5bf5d3a313a94d7c53f89e96f276d9ce21c18c37
+// Overwrite the default themes for igx-avatar using hard-coded values:
+$avatar-royalblue-theme: avatar-theme(
   $background: royalblue,
 );
 
-@include avatar($avatar-theme);
+@include avatar($avatar-royalblue-theme);
 ```
 
 <div class="divider"></div>
 
-### カプセル化した表示の使用 
+### カプセル化した表示の使用
 
 以下のサンプルは、[表示のカプセル化](#表示のカプセル化)セクションのサンプルを開始点として使用しています。
 
 ```scss
-// テーマ モジュールをインポートします
+// Import the theming module
 @use "igniteui-angular/theming" as *;
 
-// !重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
+// !IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 
-// 最初にレガシーサポートを有効にしてください
-// !重要: Ignite UI for Angular 13 より古いバージョンにのみ適用されます。
+// Enable legacy support first.
+// !IMPORTANT: Only applicable for versions older than Ignite UI for Angular 13.
 $igx-legacy-support: true;
-$avatar-theme: avatar-theme(
+$avatar-royalblue-theme: avatar-theme(
   $initials-background: royalblue,
 );
 
 :host ::ng-deep {
-  @include avatar($avatar-theme);
+  @include avatar($avatar-royalblue-theme);
 }
 ```
 
@@ -228,8 +223,8 @@ $avatar-theme: avatar-theme(
 
 <div class="divider--half"></div>
 
-* [Global テーマ]({environment:sassApiUrl}/index.html#mixin-theme)
-* [Avatar テーマ]({environment:sassApiUrl}/index.html#function-igx-avatar)
+- [Global テーマ]({environment:sassApiUrl}/index.html#mixin-theme)
+- [Avatar テーマ]({environment:sassApiUrl}/index.html#function-igx-avatar)
 
 ## その他のリソース
 
@@ -237,9 +232,9 @@ $avatar-theme: avatar-theme(
 
 グローバル テーマの設定方法:
 
-* [グローバル テーマ](./global-themes.md)
+- [グローバル テーマ](./global-themes.md)
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

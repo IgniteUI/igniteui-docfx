@@ -133,27 +133,15 @@ public pivotConfigHierarchy: IPivotConfiguration = {
 ### ディメンションのドラッグアンドドロップ
 ディメンションはチップで表現され、ドラッグアンドドロップが可能です。
 すべてのチップは、ドラッグアンドドロップでエリア内の順序を変更できます。
-`rows`、`column`、`filter`  (ディメンション チップ) のチップは、これらの領域のいずれかから他の任意の場所に移動できます。
+`rows`、`column`、`filter` (ディメンション チップ) のチップは、これらの領域のいずれかから他の任意の場所に移動できます。
 これらの領域のチップは `values` 領域に移動できず、`values` 領域のチップはどのディメンション領域にも移動できません。
 
 >[!NOTE]
 >ピボット グリッドのチップをピボット データ セレクターに移動したり、ピボット データ セレクターの項目をピボット グリッドに移動したりすることはできません。
 
-## Excel へのエクスポート
-
-[`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) は、`IgxPivotGrid` のエクスポートをサポートします。次の例は、この機能を示しています。
-
-<code-view style="height: 875px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-export" alt="Angular Pivot Grid Excel へのエクスポート">
-</code-view>
-
-> [!NOTE]
-> Excel の展開/縮小インジケーターは、ピボット グリッドの最後のディメンションの階層に基づいて表示されます。
-
 ## API リファレンス
 * [IgxPivotGridComponent]({environment:angularApiUrl}/classes/igxpivotgridcomponent.html)
-* [IgxPivotDataSelector]({environment:angularApiUrl}/classes/igxpivotdataselector.html)
+* [IgxPivotDataSelectorComponent]({environment:angularApiUrl}/classes/igxpivotdataselectorcomponent.html)
 
 
 ## その他のリソース

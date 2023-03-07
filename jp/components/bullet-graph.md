@@ -37,7 +37,7 @@ Angular Bullet Graph コンポーネントは、目盛り上でメジャーの�
 
 <div class="divider--half"></div>
 
-このゲージは、スケール、針、目盛 (1 組)、ラベル (1 組) をサポートします。このコンポーネントには、アニメーション化されたトランジションのサポートも組み込まれています。アニメーションは、[`transitionDuration`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbulletgraphcomponent.html#transitionduration) プロパティの設定で簡単にカスタマイズできます。
+このゲージは、スケール、針、目盛 (1 組)、ラベル (1 組) をサポートします。このコンポーネントには、アニメーション化されたトランジションのサポートも組み込まれています。アニメーションは、[`transitionDuration`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbulletgraphcomponent.html#transitionDuration) プロパティの設定で簡単にカスタマイズできます。
 ブレット グラフの機能には構成可能な向きや方向、視覚要素やツールチップなどがあります。
 
 <!-- Angular, React, WebComponents -->
@@ -56,8 +56,6 @@ npm install --save igniteui-angular-gauges
 ## モジュールの要件
 
 [`IgxBulletGraphComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbulletgraphcomponent.html) を作成するには、以下のモジュールが必要です。
-
-<!-- Angular, React, WebComponents -->
 
 ```ts
 // app.module.ts
@@ -307,7 +305,7 @@ export class AppModule {}
 
 ## スケール
 
-スケールはゲージで値の全範囲を強調表示する視覚的な要素です。外観やスケールの図形のカスタマイズ、更にスケールを反転 ([`isScaleInverted`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbulletgraphcomponent.html#isscaleinverted) プロパティを使用) させて、すべてのラベルを左から右ではなく、右から左へ描画することもできます。
+スケールはゲージで値の全範囲を強調表示する視覚的な要素です。外観やスケールの図形のカスタマイズ、更にスケールを反転 ([`isScaleInverted`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbulletgraphcomponent.html#isScaleInverted) プロパティを使用) させて、すべてのラベルを左から右ではなく、右から左へ描画することもできます。
 
 ```html
 <igx-bullet-graph
@@ -416,16 +414,16 @@ export class AppModule {}
 </igx-bullet-graph>
 ```
 
+## API リファレンス
+
+以下は上記のセクションで説明した API メンバーのリストです。
+
+-   [`IgxBulletGraphComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbulletgraphcomponent.html)
+-   [`IgxLinearGraphRangeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineargraphrangecomponent.html)
+
 ## その他のリソース
 
 その他のゲージ タイプの詳細については、以下のトピックを参照してください。
 
 -   [リニア ゲージ](linear-gauge.md)
 -   [ラジアル ゲージ](radial-gauge.md)
-
-## API メンバー
-
-以下は上記のセクションで説明した API メンバーのリストです。
-
--   [`IgxBulletGraphComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbulletgraphcomponent.html)
--   [`IgxLinearGraphRangeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineargraphrangecomponent.html)

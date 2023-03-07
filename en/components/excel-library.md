@@ -2,12 +2,12 @@
 title: Angular Excel Library| Data Spreadsheet and Table | Infragistics
 _description: Use Infragistics' Angular excel library to work with spreadsheet data using Microsoft Excel features.  Learn how easily you can transfer data from excel to your application using Ignite UI for Angular excel library!
 _keywords: Excel library, Ignite UI for Angular, Infragistics, workbook
-mentionedTypes: ['Workbook']
+mentionedTypes: ['Workbook', 'Worksheet', 'Cell', 'Formula']
 ---
 
 # Angular Excel Library Overview
 
-The Infragistics Angular Excel Library allows you to work with spreadsheet data using familiar Microsoft® Excel® spreadsheet objects like [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html), [`Worksheet`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html), `Cell`, [`Formula`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/formula.html) and many more. The Infragistics Angular Excel Library makes it easy for you to represent the data of your application in an Excel spreadsheet as well as transfer data from Excel into your application.
+The Infragistics Angular Excel Library allows you to work with spreadsheet data using familiar Microsoft® Excel® spreadsheet objects like [`workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/sheet.html#workbook), [`Worksheet`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html), [`IgxCell`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcell.html), [`Formula`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/formula.html) and many more. The Infragistics Angular Excel Library makes it easy for you to represent the data of your application in an Excel spreadsheet as well as transfer data from Excel into your application.
 
 ## Angular Excel Library Example
 
@@ -42,7 +42,7 @@ npm install --save igniteui-angular-core
 npm install --save igniteui-angular-excel
 </pre>
 
-## Required Modules
+## Component Modules
 
 The Angular excel library requires the following modules:
 
@@ -101,11 +101,11 @@ Now that the Excel Library module is imported, next step is to load a workbook.
 
 <!-- Angular, React, WebComponents -->
 
-In the following code snippet, an external [ExcelUtility](excel-utility.md) class is used to save and load a [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html).
+In the following code snippet, an external [ExcelUtility](excel-utility.md) class is used to save and load a [`workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/sheet.html#workbook).
 
 <!-- end: Angular, React, WebComponents -->
 
-In order to load and save [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) objects, you can utilize the save method of the actual [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) object, as well as its static `Load` method.
+In order to load and save [`workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/sheet.html#workbook) objects, you can utilize the save method of the actual [`workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/sheet.html#workbook) object, as well as its static `Load` method.
 
 ```ts
 import { Workbook } from "igniteui-angular-excel";
@@ -154,8 +154,9 @@ Modify `angular.json` by setting the `vendorSourceMap` option under architect =>
 
 <!-- -->
 
-## API Members
+## API References
 
 -   `Load`
 -   `WorkbookInProcessRuntime`
--   [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html)
+-   [`Worksheet`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html)
+-   [`workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/sheet.html#workbook)

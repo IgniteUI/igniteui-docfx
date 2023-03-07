@@ -169,7 +169,7 @@ export class MapTypeScatterContourSeriesComponent implements AfterViewInit {
 }
 ```
 
-## API メンバー
+## API リファレンス
 
 -   [`fillScale`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographiccontourlineseriescomponent.html#fillscale)
 -   [`IgxGeographicContourLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographiccontourlineseriescomponent.html)

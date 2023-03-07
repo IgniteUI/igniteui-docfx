@@ -52,7 +52,7 @@ npm install --save igniteui-angular-maps
 
 <!-- end: Angular, React, WebComponents -->
 
-## Required Modules
+## Component Modules
 
 The [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html) requires the following modules, however the DataChartInteractivityModule is only required for mouse interactions, such as panning and zooming the map content.
 
@@ -127,7 +127,7 @@ You can find more information about related Angular map features in these topics
 -   [Using Shape Polygon Series](geo-map-type-shape-polygon-series.md)
 -   [Using Shape Polyline Series](geo-map-type-shape-polyline-series.md)
 
-## API Members
+## API References
 
 The following is a list of API members mentioned in the above sections:
 

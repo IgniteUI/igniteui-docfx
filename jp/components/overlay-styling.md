@@ -14,7 +14,7 @@ _language: ja
 
 ## オーバーレイ コンポーネントのスタイル設定
 
-ほとんどの場合、[グローバル](themes/sass/global-themes.md) テーマのスタイルはオーバーレイ アウトレットの影響を受けません。例として、グローバル [`css-vars`]({environment:sassApiUrl}/index.html#mixin-css-vars) mixin で[スタイル設定された](drop-down.md#スタイル設定)ドロップダウンを見てみましょう。
+ほとんどの場合、[グローバル](themes/sass/global-themes.md) テーマのスタイルはオーバーレイ アウトレットの影響を受けません。例として、グローバル [`css-vars`]({environment:sassApiUrl}/index.html#mixin-css-vars) ミックスインで[スタイル設定された](drop-down.md#スタイル設定)ドロップダウンを見てみましょう。
 
 ```html
 <!-- overlay-styling.component.html -->
@@ -153,7 +153,7 @@ $my-overlay-theme: overlay-theme(
 ```
 
 >[!NOTE]
->コンポーネントが [`Emulated`](./themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用していて、`$legacy-support` が `true` に設定されている場合、オーバーレイのテーマ関数を使用して `::ng-deep` によってこのカプセル化を`ペネトレーションします`。
+>コンポーネントが [`Emulated`](./themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用していて、`$legacy-support` が `true` に設定されている場合、オーバーレイのテーマ関数を使用して `::ng-deep` によってこのカプセル化を`解除します`。
 
 ## API リファレンス
 * [IgniteUI for Angular - テーマ ライブラリ](themes/index.md)

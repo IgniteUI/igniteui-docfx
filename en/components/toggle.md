@@ -81,7 +81,7 @@ In the next sample, we'll use a different positioning strategy so that the conte
 The `igxToggle` directive uses the [`IgxOverlayService`]({environment:angularApiUrl}/classes/igxoverlayservice.html) provider. The `open`, `close` and `toggle` methods accept optional overlay settings that control how the content is displayed. If omitted, the default overlay settings are used as seen in the previous sample.
 
 >[!NOTE]
-> By default, the [`closeOnOutsideClick`]({environment:angularApiUrl}/interfaces/overlaysettings.html#closeonoutsideclick) property is set to `true`. In order to disable this functionality, the property has to be set to `false`. Additionally, the [`closeOnEscape`]({environment:angularApiUrl}/interfaces/overlaysettings.html#closeonescape) property defaults to `false`, so in order to make use of it, we have to set it to `true`.
+> By default, the [`closeOnOutsideClick`]({environment:angularApiUrl}/interfaces/overlaysettings.html#closeOnOutsideClick) property is set to `true`. In order to disable this functionality, the property has to be set to `false`. Additionally, the [`closeOnEscape`]({environment:angularApiUrl}/interfaces/overlaysettings.html#closeOnEscape) property defaults to `false`, so in order to make use of it, we have to set it to `true`.
 
 ```typescript
 // template.component.ts
@@ -145,7 +145,7 @@ After these changes the toggle should work exactly in the same way.
 
 
 >[!NOTE]
-> By default `IgxToggleActionDirective` excludes its host element from the [`closeOnOutsideClick`]({environment:angularApiUrl}/interfaces/overlaysettings.html#closeonoutsideclick) property. Therefore, clicking on the host element will not fire any event. Additionally, this directive will set its host element as the overlay settings [`target`]({environment:angularApiUrl}/interfaces/overlaysettings.html#target).
+> By default `IgxToggleActionDirective` excludes its host element from the [`closeOnOutsideClick`]({environment:angularApiUrl}/interfaces/overlaysettings.html#closeOnOutsideClick) property. Therefore, clicking on the host element will not fire any event. Additionally, this directive will set its host element as the overlay settings [`target`]({environment:angularApiUrl}/interfaces/overlaysettings.html#target).
 
 ### Automatic Toggle Service Provider
 

@@ -61,7 +61,7 @@ The Angular UI grid in Ignite UI for Angular has a **summaries** feature that fu
 **@@igComponent summaries** can also be enabled on a per-column level in Ignite UI for Angular, which means that you can activate it only for columns that you need. @@igComponent summaries gives you a predefined set of default summaries, depending on the type of data in the column, so that you can save some time:
 
 
-For `string` and `boolean` [`data types`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype), the following function is available:
+For `string` and `boolean` [`data types`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#dataType), the following function is available:
  - count
 
 For `number`, `currency` and `percent` data types, the following functions are available:
@@ -78,7 +78,7 @@ For `date` data type, the following functions are available:
 
 All available column data types could be found in the official [Column types topic](column-types.md#default-template).
 
-**@@igComponent summaries** are enabled per-column by setting [`hasSummary`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#hassummary) property to `true`. It is also important to keep in mind that the summaries for each column are resolved according to the column data type. In the `@@igSelector` the default column data type is `string`, so if you want `number` or `date` specific summaries you should specify the [`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype) property as `number` or `date`. Note that the summary values will be displayed localized, according to the grid [`locale`]({environment:angularApiUrl}/classes/igxgridcomponent.html#locale) and column [`pipeArgs`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#pipeArgs).
+**@@igComponent summaries** are enabled per-column by setting [`hasSummary`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#hasSummary) property to `true`. It is also important to keep in mind that the summaries for each column are resolved according to the column data type. In the `@@igSelector` the default column data type is `string`, so if you want `number` or `date` specific summaries you should specify the [`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype) property as `number` or `date`. Note that the summary values will be displayed localized, according to the grid [`locale`]({environment:angularApiUrl}/classes/igxgridcomponent.html#locale) and column [`pipeArgs`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#pipeArgs).
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
 ```html
@@ -109,7 +109,7 @@ All available column data types could be found in the official [Column types top
 </igx-hierarchical-grid>
 ```
 }
-The other way to enable/disable summaries for a specific column or a list of columns is to use the public method [`enableSummaries`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#enablesummaries)/[`disableSummaries`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#disablesummaries) of the **@@igSelector**.
+The other way to enable/disable summaries for a specific column or a list of columns is to use the public method [`enableSummaries`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#enableSummaries)/[`disableSummaries`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#disableSummaries) of the **@@igSelector**.
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
 ```html
@@ -412,22 +412,22 @@ public dateSummaryFormat(summary: IgxSummaryResult, summaryOperand: IgxSummaryOp
 @@if (igxName === 'IgxGrid') {
 ## Summaries with Group By
 
-When you have grouped by columns, the @@igComponent allows you to change the summary position and calculation mode using the [`summaryCalculationMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summarycalculationmode) and [`summaryPosition`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summaryposition) properties. Along with these two properties the @@igxName exposes and [`showSummaryOnCollapse`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#showsummaryoncollapse) property which allows you to determine whether the summary row stays visible when the group row that refers to is collapsed.
+When you have grouped by columns, the @@igComponent allows you to change the summary position and calculation mode using the [`summaryCalculationMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summaryCalculationMode) and [`summaryPosition`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summaryPosition) properties. Along with these two properties the @@igxName exposes and [`showSummaryOnCollapse`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#showSummaryOnCollapse) property which allows you to determine whether the summary row stays visible when the group row that refers to is collapsed.
 
-The available values of the [`summaryCalculationMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summarycalculationmode) property are:
+The available values of the [`summaryCalculationMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summaryCalculationMode) property are:
  - rootLevelOnly - Summaries are calculated only for the root level.
  - childLevelsOnly - Summaries are calculated only for the child levels.
  - rootAndChildLevels - Summaries are calculated for both root and child levels. This is the default value.
 
-The available values of the [`summaryPosition`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summaryposition) property are:
+The available values of the [`summaryPosition`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summaryPosition) property are:
  - top - The summary row appears before the group by row children.
  - bottom - The summary row appears after the group by row children. This is the default value.
 
-The [`showSummaryOnCollapse`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#showsummaryoncollapse) property is boolean. Its default value is set to **false**, which means that the summary row would be hidden when the group row is collapsed. If the property is set to **true** the summary row stays visible when group row is collapsed.
+The [`showSummaryOnCollapse`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#showSummaryOnCollapse) property is boolean. Its default value is set to **false**, which means that the summary row would be hidden when the group row is collapsed. If the property is set to **true** the summary row stays visible when group row is collapsed.
 
 
 > [!NOTE]
-> The [`summaryPosition`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summaryposition) property applies only for the child level summaries. The root level summaries appear always fixed at the bottom of the @@igComponent.
+> The [`summaryPosition`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summaryPosition) property applies only for the child level summaries. The root level summaries appear always fixed at the bottom of the @@igComponent.
 
 ### Demo
 
@@ -441,22 +441,22 @@ The [`showSummaryOnCollapse`]({environment:angularApiUrl}/classes/@@igTypeDoc.ht
 @@if (igxName === 'IgxTreeGrid') {
 ## Child Summaries
 
-The @@igComponent supports separate summaries for the root nodes and for each nested child node level. Which summaries are shown is configurable using the [`summaryCalculationMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summarycalculationmode) property. The child level summaries can be shown before or after the child nodes using the [`summaryPosition`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summaryposition) property. Along with these two properties the @@igxName exposes and [`showSummaryOnCollapse`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#showsummaryoncollapse) property which allows you to determine whether the summary row stays visible when the parent node that refers to is collapsed.
+The @@igComponent supports separate summaries for the root nodes and for each nested child node level. Which summaries are shown is configurable using the [`summaryCalculationMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summaryCalculationMode) property. The child level summaries can be shown before or after the child nodes using the [`summaryPosition`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summaryPosition) property. Along with these two properties the @@igxName exposes and [`showSummaryOnCollapse`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#showSummaryOnCollapse) property which allows you to determine whether the summary row stays visible when the parent node that refers to is collapsed.
 
 
-The available values of the [`summaryCalculationMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summarycalculationmode) property are:
+The available values of the [`summaryCalculationMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summaryCalculationMode) property are:
  - rootLevelOnly - Summaries are calculated only for the root level nodes.
  - childLevelsOnly - Summaries are calculated only for the child levels.
  - rootAndChildLevels - Summaries are calculated for both root and child levels. This is the default value.
 
-The available values of the [`summaryPosition`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summaryposition) property are:
+The available values of the [`summaryPosition`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summaryPosition) property are:
  - top - The summary row appears before the list of child rows.
  - bottom - The summary row appears after the list of child rows. This is the default value.
 
-The [`showSummaryOnCollapse`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#showsummaryoncollapse) property is boolean. Its default value is set to **false**, which means that the summary row would be hidden when the parent row is collapsed. If the property is set to **true** the summary row stays visible when parent row is collapsed.
+The [`showSummaryOnCollapse`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#showSummaryOnCollapse) property is boolean. Its default value is set to **false**, which means that the summary row would be hidden when the parent row is collapsed. If the property is set to **true** the summary row stays visible when parent row is collapsed.
 
 > [!NOTE]
-> The [`summaryPosition`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summaryposition) property applies only for the child level summaries. The root level summaries appear always fixed at the bottom of the @@igComponent.
+> The [`summaryPosition`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summaryPosition) property applies only for the child level summaries. The root level summaries appear always fixed at the bottom of the @@igComponent.
 
 
 <code-view style="height:720px"
@@ -466,6 +466,57 @@ The [`showSummaryOnCollapse`]({environment:angularApiUrl}/classes/@@igTypeDoc.ht
 
 }
 <div class="divider--half"></div>
+
+## Exporting Summaries
+
+There is an [`exportSummaries`]({environment:angularApiUrl}/classes/IgxExcelExporterOptions.html#exportSummaries) option in `IgxExcelExporterOptions` that specifies whether the exported data should include the grid's summaries. Default `exportSummaries` value is **false**.
+
+The [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/IgxExcelExporterService.html) will export the default summaries for all column types as their equivalent excel functions so they will continue working properly when the sheet is modified. Try it for yourself in the example below:
+
+@@if (igxName === 'IgxGrid') {
+<code-view style="height:770px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/grid/grid-summary-export" >
+</code-view>
+}
+
+@@if (igxName === 'IgxTreeGrid') {
+<code-view style="height:780px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-summary-export" >
+</code-view>
+}
+
+
+@@if (igxName === 'IgxHierarchicalGrid') {
+<code-view style="height:760px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-summary-export" >
+</code-view>
+}
+
+The exported file includes a hidden column that holds the level of each `DataRecord` in the sheet. This level is used in the summaries to filter out the cells that need to be included in the summary function.
+
+In the table below, you can find the corresponding Excel formula for each of the default summaries.
+
+Data Type | Function | Excel Function |
+|:--------|:--------:|:---------------|
+`string`, `boolean` | count | ="Count: "&COUNTIF(start:end, recordLevel) |
+`number`, `currency`, `percent` | count | ="Count: "&COUNTIF(start:end, recordLevel) |
+|| min| ="Min: "&MIN(IF(start:end=recordLevel, rangeStart:rangeEnd)) |
+|| max | ="Max: "&MAX(IF(start:end=recordLevel, rangeStart:rangeEnd)) |
+|| average | ="Avg: "&AVERAGEIF(start:end, recordLevel, rangeStart:rangeEnd) |
+|| sum | ="Sum: "&SUMIF(start:end, recordLevel, rangeStart:rangeEnd) |
+`date` | count | ="Count: "&COUNTIF(start:end, recordLevel) |
+|| earliest | ="Earliest: "& TEXT(MIN(IF(start:end=recordLevel, rangeStart:rangeEnd)), format) |
+|| latest | ="Latest: "&TEXT(MAX(IF(start:end=recordLevel, rangeStart:rangeEnd)), format) |
+
+### Known Limitations
+
+|Limitation|Description|
+|--- |--- |
+| Exporting custom summaries | Custom summaries will be exported as strings instead of Excel functions. |
+| Exporting templated summaries | Templated summaries are not supported and will be exported as the default ones. |
 
 ## Keyboard Navigation
 

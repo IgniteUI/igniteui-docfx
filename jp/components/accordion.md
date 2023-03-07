@@ -16,7 +16,7 @@ Angular Accordion は、単一のコンテナーに表示されるクリック�
 ## Angular Accordion の例
 以下は FAQ セクションの基本的な Angular Accordion の例です。アコーディオンとして動作し、個別に動作します。複数のパネルを同時に展開しながら、各テキスト ブロックをシングルクリックで切り替えることができます。これにより、自動的に展開および縮小パネル間を前後に移動することなく、情報をより簡単に読み取ることができます。このパネルは、以前に開いたセクションを毎回非表示にします。
 
-ここでは、`igx-accrodion` とその[展開パネル]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html)を定義する方法を確認できます。このサンプルは、2 種類の展開動作も示します。切り替えボタンは [singleBranchExpand]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#singlebranchexpand) プロパティを設定し、一度に展開する単一ブランチと複数ブランチを切り替えます。
+ここでは、`igx-accrodion` とその[展開パネル]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html)を定義する方法を確認できます。このサンプルは、2 種類の展開動作も示します。切り替えボタンは [singleBranchExpand]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#singleBranchExpand) プロパティを設定し、一度に展開する単一ブランチと複数ブランチを切り替えます。
 
 <code-view style="height:460px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -35,7 +35,7 @@ ng add igniteui-angular
 ```
 Ignite UI for Angular については、[*はじめに*](general/getting-started.md)トピックををご覧ください。
 
-次に、app.module ファイルに  `IgxAccordionModule` をインポートします。 
+次に、app.module ファイルに `IgxAccordionModule` をインポートします。 
 
 ```typescript
 // app.module.ts
@@ -56,7 +56,7 @@ Angular Material Accordion モジュールをインポート後、`igx-accordion
 ## 使用方法
 
 [IgxAccordionComponent]({environment:angularApiUrl}/classes/igxaccordioncomponent.html) の各セクションは、[展開パネル]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html)を使用して定義されます。
-パネルには [disabled]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html#disabled)、[collapsed]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html#collapsed)、および [animationSettings]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html#animationsettings) プロパティがあり、要件に応じてパネルの状態を構成できます。 
+パネルには [disabled]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html#disabled)、[collapsed]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html#collapsed)、および [animationSettings]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html#animationSettings) プロパティがあり、要件に応じてパネルの状態を構成できます。 
 
 ### Accordion の宣言
 
@@ -92,7 +92,7 @@ public accordion!: IgxAccordionComponent;
 this.accordion.panels;
 ```
 
-上記で示したように、[singleBranchExpand]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#singlebranchexpand) プロパティを使用すると、一度に 1 つまたは複数のパネルを展開できるかどうかを設定できます。
+上記で示したように、[singleBranchExpand]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#singleBranchExpand) プロパティを使用すると、一度に 1 つまたは複数のパネルを展開できるかどうかを設定できます。
 
 ### Angular Accordion のアニメーション
 
@@ -139,7 +139,7 @@ export class AccordionComponent {
 
 > 注: [IgxAccordionComponent]({environment:angularApiUrl}/classes/igxaccordioncomponent.html) のアニメーションを無効にするには、`animationSettings` を `null` に設定します。
 
-または、各[展開パネル]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html)の [animationSettings]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html#animationsettings) 入力を設定することもできます。
+または、各[展開パネル]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html)の [animationSettings]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html#animationSettings) 入力を設定することもできます。
 
 ```html
 <igx-accordion #accordion [singleBranchExpand]="true">
@@ -161,9 +161,9 @@ export class AccordionComponent {
     </igx-expansion-panel>
 </igx-accordion>
 ```
-[collapseAll]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#collapseall) および [expandAll]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#expandall) メソッドを使用すると、[IgxAccordion]({environment:angularApiUrl}/classes/igxaccordioncomponent.html) のすべての [IgxExpansionPanel]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) をプログラムでそれぞれ縮小および展開できます。
+[collapseAll]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#collapseAll) および [expandAll]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#expandAll) メソッドを使用すると、[IgxAccordion]({environment:angularApiUrl}/classes/igxaccordioncomponent.html) のすべての [IgxExpansionPanel]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) をプログラムでそれぞれ縮小および展開できます。
 
-> 注: [singleBranchExpand]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#singlebranchexpand) プロパティが *true* に設定されている場合、[expandAll]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#expandall) メソッドを呼び出すと、最後の[パネル]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html)のみが展開されます。
+> 注: [singleBranchExpand]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#singleBranchExpand) プロパティが *true* に設定されている場合、[expandAll]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#expandAll) メソッドを呼び出すと、最後の[パネル]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html)のみが展開されます。
 
 ### Angular Accordion テンプレート化の例
 Angular [Accordion コンポーネント]({environment:angularApiUrl}/classes/igxaccordioncomponent.html)を使用すると、ヘッダーとコンテンツ パネルの外観をカスタマイズできます。
@@ -229,7 +229,7 @@ Angular Material Accordion のキーボード ナビゲーションは、さま�
  - <kbd>END</kbd> - Accordion の最後の有効なパネルに移動します
 
 ## Angular Accordion のスタイル設定
-[Accordion]({environment:angularApiUrl}/classes/igxaccordioncomponent.html) は、基になる[パネル]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html)のコンテナーとしてのみ機能します。スタイルは、[IgxExpansionPanel トピックのスタイル設定セクション](expansion-panel.html#styling)で説明されているように、パネルのテーマから直接適用できます。
+[Accordion]({environment:angularApiUrl}/classes/igxaccordioncomponent.html) は、基になる[パネル]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html)のコンテナーとしてのみ機能します。スタイルは、[IgxExpansionPanel トピックのスタイル設定セクション](expansion-panel.md#スタイル設定)で説明されているように、パネルのテーマから直接適用できます。
 
 設計上、`igx-accordion` 内に配置される場合、展開されたパネルにマージンが設定されます。変更するために、igx-expansion-panel テーマ内で公開されるプロパティがあります。
 テーマ エンジンによって公開される関数を利用するには、スタイル ファイルに `index` ファイルをインポートする必要があります。

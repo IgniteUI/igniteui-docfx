@@ -197,7 +197,7 @@ export class RemoteLoDService {
 
 ## 行展開インジケーターの非表示/表示
 
-行がその展開前に子を持っているかの確認は、[`hasChildrenKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#haschildrenkey) 入力プロパティで判断できます。このようにして、展開インジケータを表示するかどうかを示すデータ オブジェクトからブール値プロパティを提供できます。
+行がその展開前に子を持っているかの確認は、[`hasChildrenKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#hasChildrenKey) 入力プロパティで判断できます。このようにして、展開インジケータを表示するかどうかを示すデータ オブジェクトからブール値プロパティを提供できます。
 
 ```html
 <igx-hierarchical-grid #grid [data]="data" primaryKey="ID" hasChildrenKey="hasChildren">
@@ -205,7 +205,7 @@ export class RemoteLoDService {
 </igx-hierarchical-grid>
 ```
 
-[`hasChildrenKey`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#haschildrenkey) プロパティを設定する必要がないことに注意してください。指定しなかった場合は、各行に展開インジケーターが表示されます。
+[`hasChildrenKey`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#hasChildrenKey) プロパティを設定する必要がないことに注意してください。指定しなかった場合は、各行に展開インジケーターが表示されます。
 
 さらに、ヘッダーのすべて展開/縮小インジケーターを表示/非表示にする場合は、[showExpandAll]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#showExpandAll) プロパティを使用できます。
 この UI は、パフォーマンス上の理由からデフォルトで無効になっているため、データが大きいグリッドやロードオンデマンドのグリッドで有効にすることはお勧めしません。
@@ -356,7 +356,7 @@ $custom-grid-schema: extend($_light-grid,(
 ```
 カスタム スキーマを適用するには、`light` グローバルまたは `dark` グローバルを拡張する必要があります。プロセス全体が実際にコンポーネントにカスタム スキーマを提供し、その後、それぞれのコンポーネントテーマに追加します。   
 ```scss
-$my-custom-schema: extend($light-schema, ( 
+$my-custom-schema: extend($light-schema, (
     igx-grid: $custom-grid-schema
 ));
 
@@ -367,7 +367,7 @@ $custom-theme: grid-theme(
 ```
 
 ### カスタム テーマの適用
-テーマを適用する最も簡単な方法は、グローバル スタイル ファイルに `sass` `@include` ステートメントを使用することです。 
+テーマを適用する最も簡単な方法は、グローバル スタイル ファイルに `sass` `@include` ステートメントを使用することです。
 
 ```scss
 @include grid($custom-theme);
@@ -424,7 +424,7 @@ platformBrowserDynamic()
 |グループ化|グループ化機能は、階層グリッドでサポートされません。|
 
 > [!NOTE]
-> `igxHierarchicalGrid` は内部で `igxForOf` ディレクティブを使用するため、すべての `igxForOf` の制限が `igxForOf` で有効です。詳細については、[igxForOf 既知の問題](../for-of.md#既知の問題と制限) のセクションを参照してください。
+> `igxHierarchicalGrid` は内部で `igxForOf` ディレクティブを使用するため、すべての `igxForOf` の制限が `igxForOf` で有効です。詳細については、[igxForOf 既知の問題](../for-of.md#既知の問題と制限)のセクションを参照してください。
 
 ## API リファレンス
 

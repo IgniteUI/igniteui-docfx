@@ -41,6 +41,9 @@
     - name: Build CRUD operations with IgxGrid
       href: general/how-to/how-to-perform-crud.md
       new: false
+    - name: Customize and Optimize Themes
+      href: general/how-to/how-to-customize-theme.md
+      new: true
 - name: Angular Schematics & Ignite UI CLI
   href: general/cli-overview.md
   sortable: false
@@ -123,7 +126,7 @@
     - name: Remote Data Operations
       href: grid/remote-data-operations.md
       new: false
-    - name: Column Data types
+    - name: Column Data Types
       href: grid/column-types.md
       new: false
     - name: Editing
@@ -663,7 +666,7 @@
   new: false
 - name: Chart Features
   href: charts/chart-features.md
-  new: false
+  updated: true
   items:
     - name: Axis Gridlines
       href: charts/features/chart-axis-gridlines.md
@@ -680,15 +683,18 @@
     - name: Chart Annotations
       href: charts/features/chart-annotations.md
       new: false
+    - name: Chart Data Aggregations
+      href: charts/features/chart-data-aggregations.md
+      new: true
     - name: Chart Data Legend
       href: charts/features/chart-data-legend.md
-      new: true
+      new: false
     - name: Chart Data Tooltip
       href: charts/features/chart-data-tooltip.md
-      new: true
+      new: false
     - name: Chart Highlighting
       href: charts/features/chart-highlighting.md
-      updated: true
+      new: false
     - name: Chart Markers
       href: charts/features/chart-markers.md
       new: false
@@ -921,6 +927,9 @@
     - name: Virtual Drop Down
       href: drop-down-virtual.md
       new: false
+    - name: Multi-select Hierarchical Drop Down
+      href: drop-down-hierarchical-selection.md
+      new: true
 - name: Select
   href: select.md
   new: false

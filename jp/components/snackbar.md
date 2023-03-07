@@ -22,7 +22,7 @@ _language: ja
 
 ## 使用方法
 
-はじめに、**app.module.ts** ファイルに  `IgxSnackbarModule` をインポートします。
+はじめに、**app.module.ts** ファイルに `IgxSnackbarModule` をインポートします。
 
 ```typescript
 // app.module.ts
@@ -50,7 +50,7 @@ Snackbar コンポーネントを表示するには、ボタン クリックで 
 </div>
 ```
 サンプルが正しく構成された場合、デモ サンプルが表示されます。ボタン クリック時にテキスト メッセージを表示する Snackbar が表示されます。
-以上のコード スニペットで示されるように、スナックバーに表示されるメッセージを設定する 1 つの方法は、コンテンツ プロジェクションを使用することです。 ただし、カスタム ロジックに基づいてプログラムによって値を切り替える必要がある場合は、値をパラメーターとして [`open()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#open) メソッドに渡すだけです。
+以上のコード スニペットで示されるように、スナックバーに表示されるメッセージを設定する 1 つの方法は、コンテンツ プロジェクションを使用することです。ただし、カスタム ロジックに基づいてプログラムによって値を切り替える必要がある場合は、値をパラメーターとして [`open()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#open) メソッドに渡すだけです。
 
 ```html
 <!--sample.component.html-->
@@ -63,7 +63,7 @@ Snackbar コンポーネントを表示するには、ボタン クリックで 
 ```
 
 ### 非表示/自動的に隠す
-開いた後は、[`displayTime`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#displaytime) 入力によって指定した期間遅延後に非表示になります。デフォルト値は 4000 ミリ秒です。この動作はデフォルトで有効ですが、[`autoHide`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#autohide) を **false** に設定して変更できます。この場合、Snackbar は非表示になりません。Snackbar の [`close()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#close) メソッドを使用して、コードでコンポーネントを閉じることができます。
+開いた後は、[`displayTime`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#displayTime) 入力によって指定した期間遅延後に非表示になります。デフォルト値は 4000 ミリ秒です。この動作はデフォルトで有効ですが、[`autoHide`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#autoHide) を **false** に設定して変更できます。この場合、Snackbar は非表示になりません。Snackbar の [`close()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#close) メソッドを使用して、コードでコンポーネントを閉じることができます。
 
 ```html
 <!--sample.component.html-->
@@ -90,7 +90,7 @@ public close(element) {
 </code-view>
 
 ### 表示時間
-[`displayTime`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#displaytime) でミリ秒間隔に設定し、Snackbar コンポーネントが表示される時間を設定します。デフォルトでは 4000 ミリ秒に設定されています。 
+[`displayTime`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#displayTime) でミリ秒間隔に設定し、Snackbar コンポーネントが表示される時間を設定します。デフォルトでは 4000 ミリ秒に設定されています。 
 
 ### Snackbar のカスタマイズ
 Snackbar の内容をカスタマイズして、メッセージやボタンよりも複雑な要素を表示することもできます。たとえば、ファイルの読み込み中にスナックバーを表示したい場合は、読み込みアニメーションをそのコンテンツに追加することができます。
@@ -181,7 +181,7 @@ Snackbar の主な機能を説明しました。次の例はより複雑なサ�
 ```typescript
 //sample.component.ts
 
-import { Component, OnInit, ViewChild } from "@angular/core";
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { IgxSnackbarComponent } from 'igniteui-angular';
 // import { IgxSnackbarComponent } from '@infragistics/igniteui-angular'; for licensed package
 ...
@@ -194,7 +194,7 @@ constructor() { }
 
 public ngOnInit() {
     this.navItems = [
-        { avatar: 'assets/images/avatar/2.jpg', text: 'Richard Mahoney' },
+        { avatar: 'assets/images/avatar/2.jpg', text: 'Richard Mahoney'},
         { avatar: 'assets/images/avatar/4.jpg', text: 'Lisa Landers' },
         { avatar: 'assets/images/avatar/14.jpg', text: 'Marianne Taylor' },
         { avatar: 'assets/images/avatar/17.jpg', text: 'Ward Riley' }

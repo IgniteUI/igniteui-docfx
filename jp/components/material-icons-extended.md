@@ -24,16 +24,17 @@ npm install @igniteui/material-icons-extended
 まず、コンポーネントに単一のアイコンを登録する方法を見てみましょう。
 
 ```typescript
-import { Component, OnInit } from "@angular/core";
-import { IgxIconService } from "igniteui-angular";
-import { github } from "@igniteui/material-icons-extended";
+import { Component, OnInit } from '@angular/core';
+import { IgxIconService } from 'igniteui-angular';
+// import { IgxIconService } from '@infragistics/igniteui-angular'; for licensed package
+import { github } from '@igniteui/material-icons-extended';
 // ...
 export class SampleComponent implements OnInit {
   constructor(private iconService: IgxIconService) {}
 
   ngOnInit(): void {
     // Register a single icon
-    this.iconService.addSvgIconFromText(github.name, github.value, "imx-icons");
+    this.iconService.addSvgIconFromText(github.name, github.value, 'imx-icons');
   }
 }
 ```
