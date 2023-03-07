@@ -64,34 +64,24 @@ This will allow you to seamlessly use a mix of packages from the public npm regi
 
 ### Now, to log in to our private feed using npm
 
-#### npm version 9+
-Our private feed doesn't currently support login/adduser commands with npm v9, so we recommend the following steps instead to add the required auth fields to the config:
+#### Now, to log in to our private feed using npm, run the adduser command and specify a user account and password:
 
 ```cmd
-npm config set @infragistics:registry https://packages.infragistics.com/npm/js-licensed/
+npm adduser --registry=https://packages.infragistics.com/npm/js-licensed/ --scope=@infragistics --always-auth
+```
+>[!NOTE]
+> If you are using `npm` version 9.0.0 or higher you need to set `--auth-type=legacy`
 
-npm config set //packages.infragistics.com/npm/js-licensed/:username=YOUR_USERNAME
-
-npm config set //packages.infragistics.com/npm/js-licensed/:email=YOUR_IG_EMAIL
-
-npm config set //packages.infragistics.com/npm/js-licensed/:_auth=YOUR_IG_AUTH_TOKEN
+```cmd
+npm adduser --registry=https://packages.infragistics.com/npm/js-licensed/ --scope=@infragistics --always-auth --auth-type=legacy
 ```
 
 You can generate [Access Token](#access-token-usage) through your Infragistics profile.
 
 This approach is applicable to all prior versions of `npm`.
 
-#### npm version up to v8
-Run the `adduser` command and specify a user account and password:
-
-```cmd
-npm adduser --registry=https://packages.infragistics.com/npm/js-licensed/ --scope=@infragistics
-```
-
-You will be asked to provide the username and the password that you use for logging into your Infragistics account. You should also provide the email that is registered to your Infragistics profile.
-
->[!NOTE]
-> `npm` is disallowing the use of the `"@"` symbol inside your username as it is considered as being "not safe for the net". Because your username is actually the email that you use for your Infragistics account it always contains the symbol `"@"`. That's why you must escape this limitation by replacing the `"@"` symbol with `"!!"` (two exclamation marks). For example, if your username is `"username@example.com"` when asked about your username you should provide the following input: `"username!!example.com"`.
+> [!IMPORTANT]
+> If your account is not licensed (you are still using a Trial account) the private package feed won't be accessible to you e.g. it will return 404 or 403 error message. **Only licensed accounts can access the packages.infragistics private feed.**
 
 #### After this is done, you will be logged in and you will be able to install the latest versions of the Ignite UI packages into your project:
 
