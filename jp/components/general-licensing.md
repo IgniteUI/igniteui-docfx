@@ -10,12 +10,12 @@ mentionedTypes: []
 
 購入して使用する Ignite UI for Angular に関するすべての[使用条件](https://jp.infragistics.com/legal/license/igultimate-la)を知っておくことが重要です。
 
-> [!NOTE]
+> \[!Note]
 > 2020 年第 2 四半期にライセンス条項とサブスクリプション モデルを更新しました。
 
-**商用製品**をビルドする場合、またはライセンスが[期限切れ](http://jp.infragistics.com/renewal)の場合は、[商用ライセンスを取得する](https://jp.infragistics.com/how-to-buy/product-pricing)必要があります。これにより、<https://packages.infragistics.com/npm/js-licensed/>  でホストされるプライベート npm フィードを開発に使用できます。ここには、Ignite UI for Angular パッケージの最新バージョンがあります。有効な商用ライセンスがある場合、Ignite UI for Angular の製品版をプライベート フィードによりアクセスできます。
+**商用製品**をビルドする場合、またはライセンスが[期限切れ](http://jp.infragistics.com/renewal)の場合は、[商用ライセンスを取得する](https://jp.infragistics.com/how-to-buy/product-pricing)必要があります。これにより、https://packages.infragistics.com/npm/js-licensed/  でホストされるプライベート npm フィードを開発に使用できます。ここには、Ignite UI for Angular パッケージの最新バージョンがあります。有効な商用ライセンスがある場合、Ignite UI for Angular の製品版をプライベート フィードによりアクセスできます。
 
-> [!NOTE]
+> \[!Note]
 > 現在、プライベート npm フィードで **igniteui-dockmanager** パッケージのみ使用できますが、今後は他の Ignite UI for Angular パッケージを追加する予定です。
 
 **市販されない製品**をビルドする場合は、[お気軽にお問い合わせください](https://jp.infragistics.com/about-us/contact-us)。適切なライセンスを提供します。
@@ -26,7 +26,7 @@ Npm は Node.js ランタイム環境で使用する一般的なデフォルト 
 
 Infragistics Ignite UI for Angular は npm パッケージで提供され、[いくつかの簡単な手順](./general-getting-started.md)でプロジェクトの依存関係として追加できます。この方法を選択する場合、npm を構成する必要はありません。このパッケージをインストールすると、製品の **Ignite UI for Angular トライアル版**の使用が開始されます。
 
-> [!NOTE]
+> \[!Note]
 > 現在、[igniteui-dockmanager](https://www.npmjs.com/package/igniteui-dockmanager) の npm パッケージのみにトライアル ウォーターマークがありますが、今後は他の Ignite UI for Angular パッケージにも追加する予定です。
 
 ## プライベート npm フィードを使用するための環境設定方法
@@ -35,8 +35,8 @@ Infragistics Ignite UI for Angular は npm パッケージで提供され、[い
 
 これにより公開用の npm レジストリおよびプライベート Infragistics レジストリからのパッケージを同時に使用できます。Infragistics アカウントにログインするユーザー名およびパスワードを入力する必要があります。Infragistics プロファイルに登録されるメールも入力してください。
 
-> [!NOTE]
->  **npm**  はユーザー名で **「@」** の使用を許可しません。ユーザー名が Infragistics アカウントのメール アドレスであるため、**「@」** 記号は既に含まれています。この制限を回避するには、**「@」** 記号の代わりに **「!!」** (2 つの感嘆符) を使用します。たとえば、ユーザー名が **username@example.com** の場合、**username!!example.com** と入力します。
+> \[!Note]
+> **npm**  はユーザー名で **「@」** の使用を許可しません。ユーザー名が Infragistics アカウントのメール アドレスであるため、**「@」** 記号は既に含まれています。この制限を回避するには、**「@」** 記号の代わりに **「!!」** (2 つの感嘆符) を使用します。たとえば、ユーザー名が **username@example.com** の場合、**username!!example.com** と入力します。
 
 ### npm を使用してプライベート フィードにログインするには、adduser コマンドを実行し、ユーザー アカウントとパスワードを指定します。
 
@@ -57,7 +57,7 @@ Ignite UI for Angular パッケージをスコープに設定したため、プ�
 
 トライアル版からライセンス パッケージにアップグレードする場合:
 
--   プロジェクトの **tsconfig.json** に **paths** マッピングを追加します。
+*   プロジェクトの **tsconfig.json** に **paths** マッピングを追加します。
 
 ```json
 {
@@ -74,7 +74,7 @@ Ignite UI for Angular パッケージをスコープに設定したため、プ�
 }
 ```
 
--   テーマのインポートを以下のように変更します。
+*   テーマのインポートを以下のように変更します。
 
 ```ts
 @import '~igniteui-dockmanager/dist/collection/styles/igc.themes';
@@ -92,17 +92,18 @@ npm を既に使用していて、Ignite UI for Angular ライセンスがある
 
 以下は、ローカル構成でアクセス トークンを使用してプライベート npm レジストリへの認証を設定する方法、Azure Pipelines のビルド手順、および Travis CI のビルド プロセスです。
 
--   <https://account.infragistics.com/access-tokens> からトークンを生成します。
+*   https://account.infragistics.com/access-tokens からトークンを生成します。
 
 <img class="responsive-img" style="margin-bottom:10px; -webkit-box-shadow: 4px 4px 4px 4px #ccc; -moz-box-shadow: 4px 4px 4px 4px #ccc; box-shadow: 4px 4px 4px 4px #ccc; max-width: 600px"
-  src="../images/general/generate-token.jpg"
-  data-src="../images/general/generate-token.jpg"
-  alt="New Token Generated"
-  title="Generate new token" />
+src="../images/general/generate-token.jpg"
+data-src="../images/general/generate-token.jpg"
+alt="New Token Generated"
+title="Generate new token" />
 
-> 注: 各トークンは Base64 エンコードです。
+> \[!Note]
+> 各トークンは Base64 エンコードです。
 
--   以下を [.npmrc](https://docs.npmjs.com/configuring-npm/npmrc.html) ファイルに追加します。
+*   以下を [.npmrc](https://docs.npmjs.com/configuring-npm/npmrc.html) ファイルに追加します。
 
 ```json
 @infragistics:registry=https://packages.infragistics.com/npm/js-licensed/
@@ -122,28 +123,28 @@ npm config set _auth=$(token) --scope:@infragistics
 </pre>
 
 <img class="responsive-img" style="margin-bottom:10px; -webkit-box-shadow: 4px 4px 4px 4px #ccc; -moz-box-shadow: 4px 4px 4px 4px #ccc; box-shadow: 4px 4px 4px 4px #ccc; max-width: 380px"
-  src="../images/general/azure-ci-pipelines-ci-yml-3.jpg"
-  data-src="../images/general/azure-ci-pipelines-ci-yml-3.jpg"
-  alt="Azure Pipelines CI yml update"
-  title="Azure Pipelines CI yml update" />
+src="../images/general/azure-ci-pipelines-ci-yml-3.jpg"
+data-src="../images/general/azure-ci-pipelines-ci-yml-3.jpg"
+alt="Azure Pipelines CI yml update"
+title="Azure Pipelines CI yml update" />
 
 **npm registry** および **token** 変数を追加します。
 
 <img class="responsive-img" style="margin-bottom:10px; -webkit-box-shadow: 4px 4px 4px 4px #ccc; -moz-box-shadow: 4px 4px 4px 4px #ccc; box-shadow: 4px 4px 4px 4px #ccc; max-width: 600px"
-  src="../images/general/azure-ci-new-variable-2.jpg"
-  data-src="../images/general/azure-ci-new-variable-2.jpg"
-  alt="Set npm Registry and token variables"
-  title="Set npm Registry and token variables" />
+src="../images/general/azure-ci-new-variable-2.jpg"
+data-src="../images/general/azure-ci-new-variable-2.jpg"
+alt="Set npm Registry and token variables"
+title="Set npm Registry and token variables" />
 
 <img class="responsive-img" style="margin-bottom:10px; -webkit-box-shadow: 4px 4px 4px 4px #ccc; -moz-box-shadow: 4px 4px 4px 4px #ccc; box-shadow: 4px 4px 4px 4px #ccc; max-width: 380px"
-  src="../images/general/azure-ci-add-token-variable-1.jpg"
-  data-src="../images/general/azure-ci-add-token-variable-1.jpg"
-  alt="npm Registry and token variables"
-  title="npm Registry and token variables" />
+src="../images/general/azure-ci-add-token-variable-1.jpg"
+data-src="../images/general/azure-ci-add-token-variable-1.jpg"
+alt="npm Registry and token variables"
+title="npm Registry and token variables" />
 
 ## Travis CI の構成
 
-ここではほとんど同じ方法を使用しますが、構成は [before\_install](https://docs.travis-ci.com/user/job-lifecycle/#the-job-lifecycle) に設定されます。
+ここではほとんど同じ方法を使用しますが、構成は [before_install](https://docs.travis-ci.com/user/job-lifecycle/#the-job-lifecycle) に設定されます。
 
 ```json
 before_install:
@@ -154,5 +155,5 @@ before_install:
 
 環境変数を定義する方法は、含まれる情報のタイプによって異なるため、[2 つ のオプションがあります](https://docs.travis-ci.com/user/environment-variables/)。
 
--   暗号化して [.travis.yml](https://docs.travis-ci.com/user/environment-variables/#defining-encrypted-variables-in-travisyml) に追加します。
--   [リポジトリ設定](https://docs.travis-ci.com/user/environment-variables/#defining-variables-in-repository-settings)に追加します。
+*   暗号化して [.travis.yml](https://docs.travis-ci.com/user/environment-variables/#defining-encrypted-variables-in-travisyml) に追加します。
+*   [リポジトリ設定](https://docs.travis-ci.com/user/environment-variables/#defining-variables-in-repository-settings)に追加します。

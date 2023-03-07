@@ -15,23 +15,12 @@ The Ignite UI for Angular ドーナツ チャートは[円チャート](pie-char
 
 [`IgxDoughnutChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdoughnutchartcomponent.html) コントロールでドーナツ チャートを作成するには、以下の例のように、データをバインドします。
 
-<code-view style="height: 600px"
-           data-demos-base-url="{environment:dvDemosBaseUrl}"
+<code-view style="height: 600px" alt="Angular ドーナツ チャートの凡例"
+  data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/doughnut-chart-legend"
-           github-src="charts/doughnut-chart/legend"
-           alt="Angular ドーナツ チャートの凡例" >
+                                        github-src="charts/doughnut-chart/legend">
 </code-view>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <body>
-      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/doughnut-chart/legend?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
-        </a>
-        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/doughnut-chart/legend?file=src%2Fapp.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
-        </a>
-    </body>
-</html>
 
 <div class="divider--half"></div>
 
@@ -41,60 +30,51 @@ The Ignite UI for Angular ドーナツ チャートは[円チャート](pie-char
 
 ドーナツ チャートは小さなデータ セットに適しており、一目で読みやすいです。ドーナツ チャートは、部分から全体への視覚化の 1 つのタイプにすぎません。その他は次のとおりです。
 
--   [円](pie-chart.md)
-    <!-- - Funnel  -->
--   [積層型エリア](area-chart.md)
--   [積層型 100% エリア (積層型パーセンテージ エリア)](area-chart.md)
--   [積層型棒](bar-chart.md)
--   [積層型 100% 棒 (積層型パーセンテージ棒)](bar-chart.md)
--   [ツリーマップ](treemap-chart.md)
--   [ウォーターフォール](column-chart.md)
+*   [円](pie-chart.md)
+
+<!-- - Funnel  -->
+
+*   [積層型エリア](area-chart.md)
+*   [積層型 100% エリア (積層型パーセンテージ エリア)](area-chart.md)
+*   [積層型棒](bar-chart.md)
+*   [積層型 100% 棒 (積層型パーセンテージ棒)](bar-chart.md)
+*   [ツリーマップ](treemap-chart.md)
+*   [ウォーターフォール](column-chart.md)
 
 Angular ドーナツ チャートには、次のようなデータを分析するためのビューア ツールを提供するインタラクティブ機能が含まれています。
 
--   凡例
--   スライスの分割
--   スライスの選択
--   チャート アニメーション
+*   凡例
+*   スライスの分割
+*   スライスの選択
+*   チャート アニメーション
 
 ### ドーナツ チャートのベスト プラクティス:
 
--   複数のデータ セットを使用して、データを輪に表示します。
--   データをすばやく説明するために、ドーナツの穴の中に値やラベルなどの情報を配置します。
--   スライスまたはセグメントを、合計値または全体に比例するパーセンテージ値として比較します。
--   カテゴリのグループがどのように小さなセグメントに分割されるかを示します。
--   データ セグメントの合計が 100% になるようにします。
--   パーツのセグメント/スライスでカラー パレットを区別できるようにします。
+*   複数のデータ セットを使用して、データを輪に表示します。
+*   データをすばやく説明するために、ドーナツの穴の中に値やラベルなどの情報を配置します。
+*   スライスまたはセグメントを、合計値または全体に比例するパーセンテージ値として比較します。
+*   カテゴリのグループがどのように小さなセグメントに分割されるかを示します。
+*   データ セグメントの合計が 100% になるようにします。
+*   パーツのセグメント/スライスでカラー パレットを区別できるようにします。
 
 ### 以下の場合にドーナツ チャートを使用しないでください:
 
--   時間の経過に伴う変化の比較の場合 - [棒](bar-chart.md)、[折れ線](line-chart.md)、または[エリア](area-chart.md)チャートを使用します。
--   正確なデータ比較が必要である場合 - [棒](bar-chart.md)、[折れ線](line-chart.md)、または[エリア](area-chart.md)チャートを使用します。
--   6 つまたは 8 つを超えるセグメント (大量のデータ) がある場合 — データ ストーリーに適している場合は、[棒](bar-chart.md)、[折れ線](line-chart.md)、または[エリア](area-chart.md)チャートを検討してください。
--   [棒](bar-chart.md)チャートで、ビューアが値の違いを認識しやすくなります。
--   負のデータがある場合、これはドーナツ チャートで表すことができません。
+*   時間の経過に伴う変化の比較の場合 - [棒](bar-chart.md)、[折れ線](line-chart.md)、または[エリア](area-chart.md)チャートを使用します。
+*   正確なデータ比較が必要である場合 - [棒](bar-chart.md)、[折れ線](line-chart.md)、または[エリア](area-chart.md)チャートを使用します。
+*   6 つまたは 8 つを超えるセグメント (大量のデータ) がある場合 — データ ストーリーに適している場合は、[棒](bar-chart.md)、[折れ線](line-chart.md)、または[エリア](area-chart.md)チャートを検討してください。
+*   [棒](bar-chart.md)チャートで、ビューアが値の違いを認識しやすくなります。
+*   負のデータがある場合、これはドーナツ チャートで表すことができません。
 
 ## ドーナツ チャート - スライスの選択
 
 Angular ドーナツ チャートには、クリック時にスライスを選択する機能があります。任意で、単一のカスタム ビジュアル スタイルを選択済みスライスに適用できます。`SliceClick` イベントは、ユーザーがスライスをクリックすると発生します。スライス選択を有効にすると、クリック時にスライスの選択を変更できます。次のサンプルは、スライスの選択を有効にし、選択したスライスの色を灰色に設定する方法を示しています。
 
-<code-view style="height: 600px"
-           data-demos-base-url="{environment:dvDemosBaseUrl}"
+<code-view style="height: 600px" alt="Angular ドーナツ スライスの選択"
+  data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/doughnut-chart-selection"
-           github-src="charts/doughnut-chart/selection"
-           alt="Angular ドーナツ スライスの選択" >
+                                        github-src="charts/doughnut-chart/selection">
 </code-view>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <body>
-      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/doughnut-chart/selection?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
-        </a>
-        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/doughnut-chart/selection?file=src%2Fapp.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
-        </a>
-    </body>
-</html>
 
 <div class="divider--half"></div>
 
@@ -102,23 +82,12 @@ Angular ドーナツ チャートには、クリック時にスライスを選�
 
 Angular ドーナツ チャートに複数の輪を表示して、各輪を異なるデータ 項目にバインドしたり、共通のデータ ソースを共有したりすることができます。これは、以下の季節ごとのデータ表示など、基礎となる共通のカテゴリを持つ層としてデータを表示する必要がある場合に役立ちます:
 
-<code-view style="height: 600px"
-           data-demos-base-url="{environment:dvDemosBaseUrl}"
+<code-view style="height: 600px" alt="Angular ドーナツ チャート複数のリング"
+  data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:dvDemosBaseUrl}/charts/doughnut-chart-rings"
-           github-src="charts/doughnut-chart/rings"
-           alt="Angular ドーナツ チャート複数のリング" >
+                                        github-src="charts/doughnut-chart/rings">
 </code-view>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <body>
-      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/doughnut-chart/rings?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
-        </a>
-        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/doughnut-chart/rings?file=src%2Fapp.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
-        </a>
-    </body>
-</html>
 
 <div class="divider--half"></div>
 
@@ -126,14 +95,14 @@ Angular ドーナツ チャートに複数の輪を表示して、各輪を異�
 
 関連するチャートタイプの詳細については、以下のトピックを参照してください。
 
--   [円チャート](pie-chart.md)
--   [極座標チャート](polar-chart.md)
--   [ラジアル チャート](radial-chart.md)
+*   [円チャート](pie-chart.md)
+*   [極座標チャート](polar-chart.md)
+*   [ラジアル チャート](radial-chart.md)
 
 ## API リファレンス
 
 以下のテーブルは、上記のセクションで説明した API メンバーをリストします。
 
-| チャート タイプ  | コントロール名                                                                                                                                                | API メンバー        |
-| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------- |
-| ドーナツ チャート | [`IgxDoughnutChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdoughnutchartcomponent.html) | `DoughnutChart` |
+| チャート タイプ       | コントロール名   | API メンバー |
+| -----------------|----------------|------------ |
+| ドーナツ チャート      | [`IgxDoughnutChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdoughnutchartcomponent.html)     | `DoughnutChart` |
