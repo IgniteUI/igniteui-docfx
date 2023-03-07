@@ -922,7 +922,7 @@ As you can see in the **paginate** method, custom pagination logic is performed,
     * Row Expand/collapse
     * Row Editing
     * Row Pinning
-- When the grid has a `primaryKey` set in remote data scenarios and rowSelection feature is enabled, you should keep in mind that `rowSelectionChanging` event argument will not be able to retrieve the row data for the rows that are currently out of the current data view. In this case will be emitted only a partial object of row data that consist of the primaryKey and its value.
+- When the grid has a `primaryKey` set in remote data scenarios, `rowSelectionChanging.oldSelection` event argument will not contain the full row data object for the rows that are currently out of the current data view. In this case,  `rowSelectionChanging.oldSelection` object will contain only one property, which is the `primaryKey` field.
 
 ## API References
 <div class="divider--half"></div>
