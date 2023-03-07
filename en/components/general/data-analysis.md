@@ -79,7 +79,7 @@ Keep in mind (sample related):
 
 ## Data Analysis Package
 
-You can start using this functionality by following the steps below. Keep in mind that **igniteui-angular-extras** package is only available through our [private npm feed](https://packages.infragistics.com/npm/js-licensed/). If you have a [valid commercial license](https://www.infragistics.com/products/ignite-ui-angular/angular/components/general/ignite-ui-licensing.html#license-agreements), you will have access to the private feed.
+You can start using this functionality by following the steps below. Keep in mind that **igniteui-angular-extras** package is only available through our [private npm feed](https://packages.infragistics.com/npm/js-licensed/). If you have a [valid commercial license](ignite-ui-licensing.md#license-agreements), you will have access to the private feed.
 
 Lets start with:
 
