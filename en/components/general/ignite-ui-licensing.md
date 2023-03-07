@@ -53,30 +53,45 @@ You'll be asked to login to our npm registry if not already setup.
 >[!NOTE]
 > If your project is using [`yarn`](https://yarnpkg.com/), make sure to run `upgrade-packages` with the `--skip-install` flag. Then execute `yarn install` after to properly update your `yarn.lock` as the upgrade command currently uses `npm` for the install.
 
-
 ### How to setup your environment to use the private npm feed (Step by step guide)
 
-#### First you need to setup the private registry and to associate this registry with the Infragistics scope. 
+#### First you need to setup the private registry and to associate this registry with the Infragistics scope.
 
-This will allow you to seamlessly use a mix of packages from the public npm registry and the Infragistics private registry. You will be asked to provide the username and the password that you use for logging into your Infragistics account. You should also provide the email that is registered to your Infragistics profile. 
-
->[!NOTE]
-> `npm` is disallowing the use of the `"@"` symbol inside your username as it is considered as being "not safe for the net". Because your username is actually the email that you use for your Infragistics account it always contains the symbol `"@"`. That's why you must escape this limitation by replacing the `"@"` symbol with `"!!"` (two exclamation marks). For example, if your username is `"username@example.com"` when asked about your username you should provide the following input: `"username!!example.com"`.
-
-#### Now, to log in to our private feed using npm, run the adduser command and specify a user account and password:
-
-```cmd
-npm adduser --registry=https://packages.infragistics.com/npm/js-licensed/ --scope=@infragistics --always-auth
-```
->[!NOTE]
-> If you are using `npm` version 9.0.0 or higher you need to set `--auth-type=legacy`
-
-```cmd
-npm adduser --registry=https://packages.infragistics.com/npm/js-licensed/ --scope=@infragistics --always-auth --auth-type=legacy
-```
+This will allow you to seamlessly use a mix of packages from the public npm registry and the Infragistics private registry.
 
 > [!IMPORTANT]
 > If your account is not licensed (you are still using a Trial account) the private package feed won't be accessible to you e.g. it will return 404 or 403 error message. **Only licensed accounts can access the packages.infragistics private feed.**
+
+### Now, to log in to our private feed using npm
+
+#### npm version 9+
+Our private feed doesn't currently support login/adduser commands with npm v9, so we recommend the following steps instead to add the required auth fields to the config:
+
+```cmd
+npm config set @infragistics:registry https://packages.infragistics.com/npm/js-licensed/
+
+npm config set //packages.infragistics.com/npm/js-licensed/:username=YOUR_USERNAME
+
+npm config set //packages.infragistics.com/npm/js-licensed/:email=YOUR_IG_EMAIL
+
+npm config set //packages.infragistics.com/npm/js-licensed/:_auth=YOUR_IG_AUTH_TOKEN
+```
+
+You can generate [Access Token](#access-token-usage) through your Infragistics profile.
+
+This approach is applicable to all prior versions of `npm`.
+
+#### npm version up to v8
+Run the `adduser` command and specify a user account and password:
+
+```cmd
+npm adduser --registry=https://packages.infragistics.com/npm/js-licensed/ --scope=@infragistics
+```
+
+You will be asked to provide the username and the password that you use for logging into your Infragistics account. You should also provide the email that is registered to your Infragistics profile.
+
+>[!NOTE]
+> `npm` is disallowing the use of the `"@"` symbol inside your username as it is considered as being "not safe for the net". Because your username is actually the email that you use for your Infragistics account it always contains the symbol `"@"`. That's why you must escape this limitation by replacing the `"@"` symbol with `"!!"` (two exclamation marks). For example, if your username is `"username@example.com"` when asked about your username you should provide the following input: `"username!!example.com"`.
 
 #### After this is done, you will be logged in and you will be able to install the latest versions of the Ignite UI packages into your project:
 
@@ -165,7 +180,6 @@ The following information is on how to setup authentication to our private npm r
 @infragistics:registry=https://packages.infragistics.com/npm/js-licensed/
 //packages.infragistics.com/npm/js-licensed/:_auth=YOUR_ACCESS_TOKEN
 //packages.infragistics.com/npm/js-licensed/:username=YOUR_USERNAME
-//packages.infragistics.com/npm/js-licensed/:always-auth=true
 ```
 
 ### Azure Pipelines Configuration
@@ -177,8 +191,6 @@ steps:
 - script: npm config set @infragistics:registry $(npmRegistry)
   displayName: 'Npm add registry'
 
-- script: npm config set $(igScope):always-auth=true
-  displayName: 'Npm config'
 
 - script: npm config set $(igScope):_auth=$(token)
   displayName: 'Npm config auth'
@@ -218,7 +230,6 @@ We will follow almost the same approach here. The only difference would be that 
 before_install:
 - echo "@infragistics:registry=https://packages.infragistics.com/npm/js-licensed/" >> ~/.npmrc
 - echo "//packages.infragistics.com/npm/js-licensed/:_auth=$TOKEN" >> ~/.npmrc
-- echo "//packages.infragistics.com/npm/js-licensed/:always-auth=true" >> ~/.npmrc
 ```
 
 The best way to define an environment variable depends on what type of information it will contain. So [you have two options](https://docs.travis-ci.com/user/environment-variables/):
@@ -233,7 +244,6 @@ Add the following scripts before the `npm i(ci)` step to your [CI workflow confi
 ```cmd
 - run: echo "@infragistics:registry=https://packages.infragistics.com/npm/js-licensed/" >> ~/.npmrc
 - run: echo "//packages.infragistics.com/npm/js-licensed/:_auth=${{ secrets.NPM_TOKEN }}" >> ~/.npmrc
-- run: echo "//packages.infragistics.com/npm/js-licensed/:always-auth=true" >> ~/.npmrc
 ```
 
 Define [*secrets* (encrypted environment variables)](https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets) and use them in the GitHub actions workflow for sensitive information like the access token. 
