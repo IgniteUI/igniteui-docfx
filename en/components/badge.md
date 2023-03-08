@@ -84,12 +84,7 @@ We can change the badge shape through the `shape` attribute setting its value to
 <igx-badge icon="check" type="success" shape="square"></igx-badge>
 ```
 
-If everything's done right, you should see the demo sample in your browser.
-
-<code-view style="height: 200px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/badge-sample-2" >
-</code-view>
+If everything's done right, you should see the demo sample shown above in your browser.
 
 ### Badge in List
 
