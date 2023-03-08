@@ -82,7 +82,6 @@ _language: ja
 * [フィルタリング](filtering.md)
 * [ソート](sorting.md)
 * [集計](summaries.md)
-* [集計](summaries.md)
 * [列のピン固定](column-pinning.md)
 * [選択](selection.md)
 * [仮想化とパフォーマンス](virtualization.md)
