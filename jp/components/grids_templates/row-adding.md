@@ -76,7 +76,7 @@ import { @@igxNameModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-次に、バインドしたデータソースに @@igComponent を定義をして [`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable) を true に設定し、編集アクションを有効にした[アクション ストリップ](../action-strip.md) コンポーネントを定義します。[`addRow`]({environment:angularApiUrl}/classes/igxgrideditingactionscomponent.html#addRow) 入力は、行追加 UI を生成するボタンの表示状態を制御します。
+次に、バインドしたデータソースに @@igComponent を定義をして [`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditable) を true に設定し、編集アクションを有効にした[アクション ストリップ](../action-strip.md) コンポーネントを定義します。[`addRow`]({environment:angularApiUrl}/classes/igxgrideditingactionscomponent.html#addRow) 入力は、行追加 UI を生成するボタンの表示状態を制御します。
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -292,13 +292,13 @@ this.treeGrid.beginAddRowByIndex(null);       // spawns the add row UI as the fi
 
 ## API リファレンス
 
-* [rowEditable]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable)
-* [onRowEditEnter]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onroweditenter)
-* [onRowEdit]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowedit)
-* [rowEditDone]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditdone)
-* [onRowEditCancel]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onroweditcancel)
-* [endEdit]({environment:angularApiUrl}/classes/@@igTypeDoc.html#endedit)
-* [primaryKey]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primarykey)
+* [rowEditable]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditable)
+* [onRowEditEnter]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onRowEditEnter)
+* [onRowEdit]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onRowEdit)
+* [rowEditDone]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditDone)
+* [onRowEditCancel]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onRowEditCancel)
+* [endEdit]({environment:angularApiUrl}/classes/@@igTypeDoc.html#endEdit)
+* [primaryKey]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primaryKey)
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 * [IgxActionStripComponent]({environment:angularApiUrl}/classes/igxactionstripcomponent.html)
 * [IgxGridEditingActionsComponent]({environment:angularApiUrl}/classes/igxgrideditingactionscomponent.html)

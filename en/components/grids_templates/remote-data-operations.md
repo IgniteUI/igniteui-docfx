@@ -30,8 +30,8 @@ The Ignite UI for Angular @@igComponent supports remote data operations such as 
 ## Angular @@igComponent Remote Data Operations Overview Example
 
 
-<code-view style="height:500px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:500px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-remote-filtering" alt="Angular @@igComponent Remote Data Operations Overview Example">
 </code-view>
 
@@ -40,8 +40,8 @@ The Ignite UI for Angular @@igComponent supports remote data operations such as 
 ## Angular @@igComponent Remote Data Operations Overview Example
 
 
-<code-view style="height:550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:550px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-remote-filtering" alt="Angular @@igComponent Remote Data Operations Overview Example">
 </code-view>
 
@@ -59,7 +59,7 @@ You can perform these tasks remotely and feed the resulting data to the @@igComp
 
 The [@@igxName]({environment:angularApiUrl}/classes/@@igTypeDoc.html) supports the scenario in which the data chunks are requested from a remote service, exposing the behavior implemented in the [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html) directive it uses internally.
 
-To utilize this feature, you need to subscribe to the [`dataPreLoad`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#datapreload) output so that you make the appropriate request based on the arguments received, as well as set the public [@@igxName]({environment:angularApiUrl}/classes/@@igTypeDoc.html) property [`totalItemCount`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalitemcount) with the respective information coming from the service.
+To utilize this feature, you need to subscribe to the [`dataPreLoad`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#dataPreLoad) output so that you make the appropriate request based on the arguments received, as well as set the public [@@igxName]({environment:angularApiUrl}/classes/@@igTypeDoc.html) property [`totalItemCount`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalItemCount) with the respective information coming from the service.
 
 ```html
 <igx-grid #grid [data]="remoteData | async" [autoGenerate]="false"
@@ -94,16 +94,16 @@ public processData(reset) {
 }
 ```
 
-When requesting data, you need to utilize the [`IForOfState`]({environment:angularApiUrl}/interfaces/iforofstate.html) interface, which provides the [`startIndex`]({environment:angularApiUrl}/interfaces/iforofstate.html#startindex) and [`chunkSize`]({environment:angularApiUrl}/interfaces/iforofstate.html#chunksize) properties.
+When requesting data, you need to utilize the [`IForOfState`]({environment:angularApiUrl}/interfaces/iforofstate.html) interface, which provides the [`startIndex`]({environment:angularApiUrl}/interfaces/iforofstate.html#startIndex) and [`chunkSize`]({environment:angularApiUrl}/interfaces/iforofstate.html#chunkSize) properties.
 
 >[!NOTE]
->The first [`chunkSize`]({environment:angularApiUrl}/interfaces/iforofstate.html#chunksize) will always be 0 and should be determined by you based on the specific application scenario.
+>The first [`chunkSize`]({environment:angularApiUrl}/interfaces/iforofstate.html#chunkSize) will always be 0 and should be determined by you based on the specific application scenario.
 
 ### Remote Virtualization Demo
 
 
-<code-view style="height:550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:550px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-sample-4" alt="Angular @@igComponent Remote Data Operations Overview Example">
 </code-view>
 
@@ -161,15 +161,15 @@ public handlePreLoad() {
 
 ### Infinite Scroll Demo
 
-<code-view style="height:510px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:510px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-sample-5" >
 </code-view>
 
 
 ## Remote Sorting/Filtering
 
-To provide remote sorting and filtering, you need to subscribe to the [`dataPreLoad`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#datapreload), [`sortingExpressionsChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sortingexpressionschange) and [`filteringExpressionsTreeChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringexpressionstreechange) outputs, so that you make the appropriate request based on the arguments received, as well as set the public [@@igxName]({environment:angularApiUrl}/classes/@@igTypeDoc.html) property [`totalItemCount`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalitemcount) with the respective information coming from the service.
+To provide remote sorting and filtering, you need to subscribe to the [`dataPreLoad`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#dataPreLoad), [`sortingExpressionsChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sortingExpressionsChange) and [`filteringExpressionsTreeChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringexpressionstreechange) outputs, so that you make the appropriate request based on the arguments received, as well as set the public [@@igxName]({environment:angularApiUrl}/classes/@@igTypeDoc.html) property [`totalItemCount`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalItemCount) with the respective information coming from the service.
 
 We will also take advantage of the **rxjs** `debounceTime` function, which emits a value from the source Observable only after a particular time span has passed without another source emission. This way the remote operation will be triggered only when the specified amount of time has passed without the user interrupting it.
 
@@ -201,7 +201,7 @@ public ngAfterViewInit() {
 }
 ```
 
-When remote sorting and filtering are provided, usually we do not need the built-in sorting and filtering of the grid. We can disable them by setting the [`sortStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sortstrategy) and the [`filterStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filterstrategy) inputs of the grid to the `NoopSortingStrategy` and the `NoopFilteringStrategy` respective instances.
+When remote sorting and filtering are provided, usually we do not need the built-in sorting and filtering of the grid. We can disable them by setting the [`sortStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sortStrategy) and the [`filterStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filterStrategy) inputs of the grid to the `NoopSortingStrategy` and the `NoopFilteringStrategy` respective instances.
 
 ```html
 <igx-grid #grid [data]="remoteData | async" [height]="'500px'" [width]="'100%'" [autoGenerate]='false'
@@ -227,7 +227,7 @@ You can see the result of the code from above at the beginning of this article i
 @@if (igxName === 'IgxTreeGrid') {
 ### Remote Filtering
 
-To provide remote filtering, you need to subscribe to the [`filteringExpressionsTreeChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringexpressionstreechange) output so that you make the appropriate request based on the arguments received. Let's use a flat collection as a data source for our Tree Grid by providing a [`primaryKey`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primarykey) and a [`foreignKey`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#foreignkey).
+To provide remote filtering, you need to subscribe to the [`filteringExpressionsTreeChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringExpressionsTreeChange) output so that you make the appropriate request based on the arguments received. Let's use a flat collection as a data source for our Tree Grid by providing a [`primaryKey`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primaryKey) and a [`foreignKey`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#foreignKey).
 
 We will also take advantage of the **rxjs** `debounceTime` function, which emits a value from the source Observable only after a particular time span has passed without another source emission. This way the remote operation will be triggered only when the specified amount of time has passed without the user interrupting it.
 
@@ -245,7 +245,7 @@ public ngAfterViewInit() {
 }
 ```
 
-When remote filtering is provided, usually we do not need the built-in filtering of the Tree Grid. We can disable it by setting the [`filterStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filterstrategy) input of the Tree Grid to the `NoopFilteringStrategy` instance.
+When remote filtering is provided, usually we do not need the built-in filtering of the Tree Grid. We can disable it by setting the [`filterStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filterStrategy) input of the Tree Grid to the `NoopFilteringStrategy` instance.
 
 ```html
 <!-- tree-grid-remote-filtering-sample.html -->
@@ -294,7 +294,7 @@ You can see the result of the code from above at the beginning of this article i
 ### Unique Column Values Strategy
 }
 
-The list items inside the Excel Style Filtering dialog represent the unique values for the respective column. The @@igComponent generates these values based on its data source by default. In case of remote filtering, the grid data does not contain all the data from the server. In order to provide the unique values manually and load them on demand, we can take advantage of the @@igComponent's [`uniqueColumnValuesStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#uniquecolumnvaluesstrategy) input. This input is actually a method that provides three arguments:
+The list items inside the Excel Style Filtering dialog represent the unique values for the respective column. The @@igComponent generates these values based on its data source by default. In case of remote filtering, the grid data does not contain all the data from the server. In order to provide the unique values manually and load them on demand, we can take advantage of the @@igComponent's [`uniqueColumnValuesStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#uniqueColumnValuesStrategy) input. This input is actually a method that provides three arguments:
 - **column**  - The respective column instance.
 - **filteringExpressionsTree** - The filtering expressions tree, which is reduced based on the respective column.
 - **done** - Callback that should be called with the newly generated column values when they are retrieved from the server.
@@ -302,7 +302,7 @@ The list items inside the Excel Style Filtering dialog represent the unique valu
 The developer can manually generate the necessary unique column values based on the information, that is provided by the **column** and the **filteringExpressionsTree** arguments and then invoke the **done** callback.
 
 > [!NOTE]
-> When the [`uniqueColumnValuesStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#uniquecolumnvaluesstrategy) input is provided, the default unique values generating process in the excel style filtering will not be used.
+> When the [`uniqueColumnValuesStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#uniqueColumnValuesStrategy) input is provided, the default unique values generating process in the excel style filtering will not be used.
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -323,8 +323,8 @@ public columnValuesStrategy = (column: ColumnType,
 ### Unique Column Values Strategy Demo
 
 
-<code-view style="height:800px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:800px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-excel-style-filtering-load-on-demand" >
 </code-view>
 
@@ -348,8 +348,8 @@ public columnValuesStrategy = (column: ColumnType,
 ### Unique Column Values Strategy Demo
 
 
-<code-view style="height:800px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:800px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-excel-style-filtering-load-on-demand" >
 </code-view>
 
@@ -388,8 +388,8 @@ this.remoteValuesService.getColumnData(
 ### Unique Column Values Strategy Demo
 
 
-<code-view style="height:800px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:800px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-style-filtering-load-on-demand" >
 </code-view>
 
@@ -520,7 +520,7 @@ If you want to use the *default paging template* you need to set the Paginator's
 <igx-grid #grid1 [data]="data | async" [isLoading]="isLoading" [pagingMode]="mode">
     <igx-column field="ID"></igx-column>
     ...
-    <igx-paginator [(page)]="page" [(perPage)]="perPage"  [totalRecords]="totalCount" 
+    <igx-paginator [(page)]="page" [(perPage)]="perPage"  [totalRecords]="totalCount"
         (pagingDone)="paginate($event.current)">
     </igx-paginator>
 </igx-grid>
@@ -531,7 +531,7 @@ If you want to use the *default paging template* you need to set the Paginator's
 <igx-tree-grid #treeGrid [data]="data | async" childDataKey="Content" [pagingMode]="mode">
     <igx-column field="Name"></igx-column>
     ...
-    <igx-paginator [(page)]="page" [(perPage)]="perPage" [totalRecords]="totalCount" 
+    <igx-paginator [(page)]="page" [(perPage)]="perPage" [totalRecords]="totalCount"
         (pagingDone)="paginate($event.current)">
     </igx-paginator>
 </igx-tree-grid>
@@ -542,7 +542,7 @@ If you want to use the *default paging template* you need to set the Paginator's
 <igx-hierarchical-grid #hierarchicalGrid [primaryKey]="'CustomerID'" [pagingMode]="mode">
     <igx-column field="CustomerID"></igx-column>
     ...
-    <igx-paginator [(page)]="page" [(perPage)]="perPage" [totalRecords]="totalCount" 
+    <igx-paginator [(page)]="page" [(perPage)]="perPage" [totalRecords]="totalCount"
         (pagingDone)="paginate($event.current)" (perPageChange)="getFirstPage()">
     </igx-paginator>
 </igx-hierarchical-grid>
@@ -588,16 +588,16 @@ public paginate(page: number) {
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:620px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:620px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/remote-paging-default-template" >
 </code-view>
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:560px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:560px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-remote-paging-default-template" >
 </code-view>
 
@@ -605,8 +605,8 @@ public paginate(page: number) {
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:580px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:580px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/remote-paging-default-template" >
 </code-view>
 
@@ -621,7 +621,7 @@ When we define a custom paginator content we need to define the content in a way
 ```html
 <igx-paginator #paginator
     [totalRecords]="totalCount"
-    [(page)]="page" 
+    [(page)]="page"
     [(perPage)]="perPage"
     [selectOptions]="selectOptions"
     [displayDensity]="grid1.displayDensity"
@@ -710,7 +710,7 @@ public ngAfterViewInit() {
 ```html
 <igx-paginator #paginator
     [totalRecords]="totalCount"
-    [(perPage)]="perPage" 
+    [(perPage)]="perPage"
     [selectOptions]="selectOptions"
     [displayDensity]="treeGrid.displayDensity"
     (pageChange)="paginate($event)">
@@ -745,7 +745,7 @@ public mode = GridPagingMode.Remote;
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid #hierarchicalGrid [data]="data | async" [primaryKey]="'CustomerID'" 
+<igx-hierarchical-grid #hierarchicalGrid [data]="data | async" [primaryKey]="'CustomerID'"
     [height]="'550px'" [width]="'100%'" [pagingMode]="mode"></igx-hierarchical-grid>
 ...
 public mode = GridPagingMode.Remote;
@@ -753,7 +753,7 @@ public mode = GridPagingMode.Remote;
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```html
-<igx-tree-grid #treeGrid [data]="data | async" childDataKey="Content" 
+<igx-tree-grid #treeGrid [data]="data | async" childDataKey="Content"
         expansionDepth="0" width="100%" height="540px" [pagingMode]="mode"></igx-tree-grid>
 ...
 public mode = GridPagingMode.Remote;
@@ -774,16 +774,16 @@ After all the changes above, the following result will be achieved.
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:620px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:620px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-remote-paging-sample" >
 </code-view>
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:560px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:560px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-remote-paging" >
 </code-view>
 
@@ -791,8 +791,8 @@ After all the changes above, the following result will be achieved.
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:580px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:580px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-remote-paging" >
 </code-view>
 
@@ -805,8 +805,8 @@ After all the changes above, the following result will be achieved.
 In some cases you may want to define your own paging behavior and this is when we can take advantage of the Paging template and add our custom logic along with it. We are going to extend the Remote Paging example in order to demonstrate this:
 
 
-<code-view style="height:620px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:620px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-custom-remote-paging-sample" >
 </code-view>
 
@@ -908,8 +908,8 @@ As you can see in the **paginate** method, custom pagination logic is performed,
 
 #### Remote Paging with Batch Editing Demo
 
-<code-view style="height:620px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:620px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/remote-paging-batch-editing" >
 </code-view>
 
@@ -922,6 +922,7 @@ As you can see in the **paginate** method, custom pagination logic is performed,
     * Row Expand/collapse
     * Row Editing
     * Row Pinning
+-  In remote data scenarios, when the grid has a `primaryKey` set, [`rowSelectionChanging.oldSelection`]({environment:angularApiUrl}/interfaces/IRowSelectionEventArgs.html#oldSelection) event argument will not contain the full row data object for the rows that are currently out of the data view. In this case, `rowSelectionChanging.oldSelection` object will contain only one property, which is the `primaryKey` field. For the rest of the rows, currently in the data view, `rowSelectionChanging.oldSelection` will contain the whole row data.
 
 ## API References
 <div class="divider--half"></div>

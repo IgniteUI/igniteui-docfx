@@ -6,7 +6,7 @@ _keywords: angular group by, igniteui for angular, infragistics
 
 # Angular Grid Group By
 
-A Group By behavior in an Angular Material table or UI grid creates grouped data rows based on the column values. The Group By in [`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) allows for visualizing the groups in a hierarchical structure. The grouped data rows can be expanded or collapsed and the order of grouping may be changed through the UI or API. When Row Selection is enabled, a Group By row selector is rendered in the left-most area of the group row. In case the [`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection) property is set to single, checkboxes are disabled and only serve as an indication for the group where selection is placed. If the [`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection) property is set to multiple, clicking over the Group By row selector selects all records belonging to this group.
+A Group By behavior in an Angular Material table or UI grid creates grouped data rows based on the column values. The Group By in [`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) allows for visualizing the groups in a hierarchical structure. The grouped data rows can be expanded or collapsed and the order of grouping may be changed through the UI or API. When Row Selection is enabled, a Group By row selector is rendered in the left-most area of the group row. In case the [`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowSelection) property is set to single, checkboxes are disabled and only serve as an indication for the group where selection is placed. If the [`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowSelection) property is set to multiple, clicking over the Group By row selector selects all records belonging to this group.
 
 ## Angular Grid Group By Example
 This example presents the grouping capabilities of a large amount of data. Dragging the column headers to the top (grouping area) allows users to see the data for the selected column in a hierarchical structure. They can do group by in multiple fields by dragging more column headers to the top. These grouping options come in handy when you have tables with numerous rows and columns where users want to present the data in a much faster and visually acceptable way.
@@ -20,7 +20,7 @@ This example presents the grouping capabilities of a large amount of data. Dragg
 
 ## Initial Grouping State
 
-It is possible to define initial grouping of the grid by assigning an array of expressions to the [`groupingExpressions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupingexpressions) property of the grid.
+It is possible to define initial grouping of the grid by assigning an array of expressions to the [`groupingExpressions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupingExpressions) property of the grid.
 
 ```typescript
 public ngOnInit() {
@@ -54,7 +54,7 @@ public ngOnInit() {
 }
 ```
 
-During runtime the expressions are gettable and settable from the [`groupingExpressions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupingexpressions) property. If you need to add or change an existing expression you may also use the [`groupBy`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupby) method with either a single or an array of [`ISortingExpression`]({environment:angularApiUrl}/interfaces/isortingexpression.html).
+During runtime the expressions are gettable and settable from the [`groupingExpressions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupingExpressions) property. If you need to add or change an existing expression you may also use the [`groupBy`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupby) method with either a single or an array of [`ISortingExpression`]({environment:angularApiUrl}/interfaces/isortingexpression.html).
 
 ```typescript
 grid.groupBy({ fieldName: 'ProductName', dir: SortingDirection.Desc, ignoreCase: true });
@@ -64,7 +64,7 @@ grid.groupBy({ fieldName: 'ProductName', dir: SortingDirection.Desc, ignoreCase:
 
 ### Expand/Collapse API
 
-In addition to grouping expressions you can also control the expansion states for group rows. They are stored in a separate property of the [`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) component [`groupingExpansionState`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupingexpansionstate). A group row is uniquely identified based on the field name it is created for and the value it represents for each level of grouping. This means that the signature of an expansion state interface is the following:
+In addition to grouping expressions you can also control the expansion states for group rows. They are stored in a separate property of the [`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) component [`groupingExpansionState`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupingExpansionState). A group row is uniquely identified based on the field name it is created for and the value it represents for each level of grouping. This means that the signature of an expansion state interface is the following:
 
 ```typescript
 export interface IGroupByKey {
@@ -78,7 +78,7 @@ export interface IGroupByExpandState {
 }
 ```
 
-As with [`groupingExpressions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupingexpressions), setting a list of [`IGroupByExpandState`]({environment:angularApiUrl}/interfaces/igroupbyexpandstate.html) directly to the [`groupingExpansionState`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupingexpansionstate) will change the expansion accordingly. Additionally [`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) exposes a method that toggles a group by the group record instance.
+As with [`groupingExpressions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupingExpressions), setting a list of [`IGroupByExpandState`]({environment:angularApiUrl}/interfaces/igroupbyexpandstate.html) directly to the [`groupingExpansionState`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupingExpansionState) will change the expansion accordingly. Additionally [`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) exposes a method that toggles a group by the group record instance.
 
 ```typescript
     const groupRow = this.grid.groupsRecords.find(r => r.value === "France");
@@ -87,13 +87,13 @@ As with [`groupingExpressions`]({environment:angularApiUrl}/classes/igxgridcompo
     groupRow.expanded = false;
 ```
 
-Groups can be created expanded (***default***) or collapsed and the expansion states would generally only contain the state opposite to the default behavior. You can control whether groups should be created expanded or not through the [`groupsExpanded`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupsexpanded) property.
+Groups can be created expanded (***default***) or collapsed and the expansion states would generally only contain the state opposite to the default behavior. You can control whether groups should be created expanded or not through the [`groupsExpanded`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupsExpanded) property.
 
 ### Select/Deselect all rows in a group API
 
-Selecting/Deselecting all rows in a group is available through the [`selectRowsInGroup`]({environment:angularApiUrl}/classes/igxgridcomponent.html#selectrowsingroup) and [`deselectRowsInGroup`]({environment:angularApiUrl}/classes/igxgridcomponent.html#deselectrowsingroup) API methods.
+Selecting/Deselecting all rows in a group is available through the [`selectRowsInGroup`]({environment:angularApiUrl}/classes/igxgridcomponent.html#selectRowsInGroup) and [`deselectRowsInGroup`]({environment:angularApiUrl}/classes/igxgridcomponent.html#deselectRowsInGroup) API methods.
 
-The code snippet below can be used to select all rows within a group using the group record instance [`selectRowsInGroup`]({environment:angularApiUrl}/classes/igxgridcomponent.html#selectrowsingroup) method. Additionally, the second parameter of this method is a boolean property through which you may choose whether the previous row selection will be cleared or not. The previous selection is preserved by default.
+The code snippet below can be used to select all rows within a group using the group record instance [`selectRowsInGroup`]({environment:angularApiUrl}/classes/igxgridcomponent.html#selectRowsInGroup) method. Additionally, the second parameter of this method is a boolean property through which you may choose whether the previous row selection will be cleared or not. The previous selection is preserved by default.
 
 ```typescript
     const groupRow = this.grid.groupsRecords.find(r => r.value === "France");
@@ -101,7 +101,7 @@ The code snippet below can be used to select all rows within a group using the g
     grid.selectRowsInGroup(groupRow);
 ```
 
-If you need to deselect all rows within a group programmatically, you can use the [`deselectRowsInGroup`]({environment:angularApiUrl}/classes/igxgridcomponent.html#deselectrowsingroup) method.
+If you need to deselect all rows within a group programmatically, you can use the [`deselectRowsInGroup`]({environment:angularApiUrl}/classes/igxgridcomponent.html#deselectRowsInGroup) method.
 
 ```typescript
     const groupRow = this.grid.groupsRecords.find(r => r.value === "France");
@@ -207,7 +207,7 @@ The grouping UI supports the following keyboard interactions:
 igxGrid allows defining custom grouping per column or per grouping expression, which provides grouping based on a custom condition. This is useful when you need to group by complex objects or for other application specific scenarios.
 
 > [!NOTE]
-> In order to implement custom grouping the data first needs to be sorted appropriately. Due to this you may also need to apply a custom sorting strategy that extends the base [`DefaultSortingStrategy`]({environment:angularApiUrl}/classes/defaultsortingstrategy.html). After the data is sorted the custom groups can be determined by specifying a [`groupingComparer`]({environment:angularApiUrl}/interfaces/igroupingexpression.html#groupingcomparer) for the column or for the specific grouping expression.
+> In order to implement custom grouping the data first needs to be sorted appropriately. Due to this you may also need to apply a custom sorting strategy that extends the base [`DefaultSortingStrategy`]({environment:angularApiUrl}/classes/defaultsortingstrategy.html). After the data is sorted the custom groups can be determined by specifying a [`groupingComparer`]({environment:angularApiUrl}/interfaces/igroupingexpression.html#groupingComparer) for the column or for the specific grouping expression.
 
 The sample below demonstrates custom grouping by `Date`, where the date values are sorted and grouped by Day, Week, Month or Year based on user-selected grouping mode.
 
@@ -221,7 +221,7 @@ The sample below demonstrates custom grouping by `Date`, where the date values a
 
 
 The sample defines custom sorting strategies for the different date conditions.
-Each custom strategy extends the base [`DefaultSortingStrategy`]({environment:angularApiUrl}/classes/defaultsortingstrategy.html) and defines the [`compareValues`]({environment:angularApiUrl}/classes/defaultsortingstrategy.html#comparevalues) method, which is the custom compare function used when sorting the values. Additionally it extracts the values from the date needed for the comparison.
+Each custom strategy extends the base [`DefaultSortingStrategy`]({environment:angularApiUrl}/classes/defaultsortingstrategy.html) and defines the [`compareValues`]({environment:angularApiUrl}/classes/defaultsortingstrategy.html#compareValues) method, which is the custom compare function used when sorting the values. Additionally it extracts the values from the date needed for the comparison.
 
 ```typescript
 class BaseSortingStrategy extends DefaultSortingStrategy {
@@ -279,7 +279,7 @@ class WeekSortingStrategy extends BaseSortingStrategy {
 }
 ```
 
-A [`groupingComparer`]({environment:angularApiUrl}/interfaces/igroupingexpression.html#groupingcomparer) function is defined for the grouping expressions, which determines the items belonging to the same group based on the selected grouping mode. Values in the sorted data for which this function returns 0 are marked as part of the same group.
+A [`groupingComparer`]({environment:angularApiUrl}/interfaces/igroupingexpression.html#groupingComparer) function is defined for the grouping expressions, which determines the items belonging to the same group based on the selected grouping mode. Values in the sorted data for which this function returns 0 are marked as part of the same group.
 
 ```typescript
  groupingComparer: (a, b) => {

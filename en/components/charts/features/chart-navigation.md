@@ -115,7 +115,7 @@ You can find more information about related chart features in these topics:
 -   [Chart Tooltips](chart-tooltips.md)
 -   [Chart Trendlines](chart-trendlines.md)
 
-## API Members
+## API References
 
 The following is a list of API members mentioned in the above sections:
 

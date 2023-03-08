@@ -347,7 +347,7 @@ var worksheet = this.workbook.worksheets().add("Sheet1");
 var cellText = worksheet.rows(0).cells(0).getText();
 ```
 
-## API Members
+## API References
 
 -   `Add`
 -   [`CellFillLinearGradient`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/cellfilllineargradient.html)

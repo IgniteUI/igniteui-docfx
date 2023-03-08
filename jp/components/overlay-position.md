@@ -23,7 +23,7 @@ _language: ja
 5 つの配置ストラテジがあります。
 
 ### Global
-[`positionSettings`]({environment:angularApiUrl}/interfaces/positionsettings.html) を介して渡された指示に基づいてコンテンツを配置します。 [`horizontalDirection`]({environment:angularApiUrl}/interfaces/positionsettings.html#horizontaldirection) に Left/Center/Right、[`verticalDirection`]({environment:angularApiUrl}/interfaces/positionsettings.html#verticaldirection) に Top/Middle/Bottom があります。デフォルトは:
+[`positionSettings`]({environment:angularApiUrl}/interfaces/positionsettings.html) を介して渡された指示に基づいてコンテンツを配置します。 [`horizontalDirection`]({environment:angularApiUrl}/interfaces/positionsettings.html#horizontalDirection) に Left/Center/Right、[`verticalDirection`]({environment:angularApiUrl}/interfaces/positionsettings.html#verticalDirection) に Top/Middle/Bottom があります。デフォルトは:
     | horizontalDirection        | verticalDirection        |
     |:---------------------------|:-------------------------|
     | HorizontalAlignment.Center | VerticalAlignment.Middle |
@@ -54,7 +54,7 @@ _language: ja
 <div class="divider"></div>
 
 ### Elastic
-要素の一部が表示範囲外の場合、**Connected** 配置ストラテジのように要素を配置し、要素をビュー ポートに収まるように (幅や高さの再計算により) サイズ変更します。 [`minSize`]({environment:angularApiUrl}/interfaces/positionsettings.html#minsize) を [`positionSettings`]({environment:angularApiUrl}/interfaces/positionsettings.html)  へ渡して要素のサイズが特定のしきい値を下回るようなサイズ変更を防ぐことができます。デフォルトは:
+要素の一部が表示範囲外の場合、**Connected** 配置ストラテジのように要素を配置し、要素をビュー ポートに収まるように (幅や高さの再計算により) サイズ変更します。 [`minSize`]({environment:angularApiUrl}/interfaces/positionsettings.html#minSize) を [`positionSettings`]({environment:angularApiUrl}/interfaces/positionsettings.html)  へ渡して要素のサイズが特定のしきい値を下回るようなサイズ変更を防ぐことができます。デフォルトは:
     | target          | horizontalDirection       |  verticalDirection       | horizontalStartPoint     | verticalStartPoint      minSize               |
     |:----------------|:--------------------------|:-------------------------|:-------------------------|:-------------------------|-----------------------|
     | new Point(0, 0) | HorizontalAlignment.Right | VerticalAlignment.Bottom | HorizontalAlignment.Left | VerticalAlignment.Bottom |{ width: 0, height: 0 }|

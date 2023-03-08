@@ -128,7 +128,7 @@ export class MapOverviewComponent implements AfterViewInit {
 -   [シェイプ ポリゴン シリーズの使用](geo-map-type-shape-polygon-series.md)
 -   [シェイプ ポリライン シリーズの使用](geo-map-type-shape-polyline-series.md)
 
-## API メンバー
+## API リファレンス
 
 以下は上記のセクションで説明した API メンバーのリストです。
 

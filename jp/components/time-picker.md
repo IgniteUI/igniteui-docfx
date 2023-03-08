@@ -179,7 +179,7 @@ public selectNow(timePicker: IgxTimePickerComponent) {
 ```
 
 ### キーボード ナビゲーション
-* ユーザーは、キーボードの <kbd>Up</kbd> および <kbd>Down</kbd> 矢印キーを使用するか、入力フィールドとドロップダウン/ダイアログをスクロールして、コンポーネントの時間部分をナビゲートできます。[`minValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#minvalue) または [`maxValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#maxvalue) に関係なく、入力でのナビゲーションが可能ですが、ドロップダウン/ダイアログでのナビゲーションは [`minValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#minvalue) および [`maxValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#maxvalue) の範囲内に制限されます。
+* ユーザーは、キーボードの <kbd>Up</kbd> および <kbd>Down</kbd> 矢印キーを使用するか、入力フィールドとドロップダウン/ダイアログをスクロールして、コンポーネントの時間部分をナビゲートできます。[`minValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#minValue) または [`maxValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#maxValue) に関係なく、入力でのナビゲーションが可能ですが、ドロップダウン/ダイアログでのナビゲーションは [`minValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#minValue) および [`maxValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#maxValue) の範囲内に制限されます。
 * Time Picker のドロップダウンは、トグル アイコンをクリックするか、<kbd>Space</kbd> キーを押すか、<kbd>Alt</kbd> + <kbd>Down</kbd> キーを押すことで開くことができます。ダイアログ モードでは、これは入力クリックで実行できます。
 * ドロップダウン/ダイアログの外側で <kbd>Enter</kbd> キーを押すかマウス クリックすると、選択が適用され、ドロップダウン/ダイアログが閉じます。
 * <kbd>Escape</kbd> キーを押すと、選択がキャンセルされ、ドロップダウン/ダイアログが閉じます。
@@ -210,7 +210,7 @@ public mode = PickerInteractionMode.Dialog;
 <igx-time-picker mode="dialog"></igx-time-picker>
 ```
 
-ダイアログ モードでは、ダイアログ ヘッダーに、現在選択されている時刻がピッカーの [`input format`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#inputformat) で表示されます。[`headerOrientation`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#headerorientation) プロパティを設定することで、ヘッダーの位置を変更できます。
+ダイアログ モードでは、ダイアログ ヘッダーに、現在選択されている時刻がピッカーの [`input format`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#inputformat) で表示されます。[`headerOrientation`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#headerOrientation) プロパティを設定することで、ヘッダーの位置を変更できます。
 
 <code-view style="height: 600px;"
            data-demos-base-url="{environment:demosBaseUrl}"
@@ -219,7 +219,7 @@ public mode = PickerInteractionMode.Dialog;
 
 <div class="divider--half"></div>
 
-[`minValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#minvalue) と [`maxValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#maxvalue) が設定されている場合、ダイアログにはその範囲内のみの時間が表示されます。詳細については、以下の[最小値と最大値](#最小値と最大値)の例を参照してください。
+[`minValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#minValue) と [`maxValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#maxValue) が設定されている場合、ダイアログにはその範囲内のみの時間が表示されます。詳細については、以下の[最小値と最大値](#最小値と最大値)の例を参照してください。
 
 ### 表示および入力形式
 Time Picker コンポーネントは、さまざまな表示形式と入力形式をサポートしています。
@@ -243,12 +243,12 @@ Time Picker は、パブリックの [`increment`]({environment:angularApiUrl}/c
 [Date Time Editor ディレクティブ](date-time-editor.md#増加および減少)で、両方の方法の使用法を示すサンプルを見つけることができます。
 
 ### フォームと検証
-Time Picker コンポーネントは、コア FormsModule [NgModel](https://angular.io/api/forms/NgModel) および [ReactiveFormsModule](https://angular.io/api/forms/ReactiveFormsModule) (FormControl, FormGroup など) からのすべてのディレクティブをサポートします。これには、[フォーム バリデーター](https://angular.io/api/forms/Validators)機能も含まれます。さらに、コンポーネントの[最小値と最大値](#最小値と最大値)はフォーム バリデーターとしても機能します。
+Time Picker コンポーネントは、コア FormsModule [NgModel](https://angular.io/api/forms/NgModel) および [ReactiveFormsModule](https://angular.io/api/forms/ReactiveFormsModule) (FormControl, FormGroup など) からのすべてのディレクティブをサポートします。これには、[フォーム バリデータ](https://angular.io/api/forms/Validators)機能も含まれます。さらに、コンポーネントの[最小値と最大値](#最小値と最大値)はフォーム バリデータとしても機能します。
 
 [リアクティブ フォームの統合](angular-reactive-form-validation.md)サンプルは、ReactiveForms で igxTimePicker を使用する方法を示しています。
 
 #### 最小値と最大値
-[`minValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#minvalue) および [`maxValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#maxvalue) を指定して、ユーザー入力を制限できます。その場合、ドロップダウン/ダイアログにはその範囲内の時刻のみが表示されます。ただし、ドロップダウン モードでは、ユーザーが無効な時間を入力する可能性があります。[`validationFailed`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#validationfailed) イベントを処理して、それが発生した場合にユーザーに通知することができます。
+[`minValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#minValue) および [`maxValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#maxValue) を指定して、ユーザー入力を制限できます。その場合、ドロップダウン/ダイアログにはその範囲内の時刻のみが表示されます。ただし、ドロップダウン モードでは、ユーザーが無効な時間を入力する可能性があります。[`validationFailed`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#validationfailed) イベントを処理して、それが発生した場合にユーザーに通知することができます。
 
 >[!NOTE]
 >最小/最大値は、Date オブジェクトまたは `ISO 8601` 形式の時刻のみの文字列である必要があります。
@@ -301,7 +301,7 @@ public onValidationFailed() {
 ドロップダウンには、項目のデルタに基づいて、最小/最大範囲 (09:15:30 AM~06:15:30 PM) 内の値が表示されます。無効な時間が入力されたときにメッセージを表示するためにトーストが追加されます。
 
  >[!NOTE]
->ドロップダウン/ダイアログの各時間部分に表示される値は、常にゼロから始まる項目のデルタに基づいて計算されます。[`minValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#minvalue) と [`maxValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#maxvalue) が項目のデルタと一致しない場合、表示される値は、しきい値に一致する次の/最後の可能な値から開始/終了します。
+>ドロップダウン/ダイアログの各時間部分に表示される値は、常にゼロから始まる項目のデルタに基づいて計算されます。[`minValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#minValue) と [`maxValue`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#maxValue) が項目のデルタと一致しない場合、表示される値は、しきい値に一致する次の/最後の可能な値から開始/終了します。
 
 以下は結果です。
 
@@ -324,7 +324,7 @@ public onValidationFailed() {
 
 <div class="divider--half"></div>
 
-リアクティブ フォームでは、各コンポーネントの [`valueChange`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#valuechange) イベントを処理し、他のコンポーネントの値を更新できます。
+リアクティブ フォームでは、各コンポーネントの [`valueChange`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#valueChange) イベントを処理し、他のコンポーネントの値を更新できます。
 
 <code-view style="height: 540px;"
            data-demos-base-url="{environment:demosBaseUrl}"

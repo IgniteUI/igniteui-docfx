@@ -288,7 +288,7 @@ toggleFavorite(item: IgxListItem) {
 }
 ```
 
-[`displayDensity`]({environment:angularApiUrl}/classes/igxlistcomponent.html#displaydensity) 入力を使用して、ユーザーがリストの表示密度を選択できるようにします。これには、`IgxButtonGroupModule` をインポートし、[**IgxButtonGroup**](button-group.md) を使用してすべての密度値を表示します。このようにして選択されるたびに、リストの [`displayDensity`]({environment:angularApiUrl}/classes/igxlistcomponent.html#displaydensity) にバインドされている独自の **density** プロパティを更新します。
+[`displayDensity`]({environment:angularApiUrl}/classes/igxlistcomponent.html#displayDensity) 入力を使用して、ユーザーがリストの表示密度を選択できるようにします。これには、`IgxButtonGroupModule` をインポートし、[**IgxButtonGroup**](button-group.md) を使用してすべての密度値を表示します。このようにして選択されるたびに、リストの [`displayDensity`]({environment:angularApiUrl}/classes/igxlistcomponent.html#displayDensity) にバインドされている独自の **density** プロパティを更新します。
 
 ```typescript
 // app.module.ts
@@ -345,7 +345,7 @@ public selectDensity(event) {
 連絡先や電話番号の Angular リストなどを作成しましたが、次に連絡先に電話を掛ける機能を追加します。
 [`IgxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) はリスト項目パンニングに最適です。
 以下の手順に沿って作成します。
-- [`allowLeftPanning`]({environment:angularApiUrl}/classes/igxlistcomponent.html#allowleftpanning) と [`allowRightPanning`]({environment:angularApiUrl}/classes/igxlistcomponent.html#allowrightpanning) またはそのいずれかを使用してパンニングを有効にします。
+- [`allowLeftPanning`]({environment:angularApiUrl}/classes/igxlistcomponent.html#allowLeftPanning) と [`allowRightPanning`]({environment:angularApiUrl}/classes/igxlistcomponent.html#allowRightPanning) またはそのいずれかを使用してパンニングを有効にします。
 - 右と左またはそのいずれかのテンプレートを定義します。
 - リスト項目のパンニング イベントを処理して必要なアクションを実行します。
 
@@ -441,7 +441,7 @@ public leftPanPerformed(args) {
 ```
 
 > [!NOTE]
-> リスト項目のパンニング時にパンニング イベントが発生するために達する必要のあるしきい値があります。[`IgxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) [`panEndTriggeringThreshold`]({environment:angularApiUrl}/classes/igxlistcomponent.html#panendtriggeringthreshold) プロパティを使用するしきい値を変更できます。このプロパティのデフォルトは 0.5 でリスト項目幅の 50% を意味します。
+> リスト項目のパンニング時にパンニング イベントが発生するために達する必要のあるしきい値があります。[`IgxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) [`panEndTriggeringThreshold`]({environment:angularApiUrl}/classes/igxlistcomponent.html#panEndTriggeringThreshold) プロパティを使用するしきい値を変更できます。このプロパティのデフォルトは 0.5 でリスト項目幅の 50% を意味します。
 
 次にリスト項目をパンニングします。
 
@@ -594,7 +594,7 @@ public selectItem(item) {
 <div class="divider--half"></div>
 
 > [!NOTE]
-> 注: コンポーネントの .scss ファイルにコンポーネントテーマを作成する場合、表示のカプセル化を渡すために `::ng-deep` を使用する必要があります。そうでない場合、新しいテーマが動作しません。詳細は、[コンポーネント テーマ](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/themes/sass/component-themes.html)トピックを参照してください。
+> 注: コンポーネントの .scss ファイルにコンポーネントテーマを作成する場合、表示のカプセル化を渡すために `::ng-deep` を使用する必要があります。そうでない場合、新しいテーマが動作しません。詳細は、[コンポーネント テーマ](../components/themes/sass/component-themes.md#view-encapsulation)トピックを参照してください。
 
 リスト コンポーネントに変更できるパラメーターの完全なリストについては、[IgxListComponent スタイル]({environment:sassApiUrl}/index.html#function-list-theme)を参照してください。
 

@@ -102,7 +102,7 @@ Angular [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite
 
 -   [シェープファイルのバインディング](geo-map-binding-shp-file.md)
 
-## API メンバー
+## API リファレンス
 
 -   [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html)
 -   [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html)

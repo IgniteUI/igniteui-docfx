@@ -41,6 +41,9 @@
     - name: Build CRUD operations with IgxGrid
       href: general/how-to/how-to-perform-crud.md
       new: false
+    - name: Customize and Optimize Themes
+      href: general/how-to/how-to-customize-theme.md
+      new: true
 - name: Angular Schematics & Ignite UI CLI
   href: general/cli-overview.md
   sortable: false
@@ -924,6 +927,9 @@
     - name: Virtual Drop Down
       href: drop-down-virtual.md
       new: false
+    - name: Multi-select Hierarchical Drop Down
+      href: drop-down-hierarchical-selection.md
+      new: true
 - name: Select
   href: select.md
   new: false

@@ -73,7 +73,7 @@ The @@igComponent component in Ignite UI for Angular provides the **Column Movin
 
 ## Overview
 
-**Column moving** feature is enabled on a per-grid level, meaning that the [**@@igSelector**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) could have either movable or immovable columns. This is done via the [`moving`]({environment:angularApiUrl}/classes/igxgridcomponent.html#moving) input of the [`igx-grid`]({environment:angularApiUrl}/classes/igxgridncomponent.html).
+**Column moving** feature is enabled on a per-grid level, meaning that the [**@@igSelector**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) could have either movable or immovable columns. This is done via the [`moving`]({environment:angularApiUrl}/classes/igxgridcomponent.html#moving) input of the [`igx-grid`]({environment:angularApiUrl}/classes/igxgridcomponent.html).
 
 
 @@if (igxName === 'IgxGrid') {
@@ -98,7 +98,7 @@ The @@igComponent component in Ignite UI for Angular provides the **Column Movin
 ## API
 In addition to the drag and drop functionality, the Column Moving feature also provides two API methods to allow moving a column/reordering columns programmatically: 
 
-[`moveColumn`]({environment:angularApiUrl}/classes/igxgridcomponent.html#movecolumn) - Moves a column before or after another column (a target). The first parameter is the column to be moved, and the second parameter is the target column. Also accepts an optional third parameter `position` (representing a [`DropPosition`]({environment:angularApiUrl}/enums/dropposition.html) value), which determines whether to place the column before or after the target column.
+[`moveColumn`]({environment:angularApiUrl}/classes/igxgridcomponent.html#moveColumn) - Moves a column before or after another column (a target). The first parameter is the column to be moved, and the second parameter is the target column. Also accepts an optional third parameter `position` (representing a [`DropPosition`]({environment:angularApiUrl}/enums/dropposition.html) value), which determines whether to place the column before or after the target column.
 
 ```typescript
 // Move the ID column after the Name column
@@ -202,7 +202,7 @@ The last step is to **include** the component mixins with its respective theme:
 ```
 
 > [!NOTE]
-> Depending on the component [**View Encapsulation**](/components/themes/sass/component-themes.html#view-encapsulation) strategy, it may be necessary to `penetrate` this encapsulation using `::ng-deep`
+> Depending on the component [**View Encapsulation**](../../components/themes/sass/component-themes.md#view-encapsulation) strategy, it may be necessary to `penetrate` this encapsulation using `::ng-deep`
 
 ```scss
 :host {
@@ -238,11 +238,11 @@ $dark-grid-column-moving-theme: grid-theme(
 
 
 > [!NOTE]
-> Thecolor andpalette are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](/components/themes/palettes.html) topic for detailed guidance on how to use them.
+> The color and palette are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](../../components/themes/palettes.md) topic for detailed guidance on how to use them.
 
 ### Using Schemas
 
-Going further with the theming engine, you can build a robust and flexible structure that benefits from [schemas](/components/themes/sass/schemas.html). A **schema** is a recipe of a theme.
+Going further with the theming engine, you can build a robust and flexible structure that benefits from [schemas](../../components/themes/sass/schemas.md). A **schema** is a recipe of a theme.
 
 Extend one of the two predefined schemas, that are provided for every component, in this case - [light-grid]({environment:sassApiUrl}/index.html#variable-_light-grid).
 

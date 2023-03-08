@@ -75,7 +75,7 @@ By default, the ripple effect starts from the position of the click event. You c
 </iframe></div>
 
 ### Ripple Duration
-We can use the [`igxRippleDuration`]({environment:angularApiUrl}/classes/igxrippledirective.html#rippleduration) property to change the duration of the ripple animation, which, by default, is set to 600 milliseconds.
+We can use the [`igxRippleDuration`]({environment:angularApiUrl}/classes/igxrippledirective.html#rippleDuration) property to change the duration of the ripple animation, which, by default, is set to 600 milliseconds.
 
 ```html
 <button igxButton="raised" igxRipple [igxRippleDuration]="2000">Click Me</button>
@@ -85,7 +85,7 @@ We can use the [`igxRippleDuration`]({environment:angularApiUrl}/classes/igxripp
 </iframe></div>
 
 ### Ripple Target
-Use the [`igxRippleTarget`]({environment:angularApiUrl}/classes/igxrippledirective.html#rippletarget) property to attach a ripple effect to a specific element inside a parent element.
+Use the [`igxRippleTarget`]({environment:angularApiUrl}/classes/igxrippledirective.html#igxRippleTarget) property to attach a ripple effect to a specific element inside a parent element.
 
 ```html
 <div class="parent" igxRipple="white" igxRippleTarget=".child" [igxRippleCentered]="true">

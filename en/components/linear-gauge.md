@@ -409,16 +409,16 @@ For your convenience, all above code snippets are combined into one code block b
 
 <div class="divider--half"></div>
 
+## API References
+
+The following is a list of API members mentioned in the above sections:
+
+-   [`IgxLinearGaugeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineargaugecomponent.html)
+-   [`IgxLinearGraphRangeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineargraphrangecomponent.html)
+
 ## Additional Resources
 
 You can find more information about other types of gauges in these topics:
 
 -   [Bullet Graph](bullet-graph.md)
 -   [Radial Gauge](radial-gauge.md)
-
-## API Members
-
-The following is a list of API members mentioned in the above sections:
-
--   [`IgxLinearGaugeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineargaugecomponent.html)
--   [`IgxLinearGraphRangeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineargraphrangecomponent.html)

@@ -194,7 +194,7 @@ You can change the default decimal display of values within the **DataToolTip** 
     </body>
 </html>
 
-## API Members
+## API References
 
 -   [`dataToolTipExcludedColumns`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#datatooltipexcludedcolumns)
 -   [`dataToolTipGroupedPositionModeX`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#datatooltipgroupedpositionmodex)

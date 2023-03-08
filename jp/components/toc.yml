@@ -42,6 +42,9 @@
     - name: IgxGrid を使用して CRUD 操作の構築
       href: general/how-to/how-to-perform-crud.md
       new: false
+    - name: テーマのカスタマイズと最適化
+      href: general/how-to/how-to-customize-theme.md
+      new: true
 - name: Angular Schematics & Ignite UI CLI
   href: general/cli-overview.md
   sortable: false
@@ -545,7 +548,7 @@
       href: pivotgrid/pivot-grid-custom.md
       new: true
     - name: 状態保持
-      href: pivotGrid/state-persistence.md
+      href: pivotgrid/state-persistence.md
       new: true
 - name: Tree
   href: tree.md
@@ -927,6 +930,9 @@
     - name: 仮想ドロップダウン
       href: drop-down-virtual.md
       new: false
+    - name: 複数選択の階層ドロップダウン
+      href: drop-down-hierarchical-selection.md
+      new: true
 - name: Select
   href: select.md
   new: false

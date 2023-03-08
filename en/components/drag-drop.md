@@ -25,16 +25,16 @@ When an element inside your Angular application needs to be dragged from one pla
 
 ### Dragging Fundamentals
 
-A drag operation starts when the end user swipes at least 5px in any direction. This is customizable and can be changed using the [`dragTolerance`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragtolerance) input. Otherwise the interaction is considered as a click and a `dragClick` event is triggered.
+A drag operation starts when the end user swipes at least 5px in any direction. This is customizable and can be changed using the [`dragTolerance`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragTolerance) input. Otherwise the interaction is considered as a click and a `dragClick` event is triggered.
 
-When the dragging starts, the [`dragStart`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragstart) event is triggered. To prevent any actual movement to occur, the event can be canceled by setting the [`cancel`]({environment:angularApiUrl}/interfaces/idragstarteventargs.html#cancel) property to `true`.
+When the dragging starts, the [`dragStart`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragStart) event is triggered. To prevent any actual movement to occur, the event can be canceled by setting the [`cancel`]({environment:angularApiUrl}/interfaces/idragstarteventargs.html#cancel) property to `true`.
 
-Before any actual movement is about to be performed, the [`dragMove`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragmove) event is also triggered, containing the last and next position of the pointer. It is triggered every time a movement is detected while dragging an element around. 
+Before any actual movement is about to be performed, the [`dragMove`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragMove) event is also triggered, containing the last and next position of the pointer. It is triggered every time a movement is detected while dragging an element around. 
 
-After the user releases the mouse/touch the drag ghost element is removed from the DOM and the [`dragEnd`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragend) event will be emitted.
+After the user releases the mouse/touch the drag ghost element is removed from the DOM and the [`dragEnd`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragEnd) event will be emitted.
 
 > [!Note]
-> Due to the nature of the [`dragMove`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragmove) event, it can be triggered many times in a short period of time, which may cause performance issues for complex operations done when triggered.
+> Due to the nature of the [`dragMove`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragMove) event, it can be triggered many times in a short period of time, which may cause performance issues for complex operations done when triggered.
 
 ### Dragging With Ghost
 
@@ -46,9 +46,9 @@ The [`igxDrag`]({environment:angularApiUrl}/classes/igxdragdirective.html) direc
 
 The default behavior of `igxDrag` directive is to leave the base element unmodified and to create a ghost element when drag operation is performed by the end user.
 
-Before the ghost is rendered on the page, a [`ghostCreate`]({environment:angularApiUrl}/classes/igxdragdirective.html#ghostcreate) event is triggered containing information of the ghost element that is about to be added. The event is triggered right after the [`dragStart`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragstart) event. If the [`dragStart`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragstart) is canceled, no ghost will be created and the [`ghostCreate`]({environment:angularApiUrl}/classes/igxdragdirective.html#ghostcreate) event will not trigger accordingly.
+Before the ghost is rendered on the page, a [`ghostCreate`]({environment:angularApiUrl}/classes/igxdragdirective.html#ghostCreate) event is triggered containing information of the ghost element that is about to be added. The event is triggered right after the [`dragStart`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragStart) event. If the [`dragStart`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragStart) is canceled, no ghost will be created and the [`ghostCreate`]({environment:angularApiUrl}/classes/igxdragdirective.html#ghostCreate) event will not trigger accordingly.
 
-Right before the ghost is about to be removed, the [`ghostDestroy`]({environment:angularApiUrl}/classes/igxdragdirective.html#ghostcreate) event will be triggered.
+Right before the ghost is about to be removed, the [`ghostDestroy`]({environment:angularApiUrl}/classes/igxdragdirective.html#ghostDestroy) event will be triggered.
 
 ### Customizing The Ghost
 
@@ -116,7 +116,7 @@ Drag the dialog using the handle.
 
 When an element is being dragged, there are no animations applied by default.
 
-You can apply transition animation to the `igxDrag` at any time, but it is advised to use it when dragging ends or the element is not currently dragged. This can be achieved by using the [`transitionToOrigin`]({environment:angularApiUrl}/classes/igxdragdirective.html#transitiontoorigin) and the [`transitionTo`]({environment:angularApiUrl}/classes/igxdragdirective.html#transitionto) methods.
+You can apply transition animation to the `igxDrag` at any time, but it is advised to use it when dragging ends or the element is not currently dragged. This can be achieved by using the [`transitionToOrigin`]({environment:angularApiUrl}/classes/igxdragdirective.html#transitionToOrigin) and the [`transitionTo`]({environment:angularApiUrl}/classes/igxdragdirective.html#transitionTo) methods.
 
 The `transitionToOrigin` method, as the name suggests, animates the currently dragged element or its ghost to the start position, where the dragging began. The `transitionTo` method animates the element to a specific location relative to the page (i.e. `pageX` and `pageY`) or to the position of a specified element. If the element is not being currently dragged, it will animate anyway or create ghost and animate it to the desired position.
 
@@ -155,7 +155,7 @@ When an element that is being dragged using the [`igxDrag`]({environment:angular
 
 The [`igxDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html) directive can be applied to any DOM element just like the [`igxDrag`]({environment:angularApiUrl}/classes/igxdragdirective.html) directive.
 
-By default, the [`igxDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html) directive doesn't apply any logic for modifying the dragged element position in the DOM. That's why you need to specify a [`dropStrategy`]({environment:angularApiUrl}/classes/igxdropdirective.html#dropstrategy) or apply custom logic. Drop strategies are discussed in the next section.
+By default, the [`igxDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html) directive doesn't apply any logic for modifying the dragged element position in the DOM. That's why you need to specify a [`dropStrategy`]({environment:angularApiUrl}/classes/igxdropdirective.html#dropStrategy) or apply custom logic. Drop strategies are discussed in the next section.
 
 ### Drop Strategies
 
@@ -206,7 +206,7 @@ public onDropped(event) {
 If you would like to implement your own drop logic, we advise binding to the `dropped` event and execute your logic there or extend the `IgxDefaultDropStrategy` class.
 
 ### Linking Drag to Drop Element
-Using the [`dragChannel`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragchannel) and [`dropChannel`]({environment:angularApiUrl}/classes/igxdropdirective.html#dropchannel) input on respectively `igxDrag` and `igxDrop` directives, you can link different elements to interact only between each other. For example, if an `igxDrag` element needs to be constrained so it can be dropped on specific `igxDrop` element and not all available, this can easily be achieved by assigning them the same channel.
+Using the [`dragChannel`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragChannel) and [`dropChannel`]({environment:angularApiUrl}/classes/igxdropdirective.html#dropChannel) input on respectively `igxDrag` and `igxDrop` directives, you can link different elements to interact only between each other. For example, if an `igxDrag` element needs to be constrained so it can be dropped on specific `igxDrop` element and not all available, this can easily be achieved by assigning them the same channel.
 
 #### Example
 
