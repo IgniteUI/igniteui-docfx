@@ -206,7 +206,7 @@ public ngAfterViewInit() {
 リモート ソートとフィルタリングが提供される場合、グリッドの組み込みのソートとフィルタリングは必要ありません。グリッドの [`sortStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sortStrategy) および [`filterStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filterStrategy) 入力をそれぞれのインスタンスの `NoopSortingStrategy` および `NoopFilteringStrategy` に設定して、無効にできます。
 
 ```html
-<igx-grid #grid [data]="remoteData | async" [autoGenerate]="false"
+<igx-grid #grid [data]="remoteData | async" [height]="'500px'" [width]="'100%'" [autoGenerate]='false'
         [filterStrategy]="noopFilterStrategy"
         [sortStrategy]="noopSortStrategy"
         [allowFiltering]="true">
@@ -224,7 +224,7 @@ public noopSortStrategy = NoopSortingStrategy.instance();
 
 ### リモート ソート/フィルタリングのデモ
 
-このトピックのはじめにあるコードの結果は、[デモ](#デモ)で確認できます。
+このトピックのはじめにあるコードの結果は、[デモ](#angular-grid-リモート-データ操作の例)で確認できます。
 }
 @@if (igxName === 'IgxTreeGrid') {
 ### リモート フィルタリング
@@ -923,8 +923,7 @@ public paginate(page: number) {
     * 行の展開/縮小
     * 行の編集
     * 行のピン固定
-- In remote data scenarios, when the grid has a `primaryKey` set, [`rowSelectionChanging.oldSelection`]({environment:angularApiUrl}/interfaces/IRowSelectionEventArgs.html#oldSelection) event argument will not contain the full row data object for the rows that are currently out of the current data view. In this case, `rowSelectionChanging.oldSelection` object will contain only one property, which is the `primaryKey` field. For the rest of the old selected rows, currently in the data view, `rowSelectionChanging.oldSelection` will contain the whole row data.
-
+- リモート データ シナリオでは、グリッドに `primaryKey` が設定されている場合、[`rowSelectionChanging.oldSelection`]({environment:angularApiUrl}/interfaces/IRowSelectionEventArgs.html#oldSelection) イベント引数には、現在データ ビューに含まれていない行の完全な行データ オブジェクトが含まれません。この場合、`rowSelectionChanging.oldSelection` オブジェクトには、`primaryKey` フィールドである 1 つのプロパティのみが含まれます。現在データ ビューにある残りの行については、`rowSelectionChanging.oldSelection` に行データ全体が含まれます。
 
 ## API リファレンス
 <div class="divider--half"></div>
