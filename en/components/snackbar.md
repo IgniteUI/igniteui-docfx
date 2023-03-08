@@ -161,7 +161,7 @@ Let’s create a list with contacts that can be deleted. When an item is deleted
     <igx-list-item igxRipple="pink" igxRippleTarget=".igx-list__item" *ngFor="let item of navItems">
         <div class="item-container">
             <div class="contact">
-                <igx-avatar [src]="item.avatar" roundShape="true"></igx-avatar>
+                <igx-avatar [src]="item.avatar" shape="rounded"></igx-avatar>
                 <div class="contact__info">
                     <span class="name">{{item.text}}</span>
                 </div>

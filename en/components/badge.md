@@ -56,7 +56,7 @@ Next, we will add those components to our template:
 
 ```html
 <div class="wrapper">
-    <igx-avatar icon="person" roundShape="true" size="small"></igx-avatar>
+    <igx-avatar icon="person" size="small"></igx-avatar>
     <igx-badge icon="check" type="success"></igx-badge>
 </div>
 ```
@@ -76,7 +76,20 @@ igx-badge {
 }
 ```
 
+### Badge Shape
+
+We can change the badge shape through the `shape` attribute setting its value to `square`. By default, the shape of the badge is `rounded`.
+
+```html
+<igx-badge icon="check" type="success" shape="square"></igx-badge>
+```
+
 If everything's done right, you should see the demo sample in your browser.
+
+<code-view style="height: 200px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-display/badge-sample-2" >
+</code-view>
 
 ### Badge in List
 
@@ -119,7 +132,7 @@ Next, we're adding the contacts in our template:
   <igx-list-item *ngFor="let member of members">
     <div class="wrapper">
       <div>
-        <igx-avatar icon="person" roundShape="true" size="small"></igx-avatar>
+        <igx-avatar icon="person" shape="rounded" size="small"></igx-avatar>
         <igx-badge [icon]="member.icon" [type]="member.type" class="badge-style"></igx-badge>
       </div>
       <div class="contact-container">
@@ -203,12 +216,10 @@ Position the badge in its parent container:
 
 If the sample is configured properly, a list of members should be displayed and every member has an avatar and a badge, showing its current state.
 
-
 <code-view style="height: 280px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-display/badge-sample-3" >
 </code-view>
-
 
 ## Styling
 
@@ -276,7 +287,6 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 
 ### Demo
 
-
 <code-view style="height:340px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-display/badge-styling-sample" >
@@ -302,6 +312,3 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 Our community is active and always welcoming to new ideas.
 * [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
-
-
-

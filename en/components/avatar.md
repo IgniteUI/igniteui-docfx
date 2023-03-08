@@ -46,7 +46,7 @@ export class AppModule {}
 
 ## Examples
 
-The Avatar can be either square or circular, with three size options (small, medium and large). It can be used for displaying initials, images or icons.
+The Avatar can be either square or rounded, with three size options (small, medium and large). It can be used for displaying initials, images or icons.
 
 ### Avatar displaying initials
 To get a simple avatar with [`initials`]({environment:angularApiUrl}/classes/igxavatarcomponent.html#initials) (i.e. JS  for  'Jack Sock'), add the following code inside the component template:
@@ -55,11 +55,11 @@ To get a simple avatar with [`initials`]({environment:angularApiUrl}/classes/igx
 <igx-avatar initials="JS">
 </igx-avatar>
 ```
-Let's enhance our avatar by making it circular and bigger in size. 
+Let's enhance our avatar by making it rounded and bigger in size. 
 
 ```html
 <igx-avatar initials="JS"
-            [roundShape]="true"
+            shape="rounded"
             size="medium">
 </igx-avatar>
 ```
@@ -74,6 +74,10 @@ igx-avatar {
 }
 
 ```
+
+> [!WARNING]
+> The `roundShape` property of the `igx-avatar` component have been deprecated. The `shape` attribute should be used instead.
+
 If all went well, you should see something like the following in the browser:
 
 <div class="sample-container loading" style="height:100px">
@@ -85,7 +89,7 @@ To get an avatar that displays an image, all you have to do is set the image sou
 
 ```html
 <igx-avatar src="https://randomuser.me/api/portraits/men/1.jpg"
-            [roundShape]="true"
+            shape="rounded"
             size="large">
 </igx-avatar>
 ```
@@ -101,7 +105,7 @@ Analogically, the avatar can display an icon via the [`icon`]({environment:angul
 
 ```html
 <igx-avatar icon="person"
-            [roundShape]="true"
+            shape="rounded"
             size="small">
 </igx-avatar>
 ```
@@ -123,7 +127,7 @@ To get started with styling the avatar, we need to import the `index` file, wher
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`avatar-theme`]({environment:sassApiUrl}/index.html#function-avatar-theme) and accepts the `$background`, `$color`, and the `$border-radius-square` parameters.
+Following the simplest approach, we create a new theme that extends the [`avatar-theme`]({environment:sassApiUrl}/index.html#function-avatar-theme) and accepts the `$background`, `$color`, and the `$border-radius` parameters.
 
 Given the following markup:
 
@@ -139,7 +143,7 @@ We need to create a theme:
 $custom-avatar-theme: avatar-theme(
     $background: #72da67,
     $color: #000000,
-    $border-radius-square: 16px
+    $border-radius: 16px
 );
 ```
 
