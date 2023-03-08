@@ -46,7 +46,16 @@ export class AppModule {}
 
 ## Examples
 
-The Avatar can be either square or rounded, with three size options (small, medium and large). It can be used for displaying initials, images or icons.
+The IgniteUI for Angular Avatar component comes in three shapes (square, rounded and circle), with three size options (small, medium and large). It can be used for displaying initials, images or icons.
+
+### Avatar Shape
+We can change the avatar shape through the `shape` attribute setting its value to `square`, `rounded` or `circle`. By default, the shape of the avatar is `square`.
+
+```html
+<igx-avatar initials="JS"
+            shape="circle">
+</igx-avatar>
+```
 
 ### Avatar displaying initials
 To get a simple avatar with [`initials`]({environment:angularApiUrl}/classes/igxavatarcomponent.html#initials) (i.e. JS  for  'Jack Sock'), add the following code inside the component template:
