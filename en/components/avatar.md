@@ -52,25 +52,19 @@ The IgniteUI for Angular Avatar component comes in three shapes (square, rounded
 We can change the avatar shape through the `shape` attribute setting its value to `square`, `rounded` or `circle`. By default, the shape of the avatar is `square`.
 
 ```html
-<igx-avatar initials="JS"
-            shape="circle">
-</igx-avatar>
+<igx-avatar shape="circle"></igx-avatar>
 ```
 
 ### Avatar displaying initials
 To get a simple avatar with [`initials`]({environment:angularApiUrl}/classes/igxavatarcomponent.html#initials) (i.e. JS  for  'Jack Sock'), add the following code inside the component template:
 
 ```html
-<igx-avatar initials="JS">
-</igx-avatar>
+<igx-avatar initials="JS" shape="circle"></igx-avatar>
 ```
 Let's enhance our avatar by making it rounded and bigger in size. 
 
 ```html
-<igx-avatar initials="JS"
-            shape="rounded"
-            size="medium">
-</igx-avatar>
+<igx-avatar size="medium" initials="JS" shape="circle"></igx-avatar>
 ```
 We can also change the background through the `background` property or set a color on the initials through the `color` property. 
 
