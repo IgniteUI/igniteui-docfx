@@ -147,20 +147,20 @@ export class AppModule {}
 // contacts.component.ts
 ...
 public contacts = [{
-    name: 'Terrance Orta',
-    phone: '770-504-2217'
+    name: "Terrance Orta",
+    phone: "770-504-2217"
 }, {
-    name: 'Richard Mahoney',
-    phone: '423-676-2869'
+    name: "Richard Mahoney",
+    phone: "423-676-2869"
 }, {
-    name: 'Donna Price',
-    phone: '859-496-2817'
+    name: "Donna Price",
+    phone: "859-496-2817"
 }, {
-    name: 'Lisa Landers',
-    phone: '901-747-3428'
+    name: "Lisa Landers",
+    phone: "901-747-3428"
 }, {
-    name: 'Dorothy H. Spencer',
-    phone: '573-394-9254'
+    name: "Dorothy H. Spencer",
+    phone: "573-394-9254"
 }];
 ```
 
@@ -207,11 +207,7 @@ import {
     IgxAvatarModule,
     IgxIconModule
 } from 'igniteui-angular';
-// import { 
-//    IgxListModule,
-//    IgxAvatarModule,
-//    IgxIconModule
-// } from '@infragistics/igniteui-angular'; for licensed package
+// import { IgxListModule, IgxAvatarModule, IgxIconModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -318,11 +314,11 @@ public density = 'comfortable';
 public displayDensities;
 
 public ngOnInit() {
-this.displayDensities = [
-    { label: 'comfortable', selected: this.density === 'comfortable', togglable: true },
-    { label: 'cosy', selected: this.density === 'cosy', togglable: true },
-    { label: 'compact', selected: this.density === 'compact', togglable: true }
-];
+    this.displayDensities = [
+        { label: 'comfortable', selected: this.density === 'comfortable', togglable: true },
+        { label: 'cosy', selected: this.density === 'cosy', togglable: true },
+        { label: 'compact', selected: this.density === 'compact', togglable: true }
+    ];
 }
 
 public selectDensity(event) {
@@ -594,7 +590,7 @@ public selectItem(item) {
 <div class="divider--half"></div>
 
 > [!NOTE]
-> 注: コンポーネントの .scss ファイルにコンポーネントテーマを作成する場合、表示のカプセル化を渡すために `::ng-deep` を使用する必要があります。そうでない場合、新しいテーマが動作しません。詳細は、[コンポーネント テーマ](../components/themes/sass/component-themes.md#view-encapsulation)トピックを参照してください。
+> 注: コンポーネントの .scss ファイルにコンポーネントテーマを作成する場合、表示のカプセル化を渡すために `::ng-deep` を使用する必要があります。そうでない場合、新しいテーマが動作しません。詳細は、[コンポーネント テーマ](../components/themes/sass/component-themes.md#表示のカプセル化)トピックを参照してください。
 
 リスト コンポーネントに変更できるパラメーターの完全なリストについては、[IgxListComponent スタイル]({environment:sassApiUrl}/index.html#function-list-theme)を参照してください。
 

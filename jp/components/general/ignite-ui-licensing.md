@@ -8,7 +8,9 @@ _language: ja
 # ライセンス FAQ とインストール
 ## 使用許諾契約
 購入して使用する製品に関するすべての[使用条件](https://jp.infragistics.com/legal/license/igultimate-la)を知っておくことが重要です。
-注: ライセンス条件およびサブスクリプション モデルを更新しました。
+
+> [!Note]
+> 2020 年第 2 四半期にライセンス条件およびサブスクリプション モデルを更新しました。
 
 トライアル期間が終了した場合、またはサブスクリプションの[有効期限が切れた](http://jp.infragistics.com/renewal)場合、Ignite UI を使用するチームの各開発者はサブスクリプションを[購入する](https://jp.infragistics.com/how-to-buy/product-pricing)必要があります。これにより、<https://packages.infragistics.com/npm/js-licensed/>  でホストされるプライベート npm フィードを開発に使用できます。ここには、Ignite UI for Angular パッケージの最新バージョンがあります。現在のサブスクリプションがある場合、Ignite UI for Angular の製品版をプライベート フィードによりアクセスできます。
 
@@ -54,21 +56,32 @@ schematic またはコマンドはプロジェクトのパッケージの依存�
 >[!NOTE]
 > プロジェクトが [`yarn`](https://yarnpkg.com/) を使用している場合は、`--skip-install` フラグを指定して `upgrade-packages` を実行します。その後、`yarn install` (現在 `upgrade` コマンドはインストールに `npm` を使用します) を実行して `yarn.lock` を適切に更新します。
 
-
 ### プライベート npm フィードを使用するための環境設定方法 (ステップバイステップ ガイド)
 
-#### 最初にプライベート レジストリを構成し、レジストリを Infragistics スコープと関連付けます。 
+#### 最初にプライベート レジストリを構成し、レジストリを Infragistics スコープと関連付けます。
 
-これにより公開用の npm レジストリおよびプライベート Infragistics レジストリからのパッケージを同時に使用できます。Infragistics アカウントにログインするユーザー名およびパスワードを入力する必要があります。Infragistics プロファイルに登録されるメールも入力してください。 
+これにより公開用の npm レジストリおよびプライベート Infragistics レジストリからのパッケージを同時に使用できます。
 
->[!NOTE]
-> `npm`  はユーザー名で `「@」` の使用を許可しません。ユーザー名が Infragistics アカウントのメール アドレスであるため、`「@」` 記号は既に含まれています。この制限を回避するには、`「@」` 記号の代わりに `「!!」` (2 つの感嘆符) を使用します。たとえば、ユーザー名が `username@example.com` の場合、`username!!example.com` と入力します。
+> [!NOTE]
+> アカウントのライセンスがない場合 (トライアル版アカウントを使用している場合)、プライベート パッケージ フィードにアクセスできません (たとえば、404 または 403 エラーメッセージが返されます)。 **ライセンスされているアカウントのみが packages.infragistics プライベート フィードにアクセスできます。**
+
+### npm を使用してプライベート フィードにログインするには、次のようにします。
 
 #### npm を使用してプライベート フィードにログインするには、adduser コマンドを実行し、ユーザー アカウントとパスワードを指定します。
 
 ```cmd
 npm adduser --registry=https://packages.infragistics.com/npm/js-licensed/ --scope=@infragistics --always-auth
 ```
+>[!NOTE]
+> `npm` バージョン 9.0.0 以降を使用している場合は、`--auth-type=legacy` を設定する必要があります。
+
+```cmd
+npm adduser --registry=https://packages.infragistics.com/npm/js-licensed/ --scope=@infragistics --always-auth --auth-type=legacy
+```
+
+Infragistics プロファイルから[アクセス トークン](#アクセス-トークンの使用)を生成できます。
+
+このアプローチは、以前のすべてのバージョンの npm に適用できます。
 
 > [!IMPORTANT]
 > アカウントのライセンスがない場合 (トライアル版アカウントを使用している場合)、プライベート パッケージ フィードにアクセスできません (たとえば、404 または 403 エラーメッセージが返されます)。**ライセンスされているアカウントのみが packages.infragistics プライベート フィードにアクセスできます。**
@@ -87,26 +100,26 @@ Ignite UI for Angular パッケージをスコープに設定したため、プ�
 
 #### プロジェクト ソースに追加の変更が必要になる場合があります。
 トライアル版からライセンス パッケージにアップグレードする際に CLI 移行を使用していない場合:
-- プロジェクトの `tsconfig.json` に `paths` マッピングを追加します。
+- プロジェクトの **tsconfig.json** に **paths** マッピングを追加します。
 
-```typescript
+```json
 {
-  ...
+  /* ... */
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
-    ...
+    /* ... */
     "paths": {
-      "igniteui-angular": ["./node_modules/@infragistics/igniteui-angular"],
       "igniteui-dockmanager": ["./node_modules/@infragistics/igniteui-dockmanager"],
       "igniteui-dockmanager/*": ["./node_modules/@infragistics/igniteui-dockmanager/*"],
     }
-	...
+  }
 }
 ```
-- プロジェクトの `angular.json` に `stylePreprocessorOptions` マッピングを追加します。
 
-```typescript
+- プロジェクトの`angular.json` に `stylePreprocessorOptions` マッピングを追加します。
+
+```json
 {
   "projects": {
     ..
@@ -131,7 +144,6 @@ Ignite UI for Angular パッケージをスコープに設定したため、プ�
 @use "~igniteui-angular/lib/core/styles/themes/index" as *;
 
 // Should be changed to
-
 @use "igniteui-angular/lib/core/styles/themes/index" as *;
 ```
 
@@ -152,6 +164,7 @@ npm を既に使用していて、Ignite UI for Angular ライセンスがある
   alt="新しく生成されたトークン"
   title="新しいトークンの生成" />
 
+> [!Note]
 > 各トークンは Base64 エンコードです。
 
 * 以下を [.npmrc](https://docs.npmjs.com/configuring-npm/npmrc.html) ファイルに追加します。
@@ -160,7 +173,6 @@ npm を既に使用していて、Ignite UI for Angular ライセンスがある
 @infragistics:registry=https://packages.infragistics.com/npm/js-licensed/
 //packages.infragistics.com/npm/js-licensed/:_auth=YOUR_ACCESS_TOKEN
 //packages.infragistics.com/npm/js-licensed/:username=YOUR_USERNAME
-//packages.infragistics.com/npm/js-licensed/:always-auth=true
 ```
 
 ### Azure Pipelines の構成
@@ -171,18 +183,14 @@ npm を既に使用していて、Ignite UI for Angular ライセンスがある
 
 - script: npm config set @infragistics:registry $(npmRegistry)
   displayName: 'Npm add registry'
-
-- script: npm config set $(igScope):always-auth=true
-  displayName: 'Npm config'
-
 - script: npm config set $(igScope):_auth=$(token)
   displayName: 'Npm config auth'
 ```
 
 次に、*npm registry*、*scope* および *token* の変数を追加する必要があります。2 つの方法があります。 
 
- #### パイプラインのライブラリ ページで変数グループを定義する方法
- [この記事](https://docs.microsoft.com/en-us/azure/devops/pipelines/library/variable-groups?view=azure-devops&amp;tabs=yaml) は、変数グループを使用して複数のパイプラインで制御および利用できる値を保存する方法を説明します。
+#### パイプラインのライブラリ ページで変数グループを定義する方法
+[この記事](https://docs.microsoft.com/ja-jp/azure/devops/pipelines/library/variable-groups?view=azure-devops&tabs=yaml)は、変数グループを使用して複数のパイプラインで制御および利用できる値を保存する方法を説明します。
 
 <img class="responsive-img" style="-webkit-box-shadow: 8px 9px 9px 5px #ccc; -moz-box-shadow: 8px 9px 9px 5px #ccc; box-shadow: 8px 9px 9px 5px #ccc; min-width: calc(100% - 350px)" 
   src="../../images/general/azure-ci-variable-groups.jpg"
@@ -192,7 +200,7 @@ npm を既に使用していて、Ignite UI for Angular ライセンスがある
 
  #### パイプラインの設定 UI で変数を定義し、YAML ファイルで参照する方法
 
-最も一般的なケースでは、[変数を設定して YAML ファイル内で使用します](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/variables?view=azure-devops&tabs=yaml%2Cbatch#set-variables-in-pipeline)。
+最も一般的なケースでは、[変数を設定して YAML ファイル内で使用します](https://docs.microsoft.com/ja-jp/azure/devops/pipelines/process/variables?view=azure-devops&tabs=yaml%2Cbatch#set-variables-in-pipeline)。
 
 <img class="responsive-img" style="-webkit-box-shadow: 8px 9px 9px 5px #ccc; -moz-box-shadow: 8px 9px 9px 5px #ccc; box-shadow: 8px 9px 9px 5px #ccc; min-width: calc(100% - 650px)" 
   src="../../images/general/azure-ci-new-variable-2.jpg"
@@ -213,7 +221,6 @@ npm を既に使用していて、Ignite UI for Angular ライセンスがある
 before_install:
 - echo "@infragistics:registry=https://packages.infragistics.com/npm/js-licensed/" >> ~/.npmrc
 - echo "//packages.infragistics.com/npm/js-licensed/:_auth=$TOKEN" >> ~/.npmrc
-- echo "//packages.infragistics.com/npm/js-licensed/:always-auth=true" >> ~/.npmrc
 ```
 
 環境変数を定義する最良の方法は、含まれる情報のタイプによって異なるため、[2 つのオプションがあります](https://docs.travis-ci.com/user/environment-variables/)。
@@ -228,7 +235,6 @@ before_install:
 ```cmd
 - run: echo "@infragistics:registry=https://packages.infragistics.com/npm/js-licensed/" >> ~/.npmrc
 - run: echo "//packages.infragistics.com/npm/js-licensed/:_auth=${{ secrets.NPM_TOKEN }}" >> ~/.npmrc
-- run: echo "//packages.infragistics.com/npm/js-licensed/:always-auth=true" >> ~/.npmrc
 ```
 
 [*シークレット* (暗号化された環境変数)](https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets) を定義してアクセス トークンなどの機密情報に対して GitHub Actions ワークフローでそれらを使用します。
