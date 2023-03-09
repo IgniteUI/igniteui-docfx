@@ -300,7 +300,7 @@ Here's an example of the chip area using IgxAvatar as prefix and custom icons fo
         class="chip-avatar-resized"
         igxPrefix
         [src]="chip.photo"
-        shape="rounded"
+        shape="circle"
         ></igx-avatar>
         {{chip.name}}
     </igx-chip>

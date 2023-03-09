@@ -71,7 +71,7 @@ The avatar will be our target and all we have to do is set the [`igxTooltipTarge
 <!--simpleTooltip.component.html-->
 
 <igx-avatar class="avatar" #target="tooltipTarget" igxTooltipTarget
-            src="assets/images/avatar/10.jpg" size="medium" shape="rounded">
+            src="assets/images/avatar/10.jpg" size="medium" shape="circle">
 </igx-avatar>
 ```
 
@@ -96,7 +96,7 @@ Now that we have both our target and tooltip defined, all that's left for us to 
 <!--simpleTooltip.component.html-->
 
 <igx-avatar class="avatar" #target="tooltipTarget" [igxTooltipTarget]="tooltipRef"
-            src="assets/images/avatar/10.jpg" size="medium" shape="rounded">
+            src="assets/images/avatar/10.jpg" size="medium" shape="circle">
 </igx-avatar>
 
 <div #tooltipRef="tooltip" igxTooltip>

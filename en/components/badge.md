@@ -56,7 +56,7 @@ Next, we will add those components to our template:
 
 ```html
 <div class="wrapper">
-    <igx-avatar icon="person" size="small"></igx-avatar>
+    <igx-avatar icon="person" shape="circle" size="small"></igx-avatar>
     <igx-badge icon="check" type="success"></igx-badge>
 </div>
 ```
@@ -127,7 +127,7 @@ Next, we're adding the contacts in our template:
   <igx-list-item *ngFor="let member of members">
     <div class="wrapper">
       <div>
-        <igx-avatar icon="person" shape="rounded" size="small"></igx-avatar>
+        <igx-avatar icon="person" shape="circle" size="small"></igx-avatar>
         <igx-badge [icon]="member.icon" [type]="member.type" class="badge-style"></igx-badge>
       </div>
       <div class="contact-container">
