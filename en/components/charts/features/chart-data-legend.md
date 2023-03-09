@@ -16,7 +16,7 @@ The rows of the [`IgxDataLegendComponent`]({environment:dvApiBaseUrl}/products/i
 
 <code-view style="height: 450px" alt="Angular Category Chart Data Legend Example"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-data-legend"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/data-legend"
                                         github-src="charts/category-chart/data-legend">
 </code-view>
 
@@ -39,7 +39,7 @@ The columns of the [`IgxDataLegendComponent`]({environment:dvApiBaseUrl}/product
 
 <code-view style="height: 450px" alt="Angular Financial Chart Data Legend Example"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-data-legend"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart/data-legend"
                                         github-src="charts/financial-chart/data-legend">
 </code-view>
 
@@ -94,7 +94,7 @@ The [`IgxDataLegendComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-ang
 
 <code-view style="height: 450px" alt="Angular Data Legend Styling Example"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-data-legend-styling-props"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart/data-legend-styling-props"
                                         github-src="charts/financial-chart/data-legend-styling-props">
 </code-view>
 
@@ -106,7 +106,7 @@ The following example demonstrates how to use those properties:
 
 <code-view style="height: 450px" alt="Angular Data Legend Formatting Decimals Example"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-data-legend-formatting-decimals"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/data-legend-formatting-decimals"
                                         github-src="charts/category-chart/data-legend-formatting-decimals">
 </code-view>
 
@@ -117,7 +117,7 @@ You have the ability to change the default decimal display of values within the 
 
 <code-view style="height: 450px" alt="Angular Formatting Currency Example"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-data-legend-formatting-currency"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart/data-legend-formatting-currency"
                                         github-src="charts/financial-chart/data-legend-formatting-currency">
 </code-view>
 

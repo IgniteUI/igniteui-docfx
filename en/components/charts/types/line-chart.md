@@ -16,7 +16,7 @@ You can create the Angular Line Chart in the [`IgxCategoryChartComponent`]({envi
 
 <code-view style="height: 600px" alt="Angular Line Chart Multiple Sources"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-line-chart-multiple-sources"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/line-chart-multiple-sources"
                                         github-src="charts/category-chart/line-chart-multiple-sources">
 </code-view>
 
@@ -76,7 +76,7 @@ You can create this type of chart in the [`IgxCategoryChartComponent`]({environm
 
 <code-view style="height: 600px" alt="Angular Line Chart with Single Source"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-line-chart-single-source"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/line-chart-single-source"
                                         github-src="charts/category-chart/line-chart-single-source">
 </code-view>
 
@@ -91,7 +91,7 @@ You can create this type of chart in the [`IgxCategoryChartComponent`]({environm
 
 <code-view style="height: 600px" alt="Angular Line Chart with Multiple Sources"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-line-chart-multiple-sources"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/line-chart-multiple-sources"
                                         github-src="charts/category-chart/line-chart-multiple-sources">
 </code-view>
 
@@ -108,7 +108,7 @@ You can create this type of chart in the [`IgxCategoryChartComponent`]({environm
 
 <code-view style="height: 600px" alt="Angular Line Chart Live Data Example"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-high-frequency"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/high-frequency"
                                         github-src="charts/category-chart/high-frequency">
 </code-view>
 
@@ -123,7 +123,7 @@ You can create this type of chart in the [`IgxCategoryChartComponent`]({environm
 
 <code-view style="height: 600px" alt="Angular Line Chart Styling"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-line-chart-styling"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/line-chart-styling"
                                         github-src="charts/category-chart/line-chart-styling">
 </code-view>
 
@@ -140,7 +140,7 @@ The Stacked Line Chart is often used to show the change of value over time such 
 
 <code-view style="height: 600px" alt="Angular Stacked Line Chart"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-stacked-line-chart"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/stacked-line-chart"
                                         github-src="charts/data-chart/stacked-line-chart">
 </code-view>
 
@@ -155,7 +155,7 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
 
 <code-view style="height: 600px" alt="Angular Stacked 100 Line Chart"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-stacked-100-line-chart"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/stacked-100-line-chart"
                                         github-src="charts/data-chart/stacked-100-line-chart">
 </code-view>
 
@@ -170,7 +170,7 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
 
 <code-view style="height: 600px" alt="Angular Radial Line Chart"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-radial-line-chart"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/radial-line-chart"
                                         github-src="charts/data-chart/radial-line-chart">
 </code-view>
 
@@ -185,7 +185,7 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
 
 <code-view style="height: 600px" alt="Angular Polar Line Chart"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-polar-line-chart"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/polar-line-chart"
                                         github-src="charts/data-chart/polar-line-chart">
 </code-view>
 

@@ -16,7 +16,7 @@ The following sample demonstrates how setting multiple properties on the same [`
 
 <code-view style="height: 375px" alt="Angular Radial Gauge Example"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge-animation"
+           iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge/animation"
                                         github-src="gauges/radial-gauge/animation">
 </code-view>
 
@@ -110,7 +110,7 @@ The backing can be circular or fitted. A circular shape creates a 360 degree cir
 
 <code-view style="height: 320px" alt="Angular radial gauge backing"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge-backing"
+           iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge/backing"
                                         github-src="gauges/radial-gauge/backing">
 </code-view>
 
@@ -137,7 +137,7 @@ The scale is visual element that highlights full range of values in the gauge wh
 
 <code-view style="height: 320px" alt="Angular radial gauge scale"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge-scale"
+           iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge/scale"
                                         github-src="gauges/radial-gauge/scale">
 </code-view>
 
@@ -160,7 +160,7 @@ The radial gauge labels are visual elements displaying numeric values at a speci
 
 <code-view style="height: 320px" alt="Angular radial gauge labels"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge-labels"
+           iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge/labels"
                                         github-src="gauges/radial-gauge/labels">
 </code-view>
 
@@ -188,7 +188,7 @@ Tick marks are thin lines radiating from the center of the radial gauge. There a
 
 <code-view style="height: 320px" alt="Angular radial gauge tickmarks"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge-tickmarks"
+           iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge/tickmarks"
                                         github-src="gauges/radial-gauge/tickmarks">
 </code-view>
 
@@ -218,7 +218,7 @@ A range highlights a set of continuous values bound by a specified [`minimumValu
 
 <code-view style="height: 320px" alt="Angular radial gauge ranges"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge-ranges"
+           iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge/ranges"
                                         github-src="gauges/radial-gauge/ranges">
 </code-view>
 
@@ -254,7 +254,7 @@ You can enable an interactive mode of the gauge (using [`isNeedleDraggingEnabled
 
 <code-view style="height: 320px" alt="Angular radial gauge needle"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge-needle"
+           iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge/needle"
                                         github-src="gauges/radial-gauge/needle">
 </code-view>
 

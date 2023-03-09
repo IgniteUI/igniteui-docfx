@@ -18,7 +18,7 @@ The colors of the markers are also managed by setting the [`markerBrushes`]({env
 
 <code-view style="height: 500px" alt="Angular Configuration Options Example"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-marker-options"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/marker-options"
                                         github-src="charts/category-chart/marker-options">
 </code-view>
 
@@ -31,7 +31,7 @@ In addition to marker properties, you can implement your own marker by setting a
 
 <code-view style="height: 600px" alt="Angular Chart Marker Templates"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-marker-templates"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/marker-templates"
                                         github-src="charts/category-chart/marker-templates">
 </code-view>
 

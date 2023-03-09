@@ -16,7 +16,7 @@ Angular Scatter Marker Chart renders as a collection of markers, each having a p
 
 <code-view style="height: 600px" alt="Angular Scatter Marker Chart"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-scatter-point-chart"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/scatter-point-chart"
                                         github-src="charts/data-chart/scatter-point-chart">
 </code-view>
 
@@ -29,7 +29,7 @@ Angular Scatter Line Chart renders as a collection of markers connected by a str
 
 <code-view style="height: 600px" alt="Angular Scatter Line Chart"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-scatter-line-chart"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/scatter-line-chart"
                                         github-src="charts/data-chart/scatter-line-chart">
 </code-view>
 
@@ -42,7 +42,7 @@ Angular Scatter Spline Chart renders as a collection of markers connected by a c
 
 <code-view style="height: 600px" alt="Angular Scatter Spline Chart"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-scatter-spline-chart"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/scatter-spline-chart"
                                         github-src="charts/data-chart/scatter-spline-chart">
 </code-view>
 
@@ -55,7 +55,7 @@ Use the Angular Scatter High Density (HD) Chart to bind and show scatter data ra
 
 <code-view style="height: 600px" alt="Angular Scatter HD Chart"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-scatter-hd-series"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/type-scatter-hd-series"
                                         github-src="charts/data-chart/type-scatter-hd-series">
 </code-view>
 
@@ -68,7 +68,7 @@ Angular Scatter Area Chart draws a colored surface based on a triangulation of X
 
 <code-view style="height: 600px" alt="Angular Scatter Area Chart"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-scatter-area-series"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/type-scatter-area-series"
                                         github-src="charts/data-chart/type-scatter-area-series">
 </code-view>
 
@@ -81,7 +81,7 @@ Angular Scatter Contour Chart draws colored contour lines based on a triangulati
 
 <code-view style="height: 600px" alt="Angular Scatter Contour Chart"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-scatter-contour-series"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/type-scatter-contour-series"
                                         github-src="charts/data-chart/type-scatter-contour-series">
 </code-view>
 

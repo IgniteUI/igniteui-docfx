@@ -23,7 +23,7 @@ This example shows how configure the axis gridline to display major and minor gr
 
 <code-view style="height: 450px" alt="Angular Axis Gridlines Example"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-axis-gridlines"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/axis-gridlines"
                                         github-src="charts/category-chart/axis-gridlines">
 </code-view>
 
@@ -61,7 +61,7 @@ The following example demonstrates how to customize the gridlines by setting the
 
 <code-view style="height: 450px" alt="Angular Axis Gridlines Example"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-axis-gridlines"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/axis-gridlines"
                                         github-src="charts/category-chart/axis-gridlines">
 </code-view>
 
@@ -78,7 +78,7 @@ The following example demonstrates how to customize the tickmarks by setting the
 
 <code-view style="height: 450px" alt="Angular Axis Tickmarks Example"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-axis-tickmarks"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/axis-tickmarks"
                                         github-src="charts/category-chart/axis-tickmarks">
 </code-view>
 

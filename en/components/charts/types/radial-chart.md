@@ -16,7 +16,7 @@ The Angular Radial Area Chart has a shape of a filled polygon that is bound by a
 
 <code-view style="height: 600px" alt="Angular Radial Area Chart"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-radial-area-chart"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/radial-area-chart"
                                         github-src="charts/data-chart/radial-area-chart">
 </code-view>
 
@@ -29,7 +29,7 @@ The Radial Column Chart is visualized by using a collection of rectangles that e
 
 <code-view style="height: 600px" alt="Angular Radial Column Chart"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-radial-column-chart"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/radial-column-chart"
                                         github-src="charts/data-chart/radial-column-chart">
 </code-view>
 
@@ -42,7 +42,7 @@ The Angular Radial Line Chart has renders as a collection of straight lines conn
 
 <code-view style="height: 600px" alt="Angular Radial Line Chart"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-radial-line-chart"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/radial-line-chart"
                                         github-src="charts/data-chart/radial-line-chart">
 </code-view>
 
@@ -55,7 +55,7 @@ The Radial Pie Chart uses pie slices that extend from the center of chart toward
 
 <code-view style="height: 600px" alt="Angular Radial Pie Chart"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-radial-pie-chart"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/radial-pie-chart"
                                         github-src="charts/data-chart/radial-pie-chart">
 </code-view>
 
@@ -68,7 +68,7 @@ Once our radial chart is created, we may want to make some further styling custo
 
 <code-view style="height: 600px" alt="Angular Radial Area Chart Styling"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-radial-area-chart-styling"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/radial-area-chart-styling"
                                         github-src="charts/data-chart/radial-area-chart-styling">
 </code-view>
 

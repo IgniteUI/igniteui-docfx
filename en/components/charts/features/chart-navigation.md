@@ -16,7 +16,7 @@ The following example shows all of the available panning and zooming options tha
 
 <code-view style="height: 600px" alt="Angular Navigation Example"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-chart-navigation"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/chart-navigation"
                                         github-src="charts/data-chart/chart-navigation">
 </code-view>
 
@@ -66,7 +66,7 @@ The following example demonstrates enabling scrollbars.
 
 <code-view style="height: 600px" alt="Angular Navigation Example"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-scrollbars"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart/scrollbars"
                                         github-src="charts/financial-chart/scrollbars">
 </code-view>
 

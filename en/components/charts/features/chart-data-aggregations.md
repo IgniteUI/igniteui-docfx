@@ -16,7 +16,7 @@ The following example depicts a [Column Chart](../types/column-chart.md) that gr
 
 <code-view style="height: 500px" alt="Angular Data Aggregations Example"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-data-aggregations"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/data-aggregations"
                                         github-src="charts/category-chart/data-aggregations">
 </code-view>
 

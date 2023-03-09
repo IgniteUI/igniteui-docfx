@@ -13,7 +13,7 @@ The Infragistics Angular Excel Library allows you to work with spreadsheet data 
 
 <code-view style="height: 100px" alt="Angular Excel Library Example"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/excel/excel-library-overview"
+           iframe-src="{environment:dvDemosBaseUrl}/excel/excel-library/overview"
                                         github-src="excel/excel-library/overview">
 </code-view>
 

@@ -16,7 +16,7 @@ The axis titles feature of the Angular charts, allows you to add contextual info
 
 <code-view style="height: 450px" alt="Angular Axis Titles Example"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-axis-titles"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/axis-titles"
                                         github-src="charts/category-chart/axis-titles">
 </code-view>
 
@@ -29,7 +29,7 @@ The Angular Charts allows you full control over configuring, formatting, and sty
 
 <code-view style="height: 450px" alt="Angular Axis Labels Example"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-axis-labels"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/axis-labels"
                                         github-src="charts/category-chart/axis-labels">
 </code-view>
 
@@ -54,7 +54,7 @@ By default, charts will calculate the minimum and maximum values for the numeric
 
 <code-view style="height: 450px" alt="Angular Axis Range Example"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-axis-range"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/axis-range"
                                         github-src="charts/category-chart/axis-range">
 </code-view>
 
@@ -71,7 +71,7 @@ In addition to [`yAxisMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angul
 
 <code-view style="height: 450px" alt="Angular Axis Range Example"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-axis-types"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart/axis-types"
                                         github-src="charts/financial-chart/axis-types">
 </code-view>
 
@@ -90,7 +90,7 @@ The following example shows the average maximum temperature in Celsius in New Yo
 
 <code-view style="height: 450px" alt="Angular Axis Gap Example"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-axis-gap"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/axis-gap"
                                         github-src="charts/category-chart/axis-gap">
 </code-view>
 
@@ -105,7 +105,7 @@ The following example shows a comparison of the highest grossing worldwide film 
 
 <code-view style="height: 450px" alt="Angular Axis Overlap Example"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-axis-overlap"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/axis-overlap"
                                         github-src="charts/category-chart/axis-overlap">
 </code-view>
 

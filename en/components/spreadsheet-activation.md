@@ -14,7 +14,7 @@ The Angular Spreadsheet component exposes properties that allow you to determine
 
 <code-view style="height: 500px" alt="Angular Spreadsheet Activation Example"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/excel/spreadsheet-activation"
+           iframe-src="{environment:dvDemosBaseUrl}/excel/spreadsheet/activation"
                                         github-src="excel/spreadsheet/activation">
 </code-view>
 

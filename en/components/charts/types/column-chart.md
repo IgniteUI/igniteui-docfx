@@ -16,7 +16,7 @@ You can create Angular Column Chart in the [`IgxCategoryChartComponent`]({enviro
 
 <code-view style="height: 600px" alt="Angular Column Chart Multiple Sources"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-column-chart-multiple-sources"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/column-chart-multiple-sources"
                                         github-src="charts/category-chart/column-chart-multiple-sources">
 </code-view>
 
@@ -57,7 +57,7 @@ You can create this type of chart in the [`IgxCategoryChartComponent`]({environm
 
 <code-view style="height: 600px" alt="Angular Column Chart with Single Source"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-column-chart-single-source"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/column-chart-single-source"
                                         github-src="charts/category-chart/column-chart-single-source">
 </code-view>
 
@@ -70,7 +70,7 @@ The Column Chart is able to render multiple columns per category for comparison 
 
 <code-view style="height: 600px" alt="Angular Column Chart with Multiple Sources"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-column-chart-multiple-sources"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/column-chart-multiple-sources"
                                         github-src="charts/category-chart/column-chart-multiple-sources">
 </code-view>
 
@@ -85,7 +85,7 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
 
 <code-view style="height: 600px" alt="Angular Column Chart Styling"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-column-chart-styling"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/column-chart-styling"
                                         github-src="charts/category-chart/column-chart-styling">
 </code-view>
 
@@ -104,7 +104,7 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
 
 <code-view style="height: 600px" alt="Angular Waterfall Chart"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-waterfall-chart"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/waterfall-chart"
                                         github-src="charts/data-chart/waterfall-chart">
 </code-view>
 
@@ -119,7 +119,7 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
 
 <code-view style="height: 600px" alt="Angular Stacked Column Chart"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-stacked-column-chart"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/stacked-column-chart"
                                         github-src="charts/data-chart/stacked-column-chart">
 </code-view>
 
@@ -134,7 +134,7 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
 
 <code-view style="height: 600px" alt="Angular Stacked 100 Column Chart"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-stacked-100-column-chart"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/stacked-100-column-chart"
                                         github-src="charts/data-chart/stacked-100-column-chart">
 </code-view>
 
@@ -151,7 +151,7 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
 
 <code-view style="height: 600px" alt="Angular Range Column Chart"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-range-column-chart"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/range-column-chart"
                                         github-src="charts/data-chart/range-column-chart">
 </code-view>
 
@@ -166,7 +166,7 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
 
 <code-view style="height: 600px" alt="Angular Radial Column Chart"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-radial-column-chart"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/radial-column-chart"
                                         github-src="charts/data-chart/radial-column-chart">
 </code-view>
 

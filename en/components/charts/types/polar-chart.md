@@ -16,7 +16,7 @@ The Polar Area Chart renders using a collection of polygons connecting data poin
 
 <code-view style="height: 600px" alt="Angular Polar Area Chart"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-polar-area-chart"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/polar-area-chart"
                                         github-src="charts/data-chart/polar-area-chart">
 </code-view>
 
@@ -29,7 +29,7 @@ The Polar Spline Area Chart renders also as a collection of polygons but they ha
 
 <code-view style="height: 600px" alt="Angular Polar Area Chart"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-polar-spline-area-chart"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/polar-spline-area-chart"
                                         github-src="charts/data-chart/polar-spline-area-chart">
 </code-view>
 
@@ -42,7 +42,7 @@ The Polar Marker Chart renders using a collection of markers representing data p
 
 <code-view style="height: 600px" alt="Angular Polar Marker Chart"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-polar-scatter-chart"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/polar-scatter-chart"
                                         github-src="charts/data-chart/polar-scatter-chart">
 </code-view>
 
@@ -55,7 +55,7 @@ The Polar Line Chart renders using a collection of straight lines connecting dat
 
 <code-view style="height: 600px" alt="Angular Polar Line Chart"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-polar-line-chart"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/polar-line-chart"
                                         github-src="charts/data-chart/polar-line-chart">
 </code-view>
 
@@ -68,7 +68,7 @@ The Polar Spline Chart renders using a collection of curved splines connecting d
 
 <code-view style="height: 600px" alt="Angular Polar Spline Chart"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-polar-spline-chart"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/polar-spline-chart"
                                         github-src="charts/data-chart/polar-spline-chart">
 </code-view>
 
@@ -81,7 +81,7 @@ Once our polar chart is created, we may want to make some further styling custom
 
 <code-view style="height: 600px" alt="Angular Polar Area Chart Styling"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-polar-area-chart-styling"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/polar-area-chart-styling"
                                         github-src="charts/data-chart/polar-area-chart-styling">
 </code-view>
 

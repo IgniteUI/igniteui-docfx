@@ -16,7 +16,7 @@ Angular Chart provide three types of tooltips that you can with tooltips enabled
 
 <code-view style="height: 500px" alt="Angular Tooltip Types Example"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-column-chart-with-tooltips"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/column-chart-with-tooltips"
                                         github-src="charts/category-chart/column-chart-with-tooltips">
 </code-view>
 
@@ -44,7 +44,7 @@ This example shows how to create custom tooltips for all series in Angular [`Igx
 
 <code-view style="height: 500px" alt="Angular Tooltip Template"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-tooltip-template"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/tooltip-template"
                                         github-src="charts/category-chart/tooltip-template">
 </code-view>
 
@@ -57,7 +57,7 @@ This example shows how to create custom tooltips for each series in Angular Data
 
 <code-view style="height: 500px" alt="Angular Tooltip Template"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-tooltip-template"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/tooltip-template"
                                         github-src="charts/data-chart/tooltip-template">
 </code-view>
 

@@ -15,7 +15,7 @@ It is highly recommended that you review the [Binding Shape Files with Geo-Spati
 
 <code-view style="height: 500px" alt="Angular Displaying Heat Imagery Example"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-display-heat-imagery"
+           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map/display-heat-imagery"
                                         github-src="maps/geo-map/display-heat-imagery">
 </code-view>
 

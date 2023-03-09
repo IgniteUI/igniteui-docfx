@@ -16,7 +16,7 @@ The following example demonstrates the annotation layers that are available on t
 
 <code-view style="height: 600px" alt="Angular Annotations Example"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-line-chart-with-annotations"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/line-chart-with-annotations"
                                         github-src="charts/category-chart/line-chart-with-annotations">
 </code-view>
 
@@ -45,7 +45,7 @@ The following example shows how to configure the crosshair layer but targeting a
 
 <code-view style="height: 500px" alt="Angular Crosshair Layer Styling"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-crosshair-layer-styling"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/crosshair-layer-styling"
                                         github-src="charts/data-chart/crosshair-layer-styling">
 </code-view>
 
@@ -68,7 +68,7 @@ The following example demonstrates how to style the final value layer annotation
 
 <code-view style="height: 500px" alt="Angular Final Value Layer Styling"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-final-value-layer-styling"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/final-value-layer-styling"
                                         github-src="charts/data-chart/final-value-layer-styling">
 </code-view>
 
@@ -104,7 +104,7 @@ The following example demonstrates how to style the callout layer annotations by
 
 <code-view style="height: 500px" alt="Angular Callout Layer Styling"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-callout-layer-styling"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/callout-layer-styling"
                                         github-src="charts/data-chart/callout-layer-styling">
 </code-view>
 

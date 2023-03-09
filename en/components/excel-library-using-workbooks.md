@@ -13,7 +13,7 @@ The Infragistics Angular Excel Engine enables you to save data to and load data 
 
 <code-view style="height: 500px" alt="Angular Using Workbooks Example"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/excel/excel-library-operations-on-workbooks"
+           iframe-src="{environment:dvDemosBaseUrl}/excel/excel-library/operations-on-workbooks"
                                         github-src="excel/excel-library/operations-on-workbooks">
 </code-view>
 

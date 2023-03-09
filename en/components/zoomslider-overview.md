@@ -15,7 +15,7 @@ The following sample demonstrates how to use [`IgxZoomSliderComponent`]({environ
 
 <code-view style="height: 600px" alt="Angular Zoom Slider Example"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/zoomslider-overview"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/zoomslider/overview"
                                         github-src="charts/zoomslider/overview">
 </code-view>
 

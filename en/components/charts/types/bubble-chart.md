@@ -16,7 +16,7 @@ You can create Ignite UI for Angular Bubble Chart in [`IgxDataChartComponent`]({
 
 <code-view style="height: 600px" alt="Angular Bubble Chart Example"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-scatter-bubble-chart-multiple-sources"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/scatter-bubble-chart-multiple-sources"
                                         github-src="charts/data-chart/scatter-bubble-chart-multiple-sources">
 </code-view>
 
@@ -29,7 +29,7 @@ You can bind your data to `ItemsSource` property of [`IgxBubbleSeriesComponent`]
 
 <code-view style="height: 600px" alt="Angular Bubble Chart with Single Series"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-scatter-bubble-chart-single-source"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/scatter-bubble-chart-single-source"
                                         github-src="charts/data-chart/scatter-bubble-chart-single-source">
 </code-view>
 
@@ -42,7 +42,7 @@ In Angular Bubble Chart, binding multiple data sources works by setting each new
 
 <code-view style="height: 600px" alt="Angular Bubble Chart with Multiple Series"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-scatter-bubble-chart-multiple-sources"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/scatter-bubble-chart-multiple-sources"
                                         github-src="charts/data-chart/scatter-bubble-chart-multiple-sources">
 </code-view>
 
@@ -55,7 +55,7 @@ In Angular Bubble Chart, you can customize shape of bubble markers using [`marke
 
 <code-view style="height: 600px" alt="Angular Bubble Chart Styling"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-scatter-bubble-chart-styling"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/scatter-bubble-chart-styling"
                                         github-src="charts/data-chart/scatter-bubble-chart-styling">
 </code-view>
 

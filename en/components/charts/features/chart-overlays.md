@@ -16,7 +16,7 @@ The following example depicts a [Column Chart](../types/column-chart.md) with a 
 
 <code-view style="height: 600px" alt="Angular Value Overlay Example"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-series-value-overlay"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/series-value-overlay"
                                         github-src="charts/data-chart/series-value-overlay">
 </code-view>
 

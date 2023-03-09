@@ -16,7 +16,7 @@ In the following example, the [`IgxTreemapComponent`]({environment:dvApiBaseUrl}
 
 <code-view style="height: 600px" alt="Angular Treemap Example"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/tree-map-overview"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/tree-map/overview"
                                         github-src="charts/tree-map/overview">
 </code-view>
 
@@ -66,7 +66,7 @@ In the following example, the treemap demonstrates the ability of changing it's 
 
 <code-view style="height: 600px" alt="Angular Treemap Layout Configuration"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/tree-map-layout"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/tree-map/layout"
                                         github-src="charts/tree-map/layout">
 </code-view>
 
@@ -101,7 +101,7 @@ In the following example, the treemap demonstrates the ability of changing the l
 
 <code-view style="height: 600px" alt="Angular Treemap Styling"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/tree-map-styling"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/tree-map/styling"
                                         github-src="charts/tree-map/styling">
 </code-view>
 

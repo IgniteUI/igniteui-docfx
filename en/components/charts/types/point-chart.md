@@ -16,7 +16,7 @@ You can create the Angular Point Chart in the [`IgxCategoryChartComponent`]({env
 
 <code-view style="height: 600px" alt="Angular Point Chart Example"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-point-chart-multiple-sources"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/point-chart-multiple-sources"
                                         github-src="charts/category-chart/point-chart-multiple-sources">
 </code-view>
 
@@ -29,7 +29,7 @@ In the following example, the Angular Point Chart plots a single data source by 
 
 <code-view style="height: 600px" alt="Angular Point Chart with Single Series"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-point-chart-single-source"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/point-chart-single-source"
                                         github-src="charts/category-chart/point-chart-single-source">
 </code-view>
 
@@ -42,7 +42,7 @@ Since the Angular Point Chart allows you to combine multiple series and compare 
 
 <code-view style="height: 600px" alt="Angular Point Chart with Multiple Series"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-point-chart-multiple-sources"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/point-chart-multiple-sources"
                                         github-src="charts/category-chart/point-chart-multiple-sources">
 </code-view>
 
@@ -55,7 +55,7 @@ Once the Angular Point Chart is set up, we may want to make some further styling
 
 <code-view style="height: 600px" alt="Angular Point Chart Styling"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-point-chart-styling"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/point-chart-styling"
                                         github-src="charts/category-chart/point-chart-styling">
 </code-view>
 

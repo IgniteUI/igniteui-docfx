@@ -20,7 +20,7 @@ The following example depicts the amount of renewable electricity produced since
 
 <code-view style="height: 450px" alt="Angular Axis Locations Example"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-axis-locations"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/axis-locations"
                                         github-src="charts/category-chart/axis-locations">
 </code-view>
 
@@ -43,7 +43,7 @@ The following example depicts a stock price and trade volume chart with a [Stock
 
 <code-view style="height: 450px" alt="Angular Axis Sharing Example"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-axis-sharing"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/axis-sharing"
                                         github-src="charts/data-chart/axis-sharing">
 </code-view>
 
@@ -58,7 +58,7 @@ The following example shows a Sin and Cos wave represented by a [Scatter Spline 
 
 <code-view style="height: 450px" alt="Angular Axis Crossing Axes Example"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-axis-crossing"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/axis-crossing"
                                         github-src="charts/data-chart/axis-crossing">
 </code-view>
 
