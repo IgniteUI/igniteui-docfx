@@ -61,7 +61,7 @@ To get a simple avatar with [`initials`]({environment:angularApiUrl}/classes/igx
 ```html
 <igx-avatar initials="JS" shape="circle"></igx-avatar>
 ```
-Let's enhance our avatar by making it rounded and bigger in size. 
+Let's enhance our avatar by making it circular and bigger in size. 
 
 ```html
 <igx-avatar size="medium" initials="JS" shape="circle"></igx-avatar>
