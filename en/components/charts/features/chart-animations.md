@@ -18,7 +18,7 @@ The following example depicts a [Line Chart](../types/line-chart.md) with an ani
 
 <code-view style="height: 500px" alt="Angular Configuration Options Example"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-line-chart-with-animations"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/line-chart-with-animations"
                                         github-src="charts/category-chart/line-chart-with-animations">
 </code-view>
 

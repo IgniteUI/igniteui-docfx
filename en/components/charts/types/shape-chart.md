@@ -18,7 +18,7 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
 
 <code-view style="height: 600px" alt="Angular Scatter Polygon Chart"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-scatter-polygon-series"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/type-scatter-polygon-series"
                                         github-src="charts/data-chart/type-scatter-polygon-series">
 </code-view>
 
@@ -33,7 +33,7 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
 
 <code-view style="height: 600px" alt="Angular Scatter Polyline Chart"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-scatter-polyline-series"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/type-scatter-polyline-series"
                                         github-src="charts/data-chart/type-scatter-polyline-series">
 </code-view>
 

@@ -13,7 +13,7 @@ This topic explains how to apply custom styling to the [`IgxGeographicShapeSerie
 
 <code-view style="height: 500px" alt="Angular Shape Styling on Geographic Shape Series Example"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-shape-styling"
+           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map/shape-styling"
                                         github-src="maps/geo-map/shape-styling">
 </code-view>
 

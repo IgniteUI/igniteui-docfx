@@ -16,7 +16,7 @@ The following example demonstrates how to create Composite Chart using [`IgxColu
 
 <code-view style="height: 600px" alt="Angular Composite Chart Example"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-composite-chart"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/composite-chart"
                                         github-src="charts/data-chart/composite-chart">
 </code-view>
 

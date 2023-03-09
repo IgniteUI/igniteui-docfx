@@ -16,7 +16,7 @@ You can create Donut Chart using the [`IgxDoughnutChartComponent`]({environment:
 
 <code-view style="height: 600px" alt="Angular Doughnut Legend"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/doughnut-chart-legend"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/doughnut-chart/legend"
                                         github-src="charts/doughnut-chart/legend">
 </code-view>
 
@@ -70,7 +70,7 @@ The Angular Donut Chart has the ability to select slices on click. Optionally, y
 
 <code-view style="height: 600px" alt="Angular Donut Slice Selection"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/doughnut-chart-selection"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/doughnut-chart/selection"
                                         github-src="charts/doughnut-chart/selection">
 </code-view>
 
@@ -83,7 +83,7 @@ It is possible to have a multiple ring display in the Angular Donut Chart, with 
 
 <code-view style="height: 600px" alt="Angular Doughnut Multiple Rings"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/doughnut-chart-rings"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/doughnut-chart/rings"
                                         github-src="charts/doughnut-chart/rings">
 </code-view>
 

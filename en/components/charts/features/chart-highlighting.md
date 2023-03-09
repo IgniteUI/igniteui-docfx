@@ -16,7 +16,7 @@ The following example demonstrates the different highlighting options that are a
 
 <code-view style="height: 500px" alt="Angular Highlighting Example"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-column-chart-with-highlighting"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/column-chart-with-highlighting"
                                         github-src="charts/category-chart/column-chart-with-highlighting">
 </code-view>
 

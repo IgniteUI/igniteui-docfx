@@ -13,7 +13,7 @@ In Angular map component, you can use the [`IgxGeographicProportionalSymbolSerie
 
 <code-view style="height: 500px" alt="Angular Using Scatter Proportional Series Example"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-type-scatter-bubble-series"
+           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map/type-scatter-bubble-series"
                                         github-src="maps/geo-map/type-scatter-bubble-series">
 </code-view>
 

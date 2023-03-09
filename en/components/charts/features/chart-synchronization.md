@@ -16,7 +16,7 @@ This sample shows synchronization of two Angular data charts:
 
 <code-view style="height: 600px" alt="Angular Chart Synchronization Example"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-chart-synchronization"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/chart-synchronization"
                                         github-src="charts/data-chart/chart-synchronization">
 </code-view>
 

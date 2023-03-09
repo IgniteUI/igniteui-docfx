@@ -16,7 +16,7 @@ The following example, you can use the drop-down to switch between all of the di
 
 <code-view style="height: 600px" alt="Angular Stacked Chart Types"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-stacked-chart-types"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/stacked-chart-types"
                                         github-src="charts/data-chart/stacked-chart-types">
 </code-view>
 
@@ -33,7 +33,7 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
 
 <code-view style="height: 600px" alt="Angular Stacked Area Chart"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-stacked-area-chart"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/stacked-area-chart"
                                         github-src="charts/data-chart/stacked-area-chart">
 </code-view>
 
@@ -48,7 +48,7 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
 
 <code-view style="height: 600px" alt="Angular Stacked 100 Area Chart"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-stacked-100-area-chart"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/stacked-100-area-chart"
                                         github-src="charts/data-chart/stacked-100-area-chart">
 </code-view>
 
@@ -65,7 +65,7 @@ In this example of an Stacked Bar Chart, we have a Numeric X Axis (bottom labels
 
 <code-view style="height: 600px" alt="Angular Stacked Bar Chart"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-stacked-bar-chart"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/stacked-bar-chart"
                                         github-src="charts/data-chart/stacked-bar-chart">
 </code-view>
 
@@ -80,7 +80,7 @@ In this example of a Stacked 100% Bar Chart, the Energy Product values are shown
 
 <code-view style="height: 600px" alt="Angular Stacked 100 Bar Chart"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-stacked-100-bar-chart"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/stacked-100-bar-chart"
                                         github-src="charts/data-chart/stacked-100-bar-chart">
 </code-view>
 
@@ -95,7 +95,7 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
 
 <code-view style="height: 600px" alt="Angular Stacked Column Chart"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-stacked-column-chart"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/stacked-column-chart"
                                         github-src="charts/data-chart/stacked-column-chart">
 </code-view>
 
@@ -110,7 +110,7 @@ The example below shows a study made for online shopping traffic by departments 
 
 <code-view style="height: 600px" alt="Angular Stacked 100 Column Chart"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-stacked-100-column-chart"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/stacked-100-column-chart"
                                         github-src="charts/data-chart/stacked-100-column-chart">
 </code-view>
 
@@ -123,7 +123,7 @@ The Stacked Line Chart is often used to show the change of value over time such 
 
 <code-view style="height: 600px" alt="Angular Stacked Line Chart"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-stacked-line-chart"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/stacked-line-chart"
                                         github-src="charts/data-chart/stacked-line-chart">
 </code-view>
 
@@ -138,7 +138,7 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
 
 <code-view style="height: 600px" alt="Angular Stacked 100 Line Chart"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-stacked-100-line-chart"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/stacked-100-line-chart"
                                         github-src="charts/data-chart/stacked-100-line-chart">
 </code-view>
 
@@ -153,7 +153,7 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
 
 <code-view style="height: 600px" alt="Angular Stacked Spline Area Chart"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-stacked-spline-area-chart"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/stacked-spline-area-chart"
                                         github-src="charts/data-chart/stacked-spline-area-chart">
 </code-view>
 
@@ -168,7 +168,7 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
 
 <code-view style="height: 600px" alt="Angular Stacked 100 Spline Area Chart"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-stacked-100-spline-area-chart"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/stacked-100-spline-area-chart"
                                         github-src="charts/data-chart/stacked-100-spline-area-chart">
 </code-view>
 
@@ -181,7 +181,7 @@ The Stacked Spline Chart is often used to show the change of value over time suc
 
 <code-view style="height: 600px" alt="Angular Stacked Spline Chart"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-stacked-spline-chart"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/stacked-spline-chart"
                                         github-src="charts/data-chart/stacked-spline-chart">
 </code-view>
 
@@ -196,7 +196,7 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
 
 <code-view style="height: 600px" alt="Angular Stacked 100 Spline Chart"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-stacked-100-spline-chart"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/stacked-100-spline-chart"
                                         github-src="charts/data-chart/stacked-100-spline-chart">
 </code-view>
 

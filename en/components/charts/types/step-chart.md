@@ -16,7 +16,7 @@ You can create Angular Step Area Chart in the [`IgxCategoryChartComponent`]({env
 
 <code-view style="height: 600px" alt="Angular Step Area Chart Multiple Sources"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-step-area-multiple-sources"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/step-area-multiple-sources"
                                         github-src="charts/category-chart/step-area-multiple-sources">
 </code-view>
 
@@ -31,7 +31,7 @@ You can create Step Line Chart in the [`IgxCategoryChartComponent`]({environment
 
 <code-view style="height: 600px" alt="Angular Step Line Chart Multiple Sources"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-step-line-multiple-sources"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/step-line-multiple-sources"
                                         github-src="charts/category-chart/step-line-multiple-sources">
 </code-view>
 
@@ -44,7 +44,7 @@ If you need Step Charts with more features such as composite other series, you c
 
 <code-view style="height: 600px" alt="Angular Styling Step Line Chart"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-step-line-styling"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/step-line-styling"
                                         github-src="charts/category-chart/step-line-styling">
 </code-view>
 

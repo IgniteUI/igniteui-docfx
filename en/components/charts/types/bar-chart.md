@@ -16,7 +16,7 @@ You can create Angular Bar Chart in the [`IgxDataChartComponent`]({environment:d
 
 <code-view style="height: 600px" alt="Angular Bar Chart Multiple Sources"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-bar-chart-multiple-sources"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/bar-chart-multiple-sources"
                                         github-src="charts/data-chart/bar-chart-multiple-sources">
 </code-view>
 
@@ -79,7 +79,7 @@ Bar Chart belongs to a group of Category Series and it is rendered using a colle
 
 <code-view style="height: 600px" alt="Angular Bar Chart with Single Source"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-bar-chart-single-source"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/bar-chart-single-source"
                                         github-src="charts/data-chart/bar-chart-single-source">
 </code-view>
 
@@ -92,7 +92,7 @@ The Bar Chart is able to render multiple bars per category for comparison purpos
 
 <code-view style="height: 600px" alt="Angular Bar Chart with Multiple Sources"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-bar-chart-multiple-sources"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/bar-chart-multiple-sources"
                                         github-src="charts/data-chart/bar-chart-multiple-sources">
 </code-view>
 
@@ -105,7 +105,7 @@ The Bar Chart can be styled, and allows for the ability to use [annotation value
 
 <code-view style="height: 600px" alt="Angular Bar Chart Styling"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-bar-chart-styling"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/bar-chart-styling"
                                         github-src="charts/data-chart/bar-chart-styling">
 </code-view>
 
@@ -122,7 +122,7 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
 
 <code-view style="height: 600px" alt="Angular Stacked Bar Chart"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-stacked-bar-chart"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/stacked-bar-chart"
                                         github-src="charts/data-chart/stacked-bar-chart">
 </code-view>
 
@@ -137,7 +137,7 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
 
 <code-view style="height: 600px" alt="Angular Stacked 100 Bar Chart"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-stacked-100-bar-chart"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/stacked-100-bar-chart"
                                         github-src="charts/data-chart/stacked-100-bar-chart">
 </code-view>
 

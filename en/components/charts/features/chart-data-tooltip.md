@@ -32,7 +32,7 @@ The following example demonstrates the data tooltip with a summary applied:
 
 <code-view style="height: 450px" alt="Angular Category Chart Data Tooltip Example"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-data-tooltip"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/data-tooltip"
                                         github-src="charts/category-chart/data-tooltip">
 </code-view>
 
@@ -73,7 +73,7 @@ The following example demonstrates a data tooltip with the added columns of Open
 
 <code-view style="height: 450px" alt="Angular Financial Chart Data Tooltip Example"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-data-tooltip"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart/data-tooltip"
                                         github-src="charts/financial-chart/data-tooltip">
 </code-view>
 
@@ -86,7 +86,7 @@ The following example demonstrates usage of the styling properties mentioned abo
 
 <code-view style="height: 450px" alt="Angular Financial Chart Data Tooltip Styling Example"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-data-tooltip-styling-props"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart/data-tooltip-styling-props"
                                         github-src="charts/financial-chart/data-tooltip-styling-props">
 </code-view>
 
@@ -99,7 +99,7 @@ The following example demonstrates a data tooltip positioned to the top-right of
 
 <code-view style="height: 450px" alt="Angular Category Chart Data Tooltip Positioning Example"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-data-tooltip-positioning"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/data-tooltip-positioning"
                                         github-src="charts/category-chart/data-tooltip-positioning">
 </code-view>
 
@@ -112,7 +112,7 @@ The following example demonstrates a **DataToolTip** with the minimum and maximu
 
 <code-view style="height: 450px" alt="Angular Category Chart Data Tooltip Formatting Decimals Example"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-data-tooltip-formatting-decimals"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/data-tooltip-formatting-decimals"
                                         github-src="charts/category-chart/data-tooltip-formatting-decimals">
 </code-view>
 
@@ -123,7 +123,7 @@ You can change the default decimal display of values within the **DataToolTip** 
 
 <code-view style="height: 450px" alt="Angular Financial Chart Data Tooltip Formatting Currency Example"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-data-tooltip-formatting-currency"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart/data-tooltip-formatting-currency"
                                         github-src="charts/financial-chart/data-tooltip-formatting-currency">
 </code-view>
 

@@ -13,7 +13,7 @@ The Angular Spreadsheet  (Excel viewer) component is lightweight, feature-rich a
 
 <code-view style="height: 500px" alt="Angular Spreadsheet Example"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/excel/spreadsheet-overview"
+           iframe-src="{environment:dvDemosBaseUrl}/excel/spreadsheet/overview"
                                         github-src="excel/spreadsheet/overview">
 </code-view>
 

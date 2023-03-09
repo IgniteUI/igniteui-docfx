@@ -16,7 +16,7 @@ You can create the Angular Pie Chart in the [`IgxPieChartComponent`]({environmen
 
 <code-view style="height: 600px" alt="Angular Pie Chart Overview"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart-overview"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart/overview"
                                         github-src="charts/pie-chart/overview">
 </code-view>
 
@@ -74,7 +74,7 @@ Additionally you can use the [`legendItemTemplate`]({environment:dvApiBaseUrl}/p
 
 <code-view style="height: 600px" alt="Angular Pie Chart Legend"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart-legend"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart/legend"
                                         github-src="charts/pie-chart/legend">
 </code-view>
 
@@ -91,7 +91,7 @@ If you set [`othersCategoryType`]({environment:dvApiBaseUrl}/products/ignite-ui-
 
 <code-view style="height: 600px" alt="Angular Pie Chart Others"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart-others"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart/others"
                                         github-src="charts/pie-chart/others">
 </code-view>
 
@@ -104,7 +104,7 @@ The pie chart supports explosion of individual pie slices as well as a `SliceCli
 
 <code-view style="height: 600px" alt="Angular Pie Chart Explosion"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart-explosion"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart/explosion"
                                         github-src="charts/pie-chart/explosion">
 </code-view>
 
@@ -136,7 +136,7 @@ For scenarios where you click on the Others slice, the pie chart will return an 
 
 <code-view style="height: 600px" alt="Angular Pie Chart Selection"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart-selection"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart/selection"
                                         github-src="charts/pie-chart/selection">
 </code-view>
 
@@ -151,7 +151,7 @@ In the code below, the radiusFactor is increasing the chart by 0.25% of the size
 
 <code-view style="height: 600px" alt="Angular Pie Chart Animation"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart-animation"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart/animation"
                                         github-src="charts/pie-chart/animation">
 </code-view>
 
@@ -164,7 +164,7 @@ Once our pie chart is created, we may want to make some further styling customiz
 
 <code-view style="height: 600px" alt="Angular Pie Chart Styling"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart-styling"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart/styling"
                                         github-src="charts/pie-chart/styling">
 </code-view>
 
@@ -177,7 +177,7 @@ The Radial Pie Chart belongs to a group of Radial Charts and uses belongs to a g
 
 <code-view style="height: 600px" alt="Angular Radial Pie Chart"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-radial-pie-chart"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/radial-pie-chart"
                                         github-src="charts/data-chart/radial-pie-chart">
 </code-view>
 

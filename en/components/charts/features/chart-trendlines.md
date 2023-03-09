@@ -18,7 +18,7 @@ The following sample depicts a [`IgxFinancialChartComponent`]({environment:dvApi
 
 <code-view style="height: 500px" alt="Angular Trendlines Example"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-trendlines"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart/trendlines"
                                         github-src="charts/financial-chart/trendlines">
 </code-view>
 

@@ -17,7 +17,7 @@ Modify or customize all aspects of both the X-Axis and Y-Axis using the differen
 
 <code-view style="height: 500px" alt="Angular Axis Crossing Axes Example"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-axis-crossing"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/axis-crossing"
                                         github-src="charts/data-chart/axis-crossing">
 </code-view>
 
@@ -30,7 +30,7 @@ These additional layers are on top of the chart which are mouse / touch dependen
 
 <code-view style="height: 500px" alt="Angular Annotations Example"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-line-chart-with-annotations"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/line-chart-with-annotations"
                                         github-src="charts/category-chart/line-chart-with-annotations">
 </code-view>
 
@@ -43,7 +43,7 @@ Animate your chart as it loads a new data source by enabling animations. These a
 
 <code-view style="height: 500px" alt="Angular Configuration Options Example"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-line-chart-with-animations"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/line-chart-with-animations"
                                         github-src="charts/category-chart/line-chart-with-animations">
 </code-view>
 
@@ -56,7 +56,7 @@ Bring focus to visuals such as lines, columns, or markers by highlighting them a
 
 <code-view style="height: 500px" alt="Angular Highlighting Example"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-column-chart-with-highlighting"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/column-chart-with-highlighting"
                                         github-src="charts/category-chart/column-chart-with-highlighting">
 </code-view>
 
@@ -69,7 +69,7 @@ Identify data points quickly, even if the value falls between major gridlines wi
 
 <code-view style="height: 500px" alt="Angular Configuration Options Example"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-marker-options"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/marker-options"
                                         github-src="charts/category-chart/marker-options">
 </code-view>
 
@@ -82,7 +82,7 @@ You can navigate the chart by zooming and panning with the mouse, keyboard, and 
 
 <code-view style="height: 500px" alt="Angular Navigation Example"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-chart-navigation"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/chart-navigation"
                                         github-src="charts/data-chart/chart-navigation">
 </code-view>
 
@@ -95,7 +95,7 @@ Overlays allows you to annotate important values and thresholds by plotting hori
 
 <code-view style="height: 600px" alt="Angular Value Overlay Example"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-series-value-overlay"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/series-value-overlay"
                                         github-src="charts/data-chart/series-value-overlay">
 </code-view>
 
@@ -108,7 +108,7 @@ Angular charts are optimized for high performance of rendering millions of data 
 
 <code-view style="height: 600px" alt="Angular Chart Performance Example"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-high-volume"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/high-volume"
                                         github-src="charts/category-chart/high-volume">
 </code-view>
 
@@ -121,7 +121,7 @@ Display all information relevant to the particular series type via Tooltips. The
 
 <code-view style="height: 500px" alt="Angular Tooltip Types Example"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-column-chart-with-tooltips"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/column-chart-with-tooltips"
                                         github-src="charts/category-chart/column-chart-with-tooltips">
 </code-view>
 
@@ -134,7 +134,7 @@ Use trendlines to identify a trend or find patterns in your data. There are many
 
 <code-view style="height: 500px" alt="Angular Trendlines Example"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-trendlines"
+           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart/trendlines"
                                         github-src="charts/financial-chart/trendlines">
 </code-view>
 

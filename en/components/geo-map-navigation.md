@@ -13,7 +13,7 @@ Navigation in the [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/produ
 
 <code-view style="height: 500px" alt="Angular Navigating Map Content Example"
   data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-navigation"
+           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map/navigation"
                                         github-src="maps/geo-map/navigation">
 </code-view>
 
