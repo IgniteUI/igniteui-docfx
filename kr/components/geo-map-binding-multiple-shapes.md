@@ -12,10 +12,12 @@ In the [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-
 
 ## Demo
 
-<code-view style="height: 400px"
+<code-view style="height: 400px" alt="Angular geo map binding multiple shapes"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-binding-multiple-shapes"  >
+                    iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map/binding-multiple-shapes"
+                                                 github-src="maps/geo-map/binding-multiple-shapes">
 </code-view>
+
 
 <div class="divider--half"></div>
 
