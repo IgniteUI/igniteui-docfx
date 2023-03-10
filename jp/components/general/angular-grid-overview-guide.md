@@ -21,17 +21,17 @@ Ignite UI for Angular の多くの利点のうち、簡単な統合、迅速な�
 
 ### プロジェクトのインストールと作成 
 
-Ignite UI for Angular は、Angular CLI または [Ignite UI CLI](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/general/cli/getting-started-with-cli.html "Ignite UI CLI 概要ページ") でインストールできます。Angular CLI をすばやく開始するには、以下のコマンドを実行します。 
+Ignite UI for Angular は、Angular CLI または [Ignite UI CLI](./cli/getting-started-with-cli.md) でインストールできます。Angular CLI をすばやく開始するには、以下のコマンドを実行します。 
 
 `ng add igniteui-angular` 
 
-Ignite UI for Angular を[既存の Angular アプリケーション](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/general/getting-started.html#ignite-ui-for-angular-のインストール "Ignite UI for Angular のインストール")に追加する必要がある場合、このオプションお勧めします。 
+Ignite UI for Angular を[既存の Angular アプリケーション](getting-started.md#ignite-ui-for-angular-のインストール)に追加する必要がある場合、このオプションお勧めします。 
 
 新しいアプリケーションを最初から作成する場合、以下の方法をお勧めします。 
 
 `npm install –g igniteui-cli` 
 
-Ignite UI CLI がインストールされると、cli の [Ignite UI CLI を使用したガイド付きエクスペリエンス](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/general/cli/step-by-step-guide-using-cli.html "Ignite UI CLI を使用したステップ バイ ステップ ガイド")または [Ignite UI for Angular Schematics](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/general/cli/step-by-step-guide-using-angular-schematics.html "Ignite UI for Angular Schematics を使用したステップ バイ ステップ ガイド") に従ってアプリケーションを簡単にブートストラップできます。これにより、エンドユーザーが 1 つのコマンドで実行できる構成済みアプリが構築されます。
+Ignite UI CLI がインストールされると、cli の [Ignite UI CLI を使用したガイド付きエクスペリエンス](./cli/step-by-step-guide-using-cli.md)または [Ignite UI for Angular Schematics](./cli/step-by-step-guide-using-angular-schematics.md) に従ってアプリケーションを簡単にブートストラップできます。これにより、エンドユーザーが 1 つのコマンドで実行できる構成済みアプリが構築されます。
 
 `ig` 
 
@@ -41,11 +41,11 @@ Ignite UI CLI がインストールされると、cli の [Ignite UI CLI を使�
 
 製品の依存関係のインポートには、Ignite UI CLI の使用をお勧めします。`ng add igniteui-angular` を使用すると、Ignite UI for Angular パッケージとその依存関係、フォントのインポート、スタイル設定などをプロジェクトにインストールできます。 
 
-Ignite UI CLI せずに Ignite UI for Angular コンポーネントを使用するには、必要となるすべての依存関係を構成し、プロジェクトを適切に設定したことを確認してください。手順は、[はじめに](https://jp.infragistics.com/products/ignite-ui-angular/getting-started#ignite-ui-for-angular-のインストール "Ignite UI for Angular で作業を開始")のトピックをご確認ください。 
+Ignite UI CLI せずに Ignite UI for Angular コンポーネントを使用するには、必要となるすべての依存関係を構成し、プロジェクトを適切に設定したことを確認してください。手順は、[はじめに](./getting-started.md)のトピックをご確認ください。 
 
 ### コンポーネントをテンプレートに追加 
 
-開発の環境設定が完了した後、他の Ignite UI コンポーネントの追加および構成を続行できます。以下には、[schematics](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/general/cli-overview.html#テンプレートの追加 "Ignite UI CLI 概要ページ") を使用して基本構成のグリッドを追加し、一部の列にテンプレートを追加する方法です。 
+開発の環境設定が完了した後、他の Ignite UI コンポーネントの追加および構成を続行できます。以下には、[schematics](./cli-overview.md) を使用して基本構成のグリッドを追加し、一部の列にテンプレートを追加する方法です。 
 
 ```html
 <igx-grid #grid1 [data]="localData" height="600px" (selected)="cellSelection($event)">
@@ -154,7 +154,7 @@ export class MyComponent implements OnInit {
     ...
 </igx-grid>
 ```
-詳細については、[データ バインディングのトピック](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/grid/grid.html#データ-バインディング "igxGrid バインディングのトピック")を参照してください。 
+詳細については、[データ バインディングのトピック](../grid/grid.md#angular-grid-データ-バインディング)を参照してください。 
 
 同じデータ バインディング方法は、igxDataChart などの他の Ignite UI コンポーネントにも適用できます。
 
@@ -194,11 +194,11 @@ Angular データ グリッドは、簡単なソート、フィルタリング�
 
 グリッドは、カスタム フィルタリング条件で 3 種類のフィルタリングを提供します。 
 
- - デフォルトの定義済みフィルタリングおよび標準のフィルタリング条件で列ごとに[行をフィルタリングします](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/grid/filtering.html "Grid のフィルタリング概要")。  
+ - デフォルトの定義済みフィルタリングおよび標準のフィルタリング条件で列ごとに[行をフィルタリングします](../grid/filtering.md)。  
 
- - ソート、移動、ピン固定、非表示などの機能を構成できるメニューの [Excel スタイル フィルタリング](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/grid/excel-style-filtering.html "Grid Excel スタイル フィルタリングの概要") 。 
+ - ソート、移動、ピン固定、非表示などの機能を構成できるメニューの [Excel スタイル フィルタリング](../grid/excel-style-filtering.md) 。 
 
- - すべての列でフィルタリング条件を持つグループを作成できるダイアログを提供する[高度なフィルタリング](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/grid/advanced-filtering.html "高度なフィルタリングの概要")。 
+ - すべての列でフィルタリング条件を持つグループを作成できるダイアログを提供する[高度なフィルタリング](../grid/advanced-filtering.md)。 
 
 [Angular 9 リリース](https://www.infragistics.com/community/blogs/b/infragistics/posts/ignite-ui-for-angular-9-0-0-release "Ignite UI for Angular 9.0.0 リリース")には、データ解析、豊富な可視化、グリッド状態の永続化、テーマ ウィジェットなど、多数の新しい主要機能が含まれています。 
 
@@ -235,7 +235,7 @@ Ignite UI for Angular はコンポーネントのデザインを[マテリアル
 
 <div class="divider--half"></div>
 
-サンプル ブラウザーのテーマ ウィジェットについても説明します。[Ignite UI サンプル ブラウザー](http://jp.infragistics.com/angularsite/components/grid/grid.html "Data Grid 概要と構成")でワンクリックでテーマをランタイムに変更できるようになりました。テーマ ウィジェットでは、スタイル、色、丸み、およびエレベーションを変更できます。テーマを簡単にカスタマイズできます。テーマの準備をした後、[SASS の ダウンロード] を押すと、設定済みの SCSS ファイルをアプリケーションで使用できます。 
+サンプル ブラウザーのテーマ ウィジェットについても説明します。[Ignite UI サンプル ブラウザー](../grid/grid.md)でワンクリックでテーマをランタイムに変更できるようになりました。テーマ ウィジェットでは、スタイル、色、丸み、およびエレベーションを変更できます。テーマを簡単にカスタマイズできます。テーマの準備をした後、[SASS の ダウンロード] を押すと、設定済みの SCSS ファイルをアプリケーションで使用できます。 
 
 <div class="divider--half"></div>
 
@@ -250,7 +250,7 @@ Ignite UI for Angular はコンポーネントのデザインを[マテリアル
 
 ### Ignite UI のデータ分析 
 
-Ignite Angular UI ツールセットには[データ分析機能](https://jp.infragistics.com//angularsite/components/general/data-analysis.html "igxGrid と igxDataChart のデータ分析")も含まれています。優れたエクスペリエンスを顧客に提供するために必要なすべてのビジネス機能を提供します。そのため、Excel に類似したエクスペリエンスを提供するディレクティブを提供します。たとえば、データの一部を選択することにより、ボタンをクリックし、データのサブセットですばやくデータ分析を実行できるようになりました。 
+Ignite Angular UI ツールセットには[データ分析機能](data-analysis.md)も含まれています。優れたエクスペリエンスを顧客に提供するために必要なすべてのビジネス機能を提供します。そのため、Excel に類似したエクスペリエンスを提供するディレクティブを提供します。たとえば、データの一部を選択することにより、ボタンをクリックし、データのサブセットですばやくデータ分析を実行できるようになりました。 
 
 <div class="sample-container loading" style="height: 750px;">
     <iframe id="grid-dynamic-chart" frameborder="0" seamless="" width="100%" height="100%" data-src="{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis" class="lazyload no-theming"></iframe>
