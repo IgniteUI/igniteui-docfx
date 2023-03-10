@@ -12,10 +12,12 @@ Use the map component's [`IgxGeographicPolylineSeriesComponent`]({environment:dv
 
 ## Demo
 
-<code-view style="height: 400px"
+<code-view style="height: 400px" alt="Angular geo map type shape polyline series"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-type-shape-polyline-series"  >
+                    iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map/type-shape-polyline-series"
+                                                 github-src="maps/geo-map/type-shape-polyline-series">
 </code-view>
+
 
 <div class="divider--half"></div>
 
