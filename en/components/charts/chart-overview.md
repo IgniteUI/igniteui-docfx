@@ -41,9 +41,9 @@ Built with a modular design of axis, markers, series, legend, and annotation lay
 The Angular Bar Chart, or Bar Graph is among the most common category chart types used to quickly compare frequency, count, total, or average of data in different categories with data encoded by horizontal bars of equal width and differing lengths. They are ideal for showing variations in the value of an item over time, data distribution, sorted data ranking (high to low, worst to best). Data is represented using a collection of rectangles that extend from the left to right of the chart towards the values of data points. Learn more about our [bar chart](types/bar-chart.md)
 
 <code-view style="height: 600px" alt="Angular Bar Chart Multiple Sources"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-bar-chart-multiple-sources"
-                                        github-src="charts/data-chart/bar-chart-multiple-sources">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/bar-chart-multiple-sources"
+                                                 github-src="charts/data-chart/bar-chart-multiple-sources">
 </code-view>
 
 
@@ -54,9 +54,9 @@ The Angular Bar Chart, or Bar Graph is among the most common category chart type
 The Angular Pie Chart, or Pie Graph, is a very common part-to-whole chart type. Part-to-whole charts show how categories (parts) of a data set add up to a total (whole) value. Categories are shown in proportion to other categories based on their value percentage to the total value being analyzed. A pie chart renders data values as sections in a circular, or pie-shaped graph. Each section, or pie slice, has an arc length proportional to its underlying data value. The total values represented by the pie slices represent a whole value, like 100 or 100%. Pie charts are perfect for small data sets and are easy to read at a quick glance. Learn more about our [pie chart](types/pie-chart.md)
 
 <code-view style="height: 600px" alt="Angular Pie Chart Overview"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart-overview"
-                                        github-src="charts/pie-chart/overview">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart/overview"
+                                                 github-src="charts/pie-chart/overview">
 </code-view>
 
 
@@ -67,9 +67,9 @@ The Angular Pie Chart, or Pie Graph, is a very common part-to-whole chart type. 
 The Angular Line Chart, or Line Graph is a type of category line graph shows the continuous data values represented by points connected by straight line segments of one or more quantities over a period time for showing trends and performing comparative analysis. The Y-Axis (labels on left side) show a numeric value, while the X-Axis (bottom labels) are showing a time-series or comparison category. You can include one or more data sets to compare, which would render as multiple lines in the chart. Learn more about our [line chart](types/line-chart.md)
 
 <code-view style="height: 600px" alt="Angular Line Chart Multiple Sources"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-line-chart-multiple-sources"
-                                        github-src="charts/category-chart/line-chart-multiple-sources">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/line-chart-multiple-sources"
+                                                 github-src="charts/category-chart/line-chart-multiple-sources">
 </code-view>
 
 
@@ -80,9 +80,9 @@ The Angular Line Chart, or Line Graph is a type of category line graph shows the
 The Angular Donut Chart or Donut Graph, is a variant of a Pie Chart, proportionally illustrating the occurrences of a variable in a circle to represents parts of a whole. The donut chart has a circular opening at the center of the pie chart, where a title or category explanation can be displayed. Donut charts can support multiple concentric rings, with built-in support for visualizing hierarchical data. Learn more about our [Donut chart](types/donut-chart.md)
 
 <code-view style="height: 600px" alt="Angular Doughnut Legend"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/doughnut-chart-legend"
-                                        github-src="charts/doughnut-chart/legend">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/doughnut-chart/legend"
+                                                 github-src="charts/doughnut-chart/legend">
 </code-view>
 
 
@@ -93,9 +93,9 @@ The Angular Donut Chart or Donut Graph, is a variant of a Pie Chart, proportiona
 The Angular Area Chart is rendered using a collection of points connected by straight line segments with the area below the line filled in. Values are represented on the y-axis (labels on the left side) and categories are displayed on the x-axis (bottom labels). Area Charts emphasize the amount of change over a period of time or compare multiple items as well as the relationship of parts of a whole by displaying the total of the plotted values. Learn more about our [area chart](types/area-chart.md)
 
 <code-view style="height: 600px" alt="Angular Area Chart Multiple Sources"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-area-chart-multiple-sources"
-                                        github-src="charts/category-chart/area-chart-multiple-sources">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/area-chart-multiple-sources"
+                                                 github-src="charts/category-chart/area-chart-multiple-sources">
 </code-view>
 
 
@@ -106,9 +106,9 @@ The Angular Area Chart is rendered using a collection of points connected by str
 The Angular Sparkline Chart, or Sparkline Graph is a type of category graph intended for rendering within a small-scale layout such as within a grid cell, or anywhere a word-sized visualization is needed to tell a data story. Like other Angular chart types, the Sparkline Chart has several visual elements and corresponding features that can be configured and customized such as the chart type, markers, ranges, trendlines, unknown value plotting, and tooltips. Sparkline charts can render as a Line Chart, Area Chart, Column Chart or Win / Loss Chart. The difference between the full-sized chart equivalent to the Spark-chart, is the Y-Axis (left side labels) and X-Axis (bottom labels) are not visible. Learn more about our [sparkline chart](types/sparkline-chart.md).
 
 <code-view style="height: 450px" alt="Angular Sparkline Example"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/sparkline-display-types"
-                                        github-src="charts/sparkline/display-types">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/sparkline/display-types"
+                                                 github-src="charts/sparkline/display-types">
 </code-view>
 
 
@@ -119,9 +119,9 @@ The Angular Sparkline Chart, or Sparkline Graph is a type of category graph inte
 The Angular Bubble Chart, or Bubble Graph, is used to show data comprising of three numeric values. Two of the values are plotted as an intersecting point using a Cartesian (X, Y) coordinate system, and the third value is rendered as the diameter size of the point. This gives the Bubble Chart its name - a visualization of varying sized bubbles along the X and Y coordinates of the plot. The Angular Bubble Chart is used to show relationships of data correlations with the data value differences rendered by size. You can also use a fourth data dimension, typically color, to further differentiate the values in your Bubble chart. Learn more about our [bubble chart](types/bubble-chart.md).
 
 <code-view style="height: 600px" alt="Angular Bubble Chart"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-scatter-bubble-chart-multiple-sources"
-                                        github-src="charts/data-chart/scatter-bubble-chart-multiple-sources">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/scatter-bubble-chart-multiple-sources"
+                                                 github-src="charts/data-chart/scatter-bubble-chart-multiple-sources">
 </code-view>
 
 
@@ -132,9 +132,9 @@ The Angular Bubble Chart, or Bubble Graph, is used to show data comprising of th
 The Angular Financial or Stock Chart, is a composite visualization that renders stock data and financial data in a time-series chart that includes interactive visual elements in a toolbar like day / week / month filters, chart type selection, volume type selection, indicators selection and trends lines selection. Designed for customization, the Angular Stock Chart can be customized in any way to give an easier visualization and interpretation of your data. The financial chart renders the date-time data along the X-Axis (bottom labels) and shows fields like Open, High, Low and Close volumes. The type of chart to render the Time-Series data can be Bar, Candle, Column, or Line. Learn more about our [stock chart](types/stock-chart.md).
 
 <code-view style="height: 600px" alt="Angular Stock Chart Example"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-multiple-data"
-                                        github-src="charts/financial-chart/multiple-data">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart/multiple-data"
+                                                 github-src="charts/financial-chart/multiple-data">
 </code-view>
 
 
@@ -145,9 +145,9 @@ The Angular Financial or Stock Chart, is a composite visualization that renders 
 The Angular Column Chart, or Column Graph is among the most common category chart types used to quickly compare frequency, count, total, or average of data in different categories with data encoded by vertical bars of equal width and differing lengths. They are ideal for showing variations in the value of an item over time, data distribution, sorted data ranking (high to low, worst to best). Data is represented using a collection of rectangles that extend from the top to bottom of the chart towards the values of data points. Learn more about our [column chart](types/column-chart.md).
 
 <code-view style="height: 600px" alt="Angular Column Chart Multiple Sources"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-column-chart-multiple-sources"
-                                        github-src="charts/category-chart/column-chart-multiple-sources">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/column-chart-multiple-sources"
+                                                 github-src="charts/category-chart/column-chart-multiple-sources">
 </code-view>
 
 
@@ -158,9 +158,9 @@ The Angular Column Chart, or Column Graph is among the most common category char
 The Angular Composite Chart, also called a Combo Chart, is visualization that combines different types of chart types in the same plot area. It is very useful when presenting two data series that have a very different scale and might be expressed in different units. The most common example is dollars on one axis and percentage on the other axis. Learn more about our [composite chart](types/composite-chart.md).
 
 <code-view style="height: 600px" alt="Angular Composite Chart Example"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-composite-chart"
-                                        github-src="charts/data-chart/composite-chart">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/composite-chart"
+                                                 github-src="charts/data-chart/composite-chart">
 </code-view>
 
 
@@ -179,9 +179,9 @@ The Angular Network Chart, also called Network Graph or Polyline Chart, visualiz
 The Angular Polar Area Chart or Polar Graph belongs to a group of polar charts and has a shape of a filled polygon which vertices or corners are located at the polar (angle/radius) coordinates of data points. The Polar Area Chart uses the same concepts of data plotting as the Scatter Chart but wraps data points around a circle rather than stretching them horizontally. Like with other series types, multiple Polar Area Charts can be plotted in the same data chart and they can be overlaid on each other to show differences and similarities between data sets. Learn more about our [polar chart](types/polar-chart.md).
 
 <code-view style="height: 600px" alt="Angular Polar Line Chart"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-polar-line-chart"
-                                        github-src="charts/data-chart/polar-line-chart">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/polar-line-chart"
+                                                 github-src="charts/data-chart/polar-line-chart">
 </code-view>
 
 
@@ -196,9 +196,9 @@ The Angular Pyramid Chart, also called an age pyramid or population pyramid, is 
 The Angular Scatter Chart, or Scatter Graph, is used to show the relationship between two values using a Cartesian (X, Y) coordinate system to plot data. Each data point is rendered as the intersecting point of the data value on the X and Y Axis. Scatter charts draw attention to uneven intervals or clusters of data. They can highlight the deviation of collected data from predicted results and they are often used to plot scientific and statistical data. The Angular Scatter chart organizes and plots data chronologically (even if the data is not in chronological order before binding) on X-Axis and Y-Axis. Learn more about our [scatter chart](types/scatter-chart.md).
 
 <code-view style="height: 600px" alt="Angular Scatter Marker Chart"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-scatter-point-chart"
-                                        github-src="charts/data-chart/scatter-point-chart">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/scatter-point-chart"
+                                                 github-src="charts/data-chart/scatter-point-chart">
 </code-view>
 
 
@@ -209,9 +209,9 @@ The Angular Scatter Chart, or Scatter Graph, is used to show the relationship be
 The Angular Shape Charts is a group of chart that take array of shapes (array or arrays of X/Y points) and render them as collection of polygons or polylines in Cartesian (x, y) coordinate system. They are often used highlight regions in scientific data or they can be used to plot diagrams, blueprints, or even floor plan of buildings. Learn more about our [shape chart](types/shape-chart.md).
 
 <code-view style="height: 600px" alt="Angular Scatter Polygon Chart"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-scatter-polygon-series"
-                                        github-src="charts/data-chart/type-scatter-polygon-series">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/type-scatter-polygon-series"
+                                                 github-src="charts/data-chart/type-scatter-polygon-series">
 </code-view>
 
 
@@ -222,9 +222,9 @@ The Angular Shape Charts is a group of chart that take array of shapes (array or
 The Angular Spline Chart, or Spline Graph is a type of category line graph shows the continuous data values represented by points connected by smooth line segments of one or more quantities over a period time for showing trends and performing comparative analysis. The Y-Axis (labels on left side) show a numeric value, while the X-Axis (bottom labels) are showing a time-series or comparison category. You can include one or more data sets to compare, which would render as multiple lines in the chart. The Angular Spline chart is identical to the Angular Spline chart, the only different being the line chart is points connected by straight lines, and the spline chart points are connected by smooth curves. Learn more about our [spline chart](types/spline-chart.md).
 
 <code-view style="height: 600px" alt="Angular Spline Chart Multiple Sources"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-spline-multiple-sources"
-                                        github-src="charts/category-chart/spline-multiple-sources">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/spline-multiple-sources"
+                                                 github-src="charts/category-chart/spline-multiple-sources">
 </code-view>
 
 
@@ -235,9 +235,9 @@ The Angular Spline Chart, or Spline Graph is a type of category line graph shows
 The Angular Step Chart, or Step Graph, is a category charts that renders a collection of data points connected by continuous vertical and horizontal lines forming a step-like progression. Values are represented on the Y-Axis (left labels) and categories are displayed on the X-Axis (bottom labels). The Angular Step Line chart emphasizes the amount of change over a period of time or compares multiple items. The Angular Step Line chart is identical to the Angular Step Area Chart in all aspects except that the area below the step lines is not filled in. Learn more about our [step chart](types/step-chart.md)
 
 <code-view style="height: 600px" alt="Angular Step Line Chart Multiple Sources"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-step-line-multiple-sources"
-                                        github-src="charts/category-chart/step-line-multiple-sources">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/step-line-multiple-sources"
+                                                 github-src="charts/category-chart/step-line-multiple-sources">
 </code-view>
 
 
@@ -252,9 +252,9 @@ A Time-Series Chart, or Timeline Graph, is a visualization that treats the data 
 The Ignite UI for Angular Treemap displays hierarchical (tree-structured) data as a set of nested nodes. Each branch of the tree is given a treemap node, which is then tiled with smaller nodes representing sub-branches. Each node's rectangle has an area proportional to a specified dimension on the data. Often the nodes are colored to show a separate dimension of the data. Learn more about our [treemaps](types/treemap-chart.md).
 
 <code-view style="height: 600px" alt="Angular Treemap Example"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/tree-map-overview"
-                                        github-src="charts/tree-map/overview">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/tree-map/overview"
+                                                 github-src="charts/tree-map/overview">
 </code-view>
 
 

@@ -15,9 +15,9 @@ The Ignite UI for Angular Bar Chart, Bar Graph, or Horizontal Bar Chart, is amon
 You can create Angular Bar Chart in the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) control by binding your data sources to multiple [`IgxBarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbarseriescomponent.html), as shown in the example below:
 
 <code-view style="height: 600px" alt="Angular Bar Chart Multiple Sources"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-bar-chart-multiple-sources"
-                                        github-src="charts/data-chart/bar-chart-multiple-sources">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/bar-chart-multiple-sources"
+                                                 github-src="charts/data-chart/bar-chart-multiple-sources">
 </code-view>
 
 
@@ -78,9 +78,9 @@ These use cases are commonly used for the following scenarios:
 Bar Chart belongs to a group of Category Series and it is rendered using a collection of rectangles that extend from the left to right of the chart towards the values of data points. You can create this type of chart in the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) control by binding your data to a [`IgxBarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbarseriescomponent.html), as shown in the example below:
 
 <code-view style="height: 600px" alt="Angular Bar Chart with Single Source"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-bar-chart-single-source"
-                                        github-src="charts/data-chart/bar-chart-single-source">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/bar-chart-single-source"
+                                                 github-src="charts/data-chart/bar-chart-single-source">
 </code-view>
 
 
@@ -91,9 +91,9 @@ Bar Chart belongs to a group of Category Series and it is rendered using a colle
 The Bar Chart is able to render multiple bars per category for comparison purposes. In this example, the Bar Chart is comparing box office revenue amongst popular movie franchises. You can create this type of chart in the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) control by binding your data to multiple [`IgxBarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbarseriescomponent.html), as shown in the example below:
 
 <code-view style="height: 600px" alt="Angular Bar Chart with Multiple Sources"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-bar-chart-multiple-sources"
-                                        github-src="charts/data-chart/bar-chart-multiple-sources">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/bar-chart-multiple-sources"
+                                                 github-src="charts/data-chart/bar-chart-multiple-sources">
 </code-view>
 
 
@@ -104,9 +104,9 @@ The Bar Chart is able to render multiple bars per category for comparison purpos
 The Bar Chart can be styled, and allows for the ability to use [annotation values](../features/chart-annotations.md) for each bar, for example, to demonstrate percent comparisons. You can create this type of chart in the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) control by binding your data to a [`IgxBarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbarseriescomponent.html) and adding a [`IgxCalloutLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcalloutlayercomponent.html), as shown in the example below:
 
 <code-view style="height: 600px" alt="Angular Bar Chart Styling"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-bar-chart-styling"
-                                        github-src="charts/data-chart/bar-chart-styling">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/bar-chart-styling"
+                                                 github-src="charts/data-chart/bar-chart-styling">
 </code-view>
 
 
@@ -121,9 +121,9 @@ The Stacked Bar Chart differs from the Bar Chart in that the data points represe
 You can create this type of chart in the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) control by binding your data to a [`IgxStackedBarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedbarseriescomponent.html), as shown in the example below:
 
 <code-view style="height: 600px" alt="Angular Stacked Bar Chart"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-stacked-bar-chart"
-                                        github-src="charts/data-chart/stacked-bar-chart">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/stacked-bar-chart"
+                                                 github-src="charts/data-chart/stacked-bar-chart">
 </code-view>
 
 
@@ -136,9 +136,9 @@ The Angular Stacked 100% Bar Chart is identical to the Angular Stacked Bar Chart
 You can create this type of chart in the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) control by binding your data to a [`IgxStacked100BarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstacked100barseriescomponent.html), as shown in the example below:
 
 <code-view style="height: 600px" alt="Angular Stacked 100 Bar Chart"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-stacked-100-bar-chart"
-                                        github-src="charts/data-chart/stacked-100-bar-chart">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/stacked-100-bar-chart"
+                                                 github-src="charts/data-chart/stacked-100-bar-chart">
 </code-view>
 
 

@@ -15,9 +15,9 @@ The Ignite UI for Angular Stock Chart, sometimes referred to as Angular Financia
 You can create Stock Chart using the [`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html) control by binding your data and optionally setting [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#charttype) property to [`Line`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialcharttype.html#line) value, as shown in the example below.
 
 <code-view style="height: 600px" alt="Angular Stock Chart Example"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-multiple-data"
-                                        github-src="charts/financial-chart/multiple-data">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart/multiple-data"
+                                                 github-src="charts/financial-chart/multiple-data">
 </code-view>
 
 
@@ -65,9 +65,9 @@ As a Stock Chart is meant to allow the user to perform data analysis functions, 
 ## Angular Stock Chart with Multiple Series
 
 <code-view style="height: 600px" alt="Angular Stock Index Chart"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-multiple-data"
-                                        github-src="charts/financial-chart/multiple-data">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart/multiple-data"
+                                                 github-src="charts/financial-chart/multiple-data">
 </code-view>
 
 
@@ -78,9 +78,9 @@ As a Stock Chart is meant to allow the user to perform data analysis functions, 
 In this example the Stock Chart is representing the S\&P 500 over the course of a year; useful for investors and conducting technical analysis and forecasting future pricing/reports.
 
 <code-view style="height: 600px" alt="Angular Stock Index Chart"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-stock-index-chart"
-                                        github-src="charts/financial-chart/stock-index-chart">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart/stock-index-chart"
+                                                 github-src="charts/financial-chart/stock-index-chart">
 </code-view>
 
 
@@ -91,9 +91,9 @@ In this example the Stock Chart is representing the S\&P 500 over the course of 
 If you need a Stock Chart with more features such as composite other series, you can configure the thickness, outlines, brushes, negative outlines, negative brushes as demonstrated below. In this example, the stock chart is comparing revenue between Amazon, Microsoft and Tesla.
 
 <code-view style="height: 600px" alt="Angular Stock Index Chart"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-styling"
-                                        github-src="charts/financial-chart/styling">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart/styling"
+                                                 github-src="charts/financial-chart/styling">
 </code-view>
 
 
@@ -110,9 +110,9 @@ The Callout Layer displays a callout at X/Y positions.
 Note: When using the ordinal X axis mode, the CalloutsXMemberPath should point to the numeric index of the item, otherwise CalloutsXMemberPath should point to the time value.
 
 <code-view style="height: 600px" alt="Angular Chart Annotations"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-annotations"
-                                        github-src="charts/financial-chart/annotations">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart/annotations"
+                                                 github-src="charts/financial-chart/annotations">
 </code-view>
 
 
@@ -153,9 +153,9 @@ Note that you should set the [`zoomSliderType`]({environment:dvApiBaseUrl}/produ
 In this example, the stock chart is plotting revenue for United States.
 
 <code-view style="height: 600px" alt="Angular Chart Panes"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-panes"
-                                        github-src="charts/financial-chart/panes">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart/panes"
+                                                 github-src="charts/financial-chart/panes">
 </code-view>
 
 

@@ -12,9 +12,9 @@ In Angular map component, you can use the [`IgxGeographicSymbolSeriesComponent`]
 ## Angular Geographic Symbol Map Example
 
 <code-view style="height: 500px" alt="Angular Using Scatter Symbol Series Example"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-type-scatter-symbol-series"
-                                        github-src="maps/geo-map/type-scatter-symbol-series">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map/type-scatter-symbol-series"
+                                                 github-src="maps/geo-map/type-scatter-symbol-series">
 </code-view>
 
 

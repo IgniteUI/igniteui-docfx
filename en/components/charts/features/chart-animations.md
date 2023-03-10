@@ -17,9 +17,9 @@ Animations are disabled in the Ignite UI for Angular Charts, but they can be ena
 The following example depicts a [Line Chart](../types/line-chart.md) with an animation set to the default [`transitionInMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#transitioninmode) - "Auto." The drop-down and slider at the top in this example will allow you to modify the [`transitionInMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#transitioninmode) and [`transitionInDuration`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#transitioninduration), respectively, so that you can see what the different supported animations look like at different speeds.
 
 <code-view style="height: 500px" alt="Angular Configuration Options Example"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-line-chart-with-animations"
-                                        github-src="charts/category-chart/line-chart-with-animations">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/line-chart-with-animations"
+                                                 github-src="charts/category-chart/line-chart-with-animations">
 </code-view>
 
 

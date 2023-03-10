@@ -15,9 +15,9 @@ The Ignite UI for Angular Step Chart belongs to a group of category charts that 
 You can create Angular Step Area Chart in the [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html) control by setting [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#charttype) property to **StepArea** enum, as shown in the example below.
 
 <code-view style="height: 600px" alt="Angular Step Area Chart Multiple Sources"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-step-area-multiple-sources"
-                                        github-src="charts/category-chart/step-area-multiple-sources">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/step-area-multiple-sources"
+                                                 github-src="charts/category-chart/step-area-multiple-sources">
 </code-view>
 
 
@@ -30,9 +30,9 @@ The Angular Step Line Chart is very similar to Step Area Chart, except that the 
 You can create Step Line Chart in the [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html) control by binding your data and setting [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#charttype) property to [`StepLine`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/categorycharttype.html#stepline) value, as shown in the example below.
 
 <code-view style="height: 600px" alt="Angular Step Line Chart Multiple Sources"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-step-line-multiple-sources"
-                                        github-src="charts/category-chart/step-line-multiple-sources">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/step-line-multiple-sources"
+                                                 github-src="charts/category-chart/step-line-multiple-sources">
 </code-view>
 
 
@@ -43,9 +43,9 @@ You can create Step Line Chart in the [`IgxCategoryChartComponent`]({environment
 If you need Step Charts with more features such as composite other series, you can configure the [`markerTypes`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#markertypes), [`markerBrushes`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#markerbrushes), [`markerOutlines`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#markeroutlines), lines' [`brushes`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#brushes), and lines' [`outlines`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#outlines) properties on the [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html) control as demonstrated below.
 
 <code-view style="height: 600px" alt="Angular Styling Step Line Chart"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-step-line-styling"
-                                        github-src="charts/category-chart/step-line-styling">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/step-line-styling"
+                                                 github-src="charts/category-chart/step-line-styling">
 </code-view>
 
 

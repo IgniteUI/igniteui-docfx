@@ -12,9 +12,9 @@ The Infragistics Angular Excel Engine's [`WorksheetChart`]({environment:dvApiBas
 ## Angular Working with Charts Example
 
 <code-view style="height: 500px" alt="Angular Working with Charts Example"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/excel/excel-library-working-with-charts"
-                                        github-src="excel/excel-library/working-with-charts">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/excel/excel-library/working-with-charts"
+                                                 github-src="excel/excel-library/working-with-charts">
 </code-view>
 
 

@@ -12,9 +12,9 @@ In Angular map component, you can use the [`IgxGeographicScatterAreaSeriesCompon
 ## Angular Geographic Area Map Example
 
 <code-view style="height: 500px" alt="Angular Using Scatter Area Series Example"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-type-scatter-area-series"
-                                        github-src="maps/geo-map/type-scatter-area-series">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map/type-scatter-area-series"
+                                                 github-src="maps/geo-map/type-scatter-area-series">
 </code-view>
 
 

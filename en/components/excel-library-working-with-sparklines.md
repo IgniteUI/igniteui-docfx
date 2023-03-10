@@ -12,9 +12,9 @@ The Infragistics Angular Excel Library has support for adding sparklines to an E
 ## Angular Working with Sparklines Example
 
 <code-view style="height: 500px" alt="Angular Working with Sparklines Example"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/excel/excel-library-working-with-sparklines"
-                                        github-src="excel/excel-library/working-with-sparklines">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/excel/excel-library/working-with-sparklines"
+                                                 github-src="excel/excel-library/working-with-sparklines">
 </code-view>
 
 

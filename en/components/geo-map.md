@@ -1,6 +1,6 @@
 ---
 title: Angular Map | Data Visualization Tools | Map Overview | Infragistics
-_description: Use Infragistics' Angular JavaScript map to display data that contains geographic locations from view models or geo-spatial data loaded from shape files on geographic imagery maps. View the Ignite UI for Angular map demos!
+_description: Use Infragistics' Angular JavaScript map map map to display data that contains geographic locations from view models or geo-spatial data loaded from shape files on geographic imagery maps. View the Ignite UI for Angular map demos!
 _keywords: Angular map, geographic map, imagery tiles, Ignite UI for Angular, Infragistics
 mentionedTypes: ['XamGeographicMap', 'Series']
 ---
@@ -14,9 +14,9 @@ The Ignite UI for Angular map component allows you to display data that contains
 The following sample demonstrates how display data in [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html) using [`IgxGeographicProportionalSymbolSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html) also known as Bubble Series.
 
 <code-view style="height: 500px" alt="Angular geo map type scatter bubble series"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-type-scatter-bubble-series"
-                                        github-src="maps/geo-map/type-scatter-bubble-series">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map/type-scatter-bubble-series"
+                                                 github-src="maps/geo-map/type-scatter-bubble-series">
 </code-view>
 
 

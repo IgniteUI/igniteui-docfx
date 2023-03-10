@@ -15,9 +15,9 @@ The Ignite UI for Angular Line Chart or Line Graph is a type of category charts 
 You can create the Angular Line Chart in the [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html) control by binding your data to `ItemsSource` property and setting [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#charttype) property to **Line** enum, as shown in the example below.
 
 <code-view style="height: 600px" alt="Angular Line Chart Multiple Sources"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-line-chart-multiple-sources"
-                                        github-src="charts/category-chart/line-chart-multiple-sources">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/line-chart-multiple-sources"
+                                                 github-src="charts/category-chart/line-chart-multiple-sources">
 </code-view>
 
 
@@ -75,9 +75,9 @@ The Angular Line Chart is often used to show the change of value over time such 
 You can create this type of chart in the [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html) control by binding your data and setting the [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#charttype) property to `Line`, as shown in the example below:
 
 <code-view style="height: 600px" alt="Angular Line Chart with Single Source"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-line-chart-single-source"
-                                        github-src="charts/category-chart/line-chart-single-source">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/line-chart-single-source"
+                                                 github-src="charts/category-chart/line-chart-single-source">
 </code-view>
 
 
@@ -90,9 +90,9 @@ Since the Angular Line Chart allows you to combine multiple series and compare o
 You can create this type of chart in the [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html) control by binding your data and setting the [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#charttype) property to `Line`, as shown in the example below:
 
 <code-view style="height: 600px" alt="Angular Line Chart with Multiple Sources"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-line-chart-multiple-sources"
-                                        github-src="charts/category-chart/line-chart-multiple-sources">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/line-chart-multiple-sources"
+                                                 github-src="charts/category-chart/line-chart-multiple-sources">
 </code-view>
 
 
@@ -107,9 +107,9 @@ In this example, we are streaming live data into the Angular Line Chart at an in
 You can create this type of chart in the [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html) control by binding your data and setting the [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#charttype) property to `Line`, as shown in the example below:
 
 <code-view style="height: 600px" alt="Angular Line Chart Live Data Example"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-high-frequency"
-                                        github-src="charts/category-chart/high-frequency">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/high-frequency"
+                                                 github-src="charts/category-chart/high-frequency">
 </code-view>
 
 
@@ -122,9 +122,9 @@ Once our chart is set up, we may want to make some further styling customization
 You can create this type of chart in the [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html) control by binding your data and setting the [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#charttype) property to `Line`, as shown in the example below:
 
 <code-view style="height: 600px" alt="Angular Line Chart Styling"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-line-chart-styling"
-                                        github-src="charts/category-chart/line-chart-styling">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/line-chart-styling"
+                                                 github-src="charts/category-chart/line-chart-styling">
 </code-view>
 
 
@@ -139,9 +139,9 @@ The following sections explain more advanced types of Angular Line Charts that c
 The Stacked Line Chart is often used to show the change of value over time such as the amount of renewable electricity produced for several years between regions. You can create this type of chart in the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) control by binding your data to a [`IgxStackedLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedlineseriescomponent.html), as shown in the example below:
 
 <code-view style="height: 600px" alt="Angular Stacked Line Chart"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-stacked-line-chart"
-                                        github-src="charts/data-chart/stacked-line-chart">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/stacked-line-chart"
+                                                 github-src="charts/data-chart/stacked-line-chart">
 </code-view>
 
 
@@ -154,9 +154,9 @@ The Stacked 100% Line Chart is identical to the Stacked Line Chart in all aspect
 You can create this type of chart in the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) control by binding your data to a [`IgxStacked100LineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstacked100lineseriescomponent.html), as shown in the example below:
 
 <code-view style="height: 600px" alt="Angular Stacked 100 Line Chart"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-stacked-100-line-chart"
-                                        github-src="charts/data-chart/stacked-100-line-chart">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/stacked-100-line-chart"
+                                                 github-src="charts/data-chart/stacked-100-line-chart">
 </code-view>
 
 
@@ -169,9 +169,9 @@ The Radial Line Chart belongs to a group of radial charts and has a shape of an 
 You can create this type of chart in the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) control by binding your data to a [`IgxRadialLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradiallineseriescomponent.html), as shown in the example below:
 
 <code-view style="height: 600px" alt="Angular Radial Line Chart"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-radial-line-chart"
-                                        github-src="charts/data-chart/radial-line-chart">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/radial-line-chart"
+                                                 github-src="charts/data-chart/radial-line-chart">
 </code-view>
 
 
@@ -184,9 +184,9 @@ The Polar Line Chart belongs to a group of polar charts and is rendered using a 
 You can create this type of chart in the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) control by binding your data to a [`IgxPolarLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarlineseriescomponent.html), as shown in the example below:
 
 <code-view style="height: 600px" alt="Angular Polar Line Chart"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-polar-line-chart"
-                                        github-src="charts/data-chart/polar-line-chart">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/polar-line-chart"
+                                                 github-src="charts/data-chart/polar-line-chart">
 </code-view>
 
 

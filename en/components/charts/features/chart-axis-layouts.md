@@ -19,9 +19,9 @@ For all axes, you can specify axis location in relationship to chart plot area. 
 The following example depicts the amount of renewable electricity produced since 2009, represented by a [Line Chart](../types/line-chart.md). There is a drop-down that lets you configure the [`yAxisLabelLocation`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxxychartcomponent.html#yaxislabellocation) so that you can visualize what the axes look like when the labels are placed on the left or right side on the inside or outside of the chart's plot area.
 
 <code-view style="height: 450px" alt="Angular Axis Locations Example"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-axis-locations"
-                                        github-src="charts/category-chart/axis-locations">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/axis-locations"
+                                                 github-src="charts/category-chart/axis-locations">
 </code-view>
 
 
@@ -42,9 +42,9 @@ You can share and add multiple axes in the same plot area of the Angular [`IgxDa
 The following example depicts a stock price and trade volume chart with a [Stock Chart](../types/stock-chart.md) and a [Column Chart](../types/column-chart.md) plotted. In this case, the Y-Axis on the left is used by the [Column Chart](../types/column-chart.md) and the Y-Axis on the right is used by the [Stock Chart](../types/stock-chart.md), while the X-Axis is shared between the two.
 
 <code-view style="height: 450px" alt="Angular Axis Sharing Example"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-axis-sharing"
-                                        github-src="charts/data-chart/axis-sharing">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/axis-sharing"
+                                                 github-src="charts/data-chart/axis-sharing">
 </code-view>
 
 
@@ -57,9 +57,9 @@ In addition to placing axes outside plot area, the Angular [`IgxDataChartCompone
 The following example shows a Sin and Cos wave represented by a [Scatter Spline Chart](../types/scatter-chart.md) with the X and Y axes crossing each other at the (0, 0) origin point.
 
 <code-view style="height: 450px" alt="Angular Axis Crossing Axes Example"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-axis-crossing"
-                                        github-src="charts/data-chart/axis-crossing">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/axis-crossing"
+                                                 github-src="charts/data-chart/axis-crossing">
 </code-view>
 
 

@@ -15,9 +15,9 @@ The Ignite UI for Angular Donut Chart is similar to the [Pie Chart](pie-chart.
 You can create Donut Chart using the [`IgxDoughnutChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdoughnutchartcomponent.html) control by binding your data as shown in the example below.
 
 <code-view style="height: 600px" alt="Angular Doughnut Legend"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/doughnut-chart-legend"
-                                        github-src="charts/doughnut-chart/legend">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/doughnut-chart/legend"
+                                                 github-src="charts/doughnut-chart/legend">
 </code-view>
 
 
@@ -69,9 +69,9 @@ The Angular Donut Chart includes interactive features that give the viewer tools
 The Angular Donut Chart has the ability to select slices on click. Optionally, you may apply a single custom visual style to the selected slices. The `SliceClick` event is raised when the user clicks on a slice. Enabling slice selection allows you to modify the slice's selection upon click. The following sample demonstrates how to enable slice selection and set the selected slice color to gray.
 
 <code-view style="height: 600px" alt="Angular Donut Slice Selection"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/doughnut-chart-selection"
-                                        github-src="charts/doughnut-chart/selection">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/doughnut-chart/selection"
+                                                 github-src="charts/doughnut-chart/selection">
 </code-view>
 
 
@@ -82,9 +82,9 @@ The Angular Donut Chart has the ability to select slices on click. Optionally, y
 It is possible to have a multiple ring display in the Angular Donut Chart, with each of the rings capable of being bound to a different data item, or they can share a common data source. This can be helpful if you need to display your data as tiers that have an underlying common category, such as the season to month data display below:
 
 <code-view style="height: 600px" alt="Angular Doughnut Multiple Rings"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/doughnut-chart-rings"
-                                        github-src="charts/doughnut-chart/rings">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/doughnut-chart/rings"
+                                                 github-src="charts/doughnut-chart/rings">
 </code-view>
 
 

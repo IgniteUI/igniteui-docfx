@@ -19,9 +19,9 @@ The following examples demonstrates two high performance scenarios of Angular ch
 In High-Frequency scenario, the Angular Charts can render data items that are updating in real time or at specified milliseconds intervals. You will experience no lag, no screen-flicker, and no visual delays, even as you interact with the chart on a touch-device. The following sample demonstrates the [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html) in High-Frequency scenario.
 
 <code-view style="height: 400px" alt="Angular Chart with High Frequency"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-high-frequency"
-                                        github-src="charts/category-chart/high-frequency">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/high-frequency"
+                                                 github-src="charts/category-chart/high-frequency">
 </code-view>
 
 
@@ -32,9 +32,9 @@ In High-Frequency scenario, the Angular Charts can render data items that are up
 In High-Volume scenario, the Angular Charts can render 1 million of data points while the chart keeps providing smooth performance when end-users tries zooming in/out or navigating chart content. The following sample demonstrates the [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html) in High-Volume scenario.
 
 <code-view style="height: 400px" alt="Angular Chart with High Volume"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-high-volume"
-                                        github-src="charts/category-chart/high-volume">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/high-volume"
+                                                 github-src="charts/category-chart/high-volume">
 </code-view>
 
 

@@ -15,9 +15,9 @@ The Angular [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite
 The following example depicts a [Column Chart](../types/column-chart.md) with a few horizontal value overlays plotted.
 
 <code-view style="height: 600px" alt="Angular Value Overlay Example"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-series-value-overlay"
-                                        github-src="charts/data-chart/series-value-overlay">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/series-value-overlay"
+                                                 github-src="charts/data-chart/series-value-overlay">
 </code-view>
 
 

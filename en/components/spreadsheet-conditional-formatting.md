@@ -12,9 +12,9 @@ The Angular Spreadsheet component allows you to conditionally format the cells o
 ## Angular Spreadsheet Conditional Formatting Example
 
 <code-view style="height: 500px" alt="Angular Spreadsheet Conditional Formatting Example"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/excel/spreadsheet-conditional-formatting"
-                                        github-src="excel/spreadsheet/conditional-formatting">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/excel/spreadsheet/conditional-formatting"
+                                                 github-src="excel/spreadsheet/conditional-formatting">
 </code-view>
 
 
