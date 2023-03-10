@@ -301,7 +301,7 @@ public chipsOrderChanged(event: IChipsAreaReorderEventArgs) {
         class="chip-avatar-resized"
         igxPrefix
         [src]="chip.photo"
-        roundShape="true"
+        shape="circle"
         ></igx-avatar>
         {{chip.name}}
     </igx-chip>

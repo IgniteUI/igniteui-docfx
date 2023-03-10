@@ -72,7 +72,7 @@ avatar をターゲットにして、[`igxTooltipTarget`]({environment:angularAp
 <!--simpleTooltip.component.html-->
 
 <igx-avatar class="avatar" #target="tooltipTarget" igxTooltipTarget
-            src="assets/images/avatar/10.jpg" size="medium" [roundShape]="true">
+            src="assets/images/avatar/10.jpg" size="medium" shape="circle">
 </igx-avatar>
 ```
 
@@ -97,7 +97,7 @@ avatar をターゲットにして、[`igxTooltipTarget`]({environment:angularAp
 <!--simpleTooltip.component.html-->
 
 <igx-avatar class="avatar" #target="tooltipTarget" [igxTooltipTarget]="tooltipRef"
-            src="assets/images/avatar/10.jpg" size="medium" [roundShape]="true">
+            src="assets/images/avatar/10.jpg" size="medium" shape="circle">
 </igx-avatar>
 
 <div #tooltipRef="tooltip" igxTooltip>
@@ -207,7 +207,7 @@ export class AppModule {}
         <div class="locationTooltip" #locationTooltip="tooltip" igxTooltip>
             <div class="locationTooltipContent">
                 <igx-avatar class="logo" src="assets/images/card/avatars/igLogo.png"
-                    size="medium" [roundShape]="false"></igx-avatar>
+                    size="medium" shape="square"></igx-avatar>
                 <div>
                     <div>Infragistics Inc. HQ</div>
                     <div>2 Commerce Dr, Cranbury, NJ 08512, USA</div>

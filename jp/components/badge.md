@@ -57,7 +57,7 @@ export class AppModule {}
 
 ```html
 <div class="wrapper">
-    <igx-avatar icon="person" roundShape="true" size="small"></igx-avatar>
+    <igx-avatar icon="person" shape="circle" size="small"></igx-avatar>
     <igx-badge icon="check" type="success"></igx-badge>
 </div>
 ```
@@ -77,7 +77,15 @@ igx-badge {
 }
 ```
 
-すべて適切に設定すると、ブラウザ上でデモサンプルを確認することができます。
+### Badge Shape
+
+We can change the badge shape through the `shape` attribute setting its value to `square`. By default, the shape of the badge is `rounded`.
+
+```html
+<igx-badge icon="check" type="success" shape="square"></igx-badge>
+```
+
+すべて適切に設定すると、ブラウザ上で以上のデモ サンプルを確認することができます。
 
 ### リストのバッジ
 
@@ -120,7 +128,7 @@ export class AppModule {}
   <igx-list-item *ngFor="let member of members">
     <div class="wrapper">
       <div>
-        <igx-avatar icon="person" roundShape="true" size="small"></igx-avatar>
+        <igx-avatar icon="person" shape="circle" size="small"></igx-avatar>
         <igx-badge [icon]="member.icon" [type]="member.type" class="badge-style"></igx-badge>
       </div>
       <div class="contact-container">
@@ -204,12 +212,10 @@ class Member {
 
 サンプルを正しく構成すると、アバターと、その状態を示すバッジとともにメンバーのリストが表示されます。
 
-
 <code-view style="height: 280px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-display/badge-sample-3" >
 </code-view>
-
 
 ## スタイル設定
 
@@ -277,7 +283,6 @@ $custom-badge-theme: badge-theme(
 
 ### デモ
 
-
 <code-view style="height:340px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-display/badge-styling-sample" >
@@ -303,4 +308,3 @@ $custom-badge-theme: badge-theme(
 コミュニティに参加して新しいアイデアをご提案ください。
 * [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
-

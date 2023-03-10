@@ -47,34 +47,41 @@ export class AppModule {}
 
 ## 例
 
-Avatar の形式は四角または丸で、3 つのサイズ オプション (大、中、小) があります。イニシャル、画像、またはアイコンを表示できます。
+The Ignite UI for Angular Avatar component comes in three shapes (square, rounded, and circle) and three size options (small, medium, and large).イニシャル、画像、またはアイコンを表示できます。
+
+### Avatar Shape
+We can change the avatar shape through the `shape` attribute setting its value to `square`, `rounded` or `circle`. By default, the shape of the avatar is `square`.
+
+```html
+<igx-avatar shape="circle"></igx-avatar>
+```
 
 ### イニシャルを表示するアバター
 [イニシャル]({environment:angularApiUrl}/classes/igxavatarcomponent.html#initials) ('John Smith' の場合 'JS') を使用した簡易なアバターを作成するには、以下のコードをコンポーネントのテンプレートに追加します。
 
 ```html
-<igx-avatar initials="JS">
-</igx-avatar>
+<igx-avatar initials="JS" shape="circle"></igx-avatar>
 ```
 アバターを丸形に設定し、サイズを大きくします。
 
 ```html
-<igx-avatar initials="JS"
-            [roundShape]="true"
-            size="medium">
-</igx-avatar>
+<igx-avatar size="medium" initials="JS" shape="circle"></igx-avatar>
 ```
 `background` プロパティを使用して背景色を変更できます。また、`color` プロパティを使用してイニシャルの色を設定します。
 
 ```scss
 // avatar.component.scss
 
-.igx-avatar {
+igx-avatar {
     background: #e41c77;
     color: #000000;
 }
 
 ```
+
+> [!WARNING]
+> The `roundShape` property of the `igx-avatar` component have been deprecated. The `shape` attribute should be used instead.
+
 以下は結果です。
 
 <div class="sample-container loading" style="height:100px">
@@ -102,7 +109,7 @@ Avatar の形式は四角または丸で、3 つのサイズ オプション (�
 
 ```html
 <igx-avatar icon="person"
-            [roundShape]="true"
+            shape="rounded"
             size="small">
 </igx-avatar>
 ```
@@ -124,7 +131,7 @@ Avatar のスタイル設定を始めるには、すべてのテーマ関数と�
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単な方法は、[`avatar-theme`]({environment:sassApiUrl}/index.html#function-avatar-theme) を拡張する新しいテーマを作成し、`$background`、`$color` と `$border-radius-square` パラメーターを受け取る方法です。
+最も簡単な方法は、[`avatar-theme`]({environment:sassApiUrl}/index.html#function-avatar-theme) を拡張する新しいテーマを作成し、`$background`、`$color` と `$border-radius` パラメーターを受け取る方法です。
 
 次のマークアップを前提として:
 
@@ -140,7 +147,7 @@ Avatar のスタイル設定を始めるには、すべてのテーマ関数と�
 $custom-avatar-theme: avatar-theme(
     $background: #72da67,
     $color: #000000,
-    $border-radius-square: 16px
+    $border-radius: 16px
 );
 ```
 

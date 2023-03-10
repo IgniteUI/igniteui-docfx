@@ -259,7 +259,7 @@ public contacts = [{
     Contacts
   </igx-list-item>
   <igx-list-item #item *ngFor="let contact of contacts;">
-      <igx-avatar igxListThumbnail [src]="contact.photo" roundShape="true"></igx-avatar>
+      <igx-avatar igxListThumbnail [src]="contact.photo" shape="circle"></igx-avatar>
       <h4 igxListLineTitle>{{ contact.name }}</h4>
       <p igxListLineSubTitle class="phone">{{ contact.phone }}</p>
       <span igxListLine>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, laborum.</span>
@@ -369,7 +369,7 @@ public selectDensity(event) {
   </ng-template>
   <igx-list-item isHeader="true">Contacts</igx-list-item>
   <igx-list-item #item *ngFor="let contact of contacts">
-    <igx-avatar igxListThumbnail [src]="contact.photo" roundShape="true"></igx-avatar>
+    <igx-avatar igxListThumbnail [src]="contact.photo" shape="circle"></igx-avatar>
     <h4 igxListLineTitle>{{ contact.name }}</h4>
     <p igxListLineSubTitle class="phone">{{ contact.phone }}</p>
     <igx-icon igxListAction [color]="contact.isFavorite ? 'orange' : 'lightgray'" (click)="toggleFavorite(item)">star</igx-icon>
@@ -532,7 +532,7 @@ export class ContactListComponent {
     <igx-list-item [ngClass]="contact.selected ? 'selected' : ''"
                     (click)="selectItem(contact)"
                     *ngFor="let contact of contacts | igxFilter: filterContacts;">
-        <igx-avatar igxListThumbnail [src]="contact.photo" roundShape="true"></igx-avatar>
+        <igx-avatar igxListThumbnail [src]="contact.photo" shape="circle"></igx-avatar>
         <span igxListLineTitle>{{ contact.name }}</span>
         <span igxListLineSubTitle>{{ contact.phone }}</span>
         <igx-icon igxListAction [style.color]="contact.isFavorite ? 'orange' : 'lightgray'" (click)="toggleFavorite(contact, $event)">star</igx-icon>
