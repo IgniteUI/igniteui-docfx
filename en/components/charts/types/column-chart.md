@@ -15,9 +15,9 @@ The Ignite UI for Angular Column Char, Column Graph, or Vertical Bar Chart is am
 You can create Angular Column Chart in the [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html) control by binding your data and setting [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#charttype) to **Column** enum, as shown in the example below:
 
 <code-view style="height: 600px" alt="Angular Column Chart Multiple Sources"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-column-chart-multiple-sources"
-                                        github-src="charts/category-chart/column-chart-multiple-sources">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/column-chart-multiple-sources"
+                                                 github-src="charts/category-chart/column-chart-multiple-sources">
 </code-view>
 
 
@@ -56,9 +56,9 @@ Column Chart belongs to a group of Category Series and it is rendered using a co
 You can create this type of chart in the [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html) control by binding your data and setting the [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#charttype) property to **Column** value, as shown in the example below:
 
 <code-view style="height: 600px" alt="Angular Column Chart with Single Source"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-column-chart-single-source"
-                                        github-src="charts/category-chart/column-chart-single-source">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/column-chart-single-source"
+                                                 github-src="charts/category-chart/column-chart-single-source">
 </code-view>
 
 
@@ -69,9 +69,9 @@ You can create this type of chart in the [`IgxCategoryChartComponent`]({environm
 The Column Chart is able to render multiple columns per category for comparison purposes. You can create this type of chart in the [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html) control by binding your data and setting the [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#charttype) property to **Column** value, as shown in the example below:
 
 <code-view style="height: 600px" alt="Angular Column Chart with Multiple Sources"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-column-chart-multiple-sources"
-                                        github-src="charts/category-chart/column-chart-multiple-sources">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/column-chart-multiple-sources"
+                                                 github-src="charts/category-chart/column-chart-multiple-sources">
 </code-view>
 
 
@@ -84,9 +84,9 @@ The Angular Column Chart has many options for styling and modification of the vi
 You can create this type of chart in the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) control by binding your data to a [`IgxColumnSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcolumnseriescomponent.html), as shown in the example below:
 
 <code-view style="height: 600px" alt="Angular Column Chart Styling"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-column-chart-styling"
-                                        github-src="charts/category-chart/column-chart-styling">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/column-chart-styling"
+                                                 github-src="charts/category-chart/column-chart-styling">
 </code-view>
 
 
@@ -103,9 +103,9 @@ The Waterfall Chart belongs to a group of category charts and it is rendered usi
 You can create this type of chart in the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) control by binding your data to a [`IgxWaterfallSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxwaterfallseriescomponent.html), as shown in the example below:
 
 <code-view style="height: 600px" alt="Angular Waterfall Chart"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-waterfall-chart"
-                                        github-src="charts/data-chart/waterfall-chart">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/waterfall-chart"
+                                                 github-src="charts/data-chart/waterfall-chart">
 </code-view>
 
 
@@ -118,9 +118,9 @@ The Stacked Column Chart is similar to the [Category Column Chart](column-chart.
 You can create this type of chart in the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) control by binding your data to a [`IgxStackedBarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedbarseriescomponent.html), as shown in the example below:
 
 <code-view style="height: 600px" alt="Angular Stacked Column Chart"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-stacked-column-chart"
-                                        github-src="charts/data-chart/stacked-column-chart">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/stacked-column-chart"
+                                                 github-src="charts/data-chart/stacked-column-chart">
 </code-view>
 
 
@@ -133,9 +133,9 @@ The Stacked 100% Column Chart is identical to the [Stacked Column Chart](stacked
 You can create this type of chart in the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) control by binding your data to a [`IgxStacked100BarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstacked100barseriescomponent.html), as shown in the example below:
 
 <code-view style="height: 600px" alt="Angular Stacked 100 Column Chart"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-stacked-100-column-chart"
-                                        github-src="charts/data-chart/stacked-100-column-chart">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/stacked-100-column-chart"
+                                                 github-src="charts/data-chart/stacked-100-column-chart">
 </code-view>
 
 
@@ -150,9 +150,9 @@ The Range Column Chart is identical to the [Range Area Chart](area-chart.md)(are
 You can create this type of chart in the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) control by binding your data to a [`IgxRangeColumnSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxrangecolumnseriescomponent.html), as shown in the example below:
 
 <code-view style="height: 600px" alt="Angular Range Column Chart"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-range-column-chart"
-                                        github-src="charts/data-chart/range-column-chart">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/range-column-chart"
+                                                 github-src="charts/data-chart/range-column-chart">
 </code-view>
 
 
@@ -165,9 +165,9 @@ The Radial Column Chart belongs to a group of [Radial Chart](radial-chart.md), a
 You can create this type of chart in the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) control by binding your data to a [`IgxRadialColumnSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialcolumnseriescomponent.html), as shown in the example below:
 
 <code-view style="height: 600px" alt="Angular Radial Column Chart"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-radial-column-chart"
-                                        github-src="charts/data-chart/radial-column-chart">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/radial-column-chart"
+                                                 github-src="charts/data-chart/radial-column-chart">
 </code-view>
 
 

@@ -12,9 +12,9 @@ In Angular map component, you can use the [`IgxGeographicPolylineSeriesComponent
 ## Angular Geographic Polyline Map Example
 
 <code-view style="height: 500px" alt="Angular Using Shape Polyline Series Example"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-type-shape-polyline-series"
-                                        github-src="maps/geo-map/type-shape-polyline-series">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map/type-shape-polyline-series"
+                                                 github-src="maps/geo-map/type-shape-polyline-series">
 </code-view>
 
 

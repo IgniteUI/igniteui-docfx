@@ -14,9 +14,9 @@ The Angular ZoomSlider control provides zooming functionality to range-enabled c
 The following sample demonstrates how to use [`IgxZoomSliderComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxzoomslidercomponent.html) to navigate content in [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html).
 
 <code-view style="height: 600px" alt="Angular Zoom Slider Example"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/zoomslider-overview"
-                                        github-src="charts/zoomslider/overview">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/zoomslider/overview"
+                                                 github-src="charts/zoomslider/overview">
 </code-view>
 
 

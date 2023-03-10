@@ -12,9 +12,9 @@ In Angular map component, you can use the [`IgxGeographicHighDensityScatterSerie
 ## Angular Geographic High Density Map Example
 
 <code-view style="height: 400px" alt="Angular Using Scatter High Density Series Example"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-type-scatter-density-series"
-                                        github-src="maps/geo-map/type-scatter-density-series">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map/type-scatter-density-series"
+                                                 github-src="maps/geo-map/type-scatter-density-series">
 </code-view>
 
 

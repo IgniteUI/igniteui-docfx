@@ -14,9 +14,9 @@ The Ignite UI for Angular Spline Chart belongs to a group of Category Charts tha
 The following example shows how to create Angular Spline Chart in the [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html) control by binding your data and setting the [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#charttype) property to **Spline** enum.
 
 <code-view style="height: 600px" alt="Angular Spline Chart Multiple Sources"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-spline-multiple-sources"
-                                        github-src="charts/category-chart/spline-multiple-sources">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/spline-multiple-sources"
+                                                 github-src="charts/category-chart/spline-multiple-sources">
 </code-view>
 
 
@@ -29,9 +29,9 @@ The Spline Chart is often used to show the change of value over time such as the
 You can create this type of chart in the [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html) control by binding your data and setting the [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#charttype) property to `Spline`, as shown in the example below:
 
 <code-view style="height: 600px" alt="Angular Spline Chart with Single Source"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-spline-single-source"
-                                        github-src="charts/category-chart/spline-single-source">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/spline-single-source"
+                                                 github-src="charts/category-chart/spline-single-source">
 </code-view>
 
 
@@ -44,9 +44,9 @@ Since the Spline Chart allows you to combine multiple series and compare or see 
 You can create this type of chart in the [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html) control by binding your data and setting the [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#charttype) property to `Spline`, as shown in the example below:
 
 <code-view style="height: 600px" alt="Angular Spline Chart with Multiple Sources"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-spline-multiple-sources"
-                                        github-src="charts/category-chart/spline-multiple-sources">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/spline-multiple-sources"
+                                                 github-src="charts/category-chart/spline-multiple-sources">
 </code-view>
 
 
@@ -59,9 +59,9 @@ If you need a Spline Chart with more features such as composite other series, yo
 You can create this type of chart in the [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html) control by binding your data and setting the [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#charttype) property to `Spline`, as shown in the example below:
 
 <code-view style="height: 600px" alt="Angular Spline Chart Styling"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-spline-styling"
-                                        github-src="charts/category-chart/spline-styling">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/spline-styling"
+                                                 github-src="charts/category-chart/spline-styling">
 </code-view>
 
 
@@ -78,9 +78,9 @@ The Stacked Spline Chart is often used to show the change of value over time suc
 You can create this type of chart in the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) control by binding your data to a [`IgxStackedSplineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedsplineseriescomponent.html), as shown in the example below:
 
 <code-view style="height: 600px" alt="Angular Stacked Spline Chart"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-stacked-spline-chart"
-                                        github-src="charts/data-chart/stacked-spline-chart">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/stacked-spline-chart"
+                                                 github-src="charts/data-chart/stacked-spline-chart">
 </code-view>
 
 
@@ -93,9 +93,9 @@ The Stacked 100% Spline Chart is identical to the Stacked Spline Chart in all as
 You can create this type of chart in the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) control by binding your data to a [`IgxStacked100SplineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstacked100splineseriescomponent.html), as shown in the example below:
 
 <code-view style="height: 600px" alt="Angular Stacked 100 Spline Chart"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-stacked-100-spline-chart"
-                                        github-src="charts/data-chart/stacked-100-spline-chart">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/stacked-100-spline-chart"
+                                                 github-src="charts/data-chart/stacked-100-spline-chart">
 </code-view>
 
 

@@ -13,9 +13,9 @@ By the default, the Ignite UI for Angular map component already displays geograp
 ## Angular Displaying Imagery from Open Street Maps Example
 
 <code-view style="height: 500px" alt="Angular Displaying Imagery from Open Street Maps Example"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-display-osm-imagery"
-                                        github-src="maps/geo-map/display-osm-imagery">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map/display-osm-imagery"
+                                                 github-src="maps/geo-map/display-osm-imagery">
 </code-view>
 
 

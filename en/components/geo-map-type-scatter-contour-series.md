@@ -12,9 +12,9 @@ In Angular map component, you can use the [`IgxGeographicContourLineSeriesCompon
 ## Angular Geographic Contour Map Example
 
 <code-view style="height: 500px" alt="Angular Using Scatter Contour Series Example"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-type-scatter-contour-series"
-                                        github-src="maps/geo-map/type-scatter-contour-series">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map/type-scatter-contour-series"
+                                                 github-src="maps/geo-map/type-scatter-contour-series">
 </code-view>
 
 

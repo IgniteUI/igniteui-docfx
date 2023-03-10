@@ -17,9 +17,9 @@ The Ignite UI for Angular bullet graph component provides you with the ability t
 The following sample demonstrates how setting multiple properties on the same [`IgxBulletGraphComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbulletgraphcomponent.html) can transform it to completely different bullet graph.
 
 <code-view style="height: 155px" alt="Angular Bullet Graph Example"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/gauges/bullet-graph-animation"
-                                        github-src="gauges/bullet-graph/animation">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/gauges/bullet-graph/animation"
+                                                 github-src="gauges/bullet-graph/animation">
 </code-view>
 
 
@@ -116,9 +116,9 @@ Performance value is the primary measure displayed by the component and it is vi
 ```
 
 <code-view style="height: 125px" alt="Angular bullet graph measures"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/gauges/bullet-graph-measures"
-                                        github-src="gauges/bullet-graph/measures">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/gauges/bullet-graph/measures"
+                                                 github-src="gauges/bullet-graph/measures">
 </code-view>
 
 
@@ -152,9 +152,9 @@ The ranges are visual elements that highlight a specified range of values on a s
 ```
 
 <code-view style="height: 125px" alt="Angular bullet graph ranges"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/gauges/bullet-graph-ranges"
-                                        github-src="gauges/bullet-graph/ranges">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/gauges/bullet-graph/ranges"
+                                                 github-src="gauges/bullet-graph/ranges">
 </code-view>
 
 
@@ -186,9 +186,9 @@ The tick marks serve as a visual division of the scale into intervals in order t
 ```
 
 <code-view style="height: 125px" alt="Angular bullet graph tickmarks"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/gauges/bullet-graph-tickmarks"
-                                        github-src="gauges/bullet-graph/tickmarks">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/gauges/bullet-graph/tickmarks"
+                                                 github-src="gauges/bullet-graph/tickmarks">
 </code-view>
 
 
@@ -211,9 +211,9 @@ The labels indicate the measures on the scale.
 ```
 
 <code-view style="height: 125px" alt="Angular bullet graph labels"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/gauges/bullet-graph-labels"
-                                        github-src="gauges/bullet-graph/labels">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/gauges/bullet-graph/labels"
+                                                 github-src="gauges/bullet-graph/labels">
 </code-view>
 
 
@@ -235,9 +235,9 @@ The backing element represents background and border of the bullet graph compone
 ```
 
 <code-view style="height: 125px" alt="Angular bullet graph background"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/gauges/bullet-graph-background"
-                                        github-src="gauges/bullet-graph/background">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/gauges/bullet-graph/background"
+                                                 github-src="gauges/bullet-graph/background">
 </code-view>
 
 
@@ -260,9 +260,9 @@ The scale is visual element that highlights the full range of values in the gaug
 ```
 
 <code-view style="height: 125px" alt="Angular bullet graph scale"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/gauges/bullet-graph-scale"
-                                        github-src="gauges/bullet-graph/scale">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/gauges/bullet-graph/scale"
+                                                 github-src="gauges/bullet-graph/scale">
 </code-view>
 
 

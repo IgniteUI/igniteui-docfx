@@ -15,9 +15,9 @@ In the Ignite UI for Angular [`IgxCategoryChartComponent`]({environment:dvApiBas
 The following example depicts a [Column Chart](../types/column-chart.md) that groups by the Country member of the `XAxis` and applies a summary and sort based on the Sales Sum.
 
 <code-view style="height: 500px" alt="Angular Data Aggregations Example"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-data-aggregations"
-                                        github-src="charts/category-chart/data-aggregations">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/data-aggregations"
+                                                 github-src="charts/category-chart/data-aggregations">
 </code-view>
 
 

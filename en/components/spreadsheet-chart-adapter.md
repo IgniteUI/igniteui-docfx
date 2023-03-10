@@ -12,9 +12,9 @@ The Angular Spreadsheet component allows displaying charts in your [`IgxSpreadsh
 ## Angular Spreadsheet Chart Adapter Example
 
 <code-view style="height: 500px" alt="Angular Spreadsheet Chart Adapter Example"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/excel/spreadsheet-adapter-chart"
-                                        github-src="excel/spreadsheet/adapter-chart">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/excel/spreadsheet/adapter-chart"
+                                                 github-src="excel/spreadsheet/adapter-chart">
 </code-view>
 
 

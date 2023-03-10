@@ -12,9 +12,9 @@ The Angular Spreadsheet component allows you to perform commands for activating 
 ## Angular Working with Commands Example
 
 <code-view style="height: 500px" alt="Angular Working with Commands Example"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/excel/spreadsheet-commands"
-                                        github-src="excel/spreadsheet/commands">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/excel/spreadsheet/commands"
+                                                 github-src="excel/spreadsheet/commands">
 </code-view>
 
 

@@ -15,9 +15,9 @@ The Ignite UI for Angular charts allows for interactive panning and zooming via 
 The following example shows all of the available panning and zooming options that are available. You can interact with the example by using the buttons, or select your desired options using the dropdowns or checkboxes.
 
 <code-view style="height: 600px" alt="Angular Navigation Example"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-chart-navigation"
-                                        github-src="charts/data-chart/chart-navigation">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/chart-navigation"
+                                                 github-src="charts/data-chart/chart-navigation">
 </code-view>
 
 
@@ -65,9 +65,9 @@ These can be configured to the following options
 The following example demonstrates enabling scrollbars.
 
 <code-view style="height: 600px" alt="Angular Navigation Example"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-scrollbars"
-                                        github-src="charts/financial-chart/scrollbars">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart/scrollbars"
+                                                 github-src="charts/financial-chart/scrollbars">
 </code-view>
 
 

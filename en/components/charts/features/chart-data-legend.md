@@ -15,9 +15,9 @@ In Ignite UI for Angular, the [`IgxDataLegendComponent`]({environment:dvApiBaseU
 The rows of the [`IgxDataLegendComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatalegendcomponent.html) include the header row, series row(s), and the summary row. The header row displays the axis label of the point that is hovered, and can be changed using the [`headerText`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatalegendcomponent.html#headertext) property.
 
 <code-view style="height: 450px" alt="Angular Category Chart Data Legend Example"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-data-legend"
-                                        github-src="charts/category-chart/data-legend">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/data-legend"
+                                                 github-src="charts/category-chart/data-legend">
 </code-view>
 
 
@@ -38,9 +38,9 @@ Finally, there is a summary row that displays the total of all series values. Th
 The columns of the [`IgxDataLegendComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatalegendcomponent.html) include the series title, label, value of data column, and optional unit associated with the value. Some series in the chart can have multiple columns for label, value, and units. For example, financial price series has **High**, **Low**, **Open**, and **Close** data columns which can be filtered in the [`IgxDataLegendComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatalegendcomponent.html) using the [`includedColumns`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatalegendcomponent.html#includedcolumns) or [`excludedColumns`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatalegendcomponent.html#excludedcolumns) properties.
 
 <code-view style="height: 450px" alt="Angular Financial Chart Data Legend Example"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-data-legend"
-                                        github-src="charts/financial-chart/data-legend">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart/data-legend"
+                                                 github-src="charts/financial-chart/data-legend">
 </code-view>
 
 
@@ -93,9 +93,9 @@ Also, you can use the `UnitText` property on the [`IgxDataLegendComponent`]({env
 The [`IgxDataLegendComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatalegendcomponent.html) provides properties for styling each type of column. Each of these properties begins with **Title**, **Label**, **Value**, or **Units**. You can style the text's color, font, and margin. For example, if you wanted to set the text color of all columns, you would set the [`titleTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatalegendcomponent.html#titletextcolor), [`labelTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatalegendcomponent.html#labeltextcolor), [`valueTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatalegendcomponent.html#valuetextcolor), and [`unitsTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatalegendcomponent.html#unitstextcolor) properties. The following example demonstrates a utilization of the styling properties mentioned above:
 
 <code-view style="height: 450px" alt="Angular Data Legend Styling Example"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-data-legend-styling-props"
-                                        github-src="charts/financial-chart/data-legend-styling-props">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart/data-legend-styling-props"
+                                                 github-src="charts/financial-chart/data-legend-styling-props">
 </code-view>
 
 
@@ -105,9 +105,9 @@ The [`IgxDataLegendComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-ang
 The following example demonstrates how to use those properties:
 
 <code-view style="height: 450px" alt="Angular Data Legend Formatting Decimals Example"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-data-legend-formatting-decimals"
-                                        github-src="charts/category-chart/data-legend-formatting-decimals">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/data-legend-formatting-decimals"
+                                                 github-src="charts/category-chart/data-legend-formatting-decimals">
 </code-view>
 
 
@@ -116,9 +116,9 @@ The following example demonstrates how to use those properties:
 You have the ability to change the default decimal display of values within the [`IgxDataLegendComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatalegendcomponent.html) to a currency by changing the [`valueFormatMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatalegendcomponent.html#valueformatmode) property. Also, you can change the culture of the displayed currency symbol by setting the [`valueFormatCulture`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatalegendcomponent.html#valueformatculture) property a culture tag. For example, the following example data legend with the [`valueFormatCulture`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatalegendcomponent.html#valueformatculture) set to "en-GB" to display British Pounds (£) symbol:
 
 <code-view style="height: 450px" alt="Angular Formatting Currency Example"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-data-legend-formatting-currency"
-                                        github-src="charts/financial-chart/data-legend-formatting-currency">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart/data-legend-formatting-currency"
+                                                 github-src="charts/financial-chart/data-legend-formatting-currency">
 </code-view>
 
 
