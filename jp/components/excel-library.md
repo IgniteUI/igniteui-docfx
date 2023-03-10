@@ -12,23 +12,12 @@ Infragistics Angular Excel ライブラリは、[`workbook`]({environment:dvApiB
 
 ## Angular Excel ライブラリの例
 
-<code-view style="height: 100px"
+<code-view style="height: 100px" alt="Angular Excel ライブラリの例"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/excel/excel-library-overview"
-           alt="Angular Excel ライブラリの例"
-           github-src="excel/excel-library/overview">
+                    iframe-src="{environment:dvDemosBaseUrl}/excel/excel-library/overview"
+                                                 github-src="excel/excel-library/overview">
 </code-view>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <body>
-      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/excel/excel-library/overview?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
-        </a>
-        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/excel/excel-library/overview?file=src%2Fapp.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
-        </a>
-    </body>
-</html>
 
 <div class="divider--half"></div>
 
@@ -65,11 +54,11 @@ export class AppModule {}
 
 Excel ライブラリには、アプリのバンドル サイズを制限するために使用できる 5 つのモジュールが含まれています。
 
--   **IgxExcelCoreModule** – オブジェクトモデルを含み、Excel の基盤となります。
--   **IgxExcelFunctionsModule** – Sum、Average、Min、Max、SumIfs、Ifs など、数式評価のほとんどのカスタム関数を含み、このモジュールがなくても数式が計算 ( “=SUM(A1:A5 などの数式を適用するなど) されてセルの Value を要求する場合は数式の解析で問題を発生しません。(注: 例外のスローではありません。数式の結果がエラーとなるため特定のエラーを表すオブジェクト)。
--   **IgxExcelXlsModule** – xls (および関連する) タイプ ファイルのロジックの読み込みと保存を含みます。これは Excel97to2003 関連の WorkbookFormats です。
--   **IgxExcelXlsxModule** – xlsx (および関連する) タイプ ファイルのロジックの読み込みと保存を含みます。これは Excel2007 関連および StrictOpenXml ANDWorkbookFormats です。
--   **IgxExcelModule** – 他の 4 つのモジュールの参照ですべての機能の読み込み/使用を可能にします。
+*   **IgxExcelCoreModule** – オブジェクトモデルを含み、Excel の基盤となります。
+*   **IgxExcelFunctionsModule** – Sum、Average、Min、Max、SumIfs、Ifs など、数式評価のほとんどのカスタム関数を含み、このモジュールがなくても数式が計算 ( “=SUM(A1:A5 などの数式を適用するなど) されてセルの Value を要求する場合は数式の解析で問題を発生しません。(注: 例外のスローではありません。数式の結果がエラーとなるため特定のエラーを表すオブジェクト)。
+*   **IgxExcelXlsModule** – xls (および関連する) タイプ ファイルのロジックの読み込みと保存を含みます。これは Excel97to2003 関連の WorkbookFormats です。
+*   **IgxExcelXlsxModule** – xlsx (および関連する) タイプ ファイルのロジックの読み込みと保存を含みます。これは Excel2007 関連および StrictOpenXml ANDWorkbookFormats です。
+*   **IgxExcelModule** – 他の 4 つのモジュールの参照ですべての機能の読み込み/使用を可能にします。
 
 <!-- end: Angular, React, WebComponents -->
 
@@ -77,23 +66,23 @@ Excel ライブラリには、アプリのバンドル サイズを制限する�
 
 以下は Excel のサポートされるバージョンのリストです。
 
--   Microsoft Excel 97
+*   Microsoft Excel 97
 
--   Microsoft Excel 2000
+*   Microsoft Excel 2000
 
--   Microsoft Excel 2002
+*   Microsoft Excel 2002
 
--   Microsoft Excel 2003
+*   Microsoft Excel 2003
 
--   Microsoft Excel 2007
+*   Microsoft Excel 2007
 
--   Microsoft Excel 2010
+*   Microsoft Excel 2010
 
--   Microsoft Excel 2013
+*   Microsoft Excel 2013
 
--   Microsoft Excel 2016
+*   Microsoft Excel 2016
 
-> [!NOTE]
+> \[!Note]
 > Excel ライブラリ は Excel Binary Workbook (.xlsb) フォーマットを現時点ではサポートしていません。
 
 ## ワークブックの読み込みと保存
@@ -118,13 +107,16 @@ var workbook = ExcelUtility.load(file);
 ExcelUtility.save(workbook, "fileName");
 ```
 
-<div class="divider--half"></div>
+> \[!Note]
+> For Angular
+>
+> <div class="divider--half"></div>
 
 ## ヒープの管理
 
-Excel Library のサイズに因り、ソースマップの生成を無効にすることを推奨します。
-
-architect => build => options から serve の options で `vendorSourceMap` オプションを設定して `angular.json` を変更します。
+> Excel Library のサイズに因り、ソースマップの生成を無効にすることを推奨します。
+>
+> architect => build => options から serve の options で `vendorSourceMap` オプションを設定して `angular.json` を変更します。
 
 ```ts
 ...
@@ -153,11 +145,13 @@ architect => build => options から serve の options で `vendorSourceMap` オ
       }
 ```
 
+>
+
 <!-- -->
 
 ## API リファレンス
 
--   `Load`
--   `WorkbookInProcessRuntime`
--   [`Worksheet`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html)
--   [`workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/sheet.html#workbook)
+*   `Load`
+*   `WorkbookInProcessRuntime`
+*   [`Worksheet`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html)
+*   [`workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/sheet.html#workbook)
