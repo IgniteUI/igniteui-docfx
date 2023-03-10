@@ -12,9 +12,9 @@ In Angular map component, you can use the [`IgxGeographicShapeSeriesComponent`](
 ## Angular Geographic Polygon Map Example
 
 <code-view style="height: 500px" alt="Angular Using Shape Polygon Series Example"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-type-shape-polygon-series"
-                                        github-src="maps/geo-map/type-shape-polygon-series">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map/type-shape-polygon-series"
+                                                 github-src="maps/geo-map/type-shape-polygon-series">
 </code-view>
 
 

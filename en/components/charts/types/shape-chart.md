@@ -17,9 +17,9 @@ The Angular Scatter Polygon Chart renders an array or array of arrays of polygon
 You can create this type of chart in the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) control by binding your data to a [`IgxScatterPolygonSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolygonseriescomponent.html), as shown in the example below:
 
 <code-view style="height: 600px" alt="Angular Scatter Polygon Chart"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-scatter-polygon-series"
-                                        github-src="charts/data-chart/type-scatter-polygon-series">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/type-scatter-polygon-series"
+                                                 github-src="charts/data-chart/type-scatter-polygon-series">
 </code-view>
 
 
@@ -32,9 +32,9 @@ The Angular Scatter Polyline Chart renders an array or array of arrays of polyli
 You can create this type of chart in the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) control by binding your data to a [`IgxScatterPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterpolylineseriescomponent.html), as shown in the example below:
 
 <code-view style="height: 600px" alt="Angular Scatter Polyline Chart"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-type-scatter-polyline-series"
-                                        github-src="charts/data-chart/type-scatter-polyline-series">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/type-scatter-polyline-series"
+                                                 github-src="charts/data-chart/type-scatter-polyline-series">
 </code-view>
 
 

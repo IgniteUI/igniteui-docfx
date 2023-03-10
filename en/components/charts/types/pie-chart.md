@@ -15,9 +15,9 @@ The Ignite UI for Angular Pie Chart, or Pie Graph, is a part-to-whole chart that
 You can create the Angular Pie Chart in the [`IgxPieChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartcomponent.html) by binding your data items with a string and a numeric data value. These data values will add up to a value of 100% of visualization. In this case, the example shows the overall breakdown of budget spend by department.
 
 <code-view style="height: 600px" alt="Angular Pie Chart Overview"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart-overview"
-                                        github-src="charts/pie-chart/overview">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart/overview"
+                                                 github-src="charts/pie-chart/overview">
 </code-view>
 
 
@@ -73,9 +73,9 @@ In order to display a legend next to the pie chart an ItemLegend needs to be cre
 Additionally you can use the [`legendItemTemplate`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartbasecomponent.html#legenditemtemplate) and [`legendItemBadgeTemplate`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartbasecomponent.html#legenditembadgetemplate) properties and the various font properties on ItemLegend to further customize the look of the legend items.
 
 <code-view style="height: 600px" alt="Angular Pie Chart Legend"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart-legend"
-                                        github-src="charts/pie-chart/legend">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart/legend"
+                                                 github-src="charts/pie-chart/legend">
 </code-view>
 
 
@@ -90,9 +90,9 @@ In the sample below, the [`othersCategoryThreshold`]({environment:dvApiBaseUrl}/
 If you set [`othersCategoryType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartbasecomponent.html#otherscategorytype) to Percent, then [`othersCategoryThreshold`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartbasecomponent.html#otherscategorythreshold) will be interpreted as a percentage rather than as a value, i.e. items whose values are less than 2% of the sum of all item values would be assigned to the Others category. You can use whichever [`othersCategoryType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartbasecomponent.html#otherscategorytype) is most appropriate for your application.
 
 <code-view style="height: 600px" alt="Angular Pie Chart Others"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart-others"
-                                        github-src="charts/pie-chart/others">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart/others"
+                                                 github-src="charts/pie-chart/others">
 </code-view>
 
 
@@ -103,9 +103,9 @@ If you set [`othersCategoryType`]({environment:dvApiBaseUrl}/products/ignite-ui-
 The pie chart supports explosion of individual pie slices as well as a `SliceClick` event that allows you to modify selection states and implement custom logic
 
 <code-view style="height: 600px" alt="Angular Pie Chart Explosion"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart-explosion"
-                                        github-src="charts/pie-chart/explosion">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart/explosion"
+                                                 github-src="charts/pie-chart/explosion">
 </code-view>
 
 
@@ -135,9 +135,9 @@ The events that end in “Changing” are cancelable events which means you can 
 For scenarios where you click on the Others slice, the pie chart will return an object called [`IgxPieSliceOthersContext`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiesliceotherscontext.html). This object contains a list of the data items contained within the Others slice.
 
 <code-view style="height: 600px" alt="Angular Pie Chart Selection"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart-selection"
-                                        github-src="charts/pie-chart/selection">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart/selection"
+                                                 github-src="charts/pie-chart/selection">
 </code-view>
 
 
@@ -150,9 +150,9 @@ You can animate the pie chart smoothly by setting the `radiusFactor` property, w
 In the code below, the radiusFactor is increasing the chart by 0.25% of the size, and startAngle is rotating the chart by 1 degree. When radiusFactor and startAngle reached to its maximum limit the animation is stopped by reset the animation flag and clear the interval.
 
 <code-view style="height: 600px" alt="Angular Pie Chart Animation"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart-animation"
-                                        github-src="charts/pie-chart/animation">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart/animation"
+                                                 github-src="charts/pie-chart/animation">
 </code-view>
 
 
@@ -163,9 +163,9 @@ In the code below, the radiusFactor is increasing the chart by 0.25% of the size
 Once our pie chart is created, we may want to make some further styling customizations such as a change of the colors for the slices of the chart, as demonstrated below:
 
 <code-view style="height: 600px" alt="Angular Pie Chart Styling"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart-styling"
-                                        github-src="charts/pie-chart/styling">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart/styling"
+                                                 github-src="charts/pie-chart/styling">
 </code-view>
 
 
@@ -176,9 +176,9 @@ Once our pie chart is created, we may want to make some further styling customiz
 The Radial Pie Chart belongs to a group of Radial Charts and uses belongs to a group of radial charts and uses pie slices that extend from the center of chart towards locations of data points. This chart type takes concepts of categorizing multiple series of data points and wraps them around a circular axis rather than stretching data points along a horizontal line.
 
 <code-view style="height: 600px" alt="Angular Radial Pie Chart"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-radial-pie-chart"
-                                        github-src="charts/data-chart/radial-pie-chart">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/radial-pie-chart"
+                                                 github-src="charts/data-chart/radial-pie-chart">
 </code-view>
 
 

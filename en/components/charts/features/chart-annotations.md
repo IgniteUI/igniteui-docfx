@@ -15,9 +15,9 @@ The Angular chart's hover interactions and annotations are implemented through h
 The following example demonstrates the annotation layers that are available on the Angular chart. Click on the checkboxes to turn each layer on and off.
 
 <code-view style="height: 600px" alt="Angular Annotations Example"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-line-chart-with-annotations"
-                                        github-src="charts/category-chart/line-chart-with-annotations">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/line-chart-with-annotations"
+                                                 github-src="charts/category-chart/line-chart-with-annotations">
 </code-view>
 
 
@@ -44,9 +44,9 @@ By default, the color of the crosshair lines is a lighter color than the series 
 The following example shows how to configure the crosshair layer but targeting a single series, setting the type to vertical and styling the brush color.
 
 <code-view style="height: 500px" alt="Angular Crosshair Layer Styling"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-crosshair-layer-styling"
-                                        github-src="charts/data-chart/crosshair-layer-styling">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/crosshair-layer-styling"
+                                                 github-src="charts/data-chart/crosshair-layer-styling">
 </code-view>
 
 
@@ -67,9 +67,9 @@ You can also customize this annotation by setting the following properties:
 The following example demonstrates how to style the final value layer annotation by setting the properties listed above.
 
 <code-view style="height: 500px" alt="Angular Final Value Layer Styling"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-final-value-layer-styling"
-                                        github-src="charts/data-chart/final-value-layer-styling">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/final-value-layer-styling"
+                                                 github-src="charts/data-chart/final-value-layer-styling">
 </code-view>
 
 
@@ -103,9 +103,9 @@ You can also customize this annotation by setting the following properties:
 The following example demonstrates how to style the callout layer annotations by setting the properties listed above:
 
 <code-view style="height: 500px" alt="Angular Callout Layer Styling"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-callout-layer-styling"
-                                        github-src="charts/data-chart/callout-layer-styling">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/callout-layer-styling"
+                                                 github-src="charts/data-chart/callout-layer-styling">
 </code-view>
 
 

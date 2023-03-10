@@ -15,9 +15,9 @@ The Ignite UI for Angular Bubble Chart is a type of [Scatter Chart](scatter-char
 You can create Ignite UI for Angular Bubble Chart in [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) control using the [`IgxBubbleSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbubbleseriescomponent.html) and two numeric axes, as shown in the example below.
 
 <code-view style="height: 600px" alt="Angular Bubble Chart Example"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-scatter-bubble-chart-multiple-sources"
-                                        github-src="charts/data-chart/scatter-bubble-chart-multiple-sources">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/scatter-bubble-chart-multiple-sources"
+                                                 github-src="charts/data-chart/scatter-bubble-chart-multiple-sources">
 </code-view>
 
 
@@ -28,9 +28,9 @@ You can create Ignite UI for Angular Bubble Chart in [`IgxDataChartComponent`]({
 You can bind your data to `ItemsSource` property of [`IgxBubbleSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbubbleseriescomponent.html) and map data columns using its [`xMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterbasecomponent.html#xmemberpath), [`yMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxscatterbasecomponent.html#ymemberpath), [`radiusMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbubbleseriescomponent.html#radiusmemberpath) properties, as shown in the example below:
 
 <code-view style="height: 600px" alt="Angular Bubble Chart with Single Series"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-scatter-bubble-chart-single-source"
-                                        github-src="charts/data-chart/scatter-bubble-chart-single-source">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/scatter-bubble-chart-single-source"
+                                                 github-src="charts/data-chart/scatter-bubble-chart-single-source">
 </code-view>
 
 
@@ -41,9 +41,9 @@ You can bind your data to `ItemsSource` property of [`IgxBubbleSeriesComponent`]
 In Angular Bubble Chart, binding multiple data sources works by setting each new data source to `ItemsSource` property of a additional [`IgxBubbleSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbubbleseriescomponent.html), as shown in the example below:
 
 <code-view style="height: 600px" alt="Angular Bubble Chart with Multiple Series"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-scatter-bubble-chart-multiple-sources"
-                                        github-src="charts/data-chart/scatter-bubble-chart-multiple-sources">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/scatter-bubble-chart-multiple-sources"
+                                                 github-src="charts/data-chart/scatter-bubble-chart-multiple-sources">
 </code-view>
 
 
@@ -54,9 +54,9 @@ In Angular Bubble Chart, binding multiple data sources works by setting each new
 In Angular Bubble Chart, you can customize shape of bubble markers using [`markerType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxmarkerseriescomponent.html#markertype) property, their size with [`radiusScale`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbubbleseriescomponent.html#radiusscale) property, and their appearance using [`markerBrush`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxmarkerseriescomponent.html#markerbrush), [`markerOutline`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxmarkerseriescomponent.html#markeroutline), [`markerThickness`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxmarkerseriescomponent.html#markerthickness) properties. In addition, you can also color bubble markers based on a data column using [`fillMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbubbleseriescomponent.html#fillmemberpath) and [`fillScale`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbubbleseriescomponent.html#fillscale) properties. In this example, usage of above properties is demonstrated.
 
 <code-view style="height: 600px" alt="Angular Bubble Chart Styling"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-scatter-bubble-chart-styling"
-                                        github-src="charts/data-chart/scatter-bubble-chart-styling">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/scatter-bubble-chart-styling"
+                                                 github-src="charts/data-chart/scatter-bubble-chart-styling">
 </code-view>
 
 

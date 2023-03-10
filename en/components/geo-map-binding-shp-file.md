@@ -12,9 +12,9 @@ The Ignite UI for Angular map component, the [`IgxShapeDataSource`]({environment
 ## Angular Binding Shape Files with Geo-spatial Data Example
 
 <code-view style="height: 500px" alt="Angular Binding Shape Files with Geo spatial Data Example"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-binding-shp-polylines"
-                                        github-src="maps/geo-map/binding-shp-polylines">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map/binding-shp-polylines"
+                                                 github-src="maps/geo-map/binding-shp-polylines">
 </code-view>
 
 

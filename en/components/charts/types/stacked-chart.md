@@ -15,9 +15,9 @@ The Ignite UI for Angular Stacked Chart belongs to a special group of charts tha
 The following example, you can use the drop-down to switch between all of the different types stacked charts available in the Angular [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) control.
 
 <code-view style="height: 600px" alt="Angular Stacked Chart Types"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-stacked-chart-types"
-                                        github-src="charts/data-chart/stacked-chart-types">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/stacked-chart-types"
+                                                 github-src="charts/data-chart/stacked-chart-types">
 </code-view>
 
 
@@ -32,9 +32,9 @@ Stacked Area Charts are rendered using a collection of points connected by line 
 You can create this type of chart in the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) control by binding your data to a [`IgxStackedAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedareaseriescomponent.html), as shown in the example below.
 
 <code-view style="height: 600px" alt="Angular Stacked Area Chart"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-stacked-area-chart"
-                                        github-src="charts/data-chart/stacked-area-chart">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/stacked-area-chart"
+                                                 github-src="charts/data-chart/stacked-area-chart">
 </code-view>
 
 
@@ -47,9 +47,9 @@ Sometimes the series represent part of a whole being changed over time e.g. 
 You can create this type of chart in the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) control by binding your data to a [`IgxStacked100AreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstacked100areaseriescomponent.html), as shown in the example below.
 
 <code-view style="height: 600px" alt="Angular Stacked 100 Area Chart"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-stacked-100-area-chart"
-                                        github-src="charts/data-chart/stacked-100-area-chart">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/stacked-100-area-chart"
+                                                 github-src="charts/data-chart/stacked-100-area-chart">
 </code-view>
 
 
@@ -64,9 +64,9 @@ The Stacked Bar Chart differs from the [Bar Chart](bar-chart.md) in that the dat
 In this example of an Stacked Bar Chart, we have a Numeric X Axis (bottom labels of the chart) and a Category Y Axis (left labels of the chart). You can create this type of chart in the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) control by binding your data to a [`IgxStackedBarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedbarseriescomponent.html), as shown in the example below.
 
 <code-view style="height: 600px" alt="Angular Stacked Bar Chart"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-stacked-bar-chart"
-                                        github-src="charts/data-chart/stacked-bar-chart">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/stacked-bar-chart"
+                                                 github-src="charts/data-chart/stacked-bar-chart">
 </code-view>
 
 
@@ -79,9 +79,9 @@ The Angular Stacked 100% Bar Chart is identical to the Angular stacked bar chart
 In this example of a Stacked 100% Bar Chart, the Energy Product values are shown as a 100% value of all of the data in the fragments of the horizontal bars. You can create this type of chart in the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) control by binding your data to a [`IgxStacked100BarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstacked100barseriescomponent.html), as shown in the example below.
 
 <code-view style="height: 600px" alt="Angular Stacked 100 Bar Chart"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-stacked-100-bar-chart"
-                                        github-src="charts/data-chart/stacked-100-bar-chart">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/stacked-100-bar-chart"
+                                                 github-src="charts/data-chart/stacked-100-bar-chart">
 </code-view>
 
 
@@ -94,9 +94,9 @@ The Stacked Column Chart is identical to the [Column Chart](column-chart.md) in 
 You can create this type of chart in the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) control by binding your data to a [`IgxStackedColumnSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedcolumnseriescomponent.html), as shown in the example below.
 
 <code-view style="height: 600px" alt="Angular Stacked Column Chart"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-stacked-column-chart"
-                                        github-src="charts/data-chart/stacked-column-chart">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/stacked-column-chart"
+                                                 github-src="charts/data-chart/stacked-column-chart">
 </code-view>
 
 
@@ -109,9 +109,9 @@ The Stacked 100% Column Chart is identical to the Stacked Column Chart in all as
 The example below shows a study made for online shopping traffic by departments via tablet, phone and personal computers. You can create this type of chart in the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) control by binding your data to a [`IgxStacked100ColumnSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstacked100columnseriescomponent.html), as shown in the example below.
 
 <code-view style="height: 600px" alt="Angular Stacked 100 Column Chart"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-stacked-100-column-chart"
-                                        github-src="charts/data-chart/stacked-100-column-chart">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/stacked-100-column-chart"
+                                                 github-src="charts/data-chart/stacked-100-column-chart">
 </code-view>
 
 
@@ -122,9 +122,9 @@ The example below shows a study made for online shopping traffic by departments 
 The Stacked Line Chart is often used to show the change of value over time such as the amount of renewable electricity produced for several years between regions. You can create this type of chart in the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) control by binding your data to a [`IgxStackedLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedlineseriescomponent.html), as shown in the example below:
 
 <code-view style="height: 600px" alt="Angular Stacked Line Chart"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-stacked-line-chart"
-                                        github-src="charts/data-chart/stacked-line-chart">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/stacked-line-chart"
+                                                 github-src="charts/data-chart/stacked-line-chart">
 </code-view>
 
 
@@ -137,9 +137,9 @@ The Stacked 100% Line Chart is identical to the Stacked Line Chart in all aspect
 You can create this type of chart in the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) control by binding your data to a [`IgxStacked100LineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstacked100lineseriescomponent.html), as shown in the example below:
 
 <code-view style="height: 600px" alt="Angular Stacked 100 Line Chart"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-stacked-100-line-chart"
-                                        github-src="charts/data-chart/stacked-100-line-chart">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/stacked-100-line-chart"
+                                                 github-src="charts/data-chart/stacked-100-line-chart">
 </code-view>
 
 
@@ -152,9 +152,9 @@ Stacked Spline Area Charts are rendered using a collection of points connected b
 You can create this type of chart in the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) control by binding your data to a [`IgxStackedSplineAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedsplineareaseriescomponent.html), as shown in the example below.
 
 <code-view style="height: 600px" alt="Angular Stacked Spline Area Chart"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-stacked-spline-area-chart"
-                                        github-src="charts/data-chart/stacked-spline-area-chart">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/stacked-spline-area-chart"
+                                                 github-src="charts/data-chart/stacked-spline-area-chart">
 </code-view>
 
 
@@ -167,9 +167,9 @@ The Stacked 100% Spline Area Chart is identical to the Stacked Spline Area Chart
 You can create this type of chart in the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) control by binding your data to a [`IgxStacked100SplineAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstacked100splineareaseriescomponent.html), as shown in the example below.
 
 <code-view style="height: 600px" alt="Angular Stacked 100 Spline Area Chart"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-stacked-100-spline-area-chart"
-                                        github-src="charts/data-chart/stacked-100-spline-area-chart">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/stacked-100-spline-area-chart"
+                                                 github-src="charts/data-chart/stacked-100-spline-area-chart">
 </code-view>
 
 
@@ -180,9 +180,9 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
 The Stacked Spline Chart is often used to show the change of value over time such as the amount of renewable electricity produced for several years between regions. You can create this type of chart in the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) control by binding your data to a [`IgxStackedSplineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedsplineseriescomponent.html), as shown in the example below.
 
 <code-view style="height: 600px" alt="Angular Stacked Spline Chart"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-stacked-spline-chart"
-                                        github-src="charts/data-chart/stacked-spline-chart">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/stacked-spline-chart"
+                                                 github-src="charts/data-chart/stacked-spline-chart">
 </code-view>
 
 
@@ -195,9 +195,9 @@ The Stacked 100% Spline Chart is identical to the Stacked Spline Chart in all as
 You can create this type of chart in the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) control by binding your data to a [`IgxStacked100SplineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstacked100splineseriescomponent.html).
 
 <code-view style="height: 600px" alt="Angular Stacked 100 Spline Chart"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-stacked-100-spline-chart"
-                                        github-src="charts/data-chart/stacked-100-spline-chart">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/stacked-100-spline-chart"
+                                                 github-src="charts/data-chart/stacked-100-spline-chart">
 </code-view>
 
 

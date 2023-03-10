@@ -12,9 +12,9 @@ The Infragistics Angular Excel Engine's [`worksheet`]({environment:dvApiBaseUrl}
 ## Angular Using Worksheets Example
 
 <code-view style="height: 200px" alt="Angular Using Worksheets Example"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/excel/excel-library-operations-on-worksheets"
-                                        github-src="excel/excel-library/operations-on-worksheets">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/excel/excel-library/operations-on-worksheets"
+                                                 github-src="excel/excel-library/operations-on-worksheets">
 </code-view>
 
 

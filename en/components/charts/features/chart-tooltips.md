@@ -15,9 +15,9 @@ In Angular charts, tooltips provide details about bound data and they are render
 Angular Chart provide three types of tooltips that you can with tooltips enabled by setting the [`toolTipType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#tooltiptype) property. The following example shows the [Column Chart](../types/column-chart.md) with a combo-box that you can use to change type of tooltips.
 
 <code-view style="height: 500px" alt="Angular Tooltip Types Example"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-column-chart-with-tooltips"
-                                        github-src="charts/category-chart/column-chart-with-tooltips">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/column-chart-with-tooltips"
+                                                 github-src="charts/category-chart/column-chart-with-tooltips">
 </code-view>
 
 
@@ -43,9 +43,9 @@ If none of built-in types of tooltips are matching your requirements, you can cr
 This example shows how to create custom tooltips for all series in Angular [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html) control. Note that you can also apply the same logic to custom tooltips in Angular [`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html) control.
 
 <code-view style="height: 500px" alt="Angular Tooltip Template"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-tooltip-template"
-                                        github-src="charts/category-chart/tooltip-template">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/tooltip-template"
+                                                 github-src="charts/category-chart/tooltip-template">
 </code-view>
 
 
@@ -56,9 +56,9 @@ This example shows how to create custom tooltips for all series in Angular [`Igx
 This example shows how to create custom tooltips for each series in Angular Data Chart control.
 
 <code-view style="height: 500px" alt="Angular Tooltip Template"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-tooltip-template"
-                                        github-src="charts/data-chart/tooltip-template">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/tooltip-template"
+                                                 github-src="charts/data-chart/tooltip-template">
 </code-view>
 
 

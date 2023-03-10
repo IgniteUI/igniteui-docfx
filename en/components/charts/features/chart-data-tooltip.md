@@ -31,9 +31,9 @@ Finally, there is a summary row that displays the total of all series values. Th
 The following example demonstrates the data tooltip with a summary applied:
 
 <code-view style="height: 450px" alt="Angular Category Chart Data Tooltip Example"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-data-tooltip"
-                                        github-src="charts/category-chart/data-tooltip">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/data-tooltip"
+                                                 github-src="charts/category-chart/data-tooltip">
 </code-view>
 
 
@@ -72,9 +72,9 @@ The columns included in the [`dataToolTipIncludedColumns`]({environment:dvApiBas
 The following example demonstrates a data tooltip with the added columns of Open, High, Low, Close, and Change:
 
 <code-view style="height: 450px" alt="Angular Financial Chart Data Tooltip Example"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-data-tooltip"
-                                        github-src="charts/financial-chart/data-tooltip">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart/data-tooltip"
+                                                 github-src="charts/financial-chart/data-tooltip">
 </code-view>
 
 
@@ -85,9 +85,9 @@ The **DataToolTip** provides properties for styling each type of column. Each of
 The following example demonstrates usage of the styling properties mentioned above:
 
 <code-view style="height: 450px" alt="Angular Financial Chart Data Tooltip Styling Example"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-data-tooltip-styling-props"
-                                        github-src="charts/financial-chart/data-tooltip-styling-props">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart/data-tooltip-styling-props"
+                                                 github-src="charts/financial-chart/data-tooltip-styling-props">
 </code-view>
 
 
@@ -98,9 +98,9 @@ You can set [`dataToolTipGroupingMode`]({environment:dvApiBaseUrl}/products/igni
 The following example demonstrates a data tooltip positioned to the top-right of the chart:
 
 <code-view style="height: 450px" alt="Angular Category Chart Data Tooltip Positioning Example"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-data-tooltip-positioning"
-                                        github-src="charts/category-chart/data-tooltip-positioning">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/data-tooltip-positioning"
+                                                 github-src="charts/category-chart/data-tooltip-positioning">
 </code-view>
 
 
@@ -111,9 +111,9 @@ The **DataToolTip** provides automatic abbreviation of large numbers using its [
 The following example demonstrates a **DataToolTip** with the minimum and maximum fractions set:
 
 <code-view style="height: 450px" alt="Angular Category Chart Data Tooltip Formatting Decimals Example"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-data-tooltip-formatting-decimals"
-                                        github-src="charts/category-chart/data-tooltip-formatting-decimals">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/data-tooltip-formatting-decimals"
+                                                 github-src="charts/category-chart/data-tooltip-formatting-decimals">
 </code-view>
 
 
@@ -122,9 +122,9 @@ The following example demonstrates a **DataToolTip** with the minimum and maximu
 You can change the default decimal display of values within the **DataToolTip** to be currency by changing the [`dataToolTipValueFormatMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#datatooltipvalueformatmode) property of the layer. The **DataToolTip** also exposes the ability to modify the culture of the displayed currency symbol by using its [`dataToolTipValueFormatCulture`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#datatooltipvalueformatculture) property and setting it to its corresponding culture tag. For example, the following sample demonstrates a chart with the [`dataToolTipValueFormatCulture`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#datatooltipvalueformatculture) set to "en-GB":
 
 <code-view style="height: 450px" alt="Angular Financial Chart Data Tooltip Formatting Currency Example"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-data-tooltip-formatting-currency"
-                                        github-src="charts/financial-chart/data-tooltip-formatting-currency">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart/data-tooltip-formatting-currency"
+                                                 github-src="charts/financial-chart/data-tooltip-formatting-currency">
 </code-view>
 
 

@@ -15,9 +15,9 @@ The Ignite UI for Angular Point Chart renders a collection of points. Values are
 You can create the Angular Point Chart in the [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html) control by binding your data to `ItemsSource` property and setting [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#charttype) property to **Point** enum, as shown in the example below.
 
 <code-view style="height: 600px" alt="Angular Point Chart Example"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-point-chart-multiple-sources"
-                                        github-src="charts/category-chart/point-chart-multiple-sources">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/point-chart-multiple-sources"
+                                                 github-src="charts/category-chart/point-chart-multiple-sources">
 </code-view>
 
 
@@ -28,9 +28,9 @@ You can create the Angular Point Chart in the [`IgxCategoryChartComponent`]({env
 In the following example, the Angular Point Chart plots a single data source by automatically selecting numeric data column for y-axis and non-numeric data column for x-axis.
 
 <code-view style="height: 600px" alt="Angular Point Chart with Single Series"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-point-chart-single-source"
-                                        github-src="charts/category-chart/point-chart-single-source">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/point-chart-single-source"
+                                                 github-src="charts/category-chart/point-chart-single-source">
 </code-view>
 
 
@@ -41,9 +41,9 @@ In the following example, the Angular Point Chart plots a single data source by 
 Since the Angular Point Chart allows you to combine multiple series and compare or see how they change over time, let’s see how easy it is to achieve this. All we need to do is bind to a data source containing the data for China and the USA, and the point chart will automatically update to fit the additional data.
 
 <code-view style="height: 600px" alt="Angular Point Chart with Multiple Series"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-point-chart-multiple-sources"
-                                        github-src="charts/category-chart/point-chart-multiple-sources">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/point-chart-multiple-sources"
+                                                 github-src="charts/category-chart/point-chart-multiple-sources">
 </code-view>
 
 
@@ -54,9 +54,9 @@ Since the Angular Point Chart allows you to combine multiple series and compare 
 Once the Angular Point Chart is set up, we may want to make some further styling customizations such as change the markers and its outlines, brushes and thickness.
 
 <code-view style="height: 600px" alt="Angular Point Chart Styling"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-point-chart-styling"
-                                        github-src="charts/category-chart/point-chart-styling">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/point-chart-styling"
+                                                 github-src="charts/category-chart/point-chart-styling">
 </code-view>
 
 

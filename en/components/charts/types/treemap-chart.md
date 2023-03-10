@@ -15,9 +15,9 @@ The Ignite UI for Angular Treemap chart displays hierarchical (tree-structured) 
 In the following example, the [`IgxTreemapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtreemapcomponent.html) demonstrates the 30 largest countries in the world by total area.
 
 <code-view style="height: 600px" alt="Angular Treemap Example"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/tree-map-overview"
-                                        github-src="charts/tree-map/overview">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/tree-map/overview"
+                                                 github-src="charts/tree-map/overview">
 </code-view>
 
 
@@ -65,9 +65,9 @@ There are several common use cases for choosing a Treemap. When you:
 In the following example, the treemap demonstrates the ability of changing it's algorithmic structure by modifying the [`layoutType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtreemapcomponent.html#layouttype) and [`layoutOrientation`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtreemapcomponent.html#layoutorientation) properties.
 
 <code-view style="height: 600px" alt="Angular Treemap Layout Configuration"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/tree-map-layout"
-                                        github-src="charts/tree-map/layout">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/tree-map/layout"
+                                                 github-src="charts/tree-map/layout">
 </code-view>
 
 
@@ -100,9 +100,9 @@ Note that the [`layoutOrientation`]({environment:dvApiBaseUrl}/products/ignite-u
 In the following example, the treemap demonstrates the ability of changing the look and feel of the nodes achieved by styling through the `NodeStylingScript` event.
 
 <code-view style="height: 600px" alt="Angular Treemap Styling"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/tree-map-styling"
-                                        github-src="charts/tree-map/styling">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/tree-map/styling"
+                                                 github-src="charts/tree-map/styling">
 </code-view>
 
 

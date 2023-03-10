@@ -15,9 +15,9 @@ The Ignite UI for Angular Sparkline is a lightweight charting control. It is int
 The following example shows all the different types of [`Sparkline`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/sparkline.html) available. The type is defined by setting the [`displayType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#displaytype) property. If the [`displayType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#displaytype) property is not specified, then by default, the [`Line`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/sparklinedisplaytype.html#line) type is displayed.
 
 <code-view style="height: 450px" alt="Angular Sparkline Example"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/sparkline-display-types"
-                                        github-src="charts/sparkline/display-types">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/sparkline/display-types"
+                                                 github-src="charts/sparkline/display-types">
 </code-view>
 
 
@@ -65,9 +65,9 @@ The Angular Sparkline supports the following types of sparklines by setting the 
 *   [`WinLoss`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/sparklinedisplaytype.html#winloss): This type is similar in its visual appearance to Column chart type, in which the value of each column is equal to either the positive maximum (for positive values) or the negative minimum (for negative value) of the data set. The idea is to indicate a win or loss scenario. For the Win/Loss chart to display properly, the data set must have both positive and negative values. If the WinLoss sparkline is bound to the same data as the other types such as the Line type, which can be bound to a collection of numeric values, then the Angular Sparkline will select two values from the collection - the highest and the lowest - and will render the sparkline based upon those values.
 
 <code-view style="height: 450px" alt="Angular Sparkline Example"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/sparkline-display-types"
-                                        github-src="charts/sparkline/display-types">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/sparkline/display-types"
+                                                 github-src="charts/sparkline/display-types">
 </code-view>
 
 
@@ -89,9 +89,9 @@ Markers in the sparkline can be placed in any combination of the following locat
 All of the markers mentioned above can be customized using the related marker type's property in aspects of color, visibility, and size. For example, the `Low` markers above will have properties [`lowMarkerBrush`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#lowmarkerbrush), [`lowMarkerVisibility`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#lowmarkervisibility), and [`lowMarkerSize`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#lowmarkersize).
 
 <code-view style="height: 300px" alt="Angular sparkline markers"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/sparkline-markers"
-                                        github-src="charts/sparkline/markers">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/sparkline/markers"
+                                                 github-src="charts/sparkline/markers">
 </code-view>
 
 
@@ -112,9 +112,9 @@ By default, the normal range is not displayed. When enabled, the normal range sh
 You can also configure whether to show the normal range in front of or behind the plotted series in your Angular Sparkline by setting the [`displayNormalRangeInFront`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#displaynormalrangeinfront) property.
 
 <code-view style="height: 300px" alt="Angular sparkline normal range"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/sparkline-normal-range"
-                                        github-src="charts/sparkline/normal-range">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/sparkline/normal-range"
+                                                 github-src="charts/sparkline/normal-range">
 </code-view>
 
 
@@ -131,9 +131,9 @@ Trendlines can only be displayed one at a time and by default, the trendline is 
 The sample below shows all the available trendlines via the dropdown:
 
 <code-view style="height: 300px" alt="Angular sparkline trendlines"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/sparkline-trendlines"
-                                        github-src="charts/sparkline/trendlines">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/sparkline/trendlines"
+                                                 github-src="charts/sparkline/trendlines">
 </code-view>
 
 
@@ -146,9 +146,9 @@ The Angular Sparkline can detect unknown values and render the space for unknown
 To plot the unknown values, you can set the [`unknownValuePlotting`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#unknownvalueplotting) property of the Angular Sparkline. The sample below shows the differences between the values of the [`unknownValuePlotting`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxsparklinecomponent.html#unknownvalueplotting) property, allowing you to toggle it on or off using a checkbox:
 
 <code-view style="height: 300px" alt="Angular sparkline unknown values"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/sparkline-unknown-values"
-                                        github-src="charts/sparkline/unknown-values">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/sparkline/unknown-values"
+                                                 github-src="charts/sparkline/unknown-values">
 </code-view>
 
 
@@ -159,9 +159,9 @@ To plot the unknown values, you can set the [`unknownValuePlotting`]({environm
 You can embed the Angular Sparkline in a template column of data grid or other UI controls that support templates. The following code example shows how to do this:
 
 <code-view style="height: 600px" alt="Angular sparkline grid"
-  data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/sparkline-grid"
-                                        github-src="charts/sparkline/grid">
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/sparkline/grid"
+                                                 github-src="charts/sparkline/grid">
 </code-view>
 
 
