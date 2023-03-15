@@ -77,9 +77,9 @@ igx-badge {
 }
 ```
 
-### Badge Shape
+### Badge の形状
 
-We can change the badge shape through the `shape` attribute setting its value to `square`. By default, the shape of the badge is `rounded`.
+`shape` 属性の値を `square` に設定することで、バッジの形状を変更できます。デフォルトでは、バッジの形状は `rounded` です。
 
 ```html
 <igx-badge icon="check" type="success" shape="square"></igx-badge>

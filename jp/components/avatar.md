@@ -47,10 +47,10 @@ export class AppModule {}
 
 ## 例
 
-The Ignite UI for Angular Avatar component comes in three shapes (square, rounded, and circle) and three size options (small, medium, and large).イニシャル、画像、またはアイコンを表示できます。
+Ignite UI for Angular Avatar コンポーネントには、3 つの形状 (正方形、角丸、円) と 3 つのサイズ オプション (大、中、小) があります。イニシャル、画像、またはアイコンを表示できます。
 
-### Avatar Shape
-We can change the avatar shape through the `shape` attribute setting its value to `square`, `rounded` or `circle`. By default, the shape of the avatar is `square`.
+### Avatar の形状
+`shape` 属性の値を `square`、`rounded`、または `circle` に設定することで、アバターの形状を変更できます。デフォルトでは、アバターの形状は`square` です。
 
 ```html
 <igx-avatar shape="circle"></igx-avatar>
@@ -80,7 +80,7 @@ igx-avatar {
 ```
 
 > [!WARNING]
-> The `roundShape` property of the `igx-avatar` component have been deprecated. The `shape` attribute should be used instead.
+> `igx-avatar` コンポーネントの `roundShape` プロパティは廃止されました。代わりに `shape` 属性を使用する必要があります。
 
 以下は結果です。
 
