@@ -48,7 +48,7 @@ export class AppModule {}
 
 <img class="responsive-img"  src="../images/chip/selecting_default.gif" />
 
-選択は、[`selectable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#selectable) 入力を `true` に設定して有効にできます。チップを選択すると、[`selectedChanging`]({environment:angularApiUrl}/classes/igxchipcomponent.html#selectedchanging) イベントが発生します。新しい [`selected`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#selected) 値を提供することにより、新しいステートとこの選択の変更をトリガーした [`originalEvent`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#originalevent) の元のイベントを取得できます。[`selected`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#selected) プロパティをプログラムで設定して行う場合、[`originalEvent`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#originalevent) 引数に値 `null` になります。
+選択は、[`selectable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#selectable) 入力を `true` に設定して有効にできます。チップを選択すると、[`selectedChanging`]({environment:angularApiUrl}/classes/igxchipcomponent.html#selectedChanging) イベントが発生します。新しい [`selected`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#selected) 値を提供することにより、新しいステートとこの選択の変更をトリガーした [`originalEvent`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#originalEvent) の元のイベントを取得できます。[`selected`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#selected) プロパティをプログラムで設定して行う場合、[`originalEvent`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#originalEvent) 引数に値 `null` になります。
 
 ```html
 <igx-chip *ngFor="let chip of chipList" [selectable]="true">
