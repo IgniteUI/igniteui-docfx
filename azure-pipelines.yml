@@ -15,7 +15,7 @@ stages:
   - job: BuildDocs
     steps:
       - checkout: self
-        path: '$(Pipeline.Workspace)/uno'
+        path: '$(Pipeline.Workspace)\uno'
         
       - checkout: IgniteUIDocFX
-        path: '$(Pipeline.Workspace)/dos'
+        path: '$(Pipeline.Workspace)\dos'
