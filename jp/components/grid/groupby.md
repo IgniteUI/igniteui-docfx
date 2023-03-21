@@ -297,6 +297,18 @@ class WeekSortingStrategy extends BaseSortingStrategy {
 }
 ```
 
+From version 15.1.0, you can also use the built-in sorting strategy `GroupMemberCountSortingStrategy` to sort items based on members count. 
+
+```typescript
+public sortByGroup() {
+        const expressions = this.grid1.groupingExpressions;
+        if (expressions.length) {
+            const fieldName = expressions[0].fieldName;
+            const dir = expressions[0].dir === SortingDirection.Asc ? SortingDirection.Desc : SortingDirection.Asc;
+            this.grid1.groupBy({ fieldName, dir, ignoreCase: false, strategy: GroupMemberCountSortingStrategy.instance() });
+        }
+    }
+```
 
 ## スタイル設定
 
