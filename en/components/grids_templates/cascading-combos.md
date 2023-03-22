@@ -5,11 +5,9 @@ _keywords: angular cascading combos with grid, ignite ui for angular, infragisti
 ---
 
 # Angular Grid with Cascading Combos
-The Grid's Editing functionaltiy provides with the opportunity to use [Cascading Combos](../simple-combo.md#cascading-scenario), which represents two or more [Combos](../combo.md) depending on the value from the first combo, the end users will receive only relevant data.
+The Grid's Editing functionality provides with the opportunity to use [Cascading Combos](../simple-combo.md#cascading-scenario). By selecting the value in any preceding [Combos](../combo.md), the users will receive only the data that is relevant to their selection within the next Combo.
 
 ## Angular Grid with Cascading Combos Sample Overview
-By selecting the value in any preceding combo the next combo's values are going to be automatically filtered based on that selection.
-
 The sample below demonstrates how `Grid` works with nested `Cascading Combos`.
 
 @@if (igxName === 'IgxGrid') {
