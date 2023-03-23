@@ -297,10 +297,22 @@ class WeekSortingStrategy extends BaseSortingStrategy {
 }
 ```
 
+バージョン 15.1.0 以降、組み込みのソート ストラテジ `GroupMemberCountSortingStrategy` を使用して、メンバー数に基づいて項目をソートすることもできます。
+
+```typescript
+public sortByGroup() {
+        const expressions = this.grid1.groupingExpressions;
+        if (expressions.length) {
+            const fieldName = expressions[0].fieldName;
+            const dir = expressions[0].dir === SortingDirection.Asc ? SortingDirection.Desc : SortingDirection.Asc;
+            this.grid1.groupBy({ fieldName, dir, ignoreCase: false, strategy: GroupMemberCountSortingStrategy.instance() });
+        }
+    }
+```
 
 ## スタイル設定
 
-igxGridを使用すると、[Ignite UI for Angular テーマ ライブラリ](../themes/sass/component-themes.md)でスタイルを設定できます。グリッドの [テーマ]({environment:sassApiUrl}/index.html#function-grid-theme) は、グリッドのすべての機能をカスタマイズできるさまざまなプロパティを公開します。 
+igxGridを使用すると、[Ignite UI for Angular テーマ ライブラリ](../themes/sass/component-themes.md)でスタイルを設定できます。グリッドの[テーマ]({environment:sassApiUrl}/index.html#function-grid-theme)は、グリッドのすべての機能をカスタマイズできるさまざまなプロパティを公開します。 
 
 以下の手順では、グリッドの Group By スタイルをカスタマイズする手順を実行しています。
 
@@ -350,7 +362,7 @@ $custom-chips-theme: chip-theme(
 ### カスタム カラー パレットの定義
 
 上記で説明したアプローチでは、色の値がハード コーディングされていました。または、柔軟性を高めるために [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette)、[`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することもできます。
-`Igx-palette` は指定した一次色と二次色に基づいてカラーパレットを生成します。
+`igx-palette` は指定した一次色と二次色に基づいてカラーパレットを生成します。
 
 ```scss
 $black-color: #292826;
@@ -384,7 +396,7 @@ $custom-chips-theme: chip-theme(
 );
 ```
 ### カスタム スキーマの定義
-さらに進んで、[**スキーマ**](../themes/sass/schemas.md) のすべての利点を備えた柔軟な構造を構築できます。**スキーマ**はテーマを作成させるための方法です。
+さらに進んで、[**スキーマ**](../themes/sass/schemas.md)のすべての利点を備えた柔軟な構造を構築できます。**スキーマ**はテーマを作成させるための方法です。
 すべてのコンポーネントに提供される 2 つの事前定義されたスキーマの 1 つを拡張します。この場合、`$_light_grid` を使用します。
 ```scss
 $custom-grid-schema: extend($_light-grid,(

@@ -162,7 +162,7 @@ Snackbar の主な機能を説明しました。次の例はより複雑なサ�
     <igx-list-item igxRipple="pink" igxRippleTarget=".igx-list__item" *ngFor="let item of navItems">
         <div class="item-container">
             <div class="contact">
-                <igx-avatar [src]="item.avatar" roundShape="true"></igx-avatar>
+                <igx-avatar [src]="item.avatar" shape="circle"></igx-avatar>
                 <div class="contact__info">
                     <span class="name">{{item.text}}</span>
                 </div>
