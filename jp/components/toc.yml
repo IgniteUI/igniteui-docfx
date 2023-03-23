@@ -150,6 +150,9 @@
         - name: 検証
           href: grid/validation.md
           new: true
+        - name: Cascading combos
+          href: grid/cascading-combos.md
+          new: true
     - name: 行ドラッグ
       href: grid/row-drag.md
       updated: true
