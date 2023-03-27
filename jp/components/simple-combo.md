@@ -211,6 +211,9 @@ Simple ComboBox が開かれ、リスト項目がフォーカスされている�
            iframe-src="{environment:demosBaseUrl}/lists/simple-combo-cascading" alt="Angular カスケーディングの例">
 </code-view>
 
+
+[カスケード コンボを使用した Angular Grid のサンプル](../components/grid/cascading-combos.md)を参照してください。
+
 <div class="divider--half"></div>
 
 ### テンプレートの構成
