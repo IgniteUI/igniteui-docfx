@@ -53,7 +53,7 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
 
 ## from 15.0.x to 15.1.x
 - **Visual Change** 
-- In 15.1 the sizes of the input components has increased this is more noticeable when using Material theme, we do this to match Material spec. If your application is negatively affected by the change, you can use the displayDensity input and set it to a more dense setting, e.g. from comfortable to cozy or from cozy to compact.
+- In 15.1 the sizes of the input components have increased. This is more noticeable when using the Material theme. We do this to match Material spec. If your application is negatively affected by the change, you can use the displayDensity input and set it to a more dense setting, e.g. from comfortable to cozy or from cozy to compact.
 
   **Example**
 ```html
