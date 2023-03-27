@@ -72,7 +72,7 @@ avatar をターゲットにして、[`igxTooltipTarget`]({environment:angularAp
 <!--simpleTooltip.component.html-->
 
 <igx-avatar class="avatar" #target="tooltipTarget" igxTooltipTarget
-            src="assets/images/avatar/10.jpg" size="medium" [roundShape]="true">
+            src="assets/images/avatar/10.jpg" size="medium" shape="circle">
 </igx-avatar>
 ```
 
@@ -97,7 +97,7 @@ avatar をターゲットにして、[`igxTooltipTarget`]({environment:angularAp
 <!--simpleTooltip.component.html-->
 
 <igx-avatar class="avatar" #target="tooltipTarget" [igxTooltipTarget]="tooltipRef"
-            src="assets/images/avatar/10.jpg" size="medium" [roundShape]="true">
+            src="assets/images/avatar/10.jpg" size="medium" shape="circle">
 </igx-avatar>
 
 <div #tooltipRef="tooltip" igxTooltip>
@@ -207,7 +207,7 @@ export class AppModule {}
         <div class="locationTooltip" #locationTooltip="tooltip" igxTooltip>
             <div class="locationTooltipContent">
                 <igx-avatar class="logo" src="assets/images/card/avatars/igLogo.png"
-                    size="medium" [roundShape]="false"></igx-avatar>
+                    size="medium" shape="square"></igx-avatar>
                 <div>
                     <div>Infragistics Inc. HQ</div>
                     <div>2 Commerce Dr, Cranbury, NJ 08512, USA</div>
@@ -232,7 +232,7 @@ export class AppModule {}
 ## オーバーレイ構成
 [`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) および [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) ディレクティブは、[`IgxOverlayService`](overlay.md) を使用して各ツールチップ要素を開くか閉じるかします。
 
-[`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) ディレクティブは、[`overlaySettings`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#overlaySettings) プロパティ (inherited from the [`igxToggleAction`]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html)) を公開し、ツールチップ アニメーション、UI 状の配置などのカスタマイズが可能です。プロパティを設定しない場合は、デフォルト オーバーレイ設定が使用されます。
+[`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) ディレクティブは、[`overlaySettings`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#overlaySettings) プロパティ ([`igxToggleAction`]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html) から継承します。) を公開し、ツールチップ アニメーション、UI 状の配置などのカスタマイズが可能です。プロパティを設定しない場合は、デフォルト オーバーレイ設定が使用されます。
 
 > [!NOTE]
 > [`overlaySettings`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#overlaySettings) で設定したプロパティは、デフォルト オーバーレイ設定の同じプロパティをオーバーライドし、ツールチップに直接影響があります。
