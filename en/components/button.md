@@ -50,6 +50,7 @@ Use the [`igxButton`]({environment:angularApiUrl}/classes/igxbuttondirective.htm
 <div class="sample-container loading" style="height: 70px">
     <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-2">
 </iframe></div>
+
 ### Raised Button
 All you have to do to create a raised button is to change the value of the `igxButton` property:
 ```html
@@ -58,6 +59,7 @@ All you have to do to create a raised button is to change the value of the `igxB
 <div class="sample-container loading" style="height: 70px">
     <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-5">
 </iframe></div>
+
 ### Outlined Button
 Analogically, we can switch to outlined type:
 ```html
@@ -66,6 +68,7 @@ Analogically, we can switch to outlined type:
 <div class="sample-container loading" style="height: 70px">
     <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-8">
 </iframe></div>
+
 ### Icon Button
 We can also use icons as buttons:
 ```html
@@ -76,6 +79,7 @@ We can also use icons as buttons:
 <div class="sample-container loading" style="height: 70px">
     <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-7">
 </iframe></div>
+
 ### Floating Action Button
 We can create a floating action button and use an icon to display:
 ```html
@@ -108,6 +112,7 @@ The `disabled` property can be used to make a button unclickable:
 <div class="sample-container loading" style="height: 70px">
     <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-disabled-sample">
 </iframe></div>
+
 ### Ripple
 The [`igxRipple`]({environment:angularApiUrl}/classes/igxrippledirective.html) directive adds a ripple effect to your buttons or other specified elements. You can easily change the default ripple color, position and duration, using its properties:
 ```html
@@ -118,6 +123,7 @@ The [`igxRipple`]({environment:angularApiUrl}/classes/igxrippledirective.html) d
 <div class="sample-container loading" style="height: 70px">
     <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-3">
 </iframe></div>
+
 ### Span
 We can also use the `igxButton` directive to turn elements like `span` and `div` into Ignite UI for Angular styled buttons. The default colors can be customized via the `igxButtonColor` and the `igxButtonBackground` properties:
 ```html
@@ -135,6 +141,7 @@ We can allow the user to choose the display density of the `igxButton` by using 
 
 > [!NOTE]
 > Note that the `icon` type button does not introduce visual changes for different display density values.
+
 ```typescript
 // app.module.ts
 ...
@@ -230,12 +237,14 @@ If the component is using the [`Emulated`](themes/sass/component-themes.md#view-
            iframe-src="{environment:demosBaseUrl}/data-entries/buttons-style" >
 </code-view>
 <div class="divider--half"></div>
+
 ## API References
 <div class="divider--half"></div>
 * [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
 * [IgxButton Styles]({environment:sassApiUrl}/index.html#function-button-theme)
 * [IgxRippleDirective]({environment:angularApiUrl}/classes/igxrippledirective.html)
 * [IgxButtonGroupComponent]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html)
+
 ## Additional Resources
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
