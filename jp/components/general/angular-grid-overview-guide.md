@@ -25,7 +25,7 @@ Ignite UI for Angular は、Angular CLI または [Ignite UI CLI](./cli/getting-
 
 `ng add igniteui-angular` 
 
-Ignite UI for Angular を[既存の Angular アプリケーション](getting-started.md#installing-ignite-ui-for-angular)に追加する必要がある場合、このオプションお勧めします。 
+Ignite UI for Angular を[既存の Angular アプリケーション](getting-started.md#ignite-ui-for-angular-のインストール)に追加する必要がある場合、このオプションお勧めします。 
 
 新しいアプリケーションを最初から作成する場合、以下の方法をお勧めします。 
 
@@ -154,7 +154,7 @@ export class MyComponent implements OnInit {
     ...
 </igx-grid>
 ```
-詳細については、[データ バインディングのトピック](../grid/grid.md#angular-grid-data-binding)を参照してください。 
+詳細については、[データ バインディングのトピック](../grid/grid.md#angular-grid-データ-バインディング)を参照してください。 
 
 同じデータ バインディング方法は、igxDataChart などの他の Ignite UI コンポーネントにも適用できます。
 
