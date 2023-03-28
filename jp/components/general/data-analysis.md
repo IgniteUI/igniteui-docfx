@@ -80,7 +80,7 @@ _language: ja
 
 ## データ分析パッケージ
 
-この機能を使用できるには、以下の手順を実行します。**Igniteui-angular-extras** パッケージは [プライベート npm フィード](https://packages.infragistics.com/npm/js-licensed/) でのみ利用できます。[有効な商用ライセンス](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/general/ignite-ui-licensing.html#使用許諾契約)がある場合、プライベート フィードにアクセスできます。
+この機能を使用できるには、以下の手順を実行します。**igniteui-angular-extras** パッケージは [プライベート npm フィード](https://packages.infragistics.com/npm/js-licensed/) でのみ利用できます。[有効な商用ライセンス](ignite-ui-licensing.md#license-agreements) がある場合、プライベート フィードにアクセスできます。
 
 始めましょう:
 
@@ -131,11 +131,16 @@ npm install @infragistics/igniteui-angular igniteui-angular-core igniteui-angula
 <button class="full-screen-btn" onclick='window.open("{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis")'>全画面表示</button>
 
 以下のチャート タイプをサポートします。
-- [ColumnGrouped](../data-chart-type-category-series.md)、[AreaGrouped](../data-chart-type-category-area-series.md)、[LineGrouped](../data-chart-type-category-line-series.md)、[BarGrouped](../data-chart-type-category-series.md)
-- [ColumnStacked](../data-chart-type-stacked-column-series.md)、[AreaStacked](../data-chart-type-category-spline-area-series.md)、[LineStacked](../data-chart-type-stacked-line-series.md)、[BarStacked](../data-chart-type-stacked-bar-series.md)
-- Column100Stacked、[Area100Stacked](../data-chart-type-stacked-100-area-series.md)、[Line100Stacked](../data-chart-type-stacked-100-line-series.md)、[Bar100Stacked](../data-chart-type-stacked-100-bar-series.md)
-- ScatterPoint、ScatterBubble、ScatterLine. 意味のある散布バブル チャートを表示するために、データが有効な形式でない場合、プレビューを無効にします。
-- [円チャート](../pie-chart.md)
+- [縦棒チャート](../charts/types/column-chart.md)、
+[エリア チャート](../charts/types/stacked-chart.md)、
+[折れ線チャート](../charts/types/line-chart.md)、
+[棒チャート](../charts/types/line-chart.md)、
+- [積層型チャート](../charts/types/stacked-chart.md)、
+[積層型 100% チャート](../charts/types/stacked-chart.md)、
+- [円チャート](../charts/types/pie-chart.md)、
+[散布図](../charts/types/stacked-chart.md)、
+[バブル チャート](../charts/types/bubble-chart.md)
+意味のあるバブル チャートを表示するために、データが有効な形式でない場合、プレビューを無効にします。
 
 ## セルの条件付き書式 
 グリッドに数千行のデータがある場合、生の情報を検査するだけでパターンと傾向を分析することは容易ではありません。チャートやスパークラインと同様に、`条件付き書式`は、データを可視化し、理解しやすくする別の方法を提供します。 

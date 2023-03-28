@@ -2,7 +2,7 @@
 ---
 title: Angular Grid の集計 - Ignite UI for Angular
 _description: 列のグループ フッターに Angular のグリッド集計を設定し、Angular マテリアル UI の Ignite UI でカスタム Angular テンプレートを設定するオプションがあります。
-_keywords: Angular Grid 集計, igniteui for angular, infragistics
+_keywords: angular grid 集計, igniteui for angular, infragistics
 _language: ja
 ---
 }
@@ -10,7 +10,7 @@ _language: ja
 ---
 title: Angular Grid の集計 - Ignite UI for Angular
 _description: 列のグループ フッターに Angular のグリッド集計を設定し、Angular マテリアル UI の Ignite UI でカスタム Angular テンプレートを設定するオプションがあります。
-_keywords: gngular grid 集計, igniteui for angular, infragistics
+_keywords: angular grid 集計, igniteui for angular, infragistics
 _language: ja
 ---
 }
@@ -18,7 +18,7 @@ _language: ja
 ---
 title: Angular Grid の集計 - Ignite UI for Angular
 _description: 列のグループ フッターに Angular のグリッド集計を設定し、Angular マテリアル UI の Ignite UI でカスタム Angular テンプレートを設定するオプションがあります。
-_keywords: gngular grid 集計, igniteui for angular, infragistics
+_keywords: angular grid 集計, igniteui for angular, infragistics
 _language: ja
 ---
 }
@@ -469,7 +469,7 @@ public dateSummaryFormat(summary: IgxSummaryResult, summaryOperand: IgxSummaryOp
 
 ## 集計のエクスポート
 
-[`exportSummaries`](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/latest/classes/IgxExcelExporterOptions.html#exportSummaries) オプションが `IgxExcelExporterOptions` にあり、エクスポートされたデータにグリッドの集計を含めるかどうかを指定します。デフォルトの `exportSummaries` 値は **false** です。
+[`exportSummaries`]({environment:angularApiUrl}/classes/IgxExcelExporterOptions.html#exportSummaries) オプションが `IgxExcelExporterOptions` にあり、エクスポートされたデータにグリッドの集計を含めるかどうかを指定します。デフォルトの `exportSummaries` 値は **false** です。
 
 [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/IgxExcelExporterService.html) は、すべての列タイプのデフォルトの集計を同等の Excel 関数としてエクスポートするため、シートが変更された場合でも適切に機能し続けます。以下の例をご覧ください:
 

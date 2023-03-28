@@ -52,11 +52,65 @@ ng update @angular/cli
 
 例: 6.2.4 から 7.1.0 にアップデートする場合、[6.x .. から] セクションから始めて変更を適用していきます。
 
+## 15.0.x から 15.1.x の場合:
+- **視覚的な変更**
+- 15.1 では、入力コンポーネントのサイズが大きくなりました。これは、Material テーマを使用するとより明瞭になります。これは、Material  仕様に一致するように行います。アプリケーションが変更によって悪影響を受ける場合は、displayDensity 入力を使用して、より密度の高い設定に設定できます (comfortable から cozy まで、または cozy から compact まで)。
+
+  **例**
+```html
+    <igx-input-group displayDensity="cosy">
+        ...
+    </igx-input-group>
+
+    <igx-select displayDensity="cosy">
+        ...
+    </igx-select>
+
+    <igx-combo displayDensity="cosy">
+        
+    </igx-combo>
+
+    <igx-simple-combo displayDensity="cosy">
+        ...
+    </igx-simple-combo>
+```
+
+- 15.1 では、Select および Combo コンポーネントのトグル アイコンの周りに背景が表示されるようになりました。scss または css を使用して、背景とアイコンの色を変更できます。
+
+    **例**
+```scss
+    $my-select: select-theme(
+        $toggle-button-background: red,
+        $toggle-button-foreground: #fff,
+    );
+
+    $my-combo: combo-theme(
+        $toggle-button-background: red,
+        $toggle-button-foreground: #fff,
+    );
+
+    @include css-vars($my-select);
+    @include css-vars($my-combo);
+```
+
+    **例**
+```css
+    .igx-select {
+        --igx-select-toggle-button-background: red;
+        --igx-select-toggle-button-foreground: #fff;
+    }
+    
+    .igx-combo {
+        --igx-combo-toggle-button-background: red;
+        --igx-combo-toggle-button-foreground: #fff;
+    }
+```
+
 ## 14.2.x から 15.0.x の場合:
 ### 一般
 - `igxGrid`、`igxHierarchicalGrid`、`igxTreeGrid`
     - グリッド テンプレートのパラメーターに、コンテキストの型が追加されました。これは、アプリが厳密なテンプレート モードであり、間違った型を使用している場合にも問題を引き起こす可能性があります。変換が必要なテンプレートへの参照:
-         - `IgxColumnComponent` - [`ColumnType`](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/latest/interfaces/ColumnType.html) (たとえば、`igxFilterCellTemplate` の列パラメーター)
+         - `IgxColumnComponent` - [`ColumnType`]({environment:angularApiUrl}/interfaces/columntype.html) (たとえば、`igxFilterCellTemplate` の列パラメーター)
          - `IgxGridCell` - [`CellType`]({environment:angularApiUrl}/interfaces/celltype.html) (たとえば、`igxCell` テンプレートの cell パラメーター)
 - Ignite UI for Angular に [igniteui-theming](https://github.com/IgniteUI/igniteui-theming) のピア依存関係があります。テーマ パッケージをインストールし、`angular.json` ファイルに以下のプリプロセッサー設定を追加します。
 

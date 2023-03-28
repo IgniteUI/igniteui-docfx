@@ -258,7 +258,7 @@ Cool, now let's update the template for our contacts list to show the avatar and
     Contacts
   </igx-list-item>
   <igx-list-item #item *ngFor="let contact of contacts;">
-      <igx-avatar igxListThumbnail [src]="contact.photo" roundShape="true"></igx-avatar>
+      <igx-avatar igxListThumbnail [src]="contact.photo" shape="circle"></igx-avatar>
       <h4 igxListLineTitle>{{ contact.name }}</h4>
       <p igxListLineSubTitle class="phone">{{ contact.phone }}</p>
       <span igxListLine>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, laborum.</span>
@@ -368,7 +368,7 @@ Here is the HTML code of the example:
   </ng-template>
   <igx-list-item isHeader="true">Contacts</igx-list-item>
   <igx-list-item #item *ngFor="let contact of contacts">
-    <igx-avatar igxListThumbnail [src]="contact.photo" roundShape="true"></igx-avatar>
+    <igx-avatar igxListThumbnail [src]="contact.photo" shape="circle"></igx-avatar>
     <h4 igxListLineTitle>{{ contact.name }}</h4>
     <p igxListLineSubTitle class="phone">{{ contact.phone }}</p>
     <igx-icon igxListAction [color]="contact.isFavorite ? 'orange' : 'lightgray'" (click)="toggleFavorite(item)">star</igx-icon>
@@ -532,7 +532,7 @@ What we are doing is we are adding an additional `selected` property to each dat
     <igx-list-item [ngClass]="contact.selected ? 'selected' : ''"
                     (click)="selectItem(contact)"
                     *ngFor="let contact of contacts | igxFilter: filterContacts;">
-        <igx-avatar igxListThumbnail [src]="contact.photo" roundShape="true"></igx-avatar>
+        <igx-avatar igxListThumbnail [src]="contact.photo" shape="circle"></igx-avatar>
         <span igxListLineTitle>{{ contact.name }}</span>
         <span igxListLineSubTitle>{{ contact.phone }}</span>
         <igx-icon igxListAction [style.color]="contact.isFavorite ? 'orange' : 'lightgray'" (click)="toggleFavorite(contact, $event)">star</igx-icon>
@@ -590,7 +590,7 @@ The result from the above code is
 <div class="divider--half"></div>
 
 > [!NOTE]
-> Please note that if we create our component theme in the component .scss file we need to use `::ng-deep` in order to pass the view encapsulation otherwise our new theme will not work! for more info please refer to:  [Component Themes](https://www.infragistics.com/products/ignite-ui-angular/angular/components/themes/sass/component-themes.html).
+> Please note that if we create our component theme in the component .scss file we need to use `::ng-deep` in order to pass the view encapsulation otherwise our new theme will not work! for more info please refer to:  [Component Themes](../components/themes/sass/component-themes.md).
 
 For full list of parameters that you can change for the list component please refer to: [IgxListComponent Styles]({environment:sassApiUrl}/index.html#function-list-theme)
 
