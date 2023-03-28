@@ -36,7 +36,7 @@ Ignite UI for Angular の行選択では、行内の他のすべての列に先�
 以下のサンプルは、@@igComponent の**行選択**の 3 つのタイプを示します。以下のボタンを使用して、使用可能な各選択モードを有効にします。Snackbar メッセージ ボックスで各ボタンの操作について簡単に説明します。切り替えボタンを使用して、行セレクターのチェックボックスを非表示または表示します。
 }
 @@if (igxName === 'IgxGrid') {
-To get newly selected elements you can use **event.newSelection**:
+新しく選択された要素を取得するには、**event.newSelection** を使用できます。
 
 ```ts
 public handleRowSelection(event: IRowSelectionEventArgs) {
@@ -146,7 +146,7 @@ public handleRowSelection(event) {
 <!-- selectionExample.component.html -->
 
 <igx-grid [data]="remote | async" [primaryKey]="'ProductID'" [rowSelection]="'multiple'"
-        [autoGenerate]="true" (rowSelectionChanging)="handleRowSelection($event)" [allowFiltering]="true">
+        (rowSelectionChanging)="handleRowSelection($event)" [allowFiltering]="true" [autoGenerate]="true">
 </igx-grid>
 ```
 
@@ -155,8 +155,8 @@ public handleRowSelection(event) {
 ```html
 <!-- selectionExample.component.html -->
 
-<igx-tree-grid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="true"
-        [rowSelection]="'multiple'" [allowFiltering]="true" (rowSelectionChanging)="handleRowSelection($event)">
+<igx-tree-grid [data]="data" primaryKey="ID" foreignKey="ParentID" [rowSelection]="'multiple'"
+        [allowFiltering]="true" (rowSelectionChanging)="handleRowSelection($event)" >
 </igx-tree-grid>
 ```
 
@@ -174,8 +174,8 @@ public handleRowSelection(event) {
 ```html
 <!-- selectionExample.component.html -->
 
-<igx-tree-grid [data]="data" primaryKey="ID" foreignKey="ParentID" [rowSelection]="'multipleCascade'"
-        [autoGenerate]="true" [allowFiltering]="true" (rowSelectionChanging)="handleRowSelection($event)">
+<igx-tree-grid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="true"
+        [rowSelection]="'multipleCascade'" [allowFiltering]="true" (rowSelectionChanging)="handleRowSelection($event)">
 </igx-tree-grid>
 ```
 このモードでは、親の選択状態はその子の選択状態に完全に依存します。親に選択された子と選択解除された子がある場合、そのチェックボックスは不確定な状態になります。
@@ -247,21 +247,21 @@ public handleRowSelection(event) {
 <button (click)="this.@@igObjectRef.deselectRows([1,2,5])">Deselect 1,2 and 5</button>
 ```
 
-### Row selection event
-When there is some change in the row selection **[`rowSelectionChanging`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowSelectionChanging)** event is emitted. **`rowSelectionChanging`** exposes the following arguments:
-- `oldSelection`  - array of row's data that contains the previous state of the row selection.
-- `newSelection` - array of row's data that match the new state of the row selection.
-- `added` - array of row's data that are currently added to the selection.
-- `removed` - array of row's data that are currently removed according old selection state.
-- `event` - the original event that triggered row selection change.
-- `cancel` -  allows you the prevent the row selection change.
+### 行選択イベント
+行選択に変更がある場合、**[`rowSelectionChanging`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowSelectionChanging)** イベントが発行されます。**`rowSelectionChanging`** は次の引数を公開します:
+- `oldSelection` - 行選択の前の状態を含む行データの配列。
+- `newSelection` - 行選択の新しい状態に一致する行データの列。
+- `added` - 現在選択に追加されている行データの配列。
+- `removed` - 古い選択状態に従って現在削除されている行 データの配列。
+- `event` - 行選択の変更をトリガーする元のイベント。
+- `cancel` - 行選択の変更をトリガーする元のイベント。
 @@if (igxName === 'IgxHierarchicalGrid') {
-- `owner` - if the event is triggered from a child grid, this will give you a reference to the component, from which the event is emitted.
+- `owner` - ベントが子グリッドからトリガーされる場合、これにより、イベントの発行元であるコンポーネントへの参照が提供されます。
 }
 
-#### Row selection event in remote data scenarios
+#### リモート データ シナリオでの行選択イベント
 
- In remote data scenarios, when the grid has a `primaryKey` set, [`rowSelectionChanging.oldSelection`]({environment:angularApiUrl}/interfaces/IRowSelectionEventArgs.html#oldSelection) event argument will not contain the full row data object for the rows that are currently out of the data view. In this case, `rowSelectionChanging.oldSelection` object will contain only one property, which is the `primaryKey` field. For the rest of the rows, currently in the data view, `rowSelectionChanging.oldSelection` will contain the whole row data.
+リモート データ シナリオでは、グリッドに `primaryKey` が設定されている場合、[`rowSelectionChanging.oldSelection`]({environment:angularApiUrl}/interfaces/IRowSelectionEventArgs.html#oldSelection) イベント引数には、現在データ ビューに含まれていない行の完全な行データ オブジェクトが含まれません。この場合、`rowSelectionChanging.oldSelection` オブジェクトには、`primaryKey` フィールドである 1 つのプロパティのみが含まれます。現在データ ビューにある残りの行については、`rowSelectionChanging.oldSelection` に行データ全体が含まれます。
 
 ```html
 <!-- selectionExample.component.html -->

@@ -44,11 +44,25 @@ $color: color($light-material-palette, 'primary', 900);
 | 変数名 | 説明                                                                 |
 |:-------------:|:---------------------------------------------------------------------------:|
 | `$components` | すべてのコンポーネント テーマのレジスタを格納します。tree-shaking に使用されます。            |
-| ``$dropped-themes`  | ドロップされたテーマのレジスタを格納します。tree-shaking に使用されます。  |
+| `$dropped-themes`  | ドロップされたテーマのレジスタを格納します。tree-shaking に使用されます。  |
 
 ## スクロールバーのスタイル設定
 
 Ignite UI for Angular テーマには、アプリケーション内のすべてのスクロールバーの幅や色を変更できるカスタム スクロールバー スタイルが付属しています。含まれているスタイルを適用するには、ルート アプリ コンポーネントを含む要素に `ig-scrollbar` クラスを設定してください。
+
+スクロールバーをさらにカスタマイズするには、既存の [`scrollbar-theme`]({environment:sassApiUrl}/index.html#function-scrollbar-theme) を拡張し、`$schema`、`$thumb-background`、`$track-background`、および `$size` パラメーターを受け入れる新しいテーマを作成できます。
+
+```scss
+// app.component.scss
+$my-scrollbar-theme: scrollbar-theme($thumb-background: black, $track-background: gray);
+
+@include scrollbar($my-scrollbar-theme);
+```
+パラメーターをスクロールバー関数に直接適用して、追加のテーマの作成を防ぐこともできます。
+```scss
+// app.component.scss
+@include scrollbar(scrollbar-theme($size: 16px));
+```
 
 <div class="divider"></div>
 

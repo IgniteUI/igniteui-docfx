@@ -149,6 +149,9 @@
         - name: Validation
           href: grid/validation.md
           new: true
+        - name: Grid with Cascading combos
+          href: grid/cascading-combos.md
+          new: true
     - name: Row Drag
       href: grid/row-drag.md
       updated: true

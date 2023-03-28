@@ -147,20 +147,20 @@ export class AppModule {}
 // contacts.component.ts
 ...
 public contacts = [{
-    name: 'Terrance Orta',
-    phone: '770-504-2217'
+    name: "Terrance Orta",
+    phone: "770-504-2217"
 }, {
-    name: 'Richard Mahoney',
-    phone: '423-676-2869'
+    name: "Richard Mahoney",
+    phone: "423-676-2869"
 }, {
-    name: 'Donna Price',
-    phone: '859-496-2817'
+    name: "Donna Price",
+    phone: "859-496-2817"
 }, {
-    name: 'Lisa Landers',
-    phone: '901-747-3428'
+    name: "Lisa Landers",
+    phone: "901-747-3428"
 }, {
-    name: 'Dorothy H. Spencer',
-    phone: '573-394-9254'
+    name: "Dorothy H. Spencer",
+    phone: "573-394-9254"
 }];
 ```
 
@@ -207,11 +207,7 @@ import {
     IgxAvatarModule,
     IgxIconModule
 } from 'igniteui-angular';
-// import { 
-//    IgxListModule,
-//    IgxAvatarModule,
-//    IgxIconModule
-// } from '@infragistics/igniteui-angular'; for licensed package
+// import { IgxListModule, IgxAvatarModule, IgxIconModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -263,7 +259,7 @@ public contacts = [{
     Contacts
   </igx-list-item>
   <igx-list-item #item *ngFor="let contact of contacts;">
-      <igx-avatar igxListThumbnail [src]="contact.photo" roundShape="true"></igx-avatar>
+      <igx-avatar igxListThumbnail [src]="contact.photo" shape="circle"></igx-avatar>
       <h4 igxListLineTitle>{{ contact.name }}</h4>
       <p igxListLineSubTitle class="phone">{{ contact.phone }}</p>
       <span igxListLine>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, laborum.</span>
@@ -273,7 +269,7 @@ public contacts = [{
 ```
 
 - `igxListThumbnail` は、リスト項目の開始に何らかのメディアを追加する必要がある場合に使用します。このディレクティブは、ターゲット要素 (この場合は igx-avatar) を、デフォルトの位置と間隔を提供するコンテナーにラップします。
-- `igxListAction` は、スイッチ、ラジオ ボタン、チェックボックスなど、アクションまたはメタデータを持つリスト項目に使用します。この場合、アクションは ` igx-icon` で表示されます。ディレクティブは、正しい位置と間隔のコンテナーでターゲット要素をラップします。
+- `igxListAction` は、スイッチ、ラジオ ボタン、チェックボックスなど、アクションまたはメタデータを持つリスト項目に使用します。この場合、アクションは `igx-icon` で表示されます。ディレクティブは、正しい位置と間隔のコンテナーでターゲット要素をラップします。
 - `igxListLine` は、`igxListThumbnail` と `igxListAction` の間にテキストが必要な場合に使用します。このディレクティブは、テキストの位置、間隔、配置が残りのディレクティブと外観がよくなるようにします。
 
 次に、連絡先オブジェクトの isFavorite プロパティを切り替えるために [**IgxIcon**](icon.md) コンポーネントでクリック イベントをリッスンします。
@@ -318,11 +314,11 @@ public density = 'comfortable';
 public displayDensities;
 
 public ngOnInit() {
-this.displayDensities = [
-    { label: 'comfortable', selected: this.density === 'comfortable', togglable: true },
-    { label: 'cosy', selected: this.density === 'cosy', togglable: true },
-    { label: 'compact', selected: this.density === 'compact', togglable: true }
-];
+    this.displayDensities = [
+        { label: 'comfortable', selected: this.density === 'comfortable', togglable: true },
+        { label: 'cosy', selected: this.density === 'cosy', togglable: true },
+        { label: 'compact', selected: this.density === 'compact', togglable: true }
+    ];
 }
 
 public selectDensity(event) {
@@ -373,7 +369,7 @@ public selectDensity(event) {
   </ng-template>
   <igx-list-item isHeader="true">Contacts</igx-list-item>
   <igx-list-item #item *ngFor="let contact of contacts">
-    <igx-avatar igxListThumbnail [src]="contact.photo" roundShape="true"></igx-avatar>
+    <igx-avatar igxListThumbnail [src]="contact.photo" shape="circle"></igx-avatar>
     <h4 igxListLineTitle>{{ contact.name }}</h4>
     <p igxListLineSubTitle class="phone">{{ contact.phone }}</p>
     <igx-icon igxListAction [color]="contact.isFavorite ? 'orange' : 'lightgray'" (click)="toggleFavorite(item)">star</igx-icon>
@@ -536,7 +532,7 @@ export class ContactListComponent {
     <igx-list-item [ngClass]="contact.selected ? 'selected' : ''"
                     (click)="selectItem(contact)"
                     *ngFor="let contact of contacts | igxFilter: filterContacts;">
-        <igx-avatar igxListThumbnail [src]="contact.photo" roundShape="true"></igx-avatar>
+        <igx-avatar igxListThumbnail [src]="contact.photo" shape="circle"></igx-avatar>
         <span igxListLineTitle>{{ contact.name }}</span>
         <span igxListLineSubTitle>{{ contact.phone }}</span>
         <igx-icon igxListAction [style.color]="contact.isFavorite ? 'orange' : 'lightgray'" (click)="toggleFavorite(contact, $event)">star</igx-icon>
@@ -594,7 +590,7 @@ public selectItem(item) {
 <div class="divider--half"></div>
 
 > [!NOTE]
-> 注: コンポーネントの .scss ファイルにコンポーネントテーマを作成する場合、表示のカプセル化を渡すために `::ng-deep` を使用する必要があります。そうでない場合、新しいテーマが動作しません。詳細は、[コンポーネント テーマ](../components/themes/sass/component-themes.md#view-encapsulation)トピックを参照してください。
+> 注: コンポーネントの .scss ファイルにコンポーネントテーマを作成する場合、表示のカプセル化を渡すために `::ng-deep` を使用する必要があります。そうでない場合、新しいテーマが動作しません。詳細は、[コンポーネント テーマ](../components/themes/sass/component-themes.md#表示のカプセル化)トピックを参照してください。
 
 リスト コンポーネントに変更できるパラメーターの完全なリストについては、[IgxListComponent スタイル]({environment:sassApiUrl}/index.html#function-list-theme)を参照してください。
 

@@ -303,7 +303,10 @@ adding [IgxList]({environment:angularApiUrl}/classes/igxlistcomponent.html):
 </div>
 ...
 ```
-syncing the components by hooking up on carousel's [`onSlideChanged`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#onSlideChanged) and list's [itemClicked]({environment:angularApiUrl}/classes/igxlistcomponent.html#itemClicked) events:
+syncing the components by hooking up on carousel's [`slideChanged`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#slideChanged) and list's [itemClicked]({environment:angularApiUrl}/classes/igxlistcomponent.html#itemClicked) events:
+
+>[!NOTE]
+>As of v15.1.0 `onSlideChanged` was renamed to `slideChanged`. Using `ng update` will automatically migrate your code prior to use the new event name.
 
 ```typescript
   public ngOnInit() {
@@ -312,7 +315,7 @@ syncing the components by hooking up on carousel's [`onSlideChanged`]({environme
         this.carousel.select(this.carousel.get(this.currentIndex));
     });
 
-    this.carousel.onSlideChanged.subscribe((args: ISlideEventArgs) => {
+    this.carousel.slideChanged.subscribe((args: ISlideEventArgs) => {
         this.currentIndex = args.slide.index;
     });
   }
