@@ -16,7 +16,7 @@ This project uses Node.js and Gulp as a build tool to accelerate the development
 To install docfx restore it as a dotnet tool: 
 
 ```bash
-dotnet tool restore`
+dotnet tool restore
 ```
 
 ### Installing the Node.js dependencies:
