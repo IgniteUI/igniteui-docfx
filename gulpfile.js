@@ -178,10 +178,10 @@ const  browserSyncReload = (done) => {
 };
 
 const build = series(
-  parallel(generateGridsTopics, generateTreeGridsTopics, generateHierarchicalGridsTopics,generatePivotGridsTopics), 
+  parallel(generateGridsTopics, generateTreeGridsTopics, generateHierarchicalGridsTopics, generatePivotGridsTopics), 
   buildSite, removeHTMLExtensionFromSiteMap);
 
-const buildCI = series(generateGridsTopics, generateTreeGridsTopics, generateHierarchicalGridsTopics,generatePivotGridsTopics, buildSite);
+const buildCI = series(generateGridsTopics, generateTreeGridsTopics, generateHierarchicalGridsTopics, generatePivotGridsTopics, buildSite);
 
 const copyGitHooks = async (cb) => {
 

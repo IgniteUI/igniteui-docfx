@@ -13,48 +13,23 @@ This project uses Node.js and Gulp as a build tool to accelerate the development
 
 ### Installing DocFX
 
-In macOS You can use _brew_ to install the latest version of DocFX:
+To install docfx restore it as a dotnet tool: 
 
-```
-brew install docfx
-```
-
-If _brew_ is missing on your environment, go ahead and install it with:
-
-```
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-```
-
-For Windows based platforms use [_chocolatey_](https://chocolatey.org/):
-
-Download the chocolatey.exe or use the command lister under [Install with PowerShell.exe](https://docs.chocolatey.org/en-us/choco/setup#install-with-powershell.exe):
-
-```
-Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
-```
-
-Use chocolatey to install docfx
-```
-choco install docfx
-```
-
-Note: Use the following command in order to install specific version of docfx:
-
-```
-choco install docfx --version 2.47 --force
+```bash
+dotnet tool restore`
 ```
 
 ### Installing the Node.js dependencies:
 
 If you are using npm, run:
 
-```
+```bash
 npm install
 ```
 
 If you are using yarn, run:
 
-```
+```bash
 yarn install
 ```
 
@@ -78,19 +53,19 @@ To start the server, run:
 
 for English:
 
-```
+```bash
 npm start -- --lang en
 ```
 
 for Japansese:
 
-```
+```bash
 npm start -- --lang jp
 ```
 
 for Korean:
 
-```
+```bash
 npm start -- --lang kr
 ```
 
@@ -100,19 +75,19 @@ The command takes an adittional argument --lang [ en | jp | kr ] to serve Englis
 
 For English:
 
-```
+```bash
 npm run build -- --lang en
 ```
 
 For Japanese:
 
-```
+```bash
 npm run build -- --lang jp
 ```
 
 For Korean:
 
-```
+```bash
 npm run build -- --lang kr
 ```
 
@@ -123,13 +98,13 @@ For instance, for English, the static site lives under `en/_site`;
 
 The build command is very similar to the aforementioned step. To build the site for staging, run:
 
-```
+```bash
 npm run build-staging --lang en
 ```
 
 The build command for staging is:
 
-```
+```bash
 npm run build-production --lang jp
 ```
 
@@ -138,10 +113,10 @@ npm run build-production --lang jp
 The explicit-editor attribute for code-view elements is allowing to set explicitly live editor for specified sample and supports "csb" and "stackblitz" as values.
 
 
-```
+```html
 <code-view explicit-editor="csb" ... ></code-view>
 ```
 
-```
+```html
 <code-view explicit-editor="stackblitz" ... ></code-view>
 ```
