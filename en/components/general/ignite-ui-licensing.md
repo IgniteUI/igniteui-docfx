@@ -134,7 +134,7 @@ If you are upgrading from trial to licensed package and you are not using the au
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-			...
+            ...
             "aot": true,
             "stylePreprocessorOptions": {
                 "includePaths": [
