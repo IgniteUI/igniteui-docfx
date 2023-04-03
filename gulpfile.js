@@ -110,6 +110,17 @@ const removeHTMLExtensionFromSiteMap = () => {
       .pipe(dest(DOCFX_SITE));
 };
 
+const replaceEnvironmentVariables = () => {
+  const environment = process.env.NODE_ENV ? process.env.NODE_ENV.trim() : 'development';
+  const config = require(`./${LANG}/environment.json`);
+  return src(`${DOCFX_SITE}/**/*.html`)
+    .pipe(replace(/(\{|\%7B)environment:([a-zA-Z]+)(\}|\%7D)/g, function(match, brace1, environmentVarable, brace2) {
+      const value = config[environment][environmentVarable];
+      return value || match;
+    }))
+    .pipe(dest(DOCFX_SITE));
+}
+
 const watchFiles = (done) => {
 
     const excluded = [
@@ -179,7 +190,7 @@ const  browserSyncReload = (done) => {
 
 const build = series(
   parallel(generateGridsTopics, generateTreeGridsTopics, generateHierarchicalGridsTopics,generatePivotGridsTopics), 
-  buildSite, removeHTMLExtensionFromSiteMap);
+  buildSite, removeHTMLExtensionFromSiteMap, replaceEnvironmentVariables);
 
 const buildCI = series(generateGridsTopics, generateTreeGridsTopics, generateHierarchicalGridsTopics,generatePivotGridsTopics, buildSite);
 
