@@ -210,6 +210,9 @@ The following sample demonstrates a scenario where the [igx-simple-combo]({envir
            iframe-src="{environment:demosBaseUrl}/lists/simple-combo-cascading" alt="Angular Cascading Scenario Example">
 </code-view>
 
+
+Check out our [Angular Grid with Cascading Combos Sample](../components/grid/cascading-combos.md).
+
 <div class="divider--half"></div>
 
 ### Template Configuration
