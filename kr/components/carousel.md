@@ -135,17 +135,17 @@ In the above snippet we are setting values to the [`loop`]({environment:angularA
      this.carousel.stop();
   }
 ```
-Having those configured this way, we empowered the user to have full control over the carousel. What we want to do now is customize the navigation further and replace the carousel indicators with a nice looking progress bar. Hooking up on the [`onSlideChanged`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#onslidechanged) event and using the [**IgxLinearProgressBar**]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html) component we will add adittional UI indicating the progress made. First we need to import the **IgxLinearProgressBar** module:
+Having those configured this way, we empowered the user to have full control over the carousel. What we want to do now is customize the navigation further and replace the carousel indicators with a nice looking progress bar. Hooking up on the [`slideChanged`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#onslidechanged) event and using the [**IgxLinearProgressBar**]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html) component we will add adittional UI indicating the progress made. First we need to import the **IgxLinearProgressBar** module:
 
 ```typescript
 // app.component.ts
 import { Direction, IgxCarousel, IgxLinearProgressBar } from 'igniteui-angular';
 ```
-Once we have the module imported, we can continue with adding the [**IgxLinearProgressBar**]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html) in our template. Notice that we set the [`max`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#max) property to bind to the [`total`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#total) property value, which will be defined in the **app.component.ts** file. Also, we add a handler for the [`onSlideChanged`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#onslidechanged) event and an indicator text in adittion to the progress bar:
+Once we have the module imported, we can continue with adding the [**IgxLinearProgressBar**]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html) in our template. Notice that we set the [`max`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#max) property to bind to the [`total`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#total) property value, which will be defined in the **app.component.ts** file. Also, we add a handler for the [`slideChanged`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#onslidechanged) event and an indicator text in adittion to the progress bar:
 
 ```html
 <!-- app.component.html -->
-<igx-carousel #carousel [loop]="loop" pause="false" (onSlideChanged)="onSlideChanged(carousel)">
+<igx-carousel #carousel [loop]="loop" pause="false" (slideChanged)="slideChanged(carousel)">
     <igx-slide *ngFor="let slide of slides;">
         <h3>{{slide.heading}}</h3>
         <p>{{slide.description}}</p>
@@ -156,7 +156,7 @@ Once we have the module imported, we can continue with adding the [**IgxLinearPr
 </igx-carousel>
 ```
 
-We update the [`total`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#total) and [`current`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#current) properties values in the **ngOnInit** and the linear bar value in the [`onSlideChanged`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#onslidechanged) event handler:
+We update the [`total`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#total) and [`current`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#current) properties values in the **ngOnInit** and the linear bar value in the [`slideChanged`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#onslidechanged) event handler:
 
 ```typescript
 // app.component.ts
@@ -175,7 +175,7 @@ We update the [`total`]({environment:angularApiUrl}/classes/igxcarouselcomponent
      this.current = this.carousel.current;
   }
 
-  public onSlideChanged(carousel: IgxCarousel) {
+  public slideChanged(carousel: IgxCarousel) {
     this.current = carousel.current + 1;
     this.linearbar.value = carousel.current + 1;
   }
