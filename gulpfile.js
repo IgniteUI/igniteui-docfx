@@ -77,7 +77,7 @@ const fileInclude = (grid) => {
                 "igSelector": grid.igSelector
             }
         }))
-        .pipe(replace(/^(\r?\n)/, ''))
+        .pipe(replace(/^\s*\n(?=\S)/, ''))
         .pipe(dest(DOCFX_ARTICLES + grid.igPath));
 }
 
