@@ -19,6 +19,8 @@ To install docfx restore it as a dotnet tool:
 dotnet tool restore
 ```
 
+**NOTE**: Performing `npm install` also restores dotnet tool dependencies as a `postinstall` step.
+
 ### Installing the Node.js dependencies:
 
 If you are using npm, run:
