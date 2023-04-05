@@ -67,24 +67,31 @@ schematic またはコマンドはプロジェクトのパッケージの依存�
 
 ### npm を使用してプライベート フィードにログインするには、次のようにします。
 
-#### npm を使用してプライベート フィードにログインするには、adduser コマンドを実行し、ユーザー アカウントとパスワードを指定します。
+#### npm version 9+
+プライベート フィードは現在、npm v9 で login/adduser コマンドをサポートしていないため、必要な認証フィールドを構成に追加する代わりに、次の手順をお勧めします。
 
 ```cmd
-npm adduser --registry=https://packages.infragistics.com/npm/js-licensed/ --scope=@infragistics --always-auth
-```
->[!NOTE]
-> `npm` バージョン 9.0.0 以降を使用している場合は、`--auth-type=legacy` を設定する必要があります。
-
-```cmd
-npm adduser --registry=https://packages.infragistics.com/npm/js-licensed/ --scope=@infragistics --always-auth --auth-type=legacy
+npm config set @infragistics:registry https://packages.infragistics.com/npm/js-licensed/
+npm config set //packages.infragistics.com/npm/js-licensed/:username=YOUR_USERNAME
+npm config set //packages.infragistics.com/npm/js-licensed/:email=YOUR_IG_EMAIL
+npm config set //packages.infragistics.com/npm/js-licensed/:_auth=YOUR_IG_AUTH_TOKEN
 ```
 
 Infragistics プロファイルから[アクセス トークン](#アクセス-トークンの使用)を生成できます。
 
-このアプローチは、以前のすべてのバージョンの npm に適用できます。
+このアプローチは、以前のすべてのバージョンの `npm` に適用できます。
 
-> [!IMPORTANT]
-> アカウントのライセンスがない場合 (トライアル版アカウントを使用している場合)、プライベート パッケージ フィードにアクセスできません (たとえば、404 または 403 エラーメッセージが返されます)。**ライセンスされているアカウントのみが packages.infragistics プライベート フィードにアクセスできます。**
+#### v8 までの npm バージョン
+`adduser` コマンドを実行し、ユーザー アカウントとパスワードを指定します。
+
+```cmd
+npm adduser --registry=https://packages.infragistics.com/npm/js-licensed/ --scope=@infragistics
+```
+
+Infragistics アカウントにログインするユーザー名およびパスワードを入力する必要があります。Infragistics プロファイルに登録されるメールも入力してください。
+
+>[!NOTE]
+> `npm` はユーザー名で `"@"` の使用を許可しません。ユーザー名が Infragistics アカウントのメール アドレスであるため、`"@"` 記号を含みます。この制限を回避するには、`"@"` 記号の代わりに `"!!"` (2 つの感嘆符) を使用します。たとえば、ユーザー名が `"username@example.com"` の場合、`"username!!example.com"` と入力します。
 
 #### 完了した後に、ログイン済みの状態で、プロジェクトで Ignite UI の最新バージョンをインストールできます。
 
