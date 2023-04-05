@@ -135,7 +135,7 @@ Ignite UI for Angular パッケージをスコープに設定したため、プ�
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-			...
+            ...
             "aot": true,
             "stylePreprocessorOptions": {
                 "includePaths": [
