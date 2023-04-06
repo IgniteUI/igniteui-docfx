@@ -110,8 +110,6 @@ export class ExcelUtility {
         });
     }
 }
-
-
 ```
 
 ## API References
