@@ -125,7 +125,6 @@ export class MapBindingDataCsvComponent implements AfterViewInit {
         this.map.series.add(geoSeries);
     }
 }
-
 ```
 
 ## API References
