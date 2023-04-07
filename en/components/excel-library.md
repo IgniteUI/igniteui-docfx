@@ -26,10 +26,10 @@ The Infragistics Angular Excel Library allows you to work with spreadsheet data 
 
 When installing the excel package, the core package must also be installed.
 
-<pre style="background:#141414;color:white;display:inline-block;padding:16x;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
+```cmd
 npm install --save igniteui-angular-core
 npm install --save igniteui-angular-excel
-</pre>
+```
 
 ## Component Modules
 
@@ -81,9 +81,6 @@ The following is a list of the supported versions of Excel.\*\*
 
 *   Microsoft Excel 2016
 
-> \[!Note]
-> The Excel Library does not support the Excel Binary Workbook (.xlsb) format at this time.
-
 ## Load and Save Workbooks
 
 Now that the Excel Library module is imported, next step is to load a workbook.
@@ -106,10 +103,7 @@ var workbook = ExcelUtility.load(file);
 ExcelUtility.save(workbook, "fileName");
 ```
 
-> \[!Note]
-> For Angular
->
-> <div class="divider--half"></div>
+<!--Angular -->
 
 ## Managing Heap
 
@@ -144,9 +138,7 @@ ExcelUtility.save(workbook, "fileName");
       }
 ```
 
->
-
-<!-- -->
+<!--end:Angular-->
 
 ## API References
 
