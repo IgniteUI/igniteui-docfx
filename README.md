@@ -49,8 +49,6 @@ You can create a `.env` file under the root of the project and set `NODE_ENV`, f
 NODE_ENV=development
 ```
 
-Additionally, you can configure the URLs for all three environments `development`, `staging`, and `production` by editing the 'post_processors/PostProcessors/EnvironmentVariables/preconfig.json' file and setting the respective URLs in the variables object.
-
 To start the server, run:
 
 for English:
