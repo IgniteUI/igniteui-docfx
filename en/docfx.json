@@ -49,9 +49,6 @@
         "template": [
             "../node_modules/igniteui-docfx-template/template"
         ],
-        "postProcessors": [
-            "SetEnvironmentVariables"
-        ],
         "noLangKeyword": false,
         "keepFileLink": false,
         "cleanupCacheHistory": true,
