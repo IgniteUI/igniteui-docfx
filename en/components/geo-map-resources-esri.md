@@ -12,6 +12,7 @@ The resource topic provides implementation of an utility that helps with using [
 ## Code Snippet
 
 ```ts
+
 export class EsriUtility {
 
     public static getUri(style: EsriStyle): string {
@@ -79,5 +80,5 @@ export enum EsriStyle {
 
 ## API References
 
--   [`IgxArcGISOnlineMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxarcgisonlinemapimagery.html)
--   [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html)
+*   [`IgxArcGISOnlineMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxarcgisonlinemapimagery.html)
+*   [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html)
