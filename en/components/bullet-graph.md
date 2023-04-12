@@ -70,8 +70,8 @@ The following code walks through creating a bullet graph component, and configur
                    width="300"
                    minimumValue="5"
                    maximumValue="55"
-                   value = "35"
-                   targetValue = "43">
+                   value="35"
+                   targetValue="43">
         <igx-linear-graph-range startValue="0"
                                 endValue="15"
                                 brush="#828181">
