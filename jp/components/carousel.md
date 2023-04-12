@@ -304,7 +304,10 @@ Carousel [アニメーション](carousel.md#angular-carousel-のアニメーシ
 </div>
 ...
 ```
-カルーセルの [`onSlideChanged`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#onSlideChanged) およびリストの [itemClicked]({environment:angularApiUrl}/classes/igxlistcomponent.html#itemClicked) イベントを処理し、コンポーネントを同期する方法: 
+カルーセルの [`slideChanged`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#slideChanged) およびリストの [itemClicked]({environment:angularApiUrl}/classes/igxlistcomponent.html#itemClicked) イベントを処理し、コンポーネントを同期する方法:
+
+>[!NOTE]
+>v15.1.0 以降、`onSlideChanged` の名前が `slideChanged` に変更されました。`ng update` を使用すると、新しいイベント名を使用する前にコードが自動的に移行されます。
 
 ```typescript
   public ngOnInit() {
@@ -313,7 +316,7 @@ Carousel [アニメーション](carousel.md#angular-carousel-のアニメーシ
         this.carousel.select(this.carousel.get(this.currentIndex));
     });
 
-    this.carousel.onSlideChanged.subscribe((args: ISlideEventArgs) => {
+    this.carousel.slideChanged.subscribe((args: ISlideEventArgs) => {
         this.currentIndex = args.slide.index;
     });
   }
@@ -355,7 +358,7 @@ Carousel [アニメーション](carousel.md#angular-carousel-のアニメーシ
  * [attr.role="tabpanel"](https://www.w3.org/TR/wai-aria-1.1/#tabpanel) - タブに関連付けられたリソースのコンテナー。各タブはタブ リストに含まれています。
 
 ##### **属性**:
- * Id - パターン "panel-${this.index}" に従います。
+ * id - パターン "panel-${this.index}" に従います。
  * [aria-labelledby](https://www.w3.org/TR/wai-aria/#aria-labelledby) は、"tab-${this.index}-${this.total}" のパターンに従います。
  * [aria-selected](https://www.w3.org/TR/wai-aria-1.1/#aria-selected) は、**アクティブ** スライドを設定します。特定のスライド要素の現在の**選択された**状態を示します。
 

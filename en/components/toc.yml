@@ -149,6 +149,9 @@
         - name: Validation
           href: grid/validation.md
           new: true
+        - name: Grid with Cascading combos
+          href: grid/cascading-combos.md
+          new: true
     - name: Row Drag
       href: grid/row-drag.md
       updated: true
@@ -440,7 +443,7 @@
           href: hierarchicalgrid/validation.md
           new: true
     - name: Export to Excel
-      href: hierarchicalGrid/export-excel.md
+      href: hierarchicalgrid/export-excel.md
       new: false
       updated: true
     - name: Row Drag
@@ -534,20 +537,20 @@
       href: hierarchicalgrid/state-persistence.md
       new: true
 - name: Pivot Grid
-  href: pivotgrid/pivot-grid.md
+  href: pivotGrid/pivot-grid.md
   new: true
   items:
     - name: Export to Excel
-      href: pivotgrid/export-excel.md
+      href: pivotGrid/export-excel.md
       new: true
     - name: Pivot Grid Features
-      href: pivotgrid/pivot-grid-features.md
+      href: pivotGrid/pivot-grid-features.md
       new: true
     - name: Pivot Grid Remote Operations
-      href: pivotgrid/pivot-grid-custom.md
+      href: pivotGrid/pivot-grid-custom.md
       new: true
     - name: State Persistence
-      href: pivotgrid/state-persistence.md
+      href: pivotGrid/state-persistence.md
       new: true
 - name: Tree
   href: tree.md
