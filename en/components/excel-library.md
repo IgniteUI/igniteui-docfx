@@ -107,12 +107,11 @@ ExcelUtility.save(workbook, "fileName");
 
 ## Managing Heap
 
-> Due to the size of the Excel Library, it's recommended to disable the source map generation.
->
-> Modify `angular.json` by setting the `vendorSourceMap` option under architect => build => options and under serve => options:
+Due to the size of the Excel Library, it's recommended to disable the source map generation.
+
+Modify `angular.json` by setting the `vendorSourceMap` option under architect => build => options and under serve => options:
 
 ```ts
-...
     "architect": {
         "build": {
           "builder": "...",
