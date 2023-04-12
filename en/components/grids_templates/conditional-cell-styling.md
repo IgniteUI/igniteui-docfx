@@ -270,7 +270,7 @@ You can conditionally style the @@igxName cells by setting the [`IgxColumnCompon
 @@if (igxName === 'IgxTreeGrid'){
 ```html
 <!-- sample.component.html -->
-<igx-column field="UnitPrice" header="Unit Price" [dataType]="'currency'" [pipeArgs]="formatOptions" [cellClasses] = "priceClasses"></igx-column>
+<igx-column field="UnitPrice" header="Unit Price" [dataType]="'currency'" [pipeArgs]="formatOptions" [cellClasses]="priceClasses"></igx-column>
 ```
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
