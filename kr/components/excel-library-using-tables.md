@@ -13,10 +13,7 @@ The Infragistics Excel Engine's [`WorksheetTable`]({environment:dvApiBaseUrl}/pr
 <!--## Demo
 
 
-<code-view style="height: 500px"
-           data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/excel/excel-library-working-with-tables"  >
-</code-view>
+`sample="/excel/excel-library/working-with-tables", height="500", alt="Angular excel library working with tables"`
 
 -->
 
@@ -68,15 +65,15 @@ If the data in the table is subsequently changed or you change the `hidden` prop
 
 The following are the filter types available to the columns of your [`WorksheetTable`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html):
 
--   [`AverageFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/averagefilter.html) - Cells can be filtered based on whether they are above or below the average value of all cells in the column.
--   [`CustomFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/customfilter.html) - Cells can be filtered based on one or more custom conditions.
--   [`DatePeriodFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/dateperiodfilter.html) - Only cells with dates in a specific month or quarter of any year will be displayed.
--   [`FillFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/fillfilter.html) - Only cells with a specific fill will be displayed.
--   [`FixedValuesFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/fixedvaluesfilter.html) - Cells which only match specific display values or which fall within a specific group of dates/times will be displayed.
--   [`FontColorFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/fontcolorfilter.html) - Only cells with a specific font color will be displayed.
--   [`RelativeDateRangeFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/relativedaterangefilter.html) - Cells with date values can be filtered based on whether they occur within a relative time range of the date when the filter was applied, such as the next day or previous quarter.
--   [`TopOrBottomFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/toporbottomfilter.html) - This filter allows for filtering the top or bottom N values. It also allows filtering the top or bottom N% values.
--   [`YearToDateFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/yeartodatefilter.html) - Cells with date values can be filtered if they occur between the start of the year and the date on which the filter was applied.
+*   [`AverageFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/averagefilter.html) - Cells can be filtered based on whether they are above or below the average value of all cells in the column.
+*   [`CustomFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/customfilter.html) - Cells can be filtered based on one or more custom conditions.
+*   [`DatePeriodFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/dateperiodfilter.html) - Only cells with dates in a specific month or quarter of any year will be displayed.
+*   [`FillFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/fillfilter.html) - Only cells with a specific fill will be displayed.
+*   [`FixedValuesFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/fixedvaluesfilter.html) - Cells which only match specific display values or which fall within a specific group of dates/times will be displayed.
+*   [`FontColorFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/fontcolorfilter.html) - Only cells with a specific font color will be displayed.
+*   [`RelativeDateRangeFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/relativedaterangefilter.html) - Cells with date values can be filtered based on whether they occur within a relative time range of the date when the filter was applied, such as the next day or previous quarter.
+*   [`TopOrBottomFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/toporbottomfilter.html) - This filter allows for filtering the top or bottom N values. It also allows filtering the top or bottom N% values.
+*   [`YearToDateFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/yeartodatefilter.html) - Cells with date values can be filtered if they occur between the start of the year and the date on which the filter was applied.
 
 The following code snippet demonstrates how to apply an "above average" filter to a [`WorksheetTable`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html)'s first column:
 
@@ -98,10 +95,10 @@ In addition to accessing sort conditions from the table columns, they are also e
 
 The following sort condition types are available to set on columns:
 
--   [`OrderedSortCondition`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/orderedsortcondition.html) - Sort cells in an ascending or descending order based on their value.
--   [`CustomListSortCondition`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/customlistsortcondition.html) - Sort cells in a defined order based on their text or display value. For example, this might be useful for sorting days as they appear on a calendar, rather than alphabetically.
--   [`FillSortCondition`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/fillsortcondition.html) - Sort cells based on whether their fill is a specific pattern or gradient.
--   [`FontColorSortCondition`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/fontcolorsortcondition.html) - Sort cells based on whether their font is a specific color.
+*   [`OrderedSortCondition`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/orderedsortcondition.html) - Sort cells in an ascending or descending order based on their value.
+*   [`CustomListSortCondition`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/customlistsortcondition.html) - Sort cells in a defined order based on their text or display value. For example, this might be useful for sorting days as they appear on a calendar, rather than alphabetically.
+*   [`FillSortCondition`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/fillsortcondition.html) - Sort cells based on whether their fill is a specific pattern or gradient.
+*   [`FontColorSortCondition`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/fontcolorsortcondition.html) - Sort cells based on whether their font is a specific color.
 
 There is also a `caseSensitive` property on the `sortSettings` of the [`WorksheetTable`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html) to determine whether strings should be sorted case sensitively or not.
 
