@@ -14,36 +14,25 @@ Angular ZoomSlider コントロールは、範囲対応コントロールにズ�
 
 以下のサンプルは、[`IgxZoomSliderComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxzoomslidercomponent.html) を使用して [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) のコンテンツをナビゲートする方法を示しています。
 
-<code-view style="height: 600px"
+<code-view style="height: 600px" alt="Angular ズーム スライダーの例"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/zoomslider-overview"
-           alt="Angular ズーム スライダーの例"
-           github-src="charts/zoomslider/overview">
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/zoomslider/overview"
+                                                 github-src="charts/zoomslider/overview">
 </code-view>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <body>
-      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/zoomslider/overview?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
-        </a>
-        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/zoomslider/overview?file=src%2Fapp.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
-        </a>
-    </body>
-</html>
 
 <div class="divider--half"></div>
 
 ## 使用方法
 
-| 機能名                    | 説明                                                                                      |
-| ---------------------- | --------------------------------------------------------------------------------------- |
-| スクロールバーのナビゲーション        | ZoomSlider スクロールバーの組み込み機能を使用して、スケールを変更してデータ範囲をスクロールできます。                                |
-| パンとズーム                 | サムパッドの端をドラッグして表示スケールを調節し、現在の表示範囲を広げる (ズーム アウト)、または狭くする (ズーム イン) ことができます。                |
-| 複数のユーザー インタラクション オプション | マウスによるすべてのインタラクションは、タッチ操作 (ほとんどはキーボードを介した操作) でもサポートされます。詳細は、ユーザー インタラクションと操作性を参照してください。 |
-| タッチ サポート               | タッチ対応デバイスでは、ZoomSlider のすべての機能を使用できます。すべてのマウス操作は、タッチ環境でもサポートされます。                       |
-| 拡張性                    | ZoomSlider コントロールは、追加設定なしで DataChart コントロール をサポートします。                                   |
-| 構成可能なズーム範囲ウィンドウ        | ズーム範囲ウィンドウの初期幅、初期位置、最小サイズは、構成可能です。                                                      |
+| 機能名|説明 |
+| --------------------|----------------------- |
+| スクロールバーのナビゲーション|ZoomSlider スクロールバーの組み込み機能を使用して、スケールを変更してデータ範囲をスクロールできます。 |
+| パンとズーム|サムパッドの端をドラッグして表示スケールを調節し、現在の表示範囲を広げる (ズーム アウト)、または狭くする (ズーム イン) ことができます。 |
+| 複数のユーザー インタラクション オプション|マウスによるすべてのインタラクションは、タッチ操作 (ほとんどはキーボードを介した操作) でもサポートされます。詳細は、ユーザー インタラクションと操作性を参照してください。 |
+| タッチ サポート|タッチ対応デバイスでは、ZoomSlider のすべての機能を使用できます。すべてのマウス操作は、タッチ環境でもサポートされます。 |
+| 拡張性|ZoomSlider コントロールは、追加設定なしで DataChart コントロール をサポートします。 |
+| 構成可能なズーム範囲ウィンドウ|ズーム範囲ウィンドウの初期幅、初期位置、最小サイズは、構成可能です。 |
 
 <!-- Angular, React, WebComponents -->
 
@@ -51,10 +40,10 @@ Angular ZoomSlider コントロールは、範囲対応コントロールにズ�
 
 Angular chart コンポーネントをインストールするときに core パッケージもインストールする必要があります。
 
-<pre style="background:#141414;color:white;display:inline-block;padding:16x;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
+```cmd
 npm install --save igniteui-angular-core
 npm install --save igniteui-angular-charts
-</pre>
+```
 
 <!-- end: Angular, React, WebComponents -->
 
@@ -97,5 +86,5 @@ export class AppModule {}
 
 以下は上記のセクションで説明した API メンバーのリストです。
 
--   [`IgxZoomSliderComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxzoomslidercomponent.html)
--   [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html)
+*   [`IgxZoomSliderComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxzoomslidercomponent.html)
+*   [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html)
