@@ -15,23 +15,12 @@ Ignite UI for Angular 株価チャート (Angular ファイナンシャル チ�
 
 [`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html) コントロールでこのチャート タイプを作成するには、以下の例のように、データをバインドし、[`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#charttype) プロパティを [`Line`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/financialcharttype.html#line) 値に設定します。
 
-<code-view style="height: 600px"
+<code-view style="height: 600px" alt="Angular 株価チャートの例"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-multiple-data"
-           github-src="charts/financial-chart/multiple-data"
-           alt="Angular 株価チャートの例" >
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart/multiple-data"
+                                                 github-src="charts/financial-chart/multiple-data">
 </code-view>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <body>
-      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/financial-chart/multiple-data?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
-        </a>
-        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/financial-chart/multiple-data?file=src%2Fapp.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
-        </a>
-    </body>
-</html>
 
 <div class="divider--half"></div>
 
@@ -41,82 +30,60 @@ Ignite UI for Angular 株価チャート (Angular ファイナンシャル チ�
 
 典型的な株価チャートは、価格帯のテクニカル分析に使用されるローソク足チャートのティッカー データで表されます。ローソク足チャートは、1 日の高値と安値を、ティッカー シンボルの始値と終値と比較します。
 
--   ローソク足チャートの本文には、始値と終値 (O/C) が表示されます。
--   ローソク足チャートには、始値と終値 (O/C) が表示されます。
--   ティッカー値の上限と下限の間の距離は、ティッカー価格の日の範囲です。
--   ローソク足チャートのティッカー値は、資産が開いたよりも高く閉じたときに中空になります。
--   ローソク足チャートのティッカー値は、資産が開いたよりも低く閉じたときに塗りつぶされます。
--   黒または赤のローソク足は、前のローソク足の終値よりも低い終値の価格を表します。
--   白または緑のローソク足は、前のローソク足の終値よりも高い終値を表します。
+*   ローソク足チャートの本文には、始値と終値 (O/C) が表示されます。
+*   ローソク足チャートには、始値と終値 (O/C) が表示されます。
+*   ティッカー値の上限と下限の間の距離は、ティッカー価格の日の範囲です。
+*   ローソク足チャートのティッカー値は、資産が開いたよりも高く閉じたときに中空になります。
+*   ローソク足チャートのティッカー値は、資産が開いたよりも低く閉じたときに塗りつぶされます。
+*   黒または赤のローソク足は、前のローソク足の終値よりも低い終値の価格を表します。
+*   白または緑のローソク足は、前のローソク足の終値よりも高い終値を表します。
 
 株価チャートは、次のいずれかを表示するように設定できます:
 
--   ローソク足チャート
--   棒チャート
--   縦棒チャート
--   折れ線チャート
+*   ローソク足チャート
+*   棒チャート
+*   縦棒チャート
+*   折れ線チャート
 
 株価チャートは、ユーザーがデータ分析機能を実行できるようにすることを目的としているため、次のようなインタラクティブな要素が含まれています:
 
--   時間ベースのフィルター
--   価格ペイン
--   ボリューム ペイン
--   インジケーター ペイン
--   トレンドライン
--   ナビゲーション/ズームバー ペイン
+*   時間ベースのフィルター
+*   価格ペイン
+*   ボリューム ペイン
+*   インジケーター ペイン
+*   トレンドライン
+*   ナビゲーション/ズームバー ペイン
 
 ### 株価チャートのデータ構造
 
--   データ ソースはデータ項目の配列またはリストである必要があります。
--   データ ソースに少なくとも 1 つのデータ項目を含む必要があります。
--   すべてのデータ項目には、ティッカー データの日付を表す日時 (または文字列) 列が少なくとも 1 つ含まれている必要があります。
--   すべてのデータ項目には、棒チャート、折れ線チャート、および縦棒チャートの 1 つの数値列が含まれている必要があります。
--   すべてのデータ項目には、ローソク足チャートの始値、高値、安値、終値 (OHLC) の 4 つの数値列が含まれている必要があります。
--   すべてのデータ項目には、ローソク足チャートの始値、高値、安値、終値、ボリュームの 5 つの数値列が含まれている必要があります。
+*   データ ソースはデータ項目の配列またはリストである必要があります。
+*   データ ソースに少なくとも 1 つのデータ項目を含む必要があります。
+*   すべてのデータ項目には、ティッカー データの日付を表す日時 (または文字列) 列が少なくとも 1 つ含まれている必要があります。
+*   すべてのデータ項目には、棒チャート、折れ線チャート、および縦棒チャートの 1 つの数値列が含まれている必要があります。
+*   すべてのデータ項目には、ローソク足チャートの始値、高値、安値、終値 (OHLC) の 4 つの数値列が含まれている必要があります。
+*   すべてのデータ項目には、ローソク足チャートの始値、高値、安値、終値、ボリュームの 5 つの数値列が含まれている必要があります。
 
 ## 複数シリーズの Angular 株価チャート
 
-<code-view style="height: 600px"
+<code-view style="height: 600px" alt="Angular 株価指数チャート"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-multiple-data"
-           github-src="charts/financial-chart/multiple-data"
-           alt="Angular 株価指数チャート" >
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart/multiple-data"
+                                                 github-src="charts/financial-chart/multiple-data">
 </code-view>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <body>
-      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/financial-chart/multiple-data?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
-        </a>
-        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/financial-chart/multiple-data?file=src%2Fapp.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
-        </a>
-    </body>
-</html>
 
 <div class="divider--half"></div>
 
 ## Angular 株価チャート
 
-この例では、株価チャートは 1 年間の S&P 500を表しています。投資家に役立ち、テクニカル解析を実施し、将来の価格/レポートを予測します。
+この例では、株価チャートは 1 年間の S\&P 500を表しています。投資家に役立ち、テクニカル解析を実施し、将来の価格/レポートを予測します。
 
-<code-view style="height: 600px"
+<code-view style="height: 600px" alt="Angular 株価指数チャート"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-stock-index-chart"
-           github-src="charts/financial-chart/stock-index-chart"
-           alt="Angular 株価指数チャート" >
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart/stock-index-chart"
+                                                 github-src="charts/financial-chart/stock-index-chart">
 </code-view>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <body>
-      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/financial-chart/stock-index-chart?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
-        </a>
-        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/financial-chart/stock-index-chart?file=src%2Fapp.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
-        </a>
-    </body>
-</html>
 
 <div class="divider--half"></div>
 
@@ -124,11 +91,12 @@ Ignite UI for Angular 株価チャート (Angular ファイナンシャル チ�
 
 他のシリーズの複合などのより多くの機能を備えた株価チャートが必要な場合は、以下に示すように、厚さ、アウトライン、ブラシ、負のアウトライン、負のブラシを構成できます。この例では、株価チャートは Amazon、Microsoft、Tesla の収益を比較しています。
 
-<code-view style="height: 600px"
+<code-view style="height: 600px" alt="Angular 株価指数チャート"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-styling"
-           alt="Angular 株価指数チャート" >
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart/styling"
+                                                 github-src="charts/financial-chart/styling">
 </code-view>
+
 
 <div class="divider--half"></div>
 
@@ -142,23 +110,12 @@ Ignite UI for Angular 株価チャート (Angular ファイナンシャル チ�
 
 注: X 軸モードを使用する際に CalloutsXMemberPath は数値インデックスをポイントする必要があります。あるいは、CalloutsXMemberPath を時間値にポイントしてください。
 
-<code-view style="height: 600px"
+<code-view style="height: 600px" alt="Angular チャートの注釈"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-annotations"
-           github-src="charts/financial-chart/annotations"
-           alt="Angular チャートの注釈" >
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart/annotations"
+                                                 github-src="charts/financial-chart/annotations">
 </code-view>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <body>
-      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/financial-chart/annotations?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
-        </a>
-        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/financial-chart/annotations?file=src%2Fapp.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
-        </a>
-    </body>
-</html>
 
 <div class="divider--half"></div>
 
@@ -166,10 +123,10 @@ Ignite UI for Angular 株価チャート (Angular ファイナンシャル チ�
 
 以下のペインを使用できます:
 
--   価格ペイン - 折れ線、ローソク足、棒 (OHLC)、トレンドライン、および財務オーバーレイを使用して価格を描画します。
--   インジケーター ペイン - すべての財務指標を別のチャートに描画し、BollingerBands および PriceChannel オーバーレイが Y 軸と同じ値範囲を使用するために価格ペインに描画されます。
--   ボリューム ペイン - 縦棒、折れ線、およびエリアのチャート タイプを使用して出来高を上記のペインの下に描画します。
--   ズーム ペイン - すべてのペインのズームを制御します。常にチャートの下側に描画されます。
+*   価格ペイン - 折れ線、ローソク足、棒 (OHLC)、トレンドライン、および財務オーバーレイを使用して価格を描画します。
+*   インジケーター ペイン - すべての財務指標を別のチャートに描画し、BollingerBands および PriceChannel オーバーレイが Y 軸と同じ値範囲を使用するために価格ペインに描画されます。
+*   ボリューム ペイン - 縦棒、折れ線、およびエリアのチャート タイプを使用して出来高を上記のペインの下に描画します。
+*   ズーム ペイン - すべてのペインのズームを制御します。常にチャートの下側に描画されます。
 
 ### インジケーター ペイン
 
@@ -195,23 +152,12 @@ Ignite UI for Angular 株価チャート (Angular ファイナンシャル チ�
 
 この例では、株価チャートは米国の収益をプロットしています。
 
-<code-view style="height: 600px"
+<code-view style="height: 600px" alt="Angular チャートのペイン"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-panes"
-           github-src="charts/financial-chart/panes"
-           alt="Angular チャートのペイン" >
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart/panes"
+                                                 github-src="charts/financial-chart/panes">
 </code-view>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <body>
-      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/financial-chart/panes?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
-        </a>
-        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/financial-chart/panes?file=src%2Fapp.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
-        </a>
-    </body>
-</html>
 
 <div class="divider--half"></div>
 
@@ -219,18 +165,19 @@ Ignite UI for Angular 株価チャート (Angular ファイナンシャル チ�
 
 関連するチャート機能の詳細については、以下のトピックを参照してください。
 
--   [チャート アニメーション](../features/chart-animations.md)
--   [チャート注釈](../features/chart-annotations.md)
--   [チャート ナビゲーション](../features/chart-navigation.md)
--   [チャート トレンドライン](../features/chart-trendlines.md)
--   [チャートのパフォーマンス](../features/chart-performance.md)
+*   [チャート アニメーション](../features/chart-animations.md)
+*   [チャート注釈](../features/chart-annotations.md)
+*   [チャート ナビゲーション](../features/chart-navigation.md)
+*   [チャート トレンドライン](../features/chart-trendlines.md)
+*   [チャートのパフォーマンス](../features/chart-performance.md)
 
 ## API リファレンス
 
 以下は、上記のセクションで説明した API メンバーのリストです。
 
--   [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#charttype)
--   [`crosshairsSnapToData`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#crosshairssnaptodata)
--   [`indicatorTypes`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#indicatortypes)
--   [`zoomSliderType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#zoomslidertype)
--   [`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html)
+*   [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#charttype)
+*   [`crosshairsSnapToData`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#crosshairssnaptodata)
+*   `ItemsSource`
+*   [`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html)
+*   [`indicatorTypes`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#indicatortypes)
+*   [`zoomSliderType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinancialchartcomponent.html#zoomslidertype)
