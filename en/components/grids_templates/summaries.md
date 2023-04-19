@@ -83,23 +83,18 @@ All available column data types could be found in the official [Column types top
 @@if (igxName === 'IgxGrid') {
 ```html
 <@@igSelector #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (columnInit)="initColumn($event)">
-    <igx-column field="ProductID" header="Product ID" width="200px"  [sortable]="true">
-    </igx-column>
-    <igx-column field="ProductName" header="Product Name" width="200px" [sortable]="true" [hasSummary]="true">
-    </igx-column>
-    <igx-column field="ReorderLevel" width="200px" [editable]="true" [dataType]="'number'" [hasSummary]="true">
-    </igx-column>
+    <igx-column field="ProductID" header="Product ID" width="200px" [sortable]="true"></igx-column>
+    <igx-column field="ProductName" header="Product Name" width="200px" [sortable]="true" [hasSummary]="true"></igx-column>
+    <igx-column field="ReorderLevel" width="200px" [editable]="true" [dataType]="'number'" [hasSummary]="true"></igx-column>
 </@@igSelector>
 ```
+}
 @@if (igxName === 'IgxTreeGrid') {
 ```html
 <@@igSelector #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (columnInit)="initColumn($event)">
-    <igx-column field="ID" header="Order ID" width="200px"  [sortable]="true">
-    </igx-column>
-    <igx-column field="Name" header="Order Product" width="200px" [sortable]="true" [hasSummary]="true">
-    </igx-column>
-    <igx-column field="Units" width="200px" [editable]="true" [dataType]="'number'" [hasSummary]="true">
-    </igx-column>
+    <igx-column field="ID" header="Order ID" width="200px" [sortable]="true"></igx-column>
+    <igx-column field="Name" header="Order Product" width="200px" [sortable]="true" [hasSummary]="true"></igx-column>
+    <igx-column field="Units" width="200px" [editable]="true" [dataType]="'number'" [hasSummary]="true"></igx-column>
 </@@igSelector>
 ```
 }
@@ -125,12 +120,9 @@ The other way to enable/disable summaries for a specific column or a list of col
 @@if (igxName === 'IgxGrid') {
 ```html
 <@@igSelector #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (columnInit)="initColumn($event)" >
-    <igx-column field="ProductID" header="Product ID" width="200px"  [sortable]="true">
-    </igx-column>
-    <igx-column field="ProductName" header="Product Name" width="200px" [sortable]="true" [hasSummary]="true">
-    </igx-column>
-    <igx-column field="ReorderLevel" width="200px" [editable]="true" [dataType]="'number'" [hasSummary]="false">
-    </igx-column>
+    <igx-column field="ProductID" header="Product ID" width="200px"  [sortable]="true"></igx-column>
+    <igx-column field="ProductName" header="Product Name" width="200px" [sortable]="true" [hasSummary]="true"></igx-column>
+    <igx-column field="ReorderLevel" width="200px" [editable]="true" [dataType]="'number'" [hasSummary]="false"></igx-column>
 </@@igSelector>
 <button (click)="enableSummary()">Enable Summary</button>
 <button (click)="disableSummary()">Disable Summary </button>
@@ -150,12 +142,10 @@ public disableSummary() {
 @@if (igxName === 'IgxTreeGrid') {
 ```html
 <@@igSelector #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (columnInit)="initColumn($event)" >
-    <igx-column field="ID" header="Order ID" width="200px"  [sortable]="true">
-    </igx-column>
-    <igx-column field="Name" header="Order Product" width="200px" [sortable]="true" [hasSummary]="true">
-    </igx-column>
-    <igx-column field="Units" width="200px" [editable]="true" [dataType]="'number'" [hasSummary]="false">
-    </igx-column>
+    <igx-column field="ID" header="Order ID" width="200px" [sortable]="true"></igx-column>
+    <igx-column field="Name" header="Order Product" width="200px" [sortable]="true" [hasSummary]="true" ></igx-column>
+    <igx-column field="Units" width="200px" [editable]="true" [dataType]="'number'" [hasSummary]="false"></igx-column>
+
 </@@igSelector>
 <button (click)="enableSummary()">Enable Summary</button>
 <button (click)="disableSummary()">Disable Summary </button>
@@ -293,15 +283,11 @@ export class GridComponent implements OnInit {
 @@if (igxName === 'IgxTreeGrid') {
 And now let's add our custom summary to the column `UnitPrice`. We will achieve that by setting the [`summaries`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#summaries) property to the class we create below.
 ```html
-<@@igSelector #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (columnInit)="initColumn($event)" >
-    <igx-column field="ID" width="200px"  [sortable]="true">
-    </igx-column>
-    <igx-column field="Name" header="Order Product" width="200px" [sortable]="true" [hasSummary]="true">
-    </igx-column>    
-    <igx-column field="Units" width="200px" [editable]="true" [dataType]="'number'" [hasSummary]="true">
-    <igx-column field="UnitPrice" width="200px" [dataType]="'number'" [hasSummary]="true" [summaries]="mySummary" [sortable]="true">
-    </igx-column>
-    </igx-column>
+<@@igSelector #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (columnInit)="initColumn($event)">
+    <igx-column field="ID" header="Order ID" width="200px" [sortable]="true"></igx-column>
+    <igx-column field="Name" header="Order Product" width="200px" [sortable]="true" [hasSummary]="true"></igx-column>
+    <igx-column field="Units" [dataType]="'number'" width="200px" [editable]="true" [hasSummary]="true" [summaries]="mySummary"></igx-column>
+    <igx-column field="UnitPrice" header="Unit Price" width="200px" [dataType]="'number'"  [dataType]="'currency'" [hasSummary]="true"></igx-column>
 </@@igSelector>
 ```
 
