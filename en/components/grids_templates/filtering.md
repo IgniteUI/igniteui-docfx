@@ -413,7 +413,7 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
 <!-- grid-custom-filtering.component.html -->
 
 <@@igSelector [data]="data" [autoGenerate]="false" [allowFiltering]="true">
-    <igx-column field="ProductName" header="Product Name" [dataType]="'string'" [filters]="caseSensitiveFilteringOperand"></igx-column>
+    <igx-column field="ProductName" header="Product Name" [filters]="caseSensitiveFilteringOperand"></igx-column>
     <igx-column field="Discontinued" header="Discontinued" [dataType]="'boolean'" [filters]="booleanFilteringOperand">
         <ng-template igxCell let-cell="cell" let-val>
             <img *ngIf="val" src="assets/images/grid/active.png" title="Delivered" alt="Delivered" />
@@ -428,7 +428,7 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
 <!-- tree-grid-filtering-custom-sample.component.html -->
 
 <@@igSelector [data]="data" [autoGenerate]="false" [allowFiltering]="true">
-    <igx-column field="Name" header="Order Product" [dataType]="'string'" [filters]="caseSensitiveFilteringOperand"></igx-column>
+    <igx-column field="Name" header="Order Product" [filters]="caseSensitiveFilteringOperand"></igx-column>
     <igx-column field="Delivered" header="Delivered" [dataType]="'boolean'" [filters]="booleanFilteringOperand">
         <ng-template igxCell let-cell="cell" let-val>
             <img *ngIf="val" src="assets/images/grid/active.png" title="Delivered" alt="Delivered" />
@@ -443,7 +443,7 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
 <!-- hierarchical-grid-custom-filtering.component.html -->
 
 <igx-hierarchical-grid [data]="localdata" [autoGenerate]="false" [allowFiltering]="true">
-    <igx-column field="Artist" [filterable]='true' [dataType]="'string'" [filters]="caseSensitiveFilteringOperand"></igx-column>
+    <igx-column field="Artist" [filterable]='true' [filters]="caseSensitiveFilteringOperand"></igx-column>
     <igx-column field="HasGrammyAward" [filterable]='true' [dataType]="'boolean'" [filters]="booleanFilteringOperand">
         <ng-template igxCell let-cell="cell" let-val>
             <img *ngIf="val" src="https://www.infragistics.com/angular-demos/assets/images/grid/active.png" title="True" alt="True" />
