@@ -77,7 +77,7 @@ Property **[filterable]({environment:angularApiUrl}/classes/igxcolumncomponent.h
 @@if (igxName === 'IgxTreeGrid') {
 ```html
 <@@igSelector [data]="data" [autoGenerate]="false" [allowFiltering]="true">
-    <igx-column field="Name" header="Order Product" dataType="string"></igx-column>
+    <igx-column field="Name" header="Order Product"></igx-column>
     <igx-column field="Units" header="Units" dataType="number" [filterable]="false"></igx-column>
 </@@igSelector>
 ```
@@ -85,7 +85,7 @@ Property **[filterable]({environment:angularApiUrl}/classes/igxcolumncomponent.h
 @@if (igxName !== 'IgxTreeGrid') {
 ```html
 <@@igSelector #grid1 [data]="data" [autoGenerate]="false" [allowFiltering]="true">
-    <igx-column field="ProductName" dataType="string"></igx-column>
+    <igx-column field="ProductName"></igx-column>
     <igx-column field="Price" [dataType]="'number'" [filterable]="false">
 </@@igSelector>
 ```
@@ -116,7 +116,7 @@ Filtering feature is enabled for the @@igComponent component by setting the [`al
 @@if (igxName === 'IgxGrid') {
 ```html
 <@@igSelector [data]="data" [autoGenerate]="false" [allowFiltering]="true">
-    <igx-column field="ProductName" dataType="string"></igx-column>
+    <igx-column field="ProductName"></igx-column>
     <igx-column field="Price" dataType="number"></igx-column>
     <igx-column field="Discontinued" [dataType]="'boolean'" [filterable]="false">
 </@@igSelector>
@@ -125,7 +125,7 @@ Filtering feature is enabled for the @@igComponent component by setting the [`al
 @@if (igxName === 'IgxTreeGrid') {
 ```html
 <@@igSelector [data]="data" [autoGenerate]="false" [allowFiltering]="true">
-    <igx-column field="Name" header="Order Product" dataType="string"></igx-column>
+    <igx-column field="Name" header="Order Product"></igx-column>
     <igx-column field="Units" header="Units" dataType="number"></igx-column>
     <igx-column field="Delivered" header="Delivered" [dataType]="'boolean'" [filterable]="false">
 </@@igSelector>
@@ -339,10 +339,10 @@ The @@igComponent supports remote filtering, which is demonstrated in the [`@@ig
 You can customize the filtering menu by adding, removing or modifying the filtering operands. By default, the filtering menu contains certain operands based on the column’s data type ([`IgxBooleanFilteringOperand`]({environment:angularApiUrl}/classes/igxbooleanfilteringoperand.html), [`IgxDateFilteringOperand`]({environment:angularApiUrl}/classes/igxdatefilteringoperand.html), [`IgxNumberFilteringOperand`]({environment:angularApiUrl}/classes/igxnumberfilteringoperand.html) and [`IgxStringFilteringOperand`]({environment:angularApiUrl}/classes/igxstringfilteringoperand.html)). You can extend these classes or their base class [`IgxFilteringOperand`]({environment:angularApiUrl}/classes/igxfilteringoperand.html) to change the filtering menu items’ behavior.
 
 @@if (igxName !== 'IgxTreeGrid') {
-In the sample below, inspect the “Product Name” and “Discontinued” columns filters menus. For the “Discontinued” column filter, we have limited the number of operands to All, True and False. For the “Product Name” column filter – we have modified the Contains and Does Not Contain operands logic to perform case sensitive search and added also Empty and Not Empty operands.
+In the sample below, inspect the "Product Name" and "Discontinued" columns filters menus. For the "Discontinued" column filter, we have limited the number of operands to All, True and False. For the "Product Name" column filter – we have modified the Contains and Does Not Contain operands logic to perform case sensitive search and added also Empty and Not Empty operands.
 }
 @@if (igxName === 'IgxTreeGrid') {
-In the sample below, inspect the “Order Product” and “Delivered” columns filters menus. For the “Delivered” column filter, we have limited the number of operands to All, True and False. For the “Order Product” column filter – we have modified the Contains and Does Not Contain operands logic to perform case sensitive search and added also Empty and Not Empty operands.
+In the sample below, inspect the "Order Product" and "Delivered" columns filters menus. For the "Delivered" column filter, we have limited the number of operands to All, True and False. For the "Order Product" column filter – we have modified the Contains and Does Not Contain operands logic to perform case sensitive search and added also Empty and Not Empty operands.
 }
 
 To do that, extend the [`IgxStringFilteringOperand`]({environment:angularApiUrl}/classes/igxstringfilteringoperand.html) and [`IgxBooleanFilteringOperand`]({environment:angularApiUrl}/classes/igxbooleanfilteringoperand.html), modify the operations and their logic, and set the column [`filters`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#filters) input to the new operands.
