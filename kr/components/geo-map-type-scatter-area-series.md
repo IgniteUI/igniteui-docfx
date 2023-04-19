@@ -12,10 +12,12 @@ Use the map component's [`IgxGeographicScatterAreaSeriesComponent`]({environment
 
 ## Demo
 
-<code-view style="height: 400px"
+<code-view style="height: 400px" alt="Angular geo map type scatter area series"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-type-scatter-area-series"  >
+                    iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map/type-scatter-area-series"
+                                                 github-src="maps/geo-map/type-scatter-area-series">
 </code-view>
+
 
 <div class="divider--half"></div>
 
@@ -30,16 +32,16 @@ The [`IgxGeographicScatterAreaSeriesComponent`]({environment:dvApiBaseUrl}/produ
 
 The following table summarizes properties of GeographicScatterAreaSeries used for data binding.
 
-| Property Name                                                                                                                                                              | Property Type | Description                                                                                                                                                                                                                                                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `ItemsSource`                                                                                                                                                              | any           | The source of data items to perform triangulation on if the `TrianglesSource` property provides no triangulation data.                                                                                                                                                                                                                             |
-| `LongitudeMemberPath`                                                                                                                                                      | string        | The name of the property containing the Longitude for all items bound to the `ItemsSource`.                                                                                                                                                                                                                                                        |
-| `LatitudeMemberPath`                                                                                                                                                       | string        | The name of the property containing the Latitude for all items bound to the `ItemsSource`.                                                                                                                                                                                                                                                         |
-| [`colorMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicscatterareaseriescomponent.html#colormemberpath) | string        | The name of the property containing a value at Latitude and Longitude coordinates of each data item. This numeric value will be be converted to a color when the [`colorScale`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicscatterareaseriescomponent.html#colorscale) property is set. |
-| `TrianglesSource`                                                                                                                                                          | any           | The source of triangulation data. Setting Triangles of the `TriangulationSource` object to this property improves both runtime performance and geographic series rendering.                                                                                                                                                                        |
-| `TriangleVertexMemberPath1`                                                                                                                                                | string        | The name of the property of the `TrianglesSource` items which, for each triangle, contains the index of the first vertex point in the ItemsSource. It is not mandatory to set this property. It is taken by default unless custom triangulation logic is provided.                                                                                 |
-| `TriangleVertexMemberPath2`                                                                                                                                                | string        | The name of the property of the `TrianglesSource` items which, for each triangle, contains the index of the first vertex point in the ItemsSource. It is not mandatory to set this property. It is taken by default unless custom triangulation logic is provided.                                                                                 |
-| `TriangleVertexMemberPath3`                                                                                                                                                | string        | The name of the property of the `TrianglesSource` items which, for each triangle, contains the index of the first vertex point in the ItemsSource. It is not mandatory to set this property. It is taken by default unless custom triangulation logic is provided.                                                                                 |
+| Property Name  | Property Type   | Description   |
+|--------------|---------------| ---------------|
+|`ItemsSource`|any|The source of data items to perform triangulation on if the `TrianglesSource` property provides no triangulation data.|
+|`LongitudeMemberPath`|string|The name of the property containing the Longitude for all items bound to the `ItemsSource`.|
+|`LatitudeMemberPath`|string|The name of the property containing the Latitude for all items bound to the `ItemsSource`.|
+|[`colorMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicscatterareaseriescomponent.html#colormemberpath)|string|The name of the property containing a value at Latitude and Longitude coordinates of each data item. This numeric value will be be converted to a color when the [`colorScale`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicscatterareaseriescomponent.html#colorscale) property is set.|
+|`TrianglesSource`|any|The source of triangulation data. Setting Triangles of the `TriangulationSource` object to this property improves both runtime performance and geographic series rendering.|
+|`TriangleVertexMemberPath1`|string|The name of the property of the `TrianglesSource` items which, for each triangle, contains the index of the first vertex point in the ItemsSource. It is not mandatory to set this property. It is taken by default unless custom triangulation logic is provided.|
+|`TriangleVertexMemberPath2`|string|The name of the property of the `TrianglesSource` items which, for each triangle, contains the index of the first vertex point in the ItemsSource. It is not mandatory to set this property. It is taken by default unless custom triangulation logic is provided.|
+|`TriangleVertexMemberPath3`|string|The name of the property of the `TrianglesSource` items which, for each triangle, contains the index of the first vertex point in the ItemsSource. It is not mandatory to set this property. It is taken by default unless custom triangulation logic is provided.|
 
 ## Color Scale
 
@@ -48,12 +50,12 @@ The provided [`IgxCustomPaletteColorScaleComponent`]({environment:dvApiBaseUrl}/
 
 The following table list properties of the [`IgxCustomPaletteColorScaleComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcustompalettecolorscalecomponent.html) affecting surface coloring of the GeographicScatterAreaSeries.
 
-| Property Name                                                                                                                                                              | Property Type               | Description                                                                                       |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------- | ------------------------------------------------------------------------------------------------- |
-| [`palette`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcustompalettecolorscalecomponent.html#palette)                     | ObservableCollection<Color> | Gets or sets the collection of colors to select from or to interpolate between.                   |
-| [`interpolationMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcustompalettecolorscalecomponent.html#interpolationmode) | ColorScaleInterpolationMode | Gets or sets the method getting a color from the Palette.                                         |
-| [`maximumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcustompalettecolorscalecomponent.html#maximumvalue)           | double                      | The highest value to assign a color. Any given value greater than this value will be Transparent. |
-| [`minimumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcustompalettecolorscalecomponent.html#minimumvalue)           | double                      | The lowest value to assign a color. Any given value less than this value will be Transparent.     |
+| Property Name  | Property Type   | Description   |
+|--------------|---------------| ---------------|
+|[`palette`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcustompalettecolorscalecomponent.html#palette)|ObservableCollection<Color>|Gets or sets the collection of colors to select from or to interpolate between.|
+|[`interpolationMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcustompalettecolorscalecomponent.html#interpolationmode)|ColorScaleInterpolationMode|Gets or sets the method getting a color from the Palette.|
+|[`maximumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcustompalettecolorscalecomponent.html#maximumvalue)|double|The highest value to assign a color. Any given value greater than this value will be Transparent.|
+|[`minimumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcustompalettecolorscalecomponent.html#minimumvalue)|double|The lowest value to assign a color. Any given value less than this value will be Transparent.|
 
 ## Code Snippet
 

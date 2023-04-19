@@ -14,25 +14,25 @@ mentionedTypes: ['XamBulletGraph']
 
 既存の Angular CLI プロジェクト (以前のもの) で Ignite UI for Angular を使用する場合は、以下のコマンドを実行します。
 
-<pre style="background:#141414;color:white;display:inline-block;padding:16x;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
+```cmd
 npm install --save igniteui-angular-charts igniteui-angular-core
 npm install --save igniteui-angular-excel igniteui-angular-core
 npm install --save igniteui-angular-gauges igniteui-angular-core
 npm install --save igniteui-angular-grids igniteui-angular-core
 npm install --save igniteui-angular-maps igniteui-angular-core
 npm install --save igniteui-angular-spreadsheet igniteui-angular-core
-</pre>
+```
 
 また
 
-<pre style="background:#141414;color:white;display:inline-block;padding:16x;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
+```cmd
 yarn add igniteui-angular-charts igniteui-angular-core
 yarn add igniteui-angular-excel igniteui-angular-core
 yarn add igniteui-angular-gauges igniteui-angular-core
 yarn add igniteui-angular-grids igniteui-angular-core
 yarn add igniteui-angular-maps igniteui-angular-core
 yarn add igniteui-angular-spreadsheet igniteui-angular-core
-</pre>
+```
 
 これにより、Ignite UI for Angular のパッケージが、それらのすべての依存関係、フォントのインポート、および既存のプロジェクトへのスタイル参照と共に自動的にインストールされます。
 
@@ -48,9 +48,9 @@ yarn add igniteui-angular-spreadsheet igniteui-angular-core
 
 以下のコマンドを使用して新しいアプリケーションを実行できます。
 
-<pre style="background:#141414;color:white;display:inline-block;padding:16x;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
+```cmd
 npm run-script start
-</pre>
+```
 
 コマンドを実行した後、プロジェクトがローカルでビルドされて提供されます。これでデフォルトのブラウザーで自動的に開き、プロジェクトで Ignite UI for Angular コンポーネントを使用できるようになります。
 

@@ -6,8 +6,7 @@ _language: ja
 ---
 
 # Input Group
-<p class="highlight">`IgxInputGroup` を使用すると、テキスト、アイコン、またはボタンを両側に追加して、入力と選択を拡張できます。</p>
-<div class="divider--half"></div>
+<p class="highlight">`IgxInputGroup` は、ユーザーが input、select、textarea などの入力要素を拡張することを可能にします。これは、テキスト、アイコン、ボタン、カスタムバリデーションなどのカスタムコンテンツを、プレフィックス、サフィックス、またはヒントとして、それらの両側に追加することで実現できます。</p>
 
 ## Angular Input Group の例
 
