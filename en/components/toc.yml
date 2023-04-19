@@ -22,7 +22,7 @@
   href: general/update-guide.md
   new: false
   updated: true
-- name: SSR Rendering
+- name: Server-side rendering (SSR)
   href: general/ssr-rendering.md
   new: false
 - name: Data Analysis

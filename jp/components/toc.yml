@@ -23,7 +23,7 @@
   href: general/update-guide.md
   new: false
   updated: true
-- name: SSR レンダリング
+- name: サーバー側レンダリング (SSR)
   href: general/ssr-rendering.md
   new: false
 - name: データ分析

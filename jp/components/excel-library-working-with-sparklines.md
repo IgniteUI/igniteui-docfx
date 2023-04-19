@@ -12,23 +12,12 @@ Infragistics Angular Excel Library は、Excel ワークシートにスパーク
 
 ## Angular スパークラインを使用した作業の例
 
-<code-view style="height: 500px"
+<code-view style="height: 500px" alt="Angular スパークラインを使用した作業の例"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/excel/excel-library-working-with-sparklines"
-           alt="Angular スパークラインを使用した作業の例"
-           github-src="excel/excel-library/working-with-sparklines">
+                    iframe-src="{environment:dvDemosBaseUrl}/excel/excel-library/working-with-sparklines"
+                                                 github-src="excel/excel-library/working-with-sparklines">
 </code-view>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <body>
-      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/excel/excel-library/working-with-sparklines?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
-        </a>
-        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/excel/excel-library/working-with-sparklines?file=src%2Fapp.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
-        </a>
-    </body>
-</html>
 
 <div class="divider--half"></div>
 
@@ -36,9 +25,9 @@ Infragistics Angular Excel Library は、Excel ワークシートにスパーク
 
 以下はサポートされる定義済スパークラインのタイプです。
 
--   折れ線チャート
--   列
--   積層 (Win/Loss)
+*   折れ線チャート
+*   列
+*   積層 (Win/Loss)
 
 以下のコードは、sparklineGroups コレクションを使用してスパークラインをワークシートへ追加する方法を示します。
 
@@ -53,4 +42,4 @@ workbook.save(workbook, "Sparklines.xlsx");
 
 ## API リファレンス
 
--   [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html)
+*   [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html)
