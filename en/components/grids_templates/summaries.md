@@ -80,15 +80,21 @@ All available column data types could be found in the official [Column types top
 
 **@@igComponent summaries** are enabled per-column by setting [`hasSummary`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#hasSummary) property to `true`. It is also important to keep in mind that the summaries for each column are resolved according to the column data type. In the `@@igSelector` the default column data type is `string`, so if you want `number` or `date` specific summaries you should specify the [`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype) property as `number` or `date`. Note that the summary values will be displayed localized, according to the grid [`locale`]({environment:angularApiUrl}/classes/igxgridcomponent.html#locale) and column [`pipeArgs`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#pipeArgs).
 
-@@if (igxName !== 'IgxHierarchicalGrid') {
+@@if (igxName === 'IgxGrid') {
 ```html
 <@@igSelector #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (columnInit)="initColumn($event)">
-    <igx-column field="ProductID" header="Product ID" width="200px"  [sortable]="true">
-    </igx-column>
-    <igx-column field="ProductName" header="Product Name" width="200px" [sortable]="true" [hasSummary]="true">
-    </igx-column>
-    <igx-column field="ReorderLevel" width="200px" [editable]="true" [dataType]="'number'" [hasSummary]="true">
-    </igx-column>
+    <igx-column field="ProductID" header="Product ID" width="200px" [sortable]="true"></igx-column>
+    <igx-column field="ProductName" header="Product Name" width="200px" [sortable]="true" [hasSummary]="true"></igx-column>
+    <igx-column field="ReorderLevel" width="200px" [editable]="true" [dataType]="'number'" [hasSummary]="true"></igx-column>
+</@@igSelector>
+```
+}
+@@if (igxName === 'IgxTreeGrid') {
+```html
+<@@igSelector #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (columnInit)="initColumn($event)">
+    <igx-column field="ID" header="Order ID" width="200px" [sortable]="true"></igx-column>
+    <igx-column field="Name" header="Order Product" width="200px" [sortable]="true" [hasSummary]="true"></igx-column>
+    <igx-column field="Units" width="200px" [editable]="true" [dataType]="'number'" [hasSummary]="true"></igx-column>
 </@@igSelector>
 ```
 }
@@ -111,15 +117,12 @@ All available column data types could be found in the official [Column types top
 }
 The other way to enable/disable summaries for a specific column or a list of columns is to use the public method [`enableSummaries`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#enableSummaries)/[`disableSummaries`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#disableSummaries) of the **@@igSelector**.
 
-@@if (igxName !== 'IgxHierarchicalGrid') {
+@@if (igxName === 'IgxGrid') {
 ```html
 <@@igSelector #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (columnInit)="initColumn($event)" >
-    <igx-column field="ProductID" header="Product ID" width="200px"  [sortable]="true">
-    </igx-column>
-    <igx-column field="ProductName" header="Product Name" width="200px" [sortable]="true" [hasSummary]="true">
-    </igx-column>
-    <igx-column field="ReorderLevel" width="200px" [editable]="true" [dataType]="'number'" [hasSummary]="false">
-    </igx-column>
+    <igx-column field="ProductID" header="Product ID" width="200px"  [sortable]="true"></igx-column>
+    <igx-column field="ProductName" header="Product Name" width="200px" [sortable]="true" [hasSummary]="true"></igx-column>
+    <igx-column field="ReorderLevel" width="200px" [editable]="true" [dataType]="'number'" [hasSummary]="false"></igx-column>
 </@@igSelector>
 <button (click)="enableSummary()">Enable Summary</button>
 <button (click)="disableSummary()">Disable Summary </button>
@@ -133,6 +136,29 @@ public enableSummary() {
 }
 public disableSummary() {
     this.grid1.disableSummaries('ProductName');
+}
+```
+}
+@@if (igxName === 'IgxTreeGrid') {
+```html
+<@@igSelector #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (columnInit)="initColumn($event)" >
+    <igx-column field="ID" header="Order ID" width="200px" [sortable]="true"></igx-column>
+    <igx-column field="Name" header="Order Product" width="200px" [sortable]="true" [hasSummary]="true" ></igx-column>
+    <igx-column field="Units" width="200px" [editable]="true" [dataType]="'number'" [hasSummary]="false"></igx-column>
+
+</@@igSelector>
+<button (click)="enableSummary()">Enable Summary</button>
+<button (click)="disableSummary()">Disable Summary </button>
+```
+```typescript
+public enableSummary() {
+    this.grid1.enableSummaries([
+        {fieldName: 'Units', customSummary: this.mySummary},
+        {fieldName: 'ID'}
+    ]);
+}
+public disableSummary() {
+    this.grid1.disableSummaries('Name');
 }
 ```
 }
@@ -230,7 +256,7 @@ See [Custom summaries, which access all data](#custom-summaries-which-access-all
 
 > [!NOTE]
 > In order to calculate the summary row height properly, the @@igComponent needs the [`operate`]({environment:angularApiUrl}/classes/igxsummaryoperand.html#operate) method to always return an array of [`IgxSummaryResult`]({environment:angularApiUrl}/interfaces/igxsummaryresult.html) with the proper length even when the data is empty.
-@@if (igxName !== 'IgxHierarchicalGrid') {
+@@if (igxName === 'IgxGrid') {
 And now let's add our custom summary to the column `UnitsInStock`. We will achieve that by setting the [`summaries`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#summaries) property to the class we create below.
 ```html
 <@@igSelector #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (columnInit)="initColumn($event)" >
@@ -242,6 +268,26 @@ And now let's add our custom summary to the column `UnitsInStock`. We will achie
     </igx-column>
     <igx-column field="ReorderLevel" width="200px" [editable]="true" [dataType]="'number'" [hasSummary]="true">
     </igx-column>
+</@@igSelector>
+```
+
+```typescript
+...
+export class GridComponent implements OnInit {
+    mySummary = MySummary;
+    ....
+}
+```
+}
+
+@@if (igxName === 'IgxTreeGrid') {
+And now let's add our custom summary to the column `UnitPrice`. We will achieve that by setting the [`summaries`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#summaries) property to the class we create below.
+```html
+<@@igSelector #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (columnInit)="initColumn($event)">
+    <igx-column field="ID" header="Order ID" width="200px" [sortable]="true"></igx-column>
+    <igx-column field="Name" header="Order Product" width="200px" [sortable]="true" [hasSummary]="true"></igx-column>
+    <igx-column field="Units" [dataType]="'number'" width="200px" [editable]="true" [hasSummary]="true" [summaries]="mySummary"></igx-column>
+    <igx-column field="UnitPrice" header="Unit Price" width="200px" [dataType]="'number'"  [dataType]="'currency'" [hasSummary]="true"></igx-column>
 </@@igSelector>
 ```
 
@@ -288,6 +334,21 @@ As you can see in the code snippet below the operate method has the following th
 - allGridData - gives you the whole grid data source
 - fieldName - current column field
 
+@@if (igxName === 'IgxTreeGrid') {
+```typescript
+class MySummary extends IgxNumberSummaryOperand {
+    constructor() {
+        super();
+    }
+    operate(columnData: any[], allGridData = [], fieldName?): IgxSummaryResult[] {
+        const result = super.operate(allData.map(r => r[fieldName]));
+        result.push({ key: 'test', label: 'Total Undelivered', summaryResult: allData.filter((rec) => rec.Discontinued).length });
+        return result;
+    }
+}
+```
+}
+@@if (igxName !== 'IgxTreeGrid') {
 ```typescript
 class MySummary extends IgxNumberSummaryOperand {
     constructor() {
@@ -300,6 +361,7 @@ class MySummary extends IgxNumberSummaryOperand {
     }
 }
 ```
+}
 
 @@if (igxName === 'IgxGrid') {
 

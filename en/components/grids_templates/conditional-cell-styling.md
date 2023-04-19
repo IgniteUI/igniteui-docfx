@@ -270,12 +270,7 @@ You can conditionally style the @@igxName cells by setting the [`IgxColumnCompon
 @@if (igxName === 'IgxTreeGrid'){
 ```html
 <!-- sample.component.html -->
-<igx-column field="UnitPrice" header="Unit Price" [dataType]="'number'" [cellClasses] = "priceClasses">
-    <ng-template igxCell let-cell="cell" let-val>
-        <span *ngIf="cell.row.data.UnitPrice == 0">-</span>
-        <span *ngIf="cell.row.data.UnitPrice != 0">${{val}}</span>
-    </ng-template>
-</igx-column>
+<igx-column field="UnitPrice" header="Unit Price" [dataType]="'currency'" [pipeArgs]="formatOptions" [cellClasses]="priceClasses"></igx-column>
 ```
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -321,11 +316,11 @@ public beatsPerMinuteClasses = {
 // sample.component.ts
 
 private upPriceCondition = (rowData: any, columnKey: any): boolean => {
-    return rowData[columnKey] > 25;
+    return rowData[columnKey] > 5;
 }
 
 private downPriceCondition = (rowData: any, columnKey: any): boolean => {
-    return rowData[columnKey] <= 25;
+    return rowData[columnKey] <= 5;
 }
 
 public priceClasses = {
