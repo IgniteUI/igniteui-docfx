@@ -88,7 +88,7 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
 
 ## メニュー機能の構成
 
-ソート、移動、ピン固定、非表示の機能をフィルター メニューから削除できます。これらを制御する入力は以下のとおりです: [`sortable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortable)、[`movable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#movable)、[`selected`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selected)、[`disablePinning`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disablePinning)、[`disableHiding`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disableHiding)。
+ソート、移動、ピン固定、非表示の機能をフィルター メニューから削除できます。これらを制御する入力は以下のとおりです: [`sortable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortable)、[`selected`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selected)、[`disablePinning`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disablePinning)、[`disableHiding`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disableHiding)。
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -99,7 +99,7 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
     </igx-column>
     <igx-column field="UnitPrice" header="Unit Price" [disablePinning]="true" [disableHiding]="true" [sortable]="true" [dataType]="'number'">
     </igx-column>
-    <igx-column field="OrderDate" header="Order Date" [sortable]="false" [dataType]="'date'" [formatter]="formatDate">
+    <igx-column field="OrderDate" header="Order Date" [sortable]="false"  [dataType]="'date'" [formatter]="formatDate">
     </igx-column>
     <igx-column field="Discontinued" header="Discontinued" [sortable]="true" [dataType]="'boolean'">
     </igx-column>
@@ -132,11 +132,12 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
 
 <div class="divider--half"></div>
 
-以下のサンプル 'Order Product'、'Category' および 'Units' の列には 4 つの機能すべてが有効です。'Price' で 3 機能すべてが無効で、'Order Date' および 'Delivered' はピン固定と非表示のみ有効です。
+以下のサンプルでは、'Order Product'、'Category'、および 'Units' 列で 3 つの機能がすべて有効化され、'Price' で 3 つすべてが無効化され、'Order Date' と 'Delivered' でピン固定と非表示のみが設定されています。
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="false" [allowFiltering]='true' filterMode="excelStyleFilter" [moving]="true" [height]="'650px'" [width]="'100%'" [rowHeight]="'65px'" #hierarchicalGrid>
+<igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="false" [moving]="true" [allowFiltering]='true' filterMode="excelStyleFilter"
+    [height]="'650px'" [width]="'100%'" [rowHeight]="'65px'" #hierarchicalGrid>
     <igx-column field="Artist" [filterable]='true' [sortable]="true"></igx-column>
     <igx-column field="Photo" [filterable]='false'>
         <ng-template igxCell let-cell="cell">
@@ -784,12 +785,12 @@ $custom-drop-down-schema: extend($_light-drop-down,
 
 ```scss
 $custom-light-schema: extend($light-schema,(
-    igx-grid: $custom-grid-schema,
-    igx-button: $custom-button-schema,
-    igx-input-group: $custom-input-group-schema,
-    igx-list: $custom-list-schema,
-    igx-checkbox: $custom-checkbox-schema,
-    igx-drop-down: $custom-drop-down-schema
+   grid: $custom-grid-schema,
+   button: $custom-button-schema,
+   input-group: $custom-input-group-schema,
+   list: $custom-list-schema,
+   checkbox: $custom-checkbox-schema,
+   drop-down: $custom-drop-down-schema
 ));
 
 $custom-grid: grid-theme(
