@@ -81,15 +81,21 @@ Ignite UI for Angular の Angular UI グリッドには、グループ フッタ
 
 [`hasSummary`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#hasSummary) プロパティを `true` に設定すると **@@igComponent 集計**が列レベルで有効になります。各列の集計は列のデータ型に基づいて解決されます。`@@igSelector` のデフォルトの列データ型は `string` のため、`number` または `date` 固有の集計を適用するには、[`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#dataType) プロパティを `number` または `date` に設定します。集計値は、グリッドの [`locale`]({environment:angularApiUrl}/classes/igxgridcomponent.html#locale) および列 [`pipeArgs`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#pipeArgs) に従ってローカライズされて表示されます。
 
-@@if (igxName !== 'IgxHierarchicalGrid') {
+@@if (igxName === 'IgxGrid') {
 ```html
 <@@igSelector #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (columnInit)="initColumn($event)">
-    <igx-column field="ProductID" header="Product ID" width="200px"  [sortable]="true">
-    </igx-column>
-    <igx-column field="ProductName" header="Product Name" width="200px" [sortable]="true" [hasSummary]="true">
-    </igx-column>
-    <igx-column field="ReorderLevel" width="200px" [editable]="true" [dataType]="'number'" [hasSummary]="true">
-    </igx-column>
+    <igx-column field="ProductID" header="Product ID" width="200px" [sortable]="true"></igx-column>
+    <igx-column field="ProductName" header="Product Name" width="200px" [sortable]="true" [hasSummary]="true"></igx-column>
+    <igx-column field="ReorderLevel" width="200px" [editable]="true" [dataType]="'number'" [hasSummary]="true"></igx-column>
+</@@igSelector>
+```
+}
+@@if (igxName === 'IgxTreeGrid') {
+```html
+<@@igSelector #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (columnInit)="initColumn($event)">
+    <igx-column field="ID" header="Order ID" width="200px" [sortable]="true"></igx-column>
+    <igx-column field="Name" header="Order Product" width="200px" [sortable]="true" [hasSummary]="true"></igx-column>
+    <igx-column field="Units" width="200px" [editable]="true" [dataType]="'number'" [hasSummary]="true"></igx-column>
 </@@igSelector>
 ```
 }
@@ -112,15 +118,12 @@ Ignite UI for Angular の Angular UI グリッドには、グループ フッタ
 }
 特定の列や列のリストを有効または無効にする他の方法として **@@igSelector** のパブリック メソッド [`enableSummaries`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#enablesummaries)/[`disableSummaries`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#disableSummaries) を使用する方法があります。
 
-@@if (igxName !== 'IgxHierarchicalGrid') {
+@@if (igxName === 'IgxGrid') {
 ```html
 <@@igSelector #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (columnInit)="initColumn($event)" >
-    <igx-column field="ProductID" header="Product ID" width="200px"  [sortable]="true">
-    </igx-column>
-    <igx-column field="ProductName" header="Product Name" width="200px" [sortable]="true" [hasSummary]="true">
-    </igx-column>
-    <igx-column field="ReorderLevel" width="200px" [editable]="true" [dataType]="'number'" [hasSummary]="false">
-    </igx-column>
+    <igx-column field="ProductID" header="Product ID" width="200px"  [sortable]="true"></igx-column>
+    <igx-column field="ProductName" header="Product Name" width="200px" [sortable]="true" [hasSummary]="true"></igx-column>
+    <igx-column field="ReorderLevel" width="200px" [editable]="true" [dataType]="'number'" [hasSummary]="false"></igx-column>
 </@@igSelector>
 <button (click)="enableSummary()">Enable Summary</button>
 <button (click)="disableSummary()">Disable Summary </button>
@@ -134,6 +137,29 @@ public enableSummary() {
 }
 public disableSummary() {
     this.grid1.disableSummaries('ProductName');
+}
+```
+}
+@@if (igxName === 'IgxTreeGrid') {
+```html
+<@@igSelector #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (columnInit)="initColumn($event)" >
+    <igx-column field="ID" header="Order ID" width="200px" [sortable]="true"></igx-column>
+    <igx-column field="Name" header="Order Product" width="200px" [sortable]="true" [hasSummary]="true" ></igx-column>
+    <igx-column field="Units" width="200px" [editable]="true" [dataType]="'number'" [hasSummary]="false"></igx-column>
+
+</@@igSelector>
+<button (click)="enableSummary()">Enable Summary</button>
+<button (click)="disableSummary()">Disable Summary </button>
+```
+```typescript
+public enableSummary() {
+    this.grid1.enableSummaries([
+        {fieldName: 'Units', customSummary: this.mySummary},
+        {fieldName: 'ID'}
+    ]);
+}
+public disableSummary() {
+    this.grid1.disableSummaries('Name');
 }
 ```
 }
@@ -254,6 +280,26 @@ export class GridComponent implements OnInit {
 ```
 }
 
+@@if (igxName === 'IgxTreeGrid') {
+`UnitPrice` 列にカスタム集計を追加します。[`summaries`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#summaries) プロパティを以下に作成するクラスに設定します。
+```html
+<@@igSelector #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (columnInit)="initColumn($event)">
+    <igx-column field="ID" header="Order ID" width="200px" [sortable]="true"></igx-column>
+    <igx-column field="Name" header="Order Product" width="200px" [sortable]="true" [hasSummary]="true"></igx-column>
+    <igx-column field="Units" [dataType]="'number'" width="200px" [editable]="true" [hasSummary]="true" [summaries]="mySummary"></igx-column>
+    <igx-column field="UnitPrice" header="Unit Price" width="200px" [dataType]="'number'"  [dataType]="'currency'" [hasSummary]="true"></igx-column>
+</@@igSelector>
+```
+
+```typescript
+...
+export class GridComponent implements OnInit {
+    mySummary = MySummary;
+    ....
+}
+```
+}
+
 @@if (igxName === 'IgxHierarchicalGrid') {
 列 `GramyNominations` にカスタム集計を追加します。[`summaries`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#summaries) プロパティを以下に作成するクラスに設定します。
 ```html
@@ -288,6 +334,21 @@ export class HGridSummarySampleComponent implements OnInit {
 - allGridData - グリッド データソース全体を提供します。
 - fieldName - 現在の列フィールド。
 
+@@if (igxName === 'IgxTreeGrid') {
+```typescript
+class MySummary extends IgxNumberSummaryOperand {
+    constructor() {
+        super();
+    }
+    operate(columnData: any[], allGridData = [], fieldName?): IgxSummaryResult[] {
+        const result = super.operate(allData.map(r => r[fieldName]));
+        result.push({ key: 'test', label: 'Total Undelivered', summaryResult: allData.filter((rec) => rec.Discontinued).length });
+        return result;
+    }
+}
+```
+}
+@@if (igxName !== 'IgxTreeGrid') {
 ```typescript
 class MySummary extends IgxNumberSummaryOperand {
     constructor() {
@@ -300,6 +361,7 @@ class MySummary extends IgxNumberSummaryOperand {
     }
 }
 ```
+}
 
 @@if (igxName === 'IgxGrid') {
 
@@ -526,7 +588,7 @@ public dateSummaryFormat(summary: IgxSummaryResult, summaryOperand: IgxSummaryOp
 - <kbd>DOWN</kbd> - 1 つ下のセルへ移動。
 - <kbd>LEFT</kbd> - 1 つ左のセルへ移動。
 - <kbd>RIGHT</kbd> - 1 つ右のセルへ移動。
-- <kbd>CTRL</kbd> + <kbd>LEFT</kbd> or <kbd>HOME</kbd> - 左端のセルへ移動。
+- <kbd>CTRL</kbd> + <kbd>LEFT</kbd> または <kbd>HOME</kbd> - 左端のセルへ移動。
 - <kbd>CTRL</kbd> + <kbd>RIGHT</kbd> または <kbd>END</kbd> - 右端のセルへ移動。
 
 ## スタイル設定
