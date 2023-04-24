@@ -88,7 +88,7 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
 
 ## メニュー機能の構成
 
-ソート、移動、ピン固定、非表示の機能をフィルター メニューから削除できます。これらを制御する入力は以下のとおりです: [`sortable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortable)、[`movable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#movable)、[`selected`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selected)、[`disablePinning`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disablePinning)、[`disableHiding`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disableHiding)。
+ソート、移動、ピン固定、非表示の機能をフィルター メニューから削除できます。これらを制御する入力は以下のとおりです: [`sortable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortable)、[`selected`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selected)、[`disablePinning`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disablePinning)、[`disableHiding`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disableHiding)。
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -99,7 +99,7 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
     </igx-column>
     <igx-column field="UnitPrice" header="Unit Price" [disablePinning]="true" [disableHiding]="true" [sortable]="true" [dataType]="'number'">
     </igx-column>
-    <igx-column field="OrderDate" header="Order Date" [sortable]="false" [dataType]="'date'" [formatter]="formatDate">
+    <igx-column field="OrderDate" header="Order Date" [sortable]="false"  [dataType]="'date'" [formatter]="formatDate">
     </igx-column>
     <igx-column field="Discontinued" header="Discontinued" [sortable]="true" [dataType]="'boolean'">
     </igx-column>
@@ -114,23 +114,17 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
 ```html
 <igx-tree-grid #treegrid1 [data]="data" [autoGenerate]="false" height="480px" width="100%" [moving]="true" [allowFiltering]="true"
     primaryKey="ID" foreignKey="ParentID" filterMode="excelStyleFilter">
-    <igx-column field="ID" header="Product ID" [dataType]="'string'">
-    </igx-column>
-    <igx-column field="Name" header="Product Name" [sortable]="true" [dataType]="'string'">
-    </igx-column>
-    <igx-column field="UnitPrice" header="Unit Price" [dataType]="'number'" [sortable]="false" [disablePinning]="true" [disableHiding]="true">
+    <igx-column field="ID" header="Order ID" [dataType]="'string'"></igx-column>
+    <igx-column field="Name" header="Order Product" [dataType]="'string'" [sortable]="true"></igx-column>
+    <igx-column field="Category" header="Category" [dataType]="'string'" [sortable]="true"></igx-column>
+    <igx-column field="Units" header="Units" [dataType]="'number'" [sortable]="true"></igx-column>
+    <igx-column field="UnitPrice" header="Unit Price" [dataType]="'currency'" [pipeArgs]="formatOptions"></igx-column>
+    <igx-column field="Price" header="Price" [dataType]="'currency'" [pipeArgs]="formatOptions" [sortable]="false" [disablePinning]="true" [disableHiding]="true"></igx-column>
+    <igx-column field="OrderDate" header="Order Date" [dataType]="'date'" [formatter]="formatDate" [sortable]="false"></igx-column>
+    <igx-column field="Delivered" header="Deliverued" [dataType]="'boolean'" [sortable]="false">
         <ng-template igxCell let-cell="cell" let-val>
-            <span *ngIf="cell.row.data.UnitPrice == 0">-</span>
-            <span *ngIf="cell.row.data.UnitPrice != 0">${{val}}</span>
-        </ng-template>
-    </igx-column>
-    <igx-column field="AddedDate" header="Added Date" [dataType]="'date'" [formatter]="formatDate" [sortable]="false">
-    </igx-column>
-    <igx-column field="Discontinued" header="Discontinued" [dataType]="'boolean'" [sortable]="true">
-        <ng-template igxCell let-cell="cell" let-val>
-            <span *ngIf="cell.row.data.UnitPrice == 0">-</span>
-            <img *ngIf="cell.row.data.UnitPrice != 0 && val" src="assets/images/grid/active.png" title="Continued" alt="Continued" />
-            <img *ngIf="cell.row.data.UnitPrice != 0 && !val" src="assets/images/grid/expired.png" title="Discontinued" alt="Discontinued" />
+            <img *ngIf="val" src="assets/images/grid/active.png" title="Delivered" alt="Delivered" />
+            <img *ngIf="!val" src="assets/images/grid/expired.png" title="Undelivered" alt="Undelivered" />
         </ng-template>
     </igx-column>
 </igx-tree-grid>
@@ -138,11 +132,12 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
 
 <div class="divider--half"></div>
 
-以下のサンプル 'Product Name’ と 'Discontinued’ の列には 4 つの機能すべてが有効です。'Unit Price’ で 4 機能すべてが無効で、'Added Date’ はピン固定と非表示のみ有効です。
+以下のサンプルでは、'Order Product'、'Category'、および 'Units' 列で 3 つの機能がすべて有効化され、'Price' で 3 つすべてが無効化され、'Order Date' と 'Delivered' でピン固定と非表示のみが設定されています。
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="false" [allowFiltering]='true' filterMode="excelStyleFilter" [moving]="true" [height]="'650px'" [width]="'100%'" [rowHeight]="'65px'" #hierarchicalGrid>
+<igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="false" [moving]="true" [allowFiltering]='true' filterMode="excelStyleFilter"
+    [height]="'650px'" [width]="'100%'" [rowHeight]="'65px'" #hierarchicalGrid>
     <igx-column field="Artist" [filterable]='true' [sortable]="true"></igx-column>
     <igx-column field="Photo" [filterable]='false'>
         <ng-template igxCell let-cell="cell">
@@ -179,7 +174,7 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
 
 <div class="divider--half"></div>
 
-以下のサンプルは、'Artist’ 列で 4 つの機能が有効、'Debut' で 4 つの機能が無効、'Grammy Nominations’ でピン固定と非表示のみ有効です。
+以下のサンプルは、'Artist' 列で 4 つの機能が有効、'Debut' で 4 つの機能が無効、'Grammy Nominations' でピン固定と非表示のみ有効です。
 }
 
 <div class="divider--half"></div>
@@ -790,12 +785,12 @@ $custom-drop-down-schema: extend($_light-drop-down,
 
 ```scss
 $custom-light-schema: extend($light-schema,(
-    igx-grid: $custom-grid-schema,
-    igx-button: $custom-button-schema,
-    igx-input-group: $custom-input-group-schema,
-    igx-list: $custom-list-schema,
-    igx-checkbox: $custom-checkbox-schema,
-    igx-drop-down: $custom-drop-down-schema
+   grid: $custom-grid-schema,
+   button: $custom-button-schema,
+   input-group: $custom-input-group-schema,
+   list: $custom-list-schema,
+   checkbox: $custom-checkbox-schema,
+   drop-down: $custom-drop-down-schema
 ));
 
 $custom-grid: grid-theme(

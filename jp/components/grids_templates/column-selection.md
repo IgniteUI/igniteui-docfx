@@ -34,7 +34,7 @@ _language: ja
 *_Contact Title_、_City_、および _Address_ 列の選択が無効になっています。
 }
 @@if (igxName === 'IgxTreeGrid') {
-*_Unit Price_ および _Discontinued_ 列の選択が無効になっています。
+*_Units_、_Unit Price_ および _Delivered_ 列の選択が無効になっています。
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 *_Photo_ および _Debut_ 列の選択が無効になっています。
