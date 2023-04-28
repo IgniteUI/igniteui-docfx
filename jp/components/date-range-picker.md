@@ -65,12 +65,12 @@ public range: DateRange = { start: new Date(2020, 4, 20), end: new Date(2020, 4,
 
 ### コンポーネントの投影
 
-デフォルトの Date Range Picker UX の機能向上のため、コンポーネントは子コンポーネントの投影を許可します - [`IgxInputGroupComponent`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) 、[`igxLabel`](label-input.md)、[`IgxHint`](input-group.md#hint)、[`igxPrefix`](input-group.md#prefix-および-suffix)、[`igxSuffix`](input-group.md#prefix-および-suffix) ([`IgxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) を除く) と同じです。詳細については、[Label および Input](label-input.md) トピックを参照してください。
+デフォルトの Date Range Picker UX の機能向上のため、コンポーネントは子コンポーネントの投影を許可します - [`IgxInputGroupComponent`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) 、[`igxLabel`](label-input.md)、[`igx-hint / igxHint`](input-group.md#hint)、[`igx-prefix / igxPrefix`](input-group.md#prefix-および-suffix)、[`igx-suffix / igxSuffix`](input-group.md#prefix-および-suffix) ([`IgxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) を除く) と同じです。詳細については、[Label および Input](label-input.md) トピックを参照してください。
 
 さらに、Ignite UI for Angular Date Range Picker は [`IgxPickerToggleComponent`]({environment:angularApiUrl}/classes/igxpickertogglecomponent.html) を投影するように構成できます。IgxPickerToggleComponent は、カレンダーの切り替えを制御し、[カレンダーの切り替え](#カレンダーの切り替え)セクションに示すように変更できます。
 
 ```html
-<igx-date-range-picker [(ngModel)]="range">
+<igx-date-range-picker #dateRangePicker [(ngModel)]="range">
     <label igxLabel>Flight dates</label>
     <igx-hint *ngIf="dateRangePicker.invalid">
         Please choose start and end date!

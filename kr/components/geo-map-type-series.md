@@ -16,10 +16,10 @@ All types of geographic series are always rendered on top of the geographic imag
 
 The Geographic Map component supports the following types of geographic series:
 
--   [Using Scatter Symbol Series](geo-map-type-scatter-symbol-series.md)
--   [Using Scatter Proportional Series](geo-map-type-scatter-bubble-series.md)
--   [Using Scatter Contour Series](geo-map-type-scatter-contour-series.md)
--   [Using Scatter Density Series](geo-map-type-scatter-density-series.md)
--   [Using Scatter Area Series](geo-map-type-scatter-area-series.md)
--   [Using Shape Polygon Series](geo-map-type-shape-polygon-series.md)
--   [Using Shape Polyline Series](geo-map-type-shape-polyline-series.md)
+*   [Using Scatter Symbol Series](geo-map-type-scatter-symbol-series.md)
+*   [Using Scatter Proportional Series](geo-map-type-scatter-bubble-series.md)
+*   [Using Scatter Contour Series](geo-map-type-scatter-contour-series.md)
+*   [Using Scatter Density Series](geo-map-type-scatter-density-series.md)
+*   [Using Scatter Area Series](geo-map-type-scatter-area-series.md)
+*   [Using Shape Polygon Series](geo-map-type-shape-polygon-series.md)
+*   [Using Shape Polyline Series](geo-map-type-shape-polyline-series.md)
