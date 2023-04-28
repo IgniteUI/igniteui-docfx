@@ -102,7 +102,7 @@ export class SampleFormComponent {
 > ピッカーは常に `Date` 値を返します。これは、モデルにバインドされている場合、または文字列変数への双方向バインドの場合、新しい日付が選択された後、タイプが `Date` になることを意味します。
 
 ### コンポーネントの投影
-[`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) は、[`IgxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) を除く [`IgxInputGroupComponent`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) がサポートする子コンポーネントの投影を許可します。それは、[`igxLabel`](label-input.md)、[`IgxHint`](input-group.md#hint)、[`igxPrefix`](input-group.md#prefix-および-suffix)、[`igxSuffix`](input-group.md#prefix-および-suffix) です。詳細については、[Label および Input](label-input.md) トピックを参照してください。
+[`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) は、[`IgxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) を除く [`IgxInputGroupComponent`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) がサポートする子コンポーネントの投影を許可します。それは、[`igxLabel`](label-input.md)、[`igx-hint / IgxHint`](input-group.md#hint)、[`igx-prefix / igxPrefix`](input-group.md#prefix-および-suffix)、[`igx-suffix / igxSuffix`](input-group.md#prefix-および-suffix) です。詳細については、[Label および Input](label-input.md) トピックを参照してください。
 
 ```html
 <igx-date-picker #datePicker>
@@ -220,7 +220,7 @@ IgxDatePicker と [`IgxTimePicker`](time-picker.md) を一緒に使用する場�
 
 <div class="divider--half"></div>
 
-リアクティブ フォームでは、各コンポーネントの [`valueChange`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#valuechange) イベントを処理し、他のコンポーネントの値を更新できます。
+リアクティブ フォームでは、各コンポーネントの [`valueChange`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#valueChange) イベントを処理し、他のコンポーネントの値を更新できます。
 
 <code-view style="height: 540px;"
            data-demos-base-url="{environment:demosBaseUrl}"
