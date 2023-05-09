@@ -284,6 +284,7 @@ $custom-badge-theme: badge-theme(
 ### デモ
 
 <code-view style="height:340px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-display/badge-styling-sample" >
 </code-view>

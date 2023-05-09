@@ -342,6 +342,7 @@ The last step is to include the component's theme.
 ### Demo
 
 <code-view style="height:500px"
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/simple-combo-styling" >
 </code-view>

@@ -343,6 +343,7 @@ $custom-drop-down-theme: drop-down-theme(
 ### サンプル
 
 <code-view style="height:500px"
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/simple-combo-styling" >
 </code-view>

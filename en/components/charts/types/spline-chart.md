@@ -59,6 +59,7 @@ If you need a Spline Chart with more features such as composite other series, yo
 You can create this type of chart in the [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html) control by binding your data and setting the [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#charttype) property to `Spline`, as shown in the example below:
 
 <code-view style="height: 600px" alt="Angular Spline Chart Styling"
+           no-theming
            data-demos-base-url="{environment:dvDemosBaseUrl}"
                     iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/spline-styling"
                                                  github-src="charts/category-chart/spline-styling">

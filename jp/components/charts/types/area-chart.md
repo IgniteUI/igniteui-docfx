@@ -87,6 +87,7 @@ Angular エリア チャートは、生産される再生可能電力の量な�
 エリア チャートには、多くの場合、その領域が半透明で塗りつぶされており、通常より太い線とわずかに大きいマーカーがあります。以下は、それに応じて以前のエリア チャートのスタイルを設定する方法を示す例です。
 
 <code-view style="height: 600px" alt="Angular エリア チャートのスタイル設定"
+           no-theming
            data-demos-base-url="{environment:dvDemosBaseUrl}"
                     iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/area-chart-styling"
                                                  github-src="charts/category-chart/area-chart-styling">

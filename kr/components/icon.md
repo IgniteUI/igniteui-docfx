@@ -201,6 +201,7 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 #### Demo
 
 <code-view style="height:320px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-display/icon-styling" >
 </code-view>

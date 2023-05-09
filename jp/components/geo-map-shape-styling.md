@@ -13,6 +13,7 @@ _language: ja
 ## Angular 地理シェイプ シリーズのスタイル設定の例
 
 <code-view style="height: 500px" alt="Angular 地理シェイプ シリーズのスタイル設定の例"
+           no-theming
            data-demos-base-url="{environment:dvDemosBaseUrl}"
                     iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map/shape-styling"
                                                  github-src="maps/geo-map/shape-styling">

@@ -287,6 +287,7 @@ If the component is using the [`Emulated`](themes/sass/component-themes.md#view-
 
 
 <code-view style="height: 200px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-entries/button-group-style" >
 </code-view>

@@ -370,6 +370,7 @@ $custom-drop-down: drop-down-theme(
 ### デモ
 
 <code-view style="height:530px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/interactions/query-builder-style" >
 </code-view>

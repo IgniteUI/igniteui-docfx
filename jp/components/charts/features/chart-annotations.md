@@ -45,6 +45,7 @@ Angular チャートのホバー操作と注釈は、シリーズ コレクシ�
 次の例は、単一のシリーズをターゲットにして、タイプを垂直に設定し、ブラシの色をスタイリングすることによって、十字線レイヤーを構成する方法を示しています。
 
 <code-view style="height: 500px" alt="Angular 十字線レイヤーのスタイル設定"
+           no-theming
            data-demos-base-url="{environment:dvDemosBaseUrl}"
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/crosshair-layer-styling"
                                                  github-src="charts/data-chart/crosshair-layer-styling">
@@ -68,6 +69,7 @@ Angular チャートのホバー操作と注釈は、シリーズ コレクシ�
 次の例は、上記のプロパティを設定して、最終的な値レイヤーの注釈のスタイルを設定する方法を示しています。
 
 <code-view style="height: 500px" alt="Angular 最終値レイヤーのスタイル設定"
+           no-theming
            data-demos-base-url="{environment:dvDemosBaseUrl}"
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/final-value-layer-styling"
                                                  github-src="charts/data-chart/final-value-layer-styling">
@@ -104,6 +106,7 @@ Angular チャートのホバー操作と注釈は、シリーズ コレクシ�
 次の例は、上記のプロパティを設定して、コールアウト レイヤーの注釈のスタイルを設定する方法を示しています。
 
 <code-view style="height: 500px" alt="Angular コールアウト レイヤーのスタイル設定"
+           no-theming
            data-demos-base-url="{environment:dvDemosBaseUrl}"
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/callout-layer-styling"
                                                  github-src="charts/data-chart/callout-layer-styling">

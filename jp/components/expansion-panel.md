@@ -185,6 +185,7 @@ Angular Expansion Panel は、パネルの縮小時に「更に表示」を描�
 ### Angular Expansion Panel のデモ
 
 <code-view style="height: 440px;" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/layouts/expansion-styling" >
 </code-view>

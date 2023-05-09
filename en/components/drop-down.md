@@ -442,6 +442,7 @@ If the component is using the [`Emulated`](themes/sass/component-themes.md#view-
 ### Demo
 
 <code-view style="height:350px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-styling" >
 </code-view>

@@ -328,6 +328,7 @@ $custom-banner-theme: banner-theme(
 
 
 <code-view style="height: 530px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/notifications/banner-styling" >
 </code-view>

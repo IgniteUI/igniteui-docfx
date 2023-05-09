@@ -450,6 +450,7 @@ If the component is using an [`Emulated`](../themes/sass/component-themes.md#vie
 @@if (igxName === 'IgxGrid') {
 
 <code-view style="height:540px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/grid/grid-row-pinning-styling" >
 </code-view>
@@ -458,6 +459,7 @@ If the component is using an [`Emulated`](../themes/sass/component-themes.md#vie
 @@if (igxName === 'IgxTreeGrid') {
 
 <code-view style="height:540px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-row-pinning-styling" >
 </code-view>
@@ -466,6 +468,7 @@ If the component is using an [`Emulated`](../themes/sass/component-themes.md#vie
 @@if (igxName === 'IgxHierarchicalGrid') {
 
 <code-view style="height:540px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-pinning-styling" >
 </code-view>

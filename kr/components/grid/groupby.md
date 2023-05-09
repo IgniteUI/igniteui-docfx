@@ -282,6 +282,7 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 
 
 <code-view style="height:570px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/grid/grid-groupby-styling" >
 </code-view>

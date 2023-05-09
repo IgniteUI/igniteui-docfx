@@ -358,6 +358,7 @@ public priceClasses = {
 @@if (igxName === 'IgxGrid') {
 
 <code-view style="height:530px"
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-cell-styling" >
 </code-view>
@@ -366,6 +367,7 @@ public priceClasses = {
 @@if (igxName === 'IgxTreeGrid') {
 
 <code-view style="height:600px"
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-conditional-cell-style" >
 </code-view>
