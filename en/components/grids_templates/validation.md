@@ -118,6 +118,7 @@ Validation will be triggered in the following scenarios:
 - While editing via the cell editor based on the grid's [`validationTrigger`]({environment:angularApiUrl}/classes/IgxGridComponent.html#validationTrigger). Either on `change` while typing in the editor, or on `blur` when the editor loses focus or closes.
 - When updating cells/rows via the API - [`updateRow`]({environment:angularApiUrl}/classes/IgxGridComponent.html#updateRow), [`updateCell`]({environment:angularApiUrl}/classes/IgxGridComponent.html#updateCell) etc..
 - When using batch editing and the [`undo`]({environment:angularApiUrl}/classes/IgxTransactionService.html#undo)/[`redo`]({environment:angularApiUrl}/classes/IgxTransactionService.html#redo) API of the transaction service.
+- When cells/rows are edited via user interaction or API and then the grid's `data` is changed by the user. In that case existing validation states will be re-evaluated based on the new data and transactions by row id.
 
 > Note: Validation will not trigger for records that have not been edited via user input or via the editing API. Visual indicators on the cell will only shown if the related input is considered touched - either via user interaction or via the `markAsTouched` API of the validation service.
 
