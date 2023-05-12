@@ -51,7 +51,11 @@ Unfortunately not all changes can be automatically updated. Changes below are sp
 
 For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from the "From 6.x .." section apply those changes and work your way up:
 
-## from 15.0.x to 15.1.x
+## From 15.1.x to 16.0.x
+
+- The upgrade to Angular 16 comes with changes in how `NgModules` operate under the hood. Previously, adding a module that internally depends on another would make the declarations of both available in your app. This behavior was not intended and Angular 16 changes it. If your app was depending on this behavior, e.g. you were only importing a module containing many internal dependencies like `IgxGridModule` and using components coming with those, you will need to manually add the modules for each component your app uses separately.
+
+## From 15.0.x to 15.1.x
 - **Visual Change** 
 - In 15.1 the sizes of the input components have increased. This is more noticeable when using the Material theme. We do this to match Material spec. If your application is negatively affected by the change, you can use the displayDensity input and set it to a more dense setting, e.g. from comfortable to cozy or from cozy to compact.
 
