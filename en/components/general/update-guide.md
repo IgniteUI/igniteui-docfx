@@ -67,7 +67,7 @@ To enable paging in the grid, initialize the `IgxPaginatorComponent` in the grid
 ```
 
 ```typescript
-@ViewChild('grid', { static: true }) private grid1: IgxGridComponent;
+@ViewChild('grid', { static: true }) private grid: IgxGridComponent;
 @ViewChild('paginator', { static: true }) private paginator: IgxPaginatorComponent;
 
 // prior version 16.0.x
