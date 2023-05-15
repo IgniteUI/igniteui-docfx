@@ -52,6 +52,10 @@ ng update @angular/cli
 
 例: 6.2.4 から 7.1.0 にアップデートする場合、[6.x .. から] セクションから始めて変更を適用していきます。
 
+## From 15.1.x to 16.0.x
+
+- The upgrade to Angular 16 comes with changes in how `NgModules` operate under the hood. Previously, adding a module that internally depends on another would make the declarations of both available in your app. This behavior was not intended and Angular 16 changes it. If your app was depending on this behavior, e.g. you were only importing a module containing many internal dependencies like `IgxGridModule` and using components coming with those, you will need to manually add the modules for each component your app uses separately.
+
 ## 15.0.x から 15.1.x の場合:
 - **視覚的な変更**
 - 15.1 では、入力コンポーネントのサイズが大きくなりました。これは、Material テーマを使用するとより明瞭になります。これは、Material  仕様に一致するように行います。アプリケーションが変更によって悪影響を受ける場合は、displayDensity 入力を使用して、より密度の高い設定に設定できます (comfortable から cozy まで、または cozy から compact まで)。
