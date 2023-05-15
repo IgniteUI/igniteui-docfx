@@ -55,7 +55,73 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
 
 - The upgrade to Angular 16 comes with changes in how `NgModules` operate under the hood. Previously, adding a module that internally depends on another would make the declarations of both available in your app. This behavior was not intended and Angular 16 changes it. If your app was depending on this behavior, e.g. you were only importing a module containing many internal dependencies like `IgxGridModule` and using components coming with those, you will need to manually add the modules for each component your app uses separately.
 
+- **Breaking changes**
+- In 16.0.x, all grid properties, related to paging, are removed. Paging behavior is now configured and controlled entirely through the `IgxPaginatorComponent`.
+To enable paging in the grid, initialize the `IgxPaginatorComponent` in the grid and set related input properties and attach to event handlers to the paginator itself:
+
+```html
+<igx-grid ...>
+    <igx-paginator #paginator [totalRecords]="totalRecords" [perPage]="25" (pageChange)="pageChange($event) (perPageChange)="perPageChange($event)">
+    </igx-paginator>
+<igx-grid>
+```
+
+```typescript
+@ViewChild('grid', { static: true }) private grid1: IgxGridComponent;
+@ViewChild('paginator', { static: true }) private paginator2: IgxPaginatorComponent;
+
+// prior version 16.0.x
+public onButtonClick(event) {
+    this.grid.nextPage();
+    this.grid.previousPage();
+    this.grid.paginate(0);
+}
+
+// from version 16.0.x
+public onButtonClick(event) {
+    this.paginator.nextPage();
+    this.paginator.previousPage();
+    this.paginator.paginate(0);
+}
+```
+
+- In 16.0.x, grid method `getCellByColumnVisibleIndex(rowIndex: number, index: number)` is removed. Instead, use: `getCellByKey(rowSelector: any, columnField: string)` or `getCellByColumn(rowIndex: number, columnField: string)`. Example:
+
+```typescript
+ // prior version 16.0.x
+ const cell = grid.getCellByColumnVisibleIndex(rowIndex, columnIndex);
+
+ // after version 16.0.x
+ const rowKey = grid.getRowByIndex(rowIndex).key;
+ const columnField = grid.getColumnByVisibleIndex(columnIndex).field;
+ const cell = grid.getCellByKey(rowKey, columnField);
+ const cell = grid.getCellByColumn(rowIndex, columnField);
+```
+
+
 ## From 15.0.x to 15.1.x
+- **Breaking change**
+- `rowSelectionChanging` arguments type is changed. Now the `oldSelection`, `newSelection`, `added` and `removed` collections, part of the `IRowSelectionEventArgs` interface, no longer consist of the row keys of the selected elements (when the grid has set a primaryKey), but now in any case the row data is emitted. When the grid is working with remote data and a `primaryKey` is set - for the selected rows that are not currently part of the grid view, a partial row data object will be emitted.
+
+If your code in `rowSelectionChanging` event handler was depending on reading primaryKeys from the event argument, update it as follows:
+
+```typescript
+  // prior version 15.1.x
+  public handleRowSelection(e: IRowSelectionEventArgs): void {
+    this.selectedRows = e.newSelection;
+  }
+
+  // after version 15.1.x
+  public handleRowSelection(e: IRowSelectionEventArgs): void {
+    this.selectedRows = e.newSelection.map(rec => {
+       return rec[e.owner?.primaryKey]
+    });
+  }
+```
+
+- **Behavioral Change**
+When selected row is deleted from the grid component, `rowSelectionChanging` event is not emitted.
+
 - **Visual Change** 
 - In 15.1 the sizes of the input components have increased. This is more noticeable when using the Material theme. We do this to match Material spec. If your application is negatively affected by the change, you can use the displayDensity input and set it to a more dense setting, e.g. from comfortable to cozy or from cozy to compact.
 
