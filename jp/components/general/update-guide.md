@@ -52,9 +52,9 @@ ng update @angular/cli
 
 例: 6.2.4 から 7.1.0 にアップデートする場合、[6.x .. から] セクションから始めて変更を適用していきます。
 
-## From 15.1.x to 16.0.x
+## 15.1.x から 16.0.x の場合:
 
-- The upgrade to Angular 16 comes with changes in how `NgModules` operate under the hood. Previously, adding a module that internally depends on another would make the declarations of both available in your app. This behavior was not intended and Angular 16 changes it. If your app was depending on this behavior, e.g. you were only importing a module containing many internal dependencies like `IgxGridModule` and using components coming with those, you will need to manually add the modules for each component your app uses separately.
+- Angular 16 へのアップグレードには、 `NgModules` の内部での動作方法の変更が伴います。以前は、内部的に別のモジュールに依存するモジュールを追加すると、アプリ内で両方の宣言が利用可能になりました。 この動作は意図されたものではなく、Angular 16 では変更されています。あなたのアプリがこの動作に依存していた場合、例えば `IgxGridModule` のような多くの内部依存関係を含むモジュールをインポートし、それらに付属するコンポーネントを使用しているだけであった場合、アプリが使用するコンポーネントごとに個別にモジュールを手動で追加する必要があります。
 
 ## 15.0.x から 15.1.x の場合:
 - **視覚的な変更**

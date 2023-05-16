@@ -1,18 +1,19 @@
 ---
-title: How to Use Standalone Components - Angular | Ignite UI for Angular
-_description: How to use Angular 16 preview feature that allows components to be imported standalone and without the use of NgModules with Ignite UI Angular
-_keywords: Ignite UI for Angular, Standalone Components, Angular 16, Angular Modules
+title: スタンドアロン コンポーネントの使用方法 - Angular | Ignite UI for Angular
+_description: Ignite UI for Angular で NgModules を使用せずにコンポーネントをスタンドアロンでインポートできるようにする Angular 16 プレビュー機能の使用方法
+_keywords: Ignite UI for Angular, スタンドアロン コンポーネント, Angular 16, Angular モジュール
+_language: ja
 ---
 
-# Using Standalone Components with Ignite UI for Angular (Preview)
+# Ignite UI for Angular でのスタンドアロン コンポーネントの使用 (プレビュー)
 
-Angular 16 introduces the concept of [standalone components](https://angular.io/guide/standalone-components) which allows for a simplified way of building applications by reducing the need for using `NgModules`. To support this new paradigm, all Ignite UI for Angular components are now exported as `standalone`. All the existing `NgModules` are still exported by the library for backward compatibility. However, they no longer declare any of the Ignite UI for Angular components. Instead they import and export the `standalone` components.
+Angular 16 では[スタンドアロン コンポーネント](https://angular.io/guide/standalone-components)の概念が導入されており、`NgModules` を使用する必要性が減り、アプリケーションを構築する方法が簡素化されます。この新しいパラダイムをサポートするために、すべての Ignite UI for Angular コンポーネントが `スタンドアロン` としてエクスポートされるようになりました。既存のすべての `NgModule` は、後方互換性のためにライブラリによって引き続きエクスポートされます。ただし、Ignite UI for Angular コンポーネントは宣言されなくなりました。代わりに、`スタンドアロン` コンポーネントをインポートおよびエクスポートします。
 
-The `standalone` components are still in a **preview** stage. Some utility directive exports may change in the future and may be missing from the documentation in the initial release.
+`スタンドアロン` コンポーネントはまだ**プレビュー**段階にあります。一部のユーティリティ ディレクティブのエクスポートは将来変更される可能性があり、初期リリースのドキュメントに含まれない可能性があります。
 
-## How to use the new standalone components
+## 新しいスタンドアロン コンポーネントの使用方法
 
-Starting with Angular 16 and Ignite UI for Angular 16.0 you can now simply add the imports that your component needs in the `imports` property. In the following example `IGX_GRID_DIRECTIVES` can be used to import all grid related components and directives.
+Angular 16 および Ignite UI for Angular 16.0 以降では、コンポーネントに必要なインポートを `imports` プロパティに簡単に追加できるようになりました。次の例では、`IGX_GRID_DIRECTIVES` を使用して、すべてのグリッド関連のコンポーネントとディレクティブをインポートできます。
     
 ```typescript
 import { IGX_GRID_DIRECTIVES } from 'igniteui-angular';
@@ -26,7 +27,7 @@ import { IGX_GRID_DIRECTIVES } from 'igniteui-angular';
 })
 ```
 
-But you can also import only `IgxGridComponent`.
+ただし、`IgxGridComponent` のみをインポートすることもできます。
 
 ```typescript
 import { IgxGridComponent } from 'igniteui-angular';
@@ -40,7 +41,7 @@ import { IgxGridComponent } from 'igniteui-angular';
 })
 ```
 
-In addition, as all existing modules are preserved but now only import and export the standalone components, you can also use them for your standalone component.
+さらに、既存のモジュールはすべて保持されますが、スタンドアロン コンポーネントのインポートとエクスポートのみが行われるため、それらをスタンドアロン コンポーネントに使用することもできます。
 
 ```typescript
 // `NgModule` import of the `IgxGridModule` module, which is equivalent to IGX_GRID_DIRECTIVES in terms of exported components and directives.
@@ -55,15 +56,15 @@ import { IgxGridModule } from 'igniteui-angular';
 })
 ```
 
-## Additional Resources
+## その他のリソース
 
-Related topics:
+関連トピック:
 
-- [Standalone Components](https://angular.io/guide/standalone-components)
-- [Getting started with Ignite UI for Angular](../getting-started.md)
-- [Server-side Rendering with Angular](../ssr-rendering.md)
+- [スタンドアロン コンポーネント](https://angular.io/guide/standalone-components)
+- [Ignite UI で作業を開始](../getting-started.md)
+- [Angular のサーバー側レンダリング](../ssr-rendering.md)
 
-Our community is active and always welcoming to new ideas.
+コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

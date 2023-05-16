@@ -45,7 +45,7 @@
     - name: テーマのカスタマイズと最適化
       href: general/how-to/how-to-customize-theme.md
       new: true
-    - name: Use Standalone Components (preview)
+    - name: スタンドアロン コンポーネントの使用方法 (プレビュー)
       href: general/how-to/how-to-use-standalone-components.md
       new: true
 - name: Angular Schematics & Ignite UI CLI
