@@ -7,7 +7,10 @@ _keywords:  angular select, igniteui for angular, infragistics
 # Angular Select Overview
 Angular Material Select is a form control used for data entry and data display, enabling users to select a given value from a list with several predefined values. The Angular Select Component is very similar to a DropDown list. While Select Component is used inside a form where users can choose from a list of options and submit data, a [DropDown component](drop-down.md) filters or sorts out content on a page.
 
-<p class="highlight">The Ignite UI for Angular Material [Select Component]({environment:angularApiUrl}/classes/igxselectcomponent.html) allows a single selection from a list of items, placed in a dropdown. This Material-based form control offers quick items list navigation, including selection, based on a single or multiple characters match. Since the [IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html) extends the [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html), you can handle all of the Drop Down events in the Select instance as well.</p>
+<p class="highlight">
+
+The Ignite UI for Angular Material [Select Component]({environment:angularApiUrl}/classes/igxselectcomponent.html) allows a single selection from a list of items, placed in a dropdown. This Material-based form control offers quick items list navigation, including selection, based on a single or multiple characters match. Since the [IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html) extends the [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html), you can handle all of the Drop Down events in the Select instance as well.
+</p>
 
 ## Angular Select Example
 Below is a basic Angular Select example. It has a simple contextual menu that displays a list of several choices opening per click.
