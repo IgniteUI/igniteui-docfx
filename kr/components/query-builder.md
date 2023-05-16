@@ -7,7 +7,10 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 # Query Builder
 
-<p class="highlight">The [`IgxQueryBuilderComponent`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html) component provides a way to build complex queries through the UI. By specifying AND/OR operators, conditions and values the user creates an expression tree which describes the query. 
+<p class="highlight">
+
+The [`IgxQueryBuilderComponent`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html) component provides a way to build complex queries through the UI. By specifying AND/OR operators, conditions and values the user creates an expression tree which describes the query. 
+</p>
 
 ## Angular Query Builder Example
 

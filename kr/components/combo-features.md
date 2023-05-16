@@ -7,6 +7,7 @@ _language: kr
 
 ## Combo Features
 <p class="highlight">
+
 Combo control exposes several features including data and value binding, **[custom values](combo-features.md#custom-values)**, **[filtering](combo-features.md#filtering)**, **[grouping](combo-features.md#grouping)**, etc.
 </p>
 <div class="divider"></div>

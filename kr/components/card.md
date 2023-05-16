@@ -5,11 +5,15 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 _language: kr
 ---
 
-##Card
-<p class="highlight">The Ignite UI for Angular [`IgxCardComponent`]({environment:angularApiUrl}/classes/igxcardcomponent.html) displays text, images, icons, and buttons in a visually rich presentation that can serve as an entry point to more detailed information. Cards can be used to create a multimedia dashboard. The Card component supports pagination using the same component as the Ignite UI for Angular Grid, with some custom coding required.</p>
+## Card
+
+<p class="highlight">
+
+The Ignite UI for Angular [`IgxCardComponent`]({environment:angularApiUrl}/classes/igxcardcomponent.html) displays text, images, icons, and buttons in a visually rich presentation that can serve as an entry point to more detailed information. Cards can be used to create a multimedia dashboard. The Card component supports pagination using the same component as the Ignite UI for Angular Grid, with some custom coding required.
+</p>
 <div class="divider"></div>
 
-###Card Demo
+### Card Demo
 
 <code-view style="height: 930px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -18,7 +22,7 @@ _language: kr
 
 <div class="divider--half"></div>
 
-###Usage
+### Usage
 Cards allow you to easily display content composed of different types of objects or similar objects whose size and supported actions can vary.
 
 ####Getting Started
@@ -61,7 +65,7 @@ If all went well, you should see the following card in your browser:
 </code-view>
 
 
-####Adding Avatar and Images
+#### Adding Avatar and Images
 
 Yes, Brad Stanley is popular, but maybe we want to make his card a bit more interesting. We can add a nice picture avatar to the left of his name and a larger Audi TT image. To do that let's grab the [**IgxAvatar**](avatar.md) module and import it in our **app.module.ts** file.
 ```typescript
@@ -110,7 +114,7 @@ At this point the card should look similar to the following:
 </code-view>
 
 
-####Adding Actions
+#### Adding Actions
 
 Now, we have a rich and very informative card, but it does seem like it is missing something, right? The good news is we can use some of our other components to enrich the experience and add some functionality.
 Let's put a few options to directly access social media from within the card. To do that we will grab two other modules - the [**IgxIcon**](icon.md) and the [**IgxButton**](button.md), and import them in our **app.module.ts** file.
@@ -179,7 +183,7 @@ Easy, right? Let's see how it turned out in the browser:
 
 <div class="divider--half"></div>
 
-####Summary
+#### Summary
 In this article we covered a lot of ground with the card component. First, we created a very simple card with text content only. Then added some images to make the card a bit more appealing. Finally, we used some additional Ignite UI for Angular components inside our card, like avatars, buttons and icons, to enrich the experience and add some functionality. The card component is capable of displaying more different layouts worth exploring in the Card Demo in the beginning of this article.
 
 ### API and Style References
@@ -205,7 +209,7 @@ Styles:
 
 <div class="divider"></div>
 
-###Additional Resources
+### Additional Resources
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
