@@ -6,7 +6,11 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 # Elevations
 
-<p class="highlight">Elevations are used to establish and maintain functional boundaries between Document Object Model trees to enable better functional encapsulation. The implementation of the Elevations in Ignite UI for Angular is modeled after the [Elevations in Material Design](https://material.io/design/environment/elevation.html#elevation-in-material-design).</p>
+<p class="highlight">
+
+Elevations are used to establish and maintain functional boundaries between Document Object Model trees to enable better functional encapsulation. The implementation of the Elevations in Ignite UI for Angular is modeled after the [Elevations in Material Design](https://material.io/design/environment/elevation.html#elevation-in-material-design).
+
+</p>
 <div class="divider"></div>
 
 ## Overview
