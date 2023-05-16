@@ -100,7 +100,10 @@ Try it! The final result would be something like that:
 </div>
 
 ### Radio Group
-<p class="highlight">The Ignite UI for Angular Radio Group directive provides a grouping container that allows better control over the child [`igxRadio`]({environment:angularApiUrl}/classes/igxradiocomponent.html) components and supports template-driven and reactive forms.</p>
+<p class="highlight">
+
+The Ignite UI for Angular Radio Group directive provides a grouping container that allows better control over the child [`igxRadio`]({environment:angularApiUrl}/classes/igxradiocomponent.html) components and supports template-driven and reactive forms.
+</p>
 <div class="divider"></div>
 
 #### Radio Group Demo
