@@ -10,7 +10,7 @@ Angular Material は、最も便利で使いやすいレイアウト コンポ�
 
 <p class="highlight">
 
-    Ignite UI Expansion Panel [igx-expansion-panel]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) は、軽量な Angular アコーディオン コンポーネントで、縮小または展開のどちらかの状態でレンダリングできます。Angular の Expansion Panel は、マウス クリックまたはキーボード操作によって切り替えることができます。複数の Angular 展開パネルを組み合わせて Angular アコーディオンにすることもできます。
+Ignite UI Expansion Panel [igx-expansion-panel]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) は、軽量な Angular アコーディオン コンポーネントで、縮小または展開のどちらかの状態でレンダリングできます。Angular の Expansion Panel は、マウス クリックまたはキーボード操作によって切り替えることができます。複数の Angular 展開パネルを組み合わせて Angular アコーディオンにすることもできます。
 </p>
 <div class="divider--half"></div>
 
