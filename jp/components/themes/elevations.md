@@ -7,7 +7,9 @@ _language: ja
 
 # エレベーション
 
-<p class="highlight">エレベーションは、Document Object Model ツリーの間に境界線を描画し、機能のカプセル化を向上します。Ignite UI for Angular でのエレベーションの実装は、[マテリアル デザインでのエレベーション](https://material.io/design/environment/elevation.html#elevation-in-material-design)をモデルにしています。</p>
+<p class="highlight">
+
+エレベーションは、Document Object Model ツリーの間に境界線を描画し、機能のカプセル化を向上します。Ignite UI for Angular でのエレベーションの実装は、[マテリアル デザインでのエレベーション](https://material.io/design/environment/elevation.html#elevation-in-material-design)をモデルにしています。</p>
 <div class="divider"></div>
 
 ## 概要

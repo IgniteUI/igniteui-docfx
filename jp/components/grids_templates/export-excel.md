@@ -39,6 +39,7 @@ _language: ja
 @@if (igxName === 'IgxGrid' || igxName === 'IgxTreeGrid') {
 
 <p class="highlight">
+
 Excel Exporter サービスは @@igxName のデータを MS Excel へエクスポートできます。エクスポート機能は、[`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) クラスでカプセル化され、MS Excel テーブル形式でデータをエクスポートします。この形式ではフィルタリングやソートなどの機能が使用でき、[`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) の [`export`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#export) メソッドを呼び出して最初の引数として @@igxName コンポーネントを渡し、グリッドを簡単にエクスポートします。
 </p>
 
@@ -47,6 +48,7 @@ Excel Exporter サービスは @@igxName のデータを MS Excel へエクス�
 @@if (igxName === 'IgxHierarchicalGrid') {
 
 <p class="highlight">
+
   Excel Exporter サービスは @@igxName のデータを MS Excel へエクスポートできます。エクスポート機能は、[`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) クラスでカプセル化されています。プロセスをトリガーするには、[`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) の [`export`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#export) メソッドを呼び出し、最初の引数として @@igxName コンポーネントを渡す必要があります。
 </p>
 
