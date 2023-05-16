@@ -314,8 +314,8 @@ Don't forget to include the theme in the same way as it was demonstrated above.
 
 ## API References
 <div class="divider--half"></div>
- 
-* [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
+
+* [ColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 * [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#mixin-igx-grid)
 
