@@ -8,7 +8,9 @@ _language: kr
 ## Excel 내보내기
 
 <p class="highlight">
-Ignite UI for Angular의 Excel 내보내기 서비스는 원시 데이터(배열) 또는 [**IgxGrid**](grid/grid.md) 에서 Microsoft® Excel® 형식으로 데이터를 내보내기할 수 있습니다. 내보내기 기능은 [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) 클래스에 캡슐화되며 데이터는 MS Excel 표 형식으로 내보내기가 됩니다. 이 형식은 필터링, 정렬 등과 같은 기능을 사용할 수 있습니다.</p>
+
+Ignite UI for Angular의 Excel 내보내기 서비스는 원시 데이터(배열) 또는 [**IgxGrid**](grid/grid.md) 에서 Microsoft® Excel® 형식으로 데이터를 내보내기할 수 있습니다. 내보내기 기능은 [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) 클래스에 캡슐화되며 데이터는 MS Excel 표 형식으로 내보내기가 됩니다. 이 형식은 필터링, 정렬 등과 같은 기능을 사용할 수 있습니다.
+</p>
 <div class="divider"></div>
 
 ### Excel 내보내기 데모

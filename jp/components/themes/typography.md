@@ -8,7 +8,10 @@ _language: ja
 
 # タイポグラフィ
 
-<p class="highlight">Ignite UI for Angular のタイポグラフィは、[マテリアル タイプ システム (英語)](https://material.io/design/typography/the-type-system.html#)をモデルにしています。邪魔にならないオプションで、CSS のみを使用してタイプ スタイルを変更できます。</p>
+<p class="highlight">
+
+Ignite UI for Angular のタイポグラフィは、[マテリアル タイプ システム (英語)](https://material.io/design/typography/the-type-system.html#)をモデルにしています。邪魔にならないオプションで、CSS のみを使用してタイプ スタイルを変更できます。
+</p>
 <div class="divider"></div>
 
 ## 概要
