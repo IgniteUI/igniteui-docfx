@@ -6,7 +6,10 @@ _language: kr
 ---
 
 ## Carousel
-<p class="highlight">The Ignite UI for Angular Carousel component is developed as a native [Angular component](https://angular.io/guide/architecture#components). Use it to browse or navigate through a collection of slides, including image galleries, cards, onboarding tutorials, or page-based interfaces.</p>
+<p class="highlight">
+
+The Ignite UI for Angular Carousel component is developed as a native [Angular component](https://angular.io/guide/architecture#components). Use it to browse or navigate through a collection of slides, including image galleries, cards, onboarding tutorials, or page-based interfaces.
+</p>
 <div class="divider"></div>
 
 ### Carousel Demo

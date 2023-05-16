@@ -8,7 +8,9 @@ _language: ja
 # Angular Select の概要
 Angular Material Select は、データ入力とデータ表示に使用されるフォーム コントロールであり、ユーザーはいくつかの事前定義された値を含むリストから特定の値を選択できます。Angular Select コンポーネントは、ドロップダウン リストに非常に似ています。Select コンポーネントは、ユーザーがオプションのリストから選択してデータを送信できるフォーム内で使用されますが、[DropDown コンポーネント](drop-down.md) はページのコンテンツをフィルター処理またはソートします。
 
-<p class="highlight">Ignite UI for Angular Material [Select コンポーネント]({environment:angularApiUrl}/classes/igxselectcomponent.html)は、ドロップダウンに配置された項目のリストからの単一選択できます。このマテリアルベースのフォームコントロールは、単一または複数の文字の一致に基づいて、選択などの迅速な項目リスト ナビゲーションを提供します。[IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html) は [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) を拡張するため、Select インスタンスですべての Drop Down イベントを処理できます。</p>
+<p class="highlight">
+
+Ignite UI for Angular Material [Select コンポーネント]({environment:angularApiUrl}/classes/igxselectcomponent.html)は、ドロップダウンに配置された項目のリストからの単一選択できます。このマテリアルベースのフォームコントロールは、単一または複数の文字の一致に基づいて、選択などの迅速な項目リスト ナビゲーションを提供します。[IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html) は [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) を拡張するため、Select インスタンスですべての Drop Down イベントを処理できます。</p>
 
 ## Angular Select の例
 以下は基本的な Angular Select の例です。クリックごとに開く、いくつかの選択肢のリストを表示するシンプルなコンテキスト メニューがあります。
