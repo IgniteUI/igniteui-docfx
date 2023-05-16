@@ -6,7 +6,9 @@ _language: ja
 ---
 
 # Input Group
-<p class="highlight">`IgxInputGroup` は、ユーザーが input、select、textarea などの入力要素を拡張することを可能にします。これは、テキスト、アイコン、ボタン、カスタムバリデーションなどのカスタムコンテンツを、プレフィックス、サフィックス、またはヒントとして、それらの両側に追加することで実現できます。</p>
+<p class="highlight">
+
+`IgxInputGroup` は、ユーザーが input、select、textarea などの入力要素を拡張することを可能にします。これは、テキスト、アイコン、ボタン、カスタムバリデーションなどのカスタムコンテンツを、プレフィックス、サフィックス、またはヒントとして、それらの両側に追加することで実現できます。</p>
 
 ## Angular Input Group の例
 

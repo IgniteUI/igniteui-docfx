@@ -162,7 +162,9 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 <div class="divider--half"></div>
 
 ## Radio Group
-<p class="highlight">Ignite UI for Angular Radio Group ディレクティブは、ラジオの子コンポーネントを制御できるグループ化コンテナーを提供し、**テンプレート駆動型およびリアクティブ型のフォームをサポートします。**</p>
+<p class="highlight">
+
+Ignite UI for Angular Radio Group ディレクティブは、ラジオの子コンポーネントを制御できるグループ化コンテナーを提供し、**テンプレート駆動型およびリアクティブ型のフォームをサポートします。**</p>
 <div class="divider"></div>
 
 ### デモ

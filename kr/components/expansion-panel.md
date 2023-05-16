@@ -7,6 +7,7 @@ _language: kr
 
 ## Expansion Panel
 <p class="highlight">
+
 The [`IgxExpansionPanel`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) is a lightweight component which can be rendered in two states - collapsed or expanded. When collapsed, the panel displays a short summary of its content. The collapsed panel can be toggled using mouse click, or keyboard interactions to display the body completely, containing any additional necessary content.
 </p>
 <div class="divider--half"></div>
