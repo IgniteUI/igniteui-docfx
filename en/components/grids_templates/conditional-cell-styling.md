@@ -150,18 +150,19 @@ public rowStyles = {
 
 ```typescript
 // component.ts
-public background = (row: RowType) => row.data.data['Title'] === 'CEO' ? '#6c757d' :
-    row.data.data['Title'].includes('President') ? '#adb5bd' : row.data.data['Title'].includes('Director') ?  '#ced4da' :
-    row.data.data['Title'].includes('Manager') ? '#dee2e6' :
-    row.data.data['Title'].includes('Lead') ? '#e9ecef' :
-    row.data.data['Title'].includes('Senior') ? '#f8f9fa' : null;
+public background = (row: RowType) => row.data['Title'] === 'CEO' ? '#6c757d' :
+    row.data['Title'].includes('President') ? '#adb5bd' :
+    row.data['Title'].includes('Director') ?  '#ced4da' :
+    row.data['Title'].includes('Manager') ? '#dee2e6' :
+    row.data['Title'].includes('Lead') ? '#e9ecef' :
+    row.data['Title'].includes('Senior') ? '#f8f9fa' : null;
 
 public rowStyles = {
     background: this.background,
-    'border-left': (row: RowType) => row.data.data['Title'] === 'CEO' || row.data.data['Title'].includes('President') ?
+    'border-left': (row: RowType) => row.data['Title'] === 'CEO' || row.data['Title'].includes('President') ?
         '2px solid' : null,
-    'border-color': (row: RowType) => row.data.data['Title'] === 'CEO' ? '#495057' : null,
-    color: (row: RowType) => row.data.data['Title'] === 'CEO' ? '#fff' : null
+    'border-color': (row: RowType) => row.data['Title'] === 'CEO' ? '#495057' : null,
+    color: (row: RowType) => row.data['Title'] === 'CEO' ? '#fff' : null
 };
 ```
 
@@ -270,12 +271,7 @@ You can conditionally style the @@igxName cells by setting the [`IgxColumnCompon
 @@if (igxName === 'IgxTreeGrid'){
 ```html
 <!-- sample.component.html -->
-<igx-column field="UnitPrice" header="Unit Price" [dataType]="'number'" [cellClasses] = "priceClasses">
-    <ng-template igxCell let-cell="cell" let-val>
-        <span *ngIf="cell.row.data.UnitPrice == 0">-</span>
-        <span *ngIf="cell.row.data.UnitPrice != 0">${{val}}</span>
-    </ng-template>
-</igx-column>
+<igx-column field="UnitPrice" header="Unit Price" [dataType]="'currency'" [pipeArgs]="formatOptions" [cellClasses]="priceClasses"></igx-column>
 ```
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -321,11 +317,11 @@ public beatsPerMinuteClasses = {
 // sample.component.ts
 
 private upPriceCondition = (rowData: any, columnKey: any): boolean => {
-    return rowData[columnKey] > 25;
+    return rowData[columnKey] > 5;
 }
 
 private downPriceCondition = (rowData: any, columnKey: any): boolean => {
-    return rowData[columnKey] <= 25;
+    return rowData[columnKey] <= 5;
 }
 
 public priceClasses = {

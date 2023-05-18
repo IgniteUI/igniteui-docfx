@@ -35,7 +35,8 @@ _canonicalLink: grid/export-excel
 @@if (igxName === 'IgxGrid' || igxName === 'IgxTreeGrid') {
 
 <p class="highlight">
-  The Excel Exporter service can export data to excel from the @@igxName. The data export functionality is encapsulated in the [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) class and the data is exported in MS Excel table format. This format allows features like filtering, sorting, etc. To do this you need to invoke the [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html)'s [`export`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#export) method and pass the @@igxName component as first argument to export grid easily.
+
+The Excel Exporter service can export data to excel from the @@igxName. The data export functionality is encapsulated in the [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) class and the data is exported in MS Excel table format. This format allows features like filtering, sorting, etc. To do this you need to invoke the [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html)'s [`export`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#export) method and pass the @@igxName component as first argument to export grid easily.
 </p>
 
 }
@@ -43,7 +44,8 @@ _canonicalLink: grid/export-excel
 @@if (igxName === 'IgxHierarchicalGrid' || igxName === 'IgxPivotGrid') {
 
 <p class="highlight">
-  The Excel Exporter service can export data to excel from the @@igxName. The data export functionality is encapsulated in the [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) class. To trigger the process, you need to invoke the [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html)'s [`export`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#export) method and pass the @@igxName component as the first argument.
+
+The Excel Exporter service can export data to excel from the @@igxName. The data export functionality is encapsulated in the [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) class. To trigger the process, you need to invoke the [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html)'s [`export`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#export) method and pass the @@igxName component as the first argument.
 </p>
 
 }
@@ -263,7 +265,7 @@ When you are exporting data from the @@igComponent component, the export process
 |Limitation|Description|
 |--- |--- |
 |Max worksheet size|The maximum worksheet size supported by Excel is 1,048,576 rows by 16,384 columns.|
-|Cell Styling|The excel exporter service does not support exporting a custom style applied to a cell component. In such scenarios we recommend using the [Excel Library](..\excel-library.md).|
+|Cell Styling|The excel exporter service does not support exporting a custom style applied to a cell component. In such scenarios we recommend using the [Excel Library](../excel-library.md).|
 }
 
 @@if (igxName === 'IgxTreeGrid') {
@@ -271,7 +273,7 @@ When you are exporting data from the @@igComponent component, the export process
 |--- |--- |
 |Hierarchy levels|The excel exporter service can create up to 8 levels of hierarchy.|
 |Max worksheet size|The maximum worksheet size supported by Excel is 1,048,576 rows by 16,384 columns.|
-|Cell Styling|The excel exporter service does not support exporting a custom style applied to a cell component. In such scenarios we recommend using the [Excel Library](..\excel-library.md).|
+|Cell Styling|The excel exporter service does not support exporting a custom style applied to a cell component. In such scenarios we recommend using the [Excel Library](../excel-library.md).|
 }
 
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -280,14 +282,14 @@ When you are exporting data from the @@igComponent component, the export process
 |Hierarchy levels|The excel exporter service can create up to 8 levels of hierarchy.|
 |Max worksheet size|The maximum worksheet size supported by Excel is 1,048,576 rows by 16,384 columns.|
 |Exporting pinned columns|In the exported Excel file, the pinned columns will not be frozen but will be displayed in the same order as they appear in the grid.|
-|Cell Styling|The excel exporter service does not support exporting a custom style applied to a cell component. In such scenarios we recommend using the [Excel Library](..\excel-library.md).|
+|Cell Styling|The excel exporter service does not support exporting a custom style applied to a cell component. In such scenarios we recommend using the [Excel Library](../excel-library.md).|
 }
 
 @@if (igxName === 'IgxPivotGrid') {
 |Limitation|Description|
 |--- |--- |
 |Max worksheet size|The maximum worksheet size supported by Excel is 1,048,576 rows by 16,384 columns.|
-|Cell Styling|The excel exporter service does not support exporting a custom style applied to a cell component. In such scenarios we recommend using the [Excel Library](..\excel-library.md).|
+|Cell Styling|The excel exporter service does not support exporting a custom style applied to a cell component. In such scenarios we recommend using the [Excel Library](../excel-library.md).|
 }
 
 ## API References
