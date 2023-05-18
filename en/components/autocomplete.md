@@ -7,7 +7,10 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 # Angular Autocomplete Overview
 Angular Autocomplete is a search box component that enables users to easily find, filter and select an item from a list of suggestions while they type. Feature-rich, it supports seamless data binding, filtering, grouping, UI customization options, and other built-in functionalities so developers can create intuitive autocomplete search experience.
 
-<p class="highlight">The [`igxAutocomplete`]({environment:angularApiUrl}/classes/igxautocompletedirective.html) directive provides a way to enhance a text input by showing an [`igxDropDown`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) with suggested options, provided by the developer. The suggestions will show once you start typing in the text input or use the `Arrow Up`/`Arrow Down` keys.</p>
+<p class="highlight">
+
+The [`igxAutocomplete`]({environment:angularApiUrl}/classes/igxautocompletedirective.html) directive provides a way to enhance a text input by showing an [`igxDropDown`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) with suggested options, provided by the developer. The suggestions will show once you start typing in the text input or use the `Arrow Up`/`Arrow Down` keys.
+</p>
 <div class="divider"></div>
 
 ## Angular Autocomplete Example

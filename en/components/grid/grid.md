@@ -61,6 +61,7 @@ Boston Marathon 2021 – In this angular grid example, you can see how users can
 
 <code-view style="height:700px"
            data-demos-base-url="{environment:lobDemosBaseUrl}"
+           img-src="../../images/boston-marathon-image.png"
            iframe-src="{environment:lobDemosBaseUrl}/grid/grid" alt="Angular data grid example">
 </code-view>
 
@@ -565,7 +566,8 @@ configuration. Same goes for grouping and editing operations with or without tra
 
 <code-view style="height:460px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-nested-data-binding-2" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-nested-data-binding-2"
+           alt="Angular grid nested data example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -669,7 +671,8 @@ And the result from this configuration is:
 
 <code-view style="height:460px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-nested-data-binding" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-nested-data-binding"
+           alt="Angular grid nested data binding example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -748,7 +751,8 @@ And the result is:
 
 <code-view style="height:550px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-composite-data-binding" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-composite-data-binding"
+           alt="Angular grid composite data binding example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -824,7 +828,16 @@ platformBrowserDynamic()
 ## Tutorial video
 Learn more about creating an Angular data grid in our short tutorial video:
 
-> [!Video https://www.youtube.com/embed/Xv_fQVQ8fmM]
+<div class="embeddedvideo">
+    <iframe
+        loading="lazy"
+        src="https://www.youtube.com/embed/Xv_fQVQ8fmM" 
+        title="Angular Data Grid Tutorial: Getting Started with Ignite UI Grid"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+    ></iframe>
+</div>
 
 ## Additional Resources
 <div class="divider--half"></div>
