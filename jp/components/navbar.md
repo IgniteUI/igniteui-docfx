@@ -366,6 +366,7 @@ $cutom-navbar-theme: navbar-theme(
 
 
 <code-view style="height: 150px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/menus/navbar-style" >
 </code-view>

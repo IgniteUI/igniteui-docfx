@@ -375,6 +375,7 @@ $dark-snackbar: snackbar-theme(
 
 
 <code-view style="height: 150px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/notifications/snackbar-style" >
 </code-view>

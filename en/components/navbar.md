@@ -363,6 +363,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 
 
 <code-view style="height: 150px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/menus/navbar-style" >
 </code-view>

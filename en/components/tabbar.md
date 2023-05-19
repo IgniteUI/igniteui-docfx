@@ -454,6 +454,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 
 
 <code-view style="height: 350px; width: 300px; border: 1px solid #D4D4D4;"
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/layouts/tabbar-style" >
 </code-view>

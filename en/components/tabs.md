@@ -412,6 +412,7 @@ $dark-tabs: tabs-theme(
 
 
 <code-view style="height: 250px; border: 1px solid #ededed"
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/layouts/tabs-style" >
 </code-view>

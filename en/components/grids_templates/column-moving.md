@@ -285,6 +285,7 @@ Don't forget to include the theme in the same way as it was demonstrated above.
 @@if (igxName === 'IgxGrid') {
 
 <code-view style="height:650px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/grid/grid-moving-styled-sample" >
 </code-view>
@@ -293,7 +294,8 @@ Don't forget to include the theme in the same way as it was demonstrated above.
 
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:650px" 
+<code-view style="height:650px"
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-column-moving-styled" >
 </code-view>
@@ -303,6 +305,7 @@ Don't forget to include the theme in the same way as it was demonstrated above.
 @@if (igxName === 'IgxHierarchicalGrid') {
 
 <code-view style="height:660px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-moving-styled" >
 </code-view>

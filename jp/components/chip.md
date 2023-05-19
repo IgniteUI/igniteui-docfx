@@ -450,6 +450,7 @@ $custom-theme: chip-theme(
 ### デモ
 
 <code-view style="height:100px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-display/chip-styling" >
 </code-view>

@@ -372,6 +372,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 ### Demo
 
 <code-view style="height:530px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/interactions/query-builder-style" >
 </code-view>
