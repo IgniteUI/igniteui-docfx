@@ -12,7 +12,7 @@ The Ignite UI for Angular Pie Chart, or Pie Graph, is a part-to-whole chart that
 
 ## Angular Pie Chart Example
 
-You can create the Angular Pie Chart in the [`IgxPieChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartcomponent.html) by binding your data items with a string and a numeric data value. These data values will add up to a value of 100% of visualization. In this case, the example shows the overall breakdown of budget spend by department.
+You can create the Angular Pie Chart in the [`IgxPieChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxpiechartcomponent.html) by binding your data items with a string and a numeric data value. These data values will add up to a value of 100% of visualization. In this case, the example shows the overall breakdown of budget spend by department.
 
 <code-view style="height: 600px" alt="Angular Pie Chart Overview"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
@@ -68,9 +68,9 @@ Do Not Use Pie Chart When:
 
 Legends are used to show information about each point, to know about its contribution towards the total sum. You can collapse the point using legend click.
 
-In order to display a legend next to the pie chart an ItemLegend needs to be created and assigned to the [`IgxLegendComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlegendcomponent.html) property. The [`legendLabelMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartbasecomponent.html#legendlabelmemberpath) can then be used to specify which property on your data model it will use to display inside the legend for each pie slice.
+In order to display a legend next to the pie chart an ItemLegend needs to be created and assigned to the [`IgxLegendComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxlegendcomponent.html) property. The [`legendLabelMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxpiechartbasecomponent.html#legendlabelmemberpath) can then be used to specify which property on your data model it will use to display inside the legend for each pie slice.
 
-Additionally you can use the [`legendItemTemplate`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartbasecomponent.html#legenditemtemplate) and [`legendItemBadgeTemplate`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartbasecomponent.html#legenditembadgetemplate) properties and the various font properties on ItemLegend to further customize the look of the legend items.
+Additionally you can use the [`legendItemTemplate`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxpiechartbasecomponent.html#legenditemtemplate) and [`legendItemBadgeTemplate`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxpiechartbasecomponent.html#legenditembadgetemplate) properties and the various font properties on ItemLegend to further customize the look of the legend items.
 
 <code-view style="height: 600px" alt="Angular Pie Chart Legend"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
@@ -85,9 +85,9 @@ Additionally you can use the [`legendItemTemplate`]({environment:dvApiBaseUrl}/p
 
 Sometimes, the underlying data for the pie chart will contain many items with small values. In this case, the Others category will permit automatic aggregation of several data values into a single slice
 
-In the sample below, the [`othersCategoryThreshold`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartbasecomponent.html#otherscategorythreshold) is set to 2, and [`othersCategoryType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartbasecomponent.html#otherscategorytype) is set to Number. Therefore, items with value less than or equal to 2 will be assigned to the "Others" category.
+In the sample below, the [`othersCategoryThreshold`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxpiechartbasecomponent.html#otherscategorythreshold) is set to 2, and [`othersCategoryType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxpiechartbasecomponent.html#otherscategorytype) is set to Number. Therefore, items with value less than or equal to 2 will be assigned to the "Others" category.
 
-If you set [`othersCategoryType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartbasecomponent.html#otherscategorytype) to Percent, then [`othersCategoryThreshold`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartbasecomponent.html#otherscategorythreshold) will be interpreted as a percentage rather than as a value, i.e. items whose values are less than 2% of the sum of all item values would be assigned to the Others category. You can use whichever [`othersCategoryType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartbasecomponent.html#otherscategorytype) is most appropriate for your application.
+If you set [`othersCategoryType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxpiechartbasecomponent.html#otherscategorytype) to Percent, then [`othersCategoryThreshold`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxpiechartbasecomponent.html#otherscategorythreshold) will be interpreted as a percentage rather than as a value, i.e. items whose values are less than 2% of the sum of all item values would be assigned to the Others category. You can use whichever [`othersCategoryType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxpiechartbasecomponent.html#otherscategorytype) is most appropriate for your application.
 
 <code-view style="height: 600px" alt="Angular Pie Chart Others"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
@@ -113,9 +113,9 @@ The pie chart supports explosion of individual pie slices as well as a `SliceCli
 
 ## Angular Pie Chart Selection
 
-The pie chart supports slice selection by mouse click as the default behavior. You can determine the selected slices by using the [`selectedItems`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartbasecomponent.html#selecteditems) property. The selected slices are then highlighted.
+The pie chart supports slice selection by mouse click as the default behavior. You can determine the selected slices by using the [`selectedItems`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxpiechartbasecomponent.html#selecteditems) property. The selected slices are then highlighted.
 
-There is a property called [`selectionMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartbasecomponent.html#selectionmode) which is how you set what mode you want the pie chart to use. The default value is `Single`. In order to disable selection, set the property to `Manual`.
+There is a property called [`selectionMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxpiechartbasecomponent.html#selectionmode) which is how you set what mode you want the pie chart to use. The default value is `Single`. In order to disable selection, set the property to `Manual`.
 
 The pie chart supports three different selection modes.
 
@@ -132,7 +132,7 @@ The pie chart has 4 events associated with selection:
 
 The events that end in “Changing” are cancelable events which means you can stop the selection of a slice by setting the event argument property `Cancel` to true. When set to true the associated property will not update and the slice will not become selected. This is useful for scenarios where you want to keep users from being able to select certain slices based on the data inside it.
 
-For scenarios where you click on the Others slice, the pie chart will return an object called [`IgxPieSliceOthersContext`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiesliceotherscontext.html). This object contains a list of the data items contained within the Others slice.
+For scenarios where you click on the Others slice, the pie chart will return an object called [`IgxPieSliceOthersContext`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxpiesliceotherscontext.html). This object contains a list of the data items contained within the Others slice.
 
 <code-view style="height: 600px" alt="Angular Pie Chart Selection"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
@@ -194,14 +194,14 @@ The Radial Pie Chart belongs to a group of Radial Charts and uses belongs to a g
 
 The following table lists API members mentioned in the above sections:
 
-*   [`legendItemBadgeTemplate`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartbasecomponent.html#legenditembadgetemplate)
-*   [`legendItemTemplate`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartbasecomponent.html#legenditemtemplate)
-*   [`legendLabelMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartbasecomponent.html#legendlabelmemberpath)
-*   [`othersCategoryThreshold`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartbasecomponent.html#otherscategorythreshold)
-*   [`othersCategoryType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartbasecomponent.html#otherscategorytype)
-*   [`selectionMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartbasecomponent.html#selectionmode)
+*   [`legendItemBadgeTemplate`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxpiechartbasecomponent.html#legenditembadgetemplate)
+*   [`legendItemTemplate`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxpiechartbasecomponent.html#legenditemtemplate)
+*   [`legendLabelMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxpiechartbasecomponent.html#legendlabelmemberpath)
+*   [`othersCategoryThreshold`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxpiechartbasecomponent.html#otherscategorythreshold)
+*   [`othersCategoryType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxpiechartbasecomponent.html#otherscategorytype)
+*   [`selectionMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxpiechartbasecomponent.html#selectionmode)
 
 |Chart Type       | Control Name   | API Members |
 |-----------------|----------------|------------ |
-|Pie Chart      | [`IgxPieChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartcomponent.html)     | `PieChart` |
-|Radial Pie Chart | [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) | [`IgxRadialPieSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialpieseriescomponent.html) |
+|Pie Chart      | [`IgxPieChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxpiechartcomponent.html)     | `PieChart` |
+|Radial Pie Chart | [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) | [`IgxRadialPieSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxradialpieseriescomponent.html) |
