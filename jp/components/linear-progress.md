@@ -276,6 +276,7 @@ $custom-theme: progress-linear-theme(
 
 
 <code-view style="height:50px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-display/linear-progressbar-styling" >
 </code-view>

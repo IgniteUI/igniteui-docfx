@@ -135,6 +135,7 @@ $custom-strip: action-strip-theme(
 ```
 
 <code-view style="height: 400px;" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/menus/action-strip-styling" >
 </code-view>

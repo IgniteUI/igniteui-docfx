@@ -1,10 +1,3 @@
-<style>
-    /* Fix for the overlapping right side-affix when the screen is shrinked */
-    .table-responsive {
-        width:63vw;
-    }
-</style>
-
 @@if (igxName === 'IgxGrid') {
 ---
 title: Angular Grid Editing - Ignite UI for Angular
@@ -28,6 +21,13 @@ _keywords: data manipulation, ignite ui for angular, infragistics
 _canonicalLink: grid/editing
 ---
 }
+
+<style>
+    /* Fix for the overlapping right side-affix when the screen is shrinked */
+    .table-responsive {
+        width:63vw;
+    }
+</style>
 
 # Angular @@igComponent Editing
 

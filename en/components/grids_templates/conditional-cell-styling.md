@@ -363,6 +363,7 @@ Use **::ng-deep** or **`ViewEncapsulation.None`** to force the custom styles dow
 @@if (igxName === 'IgxTreeGrid') {
 
 <code-view style="height:600px"
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-conditional-cell-style" >
 </code-view>

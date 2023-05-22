@@ -473,6 +473,7 @@ $custom-drop-down: drop-down-theme(
 @@if (igxName === 'IgxGrid') {
 
 <code-view style="height:530px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/grid/grid-advanced-filtering-style" >
 </code-view>
@@ -481,6 +482,7 @@ $custom-drop-down: drop-down-theme(
 @@if (igxName === 'IgxTreeGrid') {
 
 <code-view style="height:510px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-advanced-filtering-style" >
 </code-view>
@@ -489,6 +491,7 @@ $custom-drop-down: drop-down-theme(
 @@if (igxName === 'IgxHierarchicalGrid') {
 
 <code-view style="height:630px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-advanced-filtering-style" >
 </code-view>

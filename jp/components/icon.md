@@ -185,6 +185,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 ### デモ
 
 <code-view style="height:75px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-display/icon-styling" alt="Angular Icon の例">
 </code-view>

@@ -8,6 +8,7 @@ _language: ja
 # CSV Exporter
 
 <p class="highlight">
+
 Ignite UI CSV Exporter サービスは、文字分割値 (CSV) 形式で生データ (配列) または [**IgxGrid**](grid/grid.md) からデータをエクスポートします。
 エクスポート機能は [`IgxCsvExporterService`]({environment:angularApiUrl}/classes/igxcsvexporterservice.html) クラスにカプセル化されます。</p>
 <div class="divider"></div>
