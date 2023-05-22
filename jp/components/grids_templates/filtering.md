@@ -746,6 +746,7 @@ $custom-input-group: input-group-theme(
 @@if (igxName === 'IgxGrid') {
 
 <code-view style="height:500px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/grid/grid-filtering-style" >
 </code-view>
@@ -754,6 +755,7 @@ $custom-input-group: input-group-theme(
 @@if (igxName === 'IgxTreeGrid') {
 
 <code-view style="height:500px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-filtering-style" >
 </code-view>
@@ -762,6 +764,7 @@ $custom-input-group: input-group-theme(
 @@if (igxName === 'IgxHierarchicalGrid') {
    
 <code-view style="height:650px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-filtering-style" >
 </code-view>

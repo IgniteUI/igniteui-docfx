@@ -367,6 +367,7 @@ As mentioned earlier, we can even combine them with a theme:
 
 
 <code-view style="height: 300px;" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-display/text-highlight-style" >
 </code-view>

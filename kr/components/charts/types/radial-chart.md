@@ -77,6 +77,7 @@ Once our radial chart is created, we may want to make some further styling custo
 This example demonstrates how to customize Angular Radial Chart.
 
 <code-view style="height: 600px" alt="Angular Radial Area Chart Styling"
+           no-theming
            data-demos-base-url="{environment:dvDemosBaseUrl}"
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/radial-area-chart-styling"
                                                  github-src="charts/data-chart/radial-area-chart-styling">

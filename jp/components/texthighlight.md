@@ -368,6 +368,7 @@ $dark-highlight: highlight-theme(
 
 
 <code-view style="height: 300px;" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-display/text-highlight-style" >
 </code-view>

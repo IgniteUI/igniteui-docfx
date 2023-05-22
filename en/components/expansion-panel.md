@@ -185,6 +185,7 @@ Lets see the result from all the above changes:
 ### Angular Expansion Panel Demo
 
 <code-view style="height: 440px;" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/layouts/expansion-styling" >
 </code-view>

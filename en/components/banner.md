@@ -327,6 +327,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 
 
 <code-view style="height: 530px" 
+           no-themin
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/notifications/banner-styling" >
 </code-view>

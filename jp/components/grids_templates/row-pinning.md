@@ -451,6 +451,7 @@ Internet Explorer 11 のコンポーネントをスタイル設定するには�
 @@if (igxName === 'IgxGrid') {
 
 <code-view style="height:540px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/grid/grid-row-pinning-styling" >
 </code-view>
@@ -459,6 +460,7 @@ Internet Explorer 11 のコンポーネントをスタイル設定するには�
 @@if (igxName === 'IgxTreeGrid') {
 
 <code-view style="height:540px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-row-pinning-styling" >
 </code-view>
@@ -467,6 +469,7 @@ Internet Explorer 11 のコンポーネントをスタイル設定するには�
 @@if (igxName === 'IgxHierarchicalGrid') {
 
 <code-view style="height:540px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-pinning-styling" >
 </code-view>

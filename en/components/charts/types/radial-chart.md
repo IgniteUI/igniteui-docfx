@@ -67,6 +67,7 @@ The Radial Pie Chart uses pie slices that extend from the center of chart toward
 Once our radial chart is created, we may want to make some further styling customizations such as a change of the line colors, marker types, or outline colors of those markers. This example demonstrates how to customize styling in [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) control.
 
 <code-view style="height: 600px" alt="Angular Radial Area Chart Styling"
+           no-theming
            data-demos-base-url="{environment:dvDemosBaseUrl}"
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/radial-area-chart-styling"
                                                  github-src="charts/data-chart/radial-area-chart-styling">

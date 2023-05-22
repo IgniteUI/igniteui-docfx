@@ -88,6 +88,7 @@ Similarly to how you can show multiple [Line Chart](line-chart.md) and [Spline C
 Area charts often have semi-transparent fill for their areas, thicker lines and slightly larger markers than usual. Below is an example showing how you can style the Area Chart from earlier accordingly. 
 
 <code-view style="height: 600px" alt="Angular Area Chart Styling"
+           no-theming
            data-demos-base-url="{environment:dvDemosBaseUrl}"
                     iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/area-chart-styling"
                                                  github-src="charts/category-chart/area-chart-styling">

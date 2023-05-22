@@ -417,6 +417,7 @@ After styling the banner and buttons, we also define a custom style for [the cel
 @@if (igxName === 'IgxGrid'){
 
 <code-view style="height:560px"
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-row-edit-style" >
 </code-view>
@@ -427,6 +428,7 @@ After styling the banner and buttons, we also define a custom style for [the cel
 @@if (igxName === 'IgxHierarchicalGrid'){
 
 <code-view style="height:560px"
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-edit-style" >
 </code-view>
@@ -437,6 +439,7 @@ After styling the banner and buttons, we also define a custom style for [the cel
 @@if (igxName === 'IgxTreeGrid'){
 
 <code-view style="height:560px"
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-row-edit-style" >
 </code-view>

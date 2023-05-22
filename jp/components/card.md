@@ -332,6 +332,7 @@ $colorful-card: card-theme(
 
 
 <code-view style="height: 486px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/layouts/card-styling-sample" >
 </code-view>

@@ -55,6 +55,7 @@ Angular ポイント チャートを使用すると、複数のシリーズを�
 Angular ポイント チャートを設定したら、マーカーとそのアウトライン、ブラシ、太さを変更するなど、スタイルをさらにカスタマイズします。
 
 <code-view style="height: 600px" alt="Angular ポイント チャートのスタイル設定"
+           no-theming
            data-demos-base-url="{environment:dvDemosBaseUrl}"
                     iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/point-chart-styling"
                                                  github-src="charts/category-chart/point-chart-styling">

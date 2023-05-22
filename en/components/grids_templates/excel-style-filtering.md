@@ -831,6 +831,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 @@if (igxName === 'IgxGrid') {
 
 <code-view style="height:950px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/grid/grid-excel-style-filtering-style" >
 </code-view>
@@ -839,6 +840,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 @@if (igxName === 'IgxTreeGrid') {
 
 <code-view style="height:950px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-excel-style-filtering-style" >
 </code-view>
@@ -847,6 +849,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 @@if (igxName === 'IgxHierarchicalGrid') {
 
 <code-view style="height:950px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-style-filtering-style" >
 </code-view>

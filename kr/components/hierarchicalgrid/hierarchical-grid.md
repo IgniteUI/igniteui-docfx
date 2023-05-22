@@ -404,6 +404,7 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 #### Demo
 
 <code-view style="height:505px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-styling" >
 </code-view>

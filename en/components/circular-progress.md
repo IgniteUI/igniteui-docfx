@@ -262,6 +262,7 @@ If `$legacy-support` is set to `false`(default), include the component **css var
 <div class="divider--half"></div>
 
 <code-view style="height:100px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-display/circular-styling-sample" >
 </code-view>
