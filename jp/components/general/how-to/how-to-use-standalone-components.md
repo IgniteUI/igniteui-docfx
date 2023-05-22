@@ -7,7 +7,7 @@ _language: ja
 
 # Ignite UI for Angular での Standalone (スタンドアロン) コンポーネントの使用 (プレビュー)
 
-Angular 14 では[スタンドアロン コンポーネント](https://angular.io/guide/standalone-components)の概念が導入されました。これにより、`NgModules` を使用する必要性が減り、アプリケーションを構築する方法が簡素化されます。Standalone components were in developer preview until Angular 15. この新しいパラダイムをサポートするために、バージョン `16.0.0` では、すべての Ignite UI for Angular コンポーネントが `standalone` としてエクスポートされるようになりました。既存のすべての `NgModule` は、後方互換性のためにライブラリによって引き続きエクスポートされます。ただし、Ignite UI for Angular コンポーネントは宣言されなくなりました。代わりに、`standalone` コンポーネントをインポートおよびエクスポートします。
+Angular 14 では[スタンドアロン コンポーネント](https://angular.io/guide/standalone-components)の概念が導入されました。これにより、`NgModules` を使用する必要性が減り、アプリケーションを構築する方法が簡素化されます。スタンドアロン コンポーネントは、Angular 15 まで開発者プレビューでした。この新しいパラダイムをサポートするために、バージョン `16.0.0` では、すべての Ignite UI for Angular コンポーネントが `standalone` としてエクスポートされるようになりました。既存のすべての `NgModule` は、後方互換性のためにライブラリによって引き続きエクスポートされます。ただし、Ignite UI for Angular コンポーネントは宣言されなくなりました。代わりに、`standalone` コンポーネントをインポートおよびエクスポートします。
 
 `standalone` コンポーネントはまだ**プレビュー**段階にあります。一部のユーティリティ ディレクティブのエクスポートは将来変更される可能性があり、初期リリースのドキュメントに含まれない可能性があります。
 
@@ -27,7 +27,7 @@ import { IGX_GRID_DIRECTIVES } from 'igniteui-angular';
 })
 ```
 
-But you can also import all components used by your `standalone` component individually. Example with the `IgxGridComponent` and `IgxColumnComponent` when only these two are used by another component is as follows.
+ただし、 `standalone` コンポーネントで使用されるすべてのコンポーネントを個別にインポートすることもできます。`IgxGridComponent` と `IgxColumnComponent` を別のコンポーネントで使用する場合の例は次のとおりです。
 
 ```typescript
 import { IgxGridComponent, IgxColumnComponent } from 'igniteui-angular';
@@ -56,50 +56,50 @@ import { IgxGridModule } from 'igniteui-angular';
 })
 ```
 
-## Utility Directives
+## ユーティリティ ディレクティブ
 
-The `IGX_GRID_DIRECTIVES` shown in the previous examples is a utility directive that exports all grid related components and directives. The following table lists all new utility directives that are available in Ignite UI for Angular.
+前の例に示されているのは、すべてのグリッド関連のコンポーネントとディレクティブをエクスポートするユーティリティ ディレクティブです。次の表に、Ignite UI for Angular で使用できるすべての新しいユーティリティ ディレクティブを示します。
 
-| Directive Collection | 説明 |
+| ディレクティブのコレクション | 説明 |
 | --- | --- |
-| `IGX_ACCORDION_DIRECTIVES` | Exports all accordion related components and directives. |
-| `IGX_ACTION_STRIP_DIRECTIVES` | Exports all action strip related components and directives. |
-| `IGX_BANNER_DIRECTIVES` | Exports all banner related components and directives. |
-| `IGX_BOTTOM_NAV_DIRECTIVES` | Exports all bottom navigation related components and directives. |
-| `IGX_BUTTON_GROUP_DIRECTIVES` | Exports all button group related components and directives. |
-| `IGX_CALENDAR_DIRECTIVES` | Exports all calendar related components and directives. |
-| `IGX_CARD_DIRECTIVES` | Exports all card related components and directives. |
-| `IGX_CAROUSEL_DIRECTIVES` | Exports all carousel related components and directives. |
-| `IGX_CHIPS_DIRECTIVES` | Exports all chip related components and directives. |
-| `IGX_CIRCULAR_PROGRESS_BAR_DIRECTIVES` | Exports all circular progress bar related components and directives. |
-| `IGX_COMBO_DIRECTIVES` | Exports all combo related components and directives. |
-| `IGX_DATE_PICKER_DIRECTIVES` | Exports all date-picker related components and directives. |
-| `IGX_DATE_RANGE_PICKER_DIRECTIVES` | Exports all date-range picker related components and directives. |
-| `IGX_DIALOG_DIRECTIVES` | Exports all dialog related components and directives. |
-| `IGX_DRAG_DROP_DIRECTIVES` | Exports all drag and drop related components and directives. |
-| `IGX_DROP_DOWN_DIRECTIVES` | Exports all drop-down related components and directives. |
-| `IGX_EXPANSION_PANEL_DIRECTIVES` | Exports all expansion panel related components and directives. |
-| `IGX_GRID_DIRECTIVES` | Exports all grid related components and directives. |
-| `IGX_HIERARCHICAL_GRID_DIRECTIVES` | Exports all hierarchical grid related components and directives. |
-| `IGX_INPUT_GROUP_DIRECTIVES` | Exports all input group related components and directives. |
-| `IGX_LINEAR_PROGRESS_BAR_DIRECTIVES` | Exports all linear progress bar related components and directives. |
-| `IGX_LIST_DIRECTIVES` | Exports all list related components and directives. |
-| `IGX_NAVBAR_DIRECTIVES` | Exports all navbar related components and directives. |
-| `IGX_NAVIGATION_DRAWER_DIRECTIVES` | Exports all navigation drawer related components and directives. |
-| `IGX_PAGINATOR_DIRECTIVES` | Exports all paginator related components and directives. |
-| `IGX_PIVOT_GRID_DIRECTIVES` | Exports all pivot grid related components and directives. |
-| `IGX_PROGRESS_BAR_DIRECTIVES` | Exports all progress bar related components and directives. |
-| `IGX_QUERY_BUILDER_DIRECTIVES` | Exports all query builder related components and directives. |
-| `IGX_SELECT_DIRECTIVES` | Exports all select related components and directives. |
-| `IGX_SIMPLE_COMBO_DIRECTIVES` | Exports all simple combo related components and directives. |
-| `IGX_SLIDER_DIRECTIVES` | Exports all slider related components and directives. |
-| `IGX_SPLITTER_DIRECTIVES` | Exports all splitter related components and directives. |
-| `IGX_STEPPER_DIRECTIVES` | Exports all stepper related components and directives. |
-| `IGX_TABS_DIRECTIVES` | Exports all tabs related components and directives. |
-| `IGX_TIME_PICKER_DIRECTIVES` | Exports all time picker related components and directives. |
-| `IGX_TOOLTIP_DIRECTIVES` | Exports all tooltip related components and directives. |
-| `IGX_TREE_DIRECTIVES` | Exports all tree related components and directives. |
-| `IGX_TREE_GRID_DIRECTIVES` | Exports all tree grid related components and directives. |
+| `IGX_ACCORDION_DIRECTIVES` | すべてのアコーディオン関連のコンポーネントとディレクティブをエクスポートします。 |
+| `IGX_ACTION_STRIP_DIRECTIVES` | すべてのアクション ストリップ関連のコンポーネントとディレクティブをエクスポートします。 |
+| `IGX_BANNER_DIRECTIVES` | すべてのバナー関連のコンポーネントとディレクティブをエクスポートします。 |
+| `IGX_BOTTOM_NAV_DIRECTIVES` | すべての下部ナビゲーション関連のコンポーネントとディレクティブをエクスポートします。 |
+| `IGX_BUTTON_GROUP_DIRECTIVES` | すべてのボタン グループ関連のコンポーネントとディレクティブをエクスポートします。 |
+| `IGX_CALENDAR_DIRECTIVES` | すべてのカレンダー関連のコンポーネントとディレクティブをエクスポートします。 |
+| `IGX_CARD_DIRECTIVES` | すべてのカード関連のコンポーネントとディレクティブをエクスポートします。 |
+| `IGX_CAROUSEL_DIRECTIVES` | すべてのカルーセル関連のコンポーネントとディレクティブをエクスポートします。 |
+| `IGX_CHIPS_DIRECTIVES` | すべてのチップ関連のコンポーネントとディレクティブをエクスポートします。 |
+| `IGX_CIRCULAR_PROGRESS_BAR_DIRECTIVES` | すべての円形のプログレス バー関連のコンポーネントとディレクティブをエクスポートします。 |
+| `IGX_COMBO_DIRECTIVES` | すべてのコンボ関連のコンポーネントとディレクティブをエクスポートします。 |
+| `IGX_DATE_PICKER_DIRECTIVES` | すべての日付ピッカー関連のコンポーネントとディレクティブをエクスポートします。 |
+| `IGX_DATE_RANGE_PICKER_DIRECTIVES` | すべての日付範囲ピッカー関連のコンポーネントとディレクティブをエクスポートします。 |
+| `IGX_DIALOG_DIRECTIVES` | すべてのダイアログ関連のコンポーネントとディレクティブをエクスポートします。 |
+| `IGX_DRAG_DROP_DIRECTIVES` | すべてのドラッグアンドドロップ関連のコンポーネントとディレクティブをエクスポートします。 |
+| `IGX_DROP_DOWN_DIRECTIVES` | すべてのドロップダウン関連のコンポーネントとディレクティブをエクスポートします。 |
+| `IGX_EXPANSION_PANEL_DIRECTIVES` | すべての 展開パネル関連のコンポーネントとディレクティブをエクスポートします。 |
+| `IGX_GRID_DIRECTIVES` | すべてのグリッド関連のコンポーネントとディレクティブをエクスポートします。 |
+| `IGX_HIERARCHICAL_GRID_DIRECTIVES` | すべての階層グリッド関連のコンポーネントとディレクティブをエクスポートします。 |
+| `IGX_INPUT_GROUP_DIRECTIVES` | すべての入力グループ関連のコンポーネントとディレクティブをエクスポートします。 |
+| `IGX_LINEAR_PROGRESS_BAR_DIRECTIVES` | すべてのリニア プログレス バー関連のコンポーネントとディレクティブをエクスポートします。 |
+| `IGX_LIST_DIRECTIVES` | すべてのリスト関連のコンポーネントとディレクティブをエクスポートします。 |
+| `IGX_NAVBAR_DIRECTIVES` | すべてのナビゲーションバー関連のコンポーネントとディレクティブをエクスポートします。 |
+| `IGX_NAVIGATION_DRAWER_DIRECTIVES` | すべてのナビゲーション ドロワー関連のコンポーネントとディレクティブをエクスポートします。 |
+| `IGX_PAGINATOR_DIRECTIVES` | すべてのページネーター関連のコンポーネントとディレクティブをエクスポートします。 |
+| `IGX_PIVOT_GRID_DIRECTIVES` | すべてのピボット グリッド関連のコンポーネントとディレクティブをエクスポートします。 |
+| `IGX_PROGRESS_BAR_DIRECTIVES` | すべてのプログレス バー関連のコンポーネントとディレクティブをエクスポートします。 |
+| `IGX_QUERY_BUILDER_DIRECTIVES` | すべてのクエリ ビルダー関連のコンポーネントとディレクティブをエクスポートします。 |
+| `IGX_SELECT_DIRECTIVES` | すべてのセレクト関連のコンポーネントとディレクティブをエクスポートします。 |
+| `IGX_SIMPLE_COMBO_DIRECTIVES` | すべてのシンプルなコンボ関連のコンポーネントとディレクティブをエクスポートします。 |
+| `IGX_SLIDER_DIRECTIVES` | すべてのスライダー関連のコンポーネントとディレクティブをエクスポートします。 |
+| `IGX_SPLITTER_DIRECTIVES` | すべてのスプリッター関連コンポーネントとディレクティブをエクスポートします。 |
+| `IGX_STEPPER_DIRECTIVES` | すべてのステッパー関連のコンポーネントとディレクティブをエクスポートします。 |
+| `IGX_TABS_DIRECTIVES` | すべてのタブ関連のコンポーネントとディレクティブをエクスポートします。 |
+| `IGX_TIME_PICKER_DIRECTIVES` | すべてのタイム ピッカー関連のコンポーネントとディレクティブをエクスポートします。 |
+| `IGX_TOOLTIP_DIRECTIVES` | すべてのツールチップ関連のコンポーネントとディレクティブをエクスポートします。 |
+| `IGX_TREE_DIRECTIVES` | すべてのツリー関連のコンポーネントとディレクティブをエクスポートします。 |
+| `IGX_TREE_GRID_DIRECTIVES` | すべてのツリー グリッド関連のコンポーネントとディレクティブをエクスポートします。 |
 
 ## その他のリソース
 
