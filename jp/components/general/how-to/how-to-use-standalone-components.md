@@ -27,7 +27,7 @@ import { IGX_GRID_DIRECTIVES } from 'igniteui-angular';
 })
 ```
 
-ただし、 `standalone` コンポーネントで使用されるすべてのコンポーネントを個別にインポートすることもできます。`IgxGridComponent` と `IgxColumnComponent` を別のコンポーネントで使用する場合の例は次のとおりです。
+ただし、`standalone` コンポーネントで使用されるすべてのコンポーネントを個別にインポートすることもできます。`IgxGridComponent` と `IgxColumnComponent` を別のコンポーネントで使用する場合の例は次のとおりです。
 
 ```typescript
 import { IgxGridComponent, IgxColumnComponent } from 'igniteui-angular';
