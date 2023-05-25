@@ -132,7 +132,7 @@ _language: ja
 
 ### 範囲の選択
 
-[`selectRange(range)`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#selectRange) - API を使用してセル範囲を選択します。`rowStart` と `rowEnd` は行インデックスを使用する必要があり、`columnStart` と `columnEnd` は列インデックスまたは列データフィールド値を使用できます。
+[`selectRange(range)`]({environment:angularApiUrl}/classes/igxgridcomponent.html#selectRange) - API を使用してセル範囲を選択します。`rowStart` と `rowEnd` は行インデックスを使用する必要があり、`columnStart` と `columnEnd` は列インデックスまたは列データフィールド値を使用できます。
 
 ```typescript
 const range = { rowStart: 2, rowEnd: 2, columnStart: 1, columnEnd: 1 };
@@ -149,11 +149,11 @@ this.grid1.selectRange(range);
 
 ### セル選択のクリア
 
-[`clearCellSelection()`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#clearCellSelection) は、現在のセル選択をクリアします。
+[`clearCellSelection()`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clearCellSelection) は、現在のセル選択をクリアします。
 
 ### 選択したデータの取得
 
-[`getSelectedData()`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#getSelectedData) は、選択内容に応じた形式で選択されたデータの配列を返します。
+[`getSelectedData()`]({environment:angularApiUrl}/classes/igxgridcomponent.html#getSelectedData) は、選択内容に応じた形式で選択されたデータの配列を返します。
 
 1. 3 つの異なる単一セルが選択されている場合:
 ```
@@ -209,8 +209,8 @@ expectedData = [
 ```
 
 > [!NOTE]
-> [`selectedCells()`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#selectedCells) は、セルがグリッド ビュー ポートに表示されていない場合でも、正しい結果を返します。[`getSelectedData()`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#getSelectedData) も、選択したセル データを返します。
-> [`getSelectedRanges(): GridSelectionRange[]`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#getSelectedRanges) は、キーボードとポインターの両方の操作からグリッドで現在選択されている範囲を返します。
+> [`selectedCells()`]({environment:angularApiUrl}/classes/igxgridcomponent.html#selectedCells) は、セルがグリッド ビュー ポートに表示されていない場合でも、正しい結果を返します。[`getSelectedData()`]({environment:angularApiUrl}/classes/igxgridcomponent.html#getSelectedData) も、選択したセル データを返します。
+> [`getSelectedRanges(): GridSelectionRange[]`]({environment:angularApiUrl}/classes/igxgridcomponent.html#getSelectedRanges) は、キーボードとポインターの両方の操作からグリッドで現在選択されている範囲を返します。
 
 
 ## 機能の統合

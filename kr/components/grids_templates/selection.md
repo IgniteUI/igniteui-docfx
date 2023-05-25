@@ -84,7 +84,7 @@ _language: kr
 
 ##### 선택 범위
 
-[`selectRange(range)`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#selectrange) - API를 사용하여 셀 범위를 선택합니다. `rowStart` 및 `rowEnd`는 행 인덱스를 사용해야 하며, `columnStart` 및 `columnEnd`는 열 인덱스 또는 열 데이터 필드 값을 사용할 수 있습니다. 
+[`selectRange(range)`]({environment:angularApiUrl}/classes/igxgridcomponent.html#selectrange) - API를 사용하여 셀 범위를 선택합니다. `rowStart` 및 `rowEnd`는 행 인덱스를 사용해야 하며, `columnStart` 및 `columnEnd`는 열 인덱스 또는 열 데이터 필드 값을 사용할 수 있습니다. 
 
 ```typescript
 const range = { rowStart: 2, rowEnd: 2, columnStart: 1, columnEnd: 1 };
@@ -101,11 +101,11 @@ this.grid1.selectRange(range);
 
 ##### 셀 선택 삭제
 
-[`clearCellSelection()`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#clearcellselection)은 현재 셀 선택을 삭제합니다.
+[`clearCellSelection()`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clearcellselection)은 현재 셀 선택을 삭제합니다.
 
 ##### 선택한 데이터 가져오기
 
-[`getSelectedData()`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#getselecteddata)은 선택한 데이터의 배열을 선택 내용에 따라 형식으로 반환합니다. 이하 예:
+[`getSelectedData()`]({environment:angularApiUrl}/classes/igxgridcomponent.html#getselecteddata)은 선택한 데이터의 배열을 선택 내용에 따라 형식으로 반환합니다. 이하 예:
 
 1. 3개의 다른 단일 셀을 선택한 경우:
 ```
@@ -161,8 +161,8 @@ expectedData = [
 ```
 
 > [!NOTE] 
-> [`selectedCells()`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#selectedcells) will DO return the correct result even if the cell is not visible in grids view port. [`getSelectedData()`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#getselecteddata) will also return the selected cell data.
-> [`getSelectedRanges(): GridSelectionRange[]`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#getselectedranges)는 키보드와 포인터 상호 작용으로 그리드에서 현재 선택된 범위를 반환합니다. 유형은 GridSelectionRange[]입니다.
+> [`selectedCells()`]({environment:angularApiUrl}/classes/igxgridcomponent.html#selectedcells) will DO return the correct result even if the cell is not visible in grids view port. [`getSelectedData()`]({environment:angularApiUrl}/classes/igxgridcomponent.html#getselecteddata) will also return the selected cell data.
+> [`getSelectedRanges(): GridSelectionRange[]`]({environment:angularApiUrl}/classes/igxgridcomponent.html#getselectedranges)는 키보드와 포인터 상호 작용으로 그리드에서 현재 선택된 범위를 반환합니다. 유형은 GridSelectionRange[]입니다.
 
 
 ### 기능 통합

@@ -29,13 +29,13 @@ If you need to provide any custom styling in the @@igxName component, you can do
 
 The @@igxName component in Ignite UI for Angular provides two ways to **conditional styling of rows** based on custom rules.
 
-- By setting [`rowClasses`]({environment:angularApiUrl}/classes/IgxGridBaseDirective.html#rowClasses) input on the @@igxName component;
-- By setting [`rowStyles`]({environment:angularApiUrl}/classes/IgxGridBaseDirective.html#rowStyles) input on the @@igxName component;
+- By setting [`rowClasses`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowClasses) input on the @@igxName component;
+- By setting [`rowStyles`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowStyles) input on the @@igxName component;
 
 Further in this topic wi will cover both of them in more details.
 
 ### Using rowClasses
-You can conditionally style the @@igxName rows by setting the [`rowClasses`]({environment:angularApiUrl}/classes/IgxGridBaseDirective.html#rowClasses) input and define custom rules.
+You can conditionally style the @@igxName rows by setting the [`rowClasses`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowClasses) input and define custom rules.
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -62,7 +62,7 @@ You can conditionally style the @@igxName rows by setting the [`rowClasses`]({en
 }
 
 
-The [`rowClasses`]({environment:angularApiUrl}/classes/IgxGridBaseDirective.html#rowClasses) input accepts an object literal, containing key-value pairs, where the key is the name of the CSS class, while the value is either a callback function that returns a boolean, or boolean value.
+The [`rowClasses`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowClasses) input accepts an object literal, containing key-value pairs, where the key is the name of the CSS class, while the value is either a callback function that returns a boolean, or boolean value.
 
 ```typescript
 // sample.component.ts

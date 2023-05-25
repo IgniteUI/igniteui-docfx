@@ -146,7 +146,7 @@ Overriding the default behavior for a certain key or keys combination is one of 
 <br />
  @@if (igxName === 'IgxHierarchicalGrid') {
 >[!NOTE]
-> Both [`getNextCell`]({environment:angularApiUrl}/classes/igxgridcomponent.html#getNextCell) and [`getPreviousCell`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#getPreviousCell) are
+> Both [`getNextCell`]({environment:angularApiUrl}/classes/igxgridcomponent.html#getNextCell) and [`getPreviousCell`]({environment:angularApiUrl}/classes/igxgridcomponent.html#getPreviousCell) are
 > availabe for the current level and cannot access cells from upper or lower level.
 }
 

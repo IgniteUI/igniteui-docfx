@@ -147,7 +147,7 @@ _language: ja
 <br />
  @@if (igxName === 'IgxHierarchicalGrid') {
 >[!NOTE]
->[`getNextCell`]({environment:angularApiUrl}/classes/igxgridcomponent.html#getNextCell) および [`getPreviousCell`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#getPreviousCell) は現在のレベルで使用し、上位または下位レベルのセルにアクセスできません。
+>[`getNextCell`]({environment:angularApiUrl}/classes/igxgridcomponent.html#getNextCell) および [`getPreviousCell`]({environment:angularApiUrl}/classes/igxgridcomponent.html#getPreviousCell) は現在のレベルで使用し、上位または下位レベルのセルにアクセスできません。
 }
 
 API を使用して、ユーザー入力の検証やカスタム ナビゲーションなどの一般的なシナリオを実現する方法を示します。最初に、[`gridKeydown`]({environment:angularApiUrl}/classes/igxgridcomponent.html#gridKeydown) イベントのイベント ハンドラーを登録する必要があります。

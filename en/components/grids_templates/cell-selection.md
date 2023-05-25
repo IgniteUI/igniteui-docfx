@@ -131,7 +131,7 @@ Below are the methods that you can use in order to select ranges, clear selectio
 
 ### Select range
 
-[`selectRange(range)`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#selectRange) - Select a range of cells with the API. `rowStart` and `rowEnd` should use row indexes and `columnStart` and `columnEnd` could use column index or column data field value.
+[`selectRange(range)`]({environment:angularApiUrl}/classes/igxgridcomponent.html#selectRange) - Select a range of cells with the API. `rowStart` and `rowEnd` should use row indexes and `columnStart` and `columnEnd` could use column index or column data field value.
 
 ```typescript
 const range = { rowStart: 2, rowEnd: 2, columnStart: 1, columnEnd: 1 };
@@ -148,11 +148,11 @@ this.grid1.selectRange(range);
 
 ### Clear cell selection
 
-[`clearCellSelection()`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#clearCellSelection) will clear the current cell selection.
+[`clearCellSelection()`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clearCellSelection) will clear the current cell selection.
 
 ### Get selected data
 
-[`getSelectedData()`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#getSelectedData) will return array of the selected data in format depending on the selection. Examples below:
+[`getSelectedData()`]({environment:angularApiUrl}/classes/igxgridcomponent.html#getSelectedData) will return array of the selected data in format depending on the selection. Examples below:
 
 1. If three different single cells are selected:
 ```
@@ -208,8 +208,8 @@ expectedData = [
 ```
 
 > [!NOTE]
-> [`selectedCells()`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#selectedCells) will DO return the correct result even if the cell is not visible in grids view port. [`getSelectedData()`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#getSelectedData) will also return the selected cell data.
-> [`getSelectedRanges(): GridSelectionRange[]`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#getSelectedRanges) will return the current selected ranges in the grid from both keyboard and pointer interactions. The type is GridSelectionRange[].
+> [`selectedCells()`]({environment:angularApiUrl}/classes/igxgridcomponent.html#selectedCells) will DO return the correct result even if the cell is not visible in grids view port. [`getSelectedData()`]({environment:angularApiUrl}/classes/igxgridcomponent.html#getSelectedData) will also return the selected cell data.
+> [`getSelectedRanges(): GridSelectionRange[]`]({environment:angularApiUrl}/classes/igxgridcomponent.html#getSelectedRanges) will return the current selected ranges in the grid from both keyboard and pointer interactions. The type is GridSelectionRange[].
 
 
 ## Features integration
