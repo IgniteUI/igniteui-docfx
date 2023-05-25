@@ -302,6 +302,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 ```
 
 <code-view style="height:500px"
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/datepicker-styling-sample" >
 </code-view>

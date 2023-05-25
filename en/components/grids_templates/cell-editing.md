@@ -252,6 +252,7 @@ Please check the full sample for further reference:
 #####Angular Grid Excel Style Editing Sample
 
 <code-view style="height:550px"
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-editing-excel-style" alt="Angular Grid Excel Style Editing Example">
 </code-view>
@@ -585,6 +586,7 @@ In addition to the steps above, we can also style the controls that are used for
 @@if (igxName === 'IgxGrid') {
 
 <code-view style="height:650px"
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-editing-style" >
 </code-view>
@@ -593,6 +595,7 @@ In addition to the steps above, we can also style the controls that are used for
 @@if (igxName === 'IgxTreeGrid') {
 
 <code-view style="height:950px"
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-editing-style" >
 </code-view>
@@ -601,6 +604,7 @@ In addition to the steps above, we can also style the controls that are used for
 @@if (igxName === 'IgxHierarchicalGrid') {
 
 <code-view style="height:660px"
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-editing-style" >
 </code-view>

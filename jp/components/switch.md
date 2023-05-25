@@ -166,6 +166,7 @@ $custom-switch-theme: switch-theme(
 
 
 <code-view style="height: 200px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-entries/switch-styling" >
 </code-view>

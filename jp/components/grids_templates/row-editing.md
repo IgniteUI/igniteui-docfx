@@ -419,6 +419,7 @@ $button-theme: button-theme(
 @@if (igxName === 'IgxGrid'){
 
 <code-view style="height:560px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/grid/grid-row-edit-style" >
 </code-view>
@@ -429,6 +430,7 @@ $button-theme: button-theme(
 @@if (igxName === 'IgxHierarchicalGrid'){
 
 <code-view style="height:560px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-edit-style" >
 </code-view>
@@ -439,6 +441,7 @@ $button-theme: button-theme(
 @@if (igxName === 'IgxTreeGrid'){
 
 <code-view style="height:560px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-row-edit-style" >
 </code-view>

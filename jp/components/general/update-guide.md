@@ -52,8 +52,78 @@ ng update @angular/cli
 
 例: 6.2.4 から 7.1.0 にアップデートする場合、[6.x .. から] セクションから始めて変更を適用していきます。
 
+## 15.1.x から 16.0.x の場合:
+
+- Angular 16 へのアップグレードには、`NgModules` の内部での動作方法の変更が伴います。以前は、内部的に別のモジュールに依存するモジュールを追加すると、アプリ内で両方の宣言が利用可能になりました。この動作は意図されたものではなく、Angular 16 では変更されています。あなたのアプリがこの動作に依存していた場合、例えば `IgxGridModule` のような多くの内部依存関係を含むモジュールをインポートし、それらに付属するコンポーネントを使用しているだけであった場合、アプリが使用するコンポーネントごとに個別にモジュールを手動で追加する必要があります。
+
+- **重大な変更**
+- 16.0.x では、ページングに関連するすべてのグリッド プロパティが削除されます。ページング動作は、完全に `IgxPaginatorComponent` を通じて構成および制御されるようになりました。
+グリッドでページングを有効にするには、グリッドで `IgxPaginatorComponent` を初期化し、関連する入力プロパティを設定し、イベント ハンドラーをページネーター自体にアタッチします。
+
+```html
+<igx-grid ...>
+    <igx-paginator #paginator [totalRecords]="totalRecords" [perPage]="25" (pageChange)="pageChange($event) (perPageChange)="perPageChange($event)">
+    </igx-paginator>
+<igx-grid>
+```
+
+```typescript
+@ViewChild('grid', { static: true }) private grid: IgxGridComponent;
+@ViewChild('paginator', { static: true }) private paginator: IgxPaginatorComponent;
+
+// prior version 16.0.x
+public onButtonClick(event) {
+    this.grid.nextPage();
+    this.grid.previousPage();
+    this.grid.paginate(0);
+}
+
+// from version 16.0.x
+public onButtonClick(event) {
+    this.paginator.nextPage();
+    this.paginator.previousPage();
+    this.paginator.paginate(0);
+}
+```
+
+- 16.0.x では、グリッド メソッド `getCellByColumnVisibleIndex(rowIndex:number,index:number)` が削除されました。代わりに、`getCellByKey(rowSelector: any, columnField: string)` または `getCellByColumn(rowIndex: number, columnField: string)` を使用します。例:
+
+```typescript
+ // prior version 16.0.x
+ const cell = grid.getCellByColumnVisibleIndex(rowIndex, columnIndex);
+
+ // after version 16.0.x
+ const rowKey = grid.getRowByIndex(rowIndex).key;
+ const columnField = grid.getColumnByVisibleIndex(columnIndex).field;
+ const cell = grid.getCellByKey(rowKey, columnField);
+ const cell = grid.getCellByColumn(rowIndex, columnField);
+```
+
+
 ## 15.0.x から 15.1.x の場合:
-- **視覚的な変更**
+- **重大な変更**
+- `rowSelectionChanging` 引数の型が変更されます。`IRowSelectionEventArgs` インターフェイスの一部である `oldSelection`、`newSelection`、`added`、および `removed` コレクションは、選択された要素の行キーでではなく (グリッドに PrimaryKey を設定している場合)、いずれの場合も行データが出力されます。グリッドがリモート データを操作しており、`primaryKey` が設定されている場合、現在グリッド ビューの一部ではない選択された行に対しては、部分的な行データ オブジェクトが出力されます。
+
+`rowSelectionChanging` イベント ハンドラーのコードがイベント引数からの primaryKeys の読み取りに依存していた場合は、次のように更新します。
+
+```typescript
+  // prior version 15.1.x
+  public handleRowSelection(e: IRowSelectionEventArgs): void {
+    this.selectedRows = e.newSelection;
+  }
+
+  // after version 15.1.x
+  public handleRowSelection(e: IRowSelectionEventArgs): void {
+    this.selectedRows = e.newSelection.map(rec => {
+       return rec[e.owner?.primaryKey]
+    });
+  }
+```
+
+- **動作の変更**
+選択した行がグリッド コンポーネントから削除された場合、`rowSelectionChanging` イベントは発行されません。
+
+- **視覚的な変更** 
 - 15.1 では、入力コンポーネントのサイズが大きくなりました。これは、Material テーマを使用するとより明瞭になります。これは、Material  仕様に一致するように行います。アプリケーションが変更によって悪影響を受ける場合は、displayDensity 入力を使用して、より密度の高い設定に設定できます (comfortable から cozy まで、または cozy から compact まで)。
 
   **例**

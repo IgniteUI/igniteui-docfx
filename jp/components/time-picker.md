@@ -426,6 +426,7 @@ Time Picker の項目がコンポーネントのホスト**内**に適切にレ�
 ### デモ
 
 <code-view style="height: 600px;"
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-styling" >
 </code-view>

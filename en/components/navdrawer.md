@@ -441,6 +441,7 @@ If `$legacy-support` is set to `false`(default), include the component **css var
 
 
 <code-view style="height: 400px; border: 1px solid #D4D4D4;" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/menus/navigation-drawer-styling" >
 </code-view>

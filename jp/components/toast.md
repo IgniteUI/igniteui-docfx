@@ -280,6 +280,7 @@ $custom-toast-theme: toast-theme(
 上記と同じ方法でテーマを含める必要があることに注意してください。
 
 <code-view style="height: 600px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/notifications/toast-style" >
 </code-view>

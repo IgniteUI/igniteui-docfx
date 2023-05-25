@@ -18,7 +18,7 @@
   "author": "Infragistics",
   "license": "ISC",
   "dependencies": {
-    "igniteui-docfx-template": "^3.5.0"
+    "igniteui-docfx-template": "3.5.2-alpha.0"
   },
   "devDependencies": {
     "@stackblitz/sdk": "^1.5.3",
