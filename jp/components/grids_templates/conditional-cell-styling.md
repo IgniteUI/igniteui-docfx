@@ -32,13 +32,31 @@ _language: ja
 
 Ignite UI for Angular の @@igxName コンポーネントは、カスタム ルールに基づいて**行の条件付きスタイル設定**を作成する次の 2 つの方法を提供します:
 
+@@if (igxName === 'IgxGrid') {
 - @@igxName コンポーネントで [`rowClasses`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowClasses) 入力を設定する方法。
 - @@igxName コンポーネントで [`rowStyles`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowStyles) 入力を設定する方法。
+}
+@@if (igxName === 'IgxTreeGrid') {
+- @@igxName コンポーネントで [`rowClasses`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#rowClasses) 入力を設定する方法。
+- @@igxName コンポーネントで [`rowStyles`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#rowStyles) 入力を設定する方法。
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+- @@igxName コンポーネントで [`rowClasses`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#rowClasses) 入力を設定する方法。
+- @@igxName コンポーネントで [`rowStyles`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#rowStyles) 入力を設定する方法。
+}
 
 さらにこのトピックでは、両方について詳しく説明します。
 
 ### rowClasses の使用
+@@if (igxName === 'IgxGrid') {
 [`rowClasses`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowClasses) 入力を設定し、カスタム ルールを定義することで、@@igxName 行のスタイルを条件付きで設定できます。
+}
+@@if (igxName === 'IgxTreeGrid') {
+[`rowClasses`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#rowClasses) 入力を設定し、カスタム ルールを定義することで、@@igxName 行のスタイルを条件付きで設定できます。
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+[`rowClasses`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#rowClasses) 入力を設定し、カスタム ルールを定義することで、@@igxName 行のスタイルを条件付きで設定できます。
+}
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -64,8 +82,15 @@ Ignite UI for Angular の @@igxName コンポーネントは、カスタム ル�
 ```
 }
 
-
+@@if (igxName === 'IgxGrid') {
 [`rowClasses`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowClasses) 入力は、キー値のペアを含むオブジェクト リテラルを受け入れます。ここで、キーは CSS クラスの名前であり、値はブール値またはブール値を返すコールバック関数となります。
+}
+@@if (igxName === 'IgxTreeGrid') {
+[`rowClasses`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#rowClasses) 入力は、キー値のペアを含むオブジェクト リテラルを受け入れます。ここで、キーは CSS クラスの名前であり、値はブール値またはブール値を返すコールバック関数となります。
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+[`rowClasses`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#rowClasses) 入力は、キー値のペアを含むオブジェクト リテラルを受け入れます。ここで、キーは CSS クラスの名前であり、値はブール値またはブール値を返すコールバック関数となります。
+}
 
 ```typescript
 // sample.component.ts

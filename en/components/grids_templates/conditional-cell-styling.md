@@ -29,13 +29,31 @@ If you need to provide any custom styling in the @@igxName component, you can do
 
 The @@igxName component in Ignite UI for Angular provides two ways to **conditional styling of rows** based on custom rules.
 
+@@if (igxName === 'IgxGrid') {
 - By setting [`rowClasses`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowClasses) input on the @@igxName component;
 - By setting [`rowStyles`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowStyles) input on the @@igxName component;
+}
+@@if (igxName === 'IgxTreeGrid') {
+- By setting [`rowClasses`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#rowClasses) input on the @@igxName component;
+- By setting [`rowStyles`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#rowStyles) input on the @@igxName component;
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+- By setting [`rowClasses`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#rowClasses) input on the @@igxName component;
+- By setting [`rowStyles`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#rowStyles) input on the @@igxName component;
+}
 
 Further in this topic wi will cover both of them in more details.
 
 ### Using rowClasses
+@@if (igxName === 'IgxGrid') {
 You can conditionally style the @@igxName rows by setting the [`rowClasses`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowClasses) input and define custom rules.
+}
+@@if (igxName === 'IgxTreeGrid') {
+You can conditionally style the @@igxName rows by setting the [`rowClasses`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#rowClasses) input and define custom rules.
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+You can conditionally style the @@igxName rows by setting the [`rowClasses`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#rowClasses) input and define custom rules.
+}
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -61,8 +79,15 @@ You can conditionally style the @@igxName rows by setting the [`rowClasses`]({en
 ```
 }
 
-
+@@if (igxName === 'IgxGrid') {
 The [`rowClasses`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowClasses) input accepts an object literal, containing key-value pairs, where the key is the name of the CSS class, while the value is either a callback function that returns a boolean, or boolean value.
+}
+@@if (igxName === 'IgxTreeGrid') {
+The [`rowClasses`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#rowClasses) input accepts an object literal, containing key-value pairs, where the key is the name of the CSS class, while the value is either a callback function that returns a boolean, or boolean value.
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+The [`rowClasses`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#rowClasses) input accepts an object literal, containing key-value pairs, where the key is the name of the CSS class, while the value is either a callback function that returns a boolean, or boolean value.
+}
 
 ```typescript
 // sample.component.ts
