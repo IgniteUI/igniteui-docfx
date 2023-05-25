@@ -493,6 +493,7 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 
 
 <code-view style="height:506px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/grid/grid-pinning-styling" >
 </code-view>

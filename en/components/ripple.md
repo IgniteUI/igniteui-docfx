@@ -151,6 +151,7 @@ If the component is using the [`Emulated`](themes/sass/component-themes.md#view-
 ### Demo
 
 <code-view style="height:200px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/interactions/ripple-styling" alt="Angular Ripple Example">
 </code-view>

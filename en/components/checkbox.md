@@ -239,6 +239,7 @@ If `$legacy-support` is set to `false`(default), include the component **css var
 
 
 <code-view style="height: 100px"
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/checkbox-styling" >
 </code-view>

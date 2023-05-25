@@ -80,6 +80,7 @@ The Polar Spline Chart renders using a collection of curved splines connecting d
 Once our polar chart is created, we may want to make some further styling customizations such as a change of the line colors, marker types, or outline colors of those markers. You can create this type of chart in the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) control by binding your data to a [`IgxPolarAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarareaseriescomponent.html), as shown in the example below:
 
 <code-view style="height: 600px" alt="Angular Polar Area Chart Styling"
+           no-theming
            data-demos-base-url="{environment:dvDemosBaseUrl}"
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/polar-area-chart-styling"
                                                  github-src="charts/data-chart/polar-area-chart-styling">

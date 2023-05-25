@@ -60,6 +60,7 @@ Ignite UI for Angular スプライン チャートは、スプラインのスム
 [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html) コントロールでこのチャート タイプを作成するには、以下の例のように、データをバインドし、[`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#charttype) プロパティを `Spline` に設定します:
 
 <code-view style="height: 600px" alt="Angular スプライン チャートのスタイル設定"
+           no-theming
            data-demos-base-url="{environment:dvDemosBaseUrl}"
                     iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/spline-styling"
                                                  github-src="charts/category-chart/spline-styling">

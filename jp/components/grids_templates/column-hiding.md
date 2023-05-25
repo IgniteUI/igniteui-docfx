@@ -604,6 +604,7 @@ $custom-button: button-theme(
 @@if (igxName === 'IgxGrid') {
 
 <code-view style="height:600px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/grid/grid-column-hiding-style" >
 </code-view>
@@ -613,6 +614,7 @@ $custom-button: button-theme(
 @@if (igxName === 'IgxTreeGrid') {
 
 <code-view style="height:600px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-column-hiding-style" >
 </code-view>
@@ -622,6 +624,7 @@ $custom-button: button-theme(
 @@if (igxName === 'IgxHierarchicalGrid') {
 
 <code-view style="height:570px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-column-hiding-style" >
 </code-view>

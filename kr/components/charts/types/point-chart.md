@@ -54,6 +54,7 @@ Since the Angular Point Chart allows you to combine multiple series and compare 
 Once the Angular Point Chart is set up, we may want to make some further styling customizations such as change the markers and its outlines, brushes and thickness.
 
 <code-view style="height: 600px" alt="Angular Point Chart Styling"
+           no-theming
            data-demos-base-url="{environment:dvDemosBaseUrl}"
                     iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/point-chart-styling"
                                                  github-src="charts/category-chart/point-chart-styling">

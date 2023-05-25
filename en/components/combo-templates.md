@@ -52,6 +52,17 @@ Use selector `[igxComboItem]`:
 </igx-combo>
 ```
 
+### Header Item template
+Use selector `[igxComboHeaderItem]`:
+
+```html
+<igx-combo #templateCombo [data]="lData" [groupKey]="'region'">
+    <ng-template igxComboHeaderItem let-display let-key="groupKey">
+        <div class="header-item">Region: {{ display[key] }}</div>
+    </ng-template>
+</igx-combo>
+```
+
 ### Header template
 Use selector `[igxComboHeader]`:
 

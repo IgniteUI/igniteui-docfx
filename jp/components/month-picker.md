@@ -224,6 +224,7 @@ $my-calendar-theme: calendar-theme(
 
 
 <code-view style="height: 600px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/scheduling/monthpicker-styling" >
 </code-view>

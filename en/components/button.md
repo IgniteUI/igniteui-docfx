@@ -273,6 +273,7 @@ If the component is using the [`Emulated`](themes/sass/component-themes.md#view-
 
 ### Demo
 <code-view style="height: 100px"
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/buttons-style" >
 </code-view>

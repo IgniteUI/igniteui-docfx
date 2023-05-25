@@ -70,6 +70,7 @@ Ignite UI for Angular ラジアル折れ線チャートは、データ ポイン
 この例は、[`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) コントロールのスタイルをカスタマイズする方法を示しています。
 
 <code-view style="height: 600px" alt="Angular ラジアル エリア チャートのスタイル設定"
+           no-theming
            data-demos-base-url="{environment:dvDemosBaseUrl}"
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/radial-area-chart-styling"
                                                  github-src="charts/data-chart/radial-area-chart-styling">
