@@ -9,11 +9,11 @@ _language: ja
 
 # Angular リニア ゲージの概要
 
-Ignite UI for Angular リニア ゲージ コンポーネントを使用すると、リニア ゲージの形式でデータを視覚化できます。[`IgxLinearGaugeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineargaugecomponent.html) は、スケールおよび 1 つ以上の範囲と比較した値のシンプルで簡潔なビューを提供します。1 つのスケール、1 セットの目盛り、および 1 セットのラベルをサポートします。このコンポーネントには、アニメーション化されたトランジションのサポートも組み込まれており、アニメーションでは、[`transitionDuration`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineargaugecomponent.html#transitionduration) プロパティの設定で簡単にカスタマイズできます。また構成可能な向きや方向、視覚要素やツールチップなどがサポートされます。
+Ignite UI for Angular リニア ゲージ コンポーネントを使用すると、リニア ゲージの形式でデータを視覚化できます。[`IgxLinearGaugeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxlineargaugecomponent.html) は、スケールおよび 1 つ以上の範囲と比較した値のシンプルで簡潔なビューを提供します。1 つのスケール、1 セットの目盛り、および 1 セットのラベルをサポートします。このコンポーネントには、アニメーション化されたトランジションのサポートも組み込まれており、アニメーションでは、[`transitionDuration`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxlineargaugecomponent.html#transitionduration) プロパティの設定で簡単にカスタマイズできます。また構成可能な向きや方向、視覚要素やツールチップなどがサポートされます。
 
 ## Angular リニア ゲージの例
 
-以下のサンプルは、同じ [`IgxLinearGaugeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineargaugecomponent.html) でいくつかのプロパティを設定して全く異なるゲージにする方法を示します。
+以下のサンプルは、同じ [`IgxLinearGaugeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxlineargaugecomponent.html) でいくつかのプロパティを設定して全く異なるゲージにする方法を示します。
 
 <code-view style="height: 155px" alt="Angular リニア ゲージの例"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
@@ -39,7 +39,7 @@ npm install --save igniteui-angular-gauges
 
 ## モジュールの要件
 
-[`IgxLinearGaugeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineargaugecomponent.html) を作成するには、以下のモジュールが必要です。
+[`IgxLinearGaugeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxlineargaugecomponent.html) を作成するには、以下のモジュールが必要です。
 
 ```ts
 // app.module.ts
@@ -235,7 +235,7 @@ export class AppModule {}
 
 ## スケール
 
-スケールはゲージで値の全範囲を強調表示する視覚的な要素です。外観やスケールの図形のカスタマイズ、更にスケールを反転 ([`isScaleInverted`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineargaugecomponent.html#isscaleinverted) プロパティを使用) させて、すべてのラベルを左から右ではなく、右から左へ描画することもできます。
+スケールはゲージで値の全範囲を強調表示する視覚的な要素です。外観やスケールの図形のカスタマイズ、更にスケールを反転 ([`isScaleInverted`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxlineargaugecomponent.html#isscaleinverted) プロパティを使用) させて、すべてのラベルを左から右ではなく、右から左へ描画することもできます。
 
 ```html
 <igx-linear-gauge
@@ -343,8 +343,8 @@ export class AppModule {}
 
 以下は上記のセクションで説明した API メンバーのリストです。
 
-*   [`IgxLinearGaugeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineargaugecomponent.html)
-*   [`IgxLinearGraphRangeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineargraphrangecomponent.html)
+*   [`IgxLinearGaugeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxlineargaugecomponent.html)
+*   [`IgxLinearGraphRangeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxlineargraphrangecomponent.html)
 
 ## その他のリソース
 
