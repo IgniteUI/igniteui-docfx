@@ -447,6 +447,7 @@ In order to style the border, we have to `penetrate` this encapsulation using `:
 
 
 <code-view style="height:120px"
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/input-group-style" >
 </code-view>

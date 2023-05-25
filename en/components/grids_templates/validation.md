@@ -686,6 +686,7 @@ public cellStyles = {
 @@if (igxName === 'IgxGrid'){
 
 <code-view style="height:560px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/grid/grid-validation-style" >
 </code-view>
@@ -694,6 +695,7 @@ public cellStyles = {
 @@if (igxName === 'IgxHierarchicalGrid'){
 
 <code-view style="height:630px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-validation-style" >
 </code-view>
@@ -704,6 +706,7 @@ public cellStyles = {
 @@if (igxName === 'IgxTreeGrid'){
 
 <code-view style="height:560px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-validation-style" >
 </code-view>

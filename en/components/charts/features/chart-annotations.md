@@ -44,6 +44,7 @@ By default, the color of the crosshair lines is a lighter color than the series 
 The following example shows how to configure the crosshair layer but targeting a single series, setting the type to vertical and styling the brush color.
 
 <code-view style="height: 500px" alt="Angular Crosshair Layer Styling"
+           no-theming
            data-demos-base-url="{environment:dvDemosBaseUrl}"
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/crosshair-layer-styling"
                                                  github-src="charts/data-chart/crosshair-layer-styling">
@@ -67,6 +68,7 @@ You can also customize this annotation by setting the following properties:
 The following example demonstrates how to style the final value layer annotation by setting the properties listed above.
 
 <code-view style="height: 500px" alt="Angular Final Value Layer Styling"
+           no-theming
            data-demos-base-url="{environment:dvDemosBaseUrl}"
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/final-value-layer-styling"
                                                  github-src="charts/data-chart/final-value-layer-styling">
@@ -103,6 +105,7 @@ You can also customize this annotation by setting the following properties:
 The following example demonstrates how to style the callout layer annotations by setting the properties listed above:
 
 <code-view style="height: 500px" alt="Angular Callout Layer Styling"
+           no-theming
            data-demos-base-url="{environment:dvDemosBaseUrl}"
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/callout-layer-styling"
                                                  github-src="charts/data-chart/callout-layer-styling">

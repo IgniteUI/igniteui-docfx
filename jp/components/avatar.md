@@ -182,6 +182,7 @@ Internet Explorer 11 以前などブラウザーのコンポーネントをス�
 
 
 <code-view style="height:120px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/layouts/avatar-styling" >
 </code-view>

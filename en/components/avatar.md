@@ -181,6 +181,7 @@ If all went well, you should see something like the following in the browser:
 
 
 <code-view style="height:120px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/layouts/avatar-styling" >
 </code-view>

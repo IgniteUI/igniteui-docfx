@@ -223,6 +223,7 @@ After everything's done, your component should look like this:
 
 
 <code-view style="height: 600px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/scheduling/monthpicker-styling" >
 </code-view>

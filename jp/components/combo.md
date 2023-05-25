@@ -308,6 +308,7 @@ $custom-checkbox-theme: checkbox-theme(
 ### デモ
 
 <code-view style="height:410px"
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/combo-styling" >
 </code-view>
