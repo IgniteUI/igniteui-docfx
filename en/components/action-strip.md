@@ -1,7 +1,7 @@
 ---
 title: Angular Action Strip Component – Ignite UI for Angular | Infragistics
 _description: The Action Strip represents a template area for one or more actions. The Action Strip requires to be inside a relative container, as it is going to overlay it.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular ActionStrip components, Angular ActionStrip directives, Angular ActionStrip controls
+_keywords: Angular ActionStrip components, Angular ActionStrip directives, Angular ActionStrip controls, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Angular UI Components
 ---
 
 # Action Strip
@@ -21,7 +21,7 @@ ng add igniteui-angular
 
 For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
 
-The next step is to import the `IgxActionStripModule` in your app.module file. 
+The next step is to import the `IgxActionStripModule` in your **app.module.ts** file. 
 
 ```typescript
 // app.module.ts
@@ -37,7 +37,7 @@ import { IgxActionStripModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
-Now that you have the Angular Material Action Strip module imported, you can start with a basic configuration of the `igx-action-strip`.
+Now that you have the Ignite UI for Angular Action Strip module imported, you can start with a basic configuration of the `igx-action-strip`.
 
 Alternatively, as of `16.0.0` you can import the `IgxActionStripComponent` as a standalone dependency, or use the [`IGX_ACTION_STRIP_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/action-strip/public_api.ts) token to import the component and all of its supporting components and directives.
 
@@ -45,16 +45,24 @@ Alternatively, as of `16.0.0` you can import the `IgxActionStripComponent` as a 
 // home.component.ts
 
 ...
-import { IGX_ACTION_STRIP_DIRECTIVES, IgxActionStripComponent } from 'igniteui-angular';
-// import { IGX_ACTION_STRIP_DIRECTIVES, IgxActionStripComponent } from '@infragistics/igniteui-angular'; for licensed package
+import { IGX_ACTION_STRIP_DIRECTIVES, IgxButtonDirective, IgxIconComponent } from 'igniteui-angular';
+// import { IGX_ACTION_STRIP_DIRECTIVES, IgxButtonDirective, IgxIconComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
     selector: 'app-home',
-    templateUrl: 'home.component.html',
+    template: `
+    <div style="width:100px; height:100px;">
+        <igx-action-strip>
+            <button igxButton (click)="makeTextBold()">
+                <igx-icon>format_bold</igx-icon>
+            </button>
+        </igx-action-strip>
+    <div>
+    `,
     styleUrls: ['home.component.scss'],
     standalone: true,
-    imports: [IGX_ACTION_STRIP_DIRECTIVES]
-    /* or imports: [IgxActionStripComponent] */
+    imports: [IGX_ACTION_STRIP_DIRECTIVES, IgxButtonDirective, IgxIconComponent]
+    /* or imports: [IgxActionStripComponent, IgxButtonDirective, IgxIconComponent] */
 })
 export class HomeComponent {}
 ```

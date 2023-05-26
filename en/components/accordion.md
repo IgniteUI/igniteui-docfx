@@ -1,7 +1,7 @@
 ---
 title: Angular Accordion Component – Fully-featured collapsible panels - Infragistics 
 _description: Angular Accordion is used to build vertical expandable panels in accordion menu. Check how to do it with Ignite UI for Angular accordion component. 
-_keywords: angular accordion, angular accordion component, angular accordion example, ignite ui for angular, UI controls, infragistics
+_keywords: angular accordion, angular accordion component, angular accordion example, ignite ui for angular, angular UI components, infragistics
 ---
 
 # Angular Accordion Component Overview
@@ -33,7 +33,7 @@ ng add igniteui-angular
 ```
 For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
 
-The next step is to import the `IgxAccordionModule` in your app.module file. 
+The next step is to import the `IgxAccordionModule` in your **app.module.ts** file. 
 
 ```typescript
 // app.module.ts
@@ -49,7 +49,7 @@ import { IgxAccordionModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
-Now that you have the Angular Material Accordion module imported, you can start with a basic configuration of the `igx-accordion` and its panels.
+Now that you have the Ignite UI for Angular Accordion module imported, you can start with a basic configuration of the `igx-accordion` and its panels.
 
 Alternatively, as of `16.0.0` you can import the `IgxAccordionComponent` as a standalone dependency, or use the [`IGX_ACCORDION_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/accordion/public_api.ts) token to import the component and all of its supporting components and directives.
 
@@ -57,12 +57,23 @@ Alternatively, as of `16.0.0` you can import the `IgxAccordionComponent` as a st
 // home.component.ts
 
 ...
-import { IGX_ACCORDION_DIRECTIVES, IgxAccordionComponent } from 'igniteui-angular';
-// import { IGX_ACCORDION_DIRECTIVES, IgxAccordionComponent } from '@infragistics/igniteui-angular'; for licensed package
+import { IGX_ACCORDION_DIRECTIVES } from 'igniteui-angular';
+// import { IGX_ACCORDION_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
     selector: 'app-home',
-    templateUrl: 'home.component.html',
+    template: `
+    <igx-accordion>
+        <igx-expansion-panel>
+            <igx-expansion-panel-header>
+                <igx-expansion-panel-title>Title Panel 1</igx-expansion-panel-title>
+            </igx-expansion-panel-header>
+            <igx-expansion-panel-body>
+                Content Panel 1
+            </igx-expansion-panel-body>
+        </igx-expansion-panel>
+    </igx-accordion>
+    `,
     styleUrls: ['home.component.scss'],
     standalone: true,
     imports: [IGX_ACCORDION_DIRECTIVES]
@@ -82,7 +93,7 @@ The accordion wraps all [`igx-expansion-panel`s]({environment:angularApiUrl}/cla
 
 ```html
 <igx-accordion #accordion [singleBranchExpand]="true">
-     <igx-expansion-panel>
+    <igx-expansion-panel>
         <igx-expansion-panel-header>
             <igx-expansion-panel-title>Title Panel 1</igx-expansion-panel-title>
         </igx-expansion-panel-header>
