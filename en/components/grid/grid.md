@@ -828,16 +828,7 @@ platformBrowserDynamic()
 ## Tutorial video
 Learn more about creating an Angular data grid in our short tutorial video:
 
-<div class="embeddedvideo">
-    <iframe
-        loading="lazy"
-        src="https://www.youtube.com/embed/Xv_fQVQ8fmM" 
-        title="Angular Data Grid Tutorial: Getting Started with Ignite UI Grid"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-    ></iframe>
-</div>
+> [!Video https://www.youtube.com/embed/Xv_fQVQ8fmM]
 
 ## Additional Resources
 <div class="divider--half"></div>

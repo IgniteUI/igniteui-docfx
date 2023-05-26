@@ -56,4 +56,4 @@ This data structure is suitable for use in most Geographic Series as long as app
 ## Code Snippet
 
 This code example assumes that shape files were loaded using the `ShapeDataSource`.
-The following code binds [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html) in the map component to the `ShapeDataSource` and maps the `Points` property of all [`IgxShapefileRecord`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapefilerecord.html) objects.
+The following code binds [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicpolylineseriescomponent.html) in the map component to the `ShapeDataSource` and maps the `Points` property of all [`IgxShapefileRecord`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapefilerecord.html) objects.

@@ -41,4 +41,4 @@ workbook.save(workbook, "Sparklines.xlsx");
 
 ## API References
 
-*   [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html)
+*   [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.workbook.html)
