@@ -65,7 +65,7 @@ The `IGX_GRID_DIRECTIVES` shown in the previous examples is a utility directive 
 | [`IGX_ACTION_STRIP_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/action-strip/public_api.ts) | Exports all action strip related components and directives. |
 | [`IGX_BANNER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/banner/public_api.ts) | Exports all banner related components and directives. |
 | `IGX_BOTTOM_NAV_DIRECTIVES` | Exports all bottom navigation related components and directives. |
-| `IGX_BUTTON_GROUP_DIRECTIVES` | Exports all button group related components and directives. |
+| [`IGX_BUTTON_GROUP_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/buttonGroup/public_api.ts) | Exports all button group related components and directives. |
 | `IGX_CALENDAR_DIRECTIVES` | Exports all calendar related components and directives. |
 | `IGX_CARD_DIRECTIVES` | Exports all card related components and directives. |
 | `IGX_CAROUSEL_DIRECTIVES` | Exports all carousel related components and directives. |

@@ -21,9 +21,17 @@ We have created the Angular Button example below to show you how different butto
 
 <div class="divider--half"></div>
 
-## How To Use Angular Button With Ignite UI
+## Getting Started with Ignite UI for Angular Button
 
-The Angular Button Directive is exported as an `NgModule`, thus all you need to do in your application is to import the `IgxButtonModule` inside your `AppModule`:
+To get started with the Ignite UI for Angular Button directive, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+
+```cmd
+ng add igniteui-angular
+```
+
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+
+The next step is to import the `IgxButtonModule` in your **app.module.ts** file. 
 
 ```typescript
 // app.module.ts
@@ -38,6 +46,26 @@ import { IgxButtonModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
+Now that you have the Ignite UI for Angular Button module imported, you can start using the `igxButton` directive on elements.
+
+Alternatively, as of `16.0.0` you can import the `IgxButtonDirective` as a standalone dependency.
+
+```typescript
+// home.component.ts
+
+...
+import { IgxButtonDirective } from 'igniteui-angular';
+// import { IgxButtonDirective } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: '<button igxButton="flat">Flat</button>',
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IgxButtonDirective]
+})
+export class HomeComponent {}
+```
 
 ## Angular Button Types
 
@@ -50,8 +78,8 @@ Use the [`igxButton`]({environment:angularApiUrl}/classes/igxbuttondirective.htm
 ```
 
 <div class="sample-container loading" style="height: 70px">
-    <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-2">
-</iframe></div>
+    <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-2"></iframe>
+</div>
 
 ### Raised Button
 

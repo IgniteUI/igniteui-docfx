@@ -42,7 +42,7 @@ import { IgxBannerModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
-Now that you have the Ignite UI for Angular Banner module imported, you can start with a basic configuration of the `igx-banner` and its panels.
+Now that you have the Ignite UI for Angular Banner module imported, you can start with a basic configuration of the `igx-banner` component.
 
 Alternatively, as of `16.0.0` you can import the `IgxBannerComponent` as a standalone dependency, or use the [`IGX_BANNER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/banner/public_api.ts) token to import the component and all of its supporting components and directives.
 

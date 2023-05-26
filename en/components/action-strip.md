@@ -37,7 +37,7 @@ import { IgxActionStripModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
-Now that you have the Ignite UI for Angular Action Strip module imported, you can start with a basic configuration of the `igx-action-strip`.
+Now that you have the Ignite UI for Angular Action Strip module imported, you can start with a basic configuration of the `igx-action-strip` component.
 
 Alternatively, as of `16.0.0` you can import the `IgxActionStripComponent` as a standalone dependency, or use the [`IGX_ACTION_STRIP_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/action-strip/public_api.ts) token to import the component and all of its supporting components and directives.
 
