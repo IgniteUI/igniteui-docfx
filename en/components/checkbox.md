@@ -33,9 +33,10 @@ The next step is to import the `IgxCheckboxModule` in the **app.module.ts** file
 
 ```typescript
 // app.module.ts
-...
+
 import { IgxCheckboxModule } from 'igniteui-angular';
 // import { IgxCheckboxModule } from '@infragistics/igniteui-angular'; for licensed package
+
 @NgModule({
     ...
     imports: [..., IgxCheckboxModule],
@@ -82,16 +83,17 @@ Let's enhance the code above by binding the checkbox properties to some data. Sa
 Optionally, you can also bind the [`change`]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html#change) event and add some custom logic in the provided event handler method.
 ```typescript
 // tasks.component.ts
-...
-public tasks = [
-    { done: true, description: 'Research' },
-    { done: true, description: 'Implement' },
-    { done: false, description: 'Test' }
-];
-...
-statusChanged()
-{
-    // event handler logic
+@Component({...})
+export class HomeComponent {
+    public tasks = [
+        { done: true, description: 'Research' },
+        { done: true, description: 'Implement' },
+        { done: false, description: 'Test' }
+    ];
+
+    statusChanged() {
+        // event handler logic
+    }
 }
 ```
 Enhance the component template by adding a checkbox for each task and then setting the corresponding property bindings:
