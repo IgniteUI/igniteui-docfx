@@ -77,7 +77,7 @@ In order to display the banner component, use its [`open()`]({environment:angula
 ```html
 <!--banner.component.html-->
 
-<igx-icon (click)="connectionBanner.open()">Refresh</igx-icon>
+<igx-icon (click)="connectionBanner.open()">refresh</igx-icon>
 ...
 <igx-banner #connectionBanner>
     You are currently offline.
@@ -97,10 +97,10 @@ The [`IgxBannerComponent`]({environment:angularApiUrl}/classes/igxbannercomponen
 Configuring the message displayed in the banner is easy - just change the content you are passing to the `igx-banner` tag. The text will show up in the specified banner area and the banner will use its default template when displaying it. Below, we will change the content of our sample banner to be a bit more descriptive:
 
 ```html
-    <!--banner.component.html-->
-    <igx-banner #connectionBanner>
-        You have lost connection to the internet. This app is offline.
-    </igx-banner>
+<!--banner.component.html-->
+<igx-banner #connectionBanner>
+    You have lost connection to the internet. This app is offline.
+</igx-banner>
 ```
 
 ### Adding an icon
@@ -113,25 +113,23 @@ An [`igx-icon`](icon.md) can be displayed in the banner by passing it to the ban
 To pass an `igx-icon` to you banner, simply insert it in the banner's content:
 
 ```html
-    <!--banner.component.html-->
-    <igx-banner #connectionBanner>
-        <igx-icon>signal_wifi_off</igx-icon>
-        You have lost connection to the internet. This app is offline.
-    </igx-banner>
-    ...
+<!--banner.component.html-->
+<igx-banner #connectionBanner>
+    <igx-icon>signal_wifi_off</igx-icon>
+    You have lost connection to the internet. This app is offline.
+</igx-banner>
 ```
 
 If you want to use an `igx-icon` in your banner message, wrap it in a `span` tag:
 
 ```html
-    <!--banner.component.html-->
-    <igx-banner #connectionBanner>
-        You have lost connection to the internet. This app is offline.
-        <span>
-            <igx-icon>signal_wifi_off</igx-icon>
-        </span>
-    </igx-banner>
-    ...
+<!--banner.component.html-->
+<igx-banner #connectionBanner>
+    You have lost connection to the internet. This app is offline.
+    <span>
+        <igx-icon>signal_wifi_off</igx-icon>
+    </span>
+</igx-banner>
 ```
 
 ### Changing the banner button
@@ -139,14 +137,14 @@ If you want to use an `igx-icon` in your banner message, wrap it in a `span` tag
 The `IgxBannerModule` exposes a directive for templating the banner buttons - [`IgxBannerActionsDirective`]({environment:angularApiUrl}/classes/igxbanneractionsdirective.html). This directive allows you to override the default banner button (`Dismiss`) and add user-defined custom actions.
 
 ```html
-    <!--banner.component.html-->
-    <igx-banner #connectionBanner>
-        <igx-icon>signal_wifi_off</igx-icon>
-        You have lost connection to the internet. This app is offline.
-        <igx-banner-actions>
-            <button igxButton igxRipple (click)="connectionBanner.toggle()">Toggle Banner</button>
-        </igx-banner-actions>
-    </igx-banner>
+<!--banner.component.html-->
+<igx-banner #connectionBanner>
+    <igx-icon>signal_wifi_off</igx-icon>
+    You have lost connection to the internet. This app is offline.
+    <igx-banner-actions>
+        <button igxButton igxRipple (click)="connectionBanner.toggle()">Toggle Banner</button>
+    </igx-banner-actions>
+</igx-banner>
 ```
 
 
@@ -164,10 +162,9 @@ Let's change the animations that our banner uses, so that it slides in and out:
 
 ```html
 <!--banner.component.html-->
-    <igx-banner #connectionBanner [animationSettings]="animationSettings">
-        ...
-    </igx-banner>
+<igx-banner #connectionBanner [animationSettings]="animationSettings">
     ...
+</igx-banner>
 ```
 
 ```typescript
