@@ -1,11 +1,11 @@
 ---
 title: Angular Button Component – Ignite UI for Angular
 _description: Enhance standard buttons with built-in text, images and more features using Ignite UI for Angular Button component. Try it now.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Buttons components, Angular Buttons controls
+_keywords: Angular Button component, Angular Button control, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Angular UI Components,
 ---
 
 # Angular Button Overview
-<p class="highlight">Angular Material Button directive is used for creating and adding actionable buttons to a web page/application. There are different Angular Button types that are easy to customize and include several built-in features. By default, Angular Material uses native `<button>` and `<a>` elements to deliver an accessible experience.
+<p class="highlight">Angular Button directive is used for creating and adding actionable buttons to a web page/application. There are different Angular Button types that are easy to customize and include several built-in features. By default, Angular Material uses native `<button>` and `<a>` elements to deliver an accessible experience.
 
 The Ignite UI for Angular Button directive is intended to turn any button, span, div, or anchor element into a fully functional button. You can use the following Angular Button types - Flat Button, Raised Button, Outlined Button, Icon Button and Floating Action Button. With customizable colors, options to create themes and change the Angular Button Style and enabling users to choose the button display density and more.</p>
 

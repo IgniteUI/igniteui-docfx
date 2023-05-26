@@ -5,8 +5,7 @@ _keywords: Angular Avatar component, Angular Avatar control, Ignite UI for Angul
 ---
 
 # Angular Avatar Component Overview
-
-<p class="highlight">The Ignite UI for Angular Avatar component helps adding initials, images, or material icons to your application.</p>
+<p class="highlight">Angular Avatar component helps adding initials, images, or material icons to your application.</p>
 <div class="divider"></div>
 
 ## Angular Avatar Example
