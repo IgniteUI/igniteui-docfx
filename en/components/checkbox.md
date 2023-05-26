@@ -21,6 +21,7 @@ See the checkbox in action in the following Angular Checkbox example below.
 <div class="divider--half"></div>
 
 ## Getting Started with Ignite UI for Angular Checkbox
+
 To get started with the Ignite UI for Angular Checkbox component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
 
 ```cmd
@@ -91,7 +92,7 @@ export class HomeComponent {
         { done: false, description: 'Test' }
     ];
 
-    statusChanged() {
+    public statusChanged() {
         // event handler logic
     }
 }

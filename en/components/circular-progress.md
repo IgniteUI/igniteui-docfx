@@ -1,10 +1,10 @@
 ---
 title: Angular Circular Progress Component – Ignite UI for Angular | Infragistics
 _description: Ignite UI for Angular Circular Progress Indicator component allows developers to display progress in a circle with endless customization options.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Circular Progress components, Angular Circular Progress controls
+_keywords: Angular Circular Progress component, Angular Circular Progress control, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Angular UI Components
 ---
 
-# Circular Progress
+# Angular Circular Progress Component Overview
 <p class="highlight">The Ignite UI for Angular Circular Progress Indicator component provides a visual indicator of an application’s process as it changes. The circular indicator updates its appearance as its state changes.<p>
 <div class="divider"></div>
 
@@ -17,9 +17,18 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 <div class="divider--half"></div>
 
-## Usage
+## Getting Started with Ignite UI for Angular Circular Progress
 
-To get started with the Circular Progress Indicator component, first you need to import the **IgxProgressBarModule** in the **app.module.ts** file:
+To get started with the Ignite UI for Angular Circular Progress component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+
+```cmd
+ng add igniteui-angular
+```
+
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+
+The next step is to import the **IgxProgressBarModule** in the **app.module.ts** file:
+
 ```typescript
 // app.module.ts
 
@@ -34,6 +43,34 @@ import { IgxProgressBarModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
+
+Now that you have the Ignite UI for Angular Progress Bar module imported, you can start using the `igx-circular-bar` component.
+
+Alternatively, as of `16.0.0` you can import the `IgxCircularProgressBarComponent` as a standalone dependency, or use the [`IGX_CIRCULAR_PROGRESS_BAR_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/progressbar/public_api.ts) token to import the component and all of its supporting components and directives.
+
+```typescript
+// home.component.ts
+
+import { IGX_CIRCULAR_PROGRESS_BAR_DIRECTIVES } from 'igniteui-angular';
+// import { IGX_CIRCULAR_PROGRESS_BAR_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: `
+    <igx-circular-bar
+        [value]="100"
+        [animate]="true"
+        class="custom-size"
+    ></igx-circular-bar>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_CIRCULAR_PROGRESS_BAR_DIRECTIVES]
+})
+export class HomeComponent {}
+```
+
+## Using the Angular Circular Progress Component
 
 To have a better understanding how everything works, let's create a simple example, like the one in the demo:
 
@@ -105,23 +142,26 @@ You can dynamically change the value of the progress by using external controls 
 Add the methods that increment and decrement the value:
 
 ```typescript
-public currentValue: number;
+@Component({...})
+export class HomeComponent {
+    public currentValue: number;
 
-public ngOnInit() {
-    this.currentValue = 0;
-}
-
-public incrementProgress() {
-    this.currentValue += 10;
-    if (this.currentValue > 100) {
-        this.currentValue = 100;
-    }
-}
-
-public decrementProgress() {
-    this.currentValue -= 10;
-    if (this.currentValue < 0) {
+    public ngOnInit() {
         this.currentValue = 0;
+    }
+
+    public incrementProgress() {
+        this.currentValue += 10;
+        if (this.currentValue > 100) {
+            this.currentValue = 100;
+        }
+    }
+
+    public decrementProgress() {
+        this.currentValue -= 10;
+        if (this.currentValue < 0) {
+            this.currentValue = 0;
+        }
     }
 }
 ```
