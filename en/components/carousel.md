@@ -80,7 +80,7 @@ import { IGX_CAROUSEL_DIRECTIVES } from 'igniteui-angular';
 export class HomeComponent {}
 ```
 
-## How To Use Angular Carousel
+## Using the Angular Carousel Component
 The Ignite UI for Angular Carousel component can be used as a full-screen element or situated inside another component. Also, the slides may feature any valid html content inside, including other Angular components.
 
 In this section we will go through the setup of the above defined **demo**.

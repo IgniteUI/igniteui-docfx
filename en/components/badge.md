@@ -63,7 +63,7 @@ import { IgxBadgeComponent } from 'igniteui-angular';
 export class HomeComponent {}
 ```
 
-## Usage
+## Using the Angular Badge Component
 Let's see how the demo sample is done. It's a simple success badge on an avatar. To build that, we need to import the `IgxAvatarModule`, along with the `IgxBadgeModule`:
 
 ```typescript

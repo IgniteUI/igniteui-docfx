@@ -67,7 +67,7 @@ import { IGX_BANNER_DIRECTIVES } from 'igniteui-angular';
 export class HomeComponent {}
 ```
 
-## Usage
+## Using the Angular Banner Component
 
 ### Show Banner
 

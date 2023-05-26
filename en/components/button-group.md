@@ -79,7 +79,7 @@ import { IGX_BUTTON_GROUP_DIRECTIVES, IgxIconComponent } from 'igniteui-angular'
 export class HomeComponent {}
 ```
 
-## Usage
+## Using for Angular Button Group Component
 
 ### Add Button Group
 

@@ -82,7 +82,7 @@ import { IGX_ACCORDION_DIRECTIVES } from 'igniteui-angular';
 export class HomeComponent {}
 ```
 
-## Usage
+## Using the Angular Accordion Component
 
 Each section in the [IgxAccordionComponent]({environment:angularApiUrl}/classes/igxaccordioncomponent.html) is defined using an [expansion panel]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html).
 Panels provide [disabled]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html#disabled), [collapsed]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html#collapsed) and [animationSettings]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html#animationSettings) properties, which give you the ability to configure the states of the panel as per your requirement. 

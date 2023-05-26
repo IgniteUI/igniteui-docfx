@@ -78,7 +78,7 @@ export class HomeComponent {}
 
 <div class="divider--half"></div>
 
-## Usage
+## Using the Angular Action Strip Component
 To initialize and position the Action Strip correctly, it needs to be inside a relatively positioned container:
 
 ```html

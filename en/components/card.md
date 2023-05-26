@@ -103,7 +103,7 @@ import { IGX_CARD_DIRECTIVES } from 'igniteui-angular';
 export class HomeComponent {}
 ```
 
-## Usage
+## Using the Angular Card Component
 Then to represent the demo card template we can add the following code.
 
 ```html

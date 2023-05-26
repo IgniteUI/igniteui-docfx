@@ -4,8 +4,8 @@ _description: Ignite UI for Angular Checkbox component is a selection control th
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Checkbox components, Angular Checkbox controls
 ---
 
-# Angular Checkbox Overview
-<p class="highlight">Angular Material Checkbox is an extension of the standard HTML5 input, providing similar functionality, only enhanced with things like animations and Material Design styling. It enables users to choose one or several predefined options, mostly in forms and surveys.
+# Angular Checkbox Component Overview
+<p class="highlight">Angular Checkbox is an extension of the standard HTML input type checkbox, providing similar functionality, only enhanced with things like animations and Material Design styling. It enables users to choose one or several predefined options, mostly in forms and surveys.
 
 The Ignite UI for Angular Checkbox component is a selection control that allows users to make a binary choice for a certain condition. It behaves similarly to the native browser checkbox. Some of the features it offers are styling options, themes, checked, unchecked, and indeterminate states, and others.</p>
 <div class="divider"></div>
@@ -20,10 +20,16 @@ See the checkbox in action in the following Angular Checkbox example below.
 
 <div class="divider--half"></div>
 
-## How To Use Angular Checkbox With Ignite UI
-At its core, the Angular Checkbox component allows for a choice between selected/unselected state. The default styling is done according to the selection controls specification in the Material Design guidelines.
+## Getting Started with Ignite UI for Angular Checkbox
+To get started with the Ignite UI for Angular Checkbox component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
 
-First you need to import the `IgxCheckboxModule` in the **app.module.ts** file:
+```cmd
+ng add igniteui-angular
+```
+
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+
+The next step is to import the `IgxCheckboxModule` in the **app.module.ts** file:
 
 ```typescript
 // app.module.ts
@@ -37,12 +43,40 @@ import { IgxCheckboxModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
+
+Now that you have the Ignite UI for Angular Carousel module imported, you can start using the `igx-checkbox` component.
+
+Alternatively, as of `16.0.0` you can import the `IgxCheckboxComponent` as a standalone dependency.
+
+```typescript
+// home.component.ts
+
+import { IgxCheckboxComponent } from 'igniteui-angular';
+// import { IgxCheckboxComponent } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: `
+    <igx-checkbox [checked]="true">
+        Simple checkbox
+    </igx-checkbox>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IgxCheckboxComponent]
+})
+export class HomeComponent {}
+```
+
+## Using the Angular Checkbox Component
 To make the checkbox in the demo, add the following code inside the component template:
+
 ```html
 <igx-checkbox [checked]="true">
     Simple checkbox
 </igx-checkbox>
 ```
+
 ### Checkbox properties
 Let's enhance the code above by binding the checkbox properties to some data. Say, we have an array of task objects, each having two properties: description and done. You can bind the checkbox component [`checked`]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html#checked) property to the underlying task object done property. Analogically, you can bind the [`value`]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html#value) property to description.
 Optionally, you can also bind the [`change`]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html#change) event and add some custom logic in the provided event handler method.

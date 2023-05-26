@@ -63,7 +63,7 @@ import { IgxAvatarComponent } from 'igniteui-angular';
 export class HomeComponent {}
 ```
 
-## Examples
+## Using the Angular Avatar Component
 
 The Ignite UI for Angular Avatar component comes in three shapes (square, rounded, and circle) and three size options (small, medium, and large). It can be used for displaying initials, images or icons.
 
