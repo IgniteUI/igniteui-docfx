@@ -88,7 +88,7 @@ After that, we should have the demo sample in your browser.
 >The **igx-circular-bar** emits [`onProgressChanged`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#onProgressChanged) event that outputs an object like this `{currentValue: 65, previousValue: 64}` on each step.
 
 > [!NOTE]
-> The default progress increments by **1% of the [`max`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#max) value** per update cycle, this happens if the [`step`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#step) value is not defined. To change the update rate, the [`step`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#step) value should be defined.```
+> The default progress increments by **1% of the [`max`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#max) value** per update cycle, this happens if the [`step`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#step) value is not defined. To change the update rate, the [`step`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#step) value should be defined.```
 
 
 ### Indeterminate Progress
