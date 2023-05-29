@@ -1,10 +1,10 @@
 ---
 title: Angular Combobox Component | Data binding combobox | Infragistics
 _description: The Ignite UI for Angular ComboBox provides a powerful input, combining features of the basic HTML input, select, filtering and custom drop-down lists. Try it for FREE
-_keywords: angular combobox, ignite ui for angular, infragistics
+_keywords: angular combobox, angular combo component, angular combobox component, Angular UI Components, ignite ui for angular, infragistics
 ---
 
-# Angular ComboBox Overview
+# Angular ComboBox Component Overview
 
 The Angular ComboBox component represents a drop-down list that provides editable functionalities, allowing users to choose an option from a predefined list. The Ignite UI for Angular ComboBox Component provides also filtering capabilities, selections of items, grouping and adding custom values to a dropdown list. It can be used as an alternative to the HTML select tag and has several out-of-the-box features such as data binding (local and remote), filtering, grouping, custom templates, custom values, and more.
 
@@ -24,17 +24,25 @@ In this Angular ComboBox example, you can see how users can filter items and per
 ## Angular ComboBox Features
 
 The combobox control exposes the following features:
-    - Data Binding - local data and [remote data](combo-remote.md)
-    - [Value Binding](combo-features.md#data-binding)
-    - [Filtering](combo-features.md#filtering)
-    - [Grouping](combo-features.md#grouping)
-    - [Custom Values](combo-features.md#custom-values)
-    - [Templates](combo-templates.md)
-    - Integration with [Template Driven Forms](input-group.md) and [Reactive Forms](angular-reactive-form-validation.md)
+ * Data Binding - local data and [remote data](combo-remote.md)
+ * [Value Binding](combo-features.md#data-binding)
+ * [Filtering](combo-features.md#filtering)
+ * [Grouping](combo-features.md#grouping)
+ * [Custom Values](combo-features.md#custom-values)
+ * [Templates](combo-templates.md)
+ * Integration with [Template Driven Forms](input-group.md) and [Reactive Forms](angular-reactive-form-validation.md)
 
-## Usage
+## Getting Started with Ignite UI for Angular ComboBox
 
-To get started with the ComboBox component, first you need to import the `IgxComboModule` in your **app.module.ts** file:
+To get started with the Ignite UI for Angular ComboBox component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+
+```cmd
+ng add igniteui-angular
+```
+
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+
+The next step is to import the `IgxComboModule` in your **app.module.ts** file.
 
 ```typescript
 import { IgxComboModule } from 'igniteui-angular';
@@ -50,9 +58,39 @@ import { IgxComboModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Then, in the template, you should bind the [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) with some data.
+Now that you have the Ignite UI for Angular Combo module imported, you can start using the `igx-combo` component.
+
+Alternatively, as of `16.0.0` you can import the `IgxComboComponent` as a standalone dependency, or use the [`IGX_COMBO_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/combo/public_api.ts) token to import the component and all of its supporting components and directives.
 
 ```typescript
+// home.component.ts
+
+import { IGX_COMBO_DIRECTIVES } from 'igniteui-angular';
+// import { IGX_COMBO_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: '<igx-combo></igx-combo>',
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_COMBO_DIRECTIVES]
+    /* or imports: [IgxComboComponent] */
+})
+export class HomeComponent {}
+```
+
+## Using the Angular ComboBox Component
+
+After the initial setup, you should bind the [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) with some data.
+
+```typescript
+@Component({
+    selector: 'app-combo-demo',
+    template: '<igx-combo [data]="cities"></igx-combo>',
+    styleUrls: ['combo-demo.component.scss'],
+    standalone: true,
+    imports: [IGX_COMBO_DIRECTIVES]
+})
 export class ComboDemo implements OnInit {
     public cities: { name: string, id: string }[] = [];
 
@@ -62,11 +100,7 @@ export class ComboDemo implements OnInit {
 }
 ```
 
-```html
-<igx-combo [data]="cities"></igx-combo>
-```
-
-Our combobox is now bound to the array of cities.
+Our combobox is now bound to the array of cities, but we still haven't told the component which property to use for the items' text and which to use for the value. Let's do that now.
 
 ### Data value and display properties
 
@@ -82,7 +116,7 @@ In our case, we want the combobox to display the `name` of each city and the com
 ```
 
 > [!Note]
-> When the data source is comprised of a simple type (e.g. `string[]`, `number[]`), **do not** specify a `valueKey` and `displayKey`.
+> When the data source is an array of primitives (e.g. `string[]`, `number[]`), **do not** specify a `valueKey` and `displayKey`. Primitive values will be used for both value and text.
 
 ### Two-Way Binding
 
