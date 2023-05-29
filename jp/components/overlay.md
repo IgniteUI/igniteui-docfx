@@ -45,7 +45,7 @@ export class MyOverlayComponent {
 
 オーバーレイ サービスでオーバーレイ DOM にアタッチすると `HTMLNode` または Angular コンポーネントを動的に表示できます。
 
-Overlay サービスへの参照を追加した後、コンテンツを動的に表示/非表示できます。たとえば、Angular コンポーネントは `attach` メソッドで渡せます。これは一意の ID を生成し、`show` メソッドに渡してコンポーネントを表示します。
+Overlay サービスへの参照を追加した後、コンテンツを動的に表示/非表示できます。たとえば、Angular コンポーネントは `attach` メソッドで渡せます。これは一意の ID を生成し、`show` メソッドに渡してコンポーネントを表示します。When displaying an Angular Component a second mandatory parameter `ViewContainerRef` should be passed in the `attach` method.
 
 ```typescript
 
@@ -54,13 +54,15 @@ import { MyDynamicComponent } from '../my-dynamic-component/my-dynamic-component
 
 export class MyOverlayComponent {
     private _overlayId = ''; // The unique identifier assigned to the component by the Overlay service
-    ... 
-    // a reference to the OverlayService is defined via @Inject in the constructor
-    // under this.overlayService
+
+    constructor(
+        @Inject(IgxOverlayService) private overlayService: IgxOverlayService,
+        private viewContainerRef: ViewContainerRef
+    ) {}
 
     public showInOverlay() {
         if (!this._overlayId) {
-            this._overlayId = this.overlayService.attach(MyDynamicComponent);
+            this._overlayId = this.overlayService.attach(MyDynamicComponent, this.viewContainerRef);
         }
         this.overlayService.show(this._overlayId);
     }
@@ -108,10 +110,10 @@ export class MyOverlayComponent {
 
 Overlay サービスの [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) メソッドには 2 つのオーバーロードがあります。
   - `attach(element, settings?)`
-  - `attach(component, settings?, moduleRef?)`
+  - `attach(component, viewContainerRef, settings?)`
 
 オーバーロードの最初のパラメーターは必須でオーバーレイに表示されるコンテンツを表します。以下は、コンテンツを渡す場合の例です。
-  - コンポーネント定義 - コンポーネントを最初の引数として渡す場合、オーバーレイ サービスがそのコンポーネントの新しいインスタンスを作成し、その `ElementRef` を動的に `オーバーレイ` DOM にアタッチします。`moduleRef` を指定した場合、サービスは `ComponentRef` を作成する際にルートのものではなくモジュールの `ComponentFactoryResolver` と `Injector` を使用します。
+  - コンポーネント定義 - コンポーネントを最初の引数として渡す場合、オーバーレイ サービスがそのコンポーネントの新しいインスタンスを作成し、その `ElementRef` を動的に `オーバーレイ` DOM にアタッチします。This method also accepts a second mandatory parameter `ViewContainerRef` which is a reference to the container where the created component's host view will be inserted.
   - `ElementRef` から既存の DOM 要素 (上記のサンプルを参照) - ページで既に描画されたビューはオーバーレイ サービスで渡して、オーバーレイ DOM で描画できます。
 
 どちらの場合も、[`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) メソッドは次のようになります:
@@ -156,7 +158,7 @@ export class MyOverlayComponent {
 
     public showInOverlay() {
         if (!this._overlayId) {
-            this._overlayId = this.overlayService.attach(MyDynamicComponent, {
+            this._overlayId = this.overlayService.attach(MyDynamicComponent, this.viewContainerRef, {
                 target: this.myAnchorButton.nativeElement,
                 positionStrategy: new ConnectedPositioningStrategy()
             });
@@ -217,6 +219,7 @@ const connectedOverlaySettings = IgxOverlayService.createRelativeOverlaySettings
 // add an import for the definion of ConnectedPositioningStategy class
 import { ConnectedPositioningStrategy } from 'igniteui-angular';
 // import { ConnectedPositioningStrategy } from '@infragistics/igniteui-angular'; for licensed package
+
 ...
 export class MyOverlayComponent implements OnDestroy {
     private _overlayId = ''; // The unique identifier assigned to the component by the Overlay service
@@ -229,7 +232,7 @@ export class MyOverlayComponent implements OnDestroy {
         if (!this._overlayShown) { // If the element is not visible, show it
             //  generate ID
             if (!this._overlayId) {
-                this._overlayId = this.overlayService.attach(MyDynamicComponent, {
+                this._overlayId = this.overlayService.attach(MyDynamicComponent, this.viewContainerRef, {
                     target: this.myAnchorButton.nativeElement,
                     positionStrategy: new ConnectedPositioningStrategy({
                         closeOnOutsideClick: false, // overlay will not close on outside clicks
