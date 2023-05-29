@@ -32,8 +32,8 @@ Ignite UI for Angular @@igComponent は、リモート仮想化、リモート �
 ## Angular @@igComponent リモート データ操作の例
 
 
-<code-view style="height:500px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:500px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-remote-filtering" alt="Angular @@igComponent リモート データ操作の例">
 </code-view>
 
@@ -42,8 +42,8 @@ Ignite UI for Angular @@igComponent は、リモート仮想化、リモート �
 ## Angular @@igComponent リモート データ操作の例
 
 
-<code-view style="height:550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:550px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-remote-filtering" alt="Angular @@igComponent リモート データ操作の例">
 </code-view>
 
@@ -61,7 +61,7 @@ Ignite UI for Angular @@igComponent は、リモート仮想化、リモート �
 
 [@@igxName]({environment:angularApiUrl}/classes/@@igTypeDoc.html) は、データ チャンクがリモート サービスから要求されるシナリオをサポートし、内部で使用される [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html) ディレクティブで実装された動作を公開します。
 
-この機能を使用するには、[`dataPreLoad`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#datapreload) 出力にサブスクライブし、取得した引数に基づいて適切な要求を行い、パブリック [@@igxName]({environment:angularApiUrl}/classes/@@igTypeDoc.html) プロパティ [`totalItemCount`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalitemcount) とサービスの各情報を設定します。
+この機能を使用するには、[`dataPreLoad`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#dataPreLoad) 出力にサブスクライブし、取得した引数に基づいて適切な要求を行い、パブリック [@@igxName]({environment:angularApiUrl}/classes/@@igTypeDoc.html) プロパティ [`totalItemCount`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalItemCount) とサービスの各情報を設定します。
 
 ```html
 <igx-grid #grid [data]="remoteData | async" [autoGenerate]="false"
@@ -96,16 +96,16 @@ public processData(reset) {
 }
 ```
 
-データを要求時、[`startIndex`]({environment:angularApiUrl}/interfaces/iforofstate.html#startindex) と [`chunkSize`]({environment:angularApiUrl}/interfaces/iforofstate.html#chunksize) プロパティを提供する [`IForOfState`]({environment:angularApiUrl}/interfaces/iforofstate.html) インターフェイスを使用する必要があります。
+データを要求時、[`startIndex`]({environment:angularApiUrl}/interfaces/iforofstate.html#startIndex) と [`chunkSize`]({environment:angularApiUrl}/interfaces/iforofstate.html#chunkSize) プロパティを提供する [`IForOfState`]({environment:angularApiUrl}/interfaces/iforofstate.html) インターフェイスを使用する必要があります。
 
 >[!NOTE]
->最初の [`chunkSize`]({environment:angularApiUrl}/interfaces/iforofstate.html#chunksize) は常に 0 で、特定のアプリケーション シナリオに基づいて設定する必要があります。
+>最初の [`chunkSize`]({environment:angularApiUrl}/interfaces/iforofstate.html#chunkSize) は常に 0 で、特定のアプリケーション シナリオに基づいて設定する必要があります。
 
 ### リモート仮想化のデモ
 
 
-<code-view style="height:550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:550px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-sample-4" alt="Angular @@igComponent リモート データ操作の例">
 </code-view>
 
@@ -163,15 +163,15 @@ public handlePreLoad() {
 
 ### 無限スクロールのデモ
 
-<code-view style="height:510px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:510px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-sample-5" >
 </code-view>
 
 
 ## リモート ソート/フィルタリング
 
-リモート ソートとフィルタリングには、取得した引数に基づいて適切な要求を実行するために [`dataPreLoad`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#datapreload)、[`sortingExpressionsChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sortingexpressionschange) および [`filteringExpressionsTreeChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringexpressionstreechange) 出力にサブスクライブし、サービスから送信される相対する情報とパブリック [@@igxName]({environment:angularApiUrl}/classes/@@igTypeDoc.html) の [`totalItemCount`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalitemcount) プロパティを設定する必要があります。
+リモート ソートとフィルタリングには、取得した引数に基づいて適切な要求を実行するために [`dataPreLoad`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#dataPreLoad)、[`sortingExpressionsChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sortingExpressionsChange) および [`filteringExpressionsTreeChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringExpressionsTreeChange) 出力にサブスクライブし、サービスから送信される相対する情報とパブリック [@@igxName]({environment:angularApiUrl}/classes/@@igTypeDoc.html) の [`totalItemCount`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#totalItemCount) プロパティを設定する必要があります。
 
 また、**rxjs** `debounceTime` 関数を使用します。この関数は、特定の期間の経過後、別のソースが出力されない場合にのみ、Observable のソースから値を出力します。この方法では、ユーザーが中断することなく指定された時間が経過した場合にのみ、リモート操作がトリガーされます。
 
@@ -203,10 +203,10 @@ public ngAfterViewInit() {
 }
 ```
 
-リモート ソートとフィルタリングが提供される場合、グリッドの組み込みのソートとフィルタリングは必要ありません。グリッドの [`sortStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sortstrategy) および [`filterStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filterstrategy) 入力をそれぞれのインスタンスの `NoopSortingStrategy` および `NoopFilteringStrategy` に設定して、無効にできます。
+リモート ソートとフィルタリングが提供される場合、グリッドの組み込みのソートとフィルタリングは必要ありません。グリッドの [`sortStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sortStrategy) および [`filterStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filterStrategy) 入力をそれぞれのインスタンスの `NoopSortingStrategy` および `NoopFilteringStrategy` に設定して、無効にできます。
 
 ```html
-<igx-grid #grid [data]="remoteData | async" [autoGenerate]="false"
+<igx-grid #grid [data]="remoteData | async" [height]="'500px'" [width]="'100%'" [autoGenerate]='false'
         [filterStrategy]="noopFilterStrategy"
         [sortStrategy]="noopSortStrategy"
         [allowFiltering]="true">
@@ -224,12 +224,12 @@ public noopSortStrategy = NoopSortingStrategy.instance();
 
 ### リモート ソート/フィルタリングのデモ
 
-このトピックのはじめにあるコードの結果は、[デモ](#デモ)で確認できます。
+このトピックのはじめにあるコードの結果は、[デモ](#angular-grid-リモート-データ操作の例)で確認できます。
 }
 @@if (igxName === 'IgxTreeGrid') {
 ### リモート フィルタリング
 
-リモート フィルタリングを提供するには、受け取った引数に基づいて適切な要求を行うように [`filteringExpressionsTreeChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringexpressionstreechange) 出力にサブスクライブする必要があります。[`primaryKey`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primarykey) と [`foreignKey`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#foreignkey) を提供して、ツリー グリッドのデータ ソースとしてフラット コレクションを使用します。
+リモート フィルタリングを提供するには、受け取った引数に基づいて適切な要求を行うように [`filteringExpressionsTreeChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringExpressionsTreeChange) 出力にサブスクライブする必要があります。[`primaryKey`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primaryKey) と [`foreignKey`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#foreignKey) を提供して、ツリー グリッドのデータ ソースとしてフラット コレクションを使用します。
 
 また、**rxjs** `debounceTime` 関数を使用します。この関数は、特定の期間の経過後、別のソースが出力されない場合にのみ、Observable のソースから値を出力します。この方法では、ユーザーが中断することなく指定された時間が経過した場合にのみ、リモート操作がトリガーされます。
 
@@ -247,7 +247,7 @@ public ngAfterViewInit() {
 }
 ```
 
-リモート フィルタリングが提供される場合、ツリー グリッドの組み込みのフィルタリングは必要ありません。ツリー グリッドの [`filterStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filterstrategy) 入力を `NoopFilteringStrategy` インスタンスに設定して、無効にできます。
+リモート フィルタリングが提供される場合、ツリー グリッドの組み込みのフィルタリングは必要ありません。ツリー グリッドの [`filterStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filterStrategy) 入力を `NoopFilteringStrategy` インスタンスに設定して、無効にできます。
 
 ```html
 <!-- tree-grid-remote-filtering-sample.html -->
@@ -296,7 +296,7 @@ public processData() {
 ### 一意の列値ストラテジ
 }
 
-Excel スタイル フィルタリング ダイアログ内のリスト項目は、それぞれの列の一意の値を表します。@@igComponent は、デフォルトでデータソースに基づいてこれらの値を生成します。リモート フィルタリングの場合、グリッドのデータにはサーバーからのすべてのデータが含まれていません。これらの一意の値を手動で提供し、オンデマンドで読み込むために、@@igComponent の [`uniqueColumnValuesStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#uniquecolumnvaluesstrategy) 入力を利用できます。この入力は、実際には 3 つの引数を提供するメソッドです。
+Excel スタイル フィルタリング ダイアログ内のリスト項目は、それぞれの列の一意の値を表します。@@igComponent は、デフォルトでデータソースに基づいてこれらの値を生成します。リモート フィルタリングの場合、グリッドのデータにはサーバーからのすべてのデータが含まれていません。これらの一意の値を手動で提供し、オンデマンドで読み込むために、@@igComponent の [`uniqueColumnValuesStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#uniqueColumnValuesStrategy) 入力を利用できます。この入力は、実際には 3 つの引数を提供するメソッドです。
 - **column**  - フィルタリング式ツリー。各列に基づいて削減されます。
 - **filteringExpressionsTree** - フィルタリング式ツリー。各列に基づいて削減されます。
 - **done** - サーバーから取得されたときに、新しく生成された列値で呼び出されるコールバック。
@@ -304,7 +304,7 @@ Excel スタイル フィルタリング ダイアログ内のリスト項目は
 開発者は、**列**と **filteringExpressionsTree** 引数によって提供される情報に基づいて、必要な一意の列値を手動で生成し、**done** コールバックを呼び出すことができます。
 
 > [!NOTE]
-> [`uniqueColumnValuesStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#uniquecolumnvaluesstrategy) 入力が提供される場合、Excel スタイル フィルタリングでプロセスを生成するデフォルトの一意の値は使用されません。
+> [`uniqueColumnValuesStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#uniqueColumnValuesStrategy) 入力が提供される場合、Excel スタイル フィルタリングでプロセスを生成するデフォルトの一意の値は使用されません。
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -314,7 +314,7 @@ Excel スタイル フィルタリング ダイアログ内のリスト項目は
 ```
 
 ```typescript
-public columnValuesStrategy = (column: IgxColumnComponent,
+public columnValuesStrategy = (column: ColumnType,
                                columnExprTree: IFilteringExpressionsTree,
                                done: (uniqueValues: any[]) => void) => {
     // Get specific column data.
@@ -325,8 +325,8 @@ public columnValuesStrategy = (column: IgxColumnComponent,
 ### 一意の列値ストラテジのデモ
 
 
-<code-view style="height:800px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:800px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-excel-style-filtering-load-on-demand" >
 </code-view>
 
@@ -339,7 +339,7 @@ public columnValuesStrategy = (column: IgxColumnComponent,
 ```
 
 ```typescript
-public columnValuesStrategy = (column: IgxColumnComponent,
+public columnValuesStrategy = (column: ColumnType,
                                columnExprTree: IFilteringExpressionsTree,
                                done: (uniqueValues: any[]) => void) => {
     // Get specific column data.
@@ -350,8 +350,8 @@ public columnValuesStrategy = (column: IgxColumnComponent,
 ### 一意の列値ストラテジのデモ
 
 
-<code-view style="height:800px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:800px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-excel-style-filtering-load-on-demand" >
 </code-view>
 
@@ -369,7 +369,7 @@ public columnValuesStrategy = (column: IgxColumnComponent,
 ```
 
 ```typescript
-public singersColumnValuesStrategy = (column: IgxColumnComponent,
+public singersColumnValuesStrategy = (column: ColumnType,
                                       columnExprTree: IFilteringExpressionsTree,
                                       done: (uniqueValues: any[]) => void) => {
 // Get specific column data for the singers.
@@ -377,7 +377,7 @@ this.remoteValuesService.getColumnData(
     null, 'Singers', column, columnExprTree, uniqueValues => done(uniqueValues));
 }
 
-public albumsColumnValuesStrategy = (column: IgxColumnComponent,
+public albumsColumnValuesStrategy = (column: ColumnType,
                                      columnExprTree: IFilteringExpressionsTree,
                                      done: (uniqueValues: any[]) => void) => {
 // Get specific column data for the albums of a specific singer.
@@ -390,8 +390,8 @@ this.remoteValuesService.getColumnData(
 ### 一意の列値ストラテジのデモ
 
 
-<code-view style="height:800px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:800px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-style-filtering-load-on-demand" >
 </code-view>
 
@@ -522,7 +522,7 @@ public maxPerPage = Number.MAX_SAFE_INTEGER;
 <igx-grid #grid1 [data]="data | async" [isLoading]="isLoading" [pagingMode]="mode">
     <igx-column field="ID"></igx-column>
     ...
-    <igx-paginator [(page)]="page" [(perPage)]="perPage"  [totalRecords]="totalCount" 
+    <igx-paginator [(page)]="page" [(perPage)]="perPage"  [totalRecords]="totalCount"
         (pagingDone)="paginate($event.current)">
     </igx-paginator>
 </igx-grid>
@@ -533,7 +533,7 @@ public maxPerPage = Number.MAX_SAFE_INTEGER;
 <igx-tree-grid #treeGrid [data]="data | async" childDataKey="Content" [pagingMode]="mode">
     <igx-column field="Name"></igx-column>
     ...
-    <igx-paginator [(page)]="page" [(perPage)]="perPage" [totalRecords]="totalCount" 
+    <igx-paginator [(page)]="page" [(perPage)]="perPage" [totalRecords]="totalCount"
         (pagingDone)="paginate($event.current)">
     </igx-paginator>
 </igx-tree-grid>
@@ -544,7 +544,7 @@ public maxPerPage = Number.MAX_SAFE_INTEGER;
 <igx-hierarchical-grid #hierarchicalGrid [primaryKey]="'CustomerID'" [pagingMode]="mode">
     <igx-column field="CustomerID"></igx-column>
     ...
-    <igx-paginator [(page)]="page" [(perPage)]="perPage" [totalRecords]="totalCount" 
+    <igx-paginator [(page)]="page" [(perPage)]="perPage" [totalRecords]="totalCount"
         (pagingDone)="paginate($event.current)" (perPageChange)="getFirstPage()">
     </igx-paginator>
 </igx-hierarchical-grid>
@@ -590,16 +590,16 @@ public paginate(page: number) {
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:620px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:620px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/remote-paging-default-template" >
 </code-view>
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:560px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:560px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-remote-paging-default-template" >
 </code-view>
 
@@ -607,8 +607,8 @@ public paginate(page: number) {
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:580px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:580px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/remote-paging-default-template" >
 </code-view>
 
@@ -623,7 +623,7 @@ public paginate(page: number) {
 ```html
 <igx-paginator #paginator
     [totalRecords]="totalCount"
-    [(page)]="page" 
+    [(page)]="page"
     [(perPage)]="perPage"
     [selectOptions]="selectOptions"
     [displayDensity]="grid1.displayDensity"
@@ -644,7 +644,7 @@ private _perPage = 15;
 private _dataLengthSubscriber: { unsubscribe: () => void; } | undefined;
 
 constructor(private remoteService: RemotePagingService) { }
-...
+
 public ngAfterViewInit() {
     this.grid1.isLoading = true;
     this.remoteService.getData(0, this.perPage);
@@ -684,7 +684,7 @@ public perPageChange(perPage: number) {
 ```
 ```typescript
 @ViewChild('hierarchicalGrid', { static: true }) public hierarchicalGrid: IgxHierarchicalGridComponent;
-...
+
 public ngOnInit(): void {
     this._dataLengthSubscriber = this.remoteService.getDataLength(
         { parentID: null, rootLevel: true, key: 'Customers' }).subscribe((length) => {
@@ -712,7 +712,7 @@ public ngAfterViewInit() {
 ```html
 <igx-paginator #paginator
     [totalRecords]="totalCount"
-    [(perPage)]="perPage" 
+    [(perPage)]="perPage"
     [selectOptions]="selectOptions"
     [displayDensity]="treeGrid.displayDensity"
     (pageChange)="paginate($event)">
@@ -736,7 +736,7 @@ public paginate(page: number) {
 }
 
 >[!NOTE]
-> リモート ページングを適切に構成するには、`GridPagingMode.Remote` を設定する必要があります。 
+> リモート ページングを適切に構成するには、`GridPagingMode.Remote` を設定する必要があります。
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -747,7 +747,7 @@ public mode = GridPagingMode.Remote;
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid #hierarchicalGrid [data]="data | async" [primaryKey]="'CustomerID'" 
+<igx-hierarchical-grid #hierarchicalGrid [data]="data | async" [primaryKey]="'CustomerID'"
     [height]="'550px'" [width]="'100%'" [pagingMode]="mode"></igx-hierarchical-grid>
 ...
 public mode = GridPagingMode.Remote;
@@ -755,7 +755,7 @@ public mode = GridPagingMode.Remote;
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```html
-<igx-tree-grid #treeGrid [data]="data | async" childDataKey="Content" 
+<igx-tree-grid #treeGrid [data]="data | async" childDataKey="Content"
         expansionDepth="0" width="100%" height="540px" [pagingMode]="mode"></igx-tree-grid>
 ...
 public mode = GridPagingMode.Remote;
@@ -776,16 +776,16 @@ public mode = GridPagingMode.Remote;
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:620px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:620px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-remote-paging-sample" >
 </code-view>
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:560px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:560px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-remote-paging" >
 </code-view>
 
@@ -793,8 +793,8 @@ public mode = GridPagingMode.Remote;
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:580px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:580px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-remote-paging" >
 </code-view>
 
@@ -807,8 +807,8 @@ public mode = GridPagingMode.Remote;
 独自のページング動作を定義するために、ページング テンプレートを使用してカスタム ロジックを追加できます。上記を実証するために、リモート ページングの例を拡張する方法を説明します。
 
 
-<code-view style="height:620px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:620px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-custom-remote-paging-sample" >
 </code-view>
 
@@ -909,8 +909,8 @@ public paginate(page: number) {
 
 #### 一括編集のリモート ページングのデモ
 
-<code-view style="height:620px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:620px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/remote-paging-batch-editing" >
 </code-view>
 
@@ -919,10 +919,11 @@ public paginate(page: number) {
 ## 既知の問題と制限
 
 - グリッドに `primaryKey` が設定されておらず、リモート データ シナリオが有効になっている場合 (ページング、ソート、フィルタリング、スクロール時に、グリッドに表示されるデータを取得するためのリモート サーバーへのリクエストがトリガーされる場合)、データ要求が完了すると、行は次の状態を失います:
-    * Row Selection
-    * Row Expand/collapse
-    * Row Editing
-    * Row Pinning
+    * 行の選択
+    * 行の展開/縮小
+    * 行の編集
+    * 行のピン固定
+- リモート データ シナリオでは、グリッドに `primaryKey` が設定されている場合、[`rowSelectionChanging.oldSelection`]({environment:angularApiUrl}/interfaces/IRowSelectionEventArgs.html#oldSelection) イベント引数には、現在データ ビューに含まれていない行の完全な行データ オブジェクトが含まれません。この場合、`rowSelectionChanging.oldSelection` オブジェクトには、`primaryKey` フィールドである 1 つのプロパティのみが含まれます。現在データ ビューにある残りの行については、`rowSelectionChanging.oldSelection` に行データ全体が含まれます。
 
 ## API リファレンス
 <div class="divider--half"></div>

@@ -9,12 +9,12 @@ _language: kr
 
 It is important to know all the [legal terms and conditions](https://www.infragistics.com/legal/license/igultimate-la) regarding the Ignite UI for Angular that you purchase and use.
 
-> [!NOTE]
+> \[!Note]
 > We have updated our license terms and subscription model in second quarter of 2020.
 
-If you are building a **commercial product** or your license [has expired](http://www.infragistics.com/renewal), you will need to [acquire a commercial license](https://www.infragistics.com/how-to-buy/product-pricing). This will enable you to use our private npm feed hosted on <https://packages.infragistics.com/npm/js-licensed/> for development. There you will find the latest versions of the Ignite UI for Angular packages. If you have a valid commercial license, you can use this private feed and you will have access to the full version of Ignite UI for Angular.
+If you are building a **commercial product** or your license [has expired](http://www.infragistics.com/renewal), you will need to [acquire a commercial license](https://www.infragistics.com/how-to-buy/product-pricing). This will enable you to use our private npm feed hosted on https://packages.infragistics.com/npm/js-licensed/ for development. There you will find the latest versions of the Ignite UI for Angular packages. If you have a valid commercial license, you can use this private feed and you will have access to the full version of Ignite UI for Angular.
 
-> [!NOTE]
+> \[!Note]
 > Currently only the **igniteui-dockmanager** package is available in our private npm feed, but in the future we will add the other Ignite UI for Angular packages as well.
 
 If you are building a **non-commercial** product, [contact us](https://www.infragistics.com/about-us/contact-us) and we will provide you with the appropriate license.
@@ -25,7 +25,7 @@ Npm is the most popular package manager and is also the default one for the runt
 
 Infragistics Ignite UI for Angular is available as npm packages and you can add them as dependencies to your project in a [few easy steps](./general-getting-started.md). Choosing this approach will not require configuring npm. By installing this package you will start using the **Ignite UI for Angular Trial version** of the product.
 
-> [!NOTE]
+> \[!Note]
 > Currently only the [igniteui-dockmanager](https://www.npmjs.com/package/igniteui-dockmanager) npm package has a trial watermark, but in the future we will add it to the other Ignite UI for Angular packages as well.
 
 ## How to setup your environment to use the private npm feed
@@ -34,21 +34,21 @@ Infragistics Ignite UI for Angular is available as npm packages and you can add 
 
 This will allow you to seamlessly use a mix of packages from the public npm registry and the Infragistics private registry. You will be asked to provide the username and the password that you use for logging into your Infragistics account. You should also provide the email that is registered to your Infragistics profile.
 
-> [!NOTE]
->  **npm** is disallowing the use of the **"@"** symbol inside your username as it is considered as being "not safe for the net". Because your username is actually the email that you use for your Infragistics account it always contains the symbol **"@"**. That's why you must escape this limitation by replacing the **"@"** symbol with **"!!"** (two exclamation marks). For example, if your username is **"username@example.com"** when asked about your username you should provide the following input: **"username!!example.com"**.
+> \[!Note]
+> **npm** is disallowing the use of the **"@"** symbol inside your username as it is considered as being "not safe for the net". Because your username is actually the email that you use for your Infragistics account it always contains the symbol **"@"**. That's why you must escape this limitation by replacing the **"@"** symbol with **"!!"** (two exclamation marks). For example, if your username is **"username@example.com"** when asked about your username you should provide the following input: **"username!!example.com"**.
 
 ### Now, to log in to our private feed using npm, run the adduser command and specify a user account and password:
 
-<pre style="background:#141414;color:white;display:inline-block;padding:16x;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
+```cmd
 npm adduser --registry=https://packages.infragistics.com/npm/js-licensed/ --scope=@infragistics --always-auth
-</pre>
+```
 
 ### After this is done, you will be logged in and you will be able to install the latest versions of the Ignite UI packages into your project:
 
-<pre style="background:#141414;color:white;display:inline-block;padding:16x;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
+```cmd
 npm uninstall igniteui-dockmanager
 npm install @infragistics/igniteui-dockmanager
-</pre>
+```
 
 Have in mind that we have set the Ignite UI for Angular package to be scoped, meaning that no changing the registries is needed if you want to install packages from our private feed and from npmjs.org simultaneously.
 
@@ -56,7 +56,7 @@ Have in mind that we have set the Ignite UI for Angular package to be scoped, me
 
 If you are upgrading from trial to licensed package:
 
--   Add a **paths** mapping in the project **tsconfig.json**.
+*   Add a **paths** mapping in the project **tsconfig.json**.
 
 ```json
 {
@@ -73,7 +73,7 @@ If you are upgrading from trial to licensed package:
 }
 ```
 
--   Change the themes imports like this:
+*   Change the themes imports like this:
 
 ```ts
 @import '~igniteui-dockmanager/dist/collection/styles/igc.themes';
@@ -91,17 +91,18 @@ You can also authenticate to our private npm feed using an access token, which y
 
 The following information is on how to setup authentication to our private npm registry using an access token in local configuration, Azure Pipelines build procedures and Travis CI build process:
 
--   Generate a token from <https://account.infragistics.com/access-tokens>
+*   Generate a token from https://account.infragistics.com/access-tokens
 
 <img class="responsive-img" style="margin-bottom:10px; -webkit-box-shadow: 4px 4px 4px 4px #ccc; -moz-box-shadow: 4px 4px 4px 4px #ccc; box-shadow: 4px 4px 4px 4px #ccc; max-width: 600px"
-  src="../images/general/generate-token.jpg"
-  data-src="../images/general/generate-token.jpg"
-  alt="New Token Generated"
-  title="Generate new token" />
+src="../images/general/generate-token.jpg"
+data-src="../images/general/generate-token.jpg"
+alt="New Token Generated"
+title="Generate new token" />
 
-> Note: each token is with Base64 encoding.
+> \[!Note]
+> Each token is with Base64 encoding.
 
--   Add the following into your [.npmrc](https://docs.npmjs.com/configuring-npm/npmrc.html) file
+*   Add the following into your [.npmrc](https://docs.npmjs.com/configuring-npm/npmrc.html) file
 
 ```json
 @infragistics:registry=https://packages.infragistics.com/npm/js-licensed/
@@ -114,35 +115,29 @@ The following information is on how to setup authentication to our private npm r
 
 Update the azure-pipelines.yml with the following steps:
 
-<pre style="background:#141414;color:white;display:inline-block;padding:16x;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
+```cmd
 npm config set @infragistics:registry $(npmRegistry)
 npm config set always-auth true --scope:@infragistics
 npm config set _auth=$(token) --scope:@infragistics
-</pre>
-
-<img class="responsive-img" style="margin-bottom:10px; -webkit-box-shadow: 4px 4px 4px 4px #ccc; -moz-box-shadow: 4px 4px 4px 4px #ccc; box-shadow: 4px 4px 4px 4px #ccc; max-width: 380px"
-  src="../images/general/azure-ci-pipelines-ci-yml-3.jpg"
-  data-src="../images/general/azure-ci-pipelines-ci-yml-3.jpg"
-  alt="Azure Pipelines CI yml update"
-  title="Azure Pipelines CI yml update" />
+```
 
 Add **npm registry** and **token** variables.
 
 <img class="responsive-img" style="margin-bottom:10px; -webkit-box-shadow: 4px 4px 4px 4px #ccc; -moz-box-shadow: 4px 4px 4px 4px #ccc; box-shadow: 4px 4px 4px 4px #ccc; max-width: 600px"
-  src="../images/general/azure-ci-new-variable-2.jpg"
-  data-src="../images/general/azure-ci-new-variable-2.jpg"
-  alt="Set npm Registry and token variables"
-  title="Set npm Registry and token variables" />
+src="../images/general/azure-ci-new-variable-2.jpg"
+data-src="../images/general/azure-ci-new-variable-2.jpg"
+alt="Set npm Registry and token variables"
+title="Set npm Registry and token variables" />
 
 <img class="responsive-img" style="margin-bottom:10px; -webkit-box-shadow: 4px 4px 4px 4px #ccc; -moz-box-shadow: 4px 4px 4px 4px #ccc; box-shadow: 4px 4px 4px 4px #ccc; max-width: 380px"
-  src="../images/general/azure-ci-add-token-variable-1.jpg"
-  data-src="../images/general/azure-ci-add-token-variable-1.jpg"
-  alt="npm Registry and token variables"
-  title="npm Registry and token variables" />
+src="../images/general/azure-ci-add-token-variable-1.jpg"
+data-src="../images/general/azure-ci-add-token-variable-1.jpg"
+alt="npm Registry and token variables"
+title="npm Registry and token variables" />
 
 ## Travis CI Configuration
 
-We will follow almost the same approach here, the only difference would be that the configuration will be set on [before\_install](https://docs.travis-ci.com/user/job-lifecycle/#the-job-lifecycle)
+We will follow almost the same approach here, the only difference would be that the configuration will be set on [before_install](https://docs.travis-ci.com/user/job-lifecycle/#the-job-lifecycle)
 
 ```json
 before_install:
@@ -153,5 +148,5 @@ before_install:
 
 The best way to define an environment variable depends on what type of information it will contain, so [you have two options](https://docs.travis-ci.com/user/environment-variables/):
 
--   encrypt it and add it [to your .travis.yml](https://docs.travis-ci.com/user/environment-variables/#defining-encrypted-variables-in-travisyml)
--   add it to your [Repository Settings](https://docs.travis-ci.com/user/environment-variables/#defining-variables-in-repository-settings)
+*   encrypt it and add it [to your .travis.yml](https://docs.travis-ci.com/user/environment-variables/#defining-encrypted-variables-in-travisyml)
+*   add it to your [Repository Settings](https://docs.travis-ci.com/user/environment-variables/#defining-variables-in-repository-settings)

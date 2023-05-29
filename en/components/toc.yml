@@ -22,7 +22,7 @@
   href: general/update-guide.md
   new: false
   updated: true
-- name: SSR Rendering
+- name: Server-side rendering (SSR)
   href: general/ssr-rendering.md
   new: false
 - name: Data Analysis
@@ -41,6 +41,12 @@
     - name: Build CRUD operations with IgxGrid
       href: general/how-to/how-to-perform-crud.md
       new: false
+    - name: Customize and Optimize Themes
+      href: general/how-to/how-to-customize-theme.md
+      new: true
+    - name: Use Standalone Components
+      href: general/how-to/how-to-use-standalone-components.md
+      preview: true
 - name: Angular Schematics & Ignite UI CLI
   href: general/cli-overview.md
   sortable: false
@@ -123,7 +129,7 @@
     - name: Remote Data Operations
       href: grid/remote-data-operations.md
       new: false
-    - name: Column Data types
+    - name: Column Data Types
       href: grid/column-types.md
       new: false
     - name: Editing
@@ -145,6 +151,9 @@
           new: false
         - name: Validation
           href: grid/validation.md
+          new: true
+        - name: Grid with Cascading combos
+          href: grid/cascading-combos.md
           new: true
     - name: Row Drag
       href: grid/row-drag.md
@@ -437,7 +446,7 @@
           href: hierarchicalgrid/validation.md
           new: true
     - name: Export to Excel
-      href: hierarchicalGrid/export-excel.md
+      href: hierarchicalgrid/export-excel.md
       new: false
       updated: true
     - name: Row Drag
@@ -531,20 +540,20 @@
       href: hierarchicalgrid/state-persistence.md
       new: true
 - name: Pivot Grid
-  href: pivotgrid/pivot-grid.md
+  href: pivotGrid/pivot-grid.md
   new: true
   items:
     - name: Export to Excel
-      href: pivotgrid/export-excel.md
+      href: pivotGrid/export-excel.md
       new: true
     - name: Pivot Grid Features
-      href: pivotgrid/pivot-grid-features.md
+      href: pivotGrid/pivot-grid-features.md
       new: true
     - name: Pivot Grid Remote Operations
-      href: pivotgrid/pivot-grid-custom.md
+      href: pivotGrid/pivot-grid-custom.md
       new: true
     - name: State Persistence
-      href: pivotgrid/state-persistence.md
+      href: pivotGrid/state-persistence.md
       new: true
 - name: Tree
   href: tree.md
@@ -924,6 +933,9 @@
     - name: Virtual Drop Down
       href: drop-down-virtual.md
       new: false
+    - name: Multi-select Hierarchical Drop Down
+      href: drop-down-hierarchical-selection.md
+      new: true
 - name: Select
   href: select.md
   new: false

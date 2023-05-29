@@ -71,7 +71,7 @@ The avatar will be our target and all we have to do is set the [`igxTooltipTarge
 <!--simpleTooltip.component.html-->
 
 <igx-avatar class="avatar" #target="tooltipTarget" igxTooltipTarget
-            src="assets/images/avatar/10.jpg" size="medium" [roundShape]="true">
+            src="assets/images/avatar/10.jpg" size="medium" shape="circle">
 </igx-avatar>
 ```
 
@@ -96,7 +96,7 @@ Now that we have both our target and tooltip defined, all that's left for us to 
 <!--simpleTooltip.component.html-->
 
 <igx-avatar class="avatar" #target="tooltipTarget" [igxTooltipTarget]="tooltipRef"
-            src="assets/images/avatar/10.jpg" size="medium" [roundShape]="true">
+            src="assets/images/avatar/10.jpg" size="medium" shape="circle">
 </igx-avatar>
 
 <div #tooltipRef="tooltip" igxTooltip>
@@ -107,10 +107,10 @@ Now that we have both our target and tooltip defined, all that's left for us to 
 If everything went well, you should see the sample shown in the [Tooltip Demo](#angular-tooltip-example) section.
 
 ### Show/Hide delay settings
-What if we want to control the amount of time that should pass before showing and hiding the tooltip? For this purpose we can use the [`showDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#showdelay) and the [`hideDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hidedelay) properties of the [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) directive. Both properties are of type **number** and take time in milliseconds.
+What if we want to control the amount of time that should pass before showing and hiding the tooltip? For this purpose we can use the [`showDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#showDelay) and the [`hideDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hideDelay) properties of the [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) directive. Both properties are of type **number** and take time in milliseconds.
 
 > [!NOTE]
-> The built-in UI interaction behavior of the [`IgxTooltipTargetDirective`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) and its respective API methods work by taking [`showDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#showdelay) and [`hideDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hidedelay) property values into account. Showing and hiding the tooltip through the API of the [`IgxTooltipDirective`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) does not take the [`showDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#showdelay) and [`hideDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hidedelay) property values into account. If necessary, such logic would have to be implemented manually according to the application's specifics.
+> The built-in UI interaction behavior of the [`IgxTooltipTargetDirective`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) and its respective API methods work by taking [`showDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#showDelay) and [`hideDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hideDelay) property values into account. Showing and hiding the tooltip through the API of the [`IgxTooltipDirective`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) does not take the [`showDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#showDelay) and [`hideDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hideDelay) property values into account. If necessary, such logic would have to be implemented manually according to the application's specifics.
 
 ## Rich tooltip
 
@@ -206,7 +206,7 @@ Now for the tooltip! For its content, we will create a container that will be po
         <div class="locationTooltip" #locationTooltip="tooltip" igxTooltip>
             <div class="locationTooltipContent">
                 <igx-avatar class="logo" src="assets/images/card/avatars/igLogo.png"
-                    size="medium" [roundShape]="false"></igx-avatar>
+                    size="medium" shape="square"></igx-avatar>
                 <div>
                     <div>Infragistics Inc. HQ</div>
                     <div>2 Commerce Dr, Cranbury, NJ 08512, USA</div>
@@ -322,6 +322,7 @@ So now our styled tooltip should look like this:
 
 
 <code-view style="height:200px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/interactions/tooltip-style" >
 </code-view>

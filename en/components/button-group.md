@@ -94,7 +94,7 @@ public alignment = ButtonGroupAlignment.vertical;
 <div class="divider--half"></div>
 
 ### Multiple selection
-Use the the [`multiSelection`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#multiselection) input property to enable the multiple selection in the button group.
+Use the the [`multiSelection`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#multiSelection) input property to enable the multiple selection in the button group.
 
 ```html
 <!-- sample.component.html -->
@@ -119,7 +119,7 @@ Use the the [`multiSelection`]({environment:angularApiUrl}/classes/igxbuttongrou
 
 
 ### Display Density
-The [`displayDensity`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#displaydensity) input property is used to control the display density of a button group. This will set the style for the buttons in the group to cosy, compact or comfortable (default value) accordingly.
+The [`displayDensity`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#displayDensity) input property is used to control the display density of a button group. This will set the style for the buttons in the group to cosy, compact or comfortable (default value) accordingly.
 
 > [!NOTE] 
 > The display density of a button within a button group is not changed if it is explicitly specified.
@@ -287,6 +287,7 @@ If the component is using the [`Emulated`](themes/sass/component-themes.md#view-
 
 
 <code-view style="height: 200px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-entries/button-group-style" >
 </code-view>

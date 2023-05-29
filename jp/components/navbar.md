@@ -6,7 +6,9 @@ _language: ja
 ---
 
 # Navbar
-<p class="highlight">Ignite UI for Angular [`IgxNavbarComponent`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html)、アプリケーション内の現在位置を示し、ブラウザーの [戻る] ボタンのように戻る機能を提供します。Navigation Bar の検索またはお気に入りなどのリンクによって、ユーザーはアプリケーションでナビゲーションをスムーズに実行できます。バーは、バーが含まれるコンテナー上に配置されます。</p>
+<p class="highlight">
+
+Ignite UI for Angular [`IgxNavbarComponent`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html)、アプリケーション内の現在位置を示し、ブラウザーの [戻る] ボタンのように戻る機能を提供します。Navigation Bar の検索またはお気に入りなどのリンクによって、ユーザーはアプリケーションでナビゲーションをスムーズに実行できます。バーは、バーが含まれるコンテナー上に配置されます。</p>
 
 
 ## Angular Navbar の例
@@ -60,7 +62,7 @@ export class AppModule {}
 ```
 
 > [!NOTE]
-> [`actionButtonIcon`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#actionbuttonicon) は、デザインで Material フォントセットを使用します。
+> [`actionButtonIcon`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#actionButtonIcon) は、デザインで Material フォントセットを使用します。
 
 ### アイコン ボタンの追加
 
@@ -114,7 +116,7 @@ export class AppModule {}
 
 <div class="divider--half"></div>
 
-### カスタム アクション の追加
+### カスタム動作の追加
 
 アプリのナビゲーションでナビゲーション バーの左端にあるデフォルト アイコンではなくカスタム テンプレートを使用したい場合、`igx-navbar-action` ディレクティブを使用して提供したコンテンツをレンダリングします。これには Font Awesome ホーム アイコンのボタンを使用します。
 
@@ -148,7 +150,7 @@ export class AppModule {}
 </igx-navbar>
 ```
 
-以下はカスタム アクション ボタン アイコンをした場合の navbar の外観です。
+以下はカスタム動作ボタン アイコンをした場合の navbar の外観です。
 
 
 <code-view style="height: 300px" 
@@ -160,7 +162,7 @@ export class AppModule {}
 
 ### ナビゲーション アイコを追加
 
-戻るためのアイコンが付いたナビゲーション バーを作成する場合は、次の手順を実行します。まず、`actionButtonIcon` プロパティを使用して、Material フォントセットから適切なアイコンを選択できます。次に、以前にアクセスしたページに戻るかどうかを確認し、その結果を [`isActionButtonVisible`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#isactionbuttonvisible) プロパティに渡します。最後の手順は、戻るためのメソッドを作成し、[`action`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#action) プロパティにフックすることです。 
+戻るためのアイコンが付いたナビゲーション バーを作成する場合は、次の手順を実行します。まず、`actionButtonIcon` プロパティを使用して、Material フォントセットから適切なアイコンを選択できます。次に、以前にアクセスしたページに戻るかどうかを確認し、その結果を [`isActionButtonVisible`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#isActionButtonVisible) プロパティに渡します。最後の手順は、戻るためのメソッドを作成し、[`action`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#action) プロパティにフックすることです。 
 
 ```html
 <!--navbar.component.html-->
@@ -364,6 +366,7 @@ $cutom-navbar-theme: navbar-theme(
 
 
 <code-view style="height: 150px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/menus/navbar-style" >
 </code-view>

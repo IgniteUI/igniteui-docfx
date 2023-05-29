@@ -35,9 +35,20 @@ The sample below demonstrates the four types of @@igComponent's **row selection*
 The sample below demonstrates the three types of @@igComponent's **row selection** behavior. Use the buttons below to enable each of the available selection modes. A brief description will be provided on each button interaction through a snackbar message box. Use the switch button to _hide_ or _show_ the row selector checkbox.
 }
 @@if (igxName === 'IgxGrid') {
+To get newly selected elements you can use **event.newSelection**:
 
-<code-view style="height:700px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+```ts
+public handleRowSelection(event: IRowSelectionEventArgs) {
+    this.selectedRowsCount = event.newSelection.length;
+    this.selectedRowIndex = event.newSelection[0];
+    this.snackbarRowCount.open();
+    this.snackbar.close();
+    this.logAnEvent(`=> 'rowSelectionChanging' with value: ` + JSON.stringify(event.newSelection));
+}
+```
+
+<code-view style="height:700px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-selection" alt="Angular Row Selection Example">
 </code-view>
 
@@ -45,8 +56,8 @@ The sample below demonstrates the three types of @@igComponent's **row selection
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:700px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:700px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-selection" alt="Angular Row Selection Example">
 </code-view>
 
@@ -54,8 +65,8 @@ The sample below demonstrates the three types of @@igComponent's **row selection
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:710px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:710px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-selection" alt="Angular Row Selection Example">
 </code-view>
 
@@ -170,6 +181,16 @@ To enable cascade row selection in the [`@@igSelector`]({environment:angularApiU
 In this mode a parent's selection state entirely depends on the selection state of its children. When a parent has some selected and some deselected children, its checkbox is in an indeterminate state.
 }
 
+```ts
+<!-- selectionExample.component.ts -->
+
+ public handleRowSelection(event: IRowSelectionEventArgs) {
+    // use event.newSelection to retrieve primary key/row data of latest selected row
+    this.selectedRowsCount = event.newSelection.length;
+    this.selectedRowIndex = event.newSelection[0];
+ }
+```
+
 **Notes**
 @@if (igxName !== 'IgxTreeGrid') {
 * In order to have proper row selection and cell selection, while @@igComponent has remote virtualization, a [`primaryKey`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primarykey) should be provided.
@@ -186,7 +207,7 @@ In this mode a parent's selection state entirely depends on the selection state 
 
 ### Select rows programmatically
 
-The code snippet below can be used to select one or multiple rows simultaneously (via [`primaryKey`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primarykey)); Additionally, the second parameter of this method is a boolean property through which you may choose whether the previous row selection will be cleared or not. The previous selection is preserved by default.
+The code snippet below can be used to select one or multiple rows simultaneously (via [`primaryKey`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primaryKey)); Additionally, the second parameter of this method is a boolean property through which you may choose whether the previous row selection will be cleared or not. The previous selection is preserved by default.
 
 @@if (igxName === 'IgxGrid' || igxName === 'IgxTreeGrid') {
 ```html
@@ -227,16 +248,20 @@ If you need to deselect rows programmatically, you can use the `deselectRows(row
 ```
 
 ### Row selection event
-When there is some change in the row selection **`rowSelectionChanging`** event is emitted. **`rowSelectionChanging`** exposes the following arguments:
-- `oldSelection`  - array of row IDs that contains the previous state of the row selection.
-- `newSelection` - array of row IDs that match the new state of the row selection.
-- `added` - array of row IDs that are currently added to the selection.
-- `removed` - array of row IDs that are currently removed according old selection state.
+When there is some change in the row selection **[`rowSelectionChanging`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowSelectionChanging)** event is emitted. **`rowSelectionChanging`** exposes the following arguments:
+- `oldSelection`  - array of row's data that contains the previous state of the row selection.
+- `newSelection` - array of row's data that match the new state of the row selection.
+- `added` - array of row's data that are currently added to the selection.
+- `removed` - array of row's data that are currently removed according old selection state.
 - `event` - the original event that triggered row selection change.
 - `cancel` -  allows you the prevent the row selection change.
 @@if (igxName === 'IgxHierarchicalGrid') {
 - `owner` - if the event is triggered from a child grid, this will give you a reference to the component, from which the event is emitted.
 }
+
+#### Row selection event in remote data scenarios
+
+In remote data scenarios, when the grid has a `primaryKey` set, [`rowSelectionChanging.oldSelection`]({environment:angularApiUrl}/interfaces/IRowSelectionEventArgs.html#oldSelection) event argument will not contain the full row data object for the rows that are currently out of the data view. In this case, `rowSelectionChanging.oldSelection` object will contain only one property, which is the `primaryKey` field. For the rest of the rows, currently in the data view, `rowSelectionChanging.oldSelection` will contain the whole row data.
 
 ```html
 <!-- selectionExample.component.html -->
@@ -328,7 +353,7 @@ The `selected` property shows whether the current row is selected or not while t
 ```html
 <ng-template igxRowSelector let-rowContext>
     {{ rowContext.index }}
-    <igx-checkbox 
+    <igx-checkbox
         [checked]="rowContext.selected"
         [readonly]="true"
     ></igx-checkbox>
@@ -348,7 +373,7 @@ In the above example we are using an `igx-checkbox` and we bind `rowContext.sele
 The `rowContext.select()` and `rowContext.deselect()` methods are exposed in the template context of an `@@igSelector`. They make it easier to toggle the current row, especially in a child grid, when you implement a click handler that overrides the base functionality.
 }
 
-### Header template 
+### Header template
 To create a custom header selector template, within the @@igComponent, declare an `<ng-template>` with `igxHeadSelector` directive. From the template you can access the implicitly provided context variable, with properties that give you information about the header's state.
 
 The `selectedCount` property shows you how many rows are currently selected while `totalCount` shows you how many rows there are in the @@igComponent in total.
@@ -419,8 +444,8 @@ The `headContext.selectAll()` and `headContext.deselectAll()` methods are expose
 This demo shows the usage of custom header and row selectors. The latter uses `rowContext.index` to display row numbers and an `igx-checkbox` bound to `rowContext.selected`.
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:550px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-selection-template-numbering" >
 </code-view>
 
@@ -428,8 +453,8 @@ This demo shows the usage of custom header and row selectors. The latter uses `r
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:550px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-selection-template-numbers" >
 </code-view>
 
@@ -437,8 +462,8 @@ This demo shows the usage of custom header and row selectors. The latter uses `r
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:610px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:610px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-selection-template-numbers" >
 </code-view>
 
@@ -449,8 +474,8 @@ This demo shows the usage of custom header and row selectors. The latter uses `r
 ### Excel Style Row Selectors Demo
 This demo uses custom templates to resemble Excel-like header and row selectors.
 
-<code-view style="height:550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:550px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-selection-template-excel" >
 </code-view>
 
@@ -461,8 +486,8 @@ This demo uses custom templates to resemble Excel-like header and row selectors.
 This demo prevents some rows from being selected using the `rowSelectionChanging` event and a custom template with disabled checkbox for non-selectable rows.
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:550px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-conditional-row-selectors" >
 </code-view>
 
@@ -470,8 +495,8 @@ This demo prevents some rows from being selected using the `rowSelectionChanging
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:550px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-conditional-row-selectors" >
 </code-view>
 
@@ -479,8 +504,8 @@ This demo prevents some rows from being selected using the `rowSelectionChanging
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:630px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:630px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-conditional-row-selectors" >
 </code-view>
 

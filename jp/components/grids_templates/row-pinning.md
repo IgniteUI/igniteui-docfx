@@ -121,7 +121,7 @@ this.hierarchicalGrid.getRowByIndex(0).pinned = true;
 ```
 }
 
-[`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) の [`pinRow`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#pinrow) または [`unpinRow`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#unpinrow) メソッドを使用して ID によってレコードをピン固定またはピン固定解除できます。
+[`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) の [`pinRow`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#pinRow) または [`unpinRow`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#unpinRow) メソッドを使用して ID によってレコードをピン固定またはピン固定解除できます。
 
 @@if (igxName === 'IgxGrid') {
 ```typescript
@@ -142,9 +142,9 @@ this.hierarchicalGrid.unpinRow('ALFKI');
 ```
 }
 
-注: 行の ID は、グリッドの [`primaryKey`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primarykey) またはレコード インスタンス自体によって定義される主キー値です。両方のメソッドは操作に成功したかどうかを示すブール値を返します。よくある失敗の原因に行がすでにその状態になっていることがあります。
+注: 行の ID は、グリッドの [`primaryKey`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primaryKey) またはレコード インスタンス自体によって定義される主キー値です。両方のメソッドは操作に成功したかどうかを示すブール値を返します。よくある失敗の原因に行がすでにその状態になっていることがあります。
 
-行は、最後にピンされた行の下にピン固定されます。ピン固定行の順序を変更するには、[`rowPinning`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowPinning) イベントにサブスクライブして [`insertAtIndex`]({environment:angularApiUrl}/interfaces/ipinroweventargs.html#insertatindex) プロパティを適切な位置インデックスに変更します。
+行は、最後にピンされた行の下にピン固定されます。ピン固定行の順序を変更するには、[`rowPinning`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowPinning) イベントにサブスクライブして [`insertAtIndex`]({environment:angularApiUrl}/interfaces/ipinroweventargs.html#insertAtIndex) プロパティを適切な位置インデックスに変更します。
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -451,6 +451,7 @@ Internet Explorer 11 のコンポーネントをスタイル設定するには�
 @@if (igxName === 'IgxGrid') {
 
 <code-view style="height:540px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/grid/grid-row-pinning-styling" >
 </code-view>
@@ -459,6 +460,7 @@ Internet Explorer 11 のコンポーネントをスタイル設定するには�
 @@if (igxName === 'IgxTreeGrid') {
 
 <code-view style="height:540px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-row-pinning-styling" >
 </code-view>
@@ -467,6 +469,7 @@ Internet Explorer 11 のコンポーネントをスタイル設定するには�
 @@if (igxName === 'IgxHierarchicalGrid') {
 
 <code-view style="height:540px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-pinning-styling" >
 </code-view>

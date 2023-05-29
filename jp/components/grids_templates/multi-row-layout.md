@@ -21,10 +21,10 @@ _language: ja
 複数行レイアウトの宣言は、[`igx-column-layout`]({environment:angularApiUrl}/classes/igxcolumnlayoutcomponent.html) コンポーネントによって実現されます。各 `igx-column-layout` コンポーネントは、単一または複数の `igx-column` コンポーネントを含むブロックと見なします。一部のグリッド機能はブロック レベルで機能します (下記の「機能の統合」セクション参照)。たとえば、仮想化ではブロックを使用して仮想チャンクを決定します。そのため、レイアウトで許容される場合は、パフォーマンスを向上させるために列を更に `igx-column-layout` ブロックに分割します。複数行のレイアウトを設定するときは、これらのブロックの外側に列がなく、`IgxColumnGroupComponent` を使用しないでください。複数行レイアウトは、[グリッド レイアウト](https://www.w3.org/TR/css-grid-1/)仕様上に実装されており、その要件に準拠する必要があります。	
 
 `IgxColumnComponent` は各セルの位置と範囲を決めるために 4 つの `@Input` プロパティを公開しています。	
-* [`colStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#colstart) - フィールドの開始位置となる列インデックス。このプロパティは**必須**です。	
-* [`rowStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#rowstart) - フィールドの開始位置となる行インデックス。このプロパティは**必須**です。
-* [`colEnd`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#colend) - 現在のフィールドが終了する位置の列インデックス。colStart と colEnd の間の列数によって、そのフィールドまでの列の幅が決まります。このプロパティは**オプション**です。設定されていない場合は、デフォルトで 1 に設定されます。	
-* [`rowEnd`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#rowend) - 現在のフィールドが終了する行インデックス。rowStart と rowEnd の間の行数によって、そのフィールドにまたがる行数が決まります。このプロパティは**オプション**です。設定されていない場合は、デフォルトで `rowStart + 1` に設定されます。	
+* [`colStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#colStart) - フィールドの開始位置となる列インデックス。このプロパティは**必須**です。	
+* [`rowStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#rowStart) - フィールドの開始位置となる行インデックス。このプロパティは**必須**です。
+* [`colEnd`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#colEnd) - 現在のフィールドが終了する位置の列インデックス。colStart と colEnd の間の列数によって、そのフィールドまでの列の幅が決まります。このプロパティは**オプション**です。設定されていない場合は、デフォルトで 1 に設定されます。	
+* [`rowEnd`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#rowEnd) - 現在のフィールドが終了する行インデックス。rowStart と rowEnd の間の行数によって、そのフィールドにまたがる行数が決まります。このプロパティは**オプション**です。設定されていない場合は、デフォルトで `rowStart + 1` に設定されます。	
 
 
 ```html
@@ -55,7 +55,7 @@ _language: ja
 
 
 > [!Note]
-> [`rowStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#rowstart) プロパティと [`colStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#colstart) プロパティは、それぞれの `igx-column` に対して`igx-column-layout` に設定する必要があります。`igxColumnLayout` コンポーネントはレイアウトが正しいかどうかを検証しておらず、それについてエラーや警告を投げていません。開発者は、レイアウトの宣言が正しく完全であることを確認する必要があります。誤った配置、オーバーラップ、ブラウザの不整合などが発生し、レイアウトが壊れる可能性があります。	
+> [`rowStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#rowStart) プロパティと [`colStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#colStart) プロパティは、それぞれの `igx-column` に対して`igx-column-layout` に設定する必要があります。`igxColumnLayout` コンポーネントはレイアウトが正しいかどうかを検証しておらず、それについてエラーや警告を投げていません。開発者は、レイアウトの宣言が正しく完全であることを確認する必要があります。誤った配置、オーバーラップ、ブラウザの不整合などが発生し、レイアウトが壊れる可能性があります。	
 
 ## 機能の統合	
 複数行レイアウトのレンダリング方法は全く異なるため、列固定や列非表示など一部の列機能は `igx-column-layout` コンポーネントでのみ機能します。その他の機能ソートとグループ化などは、`igx-column` コンポーネントで同じように機能します。	
@@ -81,7 +81,7 @@ _language: ja
 ### 垂直ナビゲーション
 * <kbd>上矢印</kbd> または <kbd>下矢印</kbd> - 開始位置に対して上下のセルに移動し、行の影響は受けません。現在のセルが複数の列にまたがる場合は、次のアクティブ セルがナビゲーション開始セルに従って選択されます。
 * <kbd>Ctrl</kbd> + 上矢印</kbd>または<kbd>Ctrl</kbd> + <kbd>Down</kbd> - 最初の行または最後の行の同じ列に移動してフォーカスを適用します。 
-* <kbd>Ctrl</kbd> + <kbd>Home</kbd> or <kbd>Ctrl</kbd> + <kbd>End</kbd> - 最初の行に移動して最初のセルに移動するか、最後のセルに移動します。最後のセルに移動してフォーカスを合わせます。
+* <kbd>Ctrl</kbd> + <kbd>Home</kbd> または <kbd>Ctrl</kbd> + <kbd>End</kbd> - 最初の行に移動して最初のセルに移動するか、最後のセルに移動します。最後のセルに移動してフォーカスを合わせます。
 	
 	
 > [!Note]
@@ -95,8 +95,8 @@ _language: ja
 
 グリッドでは、特定のキーが押されたときのデフォルトのナビゲーション動作をカスタマイズできます。`隣りのセル`または`下のセル`へ移動するような操作は、キーボード ナビゲーション API を使用して簡単に処理できます。
 
-- [`gridKeydown`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#gridKeydown) が公開されます。イベントは [`IGridKeydownEventArgs`]({environment:angularApiUrl}/interfaces/igridkeydowneventargs.html) を発生します。このイベントは、キーボードで上記のキー組み合わせを介してのみ使用できます。他のすべてのキー操作では、`keydown` イベント `(keydown)="onKeydown($event)"` を使用できます。
-- [`navigateTo`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#navigateto) - このメソッドを使用すると、提供された `rowindex` と `visibleColumnIndex` に基づいて位置に移動できます。
+- [`gridKeydown`]({environment:angularApiUrl}/classes/igxgridcomponent.html#gridKeydown) が公開されます。イベントは [`IGridKeydownEventArgs`]({environment:angularApiUrl}/interfaces/igridkeydowneventargs.html) を発生します。このイベントは、キーボードで上記のキー組み合わせを介してのみ使用できます。他のすべてのキー操作では、`keydown` イベント `(keydown)="onKeydown($event)"` を使用できます。
+- [`navigateTo`]({environment:angularApiUrl}/classes/igxgridcomponent.html#navigateTo) - このメソッドを使用すると、提供された `rowindex` と `visibleColumnIndex` に基づいて位置に移動できます。
 
 以下のデモでは、Excel と同じように、<kbd>Enter</kbd> と <kbd>Shift</kbd> + <kbd>Enter</kbd> キーを使って追加のナビゲーションを使用します。
 
@@ -111,7 +111,7 @@ _language: ja
 
 ### レイアウトの構成
 
-列レイアウトを構成するときに、適切な [`colStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#colstart)  および [`colEnd`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#colend)、または [`rowStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#rowstart) および [`rowEnd`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#rowend) を計算して設定するのが難しい場合があります。特に 1 つのレイアウトに多数の列がある場合などですが、適用時のプレビューを簡単に確認するためにコンフィギュレーターを使用できます。以下の操作が可能です。
+列レイアウトを構成するときに、適切な [`colStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#colStart)  および [`colEnd`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#colEnd)、または [`rowStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#rowStart) および [`rowEnd`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#rowEnd) を計算して設定するのが難しい場合があります。特に 1 つのレイアウトに多数の列がある場合などですが、適用時のプレビューを簡単に確認するためにコンフィギュレーターを使用できます。以下の操作が可能です。
 
 * 設定全体の行数を設定します。すべてのレイアウトは同じ行数である必要があります。
 * `レイアウトの追加` チップをクリックするか、レイアウトチップを左右にドラッグしてソートします。
@@ -243,6 +243,7 @@ $my-custom-schema: extend($light-schema, (
 ### デモ 
 
 <code-view style="height:755px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/grid/grid-multi-row-layout-styling" >
 </code-view>

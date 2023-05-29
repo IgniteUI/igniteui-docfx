@@ -61,6 +61,7 @@ Boston Marathon 2021 – In this angular grid example, you can see how users can
 
 <code-view style="height:700px"
            data-demos-base-url="{environment:lobDemosBaseUrl}"
+           img-src="../../images/boston-marathon-image.png"
            iframe-src="{environment:lobDemosBaseUrl}/grid/grid" alt="Angular data grid example">
 </code-view>
 
@@ -117,7 +118,7 @@ Now that we have the grid module imported, let’s get started with a basic conf
 
 The **id** property is a string value and is the unique identifier of the grid which will be auto-generated if not provided, while **data** binds the grid, in this case to local data.
 
-The [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) property tells the **igx-grid** to auto generate the grid's [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) based on the data source fields. It will also try to deduce the appropriate data type for the column if possible. Otherwise, the developer needs to explicitly define the columns and the mapping to the data source fields.
+The [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autoGenerate) property tells the **igx-grid** to auto generate the grid's [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) based on the data source fields. It will also try to deduce the appropriate data type for the column if possible. Otherwise, the developer needs to explicitly define the columns and the mapping to the data source fields.
 
 ## Angular Bootstrap Grid Definition
 <p>Ignite UI for Angular includes a powerful bootstrap grid like flex-based layout system. Any modern application today is expected to follow a responsive web design approach, meaning it can gracefully adjust layout of HTML elements based on the device size, or from simply resizing the browser. An Angular bootstrap grid layout was the most used approach in the past, but a flex-based layout system like CSS grid has become more popular, as it works in any browser. The Ignite UI for Angular Layout Directive allows vertical and horizontal flow, including content / text wrapping, justification, and alignment. The Ignite UI for Angular grid supports a responsive layout using CSS, giving you the ultimate flexibility in how the grid behaves on resize. </p>
@@ -154,7 +155,7 @@ Following this topic you will learn more about [cell template](grid.md#cell-temp
 
 ### Defining Columns
 
-Let's turn the [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) property off and define the columns collection in the markup:
+Let's turn the [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autoGenerate) property off and define the columns collection in the markup:
 
 ```html
 <igx-grid #grid1 [data]="data | async" [autoGenerate]="false" (columnInit)="initColumns($event)"
@@ -173,7 +174,7 @@ Let's turn the [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcompo
 
 Each of the columns of the grid can be templated separately. The column expects `ng-template` Angular grid module directives.
 
-It also expose [`additionalTemplateContext`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#additionaltemplatecontext) input that can be used for custom properties and any type of data context that you want to pass to the column itself:
+It also expose [`additionalTemplateContext`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#additionalTemplateContext) input that can be used for custom properties and any type of data context that you want to pass to the column itself:
 
 ```html
 <igx-column [additionalTemplateContext]="contextObject">
@@ -230,7 +231,7 @@ As you can see, we are adding **draggable** attribute set to *false*.
 ...
 ```
 
-In the snippet above we "take" a reference to the implicitly provided cell value. This is sufficient if you just want to present some data and maybe apply some custom styling or pipe transforms over the value of the cell. However even more useful is to take the [`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html) instance itself as shown below:
+In the snippet above we "take" a reference to the implicitly provided cell value. This is sufficient if you just want to present some data and maybe apply some custom styling or pipe transforms over the value of the cell. However even more useful is to take the [`CellType`]({environment:angularApiUrl}/interfaces/celltype.html) instance itself as shown below:
 
 ```html
 <igx-grid #grid [data]="data">
@@ -274,7 +275,7 @@ to set the [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.h
 </igx-column>
 ```
 
-Make sure to check the API for the [`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html) in order to get accustomed with the provided properties you can use in your templates.
+Make sure to check the API for the [`CellType`]({environment:angularApiUrl}/interfaces/celltype.html) in order to get accustomed with the provided properties you can use in your templates.
 
 ### Column Template API
 
@@ -396,7 +397,7 @@ const POJO = [{
 >[!WARNING]
 >**The key values must not contain arrays**.
 
->If you use [autoGenerate]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) columns **the data keys must be identical.**
+>If you use [autoGenerate]({environment:angularApiUrl}/classes/igxgridcomponent.html#autoGenerate) columns **the data keys must be identical.**
 
 ## Angular Grid Data Binding
 
@@ -524,7 +525,7 @@ and in the template of the component:
     </igx-grid>
 ```
 
-**Note**: The grid [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) property is best to be avoided when binding to remote data for now. It assumes that the data is available in order to inspect it and generate the appropriate columns. This is usually not the case until the remote service responds, and the grid will throw an error. Making [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) available, when binding to remote service, is on our roadmap for future versions.
+**Note**: The grid [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autoGenerate) property is best to be avoided when binding to remote data for now. It assumes that the data is available in order to inspect it and generate the appropriate columns. This is usually not the case until the remote service responds, and the grid will throw an error. Making [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autoGenerate) available, when binding to remote service, is on our roadmap for future versions.
 
 ## Complex Data Binding
 
@@ -565,7 +566,8 @@ configuration. Same goes for grouping and editing operations with or without tra
 
 <code-view style="height:460px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-nested-data-binding-2" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-nested-data-binding-2"
+           alt="Angular grid nested data example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -669,7 +671,8 @@ And the result from this configuration is:
 
 <code-view style="height:460px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-nested-data-binding" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-nested-data-binding"
+           alt="Angular grid nested data binding example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -748,7 +751,8 @@ And the result is:
 
 <code-view style="height:550px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-composite-data-binding" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-composite-data-binding"
+           alt="Angular grid composite data binding example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -794,7 +798,7 @@ platformBrowserDynamic()
 |Grid [`width`]({environment:angularApiUrl}/classes/igxgridcomponent.html#width) does not depend on the column widths | The [`width`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#width) of all columns does not determine the spanning of the grid itself. It is determined by the parent container dimensions or the defined grid's [`width`]({environment:angularApiUrl}/classes/igxgridcomponent.html#width).|
 |Grid nested in parent container | When grid's [`width`]({environment:angularApiUrl}/classes/igxgridcomponent.html#width) is not set and it is placed in a parent container with defined dimensions, the grid spans to this container.|
 |Grid `OnPush` ChangeDetectionStrategy |The grid operates with `ChangeDetectionStrategy.OnPush` so whenever some customization appears make sure that the grid is notified about the changes that happens.|
-| Columns have a minimum allowed column width. Depending on the [`displayDensity`]({environment:angularApiUrl}/classes/igxgridcomponent.html#displaydensity) option, they are as follows: <br/>"compact": 56px <br/> "cosy": 64px <br/> "comfortable ": 80px | If width less than the minimum allowed is set it will not affect the rendered elements. They will render with the minimum allowed width for the corresponding [`displayDensity`]({environment:angularApiUrl}/classes/igxgridcomponent.html#displaydensity). This may lead to an unexpected behavior with horizontal virtualization and is therefore not supported.
+| Columns have a minimum allowed column width. Depending on the [`displayDensity`]({environment:angularApiUrl}/classes/igxgridcomponent.html#displayDensity) option, they are as follows: <br/>"compact": 56px <br/> "cosy": 64px <br/> "comfortable ": 80px | If width less than the minimum allowed is set it will not affect the rendered elements. They will render with the minimum allowed width for the corresponding [`displayDensity`]({environment:angularApiUrl}/classes/igxgridcomponent.html#displayDensity). This may lead to an unexpected behavior with horizontal virtualization and is therefore not supported.
 | Row height is not affected by the height of cells that are not currently rendered in view. | Because of virtualization a column with a custom template (that changes the cell height) that is not in the view will not affect the row height. The row height will be affected only while the related column is scrolled in the view.
 
 > [!NOTE]
@@ -820,11 +824,6 @@ platformBrowserDynamic()
 * [IgxCalendar Theme]({environment:sassApiUrl}/index.html#function-calendar-theme)
 * [IgxSnackBar Theme]({environment:sassApiUrl}/index.html#function-snackbar-theme)
 * [IgxBadge Theme]({environment:sassApiUrl}/index.html#function-badge-theme)
-
-## Tutorial video
-Learn more about creating an Angular data grid in our short tutorial video:
-
-> [!Video https://www.youtube.com/embed/Xv_fQVQ8fmM]
 
 ## Tutorial video
 Learn more about creating an Angular data grid in our short tutorial video:

@@ -13,13 +13,15 @@ By the default, the Ignite UI for Angular map component displays geographic imag
 
 ## Demo
 
-<code-view style="height: 400px"
+<code-view style="height: 400px" alt="Angular geo map display osm imagery"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-display-osm-imagery"  >
+                    iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map/display-osm-imagery"
+                                                 github-src="maps/geo-map/display-osm-imagery">
 </code-view>
+
 
 <div class="divider--half"></div>
 
 ## Code Snippet
 
-This code example explicitly sets `BackgroundContent` of the map component to the [`IgxOpenStreetMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxopenstreetmapimagery.html) object which provides geographic imagery tile from the Open Street Maps.
+This code example explicitly sets `BackgroundContent` of the map component to the [`IgxOpenStreetMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxopenstreetmapimagery.html) object which provides geographic imagery tile from the Open Street Maps.

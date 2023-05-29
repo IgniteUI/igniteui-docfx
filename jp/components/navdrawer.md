@@ -139,7 +139,7 @@ export class AppComponent  {
     @ViewChild(IgxNavigationDrawerComponent, { static: true })
     public drawer: IgxNavigationDrawerComponent;
 
-    // And of couse add the key line to our navigate function
+    // And of course add the key line to our navigate function
 
     public navigate(item) {
         this.selected = item.text;
@@ -159,7 +159,7 @@ export class AppComponent  {
 より大きい画面に Drawer をピン固定すると、相対的な位置を使用して通常のコンテンツ フローで配置されます。アプリケーションに Drawer を切り替える方法を提供するかどうかにより、ピン固定モードを使用して、[確定または永続的な動作](https://material.io/guidelines/patterns/navigation-drawer.html#navigation-drawer-behavior)を実装できます。
 
 > [!NOTE]
-> Navigation Drawer はデフォルトでレスポンシブです。画面サイズに基づいて固定解除および固定モード間で切り替わります。この動作は [`pinThreshold`]({environment:angularApiUrl}/classes/igxnavigationdrawercomponent.html#pinthreshold) プロパティによって制御され、falsy 値 (0 など) を設定すると無効になります。
+> Navigation Drawer はデフォルトでレスポンシブです。画面サイズに基づいて固定解除および固定モード間で切り替わります。この動作は [`pinThreshold`]({environment:angularApiUrl}/classes/igxnavigationdrawercomponent.html#pinThreshold) プロパティによって制御され、falsy 値 (0 など) を設定すると無効になります。
 
 
 ### ピン固定 (persistent) モード
@@ -441,6 +441,7 @@ $custom-theme: navdrawer-theme(
 
 
 <code-view style="height: 400px; border: 1px solid #D4D4D4;" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/menus/navigation-drawer-styling" >
 </code-view>

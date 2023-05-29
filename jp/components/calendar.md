@@ -1,19 +1,22 @@
 ---
-title: Angular Calendar Component – Ignite UI for Angular
-_description: With Angular Calendar Component, users can create intuitive calendars for applications to display date information using three different selection modes. Try it Now 
+title: Angular Calendar コンポーネント – Ignite UI for Angular
+_description: Angular Calendar コンポーネントを使用すると、ユーザーはアプリケーション用の直感的なカレンダーを作成して、3 つの異なる選択モードを使用して日付情報を表示できます。今すぐお試しください。
 _keywords: angular calendar, angular カレンダー, angular コンポーネント, ignite ui for angular
 _language: ja
 ---
 
-# Angular Calendar Component Overview
+# Angular Calendar コンポーネントの概要
 
-Angular Calendar is a UI component used for displaying dates and days in an app. Supporting different features, it enables users to easily manage calendar functionalities, drag and create events in a calendar, navigate to a preferred date in it, and show events in an Angular calendar month view, week view, or day view in a single click. 
+Angular Calendar は、アプリで日付と曜日を表示するために使用される UI コンポーネントです。さまざまな機能をサポートしているため、ユーザーは簡単にカレンダー機能を管理したり、カレンダーにイベントをドラッグして作成したり、希望の日付に移動したり、Angular カレンダーの月表示、週表示、または日表示でイベントをシングル クリックで表示したりできます。
 
-<p class="highlight">Ignite UI for Angular Calendar component, developed as a native Angular component, provides an easy and intuitive ways to display date information, enable dates or apply Angular calendar disable dates mode. Users can choose from three different selection modes – Angular calendar multiselect, single selection, or range selection.</p>
+<p class="highlight">
+
+Ignite UI for Angular Calendar コンポーネントは、ネイティブ [Angular コンポーネント (英語)](https://angular.io/guide/architecture#components) であり、日付情報の表示、日付の有効化、または Angular カレンダー無効日付モードの適用を簡単かつ直感的に行う方法を提供します。ユーザーは、単一選択、複数選択、または範囲選択の 3 つの選択モードから選択できます。
+</p>
 
 ## Angular Calendar の例
 
-We created the following Angular Calendar example using the Ignite UI for Angular Calendar package. It quickly shows how a basic calendar looks and feels like, how users can choose and highlight a single date, and how to move back and forth to a specific date. 
+Ignite UI for Angular Calendar パッケージを使用して、次の Angular Calendar の例を作成しました。基本的なカレンダーがどのように見えるか、ユーザーが 1 つの日付を選択して強調表示する方法、特定の日付に前後に移動する方法を簡単に示します。
 
 <div class="divider--half"></div>
 
@@ -23,7 +26,7 @@ We created the following Angular Calendar example using the Ignite UI for Angula
 </code-view>
 
 
-## How to Create A Calendar In Angular With Ignite UI
+## Ignite UI を使用して Angular でカレンダーを作成する方法
 
 ### はじめに
 
@@ -51,9 +54,9 @@ export class AppModule {}
 > [`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) が日付のローカライズおよび書式設定のために [Intl Web API](https://developer.mozilla.org/ja-JP/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat) を使用します。
 対象プラットフォームがその API をサポートしない場合、[適切なポリフィル](https://github.com/andyearnshaw/Intl.js/)を使用してください。
 
-## Angular Calendar Examples with Different Selection Modes
+## さまざまな選択モードの Angular Calendar の例
 
-### Angular Single Selection Calendar
+### Angular 単一選択カレンダー
 
 `IgxCalendarComponent` をインスタンス化するには、セレクター要素をテンプレートに追加します。単一選択カレンダー モードで現在の月を表示します。
 
@@ -63,7 +66,7 @@ export class AppModule {}
 <igx-calendar></igx-calendar>
 ```
 
-### Angular Calendar Multiselect  
+### Angular 複数選択カレンダー
 
 [`selection`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#selection) プロパティを使用してデフォルトのモードを簡単に変更できます。
 
@@ -80,7 +83,7 @@ export class AppModule {}
 </code-view>
 
 
-### Angular Calendar Range Picker
+### Angular Calendar 範囲ピッカー
 
 同じ方法に従って、範囲選択モードに切り替えることができます。
 
@@ -102,7 +105,7 @@ export class AppModule {}
 
 ### ローカライズおよび書式設定
 
-カレンダーにおいてローカライズおよび書式設定はとても重要な要素です。`IgxCalendarComponent` でこれらは以下のプロパティによって制御およびカスタマイズします - [`locale`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#locale)、[`formatOptions`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#formatoptions)、[`formatViews`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#formatviews)、[`weekStart`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#weekstart)。
+カレンダーにおいてローカライズおよび書式設定はとても重要な要素です。`IgxCalendarComponent` でこれらは以下のプロパティによって制御およびカスタマイズします - [`locale`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#locale)、[`formatOptions`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#formatOptions)、[`formatViews`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#formatViews)、[`weekStart`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#weekStart)。
 
 これらの設定に加え、`IgxCalendarComponent API` のその他のカスタマイズ機能も使用できます。最初に週の開始日を制御する `weekStart` を設定します。デフォルト値が 0 (日曜日) であるため、値を 1 (月曜日) に設定します。以下のマークアップで表示書式設定をカスタマイズするために、`formatOptions` および `formatViews` プロパティもバインドしています。最後に、`locale` プロパティをユーザーの選択した場所に基づいて値にバインドします。
 
@@ -147,8 +150,8 @@ public ngOnInit() {
 </code-view>
 
 
-### How to Disable Dates In Angular Calendar 
-このセクションは、[`disabledDates`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#disableddates) 機能の使用について説明します。これには、異なる単一の日付または範囲を配列に追加し、`disabledDates` 記述子に渡すことができます。
+### Angular Calendar で日付を無効にする方法
+このセクションは、[`disabledDates`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#disabledDates) 機能の使用について説明します。これには、異なる単一の日付または範囲を配列に追加し、`disabledDates` 記述子に渡すことができます。
 
 [`DateRangeType`]({environment:angularApiUrl}/enums/daterangetype.html) は無効にする範囲を指定するために使用します。
 
@@ -179,9 +182,9 @@ export class CalendarSample6Component {
 
 
 ### 特別な日付
-[`specialDates`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#specialdates) 機能は、`disabledDates` とほとんど同じ構成を使用します。`disabled` と異なる点は `specialDates` を選択してフォーカスする機能です。
+[`specialDates`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#specialDates) 機能は、`disabledDates` とほとんど同じ構成を使用します。`disabled` と異なる点は `specialDates` を選択してフォーカスする機能です。
 
-`igxCalendar` に `specialDates` を追加します。これを行うには、[`DateRangeType.Specific`]({environment:angularApiUrl}/enums/daterangetype.html#specific) タイプの [`DateRangeDescriptor`]({environment:angularApiUrl}/interfaces/daterangedescriptor.html) 項目を作成し、日付の配列を [`dateRange`]({environment:angularApiUrl}/interfaces/daterangedescriptor.html#daterange) として渡します。
+`igxCalendar` に `specialDates` を追加します。これを行うには、[`DateRangeType.Specific`]({environment:angularApiUrl}/enums/daterangetype.html#specific) タイプの [`DateRangeDescriptor`]({environment:angularApiUrl}/interfaces/daterangedescriptor.html) 項目を作成し、日付の配列を [`dateRange`]({environment:angularApiUrl}/interfaces/daterangedescriptor.html#dateRange) として渡します。
 
 ```typescript
 export class CalendarSample7Component {
@@ -210,11 +213,11 @@ export class CalendarSample7Component {
 
 ```html
 <igx-calendar #calendar weekStart="1"
-    selection="multi" 
+    selection="multi"
     (selected)="selectPTOdays($event)">
 </igx-calendar>
-<igx-dialog #alert title="Request Time Off" 
-    leftButtonLabel="OK" 
+<igx-dialog #alert title="Request Time Off"
+    leftButtonLabel="OK"
     (leftButtonSelect)="alert.close()">
 </igx-dialog>
 <button igxButton="raised" (click)="submitPTOdays($event)">Submit Request</button>
@@ -250,8 +253,8 @@ export class CalendarSample7Component {
 ## カレンダー イベント
 カレンダーが発するイベントを見てみましょう:
 - [`selected`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#selected) - カレンダーで日付を選択すると発生されます。
-- [`viewDateChanged`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#viewdatechanged) - 表示されている月/年が変更されるたびに発行されます。たとえば、`next` または `previous` の月に移動した後。
-- [`activeViewChanged`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#activeviewchanged) - アクティブなビューが変更された後に発生します。たとえば、ユーザーがヘッダーの `month` または `year` セクションをクリックした後。
+- [`viewDateChanged`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#viewDateChanged) - 表示されている月/年が変更されるたびに発行されます。たとえば、`next` または `previous` の月に移動した後。
+- [`activeViewChanged`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#activeViewChanged) - アクティブなビューが変更された後に発生します。たとえば、ユーザーがヘッダーの `month` または `year` セクションをクリックした後。
 
 ```html
 <!-- app.component.html -->
@@ -291,9 +294,9 @@ public activeViewChanged(event: CalendarView) {
 
 
 
-## Angular Calendar Views 
+## Angular Calendar ビュー
 `IgxCalendarModule` によって提供される個別のビューがあり、別々に使用できます。
-- 日ビュー - [`igx-days-view`]({environment:angularApiUrl}/classes/igxdaysviewcomponent.html)
+- Angular Calendar 日ビュー - [`igx-days-view`]({environment:angularApiUrl}/classes/igxdaysviewcomponent.html)
 
 
 <code-view style="height: 420px" 
@@ -302,7 +305,7 @@ public activeViewChanged(event: CalendarView) {
 </code-view>
 
 
-- Angular Calendar Month View - [`igx-months-view`]({environment:angularApiUrl}/classes/igxmonthsviewcomponent.html)
+- Angular Calendar 月ビュー - [`igx-months-view`]({environment:angularApiUrl}/classes/igxmonthsviewcomponent.html)
 
 
 <code-view style="height: 520px" 
@@ -311,7 +314,7 @@ public activeViewChanged(event: CalendarView) {
 </code-view>
 
 
-- Angular Calendar Year View - [`igx-years-view`]({environment:angularApiUrl}/classes/igxyearsviewcomponent.html)
+- Angular Calendar 年ビュー - [`igx-years-view`]({environment:angularApiUrl}/classes/igxyearsviewcomponent.html)
 
 
 <code-view style="height: 500px" 
@@ -328,7 +331,7 @@ Tab キーを使用してページを移動する場合、*igxCalendarComponent*
 - [翌月] ボタン
 - 日ビューの選択した日付、現在の日付、最初のフォーカス可能な (無効ではない) 日付
 
-In an Angular Calendar that contains more than one selected date, only the first date will be introduced as a tab stop. For example, when an Angular Calendar multiselect is enabled and you have selected the dates: *13/10/2020*, *17/10/2020* and *21/10/2020* only *13/10/2020* will be accessible during tab navigation; in an Angular Calendar Range Picker, only the first date of the selected range will be part of the page tab sequence. 
+複数の選択された日付を含む Angular Calendar では、最初の日付のみがタブ位置として導入されます。たとえば、Angular Calendar の複数選択が有効で、日付を選択した場合: **2020 年 10 月 13 日**、**2020 年 10 月 17 日**および **2020 年 10 月 21 日**のみは、タブ ナビゲーション中にアクセスできます。Angular Calendar 範囲ピッカーでは、選択した範囲の最初の日付のみがページ タブ シーケンスの一部になります。 
 
 >[!NOTE]
 > *V10.2.0* からの動作変更- 日ビューの Tab キー ナビゲーションは使用できなくなりました。日付ビューの日付間を移動するには、矢印キーを使用します。
@@ -370,7 +373,7 @@ In an Angular Calendar that contains more than one selected date, only the first
  >バージョン 8.2.0 に続いて、キーボード ナビゲーションは現在の月以外の日をフォーカスせず、ビューの月を変更します。
 
 ## マルチビュー カレンダー
-マルチ ビューカレンダーは、3 種類すべての選択をサポートしています。[`monthsViewNumber`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#monthsviewnumber) 入力を使用して、表示される月の数を設定します。これは、フレックス コンテナーに水平に表示されます。設定される最大値に制限はありません。マルチ ビューカレンダーを使用する場合、現在の月に属さない日を非表示にできます。非表示にするには、[`hideOutsideDays`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#hideoutsidedays)プ ロパティを使用します。キーボード ナビゲーションは、表示されている次/前の月へ移動します。
+マルチ ビューカレンダーは、3 種類すべての選択をサポートしています。[`monthsViewNumber`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#monthsViewNumber) 入力を使用して、表示される月の数を設定します。これは、フレックス コンテナーに水平に表示されます。設定される最大値に制限はありません。マルチ ビューカレンダーを使用する場合、現在の月に属さない日を非表示にできます。非表示にするには、[`hideOutsideDays`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#hideOutsideDays)プ ロパティを使用します。キーボード ナビゲーションは、表示されている次/前の月へ移動します。
 
 
 <code-view style="height: 540px" 
@@ -435,6 +438,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 
 
 <code-view style="height:500px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/scheduling/calendar-styling-sample" >
 </code-view>
@@ -453,5 +457,5 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular) 
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular) 
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

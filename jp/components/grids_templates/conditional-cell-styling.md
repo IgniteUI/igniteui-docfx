@@ -32,13 +32,31 @@ _language: ja
 
 Ignite UI for Angular の @@igxName コンポーネントは、カスタム ルールに基づいて**行の条件付きスタイル設定**を作成する次の 2 つの方法を提供します:
 
-- @@igxName コンポーネントで [`rowClasses`]({environment:angularApiUrl}/classes/IgxGridBaseDirective.html#rowClasses) 入力を設定する方法。
-- @@igxName コンポーネントで [`rowStyles`]({environment:angularApiUrl}/classes/IgxGridBaseDirective.html#rowStyles) 入力を設定する方法。
+@@if (igxName === 'IgxGrid') {
+- @@igxName コンポーネントで [`rowClasses`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowClasses) 入力を設定する方法。
+- @@igxName コンポーネントで [`rowStyles`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowStyles) 入力を設定する方法。
+}
+@@if (igxName === 'IgxTreeGrid') {
+- @@igxName コンポーネントで [`rowClasses`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#rowClasses) 入力を設定する方法。
+- @@igxName コンポーネントで [`rowStyles`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#rowStyles) 入力を設定する方法。
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+- @@igxName コンポーネントで [`rowClasses`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#rowClasses) 入力を設定する方法。
+- @@igxName コンポーネントで [`rowStyles`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#rowStyles) 入力を設定する方法。
+}
 
 さらにこのトピックでは、両方について詳しく説明します。
 
 ### rowClasses の使用
-[`rowClasses`]({environment:angularApiUrl}/classes/IgxGridBaseDirective.html#rowClasses) 入力を設定し、カスタム ルールを定義することで、@@igxName 行のスタイルを条件付きで設定できます。
+@@if (igxName === 'IgxGrid') {
+[`rowClasses`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowClasses) 入力を設定し、カスタム ルールを定義することで、@@igxName 行のスタイルを条件付きで設定できます。
+}
+@@if (igxName === 'IgxTreeGrid') {
+[`rowClasses`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#rowClasses) 入力を設定し、カスタム ルールを定義することで、@@igxName 行のスタイルを条件付きで設定できます。
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+[`rowClasses`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#rowClasses) 入力を設定し、カスタム ルールを定義することで、@@igxName 行のスタイルを条件付きで設定できます。
+}
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -64,8 +82,15 @@ Ignite UI for Angular の @@igxName コンポーネントは、カスタム ル�
 ```
 }
 
-
-[`rowClasses`]({environment:angularApiUrl}/classes/IgxGridBaseDirective.html#rowClasses) 入力は、キー値のペアを含むオブジェクト リテラルを受け入れます。ここで、キーは CSS クラスの名前であり、値はブール値またはブール値を返すコールバック関数となります。
+@@if (igxName === 'IgxGrid') {
+[`rowClasses`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowClasses) 入力は、キー値のペアを含むオブジェクト リテラルを受け入れます。ここで、キーは CSS クラスの名前であり、値はブール値またはブール値を返すコールバック関数となります。
+}
+@@if (igxName === 'IgxTreeGrid') {
+[`rowClasses`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#rowClasses) 入力は、キー値のペアを含むオブジェクト リテラルを受け入れます。ここで、キーは CSS クラスの名前であり、値はブール値またはブール値を返すコールバック関数となります。
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+[`rowClasses`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#rowClasses) 入力は、キー値のペアを含むオブジェクト リテラルを受け入れます。ここで、キーは CSS クラスの名前であり、値はブール値またはブール値を返すコールバック関数となります。
+}
 
 ```typescript
 // sample.component.ts
@@ -153,18 +178,19 @@ public rowStyles = {
 
 ```typescript
 // component.ts
-public background = (row: RowType) => row.data.data['Title'] === 'CEO' ? '#6c757d' :
-    row.data.data['Title'].includes('President') ? '#adb5bd' : row.data.data['Title'].includes('Director') ?  '#ced4da' :
-    row.data.data['Title'].includes('Manager') ? '#dee2e6' :
-    row.data.data['Title'].includes('Lead') ? '#e9ecef' :
-    row.data.data['Title'].includes('Senior') ? '#f8f9fa' : null;
+public background = (row: RowType) => row.data['Title'] === 'CEO' ? '#6c757d' :
+    row.data['Title'].includes('President') ? '#adb5bd' :
+    row.data['Title'].includes('Director') ?  '#ced4da' :
+    row.data['Title'].includes('Manager') ? '#dee2e6' :
+    row.data['Title'].includes('Lead') ? '#e9ecef' :
+    row.data['Title'].includes('Senior') ? '#f8f9fa' : null;
 
 public rowStyles = {
     background: this.background,
-    'border-left': (row: RowType) => row.data.data['Title'] === 'CEO' || row.data.data['Title'].includes('President') ?
+    'border-left': (row: RowType) => row.data['Title'] === 'CEO' || row.data['Title'].includes('President') ?
         '2px solid' : null,
-    'border-color': (row: RowType) => row.data.data['Title'] === 'CEO' ? '#495057' : null,
-    color: (row: RowType) => row.data.data['Title'] === 'CEO' ? '#fff' : null
+    'border-color': (row: RowType) => row.data['Title'] === 'CEO' ? '#495057' : null,
+    color: (row: RowType) => row.data['Title'] === 'CEO' ? '#fff' : null
 };
 ```
 
@@ -234,7 +260,7 @@ public childRowStyles = {
 ## 概要
 Ignite UI for Angular の @@igxName コンポーネントは、カスタム条件に基づいて 2 通りの条件付きセルのスタイル設定をサポートします。
 
-- [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) を設定して、キーと値のペアを含むオブジェクト リテラルに [`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellclasses) を入力します。キーは CSS クラスの名前です。値はブール値を返すコールバック関数またはブール値です。その結果、セルのマテリアル スタイル設定が簡単にできます。
+- [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) を設定して、キーと値のペアを含むオブジェクト リテラルに [`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellClasses) を入力します。キーは CSS クラスの名前です。値はブール値を返すコールバック関数またはブール値です。その結果、セルのマテリアル スタイル設定が簡単にできます。
 
 ```ts
 // component.ts file
@@ -262,7 +288,7 @@ private downFontCondition = (rowData: any, columnKey: any): boolean => {
 
 
 ### cellClasses の使用
-[`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) [`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellclasses) 入力を設定してカスタム条件を定義することにより、@@igxName の条件付きセルのスタイルを設定できます。
+[`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) [`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellClasses) 入力を設定してカスタム条件を定義することにより、@@igxName の条件付きセルのスタイルを設定できます。
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -273,19 +299,14 @@ private downFontCondition = (rowData: any, columnKey: any): boolean => {
 @@if (igxName === 'IgxTreeGrid'){
 ```html
 <!-- sample.component.html -->
-<igx-column field="UnitPrice" header="Unit Price" [dataType]="'number'" [cellClasses] = "priceClasses">
-    <ng-template igxCell let-cell="cell" let-val>
-        <span *ngIf="cell.row.data.UnitPrice == 0">-</span>
-        <span *ngIf="cell.row.data.UnitPrice != 0">${{val}}</span>
-    </ng-template>
-</igx-column>
+<igx-column field="UnitPrice" header="Unit Price" [dataType]="'currency'" [pipeArgs]="formatOptions" [cellClasses]="priceClasses"></igx-column>
 ```
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 <!-- TODO -->
 }
 
-[`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellclasses) 入力は、キーと値のペアを含むオブジェクト リテラルを受け取ります。キーは CSS クラスの名前です。値はブール値を返すコールバック関数またはブール値です。
+[`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellClasses) 入力は、キーと値のペアを含むオブジェクト リテラルを受け取ります。キーは CSS クラスの名前です。値はブール値を返すコールバック関数またはブール値です。
 
 @@if (igxName === 'IgxGrid') {
 ```typescript
@@ -324,11 +345,11 @@ public beatsPerMinuteClasses = {
 // sample.component.ts
 
 private upPriceCondition = (rowData: any, columnKey: any): boolean => {
-    return rowData[columnKey] > 25;
+    return rowData[columnKey] > 5;
 }
 
 private downPriceCondition = (rowData: any, columnKey: any): boolean => {
-    return rowData[columnKey] <= 25;
+    return rowData[columnKey] <= 5;
 }
 
 public priceClasses = {
@@ -362,6 +383,7 @@ public priceClasses = {
 @@if (igxName === 'IgxGrid') {
 
 <code-view style="height:530px"
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-cell-styling" >
 </code-view>
@@ -370,6 +392,7 @@ public priceClasses = {
 @@if (igxName === 'IgxTreeGrid') {
 
 <code-view style="height:600px"
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-conditional-cell-style" >
 </code-view>
@@ -521,7 +544,7 @@ public updateCSS(css: string) {
 ## 既知の問題と制限
 
 - 他の列に同じ条件でバインドされたセルがある場合、その 1 つのセルが更新された際に条件が満たされて要る場合も他のセルが新しい値に基づいて更新されない問題。
-残りのセルに変更を適用するには、パイプ チェックを実行する必要があります。以下の例は、[`onCellEdit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#oncelledit) イベントで`スプレッド演算子` ... を使用してチェックを実行する方法を示します。これにより、元のオブジェクトが新しいインスタンスでコピーされ、パイプのみ発生します。
+残りのセルに変更を適用するには、パイプ チェックを実行する必要があります。以下の例は、[`onCellEdit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onCellEdit) イベントで`スプレッド演算子` ... を使用してチェックを実行する方法を示します。これにより、元のオブジェクトが新しいインスタンスでコピーされ、パイプのみ発生します。
 
 ```ts
 public backgroundClasses = {

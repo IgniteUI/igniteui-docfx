@@ -2,32 +2,21 @@
 title: Angular Excel Library| Data Spreadsheet and Table | Infragistics
 _description: Use Infragistics' Angular excel library to work with spreadsheet data using Microsoft Excel features.  Learn how easily you can transfer data from excel to your application using Ignite UI for Angular excel library!
 _keywords: Excel library, Ignite UI for Angular, Infragistics, workbook
-mentionedTypes: ['Workbook']
+mentionedTypes: ['Workbook', 'Worksheet', 'Cell', 'Formula']
 ---
 
 # Angular Excel Library Overview
 
-The Infragistics Angular Excel Library allows you to work with spreadsheet data using familiar Microsoft® Excel® spreadsheet objects like [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html), [`Worksheet`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html), `Cell`, [`Formula`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/formula.html) and many more. The Infragistics Angular Excel Library makes it easy for you to represent the data of your application in an Excel spreadsheet as well as transfer data from Excel into your application.
+The Infragistics Angular Excel Library allows you to work with spreadsheet data using familiar Microsoft® Excel® spreadsheet objects like [`workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.sheet.html#workbook), [`Worksheet`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheet.html), [`IgxCell`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_grids_grids.igxcell.html), [`Formula`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.formula.html) and many more. The Infragistics Angular Excel Library makes it easy for you to represent the data of your application in an Excel spreadsheet as well as transfer data from Excel into your application.
 
 ## Angular Excel Library Example
 
-<code-view style="height: 100px"
+<code-view style="height: 100px" alt="Angular Excel Library Example"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/excel/excel-library-overview"
-           alt="Angular Excel Library Example"
-           github-src="excel/excel-library/overview">
+                    iframe-src="{environment:dvDemosBaseUrl}/excel/excel-library/overview"
+                                                 github-src="excel/excel-library/overview">
 </code-view>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <body>
-      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/excel/excel-library/overview?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
-        </a>
-        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/excel/excel-library/overview?file=src%2Fapp.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
-        </a>
-    </body>
-</html>
 
 <div class="divider--half"></div>
 
@@ -37,10 +26,10 @@ The Infragistics Angular Excel Library allows you to work with spreadsheet data 
 
 When installing the excel package, the core package must also be installed.
 
-<pre style="background:#141414;color:white;display:inline-block;padding:16x;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
+```cmd
 npm install --save igniteui-angular-core
 npm install --save igniteui-angular-excel
-</pre>
+```
 
 ## Component Modules
 
@@ -64,11 +53,11 @@ export class AppModule {}
 
 The Excel Library contains 5 modules that you can use to limit bundle size of your app:
 
--   **IgxExcelCoreModule** – This contains the object model and much of the excel infrastructure
--   **IgxExcelFunctionsModule** – This contains the majority of the functions for formula evaluations, such as Sum, Average, Min, Max, etc. The absence of this module won’t cause any issues with formula parsing if the formula is to be calculated. For example, if you apply a formula like “=SUM(A1:A5)” and ask for the Value of the cell, then you would get a #NAME! error returned. This is not an exception throw – it’s an object that represents a particular error since formulas can result in errors.
--   **IgxExcelXlsModule** – This contains the load and save logic for xls (and related) type files – namely the Excel97to2003 related WorkbookFormats.
--   **IgxExcelXlsxModule** – This contains the load and save logic for xlsx (and related) type files – namely the Excel2007 related and StrictOpenXml WorkbookFormats.
--   **IgxExcelModule** – This references the other 4 modules and so basically ensures that all the functionality is loaded/available.
+*   **IgxExcelCoreModule** – This contains the object model and much of the excel infrastructure
+*   **IgxExcelFunctionsModule** – This contains the majority of the functions for formula evaluations, such as Sum, Average, Min, Max, etc. The absence of this module won’t cause any issues with formula parsing if the formula is to be calculated. For example, if you apply a formula like “=SUM(A1:A5)” and ask for the Value of the cell, then you would get a #NAME! error returned. This is not an exception throw – it’s an object that represents a particular error since formulas can result in errors.
+*   **IgxExcelXlsModule** – This contains the load and save logic for xls (and related) type files – namely the Excel97to2003 related WorkbookFormats.
+*   **IgxExcelXlsxModule** – This contains the load and save logic for xlsx (and related) type files – namely the Excel2007 related and StrictOpenXml WorkbookFormats.
+*   **IgxExcelModule** – This references the other 4 modules and so basically ensures that all the functionality is loaded/available.
 
 <!-- end: Angular, React, WebComponents -->
 
@@ -76,24 +65,21 @@ The Excel Library contains 5 modules that you can use to limit bundle size of yo
 
 The following is a list of the supported versions of Excel.\*\*
 
--   Microsoft Excel 97
+*   Microsoft Excel 97
 
--   Microsoft Excel 2000
+*   Microsoft Excel 2000
 
--   Microsoft Excel 2002
+*   Microsoft Excel 2002
 
--   Microsoft Excel 2003
+*   Microsoft Excel 2003
 
--   Microsoft Excel 2007
+*   Microsoft Excel 2007
 
--   Microsoft Excel 2010
+*   Microsoft Excel 2010
 
--   Microsoft Excel 2013
+*   Microsoft Excel 2013
 
--   Microsoft Excel 2016
-
-> [!NOTE]
-> The Excel Library does not support the Excel Binary Workbook (.xlsb) format at this time.
+*   Microsoft Excel 2016
 
 ## Load and Save Workbooks
 
@@ -101,11 +87,11 @@ Now that the Excel Library module is imported, next step is to load a workbook.
 
 <!-- Angular, React, WebComponents -->
 
-In the following code snippet, an external [ExcelUtility](excel-utility.md) class is used to save and load a [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html).
+In the following code snippet, an external [ExcelUtility](excel-utility.md) class is used to save and load a [`workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.sheet.html#workbook).
 
 <!-- end: Angular, React, WebComponents -->
 
-In order to load and save [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) objects, you can utilize the save method of the actual [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html) object, as well as its static `Load` method.
+In order to load and save [`workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.sheet.html#workbook) objects, you can utilize the save method of the actual [`workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.sheet.html#workbook) object, as well as its static `Load` method.
 
 ```ts
 import { Workbook } from "igniteui-angular-excel";
@@ -117,7 +103,7 @@ var workbook = ExcelUtility.load(file);
 ExcelUtility.save(workbook, "fileName");
 ```
 
-<div class="divider--half"></div>
+<!--Angular -->
 
 ## Managing Heap
 
@@ -126,7 +112,6 @@ Due to the size of the Excel Library, it's recommended to disable the source map
 Modify `angular.json` by setting the `vendorSourceMap` option under architect => build => options and under serve => options:
 
 ```ts
-...
     "architect": {
         "build": {
           "builder": "...",
@@ -152,10 +137,11 @@ Modify `angular.json` by setting the `vendorSourceMap` option under architect =>
       }
 ```
 
-<!-- -->
+<!--end:Angular-->
 
-## API Members
+## API References
 
--   `Load`
--   `WorkbookInProcessRuntime`
--   [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html)
+*   `Load`
+*   `WorkbookInProcessRuntime`
+*   [`Worksheet`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheet.html)
+*   [`workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.sheet.html#workbook)

@@ -51,8 +51,136 @@ Unfortunately not all changes can be automatically updated. Changes below are sp
 
 For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from the "From 6.x .." section apply those changes and work your way up:
 
+## From 15.1.x to 16.0.x
+
+- The upgrade to Angular 16 comes with changes in how `NgModules` operate under the hood. Previously, adding a module that internally depends on another would make the declarations of both available in your app. This behavior was not intended and Angular 16 changes it. If your app was depending on this behavior, e.g. you were only importing a module containing many internal dependencies like `IgxGridModule` and using components coming with those, you will need to manually add the modules for each component your app uses separately.
+
+- **Breaking changes**
+- In 16.0.x, all grid properties, related to paging, are removed. Paging behavior is now configured and controlled entirely through the `IgxPaginatorComponent`.
+To enable paging in the grid, initialize the `IgxPaginatorComponent` in the grid and set related input properties and attach to event handlers to the paginator itself:
+
+```html
+<igx-grid ...>
+    <igx-paginator #paginator [totalRecords]="totalRecords" [perPage]="25" (pageChange)="pageChange($event) (perPageChange)="perPageChange($event)">
+    </igx-paginator>
+<igx-grid>
+```
+
+```typescript
+@ViewChild('grid', { static: true }) private grid: IgxGridComponent;
+@ViewChild('paginator', { static: true }) private paginator: IgxPaginatorComponent;
+
+// prior version 16.0.x
+public onButtonClick(event) {
+    this.grid.nextPage();
+    this.grid.previousPage();
+    this.grid.paginate(0);
+}
+
+// from version 16.0.x
+public onButtonClick(event) {
+    this.paginator.nextPage();
+    this.paginator.previousPage();
+    this.paginator.paginate(0);
+}
+```
+
+- In 16.0.x, grid method `getCellByColumnVisibleIndex(rowIndex: number, index: number)` is removed. Instead, use: `getCellByKey(rowSelector: any, columnField: string)` or `getCellByColumn(rowIndex: number, columnField: string)`. Example:
+
+```typescript
+ // prior version 16.0.x
+ const cell = grid.getCellByColumnVisibleIndex(rowIndex, columnIndex);
+
+ // after version 16.0.x
+ const rowKey = grid.getRowByIndex(rowIndex).key;
+ const columnField = grid.getColumnByVisibleIndex(columnIndex).field;
+ const cell = grid.getCellByKey(rowKey, columnField);
+ const cell = grid.getCellByColumn(rowIndex, columnField);
+```
+
+
+## From 15.0.x to 15.1.x
+- **Breaking change**
+- `rowSelectionChanging` arguments type is changed. Now the `oldSelection`, `newSelection`, `added` and `removed` collections, part of the `IRowSelectionEventArgs` interface, no longer consist of the row keys of the selected elements (when the grid has set a primaryKey), but now in any case the row data is emitted. When the grid is working with remote data and a `primaryKey` is set - for the selected rows that are not currently part of the grid view, a partial row data object will be emitted.
+
+If your code in `rowSelectionChanging` event handler was depending on reading primaryKeys from the event argument, update it as follows:
+
+```typescript
+  // prior version 15.1.x
+  public handleRowSelection(e: IRowSelectionEventArgs): void {
+    this.selectedRows = e.newSelection;
+  }
+
+  // after version 15.1.x
+  public handleRowSelection(e: IRowSelectionEventArgs): void {
+    this.selectedRows = e.newSelection.map(rec => {
+       return rec[e.owner?.primaryKey]
+    });
+  }
+```
+
+- **Behavioral Change**
+When selected row is deleted from the grid component, `rowSelectionChanging` event is not emitted.
+
+- **Visual Change** 
+- In 15.1 the sizes of the input components have increased. This is more noticeable when using the Material theme. We do this to match Material spec. If your application is negatively affected by the change, you can use the displayDensity input and set it to a more dense setting, e.g. from comfortable to cozy or from cozy to compact.
+
+  **Example**
+```html
+    <igx-input-group displayDensity="cosy">
+        ...
+    </igx-input-group>
+
+    <igx-select displayDensity="cosy">
+        ...
+    </igx-select>
+
+    <igx-combo displayDensity="cosy">
+        
+    </igx-combo>
+
+    <igx-simple-combo displayDensity="cosy">
+        ...
+    </igx-simple-combo>
+```
+
+- In 15.1 select and combo component now have background around the toggle icon. You can change the background and the icon color using scss or css.
+
+    **Example**
+```scss
+    $my-select: select-theme(
+        $toggle-button-background: red,
+        $toggle-button-foreground: #fff,
+    );
+
+    $my-combo: combo-theme(
+        $toggle-button-background: red,
+        $toggle-button-foreground: #fff,
+    );
+
+    @include css-vars($my-select);
+    @include css-vars($my-combo);
+```
+
+    **Example**
+```css
+    .igx-select {
+        --igx-select-toggle-button-background: red;
+        --igx-select-toggle-button-foreground: #fff;
+    }
+    
+    .igx-combo {
+        --igx-combo-toggle-button-background: red;
+        --igx-combo-toggle-button-foreground: #fff;
+    }
+```
+
 ## From 14.2.x to 15.0.x
 ### General
+- `igxGrid`, `igxHierarchicalGrid`, `igxTreeGrid`
+    - Parameters in grid templates now have types for their context. This can also cause issues if the app is in strict template mode and uses the wrong type. References to the template that may require conversion:
+         - `IgxColumnComponent` - [`ColumnType`]({environment:angularApiUrl}/interfaces/columntype.html) (for example the column parameter in `igxFilterCellTemplate`)
+         - `IgxGridCell` - [`CellType`]({environment:angularApiUrl}/interfaces/celltype.html) (for example the cell parameter in `igxCell` template)
 - Ignite UI for Angular now has a peer dependency on [igniteui-theming](https://github.com/IgniteUI/igniteui-theming). Install the theming package and add the following preprocessor configuration in your `angular.json` file.
 
     ```sh
@@ -105,7 +233,7 @@ Here's how that will affect existing code:
     .my-class {
         background: color($color: 'grays', $variant: 300);
         color: contrast-color($color: 'grays', $variant: 300);
-        border-color: hsl(var(--ig-grays-500));
+        border-color: hsl(var(--igx-grays-500));
     }
     ```
 
@@ -211,6 +339,29 @@ Here's how that will affect existing code:
     .my-class {
         box-shadow: elevation(8);
     }
+    ```
+
+### Grid Toolbar
+- **Breaking Change** - The `IgxGridToolbarTitleDirective` and `IgxGridToolbarActionsDirective` have been converted to components, keeping only the element selector. For apps using the preferred element markup of `<igx-grid-toolbar-title>` and `<igx-grid-toolbar-actions>` there should be no functional change. Apps using the `igxGridToolbarTitle` and `igxGridToolbarActions` directives on other elements will need to convert those to the mentioned elements instead:
+
+    _From:_
+    ```html
+    <igx-grid-toolbar>
+        <span igxGridToolbarTitle>Title</span >
+        <div igxGridToolbarActions>
+            ...
+        </div>
+    </igx-grid-toolbar>
+    ```
+
+    _To:_
+    ```html
+    <igx-grid-toolbar>
+        <igx-grid-toolbar-title>Title</igx-grid-toolbar-title>
+        <igx-grid-toolbar-actions>
+            ...
+        </igx-grid-toolbar-actions>
+    </igx-grid-toolbar>
     ```
 
 ## From 13.1.x to 13.2.x
@@ -750,8 +901,8 @@ The [**IgxBottomNavComponent**]({environment:angularApiUrl}/classes/igxbottomnav
     * The `id`, `itemStyle`, `panels`, `viewTabs`, `contentTabs` and `tabs` properties were removed. Currently, the [`items`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html#items) property returns the collection of tabs.
     * The following properties were changed:
         * The tab item's `isSelected` property was renamed to [`selected`]({environment:angularApiUrl}/classes/igxbottomnavitemcomponent.html#selected).
-        * The `selectedTab` property was renamed to [`selectedItem`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html#selecteditem).
-    * The `onTabSelected` and `onTabDeselected` events were removed. We introduced three new events, [`selectedIndexChanging`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html#selectedindexchanging),[`selectedIndexChange`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html#selectedindexchange) and [`selectedItemChange`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html#selecteditemchange), which provide more flexibility and control over the tabs' selection. Unfortunately, having an adequate migration for these event changes is complicated to say the least, so any errors should be handled at project level.
+        * The `selectedTab` property was renamed to [`selectedItem`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html#selectedItem).
+    * The `onTabSelected` and `onTabDeselected` events were removed. We introduced three new events, [`selectedIndexChanging`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html#selectedIndexChanging),[`selectedIndexChange`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html#selectedIndexChange) and [`selectedItemChange`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html#selectedItemChange), which provide more flexibility and control over the tabs' selection. Unfortunately, having an adequate migration for these event changes is complicated to say the least, so any errors should be handled at project level.
 
 ### IgxTabs component
 The [**IgxTabsComponent**]({environment:angularApiUrl}/classes/igxtabscomponent.html) was completely refactored in order to provide more flexible and descriptive way to define tab headers and contents. It is recommended that you update via **ng update** in order to migrate the existing **igx-tabs** definitions to the new ones.
@@ -782,9 +933,9 @@ The [**IgxTabsComponent**]({environment:angularApiUrl}/classes/igxtabscomponent.
     * The `id`, `groups`, `viewTabs`, `contentTabs` and `tabs` properties were removed. Currently, the [`items`]({environment:angularApiUrl}/classes/igxtabscomponent.html#items) property returns the collection of tabs.
     * The following properties were changed:
         * The tab item's `isSelected` property was renamed to [`selected`]({environment:angularApiUrl}/classes/igxtabitemcomponent.html#selected).
-        * The `selectedTabItem` property was shortten to [`selectedItem`]({environment:angularApiUrl}/classes/igxtabscomponent.html#selecteditem).
-        * The `type` property, with its contentFit and fixed options, is no longer available. The header sizing & positioning mode is currently controlled by the [`tabAlignment`]({environment:angularApiUrl}/classes/igxtabscomponent.html#tabalignment) input property which accepts four different values - start (default), center, end and justify. The old `contentFit` type corresponds to the current `start` alignment value and the old `fixed` type - to the current `justify` value.
-    * The `tabItemSelected` and `tabItemDeselected` events were removed. We introduced three new events, [`selectedIndexChanging`]({environment:angularApiUrl}/classes/igxtabscomponent.html#selectedindexchanging), [`selectedIndexChange`]({environment:angularApiUrl}/classes/igxtabscomponent.html#selectedindexchange) and [`selectedItemChange`]({environment:angularApiUrl}/classes/igxtabscomponent.html#selecteditemchange), which provide more flexibility and control over the tabs' selection. Unfortunately, having an adequate migration for these event changes is complicated to say the least, so any errors should be handled at project level.
+        * The `selectedTabItem` property was shortten to [`selectedItem`]({environment:angularApiUrl}/classes/igxtabscomponent.html#selectedItem).
+        * The `type` property, with its contentFit and fixed options, is no longer available. The header sizing & positioning mode is currently controlled by the [`tabAlignment`]({environment:angularApiUrl}/classes/igxtabscomponent.html#tabAlignment) input property which accepts four different values - start (default), center, end and justify. The old `contentFit` type corresponds to the current `start` alignment value and the old `fixed` type - to the current `justify` value.
+    * The `tabItemSelected` and `tabItemDeselected` events were removed. We introduced three new events, [`selectedIndexChanging`]({environment:angularApiUrl}/classes/igxtabscomponent.html#selectedIndexChanging), [`selectedIndexChange`]({environment:angularApiUrl}/classes/igxtabscomponent.html#selectedindexchange) and [`selectedItemChange`]({environment:angularApiUrl}/classes/igxtabscomponent.html#selectedIndexChange), which provide more flexibility and control over the tabs' selection. Unfortunately, having an adequate migration for these event changes is complicated to say the least, so any errors should be handled at project level.
 
 ### IgxGridComponent, IgxTreeGridComponent, IgxHierarchicalGridComponent
 * *IgxGridRowComponent*, *IgxTreeGridRowComponent*, *IgxHierarchicalRowComponent*, *IgxGridGroupByRowComponent* are no longer exposed in the public API.

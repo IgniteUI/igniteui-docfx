@@ -49,7 +49,7 @@ export class AppModule {}
 その後、ブラウザ上でデモサンプルを確認することができます。
 
 >[!NOTE]
->**igx-circular-bar** は、各ステップに `{currentValue: 65, previousValue: 64}` のようなオブジェクトを出力する [`onProgressChanged`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#onprogresschanged) イベントを発生します。
+>**igx-circular-bar** は、各ステップに `{currentValue: 65, previousValue: 64}` のようなオブジェクトを出力する [`onProgressChanged`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#onProgressChanged) イベントを発生します。
 
 > [!NOTE]
 > [`step`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#step) 値が定義されていない場合、デフォルトの進行のインクリメントの値は、**[`max`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#max) 値の 1%** です。更新レートを変更するには、[`step`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#step) 値を定義する必要があります。
@@ -68,7 +68,7 @@ export class AppModule {}
 ```
 
 >[!NOTE]
->円形のプログレスバーのテキストを非表示にするには、[`textVisibility`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#textvisibility) プロパティを ` false` に設定します。
+>円形のプログレスバーのテキストを非表示にするには、[`textVisibility`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#textVisibility) プロパティを ` false` に設定します。
 
 結果は以下のようになります。
 
@@ -263,6 +263,7 @@ $custom-theme: progress-circular-theme(
 <div class="divider--half"></div>
 
 <code-view style="height:100px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-display/circular-styling-sample" >
 </code-view>

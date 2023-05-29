@@ -215,6 +215,11 @@ When columns have set specific `width` in pixels, they stick to that size, unles
 
     <img src="../../images/grid_sizing/columns-150px-extra-area-v2.jpg" style="width: 80%"/>
 
+### Auto
+
+When columns are set to `auto` their size adjusts to fit the longest word in the column. Empty areas are possible if there are cells with very short values, while other cells have very long ones. In this scenario, all cells in the column would adjust to take the width of the cell with the longest value.
+
+<img src="../../images/grid_sizing/columns-150px-empty-area-v2.jpg" style="width: 80%"/>
 
 ### Percentages
 

@@ -1,15 +1,22 @@
 ---
 title: オートコンプリート ディレクティブ
-_description: igxAutocomplete ディレクティブは、候補オプションのパネルを表示することによりテキスト入力を向上する方法を提供します。
+_description: Angular Autocomplete コンポーネントは、候補オプションのパネルを表示することにより、テキスト入力を向上する方法を提供します。今すぐお試しください。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Autocomplete コンポーネント, Angular Autocomplete ディレクティブ, Angular Autocomplete コントロール
 _language: ja
 ---
 
-# Autocomplete
-<p class="highlight">[`igxAutocomplete`]({environment:angularApiUrl}/classes/igxautocompletedirective.html) ディレクティブは [`igxDropDown`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) と候補オプションを表示してテキスト入力を向上する方法を提供します。候補は、テキスト入力の開始時、または `上矢印`/`下矢印` キーを使用して表示します。</p>
+# Angular Autocomplete (オートコンプリート) の概要
+Angular Autocomplete は、入力中に候補のリストから項目を簡単に検索、フィルタリング、および選択できるようにする検索ボックス コンポーネントです。機能が豊富で、シームレスなデータ バインディング、フィルタリング、グループ化、UI カスタマイズ オプション、およびその他の組み込み機能をサポートしているため、直感的なオートコンプリート検索エクスペリエンスを作成できます。
+
+<p class="highlight">
+
+[`igxAutocomplete`]({environment:angularApiUrl}/classes/igxautocompletedirective.html) ディレクティブは [`igxDropDown`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) と候補オプションを表示してテキスト入力を向上する方法を提供します。候補は、テキスト入力の開始時、または `上矢印`/`下矢印` キーを使用して表示します。
+</p>
 <div class="divider"></div>
 
 ## Angular Autocomplete の例
+
+以下の Angular Autocomplete の例では、ユーザーが入力テキスト ボックスに町の名前を入力し始めると、ドロップダウンの候補リストが生成されます。
 
 <code-view style="height: 400px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -18,7 +25,7 @@ _language: ja
 
 <div class="divider--half"></div>
 
-## 使用方法
+## Ignite UI で Angular Autocomplete を使用する方法
 はじめに、**app.module** で **IgxAutocompleteModule** と **IgxDropDownModule** をインポートします。[`igxAutocomplete`]({environment:angularApiUrl}/classes/igxautocompletedirective.html) を [igx-input]({environment:angularApiUrl}/classes/igxinputdirective.html) に適用した場合は、**igxInputGroupModule** も必要となります。
 
 ```typescript
@@ -94,8 +101,8 @@ export class AutocompletePipeStartsWith implements PipeTransform {
 >[!NOTE]
 >[`igxAutocomplete`]({environment:angularApiUrl}/classes/igxautocompletedirective.html) は、利用可能なオプションのプロバイダーとして [`igxDropDown`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) を使用します。これはドロップダウン コンポーネントのすべての機能をオートコンプリートで使用できることを意味します。
 
-### Autocomplete の無効化
-Autocomplete を無効にするには、[`IgxAutocompleteDisabled`]({environment:angularApiUrl}/classes/igxautocompletedirective.html#disabled) 入力を使用します。
+### Angular Autocomplete の無効化
+Angular Autocomplete を無効にするには、[`IgxAutocompleteDisabled`]({environment:angularApiUrl}/classes/igxautocompletedirective.html#disabled) 入力を使用します。
 
 ```html
 <igx-input-group>
@@ -109,7 +116,7 @@ Autocomplete を無効にするには、[`IgxAutocompleteDisabled`]({environment
 ### Autocomplete の設定
 `igx-autocomplete` ドロップダウンの配置、スクロール ストラテジとアウトレットは、[`IgxAutocompleteSettings`]({environment:angularApiUrl}/classes/igxautocompletedirective.html#autocompletesettings) を使用して設定できます。
 
-以下の例では、ドロップダウンを入力の上に配置し、開始と終了のアニメーションを無効にします。`ConnectedPositioningStrategy` を使用します。
+以下の Angular Material Autocomplete 例では、ドロップダウンを入力の上に配置し、開始と終了のアニメーションを無効にします。`ConnectedPositioningStrategy` を使用します。
 
 ```html
 <igx-input-group class="autocomplete">
@@ -191,7 +198,7 @@ export class AutocompleteComponent {
  - <kbd>ESC</kbd> - ドロップダウンを閉じます。
 
 >[!NOTE]
->オートコンプリートが開いた際にリストの最初の項目が自動的に選択されます。リストがフィルターされたときも同様です。
+>Angular Autocomplete が開いた際にリストの最初の項目が自動的に選択されます。リストがフィルターされたときも同様です。
 
 ## 互換性サポート
 `igxAutocomplete` ディレクティブを適用すると要素を以下の ARIA 属性で装飾します。

@@ -14,35 +14,16 @@ Ignite UI for Angular マップ コントロールには、Shape ファイルを
 
 ## Angular ヒート画像の表示の例
 
-<!-- Angular, React -->
-
-```ts
-//WebComponents サンプルが CodeSandbox で機能しません。これが修正されたら、ビルドのフラグを削除します。
-```
-
-<code-view style="height: 500px"
+<code-view style="height: 500px" alt="Angular ヒート画像の表示の例"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-display-heat-imagery"
-           alt="Angular ヒート画像の表示の例"
-           github-src="maps/geo-map/display-heat-imagery">
+                    iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map/display-heat-imagery"
+                                                 github-src="maps/geo-map/display-heat-imagery">
 </code-view>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <body>
-      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/maps/geo-map/display-heat-imagery?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
-        </a>
-        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/maps/geo-map/display-heat-imagery?file=src%2Fapp.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
-        </a>
-    </body>
-</html>
 
 <div class="divider--half"></div>
 
-<!-- end: Angular, React -->
-
-[`IgxShapeDataSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapedatasource.html) がそのシェイプ ファイルを読み込むと、そのデータを ShapeFileRecord オブジェクトに変換します。これらのオブジェクトは、[`IgxShapeDataSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapedatasource.html) の `GetPointData()` メソッドから取得でき、`TileGenerator` プロパティに割り当てられた [`IgxHeatTileGenerator`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxheattilegenerator.html) で [`IgxTileGeneratorMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtilegeneratormapimagery.html) オブジェクトを使用してヒートマップを作成するために使用できます。この [`IgxTileGeneratorMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtilegeneratormapimagery.html) は、`TileImagery` ソースとして地理タイルシリーズで使用できます。
+[`IgxShapeDataSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapedatasource.html) がそのシェイプ ファイルを読み込むと、そのデータを ShapeFileRecord オブジェクトに変換します。これらのオブジェクトは、[`IgxShapeDataSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapedatasource.html) の `GetPointData()` メソッドから取得でき、`TileGenerator` プロパティに割り当てられた [`IgxHeatTileGenerator`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxheattilegenerator.html) で [`IgxTileGeneratorMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxtilegeneratormapimagery.html) オブジェクトを使用してヒートマップを作成するために使用できます。この [`IgxTileGeneratorMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxtilegeneratormapimagery.html) は、`TileImagery` ソースとして地理タイルシリーズで使用できます。
 
 [`IgxHeatTileGenerator`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxheattilegenerator.html) オブジェクトは、[`xValues`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxheattilegenerator.html#xvalues)、[`yValues`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxheattilegenerator.html#yvalues)、[`values`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxheattilegenerator.html#values) の 3 つの値パスを持つように機能します。これらの使用方法の例として、人口に関する情報を持つ形状ファイルの場合、[`xValues`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxheattilegenerator.html#xvalues) を経度、[`yValues`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxheattilegenerator.html#yvalues) を緯度、[`values`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxheattilegenerator.html#values) を人口データとみなすことができます。これらの各プロパティは、`number[]` を取得します。
 
@@ -157,17 +138,17 @@ constructor() {
 }
 ```
 
-## API メンバー
+## API リファレンス
 
--   [`IgxHeatTileGenerator`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxheattilegenerator.html)
--   [`IgxHeatTileGenerator`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxheattilegenerator.html)
--   [`maximumColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxheattilegenerator.html#maximumcolor)
--   [`minimumColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxheattilegenerator.html#minimumcolor)
--   `ShapeFileRecord`
--   `ShapeFileRecords`
--   [`IgxShapeDataSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapedatasource.html)
--   [`IgxTileGeneratorMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtilegeneratormapimagery.html)
--   [`tileGenerator`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxtilegeneratormapimagery.html#tilegenerator)
--   `TileImagery`
--   `UseBlurRadiusAdjustedForZoom`
--   `UseLogarithmicScale`
+*   [`IgxHeatTileGenerator`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxheattilegenerator.html)
+*   [`IgxHeatTileGenerator`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxheattilegenerator.html)
+*   [`maximumColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxheattilegenerator.html#maximumcolor)
+*   [`minimumColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxheattilegenerator.html#minimumcolor)
+*   `ShapeFileRecord`
+*   `ShapeFileRecords`
+*   [`IgxShapeDataSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapedatasource.html)
+*   [`IgxTileGeneratorMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxtilegeneratormapimagery.html)
+*   [`tileGenerator`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxtilegeneratormapimagery.html#tilegenerator)
+*   `TileImagery`
+*   `UseBlurRadiusAdjustedForZoom`
+*   `UseLogarithmicScale`

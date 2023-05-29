@@ -151,22 +151,23 @@ Ensure that whenever a change is made to the text content the appropriate status
 
 
 ## Fixing a bug  
-When fixing a bug you need to follow these guidelines:
 
-1.  Checkout a development branches from both `vNext`a and `master` as this is the version that is going to be used upon release (next version). `master` is the branch with the current state (current version). If the change/fix is applicable only to the ongoing release branch (vNext) there is no need to cherry-pick to master as the change/fix/feature will be pushed to master upon release.
+1.  Depending on where the bug/change/feature was found/is planned `the current version` or the `ongoing release version`, checkout a development branches from `vnext` or/and `master` branch. `vnext` is the version that is going to be used upon release (next version), and `master` is the branch with the current state (current version available on production). If the change/fix is applicable only to the ongoing release branch (`vnext`) there is no need to cherry-pick to `master` branch as the change/fix/feature will be pushed to `master` branch upon release.
 2. Run lint
 4. Pull request your changes and reference the issue. Use the enforced commit message format with applicable type, scope, etc.
 5. Don't forget to make the necessary status updates, as described in the workflow section.
 
-### Example workflow
-When bug fixes are applicable to both `vNext` and `master` branches the process will look like this:
+> Note: Cherry-pick to `master` branch only changes with **high priority**. There is no need to cherry-pick into `master` every bug fix/change from `vnext`> A regular mass merge PRs are going to be made from `vnext` into `master`.
 
-1.	Checkout new branch from `vNext`. For code example purposes let's say the new branch is called `fixing-bug-5423-vNext`.
-2.	Commit your changes to your `fixing-bug-5423-vNext` branch.
-3.	Push and PR to the `vNext` branch.
+**Example workflow for a bug with high priority**
+The process will look like this:
+
+1.	Checkout new branch from `vnext`. For code example purposes let's say the new branch is called `fixing-bug-5423-vnext`.
+2.	Commit your changes to your `fixing-bug-5423-vnext` branch.
+3.	Push and PR to the `vnext` branch.
 4.	Switch to the `master` branch.
 5.  Create a new branch from `master`.  For code example purposes let's say the new branch is called `fixing-bug-5423-master`.
-6.  Cherry pick your commit from the `fixing-bug-5423-vNext` branch: `git cherry-pick fixing-bug-5423-master`
+6.  Cherry pick your commit from the `fixing-bug-5423-vnext` branch: `git cherry-pick fixing-bug-5423-master`
 7.  Push to your `fixing-bug-5423-master` branch and PR to the `master` branch.
 
 # <a name='#environment-variables'>Environment variables</a>

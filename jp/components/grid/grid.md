@@ -117,7 +117,7 @@ public grid: IgxGridComponent;
 
 **id** プロパティは文字列値で、設定されない場合に自動生成されるグリッドの一意識別子です。**data** はグリッドをローカル データにバインドします。
 
-[`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) プロパティは、データソース フィールドに基づいて **igx-grid** にグリッドの[`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) を自動生成させます。列の適切なデータ型の決定を試みます。それ以外の場合、開発者は列およびデータ ソース フィールドへのマッピングを明示的に定義する必要があります。
+[`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autoGenerate) プロパティは、データソース フィールドに基づいて **igx-grid** にグリッドの[`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) を自動生成させます。列の適切なデータ型の決定を試みます。それ以外の場合、開発者は列およびデータ ソース フィールドへのマッピングを明示的に定義する必要があります。
 
 ## Angular Bootstrap グリッドの定義
 <p>Ignite UI for Angular には、Flex に基づくレイアウト システムのような強力なブートストラップ グリッドが含まれています。今日の最新のアプリケーションは、レスポンシブ Web デザインのアプローチに従うことが期待されています。つまり、デバイスのサイズに基づいて、または単にブラウザーのサイズを変更するだけで、HTML 要素のレイアウトを適切に調整できます。Angular ブートストラップ グリッド レイアウトはこれまで最も使用されていたアプローチでしたが、CSS グリッドのような Flex に基づくレイアウト システムは、どのブラウザーでも機能するため、より一般的になりました。Ignite UI for Angular Layout ディレクティブにより、コンテンツ/テキストの折り返し、両端揃え、配置など、垂直方向と水平方向のフローが可能になります。Ignite UI for Angular グリッドは、CSS を使用したレスポンシブ レイアウトをサポートし、サイズ変更時のグリッドの動作に究極の柔軟性を提供します。</p>
@@ -154,7 +154,7 @@ public grid: IgxGridComponent;
 
 ### 列の定義
 
-[`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) プロパティを無効にし、マークアップで列コレクションを定義します。
+[`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autoGenerate) プロパティを無効にし、マークアップで列コレクションを定義します。
 
 ```html
 <igx-grid #grid1 [data]="data | async" [autoGenerate]="false" (columnInit)="initColumns($event)"
@@ -173,7 +173,7 @@ public grid: IgxGridComponent;
 
 グリッドの各列は別のテンプレートを持つことができます。列に `ng-template` Angular グリッド モジュール ディレクティブが必要です。
 
-また、カスタム プロパティや列自体に渡す任意のタイプのデータ コンテキストに使用できる [`additionalTemplateContext`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#additionaltemplatecontext) 入力も公開します。
+また、カスタム プロパティや列自体に渡す任意のタイプのデータ コンテキストに使用できる [`additionalTemplateContext`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#additionalTemplateContext) 入力も公開します。
 
 ```html
 <igx-column [additionalTemplateContext]="contextObject">
@@ -230,7 +230,7 @@ public contextObject = { firstProperty: 'testValue', secondProperty: 'testValue1
 ...
 ```
 
-上記のスニペットで暗示的に提供されたセル値への参照を取得します。データを表示し、セルの値にカスタム スタイル設定およびパイプ変換を適用する場合に使用します。ただし、[`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html) オブジェクトを以下のように使用するとより効果的です。
+上記のスニペットで暗示的に提供されたセル値への参照を取得します。データを表示し、セルの値にカスタム スタイル設定およびパイプ変換を適用する場合に使用します。ただし、[`CellType`]({environment:angularApiUrl}/interfaces/celltype.html) オブジェクトを以下のように使用するとより効果的です。
 
 ```html
 <igx-grid #grid [data]="data">
@@ -273,7 +273,7 @@ public contextObject = { firstProperty: 'testValue', secondProperty: 'testValue1
 </igx-column>
 ```
 
-テンプレートで使用可能なプロパティの詳細については、[`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html) の API を参照してください。
+テンプレートで使用可能なプロパティの詳細については、[`CellType`]({environment:angularApiUrl}/interfaces/celltype.html) の API を参照してください。
 
 ### 列テンプレート API
 
@@ -395,7 +395,7 @@ const POJO = [{
 >[!WARNING]
 >**キー値に配列を含まないでください。**
 
->[autoGenerate]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) 列を使用する場合、データキーが同一である必要があります。
+>[autoGenerate]({environment:angularApiUrl}/classes/igxgridcomponent.html#autoGenerate) 列を使用する場合、データキーが同一である必要があります。
 
 ## Angular Grid データ バインディング
 
@@ -523,7 +523,7 @@ export class MyComponent implements OnInit {
     </igx-grid>
 ```
 
-**注**: リモート データにバインドする場合、グリッドの [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) プロパティは使用しないことをお勧めします。データを検証して適切な列を生成するためにデータが利用可能である必要があります。リモート サービスの応答が完了するまでデータが利用できないため、グリッドはエラーを発生します。リモート サービスへバインド時に [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autogenerate) を使用する機能は今後追加予定です。
+**注**: リモート データにバインドする場合、グリッドの [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autoGenerate) プロパティは使用しないことをお勧めします。データを検証して適切な列を生成するためにデータが利用可能である必要があります。リモート サービスの応答が完了するまでデータが利用できないため、グリッドはエラーを発生します。リモート サービスへバインド時に [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autoGenerate) を使用する機能は今後追加予定です。
 
 ## 複雑なデータ バインディング
 
@@ -790,7 +790,7 @@ platformBrowserDynamic()
 |グリッドの [`width`]({environment:angularApiUrl}/classes/igxgridcomponent.html#width) が列幅に依存しない | すべての列の [`width`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#width) でグリッド自体のスパンは決定しません。親コンテナーのディメンションまたは定義したグリッドの [`width`]({environment:angularApiUrl}/classes/igxgridcomponent.html#width) で決定されます。|
 |親コンテナーでネストされた Grid | グリッドの [`width`]({environment:angularApiUrl}/classes/igxgridcomponent.html#width) を設定せずに定義済みのディメンションで親コンテナーに配置した場合、グリッドがコンテナーに合わせてスパンします。|
 |Grid `OnPush` ChangeDetectionStrategy|グリッドで `ChangeDetectionStrategy.OnPush` を処理し、カスタム表示されたときにグリッドに発生した変更について通知します。|
-| 列には設定可能な最小幅があります。[`displayDensity`]({environment:angularApiUrl}/classes/igxgridcomponent.html#displaydensity) オプションに基づきます。<br/>"compact": 56px <br/> "cosy": 64px <br/> "comfortable ": 80px | 許容される最小幅未満に設定した場合、描画要素には影響せずに対応する [`displayDensity`]({environment:angularApiUrl}/classes/igxgridcomponent.html#displaydensity) に合わせて許容される最小幅で描画します。水平方向の仮想化は予期しない動作を招く場合があるためサポートしていません。
+| 列には設定可能な最小幅があります。[`displayDensity`]({environment:angularApiUrl}/classes/igxgridcomponent.html#displayDensity) オプションに基づきます。<br/>"compact": 56px <br/> "cosy": 64px <br/> "comfortable ": 80px | 許容される最小幅未満に設定した場合、描画要素には影響せずに対応する [`displayDensity`]({environment:angularApiUrl}/classes/igxgridcomponent.html#displayDensity) に合わせて許容される最小幅で描画します。水平方向の仮想化は予期しない動作を招く場合があるためサポートしていません。
 | ビューに描画されていないセル高さは行の高さに影響しません。|仮想化のため、セルの高さを変更するビューにないカスタム テンプレートの列は行の高さに影響しません。関連する列がビューにスクロールされるときのみ行の高さに影響します。
 
 > [!NOTE]
@@ -816,11 +816,6 @@ platformBrowserDynamic()
 * [IgxCalendar テーマ]({environment:sassApiUrl}/index.html#function-calendar-theme)
 * [IgxSnackBar テーマ]({environment:sassApiUrl}/index.html#function-snackbar-theme)
 * [IgxBadge テーマ]({environment:sassApiUrl}/index.html#function-badge-theme)
-
-## ビデオ チュートリアル
-Angular データ グリッドの作成について詳しくは、このビデオ チュートリアルをご覧ください:
-
-> [!Video https://www.youtube.com/embed/Xv_fQVQ8fmM]
 
 ## ビデオ チュートリアル
 Angular データ グリッドの作成について詳しくは、このビデオ チュートリアルをご覧ください:

@@ -7,8 +7,10 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 # CSV Exporter
 
 <p class="highlight">
+
 The IgniteUI CSV Exporter service can export data in a Character Separated Values format from both raw data (array) or from an [**IgxGrid**](grid/grid.md), [**IgxHierarchicalGrid**](hierarchicalgrid/hierarchical-grid.md) and [**IgxTreeGrid**](treegrid/tree-grid.md).
-The exporting functionality is encapsulated in the [`IgxCsvExporterService`]({environment:angularApiUrl}/classes/igxcsvexporterservice.html) class.</p>
+The exporting functionality is encapsulated in the [`IgxCsvExporterService`]({environment:angularApiUrl}/classes/igxcsvexporterservice.html) class.
+</p>
 <div class="divider"></div>
 
 ## Angular CSV Exporter Example

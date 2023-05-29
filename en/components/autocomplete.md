@@ -1,14 +1,21 @@
 ---
-title: Angular Autocomplete Component – Ignite UI for Angular | Infragistics
-_description: The igxAutocomplete directive provides a way to enhance a text input by showing a panel of suggested options provided by the developer.
+title: Angular Autocomplete Component – Ignite UI for Angular
+_description: The Angular Autocomplete component offers a way to enhance a text input by showing a panel of suggested options provided by the developer. Try it now.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Autocomplete components, Angular Autocomplete directives, Angular Autocomplete controls
 ---
 
-# Autocomplete
-<p class="highlight">The [`igxAutocomplete`]({environment:angularApiUrl}/classes/igxautocompletedirective.html) directive provides a way to enhance a text input by showing an [`igxDropDown`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) with suggested options, provided by the developer. The suggestions will show once you start typing in the text input or use the `Arrow Up`/`Arrow Down` keys.</p>
+# Angular Autocomplete Overview
+Angular Autocomplete is a search box component that enables users to easily find, filter and select an item from a list of suggestions while they type. Feature-rich, it supports seamless data binding, filtering, grouping, UI customization options, and other built-in functionalities so developers can create intuitive autocomplete search experience.
+
+<p class="highlight">
+
+The [`igxAutocomplete`]({environment:angularApiUrl}/classes/igxautocompletedirective.html) directive provides a way to enhance a text input by showing an [`igxDropDown`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) with suggested options, provided by the developer. The suggestions will show once you start typing in the text input or use the `Arrow Up`/`Arrow Down` keys.
+</p>
 <div class="divider"></div>
 
 ## Angular Autocomplete Example
+
+The Angular Autocomplete example below generates a dropdown suggestion list as users start typing the name of a town in the input textbox. 
 
 <code-view style="height: 400px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -17,7 +24,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 <div class="divider--half"></div>
 
-## Usage
+## How To Use Angular Autocomplete With Ignite UI
 The first step is to import the **IgxAutocompleteModule** and **IgxDropDownModule** in our **app.module**. If [`igxAutocomplete`]({environment:angularApiUrl}/classes/igxautocompletedirective.html) is applied on an [igx-input]({environment:angularApiUrl}/classes/igxinputdirective.html), the **igxInputGroupModule** is also required:
 
 ```typescript
@@ -89,8 +96,8 @@ export class AutocompletePipeStartsWith implements PipeTransform {
 >[!NOTE]
 >The [`igxAutocomplete`]({environment:angularApiUrl}/classes/igxautocompletedirective.html) uses the [`igxDropDown`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) as a provider for the available options, which means that all capabilities of the dropdown component can be used in the autocomplete.
 
-### Disabled Autocomplete
-You can disable the autocomplete by using the [`IgxAutocompleteDisabled`]({environment:angularApiUrl}/classes/igxautocompletedirective.html#disabled) input:
+### Disable Angular Autocomplete
+You can disable the Angular autocomplete by using the [`IgxAutocompleteDisabled`]({environment:angularApiUrl}/classes/igxautocompletedirective.html#disabled) input:
 
 ```html
 <igx-input-group>
@@ -102,9 +109,9 @@ You can disable the autocomplete by using the [`IgxAutocompleteDisabled`]({envir
 ```
 
 ### Autocomplete Settings
-The `igx-autocomplete` dropdown positioning, scrolling strategy, and outlet can be configured using the [`IgxAutocompleteSettings`]({environment:angularApiUrl}/classes/igxautocompletedirective.html#autocompletesettings).
+The `igx-autocomplete` dropdown positioning, scrolling strategy, and outlet can be configured using the [`IgxAutocompleteSettings`]({environment:angularApiUrl}/classes/igxautocompletedirective.html#autocompleteSettings).
 
-In the following example we will position the dropdown above the input and disable the opening and closing animations. We're using the `ConnectedPositioningStrategy` for this:
+In the following Angular Material Autocomplete example we will position the dropdown above the input and disable the opening and closing animations. We're using the `ConnectedPositioningStrategy` for this:
 
 ```html
 <igx-input-group class="autocomplete">
@@ -186,7 +193,7 @@ If everything went right, you should see this in your browser:
  - <kbd>ESC</kbd> will close the dropdown.
 
 >[!NOTE]
->When the autocomplete opens, then the first item on the list is automatically selected. The same is valid when the list is filtered.
+>When the Angular autocomplete opens, then the first item on the list is automatically selected. The same is valid when the list is filtered.
 
 ## Compatibility support
 Applying the `igxAutocomplete` directive will decorate the element with the following ARIA attributes:

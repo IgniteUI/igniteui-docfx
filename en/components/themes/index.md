@@ -1,8 +1,8 @@
-<!-- --- -->
-<!-- title: Theming Component - Native Angular | Ignite UI for Angular -->
-<!-- _description: The Ignite UI for Angular Theming component was developed through SASS with a low-difficulty API that offers restyling of one component, multiple components, or the entire suite. -->
-<!-- _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components, Angular Theming Component, Angular Theming -->
-<!-- --- -->
+---
+title: Theming Engine - Angular | Ignite UI for Angular
+_description: The Ignite UI for Angular Theming engine was developed through SASS with a low-difficulty API that offers restyling of one component, multiple components, or the entire application.
+_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components, Angular Theming Engine, Angular Theming
+---
 
 # Theming
 Ignite UI for Angular allows you to modify the styles of all component themes using CSS variables. If you really wanted to dig deep, we provide a powerful Sass theming engine that allows you to create global component themes tailored to your specific design language that work in all modern browsers.

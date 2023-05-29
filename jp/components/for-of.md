@@ -23,7 +23,7 @@ _language: ja
 
 ### はじめに
 
-[`igxFor`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) ディレクティブは `NgModule` としてエクスポートされるため、アプリケーションで行う必要があるのは、`AppModule` に `IgxForOfModule` をインポートすることだけです。
+[`igxFor`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxForOf) ディレクティブは `NgModule` としてエクスポートされるため、アプリケーションで行う必要があるのは、`AppModule` に `IgxForOfModule` をインポートすることだけです。
 
 ```typescript
 // app.module.ts
@@ -78,7 +78,7 @@ export class AppModule {}
 </igx-list>
 ```
 
-***注:*** [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) テンプレートの親コンテナーには、次の CSS ルールが適用されていることを強く推奨します: 垂直方向には `height`、水平方向には `width`、`overflow: hidden` および ` position: relative`。スムーズ スクロール動作が、表示されたままの場合にページのその他の部分に視覚的に影響を与えることが可能なコンテンツ オフセットによって実装されるためです。
+***注:*** [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxForOf) テンプレートの親コンテナーには、次の CSS ルールが適用されていることを強く推奨します: 垂直方向には `height`、水平方向には `width`、`overflow: hidden` および ` position: relative`。スムーズ スクロール動作が、表示されたままの場合にページのその他の部分に視覚的に影響を与えることが可能なコンテンツ オフセットによって実装されるためです。
 
 ### 水平仮想化 
 
@@ -138,7 +138,7 @@ export class AppModule {}
 より詳細な情報とデモについては、[グリッド仮想化](grid/virtualization.md)トピックに従ってください。
 
 ### リモート サービスにバインドされる igxFor
-[`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) ディレクティブは、`Observable` プロパティ- `remoteData`を使用してリモート サービスにバインドできます。(次の例の場合) `chunkLoading` イベントも、データのリクエストをトリガーするために利用する必要があります。
+[`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxForOf) ディレクティブは、`Observable` プロパティ- `remoteData`を使用してリモート サービスにバインドできます。(次の例の場合) `chunkLoading` イベントも、データのリクエストをトリガーするために利用する必要があります。
 
 ```html
 <div style='height: 500px; overflow: hidden; position: relative;'>
@@ -154,7 +154,7 @@ export class AppModule {}
 </div>
 ```
 
-***注:*** [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) のインスタンスで [`totalItemCount`]({environment:angularApiUrl}/classes/igxforofdirective.html#totalitemcount) プロパティを設定する必要があります。
+***注:*** [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxForOf) のインスタンスで [`totalItemCount`]({environment:angularApiUrl}/classes/igxforofdirective.html#totalItemCount) プロパティを設定する必要があります。
 
 ```typescript
 this.virtDirRemote.totalItemCount = data['@odata.count'];
@@ -167,7 +167,7 @@ this.virtDirRemote.totalItemCount = data['@odata.count'];
 public virtDirRemote: IgxForOfDirective<any>;
 ```
 
-最初のチャンクをロードするリクエストの後、[`totalItemCount`]({environment:angularApiUrl}/classes/igxforofdirective.html#totalitemcount) を設定できます:
+最初のチャンクをロードするリクエストの後、[`totalItemCount`]({environment:angularApiUrl}/classes/igxforofdirective.html#totalItemCount) を設定できます:
 
 ```typescript
 public ngAfterViewInit() {
@@ -177,7 +177,7 @@ public ngAfterViewInit() {
 }
 ```
 
-データをリクエストする際、[`startIndex`]({environment:angularApiUrl}/classes/igxforofdirective.html#state.startindex) プロパティと [`chunkSize`]({environment:angularApiUrl}/classes/igxforofdirective.html#state.chunksize) プロパティを提供する [`IgxForOfState`]({environment:angularApiUrl}/classes/igxforofdirective.html#state) インターフェイスを利用できます。最初は chunkSize が 0 になるため、最初に読み込まれるチャンクのサイズを指定する必要があることに注意してください (最適な値は、初期の [`igxForContainerSize`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforcontainersize) を [`igxForItemSize`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforitemsize) で割った値です)。
+データをリクエストする際、[`startIndex`]({environment:angularApiUrl}/classes/igxforofdirective.html#state.startindex) プロパティと [`chunkSize`]({environment:angularApiUrl}/classes/igxforofdirective.html#state.chunkSize) プロパティを提供する [`IgxForOfState`]({environment:angularApiUrl}/classes/igxforofdirective.html#state) インターフェイスを利用できます。最初は chunkSize が 0 になるため、最初に読み込まれるチャンクのサイズを指定する必要があることに注意してください (最適な値は、初期の [`igxForContainerSize`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxForContainerSize) を [`igxForItemSize`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxForItemSize) で割った値です)。
 
 ```typescript
 public getData(data?: IForOfState, cb?: (any) => void): any {

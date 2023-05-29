@@ -24,7 +24,7 @@ _canonicalLink: grid/row-drag
 
 # Row Dragging in Angular @@igComponent
 
-In Ignite UI for Angular @@igComponent, **RowDrag** is initialized on the root `@@igSelector` component and is configurable via the [`rowDraggable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowdraggable) input. Enabling row dragging provides users with a row drag-handle with which they can initiate dragging of a row.
+In Ignite UI for Angular @@igComponent, **RowDrag** is initialized on the root `@@igSelector` component and is configurable via the [`rowDraggable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowDraggable) input. Enabling row dragging provides users with a row drag-handle with which they can initiate dragging of a row.
 
 ## Angular @@igComponent Row Drag Example
 
@@ -59,7 +59,7 @@ In Ignite UI for Angular @@igComponent, **RowDrag** is initialized on the root `
 
 ## Configuration
 
-In order to enable row-dragging for your `@@igSelector`, all you need to do is set the grid's [`rowDraggable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowdraggable) to **`true`**. Once this is enabled, a row-drag handle will be displayed on each row. This handle can be used to initiate row dragging.
+In order to enable row-dragging for your `@@igSelector`, all you need to do is set the grid's [`rowDraggable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowDraggable) to **`true`**. Once this is enabled, a row-drag handle will be displayed on each row. This handle can be used to initiate row dragging.
 
 ```html
 <@@igSelector [rowDraggable]="true">
@@ -286,7 +286,7 @@ The drag ghost can be templated on every grid level, making it possible to have 
 }
 
 ### Templating the drag icon
-The drag handle icon can be templated using the grid's [`dragIndicatorIconTemplate`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#dragindicatoricontemplate). In the example we're building, let's change the icon from the default one (`drag_indicator`) to `drag_handle`.
+The drag handle icon can be templated using the grid's [`dragIndicatorIconTemplate`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#dragIndicatorIconTemplate). In the example we're building, let's change the icon from the default one (`drag_indicator`) to `drag_handle`.
 To do so, we can use the `igxDragIndicatorIcon` to pass a template inside of the `@@igSelector`'s body:
 ```html
 <@@igSelector>
@@ -404,17 +404,20 @@ Since all of the actions will be happening _inside_ of the grid's body, that's w
 ```
 }
 @@if (igxName === 'IgxTreeGrid') {
-<igx-tree-grid igxPreventDocumentScroll  #treeGrid [data]="localData" childDataKey="Employees" [rowDraggable]="true" foreignKey="ParentID"
+```html
+<igx-tree-grid igxPreventDocumentScroll  #treeGrid [data]="localData" [rowDraggable]="true" foreignKey="ParentID"
     [primaryKey]="'ID'" (rowDragStart)="rowDragStart($event)" igxDrop (dropped)="dropInGrid($event)">
     ...
 </igx-tree-grid>
-    
+```
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+```html
 <igx-hierarchical-grid #grid [data]="localData" [primaryKey]="'id'"
     [rowDraggable]="true" (rowDragStart)="rowDragStart($event)" igxDrop (dropped)="rowDrop($event)">
     ...
 </igx-hierarchical-grid>
+```
 }
 
 
@@ -650,7 +653,7 @@ class MyRowGhostComponent {
 }
 ```
 
-Finally, we create a method that will be used to handle the [`IgxDragDirective.dragMove`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragmove) event (emitted for the dragged row). The method will change the value of the property used in the `igxRowDragGhost` template and force a rerender.
+Finally, we create a method that will be used to handle the [`IgxDragDirective.dragMove`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragMove) event (emitted for the dragged row). The method will change the value of the property used in the `igxRowDragGhost` template and force a rerender.
 We want to subscribe to the `dragMove` event only of the specific row we're dragging and unsub from it (to prevent memory leaks) each time a row is dropped.
 
 ```typescript
@@ -702,7 +705,7 @@ class MyRowGhostComponent {
 
 In the demo in the next section you see how you can display an indicator of where the dragged row would be dropped. You can customize this indicator as you like - it may be a placeholder row, placed at the position where the dragged row would be dropped, a border style indicating if the dragged row would be dropped above or below the currently hovered row, etc.
 
-In order to track the position of the cursor, we bind to the `dragMove` event of the [`IgxDragDirective`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragmove) when we start dragging a row.
+In order to track the position of the cursor, we bind to the `dragMove` event of the [`IgxDragDirective`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragMove) when we start dragging a row.
 
 > [!NOTE]
 > Make sure that there is a `primaryKey` specified for the grid! The logic needs an unique identifier for the rows so they can be properly reordered
@@ -859,7 +862,7 @@ Currently, there are no known limitations for the `rowDraggable` directive.
 
 ## API References
 
-* [rowDraggable]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowdraggable)
+* [rowDraggable]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowDraggable)
 * [rowDragStart]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowDragStart)
 * [rowDragEnd]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowDragEnd)
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)

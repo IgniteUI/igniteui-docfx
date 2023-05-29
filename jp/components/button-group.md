@@ -70,6 +70,7 @@ export class AppModule {}
 //sample.component.ts
 import { ButtonGroupAlignment } from 'igniteui-angular';
 // import { ButtonGroupAlignment } from '@infragistics/igniteui-angular'; for licensed package
+
 ...
 public alignment = ButtonGroupAlignment.vertical;
 ...
@@ -94,7 +95,7 @@ public alignment = ButtonGroupAlignment.vertical;
 <div class="divider--half"></div>
 
 ### 複数選択
-[`multiSelection`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#multiselection) プロパティを使用して、ボタン グループ内のボタンの複数選択を有効/無効化します。
+[`multiSelection`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#multiSelection) プロパティを使用して、ボタン グループ内のボタンの複数選択を有効/無効化します。
 
 ```html
 <!-- sample.component.html -->
@@ -119,7 +120,7 @@ public alignment = ButtonGroupAlignment.vertical;
 
 
 ### 表示密度
-[`displayDensity`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#displaydensity) プロパティを使用して、ボタン グループの表示密度を制御します。これにより、グループ内のボタンのスタイルが、最大、最小、または標準 (デフォルト値) に設定されます。
+[`displayDensity`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#displayDensity) プロパティを使用して、ボタン グループの表示密度を制御します。これにより、グループ内のボタンのスタイルが、最大、最小、または標準 (デフォルト値) に設定されます。
 
 > [!NOTE] 
 > ボタン グループ内のボタンの表示密度は、明示的に指定されている場合は変更されません。
@@ -287,6 +288,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 
 
 <code-view style="height: 200px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-entries/button-group-style" >
 </code-view>
@@ -305,7 +307,6 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 * [IgxButton テーマ]({environment:sassApiUrl}/index.html#function-button-theme)
 * [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-ripple-theme)
 
-
 ## その他のリソース
 <div class="divider--half"></div>
 
@@ -313,3 +314,4 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 
 * [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+

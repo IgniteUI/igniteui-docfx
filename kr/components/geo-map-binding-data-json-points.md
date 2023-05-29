@@ -8,14 +8,16 @@ mentionedTypes: ['XamGeographicMap', 'ShapefileConverter']
 
 # Angular Binding JSON Files with Geographic Locations
 
-With [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html), you can plot geographic data loaded from various file types. For example, you can load geographic locations from JavaScript Object Notation (JSON) file.
+With [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicmapcomponent.html), you can plot geographic data loaded from various file types. For example, you can load geographic locations from JavaScript Object Notation (JSON) file.
 
 ## Demo
 
-<code-view style="height: 400px"
+<code-view style="height: 400px" alt="Angular geo map binding data json points"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-binding-data-json-points"  >
+                    iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map/binding-data-json-points"
+                                                 github-src="maps/geo-map/binding-data-json-points">
 </code-view>
+
 
 <div class="divider--half"></div>
 
@@ -34,4 +36,4 @@ Here is an example of data from JSON file:
 
 ## Code Snippet
 
-The following code loads and binds [`IgxGeographicHighDensityScatterSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html) in the map component to an array of objects created from loaded JSON file with geographic locations:
+The following code loads and binds [`IgxGeographicHighDensityScatterSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographichighdensityscatterseriescomponent.html) in the map component to an array of objects created from loaded JSON file with geographic locations:

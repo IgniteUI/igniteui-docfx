@@ -8,27 +8,16 @@ _language: ja
 
 # Angular 地理シェイプ シリーズのスタイル設定
 
-このトピックでは、Angular [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html) で [`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html) にカスタム スタイリングを適用する方法を説明します。
+このトピックでは、Angular [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicmapcomponent.html) で [`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicshapeseriescomponent.html) にカスタム スタイリングを適用する方法を説明します。
 
 ## Angular 地理シェイプ シリーズのスタイル設定の例
 
-<code-view style="height: 500px"
+<code-view style="height: 500px" alt="Angular 地理シェイプ シリーズのスタイル設定の例"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-shape-styling"
-           alt="Angular 地理シェイプ シリーズのスタイル設定の例"
-           github-src="maps/geo-map/map-shape-styling">
+                    iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map/shape-styling"
+                                                 github-src="maps/geo-map/shape-styling">
 </code-view>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <body>
-      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/maps/geo-map/map-shape-styling?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
-        </a>
-        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/maps/geo-map/map-shape-styling?file=src%2Fapp.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
-        </a>
-    </body>
-</html>
 
 <div class="divider--half"></div>
 
@@ -45,10 +34,10 @@ import { IgxShapefileRecord } from 'igniteui-angular-core';
 
 次のコード例は、シェイプ スタイリングを設定する 4 つの異なる方法を提供する[シェイプ スタイリング ユーティリティ](geo-map-resources-shape-styling-utility.md) ファイルを使用していることに注意してください。
 
--   [シェイプ比較スタイリング](#シェイプ比較スタイリング)
--   [シェイプ ランダム スタイリング](#シェイプ-ランダム-スタイリング)
--   [シェイプ範囲スタイリング](#シェイプ範囲スタイリング)
--   [シェイプ スケール スタイリング](#シェイプ-スケール-スタイリング)
+*   [シェイプ比較スタイリング](#シェイプ比較スタイリング)
+*   [シェイプ ランダム スタイリング](#シェイプ-ランダム-スタイリング)
+*   [シェイプ範囲スタイリング](#シェイプ範囲スタイリング)
+*   [シェイプ スケール スタイリング](#シェイプ-スケール-スタイリング)
 
 ## シェイプ ランダム スタイリング
 
@@ -179,7 +168,7 @@ public onStylingShape(s: IgxGeographicShapeSeries, args: IgxStyleShapeEventArgs)
 }
 ```
 
-## API メンバー
+## API リファレンス
 
--   [`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html)
--   [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html)
+*   [`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicshapeseriescomponent.html)
+*   [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicmapcomponent.html)

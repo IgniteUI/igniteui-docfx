@@ -82,7 +82,7 @@ public showMessage() {
 ## Examples
 
 ### Hide/Auto Hide
-Once opened, the toast disappears after a period specified by the [`displayTime`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#displaytime) input which is set initially to 4000 milliseconds. This behavior is enabled by default but you can change this by setting [`autoHide`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#autohide) to **false**. This way, the toast remains visible. Using the toast [`close()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#close) method, you can close the component.
+Once opened, the toast disappears after a period specified by the [`displayTime`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#displayTime) input which is set initially to 4000 milliseconds. This behavior is enabled by default but you can change this by setting [`autoHide`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#autoHide) to **false**. This way, the toast remains visible. Using the toast [`close()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#close) method, you can close the component.
 
 ```html
 <!--sample.component.html-->
@@ -101,7 +101,7 @@ In the other two components you can see in action how to pass different messages
 </code-view>
 
 ### Display Time
-Use [`displayTime`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#displaytime) and set it to an interval in milliseconds to configure how long the toast component is visible.
+Use [`displayTime`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#displayTime) and set it to an interval in milliseconds to configure how long the toast component is visible.
 
 ```html
 <!--sample.component.html-->
@@ -279,6 +279,7 @@ $custom-toast-theme: toast-theme(
 Don't forget to include the themes in the same way as it was demonstrated above.
 
 <code-view style="height: 600px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/notifications/toast-style" >
 </code-view>

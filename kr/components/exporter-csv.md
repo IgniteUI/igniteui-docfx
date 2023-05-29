@@ -8,8 +8,10 @@ _language: kr
 ## CSV Exporter
 
 <p class="highlight">
+
 The IgniteUI CSV Exporter service can export data in a Character Separated Values format from both raw data (array) or from an [**IgxGrid**](grid/grid.md).
-The exporting functionality is encapsulated in the [`IgxCsvExporterService`]({environment:angularApiUrl}/classes/igxcsvexporterservice.html) class.</p>
+The exporting functionality is encapsulated in the [`IgxCsvExporterService`]({environment:angularApiUrl}/classes/igxcsvexporterservice.html) class.
+</p>
 <div class="divider"></div>
 
 ### CSV Exporter Demo

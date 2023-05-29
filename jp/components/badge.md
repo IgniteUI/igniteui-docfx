@@ -41,13 +41,8 @@ export class AppModule {}
 ```typescript
 // app.module.ts
 ...
-import {
-  IgxBadgeModule,
-  IgxAvatarModule
-} from 'igniteui-angular';
-// import { 
-//   IgxBadgeModule,
-//   IgxAvatarModule } from '@infragistics/igniteui-angular'; for licensed package
+import { IgxBadgeModule, IgxAvatarModule } from 'igniteui-angular';
+// import {  IgxBadgeModule, IgxAvatarModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
   ...
@@ -62,7 +57,7 @@ export class AppModule {}
 
 ```html
 <div class="wrapper">
-    <igx-avatar icon="person" roundShape="true" size="small"></igx-avatar>
+    <igx-avatar icon="person" shape="circle" size="small"></igx-avatar>
     <igx-badge icon="check" type="success"></igx-badge>
 </div>
 ```
@@ -82,7 +77,15 @@ igx-badge {
 }
 ```
 
-すべて適切に設定すると、ブラウザ上でデモサンプルを確認することができます。
+### Badge の形状
+
+`shape` 属性の値を `square` に設定することで、バッジの形状を変更できます。デフォルトでは、バッジの形状は `rounded` です。
+
+```html
+<igx-badge icon="check" type="success" shape="square"></igx-badge>
+```
+
+すべて適切に設定すると、ブラウザ上で以上のデモ サンプルを確認することができます。
 
 ### リストのバッジ
 
@@ -99,11 +102,7 @@ import {
     IgxAvatarModule,
     IgxBadgeModule
 } from 'igniteui-angular';
-// import { 
-//    IgxListModule,
-//    IgxAvatarModule,
-//    IgxBadgeModule
-// } from '@infragistics/igniteui-angular'; for licensed package
+// import { IgxListModule, IgxAvatarModule, IgxBadgeModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -129,7 +128,7 @@ export class AppModule {}
   <igx-list-item *ngFor="let member of members">
     <div class="wrapper">
       <div>
-        <igx-avatar icon="person" roundShape="true" size="small"></igx-avatar>
+        <igx-avatar icon="person" shape="circle" size="small"></igx-avatar>
         <igx-badge [icon]="member.icon" [type]="member.type" class="badge-style"></igx-badge>
       </div>
       <div class="contact-container">
@@ -146,12 +145,12 @@ export class AppModule {}
 // contacts.component.ts
 
 ...
-public members: Member[] = [
-  new Member('Terrance Orta', 'online'),
-  new Member('Donna Price', 'online'),
-  new Member('Lisa Landers', 'away'),
-  new Member('Dorothy H. Spencer', 'offline'),
-];
+ public members: Member[] = [
+    new Member('Terrance Orta', 'online'),
+    new Member('Donna Price', 'online'),
+    new Member('Lisa Landers', 'away'),
+    new Member('Dorothy H. Spencer', 'offline'),
+  ];
 
 ```
 
@@ -213,12 +212,10 @@ class Member {
 
 サンプルを正しく構成すると、アバターと、その状態を示すバッジとともにメンバーのリストが表示されます。
 
-
 <code-view style="height: 280px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-display/badge-sample-3" >
 </code-view>
-
 
 ## スタイル設定
 
@@ -286,8 +283,8 @@ $custom-badge-theme: badge-theme(
 
 ### デモ
 
-
 <code-view style="height:340px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-display/badge-styling-sample" >
 </code-view>
@@ -306,11 +303,9 @@ $custom-badge-theme: badge-theme(
 ## テーマの依存関係
 * [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-icon-theme)
 
-
 ## その他のリソース
 <div class="divider--half"></div>
 
 コミュニティに参加して新しいアイデアをご提案ください。
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular) 
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular) 
-
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

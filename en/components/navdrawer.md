@@ -158,7 +158,7 @@ Unpinned (elevated above the content) mode is the normal behavior where the draw
 The drawer can be pinned to take advantage of larger screens, placing it within normal content flow with relative position. Depending on whether the app provides a way to toggle the drawer, the pinned mode can be used to achieve either [permanent or persistent behavior](https://material.io/guidelines/patterns/navigation-drawer.html#navigation-drawer-behavior).
 
 > [!NOTE]
-> By default the Navigation Drawer is responsive, actively changing between unpinned and pinned mode based on screen size. This behavior is controlled by the [`pinThreshold`]({environment:angularApiUrl}/classes/igxnavigationdrawercomponent.html#pinthreshold) property and can be disabled by setting a falsy value (e.g. 0).
+> By default the Navigation Drawer is responsive, actively changing between unpinned and pinned mode based on screen size. This behavior is controlled by the [`pinThreshold`]({environment:angularApiUrl}/classes/igxnavigationdrawercomponent.html#pinThreshold) property and can be disabled by setting a falsy value (e.g. 0).
 
 
 ### Pinned (persistent) setup
@@ -441,6 +441,7 @@ If `$legacy-support` is set to `false`(default), include the component **css var
 
 
 <code-view style="height: 400px; border: 1px solid #D4D4D4;" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/menus/navigation-drawer-styling" >
 </code-view>

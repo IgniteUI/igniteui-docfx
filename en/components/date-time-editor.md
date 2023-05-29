@@ -36,7 +36,7 @@ import { IgxDateTimeEditorModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-To use an input as a date time editor, set an igxDateTimeEditor directive and a valid date object as value. In order to have complete editor look and feel, wrap the input in an [input group](input-group.md). This will allow you to not only take advantage of the following directives [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html), [`igxLabel`]({environment:angularApiUrl}/classes/igxlabeldirective.html), [`igxPrefix`](input-group.md#prefix--suffix), [`igxSuffix`](input-group.md#prefix--suffix), [`igx-hint`]({environment:angularApiUrl}/classes/igxhintdirective.html), but will cover common scenarios when dealing with form inputs as well.
+To use an input as a date time editor, set an igxDateTimeEditor directive and a valid date object as value. In order to have complete editor look and feel, wrap the input in an [igx-input-group](input-group.md). This will allow you to not only take advantage of the following directives [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html), [`igxLabel`](label-input.md), [`igx-prefix`](input-group.md#prefix--suffix), [`igx-suffix`](input-group.md#prefix--suffix), [`igx-hint`](input-group.md#hints), but will cover common scenarios when dealing with form inputs as well.
 
 ### Binding
 A basic configuration scenario setting a Date object as a [`value`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#value):
@@ -64,7 +64,7 @@ The `IgxDateTimeEditorDirective` accepts an [`ISO 8601`](https://tc39.es/ecma262
 The string can be a full `ISO` string, in the format `YYYY-MM-DDTHH:mm:ss.sssZ` or it could be separated into date-only and time-only portions.
 
 ##### Date-only
-If a date-only string is bound to the directive, it needs to follow the format - `YYYY-MM-DD`. This applies only when binding a string value to the directive, the [`inputFormat`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#inputformat) is still used when typing values in the editor and it does not have to be in the same format. Additionally, when binding a date-only string, the directive will prevent time shifts by coercing the time to be `T00:00:00`.
+If a date-only string is bound to the directive, it needs to follow the format - `YYYY-MM-DD`. This applies only when binding a string value to the directive, the [`inputFormat`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#inputFormat) is still used when typing values in the editor and it does not have to be in the same format. Additionally, when binding a date-only string, the directive will prevent time shifts by coercing the time to be `T00:00:00`.
 
 ##### Time-only
 Time-only strings are normally not defined in the `ECMA` specification, however to allow the directive to be integrated in scenarios which require time-only solutions, it supports the 24 hour format - `HH:mm:ss`. The 12 hour format is not supported. Please also note that this applies for _bound values only_.
@@ -79,7 +79,7 @@ Date Time Editor Directive has intuitive keyboard navigation that makes it easy 
 
 - <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>Arrow Left</kbd> / <kbd>Right</kbd> - navigates between date sections. On <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>Right</kbd> it goes to the end of the section. If already there it goes to the end of next section if any. It works in a similar fashion in the opposite direction.
 
-- <kbd>Arrow Up</kbd> / <kbd>Down</kbd> - increment/decrement date portions. See related [`spinLoop`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#spinloop)
+- <kbd>Arrow Up</kbd> / <kbd>Down</kbd> - increment/decrement date portions. See related [`spinLoop`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#spinLoop)
 
 - <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>;</kbd> - set the current day and time in the editor.
 
@@ -88,9 +88,9 @@ Date Time Editor Directive has intuitive keyboard navigation that makes it easy 
 ### Display and input format
 The [`IgxDateTimeEditor`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html) supports different display and input formats.
 
-It uses Angular's [`DatePipe`](https://angular.io/api/common/DatePipe), which allows it to support predefined format options, such as `shortDate` and `longDate`. It can also accept a constructed format string using characters supported by the `DatePipe`, e.g. `EE/MM/yyyy`. Notice that formats like `shortDate`, `longDate`, etc., can be used as [`displayFormat`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#displayformat) only. Also, if no [`displayFormat`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#displayformat) is provided, the editor will use the [`inputFormat`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#inputformat) as its [`displayFormat`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#displayformat).
+It uses Angular's [`DatePipe`](https://angular.io/api/common/DatePipe), which allows it to support predefined format options, such as `shortDate` and `longDate`. It can also accept a constructed format string using characters supported by the `DatePipe`, e.g. `EE/MM/yyyy`. Notice that formats like `shortDate`, `longDate`, etc., can be used as [`displayFormat`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#displayFormat) only. Also, if no [`displayFormat`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#displayFormat) is provided, the editor will use the [`inputFormat`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#inputformat) as its [`displayFormat`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#displayFormat).
 
-To set a specific input format, pass it as a string to the IgxDateTimeEditor directive. This will set both the expected user input format and the [mask](mask.md) for the editor. Additionally, the [`inputFormat`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#inputformat) is locale based, so if none is provided, the editor will default to the one used by the browser.
+To set a specific input format, pass it as a string to the IgxDateTimeEditor directive. This will set both the expected user input format and the [mask](mask.md) for the editor. Additionally, the [`inputFormat`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#inputFormat) is locale based, so if none is provided, the editor will default to the one used by the browser.
 
 ```html
 <igx-input-group>
@@ -98,7 +98,7 @@ To set a specific input format, pass it as a string to the IgxDateTimeEditor dir
 </igx-input-group>
 ```
 
-The table bellow shows formats that are supported by the directive's [`inputFormat`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#inputformat):
+The table bellow shows formats that are supported by the directive's [`inputFormat`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#inputFormat):
 | Format | Description |
 |:-------:|:-----------|
 | `d` | Date, will be coerced with a leading zero while editing. |
@@ -118,7 +118,7 @@ The table bellow shows formats that are supported by the directive's [`inputForm
 > Note: The `IgxDateTimeEditorDirective` directive supports IME input. When typing in an Asian language input, the control will display input method compositions and candidate lists directly in the control’s editing area, and immediately re-flow surrounding text as the composition ends.
 
 ### Min max value
-You can specify [`minValue`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#minvalue) and [`maxValue`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#maxvalue) properties to restrict input and control the validity of the ngModel.
+You can specify [`minValue`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#minValue) and [`maxValue`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#maxValue) properties to restrict input and control the validity of the ngModel.
 ```typescript
 public minDate = new Date(2020, 1, 15);
 public maxDate = new Date(2020, 11, 1);
@@ -130,12 +130,12 @@ public maxDate = new Date(2020, 11, 1);
 </igx-input-group>
 
 ```
-The [`minValue`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#minvalue) and [`minValue`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#maxvalue) inputs can also be of type `string`, see [Binding to ISO strings](#iso).
+The [`minValue`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#minValue) and [`minValue`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#minValue) inputs can also be of type `string`, see [Binding to ISO strings](#iso).
 
 ### <a name="increment-decrement">Increment and decrement </a>
 [`igxDateTimeEditor`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html) directive exposes public [`increment`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#increment) and [`decrement`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#decrement) methods. They increment or decrement a specific [`DatePart`]({environment:angularApiUrl}/enums/datepart.html) of the currently set date and time and can be used in a couple of ways.
 
-In the first scenario, if no specific [`DatePart`]({environment:angularApiUrl}/enums/datepart.html) is passed to the method, a default [`DatePart`]({environment:angularApiUrl}/enums/datepart.html) will increment or decrement, based on the specified [`inputFormat`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#inputformat) and the internal directive implementation. In the second scenario, you can explicitly specify what [`DatePart`]({environment:angularApiUrl}/enums/datepart.html) to manipulate as it may suite different requirements.
+In the first scenario, if no specific [`DatePart`]({environment:angularApiUrl}/enums/datepart.html) is passed to the method, a default [`DatePart`]({environment:angularApiUrl}/enums/datepart.html) will increment or decrement, based on the specified [`inputFormat`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#inputFormat) and the internal directive implementation. In the second scenario, you can explicitly specify what [`DatePart`]({environment:angularApiUrl}/enums/datepart.html) to manipulate as it may suite different requirements.
 Also, both methods accept an optional `delta` parameter of type `number` which can be used to set the increment/decrement step.
 
 You may compare both in the following sample:

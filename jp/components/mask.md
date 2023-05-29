@@ -75,7 +75,7 @@ export class AppModule {}
 > 注: `IgxMaskDirective` は IME 入力をサポートし、合成が終了するとマスクを更新します。
 
 ### 書式設定付き/Raw 値にバインド
-[`includeLiterals`]({environment:angularApiUrl}/classes/igxmaskdirective.html#includeliterals) 入力を使用して、指定したマスクが適用される場合にフォームにバインドする入力値 (書式設定付きまたは Raw) を構成します。デフォルトで [`includeLiterals`]({environment:angularApiUrl}/classes/igxmaskdirective.html#includeliterals) が *false* に設定し、Raw 値が使用されます。
+[`includeLiterals`]({environment:angularApiUrl}/classes/igxmaskdirective.html#includeLiterals) 入力を使用して、指定したマスクが適用される場合にフォームにバインドする入力値 (書式設定付きまたは Raw) を構成します。デフォルトで [`includeLiterals`]({environment:angularApiUrl}/classes/igxmaskdirective.html#includeLiterals) が *false* に設定し、Raw 値が使用されます。
 
 ```html
 <!--sample.component.html-->
@@ -165,7 +165,7 @@ private notify(snackbar, message, input) {
 ### テキスト選択
 [`igxTextSelection`]({environment:angularApiUrl}/classes/igxtextselectiondirective.html) を使用して、フォーカスがあるコンポーネントにすべての入力テキストを選択させることができます。[Label および Input](label-input.md#フォーカスとテキストの選択) で `igxTextSelection` の詳細情報を参照してください。
 
-**app.module.ts** ファイルに  `IgxToastModule` をインポートします:
+**app.module.ts** ファイルに `IgxToastModule` をインポートします:
 
 ```typescript
 ...
@@ -194,7 +194,7 @@ export class AppModule {}
 >コンポーネントが正しく動作するためには、`igxMask` ディレクティブの後に `igxTextSelection` を設定することが重要です。これは、両方のディレクティブが入力 `focus` イベントで動作するため、マスクが設定された後にテキスト選択が行われるからです。
 
 ### focus と blur に追加の書式を適用
-デフォルトの mask 動作に加え、カスタムパイプを実装して [`focusedValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#focusedvaluepipe) や [`displayValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#displayvaluepipe) 入力プロパティで入力がフォーカスを get または lost した場合に値を必要なアウトプットへ変換できます。基になるモデル値に影響はありません。以下はその方法です。
+デフォルトの mask 動作に加え、カスタムパイプを実装して [`focusedValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#focusedValuePipe) や [`displayValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#displayValuePipe) 入力プロパティで入力がフォーカスを get または lost した場合に値を必要なアウトプットへ変換できます。基になるモデル値に影響はありません。以下はその方法です。
 
  表示値の最後に '%' サインを追加または削除する 2 つのパイプを実装します。
 ```typescript
@@ -213,7 +213,7 @@ export class InputFormatPipe implements PipeTransform {
 }
 ```
 
-[`focusedValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#focusedvaluepipe) や [`displayValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#displayvaluepipe) 入力プロパティに各パイプのインスタンスを渡します。
+[`focusedValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#focusedValuePipe) や [`displayValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#displayValuePipe) 入力プロパティに各パイプのインスタンスを渡します。
 
 ```typescript
 public value = 100;

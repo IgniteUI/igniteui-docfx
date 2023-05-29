@@ -48,7 +48,7 @@ To have a better understanding how everything works, let's create a simple examp
 After that, we should have the demo sample in your browser.
 
 >[!NOTE]
->The **igx-circular-bar** emits [`onProgressChanged`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#onprogresschanged) event that outputs an object like this `{currentValue: 65, previousValue: 64}` on each step.
+>The **igx-circular-bar** emits [`onProgressChanged`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#onProgressChanged) event that outputs an object like this `{currentValue: 65, previousValue: 64}` on each step.
 
 > [!NOTE]
 > The default progress increments by **1% of the [`max`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#max) value** per update cycle, this happens if the [`step`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#step) value is not defined. To change the update rate, the [`step`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#step) value should be defined.```
@@ -67,7 +67,7 @@ If you want to track a process that is not determined precisely, you can set the
 ```
 
 >[!NOTE]
->You can hide the text of the circular progress bar by setting the [`textVisibility`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#textvisibility) property to `false`.
+>You can hide the text of the circular progress bar by setting the [`textVisibility`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#textVisibility) property to `false`.
 
 The final result should be:
 
@@ -262,6 +262,7 @@ If `$legacy-support` is set to `false`(default), include the component **css var
 <div class="divider--half"></div>
 
 <code-view style="height:100px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-display/circular-styling-sample" >
 </code-view>

@@ -130,6 +130,7 @@ When `$legacy-support` is set to `true`, include the component theme like this:
 
 
 <code-view style="height: 400px;" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/menus/action-strip-styling" >
 </code-view>
@@ -148,8 +149,8 @@ The following built-in CSS styles helped us achieve this Action Strip layout:
 Additional components and/or directives that can be used within the Action Strip:
 
 * [`IgxGridActionsBaseDirective `]({environment:angularApiUrl}/classes/igxgridactionsbasedirective.html)
-* [`IgxGridPinningActionsComponent`]({environment:angularApiUrl}/classes/igxpinningactionscomponent.html)
-* [`IgxGridEditingActionsComponent`]({environment:angularApiUrl}/classes/igxeditingactionscomponent.html)
+* [`IgxGridPinningActionsComponent`]({environment:angularApiUrl}/classes/igxgridpinningactionscomponent.html)
+* [`IgxGridEditingActionsComponent`]({environment:angularApiUrl}/classes/igxgrideditingactionscomponent.html)
 * [`IgxDividerDirective`]({environment:angularApiUrl}/classes/igxdividerdirective.html)
 
 

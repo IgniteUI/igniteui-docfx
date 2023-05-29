@@ -23,7 +23,7 @@
   href: general/update-guide.md
   new: false
   updated: true
-- name: SSR レンダリング
+- name: サーバー側レンダリング (SSR)
   href: general/ssr-rendering.md
   new: false
 - name: データ分析
@@ -42,6 +42,12 @@
     - name: IgxGrid を使用して CRUD 操作の構築
       href: general/how-to/how-to-perform-crud.md
       new: false
+    - name: テーマのカスタマイズと最適化
+      href: general/how-to/how-to-customize-theme.md
+      new: true
+    - name: スタンドアロン コンポーネントの使用方法
+      href: general/how-to/how-to-use-standalone-components.md
+      preview: true
 - name: Angular Schematics & Ignite UI CLI
   href: general/cli-overview.md
   sortable: false
@@ -146,6 +152,9 @@
           new: false
         - name: 検証
           href: grid/validation.md
+          new: true
+        - name: カスケード コンボを使用したグリッド
+          href: grid/cascading-combos.md
           new: true
     - name: 行ドラッグ
       href: grid/row-drag.md
@@ -545,7 +554,7 @@
       href: pivotgrid/pivot-grid-custom.md
       new: true
     - name: 状態保持
-      href: pivotGrid/state-persistence.md
+      href: pivotgrid/state-persistence.md
       new: true
 - name: Tree
   href: tree.md
@@ -664,7 +673,7 @@
   new: false
 - name: チャート機能
   href: charts/chart-features.md
-  new: false
+  updated: true
   items:
     - name: 軸グリッド線
       href: charts/features/chart-axis-gridlines.md
@@ -681,15 +690,18 @@
     - name: チャートの注釈
       href: charts/features/chart-annotations.md
       new: false
+    - name: チャートのデータ集計
+      href: charts/features/chart-data-aggregations.md
+      new: true
     - name: チャート データ凡例
       href: charts/features/chart-data-legend.md
-      new: true
+      new: false
     - name: チャート データ ツールチップ
       href: charts/features/chart-data-tooltip.md
-      new: true
+      new: false
     - name: チャート強調表示
       href: charts/features/chart-highlighting.md
-      updated: true
+      new: false
     - name: チャート マーカー
       href: charts/features/chart-markers.md
       new: false
@@ -715,6 +727,7 @@
       href: zoomslider-overview.md
       new: false
 - name: マップ
+  href: geo-map.md
   header: true
 - name: 地理エリア マップ
   href: geo-map-type-scatter-area-series.md
@@ -923,6 +936,9 @@
     - name: 仮想ドロップダウン
       href: drop-down-virtual.md
       new: false
+    - name: 複数選択の階層ドロップダウン
+      href: drop-down-hierarchical-selection.md
+      new: true
 - name: Select
   href: select.md
   new: false

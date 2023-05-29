@@ -8,27 +8,16 @@ _language: kr
 
 # Angular Shape Styling on Geographic Shape Series
 
-This topic explains how to apply custom styling to the [`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html) in the Angular [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html).
+This topic explains how to apply custom styling to the [`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicshapeseriescomponent.html) in the Angular [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicmapcomponent.html).
 
 ## Angular Shape Styling on Geographic Shape Series Example
 
-<code-view style="height: 500px"
+<code-view style="height: 500px" alt="Angular Shape Styling on Geographic Shape Series Example"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-shape-styling"
-           alt="Angular Shape Styling on Geographic Shape Series Example"
-           github-src="maps/geo-map/map-shape-styling">
+                    iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map/shape-styling"
+                                                 github-src="maps/geo-map/shape-styling">
 </code-view>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <body>
-      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/maps/geo-map/map-shape-styling?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
-        </a>
-        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/maps/geo-map/map-shape-styling?file=src%2Fapp.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
-        </a>
-    </body>
-</html>
 
 <div class="divider--half"></div>
 
@@ -45,10 +34,10 @@ import { IgxShapefileRecord } from 'igniteui-angular-core';
 
 Note that the following code examples are using the [Shape Styling Utility](geo-map-resources-shape-styling-utility.md) file that provides four different ways of styling shapes:
 
--   [Shape Comparison Styling](#shape-comparison-styling)
--   [Shape Random Styling](#shape-random-styling)
--   [Shape Range Styling](#shape-range-styling)
--   [Shape Scale Styling](#shape-scale-styling)
+*   [Shape Comparison Styling](#shape-comparison-styling)
+*   [Shape Random Styling](#shape-random-styling)
+*   [Shape Range Styling](#shape-range-styling)
+*   [Shape Scale Styling](#shape-scale-styling)
 
 ## Shape Random Styling
 

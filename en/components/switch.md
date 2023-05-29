@@ -94,7 +94,7 @@ And the final result should be something like that:
 
 ### Label Positioning
 
-You can position the label using the switch's [`labelPosition`]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html#labelposition) property:
+You can position the label using the switch's [`labelPosition`]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html#labelPosition) property:
 
 ```html
 <igx-switch labelPosition="before"></igx-switch>
@@ -165,6 +165,7 @@ If `$legacy-support` is set to `false`(default), include the component **css var
 
 
 <code-view style="height: 200px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-entries/switch-styling" >
 </code-view>

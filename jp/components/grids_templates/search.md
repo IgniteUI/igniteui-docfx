@@ -130,9 +130,9 @@ public exactMatch: boolean = false;
 
 ### Angular 検索入力ボックス
 
-検索入力を作成します。**searchText** を ngModel として新しく作成した入力へバインドして ngModelChange イベントにサブスクライブします。ユーザーによる各 **searchText** のすべての変更を検出できます。これによって @@igComponent の [`findNext`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findnext) と [`findPrev`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findprev) メソッドを使用して searchText のすべての出現を強調し、次へまたは前 (呼び出すメソッドに基づいて) へスクロールできます。
+検索入力を作成します。**searchText** を ngModel として新しく作成した入力へバインドして ngModelChange イベントにサブスクライブします。ユーザーによる各 **searchText** のすべての変更を検出できます。これによって @@igComponent の [`findNext`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findNext) と [`findPrev`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findPrev) メソッドを使用して searchText のすべての出現を強調し、次へまたは前 (呼び出すメソッドに基づいて) へスクロールできます。
 
-[`findNext`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findnext) と [`findPrev`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findprev) メソッドの両方に 3 つの引数があります。
+[`findNext`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findNext) と [`findPrev`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findPrev) メソッドの両方に 3 つの引数があります。
 - `text`: **string** (検索テキスト)
 - (オプション) `caseSensitive`: **boolean** (検索で完全一致するかどうか、デフォルト値は false)。
 - (オプション) `exactMatch`: **boolean** (検索で完全一致するかどうか、デフォルト値は false)。
@@ -168,7 +168,7 @@ public exactMatch: boolean = false;
 
 ### 検索ボタンの追加
 
-ボタンの各クリック イベント ハンドラー内で [`findNext`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findnext) と [`findPrev`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findprev) メソッドを呼び出して検索や検索結果をナビゲーションするためのボタンを作成します。
+ボタンの各クリック イベント ハンドラー内で [`findNext`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findNext) と [`findPrev`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findPrev) メソッドを呼び出して検索や検索結果をナビゲーションするためのボタンを作成します。
 
 ```html
 <!--searchgrid.component.html-->
@@ -181,7 +181,7 @@ public exactMatch: boolean = false;
 
 ### キーボード検索の追加
 
-ユーザーは矢印キーと Enter キーで結果を移動できます。preventDefault() メソッドのデフォルト キャレットの移動を防止する検索入力の **keydown** イベントを処理し、ユーザーが押したキーに基づいて [`findNext`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findnext)/[`findPrev`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findprev) メソッドを呼び出します。
+ユーザーは矢印キーと Enter キーで結果を移動できます。preventDefault() メソッドのデフォルト キャレットの移動を防止する検索入力の **keydown** イベントを処理し、ユーザーが押したキーに基づいて [`findNext`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findNext)/[`findPrev`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findPrev) メソッドを呼び出します。
 
 ```html
 <!--searchgrid.component.html-->
@@ -206,7 +206,7 @@ public searchKeyDown(ev) {
 
 ### 大文字と小文字の区別と完全一致
 
-次に完全一致の検索で大文字と小文字を区別するかどうかをユーザーが選択できるようにします。**caseSensitive** と **exactMatch** プロパティを入力 **caseSensitive** and **exactMatch** プロパティにそれぞれバインドし、プロパティを切り替えて **change** イベントを処理後、[`findNext`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findnext) メソッドを呼び出すことによりシンプルなチェックボックスを使用します。
+次に完全一致の検索で大文字と小文字を区別するかどうかをユーザーが選択できるようにします。**caseSensitive** と **exactMatch** プロパティを入力 **caseSensitive** and **exactMatch** プロパティにそれぞれバインドし、プロパティを切り替えて **change** イベントを処理後、[`findNext`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findNext) メソッドを呼び出すことによりシンプルなチェックボックスを使用します。
 
 ```html
 <!--searchgrid.component.html-->
@@ -253,8 +253,16 @@ import {
     IgxButtonModule,
     IgxChipsModule
 } from 'igniteui-angular';
+// import { 
+//    IgxInputGroupModule,
+//    IgxIconModule,
+//    IgxRippleModule,
+//    IgxButtonModule,
+//    IgxChipsModule
+// } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
+    ...
     imports: [..., IgxInputGroupModule, IgxIconModule, IgxRippleModule, IgxButtonModule, IgxChipsModule],
 })
 export class AppModule {}
@@ -262,7 +270,7 @@ export class AppModule {}
 
 テンプレートを新しいコンポーネントで更新します。
 
-[**IgxInputGroup**](../input-group.md) 内のすべてのコンポーネントをラップします。左側で検索と 削除/クリア アイコンを切り替えます (検索入力が空かどうかに基づきます)。中央に入力を配置します。更に削除アイコンがクリックされたときに **searchText** を更新し、グリッドの [`clearSearch`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#clearsearch) メソッドを呼び出して強調表示をクリアします。
+[**IgxInputGroup**](../input-group.md) 内のすべてのコンポーネントをラップします。左側で検索と 削除/クリア アイコンを切り替えます (検索入力が空かどうかに基づきます)。中央に入力を配置します。更に削除アイコンがクリックされたときに **searchText** を更新し、グリッドの [`clearSearch`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#clearSearch) メソッドを呼び出して強調表示をクリアします。
 
 ```html
 <!--searchgrid.component.html-->
@@ -326,7 +334,7 @@ public clearSearch() {
     </div>
     ...
 ```
-- 検索ナビゲーション ボタンは、マテリアルアイコンを使用して入力を Ripple スタイルボタンにします。click イベントのハンドラーはそのままで [`findNext`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findnext)/[`findPrev`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findprev) メソッドを呼び出します。
+- 検索ナビゲーション ボタンは、マテリアルアイコンを使用して入力を Ripple スタイルボタンにします。click イベントのハンドラーはそのままで [`findNext`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findNext)/[`findPrev`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findPrev) メソッドを呼び出します。
 
 ```html
 <!--searchgrid.component.html-->
@@ -356,10 +364,10 @@ public clearSearch() {
 このトピックでは、@@igComponent にカスタム検索バーを実装し、更に検索結果を移動する際の機能を追加しました。アイコン、チップ、入力などその他の Ignite UI for Angular コンポーネントも使用しています。以下は検索 API です。
 
 [`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) メソッド:
--   [findNext]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findnext)
--   [findPrev]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findprev)
--   [clearSearch]({environment:angularApiUrl}/classes/@@igTypeDoc.html#clearsearch)
--   [refreshSearch]({environment:angularApiUrl}/classes/@@igTypeDoc.html#refreshsearch)
+-   [findNext]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findNext)
+-   [findPrev]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findPrev)
+-   [clearSearch]({environment:angularApiUrl}/classes/@@igTypeDoc.html#clearSearch)
+-   [refreshSearch]({environment:angularApiUrl}/classes/@@igTypeDoc.html#refreshSearch)
 
 [`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html) メソッド:
 

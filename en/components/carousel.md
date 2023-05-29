@@ -1,14 +1,18 @@
 ---
-title: Angular Carousel Component – Ignite UI for Angular | Infragistics
-_description: Use Ignite UI for Angular Carousel component to navigate through a collection of slides, cards or page-based interfaces with endless programmatic features.
+title: Angular Carousel Component – Ignite UI for Angular
+_description: Use Ignite UI for Angular Carousel component to navigate through a collection of slides, cards or page-based interfaces with endless programmatic features. Try it now
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Carousel component, Angular Carousel control
 ---
 
-# Carousel
-<p class="highlight">The Ignite UI for Angular Carousel component is developed as a native [Angular component](https://angular.io/guide/architecture#components). Use it to browse or navigate through a collection of slides, including image galleries, cards, onboarding tutorials, or page-based interfaces.</p>
+# Angular Carousel Overview
+<p class="highlight">Angular Carousel (or Angular Material Carousel) is a responsive, lightweight component that provides the most flexible way to create slideshow-like web experience for users who navigate back and forth through a collection of images with text slides, links, and other html elements. 
+
+The Angular Carousel component allows you to use animations, slide transitions, and customization so you can easily tweak the interface and build Angular custom carousel.
+</p>
 <div class="divider"></div>
 
 ## Angular Carousel Example
+The Angular Carousel demo you see below shows slides containing only images. We’ve enabled navigation buttons allowing users to easily move from one slide to another – going back and forth.
 
 <code-view style="height: 550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -17,8 +21,8 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 
 
-## Usage
-The carousel can be used as a full-screen element or situated inside another component. Also, the slides may feature any valid html content inside, including other Angular components.
+## How To Use Angular Carousel With Ignite UI 
+The Ignite UI Angular Carousel component can be used as a full-screen element or situated inside another component. Also, the slides may feature any valid html content inside, including other Angular components.
 
 ### First steps
 <div class="divider--half"></div>
@@ -74,14 +78,14 @@ public slides = [
 </div>
 ...
 ```
-## Examples
+## Angular Carousel Custom Examples
 
 ### Configuring IgxCarousel
 <div class="divider--half"></div>
 
-By default, the carousel has its **[`loop`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#loop)** input property set to `true` ( *looping occurs when the first slide comes after the last by navigating using the Next action, or when the last slide comes after the first by using the Previous action* ). The looping behavior can be disabled by setting the value of the `loop` input to `false`.
+By default, the Carousel in Angular has its **[`loop`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#loop)** input property set to `true` ( *looping occurs when the first slide comes after the last by navigating using the Next action, or when the last slide comes after the first by using the Previous action* ). The looping behavior can be disabled by setting the value of the `loop` input to `false`.
 
-To keep track of each slide index, the carousel has indicators that are positioned at the `bottom` of the carousel by default. In order to change this behavior, we have to use the [indicatorsOrientation]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#indicatorsorientation) property and assign it to `top`. Indicators can be disabled by adding an empty template.
+To keep track of each slide index, the carousel has indicators that are positioned at the `bottom` of the carousel by default. In order to change this behavior, we have to use the [indicatorsOrientation]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#indicatorsOrientation) property and assign it to `top`. Indicators can be disabled by adding an empty template.
 
 The carousel template may look like this:
 
@@ -98,7 +102,7 @@ The carousel template may look like this:
 ### Custom indicators
 <div class="divider--half"></div>
 
-To add custom carousel indicators we will have to use the [IgxCarouselIndicatorDirective]({environment:angularApiUrl}/classes/igxcarouselindicatordirective.html), like this:
+To add Angular custom carousel indicators we will have to use the [IgxCarouselIndicatorDirective]({environment:angularApiUrl}/classes/igxcarouselindicatordirective.html), like this:
 
 ```html
 ...
@@ -193,13 +197,13 @@ This carousel is going to contain slides with forms and images:
 
 
 
-## Animations
+## Angular Carousel Animations
 
 Animated slide transitions provide the end-users a nice experience when interacting with the carousel.
 
 The carousel is configured to use the `slide` animation by default but it also supports `fade` as an alternative animation.
 
-The animations are configured through the [animationType]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#animationtype) input, like this:
+The animations are configured through the [animationType]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#animationType) input, like this:
 
 ```html
 <igx-carousel animationType="fade">
@@ -232,9 +236,9 @@ The navigation in the carousel can be handled by the user through navigation but
 ### Pan gestures
 <div class="divider--half"></div>
 
-By default, the carousel can be used on any touch-enabled device. This is optional and can be changed by setting the [gesturesSupport]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#gesturessupport) property to `false`.
+By default, the carousel can be used on any touch-enabled device. This is optional and can be changed by setting the [gesturesSupport]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#gesturesSupport) property to `false`.
 
-The carousel [animations](carousel.md#animations) are fully supported on touch devices, which makes the carousel consistent with any platform and great when used in progressive web applications ([PWA](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps)).
+The carousel [animations](carousel.md#angular-carousel-animations) are fully supported on touch devices, which makes the carousel consistent with any platform and great when used in progressive web applications ([PWA](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps)).
 
 ### Keyboard navigation
 <div class="divider--half"></div>
@@ -299,7 +303,10 @@ adding [IgxList]({environment:angularApiUrl}/classes/igxlistcomponent.html):
 </div>
 ...
 ```
-syncing the components by hooking up on carousel's [`onSlideChanged`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#onslidechanged) and list's [itemClicked]({environment:angularApiUrl}/classes/igxlistcomponent.html#itemclicked) events:
+syncing the components by hooking up on carousel's [`slideChanged`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#slideChanged) and list's [itemClicked]({environment:angularApiUrl}/classes/igxlistcomponent.html#itemClicked) events:
+
+>[!NOTE]
+>As of v15.1.0 `onSlideChanged` was renamed to `slideChanged`. Using `ng update` will automatically migrate your code prior to use the new event name.
 
 ```typescript
   public ngOnInit() {
@@ -308,7 +315,7 @@ syncing the components by hooking up on carousel's [`onSlideChanged`]({environme
         this.carousel.select(this.carousel.get(this.currentIndex));
     });
 
-    this.carousel.onSlideChanged.subscribe((args: ISlideEventArgs) => {
+    this.carousel.slideChanged.subscribe((args: ISlideEventArgs) => {
         this.currentIndex = args.slide.index;
     });
   }

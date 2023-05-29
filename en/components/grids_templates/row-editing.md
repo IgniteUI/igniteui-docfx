@@ -16,7 +16,7 @@ _canonicalLink: grid/row-editing
 
 # Angular @@igComponent Row Editing
 
-The @@igComponent provides a convenient way to perform data manipulations through inline editing and a powerful API for Angular CRUD operations. Click on a row and press **Enter key** or simply double click with the mouse on the row that needs to be modified. 
+The @@igComponent provides a convenient way to perform data manipulations through inline editing and a powerful API for Angular CRUD operations. Click on a row and press **Enter key** or simply double click with the mouse on the row that needs to be modified.
 
 ## Angular @@igComponent Row Editing Example
 
@@ -24,8 +24,8 @@ The following sample demonstrates how to enable row editing in the @@igComponent
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:550px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-row-editing" alt="Angular @@igComponent Row Editing Example">
 </code-view>
 
@@ -33,17 +33,17 @@ The following sample demonstrates how to enable row editing in the @@igComponent
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:590px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:590px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-row-edit" alt="Angular @@igComponent Row Editing Example">
 </code-view>
 
 <div class="divider--half"></div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-   
-<code-view style="height:510px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+
+<code-view style="height:510px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-editing" alt="Angular @@igComponent Row Editing Example">
 </code-view>
 
@@ -71,7 +71,7 @@ import { @@igxNameModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Then define a @@igComponent with bound data source and [`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable) set to true:
+Then define a @@igComponent with bound data source and [`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditable) set to true:
 @@if (igxName ==='IgxGrid') {
 ```html
 <igx-grid [data]="data" [primaryKey]="'ProductID'" width="100%" height="500px" [rowEditable]="true">
@@ -142,7 +142,7 @@ Then define a @@igComponent with bound data source and [`rowEditable`]({environm
 > Setting primary key is mandatory for row editing operations.
 
 > [!NOTE]
-> It's not needed to enable editing for individual columns. Using the [`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable) property in the @@igComponent, will mean that all rows, with defined `field` property, excluding primary one, will be editable. If you want to disable editing for specific column, then you set the [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) column's input to `false`.
+> It's not needed to enable editing for individual columns. Using the [`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditable) property in the @@igComponent, will mean that all rows, with defined `field` property, excluding primary one, will be editable. If you want to disable editing for specific column, then you set the [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) column's input to `false`.
 
 @@if (igxName === 'IgxGrid') {
 ```typescript
@@ -304,12 +304,12 @@ If you want the buttons to be part of the keyboard navigation, then each on of t
 
 ## Styling
 
-Using the [Ignite UI for Angular Theme Library](../themes/index.md), we can greatly alter the Row Editing overlay. 
+Using the [Ignite UI for Angular Theme Library](../themes/index.md), we can greatly alter the Row Editing overlay.
 The Row Editing overlay is a composite element - its UI is comprised of a couple of other components:
     - [`igx-banner`](../banner.md) in order to render its contents
     - [`igx-button`](../button.md)s are rendered in the default template (for the `Done` and `Cancel` buttons).
 
-In the below example, we will make use of those two components' styling options, ([button styling](../button.md#styling) & [banner-styling](../banner.md#styling)), to customize the experience of our @@igxName's Row Editing.
+In the below example, we will make use of those two components' styling options, ([button styling](../button.md#Angular Button Styling) & [banner-styling](../banner.md#styling)), to customize the experience of our @@igxName's Row Editing.
 We will also style the current cell's editor and background to make it more distinct. You can learn more about cell styling [here](cell-editing.md#styling).
 
 ### Import theme
@@ -322,7 +322,7 @@ The first thing we need to do is import the `themes/index` file - this gives us 
 
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+```
 
 Once we've imported the themes file, we can create custom themes.
 
@@ -334,7 +334,7 @@ We can now define a custom [`banner theme`]({environment:sassApiUrl}/index.html#
     $my-light-gray: #e3e3e3;
     $my-banner-palette: $purple-palette;
 
-    $banner-theme: banner-theme( 
+    $banner-theme: banner-theme(
         $banner-background: $my-light-gray,
         $banner-message-color: color($my-banner-palette, "secondary", 600)
     );
@@ -347,7 +347,7 @@ Here we are using `my-banner-palette` in conjunction with [`igx-color`]({environ
 All we have to do now is apply the theme with a Sass `@include` statement. We pass our newly defined `$banner-theme` through the [`igx-banner mixin`]({environment:sassApiUrl}/index.html#mixin-igx-banner):
 
 ```scss
-@include banner($banner-theme); 
+@include banner($banner-theme);
 ```
 
 This will apply our custom banner theme to the Row Editing overlay. However, since we defined these in the global styles file, these styles will also apply to **all** banners in our application.
@@ -392,7 +392,7 @@ To further customize our Row Editing overlay, we can pass a custom template so w
 </@@igSelector>
 ```
 
-After we've defined our custom buttons, we can make use of the [`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme) to style them. You can learn more about `igx-button` styling [here](../button.md#styling). We can create a custom theme for our `Done` and `Cancel`:
+After we've defined our custom buttons, we can make use of the [`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme) to style them. You can learn more about `igx-button` styling [here](../button.md#angular-button-styling). We can create a custom theme for our `Done` and `Cancel`:
 
 ```scss
 // custom.component.scss
@@ -416,8 +416,9 @@ After styling the banner and buttons, we also define a custom style for [the cel
 
 @@if (igxName === 'IgxGrid'){
 
-<code-view style="height:560px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:560px"
+           no-theming
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-row-edit-style" >
 </code-view>
 
@@ -426,8 +427,9 @@ After styling the banner and buttons, we also define a custom style for [the cel
 
 @@if (igxName === 'IgxHierarchicalGrid'){
 
-<code-view style="height:560px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:560px"
+           no-theming
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-edit-style" >
 </code-view>
 
@@ -436,8 +438,9 @@ After styling the banner and buttons, we also define a custom style for [the cel
 
 @@if (igxName === 'IgxTreeGrid'){
 
-<code-view style="height:560px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:560px"
+           no-theming
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-row-edit-style" >
 </code-view>
 
@@ -456,15 +459,15 @@ After styling the banner and buttons, we also define a custom style for [the cel
 
 ## API References
 
-* [rowEditable]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable)
-* [onRowEditEnter]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onroweditenter)
-* [onRowEdit]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowedit)
-* [rowEditDone]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditdone)
-* [onRowEditCancel]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onroweditcancel)
-* [endEdit]({environment:angularApiUrl}/classes/@@igTypeDoc.html#endedit)
+* [rowEditable]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditable)
+* [onRowEditEnter]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onRowEditEnter)
+* [onRowEdit]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onRowEdit)
+* [rowEditDone]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditDone)
+* [onRowEditCancel]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onRowEditCancel)
+* [endEdit]({environment:angularApiUrl}/classes/@@igTypeDoc.html#endEdit)
 * [field]({environment:angularApiUrl}/classes/igxcolumncomponent.html#field)
 * [editable]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable)
-* [primaryKey]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primarykey)
+* [primaryKey]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primaryKey)
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 
 ## Additional Resources

@@ -47,7 +47,7 @@ The [`IgxChipComponent`]({environment:angularApiUrl}/classes/igxchipcomponent.ht
 
 <img class="responsive-img"  src="../images/chip/selecting_default.gif" />
 
-Selection can be enabled by setting the [`selectable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#selectable) input property to `true`. When selecting a chip, the [`selectedChanging`]({environment:angularApiUrl}/classes/igxchipcomponent.html#selectedchanging) event is fired. It provides the new [`selected`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#selected) value so you can get the new state and the original event in [`originalEvent`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#originalevent) that triggered the selection change. If this is not done through user interaction but instead is done by setting the [`selected`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#selected) property programmatically, the [`originalEvent`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#originalevent) argument has  a value of `null`.
+Selection can be enabled by setting the [`selectable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#selectable) input property to `true`. When selecting a chip, the [`selectedChanging`]({environment:angularApiUrl}/classes/igxchipcomponent.html#selectedChanging) event is fired. It provides the new [`selected`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#selected) value so you can get the new state and the original event in [`originalEvent`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#originalEvent) that triggered the selection change. If this is not done through user interaction but instead is done by setting the [`selected`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#selected) property programmatically, the [`originalEvent`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#originalEvent) argument has  a value of `null`.
 
 ```html
 <igx-chip *ngFor="let chip of chipList" [selectable]="true">
@@ -175,7 +175,7 @@ You can template the `prefix` and the `suffix` of the chip, using the `IgxPrefix
 </igx-chip>
 ```
 
-You can customize the size of the chip, using the [`displayDensity`]({environment:angularApiUrl}/classes/igxchipcomponent.html#displaydensity) input. By default it is set to `comfortable`. It can also be set to `cosy` or `compact`, while everything inside the chip retains its relative positioning:
+You can customize the size of the chip, using the [`displayDensity`]({environment:angularApiUrl}/classes/igxchipcomponent.html#displayDensity) input. By default it is set to `comfortable`. It can also be set to `cosy` or `compact`, while everything inside the chip retains its relative positioning:
 
 <img class="responsive-img"  src="../images/chip/density.jpg" />
 
@@ -208,7 +208,7 @@ You can customize the `select icon`, using the [`selectIcon`]({environment:angul
 </ng-template>
 ```
 
-You can customize the `remove icon`, using the [`removeIcon`]({environment:angularApiUrl}/classes/igxchipcomponent.html#removeicon) input. It takes a value of type `TemplateRef` and renders it instead of the default remove icon.
+You can customize the `remove icon`, using the [`removeIcon`]({environment:angularApiUrl}/classes/igxchipcomponent.html#removeIcon) input. It takes a value of type `TemplateRef` and renders it instead of the default remove icon.
 
 <img class="responsive-img"  src="../images/chip/remove_icons.jpg" />
 
@@ -300,7 +300,7 @@ Here's an example of the chip area using IgxAvatar as prefix and custom icons fo
         class="chip-avatar-resized"
         igxPrefix
         [src]="chip.photo"
-        roundShape="true"
+        shape="circle"
         ></igx-avatar>
         {{chip.name}}
     </igx-chip>
@@ -449,6 +449,7 @@ If `$legacy-support` is set to `false`(default), include the component **css var
 ### Demo
 
 <code-view style="height:100px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-display/chip-styling" >
 </code-view>

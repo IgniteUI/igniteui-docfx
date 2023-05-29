@@ -48,7 +48,7 @@ export class AppModule {}
 
 <img class="responsive-img"  src="../images/chip/selecting_default.gif" />
 
-選択は、[`selectable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#selectable) 入力を `true` に設定して有効にできます。チップを選択すると、[`selectedChanging`]({environment:angularApiUrl}/classes/igxchipcomponent.html#selectedchanging) イベントが発生します。新しい [`selected`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#selected) 値を提供することにより、新しいステートとこの選択の変更をトリガーした [`originalEvent`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#originalevent) の元のイベントを取得できます。[`selected`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#selected) プロパティをプログラムで設定して行う場合、[`originalEvent`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#originalevent) 引数に値 `null` になります。
+選択は、[`selectable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#selectable) 入力を `true` に設定して有効にできます。チップを選択すると、[`selectedChanging`]({environment:angularApiUrl}/classes/igxchipcomponent.html#selectedChanging) イベントが発生します。新しい [`selected`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#selected) 値を提供することにより、新しいステートとこの選択の変更をトリガーした [`originalEvent`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#originalEvent) の元のイベントを取得できます。[`selected`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#selected) プロパティをプログラムで設定して行う場合、[`originalEvent`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#originalEvent) 引数に値 `null` になります。
 
 ```html
 <igx-chip *ngFor="let chip of chipList" [selectable]="true">
@@ -176,7 +176,7 @@ public chipRemoved(event: IBaseChipEventArgs) {
 </igx-chip>
 ```
 
-チップのサイズは、[`displayDensity`]({environment:angularApiUrl}/classes/igxchipcomponent.html#displaydensity) 入力を使用してカスタマイズできます。デフォルトの設定は `comfortable` です。チップ内のすべてが相対位置を保持する際に `cosy` または `compact` にも設定できます。
+チップのサイズは、[`displayDensity`]({environment:angularApiUrl}/classes/igxchipcomponent.html#displayDensity) 入力を使用してカスタマイズできます。デフォルトの設定は `comfortable` です。チップ内のすべてが相対位置を保持する際に `cosy` または `compact` にも設定できます。
 
 <img class="responsive-img"  src="../images/chip/density.jpg" />
 
@@ -193,7 +193,7 @@ public chipRemoved(event: IBaseChipEventArgs) {
 </igx-chip>
 ```
 
-`select icon` をカスタマイズするには、[`selectIcon`]({environment:angularApiUrl}/classes/igxchipcomponent.html#selecticon) 入力を使用します。`TemplateRef` 型の値を受け取り、同じ機能を保持する際にデフォルト アイコンをオーバーライドします。
+`select icon` をカスタマイズするには、[`selectIcon`]({environment:angularApiUrl}/classes/igxchipcomponent.html#selectIcon) 入力を使用します。`TemplateRef` 型の値を受け取り、同じ機能を保持する際にデフォルト アイコンをオーバーライドします。
 
 <img class="responsive-img"  src="../images/chip/selecting_custom.gif" />
 
@@ -208,9 +208,10 @@ public chipRemoved(event: IBaseChipEventArgs) {
 </ng-template>
 ```
 
-`remove icon` をカスタマイズするには、[`removeIcon`]({environment:angularApiUrl}/classes/igxchipcomponent.html#removeicon) 入力を使用します。`TemplateRef` 型の値を取得してデフォルトの削除アイコンの代わりに描画します。
+`remove icon` をカスタマイズするには、[`removeIcon`]({environment:angularApiUrl}/classes/igxchipcomponent.html#removeIcon) 入力を使用します。`TemplateRef` 型の値を取得してデフォルトの削除アイコンの代わりに描画します。
 
 <img class="responsive-img"  src="../images/chip/remove_icons.jpg" />
+
 
 ```html
 <igx-chip *ngFor="let chip of chipList" [removable]="true" [removeIcon]="myRemoveIcon">
@@ -300,7 +301,7 @@ public chipsOrderChanged(event: IChipsAreaReorderEventArgs) {
         class="chip-avatar-resized"
         igxPrefix
         [src]="chip.photo"
-        roundShape="true"
+        shape="circle"
         ></igx-avatar>
         {{chip.name}}
     </igx-chip>
@@ -329,6 +330,7 @@ public chipsOrderChanged(event: IChipsAreaReorderEventArgs) {
 ```ts
 import { IBaseChipEventArgs, IChipsAreaReorderEventArgs } from 'igniteui-angular';
 // import { IBaseChipEventArgs, IChipsAreaReorderEventArgs } from '@infragistics/igniteui-angular'; for licensed package
+
 ...
 public chipList = [
     {
@@ -448,6 +450,7 @@ $custom-theme: chip-theme(
 ### デモ
 
 <code-view style="height:100px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-display/chip-styling" >
 </code-view>
