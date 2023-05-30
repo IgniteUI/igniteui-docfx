@@ -24,40 +24,45 @@ _language: ja
 
 ### Global
 [`positionSettings`]({environment:angularApiUrl}/interfaces/positionsettings.html) を介して渡された指示に基づいてコンテンツを配置します。 [`horizontalDirection`]({environment:angularApiUrl}/interfaces/positionsettings.html#horizontalDirection) に Left/Center/Right、[`verticalDirection`]({environment:angularApiUrl}/interfaces/positionsettings.html#verticalDirection) に Top/Middle/Bottom があります。デフォルトは:
-    | horizontalDirection        | verticalDirection        |
-    |:---------------------------|:-------------------------|
-    | HorizontalAlignment.Center | VerticalAlignment.Middle |
+
+| horizontalDirection        | verticalDirection        |
+|:---------------------------|:-------------------------|
+| HorizontalAlignment.Center | VerticalAlignment.Middle |
 <div class="divider"></div>
 
 ### Container
 コンテンツを `GlobalPositionStrategy` として配置します。
 `ContainerPositionStrategy`は画面に関連する位置ではなく、`OverlaySettings` `outlet`で提供されるコンテンツに関連する位置にコンテンツを配置します。デフォルトは:
-    | horizontalDirection        | verticalDirection        |
-    |:---------------------------|:-------------------------|
-    | HorizontalAlignment.Center | VerticalAlignment.Middle |
+
+| horizontalDirection        | verticalDirection        |
+|:---------------------------|:-------------------------|
+| HorizontalAlignment.Center | VerticalAlignment.Middle |
 <div class="divider"></div>
 
 ### Connected
 [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) からの開始点と [`positionSettings`]({environment:angularApiUrl}/interfaces/positionsettings.html) から渡された方向に基づいて要素を配置します。開始点 ([`Point`]({environment:angularApiUrl}/classes/point.html)) または `HTMLElement` を配置決めのベースとして渡すことができます。デフォルトは:
-    | target          | horizontalDirection       |  verticalDirection       | horizontalStartPoint     | verticalStartPoint       |
-    |:----------------|:--------------------------|:-------------------------|:-------------------------|:-------------------------|
-    | new Point(0, 0) | HorizontalAlignment.Right | VerticalAlignment.Bottom | HorizontalAlignment.Left | VerticalAlignment.Bottom |
+
+| target          | horizontalDirection       |  verticalDirection       | horizontalStartPoint     | verticalStartPoint       |
+|:----------------|:--------------------------|:-------------------------|:-------------------------|:-------------------------|
+| new Point(0, 0) | HorizontalAlignment.Right | VerticalAlignment.Bottom | HorizontalAlignment.Left | VerticalAlignment.Bottom |
 <div class="divider"></div>
 
 ### Auto
 **Connected** ポジション ストラテジと同じ方法で要素を配置します。
 要素が部分的にビューポートから出た場合を考慮して、異なる開始点も計算します。**Auto** ストラテジは最初に **Connected** ストラテジと同じように要素を表示しようとします。要素がビューポートから出た場合 **Auto** は開始点と方向を反転します。つまり、方向が 'bottom' の場合、要素は 'top' に切り替わります。
 反転後、要素がまだビューポートの外である場合、**Auto** は要素をビューポートに入れるために初期の方向と開始点を使用します。たとえば、エレメントがビューポートの右側から 50 ピクセル分外に出た場合、**Auto** はそれを 50 ピクセル分左へずらします。その後、要素がビューポートから部分的に外れている場合、そしてその高さまたは幅がビューポートのものより大きい場合、**Auto** は要素の左端/上端をビューポートの左端/上端に揃えます。デフォルトは:
-    | target          | horizontalDirection       |  verticalDirection       | horizontalStartPoint     | verticalStartPoint       |
-    |:----------------|:--------------------------|:-------------------------|:-------------------------|:-------------------------|
-    | new Point(0, 0) | HorizontalAlignment.Right | VerticalAlignment.Bottom | HorizontalAlignment.Left | VerticalAlignment.Bottom |
+
+| target          | horizontalDirection       |  verticalDirection       | horizontalStartPoint     | verticalStartPoint       |
+|:----------------|:--------------------------|:-------------------------|:-------------------------|:-------------------------|
+| new Point(0, 0) | HorizontalAlignment.Right | VerticalAlignment.Bottom | HorizontalAlignment.Left | VerticalAlignment.Bottom |
 <div class="divider"></div>
 
 ### Elastic
 要素の一部が表示範囲外の場合、**Connected** 配置ストラテジのように要素を配置し、要素をビュー ポートに収まるように (幅や高さの再計算により) サイズ変更します。 [`minSize`]({environment:angularApiUrl}/interfaces/positionsettings.html#minSize) を [`positionSettings`]({environment:angularApiUrl}/interfaces/positionsettings.html)  へ渡して要素のサイズが特定のしきい値を下回るようなサイズ変更を防ぐことができます。デフォルトは:
-    | target          | horizontalDirection       |  verticalDirection       | horizontalStartPoint     | verticalStartPoint      minSize               |
-    |:----------------|:--------------------------|:-------------------------|:-------------------------|:-------------------------|-----------------------|
-    | new Point(0, 0) | HorizontalAlignment.Right | VerticalAlignment.Bottom | HorizontalAlignment.Left | VerticalAlignment.Bottom |{ width: 0, height: 0 }|
+
+| target          | horizontalDirection       |  verticalDirection       | horizontalStartPoint     | verticalStartPoint       | minSize               |
+|:----------------|:--------------------------|:-------------------------|:-------------------------|:-------------------------|:----------------------|
+| new Point(0, 0) | HorizontalAlignment.Right | VerticalAlignment.Bottom | HorizontalAlignment.Left | VerticalAlignment.Bottom |{ width: 0, height: 0 }|
 <div class="divider"></div>
 
 > [!NOTE]
@@ -85,7 +90,6 @@ import {
 
 ```
 
-
 次に、オーバーレイで使用される配置ストラテジを指定します。[`overlay.attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) メソッドが呼び出されると、配置ストラテジは [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) パラメーターのプロパティとして渡されます。以下の例では、デフォルトの `GlobalPositionStrategy` を `ConnectedPositionStrategy` で変更しています。
 
 ```typescript
@@ -96,7 +100,7 @@ const overlaySettings: OverlaySettings = {
     // Pass in the positioning strategy
     positionStrategy: new ConnectedPositioningStrategy()
 };
-const overlayId = overlay.attach(dummyElement, overlaySettings); 
+this._overlayId = this.overlayService.attach(MyDynamicCardComponent, this.viewContainerRef, overlaySettings); 
 ``` 
 <div class="divider"></div>
 
@@ -128,7 +132,7 @@ const overlaySettings: OverlaySettings = {
     // Pass in the positioning strategy
     positionStrategy: strategy
 };
-this._overlayId = this.overlayService.attach(MyDynamicCardComponent, overlaySettings);
+this._overlayId = this.overlayService.attach(MyDynamicCardComponent, this.viewContainerRef, overlaySettings);
 ```
 
 
