@@ -45,7 +45,7 @@ export class MyOverlayComponent {
 
 オーバーレイ サービスでオーバーレイ DOM にアタッチすると `HTMLNode` または Angular コンポーネントを動的に表示できます。
 
-Overlay サービスへの参照を追加した後、コンテンツを動的に表示/非表示できます。たとえば、Angular コンポーネントは `attach` メソッドで渡せます。これは一意の ID を生成し、`show` メソッドに渡してコンポーネントを表示します。When displaying an Angular Component a second mandatory parameter `ViewContainerRef` should be passed in the `attach` method.
+Overlay サービスへの参照を追加した後、コンテンツを動的に表示/非表示できます。たとえば、Angular コンポーネントは `attach` メソッドで渡せます。これは一意の ID を生成し、`show` メソッドに渡してコンポーネントを表示します。Angular コンポーネントを表示する場合、`attach` メソッドに 2 番目の必須パラメーター `ViewContainerRef` を渡す必要があります。
 
 ```typescript
 
@@ -113,7 +113,7 @@ Overlay サービスの [`attach()`]({environment:angularApiUrl}/classes/igxover
   - `attach(component, viewContainerRef, settings?)`
 
 オーバーロードの最初のパラメーターは必須でオーバーレイに表示されるコンテンツを表します。以下は、コンテンツを渡す場合の例です。
-  - コンポーネント定義 - コンポーネントを最初の引数として渡す場合、オーバーレイ サービスがそのコンポーネントの新しいインスタンスを作成し、その `ElementRef` を動的に `オーバーレイ` DOM にアタッチします。This method also accepts a second mandatory parameter `ViewContainerRef` which is a reference to the container where the created component's host view will be inserted.
+  - コンポーネント定義 - コンポーネントを最初の引数として渡す場合、オーバーレイ サービスがそのコンポーネントの新しいインスタンスを作成し、その `ElementRef` を動的に `オーバーレイ` DOM にアタッチします。このメソッドは、2 番目の必須パラメーター `ViewContainerRef` に、作成されたコンポーネントのホスト ビューが挿入されるコンテナへの参照も受け入れます。
   - `ElementRef` から既存の DOM 要素 (上記のサンプルを参照) - ページで既に描画されたビューはオーバーレイ サービスで渡して、オーバーレイ DOM で描画できます。
 
 どちらの場合も、[`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) メソッドは次のようになります:
