@@ -56,8 +56,6 @@ import { IgxCalendarModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Now that you have the Ignite UI for Angular Calendar module imported, you can start using the `igx-calendar` component.
-
 Alternatively, as of `16.0.0` you can import the `IgxCalendarComponent` as a standalone dependency, or use the [`IGX_CALENDAR_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/calendar/public_api.ts) token to import the component and all of its supporting components and directives.
 
 ```typescript
@@ -78,6 +76,8 @@ import { IGX_CALENDAR_DIRECTIVES } from 'igniteui-angular';
 })
 export class HomeComponent {}
 ```
+
+Now that you have the Ignite UI for Angular Calendar module or directives imported, you can start using the `igx-calendar` component.
 
 > [!NOTE]
 > The [`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) uses the [Intl Web API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat) for localization and formatting of dates.

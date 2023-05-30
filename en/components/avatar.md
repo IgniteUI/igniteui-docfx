@@ -42,7 +42,6 @@ import { IgxAvatarModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
-Now that you have the Ignite UI for Angular Avatar module imported, you can start with a basic configuration of the `igx-avatar` component.
 
 Alternatively, as of `16.0.0` you can import the `IgxAvatarComponent` as a standalone dependency.
 
@@ -62,6 +61,8 @@ import { IgxAvatarComponent } from 'igniteui-angular';
 })
 export class HomeComponent {}
 ```
+
+Now that you have the Ignite UI for Angular Avatar module or component imported, you can start with a basic configuration of the `igx-avatar` component.
 
 ## Using the Angular Avatar Component
 

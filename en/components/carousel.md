@@ -50,8 +50,6 @@ import { IgxCarouselModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Now that you have the Ignite UI for Angular Carousel module imported, you can start using the `igx-carousel` component.
-
 Alternatively, as of `16.0.0` you can import the `IgxCarouselComponent` as a standalone dependency, or use the [`IGX_CAROUSEL_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/carousel/public_api.ts) token to import the component and all of its supporting components and directives.
 
 ```typescript
@@ -79,6 +77,8 @@ import { IGX_CAROUSEL_DIRECTIVES } from 'igniteui-angular';
 })
 export class HomeComponent {}
 ```
+
+Now that you have the Ignite UI for Angular Carousel module or directives imported, you can start using the `igx-carousel` component.
 
 ## Using the Angular Carousel Component
 The Ignite UI for Angular Carousel component can be used as a full-screen element or situated inside another component. Also, the slides may feature any valid html content inside, including other Angular components.

@@ -11,6 +11,17 @@ The Ignite UI for Angular Action Strip component provides an overlay area contai
 
 <div class="divider--half"></div>
 
+## Angular Action Strip Example
+
+
+<code-view style="height: 400px;" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/menus/action-strip-paragraph" alt="Angular Action Strip Example">
+</code-view>
+
+
+<div class="divider--half"></div>
+
 ## Getting Started with Ignite UI for Angular Action Strip
 
 To get started with the Ignite UI for Angular Action Strip component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
@@ -37,7 +48,6 @@ import { IgxActionStripModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
-Now that you have the Ignite UI for Angular Action Strip module imported, you can start with a basic configuration of the `igx-action-strip` component.
 
 Alternatively, as of `16.0.0` you can import the `IgxActionStripComponent` as a standalone dependency, or use the [`IGX_ACTION_STRIP_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/action-strip/public_api.ts) token to import the component and all of its supporting components and directives.
 
@@ -67,16 +77,7 @@ import { IGX_ACTION_STRIP_DIRECTIVES, IgxButtonDirective, IgxIconComponent } fro
 export class HomeComponent {}
 ```
 
-## Angular Action Strip Example
-
-
-<code-view style="height: 400px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/menus/action-strip-paragraph" alt="Angular Action Strip Example">
-</code-view>
-
-
-<div class="divider--half"></div>
+Now that you have the Ignite UI for Angular Action Strip module or directives imported, you can start with a basic configuration of the `igx-action-strip` component.
 
 ## Using the Angular Action Strip Component
 To initialize and position the Action Strip correctly, it needs to be inside a relatively positioned container:

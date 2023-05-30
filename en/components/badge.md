@@ -42,7 +42,6 @@ import { IgxBadgeModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
-Now that you have the Ignite UI for Angular Badge module imported, you can start with a basic configuration of the `igx-badge` component.
 
 Alternatively, as of `16.0.0` you can import the `IgxBadgeComponent` as a standalone dependency.
 
@@ -62,6 +61,8 @@ import { IgxBadgeComponent } from 'igniteui-angular';
 })
 export class HomeComponent {}
 ```
+
+Now that you have the Ignite UI for Angular Badge module or component imported, you can start with a basic configuration of the `igx-badge` component.
 
 ## Using the Angular Badge Component
 Let's see how the demo sample is done. It's a simple success badge on an avatar. To build that, we need to import the `IgxAvatarModule`, along with the `IgxBadgeModule`:

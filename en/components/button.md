@@ -46,7 +46,6 @@ import { IgxButtonModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
-Now that you have the Ignite UI for Angular Button module imported, you can start using the `igxButton` directive on elements.
 
 Alternatively, as of `16.0.0` you can import the `IgxButtonDirective` as a standalone dependency.
 
@@ -66,6 +65,8 @@ import { IgxButtonDirective } from 'igniteui-angular';
 })
 export class HomeComponent {}
 ```
+
+Now that you have the Ignite UI for Angular Button module or directive imported, you can start using the `igxButton` directive on elements.
 
 ## Angular Button Types
 

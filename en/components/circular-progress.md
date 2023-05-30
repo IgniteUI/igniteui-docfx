@@ -44,8 +44,6 @@ import { IgxProgressBarModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Now that you have the Ignite UI for Angular Progress Bar module imported, you can start using the `igx-circular-bar` component.
-
 Alternatively, as of `16.0.0` you can import the `IgxCircularProgressBarComponent` as a standalone dependency, or use the [`IGX_CIRCULAR_PROGRESS_BAR_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/progressbar/public_api.ts) token to import the component and all of its supporting components and directives.
 
 ```typescript
@@ -69,6 +67,8 @@ import { IGX_CIRCULAR_PROGRESS_BAR_DIRECTIVES } from 'igniteui-angular';
 })
 export class HomeComponent {}
 ```
+
+Now that you have the Ignite UI for Angular Progress Bar module or directives imported, you can start using the `igx-circular-bar` component.
 
 ## Using the Angular Circular Progress Component
 

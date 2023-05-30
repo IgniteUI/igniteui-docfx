@@ -46,8 +46,6 @@ import { IgxCheckboxModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Now that you have the Ignite UI for Angular Carousel module imported, you can start using the `igx-checkbox` component.
-
 Alternatively, as of `16.0.0` you can import the `IgxCheckboxComponent` as a standalone dependency.
 
 ```typescript
@@ -69,6 +67,8 @@ import { IgxCheckboxComponent } from 'igniteui-angular';
 })
 export class HomeComponent {}
 ```
+
+Now that you have the Ignite UI for Angular Checkbox module or component imported, you can start using the `igx-checkbox` component.
 
 ## Using the Angular Checkbox Component
 To make the checkbox in the demo, add the following code inside the component template:

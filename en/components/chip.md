@@ -43,8 +43,6 @@ import { IgxChipsModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Now that you have the Ignite UI for Angular Chips module imported, you can start using the `igx-chip` component.
-
 Alternatively, as of `16.0.0` you can import the `IgxChipComponent` as a standalone dependency, or use the [`IGX_CHIPS_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/chips/public_api.ts) token to import the component and all of its supporting components and directives.
 
 ```typescript
@@ -74,6 +72,8 @@ export class HomeComponent {
     ];
 }
 ```
+
+Now that you have the Ignite UI for Angular Chips module or directives imported, you can start using the `igx-chip` component.
 
 ## Using the Angular Chip Component
 
