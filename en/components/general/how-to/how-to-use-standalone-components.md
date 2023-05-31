@@ -75,7 +75,7 @@ The `IGX_GRID_DIRECTIVES` shown in the previous examples is a utility directive 
 | [`IGX_DATE_PICKER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/date-picker/public_api.ts) | Exports all date-picker related components and directives. |
 | [`IGX_DATE_RANGE_PICKER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/date-range-picker/public_api.ts) | Exports all date-range picker related components and directives. |
 | [`IGX_DIALOG_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/dialog/public_api.ts) | Exports all dialog related components and directives. |
-| `IGX_DRAG_DROP_DIRECTIVES` | Exports all drag and drop related components and directives. |
+| [`IGX_DRAG_DROP_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/directives/drag-drop/public_api.ts) | Exports all drag and drop related components and directives. |
 | `IGX_DROP_DOWN_DIRECTIVES` | Exports all drop-down related components and directives. |
 | `IGX_EXPANSION_PANEL_DIRECTIVES` | Exports all expansion panel related components and directives. |
 | `IGX_GRID_DIRECTIVES` | Exports all grid related components and directives. |
