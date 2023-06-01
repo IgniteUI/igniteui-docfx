@@ -98,7 +98,7 @@ The `IGX_GRID_DIRECTIVES` shown in the previous examples is a utility directive 
 | `IGX_TIME_PICKER_DIRECTIVES` | Exports all time picker related components and directives. |
 | `IGX_TOOLTIP_DIRECTIVES` | Exports all tooltip related components and directives. |
 | `IGX_TREE_DIRECTIVES` | Exports all tree related components and directives. |
-| `IGX_TREE_GRID_DIRECTIVES` | Exports all tree grid related components and directives. |
+| [`IGX_TREE_GRID_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/grids/tree-grid/public_api.ts) | Exports all tree grid related components and directives. |
 
 ## Additional Resources
 
