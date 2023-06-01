@@ -1,37 +1,37 @@
 ---
 title: Angular Data Grid | Build Fast Angular Tables | Infragistics
 _description: Create super fast, responsive Angular data grids and tables with Ignite UI for Angular. Supports  editing, filtering, data binding and many more. Try it now!
-_keywords: angular data grid, angular material table, ignite ui for angular
+_keywords: angular data grid, angular grid component, angular data grid component, angular table component, angular data table component, angular material table, angular UI components, ignite ui for angular
 ---
 
 <style>
-    .sample-content {
-        display: flex;
-            flex-flow: row wrap;
-            justify-content: center;
-        }
+.sample-content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
 
 .sample-column {
-            display: flex;
-            flex-flow: column nowrap;
-            flex: 1 0 25%;
-            align-content: flex-start;
-            min-width: 280px;
-        }
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 1 0 25%;
+    align-content: flex-start;
+    min-width: 280px;
+}
 
- .tabbar-wrapper {
-            width: inherit;
-            position: relative;
-            height: 100%;
-            margin: 0 auto;
-        }
+.tabbar-wrapper {
+    width: inherit;
+    position: relative;
+    height: 100%;
+    margin: 0 auto;
+}
 
- .tabbar-wrapper > p {
-            padding-right: 20px
-        }
+.tabbar-wrapper > p {
+    padding-right: 20px
+}
 </style>
 
-# Angular Data Grid Overview and Configuration
+# Angular Data Grid Component Overview
 
 <div class="sample-content">
     <article class="sample-column">
@@ -68,19 +68,19 @@ Boston Marathon 2021 – In this angular grid example, you can see how users can
 <div class="divider--half"></div>
 
 ## Getting Started with Ignite UI for Angular Data Grid
-### Dependencies
 
 >[!NOTE]
 >**This component requires [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) to be imported in the root module of the application in order for touch interactions to work as expected.**.
 
-To get started with the Angular data grid, first you need to install Ignite UI for Angular by typing the following command:
+To get started with the Ignite UI for Angular Data Grid component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
 
 ```cmd
 ng add igniteui-angular
 ```
+
 For a complete introduction to the Ignite UI for Angular, read the [*getting started*](../general/getting-started.md) topic.
 
-The Angular grid is exported as an `NgModule`, thus all you need to do in your application is to import the `IgxGridModule` inside your `AppModule`:
+The next step is to import the `IgxGridModule` in your **app.module.ts** file.
 
 ```typescript
 // app.module.ts
@@ -98,27 +98,38 @@ import { IgxGridModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Each of the components, directives and helper classes in the `IgxGridModule` can be imported through the main bundle in _igniteui-angular_. While you don't need to import all of them to instantiate and use the grid, you usually will import them (or your editor will auto-import them for you) when declaring types that are part of the grid API.
+Alternatively, as of `16.0.0` you can import the `IgxGridComponent` as a standalone dependency, or use the [`IGX_GRID_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/grids/grid/public_api.ts) token to import the component and all of its supporting components and directives.
 
 ```typescript
-import { IgxGridComponent } from 'igniteui-angular';
-// import { IgxGridComponent } from '@infragistics/igniteui-angular'; for licensed package
-...
-@ViewChild('myGrid', { read: IgxGridComponent })
-public grid: IgxGridComponent;
+// home.component.ts
+
+import { IGX_GRID_DIRECTIVES } from 'igniteui-angular';
+// import { IGX_GRID_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: '<igx-grid [data]="localData" [autoGenerate]="true"></igx-grid>',
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_GRID_DIRECTIVES]
+    /* or imports: [IgxGridComponent] */
+})
+export class HomeComponent {
+    public data: Product [];
+}
 ```
 
-### Usage
+Now that you have the Ignite UI for Angular Grid module or directives imported, you can start using the `igx-grid` component.
 
-Now that we have the grid module imported, let’s get started with a basic configuration of the **igx-grid** that binds to local data:
+## Using the Angular Data Grid
 
 ```html
 <igx-grid #grid1 id="grid1" [data]="localData" [autoGenerate]="true"></igx-grid>
 ```
 
-The **id** property is a string value and is the unique identifier of the grid which will be auto-generated if not provided, while **data** binds the grid, in this case to local data.
+The **data** property binds the grid, in this case to local array of objects.
 
-The [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autoGenerate) property tells the **igx-grid** to auto generate the grid's [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) based on the data source fields. It will also try to deduce the appropriate data type for the column if possible. Otherwise, the developer needs to explicitly define the columns and the mapping to the data source fields.
+The [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autoGenerate) property tells the `igx-grid` to auto generate the grid's [`IgxColumnComponent`s]({environment:angularApiUrl}/classes/igxcolumncomponent.html) based on the data source fields. It will also try to deduce the appropriate data type for the column if possible. Developers can also explicitly [define the columns](#angular-grid-column-configuration) and the mapping to the data source fields.
 
 ## Angular Bootstrap Grid Definition
 <p>Ignite UI for Angular includes a powerful bootstrap grid like flex-based layout system. Any modern application today is expected to follow a responsive web design approach, meaning it can gracefully adjust layout of HTML elements based on the device size, or from simply resizing the browser. An Angular bootstrap grid layout was the most used approach in the past, but a flex-based layout system like CSS grid has become more popular, as it works in any browser. The Ignite UI for Angular Layout Directive allows vertical and horizontal flow, including content / text wrapping, justification, and alignment. The Ignite UI for Angular grid supports a responsive layout using CSS, giving you the ultimate flexibility in how the grid behaves on resize. </p>
