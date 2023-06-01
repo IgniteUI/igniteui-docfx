@@ -1,12 +1,12 @@
 ---
 title: Angular Hierarchical Data Grid | Material Table | Ignite UI for Angular | Infragistics
 _description: Learn how to use Ignite UI for Angular data grid, based on Angular Material Table and create a touch-responsive angular component with variety of angular events.
-_keywords: angular data grid, igniteui for angular, infragistics
+_keywords: angular hierarchical data grid, angular hierarchical table, angular hierarchical data grid component, angular hierarchical table component, angular UI components, igniteui for angular, infragistics
 ---
 
-# Hierarchical Data Grid Overview and Configuration
+# Angular Hierarchical Data Grid Component Overview
 
-The Ignite UI for Angular Hierarchical Data Grid is used to display and manipulate hierarchical data with ease. Quickly bind your data with very little code or use a variety of events to customize different behaviors. This component provides a rich set of features like data selection, excel style filtering, sorting, paging, templating and column moving. The Hierarchical Grid builds upon the Flat Grid Component and extends its functionality by allowing the users to expand or collapse the rows of the parent grid, revealing the corresponding child grid, when more detailed information is needed. Displaying of hierarchical data has never been easier and beautiful thanks to the Material Table-based UI Grid.
+The Ignite UI for Angular Hierarchical Data Grid is used to display and manipulate hierarchical tabular data with ease. Quickly bind your data with very little code or use a variety of events to customize different behaviors. This component provides a rich set of features like data selection, excel style filtering, sorting, paging, templating and column moving. The Hierarchical Grid builds upon the Flat Grid Component and extends its functionality by allowing the users to expand or collapse the rows of the parent grid, revealing the corresponding child grid, when more detailed information is needed. Displaying of hierarchical data has never been easier and beautiful thanks to the Material Table-based UI Grid.
 
 ## Angular Hierarchical Data Grid Example
 In this angular grid example you can see how users can visualize hierarchical sets of data and use cell templating to add other visual components like [Sparkline](../charts/types/sparkline-chart.md).
@@ -18,19 +18,20 @@ In this angular grid example you can see how users can visualize hierarchical se
 
 <div class="divider--half"></div>
 
-## Dependencies
+## Getting Started with Ignite UI for Angular Hierarchical Data Grid
 
 >[!NOTE]
 >**This component requires [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) to be imported in the root module of the application in order for touch interactions to work as expected.**.
 
-To get started with the Hierarchical Data Grid, first you need to install Ignite UI for Angular by typing the following command:
+To get started with the Ignite UI for Angular Hierarchical Data Grid component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
 
 ```cmd
 ng add igniteui-angular
 ```
+
 For a complete introduction to the Ignite UI for Angular, read the [*getting started*](../general/getting-started.md) topic.
 
-The Hierarchical Grid is exported as an `NgModule` - all you need to do in your application is import the _IgxHierarchicalGridModule_ inside your `AppModule`.
+The next step is to import the `IgxHierarchicalGridModule` in your **app.module.ts** file.
 
 ```typescript
 // app.module.ts
@@ -48,16 +49,43 @@ import { IgxHierarchicalGridModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-We can obtain a reference to the Hierarchical Grid in TypeScript the following way:
+Alternatively, as of `16.0.0` you can import the `IgxHierarchicalGridComponent` as a standalone dependency, or use the [`IGX_HIERARCHICAL_GRID_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/grids/hierarchical-grid/public_api.ts) token to import the component and all of its supporting components and directives.
 
 ```typescript
-@ViewChild('hgrid1', { read: IgxHierarchicalGridComponent })
-public hgrid1: IgxHierarchicalGridComponent;
+// home.component.ts
+
+import { IGX_HIERARCHICAL_GRID_DIRECTIVES } from 'igniteui-angular';
+// import { IGX_HIERARCHICAL_GRID_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: `
+    <igx-hierarchical-grid #hierarchicalGrid [data]="singers" [autoGenerate]="true">
+        <igx-row-island [key]="'Albums'" [autoGenerate]="true">
+            <igx-row-island [key]="'Songs'" [autoGenerate]="true">
+            </igx-row-island>
+        </igx-row-island>
+        <igx-row-island [key]="'Tours'" [autoGenerate]="true">
+        </igx-row-island>
+    </igx-hierarchical-grid>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_HIERARCHICAL_GRID_DIRECTIVES]
+    /* or imports: [IgxHierarchicalGridComponent, IgxRowIslandComponent] */
+})
+export class HomeComponent {
+    public singers: Artist [];
+}
 ```
 
-## Data Binding
+Now that you have the Ignite UI for Angular Hierarchical Grid module or directives imported, you can start using the `igx-hierarchical-grid` component.
 
-**igx-hierarchical-grid** derives from **igx-grid** and shares most of its functionality. The main difference is that it allows multiple levels of hierarchy to be defined. They are configured through a separate tag within the definition of **igx-hierarchical-grid**, called **igx-row-island**. The **igx-row-island** component defines the configuration for each child grid for the particular level. Multiple row islands per level are also supported.
+## Using the Angular Hierarchical Data Grid
+
+### Data Binding
+
+`igx-hierarchical-grid` derives from `igx-grid` and shares most of its functionality. The main difference is that it allows multiple levels of hierarchy to be defined. They are configured through a separate tag within the definition of `igx-hierarchical-grid`, called `igx-row-island`. The `igx-row-island` component defines the configuration for each child grid for the particular level. Multiple row islands per level are also supported.
 The Hierarchical Grid supports two ways of binding to data:
 
 ### Using hierarchical data
@@ -94,7 +122,7 @@ export const singers = [{
     }]
 }];
 ```
-Each **igx-row-island** should specify the key of the property that holds the children data.
+Each `igx-row-island` should specify the key of the property that holds the children data.
 
 ```html
 <igx-hierarchical-grid #hierarchicalGrid [data]="singers" [autoGenerate]="true">
@@ -107,26 +135,27 @@ Each **igx-row-island** should specify the key of the property that holds the ch
 </igx-hierarchical-grid>
 ```
 > [!NOTE]
-> Note that instead of `data` the user configures only the `key` that the **igx-hierarchical-grid** needs to read to set the data automatically.
+> Note that instead of `data` the user configures only the `key` that the `igx-hierarchical-grid` needs to read to set the data automatically.
 
 ### Using Load-On-Demand
 
-Most applications are designed to load as little data as possible initially, which results in faster load times. In such cases **igx-hierarchical-grid** may be configured to allow user-created services to feed it with data on demand. The following configuration uses a special `@Output` and a newly introduced loading-in-progress template to provide a fully-featured load-on-demand.
+Most applications are designed to load as little data as possible initially, which results in faster load times. In such cases `igx-hierarchical-grid` may be configured to allow user-created services to feed it with data on demand. The following configuration uses a special `@Output` and a newly introduced loading-in-progress template to provide a fully-featured load-on-demand.
 
 ```html
 <!-- hierarchicalGridSample.component.html -->
 
-    <igx-hierarchical-grid #hGrid [primaryKey]="'CustomerID'" [autoGenerate]="true" [height]="'600px'" [width]="'100%'">
-        <igx-row-island [key]="'Orders'" [primaryKey]="'OrderID'" [autoGenerate]="true"  (gridCreated)="gridCreated($event, 'CustomerID')">
-            <igx-row-island [key]="'Order_Details'" [primaryKey]="'ProductID'" [autoGenerate]="true" (gridCreated)="gridCreated($event, 'OrderID')">
-            </igx-row-island>
+<igx-hierarchical-grid #hGrid [primaryKey]="'CustomerID'" [autoGenerate]="true" [height]="'600px'" [width]="'100%'">
+    <igx-row-island [key]="'Orders'" [primaryKey]="'OrderID'" [autoGenerate]="true"  (gridCreated)="gridCreated($event, 'CustomerID')">
+        <igx-row-island [key]="'Order_Details'" [primaryKey]="'ProductID'" [autoGenerate]="true" (gridCreated)="gridCreated($event, 'OrderID')">
         </igx-row-island>
-    </igx-hierarchical-grid>
+    </igx-row-island>
+</igx-hierarchical-grid>
 ```
 
 ```typescript
 //  hierarchicalGridSample.component.ts
 
+@Component({...})
 export class HierarchicalGridLoDSampleComponent implements AfterViewInit {
     @ViewChild("hGrid")
     public hGrid: IgxHierarchicalGridComponent;
@@ -211,7 +240,7 @@ This UI is disabled by default for performance reasons and it is not recommended
 
 ## Features
 
-The grid features could be enabled and configured through the **igx-row-island** markup - they get applied for every grid that is created for it. Changing options at runtime through the row island instance changes them for each of the grids it has spawned.
+The grid features could be enabled and configured through the `igx-row-island` markup - they get applied for every grid that is created for it. Changing options at runtime through the row island instance changes them for each of the grids it has spawned.
 
 ```html
 <igx-hierarchical-grid [data]="localData" [displayDensity]="density" [autoGenerate]="false"
@@ -246,7 +275,7 @@ The following grid features work on a per grid level, which means that each grid
 - Summaries
 - Search
 
-The Selection and Navigation features work globally for the whole **igx-hierarchical-grid**
+The Selection and Navigation features work globally for the whole `igx-hierarchical-grid`
 
 - Selection
     Selection does not allow selected cells to be present for two different child grids at once.

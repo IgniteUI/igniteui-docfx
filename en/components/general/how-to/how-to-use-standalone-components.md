@@ -79,7 +79,7 @@ The `IGX_GRID_DIRECTIVES` shown in the previous examples is a utility directive 
 | [`IGX_DROP_DOWN_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/drop-down/public_api.ts) | Exports all drop-down related components and directives. |
 | [`IGX_EXPANSION_PANEL_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/expansion-panel/public_api.ts) | Exports all expansion panel related components and directives. |
 | [`IGX_GRID_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/grids/grid/public_api.ts) | Exports all grid related components and directives. |
-| `IGX_HIERARCHICAL_GRID_DIRECTIVES` | Exports all hierarchical grid related components and directives. |
+| [`IGX_HIERARCHICAL_GRID_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/grids/hierarchical-grid/public_api.ts) | Exports all hierarchical grid related components and directives. |
 | `IGX_INPUT_GROUP_DIRECTIVES` | Exports all input group related components and directives. |
 | `IGX_LINEAR_PROGRESS_BAR_DIRECTIVES` | Exports all linear progress bar related components and directives. |
 | `IGX_LIST_DIRECTIVES` | Exports all list related components and directives. |

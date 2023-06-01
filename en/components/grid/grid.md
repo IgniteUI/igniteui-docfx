@@ -510,9 +510,7 @@ After implementing the service we will inject it in our component's constructor 
 ```typescript
 // my.component.ts
 
-@Component({
-    ...
-})
+@Component({...})
 export class MyComponent implements OnInit {
 
     public records: NorthwindRecord[];
