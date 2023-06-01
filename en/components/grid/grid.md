@@ -136,7 +136,7 @@ The [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#a
 
 ## Angular Grid Styling Configuration
 > [!NOTE]
-> The [**IgxGridComponent**]({environment:angularApiUrl}/classes/igxgridcomponent.html) uses **css grid layout**, which is **not supported in IE without prefixing**, consequently it will not render properly.
+> The [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) uses **css grid layout**, which is **not supported in IE without prefixing**, consequently it will not render properly.
 
 In [**Angular**](https://angular.io/) most of the styles are prefixed implicitly thanks to the [Autoprefixer](https://www.npmjs.com/package/autoprefixer) plugin.
 
@@ -711,49 +711,51 @@ export const DATA: any[] = [
         Region: null
     },
 ...
+]
 ```
+
 The custom template:
 
 ```html
 ...
 <igx-column field="Address" header="Address" width="25%" editable="true">
-                <ng-template #compositeTemp igxCell let-cell="cell">
-                    <div class="address-container">
-                    // In the Address column combine the Country, City and PostCode values of the corresponding data record
-                        <span><strong>Country:</strong> {{cell.row.data.Country}}</span>
-                        <br/>
-                        <span><strong>City:</strong> {{cell.row.data.City}}</span>
-                        <br/>
-                        <span><strong>Postal Code:</strong> {{cell.row.data.PostalCode}}</span>
-                    </div>
-                </ng-template>
-...
+    <ng-template #compositeTemp igxCell let-cell="cell">
+        <div class="address-container">
+        // In the Address column combine the Country, City and PostCode values of the corresponding data record
+            <span><strong>Country:</strong> {{cell.row.data.Country}}</span>
+            <br/>
+            <span><strong>City:</strong> {{cell.row.data.City}}</span>
+            <br/>
+            <span><strong>Postal Code:</strong> {{cell.row.data.PostalCode}}</span>
+        </div>
+    </ng-template>
+</igx-column>
 ```
+
 Keep in mind that with the above defined template you will not be able to make editing operations, so we need an editor template.
 
 ```html
-...
-                 <ng-template  igxCellEditor let-cell="cell">
-                        <div class="address-container">
-                        <span>
-                            <strong>Country:</strong> {{cell.row.data.Country}}
-                            <igx-input-group width="100%">
-                                    <input igxInput [(ngModel)]="cell.row.data.Country" />
-                            </igx-input-group>
-                        </span>
-                            <br/>
-                            <span><strong>City:</strong> {{cell.row.data.City}}</span>
-                            <igx-input-group width="100%">
-                                    <input igxInput [(ngModel)]="cell.row.data.City" />
-                            </igx-input-group>
-                            <br/>
-                            <span><strong>Postal Code:</strong> {{cell.row.data.PostalCode}}</span>
-                            <igx-input-group width="100%">
-                                    <input igxInput [(ngModel)]="cell.row.data.PostalCode" />
-                            </igx-input-group>
-                            <br/>
-                        </div>
-                </ng-template>
+<igx-column field="Address" header="Address" width="25%" editable="true">
+    <ng-template  igxCellEditor let-cell="cell">
+        <div class="address-container">
+            <span>
+                <strong>Country:</strong> {{cell.row.data.Country}}
+                <igx-input-group width="100%">
+                        <input igxInput [(ngModel)]="cell.row.data.Country" />
+                </igx-input-group>
+            </span>
+            <br/>
+            <span><strong>City:</strong> {{cell.row.data.City}}</span>
+            <igx-input-group width="100%">
+                    <input igxInput [(ngModel)]="cell.row.data.City" />
+            </igx-input-group>
+            <br/>
+            <span><strong>Postal Code:</strong> {{cell.row.data.PostalCode}}</span>
+            <igx-input-group width="100%">
+                    <input igxInput [(ngModel)]="cell.row.data.PostalCode" />
+            </igx-input-group>
+        </div>
+    </ng-template>
 </igx-column>
 ...
 ```
