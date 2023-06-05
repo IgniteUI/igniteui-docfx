@@ -28,7 +28,7 @@ To get started with the Ignite UI for Angular [`igxFor`]({environment:angularApi
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](../general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
 
 The next step is to import the `IgxForOfModule` in your **app.module.ts** file.
 
