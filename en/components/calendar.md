@@ -83,7 +83,7 @@ Now that you have the Ignite UI for Angular Calendar module or directives import
 > The [`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) uses the [Intl Web API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat) for localization and formatting of dates.
 Consider using [appropriate polyfills](https://github.com/andyearnshaw/Intl.js/) if your target platform does not support them.
 
-## Angular Calendar Examples with Different Selection Modes 
+## Using the Angular Calendar
 
 ### Angular Single Selection Calendar
 
