@@ -1,7 +1,7 @@
 ---
 title: Angular Star Rating Component – Ignite UI for Angular
 _description: With Angular Star Rating Component, users can view and provide feedback quickly. You can use the rating component in any angular app and angular forms. Try it Now
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Rating component, Angular Rating control
+_keywords: Angular Rating component, Angular Rating control, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library
 ---
 # Angular Star Rating Overview
 
@@ -23,7 +23,7 @@ This Angular Star Rating example demonstrates how you can use Ignite UI Angular 
 <div class="divider--half"></div>
 
 
-## Getting Started with Ignite UI for Angular Star Rating Component
+## Getting Started with Ignite UI for Angular Star Rating
 
 Ignite UI Rating is a standard [web component](https://developer.mozilla.org/en-US/docs/Web/Web_Components) and as such can be used in an Angular application.
 
