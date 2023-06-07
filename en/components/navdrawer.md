@@ -60,8 +60,8 @@ Alternatively, as of `16.0.0` you can import the `IgxNavigationDrawerComponent` 
 import { HammerModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgFor } from '@angular/common';
-import { IGX_NAVIGATION_DRAWER_DIRECTIVES } from 'igniteui-angular';
-// import { IGX_NAVIGATION_DRAWER_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+import { IGX_NAVIGATION_DRAWER_DIRECTIVES, IgxRippleDirective, IgxIconComponent } from 'igniteui-angular';
+// import { IGX_NAVIGATION_DRAWER_DIRECTIVES, IgxRippleDirective, IgxIconComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
     selector: 'app-home',
@@ -88,7 +88,9 @@ import { IGX_NAVIGATION_DRAWER_DIRECTIVES } from 'igniteui-angular';
     imports: [BrowserAnimationsModule, HammerModule, IGX_NAVIGATION_DRAWER_DIRECTIVES, IgxRippleDirective, IgxIconComponent, NgFor]
     /* or imports: [BrowserAnimationsModule, HammerModule, IgxNavigationDrawerComponent, IgxNavDrawerTemplateDirective, IgxNavDrawerItemDirective, IgxIconComponent, IgxRippleDirective, NgFor] */
 })
-export class HomeComponent {}
+export class HomeComponent {
+    public navItems: Product [];
+}
 ```
 
 Now that you have the Ignite UI for Angular Navigation Drawer module or directives imported, you can start using the `igx-nav-drawer` component.
@@ -186,8 +188,8 @@ Also, if you want the drawer to close when you select an item from it, you can u
 import { Component, ViewChild } from '@angular/core';
 import { IgxNavigationDrawerComponent } from 'igniteui-angular';
 // import { IgxNavigationDrawerComponent } from '@infragistics/igniteui-angular'; for licensed package
-...
 
+@Component({...})
 export class AppComponent  {
     @ViewChild(IgxNavigationDrawerComponent, { static: true })
     public drawer: IgxNavigationDrawerComponent;
