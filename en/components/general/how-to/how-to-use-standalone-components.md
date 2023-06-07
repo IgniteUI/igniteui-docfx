@@ -87,8 +87,8 @@ The `IGX_GRID_DIRECTIVES` shown in the previous examples is a utility directive 
 | [`IGX_NAVIGATION_DRAWER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/navigation-drawer/public_api.ts) | Exports all navigation drawer related components and directives. |
 | [`IGX_PAGINATOR_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/paginator/public_api.ts) | Exports all paginator related components and directives. |
 | [`IGX_PIVOT_GRID_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/grids/pivot-grid/public_api.ts) | Exports all pivot grid related components and directives. |
-| `IGX_PROGRESS_BAR_DIRECTIVES` | Exports all linear and circular progress bar related components and directives. |
-| `IGX_QUERY_BUILDER_DIRECTIVES` | Exports all query builder related components and directives. |
+| [`IGX_PROGRESS_BAR_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/progressbar/public_api.ts) | Exports all linear and circular progress bar related components and directives. |
+| [`IGX_QUERY_BUILDER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/query-builder/public_api.ts) | Exports all query builder related components and directives. |
 | `IGX_SELECT_DIRECTIVES` | Exports all select related components and directives. |
 | `IGX_SIMPLE_COMBO_DIRECTIVES` | Exports all simple combo related components and directives. |
 | `IGX_SLIDER_DIRECTIVES` | Exports all slider related components and directives. |
