@@ -79,6 +79,27 @@ export class AppModule { }
 >[!NOTE]
 >If you are importing `IgcFormsModule` and using either `ngModel` or `formControl`, you no longer need to include `CUSTOM_ELEMENTS_SCHEMA` as Angular will recognize the `igc-rating` tag by the custom `ControlValueAccessor` directive.
 
+Alternatively, as of `16.0.0` you can import the `IgcFormControlDirective` as a standalone dependency.
+
+```typescript
+// home.component.ts
+
+import { FormsModule } from '@angular/forms';
+import { IgcFormControlDirective } from 'igniteui-angular';
+// import { IgcFormControlDirective } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: '<igc-rating name="modelRating" [(ngModel)]="product.Rating" max="10" label="Model Rating"></igc-rating>',
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IgcFormControlDirective, FormsModule]
+})
+export class HomeComponent {
+    public product: Product;
+}
+```
+
 Add a rating with e.g. ngModel for value and it will two-way bind with your model without issues.
 
 ```html
