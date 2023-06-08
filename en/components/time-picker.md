@@ -59,7 +59,7 @@ Alternatively, as of `16.0.0` you can import the `IgxTimePickerComponent` as a s
 // home.component.ts
 
 import { FormsModule } from '@angular/forms';
-import { IGX_TABS_DIRECTIVES } from 'igniteui-angular';
+import { IGX_TIME_PICKER_DIRECTIVES } from 'igniteui-angular';
 // import { IGX_TABS_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -67,7 +67,7 @@ import { IGX_TABS_DIRECTIVES } from 'igniteui-angular';
     template: '<igx-time-picker [(ngModel)]="time"></igx-time-picker>',
     styleUrls: ['home.component.scss'],
     standalone: true,
-    imports: [IGX_TABS_DIRECTIVES, FormsModule]
+    imports: [IGX_TIME_PICKER_DIRECTIVES, FormsModule]
     /* or imports: [IgxTimePickerComponent, FormsModule] */
 })
 export class HomeComponent {
