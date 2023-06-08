@@ -19,7 +19,7 @@ _keywords: Angular Switch component, Angular Switch control, Ignite UI for Angul
 
 ## Getting Started with Ignite UI for Angular Switch
 
-To get started with the Ignite UI for Angular Splitter component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+To get started with the Ignite UI for Angular Switch component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
 
 ```cmd
 ng add igniteui-angular

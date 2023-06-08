@@ -4,9 +4,9 @@ _description: Display tabs for any occasion and implement a completely tabbed us
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Bottom Nav component, Angular Bottom Navigation controls
 ---
 
-# Bottom Navigation
+# Angular Bottom Navigation Component Overview
 
-<p class="highlight">The Ignite UI for Angular Bottom Navigation component enables the user to navigate among a number of content panels displayed in a single view. The navigation through the panels is accomplished with the tab buttons located at bottom.</p>
+<p class="highlight">The Ignite UI for Angular Bottom Navigation component enables the user to navigate among a number of content panels displayed in a single view. The navigation through the panels is accomplished with the tab buttons located at bottom of your application.</p>
 
 > [!NOTE]
 > `igx-tab-bar` selector is deprecated. You could use [`igx-bottom-nav`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html) instead. `IgxTabBarComponent` class is renamed to [`IgxBottomNavComponent`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html). `IgxTabBarModule` is renamed to `IgxBottomNavModule`.
@@ -24,9 +24,17 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 <div class="divider--half"></div>
 
-## Usage
+## Getting Started with Ignite UI for Angular Bottom Navigation
 
-The first step is to import the `IgxBottomNavModule` in the **app.module.ts** file:
+To get started with the Ignite UI for Angular Bottom Navigation component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+
+```cmd
+ng add igniteui-angular
+```
+
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+
+The next step is to import the `IgxBottomNavModule` in your **app.module.ts** file.
 
 ```typescript
 // app.module.ts
@@ -43,7 +51,51 @@ import { IgxBottomNavModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Then, modify the component's template to include the Bottom Navigation and add three items. Each item wraps an `igx-bottom-nav-header` and an `igx-bottom-nav-content` component which represent respectively the header and the container of the data. Headers usually consist of an icon and an optional text label. The Bottom Navigation control is compatible with the Material Design [**Icons**](https://material.io/icons/) so to adopt them in your application simply add the Material+Icons import in your 'styles.css' file in the main application folder.
+Alternatively, as of `16.0.0` you can import the `IgxBottomNavComponent` as a standalone dependency, or use the [`IGX_BOTTOM_NAV_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/tabs/bottom-nav/public_api.ts) token to import the component and all of its supporting components and directives.
+
+```typescript
+// home.component.ts
+
+import { IGX_BOTTOM_NAV_DIRECTIVES, IgxIconComponent } from 'igniteui-angular';
+// import { IGX_BOTTOM_NAV_DIRECTIVES, IgxIconComponent } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: `
+    <igx-bottom-nav>
+        <igx-bottom-nav-item>
+            <igx-bottom-nav-header>
+                <igx-icon>library_music</igx-icon>
+            </igx-bottom-nav-header>
+            <igx-bottom-nav-content>This is Item 1 content.</igx-bottom-nav-content>
+        </igx-bottom-nav-item>
+        <igx-bottom-nav-item>
+            <igx-bottom-nav-header>
+                <igx-icon>video_library</igx-icon>
+            </igx-bottom-nav-header>
+            <igx-bottom-nav-content>This is Item 2 content.</igx-bottom-nav-content>
+        </igx-bottom-nav-item>
+        <igx-bottom-nav-item>
+            <igx-bottom-nav-header>
+                <igx-icon>library_books</igx-icon>
+            </igx-bottom-nav-header>
+            <igx-bottom-nav-content>This is Item 3 content.</igx-bottom-nav-content>
+        </igx-bottom-nav-item>
+    </igx-bottom-nav>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_BOTTOM_NAV_DIRECTIVES, IgxIconComponent]
+    /* or imports: [IgxBottomNavComponent, IgxBottomNavItemComponent, IgxBottomNavHeaderComponent, IgxBottomNavContentComponent, IgxIconComponent] */
+})
+export class HomeComponent {}
+```
+
+Now that you have the Ignite UI for Angular Bottom Navigation module or directives imported, you can start using the `igx-bottom-nav` component.
+
+## Using the Angular Bottom Navigation
+
+Our component's template includes the Bottom Navigation and three items. Each item wraps an `igx-bottom-nav-header` and an `igx-bottom-nav-content` component which represent respectively the header and the container of the data. Headers usually consist of an icon and an optional text label. The Bottom Navigation control is compatible with the Material Design [**Icons**](https://material.io/icons/) so to adopt them in your application simply add the Material+Icons import in your 'styles.css' file in the main application folder.
 
 > [!NOTE]
 > If you haven't used the `igx-icon` in your application so far, please make sure to import the `IgxIconModule` in the **app.module.ts** before proceeding.
