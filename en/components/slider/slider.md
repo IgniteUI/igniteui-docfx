@@ -26,7 +26,7 @@ To get started with the Ignite UI for Angular Slider component, first you need t
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](../general/getting-started.md) topic.
 
 The next step is to import the `IgxSliderModule` in your **app.module.ts** file.
 
