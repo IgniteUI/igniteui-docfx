@@ -93,7 +93,7 @@ The `IGX_GRID_DIRECTIVES` shown in the previous examples is a utility directive 
 | [`IGX_SIMPLE_COMBO_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/simple-combo/public_api.ts) | Exports all simple combo related components and directives. |
 | [`IGX_SLIDER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/slider/public_api.ts) | Exports all slider related components and directives. |
 | [`IGX_SPLITTER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/splitter/public_api.ts) | Exports all splitter related components and directives. |
-| `IGX_STEPPER_DIRECTIVES` | Exports all stepper related components and directives. |
+| [`IGX_STEPPER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/stepper/public_api.ts) | Exports all stepper related components and directives. |
 | `IGX_TABS_DIRECTIVES` | Exports all tabs related components and directives. |
 | `IGX_TIME_PICKER_DIRECTIVES` | Exports all time picker related components and directives. |
 | `IGX_TOOLTIP_DIRECTIVES` | Exports all tooltip related components and directives. |
