@@ -70,7 +70,7 @@ import { IgxTextHighlightDirective } from 'igniteui-angular';
 export class HomeComponent {}
 ```
 
-Now that you have the Ignite UI for Angular Text Highlight module or directive imported, you can start using the `igxTextHighlight` component.
+Now that you have the Ignite UI for Angular Text Highlight module or directive imported, you can start using the `igxTextHighlight` directive.
 
 ## Using the Angular Text Highlight Directive
 
