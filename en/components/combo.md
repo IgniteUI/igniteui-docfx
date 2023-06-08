@@ -6,7 +6,7 @@ _keywords: angular combobox, angular combo component, angular combobox component
 
 # Angular ComboBox Component Overview
 
-The Angular ComboBox component represents a drop-down list that provides editable functionalities, allowing users to choose an option from a predefined list. The Ignite UI for Angular ComboBox Component provides also filtering capabilities, selections of items, grouping and adding custom values to a dropdown list. It can be used as an alternative to the HTML select tag and has several out-of-the-box features such as data binding (local and remote), filtering, grouping, custom templates, custom values, and more.
+The Angular ComboBox component represents a drop-down list that provides editable functionalities, allowing users to choose multiple options from a predefined list. The Ignite UI for Angular ComboBox Component also provides filtering capabilities, grouping and adding custom values to a dropdown list. It can be used as an alternative to the HTML select tag and has several out-of-the-box features such as data binding (local and remote), filtering, grouping, custom templates for items, header, and footer, custom values, and more.
 
 
 ## Angular ComboBox Example
@@ -80,7 +80,7 @@ Now that you have the Ignite UI for Angular Combo module or directives imported,
 
 ## Using the Angular ComboBox Component
 
-After the initial setup, you should bind the [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) with some data.
+After the initial setup, you can bind the [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) to data.
 
 ```typescript
 @Component({

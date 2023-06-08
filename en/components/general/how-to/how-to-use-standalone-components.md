@@ -90,7 +90,7 @@ The `IGX_GRID_DIRECTIVES` shown in the previous examples is a utility directive 
 | [`IGX_PROGRESS_BAR_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/progressbar/public_api.ts) | Exports all linear and circular progress bar related components and directives. |
 | [`IGX_QUERY_BUILDER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/query-builder/public_api.ts) | Exports all query builder related components and directives. |
 | [`IGX_SELECT_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/select/public_api.ts) | Exports all select related components and directives. |
-| `IGX_SIMPLE_COMBO_DIRECTIVES` | Exports all simple combo related components and directives. |
+| [`IGX_SIMPLE_COMBO_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/simple-combo/public_api.ts) | Exports all simple combo related components and directives. |
 | `IGX_SLIDER_DIRECTIVES` | Exports all slider related components and directives. |
 | `IGX_SPLITTER_DIRECTIVES` | Exports all splitter related components and directives. |
 | `IGX_STEPPER_DIRECTIVES` | Exports all stepper related components and directives. |
