@@ -1,10 +1,10 @@
 ---
 title: Angular Switch Component – Ignite UI for Angular | Infragistics
 _description: Ignite UI for Angular Switch component enables developers to use binary on/off or true/false data input functions within their applications.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Switch components, Angular Switch controls
+_keywords: Angular Switch component, Angular Switch control, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library
 ---
 
-# Switch
+# Angular Switch Component Overview
 <p class="highlight">The Ignite UI for Angular Switch component is a binary choice selection component that behaves similarly to the switch component in iOS.</p>
 <div class="divider"></div>
 
@@ -17,11 +17,17 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 <div class="divider--half"></div>
 
-## Usage
+## Getting Started with Ignite UI for Angular Switch
 
-At its core the switch component allows for toggling between on/off state. The default styling is done according to the selection controls specification in the Material Design guidelines.
+To get started with the Ignite UI for Angular Splitter component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
 
-The first step is to import the `IgxSwitchModule` in the **app.module.ts** file:
+```cmd
+ng add igniteui-angular
+```
+
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+
+The next step is to import the `IgxSwitchModule` in your **app.module.ts** file.
 
 ```typescript
 // app.module.ts
@@ -37,6 +43,34 @@ import { IgxSwitchModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
+
+Alternatively, as of `16.0.0` you can import the `IgxSwitchComponent` as a standalone dependency.
+
+```typescript
+// home.component.ts
+
+import { IgxSwitchComponent } from 'igniteui-angular';
+// import { IgxSwitchComponent } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: `
+    <igx-switch [checked]="true">
+        Simple switch
+    </igx-switch>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IgxSwitchComponent]
+})
+export class HomeComponent {}
+```
+
+Now that you have the Ignite UI for Angular Switch module or component imported, you can start using the `igx-switch` component.
+
+## Using the Angular Switch
+
+At its core the switch component allows for toggling between on/off state. The default styling is done according to the selection controls specification in the Material Design guidelines.
 
 To get a simple switch as the one in the demo, add the following code inside the component template:
 
