@@ -1,7 +1,7 @@
 ---
 title: Angular Data Grid | Build Fast Angular Tables | Infragistics
 _description: Create super fast, responsive Angular data grids and tables with Ignite UI for Angular. Supports  editing, filtering, data binding and many more. Try it now!
-_keywords: angular data grid, angular grid component, angular data grid component, angular table component, angular data table component, angular material table, angular UI components, ignite ui for angular
+_keywords: angular data grid, angular grid component, angular data grid component, angular table component, angular data table component, angular table, angular UI components, ignite ui for angular
 ---
 
 <style>
@@ -36,7 +36,7 @@ _keywords: angular data grid, angular grid component, angular data grid componen
 <div class="sample-content">
     <article class="sample-column">
         <div class="tabbar-wrapper">
-            <p> The Angular Data Grid is used as a feature-rich control for displaying data in a tabular format quickly and easily. Modern grids are complex and are usually packed with a set of features like data selection, excel style filtering, sorting, paging, templating, column moving, exporting to Excel, CSV, and pdf formats and more. </p>
+            <p>The Angular Data Grid is a component for displaying data in a tabular format. Modern grids are complex and are usually packed with a large set of features like data selection, excel style filtering, sorting, paging, grouping, templating, column moving, column pinning, exporting to Excel, CSV formats and more. </p>
         </div>
     </article>
     <article class="sample-column">

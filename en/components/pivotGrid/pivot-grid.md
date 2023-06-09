@@ -1,12 +1,12 @@
 ---
 title: Angular Pivot Grid & Table – Ignite UI for Angular
 _description: Create fast, responsive Angular pivot grids and tables with Ignite UI for Angular. Perform complex analysis and apply data sorting, grouping, or filtering.
-_keywords: angular pivot grid, angular pivot grid component, angular pivot table, angular pivot table component, angular material pivot table, angular ui components, ignite ui for angular
+_keywords: angular pivot grid, angular pivot grid component, angular pivot table, angular pivot table component, angular pivot data table, angular material pivot table, angular ui components, ignite ui for angular
 ---
 
 # Angular Pivot Grid Component Overview
 
-Pivot Grids are used for summing up and representing voluminous multidimensional data in a cross-tabular format. The data summary can be easily and quickly sorted, grouped, or filtered. Such data can include sums, averages, and other statistics. End-users are enabled to modify the pivot table layout through drag-and-drop operations, according to their needs.
+Ignite UI for Angular Pivot Grid is a UI component representing a table of grouped values and aggregates that lets you organize and summarize data in a tabular form. It is a data summarization tool that is used to reorganize and summarize selected columns and rows of data coming from a spreadsheet or database table to obtain a desired report.
 
 ## What is Angular Pivot Grid? 
 
