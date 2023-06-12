@@ -118,6 +118,47 @@ public ngOnInit() {
            iframe-src="{environment:demosBaseUrl}/data-display/svg-icon-sample" >
 </code-view>
 
+## Material Symbols
+
+Additionally, users can take advantage of the latest Material icons and their design variations included in the newly created [`Material Symbols Library`](https://fonts.google.com/icons). To start using Material Symbols, first you have to add the library to your application:
+
+```html
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+```
+
+Then we need to inject the [`IgxIconService`]({environment:angularApiUrl}/classes/igxiconservice.html) dependency and make use of its `registerFamilyAlias` method so that Material Symbols can work with `igx-icon`: 
+
+```ts
+constructor(private iconService: IgxIconService) { }
+
+public ngOnInit() {
+    // registers a 'material-symbols-outlined' class to be applied to all igx-icons with 'material-symbols' font-family
+    this.iconService.registerFamilyAlias('material-symbols', 'material-symbols-outlined');
+}
+```
+
+Now, we are ready to add the desired icon into our markup and customize it using adjustable font styles:
+
+```html
+<igx-icon family="material-symbols" class="custom-icon">diamond</igx-icon>
+```
+
+```scss
+.custom-icon {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 200,
+  'GRAD' 0,
+  'opsz' 40
+}
+```
+
+<code-view style="height: 70px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-display/material-symbols" >
+</code-view>
+
+To learn more about Material Symbols styles please visit their [`official documentation`](https://fonts.google.com/icons).
 
 ## Server-side Rendering Note
 
@@ -129,13 +170,15 @@ In order to avoid this, execute the listed steps:
 <ol>
 <li>
 Install `xmlhttprequest`:
+
 ```cmd
 npm i xmlhttprequest
 ```
 </li>
 <li>
 On the top of your `server.ts` file, add: 
-``` typescript
+
+```typescript
 (global as any).XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
 ```
 </li>

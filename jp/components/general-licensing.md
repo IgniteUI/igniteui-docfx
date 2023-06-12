@@ -188,7 +188,7 @@ before_install:
 
 ### GitHub Actions の構成
 
-`npm i(ci)` 手順の前に以下のスクリプトを [CI ワークフロー構成](https://help.github.com/en/actions/language-and-framework-guides/using-nodejs-with-github-actions)に追加します:
+**npm i(ci)** 手順の前に以下のスクリプトを [CI ワークフロー構成](https://help.github.com/en/actions/language-and-framework-guides/using-nodejs-with-github-actions)に追加します:
 
 ```cmd
 - run: echo "@infragistics:registry=https://packages.infragistics.com/npm/js-licensed/" >> ~/.npmrc
