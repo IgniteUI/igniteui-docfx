@@ -11,7 +11,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ## Angular Radio & Radio Group Example
 
-<code-view style="height: 90px" 
+<code-view style="height: 120px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-entries/radio-sample-1" alt="Angular Radio & Radio Group Example">
 </code-view>
@@ -55,7 +55,7 @@ The `labelPosition` property can be used to change the default position of the l
 <igx-radio [(ngModel)]="selected" value="option2" labelPosition="before">Option 2</igx-radio>
 ```
 
-<div class="sample-container loading" style="height: 90px">
+<div class="sample-container loading" style="height: 120px">
     <iframe id="radio-sample-3-iframe" data-src='{environment:demosBaseUrl}/data-entries/radio-sample-3' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 
@@ -102,7 +102,7 @@ Pay attention that if you don't use the `NgModel` directive in a two-way data bi
 The final result would be something like that:
 
 
-<code-view style="height: 450px" 
+<code-view style="height: 550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-entries/radio-sample-2" >
 </code-view>
@@ -155,7 +155,7 @@ If the component is using the [`Emulated`](themes/sass/component-themes.md#view-
 ```
 
 
-<code-view style="height: 220px" 
+<code-view style="height: 300px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-entries/radio-styling-sample" >
 </code-view>
