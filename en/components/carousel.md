@@ -22,7 +22,7 @@ The Angular Carousel demo you see below shows slides containing only images. Weâ
 <div class="divider--half"></div>
 
 ## Getting Started with Ignite UI for Angular Carousel
-To get started with the Ignite UI for Angular Card component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+To get started with the Ignite UI for Angular Carousel component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
 
 ```cmd
 ng add igniteui-angular
