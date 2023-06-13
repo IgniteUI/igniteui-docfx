@@ -72,7 +72,7 @@ export class HomeComponent {
 }
 ```
 
-Now that you have the Ignite UI for Angular Query Builder module or directives imported, you can start using the `igx-query-builder` component.
+Now that you have the Ignite UI for Angular Select module or directives imported, you can start using the `igx-select` component.
 
 ## Using the Angular Select
 
