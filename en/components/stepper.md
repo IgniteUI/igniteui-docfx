@@ -52,7 +52,7 @@ Alternatively, as of `16.0.0` you can import the `IgxStepperComponent` as a stan
 import { HammerModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { IGX_STEPPER_DIRECTIVES } from 'igniteui-angular';
-// import { IGX_SLIDER_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+// import { IGX_STEPPER_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
     selector: 'app-home',
