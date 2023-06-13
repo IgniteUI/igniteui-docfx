@@ -1,11 +1,11 @@
 ---
 title: Angular Combobox コンポーネント | データ バインディング ComboBox | インフラジスティックス
 _description: Ignite UI for Angular ComboBox は、基本的な HTML 入力、選択、フィルタリング、およびカスタム ドロップダウン リストの機能を組み合わせた強力な入力を提供します。無料でお試しください。
-_keywords: angular combobox, ignite ui for angular, インフラジスティックス
+_keywords: angular combobox, angular combo component, angular combobox component, Angular UI Components, ignite ui for angular, infragistics
 _language: ja
 ---
 
-# Angular ComboBox (コンボボックス) の概要
+# Angular ComboBox (コンボボックス) コンポーネントの概要
 
 Angular ComboBox コンポーネントは、編集可能な機能を提供するドロップダウン リストを表し、ユーザーが事前定義されたリストからオプションを選択できるようにします。Ignite UI for Angular ComboBox コンポーネントは、フィルタリング機能、項目の選択、グループ化、ドロップダウン リストにカスタム値の追加などの機能をサポートします。HTML select タグの代わりに使用でき、データ バインディング (ローカルおよびリモート)、フィルタリング、グループ化、カスタム テンプレート、カスタム値など、すぐに使用できる機能がいくつかあります。
 
@@ -14,13 +14,12 @@ Angular ComboBox コンポーネントは、編集可能な機能を提供する
 
 この Angular ComboBox の例では、ユーザーが項目をフィルターし、提供されたデータを使用して選択を実行する方法を表します。さらに、ComboBox は、キーボード ナビゲーションとカスタム スタイル設定機能を公開します。
 
-<div class="divider--half"></div>
-
 <code-view style="height: 400px;"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/combo-main" alt="Angular ComboBox の例">
 </code-view>
 
+<div class="divider--half"></div>
 
 ## Angular ComboBox 機能
 
@@ -33,27 +32,56 @@ Angular ComboBox コンポーネントは、編集可能な機能を提供する
     - [テンプレート](combo-templates.md)
     - [テンプレート駆動フォーム](input-group.md)および[リアクティブ フォーム](angular-reactive-form-validation.md)との統合
 
-## 使用方法
+## Getting Started with Ignite UI for Angular ComboBox
 
-ComboBox コンポーネントを初期化にするには、まず `IgxComboModule` を **app.module.ts**  ファイルにインポートします。
+To get started with the Ignite UI for Angular ComboBox component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+
+```cmd
+ng add igniteui-angular
+```
+
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+
+The next step is to import the `IgxComboModule` in your **app.module.ts** file.
 
 ```typescript
 import { IgxComboModule } from 'igniteui-angular';
-// import { IgxComboModule } from '@infragistics/igniteui-angular'; for licensed package
-
-@NgModule({
-    imports: [
-        ...
-        IgxComboModule,
-        ...
-    ]
-})
+Expand All
+	@@ -50,9 +57,39 @@ import { IgxComboModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-次に、テンプレートで [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) をいくつかのデータにバインドします。
+Alternatively, as of `16.0.0` you can import the `IgxComboComponent` as a standalone dependency, or use the [`IGX_COMBO_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/combo/public_api.ts) token to import the component and all of its supporting components and directives.
 
 ```typescript
+// home.component.ts
+import { IGX_COMBO_DIRECTIVES } from 'igniteui-angular';
+// import { IGX_COMBO_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+@Component({
+    selector: 'app-home',
+    template: '<igx-combo></igx-combo>',
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_COMBO_DIRECTIVES]
+    /* or imports: [IgxComboComponent] */
+})
+export class HomeComponent {}
+```
+
+Now that you have the Ignite UI for Angular Combo module or directives imported, you can start using the `igx-combo` component.
+
+## Using the Angular ComboBox Component
+
+After the initial setup, you should bind the [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) with some data.
+
+```typescript
+@Component({
+    selector: 'app-combo-demo',
+    template: '<igx-combo [data]="cities"></igx-combo>',
+    styleUrls: ['combo-demo.component.scss'],
+    standalone: true,
+    imports: [IGX_COMBO_DIRECTIVES]
+})
 export class ComboDemo implements OnInit {
     public cities: { name: string, id: string }[] = [];
 
@@ -63,11 +91,7 @@ export class ComboDemo implements OnInit {
 }
 ```
 
-```html
-<igx-combo [data]="cities"></igx-combo>
-```
-
-これで、コンボボックスの city の配列にバインドされました。
+Our combobox is now bound to the array of cities, but we still haven't told the component which property to use for the items' text and which to use for the value. Let's do that now.
 
 ### データ値と表示プロパティ
 
@@ -83,7 +107,7 @@ export class ComboDemo implements OnInit {
 ```
 
 > [!Note]
-> データソースが単純なタイプ (`string[]`、`number[]` など) で構成されている場合、`valueKey` と `displayKey` を**指定しないでください**。
+> When the data source is an array of primitives (e.g. `string[]`, `number[]`), **do not** specify a `valueKey` and `displayKey`. Primitive values will be used for both value and text.
 
 ### 双方向バインディング
 
@@ -97,9 +121,9 @@ export class ComboDemo implements OnInit {
 
 ```typescript
 export class MyCombo {
-    public cities: { name: string, id: string }[] = [
+    public cities: { name: string, id: string } [] = [
                    { name: 'Sofia', id: 'BG01' }, { name: 'London', id: 'UK01' }, ...];
-    public selectedCities: string[] = ['BG01', 'UK01'];
+    public selectedCities: { name: string, id: string } [] = [this.cities[0], this.cities[1]];
 }
 ```
 

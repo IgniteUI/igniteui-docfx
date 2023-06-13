@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-# Icon
+# Angular Icon (アイコン) コンポーネントの概要
 <p class="highlight">Ignite UI for Angular Icon コンポーネントはアイコンおよびフォント ファミリを統合するため、交互の使用やマテリアル アイコンをマークアップに追加できます。</p>
 
 ## Angular Icon の例
@@ -19,9 +19,17 @@ _language: ja
 
 <div class="divider--half"></div>
 
-## 使用方法
+## Getting Started with Ignite UI for Angular Icon
 
-Icon コンポーネントが `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` への `IgxIconModule` のインポートのみが必要になります。
+To get started with the Ignite UI for Angular Icon component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+
+```cmd
+ng add igniteui-angular
+```
+
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+
+The next step is to import the `IgxIconModule` in your **app.module.ts** file.
 
 ```typescript
 // app.module.ts
@@ -38,7 +46,28 @@ import { IgxIconModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
-## 例
+
+Alternatively, as of `16.0.0` you can import the `IgxIconComponent` as a standalone dependency.
+
+```typescript
+// home.component.ts
+import { IgxIconComponent } from 'igniteui-angular';
+// import { IgxIconComponent } from '@infragistics/igniteui-angular'; for licensed package
+@Component({
+    selector: 'app-home',
+    template: '<igx-icon [style.color]="color">home</igx-icon>',
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IgxIconComponent]
+})
+export class HomeComponent {
+    public color = '#e41c77';
+}
+```
+
+Now that you have the Ignite UI for Angular Icon module or component imported, you can start using the `igx-icon` component.
+
+## Using the Angular Icon
 
 ### アイコンの色
 
@@ -118,6 +147,48 @@ public ngOnInit() {
            iframe-src="{environment:demosBaseUrl}/data-display/svg-icon-sample" >
 </code-view>
 
+## Material Symbols
+
+Additionally, users can take advantage of the latest Material icons and their design variations included in the newly created [`Material Symbols Library`](https://fonts.google.com/icons). To start using Material Symbols, first you have to add the library to your application:
+
+```html
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+```
+
+Then we need to inject the [`IgxIconService`]({environment:angularApiUrl}/classes/igxiconservice.html) dependency and make use of its `registerFamilyAlias` method so that Material Symbols can work with `igx-icon`: 
+
+```ts
+constructor(private iconService: IgxIconService) { }
+
+public ngOnInit() {
+    // registers a 'material-symbols-outlined' class to be applied to all igx-icons with 'material-symbols' font-family
+    this.iconService.registerFamilyAlias('material-symbols', 'material-symbols-outlined');
+}
+```
+
+Now, we are ready to add the desired icon into our markup and customize it using adjustable font styles:
+
+```html
+<igx-icon family="material-symbols" class="custom-icon">diamond</igx-icon>
+```
+
+```scss
+.custom-icon {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 200,
+  'GRAD' 0,
+  'opsz' 40
+}
+```
+
+<code-view style="height: 70px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-display/material-symbols" >
+</code-view>
+
+To learn more about Material Symbols styles please visit their [`official documentation`](https://fonts.google.com/icons).
+
 ## サーバーサイド レンダリング時の注意
 
 > Angular Universal を使用してアプリケーションにサーバー側のレンダリング ロジックを実装し、`IgxIconService` を使用してアイコンを登録した場合は、以下の例外が発生することがあります。
@@ -127,14 +198,16 @@ public ngOnInit() {
 これを避けるためには、以下の順序に従って下さい。
 <ol>
 <li>
+
 `xmlhttprequest` のインストール:
 ```cmd
 npm i xmlhttprequest
 ```
 </li>
 <li>
-`server.ts` ファイル以外に追加するファイル:  
-``` typescript
+`server.ts` ファイル以外に追加するファイル:
+
+```typescript
 (global as any).XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
 ```
 </li>

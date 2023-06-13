@@ -1,11 +1,11 @@
 ---
 title: Angular Circular Progress コンポーネント
 _description: Ignite UI for Angular Circular Progress インジケーター コンポーネントは、丸形で進行状況を表示し、カスタマイズできるコンポーネントです。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Circular Progress コンポーネント, Angular Circular Progress コントロール
+_keywords: Angular Circular Progress component, Angular Circular Progress control, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Angular UI Components
 _language: ja
 ---
 
-# Circular Progress
+# Angular Circular Progress Component Overview
 <p class="highlight">Ignite UI for Angular Circular Progress インジケーター コンポーネントは、変更でアプリケーションの進行状況を表す視覚的なインジケーターです。丸形インジケーターは状態変更で外観を更新します。<p>
 <div class="divider"></div>
 
@@ -18,9 +18,18 @@ _language: ja
 
 <div class="divider--half"></div>
 
-## 使用方法
+## Getting Started with Ignite UI for Angular Circular Progress
 
-Circular Progress Indicator コンポーネントを使用するには、まず **IgxProgressBarModule** を **app.module.ts** ファイルにインポートします。
+To get started with the Ignite UI for Angular Circular Progress component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+
+```cmd
+ng add igniteui-angular
+```
+
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+
+The next step is to import the `IgxProgressBarModule` in the **app.module.ts** file:
+
 ```typescript
 // app.module.ts
 
@@ -35,6 +44,33 @@ import { IgxProgressBarModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
+
+Alternatively, as of `16.0.0` you can import the `IgxCircularProgressBarComponent` as a standalone dependency, or use the [`IGX_CIRCULAR_PROGRESS_BAR_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/progressbar/public_api.ts) token to import the component and all of its supporting components and directives.
+
+```typescript
+// home.component.ts
+import { IGX_CIRCULAR_PROGRESS_BAR_DIRECTIVES } from 'igniteui-angular';
+// import { IGX_CIRCULAR_PROGRESS_BAR_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+@Component({
+    selector: 'app-home',
+    template: `
+    <igx-circular-bar
+        [value]="100"
+        [animate]="true"
+        class="custom-size"
+    ></igx-circular-bar>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_CIRCULAR_PROGRESS_BAR_DIRECTIVES]
+    /* or imports: [IgxCircularProgressBarComponent] */
+})
+export class HomeComponent {}
+```
+
+Now that you have the Ignite UI for Angular Progress Bar module or directives imported, you can start using the `igx-circular-bar` component.
+
+## Using the Angular Circular Progress
 
 すべての動作をよりよく理解するため、デモのような簡単な例を作成します。
 
@@ -52,7 +88,7 @@ export class AppModule {}
 >**igx-circular-bar** は、各ステップに `{currentValue: 65, previousValue: 64}` のようなオブジェクトを出力する [`onProgressChanged`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#onProgressChanged) イベントを発生します。
 
 > [!NOTE]
-> [`step`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#step) 値が定義されていない場合、デフォルトの進行のインクリメントの値は、**[`max`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#max) 値の 1%** です。更新レートを変更するには、[`step`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#step) 値を定義する必要があります。
+> [`step`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#step) 値が定義されていない場合、デフォルトの進行のインクリメントの値は、**[`max`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#max) 値の 1%** です。更新レートを変更するには、[`step`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#step) 値を定義する必要があります。
 
 
 ### 不確定のプログレス
@@ -106,23 +142,23 @@ export class AppModule {}
 値を増減するメソッドを追加します。
 
 ```typescript
-public currentValue: number;
-
-public ngOnInit() {
-    this.currentValue = 0;
-}
-
-public incrementProgress() {
-    this.currentValue += 10;
-    if (this.currentValue > 100) {
-        this.currentValue = 100;
-    }
-}
-
-public decrementProgress() {
-    this.currentValue -= 10;
-    if (this.currentValue < 0) {
+@Component({...})
+export class HomeComponent {
+    public currentValue: number;
+    public ngOnInit() {
         this.currentValue = 0;
+    }
+    public incrementProgress() {
+        this.currentValue += 10;
+        if (this.currentValue > 100) {
+            this.currentValue = 100;
+        }
+    }
+    public decrementProgress() {
+        this.currentValue -= 10;
+        if (this.currentValue < 0) {
+            this.currentValue = 0;
+        }
     }
 }
 ```

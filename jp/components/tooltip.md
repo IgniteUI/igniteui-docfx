@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-# Tooltip
+# Angular Tooltip Directive Overview
 
 [`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) と [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) ディレクティブは、完全なカスタマイズが可能なツールチップをサポートし、ページのあらゆる要素にアタッチできます。
 ツールチップは、[`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html)ディレクティブで使用できる場所の数が限られています。ターゲット (アンカー) と関連つけてページで任意の配置を指定でき、スクロールやカスタム アニメーションなどのその他のオーバーレイ設定をサポートします。
@@ -20,9 +20,17 @@ _language: ja
 
 <div class="divider--half"></div>
 
-## 使用方法
+## Getting Started with Ignite UI for Angular Tooltip
 
-はじめに、app.module.ts ファイルに `IgxTooltipModule` をインポートします。
+To get started with the Ignite UI for Angular Tooltip directive, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+
+```cmd
+ng add igniteui-angular
+```
+
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+
+The next step is to import the `IgxTooltipModule` in your **app.module.ts** file.
 
 ```typescript
 // app.module.ts
@@ -38,22 +46,41 @@ import { IgxTooltipModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-## シンプルなツールチップ
+Alternatively, as of `16.0.0` you can import the `IgxTooltipDirective` as a standalone dependency, or use the [`IGX_TOOLTIP_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/directives/tooltip/public_api.ts) token to import the component and all of its supporting components and directives.
+
+```typescript
+// home.component.ts
+import { IGX_TOOLTIP_DIRECTIVES, IgxAvatarComponent } from 'igniteui-angular';
+// import { IGX_TOOLTIP_DIRECTIVES, IgxAvatarComponent } from '@infragistics/igniteui-angular'; for licensed package
+@Component({
+    selector: 'app-home',
+    template: `
+    <igx-avatar class="avatar" #target="tooltipTarget" [igxTooltipTarget]="tooltipRef"
+                src="assets/images/avatar/10.jpg" size="medium" shape="circle">
+    </igx-avatar>
+    <div #tooltipRef="tooltip" igxTooltip>
+        Her name is Madelyn James
+    </div>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_TOOLTIP_DIRECTIVES, IgxAvatarComponent]
+    /* or imports: [IgxTooltipDirective, IgxTooltipTargetDirective, IgxAvatarComponent] */
+})
+export class HomeComponent {}
+```
+
+Now that you have the Ignite UI for Angular Tooltip module or directives imported, you can start using the `igxTooltip` directive.
+
+## Using the Angular Tooltip
 
 上記のようにシンプルなテキスト ツールチップを作成します。`IgxAvatarModule` をインポートして要素として [`IgxAvatar`](avatar.md) を使用します。
 
 ```typescript
 // app.module.ts
 
-...
-import {
-    IgxTooltipModule,
-    IgxAvatarModule
-} from 'igniteui-angular';
-// import { 
-//    IgxTooltipModule,
-//    IgxAvatarModule
-// } from '@infragistics/igniteui-angular'; for licensed package
+import { IgxTooltipModule, IgxAvatarModule } from 'igniteui-angular';
+// import { IgxTooltipModule, IgxAvatarModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -122,17 +149,8 @@ avatar をターゲットにして、[`igxTooltipTarget`]({environment:angularAp
 ```typescript
 // app.module.ts
 
-...
-import {
-    IgxTooltipModule,
-    IgxAvatarModule,
-    IgxIconModule,
-} from 'igniteui-angular';
-// import { 
-//    IgxTooltipModule,
-//    IgxAvatarModule,
-//    IgxIconModule
-// } from '@infragistics/igniteui-angular'; for licensed package
+import { IgxTooltipModule, IgxAvatarModule, IgxIconModule } from 'igniteui-angular';
+// import { IgxTooltipModule, IgxAvatarModule, IgxIconModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...

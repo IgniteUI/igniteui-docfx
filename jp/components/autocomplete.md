@@ -1,12 +1,12 @@
 ---
 title: オートコンプリート ディレクティブ
-_description: Angular Autocomplete コンポーネントは、候補オプションのパネルを表示することにより、テキスト入力を向上する方法を提供します。今すぐお試しください。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Autocomplete コンポーネント, Angular Autocomplete ディレクティブ, Angular Autocomplete コントロール
+_description: Angular Autocomplete ディレクティブは、候補オプションのパネルを表示することにより、テキスト入力を向上する方法を提供します。今すぐお試しください。
+_keywords: Angular Autocomplete component, Angular Autocomplete directive, Angular Autocomplete control, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library
 _language: ja
 ---
 
-# Angular Autocomplete (オートコンプリート) の概要
-Angular Autocomplete は、入力中に候補のリストから項目を簡単に検索、フィルタリング、および選択できるようにする検索ボックス コンポーネントです。機能が豊富で、シームレスなデータ バインディング、フィルタリング、グループ化、UI カスタマイズ オプション、およびその他の組み込み機能をサポートしているため、直感的なオートコンプリート検索エクスペリエンスを作成できます。
+# Angular Autocomplete (オートコンプリート) ディレクティブ の概要
+Angular Autocomplete は、入力中に候補のリストから項目を簡単に検索、フィルタリング、および選択できるようにする検索ボックス ディレクティブです。機能が豊富で、シームレスなデータ バインディング、フィルタリング、グループ化、UI カスタマイズ オプション、およびその他の組み込み機能をサポートしているため、直感的なオートコンプリート検索エクスペリエンスを作成できます。
 
 <p class="highlight">
 
@@ -25,8 +25,17 @@ Angular Autocomplete は、入力中に候補のリストから項目を簡単�
 
 <div class="divider--half"></div>
 
-## Ignite UI で Angular Autocomplete を使用する方法
-はじめに、**app.module** で **IgxAutocompleteModule** と **IgxDropDownModule** をインポートします。[`igxAutocomplete`]({environment:angularApiUrl}/classes/igxautocompletedirective.html) を [igx-input]({environment:angularApiUrl}/classes/igxinputdirective.html) に適用した場合は、**igxInputGroupModule** も必要となります。
+## Getting Started with Ignite UI for Angular Autocomplete
+
+To get started with the Ignite UI for Angular Autocomplete directive, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+
+```cmd
+ng add igniteui-angular
+```
+
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+
+The next step is to import the **IgxAutocompleteModule** and **IgxDropDownModule** in our **app.module**. If [`igxAutocomplete`]({environment:angularApiUrl}/classes/igxautocompletedirective.html) is applied on an [igxInput]({environment:angularApiUrl}/classes/igxinputdirective.html), the **igxInputGroupModule** is also required:
 
 ```typescript
 // app.module.ts
@@ -57,12 +66,41 @@ import {
 export class AppModule {}
 ```
 
-次に、ドロップダウンを参照する `igxAutocomplete` ディレクティブを追加します。
+Alternatively, as of `16.0.0` you can import the `IgxAutocompleteDirective` as a standalone directive.
+
+```typescript
+// home.component.ts
+...
+import { IgxAutocompleteDirective, IGX_INPUT_GROUP_DIRECTIVES, IGX_DROP_DOWN_DIRECTIVES } from 'igniteui-angular';
+// import { IgxAutocompleteDirective, IGX_INPUT_GROUP_DIRECTIVES, IGX_DROP_DOWN_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+@Component({
+    selector: 'app-home',
+    template: `
+    <igx-input-group>
+        <input igxInput name="towns" type="text" [igxAutocomplete]="townsPanel" />
+        <label igxLabel for="towns">Towns</label>
+    </igx-input-group>
+    <igx-drop-down #townsPanel>
+        <igx-drop-down-item *ngFor="let town of towns">
+            {{town}}
+        </igx-drop-down-item>
+    </igx-drop-down>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IgxAutocompleteDirective, IGX_INPUT_GROUP_DIRECTIVES, IGX_DROP_DOWN_DIRECTIVES]
+})
+export class HomeComponent {}
+```
+
+Now that you have the Ignite UI for Angular Action Strip module or directive imported, you can start with a basic configuration of the `igxAutocomplete` component.
+
+## Using the Angular Autocomplete
+In order to apply the autocomplete functionality to an input, add the `igxAutocomplete` directive, referencing the dropdown:
 
 ```html
 <igx-input-group>
-    <input igxInput name="towns" type="text"
-        [igxAutocomplete]='townsPanel'/>
+    <input igxInput name="towns" type="text" [igxAutocomplete]="townsPanel" />
     <label igxLabel for="towns">Towns</label>
 </igx-input-group>
 <igx-drop-down #townsPanel>

@@ -1,13 +1,13 @@
 ---
 title: Chip コンポーネント - ネイティブ Angular | Ignite UI for Angular
 _description: Ignite UI for Angular Chip コンポーネントは入力、属性、または操作を表す小さい要素を提供します。
-_keywords: ジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Chip, Chip コンポーネント, ChipArea, ChipArea コンポーネント
+_keywords: Angular Chip, Angular Chip Component, Angular Chip Area, Angular Chip Area Component, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular UI Components
 _language: ja
 ---
 
-# Chip
+# Angular Chip Component Overview
 
-[Chip コンポーネント]({environment:angularApiUrl}/classes/igxchipcomponent.html) は、楕円形のコンテナーに情報を表示する視覚的要素です。コンポーネントにはテンプレート化、削除、選択などのさまざまなプロパティがあります。複数のチップの順序を変更し、チップ領域をコンテナーとして視覚的に接続できます。
+<p class="highlight">[Angular Chip コンポーネント]({environment:angularApiUrl}/classes/igxchipcomponent.html)は、楕円形のコンテナーに情報を表示する視覚的要素です。コンポーネントにはテンプレート化、削除、選択などのさまざまなプロパティがあります。複数のチップの順序を変更し、チップ領域をコンテナーとして視覚的に接続できます。</p>
 
 ## Angular Chip の例
 
@@ -17,17 +17,23 @@ _language: ja
            iframe-src="{environment:demosBaseUrl}/data-display/chip-simple" alt="Angular Chip の例">
 </code-view>
 
+<div class="divider--half"></div>
 
-## 使用方法
+## Getting Started with Ignite UI for Angular Chip
+To get started with the Ignite UI for Angular Chip component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
 
-はじめに、**app.module.ts** ファイルに **IgxChipsModule** をインポートします。
+```cmd
+ng add igniteui-angular
+```
+
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+
+The next step is to import the **IgxChipsModule** in the **app.module.ts** file:
+
 ```typescript
 // app.module.ts
-
-...
 import { IgxChipsModule } from 'igniteui-angular';
 // import { IgxChipsModule } from '@infragistics/igniteui-angular'; for licensed package
-
 @NgModule({
     ...
     imports: [..., IgxChipsModule],
@@ -35,6 +41,38 @@ import { IgxChipsModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
+
+Alternatively, as of `16.0.0` you can import the `IgxChipComponent` as a standalone dependency, or use the [`IGX_CHIPS_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/chips/public_api.ts) token to import the component and all of its supporting components and directives.
+
+```typescript
+// home.component.ts
+import { IGX_CHIPS_DIRECTIVES } from 'igniteui-angular';
+import { NgFor } from '@angular/common';
+// import { IGX_CHIPS_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+@Component({
+    selector: 'app-home',
+    template: `
+    <igx-chip *ngFor="let chip of chipList" [id]="chip.id">
+        {{chip.text}}
+    </igx-chip>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_CHIPS_DIRECTIVES, NgFor]
+})
+export class HomeComponent {
+    public chipList = [
+        { text: 'Country', id: '1', icon: 'place' },
+        { text: 'City', id: '2', icon: 'location_city' },
+        { text: 'Address', id: '3', icon: 'home' },
+        { text: 'Street', id: '4', icon: 'streetview' }
+    ];
+}
+```
+
+Now that you have the Ignite UI for Angular Chips module or directives imported, you can start using the `igx-chip` component.
+
+## Using the Angular Chip Component
 
 [`IgxChipComponent`]({environment:angularApiUrl}/classes/igxchipcomponent.html) には、[`id`]({environment:angularApiUrl}/classes/igxchipcomponent.html#id) 入力があるため、他のチップと簡単に識別できます。[`id`]({environment:angularApiUrl}/classes/igxchipcomponent.html#id) がない場合は自動的に生成します。
 

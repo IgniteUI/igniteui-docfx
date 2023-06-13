@@ -1,11 +1,11 @@
 ---
 title: Angular Datepicker コンポーネント – Ignite UI for Angular
 _description: Ignite UI の Angular Datepicker コントロールのを使用して、カレンダーから Web アプリケーションに日付を選択する機能を使用する方法について説明します。今すぐお試しください。 
-_keywords: angular datepicker, angular component, ignite ui for angular, angular 日付ピッカー, angular コンポーネント
+_keywords: angular datepicker, angular datepicker component, angular UI components, angular component, ignite ui for angular
 _language: ja
 ---
 
-# Angular Datepicker (日付ピッカー) の概要
+# Angular Datepicker (日付ピッカー) コンポーネントの概要
 Angular DatePicker は、手動でテキストを入力して日付を入力するか、ポップアップするカレンダー ダイアログから日付値を選択するために使用される機能豊富なコンポーネントです。軽量で使いやすい Angular の DatePicker を使用すると、ユーザーは、月、年、10 年の複数の表示オプションを使用して目的の日付に移動できます。検証を追加するための通常の min、max、および required プロパティがあります。
 
 Ignite UI for Angular DatePicker コンポーネントを使用すると、ユーザーは月表示のカレンダード ロップダウンまたは編集可能な入力フィールドから単一の日付を選択できます。Angular DatePicker は、カレンダーからのみ選択するための dialog モード、ロケール対応でカスタマイズ可能な日付の書式設定と検証の統合もサポートしています。
@@ -19,12 +19,20 @@ Ignite UI for Angular DatePicker コンポーネントを使用すると、ユ�
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-1" alt="Angular Datepicker の例">
 </code-view>
+
 <div class="divider--half"></div>
 
-## Ignite UI を使用して Angular で Datepicker を追加する方法
+## Getting Started with Ignite UI for Angular Datepicker
 
-### はじめに
-Datepicker コンポーネントの使用を開始するには、まず、使用するモジュールに `IgxDatePickerModule` をインポートする必要があります。この例では、**app.module.ts** ファイルを使用します。
+To get started with the Ignite UI for Angular Datepicker component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+
+```cmd
+ng add igniteui-angular
+```
+
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+
+The next step is to import the `IgxDatePickerModule` in your **app.module.ts** file.
 
 >[!NOTE]
 > ピッカーが [**IgxCalendarComponent**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) を使用し、タッチ操作のために **BrowserAnimationsModule** と**HammerModule** に依存関係があり、これらもモジュールに追加する必要があります。
@@ -43,6 +51,32 @@ import { IgxDatePickerModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
+Alternatively, as of `16.0.0` you can import the `IgxDatePickerComponent` as a standalone dependency, or use the [`IGX_DATE_PICKER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/date-picker/public_api.ts) token to import the component and all of its supporting components and directives.
+
+```typescript
+// home.component.ts
+import { HammerModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { IGX_DATE_PICKER_DIRECTIVES } from 'igniteui-angular';
+// import { IGX_DATE_PICKER_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+@Component({
+    selector: 'app-home',
+    template: `
+    <igx-date-picker>
+        <label igxLabel>Date</label>
+    </igx-date-picker>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [BrowserAnimationsModule, HammerModule, IGX_DATE_PICKER_DIRECTIVES]
+    /* or imports: [BrowserAnimationsModule, HammerModule, IgxDatePickerComponent, IgxLabelDirective] */
+})
+export class HomeComponent {}
+```
+
+Now that you have the Ignite UI for Angular Datepicker module or directives imported, you can start using the `igx-date-picker` component.
+
+## Using the Angular Datepicker Component
 ### Datepicker の表示
 デフォルトの `dropdown` 状態の Datepicker をインスタンス化するには、以下のコードを使用してください。
 

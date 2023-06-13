@@ -1,13 +1,12 @@
 ---
 title: Angular Avatar コンポーネント
 _description: Ignite UI for Angular の Avatar コントロールは、プロファイル ボタンなどのアプリケーションのインスタンスに画像、マテリアル アイコン、またはイニシャルを追加できます。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Avatar コンポーネント, Angular Avatar コントロール
+_keywords: Angular Avatar component, Angular Avatar control, Ignite UI for Angular, Angular UI components
 _language: ja
 ---
 
-# Avatar
-
-<p class="highlight">Ignite UI for Angular Avatar コンポーネントは、イニシャル、画像、またはマテリアル アイコンをアプリケーションに追加します。</p>
+# Angular Avatar Component Overview
+<p class="highlight">Angular Avatar コンポーネントは、イニシャル、画像、またはマテリアル アイコンをアプリケーションに追加します。</p>
 <div class="divider"></div>
 
 ## Angular Avatar の例
@@ -19,9 +18,9 @@ _language: ja
 
 <div class="divider--half"></div>
 
-## 使用方法
+## Getting Started with Ignite UI for Angular Avatar
 
-Avatar コンポーネントを初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
+To get started with the Ignite UI for Angular Avatar component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
 
 ```cmd
 ng add igniteui-angular
@@ -45,7 +44,26 @@ import { IgxAvatarModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-## 例
+Alternatively, as of `16.0.0` you can import the `IgxAvatarComponent` as a standalone dependency.
+
+```typescript
+// home.component.ts
+...
+import { IgxAvatarComponent } from 'igniteui-angular';
+// import { IgxAvatarComponent } from '@infragistics/igniteui-angular'; for licensed package
+@Component({
+    selector: 'app-home',
+    template: '<igx-avatar shape="circle"></igx-avatar>',
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IgxAvatarComponent]
+})
+export class HomeComponent {}
+```
+
+Now that you have the Ignite UI for Angular Avatar module or component imported, you can start with a basic configuration of the `igx-avatar` component.
+
+## Using the Angular Avatar Component
 
 Ignite UI for Angular Avatar コンポーネントには、3 つの形状 (正方形、角丸、円) と 3 つのサイズ オプション (大、中、小) があります。イニシャル、画像、またはアイコンを表示できます。
 

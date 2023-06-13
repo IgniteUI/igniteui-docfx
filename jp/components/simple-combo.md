@@ -1,14 +1,13 @@
 ---
 title: 単一選択 ComboBox コンポーネント
 _description: Ignite UI for Angular ComboBox は、基本的な HTML 入力、選択、フィルタリング、およびカスタム ドロップダウン リストの機能を組み合わせた強力な入力を提供します。無料でお試しください。
-_keywords: angular combobox, ignite ui for angular, infragistics, angular コンボボックス, インフラジスティックス
+_keywords: angular single selection combobox, angular combobox component, angular single selection combobox component, angular combo, angular ui components, ignite ui for angular, infragistics
 _language: ja
 ---
 
-# 単一選択 ComboBox
+# Angular Single Select ComboBox Component Overview
 
-Angular Simple ComboBox コンポーネントは、単一の選択を可能にする [ComboBox コンポーネント](combo.md)の変更です。Simple ComboBox は、ユーザーが事前定義された項目のリストからオプションを選択できるようにする編集可能な入力です。Ignite UI for Angular Simple ComboBox コンポーネントは、フィルタリング機能、項目の選択、グループ化、およびドロップダウン リストへのカスタム値の追加も提供します。HTML select タグの代わりに使用でき、データ バインディング (ローカルおよびリモート)、フィルタリング、グループ化、カスタム テンプレート、カスタム値など、すぐに使用できる機能がいくつかあります。
-
+The Angular Single Select ComboBox component is a modification of [ComboBox component](combo.md) that allows single selection. We call it "simple combo". Due to high demand for single-selection mode for the original ComboBox component, we created an extension component which offers an editable search input that allows users to choose an option from a predefined list of items and to input custom values.
 
 ## Angular Simple ComboBox の例
 
@@ -21,6 +20,7 @@ Angular Simple ComboBox コンポーネントは、単一の選択を可能に�
            iframe-src="{environment:demosBaseUrl}/lists/simple-combo-main" alt="Angular Simple ComboBox の例">
 </code-view>
 
+<div class="divider--half"></div>
 
 ## Angular Simple ComboBox の機能
 
@@ -33,9 +33,17 @@ Simple ComboBox コントロールは、次の機能を公開します:
     - テンプレート
     - テンプレート駆動フォームおよびリアクティブ フォームとの統合
 
-## 使用方法
+## Getting Started with Ignite UI for Angular Simple ComboBox
 
-Simple ComboBox コンポーネントの使用を開始するには、最初に `IgxSimpleComboModule` を **app.module.ts** ファイルにインポートする必要があります。
+To get started with the Ignite UI for Angular Simple ComboBox component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+
+```cmd
+ng add igniteui-angular
+```
+
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+
+The next step is to import the `IgxSimpleComboModule` in your **app.module.ts** file.
 
 ```typescript
 import { IgxSimpleComboModule } from 'igniteui-angular';
@@ -51,7 +59,29 @@ import { IgxSimpleComboModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-次に、テンプレートで、[igx-simple-combo]({environment:angularApiUrl}/classes/igxsimplecombocomponent.html) をいくつかのデータにバインドする必要があります。
+Alternatively, as of `16.0.0` you can import the `IgxSimpleComboComponent` as a standalone dependency, or use the [`IGX_SIMPLE_COMBO_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/simple-combo/public_api.ts) token to import the component and all of its supporting components and directives.
+
+```typescript
+// home.component.ts
+import { IGX_SIMPLE_COMBO_DIRECTIVES } from 'igniteui-angular';
+// import { IGX_SIMPLE_COMBO_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+@Component({
+    selector: 'app-home',
+    template: '<igx-simple-combo></igx-simple-combo>',
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_SIMPLE_COMBO_DIRECTIVES]
+    /* or imports: [IgxSimpleComboComponent] */
+})
+export class HomeComponent {}
+```
+
+Now that you have the Ignite UI for Angular Simple ComboBox module or directives imported, you can start using the `igx-simple-combo` component.
+
+## Using the Angular Simple ComboBox
+
+Just like the regular combobox, you can bind the [igx-simple-combo]({environment:angularApiUrl}/classes/igxsimplecombocomponent.html) to data.
+
 
 ```typescript
 export class MySimpleComboComponent implements OnInit {

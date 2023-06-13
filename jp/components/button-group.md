@@ -5,8 +5,8 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-# Button Group
-<p class="highlight">Ignite UI for Angular Button Group コンポーネントは、ボタンを水平/垂直配置、単一/複数選択、オン/オフ切り替えが可能なスタイルのボタン グループに組織するために使用します。</p>
+# Angular Button Group Component Overview
+<p class="highlight">Angular Button Group コンポーネントは、ボタンを水平/垂直配置、単一/複数選択、オン/オフ切り替えが可能なスタイルのボタン グループに組織するために使用します。</p>
 
 ## Angular Button Group の例
 
@@ -17,27 +17,67 @@ _language: ja
 
 <div class="divider--half"></div>
 
-## 使用方法
+## Getting Started with Ignite UI for Angular Button Group
 
-### はじめに
+To get started with the Ignite UI for Angular Button Group component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
 
-Button Group が `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に `IgxButtonGroupModule` をインポートする必要があります。
+```cmd
+ng add igniteui-angular
+```
+
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+
+The next step is to import the `IgxButtonGroupModule` in your **app.module.ts** file. 
 
 ```typescript
 // app.module.ts
-
+...
 import { IgxButtonGroupModule } from 'igniteui-angular';
 // import { IgxButtonGroupModule } from '@infragistics/igniteui-angular'; for licensed package
-
 @NgModule({
-    imports: [
-        ...
-        IgxButtonGroupModule,
-        ...
-    ]
+    ...
+    imports: [..., IgxButtonGroupModule],
+    ...
 })
 export class AppModule {}
 ```
+
+Alternatively, as of `16.0.0` you can import the `IgxButtonGroupComponent` as a standalone dependency, or use the [`IGX_BUTTON_GROUP_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/buttonGroup/public_api.ts) token to import the component and all of its supporting components and directives.
+
+```typescript
+// home.component.ts
+...
+import { IGX_BUTTON_GROUP_DIRECTIVES, IgxIconComponent } from 'igniteui-angular';
+// import { IGX_BUTTON_GROUP_DIRECTIVES, IgxIconComponent } from '@infragistics/igniteui-angular'; for licensed package
+@Component({
+    selector: 'app-home',
+    template: `
+    <igx-buttongroup>
+        <button igxButton>
+            <igx-icon>format_align_left</igx-icon>
+        </button>
+        <button igxButton>
+            <igx-icon>format_align_center</igx-icon>
+        </button>
+        <button igxButton>
+            <igx-icon>format_align_right</igx-icon>
+        </button>
+        <button igxButton [selected]="true">
+            <igx-icon>format_align_justify</igx-icon>
+        </button>
+    </igx-buttongroup>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_BUTTON_GROUP_DIRECTIVES, IgxIconComponent]
+    /* or imports: [IgxButtonGroupComponent, IgxButtonDirective, IgxIconComponent] */
+})
+export class HomeComponent {}
+```
+
+Now that you have the Ignite UI for Angular Button Group module or directives imported, you can start with a basic configuration of the `igx-buttongroup` and its buttons.
+
+## Using for Angular Button Group Component
 
 ### ボタン グループの追加
 

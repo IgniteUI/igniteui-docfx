@@ -1,11 +1,11 @@
 ---
 title: Radio と Radio Group
 _description: Ignite UI for Angular Radio Button コントロールおよび Radio Group コントロールは、テンプレート主導およびリアクティブ フォームで選択可能なオプションのリストを表示します。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Radio Button コンポーネント, Angular Radio Button コントロール, Angular Radio Group コンポーネント, Angular Radio Group コントロール
+_keywords: Angular Radio Group component, Angular Radio Group control, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library
 _language: ja
 ---
 
-# Radio & Radio Group
+# Angular Radio & Radio Group Component Overview
 
 ## Radio Button
 <p class="highlight">Ignite UI for Angular Radio Button コンポーネントを使用すると、隣に表示されるオプションのセットから単一のオプションを選択する機能を提供します。</p>
@@ -19,9 +19,17 @@ _language: ja
 
 <div class="divider--half"></div>
 
-### 使用方法
+## Getting Started with Ignite UI for Angular Radio Button
 
-Radio Button コンポーネントを初期化にするには、まず `IgxRadioModule` を `AppModule` ファイルにインポートします。
+To get started with the Ignite UI for Angular Radio Button component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+
+```cmd
+ng add igniteui-angular
+```
+
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+
+The next step is to import the `IgxRadioModule` in the **app.module.ts** file.
 
 ```typescript
 // app.module.ts
@@ -39,6 +47,36 @@ export class AppModule {
     public selected: any;
 }
 ```
+
+Alternatively, as of `16.0.0` you can import the `IgxRadioGroupDirective` and `IgxRadioComponent` as standalone dependencies.
+
+```typescript
+// home.component.ts
+import { FormsModule } from '@angular/forms';
+import { IgxRadioComponent, IgxRadioGroupDirective } from 'igniteui-angular';
+// import { IgxRadioComponent, IgxRadioGroupDirective } from '@infragistics/igniteui-angular'; for licensed package
+@Component({
+    selector: 'app-home',
+    template: `
+    <igx-radio-group>
+        <igx-radio [(ngModel)]="selected" value="London">London</igx-radio>
+        <igx-radio [(ngModel)]="selected" value="New York">New York</igx-radio>
+        <igx-radio [(ngModel)]="selected" value="Tokyo">Tokyo</igx-radio>
+        <igx-radio [(ngModel)]="selected" value="Sofia">Sofia</igx-radio>
+    </igx-radio-group>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IgxRadioComponent, IgxRadioGroupDirective, FormsModule]
+})
+export class HomeComponent {
+    public selected: any;
+}
+```
+
+Now that you have the Ignite UI for Angular Radio Button module or directives imported, you can start using the `igx-radio-group` directive and `igx-radio` component.
+
+## Using the Angular Radio Button
 
 ラジオ ボタンを表示するには、コンポーネントのテンプレートで以下のコードを追加します。
 

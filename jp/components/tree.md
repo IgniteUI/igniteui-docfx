@@ -1,13 +1,18 @@
 ---
 title: Angular Tree コンポーネント - Ignite UI for Angular
 _description: Ignite UI for Angular Tree コンポーネントを使用すると、階層データをツリービュー構造で表示したり、ノードを簡単にカスタマイズしたり、オンデマンドでデータを読み込んだりできます。無料でお試しください。
-_keywords: angular tree, angular tree コンポーネント, ignite ui for angular, UI コントロール, インフラジスティックス
+_keywords: angular tree, angular tree component, angular tree view, angular tree view component, angular ui components, ignite ui for angular, UI controls, infragistics
 _language: ja
 ---
+<style type="text/css">
+    code-view .codesandbox-btn {
+        display: none !important;
+    }
+</style>
 
 # Angular Tree コンポーネントの概要
 
-Angular Tree コンポーネントを使用すると、ユーザーはツリービュー構造で階層データを表現し、親子関係を維持したり、対応するデータ モデルなしで静的ツリービュー構造を定義したりできます。その主な目的は、エンドユーザーが階層データ構造内を視覚化してナビゲートできるようにすることです。UI for Angular Tree コンポーネントは、組み込みのチェックボックス、組み込みのキーボード ナビゲーションなどを通じて、ロードオンデマンド機能、項目のアクティブ化、項目の bi-state およびカスケード選択も提供します。
+The Angular Tree Component allows users to represent hierarchical data in a tree-view structure with parent-child relationships, as well as to define static tree-view structure without a corresponding data model. Its primary purpose is to allow end-users to visualize and navigate within hierarchical data structures. The Ignite UI for Angular Tree Component also provides load on demand capabilities, item activation, bi-state and tri-state cascading selection of items through built-in checkboxes, built-in keyboard navigation and more.
 
 ## Angular Tree の例
 この基本的な Angular Tree の例では、ノード階層を指定し、階層データセットを反復処理することにより、`igx-tree` とそのノードを定義する方法を確認できます。
@@ -44,9 +49,44 @@ import { IgxTreeModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
-ツリー モジュールがインポートされたので、`igx-tree` とそのノードの基本的な構成から始めましょう。
 
-## 使用方法
+Alternatively, as of `16.0.0` you can import the `IgxTreeComponent` as a standalone dependency, or use the [`IGX_TREE_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/tree/public_api.ts) token to import the component and all of its supporting components and directives.
+
+```typescript
+// home.component.ts
+import { IGX_TREE_DIRECTIVES } from 'igniteui-angular';
+// import { IGX_TREE_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+@Component({
+    selector: 'app-home',
+    template: `
+    <igx-tree>
+        <igx-tree-node>
+            Angular Libraries
+            <igx-tree-node>Ignite UI for Angular</igx-tree-node>
+            <igx-tree-node>Angular Material</igx-tree-node>
+        </igx-tree-node>
+        <igx-tree-node>
+            Web Component Libraries
+            <igx-tree-node>Ignite UI for Web Components</igx-tree-node>
+            <igx-tree-node>Open UI 5</igx-tree-node>
+        </igx-tree-node>
+        <igx-tree-node>
+            Blazor Libraries
+            <igx-tree-node>Ignite UI for Blazor</igx-tree-node>
+        </igx-tree-node>
+    </igx-tree>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_TREE_DIRECTIVES]
+    /* or imports: [IgxTreeComponent, IgxTreeNodeComponent] */
+})
+export class HomeComponent {}
+```
+
+Now that we have the Ignite UI for Angular Tree module or directives imported, let’s get started with a basic configuration of the `igx-tree` and its nodes.
+
+## Using the Angular Tree
 
 [IgxTreeNodesComponent]({environment:angularApiUrl}/classes/igxtreenodecomponent.html) は、[IgxTreeComponent]({environment:angularApiUrl}/classes/igxtreecomponent.html) に属するすべてのノードの表現です。
 ノードは、[disabled]({environment:angularApiUrl}/classes/igxtreenodecomponent.html#disabled)、[active]({environment:angularApiUrl}/classes/igxtreenodecomponent.html#active)、[selected]({environment:angularApiUrl}/classes/igxtreenodecomponent.html#selected)、および [expanded]({environment:angularApiUrl}/classes/igxtreenodecomponent.html#expanded) プロパティを提供します。これにより、要件に応じてノードの状態を構成できます。[data]({environment:angularApiUrl}/classes/igxtreenodecomponent.html#data) プロパティを使用して、ノードが表すデータ エントリへの参照を追加できます。[IgxTreeComponent.findNodes()]({environment:angularApiUrl}/classes/igxtreecomponent.html#findNodes) を使用してノードを検索するには、`[data]` をバインドする必要があります。

@@ -1,7 +1,7 @@
 ---
 title: Angular Calendar コンポーネント – Ignite UI for Angular
 _description: Angular Calendar コンポーネントを使用すると、ユーザーはアプリケーション用の直感的なカレンダーを作成して、3 つの異なる選択モードを使用して日付情報を表示できます。今すぐお試しください。
-_keywords: angular calendar, angular カレンダー, angular コンポーネント, ignite ui for angular
+_keywords: angular calendar, angular calendar component, angular UI components, angular UI library, ignite ui for angular
 _language: ja
 ---
 
@@ -26,13 +26,20 @@ Ignite UI for Angular Calendar パッケージを使用して、次の Angular C
 </code-view>
 
 
-## Ignite UI を使用して Angular でカレンダーを作成する方法
+## Getting Started with Ignite UI for Angular Calendar
 
-### はじめに
+To get started with the Ignite UI for Angular Calendar component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
 
-Calendar コンポーネントを初期化する前に、`IgxCalendarModule` を **app.module.ts** ファイルにインポートします。
+```cmd
+ng add igniteui-angular
+```
 
-注: タッチ操作のために、[**IgxCalendar**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) は **BrowserAnimationsModule** と **HammerModule** に依存関係があり、これらも AppModule に追加する必要があります。
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+
+The next step is to import the `IgxCalendarModule` in your **app.module.ts** file.
+
+>[!NOTE]
+> The [**IgxCalendarComponent**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) also depends on the [`BrowserAnimationsModule`](https://angular.io/api/platform-browser/animations/BrowserAnimationsModule) and the [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) for touch interactions, so they need to be added to the AppModule as well:
 
 ```typescript
 // app.module.ts
@@ -50,11 +57,32 @@ import { IgxCalendarModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-> [!WARNING]
+Alternatively, as of `16.0.0` you can import the `IgxCalendarComponent` as a standalone dependency, or use the [`IGX_CALENDAR_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/calendar/public_api.ts) token to import the component and all of its supporting components and directives.
+
+```typescript
+// home.component.ts
+import { HammerModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { IGX_CALENDAR_DIRECTIVES } from 'igniteui-angular';
+// import { IGX_CALENDAR_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+@Component({
+    selector: 'app-home',
+    template: '<igx-calendar></igx-calendar>',
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [BrowserAnimationsModule, HammerModule, IGX_CALENDAR_DIRECTIVES]
+    /* or imports: [BrowserAnimationsModule, HammerModule, IgxCalendarComponent] */
+})
+export class HomeComponent {}
+```
+
+Now that you have the Ignite UI for Angular Calendar module or directives imported, you can start using the `igx-calendar` component.
+
+> [!NOTE]
 > [`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) が日付のローカライズおよび書式設定のために [Intl Web API](https://developer.mozilla.org/ja-JP/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat) を使用します。
 対象プラットフォームがその API をサポートしない場合、[適切なポリフィル](https://github.com/andyearnshaw/Intl.js/)を使用してください。
 
-## さまざまな選択モードの Angular Calendar の例
+## Using the Angular Calendar
 
 ### Angular 単一選択カレンダー
 

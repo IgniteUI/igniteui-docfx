@@ -1,16 +1,12 @@
 ---
 title: Angular Select コンポーネント - IgniteUI for Angular
 _description: Angular Select コンポーネントを構成する方法について説明します。Angular Select は、Angular ドロップダウン リストを備えた入力を提供し、Angular Combobox の単一項目選択を可能にします。今すぐお試しください。
-_keywords:  angular select, igniteui for angular, インフラジスティックス
+_keywords: angular select, angular select component, angular forms, angular form select component, angular ui components, igniteui for angular, infragistics
 _language: ja
 ---
 
-# Angular Select の概要
-Angular Material Select は、データ入力とデータ表示に使用されるフォーム コントロールであり、ユーザーはいくつかの事前定義された値を含むリストから特定の値を選択できます。Angular Select コンポーネントは、ドロップダウン リストに非常に似ています。Select コンポーネントは、ユーザーがオプションのリストから選択してデータを送信できるフォーム内で使用されますが、[DropDown コンポーネント](drop-down.md) はページのコンテンツをフィルター処理またはソートします。
-
-<p class="highlight">
-
-Ignite UI for Angular Material [Select コンポーネント]({environment:angularApiUrl}/classes/igxselectcomponent.html)は、ドロップダウンに配置された項目のリストからの単一選択できます。このマテリアルベースのフォームコントロールは、単一または複数の文字の一致に基づいて、選択などの迅速な項目リスト ナビゲーションを提供します。[IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html) は [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) を拡張するため、Select インスタンスですべての Drop Down イベントを処理できます。</p>
+# Angular Select Component Overview
+Angular Select is a form component used for selecting a single value from a list of predefined values. The Angular Select Component provides functionality identical to the native HTML select element, but offers a lot more customization options. It is based on the [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) and supports all of its features, including templating, virtualization, and customizing the dropdown list items.
 
 ## Angular Select の例
 以下は基本的な Angular Select の例です。クリックごとに開く、いくつかの選択肢のリストを表示するシンプルなコンテキスト メニューがあります。
@@ -22,8 +18,17 @@ Ignite UI for Angular Material [Select コンポーネント]({environment:angul
 
 
 
-## Ignite UI で Angular Select を使用する方法
-Ignite UI for Angular [Select コンポーネント]({environment:angularApiUrl}/classes/igxselectcomponent.html)を初期化にするには、まず **IgxSelectModule** を **app.module** ファイルにインポートします。
+## Getting Started with Ignite UI for Angular Select
+
+To get started with the Ignite UI for Angular Select component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+
+```cmd
+ng add igniteui-angular
+```
+
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+
+The next step is to import the `IgxSelectModule` in the **app.module.ts** file.
 
 ```typescript
 // app.module.ts
@@ -38,7 +43,39 @@ import { IgxSelectModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-次に選択する項目のリストと共に `igx-select` を追加します。[`igx-select-item`]({environment:angularApiUrl}/classes/igxselectitemcomponent.html) を使用して、`igx-select` に含まれる項目を表示します。
+Alternatively, as of `16.0.0` you can import the `IgxSelectComponent` as a standalone dependency, or use the [`IGX_SELECT_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/select/public_api.ts) token to import the component and all of its supporting components and directives.
+
+```typescript
+// home.component.ts
+import { FormsModule } from '@angular/forms';
+import { IGX_SELECT_DIRECTIVES } from 'igniteui-angular';
+// import { IGX_SELECT_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+@Component({
+    selector: 'app-home',
+    template: `
+    <igx-select [(ngModel)]="selected">
+        <label igxLabel>Simple Select</label>
+        <igx-select-item value="Orange">Orange</igx-select-item>
+        <igx-select-item value="Apple">Apple</igx-select-item>
+        <igx-select-item value="Banana">Banana</igx-select-item>
+        <igx-select-item value="Mango">Mango</igx-select-item>
+    </igx-select>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_SELECT_DIRECTIVES, FormsModule]
+    /* or imports: [IgxSelectComponent, IgxSelectItemComponent, IgxLabelDirective, FormsModule] */
+})
+export class HomeComponent {
+    public selected: string;
+}
+```
+
+Now that you have the Ignite UI for Angular Select module or directives imported, you can start using the `igx-select` component.
+
+## Using the Angular Select
+
+Add the `igx-select` along with a list of items to choose from. We use [`igx-select-item`]({environment:angularApiUrl}/classes/igxselectitemcomponent.html) to display the items that the `igx-select` contains.
 ```html
 <igx-select>
     <label igxLabel>Simple Select</label>

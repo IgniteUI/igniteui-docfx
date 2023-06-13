@@ -1,12 +1,12 @@
 ---
 title: Angular Button コンポーネント – Ignite UI for Angular
 _description: Ignite UI for Angular Button コンポーネントで規格のボタンに定義済みテキスト、画像、およびその他の機能を追加します。今すぐお試しください。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Button コンポーネント, Angular Button コントロール
+_keywords: Angular Button component, Angular Button control, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Angular UI Components
 _language: ja
 ---
 
-# Angular Button の概要
-<p class="highlight">Angular Material Button ディレクティブは、アクション可能なボタンを作成して Web ページ/アプリケーションに追加するために使用されます。簡単にカスタマイズでき、いくつかの組み込み機能を含むさまざまな Angular Button タイプがあります。デフォルトでは、AngularMaterial はネイティブの `<button>` および `<a>` 要素を使用して、アクセス可能なエクスペリエンスを提供します。 
+# Angular Button (ボタン) の概要
+<p class="highlight">Angular Button ディレクティブは、アクション可能なボタンを作成して Web ページ/アプリケーションに追加するために使用されます。簡単にカスタマイズでき、いくつかの組み込み機能を含むさまざまな Angular Button タイプがあります。デフォルトでは、AngularMaterial はネイティブの `<button>` および `<a>` 要素を使用して、アクセス可能なエクスペリエンスを提供します。 
 
 Ignite UI for Angular Button ディレクティブを任意の button、span、div、または anchor 要素に適用して高機能なボタンを構成できます。Flat ボタン、Raised ボタン、Outlined ボタン、Icon ボタン、FAB (フローティング アクション ボタン) の Angular ボタン タイプを使用できます。カスタマイズ可能な色、テーマを作成して Angular ボタン スタイルを変更するオプション、ユーザーがボタンの表示密度を選択できるようにするオプションなどを提供します。</p>
 
@@ -22,9 +22,17 @@ Ignite UI for Angular Button ディレクティブを任意の button、span、d
 
 <div class="divider--half"></div>
 
-## Ignite UI で Angular Button を使用する方法
+## Getting Started with Ignite UI for Angular Button
 
-Angular Button ディレクティブは `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に `IgxButtonModule` をインポートする必要があります。
+To get started with the Ignite UI for Angular Button directive, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+
+```cmd
+ng add igniteui-angular
+```
+
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+
+The next step is to import the `IgxButtonModule` in your **app.module.ts** file. 
 
 ```typescript
 // app.module.ts
@@ -42,6 +50,26 @@ import { IgxButtonModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
+
+Alternatively, as of `16.0.0` you can import the `IgxButtonDirective` as a standalone dependency.
+
+```typescript
+// home.component.ts
+...
+import { IgxButtonDirective } from 'igniteui-angular';
+// import { IgxButtonDirective } from '@infragistics/igniteui-angular'; for licensed package
+@Component({
+    selector: 'app-home',
+    template: '<button igxButton="flat">Flat</button>',
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IgxButtonDirective]
+})
+export class HomeComponent {}
+```
+
+Now that you have the Ignite UI for Angular Button module or directive imported, you can start using the `igxButton` directive on elements.
+
 ## Angular ボタン タイプ
 
 ### Flat ボタン
@@ -53,8 +81,8 @@ export class AppModule {}
 ```
 
 <div class="sample-container loading" style="height: 70px">
-    <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-2">
-</iframe></div>
+    <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-2"></iframe>
+</div>
 
 ### Raised ボタン 
 

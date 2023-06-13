@@ -1,15 +1,15 @@
 ---
 title: TextHighlight ディレクティブ - ネイティブ Angular | Ignite UI for Angular
 _description: Ignite UI for Angular TextHighlight ディレクティブは、テキスト部分のハイライトやアクティブ ハイライトがあります。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コンポーネント, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular TextHighlight ディレクティブ, IgxTextHighlight ディレクティブ
+_keywords: Angular TextHighlight Directive, Angular Text Highlight Directive, IgxTextHighlight Directive, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Components, Angular UI Components, Native Angular Components Library
 _language: ja
 ---
 
-# TextHighlight ディレクティブ
+# Angular Text Highlight (テキスト強調表示) ディレクティブの概要
 
 Ignite UI for Angular の [`IgxTextHighlight`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html) ディレクティブは、テキストのハイライト、大文字と小文字の区別のオプション、完全一致のみのハイライトをサポートします。既にハイライトしている部分を含む、テキストのハイライトをアクティブに保持できます。
 
-## Angular TextHighlight ディレクティブの例
+## Angular Text Highlight ディレクティブの例
 
 
 <code-view style="height: 260px;" 
@@ -19,17 +19,23 @@ Ignite UI for Angular の [`IgxTextHighlight`]({environment:angularApiUrl}/class
 
 <div class="divider--half"></div>
 
-## 使用方法
+## Getting Started with Ignite UI for Angular Text Highlight Directive
 
-Ignite UI for Angular TextHighlight ディレクティブを使用するには、**app.module.ts** ファイルに `IgxTextHighlightModule` とアプリケーションに必要な他の Ignite UI for Angular モジュールをインポートします。
+To get started with the Ignite UI for Angular Text Highlight directive, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+
+```cmd
+ng add igniteui-angular
+```
+
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+
+The next step is to import the `IgxTextHighlightModule` in your **app.module.ts** file.
 
 ```typescript
 // app.module.ts
 ...
-import { IgxButtonModule, IgxInputGroupModule,
-        IgxIconModule, IgxRippleModule, IgxTextHighlightModule } from 'igniteui-angular';
-// import { IgxButtonModule, IgxInputGroupModule,
-//        IgxIconModule, IgxRippleModule, IgxTextHighlightModule } from '@infragistics/igniteui-angular'; for licensed package
+import { IgxTextHighlightModule } from 'igniteui-angular';
+// import { IgxTextHighlightModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -38,6 +44,34 @@ import { IgxButtonModule, IgxInputGroupModule,
 })
 export class AppModule {}
 ```
+
+Alternatively, as of `16.0.0` you can import the `IgxTextHighlightDirective` as a standalone dependency.
+
+```typescript
+// home.component.ts
+import { IgxTextHighlightDirective } from 'igniteui-angular';
+// import { IgxTextHighlightDirective } from '@infragistics/igniteui-angular'; for licensed package
+@Component({
+    selector: 'app-home',
+    template: `
+    <div igxTextHighlight
+        [value]="html"
+        [groupName]="'group1'"
+        [containerClass]="'search-text'"
+        class="search-text">
+        {{html}}
+    </div>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IgxTextHighlightDirective]
+})
+export class HomeComponent {}
+```
+
+Now that you have the Ignite UI for Angular Text Highlight module or directive imported, you can start using the `igxTextHighlight` directive.
+
+## Using the Angular Text Highlight Directive
 
 次にテキストの様々な部分を強調表示するためにハイライトできる検索ボックスを作成します。Ignite UI for Angular の [InputGroup](input-group.md) コンポーネントは、一致のクリア、次の一致、前の一致へ移動するためのボタン、検索で大文字と小文字を区別を指定するボタンを追加します。また一致がいくつ見つかったかをを示すラベルがあります。
 

@@ -1,18 +1,18 @@
 ---
 title: Angular Tree Grid | 最速の Angular Tree テーブル | インフラジスティックス
 _description: Ignite UI for Angular のツリー グリッドは、階層データまたはフラット データを簡単に表示および操作するために使用されます。コーディングをほとんど行わずにデータをバインドできます。無料でお試しください。
-_keywords: angular データ グリッド, igniteui for angular, インフラジスティックス
+_keywords: angular tree grid, angular tree table, angular tree grid component, angular tree table component, angular ui components, igniteui for angular, infragistics
 _language: ja
 ---
 
-# Angular ツリー グリッド 概要と構成
+# Angular Tree Grid (ツリー グリッド) コンポーネントの概要
 
-Ignite UI for Angular Tree Grid は、階層データまたはフラットデータを簡単に表示および操作できます。最小限のコードでデータをすばやくバインドするか、さまざまなイベントを使用してさまざまな動作をカスタマイズします。このコンポーネントは、データ選択、Excel スタイル フィルタリング、ソート、ページング、テンプレート、列移動などの豊富な機能を提供します。Material Table ベースの UI ツリー グリッドにより、表形式のデータの表示がさらに簡単できれいになりました。
+The Ignite UI for Angular Tree Grid is used to display and manipulate hierarchical or flat self-referencing data with ease.最小限のコードでデータをすばやくバインドするか、さまざまなイベントを使用してさまざまな動作をカスタマイズします。このコンポーネントは、データ選択、Excel スタイル フィルタリング、ソート、ページング、テンプレート、列移動などの豊富な機能を提供します。Material Table ベースの UI ツリー グリッドにより、表形式のデータの表示がさらに簡単できれいになりました。
 
 
 ## Angular ツリー グリッドの例
 
-この例では、ユーザーが階層データまたはフラット データを操作する方法を確認できます。フィルタリングとソートのオプション、ピン固定と非表示、行の選択、Excel と csv へのエクスポート、[スパークライン](../sparkline.md)コンポーネントを使用したセル テンプレートが含まれています。さらに、[Angular 改ページ](paging.md)を使用したカスタム改ページの例を見ることができます。
+In this example, you can see how users can display hierarchical data.フィルタリングとソートのオプション、ピン固定と非表示、行の選択、Excel と csv へのエクスポート、[スパークライン](../sparkline.md)コンポーネントを使用したセル テンプレートが含まれています。さらに、[Angular 改ページ](paging.md)を使用したカスタム改ページの例を見ることができます。
 
 
 
@@ -23,8 +23,9 @@ Ignite UI for Angular Tree Grid は、階層データまたはフラットデー
 
 <div class="divider--half"></div>
 
-## Ignite UI for Angular Tree Grid で作業を開始
-ツリー グリッドを初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
+## Ignite UI for Angular Tree Grid を使用した作業の開始
+
+To get started with the Ignite UI for Angular Tree Grid component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
 
 ```cmd
 ng add igniteui-angular
@@ -49,7 +50,28 @@ import { IgxTreeGridModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-## 使用方法
+Alternatively, as of `16.0.0` you can import the `IgxTreeGridComponent` as a standalone dependency, or use the [`IGX_TREE_GRID_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/grids/tree-grid/public_api.ts) token to import the component and all of its supporting components and directives.
+
+```typescript
+// home.component.ts
+import { IGX_TREE_GRID_DIRECTIVES } from 'igniteui-angular';
+// import { IGX_TREE_GRID_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+@Component({
+    selector: 'app-home',
+    template: '<igx-tree-grid [data]="data"></igx-tree-grid>',
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_TREE_GRID_DIRECTIVES]
+    /* or imports: [IgxTreeGridComponent] */
+})
+export class HomeComponent {
+    public data: Employee [];
+}
+```
+
+Now that you have the Ignite UI for Angular Tree Grid module or directives imported, you can start using the `igx-tree-grid` component.
+
+## Using the Angular Tree Grid
 
 >[!NOTE]
 >**このコンポーネントでは、タッチ操作が正しく動作するために、アプリケーションのルート モジュールに [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) をインポートする必要があります。**.
@@ -180,9 +202,7 @@ IgxTreeGridComponent を階層にバインドするには、[`childDataKey`]({en
 ```typescript
 // treeGridSample.component.ts
 
-@Component({
-    ...
-})
+@Component({...})
 export class MyComponent implements OnInit {
 
     public data: any[];

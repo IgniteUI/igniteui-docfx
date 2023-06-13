@@ -1,10 +1,10 @@
 ---
 title: Angular スプリッター | 分割されたペイン |  Ignite UI for Angular | インフラジスティックス
 _description: Angular Splitter コンポーネントを使用して、ビューを水平または垂直に複数の縮小可能なスプリット ペインに分割する単純な分割レイアウトを作成します。
-_keywords: angular splitter, igniteui for angular, infragistics, インフラジスティックス
+_keywords: angular splitter, angular splitter component, angular split view component, angular ui components, igniteui for angular, infragistics
 ---
 
-# スプリッター
+# Angular Splitter Component Overview
 
 Ignite UI for Angular Splitter コンポーネントはレイアウトを作成し、サイズ変更、展開、縮小が可能な複数の垂直方向または水平方向に配置されたペインに分割できます。これらの操作は、ペイン間のスプリッター バーで公開される UI によって実行されます。以下のデモでシンプルなスプリッター レイアウトを示します。
 
@@ -18,9 +18,18 @@ Ignite UI for Angular Splitter コンポーネントはレイアウトを作成�
 
 <div class="divider--half"></div>
 
-## 使用方法
+## Getting Started with Ignite UI for Angular Splitter
 
-**igxSplitter** コンポーネントを初期化にするには、まず **IgxSplitterModule** を **app.module** にインポートします。
+To get started with the Ignite UI for Angular Splitter component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+
+```cmd
+ng add igniteui-angular
+```
+
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+
+The next step is to import the `IgxSplitterModule` in your **app.module.ts** file.
+
 ```typescript
 // app.module.ts
 ...
@@ -35,7 +44,38 @@ import { IgxSplitterModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-次に、コンポーネントのマークアップを追加します。
+Alternatively, as of `16.0.0` you can import the `IgxSplitterComponent` as a standalone dependency, or use the [`IGX_SPLITTER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/splitter/public_api.ts) token to import the component and all of its supporting components and directives.
+
+```typescript
+// home.component.ts
+import { IGX_SPLITTER_DIRECTIVES } from 'igniteui-angular';
+// import { IGX_SPLITTER_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+@Component({
+    selector: 'app-home',
+    template: `
+    <igx-splitter>
+        <igx-splitter-pane>
+            Pane 1
+        </igx-splitter-pane>
+        <igx-splitter-pane>
+            Pane 2
+        </igx-splitter-pane>
+    </igx-splitter>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_SPLITTER_DIRECTIVES]
+    /* or imports: [IgxSplitterComponent, IgxSplitterPaneComponent] */
+})
+export class HomeComponent {}
+```
+
+Now that you have the Ignite UI for Angular Splitter module or directives imported, you can start using the `igx-splitter` component.
+
+## Using the Angular Splitter
+
+**igxSplitter** is initialized with the **igx-splitter** tag. Multiple splitter panes can be defined under a single **igx-splitter** component. The content of the pane is templatable and will be rendered in its own resizable container.
+
 ```html
 <!-- splitter.component.html -->
 <igx-splitter>
@@ -50,8 +90,6 @@ export class AppModule {}
     </igx-splitter-pane>
 </igx-splitter>
 ```
-**igxSplitter** は **igx-splitter** タグで初期化されます。単一の **igx-splitter** コンポーネントの下に複数のスプリッター ペインを定義できます。ペインのコンテンツはテンプレート化可能で、サイズ変更可能なコンテナーに描画されます。
-
 
 ### 方向
 

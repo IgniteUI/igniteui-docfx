@@ -1,10 +1,10 @@
 ---
 title: Snackbar コンポーネント
 _description: Ignite UI for Angular Snackbar を使用すると、単一行メッセージをモバイルおよびデスクトップ アプリケーションに含みます。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Snackbar コンポーネント, Angular Snackbar コントロール
+_keywords: Angular Snackbar component, Angular Snackbar control, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library
 _language: ja
 ---
-# Snackbar
+# Angular Snackbar Component Overview
 <p class="highlight">Ignite UI for Angular Snackbar コンポーネントは、アクションを含むことができる単一行のメッセージで操作のフィードバックを提供します。SnackBar メッセージがその他の画面要素の上に表示され、画面の中央下に配置されます。</p>
 <div class="divider"></div>
 
@@ -20,9 +20,17 @@ _language: ja
 
 <div class="divider--half"></div>
 
-## 使用方法
+## Getting Started with Ignite UI for Angular Snackbar
 
-はじめに、**app.module.ts** ファイルに `IgxSnackbarModule` をインポートします。
+To get started with the Ignite UI for Angular Snackbar component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+
+```cmd
+ng add igniteui-angular
+```
+
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+
+The next step is to import the `IgxSnackbarModule` in your **app.module.ts** file.
 
 ```typescript
 // app.module.ts
@@ -38,6 +46,32 @@ import { IgxSnackbarModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
+
+Alternatively, as of `16.0.0` you can import the `IgxSnackbarComponent` as a standalone dependency.
+
+```typescript
+// home.component.ts
+import { IgxSnackbarComponent, IgxButtonDirective } from 'igniteui-angular';
+// import { IgxSnackbarComponent, IgxButtonDirective } from '@infragistics/igniteui-angular'; for licensed package
+@Component({
+    selector: 'app-home',
+    template: `
+    <button igxButton="raised" (click)="snackbar.open()">Delete Message</button>
+    <div>
+        <igx-snackbar #snackbar>Message deleted</igx-snackbar>
+    </div>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IgxSnackbarComponent, IgxButtonDirective]
+})
+export class HomeComponent {}
+```
+
+Now that you have the Ignite UI for Angular Snackbar module or component imported, you can start using the `igx-snackbar` component.
+
+## Using the Angular Snackbar
+
 ### Snackbar の表示
 Snackbar コンポーネントを表示するには、ボタン クリックで [`open()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#open) メソッドを呼び出します。
 

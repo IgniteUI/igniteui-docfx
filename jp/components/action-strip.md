@@ -1,11 +1,11 @@
 ---
 title: アクション ストリップ
 _description: アクション ストリップは、1 つ以上のアクションのテンプレート領域を表します。アクション ストリップはオーバーレイするため、相対コンテナー内に配置する必要があります。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular ActionStrip コンポーネント, Angular ActionStrip ディレクティブ, Angular ActionStrip コントロール
+_keywords: Angular Action Strip component, Angular Action Strip directive, Angular Action Strip control, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Angular UI Components
 _language: ja
 ---
 
-# Action Strip
+# Angular Action Strip Directive Overview
 <p class="highlight">
 Ignite UI for Angular Action Strip コンポーネントは、ホバーなどのユーザー操作の際に特定のターゲット コンテナーの上に追加の UI および機能を表示できる 1 つ以上のアクションを含むオーバーレイ領域を提供します。アクション ストリップはコンテナーをオーバーレイしようとして絶対的に配置されるため、コンテナーは相対的に配置する必要があります。主な操作とターゲットコ ンテナーへのユーザー アクセスはアクション ストリップでオーバーラップされますが、使用できます。
 </p>
@@ -23,7 +23,60 @@ Ignite UI for Angular Action Strip コンポーネントは、ホバーなどの
 
 <div class="divider--half"></div>
 
-## 使用方法
+## Getting Started with Ignite UI for Angular Action Strip
+
+To get started with the Ignite UI for Angular Action Strip component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+
+```cmd
+ng add igniteui-angular
+```
+
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+
+The next step is to import the `IgxActionStripModule` in your **app.module.ts** file. 
+
+```typescript
+// app.module.ts
+...
+import { IgxActionStripModule } from 'igniteui-angular';
+// import { IgxActionStripModule } from '@infragistics/igniteui-angular'; for licensed package
+@NgModule({
+    ...
+    imports: [..., IgxActionStripModule],
+    ...
+})
+export class AppModule {}
+```
+
+Alternatively, as of `16.0.0` you can import the `IgxActionStripComponent` as a standalone dependency, or use the [`IGX_ACTION_STRIP_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/action-strip/public_api.ts) token to import the component and all of its supporting components and directives.
+
+```typescript
+// home.component.ts
+...
+import { IGX_ACTION_STRIP_DIRECTIVES, IgxButtonDirective, IgxIconComponent } from 'igniteui-angular';
+// import { IGX_ACTION_STRIP_DIRECTIVES, IgxButtonDirective, IgxIconComponent } from '@infragistics/igniteui-angular'; for licensed package
+@Component({
+    selector: 'app-home',
+    template: `
+    <div style="width:100px; height:100px;">
+        <igx-action-strip>
+            <button igxButton (click)="makeTextBold()">
+                <igx-icon>format_bold</igx-icon>
+            </button>
+        </igx-action-strip>
+    <div>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_ACTION_STRIP_DIRECTIVES, IgxButtonDirective, IgxIconComponent]
+    /* or imports: [IgxActionStripComponent, IgxButtonDirective, IgxIconComponent] */
+})
+export class HomeComponent {}
+```
+
+Now that you have the Ignite UI for Angular Action Strip module or directives imported, you can start with a basic configuration of the `igx-action-strip` component.
+
+## Using the Angular Action Strip Component
 アクション ストリップを初期化して正しく配置するには、相対的に配置されたコンテナー内に配置する必要があります。
 
 ```html

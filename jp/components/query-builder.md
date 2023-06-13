@@ -1,18 +1,20 @@
 ---
 title: Angular Query Builder コンポーネント - Ignite UI for Angular
 _description: Angular Query Builder (クエリ ビルダー) を使用すると、ユーザーは優れた UI エクスペリエンスを備えた Angular アプリで複雑なカスタム クエリを作成できます。今すぐお試しください。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, Native Angular コンポーネント スイート, Native Angular コントロール, Native Angular コンポーネント Library, Angular Query Builder コンポーネント, Angular Query Builder コントロール
+_keywords: Angular Query Builder component, Angular Query Builder control, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library
 _language: ja
 ---
 
 
-# Angular Query Builder (クエリ ビルダー) の概要
+# Angular Query Builder (クエリ ビルダー) コンポーネントの概要
 
-Angular Query Builder は、開発者が指定されたデータ セットに対して複雑なデータ フィルタリング クエリを作成できる機能豊富な UI を提供します。このコンポーネントを使用すると、式のツリーを構築し、エディターと各フィールドのデータ型によって決定される条件リストを使用して、それらの間に AND/OR 条件を設定できます。式ツリーは、バックエンドがサポートする形式のクエリに簡単に変換できます。
+Angular Query Builder は、開発者が指定されたデータ セットに対して複雑なデータ フィルタリング クエリを作成できる豊富な UI を提供します。このコンポーネントを使用すると、式のツリーを構築し、エディターと各フィールドのデータ型によって決定される条件リストを使用して、それらの間に AND/OR 条件を設定できます。式ツリーは、バックエンドがサポートする形式のクエリに簡単に変換できます。
 
 <p class="highlight">
 
 [`IgxQueryBuilderComponent`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html) コンポーネントは UI を使用して複雑なクエリを作成する方法を提供します。AND/OR 演算子、条件、および値を指定すると、クエリを記述する式ツリーが作成されます。 
+
+</p>
 
 ## Angular Query Builder の例
 
@@ -25,7 +27,62 @@ Angular Query Builder は、開発者が指定されたデータ セットに対
 
 <div class="divider--half"></div>
 
-## インタラクション
+## Getting Started with Ignite UI for Angular Query Builder
+
+To get started with the Ignite UI for Angular Query Builder component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+
+```cmd
+ng add igniteui-angular
+```
+
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+
+The next step is to import the `IgxQueryBuilderModule` in the **app.module.ts** file.
+
+```typescript
+// app.module.ts
+import { IgxQueryBuilderModule } from 'igniteui-angular';
+// import { IgxQueryBuilderModule } from '@infragistics/igniteui-angular'; for licensed package
+@NgModule({
+    ...
+    imports: [..., IgxQueryBuilderModule],
+    ...
+})
+export class AppModule {}
+```
+
+Alternatively, as of `16.0.0` you can import the `IgxQueryBuilderComponent` as a standalone dependency, or use the [`IGX_QUERY_BUILDER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/query-builder/public_api.ts) token to import the component and all of its supporting components and directives.
+
+```typescript
+// home.component.ts
+import { IGX_QUERY_BUILDER_DIRECTIVES, FilteringExpressionsTree, FieldType } from 'igniteui-angular';
+// import { IGX_QUERY_BUILDER_DIRECTIVES, FilteringExpressionsTree, FieldType } from '@infragistics/igniteui-angular'; for licensed package
+@Component({
+    selector: 'app-home',
+    template: `
+    <igx-query-builder #queryBuilder
+        [fields]="fields"
+        [(expressionTree)]="expressionTree"
+        (expressionTreeChange)="onExpressionTreeChange()">
+    </igx-query-builder>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_QUERY_BUILDER_DIRECTIVES]
+    /* or imports: [IgxQueryBuilderComponent] */
+})
+export class HomeComponent {
+    public expressionTree: FilteringExpressionsTree;
+    public fields: FieldType [];
+    public onExpressionTreeChange() {
+        ...
+    }
+}
+```
+
+Now that you have the Ignite UI for Angular Query Builder module or directives imported, you can start using the `igx-query-builder` component.
+
+## Using the Angular Query Builder
 
 最初に式木が設定されていない場合は、[`AND`]({environment:angularApiUrl}/enums/filteringlogic.html#and) または [`OR`]({environment:angularApiUrl}/enums/filteringlogic.html#or) で結合された条件のグループを作成することから開始します。その後、条件またはサブグループを追加できます。 
 
@@ -34,8 +91,6 @@ Angular Query Builder は、開発者が指定されたデータ セットに対
 複数の条件チップを選択すると、グループを作成したりクエリを削除したりするためのオプションを含むコンテキストメニューが表示されます。選択した条件でグループを作成することを選択した場合、一番上に選択した条件が配置された場所に新しく作成されたグループが表示されます。
 
 グループを選択するために、リンク条件 ([`AND`]({environment:angularApiUrl}/enums/filteringlogic.html#and) または [`OR`]({environment:angularApiUrl}/enums/filteringlogic.html#or)) に基づいて色付けされた垂直線をクリックすることもできます。単一のグループが選択されている場合、ロジックを変更、グループ解除、または削除するオプションを含むコンテキスト メニューが表示されます。
-
-## Ignite UI for Angular Query Builder コンポーネントで作業を開始
 
 コンポーネントの使用を開始するには、[`fields`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html#fields) プロパティに、フィールド名とそのデータ型を説明する配列を追加します。データ型に基づいて対応するオペランドを自動的に割り当てます。
 クエリ ビルダーには [`expressionTree`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html#expressionTree) 入力プロパティがあります。コントロールの初期状態を設定するために使用できます。

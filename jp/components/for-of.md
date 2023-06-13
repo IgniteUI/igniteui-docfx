@@ -1,13 +1,14 @@
 ---
 title: 仮想スクロール ディレクティブ
 _description: Ignite UI for Angular は ngFor と同様の仮想 igxFor ディレクティブを公開します。DOM でデータの表示されている部分のみを可視化すると DOM オブジェクトの描画が仮想化されます。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, 仮想化, パフォーマンス, 仮想ディレクティブ, 仮想 For
+_keywords: Angular Virtual ForOf Directive, Native Angular Components Suite, Angular UI Components, Native Angular Components Library, Virtualization, Performance, Virtual directive, Angular Virtual For
 _language: ja
 ---
 
-# 仮想スクロール ディレクティブ
+# Angular Virtual ForOf Directive Overview
 
 <p class="highlight">Ignite UI for Angular igxForOf ディレクティブは、膨大なデータをテンプレート化するための ngForOf の代替手段です。仮想化を使用して、DOM レンダリングとメモリ使用量を最適化します。</p>
+
 <div class="divider"></div>
 
 ## Angular 仮想スクロール ディレクティブの例
@@ -18,12 +19,19 @@ _language: ja
            iframe-src="{environment:demosBaseUrl}/data-display/igx-for-sample-1" alt="Angular 仮想スクロール ディレクティブの例">
 </code-view>
 
+<div class="divider"></div>
 
-## 使用方法
+## Getting Started with Ignite UI for Angular Virtual ForOf Directive
 
-### はじめに
+To get started with the Ignite UI for Angular [`igxFor`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxForOf) directive, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
 
-[`igxFor`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxForOf) ディレクティブは `NgModule` としてエクスポートされるため、アプリケーションで行う必要があるのは、`AppModule` に `IgxForOfModule` をインポートすることだけです。
+```cmd
+ng add igniteui-angular
+```
+
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+
+The next step is to import the `IgxForOfModule` in your **app.module.ts** file.
 
 ```typescript
 // app.module.ts
@@ -41,9 +49,33 @@ import { IgxForOfModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-### igxFor を追加
+Alternatively, as of `16.0.0` you can import the `IgxForOfDirective` as a standalone dependency.
 
-モジュールをインポート後、ローカル データにバインドする `igxFor` の基本構成を設定します。
+```typescript
+// home.component.ts
+import { IgxForOfDirective } from 'igniteui-angular';
+// import { IgxForOfDirective } from '@infragistics/igniteui-angular'; for licensed package
+@Component({
+    selector: 'app-home',
+    template: `
+    <span #container>
+        <ng-template *igxFor="data"></ng-template>
+    </span>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IgxForOfDirective]
+})
+export class HomeComponent {
+    public data: Employee [];
+}
+```
+
+Now that you have the Ignite UI for Angular ForOf module or directives imported, you can start using the `igxFor` directive.
+
+## Using the Angular Virtual ForOf
+
+Now that we have the module or directive imported, let’s get started with a basic configuration of the `igxFor` that binds to local data:
 
 ```html
 <span #container>
@@ -51,8 +83,7 @@ export class AppModule {}
 </span>
 ```
 
-**data** プロパティは、仮想化されたデータを提供する配列です。
-
+The **data** property is an array that provides the data objects used to construct the virtualized DOM.
 
 ## 例
 

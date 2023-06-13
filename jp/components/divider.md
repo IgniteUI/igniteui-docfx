@@ -1,11 +1,11 @@
 ---
 title: Divider コンポーネント
 _description: Ignite UI for Angular Divider コンポーネントは、コンテンツを水平と垂直の両方向に分割できます。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, Native Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Divider コンポーネント, Angular Divider コントロール
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, Angular UI Components, Native Angular Components Library, Angular Divider component, Angular Divider directive, Angular Divider control
 _language: ja
 ---
 
-# Divider
+# Angular Divider Component Overview
 
 <p class="highlight">デバイダ コンポーネントは、コンテンツを水平と垂直の両方向に分割できます。</p>
 <div class="divider"></div>
@@ -21,13 +21,52 @@ _language: ja
 </code-view>
 
 
-## 使用方法
+## Getting Started with Ignite UI for Angular Divider
 
-```html
-<igx-divider></igx-divider>
+To get started with the Ignite UI for Angular Divider component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+
+```cmd
+ng add igniteui-angular
 ```
 
-## 垂直デバイダ
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+
+The next step is to import the `IgxDividerModule` in your **app.module.ts** file.
+
+```typescript
+// app.module.ts
+...
+import { IgxDividerModule } from 'igniteui-angular';
+// import { IgxDividerModule } from '@infragistics/igniteui-angular'; for licensed package
+@NgModule({
+    ...
+    imports: [..., IgxDividerModule],
+    ...
+})
+export class AppModule {}
+```
+
+Alternatively, as of `16.0.0` you can import the `IgxDividerDirective` as a standalone dependency.
+
+```typescript
+// home.component.ts
+import { IgxDividerDirective } from 'igniteui-angular';
+// import { IgxDividerDirective } from '@infragistics/igniteui-angular'; for licensed package
+@Component({
+    selector: 'app-home',
+    template: '<igx-divider></igx-divider>',
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IgxDividerDirective]
+})
+export class HomeComponent {}
+```
+
+Now that you have the Ignite UI for Angular Divider module or directive imported, you can start using the `igx-divider` component.
+
+## Using the Angular Divider
+
+### 垂直デバイダ
 `vertical` 属性を追加してその値を `true` に設定することで、デバイダの方向を水平から垂直に変更できます。
 
 ```html
@@ -40,8 +79,8 @@ _language: ja
 </code-view>
 
 
-## 破線の仕切り
-デバイダのデフォルト スタイルは`実線`ですが、`破線`も使用できます。
+### 破線の仕切り
+デバイダのデフォルト スタイルは `solid` ですが、`dashed` も使用できます。
 デフォルトの外観を変更するには、デバイダの `type` 属性を使用してその値を `dashed` に設定します。
 
 ```html
@@ -54,7 +93,7 @@ _language: ja
 </code-view>
 
 
-## インセット デバイダ
+### インセット デバイダ
 デバイダは両側に設定できます。
 デバイダを埋め込むには、デバイダの `middle` 属性を `true` に設定し、`inset` 値を指定することにより、デバイダが両端から縮小し始めます。
 

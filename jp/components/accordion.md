@@ -1,11 +1,11 @@
 ---
 title: Angular Accordion – 完全機能の縮小可能なパネル - インフラジスティックス
 _description: Angular Accordion は、アコーディオン メニューで垂直方向に展開可能なパネルを作成するために使用します。Ignite UI for Angular Accordion コンポーネントで実行方法をお試しください。
-_keywords: angular accordion, angular accordion コンポーネント, angular アコーディオン, angular アコーディオン コンポーネント, angular アコーディオンの例, ignite ui for angular, UI コントロール, infragistics, インフラジスティックス
+_keywords: angular accordion, angular accordion コンポーネント, angular アコーディオン, angular アコーディオン コンポーネント, angular アコーディオンの例, ignite ui for angular, angular UI コンポーネント, infragistics, インフラジスティックス
 _language: ja
 ---
 
-# Angular Accordion コンポーネントの概要
+# Angular Accordion (アコーディオン) コンポーネントの概要
 
 ## Angular Accordion とは? 
 
@@ -25,8 +25,7 @@ Angular Accordion は、単一のコンテナーに表示されるクリック�
 
 <div class="divider--half"></div>
 
-## Angular Accordion のインストール方法
-### Ignite UI for Angular Accordion で作業を開始
+### Ignite UI for Angular Accordion を使用した作業の開始
 
 Ignite UI for Angular Accordion コンポーネントを初期化するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
 
@@ -35,7 +34,7 @@ ng add igniteui-angular
 ```
 Ignite UI for Angular については、[*はじめに*](general/getting-started.md)トピックををご覧ください。
 
-次に、app.module ファイルに `IgxAccordionModule` をインポートします。 
+次に、**app.module.ts** ファイルに `IgxAccordionModule` をインポートします。 
 
 ```typescript
 // app.module.ts
@@ -51,9 +50,39 @@ import { IgxAccordionModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
-Angular Material Accordion モジュールをインポート後、`igx-accordion` とそのパネルの基本設定を開始します。
 
-## 使用方法
+Alternatively, as of `16.0.0` you can import the `IgxAccordionComponent` as a standalone dependency, or use the [`IGX_ACCORDION_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/accordion/public_api.ts) token to import the component and all of its supporting components and directives.
+
+```typescript
+// home.component.ts
+...
+import { IGX_ACCORDION_DIRECTIVES } from 'igniteui-angular';
+// import { IGX_ACCORDION_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+@Component({
+    selector: 'app-home',
+    template: `
+    <igx-accordion>
+        <igx-expansion-panel>
+            <igx-expansion-panel-header>
+                <igx-expansion-panel-title>Title Panel 1</igx-expansion-panel-title>
+            </igx-expansion-panel-header>
+            <igx-expansion-panel-body>
+                Content Panel 1
+            </igx-expansion-panel-body>
+        </igx-expansion-panel>
+    </igx-accordion>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_ACCORDION_DIRECTIVES]
+    /* or imports: [IgxAccordionComponent] */
+})
+export class HomeComponent {}
+```
+
+Now that you have the Ignite UI for Angular Accordion module or directives imported, you can start with a basic configuration of the `igx-accordion` and its panels.
+
+## Using the Angular Accordion Component
 
 [IgxAccordionComponent]({environment:angularApiUrl}/classes/igxaccordioncomponent.html) の各セクションは、[展開パネル]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html)を使用して定義されます。
 パネルには [disabled]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html#disabled)、[collapsed]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html#collapsed)、および [animationSettings]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html#animationSettings) プロパティがあり、要件に応じてパネルの状態を構成できます。 
@@ -64,7 +93,7 @@ Accordion は、その内部で宣言されたすべての [`igx-expansion-panel
 
 ```html
 <igx-accordion #accordion [singleBranchExpand]="true">
-     <igx-expansion-panel>
+    <igx-expansion-panel>
         <igx-expansion-panel-header>
             <igx-expansion-panel-title>Title Panel 1</igx-expansion-panel-title>
         </igx-expansion-panel-header>

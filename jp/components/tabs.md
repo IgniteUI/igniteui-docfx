@@ -1,12 +1,12 @@
 ---
 title: Tabs コンポーネント - ネイティブ Angular | Ignite UI for Angular
 _description: Ignite UI for Angular Tabs コンポーネントはタブを上側に配置し、複数のタブ項目がある場合にスクロールを許可します。今すぐお試しください。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コンポーネント, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Tabs コンポーネント, Angular Tabs コントロール, Angular Tabs
+_keywords: Angular Tabs component, Angular Tabs control, Angular Tabs, Angular Tabbar Component, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Components, Angular UI Components, Native Angular Components Library
 _language: ja
 ---
 
-# Angular Tabs (タブ) の概要
-Angular Material Tabs は、関連するコンテンツを 1 つのビューで整理およびグループ化することを主な目的とするフル機能のユーザー インターフェース コンポーネントです。これにより、スペースを節約し、コンテンツをよりわかりやすくします。アニメーション、テンプレート化、カスタマイズ オプションなどのさまざまな機能がパックされています。
+# Angular Tabs (タブ) コンポーネントの概要
+Ignite UI for Angular Tabs is a full-featured user interface component that has the primary purpose to organize and group related content in a single tabbed view, thus saving space and making content more comprehensible.アニメーション、テンプレート化、カスタマイズ オプションなどのさまざまな機能がパックされています。
 
 Angular のタブは、多くのコンテンツを含む Web ページをカテゴリに分類し、簡潔かつスペース効率の良い方法で表示する必要がある場合に非常に便利です。
 
@@ -26,9 +26,17 @@ Ignite UI for Angular [`igx-tabs`]({environment:angularApiUrl}/classes/igxtabsco
 
 <div class="divider--half"></div>
 
-## Ignite UI で Angular Tabs を使用する方法
+## Getting Started with Ignite UI for Angular Tabs
 
-はじめに、**app.module.ts** ファイルに `IgxTabsModule` をインポートします。
+To get started with the Ignite UI for Angular Tabs component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+
+```cmd
+ng add igniteui-angular
+```
+
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+
+The next step is to import the `IgxTabsModule` in your **app.module.ts** file.
 
 ```typescript
 // app.module.ts
@@ -44,6 +52,46 @@ import { IgxTabsModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
+
+Alternatively, as of `16.0.0` you can import the `IgxTabsComponent` as a standalone dependency, or use the [`IGX_TABS_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/tabs/tabs/public_api.ts) token to import the component and all of its supporting components and directives.
+
+```typescript
+// home.component.ts
+import { IGX_TABS_DIRECTIVES } from 'igniteui-angular';
+// import { IGX_TABS_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+@Component({
+    selector: 'app-home',
+    template: `
+    <igx-tabs>
+      <igx-tab-item>
+        <igx-tab-header>
+          <span igxTabHeaderLabel>Tab 1</span>
+        </igx-tab-header>
+        <igx-tab-content>
+          This is Tab 1 content.
+        </igx-tab-content>
+      </igx-tab-item>
+      <igx-tab-item>
+        <igx-tab-header>
+          <span igxTabHeaderLabel>Tab 2</span>
+        </igx-tab-header>
+        <igx-tab-content>
+          This is Tab 2 content.
+        </igx-tab-content>
+      </igx-tab-item>
+    </igx-tabs>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_TABS_DIRECTIVES]
+    /* or imports: [IgxTabsComponent, IgxTabItemComponent, IgxTabHeaderComponent, IgxTabContentComponent, IgxTabHeaderLabelDirective] */
+})
+export class HomeComponent {}
+```
+
+Now that you have the Ignite UI for Angular Tabs module or directives imported, you can start using the `igx-tabs` component.
+
+## Using the Angular Tabs
 
 `igx-tab-header` にコンテンツを提供することにより、Angular Tabs ヘッダーを設定します。タブの名前を設定するには、`igxTabHeaderLabel` ディレクティブを使用してスパンを追加するだけです。タブ項目のコンテンツとして表示されるコンテンツは、`igx-tab-content` タグの間に追加する必要があります。
 

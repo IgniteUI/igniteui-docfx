@@ -1,11 +1,11 @@
 ---
 title: Angular Drop Down コンポーネント –  Ignite UI For Angular
 _description: インタラクティブ機能を追加し、アプリ内の項目のスクロール可能なリストにスタイル設定オプションを表示します。今すぐ Ignite UI for Angular の Drop Down コンポーネントをお試しください。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Drop Down コンポーネント, Angular Drop Down コントロール
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, Angular UI Components, Native Angular Components Library, Angular Drop Down component, Angular Drop Down control
 _language: ja
 ---
 
-# Angular Drop Down の概要
+# Angular Drop Down (ドロップダウン) コンポーネントの概要
 <p class="highlight">Ignite UI for Angular Drop Down は事前定義された値の切り替え可能なリストを表示し、ユーザーがクリックするだけで 1 つのオプション項目を簡単に選択できるようにするコンポーネントです。ドロップダウン メニューとして機能するようにすばやく構成することも、データをグループ化することでより有用な視覚情報を提供するために使用することもできます。グループ化を使用すると、フラット データと階層データの両方を使用できます。Drop Down コンポーネントを使用すると、宣言型のバインディングが可能になり、追加のコンテンツやリンクを埋め込むことができます。これにより、UI をさらにカスタマイズして Angular ドロップダウン リストの外観をスタイル設定する余地も残されます。これに加えて、キーボードのドロップダウン ナビゲーションや仮想化などの主要な機能が満載です。</p>
 <div class="divider"></div>
 
@@ -20,13 +20,19 @@ _language: ja
 
 <div class="divider--half"></div>
 
-## Ignite UI for Angular Drop Down で作業を開始
+## Ignite UI for Angular Drop Down を使用した作業の開始
 
 Angular アプリの Ignite UI Drop Down コンポーネントを簡単に構成する方法をご覧ください。以下のセクションでは、IgxDropDownModule をインポートし、単純な Angular Drop Down リストを作成する方法について説明します。
 
-### はじめに
+To get started with the Ignite UI for Angular Drop Down component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
 
-Drop Down コンポーネントを使用するには、まず `IgxDropDownModule` を **app.module.ts** ファイルにインポートします。
+```cmd
+ng add igniteui-angular
+```
+
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+
+The next step is to import the `IgxDropDownModule` in your **app.module.ts** file.
 
 ```typescript
 // app.module.ts
@@ -43,6 +49,38 @@ import { IgxDropDownModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
+Alternatively, as of `16.0.0` you can import the `IgxDropDownComponent` as a standalone dependency, or use the [`IGX_DROP_DOWN_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/drop-down/public_api.ts) token to import the component and all of its supporting components and directives.
+
+```typescript
+// home.component.ts
+import { NgFor } from '@angular/common';
+import { IGX_DROP_DOWN_DIRECTIVES, IgxToggleActionDirective, IgxButtonDirective } from 'igniteui-angular';
+// import { IGX_DROP_DOWN_DIRECTIVES, IgxToggleActionDirective, IgxButtonDirective } from '@infragistics/igniteui-angular'; for licensed package
+@Component({
+    selector: 'app-home',
+    template: `
+    <button igxButton="raised" 
+        [igxToggleAction]="dropdown"
+        [igxDropDownItemNavigation]="dropdown">
+        Options
+    </button>
+    <igx-drop-down #dropdown>
+        <igx-drop-down-item *ngFor="let item of items">
+            {{ item.field }}
+        </igx-drop-down-item>
+    </igx-drop-down>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_DROP_DOWN_DIRECTIVES, IgxToggleActionDirective, IgxButtonDirective, NgFor]
+    /* or imports: [IgxDropDownComponent, IgxDropDownItemComponent, IgxToggleActionDirective, IgxButtonDirective, NgFor] */
+})
+export class HomeComponent {}
+```
+
+Now that you have the Ignite UI for Angular Drop Down module or directives imported, you can start using the `igx-drop-down` component.
+
+## Using the Angular Drop Down
 ### ドロップダウンの追加
 
 選択可能な複数のオプション項目を提供するシンプルなドロップダウンを作成します。これを実現するには、[IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) と [IgxToggleAction]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html) を使用してドロップダウンを開きます / 閉じます。

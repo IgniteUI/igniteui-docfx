@@ -1,11 +1,11 @@
 ---
 title: Angular Stepper コンポーネント - Ignite UI for Angular
 _description: Angular Stepper コンポーネントを使用してコンテンツをプロセスとして可視化し、コンテンツを論理的なステップに分割して進行状況を表示します。使用方法について説明します。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, Angular Stepper コンポーネント, インフラジスティックス
+_keywords: Angular Stepper component, Angular Wizard Component, Angular Stepper Control, Angular Wizard Control, Angular UI Components, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Infragistics
 _language: ja
 ---
 
-# Angular Stepper コンポーネントの概要
+# Angular Stepper (ステッパー) コンポーネントの概要
 Angular マテリアル ステッパーは高度にカスタマイズ可能なコンポーネントで、必要なプロセスを可視化し、進行状況を各ステップで表示します。垂直線または水平線で表示されます。Ignite UI for Angular ライブラリによって提供されるステッパー コンポーネントは、ウィザードのようなワークフローと、ステップ検証、スタイル設定、向き、キーボード ナビゲーションなどの複数の機能を提供します。 
 
 ## Angular Stepper の例
@@ -19,9 +19,7 @@ Angular ステッパー デモの 4 番目のステップは、2 番目のステ
 
 <div class="divider--half"></div>
 
-## Angular Stepper のインストール方法
-
-### Ignite UI for Angular Stepper を使用した作業の開始
+## Ignite UI for Angular Stepper を使用した作業の開始
 
 Ignite UI for Angular Stepper コンポーネントを初期化するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
 
@@ -30,7 +28,7 @@ ng add igniteui-angular
 ```
 Ignite UI for Angular については、[*はじめに*](general/getting-started.md)トピックををご覧ください。
 
-次に、app.module ファイルに `IgxStepperModule` をインポートします。 
+次に、**app.module** ファイルに `IgxStepperModule` をインポートします。 
 
 ```typescript
 // app.module.ts
@@ -46,9 +44,31 @@ import { IgxStepperModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
-Angular Material Stepper モジュールをインポート後、`igx-stepper` とそのステップの基本設定を開始します。
 
-## 使用方法
+Alternatively, as of `16.0.0` you can import the `IgxStepperComponent` as a standalone dependency, or use the [`IGX_STEPPER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/stepper/public_api.ts) token to import the component and all of its supporting components and directives.
+
+```typescript
+// home.component.ts
+import { HammerModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { IGX_STEPPER_DIRECTIVES } from 'igniteui-angular';
+// import { IGX_STEPPER_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+@Component({
+    selector: 'app-home',
+    template: '<igx-slider [minValue]="0" [maxValue]="100" [step]="10" [(ngModel)]="task.completion"></igx-slider>',
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_STEPPER_DIRECTIVES, FormsModule, HammerModule]
+    /* or imports: [IgxStepperComponent, FormsModule, HammerModule] */
+})
+export class HomeComponent {
+    public task: Task;
+}
+```
+
+Now that you have the Angular Material Stepper module or directives imported, you can start with a basic configuration of the `igx-stepper` and its steps.
+
+## Using the Angular Stepper
 [IgxStepComponent]({environment:angularApiUrl}/classes/igxstepcomponent.html) は、[IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponent.html) に属するすべてのステップの表現です。ステップは [isValid]({environment:angularApiUrl}/classes/igxstepcomponent.html#isValid)、[active]({environment:angularApiUrl}/classes/igxstepcomponent.html#active)、[optional]({environment:angularApiUrl}/classes/igxstepcomponent.html#optional)、[disabled]({environment:angularApiUrl}/classes/igxstepcomponent.html#disabled)、[completed]({environment:angularApiUrl}/classes/igxstepcomponent.html#completed) プロパティを提供し、ビジネス要件に応じてステップの状態を構成できます。
 
 ### ステッパーの宣言

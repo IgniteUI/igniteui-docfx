@@ -1,12 +1,12 @@
 ---
 title: Toast コンポーネント
 _description: Ignite UI for Angular Toast コンポーネントは、アプリケーションで非対話型メッセージをユーザーに表示できます。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Toast コンポーネント, Angular Toast コントロール
+_keywords: Angular Toast component, Angular Toast control, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library
 _language: ja
 ---
 
-# Toast
-<p class="highlight">Ignite UI for Angular Toast コンポーネントは、ユーザーが閉じられない非対話型の情報および報告メッセージを表示できます。通知はページの上側、中央、または下側に表示できます。</p>
+# Angular Toast Component Overview
+<p class="highlight">The Ignite UI for Angular Toast component provides information and warning messages that are auto-hiding, non-interactive and cannot be dismissed by the user. Notifications can be displayed at the bottom, the middle, or the top of the page.</p>
 <div class="divider"></div>
 
 ## Angular Toast の例
@@ -20,11 +20,17 @@ _language: ja
 <div class="divider--half"></div>
 
 
-## 使用方法
+## Getting Started with Ignite UI for Angular Toast
 
-### はじめに
+To get started with the Ignite UI for Angular Toast component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
 
-Toast コンポーネントを初期化する前に、`IgxToastModule` を **app.module.ts** ファイルにインポートします。
+```cmd
+ng add igniteui-angular
+```
+
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+
+The next step is to import the `IgxToastModule` in your **app.module.ts** file.
 
 ```typescript
 // app.module.ts
@@ -40,6 +46,32 @@ import { IgxToastModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
+
+Alternatively, as of `16.0.0` you can import the `IgxToastComponent` as a standalone dependency.
+
+```typescript
+// home.component.ts
+import { IgxToastComponent, IgxButtonDirective } from 'igniteui-angular';
+// import { IgxToastComponent, IgxButtonDirective } from '@infragistics/igniteui-angular'; for licensed package
+@Component({
+    selector: 'app-home',
+    template: `
+    <button igxButton="raised" (click)="toast.open()">Show notification</button>
+    <igx-toast #toast>Notification displayed</igx-toast>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IgxToastComponent, IgxButtonDirective]
+    /* or imports: [IgxTimePickerComponent, IgxButtonDirective] */
+})
+export class HomeComponent {
+    public time: Date;
+}
+```
+
+Now that you have the Ignite UI for Angular Toast module or component imported, you can start using the `igx-toast` component.
+
+## Using the Angular Toast
 
 ### Toast の表示
 Toast コンポーネントを表示するには、ボタン クリックで [`open()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#open) メソッドを呼び出します。Toast コンテンツを要素内に渡すことができます。

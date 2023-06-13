@@ -1,14 +1,12 @@
 ---
-title: Input Groups コンポーネント - ネイティブ Angular | Ignite UI for Angular
-_description: Ignite UI for Angular Input Groups は、データ入力のための使いやすいフォーム、さらに検証およびエラー処理などの機能も提供します。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular Label コンポーネント, Angular Label コントロール, Angular Input Group コンポーネント, Angular Input Group コントロール, Angular Input コンポーネント, Angular Input コントロール, Input コンポーネント, Input コントロール, Label コンポーネント, Label コントロール, Angular Input ディレクティブ, Angular Label ディレクティブ, Angular Forms, Angular リアクティブ フォーム, Angular フォームの検証
+title: Input Group コンポーネント - ネイティブ Angular | Ignite UI for Angular
+_description: Ignite UI for Angular Input Group は、データ入力のための使いやすいフォーム、さらに検証およびエラー処理などの機能も提供します。
+_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library, Native Angular Components, Angular Label component, Angular Label control, Angular Input component, Angular Input control, Input component, Input control, Label component, Label control, Angular Input Group component, Angular Input Group control, Angular Input directive, Angular Label directive, Angular Forms, Angular Reactive Forms, Angular Form Validation
 _language: ja
 ---
 
-# Input Group
-<p class="highlight">
-
-`IgxInputGroup` は、ユーザーが input、select、textarea などの入力要素を拡張することを可能にします。これは、テキスト、アイコン、ボタン、カスタムバリデーションなどのカスタムコンテンツを、プレフィックス、サフィックス、またはヒントとして、それらの両側に追加することで実現できます。</p>
+# Angular Input Group Component Overview
+The `IgxInputGroupComponent` allows the user to enhance input elements like input, select, textarea, etc. This can be achieved by adding custom content like text, icons, buttons, custom validation, floating label, etc., on either side of them, as a prefix, suffix, or hint.
 
 ## Angular Input Group の例
 
@@ -19,19 +17,27 @@ _language: ja
 
 <div class="divider--half"></div>
 
-## 使用方法
-Input Group コンポーネントを初期化にするには、まず `IgxInputGroupModule` を `igniteui-angular` ツールキットにインポートします。
+## Getting Started with Ignite UI for Angular Input Group
 
-`IgxInputGroup` はテンプレート駆動フォームを使用するために **FormsModule** にも依存します。
+To get started with the Ignite UI for Angular Input Group component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+
+```cmd
+ng add igniteui-angular
+```
+
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+
+The next step is to import the `IgxInputGroupModule` in your **app.module.ts** file.
+
+Note that the `IgxInputGroupComponent` also depends on the Angular **FormsModule** in order to have a working Template Driven Form:
 
 ```typescript
 // app.module.ts
 
 ...
+import { FormsModule } from '@angular/forms';
 import { IgxInputGroupModule } from 'igniteui-angular';
 // import { IgxInputGroupModule } from '@infragistics/igniteui-angular'; for licensed package
-import { FormsModule } from '@angular/forms';
-
 @NgModule({
     ...
     imports: [..., IgxInputGroupModule, FormsModule],
@@ -40,10 +46,39 @@ import { FormsModule } from '@angular/forms';
 export class AppModule {}
 ```
 
+Alternatively, as of `16.0.0` you can import the `IgxInputGroupComponent` as a standalone dependency, or use the [`IGX_INPUT_GROUP_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/input-group/public_api.ts) token to import the component and all of its supporting components and directives.
+
+```typescript
+// home.component.ts
+import { FormsModule } from '@angular/forms';
+import { IGX_INPUT_GROUP_DIRECTIVES, IgxIconComponent } from 'igniteui-angular';
+// import { IGX_INPUT_GROUP_DIRECTIVES, IgxIconComponent } from '@infragistics/igniteui-angular'; for licensed package
+@Component({
+    selector: 'app-home',
+    template: `
+    <igx-input-group>
+        <igx-prefix>+359</igx-prefix>
+        <label igxLabel for="phone">Phone</label>
+        <input igxInput [(ngModel)]="value" name="phone" type="tel" maxlength="9" />
+        <igx-icon igxSuffix>phone</igx-icon>
+    </igx-input-group>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_INPUT_GROUP_DIRECTIVES, IgxIconComponent, FormsModule]
+    /* or imports: [IgxInputGroupComponent, IgxPrefixDirective, IgxLabelDirective, IgxInputDirective, IgxIconComponent, IgxSuffixDirective, FormsModule] */
+})
+export class HomeComponent {
+    public value = '123456789';
+}
+```
+
+Now that you have the Ignite UI for Angular Input Group module or directives imported, you can start using the `igx-input-group` component.
+
 > [!NOTE]
 > `igxInput`、`igxLabel`、`igx-preix`、`igx-suffix` または `igx-hint` ディレクティブを使用するには、`<igx-input-group>` コンテナーでラップする必要があります。
 
-## 例
+## Using the Angular Input Group
 
 ### Label および Input
 [`igxLabel`]({environment:angularApiUrl}/classes/igxlabeldirective.html)、[`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) ディレクティブとその検証、データ バインディング、API については、[このトピック](label-input.md)を参照してください。
@@ -55,14 +90,16 @@ export class AppModule {}
 <igx-input-group>
     <igx-prefix>+359</igx-prefix>
     <label igxLabel for="phone">Phone</label>
-    <input igxInput name="phone" type="tel" />
+    <input igxInput name="phone" type="tel" maxlength="9" />
     <igx-icon igxSuffix>phone</igx-icon>
 </igx-input-group>
 ```
 
-<div class="sample-container loading" style="height:100px">
-<iframe class="lazyload" id="input-group-sample-3-frame" data-src='{environment:demosBaseUrl}/data-entries/input-group-sample-3' width="100%" height="100%" seamless frameBorder="0"></iframe>
-</div>
+<code-view style="height:110px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/data-entries/input-group-sample-3" alt="Angular Input Group の例">
+</code-view>
+
 <div class="divider--half"></div>
 
 ### Hint
@@ -166,7 +203,7 @@ Ignite UI for Angular Input Group コンポーネントは、Angular 14 のデ�
 次の例では、双方向データ バインディングを使用し、`ngModel` をローカル変数にエクスポートしてコントロールの状態を検査する方法を示します。
 
 ```html
-<form>
+<form #login="ngForm">
     ...
     <igx-input-group>
         <label igxLabel for="email">Email</label>

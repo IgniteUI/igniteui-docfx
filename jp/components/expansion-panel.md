@@ -1,10 +1,10 @@
 ---
 title: Angular Expansion Panel – Ignite UI for Angular
 _description: Angular 展開パネルは、縮小と展開の 2 つの状態を持つ、簡単に設定できる拡張可能なコンポーネントを提供します。今すぐお試しください。
-_keywords: angular accordion, igniteui for angular, インフラジスティックス
+_keywords: angular expansion panel, angular expansion panel component, angular UI components, igniteui for angular, infragistics
 _language: ja
 ---
-# Angular Expansion Panel の概要
+# Angular Expansion Panel (展開パネル) コンポーネントの概要
 
 Angular Material は、最も便利で使いやすいレイアウト コンポーネントの 1 つである Angular Expansion Panel を提供します。この機能豊富なコンポーネントは、展開/縮小可能な詳細な概要ビューを作成するために使用されます。コンテンツには、Angular Expansion Panel のアニメーション、テキスト、アイコン、ヘッダー、操作バー、およびその他の要素を含めることができます。
 
@@ -23,8 +23,20 @@ Ignite UI Angular を使用して、この単純な Angular Expansion Panel の�
            iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-1" >
 </code-view>
 
+<div class="divider--half"></div>
 
-はじめに、**app.module** に **IgxExpansionPanelModule** をインポートする必要があります。
+## Getting Started with Ignite UI for Angular Expansion Panel
+
+To get started with the Ignite UI for Angular Drop Down component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+
+```cmd
+ng add igniteui-angular
+```
+
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+
+The next step is to import the `IgxExpansionPanelModule` in your **app.module.ts** file.
+
 ```typescript
 // app.module.ts
 ...
@@ -39,26 +51,43 @@ import { IgxExpansionPanelModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-次に、コンポーネントのマークアップを追加します。
-```html
-<!-- expansible-panel.component.html -->
-<igx-expansion-panel>
-    <igx-expansion-panel-header>
-        <igx-expansion-panel-title>
-           Golden Retriever
-        </igx-expansion-panel-title>
-        <igx-expansion-panel-description>
-           Medium-large gun dog
-        </igx-expansion-panel-description>
-    </igx-expansion-panel-header>
-    <igx-expansion-panel-body>
-        The Golden Retriever is a medium-large gun dog that retrieves shot waterfowl, 
-such as ducks and upland game birds, during hunting and shooting parties. 
-The name "retriever" refers to the breed's ability to retrieve shot game undamaged due to their soft mouth. 
-Golden retrievers have an instinctive love of water, and are easy to train to basic or advanced obedience standards.
-    </igx-expansion-panel-body>
-</igx-expansion-panel>
+Alternatively, as of `16.0.0` you can import the `IgxExpansionPanelComponent` as a standalone dependency, or use the [`IGX_EXPANSION_PANEL_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/expansion-panel/public_api.ts) token to import the component and all of its supporting components and directives.
+
+```typescript
+// home.component.ts
+import { IGX_EXPANSION_PANEL_DIRECTIVES } from 'igniteui-angular';
+// import { IGX_EXPANSION_PANEL_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+@Component({
+    selector: 'app-home',
+    template: `
+    <igx-expansion-panel>
+        <igx-expansion-panel-header>
+            <igx-expansion-panel-title>
+            Golden Retriever
+            </igx-expansion-panel-title>
+            <igx-expansion-panel-description>
+            Medium-large gun dog
+            </igx-expansion-panel-description>
+        </igx-expansion-panel-header>
+        <igx-expansion-panel-body>
+            The Golden Retriever is a medium-large gun dog that retrieves shot waterfowl, 
+            such as ducks and upland game birds, during hunting and shooting parties. 
+            The name "retriever" refers to the breed's ability to retrieve shot game undamaged due to their soft mouth. 
+            Golden retrievers have an instinctive love of water, and are easy to train to basic or advanced obedience standards.
+        </igx-expansion-panel-body>
+    </igx-expansion-panel>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_EXPANSION_PANEL_DIRECTIVES]
+    /* or imports: [IgxExpansionPanelComponent, IgxExpansionPanelHeaderComponent, IgxExpansionPanelTitleDirective, IgxExpansionPanelDescriptionDirective, IgxExpansionPanelBodyComponent] */
+})
+export class HomeComponent {}
 ```
+
+Now that you have the Ignite UI for Angular Expansion Panel module or directives imported, you can start using the `igx-expansion-panel` component.
+
+## Using the Angular Expansion Panel
 
 以下の表は、Angular Expansion Panel で使用可能なすべてのマークアップ要素を示します。
 | タグ名                          | 説明                                                                                                          |
@@ -79,10 +108,7 @@ Golden retrievers have an instinctive love of water, and are easy to train to ba
 // in expansion-panel.component.ts
 import { IgxExpansionPanelComponent } from 'igniteui-angular';
 // import { IgxExpansionPanelComponent } from '@infragistics/igniteui-angular'; for licensed package
-
-@Component({
-    ...
-})
+@Component({...})
 export class ExpansionPanelComponent {
     @ViewChild(IgxExpansionPanelComponent, {read: IgxExpansionPanelComponent})
     public panel: IgxExpansionPanelComponent;
@@ -91,7 +117,7 @@ export class ExpansionPanelComponent {
 
 ```html
 <!-- in expansion-component.component.html -->
-...
+<igx-expansion-panel>
     <igx-expansion-panel-header>
         Golden Retriever
         <igx-expansion-panel-description *ngIf="panel.collapsed">
@@ -99,13 +125,14 @@ export class ExpansionPanelComponent {
         </igx-expansion-panel-description>
     </igx-expansion-panel-header>
     ...
+</igx-expansion-panel>
 ```
 
 以下のサンプル コードは、コンポーネントが縮小状態の場合のみ短い説明文を表示する場合の例です。
 コンポーネントの状態に応じてより複雑な機能を追加する場合、イベント エミッターにバインドすることもできます。
 ```typescript
 // in expansion-panel.component.ts
-
+@Component({...})
 export class ExpansionPanelComponent {
     ...
     public handleExpansion(args: {event: Event}): void {
@@ -115,7 +142,7 @@ export class ExpansionPanelComponent {
 ```
 ```html
 <!-- in expansion-component.component.html -->
-<igx-expansion-panel (onExpanded)="handleExpansion($event)  (contentCollapsed)="handleCollapse($event)"></igx-expansion-panel>
+<igx-expansion-panel (onExpanded)="handleExpansion($event)" (contentCollapsed)="handleCollapse($event)"></igx-expansion-panel>
 ```
 
 以下は結果です。
@@ -143,17 +170,18 @@ export class ExpansionPanelComponent {
 `igx-expansion-panel-icon` タグでコンテンツを渡します。
 ```html
 <!-- in expansion-component.component.html -->
-    <igx-expansion-panel>
-    ...
-        <igx-expansion-panel-header [iconPosition]="'right'">
+<igx-expansion-panel>
+    <igx-expansion-panel-header [iconPosition]="'right'">
         ...
         <igx-expansion-panel-icon>
             <span class="example-icon" *ngIf="panel.collapsed">Show More</span>
             <span class="example-icon" *ngIf="!panel.collapsed">Show Less</span>
         </igx-expansion-panel-icon>
-        </igx-expansion-panel-header>
-    </igx-expansion-panel>
+    </igx-expansion-panel-header>   
+    ...
+</igx-expansion-panel>
 ```
+Our Angu
 Angular Expansion Panel は、パネルの縮小時に「更に表示」を描画し、完全に展開した後に「簡易表示」を描画します。
 
 `IgxExpansionPanel` コントロールを使用すると、あらゆる種類のコンテンツを `igx-expansion-panel-body` 内に追加できます。[`IgxGrid`](grid/grid.md)、[`IgxCombo`](combo.md)、チャート、その他の展開パネルもレンダリングできます。
@@ -275,9 +303,7 @@ import { useAnimation } from '@angular/animations';
 import { IgxExpansionPanelComponent, slideInLeft, slideOutRight } from 'igniteui-angular';
 // import { IgxExpansionPanelComponent, slideInLeft, slideOutRight } from '@infragistics/igniteui-angular'; for licensed package
 
-@Component({
-    ...
-})
+@Component({...})
 export class ExpansionPanelComponent {
     @ViewChild(IgxExpansionPanelComponent, {read: IgxExpansionPanelComponent})
     public panel: IgxExpansionPanelComponent;

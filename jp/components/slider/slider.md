@@ -1,12 +1,13 @@
 ---
 title: Angular Slider |  Ignite UI for Angular | インフラジスティックス
 _description: Ignite UI for Angular の Angular Slider でつまみラックを使用して、特定の範囲で選択を構成する方法を紹介します。
-_keywords: angular slider, igniteui for angular, インフラジスティックス
+_keywords: angular slider, angular slider component, angular range slider component, angular range input component, angular ui components, igniteui for angular, infragistics
 _language: ja
 ---
 
-# Slider 概要と構成
+# Angular Slider Component Overview
 <p class="highlight">Ignite UI for Angular Slider は、つまみをトラックで移動して指定した範囲内で値を選択できるフォーム コンポーネントです。トラックは連続またはステップとして定義でき、スライダーは単一値または範囲 (下限値と上限値) スライダーのタイプを選択できるように構成できます。</p>
+
 <div class="divider"></div>
 
 ## Angular Slider の例
@@ -18,27 +19,60 @@ _language: ja
 
 <div class="divider--half"></div>
 
-## 使用方法
+## Getting Started with Ignite UI for Angular Slider
+
+To get started with the Ignite UI for Angular Slider component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+
+```cmd
+ng add igniteui-angular
+```
+
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](../general/getting-started.md) topic.
+
+The next step is to import the `IgxSliderModule` in your **app.module.ts** file.
 
 >[!WARNING]
 >**このコンポーネントでは、タッチ操作が正しく動作するために、アプリケーションのルート モジュールに [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) をインポートする必要があります。**.
-
-Slider コンポーネントを初期化するには、**IgxSliderModule** を **app.module.ts** ファイルにインポートします。
 
 ```typescript
 // app.module.ts
 
 ...
-import { IgxSliderModule } from 'igniteui-angular';
+import { HammerModule } from '@angular/platform-browser';
 // import { IgxSliderModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
-    imports: [..., IgxSliderModule],
+    imports: [..., IgxSliderModule, HammerModule],
     ...
 })
 export class AppModule {}
 ```
+
+Alternatively, as of `16.0.0` you can import the `IgxSliderComponent` as a standalone dependency, or use the [`IGX_SLIDER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/slider/public_api.ts) token to import the component and all of its supporting components and directives.
+
+```typescript
+// home.component.ts
+import { HammerModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { IGX_SLIDER_DIRECTIVES } from 'igniteui-angular';
+// import { IGX_SLIDER_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+@Component({
+    selector: 'app-home',
+    template: '<igx-slider [minValue]="0" [maxValue]="100" [step]="10" [(ngModel)]="task.completion"></igx-slider>',
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_SLIDER_DIRECTIVES, FormsModule, HammerModule]
+    /* or imports: [IgxSliderComponent, FormsModule, HammerModule] */
+})
+export class HomeComponent {
+    public task: Task;
+}
+```
+
+Now that you have the Ignite UI for Angular Slider module or directives imported, you can start using the `igx-slider` component.
+
+## Using the Angular Slider
 
 ### 不連続スライダー
 デフォルトで Slider コンポーネントは不連続タイプに設定されています。不連続スライダーで現在値は数値ラベル (バブル) で可視化されます。バブルはスライダーのつまみにカーソルを合わせると表示されます。
