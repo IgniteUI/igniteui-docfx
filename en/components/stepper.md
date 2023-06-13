@@ -59,7 +59,7 @@ import { IGX_STEPPER_DIRECTIVES } from 'igniteui-angular';
     template: '<igx-slider [minValue]="0" [maxValue]="100" [step]="10" [(ngModel)]="task.completion"></igx-slider>',
     styleUrls: ['home.component.scss'],
     standalone: true,
-    imports: [IGX_SLIDER_DIRECTIVES, FormsModule, HammerModule]
+    imports: [IGX_STEPPER_DIRECTIVES, FormsModule, HammerModule]
     /* or imports: [IgxSliderComponent, FormsModule, HammerModule] */
 })
 export class HomeComponent {
