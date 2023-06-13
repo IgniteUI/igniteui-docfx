@@ -19,7 +19,7 @@ Below is a basic Angular Select example. It has a simple contextual menu that di
 
 ## Getting Started with Ignite UI for Angular Select
 
-To get started with the Ignite UI for Angular Query Builder component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+To get started with the Ignite UI for Angular Select component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
 
 ```cmd
 ng add igniteui-angular
