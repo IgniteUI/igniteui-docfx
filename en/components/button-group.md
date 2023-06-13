@@ -33,7 +33,7 @@ The next step is to import the `IgxButtonGroupModule` in your **app.module.ts** 
 
 ...
 import { IgxButtonGroupModule } from 'igniteui-angular';
-// import { IgxBannerModule } from '@infragistics/igniteui-angular'; for licensed package
+// import { IgxButtonGroupModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
