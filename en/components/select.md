@@ -1,16 +1,11 @@
 ---
 title: Angular Select Component - Ignite UI for Angular
 _description: Learn how to configure Angular Select Component. Angular Select provides an input with Angular dropdown list, allowing single item selection of the Angular Combobox. Try it now.
-_keywords:  angular select, igniteui for angular, infragistics
+_keywords:  angular select, angular select component, angular forms, angular form select component, angular ui components, igniteui for angular, infragistics
 ---
 
-# Angular Select Overview
-Angular Material Select is a form control used for data entry and data display, enabling users to select a given value from a list with several predefined values. The Angular Select Component is very similar to a DropDown list. While Select Component is used inside a form where users can choose from a list of options and submit data, a [DropDown component](drop-down.md) filters or sorts out content on a page.
-
-<p class="highlight">
-
-The Ignite UI for Angular Material [Select Component]({environment:angularApiUrl}/classes/igxselectcomponent.html) allows a single selection from a list of items, placed in a dropdown. This Material-based form control offers quick items list navigation, including selection, based on a single or multiple characters match. Since the [IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html) extends the [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html), you can handle all of the Drop Down events in the Select instance as well.
-</p>
+# Angular Select Component Overview
+Angular Select is a form component used for selecting a single value from a list of predefined values. The Angular Select Component provides functionality identical to the native HTML select element, but offers a lot more customization options. It is based on the [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) and supports all of its features, including templating, virtualization, and customizing the dropdown list items.
 
 ## Angular Select Example
 Below is a basic Angular Select example. It has a simple contextual menu that displays a list of several choices opening per click.
@@ -22,8 +17,18 @@ Below is a basic Angular Select example. It has a simple contextual menu that di
 
 
 
-## How To Use Angular Select With Ignite UI
-To get started with the Ignite UI for Angular [Select Component]({environment:angularApiUrl}/classes/igxselectcomponent.html), first you need to import the **IgxSelectModule** in your **app.module**:
+## Getting Started with Ignite UI for Angular Select
+
+To get started with the Ignite UI for Angular Select component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+
+```cmd
+ng add igniteui-angular
+```
+
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+
+The next step is to import the `IgxSelectModule` in the **app.module.ts** file.
+
 ```typescript
 // app.module.ts
 ...
@@ -36,7 +41,42 @@ import { IgxSelectModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
-Then add the `igx-select` along with a list of items to choose from. We use [`igx-select-item`]({environment:angularApiUrl}/classes/igxselectitemcomponent.html) to display the items that the `igx-select` contains.
+
+Alternatively, as of `16.0.0` you can import the `IgxSelectComponent` as a standalone dependency, or use the [`IGX_SELECT_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/select/public_api.ts) token to import the component and all of its supporting components and directives.
+
+```typescript
+// home.component.ts
+
+import { FormsModule } from '@angular/forms';
+import { IGX_SELECT_DIRECTIVES } from 'igniteui-angular';
+// import { IGX_SELECT_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: `
+    <igx-select [(ngModel)]="selected">
+        <label igxLabel>Simple Select</label>
+        <igx-select-item value="Orange">Orange</igx-select-item>
+        <igx-select-item value="Apple">Apple</igx-select-item>
+        <igx-select-item value="Banana">Banana</igx-select-item>
+        <igx-select-item value="Mango">Mango</igx-select-item>
+    </igx-select>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_SELECT_DIRECTIVES, FormsModule]
+    /* or imports: [IgxSelectComponent, IgxSelectItemComponent, IgxLabelDirective, FormsModule] */
+})
+export class HomeComponent {
+    public selected: string;
+}
+```
+
+Now that you have the Ignite UI for Angular Select module or directives imported, you can start using the `igx-select` component.
+
+## Using the Angular Select
+
+Add the `igx-select` along with a list of items to choose from. We use [`igx-select-item`]({environment:angularApiUrl}/classes/igxselectitemcomponent.html) to display the items that the `igx-select` contains.
 ```html
 <igx-select>
     <label igxLabel>Simple Select</label>
@@ -47,9 +87,11 @@ Then add the `igx-select` along with a list of items to choose from. We use [`ig
 </igx-select>
 ```
 Another way to do it would be to use a collection of items that we want to display using the [*ngFor](https://angular.io/api/common/NgForOf) structural directive:
+
 ```typescript
 public items: string[] = ['Orange', 'Apple', 'Banana', 'Mango'];
 ```
+
 ```html
 <igx-select [(ngModel)]="selected">
     <label igxLabel>Simple Select</label>
@@ -58,7 +100,9 @@ public items: string[] = ['Orange', 'Apple', 'Banana', 'Mango'];
     </igx-select-item>
 </igx-select>
 ```
+
 By default, the Select component will use the `innerText` of the item element in the input field. In cases with more complex item templates, you can explicitly set the `text` property to specify what to display in the input field when this item is selected. For example:
+
 ```html
 <igx-select>
     <igx-select-item *ngFor="let item of items" [value]="item.value" [text]="item.text">
@@ -66,7 +110,9 @@ By default, the Select component will use the `innerText` of the item element in
     </igx-select-item>
 </igx-select>
 ```
+
 To see the `text` property in action with a bit more sophisticated item templates, check the grouping sample below **Select with Groups** section.
+
 ### Input Properties
 
 The Select component supports the following directives applicable to the [Input Group](input-group.md):
@@ -118,7 +164,9 @@ public greengrocery: Array<{ label: string, items: Array<{ type: string, origin:
     }
 ];
 ```
+
 Then in your template file you can iterate over the objects and access their items accordingly:
+
 ```html
 <igx-select #select>
     <label igxLabel>Select With Groups</label>
@@ -136,6 +184,7 @@ Then in your template file you can iterate over the objects and access their ite
     </igx-select-item-group>
 </igx-select>
 ```
+
 <code-view style="height: 400px;"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/select-sample-2" >
