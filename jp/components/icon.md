@@ -147,15 +147,15 @@ public ngOnInit() {
            iframe-src="{environment:demosBaseUrl}/data-display/svg-icon-sample" >
 </code-view>
 
-## Material Symbols
+## マテリアル シンボル
 
-Additionally, users can take advantage of the latest Material icons and their design variations included in the newly created [`Material Symbols Library`](https://fonts.google.com/icons). To start using Material Symbols, first you have to add the library to your application:
+さらに、ユーザーは新しく作成された[`マテリアル シンボル ライブラリ`](https://fonts.google.com/icons)に含まれる最新のマテリアル アイコンとそのデザイン バリエーションを利用できます。マテリアル シンボルの使用を開始するには、まずライブラリをアプリケーションに追加する必要があります。
 
 ```html
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
 ```
 
-Then we need to inject the [`IgxIconService`]({environment:angularApiUrl}/classes/igxiconservice.html) dependency and make use of its `registerFamilyAlias` method so that Material Symbols can work with `igx-icon`: 
+次に、[`IgxIconService`]({environment:angularApiUrl}/classes/igxiconservice.html) 依存関係を注入し、その `registerFamilyAlias` メソッドを利用して、マテリアル シンボルが `igx-icon` で動作できるようにする必要があります。
 
 ```ts
 constructor(private iconService: IgxIconService) { }
@@ -166,7 +166,7 @@ public ngOnInit() {
 }
 ```
 
-Now, we are ready to add the desired icon into our markup and customize it using adjustable font styles:
+これで、目的のアイコンをマークアップに追加し、調整可能なフォント スタイルを使用してカスタマイズする準備が整いました。
 
 ```html
 <igx-icon family="material-symbols" class="custom-icon">diamond</igx-icon>
@@ -187,7 +187,7 @@ Now, we are ready to add the desired icon into our markup and customize it using
            iframe-src="{environment:demosBaseUrl}/data-display/material-symbols" >
 </code-view>
 
-To learn more about Material Symbols styles please visit their [`official documentation`](https://fonts.google.com/icons).
+マテリアル シンボル スタイルの詳細については、[`公式ドキュメント`](https://fonts.google.com/icons)をご覧ください。
 
 ## サーバーサイド レンダリング時の注意
 
