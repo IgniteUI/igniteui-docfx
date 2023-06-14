@@ -1,26 +1,34 @@
 ---
 title: Angular Radio and Radio Group – Ignite UI for Angular | Infragistics
 _description: With Ignite UI for Angular Radio Button and Radio Group controls, developers can seamlessly present lists of options for users to select for better UI in template-driven and reactive forms.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Radio Button components, Angular Radio Button controls, Angular Radio Group component, Angular Radio Group control
+_keywords: Angular Radio Group component, Angular Radio Group control, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library
 ---
 
-# Radio & Radio Group
+# Angular Radio & Radio Group Component Overview
 
 ## Radio Button
 <p class="highlight">The Ignite UI for Angular Radio Button component allows the user to select a single option from an available set of options that are listed side by side.</p>
 
 ## Angular Radio & Radio Group Example
 
-<code-view style="height: 90px" 
+<code-view style="height: 120px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-entries/radio-sample-1" alt="Angular Radio & Radio Group Example">
 </code-view>
 
 <div class="divider--half"></div>
 
-### Usage
+## Getting Started with Ignite UI for Angular Radio Button
 
-To get started with the Radio Button component, first you have to import the `IgxRadioModule` inside your `AppModule` file:
+To get started with the Ignite UI for Angular Radio Button component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+
+```cmd
+ng add igniteui-angular
+```
+
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+
+The next step is to import the `IgxRadioModule` in the **app.module.ts** file.
 
 ```typescript
 // app.module.ts
@@ -39,6 +47,38 @@ export class AppModule {
 }
 ```
 
+Alternatively, as of `16.0.0` you can import the `IgxRadioGroupDirective` and `IgxRadioComponent` as standalone dependencies.
+
+```typescript
+// home.component.ts
+
+import { FormsModule } from '@angular/forms';
+import { IgxRadioComponent, IgxRadioGroupDirective } from 'igniteui-angular';
+// import { IgxRadioComponent, IgxRadioGroupDirective } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: `
+    <igx-radio-group>
+        <igx-radio [(ngModel)]="selected" value="London">London</igx-radio>
+        <igx-radio [(ngModel)]="selected" value="New York">New York</igx-radio>
+        <igx-radio [(ngModel)]="selected" value="Tokyo">Tokyo</igx-radio>
+        <igx-radio [(ngModel)]="selected" value="Sofia">Sofia</igx-radio>
+    </igx-radio-group>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IgxRadioComponent, IgxRadioGroupDirective, FormsModule]
+})
+export class HomeComponent {
+    public selected: any;
+}
+```
+
+Now that you have the Ignite UI for Angular Radio Button module or directives imported, you can start using the `igx-radio-group` directive and `igx-radio` component.
+
+## Using the Angular Radio Button
+
 Radio buttons can be displayed using the following code inside the component template:
 
 ```html
@@ -55,7 +95,7 @@ The `labelPosition` property can be used to change the default position of the l
 <igx-radio [(ngModel)]="selected" value="option2" labelPosition="before">Option 2</igx-radio>
 ```
 
-<div class="sample-container loading" style="height: 90px">
+<div class="sample-container loading" style="height: 120px">
     <iframe id="radio-sample-3-iframe" data-src='{environment:demosBaseUrl}/data-entries/radio-sample-3' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 
@@ -102,7 +142,7 @@ Pay attention that if you don't use the `NgModel` directive in a two-way data bi
 The final result would be something like that:
 
 
-<code-view style="height: 450px" 
+<code-view style="height: 550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-entries/radio-sample-2" >
 </code-view>
@@ -155,7 +195,7 @@ If the component is using the [`Emulated`](themes/sass/component-themes.md#view-
 ```
 
 
-<code-view style="height: 220px" 
+<code-view style="height: 300px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-entries/radio-styling-sample" >
 </code-view>
