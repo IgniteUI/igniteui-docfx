@@ -1,16 +1,15 @@
 ---
 title: Angular List View | Angular List Example | Infragistics
 _description: The Ignite UI for Angular List component displays rows of items and supports one or more header items as well as search and filtering of list items. Try it for FREE
-_keywords: angular list, ignite ui for angular, angular list component
+_keywords: angular list, ignite ui for angular, angular list component, angular list view, angular list view component, angular ui components
 ---
 
-# Angular List View
+# Angular List View Component Overview
 
-The List element is extremely useful when presenting a group of items. You can create a simple list of textual items, or a more complex one, containing an array of different layout elements.
-The Ignite UI for Angular List component displays rows of items and supports one or more header items as well as search and filtering of list items. Each list item is completely templatable and will support any valid HTML or Angular component.
+The Ignite UI for Angular List component displays rows of items and supports one or more header items as well as search and filtering of list items. Each list item is completely templatable and supports any valid HTML or Angular component. The list component also providers built in panning functionality, templates for empty and loading states, and supports virtualization for large lists using the [`IgxForOf`](for-of.md) directive.
 
 ## Angular List Example
-The following example represents a list populated with contacts with a _name_ and a _phone number_ properties. The [`IgxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) component uses [**IgxAvatar**](avatar.md) and [**IgxIcon**](icon.md) to enrich the user experience and expose the capabilities of setting avatar picture and different icon for _favorite a contact_. In addition, the List View expose sorting capabilities achieved by using our filtering pipe.
+The following example represents a list populated with contacts with a _name_ and a _phone number_ properties. The [`IgxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) component uses [`igx-avatar`](avatar.md) and [`igx-icon`](icon.md) to enrich the user experience and expose the capabilities of setting avatar picture and different icon for _favorite a contact_. In addition, the List View expose sorting capabilities achieved by using our filtering pipe.
 
 <code-view style="height: 513px"
            data-demos-base-url="{environment:demosBaseUrl}"
@@ -19,36 +18,66 @@ The following example represents a list populated with contacts with a _name_ an
 
 <div class="divider--half"></div>
 
-## How to create list view with Angular?
+## Getting Started with Ignite UI for Angular List
 
->[!NOTE]
->**This component requires [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) to be imported in the root module of the application in order for touch interactions to work as expected.**.
-
-At its core the Angular list component allows you to easily display a vertical list of items. The default styling of the items is done according to the single-line list specification as per the Material Design [**guidelines**](https://material.io/guidelines/components/lists.html).
-
-To get started with the Angular list component, first you need to install Ignite UI for Angular by typing the following command:
+To get started with the Ignite UI for Angular List View component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
 
 ```cmd
 ng add igniteui-angular
 ```
+
 For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
 
-The next step is to import the `IgxListModule` in our app.module.ts file:
+The next step is to import the `IgxListModule` in the **app.module.ts** file.
+
+>[!NOTE]
+>**This component requires [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) to be imported in the root module of the application in order for touch interactions to work as expected.**.
 
 ```typescript
 // app.module.ts
 
-...
+import { HammerModule } from '@angular/platform-browser';
 import { IgxListModule } from 'igniteui-angular';
 // import { IgxListModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
-    imports: [..., IgxListModule],
+    imports: [..., IgxListModule, HammerModule],
     ...
 })
 export class AppModule {}
 ```
+
+Alternatively, as of `16.0.0` you can import the `IgxListComponent` as a standalone dependency, or use the [`IGX_LIST_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/list/public_api.ts) token to import the component and all of its supporting components and directives.
+
+```typescript
+// home.component.ts
+
+import { HammerModule } from '@angular/platform-browser';
+import { IGX_LIST_DIRECTIVES } from 'igniteui-angular';
+// import { IGX_LIST_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: `
+    <igx-list>
+        <igx-list-item isHeader="true">Header</igx-list-item>
+        <igx-list-item>Item 1</igx-list-item>
+        <igx-list-item>Item 2</igx-list-item>
+        <igx-list-item>Item 3</igx-list-item>
+    </igx-list>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_LIST_DIRECTIVES, HammerModule]
+    /* or imports: [IgxListComponent, IgxListItemComponent, HammerModule] */
+})
+export class HomeComponent {}
+```
+
+Now that you have the Ignite UI for Angular List module or directives imported, you can start using the `igx-list` component.
+
+## Using the Angular List
 
 Then in the template of our contacts component we can create our list, but what if currently (or at some point in the future) we have no items in it?
 In this case, the Angular list provides us with a default template that is used when the list is empty.
@@ -107,7 +136,6 @@ Sometimes there may be a delay in your data loading. In this case you can set th
     text-shadow: 2px 1px 2px rgba(150, 150, 150, 1);
 }
 ```
-
 
 <code-view style="height: 300px"
            data-demos-base-url="{environment:demosBaseUrl}"
