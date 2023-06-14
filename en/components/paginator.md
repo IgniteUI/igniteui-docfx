@@ -1,15 +1,15 @@
 ---
 title: Angular Paginator Example – Ignite UI for Angular
-_description: Configure Angular pagination and create custom pages in the Angular Material table by Ignite UI, get data for the requested pages with variety of angular events.
-_keywords: paginator, igniteui for angular, infragistics
+_description: Configure Angular pagination and create custom pages in the Angular Material table, or other iterable UI collection, by Ignite UI, get data for the requested pages with variety of angular events.
+_keywords: angular paginator, angular paginator component, angular ui components, igniteui for angular, infragistics
 ---
 
-# Angular Paginator Overview
-Pagination in Angular is one of the most useful features that the platform offers to developers when working with huge data sets. The purpose of Angular Paginator is to split and distribute a high volume of data collection into several pages, thus, delivering better UX whilst displaying paged information and items in an easier to compare and understand way.  
+# Angular Paginator Component Overview
+Pagination in Angular is an optimization technique when working with huge data sets. The purpose of Angular Paginator is to provide UI and API to split and distribute a high volumes of data into equally sized pages, which can be navigated by the end-user.
 
-Usually, the Angular Paginator component shows page-number or total-records. 
+The Angular Paginator component displays to the end-user the page they are viewing, the size of the page, the total number of pages and UI elements for quick navigation between pages. 
 
-Ignite UI for Angular Pagination allows us to divide a set of data into a number of similar pages. This method of pagination is particularly well-suited for large data-sets and "infinite" scrolling user interfaces, that is why the paginator is typically used with a list of items or data table. The Pagination in Angular enables the user to select a specific page from a range of pages and to determine how many records should see on each page.
+Ignite UI for Angular Paginator allows you to divide a set of data into a number of similar pages. This method of pagination is particularly well-suited for large data-sets which are difficult to display and view all at once, that is why the paginator is typically used together with a list of items or data table. The Paginator in Angular enables the user to select a specific page from a range of pages and to determine how many records they should see on each page.
 
 ## Angular Paginator Example
 
@@ -22,7 +22,65 @@ The following Angular Pagination example shows a Paginator template demonstratin
 
 <div class="divider--half"></div>
 
-## How To Use Angular Paginator With Ignite UI
+## Getting Started with Ignite UI for Angular Paginator
+
+To get started with the Ignite UI for Angular Paginator component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+
+```cmd
+ng add igniteui-angular
+```
+
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+
+The next step is to import the `IgxPaginatorModule` in the **app.module.ts** file.
+
+```typescript
+// app.module.ts
+
+import { IgxPaginatorModule } from 'igniteui-angular';
+// import { IgxPaginatorModule } from '@infragistics/igniteui-angular'; for licensed package
+
+@NgModule({
+    ...
+    imports: [..., IgxPaginatorModule],
+    ...
+})
+export class AppModule {}
+```
+
+Alternatively, as of `16.0.0` you can import the `IgxPaginatorComponent` as a standalone dependency, or use the [`IGX_PAGINATOR_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/paginator/public_api.ts) token to import the component and all of its supporting components and directives.
+
+```typescript
+// home.component.ts
+
+import { NgFor } from '@angular/common';
+import { HammerModule } from '@angular/platform-browser';
+import { IGX_PAGINATOR_DIRECTIVES, IGX_LIST_DIRECTIVES } from 'igniteui-angular';
+// import { IGX_PAGINATOR_DIRECTIVES, IGX_LIST_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: `
+    <igx-list>
+        <igx-list-item *ngFor="let item of pagedData">{{item.text}}</igx-list-item>
+    </igx-list>
+    <igx-paginator [totalRecords]="products.length" [perPage]="perPage"></igx-paginator>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_PAGINATOR_DIRECTIVES, IGX_LIST_DIRECTIVES, HammerModule, NgFor]
+    /* or imports: [IgxPaginatorComponent, IgxListComponent, IgxListItemComponent, HammerModule, NgFor] */
+})
+export class HomeComponent {
+    public products: Product [];
+    public perPage = 10;
+    public pagedData: Product [];
+}
+```
+
+Now that you have the Ignite UI for Angular Paginator module or directives imported, you can start using the `igx-paginator` component.
+
+## Using the Angular Paginator
 
 Each paginator instance requires:
 
