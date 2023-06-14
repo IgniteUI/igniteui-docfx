@@ -1,10 +1,10 @@
 ---
 title: Angular Date Range Picker Component | Ignite UI for Angular
 _description: The Angular Date Range Picker component allows you to choose a date range by defining its start and end date. You can select a range from a calendar UI. Try it now. 
-_keywords: Angular Date Range Picker, Date Range Picker, Date Picker
+_keywords: Angular Date Range Picker, Date Range Picker, Date Picker, Angular Date Range Picker Component, Angular UI Components, Angular component
 ---
 
-# Angular Date Range Picker Overview
+# Angular Date Range Picker Component Overview
 
 Angular Date Range Picker is a lightweight component that includes text input and a calendar pop-up to allow users to easily select start and end date values. It can be customized to match app requirements with features like range restrictions, formats, data range selection, grouping the start and end values together and many more. The Date Range Picker in Angular also allows developers to change the default view property and set it to month, year or multi-year. 
 
@@ -19,17 +19,23 @@ We have created this basic Angular Date Range Picker example to show you the com
 <div class="divider--half"></div>
 
 
-## How To Add Angular Date Range Picker Component With Ignite UI
+## Getting Started with Ignite UI for Angular Date Range Picker
 
-### First Steps
-To get started with the Ignite UI for Angular Date Range Picker Component, let's first import the `IgxDateRangePickerModule` in the **app.module.ts** file.
+To get started with the Ignite UI for Angular Datepicker component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+
+```cmd
+ng add igniteui-angular
+```
+
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+
+The next step is to import the `IgxDateRangePickerModule` in your **app.module.ts** file.
 
 As `IgxDateRangePicker` uses the [**IgxCalendarComponent**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html), it also has a dependency on the **BrowserAnimationsModule** and the **HammerModule** for touch interactions, so they need to be added to the `AppModule` as well:
 
 ```typescript
 // app.module.ts
 
-...
 import { IgxDateRangePickerModule } from 'igniteui-angular';
 // import { IgxDateRangePickerModule } from '@infragistics/igniteui-angular'; for licensed package
 
@@ -44,6 +50,30 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 export class AppModule {}
 ```
 
+Alternatively, as of `16.0.0` you can import the `IgxDateRangePickerComponent` as a standalone dependency, or use the [`IGX_DATE_RANGE_PICKER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/date-range-picker/public_api.ts) token to import the component and all of its supporting components and directives.
+
+```typescript
+// home.component.ts
+
+import { HammerModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { IGX_DATE_RANGE_PICKER_DIRECTIVES } from 'igniteui-angular';
+// import { IGX_DATE_RANGE_PICKER_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: '<igx-date-range-picker [value]="range"></igx-date-range-picker>',
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [BrowserAnimationsModule, HammerModule, IGX_DATE_RANGE_PICKER_DIRECTIVES]
+    /* or imports: [BrowserAnimationsModule, HammerModule, IgxDateRangePickerComponent] */
+})
+export class HomeComponent {}
+```
+
+Now that you have the Ignite UI for Angular Date Range Picker module or directives imported, you can start using the `igx-date-range-picker` component.
+
+## Using the Angular Date Range Picker Component
 ### Display Date Range Picker
 To instantiate a date range picker in its default mode, use the following code:
 
