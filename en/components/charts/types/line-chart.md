@@ -128,6 +128,17 @@ You can create this type of chart in the [`IgxCategoryChartComponent`]({environm
 </code-view>
 
 
+You can also create a dashed line within the [`IgxLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxlineseriescomponent.html) by using the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) and setting the [`dashArray`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriescomponent.html#dasharray) property on the series. This property takes an array of numbers that will describe the length of the resulting dashes in the line.
+
+The following example demonstrates usage of the [`dashArray`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriescomponent.html#dasharray) in a [`IgxLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxlineseriescomponent.html) in [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html):
+
+<code-view style="height: 600px" alt="Angular Line Chart Dash Array"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/dash-array-series"
+                                                 github-src="charts/data-chart/dash-array-series">
+</code-view>
+
+
 <div class="divider--half"></div>
 
 ## Advanced Types of Line Charts

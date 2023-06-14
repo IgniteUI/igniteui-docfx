@@ -145,7 +145,7 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
 
 The Angular Range Column Chart belongs to a group of range charts and is rendered using vertical rectangles that can appear in the middle of the plot area of the chart, rather than stretching from the bottom like the traditional [Category Column Chart](column-chart.md#angular-column-chart-example). This type of series emphasizes the amount of change between low values and high values in the same data point over a period of time or compares multiple items. Range values are represented on the Y-Axis and categories are displayed on the X-Axis.
 
-The Range Column Chart is identical to the [Range Area Chart](area-chart.md)(area-chart.md#Angular-Range-Area-chart) in all aspects except that the ranges are represented as a set of vertical columns rather than a filled area.
+The Range Column Chart is identical to the [Range Area Chart](area-chart.md)(area-chart.md#angular-range-area-chart) in all aspects except that the ranges are represented as a set of vertical columns rather than a filled area.
 
 You can create this type of chart in the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) control by binding your data to a [`IgxRangeColumnSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxrangecolumnseriescomponent.html), as shown in the example below:
 

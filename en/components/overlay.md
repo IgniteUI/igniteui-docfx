@@ -44,7 +44,7 @@ export class MyOverlayComponent {
 
 The overlay service can be used to dynamically display an `HTMLNode` or even an Angular Component by attaching it to the overlay DOM.
 
-After a reference to the Overlay service is established, it can be used to dynamically show/hide content. For example, we can pass an Angular Component in the `attach` method. This will generate a unique ID, which we can pass to the `show` method to display the component:
+After a reference to the Overlay service is established, it can be used to dynamically show/hide content. For example, we can pass an Angular Component in the `attach` method. This will generate a unique ID, which we can pass to the `show` method to display the component. When displaying an Angular Component a second mandatory parameter `ViewContainerRef` should be passed in the `attach` method.
 
 ```typescript
 
@@ -54,13 +54,15 @@ import { MyDynamicComponent } from '../my-dynamic-component/my-dynamic-component
 @Component({...})
 export class MyOverlayComponent {
     private _overlayId = ''; // The unique identifier assigned to the component by the Overlay service
-    ... 
-    // a reference to the OverlayService is defined via @Inject in the constructor
-    // under this.overlayService
+
+    constructor(
+        @Inject(IgxOverlayService) private overlayService: IgxOverlayService,
+        private viewContainerRef: ViewContainerRef
+    ) {}
 
     public showInOverlay() {
         if (!this._overlayId) {
-            this._overlayId = this.overlayService.attach(MyDynamicComponent);
+            this._overlayId = this.overlayService.attach(MyDynamicComponent, this.viewContainerRef);
         }
         this.overlayService.show(this._overlayId);
     }
@@ -110,10 +112,10 @@ export class MyOverlayComponent {
 
 The Overlay Service's [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) method has two overloads:
   - `attach(element, settings?)`
-  - `attach(component, settings?, moduleRef?)`
+  - `attach(component, viewContainerRef, settings?)`
 
 The first parameter in both overloads is mandatory and represents the content that will be shown in the overlay. There are a couple of different scenarios how the content can be passed:
-  - A component definition - When passing a component in as the first argument, the overlay service creates a new instance of that component and dynamically attaches its `ElementRef` to the `overlay` DOM. If `moduleRef` is provided the service will use the module's `ComponentFactoryResolver` and `Injector` when creating the `ComponentRef` instead of the root ones.
+  - A component definition - When passing a component in as the first argument, the overlay service creates a new instance of that component and dynamically attaches its `ElementRef` to the `overlay` DOM. This method also accepts a second mandatory parameter `ViewContainerRef` which is a reference to the container where the created component's host view will be inserted.
   - An `ElementRef` to an existing DOM element (illustrated in the sample above) - Any view that is already rendered on the page can be passed through the overlay service and be rendered in the overlay DOM.
 
 In both cases the [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) method will:
@@ -158,7 +160,7 @@ export class MyOverlayComponent {
 
     public showInOverlay() {
         if (!this._overlayId) {
-            this._overlayId = this.overlayService.attach(MyDynamicComponent, {
+            this._overlayId = this.overlayService.attach(MyDynamicComponent, this.viewContainerRef, {
                 target: this.myAnchorButton.nativeElement,
                 positionStrategy: new ConnectedPositioningStrategy()
             });
@@ -232,7 +234,7 @@ export class MyOverlayComponent implements OnDestroy {
         if (!this._overlayShown) { // If the element is not visible, show it
             //  generate ID
             if (!this._overlayId) {
-                this._overlayId = this.overlayService.attach(MyDynamicComponent, {
+                this._overlayId = this.overlayService.attach(MyDynamicComponent, this.viewContainerRef, {
                     target: this.myAnchorButton.nativeElement,
                     positionStrategy: new ConnectedPositioningStrategy({
                         closeOnOutsideClick: false, // overlay will not close on outside clicks

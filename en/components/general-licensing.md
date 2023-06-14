@@ -193,7 +193,7 @@ The best way to define an environment variable depends on what type of informati
 
 ### GitHub Actions Configuration
 
-Add the following scripts before the `npm i(ci)` step to your [CI workflow configuration](https://help.github.com/en/actions/language-and-framework-guides/using-nodejs-with-github-actions):
+Add the following scripts before the **npm i(ci)**  step to your [CI workflow configuration](https://help.github.com/en/actions/language-and-framework-guides/using-nodejs-with-github-actions):
 
 ```cmd
 - run: echo "@infragistics:registry=https://packages.infragistics.com/npm/js-licensed/" >> ~/.npmrc
