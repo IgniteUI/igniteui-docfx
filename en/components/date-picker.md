@@ -1,10 +1,10 @@
 ---
 title: Angular Datepicker Component – Ignite UI for Angular
 _description: Learn how to use a functionality to select a date from a calendar to your web application with Angular Datepicker Component by Ignite UI. Try it now. 
-_keywords: angular datepicker, angular component, ignite ui for angular
+_keywords: angular datepicker, angular datepicker component, angular UI components, angular component, ignite ui for angular
 ---
 
-# Angular Datepicker Overview
+# Angular Datepicker Component Overview
 Angular DatePicker is a feature rich component used for entering a date through manual text input or choosing date values from a calendar dialog that pops up. Lightweight and simple to use, the DatePicker in Angular lets users to navigate to a desired date with several view options – month, year, decade. There are the usual min, max, and required properties to add validation. 
 
 The Ignite UI for Angular DatePicker Component lets users pick a single date through a month-view calendar dropdown or editable input field. The Angular DatePicker also supports a dialog mode for selection from the calendar only, locale-aware and customizable date formatting and validation integration. 
@@ -18,12 +18,20 @@ Below you can see a sample that demonstrates how the Angular DatePicker works wh
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-1" alt="Angular Datepicker Example">
 </code-view>
+
 <div class="divider--half"></div>
 
-## How To Add Datepicker in Angular With Ignite UI
+## Getting Started with Ignite UI for Angular Datepicker
 
-### First Steps
-To get started with the Datepicker component, first you need to import the `IgxDatePickerModule` in the module that you would like to use it in, for our example we will be using the **app.module.ts** file.
+To get started with the Ignite UI for Angular Datepicker component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+
+```cmd
+ng add igniteui-angular
+```
+
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+
+The next step is to import the `IgxDatePickerModule` in your **app.module.ts** file.
 
 >[!NOTE]
 > As the picker uses the [**IgxCalendarComponent**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html), it is also dependent on the **BrowserAnimationsModule** and on the **HammerModule** for touch interactions, so they need to be added to the module as well:
@@ -41,6 +49,35 @@ import { IgxDatePickerModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
+
+Alternatively, as of `16.0.0` you can import the `IgxDatePickerComponent` as a standalone dependency, or use the [`IGX_DATE_PICKER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/date-picker/public_api.ts) token to import the component and all of its supporting components and directives.
+
+```typescript
+// home.component.ts
+
+import { HammerModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { IGX_DATE_PICKER_DIRECTIVES } from 'igniteui-angular';
+// import { IGX_DATE_PICKER_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: `
+    <igx-date-picker>
+        <label igxLabel>Date</label>
+    </igx-date-picker>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [BrowserAnimationsModule, HammerModule, IGX_DATE_PICKER_DIRECTIVES]
+    /* or imports: [BrowserAnimationsModule, HammerModule, IgxDatePickerComponent, IgxLabelDirective] */
+})
+export class HomeComponent {}
+```
+
+Now that you have the Ignite UI for Angular Datepicker module or directives imported, you can start using the `igx-date-picker` component.
+
+## Using the Angular Datepicker Component
 
 ### Display Datepicker
 To instantiate a Datepicker in its default `dropdown` state, use the following code:
