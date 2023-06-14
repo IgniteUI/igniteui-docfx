@@ -1,11 +1,11 @@
 ---
-title: Angular Input Groups Component | Ignite UI for Angular
-_description: The Input Groups component in Ignite UI for Angular allows for easy-to-use and aesthetic forms, simplicity with inputting data, and provides mitigation for handling validation and errors.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components, Angular Label components, Angular Label controls, Angular Input components, Angular Input controls, Input component, Input control, Label component, Label control, Angular Input Group components, Angular Input Group controls, Angular Input directive, Angular Label directive, Angular Forms, Angular Reactive Forms, Angular Form Validation
+title: Angular Input Group Component | Ignite UI for Angular
+_description: The Input Group component in Ignite UI for Angular allows for easy-to-use and aesthetic forms, simplicity with inputting data, and provides mitigation for handling validation and errors.
+_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library, Native Angular Components, Angular Label component, Angular Label control, Angular Input component, Angular Input control, Input component, Input control, Label component, Label control, Angular Input Group component, Angular Input Group control, Angular Input directive, Angular Label directive, Angular Forms, Angular Reactive Forms, Angular Form Validation
 ---
 
-# Input Group
-<p class="highlight">The `IgxInputGroup` allows the user to enhance input elements like input, select, textarea, etc. This can be achieved by adding custom content like text, icons, buttons, custom validation, etc., on either side of them, as a prefix, suffix, or hint.</p>
+# Angular Input Group Component Overview
+The `IgxInputGroupComponent` allows the user to enhance input elements like input, select, textarea, etc. This can be achieved by adding custom content like text, icons, buttons, custom validation, floating label, etc., on either side of them, as a prefix, suffix, or hint.
 <div class="divider--half"></div>
 
 ## Angular Input Group Example
@@ -17,18 +17,27 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 <div class="divider--half"></div>
 
-## Usage
-To get started with the Input Group component, first you need to import the `IgxInputGroupModule` from the `igniteui-angular` toolkit.
+## Getting Started with Ignite UI for Angular Input Group
 
-Note that the `IgxInputGroup` also depends on the **FormsModule** in order to have a working Template Driven Form:
+To get started with the Ignite UI for Angular Input Group component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+
+```cmd
+ng add igniteui-angular
+```
+
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+
+The next step is to import the `IgxInputGroupModule` in your **app.module.ts** file.
+
+Note that the `IgxInputGroupComponent` also depends on the Angular **FormsModule** in order to have a working Template Driven Form:
 
 ```typescript
 // app.module.ts
 
-...
+import { FormsModule } from '@angular/forms';
 import { IgxInputGroupModule } from 'igniteui-angular';
 // import { IgxInputGroupModule } from '@infragistics/igniteui-angular'; for licensed package
-import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
     ...
@@ -38,10 +47,41 @@ import { FormsModule } from '@angular/forms';
 export class AppModule {}
 ```
 
+Alternatively, as of `16.0.0` you can import the `IgxInputGroupComponent` as a standalone dependency, or use the [`IGX_INPUT_GROUP_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/input-group/public_api.ts) token to import the component and all of its supporting components and directives.
+
+```typescript
+// home.component.ts
+
+import { FormsModule } from '@angular/forms';
+import { IGX_INPUT_GROUP_DIRECTIVES, IgxIconComponent } from 'igniteui-angular';
+// import { IGX_INPUT_GROUP_DIRECTIVES, IgxIconComponent } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: `
+    <igx-input-group>
+        <igx-prefix>+359</igx-prefix>
+        <label igxLabel for="phone">Phone</label>
+        <input igxInput [(ngModel)]="value" name="phone" type="tel" maxlength="9" />
+        <igx-icon igxSuffix>phone</igx-icon>
+    </igx-input-group>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_INPUT_GROUP_DIRECTIVES, IgxIconComponent, FormsModule]
+    /* or imports: [IgxInputGroupComponent, IgxPrefixDirective, IgxLabelDirective, IgxInputDirective, IgxIconComponent, IgxSuffixDirective, FormsModule] */
+})
+export class HomeComponent {
+    public value = '123456789';
+}
+```
+
+Now that you have the Ignite UI for Angular Input Group module or directives imported, you can start using the `igx-input-group` component.
+
 > [!NOTE]
 > To use any of the directives `igxInput`, `igxLabel`, `igx-prefix`, `igx-suffix` or `igx-hint`, you have to wrap them in an `<igx-input-group>` container.
 
-## Examples
+## Using the Angular Input Group
 
 ### Label & Input
 You can read about the [`igxLabel`]({environment:angularApiUrl}/classes/igxlabeldirective.html) and [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) directives as well as their validation, data binding and API in a separate topic [here](label-input.md).
@@ -53,14 +93,16 @@ The `igx-prefix` or `igxPrefix` and `igx-suffix` or `igxSuffix` directives can c
 <igx-input-group>
     <igx-prefix>+359</igx-prefix>
     <label igxLabel for="phone">Phone</label>
-    <input igxInput name="phone" type="tel" />
+    <input igxInput name="phone" type="tel" maxlength="9" />
     <igx-icon igxSuffix>phone</igx-icon>
 </igx-input-group>
 ```
 
-<div class="sample-container loading" style="height:100px">
-<iframe class="lazyload" id="input-group-sample-3-frame" data-src='{environment:demosBaseUrl}/data-entries/input-group-sample-3' width="100%" height="100%" seamless frameBorder="0"></iframe>
-</div>
+<code-view style="height:110px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/data-entries/input-group-sample-3" alt="Angular Input Group Example">
+</code-view>
+
 <div class="divider--half"></div>
 
 ### Hints
@@ -79,9 +121,11 @@ The [`igx-hint`]({environment:angularApiUrl}/classes/igxhintdirective.html) dire
 ```
 
 This is how the phone field with hint looks:
-<div class="sample-container loading" style="height:110px">
-<iframe class="lazyload" id="input-group-sample-4-frame" data-src='{environment:demosBaseUrl}/data-entries/input-group-sample-4' width="100%" height="100%" seamless frameBorder="0"></iframe>
-</div>
+<code-view style="height:110px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/data-entries/input-group-sample-4" alt="Angular Input Group Example">
+</code-view>
+
 <div class="divider--half"></div>
 
 ### Input Types & Input Group Type Token
@@ -163,7 +207,7 @@ The `required` attribute adds an asterisk next to the label, indicating that thi
 The following example uses two-way data binding and demonstrates how to inspect the control's state by exporting the `ngModel` to a local variable.
 
 ```html
-<form>
+<form #login="ngForm">
     ...
     <igx-input-group>
         <label igxLabel for="email">Email</label>
