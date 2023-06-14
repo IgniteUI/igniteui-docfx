@@ -51,6 +51,7 @@ After a reference to the Overlay service is established, it can be used to dynam
 // my-overlay-component.component.ts
 import { MyDynamicComponent } from '../my-dynamic-component/my-dynamic-component.component';
 
+@Component({...})
 export class MyOverlayComponent {
     private _overlayId = ''; // The unique identifier assigned to the component by the Overlay service
 
@@ -92,6 +93,8 @@ If we want to pass an already existing `ElementRef` from the page to the [`IgxOv
 ```typescript
 // my-overlay-component.component.ts
 import { Inject, ViewChild } from '@angular/core'
+
+@Component({...})
 export class MyOverlayComponent {
     private _overlayId = ''; // The unique identifier assigned to the component by the Overlay service
 
@@ -219,7 +222,7 @@ We can modify the previously defined overlay method to not only show but also hi
 import { ConnectedPositioningStrategy } from 'igniteui-angular';
 // import { ConnectedPositioningStrategy } from '@infragistics/igniteui-angular'; for licensed package
 
-...
+@Component({...})
 export class MyOverlayComponent implements OnDestroy {
     private _overlayId = ''; // The unique identifier assigned to the component by the Overlay service
     private _overlayShown = false; // Is the component rendered in the Overlay?
