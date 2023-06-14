@@ -1,10 +1,10 @@
 ---
 title: Angular Divider Component
 _description: Ignite UI for Angular Divider component enables users to separate content both horizontally and vertically.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Divider component, Angular Divider control
+_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library, Angular Divider component, Angular Divider directive, Angular Divider control
 ---
 
-# Divider
+# Angular Divider Component Overview
 
 <p class="highlight">The divider component enables users to separate content both horizontally and vertically.</p>
 <div class="divider"></div>
@@ -19,14 +19,56 @@ By default the divider is a solid horizontal line.
            iframe-src="{environment:demosBaseUrl}/layouts/divider-sample-1" alt="Angular Divider Example">
 </code-view>
 
+## Getting Started with Ignite UI for Angular Divider
 
-## Usage
+To get started with the Ignite UI for Angular Divider component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
 
-```html
-<igx-divider></igx-divider>
+```cmd
+ng add igniteui-angular
 ```
 
-## Vertical Divider
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+
+The next step is to import the `IgxDividerModule` in your **app.module.ts** file.
+
+```typescript
+// app.module.ts
+
+...
+import { IgxDividerModule } from 'igniteui-angular';
+// import { IgxDividerModule } from '@infragistics/igniteui-angular'; for licensed package
+
+@NgModule({
+    ...
+    imports: [..., IgxDividerModule],
+    ...
+})
+export class AppModule {}
+```
+
+Alternatively, as of `16.0.0` you can import the `IgxDividerDirective` as a standalone dependency.
+
+```typescript
+// home.component.ts
+
+import { IgxDividerDirective } from 'igniteui-angular';
+// import { IgxDividerDirective } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: '<igx-divider></igx-divider>',
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IgxDividerDirective]
+})
+export class HomeComponent {}
+```
+
+Now that you have the Ignite UI for Angular Divider module or directive imported, you can start using the `igx-divider` component.
+
+## Using the Angular Divider
+
+### Vertical Divider
 By adding the `vertical` attribute and setting its value to `true`, you can change the direction of the divider from horizontal to vertical.
 
 ```html
@@ -39,7 +81,7 @@ By adding the `vertical` attribute and setting its value to `true`, you can chan
 </code-view>
 
 
-## Dashed Divider
+### Dashed Divider
 The default style of the divider is a `solid` line but it can also be `dashed`.
 To change the default look simply use the `type` attribute of the divider and set its value to `dashed`.
 
@@ -53,7 +95,7 @@ To change the default look simply use the `type` attribute of the divider and se
 </code-view>
 
 
-## Inset Divider
+### Inset Divider
 The divider can be set in on both sides.
 To inset the divider, set the `middle` attribute of the divider to `true` and provider the desired `inset` value, the divider will start shrinking from both ends.
 

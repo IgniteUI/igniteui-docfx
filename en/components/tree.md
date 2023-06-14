@@ -1,17 +1,17 @@
 ---
 title: Angular Tree Component - Ignite UI for Angular
 _description: With Ignite UI for Angular Tree component, you can display hierarchical data in a tree-view structure, customize nodes easily and load data on demand. Try for FREE
-_keywords: angular tree, angular tree component, ignite ui for angular, UI controls, infragistics
+_keywords: angular tree, angular tree component, angular tree view, angular tree view component, angular ui components, ignite ui for angular, UI controls, infragistics
 ---
 <style type="text/css">
-    code-view .codesandbox-btn{
+    code-view .codesandbox-btn {
         display: none !important;
     }
 </style>
 
 # Angular Tree Component Overview
 
-The Angular Tree Component allows users to represent hierarchical data in a tree-view structure, maintaining parent-child relationships, as well as to define static tree-view structure without a corresponding data model. Its primary purpose is to allow end-users to visualize and navigate within hierarchical data structures. The Ignite UI for Angular Tree Component also provides load on demand capabilities, item activation, bi-state and cascading selection of items through built-in checkboxes, built-in keyboard navigation and more.
+The Angular Tree Component allows users to represent hierarchical data in a tree-view structure with parent-child relationships, as well as to define static tree-view structure without a corresponding data model. Its primary purpose is to allow end-users to visualize and navigate within hierarchical data structures. The Ignite UI for Angular Tree Component also provides load on demand capabilities, item activation, bi-state and tri-state cascading selection of items through built-in checkboxes, built-in keyboard navigation and more.
 
 ## Angular Tree Example
 In this basic Angular Tree example, you can see how to define an `igx-tree` and its nodes by specifying the node hierarchy and iterating through a hierarchical data set.
@@ -48,9 +48,46 @@ import { IgxTreeModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
-Now that we have the tree module imported, let’s get started with a basic configuration of the `igx-tree` and its nodes.
 
-## Usage
+Alternatively, as of `16.0.0` you can import the `IgxTreeComponent` as a standalone dependency, or use the [`IGX_TREE_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/tree/public_api.ts) token to import the component and all of its supporting components and directives.
+
+```typescript
+// home.component.ts
+
+import { IGX_TREE_DIRECTIVES } from 'igniteui-angular';
+// import { IGX_TREE_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: `
+    <igx-tree>
+        <igx-tree-node>
+            Angular Libraries
+            <igx-tree-node>Ignite UI for Angular</igx-tree-node>
+            <igx-tree-node>Angular Material</igx-tree-node>
+        </igx-tree-node>
+        <igx-tree-node>
+            Web Component Libraries
+            <igx-tree-node>Ignite UI for Web Components</igx-tree-node>
+            <igx-tree-node>Open UI 5</igx-tree-node>
+        </igx-tree-node>
+        <igx-tree-node>
+            Blazor Libraries
+            <igx-tree-node>Ignite UI for Blazor</igx-tree-node>
+        </igx-tree-node>
+    </igx-tree>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_TREE_DIRECTIVES]
+    /* or imports: [IgxTreeComponent, IgxTreeNodeComponent] */
+})
+export class HomeComponent {}
+```
+
+Now that we have the Ignite UI for Angular Tree module or directives imported, let’s get started with a basic configuration of the `igx-tree` and its nodes.
+
+## Using the Angular Tree
 
 [IgxTreeNodesComponent]({environment:angularApiUrl}/classes/igxtreenodecomponent.html) is the representation of every node that belongs to the [IgxTreeComponent]({environment:angularApiUrl}/classes/igxtreecomponent.html).  
 Nodes provide [disabled]({environment:angularApiUrl}/classes/igxtreenodecomponent.html#disabled), [active]({environment:angularApiUrl}/classes/igxtreenodecomponent.html#active), [selected]({environment:angularApiUrl}/classes/igxtreenodecomponent.html#selected) and [expanded]({environment:angularApiUrl}/classes/igxtreenodecomponent.html#expanded) properties, which give you opportunity to configure the states of the node as per your requirement. 

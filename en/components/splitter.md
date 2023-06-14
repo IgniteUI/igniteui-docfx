@@ -1,10 +1,10 @@
 ---
 title: Angular Splitter Component | Split Panes |  Ignite UI for Angular | Infragistics
 _description: Use the Angular Splitter component to create a simple split layout splitting the view horizontally or vertically into multiple collapsible split panes.
-_keywords: angular splitter, igniteui for angular, infragistics
+_keywords: angular splitter, angular splitter component, angular split view component, angular ui components, igniteui for angular, infragistics
 ---
 
-# Splitter
+# Angular Splitter Component Overview
 
 The Ignite UI for Angular Splitter component provides the ability to create layouts, split into multiple vertically or horizontally arranged panes that may be resized, expanded and collapsed. These interactions are performed through UI exposed in the splitter bars between the panes. A simple Splitter layout is demonstrated in the demo below.
 
@@ -18,9 +18,18 @@ The Ignite UI for Angular Splitter component provides the ability to create layo
 
 <div class="divider--half"></div>
 
-## Usage
+## Getting Started with Ignite UI for Angular Splitter
 
-To start using the **igxSplitter** component, you first need to import the **IgxSplitterModule** in your **app.module**:
+To get started with the Ignite UI for Angular Splitter component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+
+```cmd
+ng add igniteui-angular
+```
+
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+
+The next step is to import the `IgxSplitterModule` in your **app.module.ts** file.
+
 ```typescript
 // app.module.ts
 ...
@@ -35,7 +44,40 @@ import { IgxSplitterModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-After that you can add the markup for your component:
+Alternatively, as of `16.0.0` you can import the `IgxSplitterComponent` as a standalone dependency, or use the [`IGX_SPLITTER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/splitter/public_api.ts) token to import the component and all of its supporting components and directives.
+
+```typescript
+// home.component.ts
+
+import { IGX_SPLITTER_DIRECTIVES } from 'igniteui-angular';
+// import { IGX_SPLITTER_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: `
+    <igx-splitter>
+        <igx-splitter-pane>
+            Pane 1
+        </igx-splitter-pane>
+        <igx-splitter-pane>
+            Pane 2
+        </igx-splitter-pane>
+    </igx-splitter>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_SPLITTER_DIRECTIVES]
+    /* or imports: [IgxSplitterComponent, IgxSplitterPaneComponent] */
+})
+export class HomeComponent {}
+```
+
+Now that you have the Ignite UI for Angular Splitter module or directives imported, you can start using the `igx-splitter` component.
+
+## Using the Angular Splitter
+
+**igxSplitter** is initialized with the **igx-splitter** tag. Multiple splitter panes can be defined under a single **igx-splitter** component. The content of the pane is templatable and will be rendered in its own resizable container.
+
 ```html
 <!-- splitter.component.html -->
 <igx-splitter>
@@ -50,8 +92,6 @@ After that you can add the markup for your component:
     </igx-splitter-pane>
 </igx-splitter>
 ```
-**igxSplitter** is initialized with the **igx-splitter** tag. Multiple splitter panes can be defined under a single **igx-splitter** component. The content of the pane is templatable and will be rendered in its own resizable container.
-
 
 ### Orientation
 
