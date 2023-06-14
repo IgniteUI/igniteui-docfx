@@ -1,10 +1,10 @@
 ---
 title: Angular Mask Directive Component | Ignite UI for Angular
 _description: With the Mask Directive in Ignite UI for Angular, the developer can control user input and format the visible value based on configurable mask rules, providing different input options and ease in use and configuration.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular mask directive, Mask, Directive, Mask Editor, Angular Mask Editor
+_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components, Native Angular Components Suite, Angular UI Components, Native Angular Components Library, Angular mask directive, Mask, Directive, Mask Editor, Angular Mask Editor
 ---
 
-# Mask
+# Angular Mask Directive Overview
 
 By applying the [`igxMask`]({environment:angularApiUrl}/classes/igxmaskdirective.html) directive on a **text input field**, the developer can control user input and format the visible value, based on configurable mask rules. It provides different input options and ease in use and configuration.
 
@@ -17,10 +17,20 @@ By applying the [`igxMask`]({environment:angularApiUrl}/classes/igxmaskdirective
 
 <div class="divider--half"></div>
 
-## Usage
-[`igxMask`]({environment:angularApiUrl}/classes/igxmaskdirective.html) directive is used on an input of type **text**.
+## Getting Started with Ignite UI for Angular Mask
 
-The first step is to import the `IgxMaskModule` and `IgxInputGroupModule` in our **app.module.ts** file.
+To get started with the Ignite UI for Angular Mask directive, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+
+```cmd
+ng add igniteui-angular
+```
+
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+
+The next step is to import the `IgxMaskModule` and `IgxInputGroupModule` in your **app.module.ts** file. 
+
+>[!NOTE]
+>[`igxMask`]({environment:angularApiUrl}/classes/igxmaskdirective.html) directive is used on an input of type **text**.
 
 ```typescript
 // app.module.ts
@@ -31,13 +41,41 @@ import { IgxMaskModule, IgxInputGroupModule } from 'igniteui-angular';
 
 @NgModule({
     ...
-    imports: [..., IgxInputGroupModule, IgxMaskModule]
+    imports: [..., IgxMaskModule, IgxInputGroupModule],
     ...
 })
 export class AppModule {}
 ```
 
-<div class="divider--half"></div>
+Alternatively, as of `16.0.0` you can import the `IgxMaskDirective` as a standalone dependency.
+
+```typescript
+// home.component.ts
+
+import { IgxMaskDirective, IGX_INPUT_GROUP_DIRECTIVES } from 'igniteui-angular';
+// import { IgxMaskDirective, IGX_INPUT_GROUP_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: `
+    <igx-input-group>
+        <igx-prefix>
+            <igx-icon>phone</igx-icon>
+        </igx-prefix>
+        <label igxLabel>Phone</label>
+        <input igxInput type="text" [igxMask]="'(####) 00-00-00 Ext. 9999'"/>
+    </igx-input-group>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IgxMaskDirective, IGX_INPUT_GROUP_DIRECTIVES]
+})
+export class HomeComponent {}
+```
+
+Now that you have the Ignite UI for Angular Mask module or directive imported, you can start using the `igxMask` directive.
+
+## Using the Angular Mask
 
 ### Supported Built-in Mask Rules
 <div class="divider--half"></div>
