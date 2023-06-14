@@ -1,12 +1,12 @@
 ---
 title: Input Group コンポーネント - ネイティブ Angular | Ignite UI for Angular
 _description: Ignite UI for Angular Input Group は、データ入力のための使いやすいフォーム、さらに検証およびエラー処理などの機能も提供します。
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library, Native Angular Components, Angular Label component, Angular Label control, Angular Input component, Angular Input control, Input component, Input control, Label component, Label control, Angular Input Group component, Angular Input Group control, Angular Input directive, Angular Label directive, Angular Forms, Angular Reactive Forms, Angular Form Validation
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, Angular UI コンポーネント, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular Label コンポーネント, Angular Label コントロール, Angular Input Group コンポーネント, Angular Input Group コントロール, Angular Input コンポーネント, Angular Input コントロール, Input コンポーネント, Input コントロール, Label コンポーネント, Label コントロール, Angular Input ディレクティブ, Angular Label ディレクティブ, Angular Forms, Angular Reactive Forms, Angular フォームの検証
 _language: ja
 ---
 
-# Angular Input Group Component Overview
-The `IgxInputGroupComponent` allows the user to enhance input elements like input, select, textarea, etc. This can be achieved by adding custom content like text, icons, buttons, custom validation, floating label, etc., on either side of them, as a prefix, suffix, or hint.
+# Angular Input Group (入力グループ) コンポーネントの概要
+`IgxInputGroupComponent` は、ユーザーが input、select、textarea などの入力要素を拡張することを可能にします。これは、テキスト、アイコン、ボタン、カスタム バリデーション、フローティング ラベルなどのカスタム コンテンツを、プレフィックス、サフィックス、またはヒントとして、それらの両側に追加することで実現できます。
 
 ## Angular Input Group の例
 
@@ -17,27 +17,28 @@ The `IgxInputGroupComponent` allows the user to enhance input elements like inpu
 
 <div class="divider--half"></div>
 
-## Getting Started with Ignite UI for Angular Input Group
+## Ignite UI for Angular Input Group を使用した作業の開始
 
-To get started with the Ignite UI for Angular Input Group component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+Ignite UI for Angular Input Group コンポーネントを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
 
 ```cmd
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
 
-The next step is to import the `IgxInputGroupModule` in your **app.module.ts** file.
+次に、**app.module.ts** ファイルに `IgxInputGroupModule` をインポートします。
 
-Note that the `IgxInputGroupComponent` also depends on the Angular **FormsModule** in order to have a working Template Driven Form:
+`IgxInputGroupComponent` はテンプレート駆動フォームを使用するために Angular **FormsModule** にも依存します。
 
 ```typescript
 // app.module.ts
 
-...
 import { FormsModule } from '@angular/forms';
 import { IgxInputGroupModule } from 'igniteui-angular';
 // import { IgxInputGroupModule } from '@infragistics/igniteui-angular'; for licensed package
+
+
 @NgModule({
     ...
     imports: [..., IgxInputGroupModule, FormsModule],
@@ -46,13 +47,15 @@ import { IgxInputGroupModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxInputGroupComponent` as a standalone dependency, or use the [`IGX_INPUT_GROUP_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/input-group/public_api.ts) token to import the component and all of its supporting components and directives.
+あるいは、`16.0.0` 以降、`IgxInputGroupComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_INPUT_GROUP_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/input-group/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
 
 ```typescript
 // home.component.ts
+
 import { FormsModule } from '@angular/forms';
 import { IGX_INPUT_GROUP_DIRECTIVES, IgxIconComponent } from 'igniteui-angular';
 // import { IGX_INPUT_GROUP_DIRECTIVES, IgxIconComponent } from '@infragistics/igniteui-angular'; for licensed package
+
 @Component({
     selector: 'app-home',
     template: `
@@ -73,12 +76,12 @@ export class HomeComponent {
 }
 ```
 
-Now that you have the Ignite UI for Angular Input Group module or directives imported, you can start using the `igx-input-group` component.
+Ignite UI for Angular Input Group モジュールまたはディレクティブをインポートしたので、`igx-input-group` コンポーネントの使用を開始できます。
 
 > [!NOTE]
 > `igxInput`、`igxLabel`、`igx-preix`、`igx-suffix` または `igx-hint` ディレクティブを使用するには、`<igx-input-group>` コンテナーでラップする必要があります。
 
-## Using the Angular Input Group
+## Angular Input Group の使用
 
 ### Label および Input
 [`igxLabel`]({environment:angularApiUrl}/classes/igxlabeldirective.html)、[`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) ディレクティブとその検証、データ バインディング、API については、[このトピック](label-input.md)を参照してください。
@@ -118,9 +121,11 @@ Now that you have the Ignite UI for Angular Input Group module or directives imp
 ```
 
 ヒントを追加した phone フィールドは以下のようになります。
-<div class="sample-container loading" style="height:110px">
-<iframe class="lazyload" id="input-group-sample-4-frame" data-src='{environment:demosBaseUrl}/data-entries/input-group-sample-4' width="100%" height="100%" seamless frameBorder="0"></iframe>
-</div>
+<code-view style="height:110px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/data-entries/input-group-sample-4" alt="Angular Input Group の例">
+</code-view>
+
 <div class="divider--half"></div>
 
 ### Input タイプと Input グループ タイプ トークン

@@ -1,12 +1,13 @@
 ---
 title: Navbar コンポーネント
 _description: Ignite UI for Angular Navbar コントロールはアプリケーションでのスムーズな移動を可能にする UI コンポーネントです。
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library, Angular NavBar component, Angular Navbar control, Angular Navigation Bar, Angular Navigation Bar component
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, Angular UI コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular Navbar コンポーネント, Angular Navbar コントロール, Angular Navigation Bar, Angular Navigation Bar コンポーネント
 _language: ja
 ---
 
-# Angular Navbar Component Overview
-The Ignite UI for Angular [`IgxNavbarComponent`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html) is an application header component that informs the user of their current position in an app, and helps them move back (much like the “back” button in a browser). The Navigation Bar can also provide links to quick actions such as search or favorite, helping users navigate smoothly through an application without trying to move to invalid routes or states. The bar sits at the top of the container it is placed in.
+# Angular Navbar (ナビゲーション バー) コンポーネントの概要
+
+Ignite UI for Angular [`IgxNavbarComponent`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html) は、アプリケーション内の現在位置をユーザーに通知し、ブラウザーの [戻る] ボタンのように戻る機能を提供するアプリケーション ヘッダー コンポーネントです。Navigation Bar の検索またはお気に入りなどのリンクによって、ユーザーはアプリケーションでナビゲーションをスムーズに実行できます。バーは、バーが含まれるコンテナ上に配置されます。
 
 
 ## Angular Navbar の例
@@ -18,32 +19,40 @@ The Ignite UI for Angular [`IgxNavbarComponent`]({environment:angularApiUrl}/cla
 
 <div class="divider--half"></div>
 
-## Getting Started with Ignite UI for Angular Navbar
+## Ignite UI for Angular Navbar を使用した作業の開始
 
-To get started with the Ignite UI for Angular Navbar component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+Ignite UI for Angular Navbar コンポーネントを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
 
 ```cmd
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
 
-The first step is to import the `IgxNavbarModule` inside our **app.module.ts** file. 
+ はじめに、**app.module.ts** ファイルに `IgxNavbarModule` をインポートします。 
 
 ```typescript
 // app.module.ts
+
 import { IgxNavbarModule } from 'igniteui-angular';
 // import { IgxNavbarModule } from '@infragistics/igniteui-angular'; for licensed package
-@@ import { IgxNavbarModule } from 'igniteui-angular';
+
+@NgModule({
+    ...
+    imports: [..., IgxNavbarModule],
+    ...
+})
 export class AppModule {}
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxNavbarComponent` as a standalone dependency, or use the [`IGX_NAVBAR_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/navbar/public_api.ts) token to import the component and all of its supporting components and directives.
+あるいは、`16.0.0` 以降、`IgxNavbarComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_NAVBAR_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/navbar/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
 
 ```typescript
 // home.component.ts
+
 import { IGX_NAVBAR_DIRECTIVES } from 'igniteui-angular';
 // import { IGX_NAVBAR_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
 @Component({
     selector: 'app-home',
     template: '<igx-navbar title="Ignite UI for Angular"></igx-navbar>',
@@ -55,14 +64,15 @@ import { IGX_NAVBAR_DIRECTIVES } from 'igniteui-angular';
 export class HomeComponent {}
 ```
 
-Now that you have the Ignite UI for Angular Navbar module or directives imported, you can start using the `igx-navbar` component.
+Ignite UI for Angular Navbar モジュールまたはディレクティブをインポートしたので、`igx-navbar` コンポーネントの使用を開始できます。
 
-## Using the Angular Navbar
+## Angular Navbar の使用
 
-Then in the template of our component we can add the following code to show a basic navbar with a title:
+コンポーネントのテンプレートで、以下のコードを追加し、タイトルの基本的な NavBar を作成します。
 
 ```html
 <!--navbar.component.html-->
+
 <igx-navbar title="Ignite UI for Angular">
 </igx-navbar>
 ```
@@ -93,11 +103,7 @@ import {
     IgxButtonModule,
     IgxIconModule
 } from 'igniteui-angular';
-// import { 
-//    IgxNavbarModule,
-//    IgxButtonModule,
-//    IgxIconModule
-// } from '@infragistics/igniteui-angular'; for licensed package
+// import { IgxNavbarModule, IgxButtonModule, IgxIconModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -257,7 +263,7 @@ Navbar のタイトルにカスタム コンテンツを提供する場合は、
 ```
 
 > [!NOTE]
-> [`igx-navbar-title`]({environment:angularApiUrl}/classes/igxnavbartitledirective.html) または [`igxNavbarTitle`]({environment:angularApiUrl}/classes/igxnavbartitledirective.html) の場合、デフォルト [`title`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#title) が使用されません。 
+> [`igx-navbar-title`]({environment:angularApiUrl}/classes/igxnavbartitledirective.html) または [`igxNavbarTitle`]({environment:angularApiUrl}/classes/igxnavbartitledirective.html) の場合、デフォルト [`title`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#title) が使用されません。
 
 
 <code-view style="height: 300px" 

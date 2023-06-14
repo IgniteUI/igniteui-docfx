@@ -1,13 +1,13 @@
 ---
 title: 単一選択 ComboBox コンポーネント
 _description: Ignite UI for Angular ComboBox は、基本的な HTML 入力、選択、フィルタリング、およびカスタム ドロップダウン リストの機能を組み合わせた強力な入力を提供します。無料でお試しください。
-_keywords: angular single selection combobox, angular combobox component, angular single selection combobox component, angular combo, angular ui components, ignite ui for angular, infragistics
+_keywords: angular 単一選択 combobox, angular combobox コンポーネント, angular 単一選択 combobox コンポーネント, angular combo, angular ui コンポーネント, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
 
-# Angular Single Select ComboBox Component Overview
+# Angular Single Select ComboBox (単一選択のコンボボックス) コンポーネントの概要
 
-The Angular Single Select ComboBox component is a modification of [ComboBox component](combo.md) that allows single selection. We call it "simple combo". Due to high demand for single-selection mode for the original ComboBox component, we created an extension component which offers an editable search input that allows users to choose an option from a predefined list of items and to input custom values.
+Angular Single Select ComboBox コンポーネントは、単一の選択を可能にする [ComboBox コンポーネント](combo.md)の変更です。これを「シンプルなコンボ」と呼びます。元の ComboBox コンポーネントの単一選択モードに対する需要が高かったため、ユーザーが事前定義された項目リストからオプションを選択し、カスタム値を入力できるようにする編集可能な検索入力を提供する拡張コンポーネントを作成しました。
 
 ## Angular Simple ComboBox の例
 
@@ -33,17 +33,17 @@ Simple ComboBox コントロールは、次の機能を公開します:
     - テンプレート
     - テンプレート駆動フォームおよびリアクティブ フォームとの統合
 
-## Getting Started with Ignite UI for Angular Simple ComboBox
+## Ignite UI for Angular Simple ComboBox を使用した作業の開始
 
-To get started with the Ignite UI for Angular Simple ComboBox component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+Ignite UI for Angular Simple ComboBox コンポーネントを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
 
 ```cmd
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
 
-The next step is to import the `IgxSimpleComboModule` in your **app.module.ts** file.
+次に、**app.module.ts** ファイルに `IgxSimpleComboModule` をインポートします。
 
 ```typescript
 import { IgxSimpleComboModule } from 'igniteui-angular';
@@ -59,12 +59,14 @@ import { IgxSimpleComboModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxSimpleComboComponent` as a standalone dependency, or use the [`IGX_SIMPLE_COMBO_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/simple-combo/public_api.ts) token to import the component and all of its supporting components and directives.
+あるいは、`16.0.0` 以降、`IgxSimpleComboComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_SIMPLE_COMBO_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/simple-combo/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
 
 ```typescript
 // home.component.ts
+
 import { IGX_SIMPLE_COMBO_DIRECTIVES } from 'igniteui-angular';
 // import { IGX_SIMPLE_COMBO_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
 @Component({
     selector: 'app-home',
     template: '<igx-simple-combo></igx-simple-combo>',
@@ -76,12 +78,11 @@ import { IGX_SIMPLE_COMBO_DIRECTIVES } from 'igniteui-angular';
 export class HomeComponent {}
 ```
 
-Now that you have the Ignite UI for Angular Simple ComboBox module or directives imported, you can start using the `igx-simple-combo` component.
+Ignite UI for Angular Simple ComboBox モジュールまたはディレクティブをインポートしたので、`igx-simple-combo` コンポーネントの使用を開始できます。
 
-## Using the Angular Simple ComboBox
+## Angular Simple ComboBox の使用
 
-Just like the regular combobox, you can bind the [igx-simple-combo]({environment:angularApiUrl}/classes/igxsimplecombocomponent.html) to data.
-
+通常のコンボボックスと同様に、[igx-simple-combo]({environment:angularApiUrl}/classes/igxsimplecombocomponent.html) をデータにバインドできます。
 
 ```typescript
 export class MySimpleComboComponent implements OnInit {

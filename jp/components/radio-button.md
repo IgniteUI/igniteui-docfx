@@ -1,35 +1,35 @@
 ---
 title: Radio と Radio Group
 _description: Ignite UI for Angular Radio Button コントロールおよび Radio Group コントロールは、テンプレート主導およびリアクティブ フォームで選択可能なオプションのリストを表示します。
-_keywords: Angular Radio Group component, Angular Radio Group control, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library
+_keywords: Angular Radio Group コンポーネント, Angular Radio Group コントロール, Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, Angular UI コンポーネント, ネイティブ Angular コンポーネント ライブラリ
 _language: ja
 ---
 
-# Angular Radio & Radio Group Component Overview
+# Angular Radio & Radio Group (ラジオ & ラジオ グループ) コンポーネントの概要
 
-## Radio Button
+## Radio Button (ラジオ ボタン)
 <p class="highlight">Ignite UI for Angular Radio Button コンポーネントを使用すると、隣に表示されるオプションのセットから単一のオプションを選択する機能を提供します。</p>
 
 ## Angular Radio & Radio Group の例
 
-<code-view style="height: 90px" 
+<code-view style="height: 120px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-entries/radio-sample-1" alt="Angular Radio & Radio Group の例">
 </code-view>
 
 <div class="divider--half"></div>
 
-## Getting Started with Ignite UI for Angular Radio Button
+## Ignite UI for Angular Radio Button を使用した作業の開始
 
-To get started with the Ignite UI for Angular Radio Button component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+Ignite UI for Angular Radio Button コンポーネントを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
 
 ```cmd
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
 
-The next step is to import the `IgxRadioModule` in the **app.module.ts** file.
+次に、**app.module.ts** ファイルに `IgxRadioModule` をインポートします。
 
 ```typescript
 // app.module.ts
@@ -48,13 +48,15 @@ export class AppModule {
 }
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxRadioGroupDirective` and `IgxRadioComponent` as standalone dependencies.
+あるいは、`16.0.0` 以降、`IgxRadioGroupDirective` と `IgxRadioComponent` をスタンドアロンの依存関係としてインポートできます。
 
 ```typescript
 // home.component.ts
+
 import { FormsModule } from '@angular/forms';
 import { IgxRadioComponent, IgxRadioGroupDirective } from 'igniteui-angular';
 // import { IgxRadioComponent, IgxRadioGroupDirective } from '@infragistics/igniteui-angular'; for licensed package
+
 @Component({
     selector: 'app-home',
     template: `
@@ -74,9 +76,9 @@ export class HomeComponent {
 }
 ```
 
-Now that you have the Ignite UI for Angular Radio Button module or directives imported, you can start using the `igx-radio-group` directive and `igx-radio` component.
+Ignite UI for Angular Radio Button モジュールまたはディレクティブをインポートしたので、`igx-radio-group` ディレクティブと `igx-radio` コンポーネントの使用を開始できます。
 
-## Using the Angular Radio Button
+## Angular Radio Button の使用
 
 ラジオ ボタンを表示するには、コンポーネントのテンプレートで以下のコードを追加します。
 
@@ -94,7 +96,7 @@ Now that you have the Ignite UI for Angular Radio Button module or directives im
 <igx-radio [(ngModel)]="selected" value="option2" labelPosition="before">Option 2</igx-radio>
 ```
 
-<div class="sample-container loading" style="height: 90px">
+<div class="sample-container loading" style="height: 120px">
     <iframe id="radio-sample-3-iframe" data-src='{environment:demosBaseUrl}/data-entries/radio-sample-3' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 
@@ -140,10 +142,12 @@ public selectedColor: string = this.colors[3].hex;
 
 結果は以下のようになります。
 
-<code-view style="height: 450px" 
+
+<code-view style="height: 550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-entries/radio-sample-2" >
 </code-view>
+
 
 ## スタイル設定
 
@@ -192,7 +196,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 ```
 
 
-<code-view style="height: 220px" 
+<code-view style="height: 300px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-entries/radio-styling-sample" >
 </code-view>
@@ -200,9 +204,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 <div class="divider--half"></div>
 
 ## Radio Group
-<p class="highlight">
-
-Ignite UI for Angular Radio Group ディレクティブは、ラジオの子コンポーネントを制御できるグループ化コンテナーを提供し、**テンプレート駆動型およびリアクティブ型のフォームをサポートします。**</p>
+<p class="highlight">Ignite UI for Angular Radio Group ディレクティブは、ラジオの子コンポーネントを制御できるグループ化コンテナーを提供し、**テンプレート駆動型およびリアクティブ型のフォームをサポートします。**</p>
 <div class="divider"></div>
 
 ### デモ

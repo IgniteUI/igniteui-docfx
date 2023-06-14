@@ -1,37 +1,38 @@
 ---
 title: Angular 階層データグリッド | マテリアル テーブル | Ignite UI for Angular | インフラジスティックス
 _description: Angular Material Table に基づいて Ignite UI for Angular データグリッドの使用方法を学び、さまざまな Angular イベントを含むタッチレスポンシブ Angular コンポーネントを作成します。
-_keywords: angular hierarchical data grid, angular hierarchical table, angular hierarchical data grid component, angular hierarchical table component, angular UI components, igniteui for angular, infragistics
+_keywords: angular hierarchical data grid, angular hierarchical table, angular hierarchical data grid コンポーネント, angular hierarchical table コンポーネント, angular UI コンポーネント, igniteui for angular, インフラジスティックス
 _language: ja
 ---
 
 # Angular 階層グリッド コンポーネントの概要
 
-Ignite UI for Angular 階層データ グリッド は、階層型表データの表示や操作が簡単にできます。最小限のコードでデータをすばやくバインドするか、さまざまなイベントを使用してさまざまな動作をカスタマイズします。このコンポーネントは、データ選択、Excel スタイル フィルタリング、ソート、ページング、テンプレート、列移動などの豊富な機能を提供します。Hierarchical Grid は、Flat Grid コンポーネントをベースとして構築されており、親グリッドの行の展開/縮小、詳細な情報が必要な場合に対応する子グリッドを表示する機能を拡張しました。マテリアル テーブル ベースの UI グリッドにより、階層データの表示がさらに簡単できれいになりました。
+Ignite UI for Angular Hierarchical Data Grid は、階層表形式データの表示と操作に使用されます。最小限のコードでデータをすばやくバインドするか、さまざまなイベントを使用してさまざまな動作をカスタマイズします。このコンポーネントは、データ選択、Excel スタイルのフィルタリング、ソート、ページング、テンプレート化、列の移動、列のピン固定、Excel および CSV へのエクスポートなどの豊富な機能セットを提供します。Hierarchical Grid は、Flat Grid コンポーネントをベースとして構築されており、親グリッドの行の展開/縮小、詳細な情報が必要な場合に対応する子グリッドを表示する機能を拡張しました。
 
 ## Angular 階層グリッドの例
 この Angular グリッドの例では、ユーザーがデータの階層セットを視覚化し、セル テンプレートを使用して[スパークライン](../sparkline.md)などの他の視覚的コンポーネントを追加する方法を確認できます。
 
-<code-view style="height:520px" 
-           data-demos-base-url="{environment:lobDemosBaseUrl}" 
+<code-view style="height:520px"
+           data-demos-base-url="{environment:lobDemosBaseUrl}"
            iframe-src="{environment:lobDemosBaseUrl}/hierarchical-grid/hierarchical-grid-resizing" alt="Angular 階層グリッドの例">
 </code-view>
 
 <div class="divider--half"></div>
 
-## Getting Started with Ignite UI for Angular Hierarchical Data Grid
+## Ignite UI for Angular Hierarchical Data Grid を使用した作業の開始
 
 >[!NOTE]
 >**このコンポーネントでは、タッチ操作が正しく動作するために、アプリケーションのルート モジュールに [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) をインポートする必要があります。**.
 
-To get started with the Ignite UI for Angular Hierarchical Data Grid component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+Ignite UI for Angular Hierarchical Data Grid コンポーネントを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
 
 ```cmd
 ng add igniteui-angular
 ```
-Ignite UI for Angular については、[はじめに](../general/getting-started.md)トピックををご覧ください。
 
-The next step is to import the `IgxHierarchicalGridModule` in your **app.module.ts** file.
+Ignite UI for Angular については、「[はじめに](../general/getting-started.md)」ピックをご覧ください。
+
+次に、**app.module.ts** ファイルに `IgxHierarchicalGridModule` をインポートします。
 
 ```typescript
 // app.module.ts
@@ -49,12 +50,14 @@ import { IgxHierarchicalGridModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxHierarchicalGridComponent` as a standalone dependency, or use the [`IGX_HIERARCHICAL_GRID_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/grids/hierarchical-grid/public_api.ts) token to import the component and all of its supporting components and directives.
+あるいは、`16.0.0` 以降、`IgxHierarchicalGridComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_HIERARCHICAL_GRID_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/grids/hierarchical-grid/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
 
 ```typescript
 // home.component.ts
+
 import { IGX_HIERARCHICAL_GRID_DIRECTIVES } from 'igniteui-angular';
 // import { IGX_HIERARCHICAL_GRID_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
 @Component({
     selector: 'app-home',
     template: `
@@ -77,9 +80,9 @@ export class HomeComponent {
 }
 ```
 
-Now that you have the Ignite UI for Angular Hierarchical Grid module or directives imported, you can start using the `igx-hierarchical-grid` component.
+Ignite UI for Angular Hierarchical Grid モジュールまたはディレクティブをインポートしたので、`igx-hierarchical-grid` コンポーネントの使用を開始できます。
 
-## Using the Angular Hierarchical Data Grid
+## Angular Hierarchical Data Grid の使用
 
 ## データ バインディング
 
@@ -152,6 +155,7 @@ export const singers = [{
 
 ```typescript
 //  hierarchicalGridSample.component.ts
+
 @Component({...})
 export class HierarchicalGridLoDSampleComponent implements AfterViewInit {
     @ViewChild("hGrid")

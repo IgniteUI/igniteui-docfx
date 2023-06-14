@@ -1,18 +1,19 @@
 ---
 title: Tabs コンポーネント - ネイティブ Angular | Ignite UI for Angular
 _description: Ignite UI for Angular Tabs コンポーネントはタブを上側に配置し、複数のタブ項目がある場合にスクロールを許可します。今すぐお試しください。
-_keywords: Angular Tabs component, Angular Tabs control, Angular Tabs, Angular Tabbar Component, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Components, Angular UI Components, Native Angular Components Library
+_keywords: Angular Tabs コンポーネント, Angular Tabs コントロール, Angular Tabs, Angular Tabbar コンポーネント, Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コンポーネント, Angular UI コンポーネント, ネイティブ Angular コンポーネント ライブラリ
 _language: ja
 ---
 
 # Angular Tabs (タブ) コンポーネントの概要
-Ignite UI for Angular Tabs is a full-featured user interface component that has the primary purpose to organize and group related content in a single tabbed view, thus saving space and making content more comprehensible.アニメーション、テンプレート化、カスタマイズ オプションなどのさまざまな機能がパックされています。
+Ignite UI for Angular Tabs は、関連するコンテンツを 1 つのタブ付きビューで整理およびグループ化することを主な目的とするフル機能のユーザー インターフェース コンポーネントです。これにより、スペースを節約し、コンテンツをよりわかりやすくします。アニメーション、テンプレート化、カスタマイズ オプションなどのさまざまな機能がパックされています。
 
 Angular のタブは、多くのコンテンツを含む Web ページをカテゴリに分類し、簡潔かつスペース効率の良い方法で表示する必要がある場合に非常に便利です。
 
 <p class="highlight">
 
 Ignite UI for Angular [`igx-tabs`]({environment:angularApiUrl}/classes/igxtabscomponent.html) コンポーネントは、同様なデータ セットの体系化や切り替えに使用します。[`igx-tab-item`]({environment:angularApiUrl}/classes/igxtabitemcomponent.html) のラッパーとして機能し、それぞれデータのコンテナーおよびタブ ヘッダーを表します。Angular Tabs コンポーネントは、タブを上側に配置して複数のタブ項目がある場合にスクロールを許可します。
+
 </p>
 
 ## Angular Tabs の例
@@ -26,17 +27,17 @@ Ignite UI for Angular [`igx-tabs`]({environment:angularApiUrl}/classes/igxtabsco
 
 <div class="divider--half"></div>
 
-## Getting Started with Ignite UI for Angular Tabs
+## Ignite UI for Angular Tabs を使用した作業の開始
 
-To get started with the Ignite UI for Angular Tabs component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+Ignite UI for Angular Tabs コンポーネントを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
 
 ```cmd
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
 
-The next step is to import the `IgxTabsModule` in your **app.module.ts** file.
+次に、**app.module.ts** ファイルに `IgxTabsModule` をインポートします。
 
 ```typescript
 // app.module.ts
@@ -53,12 +54,14 @@ import { IgxTabsModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxTabsComponent` as a standalone dependency, or use the [`IGX_TABS_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/tabs/tabs/public_api.ts) token to import the component and all of its supporting components and directives.
+あるいは、`16.0.0` 以降、`IgxTabsComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_TABS_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/tabs/tabs/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
 
 ```typescript
 // home.component.ts
+
 import { IGX_TABS_DIRECTIVES } from 'igniteui-angular';
 // import { IGX_TABS_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
 @Component({
     selector: 'app-home',
     template: `
@@ -89,9 +92,9 @@ import { IGX_TABS_DIRECTIVES } from 'igniteui-angular';
 export class HomeComponent {}
 ```
 
-Now that you have the Ignite UI for Angular Tabs module or directives imported, you can start using the `igx-tabs` component.
+Ignite UI for Angular Tabs モジュールまたはディレクティブをインポートしたので、`igx-tabs` コンポーネントの使用を開始できます。
 
-## Using the Angular Tabs
+## Angular Tabs の使用
 
 `igx-tab-header` にコンテンツを提供することにより、Angular Tabs ヘッダーを設定します。タブの名前を設定するには、`igxTabHeaderLabel` ディレクティブを使用してスパンを追加するだけです。タブ項目のコンテンツとして表示されるコンテンツは、`igx-tab-content` タグの間に追加する必要があります。
 

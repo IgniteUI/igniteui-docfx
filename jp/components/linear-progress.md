@@ -1,11 +1,11 @@
 ---
 title: Linear Progress コンポーネント
 _description: Ignite UI for Angular Linear Progress Bar コンポーネントを使用すると、プログレス バーを表示し、色またはストライプなどの外観をカスタマイズします。
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library, Angular Linear Progress component, Angular Linear Progress control
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, Angular UI コンポーネント, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Linear Progress コンポーネント, Angular Linear Progress コントロール
 _language: ja
 ---
 
-# Angular Linear Progress Component Overview
+# Angular Linear Progress (リニア プログレス) コンポーネントの概要
 <p class="highlight">Ignite UI for Angular Linear Progress インジケーター コンポーネントは、変更でアプリケーションの進行状況を表す視覚的なインジケーターです。インジケーターは状態変更で外観を更新します。インジケーターがストライプまたは実線色でスタイル設定できます。</p>
 <div class="divider--half"></div>
 
@@ -18,17 +18,17 @@ _language: ja
 
 <div class="divider--half"></div>
 
-## Getting Started with Ignite UI for Angular Linear Progress
+## Ignite UI for Angular Linear Progress を使用した作業の開始
 
-To get started with the Ignite UI for Angular Linear Progress component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+Ignite UI for Angular Linear Progress コンポーネントを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
 
 ```cmd
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
 
-The next step is to import the `IgxProgressBarModule` in the **app.module.ts** file:
+次に、**app.module.ts** ファイルに `IgxProgressBarModule` をインポートします。
 
 ```typescript
 // app.module.ts
@@ -45,12 +45,14 @@ import { IgxProgressBarModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxLinearProgressBarComponent` as a standalone dependency, or use the [`IGX_LINEAR_PROGRESS_BAR_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/progressbar/public_api.ts) token to import the component and all of its supporting components and directives.
+あるいは、`16.0.0` 以降、`IgxLinearProgressBarComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_LINEAR_PROGRESS_BAR_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/progressbar/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
 
 ```typescript
 // home.component.ts
+
 import { IGX_LINEAR_PROGRESS_BAR_DIRECTIVES } from 'igniteui-angular';
 // import { IGX_LINEAR_PROGRESS_BAR_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
 @Component({
     selector: 'app-home',
     template: '<igx-linear-bar [value]="progress"></igx-linear-bar>',
@@ -64,9 +66,9 @@ export class HomeComponent {
 }
 ```
 
-Now that you have the Ignite UI for Angular Progress Bar module or directives imported, you can start using the `igx-linear-bar` component.
+Ignite UI for Angular Progress Bar モジュールまたはディレクティブをインポートしたので、`igx-linear-bar` コンポーネントの使用を開始できます。
 
-## Using the Angular Linear Progress
+## Angular Linear Progress の使用
 
 すべてがどのように動作することを確認できるために、デモのような簡単な例を作成します。
 

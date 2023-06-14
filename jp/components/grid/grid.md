@@ -1,7 +1,7 @@
 ---
 title: Angular Data Grid | 高速な Angular テーブルを構築する | インフラジスティックス
 _description: Ignite UI for Angular で超高速でレスポンシブな Angular データ グリッドとテーブルを作成します。編集、フィルタリング、データ バインディングなどをサポートします。今すぐお試しください。
-_keywords: angular data grid, angular grid component, angular data grid component, angular table component, angular data table component, angular material table, angular UI components, ignite ui for angular
+_keywords: angular data grid, angular grid コンポーネント, angular data grid コンポーネント, angular table コンポーネント, angular data table コンポーネント, angular table, angular UI コンポーネント, ignite ui for angular
 _language: ja
 ---
 
@@ -37,7 +37,7 @@ _language: ja
 <div class="sample-content">
     <article class="sample-column">
         <div class="tabbar-wrapper">
-            <p> Angular データ グリッドは、データを表形式ですばやく簡単に表示するための機能豊富なコントロールとして使用されます。最新のグリッドは複雑で、通常、データ選択、Excel スタイルのフィルタリング、ソート、ページング、テンプレート作成、列の移動、Excel へのエクスポート、CSV、PDF 形式などの一連の機能が満載です。</p>
+            <p>Angular Data Grid は、データを表形式で表示するためのコンポーネントです。最新のグリッドは複雑で、通常、データ選択、Excel スタイルのフィルタリング、ソート、ページング、グループ化、テンプレート化、列の移動、列のピン固定、Excel へのエクスポート、CSV 形式などの大規模な機能セットが詰め込まれています。</p>
         </div>
     </article>
     <article class="sample-column">
@@ -72,15 +72,15 @@ Boston Marathon 2021 – この Angular グリッドの例では、ユーザー�
 >[!NOTE]
 >**このコンポーネントでは、タッチ操作が正しく動作するために、アプリケーションのルート モジュールに [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) をインポートする必要があります。**.
 
-To get started with the Ignite UI for Angular Data Grid component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+Ignite UI for Angular Data Grid コンポーネントを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
 
 ```cmd
 ng add igniteui-angular
 ```
 
-The next step is to import the `IgxGridModule` in your **app.module.ts** file.
+Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
 
-Angular グリッドが `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に `IgxGridModule` をインポートする必要があります。
+次に、**app.module.ts** ファイルに `IgxGridModule` をインポートします。
 
 ```typescript
 // app.module.ts
@@ -98,12 +98,14 @@ import { IgxGridModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxGridComponent` as a standalone dependency, or use the [`IGX_GRID_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/grids/grid/public_api.ts) token to import the component and all of its supporting components and directives.
+あるいは、`16.0.0` 以降、`IgxGridComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_GRID_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/grids/grid/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
 
 ```typescript
 // home.component.ts
+
 import { IGX_GRID_DIRECTIVES } from 'igniteui-angular';
 // import { IGX_GRID_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
 @Component({
     selector: 'app-home',
     template: '<igx-grid [data]="localData" [autoGenerate]="true"></igx-grid>',
@@ -117,7 +119,7 @@ export class HomeComponent {
 }
 ```
 
-Now that you have the Ignite UI for Angular Grid module or directives imported, you can start using the `igx-grid` component.
+Ignite UI for Angular Grid モジュールまたはディレクティブをインポートしたので、`igx-grid` コンポーネントの使用を開始できます。
 
 ## Using the Angular Data Grid
 
@@ -125,9 +127,9 @@ Now that you have the Ignite UI for Angular Grid module or directives imported, 
 <igx-grid #grid1 id="grid1" [data]="localData" [autoGenerate]="true"></igx-grid>
 ```
 
-The **data** property binds the grid, in this case to local array of objects.
+**data** プロパティは、グリッド (この場合はオブジェクトのローカル配列) をバインドします。
 
-[`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autoGenerate) プロパティは、データソース フィールドに基づいて `igx-grid` にグリッドの[`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) を自動生成させます。Developers can also explicitly [define the columns](#angular-grid-column-configuration) and the mapping to the data source fields.
+[`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autoGenerate) プロパティは、データソース フィールドに基づいて `igx-grid` にグリッドの[`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) を自動生成させます。開発者は[列](#angular-grid-列の構成)およびデータ ソース フィールドへのマッピングを明示的に定義することもできます。
 
 ## Angular Bootstrap グリッドの定義
 <p>Ignite UI for Angular には、Flex に基づくレイアウト システムのような強力なブートストラップ グリッドが含まれています。今日の最新のアプリケーションは、レスポンシブ Web デザインのアプローチに従うことが期待されています。つまり、デバイスのサイズに基づいて、または単にブラウザーのサイズを変更するだけで、HTML 要素のレイアウトを適切に調整できます。Angular ブートストラップ グリッド レイアウトはこれまで最も使用されていたアプローチでしたが、CSS グリッドのような Flex に基づくレイアウト システムは、どのブラウザーでも機能するため、より一般的になりました。Ignite UI for Angular Layout ディレクティブにより、コンテンツ/テキストの折り返し、両端揃え、配置など、垂直方向と水平方向のフローが可能になります。Ignite UI for Angular グリッドは、CSS を使用したレスポンシブ レイアウトをサポートし、サイズ変更時のグリッドの動作に究極の柔軟性を提供します。</p>

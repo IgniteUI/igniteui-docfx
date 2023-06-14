@@ -1,10 +1,10 @@
 ---
 title: Snackbar コンポーネント
 _description: Ignite UI for Angular Snackbar を使用すると、単一行メッセージをモバイルおよびデスクトップ アプリケーションに含みます。
-_keywords: Angular Snackbar component, Angular Snackbar control, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library
+_keywords: Angular Snackbar コンポーネント, Angular Snackbar コントロール, Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, Angular UI コンポーネント, ネイティブ Angular コンポーネント ライブラリ
 _language: ja
 ---
-# Angular Snackbar Component Overview
+# Angular Snackbar (スナックバー) コンポーネントの概要
 <p class="highlight">Ignite UI for Angular Snackbar コンポーネントは、アクションを含むことができる単一行のメッセージで操作のフィードバックを提供します。SnackBar メッセージがその他の画面要素の上に表示され、画面の中央下に配置されます。</p>
 <div class="divider"></div>
 
@@ -20,17 +20,17 @@ _language: ja
 
 <div class="divider--half"></div>
 
-## Getting Started with Ignite UI for Angular Snackbar
+## Ignite UI for Angular Snackbar を使用した作業の開始
 
-To get started with the Ignite UI for Angular Snackbar component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+Ignite UI for Angular Snackbar コンポーネントを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
 
 ```cmd
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
 
-The next step is to import the `IgxSnackbarModule` in your **app.module.ts** file.
+次に、**app.module.ts** ファイルに `IgxSnackbarModule` をインポートします。
 
 ```typescript
 // app.module.ts
@@ -47,12 +47,14 @@ import { IgxSnackbarModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxSnackbarComponent` as a standalone dependency.
+あるいは、`16.0.0` 以降、`IgxSnackbarComponent` をスタンドアロンの依存関係としてインポートできます。
 
 ```typescript
 // home.component.ts
+
 import { IgxSnackbarComponent, IgxButtonDirective } from 'igniteui-angular';
 // import { IgxSnackbarComponent, IgxButtonDirective } from '@infragistics/igniteui-angular'; for licensed package
+
 @Component({
     selector: 'app-home',
     template: `
@@ -68,9 +70,9 @@ import { IgxSnackbarComponent, IgxButtonDirective } from 'igniteui-angular';
 export class HomeComponent {}
 ```
 
-Now that you have the Ignite UI for Angular Snackbar module or component imported, you can start using the `igx-snackbar` component.
+Ignite UI for Angular Snackbar モジュールまたはコンポーネントをインポートしたので、`igx-snackbar` コンポーネントの使用を開始できます。
 
-## Using the Angular Snackbar
+## Angular Snackbar の使用
 
 ### Snackbar の表示
 Snackbar コンポーネントを表示するには、ボタン クリックで [`open()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#open) メソッドを呼び出します。

@@ -32,7 +32,7 @@ Ignite UI for Angular Accordion コンポーネントを初期化するには、
 ```cmd
 ng add igniteui-angular
 ```
-Ignite UI for Angular については、[*はじめに*](general/getting-started.md)トピックををご覧ください。
+Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
 
 次に、**app.module.ts** ファイルに `IgxAccordionModule` をインポートします。 
 
@@ -51,7 +51,7 @@ import { IgxAccordionModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxAccordionComponent` as a standalone dependency, or use the [`IGX_ACCORDION_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/accordion/public_api.ts) token to import the component and all of its supporting components and directives.
+あるいは、`16.0.0` 以降、`IgxAccordionComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_ACCORDION_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/accordion/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
 
 ```typescript
 // home.component.ts
@@ -80,9 +80,9 @@ import { IGX_ACCORDION_DIRECTIVES } from 'igniteui-angular';
 export class HomeComponent {}
 ```
 
-Now that you have the Ignite UI for Angular Accordion module or directives imported, you can start with a basic configuration of the `igx-accordion` and its panels.
+Ignite UI for Angular Accordion モジュールまたはディレクティブをインポートしたので、`igx-accordion` とそのパネルの基本構成を開始できます。
 
-## Using the Angular Accordion Component
+## Angular Accordion コンポーネントの使用
 
 [IgxAccordionComponent]({environment:angularApiUrl}/classes/igxaccordioncomponent.html) の各セクションは、[展開パネル]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html)を使用して定義されます。
 パネルには [disabled]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html#disabled)、[collapsed]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html#collapsed)、および [animationSettings]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html#animationSettings) プロパティがあり、要件に応じてパネルの状態を構成できます。 

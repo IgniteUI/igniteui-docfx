@@ -1,13 +1,13 @@
 ---
 title: Angular ピボット グリッドおよびテーブル - Ignite UI for Angular
 _description: Ignite UI for Angular を使用して、高速で応答性の高い Angular ピボット グリッドとテーブルを作成します。複雑な分析を実行し、データの並べ替え、グループ化、またはフィルタリングを適用します。
-_keywords: angular pivot grid, angular pivot grid component, angular pivot table, angular pivot table component, angular material pivot table, angular ui components, ignite ui for angular
+_keywords: angular pivot grid, angular pivot grid コンポーネント, angular pivot table, angular pivot table コンポーネント, angular pivot data table, angular material pivot table, angular ui コンポーネント, ignite ui for angular
 _language: ja
 ---
 
 # Angular Pivot Grid (ピボット グリッド) コンポーネントの概要
 
-ピボット グリッドは、クロス集計形式で大量の多次元データを合計して表すために使用されます。データの概要は、簡単かつ迅速に並べ替え、グループ化、またはフィルタリングできます。このようなデータには、合計、平均、およびその他の統計が含まれる場合があります。エンドユーザーは、必要に応じて、ドラッグアンドドロップ操作でピボット テーブルのレイアウトを変更できます。
+Ignite UI for Angular Pivot Grid は、グループ化された値と集計のテーブルを表す UI コンポーネントであり、データを表形式で整理して要約することができます。これは、スプレッドシートまたはデータベース テーブルから取得したデータの選択された列と行を再編成および要約して、目的のレポートを取得するために使用されるデータ要約ツールです。
 
 ## Angular ピボット グリッドの概要 
 
@@ -25,22 +25,24 @@ Angular ピボット グリッド コンポーネントは、ピボット テー
            iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-datasource" alt="Angular ピボット セレクターを備えたピボット グリッドの例">
 </code-view>
 
-## Getting started with Ignite UI for Angular Pivot Grid
+## Ignite UI for Angular Pivot Grid を使用した作業の開始
 
-To get started with the Ignite UI for Angular Pivot Grid component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+Ignite UI for Angular Pivot Grid コンポーネントを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
 
 ```cmd
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](../general/getting-started.md) topic.
+Ignite UI for Angular については、「[はじめに](../general/getting-started.md)」 トピックをご覧ください。
 
-The next step is to import the `IgxPivotGridModule` in your **app.module.ts** file.
+次に、**app.module.ts** ファイルに `IgxPivotGridModule` をインポートします。
 
 ```typescript
 // app.module.ts
+
 import { IgxPivotGridModule } from 'igniteui-angular';
 // import { IgxPivotGridModule } from '@infragistics/igniteui-angular'; for licensed package
+
 @NgModule({
     imports: [
         ...
@@ -51,12 +53,14 @@ import { IgxPivotGridModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxPivotGridComponent` as a standalone dependency, or use the [`IGX_PIVOT_GRID_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/grids/pivot-grid/public_api.ts) token to import the component and all of its supporting components and directives.
+あるいは、`16.0.0` 以降、`IgxPivotGridComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_PIVOT_GRID_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/grids/pivot-grid/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
 
 ```typescript
 // home.component.ts
+
 import { IGX_PIVOT_GRID_DIRECTIVES } from 'igniteui-angular';
 // import { IGX_PIVOT_GRID_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
 @Component({
     selector: 'app-home',
     template: `
@@ -73,9 +77,9 @@ export class HomeComponent {
 }
 ```
 
-Now that you have the Ignite UI for Angular Pivot Grid module or directives imported, you can start using the `igx-pivot-grid` component.
+Ignite UI for Angular Pivot Grid モジュールまたはディレクティブをインポートしたので、`igx-pivot-grid` コンポーネントの使用を開始できます。
 
-## Using the Angular Pivot Grid
+## Angular Pivot Grid の使用
 
 Angular ピボット グリッド コンポーネントは、[`pivotConfiguration`](({environment:angularApiUrl}/classes/igxpivotgridcomponent.html#pivotConfiguration)) プロパティを介して構成できます。
 

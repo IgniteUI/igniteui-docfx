@@ -1,11 +1,11 @@
 ---
 title: Ripple ディレクティブ
 _description: Ignite UI for Angular Ripple ディレクティブは、リップル アニメーション エフェクトが適用されている領域を定義できます。
-_keywords: Angular Ripple component, Angular Ripple Directive, Angular Ripple control, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library
+_keywords: Angular Ripple コンポーネント, Angular Ripple ディレクティブ, Angular Ripple コントロール, Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, Angular UI コンポーネント, ネイティブ Angular コンポーネント ライブラリ
 _language: ja
 ---
 
-# Angular Ripple Directive Overview
+# Angular Ripple (リップル) ディレクティブの概要
 
 <p class="highlight">Ignite UI for Angular Ripple コンポーネントは、タッチまたはマウス クリックに応答してアニメーションを作成します。</p>
 
@@ -17,20 +17,21 @@ _language: ja
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/interactions/ripple-sample-5" alt="Angular Ripple の例">
 </code-view>
+
 <p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div class="divider--half"></div>
 
-## Getting Started with Ignite UI for Angular Ripple Directive
+## Ignite UI for Angular Ripple ディレクティブを使用した作業の開始
 
-To get started with the Ignite UI for Angular Ripple directive, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+Ignite UI for Angular Ripple ディレクティブを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
 
 ```cmd
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
 
-The next step is to import the `IgxRippleModule` in the **app.module.ts** file.
+次に、**app.module.ts** ファイルに `IgxRippleModule` をインポートします。
 
 ```typescript
 // app.module.ts
@@ -48,12 +49,14 @@ import { IgxRippleModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxRippleDirective` as standalone dependencies.
+あるいは、`16.0.0` 以降、`IgxRippleDirective` をスタンドアロンの依存関係としてインポートできます。
 
 ```typescript
 // home.component.ts
+
 import { IgxRippleDirective, IgxButtonDirective } from 'igniteui-angular';
 // import { IgxRippleDirective, IgxButtonDirective } from '@infragistics/igniteui-angular'; for licensed package
+
 @Component({
     selector: 'app-home',
     template: '<button igxButton="raised" igxRipple>Click Me</button>',
@@ -64,12 +67,12 @@ import { IgxRippleDirective, IgxButtonDirective } from 'igniteui-angular';
 export class HomeComponent {}
 ```
 
-Now that you have the Ignite UI for Angular Ripple module or directive imported, you can start using the `igxRipple` directive.
+Ignite UI for Angular Ripple モジュールまたはディレクティブをインポートしたので、`igxRipple` ディレクティブの使用を開始できます。
 
 > [!WARNING]
 > [`igxRipple`]({environment:angularApiUrl}/classes/igxrippledirective.html) は Web Animation API を使用し、[サポートされるブラウザー](http://caniuse.com/#feat=web-animation)でネイティブに実行します。その他のブラウザーでは `web-animations.min.js` [ポリフィル](https://github.com/web-animations/web-animations-js)を使用します。
 
-## Using the Angular Ripple Directive
+## Angular Ripple ディレクティブの使用
 
 ### リップル エフェクトの追加
 

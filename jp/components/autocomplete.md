@@ -1,7 +1,7 @@
 ---
 title: オートコンプリート ディレクティブ
 _description: Angular Autocomplete ディレクティブは、候補オプションのパネルを表示することにより、テキスト入力を向上する方法を提供します。今すぐお試しください。
-_keywords: Angular Autocomplete component, Angular Autocomplete directive, Angular Autocomplete control, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library
+_keywords: Angular Autocomplete コンポーネント, Angular Autocomplete ディレクティブ, Angular Autocomplete コントロール, Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, Angular UI コンポーネント, ネイティブ Angular コンポーネント ライブラリ
 _language: ja
 ---
 
@@ -25,17 +25,17 @@ Angular Autocomplete は、入力中に候補のリストから項目を簡単�
 
 <div class="divider--half"></div>
 
-## Getting Started with Ignite UI for Angular Autocomplete
+## Ignite UI for Angular Autocomplete を使用した作業の開始
 
-To get started with the Ignite UI for Angular Autocomplete directive, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+Ignite UI for Angular Autocomplete ディレクティブを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
 
 ```cmd
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
 
-The next step is to import the **IgxAutocompleteModule** and **IgxDropDownModule** in our **app.module**. If [`igxAutocomplete`]({environment:angularApiUrl}/classes/igxautocompletedirective.html) is applied on an [igxInput]({environment:angularApiUrl}/classes/igxinputdirective.html), the **igxInputGroupModule** is also required:
+はじめに、**app.module** で **IgxAutocompleteModule** と **IgxDropDownModule** をインポートします。[`igxAutocomplete`]({environment:angularApiUrl}/classes/igxautocompletedirective.html) が [igxInput]({environment:angularApiUrl}/classes/igxinputdirective.html) に適用される場合、**igxInputGroupModule** も必要です。
 
 ```typescript
 // app.module.ts
@@ -46,11 +46,7 @@ import {
     IgxDropDownModule, 
     IgxInputGroupModule 
 } from 'igniteui-angular';
-// import { 
-//    IgxAutocompleteModule,
-//    IgxDropDownModule, 
-//    IgxInputGroupModule
-// } from '@infragistics/igniteui-angular'; for licensed package
+// import { IgxAutocompleteModule, IgxDropDownModule, IgxInputGroupModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -66,13 +62,15 @@ import {
 export class AppModule {}
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxAutocompleteDirective` as a standalone directive.
+あるいは、`16.0.0` 以降、`IgxAutocompleteDirective` をスタンドアロンのディレクティブとしてインポートできます。
 
 ```typescript
 // home.component.ts
+
 ...
 import { IgxAutocompleteDirective, IGX_INPUT_GROUP_DIRECTIVES, IGX_DROP_DOWN_DIRECTIVES } from 'igniteui-angular';
 // import { IgxAutocompleteDirective, IGX_INPUT_GROUP_DIRECTIVES, IGX_DROP_DOWN_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
 @Component({
     selector: 'app-home',
     template: `
@@ -93,10 +91,10 @@ import { IgxAutocompleteDirective, IGX_INPUT_GROUP_DIRECTIVES, IGX_DROP_DOWN_DIR
 export class HomeComponent {}
 ```
 
-Now that you have the Ignite UI for Angular Action Strip module or directive imported, you can start with a basic configuration of the `igxAutocomplete` component.
+Ignite UI for Angular Action Strip モジュールまたはディレクティブをインポートしたので、`igxAutocomplete` コンポーネントの基本構成を開始できます。
 
-## Using the Angular Autocomplete
-In order to apply the autocomplete functionality to an input, add the `igxAutocomplete` directive, referencing the dropdown:
+## Angular Autocomplete の使用
+オートコンプリート機能を入力に適用するには、ドロップダウンを参照して `igxAutocomplete` ディレクティブを追加します。
 
 ```html
 <igx-input-group>
@@ -266,9 +264,8 @@ export class AutocompleteComponent {
 
 * [IgxAutocompleteDirective]({environment:angularApiUrl}/classes/igxautocompletedirective.html)
 * [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html)
-* [IgxDropDownComponent スタイル]({environment:sassApiUrl}/index.html#function-drop-down-theme)
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
-* [IgxInputGroupComponent スタイル]({environment:sassApiUrl}/index.html#function-input-group-theme)
+
 
 ## テーマの依存関係
 * [IgxDropDown テーマ]({environment:sassApiUrl}/index.html#function-drop-down-theme)

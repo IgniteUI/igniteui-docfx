@@ -1,11 +1,11 @@
 ---
 title: 仮想スクロール ディレクティブ
 _description: Ignite UI for Angular は ngFor と同様の仮想 igxFor ディレクティブを公開します。DOM でデータの表示されている部分のみを可視化すると DOM オブジェクトの描画が仮想化されます。
-_keywords: Angular Virtual ForOf Directive, Native Angular Components Suite, Angular UI Components, Native Angular Components Library, Virtualization, Performance, Virtual directive, Angular Virtual For
+_keywords: Angular Virtual ForOf ディレクティブ, ネイティブ Angular コンポーネント スイート, Angular UI コンポーネント, ネイティブ Angular コンポーネント ライブラリ, 仮想化, パフォーマンス, 仮想ディレクティブ, Angular 仮想 For
 _language: ja
 ---
 
-# Angular Virtual ForOf Directive Overview
+# Angular Virtual ForOf (仮想 ForOf) ディレクティブの概要
 
 <p class="highlight">Ignite UI for Angular igxForOf ディレクティブは、膨大なデータをテンプレート化するための ngForOf の代替手段です。仮想化を使用して、DOM レンダリングとメモリ使用量を最適化します。</p>
 
@@ -21,17 +21,17 @@ _language: ja
 
 <div class="divider"></div>
 
-## Getting Started with Ignite UI for Angular Virtual ForOf Directive
+## Ignite UI for Angular Virtual ForOf ディレクティブを使用した作業の開始
 
-To get started with the Ignite UI for Angular [`igxFor`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxForOf) directive, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+Ignite UI for Angular [`igxFor`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxForOf) ディレクティブを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
 
 ```cmd
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
 
-The next step is to import the `IgxForOfModule` in your **app.module.ts** file.
+次に、**app.module.ts** ファイルに `IgxForOfModule` をインポートします。
 
 ```typescript
 // app.module.ts
@@ -49,12 +49,14 @@ import { IgxForOfModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxForOfDirective` as a standalone dependency.
+あるいは、`16.0.0` 以降、`IgxForOfDirective` をスタンドアロンの依存関係としてインポートできます。
 
 ```typescript
 // home.component.ts
+
 import { IgxForOfDirective } from 'igniteui-angular';
 // import { IgxForOfDirective } from '@infragistics/igniteui-angular'; for licensed package
+
 @Component({
     selector: 'app-home',
     template: `
@@ -71,11 +73,11 @@ export class HomeComponent {
 }
 ```
 
-Now that you have the Ignite UI for Angular ForOf module or directives imported, you can start using the `igxFor` directive.
+Ignite UI for Angular ForOf モジュールまたはディレクティブをインポートしたので、`igxFor` ディレクティブの使用を開始できます。
 
-## Using the Angular Virtual ForOf
+## Angular Virtual ForOf の使用
 
-Now that we have the module or directive imported, let’s get started with a basic configuration of the `igxFor` that binds to local data:
+そのモジュールまたはディレクティブをインポートしたので、ローカル データにバインドする `igxFor` の基本構成を設定します。
 
 ```html
 <span #container>
@@ -83,7 +85,7 @@ Now that we have the module or directive imported, let’s get started with a ba
 </span>
 ```
 
-The **data** property is an array that provides the data objects used to construct the virtualized DOM.
+**data** プロパティは、仮想化 DOM の構築に使用されるデータ オブジェクトを提供する配列です。
 
 ## 例
 
@@ -109,7 +111,7 @@ The **data** property is an array that provides the data objects used to constru
 </igx-list>
 ```
 
-***注:*** [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxForOf) テンプレートの親コンテナーには、次の CSS ルールが適用されていることを強く推奨します: 垂直方向には `height`、水平方向には `width`、`overflow: hidden` および ` position: relative`。スムーズ スクロール動作が、表示されたままの場合にページのその他の部分に視覚的に影響を与えることが可能なコンテンツ オフセットによって実装されるためです。
+**注:** [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxForOf) テンプレートの親コンテナーには、次の CSS ルールが適用されていることを強く推奨します: 垂直方向には `height`、水平方向には `width`、`overflow: hidden` および ` position: relative`。スムーズ スクロール動作が、表示されたままの場合にページのその他の部分に視覚的に影響を与えることが可能なコンテンツ オフセットによって実装されるためです。
 
 ### 水平仮想化 
 
@@ -281,6 +283,7 @@ igxFor ディレクティブのコンテキストには、`even`、`odd`、`firs
 
 ## その他のリソース
 
+<div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
 * [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)

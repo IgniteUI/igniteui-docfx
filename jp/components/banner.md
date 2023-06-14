@@ -1,10 +1,10 @@
 ---
 title: Angular Banner コンポーネント
 _description: Ignite UI for Angular Banner コンポーネントは、簡単に非侵入型メッセージをオプション操作と統合できます。
-_keywords: Angular Banner component, Angular Banner control, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Angular UI Components
+_keywords: Angular Banner コンポーネント, Angular Banner コントロール, Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, Angular UI コンポーネント
 _language: ja
 ---
-# Angular Banner Component Overview
+# Angular Banner (バナー) コンポーネントの概要
 <p class="highlight">Angular Banner コンポーネントは、スナックバーより長い時間の表示でダイアログより控えめのメッセージを簡単に表示できます。Banner にカスタム動作ボタンやアイコンの表示を設定できます。</p>
 
 ## Angular Banner の例
@@ -16,16 +16,17 @@ _language: ja
 
 <div class="divider--half"></div>
 
-## Getting Started with Ignite UI for Angular Banner
+## Ignite UI for Angular Banner を使用した作業の開始
 
-To get started with the Ignite UI for Angular Banner component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+Ignite UI for Angular Banner コンポーネントを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
 
 ```cmd
 ng add igniteui-angular
 ```
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
 
-The next step is to import the `IgxBannerModule` in your **app.module.ts** file. 
+Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
+
+次に、**app.module.ts** ファイルに `IgxBannerModule` をインポートします。
 
 ```typescript
 // app.module.ts
@@ -42,13 +43,15 @@ import { IgxBannerModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxBannerComponent` as a standalone dependency, or use the [`IGX_BANNER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/banner/public_api.ts) token to import the component and all of its supporting components and directives.
+あるいは、`16.0.0` 以降、`IgxBannerComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_BANNER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/banner/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
 
 ```typescript
 // home.component.ts
+
 ...
 import { IGX_BANNER_DIRECTIVES } from 'igniteui-angular';
 // import { IGX_BANNER_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
 @Component({
     selector: 'app-home',
     template: `
@@ -64,9 +67,9 @@ import { IGX_BANNER_DIRECTIVES } from 'igniteui-angular';
 export class HomeComponent {}
 ```
 
-Now that you have the Ignite UI for Angular Banner module or directives imported, you can start with a basic configuration of the `igx-banner` component.
+Ignite UI for Angular Banner モジュールまたはディレクティブをインポートしたので、`igx-banner` コンポーネントの基本構成を開始できます。
 
-## Using the Angular Banner Component
+## Angular Banner コンポーネントの使用
 
 ### Banner の表示
 
@@ -154,7 +157,7 @@ Banner コンポーネントを表示するには、ボタン クリックで [`
 
 ### カスタム アニメーションの適用
 
-Banner コンポーネントには、アニメーションのオープンとクローズのカスタム設定を適用できる [`animationSettings`]({environment:angularApiUrl}/classes/igxbannercomponent.html#animationSettings) プロパティがあります。開発者は、自分で定義したアニメーションと、[`アニメーションスイート`]({environment:sassApiUrl}/index.html)のアニメーションから選択できます。バナーで使用されるデフォルト アニメーションは、`growVerIn` が開始、`growVerOut` が終了です。 
+Banner コンポーネントには、アニメーションのオープンとクローズのカスタム設定を適用できる [`animationSettings`]({environment:angularApiUrl}/classes/igxbannercomponent.html#animationSettings) プロパティがあります。開発者は、自分で定義したアニメーションと、[`アニメーション スイート`]({environment:sassApiUrl}/index.html)のアニメーションから選択できます。バナーで使用されるデフォルト アニメーションは、`growVerIn` が開始、`growVerOut` が終了です。 
 
 スライドインまたはスライドアウトするためにバナーが使用するアニメーションを変更します。
 

@@ -19,17 +19,17 @@ _language: ja
 
 <div class="divider--half"></div>
 
-## Getting Started with Ignite UI for Angular Icon
+## Ignite UI for Angular Icon を使用した作業の開始
 
-To get started with the Ignite UI for Angular Icon component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+Ignite UI for Angular Icon コンポーネントを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
 
 ```cmd
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
 
-The next step is to import the `IgxIconModule` in your **app.module.ts** file.
+次に、**app.module.ts** ファイルに `IgxIconModule` をインポートします。
 
 ```typescript
 // app.module.ts
@@ -47,12 +47,14 @@ import { IgxIconModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxIconComponent` as a standalone dependency.
+あるいは、`16.0.0` 以降、`IgxIconComponent` をスタンドアロンの依存関係としてインポートできます。
 
 ```typescript
 // home.component.ts
+
 import { IgxIconComponent } from 'igniteui-angular';
 // import { IgxIconComponent } from '@infragistics/igniteui-angular'; for licensed package
+
 @Component({
     selector: 'app-home',
     template: '<igx-icon [style.color]="color">home</igx-icon>',
@@ -65,9 +67,9 @@ export class HomeComponent {
 }
 ```
 
-Now that you have the Ignite UI for Angular Icon module or component imported, you can start using the `igx-icon` component.
+Ignite UI for Angular Icon モジュールまたはコンポーネントをインポートしたので、`igx-icon` コンポーネントの使用を開始できます。
 
-## Using the Angular Icon
+## Angular Icon の使用
 
 ### アイコンの色
 
@@ -198,8 +200,8 @@ public ngOnInit() {
 これを避けるためには、以下の順序に従って下さい。
 <ol>
 <li>
-
 `xmlhttprequest` のインストール:
+
 ```cmd
 npm i xmlhttprequest
 ```

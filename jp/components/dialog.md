@@ -1,7 +1,7 @@
 ---
 title: Dialog Window コンポーネント
 _description: Ignite UI for Angular Dialog Window コンポーネントを使用すると、情報ダイアログまたはデータ変換ウィンドウを作成し、リアルタイムで情報を表示して管理できます。
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library, Angular Dialog Window component, Angular Dialog Window control, Angular Dialog Component
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, Angular UI コンポーネント, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Dialog Window コンポーネント, Angular Dialog Window コントロール, Angular Dialog コンポーネント
 _language: ja
 ---
 
@@ -18,17 +18,17 @@ _language: ja
 
 <div class="divider--half"></div>
 
-## Getting Started with Ignite UI for Angular Dialog Window
+## Ignite UI for Angular Dialog Window を使用した作業の開始
 
-To get started with the Ignite UI for Angular Dialog Window component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+Ignite UI for Angular Dialog Window コンポーネントを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
 
 ```cmd
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
 
-The next step is to import the `IgxDialogModule` in your **app.module.ts** file.
+次に、**app.module.ts** ファイルに `IgxDialogModule` をインポートします。
 
 ```typescript
 // app.module.ts
@@ -45,16 +45,19 @@ import { IgxDialogModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxDialogComponent` as a standalone dependency, or use the [`IGX_DIALOG_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/dialog/public_api.ts) token to import the component and all of its supporting components and directives.
+あるいは、`16.0.0` 以降、`IgxDialogComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_DIALOG_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/dialog/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
 
 ```typescript
 // home.component.ts
+
 import { IGX_DIALOG_DIRECTIVES, IgxButtonDirective, IgxRippleDirective } from 'igniteui-angular';
 // import { IGX_DIALOG_DIRECTIVES, IgxButtonDirective, IgxRippleDirective } from '@infragistics/igniteui-angular'; for licensed package
+
 @Component({
     selector: 'app-home',
     template: `
     <button igxButton="raised" igxRipple="white" (click)="alert.open()">Show Alert Dialog</button>
+
     <igx-dialog #alert
         title="Notification"
         message="Your email has been sent successfully!"
@@ -70,11 +73,12 @@ import { IGX_DIALOG_DIRECTIVES, IgxButtonDirective, IgxRippleDirective } from 'i
 export class HomeComponent {}
 ```
 
-Now that you have the Ignite UI for Angular Dialog Window module or directives imported, you can start using the `igx-dialog` component.
+Ignite UI for Angular Dialog Window モジュールまたはディレクティブをインポートしたので、`igx-dialog` コンポーネントの使用を開始できます。
 
 <div class="divider--half"></div>
 
-## Using the Angular Dialog Window
+## Dialog Window コンポーネントの使用
+
 ### 通知ダイアログ
 
 通知のダイアログを作成するには、メールコンポーネントのテンプレートに以下のコードを追加します。[`title`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#title)、[`message`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#message)、[`leftButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftButtonLabel) を設定し、[`leftButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftButtonSelect) イベントを処理します。 
@@ -173,11 +177,12 @@ Now that you have the Ignite UI for Angular Dialog Window module or directives i
 
 `igx-dialog` が表示される位置を変更するには、2 つの方法があります。
 
-- Using [`open`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#open) method and pass a valid [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html). Example:
+- [`open`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#open) メソッドを使用して、有効な [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) を渡します。例:
 
 ```typescript
 import { PositionSettings, OverlaySettings, GlobalPositionStrategy, NoOpScrollStrategy, HorizontalAlignment, VerticalAlignment } from 'igniteui-angular';
 // import { PositionSettings, OverlaySettings, GlobalPositionStrategy, NoOpScrollStrategy, HorizontalAlignment, VerticalAlignment } from '@infragistics/igniteui-angular'; for licensed package
+
 @Component({...})
 export class HomeComponent {
     public positionSettingsOnOpen: PositionSettings = {
@@ -192,13 +197,14 @@ export class HomeComponent {
         modal: false,
         closeOnOutsideClick: true
     };
+
     public openDialog() {
         this.alert.open(this.overlaySettings);
     }
 }
 ```
 
-- Using the `positionSettings` `@Input`. Example:
+- `positionSettings` `@Input` を使用します。例:
 
 ```html
 <igx-dialog #alert title="Notification" [positionSettings]="positionSettings" >
@@ -209,6 +215,7 @@ export class HomeComponent {
 import { useAnimation } from '@angular/animations';
 import { PositionSettings, HorizontalAlignment, VerticalAlignment } from 'igniteui-angular';
 // import { PositionSettings, HorizontalAlignment, VerticalAlignment } from '@infragistics/igniteui-angular'; for licensed package
+
 @Component({...})
 export class HomeComponent {
     public positionSettings: PositionSettings = {

@@ -14,29 +14,31 @@ Ignite UI for Angular Checkbox コンポーネントは、特定の条件のバ�
 ## Angular Checkbox の例
 以下の Angular Checkbox の例で、実際のチェックボックスを参照してください。
 
-<code-view style="height: 100px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 100px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/checkbox-sample-1" alt="Angular Checkbox の例">
 </code-view>
 
 <div class="divider--half"></div>
 
-## Getting Started with Ignite UI for Angular Checkbox
+## Ignite UI for Angular Checkbox を使用した作業の開始
 
-To get started with the Ignite UI for Angular Checkbox component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+Ignite UI for Angular Checkbox コンポーネントを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
 
 ```cmd
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
 
-The next step is to import the `IgxCheckboxModule` in the **app.module.ts** file:
+次に、**app.module.ts** ファイルに `IgxCheckboxModule` をインポートします。
 
 ```typescript
 // app.module.ts
+
 import { IgxCheckboxModule } from 'igniteui-angular';
 // import { IgxCheckboxModule } from '@infragistics/igniteui-angular'; for licensed package
+
 @NgModule({
     ...
     imports: [..., IgxCheckboxModule],
@@ -45,12 +47,14 @@ import { IgxCheckboxModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxCheckboxComponent` as a standalone dependency.
+あるいは、`16.0.0` 以降、`IgxCheckboxComponent` をスタンドアロンの依存関係としてインポートできます。
 
 ```typescript
 // home.component.ts
+
 import { IgxCheckboxComponent } from 'igniteui-angular';
 // import { IgxCheckboxComponent } from '@infragistics/igniteui-angular'; for licensed package
+
 @Component({
     selector: 'app-home',
     template: `
@@ -65,10 +69,10 @@ import { IgxCheckboxComponent } from 'igniteui-angular';
 export class HomeComponent {}
 ```
 
-Now that you have the Ignite UI for Angular Checkbox module or component imported, you can start using the `igx-checkbox` component.
+Ignite UI for Angular Checkbox モジュールまたはコンポーネントをインポートしたので、`igx-checkbox` コンポーネントの使用を開始できます。
 
-## Using the Angular Checkbox Component
-To make the checkbox in the demo, add the following code inside the component template:
+## Angular Checkbox コンポーネントの使用
+デモのチェックボックスを作成するには、コンポーネントのテンプレートで以下のコードを追加します。
 
 ```html
 <igx-checkbox [checked]="true">
@@ -77,10 +81,8 @@ To make the checkbox in the demo, add the following code inside the component te
 ```
 
 ### Checkbox プロパティ
-
 チェックボックス プロパティをデータにバインドし、上記のコードを拡張します。たとえば、description および done の 2 つのプロパティを持つタスク オブジェクトの配列がある場合では、チェックボックス コンポーネントの [`checked`]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html#checked) プロパティをその元となるタスク オブジェクトの done プロパティにバインドできます。同様に、[`value`]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html#value) プロパティを description にバインドします。
 オプションに [`change`]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html#change) イベントをバインドし、イベント ハンドラー メソッドでカスタム ロジックを追加できます。
-
 ```typescript
 // tasks.component.ts
 @Component({...})
@@ -90,16 +92,17 @@ export class HomeComponent {
         { done: true, description: 'Implement' },
         { done: false, description: 'Test' }
     ];
+
     public statusChanged() {
         // event handler logic
     }
 }
 ```
+
 各タスクにチェックボックスを追加し、対応するプロパティ バインディングを設定してコンポーネント テンプレートを拡張します。
 
 ```html
 <!--tasks.component.html-->
-
 <igx-checkbox *ngFor="let task of tasks" [checked]="task.done">
     {{ task.description }}
 </igx-checkbox>
@@ -109,26 +112,21 @@ export class HomeComponent {
 
 ```scss
 //task.component.scss
-
 :host {
     display: flex;
     flex-flow: column nowrap;
     padding: 16px;
 }
-
 igx-checkbox {
     margin-top: 16px;
 }
 ```
-
 以下は結果です。
 
-
-<code-view style="height: 200px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 200px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/checkbox-sample-2" >
 </code-view>
-
 
 ### ラベル配置
 
@@ -152,14 +150,13 @@ igx-checkbox {
 
 ```html
 <!-- app.component.html -->
-
-<igx-checkbox 
-    [readonly]="true" 
-    [(ngModel)]="masterCheckbox.checked" 
-    [(indeterminate)]="masterCheckbox.indeterminate" 
+<igx-checkbox
+    [readonly]="true"
+    [(ngModel)]="masterCheckbox.checked"
+    [(indeterminate)]="masterCheckbox.indeterminate"
     (click)="toggleAll()"
 >
-すべて完了しました。
+All done
 </igx-checkbox>
 <igx-checkbox class="tasks" *ngFor="let task of tasks" [(ngModel)]="task.done">
     {{ task.description }}
@@ -170,17 +167,14 @@ igx-checkbox {
 
 ```scss
 // app.component.scss
-
 :host {
     display: flex;
     flex-flow: column nowrap;
     padding: 16px;
 }
-
 igx-checkbox {
     margin-top: 16px;
 }
-
 igx-checkbox.tasks {
     padding-left: 10px;
 }
@@ -190,20 +184,17 @@ igx-checkbox.tasks {
 
 ```ts
 // app.component.ts
-
 public tasks = [
     { done: true, description: 'Research' },
     { done: true, description: 'Implement' },
     { done: false, description: 'Test' }
 ];
-
 public get masterCheckbox() {
     return this.tasks.reduce(
         (acc, curr, idx, arr) => {
             acc.checked = acc.checked && curr.done;
             acc.done = curr.done ? acc.done + 1 : acc.done;
             acc.indeterminate = acc.done === arr.length ? false : !!acc.done;
-
             return acc;
         },
         {
@@ -213,7 +204,6 @@ public get masterCheckbox() {
         }
     );
 }
-
 public toggleAll() {
     if (this.masterCheckbox.checked) {
         for (const task of this.tasks) {
@@ -226,11 +216,11 @@ public toggleAll() {
     }
 }
 ```
+
 すべて設定できると、アプリケーションは以下のようになります。
 
-
-<code-view style="height: 200px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 200px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/checkbox-sample-3" >
 </code-view>
 
@@ -300,9 +290,9 @@ $custom-checkbox-theme: checkbox-theme(
 ### Demo
 
 
-<code-view style="height: 100px" 
+<code-view style="height: 100px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/checkbox-styling" >
 </code-view>
 

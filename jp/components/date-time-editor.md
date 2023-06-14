@@ -18,17 +18,16 @@ _language: ja
 
 <div class="divider--half"></div>
 
-## Getting Started with Angular Date Time Editor Directive
-
-To get started with the Ignite UI for Angular Date Time Editor directive, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+## Ignite UI for Angular Date Time Editor ディレクティブを使用した作業の開始
+Ignite UI for Angular Date Time Editor ディレクティブを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
 
 ```cmd
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
 
-The next step is to import the `IgxDateTimeEditorModule` in your **app.module.ts** file.
+次に、**app.module.ts** ファイルに `IgxDateTimeEditorModule` をインポートします。
 
 ```typescript
 // app.module.ts
@@ -45,12 +44,14 @@ import { IgxDateTimeEditorModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxDateTimeEditorDirective` as a standalone dependency.
+あるいは、`16.0.0` 以降、`IgxDateTimeEditorDirective` をスタンドアロンの依存関係としてインポートできます。
 
 ```typescript
 // home.component.ts
+
 import { IgxDateTimeEditorDirective, IGX_INPUT_GROUP_DIRECTIVES } from 'igniteui-angular';
 // import { IgxDateTimeEditorDirective, IGX_INPUT_GROUP_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
 @Component({
     selector: 'app-home',
     template: `
@@ -67,9 +68,9 @@ export class HomeComponent {
 }
 ```
 
-Now that you have the Ignite UI for Angular Date Time Editor module or directive imported, you can start using the `igxDateTimeEditor` directive.
+Ignite UI for Angular Date Time Editor モジュールまたはディレクティブをインポートしたので、`igxDateTimeEditor` ディレクティブの使用を開始できます。
 
-## Using the Angular Date Time Editor Directive
+## Ignite UI for Angular Date Time Editor ディレクティブの使用
 
 input 要素を日時エディターとして使用するには、igxDateTimeEditor ディレクティブと有効なdateオブジェクトを値として設定します。エディターの外観を完全にするには、入力要素を [igx-input-group](input-group.md) にラップします。これにより、[`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html)、[`igxLabel`](label-input.md)、[`igx-prefix`](input-group.md#prefix-および-suffix)、[`igx-suffix`](input-group.md#prefix-および-suffix)、[`igx-hint`](input-group.md#hint) ディレクティブを利用できるだけでなく、フォーム入力を扱うときの一般的なシナリオに対処できます。
 

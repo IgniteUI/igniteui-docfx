@@ -1,11 +1,11 @@
 ---
 title: Angular Circular Progress コンポーネント
 _description: Ignite UI for Angular Circular Progress インジケーター コンポーネントは、丸形で進行状況を表示し、カスタマイズできるコンポーネントです。
-_keywords: Angular Circular Progress component, Angular Circular Progress control, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Angular UI Components
+_keywords: Angular Circular Progress コンポーネント, Angular Circular Progress コントロール, Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, Angular UI コンポーネント
 _language: ja
 ---
 
-# Angular Circular Progress Component Overview
+# Angular Circular Progress (円形プログレス) コンポーネントの概要
 <p class="highlight">Ignite UI for Angular Circular Progress インジケーター コンポーネントは、変更でアプリケーションの進行状況を表す視覚的なインジケーターです。丸形インジケーターは状態変更で外観を更新します。<p>
 <div class="divider"></div>
 
@@ -18,17 +18,17 @@ _language: ja
 
 <div class="divider--half"></div>
 
-## Getting Started with Ignite UI for Angular Circular Progress
+## Ignite UI for Angular Circular Progress を使用した作業の開始
 
-To get started with the Ignite UI for Angular Circular Progress component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+Ignite UI for Angular Circular Progress コンポーネントを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
 
 ```cmd
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
 
-The next step is to import the `IgxProgressBarModule` in the **app.module.ts** file:
+次に、**app.module.ts** ファイルに `IgxProgressBarModule` をインポートします。
 
 ```typescript
 // app.module.ts
@@ -45,12 +45,14 @@ import { IgxProgressBarModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxCircularProgressBarComponent` as a standalone dependency, or use the [`IGX_CIRCULAR_PROGRESS_BAR_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/progressbar/public_api.ts) token to import the component and all of its supporting components and directives.
+あるいは、`16.0.0` 以降、`IgxCircularProgressBarComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_CIRCULAR_PROGRESS_BAR_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/progressbar/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
 
 ```typescript
 // home.component.ts
+
 import { IGX_CIRCULAR_PROGRESS_BAR_DIRECTIVES } from 'igniteui-angular';
 // import { IGX_CIRCULAR_PROGRESS_BAR_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
 @Component({
     selector: 'app-home',
     template: `
@@ -68,9 +70,9 @@ import { IGX_CIRCULAR_PROGRESS_BAR_DIRECTIVES } from 'igniteui-angular';
 export class HomeComponent {}
 ```
 
-Now that you have the Ignite UI for Angular Progress Bar module or directives imported, you can start using the `igx-circular-bar` component.
+Ignite UI for Angular Progress Bar モジュールまたはディレクティブをインポートしたので、`igx-circular-bar` コンポーネントの使用を開始できます。
 
-## Using the Angular Circular Progress
+## Angular Circular Progress の使用
 
 すべての動作をよりよく理解するため、デモのような簡単な例を作成します。
 
@@ -104,7 +106,7 @@ Now that you have the Ignite UI for Angular Progress Bar module or directives im
 ```
 
 >[!NOTE]
->円形のプログレスバーのテキストを非表示にするには、[`textVisibility`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#textVisibility) プロパティを ` false` に設定します。
+>円形のプログレスバーのテキストを非表示にするには、[`textVisibility`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#textVisibility) プロパティを `false` に設定します。
 
 結果は以下のようになります。
 
@@ -145,15 +147,18 @@ Now that you have the Ignite UI for Angular Progress Bar module or directives im
 @Component({...})
 export class HomeComponent {
     public currentValue: number;
+
     public ngOnInit() {
         this.currentValue = 0;
     }
+
     public incrementProgress() {
         this.currentValue += 10;
         if (this.currentValue > 100) {
             this.currentValue = 100;
         }
     }
+
     public decrementProgress() {
         this.currentValue -= 10;
         if (this.currentValue < 0) {

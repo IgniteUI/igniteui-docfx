@@ -1,11 +1,11 @@
 ---
 title: アクション ストリップ
 _description: アクション ストリップは、1 つ以上のアクションのテンプレート領域を表します。アクション ストリップはオーバーレイするため、相対コンテナー内に配置する必要があります。
-_keywords: Angular Action Strip component, Angular Action Strip directive, Angular Action Strip control, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Angular UI Components
+_keywords: Angular Action Strip コンポーネント, Angular Action Strip ディレクティブ, Angular Action Strip コントロール, Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, Angular UI コンポーネント
 _language: ja
 ---
 
-# Angular Action Strip Directive Overview
+# Angular Action Strip (アクション ストリップ) ディレクティブの概要
 <p class="highlight">
 Ignite UI for Angular Action Strip コンポーネントは、ホバーなどのユーザー操作の際に特定のターゲット コンテナーの上に追加の UI および機能を表示できる 1 つ以上のアクションを含むオーバーレイ領域を提供します。アクション ストリップはコンテナーをオーバーレイしようとして絶対的に配置されるため、コンテナーは相対的に配置する必要があります。主な操作とターゲットコ ンテナーへのユーザー アクセスはアクション ストリップでオーバーラップされますが、使用できます。
 </p>
@@ -23,23 +23,25 @@ Ignite UI for Angular Action Strip コンポーネントは、ホバーなどの
 
 <div class="divider--half"></div>
 
-## Getting Started with Ignite UI for Angular Action Strip
+## Ignite UI for Angular Action Strip を使用した作業の開始
 
-To get started with the Ignite UI for Angular Action Strip component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+Ignite UI for Angular Action Strip コンポーネントを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
 
 ```cmd
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
 
-The next step is to import the `IgxActionStripModule` in your **app.module.ts** file. 
+次に、**app.module.ts** ファイルに `IgxActionStripModule` をインポートします。
 
 ```typescript
 // app.module.ts
+
 ...
 import { IgxActionStripModule } from 'igniteui-angular';
 // import { IgxActionStripModule } from '@infragistics/igniteui-angular'; for licensed package
+
 @NgModule({
     ...
     imports: [..., IgxActionStripModule],
@@ -48,13 +50,15 @@ import { IgxActionStripModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxActionStripComponent` as a standalone dependency, or use the [`IGX_ACTION_STRIP_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/action-strip/public_api.ts) token to import the component and all of its supporting components and directives.
+あるいは、`16.0.0` 以降、`IgxActionStripComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_ACTION_STRIP_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/action-strip/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
 
 ```typescript
 // home.component.ts
+
 ...
 import { IGX_ACTION_STRIP_DIRECTIVES, IgxButtonDirective, IgxIconComponent } from 'igniteui-angular';
 // import { IGX_ACTION_STRIP_DIRECTIVES, IgxButtonDirective, IgxIconComponent } from '@infragistics/igniteui-angular'; for licensed package
+
 @Component({
     selector: 'app-home',
     template: `
@@ -74,9 +78,9 @@ import { IGX_ACTION_STRIP_DIRECTIVES, IgxButtonDirective, IgxIconComponent } fro
 export class HomeComponent {}
 ```
 
-Now that you have the Ignite UI for Angular Action Strip module or directives imported, you can start with a basic configuration of the `igx-action-strip` component.
+Ignite UI for Angular Action Strip モジュールまたはディレクティブをインポートしたので、`igx-action-strip` コンポーネントの基本構成を開始できます。
 
-## Using the Angular Action Strip Component
+## Angular Action Strip コンポーネントの使用
 アクション ストリップを初期化して正しく配置するには、相対的に配置されたコンテナー内に配置する必要があります。
 
 ```html
@@ -92,7 +96,7 @@ Now that you have the Ignite UI for Angular Action Strip module or directives im
 デフォルトでアクション ストリップは表示されますが、これは [`hidden`]({environment:angularApiUrl}/classes/igxactionstripcomponent.html#hidden) の @Input プロパティで設定できます。
 
 ### メニューのルック アンド フィール
-3 つ以上のアクション項目が表示される場合に、[`IgxActionStripMenuItem`]({environment:angularApiUrl}/classes/igxactionstripmenuitemdirective.html) ディレクティブの使用をお勧めします。`*igxActionStripMenuItem` 構造ディレクティブでマークされたアクション ストリップ内の項目はドロップダウンで表示され、`[その他]` ボタン (最後のアクションを表す 3 つのドット) を切り替えると表示されます。
+3 つ以上のアクション項目が表示される場合に、[`IgxActionStripMenuItem`]({environment:angularApiUrl}/classes/igxactionstripmenuitemdirective.html) ディレクティブの使用をお勧めします。`*igxActionStripMenuItem` 構造ディレクティブでマークされたアクション ストリップ内の項目はドロップダウンで表示され、[その他] ボタン (最後のアクションを表す 3 つのドット) を切り替えると表示されます。
 
 ```html
 <div style="position:relative; width:100px; height:100px;">

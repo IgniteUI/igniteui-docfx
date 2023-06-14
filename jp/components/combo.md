@@ -1,7 +1,7 @@
 ---
 title: Angular Combobox コンポーネント | データ バインディング ComboBox | インフラジスティックス
 _description: Ignite UI for Angular ComboBox は、基本的な HTML 入力、選択、フィルタリング、およびカスタム ドロップダウン リストの機能を組み合わせた強力な入力を提供します。無料でお試しください。
-_keywords: angular combobox, angular combo component, angular combobox component, Angular UI Components, ignite ui for angular, infragistics
+_keywords: angular combobox, angular combo コンポーネント, angular combobox コンポーネント, Angular UI コンポーネント, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
 
@@ -24,39 +24,48 @@ Angular ComboBox コンポーネントは、編集可能な機能を提供する
 ## Angular ComboBox 機能
 
 コンボボックス コントロールは以下の機能を公開します。
-    - データ バインディング- ローカル データおよび[リモート データ](combo-remote.md)
-    - [値バインディング](combo-features.md#データ-バインディング)
-    - [フィルタリング](combo-features.md#フィルタリング)
-    - [グループ化](combo-features.md#グループ化)
-    - [カスタム値](combo-features.md#カスタム値)
-    - [テンプレート](combo-templates.md)
-    - [テンプレート駆動フォーム](input-group.md)および[リアクティブ フォーム](angular-reactive-form-validation.md)との統合
+ * データ バインディング- ローカル データおよび[リモート データ](combo-remote.md)
+ * [値バインディング](combo-features.md#データ-バインディング)
+ * [フィルタリング](combo-features.md#フィルタリング)
+ * [グループ化](combo-features.md#グループ化)
+ * [カスタム値](combo-features.md#カスタム値)
+ * [テンプレート](combo-templates.md)
+ * [テンプレート駆動フォーム](input-group.md)および[リアクティブ フォーム](angular-reactive-form-validation.md)との統合
 
 ## Getting Started with Ignite UI for Angular ComboBox
 
-To get started with the Ignite UI for Angular ComboBox component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+Ignite UI for Angular ComboBox コンポーネントを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
 
 ```cmd
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
 
-The next step is to import the `IgxComboModule` in your **app.module.ts** file.
+次に、**app.module.ts** ファイルに `IgxComboModule` をインポートします。
 
 ```typescript
 import { IgxComboModule } from 'igniteui-angular';
-Expand All
-	@@ -50,9 +57,39 @@ import { IgxComboModule } from 'igniteui-angular';
+// import { IgxComboModule } from '@infragistics/igniteui-angular'; for licensed package
+
+@NgModule({
+    imports: [
+        ...
+        IgxComboModule,
+        ...
+    ]
+})
 export class AppModule {}
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxComboComponent` as a standalone dependency, or use the [`IGX_COMBO_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/combo/public_api.ts) token to import the component and all of its supporting components and directives.
+あるいは、`16.0.0` 以降、`IgxComboComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_COMBO_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/combo/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
 
 ```typescript
 // home.component.ts
+
 import { IGX_COMBO_DIRECTIVES } from 'igniteui-angular';
 // import { IGX_COMBO_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
 @Component({
     selector: 'app-home',
     template: '<igx-combo></igx-combo>',
@@ -68,11 +77,11 @@ import { IGX_COMBO_DIRECTIVES } from 'igniteui-angular';
 export class HomeComponent {}
 ```
 
-Now that you have the Ignite UI for Angular Combo module or directives imported, you can start using the `igx-combo` component.
+Ignite UI for Angular Combo モジュールまたはディレクティブをインポートしたので、`igx-combo` コンポーネントの使用を開始できます。
 
-## Using the Angular ComboBox Component
+## Angular ComboBox コンポーネントの使用
 
-After the initial setup, you should bind the [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) with some data.
+初期設定後、[igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) をいくつかのデータにバインドします。
 
 ```typescript
 @Component({
@@ -91,7 +100,7 @@ export class ComboDemo implements OnInit {
 }
 ```
 
-Our combobox is now bound to the array of cities, but we still haven't told the component which property to use for the items' text and which to use for the value. Let's do that now.
+コンボボックスは都市の配列にバインドされましたが、項目のテキストにどのプロパティを使用するか、値にどのプロパティを使用するかをコンポーネントにまだ伝えていません。実際に変更してみましょう。
 
 ### データ値と表示プロパティ
 
@@ -100,14 +109,14 @@ Our combobox is now bound to the array of cities, but we still haven't told the 
  - `valueKey` - **オプション、オブジェクト配列に推奨。** - コンボボックスの選択のために保存されるデータ エントリのプロパティを指定します。`valueKey` が省略された場合、コンボボックス値はデータ エントリへの参照を使用します (選択は `igxCombo.data` からのエントリの配列になります)。
  - `displayKey` - **オブジェクト配列に必須。** - アイテムのテキストに使用するプロパティを指定します。`displayKey` に値が指定されていない場合、コンボボックスは指定された `valueKey` (存在する場合) を使用します。
 
-この例では、コンボボックスに各都市の`名前`を表示し、コンボボックス値には各都市の `id` を格納します。格納するには、これらのプロパティをコンボボックスの`displayKey` と `valueKey` にそれぞれ提供します。
+この例では、コンボボックスに各都市の `name` を表示し、コンボボックス値には各都市の `id` を格納します。格納するには、これらのプロパティをコンボボックスの`displayKey` と `valueKey` にそれぞれ提供します。
 
 ```html
 <igx-combo [data]="cities" displayKey="name" valueKey="id"></igx-combo>
 ```
 
 > [!Note]
-> When the data source is an array of primitives (e.g. `string[]`, `number[]`), **do not** specify a `valueKey` and `displayKey`. Primitive values will be used for both value and text.
+> データ ソースがプリミティブの配列 (`string[]`、`number[]` など) の場合、`valueKey` と `displayKey` を**指定しないでください**。プリミティブ値は値とテキストの両方に使用されます。
 
 ### 双方向バインディング
 
@@ -121,9 +130,9 @@ Our combobox is now bound to the array of cities, but we still haven't told the 
 
 ```typescript
 export class MyCombo {
-    public cities: { name: string, id: string } [] = [
+    public cities: { name: string, id: string }[] = [
                    { name: 'Sofia', id: 'BG01' }, { name: 'London', id: 'UK01' }, ...];
-    public selectedCities: { name: string, id: string } [] = [this.cities[0], this.cities[1]];
+    public selectedCities: string[] = ['BG01', 'UK01'];
 }
 ```
 
@@ -138,9 +147,9 @@ export class MyCombo {
 
 ```typescript
 export class MyCombo {
-    public cities: { name: string, id: string }[] = [
+    public cities: { name: string, id: string } [] = [
                    { name: 'Sofia', id: 'BG01' }, { name: 'London', id: 'UK01' }, ...];
-    public selectedCities: { name: string, id: string }[] = [this.cities[0], this.cities[1]];
+    public selectedCities: { name: string, id: string } [] = [this.cities[0], this.cities[1]];
 }
 ```
 

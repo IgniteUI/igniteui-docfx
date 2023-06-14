@@ -1,13 +1,13 @@
 ---
 title: Toggle コンポーネント - ネイティブ Angular | Ignite UI for Angular
 _description: Ignite UI for Angular Toggle ディレクティブを使用すると、トグル コンテナーを開く、操作、アニメーションに適用、および閉じることができます。
-_keywords: Angular Toggle directive, Angular Toggle control, Angular Toggle Component, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library, Native Angular Components
+_keywords: Angular Toggle ディレクティブ, Angular Toggle コントロール, Angular Toggle コンポーネント, Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, Angular UI コンポーネント, ネイティブ Angular コンポーネント ライブラリ
 _language: ja
 ---
 
-# Angular Toggle Directive Overview
+# Angular Toggle (トグル) ディレクティブの概要
 
-<p class="highlight">The Ignite UI for Angular Toggle directive allows the users to make a container in the DOM toggleable through user interaction.</p>
+<p class="highlight">Ignite UI for Angular Toggle ディレクティブを使用すると、ユーザー操作を通じて DOM 内のコンテナーを切り替え可能にできます。</p>
 
 ## Angular Toggle の例
 
@@ -18,17 +18,17 @@ _language: ja
 </code-view>
 
 
-## Getting Started with Ignite UI for Angular Toggle
+## Ignite UI for Angular Toggle を使用した作業の開始
 
-To get started with the Ignite UI for Angular Toggle directive, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+Ignite UI for Angular Toggle ディレクティブを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
 
 ```cmd
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
 
-The next step is to import the `IgxToggleModule` in your **app.module.ts** file.
+次に、**app.module.ts** ファイルに `IgxToggleModule` をインポートします。
 
 ```typescript
 // app.module.ts
@@ -45,12 +45,14 @@ import { IgxToggleModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxToggleDirective` as a standalone dependency.
+あるいは、`16.0.0` 以降、`IgxToggleDirective` をスタンドアロンの依存関係としてインポートできます。
 
 ```typescript
 // home.component.ts
+
 import { IgxToggleDirective, IgxButtonDirective } from 'igniteui-angular';
 // import { IgxToggleDirective, IgxButtonDirective } from '@infragistics/igniteui-angular'; for licensed package
+
 @Component({
     selector: 'app-home',
     template: `
@@ -68,9 +70,9 @@ import { IgxToggleDirective, IgxButtonDirective } from 'igniteui-angular';
 export class HomeComponent {}
 ```
 
-Now that you have the Ignite UI for Angular Toggle module or directive imported, you can start using the `igxToggle` directive.
+Ignite UI for Angular Toggle モジュールまたはディレクティブをインポートしたので、`igxToggle` ディレクティブの使用を開始できます。
 
-## Using the Angular Toggle Directive
+## Angular Toggle ディレクティブの使用
 
 ### トグルの表示
 

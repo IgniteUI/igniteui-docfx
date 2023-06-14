@@ -57,7 +57,7 @@ _language: ja
 ```cmd
 ng add igniteui-angular
 ```
-Ignite UI for Angular については、[*はじめに*](general/getting-started.md) トピックををご覧ください。
+Ignite UI for Angular については、[*はじめに*](general/getting-started.md) トピックをご覧ください。
 
 次に app.module.ts ファイルに `@@igxNameModule` をインポートします。そのため、[複数列グループ](./multi-column-headers.md)のトピックを簡単に確認することを強くお勧めします。グリッドで列グループを設定する方法の詳細情報を参照してください。
 

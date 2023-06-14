@@ -1,12 +1,14 @@
 ---
-title: Label および Input ディレクティブ
-_description: With Ignite UI for Angular Label and Input directives, developers can decorate and style single-line or multi-line input elements, add additional CSS styles and integrate with other controls.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library, Angular Label component, Angular Label control, Angular Input component, Angular Input control, Input component, Input control, Label component, Label control, Angular Input directive, Angular Label directive, Angular Forms, Angular Reactive Forms, Angular Form Validation
+title: Label & Input ディレクティブ
+_description: Ignite UI for Angular Label および Input ディレクティブを使用すると、単一行または複数行の入力要素を装飾およびスタイル設定し、CSS スタイルを追加し、その他のコントロールと統合できます。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, Angular UI コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular Label コンポーネント, Angular Label コントロール, Angular Input コンポーネント, Angular Input コントロール, Input コンポーネント, Input コントロール, Label コンポーネント, Label コントロール, Angular Input ディレクティブ, Angular Label ディレクティブ, Angular Forms, Angular Reactive Forms, Angular フォームの検証
 _language: ja
 ---
 
-# Angular Label & Input Directives Overview
-The Ignite UI for Angular Input and Label directives are used to decorate and style single-line or multi-line input elements in an `igx-input-group` component.
+# Angular Label & Input (ラベル & 入力) ディレクティブの概要
+Ignite UI for Angular Input および Label ディレクティブを使用すると、`igx-input-group` コンポーネント内の単一行または複数行の入力要素を装飾およびスタイル設定できます。
+
+<div class="divider--half"></div>
 
 ## Angular Label および Input の例
 
@@ -17,23 +19,26 @@ The Ignite UI for Angular Input and Label directives are used to decorate and st
 
 <div class="divider--half"></div>
 
-## Getting Started with Ignite UI for Angular Label & Input
+## Ignite UI for Angular Label & Input を使用した作業の開始
 
-To get started with the Ignite UI for Angular Label and Input directives, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+Ignite UI for Angular Label & Input ディレクティブを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
 
 ```cmd
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
 
-The next step is to import the `IgxInputGroupModule` in your **app.module.ts** file.
+次に、**app.module.ts** ファイルに `IgxInputGroupModule` をインポートします。
 
 ```typescript
 // app.module.ts
+
 import { FormsModule } from '@angular/forms';
 import { IgxInputGroupModule } from 'igniteui-angular';
 // import { IgxInputGroupModule } from '@infragistics/igniteui-angular'; for licensed package
+
+
 @NgModule({
     ...
     imports: [..., IgxInputGroupModule, FormsModule],
@@ -42,13 +47,15 @@ import { IgxInputGroupModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxLabelDirective`, `IgxInputDirective`, and `IgxInputGroupComponent` as standalone dependencies, or use the [`IGX_INPUT_GROUP_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/input-group/public_api.ts) token to import the component and all of its supporting components and directives.
+あるいは、`16.0.0` 以降、`IgxLabelDirective`、`IgxInputDirective`、および `IgxInputGroupComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_INPUT_GROUP_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/input-group/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
 
 ```typescript
 // home.component.ts
+
 import { FormsModule } from '@angular/forms';
 import { IGX_INPUT_GROUP_DIRECTIVES } from 'igniteui-angular';
 // import { IGX_INPUT_GROUP_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
 @Component({
     selector: 'app-home',
     template: `
@@ -67,10 +74,10 @@ export class HomeComponent {
 }
 ```
 
-Now that you have the Ignite UI for Angular Input Group module or directives imported, you can start using the `igxLabel` and `igxInput` directives and the `igx-input-group` component.
+Ignite UI for Angular Input Group モジュールまたはディレクティブをインポートしたので、`igxLabel` & `igxInput` ディレクティブおよび `igx-input-group` コンポーネントの使用を開始できます。
 
-## Using the Angular Label & Input
-Label および Input ディレクティブのデフォルト スタイル設定はマテリアル デザイン [**ガイドライン**](https://material.io/guidelines/components/text-fields.html) のテキスト フィールド仕様を実装します。
+## Angular Label & Input の使用
+Label および Input ディレクティブのデフォルト スタイル設定はマテリアル デザイン [**ガイドライン**](https://material.io/guidelines/components/text-fields.html)のテキスト フィールド仕様を実装します。
 
 [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) および [`igxLabel`]({environment:angularApiUrl}/classes/igxlabeldirective.html) を使用するには、`<igx-input-group>` コンテナーにラップします。
 

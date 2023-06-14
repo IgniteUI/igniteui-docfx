@@ -1,13 +1,13 @@
 ---
 title: Angular List ビュー | Angular List 例 | インフラジスティックス
 _description: Ignite UI for Angular List コンポーネントは、アイテムの行を表示し、1 つ以上のヘッダー アイテム、およびリスト アイテムの検索とフィルタリングをサポートします。無料でお試しください。
-_keywords: angular list, ignite ui for angular, angular list コンポーネント, angular list view, angular list view component, angular ui components
+_keywords: angular list, ignite ui for angular, angular list コンポーネント, angular list view, angular list view コンポーネント, angular ui コンポーネント
 _language: ja
 ---
 
 # Angular List View (リスト ビュー) コンポーネントの概要
 
-The Ignite UI for Angular List component displays rows of items and supports one or more header items as well as search and filtering of list items. Each list item is completely templatable and supports any valid HTML or Angular component. The list component also providers built in panning functionality, templates for empty and loading states, and supports virtualization for large lists using the [`IgxForOf`](for-of.md) directive.
+Ignite UI for Angular List コンポーネントは項目の行を表示し、ヘッダー項目を 1 つ以上、さらにリスト項目の検索およびフィルタリングをサポートします。各リスト項目はすべての有効な HTML または Angular コンポーネントをサポートするテンプレートに設定できます。リスト コンポーネントは、組み込みのパンニング機能、空および読み込み状態のテンプレートも提供し、[`IgxForOf`](for-of.md) ディレクティブを使用した大きなリストの仮想化をサポートします。
 
 ## Angular List の例
 次の例は、_name_ プロパティと _phone number_ プロパティを持つ連絡先が入力されたリストを表しています。[`IgxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) コンポーネントは、[`IgxAvatar`](avatar.md) と [`IgxIcon`](icon.md) を使用して、ユーザー エクスペリエンスを向上させ、**連絡先をお気に入りに追加**にアバター写真とさまざまなアイコンを設定する機能を公開します。さらに、リスト ビューは、フィルタリング パイプを使用して実現されたソート機能を公開します。
@@ -20,25 +20,28 @@ The Ignite UI for Angular List component displays rows of items and supports one
 
 <div class="divider--half"></div>
 
-## Getting Started with Ignite UI for Angular List
+## Ignite UI for Angular List を使用した作業の開始
 
-To get started with the Ignite UI for Angular List View component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+Ignite UI for Angular List View コンポーネントを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
 
 ```cmd
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
 
-The next step is to import the `IgxListModule` in the **app.module.ts** file.
+次に、**app.module.ts** ファイルに `IgxListModule` をインポートします。
 
 >[!NOTE]
->**This component requires [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) to be imported in the root module of the application in order for touch interactions to work as expected.**.
+>**このコンポーネントでは、タッチ操作が正しく動作するために、アプリケーションのルート モジュールに [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) をインポートする必要があります。**
+
 ```typescript
 // app.module.ts
+
 import { HammerModule } from '@angular/platform-browser';
 import { IgxListModule } from 'igniteui-angular';
 // import { IgxListModule } from '@infragistics/igniteui-angular'; for licensed package
+
 @NgModule({
     ...
     imports: [..., IgxListModule, HammerModule],
@@ -47,13 +50,15 @@ import { IgxListModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxListComponent` as a standalone dependency, or use the [`IGX_LIST_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/list/public_api.ts) token to import the component and all of its supporting components and directives.
+あるいは、`16.0.0` 以降、`IgxListComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_LIST_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/list/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
 
 ```typescript
 // home.component.ts
+
 import { HammerModule } from '@angular/platform-browser';
 import { IGX_LIST_DIRECTIVES } from 'igniteui-angular';
 // import { IGX_LIST_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
 @Component({
     selector: 'app-home',
     template: `
@@ -72,9 +77,9 @@ import { IGX_LIST_DIRECTIVES } from 'igniteui-angular';
 export class HomeComponent {}
 ```
 
-Now that you have the Ignite UI for Angular List module or directives imported, you can start using the `igx-list` component.
+Ignite UI for Angular List モジュールまたはディレクティブをインポートしたので、`igx-list` コンポーネントの使用を開始できます。
 
-## Using the Angular List
+## Angular List の使用
 
 連絡先コンポーネントのテンプレートでリストを作成できます。
 項目がない場合は、空のリストのデフォルト テンプレートを使用できます。
@@ -547,7 +552,7 @@ export class ContactListComponent {
            iframe-src="{environment:demosBaseUrl}/lists/list-item-selection" >
 </code-view>
 
-`selected` プロパティを各データ メンバーに追加します。デフォルトは `false` です。リスト項目がクリックされたら、データ コレクション内のすべての `selected` プロパティをリセットしたあと、クリックされた項目に対応するデータの `selected` プロパティを `true` に設定します。`selected` プロパティに基づいて、選択されたときの背景を定義している css クラスをリスト項目に適用します。
+`selected` プロパティを各データ メンバーに追加します。デフォルトは `false` です。リスト項目がクリックされたら、データ コレクション内のすべての `selected` プロパティをリセットしたあと、クリックされた項目に対応するデータの `selected` プロパティを `true` に設定します。選択したロパティに基づいて、選択されたときの背景を定義している css クラスをリスト項目に適用します。
 
 ```html
 <igx-list>
@@ -613,7 +618,7 @@ public selectItem(item) {
 <div class="divider--half"></div>
 
 > [!NOTE]
-> 注: コンポーネントの .scss ファイルにコンポーネントテーマを作成する場合、表示のカプセル化を渡すために `::ng-deep` を使用する必要があります。そうでない場合、新しいテーマが動作しません。詳細は、[コンポーネント テーマ](../components/themes/sass/component-themes.md#表示のカプセル化)トピックを参照してください。
+> 注: コンポーネントの .scss ファイルにコンポーネントテーマを作成する場合、表示のカプセル化を渡すために `::ng-deep` を使用する必要があります。そうでない場合、新しいテーマが動作しません。詳細は、[コンポーネント テーマ](../components/themes/sass/component-themes.md#表示のカプセル化) トピックを参照してください。
 
 リスト コンポーネントに変更できるパラメーターの完全なリストについては、[IgxListComponent スタイル]({environment:sassApiUrl}/index.html#function-list-theme)を参照してください。
 

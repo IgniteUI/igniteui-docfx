@@ -1,16 +1,16 @@
 ---
 title: Angular Paginator の例 – Ignite UI for Angular
-_description: Configure Angular pagination and create custom pages in the Angular Material table, or other iterable UI collection, by Ignite UI, get data for the requested pages with variety of angular events.
-_keywords: angular paginator, angular paginator component, angular ui components, igniteui for angular, infragistics
+_description: Angular ページネーションを設定し、Ignite UI を使用して Angular Material テーブルまたは他の反復可能な UI コレクションにカスタム ページを作成し、要求されたページのデータをさまざまな Angular イベントで取得します。
+_keywords: angular paginator, angular paginator コンポーネント, angular ui コンポーネント, igniteui for angular, インフラジスティックス
 _language: ja
 ---
 
 # Angular Paginator (ページネーター) コンポーネントの概要
-Pagination in Angular is an optimization technique when working with huge data sets. The purpose of Angular Paginator is to provide UI and API to split and distribute a high volumes of data into equally sized pages, which can be navigated by the end-user.
+Angular のページネーションは、巨大なデータ セットを操作する場合の最適化手法です。Angular Paginator の目的は、大量のデータを同じサイズのページに分割して分散し、エンドユーザーが操作できる UI と API を提供することです。
 
-The Angular Paginator component displays to the end-user the page they are viewing, the size of the page, the total number of pages and UI elements for quick navigation between pages. 
+Angular Paginator コンポーネントは、エンドユーザーが表示しているページ、ページのサイズ、ページの総数、およびページ間をすばやく移動できる UI 要素を表示します。 
 
-Ignite UI for Angular Paginator allows you to divide a set of data into a number of similar pages. This method of pagination is particularly well-suited for large data-sets which are difficult to display and view all at once, that is why the paginator is typically used together with a list of items or data table. The Paginator in Angular enables the user to select a specific page from a range of pages and to determine how many records they should see on each page.
+Ignite UI for Angular Paginator を使用すると、データセットを複数の同様のページに分割できます。このページネーション方法は、一度にすべてを表示して表示することが難しい大規模なデータセットに特に適しています。そのため、ページネータは通常、項目のリストまたはデータ テーブルと一緒に使用されます。Angular の Paginator を使用すると、ページの範囲から特定のページを選択し、各ページに表示するレコード数を決定できます。
 
 ## Angular Paginator の例
 
@@ -23,22 +23,24 @@ Ignite UI for Angular Paginator allows you to divide a set of data into a number
 
 <div class="divider--half"></div>
 
-## Getting Started with Ignite UI for Angular Paginator
+## Ignite UI for Angular Paginator を使用した作業の開始
 
-To get started with the Ignite UI for Angular Paginator component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+Ignite UI for Angular Paginator コンポーネントを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
 
 ```cmd
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
 
-The next step is to import the `IgxPaginatorModule` in the **app.module.ts** file.
+次に、**app.module.ts** ファイルに `IgxPaginatorModule` をインポートします。
 
 ```typescript
 // app.module.ts
+
 import { IgxPaginatorModule } from 'igniteui-angular';
 // import { IgxPaginatorModule } from '@infragistics/igniteui-angular'; for licensed package
+
 @NgModule({
     ...
     imports: [..., IgxPaginatorModule],
@@ -47,14 +49,16 @@ import { IgxPaginatorModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxPaginatorComponent` as a standalone dependency, or use the [`IGX_PAGINATOR_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/paginator/public_api.ts) token to import the component and all of its supporting components and directives.
+あるいは、`16.0.0` 以降、`IgxPaginatorComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_PAGINATOR_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/paginator/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
 
 ```typescript
 // home.component.ts
+
 import { NgFor } from '@angular/common';
 import { HammerModule } from '@angular/platform-browser';
 import { IGX_PAGINATOR_DIRECTIVES, IGX_LIST_DIRECTIVES } from 'igniteui-angular';
 // import { IGX_PAGINATOR_DIRECTIVES, IGX_LIST_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
 @Component({
     selector: 'app-home',
     template: `
@@ -75,9 +79,9 @@ export class HomeComponent {
 }
 ```
 
-Now that you have the Ignite UI for Angular Paginator module or directives imported, you can start using the `igx-paginator` component.
+Ignite UI for Angular Paginator モジュールまたはディレクティブをインポートしたので、`igx-paginator` コンポーネントの使用を開始できます。
 
-## Using the Angular Paginator
+## Angular Paginator の使用
 
 各ページネーター インスタンスには以下が必要です。
 
@@ -122,7 +126,7 @@ Now that you have the Ignite UI for Angular Paginator module or directives impor
 | 入力           |      説明                           |
 |-----------------|:------------------------------------------:|
 | displayDensity  | ページネーションの表示密度を取得または設定します。 |
-| page            | 現在のページをを取得または設定します。 |
+| page            | 現在のページを取得または設定します。 |
 | perPage         | ページごとに表示される項目数を取得または設定します。 |
 | selectOptions   | パジネーターの Select 要素でカスタム オプションを取得または設定します。デフォルトの選択値 [5、10、15、25、50、100、500] |
 | totalRecords    | 合計レコード数を取得または設定します。 |
