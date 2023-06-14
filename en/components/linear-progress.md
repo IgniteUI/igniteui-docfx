@@ -1,10 +1,10 @@
 ---
 title: Angular Linear Progress Component
 _description: Display a progress bar and customize its appearance with endless color and striping options with Ignite UI for Angular Linear Progress Bar component.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Linear Progress components, Angular Linear Progress controls
+_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library, Angular Linear Progress component, Angular Linear Progress control
 ---
 
-# Linear Progress
+# Angular Linear Progress Component Overview
 <p class="highlight">The Ignite UI for Angular Linear Progress Bar Indicator component provides a visual indicator of an application’s process as it changes. The indicator updates its appearance as its state changes. The indicator can be styled with a choice of colors in stripes or solids.</p>
 <div class="divider--half"></div>
 
@@ -17,8 +17,18 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 <div class="divider--half"></div>
 
-## Usage
-To get started with the Linear Progress Bar Indicator component, you need to import the **IgxProgressBarModule** in the **app.module.ts** file:
+## Getting Started with Ignite UI for Angular Linear Progress
+
+To get started with the Ignite UI for Angular Linear Progress component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+
+```cmd
+ng add igniteui-angular
+```
+
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+
+The next step is to import the `IgxProgressBarModule` in the **app.module.ts** file:
+
 ```typescript
 // app.module.ts
 
@@ -33,6 +43,31 @@ import { IgxProgressBarModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
+
+Alternatively, as of `16.0.0` you can import the `IgxLinearProgressBarComponent` as a standalone dependency, or use the [`IGX_LINEAR_PROGRESS_BAR_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/progressbar/public_api.ts) token to import the component and all of its supporting components and directives.
+
+```typescript
+// home.component.ts
+
+import { IGX_LINEAR_PROGRESS_BAR_DIRECTIVES } from 'igniteui-angular';
+// import { IGX_LINEAR_PROGRESS_BAR_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: '<igx-linear-bar [value]="progress"></igx-linear-bar>',
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_LINEAR_PROGRESS_BAR_DIRECTIVES]
+    /* or imports: [IgxLinearProgressBarComponent] */
+})
+export class HomeComponent {
+    public progress = 50;
+}
+```
+
+Now that you have the Ignite UI for Angular Progress Bar module or directives imported, you can start using the `igx-linear-bar` component.
+
+## Using the Angular Linear Progress
 
 To have a better understanding of how everything works, let's create a simple example, like the one in the demo:
 

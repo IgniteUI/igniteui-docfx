@@ -1,7 +1,7 @@
 ---
 title: Angular Star Rating Component – Ignite UI for Angular
 _description: With Angular Star Rating Component, users can view and provide feedback quickly. You can use the rating component in any angular app and angular forms. Try it Now
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Rating component, Angular Rating control
+_keywords: Angular Rating component, Angular Rating control, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library
 ---
 # Angular Star Rating Overview
 
@@ -23,7 +23,7 @@ This Angular Star Rating example demonstrates how you can use Ignite UI Angular 
 <div class="divider--half"></div>
 
 
-## Getting Started with Ignite UI for Angular Star Rating Component
+## Getting Started with Ignite UI for Angular Star Rating
 
 Ignite UI Rating is a standard [web component](https://developer.mozilla.org/en-US/docs/Web/Web_Components) and as such can be used in an Angular application.
 
@@ -78,6 +78,27 @@ export class AppModule { }
 
 >[!NOTE]
 >If you are importing `IgcFormsModule` and using either `ngModel` or `formControl`, you no longer need to include `CUSTOM_ELEMENTS_SCHEMA` as Angular will recognize the `igc-rating` tag by the custom `ControlValueAccessor` directive.
+
+Alternatively, as of `16.0.0` you can import the `IgcFormControlDirective` as a standalone dependency.
+
+```typescript
+// home.component.ts
+
+import { FormsModule } from '@angular/forms';
+import { IgcFormControlDirective } from 'igniteui-angular';
+// import { IgcFormControlDirective } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: '<igc-rating name="modelRating" [(ngModel)]="product.Rating" max="10" label="Model Rating"></igc-rating>',
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IgcFormControlDirective, FormsModule]
+})
+export class HomeComponent {
+    public product: Product;
+}
+```
 
 Add a rating with e.g. ngModel for value and it will two-way bind with your model without issues.
 
