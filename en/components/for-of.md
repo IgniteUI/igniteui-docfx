@@ -1,12 +1,13 @@
 ---
 title: Angular Virtual For Directive 
 _description: Ignite UI for Angular now exposes a virtual igxFor directive similar to ngFor, which virtualizes DOM object rendering by visualizing only the visible chunks of the data in the DOM.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Virtualization, Performance, Virtual directive, Virtual For
+_keywords: Angular Virtual ForOf Directive, Native Angular Components Suite, Angular UI Components, Native Angular Components Library, Virtualization, Performance, Virtual directive, Angular Virtual For
 ---
 
-# Virtual For Directive
+# Angular Virtual ForOf Directive Overview
 
 <p class="highlight">The Ignite UI for Angular igxForOf directive is an alternative to ngForOf for templating large amounts of data. It uses virtualization behind the scenes to optimize DOM rendering and memory consumption.</p>
+
 <div class="divider"></div>
 
 ## Angular Virtual For Directive Example
@@ -17,12 +18,19 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
            iframe-src="{environment:demosBaseUrl}/data-display/igx-for-sample-1" alt="Angular Virtual For Directive Example">
 </code-view>
 
+<div class="divider"></div>
 
-## Usage
+## Getting Started with Ignite UI for Angular Virtual ForOf Directive
 
-### First Steps
+To get started with the Ignite UI for Angular [`igxFor`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxForOf) directive, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
 
-The [`igxFor`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxForOf) directive is exported as an `NgModule`, thus all you need to do in your application is to import the `IgxForOfModule` inside your `AppModule`:
+```cmd
+ng add igniteui-angular
+```
+
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+
+The next step is to import the `IgxForOfModule` in your **app.module.ts** file.
 
 ```typescript
 // app.module.ts
@@ -40,9 +48,35 @@ import { IgxForOfModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-### Add igxFor
+Alternatively, as of `16.0.0` you can import the `IgxForOfDirective` as a standalone dependency.
 
-Now that we have the module imported, let’s get started with a basic configuration of the `igxFor` that binds to local data:
+```typescript
+// home.component.ts
+
+import { IgxForOfDirective } from 'igniteui-angular';
+// import { IgxForOfDirective } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: `
+    <span #container>
+        <ng-template *igxFor="data"></ng-template>
+    </span>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IgxForOfDirective]
+})
+export class HomeComponent {
+    public data: Employee [];
+}
+```
+
+Now that you have the Ignite UI for Angular Tree Grid module or directives imported, you can start using the `igxFor` directive.
+
+## Using the Angular Virtual ForOf
+
+Now that we have the module or directive imported, let’s get started with a basic configuration of the `igxFor` that binds to local data:
 
 ```html
 <span #container>
@@ -50,8 +84,7 @@ Now that we have the module imported, let’s get started with a basic configura
 </span>
 ```
 
-The **data** property is an array that provides the virtualized data.
-
+The **data** property is an array that provides the data objects used to construct the virtualized DOM.
 
 ## Examples
 
