@@ -1,11 +1,11 @@
 ---
 title: Switch コンポーネント
 _description: Ignite UI for Angular Switch コンポーネントはアプリケーションにバイナリ有効/無効または true/false のデータ入力関数を追加します。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Switch コンポーネント, Angular Switch コントロール
+_keywords: Angular Switch コンポーネント, Angular Switch コントロール, Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, Angular UI コンポーネント, ネイティブ Angular コンポーネント ライブラリ
 _language: ja
 ---
 
-# Switch
+# Angular Switch (スイッチ) コンポーネントの概要
 <p class="highlight">Ignite UI for Angular Switch コンポーネントは iOS の switch コンポーネントと同様に動作するバイナリ選択コンポーネントです。</p>
 <div class="divider"></div>
 
@@ -18,11 +18,17 @@ _language: ja
 
 <div class="divider--half"></div>
 
-## 使用方法
+## Ignite UI for Angular Switch を使用した作業の開始
 
-中核となるスイッチ コンポーネントはオン/オフ状態の切り替えが可能です。デフォルトのスタイル設定はマテリアル デザイン ガイドラインの選択コントロールの仕様に基づきます。
+Ignite UI for Angular Switch コンポーネントを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
 
-はじめに、**app.module.ts** ファイルに `IgxSwitchModule` をインポートします。
+```cmd
+ng add igniteui-angular
+```
+
+Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
+
+次に、**app.module.ts** ファイルに `IgxSwitchModule` をインポートします。
 
 ```typescript
 // app.module.ts
@@ -38,6 +44,34 @@ import { IgxSwitchModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
+
+あるいは、`16.0.0` 以降、`IgxSwitchComponent` をスタンドアロンの依存関係としてインポートできます。
+
+```typescript
+// home.component.ts
+
+import { IgxSwitchComponent } from 'igniteui-angular';
+// import { IgxSwitchComponent } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: `
+    <igx-switch [checked]="true">
+        Simple switch
+    </igx-switch>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IgxSwitchComponent]
+})
+export class HomeComponent {}
+```
+
+Ignite UI for Angular Switch モジュールまたはコンポーネントをインポートしたので、`igx-switch` コンポーネントの使用を開始できます。
+
+## Angular Switch の使用
+
+中核となるスイッチ コンポーネントはオン/オフ状態の切り替えが可能です。デフォルトのスタイル設定はマテリアル デザイン ガイドラインの選択コントロールの仕様に基づきます。
 
 デモのようにシンプルなスイッチを作成するには、コンポーネントのテンプレートに以下のコードを追加します。
 

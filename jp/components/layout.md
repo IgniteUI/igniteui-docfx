@@ -5,8 +5,8 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-# Layout Manager
-<p class="highlight">Ignite UI for Angular Layout ディレクティブは、適用されたコンテナーの子要素のレイアウト方向を指定する機能を提供します。レイアウトを垂直方向または水平方向に設定や折り返し、両端揃え、配置の制御も可能です。</p>
+# Angular Layout Manager (レイアウト マネジャー) ディレクティブの概要
+<p class="highlight">Ignite UI for Angular Layout Manager ディレクティブは、適用されたコンテナーの子要素のレイアウト方向を指定する機能を提供します。レイアウトを垂直方向または水平方向に設定や折り返し、両端揃え、配置の制御も可能です。</p>
 <div class="divider"></div>
 
 ## Angular Layout Manager の例

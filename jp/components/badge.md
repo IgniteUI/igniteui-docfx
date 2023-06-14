@@ -1,12 +1,12 @@
 ---
 title: Angular Badge コンポーネント
 _description: Ignite UI for Angular の Badge コントロールは、アプリケーションでその他のコンポーネントを装飾するために定義済みスタイルでアクティブ カウントまたはアイコンを表示します。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Badge コンポーネント, Angular Badge コントロール
+_keywords: Angular Badge コンポーネント, Angular Badge コントロール, Ignite UI for Angular, Angular UI コンポーネント
 _language: ja
 ---
 
-# Badge
-<p class="highlight">Ignite UI Badge は、視覚的な通知が必要な場合にアプリケーションでアバター、ナビゲーション メニュー、またはその他のコンポーネントと共に使用されるコンポーネントです。バッジは情報、成功、警告、またはエラーを表示するために定義済みのスタイルを持つアイコンとしてデザインされます。</p>
+# Angular Badge (バッジ) コンポーネントの概要
+<p class="highlight">Angular Badge は、視覚的な通知が必要な場合にアプリケーションでアバター、ナビゲーション メニュー、またはその他のコンポーネントと共に使用されるコンポーネントです。バッジは情報、成功、警告、またはエラーを表示するために定義済みのスタイルを持つアイコンとしてデザインされます。</p>
 <div class="divider"></div>
 
 ## Angular Badge の例
@@ -18,8 +18,16 @@ _language: ja
 
 <div class="divider--half"></div>
 
-## 使用方法
-Badge コンポーネントを初期化する前に、`IgxBadgeModule` を **app.module.ts** ファイルにインポートします。
+## Ignite UI for Angular Badge を使用した作業の開始
+
+Ignite UI for Angular Badge コンポーネントを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
+
+```cmd
+ng add igniteui-angular
+```
+Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
+
+次に、**app.module.ts** ファイルに `IgxBadgeModule` をインポートします。
 
 ```typescript
 // app.module.ts
@@ -36,6 +44,28 @@ import { IgxBadgeModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
+あるいは、`16.0.0` 以降、`IgxBadgeComponent` をスタンドアロンの依存関係としてインポートできます。
+
+```typescript
+// home.component.ts
+
+...
+import { IgxBadgeComponent } from 'igniteui-angular';
+// import { IgxBadgeComponent } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: '<igx-badge icon="check" type="success" shape="square"></igx-badge>',
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IgxBadgeComponent]
+})
+export class HomeComponent {}
+```
+
+Ignite UI for Angular Badge モジュールまたはコンポーネントをインポートしたので、`igx-badge` コンポーネントの基本構成を開始できます。
+
+## Angular Badge コンポーネントの使用
 デモ サンプルの実行方法を見てみましょう。アバターのシンプルな success スタイルのバッジです。これを構築するためには、`IgxBadgeModule` とともに `IgxAvatarModule` をインポートする必要があります。
 
 ```typescript
@@ -52,6 +82,8 @@ import { IgxBadgeModule, IgxAvatarModule } from 'igniteui-angular';
 
 export class AppModule {}
 ```
+
+*あるいは、`16.0.0` 以降、`IgxBadgeComponent` と `IgxAvatarComponent` をスタンドアロンの依存関係としてインポートできます。*
 
 次に、これらのコンポーネントをテンプレートに追加します。
 

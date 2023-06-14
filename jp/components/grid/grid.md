@@ -1,43 +1,43 @@
 ---
 title: Angular Data Grid | 高速な Angular テーブルを構築する | インフラジスティックス
 _description: Ignite UI for Angular で超高速でレスポンシブな Angular データ グリッドとテーブルを作成します。編集、フィルタリング、データ バインディングなどをサポートします。今すぐお試しください。
-_keywords: angular データ グリッド, angular マテリアル テーブル, ignite ui for angular
+_keywords: angular data grid, angular grid コンポーネント, angular data grid コンポーネント, angular table コンポーネント, angular data table コンポーネント, angular table, angular UI コンポーネント, ignite ui for angular
 _language: ja
 ---
 
 <style>
-    .sample-content {
-        display: flex;
-            flex-flow: row wrap;
-            justify-content: center;
-        }
+.sample-content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
 
 .sample-column {
-            display: flex;
-            flex-flow: column nowrap;
-            flex: 1 0 25%;
-            align-content: flex-start;
-            min-width: 280px;
-        }
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 1 0 25%;
+    align-content: flex-start;
+    min-width: 280px;
+}
 
- .tabbar-wrapper {
-            width: inherit;
-            position: relative;
-            height: 100%;
-            margin: 0 auto;
-        }
+.tabbar-wrapper {
+    width: inherit;
+    position: relative;
+    height: 100%;
+    margin: 0 auto;
+}
 
- .tabbar-wrapper > p {
-            padding-right: 20px
-        }
+.tabbar-wrapper > p {
+    padding-right: 20px
+}
 </style>
 
-# Angular データ グリッドの概要と構成
+# Angular データ グリッド コンポーネントの概要
 
 <div class="sample-content">
     <article class="sample-column">
         <div class="tabbar-wrapper">
-            <p> Angular データ グリッドは、データを表形式ですばやく簡単に表示するための機能豊富なコントロールとして使用されます。最新のグリッドは複雑で、通常、データ選択、Excel スタイルのフィルタリング、ソート、ページング、テンプレート作成、列の移動、Excel へのエクスポート、CSV、PDF 形式などの一連の機能が満載です。</p>
+            <p>Angular Data Grid は、データを表形式で表示するためのコンポーネントです。最新のグリッドは複雑で、通常、データ選択、Excel スタイルのフィルタリング、ソート、ページング、グループ化、テンプレート化、列の移動、列のピン固定、Excel へのエクスポート、CSV 形式などの大規模な機能セットが詰め込まれています。</p>
         </div>
     </article>
     <article class="sample-column">
@@ -66,20 +66,21 @@ Boston Marathon 2021 – この Angular グリッドの例では、ユーザー�
 
 <div class="divider--half"></div>
 
-## Ignite UI for Angular Data Grid で作業を開始
+## Ignite UI for Angular Data Grid を使用した作業の開始
 ### 依存関係
 
 >[!NOTE]
 >**このコンポーネントでは、タッチ操作が正しく動作するために、アプリケーションのルート モジュールに [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) をインポートする必要があります。**.
 
-Angular データ グリッドを初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
+Ignite UI for Angular Data Grid コンポーネントを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
 
 ```cmd
 ng add igniteui-angular
 ```
-Ignite UI for Angular については、[はじめに](../general/getting-started.md)トピックををご覧ください。
 
-Angular グリッドが `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に `IgxGridModule` をインポートする必要があります。
+Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
+
+次に、**app.module.ts** ファイルに `IgxGridModule` をインポートします。
 
 ```typescript
 // app.module.ts
@@ -97,34 +98,45 @@ import { IgxGridModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-`IgxGridModule` の各コンポーネント、ディレクティブ、およびヘルパー クラスは _igniteui-angular_ のメイン バンドルでインポートできます。グリッドをインスタンス化して使用するためにすべての機能をインポートする必要はありませんが、グリッド API の一部である型を宣言する場合はインポート (またはエディターで自動的にインポート) します。
+あるいは、`16.0.0` 以降、`IgxGridComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_GRID_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/grids/grid/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
 
 ```typescript
-import { IgxGridComponent } from 'igniteui-angular';
-// import { IgxGridComponent } from '@infragistics/igniteui-angular'; for licensed package
-...
-@ViewChild('myGrid', { read: IgxGridComponent })
-public grid: IgxGridComponent;
+// home.component.ts
+
+import { IGX_GRID_DIRECTIVES } from 'igniteui-angular';
+// import { IGX_GRID_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: '<igx-grid [data]="localData" [autoGenerate]="true"></igx-grid>',
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_GRID_DIRECTIVES]
+    /* or imports: [IgxGridComponent] */
+})
+export class HomeComponent {
+    public data: Product [];
+}
 ```
 
-### 使用方法
+Ignite UI for Angular Grid モジュールまたはディレクティブをインポートしたので、`igx-grid` コンポーネントの使用を開始できます。
 
-グリッド モジュールをインポート後、ローカル データにバインドする **igx-grid** の基本構成を設定します。
+## Using the Angular Data Grid
 
 ```html
 <igx-grid #grid1 id="grid1" [data]="localData" [autoGenerate]="true"></igx-grid>
 ```
 
-**id** プロパティは文字列値で、設定されない場合に自動生成されるグリッドの一意識別子です。**data** はグリッドをローカル データにバインドします。
+**data** プロパティは、グリッド (この場合はオブジェクトのローカル配列) をバインドします。
 
-[`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autoGenerate) プロパティは、データソース フィールドに基づいて **igx-grid** にグリッドの[`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) を自動生成させます。列の適切なデータ型の決定を試みます。それ以外の場合、開発者は列およびデータ ソース フィールドへのマッピングを明示的に定義する必要があります。
+[`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autoGenerate) プロパティは、データソース フィールドに基づいて `igx-grid` にグリッドの[`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) を自動生成させます。開発者は[列](#angular-grid-列の構成)およびデータ ソース フィールドへのマッピングを明示的に定義することもできます。
 
 ## Angular Bootstrap グリッドの定義
 <p>Ignite UI for Angular には、Flex に基づくレイアウト システムのような強力なブートストラップ グリッドが含まれています。今日の最新のアプリケーションは、レスポンシブ Web デザインのアプローチに従うことが期待されています。つまり、デバイスのサイズに基づいて、または単にブラウザーのサイズを変更するだけで、HTML 要素のレイアウトを適切に調整できます。Angular ブートストラップ グリッド レイアウトはこれまで最も使用されていたアプローチでしたが、CSS グリッドのような Flex に基づくレイアウト システムは、どのブラウザーでも機能するため、より一般的になりました。Ignite UI for Angular Layout ディレクティブにより、コンテンツ/テキストの折り返し、両端揃え、配置など、垂直方向と水平方向のフローが可能になります。Ignite UI for Angular グリッドは、CSS を使用したレスポンシブ レイアウトをサポートし、サイズ変更時のグリッドの動作に究極の柔軟性を提供します。</p>
 
 ## Angular Grid スタイルの構成
 > [!NOTE]
-> [**IgxGridComponent**]({environment:angularApiUrl}/classes/igxgridcomponent.html) は **css グリッド レイアウト**を使用しますが、**プレフィックスなしでは IE でサポートされていない**ため、正しく描画できません。
+> [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) は **css グリッド レイアウト**を使用しますが、**プレフィックスなしでは IE でサポートされていない**ため、正しく描画できません。
 
 [**Angular**](https://angular.io/) のほとんどのスタイルは [Autoprefixer](https://www.npmjs.com/package/autoprefixer) プラグインで暗示的にプレフィックスされてます。
 
@@ -497,9 +509,7 @@ export class AppModule {}
 ```typescript
 // my.component.ts
 
-@Component({
-    ...
-})
+@Component({...})
 export class MyComponent implements OnInit {
 
     public records: NorthwindRecord[];
@@ -694,52 +704,55 @@ export const DATA: any[] = [
         Region: null
     },
 ...
+]
 ```
+
 カスタム テンプレート:
 
 ```html
 ...
 <igx-column field="Address" header="Address" width="25%" editable="true">
-                <ng-template #compositeTemp igxCell let-cell="cell">
-                    <div class="address-container">
-                    // In the Address column combine the Country, City and PostCode values of the corresponding data record
-                        <span><strong>Country:</strong> {{cell.row.data.Country}}</span>
-                        <br/>
-                        <span><strong>City:</strong> {{cell.row.data.City}}</span>
-                        <br/>
-                        <span><strong>Postal Code:</strong> {{cell.row.data.PostalCode}}</span>
-                    </div>
-                </ng-template>
-...
+    <ng-template #compositeTemp igxCell let-cell="cell">
+        <div class="address-container">
+        // In the Address column combine the Country, City and PostCode values of the corresponding data record
+            <span><strong>Country:</strong> {{cell.row.data.Country}}</span>
+            <br/>
+            <span><strong>City:</strong> {{cell.row.data.City}}</span>
+            <br/>
+            <span><strong>Postal Code:</strong> {{cell.row.data.PostalCode}}</span>
+        </div>
+    </ng-template>
+</igx-column>
 ```
+
 上記で定義したテンプレートでは編集操作ができないため、エディター テンプレートが必要であることに注意してください。
 
 ```html
-...
-                 <ng-template  igxCellEditor let-cell="cell">
-                        <div class="address-container">
-                        <span>
-                            <strong>Country:</strong> {{cell.row.data.Country}}
-                            <igx-input-group width="100%">
-                                    <input igxInput [(ngModel)]="cell.row.data.Country" />
-                            </igx-input-group>
-                        </span>
-                            <br/>
-                            <span><strong>City:</strong> {{cell.row.data.City}}</span>
-                            <igx-input-group width="100%">
-                                    <input igxInput [(ngModel)]="cell.row.data.City" />
-                            </igx-input-group>
-                            <br/>
-                            <span><strong>Postal Code:</strong> {{cell.row.data.PostalCode}}</span>
-                            <igx-input-group width="100%">
-                                    <input igxInput [(ngModel)]="cell.row.data.PostalCode" />
-                            </igx-input-group>
-                            <br/>
-                        </div>
-                </ng-template>
+<igx-column field="Address" header="Address" width="25%" editable="true">
+    <ng-template  igxCellEditor let-cell="cell">
+        <div class="address-container">
+            <span>
+                <strong>Country:</strong> {{cell.row.data.Country}}
+                <igx-input-group width="100%">
+                        <input igxInput [(ngModel)]="cell.row.data.Country" />
+                </igx-input-group>
+            </span>
+            <br/>
+            <span><strong>City:</strong> {{cell.row.data.City}}</span>
+            <igx-input-group width="100%">
+                    <input igxInput [(ngModel)]="cell.row.data.City" />
+            </igx-input-group>
+            <br/>
+            <span><strong>Postal Code:</strong> {{cell.row.data.PostalCode}}</span>
+            <igx-input-group width="100%">
+                    <input igxInput [(ngModel)]="cell.row.data.PostalCode" />
+            </igx-input-group>
+        </div>
+    </ng-template>
 </igx-column>
 ...
 ```
+
 以下は結果です。
 
 

@@ -6,10 +6,11 @@ _language: ja
 ---
 
 # Angular Time Picker (タイム ピッカー) の概要
-<p class="highlight">Time Picker コンポーネントを使用すると、スピン ボタンがあるドロップダウン/ダイアログから時間を選択し、入力フィールドに値が設定されます。デフォルトのドロップダウン モードでは、入力フィールドは編集可能であり、ユーザーは選択した時間を編集することもできます。</p>
+<p class="highlight">タイム ピッカー コンポーネントを使用すると、ドロップダウンまたはスピナーを備えたダイアログから `Date` オブジェクトの時間部分を入力または選択し、入力フィールドに値が設定されます。デフォルトのドロップダウン モードでは、入力フィールドは編集可能であり、ユーザーは選択した時間を編集することもできます。</p>
+
 <div class="divider--half"></div>
 
-<p>今日の Web アプリケーションで最も一般的に使用される UI コンポーネントの 1 つとして、Angular Time Picker (Angular Material Time Picker とも呼ばれます) は開発者にさまざまな機能を提供します。これらの機能により、コンポーネントをカスタマイズして、ユーザーがコンポーネントを操作するための最高の UX および UI エクスペリエンスを作成できます。時計ボタンを表示するためのさまざまな組み込みテンプレートと、検証、カスタム時間形式などの機能があります。 </p>
+<p>タイム ピッカー コンポーネントには、時計ボタンを表示するためのさまざまな組み込みテンプレートと、検証、カスタム時間形式などの機能があります。</p>
 
 ## Angular Time Picker の例
 一般に、ユーザーは、テキスト入力を使用するか、Angular Time Picker ドロップダウンから時間値を選択することにより、優先時間を入力できます。以下の基本的な Angular Time Picker の例は、ユーザーがドロップダウンまたはキーボードを使用して値を簡単に入力する方法を示しています。
@@ -21,8 +22,17 @@ _language: ja
 
 <div class="divider--half"></div>
 
-## Ignite UI で Angular Time Picker コンポーネントを使用する方法
-はじめに、**app.module.ts** ファイルに `IgxTimePickerModule` をインポートします。
+## Ignite UI for Angular Time Picker を使用した作業の開始
+
+Ignite UI for Angular Time Picker コンポーネントを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
+
+```cmd
+ng add igniteui-angular
+```
+
+Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
+
+次に、**app.module.ts** ファイルに `IgxTimePickerModule` をインポートします。
 
 >[!NOTE]
 >IgxTimePicker は、タッチ操作において、**BrowserAnimationsModule** と **HammerModule** に依存しています。これらも AppModule に追加する必要があります。
@@ -43,7 +53,32 @@ import { IgxTimePickerModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
-<div class="divider--half"></div>
+
+あるいは、`16.0.0` 以降、`IgxTimePickerComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_TIME_PICKER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/time-picker/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
+
+```typescript
+// home.component.ts
+
+import { FormsModule } from '@angular/forms';
+import { IGX_TIME_PICKER_DIRECTIVES } from 'igniteui-angular';
+// import { IGX_TABS_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: '<igx-time-picker [(ngModel)]="time"></igx-time-picker>',
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_TIME_PICKER_DIRECTIVES, FormsModule]
+    /* or imports: [IgxTimePickerComponent, FormsModule] */
+})
+export class HomeComponent {
+    public time: Date;
+}
+```
+
+Ignite UI for Angular Time Picker モジュールまたはディレクティブをインポートしたので、`igx-time-picker` コンポーネントの使用を開始できます。
+
+## Angular Time Picker の使用
 
 ### デフォルト
 

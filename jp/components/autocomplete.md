@@ -1,12 +1,12 @@
 ---
 title: オートコンプリート ディレクティブ
-_description: Angular Autocomplete コンポーネントは、候補オプションのパネルを表示することにより、テキスト入力を向上する方法を提供します。今すぐお試しください。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Autocomplete コンポーネント, Angular Autocomplete ディレクティブ, Angular Autocomplete コントロール
+_description: Angular Autocomplete ディレクティブは、候補オプションのパネルを表示することにより、テキスト入力を向上する方法を提供します。今すぐお試しください。
+_keywords: Angular Autocomplete コンポーネント, Angular Autocomplete ディレクティブ, Angular Autocomplete コントロール, Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, Angular UI コンポーネント, ネイティブ Angular コンポーネント ライブラリ
 _language: ja
 ---
 
-# Angular Autocomplete (オートコンプリート) の概要
-Angular Autocomplete は、入力中に候補のリストから項目を簡単に検索、フィルタリング、および選択できるようにする検索ボックス コンポーネントです。機能が豊富で、シームレスなデータ バインディング、フィルタリング、グループ化、UI カスタマイズ オプション、およびその他の組み込み機能をサポートしているため、直感的なオートコンプリート検索エクスペリエンスを作成できます。
+# Angular Autocomplete (オートコンプリート) ディレクティブ の概要
+Angular Autocomplete は、入力中に候補のリストから項目を簡単に検索、フィルタリング、および選択できるようにする検索ボックス ディレクティブです。機能が豊富で、シームレスなデータ バインディング、フィルタリング、グループ化、UI カスタマイズ オプション、およびその他の組み込み機能をサポートしているため、直感的なオートコンプリート検索エクスペリエンスを作成できます。
 
 <p class="highlight">
 
@@ -25,8 +25,17 @@ Angular Autocomplete は、入力中に候補のリストから項目を簡単�
 
 <div class="divider--half"></div>
 
-## Ignite UI で Angular Autocomplete を使用する方法
-はじめに、**app.module** で **IgxAutocompleteModule** と **IgxDropDownModule** をインポートします。[`igxAutocomplete`]({environment:angularApiUrl}/classes/igxautocompletedirective.html) を [igx-input]({environment:angularApiUrl}/classes/igxinputdirective.html) に適用した場合は、**igxInputGroupModule** も必要となります。
+## Ignite UI for Angular Autocomplete を使用した作業の開始
+
+Ignite UI for Angular Autocomplete ディレクティブを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
+
+```cmd
+ng add igniteui-angular
+```
+
+Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
+
+はじめに、**app.module** で **IgxAutocompleteModule** と **IgxDropDownModule** をインポートします。[`igxAutocomplete`]({environment:angularApiUrl}/classes/igxautocompletedirective.html) が [igxInput]({environment:angularApiUrl}/classes/igxinputdirective.html) に適用される場合、**igxInputGroupModule** も必要です。
 
 ```typescript
 // app.module.ts
@@ -37,11 +46,7 @@ import {
     IgxDropDownModule, 
     IgxInputGroupModule 
 } from 'igniteui-angular';
-// import { 
-//    IgxAutocompleteModule,
-//    IgxDropDownModule, 
-//    IgxInputGroupModule
-// } from '@infragistics/igniteui-angular'; for licensed package
+// import { IgxAutocompleteModule, IgxDropDownModule, IgxInputGroupModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -57,12 +62,43 @@ import {
 export class AppModule {}
 ```
 
-次に、ドロップダウンを参照する `igxAutocomplete` ディレクティブを追加します。
+あるいは、`16.0.0` 以降、`IgxAutocompleteDirective` をスタンドアロンのディレクティブとしてインポートできます。
+
+```typescript
+// home.component.ts
+
+...
+import { IgxAutocompleteDirective, IGX_INPUT_GROUP_DIRECTIVES, IGX_DROP_DOWN_DIRECTIVES } from 'igniteui-angular';
+// import { IgxAutocompleteDirective, IGX_INPUT_GROUP_DIRECTIVES, IGX_DROP_DOWN_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: `
+    <igx-input-group>
+        <input igxInput name="towns" type="text" [igxAutocomplete]="townsPanel" />
+        <label igxLabel for="towns">Towns</label>
+    </igx-input-group>
+    <igx-drop-down #townsPanel>
+        <igx-drop-down-item *ngFor="let town of towns">
+            {{town}}
+        </igx-drop-down-item>
+    </igx-drop-down>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IgxAutocompleteDirective, IGX_INPUT_GROUP_DIRECTIVES, IGX_DROP_DOWN_DIRECTIVES]
+})
+export class HomeComponent {}
+```
+
+Ignite UI for Angular Action Strip モジュールまたはディレクティブをインポートしたので、`igxAutocomplete` コンポーネントの基本構成を開始できます。
+
+## Angular Autocomplete の使用
+オートコンプリート機能を入力に適用するには、ドロップダウンを参照して `igxAutocomplete` ディレクティブを追加します。
 
 ```html
 <igx-input-group>
-    <input igxInput name="towns" type="text"
-        [igxAutocomplete]='townsPanel'/>
+    <input igxInput name="towns" type="text" [igxAutocomplete]="townsPanel" />
     <label igxLabel for="towns">Towns</label>
 </igx-input-group>
 <igx-drop-down #townsPanel>
@@ -228,9 +264,8 @@ export class AutocompleteComponent {
 
 * [IgxAutocompleteDirective]({environment:angularApiUrl}/classes/igxautocompletedirective.html)
 * [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html)
-* [IgxDropDownComponent スタイル]({environment:sassApiUrl}/index.html#function-drop-down-theme)
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
-* [IgxInputGroupComponent スタイル]({environment:sassApiUrl}/index.html#function-input-group-theme)
+
 
 ## テーマの依存関係
 * [IgxDropDown テーマ]({environment:sassApiUrl}/index.html#function-drop-down-theme)

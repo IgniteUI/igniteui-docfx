@@ -1,15 +1,13 @@
 ---
 title: Angular Banner コンポーネント
 _description: Ignite UI for Angular Banner コンポーネントは、簡単に非侵入型メッセージをオプション操作と統合できます。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, Native Angular コンポーネント スイート, Native Angular コントロール, Native Angular コンポーネント Library, Angular Banner コンポーネント, Angular Banner コントロール
+_keywords: Angular Banner コンポーネント, Angular Banner コントロール, Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, Angular UI コンポーネント
 _language: ja
 ---
-# Banner
-<p class="highlight">
-Ignite UI for Angular Banner コンポーネントは、スナックバーより長い時間の表示でダイアログより控えめのメッセージを簡単に表示できます。Banner にカスタム動作ボタンやアイコンの表示を設定できます。</p>
+# Angular Banner (バナー) コンポーネントの概要
+<p class="highlight">Angular Banner コンポーネントは、スナックバーより長い時間の表示でダイアログより控えめのメッセージを簡単に表示できます。Banner にカスタム動作ボタンやアイコンの表示を設定できます。</p>
 
 ## Angular Banner の例
-
 
 <code-view style="height: 530px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -18,11 +16,17 @@ Ignite UI for Angular Banner コンポーネントは、スナックバーより
 
 <div class="divider--half"></div>
 
-## 使用方法
+## Ignite UI for Angular Banner を使用した作業の開始
 
-### はじめに
+Ignite UI for Angular Banner コンポーネントを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
 
-Banner コンポーネントを初期化にするには、まず `IgxBannerModule` を **app.module.ts** ファイルにインポートします。 
+```cmd
+ng add igniteui-angular
+```
+
+Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
+
+次に、**app.module.ts** ファイルに `IgxBannerModule` をインポートします。
 
 ```typescript
 // app.module.ts
@@ -39,6 +43,34 @@ import { IgxBannerModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
+あるいは、`16.0.0` 以降、`IgxBannerComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_BANNER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/banner/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
+
+```typescript
+// home.component.ts
+
+...
+import { IGX_BANNER_DIRECTIVES } from 'igniteui-angular';
+// import { IGX_BANNER_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: `
+    <igx-banner>
+        You are currently offline.
+    </igx-banner>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_BANNER_DIRECTIVES]
+    /* or imports: [IgxBannerComponent] */
+})
+export class HomeComponent {}
+```
+
+Ignite UI for Angular Banner モジュールまたはディレクティブをインポートしたので、`igx-banner` コンポーネントの基本構成を開始できます。
+
+## Angular Banner コンポーネントの使用
+
 ### Banner の表示
 
 Banner コンポーネントを表示するには、ボタン クリックで [`open()`]({environment:angularApiUrl}/classes/igxbannercomponent.html#open) 呼び出します。バナーは、要素がページ テンプレートに挿入された場所にその他すべてのコンテンツを移動して表示されます。通常、閉じるためのユーザー操作をほとんど必要としない非侵入型コンテンツを表示します。 
@@ -46,7 +78,7 @@ Banner コンポーネントを表示するには、ボタン クリックで [`
 ```html
 <!--banner.component.html-->
 
-<igx-icon (click)="connectionBanner.open()">Refresh</igx-icon>
+<igx-icon (click)="connectionBanner.open()">refresh</igx-icon>
 ...
 <igx-banner #connectionBanner>
     You are currently offline.
@@ -66,10 +98,10 @@ Banner コンポーネントを表示するには、ボタン クリックで [`
 `igx-banner` タグに渡されるコンテンツを変更することによりバナーに表示されるメッセージを設定できます。指定したバナー領域にテキストが表示され、表示時にバナーはデフォルト テンプレートを使用します。以下は、サンプル バナーのコンテンツを変更してより多くの情報を提供します。
 
 ```html
-    <!--banner.component.html-->
-    <igx-banner #connectionBanner>
-        You have lost connection to the internet. This app is offline.
-    </igx-banner>
+<!--banner.component.html-->
+<igx-banner #connectionBanner>
+    You have lost connection to the internet. This app is offline.
+</igx-banner>
 ```
 
 ### アイコンの追加
@@ -82,25 +114,23 @@ Banner コンポーネントを表示するには、ボタン クリックで [`
 `igx-icon` をバナーに渡すには、それをバナーのコンテンツに挿入します。
 
 ```html
-    <!--banner.component.html-->
-    <igx-banner #connectionBanner>
-        <igx-icon>signal_wifi_off</igx-icon>
-        You have lost connection to the internet. This app is offline.
-    </igx-banner>
-    ...
+<!--banner.component.html-->
+<igx-banner #connectionBanner>
+    <igx-icon>signal_wifi_off</igx-icon>
+    You have lost connection to the internet. This app is offline.
+</igx-banner>
 ```
 
 バナー メッセージで `igx-icon` を使用する場合、`span` タグでラップしてください。
 
 ```html
-    <!--banner.component.html-->
-    <igx-banner #connectionBanner>
-        You have lost connection to the internet. This app is offline.
-        <span>
-            <igx-icon>signal_wifi_off</igx-icon>
-        </span>
-    </igx-banner>
-    ...
+<!--banner.component.html-->
+<igx-banner #connectionBanner>
+    You have lost connection to the internet. This app is offline.
+    <span>
+        <igx-icon>signal_wifi_off</igx-icon>
+    </span>
+</igx-banner>
 ```
 
 ### バナー ボタンの変更
@@ -108,14 +138,14 @@ Banner コンポーネントを表示するには、ボタン クリックで [`
 `IgxBannerModule` は、バナー ボタンをテンプレート化するための [`IgxBannerActionsDirective`]({environment:angularApiUrl}/classes/igxbanneractionsdirective.html) ディレクティブを公開します。このディレクティブはデフォルト バナー ボタン (`Dismiss`) をオーバーライドし、ユーザー定義のカスタム操作を追加します。
 
 ```html
-    <!--banner.component.html-->
-    <igx-banner #connectionBanner>
-        <igx-icon>signal_wifi_off</igx-icon>
-        You have lost connection to the internet. This app is offline.
-        <igx-banner-actions>
-            <button igxButton igxRipple (click)="connectionBanner.toggle()">Toggle Banner</button>
-        </igx-banner-actions>
-    </igx-banner>
+<!--banner.component.html-->
+<igx-banner #connectionBanner>
+    <igx-icon>signal_wifi_off</igx-icon>
+    You have lost connection to the internet. This app is offline.
+    <igx-banner-actions>
+        <button igxButton igxRipple (click)="connectionBanner.toggle()">Toggle Banner</button>
+    </igx-banner-actions>
+</igx-banner>
 ```
 
 
@@ -127,16 +157,15 @@ Banner コンポーネントを表示するには、ボタン クリックで [`
 
 ### カスタム アニメーションの適用
 
-Banner コンポーネントには、アニメーションのオープンとクローズのカスタム設定を適用できる [`animationSettings`]({environment:angularApiUrl}/classes/igxbannercomponent.html#animationSettings) プロパティがあります。開発者は、自分で定義したアニメーションと、[`アニメーションスイート`]({environment:sassApiUrl}/index.html)のアニメーションから選択できます。バナーで使用されるデフォルト アニメーションは、`growVerIn` が開始、`growVerOut` が終了です。 
+Banner コンポーネントには、アニメーションのオープンとクローズのカスタム設定を適用できる [`animationSettings`]({environment:angularApiUrl}/classes/igxbannercomponent.html#animationSettings) プロパティがあります。開発者は、自分で定義したアニメーションと、[`アニメーション スイート`]({environment:sassApiUrl}/index.html)のアニメーションから選択できます。バナーで使用されるデフォルト アニメーションは、`growVerIn` が開始、`growVerOut` が終了です。 
 
 スライドインまたはスライドアウトするためにバナーが使用するアニメーションを変更します。
 
 ```html
 <!--banner.component.html-->
-    <igx-banner #connectionBanner [animationSettings]="animationSettings">
-        ...
-    </igx-banner>
+<igx-banner #connectionBanner [animationSettings]="animationSettings">
     ...
+</igx-banner>
 ```
 
 ```typescript
