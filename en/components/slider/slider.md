@@ -1,11 +1,12 @@
 ---
 title: Angular Slider |  Ignite UI for Angular | Infragistics
 _description: Learn how to configure a selection in a given range by using the thumb track with Angular Slider part of Ignite UI for Angular. Choose between singe and range slider types
-_keywords: angular slider, igniteui for angular, infragistics
+_keywords: angular slider, angular slider component, angular range slider component, angular range input component, angular ui components, igniteui for angular, infragistics
 ---
 
-# Slider Overview and Configuration
+# Angular Slider Component Overview
 <p class="highlight">The Ignite UI for Angular Slider is a form component which allows selection in a given range by moving a thumb along a track. The track can be defined as continuous or stepped and the slider can be configured so users can choose between single value and range (lower and upper value) slider types.</p>
+
 <div class="divider"></div>
 
 ## Angular Slider Example
@@ -17,27 +18,62 @@ _keywords: angular slider, igniteui for angular, infragistics
 
 <div class="divider--half"></div>
 
-## Usage
+## Getting Started with Ignite UI for Angular Slider
+
+To get started with the Ignite UI for Angular Slider component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+
+```cmd
+ng add igniteui-angular
+```
+
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](../general/getting-started.md) topic.
+
+The next step is to import the `IgxSliderModule` in your **app.module.ts** file.
 
 >[!WARNING]
 >**This component requires [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) to be imported in the root module of the application in order for user interactions to work as expected.**.
 
-To get started with the Slider component, you need to import the **IgxSliderModule** in to the **app.module.ts** file:
-
 ```typescript
 // app.module.ts
 
-...
+import { HammerModule } from '@angular/platform-browser';
 import { IgxSliderModule } from 'igniteui-angular';
 // import { IgxSliderModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
-    imports: [..., IgxSliderModule],
+    imports: [..., IgxSliderModule, HammerModule],
     ...
 })
 export class AppModule {}
 ```
+
+Alternatively, as of `16.0.0` you can import the `IgxSliderComponent` as a standalone dependency, or use the [`IGX_SLIDER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/slider/public_api.ts) token to import the component and all of its supporting components and directives.
+
+```typescript
+// home.component.ts
+
+import { HammerModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { IGX_SLIDER_DIRECTIVES } from 'igniteui-angular';
+// import { IGX_SLIDER_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: '<igx-slider [minValue]="0" [maxValue]="100" [step]="10" [(ngModel)]="task.completion"></igx-slider>',
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_SLIDER_DIRECTIVES, FormsModule, HammerModule]
+    /* or imports: [IgxSliderComponent, FormsModule, HammerModule] */
+})
+export class HomeComponent {
+    public task: Task;
+}
+```
+
+Now that you have the Ignite UI for Angular Slider module or directives imported, you can start using the `igx-slider` component.
+
+## Using the Angular Slider
 
 ### Discrete Slider
 By default, the Slider Component is set to discrete type. A discrete slider provides a visualization of the current value with a numeric label (bubble). The bubble can be shown upon hovering on the slider thumb.  
