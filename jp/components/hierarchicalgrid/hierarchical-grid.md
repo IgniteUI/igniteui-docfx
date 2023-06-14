@@ -395,6 +395,7 @@ $custom-theme: grid-theme(
 ### デモ
 
 <code-view style="height:505px"
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-styling" >
 </code-view>

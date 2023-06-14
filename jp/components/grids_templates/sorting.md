@@ -324,6 +324,7 @@ $custom-theme: grid-theme(
 
 
 <code-view style="height:550px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/grid/grid-sorting-styling" >
 </code-view>
@@ -334,6 +335,7 @@ $custom-theme: grid-theme(
 
 
 <code-view style="height:550px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-sorting-styling" >
 </code-view>
@@ -344,6 +346,7 @@ $custom-theme: grid-theme(
 
 
 <code-view style="height:510px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-sorting-styling" >
 </code-view>

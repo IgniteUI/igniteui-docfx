@@ -1,7 +1,7 @@
 ---
 title: Angular Accordion Component – Fully-featured collapsible panels - Infragistics 
 _description: Angular Accordion is used to build vertical expandable panels in accordion menu. Check how to do it with Ignite UI for Angular accordion component. 
-_keywords: angular accordion, angular accordion component, angular accordion example, ignite ui for angular, UI controls, infragistics
+_keywords: angular accordion, angular accordion component, angular accordion example, ignite ui for angular, angular UI components, infragistics
 ---
 
 # Angular Accordion Component Overview
@@ -24,8 +24,7 @@ In it, you can see how to define an `igx-accrodion` and its [expansion panels]({
 
 <div class="divider--half"></div>
 
-## How to install angular accordion?
-### Getting Started with Ignite UI for Angular Accordion
+## Getting Started with Ignite UI for Angular Accordion
 
 To get started with the Ignite UI for Angular Accordion component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
 
@@ -34,7 +33,7 @@ ng add igniteui-angular
 ```
 For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
 
-The next step is to import the `IgxAccordionModule` in your app.module file. 
+The next step is to import the `IgxAccordionModule` in your **app.module.ts** file. 
 
 ```typescript
 // app.module.ts
@@ -50,9 +49,41 @@ import { IgxAccordionModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
-Now that you have the Angular Material Accordion module imported, you can start with a basic configuration of the `igx-accordion` and its panels.
 
-## Usage
+Alternatively, as of `16.0.0` you can import the `IgxAccordionComponent` as a standalone dependency, or use the [`IGX_ACCORDION_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/accordion/public_api.ts) token to import the component and all of its supporting components and directives.
+
+```typescript
+// home.component.ts
+
+...
+import { IGX_ACCORDION_DIRECTIVES } from 'igniteui-angular';
+// import { IGX_ACCORDION_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: `
+    <igx-accordion>
+        <igx-expansion-panel>
+            <igx-expansion-panel-header>
+                <igx-expansion-panel-title>Title Panel 1</igx-expansion-panel-title>
+            </igx-expansion-panel-header>
+            <igx-expansion-panel-body>
+                Content Panel 1
+            </igx-expansion-panel-body>
+        </igx-expansion-panel>
+    </igx-accordion>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_ACCORDION_DIRECTIVES]
+    /* or imports: [IgxAccordionComponent] */
+})
+export class HomeComponent {}
+```
+
+Now that you have the Ignite UI for Angular Accordion module or directives imported, you can start with a basic configuration of the `igx-accordion` and its panels.
+
+## Using the Angular Accordion Component
 
 Each section in the [IgxAccordionComponent]({environment:angularApiUrl}/classes/igxaccordioncomponent.html) is defined using an [expansion panel]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html).
 Panels provide [disabled]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html#disabled), [collapsed]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html#collapsed) and [animationSettings]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html#animationSettings) properties, which give you the ability to configure the states of the panel as per your requirement. 
@@ -63,7 +94,7 @@ The accordion wraps all [`igx-expansion-panel`s]({environment:angularApiUrl}/cla
 
 ```html
 <igx-accordion #accordion [singleBranchExpand]="true">
-     <igx-expansion-panel>
+    <igx-expansion-panel>
         <igx-expansion-panel-header>
             <igx-expansion-panel-title>Title Panel 1</igx-expansion-panel-title>
         </igx-expansion-panel-header>

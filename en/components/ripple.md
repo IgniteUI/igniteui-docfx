@@ -1,25 +1,36 @@
 ---
 title: Angular Ripple Directive – Ignite UI for Angular | Infragistics
 _description: With Ignite UI for Angular Ripple directive, developers can define an area which received a ripple animation effect for powerful UI enhancement.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Ripple components, Angular Ripple controls
+_keywords: Angular Ripple component, Angular Ripple Directive, Angular Ripple control, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library
 ---
 
-# Ripple
+# Angular Ripple Directive Overview
+
 <p class="highlight">The Ignite UI for Angular Ripple component creates an animation in response to a touch or a mouse click.</p>
 
 ## Angular Ripple Example
+
 <div class="divider--half"></div>
-<div class="sample-container loading" style="height: 100px">
-    <iframe seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-5" class="lazyload" alt="Angular Ripple Example">
-</iframe></div>
+
+<code-view style="height: 100px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/interactions/ripple-sample-5" alt="Angular Ripple Example">
+</code-view>
+
 <p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
 <div class="divider--half"></div>
 
-## Usage
+## Getting Started with Ignite UI for Angular Ripple Directive
 
-### First Steps
+To get started with the Ignite UI for Angular Ripple directive, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
 
-The Ripple Directive is exported as an `NgModule`, thus all you need to do in your application is to import the `IgxRippleModule` inside your **app.module.ts** file:
+```cmd
+ng add igniteui-angular
+```
+
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+
+The next step is to import the `IgxRippleModule` in the **app.module.ts** file.
 
 ```typescript
 // app.module.ts
@@ -37,11 +48,32 @@ import { IgxRippleModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
+Alternatively, as of `16.0.0` you can import the `IgxRippleDirective` as standalone dependencies.
+
+```typescript
+// home.component.ts
+
+import { IgxRippleDirective, IgxButtonDirective } from 'igniteui-angular';
+// import { IgxRippleDirective, IgxButtonDirective } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: '<button igxButton="raised" igxRipple>Click Me</button>',
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IgxRippleDirective, IgxButtonDirective]
+})
+export class HomeComponent {}
+```
+
+Now that you have the Ignite UI for Angular Ripple module or directive imported, you can start using the `igxRipple` directive.
+
 > [!WARNING]
 > The [`igxRipple`]({environment:angularApiUrl}/classes/igxrippledirective.html) uses the Web Animation API and runs natively on [browsers that support it.](http://caniuse.com/#feat=web-animation)
 The `web-animations.min.js` polyfill is [available](https://github.com/web-animations/web-animations-js)
 for other browsers.
 
+## Using the Angular Ripple Directive
 
 ### Adding Ripple Effect
 
@@ -60,9 +92,11 @@ You can easily change the default ripple color using the `igxRipple`:
 ```html
 <button igxButton="raised" igxRipple="white">White</button>
 ```
-<div class="sample-container loading" style="height: 100px">
-    <iframe seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-6" class="lazyload">
-</iframe></div>
+
+<code-view style="height: 100px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/interactions/ripple-sample-6" alt="Angular Ripple Example">
+</code-view>
 
 ### Centered Ripple Effect 
 By default, the ripple effect starts from the position of the click event. You can change this behavior using the [`igxRippleCentered`]({environment:angularApiUrl}/classes/igxrippledirective.html#centered) property and setting the center of the element as origin.
@@ -70,9 +104,11 @@ By default, the ripple effect starts from the position of the click event. You c
 ```html
 <button igxButton="raised" igxRipple="white" [igxRippleCentered]="true">Centered</button>
 ```
-<div class="sample-container loading" style="height: 100px">
-    <iframe seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-3" class="lazyload">
-</iframe></div>
+
+<code-view style="height: 100px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/interactions/ripple-sample-3" alt="Angular Ripple Example">
+</code-view>
 
 ### Ripple Duration
 We can use the [`igxRippleDuration`]({environment:angularApiUrl}/classes/igxrippledirective.html#rippleDuration) property to change the duration of the ripple animation, which, by default, is set to 600 milliseconds.
@@ -80,9 +116,11 @@ We can use the [`igxRippleDuration`]({environment:angularApiUrl}/classes/igxripp
 ```html
 <button igxButton="raised" igxRipple [igxRippleDuration]="2000">Click Me</button>
 ```
-<div class="sample-container loading" style="height: 100px">
-    <iframe seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-4" class="lazyload">
-</iframe></div>
+
+<code-view style="height: 100px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/interactions/ripple-sample-4" alt="Angular Ripple Example">
+</code-view>
 
 ### Ripple Target
 Use the [`igxRippleTarget`]({environment:angularApiUrl}/classes/igxrippledirective.html#igxRippleTarget) property to attach a ripple effect to a specific element inside a parent element.
@@ -95,9 +133,10 @@ Use the [`igxRippleTarget`]({environment:angularApiUrl}/classes/igxrippledirecti
 ```
 Notice that no matter whether you click on the parent or the child element, the ripple effect will only appear on the button.
 
-<div class="sample-container loading" style="height: 350px">
-    <iframe seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-2" class="lazyload">
-</iframe></div>
+<code-view style="height: 350px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/interactions/ripple-sample-2" alt="Angular Ripple Example">
+</code-view>
 
 > [!NOTE]
 > The child element, which you want to target with the `igxRippleTarget` property, has to be relatively positioned.
@@ -151,6 +190,7 @@ If the component is using the [`Emulated`](themes/sass/component-themes.md#view-
 ### Demo
 
 <code-view style="height:200px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/interactions/ripple-styling" alt="Angular Ripple Example">
 </code-view>

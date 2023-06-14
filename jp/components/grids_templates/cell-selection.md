@@ -131,8 +131,15 @@ _language: ja
 以下は、範囲の選択、選択の解除、または選択したセル データを取得する方法です。
 
 ### 範囲の選択
-
-[`selectRange(range)`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#selectRange) - API を使用してセル範囲を選択します。`rowStart` と `rowEnd` は行インデックスを使用する必要があり、`columnStart` と `columnEnd` は列インデックスまたは列データフィールド値を使用できます。
+@@if (igxName === 'IgxGrid') {
+[`selectRange(range)`]({environment:angularApiUrl}/classes/igxgridcomponent.html#selectRange) - API を使用してセル範囲を選択します。`rowStart` と `rowEnd` は行インデックスを使用する必要があり、`columnStart` と `columnEnd` は列インデックスまたは列データフィールド値を使用できます。
+}
+@@if (igxName === 'IgxTreeGrid') {
+[`selectRange(range)`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#selectRange) - API を使用してセル範囲を選択します。`rowStart` と `rowEnd` は行インデックスを使用する必要があり、`columnStart` と `columnEnd` は列インデックスまたは列データフィールド値を使用できます。
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+[`selectRange(range)`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#selectRange) - API を使用してセル範囲を選択します。`rowStart` と `rowEnd` は行インデックスを使用する必要があり、`columnStart` と `columnEnd` は列インデックスまたは列データフィールド値を使用できます。
+}
 
 ```typescript
 const range = { rowStart: 2, rowEnd: 2, columnStart: 1, columnEnd: 1 };
@@ -149,11 +156,27 @@ this.grid1.selectRange(range);
 
 ### セル選択のクリア
 
-[`clearCellSelection()`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#clearCellSelection) は、現在のセル選択をクリアします。
+@@if (igxName === 'IgxGrid') {
+[`clearCellSelection()`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clearCellSelection) は、現在のセル選択をクリアします。
+}
+@@if (igxName === 'IgxTreeGrid') {
+[`clearCellSelection()`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#clearCellSelection) は、現在のセル選択をクリアします。
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+[`clearCellSelection()`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#clearCellSelection) は、現在のセル選択をクリアします。
+}
 
 ### 選択したデータの取得
 
-[`getSelectedData()`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#getSelectedData) は、選択内容に応じた形式で選択されたデータの配列を返します。
+@@if (igxName === 'IgxGrid') {
+[`getSelectedData()`]({environment:angularApiUrl}/classes/igxgridcomponent.html#getSelectedData) は、選択内容に応じた形式で選択されたデータの配列を返します。
+}
+@@if (igxName === 'IgxTreeGrid') {
+[`getSelectedData()`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#getSelectedData) は、選択内容に応じた形式で選択されたデータの配列を返します。
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+[`getSelectedData()`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#getSelectedData) は、選択内容に応じた形式で選択されたデータの配列を返します。
+}
 
 1. 3 つの異なる単一セルが選択されている場合:
 ```
@@ -208,10 +231,21 @@ expectedData = [
 ];
 ```
 
+@@if (igxName === 'IgxGrid') {
 > [!NOTE]
-> [`selectedCells()`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#selectedCells) は、セルがグリッド ビュー ポートに表示されていない場合でも、正しい結果を返します。[`getSelectedData()`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#getSelectedData) も、選択したセル データを返します。
-> [`getSelectedRanges(): GridSelectionRange[]`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#getSelectedRanges) は、キーボードとポインターの両方の操作からグリッドで現在選択されている範囲を返します。
-
+> [`selectedCells()`]({environment:angularApiUrl}/classes/igxgridcomponent.html#selectedCells) は、セルがグリッド ビュー ポートに表示されていない場合でも、正しい結果を返します。[`getSelectedData()`]({environment:angularApiUrl}/classes/igxgridcomponent.html#getSelectedData) も、選択したセル データを返します。
+> [`getSelectedRanges(): GridSelectionRange[]`]({environment:angularApiUrl}/classes/igxgridcomponent.html#getSelectedRanges) は、キーボードとポインターの両方の操作からグリッドで現在選択されている範囲を返します。
+}
+@@if (igxName === 'IgxTreeGrid') {
+> [!NOTE]
+> [`selectedCells()`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#selectedCells) は、セルがグリッド ビュー ポートに表示されていない場合でも、正しい結果を返します。[`getSelectedData()`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#getSelectedData) も、選択したセル データを返します。
+> [`getSelectedRanges(): GridSelectionRange[]`]({environment:angularApiUrl}/classes/igxgridcomponent.html#getSelectedRanges) は、キーボードとポインターの両方の操作からグリッドで現在選択されている範囲を返します。
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+> [!NOTE]
+> [`selectedCells()`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#selectedCells) は、セルがグリッド ビュー ポートに表示されていない場合でも、正しい結果を返します。[`getSelectedData()`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#getSelectedData) も、選択したセル データを返します。
+> [`getSelectedRanges(): GridSelectionRange[]`]({environment:angularApiUrl}/classes/igxgridcomponent.html#getSelectedRanges) は、キーボードとポインターの両方の操作からグリッドで現在選択されている範囲を返します。
+}
 
 ## 機能の統合
 マルチセル選択はインデックス ベースです (DOM 要素選択)。
@@ -290,6 +324,7 @@ $custom-grid-theme: grid-theme(
 
 
 <code-view style="height:620px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/grid/grid-multi-cell-selection-style" >
 </code-view>
@@ -300,6 +335,7 @@ $custom-grid-theme: grid-theme(
 ### デモ
 
 <code-view style="height:620px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-cell-style" >
 </code-view>
@@ -311,6 +347,7 @@ $custom-grid-theme: grid-theme(
 ### デモ
 
 <code-view style="height:620px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-multi-cell-selection-style" >
 </code-view>

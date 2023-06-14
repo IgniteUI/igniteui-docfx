@@ -360,6 +360,7 @@ $dark-button: button-theme(
 
 
 <code-view style="height:560px"
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/custom-grid-paging-style" >
 </code-view>
@@ -371,6 +372,7 @@ $dark-button: button-theme(
 ### デモ
 
 <code-view style="height:560px"
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-paging-style" >
 </code-view>
@@ -382,6 +384,7 @@ $dark-button: button-theme(
 ### デモ
 
 <code-view style="height:560px"
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-paging-style" >
 </code-view>

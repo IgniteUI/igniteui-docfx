@@ -1,11 +1,11 @@
 ---
 title: Angular Button Component – Ignite UI for Angular
 _description: Enhance standard buttons with built-in text, images and more features using Ignite UI for Angular Button component. Try it now.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Buttons components, Angular Buttons controls
+_keywords: Angular Button component, Angular Button control, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Angular UI Components,
 ---
 
 # Angular Button Overview
-<p class="highlight">Angular Material Button directive is used for creating and adding actionable buttons to a web page/application. There are different Angular Button types that are easy to customize and include several built-in features. By default, Angular Material uses native `<button>` and `<a>` elements to deliver an accessible experience.
+<p class="highlight">Angular Button directive is used for creating and adding actionable buttons to a web page/application. There are different Angular Button types that are easy to customize and include several built-in features. By default, Angular Material uses native `<button>` and `<a>` elements to deliver an accessible experience.
 
 The Ignite UI for Angular Button directive is intended to turn any button, span, div, or anchor element into a fully functional button. You can use the following Angular Button types - Flat Button, Raised Button, Outlined Button, Icon Button and Floating Action Button. With customizable colors, options to create themes and change the Angular Button Style and enabling users to choose the button display density and more.</p>
 
@@ -21,9 +21,17 @@ We have created the Angular Button example below to show you how different butto
 
 <div class="divider--half"></div>
 
-## How To Use Angular Button With Ignite UI
+## Getting Started with Ignite UI for Angular Button
 
-The Angular Button Directive is exported as an `NgModule`, thus all you need to do in your application is to import the `IgxButtonModule` inside your `AppModule`:
+To get started with the Ignite UI for Angular Button directive, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+
+```cmd
+ng add igniteui-angular
+```
+
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+
+The next step is to import the `IgxButtonModule` in your **app.module.ts** file. 
 
 ```typescript
 // app.module.ts
@@ -39,6 +47,27 @@ import { IgxButtonModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
+Alternatively, as of `16.0.0` you can import the `IgxButtonDirective` as a standalone dependency.
+
+```typescript
+// home.component.ts
+
+...
+import { IgxButtonDirective } from 'igniteui-angular';
+// import { IgxButtonDirective } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: '<button igxButton="flat">Flat</button>',
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IgxButtonDirective]
+})
+export class HomeComponent {}
+```
+
+Now that you have the Ignite UI for Angular Button module or directive imported, you can start using the `igxButton` directive on elements.
+
 ## Angular Button Types
 
 ### Flat Button
@@ -50,8 +79,8 @@ Use the [`igxButton`]({environment:angularApiUrl}/classes/igxbuttondirective.htm
 ```
 
 <div class="sample-container loading" style="height: 70px">
-    <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-2">
-</iframe></div>
+    <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-2"></iframe>
+</div>
 
 ### Raised Button
 
@@ -273,6 +302,7 @@ If the component is using the [`Emulated`](themes/sass/component-themes.md#view-
 
 ### Demo
 <code-view style="height: 100px"
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/buttons-style" >
 </code-view>

@@ -455,6 +455,7 @@ $custom-theme: grid-theme(
 
 
 <code-view style="height:570px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/grid/grid-groupby-styling" >
 </code-view>

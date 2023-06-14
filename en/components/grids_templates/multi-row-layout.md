@@ -94,8 +94,8 @@ IgxGridComponent with Multi-Row Layouts provides build-in keyboard navigation.
 
 The grid allows customizing the default navigation behavior when a certain key is pressed. Actions like `going to the next cell` or `cell below` could be handled easily with the powerful keyboard navigation API:
 
-- [`gridKeydown`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#gridKeydown) is exposed. The event will emit [`IGridKeydownEventArgs`]({environment:angularApiUrl}/interfaces/igridkeydowneventargs.html). This event is available only through the keyboard key combinations mentioned above, for all other key actions you can use `keydown` event `(keydown)="onKeydown($event)"`
-- [`navigateTo`]({environment:angularApiUrl}/classes/igxgridbasedirective.html#navigateTo) - this method allows you to navigate to a position based on provided `rowindex` and `visibleColumnIndex`
+- [`gridKeydown`]({environment:angularApiUrl}/classes/igxgridcomponent.html#gridKeydown) is exposed. The event will emit [`IGridKeydownEventArgs`]({environment:angularApiUrl}/interfaces/igridkeydowneventargs.html). This event is available only through the keyboard key combinations mentioned above, for all other key actions you can use `keydown` event `(keydown)="onKeydown($event)"`
+- [`navigateTo`]({environment:angularApiUrl}/classes/igxgridcomponent.html#navigateTo) - this method allows you to navigate to a position based on provided `rowindex` and `visibleColumnIndex`
 
 The demo below adds additional navigation down/up via the <kbd>Enter</kbd> and <kbd>Shift</kbd> + <kbd>Enter</kbd> keys, similar to the behavior observed in Excel.
 
@@ -243,6 +243,7 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 
 
 <code-view style="height:755px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/grid/grid-multi-row-layout-styling" >
 </code-view>

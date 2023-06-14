@@ -53,6 +53,17 @@ export class AppModule {}
 </igx-combo>
 ```
 
+### ヘッダー項目テンプレート
+`[igxComboHeaderItem]` セレクターを使用します。
+
+```html
+<igx-combo #templateCombo [data]="lData" [groupKey]="'region'">
+    <ng-template igxComboHeaderItem let-display let-key="groupKey">
+        <div class="header-item">Region: {{ display[key] }}</div>
+    </ng-template>
+</igx-combo>
+```
+
 ### ヘッダー テンプレート
 セレクター `[igxComboHeader]` の使用:
 

@@ -1,10 +1,10 @@
 ---
 title: Angular Drop Down Component –  Ignite UI For Angular
 _description: Add interactivity and see styling options to a scrollable list of items in your app. Get started using the Drop Down Component in Ignite UI for Angular now. 
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Drop Down components, Angular Drop Down controls
+_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library, Angular Drop Down component, Angular Drop Down control
 ---
 
-# Angular Drop Down Overview
+# Angular Drop Down Component Overview
 <p class="highlight">The Ignite UI for Angular Drop Down is a component, which displays a toggleable list of predefined values and allows users to easily select a single option item with a click. It can be quickly configured to act as a drop down menu or you can simply use it to deliver more useful visual information by grouping data. With grouping you can use both flat and hierarchical data. Drop Down component allows declarative binding, which makes it possible for you to embed additional content and links. This also leaves room for further UI customization and styling of the Angular drop down list appearance. In addition to this, it is packed with key features like keyboard dropdown navigation and virtualization. </p>
 <div class="divider"></div>
 
@@ -21,11 +21,15 @@ This Angular drop down example demonstrates the basic functionalities of a drop 
 
 ## Getting Started with Ignite UI for Angular Drop Down
 
-See how you can easily configure the Ignite UI Drop Down component for your Angular app. The sections below explain how to import the IgxDropDownModule and create a simple Angular Drop Down list.
+To get started with the Ignite UI for Angular Drop Down component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
 
-### First Steps
+```cmd
+ng add igniteui-angular
+```
 
-To get started with the drop-down component, first you need to import the `IgxDropDownModule` in the **app.module.ts** file:
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+
+The next step is to import the `IgxDropDownModule` in your **app.module.ts** file.
 
 ```typescript
 // app.module.ts
@@ -41,6 +45,41 @@ import { IgxDropDownModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
+
+Alternatively, as of `16.0.0` you can import the `IgxDropDownComponent` as a standalone dependency, or use the [`IGX_DROP_DOWN_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/drop-down/public_api.ts) token to import the component and all of its supporting components and directives.
+
+```typescript
+// home.component.ts
+
+import { NgFor } from '@angular/common';
+import { IGX_DROP_DOWN_DIRECTIVES, IgxToggleActionDirective, IgxButtonDirective } from 'igniteui-angular';
+// import { IGX_DROP_DOWN_DIRECTIVES, IgxToggleActionDirective, IgxButtonDirective } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: `
+    <button igxButton="raised" 
+        [igxToggleAction]="dropdown"
+        [igxDropDownItemNavigation]="dropdown">
+        Options
+    </button>
+    <igx-drop-down #dropdown>
+        <igx-drop-down-item *ngFor="let item of items">
+            {{ item.field }}
+        </igx-drop-down-item>
+    </igx-drop-down>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_DROP_DOWN_DIRECTIVES, IgxToggleActionDirective, IgxButtonDirective, NgFor]
+    /* or imports: [IgxDropDownComponent, IgxDropDownItemComponent, IgxToggleActionDirective, IgxButtonDirective, NgFor] */
+})
+export class HomeComponent {}
+```
+
+Now that you have the Ignite UI for Angular Drop Down module or directives imported, you can start using the `igx-drop-down` component.
+
+## Using the Angular Drop Down
 
 ### Add Drop Down
 
@@ -63,6 +102,7 @@ Let's create a simple drop-down that provides several option items to choose fro
 
 ```typescript
 // dropdown.component.ts
+@Component({...})
 export class MyDropDownComponent {
     public items: Array<{ field: string }> = [
         { field: 'Option 1' },
@@ -442,6 +482,7 @@ If the component is using the [`Emulated`](themes/sass/component-themes.md#view-
 ### Demo
 
 <code-view style="height:350px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-styling" >
 </code-view>

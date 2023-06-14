@@ -368,6 +368,7 @@ $custom-theme: grid-theme(
 
 
 <code-view style="height:500px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/grid/multi-column-headers-styling" >
 </code-view>
@@ -378,6 +379,7 @@ $custom-theme: grid-theme(
 
 
 <code-view style="height:500px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-multi-column-headers-styling" >
 </code-view>
@@ -388,6 +390,7 @@ $custom-theme: grid-theme(
 
 
 <code-view style="height:500px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-column-styling" >
 </code-view>

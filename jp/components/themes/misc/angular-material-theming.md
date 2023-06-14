@@ -6,7 +6,10 @@ _language: ja
 ---
 
 # Angular Material のテーマ
-<p class="highlight">Ignite UI for Angular テーマ エンジンを使用すると、[`Angular Material`](https://material.angular.io/) ライブラリなどの他のテーマ ライブラリからインポートされた外部コンポーネントと一緒に簡単に使用できます。</p>
+<p class="highlight">
+
+Ignite UI for Angular テーマ エンジンを使用すると、[`Angular Material`](https://material.angular.io/) ライブラリなどの他のテーマ ライブラリからインポートされた外部コンポーネントと一緒に簡単に使用できます。
+</p>
 <div class="divider--half"></div>
 
 ## Ignite UI と Angular Material の概要

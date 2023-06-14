@@ -1,11 +1,11 @@
 ---
-title: Angular Layout Manager Directive
+title: Angular Layout Manager Directives
 _description: Only Ignite UI for Angular Layout Manager directive provides various styles of responsive and fluid user interfaces.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Layout Manager component, Angular Layout Manager controls
 ---
 
-# Layout Manager
-<p class="highlight">The Ignite UI for Angular Layout Directive allows developers to specify a layout direction for any children of the container it is applied to. Layout can flow vertically or horizontally, with controls for wrapping, justification, and alignment.</p>
+# Angular Layout Manager Directives Overview
+<p class="highlight">The Ignite UI for Angular Layout Directives allow developers to specify a layout direction for any children of the container it is applied to. Layout can flow vertically or horizontally, with controls for wrapping, justification, and alignment.</p>
 <div class="divider"></div>
 
 ## Angular Layout Manager Example

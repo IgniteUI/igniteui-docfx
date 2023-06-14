@@ -150,6 +150,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 ## Angular Ripple の例
 
 <code-view style="height:200px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/interactions/ripple-styling" alt="Angular Ripple の例">
 </code-view>

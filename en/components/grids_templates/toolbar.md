@@ -625,6 +625,7 @@ The last step is to **include** the newly created themes.
 @@if (igxName === 'IgxGrid') {
 
 <code-view style="height:510px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/grid/grid-toolbar-style" >
 </code-view>
@@ -634,6 +635,7 @@ The last step is to **include** the newly created themes.
 @@if (igxName === 'IgxTreeGrid') {
 
 <code-view style="height:420px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-toolbar-style" >
 </code-view>
@@ -643,6 +645,7 @@ The last step is to **include** the newly created themes.
 @@if (igxName === 'IgxHierarchicalGrid') {
 
 <code-view style="height:530px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-toolbar-style" >
 </code-view>

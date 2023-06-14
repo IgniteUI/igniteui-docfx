@@ -385,6 +385,7 @@ $custom-grid-theme: grid-theme(
 @@if (igxName === 'IgxTreeGrid') {
 
 <code-view style="height:550px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-resize-line-styling" >
 </code-view>
@@ -393,6 +394,7 @@ $custom-grid-theme: grid-theme(
 @@if (igxName === 'IgxHierarchicalGrid') {
 
 <code-view style="height:550px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-resize-line-styling" >
 </code-view>

@@ -1,15 +1,16 @@
 ---
 title: Angular Expansion Panel – Ignite UI for Angular
 _description: Use our Angular expansion panel which provides an easily configurable expandable component with two states - collapsed and expanded. Try it now.
-_keywords: angular accordion, igniteui for angular, infragistics
+_keywords: angular expansion panel, angular expansion panel component, angular UI components, igniteui for angular, infragistics
 ---
-# Angular Expansion Panel Overview
+# Angular Expansion Panel Component Overview
 
 Angular Material provides developers with one of the most useful and easy-to-use layout components - Angular Expansion Panel. This feature-rich component is used to create an expandable/collapsible detailed summary view. The content can include Angular Expansion Panel animation, text, icons, header, action bar, and other elements. 
-
 <p class="highlight">
-    Ignite UI Expansion Panel [igx-expansion-panel]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) is a lightweight Angular accordion component which can be rendered in two states - collapsed or expanded. The Expansion Panel in Angular can be toggled using mouse click, or keyboard interactions. You can also combine multiple Angular Expansion Panels into Angular accordion. 
+
+Ignite UI Expansion Panel [igx-expansion-panel]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) is a lightweight Angular accordion component which can be rendered in two states - collapsed or expanded. The Expansion Panel in Angular can be toggled using mouse click, or keyboard interactions. You can also combine multiple Angular Expansion Panels into Angular accordion. 
 </p>
+
 <div class="divider--half"></div>
 
 ## Angular Expansion Panel Example
@@ -21,8 +22,20 @@ We've created this simple Angular Expansion Panel Example using Ignite UI Angula
            iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-1" >
 </code-view>
 
+<div class="divider--half"></div>
 
-First, we need to import the **IgxExpansionPanelModule** in our **app.module**:
+## Getting Started with Ignite UI for Angular Expansion Panel
+
+To get started with the Ignite UI for Angular Drop Down component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+
+```cmd
+ng add igniteui-angular
+```
+
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+
+The next step is to import the `IgxExpansionPanelModule` in your **app.module.ts** file.
+
 ```typescript
 // app.module.ts
 ...
@@ -37,26 +50,45 @@ import { IgxExpansionPanelModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-After that we can add the markup for our component:
-```html
-<!-- expansible-panel.component.html -->
-<igx-expansion-panel>
-    <igx-expansion-panel-header>
-        <igx-expansion-panel-title>
-           Golden Retriever
-        </igx-expansion-panel-title>
-        <igx-expansion-panel-description>
-           Medium-large gun dog
-        </igx-expansion-panel-description>
-    </igx-expansion-panel-header>
-    <igx-expansion-panel-body>
-        The Golden Retriever is a medium-large gun dog that retrieves shot waterfowl, 
-such as ducks and upland game birds, during hunting and shooting parties. 
-The name "retriever" refers to the breed's ability to retrieve shot game undamaged due to their soft mouth. 
-Golden retrievers have an instinctive love of water, and are easy to train to basic or advanced obedience standards.
-    </igx-expansion-panel-body>
-</igx-expansion-panel>
+Alternatively, as of `16.0.0` you can import the `IgxExpansionPanelComponent` as a standalone dependency, or use the [`IGX_EXPANSION_PANEL_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/expansion-panel/public_api.ts) token to import the component and all of its supporting components and directives.
+
+```typescript
+// home.component.ts
+
+import { IGX_EXPANSION_PANEL_DIRECTIVES } from 'igniteui-angular';
+// import { IGX_EXPANSION_PANEL_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: `
+    <igx-expansion-panel>
+        <igx-expansion-panel-header>
+            <igx-expansion-panel-title>
+            Golden Retriever
+            </igx-expansion-panel-title>
+            <igx-expansion-panel-description>
+            Medium-large gun dog
+            </igx-expansion-panel-description>
+        </igx-expansion-panel-header>
+        <igx-expansion-panel-body>
+            The Golden Retriever is a medium-large gun dog that retrieves shot waterfowl, 
+            such as ducks and upland game birds, during hunting and shooting parties. 
+            The name "retriever" refers to the breed's ability to retrieve shot game undamaged due to their soft mouth. 
+            Golden retrievers have an instinctive love of water, and are easy to train to basic or advanced obedience standards.
+        </igx-expansion-panel-body>
+    </igx-expansion-panel>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_EXPANSION_PANEL_DIRECTIVES]
+    /* or imports: [IgxExpansionPanelComponent, IgxExpansionPanelHeaderComponent, IgxExpansionPanelTitleDirective, IgxExpansionPanelDescriptionDirective, IgxExpansionPanelBodyComponent] */
+})
+export class HomeComponent {}
 ```
+
+Now that you have the Ignite UI for Angular Expansion Panel module or directives imported, you can start using the `igx-expansion-panel` component.
+
+## Using the Angular Expansion Panel
 
 The table below shows all the available markup parts for the Angular Expansion Panel.
 | Tag Name                          | Description                                                                                                            |
@@ -78,9 +110,7 @@ We can do this by binding the description to the control [`collapsed`]({environm
 import { IgxExpansionPanelComponent } from 'igniteui-angular';
 // import { IgxExpansionPanelComponent } from '@infragistics/igniteui-angular'; for licensed package
 
-@Component({
-    ...
-})
+@Component({...})
 export class ExpansionPanelComponent {
     @ViewChild(IgxExpansionPanelComponent, {read: IgxExpansionPanelComponent})
     public panel: IgxExpansionPanelComponent;
@@ -89,7 +119,7 @@ export class ExpansionPanelComponent {
 
 ```html
 <!-- in expansion-component.component.html -->
-...
+<igx-expansion-panel>
     <igx-expansion-panel-header>
         Golden Retriever
         <igx-expansion-panel-description *ngIf="panel.collapsed">
@@ -97,6 +127,7 @@ export class ExpansionPanelComponent {
         </igx-expansion-panel-description>
     </igx-expansion-panel-header>
     ...
+</igx-expansion-panel>
 ```
 
 The following code sample will show the short description only when the component is in its collapsed state.
@@ -104,6 +135,7 @@ If we want to add more complex functionality depending on the component state, w
 ```typescript
 // in expansion-panel.component.ts
 
+@Component({...})
 export class ExpansionPanelComponent {
     ...
     public handleExpansion(args: {event: Event}): void {
@@ -113,7 +145,7 @@ export class ExpansionPanelComponent {
 ```
 ```html
 <!-- in expansion-component.component.html -->
-<igx-expansion-panel (onExpanded)="handleExpansion($event)  (contentCollapsed)="handleCollapse($event)"></igx-expansion-panel>
+<igx-expansion-panel (onExpanded)="handleExpansion($event)" (contentCollapsed)="handleCollapse($event)"></igx-expansion-panel>
 ```
 
 Below we have the results:
@@ -141,16 +173,16 @@ The default icon for the toggle state of the control can be templated.
 We can do that by passing content in an `igx-expansion-panel-icon` tag:
 ```html
 <!-- in expansion-component.component.html -->
-    <igx-expansion-panel>
-    ...
-        <igx-expansion-panel-header [iconPosition]="'right'">
+<igx-expansion-panel>
+    <igx-expansion-panel-header [iconPosition]="'right'">
         ...
         <igx-expansion-panel-icon>
             <span class="example-icon" *ngIf="panel.collapsed">Show More</span>
             <span class="example-icon" *ngIf="!panel.collapsed">Show Less</span>
         </igx-expansion-panel-icon>
-        </igx-expansion-panel-header>
-    </igx-expansion-panel>
+    </igx-expansion-panel-header>   
+    ...
+</igx-expansion-panel>
 ```
 Our Angular Expansion Panel will now render "Show More" when the panel is collapsed and "Show Less" once it's fully expanded.
 
@@ -184,6 +216,7 @@ Lets see the result from all the above changes:
 ### Angular Expansion Panel Demo
 
 <code-view style="height: 440px;" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/layouts/expansion-styling" >
 </code-view>
@@ -272,9 +305,7 @@ import { useAnimation } from '@angular/animations';
 import { IgxExpansionPanelComponent, slideInLeft, slideOutRight } from 'igniteui-angular';
 // import { IgxExpansionPanelComponent, slideInLeft, slideOutRight } from '@infragistics/igniteui-angular'; for licensed package
 
-@Component({
-    ...
-})
+@Component({...})
 export class ExpansionPanelComponent {
     @ViewChild(IgxExpansionPanelComponent, {read: IgxExpansionPanelComponent})
     public panel: IgxExpansionPanelComponent;

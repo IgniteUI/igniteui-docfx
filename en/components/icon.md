@@ -4,7 +4,7 @@ _description: Developers can unify and use various icon and font sets interchang
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Icon components, Angular Icon controls
 ---
 
-# Icon
+# Angular Icon Component Overview
 <p class="highlight">The Ignite UI for Angular Icon component unifies icon/font families so developers can use them interchangeably and add material icons to markup.</p>
 
 ## Angular Icon Example
@@ -18,9 +18,17 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 <div class="divider--half"></div>
 
-## Usage
+## Getting Started with Ignite UI for Angular Icon
 
-The Icon component is exported as an `NgModule`, thus all you need to do in your application is to import the `IgxIconModule` inside your `AppModule`:
+To get started with the Ignite UI for Angular Icon component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+
+```cmd
+ng add igniteui-angular
+```
+
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+
+The next step is to import the `IgxIconModule` in your **app.module.ts** file.
 
 ```typescript
 // app.module.ts
@@ -37,7 +45,30 @@ import { IgxIconModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
-## Examples
+
+Alternatively, as of `16.0.0` you can import the `IgxIconComponent` as a standalone dependency.
+
+```typescript
+// home.component.ts
+
+import { IgxIconComponent } from 'igniteui-angular';
+// import { IgxIconComponent } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: '<igx-icon [style.color]="color">home</igx-icon>',
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IgxIconComponent]
+})
+export class HomeComponent {
+    public color = '#e41c77';
+}
+```
+
+Now that you have the Ignite UI for Angular Icon module or component imported, you can start using the `igx-icon` component.
+
+## Using the Angular Icon
 
 ### Icon Color
 
@@ -118,6 +149,47 @@ public ngOnInit() {
            iframe-src="{environment:demosBaseUrl}/data-display/svg-icon-sample" >
 </code-view>
 
+## Material Symbols
+
+Additionally, users can take advantage of the latest Material icons and their design variations included in the newly created [`Material Symbols Library`](https://fonts.google.com/icons). To start using Material Symbols, first you have to add the library to your application:
+
+```html
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+```
+
+Then we need to inject the [`IgxIconService`]({environment:angularApiUrl}/classes/igxiconservice.html) dependency and make use of its `registerFamilyAlias` method so that Material Symbols can work with `igx-icon`: 
+
+```ts
+constructor(private iconService: IgxIconService) { }
+
+public ngOnInit() {
+    // registers a 'material-symbols-outlined' class to be applied to all igx-icons with 'material-symbols' font-family
+    this.iconService.registerFamilyAlias('material-symbols', 'material-symbols-outlined');
+}
+```
+
+Now, we are ready to add the desired icon into our markup and customize it using adjustable font styles:
+
+```html
+<igx-icon family="material-symbols" class="custom-icon">diamond</igx-icon>
+```
+
+```scss
+.custom-icon {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 200,
+  'GRAD' 0,
+  'opsz' 40
+}
+```
+
+<code-view style="height: 70px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-display/material-symbols" >
+</code-view>
+
+To learn more about Material Symbols styles please visit their [`official documentation`](https://fonts.google.com/icons).
 
 ## Server-side Rendering Note
 
@@ -129,13 +201,15 @@ In order to avoid this, execute the listed steps:
 <ol>
 <li>
 Install `xmlhttprequest`:
+
 ```cmd
 npm i xmlhttprequest
 ```
 </li>
 <li>
 On the top of your `server.ts` file, add: 
-``` typescript
+
+```typescript
 (global as any).XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
 ```
 </li>
@@ -186,6 +260,7 @@ If the component is using the [`Emulated`](themes/sass/component-themes.md#view-
 ### Demo
 
 <code-view style="height:75px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-display/icon-styling" alt="Angular Icon Example">
 </code-view>

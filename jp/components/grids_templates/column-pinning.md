@@ -446,6 +446,7 @@ $custom-theme: grid-theme(
 
 
 <code-view style="height:506px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/grid/grid-pinning-styling" >
 </code-view>

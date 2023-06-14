@@ -5,10 +5,11 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 # Angular Time Picker Overview
-<p class="highlight">The time picker component allows users to input or select time portions from a dropdown/dialog with spinners, which is then mirrored in the input field. In dropdown mode, which is the default one, the input field is editable and users can also edit selected time.</p>
+<p class="highlight">The time picker component allows users to input or select time portions of a `Date` object from a dropdown or dialog with spinners, which is then mirrored in the input field. In dropdown mode, which is the default one, the input field is editable and users can also edit selected time.</p>
+
 <div class="divider--half"></div>
 
-<p>As one of the most commonly used UI components for today’s web applications, the Angular Time Picker, also known as Angular Material Time Picker, provides developers with a variety of features that provide with the ability to customize the component to create the best UX and UI experience for the users to interact with the component. There are different built-in templates for displaying a clock button, as well as features like validation, custom time formatting, and more.</p>
+<p>The time picker component has different built-in templates for displaying a clock button, as well as features like validation, custom time formatting, and more.</p>
 
 ## Angular Time Picker Example
 In general, users can enter a preferred time either through text input or by choosing a time value from an Angular Time Picker dropdown. The basic Angular Time Picker example below shows how users can easily enter the value with the help of the dropdown or by using the keyboard.
@@ -20,8 +21,17 @@ In general, users can enter a preferred time either through text input or by cho
 
 <div class="divider--half"></div>
 
-## How To Use Angular Time Picker Component With Ignite UI
-The first step is to import the `IgxTimePickerModule` in the **app.module.ts** file.
+## Getting Started with Ignite UI for Angular Time Picker
+
+To get started with the Ignite UI for Angular Time Picker component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+
+```cmd
+ng add igniteui-angular
+```
+
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+
+The next step is to import the `IgxTimePickerModule` in your **app.module.ts** file.
 
 >[!NOTE]
 >The IgxTimePicker is also dependent on both the **BrowserAnimationsModule** and **HammerModule** for touch interactions. They need to be added to the AppModule as well.
@@ -42,7 +52,32 @@ import { IgxTimePickerModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
-<div class="divider--half"></div>
+
+Alternatively, as of `16.0.0` you can import the `IgxTimePickerComponent` as a standalone dependency, or use the [`IGX_TIME_PICKER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/time-picker/public_api.ts) token to import the component and all of its supporting components and directives.
+
+```typescript
+// home.component.ts
+
+import { FormsModule } from '@angular/forms';
+import { IGX_TIME_PICKER_DIRECTIVES } from 'igniteui-angular';
+// import { IGX_TABS_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: '<igx-time-picker [(ngModel)]="time"></igx-time-picker>',
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_TIME_PICKER_DIRECTIVES, FormsModule]
+    /* or imports: [IgxTimePickerComponent, FormsModule] */
+})
+export class HomeComponent {
+    public time: Date;
+}
+```
+
+Now that you have the Ignite UI for Angular Time Picker module or directives imported, you can start using the `igx-time-picker` component.
+
+## Using the Angular Time Picker
 
 ### Default
 
@@ -425,6 +460,7 @@ If `$legacy-support` is set to `false`(default), include the component **css var
 ### Demo
 
 <code-view style="height: 600px;"
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-styling" >
 </code-view>

@@ -157,12 +157,6 @@ steps:
   displayName: 'Npm config auth'
 ```
 
-<img class="responsive-img" style="margin-bottom:10px; -webkit-box-shadow: 4px 4px 4px 4px #ccc; -moz-box-shadow: 4px 4px 4px 4px #ccc; box-shadow: 4px 4px 4px 4px #ccc; max-width: 380px"
-src="../images/general/azure-ci-pipelines-ci-yml-3.jpg"
-data-src="../images/general/azure-ci-pipelines-ci-yml-3.jpg"
-alt="Azure Pipelines CI yml update"
-title="Azure Pipelines CI yml update" />
-
 **npm registry** および **token** 変数を追加します。
 
 <img class="responsive-img" style="margin-bottom:10px; -webkit-box-shadow: 4px 4px 4px 4px #ccc; -moz-box-shadow: 4px 4px 4px 4px #ccc; box-shadow: 4px 4px 4px 4px #ccc; max-width: 600px"
@@ -194,7 +188,7 @@ before_install:
 
 ### GitHub Actions の構成
 
-`npm i(ci)` 手順の前に以下のスクリプトを [CI ワークフロー構成](https://help.github.com/en/actions/language-and-framework-guides/using-nodejs-with-github-actions)に追加します:
+**npm i(ci)** 手順の前に以下のスクリプトを [CI ワークフロー構成](https://help.github.com/en/actions/language-and-framework-guides/using-nodejs-with-github-actions)に追加します:
 
 ```cmd
 - run: echo "@infragistics:registry=https://packages.infragistics.com/npm/js-licensed/" >> ~/.npmrc
