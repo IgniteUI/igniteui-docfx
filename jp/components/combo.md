@@ -32,7 +32,7 @@ Angular ComboBox コンポーネントは、編集可能な機能を提供する
  * [テンプレート](combo-templates.md)
  * [テンプレート駆動フォーム](input-group.md)および[リアクティブ フォーム](angular-reactive-form-validation.md)との統合
 
-## Getting Started with Ignite UI for Angular ComboBox
+## Ignite UI for Angular ComboBox を使用した作業の開始
 
 Ignite UI for Angular ComboBox コンポーネントを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
 

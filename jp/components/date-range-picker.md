@@ -20,7 +20,7 @@ Angular Date Range Picker は、ユーザーが開始日と終了日の値を簡
 <div class="divider--half"></div>
 
 
-## Getting Started with Ignite UI for Angular Date Range Picker
+## Ignite UI for Angular Date Range Picker を使用した作業の開始
 
 Ignite UI for Angular Date Range Picker コンポーネントを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
 

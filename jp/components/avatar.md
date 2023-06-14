@@ -18,7 +18,7 @@ _language: ja
 
 <div class="divider--half"></div>
 
-## Getting Started with Ignite UI for Angular Avatar
+## Ignite UI for Angular Avatar を使用した作業の開始
 
 Ignite UI for Angular Avatar コンポーネントを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
 
