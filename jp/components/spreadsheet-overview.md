@@ -8,7 +8,7 @@ mentionedTypes: ['Spreadsheet']
 
 # Angular Spreadsheet の概要
 
-Angular Spreadsheet (Excel ビューア) コンポーネントは軽量で機能が豊富で、科学、ビジネス、財務など、あらゆる種類のスプレッドシート データを操作、視覚化、編集するために必要なすべてのオプションが用意されています。すべての情報は、セル、ペイン、およびワークシート間を直感的かつ簡単にナビゲートできる表形式で表示できます。[`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_spreadsheet.igxspreadsheetcomponent.html) は、Excel のような柔軟なインターフェイス、詳細なチャート、およびアクティブ化、セル編集、条件付き書式設定、スタイル設定、選択、クリップボードなどの機能によって補完されます。
+Angular Spreadsheet (Excel ビューア) コンポーネントは軽量で機能が豊富で、科学、ビジネス、財務など、あらゆる種類のスプレッドシート データを操作、視覚化、編集するために必要なすべてのオプションが用意されています。すべての情報は、セル、ペイン、およびワークシート間を直感的かつ簡単にナビゲートできる表形式で表示できます。[`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) は、Excel のような柔軟なインターフェイス、詳細なチャート、およびアクティブ化、セル編集、条件付き書式設定、スタイル設定、選択、クリップボードなどの機能によって補完されます。
 
 ## Angular Spreadsheet の例
 
@@ -65,7 +65,7 @@ npm install --save igniteui-angular-spreadsheet
 
 ## モジュールの要件
 
-[`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_spreadsheet.igxspreadsheetcomponent.html) を作成するには、以下のモジュールが必要です。
+[`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html) を作成するには、以下のモジュールが必要です。
 
 ```ts
 import { IgxExcelModule } from 'igniteui-angular-excel';
@@ -95,7 +95,7 @@ Angular スプレッドシート モジュールがインポートされたの�
 
 > \[!Note]
 >
-> 次のコード スニペットでは、外部の [ExcelUtility](excel-utility.md) クラスを使用して [`workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_spreadsheet.igxspreadsheetcomponent.html#workbook) を保存およびロードしています。
+> 次のコード スニペットでは、外部の [ExcelUtility](excel-utility.md) クラスを使用して [`workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#workbook) を保存およびロードしています。
 
 以下は、ワークブックを Angular スプレッドシートにロードする方法を示しています。
 
@@ -118,5 +118,5 @@ ngOnInit() {
 
 ## API リファレンス
 
-*   [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_spreadsheet.igxspreadsheetcomponent.html)
-*   [`workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_spreadsheet.igxspreadsheetcomponent.html#workbook)
+*   [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html)
+*   [`workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#workbook)
