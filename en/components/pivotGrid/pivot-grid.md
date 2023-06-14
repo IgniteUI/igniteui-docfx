@@ -1,12 +1,12 @@
 ---
 title: Angular Pivot Grid & Table – Ignite UI for Angular
 _description: Create fast, responsive Angular pivot grids and tables with Ignite UI for Angular. Perform complex analysis and apply data sorting, grouping, or filtering.
-_keywords: angular pivot grid, angular material pivot table, ignite ui for angular
+_keywords: angular pivot grid, angular pivot grid component, angular pivot table, angular pivot table component, angular pivot data table, angular material pivot table, angular ui components, ignite ui for angular
 ---
 
-# Angular Pivot Grid Overview
+# Angular Pivot Grid Component Overview
 
-Pivot Grids are used for summing up and representing voluminous multidimensional data in a cross-tabular format. The data summary can be easily and quickly sorted, grouped, or filtered. Such data can include sums, averages, and other statistics. End-users are enabled to modify the pivot table layout through drag-and-drop operations, according to their needs.
+Ignite UI for Angular Pivot Grid is a UI component representing a table of grouped values and aggregates that lets you organize and summarize data in a tabular form. It is a data summarization tool that is used to reorganize and summarize selected columns and rows of data coming from a spreadsheet or database table to obtain a desired report.
 
 ## What is Angular Pivot Grid? 
 
@@ -15,7 +15,7 @@ The Angular Pivot Grid component presents data in a pivot table and helps pe
 The `IgxPivotGridComponent` gives the ability to users to configure and display their data in a multi-dimensional pivot table structure.
 The rows and columns represent distinct data groups, and the data cell values represent aggregations. This allows complex data analysis based on a simple flat data set. The `IgxPivotGridComponent` is a feature-rich pivot table that provides easy configuration of the different dimensions and values as well as additional data operations on them like filtering and sorting.
 
-## Angular Pivot Grid example
+## Angular Pivot Grid Example
 
 The following is an Angular Pivot Grid example in combination with the Angular Pivot Data Selector Component. This way you can have more flexible runtime configuration options.
 
@@ -24,7 +24,61 @@ The following is an Angular Pivot Grid example in combination with the Angular P
            iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-datasource" alt="Angular Pivot Grid with Pivot Selector Example">
 </code-view>
 
-## Getting started with Angular Pivot Grid
+## Getting started with Ignite UI for Angular Pivot Grid
+
+To get started with the Ignite UI for Angular Pivot Grid component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+
+```cmd
+ng add igniteui-angular
+```
+
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](../general/getting-started.md) topic.
+
+The next step is to import the `IgxPivotGridModule` in your **app.module.ts** file.
+
+```typescript
+// app.module.ts
+
+import { IgxPivotGridModule } from 'igniteui-angular';
+// import { IgxPivotGridModule } from '@infragistics/igniteui-angular'; for licensed package
+
+@NgModule({
+    imports: [
+        ...
+        IgxPivotGridModule,
+        ...
+    ]
+})
+export class AppModule {}
+```
+
+Alternatively, as of `16.0.0` you can import the `IgxPivotGridComponent` as a standalone dependency, or use the [`IGX_PIVOT_GRID_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/grids/pivot-grid/public_api.ts) token to import the component and all of its supporting components and directives.
+
+```typescript
+// home.component.ts
+
+import { IGX_PIVOT_GRID_DIRECTIVES } from 'igniteui-angular';
+// import { IGX_PIVOT_GRID_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: `
+    <igx-pivot-grid [data]="data" [pivotConfiguration]="pivotConfigHierarchy">
+    </igx-pivot-grid>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_PIVOT_GRID_DIRECTIVES]
+    /* or imports: [IgxPivotGridComponent] */
+})
+export class HomeComponent {
+    public data: Transaction [];
+}
+```
+
+Now that you have the Ignite UI for Angular Pivot Grid module or directives imported, you can start using the `igx-pivot-grid` component.
+
+## Using the Angular Pivot Grid
 
 The Angular Pivot Grid Component can be configured via the [`pivotConfiguration`]({environment:angularApiUrl}/classes/igxpivotgridcomponent.html#pivotConfiguration) property.
 

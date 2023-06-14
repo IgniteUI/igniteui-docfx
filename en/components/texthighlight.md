@@ -1,14 +1,14 @@
 ---
 title: Angular Text Highlight Directive | Ignite UI for Angular
 _description: The Ignite UI for Angular TextHighlight directive can be used to highlight parts of text and have an active highlight on one of them.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Components, Native Angular Controls, Native Angular Components Library, Angular TextHighlight Directive, IgxTextHighlight Directive
+_keywords: Angular TextHighlight Directive, Angular Text Highlight Directive, IgxTextHighlight Directive, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Components, Angular UI Components, Native Angular Components Library
 ---
 
-# TextHighlight Directive
+# Angular Text Highlight Directive Overview
 
 The [`IgxTextHighlight`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html) directive in Ignite UI for Angular is used to highlight parts of a text, providing options for case sensitive searches and to highlight only exact matches. It also allows the developer to keep an active highlight, which can be any of the already highlighted parts.
 
-## Angular TextHighlight Directive Example   
+## Angular Text Highlight Directive Example   
 
 
 <code-view style="height: 260px;" 
@@ -18,17 +18,23 @@ The [`IgxTextHighlight`]({environment:angularApiUrl}/classes/igxtexthighlightdir
 
 <div class="divider--half"></div>
 
-## Usage
+## Getting Started with Ignite UI for Angular Text Highlight Directive
 
-To get started with the Ignite UI for Angular TextHighlight directive you need to import the `IgxTextHighlightModule` in the **app.module.ts** file along with the other Ignite UI for Angular modules we need for our application.
+To get started with the Ignite UI for Angular Text Highlight directive, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+
+```cmd
+ng add igniteui-angular
+```
+
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+
+The next step is to import the `IgxTextHighlightModule` in your **app.module.ts** file.
 
 ```typescript
 // app.module.ts
 ...
-import { IgxButtonModule, IgxInputGroupModule,
-        IgxIconModule, IgxRippleModule, IgxTextHighlightModule } from 'igniteui-angular';
-// import { IgxButtonModule, IgxInputGroupModule,
-//        IgxIconModule, IgxRippleModule, IgxTextHighlightModule } from '@infragistics/igniteui-angular'; for licensed package
+import { IgxTextHighlightModule } from 'igniteui-angular';
+// import { IgxTextHighlightModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -37,6 +43,36 @@ import { IgxButtonModule, IgxInputGroupModule,
 })
 export class AppModule {}
 ```
+
+Alternatively, as of `16.0.0` you can import the `IgxTextHighlightDirective` as a standalone dependency.
+
+```typescript
+// home.component.ts
+
+import { IgxTextHighlightDirective } from 'igniteui-angular';
+// import { IgxTextHighlightDirective } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: `
+    <div igxTextHighlight
+        [value]="html"
+        [groupName]="'group1'"
+        [containerClass]="'search-text'"
+        class="search-text">
+        {{html}}
+    </div>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IgxTextHighlightDirective]
+})
+export class HomeComponent {}
+```
+
+Now that you have the Ignite UI for Angular Text Highlight module or directive imported, you can start using the `igxTextHighlight` directive.
+
+## Using the Angular Text Highlight Directive
 
 Let's create a search box that we can use to highlight different parts of the text. We will use Ignite UI for Angular's [InputGroup](input-group.md) component in which we will add a text input with buttons for clear matches, find next, find previous, and a button for specifying whether the search will be case-sensitive or not. Also it has a label for how many matches we have found.
 
