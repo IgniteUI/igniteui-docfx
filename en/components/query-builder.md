@@ -1,17 +1,18 @@
 ---
 title: Angular Query Builder Component - Ignite UI for Angular
 _description: Angular Query Builder allows users to build complex custom queries in angular apps with a great UI experience. Try it Now.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Query Builder component, Angular Query Builder control
+_keywords: Angular Query Builder component, Angular Query Builder control, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library
 ---
 
 
-# Angular Query Builder Overview
+# Angular Query Builder Component Overview
 
-Angular Query Builder provides a feature rich UI that allows developers to build complex data filtering queries for a specified data set. With this component they can build a tree of expressions and set AND/OR conditions between them with editors and condition lists determined by each field's data type. The expression tree can then be easily transformed to a query in the format the backend supports.
+Angular Query Builder provides a rich UI that allows developers to build complex data filtering queries for a specified data set. With this component they can build a tree of expressions and set AND/OR conditions between them with editors and condition lists determined by each field's data type. The expression tree can then be easily transformed to a query in the format the backend supports.
 
 <p class="highlight">
 
 The [`IgxQueryBuilderComponent`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html) component provides a way to build complex queries through the UI. By specifying AND/OR operators, conditions and values the user creates an expression tree which describes the query. 
+
 </p>
 
 ## Angular Query Builder Example
@@ -25,7 +26,67 @@ We’ve created this Angular Query Builder example to show you the default funct
 
 <div class="divider--half"></div>
 
-## Interaction
+## Getting Started with Ignite UI for Angular Query Builder
+
+To get started with the Ignite UI for Angular Query Builder component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+
+```cmd
+ng add igniteui-angular
+```
+
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+
+The next step is to import the `IgxQueryBuilderModule` in the **app.module.ts** file.
+
+```typescript
+// app.module.ts
+
+import { IgxQueryBuilderModule } from 'igniteui-angular';
+// import { IgxQueryBuilderModule } from '@infragistics/igniteui-angular'; for licensed package
+
+@NgModule({
+    ...
+    imports: [..., IgxQueryBuilderModule],
+    ...
+})
+export class AppModule {}
+```
+
+Alternatively, as of `16.0.0` you can import the `IgxQueryBuilderComponent` as a standalone dependency, or use the [`IGX_QUERY_BUILDER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/query-builder/public_api.ts) token to import the component and all of its supporting components and directives.
+
+```typescript
+// home.component.ts
+
+import { IGX_QUERY_BUILDER_DIRECTIVES, FilteringExpressionsTree, FieldType } from 'igniteui-angular';
+// import { IGX_QUERY_BUILDER_DIRECTIVES, FilteringExpressionsTree, FieldType } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: `
+    <igx-query-builder #queryBuilder
+        [fields]="fields"
+        [(expressionTree)]="expressionTree"
+        (expressionTreeChange)="onExpressionTreeChange()">
+    </igx-query-builder>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_QUERY_BUILDER_DIRECTIVES]
+    /* or imports: [IgxQueryBuilderComponent] */
+})
+export class HomeComponent {
+    public expressionTree: FilteringExpressionsTree;
+    public fields: FieldType [];
+
+    public onExpressionTreeChange() {
+        ...
+    }
+}
+```
+
+Now that you have the Ignite UI for Angular Query Builder module or directives imported, you can start using the `igx-query-builder` component.
+
+## Using the Angular Query Builder
 
 If no expression tree is initially set, you start with creating a group of conditions linked with [`AND`]({environment:angularApiUrl}/enums/filteringlogic.html#and) or [`OR`]({environment:angularApiUrl}/enums/filteringlogic.html#or). After that, conditions or sub-groups can be added. 
 
@@ -34,8 +95,6 @@ In order to add a condition, a field, an operand based on the field dataType and
 If you select more than one condition chip, a context menu appears with options to create a group or delete the queries. If you choose to create a group with the selected conditions, the newly created group will appear where the topmost selected condition was placed.
 
 In order to select a group, you can also click on its vertical line, which is colored based on the linking condition ([`AND`]({environment:angularApiUrl}/enums/filteringlogic.html#and) or [`OR`]({environment:angularApiUrl}/enums/filteringlogic.html#or)). If a single group is selected, you get a context menu with options to change its logic, ungroup or delete it.
-
-## Getting Started with Ignite UI for Angular Query Builder Component
 
 You can start using the component by setting the [`fields`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html#fields) property to an array describing the field name and its data type. It will automatically assign the corresponding operands based on the data type.
 The Query Builder has the [`expressionTree`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html#expressionTree) input property. You could use it to set an initial state of the control and access the user-specified filtering logic.

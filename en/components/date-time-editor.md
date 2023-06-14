@@ -4,7 +4,7 @@ _description: The Ignite UI for Angular Date Time Editor Directive allows the us
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components, Angular Date Time Editor Directive, Angular Date Time Directive control, Date Time Editor, Angular Date Time Directive
 ---
 
-# Date Time Editor Directive
+# Angular Date Time Editor Directive
 <p class="highlight">The Ignite UI for Angular Date Time Editor Directive allows the user to set and edit the date and time in a chosen input element. The user can edit the date or time portion, using an editable masked input. Additionally, one can specify a desired display and input format, as well as min and max values to utilize validation.</p>
 <div class="divider"></div>
 
@@ -17,9 +17,17 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 <div class="divider--half"></div>
 
+## Getting Started with Angular Date Time Editor Directive
 
-## Usage
-To get started with the Ignite UI for Angular Date Time Directive, let's first import the `IgxDateTimeEditorModule` in the **app.module.ts** file:
+To get started with the Ignite UI for Angular Date Time Editor directive, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+
+```cmd
+ng add igniteui-angular
+```
+
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+
+The next step is to import the `IgxDateTimeEditorModule` in your **app.module.ts** file.
 
 ```typescript
 // app.module.ts
@@ -36,6 +44,34 @@ import { IgxDateTimeEditorModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
+Alternatively, as of `16.0.0` you can import the `IgxDateTimeEditorDirective` as a standalone dependency.
+
+```typescript
+// home.component.ts
+
+import { IgxDateTimeEditorDirective, IGX_INPUT_GROUP_DIRECTIVES } from 'igniteui-angular';
+// import { IgxDateTimeEditorDirective, IGX_INPUT_GROUP_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: `
+    <igx-input-group>
+        <input type="text" igxInput igxDateTimeEditor [value]="date" />
+    </igx-input-group>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IgxDateTimeEditorDirective, IGX_INPUT_GROUP_DIRECTIVES]
+})
+export class HomeComponent {
+    public date = new Date();
+}
+```
+
+Now that you have the Ignite UI for Angular Date Time Editor module or directive imported, you can start using the `igxDateTimeEditor` directive.
+
+## Using the Angular Date Time Editor Directive
+
 To use an input as a date time editor, set an igxDateTimeEditor directive and a valid date object as value. In order to have complete editor look and feel, wrap the input in an [igx-input-group](input-group.md). This will allow you to not only take advantage of the following directives [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html), [`igxLabel`](label-input.md), [`igx-prefix`](input-group.md#prefix--suffix), [`igx-suffix`](input-group.md#prefix--suffix), [`igx-hint`](input-group.md#hints), but will cover common scenarios when dealing with form inputs as well.
 
 ### Binding
@@ -51,6 +87,7 @@ public date = new Date();
 ```
 
 To create a two-way data-binding, set an `ngModel`:
+
 ```html
 <igx-input-group>
     <input type="text" igxInput igxDateTimeEditor [(ngModel)]="date"/>
