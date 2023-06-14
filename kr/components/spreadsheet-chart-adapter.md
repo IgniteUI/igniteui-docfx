@@ -8,7 +8,7 @@ mentionedTypes: ['Spreadsheet']
 
 # Angular Spreadsheet Chart Adapter
 
-The Angular Spreadsheet component allows displaying charts in your [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_spreadsheet.igxspreadsheetcomponent.html).
+The Angular Spreadsheet component allows displaying charts in your [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html).
 
 ## Demo
 
@@ -23,7 +23,7 @@ The Angular Spreadsheet component allows displaying charts in your [`IgxSpreadsh
 
 ## Chart Adapter Overview
 
-Using [`chartAdapter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_spreadsheet.igxspreadsheetcomponent.html#chartadapter) you can display the charts in the spreadsheet. The spreadsheet chart adapters creates and initializes chart elements for the spreadsheet based on a Infragistics.Documents.Excel.WorksheetChart instance.
+Using [`chartAdapter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#chartadapter) you can display the charts in the spreadsheet. The spreadsheet chart adapters creates and initializes chart elements for the spreadsheet based on a Infragistics.Documents.Excel.WorksheetChart instance.
 
 In order to add a WorksheetChart to a worksheet, you must use the `addChart` method of the worksheet’s Shapes collection.You can find more detail of adding charts in Excel `here`.
 
@@ -85,7 +85,7 @@ There are over 35 chart types supported by the Spreadsheet ChartAdapters includi
 
 > \[!Note]
 >
-> In the following code snippet, an external [ExcelUtility](excel-utility.md) class is used to save and load a [`workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_spreadsheet.igxspreadsheetcomponent.html#workbook).
+> In the following code snippet, an external [ExcelUtility](excel-utility.md) class is used to save and load a [`workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#workbook).
 
 When setting up your spreadsheet control to add charts, you will need to import the `WorksheetChartAdapter` class like so:
 
