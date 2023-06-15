@@ -1,11 +1,11 @@
 ---
 title: Mask ディレクティブ - ネイティブ Angular | Ignite UI for Angular
 _description: Ignite UI for Angular Mask ディレクティブを使用すると、構成可能なマスク ルールに基づいてユーザー入力を制御し、表示される値を書式設定できます。入力オプションも構成できます。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Mask ディレクティブ, マスク, ディレクティブ, マスク エディター, Angular Mask エディター
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント, Angular, ネイティブ Angular コンポーネント スィート, Angular UI コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular Mask ディレクティブ, マスク, ディレクティブ, マスク エディター, Angular Mask エディター
 _language: ja
 ---
 
-# Mask
+# Angular Mask (マスク) ディレクティブの概要
 
 **テキスト入力フィールド**に [`igxMask`]({environment:angularApiUrl}/classes/igxmaskdirective.html) ディレクティブを適用し、構成可能なマスク ルールに基づいてユーザー入力を制御して表示される値を書式設定できます。入力オプションも構成できます。
 
@@ -18,10 +18,20 @@ _language: ja
 
 <div class="divider--half"></div>
 
-## 使用方法
-[`igxMask`]({environment:angularApiUrl}/classes/igxmaskdirective.html) ディレクティブは **text** 型の入力に使用します。
+## Ignite UI for Angular Mask を使用した作業の開始
 
-はじめに、**app.module.ts** ファイルに `IgxMaskModule` と `IgxInputGroupModule` をインポートします。
+Ignite UI for Angular Mask ディレクティブを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
+
+```cmd
+ng add igniteui-angular
+```
+
+Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
+
+次に、**app.module.ts** ファイルに `IgxMaskModule` と `IgxInputGroupModule` をインポートします。 
+
+>[!NOTE]
+>[`igxMask`]({environment:angularApiUrl}/classes/igxmaskdirective.html) ディレクティブは、**text** タイプの入力で使用されます。
 
 ```typescript
 // app.module.ts
@@ -32,19 +42,47 @@ import { IgxMaskModule, IgxInputGroupModule } from 'igniteui-angular';
 
 @NgModule({
     ...
-    imports: [..., IgxInputGroupModule, IgxMaskModule]
+    imports: [..., IgxMaskModule, IgxInputGroupModule],
     ...
 })
 export class AppModule {}
 ```
 
-<div class="divider--half"></div>
+あるいは、`16.0.0` 以降、`IgxMaskDirective` をスタンドアロンの依存関係としてインポートできます。
+
+```typescript
+// home.component.ts
+
+import { IgxMaskDirective, IGX_INPUT_GROUP_DIRECTIVES } from 'igniteui-angular';
+// import { IgxMaskDirective, IGX_INPUT_GROUP_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: `
+    <igx-input-group>
+        <igx-prefix>
+            <igx-icon>phone</igx-icon>
+        </igx-prefix>
+        <label igxLabel>Phone</label>
+        <input igxInput type="text" [igxMask]="'(####) 00-00-00 Ext. 9999'"/>
+    </igx-input-group>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IgxMaskDirective, IGX_INPUT_GROUP_DIRECTIVES]
+})
+export class HomeComponent {}
+```
+
+Ignite UI for Angular Mask モジュールまたはディレクティブをインポートしたので、`igxMask` ディレクティブの使用を開始できます。
+
+## Angular Mask の使用
 
 ### サポートされる定義済みマスク ルール
 <div class="divider--half"></div>
 
 | マスク文字 | 説明 |
-| :--- | :--- | 
+| :--- | :--- |
 | 0 | 数値が必須 (0-9) |
 | 9 | 数値 (0-9) またはスペースが必須 |
 | # | 数値 (0-9)、正符号 (+)、または負符号 (-) が必須|
@@ -101,14 +139,14 @@ export class AppModule {}
 ```typescript
 // sample.component.ts
 
-public socialSecurityNumber: string = "123-45-6789";
+public socialSecurityNumber: string = '123-45-6789';
 public includeLiterals: boolean = true;
 
 public clear() {
     if (this.includeLiterals === false){
-        this.socialSecurityNumber = "123-45-6789";
+        this.socialSecurityNumber = '123-45-6789';
     } else {
-        this.socialSecurityNumber = "";
+        this.socialSecurityNumber = '';
     }
 }
 ```
@@ -140,12 +178,12 @@ public clear() {
 
 public validateDate(dateInput, snackbar) {
     if (!this.isDateValid(dateInput.value)) {
-        this.notify(snackbar, "Invalid Date", dateInput);
+        this.notify(snackbar, 'Invalid Date', dateInput);
     }
 }
 
 private isDateValid(date) {
-    return (new Date(date).toLocaleString() !== "Invalid Date");
+    return (new Date(date).toLocaleString() !== 'Invalid Date');
 }
 
 private notify(snackbar, message, input) {
@@ -196,16 +234,16 @@ export class AppModule {}
 ### focus と blur に追加の書式を適用
 デフォルトの mask 動作に加え、カスタムパイプを実装して [`focusedValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#focusedValuePipe) や [`displayValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#displayValuePipe) 入力プロパティで入力がフォーカスを get または lost した場合に値を必要なアウトプットへ変換できます。基になるモデル値に影響はありません。以下はその方法です。
 
- 表示値の最後に '%' サインを追加または削除する 2 つのパイプを実装します。
+表示値の最後に '%' サインを追加または削除する 2 つのパイプを実装します。
 ```typescript
-@Pipe({ name: "displayFormat" })
+@Pipe({ name: 'displayFormat' })
 export class DisplayFormatPipe implements PipeTransform {
     public transform(value: any): string {
-        return value + " %";
+        return value + ' %';
     }
 }
 
-@Pipe({ name: "inputFormat" })
+@Pipe({ name: 'inputFormat' })
 export class InputFormatPipe implements PipeTransform {
     public transform(value: any): string {
         return value;

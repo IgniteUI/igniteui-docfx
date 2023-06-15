@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-# Navigation Drawer
+# Angular Navigation Drawer (ナビゲーション ドロワー) コンポーネントの概要
 <p class="highlight">Ignite UI for Angular Navigation Drawer コンポーネントはサイド ナビゲーション コンテナーです。コンテンツの上からスライドインまたはスライドアウト、もしくはコンテンツ内で展開/縮小するためにピン固定できます。 ミニ バージョンが閉じている場合もナビゲーションへのクイック アクセスを提供します。Navigation Drawer はレスポンシブ モード選択およびタッチ ジェスチャをサポートします。コンテンツは、デフォルトのメニュー項目スタイル設定を使用する他、カスタマイズも可能です。</p>
 <div class="divider"></div>
 
@@ -21,27 +21,81 @@ _language: ja
 
 <div class="divider--half"></div>
 
-## 依存関係
+## Ignite UI for Angular Navigation Drawer を使用した作業の開始
+
+Ignite UI for Angular Navigation Drawer コンポーネントを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
+
+```cmd
+ng add igniteui-angular
+```
+
+Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
+
+はじめに、**app.module.ts** ファイルに `IgxNavigationDrawerModule` をインポートします。 
 
 >[!NOTE]
->このコンポーネントでは、タッチ操作が正しく動作するために、アプリケーションのルート モジュールに [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) をインポートする必要があります。 
+> [`IgxNavigationDrawerComponent`]({environment:angularApiUrl}/classes/igxnavigationdrawercomponent.html) はタッチ操作の [`BrowserAnimationsModule`](https://angular.io/api/platform-browser/animations/BrowserAnimationsModule) と [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) にも依存するため、これらを AppModule にも追加する必要があります。
 
-必要となるすべての依存関係を含むために `IgxNavigationDrawerModule` を使用して、'igniteui-angular/navigation-drawer' からアプリケーションにインポートします。
-```ts
+```typescript
+// app.module.ts
+...
+import { HammerModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { IgxNavigationDrawerModule } from 'igniteui-angular';
+// import { IgxNavigationDrawerModule } from '@infragistics/igniteui-angular'; for licensed package
+
 @NgModule({
-    imports: [
-        IgxNavigationDrawerModule
-    ]
+    ...
+    imports: [..., BrowserAnimationsModule, HammerModule, IgxNavigationDrawerModule],
+    ...
 })
-export class AppModule {
+export class AppModule {}
+```
+
+あるいは、`16.0.0` 以降、`IgxNavigationDrawerComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_NAVIGATION_DRAWER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/navigation-drawer/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
+
+```typescript
+// home.component.ts
+
+import { HammerModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgFor } from '@angular/common';
+import { IGX_NAVIGATION_DRAWER_DIRECTIVES, IgxRippleDirective, IgxIconComponent } from 'igniteui-angular';
+// import { IGX_NAVIGATION_DRAWER_DIRECTIVES, IgxRippleDirective, IgxIconComponent } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: `
+    <div class="content-wrap">
+        <igx-nav-drawer [isOpen]="true">
+            <ng-template igxDrawer>
+                <nav>
+                    <span igxDrawerItem [isHeader]="true">Components</span>
+                    <span *ngFor="let item of navItems" igxDrawerItem [active]="item.text === selected" igxRipple (click)="navigate(item)">
+                        <igx-icon fontSet="material">{{ item.name }}</igx-icon>
+                        <span>{{ item.text }}</span>
+                    </span>
+                </nav>
+            </ng-template>
+        </igx-nav-drawer>
+        <main>
+            <!-- app content -->
+        </main>
+    </div>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [BrowserAnimationsModule, HammerModule, IGX_NAVIGATION_DRAWER_DIRECTIVES, IgxRippleDirective, IgxIconComponent, NgFor]
+    /* or imports: [BrowserAnimationsModule, HammerModule, IgxNavigationDrawerComponent, IgxNavDrawerTemplateDirective, IgxNavDrawerItemDirective, IgxIconComponent, IgxRippleDirective, NgFor] */
+})
+export class HomeComponent {
+    public navItems: Product [];
 }
 ```
 
-> または、両方のモジュールで [`IgxNavigationDrawerComponent`]({environment:angularApiUrl}/classes/igxnavigationdrawercomponent.html) および追加のディレクティブをエクスポートするため、必要に応じてそれを別に宣言/参照できます。
+Ignite UI for Angular Navigation Drawer モジュールまたはディレクティブをインポートしたので、`igx-nav-drawer` コンポーネントの使用を開始できます。
 
-<div class="divider--half"></div>
-
-## 使用方法
+## Angular Navigation Drawer の使用
 
 依存関係をインポートした後、Navigation Drawer をコンポーネントのテンプレートで定義できます。
 
@@ -81,7 +135,7 @@ Drawer のコンテンツを igxDrawer ディレクティブでデコレート�
 > `igxDrawerMini` ディレクティブでデコレートした追加のテンプレートを閉じた状態の代わりの [Mini バリアント](#ミニ-バリアント)として提供できます。 
 
 > [!NOTE]
-> Navigation Drawer はコンテンツの上にフローティングさせるか、隣に固定配置できます。デフォルトでは、ドロワーはビューポートのサイズに応じてこれらのモードを切り替えます。詳細は [モード](#モード) を参照してください。
+> Navigation Drawer はコンテンツの上にフローティングさせるか、隣に固定配置できます。デフォルトでは、ドロワーはビューポートのサイズに応じてこれらのモードを切り替えます。詳細は[モード](#モード)を参照してください。
 
 モードの間に切り替えるため、2 つのコンテンツ セクションの周りに簡易なラッパーを以下のようにスタイルできます。
 ```css
@@ -98,6 +152,7 @@ Navigation drawer に要素を追加して選択するためには、typescript 
 
 ```ts
 /* app.component.ts */
+@Component({...})
 export class AppComponent {
     public navItems = [
         { name: 'account_circle', text: 'Avatar' },
@@ -133,8 +188,8 @@ Navigation Drawer は [`igxNavigationService`]({environment:angularApiUrl}/class
 import { Component, ViewChild } from '@angular/core';
 import { IgxNavigationDrawerComponent } from 'igniteui-angular';
 // import { IgxNavigationDrawerComponent } from '@infragistics/igniteui-angular'; for licensed package
-...
 
+@Component({...})
 export class AppComponent  {
     @ViewChild(IgxNavigationDrawerComponent, { static: true })
     public drawer: IgxNavigationDrawerComponent;
@@ -450,6 +505,5 @@ $custom-theme: navdrawer-theme(
 <div class="divider--half"></div>
 
 ## API とスタイル リファレンス
-
 * [IgxNavigationDrawerComponent API]({environment:angularApiUrl}/classes/igxnavigationdrawercomponent.html)
 * [IgxNavigationDrawerComponent スタイル]({environment:sassApiUrl}/index.html#function-navdrawer-theme)

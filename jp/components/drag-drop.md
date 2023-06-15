@@ -1,11 +1,11 @@
 ---
 title: Angular Drag and Drop | IgniteUI for Angular | インフラジスティックス
 _description: Ignite UI for Angular Drag and Drop ディレクティブを使用してページの要素のドラッグ実行する方法を紹介します。
-_keywords: Angular Drag and Drop, Ignite UI for Angular, インフラジスティックス
+_keywords: Angular Drag and Drop, Angular Drag and Drop ディレクティブ, Angular UI コントロール, Ignite UI for Angular, インフラジスティックス
 _language: ja
 ---
 
-# Drag and Drop
+# Angular Drag and Drop (ドラッグアンドドロップ) ディレクティブの概要
 <p class="highlight">Ignite UI for Angular Drag and Drop ディレクティブは、ページの要素のドラッグを有効にします。サポートされている機能には自由自在のドラッグ、ドラッグ ハンドルの使用、ゴーストのドラッグ、アニメーション、および複数のドロップ ストラテジが含まれています。</p>
 
 ## Angular Drag and Drop の例
@@ -20,7 +20,58 @@ _language: ja
 
 <div class="divider--half"></div>
 
-## Drag ディレクティブ
+## Ignite UI for Angular Drag and Drop コンポーネントを使用した作業の開始
+
+Ignite UI for Angular Drag & Drop ディレクティブを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
+
+```cmd
+ng add igniteui-angular
+```
+
+Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
+
+次に、**app.module.ts** ファイルに `IgxDragDropModule` をインポートします。
+
+```typescript
+// app.module.ts
+
+...
+import { IgxDragDropModule } from 'igniteui-angular';
+// import { IgxDragDropModule } from '@infragistics/igniteui-angular'; for licensed package
+
+@NgModule({
+    ...
+    imports: [..., IgxDragDropModule],
+    ...
+})
+export class AppModule {}
+```
+
+あるいは、`16.0.0` 以降、`IgxDragDirective` と `IgxDropDirective` をスタンドアロンの依存関係としてインポートすることも、[`IGX_DRAG_DROP_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/directives/drag-drop/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
+
+```typescript
+// home.component.ts
+
+import { IGX_DRAG_DROP_DIRECTIVES } from 'igniteui-angular';
+// import { IGX_DRAG_DROP_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: `
+    <div igxDrag>Drag me</div>
+    <div igxDrop>Drop here</div>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_DRAG_DROP_DIRECTIVES]
+    /* or imports: [IgxDragDirective, IgxDropDirective] */
+})
+export class HomeComponent {}
+```
+
+Ignite UI for Angular Drag and Drop モジュールまたはディレクティブをインポートしたので、`igxDrag` と `igxDrop` ディレクティブの使用を開始できます。
+
+## Angular Drag ディレクティブの使用
 
 Angular アプリケーション内の要素をある場所から他の場所へドラッグするには、[`igxDrag`]({environment:angularApiUrl}/classes/igxdragdirective.html) ディレクティブを使用します。[`igxDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html) ディレクティブと組み合わせてドラッグした要素の配置やインタラクティブなアプリケーションを作成できます。
 
@@ -55,7 +106,6 @@ Angular アプリケーション内の要素をある場所から他の場所へ
 
 デフォルトのゴースト要素は、`igxDrag` が使用されるベース要素のコピーです。[`ghostTemplate`]({environment:angularApiUrl}/classes/igxdragdirective.html#ghostTemplate) 入力へのテンプレート参照を直接提供することでカスタマイズできます。
 
-#### 使用方法
 ```html
 <div class="email-content flexlist"
 	igxDrag
@@ -101,10 +151,7 @@ Angular アプリケーション内の要素をある場所から他の場所へ
 </div>
 ```
 
-#### デモ
-
-ハンドルを使用してダイアログをドラッグします。
-
+以下のデモでは、ハンドルを使用してダイアログをドラッグします。
 
 <code-view style="height:325px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -127,10 +174,7 @@ Angular アプリケーション内の要素をある場所から他の場所へ
 
 要素の変換を処理する他のアニメーションを作成できます。これは、Angular Animations または CSS Animations を使用して、ベース `igxDrag` 要素/そのゴーストのいずれかに他の要素と同様に実行できます。ゴーストに適用する場合は、カスタムゴ ーストを定義し、その要素にアニメーションを適用する必要があります。
 
-#### デモ
-
 ドラッグ ハンドルを使用してリスト内の要素をソートします。リスト要素のドラッグ時は、他のリスト要素がアニメーションでソートされます。 
-
 
 <code-view style="height:380px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -150,7 +194,7 @@ Angular アプリケーション内の要素をある場所から他の場所へ
 </div>
 ```
 
-## Drop ディレクティブ
+## Angular Drop ディレクティブの使用
 
 [`igxDrag`]({environment:angularApiUrl}/classes/igxdragdirective.html) ディレクティブを使用してドラッグされている要素を領域に配置する場合、[`igxDrop`]({environment:angularApiUrl}/classes/igxdropdirective.html) を使用します。要素が適用される要素の境界に入ったかどうか、その後要素内でリリースされているかを決定するために使用できるイベントを提供します。
 
@@ -172,14 +216,10 @@ Angular アプリケーション内の要素をある場所から他の場所へ
 
 ストラテジを適用する方法は、上記のクラスのいずれかに `dropStrategy` 入力を設定することです。`igxDrop` はインスタンス自体を作成および管理する必要があるため、提供される値はインスタンスではなくタイプでなければなりません。
 
-#### 例
-
-TypeScript:
 ```typescript
 public appendStrategy = IgxAppendDropStrategy;
 ```
 
-HTML:
 ```html
 <div igxDrop [dropStrategy]="appendStrategy"></div>
 ```
@@ -190,14 +230,12 @@ HTML:
 
 例:
 
-HTML
 ```html
 <div igxDrag></div>
 <!-- ... -->
 <div igxDrop (dropped)="onDropped($event)"></div>
 ```
 
-TypeScript
 ```typescript
 public onDropped(event) {
     event.cancel = true;
@@ -222,8 +260,6 @@ public onDropped(event) {
 <div igxDrop [dropChannel]="['Land']"> Land </div>
 ```
 
-#### デモ
-
 右側のメールを左側のフォルダーにドラッグします。
 
 
@@ -241,8 +277,6 @@ public onDropped(event) {
 ユーザーは各列のカードをソートすることができます。各カードにドロップ領域を設定することで実行されるため、別のカードがその領域に入ったことを検出し、実行時にそれらを切り替えて、ユーザーにより快適なエクスペリエンスを提供します。
 
 列間でカードを切り替える機能はなければ、かんばんボードにはなりません。カードは、列から別の列に特定の位置で直接移動できます。以下ではダミー オブジェクトを使用して実現されているため、リリースされた場合にカードが配置される視覚的な領域が作成されます。カードのドラッグが終了するか、別の列を出るとダミーオブジェクトが削除されます。
-
-### デモ
 
 かんばんボード内で項目を移動します。
 

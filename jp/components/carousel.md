@@ -5,7 +5,7 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-# Angular Carousel (カルーセル) の概要
+# Angular Carousel (カルーセル) コンポーネントの概要
 <p class="highlight">Angular Carousel (または Angular Material Carousel) は、レスポンシブで軽量なコンポーネントであり、テキスト スライド、リンク、およびその他の html 要素を含む画像のコレクションを前後に移動するユーザーに、スライドショーのような Web エクスペリエンスを作成する最も柔軟な方法を提供します。 
 
 Angular Carousel コンポーネントを使用すると、アニメーション、スライド トランジション、およびカスタマイズを使用できるため、インターフェイスを簡単に微調整して Angular カスタム カルーセルを構築できます。
@@ -20,32 +20,69 @@ Angular Carousel コンポーネントを使用すると、アニメーション
            iframe-src="{environment:demosBaseUrl}/layouts/carousel" alt="Angular Carousel の例">
 </code-view>
 
-
-
-## Ignite UI で Angular Carousel を使用する方法
-Ignite UI Angular Carousel コンポーネントを全画面要素またはコンポーネントの子に設定できます。また、スライドに有効な HTML コンテンツ、その他の Angular コンポーネントなども含めることができます。
-
-### はじめに
 <div class="divider--half"></div>
+
+## Ignite UI for Angular Carousel を使用した作業の開始
+Ignite UI for Angular Carousel コンポーネントを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
+
+```cmd
+ng add igniteui-angular
+```
+
+Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
+
+The next step is to import the **IgxCarouselModule** in our **app.module.ts** file:
 
 >[!NOTE]
 >このコンポーネントでは、タッチ操作が正しく動作するために、アプリケーションのルート モジュールに [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) をインポートする必要があります。
 
-次に、**app.module.ts** ファイルに **IgxCarouselModule** をインポートします。
 ```typescript
 // app.module.ts
 
-...
+import { HammerModule } from '@angular/platform-browser';
 import { IgxCarouselModule } from 'igniteui-angular';
 // import { IgxCarouselModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
-    imports: [..., IgxCarouselModule],
+    imports: [..., HammerModule, IgxCarouselModule],
     ...
 })
 export class AppModule {}
 ```
+
+あるいは、`16.0.0` 以降、`IgxCarouselComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_CAROUSEL_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/carousel/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
+
+```typescript
+// home.component.ts
+
+import { HammerModule } from '@angular/platform-browser';
+import { IGX_CAROUSEL_DIRECTIVES } from 'igniteui-angular';
+// import { IGX_CAROUSEL_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: `
+    <igx-carousel>
+        <igx-slide *ngFor="let slide of slides">
+            <div class="image-container">
+                <img [src]="slide.src" />
+            </div>
+        </igx-slide>
+    </igx-carousel>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [HammerModule, IGX_CAROUSEL_DIRECTIVES]
+    /* or imports: [HammerModule, IgxCarouselComponent, IgxSlideComponent] */
+})
+export class HomeComponent {}
+```
+
+Ignite UI for Angular Carousel モジュールまたはディレクティブをインポートしたので、`igx-carousel` コンポーネントの使用を開始できます。
+
+## Angular Carousel コンポーネントの使用
+Ignite UI for Angular Carousel コンポーネントを全画面要素またはコンポーネントの子に設定できます。また、スライドに有効な HTML コンテンツ、その他の Angular コンポーネントなども含めることができます。
 
 このセクションでは、上記で定義した **デモ** の設定を行います。
 
@@ -57,27 +94,26 @@ export class AppModule {}
 スライドには画像のみが含まれるので、**ts** ファイルにオブジェクトの配列を作成し、それを使用して **igx-carousel** にスライドを追加します。
 
 ```typescript
-...
-public slides = [
-    { src: '/assets/images/carousel/ignite-ui-angular-indigo-design.png' },
-    { src: '/assets/images/carousel/slider-image-chart.png' },
-    { src: '/assets/images/carousel/ignite-ui-angular-charts.png' }
-];
-...
+@Component({...})
+export class HomeComponent {
+    public slides = [
+        { src: '/assets/images/carousel/ignite-ui-angular-indigo-design.png' },
+        { src: '/assets/images/carousel/slider-image-chart.png' },
+        { src: '/assets/images/carousel/ignite-ui-angular-charts.png' }
+    ];
+}
 ```
 
 ```html
-...
 <div class="carousel-container">
     <igx-carousel #carousel>
-            <igx-slide  *ngFor="let slide of slides;">
-                <div class="image-container">
-                    <img [src]="slide.src">
-                </div>
-             </igx-slide>
+        <igx-slide *ngFor="let slide of slides">
+            <div class="image-container">
+                <img [src]="slide.src" />
+            </div>
+        </igx-slide>
     </igx-carousel>
 </div>
-...
 ```
 ## Angular Carousel のカスタム例
 

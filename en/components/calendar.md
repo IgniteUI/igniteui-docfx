@@ -9,6 +9,7 @@ _keywords: angular calendar, angular calendar component, angular UI components, 
 Angular Calendar is a UI component used for displaying dates and days in an app. Supporting different features, it enables users to easily manage calendar functionalities, drag and create events in a calendar, navigate to a preferred date in it, and show events in an Angular calendar month view, week view, or day view in a single click.
 
 <p class="highlight">
+
 The Ignite UI for Angular Calendar component, developed as a native [Angular component](https://angular.io/guide/architecture#components), provides an easy and intuitive ways to display date information, enable dates or apply Angular calendar disable dates mode. Users can choose from three different selection modes - single selection, multi selection or range selection.
 </p>
 
