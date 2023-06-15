@@ -29,7 +29,7 @@ Ignite UI for Angular は、マテリアル ベースの UI ウィジェット�
 
 <div class="divider--half"></div>
 
-## Ignite UI と Angular Material で作業を開始
+## Ignite UI と Angular Material を使用した作業の開始
 
 ### Angular Material のインストール方法
 

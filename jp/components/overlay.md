@@ -52,6 +52,7 @@ Overlay サービスへの参照を追加した後、コンテンツを動的に
 // my-overlay-component.component.ts
 import { MyDynamicComponent } from '../my-dynamic-component/my-dynamic-component.component';
 
+@Component({...})
 export class MyOverlayComponent {
     private _overlayId = ''; // The unique identifier assigned to the component by the Overlay service
 
@@ -93,6 +94,8 @@ export class MyOverlayComponent {
 ```typescript
 // my-overlay-component.component.ts
 import { Inject, ViewChild } from '@angular/core'
+
+@Component({...})
 export class MyOverlayComponent {
     private _overlayId = ''; // The unique identifier assigned to the component by the Overlay service
 
@@ -220,7 +223,7 @@ const connectedOverlaySettings = IgxOverlayService.createRelativeOverlaySettings
 import { ConnectedPositioningStrategy } from 'igniteui-angular';
 // import { ConnectedPositioningStrategy } from '@infragistics/igniteui-angular'; for licensed package
 
-...
+@Component({...})
 export class MyOverlayComponent implements OnDestroy {
     private _overlayId = ''; // The unique identifier assigned to the component by the Overlay service
     private _overlayShown = false; // Is the component rendered in the Overlay?

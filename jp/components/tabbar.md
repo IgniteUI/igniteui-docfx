@@ -1,13 +1,13 @@
 ---
 title: Bottom Navigation コンポーネント
 _description: タブ付きのユーザー インターフェイスでタブを表示します。この UI コントロールはタブの外観および動作を管理します。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Bottom Nav コンポーネント, Angular Bottom Navigation コントロール
+_keywords: Angular Bottom Nav コンポーネント, Angular Bottom Navigation コントロール, Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, Angular UI コンポーネント, ネイティブ Angular コンポーネント ライブラリ
 _language: ja
 ---
 
-# Bottom Navigation
+# Angular Bottom Navigation (下部のナビゲーション) コンポーネントの概要
 
-<p class="highlight">Ignite UI for Angular Bottom Navigation コンポーネントは、単一ビューで表示される複数のコンテンツ パネル間での移動を可能にします。パネルの間のナビゲーションは下部にあるタブ ボタンで実行されます。</p>
+<p class="highlight">Ignite UI for Angular Bottom Navigation コンポーネントは、単一ビューで表示される複数のコンテンツ パネル間での移動を可能にします。パネルの間のナビゲーションはアプリケーションの下部にあるタブ ボタンで実行されます。</p>
 
 > [!NOTE]
 > `igx-tab-bar` セレクターは非推奨です。代わりに [`igx-bottom-nav`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html) を使用してください。`IgxTabBarComponent` クラスは [`IgxBottomNavComponent`]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html) に名前変更しました。`IgxTabBarModule` は `IgxBottomNavModule` に名前変更しました。
@@ -25,9 +25,17 @@ _language: ja
 
 <div class="divider--half"></div>
 
-## 使用方法
+## Ignite UI for Angular Bottom Navigation を使用した作業の開始
 
-はじめに、**app.module.ts** ファイルに `IgxBottomNavModule` をインポートします。
+Ignite UI for Angular Bottom Navigation コンポーネントを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
+
+```cmd
+ng add igniteui-angular
+```
+
+Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
+
+次に、**app.module.ts** ファイルに `IgxBottomNavModule` をインポートします。
 
 ```typescript
 // app.module.ts
@@ -44,7 +52,51 @@ import { IgxBottomNavModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-次にコンポーネントのテンプレートを Bottom Navigation に追加し、3 つの項目を追加します。各項目は、データのヘッダーとコンテナーをそれぞれ表す  `igx-bottom-nav-header` コンポーネントと `igx-bottom-nav-content` コンポーネントをラップします。ヘッダーは通常、アイコンとオプションのテキスト ラベルで構成されます。Bottom Navigation コントロールはマテリアル デザイン[**アイコン**](https://material.io/icons/)と互換性があるため、アプリケーションに採用するには、メイン アプリケーション フォルダーの 'styles.css' ファイルに Material+Icons インポートを追加するだけです。
+あるいは、`16.0.0` 以降、`IgxBottomNavComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_BOTTOM_NAV_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/tabs/bottom-nav/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
+
+```typescript
+// home.component.ts
+
+import { IGX_BOTTOM_NAV_DIRECTIVES, IgxIconComponent } from 'igniteui-angular';
+// import { IGX_BOTTOM_NAV_DIRECTIVES, IgxIconComponent } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: `
+    <igx-bottom-nav>
+        <igx-bottom-nav-item>
+            <igx-bottom-nav-header>
+                <igx-icon>library_music</igx-icon>
+            </igx-bottom-nav-header>
+            <igx-bottom-nav-content>This is Item 1 content.</igx-bottom-nav-content>
+        </igx-bottom-nav-item>
+        <igx-bottom-nav-item>
+            <igx-bottom-nav-header>
+                <igx-icon>video_library</igx-icon>
+            </igx-bottom-nav-header>
+            <igx-bottom-nav-content>This is Item 2 content.</igx-bottom-nav-content>
+        </igx-bottom-nav-item>
+        <igx-bottom-nav-item>
+            <igx-bottom-nav-header>
+                <igx-icon>library_books</igx-icon>
+            </igx-bottom-nav-header>
+            <igx-bottom-nav-content>This is Item 3 content.</igx-bottom-nav-content>
+        </igx-bottom-nav-item>
+    </igx-bottom-nav>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_BOTTOM_NAV_DIRECTIVES, IgxIconComponent]
+    /* or imports: [IgxBottomNavComponent, IgxBottomNavItemComponent, IgxBottomNavHeaderComponent, IgxBottomNavContentComponent, IgxIconComponent] */
+})
+export class HomeComponent {}
+```
+
+Ignite UI for Angular Bottom Navigation モジュールまたはディレクティブをインポートしたので、`igx-bottom-nav` コンポーネントの使用を開始できます。
+
+## Angular Bottom Navigation の使用
+
+コンポーネントのテンプレートには、Bottom Navigation と 3 つの項目が含まれています。各項目は、データのヘッダーとコンテナをそれぞれ表す `igx-bottom-nav-header` コンポーネントと `igx-bottom-nav-content` コンポーネントをラップします。ヘッダーは通常、アイコンとオプションのテキスト ラベルで構成されます。Bottom Navigation コントロールはマテリアル デザイン[**アイコン**](https://material.io/icons/)と互換性があるため、アプリケーションに採用するには、メイン アプリケーション フォルダーの 'styles.css' ファイルに Material+Icons インポートを追加するだけです。
 
 > [!NOTE]
 > これまでアプリケーションで `igx-icon` を使用したことがない場合は、続行する前に必ず **app.module.ts** の `IgxIconModule` をインポートしてください。

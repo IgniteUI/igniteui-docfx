@@ -250,7 +250,7 @@ return dataView.findIndex((rec, index) => index > currentRowIndex && this.isEdit
 
 詳細については、サンプルを参照してください。
 
-##### Angular Grid Excel スタイル編集のサンプル
+### Angular Grid Excel スタイル編集のサンプル
 
 <code-view style="height:550px" 
            no-theming
