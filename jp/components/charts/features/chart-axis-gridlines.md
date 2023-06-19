@@ -67,6 +67,17 @@ _language: ja
 </code-view>
 
 
+[`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) の軸には、それぞれ [`majorStrokeDashArray`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxaxiscomponent.html#majorstrokedasharray) プロパティと [`minorStrokeDashArray`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxaxiscomponent.html#minorstrokedasharray) プロパティを利用して、主グリッド線と副グリッド線にダッシュ配列を配置する機能もあります。対応する軸の [`strokeDashArray`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxaxiscomponent.html#strokedasharray) プロパティを設定することで、実際の軸線も破線にすることができます。これらのプロパティは、対応するグリッド線のダッシュの長さを記述する数値の配列を受け取ります。
+
+次の例は、上記のダッシュ配列プロパティが設定された [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) を示しています。
+
+<code-view style="height: 450px" alt="Angular 軸破線配列の例"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/dash-array-axes"
+                                                 github-src="charts/data-chart/dash-array-axes">
+</code-view>
+
+
 <div class="divider--half"></div>
 
 ## Angular 軸目盛りの例
