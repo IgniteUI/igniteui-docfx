@@ -129,6 +129,17 @@ Angular 折れ線チャートは、次のデモに示すように、数百万に
 </code-view>
 
 
+[`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) を使用し、系列に [`dashArray`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriescomponent.html#dasharray) プロパティを設定することで、[`IgxLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxlineseriescomponent.html) 内に破線を作成することもできます。このプロパティは、線の結果として得られるダッシュの長さを表す数値の配列を受け取ります。
+
+次の例は、[`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) の [`IgxLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxlineseriescomponent.html) での [`dashArray`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriescomponent.html#dasharray) の使用法を示しています。
+
+<code-view style="height: 600px" alt="Angular 折れ線チャートの破線配列"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/dash-array-series"
+                                                 github-src="charts/data-chart/dash-array-series">
+</code-view>
+
+
 <div class="divider--half"></div>
 
 ## 高度なタイプの折れ線チャート
