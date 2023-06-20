@@ -116,7 +116,7 @@ export class AppModule {}
 </igx-bullet-graph>
 ```
 
-<code-view style="height: 125px" alt="Angular bullet graph measures"
+<code-view style="height: 125px" alt="Angular ブレット グラフ メジャー"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
                     iframe-src="{environment:dvDemosBaseUrl}/gauges/bullet-graph/measures"
                                                  github-src="gauges/bullet-graph/measures">
@@ -152,7 +152,7 @@ export class AppModule {}
 </igx-bullet-graph>
 ```
 
-<code-view style="height: 125px" alt="Angular bullet graph ranges"
+<code-view style="height: 125px" alt="Angular ブレット グラフの範囲"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
                     iframe-src="{environment:dvDemosBaseUrl}/gauges/bullet-graph/ranges"
                                                  github-src="gauges/bullet-graph/ranges">
@@ -186,7 +186,7 @@ export class AppModule {}
 </igx-bullet-graph>
 ```
 
-<code-view style="height: 125px" alt="Angular bullet graph tickmarks"
+<code-view style="height: 125px" alt="Angular  ブレット グラフの目盛"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
                     iframe-src="{environment:dvDemosBaseUrl}/gauges/bullet-graph/tickmarks"
                                                  github-src="gauges/bullet-graph/tickmarks">
@@ -211,7 +211,7 @@ export class AppModule {}
 </igx-bullet-graph>
 ```
 
-<code-view style="height: 125px" alt="Angular bullet graph labels"
+<code-view style="height: 125px" alt="Angular ブレット グラフのラベル"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
                     iframe-src="{environment:dvDemosBaseUrl}/gauges/bullet-graph/labels"
                                                  github-src="gauges/bullet-graph/labels">
@@ -235,7 +235,7 @@ export class AppModule {}
 </igx-bullet-graph>
 ```
 
-<code-view style="height: 125px" alt="Angular bullet graph background"
+<code-view style="height: 125px" alt="Angular ブレット グラフのバッキング"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
                     iframe-src="{environment:dvDemosBaseUrl}/gauges/bullet-graph/background"
                                                  github-src="gauges/bullet-graph/background">
@@ -260,7 +260,7 @@ export class AppModule {}
 </igx-bullet-graph>
 ```
 
-<code-view style="height: 125px" alt="Angular bullet graph scale"
+<code-view style="height: 125px" alt="Angular ブレット グラフのスケール"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
                     iframe-src="{environment:dvDemosBaseUrl}/gauges/bullet-graph/scale"
                                                  github-src="gauges/bullet-graph/scale">
