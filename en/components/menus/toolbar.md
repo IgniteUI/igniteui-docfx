@@ -11,7 +11,7 @@ The Angular Toolbar component is a companion conainer for UI operations to inter
 
 ## Angular Toolbar Example
 
-<code-view style="height: 60px" alt="Angular Toolbar Example"
+<code-view style="height: 600px" alt="Angular Toolbar Example"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
                     iframe-src="{environment:dvDemosBaseUrl}/charts/toolbar/actions-built-in-data-chart"
                                                  github-src="charts/toolbar/actions-built-in-data-chart">
@@ -139,7 +139,7 @@ New and existing tools can be repositioned and marked hidden using the `OverlayI
 
 The following example demonstrates hiding both the `ZoomReset` and `Analyze Menu` menu tool actions. A new instance of the `ZoomReset` tool action is added and placed within the `ZoomMenu` by using the the [`afterId`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncomponent.html#afterid) property and assinging that to [`zoomOut`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html#zoomout). This will ensure the new Reset tool is displayed at the bottom of the `ZoomMenu`.
 
-<code-view style="height: 60px" alt="Angular Toolbar Example"
+<code-view style="height: 600px" alt="Angular Toolbar Example"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
                     iframe-src="{environment:dvDemosBaseUrl}/charts/toolbar/layout-actions-for-data-chart"
                                                  github-src="charts/toolbar/layout-actions-for-data-chart">
@@ -152,7 +152,7 @@ By default the Angular Toolbar is shown in the horizontal [`orientation`]({envir
 
 The following example demonstrates the vertical orientation of the Angular Toolbar.
 
-<code-view style="height: 60px" alt="Angular Verical Orientation"
+<code-view style="height: 600px" alt="Angular Verical Orientation"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
                     iframe-src="{environment:dvDemosBaseUrl}/charts/toolbar/layout-in-vertical-orientation"
                                                  github-src="charts/toolbar/layout-in-vertical-orientation">
