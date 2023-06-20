@@ -18,6 +18,10 @@ All notable changes for each version of Ignite UI for Angular are documented on 
 
 *   [Toolbar](menus/toolbar.md) - Beta
 
+## **16.0.0 (May 2023)**
+
+*   Angular 16 support.
+
 ## **15.0.0 (December 2022)**
 
 *   Angular 15 support.
