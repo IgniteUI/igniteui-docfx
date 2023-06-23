@@ -12,7 +12,7 @@ Angular ツールバー コンポーネントは、スタンドアロンまた�
 
 ## Angular ツールバーの例
 
-<code-view style="height: 60px" alt="Angular Toolbar Example"
+<code-view style="height: 600px" alt="Angular ツールバーの例"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
                     iframe-src="{environment:dvDemosBaseUrl}/charts/toolbar/actions-built-in-data-chart"
                                                  github-src="charts/toolbar/actions-built-in-data-chart">
@@ -140,7 +140,7 @@ Angular ツールバーには、`Target` プロパティが含まれています
 
 次の例は、`ZoomReset` および `Analyze Menu` メニュー ツール アクションの両方を非表示にする方法を示しています。[`afterId`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncomponent.html#afterid) プロパティを使用してそれを [`zoomOut`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html#zoomout) に割り当てることにより、`ZoomReset` ツール アクションの新しいインスタンスが追加され、`ZoomMenu` 内に配置されます。これにより、新しいリセット ツールが `ZoomMenu` の下部に表示されます。
 
-<code-view style="height: 60px" alt="Angular Toolbar の例"
+<code-view style="height: 600px" alt="Angular Toolbar の例"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
                     iframe-src="{environment:dvDemosBaseUrl}/charts/toolbar/layout-actions-for-data-chart"
                                                  github-src="charts/toolbar/layout-actions-for-data-chart">
@@ -153,7 +153,7 @@ Angular ツールバーには、`Target` プロパティが含まれています
 
 次の例は、Angular ツールバーの垂直方向を示しています。
 
-<code-view style="height: 60px" alt="Angular Verical Orientation"
+<code-view style="height: 600px" alt="Angular 垂直方向"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
                     iframe-src="{environment:dvDemosBaseUrl}/charts/toolbar/layout-in-vertical-orientation"
                                                  github-src="charts/toolbar/layout-in-vertical-orientation">
