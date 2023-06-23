@@ -14,13 +14,7 @@ This project uses Node.js and Gulp as a build tool to accelerate the development
 
 ### Installing DocFX
 
-To install docfx:
-
-```bash
-dotnet tool update -g docfx
-```
-
-Restore it as a dotnet tool - Installs the .NET local tools that are in scope for the current directory: 
+To install docfx, restore it as a dotnet tool - Installs the .NET local tools that are in scope for the current directory: 
 
 ```bash
 dotnet tool restore
