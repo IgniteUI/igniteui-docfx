@@ -34,7 +34,7 @@ _language: ja
 
 ## シェイプ ファイルのフォーマット
 
-Angular [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicmapcomponent.html)コントロールは、地理空間データのソースとして人気の高い[シェープ ファイル (英語)](http://en.wikipedia.org/wiki/Shapefile#Overview) フォーマットを使用します。シェープ ファイルは他のファイル タイプと一緒に配布されます。一般的なファイルには、*.shp*、*.shx*、および *.dbf* の拡張子が付いています。
+Angular [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html)コントロールは、地理空間データのソースとして人気の高い[シェープ ファイル (英語)](http://en.wikipedia.org/wiki/Shapefile#Overview) フォーマットを使用します。シェープ ファイルは他のファイル タイプと一緒に配布されます。一般的なファイルには、*.shp*、*.shx*、および *.dbf* の拡張子が付いています。
 
 以下の表は、シェープ ファイルの各タイプの基本情報および目的を提供しています。
 
@@ -68,7 +68,7 @@ Angular [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite
 
 ## シェイプ ファイル データ ソース (英語)
 
-以下のリストは、シェープ ファイルを取得するためのリソースを提供しています。また、[`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicmapcomponent.html) コントロールのサンプルは、シェープ ファイルの良い情報源になります。これらのシェープ ファイルは、Samples Browser のインストーラーに含まれています。
+以下のリストは、シェープ ファイルを取得するためのリソースを提供しています。また、[`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html) コントロールのサンプルは、シェープ ファイルの良い情報源になります。これらのシェープ ファイルは、Samples Browser のインストーラーに含まれています。
 
 *   [ESRI - 世界地図データ](http://www.esri.com/data/download/basemap/index.html)
 
@@ -104,9 +104,9 @@ Angular [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite
 
 ## API リファレンス
 
-*   [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicmapcomponent.html)
-*   [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicpolylineseriescomponent.html)
-*   [`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicshapeseriescomponent.html)
+*   [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html)
+*   [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html)
+*   [`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html)
 *   `ItemsSource`
 *   `ShapeMemberPath`
 *   [`IgxShapeDataSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapedatasource.html)
