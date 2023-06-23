@@ -8,15 +8,14 @@ _extraFont: https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,70
 # Typography
 
 <p class="highlight">
-
 The typography in Ignite UI for Angular is modeled after the [Material Type System](https://material.io/design/typography/the-type-system.html#). It's non-intrusive and optional, allowing you to modify the type styles using CSS only.
 </p>
-<div class="divider"></div>
 
 ## Overview
 The type system is a **_type scale_** consisting of **_13 different category type styles_** used across most components. All of the scale categories are completely reusable and adjustable by the end user.
 
 Here's a list of all 13 category styles as defined for the Material Theme in Ignite UI for Angular:
+
 | **Scale Category** | **Font Family** | **Font Weight** | **Font Size** | **Text Transform** | **Letter Spacing** | **Line Height** | **CSS Class**               | **CSS Variables**   |
 | ------------------ | --------------- | --------------- | ------------- | ------------------ | ------------------ | --------------- | --------------------------- | ------------------- |
 | **h1**             | Titillium Web   | 300             | 6 rem         | none               | -.09375 rem        | 7 rem           | `ig-typography__h1`         | `--ig-h1-*`         |

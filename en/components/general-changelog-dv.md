@@ -14,6 +14,14 @@ All notable changes for each version of Ignite UI for Angular are documented on 
 > This topic discusses changes only for components that are not included in the igniteui-angular package.
 > For changes specific to igniteui-angular components, please see CHANGELOG.MD at [Ignite UI Angular Changes](https://github.com/IgniteUI/igniteui-angular/blob/master/)
 
+### New Components
+
+*   [Toolbar](menus/toolbar.md) - Beta
+
+## **16.0.0 (May 2023)**
+
+*   Angular 16 support.
+
 ## **15.0.0 (December 2022)**
 
 *   Angular 15 support.
