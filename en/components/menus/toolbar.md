@@ -163,7 +163,7 @@ The following example demonstrates the vertical orientation of the Angular Toolb
 
 The icon component can be styled by using it's [`baseTheme`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolbarcomponent.html#basetheme) property directly to the [`IgxToolbarComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolbarcomponent.html). The following example demonstrates the various theme options that can be applied.
 
-<code-view style="height: 70px" alt="Angular Toolbar Styling/Theming"
+<code-view style="height: 600px" alt="Angular Toolbar Styling/Theming"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
                     iframe-src="{environment:dvDemosBaseUrl}/charts/toolbar/theming"
                                                  github-src="charts/toolbar/theming">
