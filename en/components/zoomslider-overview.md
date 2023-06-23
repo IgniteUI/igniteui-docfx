@@ -11,7 +11,7 @@ The Angular ZoomSlider control provides zooming functionality to range-enabled c
 
 ## Angular Zoom Slider Example
 
-The following sample demonstrates how to use [`IgxZoomSliderComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxzoomslidercomponent.html) to navigate content in [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html).
+The following sample demonstrates how to use [`IgxZoomSliderComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxzoomslidercomponent.html) to navigate content in [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html).
 
 <code-view style="height: 600px" alt="Angular Zoom Slider Example"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
@@ -48,7 +48,7 @@ npm install --save igniteui-angular-charts
 
 ## Component Modules
 
-The [`IgxZoomSliderComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxzoomslidercomponent.html) requires the following modules:
+The [`IgxZoomSliderComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxzoomslidercomponent.html) requires the following modules:
 
 ```ts
 import { IgxZoomSliderModule } from 'igniteui-angular-charts';
@@ -85,5 +85,5 @@ You can find more information about charts in [Chart Features](charts/chart-feat
 
 The following is a list of API members mentioned in the above sections:
 
-*   [`IgxZoomSliderComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxzoomslidercomponent.html)
-*   [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html)
+*   [`IgxZoomSliderComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxzoomslidercomponent.html)
+*   [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html)
