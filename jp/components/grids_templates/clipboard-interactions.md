@@ -72,7 +72,7 @@ _language: ja
 > [!NOTE] 
 > Excel は、タブで区切られたテキスト (タブ区切り `/t`) を自動的に検出し、データを別々の列に正しく貼り付けることができます。貼り付け形式が機能せず、貼り付けたものがすべて 1 列に表示される場合は、Excel の区切り文字が別の文字に設定されている、またはテキストがタブではなくスペースを使用しています。
 
-- [`gridCopy`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#gridCopy) コピー操作が実行されたときに発生します。[`clipboardOptions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clipboardoptions) を使用してコピー動作が有効になっている場合のみ発生します。
+- [`gridCopy`]({environment:angularApiUrl}/classes/igxgridcomponent.html#gridCopy) コピー操作が実行されたときに発生します。[`clipboardOptions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clipboardoptions) を使用してコピー動作が有効になっている場合のみ発生します。
 
 ## その他のリソース
 <div class="divider--half"></div>
